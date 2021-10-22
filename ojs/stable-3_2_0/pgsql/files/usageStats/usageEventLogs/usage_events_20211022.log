@@ -1,0 +1,7 @@
+127.0.0.1 - - "2021-10-22 00:00:12" http://localhost/index.php/publicknowledge/index 200 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36"
+127.0.0.1 - - "2021-10-22 00:01:15" http://localhost/index.php/publicknowledge/index 200 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36"
+127.0.0.1 - - "2021-10-22 00:01:36" http://localhost/index.php/publicknowledge/index 200 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36"
+127.0.0.1 administrative 3 "2021-10-22 00:03:00" http://localhost/index.php/publicknowledge/index 200 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36"
+127.0.0.1 administrative 3 "2021-10-22 00:03:03" http://localhost/index.php/publicknowledge/issue/view/1 200 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36"
+127.0.0.1 - - "2021-10-22 00:03:05" http://localhost/index.php/publicknowledge/index 200 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36"
+127.0.0.1 - - "2021-10-22 00:03:38" http://localhost/index.php/publicknowledge/index 200 "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36"
