@@ -2,12 +2,11 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.6.18
--- Dumped by pg_dump version 10.13 (Ubuntu 10.13-1.pgdg16.04+1)
+-- Dumped from database version 9.5.25
+-- Dumped by pg_dump version 9.5.25
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -3844,413 +3843,413 @@ COMMENT ON COLUMN public.versions.sitewide IS '1 iff the row describes a site-wi
 
 
 --
--- Name: access_keys access_key_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: access_key_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.access_keys ALTER COLUMN access_key_id SET DEFAULT nextval('public.access_keys_access_key_id_seq'::regclass);
 
 
 --
--- Name: announcement_types type_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: type_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcement_types ALTER COLUMN type_id SET DEFAULT nextval('public.announcement_types_type_id_seq'::regclass);
 
 
 --
--- Name: announcements announcement_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: announcement_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcements ALTER COLUMN announcement_id SET DEFAULT nextval('public.announcements_announcement_id_seq'::regclass);
 
 
 --
--- Name: auth_sources auth_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: auth_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.auth_sources ALTER COLUMN auth_id SET DEFAULT nextval('public.auth_sources_auth_id_seq'::regclass);
 
 
 --
--- Name: authors author_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: author_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.authors ALTER COLUMN author_id SET DEFAULT nextval('public.authors_author_id_seq'::regclass);
 
 
 --
--- Name: categories category_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: category_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.categories ALTER COLUMN category_id SET DEFAULT nextval('public.categories_category_id_seq'::regclass);
 
 
 --
--- Name: citations citation_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: citation_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.citations ALTER COLUMN citation_id SET DEFAULT nextval('public.citations_citation_id_seq'::regclass);
 
 
 --
--- Name: completed_payments completed_payment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: completed_payment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.completed_payments ALTER COLUMN completed_payment_id SET DEFAULT nextval('public.completed_payments_completed_payment_id_seq'::regclass);
 
 
 --
--- Name: controlled_vocab_entries controlled_vocab_entry_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: controlled_vocab_entry_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entries ALTER COLUMN controlled_vocab_entry_id SET DEFAULT nextval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq'::regclass);
 
 
 --
--- Name: controlled_vocabs controlled_vocab_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: controlled_vocab_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs ALTER COLUMN controlled_vocab_id SET DEFAULT nextval('public.controlled_vocabs_controlled_vocab_id_seq'::regclass);
 
 
 --
--- Name: data_object_tombstone_oai_set_objects object_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: object_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects ALTER COLUMN object_id SET DEFAULT nextval('public.data_object_tombstone_oai_set_objects_object_id_seq'::regclass);
 
 
 --
--- Name: data_object_tombstones tombstone_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: tombstone_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstones ALTER COLUMN tombstone_id SET DEFAULT nextval('public.data_object_tombstones_tombstone_id_seq'::regclass);
 
 
 --
--- Name: edit_decisions edit_decision_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: edit_decision_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.edit_decisions ALTER COLUMN edit_decision_id SET DEFAULT nextval('public.edit_decisions_edit_decision_id_seq'::regclass);
 
 
 --
--- Name: email_log log_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: log_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_log ALTER COLUMN log_id SET DEFAULT nextval('public.email_log_log_id_seq'::regclass);
 
 
 --
--- Name: email_templates email_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: email_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates ALTER COLUMN email_id SET DEFAULT nextval('public.email_templates_email_id_seq'::regclass);
 
 
 --
--- Name: email_templates_default email_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: email_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default ALTER COLUMN email_id SET DEFAULT nextval('public.email_templates_default_email_id_seq'::regclass);
 
 
 --
--- Name: event_log log_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: log_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.event_log ALTER COLUMN log_id SET DEFAULT nextval('public.event_log_log_id_seq'::regclass);
 
 
 --
--- Name: files file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.files ALTER COLUMN file_id SET DEFAULT nextval('public.files_file_id_seq'::regclass);
 
 
 --
--- Name: filter_groups filter_group_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: filter_group_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filter_groups ALTER COLUMN filter_group_id SET DEFAULT nextval('public.filter_groups_filter_group_id_seq'::regclass);
 
 
 --
--- Name: filters filter_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: filter_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filters ALTER COLUMN filter_id SET DEFAULT nextval('public.filters_filter_id_seq'::regclass);
 
 
 --
--- Name: genres genre_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: genre_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.genres ALTER COLUMN genre_id SET DEFAULT nextval('public.genres_genre_id_seq'::regclass);
 
 
 --
--- Name: institutional_subscription_ip institutional_subscription_ip_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: institutional_subscription_ip_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.institutional_subscription_ip ALTER COLUMN institutional_subscription_ip_id SET DEFAULT nextval('public.institutional_subscription_ip_institutional_subscription_ip_seq'::regclass);
 
 
 --
--- Name: institutional_subscriptions institutional_subscription_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: institutional_subscription_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.institutional_subscriptions ALTER COLUMN institutional_subscription_id SET DEFAULT nextval('public.institutional_subscriptions_institutional_subscription_id_seq'::regclass);
 
 
 --
--- Name: issue_files file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_files ALTER COLUMN file_id SET DEFAULT nextval('public.issue_files_file_id_seq'::regclass);
 
 
 --
--- Name: issue_galleys galley_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: galley_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_galleys ALTER COLUMN galley_id SET DEFAULT nextval('public.issue_galleys_galley_id_seq'::regclass);
 
 
 --
--- Name: issues issue_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: issue_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issues ALTER COLUMN issue_id SET DEFAULT nextval('public.issues_issue_id_seq'::regclass);
 
 
 --
--- Name: jobs id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.jobs ALTER COLUMN id SET DEFAULT nextval('public.jobs_id_seq'::regclass);
 
 
 --
--- Name: journals journal_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: journal_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.journals ALTER COLUMN journal_id SET DEFAULT nextval('public.journals_journal_id_seq'::regclass);
 
 
 --
--- Name: library_files file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.library_files ALTER COLUMN file_id SET DEFAULT nextval('public.library_files_file_id_seq'::regclass);
 
 
 --
--- Name: metadata_descriptions metadata_description_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: metadata_description_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.metadata_descriptions ALTER COLUMN metadata_description_id SET DEFAULT nextval('public.metadata_descriptions_metadata_description_id_seq'::regclass);
 
 
 --
--- Name: navigation_menu_item_assignments navigation_menu_item_assignment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_item_assignment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignments ALTER COLUMN navigation_menu_item_assignment_id SET DEFAULT nextval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq'::regclass);
 
 
 --
--- Name: navigation_menu_items navigation_menu_item_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_item_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_items ALTER COLUMN navigation_menu_item_id SET DEFAULT nextval('public.navigation_menu_items_navigation_menu_item_id_seq'::regclass);
 
 
 --
--- Name: navigation_menus navigation_menu_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menus ALTER COLUMN navigation_menu_id SET DEFAULT nextval('public.navigation_menus_navigation_menu_id_seq'::regclass);
 
 
 --
--- Name: notes note_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: note_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notes ALTER COLUMN note_id SET DEFAULT nextval('public.notes_note_id_seq'::regclass);
 
 
 --
--- Name: notification_mail_list notification_mail_list_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: notification_mail_list_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_mail_list ALTER COLUMN notification_mail_list_id SET DEFAULT nextval('public.notification_mail_list_notification_mail_list_id_seq'::regclass);
 
 
 --
--- Name: notification_subscription_settings setting_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: setting_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_subscription_settings ALTER COLUMN setting_id SET DEFAULT nextval('public.notification_subscription_settings_setting_id_seq'::regclass);
 
 
 --
--- Name: notifications notification_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: notification_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notifications ALTER COLUMN notification_id SET DEFAULT nextval('public.notifications_notification_id_seq'::regclass);
 
 
 --
--- Name: publication_galleys galley_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: galley_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_galleys ALTER COLUMN galley_id SET DEFAULT nextval('public.publication_galleys_galley_id_seq'::regclass);
 
 
 --
--- Name: publications publication_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: publication_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publications ALTER COLUMN publication_id SET DEFAULT nextval('public.publications_publication_id_seq'::regclass);
 
 
 --
--- Name: queries query_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: query_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.queries ALTER COLUMN query_id SET DEFAULT nextval('public.queries_query_id_seq'::regclass);
 
 
 --
--- Name: queued_payments queued_payment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: queued_payment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.queued_payments ALTER COLUMN queued_payment_id SET DEFAULT nextval('public.queued_payments_queued_payment_id_seq'::regclass);
 
 
 --
--- Name: review_assignments review_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: review_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_assignments ALTER COLUMN review_id SET DEFAULT nextval('public.review_assignments_review_id_seq'::regclass);
 
 
 --
--- Name: review_form_elements review_form_element_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: review_form_element_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_form_elements ALTER COLUMN review_form_element_id SET DEFAULT nextval('public.review_form_elements_review_form_element_id_seq'::regclass);
 
 
 --
--- Name: review_forms review_form_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: review_form_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_forms ALTER COLUMN review_form_id SET DEFAULT nextval('public.review_forms_review_form_id_seq'::regclass);
 
 
 --
--- Name: review_rounds review_round_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: review_round_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_rounds ALTER COLUMN review_round_id SET DEFAULT nextval('public.review_rounds_review_round_id_seq'::regclass);
 
 
 --
--- Name: sections section_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: section_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.sections ALTER COLUMN section_id SET DEFAULT nextval('public.sections_section_id_seq'::regclass);
 
 
 --
--- Name: stage_assignments stage_assignment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: stage_assignment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments ALTER COLUMN stage_assignment_id SET DEFAULT nextval('public.stage_assignments_stage_assignment_id_seq'::regclass);
 
 
 --
--- Name: static_pages static_page_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: static_page_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.static_pages ALTER COLUMN static_page_id SET DEFAULT nextval('public.static_pages_static_page_id_seq'::regclass);
 
 
 --
--- Name: submission_comments comment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: comment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_comments ALTER COLUMN comment_id SET DEFAULT nextval('public.submission_comments_comment_id_seq'::regclass);
 
 
 --
--- Name: submission_file_revisions revision_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: revision_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions ALTER COLUMN revision_id SET DEFAULT nextval('public.submission_file_revisions_revision_id_seq'::regclass);
 
 
 --
--- Name: submission_files submission_file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: submission_file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_files ALTER COLUMN submission_file_id SET DEFAULT nextval('public.submission_files_submission_file_id_seq'::regclass);
 
 
 --
--- Name: submission_search_keyword_list keyword_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: keyword_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list ALTER COLUMN keyword_id SET DEFAULT nextval('public.submission_search_keyword_list_keyword_id_seq'::regclass);
 
 
 --
--- Name: submission_search_objects object_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: object_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_objects ALTER COLUMN object_id SET DEFAULT nextval('public.submission_search_objects_object_id_seq'::regclass);
 
 
 --
--- Name: submissions submission_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: submission_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submissions ALTER COLUMN submission_id SET DEFAULT nextval('public.submissions_submission_id_seq'::regclass);
 
 
 --
--- Name: subscription_types type_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: type_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subscription_types ALTER COLUMN type_id SET DEFAULT nextval('public.subscription_types_type_id_seq'::regclass);
 
 
 --
--- Name: subscriptions subscription_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: subscription_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subscriptions ALTER COLUMN subscription_id SET DEFAULT nextval('public.subscriptions_subscription_id_seq'::regclass);
 
 
 --
--- Name: temporary_files file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.temporary_files ALTER COLUMN file_id SET DEFAULT nextval('public.temporary_files_file_id_seq'::regclass);
 
 
 --
--- Name: user_groups user_group_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: user_group_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_groups ALTER COLUMN user_group_id SET DEFAULT nextval('public.user_groups_user_group_id_seq'::regclass);
 
 
 --
--- Name: users user_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: user_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.users_user_id_seq'::regclass);
@@ -4262,6 +4261,13 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 
 COPY public.access_keys (access_key_id, context, key_hash, user_id, assoc_id, expiry_date) FROM stdin;
 \.
+
+
+--
+-- Name: access_keys_access_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.access_keys_access_key_id_seq', 1, false);
 
 
 --
@@ -4289,6 +4295,13 @@ COPY public.announcement_types (type_id, context_id) FROM stdin;
 
 
 --
+-- Name: announcement_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.announcement_types_type_id_seq', 1, false);
+
+
+--
 -- Data for Name: announcements; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -4297,11 +4310,25 @@ COPY public.announcements (announcement_id, assoc_type, assoc_id, type_id, date_
 
 
 --
+-- Name: announcements_announcement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.announcements_announcement_id_seq', 1, false);
+
+
+--
 -- Data for Name: auth_sources; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.auth_sources (auth_id, title, plugin, auth_default, settings) FROM stdin;
 \.
+
+
+--
+-- Name: auth_sources_auth_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.auth_sources_auth_id_seq', 1, false);
 
 
 --
@@ -4500,11 +4527,25 @@ COPY public.authors (author_id, email, include_in_browse, publication_id, seq, u
 
 
 --
+-- Name: authors_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.authors_author_id_seq', 25, true);
+
+
+--
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.categories (category_id, context_id, parent_id, seq, path, image) FROM stdin;
 \.
+
+
+--
+-- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.categories_category_id_seq', 1, false);
 
 
 --
@@ -4532,11 +4573,25 @@ COPY public.citations (citation_id, publication_id, raw_citation, seq) FROM stdi
 
 
 --
+-- Name: citations_citation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.citations_citation_id_seq', 1, false);
+
+
+--
 -- Data for Name: completed_payments; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.completed_payments (completed_payment_id, "timestamp", payment_type, context_id, user_id, assoc_id, amount, currency_code_alpha, payment_method_plugin_name) FROM stdin;
 \.
+
+
+--
+-- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.completed_payments_completed_payment_id_seq', 1, false);
 
 
 --
@@ -4590,6 +4645,13 @@ COPY public.controlled_vocab_entries (controlled_vocab_entry_id, controlled_voca
 74	92	2
 75	92	3
 \.
+
+
+--
+-- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq', 75, true);
 
 
 --
@@ -4755,6 +4817,13 @@ COPY public.controlled_vocabs (controlled_vocab_id, symbolic, assoc_type, assoc_
 
 
 --
+-- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocabs_controlled_vocab_id_seq', 101, true);
+
+
+--
 -- Data for Name: custom_issue_orders; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -4779,6 +4848,13 @@ COPY public.data_object_tombstone_oai_set_objects (object_id, tombstone_id, asso
 
 
 --
+-- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstone_oai_set_objects_object_id_seq', 6, true);
+
+
+--
 -- Data for Name: data_object_tombstone_settings; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -4795,41 +4871,55 @@ COPY public.data_object_tombstones (tombstone_id, data_object_id, date_deleted, 
 
 
 --
+-- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstones_tombstone_id_seq', 3, true);
+
+
+--
 -- Data for Name: edit_decisions; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	0	1	0	3	8	2021-10-20 23:59:01
-2	1	1	3	1	3	1	2021-10-20 23:59:26
-3	1	0	4	0	3	7	2021-10-20 23:59:39
-4	2	0	1	0	3	8	2021-10-21 00:03:16
-5	2	2	3	1	6	11	2021-10-21 00:03:43
-6	3	0	1	0	3	8	2021-10-21 00:04:28
-7	3	3	3	1	3	1	2021-10-21 00:04:45
-8	5	0	1	0	3	8	2021-10-21 00:05:52
-9	5	4	3	1	3	1	2021-10-21 00:06:09
-10	5	0	4	0	3	7	2021-10-21 00:06:21
-11	6	0	1	0	3	8	2021-10-21 00:07:12
-12	6	5	3	1	3	1	2021-10-21 00:07:30
-13	6	0	4	0	3	7	2021-10-21 00:07:43
-14	7	0	1	0	3	8	2021-10-21 00:08:25
-15	9	0	1	0	3	8	2021-10-21 00:09:56
-16	9	7	3	1	3	1	2021-10-21 00:10:13
-17	9	0	4	0	3	7	2021-10-21 00:10:26
-18	10	0	1	0	3	8	2021-10-21 00:11:17
-19	12	0	1	0	3	8	2021-10-21 00:13:01
-20	13	0	1	0	3	8	2021-10-21 00:13:55
-21	13	10	3	1	3	2	2021-10-21 00:15:16
-22	15	0	1	0	3	8	2021-10-21 00:16:11
-23	15	11	3	1	3	1	2021-10-21 00:16:28
-24	15	0	4	0	3	7	2021-10-21 00:16:41
-25	17	0	1	0	3	8	2021-10-21 00:17:52
-26	17	12	3	1	3	1	2021-10-21 00:18:10
-27	17	0	4	0	3	7	2021-10-21 00:18:23
-28	18	0	1	0	3	9	2021-10-21 00:21:05
-29	19	0	1	0	3	8	2021-10-21 00:21:41
-30	19	13	3	1	3	1	2021-10-21 00:21:59
+1	1	0	1	0	3	8	2021-10-23 01:04:35
+2	1	1	3	1	3	1	2021-10-23 01:04:59
+3	1	0	4	0	3	7	2021-10-23 01:05:13
+4	2	0	1	0	3	8	2021-10-23 01:08:28
+5	2	2	3	1	6	11	2021-10-23 01:08:50
+6	3	0	1	0	3	8	2021-10-23 01:09:27
+7	3	3	3	1	3	1	2021-10-23 01:09:43
+8	5	0	1	0	3	8	2021-10-23 01:10:41
+9	5	4	3	1	3	1	2021-10-23 01:10:57
+10	5	0	4	0	3	7	2021-10-23 01:11:08
+11	6	0	1	0	3	8	2021-10-23 01:11:49
+12	6	5	3	1	3	1	2021-10-23 01:12:05
+13	6	0	4	0	3	7	2021-10-23 01:12:16
+14	7	0	1	0	3	8	2021-10-23 01:12:51
+15	9	0	1	0	3	8	2021-10-23 01:14:10
+16	9	7	3	1	3	1	2021-10-23 01:14:27
+17	9	0	4	0	3	7	2021-10-23 01:14:37
+18	10	0	1	0	3	8	2021-10-23 01:15:22
+19	12	0	1	0	3	8	2021-10-23 01:16:52
+20	13	0	1	0	3	8	2021-10-23 01:17:37
+21	13	10	3	1	3	2	2021-10-23 01:18:49
+22	15	0	1	0	3	8	2021-10-23 01:19:38
+23	15	11	3	1	3	1	2021-10-23 01:19:53
+24	15	0	4	0	3	7	2021-10-23 01:20:04
+25	17	0	1	0	3	8	2021-10-23 01:21:04
+26	17	12	3	1	3	1	2021-10-23 01:21:20
+27	17	0	4	0	3	7	2021-10-23 01:21:32
+28	18	0	1	0	3	9	2021-10-23 01:23:58
+29	19	0	1	0	3	8	2021-10-23 01:24:27
+30	19	13	3	1	3	1	2021-10-23 01:24:43
 \.
+
+
+--
+-- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true);
 
 
 --
@@ -4838,6 +4928,13 @@ COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, st
 
 COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
 \.
+
+
+--
+-- Name: email_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.email_log_log_id_seq', 1, false);
 
 
 --
@@ -5050,6 +5147,20 @@ MANUAL_PAYMENT_NOTIFICATION	fr_CA	Avis de paiement manuel	Un paiement manuel doi
 
 
 --
+-- Name: email_templates_default_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_default_email_id_seq', 59, true);
+
+
+--
+-- Name: email_templates_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_email_id_seq', 1, false);
+
+
+--
 -- Data for Name: email_templates_settings; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -5062,267 +5173,274 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	17	2021-10-20 23:58:40	268435458	submission.event.general.metadataUpdated	0
-2	515	1	17	2021-10-20 23:58:43	1342177281	submission.event.fileUploaded	0
-3	1048585	1	17	2021-10-20 23:58:43	1342177288	submission.event.fileRevised	0
-4	515	1	17	2021-10-20 23:58:43	1342177296	submission.event.fileEdited	0
-5	1048585	1	17	2021-10-20 23:58:43	1342177296	submission.event.fileEdited	0
-6	1048585	1	17	2021-10-20 23:58:50	268435458	submission.event.general.metadataUpdated	0
-7	1048585	1	17	2021-10-20 23:58:52	268435457	submission.event.submissionSubmitted	0
-8	1048585	1	3	2021-10-20 23:59:01	805306371	log.editor.decision	0
-9	1048585	1	3	2021-10-20 23:59:10	1073741825	log.review.reviewerAssigned	0
-10	1048585	1	3	2021-10-20 23:59:17	1073741825	log.review.reviewerAssigned	0
-11	1048585	1	3	2021-10-20 23:59:23	1073741825	log.review.reviewerAssigned	0
-12	1048585	1	3	2021-10-20 23:59:26	805306371	log.editor.decision	0
-13	1048585	1	3	2021-10-20 23:59:36	268435459	submission.event.participantAdded	0
-14	1048585	1	3	2021-10-20 23:59:39	805306371	log.editor.decision	0
-15	1048585	1	3	2021-10-20 23:59:49	268435459	submission.event.participantAdded	0
-16	1048585	1	3	2021-10-20 23:59:56	268435459	submission.event.participantAdded	0
-17	1048585	1	3	2021-10-21 00:00:07	268435458	submission.event.general.metadataUpdated	0
-18	1048585	1	3	2021-10-21 00:00:11	268435458	submission.event.general.metadataUpdated	0
-19	1048585	1	3	2021-10-21 00:00:12	268435458	submission.event.general.metadataUpdated	0
-20	1048585	1	3	2021-10-21 00:00:19	268435458	submission.event.general.metadataUpdated	0
-21	515	2	3	2021-10-21 00:00:32	1342177281	submission.event.fileUploaded	0
-22	1048585	1	3	2021-10-21 00:00:32	1342177288	submission.event.fileRevised	0
-23	515	2	3	2021-10-21 00:00:33	1342177296	submission.event.fileEdited	0
-24	1048585	1	3	2021-10-21 00:00:33	1342177296	submission.event.fileEdited	0
-25	1048585	1	3	2021-10-21 00:00:48	268435459	submission.event.participantAdded	0
-26	1048585	1	17	2021-10-21 00:00:55	268435458	submission.event.general.metadataUpdated	0
-27	1048585	1	3	2021-10-21 00:01:02	268435458	submission.event.general.metadataUpdated	0
-28	1048585	1	3	2021-10-21 00:01:03	268435462	publication.event.published	0
-29	1048585	1	3	2021-10-21 00:01:17	268435463	publication.event.unpublished	0
-30	1048585	1	3	2021-10-21 00:01:26	268435462	publication.event.published	0
-31	1048585	1	3	2021-10-21 00:01:31	268435458	submission.event.general.metadataUpdated	0
-32	1048585	1	3	2021-10-21 00:01:31	268435458	submission.event.general.metadataUpdated	0
-33	1048585	1	3	2021-10-21 00:01:31	268435464	publication.event.versionCreated	0
-34	1048585	1	3	2021-10-21 00:01:42	268435458	submission.event.general.metadataUpdated	0
-35	1048585	1	3	2021-10-21 00:01:47	268435458	submission.event.general.metadataUpdated	0
-36	1048585	1	3	2021-10-21 00:01:55	268435458	submission.event.general.metadataUpdated	0
-37	1048585	1	3	2021-10-21 00:01:57	268435462	publication.event.versionPublished	0
-38	1048585	1	3	2021-10-21 00:02:15	268435463	publication.event.versionUnpublished	0
-39	1048585	1	3	2021-10-21 00:02:24	268435459	submission.event.participantAdded	0
-40	1048585	1	3	2021-10-21 00:02:37	268435459	submission.event.participantAdded	0
-41	1048585	2	18	2021-10-21 00:02:56	268435458	submission.event.general.metadataUpdated	0
-42	515	3	18	2021-10-21 00:02:59	1342177281	submission.event.fileUploaded	0
-43	1048585	2	18	2021-10-21 00:02:59	1342177288	submission.event.fileRevised	0
-44	515	3	18	2021-10-21 00:02:59	1342177296	submission.event.fileEdited	0
-45	1048585	2	18	2021-10-21 00:02:59	1342177296	submission.event.fileEdited	0
-46	1048585	2	18	2021-10-21 00:03:05	268435458	submission.event.general.metadataUpdated	0
-47	1048585	2	18	2021-10-21 00:03:07	268435457	submission.event.submissionSubmitted	0
-48	1048585	2	3	2021-10-21 00:03:16	805306371	log.editor.decision	0
-49	1048585	2	3	2021-10-21 00:03:25	268435459	submission.event.participantAdded	0
-50	1048585	2	3	2021-10-21 00:03:30	268435458	submission.event.general.metadataUpdated	0
-51	1048585	2	6	2021-10-21 00:03:43	805306372	log.editor.recommendation	0
-52	1048585	3	19	2021-10-21 00:04:05	268435458	submission.event.general.metadataUpdated	0
-53	515	4	19	2021-10-21 00:04:08	1342177281	submission.event.fileUploaded	0
-54	1048585	3	19	2021-10-21 00:04:08	1342177288	submission.event.fileRevised	0
-55	515	4	19	2021-10-21 00:04:09	1342177296	submission.event.fileEdited	0
-56	1048585	3	19	2021-10-21 00:04:09	1342177296	submission.event.fileEdited	0
-57	1048585	3	19	2021-10-21 00:04:15	268435458	submission.event.general.metadataUpdated	0
-58	1048585	3	19	2021-10-21 00:04:17	268435457	submission.event.submissionSubmitted	0
-59	1048585	3	3	2021-10-21 00:04:28	805306371	log.editor.decision	0
-60	1048585	3	3	2021-10-21 00:04:36	1073741825	log.review.reviewerAssigned	0
-61	1048585	3	3	2021-10-21 00:04:42	1073741825	log.review.reviewerAssigned	0
-62	1048585	3	3	2021-10-21 00:04:45	805306371	log.editor.decision	0
-63	1048585	3	3	2021-10-21 00:04:54	268435459	submission.event.participantAdded	0
-64	1048585	4	20	2021-10-21 00:05:06	268435458	submission.event.general.metadataUpdated	0
-65	515	5	20	2021-10-21 00:05:09	1342177281	submission.event.fileUploaded	0
-66	1048585	4	20	2021-10-21 00:05:09	1342177288	submission.event.fileRevised	0
-67	515	5	20	2021-10-21 00:05:09	1342177296	submission.event.fileEdited	0
-68	1048585	4	20	2021-10-21 00:05:09	1342177296	submission.event.fileEdited	0
-69	1048585	4	20	2021-10-21 00:05:21	268435458	submission.event.general.metadataUpdated	0
-70	1048585	4	20	2021-10-21 00:05:23	268435457	submission.event.submissionSubmitted	0
-71	1048585	5	21	2021-10-21 00:05:33	268435458	submission.event.general.metadataUpdated	0
-72	515	6	21	2021-10-21 00:05:36	1342177281	submission.event.fileUploaded	0
-73	1048585	5	21	2021-10-21 00:05:36	1342177288	submission.event.fileRevised	0
-74	515	6	21	2021-10-21 00:05:36	1342177296	submission.event.fileEdited	0
-75	1048585	5	21	2021-10-21 00:05:36	1342177296	submission.event.fileEdited	0
-76	1048585	5	21	2021-10-21 00:05:40	268435458	submission.event.general.metadataUpdated	0
-77	1048585	5	21	2021-10-21 00:05:42	268435457	submission.event.submissionSubmitted	0
-78	1048585	5	3	2021-10-21 00:05:52	805306371	log.editor.decision	0
-79	1048585	5	3	2021-10-21 00:06:00	1073741825	log.review.reviewerAssigned	0
-80	1048585	5	3	2021-10-21 00:06:06	1073741825	log.review.reviewerAssigned	0
-81	1048585	5	3	2021-10-21 00:06:09	805306371	log.editor.decision	0
-82	1048585	5	3	2021-10-21 00:06:18	268435459	submission.event.participantAdded	0
-83	1048585	5	3	2021-10-21 00:06:21	805306371	log.editor.decision	0
-84	1048585	5	3	2021-10-21 00:06:31	268435459	submission.event.participantAdded	0
-85	1048585	5	3	2021-10-21 00:06:38	268435459	submission.event.participantAdded	0
-86	1048585	6	22	2021-10-21 00:06:50	268435458	submission.event.general.metadataUpdated	0
-87	515	7	22	2021-10-21 00:06:52	1342177281	submission.event.fileUploaded	0
-88	1048585	6	22	2021-10-21 00:06:52	1342177288	submission.event.fileRevised	0
-89	515	7	22	2021-10-21 00:06:53	1342177296	submission.event.fileEdited	0
-90	1048585	6	22	2021-10-21 00:06:53	1342177296	submission.event.fileEdited	0
-91	1048585	6	22	2021-10-21 00:07:00	268435458	submission.event.general.metadataUpdated	0
-92	1048585	6	22	2021-10-21 00:07:02	268435457	submission.event.submissionSubmitted	0
-93	1048585	6	3	2021-10-21 00:07:12	805306371	log.editor.decision	0
-94	1048585	6	3	2021-10-21 00:07:22	1073741825	log.review.reviewerAssigned	0
-95	1048585	6	3	2021-10-21 00:07:28	1073741825	log.review.reviewerAssigned	0
-96	1048585	6	3	2021-10-21 00:07:30	805306371	log.editor.decision	0
-97	1048585	6	3	2021-10-21 00:07:39	268435459	submission.event.participantAdded	0
-98	1048585	6	3	2021-10-21 00:07:43	805306371	log.editor.decision	0
-99	1048585	6	3	2021-10-21 00:07:52	268435459	submission.event.participantAdded	0
-100	1048585	7	23	2021-10-21 00:08:04	268435458	submission.event.general.metadataUpdated	0
-101	515	8	23	2021-10-21 00:08:07	1342177281	submission.event.fileUploaded	0
-102	1048585	7	23	2021-10-21 00:08:07	1342177288	submission.event.fileRevised	0
-103	515	8	23	2021-10-21 00:08:07	1342177296	submission.event.fileEdited	0
-104	1048585	7	23	2021-10-21 00:08:07	1342177296	submission.event.fileEdited	0
-105	1048585	7	23	2021-10-21 00:08:11	268435458	submission.event.general.metadataUpdated	0
-106	1048585	7	23	2021-10-21 00:08:13	268435457	submission.event.submissionSubmitted	0
-107	1048585	7	3	2021-10-21 00:08:25	805306371	log.editor.decision	0
-108	1048585	7	3	2021-10-21 00:08:33	1073741825	log.review.reviewerAssigned	0
-109	1048585	7	3	2021-10-21 00:08:39	1073741825	log.review.reviewerAssigned	0
-110	1048585	7	3	2021-10-21 00:08:45	1073741825	log.review.reviewerAssigned	0
-111	1048585	7	8	2021-10-21 00:08:54	1073741830	log.review.reviewAccepted	0
-112	1048585	7	8	2021-10-21 00:08:59	1073741848	log.review.reviewReady	0
-113	1048585	8	24	2021-10-21 00:09:10	268435458	submission.event.general.metadataUpdated	0
-114	515	9	24	2021-10-21 00:09:13	1342177281	submission.event.fileUploaded	0
-115	1048585	8	24	2021-10-21 00:09:13	1342177288	submission.event.fileRevised	0
-116	515	9	24	2021-10-21 00:09:13	1342177296	submission.event.fileEdited	0
-117	1048585	8	24	2021-10-21 00:09:13	1342177296	submission.event.fileEdited	0
-118	1048585	8	24	2021-10-21 00:09:24	268435458	submission.event.general.metadataUpdated	0
-119	1048585	8	24	2021-10-21 00:09:26	268435457	submission.event.submissionSubmitted	0
-120	1048585	9	25	2021-10-21 00:09:37	268435458	submission.event.general.metadataUpdated	0
-121	515	10	25	2021-10-21 00:09:39	1342177281	submission.event.fileUploaded	0
-122	1048585	9	25	2021-10-21 00:09:39	1342177288	submission.event.fileRevised	0
-123	515	10	25	2021-10-21 00:09:40	1342177296	submission.event.fileEdited	0
-124	1048585	9	25	2021-10-21 00:09:40	1342177296	submission.event.fileEdited	0
-125	1048585	9	25	2021-10-21 00:09:43	268435458	submission.event.general.metadataUpdated	0
-126	1048585	9	25	2021-10-21 00:09:45	268435457	submission.event.submissionSubmitted	0
-127	1048585	9	3	2021-10-21 00:09:56	805306371	log.editor.decision	0
-128	1048585	9	3	2021-10-21 00:10:05	1073741825	log.review.reviewerAssigned	0
-129	1048585	9	3	2021-10-21 00:10:11	1073741825	log.review.reviewerAssigned	0
-130	1048585	9	3	2021-10-21 00:10:13	805306371	log.editor.decision	0
-131	1048585	9	3	2021-10-21 00:10:22	268435459	submission.event.participantAdded	0
-132	1048585	9	3	2021-10-21 00:10:26	805306371	log.editor.decision	0
-133	1048585	9	3	2021-10-21 00:10:36	268435459	submission.event.participantAdded	0
-134	1048585	9	3	2021-10-21 00:10:42	268435459	submission.event.participantAdded	0
-135	1048585	10	26	2021-10-21 00:10:54	268435458	submission.event.general.metadataUpdated	0
-136	515	11	26	2021-10-21 00:10:56	1342177281	submission.event.fileUploaded	0
-137	1048585	10	26	2021-10-21 00:10:56	1342177288	submission.event.fileRevised	0
-138	515	11	26	2021-10-21 00:10:57	1342177296	submission.event.fileEdited	0
-139	1048585	10	26	2021-10-21 00:10:57	1342177296	submission.event.fileEdited	0
-140	1048585	10	26	2021-10-21 00:11:03	268435458	submission.event.general.metadataUpdated	0
-141	1048585	10	26	2021-10-21 00:11:05	268435457	submission.event.submissionSubmitted	0
-142	1048585	10	3	2021-10-21 00:11:17	805306371	log.editor.decision	0
-143	1048585	10	3	2021-10-21 00:11:25	1073741825	log.review.reviewerAssigned	0
-144	1048585	10	3	2021-10-21 00:11:31	1073741825	log.review.reviewerAssigned	0
-145	1048585	10	9	2021-10-21 00:11:40	1073741830	log.review.reviewAccepted	0
-146	1048585	10	9	2021-10-21 00:11:45	1073741848	log.review.reviewReady	0
-147	1048585	10	10	2021-10-21 00:11:54	1073741830	log.review.reviewAccepted	0
-148	1048585	10	10	2021-10-21 00:11:59	1073741848	log.review.reviewReady	0
-149	1048585	11	27	2021-10-21 00:12:11	268435458	submission.event.general.metadataUpdated	0
-150	515	12	27	2021-10-21 00:12:14	1342177281	submission.event.fileUploaded	0
-151	1048585	11	27	2021-10-21 00:12:14	1342177288	submission.event.fileRevised	0
-152	515	12	27	2021-10-21 00:12:15	1342177296	submission.event.fileEdited	0
-153	1048585	11	27	2021-10-21 00:12:15	1342177296	submission.event.fileEdited	0
-154	1048585	11	27	2021-10-21 00:12:24	268435458	submission.event.general.metadataUpdated	0
-155	1048585	11	27	2021-10-21 00:12:26	268435457	submission.event.submissionSubmitted	0
-156	1048585	12	28	2021-10-21 00:12:37	268435458	submission.event.general.metadataUpdated	0
-157	515	13	28	2021-10-21 00:12:40	1342177281	submission.event.fileUploaded	0
-158	1048585	12	28	2021-10-21 00:12:40	1342177288	submission.event.fileRevised	0
-159	515	13	28	2021-10-21 00:12:40	1342177296	submission.event.fileEdited	0
-160	1048585	12	28	2021-10-21 00:12:40	1342177296	submission.event.fileEdited	0
-161	1048585	12	28	2021-10-21 00:12:47	268435458	submission.event.general.metadataUpdated	0
-162	1048585	12	28	2021-10-21 00:12:49	268435457	submission.event.submissionSubmitted	0
-163	1048585	12	3	2021-10-21 00:13:01	805306371	log.editor.decision	0
-164	1048585	12	3	2021-10-21 00:13:11	1073741825	log.review.reviewerAssigned	0
-165	1048585	12	3	2021-10-21 00:13:17	1073741825	log.review.reviewerAssigned	0
-166	1048585	13	29	2021-10-21 00:13:29	268435458	submission.event.general.metadataUpdated	0
-167	515	14	29	2021-10-21 00:13:32	1342177281	submission.event.fileUploaded	0
-168	1048585	13	29	2021-10-21 00:13:32	1342177288	submission.event.fileRevised	0
-169	515	14	29	2021-10-21 00:13:33	1342177296	submission.event.fileEdited	0
-170	1048585	13	29	2021-10-21 00:13:33	1342177296	submission.event.fileEdited	0
-171	1048585	13	29	2021-10-21 00:13:40	268435458	submission.event.general.metadataUpdated	0
-172	1048585	13	29	2021-10-21 00:13:42	268435457	submission.event.submissionSubmitted	0
-173	1048585	13	3	2021-10-21 00:13:55	805306371	log.editor.decision	0
-174	1048585	13	3	2021-10-21 00:14:04	1073741825	log.review.reviewerAssigned	0
-175	1048585	13	3	2021-10-21 00:14:09	1073741825	log.review.reviewerAssigned	0
-176	1048585	13	3	2021-10-21 00:14:15	1073741825	log.review.reviewerAssigned	0
-177	1048585	13	7	2021-10-21 00:14:24	1073741830	log.review.reviewAccepted	0
-178	1048585	13	7	2021-10-21 00:14:29	1073741848	log.review.reviewReady	0
-179	1048585	13	9	2021-10-21 00:14:37	1073741830	log.review.reviewAccepted	0
-180	1048585	13	9	2021-10-21 00:14:43	1073741848	log.review.reviewReady	0
-181	1048585	13	10	2021-10-21 00:14:53	1073741830	log.review.reviewAccepted	0
-182	1048585	13	10	2021-10-21 00:14:58	1073741848	log.review.reviewReady	0
-183	1048585	13	3	2021-10-21 00:15:16	805306371	log.editor.decision	0
-184	1048585	14	30	2021-10-21 00:15:28	268435458	submission.event.general.metadataUpdated	0
-185	515	15	30	2021-10-21 00:15:31	1342177281	submission.event.fileUploaded	0
-186	1048585	14	30	2021-10-21 00:15:31	1342177288	submission.event.fileRevised	0
-187	515	15	30	2021-10-21 00:15:31	1342177296	submission.event.fileEdited	0
-188	1048585	14	30	2021-10-21 00:15:31	1342177296	submission.event.fileEdited	0
-189	1048585	14	30	2021-10-21 00:15:37	268435458	submission.event.general.metadataUpdated	0
-190	1048585	14	30	2021-10-21 00:15:38	268435457	submission.event.submissionSubmitted	0
-191	1048585	15	31	2021-10-21 00:15:49	268435458	submission.event.general.metadataUpdated	0
-192	515	16	31	2021-10-21 00:15:51	1342177281	submission.event.fileUploaded	0
-193	1048585	15	31	2021-10-21 00:15:51	1342177288	submission.event.fileRevised	0
-194	515	16	31	2021-10-21 00:15:52	1342177296	submission.event.fileEdited	0
-195	1048585	15	31	2021-10-21 00:15:52	1342177296	submission.event.fileEdited	0
-196	1048585	15	31	2021-10-21 00:15:55	268435458	submission.event.general.metadataUpdated	0
-197	1048585	15	31	2021-10-21 00:15:57	268435457	submission.event.submissionSubmitted	0
-198	1048585	15	3	2021-10-21 00:16:11	805306371	log.editor.decision	0
-199	1048585	15	3	2021-10-21 00:16:20	1073741825	log.review.reviewerAssigned	0
-200	1048585	15	3	2021-10-21 00:16:25	1073741825	log.review.reviewerAssigned	0
-201	1048585	15	3	2021-10-21 00:16:28	805306371	log.editor.decision	0
-202	1048585	15	3	2021-10-21 00:16:37	268435459	submission.event.participantAdded	0
-203	1048585	15	3	2021-10-21 00:16:41	805306371	log.editor.decision	0
-204	1048585	15	3	2021-10-21 00:16:51	268435459	submission.event.participantAdded	0
-205	1048585	16	32	2021-10-21 00:17:03	268435458	submission.event.general.metadataUpdated	0
-206	515	17	32	2021-10-21 00:17:06	1342177281	submission.event.fileUploaded	0
-207	1048585	16	32	2021-10-21 00:17:06	1342177288	submission.event.fileRevised	0
-208	515	17	32	2021-10-21 00:17:06	1342177296	submission.event.fileEdited	0
-209	1048585	16	32	2021-10-21 00:17:06	1342177296	submission.event.fileEdited	0
-210	1048585	16	32	2021-10-21 00:17:13	268435458	submission.event.general.metadataUpdated	0
-211	1048585	16	32	2021-10-21 00:17:15	268435457	submission.event.submissionSubmitted	0
-212	1048585	17	33	2021-10-21 00:17:26	268435458	submission.event.general.metadataUpdated	0
-213	515	18	33	2021-10-21 00:17:28	1342177281	submission.event.fileUploaded	0
-214	1048585	17	33	2021-10-21 00:17:28	1342177288	submission.event.fileRevised	0
-215	515	18	33	2021-10-21 00:17:29	1342177296	submission.event.fileEdited	0
-216	1048585	17	33	2021-10-21 00:17:29	1342177296	submission.event.fileEdited	0
-217	1048585	17	33	2021-10-21 00:17:37	268435458	submission.event.general.metadataUpdated	0
-218	1048585	17	33	2021-10-21 00:17:39	268435457	submission.event.submissionSubmitted	0
-219	1048585	17	3	2021-10-21 00:17:52	805306371	log.editor.decision	0
-220	1048585	17	3	2021-10-21 00:18:01	1073741825	log.review.reviewerAssigned	0
-221	1048585	17	3	2021-10-21 00:18:07	1073741825	log.review.reviewerAssigned	0
-222	1048585	17	3	2021-10-21 00:18:10	805306371	log.editor.decision	0
-223	1048585	17	3	2021-10-21 00:18:19	268435459	submission.event.participantAdded	0
-224	1048585	17	3	2021-10-21 00:18:23	805306371	log.editor.decision	0
-225	1048585	17	3	2021-10-21 00:18:33	268435459	submission.event.participantAdded	0
-226	1048585	17	3	2021-10-21 00:18:39	268435459	submission.event.participantAdded	0
-227	515	19	3	2021-10-21 00:18:48	1342177281	submission.event.fileUploaded	0
-228	1048585	17	3	2021-10-21 00:18:48	1342177288	submission.event.fileRevised	0
-229	515	19	3	2021-10-21 00:18:49	1342177296	submission.event.fileEdited	0
-230	1048585	17	3	2021-10-21 00:18:49	1342177296	submission.event.fileEdited	0
-231	1048585	17	3	2021-10-21 00:19:03	268435458	submission.event.general.metadataUpdated	0
-232	1048585	17	3	2021-10-21 00:19:05	268435462	publication.event.scheduled	0
-233	1048585	17	3	2021-10-21 00:19:13	268435462	publication.event.published	0
-234	1048585	17	3	2021-10-21 00:19:29	268435463	publication.event.unpublished	0
-235	1048585	17	3	2021-10-21 00:19:29	268435462	publication.event.scheduled	0
-236	1048585	17	3	2021-10-21 00:19:42	268435462	publication.event.published	0
-237	1048585	17	3	2021-10-21 00:19:57	268435463	publication.event.unpublished	0
-238	1048585	17	3	2021-10-21 00:19:57	268435458	submission.event.general.metadataUpdated	0
-239	1048585	17	3	2021-10-21 00:20:20	268435458	submission.event.general.metadataUpdated	0
-240	1048585	17	3	2021-10-21 00:20:22	268435462	publication.event.published	0
-241	1048585	18	34	2021-10-21 00:20:42	268435458	submission.event.general.metadataUpdated	0
-242	515	20	34	2021-10-21 00:20:44	1342177281	submission.event.fileUploaded	0
-243	1048585	18	34	2021-10-21 00:20:44	1342177288	submission.event.fileRevised	0
-244	515	20	34	2021-10-21 00:20:45	1342177296	submission.event.fileEdited	0
-245	1048585	18	34	2021-10-21 00:20:45	1342177296	submission.event.fileEdited	0
-246	1048585	18	34	2021-10-21 00:20:49	268435458	submission.event.general.metadataUpdated	0
-247	1048585	18	34	2021-10-21 00:20:51	268435457	submission.event.submissionSubmitted	0
-248	1048585	18	3	2021-10-21 00:21:05	805306371	log.editor.decision	0
-249	1048585	19	35	2021-10-21 00:21:19	268435458	submission.event.general.metadataUpdated	0
-250	515	21	35	2021-10-21 00:21:22	1342177281	submission.event.fileUploaded	0
-251	1048585	19	35	2021-10-21 00:21:22	1342177288	submission.event.fileRevised	0
-252	515	21	35	2021-10-21 00:21:22	1342177296	submission.event.fileEdited	0
-253	1048585	19	35	2021-10-21 00:21:22	1342177296	submission.event.fileEdited	0
-254	1048585	19	35	2021-10-21 00:21:26	268435458	submission.event.general.metadataUpdated	0
-255	1048585	19	35	2021-10-21 00:21:27	268435457	submission.event.submissionSubmitted	0
-256	1048585	19	3	2021-10-21 00:21:41	805306371	log.editor.decision	0
-257	1048585	19	3	2021-10-21 00:21:50	1073741825	log.review.reviewerAssigned	0
-258	1048585	19	3	2021-10-21 00:21:56	1073741825	log.review.reviewerAssigned	0
-259	1048585	19	3	2021-10-21 00:21:59	805306371	log.editor.decision	0
-260	1048585	19	3	2021-10-21 00:22:07	268435459	submission.event.participantAdded	0
+1	1048585	1	17	2021-10-23 01:04:17	268435458	submission.event.general.metadataUpdated	0
+2	515	1	17	2021-10-23 01:04:20	1342177281	submission.event.fileUploaded	0
+3	1048585	1	17	2021-10-23 01:04:20	1342177288	submission.event.fileRevised	0
+4	515	1	17	2021-10-23 01:04:20	1342177296	submission.event.fileEdited	0
+5	1048585	1	17	2021-10-23 01:04:20	1342177296	submission.event.fileEdited	0
+6	1048585	1	17	2021-10-23 01:04:24	268435458	submission.event.general.metadataUpdated	0
+7	1048585	1	17	2021-10-23 01:04:26	268435457	submission.event.submissionSubmitted	0
+8	1048585	1	3	2021-10-23 01:04:35	805306371	log.editor.decision	0
+9	1048585	1	3	2021-10-23 01:04:43	1073741825	log.review.reviewerAssigned	0
+10	1048585	1	3	2021-10-23 01:04:49	1073741825	log.review.reviewerAssigned	0
+11	1048585	1	3	2021-10-23 01:04:55	1073741825	log.review.reviewerAssigned	0
+12	1048585	1	3	2021-10-23 01:04:59	805306371	log.editor.decision	0
+13	1048585	1	3	2021-10-23 01:05:10	268435459	submission.event.participantAdded	0
+14	1048585	1	3	2021-10-23 01:05:13	805306371	log.editor.decision	0
+15	1048585	1	3	2021-10-23 01:05:22	268435459	submission.event.participantAdded	0
+16	1048585	1	3	2021-10-23 01:05:27	268435459	submission.event.participantAdded	0
+17	1048585	1	3	2021-10-23 01:05:36	268435458	submission.event.general.metadataUpdated	0
+18	1048585	1	3	2021-10-23 01:05:40	268435458	submission.event.general.metadataUpdated	0
+19	1048585	1	3	2021-10-23 01:05:41	268435458	submission.event.general.metadataUpdated	0
+20	1048585	1	3	2021-10-23 01:05:46	268435458	submission.event.general.metadataUpdated	0
+21	515	2	3	2021-10-23 01:05:59	1342177281	submission.event.fileUploaded	0
+22	1048585	1	3	2021-10-23 01:05:59	1342177288	submission.event.fileRevised	0
+23	515	2	3	2021-10-23 01:06:00	1342177296	submission.event.fileEdited	0
+24	1048585	1	3	2021-10-23 01:06:00	1342177296	submission.event.fileEdited	0
+25	1048585	1	3	2021-10-23 01:06:14	268435459	submission.event.participantAdded	0
+26	1048585	1	17	2021-10-23 01:06:21	268435458	submission.event.general.metadataUpdated	0
+27	1048585	1	3	2021-10-23 01:06:26	268435458	submission.event.general.metadataUpdated	0
+28	1048585	1	3	2021-10-23 01:06:28	268435462	publication.event.published	0
+29	1048585	1	3	2021-10-23 01:06:41	268435463	publication.event.unpublished	0
+30	1048585	1	3	2021-10-23 01:06:48	268435462	publication.event.published	0
+31	1048585	1	3	2021-10-23 01:06:53	268435458	submission.event.general.metadataUpdated	0
+32	1048585	1	3	2021-10-23 01:06:53	268435458	submission.event.general.metadataUpdated	0
+33	1048585	1	3	2021-10-23 01:06:53	268435464	publication.event.versionCreated	0
+34	1048585	1	3	2021-10-23 01:07:04	268435458	submission.event.general.metadataUpdated	0
+35	1048585	1	3	2021-10-23 01:07:08	268435458	submission.event.general.metadataUpdated	0
+36	1048585	1	3	2021-10-23 01:07:16	268435458	submission.event.general.metadataUpdated	0
+37	1048585	1	3	2021-10-23 01:07:17	268435462	publication.event.versionPublished	0
+38	1048585	1	3	2021-10-23 01:07:35	268435463	publication.event.versionUnpublished	0
+39	1048585	1	3	2021-10-23 01:07:44	268435459	submission.event.participantAdded	0
+40	1048585	1	3	2021-10-23 01:07:56	268435459	submission.event.participantAdded	0
+41	1048585	2	18	2021-10-23 01:08:11	268435458	submission.event.general.metadataUpdated	0
+42	515	3	18	2021-10-23 01:08:14	1342177281	submission.event.fileUploaded	0
+43	1048585	2	18	2021-10-23 01:08:14	1342177288	submission.event.fileRevised	0
+44	515	3	18	2021-10-23 01:08:14	1342177296	submission.event.fileEdited	0
+45	1048585	2	18	2021-10-23 01:08:14	1342177296	submission.event.fileEdited	0
+46	1048585	2	18	2021-10-23 01:08:18	268435458	submission.event.general.metadataUpdated	0
+47	1048585	2	18	2021-10-23 01:08:19	268435457	submission.event.submissionSubmitted	0
+48	1048585	2	3	2021-10-23 01:08:28	805306371	log.editor.decision	0
+49	1048585	2	3	2021-10-23 01:08:35	268435459	submission.event.participantAdded	0
+50	1048585	2	3	2021-10-23 01:08:39	268435458	submission.event.general.metadataUpdated	0
+51	1048585	2	6	2021-10-23 01:08:50	805306372	log.editor.recommendation	0
+52	1048585	3	19	2021-10-23 01:09:10	268435458	submission.event.general.metadataUpdated	0
+53	515	4	19	2021-10-23 01:09:13	1342177281	submission.event.fileUploaded	0
+54	1048585	3	19	2021-10-23 01:09:13	1342177288	submission.event.fileRevised	0
+55	515	4	19	2021-10-23 01:09:13	1342177296	submission.event.fileEdited	0
+56	1048585	3	19	2021-10-23 01:09:13	1342177296	submission.event.fileEdited	0
+57	1048585	3	19	2021-10-23 01:09:17	268435458	submission.event.general.metadataUpdated	0
+58	1048585	3	19	2021-10-23 01:09:18	268435457	submission.event.submissionSubmitted	0
+59	1048585	3	3	2021-10-23 01:09:27	805306371	log.editor.decision	0
+60	1048585	3	3	2021-10-23 01:09:35	1073741825	log.review.reviewerAssigned	0
+61	1048585	3	3	2021-10-23 01:09:40	1073741825	log.review.reviewerAssigned	0
+62	1048585	3	3	2021-10-23 01:09:43	805306371	log.editor.decision	0
+63	1048585	3	3	2021-10-23 01:09:51	268435459	submission.event.participantAdded	0
+64	1048585	4	20	2021-10-23 01:10:03	268435458	submission.event.general.metadataUpdated	0
+65	515	5	20	2021-10-23 01:10:05	1342177281	submission.event.fileUploaded	0
+66	1048585	4	20	2021-10-23 01:10:05	1342177288	submission.event.fileRevised	0
+67	515	5	20	2021-10-23 01:10:05	1342177296	submission.event.fileEdited	0
+68	1048585	4	20	2021-10-23 01:10:05	1342177296	submission.event.fileEdited	0
+69	1048585	4	20	2021-10-23 01:10:14	268435458	submission.event.general.metadataUpdated	0
+70	1048585	4	20	2021-10-23 01:10:16	268435457	submission.event.submissionSubmitted	0
+71	1048585	5	21	2021-10-23 01:10:26	268435458	submission.event.general.metadataUpdated	0
+72	515	6	21	2021-10-23 01:10:28	1342177281	submission.event.fileUploaded	0
+73	1048585	5	21	2021-10-23 01:10:28	1342177288	submission.event.fileRevised	0
+74	515	6	21	2021-10-23 01:10:28	1342177296	submission.event.fileEdited	0
+75	1048585	5	21	2021-10-23 01:10:28	1342177296	submission.event.fileEdited	0
+76	1048585	5	21	2021-10-23 01:10:31	268435458	submission.event.general.metadataUpdated	0
+77	1048585	5	21	2021-10-23 01:10:32	268435457	submission.event.submissionSubmitted	0
+78	1048585	5	3	2021-10-23 01:10:41	805306371	log.editor.decision	0
+79	1048585	5	3	2021-10-23 01:10:49	1073741825	log.review.reviewerAssigned	0
+80	1048585	5	3	2021-10-23 01:10:55	1073741825	log.review.reviewerAssigned	0
+81	1048585	5	3	2021-10-23 01:10:57	805306371	log.editor.decision	0
+82	1048585	5	3	2021-10-23 01:11:05	268435459	submission.event.participantAdded	0
+83	1048585	5	3	2021-10-23 01:11:08	805306371	log.editor.decision	0
+84	1048585	5	3	2021-10-23 01:11:16	268435459	submission.event.participantAdded	0
+85	1048585	5	3	2021-10-23 01:11:21	268435459	submission.event.participantAdded	0
+86	1048585	6	22	2021-10-23 01:11:32	268435458	submission.event.general.metadataUpdated	0
+87	515	7	22	2021-10-23 01:11:35	1342177281	submission.event.fileUploaded	0
+88	1048585	6	22	2021-10-23 01:11:35	1342177288	submission.event.fileRevised	0
+89	515	7	22	2021-10-23 01:11:35	1342177296	submission.event.fileEdited	0
+90	1048585	6	22	2021-10-23 01:11:35	1342177296	submission.event.fileEdited	0
+91	1048585	6	22	2021-10-23 01:11:39	268435458	submission.event.general.metadataUpdated	0
+92	1048585	6	22	2021-10-23 01:11:41	268435457	submission.event.submissionSubmitted	0
+93	1048585	6	3	2021-10-23 01:11:49	805306371	log.editor.decision	0
+94	1048585	6	3	2021-10-23 01:11:57	1073741825	log.review.reviewerAssigned	0
+95	1048585	6	3	2021-10-23 01:12:03	1073741825	log.review.reviewerAssigned	0
+96	1048585	6	3	2021-10-23 01:12:05	805306371	log.editor.decision	0
+97	1048585	6	3	2021-10-23 01:12:13	268435459	submission.event.participantAdded	0
+98	1048585	6	3	2021-10-23 01:12:16	805306371	log.editor.decision	0
+99	1048585	6	3	2021-10-23 01:12:24	268435459	submission.event.participantAdded	0
+100	1048585	7	23	2021-10-23 01:12:35	268435458	submission.event.general.metadataUpdated	0
+101	515	8	23	2021-10-23 01:12:38	1342177281	submission.event.fileUploaded	0
+102	1048585	7	23	2021-10-23 01:12:38	1342177288	submission.event.fileRevised	0
+103	515	8	23	2021-10-23 01:12:38	1342177296	submission.event.fileEdited	0
+104	1048585	7	23	2021-10-23 01:12:38	1342177296	submission.event.fileEdited	0
+105	1048585	7	23	2021-10-23 01:12:41	268435458	submission.event.general.metadataUpdated	0
+106	1048585	7	23	2021-10-23 01:12:43	268435457	submission.event.submissionSubmitted	0
+107	1048585	7	3	2021-10-23 01:12:51	805306371	log.editor.decision	0
+108	1048585	7	3	2021-10-23 01:12:59	1073741825	log.review.reviewerAssigned	0
+109	1048585	7	3	2021-10-23 01:13:04	1073741825	log.review.reviewerAssigned	0
+110	1048585	7	3	2021-10-23 01:13:09	1073741825	log.review.reviewerAssigned	0
+111	1048585	7	8	2021-10-23 01:13:17	1073741830	log.review.reviewAccepted	0
+112	1048585	7	8	2021-10-23 01:13:21	1073741848	log.review.reviewReady	0
+113	1048585	8	24	2021-10-23 01:13:33	268435458	submission.event.general.metadataUpdated	0
+114	515	9	24	2021-10-23 01:13:35	1342177281	submission.event.fileUploaded	0
+115	1048585	8	24	2021-10-23 01:13:35	1342177288	submission.event.fileRevised	0
+116	515	9	24	2021-10-23 01:13:35	1342177296	submission.event.fileEdited	0
+117	1048585	8	24	2021-10-23 01:13:35	1342177296	submission.event.fileEdited	0
+118	1048585	8	24	2021-10-23 01:13:43	268435458	submission.event.general.metadataUpdated	0
+119	1048585	8	24	2021-10-23 01:13:45	268435457	submission.event.submissionSubmitted	0
+120	1048585	9	25	2021-10-23 01:13:54	268435458	submission.event.general.metadataUpdated	0
+121	515	10	25	2021-10-23 01:13:57	1342177281	submission.event.fileUploaded	0
+122	1048585	9	25	2021-10-23 01:13:57	1342177288	submission.event.fileRevised	0
+123	515	10	25	2021-10-23 01:13:57	1342177296	submission.event.fileEdited	0
+124	1048585	9	25	2021-10-23 01:13:57	1342177296	submission.event.fileEdited	0
+125	1048585	9	25	2021-10-23 01:13:59	268435458	submission.event.general.metadataUpdated	0
+126	1048585	9	25	2021-10-23 01:14:01	268435457	submission.event.submissionSubmitted	0
+127	1048585	9	3	2021-10-23 01:14:10	805306371	log.editor.decision	0
+128	1048585	9	3	2021-10-23 01:14:19	1073741825	log.review.reviewerAssigned	0
+129	1048585	9	3	2021-10-23 01:14:24	1073741825	log.review.reviewerAssigned	0
+130	1048585	9	3	2021-10-23 01:14:27	805306371	log.editor.decision	0
+131	1048585	9	3	2021-10-23 01:14:34	268435459	submission.event.participantAdded	0
+132	1048585	9	3	2021-10-23 01:14:37	805306371	log.editor.decision	0
+133	1048585	9	3	2021-10-23 01:14:45	268435459	submission.event.participantAdded	0
+134	1048585	9	3	2021-10-23 01:14:51	268435459	submission.event.participantAdded	0
+135	1048585	10	26	2021-10-23 01:15:02	268435458	submission.event.general.metadataUpdated	0
+136	515	11	26	2021-10-23 01:15:04	1342177281	submission.event.fileUploaded	0
+137	1048585	10	26	2021-10-23 01:15:04	1342177288	submission.event.fileRevised	0
+138	515	11	26	2021-10-23 01:15:05	1342177296	submission.event.fileEdited	0
+139	1048585	10	26	2021-10-23 01:15:05	1342177296	submission.event.fileEdited	0
+140	1048585	10	26	2021-10-23 01:15:09	268435458	submission.event.general.metadataUpdated	0
+141	1048585	10	26	2021-10-23 01:15:11	268435457	submission.event.submissionSubmitted	0
+142	1048585	10	3	2021-10-23 01:15:22	805306371	log.editor.decision	0
+143	1048585	10	3	2021-10-23 01:15:30	1073741825	log.review.reviewerAssigned	0
+144	1048585	10	3	2021-10-23 01:15:35	1073741825	log.review.reviewerAssigned	0
+145	1048585	10	9	2021-10-23 01:15:42	1073741830	log.review.reviewAccepted	0
+146	1048585	10	9	2021-10-23 01:15:46	1073741848	log.review.reviewReady	0
+147	1048585	10	10	2021-10-23 01:15:54	1073741830	log.review.reviewAccepted	0
+148	1048585	10	10	2021-10-23 01:15:58	1073741848	log.review.reviewReady	0
+149	1048585	11	27	2021-10-23 01:16:10	268435458	submission.event.general.metadataUpdated	0
+150	515	12	27	2021-10-23 01:16:12	1342177281	submission.event.fileUploaded	0
+151	1048585	11	27	2021-10-23 01:16:12	1342177288	submission.event.fileRevised	0
+152	515	12	27	2021-10-23 01:16:12	1342177296	submission.event.fileEdited	0
+153	1048585	11	27	2021-10-23 01:16:12	1342177296	submission.event.fileEdited	0
+154	1048585	11	27	2021-10-23 01:16:20	268435458	submission.event.general.metadataUpdated	0
+155	1048585	11	27	2021-10-23 01:16:22	268435457	submission.event.submissionSubmitted	0
+156	1048585	12	28	2021-10-23 01:16:31	268435458	submission.event.general.metadataUpdated	0
+157	515	13	28	2021-10-23 01:16:34	1342177281	submission.event.fileUploaded	0
+158	1048585	12	28	2021-10-23 01:16:34	1342177288	submission.event.fileRevised	0
+159	515	13	28	2021-10-23 01:16:34	1342177296	submission.event.fileEdited	0
+160	1048585	12	28	2021-10-23 01:16:34	1342177296	submission.event.fileEdited	0
+161	1048585	12	28	2021-10-23 01:16:38	268435458	submission.event.general.metadataUpdated	0
+162	1048585	12	28	2021-10-23 01:16:40	268435457	submission.event.submissionSubmitted	0
+163	1048585	12	3	2021-10-23 01:16:52	805306371	log.editor.decision	0
+164	1048585	12	3	2021-10-23 01:17:00	1073741825	log.review.reviewerAssigned	0
+165	1048585	12	3	2021-10-23 01:17:05	1073741825	log.review.reviewerAssigned	0
+166	1048585	13	29	2021-10-23 01:17:15	268435458	submission.event.general.metadataUpdated	0
+167	515	14	29	2021-10-23 01:17:18	1342177281	submission.event.fileUploaded	0
+168	1048585	13	29	2021-10-23 01:17:18	1342177288	submission.event.fileRevised	0
+169	515	14	29	2021-10-23 01:17:18	1342177296	submission.event.fileEdited	0
+170	1048585	13	29	2021-10-23 01:17:18	1342177296	submission.event.fileEdited	0
+171	1048585	13	29	2021-10-23 01:17:23	268435458	submission.event.general.metadataUpdated	0
+172	1048585	13	29	2021-10-23 01:17:25	268435457	submission.event.submissionSubmitted	0
+173	1048585	13	3	2021-10-23 01:17:37	805306371	log.editor.decision	0
+174	1048585	13	3	2021-10-23 01:17:45	1073741825	log.review.reviewerAssigned	0
+175	1048585	13	3	2021-10-23 01:17:50	1073741825	log.review.reviewerAssigned	0
+176	1048585	13	3	2021-10-23 01:17:56	1073741825	log.review.reviewerAssigned	0
+177	1048585	13	7	2021-10-23 01:18:03	1073741830	log.review.reviewAccepted	0
+178	1048585	13	7	2021-10-23 01:18:07	1073741848	log.review.reviewReady	0
+179	1048585	13	9	2021-10-23 01:18:15	1073741830	log.review.reviewAccepted	0
+180	1048585	13	9	2021-10-23 01:18:20	1073741848	log.review.reviewReady	0
+181	1048585	13	10	2021-10-23 01:18:28	1073741830	log.review.reviewAccepted	0
+182	1048585	13	10	2021-10-23 01:18:33	1073741848	log.review.reviewReady	0
+183	1048585	13	3	2021-10-23 01:18:49	805306371	log.editor.decision	0
+184	1048585	14	30	2021-10-23 01:18:59	268435458	submission.event.general.metadataUpdated	0
+185	515	15	30	2021-10-23 01:19:02	1342177281	submission.event.fileUploaded	0
+186	1048585	14	30	2021-10-23 01:19:02	1342177288	submission.event.fileRevised	0
+187	515	15	30	2021-10-23 01:19:02	1342177296	submission.event.fileEdited	0
+188	1048585	14	30	2021-10-23 01:19:02	1342177296	submission.event.fileEdited	0
+189	1048585	14	30	2021-10-23 01:19:06	268435458	submission.event.general.metadataUpdated	0
+190	1048585	14	30	2021-10-23 01:19:08	268435457	submission.event.submissionSubmitted	0
+191	1048585	15	31	2021-10-23 01:19:18	268435458	submission.event.general.metadataUpdated	0
+192	515	16	31	2021-10-23 01:19:20	1342177281	submission.event.fileUploaded	0
+193	1048585	15	31	2021-10-23 01:19:20	1342177288	submission.event.fileRevised	0
+194	515	16	31	2021-10-23 01:19:21	1342177296	submission.event.fileEdited	0
+195	1048585	15	31	2021-10-23 01:19:21	1342177296	submission.event.fileEdited	0
+196	1048585	15	31	2021-10-23 01:19:24	268435458	submission.event.general.metadataUpdated	0
+197	1048585	15	31	2021-10-23 01:19:25	268435457	submission.event.submissionSubmitted	0
+198	1048585	15	3	2021-10-23 01:19:38	805306371	log.editor.decision	0
+199	1048585	15	3	2021-10-23 01:19:45	1073741825	log.review.reviewerAssigned	0
+200	1048585	15	3	2021-10-23 01:19:51	1073741825	log.review.reviewerAssigned	0
+201	1048585	15	3	2021-10-23 01:19:53	805306371	log.editor.decision	0
+202	1048585	15	3	2021-10-23 01:20:01	268435459	submission.event.participantAdded	0
+203	1048585	15	3	2021-10-23 01:20:04	805306371	log.editor.decision	0
+204	1048585	15	3	2021-10-23 01:20:13	268435459	submission.event.participantAdded	0
+205	1048585	16	32	2021-10-23 01:20:24	268435458	submission.event.general.metadataUpdated	0
+206	515	17	32	2021-10-23 01:20:26	1342177281	submission.event.fileUploaded	0
+207	1048585	16	32	2021-10-23 01:20:26	1342177288	submission.event.fileRevised	0
+208	515	17	32	2021-10-23 01:20:27	1342177296	submission.event.fileEdited	0
+209	1048585	16	32	2021-10-23 01:20:27	1342177296	submission.event.fileEdited	0
+210	1048585	16	32	2021-10-23 01:20:31	268435458	submission.event.general.metadataUpdated	0
+211	1048585	16	32	2021-10-23 01:20:32	268435457	submission.event.submissionSubmitted	0
+212	1048585	17	33	2021-10-23 01:20:42	268435458	submission.event.general.metadataUpdated	0
+213	515	18	33	2021-10-23 01:20:44	1342177281	submission.event.fileUploaded	0
+214	1048585	17	33	2021-10-23 01:20:44	1342177288	submission.event.fileRevised	0
+215	515	18	33	2021-10-23 01:20:45	1342177296	submission.event.fileEdited	0
+216	1048585	17	33	2021-10-23 01:20:45	1342177296	submission.event.fileEdited	0
+217	1048585	17	33	2021-10-23 01:20:50	268435458	submission.event.general.metadataUpdated	0
+218	1048585	17	33	2021-10-23 01:20:52	268435457	submission.event.submissionSubmitted	0
+219	1048585	17	3	2021-10-23 01:21:04	805306371	log.editor.decision	0
+220	1048585	17	3	2021-10-23 01:21:12	1073741825	log.review.reviewerAssigned	0
+221	1048585	17	3	2021-10-23 01:21:18	1073741825	log.review.reviewerAssigned	0
+222	1048585	17	3	2021-10-23 01:21:20	805306371	log.editor.decision	0
+223	1048585	17	3	2021-10-23 01:21:28	268435459	submission.event.participantAdded	0
+224	1048585	17	3	2021-10-23 01:21:32	805306371	log.editor.decision	0
+225	1048585	17	3	2021-10-23 01:21:40	268435459	submission.event.participantAdded	0
+226	1048585	17	3	2021-10-23 01:21:45	268435459	submission.event.participantAdded	0
+227	515	19	3	2021-10-23 01:21:52	1342177281	submission.event.fileUploaded	0
+228	1048585	17	3	2021-10-23 01:21:52	1342177288	submission.event.fileRevised	0
+229	515	19	3	2021-10-23 01:21:53	1342177296	submission.event.fileEdited	0
+230	1048585	17	3	2021-10-23 01:21:53	1342177296	submission.event.fileEdited	0
+231	1048585	17	3	2021-10-23 01:22:06	268435458	submission.event.general.metadataUpdated	0
+232	1048585	17	3	2021-10-23 01:22:08	268435462	publication.event.scheduled	0
+233	1048585	17	3	2021-10-23 01:22:15	268435462	publication.event.published	0
+234	1048585	17	3	2021-10-23 01:22:28	268435463	publication.event.unpublished	0
+235	1048585	17	3	2021-10-23 01:22:29	268435462	publication.event.scheduled	0
+236	1048585	17	3	2021-10-23 01:22:41	268435462	publication.event.published	0
+237	1048585	17	3	2021-10-23 01:22:56	268435463	publication.event.unpublished	0
+238	1048585	17	3	2021-10-23 01:22:56	268435458	submission.event.general.metadataUpdated	0
+239	1048585	17	3	2021-10-23 01:23:18	268435458	submission.event.general.metadataUpdated	0
+240	1048585	17	3	2021-10-23 01:23:20	268435462	publication.event.published	0
+241	1048585	18	34	2021-10-23 01:23:38	268435458	submission.event.general.metadataUpdated	0
+242	515	20	34	2021-10-23 01:23:40	1342177281	submission.event.fileUploaded	0
+243	1048585	18	34	2021-10-23 01:23:40	1342177288	submission.event.fileRevised	0
+244	515	20	34	2021-10-23 01:23:40	1342177296	submission.event.fileEdited	0
+245	1048585	18	34	2021-10-23 01:23:40	1342177296	submission.event.fileEdited	0
+246	1048585	18	34	2021-10-23 01:23:44	268435458	submission.event.general.metadataUpdated	0
+247	1048585	18	34	2021-10-23 01:23:45	268435457	submission.event.submissionSubmitted	0
+248	1048585	18	3	2021-10-23 01:23:58	805306371	log.editor.decision	0
+249	1048585	19	35	2021-10-23 01:24:07	268435458	submission.event.general.metadataUpdated	0
+250	515	21	35	2021-10-23 01:24:10	1342177281	submission.event.fileUploaded	0
+251	1048585	19	35	2021-10-23 01:24:10	1342177288	submission.event.fileRevised	0
+252	515	21	35	2021-10-23 01:24:10	1342177296	submission.event.fileEdited	0
+253	1048585	19	35	2021-10-23 01:24:10	1342177296	submission.event.fileEdited	0
+254	1048585	19	35	2021-10-23 01:24:13	268435458	submission.event.general.metadataUpdated	0
+255	1048585	19	35	2021-10-23 01:24:14	268435457	submission.event.submissionSubmitted	0
+256	1048585	19	3	2021-10-23 01:24:27	805306371	log.editor.decision	0
+257	1048585	19	3	2021-10-23 01:24:35	1073741825	log.review.reviewerAssigned	0
+258	1048585	19	3	2021-10-23 01:24:41	1073741825	log.review.reviewerAssigned	0
+259	1048585	19	3	2021-10-23 01:24:43	805306371	log.editor.decision	0
+260	1048585	19	3	2021-10-23 01:24:50	268435459	submission.event.participantAdded	0
 \.
+
+
+--
+-- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.event_log_log_id_seq', 260, true);
 
 
 --
@@ -6265,28 +6383,35 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	journals/1/articles/1/6170ad3385888.pdf	application/pdf
-2	journals/1/articles/1/6170ada0d2275.pdf	application/pdf
-3	journals/1/articles/2/6170ae332cbb2.pdf	application/pdf
-4	journals/1/articles/3/6170ae7894e68.pdf	application/pdf
-5	journals/1/articles/4/6170aeb527ee2.pdf	application/pdf
-6	journals/1/articles/5/6170aed06d08b.pdf	application/pdf
-7	journals/1/articles/6/6170af1cdf24b.pdf	application/pdf
-8	journals/1/articles/7/6170af676b3d7.pdf	application/pdf
-9	journals/1/articles/8/6170afa929ce7.pdf	application/pdf
-10	journals/1/articles/9/6170afc3bd2f2.pdf	application/pdf
-11	journals/1/articles/10/6170b010b18b3.pdf	application/pdf
-12	journals/1/articles/11/6170b05eb3b8e.pdf	application/pdf
-13	journals/1/articles/12/6170b07875daa.pdf	application/pdf
-14	journals/1/articles/13/6170b0aca1afc.pdf	application/pdf
-15	journals/1/articles/14/6170b122eb44c.pdf	application/pdf
-16	journals/1/articles/15/6170b137e7b53.pdf	application/pdf
-17	journals/1/articles/16/6170b1821f25d.pdf	application/pdf
-18	journals/1/articles/17/6170b198b1791.pdf	application/pdf
-19	journals/1/articles/17/6170b1e88a2a6.pdf	application/pdf
-20	journals/1/articles/18/6170b25c9626d.pdf	application/pdf
-21	journals/1/articles/19/6170b2822a4a2.pdf	application/pdf
+1	journals/1/articles/1/61735f944c9ab.pdf	application/pdf
+2	journals/1/articles/1/61735ff760844.pdf	application/pdf
+3	journals/1/articles/2/6173607e3f7ef.pdf	application/pdf
+4	journals/1/articles/3/617360b90dea7.pdf	application/pdf
+5	journals/1/articles/4/617360ed5c30d.pdf	application/pdf
+6	journals/1/articles/5/61736104304c6.pdf	application/pdf
+7	journals/1/articles/6/617361473dc9e.pdf	application/pdf
+8	journals/1/articles/7/6173618651e60.pdf	application/pdf
+9	journals/1/articles/8/617361bf7ae2f.pdf	application/pdf
+10	journals/1/articles/9/617361d508a0c.pdf	application/pdf
+11	journals/1/articles/10/61736218a64a0.pdf	application/pdf
+12	journals/1/articles/11/6173625c9393d.pdf	application/pdf
+13	journals/1/articles/12/61736272026e8.pdf	application/pdf
+14	journals/1/articles/13/6173629e2e438.pdf	application/pdf
+15	journals/1/articles/14/617363063a498.pdf	application/pdf
+16	journals/1/articles/15/61736318de45b.pdf	application/pdf
+17	journals/1/articles/16/6173635adaf91.pdf	application/pdf
+18	journals/1/articles/17/6173636cc0666.pdf	application/pdf
+19	journals/1/articles/17/617363b05dc65.pdf	application/pdf
+20	journals/1/articles/18/6173641c777c0.pdf	application/pdf
+21	journals/1/articles/19/6173643a4685a.pdf	application/pdf
 \.
+
+
+--
+-- Name: files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.files_file_id_seq', 21, true);
 
 
 --
@@ -6295,33 +6420,40 @@ COPY public.files (file_id, path, mimetype) FROM stdin;
 
 COPY public.filter_groups (filter_group_id, symbolic, display_name, description, input_type, output_type) FROM stdin;
 1	article=>dc11	plugins.metadata.dc11.articleAdapter.displayName	plugins.metadata.dc11.articleAdapter.description	class::classes.submission.Submission	metadata::plugins.metadata.dc11.schema.Dc11Schema(ARTICLE)
-2	article=>pubmed-xml	plugins.importexport.pubmed.displayName	plugins.importexport.pubmed.description	class::classes.submission.Submission[]	xml::dtd
-3	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-4	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
-5	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-6	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
-7	issue=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.issue.Issue[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
-8	article=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.submission.Submission[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
-9	issue=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.issue.Issue	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-10	article=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.submission.Submission	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-11	galley=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.article.ArticleGalley	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-12	article=>doaj-xml	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/doaj/doajArticles.xsd)
-13	article=>doaj-json	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission	primitive::string
-14	article=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
-15	native-xml=>article	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
-16	issue=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.Issue[]	xml::schema(plugins/importexport/native/native.xsd)
-17	native-xml=>issue	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.Issue[]
-18	issuegalley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.IssueGalley[]	xml::schema(plugins/importexport/native/native.xsd)
-19	native-xml=>issuegalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.IssueGalley[]
-20	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.author.Author[]	xml::schema(plugins/importexport/native/native.xsd)
-21	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.author.Author[]
-22	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
-23	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
-24	article-galley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.ArticleGalley	xml::schema(plugins/importexport/native/native.xsd)
-25	native-xml=>ArticleGalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.ArticleGalley[]
-26	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
-27	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
+2	issue=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.issue.Issue[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
+3	article=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.submission.Submission[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
+4	article=>pubmed-xml	plugins.importexport.pubmed.displayName	plugins.importexport.pubmed.description	class::classes.submission.Submission[]	xml::dtd
+5	article=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
+6	native-xml=>article	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
+7	issue=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.Issue[]	xml::schema(plugins/importexport/native/native.xsd)
+8	native-xml=>issue	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.Issue[]
+9	issuegalley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.IssueGalley[]	xml::schema(plugins/importexport/native/native.xsd)
+10	native-xml=>issuegalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.IssueGalley[]
+11	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.author.Author[]	xml::schema(plugins/importexport/native/native.xsd)
+12	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.author.Author[]
+13	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
+14	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
+15	article-galley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.ArticleGalley	xml::schema(plugins/importexport/native/native.xsd)
+16	native-xml=>ArticleGalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.ArticleGalley[]
+17	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
+18	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
+19	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+20	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
+21	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+22	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
+23	article=>doaj-xml	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/doaj/doajArticles.xsd)
+24	article=>doaj-json	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission	primitive::string
+25	issue=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.issue.Issue	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+26	article=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.submission.Submission	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+27	galley=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.article.ArticleGalley	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
 \.
+
+
+--
+-- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.filter_groups_filter_group_id_seq', 27, true);
 
 
 --
@@ -6338,33 +6470,40 @@ COPY public.filter_settings (filter_id, locale, setting_name, setting_value, set
 
 COPY public.filters (filter_id, filter_group_id, context_id, display_name, class_name, is_template, parent_filter_id, seq) FROM stdin;
 1	1	0	Extract metadata from a(n) Submission	plugins.metadata.dc11.filter.Dc11SchemaArticleAdapter	0	0	0
-2	2	0	ArticlePubMedXmlFilter	plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter	0	0	0
-3	3	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
-4	4	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
-5	5	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
-6	6	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
-7	7	0	Crossref XML issue export	plugins.importexport.crossref.filter.IssueCrossrefXmlFilter	0	0	0
-8	8	0	Crossref XML issue export	plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter	0	0	0
-9	9	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-10	10	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-11	11	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-12	12	0	DOAJ XML export	plugins.importexport.doaj.filter.DOAJXmlFilter	0	0	0
-13	13	0	DOAJ JSON export	plugins.importexport.doaj.filter.DOAJJsonFilter	0	0	0
-14	14	0	Native XML submission export	plugins.importexport.native.filter.ArticleNativeXmlFilter	0	0	0
-15	15	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlArticleFilter	0	0	0
-16	16	0	Native XML issue export	plugins.importexport.native.filter.IssueNativeXmlFilter	0	0	0
-17	17	0	Native XML issue import	plugins.importexport.native.filter.NativeXmlIssueFilter	0	0	0
-18	18	0	Native XML issue galley export	plugins.importexport.native.filter.IssueGalleyNativeXmlFilter	0	0	0
-19	19	0	Native XML issue galley import	plugins.importexport.native.filter.NativeXmlIssueGalleyFilter	0	0	0
-20	20	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
-21	21	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
-22	23	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlArticleFileFilter	0	0	0
-23	22	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
-24	24	0	Native XML representation export	plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter	0	0	0
-25	25	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlArticleGalleyFilter	0	0	0
-26	26	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
-27	27	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
+2	2	0	Crossref XML issue export	plugins.importexport.crossref.filter.IssueCrossrefXmlFilter	0	0	0
+3	3	0	Crossref XML issue export	plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter	0	0	0
+4	4	0	ArticlePubMedXmlFilter	plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter	0	0	0
+5	5	0	Native XML submission export	plugins.importexport.native.filter.ArticleNativeXmlFilter	0	0	0
+6	6	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlArticleFilter	0	0	0
+7	7	0	Native XML issue export	plugins.importexport.native.filter.IssueNativeXmlFilter	0	0	0
+8	8	0	Native XML issue import	plugins.importexport.native.filter.NativeXmlIssueFilter	0	0	0
+9	9	0	Native XML issue galley export	plugins.importexport.native.filter.IssueGalleyNativeXmlFilter	0	0	0
+10	10	0	Native XML issue galley import	plugins.importexport.native.filter.NativeXmlIssueGalleyFilter	0	0	0
+11	11	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
+12	12	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
+13	14	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlArticleFileFilter	0	0	0
+14	13	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
+15	15	0	Native XML representation export	plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter	0	0	0
+16	16	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlArticleGalleyFilter	0	0	0
+17	17	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
+18	18	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
+19	19	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
+20	20	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
+21	21	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
+22	22	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
+23	23	0	DOAJ XML export	plugins.importexport.doaj.filter.DOAJXmlFilter	0	0	0
+24	24	0	DOAJ JSON export	plugins.importexport.doaj.filter.DOAJJsonFilter	0	0	0
+25	25	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+26	26	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+27	27	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
 \.
+
+
+--
+-- Name: filters_filter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.filters_filter_id_seq', 27, true);
 
 
 --
@@ -6420,11 +6559,25 @@ COPY public.genres (genre_id, context_id, seq, enabled, category, dependent, sup
 
 
 --
+-- Name: genres_genre_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.genres_genre_id_seq', 12, true);
+
+
+--
 -- Data for Name: institutional_subscription_ip; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.institutional_subscription_ip (institutional_subscription_ip_id, subscription_id, ip_string, ip_start, ip_end) FROM stdin;
 \.
+
+
+--
+-- Name: institutional_subscription_ip_institutional_subscription_ip_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.institutional_subscription_ip_institutional_subscription_ip_seq', 1, false);
 
 
 --
@@ -6436,11 +6589,25 @@ COPY public.institutional_subscriptions (institutional_subscription_id, subscrip
 
 
 --
+-- Name: institutional_subscriptions_institutional_subscription_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.institutional_subscriptions_institutional_subscription_id_seq', 1, false);
+
+
+--
 -- Data for Name: issue_files; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.issue_files (file_id, issue_id, file_name, file_type, file_size, content_type, original_file_name, date_uploaded, date_modified) FROM stdin;
 \.
+
+
+--
+-- Name: issue_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.issue_files_file_id_seq', 1, false);
 
 
 --
@@ -6457,6 +6624,13 @@ COPY public.issue_galley_settings (galley_id, locale, setting_name, setting_valu
 
 COPY public.issue_galleys (galley_id, locale, issue_id, file_id, label, seq, url_path) FROM stdin;
 \.
+
+
+--
+-- Name: issue_galleys_galley_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.issue_galleys_galley_id_seq', 1, false);
 
 
 --
@@ -6480,9 +6654,16 @@ COPY public.issue_settings (issue_id, locale, setting_name, setting_value, setti
 --
 
 COPY public.issues (issue_id, journal_id, volume, number, year, published, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name, url_path) FROM stdin;
-2	1	2	1	2015	0	\N	\N	2021-10-21 00:20:28	1	\N	1	1	1	0	\N	\N	
-1	1	1	2	2014	1	2021-10-20 23:58:12	\N	2021-10-21 00:20:30	1	\N	1	1	1	0	\N	\N	
+2	1	2	1	2015	0	\N	\N	2021-10-23 01:23:26	1	\N	1	1	1	0	\N	\N	
+1	1	1	2	2014	1	2021-10-23 01:03:51	\N	2021-10-23 01:23:27	1	\N	1	1	1	0	\N	\N	
 \.
+
+
+--
+-- Name: issues_issue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.issues_issue_id_seq', 2, true);
 
 
 --
@@ -6499,6 +6680,13 @@ COPY public.item_views (assoc_type, assoc_id, user_id, date_last_viewed) FROM st
 
 COPY public.jobs (id, queue, payload, attempts, reserved_at, available_at, created_at) FROM stdin;
 \.
+
+
+--
+-- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.jobs_id_seq', 1, false);
 
 
 --
@@ -6569,6 +6757,13 @@ COPY public.journals (journal_id, path, seq, primary_locale, enabled, current_is
 
 
 --
+-- Name: journals_journal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.journals_journal_id_seq', 1, true);
+
+
+--
 -- Data for Name: library_file_settings; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -6582,6 +6777,13 @@ COPY public.library_file_settings (file_id, locale, setting_name, setting_value,
 
 COPY public.library_files (file_id, context_id, file_name, original_file_name, file_type, file_size, type, date_uploaded, date_modified, submission_id, public_access) FROM stdin;
 \.
+
+
+--
+-- Name: library_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.library_files_file_id_seq', 1, false);
 
 
 --
@@ -6601,11 +6803,25 @@ COPY public.metadata_descriptions (metadata_description_id, assoc_type, assoc_id
 
 
 --
+-- Name: metadata_descriptions_metadata_description_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.metadata_descriptions_metadata_description_id_seq', 1, false);
+
+
+--
 -- Data for Name: metrics; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.metrics (load_id, context_id, pkp_section_id, assoc_object_type, assoc_object_id, submission_id, representation_id, assoc_type, assoc_id, day, month, file_type, country_id, region, city, metric_type, metric) FROM stdin;
 \.
+
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq', 23, true);
 
 
 --
@@ -6712,6 +6928,13 @@ COPY public.navigation_menu_items (navigation_menu_item_id, context_id, path, ty
 
 
 --
+-- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_items_navigation_menu_item_id_seq', 24, true);
+
+
+--
 -- Data for Name: navigation_menus; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -6723,12 +6946,26 @@ COPY public.navigation_menus (navigation_menu_id, context_id, area_name, title) 
 
 
 --
+-- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menus_navigation_menu_id_seq', 3, true);
+
+
+--
 -- Data for Name: notes; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2021-10-21 00:03:43	2021-10-21 00:03:43	Recommendation	<p>Daniel Barnes, Stephanie Berardo, David Buskins:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/><hr /><br/><p><a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a></p><p>123 456th Street&lt;br /&gt;\nBurnaby, British Columbia&lt;br /&gt;\nCanada</p><p>Ramiro Vaca, <a href="mailto: rvaca@mailinator.com">rvaca@mailinator.com</a></p>
+1	1048586	1	6	2021-10-23 01:08:50	2021-10-23 01:08:50	Recommendation	<p>Daniel Barnes, Stephanie Berardo, David Buskins:<br /><br />The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: <span class="pkpTag mceNonEditable" data-symbolic="recommendation">Recommendation</span></p><br/><br/><hr /><br/><p><a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a></p><p>123 456th Street&lt;br /&gt;\nBurnaby, British Columbia&lt;br /&gt;\nCanada</p><p>Ramiro Vaca, <a href="mailto: rvaca@mailinator.com">rvaca@mailinator.com</a></p>
 \.
+
+
+--
+-- Name: notes_note_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.notes_note_id_seq', 1, true);
 
 
 --
@@ -6737,6 +6974,13 @@ COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_mo
 
 COPY public.notification_mail_list (notification_mail_list_id, email, confirmed, token, context) FROM stdin;
 \.
+
+
+--
+-- Name: notification_mail_list_notification_mail_list_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.notification_mail_list_notification_mail_list_id_seq', 1, false);
 
 
 --
@@ -6794,196 +7038,210 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 
 
 --
+-- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_seq', 38, true);
+
+
+--
 -- Data for Name: notifications; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-83	1	0	2	16777243	2021-10-21 00:04:17	\N	1048585	3
-41	1	3	3	16777259	2021-10-21 00:01:31	\N	1048585	1
-165	1	22	2	16777235	2021-10-21 00:07:43	\N	1048585	6
-43	1	4	3	16777259	2021-10-21 00:01:31	\N	1048585	1
-45	1	5	3	16777259	2021-10-21 00:01:31	\N	1048585	1
-47	1	12	3	16777259	2021-10-21 00:01:32	\N	1048585	1
-167	1	5	2	16777254	2021-10-21 00:07:43	\N	1048585	6
-6	1	3	2	16777217	2021-10-20 23:58:51	\N	1048585	1
-49	1	14	3	16777259	2021-10-21 00:01:32	\N	1048585	1
-8	1	4	2	16777217	2021-10-20 23:58:51	\N	1048585	1
-168	1	4	2	16777254	2021-10-21 00:07:43	\N	1048585	6
-10	1	5	2	16777217	2021-10-20 23:58:51	\N	1048585	1
-51	1	16	3	16777259	2021-10-21 00:01:32	\N	1048585	1
-12	1	0	2	16777243	2021-10-20 23:58:51	\N	1048585	1
-13	1	0	2	16777245	2021-10-20 23:58:51	\N	1048585	1
-244	1	26	2	16777231	2021-10-21 00:11:17	\N	1048585	10
-53	1	17	3	16777259	2021-10-21 00:01:32	\N	1048585	1
-166	1	3	2	16777254	2021-10-21 00:07:43	2021-10-21 00:07:47	1048585	6
-84	1	0	2	16777245	2021-10-21 00:04:17	\N	1048585	3
-176	1	0	2	16777243	2021-10-21 00:08:13	\N	1048585	7
-15	1	0	2	16777236	2021-10-20 23:59:01	2021-10-20 23:59:05	523	1
-17	1	7	3	16777227	2021-10-20 23:59:10	\N	517	1
-137	1	5	2	16777254	2021-10-21 00:06:21	\N	1048585	5
-125	1	10	3	16777227	2021-10-21 00:06:06	\N	517	7
-170	1	3	2	16777217	2021-10-21 00:08:13	\N	1048585	7
-20	1	9	3	16777227	2021-10-20 23:59:17	\N	517	2
-243	1	0	2	16777236	2021-10-21 00:11:17	2021-10-21 00:11:21	523	8
-172	1	4	2	16777217	2021-10-21 00:08:13	\N	1048585	7
-86	1	0	2	16777236	2021-10-21 00:04:28	2021-10-21 00:04:31	523	3
-23	1	10	3	16777227	2021-10-20 23:59:23	\N	517	3
-174	1	5	2	16777217	2021-10-21 00:08:13	\N	1048585	7
-88	1	9	3	16777227	2021-10-21 00:04:36	\N	517	4
-58	1	3	2	16777217	2021-10-21 00:03:06	\N	1048585	2
-60	1	4	2	16777217	2021-10-21 00:03:06	\N	1048585	2
-177	1	0	2	16777245	2021-10-21 00:08:13	\N	1048585	7
-62	1	5	2	16777217	2021-10-21 00:03:06	\N	1048585	2
-64	1	0	2	16777243	2021-10-21 00:03:07	\N	1048585	2
-65	1	0	2	16777245	2021-10-21 00:03:07	\N	1048585	2
-180	1	23	2	16777231	2021-10-21 00:08:25	\N	1048585	7
-179	1	0	2	16777236	2021-10-21 00:08:25	2021-10-21 00:08:29	523	6
-33	1	17	2	16777235	2021-10-20 23:59:39	\N	1048585	1
-111	1	3	2	16777217	2021-10-21 00:05:41	\N	1048585	5
-68	1	18	2	16777231	2021-10-21 00:03:16	\N	1048585	2
-67	1	0	2	16777236	2021-10-21 00:03:16	2021-10-21 00:03:20	523	2
-91	1	10	3	16777227	2021-10-21 00:04:42	\N	517	5
-71	1	3	3	16777249	2021-10-21 00:03:43	\N	1048586	1
-184	1	9	3	16777227	2021-10-21 00:08:39	\N	517	11
-73	1	5	3	16777249	2021-10-21 00:03:43	\N	1048586	1
-75	1	4	3	16777249	2021-10-21 00:03:43	\N	1048586	1
-113	1	4	2	16777217	2021-10-21 00:05:41	\N	1048585	5
-77	1	3	2	16777217	2021-10-21 00:04:17	\N	1048585	3
-79	1	4	2	16777217	2021-10-21 00:04:17	\N	1048585	3
-81	1	5	2	16777217	2021-10-21 00:04:17	\N	1048585	3
-95	1	19	2	16777230	2021-10-21 00:04:45	\N	1048585	3
-97	1	5	2	16777251	2021-10-21 00:04:45	\N	1048585	3
-98	1	4	2	16777251	2021-10-21 00:04:45	\N	1048585	3
-96	1	3	2	16777251	2021-10-21 00:04:45	2021-10-21 00:04:49	1048585	3
-115	1	5	2	16777217	2021-10-21 00:05:41	\N	1048585	5
-101	1	3	2	16777217	2021-10-21 00:05:22	\N	1048585	4
-103	1	4	2	16777217	2021-10-21 00:05:23	\N	1048585	4
-105	1	5	2	16777217	2021-10-21 00:05:23	\N	1048585	4
-107	1	0	2	16777243	2021-10-21 00:05:23	\N	1048585	4
-108	1	0	2	16777245	2021-10-21 00:05:23	\N	1048585	4
-117	1	0	2	16777243	2021-10-21 00:05:41	\N	1048585	5
-118	1	0	2	16777245	2021-10-21 00:05:41	\N	1048585	5
-138	1	4	2	16777254	2021-10-21 00:06:21	\N	1048585	5
-147	1	0	2	16777243	2021-10-21 00:07:01	\N	1048585	6
-120	1	0	2	16777236	2021-10-21 00:05:52	2021-10-21 00:05:55	523	4
-122	1	8	3	16777227	2021-10-21 00:06:00	\N	517	6
-136	1	3	2	16777254	2021-10-21 00:06:21	2021-10-21 00:06:26	1048585	5
-148	1	0	2	16777245	2021-10-21 00:07:01	\N	1048585	6
-135	1	21	2	16777235	2021-10-21 00:06:21	\N	1048585	5
-152	1	7	3	16777227	2021-10-21 00:07:22	\N	517	8
-141	1	3	2	16777217	2021-10-21 00:07:01	\N	1048585	6
-143	1	4	2	16777217	2021-10-21 00:07:01	\N	1048585	6
-145	1	5	2	16777217	2021-10-21 00:07:01	\N	1048585	6
-150	1	0	2	16777236	2021-10-21 00:07:12	2021-10-21 00:07:17	523	5
-155	1	10	3	16777227	2021-10-21 00:07:28	\N	517	9
-234	1	3	2	16777217	2021-10-21 00:11:04	\N	1048585	10
-187	1	10	3	16777227	2021-10-21 00:08:45	\N	517	12
-369	1	31	2	16777235	2021-10-21 00:16:42	\N	1048585	15
-236	1	4	2	16777217	2021-10-21 00:11:04	\N	1048585	10
-238	1	5	2	16777217	2021-10-21 00:11:04	\N	1048585	10
-371	1	4	2	16777254	2021-10-21 00:16:42	\N	1048585	15
-240	1	0	2	16777243	2021-10-21 00:11:05	\N	1048585	10
-191	1	3	2	16777219	2021-10-21 00:08:58	\N	517	10
-241	1	0	2	16777245	2021-10-21 00:11:05	\N	1048585	10
-193	1	5	2	16777219	2021-10-21 00:08:58	\N	517	10
-372	1	5	2	16777254	2021-10-21 00:16:42	\N	1048585	15
-195	1	4	2	16777219	2021-10-21 00:08:58	\N	517	10
-299	1	0	2	16777243	2021-10-21 00:13:42	\N	1048585	13
-300	1	0	2	16777245	2021-10-21 00:13:42	\N	1048585	13
-342	1	0	2	16777243	2021-10-21 00:15:38	\N	1048585	14
-370	1	3	2	16777254	2021-10-21 00:16:42	2021-10-21 00:16:46	1048585	15
-198	1	3	2	16777217	2021-10-21 00:09:25	\N	1048585	8
-200	1	4	2	16777217	2021-10-21 00:09:25	\N	1048585	8
-343	1	0	2	16777245	2021-10-21 00:15:38	\N	1048585	14
-202	1	5	2	16777217	2021-10-21 00:09:25	\N	1048585	8
-276	1	3	2	16777217	2021-10-21 00:12:48	\N	1048585	12
-204	1	0	2	16777243	2021-10-21 00:09:26	\N	1048585	8
-205	1	0	2	16777245	2021-10-21 00:09:26	\N	1048585	8
-278	1	4	2	16777217	2021-10-21 00:12:49	\N	1048585	12
-252	1	3	2	16777219	2021-10-21 00:11:45	\N	517	15
-208	1	3	2	16777217	2021-10-21 00:09:44	\N	1048585	9
-210	1	6	2	16777217	2021-10-21 00:09:44	\N	1048585	9
-254	1	5	2	16777219	2021-10-21 00:11:45	\N	517	15
-212	1	0	2	16777243	2021-10-21 00:09:44	\N	1048585	9
-213	1	0	2	16777245	2021-10-21 00:09:44	\N	1048585	9
-256	1	4	2	16777219	2021-10-21 00:11:45	\N	517	15
-280	1	5	2	16777217	2021-10-21 00:12:49	\N	1048585	12
-215	1	0	2	16777236	2021-10-21 00:09:56	2021-10-21 00:10:00	523	7
-217	1	7	3	16777227	2021-10-21 00:10:05	\N	517	13
-282	1	0	2	16777243	2021-10-21 00:12:49	\N	1048585	12
-283	1	0	2	16777245	2021-10-21 00:12:49	\N	1048585	12
-259	1	3	2	16777219	2021-10-21 00:11:59	\N	517	16
-220	1	10	3	16777227	2021-10-21 00:10:11	\N	517	14
-261	1	5	2	16777219	2021-10-21 00:11:59	\N	517	16
-263	1	4	2	16777219	2021-10-21 00:11:59	\N	517	16
-266	1	3	2	16777217	2021-10-21 00:12:25	\N	1048585	11
-268	1	4	2	16777217	2021-10-21 00:12:25	\N	1048585	11
-229	1	25	2	16777235	2021-10-21 00:10:26	\N	1048585	9
-231	1	6	2	16777254	2021-10-21 00:10:26	\N	1048585	9
-230	1	3	2	16777254	2021-10-21 00:10:26	2021-10-21 00:10:30	1048585	9
-270	1	5	2	16777217	2021-10-21 00:12:25	\N	1048585	11
-272	1	0	2	16777243	2021-10-21 00:12:25	\N	1048585	11
-273	1	0	2	16777245	2021-10-21 00:12:25	\N	1048585	11
-286	1	28	2	16777231	2021-10-21 00:13:01	\N	1048585	12
-285	1	0	2	16777236	2021-10-21 00:13:01	2021-10-21 00:13:06	523	9
-287	1	7	3	16777227	2021-10-21 00:13:11	\N	517	17
-302	1	0	2	16777236	2021-10-21 00:13:55	2021-10-21 00:13:59	523	10
-290	1	8	3	16777227	2021-10-21 00:13:17	\N	517	18
-293	1	3	2	16777217	2021-10-21 00:13:41	\N	1048585	13
-295	1	4	2	16777217	2021-10-21 00:13:41	\N	1048585	13
-297	1	5	2	16777217	2021-10-21 00:13:41	\N	1048585	13
-314	1	3	2	16777219	2021-10-21 00:14:28	\N	517	19
-316	1	4	2	16777219	2021-10-21 00:14:28	\N	517	19
-318	1	5	2	16777219	2021-10-21 00:14:28	\N	517	19
-328	1	3	2	16777219	2021-10-21 00:14:58	\N	517	21
-321	1	3	2	16777219	2021-10-21 00:14:42	\N	517	20
-323	1	4	2	16777219	2021-10-21 00:14:42	\N	517	20
-325	1	5	2	16777219	2021-10-21 00:14:42	\N	517	20
-330	1	4	2	16777219	2021-10-21 00:14:58	\N	517	21
-332	1	5	2	16777219	2021-10-21 00:14:58	\N	517	21
-335	1	29	3	16777232	2021-10-21 00:15:17	\N	1048585	13
-351	1	0	2	16777243	2021-10-21 00:15:57	\N	1048585	15
-336	1	3	2	16777217	2021-10-21 00:15:38	\N	1048585	14
-338	1	4	2	16777217	2021-10-21 00:15:38	\N	1048585	14
-340	1	5	2	16777217	2021-10-21 00:15:38	\N	1048585	14
-352	1	0	2	16777245	2021-10-21 00:15:57	\N	1048585	15
-345	1	3	2	16777217	2021-10-21 00:15:56	\N	1048585	15
-347	1	4	2	16777217	2021-10-21 00:15:56	\N	1048585	15
-349	1	5	2	16777217	2021-10-21 00:15:57	\N	1048585	15
-354	1	0	2	16777236	2021-10-21 00:16:11	2021-10-21 00:16:15	523	11
-356	1	8	3	16777227	2021-10-21 00:16:20	\N	517	22
-359	1	9	3	16777227	2021-10-21 00:16:25	\N	517	23
-374	1	3	2	16777217	2021-10-21 00:17:15	\N	1048585	16
-376	1	4	2	16777217	2021-10-21 00:17:15	\N	1048585	16
-378	1	5	2	16777217	2021-10-21 00:17:15	\N	1048585	16
-380	1	0	2	16777243	2021-10-21 00:17:15	\N	1048585	16
-381	1	0	2	16777245	2021-10-21 00:17:15	\N	1048585	16
-423	1	34	2	16777234	2021-10-21 00:21:06	\N	1048585	18
-424	1	3	2	16777217	2021-10-21 00:21:27	\N	1048585	19
-383	1	3	2	16777217	2021-10-21 00:17:38	\N	1048585	17
-385	1	4	2	16777217	2021-10-21 00:17:38	\N	1048585	17
-387	1	5	2	16777217	2021-10-21 00:17:38	\N	1048585	17
-389	1	0	2	16777243	2021-10-21 00:17:38	\N	1048585	17
-390	1	0	2	16777245	2021-10-21 00:17:38	\N	1048585	17
-426	1	6	2	16777217	2021-10-21 00:21:27	\N	1048585	19
-428	1	0	2	16777243	2021-10-21 00:21:27	\N	1048585	19
-429	1	0	2	16777245	2021-10-21 00:21:27	\N	1048585	19
-392	1	0	2	16777236	2021-10-21 00:17:52	2021-10-21 00:17:56	523	12
-394	1	7	3	16777227	2021-10-21 00:18:01	\N	517	24
-397	1	8	3	16777227	2021-10-21 00:18:07	\N	517	25
-431	1	0	2	16777236	2021-10-21 00:21:41	2021-10-21 00:21:45	523	13
-407	1	33	2	16777235	2021-10-21 00:18:23	\N	1048585	17
-433	1	8	3	16777227	2021-10-21 00:21:50	\N	517	26
-413	1	3	2	16777217	2021-10-21 00:20:50	\N	1048585	18
-415	1	4	2	16777217	2021-10-21 00:20:50	\N	1048585	18
-417	1	5	2	16777217	2021-10-21 00:20:50	\N	1048585	18
-419	1	0	2	16777243	2021-10-21 00:20:50	\N	1048585	18
-420	1	0	2	16777245	2021-10-21 00:20:50	\N	1048585	18
-436	1	9	3	16777227	2021-10-21 00:21:56	\N	517	27
-440	1	35	2	16777230	2021-10-21 00:21:59	\N	1048585	19
-442	1	6	2	16777251	2021-10-21 00:21:59	\N	1048585	19
-441	1	3	2	16777251	2021-10-21 00:21:59	2021-10-21 00:22:03	1048585	19
+41	1	3	3	16777259	2021-10-23 01:06:53	\N	1048585	1
+170	1	3	2	16777217	2021-10-23 01:12:42	\N	1048585	7
+43	1	4	3	16777259	2021-10-23 01:06:53	\N	1048585	1
+276	1	3	2	16777217	2021-10-23 01:16:39	\N	1048585	12
+45	1	5	3	16777259	2021-10-23 01:06:53	\N	1048585	1
+172	1	4	2	16777217	2021-10-23 01:12:42	\N	1048585	7
+47	1	12	3	16777259	2021-10-23 01:06:53	\N	1048585	1
+49	1	14	3	16777259	2021-10-23 01:06:53	\N	1048585	1
+174	1	5	2	16777217	2021-10-23 01:12:42	\N	1048585	7
+6	1	3	2	16777217	2021-10-23 01:04:25	\N	1048585	1
+51	1	16	3	16777259	2021-10-23 01:06:54	\N	1048585	1
+8	1	4	2	16777217	2021-10-23 01:04:25	\N	1048585	1
+278	1	4	2	16777217	2021-10-23 01:16:39	\N	1048585	12
+10	1	5	2	16777217	2021-10-23 01:04:26	\N	1048585	1
+53	1	17	3	16777259	2021-10-23 01:06:54	\N	1048585	1
+12	1	0	2	16777243	2021-10-23 01:04:26	\N	1048585	1
+13	1	0	2	16777245	2021-10-23 01:04:26	\N	1048585	1
+176	1	0	2	16777243	2021-10-23 01:12:42	\N	1048585	7
+177	1	0	2	16777245	2021-10-23 01:12:42	\N	1048585	7
+137	1	5	2	16777254	2021-10-23 01:11:08	\N	1048585	5
+125	1	10	3	16777227	2021-10-23 01:10:55	\N	517	7
+413	1	3	2	16777217	2021-10-23 01:23:45	\N	1048585	18
+15	1	0	2	16777236	2021-10-23 01:04:35	2021-10-23 01:04:39	523	1
+17	1	7	3	16777227	2021-10-23 01:04:43	\N	517	1
+180	1	23	2	16777231	2021-10-23 01:12:51	\N	1048585	7
+86	1	0	2	16777236	2021-10-23 01:09:27	2021-10-23 01:09:31	523	3
+20	1	9	3	16777227	2021-10-23 01:04:49	\N	517	2
+179	1	0	2	16777236	2021-10-23 01:12:51	2021-10-23 01:12:54	523	6
+88	1	9	3	16777227	2021-10-23 01:09:35	\N	517	4
+23	1	10	3	16777227	2021-10-23 01:04:55	\N	517	3
+58	1	3	2	16777217	2021-10-23 01:08:19	\N	1048585	2
+60	1	4	2	16777217	2021-10-23 01:08:19	\N	1048585	2
+62	1	5	2	16777217	2021-10-23 01:08:19	\N	1048585	2
+64	1	0	2	16777243	2021-10-23 01:08:19	\N	1048585	2
+65	1	0	2	16777245	2021-10-23 01:08:19	\N	1048585	2
+111	1	3	2	16777217	2021-10-23 01:10:32	\N	1048585	5
+91	1	10	3	16777227	2021-10-23 01:09:40	\N	517	5
+33	1	17	2	16777235	2021-10-23 01:05:13	\N	1048585	1
+68	1	18	2	16777231	2021-10-23 01:08:28	\N	1048585	2
+67	1	0	2	16777236	2021-10-23 01:08:28	2021-10-23 01:08:31	523	2
+71	1	3	3	16777249	2021-10-23 01:08:50	\N	1048586	1
+73	1	5	3	16777249	2021-10-23 01:08:50	\N	1048586	1
+75	1	4	3	16777249	2021-10-23 01:08:50	\N	1048586	1
+113	1	4	2	16777217	2021-10-23 01:10:32	\N	1048585	5
+77	1	3	2	16777217	2021-10-23 01:09:18	\N	1048585	3
+79	1	4	2	16777217	2021-10-23 01:09:18	\N	1048585	3
+81	1	5	2	16777217	2021-10-23 01:09:18	\N	1048585	3
+83	1	0	2	16777243	2021-10-23 01:09:18	\N	1048585	3
+84	1	0	2	16777245	2021-10-23 01:09:18	\N	1048585	3
+95	1	19	2	16777230	2021-10-23 01:09:43	\N	1048585	3
+97	1	5	2	16777251	2021-10-23 01:09:43	\N	1048585	3
+98	1	4	2	16777251	2021-10-23 01:09:43	\N	1048585	3
+96	1	3	2	16777251	2021-10-23 01:09:43	2021-10-23 01:09:47	1048585	3
+115	1	5	2	16777217	2021-10-23 01:10:32	\N	1048585	5
+101	1	3	2	16777217	2021-10-23 01:10:15	\N	1048585	4
+103	1	4	2	16777217	2021-10-23 01:10:15	\N	1048585	4
+105	1	5	2	16777217	2021-10-23 01:10:15	\N	1048585	4
+107	1	0	2	16777243	2021-10-23 01:10:15	\N	1048585	4
+108	1	0	2	16777245	2021-10-23 01:10:15	\N	1048585	4
+117	1	0	2	16777243	2021-10-23 01:10:32	\N	1048585	5
+118	1	0	2	16777245	2021-10-23 01:10:32	\N	1048585	5
+138	1	4	2	16777254	2021-10-23 01:11:08	\N	1048585	5
+147	1	0	2	16777243	2021-10-23 01:11:41	\N	1048585	6
+120	1	0	2	16777236	2021-10-23 01:10:41	2021-10-23 01:10:45	523	4
+122	1	8	3	16777227	2021-10-23 01:10:49	\N	517	6
+136	1	3	2	16777254	2021-10-23 01:11:08	2021-10-23 01:11:12	1048585	5
+148	1	0	2	16777245	2021-10-23 01:11:41	\N	1048585	6
+135	1	21	2	16777235	2021-10-23 01:11:08	\N	1048585	5
+152	1	7	3	16777227	2021-10-23 01:11:57	\N	517	8
+141	1	3	2	16777217	2021-10-23 01:11:40	\N	1048585	6
+143	1	4	2	16777217	2021-10-23 01:11:40	\N	1048585	6
+145	1	5	2	16777217	2021-10-23 01:11:41	\N	1048585	6
+150	1	0	2	16777236	2021-10-23 01:11:49	2021-10-23 01:11:53	523	5
+155	1	10	3	16777227	2021-10-23 01:12:03	\N	517	9
+167	1	5	2	16777254	2021-10-23 01:12:17	\N	1048585	6
+165	1	22	2	16777235	2021-10-23 01:12:17	\N	1048585	6
+168	1	4	2	16777254	2021-10-23 01:12:17	\N	1048585	6
+166	1	3	2	16777254	2021-10-23 01:12:17	2021-10-23 01:12:20	1048585	6
+184	1	9	3	16777227	2021-10-23 01:13:04	\N	517	11
+280	1	5	2	16777217	2021-10-23 01:16:39	\N	1048585	12
+282	1	0	2	16777243	2021-10-23 01:16:39	\N	1048585	12
+230	1	3	2	16777254	2021-10-23 01:14:37	2021-10-23 01:14:41	1048585	9
+187	1	10	3	16777227	2021-10-23 01:13:09	\N	517	12
+283	1	0	2	16777245	2021-10-23 01:16:39	\N	1048585	12
+415	1	4	2	16777217	2021-10-23 01:23:45	\N	1048585	18
+417	1	5	2	16777217	2021-10-23 01:23:45	\N	1048585	18
+191	1	3	2	16777219	2021-10-23 01:13:21	\N	517	10
+193	1	5	2	16777219	2021-10-23 01:13:21	\N	517	10
+286	1	28	2	16777231	2021-10-23 01:16:52	\N	1048585	12
+195	1	4	2	16777219	2021-10-23 01:13:21	\N	517	10
+285	1	0	2	16777236	2021-10-23 01:16:52	2021-10-23 01:16:55	523	9
+287	1	7	3	16777227	2021-10-23 01:17:00	\N	517	17
+234	1	3	2	16777217	2021-10-23 01:15:10	\N	1048585	10
+236	1	4	2	16777217	2021-10-23 01:15:10	\N	1048585	10
+198	1	3	2	16777217	2021-10-23 01:13:44	\N	1048585	8
+302	1	0	2	16777236	2021-10-23 01:17:37	2021-10-23 01:17:40	523	10
+200	1	4	2	16777217	2021-10-23 01:13:44	\N	1048585	8
+202	1	5	2	16777217	2021-10-23 01:13:44	\N	1048585	8
+290	1	8	3	16777227	2021-10-23 01:17:05	\N	517	18
+204	1	0	2	16777243	2021-10-23 01:13:44	\N	1048585	8
+205	1	0	2	16777245	2021-10-23 01:13:44	\N	1048585	8
+238	1	5	2	16777217	2021-10-23 01:15:10	\N	1048585	10
+240	1	0	2	16777243	2021-10-23 01:15:10	\N	1048585	10
+241	1	0	2	16777245	2021-10-23 01:15:10	\N	1048585	10
+208	1	3	2	16777217	2021-10-23 01:14:00	\N	1048585	9
+293	1	3	2	16777217	2021-10-23 01:17:24	\N	1048585	13
+210	1	6	2	16777217	2021-10-23 01:14:00	\N	1048585	9
+212	1	0	2	16777243	2021-10-23 01:14:01	\N	1048585	9
+213	1	0	2	16777245	2021-10-23 01:14:01	\N	1048585	9
+295	1	4	2	16777217	2021-10-23 01:17:24	\N	1048585	13
+297	1	5	2	16777217	2021-10-23 01:17:24	\N	1048585	13
+266	1	3	2	16777217	2021-10-23 01:16:21	\N	1048585	11
+215	1	0	2	16777236	2021-10-23 01:14:11	2021-10-23 01:14:14	523	7
+217	1	7	3	16777227	2021-10-23 01:14:19	\N	517	13
+299	1	0	2	16777243	2021-10-23 01:17:24	\N	1048585	13
+300	1	0	2	16777245	2021-10-23 01:17:24	\N	1048585	13
+268	1	4	2	16777217	2021-10-23 01:16:21	\N	1048585	11
+220	1	10	3	16777227	2021-10-23 01:14:24	\N	517	14
+342	1	0	2	16777243	2021-10-23 01:19:08	\N	1048585	14
+314	1	3	2	16777219	2021-10-23 01:18:07	\N	517	19
+244	1	26	2	16777231	2021-10-23 01:15:22	\N	1048585	10
+316	1	4	2	16777219	2021-10-23 01:18:07	\N	517	19
+243	1	0	2	16777236	2021-10-23 01:15:22	2021-10-23 01:15:25	523	8
+318	1	5	2	16777219	2021-10-23 01:18:07	\N	517	19
+229	1	25	2	16777235	2021-10-23 01:14:37	\N	1048585	9
+231	1	6	2	16777254	2021-10-23 01:14:37	\N	1048585	9
+270	1	5	2	16777217	2021-10-23 01:16:21	\N	1048585	11
+343	1	0	2	16777245	2021-10-23 01:19:08	\N	1048585	14
+272	1	0	2	16777243	2021-10-23 01:16:21	\N	1048585	11
+273	1	0	2	16777245	2021-10-23 01:16:21	\N	1048585	11
+252	1	3	2	16777219	2021-10-23 01:15:46	\N	517	15
+328	1	3	2	16777219	2021-10-23 01:18:33	\N	517	21
+254	1	5	2	16777219	2021-10-23 01:15:46	\N	517	15
+256	1	4	2	16777219	2021-10-23 01:15:46	\N	517	15
+321	1	3	2	16777219	2021-10-23 01:18:19	\N	517	20
+323	1	4	2	16777219	2021-10-23 01:18:19	\N	517	20
+325	1	5	2	16777219	2021-10-23 01:18:19	\N	517	20
+259	1	3	2	16777219	2021-10-23 01:15:58	\N	517	16
+261	1	5	2	16777219	2021-10-23 01:15:58	\N	517	16
+330	1	4	2	16777219	2021-10-23 01:18:33	\N	517	21
+263	1	4	2	16777219	2021-10-23 01:15:58	\N	517	16
+332	1	5	2	16777219	2021-10-23 01:18:33	\N	517	21
+335	1	29	3	16777232	2021-10-23 01:18:49	\N	1048585	13
+351	1	0	2	16777243	2021-10-23 01:19:25	\N	1048585	15
+336	1	3	2	16777217	2021-10-23 01:19:08	\N	1048585	14
+338	1	4	2	16777217	2021-10-23 01:19:08	\N	1048585	14
+340	1	5	2	16777217	2021-10-23 01:19:08	\N	1048585	14
+352	1	0	2	16777245	2021-10-23 01:19:25	\N	1048585	15
+345	1	3	2	16777217	2021-10-23 01:19:25	\N	1048585	15
+347	1	4	2	16777217	2021-10-23 01:19:25	\N	1048585	15
+349	1	5	2	16777217	2021-10-23 01:19:25	\N	1048585	15
+354	1	0	2	16777236	2021-10-23 01:19:38	2021-10-23 01:19:41	523	11
+356	1	8	3	16777227	2021-10-23 01:19:45	\N	517	22
+359	1	9	3	16777227	2021-10-23 01:19:51	\N	517	23
+419	1	0	2	16777243	2021-10-23 01:23:45	\N	1048585	18
+369	1	31	2	16777235	2021-10-23 01:20:04	\N	1048585	15
+371	1	4	2	16777254	2021-10-23 01:20:04	\N	1048585	15
+372	1	5	2	16777254	2021-10-23 01:20:04	\N	1048585	15
+420	1	0	2	16777245	2021-10-23 01:23:45	\N	1048585	18
+370	1	3	2	16777254	2021-10-23 01:20:04	2021-10-23 01:20:08	1048585	15
+374	1	3	2	16777217	2021-10-23 01:20:32	\N	1048585	16
+376	1	4	2	16777217	2021-10-23 01:20:32	\N	1048585	16
+378	1	5	2	16777217	2021-10-23 01:20:32	\N	1048585	16
+423	1	34	2	16777234	2021-10-23 01:23:58	\N	1048585	18
+380	1	0	2	16777243	2021-10-23 01:20:32	\N	1048585	16
+381	1	0	2	16777245	2021-10-23 01:20:32	\N	1048585	16
+424	1	3	2	16777217	2021-10-23 01:24:14	\N	1048585	19
+426	1	6	2	16777217	2021-10-23 01:24:14	\N	1048585	19
+428	1	0	2	16777243	2021-10-23 01:24:14	\N	1048585	19
+383	1	3	2	16777217	2021-10-23 01:20:51	\N	1048585	17
+429	1	0	2	16777245	2021-10-23 01:24:14	\N	1048585	19
+385	1	4	2	16777217	2021-10-23 01:20:51	\N	1048585	17
+387	1	5	2	16777217	2021-10-23 01:20:51	\N	1048585	17
+389	1	0	2	16777243	2021-10-23 01:20:51	\N	1048585	17
+390	1	0	2	16777245	2021-10-23 01:20:51	\N	1048585	17
+431	1	0	2	16777236	2021-10-23 01:24:27	2021-10-23 01:24:31	523	13
+392	1	0	2	16777236	2021-10-23 01:21:04	2021-10-23 01:21:08	523	12
+394	1	7	3	16777227	2021-10-23 01:21:12	\N	517	24
+433	1	8	3	16777227	2021-10-23 01:24:35	\N	517	26
+397	1	8	3	16777227	2021-10-23 01:21:18	\N	517	25
+436	1	9	3	16777227	2021-10-23 01:24:40	\N	517	27
+440	1	35	2	16777230	2021-10-23 01:24:43	\N	1048585	19
+442	1	6	2	16777251	2021-10-23 01:24:43	\N	1048585	19
+441	1	3	2	16777251	2021-10-23 01:24:43	2021-10-23 01:24:46	1048585	19
+407	1	33	2	16777235	2021-10-23 01:21:32	\N	1048585	17
 \.
+
+
+--
+-- Name: notifications_notification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.notifications_notification_id_seq', 443, true);
 
 
 --
@@ -6999,41 +7257,41 @@ COPY public.oai_resumption_tokens (token, expire, record_offset, params) FROM st
 --
 
 COPY public.plugin_settings (plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
+acronplugin	0	enabled	1	bool
 defaultthemeplugin	0	enabled	1	bool
 tinymceplugin	0	enabled	1	bool
 usageeventplugin	0	enabled	1	bool
-acronplugin	0	enabled	1	bool
 usagestatsplugin	0	enabled	1	bool
 usagestatsplugin	0	createLogFiles	1	bool
 usagestatsplugin	0	accessLogFileParseRegex	/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] "\\S+ (?P<url>\\S+).*?" (?P<returnCode>\\S+) \\S+ ".*?" "(?P<userAgent>.*?)"/	string
 usagestatsplugin	0	optionalColumns	["city","region"]	object
 usagestatsplugin	0	chartType	bar	string
 usagestatsplugin	0	datasetMaxCount	4	string
-developedbyblockplugin	0	enabled	0	bool
-developedbyblockplugin	0	seq	0	int
 languagetoggleblockplugin	0	enabled	1	bool
 languagetoggleblockplugin	0	seq	4	int
+developedbyblockplugin	0	enabled	0	bool
+developedbyblockplugin	0	seq	0	int
 acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"lib.pkp.classes.task.ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"classes.tasks.SubscriptionExpiryReminder","frequency":{"day":"1"},"args":[]}]	object
 tinymceplugin	1	enabled	1	bool
 defaultthemeplugin	1	enabled	1	bool
-developedbyblockplugin	1	enabled	0	bool
-developedbyblockplugin	1	seq	0	int
 informationblockplugin	1	enabled	1	bool
 informationblockplugin	1	seq	7	int
 languagetoggleblockplugin	1	enabled	1	bool
 languagetoggleblockplugin	1	seq	4	int
 subscriptionblockplugin	1	enabled	1	bool
 subscriptionblockplugin	1	seq	2	int
+developedbyblockplugin	1	enabled	0	bool
+developedbyblockplugin	1	seq	0	int
 resolverplugin	1	enabled	1	bool
-lensgalleyplugin	1	enabled	1	bool
 webfeedplugin	1	enabled	1	bool
 webfeedplugin	1	displayPage	homepage	string
 webfeedplugin	1	displayItems	1	bool
-dublincoremetaplugin	1	enabled	1	bool
+lensgalleyplugin	1	enabled	1	bool
 pdfjsviewerplugin	1	enabled	1	bool
-googlescholarplugin	1	enabled	1	bool
+dublincoremetaplugin	1	enabled	1	bool
 htmlarticlegalleyplugin	1	enabled	1	bool
-usageeventplugin	0	uniqueSiteId	6170ab9c1a1f3	string
+googlescholarplugin	1	enabled	1	bool
+usageeventplugin	0	uniqueSiteId	61735e466041c	string
 defaultthemeplugin	1	typography	notoSans	string
 defaultthemeplugin	1	baseColour	#1E6292	string
 defaultthemeplugin	1	showDescriptionInJournalIndex	false	string
@@ -7066,6 +7324,13 @@ COPY public.publication_galleys (galley_id, locale, publication_id, label, submi
 2	en_US	2	PDF Version 2	2	0		0	pdf
 3	en_US	18	PDF	19	0		0	
 \.
+
+
+--
+-- Name: publication_galleys_galley_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.publication_galleys_galley_id_seq', 3, true);
 
 
 --
@@ -7271,27 +7536,34 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, access_status, date_published, last_modified, locale, primary_contact_id, section_id, seq, submission_id, status, url_path, version) FROM stdin;
-1	0	2021-10-21	2021-10-21 00:01:25	\N	1	1	0	1	3	mwandenga-signalling-theory	1
-18	0	2021-10-21	2021-10-21 00:20:22	\N	23	1	0	17	3	\N	1
-2	0	2021-10-21	2021-10-21 00:02:14	\N	3	1	0	1	1	mwandenga	2
-19	0	\N	2021-10-21 00:20:49	\N	24	1	0	18	1	\N	1
-3	0	\N	2021-10-21 00:03:30	\N	5	1	0	2	1	\N	1
-4	0	\N	2021-10-21 00:04:15	\N	6	1	0	3	1	\N	1
-20	0	\N	2021-10-21 00:21:26	\N	25	2	0	19	1	\N	1
-5	0	\N	2021-10-21 00:05:21	\N	7	1	0	4	1	\N	1
-6	0	\N	2021-10-21 00:05:40	\N	9	1	0	5	1	\N	1
-7	0	\N	2021-10-21 00:07:00	\N	10	1	0	6	1	\N	1
-8	0	\N	2021-10-21 00:08:11	\N	11	1	0	7	1	\N	1
-9	0	\N	2021-10-21 00:09:24	\N	12	1	0	8	1	\N	1
-10	0	\N	2021-10-21 00:09:43	\N	14	2	0	9	1	\N	1
-11	0	\N	2021-10-21 00:11:03	\N	15	1	0	10	1	\N	1
-12	0	\N	2021-10-21 00:12:24	\N	16	1	0	11	1	\N	1
-13	0	\N	2021-10-21 00:12:47	\N	18	1	0	12	1	\N	1
-14	0	\N	2021-10-21 00:13:40	\N	19	1	0	13	1	\N	1
-15	0	\N	2021-10-21 00:15:36	\N	20	1	0	14	1	\N	1
-16	0	\N	2021-10-21 00:15:55	\N	21	1	0	15	1	\N	1
-17	0	\N	2021-10-21 00:17:13	\N	22	1	0	16	1	\N	1
+1	0	2021-10-23	2021-10-23 01:06:48	\N	1	1	0	1	3	mwandenga-signalling-theory	1
+18	0	2021-10-23	2021-10-23 01:23:19	\N	23	1	0	17	3	\N	1
+2	0	2021-10-23	2021-10-23 01:07:34	\N	3	1	0	1	1	mwandenga	2
+19	0	\N	2021-10-23 01:23:44	\N	24	1	0	18	1	\N	1
+3	0	\N	2021-10-23 01:08:39	\N	5	1	0	2	1	\N	1
+4	0	\N	2021-10-23 01:09:17	\N	6	1	0	3	1	\N	1
+20	0	\N	2021-10-23 01:24:13	\N	25	2	0	19	1	\N	1
+5	0	\N	2021-10-23 01:10:14	\N	7	1	0	4	1	\N	1
+6	0	\N	2021-10-23 01:10:31	\N	9	1	0	5	1	\N	1
+7	0	\N	2021-10-23 01:11:39	\N	10	1	0	6	1	\N	1
+8	0	\N	2021-10-23 01:12:41	\N	11	1	0	7	1	\N	1
+9	0	\N	2021-10-23 01:13:43	\N	12	1	0	8	1	\N	1
+10	0	\N	2021-10-23 01:13:59	\N	14	2	0	9	1	\N	1
+11	0	\N	2021-10-23 01:15:09	\N	15	1	0	10	1	\N	1
+12	0	\N	2021-10-23 01:16:20	\N	16	1	0	11	1	\N	1
+13	0	\N	2021-10-23 01:16:38	\N	18	1	0	12	1	\N	1
+14	0	\N	2021-10-23 01:17:23	\N	19	1	0	13	1	\N	1
+15	0	\N	2021-10-23 01:19:06	\N	20	1	0	14	1	\N	1
+16	0	\N	2021-10-23 01:19:24	\N	21	1	0	15	1	\N	1
+17	0	\N	2021-10-23 01:20:31	\N	22	1	0	16	1	\N	1
 \.
+
+
+--
+-- Name: publications_publication_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.publications_publication_id_seq', 20, true);
 
 
 --
@@ -7301,6 +7573,13 @@ COPY public.publications (publication_id, access_status, date_published, last_mo
 COPY public.queries (query_id, assoc_type, assoc_id, stage_id, seq, date_posted, date_modified, closed) FROM stdin;
 1	1048585	2	3	1	\N	\N	0
 \.
+
+
+--
+-- Name: queries_query_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.queries_query_id_seq', 1, true);
 
 
 --
@@ -7323,38 +7602,52 @@ COPY public.queued_payments (queued_payment_id, date_created, date_modified, exp
 
 
 --
+-- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.queued_payments_queued_payment_id_seq', 1, false);
+
+
+--
 -- Data for Name: review_assignments; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, unconsidered) FROM stdin;
-1	1	7	\N	\N	2021-10-20 23:59:10	2021-10-20 23:59:10	\N	\N	\N	2021-11-17 00:00:00	2021-11-17 00:00:00	2021-10-20 23:59:10	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-2	1	9	\N	\N	2021-10-20 23:59:17	2021-10-20 23:59:17	\N	\N	\N	2021-11-17 00:00:00	2021-11-17 00:00:00	2021-10-20 23:59:17	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-16	10	10	\N	3	2021-10-21 00:11:31	2021-10-21 00:11:31	2021-10-21 00:11:54	2021-10-21 00:11:59	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:11:59	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
-3	1	10	\N	\N	2021-10-20 23:59:23	2021-10-20 23:59:23	\N	\N	\N	2021-11-17 00:00:00	2021-11-17 00:00:00	2021-10-20 23:59:23	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-4	3	9	\N	\N	2021-10-21 00:04:36	2021-10-21 00:04:36	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:04:36	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-24	17	7	\N	\N	2021-10-21 00:18:01	2021-10-21 00:18:01	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:18:01	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-5	3	10	\N	\N	2021-10-21 00:04:42	2021-10-21 00:04:42	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:04:42	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-17	12	7	\N	\N	2021-10-21 00:13:11	2021-10-21 00:13:11	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:13:11	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-6	5	8	\N	\N	2021-10-21 00:06:00	2021-10-21 00:06:00	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:06:00	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-7	5	10	\N	\N	2021-10-21 00:06:06	2021-10-21 00:06:06	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:06:06	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-8	6	7	\N	\N	2021-10-21 00:07:22	2021-10-21 00:07:22	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:07:22	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-18	12	8	\N	\N	2021-10-21 00:13:17	2021-10-21 00:13:17	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:13:17	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-9	6	10	\N	\N	2021-10-21 00:07:28	2021-10-21 00:07:28	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:07:28	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-25	17	8	\N	\N	2021-10-21 00:18:07	2021-10-21 00:18:07	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:18:07	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-11	7	9	\N	\N	2021-10-21 00:08:39	2021-10-21 00:08:39	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:08:39	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-12	7	10	\N	\N	2021-10-21 00:08:45	2021-10-21 00:08:45	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:08:45	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-26	19	8	\N	\N	2021-10-21 00:21:50	2021-10-21 00:21:50	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:21:50	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-10	7	8	\N	5	2021-10-21 00:08:33	2021-10-21 00:08:34	2021-10-21 00:08:54	2021-10-21 00:08:59	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:08:59	0	0	0	\N	\N	\N	\N	6	3	2	1	4	\N	0
-13	9	7	\N	\N	2021-10-21 00:10:05	2021-10-21 00:10:05	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:10:05	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-14	9	10	\N	\N	2021-10-21 00:10:11	2021-10-21 00:10:11	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:10:11	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-27	19	9	\N	\N	2021-10-21 00:21:56	2021-10-21 00:21:56	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:21:56	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-19	13	7	\N	2	2021-10-21 00:14:03	2021-10-21 00:14:04	2021-10-21 00:14:24	2021-10-21 00:14:29	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:14:29	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-15	10	9	\N	2	2021-10-21 00:11:25	2021-10-21 00:11:25	2021-10-21 00:11:40	2021-10-21 00:11:45	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:11:45	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
-20	13	9	\N	2	2021-10-21 00:14:09	2021-10-21 00:14:09	2021-10-21 00:14:37	2021-10-21 00:14:42	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:14:42	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-21	13	10	\N	3	2021-10-21 00:14:15	2021-10-21 00:14:15	2021-10-21 00:14:53	2021-10-21 00:14:58	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:14:58	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-22	15	8	\N	\N	2021-10-21 00:16:20	2021-10-21 00:16:20	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:16:20	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
-23	15	9	\N	\N	2021-10-21 00:16:25	2021-10-21 00:16:25	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 00:16:25	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+1	1	7	\N	\N	2021-10-23 01:04:43	2021-10-23 01:04:43	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:04:43	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+2	1	9	\N	\N	2021-10-23 01:04:49	2021-10-23 01:04:49	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:04:49	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+16	10	10	\N	3	2021-10-23 01:15:35	2021-10-23 01:15:35	2021-10-23 01:15:54	2021-10-23 01:15:58	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:15:58	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
+3	1	10	\N	\N	2021-10-23 01:04:55	2021-10-23 01:04:55	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:04:55	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+4	3	9	\N	\N	2021-10-23 01:09:35	2021-10-23 01:09:35	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:09:35	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+24	17	7	\N	\N	2021-10-23 01:21:12	2021-10-23 01:21:13	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:21:13	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+5	3	10	\N	\N	2021-10-23 01:09:40	2021-10-23 01:09:41	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:09:41	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+17	12	7	\N	\N	2021-10-23 01:17:00	2021-10-23 01:17:00	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:17:00	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+6	5	8	\N	\N	2021-10-23 01:10:49	2021-10-23 01:10:49	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:10:49	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+7	5	10	\N	\N	2021-10-23 01:10:55	2021-10-23 01:10:55	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:10:55	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+8	6	7	\N	\N	2021-10-23 01:11:57	2021-10-23 01:11:57	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:11:57	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+18	12	8	\N	\N	2021-10-23 01:17:05	2021-10-23 01:17:05	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:17:05	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+9	6	10	\N	\N	2021-10-23 01:12:03	2021-10-23 01:12:03	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:12:03	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+25	17	8	\N	\N	2021-10-23 01:21:18	2021-10-23 01:21:18	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:21:18	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+11	7	9	\N	\N	2021-10-23 01:13:04	2021-10-23 01:13:04	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:13:04	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+12	7	10	\N	\N	2021-10-23 01:13:09	2021-10-23 01:13:10	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:13:10	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+26	19	8	\N	\N	2021-10-23 01:24:35	2021-10-23 01:24:35	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:24:35	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+10	7	8	\N	5	2021-10-23 01:12:59	2021-10-23 01:12:59	2021-10-23 01:13:17	2021-10-23 01:13:21	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:13:21	0	0	0	\N	\N	\N	\N	6	3	2	1	4	\N	0
+13	9	7	\N	\N	2021-10-23 01:14:19	2021-10-23 01:14:19	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:14:19	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+14	9	10	\N	\N	2021-10-23 01:14:24	2021-10-23 01:14:24	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:14:24	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+27	19	9	\N	\N	2021-10-23 01:24:40	2021-10-23 01:24:41	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:24:41	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+19	13	7	\N	2	2021-10-23 01:17:45	2021-10-23 01:17:45	2021-10-23 01:18:03	2021-10-23 01:18:07	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:18:07	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+15	10	9	\N	2	2021-10-23 01:15:30	2021-10-23 01:15:30	2021-10-23 01:15:42	2021-10-23 01:15:46	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:15:46	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
+20	13	9	\N	2	2021-10-23 01:17:50	2021-10-23 01:17:50	2021-10-23 01:18:15	2021-10-23 01:18:19	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:18:19	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+21	13	10	\N	3	2021-10-23 01:17:56	2021-10-23 01:17:56	2021-10-23 01:18:28	2021-10-23 01:18:33	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:18:33	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+22	15	8	\N	\N	2021-10-23 01:19:45	2021-10-23 01:19:45	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:19:45	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+23	15	9	\N	\N	2021-10-23 01:19:51	2021-10-23 01:19:51	\N	\N	\N	2021-11-20 00:00:00	2021-11-20 00:00:00	2021-10-23 01:19:51	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
 \.
+
+
+--
+-- Name: review_assignments_review_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 27, true);
 
 
 --
@@ -7382,6 +7675,13 @@ COPY public.review_form_elements (review_form_element_id, review_form_id, seq, e
 
 
 --
+-- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_elements_review_form_element_id_seq', 1, false);
+
+
+--
 -- Data for Name: review_form_responses; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -7403,6 +7703,13 @@ COPY public.review_form_settings (review_form_id, locale, setting_name, setting_
 
 COPY public.review_forms (review_form_id, assoc_type, assoc_id, seq, is_active) FROM stdin;
 \.
+
+
+--
+-- Name: review_forms_review_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.review_forms_review_form_id_seq', 1, false);
 
 
 --
@@ -7435,14 +7742,21 @@ COPY public.review_rounds (review_round_id, submission_id, stage_id, round, revi
 
 
 --
+-- Name: review_rounds_review_round_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 13, true);
+
+
+--
 -- Data for Name: scheduled_tasks; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2021-10-20 23:51:38
-lib.pkp.classes.task.ReviewReminder	2021-10-20 23:51:38
-lib.pkp.classes.task.StatisticsReport	2021-10-20 23:51:38
-classes.tasks.SubscriptionExpiryReminder	2021-10-20 23:51:38
+plugins.generic.usageStats.UsageStatsLoader	2021-10-23 00:58:31
+lib.pkp.classes.task.ReviewReminder	2021-10-23 00:58:31
+lib.pkp.classes.task.StatisticsReport	2021-10-23 00:58:31
+classes.tasks.SubscriptionExpiryReminder	2021-10-23 00:58:31
 \.
 
 
@@ -7481,57 +7795,60 @@ COPY public.sections (section_id, journal_id, review_form_id, seq, editor_restri
 
 
 --
+-- Name: sections_section_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.sections_section_id_seq', 2, true);
+
+
+--
 -- Data for Name: sessions; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-ed3n1edndp8p7fr6t4e6eu6saq	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634773895	1634773895	0		localhost
-n1vm0jlt3cjutsips88fof155v	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634773915	1634773939	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634773939;s:5:"token";s:32:"79e0a405c8532d8342381623ededa634";}	localhost
-5rgk4mr39tftndkgvtphspli2u	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634773940	1634773953	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634773953;s:5:"token";s:32:"c2acb77f1e74b8bb2155f94e1e8a6763";}	localhost
-jt3v41hvkds6mslu4ou4g82o27	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634773954	1634773966	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634773966;s:5:"token";s:32:"8e6c24711608e8cecd34f86c025ff022";}	localhost
-fucpojsc520v7k1nn1esad46gh	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634773898	1634773915	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634773915;s:5:"token";s:32:"5bb8d52fb3cc14d19c1ac6ead08adef2";}	localhost
-ud2k6h74naa82lo1muq59ff74h	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774284	1634774296	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634774296;s:5:"token";s:32:"fa437963fced622ff98142cfc810a74e";}	localhost
-4tm1hubpp8j06jkm4cc6jv1k9c	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634773968	1634774281	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1634774280;s:5:"token";s:32:"22b9c7e28c8c81339d2daaca1b1b0964";}	localhost
-2fsgfo60k66okhpo22n00i4lom	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774298	1634774310	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634774310;s:5:"token";s:32:"1d3af8a41e2c2333955f541433048692";}	localhost
-0a662s591fvac0gcuu7gh0skud	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774434	1634774441	0	userId|i:17;username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1634774437;s:5:"token";s:32:"f13e87c35fcb7012e13f13e8740d8386";}	localhost
-ekfjij5a76mpnupobvldvh64cp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774456	1634774471	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634774471;s:5:"token";s:32:"971561de48360b8bf8a8b8a5b8180391";}	localhost
-ldmafh262f7nv9f73k6sbcsi08	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774313	1634774397	0	csrf|a:2:{s:9:"timestamp";i:1634774397;s:5:"token";s:32:"19cee6744217b4e640831b0bcd10736e";}username|s:7:"dbarnes";userId|i:3;	localhost
-6j14jnke9rc1l0vthb58bigug2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774398	1634774434	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634774434;s:5:"token";s:32:"5afbfc9d7aa3c635fecff2a5eae95d23";}	localhost
-djla72bjh8kes5crrmqelt2213	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774442	1634774456	0	username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1634774456;s:5:"token";s:32:"77f1e1fb9caa21c0aee8976908ce45e2";}userId|i:17;	localhost
-hnptds8h5ccnj07rsanqcjhqjo	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774529	1634774536	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634774537;s:5:"token";s:32:"3040e5ca84242daf9922e28c1d716a6c";}	localhost
-8kd4ut8db4gs7gps3shgcvcgv9	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774472	1634774485	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634774485;s:5:"token";s:32:"40845c324f2cc1aaba53f04e65d91ca8";}userId|i:3;	localhost
-nihuvfpc3okupmppir3ejoadkc	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774518	1634774518	0		localhost
-i666ac8a7t8q8ehq2aajbsccnu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774486	1634774517	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634774517;s:5:"token";s:32:"d48beeb415e062aab0a87db541bce748";}	localhost
-n3jaomte5aj6vossbn2s0lguh0	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774518	1634774518	0		localhost
-thvehs5o8ll8ce0bbvjtkk836n	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774518	1634774518	0		localhost
-tb5uqei2famdq3un1ee66gapdf	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774518	1634774518	0		localhost
-62c7gk3h7jn4f4i3s2o2eff2jo	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774518	1634774527	0		localhost
-ep4ggpnj9145vcm55dhh10rc4h	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774538	1634774551	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1634774550;s:5:"token";s:32:"96ebdc39df0fe02cc38948224f54c7ea";}signedInAs|i:3;	localhost
-5935h8ss3lbldfko63olsf1ocl	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774551	1634774564	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1634774564;s:5:"token";s:32:"460e034f00e39dc6677ade174991baba";}signedInAs|i:3;	localhost
-39rkbm76dhv4grbo34hegbvtpa	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774568	1634774635	0	csrf|a:2:{s:9:"timestamp";i:1634774635;s:5:"token";s:32:"cf7ac95b70d932dee4b5ad5a9b76b2ce";}username|s:7:"dbarnes";userId|i:3;	localhost
-mhau4piif56smpn4o4gokovqqu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774802	1634774873	0	csrf|a:2:{s:9:"timestamp";i:1634774874;s:5:"token";s:32:"b2ace76c57f4edbdddedbbd530a1113a";}username|s:7:"dbarnes";userId|i:3;	localhost
-ol1dakmcsdbu4kkrq43glrgprs	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774725	1634774799	0	csrf|a:2:{s:9:"timestamp";i:1634774799;s:5:"token";s:32:"c057243f17a3c0af47d03a972a50a942";}username|s:7:"dbarnes";userId|i:3;	localhost
-21qpa31gp1s0ubjaktlspffr97	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774637	1634774695	0	csrf|a:2:{s:9:"timestamp";i:1634774695;s:5:"token";s:32:"7ca94db1885daaf7009dad9e6112c262";}username|s:7:"dbarnes";userId|i:3;	localhost
-5ml3o2mpdqe4t50juq31q7317c	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774697	1634774723	0	csrf|a:2:{s:9:"timestamp";i:1634774722;s:5:"token";s:32:"148eed96876970a1ad71d62b94f381d8";}username|s:12:"cmontgomerie";userId|i:20;	localhost
-v78ps5nkhrqiq3fvm745ersjqe	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775201	1634775317	0	csrf|a:2:{s:9:"timestamp";i:1634775316;s:5:"token";s:32:"910dfb756c85b6188c63f7ff99785312";}username|s:7:"dbarnes";userId|i:3;	localhost
-u7t3bhsfkd98u3limhljeel0c2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775531	1634775549	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634775549;s:5:"token";s:32:"19ee30b07213801bb9f91d00c3e74ec1";}	localhost
-fh9t9ur1a50fb0mkclvkkt8hoq	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775415	1634775436	0	csrf|a:2:{s:9:"timestamp";i:1634775435;s:5:"token";s:32:"64634d16028efcb22cb0bbfd4d0bd987";}username|s:6:"rrossi";userId|i:32;	localhost
-419cqsqghqpj2utrpol7b9vjk4	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775319	1634775338	0	csrf|a:2:{s:9:"timestamp";i:1634775338;s:5:"token";s:32:"b0408aaf8c8d2aefd013635b7f7761bc";}username|s:7:"pdaniel";userId|i:30;	localhost
-il6r4ftdojbs52mbjvrgosmndd	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774942	1634774966	0	csrf|a:2:{s:9:"timestamp";i:1634774965;s:5:"token";s:32:"7173bdc2fd80d20774378a1a23593852";}username|s:7:"eostrom";userId|i:24;	localhost
-lt27m60bimt9f4mofffoh6sofg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774876	1634774939	0	csrf|a:2:{s:9:"timestamp";i:1634774939;s:5:"token";s:32:"7ff1936336e997243068de25c2a96aec";}username|s:7:"phudson";	localhost
-n3hfp3hbrjvpc8r3g86sl5agvq	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775340	1634775412	0	csrf|a:2:{s:9:"timestamp";i:1634775413;s:5:"token";s:32:"a2db684e347c0cfacc1f752525a85ea4";}username|s:7:"dbarnes";userId|i:3;	localhost
-h4rsm279d777a2vh5h82hmqhem	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775438	1634775530	0	csrf|a:2:{s:9:"timestamp";i:1634775529;s:5:"token";s:32:"3e3fad714ba0e7fe9e6511dd74a0e303";}username|s:7:"dbarnes";userId|i:3;	localhost
-pi5qvo1g78bvsbb5hklir4c5v6	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775549	1634775565	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634775565;s:5:"token";s:32:"985c9574aab1072d767c90336fdb1751";}	localhost
-6vn7du5j9lc4fl5p01huh47mks	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775045	1634775120	0	csrf|a:2:{s:9:"timestamp";i:1634775120;s:5:"token";s:32:"65efb558d2ea4a3bf740905d8548435a";}username|s:8:"agallego";	localhost
-ckrg50haollpnu5vrq3stbk6bp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634774968	1634775043	0	csrf|a:2:{s:9:"timestamp";i:1634775043;s:5:"token";s:32:"ce7908ac598737097ec78e29f0fb79e5";}username|s:7:"dbarnes";userId|i:3;	localhost
-vvdpng27u63av5b5ubh0pct4k6	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775565	1634775579	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634775576;s:5:"token";s:32:"5602e70dca471d9650d4759b46450809";}	localhost
-csnfr2ddfi07gb9e3re4v74oks	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775579	1634775593	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634775591;s:5:"token";s:32:"fef8bded309f4939c3f0139b26db2698";}	localhost
-nlb8vp7k5ppsc108unpdha9pgr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775593	1634775609	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634775606;s:5:"token";s:32:"6a88958190a6ec52cbcdb0b22ef00e43";}	localhost
-gl1e0pqq4r7iejbl29lf1paml6	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775123	1634775146	0	csrf|a:2:{s:9:"timestamp";i:1634775145;s:5:"token";s:32:"8a5a131fa671a3779d94f97ab3b78530";}username|s:10:"kalkhafaji";userId|i:27;	localhost
-fpm033l3gicte9f5ksbsqv8m56	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775148	1634775197	0	csrf|a:2:{s:9:"timestamp";i:1634775197;s:5:"token";s:32:"071498965454938339ac3933fdc7490b";}username|s:7:"dbarnes";userId|i:3;	localhost
-pneis12n0t6f679rmog77rs6n9	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775609	1634775630	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634775630;s:5:"token";s:32:"509371dd2700b72308d58039509a9bbd";}	localhost
-9l9tgp0m8ot2ev4fp2l3arcl4l	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775671	1634775728	0	csrf|a:2:{s:9:"timestamp";i:1634775729;s:5:"token";s:32:"d88de3d870ea1fee0301f6b8ecc0dc66";}username|s:7:"dbarnes";userId|i:3;	localhost
-ma3vt1bqfss8qjloe8f1mb7vq8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634775633	1634775670	0	csrf|a:2:{s:9:"timestamp";i:1634775670;s:5:"token";s:32:"3ddab4019b31677b34045b99f49f9b22";}username|s:7:"dbarnes";userId|i:3;	localhost
+fnbqvr7j0isnmn3l8mp5e2gsjn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634950707	1634950707	0		localhost
+9ei2r8jbrrsks7r3huf194n8io	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634950726	1634950747	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634950747;s:5:"token";s:32:"1abd3edaf8d2c9fe92700e4b111cee63";}	localhost
+4mnv310ots3n8j6vtcf8qak3gl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951283	1634951340	0	csrf|a:2:{s:9:"timestamp";i:1634951340;s:5:"token";s:32:"8529368f7f870c48753ea4d8e69dc39f";}username|s:7:"dbarnes";userId|i:3;	localhost
+d0hl6s9rbhsh41jhniinp50bcs	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634950747	1634950758	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634950758;s:5:"token";s:32:"0fd89b59ec4fcdab13a9c27b84cac0f0";}	localhost
+5lve52mcv1hkie2io4r13crrcv	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634950759	1634950769	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634950769;s:5:"token";s:32:"6ad22d25aea150227af8cc3746172f06";}	localhost
+iu4iu4jv34pm7dg4bppnaphaia	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634950711	1634950726	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634950726;s:5:"token";s:32:"9c199ef61e9492b76515ac2618e42838";}	localhost
+kvncahd2p6eqno9mtqqnbmmgts	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951342	1634951392	0	csrf|a:2:{s:9:"timestamp";i:1634951392;s:5:"token";s:32:"e4103f5dbf6e661c82def43795ef3c6a";}username|s:7:"dbarnes";userId|i:3;	localhost
+9ch5ctitq9g32877hi4hiumq3i	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951129	1634951160	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634951160;s:5:"token";s:32:"7d9ab560a6b74da3afb7bd14e71586fb";}	localhost
+hfa74q5k11nnlprs44urnb5ciq	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951023	1634951034	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634951034;s:5:"token";s:32:"e4899b15cdfeb4aa852fc821353c2df3";}	localhost
+f1qh9g4icououae7kt0t75fgfo	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634950771	1634951020	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1634951020;s:5:"token";s:32:"59d668c9d2cc5e6d0ac2d8f14e736573";}	localhost
+8c1epq1afpmhu13h4th6lq3si6	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951036	1634951048	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634951047;s:5:"token";s:32:"9a1c9a720846cdb7ad6688662e5847c8";}	localhost
+648frimsjqvr7bchuta4ia1sbr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951208	1634951237	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634951237;s:5:"token";s:32:"83203ec4876fce57f145babfdb788502";}	localhost
+48kbkj5498nt6iv42hj5fki1tr	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951161	1634951167	0	userId|i:17;username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1634951164;s:5:"token";s:32:"d4ec34e497af8ec2e6209cfb35203c8d";}	localhost
+ianqocu3h4u134kqej5eeqk716	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951050	1634951128	0	csrf|a:2:{s:9:"timestamp";i:1634951129;s:5:"token";s:32:"4b89f3dd1fa55a968c1c92b4b347ec2d";}username|s:7:"dbarnes";userId|i:3;	localhost
+l0mjvcgvb3g6bupfuheff8oece	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951196	1634951208	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634951208;s:5:"token";s:32:"a89cb7b8b0ef5cff724674fe0da5a890";}userId|i:3;	localhost
+rmjlhlmiamgkll496fjrpa07at	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951182	1634951195	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634951196;s:5:"token";s:32:"30df6d2b2e377cca854539f31386e0c7";}	localhost
+ucaqmsjp1jqdl4ed2f4cv7tovp	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951168	1634951182	0	username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1634951182;s:5:"token";s:32:"2004756074b2b8a814956555f9efcc9c";}userId|i:17;	localhost
+d5duulvlf7mv4gms544mhdikue	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951249	1634951256	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634951257;s:5:"token";s:32:"32c8aac4cb26f5e7c50caac52a0df2ad";}	localhost
+vsu4pc44bhvubu9830tbhbc4do	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951238	1634951247	0		localhost
+r17gf3t58jqbis355tfiej9bo6	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951258	1634951270	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1634951270;s:5:"token";s:32:"fdf97ce0b9cc5b6a0fd77667e4db1d92";}signedInAs|i:3;	localhost
+fkuaq2isppso3534050ia8gqfj	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951270	1634951282	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1634951282;s:5:"token";s:32:"b7954d08692124a0e095210c58767814";}signedInAs|i:3;	localhost
+3a5gl1ns6m7reum24bgkgujfkl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951783	1634951825	0	csrf|a:2:{s:9:"timestamp";i:1634951825;s:5:"token";s:32:"ec78862afc423152e6a3de7e6a7679eb";}username|s:7:"dbarnes";userId|i:3;	localhost
+6thjhp8u96cs04a51lk4vfm194	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951418	1634951482	0	csrf|a:2:{s:9:"timestamp";i:1634951482;s:5:"token";s:32:"52c7075bcdea8ecef94c556017b1d9d0";}username|s:7:"dbarnes";userId|i:3;	localhost
+tvu4tsab94qno2eh000cefd3po	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634952210	1634952238	0	csrf|a:2:{s:9:"timestamp";i:1634952238;s:5:"token";s:32:"57c472135e60e40570c4ae35c74885da";}username|s:7:"dbarnes";userId|i:3;	localhost
+ei3mtmppnbej4ajh8nto6hsp5e	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951394	1634951416	0	csrf|a:2:{s:9:"timestamp";i:1634951415;s:5:"token";s:32:"c2955869d5f136008cec5c39bed7a6c8";}username|s:12:"cmontgomerie";userId|i:20;	localhost
+1sugf1pvgpeoohl8leljr47gr8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951485	1634951545	0	csrf|a:2:{s:9:"timestamp";i:1634951545;s:5:"token";s:32:"bc9916309309a1d5e3db57d392f39769";}username|s:7:"dbarnes";userId|i:3;	localhost
+vkmhf9acc0leq04at679r7ad15	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951932	1634951948	0	csrf|a:2:{s:9:"timestamp";i:1634951947;s:5:"token";s:32:"ed45e62e18961d4b9e789531fc584478";}username|s:7:"pdaniel";userId|i:30;	localhost
+brvrm3us5ok2l32diee0c7n64d	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951827	1634951929	0	csrf|a:2:{s:9:"timestamp";i:1634951929;s:5:"token";s:32:"619958c1902355f23ceb116c79c0effb";}username|s:7:"dbarnes";userId|i:3;	localhost
+ocj6c6kovqjopkcpsqpqoo6jvt	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951627	1634951692	0	csrf|a:2:{s:9:"timestamp";i:1634951692;s:5:"token";s:32:"12a13a71a0f88f53fa758dcf9c5db38c";}username|s:7:"dbarnes";userId|i:3;	localhost
+l7g5o9jid3c92paon0qd3inmhi	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951547	1634951602	0	csrf|a:2:{s:9:"timestamp";i:1634951602;s:5:"token";s:32:"09bd951e5b6a7b07a03f85e228114fd1";}username|s:7:"phudson";	localhost
+ftsidibsv6mo5kvgkveidhk93f	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951605	1634951625	0	csrf|a:2:{s:9:"timestamp";i:1634951624;s:5:"token";s:32:"d317ced20ff0a1d095ce748c3a7be87b";}username|s:7:"eostrom";userId|i:24;	localhost
+c3d98au21eqiac9svbre8mi75l	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634952016	1634952032	0	csrf|a:2:{s:9:"timestamp";i:1634952032;s:5:"token";s:32:"723c5441e8ee717929c7e922515ed5e4";}username|s:6:"rrossi";userId|i:32;	localhost
+scbe4kkf0jrt2e2kv0uolhblgk	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951761	1634951782	0	csrf|a:2:{s:9:"timestamp";i:1634951781;s:5:"token";s:32:"1ceeec56f0c88eeac84e4ff32d067291";}username|s:10:"kalkhafaji";userId|i:27;	localhost
+9lqkoqt14cd1b0d8ji5fh65l3b	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951950	1634952013	0	csrf|a:2:{s:9:"timestamp";i:1634952014;s:5:"token";s:32:"f31046b06c0087d62d92f148374088d2";}username|s:7:"dbarnes";userId|i:3;	localhost
+i0uba7dk9gdmqkss9kuhfej098	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634952145	1634952159	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634952156;s:5:"token";s:32:"dee0556a1f12523dd303c1f2989f35eb";}	localhost
+c4tpa87k02e8edrt0l7r5qjf9f	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634951694	1634951759	0	csrf|a:2:{s:9:"timestamp";i:1634951759;s:5:"token";s:32:"632a128f644393987f9d2c77eda37ac7";}username|s:8:"agallego";	localhost
+1jpmmcq3iptdr3ks9hr9p89fsb	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634952159	1634952172	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634952169;s:5:"token";s:32:"305e30789809414e215d41b93df2c993";}	localhost
+vlvv2c9lmv6qlovl9k6rakphap	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634952035	1634952113	0	csrf|a:2:{s:9:"timestamp";i:1634952113;s:5:"token";s:32:"244958be22fe7a111ca03b580d9002d2";}username|s:7:"dbarnes";userId|i:3;	localhost
+knb8lpospo4hpgr3qqqvo7k3b0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634952114	1634952131	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634952132;s:5:"token";s:32:"7ed46107ceb737c9669de7ea53fe0532";}	localhost
+4q8obdk2ivbbnj4ns0itc44lli	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634952132	1634952145	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634952143;s:5:"token";s:32:"65335cfe4158adb5211582491dfc7bf9";}	localhost
+3pls63548sgnc173crk9hgs80t	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634952172	1634952187	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634952185;s:5:"token";s:32:"4f6b73aa611c4a92d0e8ddad3bf76bd3";}	localhost
+bnfsv9jn12o6fu8qjnrggkd7il	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634952187	1634952207	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634952207;s:5:"token";s:32:"2ac27cb3fef67c29b17f8bc94c618c4a";}	localhost
+jv6mpai04mfmtp9o5grhae6j2h	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1634952239	1634952291	0	csrf|a:2:{s:9:"timestamp";i:1634952291;s:5:"token";s:32:"73aed20bfa4917e375bd17ae6e0773c9";}username|s:7:"dbarnes";userId|i:3;	localhost
 \.
 
 
@@ -7561,100 +7878,107 @@ themePluginPath		default
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-2	1	3	3	2021-10-20 23:58:51	0	1
-3	1	5	4	2021-10-20 23:58:51	0	1
-5	1	7	12	2021-10-20 23:59:36	0	0
-6	1	11	14	2021-10-20 23:59:49	0	0
-7	1	13	16	2021-10-20 23:59:56	0	0
-1	1	14	17	2021-10-21 00:00:48	0	1
-4	1	5	5	2021-10-21 00:02:37	1	0
-8	2	14	18	2021-10-21 00:02:56	0	0
-9	2	3	3	2021-10-21 00:03:06	0	1
-10	2	5	4	2021-10-21 00:03:06	0	1
-11	2	5	5	2021-10-21 00:03:06	0	1
-12	2	5	6	2021-10-21 00:03:25	1	1
-13	3	14	19	2021-10-21 00:04:06	0	0
-14	3	3	3	2021-10-21 00:04:16	0	1
-15	3	5	4	2021-10-21 00:04:17	0	1
-16	3	5	5	2021-10-21 00:04:17	0	1
-17	3	7	11	2021-10-21 00:04:54	0	0
-18	4	14	20	2021-10-21 00:05:06	0	0
-19	4	3	3	2021-10-21 00:05:22	0	1
-20	4	5	4	2021-10-21 00:05:22	0	1
-21	4	5	5	2021-10-21 00:05:22	0	1
-22	5	14	21	2021-10-21 00:05:33	0	0
-23	5	3	3	2021-10-21 00:05:41	0	1
-24	5	5	4	2021-10-21 00:05:41	0	1
-25	5	5	5	2021-10-21 00:05:41	0	1
-26	5	7	11	2021-10-21 00:06:18	0	0
-27	5	11	13	2021-10-21 00:06:31	0	0
-28	5	13	15	2021-10-21 00:06:38	0	0
-29	6	14	22	2021-10-21 00:06:50	0	0
-30	6	3	3	2021-10-21 00:07:01	0	1
-31	6	5	4	2021-10-21 00:07:01	0	1
-32	6	5	5	2021-10-21 00:07:01	0	1
-33	6	7	11	2021-10-21 00:07:39	0	0
-34	6	11	13	2021-10-21 00:07:52	0	0
-35	7	14	23	2021-10-21 00:08:04	0	0
-36	7	3	3	2021-10-21 00:08:13	0	1
-37	7	5	4	2021-10-21 00:08:13	0	1
-38	7	5	5	2021-10-21 00:08:13	0	1
-39	8	14	24	2021-10-21 00:09:10	0	0
-40	8	3	3	2021-10-21 00:09:25	0	1
-41	8	5	4	2021-10-21 00:09:25	0	1
-42	8	5	5	2021-10-21 00:09:25	0	1
-43	9	14	25	2021-10-21 00:09:37	0	0
-44	9	3	3	2021-10-21 00:09:44	0	1
-45	9	5	6	2021-10-21 00:09:44	0	1
-46	9	7	12	2021-10-21 00:10:22	0	0
-47	9	11	14	2021-10-21 00:10:36	0	0
-48	9	13	16	2021-10-21 00:10:42	0	0
-49	10	14	26	2021-10-21 00:10:54	0	0
-50	10	3	3	2021-10-21 00:11:04	0	1
-51	10	5	4	2021-10-21 00:11:04	0	1
-52	10	5	5	2021-10-21 00:11:04	0	1
-53	11	14	27	2021-10-21 00:12:11	0	0
-54	11	3	3	2021-10-21 00:12:25	0	1
-55	11	5	4	2021-10-21 00:12:25	0	1
-56	11	5	5	2021-10-21 00:12:25	0	1
-57	12	14	28	2021-10-21 00:12:37	0	0
-58	12	3	3	2021-10-21 00:12:48	0	1
-59	12	5	4	2021-10-21 00:12:48	0	1
-60	12	5	5	2021-10-21 00:12:48	0	1
-61	13	14	29	2021-10-21 00:13:29	0	0
-62	13	3	3	2021-10-21 00:13:41	0	1
-63	13	5	4	2021-10-21 00:13:41	0	1
-64	13	5	5	2021-10-21 00:13:41	0	1
-65	14	14	30	2021-10-21 00:15:28	0	0
-66	14	3	3	2021-10-21 00:15:38	0	1
-67	14	5	4	2021-10-21 00:15:38	0	1
-68	14	5	5	2021-10-21 00:15:38	0	1
-69	15	14	31	2021-10-21 00:15:49	0	0
-70	15	3	3	2021-10-21 00:15:56	0	1
-71	15	5	4	2021-10-21 00:15:56	0	1
-72	15	5	5	2021-10-21 00:15:56	0	1
-73	15	7	12	2021-10-21 00:16:37	0	0
-74	15	11	14	2021-10-21 00:16:51	0	0
-75	16	14	32	2021-10-21 00:17:03	0	0
-76	16	3	3	2021-10-21 00:17:15	0	1
-77	16	5	4	2021-10-21 00:17:15	0	1
-78	16	5	5	2021-10-21 00:17:15	0	1
-79	17	14	33	2021-10-21 00:17:26	0	0
-80	17	3	3	2021-10-21 00:17:38	0	1
-81	17	5	4	2021-10-21 00:17:38	0	1
-82	17	5	5	2021-10-21 00:17:38	0	1
-83	17	7	11	2021-10-21 00:18:19	0	0
-84	17	11	13	2021-10-21 00:18:33	0	0
-85	17	13	15	2021-10-21 00:18:39	0	0
-86	18	14	34	2021-10-21 00:20:42	0	0
-87	18	3	3	2021-10-21 00:20:50	0	1
-88	18	5	4	2021-10-21 00:20:50	0	1
-89	18	5	5	2021-10-21 00:20:50	0	1
-90	19	14	35	2021-10-21 00:21:19	0	0
-91	19	3	3	2021-10-21 00:21:27	0	1
-92	19	5	6	2021-10-21 00:21:27	0	1
-93	19	7	12	2021-10-21 00:22:07	0	0
+2	1	3	3	2021-10-23 01:04:25	0	1
+3	1	5	4	2021-10-23 01:04:25	0	1
+5	1	7	12	2021-10-23 01:05:10	0	0
+6	1	11	14	2021-10-23 01:05:22	0	0
+7	1	13	16	2021-10-23 01:05:27	0	0
+1	1	14	17	2021-10-23 01:06:14	0	1
+4	1	5	5	2021-10-23 01:07:56	1	0
+8	2	14	18	2021-10-23 01:08:11	0	0
+9	2	3	3	2021-10-23 01:08:18	0	1
+10	2	5	4	2021-10-23 01:08:19	0	1
+11	2	5	5	2021-10-23 01:08:19	0	1
+12	2	5	6	2021-10-23 01:08:35	1	1
+13	3	14	19	2021-10-23 01:09:10	0	0
+14	3	3	3	2021-10-23 01:09:18	0	1
+15	3	5	4	2021-10-23 01:09:18	0	1
+16	3	5	5	2021-10-23 01:09:18	0	1
+17	3	7	11	2021-10-23 01:09:51	0	0
+18	4	14	20	2021-10-23 01:10:03	0	0
+19	4	3	3	2021-10-23 01:10:15	0	1
+20	4	5	4	2021-10-23 01:10:15	0	1
+21	4	5	5	2021-10-23 01:10:15	0	1
+22	5	14	21	2021-10-23 01:10:26	0	0
+23	5	3	3	2021-10-23 01:10:32	0	1
+24	5	5	4	2021-10-23 01:10:32	0	1
+25	5	5	5	2021-10-23 01:10:32	0	1
+26	5	7	11	2021-10-23 01:11:05	0	0
+27	5	11	13	2021-10-23 01:11:16	0	0
+28	5	13	15	2021-10-23 01:11:21	0	0
+29	6	14	22	2021-10-23 01:11:32	0	0
+30	6	3	3	2021-10-23 01:11:40	0	1
+31	6	5	4	2021-10-23 01:11:40	0	1
+32	6	5	5	2021-10-23 01:11:40	0	1
+33	6	7	11	2021-10-23 01:12:13	0	0
+34	6	11	13	2021-10-23 01:12:24	0	0
+35	7	14	23	2021-10-23 01:12:35	0	0
+36	7	3	3	2021-10-23 01:12:42	0	1
+37	7	5	4	2021-10-23 01:12:42	0	1
+38	7	5	5	2021-10-23 01:12:42	0	1
+39	8	14	24	2021-10-23 01:13:33	0	0
+40	8	3	3	2021-10-23 01:13:44	0	1
+41	8	5	4	2021-10-23 01:13:44	0	1
+42	8	5	5	2021-10-23 01:13:44	0	1
+43	9	14	25	2021-10-23 01:13:54	0	0
+44	9	3	3	2021-10-23 01:14:00	0	1
+45	9	5	6	2021-10-23 01:14:00	0	1
+46	9	7	12	2021-10-23 01:14:34	0	0
+47	9	11	14	2021-10-23 01:14:45	0	0
+48	9	13	16	2021-10-23 01:14:51	0	0
+49	10	14	26	2021-10-23 01:15:02	0	0
+50	10	3	3	2021-10-23 01:15:10	0	1
+51	10	5	4	2021-10-23 01:15:10	0	1
+52	10	5	5	2021-10-23 01:15:10	0	1
+53	11	14	27	2021-10-23 01:16:10	0	0
+54	11	3	3	2021-10-23 01:16:21	0	1
+55	11	5	4	2021-10-23 01:16:21	0	1
+56	11	5	5	2021-10-23 01:16:21	0	1
+57	12	14	28	2021-10-23 01:16:31	0	0
+58	12	3	3	2021-10-23 01:16:39	0	1
+59	12	5	4	2021-10-23 01:16:39	0	1
+60	12	5	5	2021-10-23 01:16:39	0	1
+61	13	14	29	2021-10-23 01:17:15	0	0
+62	13	3	3	2021-10-23 01:17:24	0	1
+63	13	5	4	2021-10-23 01:17:24	0	1
+64	13	5	5	2021-10-23 01:17:24	0	1
+65	14	14	30	2021-10-23 01:18:59	0	0
+66	14	3	3	2021-10-23 01:19:07	0	1
+67	14	5	4	2021-10-23 01:19:08	0	1
+68	14	5	5	2021-10-23 01:19:08	0	1
+69	15	14	31	2021-10-23 01:19:18	0	0
+70	15	3	3	2021-10-23 01:19:25	0	1
+71	15	5	4	2021-10-23 01:19:25	0	1
+72	15	5	5	2021-10-23 01:19:25	0	1
+73	15	7	12	2021-10-23 01:20:01	0	0
+74	15	11	14	2021-10-23 01:20:13	0	0
+75	16	14	32	2021-10-23 01:20:24	0	0
+76	16	3	3	2021-10-23 01:20:32	0	1
+77	16	5	4	2021-10-23 01:20:32	0	1
+78	16	5	5	2021-10-23 01:20:32	0	1
+79	17	14	33	2021-10-23 01:20:42	0	0
+80	17	3	3	2021-10-23 01:20:51	0	1
+81	17	5	4	2021-10-23 01:20:51	0	1
+82	17	5	5	2021-10-23 01:20:51	0	1
+83	17	7	11	2021-10-23 01:21:28	0	0
+84	17	11	13	2021-10-23 01:21:40	0	0
+85	17	13	15	2021-10-23 01:21:45	0	0
+86	18	14	34	2021-10-23 01:23:38	0	0
+87	18	3	3	2021-10-23 01:23:45	0	1
+88	18	5	4	2021-10-23 01:23:45	0	1
+89	18	5	5	2021-10-23 01:23:45	0	1
+90	19	14	35	2021-10-23 01:24:07	0	0
+91	19	3	3	2021-10-23 01:24:14	0	1
+92	19	5	6	2021-10-23 01:24:14	0	1
+93	19	7	12	2021-10-23 01:24:50	0	0
 \.
+
+
+--
+-- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 93, true);
 
 
 --
@@ -7674,6 +7998,13 @@ COPY public.static_pages (static_page_id, path, context_id) FROM stdin;
 
 
 --
+-- Name: static_pages_static_page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.static_pages_static_page_id_seq', 1, false);
+
+
+--
 -- Data for Name: subeditor_submission_group; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -7689,13 +8020,20 @@ COPY public.subeditor_submission_group (context_id, assoc_id, assoc_type, user_i
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	7	10	8		<p>Here are my review comments</p>	2021-10-21 00:08:58	\N	1
-2	1	4096	10	15	9		<p>Here are my review comments</p>	2021-10-21 00:11:45	\N	1
-3	1	4096	10	16	10		<p>Here are my review comments</p>	2021-10-21 00:11:59	\N	1
-4	1	4096	13	19	7		<p>Here are my review comments</p>	2021-10-21 00:14:28	\N	1
-5	1	4096	13	20	9		<p>Here are my review comments</p>	2021-10-21 00:14:42	\N	1
-6	1	4096	13	21	10		<p>Here are my review comments</p>	2021-10-21 00:14:58	\N	1
+1	1	4096	7	10	8		<p>Here are my review comments</p>	2021-10-23 01:13:21	\N	1
+2	1	4096	10	15	9		<p>Here are my review comments</p>	2021-10-23 01:15:46	\N	1
+3	1	4096	10	16	10		<p>Here are my review comments</p>	2021-10-23 01:15:58	\N	1
+4	1	4096	13	19	7		<p>Here are my review comments</p>	2021-10-23 01:18:07	\N	1
+5	1	4096	13	20	9		<p>Here are my review comments</p>	2021-10-23 01:18:19	\N	1
+6	1	4096	13	21	10		<p>Here are my review comments</p>	2021-10-23 01:18:33	\N	1
 \.
+
+
+--
+-- Name: submission_comments_comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
 
 
 --
@@ -7725,6 +8063,13 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 20	20	20
 21	21	21
 \.
+
+
+--
+-- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 21, true);
 
 
 --
@@ -7763,28 +8108,35 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	1	2	\N	\N	\N	2021-10-20 23:58:43	2021-10-20 23:58:43	17	\N	\N
-2	1	2	\N	1	10	\N	\N	\N	2021-10-21 00:00:32	2021-10-21 00:00:33	3	521	1
-3	2	3	\N	1	2	\N	\N	\N	2021-10-21 00:02:59	2021-10-21 00:02:59	18	\N	\N
-4	3	4	\N	1	2	\N	\N	\N	2021-10-21 00:04:08	2021-10-21 00:04:09	19	\N	\N
-5	4	5	\N	1	2	\N	\N	\N	2021-10-21 00:05:09	2021-10-21 00:05:09	20	\N	\N
-6	5	6	\N	1	2	\N	\N	\N	2021-10-21 00:05:36	2021-10-21 00:05:36	21	\N	\N
-7	6	7	\N	1	2	\N	\N	\N	2021-10-21 00:06:52	2021-10-21 00:06:53	22	\N	\N
-8	7	8	\N	1	2	\N	\N	\N	2021-10-21 00:08:07	2021-10-21 00:08:07	23	\N	\N
-9	8	9	\N	1	2	\N	\N	\N	2021-10-21 00:09:13	2021-10-21 00:09:13	24	\N	\N
-10	9	10	\N	1	2	\N	\N	\N	2021-10-21 00:09:39	2021-10-21 00:09:40	25	\N	\N
-11	10	11	\N	1	2	\N	\N	\N	2021-10-21 00:10:56	2021-10-21 00:10:57	26	\N	\N
-12	11	12	\N	1	2	\N	\N	\N	2021-10-21 00:12:14	2021-10-21 00:12:15	27	\N	\N
-13	12	13	\N	1	2	\N	\N	\N	2021-10-21 00:12:40	2021-10-21 00:12:40	28	\N	\N
-14	13	14	\N	1	2	\N	\N	\N	2021-10-21 00:13:32	2021-10-21 00:13:33	29	\N	\N
-15	14	15	\N	1	2	\N	\N	\N	2021-10-21 00:15:30	2021-10-21 00:15:31	30	\N	\N
-16	15	16	\N	1	2	\N	\N	\N	2021-10-21 00:15:51	2021-10-21 00:15:52	31	\N	\N
-17	16	17	\N	1	2	\N	\N	\N	2021-10-21 00:17:06	2021-10-21 00:17:06	32	\N	\N
-18	17	18	\N	1	2	\N	\N	\N	2021-10-21 00:17:28	2021-10-21 00:17:29	33	\N	\N
-19	17	19	\N	1	10	\N	\N	\N	2021-10-21 00:18:48	2021-10-21 00:18:49	3	521	3
-20	18	20	\N	1	2	\N	\N	\N	2021-10-21 00:20:44	2021-10-21 00:20:45	34	\N	\N
-21	19	21	\N	1	2	\N	\N	\N	2021-10-21 00:21:22	2021-10-21 00:21:22	35	\N	\N
+1	1	1	\N	1	2	\N	\N	\N	2021-10-23 01:04:20	2021-10-23 01:04:20	17	\N	\N
+2	1	2	\N	1	10	\N	\N	\N	2021-10-23 01:05:59	2021-10-23 01:06:00	3	521	1
+3	2	3	\N	1	2	\N	\N	\N	2021-10-23 01:08:14	2021-10-23 01:08:14	18	\N	\N
+4	3	4	\N	1	2	\N	\N	\N	2021-10-23 01:09:13	2021-10-23 01:09:13	19	\N	\N
+5	4	5	\N	1	2	\N	\N	\N	2021-10-23 01:10:05	2021-10-23 01:10:05	20	\N	\N
+6	5	6	\N	1	2	\N	\N	\N	2021-10-23 01:10:28	2021-10-23 01:10:28	21	\N	\N
+7	6	7	\N	1	2	\N	\N	\N	2021-10-23 01:11:35	2021-10-23 01:11:35	22	\N	\N
+8	7	8	\N	1	2	\N	\N	\N	2021-10-23 01:12:38	2021-10-23 01:12:38	23	\N	\N
+9	8	9	\N	1	2	\N	\N	\N	2021-10-23 01:13:35	2021-10-23 01:13:35	24	\N	\N
+10	9	10	\N	1	2	\N	\N	\N	2021-10-23 01:13:57	2021-10-23 01:13:57	25	\N	\N
+11	10	11	\N	1	2	\N	\N	\N	2021-10-23 01:15:04	2021-10-23 01:15:05	26	\N	\N
+12	11	12	\N	1	2	\N	\N	\N	2021-10-23 01:16:12	2021-10-23 01:16:12	27	\N	\N
+13	12	13	\N	1	2	\N	\N	\N	2021-10-23 01:16:34	2021-10-23 01:16:34	28	\N	\N
+14	13	14	\N	1	2	\N	\N	\N	2021-10-23 01:17:18	2021-10-23 01:17:18	29	\N	\N
+15	14	15	\N	1	2	\N	\N	\N	2021-10-23 01:19:02	2021-10-23 01:19:02	30	\N	\N
+16	15	16	\N	1	2	\N	\N	\N	2021-10-23 01:19:20	2021-10-23 01:19:21	31	\N	\N
+17	16	17	\N	1	2	\N	\N	\N	2021-10-23 01:20:26	2021-10-23 01:20:27	32	\N	\N
+18	17	18	\N	1	2	\N	\N	\N	2021-10-23 01:20:44	2021-10-23 01:20:45	33	\N	\N
+19	17	19	\N	1	10	\N	\N	\N	2021-10-23 01:21:52	2021-10-23 01:21:53	3	521	3
+20	18	20	\N	1	2	\N	\N	\N	2021-10-23 01:23:40	2021-10-23 01:23:40	34	\N	\N
+21	19	21	\N	1	2	\N	\N	\N	2021-10-23 01:24:10	2021-10-23 01:24:10	35	\N	\N
 \.
+
+
+--
+-- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 21, true);
 
 
 --
@@ -7905,6 +8257,13 @@ COPY public.submission_search_keyword_list (keyword_id, keyword_text) FROM stdin
 111	infection
 112	region
 \.
+
+
+--
+-- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq', 112, true);
 
 
 --
@@ -8106,6 +8465,13 @@ COPY public.submission_search_objects (object_id, submission_id, type, assoc_id)
 
 
 --
+-- Name: submission_search_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_objects_object_id_seq', 40, true);
+
+
+--
 -- Data for Name: submission_settings; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -8118,26 +8484,33 @@ COPY public.submission_settings (submission_id, locale, setting_name, setting_va
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-2	1	3	2021-10-21 00:03:43	2021-10-21 00:03:06	2021-10-21 00:03:16	3	en_US	1	0	0
-14	1	15	2021-10-21 00:15:38	2021-10-21 00:15:38	2021-10-21 00:15:38	1	en_US	1	0	0
-6	1	7	2021-10-21 00:07:52	2021-10-21 00:07:01	2021-10-21 00:07:43	5	en_US	1	0	0
-10	1	11	2021-10-21 00:11:59	2021-10-21 00:11:04	2021-10-21 00:11:31	3	en_US	1	0	0
-3	1	4	2021-10-21 00:04:54	2021-10-21 00:04:16	2021-10-21 00:04:45	4	en_US	1	0	0
-11	1	12	2021-10-21 00:12:26	2021-10-21 00:12:25	2021-10-21 00:12:25	1	en_US	1	0	0
-7	1	8	2021-10-21 00:08:59	2021-10-21 00:08:13	2021-10-21 00:08:34	3	en_US	1	0	0
-4	1	5	2021-10-21 00:05:23	2021-10-21 00:05:22	2021-10-21 00:05:22	1	en_US	1	0	0
-17	1	18	2021-10-21 00:20:22	2021-10-21 00:17:38	2021-10-21 00:20:22	5	en_US	3	0	0
-8	1	9	2021-10-21 00:09:26	2021-10-21 00:09:25	2021-10-21 00:09:25	1	en_US	1	0	0
-15	1	16	2021-10-21 00:16:51	2021-10-21 00:15:56	2021-10-21 00:16:41	5	en_US	1	0	0
-12	1	13	2021-10-21 00:13:17	2021-10-21 00:12:48	2021-10-21 00:13:01	3	en_US	1	0	0
-1	1	1	2021-10-21 00:02:37	2021-10-20 23:58:51	2021-10-21 00:02:15	5	en_US	3	0	0
-5	1	6	2021-10-21 00:06:38	2021-10-21 00:05:41	2021-10-21 00:06:21	5	en_US	1	0	0
-18	1	19	2021-10-21 00:21:05	2021-10-21 00:20:50	2021-10-21 00:21:05	1	en_US	4	0	0
-16	1	17	2021-10-21 00:17:15	2021-10-21 00:17:15	2021-10-21 00:17:15	1	en_US	1	0	0
-9	1	10	2021-10-21 00:10:42	2021-10-21 00:09:44	2021-10-21 00:10:26	5	en_US	1	0	0
-13	1	14	2021-10-21 00:15:16	2021-10-21 00:13:41	2021-10-21 00:14:15	3	en_US	1	0	0
-19	1	20	2021-10-21 00:22:07	2021-10-21 00:21:27	2021-10-21 00:21:59	4	en_US	1	0	0
+2	1	3	2021-10-23 01:08:50	2021-10-23 01:08:18	2021-10-23 01:08:28	3	en_US	1	0	0
+9	1	10	2021-10-23 01:14:51	2021-10-23 01:14:00	2021-10-23 01:14:37	5	en_US	1	0	0
+19	1	20	2021-10-23 01:24:50	2021-10-23 01:24:14	2021-10-23 01:24:43	4	en_US	1	0	0
+13	1	14	2021-10-23 01:18:49	2021-10-23 01:17:24	2021-10-23 01:17:56	3	en_US	1	0	0
+6	1	7	2021-10-23 01:12:24	2021-10-23 01:11:40	2021-10-23 01:12:16	5	en_US	1	0	0
+3	1	4	2021-10-23 01:09:51	2021-10-23 01:09:18	2021-10-23 01:09:43	4	en_US	1	0	0
+10	1	11	2021-10-23 01:15:58	2021-10-23 01:15:10	2021-10-23 01:15:35	3	en_US	1	0	0
+4	1	5	2021-10-23 01:10:16	2021-10-23 01:10:15	2021-10-23 01:10:15	1	en_US	1	0	0
+14	1	15	2021-10-23 01:19:08	2021-10-23 01:19:07	2021-10-23 01:19:07	1	en_US	1	0	0
+7	1	8	2021-10-23 01:13:21	2021-10-23 01:12:42	2021-10-23 01:12:59	3	en_US	1	0	0
+11	1	12	2021-10-23 01:16:22	2021-10-23 01:16:21	2021-10-23 01:16:21	1	en_US	1	0	0
+1	1	1	2021-10-23 01:07:56	2021-10-23 01:04:25	2021-10-23 01:07:34	5	en_US	3	0	0
+8	1	9	2021-10-23 01:13:45	2021-10-23 01:13:44	2021-10-23 01:13:44	1	en_US	1	0	0
+5	1	6	2021-10-23 01:11:21	2021-10-23 01:10:32	2021-10-23 01:11:08	5	en_US	1	0	0
+17	1	18	2021-10-23 01:23:20	2021-10-23 01:20:51	2021-10-23 01:23:20	5	en_US	3	0	0
+12	1	13	2021-10-23 01:17:05	2021-10-23 01:16:39	2021-10-23 01:16:52	3	en_US	1	0	0
+15	1	16	2021-10-23 01:20:13	2021-10-23 01:19:25	2021-10-23 01:20:04	5	en_US	1	0	0
+16	1	17	2021-10-23 01:20:32	2021-10-23 01:20:32	2021-10-23 01:20:32	1	en_US	1	0	0
+18	1	19	2021-10-23 01:23:58	2021-10-23 01:23:45	2021-10-23 01:23:58	1	en_US	4	0	0
 \.
+
+
+--
+-- Name: submissions_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submissions_submission_id_seq', 19, true);
 
 
 --
@@ -8157,6 +8530,13 @@ COPY public.subscription_types (type_id, journal_id, cost, currency_code_alpha, 
 
 
 --
+-- Name: subscription_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.subscription_types_type_id_seq', 1, false);
+
+
+--
 -- Data for Name: subscriptions; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -8165,11 +8545,25 @@ COPY public.subscriptions (subscription_id, journal_id, user_id, type_id, date_s
 
 
 --
+-- Name: subscriptions_subscription_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.subscriptions_subscription_id_seq', 1, false);
+
+
+--
 -- Data for Name: temporary_files; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.temporary_files (file_id, user_id, file_name, file_type, file_size, original_file_name, date_uploaded) FROM stdin;
 \.
+
+
+--
+-- Name: temporary_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.temporary_files_file_id_seq', 1, false);
 
 
 --
@@ -8355,6 +8749,13 @@ COPY public.user_groups (user_group_id, context_id, role_id, is_default, show_ti
 17	1	1048576	1	0	1	0
 18	1	2097152	1	0	0	0
 \.
+
+
+--
+-- Name: user_groups_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.user_groups_user_group_id_seq', 18, true);
 
 
 --
@@ -8665,505 +9066,42 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-26	jnovak	$2y$10$gblvUVlFPBftEZoeWr9GQOsv3tv8/w20yaaJ2em/32oabEg7Gfp9C	jnovak@mailinator.com	\N	\N	\N	\N	DK	\N	\N	\N	2021-10-21 00:10:49	\N	2021-10-21 00:10:49	\N	\N	\N	0	\N	1
-6	minoue	$2y$10$4rwIPAbdYnYLIiSE8T4JNejvm2cjpNlj/f42HirTPshwri6cY7rBu	minoue@mailinator.com				\N	JP	[]	\N	\N	2021-10-20 23:53:44	\N	2021-10-21 00:03:32	0	0	\N	0	\N	1
-19	ckwantes	$2y$10$7qBCfuZlbFrqTGBdt8yJD.BMOnJ5/xjtdTN5EPJQ5UCEkV2Q0NiRO	ckwantes@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2021-10-21 00:04:01	\N	2021-10-21 00:04:01	\N	\N	\N	0	\N	1
-4	dbuskins	$2y$10$sSfs/tGTtrQMwufHIQxm/eqaJyjXmFxRjbrfAdctBTJD1KJQP.Se6	dbuskins@mailinator.com				\N	US	[]	\N	\N	2021-10-20 23:53:19	\N	\N	0	0	\N	0	\N	1
-5	sberardo	$2y$10$4YyOWHR7/8Z4TV0HDCAYR.9ov0KS9iCCbGb9YHcYhYBOX7uzY4jwO	sberardo@mailinator.com				\N	CA	[]	\N	\N	2021-10-20 23:53:32	\N	\N	0	0	\N	0	\N	1
-11	mfritz	$2y$10$qfsIwRzL.wdtuYOaomvoH.Cp3igq9OyxF/rEqy5TuqpPCbvjS0WoO	mfritz@mailinator.com				\N	BE	[]	\N	\N	2021-10-20 23:55:15	\N	\N	0	0	\N	0	\N	1
-12	svogt	$2y$10$HIPjIWCpCUXx0MT37AS/x.yjtUaMcoh4NbM/G4ljHQ9Ncrh1jN1RG	svogt@mailinator.com				\N	CL	[]	\N	\N	2021-10-20 23:55:37	\N	\N	0	0	\N	0	\N	1
-13	gcox	$2y$10$7o09rbM2wzr1OxKtUtdU7.nXknhJsC2QmBpRVl7SZdb/x/USJhDAu	gcox@mailinator.com				\N	US	[]	\N	\N	2021-10-20 23:56:00	\N	\N	0	0	\N	0	\N	1
-14	shellier	$2y$10$RXvOnWAgo2B..YwhvaysDeMwngeJpgsKvVrK5qc0Q2ahl740f9r56	shellier@mailinator.com				\N	ZA	[]	\N	\N	2021-10-20 23:56:31	\N	\N	0	0	\N	0	\N	1
-15	cturner	$2y$10$INQjvDGMOUhig7gMg3qM/ueDKnpzgAS8L1PHlXywzruc3v.PmoqHu	cturner@mailinator.com				\N	GB	[]	\N	\N	2021-10-20 23:57:02	\N	\N	0	0	\N	0	\N	1
-16	skumar	$2y$10$W9KVna4MOM3c1g.nFgwhUObspyRBXPDB83oyLfDx3NqDJ.1/CxfkG	skumar@mailinator.com				\N	SG	[]	\N	\N	2021-10-20 23:57:35	\N	\N	0	0	\N	0	\N	1
-30	pdaniel	$2y$10$bnID2CtMvDqiJxs3ZIhB2e5//s9J85KlTrGOGyeEchtJbjDSxaPKm	pdaniel@mailinator.com	\N	\N	\N	\N	GB	\N	\N	\N	2021-10-21 00:15:23	\N	2021-10-21 00:15:23	\N	\N	\N	0	\N	1
-2	rvaca	$2y$10$Jt6Khw8AR0lGsRElcJnfDeT1gSwSb0JWA7Z7tFlPn6uOaOikN047a	rvaca@mailinator.com				\N	MX	[]	\N	\N	2021-10-20 23:52:59	\N	2021-10-20 23:57:56	0	0	\N	0	\N	1
-20	cmontgomerie	$2y$10$aGK/IgX1tQDWS/VEOb08/.raiD2X9KyUYuxQR11riQ4b75x79qpmq	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2021-10-21 00:05:01	\N	2021-10-21 00:05:01	\N	\N	\N	0	\N	1
-1	admin	$2y$10$..ZjvRlUXCdaqjMr8X1Nbe0VssRWRbK8Cy3AmQDfEHK2uhiJY0Hom	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	\N	\N	\N	2021-10-20 23:51:33	\N	2021-10-20 23:58:18	\N	\N	\N	0	\N	1
-21	ddiouf	$2y$10$rywFzNwXJzyFC2BD7R9Ez.flmxhLtCXJYXrYE.Cat6aV7yQ6ETeq2	ddiouf@mailinator.com	\N	\N	\N	\N	EG	\N	\N	\N	2021-10-21 00:05:29	\N	2021-10-21 00:05:29	\N	\N	\N	0	\N	1
-22	dphillips	$2y$10$eCfcARyvhKCZCqYm1pvasugh8MrgWOmaVoLwarpSSRLZ.VwptEqji	dphillips@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2021-10-21 00:06:45	\N	2021-10-21 00:06:45	\N	\N	\N	0	\N	1
-17	amwandenga	$2y$10$DHQBi4AUq/dk4QVvMj8Qtej.9qLHUfs5ozhhb6Eenzh6qzRv49R9u	amwandenga@mailinator.com	\N	\N	\N	\N	ZA	\N	\N	\N	2021-10-20 23:58:35	\N	2021-10-21 00:00:51	\N	\N	\N	0	\N	1
-23	dsokoloff	$2y$10$NvMS3XuqT83PC7nutFc0A.fcAAwWYOWl1VsJBetvLJcImXFrwju4q	dsokoloff@mailinator.com	\N	\N	\N	\N	IE	\N	\N	\N	2021-10-21 00:08:00	\N	2021-10-21 00:08:00	\N	\N	\N	0	\N	1
-27	kalkhafaji	$2y$10$87rdIL5dN6HhzGfYaJjf1OVaEpBzULzNTNutikl78h5HK6DC9SB8G	kalkhafaji@mailinator.com	\N	\N	\N	\N	US	\N	\N	\N	2021-10-21 00:12:06	\N	2021-10-21 00:12:06	\N	\N	\N	0	\N	1
-8	phudson	$2y$10$MevoDx1gHs1Su7iHRMNhdekyxvG9t.OykUKhWXG7nOI3riSRMbFba	phudson@mailinator.com				\N	CA	[]	\N	\N	2021-10-20 23:54:15	\N	2021-10-21 00:08:47	0	0	\N	0	\N	1
-18	ccorino	$2y$10$FFzj0.PQ6W8nLGt0V4g8tOoXntej4HBeFa4k9IdkDDX7Gs8YOq6ay	ccorino@mailinator.com	\N	\N	\N	\N	IT	\N	\N	\N	2021-10-21 00:02:51	\N	2021-10-21 00:02:51	\N	\N	\N	0	\N	1
-24	eostrom	$2y$10$.oan5RiedaIpt557CV7wdOWyLXo6VmQxs4RJnliX4uo9RxuKQMgWi	eostrom@mailinator.com	\N	\N	\N	\N	US	\N	\N	\N	2021-10-21 00:09:05	\N	2021-10-21 00:09:05	\N	\N	\N	0	\N	1
-25	fpaglieri	$2y$10$aVAgNmZgFaqHpopujh05ueaNetYTeq51.tJEmCEpykbot9nPV0voe	fpaglieri@mailinator.com	\N	\N	\N	\N	IT	\N	\N	\N	2021-10-21 00:09:32	\N	2021-10-21 00:09:32	\N	\N	\N	0	\N	1
-31	rbaiyewu	$2y$10$V6hkfJtMvMaGjzNj4nKUkeFK0VRZDRbeQ.o0IvkIDaY3p5zx6WRLq	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE	\N	\N	\N	2021-10-21 00:15:44	\N	2021-10-21 00:15:44	\N	\N	\N	0	\N	1
-28	lchristopher	$2y$10$BNYCjCeZcdZqKD8c5CC.8eVxR0TW4ZeE/K0ygSDrLoo5tXuELCd2e	lchristopher@mailinator.com	\N	\N	\N	\N	AU	\N	\N	\N	2021-10-21 00:12:32	\N	2021-10-21 00:12:32	\N	\N	\N	0	\N	1
-29	lkumiega	$2y$10$S7wW.FVl2n7kNHRrgNBg5e/Be/vw4oHA7sCDxoliE9NXtfxG4w8pS	lkumiega@mailinator.com	\N	\N	\N	\N	ZA	\N	\N	\N	2021-10-21 00:13:24	\N	2021-10-21 00:13:25	\N	\N	\N	0	\N	1
-7	jjanssen	$2y$10$cH.mR9wutiwJ/dlwbwM3xe02j03TfFx9/WbnGllf8LW0SN2ggXIBG	jjanssen@mailinator.com				\N	NL	[]	\N	\N	2021-10-20 23:53:59	\N	2021-10-21 00:14:17	0	0	\N	0	\N	1
-9	amccrae	$2y$10$U6VZS.FM8YDWk7GyYqVUuu4pQJxT3GLV8XONp6AIBiTedKqbS7b3K	amccrae@mailinator.com				\N	CA	[]	\N	\N	2021-10-20 23:54:33	\N	2021-10-21 00:14:30	0	0	\N	0	\N	1
-10	agallego	$2y$10$f4azqjOGRpOEDGNjWVu.G.GyEeUaqVLNwBj5KoCGk3x3HvBOl.sAu	agallego@mailinator.com				\N	US	[]	\N	\N	2021-10-20 23:54:54	\N	2021-10-21 00:14:44	0	0	\N	0	\N	1
-32	rrossi	$2y$10$D2MJwRoQ4QKnhCtg0IwxyuBIC0HuIJ0uohf/OhdfltxYqEi8ekKmq	rrossi@mailinator.com	\N	\N	\N	\N	ES	\N	\N	\N	2021-10-21 00:16:58	\N	2021-10-21 00:16:58	\N	\N	\N	0	\N	1
-33	vkarbasizaed	$2y$10$KyYBE9i2/7lbYDwbtvR/RuJL1argjfN/vyDJryponitRPzVxuXO5y	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR	\N	\N	\N	2021-10-21 00:17:21	\N	2021-10-21 00:17:21	\N	\N	\N	0	\N	1
-34	vwilliamson	$2y$10$wpwL1M0nOUlk4jSjE7atxO/ABLfodmN3rgOrwJuqM1jD1NhNcwfzy	vwilliamson@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2021-10-21 00:20:37	\N	2021-10-21 00:20:37	\N	\N	\N	0	\N	1
-35	zwoods	$2y$10$YNSBeG7n6PyQ6rfaK2EPmObtcNDoyo2a9ypfeAyN.9VGn7iSC0daK	zwoods@mailinator.com	\N	\N	\N	\N	US	\N	\N	\N	2021-10-21 00:21:14	\N	2021-10-21 00:21:14	\N	\N	\N	0	\N	1
-3	dbarnes	$2y$10$wGJjOAh8QTufUMHAQWOLZOxTC2Hgb8pl/OTqt8zTed7y4J/jOv2TS	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2021-10-20 23:53:09	\N	2021-10-21 00:21:28	0	0	\N	0	\N	1
+26	jnovak	$2y$10$6xjTp3j7rAkup/7u1QRwAuFcdfzXGp2S8kUs21VHmZaa1bIUfHcJW	jnovak@mailinator.com	\N	\N	\N	\N	DK	\N	\N	\N	2021-10-23 01:14:57	\N	2021-10-23 01:14:57	\N	\N	\N	0	\N	1
+6	minoue	$2y$10$7ZpQuDKoe1X2n0ipHgk3Du4HC9irj6UVYyRfEH/ztSyg1BW5isa/e	minoue@mailinator.com				\N	JP	[]	\N	\N	2021-10-23 01:00:19	\N	2021-10-23 01:08:41	0	0	\N	0	\N	1
+19	ckwantes	$2y$10$3NUE3P2TkEwk4SmiAiYJ3eP64mp.Jgnak1ya/zuwhpxmIKo2WKHnK	ckwantes@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2021-10-23 01:09:05	\N	2021-10-23 01:09:06	\N	\N	\N	0	\N	1
+4	dbuskins	$2y$10$OwFs7XVJaM3FjGYhRZegQu3vVDuHl68pZ5I3TpOU/kU/QDDSyfxQi	dbuskins@mailinator.com				\N	US	[]	\N	\N	2021-10-23 00:59:58	\N	\N	0	0	\N	0	\N	1
+5	sberardo	$2y$10$NeSuAXldFP/p25cxeX9Zp.mMjYOYBYZgIvd6yN8fu.p.qqX/gvJSa	sberardo@mailinator.com				\N	CA	[]	\N	\N	2021-10-23 01:00:08	\N	\N	0	0	\N	0	\N	1
+11	mfritz	$2y$10$MQinQ6jiIlM/k8AcgbvLbO7yTplnLkOSIqIQQf92.gbZae4x5/JRa	mfritz@mailinator.com				\N	BE	[]	\N	\N	2021-10-23 01:01:33	\N	\N	0	0	\N	0	\N	1
+12	svogt	$2y$10$H3S2/Q7V43G2WWfEXsL48.7e4RwTma0BdGreBwyxdC6xQg4.E0MLO	svogt@mailinator.com				\N	CL	[]	\N	\N	2021-10-23 01:01:51	\N	\N	0	0	\N	0	\N	1
+13	gcox	$2y$10$kb5HlnCPxqxGhYWekWeRMOKk1kZfpYDRZt1XxIMmsHgpcF4eCbY2C	gcox@mailinator.com				\N	US	[]	\N	\N	2021-10-23 01:02:09	\N	\N	0	0	\N	0	\N	1
+14	shellier	$2y$10$X.f.eyzVpuAIDa55USsCX.meHZrSQK5cGe7ib/aI4BB0HKrXt1g96	shellier@mailinator.com				\N	ZA	[]	\N	\N	2021-10-23 01:02:32	\N	\N	0	0	\N	0	\N	1
+15	cturner	$2y$10$C.L7useavU.ZabE1JHHn0edqE9BNaomPPh1wK3rutbyEGHZMz0nw6	cturner@mailinator.com				\N	GB	[]	\N	\N	2021-10-23 01:02:55	\N	\N	0	0	\N	0	\N	1
+16	skumar	$2y$10$6b42H5C7YhCxkibQWBQVf.hcdTCzH07WapmXD16GiolQE4ZjCf3N2	skumar@mailinator.com				\N	SG	[]	\N	\N	2021-10-23 01:03:20	\N	\N	0	0	\N	0	\N	1
+30	pdaniel	$2y$10$a0v5CPWsHvyCSADDFwFSMekuI9xjzRU5MAWq4GJkbfZpbM7Rb3jh2	pdaniel@mailinator.com	\N	\N	\N	\N	GB	\N	\N	\N	2021-10-23 01:18:55	\N	2021-10-23 01:18:55	\N	\N	\N	0	\N	1
+2	rvaca	$2y$10$q3S1niRbBvnN0iRlr2UBFe01XQtItawWI2cj66THCdiRrJvgzMye2	rvaca@mailinator.com				\N	MX	[]	\N	\N	2021-10-23 00:59:42	\N	2021-10-23 01:03:37	0	0	\N	0	\N	1
+20	cmontgomerie	$2y$10$wgArCKONu24a54SPWJqBpuod9QCuN0gJQjYmyEVvdgM5HvV6FpeOK	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2021-10-23 01:09:58	\N	2021-10-23 01:09:58	\N	\N	\N	0	\N	1
+1	admin	$2y$10$JN/kBoW3cnLbi4Irxx9BT.54HaG73qBYm0azz5VZL51.H07agNykC	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	\N	\N	\N	2021-10-23 00:58:26	\N	2021-10-23 01:03:56	\N	\N	\N	0	\N	1
+21	ddiouf	$2y$10$qK/zpBN1CQVSCku9T0ayOe67nmKXRV19bhidLDM6UMDXPV7UZxQVe	ddiouf@mailinator.com	\N	\N	\N	\N	EG	\N	\N	\N	2021-10-23 01:10:21	\N	2021-10-23 01:10:21	\N	\N	\N	0	\N	1
+22	dphillips	$2y$10$m7d.mOlOclNwgFaBmGBOwunC1kHDdlIxDJ0tmkJw0FyJ7QoovR7K.	dphillips@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2021-10-23 01:11:28	\N	2021-10-23 01:11:28	\N	\N	\N	0	\N	1
+17	amwandenga	$2y$10$Gga8TnhL42SCWdmZVN7o6.So/nmm/N7nBbtuJNMV3DYCdvbzyzw5a	amwandenga@mailinator.com	\N	\N	\N	\N	ZA	\N	\N	\N	2021-10-23 01:04:13	\N	2021-10-23 01:06:17	\N	\N	\N	0	\N	1
+23	dsokoloff	$2y$10$ISDX1h7fouHpARHnEzaLaOcut2TCyqk6.i0zsWrln1RSvSa9QEYz2	dsokoloff@mailinator.com	\N	\N	\N	\N	IE	\N	\N	\N	2021-10-23 01:12:31	\N	2021-10-23 01:12:31	\N	\N	\N	0	\N	1
+27	kalkhafaji	$2y$10$u6IHc2W.VU1x1l/.VngYx.23mFXFJsl/GogYtOdDIu42uSGBXTAeG	kalkhafaji@mailinator.com	\N	\N	\N	\N	US	\N	\N	\N	2021-10-23 01:16:05	\N	2021-10-23 01:16:05	\N	\N	\N	0	\N	1
+8	phudson	$2y$10$y93y9AkpSmrvPRhpY8lvg.X3jz2NFfPckYltA3Euy81E2W8VwNtvC	phudson@mailinator.com				\N	CA	[]	\N	\N	2021-10-23 01:00:45	\N	2021-10-23 01:13:11	0	0	\N	0	\N	1
+18	ccorino	$2y$10$lriFMHoIe9y9U19xRkW0RuizUOCqs0KFQDjsf4PCnL2vb5qgY/iy6	ccorino@mailinator.com	\N	\N	\N	\N	IT	\N	\N	\N	2021-10-23 01:08:07	\N	2021-10-23 01:08:07	\N	\N	\N	0	\N	1
+24	eostrom	$2y$10$iJuVAT6m6T6vKsHVZrub8O4b1hPxw1trXRLaoYBQtdrB20syM0/Tq	eostrom@mailinator.com	\N	\N	\N	\N	US	\N	\N	\N	2021-10-23 01:13:28	\N	2021-10-23 01:13:28	\N	\N	\N	0	\N	1
+25	fpaglieri	$2y$10$Lc8UYzD6RX0zA88NjfjYnOOJVnDQVpwpWaNXusaVe/s1AReyPTFZe	fpaglieri@mailinator.com	\N	\N	\N	\N	IT	\N	\N	\N	2021-10-23 01:13:50	\N	2021-10-23 01:13:50	\N	\N	\N	0	\N	1
+31	rbaiyewu	$2y$10$rSVtIkekxPk/rPdLaYJ9Uugxe8P.fSDpgvNGb8jDIGF/LVNMuK6Ky	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE	\N	\N	\N	2021-10-23 01:19:14	\N	2021-10-23 01:19:14	\N	\N	\N	0	\N	1
+28	lchristopher	$2y$10$0xe.at1RSPmekbfzzYZV2ewcUexfrV76CvO2KI4VcZCXsgUuFzBjC	lchristopher@mailinator.com	\N	\N	\N	\N	AU	\N	\N	\N	2021-10-23 01:16:27	\N	2021-10-23 01:16:27	\N	\N	\N	0	\N	1
+29	lkumiega	$2y$10$uY2bGuIECHSyhFQJqCr/N.8oDaG.EoMhr2uIc.afGhz/4/fG847PK	lkumiega@mailinator.com	\N	\N	\N	\N	ZA	\N	\N	\N	2021-10-23 01:17:11	\N	2021-10-23 01:17:11	\N	\N	\N	0	\N	1
+7	jjanssen	$2y$10$lizJt75ehAeHtxxQQLu3wOsIacFw09A7qMsT7izn/JujOiJn2lv8a	jjanssen@mailinator.com				\N	NL	[]	\N	\N	2021-10-23 01:00:31	\N	2021-10-23 01:17:57	0	0	\N	0	\N	1
+9	amccrae	$2y$10$JveBRTXco4NWVkMnWDtqreKewEVSZgfU1S7.6jKnD8Z6KY14/BKZ.	amccrae@mailinator.com				\N	CA	[]	\N	\N	2021-10-23 01:00:59	\N	2021-10-23 01:18:08	0	0	\N	0	\N	1
+10	agallego	$2y$10$kNaYAoMXNJ.AUCwPtm5c4en5VvkGmXW0I3DC7ult7cG3AGkA0iQHu	agallego@mailinator.com				\N	US	[]	\N	\N	2021-10-23 01:01:16	\N	2021-10-23 01:18:21	0	0	\N	0	\N	1
+32	rrossi	$2y$10$G4Tt9JZpp01ZhsOYm6tM0.v2nq/7NVWZcgscCcv5AJ.Pg.k4r00Qi	rrossi@mailinator.com	\N	\N	\N	\N	ES	\N	\N	\N	2021-10-23 01:20:20	\N	2021-10-23 01:20:20	\N	\N	\N	0	\N	1
+33	vkarbasizaed	$2y$10$P4hURCxh.G4WwE00mzVVWusz0Qjh6ySz.w2ORA3WxkIdGqiE23jvq	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR	\N	\N	\N	2021-10-23 01:20:38	\N	2021-10-23 01:20:38	\N	\N	\N	0	\N	1
+34	vwilliamson	$2y$10$8fzrdsoiPjdwBsYeVB1qxOA59XkJS3tTZt5QjzopzuNv6qksdWvSi	vwilliamson@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2021-10-23 01:23:34	\N	2021-10-23 01:23:34	\N	\N	\N	0	\N	1
+35	zwoods	$2y$10$S5hwcST5Rh8Gra902QuyqePvSMA/lvDxryzni8b8l9aPaUajdptFa	zwoods@mailinator.com	\N	\N	\N	\N	US	\N	\N	\N	2021-10-23 01:24:03	\N	2021-10-23 01:24:03	\N	\N	\N	0	\N	1
+3	dbarnes	$2y$10$c6wT0ZLzBW8e.wpD.coYQ.qVobKCro9Q/GIZ8sDBiWnulyLb1//SK	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2021-10-23 00:59:50	\N	2021-10-23 01:24:16	0	0	\N	0	\N	1
 \.
-
-
---
--- Data for Name: versions; Type: TABLE DATA; Schema: public; Owner: ojs-ci
---
-
-COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2021-10-20 23:51:33	1	plugins.metadata	dc11		0	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.auth	ldap		0	0
-1	0	1	0	2021-10-20 23:51:33	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.blocks	information	InformationBlockPlugin	1	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	1	0	0	2021-10-20 23:51:33	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.gateways	resolver		0	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	0	1	0	2021-10-20 23:51:33	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.generic	usageEvent		0	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.generic	driver	DRIVERPlugin	1	0
-1	0	0	0	2021-10-20 23:51:33	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-1	1	3	0	2021-10-20 23:51:33	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-1	0	1	0	2021-10-20 23:51:34	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	2	0	0	2021-10-20 23:51:34	1	plugins.generic	acron	AcronPlugin	1	1
-0	1	0	0	2021-10-20 23:51:34	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
-1	2	0	0	2021-10-20 23:51:34	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-1	1	0	0	2021-10-20 23:51:34	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
-1	2	0	0	2021-10-20 23:51:34	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-1	0	0	0	2021-10-20 23:51:34	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
-1	0	0	0	2021-10-20 23:51:34	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.importexport	pubmed		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.importexport	users		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.importexport	native		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.oaiMetadataFormats	marcxml		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.oaiMetadataFormats	rfc1807		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.oaiMetadataFormats	marc		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.paymethod	paypal		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.paymethod	manual		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
-2	0	0	0	2021-10-20 23:51:34	1	plugins.reports	reviewReport		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.reports	views		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.reports	subscriptions		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.reports	articles		0	0
-1	0	0	0	2021-10-20 23:51:34	1	plugins.themes	default	DefaultThemePlugin	1	0
-3	4	0	0	2021-10-20 23:51:32	1	core	ojs2		0	1
-2	1	0	0	2021-10-20 23:51:54	1	plugins.importexport	crossref		0	0
-2	0	0	0	2021-10-20 23:51:54	1	plugins.importexport	datacite		0	0
-1	1	0	0	2021-10-20 23:51:54	1	plugins.importexport	doaj		0	0
-1	1	0	0	2021-10-20 23:51:34	1	plugins.reports	counterReport		0	0
-\.
-
-
---
--- Name: access_keys_access_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.access_keys_access_key_id_seq', 1, false);
-
-
---
--- Name: announcement_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.announcement_types_type_id_seq', 1, false);
-
-
---
--- Name: announcements_announcement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.announcements_announcement_id_seq', 1, false);
-
-
---
--- Name: auth_sources_auth_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.auth_sources_auth_id_seq', 1, false);
-
-
---
--- Name: authors_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.authors_author_id_seq', 25, true);
-
-
---
--- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.categories_category_id_seq', 1, false);
-
-
---
--- Name: citations_citation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.citations_citation_id_seq', 1, false);
-
-
---
--- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.completed_payments_completed_payment_id_seq', 1, false);
-
-
---
--- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq', 75, true);
-
-
---
--- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.controlled_vocabs_controlled_vocab_id_seq', 101, true);
-
-
---
--- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.data_object_tombstone_oai_set_objects_object_id_seq', 6, true);
-
-
---
--- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.data_object_tombstones_tombstone_id_seq', 3, true);
-
-
---
--- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true);
-
-
---
--- Name: email_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.email_log_log_id_seq', 1, false);
-
-
---
--- Name: email_templates_default_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.email_templates_default_email_id_seq', 59, true);
-
-
---
--- Name: email_templates_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.email_templates_email_id_seq', 1, false);
-
-
---
--- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.event_log_log_id_seq', 260, true);
-
-
---
--- Name: files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.files_file_id_seq', 21, true);
-
-
---
--- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.filter_groups_filter_group_id_seq', 27, true);
-
-
---
--- Name: filters_filter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.filters_filter_id_seq', 27, true);
-
-
---
--- Name: genres_genre_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.genres_genre_id_seq', 12, true);
-
-
---
--- Name: institutional_subscription_ip_institutional_subscription_ip_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.institutional_subscription_ip_institutional_subscription_ip_seq', 1, false);
-
-
---
--- Name: institutional_subscriptions_institutional_subscription_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.institutional_subscriptions_institutional_subscription_id_seq', 1, false);
-
-
---
--- Name: issue_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.issue_files_file_id_seq', 1, false);
-
-
---
--- Name: issue_galleys_galley_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.issue_galleys_galley_id_seq', 1, false);
-
-
---
--- Name: issues_issue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.issues_issue_id_seq', 2, true);
-
-
---
--- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.jobs_id_seq', 1, false);
-
-
---
--- Name: journals_journal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.journals_journal_id_seq', 1, true);
-
-
---
--- Name: library_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.library_files_file_id_seq', 1, false);
-
-
---
--- Name: metadata_descriptions_metadata_description_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.metadata_descriptions_metadata_description_id_seq', 1, false);
-
-
---
--- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq', 23, true);
-
-
---
--- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menu_items_navigation_menu_item_id_seq', 24, true);
-
-
---
--- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menus_navigation_menu_id_seq', 3, true);
-
-
---
--- Name: notes_note_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.notes_note_id_seq', 1, true);
-
-
---
--- Name: notification_mail_list_notification_mail_list_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.notification_mail_list_notification_mail_list_id_seq', 1, false);
-
-
---
--- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_seq', 38, true);
-
-
---
--- Name: notifications_notification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.notifications_notification_id_seq', 443, true);
-
-
---
--- Name: publication_galleys_galley_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.publication_galleys_galley_id_seq', 3, true);
-
-
---
--- Name: publications_publication_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.publications_publication_id_seq', 20, true);
-
-
---
--- Name: queries_query_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.queries_query_id_seq', 1, true);
-
-
---
--- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.queued_payments_queued_payment_id_seq', 1, false);
-
-
---
--- Name: review_assignments_review_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 27, true);
-
-
---
--- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.review_form_elements_review_form_element_id_seq', 1, false);
-
-
---
--- Name: review_forms_review_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.review_forms_review_form_id_seq', 1, false);
-
-
---
--- Name: review_rounds_review_round_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 13, true);
-
-
---
--- Name: sections_section_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.sections_section_id_seq', 2, true);
-
-
---
--- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 93, true);
-
-
---
--- Name: static_pages_static_page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.static_pages_static_page_id_seq', 1, false);
-
-
---
--- Name: submission_comments_comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
-
-
---
--- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 21, true);
-
-
---
--- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 21, true);
-
-
---
--- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq', 112, true);
-
-
---
--- Name: submission_search_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submission_search_objects_object_id_seq', 40, true);
-
-
---
--- Name: submissions_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submissions_submission_id_seq', 19, true);
-
-
---
--- Name: subscription_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.subscription_types_type_id_seq', 1, false);
-
-
---
--- Name: subscriptions_subscription_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.subscriptions_subscription_id_seq', 1, false);
-
-
---
--- Name: temporary_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.temporary_files_file_id_seq', 1, false);
-
-
---
--- Name: user_groups_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.user_groups_user_group_id_seq', 18, true);
 
 
 --
@@ -9174,7 +9112,64 @@ SELECT pg_catalog.setval('public.users_user_id_seq', 35, true);
 
 
 --
--- Name: access_keys access_keys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Data for Name: versions; Type: TABLE DATA; Schema: public; Owner: ojs-ci
+--
+
+COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
+1	0	0	0	2021-10-23 00:58:26	1	plugins.metadata	dc11		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.auth	ldap		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.blocks	information	InformationBlockPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+1	0	1	0	2021-10-23 00:58:26	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	1	0	0	2021-10-23 00:58:26	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.gateways	resolver		0	0
+1	2	0	0	2021-10-23 00:58:26	1	plugins.generic	acron	AcronPlugin	1	1
+1	0	0	0	2021-10-23 00:58:26	1	plugins.generic	driver	DRIVERPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
+1	0	0	0	2021-10-23 00:58:26	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
+1	0	0	0	2021-10-23 00:58:26	1	plugins.generic	usageEvent		0	0
+1	0	1	0	2021-10-23 00:58:26	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
+1	2	0	0	2021-10-23 00:58:26	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+1	0	1	0	2021-10-23 00:58:26	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
+1	1	3	0	2021-10-23 00:58:26	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	2	0	0	2021-10-23 00:58:26	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+0	1	0	0	2021-10-23 00:58:26	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
+1	1	0	0	2021-10-23 00:58:26	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.importexport	pubmed		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.importexport	native		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.importexport	users		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.oaiMetadataFormats	marcxml		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.oaiMetadataFormats	marc		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.oaiMetadataFormats	rfc1807		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.paymethod	paypal		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.paymethod	manual		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.reports	subscriptions		0	0
+2	0	0	0	2021-10-23 00:58:26	1	plugins.reports	reviewReport		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.reports	articles		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.reports	views		0	0
+1	0	0	0	2021-10-23 00:58:26	1	plugins.themes	default	DefaultThemePlugin	1	0
+3	4	0	0	2021-10-23 00:58:25	1	core	ojs2		0	1
+2	1	0	0	2021-10-23 00:58:44	1	plugins.importexport	crossref		0	0
+1	1	0	0	2021-10-23 00:58:44	1	plugins.importexport	doaj		0	0
+2	0	0	0	2021-10-23 00:58:44	1	plugins.importexport	datacite		0	0
+1	1	0	0	2021-10-23 00:58:26	1	plugins.reports	counterReport		0	0
+\.
+
+
+--
+-- Name: access_keys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.access_keys
@@ -9182,7 +9177,7 @@ ALTER TABLE ONLY public.access_keys
 
 
 --
--- Name: announcement_settings announcement_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcement_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcement_settings
@@ -9190,7 +9185,7 @@ ALTER TABLE ONLY public.announcement_settings
 
 
 --
--- Name: announcement_type_settings announcement_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcement_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcement_type_settings
@@ -9198,7 +9193,7 @@ ALTER TABLE ONLY public.announcement_type_settings
 
 
 --
--- Name: announcement_types announcement_types_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcement_types_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcement_types
@@ -9206,7 +9201,7 @@ ALTER TABLE ONLY public.announcement_types
 
 
 --
--- Name: announcements announcements_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcements_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcements
@@ -9214,7 +9209,7 @@ ALTER TABLE ONLY public.announcements
 
 
 --
--- Name: auth_sources auth_sources_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: auth_sources_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.auth_sources
@@ -9222,7 +9217,7 @@ ALTER TABLE ONLY public.auth_sources
 
 
 --
--- Name: author_settings author_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: author_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.author_settings
@@ -9230,7 +9225,7 @@ ALTER TABLE ONLY public.author_settings
 
 
 --
--- Name: authors authors_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: authors_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.authors
@@ -9238,7 +9233,7 @@ ALTER TABLE ONLY public.authors
 
 
 --
--- Name: controlled_vocab_entry_settings c_v_e_s_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: c_v_e_s_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entry_settings
@@ -9246,7 +9241,7 @@ ALTER TABLE ONLY public.controlled_vocab_entry_settings
 
 
 --
--- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: categories_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.categories
@@ -9254,7 +9249,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: categories category_path; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: category_path; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.categories
@@ -9262,7 +9257,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: category_settings category_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: category_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.category_settings
@@ -9270,7 +9265,7 @@ ALTER TABLE ONLY public.category_settings
 
 
 --
--- Name: citation_settings citation_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: citation_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.citation_settings
@@ -9278,7 +9273,7 @@ ALTER TABLE ONLY public.citation_settings
 
 
 --
--- Name: citations citations_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: citations_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.citations
@@ -9286,7 +9281,7 @@ ALTER TABLE ONLY public.citations
 
 
 --
--- Name: citations citations_publication_seq; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: citations_publication_seq; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.citations
@@ -9294,7 +9289,7 @@ ALTER TABLE ONLY public.citations
 
 
 --
--- Name: completed_payments completed_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: completed_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.completed_payments
@@ -9302,7 +9297,7 @@ ALTER TABLE ONLY public.completed_payments
 
 
 --
--- Name: controlled_vocab_entries controlled_vocab_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: controlled_vocab_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entries
@@ -9310,7 +9305,7 @@ ALTER TABLE ONLY public.controlled_vocab_entries
 
 
 --
--- Name: controlled_vocabs controlled_vocab_symbolic; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: controlled_vocab_symbolic; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs
@@ -9318,7 +9313,7 @@ ALTER TABLE ONLY public.controlled_vocabs
 
 
 --
--- Name: controlled_vocabs controlled_vocabs_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: controlled_vocabs_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs
@@ -9326,7 +9321,7 @@ ALTER TABLE ONLY public.controlled_vocabs
 
 
 --
--- Name: custom_issue_orders custom_issue_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: custom_issue_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.custom_issue_orders
@@ -9334,7 +9329,7 @@ ALTER TABLE ONLY public.custom_issue_orders
 
 
 --
--- Name: custom_section_orders custom_section_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: custom_section_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.custom_section_orders
@@ -9342,7 +9337,7 @@ ALTER TABLE ONLY public.custom_section_orders
 
 
 --
--- Name: data_object_tombstone_oai_set_objects data_object_tombstone_oai_set_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: data_object_tombstone_oai_set_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
@@ -9350,7 +9345,7 @@ ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
 
 
 --
--- Name: data_object_tombstone_settings data_object_tombstone_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: data_object_tombstone_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_settings
@@ -9358,7 +9353,7 @@ ALTER TABLE ONLY public.data_object_tombstone_settings
 
 
 --
--- Name: data_object_tombstones data_object_tombstones_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: data_object_tombstones_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstones
@@ -9366,7 +9361,7 @@ ALTER TABLE ONLY public.data_object_tombstones
 
 
 --
--- Name: edit_decisions edit_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: edit_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.edit_decisions
@@ -9374,7 +9369,7 @@ ALTER TABLE ONLY public.edit_decisions
 
 
 --
--- Name: email_log email_log_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_log_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_log
@@ -9382,7 +9377,7 @@ ALTER TABLE ONLY public.email_log
 
 
 --
--- Name: email_log_users email_log_user_id; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_log_user_id; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_log_users
@@ -9390,7 +9385,7 @@ ALTER TABLE ONLY public.email_log_users
 
 
 --
--- Name: email_templates_settings email_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates_settings
@@ -9398,7 +9393,7 @@ ALTER TABLE ONLY public.email_templates_settings
 
 
 --
--- Name: email_templates_default_data email_templates_default_data_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_templates_default_data_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default_data
@@ -9406,7 +9401,7 @@ ALTER TABLE ONLY public.email_templates_default_data
 
 
 --
--- Name: email_templates_default email_templates_default_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_templates_default_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default
@@ -9414,7 +9409,7 @@ ALTER TABLE ONLY public.email_templates_default
 
 
 --
--- Name: email_templates email_templates_email_key; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_templates_email_key; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates
@@ -9422,7 +9417,7 @@ ALTER TABLE ONLY public.email_templates
 
 
 --
--- Name: email_templates email_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates
@@ -9430,7 +9425,7 @@ ALTER TABLE ONLY public.email_templates
 
 
 --
--- Name: event_log event_log_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: event_log_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.event_log
@@ -9438,7 +9433,7 @@ ALTER TABLE ONLY public.event_log
 
 
 --
--- Name: event_log_settings event_log_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: event_log_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.event_log_settings
@@ -9446,7 +9441,7 @@ ALTER TABLE ONLY public.event_log_settings
 
 
 --
--- Name: files files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.files
@@ -9454,7 +9449,7 @@ ALTER TABLE ONLY public.files
 
 
 --
--- Name: filter_groups filter_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: filter_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filter_groups
@@ -9462,7 +9457,7 @@ ALTER TABLE ONLY public.filter_groups
 
 
 --
--- Name: filter_groups filter_groups_symbolic; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: filter_groups_symbolic; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filter_groups
@@ -9470,7 +9465,7 @@ ALTER TABLE ONLY public.filter_groups
 
 
 --
--- Name: filter_settings filter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: filter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filter_settings
@@ -9478,7 +9473,7 @@ ALTER TABLE ONLY public.filter_settings
 
 
 --
--- Name: filters filters_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: filters_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filters
@@ -9486,7 +9481,7 @@ ALTER TABLE ONLY public.filters
 
 
 --
--- Name: genre_settings genre_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: genre_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.genre_settings
@@ -9494,7 +9489,7 @@ ALTER TABLE ONLY public.genre_settings
 
 
 --
--- Name: genres genres_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: genres_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.genres
@@ -9502,7 +9497,7 @@ ALTER TABLE ONLY public.genres
 
 
 --
--- Name: institutional_subscription_ip institutional_subscription_ip_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: institutional_subscription_ip_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.institutional_subscription_ip
@@ -9510,7 +9505,7 @@ ALTER TABLE ONLY public.institutional_subscription_ip
 
 
 --
--- Name: institutional_subscriptions institutional_subscriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: institutional_subscriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.institutional_subscriptions
@@ -9518,7 +9513,7 @@ ALTER TABLE ONLY public.institutional_subscriptions
 
 
 --
--- Name: issue_files issue_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: issue_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_files
@@ -9526,7 +9521,7 @@ ALTER TABLE ONLY public.issue_files
 
 
 --
--- Name: issue_galley_settings issue_galley_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: issue_galley_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_galley_settings
@@ -9534,7 +9529,7 @@ ALTER TABLE ONLY public.issue_galley_settings
 
 
 --
--- Name: issue_galleys issue_galleys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: issue_galleys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_galleys
@@ -9542,7 +9537,7 @@ ALTER TABLE ONLY public.issue_galleys
 
 
 --
--- Name: issue_settings issue_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: issue_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_settings
@@ -9550,7 +9545,7 @@ ALTER TABLE ONLY public.issue_settings
 
 
 --
--- Name: issues issues_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: issues_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issues
@@ -9558,7 +9553,7 @@ ALTER TABLE ONLY public.issues
 
 
 --
--- Name: item_views item_views_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: item_views_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.item_views
@@ -9566,7 +9561,7 @@ ALTER TABLE ONLY public.item_views
 
 
 --
--- Name: jobs jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.jobs
@@ -9574,7 +9569,7 @@ ALTER TABLE ONLY public.jobs
 
 
 --
--- Name: journal_settings journal_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: journal_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.journal_settings
@@ -9582,7 +9577,7 @@ ALTER TABLE ONLY public.journal_settings
 
 
 --
--- Name: journals journals_path; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: journals_path; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.journals
@@ -9590,7 +9585,7 @@ ALTER TABLE ONLY public.journals
 
 
 --
--- Name: journals journals_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: journals_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.journals
@@ -9598,7 +9593,7 @@ ALTER TABLE ONLY public.journals
 
 
 --
--- Name: library_file_settings library_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: library_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.library_file_settings
@@ -9606,7 +9601,7 @@ ALTER TABLE ONLY public.library_file_settings
 
 
 --
--- Name: library_files library_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: library_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.library_files
@@ -9614,7 +9609,7 @@ ALTER TABLE ONLY public.library_files
 
 
 --
--- Name: metadata_descriptions metadata_descriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: metadata_descriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.metadata_descriptions
@@ -9622,7 +9617,7 @@ ALTER TABLE ONLY public.metadata_descriptions
 
 
 --
--- Name: metadata_description_settings metadata_descripton_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: metadata_descripton_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.metadata_description_settings
@@ -9630,7 +9625,7 @@ ALTER TABLE ONLY public.metadata_description_settings
 
 
 --
--- Name: navigation_menu_item_assignment_settings navigation_menu_item_assignment_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_item_assignment_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
@@ -9638,7 +9633,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
 
 
 --
--- Name: navigation_menu_item_assignments navigation_menu_item_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_item_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignments
@@ -9646,7 +9641,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignments
 
 
 --
--- Name: navigation_menu_item_settings navigation_menu_item_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_item_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_settings
@@ -9654,7 +9649,7 @@ ALTER TABLE ONLY public.navigation_menu_item_settings
 
 
 --
--- Name: navigation_menu_items navigation_menu_items_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_items_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_items
@@ -9662,7 +9657,7 @@ ALTER TABLE ONLY public.navigation_menu_items
 
 
 --
--- Name: navigation_menus navigation_menus_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menus_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menus
@@ -9670,7 +9665,7 @@ ALTER TABLE ONLY public.navigation_menus
 
 
 --
--- Name: notes notes_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notes_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notes
@@ -9678,7 +9673,7 @@ ALTER TABLE ONLY public.notes
 
 
 --
--- Name: notification_mail_list notification_mail_list_email_context; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notification_mail_list_email_context; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_mail_list
@@ -9686,7 +9681,7 @@ ALTER TABLE ONLY public.notification_mail_list
 
 
 --
--- Name: notification_mail_list notification_mail_list_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notification_mail_list_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_mail_list
@@ -9694,7 +9689,7 @@ ALTER TABLE ONLY public.notification_mail_list
 
 
 --
--- Name: notification_settings notification_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notification_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_settings
@@ -9702,7 +9697,7 @@ ALTER TABLE ONLY public.notification_settings
 
 
 --
--- Name: notification_subscription_settings notification_subscription_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notification_subscription_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_subscription_settings
@@ -9710,7 +9705,7 @@ ALTER TABLE ONLY public.notification_subscription_settings
 
 
 --
--- Name: notifications notifications_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notifications_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notifications
@@ -9718,7 +9713,7 @@ ALTER TABLE ONLY public.notifications
 
 
 --
--- Name: oai_resumption_tokens oai_resumption_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: oai_resumption_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.oai_resumption_tokens
@@ -9726,7 +9721,7 @@ ALTER TABLE ONLY public.oai_resumption_tokens
 
 
 --
--- Name: plugin_settings plugin_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: plugin_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.plugin_settings
@@ -9734,7 +9729,7 @@ ALTER TABLE ONLY public.plugin_settings
 
 
 --
--- Name: publication_categories publication_categories_id; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publication_categories_id; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_categories
@@ -9742,7 +9737,7 @@ ALTER TABLE ONLY public.publication_categories
 
 
 --
--- Name: publication_galley_settings publication_galley_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publication_galley_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_galley_settings
@@ -9750,7 +9745,7 @@ ALTER TABLE ONLY public.publication_galley_settings
 
 
 --
--- Name: publication_galleys publication_galleys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publication_galleys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_galleys
@@ -9758,7 +9753,7 @@ ALTER TABLE ONLY public.publication_galleys
 
 
 --
--- Name: publication_settings publication_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publication_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_settings
@@ -9766,7 +9761,7 @@ ALTER TABLE ONLY public.publication_settings
 
 
 --
--- Name: publications publications_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publications_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publications
@@ -9774,7 +9769,7 @@ ALTER TABLE ONLY public.publications
 
 
 --
--- Name: queries queries_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: queries_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.queries
@@ -9782,7 +9777,7 @@ ALTER TABLE ONLY public.queries
 
 
 --
--- Name: query_participants query_participants_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: query_participants_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.query_participants
@@ -9790,7 +9785,7 @@ ALTER TABLE ONLY public.query_participants
 
 
 --
--- Name: queued_payments queued_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: queued_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.queued_payments
@@ -9798,7 +9793,7 @@ ALTER TABLE ONLY public.queued_payments
 
 
 --
--- Name: review_assignments review_assignment_reviewer_round_unique; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_assignment_reviewer_round_unique; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -9806,7 +9801,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_assignments review_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -9814,7 +9809,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_files review_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_files
@@ -9822,7 +9817,7 @@ ALTER TABLE ONLY public.review_files
 
 
 --
--- Name: review_form_element_settings review_form_element_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_form_element_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_form_element_settings
@@ -9830,7 +9825,7 @@ ALTER TABLE ONLY public.review_form_element_settings
 
 
 --
--- Name: review_form_elements review_form_elements_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_form_elements_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_form_elements
@@ -9838,7 +9833,7 @@ ALTER TABLE ONLY public.review_form_elements
 
 
 --
--- Name: review_form_settings review_form_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_form_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_form_settings
@@ -9846,7 +9841,7 @@ ALTER TABLE ONLY public.review_form_settings
 
 
 --
--- Name: review_forms review_forms_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_forms_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_forms
@@ -9854,7 +9849,7 @@ ALTER TABLE ONLY public.review_forms
 
 
 --
--- Name: review_round_files review_round_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_round_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_round_files
@@ -9862,7 +9857,7 @@ ALTER TABLE ONLY public.review_round_files
 
 
 --
--- Name: review_rounds review_rounds_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_rounds_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_rounds
@@ -9870,7 +9865,7 @@ ALTER TABLE ONLY public.review_rounds
 
 
 --
--- Name: review_rounds review_rounds_submission_id_stage_id_round_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_rounds_submission_id_stage_id_round_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_rounds
@@ -9878,7 +9873,7 @@ ALTER TABLE ONLY public.review_rounds
 
 
 --
--- Name: scheduled_tasks scheduled_tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: scheduled_tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.scheduled_tasks
@@ -9886,7 +9881,7 @@ ALTER TABLE ONLY public.scheduled_tasks
 
 
 --
--- Name: subeditor_submission_group section_editors_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: section_editors_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subeditor_submission_group
@@ -9894,7 +9889,7 @@ ALTER TABLE ONLY public.subeditor_submission_group
 
 
 --
--- Name: section_settings section_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: section_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.section_settings
@@ -9902,7 +9897,7 @@ ALTER TABLE ONLY public.section_settings
 
 
 --
--- Name: sections sections_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: sections_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.sections
@@ -9910,7 +9905,7 @@ ALTER TABLE ONLY public.sections
 
 
 --
--- Name: sessions sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.sessions
@@ -9918,7 +9913,7 @@ ALTER TABLE ONLY public.sessions
 
 
 --
--- Name: site_settings site_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: site_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.site_settings
@@ -9926,7 +9921,7 @@ ALTER TABLE ONLY public.site_settings
 
 
 --
--- Name: stage_assignments stage_assignment; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: stage_assignment; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments
@@ -9934,7 +9929,7 @@ ALTER TABLE ONLY public.stage_assignments
 
 
 --
--- Name: stage_assignments stage_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: stage_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments
@@ -9942,7 +9937,7 @@ ALTER TABLE ONLY public.stage_assignments
 
 
 --
--- Name: static_page_settings static_page_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: static_page_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.static_page_settings
@@ -9950,7 +9945,7 @@ ALTER TABLE ONLY public.static_page_settings
 
 
 --
--- Name: static_pages static_pages_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: static_pages_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.static_pages
@@ -9958,7 +9953,7 @@ ALTER TABLE ONLY public.static_pages
 
 
 --
--- Name: submission_comments submission_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_comments
@@ -9966,7 +9961,7 @@ ALTER TABLE ONLY public.submission_comments
 
 
 --
--- Name: submission_file_revisions submission_file_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_file_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -9974,7 +9969,7 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_file_settings submission_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_file_settings
@@ -9982,7 +9977,7 @@ ALTER TABLE ONLY public.submission_file_settings
 
 
 --
--- Name: submission_files submission_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -9990,7 +9985,7 @@ ALTER TABLE ONLY public.submission_files
 
 
 --
--- Name: submission_search_keyword_list submission_search_keyword_list_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_search_keyword_list_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list
@@ -9998,7 +9993,7 @@ ALTER TABLE ONLY public.submission_search_keyword_list
 
 
 --
--- Name: submission_search_keyword_list submission_search_keyword_text; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_search_keyword_text; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list
@@ -10006,7 +10001,7 @@ ALTER TABLE ONLY public.submission_search_keyword_list
 
 
 --
--- Name: submission_search_object_keywords submission_search_object_keywords_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_search_object_keywords_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_object_keywords
@@ -10014,7 +10009,7 @@ ALTER TABLE ONLY public.submission_search_object_keywords
 
 
 --
--- Name: submission_search_objects submission_search_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_search_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_objects
@@ -10022,7 +10017,7 @@ ALTER TABLE ONLY public.submission_search_objects
 
 
 --
--- Name: submission_settings submission_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_settings
@@ -10030,7 +10025,7 @@ ALTER TABLE ONLY public.submission_settings
 
 
 --
--- Name: submissions submissions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submissions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submissions
@@ -10038,7 +10033,7 @@ ALTER TABLE ONLY public.submissions
 
 
 --
--- Name: subscription_type_settings subscription_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: subscription_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subscription_type_settings
@@ -10046,7 +10041,7 @@ ALTER TABLE ONLY public.subscription_type_settings
 
 
 --
--- Name: subscription_types subscription_types_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: subscription_types_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subscription_types
@@ -10054,7 +10049,7 @@ ALTER TABLE ONLY public.subscription_types
 
 
 --
--- Name: subscriptions subscriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: subscriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subscriptions
@@ -10062,7 +10057,7 @@ ALTER TABLE ONLY public.subscriptions
 
 
 --
--- Name: temporary_files temporary_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: temporary_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.temporary_files
@@ -10070,7 +10065,7 @@ ALTER TABLE ONLY public.temporary_files
 
 
 --
--- Name: user_interests u_e_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: u_e_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_interests
@@ -10078,7 +10073,7 @@ ALTER TABLE ONLY public.user_interests
 
 
 --
--- Name: user_group_settings user_group_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: user_group_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_group_settings
@@ -10086,7 +10081,7 @@ ALTER TABLE ONLY public.user_group_settings
 
 
 --
--- Name: user_group_stage user_group_stage_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: user_group_stage_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_group_stage
@@ -10094,7 +10089,7 @@ ALTER TABLE ONLY public.user_group_stage
 
 
 --
--- Name: user_groups user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_groups
@@ -10102,7 +10097,7 @@ ALTER TABLE ONLY public.user_groups
 
 
 --
--- Name: user_settings user_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: user_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_settings
@@ -10110,7 +10105,7 @@ ALTER TABLE ONLY public.user_settings
 
 
 --
--- Name: user_user_groups user_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: user_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_user_groups
@@ -10118,7 +10113,7 @@ ALTER TABLE ONLY public.user_user_groups
 
 
 --
--- Name: users users_email; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: users_email; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.users
@@ -10126,7 +10121,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.users
@@ -10134,7 +10129,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users users_username; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: users_username; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.users
@@ -10142,7 +10137,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: versions versions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: versions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.versions
@@ -10913,7 +10908,7 @@ CREATE INDEX user_user_groups_user_id ON public.user_user_groups USING btree (us
 
 
 --
--- Name: announcement_settings announcement_settings_announcement_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcement_settings_announcement_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcement_settings
@@ -10921,7 +10916,7 @@ ALTER TABLE ONLY public.announcement_settings
 
 
 --
--- Name: announcement_type_settings announcement_type_settings_type_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcement_type_settings_type_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcement_type_settings
@@ -10929,7 +10924,7 @@ ALTER TABLE ONLY public.announcement_type_settings
 
 
 --
--- Name: announcement_types announcement_types_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcement_types_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcement_types
@@ -10937,7 +10932,7 @@ ALTER TABLE ONLY public.announcement_types
 
 
 --
--- Name: announcements announcements_type_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcements_type_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcements
@@ -10945,7 +10940,7 @@ ALTER TABLE ONLY public.announcements
 
 
 --
--- Name: journals journals_current_issue_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: journals_current_issue_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.journals
@@ -10953,7 +10948,7 @@ ALTER TABLE ONLY public.journals
 
 
 --
--- Name: publication_galleys publication_galleys_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publication_galleys_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_galleys
@@ -10961,7 +10956,7 @@ ALTER TABLE ONLY public.publication_galleys
 
 
 --
--- Name: review_assignments review_assignments_review_form_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_assignments_review_form_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -10969,7 +10964,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_assignments review_assignments_review_round_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_assignments_review_round_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -10977,7 +10972,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_assignments review_assignments_reviewer_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_assignments_reviewer_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -10985,7 +10980,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_assignments review_assignments_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_assignments_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -10993,7 +10988,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_files review_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_files
@@ -11001,7 +10996,7 @@ ALTER TABLE ONLY public.review_files
 
 
 --
--- Name: review_round_files review_round_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_round_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_round_files
@@ -11009,7 +11004,7 @@ ALTER TABLE ONLY public.review_round_files
 
 
 --
--- Name: submission_file_revisions submission_file_revisions_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_file_revisions_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -11017,7 +11012,7 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_file_revisions submission_file_revisions_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_file_revisions_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -11025,7 +11020,7 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_files submission_files_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_files_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -11036,6 +11031,9 @@ ALTER TABLE ONLY public.submission_files
 -- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
 --
 
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
