@@ -1,0 +1,18 @@
+diff --git a/config.inc.php b/config.inc.php
+index d99bdda997..a8aa7ff81f 100644
+--- a/config.inc.php
++++ b/config.inc.php
+@@ -298,6 +282,13 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
+ 
+ [email]
+ 
++; Default method to send emails
++; Available options: sendmail, smtp, log
++default = sendmail
++
++; Path to the sendmail, -bs argument is for using SMTP protocol
++sendmail_path = "/usr/sbin/sendmail -bs"
++
+ ; Use SMTP for sending mail instead of mail()
+ ; smtp = On
+ 
