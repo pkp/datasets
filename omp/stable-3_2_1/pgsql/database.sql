@@ -4198,18 +4198,18 @@ COPY public.author_settings (author_id, locale, setting_name, setting_value, set
 23	en_US	preferredPublicName		\N
 23	fr_CA	preferredPublicName		\N
 23		url		\N
-24	fr_CA	affiliation		\N
 24	en_US	affiliation	University of Alberta	\N
-24	fr_CA	biography		\N
+24	fr_CA	affiliation		\N
 24	en_US	biography		\N
+24	fr_CA	biography		\N
 24		country	CA	\N
-24	fr_CA	familyName		\N
 24	en_US	familyName	Palmer	\N
-24	fr_CA	givenName		\N
+24	fr_CA	familyName		\N
 24	en_US	givenName	Stuart	\N
+24	fr_CA	givenName		\N
 24		orcid		\N
-24	fr_CA	preferredPublicName		\N
 24	en_US	preferredPublicName		\N
+24	fr_CA	preferredPublicName		\N
 24		url		\N
 25	fr_CA	affiliation		\N
 25	en_US	affiliation	University of Melbourne	\N
@@ -4944,36 +4944,36 @@ COPY public.data_object_tombstones (tombstone_id, data_object_id, date_deleted, 
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	0	1	0	3	3	2021-10-21 03:59:37
-2	1	1	3	1	3	2	2021-10-21 03:59:49
-3	2	0	1	0	3	3	2021-10-21 04:02:33
-4	4	0	1	0	3	1	2021-10-21 04:05:54
-5	4	3	2	1	3	3	2021-10-21 04:06:12
-6	4	4	3	1	3	2	2021-10-21 04:06:32
-7	4	0	4	0	3	7	2021-10-21 04:06:52
-8	5	0	1	0	3	1	2021-10-21 04:08:11
-9	5	5	2	1	3	3	2021-10-21 04:08:25
-10	5	6	3	1	3	2	2021-10-21 04:08:41
-11	5	0	4	0	3	7	2021-10-21 04:08:56
-12	6	0	1	0	3	1	2021-10-21 04:11:44
-13	6	7	2	1	6	15	2021-10-21 04:12:11
-14	7	0	1	0	3	3	2021-10-21 04:15:08
-15	7	8	3	1	3	2	2021-10-21 04:15:29
-16	9	0	1	0	3	1	2021-10-21 04:18:43
-17	11	0	1	0	3	1	2021-10-21 04:20:39
-18	11	10	2	1	3	3	2021-10-21 04:20:51
-19	11	11	3	1	3	2	2021-10-21 04:21:47
-20	12	0	1	0	3	1	2021-10-21 04:23:54
-21	13	0	1	0	3	1	2021-10-21 04:26:17
-22	13	13	2	1	3	3	2021-10-21 04:26:33
-23	13	14	3	1	3	2	2021-10-21 04:27:53
-24	14	0	1	0	3	1	2021-10-21 04:30:37
-25	14	15	2	1	3	3	2021-10-21 04:30:57
-26	14	16	3	1	3	2	2021-10-21 04:31:18
-27	14	0	4	0	3	7	2021-10-21 04:31:38
-28	15	0	1	0	3	3	2021-10-21 04:34:33
-29	16	0	1	0	3	3	2021-10-21 04:35:32
-30	17	0	1	0	3	1	2021-10-21 04:39:38
+1	1	0	1	0	3	3	2021-11-13 18:30:28
+2	1	1	3	1	3	2	2021-11-13 18:30:39
+3	2	0	1	0	3	3	2021-11-13 18:33:09
+4	4	0	1	0	3	1	2021-11-13 18:36:14
+5	4	3	2	1	3	3	2021-11-13 18:36:31
+6	4	4	3	1	3	2	2021-11-13 18:36:50
+7	4	0	4	0	3	7	2021-11-13 18:37:09
+8	5	0	1	0	3	1	2021-11-13 18:38:22
+9	5	5	2	1	3	3	2021-11-13 18:38:36
+10	5	6	3	1	3	2	2021-11-13 18:38:51
+11	5	0	4	0	3	7	2021-11-13 18:39:05
+12	6	0	1	0	3	1	2021-11-13 18:41:43
+13	6	7	2	1	6	15	2021-11-13 18:42:10
+14	7	0	1	0	3	3	2021-11-13 18:44:55
+15	7	8	3	1	3	2	2021-11-13 18:45:14
+16	9	0	1	0	3	1	2021-11-13 18:48:13
+17	11	0	1	0	3	1	2021-11-13 18:50:05
+18	11	10	2	1	3	3	2021-11-13 18:50:16
+19	11	11	3	1	3	2	2021-11-13 18:51:06
+20	12	0	1	0	3	1	2021-11-13 18:53:07
+21	13	0	1	0	3	1	2021-11-13 18:55:26
+22	13	13	2	1	3	3	2021-11-13 18:55:41
+23	13	14	3	1	3	2	2021-11-13 18:56:58
+24	14	0	1	0	3	1	2021-11-13 18:59:34
+25	14	15	2	1	3	3	2021-11-13 18:59:52
+26	14	16	3	1	3	2	2021-11-13 19:00:11
+27	14	0	4	0	3	7	2021-11-13 19:00:31
+28	15	0	1	0	3	3	2021-11-13 19:03:13
+29	16	0	1	0	3	3	2021-11-13 19:04:10
+30	17	0	1	0	3	1	2021-11-13 19:08:05
 \.
 
 
@@ -5150,246 +5150,246 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	19	2021-10-21 03:59:03	268435458	submission.event.general.metadataUpdated	0
-2	515	1	19	2021-10-21 03:59:08	1342177281	submission.event.fileUploaded	0
-3	1048585	1	19	2021-10-21 03:59:11	1342177281	submission.event.fileUploaded	0
-4	1048585	1	19	2021-10-21 03:59:27	268435458	submission.event.general.metadataUpdated	0
-5	1048585	1	19	2021-10-21 03:59:29	268435457	submission.event.submissionSubmitted	0
-6	1048585	1	3	2021-10-21 03:59:37	805306371	log.editor.decision	0
-7	1048585	1	3	2021-10-21 03:59:47	1073741825	log.review.reviewerAssigned	0
-8	1048585	1	3	2021-10-21 03:59:49	805306371	log.editor.decision	0
-9	1048585	1	3	2021-10-21 03:59:57	268435459	submission.event.participantAdded	0
-10	1048585	2	20	2021-10-21 04:00:07	268435458	submission.event.general.metadataUpdated	0
-11	515	3	20	2021-10-21 04:00:12	1342177281	submission.event.fileUploaded	0
-12	1048585	2	20	2021-10-21 04:00:15	1342177281	submission.event.fileUploaded	0
-13	515	4	20	2021-10-21 04:00:21	1342177281	submission.event.fileUploaded	0
-14	1048585	2	20	2021-10-21 04:00:24	1342177281	submission.event.fileUploaded	0
-15	515	5	20	2021-10-21 04:00:31	1342177281	submission.event.fileUploaded	0
-16	1048585	2	20	2021-10-21 04:00:33	1342177281	submission.event.fileUploaded	0
-17	515	6	20	2021-10-21 04:00:40	1342177281	submission.event.fileUploaded	0
-18	1048585	2	20	2021-10-21 04:00:43	1342177281	submission.event.fileUploaded	0
-19	1048585	2	20	2021-10-21 04:02:14	268435458	submission.event.general.metadataUpdated	0
-20	1048585	2	20	2021-10-21 04:02:18	268435457	submission.event.submissionSubmitted	0
-21	1048585	2	3	2021-10-21 04:02:33	805306371	log.editor.decision	0
-22	1048585	2	3	2021-10-21 04:02:48	1073741825	log.review.reviewerAssigned	0
-23	1048585	2	3	2021-10-21 04:02:58	1073741825	log.review.reviewerAssigned	0
-24	1048585	3	21	2021-10-21 04:03:08	268435458	submission.event.general.metadataUpdated	0
-25	515	11	21	2021-10-21 04:03:14	1342177281	submission.event.fileUploaded	0
-26	1048585	3	21	2021-10-21 04:03:16	1342177281	submission.event.fileUploaded	0
-27	1048585	3	21	2021-10-21 04:03:46	268435458	submission.event.general.metadataUpdated	0
-28	1048585	3	21	2021-10-21 04:03:48	268435457	submission.event.submissionSubmitted	0
-29	1048585	4	22	2021-10-21 04:03:56	268435458	submission.event.general.metadataUpdated	0
-30	515	12	22	2021-10-21 04:04:02	1342177281	submission.event.fileUploaded	0
-31	1048585	4	22	2021-10-21 04:04:04	1342177281	submission.event.fileUploaded	0
-32	515	13	22	2021-10-21 04:04:11	1342177281	submission.event.fileUploaded	0
-33	1048585	4	22	2021-10-21 04:04:13	1342177281	submission.event.fileUploaded	0
-34	515	14	22	2021-10-21 04:04:20	1342177281	submission.event.fileUploaded	0
-35	1048585	4	22	2021-10-21 04:04:23	1342177281	submission.event.fileUploaded	0
-36	515	15	22	2021-10-21 04:04:30	1342177281	submission.event.fileUploaded	0
-37	1048585	4	22	2021-10-21 04:04:33	1342177281	submission.event.fileUploaded	0
-38	1048585	4	22	2021-10-21 04:05:38	268435458	submission.event.general.metadataUpdated	0
-39	1048585	4	22	2021-10-21 04:05:41	268435457	submission.event.submissionSubmitted	0
-40	1048585	4	3	2021-10-21 04:05:54	805306371	log.editor.decision	0
-41	1048585	4	3	2021-10-21 04:06:07	1073741825	log.review.reviewerAssigned	0
-42	1048585	4	3	2021-10-21 04:06:12	805306371	log.editor.decision	0
-43	1048585	4	3	2021-10-21 04:06:27	1073741825	log.review.reviewerAssigned	0
-44	1048585	4	3	2021-10-21 04:06:32	805306371	log.editor.decision	0
-45	1048585	4	3	2021-10-21 04:06:46	268435459	submission.event.participantAdded	0
-46	1048585	4	3	2021-10-21 04:06:52	805306371	log.editor.decision	0
-47	1048585	4	3	2021-10-21 04:07:06	268435459	submission.event.participantAdded	0
-48	1048585	5	23	2021-10-21 04:07:18	268435458	submission.event.general.metadataUpdated	0
-49	515	16	23	2021-10-21 04:07:23	1342177281	submission.event.fileUploaded	0
-50	1048585	5	23	2021-10-21 04:07:26	1342177281	submission.event.fileUploaded	0
-51	1048585	5	23	2021-10-21 04:08:00	268435458	submission.event.general.metadataUpdated	0
-52	1048585	5	23	2021-10-21 04:08:01	268435457	submission.event.submissionSubmitted	0
-53	1048585	5	3	2021-10-21 04:08:11	805306371	log.editor.decision	0
-54	1048585	5	3	2021-10-21 04:08:22	1073741825	log.review.reviewerAssigned	0
-55	1048585	5	3	2021-10-21 04:08:25	805306371	log.editor.decision	0
-56	1048585	5	3	2021-10-21 04:08:37	1073741825	log.review.reviewerAssigned	0
-57	1048585	5	3	2021-10-21 04:08:41	805306371	log.editor.decision	0
-58	1048585	5	3	2021-10-21 04:08:51	268435459	submission.event.participantAdded	0
-59	1048585	5	3	2021-10-21 04:08:56	805306371	log.editor.decision	0
-60	1048585	5	3	2021-10-21 04:09:07	268435459	submission.event.participantAdded	0
-61	1048585	5	3	2021-10-21 04:09:14	268435459	submission.event.participantAdded	0
-62	1048585	5	3	2021-10-21 04:09:22	268435474	submission.event.publicationFormatCreated	0
-63	1048585	5	3	2021-10-21 04:09:30	268435464	submission.event.publicationFormatPublished	0
-64	1048585	5	3	2021-10-21 04:09:34	268435476	submission.event.publicationFormatMadeAvailable	0
-65	515	18	3	2021-10-21 04:09:37	1342177287	submission.event.signoffSignoff	0
-66	1048585	5	3	2021-10-21 04:09:45	268435462	publication.event.published	0
-67	1048585	6	24	2021-10-21 04:09:54	268435458	submission.event.general.metadataUpdated	0
-68	515	19	24	2021-10-21 04:09:59	1342177281	submission.event.fileUploaded	0
-69	1048585	6	24	2021-10-21 04:10:02	1342177281	submission.event.fileUploaded	0
-70	515	20	24	2021-10-21 04:10:08	1342177281	submission.event.fileUploaded	0
-71	1048585	6	24	2021-10-21 04:10:11	1342177281	submission.event.fileUploaded	0
-72	515	21	24	2021-10-21 04:10:18	1342177281	submission.event.fileUploaded	0
-73	1048585	6	24	2021-10-21 04:10:20	1342177281	submission.event.fileUploaded	0
-74	515	22	24	2021-10-21 04:10:27	1342177281	submission.event.fileUploaded	0
-75	1048585	6	24	2021-10-21 04:10:30	1342177281	submission.event.fileUploaded	0
-76	1048585	6	24	2021-10-21 04:11:29	268435458	submission.event.general.metadataUpdated	0
-77	1048585	6	24	2021-10-21 04:11:31	268435457	submission.event.submissionSubmitted	0
-78	1048585	6	3	2021-10-21 04:11:44	805306371	log.editor.decision	0
-79	1048585	6	3	2021-10-21 04:11:55	268435459	submission.event.participantAdded	0
-80	1048585	6	6	2021-10-21 04:12:11	805306372	log.editor.recommendation	0
-81	1048585	7	25	2021-10-21 04:12:35	268435458	submission.event.general.metadataUpdated	0
-82	515	27	25	2021-10-21 04:12:41	1342177281	submission.event.fileUploaded	0
-83	1048585	7	25	2021-10-21 04:12:43	1342177281	submission.event.fileUploaded	0
-84	515	28	25	2021-10-21 04:12:50	1342177281	submission.event.fileUploaded	0
-85	1048585	7	25	2021-10-21 04:12:52	1342177281	submission.event.fileUploaded	0
-86	515	29	25	2021-10-21 04:12:59	1342177281	submission.event.fileUploaded	0
-87	1048585	7	25	2021-10-21 04:13:02	1342177281	submission.event.fileUploaded	0
-88	515	30	25	2021-10-21 04:13:09	1342177281	submission.event.fileUploaded	0
-89	1048585	7	25	2021-10-21 04:13:11	1342177281	submission.event.fileUploaded	0
-90	515	31	25	2021-10-21 04:13:18	1342177281	submission.event.fileUploaded	0
-91	1048585	7	25	2021-10-21 04:13:21	1342177281	submission.event.fileUploaded	0
-92	1048585	7	25	2021-10-21 04:14:49	268435458	submission.event.general.metadataUpdated	0
-93	1048585	7	25	2021-10-21 04:14:52	268435457	submission.event.submissionSubmitted	0
-94	1048585	7	3	2021-10-21 04:15:08	805306371	log.editor.decision	0
-95	1048585	7	3	2021-10-21 04:15:23	1073741825	log.review.reviewerAssigned	0
-96	1048585	7	3	2021-10-21 04:15:29	805306371	log.editor.decision	0
-97	1048585	7	3	2021-10-21 04:15:43	268435459	submission.event.participantAdded	0
-98	1048585	8	3	2021-10-21 04:15:53	268435458	submission.event.general.metadataUpdated	0
-99	515	37	3	2021-10-21 04:15:59	1342177281	submission.event.fileUploaded	0
-100	1048585	8	3	2021-10-21 04:16:01	1342177281	submission.event.fileUploaded	0
-101	1048585	8	3	2021-10-21 04:16:04	268435458	submission.event.general.metadataUpdated	0
-102	1048585	8	3	2021-10-21 04:16:05	268435457	submission.event.submissionSubmitted	0
-103	1048585	9	26	2021-10-21 04:16:13	268435458	submission.event.general.metadataUpdated	0
-104	515	38	26	2021-10-21 04:16:19	1342177281	submission.event.fileUploaded	0
-105	1048585	9	26	2021-10-21 04:16:21	1342177281	submission.event.fileUploaded	0
-106	515	39	26	2021-10-21 04:16:28	1342177281	submission.event.fileUploaded	0
-107	1048585	9	26	2021-10-21 04:16:30	1342177281	submission.event.fileUploaded	0
-108	515	40	26	2021-10-21 04:16:37	1342177281	submission.event.fileUploaded	0
-109	1048585	9	26	2021-10-21 04:16:40	1342177281	submission.event.fileUploaded	0
-110	515	41	26	2021-10-21 04:16:47	1342177281	submission.event.fileUploaded	0
-111	1048585	9	26	2021-10-21 04:16:49	1342177281	submission.event.fileUploaded	0
-112	515	42	26	2021-10-21 04:16:56	1342177281	submission.event.fileUploaded	0
-113	1048585	9	26	2021-10-21 04:16:59	1342177281	submission.event.fileUploaded	0
-114	1048585	9	26	2021-10-21 04:18:25	268435458	submission.event.general.metadataUpdated	0
-115	1048585	9	26	2021-10-21 04:18:28	268435457	submission.event.submissionSubmitted	0
-116	1048585	9	3	2021-10-21 04:18:43	805306371	log.editor.decision	0
-117	1048585	10	27	2021-10-21 04:18:58	268435458	submission.event.general.metadataUpdated	0
-118	515	48	27	2021-10-21 04:19:04	1342177281	submission.event.fileUploaded	0
-119	1048585	10	27	2021-10-21 04:19:06	1342177281	submission.event.fileUploaded	0
-120	1048585	10	27	2021-10-21 04:19:59	268435458	submission.event.general.metadataUpdated	0
-121	1048585	10	27	2021-10-21 04:20:01	268435457	submission.event.submissionSubmitted	0
-122	1048585	11	28	2021-10-21 04:20:10	268435458	submission.event.general.metadataUpdated	0
-123	515	49	28	2021-10-21 04:20:15	1342177281	submission.event.fileUploaded	0
-124	1048585	11	28	2021-10-21 04:20:17	1342177281	submission.event.fileUploaded	0
-125	1048585	11	28	2021-10-21 04:20:29	268435458	submission.event.general.metadataUpdated	0
-126	1048585	11	28	2021-10-21 04:20:30	268435457	submission.event.submissionSubmitted	0
-127	1048585	11	3	2021-10-21 04:20:39	805306371	log.editor.decision	0
-128	1048585	11	3	2021-10-21 04:20:48	1073741825	log.review.reviewerAssigned	0
-129	1048585	11	3	2021-10-21 04:20:51	805306371	log.editor.decision	0
-130	1048585	11	3	2021-10-21 04:21:01	1073741825	log.review.reviewerAssigned	0
-131	1048585	11	3	2021-10-21 04:21:07	1073741825	log.review.reviewerAssigned	0
-132	1048585	11	10	2021-10-21 04:21:15	1073741830	log.review.reviewAccepted	0
-133	1048585	11	10	2021-10-21 04:21:19	1073741848	log.review.reviewReady	0
-134	1048585	11	12	2021-10-21 04:21:27	1073741830	log.review.reviewAccepted	0
-135	1048585	11	12	2021-10-21 04:21:32	1073741848	log.review.reviewReady	0
-136	1048585	11	3	2021-10-21 04:21:47	805306371	log.editor.decision	0
-137	1048585	12	29	2021-10-21 04:22:00	268435458	submission.event.general.metadataUpdated	0
-138	515	51	29	2021-10-21 04:22:06	1342177281	submission.event.fileUploaded	0
-139	1048585	12	29	2021-10-21 04:22:08	1342177281	submission.event.fileUploaded	0
-140	515	52	29	2021-10-21 04:22:15	1342177281	submission.event.fileUploaded	0
-141	1048585	12	29	2021-10-21 04:22:17	1342177281	submission.event.fileUploaded	0
-142	515	53	29	2021-10-21 04:22:24	1342177281	submission.event.fileUploaded	0
-143	1048585	12	29	2021-10-21 04:22:26	1342177281	submission.event.fileUploaded	0
-144	1048585	12	29	2021-10-21 04:23:38	268435458	submission.event.general.metadataUpdated	0
-145	1048585	12	29	2021-10-21 04:23:40	268435457	submission.event.submissionSubmitted	0
-146	1048585	12	3	2021-10-21 04:23:54	805306371	log.editor.decision	0
-147	1048585	12	3	2021-10-21 04:24:07	1073741825	log.review.reviewerAssigned	0
-148	1048585	12	3	2021-10-21 04:24:16	1073741825	log.review.reviewerAssigned	0
-149	1048585	12	3	2021-10-21 04:24:25	1073741825	log.review.reviewerAssigned	0
-150	1048585	12	8	2021-10-21 04:24:36	1073741830	log.review.reviewAccepted	0
-151	1048585	12	8	2021-10-21 04:24:42	1073741848	log.review.reviewReady	0
-152	1048585	13	30	2021-10-21 04:24:51	268435458	submission.event.general.metadataUpdated	0
-153	515	57	30	2021-10-21 04:24:56	1342177281	submission.event.fileUploaded	0
-154	1048585	13	30	2021-10-21 04:24:59	1342177281	submission.event.fileUploaded	0
-155	515	58	30	2021-10-21 04:25:05	1342177281	submission.event.fileUploaded	0
-156	1048585	13	30	2021-10-21 04:25:08	1342177281	submission.event.fileUploaded	0
-157	515	59	30	2021-10-21 04:25:15	1342177281	submission.event.fileUploaded	0
-158	1048585	13	30	2021-10-21 04:25:17	1342177281	submission.event.fileUploaded	0
-159	1048585	13	30	2021-10-21 04:26:02	268435458	submission.event.general.metadataUpdated	0
-160	1048585	13	30	2021-10-21 04:26:04	268435457	submission.event.submissionSubmitted	0
-161	1048585	13	3	2021-10-21 04:26:17	805306371	log.editor.decision	0
-162	1048585	13	3	2021-10-21 04:26:29	1073741825	log.review.reviewerAssigned	0
-163	1048585	13	3	2021-10-21 04:26:33	805306371	log.editor.decision	0
-164	1048585	13	3	2021-10-21 04:26:46	1073741825	log.review.reviewerAssigned	0
-165	1048585	13	3	2021-10-21 04:26:55	1073741825	log.review.reviewerAssigned	0
-166	1048585	13	3	2021-10-21 04:27:03	1073741825	log.review.reviewerAssigned	0
-167	1048585	13	10	2021-10-21 04:27:13	1073741830	log.review.reviewAccepted	0
-168	1048585	13	10	2021-10-21 04:27:18	1073741848	log.review.reviewReady	0
-169	1048585	13	12	2021-10-21 04:27:27	1073741830	log.review.reviewAccepted	0
-170	1048585	13	12	2021-10-21 04:27:33	1073741848	log.review.reviewReady	0
-171	1048585	13	3	2021-10-21 04:27:53	805306371	log.editor.decision	0
-172	1048585	14	31	2021-10-21 04:28:10	268435458	submission.event.general.metadataUpdated	0
-173	515	60	31	2021-10-21 04:28:15	1342177281	submission.event.fileUploaded	0
-174	1048585	14	31	2021-10-21 04:28:18	1342177281	submission.event.fileUploaded	0
-175	515	61	31	2021-10-21 04:28:24	1342177281	submission.event.fileUploaded	0
-176	1048585	14	31	2021-10-21 04:28:27	1342177281	submission.event.fileUploaded	0
-177	515	62	31	2021-10-21 04:28:33	1342177281	submission.event.fileUploaded	0
-178	1048585	14	31	2021-10-21 04:28:36	1342177281	submission.event.fileUploaded	0
-179	515	63	31	2021-10-21 04:28:43	1342177281	submission.event.fileUploaded	0
-180	1048585	14	31	2021-10-21 04:28:45	1342177281	submission.event.fileUploaded	0
-181	515	64	31	2021-10-21 04:28:52	1342177281	submission.event.fileUploaded	0
-182	1048585	14	31	2021-10-21 04:28:58	1342177281	submission.event.fileUploaded	0
-183	515	65	31	2021-10-21 04:29:05	1342177281	submission.event.fileUploaded	0
-184	1048585	14	31	2021-10-21 04:29:16	1342177281	submission.event.fileUploaded	0
-185	1048585	14	31	2021-10-21 04:30:19	268435458	submission.event.general.metadataUpdated	0
-186	1048585	14	31	2021-10-21 04:30:22	268435457	submission.event.submissionSubmitted	0
-187	1048585	14	3	2021-10-21 04:30:37	805306371	log.editor.decision	0
-188	1048585	14	3	2021-10-21 04:30:51	1073741825	log.review.reviewerAssigned	0
-189	1048585	14	3	2021-10-21 04:30:57	805306371	log.editor.decision	0
-190	1048585	14	3	2021-10-21 04:31:12	1073741825	log.review.reviewerAssigned	0
-191	1048585	14	3	2021-10-21 04:31:18	805306371	log.editor.decision	0
-192	1048585	14	3	2021-10-21 04:31:31	268435459	submission.event.participantAdded	0
-193	1048585	14	3	2021-10-21 04:31:38	805306371	log.editor.decision	0
-194	1048585	14	3	2021-10-21 04:31:52	268435459	submission.event.participantAdded	0
-195	1048585	14	3	2021-10-21 04:32:03	268435459	submission.event.participantAdded	0
-196	1048585	14	3	2021-10-21 04:32:12	268435474	submission.event.publicationFormatCreated	0
-197	1048585	14	3	2021-10-21 04:32:29	268435464	submission.event.publicationFormatPublished	0
-198	1048585	14	3	2021-10-21 04:32:33	268435476	submission.event.publicationFormatMadeAvailable	0
-199	515	66	3	2021-10-21 04:32:38	1342177287	submission.event.signoffSignoff	0
-200	515	67	3	2021-10-21 04:32:48	1342177287	submission.event.signoffSignoff	0
-201	515	68	3	2021-10-21 04:32:59	1342177287	submission.event.signoffSignoff	0
-202	515	69	3	2021-10-21 04:33:11	1342177287	submission.event.signoffSignoff	0
-203	515	70	3	2021-10-21 04:33:22	1342177287	submission.event.signoffSignoff	0
-204	515	71	3	2021-10-21 04:33:34	1342177287	submission.event.signoffSignoff	0
-205	1048585	14	3	2021-10-21 04:33:46	268435462	publication.event.published	0
-206	1048585	15	32	2021-10-21 04:33:56	268435458	submission.event.general.metadataUpdated	0
-207	515	72	32	2021-10-21 04:34:01	1342177281	submission.event.fileUploaded	0
-208	1048585	15	32	2021-10-21 04:34:03	1342177281	submission.event.fileUploaded	0
-209	1048585	15	32	2021-10-21 04:34:21	268435458	submission.event.general.metadataUpdated	0
-210	1048585	15	32	2021-10-21 04:34:22	268435457	submission.event.submissionSubmitted	0
-211	1048585	15	3	2021-10-21 04:34:33	805306371	log.editor.decision	0
-212	1048585	16	33	2021-10-21 04:34:44	268435458	submission.event.general.metadataUpdated	0
-213	515	74	33	2021-10-21 04:34:50	1342177281	submission.event.fileUploaded	0
-214	1048585	16	33	2021-10-21 04:34:52	1342177281	submission.event.fileUploaded	0
-215	1048585	16	33	2021-10-21 04:35:19	268435458	submission.event.general.metadataUpdated	0
-216	1048585	16	33	2021-10-21 04:35:20	268435457	submission.event.submissionSubmitted	0
-217	1048585	16	3	2021-10-21 04:35:32	805306371	log.editor.decision	0
-218	1048585	16	3	2021-10-21 04:35:42	1073741825	log.review.reviewerAssigned	0
-219	1048585	16	3	2021-10-21 04:35:48	1073741825	log.review.reviewerAssigned	0
-220	1048585	16	3	2021-10-21 04:35:55	1073741825	log.review.reviewerAssigned	0
-221	1048585	16	10	2021-10-21 04:36:03	1073741830	log.review.reviewAccepted	0
-222	1048585	16	10	2021-10-21 04:36:08	1073741848	log.review.reviewReady	0
-223	1048585	17	34	2021-10-21 04:36:17	268435458	submission.event.general.metadataUpdated	0
-224	515	76	34	2021-10-21 04:36:22	1342177281	submission.event.fileUploaded	0
-225	1048585	17	34	2021-10-21 04:36:25	1342177281	submission.event.fileUploaded	0
-226	515	77	34	2021-10-21 04:36:31	1342177281	submission.event.fileUploaded	0
-227	1048585	17	34	2021-10-21 04:36:34	1342177281	submission.event.fileUploaded	0
-228	515	78	34	2021-10-21 04:36:41	1342177281	submission.event.fileUploaded	0
-229	1048585	17	34	2021-10-21 04:36:43	1342177281	submission.event.fileUploaded	0
-230	515	79	34	2021-10-21 04:36:50	1342177281	submission.event.fileUploaded	0
-231	1048585	17	34	2021-10-21 04:36:53	1342177281	submission.event.fileUploaded	0
-232	515	80	34	2021-10-21 04:37:00	1342177281	submission.event.fileUploaded	0
-233	1048585	17	34	2021-10-21 04:37:02	1342177281	submission.event.fileUploaded	0
-234	515	81	34	2021-10-21 04:37:09	1342177281	submission.event.fileUploaded	0
-235	1048585	17	34	2021-10-21 04:37:12	1342177281	submission.event.fileUploaded	0
-236	1048585	17	34	2021-10-21 04:39:16	268435458	submission.event.general.metadataUpdated	0
-237	1048585	17	34	2021-10-21 04:39:19	268435457	submission.event.submissionSubmitted	0
-238	1048585	17	3	2021-10-21 04:39:38	805306371	log.editor.decision	0
-239	1048585	17	3	2021-10-21 04:39:55	1073741825	log.review.reviewerAssigned	0
-240	1048585	17	3	2021-10-21 04:40:05	1073741825	log.review.reviewerAssigned	0
+1	1048585	1	19	2021-11-13 18:29:54	268435458	submission.event.general.metadataUpdated	0
+2	515	1	19	2021-11-13 18:29:59	1342177281	submission.event.fileUploaded	0
+3	1048585	1	19	2021-11-13 18:30:01	1342177281	submission.event.fileUploaded	0
+4	1048585	1	19	2021-11-13 18:30:18	268435458	submission.event.general.metadataUpdated	0
+5	1048585	1	19	2021-11-13 18:30:20	268435457	submission.event.submissionSubmitted	0
+6	1048585	1	3	2021-11-13 18:30:28	805306371	log.editor.decision	0
+7	1048585	1	3	2021-11-13 18:30:37	1073741825	log.review.reviewerAssigned	0
+8	1048585	1	3	2021-11-13 18:30:39	805306371	log.editor.decision	0
+9	1048585	1	3	2021-11-13 18:30:47	268435459	submission.event.participantAdded	0
+10	1048585	2	20	2021-11-13 18:30:56	268435458	submission.event.general.metadataUpdated	0
+11	515	2	20	2021-11-13 18:31:01	1342177281	submission.event.fileUploaded	0
+12	1048585	2	20	2021-11-13 18:31:03	1342177281	submission.event.fileUploaded	0
+13	515	3	20	2021-11-13 18:31:10	1342177281	submission.event.fileUploaded	0
+14	1048585	2	20	2021-11-13 18:31:12	1342177281	submission.event.fileUploaded	0
+15	515	4	20	2021-11-13 18:31:19	1342177281	submission.event.fileUploaded	0
+16	1048585	2	20	2021-11-13 18:31:22	1342177281	submission.event.fileUploaded	0
+17	515	5	20	2021-11-13 18:31:28	1342177281	submission.event.fileUploaded	0
+18	1048585	2	20	2021-11-13 18:31:31	1342177281	submission.event.fileUploaded	0
+19	1048585	2	20	2021-11-13 18:32:54	268435458	submission.event.general.metadataUpdated	0
+20	1048585	2	20	2021-11-13 18:32:56	268435457	submission.event.submissionSubmitted	0
+21	1048585	2	3	2021-11-13 18:33:09	805306371	log.editor.decision	0
+22	1048585	2	3	2021-11-13 18:33:22	1073741825	log.review.reviewerAssigned	0
+23	1048585	2	3	2021-11-13 18:33:31	1073741825	log.review.reviewerAssigned	0
+24	1048585	3	21	2021-11-13 18:33:42	268435458	submission.event.general.metadataUpdated	0
+25	515	6	21	2021-11-13 18:33:47	1342177281	submission.event.fileUploaded	0
+26	1048585	3	21	2021-11-13 18:33:50	1342177281	submission.event.fileUploaded	0
+27	1048585	3	21	2021-11-13 18:34:17	268435458	submission.event.general.metadataUpdated	0
+28	1048585	3	21	2021-11-13 18:34:19	268435457	submission.event.submissionSubmitted	0
+29	1048585	4	22	2021-11-13 18:34:26	268435458	submission.event.general.metadataUpdated	0
+30	515	7	22	2021-11-13 18:34:32	1342177281	submission.event.fileUploaded	0
+31	1048585	4	22	2021-11-13 18:34:34	1342177281	submission.event.fileUploaded	0
+32	515	8	22	2021-11-13 18:34:41	1342177281	submission.event.fileUploaded	0
+33	1048585	4	22	2021-11-13 18:34:43	1342177281	submission.event.fileUploaded	0
+34	515	9	22	2021-11-13 18:34:50	1342177281	submission.event.fileUploaded	0
+35	1048585	4	22	2021-11-13 18:34:52	1342177281	submission.event.fileUploaded	0
+36	515	10	22	2021-11-13 18:34:59	1342177281	submission.event.fileUploaded	0
+37	1048585	4	22	2021-11-13 18:35:02	1342177281	submission.event.fileUploaded	0
+38	1048585	4	22	2021-11-13 18:36:00	268435458	submission.event.general.metadataUpdated	0
+39	1048585	4	22	2021-11-13 18:36:02	268435457	submission.event.submissionSubmitted	0
+40	1048585	4	3	2021-11-13 18:36:14	805306371	log.editor.decision	0
+41	1048585	4	3	2021-11-13 18:36:27	1073741825	log.review.reviewerAssigned	0
+42	1048585	4	3	2021-11-13 18:36:31	805306371	log.editor.decision	0
+43	1048585	4	3	2021-11-13 18:36:45	1073741825	log.review.reviewerAssigned	0
+44	1048585	4	3	2021-11-13 18:36:50	805306371	log.editor.decision	0
+45	1048585	4	3	2021-11-13 18:37:03	268435459	submission.event.participantAdded	0
+46	1048585	4	3	2021-11-13 18:37:09	805306371	log.editor.decision	0
+47	1048585	4	3	2021-11-13 18:37:21	268435459	submission.event.participantAdded	0
+48	1048585	5	23	2021-11-13 18:37:31	268435458	submission.event.general.metadataUpdated	0
+49	515	11	23	2021-11-13 18:37:37	1342177281	submission.event.fileUploaded	0
+50	1048585	5	23	2021-11-13 18:37:39	1342177281	submission.event.fileUploaded	0
+51	1048585	5	23	2021-11-13 18:38:11	268435458	submission.event.general.metadataUpdated	0
+52	1048585	5	23	2021-11-13 18:38:13	268435457	submission.event.submissionSubmitted	0
+53	1048585	5	3	2021-11-13 18:38:22	805306371	log.editor.decision	0
+54	1048585	5	3	2021-11-13 18:38:33	1073741825	log.review.reviewerAssigned	0
+55	1048585	5	3	2021-11-13 18:38:36	805306371	log.editor.decision	0
+56	1048585	5	3	2021-11-13 18:38:47	1073741825	log.review.reviewerAssigned	0
+57	1048585	5	3	2021-11-13 18:38:51	805306371	log.editor.decision	0
+58	1048585	5	3	2021-11-13 18:39:00	268435459	submission.event.participantAdded	0
+59	1048585	5	3	2021-11-13 18:39:05	805306371	log.editor.decision	0
+60	1048585	5	3	2021-11-13 18:39:14	268435459	submission.event.participantAdded	0
+61	1048585	5	3	2021-11-13 18:39:22	268435459	submission.event.participantAdded	0
+62	1048585	5	3	2021-11-13 18:39:28	268435474	submission.event.publicationFormatCreated	0
+63	1048585	5	3	2021-11-13 18:39:36	268435464	submission.event.publicationFormatPublished	0
+64	1048585	5	3	2021-11-13 18:39:39	268435476	submission.event.publicationFormatMadeAvailable	0
+65	515	13	3	2021-11-13 18:39:42	1342177287	submission.event.signoffSignoff	0
+66	1048585	5	3	2021-11-13 18:39:49	268435462	publication.event.published	0
+67	1048585	6	24	2021-11-13 18:39:58	268435458	submission.event.general.metadataUpdated	0
+68	515	14	24	2021-11-13 18:40:03	1342177281	submission.event.fileUploaded	0
+69	1048585	6	24	2021-11-13 18:40:05	1342177281	submission.event.fileUploaded	0
+70	515	15	24	2021-11-13 18:40:12	1342177281	submission.event.fileUploaded	0
+71	1048585	6	24	2021-11-13 18:40:14	1342177281	submission.event.fileUploaded	0
+72	515	16	24	2021-11-13 18:40:21	1342177281	submission.event.fileUploaded	0
+73	1048585	6	24	2021-11-13 18:40:24	1342177281	submission.event.fileUploaded	0
+74	515	17	24	2021-11-13 18:40:30	1342177281	submission.event.fileUploaded	0
+75	1048585	6	24	2021-11-13 18:40:33	1342177281	submission.event.fileUploaded	0
+76	1048585	6	24	2021-11-13 18:41:28	268435458	submission.event.general.metadataUpdated	0
+77	1048585	6	24	2021-11-13 18:41:31	268435457	submission.event.submissionSubmitted	0
+78	1048585	6	3	2021-11-13 18:41:43	805306371	log.editor.decision	0
+79	1048585	6	3	2021-11-13 18:41:55	268435459	submission.event.participantAdded	0
+80	1048585	6	6	2021-11-13 18:42:10	805306372	log.editor.recommendation	0
+81	1048585	7	25	2021-11-13 18:42:32	268435458	submission.event.general.metadataUpdated	0
+82	515	22	25	2021-11-13 18:42:38	1342177281	submission.event.fileUploaded	0
+83	1048585	7	25	2021-11-13 18:42:40	1342177281	submission.event.fileUploaded	0
+84	515	23	25	2021-11-13 18:42:47	1342177281	submission.event.fileUploaded	0
+85	1048585	7	25	2021-11-13 18:42:49	1342177281	submission.event.fileUploaded	0
+86	515	24	25	2021-11-13 18:42:56	1342177281	submission.event.fileUploaded	0
+87	1048585	7	25	2021-11-13 18:42:58	1342177281	submission.event.fileUploaded	0
+88	515	25	25	2021-11-13 18:43:05	1342177281	submission.event.fileUploaded	0
+89	1048585	7	25	2021-11-13 18:43:08	1342177281	submission.event.fileUploaded	0
+90	515	26	25	2021-11-13 18:43:15	1342177281	submission.event.fileUploaded	0
+91	1048585	7	25	2021-11-13 18:43:17	1342177281	submission.event.fileUploaded	0
+92	1048585	7	25	2021-11-13 18:44:38	268435458	submission.event.general.metadataUpdated	0
+93	1048585	7	25	2021-11-13 18:44:41	268435457	submission.event.submissionSubmitted	0
+94	1048585	7	3	2021-11-13 18:44:55	805306371	log.editor.decision	0
+95	1048585	7	3	2021-11-13 18:45:09	1073741825	log.review.reviewerAssigned	0
+96	1048585	7	3	2021-11-13 18:45:14	805306371	log.editor.decision	0
+97	1048585	7	3	2021-11-13 18:45:27	268435459	submission.event.participantAdded	0
+98	1048585	8	3	2021-11-13 18:45:36	268435458	submission.event.general.metadataUpdated	0
+99	515	32	3	2021-11-13 18:45:42	1342177281	submission.event.fileUploaded	0
+100	1048585	8	3	2021-11-13 18:45:44	1342177281	submission.event.fileUploaded	0
+101	1048585	8	3	2021-11-13 18:45:47	268435458	submission.event.general.metadataUpdated	0
+102	1048585	8	3	2021-11-13 18:45:48	268435457	submission.event.submissionSubmitted	0
+103	1048585	9	26	2021-11-13 18:45:55	268435458	submission.event.general.metadataUpdated	0
+104	515	33	26	2021-11-13 18:46:01	1342177281	submission.event.fileUploaded	0
+105	1048585	9	26	2021-11-13 18:46:03	1342177281	submission.event.fileUploaded	0
+106	515	34	26	2021-11-13 18:46:09	1342177281	submission.event.fileUploaded	0
+107	1048585	9	26	2021-11-13 18:46:12	1342177281	submission.event.fileUploaded	0
+108	515	35	26	2021-11-13 18:46:19	1342177281	submission.event.fileUploaded	0
+109	1048585	9	26	2021-11-13 18:46:21	1342177281	submission.event.fileUploaded	0
+110	515	36	26	2021-11-13 18:46:28	1342177281	submission.event.fileUploaded	0
+111	1048585	9	26	2021-11-13 18:46:30	1342177281	submission.event.fileUploaded	0
+112	515	37	26	2021-11-13 18:46:37	1342177281	submission.event.fileUploaded	0
+113	1048585	9	26	2021-11-13 18:46:40	1342177281	submission.event.fileUploaded	0
+114	1048585	9	26	2021-11-13 18:47:57	268435458	submission.event.general.metadataUpdated	0
+115	1048585	9	26	2021-11-13 18:48:00	268435457	submission.event.submissionSubmitted	0
+116	1048585	9	3	2021-11-13 18:48:13	805306371	log.editor.decision	0
+117	1048585	10	27	2021-11-13 18:48:28	268435458	submission.event.general.metadataUpdated	0
+118	515	43	27	2021-11-13 18:48:33	1342177281	submission.event.fileUploaded	0
+119	1048585	10	27	2021-11-13 18:48:36	1342177281	submission.event.fileUploaded	0
+120	1048585	10	27	2021-11-13 18:49:26	268435458	submission.event.general.metadataUpdated	0
+121	1048585	10	27	2021-11-13 18:49:28	268435457	submission.event.submissionSubmitted	0
+122	1048585	11	28	2021-11-13 18:49:36	268435458	submission.event.general.metadataUpdated	0
+123	515	44	28	2021-11-13 18:49:41	1342177281	submission.event.fileUploaded	0
+124	1048585	11	28	2021-11-13 18:49:44	1342177281	submission.event.fileUploaded	0
+125	1048585	11	28	2021-11-13 18:49:55	268435458	submission.event.general.metadataUpdated	0
+126	1048585	11	28	2021-11-13 18:49:56	268435457	submission.event.submissionSubmitted	0
+127	1048585	11	3	2021-11-13 18:50:05	805306371	log.editor.decision	0
+128	1048585	11	3	2021-11-13 18:50:13	1073741825	log.review.reviewerAssigned	0
+129	1048585	11	3	2021-11-13 18:50:16	805306371	log.editor.decision	0
+130	1048585	11	3	2021-11-13 18:50:25	1073741825	log.review.reviewerAssigned	0
+131	1048585	11	3	2021-11-13 18:50:31	1073741825	log.review.reviewerAssigned	0
+132	1048585	11	10	2021-11-13 18:50:38	1073741830	log.review.reviewAccepted	0
+133	1048585	11	10	2021-11-13 18:50:42	1073741848	log.review.reviewReady	0
+134	1048585	11	12	2021-11-13 18:50:49	1073741830	log.review.reviewAccepted	0
+135	1048585	11	12	2021-11-13 18:50:53	1073741848	log.review.reviewReady	0
+136	1048585	11	3	2021-11-13 18:51:06	805306371	log.editor.decision	0
+137	1048585	12	29	2021-11-13 18:51:20	268435458	submission.event.general.metadataUpdated	0
+138	515	46	29	2021-11-13 18:51:25	1342177281	submission.event.fileUploaded	0
+139	1048585	12	29	2021-11-13 18:51:27	1342177281	submission.event.fileUploaded	0
+140	515	47	29	2021-11-13 18:51:34	1342177281	submission.event.fileUploaded	0
+141	1048585	12	29	2021-11-13 18:51:36	1342177281	submission.event.fileUploaded	0
+142	515	48	29	2021-11-13 18:51:43	1342177281	submission.event.fileUploaded	0
+143	1048585	12	29	2021-11-13 18:51:46	1342177281	submission.event.fileUploaded	0
+144	1048585	12	29	2021-11-13 18:52:51	268435458	submission.event.general.metadataUpdated	0
+145	1048585	12	29	2021-11-13 18:52:54	268435457	submission.event.submissionSubmitted	0
+146	1048585	12	3	2021-11-13 18:53:07	805306371	log.editor.decision	0
+147	1048585	12	3	2021-11-13 18:53:21	1073741825	log.review.reviewerAssigned	0
+148	1048585	12	3	2021-11-13 18:53:29	1073741825	log.review.reviewerAssigned	0
+149	1048585	12	3	2021-11-13 18:53:38	1073741825	log.review.reviewerAssigned	0
+150	1048585	12	8	2021-11-13 18:53:48	1073741830	log.review.reviewAccepted	0
+151	1048585	12	8	2021-11-13 18:53:54	1073741848	log.review.reviewReady	0
+152	1048585	13	30	2021-11-13 18:54:03	268435458	submission.event.general.metadataUpdated	0
+153	515	52	30	2021-11-13 18:54:08	1342177281	submission.event.fileUploaded	0
+154	1048585	13	30	2021-11-13 18:54:10	1342177281	submission.event.fileUploaded	0
+155	515	53	30	2021-11-13 18:54:17	1342177281	submission.event.fileUploaded	0
+156	1048585	13	30	2021-11-13 18:54:19	1342177281	submission.event.fileUploaded	0
+157	515	54	30	2021-11-13 18:54:26	1342177281	submission.event.fileUploaded	0
+158	1048585	13	30	2021-11-13 18:54:29	1342177281	submission.event.fileUploaded	0
+159	1048585	13	30	2021-11-13 18:55:12	268435458	submission.event.general.metadataUpdated	0
+160	1048585	13	30	2021-11-13 18:55:14	268435457	submission.event.submissionSubmitted	0
+161	1048585	13	3	2021-11-13 18:55:26	805306371	log.editor.decision	0
+162	1048585	13	3	2021-11-13 18:55:37	1073741825	log.review.reviewerAssigned	0
+163	1048585	13	3	2021-11-13 18:55:41	805306371	log.editor.decision	0
+164	1048585	13	3	2021-11-13 18:55:53	1073741825	log.review.reviewerAssigned	0
+165	1048585	13	3	2021-11-13 18:56:01	1073741825	log.review.reviewerAssigned	0
+166	1048585	13	3	2021-11-13 18:56:09	1073741825	log.review.reviewerAssigned	0
+167	1048585	13	10	2021-11-13 18:56:19	1073741830	log.review.reviewAccepted	0
+168	1048585	13	10	2021-11-13 18:56:25	1073741848	log.review.reviewReady	0
+169	1048585	13	12	2021-11-13 18:56:33	1073741830	log.review.reviewAccepted	0
+170	1048585	13	12	2021-11-13 18:56:38	1073741848	log.review.reviewReady	0
+171	1048585	13	3	2021-11-13 18:56:58	805306371	log.editor.decision	0
+172	1048585	14	31	2021-11-13 18:57:13	268435458	submission.event.general.metadataUpdated	0
+173	515	58	31	2021-11-13 18:57:18	1342177281	submission.event.fileUploaded	0
+174	1048585	14	31	2021-11-13 18:57:21	1342177281	submission.event.fileUploaded	0
+175	515	59	31	2021-11-13 18:57:27	1342177281	submission.event.fileUploaded	0
+176	1048585	14	31	2021-11-13 18:57:30	1342177281	submission.event.fileUploaded	0
+177	515	60	31	2021-11-13 18:57:36	1342177281	submission.event.fileUploaded	0
+178	1048585	14	31	2021-11-13 18:57:39	1342177281	submission.event.fileUploaded	0
+179	515	61	31	2021-11-13 18:57:46	1342177281	submission.event.fileUploaded	0
+180	1048585	14	31	2021-11-13 18:57:48	1342177281	submission.event.fileUploaded	0
+181	515	62	31	2021-11-13 18:57:55	1342177281	submission.event.fileUploaded	0
+182	1048585	14	31	2021-11-13 18:58:00	1342177281	submission.event.fileUploaded	0
+183	515	63	31	2021-11-13 18:58:07	1342177281	submission.event.fileUploaded	0
+184	1048585	14	31	2021-11-13 18:58:18	1342177281	submission.event.fileUploaded	0
+185	1048585	14	31	2021-11-13 18:59:17	268435458	submission.event.general.metadataUpdated	0
+186	1048585	14	31	2021-11-13 18:59:20	268435457	submission.event.submissionSubmitted	0
+187	1048585	14	3	2021-11-13 18:59:34	805306371	log.editor.decision	0
+188	1048585	14	3	2021-11-13 18:59:47	1073741825	log.review.reviewerAssigned	0
+189	1048585	14	3	2021-11-13 18:59:52	805306371	log.editor.decision	0
+190	1048585	14	3	2021-11-13 19:00:06	1073741825	log.review.reviewerAssigned	0
+191	1048585	14	3	2021-11-13 19:00:11	805306371	log.editor.decision	0
+192	1048585	14	3	2021-11-13 19:00:25	268435459	submission.event.participantAdded	0
+193	1048585	14	3	2021-11-13 19:00:31	805306371	log.editor.decision	0
+194	1048585	14	3	2021-11-13 19:00:44	268435459	submission.event.participantAdded	0
+195	1048585	14	3	2021-11-13 19:00:54	268435459	submission.event.participantAdded	0
+196	1048585	14	3	2021-11-13 19:01:02	268435474	submission.event.publicationFormatCreated	0
+197	1048585	14	3	2021-11-13 19:01:18	268435464	submission.event.publicationFormatPublished	0
+198	1048585	14	3	2021-11-13 19:01:22	268435476	submission.event.publicationFormatMadeAvailable	0
+199	515	64	3	2021-11-13 19:01:27	1342177287	submission.event.signoffSignoff	0
+200	515	65	3	2021-11-13 19:01:36	1342177287	submission.event.signoffSignoff	0
+201	515	66	3	2021-11-13 19:01:46	1342177287	submission.event.signoffSignoff	0
+202	515	67	3	2021-11-13 19:01:56	1342177287	submission.event.signoffSignoff	0
+203	515	68	3	2021-11-13 19:02:07	1342177287	submission.event.signoffSignoff	0
+204	515	69	3	2021-11-13 19:02:17	1342177287	submission.event.signoffSignoff	0
+205	1048585	14	3	2021-11-13 19:02:28	268435462	publication.event.published	0
+206	1048585	15	32	2021-11-13 19:02:38	268435458	submission.event.general.metadataUpdated	0
+207	515	70	32	2021-11-13 19:02:43	1342177281	submission.event.fileUploaded	0
+208	1048585	15	32	2021-11-13 19:02:45	1342177281	submission.event.fileUploaded	0
+209	1048585	15	32	2021-11-13 19:03:02	268435458	submission.event.general.metadataUpdated	0
+210	1048585	15	32	2021-11-13 19:03:04	268435457	submission.event.submissionSubmitted	0
+211	1048585	15	3	2021-11-13 19:03:13	805306371	log.editor.decision	0
+212	1048585	16	33	2021-11-13 19:03:25	268435458	submission.event.general.metadataUpdated	0
+213	515	72	33	2021-11-13 19:03:30	1342177281	submission.event.fileUploaded	0
+214	1048585	16	33	2021-11-13 19:03:33	1342177281	submission.event.fileUploaded	0
+215	1048585	16	33	2021-11-13 19:03:58	268435458	submission.event.general.metadataUpdated	0
+216	1048585	16	33	2021-11-13 19:04:00	268435457	submission.event.submissionSubmitted	0
+217	1048585	16	3	2021-11-13 19:04:10	805306371	log.editor.decision	0
+218	1048585	16	3	2021-11-13 19:04:20	1073741825	log.review.reviewerAssigned	0
+219	1048585	16	3	2021-11-13 19:04:26	1073741825	log.review.reviewerAssigned	0
+220	1048585	16	3	2021-11-13 19:04:33	1073741825	log.review.reviewerAssigned	0
+221	1048585	16	10	2021-11-13 19:04:41	1073741830	log.review.reviewAccepted	0
+222	1048585	16	10	2021-11-13 19:04:45	1073741848	log.review.reviewReady	0
+223	1048585	17	34	2021-11-13 19:04:53	268435458	submission.event.general.metadataUpdated	0
+224	515	73	34	2021-11-13 19:04:59	1342177281	submission.event.fileUploaded	0
+225	1048585	17	34	2021-11-13 19:05:01	1342177281	submission.event.fileUploaded	0
+226	515	74	34	2021-11-13 19:05:08	1342177281	submission.event.fileUploaded	0
+227	1048585	17	34	2021-11-13 19:05:10	1342177281	submission.event.fileUploaded	0
+228	515	75	34	2021-11-13 19:05:17	1342177281	submission.event.fileUploaded	0
+229	1048585	17	34	2021-11-13 19:05:19	1342177281	submission.event.fileUploaded	0
+230	515	76	34	2021-11-13 19:05:26	1342177281	submission.event.fileUploaded	0
+231	1048585	17	34	2021-11-13 19:05:29	1342177281	submission.event.fileUploaded	0
+232	515	77	34	2021-11-13 19:05:36	1342177281	submission.event.fileUploaded	0
+233	1048585	17	34	2021-11-13 19:05:38	1342177281	submission.event.fileUploaded	0
+234	515	78	34	2021-11-13 19:05:45	1342177281	submission.event.fileUploaded	0
+235	1048585	17	34	2021-11-13 19:05:48	1342177281	submission.event.fileUploaded	0
+236	1048585	17	34	2021-11-13 19:07:45	268435458	submission.event.general.metadataUpdated	0
+237	1048585	17	34	2021-11-13 19:07:48	268435457	submission.event.submissionSubmitted	0
+238	1048585	17	3	2021-11-13 19:08:05	805306371	log.editor.decision	0
+239	1048585	17	3	2021-11-13 19:08:21	1073741825	log.review.reviewerAssigned	0
+240	1048585	17	3	2021-11-13 19:08:31	1073741825	log.review.reviewerAssigned	0
 \.
 
 
@@ -5428,13 +5428,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 9	userGroupName	Copyeditor	string
 11	fileStage	2	int
 11	revisedFileId	\N	string
-11	fileId	3	string
+11	fileId	2	string
 11	fileRevision	1	int
 11	originalFileName	Critical History in Western Canada 1900–.pdf	string
 11	submissionId	2	int
 11	username	afinkel	string
 12	fileStage	2	int
-12	fileId	3	int
+12	fileId	2	int
 12	fileRevision	1	int
 12	originalFileName	Critical History in Western Canada 1900–.pdf	string
 12	submissionId	2	int
@@ -5442,13 +5442,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 12	name	afinkel, Critical History in Western Canada 1900–.pdf	string
 13	fileStage	2	int
 13	revisedFileId	\N	string
-13	fileId	4	string
+13	fileId	3	string
 13	fileRevision	1	int
 13	originalFileName	Vernacular Currents in Western Canadian .pdf	string
 13	submissionId	2	int
 13	username	afinkel	string
 14	fileStage	2	int
-14	fileId	4	int
+14	fileId	3	int
 14	fileRevision	1	int
 14	originalFileName	Vernacular Currents in Western Canadian .pdf	string
 14	submissionId	2	int
@@ -5456,13 +5456,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 14	name	afinkel, Vernacular Currents in Western Canadian .pdf	string
 15	fileStage	2	int
 15	revisedFileId	\N	string
-15	fileId	5	string
+15	fileId	4	string
 15	fileRevision	1	int
 15	originalFileName	Cree Intellectual Traditions in History.pdf	string
 15	submissionId	2	int
 15	username	afinkel	string
 16	fileStage	2	int
-16	fileId	5	int
+16	fileId	4	int
 16	fileRevision	1	int
 16	originalFileName	Cree Intellectual Traditions in History.pdf	string
 16	submissionId	2	int
@@ -5470,13 +5470,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 16	name	afinkel, Cree Intellectual Traditions in History.pdf	string
 17	fileStage	2	int
 17	revisedFileId	\N	string
-17	fileId	6	string
+17	fileId	5	string
 17	fileRevision	1	int
 17	originalFileName	Visualizing Space, Race, and History in .pdf	string
 17	submissionId	2	int
 17	username	afinkel	string
 18	fileStage	2	int
-18	fileId	6	int
+18	fileId	5	int
 18	fileRevision	1	int
 18	originalFileName	Visualizing Space, Race, and History in .pdf	string
 18	submissionId	2	int
@@ -5497,13 +5497,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 23	round	1	int
 25	fileStage	2	int
 25	revisedFileId	\N	string
-25	fileId	11	string
+25	fileId	6	string
 25	fileRevision	1	int
 25	originalFileName	The Political Economy of Workplace Injury in Canada.pdf	string
 25	submissionId	3	int
 25	username	bbarnetson	string
 26	fileStage	2	int
-26	fileId	11	int
+26	fileId	6	int
 26	fileRevision	1	int
 26	originalFileName	The Political Economy of Workplace Injury in Canada.pdf	string
 26	submissionId	3	int
@@ -5511,13 +5511,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 26	name	bbarnetson, The Political Economy of Workplace Injury in Canada.pdf	string
 30	fileStage	2	int
 30	revisedFileId	\N	string
-30	fileId	12	string
+30	fileId	7	string
 30	fileRevision	1	int
 30	originalFileName	Introduction: Contexts of Popular Cultur.pdf	string
 30	submissionId	4	int
 30	username	bbeaty	string
 31	fileStage	2	int
-31	fileId	12	int
+31	fileId	7	int
 31	fileRevision	1	int
 31	originalFileName	Introduction: Contexts of Popular Cultur.pdf	string
 31	submissionId	4	int
@@ -5525,13 +5525,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 31	name	bbeaty, Introduction: Contexts of Popular Cultur.pdf	string
 32	fileStage	2	int
 32	revisedFileId	\N	string
-32	fileId	13	string
+32	fileId	8	string
 32	fileRevision	1	int
 32	originalFileName	Chapter 1. A Future for Media Studies: C.pdf	string
 32	submissionId	4	int
 32	username	bbeaty	string
 33	fileStage	2	int
-33	fileId	13	int
+33	fileId	8	int
 33	fileRevision	1	int
 33	originalFileName	Chapter 1. A Future for Media Studies: C.pdf	string
 33	submissionId	4	int
@@ -5539,13 +5539,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 33	name	bbeaty, Chapter 1. A Future for Media Studies: C.pdf	string
 34	fileStage	2	int
 34	revisedFileId	\N	string
-34	fileId	14	string
+34	fileId	9	string
 34	fileRevision	1	int
 34	originalFileName	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
 34	submissionId	4	int
 34	username	bbeaty	string
 35	fileStage	2	int
-35	fileId	14	int
+35	fileId	9	int
 35	fileRevision	1	int
 35	originalFileName	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
 35	submissionId	4	int
@@ -5553,13 +5553,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 35	name	bbeaty, Chapter 2. Log On, Goof Off, and Look Up.pdf	string
 36	fileStage	2	int
 36	revisedFileId	\N	string
-36	fileId	15	string
+36	fileId	10	string
 36	fileRevision	1	int
 36	originalFileName	Chapter 3. Hawkers and Public Space: Fre.pdf	string
 36	submissionId	4	int
 36	username	bbeaty	string
 37	fileStage	2	int
-37	fileId	15	int
+37	fileId	10	int
 37	fileRevision	1	int
 37	originalFileName	Chapter 3. Hawkers and Public Space: Fre.pdf	string
 37	submissionId	4	int
@@ -5595,13 +5595,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 47	userGroupName	Layout Editor	string
 49	fileStage	2	int
 49	revisedFileId	\N	string
-49	fileId	16	string
+49	fileId	11	string
 49	fileRevision	1	int
 49	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
 49	submissionId	5	int
 49	username	callan	string
 50	fileStage	2	int
-50	fileId	16	int
+50	fileId	11	int
 50	fileRevision	1	int
 50	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
 50	submissionId	5	int
@@ -5646,13 +5646,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 65	username	dbarnes	string
 68	fileStage	2	int
 68	revisedFileId	\N	string
-68	fileId	19	string
+68	fileId	14	string
 68	fileRevision	1	int
 68	originalFileName	Identify: Understanding Your Information.pdf	string
 68	submissionId	6	int
 68	username	dbernnard	string
 69	fileStage	2	int
-69	fileId	19	int
+69	fileId	14	int
 69	fileRevision	1	int
 69	originalFileName	Identify: Understanding Your Information.pdf	string
 69	submissionId	6	int
@@ -5660,13 +5660,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 69	name	dbernnard, Identify: Understanding Your Information.pdf	string
 70	fileStage	2	int
 70	revisedFileId	\N	string
-70	fileId	20	string
+70	fileId	15	string
 70	fileRevision	1	int
 70	originalFileName	Scope: Knowing What Is Available.pdf	string
 70	submissionId	6	int
 70	username	dbernnard	string
 71	fileStage	2	int
-71	fileId	20	int
+71	fileId	15	int
 71	fileRevision	1	int
 71	originalFileName	Scope: Knowing What Is Available.pdf	string
 71	submissionId	6	int
@@ -5674,13 +5674,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 71	name	dbernnard, Scope: Knowing What Is Available.pdf	string
 72	fileStage	2	int
 72	revisedFileId	\N	string
-72	fileId	21	string
+72	fileId	16	string
 72	fileRevision	1	int
 72	originalFileName	Plan: Developing Research Strategies.pdf	string
 72	submissionId	6	int
 72	username	dbernnard	string
 73	fileStage	2	int
-73	fileId	21	int
+73	fileId	16	int
 73	fileRevision	1	int
 73	originalFileName	Plan: Developing Research Strategies.pdf	string
 73	submissionId	6	int
@@ -5688,13 +5688,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 73	name	dbernnard, Plan: Developing Research Strategies.pdf	string
 74	fileStage	2	int
 74	revisedFileId	\N	string
-74	fileId	22	string
+74	fileId	17	string
 74	fileRevision	1	int
 74	originalFileName	Gather: Finding What You Need.pdf	string
 74	submissionId	6	int
 74	username	dbernnard	string
 75	fileStage	2	int
-75	fileId	22	int
+75	fileId	17	int
 75	fileRevision	1	int
 75	originalFileName	Gather: Finding What You Need.pdf	string
 75	submissionId	6	int
@@ -5711,13 +5711,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 80	decision	Send to External Review	string
 82	fileStage	2	int
 82	revisedFileId	\N	string
-82	fileId	27	string
+82	fileId	22	string
 82	fileRevision	1	int
 82	originalFileName	Introduction.pdf	string
 82	submissionId	7	int
 82	username	dkennepohl	string
 83	fileStage	2	int
-83	fileId	27	int
+83	fileId	22	int
 83	fileRevision	1	int
 83	originalFileName	Introduction.pdf	string
 83	submissionId	7	int
@@ -5725,13 +5725,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 83	name	dkennepohl, Introduction.pdf	string
 84	fileStage	2	int
 84	revisedFileId	\N	string
-84	fileId	28	string
+84	fileId	23	string
 84	fileRevision	1	int
 84	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
 84	submissionId	7	int
 84	username	dkennepohl	string
 85	fileStage	2	int
-85	fileId	28	int
+85	fileId	23	int
 85	fileRevision	1	int
 85	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
 85	submissionId	7	int
@@ -5739,13 +5739,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 85	name	dkennepohl, Chapter 1: Interactions Affording Distan.pdf	string
 86	fileStage	2	int
 86	revisedFileId	\N	string
-86	fileId	29	string
+86	fileId	24	string
 86	fileRevision	1	int
 86	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
 86	submissionId	7	int
 86	username	dkennepohl	string
 87	fileStage	2	int
-87	fileId	29	int
+87	fileId	24	int
 87	fileRevision	1	int
 87	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
 87	submissionId	7	int
@@ -5753,13 +5753,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 87	name	dkennepohl, Chapter 2: Learning Science at a Distanc.pdf	string
 88	fileStage	2	int
 88	revisedFileId	\N	string
-88	fileId	30	string
+88	fileId	25	string
 88	fileRevision	1	int
 88	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
 88	submissionId	7	int
 88	username	dkennepohl	string
 89	fileStage	2	int
-89	fileId	30	int
+89	fileId	25	int
 89	fileRevision	1	int
 89	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
 89	submissionId	7	int
@@ -5767,13 +5767,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 89	name	dkennepohl, Chapter 3: Leadership Strategies for Coo.pdf	string
 90	fileStage	2	int
 90	revisedFileId	\N	string
-90	fileId	31	string
+90	fileId	26	string
 90	fileRevision	1	int
 90	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
 90	submissionId	7	int
 90	username	dkennepohl	string
 91	fileStage	2	int
-91	fileId	31	int
+91	fileId	26	int
 91	fileRevision	1	int
 91	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
 91	submissionId	7	int
@@ -5795,13 +5795,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 97	userGroupName	Copyeditor	string
 99	fileStage	2	int
 99	revisedFileId	\N	string
-99	fileId	37	string
+99	fileId	32	string
 99	fileRevision	1	int
 99	originalFileName	Editorial.pdf	string
 99	submissionId	8	int
 99	username	dbarnes	string
 100	fileStage	2	int
-100	fileId	37	int
+100	fileId	32	int
 100	fileRevision	1	int
 100	originalFileName	Editorial.pdf	string
 100	submissionId	8	int
@@ -5809,13 +5809,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 100	name	dbarnes, Editorial.pdf	string
 104	fileStage	2	int
 104	revisedFileId	\N	string
-104	fileId	38	string
+104	fileId	33	string
 104	fileRevision	1	int
 104	originalFileName	Internet, openness and the future of the.pdf	string
 104	submissionId	9	int
 104	username	fperini	string
 105	fileStage	2	int
-105	fileId	38	int
+105	fileId	33	int
 105	fileRevision	1	int
 105	originalFileName	Internet, openness and the future of the.pdf	string
 105	submissionId	9	int
@@ -5823,13 +5823,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 105	name	fperini, Internet, openness and the future of the.pdf	string
 106	fileStage	2	int
 106	revisedFileId	\N	string
-106	fileId	39	string
+106	fileId	34	string
 106	fileRevision	1	int
 106	originalFileName	Imagining the Internet: Open, closed or .pdf	string
 106	submissionId	9	int
 106	username	fperini	string
 107	fileStage	2	int
-107	fileId	39	int
+107	fileId	34	int
 107	fileRevision	1	int
 107	originalFileName	Imagining the Internet: Open, closed or .pdf	string
 107	submissionId	9	int
@@ -5837,13 +5837,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 107	name	fperini, Imagining the Internet: Open, closed or .pdf	string
 108	fileStage	2	int
 108	revisedFileId	\N	string
-108	fileId	40	string
+108	fileId	35	string
 108	fileRevision	1	int
 108	originalFileName	The internet in LAC will remain free, pu.pdf	string
 108	submissionId	9	int
 108	username	fperini	string
 109	fileStage	2	int
-109	fileId	40	int
+109	fileId	35	int
 109	fileRevision	1	int
 109	originalFileName	The internet in LAC will remain free, pu.pdf	string
 109	submissionId	9	int
@@ -5851,13 +5851,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 109	name	fperini, The internet in LAC will remain free, pu.pdf	string
 110	fileStage	2	int
 110	revisedFileId	\N	string
-110	fileId	41	string
+110	fileId	36	string
 110	fileRevision	1	int
 110	originalFileName	Free Internet?.pdf	string
 110	submissionId	9	int
 110	username	fperini	string
 111	fileStage	2	int
-111	fileId	41	int
+111	fileId	36	int
 111	fileRevision	1	int
 111	originalFileName	Free Internet?.pdf	string
 111	submissionId	9	int
@@ -5865,13 +5865,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 111	name	fperini, Free Internet?.pdf	string
 112	fileStage	2	int
 112	revisedFileId	\N	string
-112	fileId	42	string
+112	fileId	37	string
 112	fileRevision	1	int
 112	originalFileName	Risks and challenges for freedom of expr.pdf	string
 112	submissionId	9	int
 112	username	fperini	string
 113	fileStage	2	int
-113	fileId	42	int
+113	fileId	37	int
 113	fileRevision	1	int
 113	originalFileName	Risks and challenges for freedom of expr.pdf	string
 113	submissionId	9	int
@@ -5882,13 +5882,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 116	decision	Send to Internal Review	string
 118	fileStage	2	int
 118	revisedFileId	\N	string
-118	fileId	48	string
+118	fileId	43	string
 118	fileRevision	1	int
 118	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
 118	submissionId	10	int
 118	username	jbrower	string
 119	fileStage	2	int
-119	fileId	48	int
+119	fileId	43	int
 119	fileRevision	1	int
 119	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
 119	submissionId	10	int
@@ -5896,13 +5896,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 119	name	jbrower, Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
 123	fileStage	2	int
 123	revisedFileId	\N	string
-123	fileId	49	string
+123	fileId	44	string
 123	fileRevision	1	int
 123	originalFileName	Dreamwork.pdf	string
 123	submissionId	11	int
 123	username	jlockehart	string
 124	fileStage	2	int
-124	fileId	49	int
+124	fileId	44	int
 124	fileRevision	1	int
 124	originalFileName	Dreamwork.pdf	string
 124	submissionId	11	int
@@ -5950,13 +5950,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 136	decision	Accept Submission	string
 138	fileStage	2	int
 138	revisedFileId	\N	string
-138	fileId	51	string
+138	fileId	46	string
 138	fileRevision	1	int
 138	originalFileName	Catalyzing Access through Social and Tec.pdf	string
 138	submissionId	12	int
 138	username	lelder	string
 139	fileStage	2	int
-139	fileId	51	int
+139	fileId	46	int
 139	fileRevision	1	int
 139	originalFileName	Catalyzing Access through Social and Tec.pdf	string
 139	submissionId	12	int
@@ -5964,13 +5964,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 139	name	lelder, Catalyzing Access through Social and Tec.pdf	string
 140	fileStage	2	int
 140	revisedFileId	\N	string
-140	fileId	52	string
+140	fileId	47	string
 140	fileRevision	1	int
 140	originalFileName	Catalyzing Access via Telecommunications.pdf	string
 140	submissionId	12	int
 140	username	lelder	string
 141	fileStage	2	int
-141	fileId	52	int
+141	fileId	47	int
 141	fileRevision	1	int
 141	originalFileName	Catalyzing Access via Telecommunications.pdf	string
 141	submissionId	12	int
@@ -5978,13 +5978,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 141	name	lelder, Catalyzing Access via Telecommunications.pdf	string
 142	fileStage	2	int
 142	revisedFileId	\N	string
-142	fileId	53	string
+142	fileId	48	string
 142	fileRevision	1	int
 142	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
 142	submissionId	12	int
 142	username	lelder	string
 143	fileStage	2	int
-143	fileId	53	int
+143	fileId	48	int
 143	fileRevision	1	int
 143	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
 143	submissionId	12	int
@@ -6018,13 +6018,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 151	round	1	int
 153	fileStage	2	int
 153	revisedFileId	\N	string
-153	fileId	57	string
+153	fileId	52	string
 153	fileRevision	1	int
 153	originalFileName	Current State of Mobile Learning.pdf	string
 153	submissionId	13	int
 153	username	mally	string
 154	fileStage	2	int
-154	fileId	57	int
+154	fileId	52	int
 154	fileRevision	1	int
 154	originalFileName	Current State of Mobile Learning.pdf	string
 154	submissionId	13	int
@@ -6032,13 +6032,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 154	name	mally, Current State of Mobile Learning.pdf	string
 155	fileStage	2	int
 155	revisedFileId	\N	string
-155	fileId	58	string
+155	fileId	53	string
 155	fileRevision	1	int
 155	originalFileName	A Model for Framing Mobile Learning.pdf	string
 155	submissionId	13	int
 155	username	mally	string
 156	fileStage	2	int
-156	fileId	58	int
+156	fileId	53	int
 156	fileRevision	1	int
 156	originalFileName	A Model for Framing Mobile Learning.pdf	string
 156	submissionId	13	int
@@ -6046,13 +6046,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 156	name	mally, A Model for Framing Mobile Learning.pdf	string
 157	fileStage	2	int
 157	revisedFileId	\N	string
-157	fileId	59	string
+157	fileId	54	string
 157	fileRevision	1	int
 157	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
 157	submissionId	13	int
 157	username	mally	string
 158	fileStage	2	int
-158	fileId	59	int
+158	fileId	54	int
 158	fileRevision	1	int
 158	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
 158	submissionId	13	int
@@ -6105,13 +6105,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 171	decision	Accept Submission	string
 173	fileStage	2	int
 173	revisedFileId	\N	string
-173	fileId	60	string
+173	fileId	58	string
 173	fileRevision	1	int
 173	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
 173	submissionId	14	int
 173	username	mdawson	string
 174	fileStage	2	int
-174	fileId	60	int
+174	fileId	58	int
 174	fileRevision	1	int
 174	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
 174	submissionId	14	int
@@ -6119,13 +6119,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 174	name	mdawson, Chapter 1: Mind Control—Internal or Exte.pdf	string
 175	fileStage	2	int
 175	revisedFileId	\N	string
-175	fileId	61	string
+175	fileId	59	string
 175	fileRevision	1	int
 175	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 175	submissionId	14	int
 175	username	mdawson	string
 176	fileStage	2	int
-176	fileId	61	int
+176	fileId	59	int
 176	fileRevision	1	int
 176	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 176	submissionId	14	int
@@ -6133,13 +6133,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 176	name	mdawson, Chapter 2: Classical Music and the Class.pdf	string
 177	fileStage	2	int
 177	revisedFileId	\N	string
-177	fileId	62	string
+177	fileId	60	string
 177	fileRevision	1	int
 177	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 177	submissionId	14	int
 177	username	mdawson	string
 178	fileStage	2	int
-178	fileId	62	int
+178	fileId	60	int
 178	fileRevision	1	int
 178	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 178	submissionId	14	int
@@ -6147,13 +6147,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 178	name	mdawson, Chapter 3: Situated Cognition and Bricol.pdf	string
 179	fileStage	2	int
 179	revisedFileId	\N	string
-179	fileId	63	string
+179	fileId	61	string
 179	fileRevision	1	int
 179	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 179	submissionId	14	int
 179	username	mdawson	string
 180	fileStage	2	int
-180	fileId	63	int
+180	fileId	61	int
 180	fileRevision	1	int
 180	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 180	submissionId	14	int
@@ -6161,13 +6161,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 180	name	mdawson, Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 181	fileStage	2	int
 181	revisedFileId	\N	string
-181	fileId	64	string
+181	fileId	62	string
 181	fileRevision	1	int
 181	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 181	submissionId	14	int
 181	username	mdawson	string
 182	fileStage	2	int
-182	fileId	64	int
+182	fileId	62	int
 182	fileRevision	1	int
 182	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 182	submissionId	14	int
@@ -6175,13 +6175,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 182	name	mdawson, Segmentation of Vascular Ultrasound Imag.pdf	string
 183	fileStage	2	int
 183	revisedFileId	\N	string
-183	fileId	65	string
+183	fileId	63	string
 183	fileRevision	1	int
 183	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 183	submissionId	14	int
 183	username	mdawson	string
 184	fileStage	2	int
-184	fileId	65	int
+184	fileId	63	int
 184	fileRevision	1	int
 184	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 184	submissionId	14	int
@@ -6241,13 +6241,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 204	username	dbarnes	string
 207	fileStage	2	int
 207	revisedFileId	\N	string
-207	fileId	72	string
+207	fileId	70	string
 207	fileRevision	1	int
 207	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
 207	submissionId	15	int
 207	username	mforan	string
 208	fileStage	2	int
-208	fileId	72	int
+208	fileId	70	int
 208	fileRevision	1	int
 208	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
 208	submissionId	15	int
@@ -6258,13 +6258,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 211	decision	Send to External Review	string
 213	fileStage	2	int
 213	revisedFileId	\N	string
-213	fileId	74	string
+213	fileId	72	string
 213	fileRevision	1	int
 213	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
 213	submissionId	16	int
 213	username	mpower	string
 214	fileStage	2	int
-214	fileId	74	int
+214	fileId	72	int
 214	fileRevision	1	int
 214	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
 214	submissionId	16	int
@@ -6298,13 +6298,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 222	round	1	int
 224	fileStage	2	int
 224	revisedFileId	\N	string
-224	fileId	76	string
+224	fileId	73	string
 224	fileRevision	1	int
 224	originalFileName	Preface.pdf	string
 224	submissionId	17	int
 224	username	msmith	string
 225	fileStage	2	int
-225	fileId	76	int
+225	fileId	73	int
 225	fileRevision	1	int
 225	originalFileName	Preface.pdf	string
 225	submissionId	17	int
@@ -6312,13 +6312,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 225	name	msmith, Preface.pdf	string
 226	fileStage	2	int
 226	revisedFileId	\N	string
-226	fileId	77	string
+226	fileId	74	string
 226	fileRevision	1	int
 226	originalFileName	Introduction.pdf	string
 226	submissionId	17	int
 226	username	msmith	string
 227	fileStage	2	int
-227	fileId	77	int
+227	fileId	74	int
 227	fileRevision	1	int
 227	originalFileName	Introduction.pdf	string
 227	submissionId	17	int
@@ -6326,13 +6326,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 227	name	msmith, Introduction.pdf	string
 228	fileStage	2	int
 228	revisedFileId	\N	string
-228	fileId	78	string
+228	fileId	75	string
 228	fileRevision	1	int
 228	originalFileName	The Emergence of Open Development in a N.pdf	string
 228	submissionId	17	int
 228	username	msmith	string
 229	fileStage	2	int
-229	fileId	78	int
+229	fileId	75	int
 229	fileRevision	1	int
 229	originalFileName	The Emergence of Open Development in a N.pdf	string
 229	submissionId	17	int
@@ -6340,13 +6340,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 229	name	msmith, The Emergence of Open Development in a N.pdf	string
 230	fileStage	2	int
 230	revisedFileId	\N	string
-230	fileId	79	string
+230	fileId	76	string
 230	fileRevision	1	int
 230	originalFileName	Enacting Openness in ICT4D Research.pdf	string
 230	submissionId	17	int
 230	username	msmith	string
 231	fileStage	2	int
-231	fileId	79	int
+231	fileId	76	int
 231	fileRevision	1	int
 231	originalFileName	Enacting Openness in ICT4D Research.pdf	string
 231	submissionId	17	int
@@ -6354,13 +6354,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 231	name	msmith, Enacting Openness in ICT4D Research.pdf	string
 232	fileStage	2	int
 232	revisedFileId	\N	string
-232	fileId	80	string
+232	fileId	77	string
 232	fileRevision	1	int
 232	originalFileName	Transparency and Development: Ethical Co.pdf	string
 232	submissionId	17	int
 232	username	msmith	string
 233	fileStage	2	int
-233	fileId	80	int
+233	fileId	77	int
 233	fileRevision	1	int
 233	originalFileName	Transparency and Development: Ethical Co.pdf	string
 233	submissionId	17	int
@@ -6368,13 +6368,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 233	name	msmith, Transparency and Development: Ethical Co.pdf	string
 234	fileStage	2	int
 234	revisedFileId	\N	string
-234	fileId	81	string
+234	fileId	78	string
 234	fileRevision	1	int
 234	originalFileName	Open Educational Resources: Opportunitie.pdf	string
 234	submissionId	17	int
 234	username	msmith	string
 235	fileStage	2	int
-235	fileId	81	int
+235	fileId	78	int
 235	fileRevision	1	int
 235	originalFileName	Open Educational Resources: Opportunitie.pdf	string
 235	submissionId	17	int
@@ -6727,7 +6727,7 @@ COPY public.new_releases (submission_id, assoc_type, assoc_id) FROM stdin;
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2021-10-21 04:12:11	2021-10-21 04:12:11	Recommendation	<p>Daniel Barnes:<br><br>The recommendation regarding the submission to Public Knowledge Press, "The Information Literacy User’s Guide" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+1	1048586	1	6	2021-11-13 18:42:10	2021-11-13 18:42:10	Recommendation	<p>Daniel Barnes:<br><br>The recommendation regarding the submission to Public Knowledge Press, "The Information Literacy User’s Guide" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
 \.
 
 
@@ -6776,121 +6776,121 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-175	1	0	2	16777236	2021-10-21 04:15:08	2021-10-21 04:15:14	523	8
-253	1	28	2	16777230	2021-10-21 04:21:47	\N	1048585	11
-97	1	22	2	16777235	2021-10-21 04:06:52	\N	1048585	4
-98	1	3	2	16777254	2021-10-21 04:06:53	\N	1048585	4
-177	1	10	3	16777227	2021-10-21 04:15:23	\N	517	8
-78	1	0	2	16777245	2021-10-21 04:05:41	2021-10-21 04:06:59	1048585	4
-143	1	3	2	16777217	2021-10-21 04:11:31	\N	1048585	6
-75	1	3	2	16777217	2021-10-21 04:05:41	\N	1048585	4
-40	1	3	2	16777217	2021-10-21 04:02:17	\N	1048585	2
-270	1	0	2	16777243	2021-10-21 04:23:40	\N	1048585	12
-42	1	0	2	16777243	2021-10-21 04:02:17	\N	1048585	2
-43	1	0	2	16777245	2021-10-21 04:02:17	\N	1048585	2
-254	1	3	2	16777251	2021-10-21 04:21:47	2021-10-21 04:21:52	1048585	11
-327	1	30	2	16777230	2021-10-21 04:27:53	\N	1048585	13
-77	1	0	2	16777243	2021-10-21 04:05:41	\N	1048585	4
-11	1	3	2	16777217	2021-10-21 03:59:29	\N	1048585	1
-47	1	20	2	16777231	2021-10-21 04:02:33	\N	1048585	2
-13	1	0	2	16777243	2021-10-21 03:59:29	\N	1048585	1
-14	1	0	2	16777245	2021-10-21 03:59:29	\N	1048585	1
-46	1	0	2	16777236	2021-10-21 04:02:33	2021-10-21 04:02:39	523	2
-48	1	11	3	16777227	2021-10-21 04:02:48	\N	517	2
-328	1	3	2	16777251	2021-10-21 04:27:53	2021-10-21 04:28:00	1048585	13
-145	1	0	2	16777243	2021-10-21 04:11:31	\N	1048585	6
-16	1	0	2	16777236	2021-10-21 03:59:37	2021-10-21 03:59:41	523	1
-18	1	12	3	16777227	2021-10-21 03:59:47	\N	517	1
-205	1	0	2	16777243	2021-10-21 04:18:28	\N	1048585	9
-51	1	12	3	16777227	2021-10-21 04:02:58	\N	517	3
-127	1	23	2	16777235	2021-10-21 04:08:56	\N	1048585	5
-22	1	19	2	16777230	2021-10-21 03:59:49	\N	1048585	1
-23	1	3	2	16777251	2021-10-21 03:59:49	2021-10-21 03:59:53	1048585	1
-128	1	3	2	16777254	2021-10-21 04:08:56	\N	1048585	5
-106	1	3	2	16777217	2021-10-21 04:08:01	\N	1048585	5
-181	1	25	2	16777230	2021-10-21 04:15:29	\N	1048585	7
-146	1	0	2	16777245	2021-10-21 04:11:31	\N	1048585	6
-81	1	0	2	16777236	2021-10-21 04:05:54	2021-10-21 04:05:59	523	3
-83	1	9	3	16777227	2021-10-21 04:06:07	\N	517	4
-59	1	3	2	16777217	2021-10-21 04:03:48	\N	1048585	3
-61	1	0	2	16777243	2021-10-21 04:03:48	\N	1048585	3
-62	1	0	2	16777245	2021-10-21 04:03:48	\N	1048585	3
-111	1	0	2	16777236	2021-10-21 04:08:11	2021-10-21 04:08:15	523	5
-113	1	8	3	16777227	2021-10-21 04:08:22	\N	517	6
-182	1	3	2	16777251	2021-10-21 04:15:29	2021-10-21 04:15:35	1048585	7
-169	1	3	2	16777217	2021-10-21 04:14:52	\N	1048585	7
-171	1	0	2	16777243	2021-10-21 04:14:52	\N	1048585	7
-172	1	0	2	16777245	2021-10-21 04:14:52	\N	1048585	7
-116	1	0	2	16777236	2021-10-21 04:08:25	2021-10-21 04:08:30	523	6
-119	1	12	3	16777227	2021-10-21 04:08:37	\N	517	7
-268	1	3	2	16777217	2021-10-21 04:23:40	\N	1048585	12
-339	1	3	2	16777217	2021-10-21 04:30:22	\N	1048585	14
-86	1	0	2	16777236	2021-10-21 04:06:12	2021-10-21 04:06:18	523	4
-206	1	0	2	16777245	2021-10-21 04:18:28	\N	1048585	9
-89	1	11	3	16777227	2021-10-21 04:06:27	\N	517	5
-131	1	0	2	16777246	2021-10-21 04:09:45	\N	1048585	5
-184	1	3	2	16777217	2021-10-21 04:16:05	\N	1048585	8
-271	1	0	2	16777245	2021-10-21 04:23:40	\N	1048585	12
-186	1	0	2	16777243	2021-10-21 04:16:05	\N	1048585	8
-187	1	0	2	16777245	2021-10-21 04:16:05	\N	1048585	8
-275	1	29	2	16777229	2021-10-21 04:23:54	\N	1048585	12
-150	1	24	2	16777229	2021-10-21 04:11:44	\N	1048585	6
-274	1	0	2	16777236	2021-10-21 04:23:54	2021-10-21 04:23:59	523	12
-149	1	0	2	16777236	2021-10-21 04:11:44	2021-10-21 04:11:49	523	7
-276	1	7	3	16777227	2021-10-21 04:24:07	\N	517	12
-282	1	9	3	16777227	2021-10-21 04:24:25	\N	517	14
-153	1	3	3	16777249	2021-10-21 04:12:11	\N	1048586	1
-234	1	9	3	16777227	2021-10-21 04:20:48	\N	517	9
-210	1	26	2	16777229	2021-10-21 04:18:43	\N	1048585	9
-209	1	0	2	16777236	2021-10-21 04:18:43	2021-10-21 04:18:49	523	9
-203	1	3	2	16777217	2021-10-21 04:18:28	\N	1048585	9
-227	1	3	2	16777217	2021-10-21 04:20:30	\N	1048585	11
-220	1	3	2	16777217	2021-10-21 04:20:01	\N	1048585	10
-222	1	0	2	16777243	2021-10-21 04:20:01	\N	1048585	10
-223	1	0	2	16777245	2021-10-21 04:20:01	\N	1048585	10
-229	1	0	2	16777243	2021-10-21 04:20:30	\N	1048585	11
-230	1	0	2	16777245	2021-10-21 04:20:30	\N	1048585	11
-247	1	3	2	16777219	2021-10-21 04:21:19	\N	517	10
-232	1	0	2	16777236	2021-10-21 04:20:39	2021-10-21 04:20:42	523	10
-237	1	0	2	16777236	2021-10-21 04:20:51	2021-10-21 04:20:55	523	11
-250	1	3	2	16777219	2021-10-21 04:21:32	\N	517	11
-286	1	3	2	16777219	2021-10-21 04:24:42	\N	517	13
-426	1	34	2	16777229	2021-10-21 04:39:38	\N	1048585	17
-425	1	0	2	16777236	2021-10-21 04:39:38	2021-10-21 04:39:45	523	19
-427	1	7	3	16777227	2021-10-21 04:39:55	\N	517	24
-372	1	0	2	16777245	2021-10-21 04:34:22	\N	1048585	15
-345	1	0	2	16777236	2021-10-21 04:30:37	2021-10-21 04:30:43	523	15
-347	1	7	3	16777227	2021-10-21 04:30:51	\N	517	19
-297	1	3	2	16777217	2021-10-21 04:26:04	\N	1048585	13
-299	1	0	2	16777243	2021-10-21 04:26:04	\N	1048585	13
-300	1	0	2	16777245	2021-10-21 04:26:04	\N	1048585	13
-430	1	8	3	16777227	2021-10-21 04:40:05	\N	517	25
-303	1	0	2	16777236	2021-10-21 04:26:17	2021-10-21 04:26:22	523	13
-305	1	8	3	16777227	2021-10-21 04:26:29	\N	517	15
-375	1	32	2	16777231	2021-10-21 04:34:33	\N	1048585	15
-350	1	0	2	16777236	2021-10-21 04:30:57	2021-10-21 04:31:03	523	16
-353	1	11	3	16777227	2021-10-21 04:31:12	\N	517	20
-374	1	0	2	16777236	2021-10-21 04:34:33	2021-10-21 04:34:36	523	17
-308	1	0	2	16777236	2021-10-21 04:26:33	2021-10-21 04:26:38	523	14
-314	1	11	3	16777227	2021-10-21 04:26:55	\N	517	17
-361	1	31	2	16777235	2021-10-21 04:31:38	\N	1048585	14
-362	1	3	2	16777254	2021-10-21 04:31:38	\N	1048585	14
-419	1	3	2	16777217	2021-10-21 04:39:19	\N	1048585	17
-421	1	0	2	16777243	2021-10-21 04:39:19	\N	1048585	17
-321	1	3	2	16777219	2021-10-21 04:27:18	\N	517	16
-422	1	0	2	16777245	2021-10-21 04:39:19	\N	1048585	17
-365	1	0	2	16777246	2021-10-21 04:33:46	\N	1048585	14
-324	1	3	2	16777219	2021-10-21 04:27:33	\N	517	18
-381	1	3	2	16777217	2021-10-21 04:35:20	\N	1048585	16
-369	1	3	2	16777217	2021-10-21 04:34:22	\N	1048585	15
-371	1	0	2	16777243	2021-10-21 04:34:22	\N	1048585	15
-383	1	0	2	16777243	2021-10-21 04:35:20	\N	1048585	16
-384	1	0	2	16777245	2021-10-21 04:35:20	\N	1048585	16
-387	1	33	2	16777231	2021-10-21 04:35:32	\N	1048585	16
-386	1	0	2	16777236	2021-10-21 04:35:32	2021-10-21 04:35:36	523	18
-391	1	11	3	16777227	2021-10-21 04:35:48	\N	517	22
-394	1	12	3	16777227	2021-10-21 04:35:55	\N	517	23
-398	1	3	2	16777219	2021-10-21 04:36:08	\N	517	21
+77	1	0	2	16777243	2021-11-13 18:36:02	\N	1048585	4
+40	1	3	2	16777217	2021-11-13 18:32:56	\N	1048585	2
+175	1	0	2	16777236	2021-11-13 18:44:55	2021-11-13 18:45:01	523	8
+42	1	0	2	16777243	2021-11-13 18:32:56	\N	1048585	2
+43	1	0	2	16777245	2021-11-13 18:32:56	\N	1048585	2
+177	1	10	3	16777227	2021-11-13 18:45:09	\N	517	8
+270	1	0	2	16777243	2021-11-13 18:52:54	\N	1048585	12
+327	1	30	2	16777230	2021-11-13 18:56:58	\N	1048585	13
+150	1	24	2	16777229	2021-11-13 18:41:44	\N	1048585	6
+47	1	20	2	16777231	2021-11-13 18:33:09	\N	1048585	2
+46	1	0	2	16777236	2021-11-13 18:33:09	2021-11-13 18:33:14	523	2
+48	1	11	3	16777227	2021-11-13 18:33:22	\N	517	2
+203	1	3	2	16777217	2021-11-13 18:48:00	\N	1048585	9
+268	1	3	2	16777217	2021-11-13 18:52:54	\N	1048585	12
+11	1	3	2	16777217	2021-11-13 18:30:20	\N	1048585	1
+149	1	0	2	16777236	2021-11-13 18:41:43	2021-11-13 18:41:48	523	7
+13	1	0	2	16777243	2021-11-13 18:30:20	\N	1048585	1
+14	1	0	2	16777245	2021-11-13 18:30:20	\N	1048585	1
+51	1	12	3	16777227	2021-11-13 18:33:31	\N	517	3
+106	1	3	2	16777217	2021-11-13 18:38:13	\N	1048585	5
+181	1	25	2	16777230	2021-11-13 18:45:14	\N	1048585	7
+16	1	0	2	16777236	2021-11-13 18:30:28	2021-11-13 18:30:31	523	1
+18	1	12	3	16777227	2021-11-13 18:30:37	\N	517	1
+271	1	0	2	16777245	2021-11-13 18:52:54	\N	1048585	12
+81	1	0	2	16777236	2021-11-13 18:36:14	2021-11-13 18:36:19	523	3
+182	1	3	2	16777251	2021-11-13 18:45:14	2021-11-13 18:45:20	1048585	7
+83	1	9	3	16777227	2021-11-13 18:36:27	\N	517	4
+22	1	19	2	16777230	2021-11-13 18:30:39	\N	1048585	1
+131	1	0	2	16777246	2021-11-13 18:39:49	\N	1048585	5
+23	1	3	2	16777251	2021-11-13 18:30:40	2021-11-13 18:30:43	1048585	1
+328	1	3	2	16777251	2021-11-13 18:56:58	2021-11-13 18:57:03	1048585	13
+111	1	0	2	16777236	2021-11-13 18:38:22	2021-11-13 18:38:27	523	5
+113	1	8	3	16777227	2021-11-13 18:38:33	\N	517	6
+59	1	3	2	16777217	2021-11-13 18:34:18	\N	1048585	3
+184	1	3	2	16777217	2021-11-13 18:45:48	\N	1048585	8
+61	1	0	2	16777243	2021-11-13 18:34:19	\N	1048585	3
+62	1	0	2	16777245	2021-11-13 18:34:19	\N	1048585	3
+186	1	0	2	16777243	2021-11-13 18:45:48	\N	1048585	8
+187	1	0	2	16777245	2021-11-13 18:45:48	\N	1048585	8
+275	1	29	2	16777229	2021-11-13 18:53:08	\N	1048585	12
+205	1	0	2	16777243	2021-11-13 18:48:00	\N	1048585	9
+274	1	0	2	16777236	2021-11-13 18:53:07	2021-11-13 18:53:13	523	12
+116	1	0	2	16777236	2021-11-13 18:38:36	2021-11-13 18:38:40	523	6
+119	1	12	3	16777227	2021-11-13 18:38:47	\N	517	7
+86	1	0	2	16777236	2021-11-13 18:36:31	2021-11-13 18:36:37	523	4
+276	1	7	3	16777227	2021-11-13 18:53:21	\N	517	12
+89	1	11	3	16777227	2021-11-13 18:36:45	\N	517	5
+206	1	0	2	16777245	2021-11-13 18:48:00	\N	1048585	9
+282	1	9	3	16777227	2021-11-13 18:53:38	\N	517	14
+153	1	3	3	16777249	2021-11-13 18:42:10	\N	1048586	1
+127	1	23	2	16777235	2021-11-13 18:39:05	\N	1048585	5
+75	1	3	2	16777217	2021-11-13 18:36:02	\N	1048585	4
+128	1	3	2	16777254	2021-11-13 18:39:05	\N	1048585	5
+339	1	3	2	16777217	2021-11-13 18:59:20	\N	1048585	14
+97	1	22	2	16777235	2021-11-13 18:37:09	\N	1048585	4
+98	1	3	2	16777254	2021-11-13 18:37:09	\N	1048585	4
+78	1	0	2	16777245	2021-11-13 18:36:02	2021-11-13 18:37:14	1048585	4
+210	1	26	2	16777229	2021-11-13 18:48:14	\N	1048585	9
+209	1	0	2	16777236	2021-11-13 18:48:13	2021-11-13 18:48:19	523	9
+143	1	3	2	16777217	2021-11-13 18:41:31	\N	1048585	6
+145	1	0	2	16777243	2021-11-13 18:41:31	\N	1048585	6
+146	1	0	2	16777245	2021-11-13 18:41:31	\N	1048585	6
+232	1	0	2	16777236	2021-11-13 18:50:05	2021-11-13 18:50:08	523	10
+169	1	3	2	16777217	2021-11-13 18:44:41	\N	1048585	7
+227	1	3	2	16777217	2021-11-13 18:49:56	\N	1048585	11
+171	1	0	2	16777243	2021-11-13 18:44:41	\N	1048585	7
+220	1	3	2	16777217	2021-11-13 18:49:27	\N	1048585	10
+172	1	0	2	16777245	2021-11-13 18:44:41	\N	1048585	7
+222	1	0	2	16777243	2021-11-13 18:49:28	\N	1048585	10
+223	1	0	2	16777245	2021-11-13 18:49:28	\N	1048585	10
+234	1	9	3	16777227	2021-11-13 18:50:13	\N	517	9
+229	1	0	2	16777243	2021-11-13 18:49:56	\N	1048585	11
+230	1	0	2	16777245	2021-11-13 18:49:56	\N	1048585	11
+237	1	0	2	16777236	2021-11-13 18:50:16	2021-11-13 18:50:19	523	11
+247	1	3	2	16777219	2021-11-13 18:50:42	\N	517	10
+253	1	28	2	16777230	2021-11-13 18:51:06	\N	1048585	11
+250	1	3	2	16777219	2021-11-13 18:50:53	\N	517	11
+254	1	3	2	16777251	2021-11-13 18:51:06	2021-11-13 18:51:11	1048585	11
+398	1	3	2	16777219	2021-11-13 19:04:45	\N	517	21
+421	1	0	2	16777243	2021-11-13 19:07:48	\N	1048585	17
+286	1	3	2	16777219	2021-11-13 18:53:54	\N	517	13
+422	1	0	2	16777245	2021-11-13 19:07:48	\N	1048585	17
+372	1	0	2	16777245	2021-11-13 19:03:04	\N	1048585	15
+426	1	34	2	16777229	2021-11-13 19:08:05	\N	1048585	17
+345	1	0	2	16777236	2021-11-13 18:59:34	2021-11-13 18:59:39	523	15
+347	1	7	3	16777227	2021-11-13 18:59:47	\N	517	19
+297	1	3	2	16777217	2021-11-13 18:55:13	\N	1048585	13
+299	1	0	2	16777243	2021-11-13 18:55:14	\N	1048585	13
+300	1	0	2	16777245	2021-11-13 18:55:14	\N	1048585	13
+425	1	0	2	16777236	2021-11-13 19:08:05	2021-11-13 19:08:11	523	19
+427	1	7	3	16777227	2021-11-13 19:08:21	\N	517	24
+303	1	0	2	16777236	2021-11-13 18:55:26	2021-11-13 18:55:30	523	13
+305	1	8	3	16777227	2021-11-13 18:55:37	\N	517	15
+375	1	32	2	16777231	2021-11-13 19:03:13	\N	1048585	15
+350	1	0	2	16777236	2021-11-13 18:59:52	2021-11-13 18:59:58	523	16
+353	1	11	3	16777227	2021-11-13 19:00:06	\N	517	20
+374	1	0	2	16777236	2021-11-13 19:03:13	2021-11-13 19:03:17	523	17
+308	1	0	2	16777236	2021-11-13 18:55:41	2021-11-13 18:55:46	523	14
+314	1	11	3	16777227	2021-11-13 18:56:01	\N	517	17
+430	1	8	3	16777227	2021-11-13 19:08:31	\N	517	25
+361	1	31	2	16777235	2021-11-13 19:00:31	\N	1048585	14
+362	1	3	2	16777254	2021-11-13 19:00:31	\N	1048585	14
+321	1	3	2	16777219	2021-11-13 18:56:24	\N	517	16
+419	1	3	2	16777217	2021-11-13 19:07:48	\N	1048585	17
+365	1	0	2	16777246	2021-11-13 19:02:28	\N	1048585	14
+324	1	3	2	16777219	2021-11-13 18:56:38	\N	517	18
+381	1	3	2	16777217	2021-11-13 19:04:00	\N	1048585	16
+369	1	3	2	16777217	2021-11-13 19:03:03	\N	1048585	15
+371	1	0	2	16777243	2021-11-13 19:03:04	\N	1048585	15
+383	1	0	2	16777243	2021-11-13 19:04:00	\N	1048585	16
+384	1	0	2	16777245	2021-11-13 19:04:00	\N	1048585	16
+387	1	33	2	16777231	2021-11-13 19:04:10	\N	1048585	16
+386	1	0	2	16777236	2021-11-13 19:04:10	2021-11-13 19:04:14	523	18
+391	1	11	3	16777227	2021-11-13 19:04:26	\N	517	22
+394	1	12	3	16777227	2021-11-13 19:04:33	\N	517	23
 \.
 
 
@@ -6948,7 +6948,7 @@ webfeedplugin	1	displayItems	1	bool
 dublincoremetaplugin	1	enabled	1	bool
 pdfjsviewerplugin	1	enabled	1	bool
 googlescholarplugin	1	enabled	1	bool
-usageeventplugin	0	uniqueSiteId	6170e48957713	string
+usageeventplugin	0	uniqueSiteId	6190032e5f7b5	string
 defaultthemeplugin	1	typography	notoSans	string
 defaultthemeplugin	1	useHomepageImageAsHeader	false	string
 defaultthemeplugin	1	baseColour	#1E6292	string
@@ -7219,23 +7219,23 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, date_published, last_modified, locale, primary_contact_id, publication_date_type, publication_type, seq, series_id, series_position, submission_id, status, url_path, version) FROM stdin;
-1	\N	2021-10-21 03:59:27	en_US	1	pub	publication	0	\N	\N	1	1	\N	1
-2	\N	2021-10-21 04:02:14	en_US	2	pub	publication	0	\N	\N	2	1	\N	1
-3	\N	2021-10-21 04:03:46	en_US	10	pub	publication	0	\N	\N	3	1	\N	1
-4	\N	2021-10-21 04:05:38	en_US	11	pub	publication	0	\N	\N	4	1	\N	1
-5	2021-10-21	2021-10-21 04:09:45	en_US	15	pub	publication	0	\N	\N	5	3	\N	1
-6	\N	2021-10-21 04:11:29	en_US	16	pub	publication	0	\N	\N	6	1	\N	1
-7	\N	2021-10-21 04:14:49	en_US	20	pub	publication	0	\N	\N	7	1	\N	1
-8	\N	2021-10-21 04:16:04	en_US	25	pub	publication	0	\N	\N	8	1	\N	1
-9	\N	2021-10-21 04:18:25	en_US	26	pub	publication	0	\N	\N	9	1	\N	1
-10	\N	2021-10-21 04:19:59	en_US	31	pub	publication	0	\N	\N	10	1	\N	1
-11	\N	2021-10-21 04:20:29	en_US	32	pub	publication	0	\N	\N	11	1	\N	1
-12	\N	2021-10-21 04:23:38	en_US	33	pub	publication	0	\N	\N	12	1	\N	1
-13	\N	2021-10-21 04:26:02	en_US	41	pub	publication	0	\N	\N	13	1	\N	1
-14	2021-10-21	2021-10-21 04:33:45	en_US	45	pub	publication	0	\N	\N	14	3	\N	1
-15	\N	2021-10-21 04:34:21	en_US	48	pub	publication	0	\N	\N	15	1	\N	1
-16	\N	2021-10-21 04:35:19	en_US	49	pub	publication	0	\N	\N	16	1	\N	1
-17	\N	2021-10-21 04:39:16	en_US	50	pub	publication	0	\N	\N	17	1	\N	1
+1	\N	2021-11-13 18:30:18	en_US	1	pub	publication	0	\N	\N	1	1	\N	1
+2	\N	2021-11-13 18:32:54	en_US	2	pub	publication	0	\N	\N	2	1	\N	1
+3	\N	2021-11-13 18:34:17	en_US	10	pub	publication	0	\N	\N	3	1	\N	1
+4	\N	2021-11-13 18:35:59	en_US	11	pub	publication	0	\N	\N	4	1	\N	1
+5	2021-11-13	2021-11-13 18:39:49	en_US	15	pub	publication	0	\N	\N	5	3	\N	1
+6	\N	2021-11-13 18:41:28	en_US	16	pub	publication	0	\N	\N	6	1	\N	1
+7	\N	2021-11-13 18:44:38	en_US	20	pub	publication	0	\N	\N	7	1	\N	1
+8	\N	2021-11-13 18:45:47	en_US	25	pub	publication	0	\N	\N	8	1	\N	1
+9	\N	2021-11-13 18:47:57	en_US	26	pub	publication	0	\N	\N	9	1	\N	1
+10	\N	2021-11-13 18:49:26	en_US	31	pub	publication	0	\N	\N	10	1	\N	1
+11	\N	2021-11-13 18:49:55	en_US	32	pub	publication	0	\N	\N	11	1	\N	1
+12	\N	2021-11-13 18:52:51	en_US	33	pub	publication	0	\N	\N	12	1	\N	1
+13	\N	2021-11-13 18:55:12	en_US	41	pub	publication	0	\N	\N	13	1	\N	1
+14	2021-11-13	2021-11-13 19:02:28	en_US	45	pub	publication	0	\N	\N	14	3	\N	1
+15	\N	2021-11-13 19:03:02	en_US	48	pub	publication	0	\N	\N	15	1	\N	1
+16	\N	2021-11-13 19:03:58	en_US	49	pub	publication	0	\N	\N	16	1	\N	1
+17	\N	2021-11-13 19:07:45	en_US	50	pub	publication	0	\N	\N	17	1	\N	1
 \.
 
 
@@ -7278,31 +7278,31 @@ COPY public.representatives (representative_id, submission_id, role, representat
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, unconsidered) FROM stdin;
-21	16	10	\N	0	2021-10-21 04:35:42	2021-10-21 04:35:42	2021-10-21 04:36:03	2021-10-21 04:36:08	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:36:08	0	0	0	\N	\N	\N	0	18	3	2	1	4	0	0
-1	1	12	\N	\N	2021-10-21 03:59:47	2021-10-21 03:59:47	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 03:59:47	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-15	13	8	\N	\N	2021-10-21 04:26:29	2021-10-21 04:26:29	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:26:29	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	0
-2	2	11	\N	\N	2021-10-21 04:02:48	2021-10-21 04:02:48	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:02:48	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
-3	2	12	\N	\N	2021-10-21 04:02:58	2021-10-21 04:02:58	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:02:58	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
-4	4	9	\N	\N	2021-10-21 04:06:07	2021-10-21 04:06:07	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:06:07	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	0
-5	4	11	\N	\N	2021-10-21 04:06:27	2021-10-21 04:06:27	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:06:27	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-6	5	8	\N	\N	2021-10-21 04:08:22	2021-10-21 04:08:22	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:08:22	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	0
-24	17	7	\N	\N	2021-10-21 04:39:55	2021-10-21 04:39:55	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:39:55	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
-7	5	12	\N	\N	2021-10-21 04:08:37	2021-10-21 04:08:37	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:08:37	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-17	13	11	\N	\N	2021-10-21 04:26:55	2021-10-21 04:26:55	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:26:55	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	0
-8	7	10	\N	\N	2021-10-21 04:15:23	2021-10-21 04:15:23	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:15:23	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	0
-9	11	9	\N	\N	2021-10-21 04:20:48	2021-10-21 04:20:48	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:20:48	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	0
-25	17	8	\N	\N	2021-10-21 04:40:05	2021-10-21 04:40:05	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:40:05	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
-16	13	10	\N	0	2021-10-21 04:26:46	2021-10-21 04:26:46	2021-10-21 04:27:13	2021-10-21 04:27:18	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:27:18	0	0	0	\N	\N	\N	0	14	3	2	1	4	0	0
-10	11	10	\N	0	2021-10-21 04:21:01	2021-10-21 04:21:01	2021-10-21 04:21:15	2021-10-21 04:21:19	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:21:19	0	0	0	\N	\N	\N	0	11	3	2	1	4	0	0
-11	11	12	\N	0	2021-10-21 04:21:07	2021-10-21 04:21:07	2021-10-21 04:21:27	2021-10-21 04:21:32	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:21:32	0	0	0	\N	\N	\N	0	11	3	2	1	4	0	0
-12	12	7	\N	\N	2021-10-21 04:24:07	2021-10-21 04:24:07	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:24:07	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
-18	13	12	\N	0	2021-10-21 04:27:03	2021-10-21 04:27:03	2021-10-21 04:27:27	2021-10-21 04:27:33	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:27:33	0	0	0	\N	\N	\N	0	14	3	2	1	4	0	0
-14	12	9	\N	\N	2021-10-21 04:24:25	2021-10-21 04:24:26	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:24:26	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
-19	14	7	\N	\N	2021-10-21 04:30:51	2021-10-21 04:30:51	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:30:51	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	0
-13	12	8	\N	0	2021-10-21 04:24:16	2021-10-21 04:24:16	2021-10-21 04:24:36	2021-10-21 04:24:42	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:24:42	0	0	0	\N	\N	\N	0	12	2	2	1	4	0	0
-20	14	11	\N	\N	2021-10-21 04:31:12	2021-10-21 04:31:12	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:31:12	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	0
-22	16	11	\N	\N	2021-10-21 04:35:48	2021-10-21 04:35:48	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:35:48	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
-23	16	12	\N	\N	2021-10-21 04:35:55	2021-10-21 04:35:55	\N	\N	\N	2021-11-18 00:00:00	2021-11-18 00:00:00	2021-10-21 04:35:55	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
+21	16	10	\N	0	2021-11-13 19:04:20	2021-11-13 19:04:20	2021-11-13 19:04:41	2021-11-13 19:04:45	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 19:04:45	0	0	0	\N	\N	\N	0	18	3	2	1	4	0	0
+1	1	12	\N	\N	2021-11-13 18:30:37	2021-11-13 18:30:37	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:30:37	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+15	13	8	\N	\N	2021-11-13 18:55:37	2021-11-13 18:55:37	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:55:37	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	0
+2	2	11	\N	\N	2021-11-13 18:33:22	2021-11-13 18:33:22	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:33:22	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
+3	2	12	\N	\N	2021-11-13 18:33:31	2021-11-13 18:33:31	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:33:31	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
+4	4	9	\N	\N	2021-11-13 18:36:27	2021-11-13 18:36:27	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:36:27	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	0
+5	4	11	\N	\N	2021-11-13 18:36:45	2021-11-13 18:36:45	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:36:45	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+6	5	8	\N	\N	2021-11-13 18:38:33	2021-11-13 18:38:33	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:38:33	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	0
+24	17	7	\N	\N	2021-11-13 19:08:21	2021-11-13 19:08:21	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 19:08:21	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
+7	5	12	\N	\N	2021-11-13 18:38:47	2021-11-13 18:38:47	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:38:47	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+17	13	11	\N	\N	2021-11-13 18:56:01	2021-11-13 18:56:01	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:56:01	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	0
+8	7	10	\N	\N	2021-11-13 18:45:09	2021-11-13 18:45:09	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:45:09	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	0
+9	11	9	\N	\N	2021-11-13 18:50:13	2021-11-13 18:50:13	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:50:13	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	0
+25	17	8	\N	\N	2021-11-13 19:08:31	2021-11-13 19:08:31	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 19:08:31	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
+16	13	10	\N	0	2021-11-13 18:55:53	2021-11-13 18:55:53	2021-11-13 18:56:19	2021-11-13 18:56:25	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:56:25	0	0	0	\N	\N	\N	0	14	3	2	1	4	0	0
+10	11	10	\N	0	2021-11-13 18:50:25	2021-11-13 18:50:25	2021-11-13 18:50:38	2021-11-13 18:50:42	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:50:42	0	0	0	\N	\N	\N	0	11	3	2	1	4	0	0
+11	11	12	\N	0	2021-11-13 18:50:31	2021-11-13 18:50:31	2021-11-13 18:50:49	2021-11-13 18:50:53	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:50:53	0	0	0	\N	\N	\N	0	11	3	2	1	4	0	0
+12	12	7	\N	\N	2021-11-13 18:53:21	2021-11-13 18:53:21	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:53:21	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
+18	13	12	\N	0	2021-11-13 18:56:09	2021-11-13 18:56:09	2021-11-13 18:56:33	2021-11-13 18:56:38	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:56:38	0	0	0	\N	\N	\N	0	14	3	2	1	4	0	0
+14	12	9	\N	\N	2021-11-13 18:53:38	2021-11-13 18:53:38	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:53:38	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
+19	14	7	\N	\N	2021-11-13 18:59:47	2021-11-13 18:59:47	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:59:47	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	0
+13	12	8	\N	0	2021-11-13 18:53:29	2021-11-13 18:53:29	2021-11-13 18:53:48	2021-11-13 18:53:54	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 18:53:54	0	0	0	\N	\N	\N	0	12	2	2	1	4	0	0
+20	14	11	\N	\N	2021-11-13 19:00:06	2021-11-13 19:00:06	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 19:00:06	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	0
+22	16	11	\N	\N	2021-11-13 19:04:26	2021-11-13 19:04:26	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 19:04:26	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
+23	16	12	\N	\N	2021-11-13 19:04:33	2021-11-13 19:04:33	\N	\N	\N	2021-12-11 00:00:00	2021-12-11 00:00:00	2021-11-13 19:04:33	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
 \.
 
 
@@ -7311,46 +7311,37 @@ COPY public.review_assignments (review_id, submission_id, reviewer_id, competing
 --
 
 COPY public.review_files (review_id, file_id) FROM stdin;
-1	2
-2	7
-2	8
-2	9
-2	10
-3	7
-3	8
-3	9
-3	10
-6	17
-8	32
-8	33
-8	34
-8	35
-8	36
-9	50
-12	54
-12	55
-12	56
-13	54
-13	55
-13	56
-14	54
-14	55
-14	56
-21	75
-22	75
-23	75
+6	12
+8	27
+8	28
+8	29
+8	30
+8	31
+9	45
+12	49
+12	50
+12	51
+13	49
+13	50
+13	51
+14	49
+14	50
+14	51
+15	55
+15	56
+15	57
+24	79
+24	80
+24	81
 24	82
 24	83
 24	84
-24	85
-24	86
-24	87
+25	79
+25	80
+25	81
 25	82
 25	83
 25	84
-25	85
-25	86
-25	87
 \.
 
 
@@ -7399,38 +7390,35 @@ COPY public.review_forms (review_form_id, assoc_type, assoc_id, seq, is_active) 
 --
 
 COPY public.review_round_files (submission_id, review_round_id, stage_id, file_id, revision) FROM stdin;
-1	1	3	2	1
-2	2	3	7	1
-2	2	3	8	1
-2	2	3	9	1
-2	2	3	10	1
-5	5	2	17	1
-6	7	2	23	1
-6	7	2	24	1
-6	7	2	25	1
-6	7	2	26	1
-7	8	3	32	1
-7	8	3	33	1
-7	8	3	34	1
-7	8	3	35	1
-7	8	3	36	1
-9	9	2	43	1
-9	9	2	44	1
-9	9	2	45	1
-9	9	2	46	1
-9	9	2	47	1
-11	10	2	50	1
-12	12	2	54	1
-12	12	2	55	1
-12	12	2	56	1
-15	17	3	73	1
-16	18	3	75	1
+5	5	2	12	1
+6	7	2	18	1
+6	7	2	19	1
+6	7	2	20	1
+6	7	2	21	1
+7	8	3	27	1
+7	8	3	28	1
+7	8	3	29	1
+7	8	3	30	1
+7	8	3	31	1
+9	9	2	38	1
+9	9	2	39	1
+9	9	2	40	1
+9	9	2	41	1
+9	9	2	42	1
+11	10	2	45	1
+12	12	2	49	1
+12	12	2	50	1
+12	12	2	51	1
+13	13	2	55	1
+13	13	2	56	1
+13	13	2	57	1
+15	17	3	71	1
+17	19	2	79	1
+17	19	2	80	1
+17	19	2	81	1
 17	19	2	82	1
 17	19	2	83	1
 17	19	2	84	1
-17	19	2	85	1
-17	19	2	86	1
-17	19	2	87	1
 \.
 
 
@@ -7474,10 +7462,10 @@ COPY public.sales_rights (sales_rights_id, publication_format_id, type, row_sett
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2021-10-21 03:54:38
-lib.pkp.classes.task.ReviewReminder	2021-10-21 03:54:38
-lib.pkp.classes.task.PublishSubmissions	2021-10-21 03:54:38
-lib.pkp.classes.task.StatisticsReport	2021-10-21 03:54:38
+plugins.generic.usageStats.UsageStatsLoader	2021-11-13 18:25:39
+lib.pkp.classes.task.ReviewReminder	2021-11-13 18:25:39
+lib.pkp.classes.task.PublishSubmissions	2021-11-13 18:25:39
+lib.pkp.classes.task.StatisticsReport	2021-11-13 18:25:39
 \.
 
 
@@ -7570,31 +7558,31 @@ COPY public.series_settings (series_id, locale, setting_name, setting_value, set
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-ktd64tfof6r9u9ajagfevem6jg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634788476	1634788476	0		localhost
-kkj4egms0rutd589om8jj4o3ob	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634789549	1634789746	0	csrf|a:2:{s:9:"timestamp";i:1634789746;s:5:"token";s:32:"9740d936af822fabdbb0b42f4263cc57";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-goa46s1n8lhpjsc1uji7nlu4bv	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634788478	1634788488	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634788488;s:5:"token";s:32:"0e45dbe18b0758bc89290564aae02b56";}	localhost
-a2t68itlan01i9d3dfgnctc3mf	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634789749	1634789765	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1634789765;s:5:"token";s:32:"256691986bf4349b4249c91a2cd50c63";}	localhost
-t87snmt51eobluu2b2evbgfkej	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634788489	1634788501	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634788501;s:5:"token";s:32:"1938c75bb5ceb22c0c0cde80d609368d";}	localhost
-3j18paog4uhusl6bj3mf2tind3	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634788502	1634788508	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634788508;s:5:"token";s:32:"e6410477bcb3344013e7336ecb680d28";}	localhost
-k79j6bbanjlna8sp2ltictiv2t	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634788516	1634788520	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634788520;s:5:"token";s:32:"d134d4467ef634b0cce4e3a0eb52ccac";}	localhost
-l8u2aacoq9jq8s7o8a88i37bpf	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634789767	1634789930	0	csrf|a:2:{s:9:"timestamp";i:1634789930;s:5:"token";s:32:"08f2c458470758bea034d76c94df18a5";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-4mjjurncfsagf5mnnuqemc6ukk	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634788508	1634788515	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634788516;s:5:"token";s:32:"452b882258aa8cf50e4ca3bea1b8e686";}	localhost
-28mtfo36j6i2qtq183g8j7ad63	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634789933	1634790001	0	csrf|a:2:{s:9:"timestamp";i:1634790001;s:5:"token";s:32:"73358be4e829c12d18da23d8e1726188";}username|s:7:"jbrower";userId|s:2:"27";	localhost
-90s904blr00v2781n4904o8mht	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634788522	1634788710	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1634788710;s:5:"token";s:32:"8d7e8dd8a0b27765ff6c6405a9fde66c";}	localhost
-2qkd06gop6tp9vgp23dd7lr59j	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634788712	1634788736	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1634788736;s:5:"token";s:32:"7d01e432761fb55547c79715e7815565";}	localhost
-saqk0ebcu8pff0od1vdaopvh53	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634789030	1634789229	0	csrf|a:2:{s:9:"timestamp";i:1634789229;s:5:"token";s:32:"098e0b6524d6ce780b728df4bc0d8ceb";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-3ncovrt0cglmbco1tvakkrgs30	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634788801	1634788979	0	csrf|a:2:{s:9:"timestamp";i:1634788979;s:5:"token";s:32:"d22c4cc5efa250357f76aa52289d5ffb";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-p1vecipteihtmae0l3fmkdjj3d	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634788737	1634788799	0	csrf|a:2:{s:9:"timestamp";i:1634788799;s:5:"token";s:32:"fef2def5ec55cdcdf26cca6b24b22b72";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-lgv67n1pih7o952b1po701ris6	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634788982	1634789028	0	csrf|a:2:{s:9:"timestamp";i:1634789028;s:5:"token";s:32:"426bdc484e92d3865e28b2a4821cf74f";}username|s:10:"bbarnetson";userId|s:2:"21";	localhost
-kq0et5d5dl21335ov8uu5h9d2v	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634790004	1634790112	0	csrf|a:2:{s:9:"timestamp";i:1634790112;s:5:"token";s:32:"013901a6c71325cb11d0331594e35ce5";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-73172hetm7jes6ii4ar14r7a0o	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634789232	1634789386	0	csrf|a:2:{s:9:"timestamp";i:1634789385;s:5:"token";s:32:"5d712f929f19eebaac8e20bd57cb920c";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-cs79ekvb0d3mv6tvsf9je5p7ch	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634790115	1634790283	0	csrf|a:2:{s:9:"timestamp";i:1634790283;s:5:"token";s:32:"e0bf66a4d878df9a37ead8d9a5c5b4c8";}username|s:7:"phudson";	localhost
-jnhvtcav8arbvsjmc1lksj76u2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634789388	1634789546	0	csrf|a:2:{s:9:"timestamp";i:1634789546;s:5:"token";s:32:"33402ab26a7a910609a7a03d72ebaf0b";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-kqg049s0pn37glreiagtls989p	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634790286	1634790481	0	csrf|a:2:{s:9:"timestamp";i:1634790481;s:5:"token";s:32:"4a3aa003cd15edba4cca6f1bae7d65ea";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-v8fqlo7k1v1m9r9lm9o1krg9ru	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634790484	1634790828	0	csrf|a:2:{s:9:"timestamp";i:1634790825;s:5:"token";s:32:"55c169c29b6a0f886e6f881008ec52e6";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-0en0jam0s6520fgt7vj2nav9jt	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634790971	1634791207	0	csrf|a:2:{s:9:"timestamp";i:1634791207;s:5:"token";s:32:"c278101d68cbc6b29feb600868fc84e5";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-vi3fm92uso4f1fsi2i7qgn511g	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634790830	1634790877	0	csrf|a:2:{s:9:"timestamp";i:1634790877;s:5:"token";s:32:"bea8d094184c6595c0471680bef8b659";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-o7ugi19jhjiv64aa9tdp3bqqj1	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1634790879	1634790969	0	csrf|a:2:{s:9:"timestamp";i:1634790969;s:5:"token";s:32:"70ee4af3b58c8a568a8f693f1de9df58";}username|s:8:"agallego";	localhost
+sv0laev73dn8gt88tifprc6hop	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636827937	1636827937	0		localhost
+v2oiv78t7629rujmam5etiva2m	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636828947	1636829130	0	csrf|a:2:{s:9:"timestamp";i:1636829130;s:5:"token";s:32:"b0577e65473b52f1d2572f3d3a0c52e0";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+9uk61icdo4sr9lsfohpjiubu4n	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636827939	1636827949	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636827949;s:5:"token";s:32:"4d90de3be31ec0c913c1a29793df66c4";}	localhost
+7l7tuv86vcgieor2fhgfhn9mri	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636827950	1636827962	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636827962;s:5:"token";s:32:"dc32fe629c4d441e3f547dab76fee8dd";}	localhost
+1u5pu219udms87r1dv3dsq8dc4	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636828164	1636828187	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636828187;s:5:"token";s:32:"849c31b0868d9aa76969a94bb93c18d5";}	localhost
+v6h8k5ivljq099t80ocbi928b3	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636827963	1636827968	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636827968;s:5:"token";s:32:"9478e3ebb660072aab962bd288b48e96";}	localhost
+5a5fhs6epvsn8ivj3ie93vgj3g	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636829132	1636829148	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1636829148;s:5:"token";s:32:"ebba8bdfb3fc5959755d46c9e8662391";}	localhost
+1okmgtvol9cpsqdtok3j8oq3or	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636827976	1636827980	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636827980;s:5:"token";s:32:"2fdce4f7bb7798a342ae5467a26bf105";}	localhost
+7b7h163d2e4sncgmq5at381rkc	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636829149	1636829300	0	csrf|a:2:{s:9:"timestamp";i:1636829300;s:5:"token";s:32:"b7c550b9fda3629fc70c08472fc5755d";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+6ouk8rnaq6f7dcvrcbf0u2cusc	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636827969	1636827976	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636827976;s:5:"token";s:32:"1f29c59c4d29b643334ca8c1e23433f1";}	localhost
+03uca34a5qtkjefa1vja28mm6l	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636829302	1636829368	0	csrf|a:2:{s:9:"timestamp";i:1636829368;s:5:"token";s:32:"354b9be7199d0913e3bb11ab62f44c53";}username|s:7:"jbrower";userId|s:2:"27";	localhost
+eanlilhida1bv3oc3gosj4u3kt	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636827982	1636828162	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1636828161;s:5:"token";s:32:"f9e3f75bbed81a7e933d5cd0e9ef7f8e";}	localhost
+6nv5lf62p3vbr4p30hahl0sivh	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636828188	1636828249	0	csrf|a:2:{s:9:"timestamp";i:1636828249;s:5:"token";s:32:"e2fc6fd5c7292e4f846233fa76068303";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+0nlo4229kj4vi8on4jncl6avc2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636828250	1636828412	0	csrf|a:2:{s:9:"timestamp";i:1636828412;s:5:"token";s:32:"758ea31d653db9e20a7e6524bdf29de6";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+tsrtjsk6kvufrekob65a3mn433	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636829370	1636829472	0	csrf|a:2:{s:9:"timestamp";i:1636829472;s:5:"token";s:32:"6a5fa51c9d211c86fabc6e2e3e5af9dd";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+3kv7pk1hhkalq49l1bpgn99otn	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636828416	1636828459	0	csrf|a:2:{s:9:"timestamp";i:1636828459;s:5:"token";s:32:"d26e239632d10bab5b832eb0cc4817bf";}username|s:10:"bbarnetson";userId|s:2:"21";	localhost
+gbu2sv335g8uetpccq205bb1p8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636828461	1636828643	0	csrf|a:2:{s:9:"timestamp";i:1636828644;s:5:"token";s:32:"7bf3639d66d1cfcdf3e20e13ae78021c";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+p76p56i3ivk2m3e0lgnbdk57o5	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636829474	1636829635	0	csrf|a:2:{s:9:"timestamp";i:1636829635;s:5:"token";s:32:"1bc5228f882958260bca6f32585340fe";}username|s:7:"phudson";	localhost
+39u1rdlnc7ekp8i3qjf5196p0o	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636828646	1636828790	0	csrf|a:2:{s:9:"timestamp";i:1636828789;s:5:"token";s:32:"08594940c1fc81ccbbd45bafbcadd713";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+apq823sjqta79m11q4qksts1bg	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636828792	1636828944	0	csrf|a:2:{s:9:"timestamp";i:1636828944;s:5:"token";s:32:"1e4b716a5e121e343288340961057987";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+avq8otprescsh0bdob4hgotg75	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636829638	1636829824	0	csrf|a:2:{s:9:"timestamp";i:1636829825;s:5:"token";s:32:"0eb6f8c55306bfd64863264ed06d3d3e";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+l2pa0nej7akr5heqfs02j2q0ll	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636829827	1636830150	0	csrf|a:2:{s:9:"timestamp";i:1636830148;s:5:"token";s:32:"81ac673d27652051a77c5453adf338d9";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+2jchh8vicv22jjn0oii8kc820l	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636830288	1636830512	0	csrf|a:2:{s:9:"timestamp";i:1636830512;s:5:"token";s:32:"1fb7b488f0e333e565c10dedfba1da79";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+u33vdnf2bnf2fm8v73nn227q7k	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636830152	1636830198	0	csrf|a:2:{s:9:"timestamp";i:1636830198;s:5:"token";s:32:"597d9f8e4803698134d2d963f5401b76";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+i2c9s4s4n5rntjnvc30idm9k7a	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/83.0.4103.116 Safari/537.36	1636830199	1636830286	0	csrf|a:2:{s:9:"timestamp";i:1636830286;s:5:"token";s:32:"57c9d885d1b1d037eb52f84aa142b701";}username|s:8:"agallego";	localhost
 \.
 
 
@@ -7640,51 +7628,51 @@ COPY public.spotlights (spotlight_id, assoc_type, assoc_id, press_id) FROM stdin
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-1	1	13	19	2021-10-21 03:59:03	0	0
-2	1	3	3	2021-10-21 03:59:29	0	1
-3	1	6	14	2021-10-21 03:59:57	0	0
-4	2	14	20	2021-10-21 04:00:07	0	0
-5	2	3	3	2021-10-21 04:02:17	0	1
-6	3	13	21	2021-10-21 04:03:08	0	0
-7	3	3	3	2021-10-21 04:03:48	0	1
-8	4	14	22	2021-10-21 04:03:56	0	0
-9	4	3	3	2021-10-21 04:05:41	0	1
-10	4	6	13	2021-10-21 04:06:46	0	0
-11	4	10	15	2021-10-21 04:07:06	0	0
-12	5	13	23	2021-10-21 04:07:18	0	0
-13	5	3	3	2021-10-21 04:08:01	0	1
-14	5	6	14	2021-10-21 04:08:51	0	0
-15	5	10	16	2021-10-21 04:09:07	0	0
-16	5	12	17	2021-10-21 04:09:14	0	0
-17	6	14	24	2021-10-21 04:09:54	0	0
-18	6	3	3	2021-10-21 04:11:31	0	1
-19	6	5	6	2021-10-21 04:11:55	1	1
-20	7	14	25	2021-10-21 04:12:35	0	0
-21	7	3	3	2021-10-21 04:14:52	0	1
-22	7	6	13	2021-10-21 04:15:43	0	0
-23	8	13	3	2021-10-21 04:15:53	0	0
-24	8	3	3	2021-10-21 04:16:05	0	1
-25	9	14	26	2021-10-21 04:16:13	0	0
-26	9	3	3	2021-10-21 04:18:28	0	1
-27	10	13	27	2021-10-21 04:18:58	0	0
-28	10	3	3	2021-10-21 04:20:01	0	1
-29	11	13	28	2021-10-21 04:20:10	0	0
-30	11	3	3	2021-10-21 04:20:30	0	1
-31	12	14	29	2021-10-21 04:22:00	0	0
-32	12	3	3	2021-10-21 04:23:40	0	1
-33	13	14	30	2021-10-21 04:24:51	0	0
-34	13	3	3	2021-10-21 04:26:04	0	1
-35	14	14	31	2021-10-21 04:28:10	0	0
-36	14	3	3	2021-10-21 04:30:22	0	1
-37	14	6	13	2021-10-21 04:31:31	0	0
-38	14	10	15	2021-10-21 04:31:52	0	0
-39	14	12	18	2021-10-21 04:32:03	0	0
-40	15	13	32	2021-10-21 04:33:56	0	0
-41	15	3	3	2021-10-21 04:34:22	0	1
-42	16	13	33	2021-10-21 04:34:44	0	0
-43	16	3	3	2021-10-21 04:35:20	0	1
-44	17	14	34	2021-10-21 04:36:17	0	0
-45	17	3	3	2021-10-21 04:39:19	0	1
+1	1	13	19	2021-11-13 18:29:54	0	0
+2	1	3	3	2021-11-13 18:30:20	0	1
+3	1	6	14	2021-11-13 18:30:47	0	0
+4	2	14	20	2021-11-13 18:30:56	0	0
+5	2	3	3	2021-11-13 18:32:56	0	1
+6	3	13	21	2021-11-13 18:33:42	0	0
+7	3	3	3	2021-11-13 18:34:18	0	1
+8	4	14	22	2021-11-13 18:34:26	0	0
+9	4	3	3	2021-11-13 18:36:02	0	1
+10	4	6	13	2021-11-13 18:37:03	0	0
+11	4	10	15	2021-11-13 18:37:21	0	0
+12	5	13	23	2021-11-13 18:37:31	0	0
+13	5	3	3	2021-11-13 18:38:13	0	1
+14	5	6	14	2021-11-13 18:39:00	0	0
+15	5	10	16	2021-11-13 18:39:14	0	0
+16	5	12	17	2021-11-13 18:39:22	0	0
+17	6	14	24	2021-11-13 18:39:58	0	0
+18	6	3	3	2021-11-13 18:41:31	0	1
+19	6	5	6	2021-11-13 18:41:55	1	1
+20	7	14	25	2021-11-13 18:42:32	0	0
+21	7	3	3	2021-11-13 18:44:41	0	1
+22	7	6	13	2021-11-13 18:45:27	0	0
+23	8	13	3	2021-11-13 18:45:36	0	0
+24	8	3	3	2021-11-13 18:45:48	0	1
+25	9	14	26	2021-11-13 18:45:55	0	0
+26	9	3	3	2021-11-13 18:48:00	0	1
+27	10	13	27	2021-11-13 18:48:28	0	0
+28	10	3	3	2021-11-13 18:49:27	0	1
+29	11	13	28	2021-11-13 18:49:36	0	0
+30	11	3	3	2021-11-13 18:49:56	0	1
+31	12	14	29	2021-11-13 18:51:20	0	0
+32	12	3	3	2021-11-13 18:52:54	0	1
+33	13	14	30	2021-11-13 18:54:03	0	0
+34	13	3	3	2021-11-13 18:55:13	0	1
+35	14	14	31	2021-11-13 18:57:13	0	0
+36	14	3	3	2021-11-13 18:59:19	0	1
+37	14	6	13	2021-11-13 19:00:25	0	0
+38	14	10	15	2021-11-13 19:00:44	0	0
+39	14	12	18	2021-11-13 19:00:54	0	0
+40	15	13	32	2021-11-13 19:02:38	0	0
+41	15	3	3	2021-11-13 19:03:03	0	1
+42	16	13	33	2021-11-13 19:03:25	0	0
+43	16	3	3	2021-11-13 19:04:00	0	1
+44	17	14	34	2021-11-13 19:04:53	0	0
+45	17	3	3	2021-11-13 19:07:48	0	1
 \.
 
 
@@ -8319,9 +8307,15 @@ COPY public.submission_chapter_settings (chapter_id, locale, setting_name, setti
 --
 
 COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id, seq) FROM stdin;
+42	\N	10	6
+43	\N	10	7
 1	\N	1	1
 2	\N	1	2
 3	\N	1	3
+44	\N	10	8
+45	\N	10	9
+46	\N	11	1
+47	\N	11	2
 4	\N	2	1
 5	\N	2	2
 6	\N	2	3
@@ -8335,61 +8329,55 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 10	\N	3	3
 11	\N	3	4
 12	\N	3	5
-37	\N	10	1
-38	\N	10	2
+48	\N	12	1
+49	\N	12	2
 13	\N	4	1
 14	\N	4	2
 15	\N	4	3
-39	\N	10	3
+50	\N	12	3
 16	\N	4	4
-40	\N	10	4
-41	\N	10	5
-42	\N	10	6
 27	\N	7	1
 28	\N	7	2
 29	\N	7	3
 30	\N	7	4
-43	\N	10	7
 31	\N	7	5
-44	\N	10	8
-45	\N	10	9
 17	\N	5	1
 18	\N	5	2
 19	\N	5	3
 20	\N	5	4
 21	\N	5	5
 22	\N	5	6
-61	\N	16	1
-46	\N	11	1
-47	\N	11	2
-62	\N	16	2
-63	\N	16	3
-64	\N	16	4
-65	\N	16	5
+51	\N	13	1
+52	\N	13	2
+53	\N	13	3
 32	\N	9	1
 33	\N	9	2
 34	\N	9	3
 35	\N	9	4
 36	\N	9	5
-48	\N	12	1
-49	\N	12	2
-50	\N	12	3
-51	\N	13	1
-52	\N	13	2
-53	\N	13	3
+66	\N	17	1
+67	\N	17	2
 54	\N	14	1
 55	\N	14	2
 56	\N	14	3
+68	\N	17	3
 57	\N	14	4
-66	\N	17	1
+69	\N	17	4
+70	\N	17	5
 58	\N	15	1
 59	\N	15	2
 60	\N	15	3
-67	\N	17	2
-68	\N	17	3
-69	\N	17	4
-70	\N	17	5
 71	\N	17	6
+37	\N	10	1
+38	\N	10	2
+39	\N	10	3
+40	\N	10	4
+41	\N	10	5
+61	\N	16	1
+62	\N	16	2
+63	\N	16	3
+64	\N	16	4
+65	\N	16	5
 \.
 
 
@@ -8398,10 +8386,12 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2021-10-21 04:21:19	\N	1
-2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2021-10-21 04:21:32	\N	1
-3	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2021-10-21 04:27:33	\N	1
-4	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2021-10-21 04:36:08	\N	1
+1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2021-11-13 18:50:42	\N	1
+2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2021-11-13 18:50:53	\N	1
+3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2021-11-13 18:53:53	\N	1
+4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2021-11-13 18:56:24	\N	1
+5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2021-11-13 18:56:38	\N	1
+6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2021-11-13 19:04:45	\N	1
 \.
 
 
@@ -8412,303 +8402,296 @@ COPY public.submission_comments (comment_id, comment_type, role_id, submission_i
 COPY public.submission_file_settings (file_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 1	en_US	name	aclark, The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf	string
 1	fr_CA	name		string
-2	en_US	name	Book Manuscript, The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf	string
-2	fr_CA	name		string
-28	en_US	name	dkennepohl, Chapter 1: Interactions Affording Distan.pdf	string
-18	fr_CA	name		string
-18	en_US	name	callan, Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-29	fr_CA	name		string
-19	en_US	name	dbernnard, Identify: Understanding Your Information.pdf	string
-19	fr_CA	name		string
-19		chapterId	23	int
-20	en_US	name	dbernnard, Scope: Knowing What Is Available.pdf	string
-20	fr_CA	name		string
-20		chapterId	24	int
-21	en_US	name	dbernnard, Plan: Developing Research Strategies.pdf	string
-21	fr_CA	name		string
-12	en_US	name	bbeaty, Introduction: Contexts of Popular Cultur.pdf	string
-3	en_US	name	afinkel, Critical History in Western Canada 1900–.pdf	string
-3	fr_CA	name		string
-3		chapterId	4	int
-4	en_US	name	afinkel, Vernacular Currents in Western Canadian .pdf	string
-4	fr_CA	name		string
-4		chapterId	5	int
-5	en_US	name	afinkel, Cree Intellectual Traditions in History.pdf	string
-5	fr_CA	name		string
-5		chapterId	6	int
-6	en_US	name	afinkel, Visualizing Space, Race, and History in .pdf	string
-6	fr_CA	name		string
-6		chapterId	7	int
-7	en_US	name	Chapter Manuscript, Critical History in Western Canada 1900–.pdf	string
-7	fr_CA	name		string
-7		chapterId	4	int
-8	en_US	name	Chapter Manuscript, Vernacular Currents in Western Canadian .pdf	string
-8	fr_CA	name		string
-8		chapterId	5	int
-9	en_US	name	Chapter Manuscript, Cree Intellectual Traditions in History.pdf	string
-9	fr_CA	name		string
-9		chapterId	6	int
-10	en_US	name	Chapter Manuscript, Visualizing Space, Race, and History in .pdf	string
-10	fr_CA	name		string
-10		chapterId	7	int
-11	en_US	name	bbarnetson, The Political Economy of Workplace Injury in Canada.pdf	string
-11	fr_CA	name		string
-21		chapterId	25	int
-22	en_US	name	dbernnard, Gather: Finding What You Need.pdf	string
-30	fr_CA	name		string
-12	fr_CA	name		string
-12		chapterId	13	int
-13	en_US	name	bbeaty, Chapter 1. A Future for Media Studies: C.pdf	string
-13	fr_CA	name		string
-13		chapterId	14	int
-14	en_US	name	bbeaty, Chapter 2. Log On, Goof Off, and Look Up.pdf	string
-14	fr_CA	name		string
-14		chapterId	15	int
-15	en_US	name	bbeaty, Chapter 3. Hawkers and Public Space: Fre.pdf	string
-15	fr_CA	name		string
-15		chapterId	16	int
-16	en_US	name	callan, Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-16	fr_CA	name		string
-17	en_US	name	Book Manuscript, Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-17	fr_CA	name		string
-22	fr_CA	name		string
-31	fr_CA	name		string
-31	en_US	name	dkennepohl, Chapter 4: Toward New Models of Flexible.pdf	string
-22		chapterId	26	int
-23	en_US	name	Chapter Manuscript, Identify: Understanding Your Information.pdf	string
-23	fr_CA	name		string
-23		chapterId	23	int
-24	en_US	name	Chapter Manuscript, Scope: Knowing What Is Available.pdf	string
+24	en_US	name	dkennepohl, Chapter 2: Learning Science at a Distanc.pdf	string
 24	fr_CA	name		string
-24		chapterId	24	int
-25	en_US	name	Chapter Manuscript, Plan: Developing Research Strategies.pdf	string
+24		chapterId	29	int
+25	en_US	name	dkennepohl, Chapter 3: Leadership Strategies for Coo.pdf	string
+7	en_US	name	bbeaty, Introduction: Contexts of Popular Cultur.pdf	string
+7	fr_CA	name		string
+7		chapterId	13	int
+8	en_US	name	bbeaty, Chapter 1. A Future for Media Studies: C.pdf	string
+8	fr_CA	name		string
+8		chapterId	14	int
+9	en_US	name	bbeaty, Chapter 2. Log On, Goof Off, and Look Up.pdf	string
+9	fr_CA	name		string
+9		chapterId	15	int
+10	en_US	name	bbeaty, Chapter 3. Hawkers and Public Space: Fre.pdf	string
+10	fr_CA	name		string
+10		chapterId	16	int
+11	en_US	name	callan, Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+11	fr_CA	name		string
+12	en_US	name	Book Manuscript, Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+2	en_US	name	afinkel, Critical History in Western Canada 1900–.pdf	string
+2	fr_CA	name		string
+2		chapterId	4	int
+3	en_US	name	afinkel, Vernacular Currents in Western Canadian .pdf	string
+3	fr_CA	name		string
+3		chapterId	5	int
+4	en_US	name	afinkel, Cree Intellectual Traditions in History.pdf	string
+4	fr_CA	name		string
+4		chapterId	6	int
+5	en_US	name	afinkel, Visualizing Space, Race, and History in .pdf	string
+5	fr_CA	name		string
+5		chapterId	7	int
+6	en_US	name	bbarnetson, The Political Economy of Workplace Injury in Canada.pdf	string
+6	fr_CA	name		string
+12	fr_CA	name		string
 25	fr_CA	name		string
-25		chapterId	25	int
-26	en_US	name	Chapter Manuscript, Gather: Finding What You Need.pdf	string
-26	fr_CA	name		string
-26		chapterId	26	int
-32	en_US	name	Chapter Manuscript, Introduction.pdf	string
-27	en_US	name	dkennepohl, Introduction.pdf	string
-28	fr_CA	name		string
-29	en_US	name	dkennepohl, Chapter 2: Learning Science at a Distanc.pdf	string
-30	en_US	name	dkennepohl, Chapter 3: Leadership Strategies for Coo.pdf	string
+25		chapterId	30	int
+26	en_US	name	dkennepohl, Chapter 4: Toward New Models of Flexible.pdf	string
+13	en_US	name	callan, Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+30	en_US	name	Chapter Manuscript, Chapter 3: Leadership Strategies for Coo.pdf	string
+30	fr_CA	name		string
+14	en_US	name	dbernnard, Identify: Understanding Your Information.pdf	string
+14	fr_CA	name		string
+14		chapterId	23	int
+15	en_US	name	dbernnard, Scope: Knowing What Is Available.pdf	string
+15	fr_CA	name		string
+15		chapterId	24	int
+13	fr_CA	name		string
+16	en_US	name	dbernnard, Plan: Developing Research Strategies.pdf	string
+16	fr_CA	name		string
+16		chapterId	25	int
+17	en_US	name	dbernnard, Gather: Finding What You Need.pdf	string
 30		chapterId	30	int
-27	fr_CA	name		string
-28		chapterId	28	int
-29		chapterId	29	int
+31	en_US	name	Chapter Manuscript, Chapter 4: Toward New Models of Flexible.pdf	string
+31	fr_CA	name		string
 31		chapterId	31	int
-32	fr_CA	name		string
+22	en_US	name	dkennepohl, Introduction.pdf	string
+22	fr_CA	name		string
+17	fr_CA	name		string
+17		chapterId	26	int
+18	en_US	name	Chapter Manuscript, Identify: Understanding Your Information.pdf	string
+18	fr_CA	name		string
+18		chapterId	23	int
+19	en_US	name	Chapter Manuscript, Scope: Knowing What Is Available.pdf	string
+19	fr_CA	name		string
+19		chapterId	24	int
+20	en_US	name	Chapter Manuscript, Plan: Developing Research Strategies.pdf	string
+20	fr_CA	name		string
+20		chapterId	25	int
+21	en_US	name	Chapter Manuscript, Gather: Finding What You Need.pdf	string
+21	fr_CA	name		string
+21		chapterId	26	int
+26	fr_CA	name		string
+22		chapterId	27	int
+26		chapterId	31	int
+27	en_US	name	Chapter Manuscript, Introduction.pdf	string
+27	fr_CA	name		string
 27		chapterId	27	int
-32		chapterId	27	int
-33	en_US	name	Chapter Manuscript, Chapter 1: Interactions Affording Distan.pdf	string
+28	en_US	name	Chapter Manuscript, Chapter 1: Interactions Affording Distan.pdf	string
+28	fr_CA	name		string
+28		chapterId	28	int
+29	en_US	name	Chapter Manuscript, Chapter 2: Learning Science at a Distanc.pdf	string
+29	fr_CA	name		string
+29		chapterId	29	int
+23	en_US	name	dkennepohl, Chapter 1: Interactions Affording Distan.pdf	string
+23	fr_CA	name		string
+23		chapterId	28	int
+32	en_US	name	dbarnes, Editorial.pdf	string
+32	fr_CA	name		string
 33	fr_CA	name		string
-33		chapterId	28	int
 34	fr_CA	name		string
-34	en_US	name	Chapter Manuscript, Chapter 2: Learning Science at a Distanc.pdf	string
-34		chapterId	29	int
 35	fr_CA	name		string
-35	en_US	name	Chapter Manuscript, Chapter 3: Leadership Strategies for Coo.pdf	string
-35		chapterId	30	int
 36	fr_CA	name		string
-36	en_US	name	Chapter Manuscript, Chapter 4: Toward New Models of Flexible.pdf	string
-36		chapterId	31	int
-37	en_US	name	dbarnes, Editorial.pdf	string
+33	en_US	name	fperini, Internet, openness and the future of the.pdf	string
+34	en_US	name	fperini, Imagining the Internet: Open, closed or .pdf	string
+35	en_US	name	fperini, The internet in LAC will remain free, pu.pdf	string
+36	en_US	name	fperini, Free Internet?.pdf	string
+60	en_US	name	mdawson, Chapter 3: Situated Cognition and Bricol.pdf	string
+62	en_US	name	mdawson, Segmentation of Vascular Ultrasound Imag.pdf	string
+33		chapterId	32	int
+34		chapterId	33	int
+35		chapterId	34	int
+36		chapterId	35	int
+37	en_US	name	fperini, Risks and challenges for freedom of expr.pdf	string
 37	fr_CA	name		string
-45	fr_CA	name		string
-45		chapterId	34	int
-46	en_US	name	Chapter Manuscript, Free Internet?.pdf	string
-46	fr_CA	name		string
-46		chapterId	35	int
-47	en_US	name	Chapter Manuscript, Risks and challenges for freedom of expr.pdf	string
-47	fr_CA	name		string
-47		chapterId	36	int
-48	en_US	name	jbrower, Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
-48	fr_CA	name		string
-49	en_US	name	jlockehart, Dreamwork.pdf	string
-49	fr_CA	name		string
-50	en_US	name	Book Manuscript, Dreamwork.pdf	string
-50	fr_CA	name		string
-62	en_US	name	mdawson, Chapter 3: Situated Cognition and Bricol.pdf	string
-63	en_US	name	mdawson, Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-64	en_US	name	mdawson, Segmentation of Vascular Ultrasound Imag.pdf	string
-64	en_US	creator	Baris Kanber	string
-51	en_US	name	lelder, Catalyzing Access through Social and Tec.pdf	string
-51	fr_CA	name		string
-51		chapterId	48	int
-52	en_US	name	lelder, Catalyzing Access via Telecommunications.pdf	string
-52	fr_CA	name		string
-52		chapterId	49	int
-53	en_US	name	lelder, Access to Knowledge as a New Paradigm fo.pdf	string
-53	fr_CA	name		string
-53		chapterId	50	int
-54	en_US	name	Chapter Manuscript, Catalyzing Access through Social and Tec.pdf	string
-54	fr_CA	name		string
-38	en_US	name	fperini, Internet, openness and the future of the.pdf	string
+37		chapterId	36	int
 38	fr_CA	name		string
+38	en_US	name	Chapter Manuscript, Internet, openness and the future of the.pdf	string
 38		chapterId	32	int
-39	en_US	name	fperini, Imagining the Internet: Open, closed or .pdf	string
 39	fr_CA	name		string
+39	en_US	name	Chapter Manuscript, Imagining the Internet: Open, closed or .pdf	string
 39		chapterId	33	int
-40	en_US	name	fperini, The internet in LAC will remain free, pu.pdf	string
 40	fr_CA	name		string
+40	en_US	name	Chapter Manuscript, The internet in LAC will remain free, pu.pdf	string
 40		chapterId	34	int
-41	en_US	name	fperini, Free Internet?.pdf	string
 41	fr_CA	name		string
+41	en_US	name	Chapter Manuscript, Free Internet?.pdf	string
 41		chapterId	35	int
-42	en_US	name	fperini, Risks and challenges for freedom of expr.pdf	string
+42	en_US	name	Chapter Manuscript, Risks and challenges for freedom of expr.pdf	string
 42	fr_CA	name		string
 42		chapterId	36	int
-43	en_US	name	Chapter Manuscript, Internet, openness and the future of the.pdf	string
+43	en_US	name	jbrower, Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
 43	fr_CA	name		string
-43		chapterId	32	int
-44	en_US	name	Chapter Manuscript, Imagining the Internet: Open, closed or .pdf	string
+44	en_US	name	jlockehart, Dreamwork.pdf	string
 44	fr_CA	name		string
-44		chapterId	33	int
-45	en_US	name	Chapter Manuscript, The internet in LAC will remain free, pu.pdf	string
-54		chapterId	48	int
-55	en_US	name	Chapter Manuscript, Catalyzing Access via Telecommunications.pdf	string
+45	en_US	name	Book Manuscript, Dreamwork.pdf	string
+45	fr_CA	name		string
+62	en_US	creator	Baris Kanber	string
+52	fr_CA	name		string
+52	en_US	name	mally, Current State of Mobile Learning.pdf	string
+52		chapterId	51	int
+53	en_US	name	mally, A Model for Framing Mobile Learning.pdf	string
+53	fr_CA	name		string
+53		chapterId	52	int
+54	en_US	name	mally, Mobile Distance Learning with PDAs: Deve.pdf	string
+54	fr_CA	name		string
+46	en_US	name	lelder, Catalyzing Access through Social and Tec.pdf	string
+46	fr_CA	name		string
+46		chapterId	48	int
+47	en_US	name	lelder, Catalyzing Access via Telecommunications.pdf	string
+47	fr_CA	name		string
+47		chapterId	49	int
+48	en_US	name	lelder, Access to Knowledge as a New Paradigm fo.pdf	string
+48	fr_CA	name		string
+48		chapterId	50	int
+49	en_US	name	Chapter Manuscript, Catalyzing Access through Social and Tec.pdf	string
+49	fr_CA	name		string
+49		chapterId	48	int
+50	en_US	name	Chapter Manuscript, Catalyzing Access via Telecommunications.pdf	string
+50	fr_CA	name		string
+50		chapterId	49	int
+51	en_US	name	Chapter Manuscript, Access to Knowledge as a New Paradigm fo.pdf	string
+51	fr_CA	name		string
+51		chapterId	50	int
+54		chapterId	53	int
 55	fr_CA	name		string
-55		chapterId	49	int
-56	en_US	name	Chapter Manuscript, Access to Knowledge as a New Paradigm fo.pdf	string
+55	en_US	name	Chapter Manuscript, Current State of Mobile Learning.pdf	string
+55		chapterId	51	int
+56	en_US	name	Chapter Manuscript, A Model for Framing Mobile Learning.pdf	string
 56	fr_CA	name		string
-56		chapterId	50	int
-57	en_US	name	mally, Current State of Mobile Learning.pdf	string
+56		chapterId	52	int
+57	en_US	name	Chapter Manuscript, Mobile Distance Learning with PDAs: Deve.pdf	string
 57	fr_CA	name		string
-57		chapterId	51	int
-58	en_US	name	mally, A Model for Framing Mobile Learning.pdf	string
-58	fr_CA	name		string
-58		chapterId	52	int
-59	en_US	name	mally, Mobile Distance Learning with PDAs: Deve.pdf	string
+57		chapterId	53	int
 59	fr_CA	name		string
-59		chapterId	53	int
-61	en_US	name	mdawson, Chapter 2: Classical Music and the Class.pdf	string
-65	en_US	creator	Health Canada	string
-64	fr_CA	name		string
-64	fr_CA	creator		string
-64	fr_CA	subject		string
-64	en_US	subject		string
-64	fr_CA	description		string
-64	en_US	description	A presentation entitled "Segmentation of Vascular Ultrasound Image Sequences".	string
-64	fr_CA	publisher		string
-64	en_US	publisher		string
-64	fr_CA	sponsor		string
-64	en_US	sponsor		string
-64	fr_CA	source		string
-64	en_US	source		string
-64		dateCreated		string
-64		language	en	string
-65	fr_CA	name		string
-65	fr_CA	creator		string
-65	fr_CA	subject		string
-65	en_US	subject	Health and Safety	string
 61	fr_CA	name		string
+63	en_US	creator	Health Canada	string
+61	en_US	name	mdawson, Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 62	fr_CA	name		string
+62	fr_CA	creator		string
+62	fr_CA	subject		string
+62	en_US	subject		string
+62	fr_CA	description		string
+62	fr_CA	publisher		string
+62	en_US	publisher		string
+62	fr_CA	sponsor		string
+62	en_US	sponsor		string
+62	fr_CA	source		string
+62	en_US	source		string
+62		dateCreated		string
+62		language	en	string
 63	fr_CA	name		string
-71	en_US	subject	Health and Safety	string
-71	fr_CA	description		string
-71	en_US	description	Published by Health Canada, the Nutrient Value of Some Common Foods (NVSCF) provides Canadians with a resource that lists 19 nutrients for 1000 of the most commonly consumed foods in Canada. Use this quick and easy reference to help make informed food choices through an understanding of the nutrient content of the foods you eat. For further information, a booklet is available on this site in a downloadable or printable pdf format.	string
-74	en_US	name	mpower, A Designer's Log: Case Studies in Instructional Design.pdf	string
-74	fr_CA	name		string
-75	en_US	name	Book Manuscript, A Designer's Log: Case Studies in Instructional Design.pdf	string
-75	fr_CA	name		string
-76	en_US	name	msmith, Preface.pdf	string
-70	en_US	name	mdawson, Segmentation of Vascular Ultrasound Imag.pdf	string
-70	fr_CA	name		string
-70	en_US	creator	Baris Kanber	string
-70	fr_CA	creator		string
+63	en_US	name	mdawson, The Canadian Nutrient File: Nutrient Val.pdf	string
+63	fr_CA	creator		string
+63	fr_CA	subject		string
+63	en_US	subject	Health and Safety	string
+63	fr_CA	description		string
+63	fr_CA	publisher		string
+63	en_US	publisher	Health Canada	string
+63	fr_CA	sponsor		string
+63	en_US	sponsor		string
+58	fr_CA	name		string
+59	en_US	name	mdawson, Chapter 2: Classical Music and the Class.pdf	string
 60	fr_CA	name		string
-60	en_US	name	mdawson, Chapter 1: Mind Control—Internal or Exte.pdf	string
-60		chapterId	54	int
-61		chapterId	55	int
-62		chapterId	56	int
-63		chapterId	57	int
-65	en_US	name	mdawson, The Canadian Nutrient File: Nutrient Val.pdf	string
-65	fr_CA	description		string
-65	en_US	description	Published by Health Canada, the Nutrient Value of Some Common Foods (NVSCF) provides Canadians with a resource that lists 19 nutrients for 1000 of the most commonly consumed foods in Canada. Use this quick and easy reference to help make informed food choices through an understanding of the nutrient content of the foods you eat. For further information, a booklet is available on this site in a downloadable or printable pdf format.	string
-65	fr_CA	publisher		string
-65	en_US	publisher	Health Canada	string
-65	fr_CA	sponsor		string
-65	en_US	sponsor		string
-65	fr_CA	source		string
-65	en_US	source	http://open.canada.ca/data/en/dataset/a289fd54-060c-4a96-9fcf-b1c6e706426f	string
-65		dateCreated	2013-05-23	string
-65		language	en	string
-70	fr_CA	subject		string
-70	en_US	subject		string
-70	en_US	description	A presentation entitled "Segmentation of Vascular Ultrasound Image Sequences".	string
-70	fr_CA	description		string
-70	fr_CA	publisher		string
-70	en_US	publisher		string
-77	en_US	name	msmith, Introduction.pdf	string
-71	fr_CA	name		string
-71	en_US	name	mdawson, The Canadian Nutrient File: Nutrient Val.pdf	string
-71	en_US	creator	Health Canada	string
-71	fr_CA	creator		string
-71	fr_CA	subject		string
-71	fr_CA	publisher		string
-71	en_US	publisher	Health Canada	string
-71	fr_CA	sponsor		string
-71	en_US	sponsor		string
-71	fr_CA	source		string
-71	en_US	source	http://open.canada.ca/data/en/dataset/a289fd54-060c-4a96-9fcf-b1c6e706426f	string
-71		dateCreated	2013-05-23	string
-71		language	en	string
-72	en_US	name	mforan, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-72	fr_CA	name		string
-73	en_US	name	Book Manuscript, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-73	fr_CA	name		string
-78	en_US	name	msmith, The Emergence of Open Development in a N.pdf	string
-67	en_US	name	mdawson, Chapter 2: Classical Music and the Class.pdf	string
-67	fr_CA	name		string
-67		chapterId	55	int
-66	fr_CA	name		string
-66	en_US	name	mdawson, Chapter 1: Mind Control—Internal or Exte.pdf	string
-66		chapterId	54	int
-70	fr_CA	sponsor		string
-70	en_US	sponsor		string
-70	fr_CA	source		string
-68	en_US	name	mdawson, Chapter 3: Situated Cognition and Bricol.pdf	string
-68	fr_CA	name		string
-68		chapterId	56	int
-70	en_US	source		string
-70		dateCreated		string
-70		language	en	string
-69	en_US	name	mdawson, Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-69	fr_CA	name		string
-69		chapterId	57	int
-79	en_US	name	msmith, Enacting Openness in ICT4D Research.pdf	string
-80	en_US	name	msmith, Transparency and Development: Ethical Co.pdf	string
-81	en_US	name	msmith, Open Educational Resources: Opportunitie.pdf	string
-78		chapterId	68	int
+69	fr_CA	publisher		string
+69	en_US	publisher	Health Canada	string
+69	fr_CA	sponsor		string
+69	en_US	sponsor		string
+69	fr_CA	source		string
+69	en_US	source	http://open.canada.ca/data/en/dataset/a289fd54-060c-4a96-9fcf-b1c6e706426f	string
+69		dateCreated	2013-05-23	string
+69		language	en	string
 76	fr_CA	name		string
-76		chapterId	66	int
-77	fr_CA	name		string
-77		chapterId	67	int
+58	en_US	name	mdawson, Chapter 1: Mind Control—Internal or Exte.pdf	string
+58		chapterId	54	int
+59		chapterId	55	int
+60		chapterId	56	int
+61		chapterId	57	int
+62	en_US	description	A presentation entitled "Segmentation of Vascular Ultrasound Image Sequences".	string
+63	en_US	description	Published by Health Canada, the Nutrient Value of Some Common Foods (NVSCF) provides Canadians with a resource that lists 19 nutrients for 1000 of the most commonly consumed foods in Canada. Use this quick and easy reference to help make informed food choices through an understanding of the nutrient content of the foods you eat. For further information, a booklet is available on this site in a downloadable or printable pdf format.	string
+63	fr_CA	source		string
+63	en_US	source	http://open.canada.ca/data/en/dataset/a289fd54-060c-4a96-9fcf-b1c6e706426f	string
+63		dateCreated	2013-05-23	string
+63		language	en	string
 78	fr_CA	name		string
+69	fr_CA	name		string
+69	en_US	name	mdawson, The Canadian Nutrient File: Nutrient Val.pdf	string
+69	en_US	creator	Health Canada	string
+69	fr_CA	creator		string
+69	fr_CA	subject		string
+69	en_US	subject	Health and Safety	string
+69	fr_CA	description		string
+69	en_US	description	Published by Health Canada, the Nutrient Value of Some Common Foods (NVSCF) provides Canadians with a resource that lists 19 nutrients for 1000 of the most commonly consumed foods in Canada. Use this quick and easy reference to help make informed food choices through an understanding of the nutrient content of the foods you eat. For further information, a booklet is available on this site in a downloadable or printable pdf format.	string
+70	en_US	name	mforan, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+70	fr_CA	name		string
+71	en_US	name	Book Manuscript, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+71	fr_CA	name		string
+72	en_US	name	mpower, A Designer's Log: Case Studies in Instructional Design.pdf	string
+72	fr_CA	name		string
+73	fr_CA	name		string
+73		chapterId	66	int
+75	fr_CA	name		string
+75	en_US	name	msmith, The Emergence of Open Development in a N.pdf	string
+76		chapterId	69	int
+77	en_US	name	msmith, Transparency and Development: Ethical Co.pdf	string
+64	fr_CA	name		string
+64	en_US	name	mdawson, Chapter 1: Mind Control—Internal or Exte.pdf	string
+64		chapterId	54	int
+79		chapterId	66	int
+68	en_US	name	mdawson, Segmentation of Vascular Ultrasound Imag.pdf	string
+68	fr_CA	name		string
+65	fr_CA	name		string
+65	en_US	name	mdawson, Chapter 2: Classical Music and the Class.pdf	string
+65		chapterId	55	int
+68	en_US	creator	Baris Kanber	string
+68	fr_CA	creator		string
+68	fr_CA	subject		string
+66	en_US	name	mdawson, Chapter 3: Situated Cognition and Bricol.pdf	string
+66	fr_CA	name		string
+66		chapterId	56	int
+68	en_US	subject		string
+68	fr_CA	description		string
+68	en_US	description	A presentation entitled "Segmentation of Vascular Ultrasound Image Sequences".	string
+67	fr_CA	name		string
+67	en_US	name	mdawson, Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+67		chapterId	57	int
+68	fr_CA	publisher		string
+68	en_US	publisher		string
+68	fr_CA	sponsor		string
+68	en_US	sponsor		string
+68	fr_CA	source		string
+68	en_US	source		string
+68		dateCreated		string
+68		language	en	string
+80	en_US	name	Chapter Manuscript, Introduction.pdf	string
+74	en_US	name	msmith, Introduction.pdf	string
+74	fr_CA	name		string
+75		chapterId	68	int
+76	en_US	name	msmith, Enacting Openness in ICT4D Research.pdf	string
+77	fr_CA	name		string
+78	en_US	name	msmith, Open Educational Resources: Opportunitie.pdf	string
+78		chapterId	71	int
+77		chapterId	70	int
+73	en_US	name	msmith, Preface.pdf	string
 79	fr_CA	name		string
-79		chapterId	69	int
+74		chapterId	67	int
+79	en_US	name	Chapter Manuscript, Preface.pdf	string
 80	fr_CA	name		string
-80		chapterId	70	int
-81		chapterId	71	int
+80		chapterId	67	int
 81	fr_CA	name		string
-82	en_US	name	Chapter Manuscript, Preface.pdf	string
+81	en_US	name	Chapter Manuscript, The Emergence of Open Development in a N.pdf	string
+81		chapterId	68	int
 82	fr_CA	name		string
-82		chapterId	66	int
-83	en_US	name	Chapter Manuscript, Introduction.pdf	string
+82	en_US	name	Chapter Manuscript, Enacting Openness in ICT4D Research.pdf	string
+82		chapterId	69	int
+83	en_US	name	Chapter Manuscript, Transparency and Development: Ethical Co.pdf	string
 83	fr_CA	name		string
-83		chapterId	67	int
-84	en_US	name	Chapter Manuscript, The Emergence of Open Development in a N.pdf	string
+83		chapterId	70	int
+84	en_US	name	Chapter Manuscript, Open Educational Resources: Opportunitie.pdf	string
 84	fr_CA	name		string
-84		chapterId	68	int
-85	en_US	name	Chapter Manuscript, Enacting Openness in ICT4D Research.pdf	string
-85	fr_CA	name		string
-85		chapterId	69	int
-86	fr_CA	name		string
-86	en_US	name	Chapter Manuscript, Transparency and Development: Ethical Co.pdf	string
-86		chapterId	70	int
-87	fr_CA	name		string
-87	en_US	name	Chapter Manuscript, Open Educational Resources: Opportunitie.pdf	string
-87		chapterId	71	int
+84		chapterId	71	int
 \.
 
 
@@ -8717,93 +8700,90 @@ COPY public.submission_file_settings (file_id, locale, setting_name, setting_val
 --
 
 COPY public.submission_files (file_id, revision, source_file_id, source_revision, submission_id, file_type, genre_id, file_size, original_file_name, file_stage, direct_sales_price, sales_type, viewable, date_uploaded, date_modified, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	\N	\N	1	application/pdf	3	14572	The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf	2	\N	\N	1	2021-10-21 03:59:08	2021-10-21 03:59:08	19	\N	\N
-2	1	1	1	1	application/pdf	3	14572	The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf	4	\N	\N	1	2021-10-21 03:59:08	2021-10-21 03:59:37	19	\N	\N
-21	1	\N	\N	6	application/pdf	4	14572	Plan: Developing Research Strategies.pdf	2	\N	\N	1	2021-10-21 04:10:18	2021-10-21 04:10:18	24	\N	\N
-22	1	\N	\N	6	application/pdf	4	14572	Gather: Finding What You Need.pdf	2	\N	\N	1	2021-10-21 04:10:27	2021-10-21 04:10:27	24	\N	\N
-23	1	19	1	6	application/pdf	4	14572	Identify: Understanding Your Information.pdf	4	\N	\N	1	2021-10-21 04:09:59	2021-10-21 04:11:44	24	\N	\N
-24	1	20	1	6	application/pdf	4	14572	Scope: Knowing What Is Available.pdf	4	\N	\N	1	2021-10-21 04:10:08	2021-10-21 04:11:44	24	\N	\N
-25	1	21	1	6	application/pdf	4	14572	Plan: Developing Research Strategies.pdf	4	\N	\N	1	2021-10-21 04:10:18	2021-10-21 04:11:44	24	\N	\N
-26	1	22	1	6	application/pdf	4	14572	Gather: Finding What You Need.pdf	4	\N	\N	1	2021-10-21 04:10:27	2021-10-21 04:11:44	24	\N	\N
-27	1	\N	\N	7	application/pdf	4	14572	Introduction.pdf	2	\N	\N	1	2021-10-21 04:12:41	2021-10-21 04:12:41	25	\N	\N
-12	1	\N	\N	4	application/pdf	4	14572	Introduction: Contexts of Popular Cultur.pdf	2	\N	\N	1	2021-10-21 04:04:02	2021-10-21 04:04:02	22	\N	\N
-13	1	\N	\N	4	application/pdf	4	14572	Chapter 1. A Future for Media Studies: C.pdf	2	\N	\N	1	2021-10-21 04:04:11	2021-10-21 04:04:11	22	\N	\N
-14	1	\N	\N	4	application/pdf	4	14572	Chapter 2. Log On, Goof Off, and Look Up.pdf	2	\N	\N	1	2021-10-21 04:04:20	2021-10-21 04:04:20	22	\N	\N
-3	1	\N	\N	2	application/pdf	4	14572	Critical History in Western Canada 1900–.pdf	2	\N	\N	1	2021-10-21 04:00:12	2021-10-21 04:00:12	20	\N	\N
-4	1	\N	\N	2	application/pdf	4	14572	Vernacular Currents in Western Canadian .pdf	2	\N	\N	1	2021-10-21 04:00:21	2021-10-21 04:00:21	20	\N	\N
-5	1	\N	\N	2	application/pdf	4	14572	Cree Intellectual Traditions in History.pdf	2	\N	\N	1	2021-10-21 04:00:31	2021-10-21 04:00:31	20	\N	\N
-6	1	\N	\N	2	application/pdf	4	14572	Visualizing Space, Race, and History in .pdf	2	\N	\N	1	2021-10-21 04:00:40	2021-10-21 04:00:40	20	\N	\N
-7	1	3	1	2	application/pdf	4	14572	Critical History in Western Canada 1900–.pdf	4	\N	\N	1	2021-10-21 04:00:12	2021-10-21 04:02:33	20	\N	\N
-8	1	4	1	2	application/pdf	4	14572	Vernacular Currents in Western Canadian .pdf	4	\N	\N	1	2021-10-21 04:00:21	2021-10-21 04:02:33	20	\N	\N
-9	1	5	1	2	application/pdf	4	14572	Cree Intellectual Traditions in History.pdf	4	\N	\N	1	2021-10-21 04:00:31	2021-10-21 04:02:33	20	\N	\N
-10	1	6	1	2	application/pdf	4	14572	Visualizing Space, Race, and History in .pdf	4	\N	\N	1	2021-10-21 04:00:40	2021-10-21 04:02:33	20	\N	\N
-11	1	\N	\N	3	application/pdf	3	14572	The Political Economy of Workplace Injury in Canada.pdf	2	\N	\N	1	2021-10-21 04:03:14	2021-10-21 04:03:14	21	\N	\N
-28	1	\N	\N	7	application/pdf	4	14572	Chapter 1: Interactions Affording Distan.pdf	2	\N	\N	1	2021-10-21 04:12:50	2021-10-21 04:12:50	25	\N	\N
-29	1	\N	\N	7	application/pdf	4	14572	Chapter 2: Learning Science at a Distanc.pdf	2	\N	\N	1	2021-10-21 04:12:59	2021-10-21 04:12:59	25	\N	\N
-15	1	\N	\N	4	application/pdf	4	14572	Chapter 3. Hawkers and Public Space: Fre.pdf	2	\N	\N	1	2021-10-21 04:04:30	2021-10-21 04:04:30	22	\N	\N
-16	1	\N	\N	5	application/pdf	3	14572	Bomb Canada and Other Unkind Remarks in the American Media.pdf	2	\N	\N	1	2021-10-21 04:07:23	2021-10-21 04:07:23	23	\N	\N
-17	1	16	1	5	application/pdf	3	14572	Bomb Canada and Other Unkind Remarks in the American Media.pdf	4	\N	\N	1	2021-10-21 04:07:23	2021-10-21 04:08:11	23	\N	\N
-18	1	16	1	5	application/pdf	3	14572	Bomb Canada and Other Unkind Remarks in the American Media.pdf	10	0	openAccess	1	2021-10-21 04:07:23	2021-10-21 04:09:27	23	521	1
-30	1	\N	\N	7	application/pdf	4	14572	Chapter 3: Leadership Strategies for Coo.pdf	2	\N	\N	1	2021-10-21 04:13:09	2021-10-21 04:13:09	25	\N	\N
-35	1	30	1	7	application/pdf	4	14572	Chapter 3: Leadership Strategies for Coo.pdf	4	\N	\N	1	2021-10-21 04:13:09	2021-10-21 04:15:08	25	\N	\N
-36	1	31	1	7	application/pdf	4	14572	Chapter 4: Toward New Models of Flexible.pdf	4	\N	\N	1	2021-10-21 04:13:18	2021-10-21 04:15:08	25	\N	\N
-19	1	\N	\N	6	application/pdf	4	14572	Identify: Understanding Your Information.pdf	2	\N	\N	1	2021-10-21 04:09:59	2021-10-21 04:09:59	24	\N	\N
-20	1	\N	\N	6	application/pdf	4	14572	Scope: Knowing What Is Available.pdf	2	\N	\N	1	2021-10-21 04:10:08	2021-10-21 04:10:08	24	\N	\N
-37	1	\N	\N	8	application/pdf	3	14572	Editorial.pdf	2	\N	\N	1	2021-10-21 04:15:59	2021-10-21 04:15:59	3	\N	\N
-31	1	\N	\N	7	application/pdf	4	14572	Chapter 4: Toward New Models of Flexible.pdf	2	\N	\N	1	2021-10-21 04:13:18	2021-10-21 04:13:18	25	\N	\N
-32	1	27	1	7	application/pdf	4	14572	Introduction.pdf	4	\N	\N	1	2021-10-21 04:12:41	2021-10-21 04:15:08	25	\N	\N
-33	1	28	1	7	application/pdf	4	14572	Chapter 1: Interactions Affording Distan.pdf	4	\N	\N	1	2021-10-21 04:12:50	2021-10-21 04:15:08	25	\N	\N
-34	1	29	1	7	application/pdf	4	14572	Chapter 2: Learning Science at a Distanc.pdf	4	\N	\N	1	2021-10-21 04:12:59	2021-10-21 04:15:08	25	\N	\N
-43	1	38	1	9	application/pdf	4	14572	Internet, openness and the future of the.pdf	4	\N	\N	1	2021-10-21 04:16:19	2021-10-21 04:18:43	26	\N	\N
-38	1	\N	\N	9	application/pdf	4	14572	Internet, openness and the future of the.pdf	2	\N	\N	1	2021-10-21 04:16:19	2021-10-21 04:16:19	26	\N	\N
-39	1	\N	\N	9	application/pdf	4	14572	Imagining the Internet: Open, closed or .pdf	2	\N	\N	1	2021-10-21 04:16:28	2021-10-21 04:16:28	26	\N	\N
-40	1	\N	\N	9	application/pdf	4	14572	The internet in LAC will remain free, pu.pdf	2	\N	\N	1	2021-10-21 04:16:37	2021-10-21 04:16:37	26	\N	\N
-41	1	\N	\N	9	application/pdf	4	14572	Free Internet?.pdf	2	\N	\N	1	2021-10-21 04:16:47	2021-10-21 04:16:47	26	\N	\N
-42	1	\N	\N	9	application/pdf	4	14572	Risks and challenges for freedom of expr.pdf	2	\N	\N	1	2021-10-21 04:16:56	2021-10-21 04:16:56	26	\N	\N
-44	1	39	1	9	application/pdf	4	14572	Imagining the Internet: Open, closed or .pdf	4	\N	\N	1	2021-10-21 04:16:28	2021-10-21 04:18:43	26	\N	\N
-45	1	40	1	9	application/pdf	4	14572	The internet in LAC will remain free, pu.pdf	4	\N	\N	1	2021-10-21 04:16:37	2021-10-21 04:18:43	26	\N	\N
-46	1	41	1	9	application/pdf	4	14572	Free Internet?.pdf	4	\N	\N	1	2021-10-21 04:16:47	2021-10-21 04:18:43	26	\N	\N
-47	1	42	1	9	application/pdf	4	14572	Risks and challenges for freedom of expr.pdf	4	\N	\N	1	2021-10-21 04:16:56	2021-10-21 04:18:43	26	\N	\N
-48	1	\N	\N	10	application/pdf	3	14572	Lost Tracks: Buffalo National Park, 1909-1939.pdf	2	\N	\N	1	2021-10-21 04:19:04	2021-10-21 04:19:04	27	\N	\N
-49	1	\N	\N	11	application/pdf	3	14572	Dreamwork.pdf	2	\N	\N	1	2021-10-21 04:20:15	2021-10-21 04:20:15	28	\N	\N
-50	1	49	1	11	application/pdf	3	14572	Dreamwork.pdf	4	\N	\N	1	2021-10-21 04:20:15	2021-10-21 04:20:39	28	\N	\N
-51	1	\N	\N	12	application/pdf	4	14572	Catalyzing Access through Social and Tec.pdf	2	\N	\N	1	2021-10-21 04:22:06	2021-10-21 04:22:06	29	\N	\N
-52	1	\N	\N	12	application/pdf	4	14572	Catalyzing Access via Telecommunications.pdf	2	\N	\N	1	2021-10-21 04:22:15	2021-10-21 04:22:15	29	\N	\N
-53	1	\N	\N	12	application/pdf	4	14572	Access to Knowledge as a New Paradigm fo.pdf	2	\N	\N	1	2021-10-21 04:22:24	2021-10-21 04:22:24	29	\N	\N
-54	1	51	1	12	application/pdf	4	14572	Catalyzing Access through Social and Tec.pdf	4	\N	\N	1	2021-10-21 04:22:06	2021-10-21 04:23:54	29	\N	\N
-55	1	52	1	12	application/pdf	4	14572	Catalyzing Access via Telecommunications.pdf	4	\N	\N	1	2021-10-21 04:22:15	2021-10-21 04:23:54	29	\N	\N
-56	1	53	1	12	application/pdf	4	14572	Access to Knowledge as a New Paradigm fo.pdf	4	\N	\N	1	2021-10-21 04:22:24	2021-10-21 04:23:54	29	\N	\N
-60	1	\N	\N	14	application/pdf	4	14572	Chapter 1: Mind Control—Internal or Exte.pdf	2	\N	\N	1	2021-10-21 04:28:15	2021-10-21 04:28:15	31	\N	\N
-61	1	\N	\N	14	application/pdf	4	14572	Chapter 2: Classical Music and the Class.pdf	2	\N	\N	1	2021-10-21 04:28:24	2021-10-21 04:28:24	31	\N	\N
-62	1	\N	\N	14	application/pdf	4	14572	Chapter 3: Situated Cognition and Bricol.pdf	2	\N	\N	1	2021-10-21 04:28:33	2021-10-21 04:28:33	31	\N	\N
-63	1	\N	\N	14	application/pdf	4	14572	Chapter 4: Braitenberg’s Vehicle 2.pdf	2	\N	\N	1	2021-10-21 04:28:43	2021-10-21 04:28:43	31	\N	\N
-64	1	\N	\N	14	application/pdf	13	14572	Segmentation of Vascular Ultrasound Imag.pdf	2	\N	\N	1	2021-10-21 04:28:52	2021-10-21 04:28:52	31	\N	\N
-65	1	\N	\N	14	application/pdf	13	14572	The Canadian Nutrient File: Nutrient Val.pdf	2	\N	\N	1	2021-10-21 04:29:05	2021-10-21 04:29:05	31	\N	\N
-57	1	\N	\N	13	application/pdf	4	14572	Current State of Mobile Learning.pdf	2	\N	\N	1	2021-10-21 04:24:56	2021-10-21 04:24:56	30	\N	\N
-58	1	\N	\N	13	application/pdf	4	14572	A Model for Framing Mobile Learning.pdf	2	\N	\N	1	2021-10-21 04:25:05	2021-10-21 04:25:05	30	\N	\N
-59	1	\N	\N	13	application/pdf	4	14572	Mobile Distance Learning with PDAs: Deve.pdf	2	\N	\N	1	2021-10-21 04:25:15	2021-10-21 04:25:15	30	\N	\N
-69	1	63	1	14	application/pdf	4	14572	Chapter 4: Braitenberg’s Vehicle 2.pdf	10	0	openAccess	1	2021-10-21 04:28:43	2021-10-21 04:32:24	31	521	2
-66	1	60	1	14	application/pdf	4	14572	Chapter 1: Mind Control—Internal or Exte.pdf	10	0	openAccess	1	2021-10-21 04:28:15	2021-10-21 04:32:24	31	521	2
-75	1	74	1	16	application/pdf	3	14572	A Designer's Log: Case Studies in Instructional Design.pdf	4	\N	\N	1	2021-10-21 04:34:49	2021-10-21 04:35:32	33	\N	\N
-67	1	61	1	14	application/pdf	4	14572	Chapter 2: Classical Music and the Class.pdf	10	0	openAccess	1	2021-10-21 04:28:24	2021-10-21 04:32:24	31	521	2
-70	1	64	1	14	application/pdf	13	14572	Segmentation of Vascular Ultrasound Imag.pdf	10	0	openAccess	1	2021-10-21 04:28:52	2021-10-21 04:32:24	31	521	2
-68	1	62	1	14	application/pdf	4	14572	Chapter 3: Situated Cognition and Bricol.pdf	10	0	openAccess	1	2021-10-21 04:28:33	2021-10-21 04:32:24	31	521	2
-82	1	76	1	17	application/pdf	4	14572	Preface.pdf	4	\N	\N	1	2021-10-21 04:36:22	2021-10-21 04:39:38	34	\N	\N
-71	1	65	1	14	application/pdf	13	14572	The Canadian Nutrient File: Nutrient Val.pdf	10	0	openAccess	1	2021-10-21 04:29:05	2021-10-21 04:32:25	31	521	2
-72	1	\N	\N	15	application/pdf	3	14572	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	2	\N	\N	1	2021-10-21 04:34:01	2021-10-21 04:34:01	32	\N	\N
-73	1	72	1	15	application/pdf	3	14572	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	4	\N	\N	1	2021-10-21 04:34:01	2021-10-21 04:34:33	32	\N	\N
-74	1	\N	\N	16	application/pdf	3	14572	A Designer's Log: Case Studies in Instructional Design.pdf	2	\N	\N	1	2021-10-21 04:34:49	2021-10-21 04:34:49	33	\N	\N
-76	1	\N	\N	17	application/pdf	4	14572	Preface.pdf	2	\N	\N	1	2021-10-21 04:36:22	2021-10-21 04:36:22	34	\N	\N
-77	1	\N	\N	17	application/pdf	4	14572	Introduction.pdf	2	\N	\N	1	2021-10-21 04:36:31	2021-10-21 04:36:31	34	\N	\N
-78	1	\N	\N	17	application/pdf	4	14572	The Emergence of Open Development in a N.pdf	2	\N	\N	1	2021-10-21 04:36:41	2021-10-21 04:36:41	34	\N	\N
-79	1	\N	\N	17	application/pdf	4	14572	Enacting Openness in ICT4D Research.pdf	2	\N	\N	1	2021-10-21 04:36:50	2021-10-21 04:36:50	34	\N	\N
-80	1	\N	\N	17	application/pdf	4	14572	Transparency and Development: Ethical Co.pdf	2	\N	\N	1	2021-10-21 04:37:00	2021-10-21 04:37:00	34	\N	\N
-81	1	\N	\N	17	application/pdf	4	14572	Open Educational Resources: Opportunitie.pdf	2	\N	\N	1	2021-10-21 04:37:09	2021-10-21 04:37:09	34	\N	\N
-83	1	77	1	17	application/pdf	4	14572	Introduction.pdf	4	\N	\N	1	2021-10-21 04:36:31	2021-10-21 04:39:38	34	\N	\N
-84	1	78	1	17	application/pdf	4	14572	The Emergence of Open Development in a N.pdf	4	\N	\N	1	2021-10-21 04:36:41	2021-10-21 04:39:38	34	\N	\N
-85	1	79	1	17	application/pdf	4	14572	Enacting Openness in ICT4D Research.pdf	4	\N	\N	1	2021-10-21 04:36:50	2021-10-21 04:39:38	34	\N	\N
-86	1	80	1	17	application/pdf	4	14572	Transparency and Development: Ethical Co.pdf	4	\N	\N	1	2021-10-21 04:37:00	2021-10-21 04:39:38	34	\N	\N
-87	1	81	1	17	application/pdf	4	14572	Open Educational Resources: Opportunitie.pdf	4	\N	\N	1	2021-10-21 04:37:09	2021-10-21 04:39:38	34	\N	\N
+1	1	\N	\N	1	application/pdf	3	14572	The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf	2	\N	\N	1	2021-11-13 18:29:59	2021-11-13 18:29:59	19	\N	\N
+29	1	24	1	7	application/pdf	4	14572	Chapter 2: Learning Science at a Distanc.pdf	4	\N	\N	1	2021-11-13 18:42:56	2021-11-13 18:44:55	25	\N	\N
+30	1	25	1	7	application/pdf	4	14572	Chapter 3: Leadership Strategies for Coo.pdf	4	\N	\N	1	2021-11-13 18:43:05	2021-11-13 18:44:55	25	\N	\N
+31	1	26	1	7	application/pdf	4	14572	Chapter 4: Toward New Models of Flexible.pdf	4	\N	\N	1	2021-11-13 18:43:15	2021-11-13 18:44:55	25	\N	\N
+32	1	\N	\N	8	application/pdf	3	14572	Editorial.pdf	2	\N	\N	1	2021-11-13 18:45:42	2021-11-13 18:45:42	3	\N	\N
+7	1	\N	\N	4	application/pdf	4	14572	Introduction: Contexts of Popular Cultur.pdf	2	\N	\N	1	2021-11-13 18:34:32	2021-11-13 18:34:32	22	\N	\N
+8	1	\N	\N	4	application/pdf	4	14572	Chapter 1. A Future for Media Studies: C.pdf	2	\N	\N	1	2021-11-13 18:34:41	2021-11-13 18:34:41	22	\N	\N
+9	1	\N	\N	4	application/pdf	4	14572	Chapter 2. Log On, Goof Off, and Look Up.pdf	2	\N	\N	1	2021-11-13 18:34:50	2021-11-13 18:34:50	22	\N	\N
+10	1	\N	\N	4	application/pdf	4	14572	Chapter 3. Hawkers and Public Space: Fre.pdf	2	\N	\N	1	2021-11-13 18:34:59	2021-11-13 18:34:59	22	\N	\N
+11	1	\N	\N	5	application/pdf	3	14572	Bomb Canada and Other Unkind Remarks in the American Media.pdf	2	\N	\N	1	2021-11-13 18:37:37	2021-11-13 18:37:37	23	\N	\N
+12	1	11	1	5	application/pdf	3	14572	Bomb Canada and Other Unkind Remarks in the American Media.pdf	4	\N	\N	1	2021-11-13 18:37:37	2021-11-13 18:38:22	23	\N	\N
+2	1	\N	\N	2	application/pdf	4	14572	Critical History in Western Canada 1900–.pdf	2	\N	\N	1	2021-11-13 18:31:01	2021-11-13 18:31:01	20	\N	\N
+3	1	\N	\N	2	application/pdf	4	14572	Vernacular Currents in Western Canadian .pdf	2	\N	\N	1	2021-11-13 18:31:10	2021-11-13 18:31:10	20	\N	\N
+4	1	\N	\N	2	application/pdf	4	14572	Cree Intellectual Traditions in History.pdf	2	\N	\N	1	2021-11-13 18:31:19	2021-11-13 18:31:19	20	\N	\N
+5	1	\N	\N	2	application/pdf	4	14572	Visualizing Space, Race, and History in .pdf	2	\N	\N	1	2021-11-13 18:31:28	2021-11-13 18:31:28	20	\N	\N
+6	1	\N	\N	3	application/pdf	3	14572	The Political Economy of Workplace Injury in Canada.pdf	2	\N	\N	1	2021-11-13 18:33:47	2021-11-13 18:33:47	21	\N	\N
+38	1	33	1	9	application/pdf	4	14572	Internet, openness and the future of the.pdf	4	\N	\N	1	2021-11-13 18:46:01	2021-11-13 18:48:13	26	\N	\N
+13	1	11	1	5	application/pdf	3	14572	Bomb Canada and Other Unkind Remarks in the American Media.pdf	10	0	openAccess	1	2021-11-13 18:37:37	2021-11-13 18:39:33	23	521	1
+14	1	\N	\N	6	application/pdf	4	14572	Identify: Understanding Your Information.pdf	2	\N	\N	1	2021-11-13 18:40:03	2021-11-13 18:40:03	24	\N	\N
+15	1	\N	\N	6	application/pdf	4	14572	Scope: Knowing What Is Available.pdf	2	\N	\N	1	2021-11-13 18:40:12	2021-11-13 18:40:12	24	\N	\N
+16	1	\N	\N	6	application/pdf	4	14572	Plan: Developing Research Strategies.pdf	2	\N	\N	1	2021-11-13 18:40:21	2021-11-13 18:40:21	24	\N	\N
+17	1	\N	\N	6	application/pdf	4	14572	Gather: Finding What You Need.pdf	2	\N	\N	1	2021-11-13 18:40:30	2021-11-13 18:40:30	24	\N	\N
+18	1	14	1	6	application/pdf	4	14572	Identify: Understanding Your Information.pdf	4	\N	\N	1	2021-11-13 18:40:03	2021-11-13 18:41:43	24	\N	\N
+19	1	15	1	6	application/pdf	4	14572	Scope: Knowing What Is Available.pdf	4	\N	\N	1	2021-11-13 18:40:12	2021-11-13 18:41:43	24	\N	\N
+20	1	16	1	6	application/pdf	4	14572	Plan: Developing Research Strategies.pdf	4	\N	\N	1	2021-11-13 18:40:21	2021-11-13 18:41:43	24	\N	\N
+21	1	17	1	6	application/pdf	4	14572	Gather: Finding What You Need.pdf	4	\N	\N	1	2021-11-13 18:40:30	2021-11-13 18:41:44	24	\N	\N
+22	1	\N	\N	7	application/pdf	4	14572	Introduction.pdf	2	\N	\N	1	2021-11-13 18:42:38	2021-11-13 18:42:38	25	\N	\N
+23	1	\N	\N	7	application/pdf	4	14572	Chapter 1: Interactions Affording Distan.pdf	2	\N	\N	1	2021-11-13 18:42:47	2021-11-13 18:42:47	25	\N	\N
+35	1	\N	\N	9	application/pdf	4	14572	The internet in LAC will remain free, pu.pdf	2	\N	\N	1	2021-11-13 18:46:18	2021-11-13 18:46:18	26	\N	\N
+24	1	\N	\N	7	application/pdf	4	14572	Chapter 2: Learning Science at a Distanc.pdf	2	\N	\N	1	2021-11-13 18:42:56	2021-11-13 18:42:56	25	\N	\N
+25	1	\N	\N	7	application/pdf	4	14572	Chapter 3: Leadership Strategies for Coo.pdf	2	\N	\N	1	2021-11-13 18:43:05	2021-11-13 18:43:05	25	\N	\N
+26	1	\N	\N	7	application/pdf	4	14572	Chapter 4: Toward New Models of Flexible.pdf	2	\N	\N	1	2021-11-13 18:43:15	2021-11-13 18:43:15	25	\N	\N
+27	1	22	1	7	application/pdf	4	14572	Introduction.pdf	4	\N	\N	1	2021-11-13 18:42:38	2021-11-13 18:44:55	25	\N	\N
+36	1	\N	\N	9	application/pdf	4	14572	Free Internet?.pdf	2	\N	\N	1	2021-11-13 18:46:28	2021-11-13 18:46:28	26	\N	\N
+28	1	23	1	7	application/pdf	4	14572	Chapter 1: Interactions Affording Distan.pdf	4	\N	\N	1	2021-11-13 18:42:47	2021-11-13 18:44:55	25	\N	\N
+37	1	\N	\N	9	application/pdf	4	14572	Risks and challenges for freedom of expr.pdf	2	\N	\N	1	2021-11-13 18:46:37	2021-11-13 18:46:37	26	\N	\N
+39	1	34	1	9	application/pdf	4	14572	Imagining the Internet: Open, closed or .pdf	4	\N	\N	1	2021-11-13 18:46:09	2021-11-13 18:48:13	26	\N	\N
+40	1	35	1	9	application/pdf	4	14572	The internet in LAC will remain free, pu.pdf	4	\N	\N	1	2021-11-13 18:46:18	2021-11-13 18:48:14	26	\N	\N
+33	1	\N	\N	9	application/pdf	4	14572	Internet, openness and the future of the.pdf	2	\N	\N	1	2021-11-13 18:46:01	2021-11-13 18:46:01	26	\N	\N
+34	1	\N	\N	9	application/pdf	4	14572	Imagining the Internet: Open, closed or .pdf	2	\N	\N	1	2021-11-13 18:46:09	2021-11-13 18:46:09	26	\N	\N
+41	1	36	1	9	application/pdf	4	14572	Free Internet?.pdf	4	\N	\N	1	2021-11-13 18:46:28	2021-11-13 18:48:14	26	\N	\N
+42	1	37	1	9	application/pdf	4	14572	Risks and challenges for freedom of expr.pdf	4	\N	\N	1	2021-11-13 18:46:37	2021-11-13 18:48:14	26	\N	\N
+43	1	\N	\N	10	application/pdf	3	14572	Lost Tracks: Buffalo National Park, 1909-1939.pdf	2	\N	\N	1	2021-11-13 18:48:33	2021-11-13 18:48:33	27	\N	\N
+44	1	\N	\N	11	application/pdf	3	14572	Dreamwork.pdf	2	\N	\N	1	2021-11-13 18:49:41	2021-11-13 18:49:41	28	\N	\N
+45	1	44	1	11	application/pdf	3	14572	Dreamwork.pdf	4	\N	\N	1	2021-11-13 18:49:41	2021-11-13 18:50:05	28	\N	\N
+76	1	\N	\N	17	application/pdf	4	14572	Enacting Openness in ICT4D Research.pdf	2	\N	\N	1	2021-11-13 19:05:26	2021-11-13 19:05:26	34	\N	\N
+58	1	\N	\N	14	application/pdf	4	14572	Chapter 1: Mind Control—Internal or Exte.pdf	2	\N	\N	1	2021-11-13 18:57:18	2021-11-13 18:57:18	31	\N	\N
+46	1	\N	\N	12	application/pdf	4	14572	Catalyzing Access through Social and Tec.pdf	2	\N	\N	1	2021-11-13 18:51:25	2021-11-13 18:51:25	29	\N	\N
+47	1	\N	\N	12	application/pdf	4	14572	Catalyzing Access via Telecommunications.pdf	2	\N	\N	1	2021-11-13 18:51:34	2021-11-13 18:51:34	29	\N	\N
+48	1	\N	\N	12	application/pdf	4	14572	Access to Knowledge as a New Paradigm fo.pdf	2	\N	\N	1	2021-11-13 18:51:43	2021-11-13 18:51:43	29	\N	\N
+49	1	46	1	12	application/pdf	4	14572	Catalyzing Access through Social and Tec.pdf	4	\N	\N	1	2021-11-13 18:51:25	2021-11-13 18:53:07	29	\N	\N
+50	1	47	1	12	application/pdf	4	14572	Catalyzing Access via Telecommunications.pdf	4	\N	\N	1	2021-11-13 18:51:34	2021-11-13 18:53:07	29	\N	\N
+51	1	48	1	12	application/pdf	4	14572	Access to Knowledge as a New Paradigm fo.pdf	4	\N	\N	1	2021-11-13 18:51:43	2021-11-13 18:53:08	29	\N	\N
+59	1	\N	\N	14	application/pdf	4	14572	Chapter 2: Classical Music and the Class.pdf	2	\N	\N	1	2021-11-13 18:57:27	2021-11-13 18:57:27	31	\N	\N
+60	1	\N	\N	14	application/pdf	4	14572	Chapter 3: Situated Cognition and Bricol.pdf	2	\N	\N	1	2021-11-13 18:57:36	2021-11-13 18:57:36	31	\N	\N
+61	1	\N	\N	14	application/pdf	4	14572	Chapter 4: Braitenberg’s Vehicle 2.pdf	2	\N	\N	1	2021-11-13 18:57:46	2021-11-13 18:57:46	31	\N	\N
+62	1	\N	\N	14	application/pdf	13	14572	Segmentation of Vascular Ultrasound Imag.pdf	2	\N	\N	1	2021-11-13 18:57:55	2021-11-13 18:57:55	31	\N	\N
+63	1	\N	\N	14	application/pdf	13	14572	The Canadian Nutrient File: Nutrient Val.pdf	2	\N	\N	1	2021-11-13 18:58:07	2021-11-13 18:58:07	31	\N	\N
+52	1	\N	\N	13	application/pdf	4	14572	Current State of Mobile Learning.pdf	2	\N	\N	1	2021-11-13 18:54:08	2021-11-13 18:54:08	30	\N	\N
+53	1	\N	\N	13	application/pdf	4	14572	A Model for Framing Mobile Learning.pdf	2	\N	\N	1	2021-11-13 18:54:17	2021-11-13 18:54:17	30	\N	\N
+54	1	\N	\N	13	application/pdf	4	14572	Mobile Distance Learning with PDAs: Deve.pdf	2	\N	\N	1	2021-11-13 18:54:26	2021-11-13 18:54:26	30	\N	\N
+55	1	52	1	13	application/pdf	4	14572	Current State of Mobile Learning.pdf	4	\N	\N	1	2021-11-13 18:54:08	2021-11-13 18:55:26	30	\N	\N
+56	1	53	1	13	application/pdf	4	14572	A Model for Framing Mobile Learning.pdf	4	\N	\N	1	2021-11-13 18:54:17	2021-11-13 18:55:26	30	\N	\N
+57	1	54	1	13	application/pdf	4	14572	Mobile Distance Learning with PDAs: Deve.pdf	4	\N	\N	1	2021-11-13 18:54:26	2021-11-13 18:55:26	30	\N	\N
+64	1	58	1	14	application/pdf	4	14572	Chapter 1: Mind Control—Internal or Exte.pdf	10	0	openAccess	1	2021-11-13 18:57:18	2021-11-13 19:01:13	31	521	2
+69	1	63	1	14	application/pdf	13	14572	The Canadian Nutrient File: Nutrient Val.pdf	10	0	openAccess	1	2021-11-13 18:58:07	2021-11-13 19:01:14	31	521	2
+65	1	59	1	14	application/pdf	4	14572	Chapter 2: Classical Music and the Class.pdf	10	0	openAccess	1	2021-11-13 18:57:27	2021-11-13 19:01:14	31	521	2
+66	1	60	1	14	application/pdf	4	14572	Chapter 3: Situated Cognition and Bricol.pdf	10	0	openAccess	1	2021-11-13 18:57:36	2021-11-13 19:01:14	31	521	2
+70	1	\N	\N	15	application/pdf	3	14572	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	2	\N	\N	1	2021-11-13 19:02:43	2021-11-13 19:02:43	32	\N	\N
+67	1	61	1	14	application/pdf	4	14572	Chapter 4: Braitenberg’s Vehicle 2.pdf	10	0	openAccess	1	2021-11-13 18:57:46	2021-11-13 19:01:14	31	521	2
+71	1	70	1	15	application/pdf	3	14572	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	4	\N	\N	1	2021-11-13 19:02:43	2021-11-13 19:03:13	32	\N	\N
+68	1	62	1	14	application/pdf	13	14572	Segmentation of Vascular Ultrasound Imag.pdf	10	0	openAccess	1	2021-11-13 18:57:55	2021-11-13 19:01:14	31	521	2
+72	1	\N	\N	16	application/pdf	3	14572	A Designer's Log: Case Studies in Instructional Design.pdf	2	\N	\N	1	2021-11-13 19:03:30	2021-11-13 19:03:30	33	\N	\N
+79	1	73	1	17	application/pdf	4	14572	Preface.pdf	4	\N	\N	1	2021-11-13 19:04:59	2021-11-13 19:08:05	34	\N	\N
+80	1	74	1	17	application/pdf	4	14572	Introduction.pdf	4	\N	\N	1	2021-11-13 19:05:08	2021-11-13 19:08:05	34	\N	\N
+81	1	75	1	17	application/pdf	4	14572	The Emergence of Open Development in a N.pdf	4	\N	\N	1	2021-11-13 19:05:17	2021-11-13 19:08:05	34	\N	\N
+73	1	\N	\N	17	application/pdf	4	14572	Preface.pdf	2	\N	\N	1	2021-11-13 19:04:59	2021-11-13 19:04:59	34	\N	\N
+74	1	\N	\N	17	application/pdf	4	14572	Introduction.pdf	2	\N	\N	1	2021-11-13 19:05:08	2021-11-13 19:05:08	34	\N	\N
+75	1	\N	\N	17	application/pdf	4	14572	The Emergence of Open Development in a N.pdf	2	\N	\N	1	2021-11-13 19:05:17	2021-11-13 19:05:17	34	\N	\N
+77	1	\N	\N	17	application/pdf	4	14572	Transparency and Development: Ethical Co.pdf	2	\N	\N	1	2021-11-13 19:05:35	2021-11-13 19:05:35	34	\N	\N
+78	1	\N	\N	17	application/pdf	4	14572	Open Educational Resources: Opportunitie.pdf	2	\N	\N	1	2021-11-13 19:05:45	2021-11-13 19:05:45	34	\N	\N
+82	1	76	1	17	application/pdf	4	14572	Enacting Openness in ICT4D Research.pdf	4	\N	\N	1	2021-11-13 19:05:26	2021-11-13 19:08:05	34	\N	\N
+83	1	77	1	17	application/pdf	4	14572	Transparency and Development: Ethical Co.pdf	4	\N	\N	1	2021-11-13 19:05:35	2021-11-13 19:08:05	34	\N	\N
+84	1	78	1	17	application/pdf	4	14572	Open Educational Resources: Opportunitie.pdf	4	\N	\N	1	2021-11-13 19:05:45	2021-11-13 19:08:05	34	\N	\N
 \.
 
 
@@ -9089,21 +9069,21 @@ COPY public.submission_search_objects (object_id, submission_id, type, assoc_id)
 --
 
 COPY public.submission_settings (submission_id, locale, setting_name, setting_value) FROM stdin;
-4		workType	1
-7		workType	1
-1		workType	2
 11		workType	2
+4		workType	1
 17		workType	1
+1		workType	2
+7		workType	1
 8		workType	2
+12		workType	1
 2		workType	1
 5		workType	2
-14		workType	1
 3		workType	2
-12		workType	1
+14		workType	1
 9		workType	1
 6		workType	1
-10		workType	2
 15		workType	2
+10		workType	2
 13		workType	1
 16		workType	2
 \.
@@ -9114,10 +9094,10 @@ COPY public.submission_settings (submission_id, locale, setting_name, setting_va
 --
 
 COPY public.submission_supplementary_files (file_id, revision) FROM stdin;
-64	1
-65	1
-70	1
-71	1
+62	1
+63	1
+68	1
+69	1
 \.
 
 
@@ -9126,23 +9106,23 @@ COPY public.submission_supplementary_files (file_id, revision) FROM stdin;
 --
 
 COPY public.submissions (submission_id, locale, context_id, section_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, status, submission_progress, work_type) FROM stdin;
-4	\N	1	\N	4	2021-10-21 04:07:06	2021-10-21 04:05:41	2021-10-21 04:05:41	5	1	0	0
-7	\N	1	\N	7	2021-10-21 04:15:43	2021-10-21 04:14:52	2021-10-21 04:14:52	4	1	0	0
-1	\N	1	\N	1	2021-10-21 03:59:57	2021-10-21 03:59:29	2021-10-21 03:59:29	4	1	0	0
-11	\N	1	\N	11	2021-10-21 04:21:47	2021-10-21 04:20:30	2021-10-21 04:21:07	4	1	0	0
-17	\N	1	\N	17	2021-10-21 04:40:05	2021-10-21 04:39:19	2021-10-21 04:39:19	2	1	0	0
-8	\N	1	\N	8	2021-10-21 04:16:05	2021-10-21 04:16:05	2021-10-21 04:16:05	1	1	0	0
-2	\N	1	\N	2	2021-10-21 04:02:58	2021-10-21 04:02:17	2021-10-21 04:02:17	3	1	0	0
-5	\N	1	\N	5	2021-10-21 04:09:45	2021-10-21 04:08:01	2021-10-21 04:08:01	5	3	0	0
-14	\N	1	\N	14	2021-10-21 04:33:46	2021-10-21 04:30:22	2021-10-21 04:30:22	5	3	0	0
-3	\N	1	\N	3	2021-10-21 04:03:48	2021-10-21 04:03:48	2021-10-21 04:03:48	1	1	0	0
-12	\N	1	\N	12	2021-10-21 04:24:42	2021-10-21 04:23:40	2021-10-21 04:24:16	2	1	0	0
-9	\N	1	\N	9	2021-10-21 04:18:43	2021-10-21 04:18:28	2021-10-21 04:18:28	2	1	0	0
-6	\N	1	\N	6	2021-10-21 04:12:11	2021-10-21 04:11:31	2021-10-21 04:11:31	2	1	0	0
-10	\N	1	\N	10	2021-10-21 04:20:01	2021-10-21 04:20:01	2021-10-21 04:20:01	1	1	0	0
-15	\N	1	\N	15	2021-10-21 04:34:33	2021-10-21 04:34:22	2021-10-21 04:34:22	3	1	0	0
-13	\N	1	\N	13	2021-10-21 04:27:53	2021-10-21 04:26:04	2021-10-21 04:27:03	4	1	0	0
-16	\N	1	\N	16	2021-10-21 04:36:08	2021-10-21 04:35:20	2021-10-21 04:35:42	3	1	0	0
+11	\N	1	\N	11	2021-11-13 18:51:06	2021-11-13 18:49:56	2021-11-13 18:50:31	4	1	0	0
+4	\N	1	\N	4	2021-11-13 18:37:21	2021-11-13 18:36:02	2021-11-13 18:36:02	5	1	0	0
+1	\N	1	\N	1	2021-11-13 18:30:47	2021-11-13 18:30:20	2021-11-13 18:30:20	4	1	0	0
+17	\N	1	\N	17	2021-11-13 19:08:31	2021-11-13 19:07:48	2021-11-13 19:07:48	2	1	0	0
+7	\N	1	\N	7	2021-11-13 18:45:27	2021-11-13 18:44:41	2021-11-13 18:44:41	4	1	0	0
+8	\N	1	\N	8	2021-11-13 18:45:48	2021-11-13 18:45:48	2021-11-13 18:45:48	1	1	0	0
+12	\N	1	\N	12	2021-11-13 18:53:54	2021-11-13 18:52:54	2021-11-13 18:53:29	2	1	0	0
+2	\N	1	\N	2	2021-11-13 18:33:31	2021-11-13 18:32:56	2021-11-13 18:32:56	3	1	0	0
+5	\N	1	\N	5	2021-11-13 18:39:49	2021-11-13 18:38:13	2021-11-13 18:38:13	5	3	0	0
+3	\N	1	\N	3	2021-11-13 18:34:19	2021-11-13 18:34:18	2021-11-13 18:34:18	1	1	0	0
+14	\N	1	\N	14	2021-11-13 19:02:28	2021-11-13 18:59:19	2021-11-13 18:59:19	5	3	0	0
+9	\N	1	\N	9	2021-11-13 18:48:13	2021-11-13 18:48:00	2021-11-13 18:48:00	2	1	0	0
+6	\N	1	\N	6	2021-11-13 18:42:10	2021-11-13 18:41:31	2021-11-13 18:41:31	2	1	0	0
+15	\N	1	\N	15	2021-11-13 19:03:13	2021-11-13 19:03:03	2021-11-13 19:03:03	3	1	0	0
+10	\N	1	\N	10	2021-11-13 18:49:28	2021-11-13 18:49:27	2021-11-13 18:49:27	1	1	0	0
+13	\N	1	\N	13	2021-11-13 18:56:58	2021-11-13 18:55:13	2021-11-13 18:56:09	4	1	0	0
+16	\N	1	\N	16	2021-11-13 19:04:45	2021-11-13 19:04:00	2021-11-13 19:04:20	3	1	0	0
 \.
 
 
@@ -9534,29 +9514,18 @@ COPY public.user_settings (user_id, locale, setting_name, assoc_type, assoc_id, 
 16	en_US	familyName	0	0	Hellier	string
 16	fr_CA	familyName	0	0		string
 16	en_US	preferredPublicName	0	0		string
-10	en_US	signature	0	0		string
-10	fr_CA	affiliation	0	0		string
-10	en_US	givenName	0	0	Adela	string
-10	fr_CA	givenName	0	0		string
+10	en_US	affiliation	0	0	State University of New York	string
 10	en_US	familyName	0	0	Gallego	string
 10	fr_CA	familyName	0	0		string
-10	en_US	preferredPublicName	0	0		string
 10	fr_CA	preferredPublicName	0	0		string
 10		orcid	0	0		string
 12	en_US	biography	0	0		string
-12	fr_CA	biography	0	0		string
-12	en_US	signature	0	0		string
-12	fr_CA	signature	0	0		string
-12	fr_CA	affiliation	0	0		string
-12	en_US	givenName	0	0	Gonzalo	string
-12	fr_CA	givenName	0	0		string
-12	en_US	familyName	0	0	Favio	string
-12	fr_CA	familyName	0	0		string
-12	en_US	preferredPublicName	0	0		string
-12	fr_CA	preferredPublicName	0	0		string
-12		orcid	0	0		string
+10	en_US	signature	0	0		string
 10	fr_CA	signature	0	0		string
-10	en_US	affiliation	0	0	State University of New York	string
+10	fr_CA	affiliation	0	0		string
+10	en_US	givenName	0	0	Adela	string
+10	fr_CA	givenName	0	0		string
+10	en_US	preferredPublicName	0	0		string
 16	fr_CA	preferredPublicName	0	0		string
 16		orcid	0	0		string
 17	en_US	biography	0	0		string
@@ -9625,17 +9594,28 @@ COPY public.user_settings (user_id, locale, setting_name, assoc_type, assoc_id, 
 30	en_US	givenName	0	0	Mohamed	string
 30	en_US	familyName	0	0	Ally	string
 10	fr_CA	biography	0	0		string
+12	fr_CA	biography	0	0		string
+12	en_US	signature	0	0		string
+12	fr_CA	signature	0	0		string
 12	en_US	affiliation	0	0	Madrid	string
+12	fr_CA	affiliation	0	0		string
+12	en_US	givenName	0	0	Gonzalo	string
+12	fr_CA	givenName	0	0		string
+12	en_US	familyName	0	0	Favio	string
+12	fr_CA	familyName	0	0		string
+12	en_US	preferredPublicName	0	0		string
+12	fr_CA	preferredPublicName	0	0		string
+12		orcid	0	0		string
 31	en_US	affiliation	0	0	University of Alberta	string
 31	en_US	givenName	0	0	Michael	string
 31	en_US	familyName	0	0	Dawson	string
-32	en_US	affiliation	0	0	University of Calgary	string
 32	en_US	givenName	0	0	Max	string
 32	en_US	familyName	0	0	Foran	string
+10	en_US	biography	0	0		string
+32	en_US	affiliation	0	0	University of Calgary	string
 33	en_US	affiliation	0	0	London School of Economics	string
 33	en_US	givenName	0	0	Michael	string
 33	en_US	familyName	0	0	Power	string
-10	en_US	biography	0	0		string
 34	en_US	affiliation	0	0	International Development Research Centre	string
 34	en_US	givenName	0	0	Matthew	string
 34	en_US	familyName	0	0	Smith	string
@@ -9707,40 +9687,40 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-6	minoue	$2y$10$ligXcmfgJTElRAGjZtXe7.aG7azZL4Lgk2Hss6C.6D89.v7eRnWna	minoue@mailinator.com				\N	JP		\N	\N	2021-10-21 03:55:58	\N	2021-10-21 04:11:59	0	\N	\N	0	\N	1
-25	dkennepohl	$2y$10$xazLUObxanINL1t9D9uejuZnpQy5S31ghn1MnU5JfsZC8CQACftJu	dkennepohl@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:12:32	\N	2021-10-21 04:12:32	0	\N	\N	0	\N	1
-30	mally	$2y$10$Uom3npHGgFi2imnvxm1Jy.rFzjDalwaxFnPvaT/JSNnzpmv4pmgry	mally@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:24:48	\N	2021-10-21 04:24:48	0	\N	\N	0	\N	1
-4	dbuskins	$2y$10$rZTfPJSSAG2iVh815RMBheaDFki21PpxQ9u9llLnlVLxZAIu74SlG	dbuskins@mailinator.com				\N	US		\N	\N	2021-10-21 03:55:43	\N	2021-10-21 03:55:43	0	\N	\N	0	\N	1
-5	sberardo	$2y$10$61N35wmcZI8s3nq4WGKsG.714mH50N81ZybPPW00/LCYbIAqbGsi.	sberardo@mailinator.com				\N	CA		\N	\N	2021-10-21 03:55:51	\N	2021-10-21 03:55:51	0	\N	\N	0	\N	1
-7	jjanssen	$2y$10$zdZca3pgLUp9AKzEFZC0iuAq8cUpaLmXIA7u4bAFOUxDhyOQ.X7me	jjanssen@mailinator.com				\N	NL		\N	\N	2021-10-21 03:56:06	\N	2021-10-21 03:56:06	0	\N	\N	0	\N	1
-9	amccrae	$2y$10$Om75gETK8pLprzmr0gwDUeCjws.Pn/RajOjicp7hHXrGLkZErPnM6	amccrae@mailinator.com				\N	CA		\N	\N	2021-10-21 03:56:25	\N	2021-10-21 03:56:25	0	\N	\N	0	\N	1
-11	alzacharia	$2y$10$Kbw.GO7yfvT0ouuViPsZL.BAFJ9jpfHppI8nLRlut7BjG3uPc/0YK	alzacharia@mailinator.com				\N	GH		\N	\N	2021-10-21 03:56:46	\N	2021-10-21 03:56:46	0	\N	\N	0	\N	1
-13	mfritz	$2y$10$pvK4UCUUu/HrdeYL9rW/3e/mNBg6D0.l.hV9mMVU4EOknSzguJBEe	mfritz@mailinator.com				\N	BE		\N	\N	2021-10-21 03:57:08	\N	2021-10-21 03:57:08	0	\N	\N	0	\N	1
-14	svogt	$2y$10$CEcT8LCRA0nheO79AOpBjeaEK2Ke3yRTeK6ghv1ByECFqKjp7zjH6	svogt@mailinator.com				\N	CL		\N	\N	2021-10-21 03:57:20	\N	2021-10-21 03:57:20	0	\N	\N	0	\N	1
-15	gcox	$2y$10$QYnp4s8kQ.J4UgYAioJu5u.nGVrGBLnjs/j2SCPjoMUudhzL11Sku	gcox@mailinator.com				\N	US		\N	\N	2021-10-21 03:57:33	\N	2021-10-21 03:57:33	0	\N	\N	0	\N	1
-16	shellier	$2y$10$/xngEFBFk.Ubw.DBqDXQ5O8ZFKISshFFUIupmnesao3dXJmXEtlOi	shellier@mailinator.com				\N	ZA		\N	\N	2021-10-21 03:57:47	\N	2021-10-21 03:57:47	0	\N	\N	0	\N	1
-17	cturner	$2y$10$G0B1JmCgweVpOfeNWDn1NeKAkgQC8z1rpqiaQHpP4bePUeENecmhO	cturner@mailinator.com				\N	GB		\N	\N	2021-10-21 03:58:01	\N	2021-10-21 03:58:01	0	\N	\N	0	\N	1
-18	skumar	$2y$10$HTmI41dtxL4tiYT84qObAeHWJ.WP1BtVFnpuPJld2H/nuLY6BhSiq	skumar@mailinator.com				\N	SG		\N	\N	2021-10-21 03:58:16	\N	2021-10-21 03:58:16	0	\N	\N	0	\N	1
-26	fperini	$2y$10$1435X6hPeQxVZu5QgU2b2O7DVdu/0.3o5kI3SM9w6rwOZVXYt3p6m	fperini@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:16:10	\N	2021-10-21 04:16:10	0	\N	\N	0	\N	1
-2	rvaca	$2y$10$jXGI8.YiGn4vd5NQdO.vqOGoqVEhQnD4LDd24lGmNH/aoI/Hkes8m	rvaca@mailinator.com				\N	MX		\N	\N	2021-10-21 03:55:30	\N	2021-10-21 03:58:28	0	\N	\N	0	\N	1
-1	admin	$2y$10$5xdJcGyBFIsoovKCiCqZfuRiAmfEoKZk2dKmg3YdqiqqYaIwWBvM2	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2021-10-21 03:54:35	\N	2021-10-21 03:58:32	0	\N	\N	0	\N	1
-19	aclark	$2y$10$8BWKTGmeEydlqbdw0drQy.riS10enw0OZd3VFESviuFqQHCad3Tci	aclark@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 03:59:00	\N	2021-10-21 03:59:00	0	\N	\N	0	\N	1
-34	msmith	$2y$10$wROrdNj3gK3ShlgyBfH6D.s36nHAfqiiS3EoLwXNQ/xlSgJzj4V0m	msmith@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:36:14	\N	2021-10-21 04:36:14	0	\N	\N	0	\N	1
-20	afinkel	$2y$10$pHuYFX5.tc3lxf55wBOL2u1KHWuswIBIfX19bWbG/bQuXehe.qrSa	afinkel@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:00:04	\N	2021-10-21 04:00:04	0	\N	\N	0	\N	1
-21	bbarnetson	$2y$10$MS8asFy6PGdE53BzEpjX8ecKF3jVDMhz1VITeibL9RaHIGh6MZgT6	bbarnetson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:03:05	\N	2021-10-21 04:03:05	0	\N	\N	0	\N	1
-22	bbeaty	$2y$10$JYwXS5yWzqJTILzOdP3roueBUARMv9pvQHRGi4TsRJWZx6h/N7xcC	bbeaty@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:03:53	\N	2021-10-21 04:03:53	0	\N	\N	0	\N	1
-27	jbrower	$2y$10$a4.s247.zwMfioUamSMJyerXpgGo1GfbZfxfzRMhGLWfC08khl4sm	jbrower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:18:55	\N	2021-10-21 04:18:56	0	\N	\N	0	\N	1
-23	callan	$2y$10$9ZywR81JJWfN9oN/hoxmIug.rwplKebSJLAcxxF8YKobBwF7zwzFe	callan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:07:15	\N	2021-10-21 04:07:15	0	\N	\N	0	\N	1
-24	dbernnard	$2y$10$bX1CVCisu08mUu2DYfZRcOEtSk/g58y5ea.jGUa.UuijRN4uwwxli	dbernnard@mailinator.com	\N	\N	\N	\N	US		\N	\N	2021-10-21 04:09:51	\N	2021-10-21 04:09:51	0	\N	\N	0	\N	1
-12	gfavio	$2y$10$x2GzMijfKiXZ.ILILi/YN.oZOr9o2wDY6ZVCc0YvMy4.iY8Kek5EW	gfavio@mailinator.com				\N	ES		\N	\N	2021-10-21 03:56:56	\N	2021-10-21 04:27:20	0	\N	\N	0	\N	1
-28	jlockehart	$2y$10$EQZmrCzpZ0Ja7Sj1pEbfa.Ll.9Y81h/OIw9AkSCay5SR.iLy90PNS	jlockehart@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:20:06	\N	2021-10-21 04:20:07	0	\N	\N	0	\N	1
-3	dbarnes	$2y$10$rjQ37V8ErOkzx1i0jJWuwe86qSXz/YdxaIXPGFyRV5POrOpijYdJq	dbarnes@mailinator.com				\N	AU		\N	\N	2021-10-21 03:55:36	\N	2021-10-21 04:39:22	0	\N	\N	0	\N	1
-29	lelder	$2y$10$daoyFLGrJ39.dbk8/xRI2OwKawjz/8voDhRYoIRkz8jYaPYEY77te	lelder@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:21:58	\N	2021-10-21 04:21:58	0	\N	\N	0	\N	1
-8	phudson	$2y$10$4GDGJp1c0tWI4cvWtvZuIuQfRLJwJ4OeDIt/791wHsUpjWZdciZxa	phudson@mailinator.com				\N	CA		\N	\N	2021-10-21 03:56:16	\N	2021-10-21 04:24:29	0	\N	\N	0	\N	1
-31	mdawson	$2y$10$0b4x3dcvJpVSreN80lWM0OelV7hIllkpkVsCOjVEPDqeW7T.YNlBu	mdawson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:28:07	\N	2021-10-21 04:28:07	0	\N	\N	0	\N	1
-32	mforan	$2y$10$FCkv0zKkaohYrFS44Mq59u/XPBdTLa4A6MrLAsh4qOo1dDV4TWfJ.	mforan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:33:53	\N	2021-10-21 04:33:53	0	\N	\N	0	\N	1
-33	mpower	$2y$10$1VKDyuKz6ra00eQEpsJSEup.VH1yi7S0t72Xmh6QOBlnr5z4yCPIq	mpower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-10-21 04:34:41	\N	2021-10-21 04:34:42	0	\N	\N	0	\N	1
-10	agallego	$2y$10$35KgsLNQJiJ4SVQ7FMVO1.T/ALMCmoqT4.IpmNfE5GmZHOe.ewNCa	agallego@mailinator.com				\N	US		\N	\N	2021-10-21 03:56:35	\N	2021-10-21 04:35:58	0	\N	\N	0	\N	1
+6	minoue	$2y$10$C1ulWrqv14ncka34oCS2v.0l2m4VWBhDSkas4tzAhK2ESCokJAjTS	minoue@mailinator.com				\N	JP		\N	\N	2021-11-13 18:26:58	\N	2021-11-13 18:41:59	0	\N	\N	0	\N	1
+25	dkennepohl	$2y$10$kCMa6Ny4gxqq8c0LTWOgPe.bvUU2tJpkjRNVpfsW6S.BWHxwPG6ti	dkennepohl@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:42:29	\N	2021-11-13 18:42:29	0	\N	\N	0	\N	1
+30	mally	$2y$10$1XNcCDY5ks8MsaysOJViQuwg6ltAH16oSKn3d0gufmMYwxzBKI.yO	mally@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:54:00	\N	2021-11-13 18:54:00	0	\N	\N	0	\N	1
+4	dbuskins	$2y$10$56jbzEf5Iz8X0cQwHhIvxeWXjY3Gop.nSoD1QAJ9B9uc/vKj4kpYe	dbuskins@mailinator.com				\N	US		\N	\N	2021-11-13 18:26:43	\N	2021-11-13 18:26:43	0	\N	\N	0	\N	1
+5	sberardo	$2y$10$lfHPUvWr1Ft0dSmJ/O7rpeyync2L/lrPvcdFOS9d22vDj0Q/DB5Cq	sberardo@mailinator.com				\N	CA		\N	\N	2021-11-13 18:26:50	\N	2021-11-13 18:26:50	0	\N	\N	0	\N	1
+7	jjanssen	$2y$10$9xC4ajZ9K7ve6dzJjQUQ8.FrWsU5aJ7ZLeXFP8uBcDAPoWGnj3YSu	jjanssen@mailinator.com				\N	NL		\N	\N	2021-11-13 18:27:06	\N	2021-11-13 18:27:06	0	\N	\N	0	\N	1
+9	amccrae	$2y$10$.wldpXnWhAVGjPci43hCAeCalQ0laHRnQffE0DL.ti8s6fxok/A1W	amccrae@mailinator.com				\N	CA		\N	\N	2021-11-13 18:27:23	\N	2021-11-13 18:27:23	0	\N	\N	0	\N	1
+11	alzacharia	$2y$10$kN2hGZbqoREjk3sVdJP/8ug2O4s941zL7kc7Orwh.mvSr6x3vAKoe	alzacharia@mailinator.com				\N	GH		\N	\N	2021-11-13 18:27:43	\N	2021-11-13 18:27:43	0	\N	\N	0	\N	1
+13	mfritz	$2y$10$ccNv9jx704Rcd6U7KpOBZeX.8xxY2MpXNC5t2nk2/8lo.7xmNVEmu	mfritz@mailinator.com				\N	BE		\N	\N	2021-11-13 18:28:04	\N	2021-11-13 18:28:04	0	\N	\N	0	\N	1
+14	svogt	$2y$10$v64wmCQy3v/ouvy119DBeOn9AQ4OQlPPr38kg4eo8pZdhOafXxOa6	svogt@mailinator.com				\N	CL		\N	\N	2021-11-13 18:28:16	\N	2021-11-13 18:28:16	0	\N	\N	0	\N	1
+15	gcox	$2y$10$fTXvFA8tvRHkp9QnzBdcGeDqhB4qoUsXcp4KV/lo5htlY1TaYGrOO	gcox@mailinator.com				\N	US		\N	\N	2021-11-13 18:28:27	\N	2021-11-13 18:28:27	0	\N	\N	0	\N	1
+16	shellier	$2y$10$fbzKjt0Cw6OZn9tu/zcDfO71/gNL6rLnvN1JSr.ZoCHATqouzjed2	shellier@mailinator.com				\N	ZA		\N	\N	2021-11-13 18:28:40	\N	2021-11-13 18:28:40	0	\N	\N	0	\N	1
+17	cturner	$2y$10$yFZv.Ahix5utnDlQd5y8nej3div9BGqRzzZw0U8oo6hj10Wft9cvG	cturner@mailinator.com				\N	GB		\N	\N	2021-11-13 18:28:54	\N	2021-11-13 18:28:54	0	\N	\N	0	\N	1
+18	skumar	$2y$10$jIniS.DJzN3OZ390FOwHOeFDwVf1VQtOH35AE9lCC7PhuI2WLXnsu	skumar@mailinator.com				\N	SG		\N	\N	2021-11-13 18:29:07	\N	2021-11-13 18:29:07	0	\N	\N	0	\N	1
+26	fperini	$2y$10$bq4Mef.48imjl5r7Nd8qXOcUT1bSYtVFO3pOfQIAAKVrDlyQ.RexW	fperini@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:45:52	\N	2021-11-13 18:45:52	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$x4GJfpURfb5VI4w4htFFROcq6zqIWmTHfKpPqzh7Gpbc9h5rRhY2S	rvaca@mailinator.com				\N	MX		\N	\N	2021-11-13 18:26:30	\N	2021-11-13 18:29:19	0	\N	\N	0	\N	1
+1	admin	$2y$10$q1VthK2udf7XD7eKXlMJeuYSohjtw7q4qCVNKJhhDMW4nSfadABB6	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2021-11-13 18:25:36	\N	2021-11-13 18:29:24	0	\N	\N	0	\N	1
+19	aclark	$2y$10$vKZ5dCSNG1y5w/4CHZ8aquuQ34T0fVdQsB.FLSvCNz7IyjiF4uRoy	aclark@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:29:51	\N	2021-11-13 18:29:51	0	\N	\N	0	\N	1
+34	msmith	$2y$10$JRUgdqMfh0VPBhWtVl5gEOJDirHuZ/YSVVNcDy8gf0MrIcsA6g/Su	msmith@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 19:04:51	\N	2021-11-13 19:04:51	0	\N	\N	0	\N	1
+20	afinkel	$2y$10$mJgEGex4yyRsVQM5RrNckO7bKi8wAM2TpLq6U5RYErMgh3zbG//NC	afinkel@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:30:53	\N	2021-11-13 18:30:53	0	\N	\N	0	\N	1
+21	bbarnetson	$2y$10$1IItFA5MfRhtXfeor7A.KOj9LhIctL6.Ls/EPWcjYFL8OqJYby0Uq	bbarnetson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:33:39	\N	2021-11-13 18:33:39	0	\N	\N	0	\N	1
+22	bbeaty	$2y$10$i0oCiozHYzYW4BLJk9v3KuBkEfErpIb7FCdaZ9AFlVvRUBMEZkKu6	bbeaty@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:34:23	\N	2021-11-13 18:34:23	0	\N	\N	0	\N	1
+27	jbrower	$2y$10$1RBgaDHKaIJHbvdoiGtA3eOm3fawP/hvAWGDWTrIvo/xK/LyVBEe.	jbrower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:48:25	\N	2021-11-13 18:48:25	0	\N	\N	0	\N	1
+23	callan	$2y$10$te6a7o2dC2tqmKzKukYVQ.w9FYWcVdOnbw7tegMPE2CSDhVOfUL4e	callan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:37:29	\N	2021-11-13 18:37:29	0	\N	\N	0	\N	1
+24	dbernnard	$2y$10$vKqK.yd.6fRS5TovWVr1v.eIaVPCSDaPFPWA/GmK68GhZYp/JyGoO	dbernnard@mailinator.com	\N	\N	\N	\N	US		\N	\N	2021-11-13 18:39:55	\N	2021-11-13 18:39:55	0	\N	\N	0	\N	1
+12	gfavio	$2y$10$Cwn3DC89/M.43morIY6/w.twXfBLwkTwQDXj2uWEwuYtmpag.1b9S	gfavio@mailinator.com				\N	ES		\N	\N	2021-11-13 18:27:53	\N	2021-11-13 18:56:26	0	\N	\N	0	\N	1
+28	jlockehart	$2y$10$y1GzrCaacuytLJzDL83sDu6wLnpNuiP9yy4Os9.5qTWmLRrvszoDK	jlockehart@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:49:33	\N	2021-11-13 18:49:33	0	\N	\N	0	\N	1
+3	dbarnes	$2y$10$kkwyrSy8ZlbLsqtaXKDd.u.orxeFBM.erw5Vx47T2n6QThE5PSwmW	dbarnes@mailinator.com				\N	AU		\N	\N	2021-11-13 18:26:37	\N	2021-11-13 19:07:51	0	\N	\N	0	\N	1
+29	lelder	$2y$10$1iuzCYFeAwsFmBmZBeaZc.CuZS/4EyTWCiwMiSRa1VTv8.2QATFTG	lelder@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:51:16	\N	2021-11-13 18:51:17	0	\N	\N	0	\N	1
+8	phudson	$2y$10$lQ337oq8dV8ae8NMVttflOI9qvt53kHQe.EwixFsNhmMaB78O0PzG	phudson@mailinator.com				\N	CA		\N	\N	2021-11-13 18:27:14	\N	2021-11-13 18:53:41	0	\N	\N	0	\N	1
+31	mdawson	$2y$10$JyJNyViZt8ztidfgD/wIW.PM7vICZsk8MKviLDaNC3ONDxZubd5jG	mdawson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 18:57:10	\N	2021-11-13 18:57:10	0	\N	\N	0	\N	1
+32	mforan	$2y$10$e7VsFQs9UXtTtDlVt/Kb.ezbKW0tEPOA30RMHYgyiGSKvTpZPE/Cq	mforan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 19:02:35	\N	2021-11-13 19:02:35	0	\N	\N	0	\N	1
+33	mpower	$2y$10$1uTh/o9pNuW.R/szQFYzQufTahDKTrykHqXb4eyC2n5x9LOdNB8CG	mpower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-13 19:03:22	\N	2021-11-13 19:03:22	0	\N	\N	0	\N	1
+10	agallego	$2y$10$CgLJl7/sw8aOPLs08BDwLOi9qXBfv1FTqbchLxOqj4fWJeSGVhrGu	agallego@mailinator.com				\N	US		\N	\N	2021-11-13 18:27:33	\N	2021-11-13 19:04:35	0	\N	\N	0	\N	1
 \.
 
 
@@ -9749,37 +9729,37 @@ COPY public.users (user_id, username, password, email, url, phone, mailing_addre
 --
 
 COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2021-10-21 03:54:35	1	plugins.metadata	openurl10		0	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.metadata	dc11		0	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.metadata	mods34		0	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.pubIds	urn	URNPubIdPlugin	0	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.pubIds	doi	DOIPubIdPlugin	0	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.blocks	information	InformationBlockPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.generic	usageEvent		0	1
-1	0	0	0	2021-10-21 03:54:35	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.generic	acron		0	1
-1	2	0	0	2021-10-21 03:54:35	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	2	0	0	2021-10-21 03:54:35	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-1	0	0	0	2021-10-21 03:54:35	1	plugins.themes	default	DefaultThemePlugin	1	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.importexport	onix30		0	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.importexport	users		0	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.importexport	csv		0	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.importexport	native		0	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.paymethod	paypal		0	0
-1	0	0	0	2021-10-21 03:54:35	1	plugins.paymethod	manual		0	0
-3	2	1	4	2021-10-21 03:54:34	1	core	omp		0	1
+1	0	0	0	2021-11-13 18:25:36	1	plugins.metadata	openurl10		0	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.metadata	dc11		0	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.metadata	mods34		0	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.pubIds	urn	URNPubIdPlugin	0	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.pubIds	doi	DOIPubIdPlugin	0	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.blocks	information	InformationBlockPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.generic	usageEvent		0	1
+1	0	0	0	2021-11-13 18:25:36	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.generic	acron		0	1
+1	2	0	0	2021-11-13 18:25:36	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	2	0	0	2021-11-13 18:25:36	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	0	0	0	2021-11-13 18:25:36	1	plugins.themes	default	DefaultThemePlugin	1	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.importexport	onix30		0	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.importexport	users		0	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.importexport	csv		0	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.importexport	native		0	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.paymethod	paypal		0	0
+1	0	0	0	2021-11-13 18:25:36	1	plugins.paymethod	manual		0	0
+3	2	1	4	2021-11-13 18:25:35	1	core	omp		0	1
 \.
 
 
@@ -10123,14 +10103,14 @@ SELECT pg_catalog.setval('public.submission_chapters_chapter_id_seq', 71, true);
 -- Name: submission_comments_comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
 --
 
-SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 4, true);
+SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
 
 
 --
 -- Name: submission_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
 --
 
-SELECT pg_catalog.setval('public.submission_files_file_id_seq', 87, true);
+SELECT pg_catalog.setval('public.submission_files_file_id_seq', 84, true);
 
 
 --
