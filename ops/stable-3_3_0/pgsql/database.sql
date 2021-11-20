@@ -4362,157 +4362,157 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	7	2021-11-12 23:09:54	268435458	submission.event.general.metadataUpdated	0
-2	515	1	7	2021-11-12 23:10:03	1342177281	submission.event.fileUploaded	0
-3	1048585	1	7	2021-11-12 23:10:03	1342177288	submission.event.fileRevised	0
-4	515	1	7	2021-11-12 23:10:06	1342177296	submission.event.fileEdited	0
-5	1048585	1	7	2021-11-12 23:10:06	1342177296	submission.event.fileEdited	0
-6	1048585	1	7	2021-11-12 23:10:10	268435458	submission.event.general.metadataUpdated	0
-7	1048585	1	7	2021-11-12 23:10:12	268435457	submission.event.submissionSubmitted	0
-8	1048585	2	8	2021-11-12 23:10:20	268435458	submission.event.general.metadataUpdated	0
-9	515	2	8	2021-11-12 23:10:29	1342177281	submission.event.fileUploaded	0
-10	1048585	2	8	2021-11-12 23:10:29	1342177288	submission.event.fileRevised	0
-11	515	2	8	2021-11-12 23:10:31	1342177296	submission.event.fileEdited	0
-12	1048585	2	8	2021-11-12 23:10:31	1342177296	submission.event.fileEdited	0
-13	1048585	2	8	2021-11-12 23:10:37	268435458	submission.event.general.metadataUpdated	0
-14	1048585	2	8	2021-11-12 23:10:39	268435457	submission.event.submissionSubmitted	0
-15	1048585	2	3	2021-11-12 23:10:45	268435462	publication.event.published	0
-16	1048585	3	9	2021-11-12 23:10:53	268435458	submission.event.general.metadataUpdated	0
-17	515	3	9	2021-11-12 23:11:03	1342177281	submission.event.fileUploaded	0
-18	1048585	3	9	2021-11-12 23:11:03	1342177288	submission.event.fileRevised	0
-19	515	3	9	2021-11-12 23:11:05	1342177296	submission.event.fileEdited	0
-20	1048585	3	9	2021-11-12 23:11:05	1342177296	submission.event.fileEdited	0
-21	1048585	3	9	2021-11-12 23:11:15	268435458	submission.event.general.metadataUpdated	0
-22	1048585	3	9	2021-11-12 23:11:16	268435457	submission.event.submissionSubmitted	0
-23	1048585	3	3	2021-11-12 23:11:23	268435462	publication.event.published	0
-24	1048585	4	10	2021-11-12 23:11:32	268435458	submission.event.general.metadataUpdated	0
-25	515	4	10	2021-11-12 23:11:41	1342177281	submission.event.fileUploaded	0
-26	1048585	4	10	2021-11-12 23:11:41	1342177288	submission.event.fileRevised	0
-27	515	4	10	2021-11-12 23:11:44	1342177296	submission.event.fileEdited	0
-28	1048585	4	10	2021-11-12 23:11:44	1342177296	submission.event.fileEdited	0
-29	1048585	4	10	2021-11-12 23:11:48	268435458	submission.event.general.metadataUpdated	0
-30	1048585	4	10	2021-11-12 23:11:49	268435457	submission.event.submissionSubmitted	0
-31	1048585	4	3	2021-11-12 23:11:55	268435462	publication.event.published	0
-32	1048585	5	11	2021-11-12 23:12:04	268435458	submission.event.general.metadataUpdated	0
-33	515	5	11	2021-11-12 23:12:13	1342177281	submission.event.fileUploaded	0
-34	1048585	5	11	2021-11-12 23:12:13	1342177288	submission.event.fileRevised	0
-35	515	5	11	2021-11-12 23:12:16	1342177296	submission.event.fileEdited	0
-36	1048585	5	11	2021-11-12 23:12:16	1342177296	submission.event.fileEdited	0
-37	1048585	5	11	2021-11-12 23:12:23	268435458	submission.event.general.metadataUpdated	0
-38	1048585	5	11	2021-11-12 23:12:24	268435457	submission.event.submissionSubmitted	0
-39	1048585	5	3	2021-11-12 23:12:30	268435462	publication.event.published	0
-40	1048585	6	12	2021-11-12 23:12:38	268435458	submission.event.general.metadataUpdated	0
-41	515	6	12	2021-11-12 23:12:47	1342177281	submission.event.fileUploaded	0
-42	1048585	6	12	2021-11-12 23:12:47	1342177288	submission.event.fileRevised	0
-43	515	6	12	2021-11-12 23:12:50	1342177296	submission.event.fileEdited	0
-44	1048585	6	12	2021-11-12 23:12:50	1342177296	submission.event.fileEdited	0
-45	1048585	6	12	2021-11-12 23:12:54	268435458	submission.event.general.metadataUpdated	0
-46	1048585	6	12	2021-11-12 23:12:55	268435457	submission.event.submissionSubmitted	0
-47	1048585	6	3	2021-11-12 23:13:01	268435462	publication.event.published	0
-48	1048585	7	13	2021-11-12 23:13:09	268435458	submission.event.general.metadataUpdated	0
-49	515	7	13	2021-11-12 23:13:19	1342177281	submission.event.fileUploaded	0
-50	1048585	7	13	2021-11-12 23:13:19	1342177288	submission.event.fileRevised	0
-51	515	7	13	2021-11-12 23:13:21	1342177296	submission.event.fileEdited	0
-52	1048585	7	13	2021-11-12 23:13:21	1342177296	submission.event.fileEdited	0
-53	1048585	7	13	2021-11-12 23:13:31	268435458	submission.event.general.metadataUpdated	0
-54	1048585	7	13	2021-11-12 23:13:32	268435457	submission.event.submissionSubmitted	0
-55	1048585	7	3	2021-11-12 23:13:40	268435462	publication.event.published	0
-56	1048585	8	14	2021-11-12 23:13:48	268435458	submission.event.general.metadataUpdated	0
-57	515	8	14	2021-11-12 23:13:57	1342177281	submission.event.fileUploaded	0
-58	1048585	8	14	2021-11-12 23:13:57	1342177288	submission.event.fileRevised	0
-59	515	8	14	2021-11-12 23:14:00	1342177296	submission.event.fileEdited	0
-60	1048585	8	14	2021-11-12 23:14:00	1342177296	submission.event.fileEdited	0
-61	1048585	8	14	2021-11-12 23:14:03	268435458	submission.event.general.metadataUpdated	0
-62	1048585	8	14	2021-11-12 23:14:04	268435457	submission.event.submissionSubmitted	0
-63	1048585	8	3	2021-11-12 23:14:12	268435462	publication.event.published	0
-64	1048585	9	15	2021-11-12 23:14:20	268435458	submission.event.general.metadataUpdated	0
-65	515	9	15	2021-11-12 23:14:29	1342177281	submission.event.fileUploaded	0
-66	1048585	9	15	2021-11-12 23:14:29	1342177288	submission.event.fileRevised	0
-67	515	9	15	2021-11-12 23:14:32	1342177296	submission.event.fileEdited	0
-68	1048585	9	15	2021-11-12 23:14:32	1342177296	submission.event.fileEdited	0
-69	1048585	9	15	2021-11-12 23:14:37	268435458	submission.event.general.metadataUpdated	0
-70	1048585	9	15	2021-11-12 23:14:38	268435457	submission.event.submissionSubmitted	0
-71	1048585	9	3	2021-11-12 23:14:45	268435462	publication.event.published	0
-72	1048585	10	16	2021-11-12 23:14:53	268435458	submission.event.general.metadataUpdated	0
-73	515	10	16	2021-11-12 23:15:03	1342177281	submission.event.fileUploaded	0
-74	1048585	10	16	2021-11-12 23:15:03	1342177288	submission.event.fileRevised	0
-75	515	10	16	2021-11-12 23:15:05	1342177296	submission.event.fileEdited	0
-76	1048585	10	16	2021-11-12 23:15:05	1342177296	submission.event.fileEdited	0
-77	1048585	10	16	2021-11-12 23:15:10	268435458	submission.event.general.metadataUpdated	0
-78	1048585	10	16	2021-11-12 23:15:11	268435457	submission.event.submissionSubmitted	0
-79	1048585	10	3	2021-11-12 23:15:18	268435462	publication.event.published	0
-80	1048585	11	17	2021-11-12 23:15:26	268435458	submission.event.general.metadataUpdated	0
-81	515	11	17	2021-11-12 23:15:35	1342177281	submission.event.fileUploaded	0
-82	1048585	11	17	2021-11-12 23:15:35	1342177288	submission.event.fileRevised	0
-83	515	11	17	2021-11-12 23:15:38	1342177296	submission.event.fileEdited	0
-84	1048585	11	17	2021-11-12 23:15:38	1342177296	submission.event.fileEdited	0
-85	1048585	11	17	2021-11-12 23:15:46	268435458	submission.event.general.metadataUpdated	0
-86	1048585	11	17	2021-11-12 23:15:47	268435457	submission.event.submissionSubmitted	0
-87	1048585	11	3	2021-11-12 23:15:54	268435462	publication.event.published	0
-88	1048585	12	18	2021-11-12 23:16:02	268435458	submission.event.general.metadataUpdated	0
-89	515	12	18	2021-11-12 23:16:12	1342177281	submission.event.fileUploaded	0
-90	1048585	12	18	2021-11-12 23:16:12	1342177288	submission.event.fileRevised	0
-91	515	12	18	2021-11-12 23:16:15	1342177296	submission.event.fileEdited	0
-92	1048585	12	18	2021-11-12 23:16:15	1342177296	submission.event.fileEdited	0
-93	1048585	12	18	2021-11-12 23:16:20	268435458	submission.event.general.metadataUpdated	0
-94	1048585	12	18	2021-11-12 23:16:21	268435457	submission.event.submissionSubmitted	0
-95	1048585	12	3	2021-11-12 23:16:28	268435462	publication.event.published	0
-96	1048585	13	19	2021-11-12 23:16:36	268435458	submission.event.general.metadataUpdated	0
-97	515	13	19	2021-11-12 23:16:45	1342177281	submission.event.fileUploaded	0
-98	1048585	13	19	2021-11-12 23:16:45	1342177288	submission.event.fileRevised	0
-99	515	13	19	2021-11-12 23:16:48	1342177296	submission.event.fileEdited	0
-100	1048585	13	19	2021-11-12 23:16:48	1342177296	submission.event.fileEdited	0
-101	1048585	13	19	2021-11-12 23:16:53	268435458	submission.event.general.metadataUpdated	0
-102	1048585	13	19	2021-11-12 23:16:54	268435457	submission.event.submissionSubmitted	0
-103	1048585	13	3	2021-11-12 23:17:01	268435462	publication.event.published	0
-104	1048585	14	20	2021-11-12 23:17:09	268435458	submission.event.general.metadataUpdated	0
-105	515	14	20	2021-11-12 23:17:19	1342177281	submission.event.fileUploaded	0
-106	1048585	14	20	2021-11-12 23:17:19	1342177288	submission.event.fileRevised	0
-107	515	14	20	2021-11-12 23:17:21	1342177296	submission.event.fileEdited	0
-108	1048585	14	20	2021-11-12 23:17:21	1342177296	submission.event.fileEdited	0
-109	1048585	14	20	2021-11-12 23:17:27	268435458	submission.event.general.metadataUpdated	0
-110	1048585	14	20	2021-11-12 23:17:29	268435457	submission.event.submissionSubmitted	0
-111	1048585	14	3	2021-11-12 23:17:35	268435462	publication.event.published	0
-112	1048585	15	21	2021-11-12 23:17:43	268435458	submission.event.general.metadataUpdated	0
-113	515	15	21	2021-11-12 23:17:53	1342177281	submission.event.fileUploaded	0
-114	1048585	15	21	2021-11-12 23:17:53	1342177288	submission.event.fileRevised	0
-115	515	15	21	2021-11-12 23:17:55	1342177296	submission.event.fileEdited	0
-116	1048585	15	21	2021-11-12 23:17:55	1342177296	submission.event.fileEdited	0
-117	1048585	15	21	2021-11-12 23:17:59	268435458	submission.event.general.metadataUpdated	0
-118	1048585	15	21	2021-11-12 23:18:00	268435457	submission.event.submissionSubmitted	0
-119	1048585	15	3	2021-11-12 23:18:07	268435462	publication.event.published	0
-120	1048585	16	22	2021-11-12 23:18:17	268435458	submission.event.general.metadataUpdated	0
-121	515	16	22	2021-11-12 23:18:26	1342177281	submission.event.fileUploaded	0
-122	1048585	16	22	2021-11-12 23:18:26	1342177288	submission.event.fileRevised	0
-123	515	16	22	2021-11-12 23:18:29	1342177296	submission.event.fileEdited	0
-124	1048585	16	22	2021-11-12 23:18:29	1342177296	submission.event.fileEdited	0
-125	1048585	16	22	2021-11-12 23:18:35	268435458	submission.event.general.metadataUpdated	0
-126	1048585	16	22	2021-11-12 23:18:36	268435457	submission.event.submissionSubmitted	0
-127	1048585	16	3	2021-11-12 23:18:44	268435462	publication.event.published	0
-128	1048585	17	23	2021-11-12 23:18:52	268435458	submission.event.general.metadataUpdated	0
-129	515	17	23	2021-11-12 23:19:02	1342177281	submission.event.fileUploaded	0
-130	1048585	17	23	2021-11-12 23:19:02	1342177288	submission.event.fileRevised	0
-131	515	17	23	2021-11-12 23:19:04	1342177296	submission.event.fileEdited	0
-132	1048585	17	23	2021-11-12 23:19:04	1342177296	submission.event.fileEdited	0
-133	1048585	17	23	2021-11-12 23:19:10	268435458	submission.event.general.metadataUpdated	0
-134	1048585	17	23	2021-11-12 23:19:11	268435457	submission.event.submissionSubmitted	0
-135	1048585	17	3	2021-11-12 23:19:19	268435462	publication.event.published	0
-136	1048585	18	24	2021-11-12 23:19:28	268435458	submission.event.general.metadataUpdated	0
-137	515	18	24	2021-11-12 23:19:37	1342177281	submission.event.fileUploaded	0
-138	1048585	18	24	2021-11-12 23:19:37	1342177288	submission.event.fileRevised	0
-139	515	18	24	2021-11-12 23:19:39	1342177296	submission.event.fileEdited	0
-140	1048585	18	24	2021-11-12 23:19:39	1342177296	submission.event.fileEdited	0
-141	1048585	18	24	2021-11-12 23:19:44	268435458	submission.event.general.metadataUpdated	0
-142	1048585	18	24	2021-11-12 23:19:45	268435457	submission.event.submissionSubmitted	0
-143	1048585	18	3	2021-11-12 23:19:52	268435462	publication.event.published	0
-144	1048585	19	25	2021-11-12 23:20:02	268435458	submission.event.general.metadataUpdated	0
-145	515	19	25	2021-11-12 23:20:11	1342177281	submission.event.fileUploaded	0
-146	1048585	19	25	2021-11-12 23:20:11	1342177288	submission.event.fileRevised	0
-147	515	19	25	2021-11-12 23:20:13	1342177296	submission.event.fileEdited	0
-148	1048585	19	25	2021-11-12 23:20:13	1342177296	submission.event.fileEdited	0
-149	1048585	19	25	2021-11-12 23:20:17	268435458	submission.event.general.metadataUpdated	0
-150	1048585	19	25	2021-11-12 23:20:18	268435457	submission.event.submissionSubmitted	0
-151	1048585	19	3	2021-11-12 23:20:25	268435462	publication.event.published	0
+1	1048585	1	7	2021-11-20 22:32:45	268435458	submission.event.general.metadataUpdated	0
+2	515	1	7	2021-11-20 22:32:55	1342177281	submission.event.fileUploaded	0
+3	1048585	1	7	2021-11-20 22:32:55	1342177288	submission.event.fileRevised	0
+4	515	1	7	2021-11-20 22:32:57	1342177296	submission.event.fileEdited	0
+5	1048585	1	7	2021-11-20 22:32:57	1342177296	submission.event.fileEdited	0
+6	1048585	1	7	2021-11-20 22:33:01	268435458	submission.event.general.metadataUpdated	0
+7	1048585	1	7	2021-11-20 22:33:02	268435457	submission.event.submissionSubmitted	0
+8	1048585	2	8	2021-11-20 22:33:11	268435458	submission.event.general.metadataUpdated	0
+9	515	2	8	2021-11-20 22:33:20	1342177281	submission.event.fileUploaded	0
+10	1048585	2	8	2021-11-20 22:33:20	1342177288	submission.event.fileRevised	0
+11	515	2	8	2021-11-20 22:33:22	1342177296	submission.event.fileEdited	0
+12	1048585	2	8	2021-11-20 22:33:22	1342177296	submission.event.fileEdited	0
+13	1048585	2	8	2021-11-20 22:33:26	268435458	submission.event.general.metadataUpdated	0
+14	1048585	2	8	2021-11-20 22:33:28	268435457	submission.event.submissionSubmitted	0
+15	1048585	2	3	2021-11-20 22:33:34	268435462	publication.event.published	0
+16	1048585	3	9	2021-11-20 22:33:41	268435458	submission.event.general.metadataUpdated	0
+17	515	3	9	2021-11-20 22:33:50	1342177281	submission.event.fileUploaded	0
+18	1048585	3	9	2021-11-20 22:33:50	1342177288	submission.event.fileRevised	0
+19	515	3	9	2021-11-20 22:33:52	1342177296	submission.event.fileEdited	0
+20	1048585	3	9	2021-11-20 22:33:52	1342177296	submission.event.fileEdited	0
+21	1048585	3	9	2021-11-20 22:34:01	268435458	submission.event.general.metadataUpdated	0
+22	1048585	3	9	2021-11-20 22:34:03	268435457	submission.event.submissionSubmitted	0
+23	1048585	3	3	2021-11-20 22:34:09	268435462	publication.event.published	0
+24	1048585	4	10	2021-11-20 22:34:17	268435458	submission.event.general.metadataUpdated	0
+25	515	4	10	2021-11-20 22:34:26	1342177281	submission.event.fileUploaded	0
+26	1048585	4	10	2021-11-20 22:34:26	1342177288	submission.event.fileRevised	0
+27	515	4	10	2021-11-20 22:34:28	1342177296	submission.event.fileEdited	0
+28	1048585	4	10	2021-11-20 22:34:28	1342177296	submission.event.fileEdited	0
+29	1048585	4	10	2021-11-20 22:34:32	268435458	submission.event.general.metadataUpdated	0
+30	1048585	4	10	2021-11-20 22:34:33	268435457	submission.event.submissionSubmitted	0
+31	1048585	4	3	2021-11-20 22:34:40	268435462	publication.event.published	0
+32	1048585	5	11	2021-11-20 22:34:47	268435458	submission.event.general.metadataUpdated	0
+33	515	5	11	2021-11-20 22:34:56	1342177281	submission.event.fileUploaded	0
+34	1048585	5	11	2021-11-20 22:34:56	1342177288	submission.event.fileRevised	0
+35	515	5	11	2021-11-20 22:34:59	1342177296	submission.event.fileEdited	0
+36	1048585	5	11	2021-11-20 22:34:59	1342177296	submission.event.fileEdited	0
+37	1048585	5	11	2021-11-20 22:35:04	268435458	submission.event.general.metadataUpdated	0
+38	1048585	5	11	2021-11-20 22:35:05	268435457	submission.event.submissionSubmitted	0
+39	1048585	5	3	2021-11-20 22:35:11	268435462	publication.event.published	0
+40	1048585	6	12	2021-11-20 22:35:19	268435458	submission.event.general.metadataUpdated	0
+41	515	6	12	2021-11-20 22:35:28	1342177281	submission.event.fileUploaded	0
+42	1048585	6	12	2021-11-20 22:35:28	1342177288	submission.event.fileRevised	0
+43	515	6	12	2021-11-20 22:35:30	1342177296	submission.event.fileEdited	0
+44	1048585	6	12	2021-11-20 22:35:30	1342177296	submission.event.fileEdited	0
+45	1048585	6	12	2021-11-20 22:35:33	268435458	submission.event.general.metadataUpdated	0
+46	1048585	6	12	2021-11-20 22:35:35	268435457	submission.event.submissionSubmitted	0
+47	1048585	6	3	2021-11-20 22:35:41	268435462	publication.event.published	0
+48	1048585	7	13	2021-11-20 22:35:49	268435458	submission.event.general.metadataUpdated	0
+49	515	7	13	2021-11-20 22:35:58	1342177281	submission.event.fileUploaded	0
+50	1048585	7	13	2021-11-20 22:35:58	1342177288	submission.event.fileRevised	0
+51	515	7	13	2021-11-20 22:36:00	1342177296	submission.event.fileEdited	0
+52	1048585	7	13	2021-11-20 22:36:00	1342177296	submission.event.fileEdited	0
+53	1048585	7	13	2021-11-20 22:36:09	268435458	submission.event.general.metadataUpdated	0
+54	1048585	7	13	2021-11-20 22:36:11	268435457	submission.event.submissionSubmitted	0
+55	1048585	7	3	2021-11-20 22:36:18	268435462	publication.event.published	0
+56	1048585	8	14	2021-11-20 22:36:25	268435458	submission.event.general.metadataUpdated	0
+57	515	8	14	2021-11-20 22:36:35	1342177281	submission.event.fileUploaded	0
+58	1048585	8	14	2021-11-20 22:36:35	1342177288	submission.event.fileRevised	0
+59	515	8	14	2021-11-20 22:36:37	1342177296	submission.event.fileEdited	0
+60	1048585	8	14	2021-11-20 22:36:37	1342177296	submission.event.fileEdited	0
+61	1048585	8	14	2021-11-20 22:36:40	268435458	submission.event.general.metadataUpdated	0
+62	1048585	8	14	2021-11-20 22:36:41	268435457	submission.event.submissionSubmitted	0
+63	1048585	8	3	2021-11-20 22:36:48	268435462	publication.event.published	0
+64	1048585	9	15	2021-11-20 22:36:55	268435458	submission.event.general.metadataUpdated	0
+65	515	9	15	2021-11-20 22:37:04	1342177281	submission.event.fileUploaded	0
+66	1048585	9	15	2021-11-20 22:37:04	1342177288	submission.event.fileRevised	0
+67	515	9	15	2021-11-20 22:37:06	1342177296	submission.event.fileEdited	0
+68	1048585	9	15	2021-11-20 22:37:07	1342177296	submission.event.fileEdited	0
+69	1048585	9	15	2021-11-20 22:37:11	268435458	submission.event.general.metadataUpdated	0
+70	1048585	9	15	2021-11-20 22:37:12	268435457	submission.event.submissionSubmitted	0
+71	1048585	9	3	2021-11-20 22:37:18	268435462	publication.event.published	0
+72	1048585	10	16	2021-11-20 22:37:26	268435458	submission.event.general.metadataUpdated	0
+73	515	10	16	2021-11-20 22:37:35	1342177281	submission.event.fileUploaded	0
+74	1048585	10	16	2021-11-20 22:37:35	1342177288	submission.event.fileRevised	0
+75	515	10	16	2021-11-20 22:37:37	1342177296	submission.event.fileEdited	0
+76	1048585	10	16	2021-11-20 22:37:37	1342177296	submission.event.fileEdited	0
+77	1048585	10	16	2021-11-20 22:37:42	268435458	submission.event.general.metadataUpdated	0
+78	1048585	10	16	2021-11-20 22:37:43	268435457	submission.event.submissionSubmitted	0
+79	1048585	10	3	2021-11-20 22:37:49	268435462	publication.event.published	0
+80	1048585	11	17	2021-11-20 22:37:57	268435458	submission.event.general.metadataUpdated	0
+81	515	11	17	2021-11-20 22:38:07	1342177281	submission.event.fileUploaded	0
+82	1048585	11	17	2021-11-20 22:38:07	1342177288	submission.event.fileRevised	0
+83	515	11	17	2021-11-20 22:38:09	1342177296	submission.event.fileEdited	0
+84	1048585	11	17	2021-11-20 22:38:09	1342177296	submission.event.fileEdited	0
+85	1048585	11	17	2021-11-20 22:38:16	268435458	submission.event.general.metadataUpdated	0
+86	1048585	11	17	2021-11-20 22:38:17	268435457	submission.event.submissionSubmitted	0
+87	1048585	11	3	2021-11-20 22:38:24	268435462	publication.event.published	0
+88	1048585	12	18	2021-11-20 22:38:32	268435458	submission.event.general.metadataUpdated	0
+89	515	12	18	2021-11-20 22:38:41	1342177281	submission.event.fileUploaded	0
+90	1048585	12	18	2021-11-20 22:38:41	1342177288	submission.event.fileRevised	0
+91	515	12	18	2021-11-20 22:38:44	1342177296	submission.event.fileEdited	0
+92	1048585	12	18	2021-11-20 22:38:44	1342177296	submission.event.fileEdited	0
+93	1048585	12	18	2021-11-20 22:38:49	268435458	submission.event.general.metadataUpdated	0
+94	1048585	12	18	2021-11-20 22:38:51	268435457	submission.event.submissionSubmitted	0
+95	1048585	12	3	2021-11-20 22:38:58	268435462	publication.event.published	0
+96	1048585	13	19	2021-11-20 22:39:05	268435458	submission.event.general.metadataUpdated	0
+97	515	13	19	2021-11-20 22:39:14	1342177281	submission.event.fileUploaded	0
+98	1048585	13	19	2021-11-20 22:39:14	1342177288	submission.event.fileRevised	0
+99	515	13	19	2021-11-20 22:39:17	1342177296	submission.event.fileEdited	0
+100	1048585	13	19	2021-11-20 22:39:17	1342177296	submission.event.fileEdited	0
+101	1048585	13	19	2021-11-20 22:39:22	268435458	submission.event.general.metadataUpdated	0
+102	1048585	13	19	2021-11-20 22:39:24	268435457	submission.event.submissionSubmitted	0
+103	1048585	13	3	2021-11-20 22:39:30	268435462	publication.event.published	0
+104	1048585	14	20	2021-11-20 22:39:38	268435458	submission.event.general.metadataUpdated	0
+105	515	14	20	2021-11-20 22:39:47	1342177281	submission.event.fileUploaded	0
+106	1048585	14	20	2021-11-20 22:39:47	1342177288	submission.event.fileRevised	0
+107	515	14	20	2021-11-20 22:39:49	1342177296	submission.event.fileEdited	0
+108	1048585	14	20	2021-11-20 22:39:49	1342177296	submission.event.fileEdited	0
+109	1048585	14	20	2021-11-20 22:39:53	268435458	submission.event.general.metadataUpdated	0
+110	1048585	14	20	2021-11-20 22:39:55	268435457	submission.event.submissionSubmitted	0
+111	1048585	14	3	2021-11-20 22:40:01	268435462	publication.event.published	0
+112	1048585	15	21	2021-11-20 22:40:08	268435458	submission.event.general.metadataUpdated	0
+113	515	15	21	2021-11-20 22:40:17	1342177281	submission.event.fileUploaded	0
+114	1048585	15	21	2021-11-20 22:40:17	1342177288	submission.event.fileRevised	0
+115	515	15	21	2021-11-20 22:40:20	1342177296	submission.event.fileEdited	0
+116	1048585	15	21	2021-11-20 22:40:20	1342177296	submission.event.fileEdited	0
+117	1048585	15	21	2021-11-20 22:40:23	268435458	submission.event.general.metadataUpdated	0
+118	1048585	15	21	2021-11-20 22:40:25	268435457	submission.event.submissionSubmitted	0
+119	1048585	15	3	2021-11-20 22:40:32	268435462	publication.event.published	0
+120	1048585	16	22	2021-11-20 22:40:40	268435458	submission.event.general.metadataUpdated	0
+121	515	16	22	2021-11-20 22:40:49	1342177281	submission.event.fileUploaded	0
+122	1048585	16	22	2021-11-20 22:40:49	1342177288	submission.event.fileRevised	0
+123	515	16	22	2021-11-20 22:40:51	1342177296	submission.event.fileEdited	0
+124	1048585	16	22	2021-11-20 22:40:51	1342177296	submission.event.fileEdited	0
+125	1048585	16	22	2021-11-20 22:40:56	268435458	submission.event.general.metadataUpdated	0
+126	1048585	16	22	2021-11-20 22:40:57	268435457	submission.event.submissionSubmitted	0
+127	1048585	16	3	2021-11-20 22:41:04	268435462	publication.event.published	0
+128	1048585	17	23	2021-11-20 22:41:11	268435458	submission.event.general.metadataUpdated	0
+129	515	17	23	2021-11-20 22:41:21	1342177281	submission.event.fileUploaded	0
+130	1048585	17	23	2021-11-20 22:41:21	1342177288	submission.event.fileRevised	0
+131	515	17	23	2021-11-20 22:41:23	1342177296	submission.event.fileEdited	0
+132	1048585	17	23	2021-11-20 22:41:23	1342177296	submission.event.fileEdited	0
+133	1048585	17	23	2021-11-20 22:41:29	268435458	submission.event.general.metadataUpdated	0
+134	1048585	17	23	2021-11-20 22:41:30	268435457	submission.event.submissionSubmitted	0
+135	1048585	17	3	2021-11-20 22:41:37	268435462	publication.event.published	0
+136	1048585	18	24	2021-11-20 22:41:46	268435458	submission.event.general.metadataUpdated	0
+137	515	18	24	2021-11-20 22:41:55	1342177281	submission.event.fileUploaded	0
+138	1048585	18	24	2021-11-20 22:41:55	1342177288	submission.event.fileRevised	0
+139	515	18	24	2021-11-20 22:41:57	1342177296	submission.event.fileEdited	0
+140	1048585	18	24	2021-11-20 22:41:57	1342177296	submission.event.fileEdited	0
+141	1048585	18	24	2021-11-20 22:42:02	268435458	submission.event.general.metadataUpdated	0
+142	1048585	18	24	2021-11-20 22:42:03	268435457	submission.event.submissionSubmitted	0
+143	1048585	18	3	2021-11-20 22:42:10	268435462	publication.event.published	0
+144	1048585	19	25	2021-11-20 22:42:18	268435458	submission.event.general.metadataUpdated	0
+145	515	19	25	2021-11-20 22:42:27	1342177281	submission.event.fileUploaded	0
+146	1048585	19	25	2021-11-20 22:42:27	1342177288	submission.event.fileRevised	0
+147	515	19	25	2021-11-20 22:42:30	1342177296	submission.event.fileEdited	0
+148	1048585	19	25	2021-11-20 22:42:30	1342177296	submission.event.fileEdited	0
+149	1048585	19	25	2021-11-20 22:42:33	268435458	submission.event.general.metadataUpdated	0
+150	1048585	19	25	2021-11-20 22:42:34	268435457	submission.event.submissionSubmitted	0
+151	1048585	19	3	2021-11-20 22:42:41	268435462	publication.event.published	0
 \.
 
 
@@ -5068,25 +5068,25 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	journals/1/articles/1/618ef44ba840f.pdf	application/pdf
-2	journals/1/articles/2/618ef4657c9bc.pdf	application/pdf
-3	journals/1/articles/3/618ef48718999.pdf	application/pdf
-4	journals/1/articles/4/618ef4ad968ac.pdf	application/pdf
-5	journals/1/articles/5/618ef4cdd872a.pdf	application/pdf
-6	journals/1/articles/6/618ef4efc9e79.pdf	application/pdf
-7	journals/1/articles/7/618ef50f2fe50.pdf	application/pdf
-8	journals/1/articles/8/618ef535ccc62.pdf	application/pdf
-9	journals/1/articles/9/618ef5557e876.pdf	application/pdf
-10	journals/1/articles/10/618ef5775c109.pdf	application/pdf
-11	journals/1/articles/11/618ef5979e05a.pdf	application/pdf
-12	journals/1/articles/12/618ef5bcbdc29.pdf	application/pdf
-13	journals/1/articles/13/618ef5dda2d53.pdf	application/pdf
-14	journals/1/articles/14/618ef5ff3f625.pdf	application/pdf
-15	journals/1/articles/15/618ef621318ef.pdf	application/pdf
-16	journals/1/articles/16/618ef64282a04.pdf	application/pdf
-17	journals/1/articles/17/618ef665eef5b.pdf	application/pdf
-18	journals/1/articles/18/618ef68954987.pdf	application/pdf
-19	journals/1/articles/19/618ef6ab7a30c.pdf	application/pdf
+1	journals/1/articles/1/6199779721f88.pdf	application/pdf
+2	journals/1/articles/2/619977b02641f.pdf	application/pdf
+3	journals/1/articles/3/619977ce460bb.pdf	application/pdf
+4	journals/1/articles/4/619977f25e8ad.pdf	application/pdf
+5	journals/1/articles/5/61997810b126d.pdf	application/pdf
+6	journals/1/articles/6/6199783036223.pdf	application/pdf
+7	journals/1/articles/7/6199784e42d3e.pdf	application/pdf
+8	journals/1/articles/8/619978732215c.pdf	application/pdf
+9	journals/1/articles/9/619978907c885.pdf	application/pdf
+10	journals/1/articles/10/619978af305df.pdf	application/pdf
+11	journals/1/articles/11/619978ceed788.pdf	application/pdf
+12	journals/1/articles/12/619978f1bfe2f.pdf	application/pdf
+13	journals/1/articles/13/61997912b96e3.pdf	application/pdf
+14	journals/1/articles/14/6199793324b7f.pdf	application/pdf
+15	journals/1/articles/15/61997951e7b60.pdf	application/pdf
+16	journals/1/articles/16/6199797120f5d.pdf	application/pdf
+17	journals/1/articles/17/619979910fb1a.pdf	application/pdf
+18	journals/1/articles/18/619979b36db73.pdf	application/pdf
+19	journals/1/articles/19/619979d3b4aa4.pdf	application/pdf
 \.
 
 
@@ -5228,40 +5228,40 @@ SELECT pg_catalog.setval('public.jobs_id_seq', 1, false);
 COPY public.journal_settings (journal_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 1		supportedFormLocales	["en_US","fr_CA"]	\N
 1		contactEmail	rvaca@mailinator.com	\N
-1		contactName	Ramiro Vaca	\N
 1	fr_CA	readerInformation	##default.contextSettings.forReaders##	\N
+1	en_US	searchDescription	The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.	\N
+1		contactName	Ramiro Vaca	\N
 1	en_US	customHeaders	<meta name="pkp" content="Test metatag.">	\N
+1		defaultReviewMode	2	\N
 1		numWeeksPerResponse	4	\N
 1		numWeeksPerReview	4	\N
 1	fr_CA	openAccessPolicy	##default.contextSettings.openAccessPolicy##	\N
 1	en_US	openAccessPolicy	This server provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.	\N
-1	en_US	privacyStatement	<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>	\N
 1	fr_CA	privacyStatement	##default.contextSettings.privacyStatement##	\N
+1	en_US	privacyStatement	<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>	\N
 1	en_US	readerInformation	We encourage readers to sign up for the posting notification service for this server. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the home page. This list also allows the server to claim a certain level of support or readership. See the <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.	\N
-1	en_US	searchDescription	The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.	\N
-1	en_US	submissionChecklist	[{"order":1,"content":"The submission has not been previously posted."},{"order":2,"content":"The submission file is in OpenOffice, Microsoft Word, or RTF document file format."},{"order":3,"content":"Where available, URLs for the references have been provided."},{"order":4,"content":"The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end."},{"order":5,"content":"The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines."}]	\N
 1	fr_CA	submissionChecklist	[{"order":1,"content":"La soumission n'a pas déjà été publiée et n'est pas considérée actuellement par un autre serveur. Si ce n'est pas le cas, fournir une explication dans le champ « Commentaires au,à la rédacteur-trice »."},{"order":2,"content":"Le fichier de la soumission est dans un des formats de fichier suivants : OpenOffice, Microsoft Word, RTF ou WordPerfect."},{"order":3,"content":"Lorsque possible, les URL des références ont été fournies."},{"order":4,"content":"##default.contextSettings.checklist.submissionAppearance##"},{"order":5,"content":"##default.contextSettings.checklist.bibliographicRequirements##"}]	\N
+1	en_US	submissionChecklist	[{"order":1,"content":"The submission has not been previously posted."},{"order":2,"content":"The submission file is in OpenOffice, Microsoft Word, or RTF document file format."},{"order":3,"content":"Where available, URLs for the references have been provided."},{"order":4,"content":"The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end."},{"order":5,"content":"The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines."}]	\N
 1		supportedLocales	["en_US","fr_CA"]	\N
 1		supportedSubmissionLocales	["en_US","fr_CA"]	\N
 1		supportEmail	rvaca@mailinator.com	\N
 1		supportName	Ramiro Vaca	\N
-1		themePluginPath	default	\N
 1	en_US	acronym	JPKPKP	\N
 1	fr_CA	authorInformation	##default.contextSettings.forAuthors##	\N
-1	en_US	authorInformation	Interested in submitting to this server? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About</a> page for the policies, as well as the <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> prior to submitting or, if already registered, can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the process.	\N
-1		defaultReviewMode	2	\N
 1		emailSignature	<br/>________________________________________________________________________<br/><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>	\N
 1		disableSubmissions	0	\N
 1		itemsPerPage	25	\N
 1		keywords	request	\N
 1	en_US	librarianInformation	We encourage research librarians to list this server among their library's holdings. As well, it may be worth noting that this server's open source system is suitable for libraries to host for their faculty members to use (see <a href="http://pkp.sfu.ca">Public Knowledge Project</a>).	\N
+1	en_US	authorInformation	Interested in submitting to this server? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About</a> page for the policies, as well as the <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> prior to submitting or, if already registered, can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the process.	\N
 1	fr_CA	librarianInformation	##default.contextSettings.forLibrarians##	\N
 1		mailingAddress	123 456th Street\nBurnaby, British Columbia\nCanada	\N
 1	en_US	name	Public Knowledge Preprint Server	\N
 1	fr_CA	name	Serveur de prépublication de la connaissance du public	\N
-1		numPageLinks	10	\N
+1		themePluginPath	default	\N
 1	en_US	abbreviation	publicknowledgePub Know Pre	\N
 1		enableAuthorScreening	0	\N
+1		numPageLinks	10	\N
 1		enableOai	1	\N
 \.
 
@@ -5546,121 +5546,121 @@ SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_s
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-148	1	0	3	16777222	2021-11-12 23:18:00	\N	1048585	15
-149	1	0	3	16777223	2021-11-12 23:18:00	\N	1048585	15
-150	1	5	2	16777217	2021-11-12 23:18:00	\N	1048585	15
-54	1	0	3	16777222	2021-11-12 23:12:55	\N	1048585	6
-3	1	0	3	16777222	2021-11-12 23:10:11	\N	1048585	1
-4	1	0	3	16777223	2021-11-12 23:10:11	\N	1048585	1
-5	1	5	2	16777217	2021-11-12 23:10:11	\N	1048585	1
-7	1	4	2	16777217	2021-11-12 23:10:12	\N	1048585	1
-9	1	0	2	16777243	2021-11-12 23:10:12	\N	1048585	1
-10	1	0	2	16777245	2021-11-12 23:10:12	\N	1048585	1
-55	1	0	3	16777223	2021-11-12 23:12:55	\N	1048585	6
-56	1	5	2	16777217	2021-11-12 23:12:55	\N	1048585	6
-12	1	0	3	16777222	2021-11-12 23:10:38	\N	1048585	2
-13	1	0	3	16777223	2021-11-12 23:10:38	\N	1048585	2
-14	1	5	2	16777217	2021-11-12 23:10:38	\N	1048585	2
-16	1	4	2	16777217	2021-11-12 23:10:38	\N	1048585	2
-18	1	0	2	16777243	2021-11-12 23:10:38	\N	1048585	2
-19	1	0	2	16777245	2021-11-12 23:10:38	\N	1048585	2
-58	1	4	2	16777217	2021-11-12 23:12:55	\N	1048585	6
-60	1	0	2	16777243	2021-11-12 23:12:55	\N	1048585	6
-61	1	0	2	16777245	2021-11-12 23:12:55	\N	1048585	6
-23	1	0	3	16777222	2021-11-12 23:11:16	\N	1048585	3
-24	1	0	3	16777223	2021-11-12 23:11:16	\N	1048585	3
-25	1	5	2	16777217	2021-11-12 23:11:16	\N	1048585	3
-27	1	4	2	16777217	2021-11-12 23:11:16	\N	1048585	3
-29	1	0	2	16777243	2021-11-12 23:11:16	\N	1048585	3
-30	1	0	2	16777245	2021-11-12 23:11:16	\N	1048585	3
-98	1	5	2	16777217	2021-11-12 23:15:11	\N	1048585	10
-100	1	4	2	16777217	2021-11-12 23:15:11	\N	1048585	10
-34	1	0	3	16777222	2021-11-12 23:11:49	\N	1048585	4
-35	1	0	3	16777223	2021-11-12 23:11:49	\N	1048585	4
-36	1	5	2	16777217	2021-11-12 23:11:49	\N	1048585	4
-38	1	4	2	16777217	2021-11-12 23:11:49	\N	1048585	4
-40	1	0	2	16777243	2021-11-12 23:11:49	\N	1048585	4
-41	1	0	2	16777245	2021-11-12 23:11:49	\N	1048585	4
-65	1	0	3	16777222	2021-11-12 23:13:32	\N	1048585	7
-44	1	0	3	16777222	2021-11-12 23:12:24	\N	1048585	5
-45	1	0	3	16777223	2021-11-12 23:12:24	\N	1048585	5
-46	1	5	2	16777217	2021-11-12 23:12:24	\N	1048585	5
-48	1	4	2	16777217	2021-11-12 23:12:24	\N	1048585	5
-50	1	0	2	16777243	2021-11-12 23:12:24	\N	1048585	5
-51	1	0	2	16777245	2021-11-12 23:12:24	\N	1048585	5
-66	1	0	3	16777223	2021-11-12 23:13:32	\N	1048585	7
-67	1	5	2	16777217	2021-11-12 23:13:32	\N	1048585	7
-86	1	0	3	16777222	2021-11-12 23:14:38	\N	1048585	9
-69	1	4	2	16777217	2021-11-12 23:13:32	\N	1048585	7
-71	1	0	2	16777243	2021-11-12 23:13:32	\N	1048585	7
-72	1	0	2	16777245	2021-11-12 23:13:32	\N	1048585	7
-87	1	0	3	16777223	2021-11-12 23:14:38	\N	1048585	9
-88	1	5	2	16777217	2021-11-12 23:14:38	\N	1048585	9
-90	1	4	2	16777217	2021-11-12 23:14:38	\N	1048585	9
-76	1	0	3	16777222	2021-11-12 23:14:04	\N	1048585	8
-77	1	0	3	16777223	2021-11-12 23:14:04	\N	1048585	8
-78	1	5	2	16777217	2021-11-12 23:14:04	\N	1048585	8
-80	1	4	2	16777217	2021-11-12 23:14:04	\N	1048585	8
-82	1	0	2	16777243	2021-11-12 23:14:04	\N	1048585	8
-83	1	0	2	16777245	2021-11-12 23:14:04	\N	1048585	8
-92	1	0	2	16777243	2021-11-12 23:14:38	\N	1048585	9
-93	1	0	2	16777245	2021-11-12 23:14:38	\N	1048585	9
-102	1	0	2	16777243	2021-11-12 23:15:11	\N	1048585	10
-103	1	0	2	16777245	2021-11-12 23:15:11	\N	1048585	10
-108	1	0	3	16777223	2021-11-12 23:15:47	\N	1048585	11
-96	1	0	3	16777222	2021-11-12 23:15:11	\N	1048585	10
-97	1	0	3	16777223	2021-11-12 23:15:11	\N	1048585	10
-109	1	5	2	16777217	2021-11-12 23:15:47	\N	1048585	11
-111	1	4	2	16777217	2021-11-12 23:15:47	\N	1048585	11
-107	1	0	3	16777222	2021-11-12 23:15:47	\N	1048585	11
-113	1	0	2	16777243	2021-11-12 23:15:47	\N	1048585	11
-114	1	0	2	16777245	2021-11-12 23:15:47	\N	1048585	11
-118	1	0	3	16777222	2021-11-12 23:16:21	\N	1048585	12
-119	1	0	3	16777223	2021-11-12 23:16:21	\N	1048585	12
-120	1	5	2	16777217	2021-11-12 23:16:21	\N	1048585	12
-124	1	0	2	16777243	2021-11-12 23:16:21	\N	1048585	12
-122	1	4	2	16777217	2021-11-12 23:16:21	\N	1048585	12
-125	1	0	2	16777245	2021-11-12 23:16:21	\N	1048585	12
-128	1	0	3	16777222	2021-11-12 23:16:54	\N	1048585	13
-129	1	0	3	16777223	2021-11-12 23:16:54	\N	1048585	13
-130	1	5	2	16777217	2021-11-12 23:16:54	\N	1048585	13
-132	1	4	2	16777217	2021-11-12 23:16:54	\N	1048585	13
-134	1	0	2	16777243	2021-11-12 23:16:54	\N	1048585	13
-135	1	0	2	16777245	2021-11-12 23:16:54	\N	1048585	13
-152	1	4	2	16777217	2021-11-12 23:18:00	\N	1048585	15
-154	1	0	2	16777243	2021-11-12 23:18:00	\N	1048585	15
-138	1	0	3	16777222	2021-11-12 23:17:28	\N	1048585	14
-139	1	0	3	16777223	2021-11-12 23:17:28	\N	1048585	14
-140	1	5	2	16777217	2021-11-12 23:17:28	\N	1048585	14
-155	1	0	2	16777245	2021-11-12 23:18:00	\N	1048585	15
-142	1	4	2	16777217	2021-11-12 23:17:29	\N	1048585	14
-144	1	0	2	16777243	2021-11-12 23:17:29	\N	1048585	14
-145	1	0	2	16777245	2021-11-12 23:17:29	\N	1048585	14
-197	0	3	1	3	2021-11-12 23:20:25	\N	0	0
-158	1	0	3	16777222	2021-11-12 23:18:36	\N	1048585	16
-159	1	0	3	16777223	2021-11-12 23:18:36	\N	1048585	16
-160	1	5	2	16777217	2021-11-12 23:18:36	\N	1048585	16
-162	1	4	2	16777217	2021-11-12 23:18:36	\N	1048585	16
-164	1	0	2	16777243	2021-11-12 23:18:36	\N	1048585	16
-165	1	0	2	16777245	2021-11-12 23:18:36	\N	1048585	16
-168	1	0	3	16777222	2021-11-12 23:19:11	\N	1048585	17
-169	1	0	3	16777223	2021-11-12 23:19:11	\N	1048585	17
-170	1	5	2	16777217	2021-11-12 23:19:11	\N	1048585	17
-172	1	4	2	16777217	2021-11-12 23:19:11	\N	1048585	17
-174	1	0	2	16777243	2021-11-12 23:19:11	\N	1048585	17
-175	1	0	2	16777245	2021-11-12 23:19:11	\N	1048585	17
-178	1	0	3	16777222	2021-11-12 23:19:45	\N	1048585	18
-179	1	0	3	16777223	2021-11-12 23:19:45	\N	1048585	18
-180	1	5	2	16777217	2021-11-12 23:19:45	\N	1048585	18
-182	1	4	2	16777217	2021-11-12 23:19:45	\N	1048585	18
-184	1	0	2	16777243	2021-11-12 23:19:45	\N	1048585	18
-185	1	0	2	16777245	2021-11-12 23:19:45	\N	1048585	18
-188	1	0	3	16777222	2021-11-12 23:20:18	\N	1048585	19
-189	1	0	3	16777223	2021-11-12 23:20:18	\N	1048585	19
-190	1	5	2	16777217	2021-11-12 23:20:18	\N	1048585	19
-192	1	4	2	16777217	2021-11-12 23:20:18	\N	1048585	19
-194	1	0	2	16777243	2021-11-12 23:20:18	\N	1048585	19
-195	1	0	2	16777245	2021-11-12 23:20:18	\N	1048585	19
+158	1	0	3	16777222	2021-11-20 22:40:56	\N	1048585	16
+159	1	0	3	16777223	2021-11-20 22:40:57	\N	1048585	16
+160	1	5	2	16777217	2021-11-20 22:40:57	\N	1048585	16
+54	1	0	3	16777222	2021-11-20 22:35:34	\N	1048585	6
+3	1	0	3	16777222	2021-11-20 22:33:02	\N	1048585	1
+4	1	0	3	16777223	2021-11-20 22:33:02	\N	1048585	1
+5	1	5	2	16777217	2021-11-20 22:33:02	\N	1048585	1
+7	1	4	2	16777217	2021-11-20 22:33:02	\N	1048585	1
+9	1	0	2	16777243	2021-11-20 22:33:02	\N	1048585	1
+10	1	0	2	16777245	2021-11-20 22:33:02	\N	1048585	1
+55	1	0	3	16777223	2021-11-20 22:35:34	\N	1048585	6
+56	1	5	2	16777217	2021-11-20 22:35:34	\N	1048585	6
+12	1	0	3	16777222	2021-11-20 22:33:27	\N	1048585	2
+13	1	0	3	16777223	2021-11-20 22:33:27	\N	1048585	2
+14	1	5	2	16777217	2021-11-20 22:33:27	\N	1048585	2
+16	1	4	2	16777217	2021-11-20 22:33:27	\N	1048585	2
+18	1	0	2	16777243	2021-11-20 22:33:27	\N	1048585	2
+19	1	0	2	16777245	2021-11-20 22:33:27	\N	1048585	2
+58	1	4	2	16777217	2021-11-20 22:35:34	\N	1048585	6
+60	1	0	2	16777243	2021-11-20 22:35:34	\N	1048585	6
+61	1	0	2	16777245	2021-11-20 22:35:34	\N	1048585	6
+23	1	0	3	16777222	2021-11-20 22:34:02	\N	1048585	3
+24	1	0	3	16777223	2021-11-20 22:34:02	\N	1048585	3
+25	1	5	2	16777217	2021-11-20 22:34:02	\N	1048585	3
+27	1	4	2	16777217	2021-11-20 22:34:03	\N	1048585	3
+29	1	0	2	16777243	2021-11-20 22:34:03	\N	1048585	3
+30	1	0	2	16777245	2021-11-20 22:34:03	\N	1048585	3
+98	1	5	2	16777217	2021-11-20 22:37:43	\N	1048585	10
+100	1	4	2	16777217	2021-11-20 22:37:43	\N	1048585	10
+34	1	0	3	16777222	2021-11-20 22:34:32	\N	1048585	4
+35	1	0	3	16777223	2021-11-20 22:34:32	\N	1048585	4
+36	1	5	2	16777217	2021-11-20 22:34:32	\N	1048585	4
+38	1	4	2	16777217	2021-11-20 22:34:33	\N	1048585	4
+40	1	0	2	16777243	2021-11-20 22:34:33	\N	1048585	4
+41	1	0	2	16777245	2021-11-20 22:34:33	\N	1048585	4
+65	1	0	3	16777222	2021-11-20 22:36:10	\N	1048585	7
+44	1	0	3	16777222	2021-11-20 22:35:05	\N	1048585	5
+45	1	0	3	16777223	2021-11-20 22:35:05	\N	1048585	5
+46	1	5	2	16777217	2021-11-20 22:35:05	\N	1048585	5
+48	1	4	2	16777217	2021-11-20 22:35:05	\N	1048585	5
+50	1	0	2	16777243	2021-11-20 22:35:05	\N	1048585	5
+51	1	0	2	16777245	2021-11-20 22:35:05	\N	1048585	5
+66	1	0	3	16777223	2021-11-20 22:36:10	\N	1048585	7
+67	1	5	2	16777217	2021-11-20 22:36:10	\N	1048585	7
+86	1	0	3	16777222	2021-11-20 22:37:12	\N	1048585	9
+69	1	4	2	16777217	2021-11-20 22:36:10	\N	1048585	7
+71	1	0	2	16777243	2021-11-20 22:36:10	\N	1048585	7
+72	1	0	2	16777245	2021-11-20 22:36:10	\N	1048585	7
+87	1	0	3	16777223	2021-11-20 22:37:12	\N	1048585	9
+88	1	5	2	16777217	2021-11-20 22:37:12	\N	1048585	9
+90	1	4	2	16777217	2021-11-20 22:37:12	\N	1048585	9
+76	1	0	3	16777222	2021-11-20 22:36:41	\N	1048585	8
+77	1	0	3	16777223	2021-11-20 22:36:41	\N	1048585	8
+78	1	5	2	16777217	2021-11-20 22:36:41	\N	1048585	8
+80	1	4	2	16777217	2021-11-20 22:36:41	\N	1048585	8
+82	1	0	2	16777243	2021-11-20 22:36:41	\N	1048585	8
+83	1	0	2	16777245	2021-11-20 22:36:41	\N	1048585	8
+92	1	0	2	16777243	2021-11-20 22:37:12	\N	1048585	9
+93	1	0	2	16777245	2021-11-20 22:37:12	\N	1048585	9
+102	1	0	2	16777243	2021-11-20 22:37:43	\N	1048585	10
+103	1	0	2	16777245	2021-11-20 22:37:43	\N	1048585	10
+108	1	0	3	16777223	2021-11-20 22:38:17	\N	1048585	11
+96	1	0	3	16777222	2021-11-20 22:37:43	\N	1048585	10
+97	1	0	3	16777223	2021-11-20 22:37:43	\N	1048585	10
+109	1	5	2	16777217	2021-11-20 22:38:17	\N	1048585	11
+111	1	4	2	16777217	2021-11-20 22:38:17	\N	1048585	11
+107	1	0	3	16777222	2021-11-20 22:38:17	\N	1048585	11
+113	1	0	2	16777243	2021-11-20 22:38:17	\N	1048585	11
+114	1	0	2	16777245	2021-11-20 22:38:17	\N	1048585	11
+118	1	0	3	16777222	2021-11-20 22:38:50	\N	1048585	12
+119	1	0	3	16777223	2021-11-20 22:38:50	\N	1048585	12
+120	1	5	2	16777217	2021-11-20 22:38:50	\N	1048585	12
+124	1	0	2	16777243	2021-11-20 22:38:51	\N	1048585	12
+122	1	4	2	16777217	2021-11-20 22:38:50	\N	1048585	12
+125	1	0	2	16777245	2021-11-20 22:38:51	\N	1048585	12
+128	1	0	3	16777222	2021-11-20 22:39:23	\N	1048585	13
+129	1	0	3	16777223	2021-11-20 22:39:23	\N	1048585	13
+130	1	5	2	16777217	2021-11-20 22:39:23	\N	1048585	13
+132	1	4	2	16777217	2021-11-20 22:39:23	\N	1048585	13
+134	1	0	2	16777243	2021-11-20 22:39:23	\N	1048585	13
+135	1	0	2	16777245	2021-11-20 22:39:23	\N	1048585	13
+162	1	4	2	16777217	2021-11-20 22:40:57	\N	1048585	16
+164	1	0	2	16777243	2021-11-20 22:40:57	\N	1048585	16
+138	1	0	3	16777222	2021-11-20 22:39:54	\N	1048585	14
+139	1	0	3	16777223	2021-11-20 22:39:54	\N	1048585	14
+140	1	5	2	16777217	2021-11-20 22:39:54	\N	1048585	14
+165	1	0	2	16777245	2021-11-20 22:40:57	\N	1048585	16
+142	1	4	2	16777217	2021-11-20 22:39:54	\N	1048585	14
+144	1	0	2	16777243	2021-11-20 22:39:54	\N	1048585	14
+145	1	0	2	16777245	2021-11-20 22:39:54	\N	1048585	14
+168	1	0	3	16777222	2021-11-20 22:41:29	\N	1048585	17
+148	1	0	3	16777222	2021-11-20 22:40:24	\N	1048585	15
+149	1	0	3	16777223	2021-11-20 22:40:24	\N	1048585	15
+150	1	5	2	16777217	2021-11-20 22:40:24	\N	1048585	15
+169	1	0	3	16777223	2021-11-20 22:41:29	\N	1048585	17
+152	1	4	2	16777217	2021-11-20 22:40:25	\N	1048585	15
+170	1	5	2	16777217	2021-11-20 22:41:29	\N	1048585	17
+154	1	0	2	16777243	2021-11-20 22:40:25	\N	1048585	15
+155	1	0	2	16777245	2021-11-20 22:40:25	\N	1048585	15
+172	1	4	2	16777217	2021-11-20 22:41:30	\N	1048585	17
+174	1	0	2	16777243	2021-11-20 22:41:30	\N	1048585	17
+175	1	0	2	16777245	2021-11-20 22:41:30	\N	1048585	17
+178	1	0	3	16777222	2021-11-20 22:42:03	\N	1048585	18
+179	1	0	3	16777223	2021-11-20 22:42:03	\N	1048585	18
+180	1	5	2	16777217	2021-11-20 22:42:03	\N	1048585	18
+182	1	4	2	16777217	2021-11-20 22:42:03	\N	1048585	18
+184	1	0	2	16777243	2021-11-20 22:42:03	\N	1048585	18
+185	1	0	2	16777245	2021-11-20 22:42:03	\N	1048585	18
+188	1	0	3	16777222	2021-11-20 22:42:34	\N	1048585	19
+189	1	0	3	16777223	2021-11-20 22:42:34	\N	1048585	19
+190	1	5	2	16777217	2021-11-20 22:42:34	\N	1048585	19
+192	1	4	2	16777217	2021-11-20 22:42:34	\N	1048585	19
+194	1	0	2	16777243	2021-11-20 22:42:34	\N	1048585	19
+195	1	0	2	16777245	2021-11-20 22:42:34	\N	1048585	19
+197	0	3	1	3	2021-11-20 22:42:41	\N	0	0
 \.
 
 
@@ -5684,30 +5684,30 @@ COPY public.oai_resumption_tokens (token, expire, record_offset, params) FROM st
 --
 
 COPY public.plugin_settings (plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
-acronplugin	0	enabled	1	bool
-tinymceplugin	0	enabled	1	bool
-defaultthemeplugin	0	enabled	1	bool
-usageeventplugin	0	enabled	1	bool
 usagestatsplugin	0	enabled	1	bool
 usagestatsplugin	0	createLogFiles	1	bool
 usagestatsplugin	0	accessLogFileParseRegex	/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] "\\S+ (?P<url>\\S+).*?" (?P<returnCode>\\S+) \\S+ ".*?" "(?P<userAgent>.*?)"/	string
 usagestatsplugin	0	optionalColumns	["city","region"]	object
 usagestatsplugin	0	chartType	bar	string
 usagestatsplugin	0	datasetMaxCount	4	string
+defaultthemeplugin	0	enabled	1	bool
+usageeventplugin	0	enabled	1	bool
+tinymceplugin	0	enabled	1	bool
+acronplugin	0	enabled	1	bool
 languagetoggleblockplugin	0	enabled	1	bool
 languagetoggleblockplugin	0	seq	4	int
 developedbyblockplugin	0	enabled	0	bool
 developedbyblockplugin	0	seq	0	int
 acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]}]	object
-tinymceplugin	1	enabled	1	bool
 defaultthemeplugin	1	enabled	1	bool
+tinymceplugin	1	enabled	1	bool
 languagetoggleblockplugin	1	enabled	1	bool
 languagetoggleblockplugin	1	seq	4	int
 developedbyblockplugin	1	enabled	0	bool
 developedbyblockplugin	1	seq	0	int
-pdfjsviewerplugin	1	enabled	1	bool
 googlescholarplugin	1	enabled	1	bool
-usageeventplugin	0	uniqueSiteId	618ef3be2381a	string
+pdfjsviewerplugin	1	enabled	1	bool
+usageeventplugin	0	uniqueSiteId	61997712167d1	string
 defaultthemeplugin	1	typography	notoSans	string
 defaultthemeplugin	1	baseColour	#1E6292	string
 defaultthemeplugin	1	showDescriptionInServerIndex	false	string
@@ -5875,18 +5875,18 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 8	fr_CA	subtitle	
 8	en_US	title	Hansen & Pinto: Reason Reclaimed
 8	fr_CA	title	
-10	fr_CA	abstract	
 10	en_US	abstract	<p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.</p>
+10	fr_CA	abstract	
 10		categoryIds	[]
 10	en_US	copyrightHolder	Public Knowledge Preprint Server
 10	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
 10		copyrightYear	2021
-10	fr_CA	prefix	
 10	en_US	prefix	
-10	fr_CA	subtitle	
+10	fr_CA	prefix	
 10	en_US	subtitle	
-10	fr_CA	title	
+10	fr_CA	subtitle	
 10	en_US	title	Condensing Water Availability Models to Focus on Specific Water Management Systems
+10	fr_CA	title	
 16	en_US	title	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat
 11	en_US	abstract	<p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.</p>
 11	fr_CA	abstract	
@@ -5915,40 +5915,40 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 12	fr_CA	title	
 13	fr_CA	abstract	
 13		categoryIds	[]
-13	en_US	prefix	
 13	fr_CA	prefix	
-13	en_US	subtitle	
+13	en_US	prefix	
 13	fr_CA	subtitle	
-13	en_US	title	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions
+13	en_US	subtitle	
 13	fr_CA	title	
+13	en_US	title	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions
 13	en_US	abstract	<p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.</p>
 13	en_US	copyrightHolder	Public Knowledge Preprint Server
 13	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
 13		copyrightYear	2021
-15	en_US	abstract	<p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.</p>
-14	en_US	abstract	<p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.</p>
+15	fr_CA	abstract	
 14	fr_CA	abstract	
+14	en_US	abstract	<p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.</p>
 14		categoryIds	[]
 14	en_US	copyrightHolder	Public Knowledge Preprint Server
 14	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
 14		copyrightYear	2021
-14	en_US	prefix	
 14	fr_CA	prefix	
-14	en_US	subtitle	
+14	en_US	prefix	
 14	fr_CA	subtitle	
-14	en_US	title	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua
+14	en_US	subtitle	
 14	fr_CA	title	
-15	fr_CA	subtitle	
-15	fr_CA	abstract	
+14	en_US	title	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua
+15	en_US	subtitle	
+15	en_US	abstract	<p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.</p>
 15		categoryIds	[]
 15	en_US	copyrightHolder	Public Knowledge Preprint Server
 15	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
 15		copyrightYear	2021
-15	en_US	prefix	
 15	fr_CA	prefix	
-15	en_US	subtitle	
-15	en_US	title	Yam diseases and its management in Nigeria
+15	en_US	prefix	
+15	fr_CA	subtitle	
 15	fr_CA	title	
+15	en_US	title	Yam diseases and its management in Nigeria
 16	fr_CA	abstract	
 16		categoryIds	[]
 16	en_US	prefix	
@@ -6003,25 +6003,25 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, access_status, date_published, last_modified, locale, primary_contact_id, section_id, submission_id, status, url_path, version) FROM stdin;
-19	0	2021-11-12	2021-11-12 23:20:25	\N	22	1	19	3	\N	1
-1	0	\N	2021-11-12 23:10:10	\N	1	1	1	1	\N	1
-2	0	2021-11-12	2021-11-12 23:10:45	\N	2	1	2	3	\N	1
-3	0	2021-11-12	2021-11-12 23:11:23	\N	3	1	3	3	\N	1
-4	0	2021-11-12	2021-11-12 23:11:55	\N	5	1	4	3	\N	1
-5	0	2021-11-12	2021-11-12 23:12:30	\N	6	1	5	3	\N	1
-6	0	2021-11-12	2021-11-12 23:13:01	\N	7	1	6	3	\N	1
-7	0	2021-11-12	2021-11-12 23:13:40	\N	8	1	7	3	\N	1
-8	0	2021-11-12	2021-11-12 23:14:12	\N	10	1	8	3	\N	1
-9	0	2021-11-12	2021-11-12 23:14:45	\N	11	1	9	3	\N	1
-10	0	2021-11-12	2021-11-12 23:15:18	\N	12	1	10	3	\N	1
-11	0	2021-11-12	2021-11-12 23:15:54	\N	13	1	11	3	\N	1
-12	0	2021-11-12	2021-11-12 23:16:28	\N	15	1	12	3	\N	1
-13	0	2021-11-12	2021-11-12 23:17:01	\N	16	1	13	3	\N	1
-14	0	2021-11-12	2021-11-12 23:17:35	\N	17	1	14	3	\N	1
-15	0	2021-11-12	2021-11-12 23:18:07	\N	18	1	15	3	\N	1
-16	0	2021-11-12	2021-11-12 23:18:44	\N	19	1	16	3	\N	1
-17	0	2021-11-12	2021-11-12 23:19:19	\N	20	1	17	3	\N	1
-18	0	2021-11-12	2021-11-12 23:19:52	\N	21	1	18	3	\N	1
+19	0	2021-11-20	2021-11-20 22:42:40	\N	22	1	19	3	\N	1
+1	0	\N	2021-11-20 22:33:01	\N	1	1	1	1	\N	1
+2	0	2021-11-20	2021-11-20 22:33:33	\N	2	1	2	3	\N	1
+3	0	2021-11-20	2021-11-20 22:34:09	\N	3	1	3	3	\N	1
+4	0	2021-11-20	2021-11-20 22:34:40	\N	5	1	4	3	\N	1
+5	0	2021-11-20	2021-11-20 22:35:11	\N	6	1	5	3	\N	1
+6	0	2021-11-20	2021-11-20 22:35:41	\N	7	1	6	3	\N	1
+7	0	2021-11-20	2021-11-20 22:36:17	\N	8	1	7	3	\N	1
+8	0	2021-11-20	2021-11-20 22:36:47	\N	10	1	8	3	\N	1
+9	0	2021-11-20	2021-11-20 22:37:18	\N	11	1	9	3	\N	1
+10	0	2021-11-20	2021-11-20 22:37:49	\N	12	1	10	3	\N	1
+11	0	2021-11-20	2021-11-20 22:38:24	\N	13	1	11	3	\N	1
+12	0	2021-11-20	2021-11-20 22:38:58	\N	15	1	12	3	\N	1
+13	0	2021-11-20	2021-11-20 22:39:29	\N	16	1	13	3	\N	1
+14	0	2021-11-20	2021-11-20 22:40:00	\N	17	1	14	3	\N	1
+15	0	2021-11-20	2021-11-20 22:40:32	\N	18	1	15	3	\N	1
+16	0	2021-11-20	2021-11-20 22:41:04	\N	19	1	16	3	\N	1
+17	0	2021-11-20	2021-11-20 22:41:37	\N	20	1	17	3	\N	1
+18	0	2021-11-20	2021-11-20 22:42:10	\N	21	1	18	3	\N	1
 \.
 
 
@@ -6160,8 +6160,8 @@ SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 1, false);
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2021-11-12 23:07:28
-lib.pkp.classes.task.StatisticsReport	2021-11-12 23:07:28
+plugins.generic.usageStats.UsageStatsLoader	2021-11-20 22:30:28
+lib.pkp.classes.task.StatisticsReport	2021-11-20 22:30:28
 \.
 
 
@@ -6205,33 +6205,33 @@ SELECT pg_catalog.setval('public.sections_section_id_seq', 1, true);
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-riij7omksopenvn2cmjamqrtia	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758446	1636758446	0		localhost
-lufmhkvcfv9c3gctbk0vl9o106	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758556	1636758562	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636758562;s:5:"token";s:32:"3507ff4d9144fc12d4871ae8989d40c5";}	localhost
-n8vvvcn2034fab581ka3ncu36t	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758478	1636758484	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636758484;s:5:"token";s:32:"28855a2d2e22b472d85d8be3f0eb0bb9";}	localhost
-g9ludcfhaa62j7vn62764bl64f	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758461	1636758478	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636758478;s:5:"token";s:32:"54436c816605da59b6a4ef57691155ad";}	localhost
-if0adqp3lbbr66jmvpmkenacnc	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758485	1636758493	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636758493;s:5:"token";s:32:"0eb1b1e9e1855ccfaa357b86ad47e6a6";}	localhost
-9o4bslimcdv8v43josj7li1e34	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758822	1636758851	0	csrf|a:2:{s:9:"timestamp";i:1636758852;s:5:"token";s:32:"00af49be622f2993a6761a15f0ffec50";}username|s:7:"dbarnes";userId|i:3;	localhost
-bq2b71fuhdb0io204c55hg44e7	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758448	1636758460	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636758461;s:5:"token";s:32:"a57b5acbe0cce6070a9073aeb4c4d082";}	localhost
-ipjphfnihpcbdv36m05cka6991	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758853	1636758885	0	csrf|a:2:{s:9:"timestamp";i:1636758885;s:5:"token";s:32:"c2a5aaf05e712e052df5cc32aadc4020";}username|s:7:"dbarnes";userId|i:3;	localhost
-2qriatmcdl1o8hc0hcd78u6bs6	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758498	1636758554	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1636758554;s:5:"token";s:32:"983975034cb83902530fc60f6a8a04fa";}	localhost
-kpuvcrs4nrgin6adelmgbp6kls	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758887	1636758918	0	csrf|a:2:{s:9:"timestamp";i:1636758918;s:5:"token";s:32:"dcafe7376ad679a1531590d1b5a0351c";}username|s:7:"dbarnes";userId|i:3;	localhost
-sm2slff12bmf69ao4fb0e06arn	7	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758588	1636758612	0	csrf|a:2:{s:9:"timestamp";i:1636758611;s:5:"token";s:32:"f33292e67a14222abba3fc19f4a4ce84";}username|s:7:"ccorino";userId|i:7;	localhost
-4sflm563gbfeobtord6q9q244u	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758562	1636758586	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1636758586;s:5:"token";s:32:"a4d65cd7e06bc1623114b06588bc5a27";}	localhost
-e7g5q95kib0hefq1epc581j8bl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758920	1636758954	0	csrf|a:2:{s:9:"timestamp";i:1636758954;s:5:"token";s:32:"ea38b88336aa7675cbc2f15920156794";}username|s:7:"dbarnes";userId|i:3;	localhost
-sghvktnr8d765r4fmo21nguara	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758686	1636758716	0	csrf|a:2:{s:9:"timestamp";i:1636758716;s:5:"token";s:32:"e1d31c696ea33e81743d748018f7f472";}username|s:7:"dbarnes";userId|i:3;	localhost
-5m2f4auc2ioefn8gtd7qvp0br4	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758647	1636758684	0	csrf|a:2:{s:9:"timestamp";i:1636758684;s:5:"token";s:32:"0dcf9ec428115fd85bd9c0b4e9d85b3d";}username|s:7:"dbarnes";userId|i:3;	localhost
-snid6rn1dgi82hcao3i3sulkrf	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758614	1636758645	0	csrf|a:2:{s:9:"timestamp";i:1636758645;s:5:"token";s:32:"7a9c56d09363eea81961be1fdccf1c7e";}username|s:7:"dbarnes";userId|i:3;	localhost
-13sbcfhn1d9k082at17u3sh8a0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758956	1636758988	0	csrf|a:2:{s:9:"timestamp";i:1636758988;s:5:"token";s:32:"db11a7f482794133c38db04a9ea323f1";}username|s:7:"dbarnes";userId|i:3;	localhost
-3bon3v1a5p11upjd62lrs4onfp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758718	1636758750	0	csrf|a:2:{s:9:"timestamp";i:1636758750;s:5:"token";s:32:"2c48edb51c25884073360e0d8a2a13c2";}username|s:7:"dbarnes";userId|i:3;	localhost
-7iet09flg6tfvjg9gkb4mfd30f	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758990	1636759021	0	csrf|a:2:{s:9:"timestamp";i:1636759021;s:5:"token";s:32:"dfd55bcd793ee822831f1c741cb87c56";}username|s:7:"dbarnes";userId|i:3;	localhost
-nedgv4ococj5r5lbovh6mg7k5a	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758752	1636758781	0	csrf|a:2:{s:9:"timestamp";i:1636758781;s:5:"token";s:32:"2b449dfaf8cc1ca7beb1b4802f8cc292";}username|s:7:"dbarnes";userId|i:3;	localhost
-o4744c1cdqnrftibktq4euqd8j	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636758783	1636758821	0	csrf|a:2:{s:9:"timestamp";i:1636758821;s:5:"token";s:32:"7b42a7e08bda010a54338226f8151600";}username|s:7:"dbarnes";userId|i:3;	localhost
-rfhdifuhhp02sh4n34qenjlhi5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636759090	1636759124	0	csrf|a:2:{s:9:"timestamp";i:1636759124;s:5:"token";s:32:"066cc9044431d8ca21a2bdefa47f793a";}username|s:7:"dbarnes";userId|i:3;	localhost
-pm526qk8c1rfas5vqot1em2i9q	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636759057	1636759087	0	csrf|a:2:{s:9:"timestamp";i:1636759087;s:5:"token";s:32:"7d99c7482bb8ba231384c05412df96dd";}username|s:7:"dbarnes";userId|i:3;	localhost
-4t3i0a6dfl3ku4859ug2r6cjq9	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636759126	1636759159	0	csrf|a:2:{s:9:"timestamp";i:1636759159;s:5:"token";s:32:"38d72c9263c2d088e1e7097d49928ee3";}username|s:7:"dbarnes";userId|i:3;	localhost
-sfjrtpli2l29o3r2d991eblp70	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636759023	1636759055	0	csrf|a:2:{s:9:"timestamp";i:1636759055;s:5:"token";s:32:"50df6fd73fe9db400e551cba2aac6990";}username|s:7:"dbarnes";userId|i:3;	localhost
-ujm4a7ucegkhm0k5sou9ls5iv2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636759196	1636759225	0	csrf|a:2:{s:9:"timestamp";i:1636759225;s:5:"token";s:32:"fade0264368a320fb1eb0200a95726ec";}username|s:7:"dbarnes";userId|i:3;	localhost
-uk5nghp5hhtpcd7p61ad6mdva1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/92.0.4515.131 Safari/537.36	1636759161	1636759192	0	csrf|a:2:{s:9:"timestamp";i:1636759192;s:5:"token";s:32:"b1e1772bb1553835999f148a93d8826d";}username|s:7:"dbarnes";userId|i:3;	localhost
+47ck7p4stpa7jg3sp2f8mhh1k9	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447426	1637447426	0		localhost
+u574c76bpv4c5n2hhgm965m6sa	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447457	1637447463	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1637447463;s:5:"token";s:32:"01561670adcf3aa3c6eccfee9e6f3e17";}	localhost
+evd5n89f174oqf3f67fuf434h8	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447441	1637447457	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1637447457;s:5:"token";s:32:"7a5bed5f111f3daad200d23a86e96a65";}	localhost
+grvuvvk0tchsouutm0m9tb87e6	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447743	1637447778	0	csrf|a:2:{s:9:"timestamp";i:1637447779;s:5:"token";s:32:"3620bd26e6531d0cf589237501432189";}username|s:7:"dbarnes";userId|i:3;	localhost
+aie560ejdmm1fnv1q9i8bslelu	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447464	1637447471	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1637447471;s:5:"token";s:32:"866991144ac04530732739ddb918d9b6";}	localhost
+7emk3ie0ed7qdtqi491afvp9vi	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447780	1637447807	0	csrf|a:2:{s:9:"timestamp";i:1637447807;s:5:"token";s:32:"8a2d878ec65eb4d8c53f0ffb64d74c39";}username|s:7:"dbarnes";userId|i:3;	localhost
+5vfb5d2tsrmmu0jqqo9osraihu	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447428	1637447440	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1637447440;s:5:"token";s:32:"599ef45a63653a680392c89733d36e1b";}	localhost
+4ahj1e21qpdh2jich08d4v6e2s	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447530	1637447536	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1637447535;s:5:"token";s:32:"3f242cea8d997e2e4c8e806d2a717d36";}	localhost
+4jkkfd17j5r66d5utq0ev1avtq	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447809	1637447839	0	csrf|a:2:{s:9:"timestamp";i:1637447839;s:5:"token";s:32:"1622aed2f134f93bedada92bdfedbb8f";}username|s:7:"dbarnes";userId|i:3;	localhost
+2ncjp0tecq0618qmgi3qge271e	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447473	1637447528	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1637447527;s:5:"token";s:32:"ae83670346f3e534a1055e5d9ce65eb6";}	localhost
+bal8rvjqoiovtn8drgehjmu77e	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447584	1637447613	0	csrf|a:2:{s:9:"timestamp";i:1637447613;s:5:"token";s:32:"e50d22b27ea2d7988b8dd22787490dfb";}username|s:7:"dbarnes";userId|i:3;	localhost
+mjr3k18ke7ac7aesgnuo8c1bvp	7	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447560	1637447583	0	csrf|a:2:{s:9:"timestamp";i:1637447582;s:5:"token";s:32:"dc13552389ee0b933636112d127ee57e";}username|s:7:"ccorino";userId|i:7;	localhost
+vvc01bpb65aaeuoe0kvq5jgg8i	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447536	1637447558	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1637447558;s:5:"token";s:32:"6f57051cc1188e96c404b23a877d1325";}	localhost
+c4r73lq0eso37kb79518mf56qn	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447840	1637447869	0	csrf|a:2:{s:9:"timestamp";i:1637447869;s:5:"token";s:32:"fed5a7a14ec27e5b81e0e6714101b93d";}username|s:7:"dbarnes";userId|i:3;	localhost
+odur9h6a1dr6lt00lll723stsl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447615	1637447649	0	csrf|a:2:{s:9:"timestamp";i:1637447649;s:5:"token";s:32:"5d45eabb7dbb33c40b3a6e036305b6e8";}username|s:7:"dbarnes";userId|i:3;	localhost
+hmqd4o5pmghot0suo8rva3382u	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447872	1637447905	0	csrf|a:2:{s:9:"timestamp";i:1637447905;s:5:"token";s:32:"3b44d772762374502de93b034d6afe96";}username|s:7:"dbarnes";userId|i:3;	localhost
+5lje2qlnqs9tn7709rdjkfrov8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447906	1637447937	0	csrf|a:2:{s:9:"timestamp";i:1637447937;s:5:"token";s:32:"03500051e3c09f4d80474cb3621a9b62";}username|s:7:"dbarnes";userId|i:3;	localhost
+2nh1fdp06umkrkrl0uiqns08te	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447651	1637447680	0	csrf|a:2:{s:9:"timestamp";i:1637447680;s:5:"token";s:32:"65fa5c3e261c170440e033f89f2ea706";}username|s:7:"dbarnes";userId|i:3;	localhost
+dq5h01apbfnrcm1qdoi32tf0io	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447939	1637447971	0	csrf|a:2:{s:9:"timestamp";i:1637447971;s:5:"token";s:32:"e6f71248f1a99e3d328fb4c2836af742";}username|s:7:"dbarnes";userId|i:3;	localhost
+a9o13e2soqga50j788ln3esh1o	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447681	1637447711	0	csrf|a:2:{s:9:"timestamp";i:1637447711;s:5:"token";s:32:"e36d572276cc3e7e6512a3c670fd6ede";}username|s:7:"dbarnes";userId|i:3;	localhost
+mkq4t4a7tuubjs46rtip4hqe7f	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447713	1637447742	0	csrf|a:2:{s:9:"timestamp";i:1637447742;s:5:"token";s:32:"f33e5fcbd810418c10abcec56436562d";}username|s:7:"dbarnes";userId|i:3;	localhost
+vvohcf7nbsdgs45tp3v7q9hj88	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637448066	1637448098	0	csrf|a:2:{s:9:"timestamp";i:1637448098;s:5:"token";s:32:"63b62d1942ee2440c428a87240d20b29";}username|s:7:"dbarnes";userId|i:3;	localhost
+f371bloapslfdn9c9liishm0rm	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637447972	1637448000	0	csrf|a:2:{s:9:"timestamp";i:1637448000;s:5:"token";s:32:"d21aecfe1bcce64435ec78383b2db2b2";}username|s:7:"dbarnes";userId|i:3;	localhost
+th9r8oe2m9vf6t51sdkurm6v6s	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637448002	1637448033	0	csrf|a:2:{s:9:"timestamp";i:1637448033;s:5:"token";s:32:"c5ddb226280f9797866c37adc5556705";}username|s:7:"dbarnes";userId|i:3;	localhost
+evg01vl48jacnvkr9n6pa5142v	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637448034	1637448063	0	csrf|a:2:{s:9:"timestamp";i:1637448064;s:5:"token";s:32:"655a22d5eb60cf272721e70a5844714c";}username|s:7:"dbarnes";userId|i:3;	localhost
+ffcb3iato0tcjbl4hf8shacq7g	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637448100	1637448131	0	csrf|a:2:{s:9:"timestamp";i:1637448131;s:5:"token";s:32:"319141eb5490bacd332d3b918ee3008b";}username|s:7:"dbarnes";userId|i:3;	localhost
+if7vrn53u5m44a4g4ua07eom31	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1637448132	1637448161	0	csrf|a:2:{s:9:"timestamp";i:1637448161;s:5:"token";s:32:"b2183ec1c27085d900f2b4aec8ef7f7e";}username|s:7:"dbarnes";userId|i:3;	localhost
 \.
 
 
@@ -6261,63 +6261,63 @@ themePluginPath		default
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-1	1	4	7	2021-11-12 23:09:54	0	1
-2	1	3	5	2021-11-12 23:10:11	0	1
-3	1	3	4	2021-11-12 23:10:11	0	1
-4	2	4	8	2021-11-12 23:10:20	0	1
-5	2	3	5	2021-11-12 23:10:38	0	1
-6	2	3	4	2021-11-12 23:10:38	0	1
-7	3	4	9	2021-11-12 23:10:53	0	1
-8	3	3	5	2021-11-12 23:11:16	0	1
-9	3	3	4	2021-11-12 23:11:16	0	1
-10	4	4	10	2021-11-12 23:11:32	0	1
-11	4	3	5	2021-11-12 23:11:49	0	1
-12	4	3	4	2021-11-12 23:11:49	0	1
-13	5	4	11	2021-11-12 23:12:04	0	1
-14	5	3	5	2021-11-12 23:12:24	0	1
-15	5	3	4	2021-11-12 23:12:24	0	1
-16	6	4	12	2021-11-12 23:12:38	0	1
-17	6	3	5	2021-11-12 23:12:55	0	1
-18	6	3	4	2021-11-12 23:12:55	0	1
-19	7	4	13	2021-11-12 23:13:09	0	1
-20	7	3	5	2021-11-12 23:13:32	0	1
-21	7	3	4	2021-11-12 23:13:32	0	1
-22	8	4	14	2021-11-12 23:13:48	0	1
-23	8	3	5	2021-11-12 23:14:04	0	1
-24	8	3	4	2021-11-12 23:14:04	0	1
-25	9	4	15	2021-11-12 23:14:20	0	1
-26	9	3	5	2021-11-12 23:14:38	0	1
-27	9	3	4	2021-11-12 23:14:38	0	1
-28	10	4	16	2021-11-12 23:14:53	0	1
-29	10	3	5	2021-11-12 23:15:11	0	1
-30	10	3	4	2021-11-12 23:15:11	0	1
-31	11	4	17	2021-11-12 23:15:26	0	1
-32	11	3	5	2021-11-12 23:15:47	0	1
-33	11	3	4	2021-11-12 23:15:47	0	1
-34	12	4	18	2021-11-12 23:16:02	0	1
-35	12	3	5	2021-11-12 23:16:21	0	1
-36	12	3	4	2021-11-12 23:16:21	0	1
-37	13	4	19	2021-11-12 23:16:36	0	1
-38	13	3	5	2021-11-12 23:16:54	0	1
-39	13	3	4	2021-11-12 23:16:54	0	1
-40	14	4	20	2021-11-12 23:17:09	0	1
-41	14	3	5	2021-11-12 23:17:28	0	1
-42	14	3	4	2021-11-12 23:17:28	0	1
-43	15	4	21	2021-11-12 23:17:43	0	1
-44	15	3	5	2021-11-12 23:18:00	0	1
-45	15	3	4	2021-11-12 23:18:00	0	1
-46	16	4	22	2021-11-12 23:18:17	0	1
-47	16	3	5	2021-11-12 23:18:36	0	1
-48	16	3	4	2021-11-12 23:18:36	0	1
-49	17	4	23	2021-11-12 23:18:52	0	1
-50	17	3	5	2021-11-12 23:19:11	0	1
-51	17	3	4	2021-11-12 23:19:11	0	1
-52	18	4	24	2021-11-12 23:19:28	0	1
-53	18	3	5	2021-11-12 23:19:45	0	1
-54	18	3	4	2021-11-12 23:19:45	0	1
-55	19	4	25	2021-11-12 23:20:02	0	1
-56	19	3	5	2021-11-12 23:20:18	0	1
-57	19	3	4	2021-11-12 23:20:18	0	1
+1	1	4	7	2021-11-20 22:32:45	0	1
+2	1	3	5	2021-11-20 22:33:02	0	1
+3	1	3	4	2021-11-20 22:33:02	0	1
+4	2	4	8	2021-11-20 22:33:11	0	1
+5	2	3	5	2021-11-20 22:33:27	0	1
+6	2	3	4	2021-11-20 22:33:27	0	1
+7	3	4	9	2021-11-20 22:33:41	0	1
+8	3	3	5	2021-11-20 22:34:02	0	1
+9	3	3	4	2021-11-20 22:34:02	0	1
+10	4	4	10	2021-11-20 22:34:17	0	1
+11	4	3	5	2021-11-20 22:34:32	0	1
+12	4	3	4	2021-11-20 22:34:32	0	1
+13	5	4	11	2021-11-20 22:34:47	0	1
+14	5	3	5	2021-11-20 22:35:05	0	1
+15	5	3	4	2021-11-20 22:35:05	0	1
+16	6	4	12	2021-11-20 22:35:19	0	1
+17	6	3	5	2021-11-20 22:35:34	0	1
+18	6	3	4	2021-11-20 22:35:34	0	1
+19	7	4	13	2021-11-20 22:35:49	0	1
+20	7	3	5	2021-11-20 22:36:10	0	1
+21	7	3	4	2021-11-20 22:36:10	0	1
+22	8	4	14	2021-11-20 22:36:25	0	1
+23	8	3	5	2021-11-20 22:36:41	0	1
+24	8	3	4	2021-11-20 22:36:41	0	1
+25	9	4	15	2021-11-20 22:36:55	0	1
+26	9	3	5	2021-11-20 22:37:12	0	1
+27	9	3	4	2021-11-20 22:37:12	0	1
+28	10	4	16	2021-11-20 22:37:26	0	1
+29	10	3	5	2021-11-20 22:37:43	0	1
+30	10	3	4	2021-11-20 22:37:43	0	1
+31	11	4	17	2021-11-20 22:37:57	0	1
+32	11	3	5	2021-11-20 22:38:17	0	1
+33	11	3	4	2021-11-20 22:38:17	0	1
+34	12	4	18	2021-11-20 22:38:32	0	1
+35	12	3	5	2021-11-20 22:38:50	0	1
+36	12	3	4	2021-11-20 22:38:50	0	1
+37	13	4	19	2021-11-20 22:39:05	0	1
+38	13	3	5	2021-11-20 22:39:23	0	1
+39	13	3	4	2021-11-20 22:39:23	0	1
+40	14	4	20	2021-11-20 22:39:38	0	1
+41	14	3	5	2021-11-20 22:39:54	0	1
+42	14	3	4	2021-11-20 22:39:54	0	1
+43	15	4	21	2021-11-20 22:40:08	0	1
+44	15	3	5	2021-11-20 22:40:24	0	1
+45	15	3	4	2021-11-20 22:40:24	0	1
+46	16	4	22	2021-11-20 22:40:40	0	1
+47	16	3	5	2021-11-20 22:40:56	0	1
+48	16	3	4	2021-11-20 22:40:56	0	1
+49	17	4	23	2021-11-20 22:41:11	0	1
+50	17	3	5	2021-11-20 22:41:29	0	1
+51	17	3	4	2021-11-20 22:41:29	0	1
+52	18	4	24	2021-11-20 22:41:46	0	1
+53	18	3	5	2021-11-20 22:42:03	0	1
+54	18	3	4	2021-11-20 22:42:03	0	1
+55	19	4	25	2021-11-20 22:42:18	0	1
+56	19	3	5	2021-11-20 22:42:34	0	1
+57	19	3	4	2021-11-20 22:42:34	0	1
 \.
 
 
@@ -6438,25 +6438,25 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	1	10	\N	\N	\N	2021-11-12 23:10:03	2021-11-12 23:10:06	7	521	1
-2	2	2	\N	1	10	\N	\N	\N	2021-11-12 23:10:29	2021-11-12 23:10:31	8	521	2
-3	3	3	\N	1	10	\N	\N	\N	2021-11-12 23:11:03	2021-11-12 23:11:05	9	521	3
-4	4	4	\N	1	10	\N	\N	\N	2021-11-12 23:11:41	2021-11-12 23:11:44	10	521	4
-5	5	5	\N	1	10	\N	\N	\N	2021-11-12 23:12:13	2021-11-12 23:12:16	11	521	5
-6	6	6	\N	1	10	\N	\N	\N	2021-11-12 23:12:47	2021-11-12 23:12:50	12	521	6
-7	7	7	\N	1	10	\N	\N	\N	2021-11-12 23:13:19	2021-11-12 23:13:21	13	521	7
-8	8	8	\N	1	10	\N	\N	\N	2021-11-12 23:13:57	2021-11-12 23:14:00	14	521	8
-9	9	9	\N	1	10	\N	\N	\N	2021-11-12 23:14:29	2021-11-12 23:14:31	15	521	9
-10	10	10	\N	1	10	\N	\N	\N	2021-11-12 23:15:03	2021-11-12 23:15:05	16	521	10
-11	11	11	\N	1	10	\N	\N	\N	2021-11-12 23:15:35	2021-11-12 23:15:38	17	521	11
-12	12	12	\N	1	10	\N	\N	\N	2021-11-12 23:16:12	2021-11-12 23:16:15	18	521	12
-13	13	13	\N	1	10	\N	\N	\N	2021-11-12 23:16:45	2021-11-12 23:16:48	19	521	13
-14	14	14	\N	1	10	\N	\N	\N	2021-11-12 23:17:19	2021-11-12 23:17:21	20	521	14
-15	15	15	\N	1	10	\N	\N	\N	2021-11-12 23:17:53	2021-11-12 23:17:55	21	521	15
-16	16	16	\N	1	10	\N	\N	\N	2021-11-12 23:18:26	2021-11-12 23:18:29	22	521	16
-17	17	17	\N	1	10	\N	\N	\N	2021-11-12 23:19:01	2021-11-12 23:19:04	23	521	17
-18	18	18	\N	1	10	\N	\N	\N	2021-11-12 23:19:37	2021-11-12 23:19:39	24	521	18
-19	19	19	\N	1	10	\N	\N	\N	2021-11-12 23:20:11	2021-11-12 23:20:13	25	521	19
+1	1	1	\N	1	10	\N	\N	\N	2021-11-20 22:32:55	2021-11-20 22:32:57	7	521	1
+2	2	2	\N	1	10	\N	\N	\N	2021-11-20 22:33:20	2021-11-20 22:33:22	8	521	2
+3	3	3	\N	1	10	\N	\N	\N	2021-11-20 22:33:50	2021-11-20 22:33:52	9	521	3
+4	4	4	\N	1	10	\N	\N	\N	2021-11-20 22:34:26	2021-11-20 22:34:28	10	521	4
+5	5	5	\N	1	10	\N	\N	\N	2021-11-20 22:34:56	2021-11-20 22:34:59	11	521	5
+6	6	6	\N	1	10	\N	\N	\N	2021-11-20 22:35:28	2021-11-20 22:35:30	12	521	6
+7	7	7	\N	1	10	\N	\N	\N	2021-11-20 22:35:58	2021-11-20 22:36:00	13	521	7
+8	8	8	\N	1	10	\N	\N	\N	2021-11-20 22:36:35	2021-11-20 22:36:37	14	521	8
+9	9	9	\N	1	10	\N	\N	\N	2021-11-20 22:37:04	2021-11-20 22:37:06	15	521	9
+10	10	10	\N	1	10	\N	\N	\N	2021-11-20 22:37:35	2021-11-20 22:37:37	16	521	10
+11	11	11	\N	1	10	\N	\N	\N	2021-11-20 22:38:06	2021-11-20 22:38:09	17	521	11
+12	12	12	\N	1	10	\N	\N	\N	2021-11-20 22:38:41	2021-11-20 22:38:44	18	521	12
+13	13	13	\N	1	10	\N	\N	\N	2021-11-20 22:39:14	2021-11-20 22:39:17	19	521	13
+14	14	14	\N	1	10	\N	\N	\N	2021-11-20 22:39:47	2021-11-20 22:39:49	20	521	14
+15	15	15	\N	1	10	\N	\N	\N	2021-11-20 22:40:17	2021-11-20 22:40:20	21	521	15
+16	16	16	\N	1	10	\N	\N	\N	2021-11-20 22:40:49	2021-11-20 22:40:51	22	521	16
+17	17	17	\N	1	10	\N	\N	\N	2021-11-20 22:41:21	2021-11-20 22:41:23	23	521	17
+18	18	18	\N	1	10	\N	\N	\N	2021-11-20 22:41:55	2021-11-20 22:41:57	24	521	18
+19	19	19	\N	1	10	\N	\N	\N	2021-11-20 22:42:27	2021-11-20 22:42:30	25	521	19
 \.
 
 
@@ -9261,25 +9261,25 @@ SELECT pg_catalog.setval('public.submission_tombstones_tombstone_id_seq', 1, fal
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-6	1	6	2021-11-12 23:13:01	2021-11-12 23:12:55	2021-11-12 23:12:55	5	en_US	3	0	0
-1	1	1	2021-11-12 23:10:12	2021-11-12 23:10:11	2021-11-12 23:10:11	5	en_US	1	0	0
-11	1	11	2021-11-12 23:15:54	2021-11-12 23:15:47	2021-11-12 23:15:47	5	en_US	3	0	0
-19	1	19	2021-11-12 23:20:25	2021-11-12 23:20:18	2021-11-12 23:20:18	5	en_US	3	0	0
-15	1	15	2021-11-12 23:18:07	2021-11-12 23:18:00	2021-11-12 23:18:00	5	en_US	3	0	0
-2	1	2	2021-11-12 23:10:45	2021-11-12 23:10:38	2021-11-12 23:10:38	5	en_US	3	0	0
-7	1	7	2021-11-12 23:13:40	2021-11-12 23:13:32	2021-11-12 23:13:32	5	en_US	3	0	0
-12	1	12	2021-11-12 23:16:28	2021-11-12 23:16:21	2021-11-12 23:16:21	5	en_US	3	0	0
-3	1	3	2021-11-12 23:11:23	2021-11-12 23:11:16	2021-11-12 23:11:16	5	en_US	3	0	0
-16	1	16	2021-11-12 23:18:44	2021-11-12 23:18:36	2021-11-12 23:18:36	5	en_US	3	0	0
-8	1	8	2021-11-12 23:14:12	2021-11-12 23:14:04	2021-11-12 23:14:04	5	en_US	3	0	0
-4	1	4	2021-11-12 23:11:55	2021-11-12 23:11:49	2021-11-12 23:11:49	5	en_US	3	0	0
-13	1	13	2021-11-12 23:17:01	2021-11-12 23:16:54	2021-11-12 23:16:54	5	en_US	3	0	0
-9	1	9	2021-11-12 23:14:45	2021-11-12 23:14:38	2021-11-12 23:14:38	5	en_US	3	0	0
-17	1	17	2021-11-12 23:19:19	2021-11-12 23:19:11	2021-11-12 23:19:11	5	en_US	3	0	0
-5	1	5	2021-11-12 23:12:30	2021-11-12 23:12:24	2021-11-12 23:12:24	5	en_US	3	0	0
-14	1	14	2021-11-12 23:17:35	2021-11-12 23:17:28	2021-11-12 23:17:28	5	en_US	3	0	0
-10	1	10	2021-11-12 23:15:18	2021-11-12 23:15:11	2021-11-12 23:15:11	5	en_US	3	0	0
-18	1	18	2021-11-12 23:19:52	2021-11-12 23:19:45	2021-11-12 23:19:45	5	en_US	3	0	0
+14	1	14	2021-11-20 22:40:01	2021-11-20 22:39:54	2021-11-20 22:39:54	5	en_US	3	0	0
+5	1	5	2021-11-20 22:35:11	2021-11-20 22:35:05	2021-11-20 22:35:05	5	en_US	3	0	0
+1	1	1	2021-11-20 22:33:02	2021-11-20 22:33:02	2021-11-20 22:33:02	5	en_US	1	0	0
+10	1	10	2021-11-20 22:37:49	2021-11-20 22:37:43	2021-11-20 22:37:43	5	en_US	3	0	0
+19	1	19	2021-11-20 22:42:41	2021-11-20 22:42:34	2021-11-20 22:42:34	5	en_US	3	0	0
+15	1	15	2021-11-20 22:40:32	2021-11-20 22:40:24	2021-11-20 22:40:24	5	en_US	3	0	0
+2	1	2	2021-11-20 22:33:34	2021-11-20 22:33:27	2021-11-20 22:33:27	5	en_US	3	0	0
+6	1	6	2021-11-20 22:35:41	2021-11-20 22:35:34	2021-11-20 22:35:34	5	en_US	3	0	0
+11	1	11	2021-11-20 22:38:24	2021-11-20 22:38:17	2021-11-20 22:38:17	5	en_US	3	0	0
+3	1	3	2021-11-20 22:34:09	2021-11-20 22:34:02	2021-11-20 22:34:02	5	en_US	3	0	0
+7	1	7	2021-11-20 22:36:18	2021-11-20 22:36:10	2021-11-20 22:36:10	5	en_US	3	0	0
+16	1	16	2021-11-20 22:41:04	2021-11-20 22:40:56	2021-11-20 22:40:56	5	en_US	3	0	0
+4	1	4	2021-11-20 22:34:40	2021-11-20 22:34:32	2021-11-20 22:34:32	5	en_US	3	0	0
+12	1	12	2021-11-20 22:38:58	2021-11-20 22:38:50	2021-11-20 22:38:50	5	en_US	3	0	0
+8	1	8	2021-11-20 22:36:48	2021-11-20 22:36:41	2021-11-20 22:36:41	5	en_US	3	0	0
+17	1	17	2021-11-20 22:41:37	2021-11-20 22:41:29	2021-11-20 22:41:29	5	en_US	3	0	0
+13	1	13	2021-11-20 22:39:30	2021-11-20 22:39:23	2021-11-20 22:39:23	5	en_US	3	0	0
+9	1	9	2021-11-20 22:37:18	2021-11-20 22:37:12	2021-11-20 22:37:12	5	en_US	3	0	0
+18	1	18	2021-11-20 22:42:10	2021-11-20 22:42:03	2021-11-20 22:42:03	5	en_US	3	0	0
 \.
 
 
@@ -9579,31 +9579,31 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-16	jnovak	$2y$10$o2aks/68imx3SH/GbU6dQeLqVOWjJlvSAXkEzhyJFnk/pHnzER6qK	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2021-11-12 23:14:50	\N	2021-11-12 23:14:51	0	\N	\N	0	\N	1
-17	kalkhafaji	$2y$10$fTTOxmpEtM0o/lQNaTUweuOvKhtCC14V7.VWbCwhVfwHvUY2EE0si	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2021-11-12 23:15:23	\N	2021-11-12 23:15:23	0	\N	\N	0	\N	1
-4	dbuskins	$2y$10$DJUUH4Subd0M2fFhZ2FQR.gsp8Gazn7OR7HnvD88sN9qP.DqzILkC	dbuskins@mailinator.com				\N	US		\N	\N	2021-11-12 23:08:43	\N	2021-11-12 23:08:43	0	0	\N	0	\N	1
-5	sberardo	$2y$10$OgSj6P.BE003XGj5u2bdee2rz6k1nPfVOYDXSv9uFHjnPGbUpyiSW	sberardo@mailinator.com				\N	CA		\N	\N	2021-11-12 23:08:52	\N	2021-11-12 23:08:52	0	0	\N	0	\N	1
-6	minoue	$2y$10$AXPL0xEfXWhDeP7zTZEkReEKXlhtyNF.lM3fvBZt9A38/JjpMUdMS	minoue@mailinator.com				\N	JP		\N	\N	2021-11-12 23:09:02	\N	2021-11-12 23:09:02	0	0	\N	0	\N	1
-25	zwoods	$2y$10$/VdxOPDjOXG53ba1tTV2fu3Y9iqeOawqIMaidOmyla5YLri1E6Fq2	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2021-11-12 23:19:59	\N	2021-11-12 23:19:59	0	\N	\N	0	\N	1
-2	rvaca	$2y$10$J5MIirsWUCQerxrxMREL8eTbw.s0QLOgD8/kIUREdOAq84ozkwVlC	rvaca@mailinator.com				\N	MX		\N	\N	2021-11-12 23:08:27	\N	2021-11-12 23:09:12	0	0	\N	0	\N	1
-18	lchristopher	$2y$10$zju5e5/JM4iq7R7mb.T9VuxW8uxgmUKFGlqp2qrzx9pr16ZCa6pKi	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2021-11-12 23:15:59	\N	2021-11-12 23:15:59	0	\N	\N	0	\N	1
-1	admin	$2y$10$zNLd6JfnP3RLyIeDvWonr.L.fuAonbPBAPD/T/0i5HZRW2fWNIS/W	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2021-11-12 23:07:25	\N	2021-11-12 23:09:22	0	\N	\N	0	\N	1
-7	ccorino	$2y$10$c9UKAOPyqTVeGDRGxFbeY.a.iROR9TnL5vWTwBUFoGvIXCF/oWyKu	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2021-11-12 23:09:51	\N	2021-11-12 23:09:51	0	\N	\N	0	\N	1
-8	ckwantes	$2y$10$QVtlHN45qVww/EkvS6YgjuhZjIuLhFgSf.VSlrUjGyfqH8Fz6CkZa	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-12 23:10:17	\N	2021-11-12 23:10:17	0	\N	\N	0	\N	1
-3	dbarnes	$2y$10$1LMH3A9FlvLIDbL1N494ZuaFTuNzCVUVRGCbRM.Nyc6FOU/md5Xbu	dbarnes@mailinator.com				\N	AU		\N	\N	2021-11-12 23:08:34	\N	2021-11-12 23:20:19	0	0	\N	0	\N	1
-9	cmontgomerie	$2y$10$LVFrUvgfd5AXJLHxOBnbI.x8RaotYhYgJRzFoN.a/SbP2BuqYDOiy	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-12 23:10:50	\N	2021-11-12 23:10:50	0	\N	\N	0	\N	1
-10	ddiouf	$2y$10$6S89f5z/fcRuZOfaFRTlW.FquYOZwF5U9t4KgR1jgVK7zbpRkUbxK	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2021-11-12 23:11:29	\N	2021-11-12 23:11:29	0	\N	\N	0	\N	1
-19	lkumiega	$2y$10$PXtFAoouJHsPutQZXfni3.Xrvg0PsQRB7Y0V1Zw8VUZYlTeu.necm	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2021-11-12 23:16:33	\N	2021-11-12 23:16:33	0	\N	\N	0	\N	1
-11	dphillips	$2y$10$KjD9GY2ITcaR3TLNINjtR.B1ZvQRb3k3hWxKWxcgoxuaLkpAl6kX.	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-12 23:12:01	\N	2021-11-12 23:12:01	0	\N	\N	0	\N	1
-12	dsokoloff	$2y$10$8jQ/D10cnEE0n.V33UHdHuqdBTU6JwhL.DO7iUzzqfaFC6rZ1Dwxm	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2021-11-12 23:12:35	\N	2021-11-12 23:12:35	0	\N	\N	0	\N	1
-13	eostrom	$2y$10$4w94iLf9CKan9vwNRevD4ukpv3DH13OWiT/nG6mTzecXXnkMNj2Z2	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2021-11-12 23:13:06	\N	2021-11-12 23:13:06	0	\N	\N	0	\N	1
-20	pdaniel	$2y$10$hoCM6jIAbb/5ffm1Sng.6..nyXS74EooxrQACf302IzMSDpxur1Ea	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2021-11-12 23:17:06	\N	2021-11-12 23:17:06	0	\N	\N	0	\N	1
-14	fpaglieri	$2y$10$aKgcgZBmtnN1QRA2zWfrZO./hGPdl0PRxA9K169FsrQ7kNWKl8BhO	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2021-11-12 23:13:45	\N	2021-11-12 23:13:45	0	\N	\N	0	\N	1
-15	jmwandenga	$2y$10$s2zNCsIkLbb2L7DxvS1vR.AIBqZJGtKqWIzLAt8F.EoFY8CTGaDXO	jmwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2021-11-12 23:14:17	\N	2021-11-12 23:14:17	0	\N	\N	0	\N	1
-21	rbaiyewu	$2y$10$jYGzPOT/wf85Z3jklISgFeq7QSw8s1k3dw.63a6fRPgQjC4dF/6E.	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2021-11-12 23:17:40	\N	2021-11-12 23:17:40	0	\N	\N	0	\N	1
-22	rrossi	$2y$10$ZqaWtbnLaZTDlHqkyo7hPOnDB5mJktzpWjTBPOsFhwOY1KfofzL2O	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2021-11-12 23:18:14	\N	2021-11-12 23:18:14	0	\N	\N	0	\N	1
-23	vkarbasizaed	$2y$10$yl5bKOZUVIs1i7P.lJQxt.wcMu3dhPKdNsuYKSWhdnz4yfTOPPnYq	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2021-11-12 23:18:49	\N	2021-11-12 23:18:50	0	\N	\N	0	\N	1
-24	vwilliamson	$2y$10$h7XiC8hhgCgvnI5J1D8Q0uFcwjj6uhTKkpJSY1GGVXMPfAbpiNae.	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-12 23:19:25	\N	2021-11-12 23:19:25	0	\N	\N	0	\N	1
+16	jnovak	$2y$10$eS55atDJ59qKK8uheA5CNuR1L1XAI7l5EcEHuPeO.RoXwmXIjcVAW	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2021-11-20 22:37:23	\N	2021-11-20 22:37:23	0	\N	\N	0	\N	1
+17	kalkhafaji	$2y$10$lmiqVUf0zPJJYSjT8Lpj3e8o5sxy7jU8Jr6ZxL.uDXACjiKnvDBmO	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2021-11-20 22:37:55	\N	2021-11-20 22:37:55	0	\N	\N	0	\N	1
+4	dbuskins	$2y$10$aeVyKIXZuNsqxzO.RpSyWuePdBXIN7mARj5BUHgLzQvmBVbMajL2W	dbuskins@mailinator.com				\N	US		\N	\N	2021-11-20 22:31:36	\N	2021-11-20 22:31:36	0	0	\N	0	\N	1
+5	sberardo	$2y$10$yDS.B/DkRLUKwgS.XrpiPOL7ELQ1.B0pISusm9SPePSpoMyTcWK7O	sberardo@mailinator.com				\N	CA		\N	\N	2021-11-20 22:31:47	\N	2021-11-20 22:31:47	0	0	\N	0	\N	1
+6	minoue	$2y$10$D6JLH/wNDz5U3bmvezSkXe8KJ8lZmalB8tEptqIUCeMcmznSJvc2e	minoue@mailinator.com				\N	JP		\N	\N	2021-11-20 22:31:57	\N	2021-11-20 22:31:57	0	0	\N	0	\N	1
+25	zwoods	$2y$10$mnyQMm/E9HjjM90lsDDwcuDKfwKtczr/Vli.080KTSVnyxMbAASqS	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2021-11-20 22:42:15	\N	2021-11-20 22:42:15	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$9Ii/nSzE/BMdXbz9XPdtnOQvTVsvHEhu7XzVIofKRBVOEqKe16iEy	rvaca@mailinator.com				\N	MX		\N	\N	2021-11-20 22:31:20	\N	2021-11-20 22:32:06	0	0	\N	0	\N	1
+18	lchristopher	$2y$10$CK0sLI2rpImscHIPX8KsWeQrqlcFRuUwEB98/xX2WXiiMqKUzq4V6	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2021-11-20 22:38:29	\N	2021-11-20 22:38:29	0	\N	\N	0	\N	1
+1	admin	$2y$10$OZuJKskU.LVzd0r5VL/1suqws6gH//RFqNTxJ9O74rSuwY3ZOSmn6	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2021-11-20 22:30:25	\N	2021-11-20 22:32:16	0	\N	\N	0	\N	1
+7	ccorino	$2y$10$z.cdx/P27y62kVrrtEJERuATwx41dEZqVqCjgtRxoo6DZpJG2Ftku	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2021-11-20 22:32:42	\N	2021-11-20 22:32:43	0	\N	\N	0	\N	1
+8	ckwantes	$2y$10$uGW1otQQ0wsd.S1xxksEMO0m6yG0JiW4HaGSs43oim3gDsxIlxFkO	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-20 22:33:08	\N	2021-11-20 22:33:08	0	\N	\N	0	\N	1
+3	dbarnes	$2y$10$dWLBtFqe/uBYuAQNvrHKXeHN9ilrZYmsolj69V6GMfYOXaPBht.pa	dbarnes@mailinator.com				\N	AU		\N	\N	2021-11-20 22:31:27	\N	2021-11-20 22:42:35	0	0	\N	0	\N	1
+9	cmontgomerie	$2y$10$6bel8TkIJxCwFuYdvqFgMOyUxwv7zSTmYwq8m8oXvQRIMULjYWD8i	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-20 22:33:38	\N	2021-11-20 22:33:38	0	\N	\N	0	\N	1
+10	ddiouf	$2y$10$tXo6U.IX4ymcm5HFIDEHj.E24ohh43.yLPVPzSKXbCILmDYtrdxOy	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2021-11-20 22:34:14	\N	2021-11-20 22:34:14	0	\N	\N	0	\N	1
+19	lkumiega	$2y$10$/JIOrSm8CIVRlqUhRs8XUe3QZATcmcn4ymXi9WB5sgzsyZoOXwhQS	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2021-11-20 22:39:02	\N	2021-11-20 22:39:03	0	\N	\N	0	\N	1
+11	dphillips	$2y$10$MWVde7YfjA7cgEp4W32x0.EH1Ag17sEYC3SU.Chng0LjIKcTN4rqG	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-20 22:34:44	\N	2021-11-20 22:34:44	0	\N	\N	0	\N	1
+12	dsokoloff	$2y$10$q6stDYl21cHDKlFiLu7rFewxICaMB9KpK9xm8hrfkg5aKZIqEX9QC	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2021-11-20 22:35:16	\N	2021-11-20 22:35:16	0	\N	\N	0	\N	1
+13	eostrom	$2y$10$d.lq1PwVaDTnUFIz.tJZYerRkaVji60cv95GC0H1AqHNCIJhzSZ6.	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2021-11-20 22:35:46	\N	2021-11-20 22:35:46	0	\N	\N	0	\N	1
+20	pdaniel	$2y$10$SPtwGD7fTsddvobGPU.rTeWtTpP5UZsgl0w.rwJOkl2KIhxX/2Z36	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2021-11-20 22:39:35	\N	2021-11-20 22:39:35	0	\N	\N	0	\N	1
+14	fpaglieri	$2y$10$Fr8yhi0vwcZ2DhMPjsYNyOoaA49KKJ0H.b1Z6W/q6fryR6wmLMHI.	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2021-11-20 22:36:23	\N	2021-11-20 22:36:23	0	\N	\N	0	\N	1
+15	jmwandenga	$2y$10$azhc9ZoFVejfRnHPX16oeuBImFnvEV/lpIuY96tzMWyQxB.gkxot6	jmwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2021-11-20 22:36:52	\N	2021-11-20 22:36:52	0	\N	\N	0	\N	1
+21	rbaiyewu	$2y$10$f9k7ZuhAFxhlvgnR1fTHquCQlQBghMelW5sP9cH4tASAR6CIKsnZO	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2021-11-20 22:40:05	\N	2021-11-20 22:40:06	0	\N	\N	0	\N	1
+22	rrossi	$2y$10$Fb/wokxKrAgHs5J8eSueV.491V8NxeVn/swcUf.tNeCJwLVUlwn8y	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2021-11-20 22:40:37	\N	2021-11-20 22:40:37	0	\N	\N	0	\N	1
+23	vkarbasizaed	$2y$10$SJVO5KDl8t9WjsufCD34Fu1zfSGq/SMV0AvaT7KlqHParkTfDhsZO	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2021-11-20 22:41:09	\N	2021-11-20 22:41:09	0	\N	\N	0	\N	1
+24	vwilliamson	$2y$10$4QbMIjr8xYcVqOVoVLFsheqIfHJOo8TC8KuX1ZO0RsWmHoFGMIOGC	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2021-11-20 22:41:43	\N	2021-11-20 22:41:43	0	\N	\N	0	\N	1
 \.
 
 
@@ -9619,26 +9619,26 @@ SELECT pg_catalog.setval('public.users_user_id_seq', 25, true);
 --
 
 COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2021-11-12 23:07:25	1	plugins.metadata	dc11		0	0
-1	0	1	0	2021-11-12 23:07:25	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2021-11-12 23:07:25	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	0	0	0	2021-11-12 23:07:25	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	2	0	0	2021-11-12 23:07:25	1	plugins.generic	acron	AcronPlugin	1	1
-1	0	0	0	2021-11-12 23:07:25	1	plugins.generic	crossrefDeposit	CrossrefDepositPlugin	1	0
-1	0	0	0	2021-11-12 23:07:25	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	0	0	0	2021-11-12 23:07:25	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	0	0	0	2021-11-12 23:07:25	1	plugins.generic	usageEvent		0	0
-1	0	1	0	2021-11-12 23:07:25	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	1	2	22	2021-11-12 23:07:25	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
-1	0	0	0	2021-11-12 23:07:25	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-1	2	0	0	2021-11-12 23:07:25	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	1	0	0	2021-11-12 23:07:25	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-2	2	0	0	2021-11-12 23:07:25	1	plugins.importexport	crossref		0	0
-1	0	0	0	2021-11-12 23:07:25	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2021-11-12 23:07:25	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
-1	0	0	0	2021-11-12 23:07:25	1	plugins.themes	default	DefaultThemePlugin	1	0
-3	3	0	8	2021-11-12 23:07:25	1	core	ops		0	1
-1	1	0	0	2021-11-12 23:07:25	1	plugins.reports	counterReport		0	0
+1	0	0	0	2021-11-20 22:30:25	1	plugins.metadata	dc11		0	0
+1	0	1	0	2021-11-20 22:30:25	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	0	0	0	2021-11-20 22:30:25	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	0	0	2021-11-20 22:30:25	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2021-11-20 22:30:25	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	2	0	0	2021-11-20 22:30:25	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	1	0	0	2021-11-20 22:30:25	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2021-11-20 22:30:25	1	plugins.generic	usageEvent		0	0
+1	0	0	0	2021-11-20 22:30:25	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+1	2	0	0	2021-11-20 22:30:25	1	plugins.generic	acron	AcronPlugin	1	1
+1	0	1	0	2021-11-20 22:30:25	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	0	0	0	2021-11-20 22:30:25	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	1	2	23	2021-11-20 22:30:25	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
+1	0	0	0	2021-11-20 22:30:25	1	plugins.generic	crossrefDeposit	CrossrefDepositPlugin	1	0
+2	2	0	0	2021-11-20 22:30:25	1	plugins.importexport	crossref		0	0
+1	0	0	0	2021-11-20 22:30:25	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2021-11-20 22:30:25	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
+1	0	0	0	2021-11-20 22:30:25	1	plugins.themes	default	DefaultThemePlugin	1	0
+3	3	0	8	2021-11-20 22:30:24	1	core	ops		0	1
+1	1	0	0	2021-11-20 22:30:25	1	plugins.reports	counterReport		0	0
 \.
 
 
