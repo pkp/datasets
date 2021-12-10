@@ -48,10 +48,14 @@ Note: These tools are generally intended to be run from the OJS/OMP/OPS installa
 - `loadfiles.sh`: **Load the files environment from the appropriate dataset**. This includes file storage area, public file storage area, and configuration file.
 
   Example: `../datasets/tools/loadfiles.sh`
+  
+  Example: `../datasets/tools/loadfiles.sh stable-3_3_0` to load a set of files for a specific version (e.g. for upgrade testing)
 
 - `load.sh`: **Load both the database and file environments from the appropriate dataset**. This is equivalent to running both `loadfiles.sh` and `loaddb.sh`.
 
   Example: `../datasets/tools/load.sh` (you may need to provide a sudo password)
+
+  Example: `../datasets/tools/load.sh stable-3_3_0` to load a specific version of a dataset (e.g. for upgrade testing)
 
 ## How this is maintained
 
