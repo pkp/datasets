@@ -21,23 +21,25 @@ Within each dataset, you will find:
 
 Note: These tools are generally intended to be run from the OJS/OMP/OPS installation directory, so you will likely have to specify the path to run them. In the examples below, this repository is available in `../datasets`.
 
-- `environment.sh`: Configure the shell environment.
+- `environment.sh`: **Configure the shell environment.**
 
   Example: `. ../datasets/tools/environment.sh ojs main`
 
-- `dbclient.sh`: Connect to the database client.
+- `dbclient.sh`: **Connect to the database client.**
 
   Example: `../datasets/tools/dbclient.sh < mydatadump.sql` (to load a database dump)
+  
+  Example: `../datasets/tools/dbclient.sh` (to run SQL statements from the terminal)
 
-- `recreatedb.sh`: Ensure an empty database is available, deleting any existing data if necessary.
+- `recreatedb.sh`: **Ensure an empty database is available, deleting any existing data if necessary.**
 
   Example: `../datasets/tools/recreatedb.sh` (you may need to provide a sudo password)
 
-- `wipe.sh`: Clear out the database, files directory, configuration file, etc. This will leave the application ready to be installed.
+- `wipe.sh`: **Clear out the database, files directory, configuration file, etc.** This will leave the application ready to be installed.
 
   Example: `../datasets/tools/wipe.sh`
 
-- `loaddb.sh`: Load the appropriate database image from the datasets, creating an empty DB as needed.
+- `loaddb.sh`: **Load the appropriate database image from the datasets**. This will create an empty DB as needed.
 
   Example: `../datasets/tools/loaddb.sh` (you may need to provide a sudo password)
 
