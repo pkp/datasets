@@ -39,9 +39,17 @@ Note: These tools are generally intended to be run from the OJS/OMP/OPS installa
 
   Example: `../datasets/tools/wipe.sh`
 
-- `loaddb.sh`: **Load the appropriate database image from the datasets**. This will create an empty DB as needed.
+- `loaddb.sh`: **Load the database image from the appropriate dataset**. This will create an empty DB as needed.
 
   Example: `../datasets/tools/loaddb.sh` (you may need to provide a sudo password)
+
+- `loadfiles.sh`: **Load the files environment from the appropriate dataset**. This includes file storage area, public file storage area, and configuration file.
+
+  Example: `../datasets/tools/loadfiles.sh`
+
+- `load.sh`: **Load both the database and file environments from the appropriate dataset**. This is equivalent to running both `loadfiles.sh` and `loaddb.sh`.
+
+  Example: `../datasets/tools/load.sh` (you may need to provide a sudo password)
 
 ## How this is maintained
 
