@@ -45,7 +45,7 @@ case "$APP" in
 	"ojs") ;;
 	"omp") ;;
 	"ops") ;;
-	*) echo "Unknown app specified in first parameter."; return -1 ;;
+	*) echo "Unknown app specified in first parameter."; exit -1 ;;
 esac
 
 # Validate the branch
@@ -57,7 +57,7 @@ case "$BRANCH" in
 	"stable-3_3_0") ;;
 	"stable-3_2_1") ;;
 	"stable-3_2_0") ;;
-	*) echo "Unknown branch specified in second parameter."; return -1 ;;
+	*) echo "Unknown branch specified in second parameter."; exit -1 ;;
 esac
 
 # Validate the database type, setting default to MySQL if needed
@@ -69,7 +69,7 @@ case "$DBTYPE" in
 	"PostgreSQL")
 		export DBTYPE_SYMBOLIC=pgsql
 		;;
-	*) echo "Unknown database type specified in third parameter."; return -1 ;;
+	*) echo "Unknown database type specified in third parameter."; exit -1 ;;
 esac
 
 # The BASEURL may contain variable names. Eval them to values.
