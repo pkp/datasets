@@ -42,6 +42,8 @@ Note: These tools are generally intended to be run from the OJS/OMP/OPS installa
 - `loaddb.sh`: **Load the database image from the appropriate dataset**. This will create an empty DB as needed.
 
   Example: `../datasets/tools/loaddb.sh` (you may need to provide a sudo password)
+  
+  Example: `../datasets/tools/loaddb.sh stable-3_3_0` to load a specific database version (e.g. for upgrade testing)
 
 - `loadfiles.sh`: **Load the files environment from the appropriate dataset**. This includes file storage area, public file storage area, and configuration file.
 
