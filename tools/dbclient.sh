@@ -19,10 +19,10 @@ set -e
 
 case "$DBTYPE" in
 	PostgreSQL)
-		psql --username=$DBUSERNAME --host=$DBHOST $DBNAME
+		psql "$@" --username=$DBUSERNAME --host=$DBHOST $DBNAME
 		;;
 	MySQL|MySQLi)
-		mysql --user=$DBUSERNAME --password=$DBPASSWORD --host=$DBHOST $DBNAME
+		mysql "$@" --user=$DBUSERNAME --password=$DBPASSWORD --host=$DBHOST $DBNAME
 		;;
 	*)
 		echo "Unknown DBTYPE \"${DBTYPE}\"!"
