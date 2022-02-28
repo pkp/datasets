@@ -4586,36 +4586,36 @@ COPY public.data_object_tombstones (tombstone_id, data_object_id, date_deleted, 
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	0	1	0	3	8	2022-01-08 00:51:13
-2	1	1	3	1	3	1	2022-01-08 00:51:31
-3	1	0	4	0	3	7	2022-01-08 00:51:40
-4	2	0	1	0	3	8	2022-01-08 00:53:59
-5	2	2	3	1	6	11	2022-01-08 00:54:17
-6	3	0	1	0	3	8	2022-01-08 00:54:48
-7	3	3	3	1	3	1	2022-01-08 00:55:02
-8	5	0	1	0	3	8	2022-01-08 00:55:55
-9	5	4	3	1	3	1	2022-01-08 00:56:08
-10	5	0	4	0	3	7	2022-01-08 00:56:17
-11	6	0	1	0	3	8	2022-01-08 00:56:52
-12	6	5	3	1	3	1	2022-01-08 00:57:06
-13	6	0	4	0	3	7	2022-01-08 00:57:15
-14	7	0	1	0	3	8	2022-01-08 00:57:46
-15	9	0	1	0	3	8	2022-01-08 00:59:00
-16	9	7	3	1	3	1	2022-01-08 00:59:14
-17	9	0	4	0	3	7	2022-01-08 00:59:23
-18	10	0	1	0	3	8	2022-01-08 00:59:59
-19	12	0	1	0	3	8	2022-01-08 01:01:18
-20	13	0	1	0	3	8	2022-01-08 01:01:56
-21	13	10	3	1	3	2	2022-01-08 01:02:53
-22	15	0	1	0	3	8	2022-01-08 01:03:38
-23	15	11	3	1	3	1	2022-01-08 01:03:52
-24	15	0	4	0	3	7	2022-01-08 01:04:00
-25	17	0	1	0	3	8	2022-01-08 01:04:54
-26	17	12	3	1	3	1	2022-01-08 01:05:08
-27	17	0	4	0	3	7	2022-01-08 01:05:16
-28	18	0	1	0	3	9	2022-01-08 01:06:08
-29	19	0	1	0	3	8	2022-01-08 01:06:35
-30	19	13	3	1	3	1	2022-01-08 01:06:48
+1	1	0	1	0	3	8	2022-02-28 23:36:24
+2	1	1	3	1	3	1	2022-02-28 23:36:43
+3	1	0	4	0	3	7	2022-02-28 23:36:52
+4	2	0	1	0	3	8	2022-02-28 23:39:13
+5	2	2	3	1	6	11	2022-02-28 23:39:32
+6	3	0	1	0	3	8	2022-02-28 23:40:05
+7	3	3	3	1	3	1	2022-02-28 23:40:19
+8	5	0	1	0	3	8	2022-02-28 23:41:14
+9	5	4	3	1	3	1	2022-02-28 23:41:28
+10	5	0	4	0	3	7	2022-02-28 23:41:37
+11	6	0	1	0	3	8	2022-02-28 23:42:14
+12	6	5	3	1	3	1	2022-02-28 23:42:28
+13	6	0	4	0	3	7	2022-02-28 23:42:37
+14	7	0	1	0	3	8	2022-02-28 23:43:10
+15	9	0	1	0	3	8	2022-02-28 23:44:25
+16	9	7	3	1	3	1	2022-02-28 23:44:39
+17	9	0	4	0	3	7	2022-02-28 23:44:48
+18	10	0	1	0	3	8	2022-02-28 23:45:25
+19	12	0	1	0	3	8	2022-02-28 23:46:45
+20	13	0	1	0	3	8	2022-02-28 23:47:27
+21	13	10	3	1	3	2	2022-02-28 23:48:26
+22	15	0	1	0	3	8	2022-02-28 23:49:12
+23	15	11	3	1	3	1	2022-02-28 23:49:26
+24	15	0	4	0	3	7	2022-02-28 23:49:35
+25	17	0	1	0	3	8	2022-02-28 23:50:30
+26	17	12	3	1	3	1	2022-02-28 23:50:44
+27	17	0	4	0	3	7	2022-02-28 23:50:53
+28	18	0	1	0	3	9	2022-02-28 23:51:48
+29	19	0	1	0	3	8	2022-02-28 23:52:18
+30	19	13	3	1	3	1	2022-02-28 23:52:32
 \.
 
 
@@ -4849,214 +4849,214 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	17	2022-01-08 00:50:56	268435458	submission.event.general.metadataUpdated	0
-2	515	1	17	2022-01-08 00:51:01	1342177281	submission.event.fileUploaded	0
-3	1048585	1	17	2022-01-08 00:51:04	1342177281	submission.event.fileUploaded	0
-4	1048585	1	17	2022-01-08 00:51:07	268435458	submission.event.general.metadataUpdated	0
-5	1048585	1	17	2022-01-08 00:51:08	268435457	submission.event.submissionSubmitted	0
-6	1048585	1	3	2022-01-08 00:51:13	805306371	log.editor.decision	0
-7	1048585	1	3	2022-01-08 00:51:19	1073741825	log.review.reviewerAssigned	0
-8	1048585	1	3	2022-01-08 00:51:24	1073741825	log.review.reviewerAssigned	0
-9	1048585	1	3	2022-01-08 00:51:29	1073741825	log.review.reviewerAssigned	0
-10	1048585	1	3	2022-01-08 00:51:31	805306371	log.editor.decision	0
-11	1048585	1	3	2022-01-08 00:51:37	268435459	submission.event.participantAdded	0
-12	1048585	1	3	2022-01-08 00:51:40	805306371	log.editor.decision	0
-13	1048585	1	3	2022-01-08 00:51:46	268435459	submission.event.participantAdded	0
-14	1048585	1	3	2022-01-08 00:51:51	268435459	submission.event.participantAdded	0
-15	1048585	1	3	2022-01-08 00:51:58	268435458	submission.event.general.metadataUpdated	0
-16	1048585	1	3	2022-01-08 00:51:59	268435458	submission.event.general.metadataUpdated	0
-17	1048585	1	3	2022-01-08 00:52:00	268435458	submission.event.general.metadataUpdated	0
-18	515	2	3	2022-01-08 00:52:11	1342177281	submission.event.fileUploaded	0
-19	1048585	1	3	2022-01-08 00:52:11	1342177281	submission.event.fileUploaded	0
-20	1048585	1	3	2022-01-08 00:52:21	268435459	submission.event.participantAdded	0
-21	1048585	1	17	2022-01-08 00:52:27	268435458	submission.event.general.metadataUpdated	0
-22	1048585	1	3	2022-01-08 00:52:31	268435458	submission.event.general.metadataUpdated	0
-23	1048585	1	3	2022-01-08 00:52:32	268435462	publication.event.published	0
-24	1048585	1	3	2022-01-08 00:52:40	268435463	publication.event.unpublished	0
-25	1048585	1	3	2022-01-08 00:52:45	268435462	publication.event.published	0
-26	1048585	1	3	2022-01-08 00:52:48	268435458	submission.event.general.metadataUpdated	0
-27	1048585	1	3	2022-01-08 00:52:48	268435464	publication.event.versionCreated	0
-28	1048585	1	3	2022-01-08 00:52:58	268435458	submission.event.general.metadataUpdated	0
-29	1048585	1	3	2022-01-08 00:53:02	268435458	submission.event.general.metadataUpdated	0
-30	1048585	1	3	2022-01-08 00:53:08	268435458	submission.event.general.metadataUpdated	0
-31	1048585	1	3	2022-01-08 00:53:09	268435462	publication.event.versionPublished	0
-32	1048585	1	3	2022-01-08 00:53:18	268435463	publication.event.versionUnpublished	0
-33	1048585	1	3	2022-01-08 00:53:23	268435459	submission.event.participantAdded	0
-34	1048585	1	3	2022-01-08 00:53:31	268435459	submission.event.participantAdded	0
-35	1048585	2	18	2022-01-08 00:53:42	268435458	submission.event.general.metadataUpdated	0
-36	515	3	18	2022-01-08 00:53:48	1342177281	submission.event.fileUploaded	0
-37	1048585	2	18	2022-01-08 00:53:50	1342177281	submission.event.fileUploaded	0
-38	1048585	2	18	2022-01-08 00:53:53	268435458	submission.event.general.metadataUpdated	0
-39	1048585	2	18	2022-01-08 00:53:54	268435457	submission.event.submissionSubmitted	0
-40	1048585	2	3	2022-01-08 00:53:59	805306371	log.editor.decision	0
-41	1048585	2	3	2022-01-08 00:54:04	268435459	submission.event.participantAdded	0
-42	1048585	2	3	2022-01-08 00:54:08	268435458	submission.event.general.metadataUpdated	0
-43	1048585	2	6	2022-01-08 00:54:17	805306372	log.editor.recommendation	0
-44	1048585	3	19	2022-01-08 00:54:31	268435458	submission.event.general.metadataUpdated	0
-45	515	5	19	2022-01-08 00:54:36	1342177281	submission.event.fileUploaded	0
-46	1048585	3	19	2022-01-08 00:54:39	1342177281	submission.event.fileUploaded	0
-47	1048585	3	19	2022-01-08 00:54:42	268435458	submission.event.general.metadataUpdated	0
-48	1048585	3	19	2022-01-08 00:54:43	268435457	submission.event.submissionSubmitted	0
-49	1048585	3	3	2022-01-08 00:54:48	805306371	log.editor.decision	0
-50	1048585	3	3	2022-01-08 00:54:55	1073741825	log.review.reviewerAssigned	0
-51	1048585	3	3	2022-01-08 00:55:00	1073741825	log.review.reviewerAssigned	0
-52	1048585	3	3	2022-01-08 00:55:02	805306371	log.editor.decision	0
-53	1048585	3	3	2022-01-08 00:55:08	268435459	submission.event.participantAdded	0
-54	1048585	4	20	2022-01-08 00:55:16	268435458	submission.event.general.metadataUpdated	0
-55	515	7	20	2022-01-08 00:55:22	1342177281	submission.event.fileUploaded	0
-56	1048585	4	20	2022-01-08 00:55:24	1342177281	submission.event.fileUploaded	0
-57	1048585	4	20	2022-01-08 00:55:30	268435458	submission.event.general.metadataUpdated	0
-58	1048585	4	20	2022-01-08 00:55:31	268435457	submission.event.submissionSubmitted	0
-59	1048585	5	21	2022-01-08 00:55:38	268435458	submission.event.general.metadataUpdated	0
-60	515	8	21	2022-01-08 00:55:43	1342177281	submission.event.fileUploaded	0
-61	1048585	5	21	2022-01-08 00:55:46	1342177281	submission.event.fileUploaded	0
-62	1048585	5	21	2022-01-08 00:55:48	268435458	submission.event.general.metadataUpdated	0
-63	1048585	5	21	2022-01-08 00:55:49	268435457	submission.event.submissionSubmitted	0
-64	1048585	5	3	2022-01-08 00:55:55	805306371	log.editor.decision	0
-65	1048585	5	3	2022-01-08 00:56:01	1073741825	log.review.reviewerAssigned	0
-66	1048585	5	3	2022-01-08 00:56:06	1073741825	log.review.reviewerAssigned	0
-67	1048585	5	3	2022-01-08 00:56:08	805306371	log.editor.decision	0
-68	1048585	5	3	2022-01-08 00:56:14	268435459	submission.event.participantAdded	0
-69	1048585	5	3	2022-01-08 00:56:17	805306371	log.editor.decision	0
-70	1048585	5	3	2022-01-08 00:56:23	268435459	submission.event.participantAdded	0
-71	1048585	5	3	2022-01-08 00:56:27	268435459	submission.event.participantAdded	0
-72	1048585	6	22	2022-01-08 00:56:35	268435458	submission.event.general.metadataUpdated	0
-73	515	10	22	2022-01-08 00:56:40	1342177281	submission.event.fileUploaded	0
-74	1048585	6	22	2022-01-08 00:56:43	1342177281	submission.event.fileUploaded	0
-75	1048585	6	22	2022-01-08 00:56:46	268435458	submission.event.general.metadataUpdated	0
-76	1048585	6	22	2022-01-08 00:56:47	268435457	submission.event.submissionSubmitted	0
-77	1048585	6	3	2022-01-08 00:56:52	805306371	log.editor.decision	0
-78	1048585	6	3	2022-01-08 00:56:59	1073741825	log.review.reviewerAssigned	0
-79	1048585	6	3	2022-01-08 00:57:04	1073741825	log.review.reviewerAssigned	0
-80	1048585	6	3	2022-01-08 00:57:06	805306371	log.editor.decision	0
-81	1048585	6	3	2022-01-08 00:57:12	268435459	submission.event.participantAdded	0
-82	1048585	6	3	2022-01-08 00:57:15	805306371	log.editor.decision	0
-83	1048585	6	3	2022-01-08 00:57:21	268435459	submission.event.participantAdded	0
-84	1048585	7	23	2022-01-08 00:57:29	268435458	submission.event.general.metadataUpdated	0
-85	515	12	23	2022-01-08 00:57:34	1342177281	submission.event.fileUploaded	0
-86	1048585	7	23	2022-01-08 00:57:37	1342177281	submission.event.fileUploaded	0
-87	1048585	7	23	2022-01-08 00:57:39	268435458	submission.event.general.metadataUpdated	0
-88	1048585	7	23	2022-01-08 00:57:40	268435457	submission.event.submissionSubmitted	0
-89	1048585	7	3	2022-01-08 00:57:46	805306371	log.editor.decision	0
-90	1048585	7	3	2022-01-08 00:57:53	1073741825	log.review.reviewerAssigned	0
-91	1048585	7	3	2022-01-08 00:57:58	1073741825	log.review.reviewerAssigned	0
-92	1048585	7	3	2022-01-08 00:58:03	1073741825	log.review.reviewerAssigned	0
-93	1048585	7	8	2022-01-08 00:58:09	1073741830	log.review.reviewAccepted	0
-94	1048585	7	8	2022-01-08 00:58:13	1073741848	log.review.reviewReady	0
-95	1048585	8	24	2022-01-08 00:58:21	268435458	submission.event.general.metadataUpdated	0
-96	515	14	24	2022-01-08 00:58:26	1342177281	submission.event.fileUploaded	0
-97	1048585	8	24	2022-01-08 00:58:28	1342177281	submission.event.fileUploaded	0
-98	1048585	8	24	2022-01-08 00:58:34	268435458	submission.event.general.metadataUpdated	0
-99	1048585	8	24	2022-01-08 00:58:35	268435457	submission.event.submissionSubmitted	0
-100	1048585	9	25	2022-01-08 00:58:43	268435458	submission.event.general.metadataUpdated	0
-101	515	15	25	2022-01-08 00:58:48	1342177281	submission.event.fileUploaded	0
-102	1048585	9	25	2022-01-08 00:58:50	1342177281	submission.event.fileUploaded	0
-103	1048585	9	25	2022-01-08 00:58:53	268435458	submission.event.general.metadataUpdated	0
-104	1048585	9	25	2022-01-08 00:58:54	268435457	submission.event.submissionSubmitted	0
-105	1048585	9	3	2022-01-08 00:59:00	805306371	log.editor.decision	0
-106	1048585	9	3	2022-01-08 00:59:07	1073741825	log.review.reviewerAssigned	0
-107	1048585	9	3	2022-01-08 00:59:12	1073741825	log.review.reviewerAssigned	0
-108	1048585	9	3	2022-01-08 00:59:14	805306371	log.editor.decision	0
-109	1048585	9	3	2022-01-08 00:59:20	268435459	submission.event.participantAdded	0
-110	1048585	9	3	2022-01-08 00:59:23	805306371	log.editor.decision	0
-111	1048585	9	3	2022-01-08 00:59:29	268435459	submission.event.participantAdded	0
-112	1048585	9	3	2022-01-08 00:59:33	268435459	submission.event.participantAdded	0
-113	1048585	10	26	2022-01-08 00:59:41	268435458	submission.event.general.metadataUpdated	0
-114	515	17	26	2022-01-08 00:59:47	1342177281	submission.event.fileUploaded	0
-115	1048585	10	26	2022-01-08 00:59:49	1342177281	submission.event.fileUploaded	0
-116	1048585	10	26	2022-01-08 00:59:52	268435458	submission.event.general.metadataUpdated	0
-117	1048585	10	26	2022-01-08 00:59:53	268435457	submission.event.submissionSubmitted	0
-118	1048585	10	3	2022-01-08 00:59:59	805306371	log.editor.decision	0
-119	1048585	10	3	2022-01-08 01:00:06	1073741825	log.review.reviewerAssigned	0
-120	1048585	10	3	2022-01-08 01:00:11	1073741825	log.review.reviewerAssigned	0
-121	1048585	10	9	2022-01-08 01:00:16	1073741830	log.review.reviewAccepted	0
-122	1048585	10	9	2022-01-08 01:00:20	1073741848	log.review.reviewReady	0
-123	1048585	10	10	2022-01-08 01:00:25	1073741830	log.review.reviewAccepted	0
-124	1048585	10	10	2022-01-08 01:00:29	1073741848	log.review.reviewReady	0
-125	1048585	11	27	2022-01-08 01:00:37	268435458	submission.event.general.metadataUpdated	0
-126	515	19	27	2022-01-08 01:00:42	1342177281	submission.event.fileUploaded	0
-127	1048585	11	27	2022-01-08 01:00:45	1342177281	submission.event.fileUploaded	0
-128	1048585	11	27	2022-01-08 01:00:50	268435458	submission.event.general.metadataUpdated	0
-129	1048585	11	27	2022-01-08 01:00:51	268435457	submission.event.submissionSubmitted	0
-130	1048585	12	28	2022-01-08 01:00:58	268435458	submission.event.general.metadataUpdated	0
-131	515	20	28	2022-01-08 01:01:04	1342177281	submission.event.fileUploaded	0
-132	1048585	12	28	2022-01-08 01:01:06	1342177281	submission.event.fileUploaded	0
-133	1048585	12	28	2022-01-08 01:01:09	268435458	submission.event.general.metadataUpdated	0
-134	1048585	12	28	2022-01-08 01:01:10	268435457	submission.event.submissionSubmitted	0
-135	1048585	12	3	2022-01-08 01:01:18	805306371	log.editor.decision	0
-136	1048585	12	3	2022-01-08 01:01:24	1073741825	log.review.reviewerAssigned	0
-137	1048585	12	3	2022-01-08 01:01:29	1073741825	log.review.reviewerAssigned	0
-138	1048585	13	29	2022-01-08 01:01:37	268435458	submission.event.general.metadataUpdated	0
-139	515	22	29	2022-01-08 01:01:42	1342177281	submission.event.fileUploaded	0
-140	1048585	13	29	2022-01-08 01:01:45	1342177281	submission.event.fileUploaded	0
-141	1048585	13	29	2022-01-08 01:01:48	268435458	submission.event.general.metadataUpdated	0
-142	1048585	13	29	2022-01-08 01:01:49	268435457	submission.event.submissionSubmitted	0
-143	1048585	13	3	2022-01-08 01:01:56	805306371	log.editor.decision	0
-144	1048585	13	3	2022-01-08 01:02:03	1073741825	log.review.reviewerAssigned	0
-145	1048585	13	3	2022-01-08 01:02:08	1073741825	log.review.reviewerAssigned	0
-146	1048585	13	3	2022-01-08 01:02:13	1073741825	log.review.reviewerAssigned	0
-147	1048585	13	7	2022-01-08 01:02:18	1073741830	log.review.reviewAccepted	0
-148	1048585	13	7	2022-01-08 01:02:22	1073741848	log.review.reviewReady	0
-149	1048585	13	9	2022-01-08 01:02:27	1073741830	log.review.reviewAccepted	0
-150	1048585	13	9	2022-01-08 01:02:32	1073741848	log.review.reviewReady	0
-151	1048585	13	10	2022-01-08 01:02:38	1073741830	log.review.reviewAccepted	0
-152	1048585	13	10	2022-01-08 01:02:42	1073741848	log.review.reviewReady	0
-153	1048585	13	3	2022-01-08 01:02:53	805306371	log.editor.decision	0
-154	1048585	14	30	2022-01-08 01:03:00	268435458	submission.event.general.metadataUpdated	0
-155	515	23	30	2022-01-08 01:03:05	1342177281	submission.event.fileUploaded	0
-156	1048585	14	30	2022-01-08 01:03:08	1342177281	submission.event.fileUploaded	0
-157	1048585	14	30	2022-01-08 01:03:11	268435458	submission.event.general.metadataUpdated	0
-158	1048585	14	30	2022-01-08 01:03:12	268435457	submission.event.submissionSubmitted	0
-159	1048585	15	31	2022-01-08 01:03:19	268435458	submission.event.general.metadataUpdated	0
-160	515	24	31	2022-01-08 01:03:24	1342177281	submission.event.fileUploaded	0
-161	1048585	15	31	2022-01-08 01:03:27	1342177281	submission.event.fileUploaded	0
-162	1048585	15	31	2022-01-08 01:03:29	268435458	submission.event.general.metadataUpdated	0
-163	1048585	15	31	2022-01-08 01:03:30	268435457	submission.event.submissionSubmitted	0
-164	1048585	15	3	2022-01-08 01:03:38	805306371	log.editor.decision	0
-165	1048585	15	3	2022-01-08 01:03:45	1073741825	log.review.reviewerAssigned	0
-166	1048585	15	3	2022-01-08 01:03:50	1073741825	log.review.reviewerAssigned	0
-167	1048585	15	3	2022-01-08 01:03:52	805306371	log.editor.decision	0
-168	1048585	15	3	2022-01-08 01:03:57	268435459	submission.event.participantAdded	0
-169	1048585	15	3	2022-01-08 01:04:00	805306371	log.editor.decision	0
-170	1048585	15	3	2022-01-08 01:04:07	268435459	submission.event.participantAdded	0
-171	1048585	16	32	2022-01-08 01:04:15	268435458	submission.event.general.metadataUpdated	0
-172	515	26	32	2022-01-08 01:04:21	1342177281	submission.event.fileUploaded	0
-173	1048585	16	32	2022-01-08 01:04:23	1342177281	submission.event.fileUploaded	0
-174	1048585	16	32	2022-01-08 01:04:26	268435458	submission.event.general.metadataUpdated	0
-175	1048585	16	32	2022-01-08 01:04:27	268435457	submission.event.submissionSubmitted	0
-176	1048585	17	33	2022-01-08 01:04:34	268435458	submission.event.general.metadataUpdated	0
-177	515	27	33	2022-01-08 01:04:39	1342177281	submission.event.fileUploaded	0
-178	1048585	17	33	2022-01-08 01:04:42	1342177281	submission.event.fileUploaded	0
-179	1048585	17	33	2022-01-08 01:04:45	268435458	submission.event.general.metadataUpdated	0
-180	1048585	17	33	2022-01-08 01:04:46	268435457	submission.event.submissionSubmitted	0
-181	1048585	17	3	2022-01-08 01:04:54	805306371	log.editor.decision	0
-182	1048585	17	3	2022-01-08 01:05:01	1073741825	log.review.reviewerAssigned	0
-183	1048585	17	3	2022-01-08 01:05:06	1073741825	log.review.reviewerAssigned	0
-184	1048585	17	3	2022-01-08 01:05:08	805306371	log.editor.decision	0
-185	1048585	17	3	2022-01-08 01:05:13	268435459	submission.event.participantAdded	0
-186	1048585	17	3	2022-01-08 01:05:16	805306371	log.editor.decision	0
-187	1048585	17	3	2022-01-08 01:05:22	268435459	submission.event.participantAdded	0
-188	1048585	17	3	2022-01-08 01:05:26	268435459	submission.event.participantAdded	0
-189	515	29	3	2022-01-08 01:05:33	1342177281	submission.event.fileUploaded	0
-190	1048585	17	3	2022-01-08 01:05:34	1342177281	submission.event.fileUploaded	0
-191	1048585	17	3	2022-01-08 01:05:37	268435458	submission.event.general.metadataUpdated	0
-192	1048585	17	3	2022-01-08 01:05:39	268435462	publication.event.published	0
-193	1048585	18	34	2022-01-08 01:05:48	268435458	submission.event.general.metadataUpdated	0
-194	515	30	34	2022-01-08 01:05:54	1342177281	submission.event.fileUploaded	0
-195	1048585	18	34	2022-01-08 01:05:56	1342177281	submission.event.fileUploaded	0
-196	1048585	18	34	2022-01-08 01:05:59	268435458	submission.event.general.metadataUpdated	0
-197	1048585	18	34	2022-01-08 01:06:00	268435457	submission.event.submissionSubmitted	0
-198	1048585	18	3	2022-01-08 01:06:08	805306371	log.editor.decision	0
-199	1048585	19	35	2022-01-08 01:06:15	268435458	submission.event.general.metadataUpdated	0
-200	515	31	35	2022-01-08 01:06:20	1342177281	submission.event.fileUploaded	0
-201	1048585	19	35	2022-01-08 01:06:22	1342177281	submission.event.fileUploaded	0
-202	1048585	19	35	2022-01-08 01:06:25	268435458	submission.event.general.metadataUpdated	0
-203	1048585	19	35	2022-01-08 01:06:26	268435457	submission.event.submissionSubmitted	0
-204	1048585	19	3	2022-01-08 01:06:35	805306371	log.editor.decision	0
-205	1048585	19	3	2022-01-08 01:06:41	1073741825	log.review.reviewerAssigned	0
-206	1048585	19	3	2022-01-08 01:06:46	1073741825	log.review.reviewerAssigned	0
-207	1048585	19	3	2022-01-08 01:06:48	805306371	log.editor.decision	0
-208	1048585	19	3	2022-01-08 01:06:54	268435459	submission.event.participantAdded	0
+1	1048585	1	17	2022-02-28 23:36:06	268435458	submission.event.general.metadataUpdated	0
+2	515	1	17	2022-02-28 23:36:11	1342177281	submission.event.fileUploaded	0
+3	1048585	1	17	2022-02-28 23:36:14	1342177281	submission.event.fileUploaded	0
+4	1048585	1	17	2022-02-28 23:36:17	268435458	submission.event.general.metadataUpdated	0
+5	1048585	1	17	2022-02-28 23:36:18	268435457	submission.event.submissionSubmitted	0
+6	1048585	1	3	2022-02-28 23:36:24	805306371	log.editor.decision	0
+7	1048585	1	3	2022-02-28 23:36:30	1073741825	log.review.reviewerAssigned	0
+8	1048585	1	3	2022-02-28 23:36:35	1073741825	log.review.reviewerAssigned	0
+9	1048585	1	3	2022-02-28 23:36:41	1073741825	log.review.reviewerAssigned	0
+10	1048585	1	3	2022-02-28 23:36:43	805306371	log.editor.decision	0
+11	1048585	1	3	2022-02-28 23:36:48	268435459	submission.event.participantAdded	0
+12	1048585	1	3	2022-02-28 23:36:52	805306371	log.editor.decision	0
+13	1048585	1	3	2022-02-28 23:36:58	268435459	submission.event.participantAdded	0
+14	1048585	1	3	2022-02-28 23:37:02	268435459	submission.event.participantAdded	0
+15	1048585	1	3	2022-02-28 23:37:09	268435458	submission.event.general.metadataUpdated	0
+16	1048585	1	3	2022-02-28 23:37:11	268435458	submission.event.general.metadataUpdated	0
+17	1048585	1	3	2022-02-28 23:37:11	268435458	submission.event.general.metadataUpdated	0
+18	515	3	3	2022-02-28 23:37:23	1342177281	submission.event.fileUploaded	0
+19	1048585	1	3	2022-02-28 23:37:24	1342177281	submission.event.fileUploaded	0
+20	1048585	1	3	2022-02-28 23:37:33	268435459	submission.event.participantAdded	0
+21	1048585	1	17	2022-02-28 23:37:39	268435458	submission.event.general.metadataUpdated	0
+22	1048585	1	3	2022-02-28 23:37:43	268435458	submission.event.general.metadataUpdated	0
+23	1048585	1	3	2022-02-28 23:37:44	268435462	publication.event.published	0
+24	1048585	1	3	2022-02-28 23:37:52	268435463	publication.event.unpublished	0
+25	1048585	1	3	2022-02-28 23:37:56	268435462	publication.event.published	0
+26	1048585	1	3	2022-02-28 23:38:00	268435458	submission.event.general.metadataUpdated	0
+27	1048585	1	3	2022-02-28 23:38:00	268435464	publication.event.versionCreated	0
+28	1048585	1	3	2022-02-28 23:38:10	268435458	submission.event.general.metadataUpdated	0
+29	1048585	1	3	2022-02-28 23:38:14	268435458	submission.event.general.metadataUpdated	0
+30	1048585	1	3	2022-02-28 23:38:20	268435458	submission.event.general.metadataUpdated	0
+31	1048585	1	3	2022-02-28 23:38:21	268435462	publication.event.versionPublished	0
+32	1048585	1	3	2022-02-28 23:38:30	268435463	publication.event.versionUnpublished	0
+33	1048585	1	3	2022-02-28 23:38:35	268435459	submission.event.participantAdded	0
+34	1048585	1	3	2022-02-28 23:38:44	268435459	submission.event.participantAdded	0
+35	1048585	2	18	2022-02-28 23:38:56	268435458	submission.event.general.metadataUpdated	0
+36	515	4	18	2022-02-28 23:39:01	1342177281	submission.event.fileUploaded	0
+37	1048585	2	18	2022-02-28 23:39:03	1342177281	submission.event.fileUploaded	0
+38	1048585	2	18	2022-02-28 23:39:07	268435458	submission.event.general.metadataUpdated	0
+39	1048585	2	18	2022-02-28 23:39:08	268435457	submission.event.submissionSubmitted	0
+40	1048585	2	3	2022-02-28 23:39:13	805306371	log.editor.decision	0
+41	1048585	2	3	2022-02-28 23:39:19	268435459	submission.event.participantAdded	0
+42	1048585	2	3	2022-02-28 23:39:22	268435458	submission.event.general.metadataUpdated	0
+43	1048585	2	6	2022-02-28 23:39:32	805306372	log.editor.recommendation	0
+44	1048585	3	19	2022-02-28 23:39:47	268435458	submission.event.general.metadataUpdated	0
+45	515	6	19	2022-02-28 23:39:52	1342177281	submission.event.fileUploaded	0
+46	1048585	3	19	2022-02-28 23:39:55	1342177281	submission.event.fileUploaded	0
+47	1048585	3	19	2022-02-28 23:39:58	268435458	submission.event.general.metadataUpdated	0
+48	1048585	3	19	2022-02-28 23:39:59	268435457	submission.event.submissionSubmitted	0
+49	1048585	3	3	2022-02-28 23:40:05	805306371	log.editor.decision	0
+50	1048585	3	3	2022-02-28 23:40:11	1073741825	log.review.reviewerAssigned	0
+51	1048585	3	3	2022-02-28 23:40:16	1073741825	log.review.reviewerAssigned	0
+52	1048585	3	3	2022-02-28 23:40:19	805306371	log.editor.decision	0
+53	1048585	3	3	2022-02-28 23:40:25	268435459	submission.event.participantAdded	0
+54	1048585	4	20	2022-02-28 23:40:33	268435458	submission.event.general.metadataUpdated	0
+55	515	8	20	2022-02-28 23:40:39	1342177281	submission.event.fileUploaded	0
+56	1048585	4	20	2022-02-28 23:40:41	1342177281	submission.event.fileUploaded	0
+57	1048585	4	20	2022-02-28 23:40:47	268435458	submission.event.general.metadataUpdated	0
+58	1048585	4	20	2022-02-28 23:40:48	268435457	submission.event.submissionSubmitted	0
+59	1048585	5	21	2022-02-28 23:40:56	268435458	submission.event.general.metadataUpdated	0
+60	515	9	21	2022-02-28 23:41:01	1342177281	submission.event.fileUploaded	0
+61	1048585	5	21	2022-02-28 23:41:04	1342177281	submission.event.fileUploaded	0
+62	1048585	5	21	2022-02-28 23:41:06	268435458	submission.event.general.metadataUpdated	0
+63	1048585	5	21	2022-02-28 23:41:07	268435457	submission.event.submissionSubmitted	0
+64	1048585	5	3	2022-02-28 23:41:14	805306371	log.editor.decision	0
+65	1048585	5	3	2022-02-28 23:41:20	1073741825	log.review.reviewerAssigned	0
+66	1048585	5	3	2022-02-28 23:41:25	1073741825	log.review.reviewerAssigned	0
+67	1048585	5	3	2022-02-28 23:41:28	805306371	log.editor.decision	0
+68	1048585	5	3	2022-02-28 23:41:33	268435459	submission.event.participantAdded	0
+69	1048585	5	3	2022-02-28 23:41:37	805306371	log.editor.decision	0
+70	1048585	5	3	2022-02-28 23:41:42	268435459	submission.event.participantAdded	0
+71	1048585	5	3	2022-02-28 23:41:47	268435459	submission.event.participantAdded	0
+72	1048585	6	22	2022-02-28 23:41:56	268435458	submission.event.general.metadataUpdated	0
+73	515	11	22	2022-02-28 23:42:01	1342177281	submission.event.fileUploaded	0
+74	1048585	6	22	2022-02-28 23:42:04	1342177281	submission.event.fileUploaded	0
+75	1048585	6	22	2022-02-28 23:42:07	268435458	submission.event.general.metadataUpdated	0
+76	1048585	6	22	2022-02-28 23:42:08	268435457	submission.event.submissionSubmitted	0
+77	1048585	6	3	2022-02-28 23:42:14	805306371	log.editor.decision	0
+78	1048585	6	3	2022-02-28 23:42:21	1073741825	log.review.reviewerAssigned	0
+79	1048585	6	3	2022-02-28 23:42:26	1073741825	log.review.reviewerAssigned	0
+80	1048585	6	3	2022-02-28 23:42:28	805306371	log.editor.decision	0
+81	1048585	6	3	2022-02-28 23:42:34	268435459	submission.event.participantAdded	0
+82	1048585	6	3	2022-02-28 23:42:37	805306371	log.editor.decision	0
+83	1048585	6	3	2022-02-28 23:42:43	268435459	submission.event.participantAdded	0
+84	1048585	7	23	2022-02-28 23:42:52	268435458	submission.event.general.metadataUpdated	0
+85	515	13	23	2022-02-28 23:42:57	1342177281	submission.event.fileUploaded	0
+86	1048585	7	23	2022-02-28 23:42:59	1342177281	submission.event.fileUploaded	0
+87	1048585	7	23	2022-02-28 23:43:02	268435458	submission.event.general.metadataUpdated	0
+88	1048585	7	23	2022-02-28 23:43:03	268435457	submission.event.submissionSubmitted	0
+89	1048585	7	3	2022-02-28 23:43:10	805306371	log.editor.decision	0
+90	1048585	7	3	2022-02-28 23:43:16	1073741825	log.review.reviewerAssigned	0
+91	1048585	7	3	2022-02-28 23:43:21	1073741825	log.review.reviewerAssigned	0
+92	1048585	7	3	2022-02-28 23:43:27	1073741825	log.review.reviewerAssigned	0
+93	1048585	7	8	2022-02-28 23:43:32	1073741830	log.review.reviewAccepted	0
+94	1048585	7	8	2022-02-28 23:43:36	1073741848	log.review.reviewReady	0
+95	1048585	8	24	2022-02-28 23:43:44	268435458	submission.event.general.metadataUpdated	0
+96	515	14	24	2022-02-28 23:43:49	1342177281	submission.event.fileUploaded	0
+97	1048585	8	24	2022-02-28 23:43:52	1342177281	submission.event.fileUploaded	0
+98	1048585	8	24	2022-02-28 23:43:58	268435458	submission.event.general.metadataUpdated	0
+99	1048585	8	24	2022-02-28 23:43:59	268435457	submission.event.submissionSubmitted	0
+100	1048585	9	25	2022-02-28 23:44:07	268435458	submission.event.general.metadataUpdated	0
+101	515	15	25	2022-02-28 23:44:12	1342177281	submission.event.fileUploaded	0
+102	1048585	9	25	2022-02-28 23:44:15	1342177281	submission.event.fileUploaded	0
+103	1048585	9	25	2022-02-28 23:44:17	268435458	submission.event.general.metadataUpdated	0
+104	1048585	9	25	2022-02-28 23:44:18	268435457	submission.event.submissionSubmitted	0
+105	1048585	9	3	2022-02-28 23:44:25	805306371	log.editor.decision	0
+106	1048585	9	3	2022-02-28 23:44:32	1073741825	log.review.reviewerAssigned	0
+107	1048585	9	3	2022-02-28 23:44:37	1073741825	log.review.reviewerAssigned	0
+108	1048585	9	3	2022-02-28 23:44:39	805306371	log.editor.decision	0
+109	1048585	9	3	2022-02-28 23:44:45	268435459	submission.event.participantAdded	0
+110	1048585	9	3	2022-02-28 23:44:48	805306371	log.editor.decision	0
+111	1048585	9	3	2022-02-28 23:44:53	268435459	submission.event.participantAdded	0
+112	1048585	9	3	2022-02-28 23:44:58	268435459	submission.event.participantAdded	0
+113	1048585	10	26	2022-02-28 23:45:06	268435458	submission.event.general.metadataUpdated	0
+114	515	17	26	2022-02-28 23:45:12	1342177281	submission.event.fileUploaded	0
+115	1048585	10	26	2022-02-28 23:45:14	1342177281	submission.event.fileUploaded	0
+116	1048585	10	26	2022-02-28 23:45:17	268435458	submission.event.general.metadataUpdated	0
+117	1048585	10	26	2022-02-28 23:45:18	268435457	submission.event.submissionSubmitted	0
+118	1048585	10	3	2022-02-28 23:45:25	805306371	log.editor.decision	0
+119	1048585	10	3	2022-02-28 23:45:32	1073741825	log.review.reviewerAssigned	0
+120	1048585	10	3	2022-02-28 23:45:37	1073741825	log.review.reviewerAssigned	0
+121	1048585	10	9	2022-02-28 23:45:42	1073741830	log.review.reviewAccepted	0
+122	1048585	10	9	2022-02-28 23:45:46	1073741848	log.review.reviewReady	0
+123	1048585	10	10	2022-02-28 23:45:52	1073741830	log.review.reviewAccepted	0
+124	1048585	10	10	2022-02-28 23:45:56	1073741848	log.review.reviewReady	0
+125	1048585	11	27	2022-02-28 23:46:04	268435458	submission.event.general.metadataUpdated	0
+126	515	19	27	2022-02-28 23:46:09	1342177281	submission.event.fileUploaded	0
+127	1048585	11	27	2022-02-28 23:46:11	1342177281	submission.event.fileUploaded	0
+128	1048585	11	27	2022-02-28 23:46:17	268435458	submission.event.general.metadataUpdated	0
+129	1048585	11	27	2022-02-28 23:46:18	268435457	submission.event.submissionSubmitted	0
+130	1048585	12	28	2022-02-28 23:46:26	268435458	submission.event.general.metadataUpdated	0
+131	515	20	28	2022-02-28 23:46:31	1342177281	submission.event.fileUploaded	0
+132	1048585	12	28	2022-02-28 23:46:34	1342177281	submission.event.fileUploaded	0
+133	1048585	12	28	2022-02-28 23:46:37	268435458	submission.event.general.metadataUpdated	0
+134	1048585	12	28	2022-02-28 23:46:38	268435457	submission.event.submissionSubmitted	0
+135	1048585	12	3	2022-02-28 23:46:45	805306371	log.editor.decision	0
+136	1048585	12	3	2022-02-28 23:46:52	1073741825	log.review.reviewerAssigned	0
+137	1048585	12	3	2022-02-28 23:46:57	1073741825	log.review.reviewerAssigned	0
+138	1048585	13	29	2022-02-28 23:47:07	268435458	submission.event.general.metadataUpdated	0
+139	515	22	29	2022-02-28 23:47:13	1342177281	submission.event.fileUploaded	0
+140	1048585	13	29	2022-02-28 23:47:15	1342177281	submission.event.fileUploaded	0
+141	1048585	13	29	2022-02-28 23:47:18	268435458	submission.event.general.metadataUpdated	0
+142	1048585	13	29	2022-02-28 23:47:20	268435457	submission.event.submissionSubmitted	0
+143	1048585	13	3	2022-02-28 23:47:27	805306371	log.editor.decision	0
+144	1048585	13	3	2022-02-28 23:47:34	1073741825	log.review.reviewerAssigned	0
+145	1048585	13	3	2022-02-28 23:47:39	1073741825	log.review.reviewerAssigned	0
+146	1048585	13	3	2022-02-28 23:47:44	1073741825	log.review.reviewerAssigned	0
+147	1048585	13	7	2022-02-28 23:47:50	1073741830	log.review.reviewAccepted	0
+148	1048585	13	7	2022-02-28 23:47:54	1073741848	log.review.reviewReady	0
+149	1048585	13	9	2022-02-28 23:47:59	1073741830	log.review.reviewAccepted	0
+150	1048585	13	9	2022-02-28 23:48:03	1073741848	log.review.reviewReady	0
+151	1048585	13	10	2022-02-28 23:48:10	1073741830	log.review.reviewAccepted	0
+152	1048585	13	10	2022-02-28 23:48:14	1073741848	log.review.reviewReady	0
+153	1048585	13	3	2022-02-28 23:48:26	805306371	log.editor.decision	0
+154	1048585	14	30	2022-02-28 23:48:33	268435458	submission.event.general.metadataUpdated	0
+155	515	23	30	2022-02-28 23:48:39	1342177281	submission.event.fileUploaded	0
+156	1048585	14	30	2022-02-28 23:48:41	1342177281	submission.event.fileUploaded	0
+157	1048585	14	30	2022-02-28 23:48:44	268435458	submission.event.general.metadataUpdated	0
+158	1048585	14	30	2022-02-28 23:48:45	268435457	submission.event.submissionSubmitted	0
+159	1048585	15	31	2022-02-28 23:48:53	268435458	submission.event.general.metadataUpdated	0
+160	515	24	31	2022-02-28 23:48:58	1342177281	submission.event.fileUploaded	0
+161	1048585	15	31	2022-02-28 23:49:00	1342177281	submission.event.fileUploaded	0
+162	1048585	15	31	2022-02-28 23:49:03	268435458	submission.event.general.metadataUpdated	0
+163	1048585	15	31	2022-02-28 23:49:04	268435457	submission.event.submissionSubmitted	0
+164	1048585	15	3	2022-02-28 23:49:12	805306371	log.editor.decision	0
+165	1048585	15	3	2022-02-28 23:49:19	1073741825	log.review.reviewerAssigned	0
+166	1048585	15	3	2022-02-28 23:49:24	1073741825	log.review.reviewerAssigned	0
+167	1048585	15	3	2022-02-28 23:49:26	805306371	log.editor.decision	0
+168	1048585	15	3	2022-02-28 23:49:32	268435459	submission.event.participantAdded	0
+169	1048585	15	3	2022-02-28 23:49:35	805306371	log.editor.decision	0
+170	1048585	15	3	2022-02-28 23:49:41	268435459	submission.event.participantAdded	0
+171	1048585	16	32	2022-02-28 23:49:50	268435458	submission.event.general.metadataUpdated	0
+172	515	26	32	2022-02-28 23:49:55	1342177281	submission.event.fileUploaded	0
+173	1048585	16	32	2022-02-28 23:49:58	1342177281	submission.event.fileUploaded	0
+174	1048585	16	32	2022-02-28 23:50:01	268435458	submission.event.general.metadataUpdated	0
+175	1048585	16	32	2022-02-28 23:50:02	268435457	submission.event.submissionSubmitted	0
+176	1048585	17	33	2022-02-28 23:50:09	268435458	submission.event.general.metadataUpdated	0
+177	515	27	33	2022-02-28 23:50:14	1342177281	submission.event.fileUploaded	0
+178	1048585	17	33	2022-02-28 23:50:17	1342177281	submission.event.fileUploaded	0
+179	1048585	17	33	2022-02-28 23:50:20	268435458	submission.event.general.metadataUpdated	0
+180	1048585	17	33	2022-02-28 23:50:22	268435457	submission.event.submissionSubmitted	0
+181	1048585	17	3	2022-02-28 23:50:30	805306371	log.editor.decision	0
+182	1048585	17	3	2022-02-28 23:50:37	1073741825	log.review.reviewerAssigned	0
+183	1048585	17	3	2022-02-28 23:50:42	1073741825	log.review.reviewerAssigned	0
+184	1048585	17	3	2022-02-28 23:50:44	805306371	log.editor.decision	0
+185	1048585	17	3	2022-02-28 23:50:50	268435459	submission.event.participantAdded	0
+186	1048585	17	3	2022-02-28 23:50:53	805306371	log.editor.decision	0
+187	1048585	17	3	2022-02-28 23:50:59	268435459	submission.event.participantAdded	0
+188	1048585	17	3	2022-02-28 23:51:04	268435459	submission.event.participantAdded	0
+189	515	29	3	2022-02-28 23:51:11	1342177281	submission.event.fileUploaded	0
+190	1048585	17	3	2022-02-28 23:51:12	1342177281	submission.event.fileUploaded	0
+191	1048585	17	3	2022-02-28 23:51:15	268435458	submission.event.general.metadataUpdated	0
+192	1048585	17	3	2022-02-28 23:51:17	268435462	publication.event.published	0
+193	1048585	18	34	2022-02-28 23:51:28	268435458	submission.event.general.metadataUpdated	0
+194	515	30	34	2022-02-28 23:51:33	1342177281	submission.event.fileUploaded	0
+195	1048585	18	34	2022-02-28 23:51:35	1342177281	submission.event.fileUploaded	0
+196	1048585	18	34	2022-02-28 23:51:38	268435458	submission.event.general.metadataUpdated	0
+197	1048585	18	34	2022-02-28 23:51:39	268435457	submission.event.submissionSubmitted	0
+198	1048585	18	3	2022-02-28 23:51:48	805306371	log.editor.decision	0
+199	1048585	19	35	2022-02-28 23:51:58	268435458	submission.event.general.metadataUpdated	0
+200	515	31	35	2022-02-28 23:52:03	1342177281	submission.event.fileUploaded	0
+201	1048585	19	35	2022-02-28 23:52:06	1342177281	submission.event.fileUploaded	0
+202	1048585	19	35	2022-02-28 23:52:08	268435458	submission.event.general.metadataUpdated	0
+203	1048585	19	35	2022-02-28 23:52:09	268435457	submission.event.submissionSubmitted	0
+204	1048585	19	3	2022-02-28 23:52:18	805306371	log.editor.decision	0
+205	1048585	19	3	2022-02-28 23:52:25	1073741825	log.review.reviewerAssigned	0
+206	1048585	19	3	2022-02-28 23:52:30	1073741825	log.review.reviewerAssigned	0
+207	1048585	19	3	2022-02-28 23:52:32	805306371	log.editor.decision	0
+208	1048585	19	3	2022-02-28 23:52:39	268435459	submission.event.participantAdded	0
 \.
 
 
@@ -5114,13 +5114,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 14	userGroupName	Proofreader	string
 18	fileStage	10	int
 18	revisedFileId	\N	string
-18	fileId	2	string
+18	fileId	3	string
 18	fileRevision	1	int
 18	originalFileName	article.pdf	string
 18	submissionId	1	int
 18	username	dbarnes	string
 19	fileStage	10	int
-19	fileId	2	int
+19	fileId	3	int
 19	fileRevision	1	int
 19	originalFileName	article.pdf	string
 19	submissionId	1	int
@@ -5137,13 +5137,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 34	userGroupName	Section editor	string
 36	fileStage	2	int
 36	revisedFileId	\N	string
-36	fileId	3	string
+36	fileId	4	string
 36	fileRevision	1	int
 36	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
 36	submissionId	2	int
 36	username	ccorino	string
 37	fileStage	2	int
-37	fileId	3	int
+37	fileId	4	int
 37	fileRevision	1	int
 37	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
 37	submissionId	2	int
@@ -5160,13 +5160,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 43	decision	Accept Submission	string
 45	fileStage	2	int
 45	revisedFileId	\N	string
-45	fileId	5	string
+45	fileId	6	string
 45	fileRevision	1	int
 45	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 45	submissionId	3	int
 45	username	ckwantes	string
 46	fileStage	2	int
-46	fileId	5	int
+46	fileId	6	int
 46	fileRevision	1	int
 46	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 46	submissionId	3	int
@@ -5193,13 +5193,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 53	userGroupName	Copyeditor	string
 55	fileStage	2	int
 55	revisedFileId	\N	string
-55	fileId	7	string
+55	fileId	8	string
 55	fileRevision	1	int
 55	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 55	submissionId	4	int
 55	username	cmontgomerie	string
 56	fileStage	2	int
-56	fileId	7	int
+56	fileId	8	int
 56	fileRevision	1	int
 56	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 56	submissionId	4	int
@@ -5207,13 +5207,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 56	name	cmontgomerie, Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 60	fileStage	2	int
 60	revisedFileId	\N	string
-60	fileId	8	string
+60	fileId	9	string
 60	fileRevision	1	int
 60	originalFileName	Genetic transformation of forest trees.pdf	string
 60	submissionId	5	int
 60	username	ddiouf	string
 61	fileStage	2	int
-61	fileId	8	int
+61	fileId	9	int
 61	fileRevision	1	int
 61	originalFileName	Genetic transformation of forest trees.pdf	string
 61	submissionId	5	int
@@ -5249,13 +5249,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 71	userGroupName	Proofreader	string
 73	fileStage	2	int
 73	revisedFileId	\N	string
-73	fileId	10	string
+73	fileId	11	string
 73	fileRevision	1	int
 73	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 73	submissionId	6	int
 73	username	dphillips	string
 74	fileStage	2	int
-74	fileId	10	int
+74	fileId	11	int
 74	fileRevision	1	int
 74	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 74	submissionId	6	int
@@ -5288,13 +5288,13 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 83	userGroupName	Layout Editor	string
 85	fileStage	2	int
 85	revisedFileId	\N	string
-85	fileId	12	string
+85	fileId	13	string
 85	fileRevision	1	int
 85	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
 85	submissionId	7	int
 85	username	dsokoloff	string
 86	fileStage	2	int
-86	fileId	12	int
+86	fileId	13	int
 86	fileRevision	1	int
 86	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
 86	submissionId	7	int
@@ -5908,7 +5908,7 @@ COPY public.issue_settings (issue_id, locale, setting_name, setting_value, setti
 --
 
 COPY public.issues (issue_id, journal_id, volume, number, year, published, current, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name, url_path) FROM stdin;
-1	1	1	2	2014	1	1	2022-01-08 00:50:36	\N	2022-01-08 00:50:36	1	\N	1	1	1	0	\N	\N	
+1	1	1	2	2014	1	1	2022-02-28 23:35:48	\N	2022-02-28 23:35:48	1	\N	1	1	1	0	\N	\N	
 \.
 
 
@@ -5917,7 +5917,7 @@ COPY public.issues (issue_id, journal_id, volume, number, year, published, curre
 --
 
 COPY public.item_views (assoc_type, assoc_id, user_id, date_last_viewed) FROM stdin;
-515	2-1	3	2022-01-08 00:52:35
+515	3-1	3	2022-02-28 23:37:48
 \.
 
 
@@ -6143,7 +6143,7 @@ COPY public.navigation_menus (navigation_menu_id, context_id, area_name, title) 
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2022-01-08 00:54:17	2022-01-08 00:54:17	Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+1	1048586	1	6	2022-02-28 23:39:32	2022-02-28 23:39:32	Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
 \.
 
 
@@ -6214,207 +6214,207 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-72	1	17	3	16777259	2022-01-08 00:52:48	\N	1048585	1
-74	1	16	3	16777259	2022-01-08 00:52:48	\N	1048585	1
-211	1	23	2	16777231	2022-01-08 00:57:46	\N	1048585	7
-3	1	1	2	268435477	2022-01-08 00:50:36	\N	0	0
-76	1	14	3	16777259	2022-01-08 00:52:48	\N	1048585	1
-5	1	3	2	268435477	2022-01-08 00:50:37	\N	0	0
-210	1	0	2	16777236	2022-01-08 00:57:46	2022-01-08 00:57:48	523	6
-7	1	5	2	268435477	2022-01-08 00:50:37	\N	0	0
-78	1	12	3	16777259	2022-01-08 00:52:48	\N	1048585	1
-9	1	4	2	268435477	2022-01-08 00:50:37	\N	0	0
-215	1	9	3	16777227	2022-01-08 00:57:58	\N	517	11
-11	1	13	2	268435477	2022-01-08 00:50:37	\N	0	0
-80	1	5	3	16777259	2022-01-08 00:52:48	\N	1048585	1
-13	1	11	2	268435477	2022-01-08 00:50:37	\N	0	0
-15	1	10	2	268435477	2022-01-08 00:50:37	\N	0	0
-82	1	4	3	16777259	2022-01-08 00:52:48	\N	1048585	1
-17	1	14	2	268435477	2022-01-08 00:50:37	\N	0	0
-19	1	8	2	268435477	2022-01-08 00:50:37	\N	0	0
-84	1	3	3	16777259	2022-01-08 00:52:48	\N	1048585	1
-21	1	6	2	268435477	2022-01-08 00:50:37	\N	0	0
-23	1	7	2	268435477	2022-01-08 00:50:37	\N	0	0
-138	1	0	2	16777243	2022-01-08 00:55:31	\N	1048585	4
-25	1	16	2	268435477	2022-01-08 00:50:37	\N	0	0
-139	1	0	2	16777245	2022-01-08 00:55:31	\N	1048585	4
-27	1	9	2	268435477	2022-01-08 00:50:37	\N	0	0
-29	1	15	2	268435477	2022-01-08 00:50:37	\N	0	0
-126	1	19	2	16777230	2022-01-08 00:55:02	\N	1048585	3
-31	1	2	2	268435477	2022-01-08 00:50:37	\N	0	0
-108	1	3	2	16777217	2022-01-08 00:54:42	\N	1048585	3
-33	1	12	2	268435477	2022-01-08 00:50:37	\N	0	0
-51	1	9	3	16777227	2022-01-08 00:51:24	\N	517	2
-110	1	5	2	16777217	2022-01-08 00:54:42	\N	1048585	3
-54	1	10	3	16777227	2022-01-08 00:51:29	\N	517	3
-112	1	4	2	16777217	2022-01-08 00:54:42	\N	1048585	3
-89	1	3	2	16777217	2022-01-08 00:53:53	\N	1048585	2
-91	1	5	2	16777217	2022-01-08 00:53:53	\N	1048585	2
-93	1	4	2	16777217	2022-01-08 00:53:54	\N	1048585	2
-95	1	0	2	16777243	2022-01-08 00:53:54	\N	1048585	2
-96	1	0	2	16777245	2022-01-08 00:53:54	\N	1048585	2
-114	1	0	2	16777243	2022-01-08 00:54:43	\N	1048585	3
-115	1	0	2	16777245	2022-01-08 00:54:43	\N	1048585	3
-37	1	3	2	16777217	2022-01-08 00:51:07	\N	1048585	1
-39	1	5	2	16777217	2022-01-08 00:51:07	\N	1048585	1
-41	1	4	2	16777217	2022-01-08 00:51:07	\N	1048585	1
-43	1	0	2	16777243	2022-01-08 00:51:07	\N	1048585	1
-44	1	0	2	16777245	2022-01-08 00:51:07	\N	1048585	1
-99	1	18	2	16777231	2022-01-08 00:53:59	\N	1048585	2
-98	1	0	2	16777236	2022-01-08 00:53:59	2022-01-08 00:54:01	523	2
-64	1	17	2	16777235	2022-01-08 00:51:40	\N	1048585	1
-128	1	4	2	16777251	2022-01-08 00:55:02	\N	1048585	3
-46	1	0	2	16777236	2022-01-08 00:51:13	2022-01-08 00:51:15	523	1
-48	1	7	3	16777227	2022-01-08 00:51:19	\N	517	1
-102	1	3	3	16777249	2022-01-08 00:54:17	\N	1048586	1
-104	1	4	3	16777249	2022-01-08 00:54:17	\N	1048586	1
-106	1	5	3	16777249	2022-01-08 00:54:17	\N	1048586	1
-129	1	5	2	16777251	2022-01-08 00:55:02	\N	1048585	3
-117	1	0	2	16777236	2022-01-08 00:54:48	2022-01-08 00:54:50	523	3
-119	1	9	3	16777227	2022-01-08 00:54:55	\N	517	4
-127	1	3	2	16777251	2022-01-08 00:55:02	2022-01-08 00:55:04	1048585	3
-122	1	10	3	16777227	2022-01-08 00:55:00	\N	517	5
-148	1	0	2	16777243	2022-01-08 00:55:49	\N	1048585	5
-132	1	3	2	16777217	2022-01-08 00:55:31	\N	1048585	4
-134	1	5	2	16777217	2022-01-08 00:55:31	\N	1048585	4
-136	1	4	2	16777217	2022-01-08 00:55:31	\N	1048585	4
-149	1	0	2	16777245	2022-01-08 00:55:49	\N	1048585	5
-151	1	0	2	16777236	2022-01-08 00:55:55	2022-01-08 00:55:57	523	4
-153	1	8	3	16777227	2022-01-08 00:56:01	\N	517	6
-142	1	3	2	16777217	2022-01-08 00:55:49	\N	1048585	5
-144	1	5	2	16777217	2022-01-08 00:55:49	\N	1048585	5
-146	1	4	2	16777217	2022-01-08 00:55:49	\N	1048585	5
-156	1	10	3	16777227	2022-01-08 00:56:06	\N	517	7
-166	1	21	2	16777235	2022-01-08 00:56:17	\N	1048585	5
-168	1	4	2	16777254	2022-01-08 00:56:17	\N	1048585	5
-169	1	5	2	16777254	2022-01-08 00:56:17	\N	1048585	5
-167	1	3	2	16777254	2022-01-08 00:56:17	2022-01-08 00:56:19	1048585	5
-172	1	3	2	16777217	2022-01-08 00:56:47	\N	1048585	6
-174	1	5	2	16777217	2022-01-08 00:56:47	\N	1048585	6
-176	1	4	2	16777217	2022-01-08 00:56:47	\N	1048585	6
-178	1	0	2	16777243	2022-01-08 00:56:47	\N	1048585	6
-179	1	0	2	16777245	2022-01-08 00:56:47	\N	1048585	6
-366	1	29	3	16777232	2022-01-08 01:02:53	\N	1048585	13
-376	1	3	2	16777217	2022-01-08 01:03:30	\N	1048585	15
-181	1	0	2	16777236	2022-01-08 00:56:52	2022-01-08 00:56:54	523	5
-183	1	7	3	16777227	2022-01-08 00:56:59	\N	517	8
-378	1	5	2	16777217	2022-01-08 01:03:30	\N	1048585	15
-186	1	10	3	16777227	2022-01-08 00:57:04	\N	517	9
-218	1	10	3	16777227	2022-01-08 00:58:03	\N	517	12
-222	1	3	2	16777219	2022-01-08 00:58:13	\N	517	10
-224	1	4	2	16777219	2022-01-08 00:58:13	\N	517	10
-226	1	5	2	16777219	2022-01-08 00:58:13	\N	517	10
-196	1	22	2	16777235	2022-01-08 00:57:15	\N	1048585	6
-198	1	4	2	16777254	2022-01-08 00:57:15	\N	1048585	6
-199	1	5	2	16777254	2022-01-08 00:57:15	\N	1048585	6
-303	1	0	2	16777243	2022-01-08 01:00:51	\N	1048585	11
-197	1	3	2	16777254	2022-01-08 00:57:15	2022-01-08 00:57:17	1048585	6
-304	1	0	2	16777245	2022-01-08 01:00:51	\N	1048585	11
-201	1	3	2	16777217	2022-01-08 00:57:40	\N	1048585	7
-203	1	5	2	16777217	2022-01-08 00:57:40	\N	1048585	7
-205	1	4	2	16777217	2022-01-08 00:57:40	\N	1048585	7
-229	1	3	2	16777217	2022-01-08 00:58:35	\N	1048585	8
-207	1	0	2	16777243	2022-01-08 00:57:40	\N	1048585	7
-208	1	0	2	16777245	2022-01-08 00:57:40	\N	1048585	7
-231	1	5	2	16777217	2022-01-08 00:58:35	\N	1048585	8
-233	1	4	2	16777217	2022-01-08 00:58:35	\N	1048585	8
-235	1	0	2	16777243	2022-01-08 00:58:35	\N	1048585	8
-236	1	0	2	16777245	2022-01-08 00:58:35	\N	1048585	8
-260	1	25	2	16777235	2022-01-08 00:59:23	\N	1048585	9
-262	1	6	2	16777254	2022-01-08 00:59:23	\N	1048585	9
-261	1	3	2	16777254	2022-01-08 00:59:23	2022-01-08 00:59:25	1048585	9
-239	1	3	2	16777217	2022-01-08 00:58:53	\N	1048585	9
-241	1	6	2	16777217	2022-01-08 00:58:53	\N	1048585	9
-243	1	0	2	16777243	2022-01-08 00:58:53	\N	1048585	9
-244	1	0	2	16777245	2022-01-08 00:58:53	\N	1048585	9
-246	1	0	2	16777236	2022-01-08 00:59:00	2022-01-08 00:59:02	523	7
-248	1	7	3	16777227	2022-01-08 00:59:07	\N	517	13
-283	1	3	2	16777219	2022-01-08 01:00:20	\N	517	15
-265	1	3	2	16777217	2022-01-08 00:59:53	\N	1048585	10
-251	1	10	3	16777227	2022-01-08 00:59:12	\N	517	14
-267	1	5	2	16777217	2022-01-08 00:59:53	\N	1048585	10
-269	1	4	2	16777217	2022-01-08 00:59:53	\N	1048585	10
-271	1	0	2	16777243	2022-01-08 00:59:53	\N	1048585	10
-272	1	0	2	16777245	2022-01-08 00:59:53	\N	1048585	10
-285	1	5	2	16777219	2022-01-08 01:00:20	\N	517	15
-287	1	4	2	16777219	2022-01-08 01:00:20	\N	517	15
-275	1	26	2	16777231	2022-01-08 00:59:59	\N	1048585	10
-274	1	0	2	16777236	2022-01-08 00:59:59	2022-01-08 01:00:01	523	8
-317	1	28	2	16777231	2022-01-08 01:01:18	\N	1048585	12
-316	1	0	2	16777236	2022-01-08 01:01:18	2022-01-08 01:01:20	523	9
-318	1	7	3	16777227	2022-01-08 01:01:24	\N	517	17
-290	1	3	2	16777219	2022-01-08 01:00:29	\N	517	16
-292	1	5	2	16777219	2022-01-08 01:00:29	\N	517	16
-294	1	4	2	16777219	2022-01-08 01:00:29	\N	517	16
-307	1	3	2	16777217	2022-01-08 01:01:10	\N	1048585	12
-309	1	5	2	16777217	2022-01-08 01:01:10	\N	1048585	12
-297	1	3	2	16777217	2022-01-08 01:00:51	\N	1048585	11
-299	1	5	2	16777217	2022-01-08 01:00:51	\N	1048585	11
-301	1	4	2	16777217	2022-01-08 01:00:51	\N	1048585	11
-311	1	4	2	16777217	2022-01-08 01:01:10	\N	1048585	12
-313	1	0	2	16777243	2022-01-08 01:01:10	\N	1048585	12
-314	1	0	2	16777245	2022-01-08 01:01:10	\N	1048585	12
-333	1	0	2	16777236	2022-01-08 01:01:56	2022-01-08 01:01:58	523	10
-324	1	3	2	16777217	2022-01-08 01:01:49	\N	1048585	13
-326	1	5	2	16777217	2022-01-08 01:01:49	\N	1048585	13
-321	1	8	3	16777227	2022-01-08 01:01:29	\N	517	18
-328	1	4	2	16777217	2022-01-08 01:01:49	\N	1048585	13
-330	1	0	2	16777243	2022-01-08 01:01:49	\N	1048585	13
-331	1	0	2	16777245	2022-01-08 01:01:49	\N	1048585	13
-345	1	3	2	16777219	2022-01-08 01:02:22	\N	517	19
-347	1	5	2	16777219	2022-01-08 01:02:22	\N	517	19
-349	1	4	2	16777219	2022-01-08 01:02:22	\N	517	19
-352	1	3	2	16777219	2022-01-08 01:02:32	\N	517	20
-354	1	5	2	16777219	2022-01-08 01:02:32	\N	517	20
-356	1	4	2	16777219	2022-01-08 01:02:32	\N	517	20
-359	1	3	2	16777219	2022-01-08 01:02:42	\N	517	21
-361	1	5	2	16777219	2022-01-08 01:02:42	\N	517	21
-363	1	4	2	16777219	2022-01-08 01:02:42	\N	517	21
-367	1	3	2	16777217	2022-01-08 01:03:11	\N	1048585	14
-369	1	5	2	16777217	2022-01-08 01:03:12	\N	1048585	14
-371	1	4	2	16777217	2022-01-08 01:03:12	\N	1048585	14
-373	1	0	2	16777243	2022-01-08 01:03:12	\N	1048585	14
-374	1	0	2	16777245	2022-01-08 01:03:12	\N	1048585	14
-420	1	0	2	16777243	2022-01-08 01:04:46	\N	1048585	17
-421	1	0	2	16777245	2022-01-08 01:04:46	\N	1048585	17
-450	1	0	2	16777243	2022-01-08 01:06:00	\N	1048585	18
-380	1	4	2	16777217	2022-01-08 01:03:30	\N	1048585	15
-382	1	0	2	16777243	2022-01-08 01:03:30	\N	1048585	15
-383	1	0	2	16777245	2022-01-08 01:03:30	\N	1048585	15
-451	1	0	2	16777245	2022-01-08 01:06:00	\N	1048585	18
-473	1	6	2	16777251	2022-01-08 01:06:48	\N	1048585	19
-385	1	0	2	16777236	2022-01-08 01:03:38	2022-01-08 01:03:40	523	11
-387	1	8	3	16777227	2022-01-08 01:03:45	\N	517	22
-390	1	9	3	16777227	2022-01-08 01:03:50	\N	517	23
-423	1	0	2	16777236	2022-01-08 01:04:54	2022-01-08 01:04:56	523	12
-425	1	7	3	16777227	2022-01-08 01:05:01	\N	517	24
-400	1	31	2	16777235	2022-01-08 01:04:00	\N	1048585	15
-402	1	5	2	16777254	2022-01-08 01:04:00	\N	1048585	15
-403	1	4	2	16777254	2022-01-08 01:04:00	\N	1048585	15
-472	1	3	2	16777251	2022-01-08 01:06:48	2022-01-08 01:06:51	1048585	19
-401	1	3	2	16777254	2022-01-08 01:04:00	2022-01-08 01:04:04	1048585	15
-428	1	8	3	16777227	2022-01-08 01:05:06	\N	517	25
-405	1	3	2	16777217	2022-01-08 01:04:27	\N	1048585	16
-407	1	5	2	16777217	2022-01-08 01:04:27	\N	1048585	16
-409	1	4	2	16777217	2022-01-08 01:04:27	\N	1048585	16
-411	1	0	2	16777243	2022-01-08 01:04:27	\N	1048585	16
-412	1	0	2	16777245	2022-01-08 01:04:27	\N	1048585	16
-414	1	3	2	16777217	2022-01-08 01:04:46	\N	1048585	17
-416	1	5	2	16777217	2022-01-08 01:04:46	\N	1048585	17
-418	1	4	2	16777217	2022-01-08 01:04:46	\N	1048585	17
-454	1	34	2	16777234	2022-01-08 01:06:08	\N	1048585	18
-455	1	3	2	16777217	2022-01-08 01:06:26	\N	1048585	19
-438	1	33	2	16777235	2022-01-08 01:05:16	\N	1048585	17
-457	1	6	2	16777217	2022-01-08 01:06:26	\N	1048585	19
-459	1	0	2	16777243	2022-01-08 01:06:26	\N	1048585	19
-460	1	0	2	16777245	2022-01-08 01:06:26	\N	1048585	19
-444	1	3	2	16777217	2022-01-08 01:06:00	\N	1048585	18
-446	1	5	2	16777217	2022-01-08 01:06:00	\N	1048585	18
-448	1	4	2	16777217	2022-01-08 01:06:00	\N	1048585	18
-462	1	0	2	16777236	2022-01-08 01:06:35	2022-01-08 01:06:37	523	13
-464	1	8	3	16777227	2022-01-08 01:06:41	\N	517	26
-467	1	9	3	16777227	2022-01-08 01:06:46	\N	517	27
-471	1	35	2	16777230	2022-01-08 01:06:48	\N	1048585	19
+72	1	17	3	16777259	2022-02-28 23:38:00	\N	1048585	1
+201	1	3	2	16777217	2022-02-28 23:43:03	\N	1048585	7
+74	1	16	3	16777259	2022-02-28 23:38:00	\N	1048585	1
+3	1	1	2	268435477	2022-02-28 23:35:49	\N	0	0
+76	1	14	3	16777259	2022-02-28 23:38:00	\N	1048585	1
+5	1	3	2	268435477	2022-02-28 23:35:49	\N	0	0
+203	1	5	2	16777217	2022-02-28 23:43:03	\N	1048585	7
+7	1	5	2	268435477	2022-02-28 23:35:49	\N	0	0
+78	1	12	3	16777259	2022-02-28 23:38:00	\N	1048585	1
+9	1	4	2	268435477	2022-02-28 23:35:49	\N	0	0
+11	1	13	2	268435477	2022-02-28 23:35:49	\N	0	0
+80	1	5	3	16777259	2022-02-28 23:38:00	\N	1048585	1
+13	1	11	2	268435477	2022-02-28 23:35:49	\N	0	0
+15	1	10	2	268435477	2022-02-28 23:35:49	\N	0	0
+82	1	4	3	16777259	2022-02-28 23:38:00	\N	1048585	1
+17	1	14	2	268435477	2022-02-28 23:35:49	\N	0	0
+19	1	8	2	268435477	2022-02-28 23:35:49	\N	0	0
+84	1	3	3	16777259	2022-02-28 23:38:00	\N	1048585	1
+21	1	6	2	268435477	2022-02-28 23:35:49	\N	0	0
+23	1	7	2	268435477	2022-02-28 23:35:49	\N	0	0
+138	1	0	2	16777243	2022-02-28 23:40:48	\N	1048585	4
+25	1	16	2	268435477	2022-02-28 23:35:49	\N	0	0
+139	1	0	2	16777245	2022-02-28 23:40:48	\N	1048585	4
+27	1	9	2	268435477	2022-02-28 23:35:49	\N	0	0
+29	1	15	2	268435477	2022-02-28 23:35:49	\N	0	0
+126	1	19	2	16777230	2022-02-28 23:40:19	\N	1048585	3
+31	1	2	2	268435477	2022-02-28 23:35:49	\N	0	0
+108	1	3	2	16777217	2022-02-28 23:39:59	\N	1048585	3
+33	1	12	2	268435477	2022-02-28 23:35:49	\N	0	0
+51	1	9	3	16777227	2022-02-28 23:36:35	\N	517	2
+110	1	5	2	16777217	2022-02-28 23:39:59	\N	1048585	3
+54	1	10	3	16777227	2022-02-28 23:36:41	\N	517	3
+112	1	4	2	16777217	2022-02-28 23:39:59	\N	1048585	3
+89	1	3	2	16777217	2022-02-28 23:39:07	\N	1048585	2
+91	1	5	2	16777217	2022-02-28 23:39:07	\N	1048585	2
+93	1	4	2	16777217	2022-02-28 23:39:07	\N	1048585	2
+95	1	0	2	16777243	2022-02-28 23:39:08	\N	1048585	2
+96	1	0	2	16777245	2022-02-28 23:39:08	\N	1048585	2
+114	1	0	2	16777243	2022-02-28 23:39:59	\N	1048585	3
+115	1	0	2	16777245	2022-02-28 23:39:59	\N	1048585	3
+37	1	3	2	16777217	2022-02-28 23:36:18	\N	1048585	1
+39	1	5	2	16777217	2022-02-28 23:36:18	\N	1048585	1
+41	1	4	2	16777217	2022-02-28 23:36:18	\N	1048585	1
+43	1	0	2	16777243	2022-02-28 23:36:18	\N	1048585	1
+44	1	0	2	16777245	2022-02-28 23:36:18	\N	1048585	1
+99	1	18	2	16777231	2022-02-28 23:39:13	\N	1048585	2
+98	1	0	2	16777236	2022-02-28 23:39:13	2022-02-28 23:39:15	523	2
+64	1	17	2	16777235	2022-02-28 23:36:52	\N	1048585	1
+128	1	4	2	16777251	2022-02-28 23:40:19	\N	1048585	3
+46	1	0	2	16777236	2022-02-28 23:36:24	2022-02-28 23:36:26	523	1
+48	1	7	3	16777227	2022-02-28 23:36:30	\N	517	1
+102	1	3	3	16777249	2022-02-28 23:39:32	\N	1048586	1
+104	1	4	3	16777249	2022-02-28 23:39:32	\N	1048586	1
+106	1	5	3	16777249	2022-02-28 23:39:32	\N	1048586	1
+129	1	5	2	16777251	2022-02-28 23:40:19	\N	1048585	3
+117	1	0	2	16777236	2022-02-28 23:40:05	2022-02-28 23:40:07	523	3
+119	1	9	3	16777227	2022-02-28 23:40:11	\N	517	4
+127	1	3	2	16777251	2022-02-28 23:40:19	2022-02-28 23:40:21	1048585	3
+122	1	10	3	16777227	2022-02-28 23:40:16	\N	517	5
+148	1	0	2	16777243	2022-02-28 23:41:07	\N	1048585	5
+132	1	3	2	16777217	2022-02-28 23:40:48	\N	1048585	4
+134	1	5	2	16777217	2022-02-28 23:40:48	\N	1048585	4
+136	1	4	2	16777217	2022-02-28 23:40:48	\N	1048585	4
+149	1	0	2	16777245	2022-02-28 23:41:07	\N	1048585	5
+151	1	0	2	16777236	2022-02-28 23:41:14	2022-02-28 23:41:16	523	4
+153	1	8	3	16777227	2022-02-28 23:41:20	\N	517	6
+142	1	3	2	16777217	2022-02-28 23:41:07	\N	1048585	5
+144	1	5	2	16777217	2022-02-28 23:41:07	\N	1048585	5
+146	1	4	2	16777217	2022-02-28 23:41:07	\N	1048585	5
+156	1	10	3	16777227	2022-02-28 23:41:25	\N	517	7
+166	1	21	2	16777235	2022-02-28 23:41:37	\N	1048585	5
+168	1	4	2	16777254	2022-02-28 23:41:37	\N	1048585	5
+169	1	5	2	16777254	2022-02-28 23:41:37	\N	1048585	5
+167	1	3	2	16777254	2022-02-28 23:41:37	2022-02-28 23:41:39	1048585	5
+172	1	3	2	16777217	2022-02-28 23:42:08	\N	1048585	6
+174	1	5	2	16777217	2022-02-28 23:42:08	\N	1048585	6
+176	1	4	2	16777217	2022-02-28 23:42:08	\N	1048585	6
+178	1	0	2	16777243	2022-02-28 23:42:08	\N	1048585	6
+179	1	0	2	16777245	2022-02-28 23:42:08	\N	1048585	6
+313	1	0	2	16777243	2022-02-28 23:46:38	\N	1048585	12
+205	1	4	2	16777217	2022-02-28 23:43:03	\N	1048585	7
+181	1	0	2	16777236	2022-02-28 23:42:14	2022-02-28 23:42:16	523	5
+183	1	7	3	16777227	2022-02-28 23:42:21	\N	517	8
+207	1	0	2	16777243	2022-02-28 23:43:03	\N	1048585	7
+208	1	0	2	16777245	2022-02-28 23:43:03	\N	1048585	7
+345	1	3	2	16777219	2022-02-28 23:47:54	\N	517	19
+186	1	10	3	16777227	2022-02-28 23:42:26	\N	517	9
+314	1	0	2	16777245	2022-02-28 23:46:38	\N	1048585	12
+211	1	23	2	16777231	2022-02-28 23:43:10	\N	1048585	7
+210	1	0	2	16777236	2022-02-28 23:43:10	2022-02-28 23:43:12	523	6
+347	1	5	2	16777219	2022-02-28 23:47:54	\N	517	19
+349	1	4	2	16777219	2022-02-28 23:47:54	\N	517	19
+246	1	0	2	16777236	2022-02-28 23:44:25	2022-02-28 23:44:27	523	7
+248	1	7	3	16777227	2022-02-28 23:44:32	\N	517	13
+215	1	9	3	16777227	2022-02-28 23:43:21	\N	517	11
+196	1	22	2	16777235	2022-02-28 23:42:37	\N	1048585	6
+198	1	4	2	16777254	2022-02-28 23:42:37	\N	1048585	6
+199	1	5	2	16777254	2022-02-28 23:42:37	\N	1048585	6
+352	1	3	2	16777219	2022-02-28 23:48:03	\N	517	20
+197	1	3	2	16777254	2022-02-28 23:42:37	2022-02-28 23:42:39	1048585	6
+354	1	5	2	16777219	2022-02-28 23:48:03	\N	517	20
+218	1	10	3	16777227	2022-02-28 23:43:27	\N	517	12
+356	1	4	2	16777219	2022-02-28 23:48:03	\N	517	20
+251	1	10	3	16777227	2022-02-28 23:44:37	\N	517	14
+222	1	3	2	16777219	2022-02-28 23:43:36	\N	517	10
+359	1	3	2	16777219	2022-02-28 23:48:14	\N	517	21
+224	1	4	2	16777219	2022-02-28 23:43:36	\N	517	10
+226	1	5	2	16777219	2022-02-28 23:43:36	\N	517	10
+361	1	5	2	16777219	2022-02-28 23:48:14	\N	517	21
+363	1	4	2	16777219	2022-02-28 23:48:14	\N	517	21
+275	1	26	2	16777231	2022-02-28 23:45:25	\N	1048585	10
+274	1	0	2	16777236	2022-02-28 23:45:25	2022-02-28 23:45:27	523	8
+229	1	3	2	16777217	2022-02-28 23:43:58	\N	1048585	8
+231	1	5	2	16777217	2022-02-28 23:43:59	\N	1048585	8
+233	1	4	2	16777217	2022-02-28 23:43:59	\N	1048585	8
+235	1	0	2	16777243	2022-02-28 23:43:59	\N	1048585	8
+236	1	0	2	16777245	2022-02-28 23:43:59	\N	1048585	8
+239	1	3	2	16777217	2022-02-28 23:44:18	\N	1048585	9
+241	1	6	2	16777217	2022-02-28 23:44:18	\N	1048585	9
+243	1	0	2	16777243	2022-02-28 23:44:18	\N	1048585	9
+244	1	0	2	16777245	2022-02-28 23:44:18	\N	1048585	9
+260	1	25	2	16777235	2022-02-28 23:44:48	\N	1048585	9
+262	1	6	2	16777254	2022-02-28 23:44:48	\N	1048585	9
+330	1	0	2	16777243	2022-02-28 23:47:19	\N	1048585	13
+261	1	3	2	16777254	2022-02-28 23:44:48	2022-02-28 23:44:50	1048585	9
+265	1	3	2	16777217	2022-02-28 23:45:18	\N	1048585	10
+267	1	5	2	16777217	2022-02-28 23:45:18	\N	1048585	10
+269	1	4	2	16777217	2022-02-28 23:45:18	\N	1048585	10
+271	1	0	2	16777243	2022-02-28 23:45:18	\N	1048585	10
+272	1	0	2	16777245	2022-02-28 23:45:18	\N	1048585	10
+297	1	3	2	16777217	2022-02-28 23:46:18	\N	1048585	11
+299	1	5	2	16777217	2022-02-28 23:46:18	\N	1048585	11
+283	1	3	2	16777219	2022-02-28 23:45:46	\N	517	15
+285	1	4	2	16777219	2022-02-28 23:45:46	\N	517	15
+287	1	5	2	16777219	2022-02-28 23:45:46	\N	517	15
+301	1	4	2	16777217	2022-02-28 23:46:18	\N	1048585	11
+303	1	0	2	16777243	2022-02-28 23:46:18	\N	1048585	11
+304	1	0	2	16777245	2022-02-28 23:46:18	\N	1048585	11
+290	1	3	2	16777219	2022-02-28 23:45:55	\N	517	16
+292	1	4	2	16777219	2022-02-28 23:45:55	\N	517	16
+294	1	5	2	16777219	2022-02-28 23:45:55	\N	517	16
+321	1	8	3	16777227	2022-02-28 23:46:57	\N	517	18
+317	1	28	2	16777231	2022-02-28 23:46:45	\N	1048585	12
+307	1	3	2	16777217	2022-02-28 23:46:38	\N	1048585	12
+309	1	5	2	16777217	2022-02-28 23:46:38	\N	1048585	12
+311	1	4	2	16777217	2022-02-28 23:46:38	\N	1048585	12
+316	1	0	2	16777236	2022-02-28 23:46:45	2022-02-28 23:46:47	523	9
+318	1	7	3	16777227	2022-02-28 23:46:52	\N	517	17
+331	1	0	2	16777245	2022-02-28 23:47:19	\N	1048585	13
+333	1	0	2	16777236	2022-02-28 23:47:27	2022-02-28 23:47:30	523	10
+324	1	3	2	16777217	2022-02-28 23:47:19	\N	1048585	13
+326	1	5	2	16777217	2022-02-28 23:47:19	\N	1048585	13
+328	1	4	2	16777217	2022-02-28 23:47:19	\N	1048585	13
+366	1	29	3	16777232	2022-02-28 23:48:26	\N	1048585	13
+467	1	9	3	16777227	2022-02-28 23:52:30	\N	517	27
+367	1	3	2	16777217	2022-02-28 23:48:45	\N	1048585	14
+369	1	5	2	16777217	2022-02-28 23:48:45	\N	1048585	14
+371	1	4	2	16777217	2022-02-28 23:48:45	\N	1048585	14
+373	1	0	2	16777243	2022-02-28 23:48:45	\N	1048585	14
+374	1	0	2	16777245	2022-02-28 23:48:45	\N	1048585	14
+414	1	3	2	16777217	2022-02-28 23:50:21	\N	1048585	17
+416	1	5	2	16777217	2022-02-28 23:50:21	\N	1048585	17
+376	1	3	2	16777217	2022-02-28 23:49:04	\N	1048585	15
+378	1	5	2	16777217	2022-02-28 23:49:04	\N	1048585	15
+380	1	4	2	16777217	2022-02-28 23:49:04	\N	1048585	15
+382	1	0	2	16777243	2022-02-28 23:49:04	\N	1048585	15
+383	1	0	2	16777245	2022-02-28 23:49:04	\N	1048585	15
+418	1	4	2	16777217	2022-02-28 23:50:21	\N	1048585	17
+420	1	0	2	16777243	2022-02-28 23:50:22	\N	1048585	17
+421	1	0	2	16777245	2022-02-28 23:50:22	\N	1048585	17
+385	1	0	2	16777236	2022-02-28 23:49:12	2022-02-28 23:49:14	523	11
+387	1	8	3	16777227	2022-02-28 23:49:19	\N	517	22
+444	1	3	2	16777217	2022-02-28 23:51:39	\N	1048585	18
+390	1	9	3	16777227	2022-02-28 23:49:24	\N	517	23
+446	1	5	2	16777217	2022-02-28 23:51:39	\N	1048585	18
+400	1	31	2	16777235	2022-02-28 23:49:35	\N	1048585	15
+402	1	5	2	16777254	2022-02-28 23:49:35	\N	1048585	15
+403	1	4	2	16777254	2022-02-28 23:49:35	\N	1048585	15
+423	1	0	2	16777236	2022-02-28 23:50:30	2022-02-28 23:50:33	523	12
+401	1	3	2	16777254	2022-02-28 23:49:35	2022-02-28 23:49:38	1048585	15
+425	1	7	3	16777227	2022-02-28 23:50:37	\N	517	24
+405	1	3	2	16777217	2022-02-28 23:50:02	\N	1048585	16
+407	1	5	2	16777217	2022-02-28 23:50:02	\N	1048585	16
+409	1	4	2	16777217	2022-02-28 23:50:02	\N	1048585	16
+411	1	0	2	16777243	2022-02-28 23:50:02	\N	1048585	16
+412	1	0	2	16777245	2022-02-28 23:50:02	\N	1048585	16
+448	1	4	2	16777217	2022-02-28 23:51:39	\N	1048585	18
+450	1	0	2	16777243	2022-02-28 23:51:39	\N	1048585	18
+451	1	0	2	16777245	2022-02-28 23:51:39	\N	1048585	18
+428	1	8	3	16777227	2022-02-28 23:50:42	\N	517	25
+438	1	33	2	16777235	2022-02-28 23:50:53	\N	1048585	17
+471	1	35	2	16777230	2022-02-28 23:52:32	\N	1048585	19
+454	1	34	2	16777234	2022-02-28 23:51:48	\N	1048585	18
+455	1	3	2	16777217	2022-02-28 23:52:09	\N	1048585	19
+457	1	6	2	16777217	2022-02-28 23:52:09	\N	1048585	19
+459	1	0	2	16777243	2022-02-28 23:52:09	\N	1048585	19
+460	1	0	2	16777245	2022-02-28 23:52:09	\N	1048585	19
+473	1	6	2	16777251	2022-02-28 23:52:32	\N	1048585	19
+472	1	3	2	16777251	2022-02-28 23:52:32	2022-02-28 23:52:35	1048585	19
+462	1	0	2	16777236	2022-02-28 23:52:18	2022-02-28 23:52:20	523	13
+464	1	8	3	16777227	2022-02-28 23:52:25	\N	517	26
 \.
 
 
@@ -6465,7 +6465,7 @@ pdfjsviewerplugin	1	enabled	1	bool
 googlescholarplugin	1	enabled	1	bool
 dublincoremetaplugin	1	enabled	1	bool
 htmlarticlegalleyplugin	1	enabled	1	bool
-usageeventplugin	0	uniqueSiteId	61d8df34e8806	string
+usageeventplugin	0	uniqueSiteId	621d5ba517568	string
 defaultthemeplugin	1	typography	notoSans	string
 defaultthemeplugin	1	baseColour	#1E6292	string
 defaultthemeplugin	1	showDescriptionInJournalIndex	false	string
@@ -6494,8 +6494,8 @@ COPY public.publication_galley_settings (galley_id, locale, setting_name, settin
 --
 
 COPY public.publication_galleys (galley_id, locale, publication_id, label, file_id, seq, remote_url, is_approved, url_path) FROM stdin;
-1	en_US	1	PDF	2	0		0	
-2	en_US	2	PDF Version 2	2	0		0	pdf
+1	en_US	1	PDF	3	0		0	
+2	en_US	2	PDF Version 2	3	0		0	pdf
 3	en_US	18	PDF	29	0		0	
 \.
 
@@ -6697,26 +6697,26 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, access_status, date_published, last_modified, locale, primary_contact_id, section_id, seq, submission_id, status, url_path, version) FROM stdin;
-18	0	2022-01-08	2022-01-08 01:05:39	en_US	23	1	0	17	3	\N	1
-19	0	\N	2022-01-08 01:05:59	en_US	24	1	0	18	1	\N	1
-1	0	2022-01-08	2022-01-08 00:52:45	en_US	1	1	0	1	3	\N	1
-20	0	\N	2022-01-08 01:06:25	en_US	25	2	0	19	1	\N	1
-2	0	2022-01-08	2022-01-08 00:53:17	en_US	3	1	0	1	1	mwandenga	2
-3	0	\N	2022-01-08 00:54:07	en_US	5	1	0	2	1	\N	1
-4	0	\N	2022-01-08 00:54:42	en_US	6	1	0	3	1	\N	1
-5	0	\N	2022-01-08 00:55:30	en_US	7	1	0	4	1	\N	1
-6	0	\N	2022-01-08 00:55:48	en_US	9	1	0	5	1	\N	1
-7	0	\N	2022-01-08 00:56:46	en_US	10	1	0	6	1	\N	1
-8	0	\N	2022-01-08 00:57:39	en_US	11	1	0	7	1	\N	1
-9	0	\N	2022-01-08 00:58:34	en_US	12	1	0	8	1	\N	1
-10	0	\N	2022-01-08 00:58:53	en_US	14	2	0	9	1	\N	1
-11	0	\N	2022-01-08 00:59:52	en_US	15	1	0	10	1	\N	1
-12	0	\N	2022-01-08 01:00:50	en_US	16	1	0	11	1	\N	1
-13	0	\N	2022-01-08 01:01:09	en_US	18	1	0	12	1	\N	1
-14	0	\N	2022-01-08 01:01:48	en_US	19	1	0	13	1	\N	1
-15	0	\N	2022-01-08 01:03:11	en_US	20	1	0	14	1	\N	1
-16	0	\N	2022-01-08 01:03:29	en_US	21	1	0	15	1	\N	1
-17	0	\N	2022-01-08 01:04:26	en_US	22	1	0	16	1	\N	1
+18	0	2022-02-28	2022-02-28 23:51:17	en_US	23	1	0	17	3	\N	1
+19	0	\N	2022-02-28 23:51:38	en_US	24	1	0	18	1	\N	1
+1	0	2022-02-28	2022-02-28 23:37:56	en_US	1	1	0	1	3	\N	1
+20	0	\N	2022-02-28 23:52:08	en_US	25	2	0	19	1	\N	1
+2	0	2022-02-28	2022-02-28 23:38:30	en_US	3	1	0	1	1	mwandenga	2
+3	0	\N	2022-02-28 23:39:22	en_US	5	1	0	2	1	\N	1
+4	0	\N	2022-02-28 23:39:58	en_US	6	1	0	3	1	\N	1
+5	0	\N	2022-02-28 23:40:47	en_US	7	1	0	4	1	\N	1
+6	0	\N	2022-02-28 23:41:06	en_US	9	1	0	5	1	\N	1
+7	0	\N	2022-02-28 23:42:07	en_US	10	1	0	6	1	\N	1
+8	0	\N	2022-02-28 23:43:02	en_US	11	1	0	7	1	\N	1
+9	0	\N	2022-02-28 23:43:58	en_US	12	1	0	8	1	\N	1
+10	0	\N	2022-02-28 23:44:17	en_US	14	2	0	9	1	\N	1
+11	0	\N	2022-02-28 23:45:17	en_US	15	1	0	10	1	\N	1
+12	0	\N	2022-02-28 23:46:17	en_US	16	1	0	11	1	\N	1
+13	0	\N	2022-02-28 23:46:37	en_US	18	1	0	12	1	\N	1
+14	0	\N	2022-02-28 23:47:18	en_US	19	1	0	13	1	\N	1
+15	0	\N	2022-02-28 23:48:44	en_US	20	1	0	14	1	\N	1
+16	0	\N	2022-02-28 23:49:03	en_US	21	1	0	15	1	\N	1
+17	0	\N	2022-02-28 23:50:01	en_US	22	1	0	16	1	\N	1
 \.
 
 
@@ -6753,33 +6753,33 @@ COPY public.queued_payments (queued_payment_id, date_created, date_modified, exp
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, unconsidered) FROM stdin;
-1	1	7	\N	\N	2022-01-08 00:51:19	2022-01-08 00:51:19	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:51:19	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-2	1	9	\N	\N	2022-01-08 00:51:24	2022-01-08 00:51:24	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:51:24	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-23	15	9	\N	\N	2022-01-08 01:03:50	2022-01-08 01:03:50	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:03:50	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
-3	1	10	\N	\N	2022-01-08 00:51:29	2022-01-08 00:51:29	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:51:29	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-16	10	10	\N	3	2022-01-08 01:00:11	2022-01-08 01:00:11	2022-01-08 01:00:25	2022-01-08 01:00:29	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:00:29	0	0	0	\N	\N	\N	\N	8	3	2	1	4	0	0
-4	3	9	\N	\N	2022-01-08 00:54:55	2022-01-08 00:54:55	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:54:55	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-5	3	10	\N	\N	2022-01-08 00:55:00	2022-01-08 00:55:00	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:55:00	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-6	5	8	\N	\N	2022-01-08 00:56:01	2022-01-08 00:56:01	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:56:01	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-17	12	7	\N	\N	2022-01-08 01:01:24	2022-01-08 01:01:24	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:01:24	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-7	5	10	\N	\N	2022-01-08 00:56:06	2022-01-08 00:56:06	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:56:06	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-8	6	7	\N	\N	2022-01-08 00:56:59	2022-01-08 00:56:59	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:56:59	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-9	6	10	\N	\N	2022-01-08 00:57:04	2022-01-08 00:57:04	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:57:04	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-18	12	8	\N	\N	2022-01-08 01:01:29	2022-01-08 01:01:29	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:01:29	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-24	17	7	\N	\N	2022-01-08 01:05:01	2022-01-08 01:05:01	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:05:01	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-11	7	9	\N	\N	2022-01-08 00:57:58	2022-01-08 00:57:58	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:57:58	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-12	7	10	\N	\N	2022-01-08 00:58:03	2022-01-08 00:58:03	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:58:03	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-25	17	8	\N	\N	2022-01-08 01:05:06	2022-01-08 01:05:06	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:05:06	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-10	7	8	\N	5	2022-01-08 00:57:53	2022-01-08 00:57:53	2022-01-08 00:58:09	2022-01-08 00:58:13	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:58:13	0	0	0	\N	\N	\N	\N	6	3	2	1	4	0	0
-13	9	7	\N	\N	2022-01-08 00:59:07	2022-01-08 00:59:07	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:59:07	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-14	9	10	\N	\N	2022-01-08 00:59:12	2022-01-08 00:59:12	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 00:59:12	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-26	19	8	\N	\N	2022-01-08 01:06:41	2022-01-08 01:06:41	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:06:41	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-19	13	7	\N	2	2022-01-08 01:02:03	2022-01-08 01:02:03	2022-01-08 01:02:18	2022-01-08 01:02:22	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:02:22	0	0	0	\N	\N	\N	\N	10	3	2	1	4	0	0
-27	19	9	\N	\N	2022-01-08 01:06:46	2022-01-08 01:06:46	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:06:46	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-15	10	9	\N	2	2022-01-08 01:00:06	2022-01-08 01:00:06	2022-01-08 01:00:16	2022-01-08 01:00:20	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:00:20	0	0	0	\N	\N	\N	\N	8	3	2	1	4	0	0
-20	13	9	\N	2	2022-01-08 01:02:08	2022-01-08 01:02:08	2022-01-08 01:02:27	2022-01-08 01:02:32	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:02:32	0	0	0	\N	\N	\N	\N	10	3	2	1	4	0	0
-21	13	10	\N	3	2022-01-08 01:02:13	2022-01-08 01:02:13	2022-01-08 01:02:38	2022-01-08 01:02:42	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:02:42	0	0	0	\N	\N	\N	\N	10	3	2	1	4	0	0
-22	15	8	\N	\N	2022-01-08 01:03:45	2022-01-08 01:03:45	\N	\N	\N	2022-02-05 00:00:00	2022-02-05 00:00:00	2022-01-08 01:03:45	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+1	1	7	\N	\N	2022-02-28 23:36:30	2022-02-28 23:36:30	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:36:30	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+2	1	9	\N	\N	2022-02-28 23:36:35	2022-02-28 23:36:35	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:36:35	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+23	15	9	\N	\N	2022-02-28 23:49:24	2022-02-28 23:49:24	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:49:24	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+3	1	10	\N	\N	2022-02-28 23:36:41	2022-02-28 23:36:41	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:36:41	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+16	10	10	\N	3	2022-02-28 23:45:37	2022-02-28 23:45:37	2022-02-28 23:45:52	2022-02-28 23:45:56	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:45:56	0	0	0	\N	\N	\N	\N	8	3	2	1	4	0	0
+4	3	9	\N	\N	2022-02-28 23:40:11	2022-02-28 23:40:11	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:40:11	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+5	3	10	\N	\N	2022-02-28 23:40:16	2022-02-28 23:40:16	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:40:16	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+6	5	8	\N	\N	2022-02-28 23:41:20	2022-02-28 23:41:20	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:41:20	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+17	12	7	\N	\N	2022-02-28 23:46:52	2022-02-28 23:46:52	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:46:52	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+7	5	10	\N	\N	2022-02-28 23:41:25	2022-02-28 23:41:25	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:41:25	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+8	6	7	\N	\N	2022-02-28 23:42:21	2022-02-28 23:42:21	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:42:21	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+9	6	10	\N	\N	2022-02-28 23:42:26	2022-02-28 23:42:26	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:42:26	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+18	12	8	\N	\N	2022-02-28 23:46:57	2022-02-28 23:46:57	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:46:57	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+24	17	7	\N	\N	2022-02-28 23:50:37	2022-02-28 23:50:37	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:50:37	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+11	7	9	\N	\N	2022-02-28 23:43:21	2022-02-28 23:43:21	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:43:21	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+12	7	10	\N	\N	2022-02-28 23:43:27	2022-02-28 23:43:27	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:43:27	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+25	17	8	\N	\N	2022-02-28 23:50:42	2022-02-28 23:50:42	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:50:42	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+10	7	8	\N	5	2022-02-28 23:43:16	2022-02-28 23:43:16	2022-02-28 23:43:32	2022-02-28 23:43:36	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:43:36	0	0	0	\N	\N	\N	\N	6	3	2	1	4	0	0
+13	9	7	\N	\N	2022-02-28 23:44:32	2022-02-28 23:44:32	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:44:32	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+14	9	10	\N	\N	2022-02-28 23:44:37	2022-02-28 23:44:37	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:44:37	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+26	19	8	\N	\N	2022-02-28 23:52:25	2022-02-28 23:52:25	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:52:25	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+19	13	7	\N	2	2022-02-28 23:47:34	2022-02-28 23:47:34	2022-02-28 23:47:50	2022-02-28 23:47:54	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:47:54	0	0	0	\N	\N	\N	\N	10	3	2	1	4	0	0
+27	19	9	\N	\N	2022-02-28 23:52:30	2022-02-28 23:52:30	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:52:30	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+15	10	9	\N	2	2022-02-28 23:45:32	2022-02-28 23:45:32	2022-02-28 23:45:42	2022-02-28 23:45:46	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:45:46	0	0	0	\N	\N	\N	\N	8	3	2	1	4	0	0
+20	13	9	\N	2	2022-02-28 23:47:39	2022-02-28 23:47:39	2022-02-28 23:47:59	2022-02-28 23:48:03	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:48:03	0	0	0	\N	\N	\N	\N	10	3	2	1	4	0	0
+21	13	10	\N	3	2022-02-28 23:47:44	2022-02-28 23:47:44	2022-02-28 23:48:10	2022-02-28 23:48:14	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:48:14	0	0	0	\N	\N	\N	\N	10	3	2	1	4	0	0
+22	15	8	\N	\N	2022-02-28 23:49:19	2022-02-28 23:49:19	\N	\N	\N	2022-03-28 00:00:00	2022-03-28 00:00:00	2022-02-28 23:49:19	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
 \.
 
 
@@ -6788,15 +6788,15 @@ COPY public.review_assignments (review_id, submission_id, reviewer_id, competing
 --
 
 COPY public.review_files (review_id, file_id) FROM stdin;
-4	6
-5	6
-6	9
-7	9
-8	11
-9	11
-10	13
-11	13
-12	13
+1	2
+2	2
+3	2
+4	7
+5	7
+6	10
+7	10
+8	12
+9	12
 13	16
 14	16
 15	18
@@ -6857,11 +6857,11 @@ COPY public.review_forms (review_form_id, assoc_type, assoc_id, seq, is_active) 
 --
 
 COPY public.review_round_files (submission_id, review_round_id, stage_id, file_id, revision) FROM stdin;
-2	2	3	4	1
-3	3	3	6	1
-5	4	3	9	1
-6	5	3	11	1
-7	6	3	13	1
+1	1	3	2	1
+2	2	3	5	1
+3	3	3	7	1
+5	4	3	10	1
+6	5	3	12	1
 9	7	3	16	1
 10	8	3	18	1
 12	9	3	21	1
@@ -6897,14 +6897,14 @@ COPY public.review_rounds (review_round_id, submission_id, stage_id, round, revi
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2022-01-08 00:47:37
-plugins.importexport.medra.MedraInfoSender	2022-01-08 00:47:37
-plugins.importexport.doaj.DOAJInfoSender	2022-01-08 00:47:37
-plugins.importexport.datacite.DataciteInfoSender	2022-01-08 00:47:37
-plugins.importexport.crossref.CrossrefInfoSender	2022-01-08 00:47:37
-lib.pkp.classes.task.ReviewReminder	2022-01-08 00:47:37
-lib.pkp.classes.task.StatisticsReport	2022-01-08 00:47:37
-classes.tasks.SubscriptionExpiryReminder	2022-01-08 00:47:37
+plugins.generic.usageStats.UsageStatsLoader	2022-02-28 23:32:41
+plugins.importexport.medra.MedraInfoSender	2022-02-28 23:32:41
+plugins.importexport.doaj.DOAJInfoSender	2022-02-28 23:32:41
+plugins.importexport.datacite.DataciteInfoSender	2022-02-28 23:32:41
+plugins.importexport.crossref.CrossrefInfoSender	2022-02-28 23:32:41
+lib.pkp.classes.task.ReviewReminder	2022-02-28 23:32:41
+lib.pkp.classes.task.StatisticsReport	2022-02-28 23:32:41
+classes.tasks.SubscriptionExpiryReminder	2022-02-28 23:32:41
 \.
 
 
@@ -6947,43 +6947,43 @@ COPY public.sections (section_id, journal_id, review_form_id, seq, editor_restri
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-lt1rvjavt781fdvg2oioeddh0s	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641602855	1641602855	0		localhost
-gmh7p6j7urpi2c40aqqnl5ld62	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641602890	1641602895	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1641602895;s:5:"token";s:32:"897191b85d0e1552baf6552e5d39ef46";}	localhost
-2656g88eok9hm2g5a0fhdtd2lp	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641602857	1641602868	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1641602868;s:5:"token";s:32:"a0019dde907cbdb0301d71e88d20bd73";}	localhost
-5fcm3n8mfm1iqsv1u1r7aaiu44	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603266	1641603309	0	csrf|a:2:{s:9:"timestamp";i:1641603309;s:5:"token";s:32:"8fd832344e0566e3b4c256e584b2ade6";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-den08jreovgvfu04gr7b7uc6ko	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641602868	1641602881	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1641602881;s:5:"token";s:32:"9f9de28129a0aa75c08069cf8f4279b4";}	localhost
-29ea4m2pqtiet0j33lnuud8qtl	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641602881	1641602889	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1641602889;s:5:"token";s:32:"968ed7b475c27bfb9ea7b35c80ef51f7";}	localhost
-tiilqjs4mb7blnm6sa24iohv9g	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603051	1641603112	0	csrf|a:2:{s:9:"timestamp";i:1641603112;s:5:"token";s:32:"9b28bd57ecfa2daf9f23113800033c8c";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-d8m4gk0pam5ca16h2fo9tma3jc	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603132	1641603135	0	userId|s:2:"17";username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1641603134;s:5:"token";s:32:"9f9785c5cfa61e62ca5b6c7c26b287e9";}	localhost
-18lfls5nl6h0313npbh9ggv6q4	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641602898	1641603029	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1641603029;s:5:"token";s:32:"46acf9e819129349de3129e5c220f119";}	localhost
-neqig61ntsbnihtrfhfk24spup	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603040	1641603049	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1641603049;s:5:"token";s:32:"4137d182323fd67476c26f771da5fab6";}	localhost
-748srplvufnmser6f6moeah0lf	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603031	1641603036	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1641603036;s:5:"token";s:32:"8348a6db0860136ee52c4b796196043a";}	localhost
-is11mt0cfkmrdc2a5a9uh5fbb1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603113	1641603132	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1641603132;s:5:"token";s:32:"c24509779331830392b8d13d7e6ee6d7";}	localhost
-k9mhu7aca3d0329uk968e20ae5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603165	1641603189	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1641603189;s:5:"token";s:32:"8899d138a6eb322ef89b7612ff14b49b";}	localhost
-cpck7ge935qs1l76oi6fj0ca5t	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603157	1641603164	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1641603165;s:5:"token";s:32:"a6ba8ca3547a3ecb3d5ec076a661bac2";}	localhost
-2aer01i5kr2okuiktpgdl7k2r0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603147	1641603156	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1641603156;s:5:"token";s:32:"af0ad37bb8cd76b7aa24237fc6e274e0";}	localhost
-36afc5rejrpgojbl85pdlpu14v	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603137	1641603147	0	username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1641603147;s:5:"token";s:32:"72ecf154a5f7f7ff6054911549ef8b2d";}userId|s:2:"17";	localhost
-fuhikj9jl105lr2od6sfnvp64v	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603199	1641603208	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1641603207;s:5:"token";s:32:"d4cd99371a4aaf9bfaa812434ddd8eda";}signedInAs|s:1:"3";	localhost
-3gjm0leus94uln7bmkfiu4f774	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603189	1641603194	0	csrf|a:2:{s:9:"timestamp";i:1641603194;s:5:"token";s:32:"41551d40cac3b40c8f15ac89f030b470";}	localhost
-bgjiivqa6tksr1lv5njqavnlg4	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603194	1641603198	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1641603199;s:5:"token";s:32:"f58a053d07430ff1f22bd7db934a3b18";}	localhost
-8cvbe9mbudssql1lr6t2g38j34	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603208	1641603215	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1641603215;s:5:"token";s:32:"bdd0571da33dfce6a3dd1db631983908";}signedInAs|s:1:"3";	localhost
-9irufhjtutjon1pdd99ugdfpe3	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603217	1641603264	0	csrf|a:2:{s:9:"timestamp";i:1641603264;s:5:"token";s:32:"7e800892bb7af68b9b8f23a12ab30606";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-vul8tg9o0rtqs4ar1io41o78lo	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603692	1641603773	0	csrf|a:2:{s:9:"timestamp";i:1641603773;s:5:"token";s:32:"6f065b739cdd9b88409302ae9ddae311";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-deututtu5mqo8lqj5ctsf48mr5	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603632	1641603652	0	csrf|a:2:{s:9:"timestamp";i:1641603652;s:5:"token";s:32:"0236e7125f4bf46e252b77590fee7e48";}username|s:10:"kalkhafaji";userId|s:2:"27";	localhost
-daes2gii24vduedk5b1qkhe1i2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603333	1641603388	0	csrf|a:2:{s:9:"timestamp";i:1641603388;s:5:"token";s:32:"c9023436f8aa16027102a0c5bf76a618";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-locpulet6h92nbabcec4pl9u44	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603311	1641603331	0	csrf|a:2:{s:9:"timestamp";i:1641603331;s:5:"token";s:32:"f3adc7eb3add6ed53f9f706b8be78be8";}username|s:12:"cmontgomerie";userId|s:2:"20";	localhost
-rvd0n9omol12s3bi9qjhlih6m9	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603653	1641603690	0	csrf|a:2:{s:9:"timestamp";i:1641603690;s:5:"token";s:32:"ed4b369af02dbdfdccc1c702ee91a104";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-832ncf2ap0nqjapvtfskpc54mn	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603390	1641603442	0	csrf|a:2:{s:9:"timestamp";i:1641603442;s:5:"token";s:32:"7fc182ea7154dc19fb11e21a15bdf3ee";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-5lroe4q1hfr9c02ltnh9e4qrbq	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603444	1641603493	0	csrf|a:2:{s:9:"timestamp";i:1641603493;s:5:"token";s:32:"498c1cd3a238984ca45f35ab01f4cb7d";}username|s:7:"phudson";	localhost
-abthjnislg98m7ubmbq53jffaj	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603775	1641603792	0	csrf|a:2:{s:9:"timestamp";i:1641603792;s:5:"token";s:32:"626b5c530b73dccb5ca01ea7d8034577";}username|s:7:"pdaniel";userId|s:2:"30";	localhost
-9tprm6nrctrr8732du466qmebr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603869	1641603941	0	csrf|a:2:{s:9:"timestamp";i:1641603941;s:5:"token";s:32:"283db71b0c20e6282c058e4fda296a2c";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-90qgj6o71lagaadrlf0o53roli	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603794	1641603848	0	csrf|a:2:{s:9:"timestamp";i:1641603848;s:5:"token";s:32:"8e07bd1b065c182a2ca14d7fbbf60a27";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-li23hneunp9qsdnj6s8rgiunrs	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603495	1641603515	0	csrf|a:2:{s:9:"timestamp";i:1641603515;s:5:"token";s:32:"b682a6aa2856497ac56db8a76f764c5b";}username|s:7:"eostrom";userId|s:2:"24";	localhost
-p34v0sovcl6arvljjdjtdq8tkt	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603517	1641603574	0	csrf|a:2:{s:9:"timestamp";i:1641603574;s:5:"token";s:32:"bac6651a023b2654fff5f2dc5f1ab17b";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-0a9cpqacnhrvhra500vd87h27l	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603576	1641603630	0	csrf|a:2:{s:9:"timestamp";i:1641603630;s:5:"token";s:32:"63574d321361c78f73fff32133aaf8ef";}username|s:8:"agallego";	localhost
-4e0u0dbst09ds1ik8u935fbgql	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603850	1641603867	0	csrf|a:2:{s:9:"timestamp";i:1641603867;s:5:"token";s:32:"ca14ddd4bc9b2c334cb1a2ba05e29e8e";}username|s:6:"rrossi";userId|s:2:"32";	localhost
-q2ln0aj9um3umf5qm2op8f2lj4	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603943	1641603968	0	csrf|a:2:{s:9:"timestamp";i:1641603968;s:5:"token";s:32:"c0b070d538f79201a52ca023d25aff36";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
-rsh6qbi6dvgahkcflqd2iti4nj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/96.0.4664.45 Safari/537.36	1641603969	1641604015	0	csrf|a:2:{s:9:"timestamp";i:1641604015;s:5:"token";s:32:"6d82011cd223e2c6534f32a0564b9f61";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+6doij1huksai0jskmcksijlmgs	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091194	1646091201	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646091201;s:5:"token";s:32:"a583a0efe7e9b31dd302ee22cca64873";}	localhost
+2htkek991s83jmcmkijo44brnk	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091159	1646091159	0		localhost
+gm0domv1mag9cft89k9mpk9svm	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091161	1646091172	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646091172;s:5:"token";s:32:"bcac54629e46aa89f71db6e373493b0a";}	localhost
+p4edalgg7cqfqpoutbujtfh1mn	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091581	1646091626	0	csrf|a:2:{s:9:"timestamp";i:1646091626;s:5:"token";s:32:"15d4cc55a22617d885997273957ba2a3";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+u20qv2rmfvmbfehpvis6agv2ki	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091172	1646091186	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646091186;s:5:"token";s:32:"1f78570afbc75734fc1511839873c9d6";}	localhost
+50dnlbi8fqkcjddcogmhh9tru0	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091186	1646091194	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646091194;s:5:"token";s:32:"e31c03d6cdc4f203beffc052d342bc3f";}	localhost
+hkccuhrrs72bhv6ohcc63heboj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091476	1646091501	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1646091501;s:5:"token";s:32:"651fb17faf810dd96f1441ac87d60ec1";}	localhost
+fp3lmuirijibrie5jmui4vff2f	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091361	1646091424	0	csrf|a:2:{s:9:"timestamp";i:1646091424;s:5:"token";s:32:"0abc456b3737bad63184eb096f427416";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+7pk56b1rjso4ir0n1s9e535v03	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091203	1646091341	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1646091340;s:5:"token";s:32:"24dc140b6e77782bd29d65d3c50530ca";}	localhost
+7tc7kj0igjsu5bp13neqg397ht	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091350	1646091359	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646091359;s:5:"token";s:32:"9d10c8841c3fb1492a1cef003a71d282";}	localhost
+hai8lf7484vesbebkckutop43a	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091444	1646091447	0	userId|s:2:"17";username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1646091446;s:5:"token";s:32:"d501f470f072f17cd6e99b31dd78b0de";}	localhost
+p9r41pspbdldjsn4hb5thc5r6n	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091343	1646091348	0	userId|s:1:"1";username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646091348;s:5:"token";s:32:"a6e228b28387424b961ec5660b6a7331";}	localhost
+fhvkf24t16boupu49clcf86ds5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091424	1646091444	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1646091444;s:5:"token";s:32:"11fd79fa269ec657dbe8f3c550fa53fc";}	localhost
+i3qrpu8qoup8376mnahtterqro	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091469	1646091476	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1646091476;s:5:"token";s:32:"09d113f6b81d644bfefea854639ba024";}	localhost
+kmi3ub74rvk96s1k28bore2rmb	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091459	1646091469	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1646091469;s:5:"token";s:32:"d75505f3ff56ec63b8fc2363d8b3627d";}	localhost
+iol7m4v944vsc0d1a8jv1n9dsp	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091449	1646091459	0	username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1646091459;s:5:"token";s:32:"f54f82f5118bf0b8aaa581e3937fd9bd";}userId|s:2:"17";	localhost
+h7lolssu0hgdges7cvdiaoeie5	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091511	1646091520	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1646091520;s:5:"token";s:32:"34ff2d7b8442e1d45b2103b16e7b67e0";}signedInAs|s:1:"3";	localhost
+45h2blvrprc4ms2825u4ccojk8	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091501	1646091506	0	csrf|a:2:{s:9:"timestamp";i:1646091506;s:5:"token";s:32:"a4271b01f8def430c5cbea009492835b";}	localhost
+3r5t37bfmg9ajcivift0av2uvu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091506	1646091511	0	userId|s:1:"3";username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1646091511;s:5:"token";s:32:"2edc4062173cbec7f38913e53dcb80fe";}	localhost
+25vcujang9os9bvtkbhs6amq27	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091521	1646091529	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1646091529;s:5:"token";s:32:"37e1da42bee72561e99e26cb29f34e94";}signedInAs|s:1:"3";	localhost
+vgusn4p6f71db4062tjv16gbga	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091530	1646091580	0	csrf|a:2:{s:9:"timestamp";i:1646091580;s:5:"token";s:32:"8623650dca498d9d75702b4df589f911";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+9g8varolttctcj0vchdkj9qjaj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091980	1646092018	0	csrf|a:2:{s:9:"timestamp";i:1646092018;s:5:"token";s:32:"7ba699100b5c689c7a7365b5d040be5e";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+jla02hc1lkdl7qrbemplbk3ehj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091650	1646091708	0	csrf|a:2:{s:9:"timestamp";i:1646091708;s:5:"token";s:32:"e352ae82c095e67ed0ca73b14b3aa941";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+rkiev6fh1s37sj7cc0titr27c2	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091628	1646091649	0	csrf|a:2:{s:9:"timestamp";i:1646091649;s:5:"token";s:32:"83730369f603b0701e09a571a121470d";}username|s:12:"cmontgomerie";userId|s:2:"20";	localhost
+654hlg9bo2s17pge4nrud8nq9p	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091710	1646091764	0	csrf|a:2:{s:9:"timestamp";i:1646091764;s:5:"token";s:32:"eff2f3be24f0075e542d5edcfcef52a8";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+5ge2utg3qa3n63eh1mf907gggc	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091766	1646091817	0	csrf|a:2:{s:9:"timestamp";i:1646091817;s:5:"token";s:32:"cc56206b806bd00f9c9856d7d133ebd6";}username|s:7:"phudson";	localhost
+pqbm3g1pso1rpoom2hqpf678hp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646092022	1646092106	0	csrf|a:2:{s:9:"timestamp";i:1646092106;s:5:"token";s:32:"42fa241a689c70f40e33253da2f85f10";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+if1vc92g1pglpmkjpctddijp63	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646092108	1646092126	0	csrf|a:2:{s:9:"timestamp";i:1646092126;s:5:"token";s:32:"e823f020a7a14ad6e94dab9a795a4954";}username|s:7:"pdaniel";userId|s:2:"30";	localhost
+f3t061ot23mtff30vdnm7ijdcd	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646092185	1646092202	0	csrf|a:2:{s:9:"timestamp";i:1646092202;s:5:"token";s:32:"b1aab8debd39f9fbe5ad144134cd7244";}username|s:6:"rrossi";userId|s:2:"32";	localhost
+tnostpveugr29t5nq9pevbngcm	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091819	1646091839	0	csrf|a:2:{s:9:"timestamp";i:1646091839;s:5:"token";s:32:"bab93dc796a3204a28d970dbc72c980f";}username|s:7:"eostrom";userId|s:2:"24";	localhost
+g6pns7tqo9uigusgo30kadlq5o	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646092127	1646092183	0	csrf|a:2:{s:9:"timestamp";i:1646092183;s:5:"token";s:32:"c0dd212d0fe840133040587614a13252";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+oqfinkmpfrohetudkbpii154v6	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091842	1646091899	0	csrf|a:2:{s:9:"timestamp";i:1646091899;s:5:"token";s:32:"964702689ac61279bde25ec263155d71";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+90abr7g50bd175baodshpjpp79	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091958	1646091979	0	csrf|a:2:{s:9:"timestamp";i:1646091979;s:5:"token";s:32:"f09f7028c5a9bc85fab47735e8dd1bda";}username|s:10:"kalkhafaji";userId|s:2:"27";	localhost
+i0b6f8n0spu5eibbiq6bp9pj9b	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646091901	1646091956	0	csrf|a:2:{s:9:"timestamp";i:1646091956;s:5:"token";s:32:"6f110bcf05b438e905572695302225f7";}username|s:8:"agallego";	localhost
+ogf4s3ot486skk3ojbm2cfpnc4	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646092204	1646092280	0	csrf|a:2:{s:9:"timestamp";i:1646092280;s:5:"token";s:32:"25199acda8e11bc35ac00bc0bf724dbb";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+2lloh6118rv73qv6f4hd507nlg	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646092282	1646092308	0	csrf|a:2:{s:9:"timestamp";i:1646092308;s:5:"token";s:32:"4110de45b9fc6edbb31f78b8892dc37d";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
+d0v87lr1b4o3g07urhg8p70018	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646092313	1646092360	0	csrf|a:2:{s:9:"timestamp";i:1646092360;s:5:"token";s:32:"e9e93634ab2d8760aa5e609e50fa0b75";}username|s:7:"dbarnes";userId|s:1:"3";	localhost
 \.
 
 
@@ -7013,99 +7013,99 @@ themePluginPath		default
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-2	1	3	3	2022-01-08 00:51:07	0	1
-4	1	5	4	2022-01-08 00:51:07	0	1
-5	1	7	12	2022-01-08 00:51:37	0	0
-6	1	11	14	2022-01-08 00:51:46	0	0
-7	1	13	16	2022-01-08 00:51:51	0	0
-1	1	14	17	2022-01-08 00:52:21	0	1
-3	1	5	5	2022-01-08 00:53:31	1	0
-8	2	14	18	2022-01-08 00:53:42	0	0
-9	2	3	3	2022-01-08 00:53:53	0	1
-10	2	5	5	2022-01-08 00:53:53	0	1
-11	2	5	4	2022-01-08 00:53:53	0	1
-12	2	5	6	2022-01-08 00:54:04	1	1
-13	3	14	19	2022-01-08 00:54:31	0	0
-14	3	3	3	2022-01-08 00:54:42	0	1
-15	3	5	5	2022-01-08 00:54:42	0	1
-16	3	5	4	2022-01-08 00:54:42	0	1
-17	3	7	11	2022-01-08 00:55:08	0	0
-18	4	14	20	2022-01-08 00:55:16	0	0
-19	4	3	3	2022-01-08 00:55:31	0	1
-20	4	5	5	2022-01-08 00:55:31	0	1
-21	4	5	4	2022-01-08 00:55:31	0	1
-22	5	14	21	2022-01-08 00:55:38	0	0
-23	5	3	3	2022-01-08 00:55:49	0	1
-24	5	5	5	2022-01-08 00:55:49	0	1
-25	5	5	4	2022-01-08 00:55:49	0	1
-26	5	7	11	2022-01-08 00:56:14	0	0
-27	5	11	13	2022-01-08 00:56:23	0	0
-28	5	13	15	2022-01-08 00:56:27	0	0
-29	6	14	22	2022-01-08 00:56:35	0	0
-30	6	3	3	2022-01-08 00:56:47	0	1
-31	6	5	5	2022-01-08 00:56:47	0	1
-32	6	5	4	2022-01-08 00:56:47	0	1
-33	6	7	11	2022-01-08 00:57:12	0	0
-34	6	11	13	2022-01-08 00:57:21	0	0
-35	7	14	23	2022-01-08 00:57:29	0	0
-36	7	3	3	2022-01-08 00:57:40	0	1
-37	7	5	5	2022-01-08 00:57:40	0	1
-38	7	5	4	2022-01-08 00:57:40	0	1
-39	8	14	24	2022-01-08 00:58:21	0	0
-40	8	3	3	2022-01-08 00:58:35	0	1
-41	8	5	5	2022-01-08 00:58:35	0	1
-42	8	5	4	2022-01-08 00:58:35	0	1
-43	9	14	25	2022-01-08 00:58:43	0	0
-44	9	3	3	2022-01-08 00:58:53	0	1
-45	9	5	6	2022-01-08 00:58:53	0	1
-46	9	7	12	2022-01-08 00:59:20	0	0
-47	9	11	14	2022-01-08 00:59:29	0	0
-48	9	13	16	2022-01-08 00:59:33	0	0
-49	10	14	26	2022-01-08 00:59:41	0	0
-50	10	3	3	2022-01-08 00:59:53	0	1
-51	10	5	5	2022-01-08 00:59:53	0	1
-52	10	5	4	2022-01-08 00:59:53	0	1
-53	11	14	27	2022-01-08 01:00:37	0	0
-54	11	3	3	2022-01-08 01:00:51	0	1
-55	11	5	5	2022-01-08 01:00:51	0	1
-56	11	5	4	2022-01-08 01:00:51	0	1
-57	12	14	28	2022-01-08 01:00:58	0	0
-58	12	3	3	2022-01-08 01:01:10	0	1
-59	12	5	5	2022-01-08 01:01:10	0	1
-60	12	5	4	2022-01-08 01:01:10	0	1
-61	13	14	29	2022-01-08 01:01:37	0	0
-62	13	3	3	2022-01-08 01:01:49	0	1
-63	13	5	5	2022-01-08 01:01:49	0	1
-64	13	5	4	2022-01-08 01:01:49	0	1
-65	14	14	30	2022-01-08 01:03:00	0	0
-66	14	3	3	2022-01-08 01:03:11	0	1
-67	14	5	5	2022-01-08 01:03:11	0	1
-68	14	5	4	2022-01-08 01:03:11	0	1
-69	15	14	31	2022-01-08 01:03:19	0	0
-70	15	3	3	2022-01-08 01:03:30	0	1
-71	15	5	5	2022-01-08 01:03:30	0	1
-72	15	5	4	2022-01-08 01:03:30	0	1
-73	15	7	12	2022-01-08 01:03:57	0	0
-74	15	11	14	2022-01-08 01:04:07	0	0
-75	16	14	32	2022-01-08 01:04:15	0	0
-76	16	3	3	2022-01-08 01:04:27	0	1
-77	16	5	5	2022-01-08 01:04:27	0	1
-78	16	5	4	2022-01-08 01:04:27	0	1
-79	17	14	33	2022-01-08 01:04:34	0	0
-80	17	3	3	2022-01-08 01:04:46	0	1
-81	17	5	5	2022-01-08 01:04:46	0	1
-82	17	5	4	2022-01-08 01:04:46	0	1
-83	17	7	11	2022-01-08 01:05:13	0	0
-84	17	11	13	2022-01-08 01:05:22	0	0
-85	17	13	15	2022-01-08 01:05:26	0	0
-86	18	14	34	2022-01-08 01:05:48	0	0
-87	18	3	3	2022-01-08 01:06:00	0	1
-88	18	5	5	2022-01-08 01:06:00	0	1
-89	18	5	4	2022-01-08 01:06:00	0	1
-90	19	14	35	2022-01-08 01:06:15	0	0
-91	19	3	3	2022-01-08 01:06:26	0	1
-92	19	5	6	2022-01-08 01:06:26	0	1
-93	19	7	12	2022-01-08 01:06:54	0	0
+2	1	3	3	2022-02-28 23:36:18	0	1
+4	1	5	4	2022-02-28 23:36:18	0	1
+5	1	7	12	2022-02-28 23:36:48	0	0
+6	1	11	14	2022-02-28 23:36:58	0	0
+7	1	13	16	2022-02-28 23:37:02	0	0
+1	1	14	17	2022-02-28 23:37:33	0	1
+3	1	5	5	2022-02-28 23:38:44	1	0
+8	2	14	18	2022-02-28 23:38:56	0	0
+9	2	3	3	2022-02-28 23:39:07	0	1
+10	2	5	5	2022-02-28 23:39:07	0	1
+11	2	5	4	2022-02-28 23:39:07	0	1
+12	2	5	6	2022-02-28 23:39:19	1	1
+13	3	14	19	2022-02-28 23:39:47	0	0
+14	3	3	3	2022-02-28 23:39:58	0	1
+15	3	5	5	2022-02-28 23:39:59	0	1
+16	3	5	4	2022-02-28 23:39:59	0	1
+17	3	7	11	2022-02-28 23:40:25	0	0
+18	4	14	20	2022-02-28 23:40:33	0	0
+19	4	3	3	2022-02-28 23:40:48	0	1
+20	4	5	5	2022-02-28 23:40:48	0	1
+21	4	5	4	2022-02-28 23:40:48	0	1
+22	5	14	21	2022-02-28 23:40:56	0	0
+23	5	3	3	2022-02-28 23:41:07	0	1
+24	5	5	5	2022-02-28 23:41:07	0	1
+25	5	5	4	2022-02-28 23:41:07	0	1
+26	5	7	11	2022-02-28 23:41:33	0	0
+27	5	11	13	2022-02-28 23:41:42	0	0
+28	5	13	15	2022-02-28 23:41:47	0	0
+29	6	14	22	2022-02-28 23:41:56	0	0
+30	6	3	3	2022-02-28 23:42:08	0	1
+31	6	5	5	2022-02-28 23:42:08	0	1
+32	6	5	4	2022-02-28 23:42:08	0	1
+33	6	7	11	2022-02-28 23:42:34	0	0
+34	6	11	13	2022-02-28 23:42:43	0	0
+35	7	14	23	2022-02-28 23:42:52	0	0
+36	7	3	3	2022-02-28 23:43:03	0	1
+37	7	5	5	2022-02-28 23:43:03	0	1
+38	7	5	4	2022-02-28 23:43:03	0	1
+39	8	14	24	2022-02-28 23:43:44	0	0
+40	8	3	3	2022-02-28 23:43:58	0	1
+41	8	5	5	2022-02-28 23:43:58	0	1
+42	8	5	4	2022-02-28 23:43:58	0	1
+43	9	14	25	2022-02-28 23:44:07	0	0
+44	9	3	3	2022-02-28 23:44:18	0	1
+45	9	5	6	2022-02-28 23:44:18	0	1
+46	9	7	12	2022-02-28 23:44:44	0	0
+47	9	11	14	2022-02-28 23:44:53	0	0
+48	9	13	16	2022-02-28 23:44:58	0	0
+49	10	14	26	2022-02-28 23:45:06	0	0
+50	10	3	3	2022-02-28 23:45:18	0	1
+51	10	5	5	2022-02-28 23:45:18	0	1
+52	10	5	4	2022-02-28 23:45:18	0	1
+53	11	14	27	2022-02-28 23:46:04	0	0
+54	11	3	3	2022-02-28 23:46:18	0	1
+55	11	5	5	2022-02-28 23:46:18	0	1
+56	11	5	4	2022-02-28 23:46:18	0	1
+57	12	14	28	2022-02-28 23:46:26	0	0
+58	12	3	3	2022-02-28 23:46:38	0	1
+59	12	5	5	2022-02-28 23:46:38	0	1
+60	12	5	4	2022-02-28 23:46:38	0	1
+61	13	14	29	2022-02-28 23:47:07	0	0
+62	13	3	3	2022-02-28 23:47:19	0	1
+63	13	5	5	2022-02-28 23:47:19	0	1
+64	13	5	4	2022-02-28 23:47:19	0	1
+65	14	14	30	2022-02-28 23:48:33	0	0
+66	14	3	3	2022-02-28 23:48:45	0	1
+67	14	5	5	2022-02-28 23:48:45	0	1
+68	14	5	4	2022-02-28 23:48:45	0	1
+69	15	14	31	2022-02-28 23:48:53	0	0
+70	15	3	3	2022-02-28 23:49:04	0	1
+71	15	5	5	2022-02-28 23:49:04	0	1
+72	15	5	4	2022-02-28 23:49:04	0	1
+73	15	7	12	2022-02-28 23:49:32	0	0
+74	15	11	14	2022-02-28 23:49:41	0	0
+75	16	14	32	2022-02-28 23:49:50	0	0
+76	16	3	3	2022-02-28 23:50:02	0	1
+77	16	5	5	2022-02-28 23:50:02	0	1
+78	16	5	4	2022-02-28 23:50:02	0	1
+79	17	14	33	2022-02-28 23:50:09	0	0
+80	17	3	3	2022-02-28 23:50:21	0	1
+81	17	5	5	2022-02-28 23:50:21	0	1
+82	17	5	4	2022-02-28 23:50:21	0	1
+83	17	7	11	2022-02-28 23:50:50	0	0
+84	17	11	13	2022-02-28 23:50:59	0	0
+85	17	13	15	2022-02-28 23:51:04	0	0
+86	18	14	34	2022-02-28 23:51:28	0	0
+87	18	3	3	2022-02-28 23:51:39	0	1
+88	18	5	5	2022-02-28 23:51:39	0	1
+89	18	5	4	2022-02-28 23:51:39	0	1
+90	19	14	35	2022-02-28 23:51:58	0	0
+91	19	3	3	2022-02-28 23:52:09	0	1
+92	19	5	6	2022-02-28 23:52:09	0	1
+93	19	7	12	2022-02-28 23:52:39	0	0
 \.
 
 
@@ -7149,12 +7149,12 @@ COPY public.submission_artwork_files (file_id, revision, caption, credit, copyri
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	7	10	8		<p>Here are my review comments</p>	2022-01-08 00:58:13	\N	1
-2	1	4096	10	15	9		<p>Here are my review comments</p>	2022-01-08 01:00:20	\N	1
-3	1	4096	10	16	10		<p>Here are my review comments</p>	2022-01-08 01:00:29	\N	1
-4	1	4096	13	19	7		<p>Here are my review comments</p>	2022-01-08 01:02:22	\N	1
-5	1	4096	13	20	9		<p>Here are my review comments</p>	2022-01-08 01:02:32	\N	1
-6	1	4096	13	21	10		<p>Here are my review comments</p>	2022-01-08 01:02:42	\N	1
+1	1	4096	7	10	8		<p>Here are my review comments</p>	2022-02-28 23:43:36	\N	1
+2	1	4096	10	15	9		<p>Here are my review comments</p>	2022-02-28 23:45:46	\N	1
+3	1	4096	10	16	10		<p>Here are my review comments</p>	2022-02-28 23:45:55	\N	1
+4	1	4096	13	19	7		<p>Here are my review comments</p>	2022-02-28 23:47:53	\N	1
+5	1	4096	13	20	9		<p>Here are my review comments</p>	2022-02-28 23:48:03	\N	1
+6	1	4096	13	21	10		<p>Here are my review comments</p>	2022-02-28 23:48:14	\N	1
 \.
 
 
@@ -7165,29 +7165,29 @@ COPY public.submission_comments (comment_id, comment_type, role_id, submission_i
 COPY public.submission_file_settings (file_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 1	en_US	name	amwandenga, Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
 1	fr_CA	name		string
-2	en_US	name	dbarnes, article.pdf	string
+2	en_US	name	Article Text, Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
 2	fr_CA	name		string
-3	en_US	name	ccorino, The influence of lactation on the quantity and quality of cashmere production.pdf	string
+3	en_US	name	dbarnes, article.pdf	string
 3	fr_CA	name		string
-4	en_US	name	Article Text, The influence of lactation on the quantity and quality of cashmere production.pdf	string
+4	en_US	name	ccorino, The influence of lactation on the quantity and quality of cashmere production.pdf	string
 4	fr_CA	name		string
-5	en_US	name	ckwantes, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+5	en_US	name	Article Text, The influence of lactation on the quantity and quality of cashmere production.pdf	string
 5	fr_CA	name		string
-6	en_US	name	Article Text, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+6	en_US	name	ckwantes, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 6	fr_CA	name		string
-7	en_US	name	cmontgomerie, Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+7	en_US	name	Article Text, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 7	fr_CA	name		string
-8	en_US	name	ddiouf, Genetic transformation of forest trees.pdf	string
+8	en_US	name	cmontgomerie, Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 8	fr_CA	name		string
-9	en_US	name	Article Text, Genetic transformation of forest trees.pdf	string
+9	en_US	name	ddiouf, Genetic transformation of forest trees.pdf	string
 9	fr_CA	name		string
-10	en_US	name	dphillips, Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+10	en_US	name	Article Text, Genetic transformation of forest trees.pdf	string
 10	fr_CA	name		string
-11	en_US	name	Article Text, Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+11	en_US	name	dphillips, Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 11	fr_CA	name		string
-12	en_US	name	dsokoloff, Developing efficacy beliefs in the classroom.pdf	string
+12	en_US	name	Article Text, Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 12	fr_CA	name		string
-13	en_US	name	Article Text, Developing efficacy beliefs in the classroom.pdf	string
+13	en_US	name	dsokoloff, Developing efficacy beliefs in the classroom.pdf	string
 13	fr_CA	name		string
 14	en_US	name	eostrom, Traditions and Trends in the Study of the Commons.pdf	string
 14	fr_CA	name		string
@@ -7235,38 +7235,38 @@ COPY public.submission_file_settings (file_id, locale, setting_name, setting_val
 --
 
 COPY public.submission_files (file_id, revision, source_file_id, source_revision, submission_id, file_type, genre_id, file_size, original_file_name, file_stage, direct_sales_price, sales_type, viewable, date_uploaded, date_modified, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	\N	\N	1	application/pdf	1	14572	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	2	\N	\N	1	2022-01-08 00:51:01	2022-01-08 00:51:01	17	\N	\N
-2	1	\N	\N	1	application/pdf	1	14572	article.pdf	10	\N	\N	0	2022-01-08 00:52:11	2022-01-08 00:52:11	3	521	1
-3	1	\N	\N	2	application/pdf	1	14572	The influence of lactation on the quantity and quality of cashmere production.pdf	2	\N	\N	1	2022-01-08 00:53:48	2022-01-08 00:53:48	18	\N	\N
-4	1	3	1	2	application/pdf	1	14572	The influence of lactation on the quantity and quality of cashmere production.pdf	4	\N	\N	1	2022-01-08 00:53:48	2022-01-08 00:53:59	18	\N	\N
-5	1	\N	\N	3	application/pdf	1	14572	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	2	\N	\N	1	2022-01-08 00:54:36	2022-01-08 00:54:36	19	\N	\N
-6	1	5	1	3	application/pdf	1	14572	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	4	\N	\N	1	2022-01-08 00:54:36	2022-01-08 00:54:48	19	\N	\N
-7	1	\N	\N	4	application/pdf	1	14572	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	2	\N	\N	1	2022-01-08 00:55:22	2022-01-08 00:55:22	20	\N	\N
-8	1	\N	\N	5	application/pdf	1	14572	Genetic transformation of forest trees.pdf	2	\N	\N	1	2022-01-08 00:55:43	2022-01-08 00:55:43	21	\N	\N
-9	1	8	1	5	application/pdf	1	14572	Genetic transformation of forest trees.pdf	4	\N	\N	1	2022-01-08 00:55:43	2022-01-08 00:55:55	21	\N	\N
-10	1	\N	\N	6	application/pdf	1	14572	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	2	\N	\N	1	2022-01-08 00:56:40	2022-01-08 00:56:40	22	\N	\N
-11	1	10	1	6	application/pdf	1	14572	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	4	\N	\N	1	2022-01-08 00:56:40	2022-01-08 00:56:52	22	\N	\N
-12	1	\N	\N	7	application/pdf	1	14572	Developing efficacy beliefs in the classroom.pdf	2	\N	\N	1	2022-01-08 00:57:34	2022-01-08 00:57:34	23	\N	\N
-13	1	12	1	7	application/pdf	1	14572	Developing efficacy beliefs in the classroom.pdf	4	\N	\N	1	2022-01-08 00:57:34	2022-01-08 00:57:46	23	\N	\N
-14	1	\N	\N	8	application/pdf	1	14572	Traditions and Trends in the Study of the Commons.pdf	2	\N	\N	1	2022-01-08 00:58:26	2022-01-08 00:58:26	24	\N	\N
-15	1	\N	\N	9	application/pdf	1	14572	Hansen & Pinto: Reason Reclaimed.pdf	2	\N	\N	1	2022-01-08 00:58:48	2022-01-08 00:58:48	25	\N	\N
-16	1	15	1	9	application/pdf	1	14572	Hansen & Pinto: Reason Reclaimed.pdf	4	\N	\N	1	2022-01-08 00:58:48	2022-01-08 00:59:00	25	\N	\N
-17	1	\N	\N	10	application/pdf	1	14572	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	2	\N	\N	1	2022-01-08 00:59:47	2022-01-08 00:59:47	26	\N	\N
-18	1	17	1	10	application/pdf	1	14572	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	4	\N	\N	1	2022-01-08 00:59:47	2022-01-08 00:59:59	26	\N	\N
-19	1	\N	\N	11	application/pdf	1	14572	Learning Sustainable Design through Service.pdf	2	\N	\N	1	2022-01-08 01:00:42	2022-01-08 01:00:42	27	\N	\N
-20	1	\N	\N	12	application/pdf	1	14572	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	2	\N	\N	1	2022-01-08 01:01:04	2022-01-08 01:01:04	28	\N	\N
-21	1	20	1	12	application/pdf	1	14572	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	4	\N	\N	1	2022-01-08 01:01:04	2022-01-08 01:01:18	28	\N	\N
-22	1	\N	\N	13	application/pdf	1	14572	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	2	\N	\N	1	2022-01-08 01:01:42	2022-01-08 01:01:42	29	\N	\N
-23	1	\N	\N	14	application/pdf	1	14572	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	2	\N	\N	1	2022-01-08 01:03:05	2022-01-08 01:03:05	30	\N	\N
-24	1	\N	\N	15	application/pdf	1	14572	Yam diseases and its management in Nigeria.pdf	2	\N	\N	1	2022-01-08 01:03:24	2022-01-08 01:03:24	31	\N	\N
-25	1	24	1	15	application/pdf	1	14572	Yam diseases and its management in Nigeria.pdf	4	\N	\N	1	2022-01-08 01:03:24	2022-01-08 01:03:38	31	\N	\N
-26	1	\N	\N	16	application/pdf	1	14572	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	2	\N	\N	1	2022-01-08 01:04:21	2022-01-08 01:04:21	32	\N	\N
-27	1	\N	\N	17	application/pdf	1	14572	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in.pdf	2	\N	\N	1	2022-01-08 01:04:39	2022-01-08 01:04:39	33	\N	\N
-28	1	27	1	17	application/pdf	1	14572	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in.pdf	4	\N	\N	1	2022-01-08 01:04:39	2022-01-08 01:04:54	33	\N	\N
-29	1	\N	\N	17	application/pdf	1	14572	article.pdf	10	\N	\N	0	2022-01-08 01:05:33	2022-01-08 01:05:33	3	521	3
-30	1	\N	\N	18	application/pdf	1	14572	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	2	\N	\N	1	2022-01-08 01:05:54	2022-01-08 01:05:54	34	\N	\N
-31	1	\N	\N	19	application/pdf	1	14572	Finocchiaro: Arguments About Arguments.pdf	2	\N	\N	1	2022-01-08 01:06:20	2022-01-08 01:06:20	35	\N	\N
-32	1	31	1	19	application/pdf	1	14572	Finocchiaro: Arguments About Arguments.pdf	4	\N	\N	1	2022-01-08 01:06:20	2022-01-08 01:06:35	35	\N	\N
+1	1	\N	\N	1	application/pdf	1	14572	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	2	\N	\N	1	2022-02-28 23:36:11	2022-02-28 23:36:11	17	\N	\N
+2	1	1	1	1	application/pdf	1	14572	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	4	\N	\N	1	2022-02-28 23:36:11	2022-02-28 23:36:24	17	\N	\N
+3	1	\N	\N	1	application/pdf	1	14572	article.pdf	10	\N	\N	0	2022-02-28 23:37:23	2022-02-28 23:37:23	3	521	1
+4	1	\N	\N	2	application/pdf	1	14572	The influence of lactation on the quantity and quality of cashmere production.pdf	2	\N	\N	1	2022-02-28 23:39:01	2022-02-28 23:39:01	18	\N	\N
+5	1	4	1	2	application/pdf	1	14572	The influence of lactation on the quantity and quality of cashmere production.pdf	4	\N	\N	1	2022-02-28 23:39:01	2022-02-28 23:39:13	18	\N	\N
+6	1	\N	\N	3	application/pdf	1	14572	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	2	\N	\N	1	2022-02-28 23:39:52	2022-02-28 23:39:52	19	\N	\N
+7	1	6	1	3	application/pdf	1	14572	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	4	\N	\N	1	2022-02-28 23:39:52	2022-02-28 23:40:05	19	\N	\N
+8	1	\N	\N	4	application/pdf	1	14572	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	2	\N	\N	1	2022-02-28 23:40:39	2022-02-28 23:40:39	20	\N	\N
+9	1	\N	\N	5	application/pdf	1	14572	Genetic transformation of forest trees.pdf	2	\N	\N	1	2022-02-28 23:41:01	2022-02-28 23:41:01	21	\N	\N
+10	1	9	1	5	application/pdf	1	14572	Genetic transformation of forest trees.pdf	4	\N	\N	1	2022-02-28 23:41:01	2022-02-28 23:41:14	21	\N	\N
+11	1	\N	\N	6	application/pdf	1	14572	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	2	\N	\N	1	2022-02-28 23:42:01	2022-02-28 23:42:01	22	\N	\N
+12	1	11	1	6	application/pdf	1	14572	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	4	\N	\N	1	2022-02-28 23:42:01	2022-02-28 23:42:14	22	\N	\N
+13	1	\N	\N	7	application/pdf	1	14572	Developing efficacy beliefs in the classroom.pdf	2	\N	\N	1	2022-02-28 23:42:57	2022-02-28 23:42:57	23	\N	\N
+14	1	\N	\N	8	application/pdf	1	14572	Traditions and Trends in the Study of the Commons.pdf	2	\N	\N	1	2022-02-28 23:43:49	2022-02-28 23:43:49	24	\N	\N
+15	1	\N	\N	9	application/pdf	1	14572	Hansen & Pinto: Reason Reclaimed.pdf	2	\N	\N	1	2022-02-28 23:44:12	2022-02-28 23:44:12	25	\N	\N
+16	1	15	1	9	application/pdf	1	14572	Hansen & Pinto: Reason Reclaimed.pdf	4	\N	\N	1	2022-02-28 23:44:12	2022-02-28 23:44:25	25	\N	\N
+17	1	\N	\N	10	application/pdf	1	14572	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	2	\N	\N	1	2022-02-28 23:45:12	2022-02-28 23:45:12	26	\N	\N
+18	1	17	1	10	application/pdf	1	14572	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	4	\N	\N	1	2022-02-28 23:45:12	2022-02-28 23:45:25	26	\N	\N
+19	1	\N	\N	11	application/pdf	1	14572	Learning Sustainable Design through Service.pdf	2	\N	\N	1	2022-02-28 23:46:09	2022-02-28 23:46:09	27	\N	\N
+20	1	\N	\N	12	application/pdf	1	14572	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	2	\N	\N	1	2022-02-28 23:46:31	2022-02-28 23:46:31	28	\N	\N
+21	1	20	1	12	application/pdf	1	14572	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	4	\N	\N	1	2022-02-28 23:46:31	2022-02-28 23:46:45	28	\N	\N
+22	1	\N	\N	13	application/pdf	1	14572	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	2	\N	\N	1	2022-02-28 23:47:13	2022-02-28 23:47:13	29	\N	\N
+23	1	\N	\N	14	application/pdf	1	14572	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	2	\N	\N	1	2022-02-28 23:48:39	2022-02-28 23:48:39	30	\N	\N
+24	1	\N	\N	15	application/pdf	1	14572	Yam diseases and its management in Nigeria.pdf	2	\N	\N	1	2022-02-28 23:48:58	2022-02-28 23:48:58	31	\N	\N
+25	1	24	1	15	application/pdf	1	14572	Yam diseases and its management in Nigeria.pdf	4	\N	\N	1	2022-02-28 23:48:58	2022-02-28 23:49:12	31	\N	\N
+26	1	\N	\N	16	application/pdf	1	14572	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	2	\N	\N	1	2022-02-28 23:49:55	2022-02-28 23:49:55	32	\N	\N
+27	1	\N	\N	17	application/pdf	1	14572	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in.pdf	2	\N	\N	1	2022-02-28 23:50:14	2022-02-28 23:50:14	33	\N	\N
+28	1	27	1	17	application/pdf	1	14572	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in.pdf	4	\N	\N	1	2022-02-28 23:50:14	2022-02-28 23:50:30	33	\N	\N
+29	1	\N	\N	17	application/pdf	1	14572	article.pdf	10	\N	\N	0	2022-02-28 23:51:11	2022-02-28 23:51:11	3	521	3
+30	1	\N	\N	18	application/pdf	1	14572	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	2	\N	\N	1	2022-02-28 23:51:33	2022-02-28 23:51:33	34	\N	\N
+31	1	\N	\N	19	application/pdf	1	14572	Finocchiaro: Arguments About Arguments.pdf	2	\N	\N	1	2022-02-28 23:52:03	2022-02-28 23:52:03	35	\N	\N
+32	1	31	1	19	application/pdf	1	14572	Finocchiaro: Arguments About Arguments.pdf	4	\N	\N	1	2022-02-28 23:52:03	2022-02-28 23:52:18	35	\N	\N
 \.
 
 
@@ -7617,25 +7617,25 @@ COPY public.submission_tombstones (tombstone_id, submission_id, date_deleted, jo
 --
 
 COPY public.submissions (submission_id, locale, context_id, section_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, status, submission_progress, work_type) FROM stdin;
-11	\N	1	\N	12	2022-01-08 01:00:51	2022-01-08 01:00:51	2022-01-08 01:00:51	1	1	0	0
-7	\N	1	\N	8	2022-01-08 00:58:13	2022-01-08 00:57:40	2022-01-08 00:57:53	3	1	0	0
-3	\N	1	\N	4	2022-01-08 00:55:08	2022-01-08 00:54:42	2022-01-08 00:54:42	4	1	0	0
-15	\N	1	\N	16	2022-01-08 01:04:07	2022-01-08 01:03:30	2022-01-08 01:03:30	5	1	0	0
-4	\N	1	\N	5	2022-01-08 00:55:31	2022-01-08 00:55:31	2022-01-08 00:55:31	1	1	0	0
-8	\N	1	\N	9	2022-01-08 00:58:35	2022-01-08 00:58:35	2022-01-08 00:58:35	1	1	0	0
-19	\N	1	\N	20	2022-01-08 01:06:54	2022-01-08 01:06:26	2022-01-08 01:06:26	4	1	0	0
-12	\N	1	\N	13	2022-01-08 01:01:29	2022-01-08 01:01:10	2022-01-08 01:01:10	3	1	0	0
-16	\N	1	\N	17	2022-01-08 01:04:27	2022-01-08 01:04:27	2022-01-08 01:04:27	1	1	0	0
-5	\N	1	\N	6	2022-01-08 00:56:27	2022-01-08 00:55:49	2022-01-08 00:55:49	5	1	0	0
-9	\N	1	\N	10	2022-01-08 00:59:33	2022-01-08 00:58:53	2022-01-08 00:58:53	5	1	0	0
-1	\N	1	\N	1	2022-01-08 00:53:31	2022-01-08 00:51:07	2022-01-08 00:51:07	5	3	0	0
-13	\N	1	\N	14	2022-01-08 01:02:53	2022-01-08 01:01:49	2022-01-08 01:02:13	3	1	0	0
-2	\N	1	\N	3	2022-01-08 00:54:17	2022-01-08 00:53:53	2022-01-08 00:53:53	3	1	0	0
-6	\N	1	\N	7	2022-01-08 00:57:21	2022-01-08 00:56:47	2022-01-08 00:56:47	5	1	0	0
-17	\N	1	\N	18	2022-01-08 01:05:39	2022-01-08 01:04:46	2022-01-08 01:04:46	5	3	0	0
-10	\N	1	\N	11	2022-01-08 01:00:29	2022-01-08 00:59:53	2022-01-08 01:00:11	3	1	0	0
-14	\N	1	\N	15	2022-01-08 01:03:12	2022-01-08 01:03:11	2022-01-08 01:03:11	1	1	0	0
-18	\N	1	\N	19	2022-01-08 01:06:08	2022-01-08 01:06:00	2022-01-08 01:06:00	1	4	0	0
+18	\N	1	\N	19	2022-02-28 23:51:48	2022-02-28 23:51:39	2022-02-28 23:51:39	1	4	0	0
+10	\N	1	\N	11	2022-02-28 23:45:56	2022-02-28 23:45:18	2022-02-28 23:45:37	3	1	0	0
+11	\N	1	\N	12	2022-02-28 23:46:18	2022-02-28 23:46:18	2022-02-28 23:46:18	1	1	0	0
+3	\N	1	\N	4	2022-02-28 23:40:25	2022-02-28 23:39:58	2022-02-28 23:39:58	4	1	0	0
+7	\N	1	\N	8	2022-02-28 23:43:36	2022-02-28 23:43:03	2022-02-28 23:43:16	3	1	0	0
+15	\N	1	\N	16	2022-02-28 23:49:41	2022-02-28 23:49:04	2022-02-28 23:49:04	5	1	0	0
+4	\N	1	\N	5	2022-02-28 23:40:48	2022-02-28 23:40:48	2022-02-28 23:40:48	1	1	0	0
+8	\N	1	\N	9	2022-02-28 23:43:59	2022-02-28 23:43:58	2022-02-28 23:43:58	1	1	0	0
+19	\N	1	\N	20	2022-02-28 23:52:39	2022-02-28 23:52:09	2022-02-28 23:52:09	4	1	0	0
+12	\N	1	\N	13	2022-02-28 23:46:57	2022-02-28 23:46:38	2022-02-28 23:46:38	3	1	0	0
+16	\N	1	\N	17	2022-02-28 23:50:02	2022-02-28 23:50:02	2022-02-28 23:50:02	1	1	0	0
+1	\N	1	\N	1	2022-02-28 23:38:44	2022-02-28 23:36:18	2022-02-28 23:36:18	5	3	0	0
+5	\N	1	\N	6	2022-02-28 23:41:47	2022-02-28 23:41:07	2022-02-28 23:41:07	5	1	0	0
+9	\N	1	\N	10	2022-02-28 23:44:58	2022-02-28 23:44:18	2022-02-28 23:44:18	5	1	0	0
+2	\N	1	\N	3	2022-02-28 23:39:32	2022-02-28 23:39:07	2022-02-28 23:39:07	3	1	0	0
+13	\N	1	\N	14	2022-02-28 23:48:26	2022-02-28 23:47:19	2022-02-28 23:47:44	3	1	0	0
+6	\N	1	\N	7	2022-02-28 23:42:43	2022-02-28 23:42:08	2022-02-28 23:42:08	5	1	0	0
+17	\N	1	\N	18	2022-02-28 23:51:17	2022-02-28 23:50:21	2022-02-28 23:50:21	5	3	0	0
+14	\N	1	\N	15	2022-02-28 23:48:45	2022-02-28 23:48:45	2022-02-28 23:48:45	1	1	0	0
 \.
 
 
@@ -8194,41 +8194,41 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-19	ckwantes	$2y$10$Qc4iaHi3bghY8h6hYuFZA.Rw5/eVQQajCqO3yzjQ95rqFYfRA1NLe	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-01-08 00:54:28	\N	2022-01-08 00:54:28	0	\N	\N	0	\N	1
-20	cmontgomerie	$2y$10$8z6/x4DAO2O87H02YDdWOeB3iWxY8m2tRWAqd3JMT0E/.eTxnndRu	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-01-08 00:55:14	\N	2022-01-08 00:55:14	0	\N	\N	0	\N	1
-4	dbuskins	$2y$10$kL5OO1/yLIkvgQXjRV7Byu9SCg73wbeUiwbaLK79HPM6thQZy/zmi	dbuskins@mailinator.com				\N	US		\N	\N	2022-01-08 00:48:37	\N	2022-01-08 00:48:37	0	\N	\N	0	\N	1
-5	sberardo	$2y$10$MC1IyA7D.s/rczUqqwTVEOSLZwGNBQLAHhTaFGIui2UD0vmsTI0va	sberardo@mailinator.com				\N	CA		\N	\N	2022-01-08 00:48:44	\N	2022-01-08 00:48:44	0	\N	\N	0	\N	1
-11	mfritz	$2y$10$3WFnVrBrQTl7BnWWAh1CNe5M9DtMz1p9R/45j0/de47wqVkVn1qHC	mfritz@mailinator.com				\N	BE		\N	\N	2022-01-08 00:49:30	\N	2022-01-08 00:49:30	0	\N	\N	0	\N	1
-12	svogt	$2y$10$IKMd5KRSDkxdVWt3GnpeEeTtBScJPb0kn0eL2nHHLjmQGsXeIWVwi	svogt@mailinator.com				\N	CL		\N	\N	2022-01-08 00:49:39	\N	2022-01-08 00:49:39	0	\N	\N	0	\N	1
-13	gcox	$2y$10$P.78OeZfsjRiLdVCJ83CXOqDDrfiaNekwafvvpiHzr99lKZ820q/q	gcox@mailinator.com				\N	US		\N	\N	2022-01-08 00:49:48	\N	2022-01-08 00:49:48	0	\N	\N	0	\N	1
-14	shellier	$2y$10$IEvIfCm5gvlGRENSaIWR6.pjTsvoiGA9njUPuzpPiokq4Z0UdeHyi	shellier@mailinator.com				\N	ZA		\N	\N	2022-01-08 00:49:58	\N	2022-01-08 00:49:58	0	\N	\N	0	\N	1
-15	cturner	$2y$10$3C.TANvTb3Wc9UEPx5ejC.kOrATGK7WIRE0wkH1IqwGzRG6/LlJrK	cturner@mailinator.com				\N	GB		\N	\N	2022-01-08 00:50:08	\N	2022-01-08 00:50:08	0	\N	\N	0	\N	1
-16	skumar	$2y$10$8u8mqFxOcTBculUax.6OOeNEO3tpEgiHtOWEHMmOuTjTv.xuHTd2m	skumar@mailinator.com				\N	SG		\N	\N	2022-01-08 00:50:19	\N	2022-01-08 00:50:19	0	\N	\N	0	\N	1
-21	ddiouf	$2y$10$TKtzenUDtkgIa3dQleSzYeaA1qobYCOFsOuFB.cvdYULXb3eDXNlu	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2022-01-08 00:55:35	\N	2022-01-08 00:55:35	0	\N	\N	0	\N	1
-28	lchristopher	$2y$10$QdBRH4qPg79OlvhjGfDm6OQFP6qnZwjp80wLupVI2uKF8IbKkcB56	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2022-01-08 01:00:56	\N	2022-01-08 01:00:56	0	\N	\N	0	\N	1
-2	rvaca	$2y$10$WiX9PVNxs/KRKqm2gIW41OsMfSV7HSDU4KKuX86xrTbhrPDmdZ68S	rvaca@mailinator.com				\N	MX		\N	\N	2022-01-08 00:48:26	\N	2022-01-08 00:50:27	0	\N	\N	0	\N	1
-1	admin	$2y$10$hBdRVagmSZMxLR6LCf3LD.lGY3dg6ouzmqxDboNCDMeTLeBag5Dxq	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2022-01-08 00:47:34	\N	2022-01-08 00:50:40	0	\N	\N	0	\N	1
-22	dphillips	$2y$10$R9CgrQ3t6e.usXrkyGQuiO0WcMjkm86hgMLCKX2GqGnYlgptGNC9y	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-01-08 00:56:33	\N	2022-01-08 00:56:33	0	\N	\N	0	\N	1
-23	dsokoloff	$2y$10$IoiWgVuL3Nx.ovknyxq3KOSdngIndPVMqBgSzCu/7uiWSwqg05DmC	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2022-01-08 00:57:27	\N	2022-01-08 00:57:27	0	\N	\N	0	\N	1
-17	amwandenga	$2y$10$9JVg52THH1iG2BXHq6uPu.26tEthw.nfgCoDXLLh3m2FW1lHb3neu	amwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2022-01-08 00:50:53	\N	2022-01-08 00:52:24	0	\N	\N	0	\N	1
-8	phudson	$2y$10$8sD5pLwD4NR9C5RTH076v.9Og/sG/qTgY/GK8TaAY242HmWnrUJvO	phudson@mailinator.com				\N	CA		\N	\N	2022-01-08 00:49:05	\N	2022-01-08 00:58:05	0	\N	\N	0	\N	1
-24	eostrom	$2y$10$kEDljQhkm3jvy0jDuRx7UuKdTBkHcTZRkWqx8GyNAQMD/ODFQM/sC	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2022-01-08 00:58:18	\N	2022-01-08 00:58:18	0	\N	\N	0	\N	1
-25	fpaglieri	$2y$10$dJ6NJ.6sxxPZMoxWEC0dueMRrFvf2e7B//KjKyq53IL4AniTDuTQO	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2022-01-08 00:58:40	\N	2022-01-08 00:58:40	0	\N	\N	0	\N	1
-29	lkumiega	$2y$10$8ACPQngZY6E.KrFmOMTayOhABjBcUhVYj5YBEx.dyDY3n0mWQZ08W	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2022-01-08 01:01:34	\N	2022-01-08 01:01:35	0	\N	\N	0	\N	1
-18	ccorino	$2y$10$Hz2j/olCQFQwAXAqij/QO.rxgjTtwxEmEQ8pB4pNqlQXYPPh3SmAe	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2022-01-08 00:53:40	\N	2022-01-08 00:53:40	0	\N	\N	0	\N	1
-6	minoue	$2y$10$.AmpwEv2XhKg39XyEEtx0.cgMrduVHLqiCeC6cUg5bJA5M65GYPNi	minoue@mailinator.com				\N	JP		\N	\N	2022-01-08 00:48:50	\N	2022-01-08 00:54:08	0	\N	\N	0	\N	1
-33	vkarbasizaed	$2y$10$tleC3AbMDdvCTB1qmfG0fu1MJKVQC.ngj4Z5AO.P8c/rH.TUV/ppW	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2022-01-08 01:04:31	\N	2022-01-08 01:04:32	0	\N	\N	0	\N	1
-26	jnovak	$2y$10$XZ9kmOuEBzUziic1ABHwFuC3nAY4AEPdEVQ.3yRAjLs.woCVVVSP2	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2022-01-08 00:59:39	\N	2022-01-08 00:59:39	0	\N	\N	0	\N	1
-34	vwilliamson	$2y$10$ipcbtf1/v8nR0P1d07zvnOWq5.WvCiiNUeFqbMjhAo1S399kXqqUS	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-01-08 01:05:46	\N	2022-01-08 01:05:46	0	\N	\N	0	\N	1
-27	kalkhafaji	$2y$10$9SM/SFWdCU9BPrqIMK6hxe/AYaXMdr7psrKQOoi1rNRQZvsiQzFhi	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2022-01-08 01:00:35	\N	2022-01-08 01:00:35	0	\N	\N	0	\N	1
-7	jjanssen	$2y$10$6hEbFkQLsvmvyN5y.7C1O.hFEU06L.6h2LnjIVEuZJWTLvUmEQFf.	jjanssen@mailinator.com				\N	NL		\N	\N	2022-01-08 00:48:57	\N	2022-01-08 01:02:15	0	\N	\N	0	\N	1
-9	amccrae	$2y$10$ZW8U0asxtst7qYIHKYAMjuMiiWdMTqss0o/Qt78RmT5Ph3Cwxy2oi	amccrae@mailinator.com				\N	CA		\N	\N	2022-01-08 00:49:13	\N	2022-01-08 01:02:23	0	\N	\N	0	\N	1
-10	agallego	$2y$10$WWiNghdJDfK40u.ulV3Khe3StqhRlpJxunMzruLfDhfspJAIWr2.y	agallego@mailinator.com				\N	US		\N	\N	2022-01-08 00:49:21	\N	2022-01-08 01:02:33	0	\N	\N	0	\N	1
-30	pdaniel	$2y$10$1.tsDOHNek5ZrwvBqlrqA.eIQu0JUrC8TK94XfnABOuFor6FpVhWO	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2022-01-08 01:02:57	\N	2022-01-08 01:02:57	0	\N	\N	0	\N	1
-31	rbaiyewu	$2y$10$KcBtja7OfrDQxyyvttjqUecIvWjAhe9QMH6VAuRflGX0UQwfmYRG.	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2022-01-08 01:03:16	\N	2022-01-08 01:03:17	0	\N	\N	0	\N	1
-32	rrossi	$2y$10$/9i8DHxYKhPys664H.y/YuSyrrMMBVcAtFGH/xRNn2igzfAgep2va	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2022-01-08 01:04:13	\N	2022-01-08 01:04:13	0	\N	\N	0	\N	1
-35	zwoods	$2y$10$lEj4G1cmzhb39JSAsZpk4uMEit1Ra3PhAae5Kirn1eUlmNZIlmziK	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2022-01-08 01:06:12	\N	2022-01-08 01:06:12	0	\N	\N	0	\N	1
-3	dbarnes	$2y$10$AdA47/vSjv0vPpQuQkGNqeyTDpScJHd5COuQhEkb63w.sOu/9Elci	dbarnes@mailinator.com				\N	AU		\N	\N	2022-01-08 00:48:31	\N	2022-01-08 01:06:27	0	\N	\N	0	\N	1
+19	ckwantes	$2y$10$W.lFVpSd.Fp3jRXtskFzzOElfBNJ8Nlr6UxJpm4NevSyLYeapnOni	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-02-28 23:39:44	\N	2022-02-28 23:39:44	0	\N	\N	0	\N	1
+20	cmontgomerie	$2y$10$YM833uU4W6KWbiF0D7RdvO1yRPbIc2jGe21OVJqLeeBbGWQLXTA1e	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-02-28 23:40:31	\N	2022-02-28 23:40:31	0	\N	\N	0	\N	1
+4	dbuskins	$2y$10$i.Tjd/iZfUerPrzugx0N9uQSfGEsRb1wqW.693egYTqWvxMh4rf.K	dbuskins@mailinator.com				\N	US		\N	\N	2022-02-28 23:33:43	\N	2022-02-28 23:33:43	0	\N	\N	0	\N	1
+5	sberardo	$2y$10$7iFMASKzsuyOl8xQKqvPaOyYgk0.IhVHVuZL/JLZuU4ywqsOp1ENS	sberardo@mailinator.com				\N	CA		\N	\N	2022-02-28 23:33:49	\N	2022-02-28 23:33:49	0	\N	\N	0	\N	1
+11	mfritz	$2y$10$ORyiqkZhlTmR6J0Gxdw2P.4tsafHnwnoaM1yLmAXZ7ta2l9bayBae	mfritz@mailinator.com				\N	BE		\N	\N	2022-02-28 23:34:38	\N	2022-02-28 23:34:38	0	\N	\N	0	\N	1
+12	svogt	$2y$10$u0nHAT6.UlCJ3vgzXNPGl.oDVlw/AxIuRyqqOJ01SVjvfeY/BHBki	svogt@mailinator.com				\N	CL		\N	\N	2022-02-28 23:34:47	\N	2022-02-28 23:34:47	0	\N	\N	0	\N	1
+13	gcox	$2y$10$VHBf9ZNv4EUeudZiUJ.3TOIrTW0Aeu8lI69SgYYN8jGsqaXM/.0Bq	gcox@mailinator.com				\N	US		\N	\N	2022-02-28 23:34:57	\N	2022-02-28 23:34:57	0	\N	\N	0	\N	1
+14	shellier	$2y$10$wEsCNeU0D03jTyq7l7nqI.3yhaXjqcdO.VjhE.JaCw3zV2fJE3e6u	shellier@mailinator.com				\N	ZA		\N	\N	2022-02-28 23:35:08	\N	2022-02-28 23:35:08	0	\N	\N	0	\N	1
+15	cturner	$2y$10$QhsOvrry3A.vJl3/syQvtOcPnVco.x2TTEaskkhP8deJ68E6AVrZG	cturner@mailinator.com				\N	GB		\N	\N	2022-02-28 23:35:19	\N	2022-02-28 23:35:19	0	\N	\N	0	\N	1
+16	skumar	$2y$10$3gfTwQta05rvWPA9PfOiPOdqWJJMci246p77J8To92C8vLNJ5o1ma	skumar@mailinator.com				\N	SG		\N	\N	2022-02-28 23:35:30	\N	2022-02-28 23:35:30	0	\N	\N	0	\N	1
+21	ddiouf	$2y$10$OE2zCRLyf5zpxLI3rnczyOrCYr0N9UA/46TTnLYXf2JPjsfItbDtO	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2022-02-28 23:40:53	\N	2022-02-28 23:40:53	0	\N	\N	0	\N	1
+28	lchristopher	$2y$10$O7ogbpgNGkdIH0ZegZZj0O0F2HM08yQm8TRPn6qa.gMNGXItrEOau	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2022-02-28 23:46:23	\N	2022-02-28 23:46:23	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$sgJgyHHdu/7IfTmiqarB0O0686cpG3pkUhPUCwThchi3qGO4dNDey	rvaca@mailinator.com				\N	MX		\N	\N	2022-02-28 23:33:30	\N	2022-02-28 23:35:39	0	\N	\N	0	\N	1
+1	admin	$2y$10$MzNEMUny0jkGK.1RmHF6tu1CLJZdskhZrmGZuTIJD8ZcKDCYs8fzG	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2022-02-28 23:32:37	\N	2022-02-28 23:35:50	0	\N	\N	0	\N	1
+22	dphillips	$2y$10$igC9fplXTRn74TkLEkU4O.GVxbu.YBZLqaZ7tsibDX5KQ04w.JeS6	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-02-28 23:41:53	\N	2022-02-28 23:41:53	0	\N	\N	0	\N	1
+23	dsokoloff	$2y$10$LNmOkkNXvSlFQvddqzCsbeFkkasFnLG0rhWZ6VunUOutRtax9Fu4y	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2022-02-28 23:42:49	\N	2022-02-28 23:42:49	0	\N	\N	0	\N	1
+17	amwandenga	$2y$10$VBBWZkVUoUpsOutYqFX.8.jhL2YhVfYA/E.HetvzxP16A8LfvGjN2	amwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2022-02-28 23:36:03	\N	2022-02-28 23:37:36	0	\N	\N	0	\N	1
+8	phudson	$2y$10$uj8D8F0R3X1T5DBG9N25sOhW/khvx42bmpFtiKt1lUFWBsBEJfHji	phudson@mailinator.com				\N	CA		\N	\N	2022-02-28 23:34:11	\N	2022-02-28 23:43:28	0	\N	\N	0	\N	1
+24	eostrom	$2y$10$TeQn5y/lRpD4tHs8zZYMTe2sbRi6SH3MHKJUuTAvHJZDa4i4ZvGXe	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2022-02-28 23:43:41	\N	2022-02-28 23:43:41	0	\N	\N	0	\N	1
+25	fpaglieri	$2y$10$5qbMikVXAyAXh7I98xGYIe.4D2enpFscgbVtlPDa/M.YfYt1vpyZG	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2022-02-28 23:44:04	\N	2022-02-28 23:44:04	0	\N	\N	0	\N	1
+29	lkumiega	$2y$10$LW6VMKMImkoU/K6F9xa2/.GrPCEcGYymR2LBBNkkF99/1FvCPK.zW	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2022-02-28 23:47:05	\N	2022-02-28 23:47:05	0	\N	\N	0	\N	1
+18	ccorino	$2y$10$/wqOOROKUGDDnN6HJK4EK.k.MUhUOipMI6.M49La3naU0/9vzWX3G	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2022-02-28 23:38:53	\N	2022-02-28 23:38:53	0	\N	\N	0	\N	1
+6	minoue	$2y$10$nAgvYMw2NQ2yqyPazSShgegzbeEJv1xXjT.SA24deBi7Ai02VyvtK	minoue@mailinator.com				\N	JP		\N	\N	2022-02-28 23:33:56	\N	2022-02-28 23:39:24	0	\N	\N	0	\N	1
+33	vkarbasizaed	$2y$10$aOttFlKFrKt5.BG0Sl4cpOny9pWy/QMXMMQqiGrI68LNUa8104SGu	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2022-02-28 23:50:06	\N	2022-02-28 23:50:07	0	\N	\N	0	\N	1
+26	jnovak	$2y$10$gTn7AyrituMVT2Eq.ZvgeuAc2/0PGIMzM2FZ6WUre5l1if5gwKUB.	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2022-02-28 23:45:04	\N	2022-02-28 23:45:04	0	\N	\N	0	\N	1
+34	vwilliamson	$2y$10$VNXvSur4sWiZ9lFFZNOW0.nSlRFxOiQx6vLUcbAYN4QLfkaz1l7iu	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-02-28 23:51:25	\N	2022-02-28 23:51:25	0	\N	\N	0	\N	1
+27	kalkhafaji	$2y$10$mgBpPUjjEDMBXr.X16x4/uuq/7IDiR0X3PXf.ICG7flQwmm2Y7G2S	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2022-02-28 23:46:01	\N	2022-02-28 23:46:01	0	\N	\N	0	\N	1
+7	jjanssen	$2y$10$Ww8EINHArr0YTZ4bHQC4cO/7GysG1CJq.Q2bLsYeoYuCS7s/gz5Re	jjanssen@mailinator.com				\N	NL		\N	\N	2022-02-28 23:34:03	\N	2022-02-28 23:47:46	0	\N	\N	0	\N	1
+9	amccrae	$2y$10$eLLGomJ85tWrxVwVvV6aveeF0UucT5ppC6KlVh4qatdcQxK8wgJX6	amccrae@mailinator.com				\N	CA		\N	\N	2022-02-28 23:34:20	\N	2022-02-28 23:47:55	0	\N	\N	0	\N	1
+10	agallego	$2y$10$LprOVc43nsQS4PRH6yOZmOVwOYepl1yRvoiN2sGFZMcAAisd5d50y	agallego@mailinator.com				\N	US		\N	\N	2022-02-28 23:34:29	\N	2022-02-28 23:48:04	0	\N	\N	0	\N	1
+30	pdaniel	$2y$10$9MooP.FCNn/R.TPCqxnTJuFhxVAFhN7CyyWkWcauYZgkoCdEGe78q	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2022-02-28 23:48:31	\N	2022-02-28 23:48:31	0	\N	\N	0	\N	1
+31	rbaiyewu	$2y$10$cTTktYWruK3WzEfN6SLsouOy0ALD4tdGSibZO1CCy9F0spvNah0ae	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2022-02-28 23:48:50	\N	2022-02-28 23:48:50	0	\N	\N	0	\N	1
+32	rrossi	$2y$10$ttl3dBerFz35OLrcFu/5B.UMOmJy8ldTA/G4vWyKpcqXuVoa0Y5QO	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2022-02-28 23:49:47	\N	2022-02-28 23:49:47	0	\N	\N	0	\N	1
+35	zwoods	$2y$10$5whgN3bcKThEy5uBCAVNNukmYHs16Gqew33pjfhd9LGrucso4NnUq	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2022-02-28 23:51:55	\N	2022-02-28 23:51:55	0	\N	\N	0	\N	1
+3	dbarnes	$2y$10$lkPYyRfJszEunvBkgpow9OLdNqCtxMK4CNU470gjGjWi3SIGzGiCK	dbarnes@mailinator.com				\N	AU		\N	\N	2022-02-28 23:33:36	\N	2022-02-28 23:52:10	0	\N	\N	0	\N	1
 \.
 
 
@@ -8237,58 +8237,58 @@ COPY public.users (user_id, username, password, email, url, phone, mailing_addre
 --
 
 COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2022-01-08 00:47:34	1	plugins.metadata	dc11		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.metadata	openurl10		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.metadata	mods34		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.auth	ldap		0	0
-1	1	0	0	2022-01-08 00:47:34	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.blocks	information	InformationBlockPlugin	1	0
-1	0	1	0	2022-01-08 00:47:34	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.gateways	resolver		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-1	1	2	18	2022-01-08 00:47:34	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	2	0	0	2022-01-08 00:47:34	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	1	0	0	2022-01-08 00:47:34	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
-1	0	1	0	2022-01-08 00:47:34	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
-1	2	0	0	2022-01-08 00:47:34	1	plugins.generic	acron	AcronPlugin	1	1
-1	2	0	0	2022-01-08 00:47:34	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-0	1	0	0	2022-01-08 00:47:34	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	usageEvent		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	driver	DRIVERPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.importexport	users		0	0
-2	0	0	0	2022-01-08 00:47:34	1	plugins.importexport	medra		0	0
-1	1	0	0	2022-01-08 00:47:34	1	plugins.importexport	doaj		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.importexport	native		0	0
-2	0	0	0	2022-01-08 00:47:34	1	plugins.importexport	datacite		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.importexport	pubmed		0	0
-2	1	0	0	2022-01-08 00:47:34	1	plugins.importexport	crossref		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.oaiMetadataFormats	rfc1807		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.oaiMetadataFormats	marcxml		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.oaiMetadataFormats	marc		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.paymethod	paypal		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.paymethod	manual		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.reports	subscriptions		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.reports	articles		0	0
-2	0	0	0	2022-01-08 00:47:34	1	plugins.reports	reviewReport		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.reports	views		0	0
-1	0	0	0	2022-01-08 00:47:34	1	plugins.themes	default	DefaultThemePlugin	1	0
-3	2	1	4	2022-01-08 00:47:33	1	core	ojs2		0	1
-1	1	0	0	2022-01-08 00:47:34	1	plugins.reports	counterReport		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.metadata	dc11		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.metadata	openurl10		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.metadata	mods34		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.auth	ldap		0	0
+1	1	0	0	2022-02-28 23:32:37	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.blocks	information	InformationBlockPlugin	1	0
+1	0	1	0	2022-02-28 23:32:37	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.gateways	resolver		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+1	1	2	18	2022-02-28 23:32:37	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	2	0	0	2022-02-28 23:32:37	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	1	0	0	2022-02-28 23:32:37	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
+1	0	1	0	2022-02-28 23:32:37	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
+1	2	0	0	2022-02-28 23:32:37	1	plugins.generic	acron	AcronPlugin	1	1
+1	2	0	0	2022-02-28 23:32:37	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+0	1	0	0	2022-02-28 23:32:37	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	usageEvent		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	driver	DRIVERPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.importexport	users		0	0
+2	0	0	0	2022-02-28 23:32:37	1	plugins.importexport	medra		0	0
+1	1	0	0	2022-02-28 23:32:37	1	plugins.importexport	doaj		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.importexport	native		0	0
+2	0	0	0	2022-02-28 23:32:37	1	plugins.importexport	datacite		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.importexport	pubmed		0	0
+2	1	0	0	2022-02-28 23:32:37	1	plugins.importexport	crossref		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.oaiMetadataFormats	rfc1807		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.oaiMetadataFormats	marcxml		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.oaiMetadataFormats	marc		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.paymethod	paypal		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.paymethod	manual		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.reports	subscriptions		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.reports	articles		0	0
+2	0	0	0	2022-02-28 23:32:37	1	plugins.reports	reviewReport		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.reports	views		0	0
+1	0	0	0	2022-02-28 23:32:37	1	plugins.themes	default	DefaultThemePlugin	1	0
+3	2	1	4	2022-02-28 23:32:36	1	core	ojs2		0	1
+1	1	0	0	2022-02-28 23:32:37	1	plugins.reports	counterReport		0	0
 \.
 
 
