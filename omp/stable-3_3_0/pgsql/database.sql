@@ -2,12 +2,11 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.6.22
--- Dumped by pg_dump version 10.17 (Ubuntu 10.17-1.pgdg16.04+1)
+-- Dumped from database version 9.5.25
+-- Dumped by pg_dump version 9.5.25
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -3846,413 +3845,413 @@ COMMENT ON COLUMN public.versions.sitewide IS '1 iff the row describes a site-wi
 
 
 --
--- Name: access_keys access_key_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: access_key_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.access_keys ALTER COLUMN access_key_id SET DEFAULT nextval('public.access_keys_access_key_id_seq'::regclass);
 
 
 --
--- Name: announcement_types type_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: type_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_types ALTER COLUMN type_id SET DEFAULT nextval('public.announcement_types_type_id_seq'::regclass);
 
 
 --
--- Name: announcements announcement_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: announcement_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcements ALTER COLUMN announcement_id SET DEFAULT nextval('public.announcements_announcement_id_seq'::regclass);
 
 
 --
--- Name: auth_sources auth_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: auth_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.auth_sources ALTER COLUMN auth_id SET DEFAULT nextval('public.auth_sources_auth_id_seq'::regclass);
 
 
 --
--- Name: authors author_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: author_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.authors ALTER COLUMN author_id SET DEFAULT nextval('public.authors_author_id_seq'::regclass);
 
 
 --
--- Name: categories category_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: category_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.categories ALTER COLUMN category_id SET DEFAULT nextval('public.categories_category_id_seq'::regclass);
 
 
 --
--- Name: citations citation_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: citation_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citations ALTER COLUMN citation_id SET DEFAULT nextval('public.citations_citation_id_seq'::regclass);
 
 
 --
--- Name: completed_payments completed_payment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: completed_payment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.completed_payments ALTER COLUMN completed_payment_id SET DEFAULT nextval('public.completed_payments_completed_payment_id_seq'::regclass);
 
 
 --
--- Name: controlled_vocab_entries controlled_vocab_entry_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocab_entry_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entries ALTER COLUMN controlled_vocab_entry_id SET DEFAULT nextval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq'::regclass);
 
 
 --
--- Name: controlled_vocabs controlled_vocab_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocab_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs ALTER COLUMN controlled_vocab_id SET DEFAULT nextval('public.controlled_vocabs_controlled_vocab_id_seq'::regclass);
 
 
 --
--- Name: data_object_tombstone_oai_set_objects object_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: object_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects ALTER COLUMN object_id SET DEFAULT nextval('public.data_object_tombstone_oai_set_objects_object_id_seq'::regclass);
 
 
 --
--- Name: data_object_tombstones tombstone_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: tombstone_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstones ALTER COLUMN tombstone_id SET DEFAULT nextval('public.data_object_tombstones_tombstone_id_seq'::regclass);
 
 
 --
--- Name: edit_decisions edit_decision_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: edit_decision_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.edit_decisions ALTER COLUMN edit_decision_id SET DEFAULT nextval('public.edit_decisions_edit_decision_id_seq'::regclass);
 
 
 --
--- Name: email_log log_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: log_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_log ALTER COLUMN log_id SET DEFAULT nextval('public.email_log_log_id_seq'::regclass);
 
 
 --
--- Name: email_templates email_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: email_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates ALTER COLUMN email_id SET DEFAULT nextval('public.email_templates_email_id_seq'::regclass);
 
 
 --
--- Name: email_templates_default email_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: email_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default ALTER COLUMN email_id SET DEFAULT nextval('public.email_templates_default_email_id_seq'::regclass);
 
 
 --
--- Name: event_log log_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: log_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.event_log ALTER COLUMN log_id SET DEFAULT nextval('public.event_log_log_id_seq'::regclass);
 
 
 --
--- Name: files file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.files ALTER COLUMN file_id SET DEFAULT nextval('public.files_file_id_seq'::regclass);
 
 
 --
--- Name: filter_groups filter_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: filter_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filter_groups ALTER COLUMN filter_group_id SET DEFAULT nextval('public.filter_groups_filter_group_id_seq'::regclass);
 
 
 --
--- Name: filters filter_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: filter_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filters ALTER COLUMN filter_id SET DEFAULT nextval('public.filters_filter_id_seq'::regclass);
 
 
 --
--- Name: genres genre_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: genre_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.genres ALTER COLUMN genre_id SET DEFAULT nextval('public.genres_genre_id_seq'::regclass);
 
 
 --
--- Name: identification_codes identification_code_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: identification_code_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.identification_codes ALTER COLUMN identification_code_id SET DEFAULT nextval('public.identification_codes_identification_code_id_seq'::regclass);
 
 
 --
--- Name: jobs id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.jobs ALTER COLUMN id SET DEFAULT nextval('public.jobs_id_seq'::regclass);
 
 
 --
--- Name: library_files file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.library_files ALTER COLUMN file_id SET DEFAULT nextval('public.library_files_file_id_seq'::regclass);
 
 
 --
--- Name: markets market_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: market_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.markets ALTER COLUMN market_id SET DEFAULT nextval('public.markets_market_id_seq'::regclass);
 
 
 --
--- Name: metadata_descriptions metadata_description_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: metadata_description_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metadata_descriptions ALTER COLUMN metadata_description_id SET DEFAULT nextval('public.metadata_descriptions_metadata_description_id_seq'::regclass);
 
 
 --
--- Name: navigation_menu_item_assignments navigation_menu_item_assignment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_assignment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignments ALTER COLUMN navigation_menu_item_assignment_id SET DEFAULT nextval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq'::regclass);
 
 
 --
--- Name: navigation_menu_items navigation_menu_item_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_items ALTER COLUMN navigation_menu_item_id SET DEFAULT nextval('public.navigation_menu_items_navigation_menu_item_id_seq'::regclass);
 
 
 --
--- Name: navigation_menus navigation_menu_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menus ALTER COLUMN navigation_menu_id SET DEFAULT nextval('public.navigation_menus_navigation_menu_id_seq'::regclass);
 
 
 --
--- Name: notes note_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: note_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notes ALTER COLUMN note_id SET DEFAULT nextval('public.notes_note_id_seq'::regclass);
 
 
 --
--- Name: notification_mail_list notification_mail_list_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: notification_mail_list_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_mail_list ALTER COLUMN notification_mail_list_id SET DEFAULT nextval('public.notification_mail_list_notification_mail_list_id_seq'::regclass);
 
 
 --
--- Name: notification_subscription_settings setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_subscription_settings ALTER COLUMN setting_id SET DEFAULT nextval('public.notification_subscription_settings_setting_id_seq'::regclass);
 
 
 --
--- Name: notifications notification_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: notification_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notifications ALTER COLUMN notification_id SET DEFAULT nextval('public.notifications_notification_id_seq'::regclass);
 
 
 --
--- Name: presses press_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: press_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.presses ALTER COLUMN press_id SET DEFAULT nextval('public.presses_press_id_seq'::regclass);
 
 
 --
--- Name: publication_dates publication_date_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: publication_date_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_dates ALTER COLUMN publication_date_id SET DEFAULT nextval('public.publication_dates_publication_date_id_seq'::regclass);
 
 
 --
--- Name: publication_formats publication_format_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: publication_format_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_formats ALTER COLUMN publication_format_id SET DEFAULT nextval('public.publication_formats_publication_format_id_seq'::regclass);
 
 
 --
--- Name: publications publication_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: publication_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publications ALTER COLUMN publication_id SET DEFAULT nextval('public.publications_publication_id_seq'::regclass);
 
 
 --
--- Name: queries query_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: query_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.queries ALTER COLUMN query_id SET DEFAULT nextval('public.queries_query_id_seq'::regclass);
 
 
 --
--- Name: queued_payments queued_payment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: queued_payment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.queued_payments ALTER COLUMN queued_payment_id SET DEFAULT nextval('public.queued_payments_queued_payment_id_seq'::regclass);
 
 
 --
--- Name: representatives representative_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: representative_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.representatives ALTER COLUMN representative_id SET DEFAULT nextval('public.representatives_representative_id_seq'::regclass);
 
 
 --
--- Name: review_assignments review_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_assignments ALTER COLUMN review_id SET DEFAULT nextval('public.review_assignments_review_id_seq'::regclass);
 
 
 --
--- Name: review_form_elements review_form_element_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_form_element_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_elements ALTER COLUMN review_form_element_id SET DEFAULT nextval('public.review_form_elements_review_form_element_id_seq'::regclass);
 
 
 --
--- Name: review_forms review_form_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_form_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_forms ALTER COLUMN review_form_id SET DEFAULT nextval('public.review_forms_review_form_id_seq'::regclass);
 
 
 --
--- Name: review_rounds review_round_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_round_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_rounds ALTER COLUMN review_round_id SET DEFAULT nextval('public.review_rounds_review_round_id_seq'::regclass);
 
 
 --
--- Name: sales_rights sales_rights_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: sales_rights_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.sales_rights ALTER COLUMN sales_rights_id SET DEFAULT nextval('public.sales_rights_sales_rights_id_seq'::regclass);
 
 
 --
--- Name: series series_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: series_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series ALTER COLUMN series_id SET DEFAULT nextval('public.series_series_id_seq'::regclass);
 
 
 --
--- Name: spotlights spotlight_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: spotlight_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.spotlights ALTER COLUMN spotlight_id SET DEFAULT nextval('public.spotlights_spotlight_id_seq'::regclass);
 
 
 --
--- Name: stage_assignments stage_assignment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: stage_assignment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments ALTER COLUMN stage_assignment_id SET DEFAULT nextval('public.stage_assignments_stage_assignment_id_seq'::regclass);
 
 
 --
--- Name: static_pages static_page_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: static_page_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.static_pages ALTER COLUMN static_page_id SET DEFAULT nextval('public.static_pages_static_page_id_seq'::regclass);
 
 
 --
--- Name: submission_chapters chapter_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: chapter_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapters ALTER COLUMN chapter_id SET DEFAULT nextval('public.submission_chapters_chapter_id_seq'::regclass);
 
 
 --
--- Name: submission_comments comment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: comment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_comments ALTER COLUMN comment_id SET DEFAULT nextval('public.submission_comments_comment_id_seq'::regclass);
 
 
 --
--- Name: submission_file_revisions revision_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: revision_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions ALTER COLUMN revision_id SET DEFAULT nextval('public.submission_file_revisions_revision_id_seq'::regclass);
 
 
 --
--- Name: submission_files submission_file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_files ALTER COLUMN submission_file_id SET DEFAULT nextval('public.submission_files_submission_file_id_seq'::regclass);
 
 
 --
--- Name: submission_search_keyword_list keyword_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: keyword_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list ALTER COLUMN keyword_id SET DEFAULT nextval('public.submission_search_keyword_list_keyword_id_seq'::regclass);
 
 
 --
--- Name: submission_search_objects object_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: object_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_objects ALTER COLUMN object_id SET DEFAULT nextval('public.submission_search_objects_object_id_seq'::regclass);
 
 
 --
--- Name: submissions submission_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submissions ALTER COLUMN submission_id SET DEFAULT nextval('public.submissions_submission_id_seq'::regclass);
 
 
 --
--- Name: temporary_files file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.temporary_files ALTER COLUMN file_id SET DEFAULT nextval('public.temporary_files_file_id_seq'::regclass);
 
 
 --
--- Name: user_groups user_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: user_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_groups ALTER COLUMN user_group_id SET DEFAULT nextval('public.user_groups_user_group_id_seq'::regclass);
 
 
 --
--- Name: users user_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: user_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.users_user_id_seq'::regclass);
@@ -4264,6 +4263,13 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 
 COPY public.access_keys (access_key_id, context, key_hash, user_id, assoc_id, expiry_date) FROM stdin;
 \.
+
+
+--
+-- Name: access_keys_access_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.access_keys_access_key_id_seq', 1, false);
 
 
 --
@@ -4291,6 +4297,13 @@ COPY public.announcement_types (type_id, assoc_type, assoc_id) FROM stdin;
 
 
 --
+-- Name: announcement_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.announcement_types_type_id_seq', 1, false);
+
+
+--
 -- Data for Name: announcements; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -4299,11 +4312,25 @@ COPY public.announcements (announcement_id, assoc_type, assoc_id, type_id, date_
 
 
 --
+-- Name: announcements_announcement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.announcements_announcement_id_seq', 1, false);
+
+
+--
 -- Data for Name: auth_sources; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.auth_sources (auth_id, title, plugin, auth_default, settings) FROM stdin;
 \.
+
+
+--
+-- Name: auth_sources_auth_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.auth_sources_auth_id_seq', 1, false);
 
 
 --
@@ -4867,44 +4894,44 @@ COPY public.author_settings (author_id, locale, setting_name, setting_value) FRO
 54	fr_CA	preferredPublicName	
 54	en_US	preferredPublicName	
 54		url	
-55	en_US	affiliation	
 55	fr_CA	affiliation	
-55	en_US	biography	
+55	en_US	affiliation	
 55	fr_CA	biography	
+55	en_US	biography	
 55		country	GB
-55	en_US	familyName	Graham
 55	fr_CA	familyName	
-55	en_US	givenName	Mark
+55	en_US	familyName	Graham
 55	fr_CA	givenName	
+55	en_US	givenName	Mark
 55		orcid	
-55	en_US	preferredPublicName	
 55	fr_CA	preferredPublicName	
+55	en_US	preferredPublicName	
 55		url	
-56	en_US	affiliation	
 56	fr_CA	affiliation	
-56	en_US	biography	
+56	en_US	affiliation	
 56	fr_CA	biography	
+56	en_US	biography	
 56		country	NO
-56	en_US	familyName	Haarstad
 56	fr_CA	familyName	
-56	en_US	givenName	Håvard
+56	en_US	familyName	Haarstad
 56	fr_CA	givenName	
+56	en_US	givenName	Håvard
 56		orcid	
-56	en_US	preferredPublicName	
 56	fr_CA	preferredPublicName	
+56	en_US	preferredPublicName	
 56		url	
-57	en_US	affiliation	
 57	fr_CA	affiliation	
-57	en_US	biography	
+57	en_US	affiliation	
 57	fr_CA	biography	
+57	en_US	biography	
 57		country	US
-57	en_US	familyName	Smith
 57	fr_CA	familyName	
-57	en_US	givenName	Marshall
+57	en_US	familyName	Smith
 57	fr_CA	givenName	
+57	en_US	givenName	Marshall
 57		orcid	
-57	en_US	preferredPublicName	
 57	fr_CA	preferredPublicName	
+57	en_US	preferredPublicName	
 57		url	
 \.
 
@@ -4975,11 +5002,25 @@ COPY public.authors (author_id, email, include_in_browse, publication_id, seq, u
 
 
 --
+-- Name: authors_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.authors_author_id_seq', 57, true);
+
+
+--
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.categories (category_id, context_id, parent_id, seq, path, image) FROM stdin;
 \.
+
+
+--
+-- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.categories_category_id_seq', 1, false);
 
 
 --
@@ -5007,11 +5048,25 @@ COPY public.citations (citation_id, publication_id, raw_citation, seq) FROM stdi
 
 
 --
+-- Name: citations_citation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.citations_citation_id_seq', 1, false);
+
+
+--
 -- Data for Name: completed_payments; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.completed_payments (completed_payment_id, "timestamp", payment_type, context_id, user_id, assoc_id, amount, currency_code_alpha, payment_method_plugin_name) FROM stdin;
 \.
+
+
+--
+-- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.completed_payments_completed_payment_id_seq', 1, false);
 
 
 --
@@ -5042,6 +5097,13 @@ COPY public.controlled_vocab_entries (controlled_vocab_entry_id, controlled_voca
 25	82	1
 26	82	2
 \.
+
+
+--
+-- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq', 26, true);
 
 
 --
@@ -5169,11 +5231,25 @@ COPY public.controlled_vocabs (controlled_vocab_id, symbolic, assoc_type, assoc_
 
 
 --
+-- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocabs_controlled_vocab_id_seq', 86, true);
+
+
+--
 -- Data for Name: data_object_tombstone_oai_set_objects; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.data_object_tombstone_oai_set_objects (object_id, tombstone_id, assoc_type, assoc_id) FROM stdin;
 \.
+
+
+--
+-- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstone_oai_set_objects_object_id_seq', 4, true);
 
 
 --
@@ -5193,41 +5269,55 @@ COPY public.data_object_tombstones (tombstone_id, data_object_id, date_deleted, 
 
 
 --
+-- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstones_tombstone_id_seq', 2, true);
+
+
+--
 -- Data for Name: edit_decisions; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	0	1	0	3	3	2022-03-08 21:02:34
-2	1	1	3	1	3	2	2022-03-08 21:02:44
-3	2	0	1	0	3	3	2022-03-08 21:05:00
-4	4	0	1	0	3	1	2022-03-08 21:07:32
-5	4	3	2	1	3	3	2022-03-08 21:07:46
-6	4	4	3	1	3	2	2022-03-08 21:08:01
-7	4	0	4	0	3	7	2022-03-08 21:08:16
-8	5	0	1	0	3	1	2022-03-08 21:09:24
-9	5	5	2	1	3	3	2022-03-08 21:09:35
-10	5	6	3	1	3	2	2022-03-08 21:09:47
-11	5	0	4	0	3	7	2022-03-08 21:10:00
-12	6	0	1	0	3	1	2022-03-08 21:12:00
-13	6	7	2	1	6	15	2022-03-08 21:12:22
-14	7	0	1	0	3	3	2022-03-08 21:14:38
-15	7	8	3	1	3	2	2022-03-08 21:14:53
-16	9	0	1	0	3	1	2022-03-08 21:17:08
-17	11	0	1	0	3	1	2022-03-08 21:18:48
-18	11	10	2	1	3	3	2022-03-08 21:18:58
-19	11	11	3	1	3	2	2022-03-08 21:19:44
-20	12	0	1	0	3	1	2022-03-08 21:21:29
-21	13	0	1	0	3	1	2022-03-08 21:23:26
-22	13	13	2	1	3	3	2022-03-08 21:23:39
-23	13	14	3	1	3	2	2022-03-08 21:24:47
-24	14	0	1	0	3	1	2022-03-08 21:26:18
-25	14	15	2	1	3	3	2022-03-08 21:26:32
-26	14	16	3	1	3	2	2022-03-08 21:26:47
-27	14	0	4	0	3	7	2022-03-08 21:27:02
-28	15	0	1	0	3	3	2022-03-08 21:29:07
-29	16	0	1	0	3	3	2022-03-08 21:29:59
-30	17	0	1	0	3	1	2022-03-08 21:33:18
+1	1	0	1	0	3	3	2022-03-12 01:07:21
+2	1	1	3	1	3	2	2022-03-12 01:07:31
+3	2	0	1	0	3	3	2022-03-12 01:09:45
+4	4	0	1	0	3	1	2022-03-12 01:12:22
+5	4	3	2	1	3	3	2022-03-12 01:12:36
+6	4	4	3	1	3	2	2022-03-12 01:12:50
+7	4	0	4	0	3	7	2022-03-12 01:13:04
+8	5	0	1	0	3	1	2022-03-12 01:14:09
+9	5	5	2	1	3	3	2022-03-12 01:14:21
+10	5	6	3	1	3	2	2022-03-12 01:14:34
+11	5	0	4	0	3	7	2022-03-12 01:14:46
+12	6	0	1	0	3	1	2022-03-12 01:16:44
+13	6	7	2	1	6	15	2022-03-12 01:17:07
+14	7	0	1	0	3	3	2022-03-12 01:19:21
+15	7	8	3	1	3	2	2022-03-12 01:19:36
+16	9	0	1	0	3	1	2022-03-12 01:21:46
+17	11	0	1	0	3	1	2022-03-12 01:23:24
+18	11	10	2	1	3	3	2022-03-12 01:23:34
+19	11	11	3	1	3	2	2022-03-12 01:24:20
+20	12	0	1	0	3	1	2022-03-12 01:26:03
+21	13	0	1	0	3	1	2022-03-12 01:27:56
+22	13	13	2	1	3	3	2022-03-12 01:28:09
+23	13	14	3	1	3	2	2022-03-12 01:29:15
+24	14	0	1	0	3	1	2022-03-12 01:30:44
+25	14	15	2	1	3	3	2022-03-12 01:30:57
+26	14	16	3	1	3	2	2022-03-12 01:31:12
+27	14	0	4	0	3	7	2022-03-12 01:31:26
+28	15	0	1	0	3	3	2022-03-12 01:33:30
+29	16	0	1	0	3	3	2022-03-12 01:34:21
+30	17	0	1	0	3	1	2022-03-12 01:37:36
 \.
+
+
+--
+-- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true);
 
 
 --
@@ -5236,6 +5326,13 @@ COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, st
 
 COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
 \.
+
+
+--
+-- Name: email_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_log_log_id_seq', 1, false);
 
 
 --
@@ -5391,6 +5488,20 @@ EMAIL_LINK	fr_CA	Manuscrit susceptible d'intéresser	Nous crayons que l'article 
 
 
 --
+-- Name: email_templates_default_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_default_email_id_seq', 43, true);
+
+
+--
+-- Name: email_templates_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_email_id_seq', 1, false);
+
+
+--
 -- Data for Name: email_templates_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -5403,371 +5514,378 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	19	2022-03-08 21:02:08	268435458	submission.event.general.metadataUpdated	0
-2	515	1	19	2022-03-08 21:02:10	1342177281	submission.event.fileUploaded	0
-3	1048585	1	19	2022-03-08 21:02:10	1342177288	submission.event.fileRevised	0
-4	515	1	19	2022-03-08 21:02:10	1342177296	submission.event.fileEdited	0
-5	1048585	1	19	2022-03-08 21:02:10	1342177296	submission.event.fileEdited	0
-6	1048585	1	19	2022-03-08 21:02:26	268435458	submission.event.general.metadataUpdated	0
-7	1048585	1	19	2022-03-08 21:02:27	268435457	submission.event.submissionSubmitted	0
-8	1048585	1	3	2022-03-08 21:02:34	805306371	log.editor.decision	0
-9	1048585	1	3	2022-03-08 21:02:42	1073741825	log.review.reviewerAssigned	0
-10	1048585	1	3	2022-03-08 21:02:44	805306371	log.editor.decision	0
-11	1048585	1	3	2022-03-08 21:02:51	268435459	submission.event.participantAdded	0
-12	1048585	2	20	2022-03-08 21:03:03	268435458	submission.event.general.metadataUpdated	0
-13	515	2	20	2022-03-08 21:03:05	1342177281	submission.event.fileUploaded	0
-14	1048585	2	20	2022-03-08 21:03:05	1342177288	submission.event.fileRevised	0
-15	515	2	20	2022-03-08 21:03:05	1342177296	submission.event.fileEdited	0
-16	1048585	2	20	2022-03-08 21:03:05	1342177296	submission.event.fileEdited	0
-17	515	3	20	2022-03-08 21:03:05	1342177281	submission.event.fileUploaded	0
-18	1048585	2	20	2022-03-08 21:03:05	1342177288	submission.event.fileRevised	0
-19	515	3	20	2022-03-08 21:03:06	1342177296	submission.event.fileEdited	0
-20	1048585	2	20	2022-03-08 21:03:06	1342177296	submission.event.fileEdited	0
-21	515	4	20	2022-03-08 21:03:06	1342177281	submission.event.fileUploaded	0
-22	1048585	2	20	2022-03-08 21:03:06	1342177288	submission.event.fileRevised	0
-23	515	4	20	2022-03-08 21:03:06	1342177296	submission.event.fileEdited	0
-24	1048585	2	20	2022-03-08 21:03:06	1342177296	submission.event.fileEdited	0
-25	515	5	20	2022-03-08 21:03:07	1342177281	submission.event.fileUploaded	0
-26	1048585	2	20	2022-03-08 21:03:07	1342177288	submission.event.fileRevised	0
-27	515	5	20	2022-03-08 21:03:07	1342177296	submission.event.fileEdited	0
-28	1048585	2	20	2022-03-08 21:03:07	1342177296	submission.event.fileEdited	0
-29	1048585	2	20	2022-03-08 21:04:47	268435458	submission.event.general.metadataUpdated	0
-30	1048585	2	20	2022-03-08 21:04:50	268435457	submission.event.submissionSubmitted	0
-31	1048585	2	3	2022-03-08 21:05:00	805306371	log.editor.decision	0
-32	1048585	2	3	2022-03-08 21:05:11	1073741825	log.review.reviewerAssigned	0
-33	1048585	2	3	2022-03-08 21:05:21	1073741825	log.review.reviewerAssigned	0
-34	1048585	3	21	2022-03-08 21:05:30	268435458	submission.event.general.metadataUpdated	0
-35	515	6	21	2022-03-08 21:05:32	1342177281	submission.event.fileUploaded	0
-36	1048585	3	21	2022-03-08 21:05:32	1342177288	submission.event.fileRevised	0
-37	515	6	21	2022-03-08 21:05:32	1342177296	submission.event.fileEdited	0
-38	1048585	3	21	2022-03-08 21:05:32	1342177296	submission.event.fileEdited	0
-39	1048585	3	21	2022-03-08 21:06:02	268435458	submission.event.general.metadataUpdated	0
-40	1048585	3	21	2022-03-08 21:06:03	268435457	submission.event.submissionSubmitted	0
-41	1048585	4	22	2022-03-08 21:06:11	268435458	submission.event.general.metadataUpdated	0
-42	515	7	22	2022-03-08 21:06:13	1342177281	submission.event.fileUploaded	0
-43	1048585	4	22	2022-03-08 21:06:13	1342177288	submission.event.fileRevised	0
-44	515	7	22	2022-03-08 21:06:13	1342177296	submission.event.fileEdited	0
-45	1048585	4	22	2022-03-08 21:06:13	1342177296	submission.event.fileEdited	0
-46	515	8	22	2022-03-08 21:06:13	1342177281	submission.event.fileUploaded	0
-47	1048585	4	22	2022-03-08 21:06:13	1342177288	submission.event.fileRevised	0
-48	515	8	22	2022-03-08 21:06:14	1342177296	submission.event.fileEdited	0
-49	1048585	4	22	2022-03-08 21:06:14	1342177296	submission.event.fileEdited	0
-50	515	9	22	2022-03-08 21:06:14	1342177281	submission.event.fileUploaded	0
-51	1048585	4	22	2022-03-08 21:06:14	1342177288	submission.event.fileRevised	0
-52	515	9	22	2022-03-08 21:06:14	1342177296	submission.event.fileEdited	0
-53	1048585	4	22	2022-03-08 21:06:14	1342177296	submission.event.fileEdited	0
-54	515	10	22	2022-03-08 21:06:15	1342177281	submission.event.fileUploaded	0
-55	1048585	4	22	2022-03-08 21:06:15	1342177288	submission.event.fileRevised	0
-56	515	10	22	2022-03-08 21:06:15	1342177296	submission.event.fileEdited	0
-57	1048585	4	22	2022-03-08 21:06:15	1342177296	submission.event.fileEdited	0
-58	1048585	4	22	2022-03-08 21:07:20	268435458	submission.event.general.metadataUpdated	0
-59	1048585	4	22	2022-03-08 21:07:22	268435457	submission.event.submissionSubmitted	0
-60	1048585	4	3	2022-03-08 21:07:32	805306371	log.editor.decision	0
-61	1048585	4	3	2022-03-08 21:07:42	1073741825	log.review.reviewerAssigned	0
-62	1048585	4	3	2022-03-08 21:07:46	805306371	log.editor.decision	0
-63	1048585	4	3	2022-03-08 21:07:57	1073741825	log.review.reviewerAssigned	0
-64	1048585	4	3	2022-03-08 21:08:01	805306371	log.editor.decision	0
-65	1048585	4	3	2022-03-08 21:08:12	268435459	submission.event.participantAdded	0
-66	1048585	4	3	2022-03-08 21:08:16	805306371	log.editor.decision	0
-67	1048585	4	3	2022-03-08 21:08:27	268435459	submission.event.participantAdded	0
-68	1048585	5	23	2022-03-08 21:08:36	268435458	submission.event.general.metadataUpdated	0
-69	515	11	23	2022-03-08 21:08:38	1342177281	submission.event.fileUploaded	0
-70	1048585	5	23	2022-03-08 21:08:38	1342177288	submission.event.fileRevised	0
-71	515	11	23	2022-03-08 21:08:38	1342177296	submission.event.fileEdited	0
-72	1048585	5	23	2022-03-08 21:08:38	1342177296	submission.event.fileEdited	0
-73	1048585	5	23	2022-03-08 21:09:15	268435458	submission.event.general.metadataUpdated	0
-74	1048585	5	23	2022-03-08 21:09:16	268435457	submission.event.submissionSubmitted	0
-75	1048585	5	3	2022-03-08 21:09:24	805306371	log.editor.decision	0
-76	1048585	5	3	2022-03-08 21:09:33	1073741825	log.review.reviewerAssigned	0
-77	1048585	5	3	2022-03-08 21:09:35	805306371	log.editor.decision	0
-78	1048585	5	3	2022-03-08 21:09:45	1073741825	log.review.reviewerAssigned	0
-79	1048585	5	3	2022-03-08 21:09:47	805306371	log.editor.decision	0
-80	1048585	5	3	2022-03-08 21:09:56	268435459	submission.event.participantAdded	0
-81	1048585	5	3	2022-03-08 21:10:00	805306371	log.editor.decision	0
-82	1048585	5	3	2022-03-08 21:10:10	268435459	submission.event.participantAdded	0
-83	1048585	5	3	2022-03-08 21:10:16	268435459	submission.event.participantAdded	0
-84	1048585	5	3	2022-03-08 21:10:22	268435474	submission.event.publicationFormatCreated	0
-85	515	12	3	2022-03-08 21:10:26	1342177281	submission.event.fileUploaded	0
-86	1048585	5	3	2022-03-08 21:10:26	1342177288	submission.event.fileRevised	0
-87	1048585	5	3	2022-03-08 21:10:28	268435464	submission.event.publicationFormatPublished	0
-88	1048585	5	3	2022-03-08 21:10:30	268435476	submission.event.publicationFormatMadeAvailable	0
-89	515	12	3	2022-03-08 21:10:32	1342177296	submission.event.fileEdited	0
-90	1048585	5	3	2022-03-08 21:10:32	1342177296	submission.event.fileEdited	0
-91	515	12	3	2022-03-08 21:10:32	1342177287	submission.event.signoffSignoff	0
-92	1048585	5	3	2022-03-08 21:10:37	268435462	publication.event.published	0
-93	1048585	6	24	2022-03-08 21:10:48	268435458	submission.event.general.metadataUpdated	0
-94	515	13	24	2022-03-08 21:10:50	1342177281	submission.event.fileUploaded	0
-95	1048585	6	24	2022-03-08 21:10:50	1342177288	submission.event.fileRevised	0
-96	515	13	24	2022-03-08 21:10:50	1342177296	submission.event.fileEdited	0
-97	1048585	6	24	2022-03-08 21:10:50	1342177296	submission.event.fileEdited	0
-98	515	14	24	2022-03-08 21:10:50	1342177281	submission.event.fileUploaded	0
-99	1048585	6	24	2022-03-08 21:10:50	1342177288	submission.event.fileRevised	0
-100	515	14	24	2022-03-08 21:10:51	1342177296	submission.event.fileEdited	0
-101	1048585	6	24	2022-03-08 21:10:51	1342177296	submission.event.fileEdited	0
-102	515	15	24	2022-03-08 21:10:51	1342177281	submission.event.fileUploaded	0
-103	1048585	6	24	2022-03-08 21:10:51	1342177288	submission.event.fileRevised	0
-104	515	15	24	2022-03-08 21:10:51	1342177296	submission.event.fileEdited	0
-105	1048585	6	24	2022-03-08 21:10:51	1342177296	submission.event.fileEdited	0
-106	515	16	24	2022-03-08 21:10:52	1342177281	submission.event.fileUploaded	0
-107	1048585	6	24	2022-03-08 21:10:52	1342177288	submission.event.fileRevised	0
-108	515	16	24	2022-03-08 21:10:52	1342177296	submission.event.fileEdited	0
-109	1048585	6	24	2022-03-08 21:10:52	1342177296	submission.event.fileEdited	0
-110	1048585	6	24	2022-03-08 21:11:47	268435458	submission.event.general.metadataUpdated	0
-111	1048585	6	24	2022-03-08 21:11:49	268435457	submission.event.submissionSubmitted	0
-112	1048585	6	3	2022-03-08 21:12:00	805306371	log.editor.decision	0
-113	1048585	6	3	2022-03-08 21:12:09	268435459	submission.event.participantAdded	0
-114	1048585	6	6	2022-03-08 21:12:22	805306372	log.editor.recommendation	0
-115	1048585	7	25	2022-03-08 21:12:42	268435458	submission.event.general.metadataUpdated	0
-116	515	17	25	2022-03-08 21:12:43	1342177281	submission.event.fileUploaded	0
-117	1048585	7	25	2022-03-08 21:12:43	1342177288	submission.event.fileRevised	0
-118	515	17	25	2022-03-08 21:12:44	1342177296	submission.event.fileEdited	0
-119	1048585	7	25	2022-03-08 21:12:44	1342177296	submission.event.fileEdited	0
-120	515	18	25	2022-03-08 21:12:44	1342177281	submission.event.fileUploaded	0
-121	1048585	7	25	2022-03-08 21:12:44	1342177288	submission.event.fileRevised	0
-122	515	18	25	2022-03-08 21:12:44	1342177296	submission.event.fileEdited	0
-123	1048585	7	25	2022-03-08 21:12:44	1342177296	submission.event.fileEdited	0
-124	515	19	25	2022-03-08 21:12:45	1342177281	submission.event.fileUploaded	0
-125	1048585	7	25	2022-03-08 21:12:45	1342177288	submission.event.fileRevised	0
-126	515	19	25	2022-03-08 21:12:45	1342177296	submission.event.fileEdited	0
-127	1048585	7	25	2022-03-08 21:12:45	1342177296	submission.event.fileEdited	0
-128	515	20	25	2022-03-08 21:12:45	1342177281	submission.event.fileUploaded	0
-129	1048585	7	25	2022-03-08 21:12:45	1342177288	submission.event.fileRevised	0
-130	515	20	25	2022-03-08 21:12:46	1342177296	submission.event.fileEdited	0
-131	1048585	7	25	2022-03-08 21:12:46	1342177296	submission.event.fileEdited	0
-132	515	21	25	2022-03-08 21:12:46	1342177281	submission.event.fileUploaded	0
-133	1048585	7	25	2022-03-08 21:12:46	1342177288	submission.event.fileRevised	0
-134	515	21	25	2022-03-08 21:12:47	1342177296	submission.event.fileEdited	0
-135	1048585	7	25	2022-03-08 21:12:47	1342177296	submission.event.fileEdited	0
-136	1048585	7	25	2022-03-08 21:14:25	268435458	submission.event.general.metadataUpdated	0
-137	1048585	7	25	2022-03-08 21:14:27	268435457	submission.event.submissionSubmitted	0
-138	1048585	7	3	2022-03-08 21:14:38	805306371	log.editor.decision	0
-139	1048585	7	3	2022-03-08 21:14:50	1073741825	log.review.reviewerAssigned	0
-140	1048585	7	3	2022-03-08 21:14:53	805306371	log.editor.decision	0
-141	1048585	7	3	2022-03-08 21:15:05	268435459	submission.event.participantAdded	0
-142	1048585	8	3	2022-03-08 21:15:14	268435458	submission.event.general.metadataUpdated	0
-143	515	22	3	2022-03-08 21:15:15	1342177281	submission.event.fileUploaded	0
-144	1048585	8	3	2022-03-08 21:15:15	1342177288	submission.event.fileRevised	0
-145	515	22	3	2022-03-08 21:15:16	1342177296	submission.event.fileEdited	0
-146	1048585	8	3	2022-03-08 21:15:16	1342177296	submission.event.fileEdited	0
-147	1048585	8	3	2022-03-08 21:15:17	268435458	submission.event.general.metadataUpdated	0
-148	1048585	8	3	2022-03-08 21:15:18	268435457	submission.event.submissionSubmitted	0
-149	1048585	9	26	2022-03-08 21:15:26	268435458	submission.event.general.metadataUpdated	0
-150	515	23	26	2022-03-08 21:15:28	1342177281	submission.event.fileUploaded	0
-151	1048585	9	26	2022-03-08 21:15:28	1342177288	submission.event.fileRevised	0
-152	515	23	26	2022-03-08 21:15:28	1342177296	submission.event.fileEdited	0
-153	1048585	9	26	2022-03-08 21:15:28	1342177296	submission.event.fileEdited	0
-154	515	24	26	2022-03-08 21:15:28	1342177281	submission.event.fileUploaded	0
-155	1048585	9	26	2022-03-08 21:15:28	1342177288	submission.event.fileRevised	0
-156	515	24	26	2022-03-08 21:15:29	1342177296	submission.event.fileEdited	0
-157	1048585	9	26	2022-03-08 21:15:29	1342177296	submission.event.fileEdited	0
-158	515	25	26	2022-03-08 21:15:29	1342177281	submission.event.fileUploaded	0
-159	1048585	9	26	2022-03-08 21:15:29	1342177288	submission.event.fileRevised	0
-160	515	25	26	2022-03-08 21:15:29	1342177296	submission.event.fileEdited	0
-161	1048585	9	26	2022-03-08 21:15:29	1342177296	submission.event.fileEdited	0
-162	515	26	26	2022-03-08 21:15:29	1342177281	submission.event.fileUploaded	0
-163	1048585	9	26	2022-03-08 21:15:29	1342177288	submission.event.fileRevised	0
-164	515	26	26	2022-03-08 21:15:30	1342177296	submission.event.fileEdited	0
-165	1048585	9	26	2022-03-08 21:15:30	1342177296	submission.event.fileEdited	0
-166	515	27	26	2022-03-08 21:15:30	1342177281	submission.event.fileUploaded	0
-167	1048585	9	26	2022-03-08 21:15:30	1342177288	submission.event.fileRevised	0
-168	515	27	26	2022-03-08 21:15:31	1342177296	submission.event.fileEdited	0
-169	1048585	9	26	2022-03-08 21:15:31	1342177296	submission.event.fileEdited	0
-170	1048585	9	26	2022-03-08 21:16:55	268435458	submission.event.general.metadataUpdated	0
-171	1048585	9	26	2022-03-08 21:16:57	268435457	submission.event.submissionSubmitted	0
-172	1048585	9	3	2022-03-08 21:17:08	805306371	log.editor.decision	0
-173	1048585	10	27	2022-03-08 21:17:21	268435458	submission.event.general.metadataUpdated	0
-174	515	28	27	2022-03-08 21:17:23	1342177281	submission.event.fileUploaded	0
-175	1048585	10	27	2022-03-08 21:17:23	1342177288	submission.event.fileRevised	0
-176	515	28	27	2022-03-08 21:17:23	1342177296	submission.event.fileEdited	0
-177	1048585	10	27	2022-03-08 21:17:23	1342177296	submission.event.fileEdited	0
-178	1048585	10	27	2022-03-08 21:18:17	268435458	submission.event.general.metadataUpdated	0
-179	1048585	10	27	2022-03-08 21:18:19	268435457	submission.event.submissionSubmitted	0
-180	1048585	11	28	2022-03-08 21:18:27	268435458	submission.event.general.metadataUpdated	0
-181	515	29	28	2022-03-08 21:18:28	1342177281	submission.event.fileUploaded	0
-182	1048585	11	28	2022-03-08 21:18:28	1342177288	submission.event.fileRevised	0
-183	515	29	28	2022-03-08 21:18:28	1342177296	submission.event.fileEdited	0
-184	1048585	11	28	2022-03-08 21:18:28	1342177296	submission.event.fileEdited	0
-185	1048585	11	28	2022-03-08 21:18:39	268435458	submission.event.general.metadataUpdated	0
-186	1048585	11	28	2022-03-08 21:18:40	268435457	submission.event.submissionSubmitted	0
-187	1048585	11	3	2022-03-08 21:18:48	805306371	log.editor.decision	0
-188	1048585	11	3	2022-03-08 21:18:56	1073741825	log.review.reviewerAssigned	0
-189	1048585	11	3	2022-03-08 21:18:58	805306371	log.editor.decision	0
-190	1048585	11	3	2022-03-08 21:19:07	1073741825	log.review.reviewerAssigned	0
-191	1048585	11	3	2022-03-08 21:19:13	1073741825	log.review.reviewerAssigned	0
-192	1048585	11	10	2022-03-08 21:19:19	1073741830	log.review.reviewAccepted	0
-193	1048585	11	10	2022-03-08 21:19:23	1073741848	log.review.reviewReady	0
-194	1048585	11	12	2022-03-08 21:19:28	1073741830	log.review.reviewAccepted	0
-195	1048585	11	12	2022-03-08 21:19:33	1073741848	log.review.reviewReady	0
-196	1048585	11	3	2022-03-08 21:19:44	805306371	log.editor.decision	0
-197	1048585	12	29	2022-03-08 21:19:57	268435458	submission.event.general.metadataUpdated	0
-198	515	30	29	2022-03-08 21:19:58	1342177281	submission.event.fileUploaded	0
-199	1048585	12	29	2022-03-08 21:19:58	1342177288	submission.event.fileRevised	0
-200	515	30	29	2022-03-08 21:19:58	1342177296	submission.event.fileEdited	0
-201	1048585	12	29	2022-03-08 21:19:58	1342177296	submission.event.fileEdited	0
-202	515	31	29	2022-03-08 21:19:59	1342177281	submission.event.fileUploaded	0
-203	1048585	12	29	2022-03-08 21:19:59	1342177288	submission.event.fileRevised	0
-204	515	31	29	2022-03-08 21:19:59	1342177296	submission.event.fileEdited	0
-205	1048585	12	29	2022-03-08 21:19:59	1342177296	submission.event.fileEdited	0
-206	515	32	29	2022-03-08 21:19:59	1342177281	submission.event.fileUploaded	0
-207	1048585	12	29	2022-03-08 21:19:59	1342177288	submission.event.fileRevised	0
-208	515	32	29	2022-03-08 21:20:00	1342177296	submission.event.fileEdited	0
-209	1048585	12	29	2022-03-08 21:20:00	1342177296	submission.event.fileEdited	0
-210	1048585	12	29	2022-03-08 21:21:16	268435458	submission.event.general.metadataUpdated	0
-211	1048585	12	29	2022-03-08 21:21:18	268435457	submission.event.submissionSubmitted	0
-212	1048585	12	3	2022-03-08 21:21:29	805306371	log.editor.decision	0
-213	1048585	12	3	2022-03-08 21:21:41	1073741825	log.review.reviewerAssigned	0
-214	1048585	12	3	2022-03-08 21:21:48	1073741825	log.review.reviewerAssigned	0
-215	1048585	12	3	2022-03-08 21:21:56	1073741825	log.review.reviewerAssigned	0
-216	1048585	12	8	2022-03-08 21:22:04	1073741830	log.review.reviewAccepted	0
-217	1048585	12	8	2022-03-08 21:22:09	1073741848	log.review.reviewReady	0
-218	1048585	13	30	2022-03-08 21:22:19	268435458	submission.event.general.metadataUpdated	0
-219	515	33	30	2022-03-08 21:22:20	1342177281	submission.event.fileUploaded	0
-220	1048585	13	30	2022-03-08 21:22:20	1342177288	submission.event.fileRevised	0
-221	515	33	30	2022-03-08 21:22:21	1342177296	submission.event.fileEdited	0
-222	1048585	13	30	2022-03-08 21:22:21	1342177296	submission.event.fileEdited	0
-223	515	34	30	2022-03-08 21:22:21	1342177281	submission.event.fileUploaded	0
-224	1048585	13	30	2022-03-08 21:22:21	1342177288	submission.event.fileRevised	0
-225	515	34	30	2022-03-08 21:22:21	1342177296	submission.event.fileEdited	0
-226	1048585	13	30	2022-03-08 21:22:21	1342177296	submission.event.fileEdited	0
-227	515	35	30	2022-03-08 21:22:22	1342177281	submission.event.fileUploaded	0
-228	1048585	13	30	2022-03-08 21:22:22	1342177288	submission.event.fileRevised	0
-229	515	35	30	2022-03-08 21:22:22	1342177296	submission.event.fileEdited	0
-230	1048585	13	30	2022-03-08 21:22:22	1342177296	submission.event.fileEdited	0
-231	1048585	13	30	2022-03-08 21:23:13	268435458	submission.event.general.metadataUpdated	0
-232	1048585	13	30	2022-03-08 21:23:14	268435457	submission.event.submissionSubmitted	0
-233	1048585	13	3	2022-03-08 21:23:26	805306371	log.editor.decision	0
-234	1048585	13	3	2022-03-08 21:23:36	1073741825	log.review.reviewerAssigned	0
-235	1048585	13	3	2022-03-08 21:23:39	805306371	log.editor.decision	0
-236	1048585	13	3	2022-03-08 21:23:49	1073741825	log.review.reviewerAssigned	0
-237	1048585	13	3	2022-03-08 21:23:57	1073741825	log.review.reviewerAssigned	0
-238	1048585	13	3	2022-03-08 21:24:04	1073741825	log.review.reviewerAssigned	0
-239	1048585	13	10	2022-03-08 21:24:12	1073741830	log.review.reviewAccepted	0
-240	1048585	13	10	2022-03-08 21:24:17	1073741848	log.review.reviewReady	0
-241	1048585	13	12	2022-03-08 21:24:25	1073741830	log.review.reviewAccepted	0
-242	1048585	13	12	2022-03-08 21:24:30	1073741848	log.review.reviewReady	0
-243	1048585	13	3	2022-03-08 21:24:47	805306371	log.editor.decision	0
-244	1048585	14	31	2022-03-08 21:25:02	268435458	submission.event.general.metadataUpdated	0
-245	515	36	31	2022-03-08 21:25:03	1342177281	submission.event.fileUploaded	0
-246	1048585	14	31	2022-03-08 21:25:03	1342177288	submission.event.fileRevised	0
-247	515	36	31	2022-03-08 21:25:04	1342177296	submission.event.fileEdited	0
-248	1048585	14	31	2022-03-08 21:25:04	1342177296	submission.event.fileEdited	0
-249	515	37	31	2022-03-08 21:25:04	1342177281	submission.event.fileUploaded	0
-250	1048585	14	31	2022-03-08 21:25:04	1342177288	submission.event.fileRevised	0
-251	515	37	31	2022-03-08 21:25:04	1342177296	submission.event.fileEdited	0
-252	1048585	14	31	2022-03-08 21:25:04	1342177296	submission.event.fileEdited	0
-253	515	38	31	2022-03-08 21:25:05	1342177281	submission.event.fileUploaded	0
-254	1048585	14	31	2022-03-08 21:25:05	1342177288	submission.event.fileRevised	0
-255	515	38	31	2022-03-08 21:25:05	1342177296	submission.event.fileEdited	0
-256	1048585	14	31	2022-03-08 21:25:05	1342177296	submission.event.fileEdited	0
-257	515	39	31	2022-03-08 21:25:05	1342177281	submission.event.fileUploaded	0
-258	1048585	14	31	2022-03-08 21:25:05	1342177288	submission.event.fileRevised	0
-259	515	39	31	2022-03-08 21:25:06	1342177296	submission.event.fileEdited	0
-260	1048585	14	31	2022-03-08 21:25:06	1342177296	submission.event.fileEdited	0
-261	515	40	31	2022-03-08 21:25:06	1342177281	submission.event.fileUploaded	0
-262	1048585	14	31	2022-03-08 21:25:06	1342177288	submission.event.fileRevised	0
-263	515	40	31	2022-03-08 21:25:07	1342177296	submission.event.fileEdited	0
-264	1048585	14	31	2022-03-08 21:25:07	1342177296	submission.event.fileEdited	0
-265	515	41	31	2022-03-08 21:25:07	1342177281	submission.event.fileUploaded	0
-266	1048585	14	31	2022-03-08 21:25:07	1342177288	submission.event.fileRevised	0
-267	515	41	31	2022-03-08 21:25:08	1342177296	submission.event.fileEdited	0
-268	1048585	14	31	2022-03-08 21:25:08	1342177296	submission.event.fileEdited	0
-269	1048585	14	31	2022-03-08 21:26:04	268435458	submission.event.general.metadataUpdated	0
-270	1048585	14	31	2022-03-08 21:26:06	268435457	submission.event.submissionSubmitted	0
-271	1048585	14	3	2022-03-08 21:26:18	805306371	log.editor.decision	0
-272	1048585	14	3	2022-03-08 21:26:28	1073741825	log.review.reviewerAssigned	0
-273	1048585	14	3	2022-03-08 21:26:32	805306371	log.editor.decision	0
-274	1048585	14	3	2022-03-08 21:26:43	1073741825	log.review.reviewerAssigned	0
-275	1048585	14	3	2022-03-08 21:26:47	805306371	log.editor.decision	0
-276	1048585	14	3	2022-03-08 21:26:57	268435459	submission.event.participantAdded	0
-277	1048585	14	3	2022-03-08 21:27:02	805306371	log.editor.decision	0
-278	1048585	14	3	2022-03-08 21:27:12	268435459	submission.event.participantAdded	0
-279	1048585	14	3	2022-03-08 21:27:19	268435459	submission.event.participantAdded	0
-280	1048585	14	3	2022-03-08 21:27:26	268435474	submission.event.publicationFormatCreated	0
-281	515	42	3	2022-03-08 21:27:35	1342177281	submission.event.fileUploaded	0
-282	1048585	14	3	2022-03-08 21:27:35	1342177288	submission.event.fileRevised	0
-283	515	43	3	2022-03-08 21:27:35	1342177281	submission.event.fileUploaded	0
-284	1048585	14	3	2022-03-08 21:27:35	1342177288	submission.event.fileRevised	0
-285	515	44	3	2022-03-08 21:27:35	1342177281	submission.event.fileUploaded	0
-286	1048585	14	3	2022-03-08 21:27:35	1342177288	submission.event.fileRevised	0
-287	515	45	3	2022-03-08 21:27:35	1342177281	submission.event.fileUploaded	0
-288	1048585	14	3	2022-03-08 21:27:35	1342177288	submission.event.fileRevised	0
-289	515	46	3	2022-03-08 21:27:35	1342177281	submission.event.fileUploaded	0
-290	1048585	14	3	2022-03-08 21:27:35	1342177288	submission.event.fileRevised	0
-291	515	47	3	2022-03-08 21:27:35	1342177281	submission.event.fileUploaded	0
-292	1048585	14	3	2022-03-08 21:27:35	1342177288	submission.event.fileRevised	0
-293	1048585	14	3	2022-03-08 21:27:38	268435464	submission.event.publicationFormatPublished	0
-294	1048585	14	3	2022-03-08 21:27:41	268435476	submission.event.publicationFormatMadeAvailable	0
-295	515	43	3	2022-03-08 21:27:43	1342177296	submission.event.fileEdited	0
-296	1048585	14	3	2022-03-08 21:27:43	1342177296	submission.event.fileEdited	0
-297	515	43	3	2022-03-08 21:27:43	1342177287	submission.event.signoffSignoff	0
-298	515	44	3	2022-03-08 21:27:50	1342177296	submission.event.fileEdited	0
-299	1048585	14	3	2022-03-08 21:27:50	1342177296	submission.event.fileEdited	0
-300	515	44	3	2022-03-08 21:27:50	1342177287	submission.event.signoffSignoff	0
-301	515	42	3	2022-03-08 21:27:56	1342177296	submission.event.fileEdited	0
-302	1048585	14	3	2022-03-08 21:27:56	1342177296	submission.event.fileEdited	0
-303	515	42	3	2022-03-08 21:27:56	1342177287	submission.event.signoffSignoff	0
-304	515	45	3	2022-03-08 21:28:04	1342177296	submission.event.fileEdited	0
-305	1048585	14	3	2022-03-08 21:28:04	1342177296	submission.event.fileEdited	0
-306	515	45	3	2022-03-08 21:28:04	1342177287	submission.event.signoffSignoff	0
-307	515	46	3	2022-03-08 21:28:11	1342177296	submission.event.fileEdited	0
-308	1048585	14	3	2022-03-08 21:28:11	1342177296	submission.event.fileEdited	0
-309	515	46	3	2022-03-08 21:28:11	1342177287	submission.event.signoffSignoff	0
-310	515	47	3	2022-03-08 21:28:18	1342177296	submission.event.fileEdited	0
-311	1048585	14	3	2022-03-08 21:28:18	1342177296	submission.event.fileEdited	0
-312	515	47	3	2022-03-08 21:28:18	1342177287	submission.event.signoffSignoff	0
-313	1048585	14	3	2022-03-08 21:28:25	268435462	publication.event.published	0
-314	1048585	15	32	2022-03-08 21:28:35	268435458	submission.event.general.metadataUpdated	0
-315	515	48	32	2022-03-08 21:28:36	1342177281	submission.event.fileUploaded	0
-316	1048585	15	32	2022-03-08 21:28:36	1342177288	submission.event.fileRevised	0
-317	515	48	32	2022-03-08 21:28:37	1342177296	submission.event.fileEdited	0
-318	1048585	15	32	2022-03-08 21:28:37	1342177296	submission.event.fileEdited	0
-319	1048585	15	32	2022-03-08 21:28:55	268435458	submission.event.general.metadataUpdated	0
-320	1048585	15	32	2022-03-08 21:28:56	268435457	submission.event.submissionSubmitted	0
-321	1048585	15	3	2022-03-08 21:29:07	805306371	log.editor.decision	0
-322	1048585	16	33	2022-03-08 21:29:20	268435458	submission.event.general.metadataUpdated	0
-323	515	49	33	2022-03-08 21:29:21	1342177281	submission.event.fileUploaded	0
-324	1048585	16	33	2022-03-08 21:29:21	1342177288	submission.event.fileRevised	0
-325	515	49	33	2022-03-08 21:29:21	1342177296	submission.event.fileEdited	0
-326	1048585	16	33	2022-03-08 21:29:21	1342177296	submission.event.fileEdited	0
-327	1048585	16	33	2022-03-08 21:29:46	268435458	submission.event.general.metadataUpdated	0
-328	1048585	16	33	2022-03-08 21:29:47	268435457	submission.event.submissionSubmitted	0
-329	1048585	16	3	2022-03-08 21:29:59	805306371	log.editor.decision	0
-330	1048585	16	3	2022-03-08 21:30:08	1073741825	log.review.reviewerAssigned	0
-331	1048585	16	3	2022-03-08 21:30:14	1073741825	log.review.reviewerAssigned	0
-332	1048585	16	3	2022-03-08 21:30:21	1073741825	log.review.reviewerAssigned	0
-333	1048585	16	10	2022-03-08 21:30:27	1073741830	log.review.reviewAccepted	0
-334	1048585	16	10	2022-03-08 21:30:32	1073741848	log.review.reviewReady	0
-335	1048585	17	34	2022-03-08 21:30:41	268435458	submission.event.general.metadataUpdated	0
-336	515	50	34	2022-03-08 21:30:42	1342177281	submission.event.fileUploaded	0
-337	1048585	17	34	2022-03-08 21:30:42	1342177288	submission.event.fileRevised	0
-338	515	50	34	2022-03-08 21:30:43	1342177296	submission.event.fileEdited	0
-339	1048585	17	34	2022-03-08 21:30:43	1342177296	submission.event.fileEdited	0
-340	515	51	34	2022-03-08 21:30:43	1342177281	submission.event.fileUploaded	0
-341	1048585	17	34	2022-03-08 21:30:43	1342177288	submission.event.fileRevised	0
-342	515	51	34	2022-03-08 21:30:43	1342177296	submission.event.fileEdited	0
-343	1048585	17	34	2022-03-08 21:30:43	1342177296	submission.event.fileEdited	0
-344	515	52	34	2022-03-08 21:30:44	1342177281	submission.event.fileUploaded	0
-345	1048585	17	34	2022-03-08 21:30:44	1342177288	submission.event.fileRevised	0
-346	515	52	34	2022-03-08 21:30:44	1342177296	submission.event.fileEdited	0
-347	1048585	17	34	2022-03-08 21:30:44	1342177296	submission.event.fileEdited	0
-348	515	53	34	2022-03-08 21:30:44	1342177281	submission.event.fileUploaded	0
-349	1048585	17	34	2022-03-08 21:30:44	1342177288	submission.event.fileRevised	0
-350	515	53	34	2022-03-08 21:30:45	1342177296	submission.event.fileEdited	0
-351	1048585	17	34	2022-03-08 21:30:45	1342177296	submission.event.fileEdited	0
-352	515	54	34	2022-03-08 21:30:45	1342177281	submission.event.fileUploaded	0
-353	1048585	17	34	2022-03-08 21:30:45	1342177288	submission.event.fileRevised	0
-354	515	54	34	2022-03-08 21:30:45	1342177296	submission.event.fileEdited	0
-355	1048585	17	34	2022-03-08 21:30:45	1342177296	submission.event.fileEdited	0
-356	515	55	34	2022-03-08 21:30:46	1342177281	submission.event.fileUploaded	0
-357	1048585	17	34	2022-03-08 21:30:46	1342177288	submission.event.fileRevised	0
-358	515	55	34	2022-03-08 21:30:46	1342177296	submission.event.fileEdited	0
-359	1048585	17	34	2022-03-08 21:30:46	1342177296	submission.event.fileEdited	0
-360	1048585	17	34	2022-03-08 21:32:59	268435458	submission.event.general.metadataUpdated	0
-361	1048585	17	34	2022-03-08 21:33:01	268435457	submission.event.submissionSubmitted	0
-362	1048585	17	3	2022-03-08 21:33:18	805306371	log.editor.decision	0
-363	1048585	17	3	2022-03-08 21:33:31	1073741825	log.review.reviewerAssigned	0
-364	1048585	17	3	2022-03-08 21:33:40	1073741825	log.review.reviewerAssigned	0
+1	1048585	1	19	2022-03-12 01:06:56	268435458	submission.event.general.metadataUpdated	0
+2	515	1	19	2022-03-12 01:06:57	1342177281	submission.event.fileUploaded	0
+3	1048585	1	19	2022-03-12 01:06:57	1342177288	submission.event.fileRevised	0
+4	515	1	19	2022-03-12 01:06:57	1342177296	submission.event.fileEdited	0
+5	1048585	1	19	2022-03-12 01:06:57	1342177296	submission.event.fileEdited	0
+6	1048585	1	19	2022-03-12 01:07:13	268435458	submission.event.general.metadataUpdated	0
+7	1048585	1	19	2022-03-12 01:07:14	268435457	submission.event.submissionSubmitted	0
+8	1048585	1	3	2022-03-12 01:07:21	805306371	log.editor.decision	0
+9	1048585	1	3	2022-03-12 01:07:29	1073741825	log.review.reviewerAssigned	0
+10	1048585	1	3	2022-03-12 01:07:31	805306371	log.editor.decision	0
+11	1048585	1	3	2022-03-12 01:07:39	268435459	submission.event.participantAdded	0
+12	1048585	2	20	2022-03-12 01:07:48	268435458	submission.event.general.metadataUpdated	0
+13	515	2	20	2022-03-12 01:07:50	1342177281	submission.event.fileUploaded	0
+14	1048585	2	20	2022-03-12 01:07:50	1342177288	submission.event.fileRevised	0
+15	515	2	20	2022-03-12 01:07:50	1342177296	submission.event.fileEdited	0
+16	1048585	2	20	2022-03-12 01:07:50	1342177296	submission.event.fileEdited	0
+17	515	3	20	2022-03-12 01:07:50	1342177281	submission.event.fileUploaded	0
+18	1048585	2	20	2022-03-12 01:07:50	1342177288	submission.event.fileRevised	0
+19	515	3	20	2022-03-12 01:07:51	1342177296	submission.event.fileEdited	0
+20	1048585	2	20	2022-03-12 01:07:51	1342177296	submission.event.fileEdited	0
+21	515	4	20	2022-03-12 01:07:51	1342177281	submission.event.fileUploaded	0
+22	1048585	2	20	2022-03-12 01:07:51	1342177288	submission.event.fileRevised	0
+23	515	4	20	2022-03-12 01:07:51	1342177296	submission.event.fileEdited	0
+24	1048585	2	20	2022-03-12 01:07:51	1342177296	submission.event.fileEdited	0
+25	515	5	20	2022-03-12 01:07:52	1342177281	submission.event.fileUploaded	0
+26	1048585	2	20	2022-03-12 01:07:52	1342177288	submission.event.fileRevised	0
+27	515	5	20	2022-03-12 01:07:52	1342177296	submission.event.fileEdited	0
+28	1048585	2	20	2022-03-12 01:07:52	1342177296	submission.event.fileEdited	0
+29	1048585	2	20	2022-03-12 01:09:34	268435458	submission.event.general.metadataUpdated	0
+30	1048585	2	20	2022-03-12 01:09:36	268435457	submission.event.submissionSubmitted	0
+31	1048585	2	3	2022-03-12 01:09:45	805306371	log.editor.decision	0
+32	1048585	2	3	2022-03-12 01:09:58	1073741825	log.review.reviewerAssigned	0
+33	1048585	2	3	2022-03-12 01:10:06	1073741825	log.review.reviewerAssigned	0
+34	1048585	3	21	2022-03-12 01:10:15	268435458	submission.event.general.metadataUpdated	0
+35	515	6	21	2022-03-12 01:10:17	1342177281	submission.event.fileUploaded	0
+36	1048585	3	21	2022-03-12 01:10:17	1342177288	submission.event.fileRevised	0
+37	515	6	21	2022-03-12 01:10:17	1342177296	submission.event.fileEdited	0
+38	1048585	3	21	2022-03-12 01:10:17	1342177296	submission.event.fileEdited	0
+39	1048585	3	21	2022-03-12 01:10:48	268435458	submission.event.general.metadataUpdated	0
+40	1048585	3	21	2022-03-12 01:10:50	268435457	submission.event.submissionSubmitted	0
+41	1048585	4	22	2022-03-12 01:10:58	268435458	submission.event.general.metadataUpdated	0
+42	515	7	22	2022-03-12 01:10:59	1342177281	submission.event.fileUploaded	0
+43	1048585	4	22	2022-03-12 01:10:59	1342177288	submission.event.fileRevised	0
+44	515	7	22	2022-03-12 01:11:00	1342177296	submission.event.fileEdited	0
+45	1048585	4	22	2022-03-12 01:11:00	1342177296	submission.event.fileEdited	0
+46	515	8	22	2022-03-12 01:11:00	1342177281	submission.event.fileUploaded	0
+47	1048585	4	22	2022-03-12 01:11:00	1342177288	submission.event.fileRevised	0
+48	515	8	22	2022-03-12 01:11:00	1342177296	submission.event.fileEdited	0
+49	1048585	4	22	2022-03-12 01:11:00	1342177296	submission.event.fileEdited	0
+50	515	9	22	2022-03-12 01:11:01	1342177281	submission.event.fileUploaded	0
+51	1048585	4	22	2022-03-12 01:11:01	1342177288	submission.event.fileRevised	0
+52	515	9	22	2022-03-12 01:11:01	1342177296	submission.event.fileEdited	0
+53	1048585	4	22	2022-03-12 01:11:01	1342177296	submission.event.fileEdited	0
+54	515	10	22	2022-03-12 01:11:01	1342177281	submission.event.fileUploaded	0
+55	1048585	4	22	2022-03-12 01:11:01	1342177288	submission.event.fileRevised	0
+56	515	10	22	2022-03-12 01:11:02	1342177296	submission.event.fileEdited	0
+57	1048585	4	22	2022-03-12 01:11:02	1342177296	submission.event.fileEdited	0
+58	1048585	4	22	2022-03-12 01:12:11	268435458	submission.event.general.metadataUpdated	0
+59	1048585	4	22	2022-03-12 01:12:13	268435457	submission.event.submissionSubmitted	0
+60	1048585	4	3	2022-03-12 01:12:22	805306371	log.editor.decision	0
+61	1048585	4	3	2022-03-12 01:12:33	1073741825	log.review.reviewerAssigned	0
+62	1048585	4	3	2022-03-12 01:12:36	805306371	log.editor.decision	0
+63	1048585	4	3	2022-03-12 01:12:46	1073741825	log.review.reviewerAssigned	0
+64	1048585	4	3	2022-03-12 01:12:50	805306371	log.editor.decision	0
+65	1048585	4	3	2022-03-12 01:13:01	268435459	submission.event.participantAdded	0
+66	1048585	4	3	2022-03-12 01:13:04	805306371	log.editor.decision	0
+67	1048585	4	3	2022-03-12 01:13:15	268435459	submission.event.participantAdded	0
+68	1048585	5	23	2022-03-12 01:13:24	268435458	submission.event.general.metadataUpdated	0
+69	515	11	23	2022-03-12 01:13:26	1342177281	submission.event.fileUploaded	0
+70	1048585	5	23	2022-03-12 01:13:26	1342177288	submission.event.fileRevised	0
+71	515	11	23	2022-03-12 01:13:26	1342177296	submission.event.fileEdited	0
+72	1048585	5	23	2022-03-12 01:13:26	1342177296	submission.event.fileEdited	0
+73	1048585	5	23	2022-03-12 01:13:59	268435458	submission.event.general.metadataUpdated	0
+74	1048585	5	23	2022-03-12 01:14:01	268435457	submission.event.submissionSubmitted	0
+75	1048585	5	3	2022-03-12 01:14:09	805306371	log.editor.decision	0
+76	1048585	5	3	2022-03-12 01:14:18	1073741825	log.review.reviewerAssigned	0
+77	1048585	5	3	2022-03-12 01:14:21	805306371	log.editor.decision	0
+78	1048585	5	3	2022-03-12 01:14:31	1073741825	log.review.reviewerAssigned	0
+79	1048585	5	3	2022-03-12 01:14:34	805306371	log.editor.decision	0
+80	1048585	5	3	2022-03-12 01:14:43	268435459	submission.event.participantAdded	0
+81	1048585	5	3	2022-03-12 01:14:46	805306371	log.editor.decision	0
+82	1048585	5	3	2022-03-12 01:14:55	268435459	submission.event.participantAdded	0
+83	1048585	5	3	2022-03-12 01:15:01	268435459	submission.event.participantAdded	0
+84	1048585	5	3	2022-03-12 01:15:08	268435474	submission.event.publicationFormatCreated	0
+85	515	12	3	2022-03-12 01:15:11	1342177281	submission.event.fileUploaded	0
+86	1048585	5	3	2022-03-12 01:15:11	1342177288	submission.event.fileRevised	0
+87	1048585	5	3	2022-03-12 01:15:13	268435464	submission.event.publicationFormatPublished	0
+88	1048585	5	3	2022-03-12 01:15:16	268435476	submission.event.publicationFormatMadeAvailable	0
+89	515	12	3	2022-03-12 01:15:18	1342177296	submission.event.fileEdited	0
+90	1048585	5	3	2022-03-12 01:15:18	1342177296	submission.event.fileEdited	0
+91	515	12	3	2022-03-12 01:15:18	1342177287	submission.event.signoffSignoff	0
+92	1048585	5	3	2022-03-12 01:15:23	268435462	publication.event.published	0
+93	1048585	6	24	2022-03-12 01:15:32	268435458	submission.event.general.metadataUpdated	0
+94	515	13	24	2022-03-12 01:15:34	1342177281	submission.event.fileUploaded	0
+95	1048585	6	24	2022-03-12 01:15:34	1342177288	submission.event.fileRevised	0
+96	515	13	24	2022-03-12 01:15:34	1342177296	submission.event.fileEdited	0
+97	1048585	6	24	2022-03-12 01:15:34	1342177296	submission.event.fileEdited	0
+98	515	14	24	2022-03-12 01:15:34	1342177281	submission.event.fileUploaded	0
+99	1048585	6	24	2022-03-12 01:15:34	1342177288	submission.event.fileRevised	0
+100	515	14	24	2022-03-12 01:15:35	1342177296	submission.event.fileEdited	0
+101	1048585	6	24	2022-03-12 01:15:35	1342177296	submission.event.fileEdited	0
+102	515	15	24	2022-03-12 01:15:35	1342177281	submission.event.fileUploaded	0
+103	1048585	6	24	2022-03-12 01:15:35	1342177288	submission.event.fileRevised	0
+104	515	15	24	2022-03-12 01:15:35	1342177296	submission.event.fileEdited	0
+105	1048585	6	24	2022-03-12 01:15:35	1342177296	submission.event.fileEdited	0
+106	515	16	24	2022-03-12 01:15:36	1342177281	submission.event.fileUploaded	0
+107	1048585	6	24	2022-03-12 01:15:36	1342177288	submission.event.fileRevised	0
+108	515	16	24	2022-03-12 01:15:36	1342177296	submission.event.fileEdited	0
+109	1048585	6	24	2022-03-12 01:15:36	1342177296	submission.event.fileEdited	0
+110	1048585	6	24	2022-03-12 01:16:32	268435458	submission.event.general.metadataUpdated	0
+111	1048585	6	24	2022-03-12 01:16:34	268435457	submission.event.submissionSubmitted	0
+112	1048585	6	3	2022-03-12 01:16:44	805306371	log.editor.decision	0
+113	1048585	6	3	2022-03-12 01:16:54	268435459	submission.event.participantAdded	0
+114	1048585	6	6	2022-03-12 01:17:07	805306372	log.editor.recommendation	0
+115	1048585	7	25	2022-03-12 01:17:27	268435458	submission.event.general.metadataUpdated	0
+116	515	17	25	2022-03-12 01:17:28	1342177281	submission.event.fileUploaded	0
+117	1048585	7	25	2022-03-12 01:17:28	1342177288	submission.event.fileRevised	0
+118	515	17	25	2022-03-12 01:17:28	1342177296	submission.event.fileEdited	0
+119	1048585	7	25	2022-03-12 01:17:29	1342177296	submission.event.fileEdited	0
+120	515	18	25	2022-03-12 01:17:29	1342177281	submission.event.fileUploaded	0
+121	1048585	7	25	2022-03-12 01:17:29	1342177288	submission.event.fileRevised	0
+122	515	18	25	2022-03-12 01:17:29	1342177296	submission.event.fileEdited	0
+123	1048585	7	25	2022-03-12 01:17:29	1342177296	submission.event.fileEdited	0
+124	515	19	25	2022-03-12 01:17:29	1342177281	submission.event.fileUploaded	0
+125	1048585	7	25	2022-03-12 01:17:29	1342177288	submission.event.fileRevised	0
+126	515	19	25	2022-03-12 01:17:30	1342177296	submission.event.fileEdited	0
+127	1048585	7	25	2022-03-12 01:17:30	1342177296	submission.event.fileEdited	0
+128	515	20	25	2022-03-12 01:17:30	1342177281	submission.event.fileUploaded	0
+129	1048585	7	25	2022-03-12 01:17:30	1342177288	submission.event.fileRevised	0
+130	515	20	25	2022-03-12 01:17:30	1342177296	submission.event.fileEdited	0
+131	1048585	7	25	2022-03-12 01:17:30	1342177296	submission.event.fileEdited	0
+132	515	21	25	2022-03-12 01:17:31	1342177281	submission.event.fileUploaded	0
+133	1048585	7	25	2022-03-12 01:17:31	1342177288	submission.event.fileRevised	0
+134	515	21	25	2022-03-12 01:17:31	1342177296	submission.event.fileEdited	0
+135	1048585	7	25	2022-03-12 01:17:31	1342177296	submission.event.fileEdited	0
+136	1048585	7	25	2022-03-12 01:19:08	268435458	submission.event.general.metadataUpdated	0
+137	1048585	7	25	2022-03-12 01:19:10	268435457	submission.event.submissionSubmitted	0
+138	1048585	7	3	2022-03-12 01:19:21	805306371	log.editor.decision	0
+139	1048585	7	3	2022-03-12 01:19:33	1073741825	log.review.reviewerAssigned	0
+140	1048585	7	3	2022-03-12 01:19:36	805306371	log.editor.decision	0
+141	1048585	7	3	2022-03-12 01:19:46	268435459	submission.event.participantAdded	0
+142	1048585	8	3	2022-03-12 01:19:55	268435458	submission.event.general.metadataUpdated	0
+143	515	22	3	2022-03-12 01:19:56	1342177281	submission.event.fileUploaded	0
+144	1048585	8	3	2022-03-12 01:19:56	1342177288	submission.event.fileRevised	0
+145	515	22	3	2022-03-12 01:19:57	1342177296	submission.event.fileEdited	0
+146	1048585	8	3	2022-03-12 01:19:57	1342177296	submission.event.fileEdited	0
+147	1048585	8	3	2022-03-12 01:19:59	268435458	submission.event.general.metadataUpdated	0
+148	1048585	8	3	2022-03-12 01:19:59	268435457	submission.event.submissionSubmitted	0
+149	1048585	9	26	2022-03-12 01:20:07	268435458	submission.event.general.metadataUpdated	0
+150	515	23	26	2022-03-12 01:20:09	1342177281	submission.event.fileUploaded	0
+151	1048585	9	26	2022-03-12 01:20:09	1342177288	submission.event.fileRevised	0
+152	515	23	26	2022-03-12 01:20:09	1342177296	submission.event.fileEdited	0
+153	1048585	9	26	2022-03-12 01:20:09	1342177296	submission.event.fileEdited	0
+154	515	24	26	2022-03-12 01:20:09	1342177281	submission.event.fileUploaded	0
+155	1048585	9	26	2022-03-12 01:20:09	1342177288	submission.event.fileRevised	0
+156	515	24	26	2022-03-12 01:20:10	1342177296	submission.event.fileEdited	0
+157	1048585	9	26	2022-03-12 01:20:10	1342177296	submission.event.fileEdited	0
+158	515	25	26	2022-03-12 01:20:10	1342177281	submission.event.fileUploaded	0
+159	1048585	9	26	2022-03-12 01:20:10	1342177288	submission.event.fileRevised	0
+160	515	25	26	2022-03-12 01:20:10	1342177296	submission.event.fileEdited	0
+161	1048585	9	26	2022-03-12 01:20:10	1342177296	submission.event.fileEdited	0
+162	515	26	26	2022-03-12 01:20:11	1342177281	submission.event.fileUploaded	0
+163	1048585	9	26	2022-03-12 01:20:11	1342177288	submission.event.fileRevised	0
+164	515	26	26	2022-03-12 01:20:11	1342177296	submission.event.fileEdited	0
+165	1048585	9	26	2022-03-12 01:20:11	1342177296	submission.event.fileEdited	0
+166	515	27	26	2022-03-12 01:20:11	1342177281	submission.event.fileUploaded	0
+167	1048585	9	26	2022-03-12 01:20:11	1342177288	submission.event.fileRevised	0
+168	515	27	26	2022-03-12 01:20:12	1342177296	submission.event.fileEdited	0
+169	1048585	9	26	2022-03-12 01:20:12	1342177296	submission.event.fileEdited	0
+170	1048585	9	26	2022-03-12 01:21:33	268435458	submission.event.general.metadataUpdated	0
+171	1048585	9	26	2022-03-12 01:21:35	268435457	submission.event.submissionSubmitted	0
+172	1048585	9	3	2022-03-12 01:21:46	805306371	log.editor.decision	0
+173	1048585	10	27	2022-03-12 01:21:59	268435458	submission.event.general.metadataUpdated	0
+174	515	28	27	2022-03-12 01:22:00	1342177281	submission.event.fileUploaded	0
+175	1048585	10	27	2022-03-12 01:22:00	1342177288	submission.event.fileRevised	0
+176	515	28	27	2022-03-12 01:22:00	1342177296	submission.event.fileEdited	0
+177	1048585	10	27	2022-03-12 01:22:00	1342177296	submission.event.fileEdited	0
+178	1048585	10	27	2022-03-12 01:22:54	268435458	submission.event.general.metadataUpdated	0
+179	1048585	10	27	2022-03-12 01:22:55	268435457	submission.event.submissionSubmitted	0
+180	1048585	11	28	2022-03-12 01:23:03	268435458	submission.event.general.metadataUpdated	0
+181	515	29	28	2022-03-12 01:23:05	1342177281	submission.event.fileUploaded	0
+182	1048585	11	28	2022-03-12 01:23:05	1342177288	submission.event.fileRevised	0
+183	515	29	28	2022-03-12 01:23:05	1342177296	submission.event.fileEdited	0
+184	1048585	11	28	2022-03-12 01:23:05	1342177296	submission.event.fileEdited	0
+185	1048585	11	28	2022-03-12 01:23:15	268435458	submission.event.general.metadataUpdated	0
+186	1048585	11	28	2022-03-12 01:23:16	268435457	submission.event.submissionSubmitted	0
+187	1048585	11	3	2022-03-12 01:23:24	805306371	log.editor.decision	0
+188	1048585	11	3	2022-03-12 01:23:32	1073741825	log.review.reviewerAssigned	0
+189	1048585	11	3	2022-03-12 01:23:34	805306371	log.editor.decision	0
+190	1048585	11	3	2022-03-12 01:23:42	1073741825	log.review.reviewerAssigned	0
+191	1048585	11	3	2022-03-12 01:23:48	1073741825	log.review.reviewerAssigned	0
+192	1048585	11	10	2022-03-12 01:23:54	1073741830	log.review.reviewAccepted	0
+193	1048585	11	10	2022-03-12 01:23:58	1073741848	log.review.reviewReady	0
+194	1048585	11	12	2022-03-12 01:24:03	1073741830	log.review.reviewAccepted	0
+195	1048585	11	12	2022-03-12 01:24:07	1073741848	log.review.reviewReady	0
+196	1048585	11	3	2022-03-12 01:24:20	805306371	log.editor.decision	0
+197	1048585	12	29	2022-03-12 01:24:32	268435458	submission.event.general.metadataUpdated	0
+198	515	30	29	2022-03-12 01:24:33	1342177281	submission.event.fileUploaded	0
+199	1048585	12	29	2022-03-12 01:24:33	1342177288	submission.event.fileRevised	0
+200	515	30	29	2022-03-12 01:24:34	1342177296	submission.event.fileEdited	0
+201	1048585	12	29	2022-03-12 01:24:34	1342177296	submission.event.fileEdited	0
+202	515	31	29	2022-03-12 01:24:34	1342177281	submission.event.fileUploaded	0
+203	1048585	12	29	2022-03-12 01:24:34	1342177288	submission.event.fileRevised	0
+204	515	31	29	2022-03-12 01:24:34	1342177296	submission.event.fileEdited	0
+205	1048585	12	29	2022-03-12 01:24:34	1342177296	submission.event.fileEdited	0
+206	515	32	29	2022-03-12 01:24:35	1342177281	submission.event.fileUploaded	0
+207	1048585	12	29	2022-03-12 01:24:35	1342177288	submission.event.fileRevised	0
+208	515	32	29	2022-03-12 01:24:35	1342177296	submission.event.fileEdited	0
+209	1048585	12	29	2022-03-12 01:24:35	1342177296	submission.event.fileEdited	0
+210	1048585	12	29	2022-03-12 01:25:49	268435458	submission.event.general.metadataUpdated	0
+211	1048585	12	29	2022-03-12 01:25:51	268435457	submission.event.submissionSubmitted	0
+212	1048585	12	3	2022-03-12 01:26:03	805306371	log.editor.decision	0
+213	1048585	12	3	2022-03-12 01:26:14	1073741825	log.review.reviewerAssigned	0
+214	1048585	12	3	2022-03-12 01:26:22	1073741825	log.review.reviewerAssigned	0
+215	1048585	12	3	2022-03-12 01:26:30	1073741825	log.review.reviewerAssigned	0
+216	1048585	12	8	2022-03-12 01:26:37	1073741830	log.review.reviewAccepted	0
+217	1048585	12	8	2022-03-12 01:26:43	1073741848	log.review.reviewReady	0
+218	1048585	13	30	2022-03-12 01:26:52	268435458	submission.event.general.metadataUpdated	0
+219	515	33	30	2022-03-12 01:26:54	1342177281	submission.event.fileUploaded	0
+220	1048585	13	30	2022-03-12 01:26:54	1342177288	submission.event.fileRevised	0
+221	515	33	30	2022-03-12 01:26:54	1342177296	submission.event.fileEdited	0
+222	1048585	13	30	2022-03-12 01:26:54	1342177296	submission.event.fileEdited	0
+223	515	34	30	2022-03-12 01:26:55	1342177281	submission.event.fileUploaded	0
+224	1048585	13	30	2022-03-12 01:26:55	1342177288	submission.event.fileRevised	0
+225	515	34	30	2022-03-12 01:26:55	1342177296	submission.event.fileEdited	0
+226	1048585	13	30	2022-03-12 01:26:55	1342177296	submission.event.fileEdited	0
+227	515	35	30	2022-03-12 01:26:55	1342177281	submission.event.fileUploaded	0
+228	1048585	13	30	2022-03-12 01:26:55	1342177288	submission.event.fileRevised	0
+229	515	35	30	2022-03-12 01:26:55	1342177296	submission.event.fileEdited	0
+230	1048585	13	30	2022-03-12 01:26:56	1342177296	submission.event.fileEdited	0
+231	1048585	13	30	2022-03-12 01:27:43	268435458	submission.event.general.metadataUpdated	0
+232	1048585	13	30	2022-03-12 01:27:44	268435457	submission.event.submissionSubmitted	0
+233	1048585	13	3	2022-03-12 01:27:56	805306371	log.editor.decision	0
+234	1048585	13	3	2022-03-12 01:28:06	1073741825	log.review.reviewerAssigned	0
+235	1048585	13	3	2022-03-12 01:28:09	805306371	log.editor.decision	0
+236	1048585	13	3	2022-03-12 01:28:19	1073741825	log.review.reviewerAssigned	0
+237	1048585	13	3	2022-03-12 01:28:26	1073741825	log.review.reviewerAssigned	0
+238	1048585	13	3	2022-03-12 01:28:33	1073741825	log.review.reviewerAssigned	0
+239	1048585	13	10	2022-03-12 01:28:41	1073741830	log.review.reviewAccepted	0
+240	1048585	13	10	2022-03-12 01:28:46	1073741848	log.review.reviewReady	0
+241	1048585	13	12	2022-03-12 01:28:54	1073741830	log.review.reviewAccepted	0
+242	1048585	13	12	2022-03-12 01:28:59	1073741848	log.review.reviewReady	0
+243	1048585	13	3	2022-03-12 01:29:15	805306371	log.editor.decision	0
+244	1048585	14	31	2022-03-12 01:29:29	268435458	submission.event.general.metadataUpdated	0
+245	515	36	31	2022-03-12 01:29:31	1342177281	submission.event.fileUploaded	0
+246	1048585	14	31	2022-03-12 01:29:31	1342177288	submission.event.fileRevised	0
+247	515	36	31	2022-03-12 01:29:31	1342177296	submission.event.fileEdited	0
+248	1048585	14	31	2022-03-12 01:29:31	1342177296	submission.event.fileEdited	0
+249	515	37	31	2022-03-12 01:29:31	1342177281	submission.event.fileUploaded	0
+250	1048585	14	31	2022-03-12 01:29:31	1342177288	submission.event.fileRevised	0
+251	515	37	31	2022-03-12 01:29:32	1342177296	submission.event.fileEdited	0
+252	1048585	14	31	2022-03-12 01:29:32	1342177296	submission.event.fileEdited	0
+253	515	38	31	2022-03-12 01:29:32	1342177281	submission.event.fileUploaded	0
+254	1048585	14	31	2022-03-12 01:29:32	1342177288	submission.event.fileRevised	0
+255	515	38	31	2022-03-12 01:29:32	1342177296	submission.event.fileEdited	0
+256	1048585	14	31	2022-03-12 01:29:32	1342177296	submission.event.fileEdited	0
+257	515	39	31	2022-03-12 01:29:33	1342177281	submission.event.fileUploaded	0
+258	1048585	14	31	2022-03-12 01:29:33	1342177288	submission.event.fileRevised	0
+259	515	39	31	2022-03-12 01:29:33	1342177296	submission.event.fileEdited	0
+260	1048585	14	31	2022-03-12 01:29:33	1342177296	submission.event.fileEdited	0
+261	515	40	31	2022-03-12 01:29:33	1342177281	submission.event.fileUploaded	0
+262	1048585	14	31	2022-03-12 01:29:33	1342177288	submission.event.fileRevised	0
+263	515	40	31	2022-03-12 01:29:34	1342177296	submission.event.fileEdited	0
+264	1048585	14	31	2022-03-12 01:29:34	1342177296	submission.event.fileEdited	0
+265	515	41	31	2022-03-12 01:29:34	1342177281	submission.event.fileUploaded	0
+266	1048585	14	31	2022-03-12 01:29:34	1342177288	submission.event.fileRevised	0
+267	515	41	31	2022-03-12 01:29:35	1342177296	submission.event.fileEdited	0
+268	1048585	14	31	2022-03-12 01:29:35	1342177296	submission.event.fileEdited	0
+269	1048585	14	31	2022-03-12 01:30:29	268435458	submission.event.general.metadataUpdated	0
+270	1048585	14	31	2022-03-12 01:30:31	268435457	submission.event.submissionSubmitted	0
+271	1048585	14	3	2022-03-12 01:30:44	805306371	log.editor.decision	0
+272	1048585	14	3	2022-03-12 01:30:54	1073741825	log.review.reviewerAssigned	0
+273	1048585	14	3	2022-03-12 01:30:57	805306371	log.editor.decision	0
+274	1048585	14	3	2022-03-12 01:31:09	1073741825	log.review.reviewerAssigned	0
+275	1048585	14	3	2022-03-12 01:31:12	805306371	log.editor.decision	0
+276	1048585	14	3	2022-03-12 01:31:22	268435459	submission.event.participantAdded	0
+277	1048585	14	3	2022-03-12 01:31:26	805306371	log.editor.decision	0
+278	1048585	14	3	2022-03-12 01:31:36	268435459	submission.event.participantAdded	0
+279	1048585	14	3	2022-03-12 01:31:44	268435459	submission.event.participantAdded	0
+280	1048585	14	3	2022-03-12 01:31:51	268435474	submission.event.publicationFormatCreated	0
+281	515	42	3	2022-03-12 01:32:00	1342177281	submission.event.fileUploaded	0
+282	1048585	14	3	2022-03-12 01:32:00	1342177288	submission.event.fileRevised	0
+283	515	43	3	2022-03-12 01:32:00	1342177281	submission.event.fileUploaded	0
+284	1048585	14	3	2022-03-12 01:32:00	1342177288	submission.event.fileRevised	0
+285	515	44	3	2022-03-12 01:32:00	1342177281	submission.event.fileUploaded	0
+286	1048585	14	3	2022-03-12 01:32:00	1342177288	submission.event.fileRevised	0
+287	515	45	3	2022-03-12 01:32:00	1342177281	submission.event.fileUploaded	0
+288	1048585	14	3	2022-03-12 01:32:00	1342177288	submission.event.fileRevised	0
+289	515	46	3	2022-03-12 01:32:00	1342177281	submission.event.fileUploaded	0
+290	1048585	14	3	2022-03-12 01:32:00	1342177288	submission.event.fileRevised	0
+291	515	47	3	2022-03-12 01:32:00	1342177281	submission.event.fileUploaded	0
+292	1048585	14	3	2022-03-12 01:32:00	1342177288	submission.event.fileRevised	0
+293	1048585	14	3	2022-03-12 01:32:03	268435464	submission.event.publicationFormatPublished	0
+294	1048585	14	3	2022-03-12 01:32:06	268435476	submission.event.publicationFormatMadeAvailable	0
+295	515	43	3	2022-03-12 01:32:08	1342177296	submission.event.fileEdited	0
+296	1048585	14	3	2022-03-12 01:32:08	1342177296	submission.event.fileEdited	0
+297	515	43	3	2022-03-12 01:32:08	1342177287	submission.event.signoffSignoff	0
+298	515	44	3	2022-03-12 01:32:15	1342177296	submission.event.fileEdited	0
+299	1048585	14	3	2022-03-12 01:32:15	1342177296	submission.event.fileEdited	0
+300	515	44	3	2022-03-12 01:32:15	1342177287	submission.event.signoffSignoff	0
+301	515	42	3	2022-03-12 01:32:22	1342177296	submission.event.fileEdited	0
+302	1048585	14	3	2022-03-12 01:32:22	1342177296	submission.event.fileEdited	0
+303	515	42	3	2022-03-12 01:32:22	1342177287	submission.event.signoffSignoff	0
+304	515	45	3	2022-03-12 01:32:29	1342177296	submission.event.fileEdited	0
+305	1048585	14	3	2022-03-12 01:32:29	1342177296	submission.event.fileEdited	0
+306	515	45	3	2022-03-12 01:32:29	1342177287	submission.event.signoffSignoff	0
+307	515	46	3	2022-03-12 01:32:36	1342177296	submission.event.fileEdited	0
+308	1048585	14	3	2022-03-12 01:32:36	1342177296	submission.event.fileEdited	0
+309	515	46	3	2022-03-12 01:32:36	1342177287	submission.event.signoffSignoff	0
+310	515	47	3	2022-03-12 01:32:43	1342177296	submission.event.fileEdited	0
+311	1048585	14	3	2022-03-12 01:32:43	1342177296	submission.event.fileEdited	0
+312	515	47	3	2022-03-12 01:32:43	1342177287	submission.event.signoffSignoff	0
+313	1048585	14	3	2022-03-12 01:32:51	268435462	publication.event.published	0
+314	1048585	15	32	2022-03-12 01:33:00	268435458	submission.event.general.metadataUpdated	0
+315	515	48	32	2022-03-12 01:33:01	1342177281	submission.event.fileUploaded	0
+316	1048585	15	32	2022-03-12 01:33:01	1342177288	submission.event.fileRevised	0
+317	515	48	32	2022-03-12 01:33:01	1342177296	submission.event.fileEdited	0
+318	1048585	15	32	2022-03-12 01:33:01	1342177296	submission.event.fileEdited	0
+319	1048585	15	32	2022-03-12 01:33:18	268435458	submission.event.general.metadataUpdated	0
+320	1048585	15	32	2022-03-12 01:33:19	268435457	submission.event.submissionSubmitted	0
+321	1048585	15	3	2022-03-12 01:33:30	805306371	log.editor.decision	0
+322	1048585	16	33	2022-03-12 01:33:41	268435458	submission.event.general.metadataUpdated	0
+323	515	49	33	2022-03-12 01:33:42	1342177281	submission.event.fileUploaded	0
+324	1048585	16	33	2022-03-12 01:33:42	1342177288	submission.event.fileRevised	0
+325	515	49	33	2022-03-12 01:33:42	1342177296	submission.event.fileEdited	0
+326	1048585	16	33	2022-03-12 01:33:42	1342177296	submission.event.fileEdited	0
+327	1048585	16	33	2022-03-12 01:34:07	268435458	submission.event.general.metadataUpdated	0
+328	1048585	16	33	2022-03-12 01:34:08	268435457	submission.event.submissionSubmitted	0
+329	1048585	16	3	2022-03-12 01:34:21	805306371	log.editor.decision	0
+330	1048585	16	3	2022-03-12 01:34:29	1073741825	log.review.reviewerAssigned	0
+331	1048585	16	3	2022-03-12 01:34:35	1073741825	log.review.reviewerAssigned	0
+332	1048585	16	3	2022-03-12 01:34:42	1073741825	log.review.reviewerAssigned	0
+333	1048585	16	10	2022-03-12 01:34:48	1073741830	log.review.reviewAccepted	0
+334	1048585	16	10	2022-03-12 01:34:52	1073741848	log.review.reviewReady	0
+335	1048585	17	34	2022-03-12 01:35:01	268435458	submission.event.general.metadataUpdated	0
+336	515	50	34	2022-03-12 01:35:03	1342177281	submission.event.fileUploaded	0
+337	1048585	17	34	2022-03-12 01:35:03	1342177288	submission.event.fileRevised	0
+338	515	50	34	2022-03-12 01:35:03	1342177296	submission.event.fileEdited	0
+339	1048585	17	34	2022-03-12 01:35:03	1342177296	submission.event.fileEdited	0
+340	515	51	34	2022-03-12 01:35:04	1342177281	submission.event.fileUploaded	0
+341	1048585	17	34	2022-03-12 01:35:04	1342177288	submission.event.fileRevised	0
+342	515	51	34	2022-03-12 01:35:04	1342177296	submission.event.fileEdited	0
+343	1048585	17	34	2022-03-12 01:35:04	1342177296	submission.event.fileEdited	0
+344	515	52	34	2022-03-12 01:35:04	1342177281	submission.event.fileUploaded	0
+345	1048585	17	34	2022-03-12 01:35:04	1342177288	submission.event.fileRevised	0
+346	515	52	34	2022-03-12 01:35:05	1342177296	submission.event.fileEdited	0
+347	1048585	17	34	2022-03-12 01:35:05	1342177296	submission.event.fileEdited	0
+348	515	53	34	2022-03-12 01:35:05	1342177281	submission.event.fileUploaded	0
+349	1048585	17	34	2022-03-12 01:35:05	1342177288	submission.event.fileRevised	0
+350	515	53	34	2022-03-12 01:35:05	1342177296	submission.event.fileEdited	0
+351	1048585	17	34	2022-03-12 01:35:05	1342177296	submission.event.fileEdited	0
+352	515	54	34	2022-03-12 01:35:06	1342177281	submission.event.fileUploaded	0
+353	1048585	17	34	2022-03-12 01:35:06	1342177288	submission.event.fileRevised	0
+354	515	54	34	2022-03-12 01:35:06	1342177296	submission.event.fileEdited	0
+355	1048585	17	34	2022-03-12 01:35:06	1342177296	submission.event.fileEdited	0
+356	515	55	34	2022-03-12 01:35:06	1342177281	submission.event.fileUploaded	0
+357	1048585	17	34	2022-03-12 01:35:06	1342177288	submission.event.fileRevised	0
+358	515	55	34	2022-03-12 01:35:07	1342177296	submission.event.fileEdited	0
+359	1048585	17	34	2022-03-12 01:35:07	1342177296	submission.event.fileEdited	0
+360	1048585	17	34	2022-03-12 01:37:18	268435458	submission.event.general.metadataUpdated	0
+361	1048585	17	34	2022-03-12 01:37:20	268435457	submission.event.submissionSubmitted	0
+362	1048585	17	3	2022-03-12 01:37:36	805306371	log.editor.decision	0
+363	1048585	17	3	2022-03-12 01:37:51	1073741825	log.review.reviewerAssigned	0
+364	1048585	17	3	2022-03-12 01:38:00	1073741825	log.review.reviewerAssigned	0
 \.
+
+
+--
+-- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.event_log_log_id_seq', 364, true);
 
 
 --
@@ -7654,55 +7772,62 @@ COPY public.features (submission_id, assoc_type, assoc_id, seq) FROM stdin;
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	presses/1/monographs/1/6227c452062e0.pdf	application/pdf
-2	presses/1/monographs/2/6227c4890625b.pdf	application/pdf
-3	presses/1/monographs/2/6227c489a256b.pdf	application/pdf
-4	presses/1/monographs/2/6227c48a671f8.pdf	application/pdf
-5	presses/1/monographs/2/6227c48b1847c.pdf	application/pdf
-6	presses/1/monographs/3/6227c51c591d5.pdf	application/pdf
-7	presses/1/monographs/4/6227c5450a8a7.pdf	application/pdf
-8	presses/1/monographs/4/6227c5459c205.pdf	application/pdf
-9	presses/1/monographs/4/6227c54646e29.pdf	application/pdf
-10	presses/1/monographs/4/6227c546e71de.pdf	application/pdf
-11	presses/1/monographs/5/6227c5d5f3e76.pdf	application/pdf
-12	presses/1/monographs/6/6227c65a33031.pdf	application/pdf
-13	presses/1/monographs/6/6227c65ac1c16.pdf	application/pdf
-14	presses/1/monographs/6/6227c65b63bfb.pdf	application/pdf
-15	presses/1/monographs/6/6227c65c1b07c.pdf	application/pdf
-16	presses/1/monographs/7/6227c6cbe04f3.pdf	application/pdf
-17	presses/1/monographs/7/6227c6cc8de66.pdf	application/pdf
-18	presses/1/monographs/7/6227c6cd35483.pdf	application/pdf
-19	presses/1/monographs/7/6227c6cdd9d0a.pdf	application/pdf
-20	presses/1/monographs/7/6227c6ce8f56a.pdf	application/pdf
-21	presses/1/monographs/8/6227c763c7794.pdf	application/pdf
-22	presses/1/monographs/9/6227c770074f1.pdf	application/pdf
-23	presses/1/monographs/9/6227c7709258c.pdf	application/pdf
-24	presses/1/monographs/9/6227c77138cc2.pdf	application/pdf
-25	presses/1/monographs/9/6227c771df964.pdf	application/pdf
-26	presses/1/monographs/9/6227c7728ceea.pdf	application/pdf
-27	presses/1/monographs/10/6227c7e33b188.pdf	application/pdf
-28	presses/1/monographs/11/6227c8248cb98.pdf	application/pdf
-29	presses/1/monographs/12/6227c87e5a4cf.pdf	application/pdf
-30	presses/1/monographs/12/6227c87f028da.pdf	application/pdf
-31	presses/1/monographs/12/6227c87f98608.pdf	application/pdf
-32	presses/1/monographs/13/6227c90ca8ed5.pdf	application/pdf
-33	presses/1/monographs/13/6227c90d51a1e.pdf	application/pdf
-34	presses/1/monographs/13/6227c90e0d166.pdf	application/pdf
-35	presses/1/monographs/14/6227c9afdecc9.pdf	application/pdf
-36	presses/1/monographs/14/6227c9b07874a.pdf	application/pdf
-37	presses/1/monographs/14/6227c9b11cc91.pdf	application/pdf
-38	presses/1/monographs/14/6227c9b1baef8.pdf	application/pdf
-39	presses/1/monographs/14/6227c9b26ba47.pdf	application/pdf
-40	presses/1/monographs/14/6227c9b399293.pdf	application/pdf
-41	presses/1/monographs/15/6227ca84cdd2f.pdf	application/pdf
-42	presses/1/monographs/16/6227cab168950.pdf	application/pdf
-43	presses/1/monographs/17/6227cb029ade2.pdf	application/pdf
-44	presses/1/monographs/17/6227cb033ac1a.pdf	application/pdf
-45	presses/1/monographs/17/6227cb03ea843.pdf	application/pdf
-46	presses/1/monographs/17/6227cb049c74e.pdf	application/pdf
-47	presses/1/monographs/17/6227cb0562a0c.pdf	application/pdf
-48	presses/1/monographs/17/6227cb0636305.pdf	application/pdf
+1	presses/1/monographs/1/622bf2317cfb4.pdf	application/pdf
+2	presses/1/monographs/2/622bf26604908.pdf	application/pdf
+3	presses/1/monographs/2/622bf266937d6.pdf	application/pdf
+4	presses/1/monographs/2/622bf26748ddc.pdf	application/pdf
+5	presses/1/monographs/2/622bf267f19fa.pdf	application/pdf
+6	presses/1/monographs/3/622bf2f926ce6.pdf	application/pdf
+7	presses/1/monographs/4/622bf323d5c22.pdf	application/pdf
+8	presses/1/monographs/4/622bf324773e1.pdf	application/pdf
+9	presses/1/monographs/4/622bf32518e97.pdf	application/pdf
+10	presses/1/monographs/4/622bf325b3c65.pdf	application/pdf
+11	presses/1/monographs/5/622bf3b638d27.pdf	application/pdf
+12	presses/1/monographs/6/622bf43631ebb.pdf	application/pdf
+13	presses/1/monographs/6/622bf436c2b47.pdf	application/pdf
+14	presses/1/monographs/6/622bf43766774.pdf	application/pdf
+15	presses/1/monographs/6/622bf4381133d.pdf	application/pdf
+16	presses/1/monographs/7/622bf4a8898ec.pdf	application/pdf
+17	presses/1/monographs/7/622bf4a9307ab.pdf	application/pdf
+18	presses/1/monographs/7/622bf4a9cb5b5.pdf	application/pdf
+19	presses/1/monographs/7/622bf4aa7a94c.pdf	application/pdf
+20	presses/1/monographs/7/622bf4ab2c879.pdf	application/pdf
+21	presses/1/monographs/8/622bf53ccc6c1.pdf	application/pdf
+22	presses/1/monographs/9/622bf548f2803.pdf	application/pdf
+23	presses/1/monographs/9/622bf5499579e.pdf	application/pdf
+24	presses/1/monographs/9/622bf54a47dc5.pdf	application/pdf
+25	presses/1/monographs/9/622bf54aec1df.pdf	application/pdf
+26	presses/1/monographs/9/622bf54ba29fe.pdf	application/pdf
+27	presses/1/monographs/10/622bf5b8698b9.pdf	application/pdf
+28	presses/1/monographs/11/622bf5f9411b1.pdf	application/pdf
+29	presses/1/monographs/12/622bf651c3dd5.pdf	application/pdf
+30	presses/1/monographs/12/622bf6526ee75.pdf	application/pdf
+31	presses/1/monographs/12/622bf6530e3e1.pdf	application/pdf
+32	presses/1/monographs/13/622bf6de56596.pdf	application/pdf
+33	presses/1/monographs/13/622bf6dee6ad7.pdf	application/pdf
+34	presses/1/monographs/13/622bf6df92ff8.pdf	application/pdf
+35	presses/1/monographs/14/622bf77b2f4ae.pdf	application/pdf
+36	presses/1/monographs/14/622bf77bb8913.pdf	application/pdf
+37	presses/1/monographs/14/622bf77c5c936.pdf	application/pdf
+38	presses/1/monographs/14/622bf77d09395.pdf	application/pdf
+39	presses/1/monographs/14/622bf77db14c7.pdf	application/pdf
+40	presses/1/monographs/14/622bf77ec655e.pdf	application/pdf
+41	presses/1/monographs/15/622bf84d89e64.pdf	application/pdf
+42	presses/1/monographs/16/622bf87659877.pdf	application/pdf
+43	presses/1/monographs/17/622bf8c769cd5.pdf	application/pdf
+44	presses/1/monographs/17/622bf8c80c7f3.pdf	application/pdf
+45	presses/1/monographs/17/622bf8c8a7317.pdf	application/pdf
+46	presses/1/monographs/17/622bf8c954919.pdf	application/pdf
+47	presses/1/monographs/17/622bf8ca12b15.pdf	application/pdf
+48	presses/1/monographs/17/622bf8cac21f5.pdf	application/pdf
 \.
+
+
+--
+-- Name: files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.files_file_id_seq', 48, true);
 
 
 --
@@ -7711,25 +7836,32 @@ COPY public.files (file_id, path, mimetype) FROM stdin;
 
 COPY public.filter_groups (filter_group_id, symbolic, display_name, description, input_type, output_type) FROM stdin;
 1	publicationFormat=>dc11	plugins.metadata.dc11.publicationFormatAdapter.displayName	plugins.metadata.dc11.publicationFormatAdapter.description	class::classes.publicationFormat.PublicationFormat	metadata::plugins.metadata.dc11.schema.Dc11Schema(PUBLICATION_FORMAT)
-2	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-3	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
-4	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-5	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
-6	monograph=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
-7	native-xml=>monograph	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
-8	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.monograph.Author[]	xml::schema(plugins/importexport/native/native.xsd)
-9	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.monograph.Author[]
-10	publication-format=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publicationFormat.PublicationFormat	xml::schema(plugins/importexport/native/native.xsd)
-11	native-xml=>PublicationFormat	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publicationFormat.PublicationFormat[]
-12	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
-13	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
-14	monograph=>onix30-xml	plugins.importexport.onix30.displayName	plugins.importexport.onix30.description	class::classes.submission.Submission	xml::schema(plugins/importexport/native/ONIX_BookProduct_3.0_reference_notstrict.xsd)
-15	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
-16	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
-17	chapter=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.monograph.Chapter[]	xml::schema(plugins/importexport/native/native.xsd)
-18	native-xml=>chapter	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.monograph.Chapter
-19	monographs=>onix30-xml	plugins.importexport.onix30.displayName	plugins.importexport.onix30.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/onix30/ONIX_BookProduct_3.0_reference.xsd)
+2	monograph=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
+3	native-xml=>monograph	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
+4	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.monograph.Author[]	xml::schema(plugins/importexport/native/native.xsd)
+5	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.monograph.Author[]
+6	publication-format=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publicationFormat.PublicationFormat	xml::schema(plugins/importexport/native/native.xsd)
+7	native-xml=>PublicationFormat	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publicationFormat.PublicationFormat[]
+8	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
+9	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
+10	monograph=>onix30-xml	plugins.importexport.onix30.displayName	plugins.importexport.onix30.description	class::classes.submission.Submission	xml::schema(plugins/importexport/native/ONIX_BookProduct_3.0_reference_notstrict.xsd)
+11	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
+12	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
+13	chapter=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.monograph.Chapter[]	xml::schema(plugins/importexport/native/native.xsd)
+14	native-xml=>chapter	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.monograph.Chapter
+15	monographs=>onix30-xml	plugins.importexport.onix30.displayName	plugins.importexport.onix30.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/onix30/ONIX_BookProduct_3.0_reference.xsd)
+16	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+17	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
+18	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+19	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
 \.
+
+
+--
+-- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.filter_groups_filter_group_id_seq', 19, true);
 
 
 --
@@ -7746,25 +7878,32 @@ COPY public.filter_settings (filter_id, locale, setting_name, setting_value, set
 
 COPY public.filters (filter_id, filter_group_id, context_id, display_name, class_name, is_template, parent_filter_id, seq) FROM stdin;
 1	1	0	Extract metadata from a(n) PublicationFormat	plugins.metadata.dc11.filter.Dc11SchemaPublicationFormatAdapter	0	0	0
-2	2	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
-3	3	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
-4	4	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
-5	5	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
-6	6	0	Native XML submission export	plugins.importexport.native.filter.MonographNativeXmlFilter	0	0	0
-7	7	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlMonographFilter	0	0	0
-8	8	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
-9	9	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
-10	10	0	Native XML representation export	plugins.importexport.native.filter.PublicationFormatNativeXmlFilter	0	0	0
-11	11	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlPublicationFormatFilter	0	0	0
-12	13	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlMonographFileFilter	0	0	0
-13	12	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
-14	14	0	ONIX 3.0 XML monograph export	plugins.importexport.onix30.filter.MonographONIX30XmlFilter	0	0	0
-15	15	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
-16	16	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
-17	17	0	Native XML chapter export	plugins.importexport.native.filter.ChapterNativeXmlFilter	0	0	0
-18	18	0	Native XML Chapter import	plugins.importexport.native.filter.NativeXmlChapterFilter	0	0	0
-19	19	0	ONIX 3.0 XML monograph export	plugins.importexport.onix30.filter.MonographONIX30XmlFilter	0	0	0
+2	2	0	Native XML submission export	plugins.importexport.native.filter.MonographNativeXmlFilter	0	0	0
+3	3	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlMonographFilter	0	0	0
+4	4	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
+5	5	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
+6	6	0	Native XML representation export	plugins.importexport.native.filter.PublicationFormatNativeXmlFilter	0	0	0
+7	7	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlPublicationFormatFilter	0	0	0
+8	9	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlMonographFileFilter	0	0	0
+9	8	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
+10	10	0	ONIX 3.0 XML monograph export	plugins.importexport.onix30.filter.MonographONIX30XmlFilter	0	0	0
+11	11	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
+12	12	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
+13	13	0	Native XML chapter export	plugins.importexport.native.filter.ChapterNativeXmlFilter	0	0	0
+14	14	0	Native XML Chapter import	plugins.importexport.native.filter.NativeXmlChapterFilter	0	0	0
+15	15	0	ONIX 3.0 XML monograph export	plugins.importexport.onix30.filter.MonographONIX30XmlFilter	0	0	0
+16	16	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
+17	17	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
+18	18	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
+19	19	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
 \.
+
+
+--
+-- Name: filters_filter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.filters_filter_id_seq', 19, true);
 
 
 --
@@ -7829,11 +7968,25 @@ COPY public.genres (genre_id, context_id, seq, enabled, category, dependent, sup
 
 
 --
+-- Name: genres_genre_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.genres_genre_id_seq', 15, true);
+
+
+--
 -- Data for Name: identification_codes; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.identification_codes (identification_code_id, publication_format_id, code, value) FROM stdin;
 \.
+
+
+--
+-- Name: identification_codes_identification_code_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.identification_codes_identification_code_id_seq', 1, false);
 
 
 --
@@ -7853,6 +8006,13 @@ COPY public.jobs (id, queue, payload, attempts, reserved_at, available_at, creat
 
 
 --
+-- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.jobs_id_seq', 1, false);
+
+
+--
 -- Data for Name: library_file_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -7869,11 +8029,25 @@ COPY public.library_files (file_id, context_id, file_name, original_file_name, f
 
 
 --
+-- Name: library_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.library_files_file_id_seq', 1, false);
+
+
+--
 -- Data for Name: markets; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.markets (market_id, publication_format_id, countries_included, countries_excluded, regions_included, regions_excluded, market_date_role, market_date_format, market_date, price, discount, price_type_code, currency_code, tax_rate_code, tax_type_code, agent_id, supplier_id) FROM stdin;
 \.
+
+
+--
+-- Name: markets_market_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.markets_market_id_seq', 1, false);
 
 
 --
@@ -7893,11 +8067,25 @@ COPY public.metadata_descriptions (metadata_description_id, assoc_type, assoc_id
 
 
 --
+-- Name: metadata_descriptions_metadata_description_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metadata_descriptions_metadata_description_id_seq', 1, false);
+
+
+--
 -- Data for Name: metrics; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.metrics (load_id, context_id, pkp_section_id, assoc_object_type, assoc_object_id, submission_id, representation_id, assoc_type, assoc_id, day, month, file_type, country_id, region, city, metric_type, metric) FROM stdin;
 \.
+
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq', 22, true);
 
 
 --
@@ -8001,6 +8189,13 @@ COPY public.navigation_menu_items (navigation_menu_item_id, context_id, path, ty
 
 
 --
+-- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_items_navigation_menu_item_id_seq', 23, true);
+
+
+--
 -- Data for Name: navigation_menus; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -8009,6 +8204,13 @@ COPY public.navigation_menus (navigation_menu_id, context_id, area_name, title) 
 2	1	user	User Navigation Menu
 3	1	primary	Primary Navigation Menu
 \.
+
+
+--
+-- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menus_navigation_menu_id_seq', 3, true);
 
 
 --
@@ -8024,8 +8226,15 @@ COPY public.new_releases (submission_id, assoc_type, assoc_id) FROM stdin;
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2022-03-08 21:12:22	2022-03-08 21:12:22	Recommendation	<p>Daniel Barnes:<br><br>The recommendation regarding the submission to Public Knowledge Press, "The Information Literacy User’s Guide" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+1	1048586	1	6	2022-03-12 01:17:07	2022-03-12 01:17:07	Recommendation	<p>Daniel Barnes:<br><br>The recommendation regarding the submission to Public Knowledge Press, "The Information Literacy User’s Guide" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
 \.
+
+
+--
+-- Name: notes_note_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notes_note_id_seq', 1, true);
 
 
 --
@@ -8034,6 +8243,13 @@ COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_mo
 
 COPY public.notification_mail_list (notification_mail_list_id, email, confirmed, token, context) FROM stdin;
 \.
+
+
+--
+-- Name: notification_mail_list_notification_mail_list_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notification_mail_list_notification_mail_list_id_seq', 1, false);
 
 
 --
@@ -8069,126 +8285,140 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 
 
 --
+-- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_seq', 16, true);
+
+
+--
 -- Data for Name: notifications; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-106	1	3	2	16777217	2022-03-08 21:09:16	\N	1048585	5
-321	1	3	2	16777219	2022-03-08 21:24:17	\N	517	16
-153	1	3	3	16777249	2022-03-08 21:12:22	\N	1048586	1
-75	1	3	2	16777217	2022-03-08 21:07:22	\N	1048585	4
-253	1	28	2	16777230	2022-03-08 21:19:45	\N	1048585	11
-77	1	0	2	16777243	2022-03-08 21:07:22	\N	1048585	4
-169	1	3	2	16777217	2022-03-08 21:14:27	\N	1048585	7
-40	1	3	2	16777217	2022-03-08 21:04:50	\N	1048585	2
-247	1	3	2	16777219	2022-03-08 21:19:23	\N	517	10
-42	1	0	2	16777243	2022-03-08 21:04:50	\N	1048585	2
-43	1	0	2	16777245	2022-03-08 21:04:50	\N	1048585	2
-171	1	0	2	16777243	2022-03-08 21:14:27	\N	1048585	7
-324	1	3	2	16777219	2022-03-08 21:24:30	\N	517	18
-172	1	0	2	16777245	2022-03-08 21:14:27	\N	1048585	7
-47	1	20	2	16777231	2022-03-08 21:05:00	\N	1048585	2
-46	1	0	2	16777236	2022-03-08 21:05:00	2022-03-08 21:05:04	523	2
-11	1	3	2	16777217	2022-03-08 21:02:27	\N	1048585	1
-48	1	11	3	16777227	2022-03-08 21:05:11	\N	517	2
-13	1	0	2	16777243	2022-03-08 21:02:27	\N	1048585	1
-14	1	0	2	16777245	2022-03-08 21:02:27	\N	1048585	1
-81	1	0	2	16777236	2022-03-08 21:07:32	2022-03-08 21:07:36	523	3
-83	1	9	3	16777227	2022-03-08 21:07:42	\N	517	4
-250	1	3	2	16777219	2022-03-08 21:19:32	\N	517	11
-16	1	0	2	16777236	2022-03-08 21:02:34	2022-03-08 21:02:37	523	1
-18	1	12	3	16777227	2022-03-08 21:02:42	\N	517	1
-51	1	12	3	16777227	2022-03-08 21:05:21	\N	517	3
-270	1	0	2	16777243	2022-03-08 21:21:18	\N	1048585	12
-22	1	19	2	16777230	2022-03-08 21:02:44	\N	1048585	1
-254	1	3	2	16777251	2022-03-08 21:19:45	2022-03-08 21:19:48	1048585	11
-23	1	3	2	16777251	2022-03-08 21:02:44	2022-03-08 21:02:47	1048585	1
-86	1	0	2	16777236	2022-03-08 21:07:46	2022-03-08 21:07:50	523	4
-89	1	11	3	16777227	2022-03-08 21:07:57	\N	517	5
-111	1	0	2	16777236	2022-03-08 21:09:24	2022-03-08 21:09:28	523	5
-59	1	3	2	16777217	2022-03-08 21:06:03	\N	1048585	3
-61	1	0	2	16777243	2022-03-08 21:06:03	\N	1048585	3
-62	1	0	2	16777245	2022-03-08 21:06:03	\N	1048585	3
-113	1	8	3	16777227	2022-03-08 21:09:33	\N	517	6
-175	1	0	2	16777236	2022-03-08 21:14:38	2022-03-08 21:14:42	523	8
-97	1	22	2	16777235	2022-03-08 21:08:16	\N	1048585	4
-98	1	3	2	16777254	2022-03-08 21:08:16	\N	1048585	4
-78	1	0	2	16777245	2022-03-08 21:07:22	2022-03-08 21:08:20	1048585	4
-177	1	10	3	16777227	2022-03-08 21:14:50	\N	517	8
-419	1	3	2	16777217	2022-03-08 21:33:01	\N	1048585	17
-268	1	3	2	16777217	2022-03-08 21:21:18	\N	1048585	12
-230	1	0	2	16777245	2022-03-08 21:18:40	\N	1048585	11
-271	1	0	2	16777245	2022-03-08 21:21:18	\N	1048585	12
-116	1	0	2	16777236	2022-03-08 21:09:35	2022-03-08 21:09:39	523	6
-181	1	25	2	16777230	2022-03-08 21:14:54	\N	1048585	7
-119	1	12	3	16777227	2022-03-08 21:09:45	\N	517	7
-182	1	3	2	16777251	2022-03-08 21:14:54	2022-03-08 21:14:58	1048585	7
-275	1	29	2	16777229	2022-03-08 21:21:29	\N	1048585	12
-184	1	3	2	16777217	2022-03-08 21:15:18	\N	1048585	8
-274	1	0	2	16777236	2022-03-08 21:21:29	2022-03-08 21:21:33	523	12
-186	1	0	2	16777243	2022-03-08 21:15:18	\N	1048585	8
-187	1	0	2	16777245	2022-03-08 21:15:18	\N	1048585	8
-276	1	7	3	16777227	2022-03-08 21:21:41	\N	517	12
-220	1	3	2	16777217	2022-03-08 21:18:19	\N	1048585	10
-127	1	23	2	16777235	2022-03-08 21:10:00	\N	1048585	5
-128	1	3	2	16777254	2022-03-08 21:10:00	\N	1048585	5
-282	1	9	3	16777227	2022-03-08 21:21:56	\N	517	14
-203	1	3	2	16777217	2022-03-08 21:16:57	\N	1048585	9
-131	1	0	2	16777246	2022-03-08 21:10:38	\N	1048585	5
-205	1	0	2	16777243	2022-03-08 21:16:57	\N	1048585	9
-206	1	0	2	16777245	2022-03-08 21:16:57	\N	1048585	9
-143	1	3	2	16777217	2022-03-08 21:11:49	\N	1048585	6
-145	1	0	2	16777243	2022-03-08 21:11:49	\N	1048585	6
-146	1	0	2	16777245	2022-03-08 21:11:49	\N	1048585	6
-222	1	0	2	16777243	2022-03-08 21:18:19	\N	1048585	10
-210	1	26	2	16777229	2022-03-08 21:17:08	\N	1048585	9
-150	1	24	2	16777229	2022-03-08 21:12:00	\N	1048585	6
-149	1	0	2	16777236	2022-03-08 21:12:00	2022-03-08 21:12:04	523	7
-209	1	0	2	16777236	2022-03-08 21:17:08	2022-03-08 21:17:13	523	9
-223	1	0	2	16777245	2022-03-08 21:18:19	\N	1048585	10
-237	1	0	2	16777236	2022-03-08 21:18:58	2022-03-08 21:19:02	523	11
-227	1	3	2	16777217	2022-03-08 21:18:40	\N	1048585	11
-229	1	0	2	16777243	2022-03-08 21:18:40	\N	1048585	11
-232	1	0	2	16777236	2022-03-08 21:18:48	2022-03-08 21:18:51	523	10
-234	1	9	3	16777227	2022-03-08 21:18:56	\N	517	9
-362	1	3	2	16777254	2022-03-08 21:27:02	\N	1048585	14
-286	1	3	2	16777219	2022-03-08 21:22:09	\N	517	13
-327	1	30	2	16777230	2022-03-08 21:24:47	\N	1048585	13
-328	1	3	2	16777251	2022-03-08 21:24:47	2022-03-08 21:24:52	1048585	13
-394	1	12	3	16777227	2022-03-08 21:30:21	\N	517	23
-365	1	0	2	16777246	2022-03-08 21:28:25	\N	1048585	14
-421	1	0	2	16777243	2022-03-08 21:33:01	\N	1048585	17
-297	1	3	2	16777217	2022-03-08 21:23:14	\N	1048585	13
-422	1	0	2	16777245	2022-03-08 21:33:01	\N	1048585	17
-299	1	0	2	16777243	2022-03-08 21:23:14	\N	1048585	13
-300	1	0	2	16777245	2022-03-08 21:23:14	\N	1048585	13
-339	1	3	2	16777217	2022-03-08 21:26:06	\N	1048585	14
-303	1	0	2	16777236	2022-03-08 21:23:26	2022-03-08 21:23:29	523	13
-305	1	8	3	16777227	2022-03-08 21:23:36	\N	517	15
-426	1	34	2	16777229	2022-03-08 21:33:18	\N	1048585	17
-425	1	0	2	16777236	2022-03-08 21:33:18	2022-03-08 21:33:22	523	19
-427	1	7	3	16777227	2022-03-08 21:33:31	\N	517	24
-308	1	0	2	16777236	2022-03-08 21:23:39	2022-03-08 21:23:42	523	14
-430	1	8	3	16777227	2022-03-08 21:33:40	\N	517	25
-345	1	0	2	16777236	2022-03-08 21:26:18	2022-03-08 21:26:21	523	15
-347	1	7	3	16777227	2022-03-08 21:26:28	\N	517	19
-314	1	11	3	16777227	2022-03-08 21:23:57	\N	517	17
-369	1	3	2	16777217	2022-03-08 21:28:56	\N	1048585	15
-371	1	0	2	16777243	2022-03-08 21:28:56	\N	1048585	15
-350	1	0	2	16777236	2022-03-08 21:26:32	2022-03-08 21:26:36	523	16
-353	1	11	3	16777227	2022-03-08 21:26:43	\N	517	20
-372	1	0	2	16777245	2022-03-08 21:28:56	\N	1048585	15
-398	1	3	2	16777219	2022-03-08 21:30:31	\N	517	21
-361	1	31	2	16777235	2022-03-08 21:27:02	\N	1048585	14
-375	1	32	2	16777231	2022-03-08 21:29:07	\N	1048585	15
-374	1	0	2	16777236	2022-03-08 21:29:07	2022-03-08 21:29:10	523	17
-381	1	3	2	16777217	2022-03-08 21:29:47	\N	1048585	16
-383	1	0	2	16777243	2022-03-08 21:29:47	\N	1048585	16
-384	1	0	2	16777245	2022-03-08 21:29:47	\N	1048585	16
-387	1	33	2	16777231	2022-03-08 21:29:59	\N	1048585	16
-386	1	0	2	16777236	2022-03-08 21:29:59	2022-03-08 21:30:02	523	18
-391	1	11	3	16777227	2022-03-08 21:30:14	\N	517	22
+77	1	0	2	16777243	2022-03-12 01:12:13	\N	1048585	4
+270	1	0	2	16777243	2022-03-12 01:25:51	\N	1048585	12
+40	1	3	2	16777217	2022-03-12 01:09:35	\N	1048585	2
+42	1	0	2	16777243	2022-03-12 01:09:36	\N	1048585	2
+43	1	0	2	16777245	2022-03-12 01:09:36	\N	1048585	2
+182	1	3	2	16777251	2022-03-12 01:19:37	2022-03-12 01:19:40	1048585	7
+345	1	0	2	16777236	2022-03-12 01:30:44	2022-03-12 01:30:47	523	15
+150	1	24	2	16777229	2022-03-12 01:16:44	\N	1048585	6
+47	1	20	2	16777231	2022-03-12 01:09:45	\N	1048585	2
+46	1	0	2	16777236	2022-03-12 01:09:45	2022-03-12 01:09:50	523	2
+48	1	11	3	16777227	2022-03-12 01:09:58	\N	517	2
+350	1	0	2	16777236	2022-03-12 01:30:58	2022-03-12 01:31:02	523	16
+11	1	3	2	16777217	2022-03-12 01:07:14	\N	1048585	1
+149	1	0	2	16777236	2022-03-12 01:16:44	2022-03-12 01:16:49	523	7
+13	1	0	2	16777243	2022-03-12 01:07:14	\N	1048585	1
+14	1	0	2	16777245	2022-03-12 01:07:14	\N	1048585	1
+51	1	12	3	16777227	2022-03-12 01:10:06	\N	517	3
+106	1	3	2	16777217	2022-03-12 01:14:01	\N	1048585	5
+184	1	3	2	16777217	2022-03-12 01:19:59	\N	1048585	8
+16	1	0	2	16777236	2022-03-12 01:07:21	2022-03-12 01:07:24	523	1
+18	1	12	3	16777227	2022-03-12 01:07:29	\N	517	1
+81	1	0	2	16777236	2022-03-12 01:12:22	2022-03-12 01:12:26	523	3
+169	1	3	2	16777217	2022-03-12 01:19:10	\N	1048585	7
+83	1	9	3	16777227	2022-03-12 01:12:33	\N	517	4
+22	1	19	2	16777230	2022-03-12 01:07:31	\N	1048585	1
+131	1	0	2	16777246	2022-03-12 01:15:23	\N	1048585	5
+23	1	3	2	16777251	2022-03-12 01:07:31	2022-03-12 01:07:34	1048585	1
+171	1	0	2	16777243	2022-03-12 01:19:10	\N	1048585	7
+111	1	0	2	16777236	2022-03-12 01:14:09	2022-03-12 01:14:12	523	5
+113	1	8	3	16777227	2022-03-12 01:14:18	\N	517	6
+59	1	3	2	16777217	2022-03-12 01:10:50	\N	1048585	3
+172	1	0	2	16777245	2022-03-12 01:19:10	\N	1048585	7
+61	1	0	2	16777243	2022-03-12 01:10:50	\N	1048585	3
+62	1	0	2	16777245	2022-03-12 01:10:50	\N	1048585	3
+186	1	0	2	16777243	2022-03-12 01:19:59	\N	1048585	8
+187	1	0	2	16777245	2022-03-12 01:19:59	\N	1048585	8
+116	1	0	2	16777236	2022-03-12 01:14:21	2022-03-12 01:14:24	523	6
+119	1	12	3	16777227	2022-03-12 01:14:31	\N	517	7
+86	1	0	2	16777236	2022-03-12 01:12:36	2022-03-12 01:12:40	523	4
+268	1	3	2	16777217	2022-03-12 01:25:51	\N	1048585	12
+89	1	11	3	16777227	2022-03-12 01:12:46	\N	517	5
+175	1	0	2	16777236	2022-03-12 01:19:21	2022-03-12 01:19:25	523	8
+177	1	10	3	16777227	2022-03-12 01:19:33	\N	517	8
+271	1	0	2	16777245	2022-03-12 01:25:51	\N	1048585	12
+234	1	9	3	16777227	2022-03-12 01:23:32	\N	517	9
+153	1	3	3	16777249	2022-03-12 01:17:07	\N	1048586	1
+181	1	25	2	16777230	2022-03-12 01:19:37	\N	1048585	7
+127	1	23	2	16777235	2022-03-12 01:14:46	\N	1048585	5
+75	1	3	2	16777217	2022-03-12 01:12:13	\N	1048585	4
+128	1	3	2	16777254	2022-03-12 01:14:46	\N	1048585	5
+275	1	29	2	16777229	2022-03-12 01:26:03	\N	1048585	12
+274	1	0	2	16777236	2022-03-12 01:26:03	2022-03-12 01:26:07	523	12
+276	1	7	3	16777227	2022-03-12 01:26:14	\N	517	12
+97	1	22	2	16777235	2022-03-12 01:13:05	\N	1048585	4
+98	1	3	2	16777254	2022-03-12 01:13:05	\N	1048585	4
+78	1	0	2	16777245	2022-03-12 01:12:13	2022-03-12 01:13:09	1048585	4
+210	1	26	2	16777229	2022-03-12 01:21:46	\N	1048585	9
+282	1	9	3	16777227	2022-03-12 01:26:30	\N	517	14
+209	1	0	2	16777236	2022-03-12 01:21:46	2022-03-12 01:21:50	523	9
+143	1	3	2	16777217	2022-03-12 01:16:34	\N	1048585	6
+145	1	0	2	16777243	2022-03-12 01:16:34	\N	1048585	6
+146	1	0	2	16777245	2022-03-12 01:16:34	\N	1048585	6
+203	1	3	2	16777217	2022-03-12 01:21:35	\N	1048585	9
+205	1	0	2	16777243	2022-03-12 01:21:35	\N	1048585	9
+206	1	0	2	16777245	2022-03-12 01:21:35	\N	1048585	9
+227	1	3	2	16777217	2022-03-12 01:23:16	\N	1048585	11
+220	1	3	2	16777217	2022-03-12 01:22:55	\N	1048585	10
+222	1	0	2	16777243	2022-03-12 01:22:55	\N	1048585	10
+223	1	0	2	16777245	2022-03-12 01:22:55	\N	1048585	10
+229	1	0	2	16777243	2022-03-12 01:23:16	\N	1048585	11
+230	1	0	2	16777245	2022-03-12 01:23:16	\N	1048585	11
+237	1	0	2	16777236	2022-03-12 01:23:34	2022-03-12 01:23:37	523	11
+232	1	0	2	16777236	2022-03-12 01:23:24	2022-03-12 01:23:27	523	10
+247	1	3	2	16777219	2022-03-12 01:23:58	\N	517	10
+253	1	28	2	16777230	2022-03-12 01:24:20	\N	1048585	11
+250	1	3	2	16777219	2022-03-12 01:24:07	\N	517	11
+254	1	3	2	16777251	2022-03-12 01:24:20	2022-03-12 01:24:23	1048585	11
+339	1	3	2	16777217	2022-03-12 01:30:31	\N	1048585	14
+426	1	34	2	16777229	2022-03-12 01:37:36	\N	1048585	17
+425	1	0	2	16777236	2022-03-12 01:37:36	2022-03-12 01:37:41	523	19
+286	1	3	2	16777219	2022-03-12 01:26:43	\N	517	13
+427	1	7	3	16777227	2022-03-12 01:37:51	\N	517	24
+328	1	3	2	16777251	2022-03-12 01:29:15	2022-03-12 01:29:19	1048585	13
+430	1	8	3	16777227	2022-03-12 01:38:00	\N	517	25
+347	1	7	3	16777227	2022-03-12 01:30:54	\N	517	19
+381	1	3	2	16777217	2022-03-12 01:34:08	\N	1048585	16
+383	1	0	2	16777243	2022-03-12 01:34:08	\N	1048585	16
+353	1	11	3	16777227	2022-03-12 01:31:09	\N	517	20
+384	1	0	2	16777245	2022-03-12 01:34:08	\N	1048585	16
+297	1	3	2	16777217	2022-03-12 01:27:44	\N	1048585	13
+299	1	0	2	16777243	2022-03-12 01:27:44	\N	1048585	13
+300	1	0	2	16777245	2022-03-12 01:27:44	\N	1048585	13
+303	1	0	2	16777236	2022-03-12 01:27:56	2022-03-12 01:28:00	523	13
+305	1	8	3	16777227	2022-03-12 01:28:06	\N	517	15
+361	1	31	2	16777235	2022-03-12 01:31:26	\N	1048585	14
+362	1	3	2	16777254	2022-03-12 01:31:26	\N	1048585	14
+387	1	33	2	16777231	2022-03-12 01:34:21	\N	1048585	16
+386	1	0	2	16777236	2022-03-12 01:34:21	2022-03-12 01:34:24	523	18
+308	1	0	2	16777236	2022-03-12 01:28:09	2022-03-12 01:28:12	523	14
+365	1	0	2	16777246	2022-03-12 01:32:51	\N	1048585	14
+314	1	11	3	16777227	2022-03-12 01:28:26	\N	517	17
+369	1	3	2	16777217	2022-03-12 01:33:19	\N	1048585	15
+371	1	0	2	16777243	2022-03-12 01:33:19	\N	1048585	15
+372	1	0	2	16777245	2022-03-12 01:33:19	\N	1048585	15
+391	1	11	3	16777227	2022-03-12 01:34:35	\N	517	22
+321	1	3	2	16777219	2022-03-12 01:28:46	\N	517	16
+375	1	32	2	16777231	2022-03-12 01:33:30	\N	1048585	15
+374	1	0	2	16777236	2022-03-12 01:33:30	2022-03-12 01:33:32	523	17
+324	1	3	2	16777219	2022-03-12 01:28:59	\N	517	18
+327	1	30	2	16777230	2022-03-12 01:29:15	\N	1048585	13
+394	1	12	3	16777227	2022-03-12 01:34:42	\N	517	23
+398	1	3	2	16777219	2022-03-12 01:34:52	\N	517	21
+419	1	3	2	16777217	2022-03-12 01:37:20	\N	1048585	17
+421	1	0	2	16777243	2022-03-12 01:37:20	\N	1048585	17
+422	1	0	2	16777245	2022-03-12 01:37:20	\N	1048585	17
 \.
+
+
+--
+-- Name: notifications_notification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notifications_notification_id_seq', 432, true);
 
 
 --
@@ -8206,7 +8436,6 @@ COPY public.oai_resumption_tokens (token, expire, record_offset, params) FROM st
 COPY public.plugin_settings (plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
 defaultthemeplugin	0	enabled	1	bool
 acronplugin	0	enabled	1	bool
-usageeventplugin	0	enabled	1	bool
 usagestatsplugin	0	enabled	1	bool
 usagestatsplugin	0	createLogFiles	1	bool
 usagestatsplugin	0	accessLogFileParseRegex	/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] "\\S+ (?P<url>\\S+).*?" (?P<returnCode>\\S+) \\S+ ".*?" "(?P<userAgent>.*?)"/	string
@@ -8214,38 +8443,39 @@ usagestatsplugin	0	optionalColumns	["city","region"]	object
 usagestatsplugin	0	chartType	bar	string
 usagestatsplugin	0	datasetMaxCount	4	string
 tinymceplugin	0	enabled	1	bool
-languagetoggleblockplugin	0	enabled	1	bool
-languagetoggleblockplugin	0	seq	4	int
-languagetoggleblockplugin	0	context	1	int
+usageeventplugin	0	enabled	1	bool
 developedbyblockplugin	0	enabled	0	bool
 developedbyblockplugin	0	seq	0	int
 developedbyblockplugin	0	context	1	int
+languagetoggleblockplugin	0	enabled	1	bool
+languagetoggleblockplugin	0	seq	4	int
+languagetoggleblockplugin	0	context	1	int
 acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"lib.pkp.classes.task.ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.PublishSubmissions","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]}]	object
 defaultthemeplugin	1	enabled	1	bool
 tinymceplugin	1	enabled	1	bool
-languagetoggleblockplugin	1	enabled	1	bool
-languagetoggleblockplugin	1	seq	4	int
-languagetoggleblockplugin	1	context	1	int
-developedbyblockplugin	1	enabled	0	bool
-developedbyblockplugin	1	seq	0	int
-developedbyblockplugin	1	context	1	int
-informationblockplugin	1	enabled	1	bool
-informationblockplugin	1	seq	7	int
-informationblockplugin	1	context	1	int
 browseblockplugin	1	enabled	1	bool
 browseblockplugin	1	seq	1	int
 browseblockplugin	1	context	1	int
 browseblockplugin	1	browseNewReleases	1	bool
 browseblockplugin	1	browseCategories	1	bool
 browseblockplugin	1	browseSeries	1	bool
+developedbyblockplugin	1	enabled	0	bool
+developedbyblockplugin	1	seq	0	int
+developedbyblockplugin	1	context	1	int
+languagetoggleblockplugin	1	enabled	1	bool
+languagetoggleblockplugin	1	seq	4	int
+languagetoggleblockplugin	1	context	1	int
+informationblockplugin	1	enabled	1	bool
+informationblockplugin	1	seq	7	int
+informationblockplugin	1	context	1	int
 webfeedplugin	1	enabled	1	bool
 webfeedplugin	1	displayPage	homepage	string
 webfeedplugin	1	displayItems	1	bool
-pdfjsviewerplugin	1	enabled	1	bool
-googlescholarplugin	1	enabled	1	bool
-dublincoremetaplugin	1	enabled	1	bool
 htmlmonographfileplugin	1	enabled	1	bool
-usageeventplugin	0	uniqueSiteId	6227c2fa18407	string
+pdfjsviewerplugin	1	enabled	1	bool
+dublincoremetaplugin	1	enabled	1	bool
+googlescholarplugin	1	enabled	1	bool
+usageeventplugin	0	uniqueSiteId	622bf0e4958c9	string
 defaultthemeplugin	1	typography	notoSans	string
 defaultthemeplugin	1	useHomepageImageAsHeader	false	string
 defaultthemeplugin	1	baseColour	#1E6292	string
@@ -8257,26 +8487,26 @@ defaultthemeplugin	1	baseColour	#1E6292	string
 --
 
 COPY public.press_settings (press_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+1	fr_CA	readerInformation	Nous encourageons les lecteurs à s'abonner au service d'avis de publication de cette presse. Utilisez le lien <a href="http://localhost/index.php/publicknowledge/user/register">d'inscription</a> situé en haut de la page d'accueil de la presse. Cette inscription permettra au lecteur de recevoir la table des matières de chaque nouvelle monographie de cette presse par courriel. Cette liste permet également à la presse d'affirmer qu'elle compte un certain nombre de lecteurs. Consultez <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">l'énoncé de confidentialité </a> de la presse, lequel stipule que les noms et adresses courriel de ses lecteurs ne seront pas utilisés à d'autres fins.	\N
 1	fr_CA	submissionChecklist	[{"order":1,"content":"Cette soumission n'a jamais été publiée et n'a pas été soumise à une autre presse (ou une explication a été ajoutée à la section Commentaires du rédacteur en chef)."},{"order":2,"content":"Le fichier soumis est de format Microsoft Word, RTF ou OpenDocument."},{"order":3,"content":"Les adresses URL des références ont été fournies si elles étaient disponibles."},{"order":4,"content":"Le texte est publié à simple interligne ; utiliser une police de caractères de 12 points ; utiliser des caractères italiques au lieu de souligner (sauf pour les adresses URL) ; et toutes les illustrations, figures et tableaux doivent être insérés dans le texte aux endroits appropriés plutôt qu'à la fin."},{"order":5,"content":"Le texte respecte les exigences stylistiques et bibliographiques conformément aux <a href=\\"http:\\/\\/localhost\\/index.php\\/publicknowledge\\/about\\/submissions#authorGuidelines\\" target=\\"_blank\\">lignes directrices à l'intention des auteurs<\\/a>, disponibles dans la rubrique À propos de cette presse."}]	\N
 1		supportedFormLocales	["en_US","fr_CA"]	\N
+1		defaultReviewMode	2	\N
 1	fr_CA	librarianInformation	Nous encourageons les bibliothécaires de recherche à ajouter cette presse à la liste électronique des ressources documentaires de la bibliothèque. De plus, ce système d'édition à libre accès convient à toutes les bibliothèques et permet aux membres des facultés de l'utiliser pour les presses auxquelles ils contribuent à titre de rédacteur en chef. (voir <a href="http://pkp.sfu.ca/omp">Open Monograph Press</a>).	\N
 1	en_US	name	Public Knowledge Press	\N
 1		numWeeksPerReview	4	\N
-1	en_US	openAccessPolicy	This press provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.	\N
 1	fr_CA	openAccessPolicy	Cette presse offre un accès libre immédiat à son contenu en partant du principe que la recherche doit être accessible au grand public, car cela favorise un meilleur échange des connaissances à l'échelle mondiale.	\N
-1	en_US	privacyStatement	<p>The names and email addresses entered in this press site will be used exclusively for the stated purposes of this press and will not be made available for any other purpose or to any other party.</p>	\N
+1	en_US	openAccessPolicy	This press provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.	\N
 1	fr_CA	privacyStatement	<p>Les noms et adresses courriel saisis sur ce site de presse seront utilisés exclusivement pour les fins convenues de cette presse. Ils ne seront pas utilisés pour d'autres fins ou transmis à une tierce partie.</p>	\N
 1	en_US	readerInformation	We encourage readers to sign up for the publishing notification service for this press. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the homepage for the press. This registration will result in the reader receiving the Table of Contents by email for each new monograph of the press. This list also allows the press to claim a certain level of support or readership. See the press <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a> which assures readers that their name and email address will not be used for other purposes.	\N
-1	fr_CA	readerInformation	Nous encourageons les lecteurs à s'abonner au service d'avis de publication de cette presse. Utilisez le lien <a href="http://localhost/index.php/publicknowledge/user/register">d'inscription</a> situé en haut de la page d'accueil de la presse. Cette inscription permettra au lecteur de recevoir la table des matières de chaque nouvelle monographie de cette presse par courriel. Cette liste permet également à la presse d'affirmer qu'elle compte un certain nombre de lecteurs. Consultez <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">l'énoncé de confidentialité </a> de la presse, lequel stipule que les noms et adresses courriel de ses lecteurs ne seront pas utilisés à d'autres fins.	\N
 1	en_US	submissionChecklist	[{"order":1,"content":"The submission has not been previously published, nor is it before another press for consideration (or an explanation has been provided in Comments to the Editor)."},{"order":2,"content":"The submission file is in the Microsoft Word, RTF, or OpenDocument file format."},{"order":3,"content":"Where available, URLs for the references have been provided."},{"order":4,"content":"The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end."},{"order":5,"content":"The text adheres to the stylistic and bibliographic requirements outlined in the <a href=\\"http:\\/\\/localhost\\/index.php\\/publicknowledge\\/about\\/submissions#authorGuidelines\\" target=\\"_blank\\">Author Guidelines<\\/a>, which is found in About the Press."}]	\N
-1		defaultReviewMode	2	\N
 1		emailSignature	<br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>	\N
 1		disableSubmissions	0	\N
 1		itemsPerPage	25	\N
+1		keywords	request	\N
 1	fr_CA	name	Press de la connaissance du public	\N
 1		numPageLinks	10	\N
 1		numWeeksPerResponse	4	\N
-1		keywords	request	\N
+1	en_US	privacyStatement	<p>The names and email addresses entered in this press site will be used exclusively for the stated purposes of this press and will not be made available for any other purpose or to any other party.</p>	\N
 1	en_US	librarianInformation	We encourage research librarians to list this press among their library's electronic press holdings. As well, this open source publishing system is suitable for libraries to host for their faculty members to use with presses they are involved in editing (see <a href="http://pkp.sfu.ca/omp">Open Monograph Press</a>).	\N
 1	fr_CA	authorInformation	Vous souhaitez soumettre une contribution à cette presse ? Nous vous recommandons de lire la page\n <a href="http://localhost/index.php/publicknowledge/about">À propos de cette presse</a> pour connaitre ses règlements et la page\n <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Lignes directrices à l'intention des auteurs-es</a>. Les auteurs-es doivent <a href="http://localhost/index.php/publicknowledge/user/register">s'inscrire</a> auprès de la presse avant d'envoyer une soumission. Si vous êtes déjà inscrit-e, il suffit simplement <a href="http://localhost/index.php/index/login">d'ouvrir une session</a> pour débuter la procédure en 5 étapes.	\N
 1		contactEmail	rvaca@mailinator.com	\N
@@ -8308,6 +8538,13 @@ COPY public.presses (press_id, path, seq, primary_locale, enabled) FROM stdin;
 
 
 --
+-- Name: presses_press_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.presses_press_id_seq', 1, true);
+
+
+--
 -- Data for Name: publication_categories; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -8321,6 +8558,13 @@ COPY public.publication_categories (publication_id, category_id) FROM stdin;
 
 COPY public.publication_dates (publication_date_id, publication_format_id, role, date_format, date) FROM stdin;
 \.
+
+
+--
+-- Name: publication_dates_publication_date_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_dates_publication_date_id_seq', 1, false);
 
 
 --
@@ -8343,6 +8587,13 @@ COPY public.publication_formats (publication_format_id, publication_id, submissi
 1	5	\N	0	DA	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N			1	1
 2	14	\N	0	DA	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N			1	1
 \.
+
+
+--
+-- Name: publication_formats_publication_format_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_formats_publication_format_id_seq', 2, true);
 
 
 --
@@ -8517,24 +8768,31 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, date_published, last_modified, locale, primary_contact_id, publication_date_type, publication_type, seq, series_id, series_position, submission_id, status, url_path, version) FROM stdin;
-1	\N	2022-03-08 21:02:26	\N	1	pub	publication	0	\N	\N	1	1	\N	1
-2	\N	2022-03-08 21:04:47	\N	2	pub	publication	0	\N	\N	2	1	\N	1
-3	\N	2022-03-08 21:06:02	\N	10	pub	publication	0	\N	\N	3	1	\N	1
-4	\N	2022-03-08 21:07:20	\N	11	pub	publication	0	\N	\N	4	1	\N	1
-5	2022-03-08	2022-03-08 21:10:37	\N	15	pub	publication	0	\N	\N	5	3	\N	1
-6	\N	2022-03-08 21:11:47	\N	16	pub	publication	0	\N	\N	6	1	\N	1
-7	\N	2022-03-08 21:14:25	\N	20	pub	publication	0	\N	\N	7	1	\N	1
-8	\N	2022-03-08 21:15:17	\N	25	pub	publication	0	\N	\N	8	1	\N	1
-9	\N	2022-03-08 21:16:55	\N	26	pub	publication	0	\N	\N	9	1	\N	1
-10	\N	2022-03-08 21:18:17	\N	31	pub	publication	0	\N	\N	10	1	\N	1
-11	\N	2022-03-08 21:18:39	\N	32	pub	publication	0	\N	\N	11	1	\N	1
-12	\N	2022-03-08 21:21:16	\N	33	pub	publication	0	\N	\N	12	1	\N	1
-13	\N	2022-03-08 21:23:13	\N	41	pub	publication	0	\N	\N	13	1	\N	1
-14	2022-03-08	2022-03-08 21:28:25	\N	45	pub	publication	0	\N	\N	14	3	\N	1
-15	\N	2022-03-08 21:28:55	\N	48	pub	publication	0	\N	\N	15	1	\N	1
-16	\N	2022-03-08 21:29:46	\N	49	pub	publication	0	\N	\N	16	1	\N	1
-17	\N	2022-03-08 21:32:59	\N	50	pub	publication	0	\N	\N	17	1	\N	1
+1	\N	2022-03-12 01:07:13	\N	1	pub	publication	0	\N	\N	1	1	\N	1
+2	\N	2022-03-12 01:09:33	\N	2	pub	publication	0	\N	\N	2	1	\N	1
+3	\N	2022-03-12 01:10:48	\N	10	pub	publication	0	\N	\N	3	1	\N	1
+4	\N	2022-03-12 01:12:11	\N	11	pub	publication	0	\N	\N	4	1	\N	1
+5	2022-03-12	2022-03-12 01:15:23	\N	15	pub	publication	0	\N	\N	5	3	\N	1
+6	\N	2022-03-12 01:16:32	\N	16	pub	publication	0	\N	\N	6	1	\N	1
+7	\N	2022-03-12 01:19:08	\N	20	pub	publication	0	\N	\N	7	1	\N	1
+8	\N	2022-03-12 01:19:59	\N	25	pub	publication	0	\N	\N	8	1	\N	1
+9	\N	2022-03-12 01:21:33	\N	26	pub	publication	0	\N	\N	9	1	\N	1
+10	\N	2022-03-12 01:22:54	\N	31	pub	publication	0	\N	\N	10	1	\N	1
+11	\N	2022-03-12 01:23:15	\N	32	pub	publication	0	\N	\N	11	1	\N	1
+12	\N	2022-03-12 01:25:49	\N	33	pub	publication	0	\N	\N	12	1	\N	1
+13	\N	2022-03-12 01:27:43	\N	41	pub	publication	0	\N	\N	13	1	\N	1
+14	2022-03-12	2022-03-12 01:32:51	\N	45	pub	publication	0	\N	\N	14	3	\N	1
+15	\N	2022-03-12 01:33:18	\N	48	pub	publication	0	\N	\N	15	1	\N	1
+16	\N	2022-03-12 01:34:07	\N	49	pub	publication	0	\N	\N	16	1	\N	1
+17	\N	2022-03-12 01:37:18	\N	50	pub	publication	0	\N	\N	17	1	\N	1
 \.
+
+
+--
+-- Name: publications_publication_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publications_publication_id_seq', 17, true);
 
 
 --
@@ -8544,6 +8802,13 @@ COPY public.publications (publication_id, date_published, last_modified, locale,
 COPY public.queries (query_id, assoc_type, assoc_id, stage_id, seq, date_posted, date_modified, closed) FROM stdin;
 1	1048585	6	2	1	\N	\N	0
 \.
+
+
+--
+-- Name: queries_query_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.queries_query_id_seq', 1, true);
 
 
 --
@@ -8564,6 +8829,13 @@ COPY public.queued_payments (queued_payment_id, date_created, date_modified, exp
 
 
 --
+-- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.queued_payments_queued_payment_id_seq', 1, false);
+
+
+--
 -- Data for Name: representatives; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -8572,36 +8844,50 @@ COPY public.representatives (representative_id, submission_id, role, representat
 
 
 --
+-- Name: representatives_representative_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.representatives_representative_id_seq', 1, false);
+
+
+--
 -- Data for Name: review_assignments; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, unconsidered) FROM stdin;
-15	13	8	\N	\N	2022-03-08 21:23:36	2022-03-08 21:23:36	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:23:36	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	0
-1	1	12	\N	\N	2022-03-08 21:02:42	2022-03-08 21:02:42	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:02:42	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-2	2	11	\N	\N	2022-03-08 21:05:11	2022-03-08 21:05:11	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:05:11	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
-3	2	12	\N	\N	2022-03-08 21:05:21	2022-03-08 21:05:21	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:05:21	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
-24	17	7	\N	\N	2022-03-08 21:33:31	2022-03-08 21:33:31	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:33:31	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
-4	4	9	\N	\N	2022-03-08 21:07:42	2022-03-08 21:07:42	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:07:42	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	0
-5	4	11	\N	\N	2022-03-08 21:07:57	2022-03-08 21:07:57	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:07:57	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-6	5	8	\N	\N	2022-03-08 21:09:33	2022-03-08 21:09:33	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:09:33	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	0
-17	13	11	\N	\N	2022-03-08 21:23:57	2022-03-08 21:23:57	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:23:57	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	0
-7	5	12	\N	\N	2022-03-08 21:09:45	2022-03-08 21:09:45	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:09:45	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-8	7	10	\N	\N	2022-03-08 21:14:50	2022-03-08 21:14:50	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:14:50	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	0
-9	11	9	\N	\N	2022-03-08 21:18:56	2022-03-08 21:18:56	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:18:56	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	0
-25	17	8	\N	\N	2022-03-08 21:33:40	2022-03-08 21:33:40	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:33:40	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
-16	13	10	\N	0	2022-03-08 21:23:49	2022-03-08 21:23:49	2022-03-08 21:24:12	2022-03-08 21:24:17	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:24:17	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
-10	11	10	\N	0	2022-03-08 21:19:07	2022-03-08 21:19:07	2022-03-08 21:19:19	2022-03-08 21:19:23	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:19:23	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
-18	13	12	\N	0	2022-03-08 21:24:04	2022-03-08 21:24:04	2022-03-08 21:24:25	2022-03-08 21:24:30	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:24:30	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
-11	11	12	\N	0	2022-03-08 21:19:13	2022-03-08 21:19:13	2022-03-08 21:19:28	2022-03-08 21:19:33	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:19:33	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
-12	12	7	\N	\N	2022-03-08 21:21:41	2022-03-08 21:21:41	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:21:41	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
-19	14	7	\N	\N	2022-03-08 21:26:28	2022-03-08 21:26:28	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:26:28	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	0
-14	12	9	\N	\N	2022-03-08 21:21:56	2022-03-08 21:21:56	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:21:56	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
-20	14	11	\N	\N	2022-03-08 21:26:43	2022-03-08 21:26:43	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:26:43	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	0
-13	12	8	\N	0	2022-03-08 21:21:48	2022-03-08 21:21:48	2022-03-08 21:22:04	2022-03-08 21:22:09	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:22:09	0	0	0	\N	\N	\N	0	12	2	2	1	4	\N	0
-22	16	11	\N	\N	2022-03-08 21:30:14	2022-03-08 21:30:14	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:30:14	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
-23	16	12	\N	\N	2022-03-08 21:30:21	2022-03-08 21:30:21	\N	\N	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:30:21	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
-21	16	10	\N	0	2022-03-08 21:30:08	2022-03-08 21:30:08	2022-03-08 21:30:27	2022-03-08 21:30:32	\N	2022-04-05 00:00:00	2022-04-05 00:00:00	2022-03-08 21:30:32	0	0	0	\N	\N	\N	0	18	3	2	1	4	\N	0
+15	13	8	\N	\N	2022-03-12 01:28:06	2022-03-12 01:28:06	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:28:06	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	0
+1	1	12	\N	\N	2022-03-12 01:07:29	2022-03-12 01:07:29	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:07:29	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+2	2	11	\N	\N	2022-03-12 01:09:57	2022-03-12 01:09:58	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:09:58	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
+3	2	12	\N	\N	2022-03-12 01:10:06	2022-03-12 01:10:06	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:10:06	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
+24	17	7	\N	\N	2022-03-12 01:37:51	2022-03-12 01:37:51	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:37:51	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
+4	4	9	\N	\N	2022-03-12 01:12:33	2022-03-12 01:12:33	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:12:33	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	0
+5	4	11	\N	\N	2022-03-12 01:12:46	2022-03-12 01:12:46	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:12:46	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+6	5	8	\N	\N	2022-03-12 01:14:18	2022-03-12 01:14:18	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:14:18	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	0
+17	13	11	\N	\N	2022-03-12 01:28:26	2022-03-12 01:28:26	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:28:26	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	0
+7	5	12	\N	\N	2022-03-12 01:14:31	2022-03-12 01:14:31	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:14:31	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+8	7	10	\N	\N	2022-03-12 01:19:33	2022-03-12 01:19:33	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:19:33	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	0
+9	11	9	\N	\N	2022-03-12 01:23:32	2022-03-12 01:23:32	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:23:32	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	0
+25	17	8	\N	\N	2022-03-12 01:38:00	2022-03-12 01:38:00	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:38:00	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
+16	13	10	\N	0	2022-03-12 01:28:19	2022-03-12 01:28:19	2022-03-12 01:28:41	2022-03-12 01:28:46	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:28:46	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
+10	11	10	\N	0	2022-03-12 01:23:42	2022-03-12 01:23:42	2022-03-12 01:23:54	2022-03-12 01:23:58	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:23:58	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
+18	13	12	\N	0	2022-03-12 01:28:33	2022-03-12 01:28:33	2022-03-12 01:28:54	2022-03-12 01:28:59	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:28:59	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
+11	11	12	\N	0	2022-03-12 01:23:48	2022-03-12 01:23:48	2022-03-12 01:24:03	2022-03-12 01:24:07	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:24:07	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
+12	12	7	\N	\N	2022-03-12 01:26:14	2022-03-12 01:26:14	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:26:14	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
+19	14	7	\N	\N	2022-03-12 01:30:54	2022-03-12 01:30:54	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:30:54	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	0
+14	12	9	\N	\N	2022-03-12 01:26:30	2022-03-12 01:26:30	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:26:30	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
+20	14	11	\N	\N	2022-03-12 01:31:09	2022-03-12 01:31:09	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:31:09	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	0
+13	12	8	\N	0	2022-03-12 01:26:22	2022-03-12 01:26:22	2022-03-12 01:26:37	2022-03-12 01:26:43	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:26:43	0	0	0	\N	\N	\N	0	12	2	2	1	4	\N	0
+22	16	11	\N	\N	2022-03-12 01:34:35	2022-03-12 01:34:35	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:34:35	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
+23	16	12	\N	\N	2022-03-12 01:34:42	2022-03-12 01:34:42	\N	\N	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:34:42	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
+21	16	10	\N	0	2022-03-12 01:34:29	2022-03-12 01:34:29	2022-03-12 01:34:48	2022-03-12 01:34:52	\N	2022-04-09 00:00:00	2022-04-09 00:00:00	2022-03-12 01:34:52	0	0	0	\N	\N	\N	0	18	3	2	1	4	\N	0
 \.
+
+
+--
+-- Name: review_assignments_review_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 25, true);
 
 
 --
@@ -8629,6 +8915,13 @@ COPY public.review_form_elements (review_form_element_id, review_form_id, seq, e
 
 
 --
+-- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_elements_review_form_element_id_seq', 1, false);
+
+
+--
 -- Data for Name: review_form_responses; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -8650,6 +8943,13 @@ COPY public.review_form_settings (review_form_id, locale, setting_name, setting_
 
 COPY public.review_forms (review_form_id, assoc_type, assoc_id, seq, is_active) FROM stdin;
 \.
+
+
+--
+-- Name: review_forms_review_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_forms_review_form_id_seq', 1, false);
 
 
 --
@@ -8688,6 +8988,13 @@ COPY public.review_rounds (review_round_id, submission_id, stage_id, round, revi
 
 
 --
+-- Name: review_rounds_review_round_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 19, true);
+
+
+--
 -- Data for Name: sales_rights; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -8696,14 +9003,21 @@ COPY public.sales_rights (sales_rights_id, publication_format_id, type, row_sett
 
 
 --
+-- Name: sales_rights_sales_rights_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.sales_rights_sales_rights_id_seq', 1, false);
+
+
+--
 -- Data for Name: scheduled_tasks; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2022-03-08 20:56:11
-lib.pkp.classes.task.ReviewReminder	2022-03-08 20:56:11
-lib.pkp.classes.task.PublishSubmissions	2022-03-08 20:56:11
-lib.pkp.classes.task.StatisticsReport	2022-03-08 20:56:11
+plugins.generic.usageStats.UsageStatsLoader	2022-03-12 01:01:11
+lib.pkp.classes.task.ReviewReminder	2022-03-12 01:01:11
+lib.pkp.classes.task.PublishSubmissions	2022-03-12 01:01:11
+lib.pkp.classes.task.StatisticsReport	2022-03-12 01:01:11
 \.
 
 
@@ -8726,6 +9040,13 @@ COPY public.series (series_id, press_id, review_form_id, seq, featured, editor_r
 
 COPY public.series_categories (series_id, category_id) FROM stdin;
 \.
+
+
+--
+-- Name: series_series_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.series_series_id_seq', 5, true);
 
 
 --
@@ -8796,31 +9117,31 @@ COPY public.series_settings (series_id, locale, setting_name, setting_value, set
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-9vaqaohejhhu70su8b5aajcisa	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646772968	1646772968	0		localhost
-sofmr8cjrmvm0cfm039kljmter	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773001	1646773007	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646773007;s:5:"token";s:32:"3af713ef3a576a36d23122696cd4b07b";}	localhost
-thsclri5i6f512btprt9vemcfn	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646772985	1646773000	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646773000;s:5:"token";s:32:"0c0e5db7007251fbc3342b8b7dd1cf3c";}	localhost
-bib538sns5kfh7e89l6pkg2q3b	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773956	1646774107	0	csrf|a:2:{s:9:"timestamp";i:1646774107;s:5:"token";s:32:"2007d61d4221af4479f71497fc7cd7f5";}username|s:7:"dbarnes";userId|i:3;	localhost
-p2bap9svfanb880gi07r067pt6	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773007	1646773015	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646773015;s:5:"token";s:32:"490749b90246dc5ff7380c0989118cea";}	localhost
-rn5pu2ra79feds7ehtjmpk2uv3	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646774109	1646774119	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1646774118;s:5:"token";s:32:"43083592f9130b70e7f00d5738249834";}	localhost
-of2ufpgob5jnll8cbqgn3hqnp2	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646772971	1646772985	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646772985;s:5:"token";s:32:"90ecfe2db68478dee076daeae19733c7";}	localhost
-68i1r83l7p43atnjrevh4ve1ng	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773015	1646773019	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646773019;s:5:"token";s:32:"06aa43b45b7b6ac12fe5604755f7e5bf";}	localhost
-4eucov7t0vleo9vgeeqab7qgrh	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646774120	1646774234	0	csrf|a:2:{s:9:"timestamp";i:1646774234;s:5:"token";s:32:"313425492d034a156ae162615650f5c1";}username|s:7:"dbarnes";userId|i:3;	localhost
-crp7nudnpgch0896fmhihd4ddl	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646774236	1646774299	0	csrf|a:2:{s:9:"timestamp";i:1646774299;s:5:"token";s:32:"1ed89999ee45e7a2657f6aab511f8e1e";}username|s:7:"jbrower";userId|i:27;	localhost
-33sag9j12231jelm72tiftsrh2	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773304	1646773320	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1646773320;s:5:"token";s:32:"2cb24cda4a0d605ef590bb1b735a1759";}	localhost
-gp1u3vf8b4n53hquj2mdo5nqop	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773023	1646773301	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1646773300;s:5:"token";s:32:"c4e4e2b69038aeac9c30141a6dfa4f87";}	localhost
-cgahroule6dhpsk1bbud6j8qet	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773377	1646773522	0	csrf|a:2:{s:9:"timestamp";i:1646773521;s:5:"token";s:32:"97a62d5dba4d72c22f077355ad44acce";}username|s:7:"dbarnes";userId|i:3;	localhost
-b2hn6aaicv1oml5rirq3arqnq0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773322	1646773372	0	csrf|a:2:{s:9:"timestamp";i:1646773372;s:5:"token";s:32:"0494c93b299df0603e05cf73a05ca9f4";}username|s:7:"dbarnes";userId|i:3;	localhost
-t99m54pmhv2pdf3p1q1e8sp9ep	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773525	1646773563	0	csrf|a:2:{s:9:"timestamp";i:1646773563;s:5:"token";s:32:"1211291596f83d29703db033a3bb59a3";}username|s:10:"bbarnetson";userId|i:21;	localhost
-g0gi1do458pa3ha436iin0uq2k	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773842	1646773954	0	csrf|a:2:{s:9:"timestamp";i:1646773954;s:5:"token";s:32:"ab36a2020c23f97bbf2778f0b4fbfc3c";}username|s:7:"dbarnes";userId|i:3;	localhost
-ok5nc5rgtlqgqcd3mhi2nkqc9s	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646774301	1646774388	0	csrf|a:2:{s:9:"timestamp";i:1646774388;s:5:"token";s:32:"c8e51931809c82b7f61867c6e87e0503";}username|s:7:"dbarnes";userId|i:3;	localhost
-lkmhp4gi6rj7bra49oer4d4fpd	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773565	1646773708	0	csrf|a:2:{s:9:"timestamp";i:1646773708;s:5:"token";s:32:"d5aea373477271aa881f0dca130e9665";}username|s:7:"dbarnes";userId|i:3;	localhost
-f25m8dfkuqatremrb0c6tfi86n	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646773710	1646773839	0	csrf|a:2:{s:9:"timestamp";i:1646773839;s:5:"token";s:32:"7d32e439141cf2cd3bb819efeb7c99fb";}username|s:7:"dbarnes";userId|i:3;	localhost
-76a7u9c7l9gpf21nf59bfcb1m0	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646774391	1646774530	0	csrf|a:2:{s:9:"timestamp";i:1646774530;s:5:"token";s:32:"74264ba383175c008fb2414633b75da9";}username|s:7:"phudson";	localhost
-49nictpuf4o64obcesbd15059t	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646774533	1646774693	0	csrf|a:2:{s:9:"timestamp";i:1646774693;s:5:"token";s:32:"2dee9b7fa3323f5de1621d80a5a63af4";}username|s:7:"dbarnes";userId|i:3;	localhost
-6bro2uq0rrqjs3uodp324gscm0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646774696	1646774907	0	csrf|a:2:{s:9:"timestamp";i:1646774907;s:5:"token";s:32:"a7560268226cebd1df3180b65bdf63b3";}username|s:7:"dbarnes";userId|i:3;	localhost
-6ughdhhtplfc19udk9gqlqoneh	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646775035	1646775221	0	csrf|a:2:{s:9:"timestamp";i:1646775220;s:5:"token";s:32:"964e7e0112ef14886645a593dfe147ef";}username|s:7:"dbarnes";userId|i:3;	localhost
-3h0as20eii803ieh9lff8jggdu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646774909	1646774950	0	csrf|a:2:{s:9:"timestamp";i:1646774950;s:5:"token";s:32:"c6fa6ccdea9526bc57f015a3620c11e9";}username|s:7:"dbarnes";userId|i:3;	localhost
-lm5sl9inc2in69ch08bddf6qcc	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1646774954	1646775032	0	csrf|a:2:{s:9:"timestamp";i:1646775032;s:5:"token";s:32:"55dba7bc04cf19bf4e7e208d2ec0e0b0";}username|s:8:"agallego";	localhost
+d6q6ndh6a9hfi1i17iuuuauot8	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647046868	1647046868	0		localhost
+pnrt6oh40rvmeeohapdgrpat9l	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647046897	1647046902	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1647046902;s:5:"token";s:32:"05eeab346018fd2add92551b2f07cc12";}	localhost
+oqd40c587k1s2neocm1936qqlm	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647046884	1647046896	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1647046896;s:5:"token";s:32:"d0a4871e8a38d996f07a09f0c2920cb8";}	localhost
+3qv67upcpv6rjfee72b3mkpec5	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647046903	1647046910	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1647046910;s:5:"token";s:32:"3aba87bd0d5850b5e9f82e7c13ddaf18";}	localhost
+9ngjg5q7ul93ae935jpnictuih	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647047841	1647047988	0	csrf|a:2:{s:9:"timestamp";i:1647047988;s:5:"token";s:32:"cff2c5e6b59253f641474746a936b7a8";}username|s:7:"dbarnes";userId|i:3;	localhost
+ugg61ckemnf53gje6cfbhi3lqc	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647047991	1647048000	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1647047999;s:5:"token";s:32:"7ce7cd5f1dfc5dad8f8e24fb71ac47ca";}	localhost
+ce8e9qbdk37kcs72ru5opav9b3	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647046870	1647046882	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1647046884;s:5:"token";s:32:"0f8cbc199f68e7494406662642f9d7b0";}	localhost
+qeatsup1k8cjkkt9ka4s9o6n94	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647046911	1647046915	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1647046915;s:5:"token";s:32:"b798959047aa03d139ebb6f5a7ba0e24";}	localhost
+djjqrrkqgjio3s88akpflfrdeo	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647048001	1647048111	0	csrf|a:2:{s:9:"timestamp";i:1647048111;s:5:"token";s:32:"a0b7494d40c82b7c52d1d6ed21cc4dda";}username|s:7:"dbarnes";userId|i:3;	localhost
+6c966ujcavkva8jc0mc0tpvagq	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647048113	1647048176	0	csrf|a:2:{s:9:"timestamp";i:1647048175;s:5:"token";s:32:"b07119a278d04b84b51dde8afbc8ecbd";}username|s:7:"jbrower";userId|i:27;	localhost
+3jd3boo2osp0tcm5q466jdrsqg	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647047599	1647047724	0	csrf|a:2:{s:9:"timestamp";i:1647047724;s:5:"token";s:32:"0e3d864265f8b6b8cd8a7e4a94f745db";}username|s:7:"dbarnes";userId|i:3;	localhost
+q05sgt9tk3sqf1l0tg426d93f5	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647047192	1647047208	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1647047208;s:5:"token";s:32:"1085c220d3e455a8ed3690391eaf926b";}	localhost
+qcgm1k4lhdi045ei7ijrnhsnid	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647046917	1647047189	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1647047189;s:5:"token";s:32:"67e7f47863665663cea5072a03e13d5f";}	localhost
+u3um3tlhei0or7j2jft01eda4t	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647047262	1647047407	0	csrf|a:2:{s:9:"timestamp";i:1647047406;s:5:"token";s:32:"d6b08b86dd5af81871cbf629b19c34d2";}username|s:7:"dbarnes";userId|i:3;	localhost
+670e1p74angok71qm7g2ikuuvf	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647047210	1647047260	0	csrf|a:2:{s:9:"timestamp";i:1647047260;s:5:"token";s:32:"e3c2675eb63d35d0c0a39c1b8ab640fb";}username|s:7:"dbarnes";userId|i:3;	localhost
+qmok11i84l7cp61s3gf0k8mrg3	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647047409	1647047450	0	csrf|a:2:{s:9:"timestamp";i:1647047450;s:5:"token";s:32:"24706eb0ad4b23f7557adb741cd18a63";}username|s:10:"bbarnetson";userId|i:21;	localhost
+vlrcmkgnq2lf1b8mhe9r9mjp4r	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647048178	1647048264	0	csrf|a:2:{s:9:"timestamp";i:1647048264;s:5:"token";s:32:"016c1f625df415904e5d696801416238";}username|s:7:"dbarnes";userId|i:3;	localhost
+e6v3j7b3tgeef2njca27jv3j0n	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647047452	1647047596	0	csrf|a:2:{s:9:"timestamp";i:1647047597;s:5:"token";s:32:"45d40d51b482c264abc640a8b002254a";}username|s:7:"dbarnes";userId|i:3;	localhost
+mi9mv50mr60ac02hatuus90ir4	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647048266	1647048404	0	csrf|a:2:{s:9:"timestamp";i:1647048404;s:5:"token";s:32:"003d47cc2963021327c64b3ee2c22470";}username|s:7:"phudson";	localhost
+let6cbu6envp7uvhcnb2so3m6d	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647047727	1647047838	0	csrf|a:2:{s:9:"timestamp";i:1647047838;s:5:"token";s:32:"5feed74c44cd76c41eaf9d313b49ebe4";}username|s:7:"dbarnes";userId|i:3;	localhost
+apuc5ml9gv6ig60lt36cvo4cvt	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647048407	1647048560	0	csrf|a:2:{s:9:"timestamp";i:1647048560;s:5:"token";s:32:"aae992147d615960c13e9ce46e2a03aa";}username|s:7:"dbarnes";userId|i:3;	localhost
+0c3r2eh9nc6koqsfseut5osoob	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647048815	1647048893	0	csrf|a:2:{s:9:"timestamp";i:1647048893;s:5:"token";s:32:"bc9b3e2642a874f0457c0f6d469a606a";}username|s:8:"agallego";	localhost
+bj50cmg6klh972cl6n3s0rie0a	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647048564	1647048772	0	csrf|a:2:{s:9:"timestamp";i:1647048772;s:5:"token";s:32:"6e596216c6197b4a2771b3c345436e8c";}username|s:7:"dbarnes";userId|i:3;	localhost
+m91or0tub2b5hgkn43chourhgb	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647048896	1647049080	0	csrf|a:2:{s:9:"timestamp";i:1647049080;s:5:"token";s:32:"870d6b6e13848fe88533c4bbbf143e52";}username|s:7:"dbarnes";userId|i:3;	localhost
+uqqj0tscsn0p68kc2pk41r9c9h	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/97.0.4692.99 Safari/537.36	1647048774	1647048813	0	csrf|a:2:{s:9:"timestamp";i:1647048813;s:5:"token";s:32:"f5c36a62ef6034411eaefbe5e82f64a2";}username|s:7:"dbarnes";userId|i:3;	localhost
 \.
 
 
@@ -8862,56 +9183,70 @@ COPY public.spotlights (spotlight_id, assoc_type, assoc_id, press_id) FROM stdin
 
 
 --
+-- Name: spotlights_spotlight_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.spotlights_spotlight_id_seq', 1, false);
+
+
+--
 -- Data for Name: stage_assignments; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-1	1	13	19	2022-03-08 21:02:08	0	0
-2	1	3	3	2022-03-08 21:02:27	0	1
-3	1	6	14	2022-03-08 21:02:51	0	0
-4	2	14	20	2022-03-08 21:03:03	0	0
-5	2	3	3	2022-03-08 21:04:50	0	1
-6	3	13	21	2022-03-08 21:05:30	0	0
-7	3	3	3	2022-03-08 21:06:03	0	1
-8	4	14	22	2022-03-08 21:06:11	0	0
-9	4	3	3	2022-03-08 21:07:22	0	1
-10	4	6	13	2022-03-08 21:08:12	0	0
-11	4	10	15	2022-03-08 21:08:27	0	0
-12	5	13	23	2022-03-08 21:08:36	0	0
-13	5	3	3	2022-03-08 21:09:16	0	1
-14	5	6	14	2022-03-08 21:09:56	0	0
-15	5	10	16	2022-03-08 21:10:10	0	0
-16	5	12	17	2022-03-08 21:10:16	0	0
-17	6	14	24	2022-03-08 21:10:48	0	0
-18	6	3	3	2022-03-08 21:11:49	0	1
-19	6	5	6	2022-03-08 21:12:09	1	1
-20	7	14	25	2022-03-08 21:12:42	0	0
-21	7	3	3	2022-03-08 21:14:27	0	1
-22	7	6	13	2022-03-08 21:15:05	0	0
-23	8	13	3	2022-03-08 21:15:14	0	0
-24	8	3	3	2022-03-08 21:15:18	0	1
-25	9	14	26	2022-03-08 21:15:26	0	0
-26	9	3	3	2022-03-08 21:16:57	0	1
-27	10	13	27	2022-03-08 21:17:21	0	0
-28	10	3	3	2022-03-08 21:18:19	0	1
-29	11	13	28	2022-03-08 21:18:27	0	0
-30	11	3	3	2022-03-08 21:18:40	0	1
-31	12	14	29	2022-03-08 21:19:57	0	0
-32	12	3	3	2022-03-08 21:21:18	0	1
-33	13	14	30	2022-03-08 21:22:19	0	0
-34	13	3	3	2022-03-08 21:23:14	0	1
-35	14	14	31	2022-03-08 21:25:02	0	0
-36	14	3	3	2022-03-08 21:26:06	0	1
-37	14	6	13	2022-03-08 21:26:57	0	0
-38	14	10	15	2022-03-08 21:27:12	0	0
-39	14	12	18	2022-03-08 21:27:19	0	0
-40	15	13	32	2022-03-08 21:28:35	0	0
-41	15	3	3	2022-03-08 21:28:56	0	1
-42	16	13	33	2022-03-08 21:29:20	0	0
-43	16	3	3	2022-03-08 21:29:47	0	1
-44	17	14	34	2022-03-08 21:30:41	0	0
-45	17	3	3	2022-03-08 21:33:01	0	1
+1	1	13	19	2022-03-12 01:06:56	0	0
+2	1	3	3	2022-03-12 01:07:14	0	1
+3	1	6	14	2022-03-12 01:07:39	0	0
+4	2	14	20	2022-03-12 01:07:48	0	0
+5	2	3	3	2022-03-12 01:09:35	0	1
+6	3	13	21	2022-03-12 01:10:15	0	0
+7	3	3	3	2022-03-12 01:10:50	0	1
+8	4	14	22	2022-03-12 01:10:58	0	0
+9	4	3	3	2022-03-12 01:12:13	0	1
+10	4	6	13	2022-03-12 01:13:01	0	0
+11	4	10	15	2022-03-12 01:13:15	0	0
+12	5	13	23	2022-03-12 01:13:24	0	0
+13	5	3	3	2022-03-12 01:14:01	0	1
+14	5	6	14	2022-03-12 01:14:43	0	0
+15	5	10	16	2022-03-12 01:14:55	0	0
+16	5	12	17	2022-03-12 01:15:01	0	0
+17	6	14	24	2022-03-12 01:15:32	0	0
+18	6	3	3	2022-03-12 01:16:34	0	1
+19	6	5	6	2022-03-12 01:16:54	1	1
+20	7	14	25	2022-03-12 01:17:27	0	0
+21	7	3	3	2022-03-12 01:19:10	0	1
+22	7	6	13	2022-03-12 01:19:46	0	0
+23	8	13	3	2022-03-12 01:19:55	0	0
+24	8	3	3	2022-03-12 01:19:59	0	1
+25	9	14	26	2022-03-12 01:20:07	0	0
+26	9	3	3	2022-03-12 01:21:35	0	1
+27	10	13	27	2022-03-12 01:21:59	0	0
+28	10	3	3	2022-03-12 01:22:55	0	1
+29	11	13	28	2022-03-12 01:23:03	0	0
+30	11	3	3	2022-03-12 01:23:16	0	1
+31	12	14	29	2022-03-12 01:24:32	0	0
+32	12	3	3	2022-03-12 01:25:51	0	1
+33	13	14	30	2022-03-12 01:26:52	0	0
+34	13	3	3	2022-03-12 01:27:44	0	1
+35	14	14	31	2022-03-12 01:29:29	0	0
+36	14	3	3	2022-03-12 01:30:31	0	1
+37	14	6	13	2022-03-12 01:31:22	0	0
+38	14	10	15	2022-03-12 01:31:36	0	0
+39	14	12	18	2022-03-12 01:31:44	0	0
+40	15	13	32	2022-03-12 01:33:00	0	0
+41	15	3	3	2022-03-12 01:33:19	0	1
+42	16	13	33	2022-03-12 01:33:41	0	0
+43	16	3	3	2022-03-12 01:34:08	0	1
+44	17	14	34	2022-03-12 01:35:02	0	0
+45	17	3	3	2022-03-12 01:37:20	0	1
 \.
+
+
+--
+-- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 45, true);
 
 
 --
@@ -8928,6 +9263,13 @@ COPY public.static_page_settings (static_page_id, locale, setting_name, setting_
 
 COPY public.static_pages (static_page_id, path, context_id) FROM stdin;
 \.
+
+
+--
+-- Name: static_pages_static_page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.static_pages_static_page_id_seq', 1, false);
 
 
 --
@@ -9537,17 +9879,10 @@ COPY public.submission_chapter_settings (chapter_id, locale, setting_name, setti
 --
 
 COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id, seq) FROM stdin;
-37	\N	10	1
+57	\N	14	4
 1	\N	1	1
 2	\N	1	2
 3	\N	1	3
-38	\N	10	2
-39	\N	10	3
-40	\N	10	4
-41	\N	10	5
-42	\N	10	6
-43	\N	10	7
-44	\N	10	8
 4	\N	2	1
 5	\N	2	2
 6	\N	2	3
@@ -9555,60 +9890,74 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 23	\N	6	1
 24	\N	6	2
 25	\N	6	3
-45	\N	10	9
+58	\N	15	1
 26	\N	6	4
+59	\N	15	2
+60	\N	15	3
 8	\N	3	1
 9	\N	3	2
 10	\N	3	3
 11	\N	3	4
 12	\N	3	5
-46	\N	11	1
-47	\N	11	2
 13	\N	4	1
 14	\N	4	2
 15	\N	4	3
 16	\N	4	4
-48	\N	12	1
 27	\N	7	1
 28	\N	7	2
 29	\N	7	3
 30	\N	7	4
-49	\N	12	2
 31	\N	7	5
-50	\N	12	3
 17	\N	5	1
 18	\N	5	2
 19	\N	5	3
 20	\N	5	4
 21	\N	5	5
 22	\N	5	6
-51	\N	13	1
-52	\N	13	2
-53	\N	13	3
+61	\N	16	1
+37	\N	10	1
+38	\N	10	2
+39	\N	10	3
+40	\N	10	4
+41	\N	10	5
+42	\N	10	6
+43	\N	10	7
+44	\N	10	8
 32	\N	9	1
 33	\N	9	2
 34	\N	9	3
 35	\N	9	4
+45	\N	10	9
 36	\N	9	5
+62	\N	16	2
+46	\N	11	1
+47	\N	11	2
+63	\N	16	3
+64	\N	16	4
+65	\N	16	5
+48	\N	12	1
+49	\N	12	2
+50	\N	12	3
+51	\N	13	1
+52	\N	13	2
+53	\N	13	3
 54	\N	14	1
 55	\N	14	2
 56	\N	14	3
-57	\N	14	4
-58	\N	15	1
-59	\N	15	2
-60	\N	15	3
 66	\N	17	1
 67	\N	17	2
 68	\N	17	3
 69	\N	17	4
 70	\N	17	5
 71	\N	17	6
-61	\N	16	1
-62	\N	16	2
-63	\N	16	3
-64	\N	16	4
-65	\N	16	5
 \.
+
+
+--
+-- Name: submission_chapters_chapter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_chapters_chapter_id_seq', 71, true);
 
 
 --
@@ -9616,13 +9965,20 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2022-03-08 21:19:23	\N	1
-2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2022-03-08 21:19:32	\N	1
-3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2022-03-08 21:22:09	\N	1
-4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2022-03-08 21:24:17	\N	1
-5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2022-03-08 21:24:30	\N	1
-6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2022-03-08 21:30:31	\N	1
+1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2022-03-12 01:23:58	\N	1
+2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2022-03-12 01:24:07	\N	1
+3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2022-03-12 01:26:43	\N	1
+4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2022-03-12 01:28:46	\N	1
+5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2022-03-12 01:28:59	\N	1
+6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2022-03-12 01:34:52	\N	1
 \.
+
+
+--
+-- Name: submission_comments_comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
 
 
 --
@@ -9686,6 +10042,13 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 54	54	47
 55	55	48
 \.
+
+
+--
+-- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 55, true);
 
 
 --
@@ -9798,62 +10161,69 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	3	2	\N	\N	\N	2022-03-08 21:02:10	2022-03-08 21:02:10	19	\N	\N
-2	2	2	\N	4	2	\N	\N	\N	2022-03-08 21:03:05	2022-03-08 21:03:05	20	\N	\N
-3	2	3	\N	4	2	\N	\N	\N	2022-03-08 21:03:05	2022-03-08 21:03:06	20	\N	\N
-4	2	4	\N	4	2	\N	\N	\N	2022-03-08 21:03:06	2022-03-08 21:03:06	20	\N	\N
-5	2	5	\N	4	2	\N	\N	\N	2022-03-08 21:03:07	2022-03-08 21:03:07	20	\N	\N
-6	3	6	\N	3	2	\N	\N	\N	2022-03-08 21:05:32	2022-03-08 21:05:32	21	\N	\N
-7	4	7	\N	4	2	\N	\N	\N	2022-03-08 21:06:13	2022-03-08 21:06:13	22	\N	\N
-8	4	8	\N	4	2	\N	\N	\N	2022-03-08 21:06:13	2022-03-08 21:06:14	22	\N	\N
-9	4	9	\N	4	2	\N	\N	\N	2022-03-08 21:06:14	2022-03-08 21:06:14	22	\N	\N
-10	4	10	\N	4	2	\N	\N	\N	2022-03-08 21:06:14	2022-03-08 21:06:15	22	\N	\N
-11	5	11	\N	3	2	\N	\N	\N	2022-03-08 21:08:38	2022-03-08 21:08:38	23	\N	\N
-38	14	37	\N	4	2	\N	\N	\N	2022-03-08 21:25:05	2022-03-08 21:25:05	31	\N	\N
-12	5	11	11	3	10	0	openAccess	1	2022-03-08 21:10:26	2022-03-08 21:10:32	23	521	1
-13	6	12	\N	4	2	\N	\N	\N	2022-03-08 21:10:50	2022-03-08 21:10:50	24	\N	\N
-14	6	13	\N	4	2	\N	\N	\N	2022-03-08 21:10:50	2022-03-08 21:10:51	24	\N	\N
-15	6	14	\N	4	2	\N	\N	\N	2022-03-08 21:10:51	2022-03-08 21:10:51	24	\N	\N
-16	6	15	\N	4	2	\N	\N	\N	2022-03-08 21:10:52	2022-03-08 21:10:52	24	\N	\N
-17	7	16	\N	4	2	\N	\N	\N	2022-03-08 21:12:43	2022-03-08 21:12:44	25	\N	\N
-18	7	17	\N	4	2	\N	\N	\N	2022-03-08 21:12:44	2022-03-08 21:12:44	25	\N	\N
-19	7	18	\N	4	2	\N	\N	\N	2022-03-08 21:12:45	2022-03-08 21:12:45	25	\N	\N
-20	7	19	\N	4	2	\N	\N	\N	2022-03-08 21:12:45	2022-03-08 21:12:46	25	\N	\N
-21	7	20	\N	4	2	\N	\N	\N	2022-03-08 21:12:46	2022-03-08 21:12:47	25	\N	\N
-22	8	21	\N	3	2	\N	\N	\N	2022-03-08 21:15:15	2022-03-08 21:15:16	3	\N	\N
-23	9	22	\N	4	2	\N	\N	\N	2022-03-08 21:15:28	2022-03-08 21:15:28	26	\N	\N
-24	9	23	\N	4	2	\N	\N	\N	2022-03-08 21:15:28	2022-03-08 21:15:29	26	\N	\N
-25	9	24	\N	4	2	\N	\N	\N	2022-03-08 21:15:29	2022-03-08 21:15:29	26	\N	\N
-26	9	25	\N	4	2	\N	\N	\N	2022-03-08 21:15:29	2022-03-08 21:15:30	26	\N	\N
-27	9	26	\N	4	2	\N	\N	\N	2022-03-08 21:15:30	2022-03-08 21:15:31	26	\N	\N
-28	10	27	\N	3	2	\N	\N	\N	2022-03-08 21:17:23	2022-03-08 21:17:23	27	\N	\N
-29	11	28	\N	3	2	\N	\N	\N	2022-03-08 21:18:28	2022-03-08 21:18:28	28	\N	\N
-30	12	29	\N	4	2	\N	\N	\N	2022-03-08 21:19:58	2022-03-08 21:19:58	29	\N	\N
-31	12	30	\N	4	2	\N	\N	\N	2022-03-08 21:19:59	2022-03-08 21:19:59	29	\N	\N
-32	12	31	\N	4	2	\N	\N	\N	2022-03-08 21:19:59	2022-03-08 21:20:00	29	\N	\N
-33	13	32	\N	4	2	\N	\N	\N	2022-03-08 21:22:20	2022-03-08 21:22:21	30	\N	\N
-34	13	33	\N	4	2	\N	\N	\N	2022-03-08 21:22:21	2022-03-08 21:22:21	30	\N	\N
-35	13	34	\N	4	2	\N	\N	\N	2022-03-08 21:22:22	2022-03-08 21:22:22	30	\N	\N
-36	14	35	\N	4	2	\N	\N	\N	2022-03-08 21:25:03	2022-03-08 21:25:04	31	\N	\N
-37	14	36	\N	4	2	\N	\N	\N	2022-03-08 21:25:04	2022-03-08 21:25:04	31	\N	\N
-39	14	38	\N	4	2	\N	\N	\N	2022-03-08 21:25:05	2022-03-08 21:25:06	31	\N	\N
-40	14	39	\N	13	2	\N	\N	\N	2022-03-08 21:25:06	2022-03-08 21:25:07	31	\N	\N
-41	14	40	\N	9	2	\N	\N	\N	2022-03-08 21:25:07	2022-03-08 21:25:08	31	\N	\N
-43	14	35	36	4	10	0	openAccess	1	2022-03-08 21:27:35	2022-03-08 21:27:43	31	521	2
-50	17	43	\N	4	2	\N	\N	\N	2022-03-08 21:30:42	2022-03-08 21:30:43	34	\N	\N
-44	14	36	37	4	10	0	openAccess	1	2022-03-08 21:27:35	2022-03-08 21:27:50	31	521	2
-42	14	37	38	4	10	0	openAccess	1	2022-03-08 21:27:35	2022-03-08 21:27:56	31	521	2
-51	17	44	\N	4	2	\N	\N	\N	2022-03-08 21:30:43	2022-03-08 21:30:43	34	\N	\N
-45	14	38	39	4	10	0	openAccess	1	2022-03-08 21:27:35	2022-03-08 21:28:04	31	521	2
-46	14	39	40	13	10	0	openAccess	1	2022-03-08 21:27:35	2022-03-08 21:28:11	31	521	2
-52	17	45	\N	4	2	\N	\N	\N	2022-03-08 21:30:43	2022-03-08 21:30:44	34	\N	\N
-47	14	40	41	9	10	0	openAccess	1	2022-03-08 21:27:35	2022-03-08 21:28:18	31	521	2
-48	15	41	\N	3	2	\N	\N	\N	2022-03-08 21:28:36	2022-03-08 21:28:37	32	\N	\N
-49	16	42	\N	3	2	\N	\N	\N	2022-03-08 21:29:21	2022-03-08 21:29:21	33	\N	\N
-53	17	46	\N	4	2	\N	\N	\N	2022-03-08 21:30:44	2022-03-08 21:30:45	34	\N	\N
-54	17	47	\N	4	2	\N	\N	\N	2022-03-08 21:30:45	2022-03-08 21:30:45	34	\N	\N
-55	17	48	\N	4	2	\N	\N	\N	2022-03-08 21:30:46	2022-03-08 21:30:46	34	\N	\N
+1	1	1	\N	3	2	\N	\N	\N	2022-03-12 01:06:57	2022-03-12 01:06:57	19	\N	\N
+2	2	2	\N	4	2	\N	\N	\N	2022-03-12 01:07:50	2022-03-12 01:07:50	20	\N	\N
+3	2	3	\N	4	2	\N	\N	\N	2022-03-12 01:07:50	2022-03-12 01:07:51	20	\N	\N
+4	2	4	\N	4	2	\N	\N	\N	2022-03-12 01:07:51	2022-03-12 01:07:51	20	\N	\N
+5	2	5	\N	4	2	\N	\N	\N	2022-03-12 01:07:52	2022-03-12 01:07:52	20	\N	\N
+6	3	6	\N	3	2	\N	\N	\N	2022-03-12 01:10:17	2022-03-12 01:10:17	21	\N	\N
+7	4	7	\N	4	2	\N	\N	\N	2022-03-12 01:10:59	2022-03-12 01:11:00	22	\N	\N
+8	4	8	\N	4	2	\N	\N	\N	2022-03-12 01:11:00	2022-03-12 01:11:00	22	\N	\N
+9	4	9	\N	4	2	\N	\N	\N	2022-03-12 01:11:01	2022-03-12 01:11:01	22	\N	\N
+10	4	10	\N	4	2	\N	\N	\N	2022-03-12 01:11:01	2022-03-12 01:11:02	22	\N	\N
+11	5	11	\N	3	2	\N	\N	\N	2022-03-12 01:13:26	2022-03-12 01:13:26	23	\N	\N
+38	14	37	\N	4	2	\N	\N	\N	2022-03-12 01:29:32	2022-03-12 01:29:32	31	\N	\N
+12	5	11	11	3	10	0	openAccess	1	2022-03-12 01:15:11	2022-03-12 01:15:18	23	521	1
+13	6	12	\N	4	2	\N	\N	\N	2022-03-12 01:15:34	2022-03-12 01:15:34	24	\N	\N
+14	6	13	\N	4	2	\N	\N	\N	2022-03-12 01:15:34	2022-03-12 01:15:35	24	\N	\N
+15	6	14	\N	4	2	\N	\N	\N	2022-03-12 01:15:35	2022-03-12 01:15:35	24	\N	\N
+16	6	15	\N	4	2	\N	\N	\N	2022-03-12 01:15:36	2022-03-12 01:15:36	24	\N	\N
+17	7	16	\N	4	2	\N	\N	\N	2022-03-12 01:17:28	2022-03-12 01:17:28	25	\N	\N
+18	7	17	\N	4	2	\N	\N	\N	2022-03-12 01:17:29	2022-03-12 01:17:29	25	\N	\N
+19	7	18	\N	4	2	\N	\N	\N	2022-03-12 01:17:29	2022-03-12 01:17:30	25	\N	\N
+20	7	19	\N	4	2	\N	\N	\N	2022-03-12 01:17:30	2022-03-12 01:17:30	25	\N	\N
+21	7	20	\N	4	2	\N	\N	\N	2022-03-12 01:17:31	2022-03-12 01:17:31	25	\N	\N
+22	8	21	\N	3	2	\N	\N	\N	2022-03-12 01:19:56	2022-03-12 01:19:57	3	\N	\N
+23	9	22	\N	4	2	\N	\N	\N	2022-03-12 01:20:09	2022-03-12 01:20:09	26	\N	\N
+24	9	23	\N	4	2	\N	\N	\N	2022-03-12 01:20:09	2022-03-12 01:20:10	26	\N	\N
+25	9	24	\N	4	2	\N	\N	\N	2022-03-12 01:20:10	2022-03-12 01:20:10	26	\N	\N
+26	9	25	\N	4	2	\N	\N	\N	2022-03-12 01:20:10	2022-03-12 01:20:11	26	\N	\N
+27	9	26	\N	4	2	\N	\N	\N	2022-03-12 01:20:11	2022-03-12 01:20:12	26	\N	\N
+28	10	27	\N	3	2	\N	\N	\N	2022-03-12 01:22:00	2022-03-12 01:22:00	27	\N	\N
+29	11	28	\N	3	2	\N	\N	\N	2022-03-12 01:23:05	2022-03-12 01:23:05	28	\N	\N
+30	12	29	\N	4	2	\N	\N	\N	2022-03-12 01:24:33	2022-03-12 01:24:34	29	\N	\N
+31	12	30	\N	4	2	\N	\N	\N	2022-03-12 01:24:34	2022-03-12 01:24:34	29	\N	\N
+32	12	31	\N	4	2	\N	\N	\N	2022-03-12 01:24:35	2022-03-12 01:24:35	29	\N	\N
+33	13	32	\N	4	2	\N	\N	\N	2022-03-12 01:26:54	2022-03-12 01:26:54	30	\N	\N
+34	13	33	\N	4	2	\N	\N	\N	2022-03-12 01:26:54	2022-03-12 01:26:55	30	\N	\N
+35	13	34	\N	4	2	\N	\N	\N	2022-03-12 01:26:55	2022-03-12 01:26:55	30	\N	\N
+36	14	35	\N	4	2	\N	\N	\N	2022-03-12 01:29:31	2022-03-12 01:29:31	31	\N	\N
+37	14	36	\N	4	2	\N	\N	\N	2022-03-12 01:29:31	2022-03-12 01:29:32	31	\N	\N
+39	14	38	\N	4	2	\N	\N	\N	2022-03-12 01:29:33	2022-03-12 01:29:33	31	\N	\N
+40	14	39	\N	13	2	\N	\N	\N	2022-03-12 01:29:33	2022-03-12 01:29:34	31	\N	\N
+41	14	40	\N	9	2	\N	\N	\N	2022-03-12 01:29:34	2022-03-12 01:29:35	31	\N	\N
+43	14	35	36	4	10	0	openAccess	1	2022-03-12 01:32:00	2022-03-12 01:32:08	31	521	2
+50	17	43	\N	4	2	\N	\N	\N	2022-03-12 01:35:03	2022-03-12 01:35:03	34	\N	\N
+44	14	36	37	4	10	0	openAccess	1	2022-03-12 01:32:00	2022-03-12 01:32:15	31	521	2
+42	14	37	38	4	10	0	openAccess	1	2022-03-12 01:32:00	2022-03-12 01:32:22	31	521	2
+51	17	44	\N	4	2	\N	\N	\N	2022-03-12 01:35:04	2022-03-12 01:35:04	34	\N	\N
+45	14	38	39	4	10	0	openAccess	1	2022-03-12 01:32:00	2022-03-12 01:32:29	31	521	2
+46	14	39	40	13	10	0	openAccess	1	2022-03-12 01:32:00	2022-03-12 01:32:36	31	521	2
+52	17	45	\N	4	2	\N	\N	\N	2022-03-12 01:35:04	2022-03-12 01:35:05	34	\N	\N
+47	14	40	41	9	10	0	openAccess	1	2022-03-12 01:32:00	2022-03-12 01:32:43	31	521	2
+48	15	41	\N	3	2	\N	\N	\N	2022-03-12 01:33:01	2022-03-12 01:33:01	32	\N	\N
+49	16	42	\N	3	2	\N	\N	\N	2022-03-12 01:33:42	2022-03-12 01:33:42	33	\N	\N
+53	17	46	\N	4	2	\N	\N	\N	2022-03-12 01:35:05	2022-03-12 01:35:05	34	\N	\N
+54	17	47	\N	4	2	\N	\N	\N	2022-03-12 01:35:06	2022-03-12 01:35:06	34	\N	\N
+55	17	48	\N	4	2	\N	\N	\N	2022-03-12 01:35:06	2022-03-12 01:35:07	34	\N	\N
 \.
+
+
+--
+-- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 55, true);
 
 
 --
@@ -9972,6 +10342,13 @@ COPY public.submission_search_keyword_list (keyword_id, keyword_text) FROM stdin
 109	world
 110	psychology
 \.
+
+
+--
+-- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq', 110, true);
 
 
 --
@@ -10154,6 +10531,13 @@ COPY public.submission_search_objects (object_id, submission_id, type, assoc_id)
 
 
 --
+-- Name: submission_search_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_objects_object_id_seq', 16, true);
+
+
+--
 -- Data for Name: submission_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -10166,24 +10550,31 @@ COPY public.submission_settings (submission_id, locale, setting_name, setting_va
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-9	1	9	2022-03-08 21:17:08	2022-03-08 21:16:57	2022-03-08 21:16:57	2	en_US	1	0	1
-6	1	6	2022-03-08 21:12:22	2022-03-08 21:11:49	2022-03-08 21:11:49	2	en_US	1	0	1
-1	1	1	2022-03-08 21:02:51	2022-03-08 21:02:27	2022-03-08 21:02:27	4	en_US	1	0	2
-4	1	4	2022-03-08 21:08:27	2022-03-08 21:07:22	2022-03-08 21:07:22	5	en_US	1	0	1
-10	1	10	2022-03-08 21:18:19	2022-03-08 21:18:19	2022-03-08 21:18:19	1	en_US	1	0	2
-17	1	17	2022-03-08 21:33:40	2022-03-08 21:33:01	2022-03-08 21:33:01	2	en_US	1	0	1
-14	1	14	2022-03-08 21:28:25	2022-03-08 21:26:05	2022-03-08 21:26:05	5	en_US	3	0	1
-2	1	2	2022-03-08 21:05:21	2022-03-08 21:04:50	2022-03-08 21:04:50	3	en_US	1	0	1
-7	1	7	2022-03-08 21:15:05	2022-03-08 21:14:27	2022-03-08 21:14:27	4	en_US	1	0	1
-13	1	13	2022-03-08 21:24:47	2022-03-08 21:23:14	2022-03-08 21:24:04	4	en_US	1	0	1
-3	1	3	2022-03-08 21:06:03	2022-03-08 21:06:03	2022-03-08 21:06:03	1	en_US	1	0	2
-8	1	8	2022-03-08 21:15:18	2022-03-08 21:15:18	2022-03-08 21:15:18	1	en_US	1	0	2
-15	1	15	2022-03-08 21:29:07	2022-03-08 21:28:56	2022-03-08 21:28:56	3	en_US	1	0	2
-5	1	5	2022-03-08 21:10:37	2022-03-08 21:09:16	2022-03-08 21:09:16	5	en_US	3	0	2
-11	1	11	2022-03-08 21:19:44	2022-03-08 21:18:40	2022-03-08 21:19:13	4	en_US	1	0	2
-16	1	16	2022-03-08 21:30:32	2022-03-08 21:29:47	2022-03-08 21:30:08	3	en_US	1	0	2
-12	1	12	2022-03-08 21:22:09	2022-03-08 21:21:17	2022-03-08 21:21:48	2	en_US	1	0	1
+12	1	12	2022-03-12 01:26:43	2022-03-12 01:25:51	2022-03-12 01:26:22	2	en_US	1	0	1
+9	1	9	2022-03-12 01:21:46	2022-03-12 01:21:35	2022-03-12 01:21:35	2	en_US	1	0	1
+6	1	6	2022-03-12 01:17:07	2022-03-12 01:16:34	2022-03-12 01:16:34	2	en_US	1	0	1
+1	1	1	2022-03-12 01:07:39	2022-03-12 01:07:14	2022-03-12 01:07:14	4	en_US	1	0	2
+4	1	4	2022-03-12 01:13:15	2022-03-12 01:12:13	2022-03-12 01:12:13	5	en_US	1	0	1
+10	1	10	2022-03-12 01:22:55	2022-03-12 01:22:55	2022-03-12 01:22:55	1	en_US	1	0	2
+17	1	17	2022-03-12 01:38:00	2022-03-12 01:37:20	2022-03-12 01:37:20	2	en_US	1	0	1
+14	1	14	2022-03-12 01:32:51	2022-03-12 01:30:31	2022-03-12 01:30:31	5	en_US	3	0	1
+2	1	2	2022-03-12 01:10:06	2022-03-12 01:09:35	2022-03-12 01:09:35	3	en_US	1	0	1
+7	1	7	2022-03-12 01:19:46	2022-03-12 01:19:10	2022-03-12 01:19:10	4	en_US	1	0	1
+13	1	13	2022-03-12 01:29:15	2022-03-12 01:27:44	2022-03-12 01:28:33	4	en_US	1	0	1
+3	1	3	2022-03-12 01:10:50	2022-03-12 01:10:50	2022-03-12 01:10:50	1	en_US	1	0	2
+8	1	8	2022-03-12 01:20:00	2022-03-12 01:19:59	2022-03-12 01:19:59	1	en_US	1	0	2
+5	1	5	2022-03-12 01:15:23	2022-03-12 01:14:01	2022-03-12 01:14:01	5	en_US	3	0	2
+11	1	11	2022-03-12 01:24:20	2022-03-12 01:23:16	2022-03-12 01:23:48	4	en_US	1	0	2
+15	1	15	2022-03-12 01:33:30	2022-03-12 01:33:19	2022-03-12 01:33:19	3	en_US	1	0	2
+16	1	16	2022-03-12 01:34:52	2022-03-12 01:34:08	2022-03-12 01:34:29	3	en_US	1	0	2
 \.
+
+
+--
+-- Name: submissions_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submissions_submission_id_seq', 17, true);
 
 
 --
@@ -10192,6 +10583,13 @@ COPY public.submissions (submission_id, context_id, current_publication_id, date
 
 COPY public.temporary_files (file_id, user_id, file_name, file_type, file_size, original_file_name, date_uploaded) FROM stdin;
 \.
+
+
+--
+-- Name: temporary_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.temporary_files_file_id_seq', 1, false);
 
 
 --
@@ -10211,6 +10609,7 @@ COPY public.user_group_settings (user_group_id, locale, setting_name, setting_va
 1	fr_CA	name	##default.groups.name.siteAdmin##	string
 2		nameLocaleKey	default.groups.name.manager	string
 2		abbrevLocaleKey	default.groups.abbrev.manager	string
+14		recommendOnly	0	bool
 3		nameLocaleKey	default.groups.name.editor	string
 3		abbrevLocaleKey	default.groups.abbrev.editor	string
 4		nameLocaleKey	default.groups.name.productionEditor	string
@@ -10243,6 +10642,10 @@ COPY public.user_group_settings (user_group_id, locale, setting_name, setting_va
 17		abbrevLocaleKey	default.groups.abbrev.internalReviewer	string
 18		nameLocaleKey	default.groups.name.externalReviewer	string
 18		abbrevLocaleKey	default.groups.abbrev.externalReviewer	string
+14	en_US	name	Volume editor	string
+14	fr_CA	name	Rédacteur/Rédactrice en chef du volume	string
+14	en_US	abbrev	VE	string
+14	fr_CA	abbrev	RV	string
 19		nameLocaleKey	default.groups.name.reader	string
 19		abbrevLocaleKey	default.groups.abbrev.reader	string
 2	en_US	name	Press manager	string
@@ -10313,11 +10716,6 @@ COPY public.user_group_settings (user_group_id, locale, setting_name, setting_va
 18	fr_CA	abbrev	EvEx	string
 19	fr_CA	name	Lecteur-trice	string
 19	fr_CA	abbrev	Lect	string
-14	en_US	name	Volume editor	string
-14	fr_CA	name	Rédacteur/Rédactrice en chef du volume	string
-14	en_US	abbrev	VE	string
-14	fr_CA	abbrev	RV	string
-14		recommendOnly	0	bool
 \.
 
 
@@ -10394,6 +10792,13 @@ COPY public.user_groups (user_group_id, context_id, role_id, is_default, show_ti
 19	1	1048576	1	0	1	0
 14	1	65536	1	0	1	0
 \.
+
+
+--
+-- Name: user_groups_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_groups_user_group_id_seq', 19, true);
 
 
 --
@@ -10748,484 +11153,41 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-24	dbernnard	$2y$10$2r99ydD17h3sIn9HgINGseKSmCtqfpTz1YP7L2WAXm49hey5jOpA6	dbernnard@mailinator.com	\N	\N	\N	\N	US		\N	\N	2022-03-08 21:10:45	\N	2022-03-08 21:10:45	0	\N	\N	0	\N	1
-31	mdawson	$2y$10$jciRxTT/7ilHD.jEdw4UuOuH24smcFT6DUZGH.W2dni6dRO08kabq	mdawson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:24:59	\N	2022-03-08 21:24:59	0	\N	\N	0	\N	1
-6	minoue	$2y$10$Yd7ZMivS6fhn2KWy4dhsPuiZbl2fEVc0UXQB2.JqQDJhaqGPI4H7m	minoue@mailinator.com				\N	JP		\N	\N	2022-03-08 20:57:45	\N	2022-03-08 21:12:12	0	0	\N	0	\N	1
-3	dbarnes	$2y$10$RYNHMnd36PGSQzuFhJJc3eZd/npkgBCuzaReYaQZNrB0eJIuC4dju	dbarnes@mailinator.com				\N	AU		\N	\N	2022-03-08 20:57:18	\N	2022-03-08 21:33:04	0	0	\N	0	\N	1
-4	dbuskins	$2y$10$G0VH05cMWmnEhp0xLJt7K.GphEIg2xtOi.IjlGIB4Wp2obZMMxxiG	dbuskins@mailinator.com				\N	US		\N	\N	2022-03-08 20:57:26	\N	2022-03-08 20:57:26	0	0	\N	0	\N	1
-5	sberardo	$2y$10$z.urfVpNGkuvSb7q9Qj/UeQMWu4Y0tDVQrTzByg0r517r3pCDzSX2	sberardo@mailinator.com				\N	CA		\N	\N	2022-03-08 20:57:35	\N	2022-03-08 20:57:35	0	0	\N	0	\N	1
-7	jjanssen	$2y$10$EMEqk3iembz8tmfh5eXKZent9i1nVJk3lajic3mIM/lKlPuSdf.bC	jjanssen@mailinator.com				\N	NL		\N	\N	2022-03-08 20:57:57	\N	2022-03-08 20:57:57	0	0	\N	0	\N	1
-9	amccrae	$2y$10$0ZY8rFn1.kSfHLJ6Xu3e/uYZN2SL1oHNN4xj2hYfC2VNbxanMMqLC	amccrae@mailinator.com				\N	CA		\N	\N	2022-03-08 20:58:23	\N	2022-03-08 20:58:23	0	0	\N	0	\N	1
-11	alzacharia	$2y$10$BGzOBfyQhTPMzeAkFxkEiukaF8IrYPfVpNHg.6cOz2KR/tcyozr3e	alzacharia@mailinator.com				\N	GH		\N	\N	2022-03-08 20:58:55	\N	2022-03-08 20:58:55	0	0	\N	0	\N	1
-13	mfritz	$2y$10$b7i0r2kv1T.17d6l458cBO/fyJEJfsWisFL8D216JedgvfOeMAAJ6	mfritz@mailinator.com				\N	BE		\N	\N	2022-03-08 20:59:28	\N	2022-03-08 20:59:28	0	0	\N	0	\N	1
-14	svogt	$2y$10$ug6/uLK7BE2VqlPT1.JuxezsEAelUZiqmH3u0KVNxEeo.Frph3AYq	svogt@mailinator.com				\N	CL		\N	\N	2022-03-08 20:59:46	\N	2022-03-08 20:59:46	0	0	\N	0	\N	1
-15	gcox	$2y$10$zBgmiJr1jvBoeHjrfxpXROWpolKMHKzL8OiSRgwKdNwOov1Cw6B9q	gcox@mailinator.com				\N	US		\N	\N	2022-03-08 21:00:06	\N	2022-03-08 21:00:06	0	0	\N	0	\N	1
-16	shellier	$2y$10$l/ZUS7sGl.WYD8wVU/0jreDaLBi18B1kX9dO6Y/5zuc7WlPLX5WoK	shellier@mailinator.com				\N	ZA		\N	\N	2022-03-08 21:00:29	\N	2022-03-08 21:00:29	0	0	\N	0	\N	1
-17	cturner	$2y$10$KTX91nI7FGjbHmgqkVR7y..vjkNGyVPunGAbmUWAifOa54bH..ZZa	cturner@mailinator.com				\N	GB		\N	\N	2022-03-08 21:00:55	\N	2022-03-08 21:00:55	0	0	\N	0	\N	1
-18	skumar	$2y$10$QbNHo/6PZ3Ov3K3o88dnge.UcVYum.nHXyXxxcmUmRvDqPcrDJI/a	skumar@mailinator.com				\N	SG		\N	\N	2022-03-08 21:01:20	\N	2022-03-08 21:01:20	0	0	\N	0	\N	1
-25	dkennepohl	$2y$10$Tt5QmrXUSs8bnhzYIIWQ2OEDubxbi3BohQVnptSEkDRQS65Ng.gRy	dkennepohl@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:12:39	\N	2022-03-08 21:12:39	0	\N	\N	0	\N	1
-2	rvaca	$2y$10$E51sX36m7cxW4HpccbSmeOf/u/i4k8mJPkHtLOpi.axAJAJawIQjW	rvaca@mailinator.com				\N	MX		\N	\N	2022-03-08 20:57:11	\N	2022-03-08 21:01:38	0	0	\N	0	\N	1
-1	admin	$2y$10$5giPsTIq3V4M6sZXFNlEkuFSsrwyiBgLtwC2DAzsg2ucVwky9XMsa	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2022-03-08 20:56:07	\N	2022-03-08 21:01:44	0	\N	\N	0	\N	1
-19	aclark	$2y$10$ZyfNH/dWFGPRuEYegvdthe58vjkLsykZa9YkS1KoRIHp2l9bO.t02	aclark@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:02:05	\N	2022-03-08 21:02:05	0	\N	\N	0	\N	1
-29	lelder	$2y$10$HZxvsywx0ZYTxhtFbTEW.u1Jd3alQT.eZJYFAndOOSWZvHtn3jt4G	lelder@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:19:53	\N	2022-03-08 21:19:54	0	\N	\N	0	\N	1
-20	afinkel	$2y$10$9z8P7JgFc/7k/nTPLc/VU.AT.8lVCBtCKhvOl46sUDVv8P0PAy8wy	afinkel@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:03:00	\N	2022-03-08 21:03:00	0	\N	\N	0	\N	1
-21	bbarnetson	$2y$10$8Rz9fP7UWJw9bbTQMNL0XeBSg65cWV.Yh8C.JaBORp3kCtGrE9Kve	bbarnetson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:05:27	\N	2022-03-08 21:05:28	0	\N	\N	0	\N	1
-22	bbeaty	$2y$10$K0HGifWZGo9UG1X4iLVSbuLoiEPqhJgp9/vzApRzmyvoVZ5G4asNa	bbeaty@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:06:08	\N	2022-03-08 21:06:08	0	\N	\N	0	\N	1
-26	fperini	$2y$10$NX0xADv11a9a0a5TqE2tkeYVFjANz7Nh/jxXL6gTrbhG8XwXK1yOm	fperini@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:15:23	\N	2022-03-08 21:15:23	0	\N	\N	0	\N	1
-23	callan	$2y$10$z5spCkvbxkdq6fxjD.MDV.vh/fkVAZkOn30Cwo2a820mLNqA.GXoq	callan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:08:33	\N	2022-03-08 21:08:33	0	\N	\N	0	\N	1
-8	phudson	$2y$10$IRQdKDr1s3PapGY5IHo2AegAiHACc58y6h80NyMeIYkrCGLSPxM.S	phudson@mailinator.com				\N	CA		\N	\N	2022-03-08 20:58:09	\N	2022-03-08 21:21:59	0	0	\N	0	\N	1
-27	jbrower	$2y$10$BTgIhqbraj81bQVERh4eMuaX15oy4mqPd.2zZrvcI/N08j9cs/2r6	jbrower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:17:18	\N	2022-03-08 21:17:19	0	\N	\N	0	\N	1
-28	jlockehart	$2y$10$V4ZJhVF5a.5iSsSpmHtyeuPOOkRJgHXoJV1nwAlcZOm9V21AT47R.	jlockehart@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:18:24	\N	2022-03-08 21:18:24	0	\N	\N	0	\N	1
-32	mforan	$2y$10$TrRxslnHQwnbzat7HGLvXegKDLNmZBw8lVHU5MDhvPNJG2/MvtN.G	mforan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:28:32	\N	2022-03-08 21:28:32	0	\N	\N	0	\N	1
-30	mally	$2y$10$fWo2JG3/Y46iXZBhfIZlWeD5x0ztOfQDn8akzhIGEbRwDkML.Hos2	mally@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:22:16	\N	2022-03-08 21:22:16	0	\N	\N	0	\N	1
-12	gfavio	$2y$10$AgsZkAuZ9ly38zMOAWvNMOjC4JtsA6C/tdmFMUty5PECX5CAgOFoO	gfavio@mailinator.com				\N	ES		\N	\N	2022-03-08 20:59:11	\N	2022-03-08 21:24:19	0	0	\N	0	\N	1
-33	mpower	$2y$10$UY0RsC2CEkS6lquD.WsqIeJO/1EQq.PpId0ioDGEv/FWWSQAShj9O	mpower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:29:17	\N	2022-03-08 21:29:17	0	\N	\N	0	\N	1
-10	agallego	$2y$10$FSmNRdyHOMtwQVXDHTGJLuDGycbgbZY5V5XElirvGf0yjenwqmnA6	agallego@mailinator.com				\N	US		\N	\N	2022-03-08 20:58:38	\N	2022-03-08 21:30:23	0	0	\N	0	\N	1
-34	msmith	$2y$10$6o22oMS9pJT4ZlhAiJPWxOiYq.MflpvvlLnZzia0i9ZFvvSVgTTzu	msmith@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-08 21:30:38	\N	2022-03-08 21:30:38	0	\N	\N	0	\N	1
+24	dbernnard	$2y$10$w4WfKC0fOmAnNkqfa7ah5uqsgrK0jewdSl0iYyQkEyIqCxLWXjrCO	dbernnard@mailinator.com	\N	\N	\N	\N	US		\N	\N	2022-03-12 01:15:29	\N	2022-03-12 01:15:29	0	\N	\N	0	\N	1
+31	mdawson	$2y$10$wJQMkOnnGic/lpk5J0W9gej7EGo0vPHOKoYjCMuanq0TbkDNm4dAi	mdawson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:29:26	\N	2022-03-12 01:29:27	0	\N	\N	0	\N	1
+6	minoue	$2y$10$AejGHMV0Fy55I8s7huh34.EXVzaawAVpDPB0I.6xngA4xn1MtinKG	minoue@mailinator.com				\N	JP		\N	\N	2022-03-12 01:02:37	\N	2022-03-12 01:16:57	0	0	\N	0	\N	1
+3	dbarnes	$2y$10$lczkRHTkwT9AeT92C0Mx0esRi2gjNZCED4RHMl7FCUSILgPQ2y4zC	dbarnes@mailinator.com				\N	AU		\N	\N	2022-03-12 01:02:11	\N	2022-03-12 01:37:22	0	0	\N	0	\N	1
+4	dbuskins	$2y$10$9ReJk3LZ4.nattwLcG9VL.G09Yd/p9vDcWSmC4ysNLP1D0PZHkgzu	dbuskins@mailinator.com				\N	US		\N	\N	2022-03-12 01:02:19	\N	2022-03-12 01:02:19	0	0	\N	0	\N	1
+5	sberardo	$2y$10$ZdQmsFylwGqSExOXHZarpOSScdQEiZ6JpHDZWpUgFrLBlvu9guj3K	sberardo@mailinator.com				\N	CA		\N	\N	2022-03-12 01:02:27	\N	2022-03-12 01:02:27	0	0	\N	0	\N	1
+7	jjanssen	$2y$10$LxaAQInrrAeEzLxPqCVonuWIF8KYasi5tH5OXLkVcgt3LI5FQNJqK	jjanssen@mailinator.com				\N	NL		\N	\N	2022-03-12 01:02:51	\N	2022-03-12 01:02:51	0	0	\N	0	\N	1
+9	amccrae	$2y$10$p4ZxeFximGmJEqEPWO/lkO5UAyUm1MbHnSb/wV9E0a8ByA/0yFYf6	amccrae@mailinator.com				\N	CA		\N	\N	2022-03-12 01:03:20	\N	2022-03-12 01:03:20	0	0	\N	0	\N	1
+11	alzacharia	$2y$10$zNrD2icBqUpca1B7Pobqg.oduvgX94ep5fAqJQHdmwSdA.LoYWaE.	alzacharia@mailinator.com				\N	GH		\N	\N	2022-03-12 01:03:51	\N	2022-03-12 01:03:51	0	0	\N	0	\N	1
+13	mfritz	$2y$10$qNH.GqYdOMuDzyR7lN6no.ZUtxf6XqbUAh5SJMGURpc3xKNOg8Vxa	mfritz@mailinator.com				\N	BE		\N	\N	2022-03-12 01:04:23	\N	2022-03-12 01:04:23	0	0	\N	0	\N	1
+14	svogt	$2y$10$ULH6dX6vN/FRc6KZ387NBOCx9m8IkPO7beyee9kf3OzQvgfJqDEK6	svogt@mailinator.com				\N	CL		\N	\N	2022-03-12 01:04:41	\N	2022-03-12 01:04:41	0	0	\N	0	\N	1
+15	gcox	$2y$10$1cHNhqcbFBAbA2gYk40Nae6Kkh8Th8NMU6lr2jg9tYn9NEnawK6Wm	gcox@mailinator.com				\N	US		\N	\N	2022-03-12 01:04:59	\N	2022-03-12 01:04:59	0	0	\N	0	\N	1
+16	shellier	$2y$10$rdjs/M1rziZOcIgU/QkoDumyYhESk8L4TT7RuGMOrHauVdYDjDDRC	shellier@mailinator.com				\N	ZA		\N	\N	2022-03-12 01:05:22	\N	2022-03-12 01:05:22	0	0	\N	0	\N	1
+17	cturner	$2y$10$zOw6CEurlYL8Lr2J5ARIVO0DQLI5SZ85ToXt24S.FeYEftkEeOnFi	cturner@mailinator.com				\N	GB		\N	\N	2022-03-12 01:05:46	\N	2022-03-12 01:05:46	0	0	\N	0	\N	1
+18	skumar	$2y$10$aZY7LOophB4bBGtzURFRGOuC9gbohXwE4uv5s4QYe.vTwzZOd.itK	skumar@mailinator.com				\N	SG		\N	\N	2022-03-12 01:06:11	\N	2022-03-12 01:06:11	0	0	\N	0	\N	1
+25	dkennepohl	$2y$10$/2tiZSsNKv8TjS4DnYo92.MjlyWCVl18ueQfGs4vBV6pAXZ.Mh06W	dkennepohl@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:17:24	\N	2022-03-12 01:17:24	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$qb8TYAedRmN2Tlb68nj9H.VYI4SApIQko1.iUudRGV8EqH5JYPbvO	rvaca@mailinator.com				\N	MX		\N	\N	2022-03-12 01:02:04	\N	2022-03-12 01:06:26	0	0	\N	0	\N	1
+1	admin	$2y$10$9pw0ShzpBt4cubiKdzitK.psXSArCr40am44RzwazzL8VcfnwpPfW	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2022-03-12 01:01:07	\N	2022-03-12 01:06:32	0	\N	\N	0	\N	1
+19	aclark	$2y$10$ziTTHleytDC42UYi4vX7WOTwlWJOwxj/eqaAqRhau9Bl2XpI3uInC	aclark@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:06:52	\N	2022-03-12 01:06:53	0	\N	\N	0	\N	1
+29	lelder	$2y$10$EgafqxZHuX9SQnX9wEVFt.AZcGZd23fp89mkbYQ47dd790nzWaEDO	lelder@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:24:29	\N	2022-03-12 01:24:29	0	\N	\N	0	\N	1
+20	afinkel	$2y$10$1EU.cWojX2qOntv7rwUR/.eYChBRFn5R7MFz6HDpgrHsmz2l5xo5m	afinkel@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:07:45	\N	2022-03-12 01:07:45	0	\N	\N	0	\N	1
+21	bbarnetson	$2y$10$WYChlObXrh80rOzWwjHHTOTXMqfqNNqLGSYb2ku0AG.iDvr.tB.rO	bbarnetson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:10:12	\N	2022-03-12 01:10:12	0	\N	\N	0	\N	1
+22	bbeaty	$2y$10$tFmeWBnnNyyPUSptBdrB2O5Kb9EHC6cfJimsjN6Ri6qOvQy4qUn1S	bbeaty@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:10:55	\N	2022-03-12 01:10:55	0	\N	\N	0	\N	1
+26	fperini	$2y$10$vryvD61Pp33dC0.xllo13.NnWNcNM9GOczdBQzksCxcUHAG3IyE8u	fperini@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:20:04	\N	2022-03-12 01:20:04	0	\N	\N	0	\N	1
+23	callan	$2y$10$Gf0sABg2ctFS830uyKz.h.JFqJj3YZcMJOotF3eNyDN/1h4qpEq.O	callan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:13:22	\N	2022-03-12 01:13:22	0	\N	\N	0	\N	1
+8	phudson	$2y$10$1j6bDVxKwQi7ZWCoxz.zBeolM8stK70VGz2In82/4vJWAezr8vAra	phudson@mailinator.com				\N	CA		\N	\N	2022-03-12 01:03:07	\N	2022-03-12 01:26:33	0	0	\N	0	\N	1
+27	jbrower	$2y$10$nCXv3PDcNDgluqaJVsLq3uFjHGX8g5UjGCpUSP4CYe.tI/BZIMDim	jbrower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:21:56	\N	2022-03-12 01:21:56	0	\N	\N	0	\N	1
+28	jlockehart	$2y$10$t8g0o8yHduZOM47El0TN/OsU09iG51t1rSPf.aiciE.2BCP7MdNta	jlockehart@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:23:00	\N	2022-03-12 01:23:01	0	\N	\N	0	\N	1
+32	mforan	$2y$10$ExE46q8XKGG9AN59b9qD2uRqxlaOl5v1.wAP5QF/uZQJk5yLUiX7W	mforan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:32:57	\N	2022-03-12 01:32:57	0	\N	\N	0	\N	1
+30	mally	$2y$10$r.dlgVCYq.zArYARA3UL8e45MZZDGnxo.JZYF.w/hq.mmUzxHZqRu	mally@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:26:50	\N	2022-03-12 01:26:50	0	\N	\N	0	\N	1
+12	gfavio	$2y$10$1aCTg6YC6To0g7Xo70vE3upvUIXEwteX2zBloARDTjERhH8oEJjdy	gfavio@mailinator.com				\N	ES		\N	\N	2022-03-12 01:04:06	\N	2022-03-12 01:28:48	0	0	\N	0	\N	1
+33	mpower	$2y$10$qxYIqDFqjUCQ/MCD81dz3O14Rjm7ufAgoh.LP8N60bbqik5itn1j2	mpower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:33:38	\N	2022-03-12 01:33:38	0	\N	\N	0	\N	1
+10	agallego	$2y$10$mEh1DFEM9DmcYTSdnr5O9eaB6tvVoTAJA1zSbWxIV7U.0/fjXXnvK	agallego@mailinator.com				\N	US		\N	\N	2022-03-12 01:03:35	\N	2022-03-12 01:34:44	0	0	\N	0	\N	1
+34	msmith	$2y$10$CZ6ltveI3jDecXr7G4Kn/.xeQ/PGQYkVF1zsIHDaTBUnTf7G0bCHq	msmith@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-03-12 01:34:59	\N	2022-03-12 01:34:59	0	\N	\N	0	\N	1
 \.
-
-
---
--- Data for Name: versions; Type: TABLE DATA; Schema: public; Owner: omp-ci
---
-
-COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2022-03-08 20:56:08	1	plugins.metadata	dc11		0	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.pubIds	urn	URNPubIdPlugin	0	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.pubIds	doi	DOIPubIdPlugin	0	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.blocks	information	InformationBlockPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.generic	acron		0	1
-1	0	0	0	2022-03-08 20:56:08	1	plugins.generic	usageEvent		0	1
-1	0	0	0	2022-03-08 20:56:08	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-1	2	0	0	2022-03-08 20:56:08	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	2	0	0	2022-03-08 20:56:08	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.themes	default	DefaultThemePlugin	1	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.importexport	users		0	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.importexport	native		0	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.importexport	csv		0	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.importexport	onix30		0	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.paymethod	paypal		0	0
-1	0	0	0	2022-03-08 20:56:08	1	plugins.paymethod	manual		0	0
-3	3	0	10	2022-03-08 20:56:07	1	core	omp		0	1
-\.
-
-
---
--- Name: access_keys_access_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.access_keys_access_key_id_seq', 1, false);
-
-
---
--- Name: announcement_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.announcement_types_type_id_seq', 1, false);
-
-
---
--- Name: announcements_announcement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.announcements_announcement_id_seq', 1, false);
-
-
---
--- Name: auth_sources_auth_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.auth_sources_auth_id_seq', 1, false);
-
-
---
--- Name: authors_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.authors_author_id_seq', 57, true);
-
-
---
--- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.categories_category_id_seq', 1, false);
-
-
---
--- Name: citations_citation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.citations_citation_id_seq', 1, false);
-
-
---
--- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.completed_payments_completed_payment_id_seq', 1, false);
-
-
---
--- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq', 26, true);
-
-
---
--- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.controlled_vocabs_controlled_vocab_id_seq', 86, true);
-
-
---
--- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.data_object_tombstone_oai_set_objects_object_id_seq', 4, true);
-
-
---
--- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.data_object_tombstones_tombstone_id_seq', 2, true);
-
-
---
--- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true);
-
-
---
--- Name: email_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.email_log_log_id_seq', 1, false);
-
-
---
--- Name: email_templates_default_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.email_templates_default_email_id_seq', 43, true);
-
-
---
--- Name: email_templates_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.email_templates_email_id_seq', 1, false);
-
-
---
--- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.event_log_log_id_seq', 364, true);
-
-
---
--- Name: files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.files_file_id_seq', 48, true);
-
-
---
--- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.filter_groups_filter_group_id_seq', 19, true);
-
-
---
--- Name: filters_filter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.filters_filter_id_seq', 19, true);
-
-
---
--- Name: genres_genre_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.genres_genre_id_seq', 15, true);
-
-
---
--- Name: identification_codes_identification_code_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.identification_codes_identification_code_id_seq', 1, false);
-
-
---
--- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.jobs_id_seq', 1, false);
-
-
---
--- Name: library_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.library_files_file_id_seq', 1, false);
-
-
---
--- Name: markets_market_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.markets_market_id_seq', 1, false);
-
-
---
--- Name: metadata_descriptions_metadata_description_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.metadata_descriptions_metadata_description_id_seq', 1, false);
-
-
---
--- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq', 22, true);
-
-
---
--- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menu_items_navigation_menu_item_id_seq', 23, true);
-
-
---
--- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menus_navigation_menu_id_seq', 3, true);
-
-
---
--- Name: notes_note_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.notes_note_id_seq', 1, true);
-
-
---
--- Name: notification_mail_list_notification_mail_list_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.notification_mail_list_notification_mail_list_id_seq', 1, false);
-
-
---
--- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_seq', 16, true);
-
-
---
--- Name: notifications_notification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.notifications_notification_id_seq', 432, true);
-
-
---
--- Name: presses_press_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.presses_press_id_seq', 1, true);
-
-
---
--- Name: publication_dates_publication_date_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.publication_dates_publication_date_id_seq', 1, false);
-
-
---
--- Name: publication_formats_publication_format_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.publication_formats_publication_format_id_seq', 2, true);
-
-
---
--- Name: publications_publication_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.publications_publication_id_seq', 17, true);
-
-
---
--- Name: queries_query_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.queries_query_id_seq', 1, true);
-
-
---
--- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.queued_payments_queued_payment_id_seq', 1, false);
-
-
---
--- Name: representatives_representative_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.representatives_representative_id_seq', 1, false);
-
-
---
--- Name: review_assignments_review_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 25, true);
-
-
---
--- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_form_elements_review_form_element_id_seq', 1, false);
-
-
---
--- Name: review_forms_review_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_forms_review_form_id_seq', 1, false);
-
-
---
--- Name: review_rounds_review_round_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 19, true);
-
-
---
--- Name: sales_rights_sales_rights_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.sales_rights_sales_rights_id_seq', 1, false);
-
-
---
--- Name: series_series_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.series_series_id_seq', 5, true);
-
-
---
--- Name: spotlights_spotlight_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.spotlights_spotlight_id_seq', 1, false);
-
-
---
--- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 45, true);
-
-
---
--- Name: static_pages_static_page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.static_pages_static_page_id_seq', 1, false);
-
-
---
--- Name: submission_chapters_chapter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_chapters_chapter_id_seq', 71, true);
-
-
---
--- Name: submission_comments_comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
-
-
---
--- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 55, true);
-
-
---
--- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 55, true);
-
-
---
--- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq', 110, true);
-
-
---
--- Name: submission_search_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_search_objects_object_id_seq', 16, true);
-
-
---
--- Name: submissions_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submissions_submission_id_seq', 17, true);
-
-
---
--- Name: temporary_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.temporary_files_file_id_seq', 1, false);
-
-
---
--- Name: user_groups_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.user_groups_user_group_id_seq', 19, true);
 
 
 --
@@ -11236,7 +11198,44 @@ SELECT pg_catalog.setval('public.users_user_id_seq', 34, true);
 
 
 --
--- Name: access_keys access_keys_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Data for Name: versions; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
+1	0	0	0	2022-03-12 01:01:07	1	plugins.metadata	dc11		0	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.pubIds	doi	DOIPubIdPlugin	0	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.pubIds	urn	URNPubIdPlugin	0	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.blocks	information	InformationBlockPlugin	1	0
+1	2	0	0	2022-03-12 01:01:07	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.generic	acron		0	1
+1	0	0	0	2022-03-12 01:01:07	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	2	0	0	2022-03-12 01:01:07	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.generic	usageEvent		0	1
+1	0	0	0	2022-03-12 01:01:07	1	plugins.themes	default	DefaultThemePlugin	1	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.importexport	native		0	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.importexport	onix30		0	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.importexport	csv		0	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.importexport	users		0	0
+1	0	0	0	2022-03-12 01:01:07	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2022-03-12 01:01:08	1	plugins.paymethod	paypal		0	0
+1	0	0	0	2022-03-12 01:01:08	1	plugins.paymethod	manual		0	0
+3	3	0	10	2022-03-12 01:01:07	1	core	omp		0	1
+\.
+
+
+--
+-- Name: access_keys_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.access_keys
@@ -11244,7 +11243,7 @@ ALTER TABLE ONLY public.access_keys
 
 
 --
--- Name: announcement_settings announcement_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcement_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_settings
@@ -11252,7 +11251,7 @@ ALTER TABLE ONLY public.announcement_settings
 
 
 --
--- Name: announcement_type_settings announcement_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcement_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_type_settings
@@ -11260,7 +11259,7 @@ ALTER TABLE ONLY public.announcement_type_settings
 
 
 --
--- Name: announcement_types announcement_types_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcement_types_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_types
@@ -11268,7 +11267,7 @@ ALTER TABLE ONLY public.announcement_types
 
 
 --
--- Name: announcements announcements_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcements_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcements
@@ -11276,7 +11275,7 @@ ALTER TABLE ONLY public.announcements
 
 
 --
--- Name: auth_sources auth_sources_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: auth_sources_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.auth_sources
@@ -11284,7 +11283,7 @@ ALTER TABLE ONLY public.auth_sources
 
 
 --
--- Name: author_settings author_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: author_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.author_settings
@@ -11292,7 +11291,7 @@ ALTER TABLE ONLY public.author_settings
 
 
 --
--- Name: authors authors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: authors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.authors
@@ -11300,7 +11299,7 @@ ALTER TABLE ONLY public.authors
 
 
 --
--- Name: controlled_vocab_entry_settings c_v_e_s_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: c_v_e_s_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entry_settings
@@ -11308,7 +11307,7 @@ ALTER TABLE ONLY public.controlled_vocab_entry_settings
 
 
 --
--- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: categories_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.categories
@@ -11316,7 +11315,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: categories category_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: category_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.categories
@@ -11324,7 +11323,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: category_settings category_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: category_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.category_settings
@@ -11332,7 +11331,7 @@ ALTER TABLE ONLY public.category_settings
 
 
 --
--- Name: submission_chapter_authors chapter_authors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: chapter_authors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapter_authors
@@ -11340,7 +11339,7 @@ ALTER TABLE ONLY public.submission_chapter_authors
 
 
 --
--- Name: citation_settings citation_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: citation_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citation_settings
@@ -11348,7 +11347,7 @@ ALTER TABLE ONLY public.citation_settings
 
 
 --
--- Name: citations citations_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: citations_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citations
@@ -11356,7 +11355,7 @@ ALTER TABLE ONLY public.citations
 
 
 --
--- Name: citations citations_publication_seq; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: citations_publication_seq; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citations
@@ -11364,7 +11363,7 @@ ALTER TABLE ONLY public.citations
 
 
 --
--- Name: completed_payments completed_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: completed_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.completed_payments
@@ -11372,7 +11371,7 @@ ALTER TABLE ONLY public.completed_payments
 
 
 --
--- Name: controlled_vocab_entries controlled_vocab_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocab_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entries
@@ -11380,7 +11379,7 @@ ALTER TABLE ONLY public.controlled_vocab_entries
 
 
 --
--- Name: controlled_vocabs controlled_vocab_symbolic; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocab_symbolic; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs
@@ -11388,7 +11387,7 @@ ALTER TABLE ONLY public.controlled_vocabs
 
 
 --
--- Name: controlled_vocabs controlled_vocabs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocabs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs
@@ -11396,7 +11395,7 @@ ALTER TABLE ONLY public.controlled_vocabs
 
 
 --
--- Name: data_object_tombstone_oai_set_objects data_object_tombstone_oai_set_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstone_oai_set_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
@@ -11404,7 +11403,7 @@ ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
 
 
 --
--- Name: data_object_tombstone_settings data_object_tombstone_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstone_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_settings
@@ -11412,7 +11411,7 @@ ALTER TABLE ONLY public.data_object_tombstone_settings
 
 
 --
--- Name: data_object_tombstones data_object_tombstones_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstones_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstones
@@ -11420,7 +11419,7 @@ ALTER TABLE ONLY public.data_object_tombstones
 
 
 --
--- Name: edit_decisions edit_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: edit_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.edit_decisions
@@ -11428,7 +11427,7 @@ ALTER TABLE ONLY public.edit_decisions
 
 
 --
--- Name: email_log email_log_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_log_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_log
@@ -11436,7 +11435,7 @@ ALTER TABLE ONLY public.email_log
 
 
 --
--- Name: email_log_users email_log_user_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_log_user_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_log_users
@@ -11444,7 +11443,7 @@ ALTER TABLE ONLY public.email_log_users
 
 
 --
--- Name: email_templates_settings email_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates_settings
@@ -11452,7 +11451,7 @@ ALTER TABLE ONLY public.email_templates_settings
 
 
 --
--- Name: email_templates_default_data email_templates_default_data_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates_default_data_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default_data
@@ -11460,7 +11459,7 @@ ALTER TABLE ONLY public.email_templates_default_data
 
 
 --
--- Name: email_templates_default email_templates_default_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates_default_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default
@@ -11468,7 +11467,7 @@ ALTER TABLE ONLY public.email_templates_default
 
 
 --
--- Name: email_templates email_templates_email_key; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates_email_key; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates
@@ -11476,7 +11475,7 @@ ALTER TABLE ONLY public.email_templates
 
 
 --
--- Name: email_templates email_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates
@@ -11484,7 +11483,7 @@ ALTER TABLE ONLY public.email_templates
 
 
 --
--- Name: event_log event_log_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: event_log_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.event_log
@@ -11492,7 +11491,7 @@ ALTER TABLE ONLY public.event_log
 
 
 --
--- Name: event_log_settings event_log_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: event_log_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.event_log_settings
@@ -11500,7 +11499,7 @@ ALTER TABLE ONLY public.event_log_settings
 
 
 --
--- Name: files files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.files
@@ -11508,7 +11507,7 @@ ALTER TABLE ONLY public.files
 
 
 --
--- Name: filter_groups filter_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: filter_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filter_groups
@@ -11516,7 +11515,7 @@ ALTER TABLE ONLY public.filter_groups
 
 
 --
--- Name: filter_groups filter_groups_symbolic; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: filter_groups_symbolic; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filter_groups
@@ -11524,7 +11523,7 @@ ALTER TABLE ONLY public.filter_groups
 
 
 --
--- Name: filter_settings filter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: filter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filter_settings
@@ -11532,7 +11531,7 @@ ALTER TABLE ONLY public.filter_settings
 
 
 --
--- Name: filters filters_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: filters_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filters
@@ -11540,7 +11539,7 @@ ALTER TABLE ONLY public.filters
 
 
 --
--- Name: genre_settings genre_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: genre_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.genre_settings
@@ -11548,7 +11547,7 @@ ALTER TABLE ONLY public.genre_settings
 
 
 --
--- Name: genres genres_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: genres_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.genres
@@ -11556,7 +11555,7 @@ ALTER TABLE ONLY public.genres
 
 
 --
--- Name: identification_codes identification_codes_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: identification_codes_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.identification_codes
@@ -11564,7 +11563,7 @@ ALTER TABLE ONLY public.identification_codes
 
 
 --
--- Name: item_views item_views_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: item_views_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.item_views
@@ -11572,7 +11571,7 @@ ALTER TABLE ONLY public.item_views
 
 
 --
--- Name: jobs jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.jobs
@@ -11580,7 +11579,7 @@ ALTER TABLE ONLY public.jobs
 
 
 --
--- Name: library_file_settings library_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: library_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.library_file_settings
@@ -11588,7 +11587,7 @@ ALTER TABLE ONLY public.library_file_settings
 
 
 --
--- Name: library_files library_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: library_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.library_files
@@ -11596,7 +11595,7 @@ ALTER TABLE ONLY public.library_files
 
 
 --
--- Name: markets markets_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: markets_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.markets
@@ -11604,7 +11603,7 @@ ALTER TABLE ONLY public.markets
 
 
 --
--- Name: metadata_descriptions metadata_descriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metadata_descriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metadata_descriptions
@@ -11612,7 +11611,7 @@ ALTER TABLE ONLY public.metadata_descriptions
 
 
 --
--- Name: metadata_description_settings metadata_descripton_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metadata_descripton_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metadata_description_settings
@@ -11620,7 +11619,7 @@ ALTER TABLE ONLY public.metadata_description_settings
 
 
 --
--- Name: navigation_menu_item_assignment_settings navigation_menu_item_assignment_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_assignment_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
@@ -11628,7 +11627,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
 
 
 --
--- Name: navigation_menu_item_assignments navigation_menu_item_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignments
@@ -11636,7 +11635,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignments
 
 
 --
--- Name: navigation_menu_item_settings navigation_menu_item_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_settings
@@ -11644,7 +11643,7 @@ ALTER TABLE ONLY public.navigation_menu_item_settings
 
 
 --
--- Name: navigation_menu_items navigation_menu_items_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_items_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_items
@@ -11652,7 +11651,7 @@ ALTER TABLE ONLY public.navigation_menu_items
 
 
 --
--- Name: navigation_menus navigation_menus_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menus_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menus
@@ -11660,7 +11659,7 @@ ALTER TABLE ONLY public.navigation_menus
 
 
 --
--- Name: new_releases new_releases_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: new_releases_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.new_releases
@@ -11668,7 +11667,7 @@ ALTER TABLE ONLY public.new_releases
 
 
 --
--- Name: notes notes_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notes_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notes
@@ -11676,7 +11675,7 @@ ALTER TABLE ONLY public.notes
 
 
 --
--- Name: notification_mail_list notification_mail_list_email_context; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notification_mail_list_email_context; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_mail_list
@@ -11684,7 +11683,7 @@ ALTER TABLE ONLY public.notification_mail_list
 
 
 --
--- Name: notification_mail_list notification_mail_list_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notification_mail_list_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_mail_list
@@ -11692,7 +11691,7 @@ ALTER TABLE ONLY public.notification_mail_list
 
 
 --
--- Name: notification_settings notification_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notification_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_settings
@@ -11700,7 +11699,7 @@ ALTER TABLE ONLY public.notification_settings
 
 
 --
--- Name: notification_subscription_settings notification_subscription_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notification_subscription_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_subscription_settings
@@ -11708,7 +11707,7 @@ ALTER TABLE ONLY public.notification_subscription_settings
 
 
 --
--- Name: notifications notifications_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notifications_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notifications
@@ -11716,7 +11715,7 @@ ALTER TABLE ONLY public.notifications
 
 
 --
--- Name: oai_resumption_tokens oai_resumption_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: oai_resumption_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.oai_resumption_tokens
@@ -11724,7 +11723,7 @@ ALTER TABLE ONLY public.oai_resumption_tokens
 
 
 --
--- Name: plugin_settings plugin_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: plugin_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.plugin_settings
@@ -11732,7 +11731,7 @@ ALTER TABLE ONLY public.plugin_settings
 
 
 --
--- Name: features press_features_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: press_features_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.features
@@ -11740,7 +11739,7 @@ ALTER TABLE ONLY public.features
 
 
 --
--- Name: presses press_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: press_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.presses
@@ -11748,7 +11747,7 @@ ALTER TABLE ONLY public.presses
 
 
 --
--- Name: press_settings press_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: press_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.press_settings
@@ -11756,7 +11755,7 @@ ALTER TABLE ONLY public.press_settings
 
 
 --
--- Name: presses presses_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: presses_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.presses
@@ -11764,7 +11763,7 @@ ALTER TABLE ONLY public.presses
 
 
 --
--- Name: publication_categories publication_categories_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_categories_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_categories
@@ -11772,7 +11771,7 @@ ALTER TABLE ONLY public.publication_categories
 
 
 --
--- Name: publication_dates publication_dates_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_dates_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_dates
@@ -11780,7 +11779,7 @@ ALTER TABLE ONLY public.publication_dates
 
 
 --
--- Name: publication_format_settings publication_format_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_format_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_format_settings
@@ -11788,7 +11787,7 @@ ALTER TABLE ONLY public.publication_format_settings
 
 
 --
--- Name: publication_formats publication_formats_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_formats_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_formats
@@ -11796,7 +11795,7 @@ ALTER TABLE ONLY public.publication_formats
 
 
 --
--- Name: publication_settings publication_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_settings
@@ -11804,7 +11803,7 @@ ALTER TABLE ONLY public.publication_settings
 
 
 --
--- Name: publications publications_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publications_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publications
@@ -11812,7 +11811,7 @@ ALTER TABLE ONLY public.publications
 
 
 --
--- Name: queries queries_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: queries_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.queries
@@ -11820,7 +11819,7 @@ ALTER TABLE ONLY public.queries
 
 
 --
--- Name: query_participants query_participants_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: query_participants_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.query_participants
@@ -11828,7 +11827,7 @@ ALTER TABLE ONLY public.query_participants
 
 
 --
--- Name: queued_payments queued_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: queued_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.queued_payments
@@ -11836,7 +11835,7 @@ ALTER TABLE ONLY public.queued_payments
 
 
 --
--- Name: representatives representatives_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: representatives_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.representatives
@@ -11844,7 +11843,7 @@ ALTER TABLE ONLY public.representatives
 
 
 --
--- Name: review_assignments review_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -11852,7 +11851,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_files review_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_files
@@ -11860,7 +11859,7 @@ ALTER TABLE ONLY public.review_files
 
 
 --
--- Name: review_form_element_settings review_form_element_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_element_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_element_settings
@@ -11868,7 +11867,7 @@ ALTER TABLE ONLY public.review_form_element_settings
 
 
 --
--- Name: review_form_elements review_form_elements_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_elements_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_elements
@@ -11876,7 +11875,7 @@ ALTER TABLE ONLY public.review_form_elements
 
 
 --
--- Name: review_form_settings review_form_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_settings
@@ -11884,7 +11883,7 @@ ALTER TABLE ONLY public.review_form_settings
 
 
 --
--- Name: review_forms review_forms_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_forms_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_forms
@@ -11892,7 +11891,7 @@ ALTER TABLE ONLY public.review_forms
 
 
 --
--- Name: review_round_files review_round_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_round_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_round_files
@@ -11900,7 +11899,7 @@ ALTER TABLE ONLY public.review_round_files
 
 
 --
--- Name: review_rounds review_rounds_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_rounds_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_rounds
@@ -11908,7 +11907,7 @@ ALTER TABLE ONLY public.review_rounds
 
 
 --
--- Name: review_rounds review_rounds_submission_id_stage_id_round_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_rounds_submission_id_stage_id_round_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_rounds
@@ -11916,7 +11915,7 @@ ALTER TABLE ONLY public.review_rounds
 
 
 --
--- Name: sales_rights sales_rights_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: sales_rights_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.sales_rights
@@ -11924,7 +11923,7 @@ ALTER TABLE ONLY public.sales_rights
 
 
 --
--- Name: scheduled_tasks scheduled_tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: scheduled_tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.scheduled_tasks
@@ -11932,7 +11931,7 @@ ALTER TABLE ONLY public.scheduled_tasks
 
 
 --
--- Name: subeditor_submission_group section_editors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: section_editors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.subeditor_submission_group
@@ -11940,7 +11939,7 @@ ALTER TABLE ONLY public.subeditor_submission_group
 
 
 --
--- Name: series_categories series_categories_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series_categories_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series_categories
@@ -11948,7 +11947,7 @@ ALTER TABLE ONLY public.series_categories
 
 
 --
--- Name: series series_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series
@@ -11956,7 +11955,7 @@ ALTER TABLE ONLY public.series
 
 
 --
--- Name: series series_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series
@@ -11964,7 +11963,7 @@ ALTER TABLE ONLY public.series
 
 
 --
--- Name: series_settings series_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series_settings
@@ -11972,7 +11971,7 @@ ALTER TABLE ONLY public.series_settings
 
 
 --
--- Name: sessions sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.sessions
@@ -11980,7 +11979,7 @@ ALTER TABLE ONLY public.sessions
 
 
 --
--- Name: site_settings site_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: site_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.site_settings
@@ -11988,7 +11987,7 @@ ALTER TABLE ONLY public.site_settings
 
 
 --
--- Name: spotlight_settings spotlight_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: spotlight_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.spotlight_settings
@@ -11996,7 +11995,7 @@ ALTER TABLE ONLY public.spotlight_settings
 
 
 --
--- Name: spotlights spotlights_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: spotlights_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.spotlights
@@ -12004,7 +12003,7 @@ ALTER TABLE ONLY public.spotlights
 
 
 --
--- Name: stage_assignments stage_assignment; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: stage_assignment; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments
@@ -12012,7 +12011,7 @@ ALTER TABLE ONLY public.stage_assignments
 
 
 --
--- Name: stage_assignments stage_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: stage_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments
@@ -12020,7 +12019,7 @@ ALTER TABLE ONLY public.stage_assignments
 
 
 --
--- Name: static_page_settings static_page_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: static_page_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.static_page_settings
@@ -12028,7 +12027,7 @@ ALTER TABLE ONLY public.static_page_settings
 
 
 --
--- Name: static_pages static_pages_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: static_pages_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.static_pages
@@ -12036,7 +12035,7 @@ ALTER TABLE ONLY public.static_pages
 
 
 --
--- Name: submission_chapter_settings submission_chapter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapter_settings
@@ -12044,7 +12043,7 @@ ALTER TABLE ONLY public.submission_chapter_settings
 
 
 --
--- Name: submission_chapters submission_chapters_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapters_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapters
@@ -12052,7 +12051,7 @@ ALTER TABLE ONLY public.submission_chapters
 
 
 --
--- Name: submission_comments submission_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_comments
@@ -12060,7 +12059,7 @@ ALTER TABLE ONLY public.submission_comments
 
 
 --
--- Name: submission_file_revisions submission_file_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_file_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -12068,7 +12067,7 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_file_settings submission_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_settings
@@ -12076,7 +12075,7 @@ ALTER TABLE ONLY public.submission_file_settings
 
 
 --
--- Name: submission_files submission_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -12084,7 +12083,7 @@ ALTER TABLE ONLY public.submission_files
 
 
 --
--- Name: submission_search_keyword_list submission_search_keyword_list_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_keyword_list_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list
@@ -12092,7 +12091,7 @@ ALTER TABLE ONLY public.submission_search_keyword_list
 
 
 --
--- Name: submission_search_keyword_list submission_search_keyword_text; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_keyword_text; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list
@@ -12100,7 +12099,7 @@ ALTER TABLE ONLY public.submission_search_keyword_list
 
 
 --
--- Name: submission_search_object_keywords submission_search_object_keywords_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_object_keywords_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_object_keywords
@@ -12108,7 +12107,7 @@ ALTER TABLE ONLY public.submission_search_object_keywords
 
 
 --
--- Name: submission_search_objects submission_search_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_objects
@@ -12116,7 +12115,7 @@ ALTER TABLE ONLY public.submission_search_objects
 
 
 --
--- Name: submission_settings submission_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_settings
@@ -12124,7 +12123,7 @@ ALTER TABLE ONLY public.submission_settings
 
 
 --
--- Name: submissions submissions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submissions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submissions
@@ -12132,7 +12131,7 @@ ALTER TABLE ONLY public.submissions
 
 
 --
--- Name: temporary_files temporary_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: temporary_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.temporary_files
@@ -12140,7 +12139,7 @@ ALTER TABLE ONLY public.temporary_files
 
 
 --
--- Name: user_interests u_e_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: u_e_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_interests
@@ -12148,7 +12147,7 @@ ALTER TABLE ONLY public.user_interests
 
 
 --
--- Name: user_group_settings user_group_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_group_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_group_settings
@@ -12156,7 +12155,7 @@ ALTER TABLE ONLY public.user_group_settings
 
 
 --
--- Name: user_group_stage user_group_stage_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_group_stage_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_group_stage
@@ -12164,7 +12163,7 @@ ALTER TABLE ONLY public.user_group_stage
 
 
 --
--- Name: user_groups user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_groups
@@ -12172,7 +12171,7 @@ ALTER TABLE ONLY public.user_groups
 
 
 --
--- Name: user_settings user_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_settings
@@ -12180,7 +12179,7 @@ ALTER TABLE ONLY public.user_settings
 
 
 --
--- Name: user_user_groups user_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_user_groups
@@ -12188,7 +12187,7 @@ ALTER TABLE ONLY public.user_user_groups
 
 
 --
--- Name: users users_email; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: users_email; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.users
@@ -12196,7 +12195,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.users
@@ -12204,7 +12203,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users users_username; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: users_username; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.users
@@ -12212,7 +12211,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: versions versions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: versions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.versions
@@ -12927,7 +12926,7 @@ CREATE INDEX user_user_groups_user_id ON public.user_user_groups USING btree (us
 
 
 --
--- Name: review_files review_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_files
@@ -12935,7 +12934,7 @@ ALTER TABLE ONLY public.review_files
 
 
 --
--- Name: review_round_files review_round_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_round_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_round_files
@@ -12943,7 +12942,7 @@ ALTER TABLE ONLY public.review_round_files
 
 
 --
--- Name: submission_file_revisions submission_file_revisions_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_file_revisions_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -12951,7 +12950,7 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_file_revisions submission_file_revisions_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_file_revisions_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -12959,7 +12958,7 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_files submission_files_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_files_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -12970,6 +12969,9 @@ ALTER TABLE ONLY public.submission_files
 -- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
 --
 
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
