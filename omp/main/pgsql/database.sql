@@ -5466,36 +5466,36 @@ SELECT pg_catalog.setval('public.dois_doi_id_seq', 1, false);
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	\N	1	\N	3	23	2022-05-24 20:34:59
-2	1	1	3	1	3	2	2022-05-24 20:35:16
-3	2	\N	1	\N	3	23	2022-05-24 20:37:52
-4	4	\N	1	\N	3	1	2022-05-24 20:41:05
-5	4	3	2	1	3	3	2022-05-24 20:41:27
-6	4	4	3	1	3	2	2022-05-24 20:41:51
-7	4	\N	4	\N	3	7	2022-05-24 20:42:16
-8	5	\N	1	\N	3	1	2022-05-24 20:44:12
-9	5	5	2	1	3	3	2022-05-24 20:44:31
-10	5	6	3	1	3	2	2022-05-24 20:44:51
-11	5	\N	4	\N	3	7	2022-05-24 20:45:11
-12	6	\N	1	\N	3	1	2022-05-24 20:47:40
-13	6	7	2	1	6	28	2022-05-24 20:48:15
-14	7	\N	1	\N	3	23	2022-05-24 20:51:03
-15	7	8	3	1	3	2	2022-05-24 20:51:29
-16	9	\N	1	\N	3	1	2022-05-24 20:54:12
-17	11	\N	1	\N	3	1	2022-05-24 20:56:09
-18	11	10	2	1	3	3	2022-05-24 20:56:25
-19	11	11	3	1	3	2	2022-05-24 20:57:35
-20	12	\N	1	\N	3	1	2022-05-24 20:59:43
-21	13	\N	1	\N	3	1	2022-05-24 21:02:13
-22	13	13	2	1	3	3	2022-05-24 21:02:35
-23	13	14	3	1	3	2	2022-05-24 21:04:13
-24	14	\N	1	\N	3	1	2022-05-24 21:06:03
-25	14	15	2	1	3	3	2022-05-24 21:06:26
-26	14	16	3	1	3	2	2022-05-24 21:06:50
-27	14	\N	4	\N	3	7	2022-05-24 21:07:15
-28	15	\N	1	\N	3	23	2022-05-24 21:09:58
-29	16	\N	1	\N	3	23	2022-05-24 21:11:00
-30	17	\N	1	\N	3	1	2022-05-24 21:15:01
+1	1	\N	1	\N	3	23	2022-05-25 18:44:16
+2	1	1	3	1	3	2	2022-05-25 18:44:33
+3	2	\N	1	\N	3	23	2022-05-25 18:47:10
+4	4	\N	1	\N	3	1	2022-05-25 18:50:23
+5	4	3	2	1	3	3	2022-05-25 18:50:44
+6	4	4	3	1	3	2	2022-05-25 18:51:07
+7	4	\N	4	\N	3	7	2022-05-25 18:51:32
+8	5	\N	1	\N	3	1	2022-05-25 18:53:28
+9	5	5	2	1	3	3	2022-05-25 18:53:45
+10	5	6	3	1	3	2	2022-05-25 18:54:06
+11	5	\N	4	\N	3	7	2022-05-25 18:54:27
+12	6	\N	1	\N	3	1	2022-05-25 18:56:57
+13	6	7	2	1	6	28	2022-05-25 18:57:30
+14	7	\N	1	\N	3	23	2022-05-25 19:00:19
+15	7	8	3	1	3	2	2022-05-25 19:00:45
+16	9	\N	1	\N	3	1	2022-05-25 19:03:35
+17	11	\N	1	\N	3	1	2022-05-25 19:05:33
+18	11	10	2	1	3	3	2022-05-25 19:05:49
+19	11	11	3	1	3	2	2022-05-25 19:07:01
+20	12	\N	1	\N	3	1	2022-05-25 19:09:14
+21	13	\N	1	\N	3	1	2022-05-25 19:11:40
+22	13	13	2	1	3	3	2022-05-25 19:12:01
+23	13	14	3	1	3	2	2022-05-25 19:13:38
+24	14	\N	1	\N	3	1	2022-05-25 19:15:31
+25	14	15	2	1	3	3	2022-05-25 19:15:53
+26	14	16	3	1	3	2	2022-05-25 19:16:17
+27	14	\N	4	\N	3	7	2022-05-25 19:16:42
+28	15	\N	1	\N	3	23	2022-05-25 19:19:30
+29	16	\N	1	\N	3	23	2022-05-25 19:20:31
+30	17	\N	1	\N	3	1	2022-05-25 19:24:33
 \.
 
 
@@ -5511,41 +5511,41 @@ SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true)
 --
 
 COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
-1	1048585	1	3	2022-05-24 20:34:59	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been sent for review	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that an editor has reviewed your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-2	1048585	1	3	2022-05-24 20:35:16	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-3	1048585	2	3	2022-05-24 20:37:53	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Your submission has been sent for review	<p>Dear Alvin Finkel,</p><p>I am pleased to inform you that an editor has reviewed your submission, The West and Beyond: New Perspectives on an Imagined Region, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-4	1048585	4	3	2022-05-24 20:41:05	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for internal review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-5	1048585	4	3	2022-05-24 20:41:27	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-6	1048585	4	3	2022-05-24 20:41:51	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-7	1048585	4	3	2022-05-24 20:42:16	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Next steps for publishing your submission	<p>Dear Bart Beaty,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-8	1048585	5	3	2022-05-24 20:44:12	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for internal review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-9	1048585	5	3	2022-05-24 20:44:31	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-10	1048585	5	3	2022-05-24 20:44:51	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Bomb Canada and Other Unkind Remarks in the American Media, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-11	1048585	5	3	2022-05-24 20:45:11	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Next steps for publishing your submission	<p>Dear Chantal Allan,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, Bomb Canada and Other Unkind Remarks in the American Media, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-12	1048585	6	3	2022-05-24 20:47:40	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Your submission has been sent for internal review	<p>Dear Deborah Bernnard,</p><p>I am pleased to inform you that an editor has reviewed your submission, The Information Literacy User’s Guide, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-13	1048585	7	3	2022-05-24 20:51:03	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been sent for review	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that an editor has reviewed your submission, Accessible Elements: Teaching Science Online and at a Distance, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-14	1048585	7	3	2022-05-24 20:51:29	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Accessible Elements: Teaching Science Online and at a Distance, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-15	1048585	9	3	2022-05-24 20:54:12	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Your submission has been sent for internal review	<p>Dear Fernando Perini,</p><p>I am pleased to inform you that an editor has reviewed your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-16	1048585	11	3	2022-05-24 20:56:09	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for internal review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-17	1048585	11	3	2022-05-24 20:56:25	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-18	1048585	11	10	2022-05-24 20:56:54	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Dreamwork,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-21, if not before.<br />\n<br />\nAdela Gallego
-19	1048585	11	12	2022-05-24 20:57:08	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Dreamwork,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-21, if not before.<br />\n<br />\nGonzalo Favio
-20	1048585	11	3	2022-05-24 20:57:35	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Dreamwork, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-21	1048585	12	3	2022-05-24 20:59:43	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Your submission has been sent for internal review	<p>Dear Laurent Elder,</p><p>I am pleased to inform you that an editor has reviewed your submission, Connecting ICTs to Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-22	1048585	12	8	2022-05-24 21:00:33	1073741829	"Paul Hudson" <phudson@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Connecting ICTs to Development,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-21, if not before.<br />\n<br />\nPaul Hudson
-23	1048585	13	3	2022-05-24 21:02:14	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for internal review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-24	1048585	13	3	2022-05-24 21:02:35	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-25	1048585	13	10	2022-05-24 21:03:22	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Mobile Learning: Transforming the Delivery of Education and Training,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-21, if not before.<br />\n<br />\nAdela Gallego
-26	1048585	13	12	2022-05-24 21:03:39	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Mobile Learning: Transforming the Delivery of Education and Training,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-21, if not before.<br />\n<br />\nGonzalo Favio
-27	1048585	13	3	2022-05-24 21:04:13	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Mobile Learning: Transforming the Delivery of Education and Training, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-28	1048585	14	3	2022-05-24 21:06:03	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for internal review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-29	1048585	14	3	2022-05-24 21:06:26	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-30	1048585	14	3	2022-05-24 21:06:50	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-31	1048585	14	3	2022-05-24 21:07:15	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Next steps for publishing your submission	<p>Dear Michael Dawson,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-32	1048585	15	3	2022-05-24 21:09:58	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Your submission has been sent for review	<p>Dear Max Foran,</p><p>I am pleased to inform you that an editor has reviewed your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-33	1048585	16	3	2022-05-24 21:11:01	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Power,</p><p>I am pleased to inform you that an editor has reviewed your submission, A Designer's Log: Case Studies in Instructional Design, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-34	1048585	16	10	2022-05-24 21:11:40	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;A Designer's Log: Case Studies in Instructional Design,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-21, if not before.<br />\n<br />\nAdela Gallego
-35	1048585	17	3	2022-05-24 21:15:01	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Your submission has been sent for internal review	<p>Dear Matthew Smith,</p><p>I am pleased to inform you that an editor has reviewed your submission, Open Development: Networked Innovations in International Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+1	1048585	1	3	2022-05-25 18:44:16	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been sent for review	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that an editor has reviewed your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+2	1048585	1	3	2022-05-25 18:44:33	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+3	1048585	2	3	2022-05-25 18:47:10	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Your submission has been sent for review	<p>Dear Alvin Finkel,</p><p>I am pleased to inform you that an editor has reviewed your submission, The West and Beyond: New Perspectives on an Imagined Region, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+4	1048585	4	3	2022-05-25 18:50:23	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for internal review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+5	1048585	4	3	2022-05-25 18:50:44	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+6	1048585	4	3	2022-05-25 18:51:08	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+7	1048585	4	3	2022-05-25 18:51:32	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Next steps for publishing your submission	<p>Dear Bart Beaty,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+8	1048585	5	3	2022-05-25 18:53:28	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for internal review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+9	1048585	5	3	2022-05-25 18:53:45	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+10	1048585	5	3	2022-05-25 18:54:06	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Bomb Canada and Other Unkind Remarks in the American Media, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+11	1048585	5	3	2022-05-25 18:54:27	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Next steps for publishing your submission	<p>Dear Chantal Allan,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, Bomb Canada and Other Unkind Remarks in the American Media, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+12	1048585	6	3	2022-05-25 18:56:57	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Your submission has been sent for internal review	<p>Dear Deborah Bernnard,</p><p>I am pleased to inform you that an editor has reviewed your submission, The Information Literacy User’s Guide, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+13	1048585	7	3	2022-05-25 19:00:19	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been sent for review	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that an editor has reviewed your submission, Accessible Elements: Teaching Science Online and at a Distance, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+14	1048585	7	3	2022-05-25 19:00:45	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Accessible Elements: Teaching Science Online and at a Distance, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+15	1048585	9	3	2022-05-25 19:03:35	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Your submission has been sent for internal review	<p>Dear Fernando Perini,</p><p>I am pleased to inform you that an editor has reviewed your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+16	1048585	11	3	2022-05-25 19:05:33	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for internal review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+17	1048585	11	3	2022-05-25 19:05:49	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+18	1048585	11	10	2022-05-25 19:06:20	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Dreamwork,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-22, if not before.<br />\n<br />\nAdela Gallego
+19	1048585	11	12	2022-05-25 19:06:34	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Dreamwork,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-22, if not before.<br />\n<br />\nGonzalo Favio
+20	1048585	11	3	2022-05-25 19:07:01	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Dreamwork, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+21	1048585	12	3	2022-05-25 19:09:14	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Your submission has been sent for internal review	<p>Dear Laurent Elder,</p><p>I am pleased to inform you that an editor has reviewed your submission, Connecting ICTs to Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+22	1048585	12	8	2022-05-25 19:10:03	1073741829	"Paul Hudson" <phudson@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Connecting ICTs to Development,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-22, if not before.<br />\n<br />\nPaul Hudson
+23	1048585	13	3	2022-05-25 19:11:40	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for internal review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+24	1048585	13	3	2022-05-25 19:12:01	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+25	1048585	13	10	2022-05-25 19:12:48	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Mobile Learning: Transforming the Delivery of Education and Training,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-22, if not before.<br />\n<br />\nAdela Gallego
+26	1048585	13	12	2022-05-25 19:13:05	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Mobile Learning: Transforming the Delivery of Education and Training,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-22, if not before.<br />\n<br />\nGonzalo Favio
+27	1048585	13	3	2022-05-25 19:13:39	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Mobile Learning: Transforming the Delivery of Education and Training, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+28	1048585	14	3	2022-05-25 19:15:31	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for internal review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+29	1048585	14	3	2022-05-25 19:15:53	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+30	1048585	14	3	2022-05-25 19:16:17	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+31	1048585	14	3	2022-05-25 19:16:42	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Next steps for publishing your submission	<p>Dear Michael Dawson,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+32	1048585	15	3	2022-05-25 19:19:30	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Your submission has been sent for review	<p>Dear Max Foran,</p><p>I am pleased to inform you that an editor has reviewed your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+33	1048585	16	3	2022-05-25 19:20:32	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Power,</p><p>I am pleased to inform you that an editor has reviewed your submission, A Designer's Log: Case Studies in Instructional Design, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+34	1048585	16	10	2022-05-25 19:21:11	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;A Designer's Log: Case Studies in Instructional Design,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2022-06-22, if not before.<br />\n<br />\nAdela Gallego
+35	1048585	17	3	2022-05-25 19:24:33	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Your submission has been sent for internal review	<p>Dear Matthew Smith,</p><p>I am pleased to inform you that an editor has reviewed your submission, Open Development: Networked Innovations in International Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
 \.
 
 
@@ -5795,477 +5795,477 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	19	2022-05-24 20:34:25	268435458	submission.event.general.metadataUpdated	0
-2	515	1	19	2022-05-24 20:34:27	1342177281	submission.event.fileUploaded	0
-3	1048585	1	19	2022-05-24 20:34:27	1342177288	submission.event.fileRevised	0
-4	515	1	19	2022-05-24 20:34:27	1342177296	submission.event.fileEdited	0
-5	1048585	1	19	2022-05-24 20:34:27	1342177296	submission.event.fileEdited	0
-6	1048585	1	19	2022-05-24 20:34:44	268435458	submission.event.general.metadataUpdated	0
-7	1048585	1	19	2022-05-24 20:34:46	268435457	submission.event.submissionSubmitted	0
-8	1048585	1	3	2022-05-24 20:34:59	805306371	editor.submission.decision.sendExternalReview.log	0
-9	515	2	3	2022-05-24 20:34:59	1342177281	submission.event.fileUploaded	0
-10	1048585	1	3	2022-05-24 20:34:59	1342177288	submission.event.fileRevised	0
-11	1048585	1	3	2022-05-24 20:35:10	1073741825	log.review.reviewerAssigned	0
-12	1048585	1	3	2022-05-24 20:35:16	805306371	editor.submission.decision.accept.log	0
-13	1048585	1	3	2022-05-24 20:35:26	268435459	submission.event.participantAdded	0
-14	1048585	2	20	2022-05-24 20:35:37	268435458	submission.event.general.metadataUpdated	0
-15	515	3	20	2022-05-24 20:35:39	1342177281	submission.event.fileUploaded	0
-16	1048585	2	20	2022-05-24 20:35:39	1342177288	submission.event.fileRevised	0
-17	515	3	20	2022-05-24 20:35:39	1342177296	submission.event.fileEdited	0
-18	1048585	2	20	2022-05-24 20:35:39	1342177296	submission.event.fileEdited	0
-19	515	4	20	2022-05-24 20:35:40	1342177281	submission.event.fileUploaded	0
-20	1048585	2	20	2022-05-24 20:35:40	1342177288	submission.event.fileRevised	0
-21	515	4	20	2022-05-24 20:35:40	1342177296	submission.event.fileEdited	0
-22	1048585	2	20	2022-05-24 20:35:40	1342177296	submission.event.fileEdited	0
-23	515	5	20	2022-05-24 20:35:40	1342177281	submission.event.fileUploaded	0
-24	1048585	2	20	2022-05-24 20:35:40	1342177288	submission.event.fileRevised	0
-25	515	5	20	2022-05-24 20:35:40	1342177296	submission.event.fileEdited	0
-26	1048585	2	20	2022-05-24 20:35:40	1342177296	submission.event.fileEdited	0
-27	515	6	20	2022-05-24 20:35:41	1342177281	submission.event.fileUploaded	0
-28	1048585	2	20	2022-05-24 20:35:41	1342177288	submission.event.fileRevised	0
-29	515	6	20	2022-05-24 20:35:41	1342177296	submission.event.fileEdited	0
-30	1048585	2	20	2022-05-24 20:35:41	1342177296	submission.event.fileEdited	0
-31	1048585	2	20	2022-05-24 20:37:29	268435458	submission.event.general.metadataUpdated	0
-32	1048585	2	20	2022-05-24 20:37:32	268435457	submission.event.submissionSubmitted	0
-33	1048585	2	3	2022-05-24 20:37:52	805306371	editor.submission.decision.sendExternalReview.log	0
-34	515	7	3	2022-05-24 20:37:53	1342177281	submission.event.fileUploaded	0
-35	1048585	2	3	2022-05-24 20:37:53	1342177288	submission.event.fileRevised	0
-36	515	8	3	2022-05-24 20:37:53	1342177281	submission.event.fileUploaded	0
-37	1048585	2	3	2022-05-24 20:37:53	1342177288	submission.event.fileRevised	0
-38	515	9	3	2022-05-24 20:37:53	1342177281	submission.event.fileUploaded	0
-39	1048585	2	3	2022-05-24 20:37:53	1342177288	submission.event.fileRevised	0
-40	515	10	3	2022-05-24 20:37:53	1342177281	submission.event.fileUploaded	0
-41	1048585	2	3	2022-05-24 20:37:53	1342177288	submission.event.fileRevised	0
-42	1048585	2	3	2022-05-24 20:38:09	1073741825	log.review.reviewerAssigned	0
-43	1048585	2	3	2022-05-24 20:38:20	1073741825	log.review.reviewerAssigned	0
-44	1048585	3	21	2022-05-24 20:38:31	268435458	submission.event.general.metadataUpdated	0
-45	515	11	21	2022-05-24 20:38:34	1342177281	submission.event.fileUploaded	0
-46	1048585	3	21	2022-05-24 20:38:34	1342177288	submission.event.fileRevised	0
-47	515	11	21	2022-05-24 20:38:34	1342177296	submission.event.fileEdited	0
-48	1048585	3	21	2022-05-24 20:38:34	1342177296	submission.event.fileEdited	0
-49	1048585	3	21	2022-05-24 20:39:08	268435458	submission.event.general.metadataUpdated	0
-50	1048585	3	21	2022-05-24 20:39:10	268435457	submission.event.submissionSubmitted	0
-51	1048585	4	22	2022-05-24 20:39:20	268435458	submission.event.general.metadataUpdated	0
-52	515	12	22	2022-05-24 20:39:22	1342177281	submission.event.fileUploaded	0
-53	1048585	4	22	2022-05-24 20:39:22	1342177288	submission.event.fileRevised	0
-54	515	12	22	2022-05-24 20:39:22	1342177296	submission.event.fileEdited	0
-55	1048585	4	22	2022-05-24 20:39:22	1342177296	submission.event.fileEdited	0
-56	515	13	22	2022-05-24 20:39:22	1342177281	submission.event.fileUploaded	0
-57	1048585	4	22	2022-05-24 20:39:22	1342177288	submission.event.fileRevised	0
-58	515	13	22	2022-05-24 20:39:23	1342177296	submission.event.fileEdited	0
-59	1048585	4	22	2022-05-24 20:39:23	1342177296	submission.event.fileEdited	0
-60	515	14	22	2022-05-24 20:39:23	1342177281	submission.event.fileUploaded	0
-61	1048585	4	22	2022-05-24 20:39:23	1342177288	submission.event.fileRevised	0
-62	515	14	22	2022-05-24 20:39:23	1342177296	submission.event.fileEdited	0
-63	1048585	4	22	2022-05-24 20:39:23	1342177296	submission.event.fileEdited	0
-64	515	15	22	2022-05-24 20:39:24	1342177281	submission.event.fileUploaded	0
-65	1048585	4	22	2022-05-24 20:39:24	1342177288	submission.event.fileRevised	0
-66	515	15	22	2022-05-24 20:39:24	1342177296	submission.event.fileEdited	0
-67	1048585	4	22	2022-05-24 20:39:24	1342177296	submission.event.fileEdited	0
-68	1048585	4	22	2022-05-24 20:40:45	268435458	submission.event.general.metadataUpdated	0
-69	1048585	4	22	2022-05-24 20:40:47	268435457	submission.event.submissionSubmitted	0
-70	1048585	4	3	2022-05-24 20:41:05	805306371	editor.submission.decision.sendInternalReview.log	0
-71	515	16	3	2022-05-24 20:41:05	1342177281	submission.event.fileUploaded	0
-72	1048585	4	3	2022-05-24 20:41:06	1342177288	submission.event.fileRevised	0
-73	515	17	3	2022-05-24 20:41:06	1342177281	submission.event.fileUploaded	0
-74	1048585	4	3	2022-05-24 20:41:06	1342177288	submission.event.fileRevised	0
-75	515	18	3	2022-05-24 20:41:06	1342177281	submission.event.fileUploaded	0
-76	1048585	4	3	2022-05-24 20:41:06	1342177288	submission.event.fileRevised	0
-77	515	19	3	2022-05-24 20:41:06	1342177281	submission.event.fileUploaded	0
-78	1048585	4	3	2022-05-24 20:41:06	1342177288	submission.event.fileRevised	0
-79	1048585	4	3	2022-05-24 20:41:20	1073741825	log.review.reviewerAssigned	0
-80	1048585	4	3	2022-05-24 20:41:27	805306371	editor.submission.decision.sendExternalReview.log	0
-81	1048585	4	3	2022-05-24 20:41:42	1073741825	log.review.reviewerAssigned	0
-82	1048585	4	3	2022-05-24 20:41:51	805306371	editor.submission.decision.accept.log	0
-83	1048585	4	3	2022-05-24 20:42:06	268435459	submission.event.participantAdded	0
-84	1048585	4	3	2022-05-24 20:42:16	805306371	editor.submission.decision.sendToProduction.log	0
-85	1048585	4	3	2022-05-24 20:42:33	268435459	submission.event.participantAdded	0
-86	1048585	4	3	2022-05-24 20:43:05	268435474	submission.event.publicationFormatCreated	0
-87	1048585	5	23	2022-05-24 20:43:15	268435458	submission.event.general.metadataUpdated	0
-88	515	20	23	2022-05-24 20:43:18	1342177281	submission.event.fileUploaded	0
-89	1048585	5	23	2022-05-24 20:43:18	1342177288	submission.event.fileRevised	0
-90	515	20	23	2022-05-24 20:43:18	1342177296	submission.event.fileEdited	0
-91	1048585	5	23	2022-05-24 20:43:18	1342177296	submission.event.fileEdited	0
-92	1048585	5	23	2022-05-24 20:43:56	268435458	submission.event.general.metadataUpdated	0
-93	1048585	5	23	2022-05-24 20:43:58	268435457	submission.event.submissionSubmitted	0
-94	1048585	5	3	2022-05-24 20:44:12	805306371	editor.submission.decision.sendInternalReview.log	0
-95	515	21	3	2022-05-24 20:44:13	1342177281	submission.event.fileUploaded	0
-96	1048585	5	3	2022-05-24 20:44:13	1342177288	submission.event.fileRevised	0
-97	1048585	5	3	2022-05-24 20:44:24	1073741825	log.review.reviewerAssigned	0
-98	1048585	5	3	2022-05-24 20:44:31	805306371	editor.submission.decision.sendExternalReview.log	0
-99	1048585	5	3	2022-05-24 20:44:44	1073741825	log.review.reviewerAssigned	0
-100	1048585	5	3	2022-05-24 20:44:51	805306371	editor.submission.decision.accept.log	0
-101	1048585	5	3	2022-05-24 20:45:04	268435459	submission.event.participantAdded	0
-102	1048585	5	3	2022-05-24 20:45:11	805306371	editor.submission.decision.sendToProduction.log	0
-103	1048585	5	3	2022-05-24 20:45:25	268435459	submission.event.participantAdded	0
-104	1048585	5	3	2022-05-24 20:45:34	268435459	submission.event.participantAdded	0
-105	1048585	5	3	2022-05-24 20:45:41	268435474	submission.event.publicationFormatCreated	0
-106	515	22	3	2022-05-24 20:45:46	1342177281	submission.event.fileUploaded	0
-107	1048585	5	3	2022-05-24 20:45:46	1342177288	submission.event.fileRevised	0
-108	1048585	5	3	2022-05-24 20:45:49	268435464	submission.event.publicationFormatPublished	0
-109	1048585	5	3	2022-05-24 20:45:51	268435476	submission.event.publicationFormatMadeAvailable	0
-110	515	22	3	2022-05-24 20:45:54	1342177296	submission.event.fileEdited	0
-111	1048585	5	3	2022-05-24 20:45:54	1342177296	submission.event.fileEdited	0
-112	515	22	3	2022-05-24 20:45:54	1342177287	submission.event.signoffSignoff	0
-113	515	22	3	2022-05-24 20:45:58	1342177296	submission.event.fileEdited	0
-114	1048585	5	3	2022-05-24 20:45:58	1342177296	submission.event.fileEdited	0
-115	1048585	5	3	2022-05-24 20:46:01	268435462	publication.event.published	0
-116	1048585	6	24	2022-05-24 20:46:13	268435458	submission.event.general.metadataUpdated	0
-117	515	23	24	2022-05-24 20:46:16	1342177281	submission.event.fileUploaded	0
-118	1048585	6	24	2022-05-24 20:46:16	1342177288	submission.event.fileRevised	0
-119	515	23	24	2022-05-24 20:46:16	1342177296	submission.event.fileEdited	0
-120	1048585	6	24	2022-05-24 20:46:16	1342177296	submission.event.fileEdited	0
-121	515	24	24	2022-05-24 20:46:16	1342177281	submission.event.fileUploaded	0
-122	1048585	6	24	2022-05-24 20:46:16	1342177288	submission.event.fileRevised	0
-123	515	24	24	2022-05-24 20:46:16	1342177296	submission.event.fileEdited	0
-124	1048585	6	24	2022-05-24 20:46:16	1342177296	submission.event.fileEdited	0
-125	515	25	24	2022-05-24 20:46:17	1342177281	submission.event.fileUploaded	0
-126	1048585	6	24	2022-05-24 20:46:17	1342177288	submission.event.fileRevised	0
-127	515	25	24	2022-05-24 20:46:17	1342177296	submission.event.fileEdited	0
-128	1048585	6	24	2022-05-24 20:46:17	1342177296	submission.event.fileEdited	0
-129	515	26	24	2022-05-24 20:46:17	1342177281	submission.event.fileUploaded	0
-130	1048585	6	24	2022-05-24 20:46:17	1342177288	submission.event.fileRevised	0
-131	515	26	24	2022-05-24 20:46:17	1342177296	submission.event.fileEdited	0
-132	1048585	6	24	2022-05-24 20:46:17	1342177296	submission.event.fileEdited	0
-133	1048585	6	24	2022-05-24 20:47:20	268435458	submission.event.general.metadataUpdated	0
-134	1048585	6	24	2022-05-24 20:47:22	268435457	submission.event.submissionSubmitted	0
-135	1048585	6	3	2022-05-24 20:47:40	805306371	editor.submission.decision.sendInternalReview.log	0
-136	515	27	3	2022-05-24 20:47:40	1342177281	submission.event.fileUploaded	0
-137	1048585	6	3	2022-05-24 20:47:40	1342177288	submission.event.fileRevised	0
-138	515	28	3	2022-05-24 20:47:41	1342177281	submission.event.fileUploaded	0
-139	1048585	6	3	2022-05-24 20:47:41	1342177288	submission.event.fileRevised	0
-140	515	29	3	2022-05-24 20:47:41	1342177281	submission.event.fileUploaded	0
-141	1048585	6	3	2022-05-24 20:47:41	1342177288	submission.event.fileRevised	0
-142	515	30	3	2022-05-24 20:47:41	1342177281	submission.event.fileUploaded	0
-143	1048585	6	3	2022-05-24 20:47:41	1342177288	submission.event.fileRevised	0
-144	1048585	6	3	2022-05-24 20:47:55	268435459	submission.event.participantAdded	0
-145	1048585	6	6	2022-05-24 20:48:15	805306372	editor.submission.recommend.accept.log	0
-146	1048585	7	25	2022-05-24 20:48:44	268435458	submission.event.general.metadataUpdated	0
-147	515	31	25	2022-05-24 20:48:47	1342177281	submission.event.fileUploaded	0
-148	1048585	7	25	2022-05-24 20:48:47	1342177288	submission.event.fileRevised	0
-149	515	31	25	2022-05-24 20:48:47	1342177296	submission.event.fileEdited	0
-150	1048585	7	25	2022-05-24 20:48:47	1342177296	submission.event.fileEdited	0
-151	515	32	25	2022-05-24 20:48:47	1342177281	submission.event.fileUploaded	0
-152	1048585	7	25	2022-05-24 20:48:47	1342177288	submission.event.fileRevised	0
-153	515	32	25	2022-05-24 20:48:47	1342177296	submission.event.fileEdited	0
-154	1048585	7	25	2022-05-24 20:48:47	1342177296	submission.event.fileEdited	0
-155	515	33	25	2022-05-24 20:48:48	1342177281	submission.event.fileUploaded	0
-156	1048585	7	25	2022-05-24 20:48:48	1342177288	submission.event.fileRevised	0
-157	515	33	25	2022-05-24 20:48:48	1342177296	submission.event.fileEdited	0
-158	1048585	7	25	2022-05-24 20:48:48	1342177296	submission.event.fileEdited	0
-159	515	34	25	2022-05-24 20:48:48	1342177281	submission.event.fileUploaded	0
-160	1048585	7	25	2022-05-24 20:48:48	1342177288	submission.event.fileRevised	0
-161	515	34	25	2022-05-24 20:48:49	1342177296	submission.event.fileEdited	0
-162	1048585	7	25	2022-05-24 20:48:49	1342177296	submission.event.fileEdited	0
-163	515	35	25	2022-05-24 20:48:49	1342177281	submission.event.fileUploaded	0
-164	1048585	7	25	2022-05-24 20:48:49	1342177288	submission.event.fileRevised	0
-165	515	35	25	2022-05-24 20:48:49	1342177296	submission.event.fileEdited	0
-166	1048585	7	25	2022-05-24 20:48:49	1342177296	submission.event.fileEdited	0
-167	1048585	7	25	2022-05-24 20:50:40	268435458	submission.event.general.metadataUpdated	0
-168	1048585	7	25	2022-05-24 20:50:42	268435457	submission.event.submissionSubmitted	0
-169	1048585	7	3	2022-05-24 20:51:03	805306371	editor.submission.decision.sendExternalReview.log	0
-170	515	36	3	2022-05-24 20:51:03	1342177281	submission.event.fileUploaded	0
-171	1048585	7	3	2022-05-24 20:51:03	1342177288	submission.event.fileRevised	0
-172	515	37	3	2022-05-24 20:51:03	1342177281	submission.event.fileUploaded	0
-173	1048585	7	3	2022-05-24 20:51:03	1342177288	submission.event.fileRevised	0
-174	515	38	3	2022-05-24 20:51:03	1342177281	submission.event.fileUploaded	0
-175	1048585	7	3	2022-05-24 20:51:03	1342177288	submission.event.fileRevised	0
-176	515	39	3	2022-05-24 20:51:03	1342177281	submission.event.fileUploaded	0
-177	1048585	7	3	2022-05-24 20:51:03	1342177288	submission.event.fileRevised	0
-178	515	40	3	2022-05-24 20:51:03	1342177281	submission.event.fileUploaded	0
-179	1048585	7	3	2022-05-24 20:51:03	1342177288	submission.event.fileRevised	0
-180	1048585	7	3	2022-05-24 20:51:19	1073741825	log.review.reviewerAssigned	0
-181	1048585	7	3	2022-05-24 20:51:29	805306371	editor.submission.decision.accept.log	0
-182	1048585	7	3	2022-05-24 20:51:43	268435459	submission.event.participantAdded	0
-183	1048585	8	3	2022-05-24 20:51:56	268435458	submission.event.general.metadataUpdated	0
-184	515	41	3	2022-05-24 20:51:58	1342177281	submission.event.fileUploaded	0
-185	1048585	8	3	2022-05-24 20:51:58	1342177288	submission.event.fileRevised	0
-186	515	41	3	2022-05-24 20:51:58	1342177296	submission.event.fileEdited	0
-187	1048585	8	3	2022-05-24 20:51:58	1342177296	submission.event.fileEdited	0
-188	1048585	8	3	2022-05-24 20:52:00	268435458	submission.event.general.metadataUpdated	0
-189	1048585	8	3	2022-05-24 20:52:01	268435457	submission.event.submissionSubmitted	0
-190	1048585	9	26	2022-05-24 20:52:11	268435458	submission.event.general.metadataUpdated	0
-191	515	42	26	2022-05-24 20:52:13	1342177281	submission.event.fileUploaded	0
-192	1048585	9	26	2022-05-24 20:52:13	1342177288	submission.event.fileRevised	0
-193	515	42	26	2022-05-24 20:52:13	1342177296	submission.event.fileEdited	0
-194	1048585	9	26	2022-05-24 20:52:13	1342177296	submission.event.fileEdited	0
-195	515	43	26	2022-05-24 20:52:13	1342177281	submission.event.fileUploaded	0
-196	1048585	9	26	2022-05-24 20:52:13	1342177288	submission.event.fileRevised	0
-197	515	43	26	2022-05-24 20:52:14	1342177296	submission.event.fileEdited	0
-198	1048585	9	26	2022-05-24 20:52:14	1342177296	submission.event.fileEdited	0
-199	515	44	26	2022-05-24 20:52:14	1342177281	submission.event.fileUploaded	0
-200	1048585	9	26	2022-05-24 20:52:14	1342177288	submission.event.fileRevised	0
-201	515	44	26	2022-05-24 20:52:14	1342177296	submission.event.fileEdited	0
-202	1048585	9	26	2022-05-24 20:52:14	1342177296	submission.event.fileEdited	0
-203	515	45	26	2022-05-24 20:52:14	1342177281	submission.event.fileUploaded	0
-204	1048585	9	26	2022-05-24 20:52:14	1342177288	submission.event.fileRevised	0
-205	515	45	26	2022-05-24 20:52:15	1342177296	submission.event.fileEdited	0
-206	1048585	9	26	2022-05-24 20:52:15	1342177296	submission.event.fileEdited	0
-207	515	46	26	2022-05-24 20:52:15	1342177281	submission.event.fileUploaded	0
-208	1048585	9	26	2022-05-24 20:52:15	1342177288	submission.event.fileRevised	0
-209	515	46	26	2022-05-24 20:52:15	1342177296	submission.event.fileEdited	0
-210	1048585	9	26	2022-05-24 20:52:15	1342177296	submission.event.fileEdited	0
-211	1048585	9	26	2022-05-24 20:53:50	268435458	submission.event.general.metadataUpdated	0
-212	1048585	9	26	2022-05-24 20:53:52	268435457	submission.event.submissionSubmitted	0
-213	1048585	9	3	2022-05-24 20:54:12	805306371	editor.submission.decision.sendInternalReview.log	0
-214	515	47	3	2022-05-24 20:54:13	1342177281	submission.event.fileUploaded	0
-215	1048585	9	3	2022-05-24 20:54:13	1342177288	submission.event.fileRevised	0
-216	515	48	3	2022-05-24 20:54:13	1342177281	submission.event.fileUploaded	0
-217	1048585	9	3	2022-05-24 20:54:13	1342177288	submission.event.fileRevised	0
-218	515	49	3	2022-05-24 20:54:13	1342177281	submission.event.fileUploaded	0
-219	1048585	9	3	2022-05-24 20:54:13	1342177288	submission.event.fileRevised	0
-220	515	50	3	2022-05-24 20:54:13	1342177281	submission.event.fileUploaded	0
-221	1048585	9	3	2022-05-24 20:54:13	1342177288	submission.event.fileRevised	0
-222	515	51	3	2022-05-24 20:54:13	1342177281	submission.event.fileUploaded	0
-223	1048585	9	3	2022-05-24 20:54:13	1342177288	submission.event.fileRevised	0
-224	1048585	10	27	2022-05-24 20:54:28	268435458	submission.event.general.metadataUpdated	0
-225	515	52	27	2022-05-24 20:54:30	1342177281	submission.event.fileUploaded	0
-226	1048585	10	27	2022-05-24 20:54:30	1342177288	submission.event.fileRevised	0
-227	515	52	27	2022-05-24 20:54:31	1342177296	submission.event.fileEdited	0
-228	1048585	10	27	2022-05-24 20:54:31	1342177296	submission.event.fileEdited	0
-229	1048585	10	27	2022-05-24 20:55:28	268435458	submission.event.general.metadataUpdated	0
-230	1048585	10	27	2022-05-24 20:55:30	268435457	submission.event.submissionSubmitted	0
-231	1048585	11	28	2022-05-24 20:55:39	268435458	submission.event.general.metadataUpdated	0
-232	515	53	28	2022-05-24 20:55:42	1342177281	submission.event.fileUploaded	0
-233	1048585	11	28	2022-05-24 20:55:42	1342177288	submission.event.fileRevised	0
-234	515	53	28	2022-05-24 20:55:42	1342177296	submission.event.fileEdited	0
-235	1048585	11	28	2022-05-24 20:55:42	1342177296	submission.event.fileEdited	0
-236	1048585	11	28	2022-05-24 20:55:53	268435458	submission.event.general.metadataUpdated	0
-237	1048585	11	28	2022-05-24 20:55:54	268435457	submission.event.submissionSubmitted	0
-238	1048585	11	3	2022-05-24 20:56:09	805306371	editor.submission.decision.sendInternalReview.log	0
-239	515	54	3	2022-05-24 20:56:09	1342177281	submission.event.fileUploaded	0
-240	1048585	11	3	2022-05-24 20:56:09	1342177288	submission.event.fileRevised	0
-241	1048585	11	3	2022-05-24 20:56:19	1073741825	log.review.reviewerAssigned	0
-242	1048585	11	3	2022-05-24 20:56:25	805306371	editor.submission.decision.sendExternalReview.log	0
-243	1048585	11	3	2022-05-24 20:56:36	1073741825	log.review.reviewerAssigned	0
-244	1048585	11	3	2022-05-24 20:56:45	1073741825	log.review.reviewerAssigned	0
-245	1048585	11	10	2022-05-24 20:56:54	1073741830	log.review.reviewAccepted	0
-246	1048585	11	10	2022-05-24 20:56:59	1073741848	log.review.reviewReady	0
-247	1048585	11	12	2022-05-24 20:57:08	1073741830	log.review.reviewAccepted	0
-248	1048585	11	12	2022-05-24 20:57:13	1073741848	log.review.reviewReady	0
-249	1048585	11	3	2022-05-24 20:57:35	805306371	editor.submission.decision.accept.log	0
-250	1048585	11	3	2022-05-24 20:57:35	1073741856	submission.event.decisionReviewerEmailSent	0
-251	1048585	12	29	2022-05-24 20:57:51	268435458	submission.event.general.metadataUpdated	0
-252	515	55	29	2022-05-24 20:57:53	1342177281	submission.event.fileUploaded	0
-253	1048585	12	29	2022-05-24 20:57:53	1342177288	submission.event.fileRevised	0
-254	515	55	29	2022-05-24 20:57:53	1342177296	submission.event.fileEdited	0
-255	1048585	12	29	2022-05-24 20:57:53	1342177296	submission.event.fileEdited	0
-256	515	56	29	2022-05-24 20:57:53	1342177281	submission.event.fileUploaded	0
-257	1048585	12	29	2022-05-24 20:57:53	1342177288	submission.event.fileRevised	0
-258	515	56	29	2022-05-24 20:57:54	1342177296	submission.event.fileEdited	0
-259	1048585	12	29	2022-05-24 20:57:54	1342177296	submission.event.fileEdited	0
-260	515	57	29	2022-05-24 20:57:54	1342177281	submission.event.fileUploaded	0
-261	1048585	12	29	2022-05-24 20:57:54	1342177288	submission.event.fileRevised	0
-262	515	57	29	2022-05-24 20:57:54	1342177296	submission.event.fileEdited	0
-263	1048585	12	29	2022-05-24 20:57:54	1342177296	submission.event.fileEdited	0
-264	1048585	12	29	2022-05-24 20:59:22	268435458	submission.event.general.metadataUpdated	0
-265	1048585	12	29	2022-05-24 20:59:24	268435457	submission.event.submissionSubmitted	0
-266	1048585	12	3	2022-05-24 20:59:43	805306371	editor.submission.decision.sendInternalReview.log	0
-267	515	58	3	2022-05-24 20:59:44	1342177281	submission.event.fileUploaded	0
-268	1048585	12	3	2022-05-24 20:59:44	1342177288	submission.event.fileRevised	0
-269	515	59	3	2022-05-24 20:59:44	1342177281	submission.event.fileUploaded	0
-270	1048585	12	3	2022-05-24 20:59:44	1342177288	submission.event.fileRevised	0
-271	515	60	3	2022-05-24 20:59:44	1342177281	submission.event.fileUploaded	0
-272	1048585	12	3	2022-05-24 20:59:44	1342177288	submission.event.fileRevised	0
-273	1048585	12	3	2022-05-24 20:59:58	1073741825	log.review.reviewerAssigned	0
-274	1048585	12	3	2022-05-24 21:00:10	1073741825	log.review.reviewerAssigned	0
-275	1048585	12	3	2022-05-24 21:00:20	1073741825	log.review.reviewerAssigned	0
-276	1048585	12	8	2022-05-24 21:00:33	1073741830	log.review.reviewAccepted	0
-277	1048585	12	8	2022-05-24 21:00:38	1073741848	log.review.reviewReady	0
-278	1048585	13	30	2022-05-24 21:00:51	268435458	submission.event.general.metadataUpdated	0
-279	515	61	30	2022-05-24 21:00:53	1342177281	submission.event.fileUploaded	0
-280	1048585	13	30	2022-05-24 21:00:53	1342177288	submission.event.fileRevised	0
-281	515	61	30	2022-05-24 21:00:53	1342177296	submission.event.fileEdited	0
-282	1048585	13	30	2022-05-24 21:00:53	1342177296	submission.event.fileEdited	0
-283	515	62	30	2022-05-24 21:00:54	1342177281	submission.event.fileUploaded	0
-284	1048585	13	30	2022-05-24 21:00:54	1342177288	submission.event.fileRevised	0
-285	515	62	30	2022-05-24 21:00:54	1342177296	submission.event.fileEdited	0
-286	1048585	13	30	2022-05-24 21:00:54	1342177296	submission.event.fileEdited	0
-287	515	63	30	2022-05-24 21:00:54	1342177281	submission.event.fileUploaded	0
-288	1048585	13	30	2022-05-24 21:00:54	1342177288	submission.event.fileRevised	0
-289	515	63	30	2022-05-24 21:00:54	1342177296	submission.event.fileEdited	0
-290	1048585	13	30	2022-05-24 21:00:54	1342177296	submission.event.fileEdited	0
-291	1048585	13	30	2022-05-24 21:01:52	268435458	submission.event.general.metadataUpdated	0
-292	1048585	13	30	2022-05-24 21:01:55	268435457	submission.event.submissionSubmitted	0
-293	1048585	13	3	2022-05-24 21:02:13	805306371	editor.submission.decision.sendInternalReview.log	0
-294	515	64	3	2022-05-24 21:02:14	1342177281	submission.event.fileUploaded	0
-295	1048585	13	3	2022-05-24 21:02:14	1342177288	submission.event.fileRevised	0
-296	515	65	3	2022-05-24 21:02:14	1342177281	submission.event.fileUploaded	0
-297	1048585	13	3	2022-05-24 21:02:14	1342177288	submission.event.fileRevised	0
-298	515	66	3	2022-05-24 21:02:14	1342177281	submission.event.fileUploaded	0
-299	1048585	13	3	2022-05-24 21:02:14	1342177288	submission.event.fileRevised	0
-300	1048585	13	3	2022-05-24 21:02:27	1073741825	log.review.reviewerAssigned	0
-301	1048585	13	3	2022-05-24 21:02:35	805306371	editor.submission.decision.sendExternalReview.log	0
-302	1048585	13	3	2022-05-24 21:02:50	1073741825	log.review.reviewerAssigned	0
-303	1048585	13	3	2022-05-24 21:02:59	1073741825	log.review.reviewerAssigned	0
-304	1048585	13	3	2022-05-24 21:03:10	1073741825	log.review.reviewerAssigned	0
-305	1048585	13	10	2022-05-24 21:03:22	1073741830	log.review.reviewAccepted	0
-306	1048585	13	10	2022-05-24 21:03:27	1073741848	log.review.reviewReady	0
-307	1048585	13	12	2022-05-24 21:03:39	1073741830	log.review.reviewAccepted	0
-308	1048585	13	12	2022-05-24 21:03:45	1073741848	log.review.reviewReady	0
-309	1048585	13	3	2022-05-24 21:04:13	805306371	editor.submission.decision.accept.log	0
-310	1048585	13	3	2022-05-24 21:04:13	1073741856	submission.event.decisionReviewerEmailSent	0
-311	1048585	14	31	2022-05-24 21:04:32	268435458	submission.event.general.metadataUpdated	0
-312	515	67	31	2022-05-24 21:04:34	1342177281	submission.event.fileUploaded	0
-313	1048585	14	31	2022-05-24 21:04:34	1342177288	submission.event.fileRevised	0
-314	515	67	31	2022-05-24 21:04:34	1342177296	submission.event.fileEdited	0
-315	1048585	14	31	2022-05-24 21:04:34	1342177296	submission.event.fileEdited	0
-316	515	68	31	2022-05-24 21:04:34	1342177281	submission.event.fileUploaded	0
-317	1048585	14	31	2022-05-24 21:04:34	1342177288	submission.event.fileRevised	0
-318	515	68	31	2022-05-24 21:04:35	1342177296	submission.event.fileEdited	0
-319	1048585	14	31	2022-05-24 21:04:35	1342177296	submission.event.fileEdited	0
-320	515	69	31	2022-05-24 21:04:35	1342177281	submission.event.fileUploaded	0
-321	1048585	14	31	2022-05-24 21:04:35	1342177288	submission.event.fileRevised	0
-322	515	69	31	2022-05-24 21:04:35	1342177296	submission.event.fileEdited	0
-323	1048585	14	31	2022-05-24 21:04:35	1342177296	submission.event.fileEdited	0
-324	515	70	31	2022-05-24 21:04:36	1342177281	submission.event.fileUploaded	0
-325	1048585	14	31	2022-05-24 21:04:36	1342177288	submission.event.fileRevised	0
-326	515	70	31	2022-05-24 21:04:36	1342177296	submission.event.fileEdited	0
-327	1048585	14	31	2022-05-24 21:04:36	1342177296	submission.event.fileEdited	0
-328	515	71	31	2022-05-24 21:04:36	1342177281	submission.event.fileUploaded	0
-329	1048585	14	31	2022-05-24 21:04:36	1342177288	submission.event.fileRevised	0
-330	515	71	31	2022-05-24 21:04:37	1342177296	submission.event.fileEdited	0
-331	1048585	14	31	2022-05-24 21:04:37	1342177296	submission.event.fileEdited	0
-332	515	72	31	2022-05-24 21:04:37	1342177281	submission.event.fileUploaded	0
-333	1048585	14	31	2022-05-24 21:04:37	1342177288	submission.event.fileRevised	0
-334	515	72	31	2022-05-24 21:04:38	1342177296	submission.event.fileEdited	0
-335	1048585	14	31	2022-05-24 21:04:38	1342177296	submission.event.fileEdited	0
-336	1048585	14	31	2022-05-24 21:05:41	268435458	submission.event.general.metadataUpdated	0
-337	1048585	14	31	2022-05-24 21:05:43	268435457	submission.event.submissionSubmitted	0
-338	1048585	14	3	2022-05-24 21:06:03	805306371	editor.submission.decision.sendInternalReview.log	0
-339	515	73	3	2022-05-24 21:06:03	1342177281	submission.event.fileUploaded	0
-340	1048585	14	3	2022-05-24 21:06:03	1342177288	submission.event.fileRevised	0
-341	515	74	3	2022-05-24 21:06:03	1342177281	submission.event.fileUploaded	0
-342	1048585	14	3	2022-05-24 21:06:03	1342177288	submission.event.fileRevised	0
-343	515	75	3	2022-05-24 21:06:04	1342177281	submission.event.fileUploaded	0
-344	1048585	14	3	2022-05-24 21:06:04	1342177288	submission.event.fileRevised	0
-345	515	76	3	2022-05-24 21:06:04	1342177281	submission.event.fileUploaded	0
-346	1048585	14	3	2022-05-24 21:06:04	1342177288	submission.event.fileRevised	0
-347	515	77	3	2022-05-24 21:06:04	1342177281	submission.event.fileUploaded	0
-348	1048585	14	3	2022-05-24 21:06:04	1342177288	submission.event.fileRevised	0
-349	515	78	3	2022-05-24 21:06:04	1342177281	submission.event.fileUploaded	0
-350	1048585	14	3	2022-05-24 21:06:04	1342177288	submission.event.fileRevised	0
-351	1048585	14	3	2022-05-24 21:06:18	1073741825	log.review.reviewerAssigned	0
-352	1048585	14	3	2022-05-24 21:06:26	805306371	editor.submission.decision.sendExternalReview.log	0
-353	1048585	14	3	2022-05-24 21:06:41	1073741825	log.review.reviewerAssigned	0
-354	1048585	14	3	2022-05-24 21:06:50	805306371	editor.submission.decision.accept.log	0
-355	1048585	14	3	2022-05-24 21:07:06	268435459	submission.event.participantAdded	0
-356	1048585	14	3	2022-05-24 21:07:15	805306371	editor.submission.decision.sendToProduction.log	0
-357	1048585	14	3	2022-05-24 21:07:32	268435459	submission.event.participantAdded	0
-358	1048585	14	3	2022-05-24 21:07:43	268435459	submission.event.participantAdded	0
-359	1048585	14	3	2022-05-24 21:07:52	268435474	submission.event.publicationFormatCreated	0
-360	515	79	3	2022-05-24 21:08:03	1342177281	submission.event.fileUploaded	0
-361	1048585	14	3	2022-05-24 21:08:03	1342177288	submission.event.fileRevised	0
-362	515	80	3	2022-05-24 21:08:03	1342177281	submission.event.fileUploaded	0
-363	1048585	14	3	2022-05-24 21:08:03	1342177288	submission.event.fileRevised	0
-364	515	81	3	2022-05-24 21:08:03	1342177281	submission.event.fileUploaded	0
-365	1048585	14	3	2022-05-24 21:08:03	1342177288	submission.event.fileRevised	0
-366	515	82	3	2022-05-24 21:08:03	1342177281	submission.event.fileUploaded	0
-367	1048585	14	3	2022-05-24 21:08:03	1342177288	submission.event.fileRevised	0
-368	515	83	3	2022-05-24 21:08:03	1342177281	submission.event.fileUploaded	0
-369	1048585	14	3	2022-05-24 21:08:03	1342177288	submission.event.fileRevised	0
-370	515	84	3	2022-05-24 21:08:03	1342177281	submission.event.fileUploaded	0
-371	1048585	14	3	2022-05-24 21:08:03	1342177288	submission.event.fileRevised	0
-372	1048585	14	3	2022-05-24 21:08:06	268435464	submission.event.publicationFormatPublished	0
-373	1048585	14	3	2022-05-24 21:08:10	268435476	submission.event.publicationFormatMadeAvailable	0
-374	515	84	3	2022-05-24 21:08:14	1342177296	submission.event.fileEdited	0
-375	1048585	14	3	2022-05-24 21:08:14	1342177296	submission.event.fileEdited	0
-376	515	84	3	2022-05-24 21:08:14	1342177287	submission.event.signoffSignoff	0
-377	515	84	3	2022-05-24 21:08:18	1342177296	submission.event.fileEdited	0
-378	1048585	14	3	2022-05-24 21:08:18	1342177296	submission.event.fileEdited	0
-379	515	83	3	2022-05-24 21:08:22	1342177296	submission.event.fileEdited	0
-380	1048585	14	3	2022-05-24 21:08:22	1342177296	submission.event.fileEdited	0
-381	515	83	3	2022-05-24 21:08:22	1342177287	submission.event.signoffSignoff	0
-382	515	83	3	2022-05-24 21:08:27	1342177296	submission.event.fileEdited	0
-383	1048585	14	3	2022-05-24 21:08:27	1342177296	submission.event.fileEdited	0
-384	515	82	3	2022-05-24 21:08:31	1342177296	submission.event.fileEdited	0
-385	1048585	14	3	2022-05-24 21:08:31	1342177296	submission.event.fileEdited	0
-386	515	82	3	2022-05-24 21:08:31	1342177287	submission.event.signoffSignoff	0
-387	515	82	3	2022-05-24 21:08:36	1342177296	submission.event.fileEdited	0
-388	1048585	14	3	2022-05-24 21:08:36	1342177296	submission.event.fileEdited	0
-389	515	80	3	2022-05-24 21:08:39	1342177296	submission.event.fileEdited	0
-390	1048585	14	3	2022-05-24 21:08:39	1342177296	submission.event.fileEdited	0
-391	515	80	3	2022-05-24 21:08:39	1342177287	submission.event.signoffSignoff	0
-392	515	80	3	2022-05-24 21:08:45	1342177296	submission.event.fileEdited	0
-393	1048585	14	3	2022-05-24 21:08:45	1342177296	submission.event.fileEdited	0
-394	515	81	3	2022-05-24 21:08:49	1342177296	submission.event.fileEdited	0
-395	1048585	14	3	2022-05-24 21:08:49	1342177296	submission.event.fileEdited	0
-396	515	81	3	2022-05-24 21:08:49	1342177287	submission.event.signoffSignoff	0
-397	515	81	3	2022-05-24 21:08:55	1342177296	submission.event.fileEdited	0
-398	1048585	14	3	2022-05-24 21:08:55	1342177296	submission.event.fileEdited	0
-399	515	79	3	2022-05-24 21:08:58	1342177296	submission.event.fileEdited	0
-400	1048585	14	3	2022-05-24 21:08:58	1342177296	submission.event.fileEdited	0
-401	515	79	3	2022-05-24 21:08:58	1342177287	submission.event.signoffSignoff	0
-402	515	79	3	2022-05-24 21:09:04	1342177296	submission.event.fileEdited	0
-403	1048585	14	3	2022-05-24 21:09:04	1342177296	submission.event.fileEdited	0
-404	1048585	14	3	2022-05-24 21:09:08	268435462	publication.event.published	0
-405	1048585	15	32	2022-05-24 21:09:19	268435458	submission.event.general.metadataUpdated	0
-406	515	85	32	2022-05-24 21:09:21	1342177281	submission.event.fileUploaded	0
-407	1048585	15	32	2022-05-24 21:09:21	1342177288	submission.event.fileRevised	0
-408	515	85	32	2022-05-24 21:09:22	1342177296	submission.event.fileEdited	0
-409	1048585	15	32	2022-05-24 21:09:22	1342177296	submission.event.fileEdited	0
-410	1048585	15	32	2022-05-24 21:09:41	268435458	submission.event.general.metadataUpdated	0
-411	1048585	15	32	2022-05-24 21:09:43	268435457	submission.event.submissionSubmitted	0
-412	1048585	15	3	2022-05-24 21:09:58	805306371	editor.submission.decision.sendExternalReview.log	0
-413	515	86	3	2022-05-24 21:09:59	1342177281	submission.event.fileUploaded	0
-414	1048585	15	3	2022-05-24 21:09:59	1342177288	submission.event.fileRevised	0
-415	1048585	16	33	2022-05-24 21:10:14	268435458	submission.event.general.metadataUpdated	0
-416	515	87	33	2022-05-24 21:10:16	1342177281	submission.event.fileUploaded	0
-417	1048585	16	33	2022-05-24 21:10:16	1342177288	submission.event.fileRevised	0
-418	515	87	33	2022-05-24 21:10:16	1342177296	submission.event.fileEdited	0
-419	1048585	16	33	2022-05-24 21:10:16	1342177296	submission.event.fileEdited	0
-420	1048585	16	33	2022-05-24 21:10:43	268435458	submission.event.general.metadataUpdated	0
-421	1048585	16	33	2022-05-24 21:10:44	268435457	submission.event.submissionSubmitted	0
-422	1048585	16	3	2022-05-24 21:11:00	805306371	editor.submission.decision.sendExternalReview.log	0
-423	515	88	3	2022-05-24 21:11:01	1342177281	submission.event.fileUploaded	0
-424	1048585	16	3	2022-05-24 21:11:01	1342177288	submission.event.fileRevised	0
-425	1048585	16	3	2022-05-24 21:11:12	1073741825	log.review.reviewerAssigned	0
-426	1048585	16	3	2022-05-24 21:11:21	1073741825	log.review.reviewerAssigned	0
-427	1048585	16	3	2022-05-24 21:11:30	1073741825	log.review.reviewerAssigned	0
-428	1048585	16	10	2022-05-24 21:11:40	1073741830	log.review.reviewAccepted	0
-429	1048585	16	10	2022-05-24 21:11:44	1073741848	log.review.reviewReady	0
-430	1048585	17	34	2022-05-24 21:11:59	268435458	submission.event.general.metadataUpdated	0
-431	515	89	34	2022-05-24 21:12:02	1342177281	submission.event.fileUploaded	0
-432	1048585	17	34	2022-05-24 21:12:02	1342177288	submission.event.fileRevised	0
-433	515	89	34	2022-05-24 21:12:02	1342177296	submission.event.fileEdited	0
-434	1048585	17	34	2022-05-24 21:12:02	1342177296	submission.event.fileEdited	0
-435	515	90	34	2022-05-24 21:12:02	1342177281	submission.event.fileUploaded	0
-436	1048585	17	34	2022-05-24 21:12:02	1342177288	submission.event.fileRevised	0
-437	515	90	34	2022-05-24 21:12:02	1342177296	submission.event.fileEdited	0
-438	1048585	17	34	2022-05-24 21:12:02	1342177296	submission.event.fileEdited	0
-439	515	91	34	2022-05-24 21:12:02	1342177281	submission.event.fileUploaded	0
-440	1048585	17	34	2022-05-24 21:12:02	1342177288	submission.event.fileRevised	0
-441	515	91	34	2022-05-24 21:12:03	1342177296	submission.event.fileEdited	0
-442	1048585	17	34	2022-05-24 21:12:03	1342177296	submission.event.fileEdited	0
-443	515	92	34	2022-05-24 21:12:03	1342177281	submission.event.fileUploaded	0
-444	1048585	17	34	2022-05-24 21:12:03	1342177288	submission.event.fileRevised	0
-445	515	92	34	2022-05-24 21:12:03	1342177296	submission.event.fileEdited	0
-446	1048585	17	34	2022-05-24 21:12:03	1342177296	submission.event.fileEdited	0
-447	515	93	34	2022-05-24 21:12:04	1342177281	submission.event.fileUploaded	0
-448	1048585	17	34	2022-05-24 21:12:04	1342177288	submission.event.fileRevised	0
-449	515	93	34	2022-05-24 21:12:04	1342177296	submission.event.fileEdited	0
-450	1048585	17	34	2022-05-24 21:12:04	1342177296	submission.event.fileEdited	0
-451	515	94	34	2022-05-24 21:12:04	1342177281	submission.event.fileUploaded	0
-452	1048585	17	34	2022-05-24 21:12:04	1342177288	submission.event.fileRevised	0
-453	515	94	34	2022-05-24 21:12:05	1342177296	submission.event.fileEdited	0
-454	1048585	17	34	2022-05-24 21:12:05	1342177296	submission.event.fileEdited	0
-455	1048585	17	34	2022-05-24 21:14:33	268435458	submission.event.general.metadataUpdated	0
-456	1048585	17	34	2022-05-24 21:14:36	268435457	submission.event.submissionSubmitted	0
-457	1048585	17	3	2022-05-24 21:15:01	805306371	editor.submission.decision.sendInternalReview.log	0
-458	515	95	3	2022-05-24 21:15:02	1342177281	submission.event.fileUploaded	0
-459	1048585	17	3	2022-05-24 21:15:02	1342177288	submission.event.fileRevised	0
-460	515	96	3	2022-05-24 21:15:02	1342177281	submission.event.fileUploaded	0
-461	1048585	17	3	2022-05-24 21:15:02	1342177288	submission.event.fileRevised	0
-462	515	97	3	2022-05-24 21:15:02	1342177281	submission.event.fileUploaded	0
-463	1048585	17	3	2022-05-24 21:15:02	1342177288	submission.event.fileRevised	0
-464	515	98	3	2022-05-24 21:15:02	1342177281	submission.event.fileUploaded	0
-465	1048585	17	3	2022-05-24 21:15:02	1342177288	submission.event.fileRevised	0
-466	515	99	3	2022-05-24 21:15:02	1342177281	submission.event.fileUploaded	0
-467	1048585	17	3	2022-05-24 21:15:02	1342177288	submission.event.fileRevised	0
-468	515	100	3	2022-05-24 21:15:02	1342177281	submission.event.fileUploaded	0
-469	1048585	17	3	2022-05-24 21:15:02	1342177288	submission.event.fileRevised	0
-470	1048585	17	3	2022-05-24 21:15:19	1073741825	log.review.reviewerAssigned	0
-471	1048585	17	3	2022-05-24 21:15:31	1073741825	log.review.reviewerAssigned	0
+1	1048585	1	19	2022-05-25 18:43:41	268435458	submission.event.general.metadataUpdated	0
+2	515	1	19	2022-05-25 18:43:44	1342177281	submission.event.fileUploaded	0
+3	1048585	1	19	2022-05-25 18:43:44	1342177288	submission.event.fileRevised	0
+4	515	1	19	2022-05-25 18:43:44	1342177296	submission.event.fileEdited	0
+5	1048585	1	19	2022-05-25 18:43:44	1342177296	submission.event.fileEdited	0
+6	1048585	1	19	2022-05-25 18:44:01	268435458	submission.event.general.metadataUpdated	0
+7	1048585	1	19	2022-05-25 18:44:02	268435457	submission.event.submissionSubmitted	0
+8	1048585	1	3	2022-05-25 18:44:16	805306371	editor.submission.decision.sendExternalReview.log	0
+9	515	2	3	2022-05-25 18:44:16	1342177281	submission.event.fileUploaded	0
+10	1048585	1	3	2022-05-25 18:44:16	1342177288	submission.event.fileRevised	0
+11	1048585	1	3	2022-05-25 18:44:28	1073741825	log.review.reviewerAssigned	0
+12	1048585	1	3	2022-05-25 18:44:33	805306371	editor.submission.decision.accept.log	0
+13	1048585	1	3	2022-05-25 18:44:43	268435459	submission.event.participantAdded	0
+14	1048585	2	20	2022-05-25 18:44:54	268435458	submission.event.general.metadataUpdated	0
+15	515	3	20	2022-05-25 18:44:57	1342177281	submission.event.fileUploaded	0
+16	1048585	2	20	2022-05-25 18:44:57	1342177288	submission.event.fileRevised	0
+17	515	3	20	2022-05-25 18:44:57	1342177296	submission.event.fileEdited	0
+18	1048585	2	20	2022-05-25 18:44:57	1342177296	submission.event.fileEdited	0
+19	515	4	20	2022-05-25 18:44:57	1342177281	submission.event.fileUploaded	0
+20	1048585	2	20	2022-05-25 18:44:57	1342177288	submission.event.fileRevised	0
+21	515	4	20	2022-05-25 18:44:58	1342177296	submission.event.fileEdited	0
+22	1048585	2	20	2022-05-25 18:44:58	1342177296	submission.event.fileEdited	0
+23	515	5	20	2022-05-25 18:44:58	1342177281	submission.event.fileUploaded	0
+24	1048585	2	20	2022-05-25 18:44:58	1342177288	submission.event.fileRevised	0
+25	515	5	20	2022-05-25 18:44:58	1342177296	submission.event.fileEdited	0
+26	1048585	2	20	2022-05-25 18:44:58	1342177296	submission.event.fileEdited	0
+27	515	6	20	2022-05-25 18:44:58	1342177281	submission.event.fileUploaded	0
+28	1048585	2	20	2022-05-25 18:44:58	1342177288	submission.event.fileRevised	0
+29	515	6	20	2022-05-25 18:44:59	1342177296	submission.event.fileEdited	0
+30	1048585	2	20	2022-05-25 18:44:59	1342177296	submission.event.fileEdited	0
+31	1048585	2	20	2022-05-25 18:46:48	268435458	submission.event.general.metadataUpdated	0
+32	1048585	2	20	2022-05-25 18:46:51	268435457	submission.event.submissionSubmitted	0
+33	1048585	2	3	2022-05-25 18:47:10	805306371	editor.submission.decision.sendExternalReview.log	0
+34	515	7	3	2022-05-25 18:47:11	1342177281	submission.event.fileUploaded	0
+35	1048585	2	3	2022-05-25 18:47:11	1342177288	submission.event.fileRevised	0
+36	515	8	3	2022-05-25 18:47:11	1342177281	submission.event.fileUploaded	0
+37	1048585	2	3	2022-05-25 18:47:11	1342177288	submission.event.fileRevised	0
+38	515	9	3	2022-05-25 18:47:11	1342177281	submission.event.fileUploaded	0
+39	1048585	2	3	2022-05-25 18:47:11	1342177288	submission.event.fileRevised	0
+40	515	10	3	2022-05-25 18:47:11	1342177281	submission.event.fileUploaded	0
+41	1048585	2	3	2022-05-25 18:47:11	1342177288	submission.event.fileRevised	0
+42	1048585	2	3	2022-05-25 18:47:26	1073741825	log.review.reviewerAssigned	0
+43	1048585	2	3	2022-05-25 18:47:38	1073741825	log.review.reviewerAssigned	0
+44	1048585	3	21	2022-05-25 18:47:49	268435458	submission.event.general.metadataUpdated	0
+45	515	11	21	2022-05-25 18:47:52	1342177281	submission.event.fileUploaded	0
+46	1048585	3	21	2022-05-25 18:47:52	1342177288	submission.event.fileRevised	0
+47	515	11	21	2022-05-25 18:47:52	1342177296	submission.event.fileEdited	0
+48	1048585	3	21	2022-05-25 18:47:52	1342177296	submission.event.fileEdited	0
+49	1048585	3	21	2022-05-25 18:48:26	268435458	submission.event.general.metadataUpdated	0
+50	1048585	3	21	2022-05-25 18:48:28	268435457	submission.event.submissionSubmitted	0
+51	1048585	4	22	2022-05-25 18:48:38	268435458	submission.event.general.metadataUpdated	0
+52	515	12	22	2022-05-25 18:48:40	1342177281	submission.event.fileUploaded	0
+53	1048585	4	22	2022-05-25 18:48:40	1342177288	submission.event.fileRevised	0
+54	515	12	22	2022-05-25 18:48:41	1342177296	submission.event.fileEdited	0
+55	1048585	4	22	2022-05-25 18:48:41	1342177296	submission.event.fileEdited	0
+56	515	13	22	2022-05-25 18:48:41	1342177281	submission.event.fileUploaded	0
+57	1048585	4	22	2022-05-25 18:48:41	1342177288	submission.event.fileRevised	0
+58	515	13	22	2022-05-25 18:48:41	1342177296	submission.event.fileEdited	0
+59	1048585	4	22	2022-05-25 18:48:41	1342177296	submission.event.fileEdited	0
+60	515	14	22	2022-05-25 18:48:41	1342177281	submission.event.fileUploaded	0
+61	1048585	4	22	2022-05-25 18:48:41	1342177288	submission.event.fileRevised	0
+62	515	14	22	2022-05-25 18:48:42	1342177296	submission.event.fileEdited	0
+63	1048585	4	22	2022-05-25 18:48:42	1342177296	submission.event.fileEdited	0
+64	515	15	22	2022-05-25 18:48:42	1342177281	submission.event.fileUploaded	0
+65	1048585	4	22	2022-05-25 18:48:42	1342177288	submission.event.fileRevised	0
+66	515	15	22	2022-05-25 18:48:42	1342177296	submission.event.fileEdited	0
+67	1048585	4	22	2022-05-25 18:48:42	1342177296	submission.event.fileEdited	0
+68	1048585	4	22	2022-05-25 18:50:02	268435458	submission.event.general.metadataUpdated	0
+69	1048585	4	22	2022-05-25 18:50:05	268435457	submission.event.submissionSubmitted	0
+70	1048585	4	3	2022-05-25 18:50:23	805306371	editor.submission.decision.sendInternalReview.log	0
+71	515	16	3	2022-05-25 18:50:23	1342177281	submission.event.fileUploaded	0
+72	1048585	4	3	2022-05-25 18:50:23	1342177288	submission.event.fileRevised	0
+73	515	17	3	2022-05-25 18:50:23	1342177281	submission.event.fileUploaded	0
+74	1048585	4	3	2022-05-25 18:50:23	1342177288	submission.event.fileRevised	0
+75	515	18	3	2022-05-25 18:50:23	1342177281	submission.event.fileUploaded	0
+76	1048585	4	3	2022-05-25 18:50:23	1342177288	submission.event.fileRevised	0
+77	515	19	3	2022-05-25 18:50:23	1342177281	submission.event.fileUploaded	0
+78	1048585	4	3	2022-05-25 18:50:23	1342177288	submission.event.fileRevised	0
+79	1048585	4	3	2022-05-25 18:50:37	1073741825	log.review.reviewerAssigned	0
+80	1048585	4	3	2022-05-25 18:50:44	805306371	editor.submission.decision.sendExternalReview.log	0
+81	1048585	4	3	2022-05-25 18:50:59	1073741825	log.review.reviewerAssigned	0
+82	1048585	4	3	2022-05-25 18:51:07	805306371	editor.submission.decision.accept.log	0
+83	1048585	4	3	2022-05-25 18:51:22	268435459	submission.event.participantAdded	0
+84	1048585	4	3	2022-05-25 18:51:32	805306371	editor.submission.decision.sendToProduction.log	0
+85	1048585	4	3	2022-05-25 18:51:50	268435459	submission.event.participantAdded	0
+86	1048585	4	3	2022-05-25 18:52:21	268435474	submission.event.publicationFormatCreated	0
+87	1048585	5	23	2022-05-25 18:52:31	268435458	submission.event.general.metadataUpdated	0
+88	515	20	23	2022-05-25 18:52:33	1342177281	submission.event.fileUploaded	0
+89	1048585	5	23	2022-05-25 18:52:33	1342177288	submission.event.fileRevised	0
+90	515	20	23	2022-05-25 18:52:34	1342177296	submission.event.fileEdited	0
+91	1048585	5	23	2022-05-25 18:52:34	1342177296	submission.event.fileEdited	0
+92	1048585	5	23	2022-05-25 18:53:11	268435458	submission.event.general.metadataUpdated	0
+93	1048585	5	23	2022-05-25 18:53:13	268435457	submission.event.submissionSubmitted	0
+94	1048585	5	3	2022-05-25 18:53:28	805306371	editor.submission.decision.sendInternalReview.log	0
+95	515	21	3	2022-05-25 18:53:28	1342177281	submission.event.fileUploaded	0
+96	1048585	5	3	2022-05-25 18:53:28	1342177288	submission.event.fileRevised	0
+97	1048585	5	3	2022-05-25 18:53:39	1073741825	log.review.reviewerAssigned	0
+98	1048585	5	3	2022-05-25 18:53:45	805306371	editor.submission.decision.sendExternalReview.log	0
+99	1048585	5	3	2022-05-25 18:53:58	1073741825	log.review.reviewerAssigned	0
+100	1048585	5	3	2022-05-25 18:54:06	805306371	editor.submission.decision.accept.log	0
+101	1048585	5	3	2022-05-25 18:54:19	268435459	submission.event.participantAdded	0
+102	1048585	5	3	2022-05-25 18:54:27	805306371	editor.submission.decision.sendToProduction.log	0
+103	1048585	5	3	2022-05-25 18:54:41	268435459	submission.event.participantAdded	0
+104	1048585	5	3	2022-05-25 18:54:50	268435459	submission.event.participantAdded	0
+105	1048585	5	3	2022-05-25 18:54:58	268435474	submission.event.publicationFormatCreated	0
+106	515	22	3	2022-05-25 18:55:03	1342177281	submission.event.fileUploaded	0
+107	1048585	5	3	2022-05-25 18:55:03	1342177288	submission.event.fileRevised	0
+108	1048585	5	3	2022-05-25 18:55:06	268435464	submission.event.publicationFormatPublished	0
+109	1048585	5	3	2022-05-25 18:55:08	268435476	submission.event.publicationFormatMadeAvailable	0
+110	515	22	3	2022-05-25 18:55:12	1342177296	submission.event.fileEdited	0
+111	1048585	5	3	2022-05-25 18:55:12	1342177296	submission.event.fileEdited	0
+112	515	22	3	2022-05-25 18:55:12	1342177287	submission.event.signoffSignoff	0
+113	515	22	3	2022-05-25 18:55:15	1342177296	submission.event.fileEdited	0
+114	1048585	5	3	2022-05-25 18:55:15	1342177296	submission.event.fileEdited	0
+115	1048585	5	3	2022-05-25 18:55:18	268435462	publication.event.published	0
+116	1048585	6	24	2022-05-25 18:55:30	268435458	submission.event.general.metadataUpdated	0
+117	515	23	24	2022-05-25 18:55:32	1342177281	submission.event.fileUploaded	0
+118	1048585	6	24	2022-05-25 18:55:32	1342177288	submission.event.fileRevised	0
+119	515	23	24	2022-05-25 18:55:32	1342177296	submission.event.fileEdited	0
+120	1048585	6	24	2022-05-25 18:55:32	1342177296	submission.event.fileEdited	0
+121	515	24	24	2022-05-25 18:55:33	1342177281	submission.event.fileUploaded	0
+122	1048585	6	24	2022-05-25 18:55:33	1342177288	submission.event.fileRevised	0
+123	515	24	24	2022-05-25 18:55:33	1342177296	submission.event.fileEdited	0
+124	1048585	6	24	2022-05-25 18:55:33	1342177296	submission.event.fileEdited	0
+125	515	25	24	2022-05-25 18:55:33	1342177281	submission.event.fileUploaded	0
+126	1048585	6	24	2022-05-25 18:55:33	1342177288	submission.event.fileRevised	0
+127	515	25	24	2022-05-25 18:55:34	1342177296	submission.event.fileEdited	0
+128	1048585	6	24	2022-05-25 18:55:34	1342177296	submission.event.fileEdited	0
+129	515	26	24	2022-05-25 18:55:34	1342177281	submission.event.fileUploaded	0
+130	1048585	6	24	2022-05-25 18:55:34	1342177288	submission.event.fileRevised	0
+131	515	26	24	2022-05-25 18:55:34	1342177296	submission.event.fileEdited	0
+132	1048585	6	24	2022-05-25 18:55:34	1342177296	submission.event.fileEdited	0
+133	1048585	6	24	2022-05-25 18:56:36	268435458	submission.event.general.metadataUpdated	0
+134	1048585	6	24	2022-05-25 18:56:38	268435457	submission.event.submissionSubmitted	0
+135	1048585	6	3	2022-05-25 18:56:57	805306371	editor.submission.decision.sendInternalReview.log	0
+136	515	27	3	2022-05-25 18:56:57	1342177281	submission.event.fileUploaded	0
+137	1048585	6	3	2022-05-25 18:56:57	1342177288	submission.event.fileRevised	0
+138	515	28	3	2022-05-25 18:56:57	1342177281	submission.event.fileUploaded	0
+139	1048585	6	3	2022-05-25 18:56:57	1342177288	submission.event.fileRevised	0
+140	515	29	3	2022-05-25 18:56:57	1342177281	submission.event.fileUploaded	0
+141	1048585	6	3	2022-05-25 18:56:57	1342177288	submission.event.fileRevised	0
+142	515	30	3	2022-05-25 18:56:57	1342177281	submission.event.fileUploaded	0
+143	1048585	6	3	2022-05-25 18:56:57	1342177288	submission.event.fileRevised	0
+144	1048585	6	3	2022-05-25 18:57:11	268435459	submission.event.participantAdded	0
+145	1048585	6	6	2022-05-25 18:57:30	805306372	editor.submission.recommend.accept.log	0
+146	1048585	7	25	2022-05-25 18:57:59	268435458	submission.event.general.metadataUpdated	0
+147	515	31	25	2022-05-25 18:58:02	1342177281	submission.event.fileUploaded	0
+148	1048585	7	25	2022-05-25 18:58:02	1342177288	submission.event.fileRevised	0
+149	515	31	25	2022-05-25 18:58:02	1342177296	submission.event.fileEdited	0
+150	1048585	7	25	2022-05-25 18:58:02	1342177296	submission.event.fileEdited	0
+151	515	32	25	2022-05-25 18:58:02	1342177281	submission.event.fileUploaded	0
+152	1048585	7	25	2022-05-25 18:58:02	1342177288	submission.event.fileRevised	0
+153	515	32	25	2022-05-25 18:58:02	1342177296	submission.event.fileEdited	0
+154	1048585	7	25	2022-05-25 18:58:02	1342177296	submission.event.fileEdited	0
+155	515	33	25	2022-05-25 18:58:02	1342177281	submission.event.fileUploaded	0
+156	1048585	7	25	2022-05-25 18:58:03	1342177288	submission.event.fileRevised	0
+157	515	33	25	2022-05-25 18:58:03	1342177296	submission.event.fileEdited	0
+158	1048585	7	25	2022-05-25 18:58:03	1342177296	submission.event.fileEdited	0
+159	515	34	25	2022-05-25 18:58:03	1342177281	submission.event.fileUploaded	0
+160	1048585	7	25	2022-05-25 18:58:03	1342177288	submission.event.fileRevised	0
+161	515	34	25	2022-05-25 18:58:04	1342177296	submission.event.fileEdited	0
+162	1048585	7	25	2022-05-25 18:58:04	1342177296	submission.event.fileEdited	0
+163	515	35	25	2022-05-25 18:58:04	1342177281	submission.event.fileUploaded	0
+164	1048585	7	25	2022-05-25 18:58:04	1342177288	submission.event.fileRevised	0
+165	515	35	25	2022-05-25 18:58:04	1342177296	submission.event.fileEdited	0
+166	1048585	7	25	2022-05-25 18:58:04	1342177296	submission.event.fileEdited	0
+167	1048585	7	25	2022-05-25 18:59:56	268435458	submission.event.general.metadataUpdated	0
+168	1048585	7	25	2022-05-25 18:59:59	268435457	submission.event.submissionSubmitted	0
+169	1048585	7	3	2022-05-25 19:00:19	805306371	editor.submission.decision.sendExternalReview.log	0
+170	515	36	3	2022-05-25 19:00:20	1342177281	submission.event.fileUploaded	0
+171	1048585	7	3	2022-05-25 19:00:20	1342177288	submission.event.fileRevised	0
+172	515	37	3	2022-05-25 19:00:20	1342177281	submission.event.fileUploaded	0
+173	1048585	7	3	2022-05-25 19:00:20	1342177288	submission.event.fileRevised	0
+174	515	38	3	2022-05-25 19:00:20	1342177281	submission.event.fileUploaded	0
+175	1048585	7	3	2022-05-25 19:00:20	1342177288	submission.event.fileRevised	0
+176	515	39	3	2022-05-25 19:00:20	1342177281	submission.event.fileUploaded	0
+177	1048585	7	3	2022-05-25 19:00:20	1342177288	submission.event.fileRevised	0
+178	515	40	3	2022-05-25 19:00:20	1342177281	submission.event.fileUploaded	0
+179	1048585	7	3	2022-05-25 19:00:20	1342177288	submission.event.fileRevised	0
+180	1048585	7	3	2022-05-25 19:00:36	1073741825	log.review.reviewerAssigned	0
+181	1048585	7	3	2022-05-25 19:00:45	805306371	editor.submission.decision.accept.log	0
+182	1048585	7	3	2022-05-25 19:01:01	268435459	submission.event.participantAdded	0
+183	1048585	8	3	2022-05-25 19:01:12	268435458	submission.event.general.metadataUpdated	0
+184	515	41	3	2022-05-25 19:01:14	1342177281	submission.event.fileUploaded	0
+185	1048585	8	3	2022-05-25 19:01:14	1342177288	submission.event.fileRevised	0
+186	515	41	3	2022-05-25 19:01:15	1342177296	submission.event.fileEdited	0
+187	1048585	8	3	2022-05-25 19:01:15	1342177296	submission.event.fileEdited	0
+188	1048585	8	3	2022-05-25 19:01:17	268435458	submission.event.general.metadataUpdated	0
+189	1048585	8	3	2022-05-25 19:01:18	268435457	submission.event.submissionSubmitted	0
+190	1048585	9	26	2022-05-25 19:01:27	268435458	submission.event.general.metadataUpdated	0
+191	515	42	26	2022-05-25 19:01:30	1342177281	submission.event.fileUploaded	0
+192	1048585	9	26	2022-05-25 19:01:30	1342177288	submission.event.fileRevised	0
+193	515	42	26	2022-05-25 19:01:30	1342177296	submission.event.fileEdited	0
+194	1048585	9	26	2022-05-25 19:01:30	1342177296	submission.event.fileEdited	0
+195	515	43	26	2022-05-25 19:01:30	1342177281	submission.event.fileUploaded	0
+196	1048585	9	26	2022-05-25 19:01:30	1342177288	submission.event.fileRevised	0
+197	515	43	26	2022-05-25 19:01:30	1342177296	submission.event.fileEdited	0
+198	1048585	9	26	2022-05-25 19:01:30	1342177296	submission.event.fileEdited	0
+199	515	44	26	2022-05-25 19:01:30	1342177281	submission.event.fileUploaded	0
+200	1048585	9	26	2022-05-25 19:01:30	1342177288	submission.event.fileRevised	0
+201	515	44	26	2022-05-25 19:01:31	1342177296	submission.event.fileEdited	0
+202	1048585	9	26	2022-05-25 19:01:31	1342177296	submission.event.fileEdited	0
+203	515	45	26	2022-05-25 19:01:31	1342177281	submission.event.fileUploaded	0
+204	1048585	9	26	2022-05-25 19:01:31	1342177288	submission.event.fileRevised	0
+205	515	45	26	2022-05-25 19:01:31	1342177296	submission.event.fileEdited	0
+206	1048585	9	26	2022-05-25 19:01:31	1342177296	submission.event.fileEdited	0
+207	515	46	26	2022-05-25 19:01:32	1342177281	submission.event.fileUploaded	0
+208	1048585	9	26	2022-05-25 19:01:32	1342177288	submission.event.fileRevised	0
+209	515	46	26	2022-05-25 19:01:32	1342177296	submission.event.fileEdited	0
+210	1048585	9	26	2022-05-25 19:01:32	1342177296	submission.event.fileEdited	0
+211	1048585	9	26	2022-05-25 19:03:11	268435458	submission.event.general.metadataUpdated	0
+212	1048585	9	26	2022-05-25 19:03:14	268435457	submission.event.submissionSubmitted	0
+213	1048585	9	3	2022-05-25 19:03:35	805306371	editor.submission.decision.sendInternalReview.log	0
+214	515	47	3	2022-05-25 19:03:35	1342177281	submission.event.fileUploaded	0
+215	1048585	9	3	2022-05-25 19:03:35	1342177288	submission.event.fileRevised	0
+216	515	48	3	2022-05-25 19:03:35	1342177281	submission.event.fileUploaded	0
+217	1048585	9	3	2022-05-25 19:03:35	1342177288	submission.event.fileRevised	0
+218	515	49	3	2022-05-25 19:03:35	1342177281	submission.event.fileUploaded	0
+219	1048585	9	3	2022-05-25 19:03:35	1342177288	submission.event.fileRevised	0
+220	515	50	3	2022-05-25 19:03:35	1342177281	submission.event.fileUploaded	0
+221	1048585	9	3	2022-05-25 19:03:35	1342177288	submission.event.fileRevised	0
+222	515	51	3	2022-05-25 19:03:35	1342177281	submission.event.fileUploaded	0
+223	1048585	9	3	2022-05-25 19:03:35	1342177288	submission.event.fileRevised	0
+224	1048585	10	27	2022-05-25 19:03:51	268435458	submission.event.general.metadataUpdated	0
+225	515	52	27	2022-05-25 19:03:54	1342177281	submission.event.fileUploaded	0
+226	1048585	10	27	2022-05-25 19:03:54	1342177288	submission.event.fileRevised	0
+227	515	52	27	2022-05-25 19:03:54	1342177296	submission.event.fileEdited	0
+228	1048585	10	27	2022-05-25 19:03:54	1342177296	submission.event.fileEdited	0
+229	1048585	10	27	2022-05-25 19:04:53	268435458	submission.event.general.metadataUpdated	0
+230	1048585	10	27	2022-05-25 19:04:55	268435457	submission.event.submissionSubmitted	0
+231	1048585	11	28	2022-05-25 19:05:05	268435458	submission.event.general.metadataUpdated	0
+232	515	53	28	2022-05-25 19:05:08	1342177281	submission.event.fileUploaded	0
+233	1048585	11	28	2022-05-25 19:05:08	1342177288	submission.event.fileRevised	0
+234	515	53	28	2022-05-25 19:05:08	1342177296	submission.event.fileEdited	0
+235	1048585	11	28	2022-05-25 19:05:08	1342177296	submission.event.fileEdited	0
+236	1048585	11	28	2022-05-25 19:05:18	268435458	submission.event.general.metadataUpdated	0
+237	1048585	11	28	2022-05-25 19:05:19	268435457	submission.event.submissionSubmitted	0
+238	1048585	11	3	2022-05-25 19:05:33	805306371	editor.submission.decision.sendInternalReview.log	0
+239	515	54	3	2022-05-25 19:05:33	1342177281	submission.event.fileUploaded	0
+240	1048585	11	3	2022-05-25 19:05:33	1342177288	submission.event.fileRevised	0
+241	1048585	11	3	2022-05-25 19:05:44	1073741825	log.review.reviewerAssigned	0
+242	1048585	11	3	2022-05-25 19:05:49	805306371	editor.submission.decision.sendExternalReview.log	0
+243	1048585	11	3	2022-05-25 19:06:01	1073741825	log.review.reviewerAssigned	0
+244	1048585	11	3	2022-05-25 19:06:10	1073741825	log.review.reviewerAssigned	0
+245	1048585	11	10	2022-05-25 19:06:20	1073741830	log.review.reviewAccepted	0
+246	1048585	11	10	2022-05-25 19:06:24	1073741848	log.review.reviewReady	0
+247	1048585	11	12	2022-05-25 19:06:34	1073741830	log.review.reviewAccepted	0
+248	1048585	11	12	2022-05-25 19:06:38	1073741848	log.review.reviewReady	0
+249	1048585	11	3	2022-05-25 19:07:01	805306371	editor.submission.decision.accept.log	0
+250	1048585	11	3	2022-05-25 19:07:01	1073741856	submission.event.decisionReviewerEmailSent	0
+251	1048585	12	29	2022-05-25 19:07:16	268435458	submission.event.general.metadataUpdated	0
+252	515	55	29	2022-05-25 19:07:19	1342177281	submission.event.fileUploaded	0
+253	1048585	12	29	2022-05-25 19:07:19	1342177288	submission.event.fileRevised	0
+254	515	55	29	2022-05-25 19:07:19	1342177296	submission.event.fileEdited	0
+255	1048585	12	29	2022-05-25 19:07:19	1342177296	submission.event.fileEdited	0
+256	515	56	29	2022-05-25 19:07:19	1342177281	submission.event.fileUploaded	0
+257	1048585	12	29	2022-05-25 19:07:19	1342177288	submission.event.fileRevised	0
+258	515	56	29	2022-05-25 19:07:20	1342177296	submission.event.fileEdited	0
+259	1048585	12	29	2022-05-25 19:07:20	1342177296	submission.event.fileEdited	0
+260	515	57	29	2022-05-25 19:07:20	1342177281	submission.event.fileUploaded	0
+261	1048585	12	29	2022-05-25 19:07:20	1342177288	submission.event.fileRevised	0
+262	515	57	29	2022-05-25 19:07:20	1342177296	submission.event.fileEdited	0
+263	1048585	12	29	2022-05-25 19:07:20	1342177296	submission.event.fileEdited	0
+264	1048585	12	29	2022-05-25 19:08:50	268435458	submission.event.general.metadataUpdated	0
+265	1048585	12	29	2022-05-25 19:08:52	268435457	submission.event.submissionSubmitted	0
+266	1048585	12	3	2022-05-25 19:09:14	805306371	editor.submission.decision.sendInternalReview.log	0
+267	515	58	3	2022-05-25 19:09:14	1342177281	submission.event.fileUploaded	0
+268	1048585	12	3	2022-05-25 19:09:14	1342177288	submission.event.fileRevised	0
+269	515	59	3	2022-05-25 19:09:14	1342177281	submission.event.fileUploaded	0
+270	1048585	12	3	2022-05-25 19:09:14	1342177288	submission.event.fileRevised	0
+271	515	60	3	2022-05-25 19:09:14	1342177281	submission.event.fileUploaded	0
+272	1048585	12	3	2022-05-25 19:09:14	1342177288	submission.event.fileRevised	0
+273	1048585	12	3	2022-05-25 19:09:29	1073741825	log.review.reviewerAssigned	0
+274	1048585	12	3	2022-05-25 19:09:39	1073741825	log.review.reviewerAssigned	0
+275	1048585	12	3	2022-05-25 19:09:50	1073741825	log.review.reviewerAssigned	0
+276	1048585	12	8	2022-05-25 19:10:03	1073741830	log.review.reviewAccepted	0
+277	1048585	12	8	2022-05-25 19:10:08	1073741848	log.review.reviewReady	0
+278	1048585	13	30	2022-05-25 19:10:21	268435458	submission.event.general.metadataUpdated	0
+279	515	61	30	2022-05-25 19:10:23	1342177281	submission.event.fileUploaded	0
+280	1048585	13	30	2022-05-25 19:10:23	1342177288	submission.event.fileRevised	0
+281	515	61	30	2022-05-25 19:10:23	1342177296	submission.event.fileEdited	0
+282	1048585	13	30	2022-05-25 19:10:23	1342177296	submission.event.fileEdited	0
+283	515	62	30	2022-05-25 19:10:23	1342177281	submission.event.fileUploaded	0
+284	1048585	13	30	2022-05-25 19:10:24	1342177288	submission.event.fileRevised	0
+285	515	62	30	2022-05-25 19:10:24	1342177296	submission.event.fileEdited	0
+286	1048585	13	30	2022-05-25 19:10:24	1342177296	submission.event.fileEdited	0
+287	515	63	30	2022-05-25 19:10:24	1342177281	submission.event.fileUploaded	0
+288	1048585	13	30	2022-05-25 19:10:24	1342177288	submission.event.fileRevised	0
+289	515	63	30	2022-05-25 19:10:24	1342177296	submission.event.fileEdited	0
+290	1048585	13	30	2022-05-25 19:10:24	1342177296	submission.event.fileEdited	0
+291	1048585	13	30	2022-05-25 19:11:20	268435458	submission.event.general.metadataUpdated	0
+292	1048585	13	30	2022-05-25 19:11:22	268435457	submission.event.submissionSubmitted	0
+293	1048585	13	3	2022-05-25 19:11:40	805306371	editor.submission.decision.sendInternalReview.log	0
+294	515	64	3	2022-05-25 19:11:40	1342177281	submission.event.fileUploaded	0
+295	1048585	13	3	2022-05-25 19:11:40	1342177288	submission.event.fileRevised	0
+296	515	65	3	2022-05-25 19:11:40	1342177281	submission.event.fileUploaded	0
+297	1048585	13	3	2022-05-25 19:11:40	1342177288	submission.event.fileRevised	0
+298	515	66	3	2022-05-25 19:11:40	1342177281	submission.event.fileUploaded	0
+299	1048585	13	3	2022-05-25 19:11:40	1342177288	submission.event.fileRevised	0
+300	1048585	13	3	2022-05-25 19:11:54	1073741825	log.review.reviewerAssigned	0
+301	1048585	13	3	2022-05-25 19:12:01	805306371	editor.submission.decision.sendExternalReview.log	0
+302	1048585	13	3	2022-05-25 19:12:16	1073741825	log.review.reviewerAssigned	0
+303	1048585	13	3	2022-05-25 19:12:27	1073741825	log.review.reviewerAssigned	0
+304	1048585	13	3	2022-05-25 19:12:37	1073741825	log.review.reviewerAssigned	0
+305	1048585	13	10	2022-05-25 19:12:48	1073741830	log.review.reviewAccepted	0
+306	1048585	13	10	2022-05-25 19:12:54	1073741848	log.review.reviewReady	0
+307	1048585	13	12	2022-05-25 19:13:05	1073741830	log.review.reviewAccepted	0
+308	1048585	13	12	2022-05-25 19:13:10	1073741848	log.review.reviewReady	0
+309	1048585	13	3	2022-05-25 19:13:38	805306371	editor.submission.decision.accept.log	0
+310	1048585	13	3	2022-05-25 19:13:39	1073741856	submission.event.decisionReviewerEmailSent	0
+311	1048585	14	31	2022-05-25 19:13:58	268435458	submission.event.general.metadataUpdated	0
+312	515	67	31	2022-05-25 19:14:00	1342177281	submission.event.fileUploaded	0
+313	1048585	14	31	2022-05-25 19:14:00	1342177288	submission.event.fileRevised	0
+314	515	67	31	2022-05-25 19:14:01	1342177296	submission.event.fileEdited	0
+315	1048585	14	31	2022-05-25 19:14:01	1342177296	submission.event.fileEdited	0
+316	515	68	31	2022-05-25 19:14:01	1342177281	submission.event.fileUploaded	0
+317	1048585	14	31	2022-05-25 19:14:01	1342177288	submission.event.fileRevised	0
+318	515	68	31	2022-05-25 19:14:01	1342177296	submission.event.fileEdited	0
+319	1048585	14	31	2022-05-25 19:14:01	1342177296	submission.event.fileEdited	0
+320	515	69	31	2022-05-25 19:14:01	1342177281	submission.event.fileUploaded	0
+321	1048585	14	31	2022-05-25 19:14:01	1342177288	submission.event.fileRevised	0
+322	515	69	31	2022-05-25 19:14:02	1342177296	submission.event.fileEdited	0
+323	1048585	14	31	2022-05-25 19:14:02	1342177296	submission.event.fileEdited	0
+324	515	70	31	2022-05-25 19:14:02	1342177281	submission.event.fileUploaded	0
+325	1048585	14	31	2022-05-25 19:14:02	1342177288	submission.event.fileRevised	0
+326	515	70	31	2022-05-25 19:14:02	1342177296	submission.event.fileEdited	0
+327	1048585	14	31	2022-05-25 19:14:02	1342177296	submission.event.fileEdited	0
+328	515	71	31	2022-05-25 19:14:03	1342177281	submission.event.fileUploaded	0
+329	1048585	14	31	2022-05-25 19:14:03	1342177288	submission.event.fileRevised	0
+330	515	71	31	2022-05-25 19:14:03	1342177296	submission.event.fileEdited	0
+331	1048585	14	31	2022-05-25 19:14:03	1342177296	submission.event.fileEdited	0
+332	515	72	31	2022-05-25 19:14:04	1342177281	submission.event.fileUploaded	0
+333	1048585	14	31	2022-05-25 19:14:04	1342177288	submission.event.fileRevised	0
+334	515	72	31	2022-05-25 19:14:05	1342177296	submission.event.fileEdited	0
+335	1048585	14	31	2022-05-25 19:14:05	1342177296	submission.event.fileEdited	0
+336	1048585	14	31	2022-05-25 19:15:09	268435458	submission.event.general.metadataUpdated	0
+337	1048585	14	31	2022-05-25 19:15:11	268435457	submission.event.submissionSubmitted	0
+338	1048585	14	3	2022-05-25 19:15:31	805306371	editor.submission.decision.sendInternalReview.log	0
+339	515	73	3	2022-05-25 19:15:31	1342177281	submission.event.fileUploaded	0
+340	1048585	14	3	2022-05-25 19:15:31	1342177288	submission.event.fileRevised	0
+341	515	74	3	2022-05-25 19:15:31	1342177281	submission.event.fileUploaded	0
+342	1048585	14	3	2022-05-25 19:15:31	1342177288	submission.event.fileRevised	0
+343	515	75	3	2022-05-25 19:15:31	1342177281	submission.event.fileUploaded	0
+344	1048585	14	3	2022-05-25 19:15:31	1342177288	submission.event.fileRevised	0
+345	515	76	3	2022-05-25 19:15:31	1342177281	submission.event.fileUploaded	0
+346	1048585	14	3	2022-05-25 19:15:31	1342177288	submission.event.fileRevised	0
+347	515	77	3	2022-05-25 19:15:31	1342177281	submission.event.fileUploaded	0
+348	1048585	14	3	2022-05-25 19:15:31	1342177288	submission.event.fileRevised	0
+349	515	78	3	2022-05-25 19:15:32	1342177281	submission.event.fileUploaded	0
+350	1048585	14	3	2022-05-25 19:15:32	1342177288	submission.event.fileRevised	0
+351	1048585	14	3	2022-05-25 19:15:45	1073741825	log.review.reviewerAssigned	0
+352	1048585	14	3	2022-05-25 19:15:53	805306371	editor.submission.decision.sendExternalReview.log	0
+353	1048585	14	3	2022-05-25 19:16:08	1073741825	log.review.reviewerAssigned	0
+354	1048585	14	3	2022-05-25 19:16:17	805306371	editor.submission.decision.accept.log	0
+355	1048585	14	3	2022-05-25 19:16:32	268435459	submission.event.participantAdded	0
+356	1048585	14	3	2022-05-25 19:16:42	805306371	editor.submission.decision.sendToProduction.log	0
+357	1048585	14	3	2022-05-25 19:17:00	268435459	submission.event.participantAdded	0
+358	1048585	14	3	2022-05-25 19:17:11	268435459	submission.event.participantAdded	0
+359	1048585	14	3	2022-05-25 19:17:20	268435474	submission.event.publicationFormatCreated	0
+360	515	79	3	2022-05-25 19:17:32	1342177281	submission.event.fileUploaded	0
+361	1048585	14	3	2022-05-25 19:17:32	1342177288	submission.event.fileRevised	0
+362	515	80	3	2022-05-25 19:17:32	1342177281	submission.event.fileUploaded	0
+363	1048585	14	3	2022-05-25 19:17:32	1342177288	submission.event.fileRevised	0
+364	515	81	3	2022-05-25 19:17:32	1342177281	submission.event.fileUploaded	0
+365	1048585	14	3	2022-05-25 19:17:32	1342177288	submission.event.fileRevised	0
+366	515	82	3	2022-05-25 19:17:32	1342177281	submission.event.fileUploaded	0
+367	1048585	14	3	2022-05-25 19:17:32	1342177288	submission.event.fileRevised	0
+368	515	83	3	2022-05-25 19:17:32	1342177281	submission.event.fileUploaded	0
+369	1048585	14	3	2022-05-25 19:17:32	1342177288	submission.event.fileRevised	0
+370	515	84	3	2022-05-25 19:17:32	1342177281	submission.event.fileUploaded	0
+371	1048585	14	3	2022-05-25 19:17:32	1342177288	submission.event.fileRevised	0
+372	1048585	14	3	2022-05-25 19:17:35	268435464	submission.event.publicationFormatPublished	0
+373	1048585	14	3	2022-05-25 19:17:39	268435476	submission.event.publicationFormatMadeAvailable	0
+374	515	84	3	2022-05-25 19:17:42	1342177296	submission.event.fileEdited	0
+375	1048585	14	3	2022-05-25 19:17:42	1342177296	submission.event.fileEdited	0
+376	515	84	3	2022-05-25 19:17:42	1342177287	submission.event.signoffSignoff	0
+377	515	84	3	2022-05-25 19:17:47	1342177296	submission.event.fileEdited	0
+378	1048585	14	3	2022-05-25 19:17:47	1342177296	submission.event.fileEdited	0
+379	515	82	3	2022-05-25 19:17:51	1342177296	submission.event.fileEdited	0
+380	1048585	14	3	2022-05-25 19:17:51	1342177296	submission.event.fileEdited	0
+381	515	82	3	2022-05-25 19:17:51	1342177287	submission.event.signoffSignoff	0
+382	515	82	3	2022-05-25 19:17:55	1342177296	submission.event.fileEdited	0
+383	1048585	14	3	2022-05-25 19:17:55	1342177296	submission.event.fileEdited	0
+384	515	83	3	2022-05-25 19:18:00	1342177296	submission.event.fileEdited	0
+385	1048585	14	3	2022-05-25 19:18:00	1342177296	submission.event.fileEdited	0
+386	515	83	3	2022-05-25 19:18:00	1342177287	submission.event.signoffSignoff	0
+387	515	83	3	2022-05-25 19:18:05	1342177296	submission.event.fileEdited	0
+388	1048585	14	3	2022-05-25 19:18:05	1342177296	submission.event.fileEdited	0
+389	515	81	3	2022-05-25 19:18:09	1342177296	submission.event.fileEdited	0
+390	1048585	14	3	2022-05-25 19:18:09	1342177296	submission.event.fileEdited	0
+391	515	81	3	2022-05-25 19:18:09	1342177287	submission.event.signoffSignoff	0
+392	515	81	3	2022-05-25 19:18:15	1342177296	submission.event.fileEdited	0
+393	1048585	14	3	2022-05-25 19:18:15	1342177296	submission.event.fileEdited	0
+394	515	80	3	2022-05-25 19:18:19	1342177296	submission.event.fileEdited	0
+395	1048585	14	3	2022-05-25 19:18:19	1342177296	submission.event.fileEdited	0
+396	515	80	3	2022-05-25 19:18:19	1342177287	submission.event.signoffSignoff	0
+397	515	80	3	2022-05-25 19:18:24	1342177296	submission.event.fileEdited	0
+398	1048585	14	3	2022-05-25 19:18:24	1342177296	submission.event.fileEdited	0
+399	515	79	3	2022-05-25 19:18:28	1342177296	submission.event.fileEdited	0
+400	1048585	14	3	2022-05-25 19:18:28	1342177296	submission.event.fileEdited	0
+401	515	79	3	2022-05-25 19:18:28	1342177287	submission.event.signoffSignoff	0
+402	515	79	3	2022-05-25 19:18:34	1342177296	submission.event.fileEdited	0
+403	1048585	14	3	2022-05-25 19:18:34	1342177296	submission.event.fileEdited	0
+404	1048585	14	3	2022-05-25 19:18:38	268435462	publication.event.published	0
+405	1048585	15	32	2022-05-25 19:18:51	268435458	submission.event.general.metadataUpdated	0
+406	515	85	32	2022-05-25 19:18:53	1342177281	submission.event.fileUploaded	0
+407	1048585	15	32	2022-05-25 19:18:53	1342177288	submission.event.fileRevised	0
+408	515	85	32	2022-05-25 19:18:54	1342177296	submission.event.fileEdited	0
+409	1048585	15	32	2022-05-25 19:18:54	1342177296	submission.event.fileEdited	0
+410	1048585	15	32	2022-05-25 19:19:13	268435458	submission.event.general.metadataUpdated	0
+411	1048585	15	32	2022-05-25 19:19:14	268435457	submission.event.submissionSubmitted	0
+412	1048585	15	3	2022-05-25 19:19:30	805306371	editor.submission.decision.sendExternalReview.log	0
+413	515	86	3	2022-05-25 19:19:30	1342177281	submission.event.fileUploaded	0
+414	1048585	15	3	2022-05-25 19:19:30	1342177288	submission.event.fileRevised	0
+415	1048585	16	33	2022-05-25 19:19:43	268435458	submission.event.general.metadataUpdated	0
+416	515	87	33	2022-05-25 19:19:46	1342177281	submission.event.fileUploaded	0
+417	1048585	16	33	2022-05-25 19:19:46	1342177288	submission.event.fileRevised	0
+418	515	87	33	2022-05-25 19:19:46	1342177296	submission.event.fileEdited	0
+419	1048585	16	33	2022-05-25 19:19:46	1342177296	submission.event.fileEdited	0
+420	1048585	16	33	2022-05-25 19:20:13	268435458	submission.event.general.metadataUpdated	0
+421	1048585	16	33	2022-05-25 19:20:14	268435457	submission.event.submissionSubmitted	0
+422	1048585	16	3	2022-05-25 19:20:31	805306371	editor.submission.decision.sendExternalReview.log	0
+423	515	88	3	2022-05-25 19:20:32	1342177281	submission.event.fileUploaded	0
+424	1048585	16	3	2022-05-25 19:20:32	1342177288	submission.event.fileRevised	0
+425	1048585	16	3	2022-05-25 19:20:43	1073741825	log.review.reviewerAssigned	0
+426	1048585	16	3	2022-05-25 19:20:51	1073741825	log.review.reviewerAssigned	0
+427	1048585	16	3	2022-05-25 19:21:00	1073741825	log.review.reviewerAssigned	0
+428	1048585	16	10	2022-05-25 19:21:11	1073741830	log.review.reviewAccepted	0
+429	1048585	16	10	2022-05-25 19:21:16	1073741848	log.review.reviewReady	0
+430	1048585	17	34	2022-05-25 19:21:27	268435458	submission.event.general.metadataUpdated	0
+431	515	89	34	2022-05-25 19:21:30	1342177281	submission.event.fileUploaded	0
+432	1048585	17	34	2022-05-25 19:21:30	1342177288	submission.event.fileRevised	0
+433	515	89	34	2022-05-25 19:21:30	1342177296	submission.event.fileEdited	0
+434	1048585	17	34	2022-05-25 19:21:30	1342177296	submission.event.fileEdited	0
+435	515	90	34	2022-05-25 19:21:30	1342177281	submission.event.fileUploaded	0
+436	1048585	17	34	2022-05-25 19:21:30	1342177288	submission.event.fileRevised	0
+437	515	90	34	2022-05-25 19:21:30	1342177296	submission.event.fileEdited	0
+438	1048585	17	34	2022-05-25 19:21:30	1342177296	submission.event.fileEdited	0
+439	515	91	34	2022-05-25 19:21:30	1342177281	submission.event.fileUploaded	0
+440	1048585	17	34	2022-05-25 19:21:30	1342177288	submission.event.fileRevised	0
+441	515	91	34	2022-05-25 19:21:31	1342177296	submission.event.fileEdited	0
+442	1048585	17	34	2022-05-25 19:21:31	1342177296	submission.event.fileEdited	0
+443	515	92	34	2022-05-25 19:21:31	1342177281	submission.event.fileUploaded	0
+444	1048585	17	34	2022-05-25 19:21:31	1342177288	submission.event.fileRevised	0
+445	515	92	34	2022-05-25 19:21:31	1342177296	submission.event.fileEdited	0
+446	1048585	17	34	2022-05-25 19:21:31	1342177296	submission.event.fileEdited	0
+447	515	93	34	2022-05-25 19:21:32	1342177281	submission.event.fileUploaded	0
+448	1048585	17	34	2022-05-25 19:21:32	1342177288	submission.event.fileRevised	0
+449	515	93	34	2022-05-25 19:21:32	1342177296	submission.event.fileEdited	0
+450	1048585	17	34	2022-05-25 19:21:32	1342177296	submission.event.fileEdited	0
+451	515	94	34	2022-05-25 19:21:32	1342177281	submission.event.fileUploaded	0
+452	1048585	17	34	2022-05-25 19:21:32	1342177288	submission.event.fileRevised	0
+453	515	94	34	2022-05-25 19:21:33	1342177296	submission.event.fileEdited	0
+454	1048585	17	34	2022-05-25 19:21:33	1342177296	submission.event.fileEdited	0
+455	1048585	17	34	2022-05-25 19:24:03	268435458	submission.event.general.metadataUpdated	0
+456	1048585	17	34	2022-05-25 19:24:07	268435457	submission.event.submissionSubmitted	0
+457	1048585	17	3	2022-05-25 19:24:33	805306371	editor.submission.decision.sendInternalReview.log	0
+458	515	95	3	2022-05-25 19:24:33	1342177281	submission.event.fileUploaded	0
+459	1048585	17	3	2022-05-25 19:24:33	1342177288	submission.event.fileRevised	0
+460	515	96	3	2022-05-25 19:24:33	1342177281	submission.event.fileUploaded	0
+461	1048585	17	3	2022-05-25 19:24:33	1342177288	submission.event.fileRevised	0
+462	515	97	3	2022-05-25 19:24:33	1342177281	submission.event.fileUploaded	0
+463	1048585	17	3	2022-05-25 19:24:33	1342177288	submission.event.fileRevised	0
+464	515	98	3	2022-05-25 19:24:33	1342177281	submission.event.fileUploaded	0
+465	1048585	17	3	2022-05-25 19:24:33	1342177288	submission.event.fileRevised	0
+466	515	99	3	2022-05-25 19:24:33	1342177281	submission.event.fileUploaded	0
+467	1048585	17	3	2022-05-25 19:24:33	1342177288	submission.event.fileRevised	0
+468	515	100	3	2022-05-25 19:24:33	1342177281	submission.event.fileUploaded	0
+469	1048585	17	3	2022-05-25 19:24:33	1342177288	submission.event.fileRevised	0
+470	1048585	17	3	2022-05-25 19:24:51	1073741825	log.review.reviewerAssigned	0
+471	1048585	17	3	2022-05-25 19:25:04	1073741825	log.review.reviewerAssigned	0
 \.
 
 
@@ -7199,57 +7199,57 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 171	username	dbarnes	string
 171	name	Chapter 4: Toward New Models of Flexible.pdf	string
 172	fileStage	4	int
-172	sourceSubmissionFileId	33	int
+172	sourceSubmissionFileId	34	int
 172	submissionFileId	37	int
-172	fileId	18	int
+172	fileId	19	int
 172	submissionId	7	int
-172	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
+172	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
 172	username	dbarnes	string
 173	fileStage	4	int
 173	submissionFileId	37	int
-173	fileId	18	int
+173	fileId	19	int
 173	submissionId	7	int
 173	username	dbarnes	string
-173	name	Chapter 2: Learning Science at a Distanc.pdf	string
+173	name	Chapter 3: Leadership Strategies for Coo.pdf	string
 174	fileStage	4	int
-174	sourceSubmissionFileId	34	int
+174	sourceSubmissionFileId	31	int
 174	submissionFileId	38	int
-174	fileId	19	int
+174	fileId	16	int
 174	submissionId	7	int
-174	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
+174	originalFileName	Introduction.pdf	string
 174	username	dbarnes	string
 175	fileStage	4	int
 175	submissionFileId	38	int
-175	fileId	19	int
+175	fileId	16	int
 175	submissionId	7	int
 175	username	dbarnes	string
-175	name	Chapter 3: Leadership Strategies for Coo.pdf	string
+175	name	Introduction.pdf	string
 176	fileStage	4	int
-176	sourceSubmissionFileId	31	int
+176	sourceSubmissionFileId	32	int
 176	submissionFileId	39	int
-176	fileId	16	int
+176	fileId	17	int
 176	submissionId	7	int
-176	originalFileName	Introduction.pdf	string
+176	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
 176	username	dbarnes	string
 177	fileStage	4	int
 177	submissionFileId	39	int
-177	fileId	16	int
+177	fileId	17	int
 177	submissionId	7	int
 177	username	dbarnes	string
-177	name	Introduction.pdf	string
+177	name	Chapter 1: Interactions Affording Distan.pdf	string
 178	fileStage	4	int
-178	sourceSubmissionFileId	32	int
+178	sourceSubmissionFileId	33	int
 178	submissionFileId	40	int
-178	fileId	17	int
+178	fileId	18	int
 178	submissionId	7	int
-178	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
+178	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
 178	username	dbarnes	string
 179	fileStage	4	int
 179	submissionFileId	40	int
-179	fileId	17	int
+179	fileId	18	int
 179	submissionId	7	int
 179	username	dbarnes	string
-179	name	Chapter 1: Interactions Affording Distan.pdf	string
+179	name	Chapter 2: Learning Science at a Distanc.pdf	string
 180	reviewAssignmentId	8	string
 180	reviewerName	Adela Gallego	string
 180	submissionId	7	int
@@ -7448,57 +7448,57 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 215	username	dbarnes	string
 215	name	Risks and challenges for freedom of expr.pdf	string
 216	fileStage	19	int
-216	sourceSubmissionFileId	44	int
+216	sourceSubmissionFileId	45	int
 216	submissionFileId	48	int
-216	fileId	24	int
+216	fileId	25	int
 216	submissionId	9	int
-216	originalFileName	The internet in LAC will remain free, pu.pdf	string
+216	originalFileName	Free Internet?.pdf	string
 216	username	dbarnes	string
 217	fileStage	19	int
 217	submissionFileId	48	int
-217	fileId	24	int
+217	fileId	25	int
 217	submissionId	9	int
 217	username	dbarnes	string
-217	name	The internet in LAC will remain free, pu.pdf	string
+217	name	Free Internet?.pdf	string
 218	fileStage	19	int
-218	sourceSubmissionFileId	45	int
+218	sourceSubmissionFileId	42	int
 218	submissionFileId	49	int
-218	fileId	25	int
+218	fileId	22	int
 218	submissionId	9	int
-218	originalFileName	Free Internet?.pdf	string
+218	originalFileName	Internet, openness and the future of the.pdf	string
 218	username	dbarnes	string
 219	fileStage	19	int
 219	submissionFileId	49	int
-219	fileId	25	int
+219	fileId	22	int
 219	submissionId	9	int
 219	username	dbarnes	string
-219	name	Free Internet?.pdf	string
+219	name	Internet, openness and the future of the.pdf	string
 220	fileStage	19	int
-220	sourceSubmissionFileId	42	int
+220	sourceSubmissionFileId	43	int
 220	submissionFileId	50	int
-220	fileId	22	int
+220	fileId	23	int
 220	submissionId	9	int
-220	originalFileName	Internet, openness and the future of the.pdf	string
+220	originalFileName	Imagining the Internet: Open, closed or .pdf	string
 220	username	dbarnes	string
 221	fileStage	19	int
 221	submissionFileId	50	int
-221	fileId	22	int
+221	fileId	23	int
 221	submissionId	9	int
 221	username	dbarnes	string
-221	name	Internet, openness and the future of the.pdf	string
+221	name	Imagining the Internet: Open, closed or .pdf	string
 222	fileStage	19	int
-222	sourceSubmissionFileId	43	int
+222	sourceSubmissionFileId	44	int
 222	submissionFileId	51	int
-222	fileId	23	int
+222	fileId	24	int
 222	submissionId	9	int
-222	originalFileName	Imagining the Internet: Open, closed or .pdf	string
+222	originalFileName	The internet in LAC will remain free, pu.pdf	string
 222	username	dbarnes	string
 223	fileStage	19	int
 223	submissionFileId	51	int
-223	fileId	23	int
+223	fileId	24	int
 223	submissionId	9	int
 223	username	dbarnes	string
-223	name	Imagining the Internet: Open, closed or .pdf	string
+223	name	The internet in LAC will remain free, pu.pdf	string
 225	fileStage	2	int
 225	sourceSubmissionFileId	\N	string
 225	submissionFileId	52	int
@@ -7852,44 +7852,44 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 293	submissionId	13	int
 293	decision	1	int
 294	fileStage	19	int
-294	sourceSubmissionFileId	62	int
+294	sourceSubmissionFileId	63	int
 294	submissionFileId	64	int
-294	fileId	33	int
+294	fileId	34	int
 294	submissionId	13	int
-294	originalFileName	A Model for Framing Mobile Learning.pdf	string
+294	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
 294	username	dbarnes	string
 295	fileStage	19	int
 295	submissionFileId	64	int
-295	fileId	33	int
+295	fileId	34	int
 295	submissionId	13	int
 295	username	dbarnes	string
-295	name	A Model for Framing Mobile Learning.pdf	string
+295	name	Mobile Distance Learning with PDAs: Deve.pdf	string
 296	fileStage	19	int
-296	sourceSubmissionFileId	63	int
+296	sourceSubmissionFileId	61	int
 296	submissionFileId	65	int
-296	fileId	34	int
+296	fileId	32	int
 296	submissionId	13	int
-296	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
+296	originalFileName	Current State of Mobile Learning.pdf	string
 296	username	dbarnes	string
 297	fileStage	19	int
 297	submissionFileId	65	int
-297	fileId	34	int
+297	fileId	32	int
 297	submissionId	13	int
 297	username	dbarnes	string
-297	name	Mobile Distance Learning with PDAs: Deve.pdf	string
+297	name	Current State of Mobile Learning.pdf	string
 298	fileStage	19	int
-298	sourceSubmissionFileId	61	int
+298	sourceSubmissionFileId	62	int
 298	submissionFileId	66	int
-298	fileId	32	int
+298	fileId	33	int
 298	submissionId	13	int
-298	originalFileName	Current State of Mobile Learning.pdf	string
+298	originalFileName	A Model for Framing Mobile Learning.pdf	string
 298	username	dbarnes	string
 299	fileStage	19	int
 299	submissionFileId	66	int
-299	fileId	32	int
+299	fileId	33	int
 299	submissionId	13	int
 299	username	dbarnes	string
-299	name	Current State of Mobile Learning.pdf	string
+299	name	A Model for Framing Mobile Learning.pdf	string
 300	reviewAssignmentId	15	string
 300	reviewerName	Paul Hudson	string
 300	submissionId	13	int
@@ -8122,71 +8122,70 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 340	username	dbarnes	string
 340	name	The Canadian Nutrient File: Nutrient Val.pdf	string
 341	fileStage	19	int
-341	sourceSubmissionFileId	70	int
+341	sourceSubmissionFileId	71	int
 341	submissionFileId	74	int
-341	fileId	38	int
+341	fileId	39	int
 341	submissionId	14	int
-341	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+341	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 341	username	dbarnes	string
 342	fileStage	19	int
 342	submissionFileId	74	int
-342	fileId	38	int
+342	fileId	39	int
 342	submissionId	14	int
 342	username	dbarnes	string
-342	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+342	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 343	fileStage	19	int
-343	sourceSubmissionFileId	71	int
+343	sourceSubmissionFileId	70	int
 343	submissionFileId	75	int
-343	fileId	39	int
+343	fileId	38	int
 343	submissionId	14	int
-343	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+343	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 343	username	dbarnes	string
 344	fileStage	19	int
 344	submissionFileId	75	int
-344	fileId	39	int
+344	fileId	38	int
 344	submissionId	14	int
 344	username	dbarnes	string
-368	sourceSubmissionFileId	68	int
-344	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+344	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 345	fileStage	19	int
-345	sourceSubmissionFileId	69	int
+345	sourceSubmissionFileId	68	int
 345	submissionFileId	76	int
-345	fileId	37	int
+345	fileId	36	int
 345	submissionId	14	int
-345	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+345	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 345	username	dbarnes	string
 346	fileStage	19	int
 346	submissionFileId	76	int
-346	fileId	37	int
+346	fileId	36	int
 346	submissionId	14	int
 346	username	dbarnes	string
-346	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+346	name	Chapter 2: Classical Music and the Class.pdf	string
 347	fileStage	19	int
-347	sourceSubmissionFileId	67	int
+347	sourceSubmissionFileId	69	int
 347	submissionFileId	77	int
-347	fileId	35	int
+347	fileId	37	int
 347	submissionId	14	int
-347	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+347	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 347	username	dbarnes	string
 348	fileStage	19	int
 348	submissionFileId	77	int
-348	fileId	35	int
+348	fileId	37	int
 348	submissionId	14	int
 348	username	dbarnes	string
-348	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+348	name	Chapter 3: Situated Cognition and Bricol.pdf	string
 349	fileStage	19	int
-349	sourceSubmissionFileId	68	int
+349	sourceSubmissionFileId	67	int
 349	submissionFileId	78	int
-349	fileId	36	int
+349	fileId	35	int
 349	submissionId	14	int
-349	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+349	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
 349	username	dbarnes	string
 350	fileStage	19	int
 350	submissionFileId	78	int
-350	fileId	36	int
+350	fileId	35	int
 350	submissionId	14	int
 350	username	dbarnes	string
-350	name	Chapter 2: Classical Music and the Class.pdf	string
+350	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
 351	reviewAssignmentId	19	string
 351	reviewerName	Julie Janssen	string
 351	submissionId	14	int
@@ -8233,56 +8232,57 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 361	username	dbarnes	string
 361	name	The Canadian Nutrient File: Nutrient Val.pdf	string
 362	fileStage	10	int
-362	sourceSubmissionFileId	70	int
+362	sourceSubmissionFileId	71	int
 362	submissionFileId	80	int
-362	fileId	38	int
+362	fileId	39	int
 362	submissionId	14	int
-362	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+362	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 362	username	dbarnes	string
 363	fileStage	10	int
 363	submissionFileId	80	int
-363	fileId	38	int
+363	fileId	39	int
 363	submissionId	14	int
 363	username	dbarnes	string
-363	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+363	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 364	fileStage	10	int
-364	sourceSubmissionFileId	71	int
+364	sourceSubmissionFileId	70	int
 364	submissionFileId	81	int
-364	fileId	39	int
+364	fileId	38	int
 364	submissionId	14	int
-364	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+364	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 364	username	dbarnes	string
 365	fileStage	10	int
 365	submissionFileId	81	int
-365	fileId	39	int
+365	fileId	38	int
 365	submissionId	14	int
 365	username	dbarnes	string
-365	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+365	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 366	fileStage	10	int
-366	sourceSubmissionFileId	69	int
+366	sourceSubmissionFileId	68	int
 366	submissionFileId	82	int
-366	fileId	37	int
+366	fileId	36	int
 366	submissionId	14	int
-366	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+366	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 366	username	dbarnes	string
 367	fileStage	10	int
 367	submissionFileId	82	int
-367	fileId	37	int
+367	fileId	36	int
 367	submissionId	14	int
 367	username	dbarnes	string
-367	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+367	name	Chapter 2: Classical Music and the Class.pdf	string
 368	fileStage	10	int
+368	sourceSubmissionFileId	69	int
 368	submissionFileId	83	int
-368	fileId	36	int
+368	fileId	37	int
 368	submissionId	14	int
-368	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+368	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 368	username	dbarnes	string
 369	fileStage	10	int
 369	submissionFileId	83	int
-369	fileId	36	int
+369	fileId	37	int
 369	submissionId	14	int
 369	username	dbarnes	string
-369	name	Chapter 2: Classical Music and the Class.pdf	string
+369	name	Chapter 3: Situated Cognition and Bricol.pdf	string
 370	fileStage	10	int
 370	sourceSubmissionFileId	67	int
 370	submissionFileId	84	int
@@ -8333,14 +8333,14 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 378	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
 379	fileStage	10	int
 379	sourceSubmissionFileId	68	int
-379	submissionFileId	83	int
+379	submissionFileId	82	int
 379	fileId	36	int
 379	submissionId	14	int
 379	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 379	username	dbarnes	string
 380	fileStage	10	int
 380	sourceSubmissionFileId	68	int
-380	submissionFileId	83	int
+380	submissionFileId	82	int
 380	fileId	36	int
 380	submissionId	14	int
 380	username	dbarnes	string
@@ -8351,14 +8351,14 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 381	username	dbarnes	string
 382	fileStage	10	int
 382	sourceSubmissionFileId	68	int
-382	submissionFileId	83	int
+382	submissionFileId	82	int
 382	fileId	36	int
 382	submissionId	14	int
 382	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 382	username	dbarnes	string
 383	fileStage	10	int
 383	sourceSubmissionFileId	68	int
-383	submissionFileId	83	int
+383	submissionFileId	82	int
 383	fileId	36	int
 383	submissionId	14	int
 383	username	dbarnes	string
@@ -8366,14 +8366,14 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 383	name	Chapter 2: Classical Music and the Class.pdf	string
 384	fileStage	10	int
 384	sourceSubmissionFileId	69	int
-384	submissionFileId	82	int
+384	submissionFileId	83	int
 384	fileId	37	int
 384	submissionId	14	int
 384	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 384	username	dbarnes	string
 385	fileStage	10	int
 385	sourceSubmissionFileId	69	int
-385	submissionFileId	82	int
+385	submissionFileId	83	int
 385	fileId	37	int
 385	submissionId	14	int
 385	username	dbarnes	string
@@ -8384,14 +8384,14 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 386	username	dbarnes	string
 387	fileStage	10	int
 387	sourceSubmissionFileId	69	int
-387	submissionFileId	82	int
+387	submissionFileId	83	int
 387	fileId	37	int
 387	submissionId	14	int
 387	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 387	username	dbarnes	string
 388	fileStage	10	int
 388	sourceSubmissionFileId	69	int
-388	submissionFileId	82	int
+388	submissionFileId	83	int
 388	fileId	37	int
 388	submissionId	14	int
 388	username	dbarnes	string
@@ -8399,14 +8399,14 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 388	name	Chapter 3: Situated Cognition and Bricol.pdf	string
 389	fileStage	10	int
 389	sourceSubmissionFileId	70	int
-389	submissionFileId	80	int
+389	submissionFileId	81	int
 389	fileId	38	int
 389	submissionId	14	int
 389	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 389	username	dbarnes	string
 390	fileStage	10	int
 390	sourceSubmissionFileId	70	int
-390	submissionFileId	80	int
+390	submissionFileId	81	int
 390	fileId	38	int
 390	submissionId	14	int
 390	username	dbarnes	string
@@ -8417,14 +8417,14 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 391	username	dbarnes	string
 392	fileStage	10	int
 392	sourceSubmissionFileId	70	int
-392	submissionFileId	80	int
+392	submissionFileId	81	int
 392	fileId	38	int
 392	submissionId	14	int
 392	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 392	username	dbarnes	string
 393	fileStage	10	int
 393	sourceSubmissionFileId	70	int
-393	submissionFileId	80	int
+393	submissionFileId	81	int
 393	fileId	38	int
 393	submissionId	14	int
 393	username	dbarnes	string
@@ -8432,14 +8432,14 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 393	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 394	fileStage	10	int
 394	sourceSubmissionFileId	71	int
-394	submissionFileId	81	int
+394	submissionFileId	80	int
 394	fileId	39	int
 394	submissionId	14	int
 394	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 394	username	dbarnes	string
 395	fileStage	10	int
 395	sourceSubmissionFileId	71	int
-395	submissionFileId	81	int
+395	submissionFileId	80	int
 395	fileId	39	int
 395	submissionId	14	int
 395	username	dbarnes	string
@@ -8450,14 +8450,14 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 396	username	dbarnes	string
 397	fileStage	10	int
 397	sourceSubmissionFileId	71	int
-397	submissionFileId	81	int
+397	submissionFileId	80	int
 397	fileId	39	int
 397	submissionId	14	int
 397	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 397	username	dbarnes	string
 398	fileStage	10	int
 398	sourceSubmissionFileId	71	int
-398	submissionFileId	81	int
+398	submissionFileId	80	int
 398	fileId	39	int
 398	submissionId	14	int
 398	username	dbarnes	string
@@ -8900,54 +8900,54 @@ COPY public.features (submission_id, assoc_type, assoc_id, seq) FROM stdin;
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	presses/1/monographs/1/628d4153948df.pdf	application/pdf
-2	presses/1/monographs/2/628d419ba0301.pdf	application/pdf
-3	presses/1/monographs/2/628d419c1ecbc.pdf	application/pdf
-4	presses/1/monographs/2/628d419c8de87.pdf	application/pdf
-5	presses/1/monographs/2/628d419d0e934.pdf	application/pdf
-6	presses/1/monographs/3/628d424a0ff30.pdf	application/pdf
-7	presses/1/monographs/4/628d427a76c58.pdf	application/pdf
-8	presses/1/monographs/4/628d427adcc8b.pdf	application/pdf
-9	presses/1/monographs/4/628d427b5d881.pdf	application/pdf
-10	presses/1/monographs/4/628d427c13427.pdf	application/pdf
-11	presses/1/monographs/5/628d43667ec7c.pdf	application/pdf
-12	presses/1/monographs/6/628d4417f26f4.pdf	application/pdf
-13	presses/1/monographs/6/628d4418716f1.pdf	application/pdf
-14	presses/1/monographs/6/628d4419114a4.pdf	application/pdf
-15	presses/1/monographs/6/628d44199e626.pdf	application/pdf
-16	presses/1/monographs/7/628d44af2e426.pdf	application/pdf
-17	presses/1/monographs/7/628d44afa3598.pdf	application/pdf
-18	presses/1/monographs/7/628d44b023153.pdf	application/pdf
-19	presses/1/monographs/7/628d44b0c0f03.pdf	application/pdf
-20	presses/1/monographs/7/628d44b159562.pdf	application/pdf
-21	presses/1/monographs/8/628d456e5d545.pdf	application/pdf
-22	presses/1/monographs/9/628d457d5d297.pdf	application/pdf
-23	presses/1/monographs/9/628d457dcc1c6.pdf	application/pdf
-24	presses/1/monographs/9/628d457e4383a.pdf	application/pdf
-25	presses/1/monographs/9/628d457eb8647.pdf	application/pdf
-26	presses/1/monographs/9/628d457f5f278.pdf	application/pdf
-27	presses/1/monographs/10/628d4606b4b00.pdf	application/pdf
-28	presses/1/monographs/11/628d464e22285.pdf	application/pdf
-29	presses/1/monographs/12/628d46d17d577.pdf	application/pdf
-30	presses/1/monographs/12/628d46d1ea784.pdf	application/pdf
-31	presses/1/monographs/12/628d46d26cd33.pdf	application/pdf
-32	presses/1/monographs/13/628d4785ace2f.pdf	application/pdf
-33	presses/1/monographs/13/628d47862326d.pdf	application/pdf
-34	presses/1/monographs/13/628d478693a07.pdf	application/pdf
-35	presses/1/monographs/14/628d48626a3c3.pdf	application/pdf
-36	presses/1/monographs/14/628d4862e2cfe.pdf	application/pdf
-37	presses/1/monographs/14/628d4863662a8.pdf	application/pdf
-38	presses/1/monographs/14/628d48640d996.pdf	application/pdf
-39	presses/1/monographs/14/628d48649f16d.pdf	application/pdf
-40	presses/1/monographs/14/628d486586028.pdf	application/pdf
-41	presses/1/monographs/15/628d4981acc33.pdf	application/pdf
-42	presses/1/monographs/16/628d49b895e21.pdf	application/pdf
-43	presses/1/monographs/17/628d4a220c287.pdf	application/pdf
-44	presses/1/monographs/17/628d4a227b7b0.pdf	application/pdf
-45	presses/1/monographs/17/628d4a22ed421.pdf	application/pdf
-46	presses/1/monographs/17/628d4a2372ae3.pdf	application/pdf
-47	presses/1/monographs/17/628d4a2408eec.pdf	application/pdf
-48	presses/1/monographs/17/628d4a24a5b96.pdf	application/pdf
+1	presses/1/monographs/1/628e78e063d9f.pdf	application/pdf
+2	presses/1/monographs/2/628e7929396a3.pdf	application/pdf
+3	presses/1/monographs/2/628e7929a6f0d.pdf	application/pdf
+4	presses/1/monographs/2/628e792a226bb.pdf	application/pdf
+5	presses/1/monographs/2/628e792a9464f.pdf	application/pdf
+6	presses/1/monographs/3/628e79d82bbbf.pdf	application/pdf
+7	presses/1/monographs/4/628e7a08ea23b.pdf	application/pdf
+8	presses/1/monographs/4/628e7a0962f19.pdf	application/pdf
+9	presses/1/monographs/4/628e7a09d35d6.pdf	application/pdf
+10	presses/1/monographs/4/628e7a0a8f552.pdf	application/pdf
+11	presses/1/monographs/5/628e7af1b51b9.pdf	application/pdf
+12	presses/1/monographs/6/628e7ba4985b1.pdf	application/pdf
+13	presses/1/monographs/6/628e7ba517c90.pdf	application/pdf
+14	presses/1/monographs/6/628e7ba596420.pdf	application/pdf
+15	presses/1/monographs/6/628e7ba63f530.pdf	application/pdf
+16	presses/1/monographs/7/628e7c3a11bdb.pdf	application/pdf
+17	presses/1/monographs/7/628e7c3a7a5bf.pdf	application/pdf
+18	presses/1/monographs/7/628e7c3aedac2.pdf	application/pdf
+19	presses/1/monographs/7/628e7c3b9f1cd.pdf	application/pdf
+20	presses/1/monographs/7/628e7c3c4bef3.pdf	application/pdf
+21	presses/1/monographs/8/628e7cfadb55f.pdf	application/pdf
+22	presses/1/monographs/9/628e7d0a00d06.pdf	application/pdf
+23	presses/1/monographs/9/628e7d0a78047.pdf	application/pdf
+24	presses/1/monographs/9/628e7d0ae7d7f.pdf	application/pdf
+25	presses/1/monographs/9/628e7d0b7759c.pdf	application/pdf
+26	presses/1/monographs/9/628e7d0c249ee.pdf	application/pdf
+27	presses/1/monographs/10/628e7d9a0345a.pdf	application/pdf
+28	presses/1/monographs/11/628e7de3f205b.pdf	application/pdf
+29	presses/1/monographs/12/628e7e6756b53.pdf	application/pdf
+30	presses/1/monographs/12/628e7e67ca2b0.pdf	application/pdf
+31	presses/1/monographs/12/628e7e684e049.pdf	application/pdf
+32	presses/1/monographs/13/628e7f1f7a409.pdf	application/pdf
+33	presses/1/monographs/13/628e7f1fee978.pdf	application/pdf
+34	presses/1/monographs/13/628e7f206eecb.pdf	application/pdf
+35	presses/1/monographs/14/628e7ff8c46e3.pdf	application/pdf
+36	presses/1/monographs/14/628e7ff9467dc.pdf	application/pdf
+37	presses/1/monographs/14/628e7ff9e4637.pdf	application/pdf
+38	presses/1/monographs/14/628e7ffa7f124.pdf	application/pdf
+39	presses/1/monographs/14/628e7ffb10c5b.pdf	application/pdf
+40	presses/1/monographs/14/628e7ffc078a6.pdf	application/pdf
+41	presses/1/monographs/15/628e811dbc02e.pdf	application/pdf
+42	presses/1/monographs/16/628e815266ca1.pdf	application/pdf
+43	presses/1/monographs/17/628e81b9f269c.pdf	application/pdf
+44	presses/1/monographs/17/628e81ba6da2b.pdf	application/pdf
+45	presses/1/monographs/17/628e81badd51f.pdf	application/pdf
+46	presses/1/monographs/17/628e81bb68134.pdf	application/pdf
+47	presses/1/monographs/17/628e81bc2ddf0.pdf	application/pdf
+48	presses/1/monographs/17/628e81bcb35e4.pdf	application/pdf
 \.
 
 
@@ -9356,7 +9356,7 @@ COPY public.new_releases (submission_id, assoc_type, assoc_id) FROM stdin;
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2022-05-24 20:48:15	2022-05-24 20:48:15	Editor Recommendation	<p>Dear Daniel Barnes,</p><p>After considering the reviewers' feedback, I would like to make the following recommendation regarding the submission The Information Literacy User’s Guide.</p><p>My recommendation is:<br />Accept Submission.</p><p>Please visit the submission's <a href="http://localhost/index.php/publicknowledge/workflow/index/6/2">editorial workflow</a> to act on this recommendation.</p><p>Please feel free to contact me with any questions.</p><p>Kind regards,</p><p>Minoti Inoue</p>
+1	1048586	1	6	2022-05-25 18:57:30	2022-05-25 18:57:30	Editor Recommendation	<p>Dear Daniel Barnes,</p><p>After considering the reviewers' feedback, I would like to make the following recommendation regarding the submission The Information Literacy User’s Guide.</p><p>My recommendation is:<br />Accept Submission.</p><p>Please visit the submission's <a href="http://localhost/index.php/publicknowledge/workflow/index/6/2">editorial workflow</a> to act on this recommendation.</p><p>Please feel free to contact me with any questions.</p><p>Kind regards,</p><p>Minoti Inoue</p>
 \.
 
 
@@ -9426,118 +9426,118 @@ SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_s
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-100	1	0	2	16777236	2022-05-24 20:44:12	2022-05-24 20:44:18	523	5
-102	1	8	3	16777227	2022-05-24 20:44:24	\N	517	6
-37	1	3	2	16777217	2022-05-24 20:37:32	\N	1048585	2
-39	1	0	2	16777243	2022-05-24 20:37:32	\N	1048585	2
-40	1	0	2	16777245	2022-05-24 20:37:32	\N	1048585	2
-200	1	3	2	16777217	2022-05-24 20:55:29	\N	1048585	10
-75	1	0	2	16777236	2022-05-24 20:41:05	2022-05-24 20:41:12	523	3
-43	1	0	2	16777236	2022-05-24 20:37:52	2022-05-24 20:38:00	523	2
-44	1	11	3	16777227	2022-05-24 20:38:09	\N	517	2
-104	1	0	2	16777236	2022-05-24 20:44:31	2022-05-24 20:44:36	523	6
-77	1	9	3	16777227	2022-05-24 20:41:20	\N	517	4
-46	1	12	3	16777227	2022-05-24 20:38:20	\N	517	3
-106	1	12	3	16777227	2022-05-24 20:44:44	\N	517	7
-11	1	3	2	16777217	2022-05-24 20:34:45	\N	1048585	1
-13	1	0	2	16777243	2022-05-24 20:34:46	\N	1048585	1
-14	1	0	2	16777245	2022-05-24 20:34:46	\N	1048585	1
-16	1	0	2	16777236	2022-05-24 20:34:59	2022-05-24 20:35:04	523	1
-17	1	12	3	16777227	2022-05-24 20:35:10	\N	517	1
-127	1	3	2	16777217	2022-05-24 20:47:22	\N	1048585	6
-19	1	19	2	16777230	2022-05-24 20:35:16	\N	1048585	1
-20	1	3	2	16777251	2022-05-24 20:35:16	2022-05-24 20:35:21	1048585	1
-79	1	0	2	16777236	2022-05-24 20:41:27	2022-05-24 20:41:34	523	4
-111	1	23	2	16777235	2022-05-24 20:45:12	\N	1048585	5
-81	1	11	3	16777227	2022-05-24 20:41:42	\N	517	5
-53	1	3	2	16777217	2022-05-24 20:39:10	\N	1048585	3
-112	1	3	2	16777254	2022-05-24 20:45:12	\N	1048585	5
-55	1	0	2	16777243	2022-05-24 20:39:10	\N	1048585	3
-56	1	0	2	16777245	2022-05-24 20:39:10	\N	1048585	3
-129	1	0	2	16777243	2022-05-24 20:47:22	\N	1048585	6
-130	1	0	2	16777245	2022-05-24 20:47:22	\N	1048585	6
-202	1	0	2	16777243	2022-05-24 20:55:29	\N	1048585	10
-183	1	3	2	16777217	2022-05-24 20:53:52	\N	1048585	9
-115	1	0	2	16777246	2022-05-24 20:46:01	\N	1048585	5
-185	1	0	2	16777243	2022-05-24 20:53:52	\N	1048585	9
-186	1	0	2	16777245	2022-05-24 20:53:52	\N	1048585	9
-203	1	0	2	16777245	2022-05-24 20:55:29	\N	1048585	10
-86	1	22	2	16777235	2022-05-24 20:42:16	\N	1048585	4
-189	1	0	2	16777236	2022-05-24 20:54:12	\N	523	9
-87	1	3	2	16777254	2022-05-24 20:42:16	\N	1048585	4
-72	1	0	2	16777245	2022-05-24 20:40:47	2022-05-24 20:42:24	1048585	4
-190	1	26	2	16777229	2022-05-24 20:54:13	\N	1048585	9
-134	1	24	2	16777229	2022-05-24 20:47:40	\N	1048585	6
-133	1	0	2	16777236	2022-05-24 20:47:40	2022-05-24 20:47:48	523	7
-69	1	3	2	16777217	2022-05-24 20:40:47	\N	1048585	4
-71	1	0	2	16777243	2022-05-24 20:40:47	\N	1048585	4
-369	1	3	2	16777217	2022-05-24 21:14:36	\N	1048585	17
-136	1	3	3	16777249	2022-05-24 20:48:15	\N	1048586	1
-212	1	0	2	16777236	2022-05-24 20:56:09	2022-05-24 20:56:13	523	10
-214	1	9	3	16777227	2022-05-24 20:56:19	\N	517	9
-152	1	3	2	16777217	2022-05-24 20:50:42	\N	1048585	7
-207	1	3	2	16777217	2022-05-24 20:55:54	\N	1048585	11
-209	1	0	2	16777243	2022-05-24 20:55:54	\N	1048585	11
-154	1	0	2	16777243	2022-05-24 20:50:42	\N	1048585	7
-95	1	3	2	16777217	2022-05-24 20:43:57	\N	1048585	5
-210	1	0	2	16777245	2022-05-24 20:55:54	\N	1048585	11
-155	1	0	2	16777245	2022-05-24 20:50:42	\N	1048585	7
-226	1	28	2	16777230	2022-05-24 20:57:35	\N	1048585	11
-216	1	0	2	16777236	2022-05-24 20:56:25	2022-05-24 20:56:29	523	11
-224	1	3	2	16777219	2022-05-24 20:57:13	\N	517	11
-222	1	3	2	16777219	2022-05-24 20:56:59	\N	517	10
-158	1	0	2	16777236	2022-05-24 20:51:03	2022-05-24 20:51:10	523	8
-159	1	10	3	16777227	2022-05-24 20:51:19	\N	517	8
-161	1	25	2	16777230	2022-05-24 20:51:29	\N	1048585	7
-162	1	3	2	16777251	2022-05-24 20:51:29	2022-05-24 20:51:35	1048585	7
-227	1	3	2	16777251	2022-05-24 20:57:35	2022-05-24 20:57:41	1048585	11
-164	1	3	2	16777217	2022-05-24 20:52:01	\N	1048585	8
-166	1	0	2	16777243	2022-05-24 20:52:01	\N	1048585	8
-167	1	0	2	16777245	2022-05-24 20:52:01	\N	1048585	8
-241	1	3	2	16777217	2022-05-24 20:59:24	\N	1048585	12
-243	1	0	2	16777243	2022-05-24 20:59:24	\N	1048585	12
-244	1	0	2	16777245	2022-05-24 20:59:24	\N	1048585	12
-248	1	29	2	16777229	2022-05-24 20:59:44	\N	1048585	12
-247	1	0	2	16777236	2022-05-24 20:59:43	2022-05-24 20:59:51	523	12
-249	1	7	3	16777227	2022-05-24 20:59:58	\N	517	12
-253	1	9	3	16777227	2022-05-24 21:00:20	\N	517	14
-255	1	3	2	16777219	2022-05-24 21:00:37	\N	517	13
-266	1	3	2	16777217	2022-05-24 21:01:54	\N	1048585	13
-268	1	0	2	16777243	2022-05-24 21:01:55	\N	1048585	13
-269	1	0	2	16777245	2022-05-24 21:01:55	\N	1048585	13
-272	1	0	2	16777236	2022-05-24 21:02:13	2022-05-24 21:02:20	523	13
-274	1	8	3	16777227	2022-05-24 21:02:27	\N	517	15
-318	1	3	2	16777254	2022-05-24 21:07:16	\N	1048585	14
-276	1	0	2	16777236	2022-05-24 21:02:35	2022-05-24 21:02:41	523	14
-280	1	11	3	16777227	2022-05-24 21:02:59	\N	517	17
-284	1	3	2	16777219	2022-05-24 21:03:27	\N	517	16
-286	1	3	2	16777219	2022-05-24 21:03:45	\N	517	18
-288	1	30	2	16777230	2022-05-24 21:04:13	\N	1048585	13
-289	1	3	2	16777251	2022-05-24 21:04:13	2022-05-24 21:04:21	1048585	13
-321	1	0	2	16777246	2022-05-24 21:09:08	\N	1048585	14
-371	1	0	2	16777243	2022-05-24 21:14:36	\N	1048585	17
-372	1	0	2	16777245	2022-05-24 21:14:36	\N	1048585	17
-376	1	34	2	16777229	2022-05-24 21:15:01	\N	1048585	17
-325	1	3	2	16777217	2022-05-24 21:09:42	\N	1048585	15
-375	1	0	2	16777236	2022-05-24 21:15:01	2022-05-24 21:15:10	523	19
-377	1	7	3	16777227	2022-05-24 21:15:19	\N	517	24
-327	1	0	2	16777243	2022-05-24 21:09:42	\N	1048585	15
-300	1	3	2	16777217	2022-05-24 21:05:43	\N	1048585	14
-379	1	8	3	16777227	2022-05-24 21:15:31	\N	517	25
-328	1	0	2	16777245	2022-05-24 21:09:42	\N	1048585	15
-306	1	0	2	16777236	2022-05-24 21:06:03	2022-05-24 21:06:10	523	15
-308	1	7	3	16777227	2022-05-24 21:06:18	\N	517	19
-310	1	0	2	16777236	2022-05-24 21:06:26	2022-05-24 21:06:33	523	16
-312	1	11	3	16777227	2022-05-24 21:06:41	\N	517	20
-330	1	0	2	16777236	2022-05-24 21:09:58	\N	523	17
-317	1	31	2	16777235	2022-05-24 21:07:16	\N	1048585	14
-336	1	3	2	16777217	2022-05-24 21:10:44	\N	1048585	16
-338	1	0	2	16777243	2022-05-24 21:10:44	\N	1048585	16
-339	1	0	2	16777245	2022-05-24 21:10:44	\N	1048585	16
-341	1	0	2	16777236	2022-05-24 21:11:00	2022-05-24 21:11:06	523	18
-344	1	11	3	16777227	2022-05-24 21:11:21	\N	517	22
-346	1	12	3	16777227	2022-05-24 21:11:30	\N	517	23
-348	1	3	2	16777219	2022-05-24 21:11:44	\N	517	21
+100	1	0	2	16777236	2022-05-25 18:53:28	2022-05-25 18:53:33	523	5
+102	1	8	3	16777227	2022-05-25 18:53:39	\N	517	6
+37	1	3	2	16777217	2022-05-25 18:46:50	\N	1048585	2
+39	1	0	2	16777243	2022-05-25 18:46:50	\N	1048585	2
+40	1	0	2	16777245	2022-05-25 18:46:50	\N	1048585	2
+104	1	0	2	16777236	2022-05-25 18:53:45	2022-05-25 18:53:51	523	6
+106	1	12	3	16777227	2022-05-25 18:53:58	\N	517	7
+75	1	0	2	16777236	2022-05-25 18:50:23	2022-05-25 18:50:29	523	3
+43	1	0	2	16777236	2022-05-25 18:47:10	2022-05-25 18:47:18	523	2
+44	1	11	3	16777227	2022-05-25 18:47:26	\N	517	2
+200	1	3	2	16777217	2022-05-25 19:04:54	\N	1048585	10
+77	1	9	3	16777227	2022-05-25 18:50:37	\N	517	4
+46	1	12	3	16777227	2022-05-25 18:47:38	\N	517	3
+11	1	3	2	16777217	2022-05-25 18:44:02	\N	1048585	1
+13	1	0	2	16777243	2022-05-25 18:44:02	\N	1048585	1
+14	1	0	2	16777245	2022-05-25 18:44:02	\N	1048585	1
+127	1	3	2	16777217	2022-05-25 18:56:38	\N	1048585	6
+16	1	0	2	16777236	2022-05-25 18:44:16	2022-05-25 18:44:21	523	1
+17	1	12	3	16777227	2022-05-25 18:44:28	\N	517	1
+19	1	19	2	16777230	2022-05-25 18:44:34	\N	1048585	1
+20	1	3	2	16777251	2022-05-25 18:44:34	2022-05-25 18:44:38	1048585	1
+111	1	23	2	16777235	2022-05-25 18:54:27	\N	1048585	5
+112	1	3	2	16777254	2022-05-25 18:54:27	\N	1048585	5
+79	1	0	2	16777236	2022-05-25 18:50:44	2022-05-25 18:50:51	523	4
+129	1	0	2	16777243	2022-05-25 18:56:38	\N	1048585	6
+81	1	11	3	16777227	2022-05-25 18:50:59	\N	517	5
+53	1	3	2	16777217	2022-05-25 18:48:28	\N	1048585	3
+55	1	0	2	16777243	2022-05-25 18:48:28	\N	1048585	3
+56	1	0	2	16777245	2022-05-25 18:48:28	\N	1048585	3
+130	1	0	2	16777245	2022-05-25 18:56:38	\N	1048585	6
+202	1	0	2	16777243	2022-05-25 19:04:55	\N	1048585	10
+115	1	0	2	16777246	2022-05-25 18:55:18	\N	1048585	5
+183	1	3	2	16777217	2022-05-25 19:03:13	\N	1048585	9
+185	1	0	2	16777243	2022-05-25 19:03:13	\N	1048585	9
+186	1	0	2	16777245	2022-05-25 19:03:13	\N	1048585	9
+203	1	0	2	16777245	2022-05-25 19:04:55	\N	1048585	10
+86	1	22	2	16777235	2022-05-25 18:51:32	\N	1048585	4
+189	1	0	2	16777236	2022-05-25 19:03:35	\N	523	9
+87	1	3	2	16777254	2022-05-25 18:51:32	\N	1048585	4
+134	1	24	2	16777229	2022-05-25 18:56:57	\N	1048585	6
+72	1	0	2	16777245	2022-05-25 18:50:04	2022-05-25 18:51:41	1048585	4
+190	1	26	2	16777229	2022-05-25 19:03:35	\N	1048585	9
+133	1	0	2	16777236	2022-05-25 18:56:57	2022-05-25 18:57:05	523	7
+69	1	3	2	16777217	2022-05-25 18:50:04	\N	1048585	4
+71	1	0	2	16777243	2022-05-25 18:50:04	\N	1048585	4
+369	1	3	2	16777217	2022-05-25 19:24:06	\N	1048585	17
+136	1	3	3	16777249	2022-05-25 18:57:30	\N	1048586	1
+212	1	0	2	16777236	2022-05-25 19:05:33	2022-05-25 19:05:37	523	10
+152	1	3	2	16777217	2022-05-25 18:59:59	\N	1048585	7
+214	1	9	3	16777227	2022-05-25 19:05:44	\N	517	9
+207	1	3	2	16777217	2022-05-25 19:05:19	\N	1048585	11
+154	1	0	2	16777243	2022-05-25 18:59:59	\N	1048585	7
+209	1	0	2	16777243	2022-05-25 19:05:19	\N	1048585	11
+155	1	0	2	16777245	2022-05-25 18:59:59	\N	1048585	7
+95	1	3	2	16777217	2022-05-25 18:53:12	\N	1048585	5
+210	1	0	2	16777245	2022-05-25 19:05:19	\N	1048585	11
+226	1	28	2	16777230	2022-05-25 19:07:01	\N	1048585	11
+216	1	0	2	16777236	2022-05-25 19:05:49	2022-05-25 19:05:54	523	11
+224	1	3	2	16777219	2022-05-25 19:06:38	\N	517	11
+222	1	3	2	16777219	2022-05-25 19:06:24	\N	517	10
+158	1	0	2	16777236	2022-05-25 19:00:19	2022-05-25 19:00:27	523	8
+159	1	10	3	16777227	2022-05-25 19:00:36	\N	517	8
+161	1	25	2	16777230	2022-05-25 19:00:45	\N	1048585	7
+162	1	3	2	16777251	2022-05-25 19:00:45	2022-05-25 19:00:52	1048585	7
+227	1	3	2	16777251	2022-05-25 19:07:01	2022-05-25 19:07:06	1048585	11
+164	1	3	2	16777217	2022-05-25 19:01:17	\N	1048585	8
+166	1	0	2	16777243	2022-05-25 19:01:17	\N	1048585	8
+167	1	0	2	16777245	2022-05-25 19:01:17	\N	1048585	8
+241	1	3	2	16777217	2022-05-25 19:08:52	\N	1048585	12
+243	1	0	2	16777243	2022-05-25 19:08:52	\N	1048585	12
+244	1	0	2	16777245	2022-05-25 19:08:52	\N	1048585	12
+248	1	29	2	16777229	2022-05-25 19:09:14	\N	1048585	12
+247	1	0	2	16777236	2022-05-25 19:09:14	2022-05-25 19:09:21	523	12
+249	1	7	3	16777227	2022-05-25 19:09:29	\N	517	12
+253	1	9	3	16777227	2022-05-25 19:09:50	\N	517	14
+255	1	3	2	16777219	2022-05-25 19:10:08	\N	517	13
+266	1	3	2	16777217	2022-05-25 19:11:22	\N	1048585	13
+268	1	0	2	16777243	2022-05-25 19:11:22	\N	1048585	13
+269	1	0	2	16777245	2022-05-25 19:11:22	\N	1048585	13
+272	1	0	2	16777236	2022-05-25 19:11:40	2022-05-25 19:11:46	523	13
+274	1	8	3	16777227	2022-05-25 19:11:54	\N	517	15
+318	1	3	2	16777254	2022-05-25 19:16:42	\N	1048585	14
+276	1	0	2	16777236	2022-05-25 19:12:01	2022-05-25 19:12:08	523	14
+280	1	11	3	16777227	2022-05-25 19:12:27	\N	517	17
+284	1	3	2	16777219	2022-05-25 19:12:54	\N	517	16
+286	1	3	2	16777219	2022-05-25 19:13:10	\N	517	18
+288	1	30	2	16777230	2022-05-25 19:13:39	\N	1048585	13
+289	1	3	2	16777251	2022-05-25 19:13:39	2022-05-25 19:13:47	1048585	13
+321	1	0	2	16777246	2022-05-25 19:18:38	\N	1048585	14
+371	1	0	2	16777243	2022-05-25 19:24:07	\N	1048585	17
+372	1	0	2	16777245	2022-05-25 19:24:07	\N	1048585	17
+376	1	34	2	16777229	2022-05-25 19:24:33	\N	1048585	17
+325	1	3	2	16777217	2022-05-25 19:19:14	\N	1048585	15
+375	1	0	2	16777236	2022-05-25 19:24:33	2022-05-25 19:24:41	523	19
+377	1	7	3	16777227	2022-05-25 19:24:51	\N	517	24
+327	1	0	2	16777243	2022-05-25 19:19:14	\N	1048585	15
+300	1	3	2	16777217	2022-05-25 19:15:11	\N	1048585	14
+379	1	8	3	16777227	2022-05-25 19:25:04	\N	517	25
+328	1	0	2	16777245	2022-05-25 19:19:14	\N	1048585	15
+306	1	0	2	16777236	2022-05-25 19:15:31	2022-05-25 19:15:38	523	15
+308	1	7	3	16777227	2022-05-25 19:15:45	\N	517	19
+310	1	0	2	16777236	2022-05-25 19:15:53	2022-05-25 19:16:00	523	16
+312	1	11	3	16777227	2022-05-25 19:16:08	\N	517	20
+330	1	0	2	16777236	2022-05-25 19:19:30	\N	523	17
+317	1	31	2	16777235	2022-05-25 19:16:42	\N	1048585	14
+336	1	3	2	16777217	2022-05-25 19:20:14	\N	1048585	16
+338	1	0	2	16777243	2022-05-25 19:20:14	\N	1048585	16
+339	1	0	2	16777245	2022-05-25 19:20:14	\N	1048585	16
+341	1	0	2	16777236	2022-05-25 19:20:31	2022-05-25 19:20:36	523	18
+344	1	11	3	16777227	2022-05-25 19:20:51	\N	517	22
+346	1	12	3	16777227	2022-05-25 19:21:00	\N	517	23
+348	1	3	2	16777219	2022-05-25 19:21:16	\N	517	21
 \.
 
 
@@ -9602,7 +9602,7 @@ webfeedplugin	1	enabled	1	bool
 webfeedplugin	1	displayPage	homepage	string
 webfeedplugin	1	displayItems	1	bool
 googlescholarplugin	1	enabled	1	bool
-usageeventplugin	0	uniqueSiteId	628d3f6d5326c	string
+usageeventplugin	0	uniqueSiteId	628e76fb20daf	string
 defaultthemeplugin	1	useHomepageImageAsHeader	false	string
 defaultthemeplugin	1	showCatalogSeriesListing	false	string
 \.
@@ -9903,23 +9903,23 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, date_published, last_modified, primary_contact_id, publication_date_type, publication_type, seq, series_id, series_position, submission_id, status, url_path, version, doi_id) FROM stdin;
-1	\N	2022-05-24 20:34:44	1	pub	publication	0	\N	\N	1	1	\N	1	\N
-2	\N	2022-05-24 20:37:29	2	pub	publication	0	\N	\N	2	1	\N	1	\N
-3	\N	2022-05-24 20:39:08	10	pub	publication	0	\N	\N	3	1	\N	1	\N
-4	\N	2022-05-24 20:40:45	11	pub	publication	0	\N	\N	4	1	\N	1	\N
-5	2022-05-24	2022-05-24 20:46:01	15	pub	publication	0	\N	\N	5	3	\N	1	\N
-6	\N	2022-05-24 20:47:20	16	pub	publication	0	\N	\N	6	1	\N	1	\N
-7	\N	2022-05-24 20:50:40	20	pub	publication	0	\N	\N	7	1	\N	1	\N
-8	\N	2022-05-24 20:52:00	25	pub	publication	0	\N	\N	8	1	\N	1	\N
-9	\N	2022-05-24 20:53:50	26	pub	publication	0	\N	\N	9	1	\N	1	\N
-10	\N	2022-05-24 20:55:28	31	pub	publication	0	\N	\N	10	1	\N	1	\N
-11	\N	2022-05-24 20:55:53	32	pub	publication	0	\N	\N	11	1	\N	1	\N
-12	\N	2022-05-24 20:59:22	33	pub	publication	0	\N	\N	12	1	\N	1	\N
-13	\N	2022-05-24 21:01:52	41	pub	publication	0	\N	\N	13	1	\N	1	\N
-14	2022-05-24	2022-05-24 21:09:08	45	pub	publication	0	\N	\N	14	3	\N	1	\N
-15	\N	2022-05-24 21:09:41	48	pub	publication	0	\N	\N	15	1	\N	1	\N
-16	\N	2022-05-24 21:10:43	49	pub	publication	0	\N	\N	16	1	\N	1	\N
-17	\N	2022-05-24 21:14:33	50	pub	publication	0	\N	\N	17	1	\N	1	\N
+1	\N	2022-05-25 18:44:01	1	pub	publication	0	\N	\N	1	1	\N	1	\N
+2	\N	2022-05-25 18:46:48	2	pub	publication	0	\N	\N	2	1	\N	1	\N
+3	\N	2022-05-25 18:48:26	10	pub	publication	0	\N	\N	3	1	\N	1	\N
+4	\N	2022-05-25 18:50:02	11	pub	publication	0	\N	\N	4	1	\N	1	\N
+5	2022-05-25	2022-05-25 18:55:18	15	pub	publication	0	\N	\N	5	3	\N	1	\N
+6	\N	2022-05-25 18:56:36	16	pub	publication	0	\N	\N	6	1	\N	1	\N
+7	\N	2022-05-25 18:59:56	20	pub	publication	0	\N	\N	7	1	\N	1	\N
+8	\N	2022-05-25 19:01:16	25	pub	publication	0	\N	\N	8	1	\N	1	\N
+9	\N	2022-05-25 19:03:11	26	pub	publication	0	\N	\N	9	1	\N	1	\N
+10	\N	2022-05-25 19:04:53	31	pub	publication	0	\N	\N	10	1	\N	1	\N
+11	\N	2022-05-25 19:05:18	32	pub	publication	0	\N	\N	11	1	\N	1	\N
+12	\N	2022-05-25 19:08:50	33	pub	publication	0	\N	\N	12	1	\N	1	\N
+13	\N	2022-05-25 19:11:20	41	pub	publication	0	\N	\N	13	1	\N	1	\N
+14	2022-05-25	2022-05-25 19:18:38	45	pub	publication	0	\N	\N	14	3	\N	1	\N
+15	\N	2022-05-25 19:19:13	48	pub	publication	0	\N	\N	15	1	\N	1	\N
+16	\N	2022-05-25 19:20:13	49	pub	publication	0	\N	\N	16	1	\N	1	\N
+17	\N	2022-05-25 19:24:03	50	pub	publication	0	\N	\N	17	1	\N	1	\N
 \.
 
 
@@ -9990,31 +9990,31 @@ SELECT pg_catalog.setval('public.representatives_representative_id_seq', 1, fals
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, unconsidered) FROM stdin;
-13	12	8	\N	0	2022-05-24 21:00:10	2022-05-24 21:00:10	2022-05-24 21:00:33	2022-05-24 21:00:37	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:00:37	0	0	0	\N	\N	\N	0	12	2	2	1	4	\N	0
-1	1	12	\N	\N	2022-05-24 20:35:10	2022-05-24 20:35:10	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:35:10	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-2	2	11	\N	\N	2022-05-24 20:38:09	2022-05-24 20:38:09	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:38:09	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
-3	2	12	\N	\N	2022-05-24 20:38:20	2022-05-24 20:38:20	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:38:20	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
-15	13	8	\N	\N	2022-05-24 21:02:27	2022-05-24 21:02:27	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:02:27	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	0
-4	4	9	\N	\N	2022-05-24 20:41:20	2022-05-24 20:41:20	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:41:20	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	0
-5	4	11	\N	\N	2022-05-24 20:41:42	2022-05-24 20:41:42	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:41:42	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-6	5	8	\N	\N	2022-05-24 20:44:24	2022-05-24 20:44:24	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:44:24	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	0
-21	16	10	\N	0	2022-05-24 21:11:12	2022-05-24 21:11:12	2022-05-24 21:11:40	2022-05-24 21:11:44	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:11:44	0	0	0	\N	\N	\N	0	18	3	2	1	4	\N	0
-7	5	12	\N	\N	2022-05-24 20:44:44	2022-05-24 20:44:44	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:44:44	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-8	7	10	\N	\N	2022-05-24 20:51:19	2022-05-24 20:51:19	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:51:19	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	0
-9	11	9	\N	\N	2022-05-24 20:56:19	2022-05-24 20:56:19	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:56:19	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	0
-17	13	11	\N	\N	2022-05-24 21:02:59	2022-05-24 21:02:59	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:02:59	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	0
-24	17	7	\N	\N	2022-05-24 21:15:19	2022-05-24 21:15:19	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:15:19	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
-25	17	8	\N	\N	2022-05-24 21:15:31	2022-05-24 21:15:31	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:15:31	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
-10	11	10	\N	0	2022-05-24 20:56:36	2022-05-24 20:56:36	2022-05-24 20:56:54	2022-05-24 20:56:59	2022-05-24 20:57:35	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:57:35	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
-11	11	12	\N	0	2022-05-24 20:56:45	2022-05-24 20:56:45	2022-05-24 20:57:08	2022-05-24 20:57:13	2022-05-24 20:57:35	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:57:35	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
-16	13	10	\N	0	2022-05-24 21:02:50	2022-05-24 21:02:50	2022-05-24 21:03:22	2022-05-24 21:03:27	2022-05-24 21:04:13	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:04:13	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
-12	12	7	\N	\N	2022-05-24 20:59:58	2022-05-24 20:59:59	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 20:59:59	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
-18	13	12	\N	0	2022-05-24 21:03:10	2022-05-24 21:03:10	2022-05-24 21:03:39	2022-05-24 21:03:45	2022-05-24 21:04:13	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:04:13	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
-14	12	9	\N	\N	2022-05-24 21:00:20	2022-05-24 21:00:20	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:00:20	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
-19	14	7	\N	\N	2022-05-24 21:06:18	2022-05-24 21:06:18	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:06:18	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	0
-20	14	11	\N	\N	2022-05-24 21:06:41	2022-05-24 21:06:41	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:06:41	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	0
-22	16	11	\N	\N	2022-05-24 21:11:21	2022-05-24 21:11:21	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:11:21	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
-23	16	12	\N	\N	2022-05-24 21:11:30	2022-05-24 21:11:30	\N	\N	\N	2022-06-21 00:00:00	2022-06-21 00:00:00	2022-05-24 21:11:30	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
+13	12	8	\N	0	2022-05-25 19:09:39	2022-05-25 19:09:39	2022-05-25 19:10:03	2022-05-25 19:10:08	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:10:08	0	0	0	\N	\N	\N	0	12	2	2	1	4	\N	0
+1	1	12	\N	\N	2022-05-25 18:44:28	2022-05-25 18:44:28	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 18:44:28	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+2	2	11	\N	\N	2022-05-25 18:47:26	2022-05-25 18:47:26	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 18:47:26	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
+3	2	12	\N	\N	2022-05-25 18:47:38	2022-05-25 18:47:38	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 18:47:38	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
+15	13	8	\N	\N	2022-05-25 19:11:54	2022-05-25 19:11:54	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:11:54	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	0
+4	4	9	\N	\N	2022-05-25 18:50:37	2022-05-25 18:50:37	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 18:50:37	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	0
+5	4	11	\N	\N	2022-05-25 18:50:59	2022-05-25 18:50:59	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 18:50:59	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+6	5	8	\N	\N	2022-05-25 18:53:39	2022-05-25 18:53:39	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 18:53:39	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	0
+21	16	10	\N	0	2022-05-25 19:20:43	2022-05-25 19:20:43	2022-05-25 19:21:11	2022-05-25 19:21:16	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:21:16	0	0	0	\N	\N	\N	0	18	3	2	1	4	\N	0
+7	5	12	\N	\N	2022-05-25 18:53:58	2022-05-25 18:53:58	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 18:53:58	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+8	7	10	\N	\N	2022-05-25 19:00:36	2022-05-25 19:00:36	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:00:36	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	0
+9	11	9	\N	\N	2022-05-25 19:05:44	2022-05-25 19:05:44	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:05:44	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	0
+17	13	11	\N	\N	2022-05-25 19:12:27	2022-05-25 19:12:27	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:12:27	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	0
+24	17	7	\N	\N	2022-05-25 19:24:51	2022-05-25 19:24:51	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:24:51	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
+25	17	8	\N	\N	2022-05-25 19:25:04	2022-05-25 19:25:04	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:25:04	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
+10	11	10	\N	0	2022-05-25 19:06:01	2022-05-25 19:06:01	2022-05-25 19:06:20	2022-05-25 19:06:24	2022-05-25 19:07:01	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:07:01	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
+11	11	12	\N	0	2022-05-25 19:06:10	2022-05-25 19:06:10	2022-05-25 19:06:34	2022-05-25 19:06:38	2022-05-25 19:07:01	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:07:01	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
+16	13	10	\N	0	2022-05-25 19:12:16	2022-05-25 19:12:16	2022-05-25 19:12:48	2022-05-25 19:12:54	2022-05-25 19:13:39	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:13:39	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
+12	12	7	\N	\N	2022-05-25 19:09:29	2022-05-25 19:09:29	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:09:29	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
+18	13	12	\N	0	2022-05-25 19:12:37	2022-05-25 19:12:37	2022-05-25 19:13:05	2022-05-25 19:13:10	2022-05-25 19:13:39	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:13:39	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
+14	12	9	\N	\N	2022-05-25 19:09:50	2022-05-25 19:09:50	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:09:50	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
+19	14	7	\N	\N	2022-05-25 19:15:45	2022-05-25 19:15:45	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:15:45	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	0
+20	14	11	\N	\N	2022-05-25 19:16:08	2022-05-25 19:16:08	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:16:08	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	0
+22	16	11	\N	\N	2022-05-25 19:20:51	2022-05-25 19:20:51	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:20:51	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
+23	16	12	\N	\N	2022-05-25 19:21:00	2022-05-25 19:21:01	\N	\N	\N	2022-06-22 00:00:00	2022-06-22 00:00:00	2022-05-25 19:21:01	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
 \.
 
 
@@ -10062,12 +10062,12 @@ COPY public.review_files (review_id, submission_file_id) FROM stdin;
 15	64
 15	65
 15	66
-19	75
-19	76
-19	77
 19	78
 19	73
 19	74
+19	75
+19	76
+19	77
 21	88
 22	88
 23	88
@@ -10247,11 +10247,11 @@ SELECT pg_catalog.setval('public.sales_rights_sales_rights_id_seq', 1, false);
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2022-05-24 20:26:06
-lib.pkp.classes.task.ReviewReminder	2022-05-24 20:26:06
-lib.pkp.classes.task.PublishSubmissions	2022-05-24 20:26:06
-lib.pkp.classes.task.StatisticsReport	2022-05-24 20:26:06
-lib.pkp.classes.task.RemoveUnvalidatedExpiredUsers	2022-05-24 20:26:06
+plugins.generic.usageStats.UsageStatsLoader	2022-05-25 18:35:23
+lib.pkp.classes.task.ReviewReminder	2022-05-25 18:35:23
+lib.pkp.classes.task.PublishSubmissions	2022-05-25 18:35:23
+lib.pkp.classes.task.StatisticsReport	2022-05-25 18:35:23
+lib.pkp.classes.task.RemoveUnvalidatedExpiredUsers	2022-05-25 18:35:23
 \.
 
 
@@ -10351,31 +10351,31 @@ COPY public.series_settings (series_id, locale, setting_name, setting_value, set
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-lferedme91flfalgrb1l5gtfqi	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653423996	1653424001	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653424001;s:5:"token";s:32:"bc64ef62aaffd8c2009f6a6a9bb55c2b";}	localhost
-rssc7a5apams1unm7aqu6u946r	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653426043	1653426262	0	csrf|a:2:{s:9:"timestamp";i:1653426262;s:5:"token";s:32:"6c8b91da2d1eafc44cac09b987208335";}username|s:7:"dbarnes";userId|i:3;	localhost
-nn44l02ns6a1kn4vacrt5sleeb	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653423981	1653423995	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653423995;s:5:"token";s:32:"e7b9bb855d2595f1ea1db274a7fb3a43";}	localhost
-0ot3k4do27o0n1isuq72uit50f	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653424002	1653424012	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653424012;s:5:"token";s:32:"6745f248458ddf313a99ab628116c30b";}	localhost
-6mt2ubqg86k4mpma3o2cov8pf8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653425316	1653425505	0	csrf|a:2:{s:9:"timestamp";i:1653425505;s:5:"token";s:32:"547fd4ac60b03cd425187719580a2bd2";}username|s:7:"dbarnes";userId|i:3;	localhost
-fvf5g0aa8uok9r6jcc05infpj0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653425165	1653425312	0	csrf|a:2:{s:9:"timestamp";i:1653425312;s:5:"token";s:32:"3ee195a1dabd453630d65b2101a4bedc";}username|s:7:"dbarnes";userId|i:3;	localhost
-avd2g316klnivpof163lc3umjg	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653423966	1653423981	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653423981;s:5:"token";s:32:"35fd4150cd00ab21f5d722307e169513";}	localhost
-d43ra3c6hvdsuadai38vraojfe	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653424012	1653424017	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653424017;s:5:"token";s:32:"7460311774a082f3693676eb2291b126";}	localhost
-3fthr7mfceia4248bqt9uhti53	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653425509	1653425521	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1653425521;s:5:"token";s:32:"c2b798aef0a4e0cd2873b1e5a9a5a918";}	localhost
-q8vktp77kth9virmh6cqtnugmc	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653424457	1653424527	0	csrf|a:2:{s:9:"timestamp";i:1653424527;s:5:"token";s:32:"7a55ddcf8be725ab8fc23a1180d3668b";}username|s:7:"dbarnes";userId|i:3;	localhost
-uqmdoo9l1do70i9takb0skkeh5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653425523	1653425659	0	csrf|a:2:{s:9:"timestamp";i:1653425659;s:5:"token";s:32:"a462bb1398a931ab67a1e8560f67d9d2";}username|s:7:"dbarnes";userId|i:3;	localhost
-5nojdv77bvnv98pajsi1viporq	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653424021	1653424408	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1653424407;s:5:"token";s:32:"4dbf5c12066588f3f02420ebaccb5c2a";}	localhost
-8q735e48v2m4ca28lb87049bet	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653424704	1653424750	0	csrf|a:2:{s:9:"timestamp";i:1653424749;s:5:"token";s:32:"e222a7bab19b425b37274bc79dd2da7f";}username|s:10:"bbarnetson";userId|i:21;	localhost
-6egt0vg76d97hsp42ofg0jmbos	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653424437	1653424456	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653424455;s:5:"token";s:32:"293b18ae66c1e209213c9c7082f1f682";}	localhost
-71dg3l8mjj0q1pfmj8dkmcrpr6	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653425661	1653425730	0	csrf|a:2:{s:9:"timestamp";i:1653425729;s:5:"token";s:32:"c0154fe6547b2ea1247b5bde73c30562";}username|s:7:"jbrower";userId|i:27;	localhost
-53qbov7er04vclpvnu58efnj08	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653424411	1653424435	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653424435;s:5:"token";s:32:"9d7e42732587212ca173374ca307216f";}	localhost
-2url5gkndpur4jmvl5bcera705	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653424530	1653424701	0	csrf|a:2:{s:9:"timestamp";i:1653424700;s:5:"token";s:32:"fceeede574153efe90463206e82278b3";}username|s:7:"dbarnes";userId|i:3;	localhost
-od9m3v3mr6cteqovsgk61365m6	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653424752	1653424986	0	csrf|a:2:{s:9:"timestamp";i:1653424986;s:5:"token";s:32:"599172cfad3cfb187288be33c6c1c5bc";}username|s:7:"dbarnes";userId|i:3;	localhost
-d990f12iqereqsi4kkir1p8m8f	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653425732	1653425861	0	csrf|a:2:{s:9:"timestamp";i:1653425862;s:5:"token";s:32:"dd6174cae69a648e0c4ad56ba9026ca7";}username|s:7:"dbarnes";userId|i:3;	localhost
-9c23erb3fe9euhq39pns10n3el	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653424988	1653425162	0	csrf|a:2:{s:9:"timestamp";i:1653425162;s:5:"token";s:32:"5c1c101a3d5f100efe3c80d733173394";}username|s:7:"dbarnes";userId|i:3;	localhost
-nev0c7okrpk2k8uo4q2h9l4v52	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653425863	1653426039	0	csrf|a:2:{s:9:"timestamp";i:1653426039;s:5:"token";s:32:"2dcf9045673a9749f56158e8afbe143c";}username|s:7:"phudson";	localhost
-272njdneijnofkdpql3499tinb	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653426264	1653426549	0	csrf|a:2:{s:9:"timestamp";i:1653426549;s:5:"token";s:32:"e7a4f411080482eda87ae662a0074879";}username|s:7:"dbarnes";userId|i:3;	localhost
-e37a9uc63ncrhps12t9q8peoqv	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653426607	1653426705	0	csrf|a:2:{s:9:"timestamp";i:1653426705;s:5:"token";s:32:"d87c162670d97f746cccd5e06b884727";}username|s:8:"agallego";	localhost
-jol6vmct545n521bc7pfhfagrd	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653426552	1653426602	0	csrf|a:2:{s:9:"timestamp";i:1653426602;s:5:"token";s:32:"ae300c01b87d42f9bc0ee710e7a12a2d";}username|s:7:"dbarnes";userId|i:3;	localhost
-pau244d5tqcj7c7fil1o4r6uud	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653426712	1653426932	0	csrf|a:2:{s:9:"timestamp";i:1653426931;s:5:"token";s:32:"4dcf172e1ca66bd5f985d71df136999a";}username|s:7:"dbarnes";userId|i:3;	localhost
+lip4rqib95a6jqh9s0q0re86mo	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653503754	1653503760	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653503760;s:5:"token";s:32:"875921934d02166c75b5c24bb1c985ba";}	localhost
+6v4j36k0ko1v75nr9q3nbvlkg5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653505814	1653506028	0	csrf|a:2:{s:9:"timestamp";i:1653506028;s:5:"token";s:32:"fd72a777367be3b7ea02e44d7aeac8e4";}username|s:7:"dbarnes";userId|i:3;	localhost
+77eai8e5nvt113cr39ar5cnnl4	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653503738	1653503753	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653503753;s:5:"token";s:32:"74431919b13084e4fa31ff359f8ca9b0";}	localhost
+3eaa13muv8bi106np7g7roguo1	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653503761	1653503771	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653503771;s:5:"token";s:32:"3057a298fe7bd2a03e33a091329ca9d3";}	localhost
+3pf6baipmg4sa6p8prtpb0upih	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653505072	1653505263	0	csrf|a:2:{s:9:"timestamp";i:1653505263;s:5:"token";s:32:"524bdc7d0fc7519fb01b218807d9bb99";}username|s:7:"dbarnes";userId|i:3;	localhost
+qledjrd4vn21dhnn4j206enk10	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653504922	1653505068	0	csrf|a:2:{s:9:"timestamp";i:1653505068;s:5:"token";s:32:"e750aed035db6b0d1b30ff7689d71d54";}username|s:7:"dbarnes";userId|i:3;	localhost
+tf2kgd8jsgkq59p3hc1cbsar3h	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653503723	1653503738	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653503738;s:5:"token";s:32:"56d7ca32d74e764ea41b20440f6d3714";}	localhost
+vdg0dn95ind0l8j438s6h4dn4q	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653503771	1653503777	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653503777;s:5:"token";s:32:"d65d487cdad478250576c9f23577df8a";}	localhost
+vno8pb96kiqfchce2dla7km0d2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653505266	1653505278	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1653505277;s:5:"token";s:32:"ac22dacbecf2152464732a42efebf714";}	localhost
+m29kpb3t4ai2ko6kd5lc47fk5e	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653504214	1653504284	0	csrf|a:2:{s:9:"timestamp";i:1653504284;s:5:"token";s:32:"33bb5a235b977627970022c3196f55c0";}username|s:7:"dbarnes";userId|i:3;	localhost
+gpamec3j34jta1qh8l03na1jfm	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653505280	1653505422	0	csrf|a:2:{s:9:"timestamp";i:1653505422;s:5:"token";s:32:"cca974590eb33553e9afd36708729d80";}username|s:7:"dbarnes";userId|i:3;	localhost
+1grvap4ku4u9s4m8h0fbu5ebr2	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653503779	1653504163	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1653504162;s:5:"token";s:32:"8c1e4f2a9494569582d86e64c51258a0";}	localhost
+q69qeu05g56v8mdt46b69ldctu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653504743	1653504919	0	csrf|a:2:{s:9:"timestamp";i:1653504919;s:5:"token";s:32:"5e9f8a362000e06f38c6b497e6efa865";}username|s:7:"dbarnes";userId|i:3;	localhost
+vo60e27dkh68unudk374aq7i36	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653504193	1653504212	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653504212;s:5:"token";s:32:"4dc7a75315ed7dc4eb7e27175f470d48";}	localhost
+pce4v8lu875qsgl89ppfgrc6ck	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653505424	1653505495	0	csrf|a:2:{s:9:"timestamp";i:1653505494;s:5:"token";s:32:"6295fda355918d5bc1e8cb4c50a544d0";}username|s:7:"jbrower";userId|i:27;	localhost
+1ubvfitsrjd2de1vnpvb7qennq	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653504166	1653504191	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1653504191;s:5:"token";s:32:"73d09b79d4645a1411eeeb91b56a8ff2";}	localhost
+ibk67qralaqjcpf1tnntu5s042	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653504462	1653504508	0	csrf|a:2:{s:9:"timestamp";i:1653504508;s:5:"token";s:32:"7799a5070e323a0b51034345e4901026";}username|s:10:"bbarnetson";userId|i:21;	localhost
+l2jqb73rhfcoe07chomsnv9ffm	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653504287	1653504459	0	csrf|a:2:{s:9:"timestamp";i:1653504458;s:5:"token";s:32:"1435ee1a86b341b7f37030abf614723b";}username|s:7:"dbarnes";userId|i:3;	localhost
+76tesorf6vq53paljtb0qp43hi	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653504511	1653504741	0	csrf|a:2:{s:9:"timestamp";i:1653504741;s:5:"token";s:32:"ef85108ff6033e6bf90eda4bd3ba643c";}username|s:7:"dbarnes";userId|i:3;	localhost
+23sbikvusv91b33r7neukgiinl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653505497	1653505627	0	csrf|a:2:{s:9:"timestamp";i:1653505627;s:5:"token";s:32:"783abfe9935568d97cdc64d95a9f740b";}username|s:7:"dbarnes";userId|i:3;	localhost
+l52vsmgtd4781q7jft931mmdap	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653505629	1653505809	0	csrf|a:2:{s:9:"timestamp";i:1653505809;s:5:"token";s:32:"20eb5083cdf712a738237ede8cdfb835";}username|s:7:"phudson";	localhost
+0711l93jr6dgmncgfvmhlh3fpu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653506030	1653506319	0	csrf|a:2:{s:9:"timestamp";i:1653506319;s:5:"token";s:32:"5e986cab781f5dfb7b3e3b70c1c95ff1";}username|s:7:"dbarnes";userId|i:3;	localhost
+ve8gggq7em6o2i5qpei18gbe0k	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653506376	1653506477	0	csrf|a:2:{s:9:"timestamp";i:1653506477;s:5:"token";s:32:"6105b07047dbe5d3c0ce340e8cc00e0e";}username|s:8:"agallego";	localhost
+597q3ub3of67dg9vnjdh03feej	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653506324	1653506375	0	csrf|a:2:{s:9:"timestamp";i:1653506375;s:5:"token";s:32:"7c93099af46a521a39b9877ac0279063";}username|s:7:"dbarnes";userId|i:3;	localhost
+jp27ee33qn7mpvdpsto417qtub	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/100.0.4896.60 Safari/537.36	1653506480	1653506704	0	csrf|a:2:{s:9:"timestamp";i:1653506704;s:5:"token";s:32:"d89e526e46b665ed4a06e615e07cf169";}username|s:7:"dbarnes";userId|i:3;	localhost
 \.
 
 
@@ -10428,51 +10428,51 @@ SELECT pg_catalog.setval('public.spotlights_spotlight_id_seq', 1, false);
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-1	1	13	19	2022-05-24 20:34:25	0	0
-2	1	3	3	2022-05-24 20:34:45	0	1
-3	1	6	14	2022-05-24 20:35:26	0	0
-4	2	14	20	2022-05-24 20:35:37	0	0
-5	2	3	3	2022-05-24 20:37:32	0	1
-6	3	13	21	2022-05-24 20:38:31	0	0
-7	3	3	3	2022-05-24 20:39:09	0	1
-8	4	14	22	2022-05-24 20:39:20	0	0
-9	4	3	3	2022-05-24 20:40:47	0	1
-10	4	6	13	2022-05-24 20:42:06	0	0
-11	4	10	15	2022-05-24 20:42:33	0	0
-12	5	13	23	2022-05-24 20:43:15	0	0
-13	5	3	3	2022-05-24 20:43:57	0	1
-14	5	6	14	2022-05-24 20:45:04	0	0
-15	5	10	16	2022-05-24 20:45:25	0	0
-16	5	12	17	2022-05-24 20:45:34	0	0
-17	6	14	24	2022-05-24 20:46:13	0	0
-18	6	3	3	2022-05-24 20:47:22	0	1
-19	6	5	6	2022-05-24 20:47:55	1	1
-20	7	14	25	2022-05-24 20:48:44	0	0
-21	7	3	3	2022-05-24 20:50:42	0	1
-22	7	6	13	2022-05-24 20:51:43	0	0
-23	8	13	3	2022-05-24 20:51:56	0	0
-24	8	3	3	2022-05-24 20:52:01	0	1
-25	9	14	26	2022-05-24 20:52:11	0	0
-26	9	3	3	2022-05-24 20:53:52	0	1
-27	10	13	27	2022-05-24 20:54:28	0	0
-28	10	3	3	2022-05-24 20:55:29	0	1
-29	11	13	28	2022-05-24 20:55:39	0	0
-30	11	3	3	2022-05-24 20:55:54	0	1
-31	12	14	29	2022-05-24 20:57:51	0	0
-32	12	3	3	2022-05-24 20:59:24	0	1
-33	13	14	30	2022-05-24 21:00:51	0	0
-34	13	3	3	2022-05-24 21:01:54	0	1
-35	14	14	31	2022-05-24 21:04:32	0	0
-36	14	3	3	2022-05-24 21:05:43	0	1
-37	14	6	13	2022-05-24 21:07:06	0	0
-38	14	10	15	2022-05-24 21:07:32	0	0
-39	14	12	18	2022-05-24 21:07:43	0	0
-40	15	13	32	2022-05-24 21:09:19	0	0
-41	15	3	3	2022-05-24 21:09:42	0	1
-42	16	13	33	2022-05-24 21:10:14	0	0
-43	16	3	3	2022-05-24 21:10:44	0	1
-44	17	14	34	2022-05-24 21:11:59	0	0
-45	17	3	3	2022-05-24 21:14:36	0	1
+1	1	13	19	2022-05-25 18:43:41	0	0
+2	1	3	3	2022-05-25 18:44:02	0	1
+3	1	6	14	2022-05-25 18:44:43	0	0
+4	2	14	20	2022-05-25 18:44:54	0	0
+5	2	3	3	2022-05-25 18:46:50	0	1
+6	3	13	21	2022-05-25 18:47:49	0	0
+7	3	3	3	2022-05-25 18:48:28	0	1
+8	4	14	22	2022-05-25 18:48:38	0	0
+9	4	3	3	2022-05-25 18:50:04	0	1
+10	4	6	13	2022-05-25 18:51:22	0	0
+11	4	10	15	2022-05-25 18:51:50	0	0
+12	5	13	23	2022-05-25 18:52:31	0	0
+13	5	3	3	2022-05-25 18:53:12	0	1
+14	5	6	14	2022-05-25 18:54:19	0	0
+15	5	10	16	2022-05-25 18:54:41	0	0
+16	5	12	17	2022-05-25 18:54:50	0	0
+17	6	14	24	2022-05-25 18:55:30	0	0
+18	6	3	3	2022-05-25 18:56:38	0	1
+19	6	5	6	2022-05-25 18:57:11	1	1
+20	7	14	25	2022-05-25 18:57:59	0	0
+21	7	3	3	2022-05-25 18:59:59	0	1
+22	7	6	13	2022-05-25 19:01:01	0	0
+23	8	13	3	2022-05-25 19:01:12	0	0
+24	8	3	3	2022-05-25 19:01:17	0	1
+25	9	14	26	2022-05-25 19:01:27	0	0
+26	9	3	3	2022-05-25 19:03:13	0	1
+27	10	13	27	2022-05-25 19:03:51	0	0
+28	10	3	3	2022-05-25 19:04:54	0	1
+29	11	13	28	2022-05-25 19:05:05	0	0
+30	11	3	3	2022-05-25 19:05:19	0	1
+31	12	14	29	2022-05-25 19:07:16	0	0
+32	12	3	3	2022-05-25 19:08:52	0	1
+33	13	14	30	2022-05-25 19:10:21	0	0
+34	13	3	3	2022-05-25 19:11:22	0	1
+35	14	14	31	2022-05-25 19:13:58	0	0
+36	14	3	3	2022-05-25 19:15:11	0	1
+37	14	6	13	2022-05-25 19:16:32	0	0
+38	14	10	15	2022-05-25 19:17:00	0	0
+39	14	12	18	2022-05-25 19:17:11	0	0
+40	15	13	32	2022-05-25 19:18:51	0	0
+41	15	3	3	2022-05-25 19:19:14	0	1
+42	16	13	33	2022-05-25 19:19:43	0	0
+43	16	3	3	2022-05-25 19:20:14	0	1
+44	17	14	34	2022-05-25 19:21:27	0	0
+45	17	3	3	2022-05-25 19:24:06	0	1
 \.
 
 
@@ -11255,6 +11255,7 @@ COPY public.submission_chapter_settings (chapter_id, locale, setting_name, setti
 --
 
 COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id, seq, source_chapter_id, doi_id) FROM stdin;
+26	\N	6	4	26	\N
 1	\N	1	1	1	\N
 2	\N	1	2	2	\N
 3	\N	1	3	3	\N
@@ -11266,10 +11267,6 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 5	\N	2	2	5	\N
 6	\N	2	3	6	\N
 7	\N	2	4	7	\N
-54	\N	14	1	54	\N
-55	\N	14	2	55	\N
-56	\N	14	3	56	\N
-57	\N	14	4	57	\N
 8	\N	3	1	8	\N
 9	\N	3	2	9	\N
 10	\N	3	3	10	\N
@@ -11279,13 +11276,20 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 28	\N	7	2	28	\N
 29	\N	7	3	29	\N
 30	\N	7	4	30	\N
-31	\N	7	5	31	\N
 17	\N	5	1	17	\N
 18	\N	5	2	18	\N
 19	\N	5	3	19	\N
 20	\N	5	4	20	\N
 21	\N	5	5	21	\N
 22	\N	5	6	22	\N
+31	\N	7	5	31	\N
+54	\N	14	1	54	\N
+55	\N	14	2	55	\N
+56	\N	14	3	56	\N
+57	\N	14	4	57	\N
+23	\N	6	1	23	\N
+24	\N	6	2	24	\N
+25	\N	6	3	25	\N
 37	\N	10	1	37	\N
 38	\N	10	2	38	\N
 39	\N	10	3	39	\N
@@ -11295,25 +11299,21 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 43	\N	10	7	43	\N
 44	\N	10	8	44	\N
 45	\N	10	9	45	\N
-23	\N	6	1	23	\N
-24	\N	6	2	24	\N
-25	\N	6	3	25	\N
-26	\N	6	4	26	\N
-46	\N	11	1	46	\N
-47	\N	11	2	47	\N
 32	\N	9	1	32	\N
 33	\N	9	2	33	\N
 34	\N	9	3	34	\N
 35	\N	9	4	35	\N
 36	\N	9	5	36	\N
+46	\N	11	1	46	\N
+47	\N	11	2	47	\N
 58	\N	15	1	58	\N
 59	\N	15	2	59	\N
 60	\N	15	3	60	\N
+66	\N	17	1	66	\N
+67	\N	17	2	67	\N
 48	\N	12	1	48	\N
 49	\N	12	2	49	\N
 50	\N	12	3	50	\N
-66	\N	17	1	66	\N
-67	\N	17	2	67	\N
 68	\N	17	3	68	\N
 69	\N	17	4	69	\N
 70	\N	17	5	70	\N
@@ -11341,11 +11341,11 @@ SELECT pg_catalog.setval('public.submission_chapters_chapter_id_seq', 71, true);
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2022-05-24 20:56:59	\N	1
-2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2022-05-24 20:57:12	\N	1
-3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2022-05-24 21:00:37	\N	1
-4	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2022-05-24 21:03:45	\N	1
-5	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2022-05-24 21:11:44	\N	1
+1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2022-05-25 19:06:24	\N	1
+2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2022-05-25 19:06:38	\N	1
+3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2022-05-25 19:10:08	\N	1
+4	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2022-05-25 19:13:10	\N	1
+5	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2022-05-25 19:21:16	\N	1
 \.
 
 
@@ -11397,10 +11397,10 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 34	34	19
 35	35	20
 36	36	20
-37	37	18
-38	38	19
-39	39	16
-40	40	17
+37	37	19
+38	38	16
+39	39	17
+40	40	18
 41	41	21
 42	42	22
 43	43	23
@@ -11408,10 +11408,10 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 45	45	25
 46	46	26
 47	47	26
-48	48	24
-49	49	25
-50	50	22
-51	51	23
+48	48	25
+49	49	22
+50	50	23
+51	51	24
 52	52	27
 53	53	28
 54	54	28
@@ -11424,9 +11424,9 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 61	61	32
 62	62	33
 63	63	34
-64	64	33
-65	65	34
-66	66	32
+64	64	34
+65	65	32
+66	66	33
 67	67	35
 68	68	36
 69	69	37
@@ -11434,16 +11434,16 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 71	71	39
 72	72	40
 73	73	40
-74	74	38
-75	75	39
-76	76	37
-77	77	35
-78	78	36
+74	74	39
+75	75	38
+76	76	36
+77	77	37
+78	78	35
 79	79	40
-80	80	38
-81	81	39
-82	82	37
-83	83	36
+80	80	39
+81	81	38
+82	82	36
+83	83	37
 84	84	35
 85	85	41
 86	86	41
@@ -11542,14 +11542,14 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 35		chapterId	31	string
 36	en_US	name	Chapter 4: Toward New Models of Flexible.pdf	string
 36		chapterId	31	string
-37	en_US	name	Chapter 2: Learning Science at a Distanc.pdf	string
-37		chapterId	29	string
-38	en_US	name	Chapter 3: Leadership Strategies for Coo.pdf	string
-38		chapterId	30	string
-39	en_US	name	Introduction.pdf	string
-39		chapterId	27	string
-40	en_US	name	Chapter 1: Interactions Affording Distan.pdf	string
-40		chapterId	28	string
+37	en_US	name	Chapter 3: Leadership Strategies for Coo.pdf	string
+37		chapterId	30	string
+38	en_US	name	Introduction.pdf	string
+38		chapterId	27	string
+39	en_US	name	Chapter 1: Interactions Affording Distan.pdf	string
+39		chapterId	28	string
+40	en_US	name	Chapter 2: Learning Science at a Distanc.pdf	string
+40		chapterId	29	string
 41	en_US	name	Editorial.pdf	string
 42	en_US	name	Internet, openness and the future of the.pdf	string
 43	en_US	name	Imagining the Internet: Open, closed or .pdf	string
@@ -11563,14 +11563,14 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 46		chapterId	36	string
 47	en_US	name	Risks and challenges for freedom of expr.pdf	string
 47		chapterId	36	string
-48	en_US	name	The internet in LAC will remain free, pu.pdf	string
-48		chapterId	34	string
-49	en_US	name	Free Internet?.pdf	string
-49		chapterId	35	string
-50	en_US	name	Internet, openness and the future of the.pdf	string
-50		chapterId	32	string
-51	en_US	name	Imagining the Internet: Open, closed or .pdf	string
-51		chapterId	33	string
+48	en_US	name	Free Internet?.pdf	string
+48		chapterId	35	string
+49	en_US	name	Internet, openness and the future of the.pdf	string
+49		chapterId	32	string
+50	en_US	name	Imagining the Internet: Open, closed or .pdf	string
+50		chapterId	33	string
+51	en_US	name	The internet in LAC will remain free, pu.pdf	string
+51		chapterId	34	string
 52	en_US	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
 53	en_US	name	Dreamwork.pdf	string
 54	en_US	name	Dreamwork.pdf	string
@@ -11592,12 +11592,12 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 61		chapterId	51	string
 62		chapterId	52	string
 63		chapterId	53	string
-64	en_US	name	A Model for Framing Mobile Learning.pdf	string
-64		chapterId	52	string
-65	en_US	name	Mobile Distance Learning with PDAs: Deve.pdf	string
-65		chapterId	53	string
-66	en_US	name	Current State of Mobile Learning.pdf	string
-66		chapterId	51	string
+64	en_US	name	Mobile Distance Learning with PDAs: Deve.pdf	string
+64		chapterId	53	string
+65	en_US	name	Current State of Mobile Learning.pdf	string
+65		chapterId	51	string
+66	en_US	name	A Model for Framing Mobile Learning.pdf	string
+66		chapterId	52	string
 67	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
 68	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
 69	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
@@ -11609,30 +11609,30 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 69		chapterId	56	string
 70		chapterId	57	string
 73	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-74	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-74		chapterId	57	string
-75	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-76	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
-76		chapterId	56	string
-77	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
-77		chapterId	54	string
-78	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
-78		chapterId	55	string
+74	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+75	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+75		chapterId	57	string
+76	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
+76		chapterId	55	string
+77	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+77		chapterId	56	string
+78	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+78		chapterId	54	string
 85	en_US	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
 86	en_US	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
 84	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
 84		chapterId	54	string
 87	en_US	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-83	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
-83		chapterId	55	string
+82	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
+82		chapterId	55	string
 88	en_US	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-82	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
-82		chapterId	56	string
+83	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+83		chapterId	56	string
 89	en_US	name	Preface.pdf	string
-80	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-80		chapterId	57	string
+81	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+81		chapterId	57	string
 90	en_US	name	Introduction.pdf	string
-81	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+80	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 79	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
 91	en_US	name	The Emergence of Open Development in a N.pdf	string
 92	en_US	name	Enacting Openness in ICT4D Research.pdf	string
@@ -11664,106 +11664,106 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id, doi_id) FROM stdin;
-1	1	1	\N	3	2	\N	\N	\N	2022-05-24 20:34:27	2022-05-24 20:34:27	19	\N	\N	\N
-2	1	1	1	3	4	\N	\N	\N	2022-05-24 20:34:59	2022-05-24 20:34:59	19	523	1	\N
-3	2	2	\N	4	2	\N	\N	\N	2022-05-24 20:35:39	2022-05-24 20:35:39	20	\N	\N	\N
-4	2	3	\N	4	2	\N	\N	\N	2022-05-24 20:35:40	2022-05-24 20:35:40	20	\N	\N	\N
-5	2	4	\N	4	2	\N	\N	\N	2022-05-24 20:35:40	2022-05-24 20:35:40	20	\N	\N	\N
-6	2	5	\N	4	2	\N	\N	\N	2022-05-24 20:35:41	2022-05-24 20:35:41	20	\N	\N	\N
-7	2	5	6	4	4	\N	\N	\N	2022-05-24 20:37:53	2022-05-24 20:37:53	20	523	2	\N
-8	2	4	5	4	4	\N	\N	\N	2022-05-24 20:37:53	2022-05-24 20:37:53	20	523	2	\N
-9	2	3	4	4	4	\N	\N	\N	2022-05-24 20:37:53	2022-05-24 20:37:53	20	523	2	\N
-10	2	2	3	4	4	\N	\N	\N	2022-05-24 20:37:53	2022-05-24 20:37:53	20	523	2	\N
-11	3	6	\N	3	2	\N	\N	\N	2022-05-24 20:38:34	2022-05-24 20:38:34	21	\N	\N	\N
-12	4	7	\N	4	2	\N	\N	\N	2022-05-24 20:39:22	2022-05-24 20:39:22	22	\N	\N	\N
-13	4	8	\N	4	2	\N	\N	\N	2022-05-24 20:39:22	2022-05-24 20:39:23	22	\N	\N	\N
-14	4	9	\N	4	2	\N	\N	\N	2022-05-24 20:39:23	2022-05-24 20:39:23	22	\N	\N	\N
-15	4	10	\N	4	2	\N	\N	\N	2022-05-24 20:39:24	2022-05-24 20:39:24	22	\N	\N	\N
-16	4	10	15	4	19	\N	\N	\N	2022-05-24 20:41:05	2022-05-24 20:41:05	22	523	3	\N
-17	4	9	14	4	19	\N	\N	\N	2022-05-24 20:41:06	2022-05-24 20:41:06	22	523	3	\N
-18	4	8	13	4	19	\N	\N	\N	2022-05-24 20:41:06	2022-05-24 20:41:06	22	523	3	\N
-19	4	7	12	4	19	\N	\N	\N	2022-05-24 20:41:06	2022-05-24 20:41:06	22	523	3	\N
-20	5	11	\N	3	2	\N	\N	\N	2022-05-24 20:43:18	2022-05-24 20:43:18	23	\N	\N	\N
-21	5	11	20	3	19	\N	\N	\N	2022-05-24 20:44:13	2022-05-24 20:44:13	23	523	5	\N
-22	5	11	20	3	10	0	openAccess	1	2022-05-24 20:45:46	2022-05-24 20:45:58	23	521	2	\N
-23	6	12	\N	4	2	\N	\N	\N	2022-05-24 20:46:16	2022-05-24 20:46:16	24	\N	\N	\N
-24	6	13	\N	4	2	\N	\N	\N	2022-05-24 20:46:16	2022-05-24 20:46:16	24	\N	\N	\N
-25	6	14	\N	4	2	\N	\N	\N	2022-05-24 20:46:17	2022-05-24 20:46:17	24	\N	\N	\N
-26	6	15	\N	4	2	\N	\N	\N	2022-05-24 20:46:17	2022-05-24 20:46:17	24	\N	\N	\N
-27	6	15	26	4	19	\N	\N	\N	2022-05-24 20:47:40	2022-05-24 20:47:40	24	523	7	\N
-28	6	14	25	4	19	\N	\N	\N	2022-05-24 20:47:41	2022-05-24 20:47:41	24	523	7	\N
-29	6	13	24	4	19	\N	\N	\N	2022-05-24 20:47:41	2022-05-24 20:47:41	24	523	7	\N
-30	6	12	23	4	19	\N	\N	\N	2022-05-24 20:47:41	2022-05-24 20:47:41	24	523	7	\N
-31	7	16	\N	4	2	\N	\N	\N	2022-05-24 20:48:47	2022-05-24 20:48:47	25	\N	\N	\N
-32	7	17	\N	4	2	\N	\N	\N	2022-05-24 20:48:47	2022-05-24 20:48:47	25	\N	\N	\N
-33	7	18	\N	4	2	\N	\N	\N	2022-05-24 20:48:48	2022-05-24 20:48:48	25	\N	\N	\N
-34	7	19	\N	4	2	\N	\N	\N	2022-05-24 20:48:48	2022-05-24 20:48:49	25	\N	\N	\N
-35	7	20	\N	4	2	\N	\N	\N	2022-05-24 20:48:49	2022-05-24 20:48:49	25	\N	\N	\N
-36	7	20	35	4	4	\N	\N	\N	2022-05-24 20:51:03	2022-05-24 20:51:03	25	523	8	\N
-37	7	18	33	4	4	\N	\N	\N	2022-05-24 20:51:03	2022-05-24 20:51:03	25	523	8	\N
-38	7	19	34	4	4	\N	\N	\N	2022-05-24 20:51:03	2022-05-24 20:51:03	25	523	8	\N
-39	7	16	31	4	4	\N	\N	\N	2022-05-24 20:51:03	2022-05-24 20:51:03	25	523	8	\N
-40	7	17	32	4	4	\N	\N	\N	2022-05-24 20:51:03	2022-05-24 20:51:03	25	523	8	\N
-41	8	21	\N	3	2	\N	\N	\N	2022-05-24 20:51:58	2022-05-24 20:51:58	3	\N	\N	\N
-42	9	22	\N	4	2	\N	\N	\N	2022-05-24 20:52:13	2022-05-24 20:52:13	26	\N	\N	\N
-43	9	23	\N	4	2	\N	\N	\N	2022-05-24 20:52:13	2022-05-24 20:52:14	26	\N	\N	\N
-44	9	24	\N	4	2	\N	\N	\N	2022-05-24 20:52:14	2022-05-24 20:52:14	26	\N	\N	\N
-45	9	25	\N	4	2	\N	\N	\N	2022-05-24 20:52:14	2022-05-24 20:52:15	26	\N	\N	\N
-46	9	26	\N	4	2	\N	\N	\N	2022-05-24 20:52:15	2022-05-24 20:52:15	26	\N	\N	\N
-47	9	26	46	4	19	\N	\N	\N	2022-05-24 20:54:13	2022-05-24 20:54:13	26	523	9	\N
-48	9	24	44	4	19	\N	\N	\N	2022-05-24 20:54:13	2022-05-24 20:54:13	26	523	9	\N
-49	9	25	45	4	19	\N	\N	\N	2022-05-24 20:54:13	2022-05-24 20:54:13	26	523	9	\N
-50	9	22	42	4	19	\N	\N	\N	2022-05-24 20:54:13	2022-05-24 20:54:13	26	523	9	\N
-51	9	23	43	4	19	\N	\N	\N	2022-05-24 20:54:13	2022-05-24 20:54:13	26	523	9	\N
-52	10	27	\N	3	2	\N	\N	\N	2022-05-24 20:54:30	2022-05-24 20:54:31	27	\N	\N	\N
-53	11	28	\N	3	2	\N	\N	\N	2022-05-24 20:55:42	2022-05-24 20:55:42	28	\N	\N	\N
-54	11	28	53	3	19	\N	\N	\N	2022-05-24 20:56:09	2022-05-24 20:56:09	28	523	10	\N
-55	12	29	\N	4	2	\N	\N	\N	2022-05-24 20:57:53	2022-05-24 20:57:53	29	\N	\N	\N
-56	12	30	\N	4	2	\N	\N	\N	2022-05-24 20:57:53	2022-05-24 20:57:54	29	\N	\N	\N
-57	12	31	\N	4	2	\N	\N	\N	2022-05-24 20:57:54	2022-05-24 20:57:54	29	\N	\N	\N
-58	12	31	57	4	19	\N	\N	\N	2022-05-24 20:59:44	2022-05-24 20:59:44	29	523	12	\N
-59	12	29	55	4	19	\N	\N	\N	2022-05-24 20:59:44	2022-05-24 20:59:44	29	523	12	\N
-60	12	30	56	4	19	\N	\N	\N	2022-05-24 20:59:44	2022-05-24 20:59:44	29	523	12	\N
-61	13	32	\N	4	2	\N	\N	\N	2022-05-24 21:00:53	2022-05-24 21:00:53	30	\N	\N	\N
-62	13	33	\N	4	2	\N	\N	\N	2022-05-24 21:00:54	2022-05-24 21:00:54	30	\N	\N	\N
-63	13	34	\N	4	2	\N	\N	\N	2022-05-24 21:00:54	2022-05-24 21:00:54	30	\N	\N	\N
-64	13	33	62	4	19	\N	\N	\N	2022-05-24 21:02:14	2022-05-24 21:02:14	30	523	13	\N
-65	13	34	63	4	19	\N	\N	\N	2022-05-24 21:02:14	2022-05-24 21:02:14	30	523	13	\N
-66	13	32	61	4	19	\N	\N	\N	2022-05-24 21:02:14	2022-05-24 21:02:14	30	523	13	\N
-67	14	35	\N	4	2	\N	\N	\N	2022-05-24 21:04:34	2022-05-24 21:04:34	31	\N	\N	\N
-68	14	36	\N	4	2	\N	\N	\N	2022-05-24 21:04:34	2022-05-24 21:04:35	31	\N	\N	\N
-69	14	37	\N	4	2	\N	\N	\N	2022-05-24 21:04:35	2022-05-24 21:04:35	31	\N	\N	\N
-70	14	38	\N	4	2	\N	\N	\N	2022-05-24 21:04:36	2022-05-24 21:04:36	31	\N	\N	\N
-71	14	39	\N	13	2	\N	\N	\N	2022-05-24 21:04:36	2022-05-24 21:04:37	31	\N	\N	\N
-72	14	40	\N	9	2	\N	\N	\N	2022-05-24 21:04:37	2022-05-24 21:04:38	31	\N	\N	\N
-73	14	40	72	9	19	\N	\N	\N	2022-05-24 21:06:03	2022-05-24 21:06:03	31	523	15	\N
-74	14	38	70	4	19	\N	\N	\N	2022-05-24 21:06:03	2022-05-24 21:06:03	31	523	15	\N
-75	14	39	71	13	19	\N	\N	\N	2022-05-24 21:06:04	2022-05-24 21:06:04	31	523	15	\N
-76	14	37	69	4	19	\N	\N	\N	2022-05-24 21:06:04	2022-05-24 21:06:04	31	523	15	\N
-77	14	35	67	4	19	\N	\N	\N	2022-05-24 21:06:04	2022-05-24 21:06:04	31	523	15	\N
-78	14	36	68	4	19	\N	\N	\N	2022-05-24 21:06:04	2022-05-24 21:06:04	31	523	15	\N
-84	14	35	67	4	10	0	openAccess	1	2022-05-24 21:08:03	2022-05-24 21:08:18	31	521	3	\N
-83	14	36	68	4	10	0	openAccess	1	2022-05-24 21:08:03	2022-05-24 21:08:27	31	521	3	\N
-82	14	37	69	4	10	0	openAccess	1	2022-05-24 21:08:03	2022-05-24 21:08:36	31	521	3	\N
-80	14	38	70	4	10	0	openAccess	1	2022-05-24 21:08:03	2022-05-24 21:08:45	31	521	3	\N
-81	14	39	71	13	10	0	openAccess	1	2022-05-24 21:08:03	2022-05-24 21:08:55	31	521	3	\N
-79	14	40	72	9	10	0	openAccess	1	2022-05-24 21:08:03	2022-05-24 21:09:04	31	521	3	\N
-85	15	41	\N	3	2	\N	\N	\N	2022-05-24 21:09:21	2022-05-24 21:09:22	32	\N	\N	\N
-86	15	41	85	3	4	\N	\N	\N	2022-05-24 21:09:59	2022-05-24 21:09:59	32	523	17	\N
-87	16	42	\N	3	2	\N	\N	\N	2022-05-24 21:10:16	2022-05-24 21:10:16	33	\N	\N	\N
-88	16	42	87	3	4	\N	\N	\N	2022-05-24 21:11:01	2022-05-24 21:11:01	33	523	18	\N
-89	17	43	\N	4	2	\N	\N	\N	2022-05-24 21:12:02	2022-05-24 21:12:02	34	\N	\N	\N
-90	17	44	\N	4	2	\N	\N	\N	2022-05-24 21:12:02	2022-05-24 21:12:02	34	\N	\N	\N
-91	17	45	\N	4	2	\N	\N	\N	2022-05-24 21:12:02	2022-05-24 21:12:03	34	\N	\N	\N
-92	17	46	\N	4	2	\N	\N	\N	2022-05-24 21:12:03	2022-05-24 21:12:03	34	\N	\N	\N
-93	17	47	\N	4	2	\N	\N	\N	2022-05-24 21:12:04	2022-05-24 21:12:04	34	\N	\N	\N
-94	17	48	\N	4	2	\N	\N	\N	2022-05-24 21:12:04	2022-05-24 21:12:05	34	\N	\N	\N
-95	17	47	93	4	19	\N	\N	\N	2022-05-24 21:15:02	2022-05-24 21:15:02	34	523	19	\N
-96	17	48	94	4	19	\N	\N	\N	2022-05-24 21:15:02	2022-05-24 21:15:02	34	523	19	\N
-97	17	46	92	4	19	\N	\N	\N	2022-05-24 21:15:02	2022-05-24 21:15:02	34	523	19	\N
-98	17	43	89	4	19	\N	\N	\N	2022-05-24 21:15:02	2022-05-24 21:15:02	34	523	19	\N
-99	17	44	90	4	19	\N	\N	\N	2022-05-24 21:15:02	2022-05-24 21:15:02	34	523	19	\N
-100	17	45	91	4	19	\N	\N	\N	2022-05-24 21:15:02	2022-05-24 21:15:02	34	523	19	\N
+1	1	1	\N	3	2	\N	\N	\N	2022-05-25 18:43:44	2022-05-25 18:43:44	19	\N	\N	\N
+2	1	1	1	3	4	\N	\N	\N	2022-05-25 18:44:16	2022-05-25 18:44:16	19	523	1	\N
+3	2	2	\N	4	2	\N	\N	\N	2022-05-25 18:44:57	2022-05-25 18:44:57	20	\N	\N	\N
+4	2	3	\N	4	2	\N	\N	\N	2022-05-25 18:44:57	2022-05-25 18:44:57	20	\N	\N	\N
+5	2	4	\N	4	2	\N	\N	\N	2022-05-25 18:44:58	2022-05-25 18:44:58	20	\N	\N	\N
+6	2	5	\N	4	2	\N	\N	\N	2022-05-25 18:44:58	2022-05-25 18:44:59	20	\N	\N	\N
+7	2	5	6	4	4	\N	\N	\N	2022-05-25 18:47:11	2022-05-25 18:47:11	20	523	2	\N
+8	2	4	5	4	4	\N	\N	\N	2022-05-25 18:47:11	2022-05-25 18:47:11	20	523	2	\N
+9	2	3	4	4	4	\N	\N	\N	2022-05-25 18:47:11	2022-05-25 18:47:11	20	523	2	\N
+10	2	2	3	4	4	\N	\N	\N	2022-05-25 18:47:11	2022-05-25 18:47:11	20	523	2	\N
+11	3	6	\N	3	2	\N	\N	\N	2022-05-25 18:47:52	2022-05-25 18:47:52	21	\N	\N	\N
+12	4	7	\N	4	2	\N	\N	\N	2022-05-25 18:48:40	2022-05-25 18:48:41	22	\N	\N	\N
+13	4	8	\N	4	2	\N	\N	\N	2022-05-25 18:48:41	2022-05-25 18:48:41	22	\N	\N	\N
+14	4	9	\N	4	2	\N	\N	\N	2022-05-25 18:48:41	2022-05-25 18:48:42	22	\N	\N	\N
+15	4	10	\N	4	2	\N	\N	\N	2022-05-25 18:48:42	2022-05-25 18:48:42	22	\N	\N	\N
+16	4	10	15	4	19	\N	\N	\N	2022-05-25 18:50:23	2022-05-25 18:50:23	22	523	3	\N
+17	4	9	14	4	19	\N	\N	\N	2022-05-25 18:50:23	2022-05-25 18:50:23	22	523	3	\N
+18	4	8	13	4	19	\N	\N	\N	2022-05-25 18:50:23	2022-05-25 18:50:23	22	523	3	\N
+19	4	7	12	4	19	\N	\N	\N	2022-05-25 18:50:23	2022-05-25 18:50:23	22	523	3	\N
+20	5	11	\N	3	2	\N	\N	\N	2022-05-25 18:52:33	2022-05-25 18:52:34	23	\N	\N	\N
+21	5	11	20	3	19	\N	\N	\N	2022-05-25 18:53:28	2022-05-25 18:53:28	23	523	5	\N
+22	5	11	20	3	10	0	openAccess	1	2022-05-25 18:55:03	2022-05-25 18:55:15	23	521	2	\N
+23	6	12	\N	4	2	\N	\N	\N	2022-05-25 18:55:32	2022-05-25 18:55:32	24	\N	\N	\N
+24	6	13	\N	4	2	\N	\N	\N	2022-05-25 18:55:33	2022-05-25 18:55:33	24	\N	\N	\N
+25	6	14	\N	4	2	\N	\N	\N	2022-05-25 18:55:33	2022-05-25 18:55:33	24	\N	\N	\N
+26	6	15	\N	4	2	\N	\N	\N	2022-05-25 18:55:34	2022-05-25 18:55:34	24	\N	\N	\N
+27	6	15	26	4	19	\N	\N	\N	2022-05-25 18:56:57	2022-05-25 18:56:57	24	523	7	\N
+28	6	14	25	4	19	\N	\N	\N	2022-05-25 18:56:57	2022-05-25 18:56:57	24	523	7	\N
+29	6	13	24	4	19	\N	\N	\N	2022-05-25 18:56:57	2022-05-25 18:56:57	24	523	7	\N
+30	6	12	23	4	19	\N	\N	\N	2022-05-25 18:56:57	2022-05-25 18:56:57	24	523	7	\N
+31	7	16	\N	4	2	\N	\N	\N	2022-05-25 18:58:02	2022-05-25 18:58:02	25	\N	\N	\N
+32	7	17	\N	4	2	\N	\N	\N	2022-05-25 18:58:02	2022-05-25 18:58:02	25	\N	\N	\N
+33	7	18	\N	4	2	\N	\N	\N	2022-05-25 18:58:02	2022-05-25 18:58:03	25	\N	\N	\N
+34	7	19	\N	4	2	\N	\N	\N	2022-05-25 18:58:03	2022-05-25 18:58:04	25	\N	\N	\N
+35	7	20	\N	4	2	\N	\N	\N	2022-05-25 18:58:04	2022-05-25 18:58:04	25	\N	\N	\N
+36	7	20	35	4	4	\N	\N	\N	2022-05-25 19:00:20	2022-05-25 19:00:20	25	523	8	\N
+37	7	19	34	4	4	\N	\N	\N	2022-05-25 19:00:20	2022-05-25 19:00:20	25	523	8	\N
+38	7	16	31	4	4	\N	\N	\N	2022-05-25 19:00:20	2022-05-25 19:00:20	25	523	8	\N
+39	7	17	32	4	4	\N	\N	\N	2022-05-25 19:00:20	2022-05-25 19:00:20	25	523	8	\N
+40	7	18	33	4	4	\N	\N	\N	2022-05-25 19:00:20	2022-05-25 19:00:20	25	523	8	\N
+41	8	21	\N	3	2	\N	\N	\N	2022-05-25 19:01:14	2022-05-25 19:01:15	3	\N	\N	\N
+42	9	22	\N	4	2	\N	\N	\N	2022-05-25 19:01:30	2022-05-25 19:01:30	26	\N	\N	\N
+43	9	23	\N	4	2	\N	\N	\N	2022-05-25 19:01:30	2022-05-25 19:01:30	26	\N	\N	\N
+44	9	24	\N	4	2	\N	\N	\N	2022-05-25 19:01:30	2022-05-25 19:01:31	26	\N	\N	\N
+45	9	25	\N	4	2	\N	\N	\N	2022-05-25 19:01:31	2022-05-25 19:01:31	26	\N	\N	\N
+46	9	26	\N	4	2	\N	\N	\N	2022-05-25 19:01:32	2022-05-25 19:01:32	26	\N	\N	\N
+47	9	26	46	4	19	\N	\N	\N	2022-05-25 19:03:35	2022-05-25 19:03:35	26	523	9	\N
+48	9	25	45	4	19	\N	\N	\N	2022-05-25 19:03:35	2022-05-25 19:03:35	26	523	9	\N
+49	9	22	42	4	19	\N	\N	\N	2022-05-25 19:03:35	2022-05-25 19:03:35	26	523	9	\N
+50	9	23	43	4	19	\N	\N	\N	2022-05-25 19:03:35	2022-05-25 19:03:35	26	523	9	\N
+51	9	24	44	4	19	\N	\N	\N	2022-05-25 19:03:35	2022-05-25 19:03:35	26	523	9	\N
+52	10	27	\N	3	2	\N	\N	\N	2022-05-25 19:03:54	2022-05-25 19:03:54	27	\N	\N	\N
+53	11	28	\N	3	2	\N	\N	\N	2022-05-25 19:05:08	2022-05-25 19:05:08	28	\N	\N	\N
+54	11	28	53	3	19	\N	\N	\N	2022-05-25 19:05:33	2022-05-25 19:05:33	28	523	10	\N
+55	12	29	\N	4	2	\N	\N	\N	2022-05-25 19:07:19	2022-05-25 19:07:19	29	\N	\N	\N
+56	12	30	\N	4	2	\N	\N	\N	2022-05-25 19:07:19	2022-05-25 19:07:20	29	\N	\N	\N
+57	12	31	\N	4	2	\N	\N	\N	2022-05-25 19:07:20	2022-05-25 19:07:20	29	\N	\N	\N
+58	12	31	57	4	19	\N	\N	\N	2022-05-25 19:09:14	2022-05-25 19:09:14	29	523	12	\N
+59	12	29	55	4	19	\N	\N	\N	2022-05-25 19:09:14	2022-05-25 19:09:14	29	523	12	\N
+60	12	30	56	4	19	\N	\N	\N	2022-05-25 19:09:14	2022-05-25 19:09:14	29	523	12	\N
+61	13	32	\N	4	2	\N	\N	\N	2022-05-25 19:10:23	2022-05-25 19:10:23	30	\N	\N	\N
+62	13	33	\N	4	2	\N	\N	\N	2022-05-25 19:10:23	2022-05-25 19:10:24	30	\N	\N	\N
+63	13	34	\N	4	2	\N	\N	\N	2022-05-25 19:10:24	2022-05-25 19:10:24	30	\N	\N	\N
+64	13	34	63	4	19	\N	\N	\N	2022-05-25 19:11:40	2022-05-25 19:11:40	30	523	13	\N
+65	13	32	61	4	19	\N	\N	\N	2022-05-25 19:11:40	2022-05-25 19:11:40	30	523	13	\N
+66	13	33	62	4	19	\N	\N	\N	2022-05-25 19:11:40	2022-05-25 19:11:40	30	523	13	\N
+67	14	35	\N	4	2	\N	\N	\N	2022-05-25 19:14:00	2022-05-25 19:14:01	31	\N	\N	\N
+68	14	36	\N	4	2	\N	\N	\N	2022-05-25 19:14:01	2022-05-25 19:14:01	31	\N	\N	\N
+69	14	37	\N	4	2	\N	\N	\N	2022-05-25 19:14:01	2022-05-25 19:14:02	31	\N	\N	\N
+70	14	38	\N	4	2	\N	\N	\N	2022-05-25 19:14:02	2022-05-25 19:14:02	31	\N	\N	\N
+71	14	39	\N	13	2	\N	\N	\N	2022-05-25 19:14:03	2022-05-25 19:14:03	31	\N	\N	\N
+72	14	40	\N	9	2	\N	\N	\N	2022-05-25 19:14:04	2022-05-25 19:14:05	31	\N	\N	\N
+73	14	40	72	9	19	\N	\N	\N	2022-05-25 19:15:31	2022-05-25 19:15:31	31	523	15	\N
+74	14	39	71	13	19	\N	\N	\N	2022-05-25 19:15:31	2022-05-25 19:15:31	31	523	15	\N
+75	14	38	70	4	19	\N	\N	\N	2022-05-25 19:15:31	2022-05-25 19:15:31	31	523	15	\N
+76	14	36	68	4	19	\N	\N	\N	2022-05-25 19:15:31	2022-05-25 19:15:31	31	523	15	\N
+77	14	37	69	4	19	\N	\N	\N	2022-05-25 19:15:31	2022-05-25 19:15:31	31	523	15	\N
+78	14	35	67	4	19	\N	\N	\N	2022-05-25 19:15:32	2022-05-25 19:15:32	31	523	15	\N
+84	14	35	67	4	10	0	openAccess	1	2022-05-25 19:17:32	2022-05-25 19:17:47	31	521	3	\N
+82	14	36	68	4	10	0	openAccess	1	2022-05-25 19:17:32	2022-05-25 19:17:55	31	521	3	\N
+83	14	37	69	4	10	0	openAccess	1	2022-05-25 19:17:32	2022-05-25 19:18:05	31	521	3	\N
+81	14	38	70	4	10	0	openAccess	1	2022-05-25 19:17:32	2022-05-25 19:18:15	31	521	3	\N
+80	14	39	71	13	10	0	openAccess	1	2022-05-25 19:17:32	2022-05-25 19:18:24	31	521	3	\N
+79	14	40	72	9	10	0	openAccess	1	2022-05-25 19:17:32	2022-05-25 19:18:34	31	521	3	\N
+85	15	41	\N	3	2	\N	\N	\N	2022-05-25 19:18:53	2022-05-25 19:18:54	32	\N	\N	\N
+86	15	41	85	3	4	\N	\N	\N	2022-05-25 19:19:30	2022-05-25 19:19:30	32	523	17	\N
+87	16	42	\N	3	2	\N	\N	\N	2022-05-25 19:19:46	2022-05-25 19:19:46	33	\N	\N	\N
+88	16	42	87	3	4	\N	\N	\N	2022-05-25 19:20:32	2022-05-25 19:20:32	33	523	18	\N
+89	17	43	\N	4	2	\N	\N	\N	2022-05-25 19:21:30	2022-05-25 19:21:30	34	\N	\N	\N
+90	17	44	\N	4	2	\N	\N	\N	2022-05-25 19:21:30	2022-05-25 19:21:30	34	\N	\N	\N
+91	17	45	\N	4	2	\N	\N	\N	2022-05-25 19:21:30	2022-05-25 19:21:31	34	\N	\N	\N
+92	17	46	\N	4	2	\N	\N	\N	2022-05-25 19:21:31	2022-05-25 19:21:31	34	\N	\N	\N
+93	17	47	\N	4	2	\N	\N	\N	2022-05-25 19:21:32	2022-05-25 19:21:32	34	\N	\N	\N
+94	17	48	\N	4	2	\N	\N	\N	2022-05-25 19:21:32	2022-05-25 19:21:33	34	\N	\N	\N
+95	17	47	93	4	19	\N	\N	\N	2022-05-25 19:24:33	2022-05-25 19:24:33	34	523	19	\N
+96	17	48	94	4	19	\N	\N	\N	2022-05-25 19:24:33	2022-05-25 19:24:33	34	523	19	\N
+97	17	46	92	4	19	\N	\N	\N	2022-05-25 19:24:33	2022-05-25 19:24:33	34	523	19	\N
+98	17	43	89	4	19	\N	\N	\N	2022-05-25 19:24:33	2022-05-25 19:24:33	34	523	19	\N
+99	17	44	90	4	19	\N	\N	\N	2022-05-25 19:24:33	2022-05-25 19:24:33	34	523	19	\N
+100	17	45	91	4	19	\N	\N	\N	2022-05-25 19:24:33	2022-05-25 19:24:33	34	523	19	\N
 \.
 
 
@@ -12098,23 +12098,23 @@ COPY public.submission_settings (submission_id, locale, setting_name, setting_va
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-7	1	7	2022-05-24 20:51:43	2022-05-24 20:50:42	2022-05-24 20:50:42	4	en_US	1	0	1
-13	1	13	2022-05-24 21:04:13	2022-05-24 21:01:54	2022-05-24 21:03:10	4	en_US	1	0	1
-5	1	5	2022-05-24 20:46:01	2022-05-24 20:43:57	2022-05-24 20:43:57	5	en_US	3	0	2
-1	1	1	2022-05-24 20:35:26	2022-05-24 20:34:45	2022-05-24 20:34:45	4	en_US	1	0	2
-11	1	11	2022-05-24 20:57:35	2022-05-24 20:55:54	2022-05-24 20:56:45	4	en_US	1	0	2
-8	1	8	2022-05-24 20:52:01	2022-05-24 20:52:01	2022-05-24 20:52:01	1	en_US	1	0	2
-14	1	14	2022-05-24 21:09:08	2022-05-24 21:05:43	2022-05-24 21:05:43	5	en_US	3	0	1
-17	1	17	2022-05-24 21:15:31	2022-05-24 21:14:36	2022-05-24 21:14:36	2	en_US	1	0	1
-4	1	4	2022-05-24 20:43:05	2022-05-24 20:40:47	2022-05-24 20:40:47	5	en_US	1	0	1
-6	1	6	2022-05-24 20:48:15	2022-05-24 20:47:22	2022-05-24 20:47:22	2	en_US	1	0	1
-2	1	2	2022-05-24 20:38:20	2022-05-24 20:37:32	2022-05-24 20:37:32	3	en_US	1	0	1
-15	1	15	2022-05-24 21:09:59	2022-05-24 21:09:42	2022-05-24 21:09:42	3	en_US	1	0	2
-9	1	9	2022-05-24 20:54:13	2022-05-24 20:53:52	2022-05-24 20:53:52	2	en_US	1	0	1
-3	1	3	2022-05-24 20:39:10	2022-05-24 20:39:09	2022-05-24 20:39:09	1	en_US	1	0	2
-12	1	12	2022-05-24 21:00:38	2022-05-24 20:59:24	2022-05-24 21:00:10	2	en_US	1	0	1
-10	1	10	2022-05-24 20:55:30	2022-05-24 20:55:29	2022-05-24 20:55:29	1	en_US	1	0	2
-16	1	16	2022-05-24 21:11:44	2022-05-24 21:10:44	2022-05-24 21:11:12	3	en_US	1	0	2
+7	1	7	2022-05-25 19:01:01	2022-05-25 18:59:59	2022-05-25 18:59:59	4	en_US	1	0	1
+5	1	5	2022-05-25 18:55:18	2022-05-25 18:53:12	2022-05-25 18:53:12	5	en_US	3	0	2
+1	1	1	2022-05-25 18:44:43	2022-05-25 18:44:02	2022-05-25 18:44:02	4	en_US	1	0	2
+8	1	8	2022-05-25 19:01:18	2022-05-25 19:01:17	2022-05-25 19:01:17	1	en_US	1	0	2
+11	1	11	2022-05-25 19:07:01	2022-05-25 19:05:19	2022-05-25 19:06:10	4	en_US	1	0	2
+13	1	13	2022-05-25 19:13:39	2022-05-25 19:11:22	2022-05-25 19:12:37	4	en_US	1	0	1
+14	1	14	2022-05-25 19:18:38	2022-05-25 19:15:11	2022-05-25 19:15:11	5	en_US	3	0	1
+4	1	4	2022-05-25 18:52:21	2022-05-25 18:50:04	2022-05-25 18:50:04	5	en_US	1	0	1
+6	1	6	2022-05-25 18:57:30	2022-05-25 18:56:38	2022-05-25 18:56:38	2	en_US	1	0	1
+2	1	2	2022-05-25 18:47:38	2022-05-25 18:46:50	2022-05-25 18:46:50	3	en_US	1	0	1
+17	1	17	2022-05-25 19:25:04	2022-05-25 19:24:06	2022-05-25 19:24:06	2	en_US	1	0	1
+9	1	9	2022-05-25 19:03:35	2022-05-25 19:03:13	2022-05-25 19:03:13	2	en_US	1	0	1
+3	1	3	2022-05-25 18:48:28	2022-05-25 18:48:28	2022-05-25 18:48:28	1	en_US	1	0	2
+12	1	12	2022-05-25 19:10:08	2022-05-25 19:08:52	2022-05-25 19:09:39	2	en_US	1	0	1
+15	1	15	2022-05-25 19:19:30	2022-05-25 19:19:14	2022-05-25 19:19:14	3	en_US	1	0	2
+10	1	10	2022-05-25 19:04:55	2022-05-25 19:04:54	2022-05-25 19:04:54	1	en_US	1	0	2
+16	1	16	2022-05-25 19:21:16	2022-05-25 19:20:14	2022-05-25 19:20:43	3	en_US	1	0	2
 \.
 
 
@@ -12701,40 +12701,40 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-24	dbernnard	$2y$10$FPGFqmbV.6IKNT0zoIDdd.AQu02AaIBaDBFzQiBVA6F7hXmbNNHiy	dbernnard@mailinator.com	\N	\N	\N	\N	US	\N	\N	\N	2022-05-24 20:46:08	\N	2022-05-24 20:46:08	\N	\N	\N	0	\N	1
-6	minoue	$2y$10$/7cBQ60eZqrle9gFawjEw.MubAWSw28t.X/lUM0F68azcOoqBqNCa	minoue@mailinator.com				\N	JP	[]	\N	\N	2022-05-24 20:28:02	\N	2022-05-24 20:47:57	0	0	\N	0	\N	1
-4	dbuskins	$2y$10$2r04c6JJyYEyg9mcIi9noOb7qESlxsbpSJM7W/..r9dJat2CrpoiG	dbuskins@mailinator.com				\N	US	[]	\N	\N	2022-05-24 20:27:35	\N	\N	0	0	\N	0	\N	1
-5	sberardo	$2y$10$WUucMwDSfy1Lf.Yoca2kF.aG5KwbtTObZZxfUvEEt/oyDpeKH/X9W	sberardo@mailinator.com				\N	CA	[]	\N	\N	2022-05-24 20:27:50	\N	\N	0	0	\N	0	\N	1
-7	jjanssen	$2y$10$yVK0dtuclGYBPfLEylwI8.DeELuerSMEfNZGhSnU622MYdiZmZYLS	jjanssen@mailinator.com				\N	NL	[]	\N	\N	2022-05-24 20:28:16	\N	\N	0	0	\N	0	\N	1
-9	amccrae	$2y$10$3lhm5iF7FZiHFngtZgvsQOXmceNGD5LoAUN.iEd.tk6bQeGjMiNbu	amccrae@mailinator.com				\N	CA	[]	\N	\N	2022-05-24 20:28:50	\N	\N	0	0	\N	0	\N	1
-11	alzacharia	$2y$10$6mN/uVi6a51hRiVuetK4yupQ6wefmWjTJMmnktkfQiv7LZjqKtDpG	alzacharia@mailinator.com				\N	GH	[]	\N	\N	2022-05-24 20:29:33	\N	\N	0	0	\N	0	\N	1
-13	mfritz	$2y$10$URojrIApBkd4/IDoZnCdEu7zPMlHikb0RZxp0IsfLmp04y00Xi9ne	mfritz@mailinator.com				\N	BE	[]	\N	\N	2022-05-24 20:30:22	\N	\N	0	0	\N	0	\N	1
-14	svogt	$2y$10$g/9Vocnh1pZNLuS7XQ/f0uSDbBWxgyUI4ljFUVcmdGVfaoV9YBry2	svogt@mailinator.com				\N	CL	[]	\N	\N	2022-05-24 20:30:48	\N	\N	0	0	\N	0	\N	1
-15	gcox	$2y$10$1YYmw5yNa3Yqc/0gphgbP.CAjP5q7TsergMpNJU1WpqkKCOLvaVyG	gcox@mailinator.com				\N	US	[]	\N	\N	2022-05-24 20:31:13	\N	\N	0	0	\N	0	\N	1
-16	shellier	$2y$10$aWWFHJpUCcW75O8sC2ysKOG/RsiFUGYREeq8dXzQdoU6t5QiRUd8C	shellier@mailinator.com				\N	ZA	[]	\N	\N	2022-05-24 20:31:48	\N	\N	0	0	\N	0	\N	1
-17	cturner	$2y$10$Cv.DFGLlSfK26EdnU6Dl3.3u5kFIc2q.78Kb0.81YS8WU.5niFwGS	cturner@mailinator.com				\N	GB	[]	\N	\N	2022-05-24 20:32:25	\N	\N	0	0	\N	0	\N	1
-18	skumar	$2y$10$OcTM9P1n3AGgSSylT.lulelXGS8FK9QoYJPNf5FHPSvXyv0ZppedG	skumar@mailinator.com				\N	SG	[]	\N	\N	2022-05-24 20:33:02	\N	\N	0	0	\N	0	\N	1
-25	dkennepohl	$2y$10$ZF2NVvtDvqckPfdXC.q2FO6cylpSb9UGhcbr7O8GEhe17op9bWhzi	dkennepohl@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 20:48:39	\N	2022-05-24 20:48:39	\N	\N	\N	0	\N	1
-29	lelder	$2y$10$aUfITsA4.Fky1ttl3ArZ5eLtlqtqNcoX/YIkMD0PHCcSSu/FCeqhe	lelder@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 20:57:46	\N	2022-05-24 20:57:46	\N	\N	\N	0	\N	1
-2	rvaca	$2y$10$QfwKWgBBTrDR1DxC9qCMu.0vx8DmkL/YIduxFfMUndeqMD9IA/rIC	rvaca@mailinator.com				\N	MX	[]	\N	\N	2022-05-24 20:27:11	\N	2022-05-24 20:33:24	0	0	\N	0	\N	1
-32	mforan	$2y$10$8qwKGWdIq7ndN4YorQwMU.s8caw0K9FBEbkVlnZH/JPEA08BxVUU6	mforan@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 21:09:14	\N	2022-05-24 21:09:14	\N	\N	\N	0	\N	1
-1	admin	$2y$10$aHhotijRVGz0m.DBC/FaVOJ.MMTHqbbi/EsVX18I03AxUjAymf7tO	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	\N	\N	\N	2022-05-24 20:26:02	\N	2022-05-24 20:33:57	\N	\N	\N	0	\N	1
-19	aclark	$2y$10$1bYp1yETZtP846SnIS.3nuz72V52xj3qw2WzIeqbt77mPhirPW/PK	aclark@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 20:34:20	\N	2022-05-24 20:34:20	\N	\N	\N	0	\N	1
-20	afinkel	$2y$10$VfWFpUVGomxAMudY1WenHeOVszaOQ1GUEUXOY2QfW/k0AE8pBDhfO	afinkel@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 20:35:32	\N	2022-05-24 20:35:33	\N	\N	\N	0	\N	1
-26	fperini	$2y$10$mhnwipTEb2HHjF1ZuaTvleucr/ZSveDQ01FXZzHzQwPSUvS/K1yQ2	fperini@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 20:52:06	\N	2022-05-24 20:52:06	\N	\N	\N	0	\N	1
-21	bbarnetson	$2y$10$Qmrr97MA46zN.PD0e9DwR.SPvU4JPzD10m2zvTY6pDv/.WRDRXfDu	bbarnetson@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 20:38:27	\N	2022-05-24 20:38:27	\N	\N	\N	0	\N	1
-22	bbeaty	$2y$10$pn6HmDDLsy01aU7aFHe55.Ebv6iD6utkE68NCnGGAFaXV3Di4xGYW	bbeaty@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 20:39:15	\N	2022-05-24 20:39:15	\N	\N	\N	0	\N	1
-8	phudson	$2y$10$xq7KaB6w2pNP8BWt0TwRAu2E6qt2URmZAQopudfPvLWNlPY5o.4e6	phudson@mailinator.com				\N	CA	[]	\N	\N	2022-05-24 20:28:32	\N	2022-05-24 21:00:24	0	0	\N	0	\N	1
-23	callan	$2y$10$V7sjuSe.2dFitA0oHyUdXuFdWUlKsS.7azGEzhYdXdkr9qTxwr/ly	callan@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 20:43:11	\N	2022-05-24 20:43:11	\N	\N	\N	0	\N	1
-27	jbrower	$2y$10$YZXO7tKA91hKh0/KW9J.qOvsC/FMJHVyDlQo0.jn5g029BVy05MQS	jbrower@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 20:54:24	\N	2022-05-24 20:54:24	\N	\N	\N	0	\N	1
-28	jlockehart	$2y$10$QicspOsyPysis.sgVQHla.JTI9qNC1hbENE/vKFMIzV5fPh7Z7kc2	jlockehart@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 20:55:35	\N	2022-05-24 20:55:35	\N	\N	\N	0	\N	1
-33	mpower	$2y$10$FSZjvEAjgM0.wzljphKXceYLCN/2UZB75EYvfeEoWdyg/klQzl3u6	mpower@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 21:10:09	\N	2022-05-24 21:10:09	\N	\N	\N	0	\N	1
-30	mally	$2y$10$hM9t4Hnfz/4ftlqdtIPPautT58eqfv.Ko2RFS35LU4z3HpE.QCgm.	mally@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 21:00:46	\N	2022-05-24 21:00:46	\N	\N	\N	0	\N	1
-12	gfavio	$2y$10$sc6cvnd8ierrx30YSZSa5.ivsz4onJwQX13l80zxEMKpV6BtQeipy	gfavio@mailinator.com				\N	ES	[]	\N	\N	2022-05-24 20:29:56	\N	2022-05-24 21:03:29	0	0	\N	0	\N	1
-10	agallego	$2y$10$xDGYtFYAanWhB/IzUjBHi.5HgMtdHIwp1NRSjFCOah5lDVNd4pQeC	agallego@mailinator.com				\N	US	[]	\N	\N	2022-05-24 20:29:11	\N	2022-05-24 21:11:32	0	0	\N	0	\N	1
-31	mdawson	$2y$10$PtZyS8wWlAnlWBsUx/j1YeG9mbfqT87MC40NTYL0EHnmmuI2fQqDS	mdawson@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 21:04:27	\N	2022-05-24 21:04:27	\N	\N	\N	0	\N	1
-34	msmith	$2y$10$YATjxORmsoS3PbiP7NwHZe9gkBXAYPmNmzFFp74YcBHs3JniCYu2q	msmith@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-24 21:11:55	\N	2022-05-24 21:11:55	\N	\N	\N	0	\N	1
-3	dbarnes	$2y$10$GjpBMwN9W4AsnGzNG0kzleNnJzd5JjS0Cyt9VkmgIDNe4SOoGVM0O	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2022-05-24 20:27:20	\N	2022-05-24 21:14:38	0	0	\N	0	\N	1
+24	dbernnard	$2y$10$V60iabnDCEGA.8fo3TI/hezJHsauonwbrn6.fXwccuIE3BtAU5xtG	dbernnard@mailinator.com	\N	\N	\N	\N	US	\N	\N	\N	2022-05-25 18:55:25	\N	2022-05-25 18:55:25	\N	\N	\N	0	\N	1
+6	minoue	$2y$10$5MVu5M3Pxwd15k0QHiRk.eC4BjJfAiI7vWljuP6A0uv6uBjDSCwFS	minoue@mailinator.com				\N	JP	[]	\N	\N	2022-05-25 18:37:18	\N	2022-05-25 18:57:14	0	0	\N	0	\N	1
+4	dbuskins	$2y$10$XTzCKDQ9IEPJnPd6tCSrb.EfSK5L58xl7BABa54uV2sddPUkB.1xS	dbuskins@mailinator.com				\N	US	[]	\N	\N	2022-05-25 18:36:49	\N	\N	0	0	\N	0	\N	1
+5	sberardo	$2y$10$SNcPwysd8OPcx/MfLacEGu9XbGn7OhPjkdDrFPMvG6bTipAgZnnsS	sberardo@mailinator.com				\N	CA	[]	\N	\N	2022-05-25 18:37:05	\N	\N	0	0	\N	0	\N	1
+7	jjanssen	$2y$10$X1r8lkJy.PmQ7dFsZS.DtuqlZBWe1SJHBDQoQOfvnmcVZwxoVaG5S	jjanssen@mailinator.com				\N	NL	[]	\N	\N	2022-05-25 18:37:33	\N	\N	0	0	\N	0	\N	1
+9	amccrae	$2y$10$oZ7GgjV1J7qQG8zXwPwwrOt5MfDerxt/iuOfC8xtDidvz3hFxYhrK	amccrae@mailinator.com				\N	CA	[]	\N	\N	2022-05-25 18:38:07	\N	\N	0	0	\N	0	\N	1
+11	alzacharia	$2y$10$6twnPc9nREYGDQ9ivf4oCe1NQZrpnO7qdwQR.f0UQAYZQaObPM/fW	alzacharia@mailinator.com				\N	GH	[]	\N	\N	2022-05-25 18:38:50	\N	\N	0	0	\N	0	\N	1
+13	mfritz	$2y$10$Zo7fGcGxRCdEyScdBERDpOx1mOftfPVhm5axiGOTU4Sn6/SC.2Ps.	mfritz@mailinator.com				\N	BE	[]	\N	\N	2022-05-25 18:39:36	\N	\N	0	0	\N	0	\N	1
+14	svogt	$2y$10$J/ipuSShivxxUtUSipDiHejmVRYiON3Pod4k2mBMDf67vmySwPRrO	svogt@mailinator.com				\N	CL	[]	\N	\N	2022-05-25 18:40:02	\N	\N	0	0	\N	0	\N	1
+15	gcox	$2y$10$9Bz/ZyU7OpO8MXaDov/GoOucJc2U8A386z.csrzMu1AObZvn6Si2S	gcox@mailinator.com				\N	US	[]	\N	\N	2022-05-25 18:40:28	\N	\N	0	0	\N	0	\N	1
+16	shellier	$2y$10$AolE6RZBxgqQYiVLEL7bPO/4IjiJysysMPeaIgFoRSL9auIBtIPRW	shellier@mailinator.com				\N	ZA	[]	\N	\N	2022-05-25 18:41:03	\N	\N	0	0	\N	0	\N	1
+17	cturner	$2y$10$hIQj2A4fQ0tGtMjLLZQEOOaR8NpO1yHr9c7rKiU6YJmOawU1qaWNC	cturner@mailinator.com				\N	GB	[]	\N	\N	2022-05-25 18:41:43	\N	\N	0	0	\N	0	\N	1
+18	skumar	$2y$10$bcvFqS4Hsx8YYrPuYxa2be2roc4LUHFZdNTZ5Lk3XH3f5aOgu7XgW	skumar@mailinator.com				\N	SG	[]	\N	\N	2022-05-25 18:42:20	\N	\N	0	0	\N	0	\N	1
+25	dkennepohl	$2y$10$C61prsTE2lMXpH145v0PquJSVeAcXQiuvlrISliTYr5nWmR4VpPaG	dkennepohl@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 18:57:55	\N	2022-05-25 18:57:55	\N	\N	\N	0	\N	1
+29	lelder	$2y$10$bAsw7o9i2ar3yi0ZHXalWOms6MHjFFKJ2ZO/I.wpPBPcwzNlcZaOu	lelder@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 19:07:12	\N	2022-05-25 19:07:12	\N	\N	\N	0	\N	1
+2	rvaca	$2y$10$QiK0RSXLYgHHB4ZU057MteOvjrEYxGp9M1hFEHIcTawIss7cuM/Ya	rvaca@mailinator.com				\N	MX	[]	\N	\N	2022-05-25 18:36:29	\N	2022-05-25 18:42:39	0	0	\N	0	\N	1
+32	mforan	$2y$10$.phMv841elrGS/bqjvVT4.kL2eldf5pod9WoBy.I8XppgK5IqDgp2	mforan@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 19:18:46	\N	2022-05-25 19:18:46	\N	\N	\N	0	\N	1
+1	admin	$2y$10$pck72lXz3MjgmHgXXxE1Xup9ODScpQG9S8r/iB337MAWxrKuFRvZG	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	\N	\N	\N	2022-05-25 18:35:18	\N	2022-05-25 18:43:13	\N	\N	\N	0	\N	1
+19	aclark	$2y$10$rw385ksks3ZspXYkMAUAo.h2NYdv98B.I8oI38UE.fWO4K6YOzEYC	aclark@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 18:43:37	\N	2022-05-25 18:43:37	\N	\N	\N	0	\N	1
+20	afinkel	$2y$10$TotzqVTttQiRIJOXaUWlvO0Wlc0JrNI/f335vSukBjgBVjh3suIU.	afinkel@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 18:44:50	\N	2022-05-25 18:44:50	\N	\N	\N	0	\N	1
+26	fperini	$2y$10$byF9.za1Gb5.tarXPn/UtOtW60Gopj00vEDLo4xJOMi9BLL3ZoW6C	fperini@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 19:01:23	\N	2022-05-25 19:01:23	\N	\N	\N	0	\N	1
+21	bbarnetson	$2y$10$9pW6bcZllOWIbujLPAD9AO.dl5hwcdPbH/K8TPBiik9mxW.y2rkfS	bbarnetson@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 18:47:45	\N	2022-05-25 18:47:45	\N	\N	\N	0	\N	1
+22	bbeaty	$2y$10$3/4ZSvjaJvgsA7trnuu99Oe4x5EfF3QNolm/hPLlZAnAJE.y5fxfC	bbeaty@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 18:48:33	\N	2022-05-25 18:48:34	\N	\N	\N	0	\N	1
+8	phudson	$2y$10$CLw3ng0PMAD6w1Y71I/Vu.4pA9UX6gUQ0o6giM6di4bHjNzHNkLqq	phudson@mailinator.com				\N	CA	[]	\N	\N	2022-05-25 18:37:48	\N	2022-05-25 19:09:54	0	0	\N	0	\N	1
+23	callan	$2y$10$gECTwSdO3ZETzhXTnyoCPuxwAoOyaFEjS/NZLV9Y4x3NOP1WB8L5W	callan@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 18:52:26	\N	2022-05-25 18:52:26	\N	\N	\N	0	\N	1
+27	jbrower	$2y$10$rgeo85GDZ3YrC1Gp0DekXOWrwsGCuUHIu.eZ.mer1AnLitqBGBl7.	jbrower@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 19:03:47	\N	2022-05-25 19:03:47	\N	\N	\N	0	\N	1
+28	jlockehart	$2y$10$k7y2FROJfKqwtHux636o8ej6brsMIEiIwj6/YHEEOoI2ooht7wqUS	jlockehart@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 19:05:00	\N	2022-05-25 19:05:01	\N	\N	\N	0	\N	1
+33	mpower	$2y$10$DsiQG/vJ/IA3YoSqZPzysevDJGe0Dq/VO9RjHCjuxedFyaMqO5r5q	mpower@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 19:19:39	\N	2022-05-25 19:19:39	\N	\N	\N	0	\N	1
+30	mally	$2y$10$pOxCGNJb9AniKQqgmrCuYOfylW250KOLXJhFqqpDBg05jC5lppvLi	mally@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 19:10:16	\N	2022-05-25 19:10:16	\N	\N	\N	0	\N	1
+12	gfavio	$2y$10$d1CO9.1oCq7jBVeW2sdJUub7P8HBnn9UlJNWV3MrChqN0qLtrc5YW	gfavio@mailinator.com				\N	ES	[]	\N	\N	2022-05-25 18:39:13	\N	2022-05-25 19:12:56	0	0	\N	0	\N	1
+10	agallego	$2y$10$ljaDYDu8kmMJ33ylM3hI1uOvSeqKJgzz84PAWIxl42gQCg/AmgXlO	agallego@mailinator.com				\N	US	[]	\N	\N	2022-05-25 18:38:28	\N	2022-05-25 19:21:03	0	0	\N	0	\N	1
+31	mdawson	$2y$10$G3.cL8XQ7DZe8RMkDZHLS.de4B3b4mx6u7UVKaG/CnAezQmxnmnlG	mdawson@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 19:13:53	\N	2022-05-25 19:13:53	\N	\N	\N	0	\N	1
+34	msmith	$2y$10$.tpXhFxs/Kq8Cl.jeCAc4uHxbwSo4qgXkMydalh/sVWh15rHXIGOq	msmith@mailinator.com	\N	\N	\N	\N	CA	\N	\N	\N	2022-05-25 19:21:23	\N	2022-05-25 19:21:23	\N	\N	\N	0	\N	1
+3	dbarnes	$2y$10$uRUCLqcn6XL8IWQDiHzaCOvzPrQc0Gr2po2NFhWkApXvCaV3iTLlG	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2022-05-25 18:36:37	\N	2022-05-25 19:24:10	0	0	\N	0	\N	1
 \.
 
 
@@ -12750,34 +12750,34 @@ SELECT pg_catalog.setval('public.users_user_id_seq', 34, true);
 --
 
 COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2022-05-24 20:26:02	1	plugins.metadata	dc11		0	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.pubIds	urn	URNPubIdPlugin	0	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.blocks	browse	\\APP\\plugins\\blocks\\browse\\BrowseBlockPlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.blocks	information	InformationBlockPlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-1	2	0	0	2022-05-24 20:26:02	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.generic	usageEvent		0	1
-1	0	0	0	2022-05-24 20:26:02	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	2	0	0	2022-05-24 20:26:02	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-1	0	0	0	2022-05-24 20:26:02	1	plugins.generic	acron		0	1
-1	0	0	0	2022-05-24 20:26:02	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.themes	default	DefaultThemePlugin	1	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.importexport	users		0	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.importexport	onix30		0	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.importexport	csv		0	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.importexport	native		0	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.paymethod	manual		0	0
-1	0	0	0	2022-05-24 20:26:02	1	plugins.paymethod	paypal		0	0
-3	4	0	0	2022-05-24 20:26:01	1	core	omp		0	1
+1	0	0	0	2022-05-25 18:35:19	1	plugins.metadata	dc11		0	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.pubIds	urn	URNPubIdPlugin	0	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.blocks	browse	\\APP\\plugins\\blocks\\browse\\BrowseBlockPlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.blocks	information	InformationBlockPlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+1	2	0	0	2022-05-25 18:35:19	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.generic	usageEvent		0	1
+1	0	0	0	2022-05-25 18:35:19	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	2	0	0	2022-05-25 18:35:19	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	0	0	0	2022-05-25 18:35:19	1	plugins.generic	acron		0	1
+1	0	0	0	2022-05-25 18:35:19	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.themes	default	DefaultThemePlugin	1	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.importexport	users		0	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.importexport	onix30		0	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.importexport	csv		0	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.importexport	native		0	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.paymethod	manual		0	0
+1	0	0	0	2022-05-25 18:35:19	1	plugins.paymethod	paypal		0	0
+3	4	0	0	2022-05-25 18:35:18	1	core	omp		0	1
 \.
 
 
