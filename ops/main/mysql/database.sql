@@ -596,7 +596,7 @@ CREATE TABLE `edit_decisions` (
 
 LOCK TABLES `edit_decisions` WRITE;
 /*!40000 ALTER TABLE `edit_decisions` DISABLE KEYS */;
-INSERT INTO `edit_decisions` VALUES (1,4,NULL,5,NULL,3,9,'2022-07-20 23:32:14'),(2,4,NULL,5,NULL,3,18,'2022-07-20 23:32:21'),(3,4,NULL,5,NULL,3,9,'2022-07-20 23:32:28');
+INSERT INTO `edit_decisions` VALUES (1,4,NULL,5,NULL,3,9,'2022-07-23 18:17:10'),(2,4,NULL,5,NULL,3,18,'2022-07-23 18:17:16'),(3,4,NULL,5,NULL,3,9,'2022-07-23 18:17:23');
 /*!40000 ALTER TABLE `edit_decisions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -631,7 +631,7 @@ CREATE TABLE `email_log` (
 
 LOCK TABLES `email_log` WRITE;
 /*!40000 ALTER TABLE `email_log` DISABLE KEYS */;
-INSERT INTO `email_log` VALUES (1,1048585,4,3,'2022-07-20 23:32:14',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','Your submission has been declined','<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),(2,1048585,4,3,'2022-07-20 23:32:21',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','We have reversed the decision to decline your submission','<p>Dear Diaga Diouf,</p>\n<p>The decision to decline your submission, Genetic transformation of forest trees, has been reversed. \nAn editor will look further at your submission before deciding whether to decline \nthe submission or send it for review.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/4\">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>\n'),(3,1048585,4,3,'2022-07-20 23:32:28',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','Your submission has been declined','<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>');
+INSERT INTO `email_log` VALUES (1,1048585,4,3,'2022-07-23 18:17:10',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','Your submission has been declined','<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),(2,1048585,4,3,'2022-07-23 18:17:16',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','We have reversed the decision to decline your submission','<p>Dear Diaga Diouf,</p>\n<p>The decision to decline your submission, Genetic transformation of forest trees, has been reversed. \nAn editor will look further at your submission before deciding whether to decline \nthe submission or send it for review.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/4\">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>\n'),(3,1048585,4,3,'2022-07-23 18:17:23',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','Your submission has been declined','<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>');
 /*!40000 ALTER TABLE `email_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -795,7 +795,7 @@ CREATE TABLE `event_log` (
 
 LOCK TABLES `event_log` WRITE;
 /*!40000 ALTER TABLE `event_log` DISABLE KEYS */;
-INSERT INTO `event_log` VALUES (1,1048585,1,7,'2022-07-20 23:29:18',268435458,'submission.event.general.metadataUpdated',0),(2,515,1,7,'2022-07-20 23:29:28',1342177281,'submission.event.fileUploaded',0),(3,1048585,1,7,'2022-07-20 23:29:28',1342177288,'submission.event.fileRevised',0),(4,515,1,7,'2022-07-20 23:29:31',1342177296,'submission.event.fileEdited',0),(5,1048585,1,7,'2022-07-20 23:29:31',1342177296,'submission.event.fileEdited',0),(6,1048585,1,7,'2022-07-20 23:29:35',268435458,'submission.event.general.metadataUpdated',0),(7,1048585,1,7,'2022-07-20 23:29:36',268435457,'submission.event.submissionSubmitted',0),(8,1048585,2,8,'2022-07-20 23:29:45',268435458,'submission.event.general.metadataUpdated',0),(9,515,2,8,'2022-07-20 23:29:55',1342177281,'submission.event.fileUploaded',0),(10,1048585,2,8,'2022-07-20 23:29:55',1342177288,'submission.event.fileRevised',0),(11,515,2,8,'2022-07-20 23:29:57',1342177296,'submission.event.fileEdited',0),(12,1048585,2,8,'2022-07-20 23:29:57',1342177296,'submission.event.fileEdited',0),(13,1048585,2,8,'2022-07-20 23:30:03',268435458,'submission.event.general.metadataUpdated',0),(14,1048585,2,8,'2022-07-20 23:30:04',268435457,'submission.event.submissionSubmitted',0),(15,1048585,2,8,'2022-07-20 23:30:10',268435458,'submission.event.general.metadataUpdated',0),(16,1048585,2,8,'2022-07-20 23:30:24',268435458,'submission.event.general.metadataUpdated',0),(17,1048585,2,3,'2022-07-20 23:30:32',268435462,'publication.event.published',0),(18,1048585,3,9,'2022-07-20 23:30:40',268435458,'submission.event.general.metadataUpdated',0),(19,515,3,9,'2022-07-20 23:30:51',1342177281,'submission.event.fileUploaded',0),(20,1048585,3,9,'2022-07-20 23:30:51',1342177288,'submission.event.fileRevised',0),(21,515,3,9,'2022-07-20 23:30:53',1342177296,'submission.event.fileEdited',0),(22,1048585,3,9,'2022-07-20 23:30:53',1342177296,'submission.event.fileEdited',0),(23,1048585,3,9,'2022-07-20 23:31:02',268435458,'submission.event.general.metadataUpdated',0),(24,1048585,3,9,'2022-07-20 23:31:04',268435457,'submission.event.submissionSubmitted',0),(25,1048585,3,3,'2022-07-20 23:31:13',268435462,'publication.event.published',0),(26,1048585,3,3,'2022-07-20 23:31:22',268435463,'publication.event.unpublished',0),(27,1048585,3,3,'2022-07-20 23:31:25',268435458,'submission.event.general.metadataUpdated',0),(28,1048585,3,3,'2022-07-20 23:31:28',268435462,'publication.event.published',0),(29,1048585,3,3,'2022-07-20 23:31:31',268435458,'submission.event.general.metadataUpdated',0),(30,1048585,3,3,'2022-07-20 23:31:31',268435464,'publication.event.versionCreated',0),(31,1048585,3,3,'2022-07-20 23:31:36',268435458,'submission.event.general.metadataUpdated',0),(32,1048585,3,3,'2022-07-20 23:31:39',268435462,'publication.event.versionPublished',0),(33,1048585,4,10,'2022-07-20 23:31:47',268435458,'submission.event.general.metadataUpdated',0),(34,515,4,10,'2022-07-20 23:31:58',1342177281,'submission.event.fileUploaded',0),(35,1048585,4,10,'2022-07-20 23:31:58',1342177288,'submission.event.fileRevised',0),(36,515,4,10,'2022-07-20 23:32:00',1342177296,'submission.event.fileEdited',0),(37,1048585,4,10,'2022-07-20 23:32:00',1342177296,'submission.event.fileEdited',0),(38,1048585,4,10,'2022-07-20 23:32:04',268435458,'submission.event.general.metadataUpdated',0),(39,1048585,4,10,'2022-07-20 23:32:05',268435457,'submission.event.submissionSubmitted',0),(40,1048585,4,3,'2022-07-20 23:32:14',805306371,'editor.submission.decision.decline.log',0),(41,1048585,4,3,'2022-07-20 23:32:21',805306371,'editor.submission.decision.revertDecline.log',0),(42,1048585,4,3,'2022-07-20 23:32:28',805306371,'editor.submission.decision.decline.log',0),(43,1048585,5,11,'2022-07-20 23:32:40',268435458,'submission.event.general.metadataUpdated',0),(44,515,5,11,'2022-07-20 23:32:51',1342177281,'submission.event.fileUploaded',0),(45,1048585,5,11,'2022-07-20 23:32:51',1342177288,'submission.event.fileRevised',0),(46,515,5,11,'2022-07-20 23:32:53',1342177296,'submission.event.fileEdited',0),(47,1048585,5,11,'2022-07-20 23:32:53',1342177296,'submission.event.fileEdited',0),(48,1048585,5,11,'2022-07-20 23:33:00',268435458,'submission.event.general.metadataUpdated',0),(49,1048585,5,11,'2022-07-20 23:33:01',268435457,'submission.event.submissionSubmitted',0),(50,1048585,5,3,'2022-07-20 23:33:11',268435462,'publication.event.published',0),(51,1048585,6,12,'2022-07-20 23:33:21',268435458,'submission.event.general.metadataUpdated',0),(52,515,6,12,'2022-07-20 23:33:31',1342177281,'submission.event.fileUploaded',0),(53,1048585,6,12,'2022-07-20 23:33:31',1342177288,'submission.event.fileRevised',0),(54,515,6,12,'2022-07-20 23:33:33',1342177296,'submission.event.fileEdited',0),(55,1048585,6,12,'2022-07-20 23:33:33',1342177296,'submission.event.fileEdited',0),(56,1048585,6,12,'2022-07-20 23:33:37',268435458,'submission.event.general.metadataUpdated',0),(57,1048585,6,12,'2022-07-20 23:33:38',268435457,'submission.event.submissionSubmitted',0),(58,1048585,6,3,'2022-07-20 23:33:46',268435462,'publication.event.published',0),(59,1048585,7,13,'2022-07-20 23:33:55',268435458,'submission.event.general.metadataUpdated',0),(60,515,7,13,'2022-07-20 23:34:06',1342177281,'submission.event.fileUploaded',0),(61,1048585,7,13,'2022-07-20 23:34:06',1342177288,'submission.event.fileRevised',0),(62,515,7,13,'2022-07-20 23:34:08',1342177296,'submission.event.fileEdited',0),(63,1048585,7,13,'2022-07-20 23:34:08',1342177296,'submission.event.fileEdited',0),(64,1048585,7,13,'2022-07-20 23:34:19',268435458,'submission.event.general.metadataUpdated',0),(65,1048585,7,13,'2022-07-20 23:34:20',268435457,'submission.event.submissionSubmitted',0),(66,1048585,7,3,'2022-07-20 23:34:29',268435462,'publication.event.published',0),(67,1048585,8,14,'2022-07-20 23:34:38',268435458,'submission.event.general.metadataUpdated',0),(68,515,8,14,'2022-07-20 23:34:49',1342177281,'submission.event.fileUploaded',0),(69,1048585,8,14,'2022-07-20 23:34:49',1342177288,'submission.event.fileRevised',0),(70,515,8,14,'2022-07-20 23:34:51',1342177296,'submission.event.fileEdited',0),(71,1048585,8,14,'2022-07-20 23:34:51',1342177296,'submission.event.fileEdited',0),(72,1048585,8,14,'2022-07-20 23:34:54',268435458,'submission.event.general.metadataUpdated',0),(73,1048585,8,14,'2022-07-20 23:34:55',268435457,'submission.event.submissionSubmitted',0),(74,1048585,8,3,'2022-07-20 23:35:03',268435462,'publication.event.published',0),(75,1048585,9,15,'2022-07-20 23:35:14',268435458,'submission.event.general.metadataUpdated',0),(76,515,9,15,'2022-07-20 23:35:24',1342177281,'submission.event.fileUploaded',0),(77,1048585,9,15,'2022-07-20 23:35:24',1342177288,'submission.event.fileRevised',0),(78,515,9,15,'2022-07-20 23:35:26',1342177296,'submission.event.fileEdited',0),(79,1048585,9,15,'2022-07-20 23:35:26',1342177296,'submission.event.fileEdited',0),(80,1048585,9,15,'2022-07-20 23:35:31',268435458,'submission.event.general.metadataUpdated',0),(81,1048585,9,15,'2022-07-20 23:35:32',268435457,'submission.event.submissionSubmitted',0),(82,1048585,9,3,'2022-07-20 23:35:40',268435462,'publication.event.published',0),(83,1048585,10,16,'2022-07-20 23:35:50',268435458,'submission.event.general.metadataUpdated',0),(84,515,10,16,'2022-07-20 23:36:00',1342177281,'submission.event.fileUploaded',0),(85,1048585,10,16,'2022-07-20 23:36:00',1342177288,'submission.event.fileRevised',0),(86,515,10,16,'2022-07-20 23:36:02',1342177296,'submission.event.fileEdited',0),(87,1048585,10,16,'2022-07-20 23:36:02',1342177296,'submission.event.fileEdited',0),(88,1048585,10,16,'2022-07-20 23:36:08',268435458,'submission.event.general.metadataUpdated',0),(89,1048585,10,16,'2022-07-20 23:36:09',268435457,'submission.event.submissionSubmitted',0),(90,1048585,10,3,'2022-07-20 23:36:18',268435462,'publication.event.published',0),(91,1048585,11,17,'2022-07-20 23:36:28',268435458,'submission.event.general.metadataUpdated',0),(92,515,11,17,'2022-07-20 23:36:38',1342177281,'submission.event.fileUploaded',0),(93,1048585,11,17,'2022-07-20 23:36:38',1342177288,'submission.event.fileRevised',0),(94,515,11,17,'2022-07-20 23:36:41',1342177296,'submission.event.fileEdited',0),(95,1048585,11,17,'2022-07-20 23:36:41',1342177296,'submission.event.fileEdited',0),(96,1048585,11,17,'2022-07-20 23:36:49',268435458,'submission.event.general.metadataUpdated',0),(97,1048585,11,17,'2022-07-20 23:36:50',268435457,'submission.event.submissionSubmitted',0),(98,1048585,11,3,'2022-07-20 23:36:59',268435462,'publication.event.published',0),(99,1048585,12,18,'2022-07-20 23:37:10',268435458,'submission.event.general.metadataUpdated',0),(100,515,12,18,'2022-07-20 23:37:20',1342177281,'submission.event.fileUploaded',0),(101,1048585,12,18,'2022-07-20 23:37:20',1342177288,'submission.event.fileRevised',0),(102,515,12,18,'2022-07-20 23:37:22',1342177296,'submission.event.fileEdited',0),(103,1048585,12,18,'2022-07-20 23:37:22',1342177296,'submission.event.fileEdited',0),(104,1048585,12,18,'2022-07-20 23:37:27',268435458,'submission.event.general.metadataUpdated',0),(105,1048585,12,18,'2022-07-20 23:37:28',268435457,'submission.event.submissionSubmitted',0),(106,1048585,12,3,'2022-07-20 23:37:37',268435462,'publication.event.published',0),(107,1048585,13,19,'2022-07-20 23:37:47',268435458,'submission.event.general.metadataUpdated',0),(108,515,13,19,'2022-07-20 23:37:57',1342177281,'submission.event.fileUploaded',0),(109,1048585,13,19,'2022-07-20 23:37:57',1342177288,'submission.event.fileRevised',0),(110,515,13,19,'2022-07-20 23:38:00',1342177296,'submission.event.fileEdited',0),(111,1048585,13,19,'2022-07-20 23:38:00',1342177296,'submission.event.fileEdited',0),(112,1048585,13,19,'2022-07-20 23:38:07',268435458,'submission.event.general.metadataUpdated',0),(113,1048585,13,19,'2022-07-20 23:38:08',268435457,'submission.event.submissionSubmitted',0),(114,1048585,13,3,'2022-07-20 23:38:17',268435462,'publication.event.published',0),(115,1048585,14,20,'2022-07-20 23:38:28',268435458,'submission.event.general.metadataUpdated',0),(116,515,14,20,'2022-07-20 23:38:38',1342177281,'submission.event.fileUploaded',0),(117,1048585,14,20,'2022-07-20 23:38:38',1342177288,'submission.event.fileRevised',0),(118,515,14,20,'2022-07-20 23:38:40',1342177296,'submission.event.fileEdited',0),(119,1048585,14,20,'2022-07-20 23:38:40',1342177296,'submission.event.fileEdited',0),(120,1048585,14,20,'2022-07-20 23:38:45',268435458,'submission.event.general.metadataUpdated',0),(121,1048585,14,20,'2022-07-20 23:38:46',268435457,'submission.event.submissionSubmitted',0),(122,1048585,14,3,'2022-07-20 23:38:55',268435462,'publication.event.published',0),(123,1048585,15,21,'2022-07-20 23:39:05',268435458,'submission.event.general.metadataUpdated',0),(124,515,15,21,'2022-07-20 23:39:16',1342177281,'submission.event.fileUploaded',0),(125,1048585,15,21,'2022-07-20 23:39:16',1342177288,'submission.event.fileRevised',0),(126,515,15,21,'2022-07-20 23:39:18',1342177296,'submission.event.fileEdited',0),(127,1048585,15,21,'2022-07-20 23:39:18',1342177296,'submission.event.fileEdited',0),(128,1048585,15,21,'2022-07-20 23:39:22',268435458,'submission.event.general.metadataUpdated',0),(129,1048585,15,21,'2022-07-20 23:39:23',268435457,'submission.event.submissionSubmitted',0),(130,1048585,15,3,'2022-07-20 23:39:31',268435462,'publication.event.published',0),(131,1048585,16,22,'2022-07-20 23:39:42',268435458,'submission.event.general.metadataUpdated',0),(132,515,16,22,'2022-07-20 23:39:53',1342177281,'submission.event.fileUploaded',0),(133,1048585,16,22,'2022-07-20 23:39:53',1342177288,'submission.event.fileRevised',0),(134,515,16,22,'2022-07-20 23:39:55',1342177296,'submission.event.fileEdited',0),(135,1048585,16,22,'2022-07-20 23:39:55',1342177296,'submission.event.fileEdited',0),(136,1048585,16,22,'2022-07-20 23:40:02',268435458,'submission.event.general.metadataUpdated',0),(137,1048585,16,22,'2022-07-20 23:40:03',268435457,'submission.event.submissionSubmitted',0),(138,1048585,16,3,'2022-07-20 23:40:12',268435462,'publication.event.published',0),(139,1048585,17,23,'2022-07-20 23:40:22',268435458,'submission.event.general.metadataUpdated',0),(140,515,17,23,'2022-07-20 23:40:33',1342177281,'submission.event.fileUploaded',0),(141,1048585,17,23,'2022-07-20 23:40:33',1342177288,'submission.event.fileRevised',0),(142,515,17,23,'2022-07-20 23:40:35',1342177296,'submission.event.fileEdited',0),(143,1048585,17,23,'2022-07-20 23:40:35',1342177296,'submission.event.fileEdited',0),(144,1048585,17,23,'2022-07-20 23:40:43',268435458,'submission.event.general.metadataUpdated',0),(145,1048585,17,23,'2022-07-20 23:40:45',268435457,'submission.event.submissionSubmitted',0),(146,1048585,17,3,'2022-07-20 23:40:53',268435462,'publication.event.published',0),(147,1048585,18,24,'2022-07-20 23:41:03',268435458,'submission.event.general.metadataUpdated',0),(148,515,18,24,'2022-07-20 23:41:14',1342177281,'submission.event.fileUploaded',0),(149,1048585,18,24,'2022-07-20 23:41:14',1342177288,'submission.event.fileRevised',0),(150,515,18,24,'2022-07-20 23:41:16',1342177296,'submission.event.fileEdited',0),(151,1048585,18,24,'2022-07-20 23:41:16',1342177296,'submission.event.fileEdited',0),(152,1048585,18,24,'2022-07-20 23:41:20',268435458,'submission.event.general.metadataUpdated',0),(153,1048585,18,24,'2022-07-20 23:41:21',268435457,'submission.event.submissionSubmitted',0),(154,1048585,18,3,'2022-07-20 23:41:31',268435462,'publication.event.published',0),(155,1048585,19,25,'2022-07-20 23:41:41',268435458,'submission.event.general.metadataUpdated',0),(156,515,19,25,'2022-07-20 23:41:51',1342177281,'submission.event.fileUploaded',0),(157,1048585,19,25,'2022-07-20 23:41:51',1342177288,'submission.event.fileRevised',0),(158,515,19,25,'2022-07-20 23:41:54',1342177296,'submission.event.fileEdited',0),(159,1048585,19,25,'2022-07-20 23:41:54',1342177296,'submission.event.fileEdited',0),(160,1048585,19,25,'2022-07-20 23:41:58',268435458,'submission.event.general.metadataUpdated',0),(161,1048585,19,25,'2022-07-20 23:41:59',268435457,'submission.event.submissionSubmitted',0),(162,1048585,19,3,'2022-07-20 23:42:08',268435462,'publication.event.published',0);
+INSERT INTO `event_log` VALUES (1,1048585,1,7,'2022-07-23 18:14:19',268435458,'submission.event.general.metadataUpdated',0),(2,515,1,7,'2022-07-23 18:14:29',1342177281,'submission.event.fileUploaded',0),(3,1048585,1,7,'2022-07-23 18:14:29',1342177288,'submission.event.fileRevised',0),(4,515,1,7,'2022-07-23 18:14:32',1342177296,'submission.event.fileEdited',0),(5,1048585,1,7,'2022-07-23 18:14:32',1342177296,'submission.event.fileEdited',0),(6,1048585,1,7,'2022-07-23 18:14:36',268435458,'submission.event.general.metadataUpdated',0),(7,1048585,1,7,'2022-07-23 18:14:37',268435457,'submission.event.submissionSubmitted',0),(8,1048585,2,8,'2022-07-23 18:14:45',268435458,'submission.event.general.metadataUpdated',0),(9,515,2,8,'2022-07-23 18:14:55',1342177281,'submission.event.fileUploaded',0),(10,1048585,2,8,'2022-07-23 18:14:55',1342177288,'submission.event.fileRevised',0),(11,515,2,8,'2022-07-23 18:14:57',1342177296,'submission.event.fileEdited',0),(12,1048585,2,8,'2022-07-23 18:14:57',1342177296,'submission.event.fileEdited',0),(13,1048585,2,8,'2022-07-23 18:15:03',268435458,'submission.event.general.metadataUpdated',0),(14,1048585,2,8,'2022-07-23 18:15:04',268435457,'submission.event.submissionSubmitted',0),(15,1048585,2,8,'2022-07-23 18:15:09',268435458,'submission.event.general.metadataUpdated',0),(16,1048585,2,8,'2022-07-23 18:15:23',268435458,'submission.event.general.metadataUpdated',0),(17,1048585,2,3,'2022-07-23 18:15:30',268435462,'publication.event.published',0),(18,1048585,3,9,'2022-07-23 18:15:39',268435458,'submission.event.general.metadataUpdated',0),(19,515,3,9,'2022-07-23 18:15:49',1342177281,'submission.event.fileUploaded',0),(20,1048585,3,9,'2022-07-23 18:15:49',1342177288,'submission.event.fileRevised',0),(21,515,3,9,'2022-07-23 18:15:51',1342177296,'submission.event.fileEdited',0),(22,1048585,3,9,'2022-07-23 18:15:51',1342177296,'submission.event.fileEdited',0),(23,1048585,3,9,'2022-07-23 18:16:02',268435458,'submission.event.general.metadataUpdated',0),(24,1048585,3,9,'2022-07-23 18:16:03',268435457,'submission.event.submissionSubmitted',0),(25,1048585,3,3,'2022-07-23 18:16:12',268435462,'publication.event.published',0),(26,1048585,3,3,'2022-07-23 18:16:19',268435463,'publication.event.unpublished',0),(27,1048585,3,3,'2022-07-23 18:16:22',268435458,'submission.event.general.metadataUpdated',0),(28,1048585,3,3,'2022-07-23 18:16:25',268435462,'publication.event.published',0),(29,1048585,3,3,'2022-07-23 18:16:28',268435458,'submission.event.general.metadataUpdated',0),(30,1048585,3,3,'2022-07-23 18:16:28',268435464,'publication.event.versionCreated',0),(31,1048585,3,3,'2022-07-23 18:16:32',268435458,'submission.event.general.metadataUpdated',0),(32,1048585,3,3,'2022-07-23 18:16:36',268435462,'publication.event.versionPublished',0),(33,1048585,4,10,'2022-07-23 18:16:44',268435458,'submission.event.general.metadataUpdated',0),(34,515,4,10,'2022-07-23 18:16:54',1342177281,'submission.event.fileUploaded',0),(35,1048585,4,10,'2022-07-23 18:16:54',1342177288,'submission.event.fileRevised',0),(36,515,4,10,'2022-07-23 18:16:56',1342177296,'submission.event.fileEdited',0),(37,1048585,4,10,'2022-07-23 18:16:56',1342177296,'submission.event.fileEdited',0),(38,1048585,4,10,'2022-07-23 18:17:00',268435458,'submission.event.general.metadataUpdated',0),(39,1048585,4,10,'2022-07-23 18:17:01',268435457,'submission.event.submissionSubmitted',0),(40,1048585,4,3,'2022-07-23 18:17:10',805306371,'editor.submission.decision.decline.log',0),(41,1048585,4,3,'2022-07-23 18:17:16',805306371,'editor.submission.decision.revertDecline.log',0),(42,1048585,4,3,'2022-07-23 18:17:23',805306371,'editor.submission.decision.decline.log',0),(43,1048585,5,11,'2022-07-23 18:17:35',268435458,'submission.event.general.metadataUpdated',0),(44,515,5,11,'2022-07-23 18:17:45',1342177281,'submission.event.fileUploaded',0),(45,1048585,5,11,'2022-07-23 18:17:45',1342177288,'submission.event.fileRevised',0),(46,515,5,11,'2022-07-23 18:17:47',1342177296,'submission.event.fileEdited',0),(47,1048585,5,11,'2022-07-23 18:17:47',1342177296,'submission.event.fileEdited',0),(48,1048585,5,11,'2022-07-23 18:17:53',268435458,'submission.event.general.metadataUpdated',0),(49,1048585,5,11,'2022-07-23 18:17:54',268435457,'submission.event.submissionSubmitted',0),(50,1048585,5,3,'2022-07-23 18:18:02',268435462,'publication.event.published',0),(51,1048585,6,12,'2022-07-23 18:18:12',268435458,'submission.event.general.metadataUpdated',0),(52,515,6,12,'2022-07-23 18:18:22',1342177281,'submission.event.fileUploaded',0),(53,1048585,6,12,'2022-07-23 18:18:22',1342177288,'submission.event.fileRevised',0),(54,515,6,12,'2022-07-23 18:18:24',1342177296,'submission.event.fileEdited',0),(55,1048585,6,12,'2022-07-23 18:18:24',1342177296,'submission.event.fileEdited',0),(56,1048585,6,12,'2022-07-23 18:18:28',268435458,'submission.event.general.metadataUpdated',0),(57,1048585,6,12,'2022-07-23 18:18:29',268435457,'submission.event.submissionSubmitted',0),(58,1048585,6,3,'2022-07-23 18:18:37',268435462,'publication.event.published',0),(59,1048585,7,13,'2022-07-23 18:18:47',268435458,'submission.event.general.metadataUpdated',0),(60,515,7,13,'2022-07-23 18:18:57',1342177281,'submission.event.fileUploaded',0),(61,1048585,7,13,'2022-07-23 18:18:57',1342177288,'submission.event.fileRevised',0),(62,515,7,13,'2022-07-23 18:18:59',1342177296,'submission.event.fileEdited',0),(63,1048585,7,13,'2022-07-23 18:18:59',1342177296,'submission.event.fileEdited',0),(64,1048585,7,13,'2022-07-23 18:19:10',268435458,'submission.event.general.metadataUpdated',0),(65,1048585,7,13,'2022-07-23 18:19:11',268435457,'submission.event.submissionSubmitted',0),(66,1048585,7,3,'2022-07-23 18:19:20',268435462,'publication.event.published',0),(67,1048585,8,14,'2022-07-23 18:19:30',268435458,'submission.event.general.metadataUpdated',0),(68,515,8,14,'2022-07-23 18:19:40',1342177281,'submission.event.fileUploaded',0),(69,1048585,8,14,'2022-07-23 18:19:40',1342177288,'submission.event.fileRevised',0),(70,515,8,14,'2022-07-23 18:19:43',1342177296,'submission.event.fileEdited',0),(71,1048585,8,14,'2022-07-23 18:19:43',1342177296,'submission.event.fileEdited',0),(72,1048585,8,14,'2022-07-23 18:19:46',268435458,'submission.event.general.metadataUpdated',0),(73,1048585,8,14,'2022-07-23 18:19:48',268435457,'submission.event.submissionSubmitted',0),(74,1048585,8,3,'2022-07-23 18:19:56',268435462,'publication.event.published',0),(75,1048585,9,15,'2022-07-23 18:20:05',268435458,'submission.event.general.metadataUpdated',0),(76,515,9,15,'2022-07-23 18:20:16',1342177281,'submission.event.fileUploaded',0),(77,1048585,9,15,'2022-07-23 18:20:16',1342177288,'submission.event.fileRevised',0),(78,515,9,15,'2022-07-23 18:20:18',1342177296,'submission.event.fileEdited',0),(79,1048585,9,15,'2022-07-23 18:20:18',1342177296,'submission.event.fileEdited',0),(80,1048585,9,15,'2022-07-23 18:20:23',268435458,'submission.event.general.metadataUpdated',0),(81,1048585,9,15,'2022-07-23 18:20:24',268435457,'submission.event.submissionSubmitted',0),(82,1048585,9,3,'2022-07-23 18:20:32',268435462,'publication.event.published',0),(83,1048585,10,16,'2022-07-23 18:20:42',268435458,'submission.event.general.metadataUpdated',0),(84,515,10,16,'2022-07-23 18:20:53',1342177281,'submission.event.fileUploaded',0),(85,1048585,10,16,'2022-07-23 18:20:53',1342177288,'submission.event.fileRevised',0),(86,515,10,16,'2022-07-23 18:20:55',1342177296,'submission.event.fileEdited',0),(87,1048585,10,16,'2022-07-23 18:20:55',1342177296,'submission.event.fileEdited',0),(88,1048585,10,16,'2022-07-23 18:21:01',268435458,'submission.event.general.metadataUpdated',0),(89,1048585,10,16,'2022-07-23 18:21:01',268435457,'submission.event.submissionSubmitted',0),(90,1048585,10,3,'2022-07-23 18:21:09',268435462,'publication.event.published',0),(91,1048585,11,17,'2022-07-23 18:21:20',268435458,'submission.event.general.metadataUpdated',0),(92,515,11,17,'2022-07-23 18:21:30',1342177281,'submission.event.fileUploaded',0),(93,1048585,11,17,'2022-07-23 18:21:30',1342177288,'submission.event.fileRevised',0),(94,515,11,17,'2022-07-23 18:21:33',1342177296,'submission.event.fileEdited',0),(95,1048585,11,17,'2022-07-23 18:21:33',1342177296,'submission.event.fileEdited',0),(96,1048585,11,17,'2022-07-23 18:21:41',268435458,'submission.event.general.metadataUpdated',0),(97,1048585,11,17,'2022-07-23 18:21:42',268435457,'submission.event.submissionSubmitted',0),(98,1048585,11,3,'2022-07-23 18:21:50',268435462,'publication.event.published',0),(99,1048585,12,18,'2022-07-23 18:22:00',268435458,'submission.event.general.metadataUpdated',0),(100,515,12,18,'2022-07-23 18:22:11',1342177281,'submission.event.fileUploaded',0),(101,1048585,12,18,'2022-07-23 18:22:11',1342177288,'submission.event.fileRevised',0),(102,515,12,18,'2022-07-23 18:22:13',1342177296,'submission.event.fileEdited',0),(103,1048585,12,18,'2022-07-23 18:22:13',1342177296,'submission.event.fileEdited',0),(104,1048585,12,18,'2022-07-23 18:22:18',268435458,'submission.event.general.metadataUpdated',0),(105,1048585,12,18,'2022-07-23 18:22:19',268435457,'submission.event.submissionSubmitted',0),(106,1048585,12,3,'2022-07-23 18:22:30',268435462,'publication.event.published',0),(107,1048585,13,19,'2022-07-23 18:22:42',268435458,'submission.event.general.metadataUpdated',0),(108,515,13,19,'2022-07-23 18:22:52',1342177281,'submission.event.fileUploaded',0),(109,1048585,13,19,'2022-07-23 18:22:52',1342177288,'submission.event.fileRevised',0),(110,515,13,19,'2022-07-23 18:22:54',1342177296,'submission.event.fileEdited',0),(111,1048585,13,19,'2022-07-23 18:22:54',1342177296,'submission.event.fileEdited',0),(112,1048585,13,19,'2022-07-23 18:23:00',268435458,'submission.event.general.metadataUpdated',0),(113,1048585,13,19,'2022-07-23 18:23:01',268435457,'submission.event.submissionSubmitted',0),(114,1048585,13,3,'2022-07-23 18:23:10',268435462,'publication.event.published',0),(115,1048585,14,20,'2022-07-23 18:23:20',268435458,'submission.event.general.metadataUpdated',0),(116,515,14,20,'2022-07-23 18:23:30',1342177281,'submission.event.fileUploaded',0),(117,1048585,14,20,'2022-07-23 18:23:30',1342177288,'submission.event.fileRevised',0),(118,515,14,20,'2022-07-23 18:23:33',1342177296,'submission.event.fileEdited',0),(119,1048585,14,20,'2022-07-23 18:23:33',1342177296,'submission.event.fileEdited',0),(120,1048585,14,20,'2022-07-23 18:23:38',268435458,'submission.event.general.metadataUpdated',0),(121,1048585,14,20,'2022-07-23 18:23:39',268435457,'submission.event.submissionSubmitted',0),(122,1048585,14,3,'2022-07-23 18:23:48',268435462,'publication.event.published',0),(123,1048585,15,21,'2022-07-23 18:23:58',268435458,'submission.event.general.metadataUpdated',0),(124,515,15,21,'2022-07-23 18:24:08',1342177281,'submission.event.fileUploaded',0),(125,1048585,15,21,'2022-07-23 18:24:08',1342177288,'submission.event.fileRevised',0),(126,515,15,21,'2022-07-23 18:24:10',1342177296,'submission.event.fileEdited',0),(127,1048585,15,21,'2022-07-23 18:24:10',1342177296,'submission.event.fileEdited',0),(128,1048585,15,21,'2022-07-23 18:24:13',268435458,'submission.event.general.metadataUpdated',0),(129,1048585,15,21,'2022-07-23 18:24:14',268435457,'submission.event.submissionSubmitted',0),(130,1048585,15,3,'2022-07-23 18:24:22',268435462,'publication.event.published',0),(131,1048585,16,22,'2022-07-23 18:24:32',268435458,'submission.event.general.metadataUpdated',0),(132,515,16,22,'2022-07-23 18:24:43',1342177281,'submission.event.fileUploaded',0),(133,1048585,16,22,'2022-07-23 18:24:43',1342177288,'submission.event.fileRevised',0),(134,515,16,22,'2022-07-23 18:24:45',1342177296,'submission.event.fileEdited',0),(135,1048585,16,22,'2022-07-23 18:24:45',1342177296,'submission.event.fileEdited',0),(136,1048585,16,22,'2022-07-23 18:24:52',268435458,'submission.event.general.metadataUpdated',0),(137,1048585,16,22,'2022-07-23 18:24:53',268435457,'submission.event.submissionSubmitted',0),(138,1048585,16,3,'2022-07-23 18:25:01',268435462,'publication.event.published',0),(139,1048585,17,23,'2022-07-23 18:25:11',268435458,'submission.event.general.metadataUpdated',0),(140,515,17,23,'2022-07-23 18:25:22',1342177281,'submission.event.fileUploaded',0),(141,1048585,17,23,'2022-07-23 18:25:22',1342177288,'submission.event.fileRevised',0),(142,515,17,23,'2022-07-23 18:25:24',1342177296,'submission.event.fileEdited',0),(143,1048585,17,23,'2022-07-23 18:25:24',1342177296,'submission.event.fileEdited',0),(144,1048585,17,23,'2022-07-23 18:25:32',268435458,'submission.event.general.metadataUpdated',0),(145,1048585,17,23,'2022-07-23 18:25:33',268435457,'submission.event.submissionSubmitted',0),(146,1048585,17,3,'2022-07-23 18:25:42',268435462,'publication.event.published',0),(147,1048585,18,24,'2022-07-23 18:25:52',268435458,'submission.event.general.metadataUpdated',0),(148,515,18,24,'2022-07-23 18:26:02',1342177281,'submission.event.fileUploaded',0),(149,1048585,18,24,'2022-07-23 18:26:02',1342177288,'submission.event.fileRevised',0),(150,515,18,24,'2022-07-23 18:26:04',1342177296,'submission.event.fileEdited',0),(151,1048585,18,24,'2022-07-23 18:26:04',1342177296,'submission.event.fileEdited',0),(152,1048585,18,24,'2022-07-23 18:26:09',268435458,'submission.event.general.metadataUpdated',0),(153,1048585,18,24,'2022-07-23 18:26:10',268435457,'submission.event.submissionSubmitted',0),(154,1048585,18,3,'2022-07-23 18:26:19',268435462,'publication.event.published',0),(155,1048585,19,25,'2022-07-23 18:26:28',268435458,'submission.event.general.metadataUpdated',0),(156,515,19,25,'2022-07-23 18:26:38',1342177281,'submission.event.fileUploaded',0),(157,1048585,19,25,'2022-07-23 18:26:38',1342177288,'submission.event.fileRevised',0),(158,515,19,25,'2022-07-23 18:26:40',1342177296,'submission.event.fileEdited',0),(159,1048585,19,25,'2022-07-23 18:26:40',1342177296,'submission.event.fileEdited',0),(160,1048585,19,25,'2022-07-23 18:26:44',268435458,'submission.event.general.metadataUpdated',0),(161,1048585,19,25,'2022-07-23 18:26:45',268435457,'submission.event.submissionSubmitted',0),(162,1048585,19,3,'2022-07-23 18:26:54',268435462,'publication.event.published',0);
 /*!40000 ALTER TABLE `event_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -875,7 +875,7 @@ CREATE TABLE `files` (
 
 LOCK TABLES `files` WRITE;
 /*!40000 ALTER TABLE `files` DISABLE KEYS */;
-INSERT INTO `files` VALUES (1,'contexts/1/submissions/1/62d88fd8c27ee.pdf','application/pdf'),(2,'contexts/1/submissions/2/62d88ff34dc2b.pdf','application/pdf'),(3,'contexts/1/submissions/3/62d8902b0de24.pdf','application/pdf'),(4,'contexts/1/submissions/4/62d8906e69e9c.pdf','application/pdf'),(5,'contexts/1/submissions/5/62d890a3266e7.pdf','application/pdf'),(6,'contexts/1/submissions/6/62d890cb897ba.pdf','application/pdf'),(7,'contexts/1/submissions/7/62d890ee2ab0c.pdf','application/pdf'),(8,'contexts/1/submissions/8/62d891190acbe.pdf','application/pdf'),(9,'contexts/1/submissions/9/62d8913c4adb6.pdf','application/pdf'),(10,'contexts/1/submissions/10/62d891604ac52.pdf','application/pdf'),(11,'contexts/1/submissions/11/62d89186a56ec.pdf','application/pdf'),(12,'contexts/1/submissions/12/62d891b04115c.pdf','application/pdf'),(13,'contexts/1/submissions/13/62d891d5ece64.pdf','application/pdf'),(14,'contexts/1/submissions/14/62d891fe5e4f4.pdf','application/pdf'),(15,'contexts/1/submissions/15/62d8922433f76.pdf','application/pdf'),(16,'contexts/1/submissions/16/62d892494797a.pdf','application/pdf'),(17,'contexts/1/submissions/17/62d8927176a92.pdf','application/pdf'),(18,'contexts/1/submissions/18/62d8929a033a5.pdf','application/pdf'),(19,'contexts/1/submissions/19/62d892bfd1be6.pdf','application/pdf');
+INSERT INTO `files` VALUES (1,'contexts/1/submissions/1/62dc3a85ce3bd.pdf','application/pdf'),(2,'contexts/1/submissions/2/62dc3a9f6d893.pdf','application/pdf'),(3,'contexts/1/submissions/3/62dc3ad5736a6.pdf','application/pdf'),(4,'contexts/1/submissions/4/62dc3b1694995.pdf','application/pdf'),(5,'contexts/1/submissions/5/62dc3b493d96b.pdf','application/pdf'),(6,'contexts/1/submissions/6/62dc3b6e5c170.pdf','application/pdf'),(7,'contexts/1/submissions/7/62dc3b91906b3.pdf','application/pdf'),(8,'contexts/1/submissions/8/62dc3bbce237d.pdf','application/pdf'),(9,'contexts/1/submissions/9/62dc3be020b84.pdf','application/pdf'),(10,'contexts/1/submissions/10/62dc3c0527f63.pdf','application/pdf'),(11,'contexts/1/submissions/11/62dc3c2aa05d2.pdf','application/pdf'),(12,'contexts/1/submissions/12/62dc3c5346682.pdf','application/pdf'),(13,'contexts/1/submissions/13/62dc3c7c4dd6d.pdf','application/pdf'),(14,'contexts/1/submissions/14/62dc3ca2ebb60.pdf','application/pdf'),(15,'contexts/1/submissions/15/62dc3cc80b73a.pdf','application/pdf'),(16,'contexts/1/submissions/16/62dc3ceb5a5e1.pdf','application/pdf'),(17,'contexts/1/submissions/17/62dc3d125301e.pdf','application/pdf'),(18,'contexts/1/submissions/18/62dc3d3a748e0.pdf','application/pdf'),(19,'contexts/1/submissions/19/62dc3d5e74594.pdf','application/pdf');
 /*!40000 ALTER TABLE `files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1023,6 +1023,90 @@ LOCK TABLES `genres` WRITE;
 /*!40000 ALTER TABLE `genres` DISABLE KEYS */;
 INSERT INTO `genres` VALUES (1,1,0,1,1,0,0,'SUBMISSION'),(2,1,1,1,3,0,1,'RESEARCHINSTRUMENT'),(3,1,2,1,3,0,1,'RESEARCHMATERIALS'),(4,1,3,1,3,0,1,'RESEARCHRESULTS'),(5,1,4,1,3,0,1,'TRANSCRIPTS'),(6,1,5,1,3,0,1,'DATAANALYSIS'),(7,1,6,1,3,0,1,'DATASET'),(8,1,7,1,3,0,1,'SOURCETEXTS'),(9,1,8,1,1,1,1,'MULTIMEDIA'),(10,1,9,1,2,1,0,'IMAGE'),(11,1,10,1,1,1,0,'STYLE'),(12,1,11,1,3,0,1,'OTHER');
 /*!40000 ALTER TABLE `genres` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `institution_ip`
+--
+
+DROP TABLE IF EXISTS `institution_ip`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `institution_ip` (
+  `institution_ip_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `institution_id` bigint(20) NOT NULL,
+  `ip_string` varchar(40) NOT NULL,
+  `ip_start` bigint(20) NOT NULL,
+  `ip_end` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`institution_ip_id`),
+  KEY `institution_ip_institution_id` (`institution_id`),
+  KEY `institution_ip_start` (`ip_start`),
+  KEY `institution_ip_end` (`ip_end`),
+  CONSTRAINT `institution_ip_institution_id_foreign` FOREIGN KEY (`institution_id`) REFERENCES `institutions` (`institution_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `institution_ip`
+--
+
+LOCK TABLES `institution_ip` WRITE;
+/*!40000 ALTER TABLE `institution_ip` DISABLE KEYS */;
+/*!40000 ALTER TABLE `institution_ip` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `institution_settings`
+--
+
+DROP TABLE IF EXISTS `institution_settings`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `institution_settings` (
+  `institution_id` bigint(20) NOT NULL,
+  `locale` varchar(14) NOT NULL DEFAULT '',
+  `setting_name` varchar(255) NOT NULL,
+  `setting_value` text,
+  UNIQUE KEY `institution_settings_pkey` (`institution_id`,`locale`,`setting_name`),
+  KEY `institution_settings_institution_id` (`institution_id`),
+  CONSTRAINT `institution_settings_institution_id_foreign` FOREIGN KEY (`institution_id`) REFERENCES `institutions` (`institution_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `institution_settings`
+--
+
+LOCK TABLES `institution_settings` WRITE;
+/*!40000 ALTER TABLE `institution_settings` DISABLE KEYS */;
+/*!40000 ALTER TABLE `institution_settings` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `institutions`
+--
+
+DROP TABLE IF EXISTS `institutions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `institutions` (
+  `institution_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `context_id` bigint(20) NOT NULL,
+  `ror` varchar(255) DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`institution_id`),
+  KEY `institutions_context_id_foreign` (`context_id`),
+  CONSTRAINT `institutions_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `institutions`
+--
+
+LOCK TABLES `institutions` WRITE;
+/*!40000 ALTER TABLE `institutions` DISABLE KEYS */;
+/*!40000 ALTER TABLE `institutions` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1223,44 +1307,274 @@ LOCK TABLES `metadata_descriptions` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `metrics`
+-- Table structure for table `metrics_context`
 --
 
-DROP TABLE IF EXISTS `metrics`;
+DROP TABLE IF EXISTS `metrics_context`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `metrics` (
+CREATE TABLE `metrics_context` (
   `load_id` varchar(255) NOT NULL,
   `context_id` bigint(20) NOT NULL,
-  `pkp_section_id` bigint(20) DEFAULT NULL,
-  `assoc_object_type` bigint(20) DEFAULT NULL,
-  `assoc_object_id` bigint(20) DEFAULT NULL,
-  `submission_id` bigint(20) DEFAULT NULL,
-  `representation_id` bigint(20) DEFAULT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `day` varchar(8) DEFAULT NULL,
-  `month` varchar(6) DEFAULT NULL,
-  `file_type` smallint(6) DEFAULT NULL,
-  `country_id` varchar(2) DEFAULT NULL,
-  `region` varchar(2) DEFAULT NULL,
-  `city` varchar(255) DEFAULT NULL,
-  `metric_type` varchar(255) NOT NULL,
+  `date` date NOT NULL,
   `metric` int(11) NOT NULL,
-  KEY `metrics_load_id` (`load_id`),
-  KEY `metrics_metric_type_context_id` (`metric_type`,`context_id`),
-  KEY `metrics_metric_type_submission_id_assoc_type` (`metric_type`,`submission_id`,`assoc_type`),
-  KEY `metrics_metric_type_submission_id_assoc` (`metric_type`,`context_id`,`assoc_type`,`assoc_id`)
+  KEY `metrics_context_load_id` (`load_id`),
+  KEY `metrics_context_context_id` (`context_id`),
+  CONSTRAINT `metrics_context_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `metrics`
+-- Dumping data for table `metrics_context`
 --
 
-LOCK TABLES `metrics` WRITE;
-/*!40000 ALTER TABLE `metrics` DISABLE KEYS */;
-/*!40000 ALTER TABLE `metrics` ENABLE KEYS */;
+LOCK TABLES `metrics_context` WRITE;
+/*!40000 ALTER TABLE `metrics_context` DISABLE KEYS */;
+/*!40000 ALTER TABLE `metrics_context` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `metrics_counter_submission_daily`
+--
+
+DROP TABLE IF EXISTS `metrics_counter_submission_daily`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `metrics_counter_submission_daily` (
+  `load_id` varchar(255) NOT NULL,
+  `context_id` bigint(20) NOT NULL,
+  `submission_id` bigint(20) NOT NULL,
+  `date` date NOT NULL,
+  `metric_investigations` int(11) NOT NULL,
+  `metric_investigations_unique` int(11) NOT NULL,
+  `metric_requests` int(11) NOT NULL,
+  `metric_requests_unique` int(11) NOT NULL,
+  UNIQUE KEY `msd_uc_load_id_context_id_submission_id_date` (`load_id`,`context_id`,`submission_id`,`date`),
+  KEY `msd_submission_id_foreign` (`submission_id`),
+  KEY `msd_load_id` (`load_id`),
+  KEY `msd_context_id_submission_id` (`context_id`,`submission_id`),
+  CONSTRAINT `msd_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
+  CONSTRAINT `msd_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `metrics_counter_submission_daily`
+--
+
+LOCK TABLES `metrics_counter_submission_daily` WRITE;
+/*!40000 ALTER TABLE `metrics_counter_submission_daily` DISABLE KEYS */;
+/*!40000 ALTER TABLE `metrics_counter_submission_daily` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `metrics_counter_submission_institution_daily`
+--
+
+DROP TABLE IF EXISTS `metrics_counter_submission_institution_daily`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `metrics_counter_submission_institution_daily` (
+  `load_id` varchar(255) NOT NULL,
+  `context_id` bigint(20) NOT NULL,
+  `submission_id` bigint(20) NOT NULL,
+  `institution_id` bigint(20) NOT NULL,
+  `date` date NOT NULL,
+  `metric_investigations` int(11) NOT NULL,
+  `metric_investigations_unique` int(11) NOT NULL,
+  `metric_requests` int(11) NOT NULL,
+  `metric_requests_unique` int(11) NOT NULL,
+  UNIQUE KEY `msid_uc_load_id_context_id_submission_id_institution_id_date` (`load_id`,`context_id`,`submission_id`,`institution_id`,`date`),
+  KEY `msid_submission_id_foreign` (`submission_id`),
+  KEY `msid_institution_id_foreign` (`institution_id`),
+  KEY `msid_load_id` (`load_id`),
+  KEY `msid_context_id_submission_id` (`context_id`,`submission_id`),
+  CONSTRAINT `msid_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
+  CONSTRAINT `msid_institution_id_foreign` FOREIGN KEY (`institution_id`) REFERENCES `institutions` (`institution_id`) ON DELETE CASCADE,
+  CONSTRAINT `msid_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `metrics_counter_submission_institution_daily`
+--
+
+LOCK TABLES `metrics_counter_submission_institution_daily` WRITE;
+/*!40000 ALTER TABLE `metrics_counter_submission_institution_daily` DISABLE KEYS */;
+/*!40000 ALTER TABLE `metrics_counter_submission_institution_daily` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `metrics_counter_submission_institution_monthly`
+--
+
+DROP TABLE IF EXISTS `metrics_counter_submission_institution_monthly`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `metrics_counter_submission_institution_monthly` (
+  `context_id` bigint(20) NOT NULL,
+  `submission_id` bigint(20) NOT NULL,
+  `institution_id` bigint(20) NOT NULL,
+  `month` int(11) NOT NULL,
+  `metric_investigations` int(11) NOT NULL,
+  `metric_investigations_unique` int(11) NOT NULL,
+  `metric_requests` int(11) NOT NULL,
+  `metric_requests_unique` int(11) NOT NULL,
+  UNIQUE KEY `msim_uc_context_id_submission_id_institution_id_month` (`context_id`,`submission_id`,`institution_id`,`month`),
+  KEY `msim_submission_id_foreign` (`submission_id`),
+  KEY `msim_institution_id_foreign` (`institution_id`),
+  KEY `msim_context_id_submission_id` (`context_id`,`submission_id`),
+  CONSTRAINT `msim_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
+  CONSTRAINT `msim_institution_id_foreign` FOREIGN KEY (`institution_id`) REFERENCES `institutions` (`institution_id`) ON DELETE CASCADE,
+  CONSTRAINT `msim_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `metrics_counter_submission_institution_monthly`
+--
+
+LOCK TABLES `metrics_counter_submission_institution_monthly` WRITE;
+/*!40000 ALTER TABLE `metrics_counter_submission_institution_monthly` DISABLE KEYS */;
+/*!40000 ALTER TABLE `metrics_counter_submission_institution_monthly` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `metrics_counter_submission_monthly`
+--
+
+DROP TABLE IF EXISTS `metrics_counter_submission_monthly`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `metrics_counter_submission_monthly` (
+  `context_id` bigint(20) NOT NULL,
+  `submission_id` bigint(20) NOT NULL,
+  `month` int(11) NOT NULL,
+  `metric_investigations` int(11) NOT NULL,
+  `metric_investigations_unique` int(11) NOT NULL,
+  `metric_requests` int(11) NOT NULL,
+  `metric_requests_unique` int(11) NOT NULL,
+  UNIQUE KEY `msm_uc_context_id_submission_id_month` (`context_id`,`submission_id`,`month`),
+  KEY `msm_submission_id_foreign` (`submission_id`),
+  KEY `msm_context_id_submission_id` (`context_id`,`submission_id`),
+  CONSTRAINT `msm_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
+  CONSTRAINT `msm_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `metrics_counter_submission_monthly`
+--
+
+LOCK TABLES `metrics_counter_submission_monthly` WRITE;
+/*!40000 ALTER TABLE `metrics_counter_submission_monthly` DISABLE KEYS */;
+/*!40000 ALTER TABLE `metrics_counter_submission_monthly` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `metrics_submission`
+--
+
+DROP TABLE IF EXISTS `metrics_submission`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `metrics_submission` (
+  `load_id` varchar(255) NOT NULL,
+  `context_id` bigint(20) NOT NULL,
+  `submission_id` bigint(20) NOT NULL,
+  `representation_id` bigint(20) DEFAULT NULL,
+  `submission_file_id` bigint(20) unsigned DEFAULT NULL,
+  `file_type` bigint(20) DEFAULT NULL,
+  `assoc_type` bigint(20) NOT NULL,
+  `date` date NOT NULL,
+  `metric` int(11) NOT NULL,
+  KEY `metrics_submission_submission_id_foreign` (`submission_id`),
+  KEY `metrics_submission_representation_id_foreign` (`representation_id`),
+  KEY `metrics_submission_submission_file_id_foreign` (`submission_file_id`),
+  KEY `ms_load_id` (`load_id`),
+  KEY `ms_context_id_submission_id_assoc_type_file_type` (`context_id`,`submission_id`,`assoc_type`,`file_type`),
+  CONSTRAINT `metrics_submission_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
+  CONSTRAINT `metrics_submission_representation_id_foreign` FOREIGN KEY (`representation_id`) REFERENCES `publication_galleys` (`galley_id`) ON DELETE CASCADE,
+  CONSTRAINT `metrics_submission_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE,
+  CONSTRAINT `metrics_submission_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `metrics_submission`
+--
+
+LOCK TABLES `metrics_submission` WRITE;
+/*!40000 ALTER TABLE `metrics_submission` DISABLE KEYS */;
+/*!40000 ALTER TABLE `metrics_submission` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `metrics_submission_geo_daily`
+--
+
+DROP TABLE IF EXISTS `metrics_submission_geo_daily`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `metrics_submission_geo_daily` (
+  `load_id` varchar(255) NOT NULL,
+  `context_id` bigint(20) NOT NULL,
+  `submission_id` bigint(20) NOT NULL,
+  `country` varchar(2) NOT NULL DEFAULT '',
+  `region` varchar(3) NOT NULL DEFAULT '',
+  `city` varchar(255) NOT NULL DEFAULT '',
+  `date` date NOT NULL,
+  `metric` int(11) NOT NULL,
+  `metric_unique` int(11) NOT NULL,
+  UNIQUE KEY `msgd_uc_load_context_submission_c_r_c_date` (`load_id`,`context_id`,`submission_id`,`country`,`region`,`city`,`date`),
+  KEY `msgd_submission_id_foreign` (`submission_id`),
+  KEY `msgd_load_id` (`load_id`),
+  KEY `msgd_context_id_submission_id` (`context_id`,`submission_id`),
+  CONSTRAINT `msgd_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
+  CONSTRAINT `msgd_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `metrics_submission_geo_daily`
+--
+
+LOCK TABLES `metrics_submission_geo_daily` WRITE;
+/*!40000 ALTER TABLE `metrics_submission_geo_daily` DISABLE KEYS */;
+/*!40000 ALTER TABLE `metrics_submission_geo_daily` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `metrics_submission_geo_monthly`
+--
+
+DROP TABLE IF EXISTS `metrics_submission_geo_monthly`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `metrics_submission_geo_monthly` (
+  `context_id` bigint(20) NOT NULL,
+  `submission_id` bigint(20) NOT NULL,
+  `country` varchar(2) NOT NULL DEFAULT '',
+  `region` varchar(3) NOT NULL DEFAULT '',
+  `city` varchar(255) NOT NULL DEFAULT '',
+  `month` int(11) NOT NULL,
+  `metric` int(11) NOT NULL,
+  `metric_unique` int(11) NOT NULL,
+  UNIQUE KEY `msgm_uc_context_submission_c_r_c_month` (`context_id`,`submission_id`,`country`,`region`,`city`,`month`),
+  KEY `msgm_submission_id_foreign` (`submission_id`),
+  KEY `msgm_context_id_submission_id` (`context_id`,`submission_id`),
+  CONSTRAINT `msgm_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
+  CONSTRAINT `msgm_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `metrics_submission_geo_monthly`
+--
+
+LOCK TABLES `metrics_submission_geo_monthly` WRITE;
+/*!40000 ALTER TABLE `metrics_submission_geo_monthly` DISABLE KEYS */;
+/*!40000 ALTER TABLE `metrics_submission_geo_monthly` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -1540,7 +1854,7 @@ CREATE TABLE `notifications` (
 
 LOCK TABLES `notifications` WRITE;
 /*!40000 ALTER TABLE `notifications` DISABLE KEYS */;
-INSERT INTO `notifications` VALUES (3,1,0,3,16777222,'2022-07-20 23:29:36',NULL,1048585,1),(4,1,0,3,16777223,'2022-07-20 23:29:36',NULL,1048585,1),(5,1,4,2,16777217,'2022-07-20 23:29:36',NULL,1048585,1),(7,1,5,2,16777217,'2022-07-20 23:29:36',NULL,1048585,1),(9,1,0,2,16777243,'2022-07-20 23:29:36',NULL,1048585,1),(10,1,0,2,16777245,'2022-07-20 23:29:36',NULL,1048585,1),(12,1,0,3,16777222,'2022-07-20 23:30:04',NULL,1048585,2),(13,1,0,3,16777223,'2022-07-20 23:30:04',NULL,1048585,2),(14,1,4,2,16777217,'2022-07-20 23:30:04',NULL,1048585,2),(16,1,5,2,16777217,'2022-07-20 23:30:04',NULL,1048585,2),(18,1,0,2,16777243,'2022-07-20 23:30:04',NULL,1048585,2),(19,1,0,2,16777245,'2022-07-20 23:30:04',NULL,1048585,2),(23,1,0,3,16777222,'2022-07-20 23:31:03',NULL,1048585,3),(24,1,0,3,16777223,'2022-07-20 23:31:03',NULL,1048585,3),(25,1,4,2,16777217,'2022-07-20 23:31:03',NULL,1048585,3),(27,1,5,2,16777217,'2022-07-20 23:31:04',NULL,1048585,3),(29,1,0,2,16777243,'2022-07-20 23:31:04',NULL,1048585,3),(30,1,0,2,16777245,'2022-07-20 23:31:04',NULL,1048585,3),(35,1,4,3,16777259,'2022-07-20 23:31:31',NULL,1048585,3),(37,1,5,3,16777259,'2022-07-20 23:31:32',NULL,1048585,3),(39,1,9,3,16777259,'2022-07-20 23:31:32',NULL,1048585,3),(41,1,0,3,16777222,'2022-07-20 23:32:05',NULL,1048585,4),(42,1,0,3,16777223,'2022-07-20 23:32:05',NULL,1048585,4),(43,1,4,2,16777217,'2022-07-20 23:32:05',NULL,1048585,4),(45,1,5,2,16777217,'2022-07-20 23:32:05',NULL,1048585,4),(47,1,0,2,16777243,'2022-07-20 23:32:05',NULL,1048585,4),(48,1,0,2,16777245,'2022-07-20 23:32:05',NULL,1048585,4),(51,1,10,2,16777234,'2022-07-20 23:32:28',NULL,1048585,4),(52,1,0,3,16777222,'2022-07-20 23:33:01',NULL,1048585,5),(53,1,0,3,16777223,'2022-07-20 23:33:01',NULL,1048585,5),(54,1,4,2,16777217,'2022-07-20 23:33:01',NULL,1048585,5),(56,1,5,2,16777217,'2022-07-20 23:33:01',NULL,1048585,5),(58,1,0,2,16777243,'2022-07-20 23:33:01',NULL,1048585,5),(59,1,0,2,16777245,'2022-07-20 23:33:01',NULL,1048585,5),(62,1,0,3,16777222,'2022-07-20 23:33:38',NULL,1048585,6),(63,1,0,3,16777223,'2022-07-20 23:33:38',NULL,1048585,6),(64,1,4,2,16777217,'2022-07-20 23:33:38',NULL,1048585,6),(66,1,5,2,16777217,'2022-07-20 23:33:38',NULL,1048585,6),(68,1,0,2,16777243,'2022-07-20 23:33:38',NULL,1048585,6),(69,1,0,2,16777245,'2022-07-20 23:33:38',NULL,1048585,6),(73,1,0,3,16777222,'2022-07-20 23:34:20',NULL,1048585,7),(74,1,0,3,16777223,'2022-07-20 23:34:20',NULL,1048585,7),(75,1,4,2,16777217,'2022-07-20 23:34:20',NULL,1048585,7),(77,1,5,2,16777217,'2022-07-20 23:34:20',NULL,1048585,7),(79,1,0,2,16777243,'2022-07-20 23:34:20',NULL,1048585,7),(80,1,0,2,16777245,'2022-07-20 23:34:20',NULL,1048585,7),(84,1,0,3,16777222,'2022-07-20 23:34:55',NULL,1048585,8),(85,1,0,3,16777223,'2022-07-20 23:34:55',NULL,1048585,8),(86,1,4,2,16777217,'2022-07-20 23:34:55',NULL,1048585,8),(88,1,5,2,16777217,'2022-07-20 23:34:55',NULL,1048585,8),(90,1,0,2,16777243,'2022-07-20 23:34:55',NULL,1048585,8),(91,1,0,2,16777245,'2022-07-20 23:34:55',NULL,1048585,8),(94,1,0,3,16777222,'2022-07-20 23:35:31',NULL,1048585,9),(95,1,0,3,16777223,'2022-07-20 23:35:31',NULL,1048585,9),(96,1,4,2,16777217,'2022-07-20 23:35:31',NULL,1048585,9),(98,1,5,2,16777217,'2022-07-20 23:35:31',NULL,1048585,9),(100,1,0,2,16777243,'2022-07-20 23:35:32',NULL,1048585,9),(101,1,0,2,16777245,'2022-07-20 23:35:32',NULL,1048585,9),(104,1,0,3,16777222,'2022-07-20 23:36:09',NULL,1048585,10),(105,1,0,3,16777223,'2022-07-20 23:36:09',NULL,1048585,10),(106,1,4,2,16777217,'2022-07-20 23:36:09',NULL,1048585,10),(108,1,5,2,16777217,'2022-07-20 23:36:09',NULL,1048585,10),(110,1,0,2,16777243,'2022-07-20 23:36:09',NULL,1048585,10),(111,1,0,2,16777245,'2022-07-20 23:36:09',NULL,1048585,10),(115,1,0,3,16777222,'2022-07-20 23:36:50',NULL,1048585,11),(116,1,0,3,16777223,'2022-07-20 23:36:50',NULL,1048585,11),(117,1,4,2,16777217,'2022-07-20 23:36:50',NULL,1048585,11),(119,1,5,2,16777217,'2022-07-20 23:36:50',NULL,1048585,11),(121,1,0,2,16777243,'2022-07-20 23:36:50',NULL,1048585,11),(122,1,0,2,16777245,'2022-07-20 23:36:50',NULL,1048585,11),(126,1,0,3,16777222,'2022-07-20 23:37:28',NULL,1048585,12),(127,1,0,3,16777223,'2022-07-20 23:37:28',NULL,1048585,12),(128,1,4,2,16777217,'2022-07-20 23:37:28',NULL,1048585,12),(130,1,5,2,16777217,'2022-07-20 23:37:28',NULL,1048585,12),(132,1,0,2,16777243,'2022-07-20 23:37:28',NULL,1048585,12),(133,1,0,2,16777245,'2022-07-20 23:37:28',NULL,1048585,12),(136,1,0,3,16777222,'2022-07-20 23:38:08',NULL,1048585,13),(137,1,0,3,16777223,'2022-07-20 23:38:08',NULL,1048585,13),(138,1,4,2,16777217,'2022-07-20 23:38:08',NULL,1048585,13),(140,1,5,2,16777217,'2022-07-20 23:38:08',NULL,1048585,13),(142,1,0,2,16777243,'2022-07-20 23:38:08',NULL,1048585,13),(143,1,0,2,16777245,'2022-07-20 23:38:08',NULL,1048585,13),(146,1,0,3,16777222,'2022-07-20 23:38:46',NULL,1048585,14),(147,1,0,3,16777223,'2022-07-20 23:38:46',NULL,1048585,14),(148,1,4,2,16777217,'2022-07-20 23:38:46',NULL,1048585,14),(150,1,5,2,16777217,'2022-07-20 23:38:46',NULL,1048585,14),(152,1,0,2,16777243,'2022-07-20 23:38:46',NULL,1048585,14),(153,1,0,2,16777245,'2022-07-20 23:38:46',NULL,1048585,14),(156,1,0,3,16777222,'2022-07-20 23:39:23',NULL,1048585,15),(157,1,0,3,16777223,'2022-07-20 23:39:23',NULL,1048585,15),(158,1,4,2,16777217,'2022-07-20 23:39:23',NULL,1048585,15),(160,1,5,2,16777217,'2022-07-20 23:39:23',NULL,1048585,15),(162,1,0,2,16777243,'2022-07-20 23:39:23',NULL,1048585,15),(163,1,0,2,16777245,'2022-07-20 23:39:23',NULL,1048585,15),(166,1,0,3,16777222,'2022-07-20 23:40:03',NULL,1048585,16),(167,1,0,3,16777223,'2022-07-20 23:40:03',NULL,1048585,16),(168,1,4,2,16777217,'2022-07-20 23:40:03',NULL,1048585,16),(170,1,5,2,16777217,'2022-07-20 23:40:03',NULL,1048585,16),(172,1,0,2,16777243,'2022-07-20 23:40:03',NULL,1048585,16),(173,1,0,2,16777245,'2022-07-20 23:40:03',NULL,1048585,16),(176,1,0,3,16777222,'2022-07-20 23:40:44',NULL,1048585,17),(177,1,0,3,16777223,'2022-07-20 23:40:44',NULL,1048585,17),(178,1,4,2,16777217,'2022-07-20 23:40:44',NULL,1048585,17),(180,1,5,2,16777217,'2022-07-20 23:40:44',NULL,1048585,17),(182,1,0,2,16777243,'2022-07-20 23:40:44',NULL,1048585,17),(183,1,0,2,16777245,'2022-07-20 23:40:44',NULL,1048585,17),(186,1,0,3,16777222,'2022-07-20 23:41:21',NULL,1048585,18),(187,1,0,3,16777223,'2022-07-20 23:41:21',NULL,1048585,18),(188,1,4,2,16777217,'2022-07-20 23:41:21',NULL,1048585,18),(190,1,5,2,16777217,'2022-07-20 23:41:21',NULL,1048585,18),(192,1,0,2,16777243,'2022-07-20 23:41:21',NULL,1048585,18),(193,1,0,2,16777245,'2022-07-20 23:41:21',NULL,1048585,18),(196,1,0,3,16777222,'2022-07-20 23:41:59',NULL,1048585,19),(197,1,0,3,16777223,'2022-07-20 23:41:59',NULL,1048585,19),(198,1,4,2,16777217,'2022-07-20 23:41:59',NULL,1048585,19),(200,1,5,2,16777217,'2022-07-20 23:41:59',NULL,1048585,19),(202,1,0,2,16777243,'2022-07-20 23:41:59',NULL,1048585,19),(203,1,0,2,16777245,'2022-07-20 23:41:59',NULL,1048585,19),(205,0,3,1,3,'2022-07-20 23:42:08',NULL,0,0);
+INSERT INTO `notifications` VALUES (3,1,0,3,16777222,'2022-07-23 18:14:37',NULL,1048585,1),(4,1,0,3,16777223,'2022-07-23 18:14:37',NULL,1048585,1),(5,1,4,2,16777217,'2022-07-23 18:14:37',NULL,1048585,1),(7,1,5,2,16777217,'2022-07-23 18:14:37',NULL,1048585,1),(9,1,0,2,16777243,'2022-07-23 18:14:37',NULL,1048585,1),(10,1,0,2,16777245,'2022-07-23 18:14:37',NULL,1048585,1),(12,1,0,3,16777222,'2022-07-23 18:15:04',NULL,1048585,2),(13,1,0,3,16777223,'2022-07-23 18:15:04',NULL,1048585,2),(14,1,4,2,16777217,'2022-07-23 18:15:04',NULL,1048585,2),(16,1,5,2,16777217,'2022-07-23 18:15:04',NULL,1048585,2),(18,1,0,2,16777243,'2022-07-23 18:15:04',NULL,1048585,2),(19,1,0,2,16777245,'2022-07-23 18:15:04',NULL,1048585,2),(23,1,0,3,16777222,'2022-07-23 18:16:03',NULL,1048585,3),(24,1,0,3,16777223,'2022-07-23 18:16:03',NULL,1048585,3),(25,1,4,2,16777217,'2022-07-23 18:16:03',NULL,1048585,3),(27,1,5,2,16777217,'2022-07-23 18:16:03',NULL,1048585,3),(29,1,0,2,16777243,'2022-07-23 18:16:03',NULL,1048585,3),(30,1,0,2,16777245,'2022-07-23 18:16:03',NULL,1048585,3),(35,1,4,3,16777259,'2022-07-23 18:16:28',NULL,1048585,3),(37,1,5,3,16777259,'2022-07-23 18:16:28',NULL,1048585,3),(39,1,9,3,16777259,'2022-07-23 18:16:28',NULL,1048585,3),(41,1,0,3,16777222,'2022-07-23 18:17:01',NULL,1048585,4),(42,1,0,3,16777223,'2022-07-23 18:17:01',NULL,1048585,4),(43,1,4,2,16777217,'2022-07-23 18:17:01',NULL,1048585,4),(45,1,5,2,16777217,'2022-07-23 18:17:01',NULL,1048585,4),(47,1,0,2,16777243,'2022-07-23 18:17:01',NULL,1048585,4),(48,1,0,2,16777245,'2022-07-23 18:17:01',NULL,1048585,4),(51,1,10,2,16777234,'2022-07-23 18:17:23',NULL,1048585,4),(52,1,0,3,16777222,'2022-07-23 18:17:54',NULL,1048585,5),(53,1,0,3,16777223,'2022-07-23 18:17:54',NULL,1048585,5),(54,1,4,2,16777217,'2022-07-23 18:17:54',NULL,1048585,5),(56,1,5,2,16777217,'2022-07-23 18:17:54',NULL,1048585,5),(58,1,0,2,16777243,'2022-07-23 18:17:54',NULL,1048585,5),(59,1,0,2,16777245,'2022-07-23 18:17:54',NULL,1048585,5),(62,1,0,3,16777222,'2022-07-23 18:18:29',NULL,1048585,6),(63,1,0,3,16777223,'2022-07-23 18:18:29',NULL,1048585,6),(64,1,4,2,16777217,'2022-07-23 18:18:29',NULL,1048585,6),(66,1,5,2,16777217,'2022-07-23 18:18:29',NULL,1048585,6),(68,1,0,2,16777243,'2022-07-23 18:18:29',NULL,1048585,6),(69,1,0,2,16777245,'2022-07-23 18:18:29',NULL,1048585,6),(73,1,0,3,16777222,'2022-07-23 18:19:11',NULL,1048585,7),(74,1,0,3,16777223,'2022-07-23 18:19:11',NULL,1048585,7),(75,1,4,2,16777217,'2022-07-23 18:19:11',NULL,1048585,7),(77,1,5,2,16777217,'2022-07-23 18:19:11',NULL,1048585,7),(79,1,0,2,16777243,'2022-07-23 18:19:11',NULL,1048585,7),(80,1,0,2,16777245,'2022-07-23 18:19:11',NULL,1048585,7),(84,1,0,3,16777222,'2022-07-23 18:19:47',NULL,1048585,8),(85,1,0,3,16777223,'2022-07-23 18:19:47',NULL,1048585,8),(86,1,4,2,16777217,'2022-07-23 18:19:47',NULL,1048585,8),(88,1,5,2,16777217,'2022-07-23 18:19:47',NULL,1048585,8),(90,1,0,2,16777243,'2022-07-23 18:19:47',NULL,1048585,8),(91,1,0,2,16777245,'2022-07-23 18:19:47',NULL,1048585,8),(94,1,0,3,16777222,'2022-07-23 18:20:24',NULL,1048585,9),(95,1,0,3,16777223,'2022-07-23 18:20:24',NULL,1048585,9),(96,1,4,2,16777217,'2022-07-23 18:20:24',NULL,1048585,9),(98,1,5,2,16777217,'2022-07-23 18:20:24',NULL,1048585,9),(100,1,0,2,16777243,'2022-07-23 18:20:24',NULL,1048585,9),(101,1,0,2,16777245,'2022-07-23 18:20:24',NULL,1048585,9),(104,1,0,3,16777222,'2022-07-23 18:21:01',NULL,1048585,10),(105,1,0,3,16777223,'2022-07-23 18:21:01',NULL,1048585,10),(106,1,4,2,16777217,'2022-07-23 18:21:01',NULL,1048585,10),(108,1,5,2,16777217,'2022-07-23 18:21:01',NULL,1048585,10),(110,1,0,2,16777243,'2022-07-23 18:21:01',NULL,1048585,10),(111,1,0,2,16777245,'2022-07-23 18:21:01',NULL,1048585,10),(115,1,0,3,16777222,'2022-07-23 18:21:42',NULL,1048585,11),(116,1,0,3,16777223,'2022-07-23 18:21:42',NULL,1048585,11),(117,1,4,2,16777217,'2022-07-23 18:21:42',NULL,1048585,11),(119,1,5,2,16777217,'2022-07-23 18:21:42',NULL,1048585,11),(121,1,0,2,16777243,'2022-07-23 18:21:42',NULL,1048585,11),(122,1,0,2,16777245,'2022-07-23 18:21:42',NULL,1048585,11),(126,1,0,3,16777222,'2022-07-23 18:22:19',NULL,1048585,12),(127,1,0,3,16777223,'2022-07-23 18:22:19',NULL,1048585,12),(128,1,4,2,16777217,'2022-07-23 18:22:19',NULL,1048585,12),(130,1,5,2,16777217,'2022-07-23 18:22:19',NULL,1048585,12),(132,1,0,2,16777243,'2022-07-23 18:22:19',NULL,1048585,12),(133,1,0,2,16777245,'2022-07-23 18:22:19',NULL,1048585,12),(136,1,0,3,16777222,'2022-07-23 18:23:01',NULL,1048585,13),(137,1,0,3,16777223,'2022-07-23 18:23:01',NULL,1048585,13),(138,1,4,2,16777217,'2022-07-23 18:23:01',NULL,1048585,13),(140,1,5,2,16777217,'2022-07-23 18:23:01',NULL,1048585,13),(142,1,0,2,16777243,'2022-07-23 18:23:01',NULL,1048585,13),(143,1,0,2,16777245,'2022-07-23 18:23:01',NULL,1048585,13),(146,1,0,3,16777222,'2022-07-23 18:23:39',NULL,1048585,14),(147,1,0,3,16777223,'2022-07-23 18:23:39',NULL,1048585,14),(148,1,4,2,16777217,'2022-07-23 18:23:39',NULL,1048585,14),(150,1,5,2,16777217,'2022-07-23 18:23:39',NULL,1048585,14),(152,1,0,2,16777243,'2022-07-23 18:23:39',NULL,1048585,14),(153,1,0,2,16777245,'2022-07-23 18:23:39',NULL,1048585,14),(156,1,0,3,16777222,'2022-07-23 18:24:14',NULL,1048585,15),(157,1,0,3,16777223,'2022-07-23 18:24:14',NULL,1048585,15),(158,1,4,2,16777217,'2022-07-23 18:24:14',NULL,1048585,15),(160,1,5,2,16777217,'2022-07-23 18:24:14',NULL,1048585,15),(162,1,0,2,16777243,'2022-07-23 18:24:14',NULL,1048585,15),(163,1,0,2,16777245,'2022-07-23 18:24:14',NULL,1048585,15),(166,1,0,3,16777222,'2022-07-23 18:24:53',NULL,1048585,16),(167,1,0,3,16777223,'2022-07-23 18:24:53',NULL,1048585,16),(168,1,4,2,16777217,'2022-07-23 18:24:53',NULL,1048585,16),(170,1,5,2,16777217,'2022-07-23 18:24:53',NULL,1048585,16),(172,1,0,2,16777243,'2022-07-23 18:24:53',NULL,1048585,16),(173,1,0,2,16777245,'2022-07-23 18:24:53',NULL,1048585,16),(176,1,0,3,16777222,'2022-07-23 18:25:33',NULL,1048585,17),(177,1,0,3,16777223,'2022-07-23 18:25:33',NULL,1048585,17),(178,1,4,2,16777217,'2022-07-23 18:25:33',NULL,1048585,17),(180,1,5,2,16777217,'2022-07-23 18:25:33',NULL,1048585,17),(182,1,0,2,16777243,'2022-07-23 18:25:33',NULL,1048585,17),(183,1,0,2,16777245,'2022-07-23 18:25:33',NULL,1048585,17),(186,1,0,3,16777222,'2022-07-23 18:26:10',NULL,1048585,18),(187,1,0,3,16777223,'2022-07-23 18:26:10',NULL,1048585,18),(188,1,4,2,16777217,'2022-07-23 18:26:10',NULL,1048585,18),(190,1,5,2,16777217,'2022-07-23 18:26:10',NULL,1048585,18),(192,1,0,2,16777243,'2022-07-23 18:26:10',NULL,1048585,18),(193,1,0,2,16777245,'2022-07-23 18:26:10',NULL,1048585,18),(196,1,0,3,16777222,'2022-07-23 18:26:45',NULL,1048585,19),(197,1,0,3,16777223,'2022-07-23 18:26:45',NULL,1048585,19),(198,1,4,2,16777217,'2022-07-23 18:26:45',NULL,1048585,19),(200,1,5,2,16777217,'2022-07-23 18:26:45',NULL,1048585,19),(202,1,0,2,16777243,'2022-07-23 18:26:45',NULL,1048585,19),(203,1,0,2,16777245,'2022-07-23 18:26:45',NULL,1048585,19),(205,0,3,1,3,'2022-07-23 18:26:54',NULL,0,0);
 /*!40000 ALTER TABLE `notifications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1593,7 +1907,7 @@ CREATE TABLE `plugin_settings` (
 
 LOCK TABLES `plugin_settings` WRITE;
 /*!40000 ALTER TABLE `plugin_settings` DISABLE KEYS */;
-INSERT INTO `plugin_settings` VALUES ('acronplugin',0,'crontab','[{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"lib.pkp.classes.task.StatisticsReport\",\"frequency\":{\"day\":\"1\"},\"args\":[]},{\"className\":\"lib.pkp.classes.task.RemoveUnvalidatedExpiredUsers\",\"frequency\":{\"day\":\"1\"},\"args\":[]}]','object'),('acronplugin',0,'enabled','1','bool'),('defaultthemeplugin',0,'enabled','1','bool'),('defaultthemeplugin',1,'enabled','1','bool'),('defaultthemeplugin',1,'showDescriptionInServerIndex','false','string'),('defaultthemeplugin',1,'useHomepageImageAsHeader','false','string'),('developedbyblockplugin',0,'enabled','0','bool'),('developedbyblockplugin',0,'seq','0','int'),('developedbyblockplugin',1,'enabled','0','bool'),('developedbyblockplugin',1,'seq','0','int'),('googlescholarplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',0,'enabled','1','bool'),('languagetoggleblockplugin',0,'seq','4','int'),('languagetoggleblockplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',1,'seq','4','int'),('pdfjsviewerplugin',1,'enabled','1','bool'),('tinymceplugin',0,'enabled','1','bool'),('tinymceplugin',1,'enabled','1','bool'),('usageeventplugin',0,'enabled','1','bool'),('usageeventplugin',0,'uniqueSiteId','62d88f369b1a1','string'),('usagestatsplugin',0,'accessLogFileParseRegex','/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] \"\\S+ (?P<url>\\S+).*?\" (?P<returnCode>\\S+) \\S+ \".*?\" \"(?P<userAgent>.*?)\"/','string'),('usagestatsplugin',0,'chartType','bar','string'),('usagestatsplugin',0,'createLogFiles','1','bool'),('usagestatsplugin',0,'datasetMaxCount','4','string'),('usagestatsplugin',0,'enabled','1','bool'),('usagestatsplugin',0,'optionalColumns','[\"city\",\"region\"]','object');
+INSERT INTO `plugin_settings` VALUES ('acronplugin',0,'crontab','[{\"className\":\"lib.pkp.classes.task.StatisticsReport\",\"frequency\":{\"day\":\"1\"},\"args\":[]},{\"className\":\"lib.pkp.classes.task.RemoveUnvalidatedExpiredUsers\",\"frequency\":{\"day\":\"1\"},\"args\":[]},{\"className\":\"lib.pkp.classes.task.UpdateIPGeoDB\",\"frequency\":{\"day\":\"10\"},\"args\":[]},{\"className\":\"classes.tasks.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[]}]','object'),('acronplugin',0,'enabled','1','bool'),('defaultthemeplugin',0,'enabled','1','bool'),('defaultthemeplugin',1,'enabled','1','bool'),('defaultthemeplugin',1,'showDescriptionInServerIndex','false','string'),('defaultthemeplugin',1,'useHomepageImageAsHeader','false','string'),('developedbyblockplugin',0,'enabled','0','bool'),('developedbyblockplugin',0,'seq','0','int'),('developedbyblockplugin',1,'enabled','0','bool'),('developedbyblockplugin',1,'seq','0','int'),('googlescholarplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',0,'enabled','1','bool'),('languagetoggleblockplugin',0,'seq','4','int'),('languagetoggleblockplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',1,'seq','4','int'),('pdfjsviewerplugin',1,'enabled','1','bool'),('tinymceplugin',0,'enabled','1','bool'),('tinymceplugin',1,'enabled','1','bool'),('usageeventplugin',0,'enabled','1','bool'),('usageeventplugin',0,'uniqueSiteId','','string');
 /*!40000 ALTER TABLE `plugin_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1750,7 +2064,7 @@ CREATE TABLE `publications` (
 
 LOCK TABLES `publications` WRITE;
 /*!40000 ALTER TABLE `publications` DISABLE KEYS */;
-INSERT INTO `publications` VALUES (1,0,NULL,'2022-07-20 23:29:35',1,1,1,1,NULL,1,NULL),(2,0,'2022-07-20','2022-07-20 23:30:31',2,1,2,3,NULL,1,NULL),(3,0,'2022-07-20','2022-07-20 23:31:28',4,1,3,3,NULL,1,NULL),(4,0,'2022-07-20','2022-07-20 23:31:39',6,1,3,3,NULL,2,NULL),(5,0,NULL,'2022-07-20 23:32:04',8,1,4,1,NULL,1,NULL),(6,0,'2022-07-20','2022-07-20 23:33:11',9,1,5,3,NULL,1,NULL),(7,0,'2022-07-20','2022-07-20 23:33:46',10,1,6,3,NULL,1,NULL),(8,0,'2022-07-20','2022-07-20 23:34:29',11,1,7,3,NULL,1,NULL),(9,0,'2022-07-20','2022-07-20 23:35:03',13,1,8,3,NULL,1,NULL),(10,0,'2022-07-20','2022-07-20 23:35:40',14,1,9,3,NULL,1,NULL),(11,0,'2022-07-20','2022-07-20 23:36:18',15,1,10,3,NULL,1,NULL),(12,0,'2022-07-20','2022-07-20 23:36:59',16,1,11,3,NULL,1,NULL),(13,0,'2022-07-20','2022-07-20 23:37:37',18,1,12,3,NULL,1,NULL),(14,0,'2022-07-20','2022-07-20 23:38:17',19,1,13,3,NULL,1,NULL),(15,0,'2022-07-20','2022-07-20 23:38:54',20,1,14,3,NULL,1,NULL),(16,0,'2022-07-20','2022-07-20 23:39:31',21,1,15,3,NULL,1,NULL),(17,0,'2022-07-20','2022-07-20 23:40:12',22,1,16,3,NULL,1,NULL),(18,0,'2022-07-20','2022-07-20 23:40:53',23,1,17,3,NULL,1,NULL),(19,0,'2022-07-20','2022-07-20 23:41:31',24,1,18,3,NULL,1,NULL),(20,0,'2022-07-20','2022-07-20 23:42:08',25,1,19,3,NULL,1,NULL);
+INSERT INTO `publications` VALUES (1,0,NULL,'2022-07-23 18:14:36',1,1,1,1,NULL,1,NULL),(2,0,'2022-07-23','2022-07-23 18:15:30',2,1,2,3,NULL,1,NULL),(3,0,'2022-07-23','2022-07-23 18:16:25',4,1,3,3,NULL,1,NULL),(4,0,'2022-07-23','2022-07-23 18:16:35',6,1,3,3,NULL,2,NULL),(5,0,NULL,'2022-07-23 18:17:00',8,1,4,1,NULL,1,NULL),(6,0,'2022-07-23','2022-07-23 18:18:02',9,1,5,3,NULL,1,NULL),(7,0,'2022-07-23','2022-07-23 18:18:37',10,1,6,3,NULL,1,NULL),(8,0,'2022-07-23','2022-07-23 18:19:20',11,1,7,3,NULL,1,NULL),(9,0,'2022-07-23','2022-07-23 18:19:55',13,1,8,3,NULL,1,NULL),(10,0,'2022-07-23','2022-07-23 18:20:32',14,1,9,3,NULL,1,NULL),(11,0,'2022-07-23','2022-07-23 18:21:09',15,1,10,3,NULL,1,NULL),(12,0,'2022-07-23','2022-07-23 18:21:50',16,1,11,3,NULL,1,NULL),(13,0,'2022-07-23','2022-07-23 18:22:30',18,1,12,3,NULL,1,NULL),(14,0,'2022-07-23','2022-07-23 18:23:10',19,1,13,3,NULL,1,NULL),(15,0,'2022-07-23','2022-07-23 18:23:48',20,1,14,3,NULL,1,NULL),(16,0,'2022-07-23','2022-07-23 18:24:22',21,1,15,3,NULL,1,NULL),(17,0,'2022-07-23','2022-07-23 18:25:01',22,1,16,3,NULL,1,NULL),(18,0,'2022-07-23','2022-07-23 18:25:42',23,1,17,3,NULL,1,NULL),(19,0,'2022-07-23','2022-07-23 18:26:19',24,1,18,3,NULL,1,NULL),(20,0,'2022-07-23','2022-07-23 18:26:54',25,1,19,3,NULL,1,NULL);
 /*!40000 ALTER TABLE `publications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2100,7 +2414,7 @@ CREATE TABLE `scheduled_tasks` (
 
 LOCK TABLES `scheduled_tasks` WRITE;
 /*!40000 ALTER TABLE `scheduled_tasks` DISABLE KEYS */;
-INSERT INTO `scheduled_tasks` VALUES ('lib.pkp.classes.task.RemoveUnvalidatedExpiredUsers','2022-07-20 23:26:32'),('lib.pkp.classes.task.StatisticsReport','2022-07-20 23:26:32'),('plugins.generic.usageStats.UsageStatsLoader','2022-07-20 23:26:31');
+INSERT INTO `scheduled_tasks` VALUES ('classes.tasks.UsageStatsLoader','2022-07-23 18:11:39'),('lib.pkp.classes.task.RemoveUnvalidatedExpiredUsers','2022-07-23 18:11:37'),('lib.pkp.classes.task.StatisticsReport','2022-07-23 18:11:37'),('lib.pkp.classes.task.UpdateIPGeoDB','2022-07-23 18:11:37');
 /*!40000 ALTER TABLE `scheduled_tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2191,7 +2505,7 @@ CREATE TABLE `server_settings` (
 
 LOCK TABLES `server_settings` WRITE;
 /*!40000 ALTER TABLE `server_settings` DISABLE KEYS */;
-INSERT INTO `server_settings` VALUES (1,'','contactEmail','rvaca@mailinator.com',NULL),(1,'','contactName','Ramiro Vaca',NULL),(1,'','copySubmissionAckAddress','',NULL),(1,'','copySubmissionAckPrimaryContact','0',NULL),(1,'','country','IS',NULL),(1,'','defaultReviewMode','2',NULL),(1,'','disableSubmissions','0',NULL),(1,'','doiSuffixType','default',NULL),(1,'','emailSignature','<br/><hr /><br/><p><a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href=\"mailto: {$contactEmail}\">{$contactEmail}</a></p>',NULL),(1,'','enableAuthorScreening','0',NULL),(1,'','enableDois','1',NULL),(1,'','enableOai','1',NULL),(1,'','itemsPerPage','25',NULL),(1,'','keywords','request',NULL),(1,'','mailingAddress','123 456th Street\nBurnaby, British Columbia\nCanada',NULL),(1,'','notifyAllAuthors','1',NULL),(1,'','numPageLinks','10',NULL),(1,'','numWeeksPerResponse','4',NULL),(1,'','numWeeksPerReview','4',NULL),(1,'','registrationAgency','',NULL),(1,'','supportedFormLocales','[\"en_US\",\"fr_CA\"]',NULL),(1,'','supportedLocales','[\"en_US\",\"fr_CA\"]',NULL),(1,'','supportedSubmissionLocales','[\"en_US\",\"fr_CA\"]',NULL),(1,'','supportEmail','rvaca@mailinator.com',NULL),(1,'','supportName','Ramiro Vaca',NULL),(1,'','themePluginPath','default',NULL),(1,'en_US','abbreviation','publicknowledgePub Know Pre',NULL),(1,'en_US','acronym','JPKPKP',NULL),(1,'en_US','authorInformation','Interested in submitting to this server? We recommend that you review the <a href=\"http://localhost/index.php/publicknowledge/about\">About</a> page for the policies, as well as the <a href=\"http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines\">Author Guidelines</a>. Authors need to <a href=\"http://localhost/index.php/publicknowledge/user/register\">register</a> prior to submitting or, if already registered, can simply <a href=\"http://localhost/index.php/index/login\">log in</a> and begin the process.',NULL),(1,'en_US','customHeaders','<meta name=\"pkp\" content=\"Test metatag.\">',NULL),(1,'en_US','librarianInformation','We encourage research librarians to list this server among their library\'s holdings. As well, it may be worth noting that this server\'s open source system is suitable for libraries to host for their faculty members to use (see <a href=\"https://pkp.sfu.ca\">Public Knowledge Project</a>).',NULL),(1,'en_US','name','Public Knowledge Preprint Server',NULL),(1,'en_US','openAccessPolicy','This server provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.',NULL),(1,'en_US','privacyStatement','<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>',NULL),(1,'en_US','readerInformation','We encourage readers to sign up for the posting notification service for this server. Use the <a href=\"http://localhost/index.php/publicknowledge/user/register\">Register</a> link at the top of the home page. This list also allows the server to claim a certain level of support or readership. See the <a href=\"http://localhost/index.php/publicknowledge/about/submissions#privacyStatement\">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.',NULL),(1,'en_US','searchDescription','The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.',NULL),(1,'en_US','submissionChecklist','[{\"order\":1,\"content\":\"The submission has not been previously posted.\"},{\"order\":2,\"content\":\"The submission file is in OpenOffice, Microsoft Word, or RTF document file format.\"},{\"order\":3,\"content\":\"Where available, URLs for the references have been provided.\"},{\"order\":4,\"content\":\"The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.\"},{\"order\":5,\"content\":\"The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines.\"}]',NULL),(1,'fr_CA','authorInformation','##default.contextSettings.forAuthors##',NULL),(1,'fr_CA','librarianInformation','##default.contextSettings.forLibrarians##',NULL),(1,'fr_CA','name','Serveur de prépublication de la connaissance du public',NULL),(1,'fr_CA','openAccessPolicy','##default.contextSettings.openAccessPolicy##',NULL),(1,'fr_CA','privacyStatement','##default.contextSettings.privacyStatement##',NULL),(1,'fr_CA','readerInformation','##default.contextSettings.forReaders##',NULL),(1,'fr_CA','submissionChecklist','[{\"order\":1,\"content\":\"La soumission n\'a pas déjà été publiée et n\'est pas considérée actuellement par un autre serveur. Si ce n\'est pas le cas, fournir une explication dans le champ « Commentaires au,à la rédacteur-trice ».\"},{\"order\":2,\"content\":\"Le fichier de la soumission est dans un des formats de fichier suivants : OpenOffice, Microsoft Word, RTF ou WordPerfect.\"},{\"order\":3,\"content\":\"Lorsque possible, les URL des références ont été fournies.\"},{\"order\":4,\"content\":\"##default.contextSettings.checklist.submissionAppearance##\"},{\"order\":5,\"content\":\"##default.contextSettings.checklist.bibliographicRequirements##\"}]',NULL);
+INSERT INTO `server_settings` VALUES (1,'','contactEmail','rvaca@mailinator.com',NULL),(1,'','contactName','Ramiro Vaca',NULL),(1,'','copySubmissionAckAddress','',NULL),(1,'','copySubmissionAckPrimaryContact','0',NULL),(1,'','country','IS',NULL),(1,'','defaultReviewMode','2',NULL),(1,'','disableSubmissions','0',NULL),(1,'','doiSuffixType','default',NULL),(1,'','emailSignature','<br/><hr /><br/><p><a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href=\"mailto: {$contactEmail}\">{$contactEmail}</a></p>',NULL),(1,'','enableAuthorScreening','0',NULL),(1,'','enableDois','1',NULL),(1,'','enableGeoUsageStats','',NULL),(1,'','enableInstitutionUsageStats','0',NULL),(1,'','enableOai','1',NULL),(1,'','itemsPerPage','25',NULL),(1,'','keywords','request',NULL),(1,'','mailingAddress','123 456th Street\nBurnaby, British Columbia\nCanada',NULL),(1,'','notifyAllAuthors','1',NULL),(1,'','numPageLinks','10',NULL),(1,'','numWeeksPerResponse','4',NULL),(1,'','numWeeksPerReview','4',NULL),(1,'','registrationAgency','',NULL),(1,'','supportedFormLocales','[\"en_US\",\"fr_CA\"]',NULL),(1,'','supportedLocales','[\"en_US\",\"fr_CA\"]',NULL),(1,'','supportedSubmissionLocales','[\"en_US\",\"fr_CA\"]',NULL),(1,'','supportEmail','rvaca@mailinator.com',NULL),(1,'','supportName','Ramiro Vaca',NULL),(1,'','themePluginPath','default',NULL),(1,'en_US','abbreviation','publicknowledgePub Know Pre',NULL),(1,'en_US','acronym','JPKPKP',NULL),(1,'en_US','authorInformation','Interested in submitting to this server? We recommend that you review the <a href=\"http://localhost/index.php/publicknowledge/about\">About</a> page for the policies, as well as the <a href=\"http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines\">Author Guidelines</a>. Authors need to <a href=\"http://localhost/index.php/publicknowledge/user/register\">register</a> prior to submitting or, if already registered, can simply <a href=\"http://localhost/index.php/index/login\">log in</a> and begin the process.',NULL),(1,'en_US','customHeaders','<meta name=\"pkp\" content=\"Test metatag.\">',NULL),(1,'en_US','librarianInformation','We encourage research librarians to list this server among their library\'s holdings. As well, it may be worth noting that this server\'s open source system is suitable for libraries to host for their faculty members to use (see <a href=\"https://pkp.sfu.ca\">Public Knowledge Project</a>).',NULL),(1,'en_US','name','Public Knowledge Preprint Server',NULL),(1,'en_US','openAccessPolicy','This server provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.',NULL),(1,'en_US','privacyStatement','<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>',NULL),(1,'en_US','readerInformation','We encourage readers to sign up for the posting notification service for this server. Use the <a href=\"http://localhost/index.php/publicknowledge/user/register\">Register</a> link at the top of the home page. This list also allows the server to claim a certain level of support or readership. See the <a href=\"http://localhost/index.php/publicknowledge/about/submissions#privacyStatement\">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.',NULL),(1,'en_US','searchDescription','The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.',NULL),(1,'en_US','submissionChecklist','[{\"order\":1,\"content\":\"The submission has not been previously posted.\"},{\"order\":2,\"content\":\"The submission file is in OpenOffice, Microsoft Word, or RTF document file format.\"},{\"order\":3,\"content\":\"Where available, URLs for the references have been provided.\"},{\"order\":4,\"content\":\"The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end.\"},{\"order\":5,\"content\":\"The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines.\"}]',NULL),(1,'fr_CA','authorInformation','##default.contextSettings.forAuthors##',NULL),(1,'fr_CA','librarianInformation','##default.contextSettings.forLibrarians##',NULL),(1,'fr_CA','name','Serveur de prépublication de la connaissance du public',NULL),(1,'fr_CA','openAccessPolicy','##default.contextSettings.openAccessPolicy##',NULL),(1,'fr_CA','privacyStatement','##default.contextSettings.privacyStatement##',NULL),(1,'fr_CA','readerInformation','##default.contextSettings.forReaders##',NULL),(1,'fr_CA','submissionChecklist','[{\"order\":1,\"content\":\"La soumission n\'a pas déjà été publiée et n\'est pas considérée actuellement par un autre serveur. Si ce n\'est pas le cas, fournir une explication dans le champ « Commentaires au,à la rédacteur-trice ».\"},{\"order\":2,\"content\":\"Le fichier de la soumission est dans un des formats de fichier suivants : OpenOffice, Microsoft Word, RTF ou WordPerfect.\"},{\"order\":3,\"content\":\"Lorsque possible, les URL des références ont été fournies.\"},{\"order\":4,\"content\":\"##default.contextSettings.checklist.submissionAppearance##\"},{\"order\":5,\"content\":\"##default.contextSettings.checklist.bibliographicRequirements##\"}]',NULL);
 /*!40000 ALTER TABLE `server_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2251,7 +2565,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('09oj1b26i53bq9n8kbcfhcbc0k',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360180,1658360219,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360219;s:5:\"token\";s:32:\"24c6beaeb0b67eecc40858b9cd569aab\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('0b8j0nh1dho8sr6sfdn4vogc7p',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359606,1658359623,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658359623;s:5:\"token\";s:32:\"0a42c34e5e164c338d8ff91fa1ec243b\";}','localhost'),('0m9c80prc2lf9tksvsc3a05o5s',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360142,1658360178,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360179;s:5:\"token\";s:32:\"1f1069379d227ce39c101b43dcddbe0b\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('28alvcn9661ucplsh8cm7d7kob',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359634,1658359649,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658359649;s:5:\"token\";s:32:\"fa051e04a4a781f2d1193b1769582275\";}','localhost'),('5njn9l0l2jm7iuljsp398qt35t',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360105,1658360140,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360140;s:5:\"token\";s:32:\"7d64e9fe5eead5388e39f86c1c793f08\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('63fa65vssnucbr7jqejh6hm6ig',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360028,1658360069,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360069;s:5:\"token\";s:32:\"ceb2effd325afe4ae15231dc1addc285\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('65veq3tih76af1m7aou90566ho',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359652,1658359714,0,'username|s:5:\"rvaca\";csrf|a:2:{s:9:\"timestamp\";i:1658359714;s:5:\"token\";s:32:\"9de7c082df7227c30316d54560c4b6b9\";}','localhost'),('7f8mc9tfqvgas6phm88d2sag97',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360455,1658360491,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360491;s:5:\"token\";s:32:\"167e1a5996beb1367a67efd41dbe70db\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('7s69bloo96815s7ctomvb1dct6',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359591,1658359606,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658359606;s:5:\"token\";s:32:\"8d2df525d5ce8f41bc8ee91941ccb3a3\";}','localhost'),('9bsga9e7jlm55uio3afkobjk4h',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359778,1658359826,0,'csrf|a:2:{s:9:\"timestamp\";i:1658359825;s:5:\"token\";s:32:\"7747d9fa04d53ef7246e302882fb87ac\";}username|s:8:\"ckwantes\";','localhost'),('ar9onnnfpnp67i24u0svodgaih',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360299,1658360335,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360335;s:5:\"token\";s:32:\"f022587331c6f36a4a9159d714c84d95\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('bgsibt9up6pen282knefk771hl',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360337,1658360372,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360372;s:5:\"token\";s:32:\"f6e61d78a558659ed37dad94c49c6a8f\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('cuq0r5nljli7qqpikcts09s39h',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359716,1658359723,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658359723;s:5:\"token\";s:32:\"6f0571cc57a2acea43d89227c3e53cda\";}','localhost'),('d07779c384fhpj7ia65q8jpoaq',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359833,1658359899,0,'csrf|a:2:{s:9:\"timestamp\";i:1658359899;s:5:\"token\";s:32:\"ca973f58fa8c5b1510e921edd263052f\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('d2rolkuj3u44dbpjtpjn2kovia',10,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359901,1658359926,0,'csrf|a:2:{s:9:\"timestamp\";i:1658359925;s:5:\"token\";s:32:\"9b7c0bd524bceca754ddc44bba8e0076\";}username|s:6:\"ddiouf\";userId|i:10;','localhost'),('hr65d62kd78okrsqkt12tfu9r7',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359826,1658359831,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1658359831;s:5:\"token\";s:32:\"a4fbaf9e665c2ffbb4cbc7b4029bb257\";}','localhost'),('k6tcg9aturfkihknr4p3s3m79r',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359953,1658359992,0,'csrf|a:2:{s:9:\"timestamp\";i:1658359992;s:5:\"token\";s:32:\"8673243eab494caa01704588d331023b\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('kljjda42jf46gl32opkgnsamp3',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359926,1658359952,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1658359952;s:5:\"token\";s:32:\"78c244fd0920b871465d3abe6c1f4c11\";}','localhost'),('kvba6dtvruflv4pmf4k2uq5gls',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360414,1658360453,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360453;s:5:\"token\";s:32:\"8cfab47ef2ac7f6b1a2b9595d5389469\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('mbhfrhp8vucokqgjkgfla9rgvr',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360221,1658360257,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360257;s:5:\"token\";s:32:\"6736e50cb11fd2b98a89c49b41efc1be\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('po4ei40p9dchvldioq7erebo1k',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360259,1658360298,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360298;s:5:\"token\";s:32:\"2d0e7f5cab58e930883a9f077c8298ec\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('q3sef8p1rpgi0d9reai857863g',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360071,1658360104,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360104;s:5:\"token\";s:32:\"696c70eb41637a639918ea5ddae2eaad\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('q6ub4jmo5mlig7246rmeolt1hl',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359723,1658359749,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658359749;s:5:\"token\";s:32:\"24a9f78987e05fa3dc763e60811cdafd\";}','localhost'),('qtrlmm7bluecgepdqgrg53fpma',7,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359751,1658359777,0,'csrf|a:2:{s:9:\"timestamp\";i:1658359776;s:5:\"token\";s:32:\"320026b7e956859986f0d055ed394371\";}username|s:7:\"ccorino\";userId|i:7;','localhost'),('slkr147kigrvg2rik0komtjh5f',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360493,1658360528,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360528;s:5:\"token\";s:32:\"318deb6c9b7188aeaaa2d6baf1054f28\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('tqkr3emitoplqil9hscoo4uikv',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359993,1658360026,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360026;s:5:\"token\";s:32:\"1ae3d94cae099259cf7288e457b72308\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('u9ach3u81sp9gj56u5mv4l04aq',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658360374,1658360413,0,'csrf|a:2:{s:9:\"timestamp\";i:1658360413;s:5:\"token\";s:32:\"1ae21a3afb0ce2ae348f8858d35c6eb0\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('v4r63h6iq3hkdfndl2ndfqek28',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658359624,1658359633,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658359633;s:5:\"token\";s:32:\"42b7a09448005183414ad90890f9ea80\";}','localhost');
+INSERT INTO `sessions` VALUES ('1l5hbasn99d3ccftkif5gemqh2',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600132,1658600196,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600196;s:5:\"token\";s:32:\"56cf89b8e6c67907021c436ee0dd1ba5\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('2fs0pshctoidrq1ovnmrhjl43v',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600319,1658600360,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600360;s:5:\"token\";s:32:\"bf8858fa514b7b529c4e3228d3a9eecb\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('3i52cj2ps2qkdqbsktne19qo9h',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600512,1658600551,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600551;s:5:\"token\";s:32:\"c97d07ddb4031cbcc6503bfd55b1165c\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('4aume4i9u0j86cjeca11d442s1',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600125,1658600130,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1658600130;s:5:\"token\";s:32:\"9cd90592138376e34dc86bde6c5ccf92\";}','localhost'),('4nk849c3tplcb1sld33qh3t2a9',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658599914,1658599930,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658599930;s:5:\"token\";s:32:\"a2d9eab5107454e11839a352978d585f\";}','localhost'),('66i5gij6cj9vvcfb2kmbh82jes',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600079,1658600124,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600124;s:5:\"token\";s:32:\"c11d89766fd5d08bb4255b728e680a9f\";}username|s:8:\"ckwantes\";','localhost'),('7l9nne76484ov8u1c3omn4cldd',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600284,1658600318,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600318;s:5:\"token\";s:32:\"d38a591c02a26029fa448dc25ce89c49\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('8hbb2em80v9r6jn8r8k1iv308s',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600362,1658600396,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600396;s:5:\"token\";s:32:\"ccb67a3a55aabf51a05ad08e75336b5d\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('apju5dkvp0k03s0in88fqp8uls',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600435,1658600470,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600470;s:5:\"token\";s:32:\"721d0b7165133aa2871a2b48df019292\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('ddpmu3p1sgdvbsj76nqganrbtr',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658599937,1658599946,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658599946;s:5:\"token\";s:32:\"a7ee564e9b129db2479cbad0aca320ce\";}','localhost'),('dosh3j1qt1v7n3rak866fc9vvj',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600664,1658600701,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600701;s:5:\"token\";s:32:\"8e34666fdd56772c4375ecb1d46f8bed\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('gt0akqq7n6hc7to9qtue50a4fh',7,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600052,1658600077,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600077;s:5:\"token\";s:32:\"e461c16658f4a26739c934c4ce50c540\";}username|s:7:\"ccorino\";userId|i:7;','localhost'),('hfnea1nfgsggo50nc7d4139gp8',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658599897,1658599913,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658599914;s:5:\"token\";s:32:\"a77dd47709a1ba295351563259cc5d99\";}','localhost'),('hk9q1qalbs07ivg2f5b4he3hut',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658599930,1658599937,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658599937;s:5:\"token\";s:32:\"ed509a51f14dddcfb6613939ca8df549\";}','localhost'),('iij1ii77fimqtr5ijmp2h804bk',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600554,1658600590,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600590;s:5:\"token\";s:32:\"e802103dcf349354e12c76f85154fe6e\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('jj6giqk1iljud054n1i7r7cc3i',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600398,1658600433,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600433;s:5:\"token\";s:32:\"c9223588a00fe455f043a720ba7c3b72\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('lhgrib9j80pdpuedf6tgs92eqg',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600222,1658600246,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1658600243;s:5:\"token\";s:32:\"148be486c3015eaa996611f1e552b139\";}','localhost'),('m2a3ua4q3u54r5q1potrui2lr2',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658599951,1658600014,0,'username|s:5:\"rvaca\";csrf|a:2:{s:9:\"timestamp\";i:1658600014;s:5:\"token\";s:32:\"18ee4d0d5662151967ae54e4963ce4e1\";}','localhost'),('maovagcit2u734dfc8ktoktr6e',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600247,1658600282,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600282;s:5:\"token\";s:32:\"39c43baca54195e839443a078627216a\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('o7cn9thm5at68o1boi36eiu8am',10,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600198,1658600221,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600221;s:5:\"token\";s:32:\"ab3b50e1486358b5c07a68e0923c869b\";}username|s:6:\"ddiouf\";userId|i:10;','localhost'),('oamlsm8lsruipapvr2qpj6dfmr',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600472,1658600510,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600510;s:5:\"token\";s:32:\"f4a8f4226aa340173cb3f1eb654ca9db\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('odh43seo234m0irva9kdtlvpck',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600024,1658600050,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658600050;s:5:\"token\";s:32:\"adb05c2ce380684cd4cf5baa06bf8b3b\";}','localhost'),('olvoo387l9ungpjffa4ntjdipq',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600781,1658600814,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600814;s:5:\"token\";s:32:\"9756ae2149fd2413dbcedd5e2aee687c\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('q5qk1v7t6hdam1tpl7smm1vbkt',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600630,1658600663,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600663;s:5:\"token\";s:32:\"0bc261e14263a5c1c97e3d3c67337900\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('r2kjqertpl0kq332rn7ib32gbv',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600592,1658600628,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600628;s:5:\"token\";s:32:\"455ad2fe96c29d75c60953bf0c8aadad\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('sbkvqifabsrfaegn96oc1q8ded',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600017,1658600023,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1658600023;s:5:\"token\";s:32:\"658c12ecce7dba32a3960b6203c487ff\";}','localhost'),('toipvplmlofa6apand4h42dr28',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600703,1658600742,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600742;s:5:\"token\";s:32:\"4d9dc069923a899d24e5a0e53bb32210\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('vs06oa29aku2b200f1iif7jc57',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36',1658600744,1658600779,0,'csrf|a:2:{s:9:\"timestamp\";i:1658600779;s:5:\"token\";s:32:\"e68961bcb20fae4389b554201a6c3ac8\";}username|s:7:\"dbarnes\";userId|i:3;','localhost');
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2303,7 +2617,7 @@ CREATE TABLE `site_settings` (
 
 LOCK TABLES `site_settings` WRITE;
 /*!40000 ALTER TABLE `site_settings` DISABLE KEYS */;
-INSERT INTO `site_settings` VALUES ('contactEmail','en_US','pkpadmin@mailinator.com'),('contactName','en_US','Open Preprint Systems'),('contactName','fr_CA','Open Preprint Systems'),('themePluginPath','','default');
+INSERT INTO `site_settings` VALUES ('compressStatsLogs','','0'),('contactEmail','en_US','pkpadmin@mailinator.com'),('contactName','en_US','Open Preprint Systems'),('contactName','fr_CA','Open Preprint Systems'),('enableGeoUsageStats','','disabled'),('enableInstitutionUsageStats','','0'),('isSiteSushiPlatform','','0'),('keepDailyUsageStats','','0'),('themePluginPath','','default');
 /*!40000 ALTER TABLE `site_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2336,7 +2650,7 @@ CREATE TABLE `stage_assignments` (
 
 LOCK TABLES `stage_assignments` WRITE;
 /*!40000 ALTER TABLE `stage_assignments` DISABLE KEYS */;
-INSERT INTO `stage_assignments` VALUES (1,1,4,7,'2022-07-20 23:29:18',0,1),(2,1,3,4,'2022-07-20 23:29:36',0,1),(3,1,3,5,'2022-07-20 23:29:36',0,1),(4,2,4,8,'2022-07-20 23:29:45',0,1),(5,2,3,4,'2022-07-20 23:30:04',0,1),(6,2,3,5,'2022-07-20 23:30:04',0,1),(7,3,4,9,'2022-07-20 23:30:40',0,1),(8,3,3,4,'2022-07-20 23:31:03',0,1),(9,3,3,5,'2022-07-20 23:31:03',0,1),(10,4,4,10,'2022-07-20 23:31:47',0,1),(11,4,3,4,'2022-07-20 23:32:05',0,1),(12,4,3,5,'2022-07-20 23:32:05',0,1),(13,5,4,11,'2022-07-20 23:32:40',0,1),(14,5,3,4,'2022-07-20 23:33:01',0,1),(15,5,3,5,'2022-07-20 23:33:01',0,1),(16,6,4,12,'2022-07-20 23:33:21',0,1),(17,6,3,4,'2022-07-20 23:33:38',0,1),(18,6,3,5,'2022-07-20 23:33:38',0,1),(19,7,4,13,'2022-07-20 23:33:55',0,1),(20,7,3,4,'2022-07-20 23:34:20',0,1),(21,7,3,5,'2022-07-20 23:34:20',0,1),(22,8,4,14,'2022-07-20 23:34:38',0,1),(23,8,3,4,'2022-07-20 23:34:55',0,1),(24,8,3,5,'2022-07-20 23:34:55',0,1),(25,9,4,15,'2022-07-20 23:35:14',0,1),(26,9,3,4,'2022-07-20 23:35:31',0,1),(27,9,3,5,'2022-07-20 23:35:31',0,1),(28,10,4,16,'2022-07-20 23:35:50',0,1),(29,10,3,4,'2022-07-20 23:36:09',0,1),(30,10,3,5,'2022-07-20 23:36:09',0,1),(31,11,4,17,'2022-07-20 23:36:28',0,1),(32,11,3,4,'2022-07-20 23:36:50',0,1),(33,11,3,5,'2022-07-20 23:36:50',0,1),(34,12,4,18,'2022-07-20 23:37:10',0,1),(35,12,3,4,'2022-07-20 23:37:28',0,1),(36,12,3,5,'2022-07-20 23:37:28',0,1),(37,13,4,19,'2022-07-20 23:37:47',0,1),(38,13,3,4,'2022-07-20 23:38:08',0,1),(39,13,3,5,'2022-07-20 23:38:08',0,1),(40,14,4,20,'2022-07-20 23:38:28',0,1),(41,14,3,4,'2022-07-20 23:38:46',0,1),(42,14,3,5,'2022-07-20 23:38:46',0,1),(43,15,4,21,'2022-07-20 23:39:05',0,1),(44,15,3,4,'2022-07-20 23:39:23',0,1),(45,15,3,5,'2022-07-20 23:39:23',0,1),(46,16,4,22,'2022-07-20 23:39:42',0,1),(47,16,3,4,'2022-07-20 23:40:03',0,1),(48,16,3,5,'2022-07-20 23:40:03',0,1),(49,17,4,23,'2022-07-20 23:40:23',0,1),(50,17,3,4,'2022-07-20 23:40:44',0,1),(51,17,3,5,'2022-07-20 23:40:44',0,1),(52,18,4,24,'2022-07-20 23:41:03',0,1),(53,18,3,4,'2022-07-20 23:41:21',0,1),(54,18,3,5,'2022-07-20 23:41:21',0,1),(55,19,4,25,'2022-07-20 23:41:41',0,1),(56,19,3,4,'2022-07-20 23:41:59',0,1),(57,19,3,5,'2022-07-20 23:41:59',0,1);
+INSERT INTO `stage_assignments` VALUES (1,1,4,7,'2022-07-23 18:14:19',0,1),(2,1,3,4,'2022-07-23 18:14:37',0,1),(3,1,3,5,'2022-07-23 18:14:37',0,1),(4,2,4,8,'2022-07-23 18:14:45',0,1),(5,2,3,4,'2022-07-23 18:15:04',0,1),(6,2,3,5,'2022-07-23 18:15:04',0,1),(7,3,4,9,'2022-07-23 18:15:39',0,1),(8,3,3,4,'2022-07-23 18:16:03',0,1),(9,3,3,5,'2022-07-23 18:16:03',0,1),(10,4,4,10,'2022-07-23 18:16:44',0,1),(11,4,3,4,'2022-07-23 18:17:01',0,1),(12,4,3,5,'2022-07-23 18:17:01',0,1),(13,5,4,11,'2022-07-23 18:17:35',0,1),(14,5,3,4,'2022-07-23 18:17:54',0,1),(15,5,3,5,'2022-07-23 18:17:54',0,1),(16,6,4,12,'2022-07-23 18:18:12',0,1),(17,6,3,4,'2022-07-23 18:18:29',0,1),(18,6,3,5,'2022-07-23 18:18:29',0,1),(19,7,4,13,'2022-07-23 18:18:47',0,1),(20,7,3,4,'2022-07-23 18:19:11',0,1),(21,7,3,5,'2022-07-23 18:19:11',0,1),(22,8,4,14,'2022-07-23 18:19:30',0,1),(23,8,3,4,'2022-07-23 18:19:47',0,1),(24,8,3,5,'2022-07-23 18:19:47',0,1),(25,9,4,15,'2022-07-23 18:20:05',0,1),(26,9,3,4,'2022-07-23 18:20:24',0,1),(27,9,3,5,'2022-07-23 18:20:24',0,1),(28,10,4,16,'2022-07-23 18:20:42',0,1),(29,10,3,4,'2022-07-23 18:21:01',0,1),(30,10,3,5,'2022-07-23 18:21:01',0,1),(31,11,4,17,'2022-07-23 18:21:20',0,1),(32,11,3,4,'2022-07-23 18:21:42',0,1),(33,11,3,5,'2022-07-23 18:21:42',0,1),(34,12,4,18,'2022-07-23 18:22:00',0,1),(35,12,3,4,'2022-07-23 18:22:19',0,1),(36,12,3,5,'2022-07-23 18:22:19',0,1),(37,13,4,19,'2022-07-23 18:22:42',0,1),(38,13,3,4,'2022-07-23 18:23:01',0,1),(39,13,3,5,'2022-07-23 18:23:01',0,1),(40,14,4,20,'2022-07-23 18:23:20',0,1),(41,14,3,4,'2022-07-23 18:23:39',0,1),(42,14,3,5,'2022-07-23 18:23:39',0,1),(43,15,4,21,'2022-07-23 18:23:58',0,1),(44,15,3,4,'2022-07-23 18:24:14',0,1),(45,15,3,5,'2022-07-23 18:24:14',0,1),(46,16,4,22,'2022-07-23 18:24:32',0,1),(47,16,3,4,'2022-07-23 18:24:53',0,1),(48,16,3,5,'2022-07-23 18:24:53',0,1),(49,17,4,23,'2022-07-23 18:25:11',0,1),(50,17,3,4,'2022-07-23 18:25:33',0,1),(51,17,3,5,'2022-07-23 18:25:33',0,1),(52,18,4,24,'2022-07-23 18:25:52',0,1),(53,18,3,4,'2022-07-23 18:26:10',0,1),(54,18,3,5,'2022-07-23 18:26:10',0,1),(55,19,4,25,'2022-07-23 18:26:28',0,1),(56,19,3,4,'2022-07-23 18:26:45',0,1),(57,19,3,5,'2022-07-23 18:26:45',0,1);
 /*!40000 ALTER TABLE `stage_assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2495,7 +2809,7 @@ CREATE TABLE `submission_files` (
 
 LOCK TABLES `submission_files` WRITE;
 /*!40000 ALTER TABLE `submission_files` DISABLE KEYS */;
-INSERT INTO `submission_files` VALUES (1,1,1,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:29:28','2022-07-20 23:29:31',7,521,1),(2,2,2,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:29:55','2022-07-20 23:29:57',8,521,2),(3,3,3,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:30:51','2022-07-20 23:30:53',9,521,3),(4,4,4,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:31:58','2022-07-20 23:32:00',10,521,5),(5,5,5,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:32:51','2022-07-20 23:32:53',11,521,6),(6,6,6,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:33:31','2022-07-20 23:33:33',12,521,7),(7,7,7,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:34:06','2022-07-20 23:34:08',13,521,8),(8,8,8,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:34:49','2022-07-20 23:34:51',14,521,9),(9,9,9,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:35:24','2022-07-20 23:35:26',15,521,10),(10,10,10,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:36:00','2022-07-20 23:36:02',16,521,11),(11,11,11,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:36:38','2022-07-20 23:36:41',17,521,12),(12,12,12,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:37:20','2022-07-20 23:37:22',18,521,13),(13,13,13,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:37:57','2022-07-20 23:38:00',19,521,14),(14,14,14,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:38:38','2022-07-20 23:38:40',20,521,15),(15,15,15,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:39:16','2022-07-20 23:39:18',21,521,16),(16,16,16,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:39:53','2022-07-20 23:39:55',22,521,17),(17,17,17,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:40:33','2022-07-20 23:40:35',23,521,18),(18,18,18,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:41:14','2022-07-20 23:41:16',24,521,19),(19,19,19,NULL,1,10,NULL,NULL,NULL,'2022-07-20 23:41:51','2022-07-20 23:41:54',25,521,20);
+INSERT INTO `submission_files` VALUES (1,1,1,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:14:29','2022-07-23 18:14:32',7,521,1),(2,2,2,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:14:55','2022-07-23 18:14:57',8,521,2),(3,3,3,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:15:49','2022-07-23 18:15:51',9,521,3),(4,4,4,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:16:54','2022-07-23 18:16:56',10,521,5),(5,5,5,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:17:45','2022-07-23 18:17:47',11,521,6),(6,6,6,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:18:22','2022-07-23 18:18:24',12,521,7),(7,7,7,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:18:57','2022-07-23 18:18:59',13,521,8),(8,8,8,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:19:40','2022-07-23 18:19:43',14,521,9),(9,9,9,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:20:16','2022-07-23 18:20:18',15,521,10),(10,10,10,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:20:53','2022-07-23 18:20:55',16,521,11),(11,11,11,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:21:30','2022-07-23 18:21:33',17,521,12),(12,12,12,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:22:11','2022-07-23 18:22:13',18,521,13),(13,13,13,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:22:52','2022-07-23 18:22:54',19,521,14),(14,14,14,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:23:30','2022-07-23 18:23:33',20,521,15),(15,15,15,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:24:08','2022-07-23 18:24:10',21,521,16),(16,16,16,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:24:43','2022-07-23 18:24:45',22,521,17),(17,17,17,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:25:22','2022-07-23 18:25:24',23,521,18),(18,18,18,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:26:02','2022-07-23 18:26:04',24,521,19),(19,19,19,NULL,1,10,NULL,NULL,NULL,'2022-07-23 18:26:38','2022-07-23 18:26:40',25,521,20);
 /*!40000 ALTER TABLE `submission_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2634,7 +2948,7 @@ CREATE TABLE `submissions` (
 
 LOCK TABLES `submissions` WRITE;
 /*!40000 ALTER TABLE `submissions` DISABLE KEYS */;
-INSERT INTO `submissions` VALUES (1,1,1,'2022-07-20 23:29:36','2022-07-20 23:29:36','2022-07-20 23:29:36',5,'en_US',1,0,0),(2,1,2,'2022-07-20 23:30:32','2022-07-20 23:30:04','2022-07-20 23:30:04',5,'en_US',3,0,0),(3,1,4,'2022-07-20 23:31:39','2022-07-20 23:31:03','2022-07-20 23:31:03',5,'en_US',3,0,0),(4,1,5,'2022-07-20 23:32:28','2022-07-20 23:32:05','2022-07-20 23:32:05',5,'en_US',4,0,0),(5,1,6,'2022-07-20 23:33:11','2022-07-20 23:33:01','2022-07-20 23:33:01',5,'en_US',3,0,0),(6,1,7,'2022-07-20 23:33:46','2022-07-20 23:33:38','2022-07-20 23:33:38',5,'en_US',3,0,0),(7,1,8,'2022-07-20 23:34:29','2022-07-20 23:34:19','2022-07-20 23:34:19',5,'en_US',3,0,0),(8,1,9,'2022-07-20 23:35:03','2022-07-20 23:34:55','2022-07-20 23:34:55',5,'en_US',3,0,0),(9,1,10,'2022-07-20 23:35:40','2022-07-20 23:35:31','2022-07-20 23:35:31',5,'en_US',3,0,0),(10,1,11,'2022-07-20 23:36:18','2022-07-20 23:36:09','2022-07-20 23:36:09',5,'en_US',3,0,0),(11,1,12,'2022-07-20 23:36:59','2022-07-20 23:36:50','2022-07-20 23:36:50',5,'en_US',3,0,0),(12,1,13,'2022-07-20 23:37:37','2022-07-20 23:37:28','2022-07-20 23:37:28',5,'en_US',3,0,0),(13,1,14,'2022-07-20 23:38:17','2022-07-20 23:38:08','2022-07-20 23:38:08',5,'en_US',3,0,0),(14,1,15,'2022-07-20 23:38:55','2022-07-20 23:38:46','2022-07-20 23:38:46',5,'en_US',3,0,0),(15,1,16,'2022-07-20 23:39:31','2022-07-20 23:39:23','2022-07-20 23:39:23',5,'en_US',3,0,0),(16,1,17,'2022-07-20 23:40:12','2022-07-20 23:40:03','2022-07-20 23:40:03',5,'en_US',3,0,0),(17,1,18,'2022-07-20 23:40:53','2022-07-20 23:40:44','2022-07-20 23:40:44',5,'en_US',3,0,0),(18,1,19,'2022-07-20 23:41:31','2022-07-20 23:41:21','2022-07-20 23:41:21',5,'en_US',3,0,0),(19,1,20,'2022-07-20 23:42:08','2022-07-20 23:41:59','2022-07-20 23:41:59',5,'en_US',3,0,0);
+INSERT INTO `submissions` VALUES (1,1,1,'2022-07-23 18:14:37','2022-07-23 18:14:37','2022-07-23 18:14:37',5,'en_US',1,0,0),(2,1,2,'2022-07-23 18:15:30','2022-07-23 18:15:03','2022-07-23 18:15:03',5,'en_US',3,0,0),(3,1,4,'2022-07-23 18:16:36','2022-07-23 18:16:03','2022-07-23 18:16:03',5,'en_US',3,0,0),(4,1,5,'2022-07-23 18:17:23','2022-07-23 18:17:01','2022-07-23 18:17:01',5,'en_US',4,0,0),(5,1,6,'2022-07-23 18:18:02','2022-07-23 18:17:54','2022-07-23 18:17:54',5,'en_US',3,0,0),(6,1,7,'2022-07-23 18:18:37','2022-07-23 18:18:29','2022-07-23 18:18:29',5,'en_US',3,0,0),(7,1,8,'2022-07-23 18:19:20','2022-07-23 18:19:11','2022-07-23 18:19:11',5,'en_US',3,0,0),(8,1,9,'2022-07-23 18:19:56','2022-07-23 18:19:47','2022-07-23 18:19:47',5,'en_US',3,0,0),(9,1,10,'2022-07-23 18:20:32','2022-07-23 18:20:24','2022-07-23 18:20:24',5,'en_US',3,0,0),(10,1,11,'2022-07-23 18:21:09','2022-07-23 18:21:01','2022-07-23 18:21:01',5,'en_US',3,0,0),(11,1,12,'2022-07-23 18:21:50','2022-07-23 18:21:42','2022-07-23 18:21:42',5,'en_US',3,0,0),(12,1,13,'2022-07-23 18:22:30','2022-07-23 18:22:19','2022-07-23 18:22:19',5,'en_US',3,0,0),(13,1,14,'2022-07-23 18:23:10','2022-07-23 18:23:01','2022-07-23 18:23:01',5,'en_US',3,0,0),(14,1,15,'2022-07-23 18:23:48','2022-07-23 18:23:39','2022-07-23 18:23:39',5,'en_US',3,0,0),(15,1,16,'2022-07-23 18:24:22','2022-07-23 18:24:14','2022-07-23 18:24:14',5,'en_US',3,0,0),(16,1,17,'2022-07-23 18:25:01','2022-07-23 18:24:52','2022-07-23 18:24:52',5,'en_US',3,0,0),(17,1,18,'2022-07-23 18:25:42','2022-07-23 18:25:33','2022-07-23 18:25:33',5,'en_US',3,0,0),(18,1,19,'2022-07-23 18:26:19','2022-07-23 18:26:10','2022-07-23 18:26:10',5,'en_US',3,0,0),(19,1,20,'2022-07-23 18:26:54','2022-07-23 18:26:45','2022-07-23 18:26:45',5,'en_US',3,0,0);
 /*!40000 ALTER TABLE `submissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2668,34 +2982,156 @@ LOCK TABLES `temporary_files` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `usage_stats_temporary_records`
+-- Table structure for table `usage_stats_institution_temporary_records`
 --
 
-DROP TABLE IF EXISTS `usage_stats_temporary_records`;
+DROP TABLE IF EXISTS `usage_stats_institution_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `usage_stats_temporary_records` (
-  `assoc_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `representation_id` bigint(20) DEFAULT NULL,
-  `day` bigint(20) NOT NULL,
-  `entry_time` bigint(20) NOT NULL,
-  `metric` bigint(20) NOT NULL DEFAULT '1',
-  `country_id` varchar(2) DEFAULT NULL,
-  `region` varchar(2) DEFAULT NULL,
-  `city` varchar(255) DEFAULT NULL,
+CREATE TABLE `usage_stats_institution_temporary_records` (
   `load_id` varchar(255) NOT NULL,
-  `file_type` smallint(6) DEFAULT NULL
+  `line_number` bigint(20) NOT NULL,
+  `institution_id` bigint(20) NOT NULL,
+  UNIQUE KEY `usitr_load_id_line_number_institution_id` (`load_id`,`line_number`,`institution_id`),
+  KEY `usi_institution_id_foreign` (`institution_id`),
+  CONSTRAINT `usi_institution_id_foreign` FOREIGN KEY (`institution_id`) REFERENCES `institutions` (`institution_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usage_stats_temporary_records`
+-- Dumping data for table `usage_stats_institution_temporary_records`
 --
 
-LOCK TABLES `usage_stats_temporary_records` WRITE;
-/*!40000 ALTER TABLE `usage_stats_temporary_records` DISABLE KEYS */;
-/*!40000 ALTER TABLE `usage_stats_temporary_records` ENABLE KEYS */;
+LOCK TABLES `usage_stats_institution_temporary_records` WRITE;
+/*!40000 ALTER TABLE `usage_stats_institution_temporary_records` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usage_stats_institution_temporary_records` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usage_stats_total_temporary_records`
+--
+
+DROP TABLE IF EXISTS `usage_stats_total_temporary_records`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usage_stats_total_temporary_records` (
+  `date` datetime NOT NULL,
+  `ip` varchar(255) NOT NULL,
+  `user_agent` varchar(255) NOT NULL,
+  `line_number` bigint(20) NOT NULL,
+  `canonical_url` varchar(255) NOT NULL,
+  `context_id` bigint(20) NOT NULL,
+  `submission_id` bigint(20) DEFAULT NULL,
+  `representation_id` bigint(20) DEFAULT NULL,
+  `submission_file_id` bigint(20) unsigned DEFAULT NULL,
+  `assoc_type` bigint(20) NOT NULL,
+  `file_type` smallint(6) DEFAULT NULL,
+  `country` varchar(2) NOT NULL DEFAULT '',
+  `region` varchar(3) NOT NULL DEFAULT '',
+  `city` varchar(255) NOT NULL DEFAULT '',
+  `load_id` varchar(255) NOT NULL,
+  KEY `ust_context_id_foreign` (`context_id`),
+  KEY `ust_submission_id_foreign` (`submission_id`),
+  KEY `ust_representation_id_foreign` (`representation_id`),
+  KEY `ust_submission_file_id_foreign` (`submission_file_id`),
+  CONSTRAINT `ust_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
+  CONSTRAINT `ust_representation_id_foreign` FOREIGN KEY (`representation_id`) REFERENCES `publication_galleys` (`galley_id`) ON DELETE CASCADE,
+  CONSTRAINT `ust_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE,
+  CONSTRAINT `ust_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usage_stats_total_temporary_records`
+--
+
+LOCK TABLES `usage_stats_total_temporary_records` WRITE;
+/*!40000 ALTER TABLE `usage_stats_total_temporary_records` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usage_stats_total_temporary_records` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usage_stats_unique_item_investigations_temporary_records`
+--
+
+DROP TABLE IF EXISTS `usage_stats_unique_item_investigations_temporary_records`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usage_stats_unique_item_investigations_temporary_records` (
+  `date` datetime NOT NULL,
+  `ip` varchar(255) NOT NULL,
+  `user_agent` varchar(255) NOT NULL,
+  `line_number` bigint(20) NOT NULL,
+  `context_id` bigint(20) NOT NULL,
+  `submission_id` bigint(20) NOT NULL,
+  `representation_id` bigint(20) DEFAULT NULL,
+  `submission_file_id` bigint(20) unsigned DEFAULT NULL,
+  `assoc_type` bigint(20) NOT NULL,
+  `file_type` smallint(6) DEFAULT NULL,
+  `country` varchar(2) NOT NULL DEFAULT '',
+  `region` varchar(3) NOT NULL DEFAULT '',
+  `city` varchar(255) NOT NULL DEFAULT '',
+  `load_id` varchar(255) NOT NULL,
+  KEY `usii_context_id_foreign` (`context_id`),
+  KEY `usii_submission_id_foreign` (`submission_id`),
+  KEY `usii_representation_id_foreign` (`representation_id`),
+  KEY `usii_submission_file_id_foreign` (`submission_file_id`),
+  CONSTRAINT `usii_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
+  CONSTRAINT `usii_representation_id_foreign` FOREIGN KEY (`representation_id`) REFERENCES `publication_galleys` (`galley_id`) ON DELETE CASCADE,
+  CONSTRAINT `usii_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE,
+  CONSTRAINT `usii_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usage_stats_unique_item_investigations_temporary_records`
+--
+
+LOCK TABLES `usage_stats_unique_item_investigations_temporary_records` WRITE;
+/*!40000 ALTER TABLE `usage_stats_unique_item_investigations_temporary_records` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usage_stats_unique_item_investigations_temporary_records` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `usage_stats_unique_item_requests_temporary_records`
+--
+
+DROP TABLE IF EXISTS `usage_stats_unique_item_requests_temporary_records`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usage_stats_unique_item_requests_temporary_records` (
+  `date` datetime NOT NULL,
+  `ip` varchar(255) NOT NULL,
+  `user_agent` varchar(255) NOT NULL,
+  `line_number` bigint(20) NOT NULL,
+  `context_id` bigint(20) NOT NULL,
+  `submission_id` bigint(20) NOT NULL,
+  `representation_id` bigint(20) DEFAULT NULL,
+  `submission_file_id` bigint(20) unsigned DEFAULT NULL,
+  `assoc_type` bigint(20) NOT NULL,
+  `file_type` smallint(6) DEFAULT NULL,
+  `country` varchar(2) NOT NULL DEFAULT '',
+  `region` varchar(3) NOT NULL DEFAULT '',
+  `city` varchar(255) NOT NULL DEFAULT '',
+  `load_id` varchar(255) NOT NULL,
+  KEY `usir_context_id_foreign` (`context_id`),
+  KEY `usir_submission_id_foreign` (`submission_id`),
+  KEY `usir_representation_id_foreign` (`representation_id`),
+  KEY `usir_submission_file_id_foreign` (`submission_file_id`),
+  CONSTRAINT `usir_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
+  CONSTRAINT `usir_representation_id_foreign` FOREIGN KEY (`representation_id`) REFERENCES `publication_galleys` (`galley_id`) ON DELETE CASCADE,
+  CONSTRAINT `usir_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE,
+  CONSTRAINT `usir_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usage_stats_unique_item_requests_temporary_records`
+--
+
+LOCK TABLES `usage_stats_unique_item_requests_temporary_records` WRITE;
+/*!40000 ALTER TABLE `usage_stats_unique_item_requests_temporary_records` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usage_stats_unique_item_requests_temporary_records` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -2903,7 +3339,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','$2y$10$ykq2VBlzgpE541t/PCsqk.yl5f.l02h7zKHH1vjxJc6gw8rj2cF4q','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'[]',NULL,NULL,'2022-07-20 23:26:27',NULL,'2022-07-20 23:28:43',NULL,NULL,NULL,0,NULL,1),(2,'rvaca','$2y$10$x/UiccqMREY.elI0DKAedu7SWp2h/6E5mGo0N5NxszF9XkkJrKRR6','rvaca@mailinator.com','','','',NULL,'MX','[]',NULL,NULL,'2022-07-20 23:27:43',NULL,'2022-07-20 23:28:31',0,0,NULL,0,NULL,1),(3,'dbarnes','$2y$10$WxkD3ryUUdOr2FFpe5YEwu1IsmgQsKCb4kmBaLh0qc1BS/RWcGwM2','dbarnes@mailinator.com','','','',NULL,'AU','[]',NULL,NULL,'2022-07-20 23:27:50',NULL,'2022-07-20 23:42:00',0,0,NULL,0,NULL,1),(4,'dbuskins','$2y$10$R9P8xs76A7GgXjbLePAZE.cfmpRpRCtJ15w.qjels44/ow06cnHM6','dbuskins@mailinator.com','','','',NULL,'US','[]',NULL,NULL,'2022-07-20 23:28:00',NULL,NULL,0,0,NULL,0,NULL,1),(5,'sberardo','$2y$10$Xu1NemuFCbrvNPmaY2Kzx.PbXNsiFFuC8XWONm5f0d/sZK1tKrGPa','sberardo@mailinator.com','','','',NULL,'CA','[]',NULL,NULL,'2022-07-20 23:28:11',NULL,NULL,0,0,NULL,0,NULL,1),(6,'minoue','$2y$10$wziuutYQ.Dw3YpWI5uYsGuqCTMyFVZDSla0hDGGHf3r/NDetCfPF2','minoue@mailinator.com','','','',NULL,'JP','[]',NULL,NULL,'2022-07-20 23:28:22',NULL,NULL,0,0,NULL,0,NULL,1),(7,'ccorino','$2y$10$/bqwy1aul3wxiAXWK4ncZOMaIy5GWiy0.2YNOiwuGw7457Z5UAJeq','ccorino@mailinator.com',NULL,NULL,NULL,NULL,'IT','[]',NULL,NULL,'2022-07-20 23:29:14',NULL,'2022-07-20 23:29:14',NULL,NULL,NULL,0,NULL,1),(8,'ckwantes','$2y$10$H90Vu6bMM0eWIo59mlHpSetQ0953q59JmqNSFdxe/CQvf0yynQq5K','ckwantes@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2022-07-20 23:29:41',NULL,'2022-07-20 23:29:41',NULL,NULL,NULL,0,NULL,1),(9,'cmontgomerie','$2y$10$X11yr7Q0rywxKwROfNcwTejYywzAI36K7xn6stlxdab6esjsh2QRW','cmontgomerie@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2022-07-20 23:30:36',NULL,'2022-07-20 23:30:37',NULL,NULL,NULL,0,NULL,1),(10,'ddiouf','$2y$10$wAgFsFN5o0QcQoYN6O0w9OCzN0Ecnzupx.SncPqG7L4JZrL9uptT.','ddiouf@mailinator.com',NULL,NULL,NULL,NULL,'EG','[]',NULL,NULL,'2022-07-20 23:31:44',NULL,'2022-07-20 23:31:44',NULL,NULL,NULL,0,NULL,1),(11,'dphillips','$2y$10$WYHYR3kR8gVi7UCqG9nJ0eX717tzDUCdnCI3WfSNuy80pN8sL2wN.','dphillips@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2022-07-20 23:32:36',NULL,'2022-07-20 23:32:36',NULL,NULL,NULL,0,NULL,1),(12,'dsokoloff','$2y$10$Jg2Tu2QDhhGcxbm3S7KgKennTphRrYcJEmDNdlJVhNBI0i7Xkeay6','dsokoloff@mailinator.com',NULL,NULL,NULL,NULL,'IE','[]',NULL,NULL,'2022-07-20 23:33:17',NULL,'2022-07-20 23:33:17',NULL,NULL,NULL,0,NULL,1),(13,'eostrom','$2y$10$EOYHFYJABQJmtirMeCvK8eSyvVF31WESbYBJDB8Cr.qleX5oLFTYO','eostrom@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2022-07-20 23:33:51',NULL,'2022-07-20 23:33:51',NULL,NULL,NULL,0,NULL,1),(14,'fpaglieri','$2y$10$n7f.KjCRK7xxdjbCDO5HlO7YC8/.x64BFrU9Y06JUadvfmVpO6UKW','fpaglieri@mailinator.com',NULL,NULL,NULL,NULL,'IT','[]',NULL,NULL,'2022-07-20 23:34:35',NULL,'2022-07-20 23:34:35',NULL,NULL,NULL,0,NULL,1),(15,'jmwandenga','$2y$10$VcJQSHX3XSU.ZutE9wqk0ucIS1hz45Jzq/OwgX7ISMXDlbW.30BSC','jmwandenga@mailinator.com',NULL,NULL,NULL,NULL,'ZA','[]',NULL,NULL,'2022-07-20 23:35:09',NULL,'2022-07-20 23:35:09',NULL,NULL,NULL,0,NULL,1),(16,'jnovak','$2y$10$dfzqppRpX1R94hVThqvyhOSLFbT7gtEP5X0pVtQRSWAzv62yTCP/G','jnovak@mailinator.com',NULL,NULL,NULL,NULL,'DK','[]',NULL,NULL,'2022-07-20 23:35:46',NULL,'2022-07-20 23:35:46',NULL,NULL,NULL,0,NULL,1),(17,'kalkhafaji','$2y$10$ilKKxnzRuI3KLehvMi7dsONIVnwt1c//UjWOt50avt/ZSnAArV0IC','kalkhafaji@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2022-07-20 23:36:24',NULL,'2022-07-20 23:36:24',NULL,NULL,NULL,0,NULL,1),(18,'lchristopher','$2y$10$Y1wnDD3bDDcppROYiLX7Deev/lwhJ4CHABr1VadXvvcaxEs2N9e1K','lchristopher@mailinator.com',NULL,NULL,NULL,NULL,'AU','[]',NULL,NULL,'2022-07-20 23:37:06',NULL,'2022-07-20 23:37:06',NULL,NULL,NULL,0,NULL,1),(19,'lkumiega','$2y$10$7MlwgkVej6xYvT9.xZNfhe.u7WfYXrb4QOEq5RJRaQgDuPA974mri','lkumiega@mailinator.com',NULL,NULL,NULL,NULL,'ZA','[]',NULL,NULL,'2022-07-20 23:37:43',NULL,'2022-07-20 23:37:43',NULL,NULL,NULL,0,NULL,1),(20,'pdaniel','$2y$10$cDQRz0Uvvw8TTW9Mpu5.gO9bmm2uQqrL1u2zuEkV3utcwuyKRbBnW','pdaniel@mailinator.com',NULL,NULL,NULL,NULL,'GB','[]',NULL,NULL,'2022-07-20 23:38:23',NULL,'2022-07-20 23:38:24',NULL,NULL,NULL,0,NULL,1),(21,'rbaiyewu','$2y$10$2OTQI4VM1oV7xBnKJOUYk.N8bCM9qF6kKXHvno35CjazLoTg2U9Lm','rbaiyewu@mailinator.com',NULL,NULL,NULL,NULL,'KE','[]',NULL,NULL,'2022-07-20 23:39:01',NULL,'2022-07-20 23:39:01',NULL,NULL,NULL,0,NULL,1),(22,'rrossi','$2y$10$2JO09wGWOWQIoi.fLfI5v.3uubgriV.Rh28YGwRmDoMUdx4Q6L5ZK','rrossi@mailinator.com',NULL,NULL,NULL,NULL,'ES','[]',NULL,NULL,'2022-07-20 23:39:38',NULL,'2022-07-20 23:39:38',NULL,NULL,NULL,0,NULL,1),(23,'vkarbasizaed','$2y$10$HPbjuFVfZVrh364Va9J5HO6G4eSY3vfX9cXol4e0DaECegaqSfPf.','vkarbasizaed@mailinator.com',NULL,NULL,NULL,NULL,'IR','[]',NULL,NULL,'2022-07-20 23:40:19',NULL,'2022-07-20 23:40:19',NULL,NULL,NULL,0,NULL,1),(24,'vwilliamson','$2y$10$Op3eXBgghYPOBB0Lq2KCXe19ALXa6krx3YWz93MCdJpiEaStP/XB.','vwilliamson@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2022-07-20 23:40:59',NULL,'2022-07-20 23:40:59',NULL,NULL,NULL,0,NULL,1),(25,'zwoods','$2y$10$MhOGvEZ4kp.nxuVv6khLjuCwGJ4vVrKqaybgkgU2UA.B2I4yvUVBS','zwoods@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2022-07-20 23:41:37',NULL,'2022-07-20 23:41:37',NULL,NULL,NULL,0,NULL,1);
+INSERT INTO `users` VALUES (1,'admin','$2y$10$/EgGa56cQkeb0inS50wr1urFzfKmgFNhDO06E16K1PZ5EJqbJxws2','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'[]',NULL,NULL,'2022-07-23 18:11:30',NULL,'2022-07-23 18:13:44',NULL,NULL,NULL,0,NULL,1),(2,'rvaca','$2y$10$G9BmWcjP.YGA1F57fq28yuyxValNgsQ.eQE7byffRhGbmezMZZ1Au','rvaca@mailinator.com','','','',NULL,'MX','[]',NULL,NULL,'2022-07-23 18:12:40',NULL,'2022-07-23 18:13:32',0,0,NULL,0,NULL,1),(3,'dbarnes','$2y$10$OYVxTqxG5Jp3Ro.k3EF9Me5TimB73Yc48Dmci95r60ZFWtmsl6eQa','dbarnes@mailinator.com','','','',NULL,'AU','[]',NULL,NULL,'2022-07-23 18:12:48',NULL,'2022-07-23 18:26:46',0,0,NULL,0,NULL,1),(4,'dbuskins','$2y$10$VUiBFQnWZjjPNltbJTlchukcGPz4iCvL/m8ep5f7XK7Gr57L8rXoC','dbuskins@mailinator.com','','','',NULL,'US','[]',NULL,NULL,'2022-07-23 18:12:59',NULL,NULL,0,0,NULL,0,NULL,1),(5,'sberardo','$2y$10$SJT6Usxv8HRtRQWhG.uqVutWgNMn0SmLBNt4ZeVZubFhc014.R.xi','sberardo@mailinator.com','','','',NULL,'CA','[]',NULL,NULL,'2022-07-23 18:13:13',NULL,NULL,0,0,NULL,0,NULL,1),(6,'minoue','$2y$10$s5LSi2ipCnEsDv567Gt26uEYr/LV04vlrhE0g7UdSp6nGDVh8xsMe','minoue@mailinator.com','','','',NULL,'JP','[]',NULL,NULL,'2022-07-23 18:13:23',NULL,NULL,0,0,NULL,0,NULL,1),(7,'ccorino','$2y$10$u5JC0LDumq0Ei6929JV7fO2e4r5bBooov8auwTujjtZ5W9CpZtgwi','ccorino@mailinator.com',NULL,NULL,NULL,NULL,'IT','[]',NULL,NULL,'2022-07-23 18:14:15',NULL,'2022-07-23 18:14:15',NULL,NULL,NULL,0,NULL,1),(8,'ckwantes','$2y$10$YM0yvruMq5If5IMG3iZ7q.cf5..nt.MjXXPOkNUw2tISavof4zqh.','ckwantes@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2022-07-23 18:14:41',NULL,'2022-07-23 18:14:41',NULL,NULL,NULL,0,NULL,1),(9,'cmontgomerie','$2y$10$FAr7N28n5XaLyyDkeh72..g6VV4BQFE12ccUsR.xcDI887Tvy5AYi','cmontgomerie@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2022-07-23 18:15:35',NULL,'2022-07-23 18:15:35',NULL,NULL,NULL,0,NULL,1),(10,'ddiouf','$2y$10$E1YVrOX8pzOeW53Kp2zCO.pDdAgAr0F.GpavQ.Bb4fhRUacPoyKxy','ddiouf@mailinator.com',NULL,NULL,NULL,NULL,'EG','[]',NULL,NULL,'2022-07-23 18:16:40',NULL,'2022-07-23 18:16:41',NULL,NULL,NULL,0,NULL,1),(11,'dphillips','$2y$10$/osQV0s3yml0WdfR29U5feBmj3/yZ5j1SFQkjhZUzZFlqyItXgsGm','dphillips@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2022-07-23 18:17:30',NULL,'2022-07-23 18:17:31',NULL,NULL,NULL,0,NULL,1),(12,'dsokoloff','$2y$10$IwaZ6o8FwSFKV8PdE0lECuuy14/ZH3xD.AUcUySmtYX0yUD9awUre','dsokoloff@mailinator.com',NULL,NULL,NULL,NULL,'IE','[]',NULL,NULL,'2022-07-23 18:18:07',NULL,'2022-07-23 18:18:08',NULL,NULL,NULL,0,NULL,1),(13,'eostrom','$2y$10$WtSdyZH74uPpEJujeWo3zOBh9xdyOYLQNOAJdlvQBIJ4MDiiU8jVS','eostrom@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2022-07-23 18:18:43',NULL,'2022-07-23 18:18:43',NULL,NULL,NULL,0,NULL,1),(14,'fpaglieri','$2y$10$vyxROluRU7MlZjYDmT/LbOo9Fq4kOAdQ1hT8payDcOH1WDTxSBDeG','fpaglieri@mailinator.com',NULL,NULL,NULL,NULL,'IT','[]',NULL,NULL,'2022-07-23 18:19:26',NULL,'2022-07-23 18:19:26',NULL,NULL,NULL,0,NULL,1),(15,'jmwandenga','$2y$10$tBR1cSSfWLDRfYCiDZtAP.2Fh2HTBiQT4vyS5YyMFdTwivelHbuj2','jmwandenga@mailinator.com',NULL,NULL,NULL,NULL,'ZA','[]',NULL,NULL,'2022-07-23 18:20:01',NULL,'2022-07-23 18:20:01',NULL,NULL,NULL,0,NULL,1),(16,'jnovak','$2y$10$iHb2B9be3hJJJb/dDUx2iuunt.8lg5T1sL68rfhI8PbUukSuNL2oi','jnovak@mailinator.com',NULL,NULL,NULL,NULL,'DK','[]',NULL,NULL,'2022-07-23 18:20:38',NULL,'2022-07-23 18:20:38',NULL,NULL,NULL,0,NULL,1),(17,'kalkhafaji','$2y$10$scvEtmFhReClV0g.lcIlUefGPfmQ/czhh2h6THHpql3XsadQcYApa','kalkhafaji@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2022-07-23 18:21:15',NULL,'2022-07-23 18:21:16',NULL,NULL,NULL,0,NULL,1),(18,'lchristopher','$2y$10$CcDO0ERIGUQiNIvi716VceF1L2/lAeKAKlMgwRT6ZXNocHDhdbvx6','lchristopher@mailinator.com',NULL,NULL,NULL,NULL,'AU','[]',NULL,NULL,'2022-07-23 18:21:56',NULL,'2022-07-23 18:21:56',NULL,NULL,NULL,0,NULL,1),(19,'lkumiega','$2y$10$KocYX476VRIwNbI5TjpLzub53rCE/Lzy9VCZSuDxdSapVvEu/NDvm','lkumiega@mailinator.com',NULL,NULL,NULL,NULL,'ZA','[]',NULL,NULL,'2022-07-23 18:22:38',NULL,'2022-07-23 18:22:38',NULL,NULL,NULL,0,NULL,1),(20,'pdaniel','$2y$10$ebcV3WQch36sfvPTH5zC0eGsQ6iTdktT1n7l8PIZ3tV/gKkbN2Igi','pdaniel@mailinator.com',NULL,NULL,NULL,NULL,'GB','[]',NULL,NULL,'2022-07-23 18:23:16',NULL,'2022-07-23 18:23:16',NULL,NULL,NULL,0,NULL,1),(21,'rbaiyewu','$2y$10$B3vdQNY46OyEw8I1uUdF7.czO.5euZFTlnFVaToZNMWzvcOzAJIx.','rbaiyewu@mailinator.com',NULL,NULL,NULL,NULL,'KE','[]',NULL,NULL,'2022-07-23 18:23:54',NULL,'2022-07-23 18:23:54',NULL,NULL,NULL,0,NULL,1),(22,'rrossi','$2y$10$Axu/WJR.ZzQyV7MeuU7JIeQi718WtgFuBQgGrcnm43rUAGoBLmhs.','rrossi@mailinator.com',NULL,NULL,NULL,NULL,'ES','[]',NULL,NULL,'2022-07-23 18:24:28',NULL,'2022-07-23 18:24:29',NULL,NULL,NULL,0,NULL,1),(23,'vkarbasizaed','$2y$10$rUELey0aTDjpowM9mRhHSuHw1xyrzPsyLwyDBSi2bvaDyJovq2fyG','vkarbasizaed@mailinator.com',NULL,NULL,NULL,NULL,'IR','[]',NULL,NULL,'2022-07-23 18:25:07',NULL,'2022-07-23 18:25:07',NULL,NULL,NULL,0,NULL,1),(24,'vwilliamson','$2y$10$1K5a2mVJFstfOQnI.Dt8fuD5ppkxt7f5gfhUqdCiUc2VAj.4fQnyO','vwilliamson@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2022-07-23 18:25:48',NULL,'2022-07-23 18:25:48',NULL,NULL,NULL,0,NULL,1),(25,'zwoods','$2y$10$lbQ6m19a/XB6oFjQSwslTuJMiFZz4buBc5b88DEa5WOgK1b1XX5kS','zwoods@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2022-07-23 18:26:24',NULL,'2022-07-23 18:26:25',NULL,NULL,NULL,0,NULL,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2936,7 +3372,7 @@ CREATE TABLE `versions` (
 
 LOCK TABLES `versions` WRITE;
 /*!40000 ALTER TABLE `versions` DISABLE KEYS */;
-INSERT INTO `versions` VALUES (1,0,0,0,'2022-07-20 23:26:27',1,'plugins.metadata','dc11','',0,0),(1,0,0,0,'2022-07-20 23:26:27',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),(1,0,0,0,'2022-07-20 23:26:27',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),(1,0,1,0,'2022-07-20 23:26:27',1,'plugins.blocks','browse','BrowseBlockPlugin',1,0),(1,0,1,0,'2022-07-20 23:26:27',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),(1,2,0,0,'2022-07-20 23:26:27',1,'plugins.generic','orcidProfile','OrcidProfilePlugin',1,0),(1,0,0,0,'2022-07-20 23:26:27',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),(1,2,0,0,'2022-07-20 23:26:27',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),(1,0,0,0,'2022-07-20 23:26:27',1,'plugins.generic','usageStats','UsageStatsPlugin',0,1),(1,1,0,0,'2022-07-20 23:26:27',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),(1,0,0,0,'2022-07-20 23:26:27',1,'plugins.generic','usageEvent','',0,0),(1,2,0,0,'2022-07-20 23:26:27',1,'plugins.generic','acron','AcronPlugin',1,1),(0,1,0,0,'2022-07-20 23:26:27',1,'plugins.generic','citationStyleLanguage','CitationStyleLanguagePlugin',1,0),(1,0,0,0,'2022-07-20 23:26:27',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),(2,2,0,0,'2022-07-20 23:26:27',1,'plugins.generic','crossref','',0,0),(1,0,0,0,'2022-07-20 23:26:27',1,'plugins.importexport','native','',0,0),(1,0,0,0,'2022-07-20 23:26:27',1,'plugins.oaiMetadataFormats','dc','',0,0),(1,1,0,0,'2022-07-20 23:26:27',1,'plugins.reports','counterReport','',0,0),(1,0,0,0,'2022-07-20 23:26:27',1,'plugins.themes','default','DefaultThemePlugin',1,0),(3,4,0,0,'2022-07-20 23:26:24',1,'core','ops','',0,1);
+INSERT INTO `versions` VALUES (1,0,0,0,'2022-07-23 18:11:31',1,'plugins.metadata','dc11','',0,0),(1,0,0,0,'2022-07-23 18:11:31',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),(1,0,0,0,'2022-07-23 18:11:31',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),(1,0,1,0,'2022-07-23 18:11:31',1,'plugins.blocks','browse','BrowseBlockPlugin',1,0),(1,0,1,0,'2022-07-23 18:11:31',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),(1,2,0,0,'2022-07-23 18:11:31',1,'plugins.generic','orcidProfile','OrcidProfilePlugin',1,0),(1,0,0,0,'2022-07-23 18:11:31',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),(1,2,0,0,'2022-07-23 18:11:31',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),(1,1,0,0,'2022-07-23 18:11:31',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),(1,0,0,0,'2022-07-23 18:11:31',1,'plugins.generic','usageEvent','',0,0),(1,2,0,0,'2022-07-23 18:11:31',1,'plugins.generic','acron','AcronPlugin',1,1),(0,1,0,0,'2022-07-23 18:11:31',1,'plugins.generic','citationStyleLanguage','CitationStyleLanguagePlugin',1,0),(1,0,0,0,'2022-07-23 18:11:31',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),(2,2,0,0,'2022-07-23 18:11:31',1,'plugins.generic','crossref','',0,0),(1,0,0,0,'2022-07-23 18:11:31',1,'plugins.importexport','native','',0,0),(1,0,0,0,'2022-07-23 18:11:31',1,'plugins.oaiMetadataFormats','dc','',0,0),(1,0,0,0,'2022-07-23 18:11:31',1,'plugins.themes','default','DefaultThemePlugin',1,0),(3,4,0,0,'2022-07-23 18:11:27',1,'core','ops','',0,1);
 /*!40000 ALTER TABLE `versions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2949,4 +3385,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-07-20 23:42:09
+-- Dump completed on 2022-07-23 18:26:55
