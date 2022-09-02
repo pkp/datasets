@@ -4773,9 +4773,9 @@ SELECT pg_catalog.setval('public.dois_doi_id_seq', 1, false);
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	4	\N	5	\N	3	8	2022-09-02 05:07:37
-2	4	\N	5	\N	3	16	2022-09-02 05:07:45
-3	4	\N	5	\N	3	8	2022-09-02 05:07:53
+1	4	\N	5	\N	3	8	2022-09-02 07:11:57
+2	4	\N	5	\N	3	16	2022-09-02 07:12:05
+3	4	\N	5	\N	3	8	2022-09-02 07:12:12
 \.
 
 
@@ -4791,31 +4791,31 @@ SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 3, true);
 --
 
 COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
-1	1048585	1	0	2022-09-02 05:04:38	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Carlo Corino" <ccorino@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Carlo Corino,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, The influence of lactation on the quantity and quality of cashmere production, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/1</p><p>If you have been logged out, you can login again with the username ccorino</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-2	1048585	2	0	2022-09-02 05:05:09	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Catherine Kwantes" <ckwantes@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Catherine Kwantes,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/2</p><p>If you have been logged out, you can login again with the username ckwantes</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/2">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-3	1048585	3	0	2022-09-02 05:06:14	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Craig Montgomerie" <cmontgomerie@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Craig Montgomerie,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/3</p><p>If you have been logged out, you can login again with the username cmontgomerie</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/3">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-4	1048585	3	0	2022-09-02 05:06:14	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Mark Irvine" <mirvine@mailinator.com>			Submission Acknowledgement	Hello,<br />\n<br />\nCraig Montgomerie has submitted the manuscript, &quot;Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice&quot; to Public Knowledge Preprint Server. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this server as a venue for your work.<br />\n<br />\n<br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-5	1048585	4	0	2022-09-02 05:07:26	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Diaga Diouf,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Genetic transformation of forest trees, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/4</p><p>If you have been logged out, you can login again with the username ddiouf</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-6	1048585	4	3	2022-09-02 05:07:37	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-7	1048585	4	3	2022-09-02 05:07:45	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			We have reversed the decision to decline your submission	<p>Dear Diaga Diouf,</p>\n<p>The decision to decline your submission, Genetic transformation of forest trees, has been reversed. \nAn editor will look further at your submission before deciding whether to decline \nthe submission or send it for review.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>\n
-8	1048585	4	3	2022-09-02 05:07:53	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-9	1048585	5	0	2022-09-02 05:08:30	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Dana Phillips,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/5</p><p>If you have been logged out, you can login again with the username dphillips</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-10	1048585	6	0	2022-09-02 05:09:11	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Domatilia Sokoloff" <dsokoloff@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Domatilia Sokoloff,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Developing efficacy beliefs in the classroom, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/6</p><p>If you have been logged out, you can login again with the username dsokoloff</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/6">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-11	1048585	7	0	2022-09-02 05:09:59	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Elinor Ostrom" <eostrom@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Elinor Ostrom,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Traditions and Trends in the Study of the Commons, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/7</p><p>If you have been logged out, you can login again with the username eostrom</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-12	1048585	7	0	2022-09-02 05:10:00	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank van Laerhoven" <fvanlaerhoven@mailinator.com>			Submission Acknowledgement	Hello,<br />\n<br />\nElinor Ostrom has submitted the manuscript, &quot;Traditions and Trends in the Study of the Commons&quot; to Public Knowledge Preprint Server. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this server as a venue for your work.<br />\n<br />\n<br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-13	1048585	8	0	2022-09-02 05:10:42	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Fabio Paglieri,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Hansen & Pinto: Reason Reclaimed, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/8</p><p>If you have been logged out, you can login again with the username fpaglieri</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/8">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-14	1048585	9	0	2022-09-02 05:11:25	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Mwandenga" <jmwandenga@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear John Mwandenga,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/9</p><p>If you have been logged out, you can login again with the username jmwandenga</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/9">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-15	1048585	10	0	2022-09-02 05:12:10	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Novak" <jnovak@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear John Novak,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Condensing Water Availability Models to Focus on Specific Water Management Systems, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/10</p><p>If you have been logged out, you can login again with the username jnovak</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/10">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-16	1048585	11	0	2022-09-02 05:12:59	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Karim Al-Khafaji" <kalkhafaji@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Karim Al-Khafaji,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Learning Sustainable Design through Service, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/11</p><p>If you have been logged out, you can login again with the username kalkhafaji</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-17	1048585	11	0	2022-09-02 05:12:59	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Margaret Morse" <mmorse@mailinator.com>			Submission Acknowledgement	Hello,<br />\n<br />\nKarim Al-Khafaji has submitted the manuscript, &quot;Learning Sustainable Design through Service&quot; to Public Knowledge Preprint Server. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this server as a venue for your work.<br />\n<br />\n<br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-18	1048585	12	0	2022-09-02 05:13:45	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Leo Christopher" <lchristopher@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Leo Christopher,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Sodium butyrate improves growth performance of weaned piglets during the first period after weaning, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/12</p><p>If you have been logged out, you can login again with the username lchristopher</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/12">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-19	1048585	13	0	2022-09-02 05:14:34	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Lise Kumiega" <lkumiega@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Lise Kumiega,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/13</p><p>If you have been logged out, you can login again with the username lkumiega</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-20	1048585	14	0	2022-09-02 05:15:21	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Patricia Daniel" <pdaniel@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Patricia Daniel,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/14</p><p>If you have been logged out, you can login again with the username pdaniel</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-21	1048585	15	0	2022-09-02 05:16:04	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Rana Baiyewu,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Yam diseases and its management in Nigeria, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/15</p><p>If you have been logged out, you can login again with the username rbaiyewu</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/15">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-22	1048585	16	0	2022-09-02 05:16:51	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rosanna Rossi" <rrossi@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Rosanna Rossi,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/16</p><p>If you have been logged out, you can login again with the username rrossi</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/16">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-23	1048585	17	0	2022-09-02 05:17:40	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Vajiheh Karbasizaed,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/17</p><p>If you have been logged out, you can login again with the username vkarbasizaed</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/17">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-24	1048585	18	0	2022-09-02 05:18:24	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Valerie Williamson" <vwilliamson@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Valerie Williamson,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Self-Organization in Multi-Level Institutions in Networked Environments, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/18</p><p>If you have been logged out, you can login again with the username vwilliamson</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/18">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
-25	1048585	19	0	2022-09-02 05:19:08	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Zita Woods" <zwoods@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Zita Woods,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Finocchiaro: Arguments About Arguments, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/19</p><p>If you have been logged out, you can login again with the username zwoods</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/19">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+1	1048585	1	0	2022-09-02 07:09:09	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Carlo Corino" <ccorino@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Carlo Corino,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, The influence of lactation on the quantity and quality of cashmere production, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/1</p><p>If you have been logged out, you can login again with the username ccorino</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+2	1048585	2	0	2022-09-02 07:09:37	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Catherine Kwantes" <ckwantes@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Catherine Kwantes,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/2</p><p>If you have been logged out, you can login again with the username ckwantes</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/2">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+3	1048585	3	0	2022-09-02 07:10:38	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Craig Montgomerie" <cmontgomerie@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Craig Montgomerie,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/3</p><p>If you have been logged out, you can login again with the username cmontgomerie</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/3">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+4	1048585	3	0	2022-09-02 07:10:38	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Mark Irvine" <mirvine@mailinator.com>			Submission Acknowledgement	Hello,<br />\n<br />\nCraig Montgomerie has submitted the manuscript, &quot;Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice&quot; to Public Knowledge Preprint Server. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this server as a venue for your work.<br />\n<br />\n<br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+5	1048585	4	0	2022-09-02 07:11:48	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Diaga Diouf,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Genetic transformation of forest trees, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/4</p><p>If you have been logged out, you can login again with the username ddiouf</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+6	1048585	4	3	2022-09-02 07:11:58	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+7	1048585	4	3	2022-09-02 07:12:05	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			We have reversed the decision to decline your submission	<p>Dear Diaga Diouf,</p>\n<p>The decision to decline your submission, Genetic transformation of forest trees, has been reversed. \nAn editor will look further at your submission before deciding whether to decline \nthe submission or send it for review.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>\n
+8	1048585	4	3	2022-09-02 07:12:13	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+9	1048585	5	0	2022-09-02 07:12:46	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Dana Phillips,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/5</p><p>If you have been logged out, you can login again with the username dphillips</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+10	1048585	6	0	2022-09-02 07:13:26	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Domatilia Sokoloff" <dsokoloff@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Domatilia Sokoloff,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Developing efficacy beliefs in the classroom, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/6</p><p>If you have been logged out, you can login again with the username dsokoloff</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/6">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+11	1048585	7	0	2022-09-02 07:14:12	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Elinor Ostrom" <eostrom@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Elinor Ostrom,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Traditions and Trends in the Study of the Commons, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/7</p><p>If you have been logged out, you can login again with the username eostrom</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+12	1048585	7	0	2022-09-02 07:14:12	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank van Laerhoven" <fvanlaerhoven@mailinator.com>			Submission Acknowledgement	Hello,<br />\n<br />\nElinor Ostrom has submitted the manuscript, &quot;Traditions and Trends in the Study of the Commons&quot; to Public Knowledge Preprint Server. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this server as a venue for your work.<br />\n<br />\n<br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+13	1048585	8	0	2022-09-02 07:14:53	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Fabio Paglieri,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Hansen & Pinto: Reason Reclaimed, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/8</p><p>If you have been logged out, you can login again with the username fpaglieri</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/8">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+14	1048585	9	0	2022-09-02 07:15:33	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Mwandenga" <jmwandenga@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear John Mwandenga,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/9</p><p>If you have been logged out, you can login again with the username jmwandenga</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/9">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+15	1048585	10	0	2022-09-02 07:16:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Novak" <jnovak@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear John Novak,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Condensing Water Availability Models to Focus on Specific Water Management Systems, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/10</p><p>If you have been logged out, you can login again with the username jnovak</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/10">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+16	1048585	11	0	2022-09-02 07:17:07	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Karim Al-Khafaji" <kalkhafaji@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Karim Al-Khafaji,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Learning Sustainable Design through Service, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/11</p><p>If you have been logged out, you can login again with the username kalkhafaji</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+17	1048585	11	0	2022-09-02 07:17:07	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Margaret Morse" <mmorse@mailinator.com>			Submission Acknowledgement	Hello,<br />\n<br />\nKarim Al-Khafaji has submitted the manuscript, &quot;Learning Sustainable Design through Service&quot; to Public Knowledge Preprint Server. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this server as a venue for your work.<br />\n<br />\n<br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+18	1048585	12	0	2022-09-02 07:17:53	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Leo Christopher" <lchristopher@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Leo Christopher,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Sodium butyrate improves growth performance of weaned piglets during the first period after weaning, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/12</p><p>If you have been logged out, you can login again with the username lchristopher</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/12">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+19	1048585	13	0	2022-09-02 07:18:42	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Lise Kumiega" <lkumiega@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Lise Kumiega,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/13</p><p>If you have been logged out, you can login again with the username lkumiega</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+20	1048585	14	0	2022-09-02 07:19:28	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Patricia Daniel" <pdaniel@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Patricia Daniel,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/14</p><p>If you have been logged out, you can login again with the username pdaniel</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+21	1048585	15	0	2022-09-02 07:20:13	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Rana Baiyewu,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Yam diseases and its management in Nigeria, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/15</p><p>If you have been logged out, you can login again with the username rbaiyewu</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/15">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+22	1048585	16	0	2022-09-02 07:21:00	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rosanna Rossi" <rrossi@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Rosanna Rossi,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/16</p><p>If you have been logged out, you can login again with the username rrossi</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/16">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+23	1048585	17	0	2022-09-02 07:21:47	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Vajiheh Karbasizaed,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/17</p><p>If you have been logged out, you can login again with the username vkarbasizaed</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/17">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+24	1048585	18	0	2022-09-02 07:22:33	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Valerie Williamson" <vwilliamson@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Valerie Williamson,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Self-Organization in Multi-Level Institutions in Networked Environments, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/18</p><p>If you have been logged out, you can login again with the username vwilliamson</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/18">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
+25	1048585	19	0	2022-09-02 07:23:17	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Zita Woods" <zwoods@mailinator.com>		"David Buskins" <dbuskins@mailinator.com>, "Stephanie Berardo" <sberardo@mailinator.com>	Thank you for your submission to {$serverName}	<p>Dear Zita Woods,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your submission, Finocchiaro: Arguments About Arguments, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/19</p><p>If you have been logged out, you can login again with the username zwoods</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/19">submission dashboard</a>.</p><p>Thank you for considering this journal as a venue for your work.</p><br><br><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto:%20%7B$contactEmail%7D">{$contactEmail}</a></p>
 \.
 
 
@@ -4964,168 +4964,168 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	7	2022-09-02 05:04:17	268435458	submission.event.general.metadataUpdated	0
-2	515	1	7	2022-09-02 05:04:28	1342177281	submission.event.fileUploaded	0
-3	1048585	1	7	2022-09-02 05:04:28	1342177288	submission.event.fileRevised	0
-4	515	1	7	2022-09-02 05:04:31	1342177296	submission.event.fileEdited	0
-5	1048585	1	7	2022-09-02 05:04:31	1342177296	submission.event.fileEdited	0
-6	1048585	1	7	2022-09-02 05:04:37	268435458	submission.event.general.metadataUpdated	0
-7	1048585	1	7	2022-09-02 05:04:38	268435457	submission.event.submissionSubmitted	0
-8	1048585	2	8	2022-09-02 05:04:47	268435458	submission.event.general.metadataUpdated	0
-9	515	2	8	2022-09-02 05:04:58	1342177281	submission.event.fileUploaded	0
-10	1048585	2	8	2022-09-02 05:04:58	1342177288	submission.event.fileRevised	0
-11	515	2	8	2022-09-02 05:05:01	1342177296	submission.event.fileEdited	0
-12	1048585	2	8	2022-09-02 05:05:01	1342177296	submission.event.fileEdited	0
-13	1048585	2	8	2022-09-02 05:05:07	268435458	submission.event.general.metadataUpdated	0
-14	1048585	2	8	2022-09-02 05:05:09	268435457	submission.event.submissionSubmitted	0
-15	1048585	2	8	2022-09-02 05:05:15	268435458	submission.event.general.metadataUpdated	0
-16	1048585	2	8	2022-09-02 05:05:27	268435458	submission.event.general.metadataUpdated	0
-17	1048585	2	3	2022-09-02 05:05:37	268435462	publication.event.published	0
-18	1048585	3	9	2022-09-02 05:05:49	268435458	submission.event.general.metadataUpdated	0
-19	515	3	9	2022-09-02 05:06:00	1342177281	submission.event.fileUploaded	0
-20	1048585	3	9	2022-09-02 05:06:00	1342177288	submission.event.fileRevised	0
-21	515	3	9	2022-09-02 05:06:02	1342177296	submission.event.fileEdited	0
-22	1048585	3	9	2022-09-02 05:06:02	1342177296	submission.event.fileEdited	0
-23	1048585	3	9	2022-09-02 05:06:13	268435458	submission.event.general.metadataUpdated	0
-24	1048585	3	9	2022-09-02 05:06:14	268435457	submission.event.submissionSubmitted	0
-25	1048585	3	3	2022-09-02 05:06:25	268435462	publication.event.published	0
-26	1048585	3	3	2022-09-02 05:06:36	268435463	publication.event.unpublished	0
-27	1048585	3	3	2022-09-02 05:06:40	268435458	submission.event.general.metadataUpdated	0
-28	1048585	3	3	2022-09-02 05:06:44	268435462	publication.event.published	0
-29	1048585	3	3	2022-09-02 05:06:48	268435458	submission.event.general.metadataUpdated	0
-30	1048585	3	3	2022-09-02 05:06:48	268435464	publication.event.versionCreated	0
-31	1048585	3	3	2022-09-02 05:06:53	268435458	submission.event.general.metadataUpdated	0
-32	1048585	3	3	2022-09-02 05:06:56	268435462	publication.event.versionPublished	0
-33	1048585	4	10	2022-09-02 05:07:07	268435458	submission.event.general.metadataUpdated	0
-34	515	4	10	2022-09-02 05:07:18	1342177281	submission.event.fileUploaded	0
-35	1048585	4	10	2022-09-02 05:07:18	1342177288	submission.event.fileRevised	0
-36	515	4	10	2022-09-02 05:07:20	1342177296	submission.event.fileEdited	0
-37	1048585	4	10	2022-09-02 05:07:20	1342177296	submission.event.fileEdited	0
-38	1048585	4	10	2022-09-02 05:07:25	268435458	submission.event.general.metadataUpdated	0
-39	1048585	4	10	2022-09-02 05:07:26	268435457	submission.event.submissionSubmitted	0
-40	1048585	4	3	2022-09-02 05:07:37	805306371	editor.submission.decision.decline.log	0
-41	1048585	4	3	2022-09-02 05:07:45	805306371	editor.submission.decision.revertDecline.log	0
-42	1048585	4	3	2022-09-02 05:07:53	805306371	editor.submission.decision.decline.log	0
-43	1048585	5	11	2022-09-02 05:08:07	268435458	submission.event.general.metadataUpdated	0
-44	515	5	11	2022-09-02 05:08:18	1342177281	submission.event.fileUploaded	0
-45	1048585	5	11	2022-09-02 05:08:18	1342177288	submission.event.fileRevised	0
-46	515	5	11	2022-09-02 05:08:20	1342177296	submission.event.fileEdited	0
-47	1048585	5	11	2022-09-02 05:08:20	1342177296	submission.event.fileEdited	0
-48	1048585	5	11	2022-09-02 05:08:29	268435458	submission.event.general.metadataUpdated	0
-49	1048585	5	11	2022-09-02 05:08:30	268435457	submission.event.submissionSubmitted	0
-50	1048585	5	3	2022-09-02 05:08:40	268435462	publication.event.published	0
-51	1048585	6	12	2022-09-02 05:08:51	268435458	submission.event.general.metadataUpdated	0
-52	515	6	12	2022-09-02 05:09:02	1342177281	submission.event.fileUploaded	0
-53	1048585	6	12	2022-09-02 05:09:02	1342177288	submission.event.fileRevised	0
-54	515	6	12	2022-09-02 05:09:05	1342177296	submission.event.fileEdited	0
-55	1048585	6	12	2022-09-02 05:09:05	1342177296	submission.event.fileEdited	0
-56	1048585	6	12	2022-09-02 05:09:10	268435458	submission.event.general.metadataUpdated	0
-57	1048585	6	12	2022-09-02 05:09:11	268435457	submission.event.submissionSubmitted	0
-58	1048585	6	3	2022-09-02 05:09:21	268435462	publication.event.published	0
-59	1048585	7	13	2022-09-02 05:09:34	268435458	submission.event.general.metadataUpdated	0
-60	515	7	13	2022-09-02 05:09:44	1342177281	submission.event.fileUploaded	0
-61	1048585	7	13	2022-09-02 05:09:44	1342177288	submission.event.fileRevised	0
-62	515	7	13	2022-09-02 05:09:47	1342177296	submission.event.fileEdited	0
-63	1048585	7	13	2022-09-02 05:09:47	1342177296	submission.event.fileEdited	0
-64	1048585	7	13	2022-09-02 05:09:58	268435458	submission.event.general.metadataUpdated	0
-65	1048585	7	13	2022-09-02 05:10:00	268435457	submission.event.submissionSubmitted	0
-66	1048585	7	3	2022-09-02 05:10:11	268435462	publication.event.published	0
-67	1048585	8	14	2022-09-02 05:10:23	268435458	submission.event.general.metadataUpdated	0
-68	515	8	14	2022-09-02 05:10:34	1342177281	submission.event.fileUploaded	0
-69	1048585	8	14	2022-09-02 05:10:34	1342177288	submission.event.fileRevised	0
-70	515	8	14	2022-09-02 05:10:36	1342177296	submission.event.fileEdited	0
-71	1048585	8	14	2022-09-02 05:10:36	1342177296	submission.event.fileEdited	0
-72	1048585	8	14	2022-09-02 05:10:40	268435458	submission.event.general.metadataUpdated	0
-73	1048585	8	14	2022-09-02 05:10:42	268435457	submission.event.submissionSubmitted	0
-74	1048585	8	3	2022-09-02 05:10:52	268435462	publication.event.published	0
-75	1048585	9	15	2022-09-02 05:11:04	268435458	submission.event.general.metadataUpdated	0
-76	515	9	15	2022-09-02 05:11:15	1342177281	submission.event.fileUploaded	0
-77	1048585	9	15	2022-09-02 05:11:15	1342177288	submission.event.fileRevised	0
-78	515	9	15	2022-09-02 05:11:17	1342177296	submission.event.fileEdited	0
-79	1048585	9	15	2022-09-02 05:11:17	1342177296	submission.event.fileEdited	0
-80	1048585	9	15	2022-09-02 05:11:23	268435458	submission.event.general.metadataUpdated	0
-81	1048585	9	15	2022-09-02 05:11:25	268435457	submission.event.submissionSubmitted	0
-82	1048585	9	3	2022-09-02 05:11:36	268435462	publication.event.published	0
-83	1048585	10	16	2022-09-02 05:11:49	268435458	submission.event.general.metadataUpdated	0
-84	515	10	16	2022-09-02 05:12:00	1342177281	submission.event.fileUploaded	0
-85	1048585	10	16	2022-09-02 05:12:00	1342177288	submission.event.fileRevised	0
-86	515	10	16	2022-09-02 05:12:02	1342177296	submission.event.fileEdited	0
-87	1048585	10	16	2022-09-02 05:12:02	1342177296	submission.event.fileEdited	0
-88	1048585	10	16	2022-09-02 05:12:08	268435458	submission.event.general.metadataUpdated	0
-89	1048585	10	16	2022-09-02 05:12:10	268435457	submission.event.submissionSubmitted	0
-90	1048585	10	3	2022-09-02 05:12:21	268435462	publication.event.published	0
-91	1048585	11	17	2022-09-02 05:12:33	268435458	submission.event.general.metadataUpdated	0
-92	515	11	17	2022-09-02 05:12:44	1342177281	submission.event.fileUploaded	0
-93	1048585	11	17	2022-09-02 05:12:44	1342177288	submission.event.fileRevised	0
-94	515	11	17	2022-09-02 05:12:47	1342177296	submission.event.fileEdited	0
-95	1048585	11	17	2022-09-02 05:12:47	1342177296	submission.event.fileEdited	0
-96	1048585	11	17	2022-09-02 05:12:57	268435458	submission.event.general.metadataUpdated	0
-97	1048585	11	17	2022-09-02 05:12:59	268435457	submission.event.submissionSubmitted	0
-98	1048585	11	3	2022-09-02 05:13:10	268435462	publication.event.published	0
-99	1048585	12	18	2022-09-02 05:13:23	268435458	submission.event.general.metadataUpdated	0
-100	515	12	18	2022-09-02 05:13:34	1342177281	submission.event.fileUploaded	0
-101	1048585	12	18	2022-09-02 05:13:34	1342177288	submission.event.fileRevised	0
-102	515	12	18	2022-09-02 05:13:37	1342177296	submission.event.fileEdited	0
-103	1048585	12	18	2022-09-02 05:13:37	1342177296	submission.event.fileEdited	0
-104	1048585	12	18	2022-09-02 05:13:44	268435458	submission.event.general.metadataUpdated	0
-105	1048585	12	18	2022-09-02 05:13:46	268435457	submission.event.submissionSubmitted	0
-106	1048585	12	3	2022-09-02 05:13:57	268435462	publication.event.published	0
-107	1048585	13	19	2022-09-02 05:14:11	268435458	submission.event.general.metadataUpdated	0
-108	515	13	19	2022-09-02 05:14:22	1342177281	submission.event.fileUploaded	0
-109	1048585	13	19	2022-09-02 05:14:22	1342177288	submission.event.fileRevised	0
-110	515	13	19	2022-09-02 05:14:25	1342177296	submission.event.fileEdited	0
-111	1048585	13	19	2022-09-02 05:14:25	1342177296	submission.event.fileEdited	0
-112	1048585	13	19	2022-09-02 05:14:33	268435458	submission.event.general.metadataUpdated	0
-113	1048585	13	19	2022-09-02 05:14:34	268435457	submission.event.submissionSubmitted	0
-114	1048585	13	3	2022-09-02 05:14:46	268435462	publication.event.published	0
-115	1048585	14	20	2022-09-02 05:15:00	268435458	submission.event.general.metadataUpdated	0
-116	515	14	20	2022-09-02 05:15:10	1342177281	submission.event.fileUploaded	0
-117	1048585	14	20	2022-09-02 05:15:10	1342177288	submission.event.fileRevised	0
-118	515	14	20	2022-09-02 05:15:13	1342177296	submission.event.fileEdited	0
-119	1048585	14	20	2022-09-02 05:15:13	1342177296	submission.event.fileEdited	0
-120	1048585	14	20	2022-09-02 05:15:20	268435458	submission.event.general.metadataUpdated	0
-121	1048585	14	20	2022-09-02 05:15:21	268435457	submission.event.submissionSubmitted	0
-122	1048585	14	3	2022-09-02 05:15:32	268435462	publication.event.published	0
-123	1048585	15	21	2022-09-02 05:15:46	268435458	submission.event.general.metadataUpdated	0
-124	515	15	21	2022-09-02 05:15:56	1342177281	submission.event.fileUploaded	0
-125	1048585	15	21	2022-09-02 05:15:56	1342177288	submission.event.fileRevised	0
-126	515	15	21	2022-09-02 05:15:59	1342177296	submission.event.fileEdited	0
-127	1048585	15	21	2022-09-02 05:15:59	1342177296	submission.event.fileEdited	0
-128	1048585	15	21	2022-09-02 05:16:03	268435458	submission.event.general.metadataUpdated	0
-129	1048585	15	21	2022-09-02 05:16:04	268435457	submission.event.submissionSubmitted	0
-130	1048585	15	3	2022-09-02 05:16:16	268435462	publication.event.published	0
-131	1048585	16	22	2022-09-02 05:16:29	268435458	submission.event.general.metadataUpdated	0
-132	515	16	22	2022-09-02 05:16:39	1342177281	submission.event.fileUploaded	0
-133	1048585	16	22	2022-09-02 05:16:39	1342177288	submission.event.fileRevised	0
-134	515	16	22	2022-09-02 05:16:42	1342177296	submission.event.fileEdited	0
-135	1048585	16	22	2022-09-02 05:16:42	1342177296	submission.event.fileEdited	0
-136	1048585	16	22	2022-09-02 05:16:49	268435458	submission.event.general.metadataUpdated	0
-137	1048585	16	22	2022-09-02 05:16:51	268435457	submission.event.submissionSubmitted	0
-138	1048585	16	3	2022-09-02 05:17:02	268435462	publication.event.published	0
-139	1048585	17	23	2022-09-02 05:17:16	268435458	submission.event.general.metadataUpdated	0
-140	515	17	23	2022-09-02 05:17:27	1342177281	submission.event.fileUploaded	0
-141	1048585	17	23	2022-09-02 05:17:27	1342177288	submission.event.fileRevised	0
-142	515	17	23	2022-09-02 05:17:29	1342177296	submission.event.fileEdited	0
-143	1048585	17	23	2022-09-02 05:17:29	1342177296	submission.event.fileEdited	0
-144	1048585	17	23	2022-09-02 05:17:38	268435458	submission.event.general.metadataUpdated	0
-145	1048585	17	23	2022-09-02 05:17:40	268435457	submission.event.submissionSubmitted	0
-146	1048585	17	3	2022-09-02 05:17:51	268435462	publication.event.published	0
-147	1048585	18	24	2022-09-02 05:18:04	268435458	submission.event.general.metadataUpdated	0
-148	515	18	24	2022-09-02 05:18:15	1342177281	submission.event.fileUploaded	0
-149	1048585	18	24	2022-09-02 05:18:15	1342177288	submission.event.fileRevised	0
-150	515	18	24	2022-09-02 05:18:17	1342177296	submission.event.fileEdited	0
-151	1048585	18	24	2022-09-02 05:18:17	1342177296	submission.event.fileEdited	0
-152	1048585	18	24	2022-09-02 05:18:22	268435458	submission.event.general.metadataUpdated	0
-153	1048585	18	24	2022-09-02 05:18:24	268435457	submission.event.submissionSubmitted	0
-154	1048585	18	3	2022-09-02 05:18:36	268435462	publication.event.published	0
-155	1048585	19	25	2022-09-02 05:18:49	268435458	submission.event.general.metadataUpdated	0
-156	515	19	25	2022-09-02 05:19:00	1342177281	submission.event.fileUploaded	0
-157	1048585	19	25	2022-09-02 05:19:00	1342177288	submission.event.fileRevised	0
-158	515	19	25	2022-09-02 05:19:02	1342177296	submission.event.fileEdited	0
-159	1048585	19	25	2022-09-02 05:19:02	1342177296	submission.event.fileEdited	0
-160	1048585	19	25	2022-09-02 05:19:07	268435458	submission.event.general.metadataUpdated	0
-161	1048585	19	25	2022-09-02 05:19:08	268435457	submission.event.submissionSubmitted	0
-162	1048585	19	3	2022-09-02 05:19:20	268435462	publication.event.published	0
+1	1048585	1	7	2022-09-02 07:08:49	268435458	submission.event.general.metadataUpdated	0
+2	515	1	7	2022-09-02 07:09:00	1342177281	submission.event.fileUploaded	0
+3	1048585	1	7	2022-09-02 07:09:00	1342177288	submission.event.fileRevised	0
+4	515	1	7	2022-09-02 07:09:02	1342177296	submission.event.fileEdited	0
+5	1048585	1	7	2022-09-02 07:09:02	1342177296	submission.event.fileEdited	0
+6	1048585	1	7	2022-09-02 07:09:08	268435458	submission.event.general.metadataUpdated	0
+7	1048585	1	7	2022-09-02 07:09:09	268435457	submission.event.submissionSubmitted	0
+8	1048585	2	8	2022-09-02 07:09:18	268435458	submission.event.general.metadataUpdated	0
+9	515	2	8	2022-09-02 07:09:28	1342177281	submission.event.fileUploaded	0
+10	1048585	2	8	2022-09-02 07:09:28	1342177288	submission.event.fileRevised	0
+11	515	2	8	2022-09-02 07:09:31	1342177296	submission.event.fileEdited	0
+12	1048585	2	8	2022-09-02 07:09:31	1342177296	submission.event.fileEdited	0
+13	1048585	2	8	2022-09-02 07:09:36	268435458	submission.event.general.metadataUpdated	0
+14	1048585	2	8	2022-09-02 07:09:37	268435457	submission.event.submissionSubmitted	0
+15	1048585	2	8	2022-09-02 07:09:43	268435458	submission.event.general.metadataUpdated	0
+16	1048585	2	8	2022-09-02 07:09:54	268435458	submission.event.general.metadataUpdated	0
+17	1048585	2	3	2022-09-02 07:10:04	268435462	publication.event.published	0
+18	1048585	3	9	2022-09-02 07:10:14	268435458	submission.event.general.metadataUpdated	0
+19	515	3	9	2022-09-02 07:10:25	1342177281	submission.event.fileUploaded	0
+20	1048585	3	9	2022-09-02 07:10:25	1342177288	submission.event.fileRevised	0
+21	515	3	9	2022-09-02 07:10:27	1342177296	submission.event.fileEdited	0
+22	1048585	3	9	2022-09-02 07:10:27	1342177296	submission.event.fileEdited	0
+23	1048585	3	9	2022-09-02 07:10:37	268435458	submission.event.general.metadataUpdated	0
+24	1048585	3	9	2022-09-02 07:10:38	268435457	submission.event.submissionSubmitted	0
+25	1048585	3	3	2022-09-02 07:10:48	268435462	publication.event.published	0
+26	1048585	3	3	2022-09-02 07:10:59	268435463	publication.event.unpublished	0
+27	1048585	3	3	2022-09-02 07:11:03	268435458	submission.event.general.metadataUpdated	0
+28	1048585	3	3	2022-09-02 07:11:06	268435462	publication.event.published	0
+29	1048585	3	3	2022-09-02 07:11:10	268435458	submission.event.general.metadataUpdated	0
+30	1048585	3	3	2022-09-02 07:11:10	268435464	publication.event.versionCreated	0
+31	1048585	3	3	2022-09-02 07:11:15	268435458	submission.event.general.metadataUpdated	0
+32	1048585	3	3	2022-09-02 07:11:18	268435462	publication.event.versionPublished	0
+33	1048585	4	10	2022-09-02 07:11:29	268435458	submission.event.general.metadataUpdated	0
+34	515	4	10	2022-09-02 07:11:40	1342177281	submission.event.fileUploaded	0
+35	1048585	4	10	2022-09-02 07:11:40	1342177288	submission.event.fileRevised	0
+36	515	4	10	2022-09-02 07:11:42	1342177296	submission.event.fileEdited	0
+37	1048585	4	10	2022-09-02 07:11:42	1342177296	submission.event.fileEdited	0
+38	1048585	4	10	2022-09-02 07:11:47	268435458	submission.event.general.metadataUpdated	0
+39	1048585	4	10	2022-09-02 07:11:48	268435457	submission.event.submissionSubmitted	0
+40	1048585	4	3	2022-09-02 07:11:57	805306371	editor.submission.decision.decline.log	0
+41	1048585	4	3	2022-09-02 07:12:05	805306371	editor.submission.decision.revertDecline.log	0
+42	1048585	4	3	2022-09-02 07:12:12	805306371	editor.submission.decision.decline.log	0
+43	1048585	5	11	2022-09-02 07:12:26	268435458	submission.event.general.metadataUpdated	0
+44	515	5	11	2022-09-02 07:12:37	1342177281	submission.event.fileUploaded	0
+45	1048585	5	11	2022-09-02 07:12:37	1342177288	submission.event.fileRevised	0
+46	515	5	11	2022-09-02 07:12:39	1342177296	submission.event.fileEdited	0
+47	1048585	5	11	2022-09-02 07:12:39	1342177296	submission.event.fileEdited	0
+48	1048585	5	11	2022-09-02 07:12:45	268435458	submission.event.general.metadataUpdated	0
+49	1048585	5	11	2022-09-02 07:12:46	268435457	submission.event.submissionSubmitted	0
+50	1048585	5	3	2022-09-02 07:12:56	268435462	publication.event.published	0
+51	1048585	6	12	2022-09-02 07:13:07	268435458	submission.event.general.metadataUpdated	0
+52	515	6	12	2022-09-02 07:13:18	1342177281	submission.event.fileUploaded	0
+53	1048585	6	12	2022-09-02 07:13:18	1342177288	submission.event.fileRevised	0
+54	515	6	12	2022-09-02 07:13:20	1342177296	submission.event.fileEdited	0
+55	1048585	6	12	2022-09-02 07:13:20	1342177296	submission.event.fileEdited	0
+56	1048585	6	12	2022-09-02 07:13:25	268435458	submission.event.general.metadataUpdated	0
+57	1048585	6	12	2022-09-02 07:13:26	268435457	submission.event.submissionSubmitted	0
+58	1048585	6	3	2022-09-02 07:13:36	268435462	publication.event.published	0
+59	1048585	7	13	2022-09-02 07:13:47	268435458	submission.event.general.metadataUpdated	0
+60	515	7	13	2022-09-02 07:13:57	1342177281	submission.event.fileUploaded	0
+61	1048585	7	13	2022-09-02 07:13:57	1342177288	submission.event.fileRevised	0
+62	515	7	13	2022-09-02 07:14:00	1342177296	submission.event.fileEdited	0
+63	1048585	7	13	2022-09-02 07:14:00	1342177296	submission.event.fileEdited	0
+64	1048585	7	13	2022-09-02 07:14:11	268435458	submission.event.general.metadataUpdated	0
+65	1048585	7	13	2022-09-02 07:14:12	268435457	submission.event.submissionSubmitted	0
+66	1048585	7	3	2022-09-02 07:14:24	268435462	publication.event.published	0
+67	1048585	8	14	2022-09-02 07:14:35	268435458	submission.event.general.metadataUpdated	0
+68	515	8	14	2022-09-02 07:14:46	1342177281	submission.event.fileUploaded	0
+69	1048585	8	14	2022-09-02 07:14:46	1342177288	submission.event.fileRevised	0
+70	515	8	14	2022-09-02 07:14:48	1342177296	submission.event.fileEdited	0
+71	1048585	8	14	2022-09-02 07:14:48	1342177296	submission.event.fileEdited	0
+72	1048585	8	14	2022-09-02 07:14:52	268435458	submission.event.general.metadataUpdated	0
+73	1048585	8	14	2022-09-02 07:14:53	268435457	submission.event.submissionSubmitted	0
+74	1048585	8	3	2022-09-02 07:15:03	268435462	publication.event.published	0
+75	1048585	9	15	2022-09-02 07:15:14	268435458	submission.event.general.metadataUpdated	0
+76	515	9	15	2022-09-02 07:15:25	1342177281	submission.event.fileUploaded	0
+77	1048585	9	15	2022-09-02 07:15:25	1342177288	submission.event.fileRevised	0
+78	515	9	15	2022-09-02 07:15:27	1342177296	submission.event.fileEdited	0
+79	1048585	9	15	2022-09-02 07:15:27	1342177296	submission.event.fileEdited	0
+80	1048585	9	15	2022-09-02 07:15:32	268435458	submission.event.general.metadataUpdated	0
+81	1048585	9	15	2022-09-02 07:15:33	268435457	submission.event.submissionSubmitted	0
+82	1048585	9	3	2022-09-02 07:15:45	268435462	publication.event.published	0
+83	1048585	10	16	2022-09-02 07:15:57	268435458	submission.event.general.metadataUpdated	0
+84	515	10	16	2022-09-02 07:16:08	1342177281	submission.event.fileUploaded	0
+85	1048585	10	16	2022-09-02 07:16:08	1342177288	submission.event.fileRevised	0
+86	515	10	16	2022-09-02 07:16:11	1342177296	submission.event.fileEdited	0
+87	1048585	10	16	2022-09-02 07:16:11	1342177296	submission.event.fileEdited	0
+88	1048585	10	16	2022-09-02 07:16:17	268435458	submission.event.general.metadataUpdated	0
+89	1048585	10	16	2022-09-02 07:16:18	268435457	submission.event.submissionSubmitted	0
+90	1048585	10	3	2022-09-02 07:16:30	268435462	publication.event.published	0
+91	1048585	11	17	2022-09-02 07:16:42	268435458	submission.event.general.metadataUpdated	0
+92	515	11	17	2022-09-02 07:16:53	1342177281	submission.event.fileUploaded	0
+93	1048585	11	17	2022-09-02 07:16:53	1342177288	submission.event.fileRevised	0
+94	515	11	17	2022-09-02 07:16:55	1342177296	submission.event.fileEdited	0
+95	1048585	11	17	2022-09-02 07:16:55	1342177296	submission.event.fileEdited	0
+96	1048585	11	17	2022-09-02 07:17:05	268435458	submission.event.general.metadataUpdated	0
+97	1048585	11	17	2022-09-02 07:17:07	268435457	submission.event.submissionSubmitted	0
+98	1048585	11	3	2022-09-02 07:17:18	268435462	publication.event.published	0
+99	1048585	12	18	2022-09-02 07:17:32	268435458	submission.event.general.metadataUpdated	0
+100	515	12	18	2022-09-02 07:17:42	1342177281	submission.event.fileUploaded	0
+101	1048585	12	18	2022-09-02 07:17:42	1342177288	submission.event.fileRevised	0
+102	515	12	18	2022-09-02 07:17:45	1342177296	submission.event.fileEdited	0
+103	1048585	12	18	2022-09-02 07:17:45	1342177296	submission.event.fileEdited	0
+104	1048585	12	18	2022-09-02 07:17:52	268435458	submission.event.general.metadataUpdated	0
+105	1048585	12	18	2022-09-02 07:17:53	268435457	submission.event.submissionSubmitted	0
+106	1048585	12	3	2022-09-02 07:18:04	268435462	publication.event.published	0
+107	1048585	13	19	2022-09-02 07:18:18	268435458	submission.event.general.metadataUpdated	0
+108	515	13	19	2022-09-02 07:18:29	1342177281	submission.event.fileUploaded	0
+109	1048585	13	19	2022-09-02 07:18:29	1342177288	submission.event.fileRevised	0
+110	515	13	19	2022-09-02 07:18:32	1342177296	submission.event.fileEdited	0
+111	1048585	13	19	2022-09-02 07:18:32	1342177296	submission.event.fileEdited	0
+112	1048585	13	19	2022-09-02 07:18:40	268435458	submission.event.general.metadataUpdated	0
+113	1048585	13	19	2022-09-02 07:18:42	268435457	submission.event.submissionSubmitted	0
+114	1048585	13	3	2022-09-02 07:18:53	268435462	publication.event.published	0
+115	1048585	14	20	2022-09-02 07:19:07	268435458	submission.event.general.metadataUpdated	0
+116	515	14	20	2022-09-02 07:19:18	1342177281	submission.event.fileUploaded	0
+117	1048585	14	20	2022-09-02 07:19:18	1342177288	submission.event.fileRevised	0
+118	515	14	20	2022-09-02 07:19:20	1342177296	submission.event.fileEdited	0
+119	1048585	14	20	2022-09-02 07:19:20	1342177296	submission.event.fileEdited	0
+120	1048585	14	20	2022-09-02 07:19:27	268435458	submission.event.general.metadataUpdated	0
+121	1048585	14	20	2022-09-02 07:19:28	268435457	submission.event.submissionSubmitted	0
+122	1048585	14	3	2022-09-02 07:19:40	268435462	publication.event.published	0
+123	1048585	15	21	2022-09-02 07:19:53	268435458	submission.event.general.metadataUpdated	0
+124	515	15	21	2022-09-02 07:20:04	1342177281	submission.event.fileUploaded	0
+125	1048585	15	21	2022-09-02 07:20:04	1342177288	submission.event.fileRevised	0
+126	515	15	21	2022-09-02 07:20:07	1342177296	submission.event.fileEdited	0
+127	1048585	15	21	2022-09-02 07:20:07	1342177296	submission.event.fileEdited	0
+128	1048585	15	21	2022-09-02 07:20:11	268435458	submission.event.general.metadataUpdated	0
+129	1048585	15	21	2022-09-02 07:20:13	268435457	submission.event.submissionSubmitted	0
+130	1048585	15	3	2022-09-02 07:20:25	268435462	publication.event.published	0
+131	1048585	16	22	2022-09-02 07:20:38	268435458	submission.event.general.metadataUpdated	0
+132	515	16	22	2022-09-02 07:20:49	1342177281	submission.event.fileUploaded	0
+133	1048585	16	22	2022-09-02 07:20:49	1342177288	submission.event.fileRevised	0
+134	515	16	22	2022-09-02 07:20:52	1342177296	submission.event.fileEdited	0
+135	1048585	16	22	2022-09-02 07:20:52	1342177296	submission.event.fileEdited	0
+136	1048585	16	22	2022-09-02 07:20:59	268435458	submission.event.general.metadataUpdated	0
+137	1048585	16	22	2022-09-02 07:21:01	268435457	submission.event.submissionSubmitted	0
+138	1048585	16	3	2022-09-02 07:21:11	268435462	publication.event.published	0
+139	1048585	17	23	2022-09-02 07:21:25	268435458	submission.event.general.metadataUpdated	0
+140	515	17	23	2022-09-02 07:21:36	1342177281	submission.event.fileUploaded	0
+141	1048585	17	23	2022-09-02 07:21:36	1342177288	submission.event.fileRevised	0
+142	515	17	23	2022-09-02 07:21:39	1342177296	submission.event.fileEdited	0
+143	1048585	17	23	2022-09-02 07:21:39	1342177296	submission.event.fileEdited	0
+144	1048585	17	23	2022-09-02 07:21:45	268435458	submission.event.general.metadataUpdated	0
+145	1048585	17	23	2022-09-02 07:21:47	268435457	submission.event.submissionSubmitted	0
+146	1048585	17	3	2022-09-02 07:21:59	268435462	publication.event.published	0
+147	1048585	18	24	2022-09-02 07:22:12	268435458	submission.event.general.metadataUpdated	0
+148	515	18	24	2022-09-02 07:22:23	1342177281	submission.event.fileUploaded	0
+149	1048585	18	24	2022-09-02 07:22:23	1342177288	submission.event.fileRevised	0
+150	515	18	24	2022-09-02 07:22:25	1342177296	submission.event.fileEdited	0
+151	1048585	18	24	2022-09-02 07:22:25	1342177296	submission.event.fileEdited	0
+152	1048585	18	24	2022-09-02 07:22:31	268435458	submission.event.general.metadataUpdated	0
+153	1048585	18	24	2022-09-02 07:22:33	268435457	submission.event.submissionSubmitted	0
+154	1048585	18	3	2022-09-02 07:22:45	268435462	publication.event.published	0
+155	1048585	19	25	2022-09-02 07:22:58	268435458	submission.event.general.metadataUpdated	0
+156	515	19	25	2022-09-02 07:23:08	1342177281	submission.event.fileUploaded	0
+157	1048585	19	25	2022-09-02 07:23:08	1342177288	submission.event.fileRevised	0
+158	515	19	25	2022-09-02 07:23:11	1342177296	submission.event.fileEdited	0
+159	1048585	19	25	2022-09-02 07:23:11	1342177296	submission.event.fileEdited	0
+160	1048585	19	25	2022-09-02 07:23:15	268435458	submission.event.general.metadataUpdated	0
+161	1048585	19	25	2022-09-02 07:23:17	268435457	submission.event.submissionSubmitted	0
+162	1048585	19	3	2022-09-02 07:23:29	268435462	publication.event.published	0
 \.
 
 
@@ -5708,25 +5708,25 @@ SELECT pg_catalog.setval('public.failed_jobs_id_seq', 1, false);
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	contexts/1/submissions/1/63118edc9c261.pdf	application/pdf
-2	contexts/1/submissions/2/63118efaad4f9.pdf	application/pdf
-3	contexts/1/submissions/3/63118f380934a.pdf	application/pdf
-4	contexts/1/submissions/4/63118f860a92b.pdf	application/pdf
-5	contexts/1/submissions/5/63118fc269e39.pdf	application/pdf
-6	contexts/1/submissions/6/63118feebd5d2.pdf	application/pdf
-7	contexts/1/submissions/7/63119018c0721.pdf	application/pdf
-8	contexts/1/submissions/8/6311904a0bfff.pdf	application/pdf
-9	contexts/1/submissions/9/631190730044a.pdf	application/pdf
-10	contexts/1/submissions/10/631190a0012d9.pdf	application/pdf
-11	contexts/1/submissions/11/631190cc92b4d.pdf	application/pdf
-12	contexts/1/submissions/12/631190fe6c0e8.pdf	application/pdf
-13	contexts/1/submissions/13/6311912ea3f0b.pdf	application/pdf
-14	contexts/1/submissions/14/6311915ec20ed.pdf	application/pdf
-15	contexts/1/submissions/15/6311918cc6e48.pdf	application/pdf
-16	contexts/1/submissions/16/631191b7bb29d.pdf	application/pdf
-17	contexts/1/submissions/17/631191e71ef0d.pdf	application/pdf
-18	contexts/1/submissions/18/63119217339fd.pdf	application/pdf
-19	contexts/1/submissions/19/63119244621ed.pdf	application/pdf
+1	contexts/1/submissions/1/6311ac0c4be22.pdf	application/pdf
+2	contexts/1/submissions/2/6311ac28cb3fc.pdf	application/pdf
+3	contexts/1/submissions/3/6311ac611fd47.pdf	application/pdf
+4	contexts/1/submissions/4/6311acac3d743.pdf	application/pdf
+5	contexts/1/submissions/5/6311ace57b4e1.pdf	application/pdf
+6	contexts/1/submissions/6/6311ad0e43add.pdf	application/pdf
+7	contexts/1/submissions/7/6311ad35d7441.pdf	application/pdf
+8	contexts/1/submissions/8/6311ad664f335.pdf	application/pdf
+9	contexts/1/submissions/9/6311ad8d6560c.pdf	application/pdf
+10	contexts/1/submissions/10/6311adb87f2d1.pdf	application/pdf
+11	contexts/1/submissions/11/6311ade526035.pdf	application/pdf
+12	contexts/1/submissions/12/6311ae16e13b1.pdf	application/pdf
+13	contexts/1/submissions/13/6311ae45b7b7c.pdf	application/pdf
+14	contexts/1/submissions/14/6311ae7609440.pdf	application/pdf
+15	contexts/1/submissions/15/6311aea498ad9.pdf	application/pdf
+16	contexts/1/submissions/16/6311aed19ebe8.pdf	application/pdf
+17	contexts/1/submissions/17/6311af009b21d.pdf	application/pdf
+18	contexts/1/submissions/18/6311af2f315e5.pdf	application/pdf
+19	contexts/1/submissions/19/6311af5ce21dc.pdf	application/pdf
 \.
 
 
@@ -5909,7 +5909,7 @@ COPY public.item_views (assoc_type, assoc_id, user_id, date_last_viewed) FROM st
 --
 
 COPY public.job_batches (id, name, total_jobs, pending_jobs, failed_jobs, failed_job_ids, options, cancelled_at, created_at, finished_at) FROM stdin;
-972aa96a-6e92-41c8-adc2-d4d3d7251cb0		0	0	0	[]	YTowOnt9	\N	1662094867	\N
+972ad5fe-b59a-45aa-bd76-13e078bdb9a0		0	0	0	[]	YTowOnt9	\N	1662102346	\N
 \.
 
 
@@ -5918,7 +5918,7 @@ COPY public.job_batches (id, name, total_jobs, pending_jobs, failed_jobs, failed
 --
 
 COPY public.jobs (id, queue, payload, attempts, reserved_at, available_at, created_at) FROM stdin;
-39	queue	{"uuid":"d358985f-8ea7-4c90-8914-bee281391015","displayName":"PKP\\\\Jobs\\\\Submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":null,"maxExceptions":null,"failOnTimeout":false,"backoff":null,"timeout":null,"retryUntil":null,"data":{"commandName":"PKP\\\\Jobs\\\\Submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\Jobs\\\\Submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:19;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	1	1662095961	1662095960	1662095960
+39	queue	{"uuid":"1c0972db-5dec-4fac-b11f-40a33a5624c0","displayName":"PKP\\\\Jobs\\\\Submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":null,"maxExceptions":null,"failOnTimeout":false,"backoff":null,"timeout":null,"retryUntil":null,"data":{"commandName":"PKP\\\\Jobs\\\\Submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\Jobs\\\\Submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:19;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	1	1662103409	1662103409	1662103409
 \.
 
 
@@ -6257,125 +6257,125 @@ SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_s
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-65	1	0	3	16777222	2022-09-02 05:11:25	\N	1048585	9
-66	1	0	3	16777223	2022-09-02 05:11:25	\N	1048585	9
-3	1	0	3	16777222	2022-09-02 05:04:38	\N	1048585	1
-4	1	0	3	16777223	2022-09-02 05:04:38	\N	1048585	1
-5	1	4	2	16777217	2022-09-02 05:04:38	\N	1048585	1
-6	1	5	2	16777217	2022-09-02 05:04:38	\N	1048585	1
-7	1	0	2	16777243	2022-09-02 05:04:38	\N	1048585	1
-8	1	0	2	16777245	2022-09-02 05:04:38	\N	1048585	1
-9	1	0	3	16777222	2022-09-02 05:05:08	\N	1048585	2
-10	1	0	3	16777223	2022-09-02 05:05:08	\N	1048585	2
-11	1	4	2	16777217	2022-09-02 05:05:08	\N	1048585	2
-12	1	5	2	16777217	2022-09-02 05:05:08	\N	1048585	2
-13	1	0	2	16777243	2022-09-02 05:05:08	\N	1048585	2
-14	1	0	2	16777245	2022-09-02 05:05:09	\N	1048585	2
-67	1	4	2	16777217	2022-09-02 05:11:25	\N	1048585	9
-17	1	0	3	16777222	2022-09-02 05:06:14	\N	1048585	3
-18	1	0	3	16777223	2022-09-02 05:06:14	\N	1048585	3
-19	1	4	2	16777217	2022-09-02 05:06:14	\N	1048585	3
-20	1	5	2	16777217	2022-09-02 05:06:14	\N	1048585	3
-21	1	0	2	16777243	2022-09-02 05:06:14	\N	1048585	3
-22	1	0	2	16777245	2022-09-02 05:06:14	\N	1048585	3
-68	1	5	2	16777217	2022-09-02 05:11:25	\N	1048585	9
-69	1	0	2	16777243	2022-09-02 05:11:25	\N	1048585	9
-25	1	4	3	16777259	2022-09-02 05:06:48	\N	1048585	3
-26	1	5	3	16777259	2022-09-02 05:06:48	\N	1048585	3
-27	1	9	3	16777259	2022-09-02 05:06:48	\N	1048585	3
-28	1	0	3	16777222	2022-09-02 05:07:26	\N	1048585	4
-29	1	0	3	16777223	2022-09-02 05:07:26	\N	1048585	4
-30	1	4	2	16777217	2022-09-02 05:07:26	\N	1048585	4
-31	1	5	2	16777217	2022-09-02 05:07:26	\N	1048585	4
-32	1	0	2	16777243	2022-09-02 05:07:26	\N	1048585	4
-33	1	0	2	16777245	2022-09-02 05:07:26	\N	1048585	4
-70	1	0	2	16777245	2022-09-02 05:11:25	\N	1048585	9
-35	1	10	2	16777234	2022-09-02 05:07:53	\N	1048585	4
-36	1	0	3	16777222	2022-09-02 05:08:30	\N	1048585	5
-37	1	0	3	16777223	2022-09-02 05:08:30	\N	1048585	5
-38	1	4	2	16777217	2022-09-02 05:08:30	\N	1048585	5
-39	1	5	2	16777217	2022-09-02 05:08:30	\N	1048585	5
-40	1	0	2	16777243	2022-09-02 05:08:30	\N	1048585	5
-41	1	0	2	16777245	2022-09-02 05:08:30	\N	1048585	5
-43	1	0	3	16777222	2022-09-02 05:09:11	\N	1048585	6
-44	1	0	3	16777223	2022-09-02 05:09:11	\N	1048585	6
-45	1	4	2	16777217	2022-09-02 05:09:11	\N	1048585	6
-46	1	5	2	16777217	2022-09-02 05:09:11	\N	1048585	6
-47	1	0	2	16777243	2022-09-02 05:09:11	\N	1048585	6
-48	1	0	2	16777245	2022-09-02 05:09:11	\N	1048585	6
-84	1	0	2	16777243	2022-09-02 05:12:59	\N	1048585	11
-51	1	0	3	16777222	2022-09-02 05:09:59	\N	1048585	7
-52	1	0	3	16777223	2022-09-02 05:09:59	\N	1048585	7
-53	1	4	2	16777217	2022-09-02 05:09:59	\N	1048585	7
-54	1	5	2	16777217	2022-09-02 05:09:59	\N	1048585	7
-55	1	0	2	16777243	2022-09-02 05:09:59	\N	1048585	7
-56	1	0	2	16777245	2022-09-02 05:09:59	\N	1048585	7
-72	1	0	3	16777222	2022-09-02 05:12:10	\N	1048585	10
-58	1	0	3	16777222	2022-09-02 05:10:42	\N	1048585	8
-59	1	0	3	16777223	2022-09-02 05:10:42	\N	1048585	8
-60	1	4	2	16777217	2022-09-02 05:10:42	\N	1048585	8
-61	1	5	2	16777217	2022-09-02 05:10:42	\N	1048585	8
-62	1	0	2	16777243	2022-09-02 05:10:42	\N	1048585	8
-63	1	0	2	16777245	2022-09-02 05:10:42	\N	1048585	8
-73	1	0	3	16777223	2022-09-02 05:12:10	\N	1048585	10
-74	1	4	2	16777217	2022-09-02 05:12:10	\N	1048585	10
-75	1	5	2	16777217	2022-09-02 05:12:10	\N	1048585	10
-76	1	0	2	16777243	2022-09-02 05:12:10	\N	1048585	10
-77	1	0	2	16777245	2022-09-02 05:12:10	\N	1048585	10
-85	1	0	2	16777245	2022-09-02 05:12:59	\N	1048585	11
-87	1	0	3	16777222	2022-09-02 05:13:45	\N	1048585	12
-80	1	0	3	16777222	2022-09-02 05:12:59	\N	1048585	11
-81	1	0	3	16777223	2022-09-02 05:12:59	\N	1048585	11
-82	1	4	2	16777217	2022-09-02 05:12:59	\N	1048585	11
-83	1	5	2	16777217	2022-09-02 05:12:59	\N	1048585	11
-88	1	0	3	16777223	2022-09-02 05:13:45	\N	1048585	12
-89	1	4	2	16777217	2022-09-02 05:13:45	\N	1048585	12
-90	1	5	2	16777217	2022-09-02 05:13:45	\N	1048585	12
-91	1	0	2	16777243	2022-09-02 05:13:45	\N	1048585	12
-92	1	0	2	16777245	2022-09-02 05:13:45	\N	1048585	12
-94	1	0	3	16777222	2022-09-02 05:14:34	\N	1048585	13
-95	1	0	3	16777223	2022-09-02 05:14:34	\N	1048585	13
-96	1	4	2	16777217	2022-09-02 05:14:34	\N	1048585	13
-97	1	5	2	16777217	2022-09-02 05:14:34	\N	1048585	13
-98	1	0	2	16777243	2022-09-02 05:14:34	\N	1048585	13
-99	1	0	2	16777245	2022-09-02 05:14:34	\N	1048585	13
-101	1	0	3	16777222	2022-09-02 05:15:21	\N	1048585	14
-102	1	0	3	16777223	2022-09-02 05:15:21	\N	1048585	14
-103	1	4	2	16777217	2022-09-02 05:15:21	\N	1048585	14
-104	1	5	2	16777217	2022-09-02 05:15:21	\N	1048585	14
-105	1	0	2	16777243	2022-09-02 05:15:21	\N	1048585	14
-106	1	0	2	16777245	2022-09-02 05:15:21	\N	1048585	14
-108	1	0	3	16777222	2022-09-02 05:16:04	\N	1048585	15
-109	1	0	3	16777223	2022-09-02 05:16:04	\N	1048585	15
-110	1	4	2	16777217	2022-09-02 05:16:04	\N	1048585	15
-111	1	5	2	16777217	2022-09-02 05:16:04	\N	1048585	15
-112	1	0	2	16777243	2022-09-02 05:16:04	\N	1048585	15
-113	1	0	2	16777245	2022-09-02 05:16:04	\N	1048585	15
-115	1	0	3	16777222	2022-09-02 05:16:51	\N	1048585	16
-116	1	0	3	16777223	2022-09-02 05:16:51	\N	1048585	16
-117	1	4	2	16777217	2022-09-02 05:16:51	\N	1048585	16
-118	1	5	2	16777217	2022-09-02 05:16:51	\N	1048585	16
-119	1	0	2	16777243	2022-09-02 05:16:51	\N	1048585	16
-120	1	0	2	16777245	2022-09-02 05:16:51	\N	1048585	16
-122	1	0	3	16777222	2022-09-02 05:17:39	\N	1048585	17
-123	1	0	3	16777223	2022-09-02 05:17:39	\N	1048585	17
-124	1	4	2	16777217	2022-09-02 05:17:39	\N	1048585	17
-125	1	5	2	16777217	2022-09-02 05:17:39	\N	1048585	17
-126	1	0	2	16777243	2022-09-02 05:17:39	\N	1048585	17
-127	1	0	2	16777245	2022-09-02 05:17:39	\N	1048585	17
-129	1	0	3	16777222	2022-09-02 05:18:23	\N	1048585	18
-130	1	0	3	16777223	2022-09-02 05:18:23	\N	1048585	18
-131	1	4	2	16777217	2022-09-02 05:18:24	\N	1048585	18
-132	1	5	2	16777217	2022-09-02 05:18:24	\N	1048585	18
-133	1	0	2	16777243	2022-09-02 05:18:24	\N	1048585	18
-134	1	0	2	16777245	2022-09-02 05:18:24	\N	1048585	18
-136	1	0	3	16777222	2022-09-02 05:19:08	\N	1048585	19
-137	1	0	3	16777223	2022-09-02 05:19:08	\N	1048585	19
-138	1	4	2	16777217	2022-09-02 05:19:08	\N	1048585	19
-139	1	5	2	16777217	2022-09-02 05:19:08	\N	1048585	19
-140	1	0	2	16777243	2022-09-02 05:19:08	\N	1048585	19
-141	1	0	2	16777245	2022-09-02 05:19:08	\N	1048585	19
-142	0	3	1	3	2022-09-02 05:19:20	\N	0	0
+65	1	0	3	16777222	2022-09-02 07:15:33	\N	1048585	9
+66	1	0	3	16777223	2022-09-02 07:15:33	\N	1048585	9
+3	1	0	3	16777222	2022-09-02 07:09:09	\N	1048585	1
+4	1	0	3	16777223	2022-09-02 07:09:09	\N	1048585	1
+5	1	4	2	16777217	2022-09-02 07:09:09	\N	1048585	1
+6	1	5	2	16777217	2022-09-02 07:09:09	\N	1048585	1
+7	1	0	2	16777243	2022-09-02 07:09:09	\N	1048585	1
+8	1	0	2	16777245	2022-09-02 07:09:09	\N	1048585	1
+9	1	0	3	16777222	2022-09-02 07:09:37	\N	1048585	2
+10	1	0	3	16777223	2022-09-02 07:09:37	\N	1048585	2
+11	1	4	2	16777217	2022-09-02 07:09:37	\N	1048585	2
+12	1	5	2	16777217	2022-09-02 07:09:37	\N	1048585	2
+13	1	0	2	16777243	2022-09-02 07:09:37	\N	1048585	2
+14	1	0	2	16777245	2022-09-02 07:09:37	\N	1048585	2
+67	1	4	2	16777217	2022-09-02 07:15:33	\N	1048585	9
+17	1	0	3	16777222	2022-09-02 07:10:38	\N	1048585	3
+18	1	0	3	16777223	2022-09-02 07:10:38	\N	1048585	3
+19	1	4	2	16777217	2022-09-02 07:10:38	\N	1048585	3
+20	1	5	2	16777217	2022-09-02 07:10:38	\N	1048585	3
+21	1	0	2	16777243	2022-09-02 07:10:38	\N	1048585	3
+22	1	0	2	16777245	2022-09-02 07:10:38	\N	1048585	3
+68	1	5	2	16777217	2022-09-02 07:15:33	\N	1048585	9
+69	1	0	2	16777243	2022-09-02 07:15:33	\N	1048585	9
+25	1	4	3	16777259	2022-09-02 07:11:10	\N	1048585	3
+26	1	5	3	16777259	2022-09-02 07:11:10	\N	1048585	3
+27	1	9	3	16777259	2022-09-02 07:11:10	\N	1048585	3
+28	1	0	3	16777222	2022-09-02 07:11:48	\N	1048585	4
+29	1	0	3	16777223	2022-09-02 07:11:48	\N	1048585	4
+30	1	4	2	16777217	2022-09-02 07:11:48	\N	1048585	4
+31	1	5	2	16777217	2022-09-02 07:11:48	\N	1048585	4
+32	1	0	2	16777243	2022-09-02 07:11:48	\N	1048585	4
+33	1	0	2	16777245	2022-09-02 07:11:48	\N	1048585	4
+70	1	0	2	16777245	2022-09-02 07:15:33	\N	1048585	9
+35	1	10	2	16777234	2022-09-02 07:12:13	\N	1048585	4
+36	1	0	3	16777222	2022-09-02 07:12:46	\N	1048585	5
+37	1	0	3	16777223	2022-09-02 07:12:46	\N	1048585	5
+38	1	4	2	16777217	2022-09-02 07:12:46	\N	1048585	5
+39	1	5	2	16777217	2022-09-02 07:12:46	\N	1048585	5
+40	1	0	2	16777243	2022-09-02 07:12:46	\N	1048585	5
+41	1	0	2	16777245	2022-09-02 07:12:46	\N	1048585	5
+43	1	0	3	16777222	2022-09-02 07:13:26	\N	1048585	6
+44	1	0	3	16777223	2022-09-02 07:13:26	\N	1048585	6
+45	1	4	2	16777217	2022-09-02 07:13:26	\N	1048585	6
+46	1	5	2	16777217	2022-09-02 07:13:26	\N	1048585	6
+47	1	0	2	16777243	2022-09-02 07:13:26	\N	1048585	6
+48	1	0	2	16777245	2022-09-02 07:13:26	\N	1048585	6
+84	1	0	2	16777243	2022-09-02 07:17:07	\N	1048585	11
+51	1	0	3	16777222	2022-09-02 07:14:12	\N	1048585	7
+52	1	0	3	16777223	2022-09-02 07:14:12	\N	1048585	7
+53	1	4	2	16777217	2022-09-02 07:14:12	\N	1048585	7
+54	1	5	2	16777217	2022-09-02 07:14:12	\N	1048585	7
+55	1	0	2	16777243	2022-09-02 07:14:12	\N	1048585	7
+56	1	0	2	16777245	2022-09-02 07:14:12	\N	1048585	7
+72	1	0	3	16777222	2022-09-02 07:16:18	\N	1048585	10
+58	1	0	3	16777222	2022-09-02 07:14:53	\N	1048585	8
+59	1	0	3	16777223	2022-09-02 07:14:53	\N	1048585	8
+60	1	4	2	16777217	2022-09-02 07:14:53	\N	1048585	8
+61	1	5	2	16777217	2022-09-02 07:14:53	\N	1048585	8
+62	1	0	2	16777243	2022-09-02 07:14:53	\N	1048585	8
+63	1	0	2	16777245	2022-09-02 07:14:53	\N	1048585	8
+73	1	0	3	16777223	2022-09-02 07:16:18	\N	1048585	10
+74	1	4	2	16777217	2022-09-02 07:16:18	\N	1048585	10
+75	1	5	2	16777217	2022-09-02 07:16:18	\N	1048585	10
+76	1	0	2	16777243	2022-09-02 07:16:18	\N	1048585	10
+77	1	0	2	16777245	2022-09-02 07:16:18	\N	1048585	10
+85	1	0	2	16777245	2022-09-02 07:17:07	\N	1048585	11
+87	1	0	3	16777222	2022-09-02 07:17:53	\N	1048585	12
+80	1	0	3	16777222	2022-09-02 07:17:07	\N	1048585	11
+81	1	0	3	16777223	2022-09-02 07:17:07	\N	1048585	11
+82	1	4	2	16777217	2022-09-02 07:17:07	\N	1048585	11
+83	1	5	2	16777217	2022-09-02 07:17:07	\N	1048585	11
+88	1	0	3	16777223	2022-09-02 07:17:53	\N	1048585	12
+89	1	4	2	16777217	2022-09-02 07:17:53	\N	1048585	12
+90	1	5	2	16777217	2022-09-02 07:17:53	\N	1048585	12
+91	1	0	2	16777243	2022-09-02 07:17:53	\N	1048585	12
+92	1	0	2	16777245	2022-09-02 07:17:53	\N	1048585	12
+94	1	0	3	16777222	2022-09-02 07:18:41	\N	1048585	13
+95	1	0	3	16777223	2022-09-02 07:18:41	\N	1048585	13
+96	1	4	2	16777217	2022-09-02 07:18:41	\N	1048585	13
+97	1	5	2	16777217	2022-09-02 07:18:41	\N	1048585	13
+98	1	0	2	16777243	2022-09-02 07:18:41	\N	1048585	13
+99	1	0	2	16777245	2022-09-02 07:18:41	\N	1048585	13
+101	1	0	3	16777222	2022-09-02 07:19:28	\N	1048585	14
+102	1	0	3	16777223	2022-09-02 07:19:28	\N	1048585	14
+103	1	4	2	16777217	2022-09-02 07:19:28	\N	1048585	14
+104	1	5	2	16777217	2022-09-02 07:19:28	\N	1048585	14
+105	1	0	2	16777243	2022-09-02 07:19:28	\N	1048585	14
+106	1	0	2	16777245	2022-09-02 07:19:28	\N	1048585	14
+108	1	0	3	16777222	2022-09-02 07:20:13	\N	1048585	15
+109	1	0	3	16777223	2022-09-02 07:20:13	\N	1048585	15
+110	1	4	2	16777217	2022-09-02 07:20:13	\N	1048585	15
+111	1	5	2	16777217	2022-09-02 07:20:13	\N	1048585	15
+112	1	0	2	16777243	2022-09-02 07:20:13	\N	1048585	15
+113	1	0	2	16777245	2022-09-02 07:20:13	\N	1048585	15
+115	1	0	3	16777222	2022-09-02 07:21:00	\N	1048585	16
+116	1	0	3	16777223	2022-09-02 07:21:00	\N	1048585	16
+117	1	4	2	16777217	2022-09-02 07:21:00	\N	1048585	16
+118	1	5	2	16777217	2022-09-02 07:21:00	\N	1048585	16
+119	1	0	2	16777243	2022-09-02 07:21:00	\N	1048585	16
+120	1	0	2	16777245	2022-09-02 07:21:00	\N	1048585	16
+122	1	0	3	16777222	2022-09-02 07:21:47	\N	1048585	17
+123	1	0	3	16777223	2022-09-02 07:21:47	\N	1048585	17
+124	1	4	2	16777217	2022-09-02 07:21:47	\N	1048585	17
+125	1	5	2	16777217	2022-09-02 07:21:47	\N	1048585	17
+126	1	0	2	16777243	2022-09-02 07:21:47	\N	1048585	17
+127	1	0	2	16777245	2022-09-02 07:21:47	\N	1048585	17
+129	1	0	3	16777222	2022-09-02 07:22:32	\N	1048585	18
+130	1	0	3	16777223	2022-09-02 07:22:32	\N	1048585	18
+131	1	4	2	16777217	2022-09-02 07:22:32	\N	1048585	18
+132	1	5	2	16777217	2022-09-02 07:22:32	\N	1048585	18
+133	1	0	2	16777243	2022-09-02 07:22:32	\N	1048585	18
+134	1	0	2	16777245	2022-09-02 07:22:32	\N	1048585	18
+136	1	0	3	16777222	2022-09-02 07:23:17	\N	1048585	19
+137	1	0	3	16777223	2022-09-02 07:23:17	\N	1048585	19
+138	1	4	2	16777217	2022-09-02 07:23:17	\N	1048585	19
+139	1	5	2	16777217	2022-09-02 07:23:17	\N	1048585	19
+140	1	0	2	16777243	2022-09-02 07:23:17	\N	1048585	19
+141	1	0	2	16777245	2022-09-02 07:23:17	\N	1048585	19
+142	0	3	1	3	2022-09-02 07:23:29	\N	0	0
 \.
 
 
@@ -6578,54 +6578,54 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 9	en_US	title	Hansen & Pinto: Reason Reclaimed
 9	fr_CA	title	
 17	fr_CA	title	
-10	fr_CA	abstract	
 10	en_US	abstract	<p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.</p>
+10	fr_CA	abstract	
 10		categoryIds	[]
 10	en_US	copyrightHolder	Public Knowledge Preprint Server
 10	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
 10		copyrightYear	2022
-10	fr_CA	prefix	
 10	en_US	prefix	
-10	fr_CA	subtitle	
+10	fr_CA	prefix	
 10	en_US	subtitle	
-10	fr_CA	title	
+10	fr_CA	subtitle	
 10	en_US	title	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence
-11	en_US	abstract	<p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.</p>
+10	fr_CA	title	
 11	fr_CA	abstract	
+11	en_US	abstract	<p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.</p>
 11		categoryIds	[]
 11	en_US	copyrightHolder	Public Knowledge Preprint Server
 11	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
 11		copyrightYear	2022
-11	en_US	prefix	
 11	fr_CA	prefix	
-11	en_US	subtitle	
+11	en_US	prefix	
 11	fr_CA	subtitle	
-11	en_US	title	Condensing Water Availability Models to Focus on Specific Water Management Systems
+11	en_US	subtitle	
 11	fr_CA	title	
+11	en_US	title	Condensing Water Availability Models to Focus on Specific Water Management Systems
 12	fr_CA	abstract	
 12	en_US	abstract	<p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.</p>
 12		categoryIds	[]
 12	en_US	copyrightHolder	Public Knowledge Preprint Server
 12	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
 12		copyrightYear	2022
-12	en_US	prefix	
 12	fr_CA	prefix	
-12	en_US	subtitle	
+12	en_US	prefix	
 12	fr_CA	subtitle	
-12	en_US	title	Learning Sustainable Design through Service
+12	en_US	subtitle	
 12	fr_CA	title	
-13	en_US	abstract	<p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.</p>
+12	en_US	title	Learning Sustainable Design through Service
 13	fr_CA	abstract	
+13	en_US	abstract	<p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.</p>
 13		categoryIds	[]
 13	en_US	copyrightHolder	Public Knowledge Preprint Server
 13	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
 13		copyrightYear	2022
-13	en_US	prefix	
 13	fr_CA	prefix	
-13	en_US	subtitle	
+13	en_US	prefix	
 13	fr_CA	subtitle	
-13	en_US	title	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning
+13	en_US	subtitle	
 13	fr_CA	title	
+13	en_US	title	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning
 14	fr_CA	abstract	
 14		categoryIds	[]
 14	en_US	prefix	
@@ -6638,36 +6638,36 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 14	en_US	copyrightHolder	Public Knowledge Preprint Server
 14	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
 14		copyrightYear	2022
-15	en_US	abstract	<p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.</p>
 15	fr_CA	abstract	
+15	en_US	abstract	<p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.</p>
 15		categoryIds	[]
 15	en_US	copyrightHolder	Public Knowledge Preprint Server
 15	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
 15		copyrightYear	2022
-15	en_US	prefix	
 15	fr_CA	prefix	
-15	en_US	subtitle	
+15	en_US	prefix	
 15	fr_CA	subtitle	
-15	en_US	title	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua
+15	en_US	subtitle	
 15	fr_CA	title	
-16	fr_CA	prefix	
-16	en_US	abstract	<p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.</p>
+15	en_US	title	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua
+16	en_US	prefix	
 16	fr_CA	abstract	
+16	en_US	abstract	<p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.</p>
 16		categoryIds	[]
 16	en_US	copyrightHolder	Public Knowledge Preprint Server
 16	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
 16		copyrightYear	2022
-16	en_US	prefix	
-16	en_US	subtitle	
+16	fr_CA	prefix	
 16	fr_CA	subtitle	
-16	en_US	title	Yam diseases and its management in Nigeria
+16	en_US	subtitle	
 16	fr_CA	title	
+16	en_US	title	Yam diseases and its management in Nigeria
 17	fr_CA	abstract	
 17		categoryIds	[]
-17	en_US	prefix	
 17	fr_CA	prefix	
-17	en_US	subtitle	
+17	en_US	prefix	
 17	fr_CA	subtitle	
+17	en_US	subtitle	
 17	en_US	abstract	<p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.</p>
 17	en_US	copyrightHolder	Public Knowledge Preprint Server
 17	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
@@ -6717,26 +6717,26 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, access_status, date_published, last_modified, primary_contact_id, section_id, submission_id, status, url_path, version, doi_id) FROM stdin;
-1	0	\N	2022-09-02 05:04:37	1	1	1	1	\N	1	\N
-18	0	2022-09-02	2022-09-02 05:17:51	23	1	17	3	\N	1	\N
-2	0	2022-09-02	2022-09-02 05:05:36	2	1	2	3	\N	1	\N
-19	0	2022-09-02	2022-09-02 05:18:36	24	1	18	3	\N	1	\N
-20	0	2022-09-02	2022-09-02 05:19:20	25	1	19	3	\N	1	\N
-3	0	2022-09-02	2022-09-02 05:06:43	4	1	3	3	\N	1	\N
-4	0	2022-09-02	2022-09-02 05:06:56	6	1	3	3	\N	2	\N
-5	0	\N	2022-09-02 05:07:24	8	1	4	1	\N	1	\N
-6	0	2022-09-02	2022-09-02 05:08:40	9	1	5	3	\N	1	\N
-7	0	2022-09-02	2022-09-02 05:09:21	10	1	6	3	\N	1	\N
-8	0	2022-09-02	2022-09-02 05:10:11	11	1	7	3	\N	1	\N
-9	0	2022-09-02	2022-09-02 05:10:52	13	1	8	3	\N	1	\N
-10	0	2022-09-02	2022-09-02 05:11:36	14	1	9	3	\N	1	\N
-11	0	2022-09-02	2022-09-02 05:12:21	15	1	10	3	\N	1	\N
-12	0	2022-09-02	2022-09-02 05:13:10	16	1	11	3	\N	1	\N
-13	0	2022-09-02	2022-09-02 05:13:57	18	1	12	3	\N	1	\N
-14	0	2022-09-02	2022-09-02 05:14:46	19	1	13	3	\N	1	\N
-15	0	2022-09-02	2022-09-02 05:15:32	20	1	14	3	\N	1	\N
-16	0	2022-09-02	2022-09-02 05:16:15	21	1	15	3	\N	1	\N
-17	0	2022-09-02	2022-09-02 05:17:02	22	1	16	3	\N	1	\N
+18	0	2022-09-02	2022-09-02 07:21:58	23	1	17	3	\N	1	\N
+1	0	\N	2022-09-02 07:09:07	1	1	1	1	\N	1	\N
+19	0	2022-09-02	2022-09-02 07:22:45	24	1	18	3	\N	1	\N
+2	0	2022-09-02	2022-09-02 07:10:04	2	1	2	3	\N	1	\N
+20	0	2022-09-02	2022-09-02 07:23:29	25	1	19	3	\N	1	\N
+3	0	2022-09-02	2022-09-02 07:11:06	4	1	3	3	\N	1	\N
+4	0	2022-09-02	2022-09-02 07:11:18	6	1	3	3	\N	2	\N
+5	0	\N	2022-09-02 07:11:46	8	1	4	1	\N	1	\N
+6	0	2022-09-02	2022-09-02 07:12:56	9	1	5	3	\N	1	\N
+7	0	2022-09-02	2022-09-02 07:13:36	10	1	6	3	\N	1	\N
+8	0	2022-09-02	2022-09-02 07:14:24	11	1	7	3	\N	1	\N
+9	0	2022-09-02	2022-09-02 07:15:03	13	1	8	3	\N	1	\N
+10	0	2022-09-02	2022-09-02 07:15:44	14	1	9	3	\N	1	\N
+11	0	2022-09-02	2022-09-02 07:16:30	15	1	10	3	\N	1	\N
+12	0	2022-09-02	2022-09-02 07:17:18	16	1	11	3	\N	1	\N
+13	0	2022-09-02	2022-09-02 07:18:04	18	1	12	3	\N	1	\N
+14	0	2022-09-02	2022-09-02 07:18:53	19	1	13	3	\N	1	\N
+15	0	2022-09-02	2022-09-02 07:19:40	20	1	14	3	\N	1	\N
+16	0	2022-09-02	2022-09-02 07:20:24	21	1	15	3	\N	1	\N
+17	0	2022-09-02	2022-09-02 07:21:11	22	1	16	3	\N	1	\N
 \.
 
 
@@ -6875,10 +6875,10 @@ SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 1, false);
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-PKP\\task\\StatisticsReport	2022-09-02 05:01:07
-PKP\\task\\RemoveUnvalidatedExpiredUsers	2022-09-02 05:01:07
-PKP\\task\\UpdateIPGeoDB	2022-09-02 05:01:07
-APP\\tasks\\UsageStatsLoader	2022-09-02 05:01:09
+PKP\\task\\StatisticsReport	2022-09-02 07:05:46
+PKP\\task\\RemoveUnvalidatedExpiredUsers	2022-09-02 07:05:46
+PKP\\task\\UpdateIPGeoDB	2022-09-02 07:05:46
+APP\\tasks\\UsageStatsLoader	2022-09-02 07:05:48
 \.
 
 
@@ -6924,49 +6924,49 @@ SELECT pg_catalog.setval('public.sections_section_id_seq', 1, true);
 COPY public.server_settings (server_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 1	fr_CA	submissionChecklist	[{"order":1,"content":"La soumission n'a pas déjà été publiée et n'est pas considérée actuellement par un autre serveur. Si ce n'est pas le cas, fournir une explication dans le champ « Commentaires au,à la rédacteur-trice »."},{"order":2,"content":"Le fichier de la soumission est dans un des formats de fichier suivants : OpenOffice, Microsoft Word, RTF ou WordPerfect."},{"order":3,"content":"Lorsque possible, les URL des références ont été fournies."},{"order":4,"content":"##default.contextSettings.checklist.submissionAppearance##"},{"order":5,"content":"##default.contextSettings.checklist.bibliographicRequirements##"}]	\N
 1		supportedFormLocales	["en_US","fr_CA"]	\N
-1		supportedLocales	["en_US","fr_CA"]	\N
-1		supportedSubmissionLocales	["en_US","fr_CA"]	\N
-1		themePluginPath	default	\N
+1		enableAuthorScreening	0	\N
 1	fr_CA	authorInformation	##default.contextSettings.forAuthors##	\N
-1		country	IS	\N
-1		defaultReviewMode	2	\N
-1		copySubmissionAckPrimaryContact	0	\N
-1		copySubmissionAckAddress		\N
-1		emailSignature	<br/><hr /><br/><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto: {$contactEmail}">{$contactEmail}</a></p>	\N
+1		contactEmail	rvaca@mailinator.com	\N
+1		contactName	Ramiro Vaca	\N
+1	en_US	name	Public Knowledge Preprint Server	\N
+1	fr_CA	name	Serveur de prépublication de la connaissance du public	\N
+1		notifyAllAuthors	1	\N
+1		numPageLinks	10	\N
 1	fr_CA	openAccessPolicy	##default.contextSettings.openAccessPolicy##	\N
 1	en_US	privacyStatement	<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>	\N
 1	fr_CA	privacyStatement	##default.contextSettings.privacyStatement##	\N
 1	en_US	readerInformation	We encourage readers to sign up for the posting notification service for this server. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the home page. This list also allows the server to claim a certain level of support or readership. See the <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.	\N
 1	fr_CA	readerInformation	##default.contextSettings.forReaders##	\N
+1	en_US	searchDescription	The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.	\N
 1	en_US	submissionChecklist	[{"order":1,"content":"The submission has not been previously posted."},{"order":2,"content":"The submission file is in OpenOffice, Microsoft Word, or RTF document file format."},{"order":3,"content":"Where available, URLs for the references have been provided."},{"order":4,"content":"The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end."},{"order":5,"content":"The text adheres to the stylistic and bibliographic requirements outlined in the Author Guidelines."}]	\N
-1		enableGeoUsageStats		\N
-1		enableInstitutionUsageStats	0	\N
-1		enableAuthorScreening	0	\N
+1		supportedLocales	["en_US","fr_CA"]	\N
+1		supportedSubmissionLocales	["en_US","fr_CA"]	\N
+1		supportEmail	rvaca@mailinator.com	\N
+1		supportName	Ramiro Vaca	\N
 1		enableOai	1	\N
-1	en_US	acronym	JPKPKP	\N
-1	en_US	authorInformation	Interested in submitting to this server? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About</a> page for the policies, as well as the <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> prior to submitting or, if already registered, can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the process.	\N
-1		enableDois	1	\N
+1		country	IS	\N
 1		doiSuffixType	default	\N
 1		registrationAgency		\N
 1		disableSubmissions	0	\N
 1		itemsPerPage	25	\N
 1		keywords	request	\N
+1		themePluginPath	default	\N
+1		enableGeoUsageStats		\N
+1	en_US	acronym	JPKPKP	\N
+1	en_US	authorInformation	Interested in submitting to this server? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About</a> page for the policies, as well as the <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> prior to submitting or, if already registered, can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the process.	\N
+1	en_US	customHeaders	<meta name="pkp" content="Test metatag.">	\N
+1		defaultReviewMode	2	\N
+1		copySubmissionAckPrimaryContact	0	\N
+1		copySubmissionAckAddress		\N
+1		emailSignature	<br/><hr /><br/><p><a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a></p><p>{$mailingAddress}</p><p>{$contactName}, <a href="mailto: {$contactEmail}">{$contactEmail}</a></p>	\N
+1	en_US	librarianInformation	We encourage research librarians to list this server among their library's holdings. As well, it may be worth noting that this server's open source system is suitable for libraries to host for their faculty members to use (see <a href="https://pkp.sfu.ca">Public Knowledge Project</a>).	\N
 1	fr_CA	librarianInformation	##default.contextSettings.forLibrarians##	\N
-1	en_US	name	Public Knowledge Preprint Server	\N
-1	fr_CA	name	Serveur de prépublication de la connaissance du public	\N
-1		notifyAllAuthors	1	\N
-1		numPageLinks	10	\N
+1		enableDois	1	\N
+1		mailingAddress	123 456th Street\nBurnaby, British Columbia\nCanada	\N
 1		numWeeksPerResponse	4	\N
 1		numWeeksPerReview	4	\N
 1	en_US	openAccessPolicy	This server provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.	\N
-1		contactEmail	rvaca@mailinator.com	\N
-1		contactName	Ramiro Vaca	\N
-1	en_US	customHeaders	<meta name="pkp" content="Test metatag.">	\N
-1	en_US	librarianInformation	We encourage research librarians to list this server among their library's holdings. As well, it may be worth noting that this server's open source system is suitable for libraries to host for their faculty members to use (see <a href="https://pkp.sfu.ca">Public Knowledge Project</a>).	\N
-1		mailingAddress	123 456th Street\nBurnaby, British Columbia\nCanada	\N
-1	en_US	searchDescription	The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.	\N
-1		supportEmail	rvaca@mailinator.com	\N
-1		supportName	Ramiro Vaca	\N
+1		enableInstitutionUsageStats	0	\N
 1	en_US	abbreviation	publicknowledgePub Know Pre	\N
 \.
 
@@ -6992,52 +6992,52 @@ SELECT pg_catalog.setval('public.servers_server_id_seq', 1, true);
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-e9ifk0ogiufp54187hj4ktnmf0	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662094907	1662094915	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662094915;s:5:"token";s:32:"faaf91aec3da8577a1f9b26d26a67002";}	localhost
-7r9j07bvsuid178dfak65aeg5n	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662094885	1662094906	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662094906;s:5:"token";s:32:"3b0b7646f8cc1ec3cd9ea3e4de8f65b2";}	localhost
-60ngp9u1u5qnqm78ke2khinmk3	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662094916	1662094931	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662094931;s:5:"token";s:32:"447f05cf872d6b57f2403029ba77b56e";}	localhost
-saj9b3rjlsl1l49jlbmkqks21b	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662094867	1662094885	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662094885;s:5:"token";s:32:"12764e3955ff9bec0404c04bf190e4ce";}	localhost
-3vtnit64c8r5j71tg50aojton5	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662094936	1662094996	0	username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662094995;s:5:"token";s:32:"f41a0e059e5abb8248c6fc04705cb4dc";}	localhost
-5be62oitqerbkdnjhqa738jpju	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662094997	1662095008	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1662095008;s:5:"token";s:32:"1f9e7209515a3c81e3a91a33abd033dc";}	localhost
-9n467l67shm9h0kmnq5ld2dk3m	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095141	1662095175	0	csrf|a:2:{s:9:"timestamp";i:1662095175;s:5:"token";s:32:"682e6f11c5eeb4d63dc28d734c0c83a8";}username|s:12:"cmontgomerie";	localhost
-d77arv7e5lkt9m96e8l405pktp	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095019	1662095047	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662095047;s:5:"token";s:32:"174e9ec06ce9d7fb83cdca66f5f38d2f";}	localhost
-f3qeaop2s8hu0mqsa3ibsuej5c	7	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095049	1662095079	0	csrf|a:2:{s:9:"timestamp";i:1662095078;s:5:"token";s:32:"8db19ff8087cb3d7a2d5d862b719daec";}username|s:7:"ccorino";userId|i:7;	localhost
-gtcnl73j5877kkqo31qell1tu0	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095011	1662095019	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662095019;s:5:"token";s:32:"a05af8853022ce56154936e1837ace42";}	localhost
-i8he09dn26b58l9egi0i3ku02g	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095081	1662095129	0	csrf|a:2:{s:9:"timestamp";i:1662095129;s:5:"token";s:32:"e46fd4efaa6cfc8fce581b974b4cd828";}username|s:8:"ckwantes";	localhost
-i4afgockphpq40ga70h2akgi78	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095130	1662095136	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095136;s:5:"token";s:32:"80ee62812ec4222db0807476b322839e";}	localhost
-oll7jei6ulehqnvprjp584f13o	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095175	1662095186	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095186;s:5:"token";s:32:"a3bdcc3fc93801152a4bb51334021d3a";}	localhost
-8b6103ns42ogmiqi58v4636j8n	10	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095218	1662095246	0	csrf|a:2:{s:9:"timestamp";i:1662095246;s:5:"token";s:32:"e9ff356ce04e44ad308e20d1c9ad1be8";}username|s:6:"ddiouf";userId|i:10;	localhost
-o5v8u9h99d9k132bll585lc983	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095187	1662095216	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095216;s:5:"token";s:32:"edd935eb5f7c662f50fb738c2c0ab1f9";}	localhost
-5qhh1v548do8qbsgt53t5mj1qu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095246	1662095277	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095274;s:5:"token";s:32:"bd379b863248c2c41e48bb2387dc31b1";}	localhost
-r8o9k3rin16ladqia2r1s6uask	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095278	1662095311	0	csrf|a:2:{s:9:"timestamp";i:1662095310;s:5:"token";s:32:"d5e3a9b2ff9f9f017eb16235cd7320be";}username|s:9:"dphillips";	localhost
-bjat5ec7hnr9sovn9kkk46q7cl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095311	1662095320	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095320;s:5:"token";s:32:"10af23b71da9c427eefc986ecd4e75b3";}	localhost
-9v72h9pen0aaa2ur1e3nv8i62k	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095322	1662095352	0	csrf|a:2:{s:9:"timestamp";i:1662095352;s:5:"token";s:32:"ae91eb623eed83843bf1f5a37c19561e";}username|s:9:"dsokoloff";	localhost
-tgj76lbdna9u8uh15hhks15fd4	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095352	1662095361	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095361;s:5:"token";s:32:"cb0b3507a2eec59fcac82264adfa52c9";}	localhost
-3k9la7lgaeeoandhjjlehiaf42	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095364	1662095400	0	csrf|a:2:{s:9:"timestamp";i:1662095400;s:5:"token";s:32:"d64102d2ebee23fd21d780ad0f21babc";}username|s:7:"eostrom";	localhost
-dn92m6ltea05d2m7vlpnu5iehl	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095499	1662095531	0	csrf|a:2:{s:9:"timestamp";i:1662095530;s:5:"token";s:32:"c56deb1d352a695749b08a88f91d6761";}username|s:6:"jnovak";	localhost
-q7afd97bcshs7vgqbnf5ghlcmk	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095413	1662095442	0	csrf|a:2:{s:9:"timestamp";i:1662095442;s:5:"token";s:32:"4e005fb50b2606ecb734dd787642a5b9";}username|s:9:"fpaglieri";	localhost
-s1g6kglmgrtt26elf06aosh8vj	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095543	1662095579	0	csrf|a:2:{s:9:"timestamp";i:1662095579;s:5:"token";s:32:"faa427d8c0ed79e1e7f7aa561cb904cd";}username|s:10:"kalkhafaji";	localhost
-17tqtv70r2ddiddolerilmqq4a	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095443	1662095452	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095452;s:5:"token";s:32:"0bd98cbf545d8f2edabe4fb25a8eda9f";}	localhost
-9aue2kfg24h3vu937ln0mmsmib	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095454	1662095485	0	csrf|a:2:{s:9:"timestamp";i:1662095485;s:5:"token";s:32:"1fde30e72b82251fe0e3898e3b8dfeb6";}username|s:10:"jmwandenga";	localhost
-lcchtdth9bb2k4aacskvdd2vs0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095401	1662095412	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095412;s:5:"token";s:32:"ed8cbe611d0c0519fcdf13f7b2d9c5d2";}	localhost
-mjhttuiqmtpc8vhjph3qfniodl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095486	1662095496	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095496;s:5:"token";s:32:"a4aa7b68c22f8d27efbb164c3502067a";}	localhost
-29calesjaqc8huesi7170s1cuj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095531	1662095541	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095541;s:5:"token";s:32:"72f6cc39feac2ae93610e98d0a0cdd88";}	localhost
-cu46frptb1ogdoahi4k95hp6gt	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095627	1662095637	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095637;s:5:"token";s:32:"63c4d17df7039d94de000906613348d9";}	localhost
-cjdt1cv2sd5afs60i5rjhfdvst	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095592	1662095626	0	csrf|a:2:{s:9:"timestamp";i:1662095626;s:5:"token";s:32:"77f70ed103c99f47f646cd1e68695927";}username|s:12:"lchristopher";	localhost
-hr3lsfthcp2ih9i4k05g521jrl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095580	1662095590	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095590;s:5:"token";s:32:"8bff3ceef0edf096e1a968e4e0c00870";}	localhost
-pdhv879up5p9vq95h4iit5g6hu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095676	1662095685	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095686;s:5:"token";s:32:"11a730b3be8612260724c582a612f4a1";}	localhost
-bi0v409tmv51nsc744q4o83npp	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095640	1662095675	0	csrf|a:2:{s:9:"timestamp";i:1662095675;s:5:"token";s:32:"e7edc8877c5b56c7405f0720180fffc5";}username|s:8:"lkumiega";	localhost
-ks9p4lkmkaor97go5e0kf83ajl	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095689	1662095722	0	csrf|a:2:{s:9:"timestamp";i:1662095722;s:5:"token";s:32:"9878a58b46dd2a29c36d0ec2a9a139b3";}username|s:7:"pdaniel";	localhost
-hbalc04pdkpobam9nhvip5c39o	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095734	1662095765	0	csrf|a:2:{s:9:"timestamp";i:1662095765;s:5:"token";s:32:"fa072e81ca818a7b8d3b42297aea3eb4";}username|s:8:"rbaiyewu";	localhost
-44cfn7f53p8lnd5fiel2a1rmen	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095722	1662095732	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095732;s:5:"token";s:32:"034b1edc31a686b6203840872513eed3";}	localhost
-2fk5a0m1ose6u6gfi1ilmclktn	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095765	1662095775	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095775;s:5:"token";s:32:"236ba7d24ee74111399d0b4061c3a534";}	localhost
-ogpmmoprals9s1dmu719qqb3ou	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095812	1662095822	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095822;s:5:"token";s:32:"cacd55d369e169241c4a9a6756b5d840";}	localhost
-gm1t3ms8rko6440po62e4o9m81	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095778	1662095811	0	csrf|a:2:{s:9:"timestamp";i:1662095811;s:5:"token";s:32:"786d9e32cc57ff464fa5299ed75babec";}username|s:6:"rrossi";	localhost
-qop0upbhtkpilvpsfgj1f7g24j	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095825	1662095860	0	csrf|a:2:{s:9:"timestamp";i:1662095860;s:5:"token";s:32:"9f32572946a1eaf849bc7777ca5997e9";}username|s:12:"vkarbasizaed";	localhost
-bcsmn6ujse0e6kld222hkks7sr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095861	1662095870	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095870;s:5:"token";s:32:"5a3092a314b032217b337700a34218c7";}	localhost
-nm4e15r9qfb6un1oam83nik6a1	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095918	1662095949	0	csrf|a:2:{s:9:"timestamp";i:1662095948;s:5:"token";s:32:"c7a203f8e09be19e539c31f0eefea1d4";}username|s:6:"zwoods";	localhost
-icq7q94saoklc32k17h8umf56l	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095949	1662095959	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095959;s:5:"token";s:32:"709465238d4787a54e4956cecb0fb885";}	localhost
-cp4o1m9rq4lse20e0es89h84j5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095905	1662095915	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662095916;s:5:"token";s:32:"aa7d76b338f954f1c404e39093485e73";}	localhost
-d9e9kst3idp9755aqcrjab8jur	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662095873	1662095904	0	csrf|a:2:{s:9:"timestamp";i:1662095904;s:5:"token";s:32:"b26c0b3413c35851b413ffd79e1dd4d3";}username|s:11:"vwilliamson";	localhost
+hl6rcs827d4r41sjgsadm6o0aq	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102383	1662102392	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662102392;s:5:"token";s:32:"541680b160f9d6a4dde8ea53de2aa896";}	localhost
+m6vho30enjmrt9ehqbv4cpnlaq	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102362	1662102383	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662102383;s:5:"token";s:32:"bfd93d7d93d5d2f77c5c644a062e5a3c";}	localhost
+7j3ah11lp1t5t0kh0vqb8slh7v	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102393	1662102404	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662102404;s:5:"token";s:32:"901e1a70e6a3f30dc4823d4945b0b2c0";}	localhost
+k0f5jioeb1o5loq0qqphcuoogu	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102346	1662102362	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662102362;s:5:"token";s:32:"c6c0fc6bfd1de29ac1a8299f10b674b4";}	localhost
+e969nf8f97m8im98vpd9qqitlu	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102408	1662102469	0	username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662102469;s:5:"token";s:32:"5aa716f40ea7e4c3d53dfd0d7799c8bb";}	localhost
+3pksa2qbgegahj5206nqapron7	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102597	1662102603	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662102603;s:5:"token";s:32:"a8817518098bfef1e759af9d7143701a";}	localhost
+sfkqmd8ahf3uic065mc8bi376s	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102471	1662102483	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1662102481;s:5:"token";s:32:"374888eee788995988cca2e563e5f8ac";}	localhost
+16ng2clhap88r0mfdg5htquuk6	7	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102521	1662102549	0	csrf|a:2:{s:9:"timestamp";i:1662102548;s:5:"token";s:32:"6964fb314aed5a74faeef78c109bbea0";}username|s:7:"ccorino";userId|i:7;	localhost
+3gg85t6vcrr4c2p79096eituis	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102492	1662102519	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662102519;s:5:"token";s:32:"b8d26f866445202a9b51e94fe982a373";}	localhost
+t2oklf73ttfvb8j2olutjjpqit	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102485	1662102491	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1662102491;s:5:"token";s:32:"1d2ee0c04a3c54030f7cdcca0c1ec9c0";}	localhost
+mnm73q32a9ssc9d6a4pormkt9t	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102551	1662102596	0	csrf|a:2:{s:9:"timestamp";i:1662102595;s:5:"token";s:32:"1c2da58669b7220e4e067c650aeb2ba6";}username|s:8:"ckwantes";	localhost
+43tno9ojuhh65iigeth2c138iv	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102640	1662102650	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662102650;s:5:"token";s:32:"4cfac32257cc78d7e4e8d007928dc716";}	localhost
+0rgfo4rts6efe960gmg2nnn541	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102606	1662102639	0	csrf|a:2:{s:9:"timestamp";i:1662102639;s:5:"token";s:32:"cf9c893581e50ef01d9bbc8fd63950e5";}username|s:12:"cmontgomerie";	localhost
+qgjuifufklf59jvl1chukt1nc2	10	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102681	1662102708	0	csrf|a:2:{s:9:"timestamp";i:1662102707;s:5:"token";s:32:"f7f11d355782f5e84432f40a015fe572";}username|s:6:"ddiouf";userId|i:10;	localhost
+k55eaeurlco5fchp9gq3gcqv49	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102650	1662102679	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662102679;s:5:"token";s:32:"0d2d0cf05dc6cc139953c963485c7a1c";}	localhost
+4dp5gjd25hbikcftdskf4es1k9	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102708	1662102736	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662102734;s:5:"token";s:32:"b19bb7a94a3ef49f5d9a9a738e426f56";}	localhost
+pec946fctl20qk1uaica48i32t	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102738	1662102767	0	csrf|a:2:{s:9:"timestamp";i:1662102767;s:5:"token";s:32:"5544681c37c69a6679d9f12f48598bb0";}username|s:9:"dphillips";	localhost
+t7all2fko61oo43pj1uvifjhco	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102768	1662102776	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662102776;s:5:"token";s:32:"b7b5d85230f1686cd0cc83d00c416a5d";}	localhost
+r69j31immepn3sj5rtb2poe78h	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102778	1662102807	0	csrf|a:2:{s:9:"timestamp";i:1662102807;s:5:"token";s:32:"6ca2a4c90711c3cad7a1ac99c0d13702";}username|s:9:"dsokoloff";	localhost
+l3k8s3p99lq5kt9i60266qa1vv	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102807	1662102816	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662102816;s:5:"token";s:32:"df5ad00afe0eb921336d46cadeb4bb5e";}	localhost
+h0hfepm025kinunv6ccfr4io6d	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102818	1662102853	0	csrf|a:2:{s:9:"timestamp";i:1662102852;s:5:"token";s:32:"8a04a8125eb7519c4c8400128b28d202";}username|s:7:"eostrom";	localhost
+libvq9ub89g86857e6a9bv93or	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102905	1662102934	0	csrf|a:2:{s:9:"timestamp";i:1662102934;s:5:"token";s:32:"4fa3ae9d17080ba1b863ceedbb691be4";}username|s:10:"jmwandenga";	localhost
+6bo83smh8u73rk1m87n4oe7b8s	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102866	1662102894	0	csrf|a:2:{s:9:"timestamp";i:1662102893;s:5:"token";s:32:"8f887fb74bf409f3031dd65dc55fff67";}username|s:9:"fpaglieri";	localhost
+g69cedmdtv3p71pf69l948mvja	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102894	1662102903	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662102903;s:5:"token";s:32:"5377bee6b6289d2bff1a6f6c26f25c87";}	localhost
+oc5dt1gudpda02jon372rv5f2j	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102935	1662102944	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662102944;s:5:"token";s:32:"991ac731a86afb3cd309af106bd0ec33";}	localhost
+04827girj68t7vbpr4jegr3es9	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103086	1662103122	0	csrf|a:2:{s:9:"timestamp";i:1662103122;s:5:"token";s:32:"648e77a8bba14c562083e69b50d0b913";}username|s:8:"lkumiega";	localhost
+dvlst5bilaqiqo31ac4dud8efr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102853	1662102864	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662102864;s:5:"token";s:32:"f6f333e628e6b808998a696bb239d7a4";}	localhost
+ifkbdgiqmn8pu4h2cbfr2a449m	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102947	1662102979	0	csrf|a:2:{s:9:"timestamp";i:1662102979;s:5:"token";s:32:"c3cf58ec3857a99c2a44243a5956d26c";}username|s:6:"jnovak";	localhost
+pl20kv451mdu0t3sbp6j71sdvo	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103028	1662103038	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662103038;s:5:"token";s:32:"ea867c68cab41bbb2004a494ffbc1d7f";}	localhost
+12mu33ijba9rrp1fmo7jrudpeh	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102980	1662102990	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662102990;s:5:"token";s:32:"d4c0de0770e120cffe153fec3d02c7eb";}	localhost
+uh605tt034psgvigp54rg9u5kb	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103135	1662103169	0	csrf|a:2:{s:9:"timestamp";i:1662103169;s:5:"token";s:32:"0a7bb613a9d89d1426a8d64fabdbc3fb";}username|s:7:"pdaniel";	localhost
+iiv8rlv19jgvl2c1stfe3580vl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103075	1662103084	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662103084;s:5:"token";s:32:"82568630b53e811f3cfdfa374933ed19";}	localhost
+n8kp6a2e97gqk0ium6l9dqaqhs	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662102992	1662103027	0	csrf|a:2:{s:9:"timestamp";i:1662103027;s:5:"token";s:32:"83ce6bd371b96617807efe7dcb5fdd68";}username|s:10:"kalkhafaji";	localhost
+lbqv62rf06pq85tmbu6f7501d9	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103040	1662103074	0	csrf|a:2:{s:9:"timestamp";i:1662103074;s:5:"token";s:32:"5f119a42d239ff1cfd7c6fb85b897f68";}username|s:12:"lchristopher";	localhost
+kq8pvpf56g6oufatuul3orv0bp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103123	1662103133	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662103133;s:5:"token";s:32:"5de0cbea65647816ffe2c25578036f67";}	localhost
+epnh0o6030p1l7j7n8uet0hbje	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103182	1662103213	0	csrf|a:2:{s:9:"timestamp";i:1662103213;s:5:"token";s:32:"8263905d9a67d2cb607d77bd7c9c34be";}username|s:8:"rbaiyewu";	localhost
+f1dhbi43sj6meto8ac10bls8pu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103170	1662103180	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662103180;s:5:"token";s:32:"9cf917dd93c79bca3c1353771f1e3982";}	localhost
+qp4qg13jbiip11lbf15fr72h1b	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103214	1662103224	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662103224;s:5:"token";s:32:"04f1b04d6029b44edf4938ac24a7c2d7";}	localhost
+impv67gn4mddtt7o0qpqtkdfd2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103262	1662103271	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662103271;s:5:"token";s:32:"447df73698ca7eb86b503bf592d31b69";}	localhost
+g6nukbdo3484d78q70lo6kriqq	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103227	1662103261	0	csrf|a:2:{s:9:"timestamp";i:1662103261;s:5:"token";s:32:"2da8a313a5a40c424b22ae5257a4ce2a";}username|s:6:"rrossi";	localhost
+90bks2mln5n64ucp0rttkrj2nu	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103275	1662103308	0	csrf|a:2:{s:9:"timestamp";i:1662103307;s:5:"token";s:32:"a790acc5096fae19defaf931f95e6869";}username|s:12:"vkarbasizaed";	localhost
+bli7eg44r2efo2p3o037hvn59v	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103308	1662103318	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662103318;s:5:"token";s:32:"131144fbeb2dd98f7b3f9d1557820509";}	localhost
+vup2cklff014ljkcilan5oanh6	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103321	1662103353	0	csrf|a:2:{s:9:"timestamp";i:1662103353;s:5:"token";s:32:"875dffbd07c123458e6ffbe4495792fa";}username|s:11:"vwilliamson";	localhost
+pecuesfis7qc6qcr4mruori3iq	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103367	1662103398	0	csrf|a:2:{s:9:"timestamp";i:1662103397;s:5:"token";s:32:"d68ea6853d338982a8aac5534e45c282";}username|s:6:"zwoods";	localhost
+5d1a1b7dj7fg47s6mabidlrfdk	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103354	1662103365	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662103365;s:5:"token";s:32:"ace52c9b7cb26eefdc0fe80a1ab24be3";}	localhost
+2ds5q229ttf9ncfu4gcde6d3vt	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.53 Safari/537.36	1662103398	1662103408	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1662103408;s:5:"token";s:32:"a5e1a3dd02888e9e2ca8b9bc568384af";}	localhost
 \.
 
 
@@ -7072,63 +7072,63 @@ themePluginPath		default
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-1	1	4	7	2022-09-02 05:04:17	0	1
-2	1	3	4	2022-09-02 05:04:38	0	1
-3	1	3	5	2022-09-02 05:04:38	0	1
-4	2	4	8	2022-09-02 05:04:47	0	1
-5	2	3	4	2022-09-02 05:05:08	0	1
-6	2	3	5	2022-09-02 05:05:08	0	1
-7	3	4	9	2022-09-02 05:05:49	0	1
-8	3	3	4	2022-09-02 05:06:14	0	1
-9	3	3	5	2022-09-02 05:06:14	0	1
-10	4	4	10	2022-09-02 05:07:07	0	1
-11	4	3	4	2022-09-02 05:07:26	0	1
-12	4	3	5	2022-09-02 05:07:26	0	1
-13	5	4	11	2022-09-02 05:08:07	0	1
-14	5	3	4	2022-09-02 05:08:30	0	1
-15	5	3	5	2022-09-02 05:08:30	0	1
-16	6	4	12	2022-09-02 05:08:52	0	1
-17	6	3	4	2022-09-02 05:09:11	0	1
-18	6	3	5	2022-09-02 05:09:11	0	1
-19	7	4	13	2022-09-02 05:09:34	0	1
-20	7	3	4	2022-09-02 05:09:59	0	1
-21	7	3	5	2022-09-02 05:09:59	0	1
-22	8	4	14	2022-09-02 05:10:23	0	1
-23	8	3	4	2022-09-02 05:10:42	0	1
-24	8	3	5	2022-09-02 05:10:42	0	1
-25	9	4	15	2022-09-02 05:11:04	0	1
-26	9	3	4	2022-09-02 05:11:25	0	1
-27	9	3	5	2022-09-02 05:11:25	0	1
-28	10	4	16	2022-09-02 05:11:49	0	1
-29	10	3	4	2022-09-02 05:12:10	0	1
-30	10	3	5	2022-09-02 05:12:10	0	1
-31	11	4	17	2022-09-02 05:12:33	0	1
-32	11	3	4	2022-09-02 05:12:58	0	1
-33	11	3	5	2022-09-02 05:12:58	0	1
-34	12	4	18	2022-09-02 05:13:23	0	1
-35	12	3	4	2022-09-02 05:13:45	0	1
-36	12	3	5	2022-09-02 05:13:45	0	1
-37	13	4	19	2022-09-02 05:14:11	0	1
-38	13	3	4	2022-09-02 05:14:34	0	1
-39	13	3	5	2022-09-02 05:14:34	0	1
-40	14	4	20	2022-09-02 05:15:00	0	1
-41	14	3	4	2022-09-02 05:15:21	0	1
-42	14	3	5	2022-09-02 05:15:21	0	1
-43	15	4	21	2022-09-02 05:15:46	0	1
-44	15	3	4	2022-09-02 05:16:04	0	1
-45	15	3	5	2022-09-02 05:16:04	0	1
-46	16	4	22	2022-09-02 05:16:29	0	1
-47	16	3	4	2022-09-02 05:16:51	0	1
-48	16	3	5	2022-09-02 05:16:51	0	1
-49	17	4	23	2022-09-02 05:17:16	0	1
-50	17	3	4	2022-09-02 05:17:39	0	1
-51	17	3	5	2022-09-02 05:17:39	0	1
-52	18	4	24	2022-09-02 05:18:04	0	1
-53	18	3	4	2022-09-02 05:18:23	0	1
-54	18	3	5	2022-09-02 05:18:23	0	1
-55	19	4	25	2022-09-02 05:18:49	0	1
-56	19	3	4	2022-09-02 05:19:08	0	1
-57	19	3	5	2022-09-02 05:19:08	0	1
+1	1	4	7	2022-09-02 07:08:49	0	1
+2	1	3	4	2022-09-02 07:09:09	0	1
+3	1	3	5	2022-09-02 07:09:09	0	1
+4	2	4	8	2022-09-02 07:09:18	0	1
+5	2	3	4	2022-09-02 07:09:37	0	1
+6	2	3	5	2022-09-02 07:09:37	0	1
+7	3	4	9	2022-09-02 07:10:14	0	1
+8	3	3	4	2022-09-02 07:10:38	0	1
+9	3	3	5	2022-09-02 07:10:38	0	1
+10	4	4	10	2022-09-02 07:11:29	0	1
+11	4	3	4	2022-09-02 07:11:48	0	1
+12	4	3	5	2022-09-02 07:11:48	0	1
+13	5	4	11	2022-09-02 07:12:26	0	1
+14	5	3	4	2022-09-02 07:12:46	0	1
+15	5	3	5	2022-09-02 07:12:46	0	1
+16	6	4	12	2022-09-02 07:13:07	0	1
+17	6	3	4	2022-09-02 07:13:26	0	1
+18	6	3	5	2022-09-02 07:13:26	0	1
+19	7	4	13	2022-09-02 07:13:47	0	1
+20	7	3	4	2022-09-02 07:14:12	0	1
+21	7	3	5	2022-09-02 07:14:12	0	1
+22	8	4	14	2022-09-02 07:14:35	0	1
+23	8	3	4	2022-09-02 07:14:53	0	1
+24	8	3	5	2022-09-02 07:14:53	0	1
+25	9	4	15	2022-09-02 07:15:14	0	1
+26	9	3	4	2022-09-02 07:15:33	0	1
+27	9	3	5	2022-09-02 07:15:33	0	1
+28	10	4	16	2022-09-02 07:15:57	0	1
+29	10	3	4	2022-09-02 07:16:18	0	1
+30	10	3	5	2022-09-02 07:16:18	0	1
+31	11	4	17	2022-09-02 07:16:42	0	1
+32	11	3	4	2022-09-02 07:17:07	0	1
+33	11	3	5	2022-09-02 07:17:07	0	1
+34	12	4	18	2022-09-02 07:17:32	0	1
+35	12	3	4	2022-09-02 07:17:53	0	1
+36	12	3	5	2022-09-02 07:17:53	0	1
+37	13	4	19	2022-09-02 07:18:18	0	1
+38	13	3	4	2022-09-02 07:18:41	0	1
+39	13	3	5	2022-09-02 07:18:41	0	1
+40	14	4	20	2022-09-02 07:19:07	0	1
+41	14	3	4	2022-09-02 07:19:28	0	1
+42	14	3	5	2022-09-02 07:19:28	0	1
+43	15	4	21	2022-09-02 07:19:53	0	1
+44	15	3	4	2022-09-02 07:20:12	0	1
+45	15	3	5	2022-09-02 07:20:12	0	1
+46	16	4	22	2022-09-02 07:20:38	0	1
+47	16	3	4	2022-09-02 07:21:00	0	1
+48	16	3	5	2022-09-02 07:21:00	0	1
+49	17	4	23	2022-09-02 07:21:26	0	1
+50	17	3	4	2022-09-02 07:21:47	0	1
+51	17	3	5	2022-09-02 07:21:47	0	1
+52	18	4	24	2022-09-02 07:22:12	0	1
+53	18	3	4	2022-09-02 07:22:32	0	1
+54	18	3	5	2022-09-02 07:22:32	0	1
+55	19	4	25	2022-09-02 07:22:58	0	1
+56	19	3	4	2022-09-02 07:23:16	0	1
+57	19	3	5	2022-09-02 07:23:17	0	1
 \.
 
 
@@ -7249,25 +7249,25 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	1	10	\N	\N	\N	2022-09-02 05:04:28	2022-09-02 05:04:31	7	521	1
-2	2	2	\N	1	10	\N	\N	\N	2022-09-02 05:04:58	2022-09-02 05:05:01	8	521	2
-3	3	3	\N	1	10	\N	\N	\N	2022-09-02 05:06:00	2022-09-02 05:06:02	9	521	3
-4	4	4	\N	1	10	\N	\N	\N	2022-09-02 05:07:18	2022-09-02 05:07:20	10	521	5
-5	5	5	\N	1	10	\N	\N	\N	2022-09-02 05:08:18	2022-09-02 05:08:20	11	521	6
-6	6	6	\N	1	10	\N	\N	\N	2022-09-02 05:09:02	2022-09-02 05:09:05	12	521	7
-7	7	7	\N	1	10	\N	\N	\N	2022-09-02 05:09:44	2022-09-02 05:09:47	13	521	8
-8	8	8	\N	1	10	\N	\N	\N	2022-09-02 05:10:34	2022-09-02 05:10:36	14	521	9
-9	9	9	\N	1	10	\N	\N	\N	2022-09-02 05:11:15	2022-09-02 05:11:17	15	521	10
-10	10	10	\N	1	10	\N	\N	\N	2022-09-02 05:12:00	2022-09-02 05:12:02	16	521	11
-11	11	11	\N	1	10	\N	\N	\N	2022-09-02 05:12:44	2022-09-02 05:12:47	17	521	12
-12	12	12	\N	1	10	\N	\N	\N	2022-09-02 05:13:34	2022-09-02 05:13:37	18	521	13
-13	13	13	\N	1	10	\N	\N	\N	2022-09-02 05:14:22	2022-09-02 05:14:25	19	521	14
-14	14	14	\N	1	10	\N	\N	\N	2022-09-02 05:15:10	2022-09-02 05:15:13	20	521	15
-15	15	15	\N	1	10	\N	\N	\N	2022-09-02 05:15:56	2022-09-02 05:15:59	21	521	16
-16	16	16	\N	1	10	\N	\N	\N	2022-09-02 05:16:39	2022-09-02 05:16:42	22	521	17
-17	17	17	\N	1	10	\N	\N	\N	2022-09-02 05:17:27	2022-09-02 05:17:29	23	521	18
-18	18	18	\N	1	10	\N	\N	\N	2022-09-02 05:18:15	2022-09-02 05:18:17	24	521	19
-19	19	19	\N	1	10	\N	\N	\N	2022-09-02 05:19:00	2022-09-02 05:19:02	25	521	20
+1	1	1	\N	1	10	\N	\N	\N	2022-09-02 07:09:00	2022-09-02 07:09:02	7	521	1
+2	2	2	\N	1	10	\N	\N	\N	2022-09-02 07:09:28	2022-09-02 07:09:31	8	521	2
+3	3	3	\N	1	10	\N	\N	\N	2022-09-02 07:10:25	2022-09-02 07:10:27	9	521	3
+4	4	4	\N	1	10	\N	\N	\N	2022-09-02 07:11:40	2022-09-02 07:11:42	10	521	5
+5	5	5	\N	1	10	\N	\N	\N	2022-09-02 07:12:37	2022-09-02 07:12:39	11	521	6
+6	6	6	\N	1	10	\N	\N	\N	2022-09-02 07:13:18	2022-09-02 07:13:20	12	521	7
+7	7	7	\N	1	10	\N	\N	\N	2022-09-02 07:13:57	2022-09-02 07:14:00	13	521	8
+8	8	8	\N	1	10	\N	\N	\N	2022-09-02 07:14:46	2022-09-02 07:14:48	14	521	9
+9	9	9	\N	1	10	\N	\N	\N	2022-09-02 07:15:25	2022-09-02 07:15:27	15	521	10
+10	10	10	\N	1	10	\N	\N	\N	2022-09-02 07:16:08	2022-09-02 07:16:11	16	521	11
+11	11	11	\N	1	10	\N	\N	\N	2022-09-02 07:16:53	2022-09-02 07:16:55	17	521	12
+12	12	12	\N	1	10	\N	\N	\N	2022-09-02 07:17:42	2022-09-02 07:17:45	18	521	13
+13	13	13	\N	1	10	\N	\N	\N	2022-09-02 07:18:29	2022-09-02 07:18:32	19	521	14
+14	14	14	\N	1	10	\N	\N	\N	2022-09-02 07:19:18	2022-09-02 07:19:20	20	521	15
+15	15	15	\N	1	10	\N	\N	\N	2022-09-02 07:20:04	2022-09-02 07:20:07	21	521	16
+16	16	16	\N	1	10	\N	\N	\N	2022-09-02 07:20:49	2022-09-02 07:20:52	22	521	17
+17	17	17	\N	1	10	\N	\N	\N	2022-09-02 07:21:36	2022-09-02 07:21:39	23	521	18
+18	18	18	\N	1	10	\N	\N	\N	2022-09-02 07:22:23	2022-09-02 07:22:25	24	521	19
+19	19	19	\N	1	10	\N	\N	\N	2022-09-02 07:23:08	2022-09-02 07:23:11	25	521	20
 \.
 
 
@@ -8230,8 +8230,6 @@ COPY public.submission_search_keyword_list (keyword_id, keyword_text) FROM stdin
 945	zita
 946	woods
 947	cuny
-948	finocchiaro
-949	arguments
 \.
 
 
@@ -8251,10 +8249,6 @@ COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM 
 1	2	1
 1	3	2
 1	4	3
-33	146	0
-33	147	1
-33	148	2
-33	3	3
 9	5	0
 9	6	1
 9	3	2
@@ -8346,81 +8340,6 @@ COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM 
 13	24	0
 13	23	1
 13	26	2
-49	194	0
-49	195	1
-49	3	2
-49	196	3
-49	197	4
-50	198	0
-50	199	1
-50	167	2
-50	88	3
-51	89	0
-51	131	1
-51	91	2
-51	200	3
-51	201	4
-51	202	5
-51	95	6
-51	203	7
-51	204	8
-51	205	9
-51	206	10
-51	206	11
-51	207	12
-51	208	13
-51	209	14
-51	132	15
-51	210	16
-51	211	17
-51	212	18
-51	199	19
-51	167	20
-51	169	21
-51	213	22
-51	214	23
-51	120	24
-51	215	25
-51	66	26
-51	61	27
-51	216	28
-51	217	29
-51	218	30
-51	69	31
-51	219	32
-51	220	33
-51	221	34
-51	222	35
-51	223	36
-51	224	37
-51	117	38
-51	186	39
-51	66	40
-51	225	41
-51	226	42
-51	227	43
-51	228	44
-51	229	45
-51	201	46
-51	230	47
-51	231	48
-51	50	49
-51	117	50
-51	232	51
-51	228	52
-51	233	53
-51	234	54
-51	224	55
-51	117	56
-51	235	57
-51	166	58
-51	236	59
-51	201	60
-51	237	61
-51	238	62
-51	217	63
-51	239	64
-51	83	65
 51	240	66
 51	224	67
 51	241	68
@@ -8475,84 +8394,6 @@ COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM 
 75	330	31
 75	331	32
 75	332	33
-75	333	34
-75	334	35
-75	324	36
-75	322	37
-75	332	38
-75	335	39
-75	336	40
-75	337	41
-83	347	3
-83	348	4
-83	349	5
-83	350	6
-83	351	7
-83	341	8
-83	352	9
-83	353	10
-83	348	11
-83	354	12
-83	355	13
-83	356	14
-83	357	15
-83	358	16
-83	359	17
-83	347	18
-83	341	19
-83	324	20
-83	360	21
-83	361	22
-83	362	23
-83	363	24
-83	341	25
-83	364	26
-83	365	27
-83	366	28
-83	367	29
-83	368	30
-83	369	31
-83	370	32
-83	371	33
-83	372	34
-83	347	35
-83	348	36
-83	373	37
-83	347	38
-83	374	39
-83	375	40
-83	376	41
-83	377	42
-83	378	43
-83	377	44
-83	379	45
-83	380	46
-83	381	47
-83	382	48
-83	366	49
-83	344	50
-83	341	51
-83	324	52
-83	345	53
-83	383	54
-83	219	55
-83	198	56
-83	384	57
-83	385	58
-83	386	59
-83	387	60
-83	348	61
-83	363	62
-83	388	63
-83	341	64
-83	352	65
-83	389	66
-83	365	67
-83	390	68
-83	391	69
-83	392	70
-83	385	71
-83	393	72
 41	149	0
 41	150	1
 41	3	2
@@ -8630,6 +8471,162 @@ COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM 
 66	295	1
 66	296	2
 66	297	3
+75	333	34
+75	334	35
+75	324	36
+75	322	37
+75	332	38
+75	335	39
+75	336	40
+75	337	41
+81	298	0
+81	338	1
+81	339	2
+81	3	3
+82	340	0
+82	341	1
+82	342	2
+82	343	3
+82	344	4
+82	264	5
+82	341	6
+82	324	7
+82	345	8
+83	346	0
+83	341	1
+83	342	2
+83	347	3
+83	348	4
+83	349	5
+83	350	6
+83	351	7
+83	341	8
+83	352	9
+83	353	10
+83	348	11
+83	354	12
+83	355	13
+83	356	14
+83	357	15
+83	358	16
+83	359	17
+83	347	18
+83	341	19
+83	324	20
+83	360	21
+83	361	22
+83	362	23
+83	363	24
+83	341	25
+83	364	26
+83	365	27
+83	366	28
+83	367	29
+83	368	30
+83	369	31
+83	370	32
+83	371	33
+83	372	34
+83	347	35
+83	348	36
+83	373	37
+83	347	38
+83	374	39
+83	375	40
+83	376	41
+83	377	42
+83	378	43
+83	377	44
+83	379	45
+83	380	46
+83	381	47
+83	382	48
+83	366	49
+83	344	50
+83	341	51
+83	324	52
+83	345	53
+83	383	54
+57	244	0
+57	245	1
+57	246	2
+57	3	3
+57	247	4
+57	248	5
+57	249	6
+57	246	7
+57	3	8
+58	250	0
+58	251	1
+58	17	2
+58	252	3
+59	17	0
+59	252	1
+59	253	2
+59	254	3
+59	255	4
+59	256	5
+59	124	6
+59	257	7
+59	258	8
+59	259	9
+59	260	10
+59	261	11
+59	262	12
+59	263	13
+59	264	14
+59	265	15
+59	266	16
+59	267	17
+59	268	18
+59	269	19
+59	270	20
+59	271	21
+59	272	22
+59	273	23
+59	274	24
+59	275	25
+59	263	26
+59	264	27
+59	252	28
+59	276	29
+59	277	30
+59	278	31
+59	205	32
+59	279	33
+59	260	34
+59	261	35
+59	280	36
+59	281	37
+59	282	38
+59	283	39
+59	284	40
+59	285	41
+61	178	0
+61	286	1
+61	287	2
+61	178	3
+61	288	4
+61	289	5
+61	290	6
+83	219	55
+83	198	56
+83	384	57
+83	385	58
+83	386	59
+83	387	60
+83	348	61
+83	363	62
+83	388	63
+83	341	64
+83	352	65
+83	389	66
+83	365	67
+83	390	68
+83	391	69
+83	392	70
+83	385	71
+83	393	72
 83	394	73
 83	373	74
 83	395	75
@@ -8659,15 +8656,6 @@ COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM 
 83	360	99
 83	403	100
 83	387	101
-83	348	102
-83	404	103
-83	405	104
-83	346	105
-83	341	106
-83	342	107
-83	347	108
-83	348	109
-83	385	110
 25	72	0
 25	73	1
 25	3	2
@@ -8780,84 +8768,94 @@ COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM 
 29	123	8
 29	124	9
 29	24	10
-57	244	0
-57	245	1
-57	246	2
-57	3	3
-57	247	4
-57	248	5
-57	249	6
-57	246	7
-57	3	8
-58	250	0
-58	251	1
-58	17	2
-58	252	3
-59	17	0
-59	252	1
-59	253	2
-59	254	3
-59	255	4
-59	256	5
-59	124	6
-59	257	7
-59	258	8
-59	259	9
-59	260	10
-59	261	11
-59	262	12
-59	263	13
-59	264	14
-59	265	15
-59	266	16
-59	267	17
-59	268	18
-59	269	19
-59	270	20
-59	271	21
-59	272	22
-59	273	23
-59	274	24
-59	275	25
-59	263	26
-59	264	27
-59	252	28
-59	276	29
-59	277	30
-59	278	31
-59	205	32
-59	279	33
-59	260	34
-59	261	35
-59	280	36
-59	281	37
-59	282	38
-59	283	39
-59	284	40
-59	285	41
-61	178	0
-61	286	1
-61	287	2
-61	178	3
-61	288	4
-61	289	5
-61	290	6
-81	298	0
-81	338	1
-81	339	2
-81	3	3
-82	340	0
-82	341	1
-82	342	2
-82	343	3
-82	344	4
-82	264	5
-82	341	6
-82	324	7
-82	345	8
-83	346	0
-83	341	1
-83	342	2
+33	146	0
+33	147	1
+33	148	2
+33	3	3
+49	194	0
+49	195	1
+49	3	2
+49	196	3
+49	197	4
+50	198	0
+50	199	1
+50	167	2
+50	88	3
+51	89	0
+51	131	1
+51	91	2
+51	200	3
+51	201	4
+51	202	5
+51	95	6
+51	203	7
+51	204	8
+51	205	9
+51	206	10
+51	206	11
+51	207	12
+51	208	13
+51	209	14
+51	132	15
+51	210	16
+51	211	17
+51	212	18
+51	199	19
+51	167	20
+51	169	21
+51	213	22
+51	214	23
+51	120	24
+51	215	25
+51	66	26
+51	61	27
+51	216	28
+51	217	29
+51	218	30
+51	69	31
+51	219	32
+51	220	33
+51	221	34
+51	222	35
+51	223	36
+51	224	37
+51	117	38
+51	186	39
+51	66	40
+51	225	41
+51	226	42
+51	227	43
+51	228	44
+51	229	45
+51	201	46
+51	230	47
+51	231	48
+51	50	49
+51	117	50
+51	232	51
+51	228	52
+51	233	53
+51	234	54
+51	224	55
+51	117	56
+51	235	57
+51	166	58
+51	236	59
+51	201	60
+51	237	61
+51	238	62
+51	217	63
+51	239	64
+51	83	65
+83	348	102
+83	404	103
+83	405	104
+83	346	105
+83	341	106
+83	342	107
+83	347	108
+83	348	109
+83	385	110
 83	402	111
 83	360	112
 83	397	113
@@ -9861,9 +9859,6 @@ COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM 
 153	945	0
 153	946	1
 153	947	2
-154	948	0
-154	949	1
-154	949	2
 \.
 
 
@@ -10047,25 +10042,25 @@ COPY public.submission_settings (submission_id, locale, setting_name, setting_va
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-16	1	17	2022-09-02 05:17:03	2022-09-02 05:16:50	2022-09-02 05:16:50	5	en_US	3	0	0
-1	1	1	2022-09-02 05:04:38	2022-09-02 05:04:38	2022-09-02 05:04:38	5	en_US	1	0	0
-4	1	5	2022-09-02 05:07:53	2022-09-02 05:07:26	2022-09-02 05:07:26	5	en_US	4	0	0
-8	1	9	2022-09-02 05:10:52	2022-09-02 05:10:41	2022-09-02 05:10:41	5	en_US	3	0	0
-12	1	13	2022-09-02 05:13:57	2022-09-02 05:13:45	2022-09-02 05:13:45	5	en_US	3	0	0
-2	1	2	2022-09-02 05:05:37	2022-09-02 05:05:08	2022-09-02 05:05:08	5	en_US	3	0	0
-5	1	6	2022-09-02 05:08:40	2022-09-02 05:08:30	2022-09-02 05:08:30	5	en_US	3	0	0
-9	1	10	2022-09-02 05:11:36	2022-09-02 05:11:24	2022-09-02 05:11:24	5	en_US	3	0	0
-17	1	18	2022-09-02 05:17:51	2022-09-02 05:17:39	2022-09-02 05:17:39	5	en_US	3	0	0
-13	1	14	2022-09-02 05:14:46	2022-09-02 05:14:34	2022-09-02 05:14:34	5	en_US	3	0	0
-6	1	7	2022-09-02 05:09:21	2022-09-02 05:09:11	2022-09-02 05:09:11	5	en_US	3	0	0
-3	1	4	2022-09-02 05:06:56	2022-09-02 05:06:14	2022-09-02 05:06:14	5	en_US	3	0	0
-10	1	11	2022-09-02 05:12:21	2022-09-02 05:12:10	2022-09-02 05:12:10	5	en_US	3	0	0
-7	1	8	2022-09-02 05:10:11	2022-09-02 05:09:59	2022-09-02 05:09:59	5	en_US	3	0	0
-14	1	15	2022-09-02 05:15:32	2022-09-02 05:15:21	2022-09-02 05:15:21	5	en_US	3	0	0
-18	1	19	2022-09-02 05:18:36	2022-09-02 05:18:23	2022-09-02 05:18:23	5	en_US	3	0	0
-11	1	12	2022-09-02 05:13:10	2022-09-02 05:12:58	2022-09-02 05:12:58	5	en_US	3	0	0
-15	1	16	2022-09-02 05:16:16	2022-09-02 05:16:04	2022-09-02 05:16:04	5	en_US	3	0	0
-19	1	20	2022-09-02 05:19:20	2022-09-02 05:19:08	2022-09-02 05:19:08	5	en_US	3	0	0
+16	1	17	2022-09-02 07:21:11	2022-09-02 07:21:00	2022-09-02 07:21:00	5	en_US	3	0	0
+12	1	13	2022-09-02 07:18:04	2022-09-02 07:17:53	2022-09-02 07:17:53	5	en_US	3	0	0
+8	1	9	2022-09-02 07:15:03	2022-09-02 07:14:53	2022-09-02 07:14:53	5	en_US	3	0	0
+4	1	5	2022-09-02 07:12:12	2022-09-02 07:11:47	2022-09-02 07:11:47	5	en_US	4	0	0
+1	1	1	2022-09-02 07:09:09	2022-09-02 07:09:08	2022-09-02 07:09:08	5	en_US	1	0	0
+17	1	18	2022-09-02 07:21:59	2022-09-02 07:21:46	2022-09-02 07:21:46	5	en_US	3	0	0
+5	1	6	2022-09-02 07:12:56	2022-09-02 07:12:46	2022-09-02 07:12:46	5	en_US	3	0	0
+2	1	2	2022-09-02 07:10:04	2022-09-02 07:09:37	2022-09-02 07:09:37	5	en_US	3	0	0
+9	1	10	2022-09-02 07:15:45	2022-09-02 07:15:33	2022-09-02 07:15:33	5	en_US	3	0	0
+13	1	14	2022-09-02 07:18:53	2022-09-02 07:18:41	2022-09-02 07:18:41	5	en_US	3	0	0
+6	1	7	2022-09-02 07:13:36	2022-09-02 07:13:26	2022-09-02 07:13:26	5	en_US	3	0	0
+10	1	11	2022-09-02 07:16:30	2022-09-02 07:16:18	2022-09-02 07:16:18	5	en_US	3	0	0
+14	1	15	2022-09-02 07:19:40	2022-09-02 07:19:28	2022-09-02 07:19:28	5	en_US	3	0	0
+3	1	4	2022-09-02 07:11:18	2022-09-02 07:10:38	2022-09-02 07:10:38	5	en_US	3	0	0
+18	1	19	2022-09-02 07:22:45	2022-09-02 07:22:32	2022-09-02 07:22:32	5	en_US	3	0	0
+7	1	8	2022-09-02 07:14:24	2022-09-02 07:14:12	2022-09-02 07:14:12	5	en_US	3	0	0
+11	1	12	2022-09-02 07:17:18	2022-09-02 07:17:06	2022-09-02 07:17:06	5	en_US	3	0	0
+15	1	16	2022-09-02 07:20:25	2022-09-02 07:20:12	2022-09-02 07:20:12	5	en_US	3	0	0
+19	1	20	2022-09-02 07:23:29	2022-09-02 07:23:16	2022-09-02 07:23:16	5	en_US	3	0	0
 \.
 
 
@@ -10389,31 +10384,31 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-16	jnovak	$2y$10$Kt2D7./0DrR/NVwwhmYLjOd1eJw2QMKQiP.0lye0JyakDec1d5Ski	jnovak@mailinator.com	\N	\N	\N	\N	DK	[]	\N	\N	2022-09-02 05:11:44	\N	2022-09-02 05:11:44	\N	\N	\N	0	\N	1
-3	dbarnes	$2y$10$iapROhkxS1z4guUA9yV4nuJiDhAYW0ecMEjmeTLa/26TR1s.5ajZ2	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2022-09-02 05:02:39	\N	2022-09-02 05:19:09	0	\N	\N	0	\N	1
-17	kalkhafaji	$2y$10$Fcf/W5sBlaeR8xuK8Mg/W.WFzSIoYpy8ZscMkcbwkPhdf4cZy9gle	kalkhafaji@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2022-09-02 05:12:29	\N	2022-09-02 05:12:29	\N	\N	\N	0	\N	1
-4	dbuskins	$2y$10$9VxWzQU2DlUMk6Y2vESsc.RbT.Gy3SOpDoHbbY9ZXF5cbyZ9u7HAe	dbuskins@mailinator.com				\N	US	[]	\N	\N	2022-09-02 05:02:50	\N	\N	0	\N	\N	0	\N	1
-5	sberardo	$2y$10$uAadIOaT14djtr3aymzVCuNE.kMlncNgBHuuPSP8f.lZRzUF1o6Z.	sberardo@mailinator.com				\N	CA	[]	\N	\N	2022-09-02 05:03:02	\N	\N	0	\N	\N	0	\N	1
-6	minoue	$2y$10$xQKn07rhAPb2j23Ty7vfdOtZZMqNm1AGGgCuTJWwlaKap57jw8x3K	minoue@mailinator.com				\N	JP	[]	\N	\N	2022-09-02 05:03:13	\N	\N	0	\N	\N	0	\N	1
-18	lchristopher	$2y$10$4TG/uCuDVueMktDurtnj8uPVMX.kEwDInRiUtGGcaQx6rRETstagS	lchristopher@mailinator.com	\N	\N	\N	\N	AU	[]	\N	\N	2022-09-02 05:13:19	\N	2022-09-02 05:13:19	\N	\N	\N	0	\N	1
-2	rvaca	$2y$10$wez.nGsPUQ3N3HSd/8bMpuBsHTSJNdlOJgtn.3.tH.x1hPKAMjrj6	rvaca@mailinator.com				\N	MX	[]	\N	\N	2022-09-02 05:02:30	\N	2022-09-02 05:03:25	0	\N	\N	0	\N	1
-1	admin	$2y$10$o7MmYn46z3rGswc3MjOtfeJuuSzJfNNhTFPNDwvOsCFM9rFR8kHsK	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	[]	\N	\N	2022-09-02 05:01:01	\N	2022-09-02 05:03:39	\N	\N	\N	0	\N	1
-7	ccorino	$2y$10$NG2oYn4kxKQC6r5f7n0To.zvUgOTRIxM2cB2xKam9nasXVJ08pER.	ccorino@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2022-09-02 05:04:12	\N	2022-09-02 05:04:12	\N	\N	\N	0	\N	1
-8	ckwantes	$2y$10$J01ktxCGxRCzY8Ll6vyTieTvVRaCdthcjOj/iEnDga09Aab9/Xalm	ckwantes@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2022-09-02 05:04:43	\N	2022-09-02 05:04:43	\N	\N	\N	0	\N	1
-9	cmontgomerie	$2y$10$U0bmmqrYqcWGBoopZ8jQFubkiUbTbq7DAjHwksM3przltwJtpeFHW	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2022-09-02 05:05:44	\N	2022-09-02 05:05:44	\N	\N	\N	0	\N	1
-19	lkumiega	$2y$10$7a4Sa8SAUufDZDIfEwR3he96EmZQgvS9ZtB01gue52RY4368fFRiu	lkumiega@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2022-09-02 05:14:07	\N	2022-09-02 05:14:07	\N	\N	\N	0	\N	1
-10	ddiouf	$2y$10$LJrd/GDuvYwNkjGYHnwQSenVl/3hVpvWNf3yVBEM4rju0X9w6d2G2	ddiouf@mailinator.com	\N	\N	\N	\N	EG	[]	\N	\N	2022-09-02 05:07:02	\N	2022-09-02 05:07:02	\N	\N	\N	0	\N	1
-11	dphillips	$2y$10$JEC3FWVO1shXagJ.tPDBwO2KDLJ/kiZsfoxW1Zq9ba25j//V6UoPy	dphillips@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2022-09-02 05:08:02	\N	2022-09-02 05:08:03	\N	\N	\N	0	\N	1
-20	pdaniel	$2y$10$jJntjbY6H3w1YYsbLAzJQOay7o6We3QYkjdzGxWSj3TJzIFn8Dcye	pdaniel@mailinator.com	\N	\N	\N	\N	GB	[]	\N	\N	2022-09-02 05:14:55	\N	2022-09-02 05:14:55	\N	\N	\N	0	\N	1
-12	dsokoloff	$2y$10$iWWVXW3wBAgDrlLsUdN3ze9gVYPiUJK2Jwroo/zn.WJ9Vx4Slaf5O	dsokoloff@mailinator.com	\N	\N	\N	\N	IE	[]	\N	\N	2022-09-02 05:08:47	\N	2022-09-02 05:08:47	\N	\N	\N	0	\N	1
-13	eostrom	$2y$10$49vC/HsruCCAN31VsipAfee.LQOnc0Q6N438GHd.0syjFbq7xefte	eostrom@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2022-09-02 05:09:29	\N	2022-09-02 05:09:29	\N	\N	\N	0	\N	1
-14	fpaglieri	$2y$10$3P2pHUQEjWyscXGu2lhJt.2G.vHp76arBpXIG/rSeDq7lMQy8JtDa	fpaglieri@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2022-09-02 05:10:18	\N	2022-09-02 05:10:18	\N	\N	\N	0	\N	1
-21	rbaiyewu	$2y$10$pZwSKqpsAv4LA9TUPBzUKuhdwdtLZjd6pipAaBLN.83um9WN3wBWy	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE	[]	\N	\N	2022-09-02 05:15:41	\N	2022-09-02 05:15:41	\N	\N	\N	0	\N	1
-15	jmwandenga	$2y$10$XM6ytgSozwKJ2UOXZYLZhurQoCWbZnRDRGvnxrCyrzfhqcEmSGgDK	jmwandenga@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2022-09-02 05:10:59	\N	2022-09-02 05:10:59	\N	\N	\N	0	\N	1
-22	rrossi	$2y$10$fnNpMcC0UchDQT6XoxRccOLVLMtOZp5fMSwoW4gxOVY34U8bvrS1K	rrossi@mailinator.com	\N	\N	\N	\N	ES	[]	\N	\N	2022-09-02 05:16:24	\N	2022-09-02 05:16:24	\N	\N	\N	0	\N	1
-23	vkarbasizaed	$2y$10$7zoAs6B/1OrKtG12CWDp4uGOYM232zwnECMLPFgeZ/imM4.C/OnDK	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR	[]	\N	\N	2022-09-02 05:17:11	\N	2022-09-02 05:17:12	\N	\N	\N	0	\N	1
-24	vwilliamson	$2y$10$/pAlwSqLLzkz8g4xWYJIz.Owyg8pUlQ/5ihb4t0Ghk2WzunG6vfe6	vwilliamson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2022-09-02 05:17:59	\N	2022-09-02 05:18:00	\N	\N	\N	0	\N	1
-25	zwoods	$2y$10$A1NrnppdK5e8Eg303KG2KO/DAMnuZaJtaPmAJQ.MmW2VE.XOQ097i	zwoods@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2022-09-02 05:18:44	\N	2022-09-02 05:18:45	\N	\N	\N	0	\N	1
+16	jnovak	$2y$10$SENtD9PuUa.rJDELCI58QOfND3JcTnDOhZYbZ2kgxSN.XQELPq.yG	jnovak@mailinator.com	\N	\N	\N	\N	DK	[]	\N	\N	2022-09-02 07:15:53	\N	2022-09-02 07:15:53	\N	\N	\N	0	\N	1
+3	dbarnes	$2y$10$yojbZDSVmbOLyXneJBH2AuhZjl4.4b0FTyWSVbMvb4ajGcj5Q9LEi	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2022-09-02 07:07:10	\N	2022-09-02 07:23:18	0	\N	\N	0	\N	1
+17	kalkhafaji	$2y$10$I9CpxOOIl9J/cUHUqKXqD.GKi4dqZJCgLVCX.WGp6GtqBgzzMRR16	kalkhafaji@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2022-09-02 07:16:38	\N	2022-09-02 07:16:38	\N	\N	\N	0	\N	1
+4	dbuskins	$2y$10$eZlni52yL2Xt4vUdHhsJj.1fMc1A2l6yu88vuDxUQQvzHhG9BW2jO	dbuskins@mailinator.com				\N	US	[]	\N	\N	2022-09-02 07:07:23	\N	\N	0	\N	\N	0	\N	1
+5	sberardo	$2y$10$PM95txSDseNFjXTdzegk8eywxgdF2rI13NNl.5MeO9JhNjasTlUAK	sberardo@mailinator.com				\N	CA	[]	\N	\N	2022-09-02 07:07:37	\N	\N	0	\N	\N	0	\N	1
+6	minoue	$2y$10$9wzqTM8rQkiuWOX3Wp1hBeP.on2Zrjjxqf3WNwFVKIPjXQBG1koOe	minoue@mailinator.com				\N	JP	[]	\N	\N	2022-09-02 07:07:47	\N	\N	0	\N	\N	0	\N	1
+18	lchristopher	$2y$10$ouegVASctIuFzA7uIlrz0eu/2Cguolw6fqDZyZBWoh0Rtz9yc3o0W	lchristopher@mailinator.com	\N	\N	\N	\N	AU	[]	\N	\N	2022-09-02 07:17:27	\N	2022-09-02 07:17:27	\N	\N	\N	0	\N	1
+2	rvaca	$2y$10$IFYPB.9F2d3Hib7OBWxrIOAniFPw0Xq2TPUZwcXQKnQRplf6T6tY2	rvaca@mailinator.com				\N	MX	[]	\N	\N	2022-09-02 07:07:00	\N	2022-09-02 07:07:59	0	\N	\N	0	\N	1
+1	admin	$2y$10$GMkSUxWuejdMO//UTHUzuemLhhJeQ5VlB4GtfKb9tc0V45lD/.erC	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	[]	\N	\N	2022-09-02 07:05:42	\N	2022-09-02 07:08:12	\N	\N	\N	0	\N	1
+7	ccorino	$2y$10$SpCKX9zxXR4gmieuX17HnupOe2AWQcfkc1BWi52isUFsMtUJYMpQ6	ccorino@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2022-09-02 07:08:44	\N	2022-09-02 07:08:44	\N	\N	\N	0	\N	1
+8	ckwantes	$2y$10$YR0i4fEJdoS98WBFY14zvu6Hk69x6Nu5qyMQ.7JNgjjo0Xd0FZAQe	ckwantes@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2022-09-02 07:09:14	\N	2022-09-02 07:09:14	\N	\N	\N	0	\N	1
+9	cmontgomerie	$2y$10$2jRGvBeyQJwV5s04qELzP.a2P1soJpMBK.1niJDEsy32LnhLUF1Fm	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2022-09-02 07:10:09	\N	2022-09-02 07:10:09	\N	\N	\N	0	\N	1
+19	lkumiega	$2y$10$2augmu2I4acfdpOBm2M1.OAmKZavbfh3PrUlWxg9hZxqgizcj247.	lkumiega@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2022-09-02 07:18:13	\N	2022-09-02 07:18:13	\N	\N	\N	0	\N	1
+10	ddiouf	$2y$10$.K0KK.upYTGnkrKOahueIOX7Pfm2PL1FLwhz3zE2bab7FhJ5iyHPK	ddiouf@mailinator.com	\N	\N	\N	\N	EG	[]	\N	\N	2022-09-02 07:11:25	\N	2022-09-02 07:11:25	\N	\N	\N	0	\N	1
+11	dphillips	$2y$10$F8Jy5yECjuXt4e8V7gUE1OKxx3jfZR6X/gy5hgrVWRGsrFiLgRO7.	dphillips@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2022-09-02 07:12:22	\N	2022-09-02 07:12:22	\N	\N	\N	0	\N	1
+20	pdaniel	$2y$10$dB7TutalbJY7F6DLEp/vyOyuU8sFcLej.6Dj2sD0pl9bgPQr3uuQ2	pdaniel@mailinator.com	\N	\N	\N	\N	GB	[]	\N	\N	2022-09-02 07:19:02	\N	2022-09-02 07:19:02	\N	\N	\N	0	\N	1
+12	dsokoloff	$2y$10$EgwnYS2pMPLp/Bof4AMA8O/1z3SNjYjI8nQ6K4yOPWgQFx24.yALC	dsokoloff@mailinator.com	\N	\N	\N	\N	IE	[]	\N	\N	2022-09-02 07:13:03	\N	2022-09-02 07:13:03	\N	\N	\N	0	\N	1
+13	eostrom	$2y$10$lIzjYFbrHUduRZ2CIv7pEOOIW6n9M3POjZ6i30.p03rwkBp6h/ryy	eostrom@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2022-09-02 07:13:42	\N	2022-09-02 07:13:43	\N	\N	\N	0	\N	1
+14	fpaglieri	$2y$10$BxixUKPZUpisNoEmhlu0V.AltXB01ODnXuZ45UTa4afMn9XMP9d0a	fpaglieri@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2022-09-02 07:14:31	\N	2022-09-02 07:14:31	\N	\N	\N	0	\N	1
+21	rbaiyewu	$2y$10$UHLa0WJHHKtTP360km6wY.6kbCgW07aiSpJ4.jIFeNYRMip1UPp6e	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE	[]	\N	\N	2022-09-02 07:19:49	\N	2022-09-02 07:19:49	\N	\N	\N	0	\N	1
+15	jmwandenga	$2y$10$t/ZorrDhCA6kUnK9owtYQueCTf5eYe/FilJCk3Hf49NqfiX/BtqFa	jmwandenga@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2022-09-02 07:15:10	\N	2022-09-02 07:15:10	\N	\N	\N	0	\N	1
+22	rrossi	$2y$10$7f89.6JkwvFLqhlKCuq77eZlP4Vkkvg9MToejXVFbgkX.IFsw64Iy	rrossi@mailinator.com	\N	\N	\N	\N	ES	[]	\N	\N	2022-09-02 07:20:34	\N	2022-09-02 07:20:34	\N	\N	\N	0	\N	1
+23	vkarbasizaed	$2y$10$/sWUYw0TejXUqRiY7DZ53ufdoKpz9ITq36QSrB9cMkmsgphJ6j9Ny	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR	[]	\N	\N	2022-09-02 07:21:21	\N	2022-09-02 07:21:21	\N	\N	\N	0	\N	1
+24	vwilliamson	$2y$10$R76HUHP0ETX6.FtFdhhQled5PB2DWTI9FscBY0nzCzfaXUlSSpRDu	vwilliamson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2022-09-02 07:22:07	\N	2022-09-02 07:22:07	\N	\N	\N	0	\N	1
+25	zwoods	$2y$10$sho3m/fA21HpYjICrvY5ieDH1glYDBWeO8sui3pyFFn6onBzQVpcG	zwoods@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2022-09-02 07:22:53	\N	2022-09-02 07:22:53	\N	\N	\N	0	\N	1
 \.
 
 
@@ -10429,24 +10424,24 @@ SELECT pg_catalog.setval('public.users_user_id_seq', 25, true);
 --
 
 COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2022-09-02 05:01:01	1	plugins.metadata	dc11		0	0
-1	0	0	0	2022-09-02 05:01:01	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	0	0	2022-09-02 05:01:01	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	0	1	0	2022-09-02 05:01:01	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	1	0	2022-09-02 05:01:01	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	2	0	0	2022-09-02 05:01:01	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
-1	0	0	0	2022-09-02 05:01:01	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	2	0	0	2022-09-02 05:01:01	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	1	0	0	2022-09-02 05:01:01	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	0	0	0	2022-09-02 05:01:01	1	plugins.generic	usageEvent		0	0
-1	3	0	0	2022-09-02 05:01:01	1	plugins.generic	acron	AcronPlugin	1	1
-0	1	0	0	2022-09-02 05:01:01	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
-1	0	0	0	2022-09-02 05:01:01	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-2	2	0	0	2022-09-02 05:01:01	1	plugins.generic	crossref		0	0
-1	0	0	0	2022-09-02 05:01:01	1	plugins.importexport	native		0	0
-1	0	0	0	2022-09-02 05:01:01	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2022-09-02 05:01:01	1	plugins.themes	default	DefaultThemePlugin	1	0
-3	4	0	0	2022-09-02 05:01:00	1	core	ops		0	1
+1	0	0	0	2022-09-02 07:05:42	1	plugins.metadata	dc11		0	0
+1	0	0	0	2022-09-02 07:05:42	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2022-09-02 07:05:42	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	1	0	2022-09-02 07:05:42	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	0	1	0	2022-09-02 07:05:42	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	2	0	0	2022-09-02 07:05:42	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
+1	0	0	0	2022-09-02 07:05:42	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	2	0	0	2022-09-02 07:05:42	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	1	0	0	2022-09-02 07:05:42	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2022-09-02 07:05:42	1	plugins.generic	usageEvent		0	0
+1	3	0	0	2022-09-02 07:05:42	1	plugins.generic	acron	AcronPlugin	1	1
+0	1	0	0	2022-09-02 07:05:42	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+1	0	0	0	2022-09-02 07:05:42	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+2	2	0	0	2022-09-02 07:05:42	1	plugins.generic	crossref		0	0
+1	0	0	0	2022-09-02 07:05:42	1	plugins.importexport	native		0	0
+1	0	0	0	2022-09-02 07:05:42	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2022-09-02 07:05:42	1	plugins.themes	default	DefaultThemePlugin	1	0
+3	4	0	0	2022-09-02 07:05:41	1	core	ops		0	1
 \.
 
 
