@@ -83,7 +83,7 @@ export DBPASSWORD=${APP}-ci
 export FILESDIR=files
 
 # Export Cypress equivalents
-export CYPRESS_baseUrl=${BASEURL}
+export CYPRESS_BASE_URL=${BASEURL}
 export CYPRESS_DBTYPE=${DBTYPE}
 export CYPRESS_DBUSERNAME=${DBUSERNAME}
 export CYPRESS_DBNAME=${DBNAME}
