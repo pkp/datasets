@@ -4744,91 +4744,91 @@ COPY public.author_settings (author_id, locale, setting_name, setting_value) FRO
 39	fr_CA	preferredPublicName	
 39	en_US	preferredPublicName	
 39		url	
-40	en_US	affiliation	
 40	fr_CA	affiliation	
-40	en_US	biography	
+40	en_US	affiliation	
 40	fr_CA	biography	
+40	en_US	biography	
 40		country	CA
-40	en_US	familyName	Bannerman
 40	fr_CA	familyName	
-40	en_US	givenName	Sara
+40	en_US	familyName	Bannerman
 40	fr_CA	givenName	
+40	en_US	givenName	Sara
 40		orcid	
-40	en_US	preferredPublicName	
 40	fr_CA	preferredPublicName	
+40	en_US	preferredPublicName	
 40		url	
 41	en_US	affiliation	Athabasca University
 41		country	CA
 41	en_US	familyName	Ally
 41	en_US	givenName	Mohamed
-42	en_US	affiliation	
 42	fr_CA	affiliation	
-42	en_US	biography	
+42	en_US	affiliation	
 42	fr_CA	biography	
+42	en_US	biography	
 42		country	GB
-42	en_US	familyName	Traxler
 42	fr_CA	familyName	
-42	en_US	givenName	John
+42	en_US	familyName	Traxler
 42	fr_CA	givenName	
+42	en_US	givenName	John
 42		orcid	
-42	en_US	preferredPublicName	
 42	fr_CA	preferredPublicName	
+42	en_US	preferredPublicName	
 42		url	
-43	en_US	affiliation	
 43	fr_CA	affiliation	
-43	en_US	biography	
+43	en_US	affiliation	
 43	fr_CA	biography	
+43	en_US	biography	
 43		country	CA
-43	en_US	familyName	Koole
 43	fr_CA	familyName	
-43	en_US	givenName	Marguerite
+43	en_US	familyName	Koole
 43	fr_CA	givenName	
+43	en_US	givenName	Marguerite
 43		orcid	
-43	en_US	preferredPublicName	
 43	fr_CA	preferredPublicName	
+43	en_US	preferredPublicName	
 43		url	
-44	en_US	affiliation	
 44	fr_CA	affiliation	
-44	en_US	biography	
+44	en_US	affiliation	
 44	fr_CA	biography	
+44	en_US	biography	
 44		country	NO
-44	en_US	familyName	Rekkedal
 44	fr_CA	familyName	
-44	en_US	givenName	Torstein
+44	en_US	familyName	Rekkedal
 44	fr_CA	givenName	
+44	en_US	givenName	Torstein
 44		orcid	
-44	en_US	preferredPublicName	
 44	fr_CA	preferredPublicName	
+44	en_US	preferredPublicName	
 44		url	
 45	en_US	affiliation	University of Alberta
 45		country	CA
 45	en_US	familyName	Dawson
 45	en_US	givenName	Michael
-46	en_US	affiliation	Athabasca University
 46	fr_CA	affiliation	
-46	en_US	biography	
+46	en_US	affiliation	Athabasca University
 46	fr_CA	biography	
+46	en_US	biography	
 46		country	CA
-46	en_US	familyName	Dupuis
 46	fr_CA	familyName	
-46	en_US	givenName	Brian
+46	en_US	familyName	Dupuis
 46	fr_CA	givenName	
+46	en_US	givenName	Brian
 46		orcid	
-46	en_US	preferredPublicName	
 46	fr_CA	preferredPublicName	
+46	en_US	preferredPublicName	
 46		url	
-47	en_US	affiliation	University of Calgary
 47	fr_CA	affiliation	
-47	en_US	biography	
+47	en_US	affiliation	University of Calgary
 47	fr_CA	biography	
+47	en_US	biography	
 47		country	CA
-47	en_US	familyName	Wilson
 47	fr_CA	familyName	
-47	en_US	givenName	Michael
+47	en_US	familyName	Wilson
 47	fr_CA	givenName	
+47	en_US	givenName	Michael
 47		orcid	
-47	en_US	preferredPublicName	
 47	fr_CA	preferredPublicName	
+47	en_US	preferredPublicName	
 47		url	
 48	en_US	affiliation	University of Calgary
 48		country	CA
@@ -4842,57 +4842,57 @@ COPY public.author_settings (author_id, locale, setting_name, setting_value) FRO
 50		country	CA
 50	en_US	familyName	Smith
 50	en_US	givenName	Matthew
-51	fr_CA	affiliation	
-51	en_US	biography	
-51	fr_CA	biography	
-51		country	US
-51	en_US	familyName	Benkler
-51	fr_CA	familyName	
-51	en_US	givenName	Yochai
-51	fr_CA	givenName	
-51		orcid	
-51	fr_CA	preferredPublicName	
-51		url	
 51	en_US	affiliation	
+51	fr_CA	biography	
+51	en_US	biography	
+51		country	US
+51	fr_CA	familyName	
+51	en_US	familyName	Benkler
+51	fr_CA	givenName	
+51	en_US	givenName	Yochai
+51		orcid	
 51	en_US	preferredPublicName	
-52	en_US	affiliation	
+51		url	
+51	fr_CA	affiliation	
+51	fr_CA	preferredPublicName	
 52	fr_CA	affiliation	
-52	en_US	biography	
+52	en_US	affiliation	
 52	fr_CA	biography	
+52	en_US	biography	
 52		country	CA
-52	en_US	familyName	Reilly
 52	fr_CA	familyName	
-52	en_US	givenName	Katherine
+52	en_US	familyName	Reilly
 52	fr_CA	givenName	
+52	en_US	givenName	Katherine
 52		orcid	
-52	en_US	preferredPublicName	
 52	fr_CA	preferredPublicName	
+52	en_US	preferredPublicName	
 52		url	
-53	en_US	affiliation	
 53	fr_CA	affiliation	
-53	en_US	biography	
+53	en_US	affiliation	
 53	fr_CA	biography	
+53	en_US	biography	
 53		country	US
-53	en_US	familyName	Loudon
 53	fr_CA	familyName	
-53	en_US	givenName	Melissa
+53	en_US	familyName	Loudon
 53	fr_CA	givenName	
+53	en_US	givenName	Melissa
 53		orcid	
-53	en_US	preferredPublicName	
 53	fr_CA	preferredPublicName	
+53	en_US	preferredPublicName	
 53		url	
-54	en_US	affiliation	
 54	fr_CA	affiliation	
-54	en_US	biography	
+54	en_US	affiliation	
 54	fr_CA	biography	
+54	en_US	biography	
 54		country	ZA
-54	en_US	familyName	Rivett
 54	fr_CA	familyName	
-54	en_US	givenName	Ulrike
+54	en_US	familyName	Rivett
 54	fr_CA	givenName	
+54	en_US	givenName	Ulrike
 54		orcid	
-54	en_US	preferredPublicName	
 54	fr_CA	preferredPublicName	
+54	en_US	preferredPublicName	
 54		url	
 55	en_US	affiliation	
 55	fr_CA	affiliation	
@@ -5280,36 +5280,36 @@ SELECT pg_catalog.setval('public.data_object_tombstones_tombstone_id_seq', 2, tr
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	0	1	0	3	3	2022-12-13 15:49:15
-2	1	1	3	1	3	2	2022-12-13 15:49:25
-3	2	0	1	0	3	3	2022-12-13 15:51:02
-4	4	0	1	0	3	1	2022-12-13 15:53:03
-5	4	3	2	1	3	3	2022-12-13 15:53:16
-6	4	4	3	1	3	2	2022-12-13 15:53:29
-7	4	0	4	0	3	7	2022-12-13 15:53:42
-8	5	0	1	0	3	1	2022-12-13 15:54:40
-9	5	5	2	1	3	3	2022-12-13 15:54:50
-10	5	6	3	1	3	2	2022-12-13 15:55:02
-11	5	0	4	0	3	7	2022-12-13 15:55:13
-12	6	0	1	0	3	1	2022-12-13 15:56:55
-13	6	7	2	1	6	15	2022-12-13 15:57:14
-14	7	0	1	0	3	3	2022-12-13 15:58:50
-15	7	8	3	1	3	2	2022-12-13 15:59:04
-16	9	0	1	0	3	1	2022-12-13 16:00:48
-17	11	0	1	0	3	1	2022-12-13 16:02:16
-18	11	10	2	1	3	3	2022-12-13 16:02:26
-19	11	11	3	1	3	2	2022-12-13 16:03:09
-20	12	0	1	0	3	1	2022-12-13 16:04:30
-21	13	0	1	0	3	1	2022-12-13 16:06:06
-22	13	13	2	1	3	3	2022-12-13 16:06:19
-23	13	14	3	1	3	2	2022-12-13 16:07:19
-24	14	0	1	0	3	1	2022-12-13 16:08:36
-25	14	15	2	1	3	3	2022-12-13 16:08:50
-26	14	16	3	1	3	2	2022-12-13 16:09:04
-27	14	0	4	0	3	7	2022-12-13 16:09:18
-28	15	0	1	0	3	3	2022-12-13 16:11:11
-29	16	0	1	0	3	3	2022-12-13 16:11:58
-30	17	0	1	0	3	1	2022-12-13 16:14:27
+1	1	0	1	0	3	3	2022-12-13 22:49:21
+2	1	1	3	1	3	2	2022-12-13 22:49:31
+3	2	0	1	0	3	3	2022-12-13 22:51:03
+4	4	0	1	0	3	1	2022-12-13 22:53:02
+5	4	3	2	1	3	3	2022-12-13 22:53:14
+6	4	4	3	1	3	2	2022-12-13 22:53:27
+7	4	0	4	0	3	7	2022-12-13 22:53:39
+8	5	0	1	0	3	1	2022-12-13 22:54:34
+9	5	5	2	1	3	3	2022-12-13 22:54:45
+10	5	6	3	1	3	2	2022-12-13 22:54:56
+11	5	0	4	0	3	7	2022-12-13 22:55:07
+12	6	0	1	0	3	1	2022-12-13 22:56:47
+13	6	7	2	1	6	15	2022-12-13 22:57:05
+14	7	0	1	0	3	3	2022-12-13 22:58:40
+15	7	8	3	1	3	2	2022-12-13 22:58:53
+16	9	0	1	0	3	1	2022-12-13 23:00:37
+17	11	0	1	0	3	1	2022-12-13 23:02:03
+18	11	10	2	1	3	3	2022-12-13 23:02:12
+19	11	11	3	1	3	2	2022-12-13 23:02:54
+20	12	0	1	0	3	1	2022-12-13 23:04:15
+21	13	0	1	0	3	1	2022-12-13 23:05:47
+22	13	13	2	1	3	3	2022-12-13 23:05:59
+23	13	14	3	1	3	2	2022-12-13 23:06:57
+24	14	0	1	0	3	1	2022-12-13 23:08:09
+25	14	15	2	1	3	3	2022-12-13 23:08:22
+26	14	16	3	1	3	2	2022-12-13 23:08:34
+27	14	0	4	0	3	7	2022-12-13 23:08:45
+28	15	0	1	0	3	3	2022-12-13 23:10:31
+29	16	0	1	0	3	3	2022-12-13 23:11:16
+30	17	0	1	0	3	1	2022-12-13 23:13:39
 \.
 
 
@@ -5514,461 +5514,453 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	19	2022-12-13 15:48:52	268435458	submission.event.general.metadataUpdated	0
-2	1048585	1	19	2022-12-13 15:48:52	268435458	submission.event.general.metadataUpdated	0
-3	515	1	19	2022-12-13 15:48:54	1342177281	submission.event.fileUploaded	0
-4	1048585	1	19	2022-12-13 15:48:54	1342177288	submission.event.fileRevised	0
-5	515	1	19	2022-12-13 15:48:54	1342177296	submission.event.fileEdited	0
-6	1048585	1	19	2022-12-13 15:48:54	1342177296	submission.event.fileEdited	0
-7	1048585	1	19	2022-12-13 15:49:08	268435458	submission.event.general.metadataUpdated	0
-8	1048585	1	19	2022-12-13 15:49:09	268435457	submission.event.submissionSubmitted	0
-9	1048585	1	3	2022-12-13 15:49:15	805306371	log.editor.decision	0
-10	515	2	3	2022-12-13 15:49:15	1342177281	submission.event.fileUploaded	0
-11	1048585	1	3	2022-12-13 15:49:15	1342177288	submission.event.fileRevised	0
-12	1048585	1	3	2022-12-13 15:49:22	1073741825	log.review.reviewerAssigned	0
-13	1048585	1	3	2022-12-13 15:49:25	805306371	log.editor.decision	0
-14	1048585	1	3	2022-12-13 15:49:31	268435459	submission.event.participantAdded	0
-15	1048585	2	20	2022-12-13 15:49:40	268435458	submission.event.general.metadataUpdated	0
-16	1048585	2	20	2022-12-13 15:49:40	268435458	submission.event.general.metadataUpdated	0
-17	515	3	20	2022-12-13 15:49:41	1342177281	submission.event.fileUploaded	0
-18	1048585	2	20	2022-12-13 15:49:41	1342177288	submission.event.fileRevised	0
-19	515	3	20	2022-12-13 15:49:42	1342177296	submission.event.fileEdited	0
-20	1048585	2	20	2022-12-13 15:49:42	1342177296	submission.event.fileEdited	0
-21	515	4	20	2022-12-13 15:49:42	1342177281	submission.event.fileUploaded	0
-22	1048585	2	20	2022-12-13 15:49:42	1342177288	submission.event.fileRevised	0
-23	515	4	20	2022-12-13 15:49:42	1342177296	submission.event.fileEdited	0
-24	1048585	2	20	2022-12-13 15:49:42	1342177296	submission.event.fileEdited	0
-25	515	5	20	2022-12-13 15:49:42	1342177281	submission.event.fileUploaded	0
-26	1048585	2	20	2022-12-13 15:49:42	1342177288	submission.event.fileRevised	0
-27	515	5	20	2022-12-13 15:49:43	1342177296	submission.event.fileEdited	0
-28	1048585	2	20	2022-12-13 15:49:43	1342177296	submission.event.fileEdited	0
-29	515	6	20	2022-12-13 15:49:43	1342177281	submission.event.fileUploaded	0
-30	1048585	2	20	2022-12-13 15:49:43	1342177288	submission.event.fileRevised	0
-31	515	6	20	2022-12-13 15:49:44	1342177296	submission.event.fileEdited	0
-32	1048585	2	20	2022-12-13 15:49:44	1342177296	submission.event.fileEdited	0
-33	1048585	2	20	2022-12-13 15:50:51	268435458	submission.event.general.metadataUpdated	0
-34	1048585	2	20	2022-12-13 15:50:53	268435457	submission.event.submissionSubmitted	0
-35	1048585	2	3	2022-12-13 15:51:02	805306371	log.editor.decision	0
-36	515	7	3	2022-12-13 15:51:02	1342177281	submission.event.fileUploaded	0
-37	1048585	2	3	2022-12-13 15:51:02	1342177288	submission.event.fileRevised	0
-38	515	8	3	2022-12-13 15:51:03	1342177281	submission.event.fileUploaded	0
-39	1048585	2	3	2022-12-13 15:51:03	1342177288	submission.event.fileRevised	0
-40	515	9	3	2022-12-13 15:51:03	1342177281	submission.event.fileUploaded	0
-41	1048585	2	3	2022-12-13 15:51:03	1342177288	submission.event.fileRevised	0
-42	515	10	3	2022-12-13 15:51:03	1342177281	submission.event.fileUploaded	0
-43	1048585	2	3	2022-12-13 15:51:03	1342177288	submission.event.fileRevised	0
-44	1048585	2	3	2022-12-13 15:51:12	1073741825	log.review.reviewerAssigned	0
-45	1048585	2	3	2022-12-13 15:51:19	1073741825	log.review.reviewerAssigned	0
-46	1048585	3	21	2022-12-13 15:51:28	268435458	submission.event.general.metadataUpdated	0
-47	1048585	3	21	2022-12-13 15:51:28	268435458	submission.event.general.metadataUpdated	0
-48	515	11	21	2022-12-13 15:51:29	1342177281	submission.event.fileUploaded	0
-49	1048585	3	21	2022-12-13 15:51:29	1342177288	submission.event.fileRevised	0
-50	515	11	21	2022-12-13 15:51:30	1342177296	submission.event.fileEdited	0
-51	1048585	3	21	2022-12-13 15:51:30	1342177296	submission.event.fileEdited	0
-52	1048585	3	21	2022-12-13 15:51:54	268435458	submission.event.general.metadataUpdated	0
-53	1048585	3	21	2022-12-13 15:51:55	268435457	submission.event.submissionSubmitted	0
-54	1048585	4	22	2022-12-13 15:52:03	268435458	submission.event.general.metadataUpdated	0
-55	1048585	4	22	2022-12-13 15:52:03	268435458	submission.event.general.metadataUpdated	0
-56	515	12	22	2022-12-13 15:52:04	1342177281	submission.event.fileUploaded	0
-57	1048585	4	22	2022-12-13 15:52:04	1342177288	submission.event.fileRevised	0
-58	515	12	22	2022-12-13 15:52:05	1342177296	submission.event.fileEdited	0
-59	1048585	4	22	2022-12-13 15:52:05	1342177296	submission.event.fileEdited	0
-60	515	13	22	2022-12-13 15:52:05	1342177281	submission.event.fileUploaded	0
-61	1048585	4	22	2022-12-13 15:52:05	1342177288	submission.event.fileRevised	0
-62	515	13	22	2022-12-13 15:52:05	1342177296	submission.event.fileEdited	0
-63	1048585	4	22	2022-12-13 15:52:05	1342177296	submission.event.fileEdited	0
-64	515	14	22	2022-12-13 15:52:05	1342177281	submission.event.fileUploaded	0
-65	1048585	4	22	2022-12-13 15:52:05	1342177288	submission.event.fileRevised	0
-66	515	14	22	2022-12-13 15:52:06	1342177296	submission.event.fileEdited	0
-67	1048585	4	22	2022-12-13 15:52:06	1342177296	submission.event.fileEdited	0
-68	515	15	22	2022-12-13 15:52:06	1342177281	submission.event.fileUploaded	0
-69	1048585	4	22	2022-12-13 15:52:06	1342177288	submission.event.fileRevised	0
-70	515	15	22	2022-12-13 15:52:06	1342177296	submission.event.fileEdited	0
-71	1048585	4	22	2022-12-13 15:52:07	1342177296	submission.event.fileEdited	0
-72	1048585	4	22	2022-12-13 15:52:53	268435458	submission.event.general.metadataUpdated	0
-73	1048585	4	22	2022-12-13 15:52:55	268435457	submission.event.submissionSubmitted	0
-74	1048585	4	3	2022-12-13 15:53:03	805306371	log.editor.decision	0
-75	515	16	3	2022-12-13 15:53:03	1342177281	submission.event.fileUploaded	0
-76	1048585	4	3	2022-12-13 15:53:03	1342177288	submission.event.fileRevised	0
-77	515	17	3	2022-12-13 15:53:03	1342177281	submission.event.fileUploaded	0
-78	1048585	4	3	2022-12-13 15:53:03	1342177288	submission.event.fileRevised	0
-79	515	18	3	2022-12-13 15:53:03	1342177281	submission.event.fileUploaded	0
-80	1048585	4	3	2022-12-13 15:53:03	1342177288	submission.event.fileRevised	0
-81	515	19	3	2022-12-13 15:53:03	1342177281	submission.event.fileUploaded	0
-82	1048585	4	3	2022-12-13 15:53:04	1342177288	submission.event.fileRevised	0
-83	1048585	4	3	2022-12-13 15:53:13	1073741825	log.review.reviewerAssigned	0
-84	1048585	4	3	2022-12-13 15:53:16	805306371	log.editor.decision	0
-85	1048585	4	3	2022-12-13 15:53:26	1073741825	log.review.reviewerAssigned	0
-86	1048585	4	3	2022-12-13 15:53:29	805306371	log.editor.decision	0
-87	1048585	4	3	2022-12-13 15:53:38	268435459	submission.event.participantAdded	0
-88	1048585	4	3	2022-12-13 15:53:42	805306371	log.editor.decision	0
-89	1048585	4	3	2022-12-13 15:53:51	268435459	submission.event.participantAdded	0
-90	1048585	5	23	2022-12-13 15:54:02	268435458	submission.event.general.metadataUpdated	0
-91	1048585	5	23	2022-12-13 15:54:03	268435458	submission.event.general.metadataUpdated	0
-92	515	20	23	2022-12-13 15:54:04	1342177281	submission.event.fileUploaded	0
-93	1048585	5	23	2022-12-13 15:54:04	1342177288	submission.event.fileRevised	0
-94	515	20	23	2022-12-13 15:54:04	1342177296	submission.event.fileEdited	0
-95	1048585	5	23	2022-12-13 15:54:04	1342177296	submission.event.fileEdited	0
-96	1048585	5	23	2022-12-13 15:54:31	268435458	submission.event.general.metadataUpdated	0
-97	1048585	5	23	2022-12-13 15:54:33	268435457	submission.event.submissionSubmitted	0
-98	1048585	5	3	2022-12-13 15:54:40	805306371	log.editor.decision	0
-99	515	21	3	2022-12-13 15:54:40	1342177281	submission.event.fileUploaded	0
-100	1048585	5	3	2022-12-13 15:54:40	1342177288	submission.event.fileRevised	0
-101	1048585	5	3	2022-12-13 15:54:48	1073741825	log.review.reviewerAssigned	0
-102	1048585	5	3	2022-12-13 15:54:50	805306371	log.editor.decision	0
-103	1048585	5	3	2022-12-13 15:54:59	1073741825	log.review.reviewerAssigned	0
-104	1048585	5	3	2022-12-13 15:55:02	805306371	log.editor.decision	0
-105	1048585	5	3	2022-12-13 15:55:09	268435459	submission.event.participantAdded	0
-106	1048585	5	3	2022-12-13 15:55:13	805306371	log.editor.decision	0
-107	1048585	5	3	2022-12-13 15:55:20	268435459	submission.event.participantAdded	0
-108	1048585	5	3	2022-12-13 15:55:26	268435459	submission.event.participantAdded	0
-109	1048585	5	3	2022-12-13 15:55:31	268435474	submission.event.publicationFormatCreated	0
-110	515	22	3	2022-12-13 15:55:35	1342177281	submission.event.fileUploaded	0
-111	1048585	5	3	2022-12-13 15:55:35	1342177288	submission.event.fileRevised	0
-112	1048585	5	3	2022-12-13 15:55:37	268435464	submission.event.publicationFormatPublished	0
-113	1048585	5	3	2022-12-13 15:55:40	268435476	submission.event.publicationFormatMadeAvailable	0
-114	515	22	3	2022-12-13 15:55:42	1342177296	submission.event.fileEdited	0
-115	1048585	5	3	2022-12-13 15:55:42	1342177296	submission.event.fileEdited	0
-116	515	22	3	2022-12-13 15:55:42	1342177287	submission.event.signoffSignoff	0
-117	1048585	5	3	2022-12-13 15:55:47	268435462	publication.event.published	0
-118	1048585	6	24	2022-12-13 15:55:55	268435458	submission.event.general.metadataUpdated	0
-119	1048585	6	24	2022-12-13 15:55:55	268435458	submission.event.general.metadataUpdated	0
-120	515	23	24	2022-12-13 15:55:56	1342177281	submission.event.fileUploaded	0
-121	1048585	6	24	2022-12-13 15:55:56	1342177288	submission.event.fileRevised	0
-122	515	23	24	2022-12-13 15:55:57	1342177296	submission.event.fileEdited	0
-123	1048585	6	24	2022-12-13 15:55:57	1342177296	submission.event.fileEdited	0
-124	515	24	24	2022-12-13 15:55:57	1342177281	submission.event.fileUploaded	0
-125	1048585	6	24	2022-12-13 15:55:57	1342177288	submission.event.fileRevised	0
-126	515	24	24	2022-12-13 15:55:57	1342177296	submission.event.fileEdited	0
-127	1048585	6	24	2022-12-13 15:55:57	1342177296	submission.event.fileEdited	0
-128	515	25	24	2022-12-13 15:55:58	1342177281	submission.event.fileUploaded	0
-129	1048585	6	24	2022-12-13 15:55:58	1342177288	submission.event.fileRevised	0
-130	515	25	24	2022-12-13 15:55:58	1342177296	submission.event.fileEdited	0
-131	1048585	6	24	2022-12-13 15:55:58	1342177296	submission.event.fileEdited	0
-132	515	26	24	2022-12-13 15:55:58	1342177281	submission.event.fileUploaded	0
-133	1048585	6	24	2022-12-13 15:55:58	1342177288	submission.event.fileRevised	0
-134	515	26	24	2022-12-13 15:55:59	1342177296	submission.event.fileEdited	0
-135	1048585	6	24	2022-12-13 15:55:59	1342177296	submission.event.fileEdited	0
-136	1048585	6	24	2022-12-13 15:56:44	268435458	submission.event.general.metadataUpdated	0
-137	1048585	6	24	2022-12-13 15:56:46	268435457	submission.event.submissionSubmitted	0
-138	1048585	6	3	2022-12-13 15:56:55	805306371	log.editor.decision	0
-139	515	27	3	2022-12-13 15:56:55	1342177281	submission.event.fileUploaded	0
-140	1048585	6	3	2022-12-13 15:56:55	1342177288	submission.event.fileRevised	0
-141	515	28	3	2022-12-13 15:56:55	1342177281	submission.event.fileUploaded	0
-142	1048585	6	3	2022-12-13 15:56:55	1342177288	submission.event.fileRevised	0
-143	515	29	3	2022-12-13 15:56:55	1342177281	submission.event.fileUploaded	0
-144	1048585	6	3	2022-12-13 15:56:55	1342177288	submission.event.fileRevised	0
-145	515	30	3	2022-12-13 15:56:55	1342177281	submission.event.fileUploaded	0
-146	1048585	6	3	2022-12-13 15:56:55	1342177288	submission.event.fileRevised	0
-147	1048585	6	3	2022-12-13 15:57:03	268435459	submission.event.participantAdded	0
-148	1048585	6	6	2022-12-13 15:57:14	805306372	log.editor.recommendation	0
-149	1048585	7	25	2022-12-13 15:57:31	268435458	submission.event.general.metadataUpdated	0
-150	1048585	7	25	2022-12-13 15:57:31	268435458	submission.event.general.metadataUpdated	0
-151	515	31	25	2022-12-13 15:57:32	1342177281	submission.event.fileUploaded	0
-152	1048585	7	25	2022-12-13 15:57:32	1342177288	submission.event.fileRevised	0
-153	515	31	25	2022-12-13 15:57:32	1342177296	submission.event.fileEdited	0
-154	1048585	7	25	2022-12-13 15:57:32	1342177296	submission.event.fileEdited	0
-155	515	32	25	2022-12-13 15:57:33	1342177281	submission.event.fileUploaded	0
-156	1048585	7	25	2022-12-13 15:57:33	1342177288	submission.event.fileRevised	0
-157	515	32	25	2022-12-13 15:57:33	1342177296	submission.event.fileEdited	0
-158	1048585	7	25	2022-12-13 15:57:33	1342177296	submission.event.fileEdited	0
-159	515	33	25	2022-12-13 15:57:33	1342177281	submission.event.fileUploaded	0
-160	1048585	7	25	2022-12-13 15:57:33	1342177288	submission.event.fileRevised	0
-161	515	33	25	2022-12-13 15:57:34	1342177296	submission.event.fileEdited	0
-162	1048585	7	25	2022-12-13 15:57:34	1342177296	submission.event.fileEdited	0
-163	515	34	25	2022-12-13 15:57:34	1342177281	submission.event.fileUploaded	0
-164	1048585	7	25	2022-12-13 15:57:34	1342177288	submission.event.fileRevised	0
-165	515	34	25	2022-12-13 15:57:34	1342177296	submission.event.fileEdited	0
-166	1048585	7	25	2022-12-13 15:57:34	1342177296	submission.event.fileEdited	0
-167	515	35	25	2022-12-13 15:57:35	1342177281	submission.event.fileUploaded	0
-168	1048585	7	25	2022-12-13 15:57:35	1342177288	submission.event.fileRevised	0
-169	515	35	25	2022-12-13 15:57:35	1342177296	submission.event.fileEdited	0
-170	1048585	7	25	2022-12-13 15:57:35	1342177296	submission.event.fileEdited	0
-171	1048585	7	25	2022-12-13 15:58:38	268435458	submission.event.general.metadataUpdated	0
-172	1048585	7	25	2022-12-13 15:58:41	268435457	submission.event.submissionSubmitted	0
-173	1048585	7	3	2022-12-13 15:58:50	805306371	log.editor.decision	0
-174	515	36	3	2022-12-13 15:58:50	1342177281	submission.event.fileUploaded	0
-175	1048585	7	3	2022-12-13 15:58:51	1342177288	submission.event.fileRevised	0
-176	515	37	3	2022-12-13 15:58:51	1342177281	submission.event.fileUploaded	0
-177	1048585	7	3	2022-12-13 15:58:51	1342177288	submission.event.fileRevised	0
-178	515	38	3	2022-12-13 15:58:51	1342177281	submission.event.fileUploaded	0
-179	1048585	7	3	2022-12-13 15:58:51	1342177288	submission.event.fileRevised	0
-180	515	39	3	2022-12-13 15:58:51	1342177281	submission.event.fileUploaded	0
-181	1048585	7	3	2022-12-13 15:58:51	1342177288	submission.event.fileRevised	0
-182	515	40	3	2022-12-13 15:58:51	1342177281	submission.event.fileUploaded	0
-183	1048585	7	3	2022-12-13 15:58:51	1342177288	submission.event.fileRevised	0
-184	1048585	7	3	2022-12-13 15:59:01	1073741825	log.review.reviewerAssigned	0
-185	1048585	7	3	2022-12-13 15:59:04	805306371	log.editor.decision	0
-186	1048585	7	3	2022-12-13 15:59:12	268435459	submission.event.participantAdded	0
-187	1048585	8	3	2022-12-13 15:59:21	268435458	submission.event.general.metadataUpdated	0
-188	1048585	8	3	2022-12-13 15:59:21	268435458	submission.event.general.metadataUpdated	0
-189	515	41	3	2022-12-13 15:59:22	1342177281	submission.event.fileUploaded	0
-190	1048585	8	3	2022-12-13 15:59:22	1342177288	submission.event.fileRevised	0
-191	515	41	3	2022-12-13 15:59:22	1342177296	submission.event.fileEdited	0
-192	1048585	8	3	2022-12-13 15:59:22	1342177296	submission.event.fileEdited	0
-193	1048585	8	3	2022-12-13 15:59:24	268435458	submission.event.general.metadataUpdated	0
-194	1048585	8	3	2022-12-13 15:59:25	268435457	submission.event.submissionSubmitted	0
-195	1048585	9	26	2022-12-13 15:59:32	268435458	submission.event.general.metadataUpdated	0
-196	1048585	9	26	2022-12-13 15:59:32	268435458	submission.event.general.metadataUpdated	0
-197	515	42	26	2022-12-13 15:59:33	1342177281	submission.event.fileUploaded	0
-198	1048585	9	26	2022-12-13 15:59:33	1342177288	submission.event.fileRevised	0
-199	515	42	26	2022-12-13 15:59:34	1342177296	submission.event.fileEdited	0
-200	1048585	9	26	2022-12-13 15:59:34	1342177296	submission.event.fileEdited	0
-201	515	43	26	2022-12-13 15:59:34	1342177281	submission.event.fileUploaded	0
-202	1048585	9	26	2022-12-13 15:59:34	1342177288	submission.event.fileRevised	0
-203	515	43	26	2022-12-13 15:59:34	1342177296	submission.event.fileEdited	0
-204	1048585	9	26	2022-12-13 15:59:34	1342177296	submission.event.fileEdited	0
-205	515	44	26	2022-12-13 15:59:35	1342177281	submission.event.fileUploaded	0
-206	1048585	9	26	2022-12-13 15:59:35	1342177288	submission.event.fileRevised	0
-207	515	44	26	2022-12-13 15:59:35	1342177296	submission.event.fileEdited	0
-208	1048585	9	26	2022-12-13 15:59:35	1342177296	submission.event.fileEdited	0
-209	515	45	26	2022-12-13 15:59:35	1342177281	submission.event.fileUploaded	0
-210	1048585	9	26	2022-12-13 15:59:35	1342177288	submission.event.fileRevised	0
-211	515	45	26	2022-12-13 15:59:36	1342177296	submission.event.fileEdited	0
-212	1048585	9	26	2022-12-13 15:59:36	1342177296	submission.event.fileEdited	0
-213	515	46	26	2022-12-13 15:59:36	1342177281	submission.event.fileUploaded	0
-214	1048585	9	26	2022-12-13 15:59:36	1342177288	submission.event.fileRevised	0
-215	515	46	26	2022-12-13 15:59:36	1342177296	submission.event.fileEdited	0
-216	1048585	9	26	2022-12-13 15:59:36	1342177296	submission.event.fileEdited	0
-217	1048585	9	26	2022-12-13 16:00:37	268435458	submission.event.general.metadataUpdated	0
-218	1048585	9	26	2022-12-13 16:00:39	268435457	submission.event.submissionSubmitted	0
-219	1048585	9	3	2022-12-13 16:00:48	805306371	log.editor.decision	0
-220	1048585	10	27	2022-12-13 16:01:00	268435458	submission.event.general.metadataUpdated	0
-221	1048585	10	27	2022-12-13 16:01:00	268435458	submission.event.general.metadataUpdated	0
-222	515	47	27	2022-12-13 16:01:02	1342177281	submission.event.fileUploaded	0
-223	1048585	10	27	2022-12-13 16:01:02	1342177288	submission.event.fileRevised	0
-224	515	47	27	2022-12-13 16:01:02	1342177296	submission.event.fileEdited	0
-225	1048585	10	27	2022-12-13 16:01:02	1342177296	submission.event.fileEdited	0
-226	1048585	10	27	2022-12-13 16:01:46	268435458	submission.event.general.metadataUpdated	0
-227	1048585	10	27	2022-12-13 16:01:47	268435457	submission.event.submissionSubmitted	0
-228	1048585	11	28	2022-12-13 16:01:55	268435458	submission.event.general.metadataUpdated	0
-229	1048585	11	28	2022-12-13 16:01:55	268435458	submission.event.general.metadataUpdated	0
-230	515	48	28	2022-12-13 16:01:57	1342177281	submission.event.fileUploaded	0
-231	1048585	11	28	2022-12-13 16:01:57	1342177288	submission.event.fileRevised	0
-232	515	48	28	2022-12-13 16:01:57	1342177296	submission.event.fileEdited	0
-233	1048585	11	28	2022-12-13 16:01:57	1342177296	submission.event.fileEdited	0
-234	1048585	11	28	2022-12-13 16:02:06	268435458	submission.event.general.metadataUpdated	0
-235	1048585	11	28	2022-12-13 16:02:08	268435457	submission.event.submissionSubmitted	0
-236	1048585	11	3	2022-12-13 16:02:16	805306371	log.editor.decision	0
-237	515	49	3	2022-12-13 16:02:16	1342177281	submission.event.fileUploaded	0
-238	1048585	11	3	2022-12-13 16:02:16	1342177288	submission.event.fileRevised	0
-239	1048585	11	3	2022-12-13 16:02:23	1073741825	log.review.reviewerAssigned	0
-240	1048585	11	3	2022-12-13 16:02:26	805306371	log.editor.decision	0
-241	1048585	11	3	2022-12-13 16:02:33	1073741825	log.review.reviewerAssigned	0
-242	1048585	11	3	2022-12-13 16:02:40	1073741825	log.review.reviewerAssigned	0
-243	1048585	11	10	2022-12-13 16:02:44	1073741830	log.review.reviewAccepted	0
-244	1048585	11	10	2022-12-13 16:02:48	1073741848	log.review.reviewReady	0
-245	1048585	11	12	2022-12-13 16:02:53	1073741830	log.review.reviewAccepted	0
-246	1048585	11	12	2022-12-13 16:02:58	1073741848	log.review.reviewReady	0
-247	1048585	11	3	2022-12-13 16:03:09	805306371	log.editor.decision	0
-248	1048585	12	29	2022-12-13 16:03:21	268435458	submission.event.general.metadataUpdated	0
-249	1048585	12	29	2022-12-13 16:03:21	268435458	submission.event.general.metadataUpdated	0
-250	515	50	29	2022-12-13 16:03:22	1342177281	submission.event.fileUploaded	0
-251	1048585	12	29	2022-12-13 16:03:22	1342177288	submission.event.fileRevised	0
-252	515	50	29	2022-12-13 16:03:22	1342177296	submission.event.fileEdited	0
-253	1048585	12	29	2022-12-13 16:03:22	1342177296	submission.event.fileEdited	0
-254	515	51	29	2022-12-13 16:03:23	1342177281	submission.event.fileUploaded	0
-255	1048585	12	29	2022-12-13 16:03:23	1342177288	submission.event.fileRevised	0
-256	515	51	29	2022-12-13 16:03:23	1342177296	submission.event.fileEdited	0
-257	1048585	12	29	2022-12-13 16:03:23	1342177296	submission.event.fileEdited	0
-258	515	52	29	2022-12-13 16:03:23	1342177281	submission.event.fileUploaded	0
-259	1048585	12	29	2022-12-13 16:03:23	1342177288	submission.event.fileRevised	0
-260	515	52	29	2022-12-13 16:03:24	1342177296	submission.event.fileEdited	0
-261	1048585	12	29	2022-12-13 16:03:24	1342177296	submission.event.fileEdited	0
-262	1048585	12	29	2022-12-13 16:04:19	268435458	submission.event.general.metadataUpdated	0
-263	1048585	12	29	2022-12-13 16:04:21	268435457	submission.event.submissionSubmitted	0
-264	1048585	12	3	2022-12-13 16:04:30	805306371	log.editor.decision	0
-265	1048585	12	3	2022-12-13 16:04:41	1073741825	log.review.reviewerAssigned	0
-266	1048585	12	3	2022-12-13 16:04:47	1073741825	log.review.reviewerAssigned	0
-267	1048585	12	3	2022-12-13 16:04:54	1073741825	log.review.reviewerAssigned	0
-268	1048585	12	8	2022-12-13 16:05:00	1073741830	log.review.reviewAccepted	0
-269	1048585	12	8	2022-12-13 16:05:06	1073741848	log.review.reviewReady	0
-270	1048585	13	30	2022-12-13 16:05:15	268435458	submission.event.general.metadataUpdated	0
-271	1048585	13	30	2022-12-13 16:05:15	268435458	submission.event.general.metadataUpdated	0
-272	515	53	30	2022-12-13 16:05:16	1342177281	submission.event.fileUploaded	0
-273	1048585	13	30	2022-12-13 16:05:16	1342177288	submission.event.fileRevised	0
-274	515	53	30	2022-12-13 16:05:16	1342177296	submission.event.fileEdited	0
-275	1048585	13	30	2022-12-13 16:05:16	1342177296	submission.event.fileEdited	0
-276	515	54	30	2022-12-13 16:05:17	1342177281	submission.event.fileUploaded	0
-277	1048585	13	30	2022-12-13 16:05:17	1342177288	submission.event.fileRevised	0
-278	515	54	30	2022-12-13 16:05:17	1342177296	submission.event.fileEdited	0
-279	1048585	13	30	2022-12-13 16:05:17	1342177296	submission.event.fileEdited	0
-280	515	55	30	2022-12-13 16:05:17	1342177281	submission.event.fileUploaded	0
-281	1048585	13	30	2022-12-13 16:05:17	1342177288	submission.event.fileRevised	0
-282	515	55	30	2022-12-13 16:05:18	1342177296	submission.event.fileEdited	0
-283	1048585	13	30	2022-12-13 16:05:18	1342177296	submission.event.fileEdited	0
-284	1048585	13	30	2022-12-13 16:05:54	268435458	submission.event.general.metadataUpdated	0
-285	1048585	13	30	2022-12-13 16:05:56	268435457	submission.event.submissionSubmitted	0
-286	1048585	13	3	2022-12-13 16:06:06	805306371	log.editor.decision	0
-287	515	56	3	2022-12-13 16:06:06	1342177281	submission.event.fileUploaded	0
-288	1048585	13	3	2022-12-13 16:06:06	1342177288	submission.event.fileRevised	0
-289	515	57	3	2022-12-13 16:06:06	1342177281	submission.event.fileUploaded	0
-290	1048585	13	3	2022-12-13 16:06:07	1342177288	submission.event.fileRevised	0
-291	515	58	3	2022-12-13 16:06:07	1342177281	submission.event.fileUploaded	0
-292	1048585	13	3	2022-12-13 16:06:07	1342177288	submission.event.fileRevised	0
-293	1048585	13	3	2022-12-13 16:06:16	1073741825	log.review.reviewerAssigned	0
-294	1048585	13	3	2022-12-13 16:06:19	805306371	log.editor.decision	0
-295	1048585	13	3	2022-12-13 16:06:28	1073741825	log.review.reviewerAssigned	0
-296	1048585	13	3	2022-12-13 16:06:34	1073741825	log.review.reviewerAssigned	0
-297	1048585	13	3	2022-12-13 16:06:41	1073741825	log.review.reviewerAssigned	0
-298	1048585	13	10	2022-12-13 16:06:47	1073741830	log.review.reviewAccepted	0
-299	1048585	13	10	2022-12-13 16:06:52	1073741848	log.review.reviewReady	0
-300	1048585	13	12	2022-12-13 16:06:59	1073741830	log.review.reviewAccepted	0
-301	1048585	13	12	2022-12-13 16:07:04	1073741848	log.review.reviewReady	0
-302	1048585	13	3	2022-12-13 16:07:19	805306371	log.editor.decision	0
-303	1048585	14	31	2022-12-13 16:07:33	268435458	submission.event.general.metadataUpdated	0
-304	1048585	14	31	2022-12-13 16:07:33	268435458	submission.event.general.metadataUpdated	0
-305	515	59	31	2022-12-13 16:07:34	1342177281	submission.event.fileUploaded	0
-306	1048585	14	31	2022-12-13 16:07:34	1342177288	submission.event.fileRevised	0
-307	515	59	31	2022-12-13 16:07:34	1342177296	submission.event.fileEdited	0
-308	1048585	14	31	2022-12-13 16:07:34	1342177296	submission.event.fileEdited	0
-309	515	60	31	2022-12-13 16:07:35	1342177281	submission.event.fileUploaded	0
-310	1048585	14	31	2022-12-13 16:07:35	1342177288	submission.event.fileRevised	0
-311	515	60	31	2022-12-13 16:07:35	1342177296	submission.event.fileEdited	0
-312	1048585	14	31	2022-12-13 16:07:35	1342177296	submission.event.fileEdited	0
-313	515	61	31	2022-12-13 16:07:35	1342177281	submission.event.fileUploaded	0
-314	1048585	14	31	2022-12-13 16:07:35	1342177288	submission.event.fileRevised	0
-315	515	61	31	2022-12-13 16:07:36	1342177296	submission.event.fileEdited	0
-316	1048585	14	31	2022-12-13 16:07:36	1342177296	submission.event.fileEdited	0
-317	515	62	31	2022-12-13 16:07:36	1342177281	submission.event.fileUploaded	0
-318	1048585	14	31	2022-12-13 16:07:36	1342177288	submission.event.fileRevised	0
-319	515	62	31	2022-12-13 16:07:36	1342177296	submission.event.fileEdited	0
-320	1048585	14	31	2022-12-13 16:07:36	1342177296	submission.event.fileEdited	0
-321	515	63	31	2022-12-13 16:07:37	1342177281	submission.event.fileUploaded	0
-322	1048585	14	31	2022-12-13 16:07:37	1342177288	submission.event.fileRevised	0
-323	515	63	31	2022-12-13 16:07:38	1342177296	submission.event.fileEdited	0
-324	1048585	14	31	2022-12-13 16:07:38	1342177296	submission.event.fileEdited	0
-325	515	64	31	2022-12-13 16:07:38	1342177281	submission.event.fileUploaded	0
-326	1048585	14	31	2022-12-13 16:07:38	1342177288	submission.event.fileRevised	0
-327	515	64	31	2022-12-13 16:07:39	1342177296	submission.event.fileEdited	0
-328	1048585	14	31	2022-12-13 16:07:39	1342177296	submission.event.fileEdited	0
-329	1048585	14	31	2022-12-13 16:08:22	268435458	submission.event.general.metadataUpdated	0
-330	1048585	14	31	2022-12-13 16:08:24	268435457	submission.event.submissionSubmitted	0
-331	1048585	14	3	2022-12-13 16:08:36	805306371	log.editor.decision	0
-332	515	65	3	2022-12-13 16:08:36	1342177281	submission.event.fileUploaded	0
-333	1048585	14	3	2022-12-13 16:08:36	1342177288	submission.event.fileRevised	0
-334	515	66	3	2022-12-13 16:08:36	1342177281	submission.event.fileUploaded	0
-335	1048585	14	3	2022-12-13 16:08:36	1342177288	submission.event.fileRevised	0
-336	515	67	3	2022-12-13 16:08:36	1342177281	submission.event.fileUploaded	0
-337	1048585	14	3	2022-12-13 16:08:36	1342177288	submission.event.fileRevised	0
-338	515	68	3	2022-12-13 16:08:36	1342177281	submission.event.fileUploaded	0
-339	1048585	14	3	2022-12-13 16:08:36	1342177288	submission.event.fileRevised	0
-340	515	69	3	2022-12-13 16:08:36	1342177281	submission.event.fileUploaded	0
-341	1048585	14	3	2022-12-13 16:08:36	1342177288	submission.event.fileRevised	0
-342	515	70	3	2022-12-13 16:08:36	1342177281	submission.event.fileUploaded	0
-343	1048585	14	3	2022-12-13 16:08:36	1342177288	submission.event.fileRevised	0
-344	1048585	14	3	2022-12-13 16:08:46	1073741825	log.review.reviewerAssigned	0
-345	1048585	14	3	2022-12-13 16:08:50	805306371	log.editor.decision	0
-346	1048585	14	3	2022-12-13 16:09:00	1073741825	log.review.reviewerAssigned	0
-347	1048585	14	3	2022-12-13 16:09:04	805306371	log.editor.decision	0
-348	1048585	14	3	2022-12-13 16:09:13	268435459	submission.event.participantAdded	0
-349	1048585	14	3	2022-12-13 16:09:18	805306371	log.editor.decision	0
-350	1048585	14	3	2022-12-13 16:09:27	268435459	submission.event.participantAdded	0
-351	1048585	14	3	2022-12-13 16:09:34	268435459	submission.event.participantAdded	0
-352	1048585	14	3	2022-12-13 16:09:41	268435474	submission.event.publicationFormatCreated	0
-353	515	71	3	2022-12-13 16:09:50	1342177281	submission.event.fileUploaded	0
-354	1048585	14	3	2022-12-13 16:09:50	1342177288	submission.event.fileRevised	0
-355	515	72	3	2022-12-13 16:09:50	1342177281	submission.event.fileUploaded	0
-356	1048585	14	3	2022-12-13 16:09:50	1342177288	submission.event.fileRevised	0
-357	515	73	3	2022-12-13 16:09:50	1342177281	submission.event.fileUploaded	0
-358	1048585	14	3	2022-12-13 16:09:50	1342177288	submission.event.fileRevised	0
-359	515	74	3	2022-12-13 16:09:50	1342177281	submission.event.fileUploaded	0
-360	1048585	14	3	2022-12-13 16:09:50	1342177288	submission.event.fileRevised	0
-361	515	75	3	2022-12-13 16:09:50	1342177281	submission.event.fileUploaded	0
-362	1048585	14	3	2022-12-13 16:09:50	1342177288	submission.event.fileRevised	0
-363	515	76	3	2022-12-13 16:09:50	1342177281	submission.event.fileUploaded	0
-364	1048585	14	3	2022-12-13 16:09:50	1342177288	submission.event.fileRevised	0
-365	1048585	14	3	2022-12-13 16:09:53	268435464	submission.event.publicationFormatPublished	0
-366	1048585	14	3	2022-12-13 16:09:56	268435476	submission.event.publicationFormatMadeAvailable	0
-367	515	71	3	2022-12-13 16:09:59	1342177296	submission.event.fileEdited	0
-368	1048585	14	3	2022-12-13 16:09:59	1342177296	submission.event.fileEdited	0
-369	515	71	3	2022-12-13 16:09:59	1342177287	submission.event.signoffSignoff	0
-370	515	72	3	2022-12-13 16:10:05	1342177296	submission.event.fileEdited	0
-371	1048585	14	3	2022-12-13 16:10:05	1342177296	submission.event.fileEdited	0
-372	515	72	3	2022-12-13 16:10:05	1342177287	submission.event.signoffSignoff	0
-373	515	73	3	2022-12-13 16:10:11	1342177296	submission.event.fileEdited	0
-374	1048585	14	3	2022-12-13 16:10:11	1342177296	submission.event.fileEdited	0
-375	515	73	3	2022-12-13 16:10:11	1342177287	submission.event.signoffSignoff	0
-376	515	74	3	2022-12-13 16:10:17	1342177296	submission.event.fileEdited	0
-377	1048585	14	3	2022-12-13 16:10:17	1342177296	submission.event.fileEdited	0
-378	515	74	3	2022-12-13 16:10:17	1342177287	submission.event.signoffSignoff	0
-379	515	75	3	2022-12-13 16:10:23	1342177296	submission.event.fileEdited	0
-380	1048585	14	3	2022-12-13 16:10:23	1342177296	submission.event.fileEdited	0
-381	515	75	3	2022-12-13 16:10:23	1342177287	submission.event.signoffSignoff	0
-382	515	76	3	2022-12-13 16:10:29	1342177296	submission.event.fileEdited	0
-383	1048585	14	3	2022-12-13 16:10:29	1342177296	submission.event.fileEdited	0
-384	515	76	3	2022-12-13 16:10:29	1342177287	submission.event.signoffSignoff	0
-385	1048585	14	3	2022-12-13 16:10:36	268435462	publication.event.published	0
-386	1048585	15	32	2022-12-13 16:10:44	268435458	submission.event.general.metadataUpdated	0
-387	1048585	15	32	2022-12-13 16:10:44	268435458	submission.event.general.metadataUpdated	0
-388	515	77	32	2022-12-13 16:10:45	1342177281	submission.event.fileUploaded	0
-389	1048585	15	32	2022-12-13 16:10:45	1342177288	submission.event.fileRevised	0
-390	515	77	32	2022-12-13 16:10:46	1342177296	submission.event.fileEdited	0
-391	1048585	15	32	2022-12-13 16:10:46	1342177296	submission.event.fileEdited	0
-392	1048585	15	32	2022-12-13 16:11:00	268435458	submission.event.general.metadataUpdated	0
-393	1048585	15	32	2022-12-13 16:11:01	268435457	submission.event.submissionSubmitted	0
-394	1048585	15	3	2022-12-13 16:11:11	805306371	log.editor.decision	0
-395	515	78	3	2022-12-13 16:11:11	1342177281	submission.event.fileUploaded	0
-396	1048585	15	3	2022-12-13 16:11:11	1342177288	submission.event.fileRevised	0
-397	1048585	16	33	2022-12-13 16:11:22	268435458	submission.event.general.metadataUpdated	0
-398	1048585	16	33	2022-12-13 16:11:22	268435458	submission.event.general.metadataUpdated	0
-399	515	79	33	2022-12-13 16:11:23	1342177281	submission.event.fileUploaded	0
-400	1048585	16	33	2022-12-13 16:11:23	1342177288	submission.event.fileRevised	0
-401	515	79	33	2022-12-13 16:11:24	1342177296	submission.event.fileEdited	0
-402	1048585	16	33	2022-12-13 16:11:24	1342177296	submission.event.fileEdited	0
-403	1048585	16	33	2022-12-13 16:11:46	268435458	submission.event.general.metadataUpdated	0
-404	1048585	16	33	2022-12-13 16:11:48	268435457	submission.event.submissionSubmitted	0
-405	1048585	16	3	2022-12-13 16:11:58	805306371	log.editor.decision	0
-406	515	80	3	2022-12-13 16:11:58	1342177281	submission.event.fileUploaded	0
-407	1048585	16	3	2022-12-13 16:11:58	1342177288	submission.event.fileRevised	0
-408	1048585	16	3	2022-12-13 16:12:06	1073741825	log.review.reviewerAssigned	0
-409	1048585	16	3	2022-12-13 16:12:11	1073741825	log.review.reviewerAssigned	0
-410	1048585	16	3	2022-12-13 16:12:17	1073741825	log.review.reviewerAssigned	0
-411	1048585	16	10	2022-12-13 16:12:22	1073741830	log.review.reviewAccepted	0
-412	1048585	16	10	2022-12-13 16:12:26	1073741848	log.review.reviewReady	0
-413	1048585	17	34	2022-12-13 16:12:35	268435458	submission.event.general.metadataUpdated	0
-414	1048585	17	34	2022-12-13 16:12:35	268435458	submission.event.general.metadataUpdated	0
-415	515	81	34	2022-12-13 16:12:37	1342177281	submission.event.fileUploaded	0
-416	1048585	17	34	2022-12-13 16:12:37	1342177288	submission.event.fileRevised	0
-417	515	81	34	2022-12-13 16:12:37	1342177296	submission.event.fileEdited	0
-418	1048585	17	34	2022-12-13 16:12:37	1342177296	submission.event.fileEdited	0
-419	515	82	34	2022-12-13 16:12:37	1342177281	submission.event.fileUploaded	0
-420	1048585	17	34	2022-12-13 16:12:37	1342177288	submission.event.fileRevised	0
-421	515	82	34	2022-12-13 16:12:38	1342177296	submission.event.fileEdited	0
-422	1048585	17	34	2022-12-13 16:12:38	1342177296	submission.event.fileEdited	0
-423	515	83	34	2022-12-13 16:12:38	1342177281	submission.event.fileUploaded	0
-424	1048585	17	34	2022-12-13 16:12:38	1342177288	submission.event.fileRevised	0
-425	515	83	34	2022-12-13 16:12:38	1342177296	submission.event.fileEdited	0
-426	1048585	17	34	2022-12-13 16:12:38	1342177296	submission.event.fileEdited	0
-427	515	84	34	2022-12-13 16:12:39	1342177281	submission.event.fileUploaded	0
-428	1048585	17	34	2022-12-13 16:12:39	1342177288	submission.event.fileRevised	0
-429	515	84	34	2022-12-13 16:12:39	1342177296	submission.event.fileEdited	0
-430	1048585	17	34	2022-12-13 16:12:39	1342177296	submission.event.fileEdited	0
-431	515	85	34	2022-12-13 16:12:39	1342177281	submission.event.fileUploaded	0
-432	1048585	17	34	2022-12-13 16:12:39	1342177288	submission.event.fileRevised	0
-433	515	85	34	2022-12-13 16:12:40	1342177296	submission.event.fileEdited	0
-434	1048585	17	34	2022-12-13 16:12:40	1342177296	submission.event.fileEdited	0
-435	515	86	34	2022-12-13 16:12:40	1342177281	submission.event.fileUploaded	0
-436	1048585	17	34	2022-12-13 16:12:40	1342177288	submission.event.fileRevised	0
-437	515	86	34	2022-12-13 16:12:40	1342177296	submission.event.fileEdited	0
-438	1048585	17	34	2022-12-13 16:12:40	1342177296	submission.event.fileEdited	0
-439	1048585	17	34	2022-12-13 16:14:11	268435458	submission.event.general.metadataUpdated	0
-440	1048585	17	34	2022-12-13 16:14:14	268435457	submission.event.submissionSubmitted	0
-441	1048585	17	3	2022-12-13 16:14:27	805306371	log.editor.decision	0
-442	515	87	3	2022-12-13 16:14:27	1342177281	submission.event.fileUploaded	0
-443	1048585	17	3	2022-12-13 16:14:27	1342177288	submission.event.fileRevised	0
-444	515	88	3	2022-12-13 16:14:27	1342177281	submission.event.fileUploaded	0
-445	1048585	17	3	2022-12-13 16:14:27	1342177288	submission.event.fileRevised	0
-446	515	89	3	2022-12-13 16:14:27	1342177281	submission.event.fileUploaded	0
-447	1048585	17	3	2022-12-13 16:14:27	1342177288	submission.event.fileRevised	0
-448	515	90	3	2022-12-13 16:14:27	1342177281	submission.event.fileUploaded	0
-449	1048585	17	3	2022-12-13 16:14:27	1342177288	submission.event.fileRevised	0
-450	515	91	3	2022-12-13 16:14:27	1342177281	submission.event.fileUploaded	0
-451	1048585	17	3	2022-12-13 16:14:27	1342177288	submission.event.fileRevised	0
-452	515	92	3	2022-12-13 16:14:27	1342177281	submission.event.fileUploaded	0
-453	1048585	17	3	2022-12-13 16:14:27	1342177288	submission.event.fileRevised	0
-454	1048585	17	3	2022-12-13 16:14:39	1073741825	log.review.reviewerAssigned	0
-455	1048585	17	3	2022-12-13 16:14:45	1073741825	log.review.reviewerAssigned	0
+1	1048585	1	19	2022-12-13 22:48:58	268435458	submission.event.general.metadataUpdated	0
+2	1048585	1	19	2022-12-13 22:48:58	268435458	submission.event.general.metadataUpdated	0
+3	515	1	19	2022-12-13 22:48:59	1342177281	submission.event.fileUploaded	0
+4	1048585	1	19	2022-12-13 22:48:59	1342177288	submission.event.fileRevised	0
+5	515	1	19	2022-12-13 22:48:59	1342177296	submission.event.fileEdited	0
+6	1048585	1	19	2022-12-13 22:48:59	1342177296	submission.event.fileEdited	0
+7	1048585	1	19	2022-12-13 22:49:13	268435458	submission.event.general.metadataUpdated	0
+8	1048585	1	19	2022-12-13 22:49:14	268435457	submission.event.submissionSubmitted	0
+9	1048585	1	3	2022-12-13 22:49:21	805306371	log.editor.decision	0
+10	515	2	3	2022-12-13 22:49:21	1342177281	submission.event.fileUploaded	0
+11	1048585	1	3	2022-12-13 22:49:21	1342177288	submission.event.fileRevised	0
+12	1048585	1	3	2022-12-13 22:49:28	1073741825	log.review.reviewerAssigned	0
+13	1048585	1	3	2022-12-13 22:49:31	805306371	log.editor.decision	0
+14	1048585	1	3	2022-12-13 22:49:37	268435459	submission.event.participantAdded	0
+15	1048585	2	20	2022-12-13 22:49:45	268435458	submission.event.general.metadataUpdated	0
+16	1048585	2	20	2022-12-13 22:49:45	268435458	submission.event.general.metadataUpdated	0
+17	515	3	20	2022-12-13 22:49:46	1342177281	submission.event.fileUploaded	0
+18	1048585	2	20	2022-12-13 22:49:46	1342177288	submission.event.fileRevised	0
+19	515	3	20	2022-12-13 22:49:47	1342177296	submission.event.fileEdited	0
+20	1048585	2	20	2022-12-13 22:49:47	1342177296	submission.event.fileEdited	0
+21	515	4	20	2022-12-13 22:49:47	1342177281	submission.event.fileUploaded	0
+22	1048585	2	20	2022-12-13 22:49:47	1342177288	submission.event.fileRevised	0
+23	515	4	20	2022-12-13 22:49:47	1342177296	submission.event.fileEdited	0
+24	1048585	2	20	2022-12-13 22:49:47	1342177296	submission.event.fileEdited	0
+25	515	5	20	2022-12-13 22:49:48	1342177281	submission.event.fileUploaded	0
+26	1048585	2	20	2022-12-13 22:49:48	1342177288	submission.event.fileRevised	0
+27	515	5	20	2022-12-13 22:49:48	1342177296	submission.event.fileEdited	0
+28	1048585	2	20	2022-12-13 22:49:48	1342177296	submission.event.fileEdited	0
+29	515	6	20	2022-12-13 22:49:48	1342177281	submission.event.fileUploaded	0
+30	1048585	2	20	2022-12-13 22:49:48	1342177288	submission.event.fileRevised	0
+31	515	6	20	2022-12-13 22:49:49	1342177296	submission.event.fileEdited	0
+32	1048585	2	20	2022-12-13 22:49:49	1342177296	submission.event.fileEdited	0
+33	1048585	2	20	2022-12-13 22:50:53	268435458	submission.event.general.metadataUpdated	0
+34	1048585	2	20	2022-12-13 22:50:55	268435457	submission.event.submissionSubmitted	0
+35	1048585	2	3	2022-12-13 22:51:03	805306371	log.editor.decision	0
+36	1048585	2	3	2022-12-13 22:51:13	1073741825	log.review.reviewerAssigned	0
+37	1048585	2	3	2022-12-13 22:51:20	1073741825	log.review.reviewerAssigned	0
+38	1048585	3	21	2022-12-13 22:51:29	268435458	submission.event.general.metadataUpdated	0
+39	1048585	3	21	2022-12-13 22:51:29	268435458	submission.event.general.metadataUpdated	0
+40	515	7	21	2022-12-13 22:51:30	1342177281	submission.event.fileUploaded	0
+41	1048585	3	21	2022-12-13 22:51:30	1342177288	submission.event.fileRevised	0
+42	515	7	21	2022-12-13 22:51:30	1342177296	submission.event.fileEdited	0
+43	1048585	3	21	2022-12-13 22:51:30	1342177296	submission.event.fileEdited	0
+44	1048585	3	21	2022-12-13 22:51:54	268435458	submission.event.general.metadataUpdated	0
+45	1048585	3	21	2022-12-13 22:51:55	268435457	submission.event.submissionSubmitted	0
+46	1048585	4	22	2022-12-13 22:52:03	268435458	submission.event.general.metadataUpdated	0
+47	1048585	4	22	2022-12-13 22:52:03	268435458	submission.event.general.metadataUpdated	0
+48	515	8	22	2022-12-13 22:52:04	1342177281	submission.event.fileUploaded	0
+49	1048585	4	22	2022-12-13 22:52:04	1342177288	submission.event.fileRevised	0
+50	515	8	22	2022-12-13 22:52:04	1342177296	submission.event.fileEdited	0
+51	1048585	4	22	2022-12-13 22:52:04	1342177296	submission.event.fileEdited	0
+52	515	9	22	2022-12-13 22:52:05	1342177281	submission.event.fileUploaded	0
+53	1048585	4	22	2022-12-13 22:52:05	1342177288	submission.event.fileRevised	0
+54	515	9	22	2022-12-13 22:52:05	1342177296	submission.event.fileEdited	0
+55	1048585	4	22	2022-12-13 22:52:05	1342177296	submission.event.fileEdited	0
+56	515	10	22	2022-12-13 22:52:05	1342177281	submission.event.fileUploaded	0
+57	1048585	4	22	2022-12-13 22:52:05	1342177288	submission.event.fileRevised	0
+58	515	10	22	2022-12-13 22:52:06	1342177296	submission.event.fileEdited	0
+59	1048585	4	22	2022-12-13 22:52:06	1342177296	submission.event.fileEdited	0
+60	515	11	22	2022-12-13 22:52:06	1342177281	submission.event.fileUploaded	0
+61	1048585	4	22	2022-12-13 22:52:06	1342177288	submission.event.fileRevised	0
+62	515	11	22	2022-12-13 22:52:06	1342177296	submission.event.fileEdited	0
+63	1048585	4	22	2022-12-13 22:52:06	1342177296	submission.event.fileEdited	0
+64	1048585	4	22	2022-12-13 22:52:52	268435458	submission.event.general.metadataUpdated	0
+65	1048585	4	22	2022-12-13 22:52:54	268435457	submission.event.submissionSubmitted	0
+66	1048585	4	3	2022-12-13 22:53:02	805306371	log.editor.decision	0
+67	515	12	3	2022-12-13 22:53:02	1342177281	submission.event.fileUploaded	0
+68	1048585	4	3	2022-12-13 22:53:02	1342177288	submission.event.fileRevised	0
+69	515	13	3	2022-12-13 22:53:02	1342177281	submission.event.fileUploaded	0
+70	1048585	4	3	2022-12-13 22:53:02	1342177288	submission.event.fileRevised	0
+71	515	14	3	2022-12-13 22:53:02	1342177281	submission.event.fileUploaded	0
+72	1048585	4	3	2022-12-13 22:53:02	1342177288	submission.event.fileRevised	0
+73	515	15	3	2022-12-13 22:53:02	1342177281	submission.event.fileUploaded	0
+74	1048585	4	3	2022-12-13 22:53:02	1342177288	submission.event.fileRevised	0
+75	1048585	4	3	2022-12-13 22:53:11	1073741825	log.review.reviewerAssigned	0
+76	1048585	4	3	2022-12-13 22:53:14	805306371	log.editor.decision	0
+77	1048585	4	3	2022-12-13 22:53:24	1073741825	log.review.reviewerAssigned	0
+78	1048585	4	3	2022-12-13 22:53:27	805306371	log.editor.decision	0
+79	1048585	4	3	2022-12-13 22:53:35	268435459	submission.event.participantAdded	0
+80	1048585	4	3	2022-12-13 22:53:39	805306371	log.editor.decision	0
+81	1048585	4	3	2022-12-13 22:53:47	268435459	submission.event.participantAdded	0
+82	1048585	5	23	2022-12-13 22:53:56	268435458	submission.event.general.metadataUpdated	0
+83	1048585	5	23	2022-12-13 22:53:57	268435458	submission.event.general.metadataUpdated	0
+84	515	16	23	2022-12-13 22:53:58	1342177281	submission.event.fileUploaded	0
+85	1048585	5	23	2022-12-13 22:53:58	1342177288	submission.event.fileRevised	0
+86	515	16	23	2022-12-13 22:53:58	1342177296	submission.event.fileEdited	0
+87	1048585	5	23	2022-12-13 22:53:58	1342177296	submission.event.fileEdited	0
+88	1048585	5	23	2022-12-13 22:54:26	268435458	submission.event.general.metadataUpdated	0
+89	1048585	5	23	2022-12-13 22:54:27	268435457	submission.event.submissionSubmitted	0
+90	1048585	5	3	2022-12-13 22:54:34	805306371	log.editor.decision	0
+91	515	17	3	2022-12-13 22:54:34	1342177281	submission.event.fileUploaded	0
+92	1048585	5	3	2022-12-13 22:54:34	1342177288	submission.event.fileRevised	0
+93	1048585	5	3	2022-12-13 22:54:42	1073741825	log.review.reviewerAssigned	0
+94	1048585	5	3	2022-12-13 22:54:45	805306371	log.editor.decision	0
+95	1048585	5	3	2022-12-13 22:54:53	1073741825	log.review.reviewerAssigned	0
+96	1048585	5	3	2022-12-13 22:54:56	805306371	log.editor.decision	0
+97	1048585	5	3	2022-12-13 22:55:04	268435459	submission.event.participantAdded	0
+98	1048585	5	3	2022-12-13 22:55:07	805306371	log.editor.decision	0
+99	1048585	5	3	2022-12-13 22:55:15	268435459	submission.event.participantAdded	0
+100	1048585	5	3	2022-12-13 22:55:21	268435459	submission.event.participantAdded	0
+101	1048585	5	3	2022-12-13 22:55:26	268435474	submission.event.publicationFormatCreated	0
+102	515	18	3	2022-12-13 22:55:30	1342177281	submission.event.fileUploaded	0
+103	1048585	5	3	2022-12-13 22:55:30	1342177288	submission.event.fileRevised	0
+104	1048585	5	3	2022-12-13 22:55:32	268435464	submission.event.publicationFormatPublished	0
+105	1048585	5	3	2022-12-13 22:55:34	268435476	submission.event.publicationFormatMadeAvailable	0
+106	515	18	3	2022-12-13 22:55:36	1342177296	submission.event.fileEdited	0
+107	1048585	5	3	2022-12-13 22:55:36	1342177296	submission.event.fileEdited	0
+108	515	18	3	2022-12-13 22:55:36	1342177287	submission.event.signoffSignoff	0
+109	1048585	5	3	2022-12-13 22:55:41	268435462	publication.event.published	0
+110	1048585	6	24	2022-12-13 22:55:50	268435458	submission.event.general.metadataUpdated	0
+111	1048585	6	24	2022-12-13 22:55:50	268435458	submission.event.general.metadataUpdated	0
+112	515	19	24	2022-12-13 22:55:51	1342177281	submission.event.fileUploaded	0
+113	1048585	6	24	2022-12-13 22:55:51	1342177288	submission.event.fileRevised	0
+114	515	19	24	2022-12-13 22:55:51	1342177296	submission.event.fileEdited	0
+115	1048585	6	24	2022-12-13 22:55:51	1342177296	submission.event.fileEdited	0
+116	515	20	24	2022-12-13 22:55:52	1342177281	submission.event.fileUploaded	0
+117	1048585	6	24	2022-12-13 22:55:52	1342177288	submission.event.fileRevised	0
+118	515	20	24	2022-12-13 22:55:52	1342177296	submission.event.fileEdited	0
+119	1048585	6	24	2022-12-13 22:55:52	1342177296	submission.event.fileEdited	0
+120	515	21	24	2022-12-13 22:55:52	1342177281	submission.event.fileUploaded	0
+121	1048585	6	24	2022-12-13 22:55:52	1342177288	submission.event.fileRevised	0
+122	515	21	24	2022-12-13 22:55:53	1342177296	submission.event.fileEdited	0
+123	1048585	6	24	2022-12-13 22:55:53	1342177296	submission.event.fileEdited	0
+124	515	22	24	2022-12-13 22:55:53	1342177281	submission.event.fileUploaded	0
+125	1048585	6	24	2022-12-13 22:55:53	1342177288	submission.event.fileRevised	0
+126	515	22	24	2022-12-13 22:55:53	1342177296	submission.event.fileEdited	0
+127	1048585	6	24	2022-12-13 22:55:53	1342177296	submission.event.fileEdited	0
+128	1048585	6	24	2022-12-13 22:56:37	268435458	submission.event.general.metadataUpdated	0
+129	1048585	6	24	2022-12-13 22:56:38	268435457	submission.event.submissionSubmitted	0
+130	1048585	6	3	2022-12-13 22:56:47	805306371	log.editor.decision	0
+131	515	23	3	2022-12-13 22:56:47	1342177281	submission.event.fileUploaded	0
+132	1048585	6	3	2022-12-13 22:56:47	1342177288	submission.event.fileRevised	0
+133	515	24	3	2022-12-13 22:56:47	1342177281	submission.event.fileUploaded	0
+134	1048585	6	3	2022-12-13 22:56:47	1342177288	submission.event.fileRevised	0
+135	515	25	3	2022-12-13 22:56:47	1342177281	submission.event.fileUploaded	0
+136	1048585	6	3	2022-12-13 22:56:47	1342177288	submission.event.fileRevised	0
+137	515	26	3	2022-12-13 22:56:47	1342177281	submission.event.fileUploaded	0
+138	1048585	6	3	2022-12-13 22:56:47	1342177288	submission.event.fileRevised	0
+139	1048585	6	3	2022-12-13 22:56:55	268435459	submission.event.participantAdded	0
+140	1048585	6	6	2022-12-13 22:57:05	805306372	log.editor.recommendation	0
+141	1048585	7	25	2022-12-13 22:57:23	268435458	submission.event.general.metadataUpdated	0
+142	1048585	7	25	2022-12-13 22:57:23	268435458	submission.event.general.metadataUpdated	0
+143	515	27	25	2022-12-13 22:57:25	1342177281	submission.event.fileUploaded	0
+144	1048585	7	25	2022-12-13 22:57:25	1342177288	submission.event.fileRevised	0
+145	515	27	25	2022-12-13 22:57:25	1342177296	submission.event.fileEdited	0
+146	1048585	7	25	2022-12-13 22:57:25	1342177296	submission.event.fileEdited	0
+147	515	28	25	2022-12-13 22:57:25	1342177281	submission.event.fileUploaded	0
+148	1048585	7	25	2022-12-13 22:57:25	1342177288	submission.event.fileRevised	0
+149	515	28	25	2022-12-13 22:57:26	1342177296	submission.event.fileEdited	0
+150	1048585	7	25	2022-12-13 22:57:26	1342177296	submission.event.fileEdited	0
+151	515	29	25	2022-12-13 22:57:26	1342177281	submission.event.fileUploaded	0
+152	1048585	7	25	2022-12-13 22:57:26	1342177288	submission.event.fileRevised	0
+153	515	29	25	2022-12-13 22:57:26	1342177296	submission.event.fileEdited	0
+154	1048585	7	25	2022-12-13 22:57:26	1342177296	submission.event.fileEdited	0
+155	515	30	25	2022-12-13 22:57:26	1342177281	submission.event.fileUploaded	0
+156	1048585	7	25	2022-12-13 22:57:26	1342177288	submission.event.fileRevised	0
+157	515	30	25	2022-12-13 22:57:27	1342177296	submission.event.fileEdited	0
+158	1048585	7	25	2022-12-13 22:57:27	1342177296	submission.event.fileEdited	0
+159	515	31	25	2022-12-13 22:57:27	1342177281	submission.event.fileUploaded	0
+160	1048585	7	25	2022-12-13 22:57:27	1342177288	submission.event.fileRevised	0
+161	515	31	25	2022-12-13 22:57:28	1342177296	submission.event.fileEdited	0
+162	1048585	7	25	2022-12-13 22:57:28	1342177296	submission.event.fileEdited	0
+163	1048585	7	25	2022-12-13 22:58:29	268435458	submission.event.general.metadataUpdated	0
+164	1048585	7	25	2022-12-13 22:58:32	268435457	submission.event.submissionSubmitted	0
+165	1048585	7	3	2022-12-13 22:58:40	805306371	log.editor.decision	0
+166	1048585	7	3	2022-12-13 22:58:50	1073741825	log.review.reviewerAssigned	0
+167	1048585	7	3	2022-12-13 22:58:53	805306371	log.editor.decision	0
+168	1048585	7	3	2022-12-13 22:59:02	268435459	submission.event.participantAdded	0
+169	1048585	8	3	2022-12-13 22:59:11	268435458	submission.event.general.metadataUpdated	0
+170	1048585	8	3	2022-12-13 22:59:11	268435458	submission.event.general.metadataUpdated	0
+171	515	32	3	2022-12-13 22:59:12	1342177281	submission.event.fileUploaded	0
+172	1048585	8	3	2022-12-13 22:59:12	1342177288	submission.event.fileRevised	0
+173	515	32	3	2022-12-13 22:59:12	1342177296	submission.event.fileEdited	0
+174	1048585	8	3	2022-12-13 22:59:12	1342177296	submission.event.fileEdited	0
+175	1048585	8	3	2022-12-13 22:59:14	268435458	submission.event.general.metadataUpdated	0
+176	1048585	8	3	2022-12-13 22:59:15	268435457	submission.event.submissionSubmitted	0
+177	1048585	9	26	2022-12-13 22:59:22	268435458	submission.event.general.metadataUpdated	0
+178	1048585	9	26	2022-12-13 22:59:22	268435458	submission.event.general.metadataUpdated	0
+179	515	33	26	2022-12-13 22:59:23	1342177281	submission.event.fileUploaded	0
+180	1048585	9	26	2022-12-13 22:59:23	1342177288	submission.event.fileRevised	0
+181	515	33	26	2022-12-13 22:59:24	1342177296	submission.event.fileEdited	0
+182	1048585	9	26	2022-12-13 22:59:24	1342177296	submission.event.fileEdited	0
+183	515	34	26	2022-12-13 22:59:24	1342177281	submission.event.fileUploaded	0
+184	1048585	9	26	2022-12-13 22:59:24	1342177288	submission.event.fileRevised	0
+185	515	34	26	2022-12-13 22:59:24	1342177296	submission.event.fileEdited	0
+186	1048585	9	26	2022-12-13 22:59:24	1342177296	submission.event.fileEdited	0
+187	515	35	26	2022-12-13 22:59:25	1342177281	submission.event.fileUploaded	0
+188	1048585	9	26	2022-12-13 22:59:25	1342177288	submission.event.fileRevised	0
+189	515	35	26	2022-12-13 22:59:25	1342177296	submission.event.fileEdited	0
+190	1048585	9	26	2022-12-13 22:59:25	1342177296	submission.event.fileEdited	0
+191	515	36	26	2022-12-13 22:59:25	1342177281	submission.event.fileUploaded	0
+192	1048585	9	26	2022-12-13 22:59:25	1342177288	submission.event.fileRevised	0
+193	515	36	26	2022-12-13 22:59:26	1342177296	submission.event.fileEdited	0
+194	1048585	9	26	2022-12-13 22:59:26	1342177296	submission.event.fileEdited	0
+195	515	37	26	2022-12-13 22:59:26	1342177281	submission.event.fileUploaded	0
+196	1048585	9	26	2022-12-13 22:59:26	1342177288	submission.event.fileRevised	0
+197	515	37	26	2022-12-13 22:59:26	1342177296	submission.event.fileEdited	0
+198	1048585	9	26	2022-12-13 22:59:26	1342177296	submission.event.fileEdited	0
+199	1048585	9	26	2022-12-13 23:00:25	268435458	submission.event.general.metadataUpdated	0
+200	1048585	9	26	2022-12-13 23:00:27	268435457	submission.event.submissionSubmitted	0
+201	1048585	9	3	2022-12-13 23:00:37	805306371	log.editor.decision	0
+202	515	38	3	2022-12-13 23:00:37	1342177281	submission.event.fileUploaded	0
+203	1048585	9	3	2022-12-13 23:00:37	1342177288	submission.event.fileRevised	0
+204	515	39	3	2022-12-13 23:00:37	1342177281	submission.event.fileUploaded	0
+205	1048585	9	3	2022-12-13 23:00:37	1342177288	submission.event.fileRevised	0
+206	515	40	3	2022-12-13 23:00:37	1342177281	submission.event.fileUploaded	0
+207	1048585	9	3	2022-12-13 23:00:37	1342177288	submission.event.fileRevised	0
+208	515	41	3	2022-12-13 23:00:37	1342177281	submission.event.fileUploaded	0
+209	1048585	9	3	2022-12-13 23:00:37	1342177288	submission.event.fileRevised	0
+210	515	42	3	2022-12-13 23:00:37	1342177281	submission.event.fileUploaded	0
+211	1048585	9	3	2022-12-13 23:00:37	1342177288	submission.event.fileRevised	0
+212	1048585	10	27	2022-12-13 23:00:49	268435458	submission.event.general.metadataUpdated	0
+213	1048585	10	27	2022-12-13 23:00:49	268435458	submission.event.general.metadataUpdated	0
+214	515	43	27	2022-12-13 23:00:51	1342177281	submission.event.fileUploaded	0
+215	1048585	10	27	2022-12-13 23:00:51	1342177288	submission.event.fileRevised	0
+216	515	43	27	2022-12-13 23:00:51	1342177296	submission.event.fileEdited	0
+217	1048585	10	27	2022-12-13 23:00:51	1342177296	submission.event.fileEdited	0
+218	1048585	10	27	2022-12-13 23:01:34	268435458	submission.event.general.metadataUpdated	0
+219	1048585	10	27	2022-12-13 23:01:36	268435457	submission.event.submissionSubmitted	0
+294	1048585	13	3	2022-12-13 23:06:57	805306371	log.editor.decision	0
+220	1048585	11	28	2022-12-13 23:01:43	268435458	submission.event.general.metadataUpdated	0
+221	1048585	11	28	2022-12-13 23:01:43	268435458	submission.event.general.metadataUpdated	0
+222	515	44	28	2022-12-13 23:01:45	1342177281	submission.event.fileUploaded	0
+223	1048585	11	28	2022-12-13 23:01:45	1342177288	submission.event.fileRevised	0
+224	515	44	28	2022-12-13 23:01:45	1342177296	submission.event.fileEdited	0
+225	1048585	11	28	2022-12-13 23:01:45	1342177296	submission.event.fileEdited	0
+226	1048585	11	28	2022-12-13 23:01:54	268435458	submission.event.general.metadataUpdated	0
+227	1048585	11	28	2022-12-13 23:01:56	268435457	submission.event.submissionSubmitted	0
+228	1048585	11	3	2022-12-13 23:02:03	805306371	log.editor.decision	0
+229	515	45	3	2022-12-13 23:02:03	1342177281	submission.event.fileUploaded	0
+230	1048585	11	3	2022-12-13 23:02:03	1342177288	submission.event.fileRevised	0
+231	1048585	11	3	2022-12-13 23:02:10	1073741825	log.review.reviewerAssigned	0
+232	1048585	11	3	2022-12-13 23:02:12	805306371	log.editor.decision	0
+233	1048585	11	3	2022-12-13 23:02:20	1073741825	log.review.reviewerAssigned	0
+234	1048585	11	3	2022-12-13 23:02:26	1073741825	log.review.reviewerAssigned	0
+235	1048585	11	10	2022-12-13 23:02:31	1073741830	log.review.reviewAccepted	0
+236	1048585	11	10	2022-12-13 23:02:34	1073741848	log.review.reviewReady	0
+237	1048585	11	12	2022-12-13 23:02:39	1073741830	log.review.reviewAccepted	0
+238	1048585	11	12	2022-12-13 23:02:43	1073741848	log.review.reviewReady	0
+239	1048585	11	3	2022-12-13 23:02:54	805306371	log.editor.decision	0
+240	1048585	12	29	2022-12-13 23:03:05	268435458	submission.event.general.metadataUpdated	0
+241	1048585	12	29	2022-12-13 23:03:06	268435458	submission.event.general.metadataUpdated	0
+242	515	46	29	2022-12-13 23:03:07	1342177281	submission.event.fileUploaded	0
+243	1048585	12	29	2022-12-13 23:03:07	1342177288	submission.event.fileRevised	0
+244	515	46	29	2022-12-13 23:03:07	1342177296	submission.event.fileEdited	0
+245	1048585	12	29	2022-12-13 23:03:07	1342177296	submission.event.fileEdited	0
+246	515	47	29	2022-12-13 23:03:07	1342177281	submission.event.fileUploaded	0
+247	1048585	12	29	2022-12-13 23:03:07	1342177288	submission.event.fileRevised	0
+248	515	47	29	2022-12-13 23:03:08	1342177296	submission.event.fileEdited	0
+249	1048585	12	29	2022-12-13 23:03:08	1342177296	submission.event.fileEdited	0
+250	515	48	29	2022-12-13 23:03:08	1342177281	submission.event.fileUploaded	0
+251	1048585	12	29	2022-12-13 23:03:08	1342177288	submission.event.fileRevised	0
+252	515	48	29	2022-12-13 23:03:08	1342177296	submission.event.fileEdited	0
+253	1048585	12	29	2022-12-13 23:03:08	1342177296	submission.event.fileEdited	0
+254	1048585	12	29	2022-12-13 23:04:03	268435458	submission.event.general.metadataUpdated	0
+255	1048585	12	29	2022-12-13 23:04:05	268435457	submission.event.submissionSubmitted	0
+256	1048585	12	3	2022-12-13 23:04:15	805306371	log.editor.decision	0
+257	1048585	12	3	2022-12-13 23:04:25	1073741825	log.review.reviewerAssigned	0
+258	1048585	12	3	2022-12-13 23:04:31	1073741825	log.review.reviewerAssigned	0
+259	1048585	12	3	2022-12-13 23:04:38	1073741825	log.review.reviewerAssigned	0
+260	1048585	12	8	2022-12-13 23:04:44	1073741830	log.review.reviewAccepted	0
+261	1048585	12	8	2022-12-13 23:04:49	1073741848	log.review.reviewReady	0
+262	1048585	13	30	2022-12-13 23:04:58	268435458	submission.event.general.metadataUpdated	0
+263	1048585	13	30	2022-12-13 23:04:58	268435458	submission.event.general.metadataUpdated	0
+264	515	49	30	2022-12-13 23:04:59	1342177281	submission.event.fileUploaded	0
+265	1048585	13	30	2022-12-13 23:04:59	1342177288	submission.event.fileRevised	0
+266	515	49	30	2022-12-13 23:04:59	1342177296	submission.event.fileEdited	0
+267	1048585	13	30	2022-12-13 23:04:59	1342177296	submission.event.fileEdited	0
+268	515	50	30	2022-12-13 23:05:00	1342177281	submission.event.fileUploaded	0
+269	1048585	13	30	2022-12-13 23:05:00	1342177288	submission.event.fileRevised	0
+270	515	50	30	2022-12-13 23:05:00	1342177296	submission.event.fileEdited	0
+271	1048585	13	30	2022-12-13 23:05:00	1342177296	submission.event.fileEdited	0
+272	515	51	30	2022-12-13 23:05:00	1342177281	submission.event.fileUploaded	0
+273	1048585	13	30	2022-12-13 23:05:00	1342177288	submission.event.fileRevised	0
+274	515	51	30	2022-12-13 23:05:01	1342177296	submission.event.fileEdited	0
+275	1048585	13	30	2022-12-13 23:05:01	1342177296	submission.event.fileEdited	0
+276	1048585	13	30	2022-12-13 23:05:36	268435458	submission.event.general.metadataUpdated	0
+277	1048585	13	30	2022-12-13 23:05:37	268435457	submission.event.submissionSubmitted	0
+278	1048585	13	3	2022-12-13 23:05:47	805306371	log.editor.decision	0
+279	515	52	3	2022-12-13 23:05:47	1342177281	submission.event.fileUploaded	0
+280	1048585	13	3	2022-12-13 23:05:47	1342177288	submission.event.fileRevised	0
+281	515	53	3	2022-12-13 23:05:48	1342177281	submission.event.fileUploaded	0
+282	1048585	13	3	2022-12-13 23:05:48	1342177288	submission.event.fileRevised	0
+283	515	54	3	2022-12-13 23:05:48	1342177281	submission.event.fileUploaded	0
+284	1048585	13	3	2022-12-13 23:05:48	1342177288	submission.event.fileRevised	0
+285	1048585	13	3	2022-12-13 23:05:56	1073741825	log.review.reviewerAssigned	0
+286	1048585	13	3	2022-12-13 23:05:59	805306371	log.editor.decision	0
+287	1048585	13	3	2022-12-13 23:06:09	1073741825	log.review.reviewerAssigned	0
+288	1048585	13	3	2022-12-13 23:06:15	1073741825	log.review.reviewerAssigned	0
+289	1048585	13	3	2022-12-13 23:06:21	1073741825	log.review.reviewerAssigned	0
+290	1048585	13	10	2022-12-13 23:06:28	1073741830	log.review.reviewAccepted	0
+291	1048585	13	10	2022-12-13 23:06:32	1073741848	log.review.reviewReady	0
+292	1048585	13	12	2022-12-13 23:06:38	1073741830	log.review.reviewAccepted	0
+293	1048585	13	12	2022-12-13 23:06:43	1073741848	log.review.reviewReady	0
+295	1048585	14	31	2022-12-13 23:07:10	268435458	submission.event.general.metadataUpdated	0
+296	1048585	14	31	2022-12-13 23:07:11	268435458	submission.event.general.metadataUpdated	0
+297	515	55	31	2022-12-13 23:07:12	1342177281	submission.event.fileUploaded	0
+298	1048585	14	31	2022-12-13 23:07:12	1342177288	submission.event.fileRevised	0
+299	515	55	31	2022-12-13 23:07:12	1342177296	submission.event.fileEdited	0
+300	1048585	14	31	2022-12-13 23:07:12	1342177296	submission.event.fileEdited	0
+301	515	56	31	2022-12-13 23:07:12	1342177281	submission.event.fileUploaded	0
+302	1048585	14	31	2022-12-13 23:07:12	1342177288	submission.event.fileRevised	0
+303	515	56	31	2022-12-13 23:07:13	1342177296	submission.event.fileEdited	0
+304	1048585	14	31	2022-12-13 23:07:13	1342177296	submission.event.fileEdited	0
+305	515	57	31	2022-12-13 23:07:13	1342177281	submission.event.fileUploaded	0
+306	1048585	14	31	2022-12-13 23:07:13	1342177288	submission.event.fileRevised	0
+307	515	57	31	2022-12-13 23:07:13	1342177296	submission.event.fileEdited	0
+308	1048585	14	31	2022-12-13 23:07:13	1342177296	submission.event.fileEdited	0
+309	515	58	31	2022-12-13 23:07:14	1342177281	submission.event.fileUploaded	0
+310	1048585	14	31	2022-12-13 23:07:14	1342177288	submission.event.fileRevised	0
+311	515	58	31	2022-12-13 23:07:14	1342177296	submission.event.fileEdited	0
+312	1048585	14	31	2022-12-13 23:07:14	1342177296	submission.event.fileEdited	0
+313	515	59	31	2022-12-13 23:07:14	1342177281	submission.event.fileUploaded	0
+314	1048585	14	31	2022-12-13 23:07:14	1342177288	submission.event.fileRevised	0
+315	515	59	31	2022-12-13 23:07:15	1342177296	submission.event.fileEdited	0
+316	1048585	14	31	2022-12-13 23:07:15	1342177296	submission.event.fileEdited	0
+317	515	60	31	2022-12-13 23:07:15	1342177281	submission.event.fileUploaded	0
+318	1048585	14	31	2022-12-13 23:07:15	1342177288	submission.event.fileRevised	0
+319	515	60	31	2022-12-13 23:07:16	1342177296	submission.event.fileEdited	0
+320	1048585	14	31	2022-12-13 23:07:16	1342177296	submission.event.fileEdited	0
+321	1048585	14	31	2022-12-13 23:07:57	268435458	submission.event.general.metadataUpdated	0
+322	1048585	14	31	2022-12-13 23:07:59	268435457	submission.event.submissionSubmitted	0
+323	1048585	14	3	2022-12-13 23:08:09	805306371	log.editor.decision	0
+324	515	61	3	2022-12-13 23:08:09	1342177281	submission.event.fileUploaded	0
+325	1048585	14	3	2022-12-13 23:08:09	1342177288	submission.event.fileRevised	0
+326	515	62	3	2022-12-13 23:08:09	1342177281	submission.event.fileUploaded	0
+327	1048585	14	3	2022-12-13 23:08:09	1342177288	submission.event.fileRevised	0
+328	515	63	3	2022-12-13 23:08:09	1342177281	submission.event.fileUploaded	0
+329	1048585	14	3	2022-12-13 23:08:09	1342177288	submission.event.fileRevised	0
+330	515	64	3	2022-12-13 23:08:09	1342177281	submission.event.fileUploaded	0
+331	1048585	14	3	2022-12-13 23:08:09	1342177288	submission.event.fileRevised	0
+332	515	65	3	2022-12-13 23:08:09	1342177281	submission.event.fileUploaded	0
+333	1048585	14	3	2022-12-13 23:08:09	1342177288	submission.event.fileRevised	0
+334	515	66	3	2022-12-13 23:08:09	1342177281	submission.event.fileUploaded	0
+335	1048585	14	3	2022-12-13 23:08:09	1342177288	submission.event.fileRevised	0
+336	1048585	14	3	2022-12-13 23:08:18	1073741825	log.review.reviewerAssigned	0
+337	1048585	14	3	2022-12-13 23:08:22	805306371	log.editor.decision	0
+338	1048585	14	3	2022-12-13 23:08:31	1073741825	log.review.reviewerAssigned	0
+339	1048585	14	3	2022-12-13 23:08:34	805306371	log.editor.decision	0
+340	1048585	14	3	2022-12-13 23:08:42	268435459	submission.event.participantAdded	0
+341	1048585	14	3	2022-12-13 23:08:45	805306371	log.editor.decision	0
+342	1048585	14	3	2022-12-13 23:08:54	268435459	submission.event.participantAdded	0
+343	1048585	14	3	2022-12-13 23:08:59	268435459	submission.event.participantAdded	0
+344	1048585	14	3	2022-12-13 23:09:05	268435474	submission.event.publicationFormatCreated	0
+345	515	67	3	2022-12-13 23:09:13	1342177281	submission.event.fileUploaded	0
+346	1048585	14	3	2022-12-13 23:09:13	1342177288	submission.event.fileRevised	0
+347	515	68	3	2022-12-13 23:09:14	1342177281	submission.event.fileUploaded	0
+348	1048585	14	3	2022-12-13 23:09:14	1342177288	submission.event.fileRevised	0
+349	515	69	3	2022-12-13 23:09:14	1342177281	submission.event.fileUploaded	0
+350	1048585	14	3	2022-12-13 23:09:14	1342177288	submission.event.fileRevised	0
+351	515	70	3	2022-12-13 23:09:14	1342177281	submission.event.fileUploaded	0
+352	1048585	14	3	2022-12-13 23:09:14	1342177288	submission.event.fileRevised	0
+353	515	71	3	2022-12-13 23:09:14	1342177281	submission.event.fileUploaded	0
+354	1048585	14	3	2022-12-13 23:09:14	1342177288	submission.event.fileRevised	0
+355	515	72	3	2022-12-13 23:09:14	1342177281	submission.event.fileUploaded	0
+356	1048585	14	3	2022-12-13 23:09:14	1342177288	submission.event.fileRevised	0
+357	1048585	14	3	2022-12-13 23:09:16	268435464	submission.event.publicationFormatPublished	0
+358	1048585	14	3	2022-12-13 23:09:18	268435476	submission.event.publicationFormatMadeAvailable	0
+359	515	67	3	2022-12-13 23:09:21	1342177296	submission.event.fileEdited	0
+360	1048585	14	3	2022-12-13 23:09:21	1342177296	submission.event.fileEdited	0
+361	515	67	3	2022-12-13 23:09:21	1342177287	submission.event.signoffSignoff	0
+362	515	68	3	2022-12-13 23:09:27	1342177296	submission.event.fileEdited	0
+363	1048585	14	3	2022-12-13 23:09:27	1342177296	submission.event.fileEdited	0
+364	515	68	3	2022-12-13 23:09:27	1342177287	submission.event.signoffSignoff	0
+365	515	69	3	2022-12-13 23:09:32	1342177296	submission.event.fileEdited	0
+366	1048585	14	3	2022-12-13 23:09:32	1342177296	submission.event.fileEdited	0
+367	515	69	3	2022-12-13 23:09:32	1342177287	submission.event.signoffSignoff	0
+368	515	70	3	2022-12-13 23:09:38	1342177296	submission.event.fileEdited	0
+369	1048585	14	3	2022-12-13 23:09:38	1342177296	submission.event.fileEdited	0
+370	515	70	3	2022-12-13 23:09:38	1342177287	submission.event.signoffSignoff	0
+371	515	71	3	2022-12-13 23:09:44	1342177296	submission.event.fileEdited	0
+372	1048585	14	3	2022-12-13 23:09:44	1342177296	submission.event.fileEdited	0
+373	515	71	3	2022-12-13 23:09:44	1342177287	submission.event.signoffSignoff	0
+374	515	72	3	2022-12-13 23:09:50	1342177296	submission.event.fileEdited	0
+375	1048585	14	3	2022-12-13 23:09:50	1342177296	submission.event.fileEdited	0
+376	515	72	3	2022-12-13 23:09:50	1342177287	submission.event.signoffSignoff	0
+377	1048585	14	3	2022-12-13 23:09:56	268435462	publication.event.published	0
+378	1048585	15	32	2022-12-13 23:10:04	268435458	submission.event.general.metadataUpdated	0
+379	1048585	15	32	2022-12-13 23:10:04	268435458	submission.event.general.metadataUpdated	0
+380	515	73	32	2022-12-13 23:10:05	1342177281	submission.event.fileUploaded	0
+381	1048585	15	32	2022-12-13 23:10:05	1342177288	submission.event.fileRevised	0
+382	515	73	32	2022-12-13 23:10:06	1342177296	submission.event.fileEdited	0
+383	1048585	15	32	2022-12-13 23:10:06	1342177296	submission.event.fileEdited	0
+384	1048585	15	32	2022-12-13 23:10:20	268435458	submission.event.general.metadataUpdated	0
+385	1048585	15	32	2022-12-13 23:10:21	268435457	submission.event.submissionSubmitted	0
+386	1048585	15	3	2022-12-13 23:10:31	805306371	log.editor.decision	0
+387	515	74	3	2022-12-13 23:10:31	1342177281	submission.event.fileUploaded	0
+388	1048585	15	3	2022-12-13 23:10:31	1342177288	submission.event.fileRevised	0
+389	1048585	16	33	2022-12-13 23:10:41	268435458	submission.event.general.metadataUpdated	0
+390	1048585	16	33	2022-12-13 23:10:41	268435458	submission.event.general.metadataUpdated	0
+391	515	75	33	2022-12-13 23:10:42	1342177281	submission.event.fileUploaded	0
+392	1048585	16	33	2022-12-13 23:10:42	1342177288	submission.event.fileRevised	0
+393	515	75	33	2022-12-13 23:10:43	1342177296	submission.event.fileEdited	0
+394	1048585	16	33	2022-12-13 23:10:43	1342177296	submission.event.fileEdited	0
+395	1048585	16	33	2022-12-13 23:11:05	268435458	submission.event.general.metadataUpdated	0
+396	1048585	16	33	2022-12-13 23:11:06	268435457	submission.event.submissionSubmitted	0
+397	1048585	16	3	2022-12-13 23:11:16	805306371	log.editor.decision	0
+398	515	76	3	2022-12-13 23:11:16	1342177281	submission.event.fileUploaded	0
+399	1048585	16	3	2022-12-13 23:11:16	1342177288	submission.event.fileRevised	0
+400	1048585	16	3	2022-12-13 23:11:24	1073741825	log.review.reviewerAssigned	0
+401	1048585	16	3	2022-12-13 23:11:29	1073741825	log.review.reviewerAssigned	0
+402	1048585	16	3	2022-12-13 23:11:35	1073741825	log.review.reviewerAssigned	0
+403	1048585	16	10	2022-12-13 23:11:41	1073741830	log.review.reviewAccepted	0
+404	1048585	16	10	2022-12-13 23:11:45	1073741848	log.review.reviewReady	0
+405	1048585	17	34	2022-12-13 23:11:53	268435458	submission.event.general.metadataUpdated	0
+406	1048585	17	34	2022-12-13 23:11:53	268435458	submission.event.general.metadataUpdated	0
+407	515	77	34	2022-12-13 23:11:54	1342177281	submission.event.fileUploaded	0
+408	1048585	17	34	2022-12-13 23:11:54	1342177288	submission.event.fileRevised	0
+409	515	77	34	2022-12-13 23:11:55	1342177296	submission.event.fileEdited	0
+410	1048585	17	34	2022-12-13 23:11:55	1342177296	submission.event.fileEdited	0
+411	515	78	34	2022-12-13 23:11:55	1342177281	submission.event.fileUploaded	0
+412	1048585	17	34	2022-12-13 23:11:55	1342177288	submission.event.fileRevised	0
+413	515	78	34	2022-12-13 23:11:55	1342177296	submission.event.fileEdited	0
+414	1048585	17	34	2022-12-13 23:11:55	1342177296	submission.event.fileEdited	0
+415	515	79	34	2022-12-13 23:11:56	1342177281	submission.event.fileUploaded	0
+416	1048585	17	34	2022-12-13 23:11:56	1342177288	submission.event.fileRevised	0
+417	515	79	34	2022-12-13 23:11:56	1342177296	submission.event.fileEdited	0
+418	1048585	17	34	2022-12-13 23:11:56	1342177296	submission.event.fileEdited	0
+419	515	80	34	2022-12-13 23:11:56	1342177281	submission.event.fileUploaded	0
+420	1048585	17	34	2022-12-13 23:11:56	1342177288	submission.event.fileRevised	0
+421	515	80	34	2022-12-13 23:11:57	1342177296	submission.event.fileEdited	0
+422	1048585	17	34	2022-12-13 23:11:57	1342177296	submission.event.fileEdited	0
+423	515	81	34	2022-12-13 23:11:57	1342177281	submission.event.fileUploaded	0
+424	1048585	17	34	2022-12-13 23:11:57	1342177288	submission.event.fileRevised	0
+425	515	81	34	2022-12-13 23:11:57	1342177296	submission.event.fileEdited	0
+426	1048585	17	34	2022-12-13 23:11:57	1342177296	submission.event.fileEdited	0
+427	515	82	34	2022-12-13 23:11:58	1342177281	submission.event.fileUploaded	0
+428	1048585	17	34	2022-12-13 23:11:58	1342177288	submission.event.fileRevised	0
+429	515	82	34	2022-12-13 23:11:58	1342177296	submission.event.fileEdited	0
+430	1048585	17	34	2022-12-13 23:11:58	1342177296	submission.event.fileEdited	0
+431	1048585	17	34	2022-12-13 23:13:24	268435458	submission.event.general.metadataUpdated	0
+432	1048585	17	34	2022-12-13 23:13:26	268435457	submission.event.submissionSubmitted	0
+433	1048585	17	3	2022-12-13 23:13:39	805306371	log.editor.decision	0
+434	515	83	3	2022-12-13 23:13:39	1342177281	submission.event.fileUploaded	0
+435	1048585	17	3	2022-12-13 23:13:39	1342177288	submission.event.fileRevised	0
+436	515	84	3	2022-12-13 23:13:39	1342177281	submission.event.fileUploaded	0
+437	1048585	17	3	2022-12-13 23:13:39	1342177288	submission.event.fileRevised	0
+438	515	85	3	2022-12-13 23:13:39	1342177281	submission.event.fileUploaded	0
+439	1048585	17	3	2022-12-13 23:13:39	1342177288	submission.event.fileRevised	0
+440	515	86	3	2022-12-13 23:13:39	1342177281	submission.event.fileUploaded	0
+441	1048585	17	3	2022-12-13 23:13:39	1342177288	submission.event.fileRevised	0
+442	515	87	3	2022-12-13 23:13:39	1342177281	submission.event.fileUploaded	0
+443	1048585	17	3	2022-12-13 23:13:39	1342177288	submission.event.fileRevised	0
+444	515	88	3	2022-12-13 23:13:39	1342177281	submission.event.fileUploaded	0
+445	1048585	17	3	2022-12-13 23:13:39	1342177288	submission.event.fileRevised	0
+446	1048585	17	3	2022-12-13 23:13:50	1073741825	log.review.reviewerAssigned	0
+447	1048585	17	3	2022-12-13 23:13:57	1073741825	log.review.reviewerAssigned	0
 \.
 
 
@@ -5976,7 +5968,7 @@ COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event
 -- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
 --
 
-SELECT pg_catalog.setval('public.event_log_log_id_seq', 455, true);
+SELECT pg_catalog.setval('public.event_log_log_id_seq', 447, true);
 
 
 --
@@ -6154,2180 +6146,2128 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 35	editorName	Daniel Barnes	string
 35	submissionId	2	int
 35	decision	Send to External Review	string
-36	fileStage	4	int
-36	sourceSubmissionFileId	6	int
-36	submissionFileId	7	int
-36	fileId	5	int
+36	reviewAssignmentId	2	string
+36	reviewerName	Al Zacharia	string
 36	submissionId	2	int
-36	originalFileName	Visualizing Space, Race, and History in .pdf	string
-36	username	dbarnes	string
-37	fileStage	4	int
-37	submissionFileId	7	int
-37	fileId	5	int
+36	stageId	3	int
+36	round	1	int
+37	reviewAssignmentId	3	string
+37	reviewerName	Gonzalo Favio	string
 37	submissionId	2	int
-37	username	dbarnes	string
-37	name	Visualizing Space, Race, and History in .pdf	string
-38	fileStage	4	int
-38	sourceSubmissionFileId	5	int
-38	submissionFileId	8	int
-38	fileId	4	int
-38	submissionId	2	int
-38	originalFileName	Cree Intellectual Traditions in History.pdf	string
-38	username	dbarnes	string
-39	fileStage	4	int
-39	submissionFileId	8	int
-39	fileId	4	int
-39	submissionId	2	int
-39	username	dbarnes	string
-39	name	Cree Intellectual Traditions in History.pdf	string
-40	fileStage	4	int
-40	sourceSubmissionFileId	4	int
-40	submissionFileId	9	int
-40	fileId	3	int
-40	submissionId	2	int
-40	originalFileName	Vernacular Currents in Western Canadian .pdf	string
-40	username	dbarnes	string
-41	fileStage	4	int
-41	submissionFileId	9	int
-41	fileId	3	int
-41	submissionId	2	int
-41	username	dbarnes	string
-41	name	Vernacular Currents in Western Canadian .pdf	string
-42	fileStage	4	int
-42	sourceSubmissionFileId	3	int
-42	submissionFileId	10	int
-42	fileId	2	int
-42	submissionId	2	int
-42	originalFileName	Critical History in Western Canada 1900–.pdf	string
-42	username	dbarnes	string
-43	fileStage	4	int
-43	submissionFileId	10	int
-43	fileId	2	int
-43	submissionId	2	int
-43	username	dbarnes	string
-43	name	Critical History in Western Canada 1900–.pdf	string
-44	reviewAssignmentId	2	string
-44	reviewerName	Al Zacharia	string
-44	submissionId	2	int
-44	stageId	3	int
-44	round	1	int
-45	reviewAssignmentId	3	string
-45	reviewerName	Gonzalo Favio	string
-45	submissionId	2	int
-45	stageId	3	int
-45	round	1	int
+37	stageId	3	int
+37	round	1	int
+40	fileStage	2	int
+40	sourceSubmissionFileId	\N	string
+40	submissionFileId	7	int
+40	fileId	6	int
+40	submissionId	3	int
+40	originalFileName	The Political Economy of Workplace Injury in Canada.pdf	string
+40	username	bbarnetson	string
+41	fileStage	2	int
+41	submissionFileId	7	int
+41	fileId	6	int
+41	submissionId	3	int
+41	username	bbarnetson	string
+41	name	The Political Economy of Workplace Injury in Canada.pdf	string
+42	fileStage	2	int
+42	sourceSubmissionFileId	\N	string
+42	submissionFileId	7	int
+42	fileId	6	int
+42	submissionId	3	int
+42	originalFileName	The Political Economy of Workplace Injury in Canada.pdf	string
+42	username	bbarnetson	string
+43	fileStage	2	int
+43	sourceSubmissionFileId	\N	string
+43	submissionFileId	7	int
+43	fileId	6	int
+43	submissionId	3	int
+43	username	bbarnetson	string
+43	originalFileName	The Political Economy of Workplace Injury in Canada.pdf	string
+43	name	The Political Economy of Workplace Injury in Canada.pdf	string
 48	fileStage	2	int
 48	sourceSubmissionFileId	\N	string
-48	submissionFileId	11	int
-48	fileId	6	int
-48	submissionId	3	int
-48	originalFileName	The Political Economy of Workplace Injury in Canada.pdf	string
-48	username	bbarnetson	string
+48	submissionFileId	8	int
+48	fileId	7	int
+48	submissionId	4	int
+48	originalFileName	Introduction: Contexts of Popular Cultur.pdf	string
+48	username	bbeaty	string
 49	fileStage	2	int
-49	submissionFileId	11	int
-49	fileId	6	int
-49	submissionId	3	int
-49	username	bbarnetson	string
-49	name	The Political Economy of Workplace Injury in Canada.pdf	string
+49	submissionFileId	8	int
+49	fileId	7	int
+49	submissionId	4	int
+49	username	bbeaty	string
+49	name	Introduction: Contexts of Popular Cultur.pdf	string
 50	fileStage	2	int
 50	sourceSubmissionFileId	\N	string
-50	submissionFileId	11	int
-50	fileId	6	int
-50	submissionId	3	int
-50	originalFileName	The Political Economy of Workplace Injury in Canada.pdf	string
-50	username	bbarnetson	string
+50	submissionFileId	8	int
+50	fileId	7	int
+50	submissionId	4	int
+50	originalFileName	Introduction: Contexts of Popular Cultur.pdf	string
+50	username	bbeaty	string
 51	fileStage	2	int
 51	sourceSubmissionFileId	\N	string
-51	submissionFileId	11	int
-51	fileId	6	int
-51	submissionId	3	int
-51	username	bbarnetson	string
-51	originalFileName	The Political Economy of Workplace Injury in Canada.pdf	string
-51	name	The Political Economy of Workplace Injury in Canada.pdf	string
+51	submissionFileId	8	int
+51	fileId	7	int
+51	submissionId	4	int
+51	username	bbeaty	string
+51	originalFileName	Introduction: Contexts of Popular Cultur.pdf	string
+51	name	Introduction: Contexts of Popular Cultur.pdf	string
+52	fileStage	2	int
+52	sourceSubmissionFileId	\N	string
+52	submissionFileId	9	int
+52	fileId	8	int
+52	submissionId	4	int
+52	originalFileName	Chapter 1. A Future for Media Studies: C.pdf	string
+52	username	bbeaty	string
+53	fileStage	2	int
+53	submissionFileId	9	int
+53	fileId	8	int
+53	submissionId	4	int
+53	username	bbeaty	string
+53	name	Chapter 1. A Future for Media Studies: C.pdf	string
+54	fileStage	2	int
+54	sourceSubmissionFileId	\N	string
+54	submissionFileId	9	int
+54	fileId	8	int
+54	submissionId	4	int
+54	originalFileName	Chapter 1. A Future for Media Studies: C.pdf	string
+54	username	bbeaty	string
+55	fileStage	2	int
+55	sourceSubmissionFileId	\N	string
+55	submissionFileId	9	int
+55	fileId	8	int
+55	submissionId	4	int
+55	username	bbeaty	string
+55	originalFileName	Chapter 1. A Future for Media Studies: C.pdf	string
+55	name	Chapter 1. A Future for Media Studies: C.pdf	string
 56	fileStage	2	int
 56	sourceSubmissionFileId	\N	string
-56	submissionFileId	12	int
-56	fileId	7	int
+56	submissionFileId	10	int
+56	fileId	9	int
 56	submissionId	4	int
-56	originalFileName	Introduction: Contexts of Popular Cultur.pdf	string
+56	originalFileName	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
 56	username	bbeaty	string
 57	fileStage	2	int
-57	submissionFileId	12	int
-57	fileId	7	int
+57	submissionFileId	10	int
+57	fileId	9	int
 57	submissionId	4	int
 57	username	bbeaty	string
-57	name	Introduction: Contexts of Popular Cultur.pdf	string
+57	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
 58	fileStage	2	int
 58	sourceSubmissionFileId	\N	string
-58	submissionFileId	12	int
-58	fileId	7	int
+58	submissionFileId	10	int
+58	fileId	9	int
 58	submissionId	4	int
-58	originalFileName	Introduction: Contexts of Popular Cultur.pdf	string
+58	originalFileName	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
 58	username	bbeaty	string
 59	fileStage	2	int
 59	sourceSubmissionFileId	\N	string
-59	submissionFileId	12	int
-59	fileId	7	int
+59	submissionFileId	10	int
+59	fileId	9	int
 59	submissionId	4	int
 59	username	bbeaty	string
-59	originalFileName	Introduction: Contexts of Popular Cultur.pdf	string
-59	name	Introduction: Contexts of Popular Cultur.pdf	string
+59	originalFileName	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
+59	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
 60	fileStage	2	int
 60	sourceSubmissionFileId	\N	string
-60	submissionFileId	13	int
-60	fileId	8	int
+60	submissionFileId	11	int
+60	fileId	10	int
 60	submissionId	4	int
-60	originalFileName	Chapter 1. A Future for Media Studies: C.pdf	string
+60	originalFileName	Chapter 3. Hawkers and Public Space: Fre.pdf	string
 60	username	bbeaty	string
 61	fileStage	2	int
-61	submissionFileId	13	int
-61	fileId	8	int
+61	submissionFileId	11	int
+61	fileId	10	int
 61	submissionId	4	int
 61	username	bbeaty	string
-61	name	Chapter 1. A Future for Media Studies: C.pdf	string
+61	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
 62	fileStage	2	int
 62	sourceSubmissionFileId	\N	string
-62	submissionFileId	13	int
-62	fileId	8	int
+62	submissionFileId	11	int
+62	fileId	10	int
 62	submissionId	4	int
-62	originalFileName	Chapter 1. A Future for Media Studies: C.pdf	string
+62	originalFileName	Chapter 3. Hawkers and Public Space: Fre.pdf	string
 62	username	bbeaty	string
 63	fileStage	2	int
 63	sourceSubmissionFileId	\N	string
-63	submissionFileId	13	int
-63	fileId	8	int
+63	submissionFileId	11	int
+63	fileId	10	int
 63	submissionId	4	int
 63	username	bbeaty	string
-63	originalFileName	Chapter 1. A Future for Media Studies: C.pdf	string
-63	name	Chapter 1. A Future for Media Studies: C.pdf	string
-64	fileStage	2	int
-64	sourceSubmissionFileId	\N	string
-64	submissionFileId	14	int
-64	fileId	9	int
-64	submissionId	4	int
-64	originalFileName	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
-64	username	bbeaty	string
-65	fileStage	2	int
-65	submissionFileId	14	int
-65	fileId	9	int
-65	submissionId	4	int
-65	username	bbeaty	string
-65	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
-66	fileStage	2	int
-66	sourceSubmissionFileId	\N	string
-66	submissionFileId	14	int
-66	fileId	9	int
+63	originalFileName	Chapter 3. Hawkers and Public Space: Fre.pdf	string
+63	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
+66	editorName	Daniel Barnes	string
 66	submissionId	4	int
-66	originalFileName	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
-66	username	bbeaty	string
-67	fileStage	2	int
-67	sourceSubmissionFileId	\N	string
-67	submissionFileId	14	int
-67	fileId	9	int
+66	decision	Send to Internal Review	string
+67	fileStage	19	int
+67	sourceSubmissionFileId	11	int
+67	submissionFileId	12	int
+67	fileId	10	int
 67	submissionId	4	int
-67	username	bbeaty	string
-67	originalFileName	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
-67	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
-68	fileStage	2	int
-68	sourceSubmissionFileId	\N	string
-68	submissionFileId	15	int
+67	originalFileName	Chapter 3. Hawkers and Public Space: Fre.pdf	string
+67	username	dbarnes	string
+68	fileStage	19	int
+68	submissionFileId	12	int
 68	fileId	10	int
 68	submissionId	4	int
-68	originalFileName	Chapter 3. Hawkers and Public Space: Fre.pdf	string
-68	username	bbeaty	string
-69	fileStage	2	int
-69	submissionFileId	15	int
-69	fileId	10	int
+68	username	dbarnes	string
+68	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
+69	fileStage	19	int
+69	sourceSubmissionFileId	10	int
+69	submissionFileId	13	int
+69	fileId	9	int
 69	submissionId	4	int
-69	username	bbeaty	string
-69	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
-70	fileStage	2	int
-70	sourceSubmissionFileId	\N	string
-70	submissionFileId	15	int
-70	fileId	10	int
+69	originalFileName	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
+69	username	dbarnes	string
+70	fileStage	19	int
+70	submissionFileId	13	int
+70	fileId	9	int
 70	submissionId	4	int
-70	originalFileName	Chapter 3. Hawkers and Public Space: Fre.pdf	string
-70	username	bbeaty	string
-71	fileStage	2	int
-71	sourceSubmissionFileId	\N	string
-71	submissionFileId	15	int
-71	fileId	10	int
+70	username	dbarnes	string
+70	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
+71	fileStage	19	int
+71	sourceSubmissionFileId	9	int
+71	submissionFileId	14	int
+71	fileId	8	int
 71	submissionId	4	int
-71	username	bbeaty	string
-71	originalFileName	Chapter 3. Hawkers and Public Space: Fre.pdf	string
-71	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
-74	editorName	Daniel Barnes	string
+71	originalFileName	Chapter 1. A Future for Media Studies: C.pdf	string
+71	username	dbarnes	string
+72	fileStage	19	int
+72	submissionFileId	14	int
+72	fileId	8	int
+72	submissionId	4	int
+72	username	dbarnes	string
+72	name	Chapter 1. A Future for Media Studies: C.pdf	string
+73	fileStage	19	int
+73	sourceSubmissionFileId	8	int
+73	submissionFileId	15	int
+73	fileId	7	int
+73	submissionId	4	int
+73	originalFileName	Introduction: Contexts of Popular Cultur.pdf	string
+73	username	dbarnes	string
+74	fileStage	19	int
+74	submissionFileId	15	int
+74	fileId	7	int
 74	submissionId	4	int
-74	decision	Send to Internal Review	string
-75	fileStage	19	int
-75	sourceSubmissionFileId	15	int
-75	submissionFileId	16	int
-75	fileId	10	int
+74	username	dbarnes	string
+74	name	Introduction: Contexts of Popular Cultur.pdf	string
+75	reviewAssignmentId	4	string
+75	reviewerName	Aisla McCrae	string
 75	submissionId	4	int
-75	originalFileName	Chapter 3. Hawkers and Public Space: Fre.pdf	string
-75	username	dbarnes	string
-76	fileStage	19	int
-76	submissionFileId	16	int
-76	fileId	10	int
+75	stageId	2	int
+75	round	1	int
+76	editorName	Daniel Barnes	string
 76	submissionId	4	int
-76	username	dbarnes	string
-76	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
-77	fileStage	19	int
-77	sourceSubmissionFileId	14	int
-77	submissionFileId	17	int
-77	fileId	9	int
+76	decision	Send to External Review	string
+77	reviewAssignmentId	5	string
+77	reviewerName	Al Zacharia	string
 77	submissionId	4	int
-77	originalFileName	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
-77	username	dbarnes	string
-78	fileStage	19	int
-78	submissionFileId	17	int
-78	fileId	9	int
+77	stageId	3	int
+77	round	1	int
+78	editorName	Daniel Barnes	string
 78	submissionId	4	int
-78	username	dbarnes	string
-78	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
-79	fileStage	19	int
-79	sourceSubmissionFileId	13	int
-79	submissionFileId	18	int
-79	fileId	8	int
-79	submissionId	4	int
-79	originalFileName	Chapter 1. A Future for Media Studies: C.pdf	string
-79	username	dbarnes	string
-80	fileStage	19	int
-80	submissionFileId	18	int
-80	fileId	8	int
+78	decision	Accept Submission	string
+79	name	Maria Fritz	string
+79	username	mfritz	string
+79	userGroupName	Copyeditor	string
+80	editorName	Daniel Barnes	string
 80	submissionId	4	int
-80	username	dbarnes	string
-80	name	Chapter 1. A Future for Media Studies: C.pdf	string
-81	fileStage	19	int
-81	sourceSubmissionFileId	12	int
-81	submissionFileId	19	int
-81	fileId	7	int
-81	submissionId	4	int
-81	originalFileName	Introduction: Contexts of Popular Cultur.pdf	string
-81	username	dbarnes	string
-82	fileStage	19	int
-82	submissionFileId	19	int
-82	fileId	7	int
-82	submissionId	4	int
-82	username	dbarnes	string
-82	name	Introduction: Contexts of Popular Cultur.pdf	string
-83	reviewAssignmentId	4	string
-83	reviewerName	Aisla McCrae	string
-83	submissionId	4	int
-83	stageId	2	int
-83	round	1	int
-84	editorName	Daniel Barnes	string
-84	submissionId	4	int
-84	decision	Send to External Review	string
-85	reviewAssignmentId	5	string
-85	reviewerName	Al Zacharia	string
-85	submissionId	4	int
-85	stageId	3	int
-85	round	1	int
-86	editorName	Daniel Barnes	string
-86	submissionId	4	int
-86	decision	Accept Submission	string
-87	name	Maria Fritz	string
-87	username	mfritz	string
-87	userGroupName	Copyeditor	string
-88	editorName	Daniel Barnes	string
-88	submissionId	4	int
-88	decision	Send To Production	string
-89	name	Graham Cox	string
-89	username	gcox	string
-89	userGroupName	Layout Editor	string
-92	fileStage	2	int
-92	sourceSubmissionFileId	\N	string
-92	submissionFileId	20	int
+80	decision	Send To Production	string
+81	name	Graham Cox	string
+81	username	gcox	string
+81	userGroupName	Layout Editor	string
+84	fileStage	2	int
+84	sourceSubmissionFileId	\N	string
+84	submissionFileId	16	int
+84	fileId	11	int
+84	submissionId	5	int
+84	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+84	username	callan	string
+85	fileStage	2	int
+85	submissionFileId	16	int
+85	fileId	11	int
+85	submissionId	5	int
+85	username	callan	string
+85	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+86	fileStage	2	int
+86	sourceSubmissionFileId	\N	string
+86	submissionFileId	16	int
+86	fileId	11	int
+86	submissionId	5	int
+86	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+86	username	callan	string
+87	fileStage	2	int
+87	sourceSubmissionFileId	\N	string
+87	submissionFileId	16	int
+87	fileId	11	int
+87	submissionId	5	int
+87	username	callan	string
+87	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+87	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+90	editorName	Daniel Barnes	string
+90	submissionId	5	int
+90	decision	Send to Internal Review	string
+91	fileStage	19	int
+91	sourceSubmissionFileId	16	int
+91	submissionFileId	17	int
+91	fileId	11	int
+91	submissionId	5	int
+91	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+91	username	dbarnes	string
+92	fileStage	19	int
+92	submissionFileId	17	int
 92	fileId	11	int
 92	submissionId	5	int
-92	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-92	username	callan	string
-93	fileStage	2	int
-93	submissionFileId	20	int
-93	fileId	11	int
+92	username	dbarnes	string
+92	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+93	reviewAssignmentId	6	string
+93	reviewerName	Paul Hudson	string
 93	submissionId	5	int
-93	username	callan	string
-93	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-94	fileStage	2	int
-94	sourceSubmissionFileId	\N	string
-94	submissionFileId	20	int
-94	fileId	11	int
+93	stageId	2	int
+93	round	1	int
+94	editorName	Daniel Barnes	string
 94	submissionId	5	int
-94	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-94	username	callan	string
-95	fileStage	2	int
-95	sourceSubmissionFileId	\N	string
-95	submissionFileId	20	int
-95	fileId	11	int
+94	decision	Send to External Review	string
+95	reviewAssignmentId	7	string
+95	reviewerName	Gonzalo Favio	string
 95	submissionId	5	int
-95	username	callan	string
-95	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-95	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+95	stageId	3	int
+95	round	1	int
+96	editorName	Daniel Barnes	string
+96	submissionId	5	int
+96	decision	Accept Submission	string
+97	name	Sarah Vogt	string
+97	username	svogt	string
+97	userGroupName	Copyeditor	string
 98	editorName	Daniel Barnes	string
 98	submissionId	5	int
-98	decision	Send to Internal Review	string
-99	fileStage	19	int
-99	sourceSubmissionFileId	20	int
-99	submissionFileId	21	int
-99	fileId	11	int
-99	submissionId	5	int
-99	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-99	username	dbarnes	string
-100	fileStage	19	int
-100	submissionFileId	21	int
-100	fileId	11	int
-100	submissionId	5	int
-100	username	dbarnes	string
-100	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-101	reviewAssignmentId	6	string
-101	reviewerName	Paul Hudson	string
-101	submissionId	5	int
-101	stageId	2	int
-101	round	1	int
-102	editorName	Daniel Barnes	string
+98	decision	Send To Production	string
+99	name	Stephen Hellier	string
+99	username	shellier	string
+99	userGroupName	Layout Editor	string
+100	name	Catherine Turner	string
+100	username	cturner	string
+100	userGroupName	Proofreader	string
+101	formatName	PDF	string
+102	fileStage	10	int
+102	sourceSubmissionFileId	16	int
+102	submissionFileId	18	int
+102	fileId	11	int
 102	submissionId	5	int
-102	decision	Send to External Review	string
-103	reviewAssignmentId	7	string
-103	reviewerName	Gonzalo Favio	string
+102	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+102	username	dbarnes	string
+103	fileStage	10	int
+103	submissionFileId	18	int
+103	fileId	11	int
 103	submissionId	5	int
-103	stageId	3	int
-103	round	1	int
-104	editorName	Daniel Barnes	string
-104	submissionId	5	int
-104	decision	Accept Submission	string
-105	name	Sarah Vogt	string
-105	username	svogt	string
-105	userGroupName	Copyeditor	string
-106	editorName	Daniel Barnes	string
+103	username	dbarnes	string
+103	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+104	publicationFormatName	PDF	string
+105	publicationFormatName	PDF	string
+106	fileStage	10	int
+106	sourceSubmissionFileId	16	int
+106	submissionFileId	18	int
+106	fileId	11	int
 106	submissionId	5	int
-106	decision	Send To Production	string
-107	name	Stephen Hellier	string
-107	username	shellier	string
-107	userGroupName	Layout Editor	string
-108	name	Catherine Turner	string
-108	username	cturner	string
-108	userGroupName	Proofreader	string
-109	formatName	PDF	string
-110	fileStage	10	int
-110	sourceSubmissionFileId	20	int
-110	submissionFileId	22	int
-110	fileId	11	int
-110	submissionId	5	int
-110	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-110	username	dbarnes	string
-111	fileStage	10	int
-111	submissionFileId	22	int
-111	fileId	11	int
-111	submissionId	5	int
-111	username	dbarnes	string
-111	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-112	publicationFormatName	PDF	string
-113	publicationFormatName	PDF	string
-114	fileStage	10	int
-114	sourceSubmissionFileId	20	int
-114	submissionFileId	22	int
-114	fileId	11	int
-114	submissionId	5	int
-114	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-114	username	dbarnes	string
-115	fileStage	10	int
-115	sourceSubmissionFileId	20	int
-115	submissionFileId	22	int
-115	fileId	11	int
-115	submissionId	5	int
-115	username	dbarnes	string
-115	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-115	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-116	file	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-116	name	Daniel Barnes	string
-116	username	dbarnes	string
+106	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+106	username	dbarnes	string
+107	fileStage	10	int
+107	sourceSubmissionFileId	16	int
+107	submissionFileId	18	int
+107	fileId	11	int
+107	submissionId	5	int
+107	username	dbarnes	string
+107	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+107	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+108	file	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+108	name	Daniel Barnes	string
+108	username	dbarnes	string
+112	fileStage	2	int
+112	sourceSubmissionFileId	\N	string
+112	submissionFileId	19	int
+112	fileId	12	int
+112	submissionId	6	int
+112	originalFileName	Identify: Understanding Your Information.pdf	string
+112	username	dbernnard	string
+113	fileStage	2	int
+113	submissionFileId	19	int
+113	fileId	12	int
+113	submissionId	6	int
+113	username	dbernnard	string
+113	name	Identify: Understanding Your Information.pdf	string
+114	fileStage	2	int
+114	sourceSubmissionFileId	\N	string
+114	submissionFileId	19	int
+114	fileId	12	int
+114	submissionId	6	int
+114	originalFileName	Identify: Understanding Your Information.pdf	string
+114	username	dbernnard	string
+115	fileStage	2	int
+115	sourceSubmissionFileId	\N	string
+115	submissionFileId	19	int
+115	fileId	12	int
+115	submissionId	6	int
+115	username	dbernnard	string
+115	originalFileName	Identify: Understanding Your Information.pdf	string
+115	name	Identify: Understanding Your Information.pdf	string
+116	fileStage	2	int
+116	sourceSubmissionFileId	\N	string
+116	submissionFileId	20	int
+116	fileId	13	int
+116	submissionId	6	int
+116	originalFileName	Scope: Knowing What Is Available.pdf	string
+116	username	dbernnard	string
+117	fileStage	2	int
+117	submissionFileId	20	int
+117	fileId	13	int
+117	submissionId	6	int
+117	username	dbernnard	string
+117	name	Scope: Knowing What Is Available.pdf	string
+118	fileStage	2	int
+118	sourceSubmissionFileId	\N	string
+118	submissionFileId	20	int
+118	fileId	13	int
+118	submissionId	6	int
+118	originalFileName	Scope: Knowing What Is Available.pdf	string
+118	username	dbernnard	string
+119	fileStage	2	int
+119	sourceSubmissionFileId	\N	string
+119	submissionFileId	20	int
+119	fileId	13	int
+119	submissionId	6	int
+119	username	dbernnard	string
+119	originalFileName	Scope: Knowing What Is Available.pdf	string
+119	name	Scope: Knowing What Is Available.pdf	string
 120	fileStage	2	int
 120	sourceSubmissionFileId	\N	string
-120	submissionFileId	23	int
-120	fileId	12	int
+120	submissionFileId	21	int
+120	fileId	14	int
 120	submissionId	6	int
-120	originalFileName	Identify: Understanding Your Information.pdf	string
+120	originalFileName	Plan: Developing Research Strategies.pdf	string
 120	username	dbernnard	string
 121	fileStage	2	int
-121	submissionFileId	23	int
-121	fileId	12	int
+121	submissionFileId	21	int
+121	fileId	14	int
 121	submissionId	6	int
 121	username	dbernnard	string
-121	name	Identify: Understanding Your Information.pdf	string
+121	name	Plan: Developing Research Strategies.pdf	string
 122	fileStage	2	int
 122	sourceSubmissionFileId	\N	string
-122	submissionFileId	23	int
-122	fileId	12	int
+122	submissionFileId	21	int
+122	fileId	14	int
 122	submissionId	6	int
-122	originalFileName	Identify: Understanding Your Information.pdf	string
+122	originalFileName	Plan: Developing Research Strategies.pdf	string
 122	username	dbernnard	string
 123	fileStage	2	int
 123	sourceSubmissionFileId	\N	string
-123	submissionFileId	23	int
-123	fileId	12	int
+123	submissionFileId	21	int
+123	fileId	14	int
 123	submissionId	6	int
 123	username	dbernnard	string
-123	originalFileName	Identify: Understanding Your Information.pdf	string
-123	name	Identify: Understanding Your Information.pdf	string
+123	originalFileName	Plan: Developing Research Strategies.pdf	string
+123	name	Plan: Developing Research Strategies.pdf	string
 124	fileStage	2	int
 124	sourceSubmissionFileId	\N	string
-124	submissionFileId	24	int
-124	fileId	13	int
+124	submissionFileId	22	int
+124	fileId	15	int
 124	submissionId	6	int
-124	originalFileName	Scope: Knowing What Is Available.pdf	string
+124	originalFileName	Gather: Finding What You Need.pdf	string
 124	username	dbernnard	string
 125	fileStage	2	int
-125	submissionFileId	24	int
-125	fileId	13	int
+125	submissionFileId	22	int
+125	fileId	15	int
 125	submissionId	6	int
 125	username	dbernnard	string
-125	name	Scope: Knowing What Is Available.pdf	string
+125	name	Gather: Finding What You Need.pdf	string
 126	fileStage	2	int
 126	sourceSubmissionFileId	\N	string
-126	submissionFileId	24	int
-126	fileId	13	int
+126	submissionFileId	22	int
+126	fileId	15	int
 126	submissionId	6	int
-126	originalFileName	Scope: Knowing What Is Available.pdf	string
+174	submissionFileId	32	int
+126	originalFileName	Gather: Finding What You Need.pdf	string
 126	username	dbernnard	string
 127	fileStage	2	int
 127	sourceSubmissionFileId	\N	string
-127	submissionFileId	24	int
-127	fileId	13	int
+127	submissionFileId	22	int
+127	fileId	15	int
 127	submissionId	6	int
 127	username	dbernnard	string
-127	originalFileName	Scope: Knowing What Is Available.pdf	string
-127	name	Scope: Knowing What Is Available.pdf	string
-128	fileStage	2	int
-128	sourceSubmissionFileId	\N	string
-128	submissionFileId	25	int
-128	fileId	14	int
-128	submissionId	6	int
-128	originalFileName	Plan: Developing Research Strategies.pdf	string
-128	username	dbernnard	string
-129	fileStage	2	int
-129	submissionFileId	25	int
-129	fileId	14	int
-129	submissionId	6	int
-129	username	dbernnard	string
-129	name	Plan: Developing Research Strategies.pdf	string
-130	fileStage	2	int
-130	sourceSubmissionFileId	\N	string
-130	submissionFileId	25	int
-130	fileId	14	int
+127	originalFileName	Gather: Finding What You Need.pdf	string
+127	name	Gather: Finding What You Need.pdf	string
+130	editorName	Daniel Barnes	string
 130	submissionId	6	int
-130	originalFileName	Plan: Developing Research Strategies.pdf	string
-130	username	dbernnard	string
-131	fileStage	2	int
-131	sourceSubmissionFileId	\N	string
-131	submissionFileId	25	int
-131	fileId	14	int
+130	decision	Send to Internal Review	string
+131	fileStage	19	int
+131	sourceSubmissionFileId	22	int
+131	submissionFileId	23	int
+131	fileId	15	int
 131	submissionId	6	int
-131	username	dbernnard	string
-131	originalFileName	Plan: Developing Research Strategies.pdf	string
-131	name	Plan: Developing Research Strategies.pdf	string
-132	fileStage	2	int
-132	sourceSubmissionFileId	\N	string
-132	submissionFileId	26	int
+131	originalFileName	Gather: Finding What You Need.pdf	string
+131	username	dbarnes	string
+132	fileStage	19	int
+132	submissionFileId	23	int
 132	fileId	15	int
 132	submissionId	6	int
-132	originalFileName	Gather: Finding What You Need.pdf	string
-132	username	dbernnard	string
-133	fileStage	2	int
-133	submissionFileId	26	int
-133	fileId	15	int
+132	username	dbarnes	string
+132	name	Gather: Finding What You Need.pdf	string
+133	fileStage	19	int
+133	sourceSubmissionFileId	21	int
+133	submissionFileId	24	int
+133	fileId	14	int
 133	submissionId	6	int
-133	username	dbernnard	string
-133	name	Gather: Finding What You Need.pdf	string
-134	fileStage	2	int
-134	sourceSubmissionFileId	\N	string
-134	submissionFileId	26	int
-134	fileId	15	int
+133	originalFileName	Plan: Developing Research Strategies.pdf	string
+133	username	dbarnes	string
+134	fileStage	19	int
+134	submissionFileId	24	int
+134	fileId	14	int
 134	submissionId	6	int
-134	originalFileName	Gather: Finding What You Need.pdf	string
-134	username	dbernnard	string
-135	fileStage	2	int
-135	sourceSubmissionFileId	\N	string
-135	submissionFileId	26	int
-135	fileId	15	int
+134	username	dbarnes	string
+134	name	Plan: Developing Research Strategies.pdf	string
+135	fileStage	19	int
+135	sourceSubmissionFileId	20	int
+135	submissionFileId	25	int
+135	fileId	13	int
 135	submissionId	6	int
-135	username	dbernnard	string
-135	originalFileName	Gather: Finding What You Need.pdf	string
-135	name	Gather: Finding What You Need.pdf	string
-138	editorName	Daniel Barnes	string
+135	originalFileName	Scope: Knowing What Is Available.pdf	string
+135	username	dbarnes	string
+136	fileStage	19	int
+136	submissionFileId	25	int
+136	fileId	13	int
+136	submissionId	6	int
+136	username	dbarnes	string
+136	name	Scope: Knowing What Is Available.pdf	string
+137	fileStage	19	int
+137	sourceSubmissionFileId	19	int
+137	submissionFileId	26	int
+137	fileId	12	int
+137	submissionId	6	int
+137	originalFileName	Identify: Understanding Your Information.pdf	string
+137	username	dbarnes	string
+138	fileStage	19	int
+138	submissionFileId	26	int
+138	fileId	12	int
 138	submissionId	6	int
-138	decision	Send to Internal Review	string
-139	fileStage	19	int
-139	sourceSubmissionFileId	26	int
-139	submissionFileId	27	int
-139	fileId	15	int
-139	submissionId	6	int
-139	originalFileName	Gather: Finding What You Need.pdf	string
-139	username	dbarnes	string
-140	fileStage	19	int
-140	submissionFileId	27	int
-140	fileId	15	int
+138	username	dbarnes	string
+138	name	Identify: Understanding Your Information.pdf	string
+139	name	Minoti Inoue	string
+139	username	minoue	string
+139	userGroupName	Series editor	string
+140	editorName	Minoti Inoue	string
 140	submissionId	6	int
-140	username	dbarnes	string
-140	name	Gather: Finding What You Need.pdf	string
-141	fileStage	19	int
-141	sourceSubmissionFileId	25	int
-141	submissionFileId	28	int
-141	fileId	14	int
-141	submissionId	6	int
-141	originalFileName	Plan: Developing Research Strategies.pdf	string
-141	username	dbarnes	string
-142	fileStage	19	int
-142	submissionFileId	28	int
-142	fileId	14	int
-142	submissionId	6	int
-142	username	dbarnes	string
-142	name	Plan: Developing Research Strategies.pdf	string
-143	fileStage	19	int
-143	sourceSubmissionFileId	24	int
-143	submissionFileId	29	int
-143	fileId	13	int
-143	submissionId	6	int
-143	originalFileName	Scope: Knowing What Is Available.pdf	string
-143	username	dbarnes	string
-144	fileStage	19	int
-144	submissionFileId	29	int
-144	fileId	13	int
-144	submissionId	6	int
-144	username	dbarnes	string
-144	name	Scope: Knowing What Is Available.pdf	string
-145	fileStage	19	int
-145	sourceSubmissionFileId	23	int
-145	submissionFileId	30	int
-145	fileId	12	int
-145	submissionId	6	int
-145	originalFileName	Identify: Understanding Your Information.pdf	string
-145	username	dbarnes	string
-146	fileStage	19	int
-146	submissionFileId	30	int
-146	fileId	12	int
-146	submissionId	6	int
-146	username	dbarnes	string
-146	name	Identify: Understanding Your Information.pdf	string
-147	name	Minoti Inoue	string
-147	username	minoue	string
-147	userGroupName	Series editor	string
-148	editorName	Minoti Inoue	string
-148	submissionId	6	int
-148	decision	Send to External Review	string
+140	decision	Send to External Review	string
+143	fileStage	2	int
+143	sourceSubmissionFileId	\N	string
+143	submissionFileId	27	int
+143	fileId	16	int
+143	submissionId	7	int
+143	originalFileName	Introduction.pdf	string
+143	username	dkennepohl	string
+144	fileStage	2	int
+144	submissionFileId	27	int
+144	fileId	16	int
+144	submissionId	7	int
+144	username	dkennepohl	string
+144	name	Introduction.pdf	string
+145	fileStage	2	int
+145	sourceSubmissionFileId	\N	string
+145	submissionFileId	27	int
+145	fileId	16	int
+145	submissionId	7	int
+145	originalFileName	Introduction.pdf	string
+145	username	dkennepohl	string
+146	fileStage	2	int
+146	sourceSubmissionFileId	\N	string
+146	submissionFileId	27	int
+146	fileId	16	int
+146	submissionId	7	int
+146	username	dkennepohl	string
+146	originalFileName	Introduction.pdf	string
+146	name	Introduction.pdf	string
+147	fileStage	2	int
+147	sourceSubmissionFileId	\N	string
+147	submissionFileId	28	int
+147	fileId	17	int
+147	submissionId	7	int
+147	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
+147	username	dkennepohl	string
+148	fileStage	2	int
+148	submissionFileId	28	int
+148	fileId	17	int
+148	submissionId	7	int
+148	username	dkennepohl	string
+148	name	Chapter 1: Interactions Affording Distan.pdf	string
+149	fileStage	2	int
+149	sourceSubmissionFileId	\N	string
+149	submissionFileId	28	int
+149	fileId	17	int
+149	submissionId	7	int
+149	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
+149	username	dkennepohl	string
+150	fileStage	2	int
+150	sourceSubmissionFileId	\N	string
+150	submissionFileId	28	int
+150	fileId	17	int
+150	submissionId	7	int
+150	username	dkennepohl	string
+150	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
+150	name	Chapter 1: Interactions Affording Distan.pdf	string
 151	fileStage	2	int
 151	sourceSubmissionFileId	\N	string
-151	submissionFileId	31	int
-151	fileId	16	int
+151	submissionFileId	29	int
+151	fileId	18	int
 151	submissionId	7	int
-151	originalFileName	Introduction.pdf	string
+151	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
 151	username	dkennepohl	string
 152	fileStage	2	int
-152	submissionFileId	31	int
-152	fileId	16	int
+152	submissionFileId	29	int
+152	fileId	18	int
 152	submissionId	7	int
 152	username	dkennepohl	string
-152	name	Introduction.pdf	string
+152	name	Chapter 2: Learning Science at a Distanc.pdf	string
 153	fileStage	2	int
 153	sourceSubmissionFileId	\N	string
-153	submissionFileId	31	int
-153	fileId	16	int
+153	submissionFileId	29	int
+153	fileId	18	int
 153	submissionId	7	int
-153	originalFileName	Introduction.pdf	string
+153	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
 153	username	dkennepohl	string
 154	fileStage	2	int
 154	sourceSubmissionFileId	\N	string
-154	submissionFileId	31	int
-154	fileId	16	int
+154	submissionFileId	29	int
+154	fileId	18	int
 154	submissionId	7	int
 154	username	dkennepohl	string
-154	originalFileName	Introduction.pdf	string
-154	name	Introduction.pdf	string
+154	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
+154	name	Chapter 2: Learning Science at a Distanc.pdf	string
 155	fileStage	2	int
 155	sourceSubmissionFileId	\N	string
-155	submissionFileId	32	int
-155	fileId	17	int
+155	submissionFileId	30	int
+155	fileId	19	int
 155	submissionId	7	int
-155	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
+155	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
 155	username	dkennepohl	string
 156	fileStage	2	int
-156	submissionFileId	32	int
-156	fileId	17	int
+156	submissionFileId	30	int
+156	fileId	19	int
 156	submissionId	7	int
 156	username	dkennepohl	string
-156	name	Chapter 1: Interactions Affording Distan.pdf	string
+156	name	Chapter 3: Leadership Strategies for Coo.pdf	string
 157	fileStage	2	int
 157	sourceSubmissionFileId	\N	string
-157	submissionFileId	32	int
-157	fileId	17	int
+157	submissionFileId	30	int
+157	fileId	19	int
 157	submissionId	7	int
-157	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
+157	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
 157	username	dkennepohl	string
 158	fileStage	2	int
 158	sourceSubmissionFileId	\N	string
-158	submissionFileId	32	int
-158	fileId	17	int
+158	submissionFileId	30	int
+158	fileId	19	int
 158	submissionId	7	int
 158	username	dkennepohl	string
-158	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
-158	name	Chapter 1: Interactions Affording Distan.pdf	string
+158	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
+158	name	Chapter 3: Leadership Strategies for Coo.pdf	string
 159	fileStage	2	int
 159	sourceSubmissionFileId	\N	string
-159	submissionFileId	33	int
-159	fileId	18	int
+159	submissionFileId	31	int
+159	fileId	20	int
 159	submissionId	7	int
-159	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
+159	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
 159	username	dkennepohl	string
 160	fileStage	2	int
-160	submissionFileId	33	int
-160	fileId	18	int
+160	submissionFileId	31	int
+160	fileId	20	int
 160	submissionId	7	int
 160	username	dkennepohl	string
-160	name	Chapter 2: Learning Science at a Distanc.pdf	string
+160	name	Chapter 4: Toward New Models of Flexible.pdf	string
 161	fileStage	2	int
 161	sourceSubmissionFileId	\N	string
-161	submissionFileId	33	int
-161	fileId	18	int
+161	submissionFileId	31	int
+161	fileId	20	int
 161	submissionId	7	int
-161	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
+161	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
 161	username	dkennepohl	string
 162	fileStage	2	int
 162	sourceSubmissionFileId	\N	string
-162	submissionFileId	33	int
-162	fileId	18	int
+162	submissionFileId	31	int
+162	fileId	20	int
 162	submissionId	7	int
 162	username	dkennepohl	string
-162	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
-162	name	Chapter 2: Learning Science at a Distanc.pdf	string
-163	fileStage	2	int
-163	sourceSubmissionFileId	\N	string
-163	submissionFileId	34	int
-163	fileId	19	int
-163	submissionId	7	int
-163	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
-163	username	dkennepohl	string
-164	fileStage	2	int
-164	submissionFileId	34	int
-164	fileId	19	int
-164	submissionId	7	int
-164	username	dkennepohl	string
-164	name	Chapter 3: Leadership Strategies for Coo.pdf	string
-165	fileStage	2	int
-165	sourceSubmissionFileId	\N	string
-165	submissionFileId	34	int
-165	fileId	19	int
+162	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
+162	name	Chapter 4: Toward New Models of Flexible.pdf	string
+165	editorName	Daniel Barnes	string
 165	submissionId	7	int
-165	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
-165	username	dkennepohl	string
-166	fileStage	2	int
-166	sourceSubmissionFileId	\N	string
-166	submissionFileId	34	int
-166	fileId	19	int
+165	decision	Send to External Review	string
+166	reviewAssignmentId	8	string
+166	reviewerName	Adela Gallego	string
 166	submissionId	7	int
-166	username	dkennepohl	string
-166	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
-166	name	Chapter 3: Leadership Strategies for Coo.pdf	string
-167	fileStage	2	int
-167	sourceSubmissionFileId	\N	string
-167	submissionFileId	35	int
-167	fileId	20	int
+166	stageId	3	int
+166	round	1	int
+167	editorName	Daniel Barnes	string
 167	submissionId	7	int
-167	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
-167	username	dkennepohl	string
-168	fileStage	2	int
-168	submissionFileId	35	int
-168	fileId	20	int
-168	submissionId	7	int
-168	username	dkennepohl	string
-197	submissionId	9	int
-168	name	Chapter 4: Toward New Models of Flexible.pdf	string
-169	fileStage	2	int
-169	sourceSubmissionFileId	\N	string
-169	submissionFileId	35	int
-169	fileId	20	int
-169	submissionId	7	int
-169	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
-169	username	dkennepohl	string
-170	fileStage	2	int
-170	sourceSubmissionFileId	\N	string
-170	submissionFileId	35	int
-170	fileId	20	int
-170	submissionId	7	int
-170	username	dkennepohl	string
-170	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
-170	name	Chapter 4: Toward New Models of Flexible.pdf	string
-173	editorName	Daniel Barnes	string
-173	submissionId	7	int
-173	decision	Send to External Review	string
-174	fileStage	4	int
-174	sourceSubmissionFileId	31	int
-174	submissionFileId	36	int
-174	fileId	16	int
-174	submissionId	7	int
-174	originalFileName	Introduction.pdf	string
+167	decision	Accept Submission	string
+168	name	Maria Fritz	string
+168	username	mfritz	string
+168	userGroupName	Copyeditor	string
+171	fileStage	2	int
+171	sourceSubmissionFileId	\N	string
+171	submissionFileId	32	int
+171	fileId	21	int
+171	submissionId	8	int
+171	originalFileName	Editorial.pdf	string
+171	username	dbarnes	string
+172	fileStage	2	int
+172	submissionFileId	32	int
+172	fileId	21	int
+172	submissionId	8	int
+172	username	dbarnes	string
+172	name	Editorial.pdf	string
+173	fileStage	2	int
+173	sourceSubmissionFileId	\N	string
+173	submissionFileId	32	int
+173	fileId	21	int
+173	submissionId	8	int
+173	originalFileName	Editorial.pdf	string
+173	username	dbarnes	string
+174	fileStage	2	int
+174	sourceSubmissionFileId	\N	string
+174	fileId	21	int
+174	submissionId	8	int
 174	username	dbarnes	string
-175	fileStage	4	int
-175	submissionFileId	36	int
-175	fileId	16	int
-175	submissionId	7	int
-175	username	dbarnes	string
-175	name	Introduction.pdf	string
-176	fileStage	4	int
-176	sourceSubmissionFileId	32	int
-176	submissionFileId	37	int
-176	fileId	17	int
-176	submissionId	7	int
-176	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
-176	username	dbarnes	string
-177	fileStage	4	int
-177	submissionFileId	37	int
-177	fileId	17	int
-177	submissionId	7	int
-177	username	dbarnes	string
-177	name	Chapter 1: Interactions Affording Distan.pdf	string
-178	fileStage	4	int
-178	sourceSubmissionFileId	33	int
-178	submissionFileId	38	int
-178	fileId	18	int
-178	submissionId	7	int
-178	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
-178	username	dbarnes	string
-179	fileStage	4	int
-179	submissionFileId	38	int
-179	fileId	18	int
-179	submissionId	7	int
-179	username	dbarnes	string
-179	name	Chapter 2: Learning Science at a Distanc.pdf	string
-180	fileStage	4	int
-180	sourceSubmissionFileId	34	int
-180	submissionFileId	39	int
-180	fileId	19	int
-180	submissionId	7	int
-180	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
-180	username	dbarnes	string
-181	fileStage	4	int
-181	submissionFileId	39	int
-181	fileId	19	int
-181	submissionId	7	int
-181	username	dbarnes	string
-181	name	Chapter 3: Leadership Strategies for Coo.pdf	string
-182	fileStage	4	int
-182	sourceSubmissionFileId	35	int
-182	submissionFileId	40	int
-182	fileId	20	int
-182	submissionId	7	int
-182	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
-182	username	dbarnes	string
-183	fileStage	4	int
-183	submissionFileId	40	int
-183	fileId	20	int
-183	submissionId	7	int
-183	username	dbarnes	string
-183	name	Chapter 4: Toward New Models of Flexible.pdf	string
-184	reviewAssignmentId	8	string
-184	reviewerName	Adela Gallego	string
-184	submissionId	7	int
-184	stageId	3	int
-184	round	1	int
-185	editorName	Daniel Barnes	string
-185	submissionId	7	int
-185	decision	Accept Submission	string
-186	name	Maria Fritz	string
-186	username	mfritz	string
-186	userGroupName	Copyeditor	string
+174	originalFileName	Editorial.pdf	string
+174	name	Editorial.pdf	string
+179	fileStage	2	int
+179	sourceSubmissionFileId	\N	string
+179	submissionFileId	33	int
+179	fileId	22	int
+179	submissionId	9	int
+179	originalFileName	Internet, openness and the future of the.pdf	string
+179	username	fperini	string
+180	fileStage	2	int
+180	submissionFileId	33	int
+180	fileId	22	int
+180	submissionId	9	int
+180	username	fperini	string
+180	name	Internet, openness and the future of the.pdf	string
+181	fileStage	2	int
+181	sourceSubmissionFileId	\N	string
+181	submissionFileId	33	int
+181	fileId	22	int
+181	submissionId	9	int
+181	originalFileName	Internet, openness and the future of the.pdf	string
+181	username	fperini	string
+182	fileStage	2	int
+182	sourceSubmissionFileId	\N	string
+182	submissionFileId	33	int
+182	fileId	22	int
+182	submissionId	9	int
+182	username	fperini	string
+182	originalFileName	Internet, openness and the future of the.pdf	string
+182	name	Internet, openness and the future of the.pdf	string
+183	fileStage	2	int
+183	sourceSubmissionFileId	\N	string
+183	submissionFileId	34	int
+183	fileId	23	int
+183	submissionId	9	int
+183	originalFileName	Imagining the Internet: Open, closed or .pdf	string
+183	username	fperini	string
+184	fileStage	2	int
+184	submissionFileId	34	int
+184	fileId	23	int
+184	submissionId	9	int
+184	username	fperini	string
+184	name	Imagining the Internet: Open, closed or .pdf	string
+185	fileStage	2	int
+185	sourceSubmissionFileId	\N	string
+185	submissionFileId	34	int
+185	fileId	23	int
+185	submissionId	9	int
+185	originalFileName	Imagining the Internet: Open, closed or .pdf	string
+185	username	fperini	string
+186	fileStage	2	int
+186	sourceSubmissionFileId	\N	string
+186	submissionFileId	34	int
+186	fileId	23	int
+186	submissionId	9	int
+186	username	fperini	string
+186	originalFileName	Imagining the Internet: Open, closed or .pdf	string
+186	name	Imagining the Internet: Open, closed or .pdf	string
+187	fileStage	2	int
+187	sourceSubmissionFileId	\N	string
+187	submissionFileId	35	int
+187	fileId	24	int
+187	submissionId	9	int
+187	originalFileName	The internet in LAC will remain free, pu.pdf	string
+187	username	fperini	string
+188	fileStage	2	int
+188	submissionFileId	35	int
+188	fileId	24	int
+188	submissionId	9	int
+188	username	fperini	string
+188	name	The internet in LAC will remain free, pu.pdf	string
 189	fileStage	2	int
 189	sourceSubmissionFileId	\N	string
-189	submissionFileId	41	int
-189	fileId	21	int
-189	submissionId	8	int
-189	originalFileName	Editorial.pdf	string
-189	username	dbarnes	string
+189	submissionFileId	35	int
+189	fileId	24	int
+189	submissionId	9	int
+189	originalFileName	The internet in LAC will remain free, pu.pdf	string
+189	username	fperini	string
 190	fileStage	2	int
-190	submissionFileId	41	int
-190	fileId	21	int
-190	submissionId	8	int
-190	username	dbarnes	string
-190	name	Editorial.pdf	string
+190	sourceSubmissionFileId	\N	string
+190	submissionFileId	35	int
+190	fileId	24	int
+190	submissionId	9	int
+190	username	fperini	string
+190	originalFileName	The internet in LAC will remain free, pu.pdf	string
+190	name	The internet in LAC will remain free, pu.pdf	string
 191	fileStage	2	int
 191	sourceSubmissionFileId	\N	string
-191	submissionFileId	41	int
-191	fileId	21	int
-191	submissionId	8	int
-191	originalFileName	Editorial.pdf	string
-191	username	dbarnes	string
+191	submissionFileId	36	int
+191	fileId	25	int
+191	submissionId	9	int
+191	originalFileName	Free Internet?.pdf	string
+191	username	fperini	string
 192	fileStage	2	int
-192	sourceSubmissionFileId	\N	string
-192	submissionFileId	41	int
-192	fileId	21	int
-192	submissionId	8	int
-192	username	dbarnes	string
-192	originalFileName	Editorial.pdf	string
-192	name	Editorial.pdf	string
+192	submissionFileId	36	int
+192	fileId	25	int
+192	submissionId	9	int
+192	username	fperini	string
+192	name	Free Internet?.pdf	string
+193	fileStage	2	int
+193	sourceSubmissionFileId	\N	string
+193	submissionFileId	36	int
+193	fileId	25	int
+193	submissionId	9	int
+193	originalFileName	Free Internet?.pdf	string
+193	username	fperini	string
+194	fileStage	2	int
+194	sourceSubmissionFileId	\N	string
+194	submissionFileId	36	int
+194	fileId	25	int
+194	submissionId	9	int
+194	username	fperini	string
+194	originalFileName	Free Internet?.pdf	string
+194	name	Free Internet?.pdf	string
+195	fileStage	2	int
+195	sourceSubmissionFileId	\N	string
+195	submissionFileId	37	int
+195	fileId	26	int
+195	submissionId	9	int
+195	originalFileName	Risks and challenges for freedom of expr.pdf	string
+195	username	fperini	string
+196	fileStage	2	int
+196	submissionFileId	37	int
+196	fileId	26	int
+196	submissionId	9	int
+196	username	fperini	string
+196	name	Risks and challenges for freedom of expr.pdf	string
 197	fileStage	2	int
 197	sourceSubmissionFileId	\N	string
-197	submissionFileId	42	int
-197	fileId	22	int
-197	originalFileName	Internet, openness and the future of the.pdf	string
+197	submissionFileId	37	int
+197	fileId	26	int
+197	submissionId	9	int
+197	originalFileName	Risks and challenges for freedom of expr.pdf	string
 197	username	fperini	string
 198	fileStage	2	int
-198	submissionFileId	42	int
-198	fileId	22	int
+198	sourceSubmissionFileId	\N	string
+198	submissionFileId	37	int
+198	fileId	26	int
 198	submissionId	9	int
 198	username	fperini	string
-198	name	Internet, openness and the future of the.pdf	string
-199	fileStage	2	int
-199	sourceSubmissionFileId	\N	string
-199	submissionFileId	42	int
-199	fileId	22	int
-199	submissionId	9	int
-199	originalFileName	Internet, openness and the future of the.pdf	string
-199	username	fperini	string
-200	fileStage	2	int
-200	sourceSubmissionFileId	\N	string
-200	submissionFileId	42	int
-200	fileId	22	int
-200	submissionId	9	int
-200	username	fperini	string
-200	originalFileName	Internet, openness and the future of the.pdf	string
-200	name	Internet, openness and the future of the.pdf	string
-201	fileStage	2	int
-201	sourceSubmissionFileId	\N	string
-201	submissionFileId	43	int
-201	fileId	23	int
+198	originalFileName	Risks and challenges for freedom of expr.pdf	string
+198	name	Risks and challenges for freedom of expr.pdf	string
+201	editorName	Daniel Barnes	string
 201	submissionId	9	int
-201	originalFileName	Imagining the Internet: Open, closed or .pdf	string
-201	username	fperini	string
-202	fileStage	2	int
-202	submissionFileId	43	int
-202	fileId	23	int
+201	decision	Send to Internal Review	string
+202	fileStage	19	int
+202	sourceSubmissionFileId	33	int
+202	submissionFileId	38	int
+202	fileId	22	int
 202	submissionId	9	int
-202	username	fperini	string
-202	name	Imagining the Internet: Open, closed or .pdf	string
-203	fileStage	2	int
-203	sourceSubmissionFileId	\N	string
-203	submissionFileId	43	int
-203	fileId	23	int
+202	originalFileName	Internet, openness and the future of the.pdf	string
+202	username	dbarnes	string
+203	fileStage	19	int
+203	submissionFileId	38	int
+203	fileId	22	int
 203	submissionId	9	int
-203	originalFileName	Imagining the Internet: Open, closed or .pdf	string
-203	username	fperini	string
-204	fileStage	2	int
-204	sourceSubmissionFileId	\N	string
-204	submissionFileId	43	int
+203	username	dbarnes	string
+203	name	Internet, openness and the future of the.pdf	string
+204	fileStage	19	int
+204	sourceSubmissionFileId	34	int
+204	submissionFileId	39	int
 204	fileId	23	int
 204	submissionId	9	int
-204	username	fperini	string
 204	originalFileName	Imagining the Internet: Open, closed or .pdf	string
-204	name	Imagining the Internet: Open, closed or .pdf	string
-205	fileStage	2	int
-205	sourceSubmissionFileId	\N	string
-205	submissionFileId	44	int
-205	fileId	24	int
+204	username	dbarnes	string
+205	fileStage	19	int
+205	submissionFileId	39	int
+205	fileId	23	int
 205	submissionId	9	int
-205	originalFileName	The internet in LAC will remain free, pu.pdf	string
-205	username	fperini	string
-206	fileStage	2	int
-206	submissionFileId	44	int
+205	username	dbarnes	string
+205	name	Imagining the Internet: Open, closed or .pdf	string
+206	fileStage	19	int
+206	sourceSubmissionFileId	35	int
+206	submissionFileId	40	int
 206	fileId	24	int
 206	submissionId	9	int
-206	username	fperini	string
-206	name	The internet in LAC will remain free, pu.pdf	string
-207	fileStage	2	int
-207	sourceSubmissionFileId	\N	string
-207	submissionFileId	44	int
+206	originalFileName	The internet in LAC will remain free, pu.pdf	string
+206	username	dbarnes	string
+207	fileStage	19	int
+207	submissionFileId	40	int
 207	fileId	24	int
 207	submissionId	9	int
-207	originalFileName	The internet in LAC will remain free, pu.pdf	string
-207	username	fperini	string
-208	fileStage	2	int
-208	sourceSubmissionFileId	\N	string
-208	submissionFileId	44	int
-208	fileId	24	int
+207	username	dbarnes	string
+207	name	The internet in LAC will remain free, pu.pdf	string
+208	fileStage	19	int
+208	sourceSubmissionFileId	36	int
+208	submissionFileId	41	int
+208	fileId	25	int
 208	submissionId	9	int
-208	username	fperini	string
-208	originalFileName	The internet in LAC will remain free, pu.pdf	string
-208	name	The internet in LAC will remain free, pu.pdf	string
-209	fileStage	2	int
-209	sourceSubmissionFileId	\N	string
-209	submissionFileId	45	int
+208	originalFileName	Free Internet?.pdf	string
+208	username	dbarnes	string
+209	fileStage	19	int
+209	submissionFileId	41	int
 209	fileId	25	int
 209	submissionId	9	int
-209	originalFileName	Free Internet?.pdf	string
-209	username	fperini	string
-210	fileStage	2	int
-210	submissionFileId	45	int
-210	fileId	25	int
+209	username	dbarnes	string
+209	name	Free Internet?.pdf	string
+210	fileStage	19	int
+210	sourceSubmissionFileId	37	int
+210	submissionFileId	42	int
+210	fileId	26	int
 210	submissionId	9	int
-210	username	fperini	string
-210	name	Free Internet?.pdf	string
-211	fileStage	2	int
-211	sourceSubmissionFileId	\N	string
-211	submissionFileId	45	int
-211	fileId	25	int
+210	originalFileName	Risks and challenges for freedom of expr.pdf	string
+210	username	dbarnes	string
+211	fileStage	19	int
+211	submissionFileId	42	int
+211	fileId	26	int
 211	submissionId	9	int
-211	originalFileName	Free Internet?.pdf	string
-211	username	fperini	string
-212	fileStage	2	int
-212	sourceSubmissionFileId	\N	string
-212	submissionFileId	45	int
-212	fileId	25	int
-212	submissionId	9	int
-212	username	fperini	string
-212	originalFileName	Free Internet?.pdf	string
-212	name	Free Internet?.pdf	string
-213	fileStage	2	int
-213	sourceSubmissionFileId	\N	string
-213	submissionFileId	46	int
-213	fileId	26	int
-213	submissionId	9	int
-213	originalFileName	Risks and challenges for freedom of expr.pdf	string
-213	username	fperini	string
+211	username	dbarnes	string
+211	name	Risks and challenges for freedom of expr.pdf	string
 214	fileStage	2	int
-214	submissionFileId	46	int
-214	fileId	26	int
-214	submissionId	9	int
-214	username	fperini	string
-214	name	Risks and challenges for freedom of expr.pdf	string
+214	sourceSubmissionFileId	\N	string
+214	submissionFileId	43	int
+214	fileId	27	int
+214	submissionId	10	int
+214	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
+214	username	jbrower	string
 215	fileStage	2	int
-215	sourceSubmissionFileId	\N	string
-215	submissionFileId	46	int
-215	fileId	26	int
-215	submissionId	9	int
-215	originalFileName	Risks and challenges for freedom of expr.pdf	string
-215	username	fperini	string
+215	submissionFileId	43	int
+215	fileId	27	int
+215	submissionId	10	int
+215	username	jbrower	string
+215	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
 216	fileStage	2	int
 216	sourceSubmissionFileId	\N	string
-216	submissionFileId	46	int
-216	fileId	26	int
-216	submissionId	9	int
-216	username	fperini	string
-216	originalFileName	Risks and challenges for freedom of expr.pdf	string
-216	name	Risks and challenges for freedom of expr.pdf	string
-219	editorName	Daniel Barnes	string
-219	submissionId	9	int
-219	decision	Send to Internal Review	string
+216	submissionFileId	43	int
+216	fileId	27	int
+216	submissionId	10	int
+216	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
+216	username	jbrower	string
+217	fileStage	2	int
+217	sourceSubmissionFileId	\N	string
+217	submissionFileId	43	int
+217	fileId	27	int
+217	submissionId	10	int
+217	username	jbrower	string
+217	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
+217	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
 222	fileStage	2	int
 222	sourceSubmissionFileId	\N	string
-222	submissionFileId	47	int
-222	fileId	27	int
-222	submissionId	10	int
-222	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
-222	username	jbrower	string
+222	submissionFileId	44	int
+222	fileId	28	int
+222	submissionId	11	int
+222	originalFileName	Dreamwork.pdf	string
+222	username	jlockehart	string
 223	fileStage	2	int
-223	submissionFileId	47	int
-223	fileId	27	int
-223	submissionId	10	int
-223	username	jbrower	string
-223	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
+223	submissionFileId	44	int
+223	fileId	28	int
+223	submissionId	11	int
+223	username	jlockehart	string
+223	name	Dreamwork.pdf	string
 224	fileStage	2	int
 224	sourceSubmissionFileId	\N	string
-224	submissionFileId	47	int
-224	fileId	27	int
-224	submissionId	10	int
-224	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
-224	username	jbrower	string
+224	submissionFileId	44	int
+224	fileId	28	int
+224	submissionId	11	int
+224	originalFileName	Dreamwork.pdf	string
+224	username	jlockehart	string
 225	fileStage	2	int
 225	sourceSubmissionFileId	\N	string
-225	submissionFileId	47	int
-225	fileId	27	int
-225	submissionId	10	int
-225	username	jbrower	string
-225	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
-225	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
-230	fileStage	2	int
-230	sourceSubmissionFileId	\N	string
-230	submissionFileId	48	int
+225	submissionFileId	44	int
+225	fileId	28	int
+225	submissionId	11	int
+225	username	jlockehart	string
+225	originalFileName	Dreamwork.pdf	string
+225	name	Dreamwork.pdf	string
+228	editorName	Daniel Barnes	string
+228	submissionId	11	int
+228	decision	Send to Internal Review	string
+229	fileStage	19	int
+229	sourceSubmissionFileId	44	int
+229	submissionFileId	45	int
+229	fileId	28	int
+229	submissionId	11	int
+229	originalFileName	Dreamwork.pdf	string
+229	username	dbarnes	string
+230	fileStage	19	int
+230	submissionFileId	45	int
 230	fileId	28	int
 230	submissionId	11	int
-230	originalFileName	Dreamwork.pdf	string
-230	username	jlockehart	string
-231	fileStage	2	int
-231	submissionFileId	48	int
-231	fileId	28	int
+230	username	dbarnes	string
+230	name	Dreamwork.pdf	string
+231	reviewAssignmentId	9	string
+231	reviewerName	Aisla McCrae	string
 231	submissionId	11	int
-231	username	jlockehart	string
-231	name	Dreamwork.pdf	string
-232	fileStage	2	int
-232	sourceSubmissionFileId	\N	string
-232	submissionFileId	48	int
-232	fileId	28	int
+231	stageId	2	int
+231	round	1	int
+232	editorName	Daniel Barnes	string
 232	submissionId	11	int
-232	originalFileName	Dreamwork.pdf	string
-232	username	jlockehart	string
-233	fileStage	2	int
-233	sourceSubmissionFileId	\N	string
-233	submissionFileId	48	int
-233	fileId	28	int
+232	decision	Send to External Review	string
+233	reviewAssignmentId	10	string
+233	reviewerName	Adela Gallego	string
 233	submissionId	11	int
-233	username	jlockehart	string
-233	originalFileName	Dreamwork.pdf	string
-233	name	Dreamwork.pdf	string
-236	editorName	Daniel Barnes	string
+233	stageId	3	int
+233	round	1	int
+234	reviewAssignmentId	11	string
+234	reviewerName	Gonzalo Favio	string
+234	submissionId	11	int
+234	stageId	3	int
+234	round	1	int
+235	reviewAssignmentId	10	int
+235	reviewerName	Adela Gallego	string
+235	submissionId	11	int
+235	round	1	int
+236	reviewAssignmentId	10	int
+236	reviewerName	Adela Gallego	string
 236	submissionId	11	int
-236	decision	Send to Internal Review	string
-237	fileStage	19	int
-237	sourceSubmissionFileId	48	int
-237	submissionFileId	49	int
-237	fileId	28	int
+236	round	1	int
+237	reviewAssignmentId	11	int
+237	reviewerName	Gonzalo Favio	string
 237	submissionId	11	int
-237	originalFileName	Dreamwork.pdf	string
-237	username	dbarnes	string
-238	fileStage	19	int
-238	submissionFileId	49	int
-238	fileId	28	int
+237	round	1	int
+238	reviewAssignmentId	11	int
+238	reviewerName	Gonzalo Favio	string
 238	submissionId	11	int
-238	username	dbarnes	string
-238	name	Dreamwork.pdf	string
-239	reviewAssignmentId	9	string
-239	reviewerName	Aisla McCrae	string
+238	round	1	int
+239	editorName	Daniel Barnes	string
 239	submissionId	11	int
-239	stageId	2	int
-239	round	1	int
-240	editorName	Daniel Barnes	string
-240	submissionId	11	int
-240	decision	Send to External Review	string
-241	reviewAssignmentId	10	string
-241	reviewerName	Adela Gallego	string
-241	submissionId	11	int
-241	stageId	3	int
-241	round	1	int
-242	reviewAssignmentId	11	string
-242	reviewerName	Gonzalo Favio	string
-242	submissionId	11	int
-242	stageId	3	int
-242	round	1	int
-243	reviewAssignmentId	10	int
-243	reviewerName	Adela Gallego	string
-243	submissionId	11	int
-243	round	1	int
-244	reviewAssignmentId	10	int
-244	reviewerName	Adela Gallego	string
-244	submissionId	11	int
-244	round	1	int
-245	reviewAssignmentId	11	int
-245	reviewerName	Gonzalo Favio	string
-245	submissionId	11	int
-245	round	1	int
-246	reviewAssignmentId	11	int
-246	reviewerName	Gonzalo Favio	string
-246	submissionId	11	int
-246	round	1	int
-247	editorName	Daniel Barnes	string
-247	submissionId	11	int
-247	decision	Accept Submission	string
+239	decision	Accept Submission	string
+242	fileStage	2	int
+242	sourceSubmissionFileId	\N	string
+242	submissionFileId	46	int
+242	fileId	29	int
+242	submissionId	12	int
+242	originalFileName	Catalyzing Access through Social and Tec.pdf	string
+242	username	lelder	string
+243	fileStage	2	int
+243	submissionFileId	46	int
+243	fileId	29	int
+243	submissionId	12	int
+243	username	lelder	string
+243	name	Catalyzing Access through Social and Tec.pdf	string
+244	fileStage	2	int
+244	sourceSubmissionFileId	\N	string
+244	submissionFileId	46	int
+244	fileId	29	int
+244	submissionId	12	int
+244	originalFileName	Catalyzing Access through Social and Tec.pdf	string
+244	username	lelder	string
+245	fileStage	2	int
+245	sourceSubmissionFileId	\N	string
+245	submissionFileId	46	int
+245	fileId	29	int
+245	submissionId	12	int
+245	username	lelder	string
+245	originalFileName	Catalyzing Access through Social and Tec.pdf	string
+245	name	Catalyzing Access through Social and Tec.pdf	string
+246	fileStage	2	int
+246	sourceSubmissionFileId	\N	string
+246	submissionFileId	47	int
+246	fileId	30	int
+246	submissionId	12	int
+246	originalFileName	Catalyzing Access via Telecommunications.pdf	string
+246	username	lelder	string
+247	fileStage	2	int
+247	submissionFileId	47	int
+247	fileId	30	int
+247	submissionId	12	int
+247	username	lelder	string
+247	name	Catalyzing Access via Telecommunications.pdf	string
+248	fileStage	2	int
+248	sourceSubmissionFileId	\N	string
+248	submissionFileId	47	int
+248	fileId	30	int
+248	submissionId	12	int
+248	originalFileName	Catalyzing Access via Telecommunications.pdf	string
+248	username	lelder	string
+249	fileStage	2	int
+249	sourceSubmissionFileId	\N	string
+249	submissionFileId	47	int
+249	fileId	30	int
+249	submissionId	12	int
+249	username	lelder	string
+249	originalFileName	Catalyzing Access via Telecommunications.pdf	string
+249	name	Catalyzing Access via Telecommunications.pdf	string
 250	fileStage	2	int
 250	sourceSubmissionFileId	\N	string
-250	submissionFileId	50	int
-250	fileId	29	int
+250	submissionFileId	48	int
+250	fileId	31	int
 250	submissionId	12	int
-250	originalFileName	Catalyzing Access through Social and Tec.pdf	string
+250	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
 250	username	lelder	string
 251	fileStage	2	int
-251	submissionFileId	50	int
-251	fileId	29	int
+251	submissionFileId	48	int
+251	fileId	31	int
 251	submissionId	12	int
 251	username	lelder	string
-251	name	Catalyzing Access through Social and Tec.pdf	string
+251	name	Access to Knowledge as a New Paradigm fo.pdf	string
 252	fileStage	2	int
 252	sourceSubmissionFileId	\N	string
-252	submissionFileId	50	int
-252	fileId	29	int
+252	submissionFileId	48	int
+252	fileId	31	int
 252	submissionId	12	int
-252	originalFileName	Catalyzing Access through Social and Tec.pdf	string
+252	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
 252	username	lelder	string
 253	fileStage	2	int
 253	sourceSubmissionFileId	\N	string
-253	submissionFileId	50	int
-253	fileId	29	int
+253	submissionFileId	48	int
+253	fileId	31	int
 253	submissionId	12	int
 253	username	lelder	string
-253	originalFileName	Catalyzing Access through Social and Tec.pdf	string
-253	name	Catalyzing Access through Social and Tec.pdf	string
-254	fileStage	2	int
-254	sourceSubmissionFileId	\N	string
-254	submissionFileId	51	int
-254	fileId	30	int
-254	submissionId	12	int
-254	originalFileName	Catalyzing Access via Telecommunications.pdf	string
-254	username	lelder	string
-255	fileStage	2	int
-255	submissionFileId	51	int
-255	fileId	30	int
-255	submissionId	12	int
-255	username	lelder	string
-255	name	Catalyzing Access via Telecommunications.pdf	string
-256	fileStage	2	int
-256	sourceSubmissionFileId	\N	string
-256	submissionFileId	51	int
-256	fileId	30	int
+253	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
+253	name	Access to Knowledge as a New Paradigm fo.pdf	string
+256	editorName	Daniel Barnes	string
 256	submissionId	12	int
-256	originalFileName	Catalyzing Access via Telecommunications.pdf	string
-256	username	lelder	string
-257	fileStage	2	int
-257	sourceSubmissionFileId	\N	string
-257	submissionFileId	51	int
-257	fileId	30	int
+256	decision	Send to Internal Review	string
+257	reviewAssignmentId	12	string
+257	reviewerName	Julie Janssen	string
 257	submissionId	12	int
-257	username	lelder	string
-257	originalFileName	Catalyzing Access via Telecommunications.pdf	string
-257	name	Catalyzing Access via Telecommunications.pdf	string
-258	fileStage	2	int
-258	sourceSubmissionFileId	\N	string
-258	submissionFileId	52	int
-258	fileId	31	int
+257	stageId	2	int
+257	round	1	int
+258	reviewAssignmentId	13	string
+258	reviewerName	Paul Hudson	string
 258	submissionId	12	int
-258	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
-258	username	lelder	string
-259	fileStage	2	int
-259	submissionFileId	52	int
-259	fileId	31	int
+258	stageId	2	int
+258	round	1	int
+259	reviewAssignmentId	14	string
+259	reviewerName	Aisla McCrae	string
 259	submissionId	12	int
-259	username	lelder	string
-259	name	Access to Knowledge as a New Paradigm fo.pdf	string
-260	fileStage	2	int
-260	sourceSubmissionFileId	\N	string
-260	submissionFileId	52	int
-260	fileId	31	int
+259	stageId	2	int
+259	round	1	int
+260	reviewAssignmentId	13	int
+260	reviewerName	Paul Hudson	string
 260	submissionId	12	int
-260	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
-260	username	lelder	string
-261	fileStage	2	int
-261	sourceSubmissionFileId	\N	string
-261	submissionFileId	52	int
-261	fileId	31	int
+260	round	1	int
+261	reviewAssignmentId	13	int
+261	reviewerName	Paul Hudson	string
 261	submissionId	12	int
-261	username	lelder	string
-261	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
-261	name	Access to Knowledge as a New Paradigm fo.pdf	string
-264	editorName	Daniel Barnes	string
-264	submissionId	12	int
-264	decision	Send to Internal Review	string
-265	reviewAssignmentId	12	string
-265	reviewerName	Julie Janssen	string
-265	submissionId	12	int
-265	stageId	2	int
-265	round	1	int
-266	reviewAssignmentId	13	string
-266	reviewerName	Paul Hudson	string
-266	submissionId	12	int
-266	stageId	2	int
-266	round	1	int
-267	reviewAssignmentId	14	string
-267	reviewerName	Aisla McCrae	string
-267	submissionId	12	int
-267	stageId	2	int
-267	round	1	int
-268	reviewAssignmentId	13	int
-268	reviewerName	Paul Hudson	string
-268	submissionId	12	int
-268	round	1	int
-269	reviewAssignmentId	13	int
-269	reviewerName	Paul Hudson	string
-269	submissionId	12	int
-269	round	1	int
+261	round	1	int
+264	fileStage	2	int
+264	sourceSubmissionFileId	\N	string
+264	submissionFileId	49	int
+264	fileId	32	int
+264	submissionId	13	int
+264	originalFileName	Current State of Mobile Learning.pdf	string
+264	username	mally	string
+265	fileStage	2	int
+265	submissionFileId	49	int
+265	fileId	32	int
+265	submissionId	13	int
+265	username	mally	string
+265	name	Current State of Mobile Learning.pdf	string
+266	fileStage	2	int
+266	sourceSubmissionFileId	\N	string
+266	submissionFileId	49	int
+266	fileId	32	int
+266	submissionId	13	int
+266	originalFileName	Current State of Mobile Learning.pdf	string
+266	username	mally	string
+267	fileStage	2	int
+267	sourceSubmissionFileId	\N	string
+267	submissionFileId	49	int
+267	fileId	32	int
+267	submissionId	13	int
+267	username	mally	string
+267	originalFileName	Current State of Mobile Learning.pdf	string
+267	name	Current State of Mobile Learning.pdf	string
+268	fileStage	2	int
+268	sourceSubmissionFileId	\N	string
+268	submissionFileId	50	int
+268	fileId	33	int
+268	submissionId	13	int
+268	originalFileName	A Model for Framing Mobile Learning.pdf	string
+268	username	mally	string
+269	fileStage	2	int
+269	submissionFileId	50	int
+269	fileId	33	int
+269	submissionId	13	int
+269	username	mally	string
+269	name	A Model for Framing Mobile Learning.pdf	string
+270	fileStage	2	int
+270	sourceSubmissionFileId	\N	string
+270	submissionFileId	50	int
+270	fileId	33	int
+270	submissionId	13	int
+270	originalFileName	A Model for Framing Mobile Learning.pdf	string
+270	username	mally	string
+271	fileStage	2	int
+271	sourceSubmissionFileId	\N	string
+271	submissionFileId	50	int
+271	fileId	33	int
+271	submissionId	13	int
+271	username	mally	string
+271	originalFileName	A Model for Framing Mobile Learning.pdf	string
+271	name	A Model for Framing Mobile Learning.pdf	string
 272	fileStage	2	int
 272	sourceSubmissionFileId	\N	string
-272	submissionFileId	53	int
-272	fileId	32	int
+272	submissionFileId	51	int
+272	fileId	34	int
 272	submissionId	13	int
-272	originalFileName	Current State of Mobile Learning.pdf	string
+272	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
 272	username	mally	string
 273	fileStage	2	int
-273	submissionFileId	53	int
-273	fileId	32	int
+273	submissionFileId	51	int
+273	fileId	34	int
 273	submissionId	13	int
 273	username	mally	string
-273	name	Current State of Mobile Learning.pdf	string
+273	name	Mobile Distance Learning with PDAs: Deve.pdf	string
 274	fileStage	2	int
 274	sourceSubmissionFileId	\N	string
-274	submissionFileId	53	int
-274	fileId	32	int
+274	submissionFileId	51	int
+274	fileId	34	int
 274	submissionId	13	int
-296	stageId	3	int
-274	originalFileName	Current State of Mobile Learning.pdf	string
+274	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
 274	username	mally	string
 275	fileStage	2	int
 275	sourceSubmissionFileId	\N	string
-275	submissionFileId	53	int
-275	fileId	32	int
+275	submissionFileId	51	int
+275	fileId	34	int
 275	submissionId	13	int
 275	username	mally	string
-275	originalFileName	Current State of Mobile Learning.pdf	string
-275	name	Current State of Mobile Learning.pdf	string
-276	fileStage	2	int
-276	sourceSubmissionFileId	\N	string
-276	submissionFileId	54	int
-276	fileId	33	int
-276	submissionId	13	int
-276	originalFileName	A Model for Framing Mobile Learning.pdf	string
-276	username	mally	string
-277	fileStage	2	int
-277	submissionFileId	54	int
-277	fileId	33	int
-277	submissionId	13	int
-277	username	mally	string
-277	name	A Model for Framing Mobile Learning.pdf	string
-278	fileStage	2	int
-278	sourceSubmissionFileId	\N	string
-278	submissionFileId	54	int
-278	fileId	33	int
+275	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
+275	name	Mobile Distance Learning with PDAs: Deve.pdf	string
+278	editorName	Daniel Barnes	string
 278	submissionId	13	int
-278	originalFileName	A Model for Framing Mobile Learning.pdf	string
-278	username	mally	string
-279	fileStage	2	int
-279	sourceSubmissionFileId	\N	string
-279	submissionFileId	54	int
-279	fileId	33	int
+278	decision	Send to Internal Review	string
+279	fileStage	19	int
+279	sourceSubmissionFileId	49	int
+279	submissionFileId	52	int
+279	fileId	32	int
 279	submissionId	13	int
-279	username	mally	string
-279	originalFileName	A Model for Framing Mobile Learning.pdf	string
-279	name	A Model for Framing Mobile Learning.pdf	string
-280	fileStage	2	int
-280	sourceSubmissionFileId	\N	string
-280	submissionFileId	55	int
-280	fileId	34	int
+279	originalFileName	Current State of Mobile Learning.pdf	string
+279	username	dbarnes	string
+280	fileStage	19	int
+280	submissionFileId	52	int
+280	fileId	32	int
 280	submissionId	13	int
-280	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
-280	username	mally	string
-281	fileStage	2	int
-281	submissionFileId	55	int
-281	fileId	34	int
+280	username	dbarnes	string
+280	name	Current State of Mobile Learning.pdf	string
+281	fileStage	19	int
+281	sourceSubmissionFileId	50	int
+281	submissionFileId	53	int
+281	fileId	33	int
 281	submissionId	13	int
-281	username	mally	string
-281	name	Mobile Distance Learning with PDAs: Deve.pdf	string
-282	fileStage	2	int
-282	sourceSubmissionFileId	\N	string
-282	submissionFileId	55	int
-282	fileId	34	int
+281	originalFileName	A Model for Framing Mobile Learning.pdf	string
+281	username	dbarnes	string
+282	fileStage	19	int
+282	submissionFileId	53	int
+282	fileId	33	int
 282	submissionId	13	int
-282	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
-282	username	mally	string
-283	fileStage	2	int
-283	sourceSubmissionFileId	\N	string
-283	submissionFileId	55	int
+282	username	dbarnes	string
+282	name	A Model for Framing Mobile Learning.pdf	string
+283	fileStage	19	int
+283	sourceSubmissionFileId	51	int
+283	submissionFileId	54	int
 283	fileId	34	int
 283	submissionId	13	int
-283	username	mally	string
 283	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
-283	name	Mobile Distance Learning with PDAs: Deve.pdf	string
+283	username	dbarnes	string
+284	fileStage	19	int
+284	submissionFileId	54	int
+284	fileId	34	int
+284	submissionId	13	int
+284	username	dbarnes	string
+284	name	Mobile Distance Learning with PDAs: Deve.pdf	string
+285	reviewAssignmentId	15	string
+285	reviewerName	Paul Hudson	string
+285	submissionId	13	int
+285	stageId	2	int
+285	round	1	int
 286	editorName	Daniel Barnes	string
 286	submissionId	13	int
-286	decision	Send to Internal Review	string
-287	fileStage	19	int
-287	sourceSubmissionFileId	53	int
-287	submissionFileId	56	int
-287	fileId	32	int
+286	decision	Send to External Review	string
+287	reviewAssignmentId	16	string
+287	reviewerName	Adela Gallego	string
 287	submissionId	13	int
-287	originalFileName	Current State of Mobile Learning.pdf	string
-287	username	dbarnes	string
-288	fileStage	19	int
-288	submissionFileId	56	int
-288	fileId	32	int
+287	stageId	3	int
+287	round	1	int
+288	reviewAssignmentId	17	string
+288	reviewerName	Al Zacharia	string
 288	submissionId	13	int
-288	username	dbarnes	string
-288	name	Current State of Mobile Learning.pdf	string
-289	fileStage	19	int
-289	sourceSubmissionFileId	54	int
-289	submissionFileId	57	int
-289	fileId	33	int
+288	stageId	3	int
+288	round	1	int
+289	reviewAssignmentId	18	string
+289	reviewerName	Gonzalo Favio	string
 289	submissionId	13	int
-289	originalFileName	A Model for Framing Mobile Learning.pdf	string
-289	username	dbarnes	string
-290	fileStage	19	int
-290	submissionFileId	57	int
-290	fileId	33	int
+289	stageId	3	int
+289	round	1	int
+290	reviewAssignmentId	16	int
+290	reviewerName	Adela Gallego	string
 290	submissionId	13	int
-290	username	dbarnes	string
-290	name	A Model for Framing Mobile Learning.pdf	string
-291	fileStage	19	int
-291	sourceSubmissionFileId	55	int
-291	submissionFileId	58	int
-291	fileId	34	int
+290	round	1	int
+291	reviewAssignmentId	16	int
+291	reviewerName	Adela Gallego	string
 291	submissionId	13	int
-291	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
-291	username	dbarnes	string
-292	fileStage	19	int
-292	submissionFileId	58	int
-292	fileId	34	int
+291	round	1	int
+292	reviewAssignmentId	18	int
+292	reviewerName	Gonzalo Favio	string
 292	submissionId	13	int
-292	username	dbarnes	string
-292	name	Mobile Distance Learning with PDAs: Deve.pdf	string
-293	reviewAssignmentId	15	string
-293	reviewerName	Paul Hudson	string
+292	round	1	int
+293	reviewAssignmentId	18	int
+293	reviewerName	Gonzalo Favio	string
 293	submissionId	13	int
-293	stageId	2	int
 293	round	1	int
 294	editorName	Daniel Barnes	string
 294	submissionId	13	int
-294	decision	Send to External Review	string
-295	reviewAssignmentId	16	string
-295	reviewerName	Adela Gallego	string
-295	submissionId	13	int
-295	stageId	3	int
-295	round	1	int
-296	reviewAssignmentId	17	string
-296	reviewerName	Al Zacharia	string
-296	submissionId	13	int
-296	round	1	int
-297	reviewAssignmentId	18	string
-297	reviewerName	Gonzalo Favio	string
-297	submissionId	13	int
-297	stageId	3	int
-297	round	1	int
-298	reviewAssignmentId	16	int
-298	reviewerName	Adela Gallego	string
-298	submissionId	13	int
-298	round	1	int
-299	reviewAssignmentId	16	int
-299	reviewerName	Adela Gallego	string
-299	submissionId	13	int
-299	round	1	int
-300	reviewAssignmentId	18	int
-300	reviewerName	Gonzalo Favio	string
-300	submissionId	13	int
-300	round	1	int
-301	reviewAssignmentId	18	int
-301	reviewerName	Gonzalo Favio	string
-301	submissionId	13	int
-301	round	1	int
-302	editorName	Daniel Barnes	string
-302	submissionId	13	int
-302	decision	Accept Submission	string
+294	decision	Accept Submission	string
+297	fileStage	2	int
+297	sourceSubmissionFileId	\N	string
+297	submissionFileId	55	int
+297	fileId	35	int
+297	submissionId	14	int
+297	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+297	username	mdawson	string
+298	fileStage	2	int
+298	submissionFileId	55	int
+298	fileId	35	int
+298	submissionId	14	int
+298	username	mdawson	string
+298	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+299	fileStage	2	int
+299	sourceSubmissionFileId	\N	string
+299	submissionFileId	55	int
+299	fileId	35	int
+299	submissionId	14	int
+299	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+299	username	mdawson	string
+300	fileStage	2	int
+300	sourceSubmissionFileId	\N	string
+300	submissionFileId	55	int
+300	fileId	35	int
+300	submissionId	14	int
+300	username	mdawson	string
+300	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+300	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+301	fileStage	2	int
+301	sourceSubmissionFileId	\N	string
+301	submissionFileId	56	int
+301	fileId	36	int
+301	submissionId	14	int
+301	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+301	username	mdawson	string
+302	fileStage	2	int
+302	submissionFileId	56	int
+302	fileId	36	int
+302	submissionId	14	int
+302	username	mdawson	string
+302	name	Chapter 2: Classical Music and the Class.pdf	string
+303	fileStage	2	int
+303	sourceSubmissionFileId	\N	string
+303	submissionFileId	56	int
+303	fileId	36	int
+303	submissionId	14	int
+303	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+303	username	mdawson	string
+304	fileStage	2	int
+304	sourceSubmissionFileId	\N	string
+304	submissionFileId	56	int
+304	fileId	36	int
+304	submissionId	14	int
+304	username	mdawson	string
+304	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+304	name	Chapter 2: Classical Music and the Class.pdf	string
 305	fileStage	2	int
 305	sourceSubmissionFileId	\N	string
-305	submissionFileId	59	int
-305	fileId	35	int
+305	submissionFileId	57	int
+305	fileId	37	int
 305	submissionId	14	int
-305	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+305	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 305	username	mdawson	string
 306	fileStage	2	int
-306	submissionFileId	59	int
-306	fileId	35	int
+306	submissionFileId	57	int
+306	fileId	37	int
 306	submissionId	14	int
 306	username	mdawson	string
-306	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+306	name	Chapter 3: Situated Cognition and Bricol.pdf	string
 307	fileStage	2	int
 307	sourceSubmissionFileId	\N	string
-307	submissionFileId	59	int
-307	fileId	35	int
+307	submissionFileId	57	int
+307	fileId	37	int
 307	submissionId	14	int
-307	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+307	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 307	username	mdawson	string
 308	fileStage	2	int
 308	sourceSubmissionFileId	\N	string
-308	submissionFileId	59	int
-308	fileId	35	int
+308	submissionFileId	57	int
+308	fileId	37	int
 308	submissionId	14	int
 308	username	mdawson	string
-308	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
-308	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+308	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+308	name	Chapter 3: Situated Cognition and Bricol.pdf	string
 309	fileStage	2	int
 309	sourceSubmissionFileId	\N	string
-309	submissionFileId	60	int
-309	fileId	36	int
+309	submissionFileId	58	int
+309	fileId	38	int
 309	submissionId	14	int
-309	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+309	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 309	username	mdawson	string
 310	fileStage	2	int
-310	submissionFileId	60	int
-310	fileId	36	int
+310	submissionFileId	58	int
+310	fileId	38	int
 310	submissionId	14	int
 310	username	mdawson	string
-310	name	Chapter 2: Classical Music and the Class.pdf	string
+310	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 311	fileStage	2	int
 311	sourceSubmissionFileId	\N	string
-311	submissionFileId	60	int
-311	fileId	36	int
+311	submissionFileId	58	int
+311	fileId	38	int
 311	submissionId	14	int
-311	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+311	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 311	username	mdawson	string
 312	fileStage	2	int
 312	sourceSubmissionFileId	\N	string
-312	submissionFileId	60	int
-312	fileId	36	int
+312	submissionFileId	58	int
+312	fileId	38	int
 312	submissionId	14	int
 312	username	mdawson	string
-312	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
-312	name	Chapter 2: Classical Music and the Class.pdf	string
+312	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+312	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 313	fileStage	2	int
 313	sourceSubmissionFileId	\N	string
-313	submissionFileId	61	int
-313	fileId	37	int
+313	submissionFileId	59	int
+313	fileId	39	int
 313	submissionId	14	int
-313	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+313	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 313	username	mdawson	string
 314	fileStage	2	int
-314	submissionFileId	61	int
-314	fileId	37	int
+314	submissionFileId	59	int
+314	fileId	39	int
 314	submissionId	14	int
 314	username	mdawson	string
-314	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+314	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 315	fileStage	2	int
 315	sourceSubmissionFileId	\N	string
-315	submissionFileId	61	int
-315	fileId	37	int
+315	submissionFileId	59	int
+315	fileId	39	int
 315	submissionId	14	int
-315	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+315	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 315	username	mdawson	string
 316	fileStage	2	int
 316	sourceSubmissionFileId	\N	string
-316	submissionFileId	61	int
-316	fileId	37	int
+316	submissionFileId	59	int
+316	fileId	39	int
 316	submissionId	14	int
 316	username	mdawson	string
-316	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
-316	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+316	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+316	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 317	fileStage	2	int
 317	sourceSubmissionFileId	\N	string
-317	submissionFileId	62	int
-317	fileId	38	int
+317	submissionFileId	60	int
+317	fileId	40	int
 317	submissionId	14	int
-317	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+317	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 317	username	mdawson	string
 318	fileStage	2	int
-318	submissionFileId	62	int
-318	fileId	38	int
+318	submissionFileId	60	int
+318	fileId	40	int
 318	submissionId	14	int
 318	username	mdawson	string
-318	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+318	name	The Canadian Nutrient File: Nutrient Val.pdf	string
 319	fileStage	2	int
 319	sourceSubmissionFileId	\N	string
-319	submissionFileId	62	int
-319	fileId	38	int
+319	submissionFileId	60	int
+319	fileId	40	int
 319	submissionId	14	int
-319	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+319	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 319	username	mdawson	string
 320	fileStage	2	int
 320	sourceSubmissionFileId	\N	string
-320	submissionFileId	62	int
-320	fileId	38	int
+320	submissionFileId	60	int
+320	fileId	40	int
 320	submissionId	14	int
 320	username	mdawson	string
-320	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-320	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-321	fileStage	2	int
-321	sourceSubmissionFileId	\N	string
-321	submissionFileId	63	int
-321	fileId	39	int
-321	submissionId	14	int
-321	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
-321	username	mdawson	string
-322	fileStage	2	int
-322	submissionFileId	63	int
-322	fileId	39	int
-322	submissionId	14	int
-322	username	mdawson	string
-322	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-323	fileStage	2	int
-323	sourceSubmissionFileId	\N	string
-323	submissionFileId	63	int
-323	fileId	39	int
+320	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+320	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+323	editorName	Daniel Barnes	string
 323	submissionId	14	int
-323	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
-323	username	mdawson	string
-324	fileStage	2	int
-324	sourceSubmissionFileId	\N	string
-324	submissionFileId	63	int
-324	fileId	39	int
+323	decision	Send to Internal Review	string
+324	fileStage	19	int
+324	sourceSubmissionFileId	55	int
+324	submissionFileId	61	int
+324	fileId	35	int
 324	submissionId	14	int
-324	username	mdawson	string
-324	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
-324	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-325	fileStage	2	int
-325	sourceSubmissionFileId	\N	string
-325	submissionFileId	64	int
-325	fileId	40	int
+324	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+324	username	dbarnes	string
+325	fileStage	19	int
+325	submissionFileId	61	int
+325	fileId	35	int
 325	submissionId	14	int
-325	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
-325	username	mdawson	string
-326	fileStage	2	int
-326	submissionFileId	64	int
-326	fileId	40	int
+325	username	dbarnes	string
+325	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+326	fileStage	19	int
+326	sourceSubmissionFileId	56	int
+326	submissionFileId	62	int
+326	fileId	36	int
 326	submissionId	14	int
-326	username	mdawson	string
-326	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-327	fileStage	2	int
-327	sourceSubmissionFileId	\N	string
-327	submissionFileId	64	int
-327	fileId	40	int
+326	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+326	username	dbarnes	string
+327	fileStage	19	int
+327	submissionFileId	62	int
+327	fileId	36	int
 327	submissionId	14	int
-327	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
-327	username	mdawson	string
-328	fileStage	2	int
-328	sourceSubmissionFileId	\N	string
-328	submissionFileId	64	int
-328	fileId	40	int
+327	username	dbarnes	string
+327	name	Chapter 2: Classical Music and the Class.pdf	string
+328	fileStage	19	int
+328	sourceSubmissionFileId	57	int
+328	submissionFileId	63	int
+328	fileId	37	int
 328	submissionId	14	int
-328	username	mdawson	string
-328	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
-328	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-331	editorName	Daniel Barnes	string
+328	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+328	username	dbarnes	string
+329	fileStage	19	int
+329	submissionFileId	63	int
+329	fileId	37	int
+329	submissionId	14	int
+329	username	dbarnes	string
+329	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+330	fileStage	19	int
+330	sourceSubmissionFileId	58	int
+330	submissionFileId	64	int
+330	fileId	38	int
+330	submissionId	14	int
+330	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+330	username	dbarnes	string
+331	fileStage	19	int
+331	submissionFileId	64	int
+331	fileId	38	int
 331	submissionId	14	int
-331	decision	Send to Internal Review	string
+331	username	dbarnes	string
+331	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 332	fileStage	19	int
 332	sourceSubmissionFileId	59	int
 332	submissionFileId	65	int
-332	fileId	35	int
+332	fileId	39	int
 332	submissionId	14	int
-332	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+332	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 332	username	dbarnes	string
 333	fileStage	19	int
 333	submissionFileId	65	int
-333	fileId	35	int
+333	fileId	39	int
 333	submissionId	14	int
 333	username	dbarnes	string
-333	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+333	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 334	fileStage	19	int
 334	sourceSubmissionFileId	60	int
 334	submissionFileId	66	int
-334	fileId	36	int
+334	fileId	40	int
 334	submissionId	14	int
-334	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+334	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 334	username	dbarnes	string
 335	fileStage	19	int
 335	submissionFileId	66	int
-335	fileId	36	int
+335	fileId	40	int
 335	submissionId	14	int
 335	username	dbarnes	string
-335	name	Chapter 2: Classical Music and the Class.pdf	string
-336	fileStage	19	int
-336	sourceSubmissionFileId	61	int
-336	submissionFileId	67	int
-336	fileId	37	int
+335	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+336	reviewAssignmentId	19	string
+336	reviewerName	Julie Janssen	string
 336	submissionId	14	int
-336	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
-336	username	dbarnes	string
-337	fileStage	19	int
-337	submissionFileId	67	int
-337	fileId	37	int
+336	stageId	2	int
+336	round	1	int
+337	editorName	Daniel Barnes	string
 337	submissionId	14	int
-337	username	dbarnes	string
-337	name	Chapter 3: Situated Cognition and Bricol.pdf	string
-338	fileStage	19	int
-338	sourceSubmissionFileId	62	int
-338	submissionFileId	68	int
-338	fileId	38	int
+337	decision	Send to External Review	string
+338	reviewAssignmentId	20	string
+338	reviewerName	Al Zacharia	string
 338	submissionId	14	int
-338	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-338	username	dbarnes	string
-339	fileStage	19	int
-339	submissionFileId	68	int
-339	fileId	38	int
+338	stageId	3	int
+338	round	1	int
+339	editorName	Daniel Barnes	string
 339	submissionId	14	int
-339	username	dbarnes	string
-339	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-340	fileStage	19	int
-340	sourceSubmissionFileId	63	int
-340	submissionFileId	69	int
-340	fileId	39	int
-340	submissionId	14	int
-340	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
-340	username	dbarnes	string
-341	fileStage	19	int
-341	submissionFileId	69	int
-341	fileId	39	int
+339	decision	Accept Submission	string
+340	name	Maria Fritz	string
+340	username	mfritz	string
+340	userGroupName	Copyeditor	string
+341	editorName	Daniel Barnes	string
 341	submissionId	14	int
-341	username	dbarnes	string
-341	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-342	fileStage	19	int
-342	sourceSubmissionFileId	64	int
-342	submissionFileId	70	int
-342	fileId	40	int
-342	submissionId	14	int
-342	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
-342	username	dbarnes	string
-343	fileStage	19	int
-343	submissionFileId	70	int
-343	fileId	40	int
-343	submissionId	14	int
-343	username	dbarnes	string
-343	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-344	reviewAssignmentId	19	string
-344	reviewerName	Julie Janssen	string
-344	submissionId	14	int
-344	stageId	2	int
-344	round	1	int
-345	editorName	Daniel Barnes	string
+341	decision	Send To Production	string
+342	name	Graham Cox	string
+342	username	gcox	string
+342	userGroupName	Layout Editor	string
+343	name	Sabine Kumar	string
+343	username	skumar	string
+343	userGroupName	Proofreader	string
+344	formatName	PDF	string
+345	fileStage	10	int
+345	sourceSubmissionFileId	55	int
+345	submissionFileId	67	int
+345	fileId	35	int
 345	submissionId	14	int
-345	decision	Send to External Review	string
-346	reviewAssignmentId	20	string
-346	reviewerName	Al Zacharia	string
+345	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+345	username	dbarnes	string
+346	fileStage	10	int
+346	submissionFileId	67	int
+346	fileId	35	int
 346	submissionId	14	int
-346	stageId	3	int
-346	round	1	int
-347	editorName	Daniel Barnes	string
+346	username	dbarnes	string
+346	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+347	fileStage	10	int
+347	sourceSubmissionFileId	56	int
+347	submissionFileId	68	int
+347	fileId	36	int
 347	submissionId	14	int
-347	decision	Accept Submission	string
-348	name	Maria Fritz	string
-348	username	mfritz	string
-348	userGroupName	Copyeditor	string
-349	editorName	Daniel Barnes	string
+347	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+347	username	dbarnes	string
+348	fileStage	10	int
+348	submissionFileId	68	int
+348	fileId	36	int
+348	submissionId	14	int
+348	username	dbarnes	string
+348	name	Chapter 2: Classical Music and the Class.pdf	string
+349	fileStage	10	int
+349	sourceSubmissionFileId	57	int
+349	submissionFileId	69	int
+349	fileId	37	int
 349	submissionId	14	int
-349	decision	Send To Production	string
-350	name	Graham Cox	string
-350	username	gcox	string
-350	userGroupName	Layout Editor	string
-351	name	Sabine Kumar	string
-351	username	skumar	string
-351	userGroupName	Proofreader	string
-352	formatName	PDF	string
+349	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+349	username	dbarnes	string
+350	fileStage	10	int
+350	submissionFileId	69	int
+350	fileId	37	int
+350	submissionId	14	int
+350	username	dbarnes	string
+350	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+351	fileStage	10	int
+351	sourceSubmissionFileId	58	int
+351	submissionFileId	70	int
+351	fileId	38	int
+351	submissionId	14	int
+351	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+351	username	dbarnes	string
+352	fileStage	10	int
+352	submissionFileId	70	int
+352	fileId	38	int
+352	submissionId	14	int
+352	username	dbarnes	string
+352	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 353	fileStage	10	int
 353	sourceSubmissionFileId	59	int
 353	submissionFileId	71	int
-353	fileId	35	int
+353	fileId	39	int
 353	submissionId	14	int
-353	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+353	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 353	username	dbarnes	string
 354	fileStage	10	int
 354	submissionFileId	71	int
-354	fileId	35	int
+354	fileId	39	int
 354	submissionId	14	int
 354	username	dbarnes	string
-354	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+354	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 355	fileStage	10	int
 355	sourceSubmissionFileId	60	int
 355	submissionFileId	72	int
-355	fileId	36	int
+355	fileId	40	int
 355	submissionId	14	int
-355	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+355	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 355	username	dbarnes	string
 356	fileStage	10	int
 356	submissionFileId	72	int
-356	fileId	36	int
+356	fileId	40	int
 356	submissionId	14	int
 356	username	dbarnes	string
-356	name	Chapter 2: Classical Music and the Class.pdf	string
-357	fileStage	10	int
-357	sourceSubmissionFileId	61	int
-357	submissionFileId	73	int
-357	fileId	37	int
-357	submissionId	14	int
-357	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
-357	username	dbarnes	string
-358	fileStage	10	int
-358	submissionFileId	73	int
-358	fileId	37	int
-358	submissionId	14	int
-358	username	dbarnes	string
-358	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+356	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+357	publicationFormatName	PDF	string
+358	publicationFormatName	PDF	string
 359	fileStage	10	int
-359	sourceSubmissionFileId	62	int
-359	submissionFileId	74	int
-359	fileId	38	int
+359	sourceSubmissionFileId	55	int
+359	submissionFileId	67	int
+359	fileId	35	int
 359	submissionId	14	int
-359	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+359	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
 359	username	dbarnes	string
 360	fileStage	10	int
-360	submissionFileId	74	int
-360	fileId	38	int
+360	sourceSubmissionFileId	55	int
+360	submissionFileId	67	int
+360	fileId	35	int
 360	submissionId	14	int
 360	username	dbarnes	string
-360	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-361	fileStage	10	int
-361	sourceSubmissionFileId	63	int
-361	submissionFileId	75	int
-361	fileId	39	int
-361	submissionId	14	int
-361	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+360	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+360	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+361	file	Chapter 1: Mind Control—Internal or Exte.pdf	string
+361	name	Daniel Barnes	string
 361	username	dbarnes	string
 362	fileStage	10	int
-362	submissionFileId	75	int
-362	fileId	39	int
+362	sourceSubmissionFileId	56	int
+362	submissionFileId	68	int
+362	fileId	36	int
 362	submissionId	14	int
+362	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 362	username	dbarnes	string
-362	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 363	fileStage	10	int
-363	sourceSubmissionFileId	64	int
-363	submissionFileId	76	int
-363	fileId	40	int
+363	sourceSubmissionFileId	56	int
+363	submissionFileId	68	int
+363	fileId	36	int
 363	submissionId	14	int
-363	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 363	username	dbarnes	string
-364	fileStage	10	int
-364	submissionFileId	76	int
-364	fileId	40	int
-364	submissionId	14	int
+363	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+363	name	Chapter 2: Classical Music and the Class.pdf	string
+364	file	Chapter 2: Classical Music and the Class.pdf	string
+364	name	Daniel Barnes	string
 364	username	dbarnes	string
-364	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-365	publicationFormatName	PDF	string
-366	publicationFormatName	PDF	string
-367	fileStage	10	int
-367	sourceSubmissionFileId	59	int
-367	submissionFileId	71	int
-367	fileId	35	int
-367	submissionId	14	int
-367	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+365	fileStage	10	int
+365	sourceSubmissionFileId	57	int
+365	submissionFileId	69	int
+365	fileId	37	int
+365	submissionId	14	int
+365	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+365	username	dbarnes	string
+366	fileStage	10	int
+366	sourceSubmissionFileId	57	int
+366	submissionFileId	69	int
+366	fileId	37	int
+366	submissionId	14	int
+366	username	dbarnes	string
+366	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+366	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+367	file	Chapter 3: Situated Cognition and Bricol.pdf	string
+367	name	Daniel Barnes	string
 367	username	dbarnes	string
 368	fileStage	10	int
-368	sourceSubmissionFileId	59	int
-368	submissionFileId	71	int
-368	fileId	35	int
+368	sourceSubmissionFileId	58	int
+368	submissionFileId	70	int
+368	fileId	38	int
 368	submissionId	14	int
+368	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 368	username	dbarnes	string
-368	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
-368	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
-369	file	Chapter 1: Mind Control—Internal or Exte.pdf	string
-369	name	Daniel Barnes	string
+369	fileStage	10	int
+369	sourceSubmissionFileId	58	int
+369	submissionFileId	70	int
+369	fileId	38	int
+369	submissionId	14	int
 369	username	dbarnes	string
-370	fileStage	10	int
-370	sourceSubmissionFileId	60	int
-370	submissionFileId	72	int
-370	fileId	36	int
-370	submissionId	14	int
-370	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+369	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+369	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+370	file	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+370	name	Daniel Barnes	string
 370	username	dbarnes	string
 371	fileStage	10	int
-371	sourceSubmissionFileId	60	int
-371	submissionFileId	72	int
-371	fileId	36	int
+371	sourceSubmissionFileId	59	int
+371	submissionFileId	71	int
+371	fileId	39	int
 371	submissionId	14	int
+371	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 371	username	dbarnes	string
-371	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
-371	name	Chapter 2: Classical Music and the Class.pdf	string
-372	file	Chapter 2: Classical Music and the Class.pdf	string
-372	name	Daniel Barnes	string
+372	fileStage	10	int
+372	sourceSubmissionFileId	59	int
+372	submissionFileId	71	int
+372	fileId	39	int
+372	submissionId	14	int
 372	username	dbarnes	string
-373	fileStage	10	int
-373	sourceSubmissionFileId	61	int
-373	submissionFileId	73	int
-373	fileId	37	int
-373	submissionId	14	int
-373	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+372	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+372	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+373	file	Segmentation of Vascular Ultrasound Imag.pdf	string
+373	name	Daniel Barnes	string
 373	username	dbarnes	string
 374	fileStage	10	int
-374	sourceSubmissionFileId	61	int
-374	submissionFileId	73	int
-374	fileId	37	int
+374	sourceSubmissionFileId	60	int
+374	submissionFileId	72	int
+374	fileId	40	int
 374	submissionId	14	int
+374	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 374	username	dbarnes	string
-374	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
-374	name	Chapter 3: Situated Cognition and Bricol.pdf	string
-375	file	Chapter 3: Situated Cognition and Bricol.pdf	string
-375	name	Daniel Barnes	string
+375	fileStage	10	int
+375	sourceSubmissionFileId	60	int
+375	submissionFileId	72	int
+375	fileId	40	int
+375	submissionId	14	int
 375	username	dbarnes	string
-376	fileStage	10	int
-376	sourceSubmissionFileId	62	int
-376	submissionFileId	74	int
-376	fileId	38	int
-376	submissionId	14	int
-376	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+375	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+375	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+376	file	The Canadian Nutrient File: Nutrient Val.pdf	string
+376	name	Daniel Barnes	string
 376	username	dbarnes	string
-377	fileStage	10	int
-377	sourceSubmissionFileId	62	int
-377	submissionFileId	74	int
-377	fileId	38	int
-377	submissionId	14	int
-377	username	dbarnes	string
-377	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-377	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-378	file	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-378	name	Daniel Barnes	string
-378	username	dbarnes	string
-379	fileStage	10	int
-379	sourceSubmissionFileId	63	int
-379	submissionFileId	75	int
-379	fileId	39	int
-379	submissionId	14	int
-379	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
-379	username	dbarnes	string
-380	fileStage	10	int
-380	sourceSubmissionFileId	63	int
-380	submissionFileId	75	int
-380	fileId	39	int
-380	submissionId	14	int
-380	username	dbarnes	string
-380	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
-380	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-381	file	Segmentation of Vascular Ultrasound Imag.pdf	string
-381	name	Daniel Barnes	string
-381	username	dbarnes	string
-382	fileStage	10	int
-382	sourceSubmissionFileId	64	int
-382	submissionFileId	76	int
-382	fileId	40	int
-382	submissionId	14	int
-382	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
-382	username	dbarnes	string
-383	fileStage	10	int
-383	sourceSubmissionFileId	64	int
-383	submissionFileId	76	int
-383	fileId	40	int
-383	submissionId	14	int
-383	username	dbarnes	string
-383	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
-383	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-384	file	The Canadian Nutrient File: Nutrient Val.pdf	string
-384	name	Daniel Barnes	string
-384	username	dbarnes	string
-388	fileStage	2	int
-388	sourceSubmissionFileId	\N	string
-388	submissionFileId	77	int
+380	fileStage	2	int
+380	sourceSubmissionFileId	\N	string
+380	submissionFileId	73	int
+380	fileId	41	int
+380	submissionId	15	int
+380	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+380	username	mforan	string
+381	fileStage	2	int
+381	submissionFileId	73	int
+381	fileId	41	int
+381	submissionId	15	int
+381	username	mforan	string
+381	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+382	fileStage	2	int
+382	sourceSubmissionFileId	\N	string
+382	submissionFileId	73	int
+382	fileId	41	int
+382	submissionId	15	int
+382	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+382	username	mforan	string
+383	fileStage	2	int
+383	sourceSubmissionFileId	\N	string
+383	submissionFileId	73	int
+383	fileId	41	int
+383	submissionId	15	int
+383	username	mforan	string
+383	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+383	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+386	editorName	Daniel Barnes	string
+386	submissionId	15	int
+386	decision	Send to External Review	string
+387	fileStage	4	int
+387	sourceSubmissionFileId	73	int
+387	submissionFileId	74	int
+387	fileId	41	int
+387	submissionId	15	int
+387	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+387	username	dbarnes	string
+388	fileStage	4	int
+388	submissionFileId	74	int
 388	fileId	41	int
 388	submissionId	15	int
-388	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-388	username	mforan	string
-389	fileStage	2	int
-389	submissionFileId	77	int
-389	fileId	41	int
-389	submissionId	15	int
-389	username	mforan	string
-389	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-390	fileStage	2	int
-390	sourceSubmissionFileId	\N	string
-390	submissionFileId	77	int
-390	fileId	41	int
-390	submissionId	15	int
-390	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-390	username	mforan	string
+388	username	dbarnes	string
+415	fileId	45	int
+388	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
 391	fileStage	2	int
 391	sourceSubmissionFileId	\N	string
-391	submissionFileId	77	int
-391	fileId	41	int
-391	submissionId	15	int
-391	username	mforan	string
-391	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-391	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-394	editorName	Daniel Barnes	string
-394	submissionId	15	int
-394	decision	Send to External Review	string
-395	fileStage	4	int
-395	sourceSubmissionFileId	77	int
-395	submissionFileId	78	int
-395	fileId	41	int
-395	submissionId	15	int
-395	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-395	username	dbarnes	string
-396	fileStage	4	int
-396	submissionFileId	78	int
-396	fileId	41	int
-396	submissionId	15	int
-396	username	dbarnes	string
-396	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-399	fileStage	2	int
-399	sourceSubmissionFileId	\N	string
-399	submissionFileId	79	int
+391	submissionFileId	75	int
+391	fileId	42	int
+391	submissionId	16	int
+391	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
+391	username	mpower	string
+392	fileStage	2	int
+392	submissionFileId	75	int
+392	fileId	42	int
+392	submissionId	16	int
+392	username	mpower	string
+392	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
+393	fileStage	2	int
+393	sourceSubmissionFileId	\N	string
+393	submissionFileId	75	int
+393	fileId	42	int
+393	submissionId	16	int
+393	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
+393	username	mpower	string
+394	fileStage	2	int
+394	sourceSubmissionFileId	\N	string
+394	submissionFileId	75	int
+394	fileId	42	int
+394	submissionId	16	int
+394	username	mpower	string
+394	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
+394	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
+397	editorName	Daniel Barnes	string
+397	submissionId	16	int
+397	decision	Send to External Review	string
+398	fileStage	4	int
+398	sourceSubmissionFileId	75	int
+398	submissionFileId	76	int
+398	fileId	42	int
+398	submissionId	16	int
+398	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
+398	username	dbarnes	string
+399	fileStage	4	int
+399	submissionFileId	76	int
 399	fileId	42	int
 399	submissionId	16	int
-399	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
-399	username	mpower	string
-400	fileStage	2	int
-400	submissionFileId	79	int
-400	fileId	42	int
+399	username	dbarnes	string
+399	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
+400	reviewAssignmentId	21	string
+400	reviewerName	Adela Gallego	string
 400	submissionId	16	int
-400	username	mpower	string
-400	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-401	fileStage	2	int
-401	sourceSubmissionFileId	\N	string
-401	submissionFileId	79	int
-401	fileId	42	int
+400	stageId	3	int
+400	round	1	int
+401	reviewAssignmentId	22	string
+401	reviewerName	Al Zacharia	string
 401	submissionId	16	int
-401	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
-401	username	mpower	string
-402	fileStage	2	int
-402	sourceSubmissionFileId	\N	string
-402	submissionFileId	79	int
-402	fileId	42	int
+401	stageId	3	int
+401	round	1	int
+402	reviewAssignmentId	23	string
+402	reviewerName	Gonzalo Favio	string
 402	submissionId	16	int
-402	username	mpower	string
-402	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
-402	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-405	editorName	Daniel Barnes	string
-405	submissionId	16	int
-405	decision	Send to External Review	string
-406	fileStage	4	int
-406	sourceSubmissionFileId	79	int
-406	submissionFileId	80	int
-406	fileId	42	int
-406	submissionId	16	int
-406	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
-406	username	dbarnes	string
-407	fileStage	4	int
-407	submissionFileId	80	int
-407	fileId	42	int
-407	submissionId	16	int
-407	username	dbarnes	string
-407	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-408	reviewAssignmentId	21	string
-408	reviewerName	Adela Gallego	string
-408	submissionId	16	int
-408	stageId	3	int
-408	round	1	int
-409	reviewAssignmentId	22	string
-409	reviewerName	Al Zacharia	string
-409	submissionId	16	int
-409	stageId	3	int
-409	round	1	int
-410	reviewAssignmentId	23	string
-410	reviewerName	Gonzalo Favio	string
-410	submissionId	16	int
-410	stageId	3	int
-410	round	1	int
-411	reviewAssignmentId	21	int
-411	reviewerName	Adela Gallego	string
-411	submissionId	16	int
-411	round	1	int
-412	reviewAssignmentId	21	int
-412	reviewerName	Adela Gallego	string
-412	submissionId	16	int
-412	round	1	int
+402	stageId	3	int
+402	round	1	int
+403	reviewAssignmentId	21	int
+403	reviewerName	Adela Gallego	string
+403	submissionId	16	int
+403	round	1	int
+404	reviewAssignmentId	21	int
+404	reviewerName	Adela Gallego	string
+404	submissionId	16	int
+404	round	1	int
+407	fileStage	2	int
+407	sourceSubmissionFileId	\N	string
+407	submissionFileId	77	int
+407	fileId	43	int
+407	submissionId	17	int
+407	originalFileName	Preface.pdf	string
+407	username	msmith	string
+408	fileStage	2	int
+408	submissionFileId	77	int
+408	fileId	43	int
+408	submissionId	17	int
+408	username	msmith	string
+408	name	Preface.pdf	string
+409	fileStage	2	int
+409	sourceSubmissionFileId	\N	string
+409	submissionFileId	77	int
+409	fileId	43	int
+409	submissionId	17	int
+409	originalFileName	Preface.pdf	string
+409	username	msmith	string
+410	fileStage	2	int
+410	sourceSubmissionFileId	\N	string
+410	submissionFileId	77	int
+410	fileId	43	int
+410	submissionId	17	int
+410	username	msmith	string
+410	originalFileName	Preface.pdf	string
+410	name	Preface.pdf	string
+411	fileStage	2	int
+411	sourceSubmissionFileId	\N	string
+411	submissionFileId	78	int
+411	fileId	44	int
+411	submissionId	17	int
+411	originalFileName	Introduction.pdf	string
+411	username	msmith	string
+412	fileStage	2	int
+412	submissionFileId	78	int
+412	fileId	44	int
+412	submissionId	17	int
+412	username	msmith	string
+412	name	Introduction.pdf	string
+413	fileStage	2	int
+413	sourceSubmissionFileId	\N	string
+413	submissionFileId	78	int
+413	fileId	44	int
+413	submissionId	17	int
+413	originalFileName	Introduction.pdf	string
+413	username	msmith	string
+414	fileStage	2	int
+414	sourceSubmissionFileId	\N	string
+414	submissionFileId	78	int
+414	fileId	44	int
+414	submissionId	17	int
+414	username	msmith	string
+414	originalFileName	Introduction.pdf	string
+414	name	Introduction.pdf	string
 415	fileStage	2	int
 415	sourceSubmissionFileId	\N	string
-415	submissionFileId	81	int
-415	fileId	43	int
+415	submissionFileId	79	int
 415	submissionId	17	int
-415	originalFileName	Preface.pdf	string
+415	originalFileName	The Emergence of Open Development in a N.pdf	string
 415	username	msmith	string
 416	fileStage	2	int
-416	submissionFileId	81	int
-416	fileId	43	int
+416	submissionFileId	79	int
+416	fileId	45	int
 416	submissionId	17	int
 416	username	msmith	string
-416	name	Preface.pdf	string
+416	name	The Emergence of Open Development in a N.pdf	string
 417	fileStage	2	int
 417	sourceSubmissionFileId	\N	string
-417	submissionFileId	81	int
-417	fileId	43	int
+417	submissionFileId	79	int
+417	fileId	45	int
 417	submissionId	17	int
-417	originalFileName	Preface.pdf	string
+417	originalFileName	The Emergence of Open Development in a N.pdf	string
 417	username	msmith	string
 418	fileStage	2	int
 418	sourceSubmissionFileId	\N	string
-418	submissionFileId	81	int
-418	fileId	43	int
+418	submissionFileId	79	int
+418	fileId	45	int
 418	submissionId	17	int
 418	username	msmith	string
-418	originalFileName	Preface.pdf	string
-418	name	Preface.pdf	string
+418	originalFileName	The Emergence of Open Development in a N.pdf	string
+418	name	The Emergence of Open Development in a N.pdf	string
 419	fileStage	2	int
 419	sourceSubmissionFileId	\N	string
-419	submissionFileId	82	int
-419	fileId	44	int
+419	submissionFileId	80	int
+419	fileId	46	int
 419	submissionId	17	int
-419	originalFileName	Introduction.pdf	string
+419	originalFileName	Enacting Openness in ICT4D Research.pdf	string
 419	username	msmith	string
 420	fileStage	2	int
-420	submissionFileId	82	int
-420	fileId	44	int
+420	submissionFileId	80	int
+420	fileId	46	int
 420	submissionId	17	int
 420	username	msmith	string
-420	name	Introduction.pdf	string
+420	name	Enacting Openness in ICT4D Research.pdf	string
 421	fileStage	2	int
 421	sourceSubmissionFileId	\N	string
-421	submissionFileId	82	int
-421	fileId	44	int
+421	submissionFileId	80	int
+421	fileId	46	int
 421	submissionId	17	int
-421	originalFileName	Introduction.pdf	string
+421	originalFileName	Enacting Openness in ICT4D Research.pdf	string
 421	username	msmith	string
 422	fileStage	2	int
 422	sourceSubmissionFileId	\N	string
-422	submissionFileId	82	int
-422	fileId	44	int
+422	submissionFileId	80	int
+422	fileId	46	int
 422	submissionId	17	int
 422	username	msmith	string
-422	originalFileName	Introduction.pdf	string
-422	name	Introduction.pdf	string
+422	originalFileName	Enacting Openness in ICT4D Research.pdf	string
+422	name	Enacting Openness in ICT4D Research.pdf	string
 423	fileStage	2	int
 423	sourceSubmissionFileId	\N	string
-423	submissionFileId	83	int
-423	fileId	45	int
+423	submissionFileId	81	int
+423	fileId	47	int
 423	submissionId	17	int
-423	originalFileName	The Emergence of Open Development in a N.pdf	string
+423	originalFileName	Transparency and Development: Ethical Co.pdf	string
 423	username	msmith	string
 424	fileStage	2	int
-424	submissionFileId	83	int
-424	fileId	45	int
+424	submissionFileId	81	int
+424	fileId	47	int
 424	submissionId	17	int
 424	username	msmith	string
-424	name	The Emergence of Open Development in a N.pdf	string
+424	name	Transparency and Development: Ethical Co.pdf	string
 425	fileStage	2	int
 425	sourceSubmissionFileId	\N	string
-425	submissionFileId	83	int
-425	fileId	45	int
+425	submissionFileId	81	int
+425	fileId	47	int
 425	submissionId	17	int
-425	originalFileName	The Emergence of Open Development in a N.pdf	string
+425	originalFileName	Transparency and Development: Ethical Co.pdf	string
 425	username	msmith	string
 426	fileStage	2	int
 426	sourceSubmissionFileId	\N	string
-426	submissionFileId	83	int
-426	fileId	45	int
+426	submissionFileId	81	int
+426	fileId	47	int
 426	submissionId	17	int
 426	username	msmith	string
-426	originalFileName	The Emergence of Open Development in a N.pdf	string
-426	name	The Emergence of Open Development in a N.pdf	string
+426	originalFileName	Transparency and Development: Ethical Co.pdf	string
+426	name	Transparency and Development: Ethical Co.pdf	string
 427	fileStage	2	int
 427	sourceSubmissionFileId	\N	string
-427	submissionFileId	84	int
-427	fileId	46	int
+427	submissionFileId	82	int
+427	fileId	48	int
 427	submissionId	17	int
-427	originalFileName	Enacting Openness in ICT4D Research.pdf	string
+427	originalFileName	Open Educational Resources: Opportunitie.pdf	string
 427	username	msmith	string
 428	fileStage	2	int
-428	submissionFileId	84	int
-428	fileId	46	int
+428	submissionFileId	82	int
+428	fileId	48	int
 428	submissionId	17	int
 428	username	msmith	string
-428	name	Enacting Openness in ICT4D Research.pdf	string
+428	name	Open Educational Resources: Opportunitie.pdf	string
 429	fileStage	2	int
 429	sourceSubmissionFileId	\N	string
-429	submissionFileId	84	int
-429	fileId	46	int
+429	submissionFileId	82	int
+429	fileId	48	int
 429	submissionId	17	int
-429	originalFileName	Enacting Openness in ICT4D Research.pdf	string
+429	originalFileName	Open Educational Resources: Opportunitie.pdf	string
 429	username	msmith	string
 430	fileStage	2	int
 430	sourceSubmissionFileId	\N	string
-430	submissionFileId	84	int
-430	fileId	46	int
+430	submissionFileId	82	int
+430	fileId	48	int
 430	submissionId	17	int
 430	username	msmith	string
-430	originalFileName	Enacting Openness in ICT4D Research.pdf	string
-430	name	Enacting Openness in ICT4D Research.pdf	string
-431	fileStage	2	int
-431	sourceSubmissionFileId	\N	string
-431	submissionFileId	85	int
-431	fileId	47	int
-431	submissionId	17	int
-431	originalFileName	Transparency and Development: Ethical Co.pdf	string
-431	username	msmith	string
-432	fileStage	2	int
-432	submissionFileId	85	int
-432	fileId	47	int
-432	submissionId	17	int
-432	username	msmith	string
-432	name	Transparency and Development: Ethical Co.pdf	string
-433	fileStage	2	int
-433	sourceSubmissionFileId	\N	string
-433	submissionFileId	85	int
-433	fileId	47	int
+430	originalFileName	Open Educational Resources: Opportunitie.pdf	string
+430	name	Open Educational Resources: Opportunitie.pdf	string
+433	editorName	Daniel Barnes	string
 433	submissionId	17	int
-433	originalFileName	Transparency and Development: Ethical Co.pdf	string
-433	username	msmith	string
-434	fileStage	2	int
-434	sourceSubmissionFileId	\N	string
-434	submissionFileId	85	int
-434	fileId	47	int
+433	decision	Send to Internal Review	string
+434	fileStage	19	int
+434	sourceSubmissionFileId	77	int
+434	submissionFileId	83	int
+434	fileId	43	int
 434	submissionId	17	int
-434	username	msmith	string
-434	originalFileName	Transparency and Development: Ethical Co.pdf	string
-434	name	Transparency and Development: Ethical Co.pdf	string
-435	fileStage	2	int
-435	sourceSubmissionFileId	\N	string
-435	submissionFileId	86	int
-435	fileId	48	int
+434	originalFileName	Preface.pdf	string
+434	username	dbarnes	string
+435	fileStage	19	int
+435	submissionFileId	83	int
+435	fileId	43	int
 435	submissionId	17	int
-435	originalFileName	Open Educational Resources: Opportunitie.pdf	string
-435	username	msmith	string
-436	fileStage	2	int
-436	submissionFileId	86	int
-436	fileId	48	int
+435	username	dbarnes	string
+435	name	Preface.pdf	string
+436	fileStage	19	int
+436	sourceSubmissionFileId	78	int
+436	submissionFileId	84	int
+436	fileId	44	int
 436	submissionId	17	int
-436	username	msmith	string
-436	name	Open Educational Resources: Opportunitie.pdf	string
-437	fileStage	2	int
-437	sourceSubmissionFileId	\N	string
-437	submissionFileId	86	int
-437	fileId	48	int
+436	originalFileName	Introduction.pdf	string
+436	username	dbarnes	string
+437	fileStage	19	int
+437	submissionFileId	84	int
+437	fileId	44	int
 437	submissionId	17	int
-437	originalFileName	Open Educational Resources: Opportunitie.pdf	string
-437	username	msmith	string
-438	fileStage	2	int
-438	sourceSubmissionFileId	\N	string
-438	submissionFileId	86	int
-438	fileId	48	int
+437	username	dbarnes	string
+437	name	Introduction.pdf	string
+438	fileStage	19	int
+438	sourceSubmissionFileId	79	int
+438	submissionFileId	85	int
+438	fileId	45	int
 438	submissionId	17	int
-438	username	msmith	string
-438	originalFileName	Open Educational Resources: Opportunitie.pdf	string
-438	name	Open Educational Resources: Opportunitie.pdf	string
-441	editorName	Daniel Barnes	string
+438	originalFileName	The Emergence of Open Development in a N.pdf	string
+438	username	dbarnes	string
+439	fileStage	19	int
+439	submissionFileId	85	int
+439	fileId	45	int
+439	submissionId	17	int
+439	username	dbarnes	string
+439	name	The Emergence of Open Development in a N.pdf	string
+440	fileStage	19	int
+440	sourceSubmissionFileId	80	int
+440	submissionFileId	86	int
+440	fileId	46	int
+440	submissionId	17	int
+440	originalFileName	Enacting Openness in ICT4D Research.pdf	string
+440	username	dbarnes	string
+441	fileStage	19	int
+441	submissionFileId	86	int
+441	fileId	46	int
 441	submissionId	17	int
-441	decision	Send to Internal Review	string
+441	username	dbarnes	string
+441	name	Enacting Openness in ICT4D Research.pdf	string
 442	fileStage	19	int
 442	sourceSubmissionFileId	81	int
 442	submissionFileId	87	int
-442	fileId	43	int
+442	fileId	47	int
 442	submissionId	17	int
-442	originalFileName	Preface.pdf	string
+442	originalFileName	Transparency and Development: Ethical Co.pdf	string
 442	username	dbarnes	string
 443	fileStage	19	int
 443	submissionFileId	87	int
-443	fileId	43	int
+443	fileId	47	int
 443	submissionId	17	int
 443	username	dbarnes	string
-443	name	Preface.pdf	string
+443	name	Transparency and Development: Ethical Co.pdf	string
 444	fileStage	19	int
 444	sourceSubmissionFileId	82	int
 444	submissionFileId	88	int
-444	fileId	44	int
+444	fileId	48	int
 444	submissionId	17	int
-444	originalFileName	Introduction.pdf	string
+444	originalFileName	Open Educational Resources: Opportunitie.pdf	string
 444	username	dbarnes	string
 445	fileStage	19	int
 445	submissionFileId	88	int
-445	fileId	44	int
+445	fileId	48	int
 445	submissionId	17	int
 445	username	dbarnes	string
-445	name	Introduction.pdf	string
-446	fileStage	19	int
-446	sourceSubmissionFileId	83	int
-446	submissionFileId	89	int
-446	fileId	45	int
+445	name	Open Educational Resources: Opportunitie.pdf	string
+446	reviewAssignmentId	24	string
+446	reviewerName	Julie Janssen	string
 446	submissionId	17	int
-446	originalFileName	The Emergence of Open Development in a N.pdf	string
-446	username	dbarnes	string
-447	fileStage	19	int
-447	submissionFileId	89	int
-447	fileId	45	int
+446	stageId	2	int
+446	round	1	int
+447	reviewAssignmentId	25	string
+447	reviewerName	Paul Hudson	string
 447	submissionId	17	int
-447	username	dbarnes	string
-447	name	The Emergence of Open Development in a N.pdf	string
-448	fileStage	19	int
-448	sourceSubmissionFileId	84	int
-448	submissionFileId	90	int
-448	fileId	46	int
-448	submissionId	17	int
-448	originalFileName	Enacting Openness in ICT4D Research.pdf	string
-448	username	dbarnes	string
-449	fileStage	19	int
-449	submissionFileId	90	int
-449	fileId	46	int
-449	submissionId	17	int
-449	username	dbarnes	string
-449	name	Enacting Openness in ICT4D Research.pdf	string
-450	fileStage	19	int
-450	sourceSubmissionFileId	85	int
-450	submissionFileId	91	int
-450	fileId	47	int
-450	submissionId	17	int
-450	originalFileName	Transparency and Development: Ethical Co.pdf	string
-450	username	dbarnes	string
-451	fileStage	19	int
-451	submissionFileId	91	int
-451	fileId	47	int
-451	submissionId	17	int
-451	username	dbarnes	string
-451	name	Transparency and Development: Ethical Co.pdf	string
-452	fileStage	19	int
-452	sourceSubmissionFileId	86	int
-452	submissionFileId	92	int
-452	fileId	48	int
-452	submissionId	17	int
-452	originalFileName	Open Educational Resources: Opportunitie.pdf	string
-452	username	dbarnes	string
-453	fileStage	19	int
-453	submissionFileId	92	int
-453	fileId	48	int
-453	submissionId	17	int
-453	username	dbarnes	string
-453	name	Open Educational Resources: Opportunitie.pdf	string
-454	reviewAssignmentId	24	string
-454	reviewerName	Julie Janssen	string
-454	submissionId	17	int
-454	stageId	2	int
-454	round	1	int
-455	reviewAssignmentId	25	string
-455	reviewerName	Paul Hudson	string
-455	submissionId	17	int
-455	stageId	2	int
-455	round	1	int
+447	stageId	2	int
+447	round	1	int
 \.
 
 
@@ -8344,54 +8284,54 @@ COPY public.features (submission_id, assoc_type, assoc_id, seq) FROM stdin;
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	presses/1/monographs/1/63989ee625ccf.pdf	application/pdf
-2	presses/1/monographs/2/63989f159216c.pdf	application/pdf
-3	presses/1/monographs/2/63989f163fd94.pdf	application/pdf
-4	presses/1/monographs/2/63989f16d87f0.pdf	application/pdf
-5	presses/1/monographs/2/63989f17905f7.pdf	application/pdf
-6	presses/1/monographs/3/63989f8199e37.pdf	application/pdf
-7	presses/1/monographs/4/63989fa49458d.pdf	application/pdf
-8	presses/1/monographs/4/63989fa54be45.pdf	application/pdf
-9	presses/1/monographs/4/63989fa5d6430.pdf	application/pdf
-10	presses/1/monographs/4/63989fa67b17b.pdf	application/pdf
-11	presses/1/monographs/5/6398a01c1fc6e.pdf	application/pdf
-12	presses/1/monographs/6/6398a08ccab99.pdf	application/pdf
-13	presses/1/monographs/6/6398a08d78c8b.pdf	application/pdf
-14	presses/1/monographs/6/6398a08e1a99e.pdf	application/pdf
-15	presses/1/monographs/6/6398a08eba14e.pdf	application/pdf
-16	presses/1/monographs/7/6398a0ec50dfe.pdf	application/pdf
-17	presses/1/monographs/7/6398a0ecf3710.pdf	application/pdf
-18	presses/1/monographs/7/6398a0ed91e61.pdf	application/pdf
-19	presses/1/monographs/7/6398a0ee415f7.pdf	application/pdf
-20	presses/1/monographs/7/6398a0eee72f2.pdf	application/pdf
-21	presses/1/monographs/8/6398a15a4af8e.pdf	application/pdf
-22	presses/1/monographs/9/6398a165cd04d.pdf	application/pdf
-23	presses/1/monographs/9/6398a1667548d.pdf	application/pdf
-24	presses/1/monographs/9/6398a1670f2ef.pdf	application/pdf
-25	presses/1/monographs/9/6398a167a8979.pdf	application/pdf
-26	presses/1/monographs/9/6398a16852b8e.pdf	application/pdf
-27	presses/1/monographs/10/6398a1be2d53d.pdf	application/pdf
-28	presses/1/monographs/11/6398a1f516229.pdf	application/pdf
-29	presses/1/monographs/12/6398a24a52fe9.pdf	application/pdf
-30	presses/1/monographs/12/6398a24aea2d3.pdf	application/pdf
-31	presses/1/monographs/12/6398a24b9d14d.pdf	application/pdf
-32	presses/1/monographs/13/6398a2bc50178.pdf	application/pdf
-33	presses/1/monographs/13/6398a2bd07e59.pdf	application/pdf
-34	presses/1/monographs/13/6398a2bda3c49.pdf	application/pdf
-35	presses/1/monographs/14/6398a3465e03d.pdf	application/pdf
-36	presses/1/monographs/14/6398a34710c4d.pdf	application/pdf
-37	presses/1/monographs/14/6398a347b4f8f.pdf	application/pdf
-38	presses/1/monographs/14/6398a34864238.pdf	application/pdf
-39	presses/1/monographs/14/6398a3491d022.pdf	application/pdf
-40	presses/1/monographs/14/6398a34a43b3c.pdf	application/pdf
-41	presses/1/monographs/15/6398a4059779a.pdf	application/pdf
-42	presses/1/monographs/16/6398a42b9d4e0.pdf	application/pdf
-43	presses/1/monographs/17/6398a474ebfc0.pdf	application/pdf
-44	presses/1/monographs/17/6398a475a1f9f.pdf	application/pdf
-45	presses/1/monographs/17/6398a4764fd5f.pdf	application/pdf
-46	presses/1/monographs/17/6398a476eb23f.pdf	application/pdf
-47	presses/1/monographs/17/6398a4779a438.pdf	application/pdf
-48	presses/1/monographs/17/6398a47877f8e.pdf	application/pdf
+1	presses/1/monographs/1/6399015b758f3.pdf	application/pdf
+2	presses/1/monographs/2/6399018acab89.pdf	application/pdf
+3	presses/1/monographs/2/6399018b80ce4.pdf	application/pdf
+4	presses/1/monographs/2/6399018c1efe2.pdf	application/pdf
+5	presses/1/monographs/2/6399018cb8d76.pdf	application/pdf
+6	presses/1/monographs/3/639901f235175.pdf	application/pdf
+7	presses/1/monographs/4/639902146435f.pdf	application/pdf
+8	presses/1/monographs/4/63990215062b5.pdf	application/pdf
+9	presses/1/monographs/4/6399021597ca4.pdf	application/pdf
+10	presses/1/monographs/4/639902163695a.pdf	application/pdf
+11	presses/1/monographs/5/6399028628aee.pdf	application/pdf
+12	presses/1/monographs/6/639902f7713b0.pdf	application/pdf
+13	presses/1/monographs/6/639902f819dc1.pdf	application/pdf
+14	presses/1/monographs/6/639902f8aae67.pdf	application/pdf
+15	presses/1/monographs/6/639902f95914c.pdf	application/pdf
+16	presses/1/monographs/7/63990354f3fcb.pdf	application/pdf
+17	presses/1/monographs/7/6399035597eaa.pdf	application/pdf
+18	presses/1/monographs/7/6399035638506.pdf	application/pdf
+19	presses/1/monographs/7/63990356cee59.pdf	application/pdf
+20	presses/1/monographs/7/6399035776f8c.pdf	application/pdf
+21	presses/1/monographs/8/639903c045db8.pdf	application/pdf
+22	presses/1/monographs/9/639903cbcd0e1.pdf	application/pdf
+23	presses/1/monographs/9/639903cc89d10.pdf	application/pdf
+24	presses/1/monographs/9/639903cd20388.pdf	application/pdf
+25	presses/1/monographs/9/639903cdb92f3.pdf	application/pdf
+26	presses/1/monographs/9/639903ce64396.pdf	application/pdf
+27	presses/1/monographs/10/63990422edfc8.pdf	application/pdf
+28	presses/1/monographs/11/639904591c20a.pdf	application/pdf
+29	presses/1/monographs/12/639904ab30a1d.pdf	application/pdf
+30	presses/1/monographs/12/639904abcf5d8.pdf	application/pdf
+31	presses/1/monographs/12/639904ac68cc9.pdf	application/pdf
+32	presses/1/monographs/13/6399051b7f455.pdf	application/pdf
+33	presses/1/monographs/13/6399051c22556.pdf	application/pdf
+34	presses/1/monographs/13/6399051caf1f8.pdf	application/pdf
+35	presses/1/monographs/14/639905a038d7f.pdf	application/pdf
+36	presses/1/monographs/14/639905a0c487e.pdf	application/pdf
+37	presses/1/monographs/14/639905a16905c.pdf	application/pdf
+38	presses/1/monographs/14/639905a20579f.pdf	application/pdf
+39	presses/1/monographs/14/639905a2b9a59.pdf	application/pdf
+40	presses/1/monographs/14/639905a3b8480.pdf	application/pdf
+41	presses/1/monographs/15/6399064dddf92.pdf	application/pdf
+42	presses/1/monographs/16/63990672cae62.pdf	application/pdf
+43	presses/1/monographs/17/639906badc447.pdf	application/pdf
+44	presses/1/monographs/17/639906bb85f50.pdf	application/pdf
+45	presses/1/monographs/17/639906bc1f0f0.pdf	application/pdf
+46	presses/1/monographs/17/639906bcb4c83.pdf	application/pdf
+47	presses/1/monographs/17/639906bd59d56.pdf	application/pdf
+48	presses/1/monographs/17/639906be2481b.pdf	application/pdf
 \.
 
 
@@ -8798,7 +8738,7 @@ COPY public.new_releases (submission_id, assoc_type, assoc_id) FROM stdin;
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2022-12-13 15:57:14	2022-12-13 15:57:14	Recommendation	<p>Daniel Barnes, David Buskins:<br><br>The recommendation regarding the submission to Public Knowledge Press, "The Information Literacy User’s Guide" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+1	1048586	1	6	2022-12-13 22:57:05	2022-12-13 22:57:05	Recommendation	<p>Daniel Barnes, David Buskins:<br><br>The recommendation regarding the submission to Public Knowledge Press, "The Information Literacy User’s Guide" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
 \.
 
 
@@ -8868,125 +8808,124 @@ SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_s
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-77	1	0	2	16777243	2022-12-13 15:52:55	\N	1048585	4
-353	1	7	3	16777227	2022-12-13 16:08:46	\N	517	19
-40	1	3	2	16777217	2022-12-13 15:50:53	\N	1048585	2
-179	1	0	2	16777236	2022-12-13 15:58:50	2022-12-13 15:58:55	523	8
-42	1	0	2	16777243	2022-12-13 15:50:53	\N	1048585	2
-43	1	0	2	16777245	2022-12-13 15:50:53	\N	1048585	2
-127	1	23	2	16777235	2022-12-13 15:55:13	\N	1048585	5
-181	1	10	3	16777227	2022-12-13 15:59:01	\N	517	8
-128	1	3	2	16777254	2022-12-13 15:55:13	\N	1048585	5
-7	0	1	1	1	2022-12-13 15:48:45	\N	0	0
-147	1	0	2	16777243	2022-12-13 15:56:46	\N	1048585	6
-47	1	20	2	16777231	2022-12-13 15:51:03	\N	1048585	2
-46	1	0	2	16777236	2022-12-13 15:51:02	2022-12-13 15:51:07	523	2
-48	1	11	3	16777227	2022-12-13 15:51:12	\N	517	2
-11	1	3	2	16777217	2022-12-13 15:49:09	\N	1048585	1
-148	1	0	2	16777245	2022-12-13 15:56:46	\N	1048585	6
-13	1	0	2	16777243	2022-12-13 15:49:09	\N	1048585	1
-14	1	0	2	16777245	2022-12-13 15:49:09	\N	1048585	1
-288	1	9	3	16777227	2022-12-13 16:04:54	\N	517	14
-51	1	12	3	16777227	2022-12-13 15:51:19	\N	517	3
-16	1	0	2	16777236	2022-12-13 15:49:15	2022-12-13 15:49:18	523	1
-18	1	12	3	16777227	2022-12-13 15:49:22	\N	517	1
-185	1	25	2	16777230	2022-12-13 15:59:04	\N	1048585	7
-106	1	3	2	16777217	2022-12-13 15:54:33	\N	1048585	5
-81	1	0	2	16777236	2022-12-13 15:53:03	2022-12-13 15:53:07	523	3
-22	1	19	2	16777230	2022-12-13 15:49:25	\N	1048585	1
-23	1	3	2	16777251	2022-12-13 15:49:25	2022-12-13 15:49:27	1048585	1
-83	1	9	3	16777227	2022-12-13 15:53:13	\N	517	4
-186	1	3	2	16777251	2022-12-13 15:59:04	2022-12-13 15:59:07	1048585	7
-188	1	3	2	16777217	2022-12-13 15:59:25	\N	1048585	8
-59	1	3	2	16777217	2022-12-13 15:51:55	\N	1048585	3
-111	1	0	2	16777236	2022-12-13 15:54:40	2022-12-13 15:54:43	523	5
-61	1	0	2	16777243	2022-12-13 15:51:55	\N	1048585	3
-62	1	0	2	16777245	2022-12-13 15:51:55	\N	1048585	3
-113	1	8	3	16777227	2022-12-13 15:54:48	\N	517	6
-190	1	0	2	16777243	2022-12-13 15:59:25	\N	1048585	8
-191	1	0	2	16777245	2022-12-13 15:59:25	\N	1048585	8
-131	1	0	2	16777246	2022-12-13 15:55:47	\N	1048585	5
-86	1	0	2	16777236	2022-12-13 15:53:16	2022-12-13 15:53:20	523	4
-116	1	0	2	16777236	2022-12-13 15:54:50	2022-12-13 15:54:54	523	6
-89	1	11	3	16777227	2022-12-13 15:53:26	\N	517	5
-119	1	12	3	16777227	2022-12-13 15:54:59	\N	517	7
-216	1	26	2	16777229	2022-12-13 16:00:48	\N	1048585	9
-215	1	0	2	16777236	2022-12-13 16:00:48	2022-12-13 16:00:52	523	9
-207	1	3	2	16777217	2022-12-13 16:00:38	\N	1048585	9
-75	1	3	2	16777217	2022-12-13 15:52:55	\N	1048585	4
-209	1	4	2	16777217	2022-12-13 16:00:38	\N	1048585	9
-152	1	24	2	16777229	2022-12-13 15:56:55	\N	1048585	6
-151	1	0	2	16777236	2022-12-13 15:56:55	2022-12-13 15:56:58	523	7
-97	1	22	2	16777235	2022-12-13 15:53:42	\N	1048585	4
-98	1	3	2	16777254	2022-12-13 15:53:42	\N	1048585	4
-211	1	0	2	16777243	2022-12-13 16:00:39	\N	1048585	9
-78	1	0	2	16777245	2022-12-13 15:52:55	2022-12-13 15:53:45	1048585	4
-212	1	0	2	16777245	2022-12-13 16:00:39	\N	1048585	9
-155	1	3	3	16777249	2022-12-13 15:57:14	\N	1048586	1
-228	1	0	2	16777243	2022-12-13 16:01:47	\N	1048585	10
-229	1	0	2	16777245	2022-12-13 16:01:47	\N	1048585	10
-157	1	4	3	16777249	2022-12-13 15:57:14	\N	1048586	1
-143	1	3	2	16777217	2022-12-13 15:56:46	\N	1048585	6
-145	1	4	2	16777217	2022-12-13 15:56:46	\N	1048585	6
-235	1	0	2	16777243	2022-12-13 16:02:08	\N	1048585	11
-236	1	0	2	16777245	2022-12-13 16:02:08	\N	1048585	11
-226	1	3	2	16777217	2022-12-13 16:01:47	\N	1048585	10
-240	1	9	3	16777227	2022-12-13 16:02:23	\N	517	9
-233	1	3	2	16777217	2022-12-13 16:02:08	\N	1048585	11
-238	1	0	2	16777236	2022-12-13 16:02:16	2022-12-13 16:02:19	523	10
-173	1	3	2	16777217	2022-12-13 15:58:40	\N	1048585	7
-175	1	0	2	16777243	2022-12-13 15:58:41	\N	1048585	7
-176	1	0	2	16777245	2022-12-13 15:58:41	\N	1048585	7
-243	1	0	2	16777236	2022-12-13 16:02:26	2022-12-13 16:02:29	523	11
-253	1	3	2	16777219	2022-12-13 16:02:48	\N	517	10
-256	1	3	2	16777219	2022-12-13 16:02:57	\N	517	11
-259	1	28	2	16777230	2022-12-13 16:03:09	\N	1048585	11
-260	1	3	2	16777251	2022-12-13 16:03:09	2022-12-13 16:03:12	1048585	11
-274	1	3	2	16777217	2022-12-13 16:04:20	\N	1048585	12
-276	1	0	2	16777243	2022-12-13 16:04:21	\N	1048585	12
-277	1	0	2	16777245	2022-12-13 16:04:21	\N	1048585	12
-281	1	29	2	16777229	2022-12-13 16:04:30	\N	1048585	12
-280	1	0	2	16777236	2022-12-13 16:04:30	2022-12-13 16:04:34	523	12
-282	1	7	3	16777227	2022-12-13 16:04:41	\N	517	12
-330	1	3	2	16777219	2022-12-13 16:07:04	\N	517	18
-292	1	3	2	16777219	2022-12-13 16:05:05	\N	517	13
-356	1	0	2	16777236	2022-12-13 16:08:50	2022-12-13 16:08:54	523	16
-359	1	11	3	16777227	2022-12-13 16:09:00	\N	517	20
-333	1	30	2	16777230	2022-12-13 16:07:19	\N	1048585	13
-432	1	34	2	16777229	2022-12-13 16:14:27	\N	1048585	17
-387	1	3	2	16777217	2022-12-13 16:11:48	\N	1048585	16
-334	1	3	2	16777251	2022-12-13 16:07:19	2022-12-13 16:07:23	1048585	13
-389	1	0	2	16777243	2022-12-13 16:11:48	\N	1048585	16
-390	1	0	2	16777245	2022-12-13 16:11:48	\N	1048585	16
-367	1	31	2	16777235	2022-12-13 16:09:18	\N	1048585	14
-303	1	3	2	16777217	2022-12-13 16:05:56	\N	1048585	13
-368	1	3	2	16777254	2022-12-13 16:09:18	\N	1048585	14
-305	1	0	2	16777243	2022-12-13 16:05:56	\N	1048585	13
-306	1	0	2	16777245	2022-12-13 16:05:56	\N	1048585	13
-431	1	0	2	16777236	2022-12-13 16:14:27	2022-12-13 16:14:31	523	19
-309	1	0	2	16777236	2022-12-13 16:06:06	2022-12-13 16:06:10	523	13
-311	1	8	3	16777227	2022-12-13 16:06:16	\N	517	15
-371	1	0	2	16777246	2022-12-13 16:10:36	\N	1048585	14
-393	1	33	2	16777231	2022-12-13 16:11:58	\N	1048585	16
-392	1	0	2	16777236	2022-12-13 16:11:58	2022-12-13 16:12:01	523	18
-314	1	0	2	16777236	2022-12-13 16:06:19	2022-12-13 16:06:23	523	14
-375	1	3	2	16777217	2022-12-13 16:11:01	\N	1048585	15
-377	1	0	2	16777243	2022-12-13 16:11:01	\N	1048585	15
-378	1	0	2	16777245	2022-12-13 16:11:01	\N	1048585	15
-320	1	11	3	16777227	2022-12-13 16:06:34	\N	517	17
-381	1	32	2	16777231	2022-12-13 16:11:11	\N	1048585	15
-380	1	0	2	16777236	2022-12-13 16:11:11	2022-12-13 16:11:14	523	17
-433	1	7	3	16777227	2022-12-13 16:14:39	\N	517	24
-397	1	11	3	16777227	2022-12-13 16:12:11	\N	517	22
-327	1	3	2	16777219	2022-12-13 16:06:52	\N	517	16
-400	1	12	3	16777227	2022-12-13 16:12:17	\N	517	23
-345	1	3	2	16777217	2022-12-13 16:08:24	\N	1048585	14
-351	1	0	2	16777236	2022-12-13 16:08:36	2022-12-13 16:08:40	523	15
-404	1	3	2	16777219	2022-12-13 16:12:26	\N	517	21
-436	1	8	3	16777227	2022-12-13 16:14:45	\N	517	25
-425	1	3	2	16777217	2022-12-13 16:14:14	\N	1048585	17
-427	1	0	2	16777243	2022-12-13 16:14:14	\N	1048585	17
-428	1	0	2	16777245	2022-12-13 16:14:14	\N	1048585	17
+371	1	0	2	16777246	2022-12-13 23:09:56	\N	1048585	14
+42	1	0	2	16777243	2022-12-13 22:50:55	\N	1048585	2
+235	1	0	2	16777243	2022-12-13 23:01:56	\N	1048585	11
+43	1	0	2	16777245	2022-12-13 22:50:55	\N	1048585	2
+127	1	23	2	16777235	2022-12-13 22:55:07	\N	1048585	5
+236	1	0	2	16777245	2022-12-13 23:01:56	\N	1048585	11
+128	1	3	2	16777254	2022-12-13 22:55:07	\N	1048585	5
+311	1	8	3	16777227	2022-12-13 23:05:56	\N	517	15
+226	1	3	2	16777217	2022-12-13 23:01:36	\N	1048585	10
+228	1	0	2	16777243	2022-12-13 23:01:36	\N	1048585	10
+143	1	3	2	16777217	2022-12-13 22:56:38	\N	1048585	6
+47	1	20	2	16777231	2022-12-13 22:51:03	\N	1048585	2
+229	1	0	2	16777245	2022-12-13 23:01:36	\N	1048585	10
+46	1	0	2	16777236	2022-12-13 22:51:03	2022-12-13 22:51:07	523	2
+11	1	3	2	16777217	2022-12-13 22:49:14	\N	1048585	1
+145	1	4	2	16777217	2022-12-13 22:56:38	\N	1048585	6
+13	1	0	2	16777243	2022-12-13 22:49:14	\N	1048585	1
+14	1	0	2	16777245	2022-12-13 22:49:14	\N	1048585	1
+48	1	11	3	16777227	2022-12-13 22:51:13	\N	517	2
+147	1	0	2	16777243	2022-12-13 22:56:38	\N	1048585	6
+75	1	3	2	16777217	2022-12-13 22:52:53	\N	1048585	4
+16	1	0	2	16777236	2022-12-13 22:49:21	2022-12-13 22:49:23	523	1
+18	1	12	3	16777227	2022-12-13 22:49:28	\N	517	1
+148	1	0	2	16777245	2022-12-13 22:56:38	\N	1048585	6
+77	1	0	2	16777243	2022-12-13 22:52:54	\N	1048585	4
+240	1	9	3	16777227	2022-12-13 23:02:10	\N	517	9
+22	1	19	2	16777230	2022-12-13 22:49:31	\N	1048585	1
+233	1	3	2	16777217	2022-12-13 23:01:56	\N	1048585	11
+23	1	3	2	16777251	2022-12-13 22:49:31	2022-12-13 22:49:33	1048585	1
+51	1	12	3	16777227	2022-12-13 22:51:20	\N	517	3
+81	1	0	2	16777236	2022-12-13 22:53:02	2022-12-13 22:53:06	523	3
+83	1	9	3	16777227	2022-12-13 22:53:11	\N	517	4
+152	1	24	2	16777229	2022-12-13 22:56:47	\N	1048585	6
+151	1	0	2	16777236	2022-12-13 22:56:47	2022-12-13 22:56:50	523	7
+238	1	0	2	16777236	2022-12-13 23:02:03	2022-12-13 23:02:06	523	10
+106	1	3	2	16777217	2022-12-13 22:54:27	\N	1048585	5
+86	1	0	2	16777236	2022-12-13 22:53:14	2022-12-13 22:53:18	523	4
+89	1	11	3	16777227	2022-12-13 22:53:24	\N	517	5
+155	1	3	3	16777249	2022-12-13 22:57:05	\N	1048586	1
+157	1	4	3	16777249	2022-12-13 22:57:05	\N	1048586	1
+243	1	0	2	16777236	2022-12-13 23:02:12	2022-12-13 23:02:15	523	11
+179	1	0	2	16777236	2022-12-13 22:58:40	2022-12-13 22:58:44	523	8
+181	1	10	3	16777227	2022-12-13 22:58:50	\N	517	8
+97	1	22	2	16777235	2022-12-13 22:53:39	\N	1048585	4
+98	1	3	2	16777254	2022-12-13 22:53:39	\N	1048585	4
+59	1	3	2	16777217	2022-12-13 22:51:55	\N	1048585	3
+40	1	3	2	16777217	2022-12-13 22:50:55	\N	1048585	2
+131	1	0	2	16777246	2022-12-13 22:55:41	\N	1048585	5
+78	1	0	2	16777245	2022-12-13 22:52:54	2022-12-13 22:53:42	1048585	4
+61	1	0	2	16777243	2022-12-13 22:51:55	\N	1048585	3
+62	1	0	2	16777245	2022-12-13 22:51:55	\N	1048585	3
+111	1	0	2	16777236	2022-12-13 22:54:34	2022-12-13 22:54:37	523	5
+113	1	8	3	16777227	2022-12-13 22:54:42	\N	517	6
+253	1	3	2	16777219	2022-12-13 23:02:34	\N	517	10
+256	1	3	2	16777219	2022-12-13 23:02:43	\N	517	11
+116	1	0	2	16777236	2022-12-13 22:54:45	2022-12-13 22:54:48	523	6
+119	1	12	3	16777227	2022-12-13 22:54:53	\N	517	7
+173	1	3	2	16777217	2022-12-13 22:58:31	\N	1048585	7
+175	1	0	2	16777243	2022-12-13 22:58:31	\N	1048585	7
+176	1	0	2	16777245	2022-12-13 22:58:31	\N	1048585	7
+185	1	25	2	16777230	2022-12-13 22:58:53	\N	1048585	7
+259	1	28	2	16777230	2022-12-13 23:02:54	\N	1048585	11
+186	1	3	2	16777251	2022-12-13 22:58:53	2022-12-13 22:58:57	1048585	7
+260	1	3	2	16777251	2022-12-13 23:02:54	2022-12-13 23:02:57	1048585	11
+188	1	3	2	16777217	2022-12-13 22:59:15	\N	1048585	8
+190	1	0	2	16777243	2022-12-13 22:59:15	\N	1048585	8
+191	1	0	2	16777245	2022-12-13 22:59:15	\N	1048585	8
+274	1	3	2	16777217	2022-12-13 23:04:05	\N	1048585	12
+216	1	26	2	16777229	2022-12-13 23:00:37	\N	1048585	9
+207	1	3	2	16777217	2022-12-13 23:00:27	\N	1048585	9
+209	1	4	2	16777217	2022-12-13 23:00:27	\N	1048585	9
+276	1	0	2	16777243	2022-12-13 23:04:05	\N	1048585	12
+211	1	0	2	16777243	2022-12-13 23:00:27	\N	1048585	9
+212	1	0	2	16777245	2022-12-13 23:00:27	\N	1048585	9
+277	1	0	2	16777245	2022-12-13 23:04:05	\N	1048585	12
+215	1	0	2	16777236	2022-12-13 23:00:37	2022-12-13 23:00:40	523	9
+281	1	29	2	16777229	2022-12-13 23:04:15	\N	1048585	12
+280	1	0	2	16777236	2022-12-13 23:04:15	2022-12-13 23:04:19	523	12
+282	1	7	3	16777227	2022-12-13 23:04:25	\N	517	12
+345	1	3	2	16777217	2022-12-13 23:07:59	\N	1048585	14
+303	1	3	2	16777217	2022-12-13 23:05:37	\N	1048585	13
+404	1	3	2	16777219	2022-12-13 23:11:45	\N	517	21
+288	1	9	3	16777227	2022-12-13 23:04:38	\N	517	14
+305	1	0	2	16777243	2022-12-13 23:05:37	\N	1048585	13
+306	1	0	2	16777245	2022-12-13 23:05:37	\N	1048585	13
+375	1	3	2	16777217	2022-12-13 23:10:21	\N	1048585	15
+292	1	3	2	16777219	2022-12-13 23:04:49	\N	517	13
+309	1	0	2	16777236	2022-12-13 23:05:47	2022-12-13 23:05:51	523	13
+377	1	0	2	16777243	2022-12-13 23:10:21	\N	1048585	15
+378	1	0	2	16777245	2022-12-13 23:10:21	\N	1048585	15
+314	1	0	2	16777236	2022-12-13 23:05:59	2022-12-13 23:06:03	523	14
+381	1	32	2	16777231	2022-12-13 23:10:31	\N	1048585	15
+380	1	0	2	16777236	2022-12-13 23:10:31	2022-12-13 23:10:33	523	17
+425	1	3	2	16777217	2022-12-13 23:13:26	\N	1048585	17
+320	1	11	3	16777227	2022-12-13 23:06:15	\N	517	17
+351	1	0	2	16777236	2022-12-13 23:08:09	2022-12-13 23:08:13	523	15
+353	1	7	3	16777227	2022-12-13 23:08:18	\N	517	19
+427	1	0	2	16777243	2022-12-13 23:13:26	\N	1048585	17
+387	1	3	2	16777217	2022-12-13 23:11:06	\N	1048585	16
+327	1	3	2	16777219	2022-12-13 23:06:32	\N	517	16
+389	1	0	2	16777243	2022-12-13 23:11:06	\N	1048585	16
+390	1	0	2	16777245	2022-12-13 23:11:06	\N	1048585	16
+330	1	3	2	16777219	2022-12-13 23:06:43	\N	517	18
+428	1	0	2	16777245	2022-12-13 23:13:26	\N	1048585	17
+333	1	30	2	16777230	2022-12-13 23:06:58	\N	1048585	13
+334	1	3	2	16777251	2022-12-13 23:06:58	2022-12-13 23:07:02	1048585	13
+393	1	33	2	16777231	2022-12-13 23:11:16	\N	1048585	16
+392	1	0	2	16777236	2022-12-13 23:11:16	2022-12-13 23:11:19	523	18
+356	1	0	2	16777236	2022-12-13 23:08:22	2022-12-13 23:08:25	523	16
+397	1	11	3	16777227	2022-12-13 23:11:29	\N	517	22
+359	1	11	3	16777227	2022-12-13 23:08:31	\N	517	20
+400	1	12	3	16777227	2022-12-13 23:11:35	\N	517	23
+367	1	31	2	16777235	2022-12-13 23:08:45	\N	1048585	14
+368	1	3	2	16777254	2022-12-13 23:08:45	\N	1048585	14
+432	1	34	2	16777229	2022-12-13 23:13:40	\N	1048585	17
+431	1	0	2	16777236	2022-12-13 23:13:39	2022-12-13 23:13:43	523	19
+433	1	7	3	16777227	2022-12-13 23:13:50	\N	517	24
+436	1	8	3	16777227	2022-12-13 23:13:57	\N	517	25
 \.
 
 
@@ -9051,7 +8990,7 @@ webfeedplugin	1	displayPage	homepage	string
 webfeedplugin	1	displayItems	1	bool
 htmlmonographfileplugin	1	enabled	1	bool
 googlescholarplugin	1	enabled	1	bool
-usageeventplugin	0	uniqueSiteId	63989df781670	string
+usageeventplugin	0	uniqueSiteId	639900787dfcd	string
 defaultthemeplugin	1	typography	notoSans	string
 defaultthemeplugin	1	useHomepageImageAsHeader	false	string
 defaultthemeplugin	1	baseColour	#1E6292	string
@@ -9063,26 +9002,26 @@ defaultthemeplugin	1	baseColour	#1E6292	string
 --
 
 COPY public.press_settings (press_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+1	fr_CA	readerInformation	Nous encourageons les lecteurs à s'abonner au service d'avis de publication de cette presse. Utilisez le lien <a href="http://localhost/index.php/publicknowledge/user/register">d'inscription</a> situé en haut de la page d'accueil de la presse. Cette inscription permettra au lecteur de recevoir la table des matières de chaque nouvelle monographie de cette presse par courriel. Cette liste permet également à la presse d'affirmer qu'elle compte un certain nombre de lecteurs. Consultez <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">l'énoncé de confidentialité </a> de la presse, lequel stipule que les noms et adresses courriel de ses lecteurs ne seront pas utilisés à d'autres fins.	\N
 1	fr_CA	submissionChecklist	[{"order":1,"content":"Cette soumission n'a jamais été publiée et n'a pas été soumise à une autre presse (ou une explication a été ajoutée à la section Commentaires du rédacteur en chef)."},{"order":2,"content":"Le fichier soumis est de format Microsoft Word, RTF ou OpenDocument."},{"order":3,"content":"Les adresses URL des références ont été fournies si elles étaient disponibles."},{"order":4,"content":"Le texte est publié à simple interligne ; utiliser une police de caractères de 12 points ; utiliser des caractères italiques au lieu de souligner (sauf pour les adresses URL) ; et toutes les illustrations, figures et tableaux doivent être insérés dans le texte aux endroits appropriés plutôt qu'à la fin."},{"order":5,"content":"Le texte respecte les exigences stylistiques et bibliographiques conformément aux <a href=\\"http:\\/\\/localhost\\/index.php\\/publicknowledge\\/about\\/submissions#authorGuidelines\\" target=\\"_blank\\">lignes directrices à l'intention des auteurs<\\/a>, disponibles dans la rubrique À propos de cette presse."}]	\N
 1		supportedFormLocales	["en_US","fr_CA"]	\N
+1		defaultReviewMode	2	\N
 1	fr_CA	librarianInformation	Nous encourageons les bibliothécaires de recherche à ajouter cette presse à la liste électronique des ressources documentaires de la bibliothèque. De plus, ce système d'édition à libre accès convient à toutes les bibliothèques et permet aux membres des facultés de l'utiliser pour les presses auxquelles ils contribuent à titre de rédacteur en chef. (voir <a href="http://pkp.sfu.ca/omp">Open Monograph Press</a>).	\N
 1	en_US	name	Public Knowledge Press	\N
 1		numWeeksPerReview	4	\N
-1	en_US	openAccessPolicy	This press provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.	\N
 1	fr_CA	openAccessPolicy	Cette presse offre un accès libre immédiat à son contenu en partant du principe que la recherche doit être accessible au grand public, car cela favorise un meilleur échange des connaissances à l'échelle mondiale.	\N
-1	en_US	privacyStatement	<p>The names and email addresses entered in this press site will be used exclusively for the stated purposes of this press and will not be made available for any other purpose or to any other party.</p>	\N
+1	en_US	openAccessPolicy	This press provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.	\N
 1	fr_CA	privacyStatement	<p>Les noms et adresses courriel saisis sur ce site de presse seront utilisés exclusivement pour les fins convenues de cette presse. Ils ne seront pas utilisés pour d'autres fins ou transmis à une tierce partie.</p>	\N
 1	en_US	readerInformation	We encourage readers to sign up for the publishing notification service for this press. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the homepage for the press. This registration will result in the reader receiving the Table of Contents by email for each new monograph of the press. This list also allows the press to claim a certain level of support or readership. See the press <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a> which assures readers that their name and email address will not be used for other purposes.	\N
-1	fr_CA	readerInformation	Nous encourageons les lecteurs à s'abonner au service d'avis de publication de cette presse. Utilisez le lien <a href="http://localhost/index.php/publicknowledge/user/register">d'inscription</a> situé en haut de la page d'accueil de la presse. Cette inscription permettra au lecteur de recevoir la table des matières de chaque nouvelle monographie de cette presse par courriel. Cette liste permet également à la presse d'affirmer qu'elle compte un certain nombre de lecteurs. Consultez <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">l'énoncé de confidentialité </a> de la presse, lequel stipule que les noms et adresses courriel de ses lecteurs ne seront pas utilisés à d'autres fins.	\N
 1	en_US	submissionChecklist	[{"order":1,"content":"The submission has not been previously published, nor is it before another press for consideration (or an explanation has been provided in Comments to the Editor)."},{"order":2,"content":"The submission file is in the Microsoft Word, RTF, or OpenDocument file format."},{"order":3,"content":"Where available, URLs for the references have been provided."},{"order":4,"content":"The text is single-spaced; uses a 12-point font; employs italics, rather than underlining (except with URL addresses); and all illustrations, figures, and tables are placed within the text at the appropriate points, rather than at the end."},{"order":5,"content":"The text adheres to the stylistic and bibliographic requirements outlined in the <a href=\\"http:\\/\\/localhost\\/index.php\\/publicknowledge\\/about\\/submissions#authorGuidelines\\" target=\\"_blank\\">Author Guidelines<\\/a>, which is found in About the Press."}]	\N
-1		defaultReviewMode	2	\N
 1		emailSignature	<br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>	\N
 1		disableSubmissions	0	\N
 1		itemsPerPage	25	\N
+1		keywords	request	\N
 1	fr_CA	name	Press de la connaissance du public	\N
 1		numPageLinks	10	\N
 1		numWeeksPerResponse	4	\N
-1		keywords	request	\N
+1	en_US	privacyStatement	<p>The names and email addresses entered in this press site will be used exclusively for the stated purposes of this press and will not be made available for any other purpose or to any other party.</p>	\N
 1	en_US	librarianInformation	We encourage research librarians to list this press among their library's electronic press holdings. As well, this open source publishing system is suitable for libraries to host for their faculty members to use with presses they are involved in editing (see <a href="http://pkp.sfu.ca/omp">Open Monograph Press</a>).	\N
 1	fr_CA	authorInformation	Vous souhaitez soumettre une contribution à cette presse ? Nous vous recommandons de lire la page\n <a href="http://localhost/index.php/publicknowledge/about">À propos de cette presse</a> pour connaitre ses règlements et la page\n <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Lignes directrices à l'intention des auteurs-es</a>. Les auteurs-es doivent <a href="http://localhost/index.php/publicknowledge/user/register">s'inscrire</a> auprès de la presse avant d'envoyer une soumission. Si vous êtes déjà inscrit-e, il suffit simplement <a href="http://localhost/index.php/index/login">d'ouvrir une session</a> pour débuter la procédure en 5 étapes.	\N
 1		contactEmail	rvaca@mailinator.com	\N
@@ -9344,23 +9283,23 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, date_published, last_modified, locale, primary_contact_id, publication_date_type, publication_type, seq, series_id, series_position, submission_id, status, url_path, version) FROM stdin;
-17	\N	2022-12-13 16:14:11	\N	50	pub	publication	0	\N	\N	17	1	\N	1
-1	\N	2022-12-13 15:49:08	\N	1	pub	publication	0	\N	\N	1	1	\N	1
-2	\N	2022-12-13 15:50:51	\N	2	pub	publication	0	\N	\N	2	1	\N	1
-3	\N	2022-12-13 15:51:54	\N	10	pub	publication	0	\N	\N	3	1	\N	1
-4	\N	2022-12-13 15:52:53	\N	11	pub	publication	0	3	\N	4	1	\N	1
-5	2022-12-13	2022-12-13 15:55:47	\N	15	pub	publication	0	\N	\N	5	3	\N	1
-6	\N	2022-12-13 15:56:44	\N	16	pub	publication	0	1	\N	6	1	\N	1
-7	\N	2022-12-13 15:58:38	\N	20	pub	publication	0	4	\N	7	1	\N	1
-8	\N	2022-12-13 15:59:24	\N	25	pub	publication	0	\N	\N	8	1	\N	1
-9	\N	2022-12-13 16:00:36	\N	26	pub	publication	0	1	\N	9	1	\N	1
-10	\N	2022-12-13 16:01:46	\N	31	pub	publication	0	\N	\N	10	1	\N	1
-11	\N	2022-12-13 16:02:06	\N	32	pub	publication	0	\N	\N	11	1	\N	1
-12	\N	2022-12-13 16:04:19	\N	33	pub	publication	0	\N	\N	12	1	\N	1
-13	\N	2022-12-13 16:05:54	\N	41	pub	publication	0	\N	\N	13	1	\N	1
-14	2022-12-13	2022-12-13 16:10:35	\N	45	pub	publication	0	5	\N	14	3	\N	1
-15	\N	2022-12-13 16:11:00	\N	48	pub	publication	0	\N	\N	15	1	\N	1
-16	\N	2022-12-13 16:11:46	\N	49	pub	publication	0	\N	\N	16	1	\N	1
+17	\N	2022-12-13 23:13:24	\N	50	pub	publication	0	\N	\N	17	1	\N	1
+1	\N	2022-12-13 22:49:13	\N	1	pub	publication	0	\N	\N	1	1	\N	1
+2	\N	2022-12-13 22:50:53	\N	2	pub	publication	0	\N	\N	2	1	\N	1
+3	\N	2022-12-13 22:51:54	\N	10	pub	publication	0	\N	\N	3	1	\N	1
+4	\N	2022-12-13 22:52:52	\N	11	pub	publication	0	3	\N	4	1	\N	1
+5	2022-12-13	2022-12-13 22:55:41	\N	15	pub	publication	0	\N	\N	5	3	\N	1
+6	\N	2022-12-13 22:56:37	\N	16	pub	publication	0	1	\N	6	1	\N	1
+7	\N	2022-12-13 22:58:29	\N	20	pub	publication	0	4	\N	7	1	\N	1
+8	\N	2022-12-13 22:59:14	\N	25	pub	publication	0	\N	\N	8	1	\N	1
+9	\N	2022-12-13 23:00:25	\N	26	pub	publication	0	1	\N	9	1	\N	1
+10	\N	2022-12-13 23:01:34	\N	31	pub	publication	0	\N	\N	10	1	\N	1
+11	\N	2022-12-13 23:01:54	\N	32	pub	publication	0	\N	\N	11	1	\N	1
+12	\N	2022-12-13 23:04:03	\N	33	pub	publication	0	\N	\N	12	1	\N	1
+13	\N	2022-12-13 23:05:36	\N	41	pub	publication	0	\N	\N	13	1	\N	1
+14	2022-12-13	2022-12-13 23:09:56	\N	45	pub	publication	0	5	\N	14	3	\N	1
+15	\N	2022-12-13 23:10:20	\N	48	pub	publication	0	\N	\N	15	1	\N	1
+16	\N	2022-12-13 23:11:05	\N	49	pub	publication	0	\N	\N	16	1	\N	1
 \.
 
 
@@ -9432,31 +9371,31 @@ SELECT pg_catalog.setval('public.representatives_representative_id_seq', 1, fals
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, unconsidered) FROM stdin;
-15	13	8	\N	\N	2022-12-13 16:06:16	2022-12-13 16:06:16	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:06:16	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	0
-1	1	12	\N	\N	2022-12-13 15:49:22	2022-12-13 15:49:22	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 15:49:22	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-2	2	11	\N	\N	2022-12-13 15:51:12	2022-12-13 15:51:12	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 15:51:12	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
-3	2	12	\N	\N	2022-12-13 15:51:19	2022-12-13 15:51:19	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 15:51:19	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
-24	17	7	\N	\N	2022-12-13 16:14:39	2022-12-13 16:14:39	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:14:39	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
-4	4	9	\N	\N	2022-12-13 15:53:13	2022-12-13 15:53:13	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 15:53:13	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	0
-5	4	11	\N	\N	2022-12-13 15:53:26	2022-12-13 15:53:26	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 15:53:26	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-6	5	8	\N	\N	2022-12-13 15:54:48	2022-12-13 15:54:48	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 15:54:48	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	0
-17	13	11	\N	\N	2022-12-13 16:06:34	2022-12-13 16:06:34	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:06:34	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	0
-7	5	12	\N	\N	2022-12-13 15:54:59	2022-12-13 15:54:59	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 15:54:59	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-8	7	10	\N	\N	2022-12-13 15:59:01	2022-12-13 15:59:01	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 15:59:01	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	0
-9	11	9	\N	\N	2022-12-13 16:02:23	2022-12-13 16:02:23	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:02:23	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	0
-25	17	8	\N	\N	2022-12-13 16:14:45	2022-12-13 16:14:45	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:14:45	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
-16	13	10	\N	0	2022-12-13 16:06:28	2022-12-13 16:06:28	2022-12-13 16:06:47	2022-12-13 16:06:52	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:06:52	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
-10	11	10	\N	0	2022-12-13 16:02:33	2022-12-13 16:02:33	2022-12-13 16:02:44	2022-12-13 16:02:48	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:02:48	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
-18	13	12	\N	0	2022-12-13 16:06:41	2022-12-13 16:06:41	2022-12-13 16:06:59	2022-12-13 16:07:04	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:07:04	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
-11	11	12	\N	0	2022-12-13 16:02:40	2022-12-13 16:02:40	2022-12-13 16:02:53	2022-12-13 16:02:58	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:02:58	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
-12	12	7	\N	\N	2022-12-13 16:04:41	2022-12-13 16:04:41	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:04:41	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
-19	14	7	\N	\N	2022-12-13 16:08:46	2022-12-13 16:08:46	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:08:46	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	0
-14	12	9	\N	\N	2022-12-13 16:04:54	2022-12-13 16:04:54	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:04:54	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
-20	14	11	\N	\N	2022-12-13 16:09:00	2022-12-13 16:09:00	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:09:00	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	0
-13	12	8	\N	0	2022-12-13 16:04:47	2022-12-13 16:04:47	2022-12-13 16:05:00	2022-12-13 16:05:06	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:05:06	0	0	0	\N	\N	\N	0	12	2	2	1	4	\N	0
-22	16	11	\N	\N	2022-12-13 16:12:11	2022-12-13 16:12:11	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:12:11	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
-23	16	12	\N	\N	2022-12-13 16:12:17	2022-12-13 16:12:17	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:12:17	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
-21	16	10	\N	0	2022-12-13 16:12:06	2022-12-13 16:12:06	2022-12-13 16:12:22	2022-12-13 16:12:26	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 16:12:26	0	0	0	\N	\N	\N	0	18	3	2	1	4	\N	0
+15	13	8	\N	\N	2022-12-13 23:05:56	2022-12-13 23:05:56	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:05:56	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	0
+1	1	12	\N	\N	2022-12-13 22:49:28	2022-12-13 22:49:28	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 22:49:28	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+2	2	11	\N	\N	2022-12-13 22:51:13	2022-12-13 22:51:13	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 22:51:13	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
+3	2	12	\N	\N	2022-12-13 22:51:20	2022-12-13 22:51:20	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 22:51:20	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
+24	17	7	\N	\N	2022-12-13 23:13:50	2022-12-13 23:13:50	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:13:50	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
+4	4	9	\N	\N	2022-12-13 22:53:11	2022-12-13 22:53:11	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 22:53:11	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	0
+5	4	11	\N	\N	2022-12-13 22:53:24	2022-12-13 22:53:24	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 22:53:24	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+6	5	8	\N	\N	2022-12-13 22:54:42	2022-12-13 22:54:42	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 22:54:42	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	0
+17	13	11	\N	\N	2022-12-13 23:06:15	2022-12-13 23:06:15	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:06:15	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	0
+7	5	12	\N	\N	2022-12-13 22:54:53	2022-12-13 22:54:53	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 22:54:53	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+8	7	10	\N	\N	2022-12-13 22:58:50	2022-12-13 22:58:50	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 22:58:50	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	0
+9	11	9	\N	\N	2022-12-13 23:02:10	2022-12-13 23:02:10	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:02:10	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	0
+25	17	8	\N	\N	2022-12-13 23:13:57	2022-12-13 23:13:57	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:13:57	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
+16	13	10	\N	0	2022-12-13 23:06:09	2022-12-13 23:06:09	2022-12-13 23:06:28	2022-12-13 23:06:32	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:06:32	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
+10	11	10	\N	0	2022-12-13 23:02:20	2022-12-13 23:02:20	2022-12-13 23:02:31	2022-12-13 23:02:34	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:02:34	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
+18	13	12	\N	0	2022-12-13 23:06:21	2022-12-13 23:06:21	2022-12-13 23:06:38	2022-12-13 23:06:43	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:06:43	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
+11	11	12	\N	0	2022-12-13 23:02:26	2022-12-13 23:02:26	2022-12-13 23:02:39	2022-12-13 23:02:43	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:02:43	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
+12	12	7	\N	\N	2022-12-13 23:04:25	2022-12-13 23:04:25	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:04:25	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
+19	14	7	\N	\N	2022-12-13 23:08:18	2022-12-13 23:08:18	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:08:18	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	0
+14	12	9	\N	\N	2022-12-13 23:04:38	2022-12-13 23:04:38	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:04:38	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
+20	14	11	\N	\N	2022-12-13 23:08:31	2022-12-13 23:08:31	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:08:31	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	0
+13	12	8	\N	0	2022-12-13 23:04:31	2022-12-13 23:04:31	2022-12-13 23:04:44	2022-12-13 23:04:49	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:04:49	0	0	0	\N	\N	\N	0	12	2	2	1	4	\N	0
+22	16	11	\N	\N	2022-12-13 23:11:29	2022-12-13 23:11:29	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:11:29	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
+23	16	12	\N	\N	2022-12-13 23:11:35	2022-12-13 23:11:35	\N	\N	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:11:35	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
+21	16	10	\N	0	2022-12-13 23:11:24	2022-12-13 23:11:24	2022-12-13 23:11:41	2022-12-13 23:11:45	\N	2023-01-10 00:00:00	2023-01-10 00:00:00	2022-12-13 23:11:45	0	0	0	\N	\N	\N	0	18	3	2	1	4	\N	0
 \.
 
 
@@ -9473,49 +9412,36 @@ SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 25, true);
 
 COPY public.review_files (review_id, submission_file_id) FROM stdin;
 1	2
-2	10
-2	9
-2	8
-2	7
-3	10
-3	9
-3	8
-3	7
-4	19
-4	18
-4	17
-4	16
-6	21
-8	36
-8	37
-8	38
-8	39
-8	40
-9	49
-15	56
-15	57
-15	58
+4	15
+4	14
+4	13
+4	12
+6	17
+9	45
+15	52
+15	53
+15	54
+19	61
+19	62
+19	63
+19	64
 19	65
 19	66
-19	67
-19	68
-19	69
-19	70
-21	80
-22	80
-23	80
+21	76
+22	76
+23	76
+24	83
+24	84
+24	85
+24	86
 24	87
 24	88
-24	89
-24	90
-24	91
-24	92
+25	83
+25	84
+25	85
+25	86
 25	87
 25	88
-25	89
-25	90
-25	91
-25	92
 \.
 
 
@@ -9579,42 +9505,38 @@ SELECT pg_catalog.setval('public.review_forms_review_form_id_seq', 1, false);
 
 COPY public.review_round_files (submission_id, review_round_id, stage_id, submission_file_id) FROM stdin;
 1	1	3	2
-2	2	3	7
-2	2	3	8
-2	2	3	9
-2	2	3	10
-4	3	2	16
-4	3	2	17
-4	3	2	18
-4	3	2	19
-5	5	2	21
-6	7	2	27
-6	7	2	28
-6	7	2	29
-6	7	2	30
-7	8	3	36
-7	8	3	37
-7	8	3	38
-7	8	3	39
-7	8	3	40
-11	10	2	49
-13	13	2	56
-13	13	2	57
-13	13	2	58
+4	3	2	12
+4	3	2	13
+4	3	2	14
+4	3	2	15
+5	5	2	17
+6	7	2	23
+6	7	2	24
+6	7	2	25
+6	7	2	26
+9	9	2	38
+9	9	2	39
+9	9	2	40
+9	9	2	41
+9	9	2	42
+11	10	2	45
+13	13	2	52
+13	13	2	53
+13	13	2	54
+14	15	2	61
+14	15	2	62
+14	15	2	63
+14	15	2	64
 14	15	2	65
 14	15	2	66
-14	15	2	67
-14	15	2	68
-14	15	2	69
-14	15	2	70
-15	17	3	78
-16	18	3	80
+15	17	3	74
+16	18	3	76
+17	19	2	83
+17	19	2	84
+17	19	2	85
+17	19	2	86
 17	19	2	87
 17	19	2	88
-17	19	2	89
-17	19	2	90
-17	19	2	91
-17	19	2	92
 \.
 
 
@@ -9672,10 +9594,10 @@ SELECT pg_catalog.setval('public.sales_rights_sales_rights_id_seq', 1, false);
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2022-12-13 15:44:40
-lib.pkp.classes.task.ReviewReminder	2022-12-13 15:44:40
-lib.pkp.classes.task.PublishSubmissions	2022-12-13 15:44:40
-lib.pkp.classes.task.StatisticsReport	2022-12-13 15:44:40
+plugins.generic.usageStats.UsageStatsLoader	2022-12-13 22:44:58
+lib.pkp.classes.task.ReviewReminder	2022-12-13 22:44:58
+lib.pkp.classes.task.PublishSubmissions	2022-12-13 22:44:58
+lib.pkp.classes.task.StatisticsReport	2022-12-13 22:44:58
 \.
 
 
@@ -9775,31 +9697,31 @@ COPY public.series_settings (series_id, locale, setting_name, setting_value, set
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-ad8cpgk1p7evda06iutsuhdkbn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946277	1670946277	0		localhost
-ljceuvsehgpkr52ir3ug6ft79r	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946310	1670946315	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670946315;s:5:"token";s:32:"a0b962ce39fc4e0169608be7c9c209d7";}	localhost
-b5lrjkp4ki35dnl276sc2p6ad3	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946295	1670946308	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670946308;s:5:"token";s:32:"3f863ce96aa4f2556aa93933c482fdad";}	localhost
-360ke51ki1gsfomf2b5f30knnq	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946315	1670946322	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670946322;s:5:"token";s:32:"297a24673be4366d97f60380bbdc7217";}	localhost
-elocckr4l1nno485rad6i3lne0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670947045	1670947154	0	csrf|a:2:{s:9:"timestamp";i:1670947154;s:5:"token";s:32:"b4f3a5825666766d68f83a7f99791d70";}username|s:7:"dbarnes";userId|i:3;	localhost
-narj25cn3j121nlmtp1k5frn16	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946280	1670946294	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670946294;s:5:"token";s:32:"626ea00d2469017d036e35cd504d3fbe";}	localhost
-249ht79d0ehn8bidf6089je0gv	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670947156	1670947165	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1670947165;s:5:"token";s:32:"ab979f5bbefd68a09a17d1a847229185";}	localhost
-2v4n1re1pnh9rg0914ebmgthgr	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670947255	1670947308	0	csrf|a:2:{s:9:"timestamp";i:1670947307;s:5:"token";s:32:"d498b2ff5e0a791f66450ce38ebee2d7";}username|s:7:"jbrower";userId|i:27;	localhost
-ccc3m5q2ktb194immcjejamt5d	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946323	1670946326	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670946326;s:5:"token";s:32:"301c60bf4380c005bb95804d11282c94";}	localhost
-d3gs2knlu67u5968k079inub77	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670947167	1670947253	0	csrf|a:2:{s:9:"timestamp";i:1670947253;s:5:"token";s:32:"594663e16ddcae453247fcd12c520454";}username|s:7:"dbarnes";userId|i:3;	localhost
-m1e22ccaa03me81cfhtluknuum	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946682	1670946715	0	csrf|a:2:{s:9:"timestamp";i:1670946715;s:5:"token";s:32:"4be8b1ef4bc3ea41e4ad4c190cd4b2d7";}username|s:10:"bbarnetson";userId|i:21;	localhost
-4cr91j9uqo9k56m8npraik7eui	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946510	1670946525	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670946525;s:5:"token";s:32:"6f752cc61008974b43d9bb36c8a81c52";}	localhost
-geq94132cl57t44tc4fn7gd0to	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946527	1670946572	0	csrf|a:2:{s:9:"timestamp";i:1670946573;s:5:"token";s:32:"e00daeefcdc7410d568d5038d72c02ad";}username|s:7:"dbarnes";userId|i:3;	localhost
-1e1je81m3kl1to7vl2iia5trfk	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946328	1670946508	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1670946508;s:5:"token";s:32:"89a81ae1c139150098ec1f9ce837503a";}	localhost
-93r1fltdk1ceg1voodq8h3kfsa	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670947310	1670947393	0	csrf|a:2:{s:9:"timestamp";i:1670947393;s:5:"token";s:32:"4c4c4d8f4a292565b2bb4a741bdd5841";}username|s:7:"dbarnes";userId|i:3;	localhost
-kbnvt685eo185pomt2euesi66g	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946574	1670946680	0	csrf|a:2:{s:9:"timestamp";i:1670946679;s:5:"token";s:32:"beaf89f19478c3d8c49d0094594c883a";}username|s:7:"dbarnes";userId|i:3;	localhost
-sj0aa45nbbcugmvir3u902k9ap	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946717	1670946832	0	csrf|a:2:{s:9:"timestamp";i:1670946832;s:5:"token";s:32:"30ad00be1d48d3aae1955240645893e3";}username|s:7:"dbarnes";userId|i:3;	localhost
-v3s3dpcrst8epg9s54qivb9e1f	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946837	1670946947	0	csrf|a:2:{s:9:"timestamp";i:1670946947;s:5:"token";s:32:"5045d8eff2b4651a7fef34444d09671a";}username|s:7:"dbarnes";userId|i:3;	localhost
-1tckkscfa5a3r7ihtuucob2kg3	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670947395	1670947507	0	csrf|a:2:{s:9:"timestamp";i:1670947506;s:5:"token";s:32:"bcf43f8498ec735af6da9e959a8ab476";}username|s:7:"phudson";	localhost
-55au2pri1e8obkd6ucomuc6hgs	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670946949	1670947043	0	csrf|a:2:{s:9:"timestamp";i:1670947043;s:5:"token";s:32:"d7d3b0ac6eaf0289276469abc5b5187a";}username|s:7:"dbarnes";userId|i:3;	localhost
-r8q9hse30vkc3cbu27ff9d5fl0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670947509	1670947644	0	csrf|a:2:{s:9:"timestamp";i:1670947644;s:5:"token";s:32:"2378beb14e5359c8f453cf7a105ed0e3";}username|s:7:"dbarnes";userId|i:3;	localhost
-r04ad7f9sfcilgkukoav6luqr3	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670947839	1670947874	0	csrf|a:2:{s:9:"timestamp";i:1670947875;s:5:"token";s:32:"85898700436230c246aab58e787dac7b";}username|s:7:"dbarnes";userId|i:3;	localhost
-8jne05apb7uh03q6nkamfeg83c	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670947647	1670947837	0	csrf|a:2:{s:9:"timestamp";i:1670947837;s:5:"token";s:32:"88ea921b97e705f92ee8ff8da4afce1a";}username|s:7:"dbarnes";userId|i:3;	localhost
-8imjnsdrtoeed1irbqon7b8bft	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670947876	1670947948	0	csrf|a:2:{s:9:"timestamp";i:1670947948;s:5:"token";s:32:"3be1f9242eba9b24391e8bc939cb4213";}username|s:8:"agallego";	localhost
-7fe5178rjiqlk5rs1a4fe32j76	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670947950	1670948086	0	csrf|a:2:{s:9:"timestamp";i:1670948085;s:5:"token";s:32:"f7b1e4fa07fdde87b5e89a330765dbda";}username|s:7:"dbarnes";userId|i:3;	localhost
+8dv3bobh84jrih1vh3nh5qpmd2	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971496	1670971496	0		localhost
+fk7tj2dkvrr5hv73ff6j0dh8ga	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971526	1670971531	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670971531;s:5:"token";s:32:"9e1d642aa153f51aac354e9e681ca93f";}	localhost
+gnt3621ssal0gkrbbg2l9avg9e	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971512	1670971525	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670971525;s:5:"token";s:32:"a5863da7524ec4d3219c80cdf119ed82";}	localhost
+p9ebicdmg1sulcm9scugu26kst	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971532	1670971538	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670971538;s:5:"token";s:32:"3af7e8a691e14e8a040f7c28a86ef69c";}	localhost
+4dp274phbrrgur9b6dtv5f8olb	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670972238	1670972344	0	csrf|a:2:{s:9:"timestamp";i:1670972344;s:5:"token";s:32:"183c9e56ae62025330a90755884e92a4";}username|s:7:"dbarnes";userId|i:3;	localhost
+o78hu9im9nm06m87lflcdpamqv	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971498	1670971511	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670971511;s:5:"token";s:32:"1287006c6a0389bbd1c9516121aae241";}	localhost
+ik5b0iajs17fv6bilo8grfjb98	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670972346	1670972355	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1670972355;s:5:"token";s:32:"47413507f8705e5d360ca721059df02d";}	localhost
+h445qa9bfk4l3a5rq5k3ko2o0j	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971539	1670971542	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670971542;s:5:"token";s:32:"46b757b1382cc0955aeef7faab928f65";}	localhost
+qfddbj4mh4116quu98tvh9mmgp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670972357	1670972441	0	csrf|a:2:{s:9:"timestamp";i:1670972441;s:5:"token";s:32:"d5ca23f0328b3b1a60c67161536869fa";}username|s:7:"dbarnes";userId|i:3;	localhost
+qv24f37a0lu0mnmo4vvvo77ddh	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670972444	1670972496	0	csrf|a:2:{s:9:"timestamp";i:1670972495;s:5:"token";s:32:"1a37aef5974c32313791571fbc086bfb";}username|s:7:"jbrower";userId|i:27;	localhost
+hi21loesh94k9htkigoebpngbe	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971544	1670971713	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1670971713;s:5:"token";s:32:"3b20c50adf728767e981af6c2286d74d";}	localhost
+btnad989gr52jb6dhfh89aj3ea	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971716	1670971731	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1670971730;s:5:"token";s:32:"cce9fb8de1a2468db47e7dfe1f65bdb8";}	localhost
+6070hu6tijerftsdcdd93lehpb	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971732	1670971778	0	csrf|a:2:{s:9:"timestamp";i:1670971778;s:5:"token";s:32:"c9e1c6025d06328aef1ef10895460965";}username|s:7:"dbarnes";userId|i:3;	localhost
+62qeekpir8il68hvjef776enfr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971780	1670971881	0	csrf|a:2:{s:9:"timestamp";i:1670971880;s:5:"token";s:32:"e94fe25f56aa4f5d25b37cb98fe85f22";}username|s:7:"dbarnes";userId|i:3;	localhost
+148fotqesdftqqip2ijomnv8hn	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971883	1670971915	0	csrf|a:2:{s:9:"timestamp";i:1670971915;s:5:"token";s:32:"899cf5e5632324c59af517a05e77e0ed";}username|s:10:"bbarnetson";userId|i:21;	localhost
+kglo4nv8q101pp6nvmc3jnsphd	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670971917	1670972029	0	csrf|a:2:{s:9:"timestamp";i:1670972029;s:5:"token";s:32:"443fd31b9c20b6ddc0404533b17c4b61";}username|s:7:"dbarnes";userId|i:3;	localhost
+nbrgvrbhm927muaip7b81gbp7e	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670972498	1670972578	0	csrf|a:2:{s:9:"timestamp";i:1670972578;s:5:"token";s:32:"b26c06d3b923512e9b1892283ec5599d";}username|s:7:"dbarnes";userId|i:3;	localhost
+pqj2sqnv1i93lfg9dna7dm3gdt	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670972031	1670972143	0	csrf|a:2:{s:9:"timestamp";i:1670972143;s:5:"token";s:32:"0aed95d507b2d8361ec5da78331e62ce";}username|s:7:"dbarnes";userId|i:3;	localhost
+6l5q8gqqun214760eh3vt9cltv	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670972580	1670972690	0	csrf|a:2:{s:9:"timestamp";i:1670972690;s:5:"token";s:32:"db22daea08299f50bd9b49e0e763a158";}username|s:7:"phudson";	localhost
+6e7nf34vcf598dtorjomtra41h	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670972144	1670972235	0	csrf|a:2:{s:9:"timestamp";i:1670972236;s:5:"token";s:32:"656b5826e78a5ce1e7b674a7c81735f5";}username|s:7:"dbarnes";userId|i:3;	localhost
+u4ejpfvpetv4j62efc7okt4boe	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670972693	1670972822	0	csrf|a:2:{s:9:"timestamp";i:1670972822;s:5:"token";s:32:"46b9399ec5f4d6a8bb86b1d6d5677c63";}username|s:7:"dbarnes";userId|i:3;	localhost
+e4j5e28p6e0dtetva6b5jfogvu	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670973036	1670973106	0	csrf|a:2:{s:9:"timestamp";i:1670973106;s:5:"token";s:32:"623f61f98a594b50b2f6326232d7c331";}username|s:8:"agallego";	localhost
+933ohfn5lqfjq63pe5grjmrnkl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670972825	1670972998	0	csrf|a:2:{s:9:"timestamp";i:1670972998;s:5:"token";s:32:"255d0f716ba3460736892a377ba7c082";}username|s:7:"dbarnes";userId|i:3;	localhost
+nrrse5jk1asdlc2qn41a0q72i0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670972999	1670973034	0	csrf|a:2:{s:9:"timestamp";i:1670973034;s:5:"token";s:32:"ca5a179203e99f2c9992098a8f986d51";}username|s:7:"dbarnes";userId|i:3;	localhost
+hbts7mff0dcmibftptdpe1bvr8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/105.0.5195.102 Safari/537.36	1670973108	1670973238	0	csrf|a:2:{s:9:"timestamp";i:1670973237;s:5:"token";s:32:"6332e8a9c4dba03575344096ce12faf9";}username|s:7:"dbarnes";userId|i:3;	localhost
 \.
 
 
@@ -9852,53 +9774,53 @@ SELECT pg_catalog.setval('public.spotlights_spotlight_id_seq', 1, false);
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-1	1	13	19	2022-12-13 15:48:52	0	0
-2	1	3	3	2022-12-13 15:49:09	0	1
-3	1	6	14	2022-12-13 15:49:31	0	0
-4	2	14	20	2022-12-13 15:49:40	0	0
-5	2	3	3	2022-12-13 15:50:53	0	1
-6	3	13	21	2022-12-13 15:51:28	0	0
-7	3	3	3	2022-12-13 15:51:55	0	1
-8	4	14	22	2022-12-13 15:52:03	0	0
-9	4	3	3	2022-12-13 15:52:55	0	1
-10	4	6	13	2022-12-13 15:53:38	0	0
-11	4	10	15	2022-12-13 15:53:51	0	0
-12	5	13	23	2022-12-13 15:54:02	0	0
-13	5	3	3	2022-12-13 15:54:33	0	1
-14	5	6	14	2022-12-13 15:55:09	0	0
-15	5	10	16	2022-12-13 15:55:20	0	0
-16	5	12	17	2022-12-13 15:55:26	0	0
-17	6	14	24	2022-12-13 15:55:55	0	0
-18	6	3	3	2022-12-13 15:56:46	0	1
-19	6	5	4	2022-12-13 15:56:46	0	1
-20	6	5	6	2022-12-13 15:57:03	1	1
-21	7	14	25	2022-12-13 15:57:31	0	0
-22	7	3	3	2022-12-13 15:58:40	0	1
-23	7	6	13	2022-12-13 15:59:12	0	0
-24	8	13	3	2022-12-13 15:59:21	0	0
-25	8	3	3	2022-12-13 15:59:25	0	1
-26	9	14	26	2022-12-13 15:59:32	0	0
-27	9	3	3	2022-12-13 16:00:38	0	1
-28	9	5	4	2022-12-13 16:00:38	0	1
-29	10	13	27	2022-12-13 16:01:00	0	0
-30	10	3	3	2022-12-13 16:01:47	0	1
-31	11	13	28	2022-12-13 16:01:55	0	0
-32	11	3	3	2022-12-13 16:02:08	0	1
-33	12	14	29	2022-12-13 16:03:21	0	0
-34	12	3	3	2022-12-13 16:04:20	0	1
-35	13	14	30	2022-12-13 16:05:15	0	0
-36	13	3	3	2022-12-13 16:05:56	0	1
-37	14	14	31	2022-12-13 16:07:33	0	0
-38	14	3	3	2022-12-13 16:08:24	0	1
-39	14	6	13	2022-12-13 16:09:13	0	0
-40	14	10	15	2022-12-13 16:09:27	0	0
-41	14	12	18	2022-12-13 16:09:34	0	0
-42	15	13	32	2022-12-13 16:10:44	0	0
-43	15	3	3	2022-12-13 16:11:01	0	1
-44	16	13	33	2022-12-13 16:11:22	0	0
-45	16	3	3	2022-12-13 16:11:48	0	1
-46	17	14	34	2022-12-13 16:12:35	0	0
-47	17	3	3	2022-12-13 16:14:13	0	1
+1	1	13	19	2022-12-13 22:48:58	0	0
+2	1	3	3	2022-12-13 22:49:14	0	1
+3	1	6	14	2022-12-13 22:49:37	0	0
+4	2	14	20	2022-12-13 22:49:45	0	0
+5	2	3	3	2022-12-13 22:50:55	0	1
+6	3	13	21	2022-12-13 22:51:29	0	0
+7	3	3	3	2022-12-13 22:51:55	0	1
+8	4	14	22	2022-12-13 22:52:03	0	0
+9	4	3	3	2022-12-13 22:52:53	0	1
+10	4	6	13	2022-12-13 22:53:35	0	0
+11	4	10	15	2022-12-13 22:53:47	0	0
+12	5	13	23	2022-12-13 22:53:56	0	0
+13	5	3	3	2022-12-13 22:54:27	0	1
+14	5	6	14	2022-12-13 22:55:04	0	0
+15	5	10	16	2022-12-13 22:55:15	0	0
+16	5	12	17	2022-12-13 22:55:21	0	0
+17	6	14	24	2022-12-13 22:55:50	0	0
+18	6	3	3	2022-12-13 22:56:38	0	1
+19	6	5	4	2022-12-13 22:56:38	0	1
+20	6	5	6	2022-12-13 22:56:55	1	1
+21	7	14	25	2022-12-13 22:57:23	0	0
+22	7	3	3	2022-12-13 22:58:31	0	1
+23	7	6	13	2022-12-13 22:59:02	0	0
+24	8	13	3	2022-12-13 22:59:11	0	0
+25	8	3	3	2022-12-13 22:59:15	0	1
+26	9	14	26	2022-12-13 22:59:22	0	0
+27	9	3	3	2022-12-13 23:00:27	0	1
+28	9	5	4	2022-12-13 23:00:27	0	1
+29	10	13	27	2022-12-13 23:00:49	0	0
+30	10	3	3	2022-12-13 23:01:35	0	1
+31	11	13	28	2022-12-13 23:01:43	0	0
+32	11	3	3	2022-12-13 23:01:56	0	1
+33	12	14	29	2022-12-13 23:03:05	0	0
+34	12	3	3	2022-12-13 23:04:05	0	1
+35	13	14	30	2022-12-13 23:04:58	0	0
+36	13	3	3	2022-12-13 23:05:37	0	1
+37	14	14	31	2022-12-13 23:07:10	0	0
+38	14	3	3	2022-12-13 23:07:59	0	1
+39	14	6	13	2022-12-13 23:08:42	0	0
+40	14	10	15	2022-12-13 23:08:54	0	0
+41	14	12	18	2022-12-13 23:08:59	0	0
+42	15	13	32	2022-12-13 23:10:04	0	0
+43	15	3	3	2022-12-13 23:10:21	0	1
+44	16	13	33	2022-12-13 23:10:41	0	0
+45	16	3	3	2022-12-13 23:11:06	0	1
+46	17	14	34	2022-12-13 23:11:53	0	0
+47	17	3	3	2022-12-13 23:13:26	0	1
 \.
 
 
@@ -10539,54 +10461,51 @@ COPY public.submission_chapter_settings (chapter_id, locale, setting_name, setti
 --
 
 COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id, seq) FROM stdin;
-42	\N	10	6
-43	\N	10	7
+32	\N	9	1
 1	\N	1	1
 2	\N	1	2
 3	\N	1	3
-44	\N	10	8
-45	\N	10	9
-46	\N	11	1
-47	\N	11	2
-4	\N	2	1
-5	\N	2	2
-6	\N	2	3
-7	\N	2	4
-23	\N	6	1
-24	\N	6	2
-25	\N	6	3
-26	\N	6	4
-8	\N	3	1
-9	\N	3	2
-10	\N	3	3
-11	\N	3	4
-12	\N	3	5
-48	\N	12	1
-49	\N	12	2
-13	\N	4	1
-14	\N	4	2
-15	\N	4	3
-50	\N	12	3
-16	\N	4	4
-27	\N	7	1
-28	\N	7	2
-29	\N	7	3
-30	\N	7	4
-31	\N	7	5
+33	\N	9	2
+34	\N	9	3
+35	\N	9	4
 17	\N	5	1
 18	\N	5	2
 19	\N	5	3
 20	\N	5	4
 21	\N	5	5
+4	\N	2	1
+5	\N	2	2
+6	\N	2	3
 22	\N	5	6
+7	\N	2	4
+36	\N	9	5
+66	\N	17	1
+8	\N	3	1
+9	\N	3	2
+10	\N	3	3
+11	\N	3	4
+12	\N	3	5
+67	\N	17	2
+23	\N	6	1
+24	\N	6	2
+25	\N	6	3
+68	\N	17	3
+26	\N	6	4
+13	\N	4	1
+14	\N	4	2
+15	\N	4	3
+69	\N	17	4
+16	\N	4	4
 51	\N	13	1
 52	\N	13	2
+70	\N	17	5
 53	\N	13	3
-32	\N	9	1
-33	\N	9	2
-34	\N	9	3
-35	\N	9	4
-36	\N	9	5
+71	\N	17	6
+27	\N	7	1
+28	\N	7	2
+29	\N	7	3
+30	\N	7	4
+31	\N	7	5
 54	\N	14	1
 55	\N	14	2
 56	\N	14	3
@@ -10594,17 +10513,20 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 58	\N	15	1
 59	\N	15	2
 60	\N	15	3
-66	\N	17	1
-67	\N	17	2
-68	\N	17	3
-69	\N	17	4
-70	\N	17	5
-71	\N	17	6
 37	\N	10	1
 38	\N	10	2
 39	\N	10	3
 40	\N	10	4
 41	\N	10	5
+42	\N	10	6
+43	\N	10	7
+44	\N	10	8
+45	\N	10	9
+46	\N	11	1
+47	\N	11	2
+48	\N	12	1
+49	\N	12	2
+50	\N	12	3
 61	\N	16	1
 62	\N	16	2
 63	\N	16	3
@@ -10625,12 +10547,12 @@ SELECT pg_catalog.setval('public.submission_chapters_chapter_id_seq', 71, true);
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2022-12-13 16:02:48	\N	1
-2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2022-12-13 16:02:57	\N	1
-3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2022-12-13 16:05:05	\N	1
-4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2022-12-13 16:06:52	\N	1
-5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2022-12-13 16:07:04	\N	1
-6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2022-12-13 16:12:26	\N	1
+1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2022-12-13 23:02:34	\N	1
+2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2022-12-13 23:02:43	\N	1
+3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2022-12-13 23:04:49	\N	1
+4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2022-12-13 23:06:32	\N	1
+5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2022-12-13 23:06:43	\N	1
+6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2022-12-13 23:11:45	\N	1
 \.
 
 
@@ -10652,92 +10574,88 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 4	4	3
 5	5	4
 6	6	5
-7	7	5
-8	8	4
-9	9	3
-10	10	2
-11	11	6
-12	12	7
-13	13	8
-14	14	9
-15	15	10
-16	16	10
-17	17	9
-18	18	8
-19	19	7
-20	20	11
-21	21	11
-22	22	11
-23	23	12
-24	24	13
-25	25	14
-26	26	15
-27	27	15
-28	28	14
-29	29	13
-30	30	12
-31	31	16
-32	32	17
-33	33	18
-34	34	19
-35	35	20
-36	36	16
-37	37	17
-38	38	18
-39	39	19
-40	40	20
-41	41	21
-42	42	22
-43	43	23
-44	44	24
-45	45	25
-46	46	26
-47	47	27
-48	48	28
-49	49	28
-50	50	29
-51	51	30
-52	52	31
-53	53	32
-54	54	33
-55	55	34
-56	56	32
-57	57	33
-58	58	34
-59	59	35
-60	60	36
-61	61	37
-62	62	38
-63	63	39
-64	64	40
-65	65	35
-66	66	36
-67	67	37
-68	68	38
-69	69	39
-70	70	40
-71	71	35
-72	72	36
-73	73	37
-74	74	38
-75	75	39
-76	76	40
-77	77	41
-78	78	41
-79	79	42
-80	80	42
-81	81	43
-82	82	44
-83	83	45
-84	84	46
-85	85	47
-86	86	48
-87	87	43
-88	88	44
-89	89	45
-90	90	46
-91	91	47
-92	92	48
+7	7	6
+8	8	7
+9	9	8
+10	10	9
+11	11	10
+12	12	10
+13	13	9
+14	14	8
+15	15	7
+16	16	11
+17	17	11
+18	18	11
+19	19	12
+20	20	13
+21	21	14
+22	22	15
+23	23	15
+24	24	14
+25	25	13
+26	26	12
+27	27	16
+28	28	17
+29	29	18
+30	30	19
+31	31	20
+32	32	21
+33	33	22
+34	34	23
+35	35	24
+36	36	25
+37	37	26
+38	38	22
+39	39	23
+40	40	24
+41	41	25
+42	42	26
+43	43	27
+44	44	28
+45	45	28
+46	46	29
+47	47	30
+48	48	31
+49	49	32
+50	50	33
+51	51	34
+52	52	32
+53	53	33
+54	54	34
+55	55	35
+56	56	36
+57	57	37
+58	58	38
+59	59	39
+60	60	40
+61	61	35
+62	62	36
+63	63	37
+64	64	38
+65	65	39
+66	66	40
+67	67	35
+68	68	36
+69	69	37
+70	70	38
+71	71	39
+72	72	40
+73	73	41
+74	74	41
+75	75	42
+76	76	42
+77	77	43
+78	78	44
+79	79	45
+80	80	46
+81	81	47
+82	82	48
+83	83	43
+84	84	44
+85	85	45
+86	86	46
+87	87	47
+88	88	48
 \.
 
 
@@ -10745,7 +10663,7 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 -- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
 --
 
-SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 92, true);
+SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 88, true);
 
 
 --
@@ -10763,160 +10681,152 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 4		chapterId	5	string
 5		chapterId	6	string
 6		chapterId	7	string
-7	en_US	name	Visualizing Space, Race, and History in .pdf	string
-7		chapterId	7	string
-8	en_US	name	Cree Intellectual Traditions in History.pdf	string
-8		chapterId	6	string
-9	en_US	name	Vernacular Currents in Western Canadian .pdf	string
-9		chapterId	5	string
-10	en_US	name	Critical History in Western Canada 1900–.pdf	string
-10		chapterId	4	string
-11	en_US	name	The Political Economy of Workplace Injury in Canada.pdf	string
-12	en_US	name	Introduction: Contexts of Popular Cultur.pdf	string
-13	en_US	name	Chapter 1. A Future for Media Studies: C.pdf	string
-14	en_US	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
-15	en_US	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
-12		chapterId	13	string
-13		chapterId	14	string
-14		chapterId	15	string
-15		chapterId	16	string
-16	en_US	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
-16		chapterId	16	string
-17	en_US	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
-17		chapterId	15	string
-18	en_US	name	Chapter 1. A Future for Media Studies: C.pdf	string
-18		chapterId	14	string
-19	en_US	name	Introduction: Contexts of Popular Cultur.pdf	string
-19		chapterId	13	string
-20	en_US	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-21	en_US	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-32		chapterId	28	string
-22	en_US	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-23	en_US	name	Identify: Understanding Your Information.pdf	string
-24	en_US	name	Scope: Knowing What Is Available.pdf	string
-25	en_US	name	Plan: Developing Research Strategies.pdf	string
-26	en_US	name	Gather: Finding What You Need.pdf	string
-23		chapterId	23	string
-24		chapterId	24	string
-25		chapterId	25	string
-26		chapterId	26	string
-27	en_US	name	Gather: Finding What You Need.pdf	string
-27		chapterId	26	string
-28	en_US	name	Plan: Developing Research Strategies.pdf	string
-28		chapterId	25	string
-29	en_US	name	Scope: Knowing What Is Available.pdf	string
-29		chapterId	24	string
-30	en_US	name	Identify: Understanding Your Information.pdf	string
-30		chapterId	23	string
-31	en_US	name	Introduction.pdf	string
-32	en_US	name	Chapter 1: Interactions Affording Distan.pdf	string
-33	en_US	name	Chapter 2: Learning Science at a Distanc.pdf	string
-34	en_US	name	Chapter 3: Leadership Strategies for Coo.pdf	string
-35	en_US	name	Chapter 4: Toward New Models of Flexible.pdf	string
-31		chapterId	27	string
-33		chapterId	29	string
-34		chapterId	30	string
-35		chapterId	31	string
-36	en_US	name	Introduction.pdf	string
-36		chapterId	27	string
-37	en_US	name	Chapter 1: Interactions Affording Distan.pdf	string
-37		chapterId	28	string
-38	en_US	name	Chapter 2: Learning Science at a Distanc.pdf	string
-38		chapterId	29	string
-39	en_US	name	Chapter 3: Leadership Strategies for Coo.pdf	string
-39		chapterId	30	string
-40	en_US	name	Chapter 4: Toward New Models of Flexible.pdf	string
-40		chapterId	31	string
-41	en_US	name	Editorial.pdf	string
-42	en_US	name	Internet, openness and the future of the.pdf	string
-43	en_US	name	Imagining the Internet: Open, closed or .pdf	string
-44	en_US	name	The internet in LAC will remain free, pu.pdf	string
-45	en_US	name	Free Internet?.pdf	string
-46	en_US	name	Risks and challenges for freedom of expr.pdf	string
-42		chapterId	32	string
-43		chapterId	33	string
-44		chapterId	34	string
-45		chapterId	35	string
-46		chapterId	36	string
-47	en_US	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
-48	en_US	name	Dreamwork.pdf	string
-49	en_US	name	Dreamwork.pdf	string
-50	en_US	name	Catalyzing Access through Social and Tec.pdf	string
-51	en_US	name	Catalyzing Access via Telecommunications.pdf	string
-52	en_US	name	Access to Knowledge as a New Paradigm fo.pdf	string
-50		chapterId	48	string
-51		chapterId	49	string
-52		chapterId	50	string
-53	en_US	name	Current State of Mobile Learning.pdf	string
-54	en_US	name	A Model for Framing Mobile Learning.pdf	string
-55	en_US	name	Mobile Distance Learning with PDAs: Deve.pdf	string
-53		chapterId	51	string
-54		chapterId	52	string
-55		chapterId	53	string
-56	en_US	name	Current State of Mobile Learning.pdf	string
-56		chapterId	51	string
-57	en_US	name	A Model for Framing Mobile Learning.pdf	string
-57		chapterId	52	string
-58	en_US	name	Mobile Distance Learning with PDAs: Deve.pdf	string
-58		chapterId	53	string
-59	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
-60	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
-61	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
-62	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-63	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-64	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-59		chapterId	54	string
-60		chapterId	55	string
-61		chapterId	56	string
-62		chapterId	57	string
-65	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
-65		chapterId	54	string
-66	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
-66		chapterId	55	string
-67	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
-67		chapterId	56	string
-68	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-68		chapterId	57	string
-69	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-70	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-81		chapterId	66	string
-82		chapterId	67	string
-71	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
-71		chapterId	54	string
-83		chapterId	68	string
-84		chapterId	69	string
-72	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
-72		chapterId	55	string
-85		chapterId	70	string
-86		chapterId	71	string
-73	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
-73		chapterId	56	string
-87	en_US	name	Preface.pdf	string
-87		chapterId	66	string
-74	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-74		chapterId	57	string
-88	en_US	name	Introduction.pdf	string
-75	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-88		chapterId	67	string
-76	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-77	en_US	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-78	en_US	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-79	en_US	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-80	en_US	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-81	en_US	name	Preface.pdf	string
-82	en_US	name	Introduction.pdf	string
-83	en_US	name	The Emergence of Open Development in a N.pdf	string
-84	en_US	name	Enacting Openness in ICT4D Research.pdf	string
-85	en_US	name	Transparency and Development: Ethical Co.pdf	string
-86	en_US	name	Open Educational Resources: Opportunitie.pdf	string
-89	en_US	name	The Emergence of Open Development in a N.pdf	string
-89		chapterId	68	string
-90	en_US	name	Enacting Openness in ICT4D Research.pdf	string
-90		chapterId	69	string
-91	en_US	name	Transparency and Development: Ethical Co.pdf	string
-91		chapterId	70	string
-92	en_US	name	Open Educational Resources: Opportunitie.pdf	string
-92		chapterId	71	string
+7	en_US	name	The Political Economy of Workplace Injury in Canada.pdf	string
+8	en_US	name	Introduction: Contexts of Popular Cultur.pdf	string
+9	en_US	name	Chapter 1. A Future for Media Studies: C.pdf	string
+10	en_US	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
+11	en_US	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
+8		chapterId	13	string
+9		chapterId	14	string
+10		chapterId	15	string
+11		chapterId	16	string
+12	en_US	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
+12		chapterId	16	string
+13	en_US	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
+13		chapterId	15	string
+14	en_US	name	Chapter 1. A Future for Media Studies: C.pdf	string
+14		chapterId	14	string
+15	en_US	name	Introduction: Contexts of Popular Cultur.pdf	string
+15		chapterId	13	string
+16	en_US	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+17	en_US	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+34	en_US	name	Imagining the Internet: Open, closed or .pdf	string
+18	en_US	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+19	en_US	name	Identify: Understanding Your Information.pdf	string
+20	en_US	name	Scope: Knowing What Is Available.pdf	string
+21	en_US	name	Plan: Developing Research Strategies.pdf	string
+22	en_US	name	Gather: Finding What You Need.pdf	string
+19		chapterId	23	string
+20		chapterId	24	string
+21		chapterId	25	string
+22		chapterId	26	string
+23	en_US	name	Gather: Finding What You Need.pdf	string
+23		chapterId	26	string
+24	en_US	name	Plan: Developing Research Strategies.pdf	string
+24		chapterId	25	string
+25	en_US	name	Scope: Knowing What Is Available.pdf	string
+25		chapterId	24	string
+26	en_US	name	Identify: Understanding Your Information.pdf	string
+26		chapterId	23	string
+27	en_US	name	Introduction.pdf	string
+28	en_US	name	Chapter 1: Interactions Affording Distan.pdf	string
+29	en_US	name	Chapter 2: Learning Science at a Distanc.pdf	string
+30	en_US	name	Chapter 3: Leadership Strategies for Coo.pdf	string
+31	en_US	name	Chapter 4: Toward New Models of Flexible.pdf	string
+27		chapterId	27	string
+28		chapterId	28	string
+29		chapterId	29	string
+30		chapterId	30	string
+31		chapterId	31	string
+32	en_US	name	Editorial.pdf	string
+33	en_US	name	Internet, openness and the future of the.pdf	string
+35	en_US	name	The internet in LAC will remain free, pu.pdf	string
+36	en_US	name	Free Internet?.pdf	string
+37	en_US	name	Risks and challenges for freedom of expr.pdf	string
+33		chapterId	32	string
+34		chapterId	33	string
+35		chapterId	34	string
+36		chapterId	35	string
+37		chapterId	36	string
+38	en_US	name	Internet, openness and the future of the.pdf	string
+38		chapterId	32	string
+39	en_US	name	Imagining the Internet: Open, closed or .pdf	string
+39		chapterId	33	string
+40	en_US	name	The internet in LAC will remain free, pu.pdf	string
+40		chapterId	34	string
+41	en_US	name	Free Internet?.pdf	string
+41		chapterId	35	string
+42	en_US	name	Risks and challenges for freedom of expr.pdf	string
+42		chapterId	36	string
+43	en_US	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
+44	en_US	name	Dreamwork.pdf	string
+45	en_US	name	Dreamwork.pdf	string
+46	en_US	name	Catalyzing Access through Social and Tec.pdf	string
+47	en_US	name	Catalyzing Access via Telecommunications.pdf	string
+48	en_US	name	Access to Knowledge as a New Paradigm fo.pdf	string
+46		chapterId	48	string
+47		chapterId	49	string
+48		chapterId	50	string
+49	en_US	name	Current State of Mobile Learning.pdf	string
+50	en_US	name	A Model for Framing Mobile Learning.pdf	string
+51	en_US	name	Mobile Distance Learning with PDAs: Deve.pdf	string
+49		chapterId	51	string
+50		chapterId	52	string
+51		chapterId	53	string
+52	en_US	name	Current State of Mobile Learning.pdf	string
+52		chapterId	51	string
+53	en_US	name	A Model for Framing Mobile Learning.pdf	string
+53		chapterId	52	string
+54	en_US	name	Mobile Distance Learning with PDAs: Deve.pdf	string
+54		chapterId	53	string
+55	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+56	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
+57	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+58	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+59	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+60	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+55		chapterId	54	string
+56		chapterId	55	string
+57		chapterId	56	string
+58		chapterId	57	string
+61	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+61		chapterId	54	string
+62	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
+62		chapterId	55	string
+63	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+63		chapterId	56	string
+64	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+64		chapterId	57	string
+65	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+66	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+86	en_US	name	Enacting Openness in ICT4D Research.pdf	string
+86		chapterId	69	string
+67	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+67		chapterId	54	string
+87	en_US	name	Transparency and Development: Ethical Co.pdf	string
+87		chapterId	70	string
+68	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
+68		chapterId	55	string
+88	en_US	name	Open Educational Resources: Opportunitie.pdf	string
+88		chapterId	71	string
+69	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+69		chapterId	56	string
+70	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+70		chapterId	57	string
+71	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+72	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+73	en_US	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+74	en_US	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+75	en_US	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
+76	en_US	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
+77	en_US	name	Preface.pdf	string
+78	en_US	name	Introduction.pdf	string
+79	en_US	name	The Emergence of Open Development in a N.pdf	string
+80	en_US	name	Enacting Openness in ICT4D Research.pdf	string
+81	en_US	name	Transparency and Development: Ethical Co.pdf	string
+82	en_US	name	Open Educational Resources: Opportunitie.pdf	string
+77		chapterId	66	string
+78		chapterId	67	string
+79		chapterId	68	string
+80		chapterId	69	string
+81		chapterId	70	string
+82		chapterId	71	string
+83	en_US	name	Preface.pdf	string
+83		chapterId	66	string
+84	en_US	name	Introduction.pdf	string
+84		chapterId	67	string
+85	en_US	name	The Emergence of Open Development in a N.pdf	string
+85		chapterId	68	string
 \.
 
 
@@ -10925,98 +10835,94 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	3	2	\N	\N	\N	2022-12-13 15:48:54	2022-12-13 15:48:54	19	\N	\N
-2	1	1	1	3	4	\N	\N	\N	2022-12-13 15:49:15	2022-12-13 15:49:15	19	\N	\N
-3	2	2	\N	4	2	\N	\N	\N	2022-12-13 15:49:41	2022-12-13 15:49:42	20	\N	\N
-4	2	3	\N	4	2	\N	\N	\N	2022-12-13 15:49:42	2022-12-13 15:49:42	20	\N	\N
-5	2	4	\N	4	2	\N	\N	\N	2022-12-13 15:49:42	2022-12-13 15:49:43	20	\N	\N
-6	2	5	\N	4	2	\N	\N	\N	2022-12-13 15:49:43	2022-12-13 15:49:44	20	\N	\N
-7	2	5	6	4	4	\N	\N	\N	2022-12-13 15:51:02	2022-12-13 15:51:02	20	\N	\N
-8	2	4	5	4	4	\N	\N	\N	2022-12-13 15:51:02	2022-12-13 15:51:02	20	\N	\N
-9	2	3	4	4	4	\N	\N	\N	2022-12-13 15:51:03	2022-12-13 15:51:03	20	\N	\N
-10	2	2	3	4	4	\N	\N	\N	2022-12-13 15:51:03	2022-12-13 15:51:03	20	\N	\N
-11	3	6	\N	3	2	\N	\N	\N	2022-12-13 15:51:29	2022-12-13 15:51:30	21	\N	\N
-12	4	7	\N	4	2	\N	\N	\N	2022-12-13 15:52:04	2022-12-13 15:52:05	22	\N	\N
-13	4	8	\N	4	2	\N	\N	\N	2022-12-13 15:52:05	2022-12-13 15:52:05	22	\N	\N
-14	4	9	\N	4	2	\N	\N	\N	2022-12-13 15:52:05	2022-12-13 15:52:06	22	\N	\N
-15	4	10	\N	4	2	\N	\N	\N	2022-12-13 15:52:06	2022-12-13 15:52:06	22	\N	\N
-16	4	10	15	4	19	\N	\N	\N	2022-12-13 15:53:03	2022-12-13 15:53:03	22	\N	\N
-17	4	9	14	4	19	\N	\N	\N	2022-12-13 15:53:03	2022-12-13 15:53:03	22	\N	\N
-18	4	8	13	4	19	\N	\N	\N	2022-12-13 15:53:03	2022-12-13 15:53:03	22	\N	\N
-19	4	7	12	4	19	\N	\N	\N	2022-12-13 15:53:03	2022-12-13 15:53:03	22	\N	\N
-20	5	11	\N	3	2	\N	\N	\N	2022-12-13 15:54:04	2022-12-13 15:54:04	23	\N	\N
-21	5	11	20	3	19	\N	\N	\N	2022-12-13 15:54:40	2022-12-13 15:54:40	23	\N	\N
-22	5	11	20	3	10	0	openAccess	1	2022-12-13 15:55:35	2022-12-13 15:55:42	23	521	1
-23	6	12	\N	4	2	\N	\N	\N	2022-12-13 15:55:56	2022-12-13 15:55:57	24	\N	\N
-24	6	13	\N	4	2	\N	\N	\N	2022-12-13 15:55:57	2022-12-13 15:55:57	24	\N	\N
-25	6	14	\N	4	2	\N	\N	\N	2022-12-13 15:55:58	2022-12-13 15:55:58	24	\N	\N
-26	6	15	\N	4	2	\N	\N	\N	2022-12-13 15:55:58	2022-12-13 15:55:59	24	\N	\N
-27	6	15	26	4	19	\N	\N	\N	2022-12-13 15:56:55	2022-12-13 15:56:55	24	\N	\N
-28	6	14	25	4	19	\N	\N	\N	2022-12-13 15:56:55	2022-12-13 15:56:55	24	\N	\N
-29	6	13	24	4	19	\N	\N	\N	2022-12-13 15:56:55	2022-12-13 15:56:55	24	\N	\N
-30	6	12	23	4	19	\N	\N	\N	2022-12-13 15:56:55	2022-12-13 15:56:55	24	\N	\N
-31	7	16	\N	4	2	\N	\N	\N	2022-12-13 15:57:32	2022-12-13 15:57:32	25	\N	\N
-32	7	17	\N	4	2	\N	\N	\N	2022-12-13 15:57:33	2022-12-13 15:57:33	25	\N	\N
-33	7	18	\N	4	2	\N	\N	\N	2022-12-13 15:57:33	2022-12-13 15:57:34	25	\N	\N
-34	7	19	\N	4	2	\N	\N	\N	2022-12-13 15:57:34	2022-12-13 15:57:34	25	\N	\N
-35	7	20	\N	4	2	\N	\N	\N	2022-12-13 15:57:34	2022-12-13 15:57:35	25	\N	\N
-36	7	16	31	4	4	\N	\N	\N	2022-12-13 15:58:50	2022-12-13 15:58:50	25	\N	\N
-37	7	17	32	4	4	\N	\N	\N	2022-12-13 15:58:51	2022-12-13 15:58:51	25	\N	\N
-38	7	18	33	4	4	\N	\N	\N	2022-12-13 15:58:51	2022-12-13 15:58:51	25	\N	\N
-39	7	19	34	4	4	\N	\N	\N	2022-12-13 15:58:51	2022-12-13 15:58:51	25	\N	\N
-40	7	20	35	4	4	\N	\N	\N	2022-12-13 15:58:51	2022-12-13 15:58:51	25	\N	\N
-41	8	21	\N	3	2	\N	\N	\N	2022-12-13 15:59:22	2022-12-13 15:59:22	3	\N	\N
-42	9	22	\N	4	2	\N	\N	\N	2022-12-13 15:59:33	2022-12-13 15:59:34	26	\N	\N
-43	9	23	\N	4	2	\N	\N	\N	2022-12-13 15:59:34	2022-12-13 15:59:34	26	\N	\N
-44	9	24	\N	4	2	\N	\N	\N	2022-12-13 15:59:35	2022-12-13 15:59:35	26	\N	\N
-45	9	25	\N	4	2	\N	\N	\N	2022-12-13 15:59:35	2022-12-13 15:59:36	26	\N	\N
-46	9	26	\N	4	2	\N	\N	\N	2022-12-13 15:59:36	2022-12-13 15:59:36	26	\N	\N
-47	10	27	\N	3	2	\N	\N	\N	2022-12-13 16:01:02	2022-12-13 16:01:02	27	\N	\N
-48	11	28	\N	3	2	\N	\N	\N	2022-12-13 16:01:57	2022-12-13 16:01:57	28	\N	\N
-49	11	28	48	3	19	\N	\N	\N	2022-12-13 16:02:16	2022-12-13 16:02:16	28	\N	\N
-50	12	29	\N	4	2	\N	\N	\N	2022-12-13 16:03:22	2022-12-13 16:03:22	29	\N	\N
-51	12	30	\N	4	2	\N	\N	\N	2022-12-13 16:03:22	2022-12-13 16:03:23	29	\N	\N
-52	12	31	\N	4	2	\N	\N	\N	2022-12-13 16:03:23	2022-12-13 16:03:24	29	\N	\N
-53	13	32	\N	4	2	\N	\N	\N	2022-12-13 16:05:16	2022-12-13 16:05:16	30	\N	\N
-54	13	33	\N	4	2	\N	\N	\N	2022-12-13 16:05:17	2022-12-13 16:05:17	30	\N	\N
-55	13	34	\N	4	2	\N	\N	\N	2022-12-13 16:05:17	2022-12-13 16:05:18	30	\N	\N
-56	13	32	53	4	19	\N	\N	\N	2022-12-13 16:06:06	2022-12-13 16:06:06	30	\N	\N
-57	13	33	54	4	19	\N	\N	\N	2022-12-13 16:06:06	2022-12-13 16:06:06	30	\N	\N
-58	13	34	55	4	19	\N	\N	\N	2022-12-13 16:06:07	2022-12-13 16:06:07	30	\N	\N
-59	14	35	\N	4	2	\N	\N	\N	2022-12-13 16:07:34	2022-12-13 16:07:34	31	\N	\N
-60	14	36	\N	4	2	\N	\N	\N	2022-12-13 16:07:35	2022-12-13 16:07:35	31	\N	\N
-61	14	37	\N	4	2	\N	\N	\N	2022-12-13 16:07:35	2022-12-13 16:07:36	31	\N	\N
-62	14	38	\N	4	2	\N	\N	\N	2022-12-13 16:07:36	2022-12-13 16:07:36	31	\N	\N
-63	14	39	\N	13	2	\N	\N	\N	2022-12-13 16:07:37	2022-12-13 16:07:38	31	\N	\N
-64	14	40	\N	9	2	\N	\N	\N	2022-12-13 16:07:38	2022-12-13 16:07:39	31	\N	\N
-65	14	35	59	4	19	\N	\N	\N	2022-12-13 16:08:36	2022-12-13 16:08:36	31	\N	\N
-66	14	36	60	4	19	\N	\N	\N	2022-12-13 16:08:36	2022-12-13 16:08:36	31	\N	\N
-67	14	37	61	4	19	\N	\N	\N	2022-12-13 16:08:36	2022-12-13 16:08:36	31	\N	\N
-68	14	38	62	4	19	\N	\N	\N	2022-12-13 16:08:36	2022-12-13 16:08:36	31	\N	\N
-69	14	39	63	13	19	\N	\N	\N	2022-12-13 16:08:36	2022-12-13 16:08:36	31	\N	\N
-70	14	40	64	9	19	\N	\N	\N	2022-12-13 16:08:36	2022-12-13 16:08:36	31	\N	\N
-72	14	36	60	4	10	0	openAccess	1	2022-12-13 16:09:50	2022-12-13 16:10:05	31	521	2
-73	14	37	61	4	10	0	openAccess	1	2022-12-13 16:09:50	2022-12-13 16:10:11	31	521	2
-74	14	38	62	4	10	0	openAccess	1	2022-12-13 16:09:50	2022-12-13 16:10:17	31	521	2
-75	14	39	63	13	10	0	openAccess	1	2022-12-13 16:09:50	2022-12-13 16:10:23	31	521	2
-71	14	35	59	4	10	0	openAccess	1	2022-12-13 16:09:50	2022-12-13 16:09:59	31	521	2
-76	14	40	64	9	10	0	openAccess	1	2022-12-13 16:09:50	2022-12-13 16:10:29	31	521	2
-77	15	41	\N	3	2	\N	\N	\N	2022-12-13 16:10:45	2022-12-13 16:10:46	32	\N	\N
-78	15	41	77	3	4	\N	\N	\N	2022-12-13 16:11:11	2022-12-13 16:11:11	32	\N	\N
-79	16	42	\N	3	2	\N	\N	\N	2022-12-13 16:11:23	2022-12-13 16:11:24	33	\N	\N
-80	16	42	79	3	4	\N	\N	\N	2022-12-13 16:11:58	2022-12-13 16:11:58	33	\N	\N
-81	17	43	\N	4	2	\N	\N	\N	2022-12-13 16:12:36	2022-12-13 16:12:37	34	\N	\N
-82	17	44	\N	4	2	\N	\N	\N	2022-12-13 16:12:37	2022-12-13 16:12:38	34	\N	\N
-83	17	45	\N	4	2	\N	\N	\N	2022-12-13 16:12:38	2022-12-13 16:12:38	34	\N	\N
-84	17	46	\N	4	2	\N	\N	\N	2022-12-13 16:12:38	2022-12-13 16:12:39	34	\N	\N
-85	17	47	\N	4	2	\N	\N	\N	2022-12-13 16:12:39	2022-12-13 16:12:40	34	\N	\N
-86	17	48	\N	4	2	\N	\N	\N	2022-12-13 16:12:40	2022-12-13 16:12:40	34	\N	\N
-87	17	43	81	4	19	\N	\N	\N	2022-12-13 16:14:27	2022-12-13 16:14:27	34	\N	\N
-88	17	44	82	4	19	\N	\N	\N	2022-12-13 16:14:27	2022-12-13 16:14:27	34	\N	\N
-89	17	45	83	4	19	\N	\N	\N	2022-12-13 16:14:27	2022-12-13 16:14:27	34	\N	\N
-90	17	46	84	4	19	\N	\N	\N	2022-12-13 16:14:27	2022-12-13 16:14:27	34	\N	\N
-91	17	47	85	4	19	\N	\N	\N	2022-12-13 16:14:27	2022-12-13 16:14:27	34	\N	\N
-92	17	48	86	4	19	\N	\N	\N	2022-12-13 16:14:27	2022-12-13 16:14:27	34	\N	\N
+1	1	1	\N	3	2	\N	\N	\N	2022-12-13 22:48:59	2022-12-13 22:48:59	19	\N	\N
+2	1	1	1	3	4	\N	\N	\N	2022-12-13 22:49:21	2022-12-13 22:49:21	19	\N	\N
+3	2	2	\N	4	2	\N	\N	\N	2022-12-13 22:49:46	2022-12-13 22:49:47	20	\N	\N
+4	2	3	\N	4	2	\N	\N	\N	2022-12-13 22:49:47	2022-12-13 22:49:47	20	\N	\N
+5	2	4	\N	4	2	\N	\N	\N	2022-12-13 22:49:48	2022-12-13 22:49:48	20	\N	\N
+6	2	5	\N	4	2	\N	\N	\N	2022-12-13 22:49:48	2022-12-13 22:49:49	20	\N	\N
+7	3	6	\N	3	2	\N	\N	\N	2022-12-13 22:51:30	2022-12-13 22:51:30	21	\N	\N
+8	4	7	\N	4	2	\N	\N	\N	2022-12-13 22:52:04	2022-12-13 22:52:04	22	\N	\N
+9	4	8	\N	4	2	\N	\N	\N	2022-12-13 22:52:05	2022-12-13 22:52:05	22	\N	\N
+10	4	9	\N	4	2	\N	\N	\N	2022-12-13 22:52:05	2022-12-13 22:52:06	22	\N	\N
+11	4	10	\N	4	2	\N	\N	\N	2022-12-13 22:52:06	2022-12-13 22:52:06	22	\N	\N
+12	4	10	11	4	19	\N	\N	\N	2022-12-13 22:53:02	2022-12-13 22:53:02	22	\N	\N
+13	4	9	10	4	19	\N	\N	\N	2022-12-13 22:53:02	2022-12-13 22:53:02	22	\N	\N
+14	4	8	9	4	19	\N	\N	\N	2022-12-13 22:53:02	2022-12-13 22:53:02	22	\N	\N
+15	4	7	8	4	19	\N	\N	\N	2022-12-13 22:53:02	2022-12-13 22:53:02	22	\N	\N
+16	5	11	\N	3	2	\N	\N	\N	2022-12-13 22:53:58	2022-12-13 22:53:58	23	\N	\N
+17	5	11	16	3	19	\N	\N	\N	2022-12-13 22:54:34	2022-12-13 22:54:34	23	\N	\N
+45	11	28	44	3	19	\N	\N	\N	2022-12-13 23:02:03	2022-12-13 23:02:03	28	\N	\N
+18	5	11	16	3	10	0	openAccess	1	2022-12-13 22:55:30	2022-12-13 22:55:36	23	521	1
+19	6	12	\N	4	2	\N	\N	\N	2022-12-13 22:55:51	2022-12-13 22:55:51	24	\N	\N
+20	6	13	\N	4	2	\N	\N	\N	2022-12-13 22:55:52	2022-12-13 22:55:52	24	\N	\N
+21	6	14	\N	4	2	\N	\N	\N	2022-12-13 22:55:52	2022-12-13 22:55:53	24	\N	\N
+22	6	15	\N	4	2	\N	\N	\N	2022-12-13 22:55:53	2022-12-13 22:55:53	24	\N	\N
+23	6	15	22	4	19	\N	\N	\N	2022-12-13 22:56:47	2022-12-13 22:56:47	24	\N	\N
+24	6	14	21	4	19	\N	\N	\N	2022-12-13 22:56:47	2022-12-13 22:56:47	24	\N	\N
+25	6	13	20	4	19	\N	\N	\N	2022-12-13 22:56:47	2022-12-13 22:56:47	24	\N	\N
+26	6	12	19	4	19	\N	\N	\N	2022-12-13 22:56:47	2022-12-13 22:56:47	24	\N	\N
+27	7	16	\N	4	2	\N	\N	\N	2022-12-13 22:57:25	2022-12-13 22:57:25	25	\N	\N
+28	7	17	\N	4	2	\N	\N	\N	2022-12-13 22:57:25	2022-12-13 22:57:26	25	\N	\N
+29	7	18	\N	4	2	\N	\N	\N	2022-12-13 22:57:26	2022-12-13 22:57:26	25	\N	\N
+30	7	19	\N	4	2	\N	\N	\N	2022-12-13 22:57:26	2022-12-13 22:57:27	25	\N	\N
+31	7	20	\N	4	2	\N	\N	\N	2022-12-13 22:57:27	2022-12-13 22:57:28	25	\N	\N
+32	8	21	\N	3	2	\N	\N	\N	2022-12-13 22:59:12	2022-12-13 22:59:12	3	\N	\N
+33	9	22	\N	4	2	\N	\N	\N	2022-12-13 22:59:23	2022-12-13 22:59:24	26	\N	\N
+34	9	23	\N	4	2	\N	\N	\N	2022-12-13 22:59:24	2022-12-13 22:59:24	26	\N	\N
+35	9	24	\N	4	2	\N	\N	\N	2022-12-13 22:59:25	2022-12-13 22:59:25	26	\N	\N
+36	9	25	\N	4	2	\N	\N	\N	2022-12-13 22:59:25	2022-12-13 22:59:26	26	\N	\N
+37	9	26	\N	4	2	\N	\N	\N	2022-12-13 22:59:26	2022-12-13 22:59:26	26	\N	\N
+38	9	22	33	4	19	\N	\N	\N	2022-12-13 23:00:37	2022-12-13 23:00:37	26	\N	\N
+39	9	23	34	4	19	\N	\N	\N	2022-12-13 23:00:37	2022-12-13 23:00:37	26	\N	\N
+40	9	24	35	4	19	\N	\N	\N	2022-12-13 23:00:37	2022-12-13 23:00:37	26	\N	\N
+41	9	25	36	4	19	\N	\N	\N	2022-12-13 23:00:37	2022-12-13 23:00:37	26	\N	\N
+42	9	26	37	4	19	\N	\N	\N	2022-12-13 23:00:37	2022-12-13 23:00:37	26	\N	\N
+43	10	27	\N	3	2	\N	\N	\N	2022-12-13 23:00:50	2022-12-13 23:00:51	27	\N	\N
+44	11	28	\N	3	2	\N	\N	\N	2022-12-13 23:01:45	2022-12-13 23:01:45	28	\N	\N
+46	12	29	\N	4	2	\N	\N	\N	2022-12-13 23:03:07	2022-12-13 23:03:07	29	\N	\N
+47	12	30	\N	4	2	\N	\N	\N	2022-12-13 23:03:07	2022-12-13 23:03:08	29	\N	\N
+48	12	31	\N	4	2	\N	\N	\N	2022-12-13 23:03:08	2022-12-13 23:03:08	29	\N	\N
+49	13	32	\N	4	2	\N	\N	\N	2022-12-13 23:04:59	2022-12-13 23:04:59	30	\N	\N
+50	13	33	\N	4	2	\N	\N	\N	2022-12-13 23:05:00	2022-12-13 23:05:00	30	\N	\N
+51	13	34	\N	4	2	\N	\N	\N	2022-12-13 23:05:00	2022-12-13 23:05:01	30	\N	\N
+52	13	32	49	4	19	\N	\N	\N	2022-12-13 23:05:47	2022-12-13 23:05:47	30	\N	\N
+53	13	33	50	4	19	\N	\N	\N	2022-12-13 23:05:47	2022-12-13 23:05:47	30	\N	\N
+54	13	34	51	4	19	\N	\N	\N	2022-12-13 23:05:48	2022-12-13 23:05:48	30	\N	\N
+55	14	35	\N	4	2	\N	\N	\N	2022-12-13 23:07:12	2022-12-13 23:07:12	31	\N	\N
+56	14	36	\N	4	2	\N	\N	\N	2022-12-13 23:07:12	2022-12-13 23:07:13	31	\N	\N
+57	14	37	\N	4	2	\N	\N	\N	2022-12-13 23:07:13	2022-12-13 23:07:13	31	\N	\N
+58	14	38	\N	4	2	\N	\N	\N	2022-12-13 23:07:14	2022-12-13 23:07:14	31	\N	\N
+59	14	39	\N	13	2	\N	\N	\N	2022-12-13 23:07:14	2022-12-13 23:07:15	31	\N	\N
+60	14	40	\N	9	2	\N	\N	\N	2022-12-13 23:07:15	2022-12-13 23:07:16	31	\N	\N
+61	14	35	55	4	19	\N	\N	\N	2022-12-13 23:08:09	2022-12-13 23:08:09	31	\N	\N
+62	14	36	56	4	19	\N	\N	\N	2022-12-13 23:08:09	2022-12-13 23:08:09	31	\N	\N
+63	14	37	57	4	19	\N	\N	\N	2022-12-13 23:08:09	2022-12-13 23:08:09	31	\N	\N
+64	14	38	58	4	19	\N	\N	\N	2022-12-13 23:08:09	2022-12-13 23:08:09	31	\N	\N
+65	14	39	59	13	19	\N	\N	\N	2022-12-13 23:08:09	2022-12-13 23:08:09	31	\N	\N
+66	14	40	60	9	19	\N	\N	\N	2022-12-13 23:08:09	2022-12-13 23:08:09	31	\N	\N
+67	14	35	55	4	10	0	openAccess	1	2022-12-13 23:09:13	2022-12-13 23:09:21	31	521	2
+68	14	36	56	4	10	0	openAccess	1	2022-12-13 23:09:14	2022-12-13 23:09:27	31	521	2
+69	14	37	57	4	10	0	openAccess	1	2022-12-13 23:09:14	2022-12-13 23:09:32	31	521	2
+70	14	38	58	4	10	0	openAccess	1	2022-12-13 23:09:14	2022-12-13 23:09:38	31	521	2
+71	14	39	59	13	10	0	openAccess	1	2022-12-13 23:09:14	2022-12-13 23:09:44	31	521	2
+72	14	40	60	9	10	0	openAccess	1	2022-12-13 23:09:14	2022-12-13 23:09:50	31	521	2
+73	15	41	\N	3	2	\N	\N	\N	2022-12-13 23:10:05	2022-12-13 23:10:06	32	\N	\N
+74	15	41	73	3	4	\N	\N	\N	2022-12-13 23:10:31	2022-12-13 23:10:31	32	\N	\N
+75	16	42	\N	3	2	\N	\N	\N	2022-12-13 23:10:42	2022-12-13 23:10:43	33	\N	\N
+76	16	42	75	3	4	\N	\N	\N	2022-12-13 23:11:16	2022-12-13 23:11:16	33	\N	\N
+77	17	43	\N	4	2	\N	\N	\N	2022-12-13 23:11:54	2022-12-13 23:11:55	34	\N	\N
+78	17	44	\N	4	2	\N	\N	\N	2022-12-13 23:11:55	2022-12-13 23:11:55	34	\N	\N
+79	17	45	\N	4	2	\N	\N	\N	2022-12-13 23:11:56	2022-12-13 23:11:56	34	\N	\N
+80	17	46	\N	4	2	\N	\N	\N	2022-12-13 23:11:56	2022-12-13 23:11:57	34	\N	\N
+81	17	47	\N	4	2	\N	\N	\N	2022-12-13 23:11:57	2022-12-13 23:11:57	34	\N	\N
+82	17	48	\N	4	2	\N	\N	\N	2022-12-13 23:11:58	2022-12-13 23:11:58	34	\N	\N
+83	17	43	77	4	19	\N	\N	\N	2022-12-13 23:13:39	2022-12-13 23:13:39	34	\N	\N
+84	17	44	78	4	19	\N	\N	\N	2022-12-13 23:13:39	2022-12-13 23:13:39	34	\N	\N
+85	17	45	79	4	19	\N	\N	\N	2022-12-13 23:13:39	2022-12-13 23:13:39	34	\N	\N
+86	17	46	80	4	19	\N	\N	\N	2022-12-13 23:13:39	2022-12-13 23:13:39	34	\N	\N
+87	17	47	81	4	19	\N	\N	\N	2022-12-13 23:13:39	2022-12-13 23:13:39	34	\N	\N
+88	17	48	82	4	19	\N	\N	\N	2022-12-13 23:13:39	2022-12-13 23:13:39	34	\N	\N
 \.
 
 
@@ -11024,7 +10930,7 @@ COPY public.submission_files (submission_file_id, submission_id, file_id, source
 -- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
 --
 
-SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 92, true);
+SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 88, true);
 
 
 --
@@ -11351,23 +11257,23 @@ COPY public.submission_settings (submission_id, locale, setting_name, setting_va
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-9	1	9	2022-12-13 16:00:48	2022-12-13 16:00:38	2022-12-13 16:00:38	2	en_US	1	0	1
-6	1	6	2022-12-13 15:57:14	2022-12-13 15:56:46	2022-12-13 15:56:46	2	en_US	1	0	1
-12	1	12	2022-12-13 16:05:06	2022-12-13 16:04:20	2022-12-13 16:04:47	2	en_US	1	0	1
-1	1	1	2022-12-13 15:49:31	2022-12-13 15:49:09	2022-12-13 15:49:09	4	en_US	1	0	2
-4	1	4	2022-12-13 15:53:51	2022-12-13 15:52:55	2022-12-13 15:52:55	5	en_US	1	0	1
-10	1	10	2022-12-13 16:01:47	2022-12-13 16:01:47	2022-12-13 16:01:47	1	en_US	1	0	2
-16	1	16	2022-12-13 16:12:26	2022-12-13 16:11:48	2022-12-13 16:12:06	3	en_US	1	0	2
-2	1	2	2022-12-13 15:51:19	2022-12-13 15:50:53	2022-12-13 15:50:53	3	en_US	1	0	1
-7	1	7	2022-12-13 15:59:12	2022-12-13 15:58:40	2022-12-13 15:58:40	4	en_US	1	0	1
-3	1	3	2022-12-13 15:51:55	2022-12-13 15:51:55	2022-12-13 15:51:55	1	en_US	1	0	2
-5	1	5	2022-12-13 15:55:47	2022-12-13 15:54:33	2022-12-13 15:54:33	5	en_US	3	0	2
-11	1	11	2022-12-13 16:03:09	2022-12-13 16:02:07	2022-12-13 16:02:40	4	en_US	1	0	2
-14	1	14	2022-12-13 16:10:36	2022-12-13 16:08:24	2022-12-13 16:08:24	5	en_US	3	0	1
-8	1	8	2022-12-13 15:59:25	2022-12-13 15:59:25	2022-12-13 15:59:25	1	en_US	1	0	2
-13	1	13	2022-12-13 16:07:19	2022-12-13 16:05:56	2022-12-13 16:06:41	4	en_US	1	0	1
-17	1	17	2022-12-13 16:14:45	2022-12-13 16:14:13	2022-12-13 16:14:13	2	en_US	1	0	1
-15	1	15	2022-12-13 16:11:11	2022-12-13 16:11:01	2022-12-13 16:11:01	3	en_US	1	0	2
+9	1	9	2022-12-13 23:00:37	2022-12-13 23:00:27	2022-12-13 23:00:27	2	en_US	1	0	1
+6	1	6	2022-12-13 22:57:05	2022-12-13 22:56:38	2022-12-13 22:56:38	2	en_US	1	0	1
+12	1	12	2022-12-13 23:04:49	2022-12-13 23:04:05	2022-12-13 23:04:31	2	en_US	1	0	1
+1	1	1	2022-12-13 22:49:37	2022-12-13 22:49:14	2022-12-13 22:49:14	4	en_US	1	0	2
+4	1	4	2022-12-13 22:53:47	2022-12-13 22:52:53	2022-12-13 22:52:53	5	en_US	1	0	1
+16	1	16	2022-12-13 23:11:45	2022-12-13 23:11:06	2022-12-13 23:11:24	3	en_US	1	0	2
+10	1	10	2022-12-13 23:01:36	2022-12-13 23:01:35	2022-12-13 23:01:35	1	en_US	1	0	2
+2	1	2	2022-12-13 22:51:20	2022-12-13 22:50:55	2022-12-13 22:50:55	3	en_US	1	0	1
+7	1	7	2022-12-13 22:59:02	2022-12-13 22:58:31	2022-12-13 22:58:31	4	en_US	1	0	1
+3	1	3	2022-12-13 22:51:55	2022-12-13 22:51:55	2022-12-13 22:51:55	1	en_US	1	0	2
+8	1	8	2022-12-13 22:59:15	2022-12-13 22:59:15	2022-12-13 22:59:15	1	en_US	1	0	2
+5	1	5	2022-12-13 22:55:41	2022-12-13 22:54:27	2022-12-13 22:54:27	5	en_US	3	0	2
+14	1	14	2022-12-13 23:09:56	2022-12-13 23:07:59	2022-12-13 23:07:59	5	en_US	3	0	1
+13	1	13	2022-12-13 23:06:58	2022-12-13 23:05:37	2022-12-13 23:06:21	4	en_US	1	0	1
+11	1	11	2022-12-13 23:02:54	2022-12-13 23:01:56	2022-12-13 23:02:26	4	en_US	1	0	2
+17	1	17	2022-12-13 23:13:57	2022-12-13 23:13:26	2022-12-13 23:13:26	2	en_US	1	0	1
+15	1	15	2022-12-13 23:10:31	2022-12-13 23:10:21	2022-12-13 23:10:21	3	en_US	1	0	2
 \.
 
 
@@ -11410,6 +11316,7 @@ COPY public.user_group_settings (user_group_id, locale, setting_name, setting_va
 1	fr_CA	name	##default.groups.name.siteAdmin##	string
 2		nameLocaleKey	default.groups.name.manager	string
 2		abbrevLocaleKey	default.groups.abbrev.manager	string
+14		recommendOnly	0	bool
 3		nameLocaleKey	default.groups.name.editor	string
 3		abbrevLocaleKey	default.groups.abbrev.editor	string
 4		nameLocaleKey	default.groups.name.productionEditor	string
@@ -11442,6 +11349,10 @@ COPY public.user_group_settings (user_group_id, locale, setting_name, setting_va
 17		abbrevLocaleKey	default.groups.abbrev.internalReviewer	string
 18		nameLocaleKey	default.groups.name.externalReviewer	string
 18		abbrevLocaleKey	default.groups.abbrev.externalReviewer	string
+14	en_US	name	Volume editor	string
+14	fr_CA	name	Rédacteur/Rédactrice en chef du volume	string
+14	en_US	abbrev	VE	string
+14	fr_CA	abbrev	RV	string
 19		nameLocaleKey	default.groups.name.reader	string
 19		abbrevLocaleKey	default.groups.abbrev.reader	string
 2	en_US	name	Press manager	string
@@ -11512,11 +11423,6 @@ COPY public.user_group_settings (user_group_id, locale, setting_name, setting_va
 18	fr_CA	abbrev	EvEx	string
 19	fr_CA	name	Lecteur-trice	string
 19	fr_CA	abbrev	Lect	string
-14	en_US	name	Volume editor	string
-14	fr_CA	name	Rédacteur/Rédactrice en chef du volume	string
-14	en_US	abbrev	VE	string
-14	fr_CA	abbrev	RV	string
-14		recommendOnly	0	bool
 \.
 
 
@@ -11954,40 +11860,40 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-24	dbernnard	$2y$10$sqVIYxcvxDjRGEVxm9yYd..JP7OrENka5817/3zy92WegY302kbbG	dbernnard@mailinator.com	\N	\N	\N	\N	US		\N	\N	2022-12-13 15:55:52	\N	2022-12-13 15:55:52	0	\N	\N	0	\N	1
-31	mdawson	$2y$10$YLJmSvabYU1AwGiata.kV.edzxLLEO.d10kiD/H7DnvhauA08N9cO	mdawson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 16:07:30	\N	2022-12-13 16:07:30	0	\N	\N	0	\N	1
-6	minoue	$2y$10$sX2PmBq5iCbqjqJ9quFUd.LAxbm.QRlDwudt/j8HSh.nF.dZJ6JzK	minoue@mailinator.com				\N	JP		\N	\N	2022-12-13 15:46:10	\N	2022-12-13 15:57:06	0	0	\N	0	\N	1
-3	dbarnes	$2y$10$XpJT2oBYIZvnejeGDFyxEO05v.tmOxFwnijCckrPKYBO3YJHdvqz.	dbarnes@mailinator.com				\N	AU		\N	\N	2022-12-13 15:45:42	\N	2022-12-13 16:14:16	0	0	\N	0	\N	1
-4	dbuskins	$2y$10$Xcy9mFHY2lkbfLpMyziXbOvUfbwLq.SE0zmfGBASYCWt9LYYznY6i	dbuskins@mailinator.com				\N	US		\N	\N	2022-12-13 15:45:50	\N	2022-12-13 15:45:50	0	0	\N	0	\N	1
-5	sberardo	$2y$10$wS2Y6bQ7YymDYGv6UztaW.cyS98wwC1v93XyRzJwNmH/3i/56Eon6	sberardo@mailinator.com				\N	CA		\N	\N	2022-12-13 15:46:01	\N	2022-12-13 15:46:01	0	0	\N	0	\N	1
-7	jjanssen	$2y$10$szmyLyV2rO7OXR5ZFaRNluooqvEsCUmdeiiQkaSS7KOa.B4ebWRT2	jjanssen@mailinator.com				\N	NL		\N	\N	2022-12-13 15:46:19	\N	2022-12-13 15:46:19	0	0	\N	0	\N	1
-9	amccrae	$2y$10$2o.us6vNt0kndHTqPDCy6uNTOVmEZFdkBvD0HP45WX7PuojwSAU/O	amccrae@mailinator.com				\N	CA		\N	\N	2022-12-13 15:46:35	\N	2022-12-13 15:46:35	0	0	\N	0	\N	1
-11	alzacharia	$2y$10$ED2Tz6t2qxeYwJqBCjtcsOif.U25009mNEVKPbYG.UgskJMjmAq1m	alzacharia@mailinator.com				\N	GH		\N	\N	2022-12-13 15:46:55	\N	2022-12-13 15:46:55	0	0	\N	0	\N	1
-13	mfritz	$2y$10$7jaoWNitwsto8cUJVxpdgOyob6UznhUbSqoffK98cBFDkvKam0U7m	mfritz@mailinator.com				\N	BE		\N	\N	2022-12-13 15:47:15	\N	2022-12-13 15:47:15	0	0	\N	0	\N	1
-14	svogt	$2y$10$a74QK7Iy/62hS9lAV2U.Euxv1.Dc84ZxCyNGCpdkLd0iicGSzRE4O	svogt@mailinator.com				\N	CL		\N	\N	2022-12-13 15:47:26	\N	2022-12-13 15:47:26	0	0	\N	0	\N	1
-15	gcox	$2y$10$B.DPob4fDE9/oHAkM5KfkeFtLwm2Z/CVMo4ldwcPJnQ0hLJuzvaIm	gcox@mailinator.com				\N	US		\N	\N	2022-12-13 15:47:38	\N	2022-12-13 15:47:38	0	0	\N	0	\N	1
-16	shellier	$2y$10$spoCA/iRuqPpJBN301eHk.eeCdPgBdqZaHxqnzRYDqqsae8L2SMti	shellier@mailinator.com				\N	ZA		\N	\N	2022-12-13 15:47:50	\N	2022-12-13 15:47:50	0	0	\N	0	\N	1
-17	cturner	$2y$10$KXfUgNqzTnIwktvEZXZOo.TCG6uDcTZfXCaFbNCUCCfo629RbpgCK	cturner@mailinator.com				\N	GB		\N	\N	2022-12-13 15:48:03	\N	2022-12-13 15:48:03	0	0	\N	0	\N	1
-18	skumar	$2y$10$OTz9nAItSB0o285NFRHRdeQwsJpmNYCQeSFj4jzdw54MjC0N47Ncu	skumar@mailinator.com				\N	SG		\N	\N	2022-12-13 15:48:16	\N	2022-12-13 15:48:16	0	0	\N	0	\N	1
-25	dkennepohl	$2y$10$kh/CuRDH2klgeMNc5aWnouVD0sVbz0mDyH0eFVRXyCqvpA2PImmmu	dkennepohl@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 15:57:28	\N	2022-12-13 15:57:28	0	\N	\N	0	\N	1
-2	rvaca	$2y$10$agGxwrST3A2JoyEvjOmkPu3afgQ98jg7VxlBYpf6s6OCzifvFp/Eq	rvaca@mailinator.com				\N	MX		\N	\N	2022-12-13 15:45:36	\N	2022-12-13 15:48:26	0	0	\N	0	\N	1
-1	admin	$2y$10$jHvWvIeCV7SbSeEm3cPPtufeSSdxsxI11jXcqgV2C7mPEdGz64O0a	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2022-12-13 15:44:37	\N	2022-12-13 15:48:30	0	\N	\N	0	\N	1
-19	aclark	$2y$10$dHg6PKxZA9OnkI13XW4KaeDvRuydKB0VfbdiY/SxrBkLmw/QUolUe	aclark@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 15:48:49	\N	2022-12-13 15:48:50	0	\N	\N	0	\N	1
-29	lelder	$2y$10$u6wRr07xVEGE57F.yJi3vOkiJilDShZVJMtRWJMO9MGd8FAd/aeYS	lelder@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 16:03:18	\N	2022-12-13 16:03:18	0	\N	\N	0	\N	1
-20	afinkel	$2y$10$LUMTb3Ui.u8RT6cH9BPt0eyQe9wBIzKrjk0Czm4kADtYHWbGu5WAK	afinkel@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 15:49:37	\N	2022-12-13 15:49:37	0	\N	\N	0	\N	1
-21	bbarnetson	$2y$10$B.bFGuWdD.0Cf4mKDCkOXuzjVCSuLFfvkqiFo0EYAyuqoiIWw5t0a	bbarnetson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 15:51:25	\N	2022-12-13 15:51:25	0	\N	\N	0	\N	1
-22	bbeaty	$2y$10$W97adR.Rhz2hbURe0aq2p.yoOvFpmJTSun5hDp92HAP89ke.I3TX.	bbeaty@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 15:52:00	\N	2022-12-13 15:52:00	0	\N	\N	0	\N	1
-26	fperini	$2y$10$3GcZN5bwAR2zqLFIFmtiwOC0epPO3j8hRa1UcK1cMLcKLFdcC07RO	fperini@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 15:59:29	\N	2022-12-13 15:59:29	0	\N	\N	0	\N	1
-23	callan	$2y$10$eNpCE7YUEXshtGrqLWnO2OowD/Xlpw6h/7OOrIWIXDIilEidxeNCS	callan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 15:54:00	\N	2022-12-13 15:54:00	0	\N	\N	0	\N	1
-8	phudson	$2y$10$MDcMZhJR.nWoZEi/AD889OOFXrO2jjuBrXbSfggXzJ0jrzsNr7RMa	phudson@mailinator.com				\N	CA		\N	\N	2022-12-13 15:46:27	\N	2022-12-13 16:04:56	0	0	\N	0	\N	1
-27	jbrower	$2y$10$VQ69g65jnt8/WydDvqjSruFFCnDXEw1kWnFnbqTlpfbah5Wgd90R.	jbrower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 16:00:58	\N	2022-12-13 16:00:58	0	\N	\N	0	\N	1
-28	jlockehart	$2y$10$ZFGOnGkvOu11.uohU2gcAeGWLon1L.xCbr9zPGixI/EZMhJLKxW8m	jlockehart@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 16:01:53	\N	2022-12-13 16:01:53	0	\N	\N	0	\N	1
-32	mforan	$2y$10$av8uIv.7XIaVMd5.B7vml.GMXnxladulL5Q/0L.ND0DK3hdp72m8W	mforan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 16:10:41	\N	2022-12-13 16:10:41	0	\N	\N	0	\N	1
-30	mally	$2y$10$1zLo3ix43Ysmbl59VznKIObCmLvljZh5EdAYH5bJxalVlbUaJSRfu	mally@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 16:05:12	\N	2022-12-13 16:05:12	0	\N	\N	0	\N	1
-12	gfavio	$2y$10$rvCl9l0mi5wG5cDwj94pDeo/nW5e.k6mBsS.s4vI63dggQ9MiNOf.	gfavio@mailinator.com				\N	ES		\N	\N	2022-12-13 15:47:05	\N	2022-12-13 16:06:54	0	0	\N	0	\N	1
-33	mpower	$2y$10$za51zZw/WRwRTmrGGVeKZuzqFfwKwnTGyauUVeWLr.mpRAZ9vZL9u	mpower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 16:11:19	\N	2022-12-13 16:11:19	0	\N	\N	0	\N	1
-10	agallego	$2y$10$xkE4ByxKHrZ7rWAdMCq2q.ayQu5R6wAYdLQV/kkh7L2iISDZqi286	agallego@mailinator.com				\N	US		\N	\N	2022-12-13 15:46:45	\N	2022-12-13 16:12:18	0	0	\N	0	\N	1
-34	msmith	$2y$10$Bz9Qs/UEREAfsf.hav0NI.spkBxtA5RfFQgjm/aStUDCItmnB5q/e	msmith@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 16:12:32	\N	2022-12-13 16:12:33	0	\N	\N	0	\N	1
+24	dbernnard	$2y$10$C2Ty5TxaIs9PIqlsX3o1XeE53MmtRSOoTdQEIxayNp/Gpqta6Omym	dbernnard@mailinator.com	\N	\N	\N	\N	US		\N	\N	2022-12-13 22:55:47	\N	2022-12-13 22:55:47	0	\N	\N	0	\N	1
+31	mdawson	$2y$10$cANyJ906DSNFi24QEF9Ltetgbz22OOGHB.sbkrlwZITfZp7gIqR0y	mdawson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 23:07:08	\N	2022-12-13 23:07:08	0	\N	\N	0	\N	1
+6	minoue	$2y$10$jotlIskShFlWweyRtLUSaeClTy1psfTfI9CJYKn5ZAwzboyLdxJNO	minoue@mailinator.com				\N	JP		\N	\N	2022-12-13 22:46:17	\N	2022-12-13 22:56:58	0	0	\N	0	\N	1
+3	dbarnes	$2y$10$57x/AKZ3VLSVp8mX930bG.VQhEaGNxCS1BS33AV.D0qOtzWPkbqXC	dbarnes@mailinator.com				\N	AU		\N	\N	2022-12-13 22:45:57	\N	2022-12-13 23:13:28	0	0	\N	0	\N	1
+4	dbuskins	$2y$10$c8qSSRA00W1Mf4/BXdwc6.mSYktifKq17Mvn5xNQlS/OtvoRgW4NO	dbuskins@mailinator.com				\N	US		\N	\N	2022-12-13 22:46:03	\N	2022-12-13 22:46:03	0	0	\N	0	\N	1
+5	sberardo	$2y$10$UTjC73O0gX9GGvGacJqIY.mxFZJ7gP.vDFFiZo5C7.t7.A8zDUMHu	sberardo@mailinator.com				\N	CA		\N	\N	2022-12-13 22:46:10	\N	2022-12-13 22:46:10	0	0	\N	0	\N	1
+7	jjanssen	$2y$10$UusrnOdd9.11sJLcnGrpGe6TWQpUV8143SSxIYPSwQTSfculriej.	jjanssen@mailinator.com				\N	NL		\N	\N	2022-12-13 22:46:25	\N	2022-12-13 22:46:25	0	0	\N	0	\N	1
+9	amccrae	$2y$10$V9gcu37d2D3NZioORyKUt.YTus2nqMiqvXLXfN5tsfRI2xkc34q8i	amccrae@mailinator.com				\N	CA		\N	\N	2022-12-13 22:46:46	\N	2022-12-13 22:46:46	0	0	\N	0	\N	1
+11	alzacharia	$2y$10$B.2w6WjFGpbfh0U2cZ1UGerEpcjMEGc3vc5kE0rR0UNSSKosMLQtm	alzacharia@mailinator.com				\N	GH		\N	\N	2022-12-13 22:47:06	\N	2022-12-13 22:47:06	0	0	\N	0	\N	1
+13	mfritz	$2y$10$vj4hcHyo4bj2vdhe.RnuZunGT2eIZecF8EKswIe7av4OuPu6DI4ya	mfritz@mailinator.com				\N	BE		\N	\N	2022-12-13 22:47:25	\N	2022-12-13 22:47:25	0	0	\N	0	\N	1
+14	svogt	$2y$10$oqG8B70shIkwDLWeN7I.5unmIuXuICgDe7YtgpltWdN9qEcRqeLqy	svogt@mailinator.com				\N	CL		\N	\N	2022-12-13 22:47:35	\N	2022-12-13 22:47:35	0	0	\N	0	\N	1
+15	gcox	$2y$10$X9cftvImC94qe37YTnFTZ.iT8q.nZt3vGwXye2/Dxb976GHrt6vUu	gcox@mailinator.com				\N	US		\N	\N	2022-12-13 22:47:46	\N	2022-12-13 22:47:46	0	0	\N	0	\N	1
+16	shellier	$2y$10$MOfhp9LHmFB3v.Cw3LXUOu4GY3koS4Z7DEmoYmk0c2hatNweokGcC	shellier@mailinator.com				\N	ZA		\N	\N	2022-12-13 22:47:58	\N	2022-12-13 22:47:58	0	0	\N	0	\N	1
+17	cturner	$2y$10$yKJfjWT.UrWuSNgMf07v1enXpZHNKufNh3EqpYyQMT1e9YEfgG2ba	cturner@mailinator.com				\N	GB		\N	\N	2022-12-13 22:48:10	\N	2022-12-13 22:48:10	0	0	\N	0	\N	1
+18	skumar	$2y$10$gNTR0gRs6EH6v/MPGboS6OeswgVdw28O/0CYqCtU9js2k9jctnIwu	skumar@mailinator.com				\N	SG		\N	\N	2022-12-13 22:48:22	\N	2022-12-13 22:48:22	0	0	\N	0	\N	1
+25	dkennepohl	$2y$10$iLdcW9lLIvCU8Sa/B5O6Qu6MrxNHdWIaqBhS0A7BHVU48XxBwT5XC	dkennepohl@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 22:57:20	\N	2022-12-13 22:57:21	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$cNeXesJs3R.a5.ieiOr9BuIkHqF4gUnZv.VBcdGNgmBa4mbdya80q	rvaca@mailinator.com				\N	MX		\N	\N	2022-12-13 22:45:51	\N	2022-12-13 22:48:31	0	0	\N	0	\N	1
+1	admin	$2y$10$5Cp5jcaqYmTjvWLdw7Zsf.abWFUAKQ2z4H71tpRaydkKu/DSBkokK	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2022-12-13 22:44:55	\N	2022-12-13 22:48:36	0	\N	\N	0	\N	1
+19	aclark	$2y$10$LQvsPGy7T7X.9gbVxBkVuujbBzrj7No3tfUUt9lRQXSskr8RJAuuS	aclark@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 22:48:55	\N	2022-12-13 22:48:55	0	\N	\N	0	\N	1
+29	lelder	$2y$10$gg.upgeM6xKgCH1A6pPiZu0VIq4exmqXEt5s9AH4YFj2ZLDDAca5m	lelder@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 23:03:03	\N	2022-12-13 23:03:03	0	\N	\N	0	\N	1
+20	afinkel	$2y$10$c9TWeVVadMHLQmgKNaBtTOdGdo7J93o11FP0LLiiSVDm8TzOhsWGm	afinkel@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 22:49:42	\N	2022-12-13 22:49:43	0	\N	\N	0	\N	1
+21	bbarnetson	$2y$10$34qLQEj93/issILwiWj0ae35KG2kb85RQjIJycDFB4tt2OCSG6eW.	bbarnetson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 22:51:26	\N	2022-12-13 22:51:26	0	\N	\N	0	\N	1
+22	bbeaty	$2y$10$uIEyMpGoIrCV5rIf7HKUAeV7fXWEPE/sFNcfYctWOoXIVgT32tjLG	bbeaty@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 22:52:00	\N	2022-12-13 22:52:00	0	\N	\N	0	\N	1
+26	fperini	$2y$10$oQDbHv6XWNOgC6ufLxkmz.Ey94Q268calQ7gbMJI5Awanc/YsUzv6	fperini@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 22:59:19	\N	2022-12-13 22:59:19	0	\N	\N	0	\N	1
+23	callan	$2y$10$5Jl648HPAbqME6nC6hMFue8623o2k/Pjj05Abh6RhUHLkrFasHyAa	callan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 22:53:54	\N	2022-12-13 22:53:54	0	\N	\N	0	\N	1
+8	phudson	$2y$10$VnVb3u2fHjrYwka1sYwQleIT0kzT44KG0WigYszo6TqHUo9O37L0m	phudson@mailinator.com				\N	CA		\N	\N	2022-12-13 22:46:34	\N	2022-12-13 23:04:40	0	0	\N	0	\N	1
+27	jbrower	$2y$10$56TOlJEWYQNnwaI.4EU5RewHNAhBNYPisbFJ7FUwe4b1eGOcRXgem	jbrower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 23:00:47	\N	2022-12-13 23:00:47	0	\N	\N	0	\N	1
+28	jlockehart	$2y$10$8VuA5FZON0iifpQH5SSmo.pTY8sv2UclWIEUQ6omZCWFftm9kIgU6	jlockehart@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 23:01:41	\N	2022-12-13 23:01:41	0	\N	\N	0	\N	1
+32	mforan	$2y$10$EgKGMZpZpI7uv51sHAmgB.GFkjLHwad01GPyguaAKUmMZG423x2CW	mforan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 23:10:02	\N	2022-12-13 23:10:02	0	\N	\N	0	\N	1
+30	mally	$2y$10$pA67qbN7ekq8U8eqevyGiO9/sUCWEEF2tmY.lLgNOuKAtpKAYeS/W	mally@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 23:04:55	\N	2022-12-13 23:04:55	0	\N	\N	0	\N	1
+12	gfavio	$2y$10$mpL4N5LeqRAL2bS2RBiU6uN.VdtSmjKDPYA2fSqw3GpaWWMjGmPs2	gfavio@mailinator.com				\N	ES		\N	\N	2022-12-13 22:47:15	\N	2022-12-13 23:06:34	0	0	\N	0	\N	1
+33	mpower	$2y$10$V4GcMT99J6mt3PgFkBgeuOBYA6wZpZbjIrlhlT8VyDHOsuLelAA96	mpower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 23:10:38	\N	2022-12-13 23:10:39	0	\N	\N	0	\N	1
+10	agallego	$2y$10$1IauBsa2OWLjewt53y8qteB9qchK4fyWOqhL0IazsDXZVb4mE3Hu6	agallego@mailinator.com				\N	US		\N	\N	2022-12-13 22:46:56	\N	2022-12-13 23:11:37	0	0	\N	0	\N	1
+34	msmith	$2y$10$dNTmaHEQfyeUQZya6nULTOc01yK.0651cCuUsrZF8BFG.MmrbMFoO	msmith@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2022-12-13 23:11:50	\N	2022-12-13 23:11:51	0	\N	\N	0	\N	1
 \.
 
 
@@ -12003,37 +11909,37 @@ SELECT pg_catalog.setval('public.users_user_id_seq', 34, true);
 --
 
 COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2022-12-13 15:44:37	1	plugins.metadata	dc11		0	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.pubIds	urn	URNPubIdPlugin	0	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.pubIds	doi	DOIPubIdPlugin	0	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.blocks	information	InformationBlockPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.generic	usageEvent		0	1
-1	0	0	0	2022-12-13 15:44:37	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-1	2	0	0	2022-12-13 15:44:37	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.generic	acron		0	1
-1	0	0	0	2022-12-13 15:44:37	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-1	2	0	0	2022-12-13 15:44:37	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.themes	default	DefaultThemePlugin	1	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.importexport	users		0	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.importexport	csv		0	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.importexport	onix30		0	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.importexport	native		0	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.paymethod	manual		0	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.paymethod	paypal		0	0
-1	0	0	0	2022-12-13 15:44:37	1	plugins.reports	monographReport		0	0
-2	0	0	0	2022-12-13 15:44:37	1	plugins.reports	reviewReport		0	0
-3	3	0	13	2022-12-13 15:44:36	1	core	omp		0	1
+1	0	0	0	2022-12-13 22:44:55	1	plugins.metadata	dc11		0	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.pubIds	urn	URNPubIdPlugin	0	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.pubIds	doi	DOIPubIdPlugin	0	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.blocks	information	InformationBlockPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.generic	usageEvent		0	1
+1	0	0	0	2022-12-13 22:44:55	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+1	2	0	0	2022-12-13 22:44:55	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.generic	acron		0	1
+1	0	0	0	2022-12-13 22:44:55	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	2	0	0	2022-12-13 22:44:55	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.themes	default	DefaultThemePlugin	1	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.importexport	users		0	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.importexport	csv		0	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.importexport	onix30		0	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.importexport	native		0	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.paymethod	manual		0	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.paymethod	paypal		0	0
+1	0	0	0	2022-12-13 22:44:55	1	plugins.reports	monographReport		0	0
+2	0	0	0	2022-12-13 22:44:55	1	plugins.reports	reviewReport		0	0
+3	3	0	13	2022-12-13 22:44:55	1	core	omp		0	1
 \.
 
 
