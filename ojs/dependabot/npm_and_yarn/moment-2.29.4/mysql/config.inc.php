@@ -130,7 +130,7 @@ sitewide_privacy_statement = Off
 
 ; The number of days a new user has to validate their account
 ; A new user account will be expired and removed if this many days have passed since the user registered
-; their account, and they have not validated their account or logged in. If the user_validation_period is set to 
+; their account, and they have not validated their account or logged in. If the user_validation_period is set to
 ; 0, unvalidated accounts will never be removed. Use this setting to automatically remove bot registrations.
 user_validation_period = 28
 
@@ -292,7 +292,7 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 [email]
 
 ; Default method to send emails
-; Available options: sendmail, smtp, log
+; Available options: sendmail, smtp, log, phpmailer
 default = sendmail
 
 ; Path to the sendmail, -bs argument is for using SMTP protocol
@@ -528,8 +528,43 @@ default_connection = "database"
 ; Default queue to use when a job is added to the queue
 default_queue = "queue"
 
-; Do not run jobs on shutdown
-; By default, jobs in the queue will be run during PHP's shutdown
-; function. Disable this if you want to run jobs through a separate
-; cron job or workers.
-disable_jobs_run_at_shutdown = Off
+; Whether or not to turn on the built-in job runner
+;
+; When enabled, jobs will be processed at the end of each web
+; request to the application.
+;
+; Use of the built-in job runner is highly discouraged for high-volume 
+; sites. Instead, a worker daemon or cron job should be configured
+; to process jobs off the application's main thread.
+;
+; See: <link-to-documentation>
+;
+job_runner = On
+
+; The maximum number of jobs to run in a single request when using
+; the built-in job runner.
+job_runner_max_jobs = 30
+
+; The maximum number of seconds the built-in job runner should spend
+; running jobs in a single request.
+;
+; This should be less than the max_execution_time the server has 
+; configured for PHP.
+;
+; Lower this setting if jobs are failing due to timeouts.
+job_runner_max_execution_time = 30
+
+; The maximum consumerable memory that should be spent by the built-in
+; job runner when running jobs.
+;
+; Set as a percentage, such as 80%: 
+;
+; job_runner_max_memory = 80
+;
+; Or set as a fixed value in megabytes:
+; 
+; job_runner_max_memory = 128M
+;
+; When setting a fixed value in megabytes, this should be less than the
+; memory_limit the server has configured for PHP.
+job_runner_max_memory = 80
