@@ -289,6 +289,10 @@ reset_seconds = 7200
 ; stripped.
 allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,dd,b,i,u,img[src|alt],sup,sub,br,p"
 
+; Allowed HTML tags for submission titles only
+; Unspecified attributes will be stripped.
+allowed_title_html = "b,i,u,sup,sub"
+
 ;N.b.: The implicit_auth parameter has been removed in favor of plugin implementations such as shibboleth
 
 ;;;;;;;;;;;;;;;;;;
@@ -576,3 +580,7 @@ job_runner_max_execution_time = 30
 ; When setting a fixed value in megabytes, this should be less than the
 ; memory_limit the server has configured for PHP.
 job_runner_max_memory = 80
+
+; Remove failed jobs from the database after the following number of days.
+; Remove this setting to leave failed jobs in the database.
+delete_failed_jobs_after = 180
