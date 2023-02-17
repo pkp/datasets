@@ -1,0 +1,13 @@
+diff --git a/config.inc.php b/config.inc.php
+index 79426feb0f..d31f6288e9 100644
+--- a/config.inc.php
++++ b/config.inc.php
+@@ -204,7 +204,7 @@ web_cache_hours = 1
+ [i18n]
+ 
+ ; Default locale
+-locale = en_US
++locale = en
+ 
+ ; Database connection character set
+ connection_charset = utf8
