@@ -221,9 +221,9 @@ DROP INDEX public.review_round_files_submission_id;
 DROP INDEX public.review_round_files_submission_file_id;
 DROP INDEX public.review_round_files_review_round_id;
 DROP INDEX public.review_form_settings_review_form_id;
+DROP INDEX public.review_form_responses_unique;
 DROP INDEX public.review_form_responses_review_id;
 DROP INDEX public.review_form_responses_review_form_element_id;
-DROP INDEX public.review_form_responses_pkey;
 DROP INDEX public.review_form_elements_review_form_id;
 DROP INDEX public.review_form_element_settings_review_form_element_id;
 DROP INDEX public.review_files_submission_file_id;
@@ -346,63 +346,96 @@ DROP INDEX public.announcement_type_settings_type_id;
 DROP INDEX public.announcement_settings_announcement_id;
 DROP INDEX public.access_keys_user_id;
 DROP INDEX public.access_keys_hash;
+ALTER TABLE ONLY public.versions DROP CONSTRAINT versions_unique;
 ALTER TABLE ONLY public.versions DROP CONSTRAINT versions_pkey;
 ALTER TABLE ONLY public.usage_stats_institution_temporary_records DROP CONSTRAINT usitr_load_id_line_number_institution_id;
 ALTER TABLE ONLY public.users DROP CONSTRAINT users_pkey;
+ALTER TABLE ONLY public.user_user_groups DROP CONSTRAINT user_user_groups_unique;
 ALTER TABLE ONLY public.user_user_groups DROP CONSTRAINT user_user_groups_pkey;
+ALTER TABLE ONLY public.user_settings DROP CONSTRAINT user_settings_unique;
 ALTER TABLE ONLY public.user_settings DROP CONSTRAINT user_settings_pkey;
+ALTER TABLE ONLY public.user_interests DROP CONSTRAINT user_interests_pkey;
 ALTER TABLE ONLY public.user_groups DROP CONSTRAINT user_groups_pkey;
+ALTER TABLE ONLY public.user_group_stage DROP CONSTRAINT user_group_stage_unique;
 ALTER TABLE ONLY public.user_group_stage DROP CONSTRAINT user_group_stage_pkey;
+ALTER TABLE ONLY public.user_group_settings DROP CONSTRAINT user_group_settings_unique;
 ALTER TABLE ONLY public.user_group_settings DROP CONSTRAINT user_group_settings_pkey;
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records DROP CONSTRAINT usage_stats_unique_item_requests_temporary_records_pkey;
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records DROP CONSTRAINT usage_stats_unique_item_investigations_temporary_records_pkey;
+ALTER TABLE ONLY public.usage_stats_total_temporary_records DROP CONSTRAINT usage_stats_total_temporary_records_pkey;
+ALTER TABLE ONLY public.usage_stats_institution_temporary_records DROP CONSTRAINT usage_stats_institution_temporary_records_pkey;
 ALTER TABLE ONLY public.user_interests DROP CONSTRAINT u_e_pkey;
 ALTER TABLE ONLY public.temporary_files DROP CONSTRAINT temporary_files_pkey;
 ALTER TABLE ONLY public.submissions DROP CONSTRAINT submissions_pkey;
+ALTER TABLE ONLY public.submission_settings DROP CONSTRAINT submission_settings_unique;
 ALTER TABLE ONLY public.submission_settings DROP CONSTRAINT submission_settings_pkey;
 ALTER TABLE ONLY public.submission_search_objects DROP CONSTRAINT submission_search_objects_pkey;
+ALTER TABLE ONLY public.submission_search_object_keywords DROP CONSTRAINT submission_search_object_keywords_unique;
 ALTER TABLE ONLY public.submission_search_object_keywords DROP CONSTRAINT submission_search_object_keywords_pkey;
 ALTER TABLE ONLY public.submission_search_keyword_list DROP CONSTRAINT submission_search_keyword_text;
 ALTER TABLE ONLY public.submission_search_keyword_list DROP CONSTRAINT submission_search_keyword_list_pkey;
 ALTER TABLE ONLY public.submission_files DROP CONSTRAINT submission_files_pkey;
+ALTER TABLE ONLY public.submission_file_settings DROP CONSTRAINT submission_file_settings_unique;
 ALTER TABLE ONLY public.submission_file_settings DROP CONSTRAINT submission_file_settings_pkey;
 ALTER TABLE ONLY public.submission_file_revisions DROP CONSTRAINT submission_file_revisions_pkey;
 ALTER TABLE ONLY public.submission_comments DROP CONSTRAINT submission_comments_pkey;
+ALTER TABLE ONLY public.subeditor_submission_group DROP CONSTRAINT subeditor_submission_group_pkey;
 ALTER TABLE ONLY public.stage_assignments DROP CONSTRAINT stage_assignments_pkey;
 ALTER TABLE ONLY public.stage_assignments DROP CONSTRAINT stage_assignment;
+ALTER TABLE ONLY public.site_settings DROP CONSTRAINT site_settings_unique;
 ALTER TABLE ONLY public.site_settings DROP CONSTRAINT site_settings_pkey;
+ALTER TABLE ONLY public.site DROP CONSTRAINT site_pkey;
 ALTER TABLE ONLY public.sessions DROP CONSTRAINT sessions_pkey;
 ALTER TABLE ONLY public.servers DROP CONSTRAINT servers_pkey;
 ALTER TABLE ONLY public.servers DROP CONSTRAINT servers_path;
+ALTER TABLE ONLY public.server_settings DROP CONSTRAINT server_settings_unique;
 ALTER TABLE ONLY public.server_settings DROP CONSTRAINT server_settings_pkey;
 ALTER TABLE ONLY public.sections DROP CONSTRAINT sections_pkey;
+ALTER TABLE ONLY public.section_settings DROP CONSTRAINT section_settings_unique;
 ALTER TABLE ONLY public.section_settings DROP CONSTRAINT section_settings_pkey;
-ALTER TABLE ONLY public.subeditor_submission_group DROP CONSTRAINT section_editors_pkey;
+ALTER TABLE ONLY public.subeditor_submission_group DROP CONSTRAINT section_editors_unique;
+ALTER TABLE ONLY public.scheduled_tasks DROP CONSTRAINT scheduled_tasks_unique;
 ALTER TABLE ONLY public.scheduled_tasks DROP CONSTRAINT scheduled_tasks_pkey;
 ALTER TABLE ONLY public.review_rounds DROP CONSTRAINT review_rounds_submission_id_stage_id_round_pkey;
 ALTER TABLE ONLY public.review_rounds DROP CONSTRAINT review_rounds_pkey;
+ALTER TABLE ONLY public.review_round_files DROP CONSTRAINT review_round_files_unique;
 ALTER TABLE ONLY public.review_round_files DROP CONSTRAINT review_round_files_pkey;
 ALTER TABLE ONLY public.review_forms DROP CONSTRAINT review_forms_pkey;
+ALTER TABLE ONLY public.review_form_settings DROP CONSTRAINT review_form_settings_unique;
 ALTER TABLE ONLY public.review_form_settings DROP CONSTRAINT review_form_settings_pkey;
+ALTER TABLE ONLY public.review_form_responses DROP CONSTRAINT review_form_responses_pkey;
 ALTER TABLE ONLY public.review_form_elements DROP CONSTRAINT review_form_elements_pkey;
+ALTER TABLE ONLY public.review_form_element_settings DROP CONSTRAINT review_form_element_settings_unique;
 ALTER TABLE ONLY public.review_form_element_settings DROP CONSTRAINT review_form_element_settings_pkey;
+ALTER TABLE ONLY public.review_files DROP CONSTRAINT review_files_unique;
 ALTER TABLE ONLY public.review_files DROP CONSTRAINT review_files_pkey;
 ALTER TABLE ONLY public.review_assignments DROP CONSTRAINT review_assignments_pkey;
+ALTER TABLE ONLY public.query_participants DROP CONSTRAINT query_participants_unique;
 ALTER TABLE ONLY public.query_participants DROP CONSTRAINT query_participants_pkey;
 ALTER TABLE ONLY public.queries DROP CONSTRAINT queries_pkey;
 ALTER TABLE ONLY public.publications DROP CONSTRAINT publications_pkey;
+ALTER TABLE ONLY public.publication_settings DROP CONSTRAINT publication_settings_unique;
 ALTER TABLE ONLY public.publication_settings DROP CONSTRAINT publication_settings_pkey;
 ALTER TABLE ONLY public.publication_galleys DROP CONSTRAINT publication_galleys_pkey;
+ALTER TABLE ONLY public.publication_galley_settings DROP CONSTRAINT publication_galley_settings_unique;
 ALTER TABLE ONLY public.publication_galley_settings DROP CONSTRAINT publication_galley_settings_pkey;
+ALTER TABLE ONLY public.publication_categories DROP CONSTRAINT publication_categories_pkey;
 ALTER TABLE ONLY public.publication_categories DROP CONSTRAINT publication_categories_id;
+ALTER TABLE ONLY public.plugin_settings DROP CONSTRAINT plugin_settings_unique;
 ALTER TABLE ONLY public.plugin_settings DROP CONSTRAINT plugin_settings_pkey;
+ALTER TABLE ONLY public.oai_resumption_tokens DROP CONSTRAINT oai_resumption_tokens_unique;
 ALTER TABLE ONLY public.oai_resumption_tokens DROP CONSTRAINT oai_resumption_tokens_pkey;
 ALTER TABLE ONLY public.notifications DROP CONSTRAINT notifications_pkey;
 ALTER TABLE ONLY public.notification_subscription_settings DROP CONSTRAINT notification_subscription_settings_pkey;
+ALTER TABLE ONLY public.notification_settings DROP CONSTRAINT notification_settings_unique;
 ALTER TABLE ONLY public.notification_settings DROP CONSTRAINT notification_settings_pkey;
 ALTER TABLE ONLY public.notes DROP CONSTRAINT notes_pkey;
 ALTER TABLE ONLY public.navigation_menus DROP CONSTRAINT navigation_menus_pkey;
 ALTER TABLE ONLY public.navigation_menu_items DROP CONSTRAINT navigation_menu_items_pkey;
+ALTER TABLE ONLY public.navigation_menu_item_settings DROP CONSTRAINT navigation_menu_item_settings_unique;
 ALTER TABLE ONLY public.navigation_menu_item_settings DROP CONSTRAINT navigation_menu_item_settings_pkey;
 ALTER TABLE ONLY public.navigation_menu_item_assignments DROP CONSTRAINT navigation_menu_item_assignments_pkey;
+ALTER TABLE ONLY public.navigation_menu_item_assignment_settings DROP CONSTRAINT navigation_menu_item_assignment_settings_unique;
 ALTER TABLE ONLY public.navigation_menu_item_assignment_settings DROP CONSTRAINT navigation_menu_item_assignment_settings_pkey;
 ALTER TABLE ONLY public.metrics_counter_submission_monthly DROP CONSTRAINT msm_uc_context_id_submission_id_month;
 ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly DROP CONSTRAINT msim_uc_context_id_submission_id_institution_id_month;
@@ -410,174 +443,286 @@ ALTER TABLE ONLY public.metrics_counter_submission_institution_daily DROP CONSTR
 ALTER TABLE ONLY public.metrics_submission_geo_monthly DROP CONSTRAINT msgm_uc_context_submission_c_r_c_month;
 ALTER TABLE ONLY public.metrics_submission_geo_daily DROP CONSTRAINT msgd_uc_load_context_submission_c_r_c_date;
 ALTER TABLE ONLY public.metrics_counter_submission_daily DROP CONSTRAINT msd_uc_load_id_context_id_submission_id_date;
+ALTER TABLE ONLY public.metrics_submission DROP CONSTRAINT metrics_submission_pkey;
+ALTER TABLE ONLY public.metrics_submission_geo_monthly DROP CONSTRAINT metrics_submission_geo_monthly_pkey;
+ALTER TABLE ONLY public.metrics_submission_geo_daily DROP CONSTRAINT metrics_submission_geo_daily_pkey;
+ALTER TABLE ONLY public.metrics_counter_submission_monthly DROP CONSTRAINT metrics_counter_submission_monthly_pkey;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly DROP CONSTRAINT metrics_counter_submission_institution_monthly_pkey;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily DROP CONSTRAINT metrics_counter_submission_institution_daily_pkey;
+ALTER TABLE ONLY public.metrics_counter_submission_daily DROP CONSTRAINT metrics_counter_submission_daily_pkey;
+ALTER TABLE ONLY public.metrics_context DROP CONSTRAINT metrics_context_pkey;
 ALTER TABLE ONLY public.library_files DROP CONSTRAINT library_files_pkey;
+ALTER TABLE ONLY public.library_file_settings DROP CONSTRAINT library_file_settings_unique;
 ALTER TABLE ONLY public.library_file_settings DROP CONSTRAINT library_file_settings_pkey;
 ALTER TABLE ONLY public.jobs DROP CONSTRAINT jobs_pkey;
 ALTER TABLE ONLY public.job_batches DROP CONSTRAINT job_batches_pkey;
 ALTER TABLE ONLY public.institutions DROP CONSTRAINT institutions_pkey;
+ALTER TABLE ONLY public.institution_settings DROP CONSTRAINT institution_settings_unique;
 ALTER TABLE ONLY public.institution_settings DROP CONSTRAINT institution_settings_pkey;
 ALTER TABLE ONLY public.institution_ip DROP CONSTRAINT institution_ip_pkey;
 ALTER TABLE ONLY public.genres DROP CONSTRAINT genres_pkey;
+ALTER TABLE ONLY public.genre_settings DROP CONSTRAINT genre_settings_unique;
 ALTER TABLE ONLY public.genre_settings DROP CONSTRAINT genre_settings_pkey;
 ALTER TABLE ONLY public.filters DROP CONSTRAINT filters_pkey;
+ALTER TABLE ONLY public.filter_settings DROP CONSTRAINT filter_settings_unique;
 ALTER TABLE ONLY public.filter_settings DROP CONSTRAINT filter_settings_pkey;
 ALTER TABLE ONLY public.filter_groups DROP CONSTRAINT filter_groups_symbolic;
 ALTER TABLE ONLY public.filter_groups DROP CONSTRAINT filter_groups_pkey;
 ALTER TABLE ONLY public.files DROP CONSTRAINT files_pkey;
 ALTER TABLE ONLY public.failed_jobs DROP CONSTRAINT failed_jobs_pkey;
+ALTER TABLE ONLY public.event_log_settings DROP CONSTRAINT event_log_settings_unique;
 ALTER TABLE ONLY public.event_log_settings DROP CONSTRAINT event_log_settings_pkey;
 ALTER TABLE ONLY public.event_log DROP CONSTRAINT event_log_pkey;
+ALTER TABLE ONLY public.email_templates_settings DROP CONSTRAINT email_templates_settings_unique;
+ALTER TABLE ONLY public.email_templates_settings DROP CONSTRAINT email_templates_settings_pkey;
 ALTER TABLE ONLY public.email_templates DROP CONSTRAINT email_templates_pkey;
 ALTER TABLE ONLY public.email_templates DROP CONSTRAINT email_templates_email_key;
+ALTER TABLE ONLY public.email_templates_default_data DROP CONSTRAINT email_templates_default_data_unique;
 ALTER TABLE ONLY public.email_templates_default_data DROP CONSTRAINT email_templates_default_data_pkey;
-ALTER TABLE ONLY public.email_templates_settings DROP CONSTRAINT email_settings_pkey;
+ALTER TABLE ONLY public.email_log_users DROP CONSTRAINT email_log_users_pkey;
 ALTER TABLE ONLY public.email_log_users DROP CONSTRAINT email_log_user_id;
 ALTER TABLE ONLY public.email_log DROP CONSTRAINT email_log_pkey;
 ALTER TABLE ONLY public.edit_decisions DROP CONSTRAINT edit_decisions_pkey;
 ALTER TABLE ONLY public.dois DROP CONSTRAINT dois_pkey;
+ALTER TABLE ONLY public.doi_settings DROP CONSTRAINT doi_settings_unique;
 ALTER TABLE ONLY public.doi_settings DROP CONSTRAINT doi_settings_pkey;
 ALTER TABLE ONLY public.data_object_tombstones DROP CONSTRAINT data_object_tombstones_pkey;
+ALTER TABLE ONLY public.data_object_tombstone_settings DROP CONSTRAINT data_object_tombstone_settings_unique;
 ALTER TABLE ONLY public.data_object_tombstone_settings DROP CONSTRAINT data_object_tombstone_settings_pkey;
 ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects DROP CONSTRAINT data_object_tombstone_oai_set_objects_pkey;
 ALTER TABLE ONLY public.controlled_vocabs DROP CONSTRAINT controlled_vocabs_pkey;
 ALTER TABLE ONLY public.controlled_vocabs DROP CONSTRAINT controlled_vocab_symbolic;
+ALTER TABLE ONLY public.controlled_vocab_entry_settings DROP CONSTRAINT controlled_vocab_entry_settings_pkey;
 ALTER TABLE ONLY public.controlled_vocab_entries DROP CONSTRAINT controlled_vocab_entries_pkey;
 ALTER TABLE ONLY public.citations DROP CONSTRAINT citations_publication_seq;
 ALTER TABLE ONLY public.citations DROP CONSTRAINT citations_pkey;
+ALTER TABLE ONLY public.citation_settings DROP CONSTRAINT citation_settings_unique;
 ALTER TABLE ONLY public.citation_settings DROP CONSTRAINT citation_settings_pkey;
+ALTER TABLE ONLY public.category_settings DROP CONSTRAINT category_settings_unique;
 ALTER TABLE ONLY public.category_settings DROP CONSTRAINT category_settings_pkey;
 ALTER TABLE ONLY public.categories DROP CONSTRAINT category_path;
 ALTER TABLE ONLY public.categories DROP CONSTRAINT categories_pkey;
 ALTER TABLE ONLY public.controlled_vocab_entry_settings DROP CONSTRAINT c_v_e_s_pkey;
 ALTER TABLE ONLY public.authors DROP CONSTRAINT authors_pkey;
+ALTER TABLE ONLY public.author_settings DROP CONSTRAINT author_settings_unique;
 ALTER TABLE ONLY public.author_settings DROP CONSTRAINT author_settings_pkey;
 ALTER TABLE ONLY public.announcements DROP CONSTRAINT announcements_pkey;
 ALTER TABLE ONLY public.announcement_types DROP CONSTRAINT announcement_types_pkey;
+ALTER TABLE ONLY public.announcement_type_settings DROP CONSTRAINT announcement_type_settings_unique;
 ALTER TABLE ONLY public.announcement_type_settings DROP CONSTRAINT announcement_type_settings_pkey;
+ALTER TABLE ONLY public.announcement_settings DROP CONSTRAINT announcement_settings_unique;
 ALTER TABLE ONLY public.announcement_settings DROP CONSTRAINT announcement_settings_pkey;
 ALTER TABLE ONLY public.access_keys DROP CONSTRAINT access_keys_pkey;
+ALTER TABLE public.versions ALTER COLUMN version_id DROP DEFAULT;
 ALTER TABLE public.users ALTER COLUMN user_id DROP DEFAULT;
+ALTER TABLE public.user_user_groups ALTER COLUMN user_user_group_id DROP DEFAULT;
+ALTER TABLE public.user_settings ALTER COLUMN user_setting_id DROP DEFAULT;
+ALTER TABLE public.user_interests ALTER COLUMN user_interest_id DROP DEFAULT;
 ALTER TABLE public.user_groups ALTER COLUMN user_group_id DROP DEFAULT;
+ALTER TABLE public.user_group_stage ALTER COLUMN user_group_stage_id DROP DEFAULT;
+ALTER TABLE public.user_group_settings ALTER COLUMN user_group_setting_id DROP DEFAULT;
+ALTER TABLE public.usage_stats_unique_item_requests_temporary_records ALTER COLUMN usage_stats_temp_item_id DROP DEFAULT;
+ALTER TABLE public.usage_stats_unique_item_investigations_temporary_records ALTER COLUMN usage_stats_temp_unique_item_id DROP DEFAULT;
+ALTER TABLE public.usage_stats_total_temporary_records ALTER COLUMN usage_stats_temp_total_id DROP DEFAULT;
+ALTER TABLE public.usage_stats_institution_temporary_records ALTER COLUMN usage_stats_temp_institution_id DROP DEFAULT;
 ALTER TABLE public.temporary_files ALTER COLUMN file_id DROP DEFAULT;
 ALTER TABLE public.submissions ALTER COLUMN submission_id DROP DEFAULT;
+ALTER TABLE public.submission_settings ALTER COLUMN submission_setting_id DROP DEFAULT;
 ALTER TABLE public.submission_search_objects ALTER COLUMN object_id DROP DEFAULT;
+ALTER TABLE public.submission_search_object_keywords ALTER COLUMN submission_search_object_keyword_id DROP DEFAULT;
 ALTER TABLE public.submission_search_keyword_list ALTER COLUMN keyword_id DROP DEFAULT;
 ALTER TABLE public.submission_files ALTER COLUMN submission_file_id DROP DEFAULT;
+ALTER TABLE public.submission_file_settings ALTER COLUMN submission_file_setting_id DROP DEFAULT;
 ALTER TABLE public.submission_file_revisions ALTER COLUMN revision_id DROP DEFAULT;
 ALTER TABLE public.submission_comments ALTER COLUMN comment_id DROP DEFAULT;
+ALTER TABLE public.subeditor_submission_group ALTER COLUMN subeditor_submission_group_id DROP DEFAULT;
 ALTER TABLE public.stage_assignments ALTER COLUMN stage_assignment_id DROP DEFAULT;
+ALTER TABLE public.site_settings ALTER COLUMN site_setting_id DROP DEFAULT;
+ALTER TABLE public.site ALTER COLUMN site_id DROP DEFAULT;
 ALTER TABLE public.servers ALTER COLUMN server_id DROP DEFAULT;
+ALTER TABLE public.server_settings ALTER COLUMN server_setting_id DROP DEFAULT;
 ALTER TABLE public.sections ALTER COLUMN section_id DROP DEFAULT;
+ALTER TABLE public.section_settings ALTER COLUMN section_setting_id DROP DEFAULT;
+ALTER TABLE public.scheduled_tasks ALTER COLUMN scheduled_task_id DROP DEFAULT;
 ALTER TABLE public.review_rounds ALTER COLUMN review_round_id DROP DEFAULT;
+ALTER TABLE public.review_round_files ALTER COLUMN review_round_file_id DROP DEFAULT;
 ALTER TABLE public.review_forms ALTER COLUMN review_form_id DROP DEFAULT;
+ALTER TABLE public.review_form_settings ALTER COLUMN review_form_setting_id DROP DEFAULT;
+ALTER TABLE public.review_form_responses ALTER COLUMN review_form_response_id DROP DEFAULT;
 ALTER TABLE public.review_form_elements ALTER COLUMN review_form_element_id DROP DEFAULT;
+ALTER TABLE public.review_form_element_settings ALTER COLUMN review_form_element_setting_id DROP DEFAULT;
+ALTER TABLE public.review_files ALTER COLUMN review_file_id DROP DEFAULT;
 ALTER TABLE public.review_assignments ALTER COLUMN review_id DROP DEFAULT;
+ALTER TABLE public.query_participants ALTER COLUMN query_participant_id DROP DEFAULT;
 ALTER TABLE public.queries ALTER COLUMN query_id DROP DEFAULT;
 ALTER TABLE public.publications ALTER COLUMN publication_id DROP DEFAULT;
+ALTER TABLE public.publication_settings ALTER COLUMN publication_setting_id DROP DEFAULT;
 ALTER TABLE public.publication_galleys ALTER COLUMN galley_id DROP DEFAULT;
+ALTER TABLE public.publication_galley_settings ALTER COLUMN publication_galley_setting_id DROP DEFAULT;
+ALTER TABLE public.publication_categories ALTER COLUMN publication_category_id DROP DEFAULT;
+ALTER TABLE public.plugin_settings ALTER COLUMN plugin_setting_id DROP DEFAULT;
+ALTER TABLE public.oai_resumption_tokens ALTER COLUMN oai_resumption_token_id DROP DEFAULT;
 ALTER TABLE public.notifications ALTER COLUMN notification_id DROP DEFAULT;
 ALTER TABLE public.notification_subscription_settings ALTER COLUMN setting_id DROP DEFAULT;
+ALTER TABLE public.notification_settings ALTER COLUMN notification_setting_id DROP DEFAULT;
 ALTER TABLE public.notes ALTER COLUMN note_id DROP DEFAULT;
 ALTER TABLE public.navigation_menus ALTER COLUMN navigation_menu_id DROP DEFAULT;
 ALTER TABLE public.navigation_menu_items ALTER COLUMN navigation_menu_item_id DROP DEFAULT;
+ALTER TABLE public.navigation_menu_item_settings ALTER COLUMN navigation_menu_item_setting_id DROP DEFAULT;
 ALTER TABLE public.navigation_menu_item_assignments ALTER COLUMN navigation_menu_item_assignment_id DROP DEFAULT;
+ALTER TABLE public.navigation_menu_item_assignment_settings ALTER COLUMN navigation_menu_item_assignment_setting_id DROP DEFAULT;
+ALTER TABLE public.metrics_submission_geo_monthly ALTER COLUMN metrics_submission_geo_monthly_id DROP DEFAULT;
+ALTER TABLE public.metrics_submission_geo_daily ALTER COLUMN metrics_submission_geo_daily_id DROP DEFAULT;
+ALTER TABLE public.metrics_submission ALTER COLUMN metrics_submission_id DROP DEFAULT;
+ALTER TABLE public.metrics_counter_submission_monthly ALTER COLUMN metrics_counter_submission_monthly_id DROP DEFAULT;
+ALTER TABLE public.metrics_counter_submission_institution_monthly ALTER COLUMN metrics_counter_submission_institution_monthly_id DROP DEFAULT;
+ALTER TABLE public.metrics_counter_submission_institution_daily ALTER COLUMN metrics_counter_submission_institution_daily_id DROP DEFAULT;
+ALTER TABLE public.metrics_counter_submission_daily ALTER COLUMN metrics_counter_submission_daily_id DROP DEFAULT;
+ALTER TABLE public.metrics_context ALTER COLUMN metrics_context_id DROP DEFAULT;
 ALTER TABLE public.library_files ALTER COLUMN file_id DROP DEFAULT;
+ALTER TABLE public.library_file_settings ALTER COLUMN library_file_setting_id DROP DEFAULT;
 ALTER TABLE public.jobs ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.institutions ALTER COLUMN institution_id DROP DEFAULT;
+ALTER TABLE public.institution_settings ALTER COLUMN institution_setting_id DROP DEFAULT;
 ALTER TABLE public.institution_ip ALTER COLUMN institution_ip_id DROP DEFAULT;
 ALTER TABLE public.genres ALTER COLUMN genre_id DROP DEFAULT;
+ALTER TABLE public.genre_settings ALTER COLUMN genre_setting_id DROP DEFAULT;
 ALTER TABLE public.filters ALTER COLUMN filter_id DROP DEFAULT;
+ALTER TABLE public.filter_settings ALTER COLUMN filter_setting_id DROP DEFAULT;
 ALTER TABLE public.filter_groups ALTER COLUMN filter_group_id DROP DEFAULT;
 ALTER TABLE public.files ALTER COLUMN file_id DROP DEFAULT;
 ALTER TABLE public.failed_jobs ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.event_log_settings ALTER COLUMN event_log_setting_id DROP DEFAULT;
 ALTER TABLE public.event_log ALTER COLUMN log_id DROP DEFAULT;
+ALTER TABLE public.email_templates_settings ALTER COLUMN email_template_setting_id DROP DEFAULT;
+ALTER TABLE public.email_templates_default_data ALTER COLUMN email_templates_default_data_id DROP DEFAULT;
 ALTER TABLE public.email_templates ALTER COLUMN email_id DROP DEFAULT;
+ALTER TABLE public.email_log_users ALTER COLUMN email_log_user_id DROP DEFAULT;
 ALTER TABLE public.email_log ALTER COLUMN log_id DROP DEFAULT;
 ALTER TABLE public.edit_decisions ALTER COLUMN edit_decision_id DROP DEFAULT;
 ALTER TABLE public.dois ALTER COLUMN doi_id DROP DEFAULT;
+ALTER TABLE public.doi_settings ALTER COLUMN doi_setting_id DROP DEFAULT;
 ALTER TABLE public.data_object_tombstones ALTER COLUMN tombstone_id DROP DEFAULT;
+ALTER TABLE public.data_object_tombstone_settings ALTER COLUMN tombstone_setting_id DROP DEFAULT;
 ALTER TABLE public.data_object_tombstone_oai_set_objects ALTER COLUMN object_id DROP DEFAULT;
 ALTER TABLE public.controlled_vocabs ALTER COLUMN controlled_vocab_id DROP DEFAULT;
+ALTER TABLE public.controlled_vocab_entry_settings ALTER COLUMN controlled_vocab_entry_setting_id DROP DEFAULT;
 ALTER TABLE public.controlled_vocab_entries ALTER COLUMN controlled_vocab_entry_id DROP DEFAULT;
 ALTER TABLE public.citations ALTER COLUMN citation_id DROP DEFAULT;
+ALTER TABLE public.citation_settings ALTER COLUMN citation_setting_id DROP DEFAULT;
+ALTER TABLE public.category_settings ALTER COLUMN category_setting_id DROP DEFAULT;
 ALTER TABLE public.categories ALTER COLUMN category_id DROP DEFAULT;
 ALTER TABLE public.authors ALTER COLUMN author_id DROP DEFAULT;
+ALTER TABLE public.author_settings ALTER COLUMN author_setting_id DROP DEFAULT;
 ALTER TABLE public.announcements ALTER COLUMN announcement_id DROP DEFAULT;
 ALTER TABLE public.announcement_types ALTER COLUMN type_id DROP DEFAULT;
+ALTER TABLE public.announcement_type_settings ALTER COLUMN announcement_type_setting_id DROP DEFAULT;
+ALTER TABLE public.announcement_settings ALTER COLUMN announcement_setting_id DROP DEFAULT;
 ALTER TABLE public.access_keys ALTER COLUMN access_key_id DROP DEFAULT;
+DROP SEQUENCE public.versions_version_id_seq;
 DROP TABLE public.versions;
 DROP SEQUENCE public.users_user_id_seq;
 DROP TABLE public.users;
+DROP SEQUENCE public.user_user_groups_user_user_group_id_seq;
 DROP TABLE public.user_user_groups;
+DROP SEQUENCE public.user_settings_user_setting_id_seq;
 DROP TABLE public.user_settings;
+DROP SEQUENCE public.user_interests_user_interest_id_seq;
 DROP TABLE public.user_interests;
 DROP SEQUENCE public.user_groups_user_group_id_seq;
 DROP TABLE public.user_groups;
+DROP SEQUENCE public.user_group_stage_user_group_stage_id_seq;
 DROP TABLE public.user_group_stage;
+DROP SEQUENCE public.user_group_settings_user_group_setting_id_seq;
 DROP TABLE public.user_group_settings;
+DROP SEQUENCE public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq;
 DROP TABLE public.usage_stats_unique_item_requests_temporary_records;
+DROP SEQUENCE public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq;
 DROP TABLE public.usage_stats_unique_item_investigations_temporary_records;
+DROP SEQUENCE public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq;
 DROP TABLE public.usage_stats_total_temporary_records;
+DROP SEQUENCE public.usage_stats_institution_tempo_usage_stats_temp_institution__seq;
 DROP TABLE public.usage_stats_institution_temporary_records;
 DROP SEQUENCE public.temporary_files_file_id_seq;
 DROP TABLE public.temporary_files;
 DROP SEQUENCE public.submissions_submission_id_seq;
 DROP TABLE public.submissions;
+DROP SEQUENCE public.submission_settings_submission_setting_id_seq;
 DROP TABLE public.submission_settings;
 DROP SEQUENCE public.submission_search_objects_object_id_seq;
 DROP TABLE public.submission_search_objects;
+DROP SEQUENCE public.submission_search_object_keyw_submission_search_object_keyw_seq;
 DROP TABLE public.submission_search_object_keywords;
 DROP SEQUENCE public.submission_search_keyword_list_keyword_id_seq;
 DROP TABLE public.submission_search_keyword_list;
 DROP SEQUENCE public.submission_files_submission_file_id_seq;
 DROP TABLE public.submission_files;
+DROP SEQUENCE public.submission_file_settings_submission_file_setting_id_seq;
 DROP TABLE public.submission_file_settings;
 DROP SEQUENCE public.submission_file_revisions_revision_id_seq;
 DROP TABLE public.submission_file_revisions;
 DROP SEQUENCE public.submission_comments_comment_id_seq;
 DROP TABLE public.submission_comments;
+DROP SEQUENCE public.subeditor_submission_group_subeditor_submission_group_id_seq;
 DROP TABLE public.subeditor_submission_group;
 DROP SEQUENCE public.stage_assignments_stage_assignment_id_seq;
 DROP TABLE public.stage_assignments;
+DROP SEQUENCE public.site_site_id_seq;
+DROP SEQUENCE public.site_settings_site_setting_id_seq;
 DROP TABLE public.site_settings;
 DROP TABLE public.site;
 DROP TABLE public.sessions;
 DROP SEQUENCE public.servers_server_id_seq;
 DROP TABLE public.servers;
+DROP SEQUENCE public.server_settings_server_setting_id_seq;
 DROP TABLE public.server_settings;
 DROP SEQUENCE public.sections_section_id_seq;
 DROP TABLE public.sections;
+DROP SEQUENCE public.section_settings_section_setting_id_seq;
 DROP TABLE public.section_settings;
+DROP SEQUENCE public.scheduled_tasks_scheduled_task_id_seq;
 DROP TABLE public.scheduled_tasks;
 DROP SEQUENCE public.review_rounds_review_round_id_seq;
 DROP TABLE public.review_rounds;
+DROP SEQUENCE public.review_round_files_review_round_file_id_seq;
 DROP TABLE public.review_round_files;
 DROP SEQUENCE public.review_forms_review_form_id_seq;
 DROP TABLE public.review_forms;
+DROP SEQUENCE public.review_form_settings_review_form_setting_id_seq;
 DROP TABLE public.review_form_settings;
+DROP SEQUENCE public.review_form_responses_review_form_response_id_seq;
 DROP TABLE public.review_form_responses;
 DROP SEQUENCE public.review_form_elements_review_form_element_id_seq;
 DROP TABLE public.review_form_elements;
+DROP SEQUENCE public.review_form_element_settings_review_form_element_setting_id_seq;
 DROP TABLE public.review_form_element_settings;
+DROP SEQUENCE public.review_files_review_file_id_seq;
 DROP TABLE public.review_files;
 DROP SEQUENCE public.review_assignments_review_id_seq;
 DROP TABLE public.review_assignments;
+DROP SEQUENCE public.query_participants_query_participant_id_seq;
 DROP TABLE public.query_participants;
 DROP SEQUENCE public.queries_query_id_seq;
 DROP TABLE public.queries;
 DROP SEQUENCE public.publications_publication_id_seq;
 DROP TABLE public.publications;
+DROP SEQUENCE public.publication_settings_publication_setting_id_seq;
 DROP TABLE public.publication_settings;
 DROP SEQUENCE public.publication_galleys_galley_id_seq;
 DROP TABLE public.publication_galleys;
+DROP SEQUENCE public.publication_galley_settings_publication_galley_setting_id_seq;
 DROP TABLE public.publication_galley_settings;
+DROP SEQUENCE public.publication_categories_publication_category_id_seq;
 DROP TABLE public.publication_categories;
+DROP SEQUENCE public.plugin_settings_plugin_setting_id_seq;
 DROP TABLE public.plugin_settings;
+DROP SEQUENCE public.oai_resumption_tokens_oai_resumption_token_id_seq;
 DROP TABLE public.oai_resumption_tokens;
 DROP SEQUENCE public.notifications_notification_id_seq;
 DROP TABLE public.notifications;
 DROP SEQUENCE public.notification_subscription_settings_setting_id_seq;
 DROP TABLE public.notification_subscription_settings;
+DROP SEQUENCE public.notification_settings_notification_setting_id_seq;
 DROP TABLE public.notification_settings;
 DROP SEQUENCE public.notes_note_id_seq;
 DROP TABLE public.notes;
@@ -585,34 +730,48 @@ DROP SEQUENCE public.navigation_menus_navigation_menu_id_seq;
 DROP TABLE public.navigation_menus;
 DROP SEQUENCE public.navigation_menu_items_navigation_menu_item_id_seq;
 DROP TABLE public.navigation_menu_items;
+DROP SEQUENCE public.navigation_menu_item_settings_navigation_menu_item_setting__seq;
 DROP TABLE public.navigation_menu_item_settings;
-DROP TABLE public.navigation_menu_item_assignment_settings;
 DROP SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq;
 DROP TABLE public.navigation_menu_item_assignments;
+DROP SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1;
+DROP TABLE public.navigation_menu_item_assignment_settings;
+DROP SEQUENCE public.metrics_submission_metrics_submission_id_seq;
+DROP SEQUENCE public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq;
 DROP TABLE public.metrics_submission_geo_monthly;
+DROP SEQUENCE public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq;
 DROP TABLE public.metrics_submission_geo_daily;
 DROP TABLE public.metrics_submission;
+DROP SEQUENCE public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq;
 DROP TABLE public.metrics_counter_submission_monthly;
-DROP TABLE public.metrics_counter_submission_institution_monthly;
+DROP SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_in_seq;
 DROP TABLE public.metrics_counter_submission_institution_daily;
+DROP SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_i_seq1;
+DROP TABLE public.metrics_counter_submission_institution_monthly;
+DROP SEQUENCE public.metrics_counter_submission_da_metrics_counter_submission_da_seq;
 DROP TABLE public.metrics_counter_submission_daily;
+DROP SEQUENCE public.metrics_context_metrics_context_id_seq;
 DROP TABLE public.metrics_context;
 DROP SEQUENCE public.library_files_file_id_seq;
 DROP TABLE public.library_files;
+DROP SEQUENCE public.library_file_settings_library_file_setting_id_seq;
 DROP TABLE public.library_file_settings;
 DROP SEQUENCE public.jobs_id_seq;
 DROP TABLE public.jobs;
 DROP TABLE public.job_batches;
 DROP SEQUENCE public.institutions_institution_id_seq;
 DROP TABLE public.institutions;
+DROP SEQUENCE public.institution_settings_institution_setting_id_seq;
 DROP TABLE public.institution_settings;
 DROP SEQUENCE public.institution_ip_institution_ip_id_seq;
 DROP TABLE public.institution_ip;
 DROP SEQUENCE public.genres_genre_id_seq;
 DROP TABLE public.genres;
+DROP SEQUENCE public.genre_settings_genre_setting_id_seq;
 DROP TABLE public.genre_settings;
 DROP SEQUENCE public.filters_filter_id_seq;
 DROP TABLE public.filters;
+DROP SEQUENCE public.filter_settings_filter_setting_id_seq;
 DROP TABLE public.filter_settings;
 DROP SEQUENCE public.filter_groups_filter_group_id_seq;
 DROP TABLE public.filter_groups;
@@ -620,13 +779,17 @@ DROP SEQUENCE public.files_file_id_seq;
 DROP TABLE public.files;
 DROP SEQUENCE public.failed_jobs_id_seq;
 DROP TABLE public.failed_jobs;
+DROP SEQUENCE public.event_log_settings_event_log_setting_id_seq;
 DROP TABLE public.event_log_settings;
 DROP SEQUENCE public.event_log_log_id_seq;
 DROP TABLE public.event_log;
+DROP SEQUENCE public.email_templates_settings_email_template_setting_id_seq;
 DROP TABLE public.email_templates_settings;
 DROP SEQUENCE public.email_templates_email_id_seq;
+DROP SEQUENCE public.email_templates_default_data_email_templates_default_data_i_seq;
 DROP TABLE public.email_templates_default_data;
 DROP TABLE public.email_templates;
+DROP SEQUENCE public.email_log_users_email_log_user_id_seq;
 DROP TABLE public.email_log_users;
 DROP SEQUENCE public.email_log_log_id_seq;
 DROP TABLE public.email_log;
@@ -634,31 +797,39 @@ DROP SEQUENCE public.edit_decisions_edit_decision_id_seq;
 DROP TABLE public.edit_decisions;
 DROP SEQUENCE public.dois_doi_id_seq;
 DROP TABLE public.dois;
+DROP SEQUENCE public.doi_settings_doi_setting_id_seq;
 DROP TABLE public.doi_settings;
 DROP SEQUENCE public.data_object_tombstones_tombstone_id_seq;
 DROP TABLE public.data_object_tombstones;
+DROP SEQUENCE public.data_object_tombstone_settings_tombstone_setting_id_seq;
 DROP TABLE public.data_object_tombstone_settings;
 DROP SEQUENCE public.data_object_tombstone_oai_set_objects_object_id_seq;
 DROP TABLE public.data_object_tombstone_oai_set_objects;
 DROP SEQUENCE public.controlled_vocabs_controlled_vocab_id_seq;
 DROP TABLE public.controlled_vocabs;
+DROP SEQUENCE public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq;
 DROP TABLE public.controlled_vocab_entry_settings;
 DROP SEQUENCE public.controlled_vocab_entries_controlled_vocab_entry_id_seq;
 DROP TABLE public.controlled_vocab_entries;
 DROP SEQUENCE public.citations_citation_id_seq;
 DROP TABLE public.citations;
+DROP SEQUENCE public.citation_settings_citation_setting_id_seq;
 DROP TABLE public.citation_settings;
+DROP SEQUENCE public.category_settings_category_setting_id_seq;
 DROP TABLE public.category_settings;
 DROP SEQUENCE public.categories_category_id_seq;
 DROP TABLE public.categories;
 DROP SEQUENCE public.authors_author_id_seq;
 DROP TABLE public.authors;
+DROP SEQUENCE public.author_settings_author_setting_id_seq;
 DROP TABLE public.author_settings;
 DROP SEQUENCE public.announcements_announcement_id_seq;
 DROP TABLE public.announcements;
 DROP SEQUENCE public.announcement_types_type_id_seq;
 DROP TABLE public.announcement_types;
+DROP SEQUENCE public.announcement_type_settings_announcement_type_setting_id_seq;
 DROP TABLE public.announcement_type_settings;
+DROP SEQUENCE public.announcement_settings_announcement_setting_id_seq;
 DROP TABLE public.announcement_settings;
 DROP SEQUENCE public.access_keys_access_key_id_seq;
 DROP TABLE public.access_keys;
@@ -747,6 +918,7 @@ ALTER SEQUENCE public.access_keys_access_key_id_seq OWNED BY public.access_keys.
 --
 
 CREATE TABLE public.announcement_settings (
+    announcement_setting_id bigint NOT NULL,
     announcement_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -765,10 +937,32 @@ COMMENT ON TABLE public.announcement_settings IS 'More data about announcements,
 
 
 --
+-- Name: announcement_settings_announcement_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.announcement_settings_announcement_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.announcement_settings_announcement_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: announcement_settings_announcement_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.announcement_settings_announcement_setting_id_seq OWNED BY public.announcement_settings.announcement_setting_id;
+
+
+--
 -- Name: announcement_type_settings; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.announcement_type_settings (
+    announcement_type_setting_id bigint NOT NULL,
     type_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -784,6 +978,27 @@ ALTER TABLE public.announcement_type_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.announcement_type_settings IS 'More data about announcement types, including localized properties like their names.';
+
+
+--
+-- Name: announcement_type_settings_announcement_type_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.announcement_type_settings_announcement_type_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.announcement_type_settings_announcement_type_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: announcement_type_settings_announcement_type_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.announcement_type_settings_announcement_type_setting_id_seq OWNED BY public.announcement_type_settings.announcement_type_setting_id;
 
 
 --
@@ -875,6 +1090,7 @@ ALTER SEQUENCE public.announcements_announcement_id_seq OWNED BY public.announce
 --
 
 CREATE TABLE public.author_settings (
+    author_setting_id bigint NOT NULL,
     author_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -889,6 +1105,27 @@ ALTER TABLE public.author_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.author_settings IS 'More data about authors, including localized properties such as their name and affiliation.';
+
+
+--
+-- Name: author_settings_author_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.author_settings_author_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.author_settings_author_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: author_settings_author_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.author_settings_author_setting_id_seq OWNED BY public.author_settings.author_setting_id;
 
 
 --
@@ -984,6 +1221,7 @@ ALTER SEQUENCE public.categories_category_id_seq OWNED BY public.categories.cate
 --
 
 CREATE TABLE public.category_settings (
+    category_setting_id bigint NOT NULL,
     category_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -1001,10 +1239,32 @@ COMMENT ON TABLE public.category_settings IS 'More data about categories, includ
 
 
 --
+-- Name: category_settings_category_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.category_settings_category_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.category_settings_category_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: category_settings_category_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.category_settings_category_setting_id_seq OWNED BY public.category_settings.category_setting_id;
+
+
+--
 -- Name: citation_settings; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.citation_settings (
+    citation_setting_id bigint NOT NULL,
     citation_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -1020,6 +1280,27 @@ ALTER TABLE public.citation_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.citation_settings IS 'Additional data about citations, including localized content.';
+
+
+--
+-- Name: citation_settings_citation_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.citation_settings_citation_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.citation_settings_citation_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: citation_settings_citation_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.citation_settings_citation_setting_id_seq OWNED BY public.citation_settings.citation_setting_id;
 
 
 --
@@ -1110,6 +1391,7 @@ ALTER SEQUENCE public.controlled_vocab_entries_controlled_vocab_entry_id_seq OWN
 --
 
 CREATE TABLE public.controlled_vocab_entry_settings (
+    controlled_vocab_entry_setting_id bigint NOT NULL,
     controlled_vocab_entry_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -1125,6 +1407,27 @@ ALTER TABLE public.controlled_vocab_entry_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.controlled_vocab_entry_settings IS 'More data about a controlled vocabulary entry, including localized properties such as the actual word or phrase.';
+
+
+--
+-- Name: controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq OWNER TO "ops-ci";
+
+--
+-- Name: controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq OWNED BY public.controlled_vocab_entry_settings.controlled_vocab_entry_setting_id;
 
 
 --
@@ -1216,6 +1519,7 @@ ALTER SEQUENCE public.data_object_tombstone_oai_set_objects_object_id_seq OWNED 
 --
 
 CREATE TABLE public.data_object_tombstone_settings (
+    tombstone_setting_id bigint NOT NULL,
     tombstone_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -1238,6 +1542,27 @@ COMMENT ON TABLE public.data_object_tombstone_settings IS 'More data about data 
 --
 
 COMMENT ON COLUMN public.data_object_tombstone_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: data_object_tombstone_settings_tombstone_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.data_object_tombstone_settings_tombstone_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.data_object_tombstone_settings_tombstone_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: data_object_tombstone_settings_tombstone_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.data_object_tombstone_settings_tombstone_setting_id_seq OWNED BY public.data_object_tombstone_settings.tombstone_setting_id;
 
 
 --
@@ -1289,6 +1614,7 @@ ALTER SEQUENCE public.data_object_tombstones_tombstone_id_seq OWNED BY public.da
 --
 
 CREATE TABLE public.doi_settings (
+    doi_setting_id bigint NOT NULL,
     doi_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -1303,6 +1629,27 @@ ALTER TABLE public.doi_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.doi_settings IS 'More data about DOIs, including the registration agency.';
+
+
+--
+-- Name: doi_settings_doi_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.doi_settings_doi_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.doi_settings_doi_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: doi_settings_doi_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.doi_settings_doi_setting_id_seq OWNED BY public.doi_settings.doi_setting_id;
 
 
 --
@@ -1448,12 +1795,41 @@ ALTER SEQUENCE public.email_log_log_id_seq OWNED BY public.email_log.log_id;
 --
 
 CREATE TABLE public.email_log_users (
+    email_log_user_id bigint NOT NULL,
     email_log_id bigint NOT NULL,
     user_id bigint NOT NULL
 );
 
 
 ALTER TABLE public.email_log_users OWNER TO "ops-ci";
+
+--
+-- Name: TABLE email_log_users; Type: COMMENT; Schema: public; Owner: ops-ci
+--
+
+COMMENT ON TABLE public.email_log_users IS 'A record of users associated with an email log entry.';
+
+
+--
+-- Name: email_log_users_email_log_user_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.email_log_users_email_log_user_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.email_log_users_email_log_user_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: email_log_users_email_log_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.email_log_users_email_log_user_id_seq OWNED BY public.email_log_users.email_log_user_id;
+
 
 --
 -- Name: email_templates; Type: TABLE; Schema: public; Owner: ops-ci
@@ -1488,6 +1864,7 @@ COMMENT ON COLUMN public.email_templates.email_key IS 'Unique identifier for thi
 --
 
 CREATE TABLE public.email_templates_default_data (
+    email_templates_default_data_id bigint NOT NULL,
     email_key character varying(255) NOT NULL,
     locale character varying(14) DEFAULT 'en'::character varying NOT NULL,
     name character varying(255) NOT NULL,
@@ -1510,6 +1887,27 @@ COMMENT ON TABLE public.email_templates_default_data IS 'Default email templates
 --
 
 COMMENT ON COLUMN public.email_templates_default_data.email_key IS 'Unique identifier for this email.';
+
+
+--
+-- Name: email_templates_default_data_email_templates_default_data_i_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.email_templates_default_data_email_templates_default_data_i_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.email_templates_default_data_email_templates_default_data_i_seq OWNER TO "ops-ci";
+
+--
+-- Name: email_templates_default_data_email_templates_default_data_i_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.email_templates_default_data_email_templates_default_data_i_seq OWNED BY public.email_templates_default_data.email_templates_default_data_id;
 
 
 --
@@ -1538,6 +1936,7 @@ ALTER SEQUENCE public.email_templates_email_id_seq OWNED BY public.email_templat
 --
 
 CREATE TABLE public.email_templates_settings (
+    email_template_setting_id bigint NOT NULL,
     email_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -1552,6 +1951,27 @@ ALTER TABLE public.email_templates_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.email_templates_settings IS 'More data about custom email templates, including localized properties such as the subject and body.';
+
+
+--
+-- Name: email_templates_settings_email_template_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.email_templates_settings_email_template_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.email_templates_settings_email_template_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: email_templates_settings_email_template_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.email_templates_settings_email_template_setting_id_seq OWNED BY public.email_templates_settings.email_template_setting_id;
 
 
 --
@@ -1605,6 +2025,7 @@ ALTER SEQUENCE public.event_log_log_id_seq OWNED BY public.event_log.log_id;
 --
 
 CREATE TABLE public.event_log_settings (
+    event_log_setting_id bigint NOT NULL,
     log_id bigint NOT NULL,
     setting_name character varying(255) NOT NULL,
     setting_value text,
@@ -1626,6 +2047,27 @@ COMMENT ON TABLE public.event_log_settings IS 'Data about an event log entry. Th
 --
 
 COMMENT ON COLUMN public.event_log_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: event_log_settings_event_log_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.event_log_settings_event_log_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.event_log_settings_event_log_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: event_log_settings_event_log_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.event_log_settings_event_log_setting_id_seq OWNED BY public.event_log_settings.event_log_setting_id;
 
 
 --
@@ -1762,6 +2204,7 @@ ALTER SEQUENCE public.filter_groups_filter_group_id_seq OWNED BY public.filter_g
 --
 
 CREATE TABLE public.filter_settings (
+    filter_setting_id bigint NOT NULL,
     filter_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -1777,6 +2220,27 @@ ALTER TABLE public.filter_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.filter_settings IS 'More data about filters, including localized content.';
+
+
+--
+-- Name: filter_settings_filter_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.filter_settings_filter_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.filter_settings_filter_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: filter_settings_filter_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.filter_settings_filter_setting_id_seq OWNED BY public.filter_settings.filter_setting_id;
 
 
 --
@@ -1830,6 +2294,7 @@ ALTER SEQUENCE public.filters_filter_id_seq OWNED BY public.filters.filter_id;
 --
 
 CREATE TABLE public.genre_settings (
+    genre_setting_id bigint NOT NULL,
     genre_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -1852,6 +2317,27 @@ COMMENT ON TABLE public.genre_settings IS 'More data about file genres, includin
 --
 
 COMMENT ON COLUMN public.genre_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: genre_settings_genre_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.genre_settings_genre_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.genre_settings_genre_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: genre_settings_genre_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.genre_settings_genre_setting_id_seq OWNED BY public.genre_settings.genre_setting_id;
 
 
 --
@@ -1956,6 +2442,7 @@ ALTER SEQUENCE public.institution_ip_institution_ip_id_seq OWNED BY public.insti
 --
 
 CREATE TABLE public.institution_settings (
+    institution_setting_id bigint NOT NULL,
     institution_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -1970,6 +2457,27 @@ ALTER TABLE public.institution_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.institution_settings IS 'More data about institutions, including localized properties like names.';
+
+
+--
+-- Name: institution_settings_institution_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.institution_settings_institution_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.institution_settings_institution_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: institution_settings_institution_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.institution_settings_institution_setting_id_seq OWNED BY public.institution_settings.institution_setting_id;
 
 
 --
@@ -2098,6 +2606,7 @@ ALTER SEQUENCE public.jobs_id_seq OWNED BY public.jobs.id;
 --
 
 CREATE TABLE public.library_file_settings (
+    library_file_setting_id bigint NOT NULL,
     file_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -2120,6 +2629,27 @@ COMMENT ON TABLE public.library_file_settings IS 'More data about library files,
 --
 
 COMMENT ON COLUMN public.library_file_settings.setting_type IS '(bool|int|float|string|object|date)';
+
+
+--
+-- Name: library_file_settings_library_file_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.library_file_settings_library_file_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.library_file_settings_library_file_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: library_file_settings_library_file_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.library_file_settings_library_file_setting_id_seq OWNED BY public.library_file_settings.library_file_setting_id;
 
 
 --
@@ -2176,6 +2706,7 @@ ALTER SEQUENCE public.library_files_file_id_seq OWNED BY public.library_files.fi
 --
 
 CREATE TABLE public.metrics_context (
+    metrics_context_id bigint NOT NULL,
     load_id character varying(255) NOT NULL,
     context_id bigint NOT NULL,
     date date NOT NULL,
@@ -2193,10 +2724,32 @@ COMMENT ON TABLE public.metrics_context IS 'Daily statistics for views of the ho
 
 
 --
+-- Name: metrics_context_metrics_context_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.metrics_context_metrics_context_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_context_metrics_context_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: metrics_context_metrics_context_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.metrics_context_metrics_context_id_seq OWNED BY public.metrics_context.metrics_context_id;
+
+
+--
 -- Name: metrics_counter_submission_daily; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.metrics_counter_submission_daily (
+    metrics_counter_submission_daily_id bigint NOT NULL,
     load_id character varying(255) NOT NULL,
     context_id bigint NOT NULL,
     submission_id bigint NOT NULL,
@@ -2218,10 +2771,79 @@ COMMENT ON TABLE public.metrics_counter_submission_daily IS 'Daily statistics ma
 
 
 --
+-- Name: metrics_counter_submission_da_metrics_counter_submission_da_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.metrics_counter_submission_da_metrics_counter_submission_da_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_counter_submission_da_metrics_counter_submission_da_seq OWNER TO "ops-ci";
+
+--
+-- Name: metrics_counter_submission_da_metrics_counter_submission_da_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.metrics_counter_submission_da_metrics_counter_submission_da_seq OWNED BY public.metrics_counter_submission_daily.metrics_counter_submission_daily_id;
+
+
+--
+-- Name: metrics_counter_submission_institution_monthly; Type: TABLE; Schema: public; Owner: ops-ci
+--
+
+CREATE TABLE public.metrics_counter_submission_institution_monthly (
+    metrics_counter_submission_institution_monthly_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    institution_id bigint NOT NULL,
+    month integer NOT NULL,
+    metric_investigations integer NOT NULL,
+    metric_investigations_unique integer NOT NULL,
+    metric_requests integer NOT NULL,
+    metric_requests_unique integer NOT NULL
+);
+
+
+ALTER TABLE public.metrics_counter_submission_institution_monthly OWNER TO "ops-ci";
+
+--
+-- Name: TABLE metrics_counter_submission_institution_monthly; Type: COMMENT; Schema: public; Owner: ops-ci
+--
+
+COMMENT ON TABLE public.metrics_counter_submission_institution_monthly IS 'Monthly statistics matching the COUNTER R5 protocol for views and downloads from institutions.';
+
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_i_seq1; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_i_seq1
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_counter_submission_in_metrics_counter_submission_i_seq1 OWNER TO "ops-ci";
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_i_seq1; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_i_seq1 OWNED BY public.metrics_counter_submission_institution_monthly.metrics_counter_submission_institution_monthly_id;
+
+
+--
 -- Name: metrics_counter_submission_institution_daily; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.metrics_counter_submission_institution_daily (
+    metrics_counter_submission_institution_daily_id bigint NOT NULL,
     load_id character varying(255) NOT NULL,
     context_id bigint NOT NULL,
     submission_id bigint NOT NULL,
@@ -2244,28 +2866,24 @@ COMMENT ON TABLE public.metrics_counter_submission_institution_daily IS 'Daily s
 
 
 --
--- Name: metrics_counter_submission_institution_monthly; Type: TABLE; Schema: public; Owner: ops-ci
+-- Name: metrics_counter_submission_in_metrics_counter_submission_in_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
 --
 
-CREATE TABLE public.metrics_counter_submission_institution_monthly (
-    context_id bigint NOT NULL,
-    submission_id bigint NOT NULL,
-    institution_id bigint NOT NULL,
-    month integer NOT NULL,
-    metric_investigations integer NOT NULL,
-    metric_investigations_unique integer NOT NULL,
-    metric_requests integer NOT NULL,
-    metric_requests_unique integer NOT NULL
-);
+CREATE SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_in_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
 
 
-ALTER TABLE public.metrics_counter_submission_institution_monthly OWNER TO "ops-ci";
+ALTER TABLE public.metrics_counter_submission_in_metrics_counter_submission_in_seq OWNER TO "ops-ci";
 
 --
--- Name: TABLE metrics_counter_submission_institution_monthly; Type: COMMENT; Schema: public; Owner: ops-ci
+-- Name: metrics_counter_submission_in_metrics_counter_submission_in_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
 --
 
-COMMENT ON TABLE public.metrics_counter_submission_institution_monthly IS 'Monthly statistics matching the COUNTER R5 protocol for views and downloads from institutions.';
+ALTER SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_in_seq OWNED BY public.metrics_counter_submission_institution_daily.metrics_counter_submission_institution_daily_id;
 
 
 --
@@ -2273,6 +2891,7 @@ COMMENT ON TABLE public.metrics_counter_submission_institution_monthly IS 'Month
 --
 
 CREATE TABLE public.metrics_counter_submission_monthly (
+    metrics_counter_submission_monthly_id bigint NOT NULL,
     context_id bigint NOT NULL,
     submission_id bigint NOT NULL,
     month integer NOT NULL,
@@ -2293,10 +2912,32 @@ COMMENT ON TABLE public.metrics_counter_submission_monthly IS 'Monthly statistic
 
 
 --
+-- Name: metrics_counter_submission_mo_metrics_counter_submission_mo_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq OWNER TO "ops-ci";
+
+--
+-- Name: metrics_counter_submission_mo_metrics_counter_submission_mo_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq OWNED BY public.metrics_counter_submission_monthly.metrics_counter_submission_monthly_id;
+
+
+--
 -- Name: metrics_submission; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.metrics_submission (
+    metrics_submission_id bigint NOT NULL,
     load_id character varying(255) NOT NULL,
     context_id bigint NOT NULL,
     submission_id bigint NOT NULL,
@@ -2323,6 +2964,7 @@ COMMENT ON TABLE public.metrics_submission IS 'Daily statistics for views and do
 --
 
 CREATE TABLE public.metrics_submission_geo_daily (
+    metrics_submission_geo_daily_id bigint NOT NULL,
     load_id character varying(255) NOT NULL,
     context_id bigint NOT NULL,
     submission_id bigint NOT NULL,
@@ -2345,10 +2987,32 @@ COMMENT ON TABLE public.metrics_submission_geo_daily IS 'Daily statistics by cou
 
 
 --
+-- Name: metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq OWNER TO "ops-ci";
+
+--
+-- Name: metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq OWNED BY public.metrics_submission_geo_daily.metrics_submission_geo_daily_id;
+
+
+--
 -- Name: metrics_submission_geo_monthly; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.metrics_submission_geo_monthly (
+    metrics_submission_geo_monthly_id bigint NOT NULL,
     context_id bigint NOT NULL,
     submission_id bigint NOT NULL,
     country character varying(2) DEFAULT ''::character varying NOT NULL,
@@ -2367,6 +3031,92 @@ ALTER TABLE public.metrics_submission_geo_monthly OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.metrics_submission_geo_monthly IS 'Monthly statistics by country, region and city for views and downloads of published submissions and galleys.';
+
+
+--
+-- Name: metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq OWNER TO "ops-ci";
+
+--
+-- Name: metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq OWNED BY public.metrics_submission_geo_monthly.metrics_submission_geo_monthly_id;
+
+
+--
+-- Name: metrics_submission_metrics_submission_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.metrics_submission_metrics_submission_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_submission_metrics_submission_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: metrics_submission_metrics_submission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.metrics_submission_metrics_submission_id_seq OWNED BY public.metrics_submission.metrics_submission_id;
+
+
+--
+-- Name: navigation_menu_item_assignment_settings; Type: TABLE; Schema: public; Owner: ops-ci
+--
+
+CREATE TABLE public.navigation_menu_item_assignment_settings (
+    navigation_menu_item_assignment_setting_id bigint NOT NULL,
+    navigation_menu_item_assignment_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.navigation_menu_item_assignment_settings OWNER TO "ops-ci";
+
+--
+-- Name: TABLE navigation_menu_item_assignment_settings; Type: COMMENT; Schema: public; Owner: ops-ci
+--
+
+COMMENT ON TABLE public.navigation_menu_item_assignment_settings IS 'More data about navigation menu item assignments to navigation menus, including localized content.';
+
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignm_seq1; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1 OWNER TO "ops-ci";
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignm_seq1; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1 OWNED BY public.navigation_menu_item_assignment_settings.navigation_menu_item_assignment_setting_id;
 
 
 --
@@ -2413,32 +3163,11 @@ ALTER SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignm
 
 
 --
--- Name: navigation_menu_item_assignment_settings; Type: TABLE; Schema: public; Owner: ops-ci
---
-
-CREATE TABLE public.navigation_menu_item_assignment_settings (
-    navigation_menu_item_assignment_id bigint NOT NULL,
-    locale character varying(14) DEFAULT ''::character varying NOT NULL,
-    setting_name character varying(255) NOT NULL,
-    setting_value text,
-    setting_type character varying(6) NOT NULL
-);
-
-
-ALTER TABLE public.navigation_menu_item_assignment_settings OWNER TO "ops-ci";
-
---
--- Name: TABLE navigation_menu_item_assignment_settings; Type: COMMENT; Schema: public; Owner: ops-ci
---
-
-COMMENT ON TABLE public.navigation_menu_item_assignment_settings IS 'More data about navigation menu item assignments to navigation menus, including localized content.';
-
-
---
 -- Name: navigation_menu_item_settings; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.navigation_menu_item_settings (
+    navigation_menu_item_setting_id bigint NOT NULL,
     navigation_menu_item_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -2454,6 +3183,27 @@ ALTER TABLE public.navigation_menu_item_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.navigation_menu_item_settings IS 'More data about navigation menu items, including localized content such as names.';
+
+
+--
+-- Name: navigation_menu_item_settings_navigation_menu_item_setting__seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.navigation_menu_item_settings_navigation_menu_item_setting__seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.navigation_menu_item_settings_navigation_menu_item_setting__seq OWNER TO "ops-ci";
+
+--
+-- Name: navigation_menu_item_settings_navigation_menu_item_setting__seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.navigation_menu_item_settings_navigation_menu_item_setting__seq OWNED BY public.navigation_menu_item_settings.navigation_menu_item_setting_id;
 
 
 --
@@ -2591,6 +3341,7 @@ ALTER SEQUENCE public.notes_note_id_seq OWNED BY public.notes.note_id;
 --
 
 CREATE TABLE public.notification_settings (
+    notification_setting_id bigint NOT NULL,
     notification_id bigint NOT NULL,
     locale character varying(14),
     setting_name character varying(64) NOT NULL,
@@ -2613,6 +3364,27 @@ COMMENT ON TABLE public.notification_settings IS 'More data about notifications,
 --
 
 COMMENT ON COLUMN public.notification_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: notification_settings_notification_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.notification_settings_notification_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.notification_settings_notification_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: notification_settings_notification_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.notification_settings_notification_setting_id_seq OWNED BY public.notification_settings.notification_setting_id;
 
 
 --
@@ -2718,6 +3490,7 @@ ALTER SEQUENCE public.notifications_notification_id_seq OWNED BY public.notifica
 --
 
 CREATE TABLE public.oai_resumption_tokens (
+    oai_resumption_token_id bigint NOT NULL,
     token character varying(32) NOT NULL,
     expire bigint NOT NULL,
     record_offset integer NOT NULL,
@@ -2735,10 +3508,32 @@ COMMENT ON TABLE public.oai_resumption_tokens IS 'OAI resumption tokens are used
 
 
 --
+-- Name: oai_resumption_tokens_oai_resumption_token_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.oai_resumption_tokens_oai_resumption_token_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.oai_resumption_tokens_oai_resumption_token_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: oai_resumption_tokens_oai_resumption_token_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.oai_resumption_tokens_oai_resumption_token_id_seq OWNED BY public.oai_resumption_tokens.oai_resumption_token_id;
+
+
+--
 -- Name: plugin_settings; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.plugin_settings (
+    plugin_setting_id bigint NOT NULL,
     plugin_name character varying(80) NOT NULL,
     context_id bigint NOT NULL,
     setting_name character varying(80) NOT NULL,
@@ -2764,10 +3559,32 @@ COMMENT ON COLUMN public.plugin_settings.setting_type IS '(bool|int|float|string
 
 
 --
+-- Name: plugin_settings_plugin_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.plugin_settings_plugin_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.plugin_settings_plugin_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: plugin_settings_plugin_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.plugin_settings_plugin_setting_id_seq OWNED BY public.plugin_settings.plugin_setting_id;
+
+
+--
 -- Name: publication_categories; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.publication_categories (
+    publication_category_id bigint NOT NULL,
     publication_id bigint NOT NULL,
     category_id bigint NOT NULL
 );
@@ -2783,10 +3600,32 @@ COMMENT ON TABLE public.publication_categories IS 'Associates publications (and 
 
 
 --
+-- Name: publication_categories_publication_category_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.publication_categories_publication_category_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.publication_categories_publication_category_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: publication_categories_publication_category_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.publication_categories_publication_category_id_seq OWNED BY public.publication_categories.publication_category_id;
+
+
+--
 -- Name: publication_galley_settings; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.publication_galley_settings (
+    publication_galley_setting_id bigint NOT NULL,
     galley_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -2801,6 +3640,27 @@ ALTER TABLE public.publication_galley_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.publication_galley_settings IS 'More data about publication galleys, including localized properties such as labels.';
+
+
+--
+-- Name: publication_galley_settings_publication_galley_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.publication_galley_settings_publication_galley_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.publication_galley_settings_publication_galley_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: publication_galley_settings_publication_galley_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.publication_galley_settings_publication_galley_setting_id_seq OWNED BY public.publication_galley_settings.publication_galley_setting_id;
 
 
 --
@@ -2856,6 +3716,7 @@ ALTER SEQUENCE public.publication_galleys_galley_id_seq OWNED BY public.publicat
 --
 
 CREATE TABLE public.publication_settings (
+    publication_setting_id bigint NOT NULL,
     publication_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -2870,6 +3731,27 @@ ALTER TABLE public.publication_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.publication_settings IS 'More data about publications, including localized properties such as the title and abstract.';
+
+
+--
+-- Name: publication_settings_publication_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.publication_settings_publication_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.publication_settings_publication_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: publication_settings_publication_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.publication_settings_publication_setting_id_seq OWNED BY public.publication_settings.publication_setting_id;
 
 
 --
@@ -2972,6 +3854,7 @@ ALTER SEQUENCE public.queries_query_id_seq OWNED BY public.queries.query_id;
 --
 
 CREATE TABLE public.query_participants (
+    query_participant_id bigint NOT NULL,
     query_id bigint NOT NULL,
     user_id bigint NOT NULL
 );
@@ -2984,6 +3867,27 @@ ALTER TABLE public.query_participants OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.query_participants IS 'The users assigned to a discussion.';
+
+
+--
+-- Name: query_participants_query_participant_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.query_participants_query_participant_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.query_participants_query_participant_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: query_participants_query_participant_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.query_participants_query_participant_id_seq OWNED BY public.query_participants.query_participant_id;
 
 
 --
@@ -3057,6 +3961,7 @@ ALTER SEQUENCE public.review_assignments_review_id_seq OWNED BY public.review_as
 --
 
 CREATE TABLE public.review_files (
+    review_file_id bigint NOT NULL,
     review_id bigint NOT NULL,
     submission_file_id bigint NOT NULL
 );
@@ -3072,10 +3977,32 @@ COMMENT ON TABLE public.review_files IS 'A list of the submission files made ava
 
 
 --
+-- Name: review_files_review_file_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.review_files_review_file_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_files_review_file_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: review_files_review_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.review_files_review_file_id_seq OWNED BY public.review_files.review_file_id;
+
+
+--
 -- Name: review_form_element_settings; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.review_form_element_settings (
+    review_form_element_setting_id bigint NOT NULL,
     review_form_element_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -3091,6 +4018,27 @@ ALTER TABLE public.review_form_element_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.review_form_element_settings IS 'More data about review form elements, including localized content such as question text.';
+
+
+--
+-- Name: review_form_element_settings_review_form_element_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.review_form_element_settings_review_form_element_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_form_element_settings_review_form_element_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: review_form_element_settings_review_form_element_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.review_form_element_settings_review_form_element_setting_id_seq OWNED BY public.review_form_element_settings.review_form_element_setting_id;
 
 
 --
@@ -3142,6 +4090,7 @@ ALTER SEQUENCE public.review_form_elements_review_form_element_id_seq OWNED BY p
 --
 
 CREATE TABLE public.review_form_responses (
+    review_form_response_id bigint NOT NULL,
     review_form_element_id bigint NOT NULL,
     review_id bigint NOT NULL,
     response_type character varying(6),
@@ -3159,10 +4108,32 @@ COMMENT ON TABLE public.review_form_responses IS 'Each review form response reco
 
 
 --
+-- Name: review_form_responses_review_form_response_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.review_form_responses_review_form_response_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_form_responses_review_form_response_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: review_form_responses_review_form_response_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.review_form_responses_review_form_response_id_seq OWNED BY public.review_form_responses.review_form_response_id;
+
+
+--
 -- Name: review_form_settings; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.review_form_settings (
+    review_form_setting_id bigint NOT NULL,
     review_form_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -3178,6 +4149,27 @@ ALTER TABLE public.review_form_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.review_form_settings IS 'More data about review forms, including localized content such as names.';
+
+
+--
+-- Name: review_form_settings_review_form_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.review_form_settings_review_form_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_form_settings_review_form_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: review_form_settings_review_form_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.review_form_settings_review_form_setting_id_seq OWNED BY public.review_form_settings.review_form_setting_id;
 
 
 --
@@ -3228,6 +4220,7 @@ ALTER SEQUENCE public.review_forms_review_form_id_seq OWNED BY public.review_for
 --
 
 CREATE TABLE public.review_round_files (
+    review_round_file_id bigint NOT NULL,
     submission_id bigint NOT NULL,
     review_round_id bigint NOT NULL,
     stage_id smallint NOT NULL,
@@ -3242,6 +4235,27 @@ ALTER TABLE public.review_round_files OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.review_round_files IS 'Records the files made available to reviewers for a round of reviews. These can be further customized on a per review basis with review_files.';
+
+
+--
+-- Name: review_round_files_review_round_file_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.review_round_files_review_round_file_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_round_files_review_round_file_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: review_round_files_review_round_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.review_round_files_review_round_file_id_seq OWNED BY public.review_round_files.review_round_file_id;
 
 
 --
@@ -3293,6 +4307,7 @@ ALTER SEQUENCE public.review_rounds_review_round_id_seq OWNED BY public.review_r
 --
 
 CREATE TABLE public.scheduled_tasks (
+    scheduled_task_id bigint NOT NULL,
     class_name character varying(255) NOT NULL,
     last_run timestamp(0) without time zone
 );
@@ -3308,10 +4323,32 @@ COMMENT ON TABLE public.scheduled_tasks IS 'The last time each scheduled task wa
 
 
 --
+-- Name: scheduled_tasks_scheduled_task_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.scheduled_tasks_scheduled_task_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.scheduled_tasks_scheduled_task_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: scheduled_tasks_scheduled_task_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.scheduled_tasks_scheduled_task_id_seq OWNED BY public.scheduled_tasks.scheduled_task_id;
+
+
+--
 -- Name: section_settings; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.section_settings (
+    section_setting_id bigint NOT NULL,
     section_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -3326,6 +4363,27 @@ ALTER TABLE public.section_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.section_settings IS 'More data about sections, including localized properties such as section titles.';
+
+
+--
+-- Name: section_settings_section_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.section_settings_section_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.section_settings_section_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: section_settings_section_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.section_settings_section_setting_id_seq OWNED BY public.section_settings.section_setting_id;
 
 
 --
@@ -3383,6 +4441,7 @@ ALTER SEQUENCE public.sections_section_id_seq OWNED BY public.sections.section_i
 --
 
 CREATE TABLE public.server_settings (
+    server_setting_id bigint NOT NULL,
     server_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -3398,6 +4457,27 @@ ALTER TABLE public.server_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.server_settings IS 'More data about server settings, including localized properties such as policies.';
+
+
+--
+-- Name: server_settings_server_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.server_settings_server_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.server_settings_server_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: server_settings_server_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.server_settings_server_setting_id_seq OWNED BY public.server_settings.server_setting_id;
 
 
 --
@@ -3488,6 +4568,7 @@ COMMENT ON TABLE public.sessions IS 'Session data for logged-in users.';
 --
 
 CREATE TABLE public.site (
+    site_id bigint NOT NULL,
     redirect bigint DEFAULT '0'::bigint NOT NULL,
     primary_locale character varying(14) NOT NULL,
     min_password_length smallint DEFAULT '6'::smallint NOT NULL,
@@ -3539,6 +4620,7 @@ COMMENT ON COLUMN public.site.supported_locales IS 'Locales supported by the sit
 --
 
 CREATE TABLE public.site_settings (
+    site_setting_id bigint NOT NULL,
     setting_name character varying(255) NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_value text
@@ -3552,6 +4634,48 @@ ALTER TABLE public.site_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.site_settings IS 'More data about the site, including localized properties such as its name.';
+
+
+--
+-- Name: site_settings_site_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.site_settings_site_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.site_settings_site_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: site_settings_site_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.site_settings_site_setting_id_seq OWNED BY public.site_settings.site_setting_id;
+
+
+--
+-- Name: site_site_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.site_site_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.site_site_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: site_site_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.site_site_id_seq OWNED BY public.site.site_id;
 
 
 --
@@ -3604,6 +4728,7 @@ ALTER SEQUENCE public.stage_assignments_stage_assignment_id_seq OWNED BY public.
 --
 
 CREATE TABLE public.subeditor_submission_group (
+    subeditor_submission_group_id bigint NOT NULL,
     context_id bigint NOT NULL,
     assoc_id bigint NOT NULL,
     assoc_type bigint NOT NULL,
@@ -3619,6 +4744,27 @@ ALTER TABLE public.subeditor_submission_group OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.subeditor_submission_group IS 'Subeditor assignments to e.g. sections and categories';
+
+
+--
+-- Name: subeditor_submission_group_subeditor_submission_group_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.subeditor_submission_group_subeditor_submission_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.subeditor_submission_group_subeditor_submission_group_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: subeditor_submission_group_subeditor_submission_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.subeditor_submission_group_subeditor_submission_group_id_seq OWNED BY public.subeditor_submission_group.subeditor_submission_group_id;
 
 
 --
@@ -3716,6 +4862,7 @@ ALTER SEQUENCE public.submission_file_revisions_revision_id_seq OWNED BY public.
 --
 
 CREATE TABLE public.submission_file_settings (
+    submission_file_setting_id bigint NOT NULL,
     submission_file_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -3738,6 +4885,27 @@ COMMENT ON TABLE public.submission_file_settings IS 'Localized data about submis
 --
 
 COMMENT ON COLUMN public.submission_file_settings.setting_type IS '(bool|int|float|string|object|date)';
+
+
+--
+-- Name: submission_file_settings_submission_file_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.submission_file_settings_submission_file_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_file_settings_submission_file_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: submission_file_settings_submission_file_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.submission_file_settings_submission_file_setting_id_seq OWNED BY public.submission_file_settings.submission_file_setting_id;
 
 
 --
@@ -3837,6 +5005,7 @@ ALTER SEQUENCE public.submission_search_keyword_list_keyword_id_seq OWNED BY pub
 --
 
 CREATE TABLE public.submission_search_object_keywords (
+    submission_search_object_keyword_id bigint NOT NULL,
     object_id bigint NOT NULL,
     keyword_id bigint NOT NULL,
     pos integer NOT NULL
@@ -3857,6 +5026,27 @@ COMMENT ON TABLE public.submission_search_object_keywords IS 'Relationships betw
 --
 
 COMMENT ON COLUMN public.submission_search_object_keywords.pos IS 'Word position of the keyword in the object.';
+
+
+--
+-- Name: submission_search_object_keyw_submission_search_object_keyw_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.submission_search_object_keyw_submission_search_object_keyw_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_search_object_keyw_submission_search_object_keyw_seq OWNER TO "ops-ci";
+
+--
+-- Name: submission_search_object_keyw_submission_search_object_keyw_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.submission_search_object_keyw_submission_search_object_keyw_seq OWNED BY public.submission_search_object_keywords.submission_search_object_keyword_id;
 
 
 --
@@ -3920,6 +5110,7 @@ ALTER SEQUENCE public.submission_search_objects_object_id_seq OWNED BY public.su
 --
 
 CREATE TABLE public.submission_settings (
+    submission_setting_id bigint NOT NULL,
     submission_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -3934,6 +5125,27 @@ ALTER TABLE public.submission_settings OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.submission_settings IS 'Localized data about submissions';
+
+
+--
+-- Name: submission_settings_submission_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.submission_settings_submission_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_settings_submission_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: submission_settings_submission_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.submission_settings_submission_setting_id_seq OWNED BY public.submission_settings.submission_setting_id;
 
 
 --
@@ -4035,6 +5247,7 @@ ALTER SEQUENCE public.temporary_files_file_id_seq OWNED BY public.temporary_file
 --
 
 CREATE TABLE public.usage_stats_institution_temporary_records (
+    usage_stats_temp_institution_id bigint NOT NULL,
     load_id character varying(255) NOT NULL,
     line_number bigint NOT NULL,
     institution_id bigint NOT NULL
@@ -4051,10 +5264,32 @@ COMMENT ON TABLE public.usage_stats_institution_temporary_records IS 'Temporary 
 
 
 --
+-- Name: usage_stats_institution_tempo_usage_stats_temp_institution__seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.usage_stats_institution_tempo_usage_stats_temp_institution__seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usage_stats_institution_tempo_usage_stats_temp_institution__seq OWNER TO "ops-ci";
+
+--
+-- Name: usage_stats_institution_tempo_usage_stats_temp_institution__seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.usage_stats_institution_tempo_usage_stats_temp_institution__seq OWNED BY public.usage_stats_institution_temporary_records.usage_stats_temp_institution_id;
+
+
+--
 -- Name: usage_stats_total_temporary_records; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.usage_stats_total_temporary_records (
+    usage_stats_temp_total_id bigint NOT NULL,
     date timestamp(0) without time zone NOT NULL,
     ip character varying(255) NOT NULL,
     user_agent character varying(255) NOT NULL,
@@ -4083,10 +5318,32 @@ COMMENT ON TABLE public.usage_stats_total_temporary_records IS 'Temporary stats 
 
 
 --
+-- Name: usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq OWNED BY public.usage_stats_total_temporary_records.usage_stats_temp_total_id;
+
+
+--
 -- Name: usage_stats_unique_item_investigations_temporary_records; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.usage_stats_unique_item_investigations_temporary_records (
+    usage_stats_temp_unique_item_id bigint NOT NULL,
     date timestamp(0) without time zone NOT NULL,
     ip character varying(255) NOT NULL,
     user_agent character varying(255) NOT NULL,
@@ -4114,10 +5371,32 @@ COMMENT ON TABLE public.usage_stats_unique_item_investigations_temporary_records
 
 
 --
+-- Name: usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq OWNER TO "ops-ci";
+
+--
+-- Name: usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq OWNED BY public.usage_stats_unique_item_investigations_temporary_records.usage_stats_temp_unique_item_id;
+
+
+--
 -- Name: usage_stats_unique_item_requests_temporary_records; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.usage_stats_unique_item_requests_temporary_records (
+    usage_stats_temp_item_id bigint NOT NULL,
     date timestamp(0) without time zone NOT NULL,
     ip character varying(255) NOT NULL,
     user_agent character varying(255) NOT NULL,
@@ -4145,10 +5424,32 @@ COMMENT ON TABLE public.usage_stats_unique_item_requests_temporary_records IS 'T
 
 
 --
+-- Name: usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq OWNED BY public.usage_stats_unique_item_requests_temporary_records.usage_stats_temp_item_id;
+
+
+--
 -- Name: user_group_settings; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.user_group_settings (
+    user_group_setting_id bigint NOT NULL,
     user_group_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -4166,10 +5467,32 @@ COMMENT ON TABLE public.user_group_settings IS 'More data about user groups, inc
 
 
 --
+-- Name: user_group_settings_user_group_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.user_group_settings_user_group_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_group_settings_user_group_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: user_group_settings_user_group_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.user_group_settings_user_group_setting_id_seq OWNED BY public.user_group_settings.user_group_setting_id;
+
+
+--
 -- Name: user_group_stage; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.user_group_stage (
+    user_group_stage_id bigint NOT NULL,
     context_id bigint NOT NULL,
     user_group_id bigint NOT NULL,
     stage_id bigint NOT NULL
@@ -4183,6 +5506,27 @@ ALTER TABLE public.user_group_stage OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.user_group_stage IS 'Which stages of the editorial workflow the user_groups can access.';
+
+
+--
+-- Name: user_group_stage_user_group_stage_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.user_group_stage_user_group_stage_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_group_stage_user_group_stage_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: user_group_stage_user_group_stage_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.user_group_stage_user_group_stage_id_seq OWNED BY public.user_group_stage.user_group_stage_id;
 
 
 --
@@ -4235,6 +5579,7 @@ ALTER SEQUENCE public.user_groups_user_group_id_seq OWNED BY public.user_groups.
 --
 
 CREATE TABLE public.user_interests (
+    user_interest_id bigint NOT NULL,
     user_id bigint NOT NULL,
     controlled_vocab_entry_id bigint NOT NULL
 );
@@ -4250,10 +5595,32 @@ COMMENT ON TABLE public.user_interests IS 'Associates users with user interests 
 
 
 --
+-- Name: user_interests_user_interest_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.user_interests_user_interest_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_interests_user_interest_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: user_interests_user_interest_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.user_interests_user_interest_id_seq OWNED BY public.user_interests.user_interest_id;
+
+
+--
 -- Name: user_settings; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.user_settings (
+    user_setting_id bigint NOT NULL,
     user_id bigint NOT NULL,
     locale character varying(14) DEFAULT ''::character varying NOT NULL,
     setting_name character varying(255) NOT NULL,
@@ -4271,10 +5638,32 @@ COMMENT ON TABLE public.user_settings IS 'More data about users, including local
 
 
 --
+-- Name: user_settings_user_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.user_settings_user_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_settings_user_setting_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: user_settings_user_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.user_settings_user_setting_id_seq OWNED BY public.user_settings.user_setting_id;
+
+
+--
 -- Name: user_user_groups; Type: TABLE; Schema: public; Owner: ops-ci
 --
 
 CREATE TABLE public.user_user_groups (
+    user_user_group_id bigint NOT NULL,
     user_group_id bigint NOT NULL,
     user_id bigint NOT NULL
 );
@@ -4287,6 +5676,27 @@ ALTER TABLE public.user_user_groups OWNER TO "ops-ci";
 --
 
 COMMENT ON TABLE public.user_user_groups IS 'Maps users to their assigned user_groups.';
+
+
+--
+-- Name: user_user_groups_user_user_group_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.user_user_groups_user_user_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_user_groups_user_user_group_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: user_user_groups_user_user_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.user_user_groups_user_user_group_id_seq OWNED BY public.user_user_groups.user_user_group_id;
 
 
 --
@@ -4353,6 +5763,7 @@ ALTER SEQUENCE public.users_user_id_seq OWNED BY public.users.user_id;
 --
 
 CREATE TABLE public.versions (
+    version_id bigint NOT NULL,
     major integer DEFAULT 0 NOT NULL,
     minor integer DEFAULT 0 NOT NULL,
     revision integer DEFAULT 0 NOT NULL,
@@ -4447,10 +5858,45 @@ COMMENT ON COLUMN public.versions.sitewide IS '1 iff the row describes a site-wi
 
 
 --
+-- Name: versions_version_id_seq; Type: SEQUENCE; Schema: public; Owner: ops-ci
+--
+
+CREATE SEQUENCE public.versions_version_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.versions_version_id_seq OWNER TO "ops-ci";
+
+--
+-- Name: versions_version_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ops-ci
+--
+
+ALTER SEQUENCE public.versions_version_id_seq OWNED BY public.versions.version_id;
+
+
+--
 -- Name: access_key_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.access_keys ALTER COLUMN access_key_id SET DEFAULT nextval('public.access_keys_access_key_id_seq'::regclass);
+
+
+--
+-- Name: announcement_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.announcement_settings ALTER COLUMN announcement_setting_id SET DEFAULT nextval('public.announcement_settings_announcement_setting_id_seq'::regclass);
+
+
+--
+-- Name: announcement_type_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.announcement_type_settings ALTER COLUMN announcement_type_setting_id SET DEFAULT nextval('public.announcement_type_settings_announcement_type_setting_id_seq'::regclass);
 
 
 --
@@ -4468,6 +5914,13 @@ ALTER TABLE ONLY public.announcements ALTER COLUMN announcement_id SET DEFAULT n
 
 
 --
+-- Name: author_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.author_settings ALTER COLUMN author_setting_id SET DEFAULT nextval('public.author_settings_author_setting_id_seq'::regclass);
+
+
+--
 -- Name: author_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
@@ -4479,6 +5932,20 @@ ALTER TABLE ONLY public.authors ALTER COLUMN author_id SET DEFAULT nextval('publ
 --
 
 ALTER TABLE ONLY public.categories ALTER COLUMN category_id SET DEFAULT nextval('public.categories_category_id_seq'::regclass);
+
+
+--
+-- Name: category_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.category_settings ALTER COLUMN category_setting_id SET DEFAULT nextval('public.category_settings_category_setting_id_seq'::regclass);
+
+
+--
+-- Name: citation_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.citation_settings ALTER COLUMN citation_setting_id SET DEFAULT nextval('public.citation_settings_citation_setting_id_seq'::regclass);
 
 
 --
@@ -4496,6 +5963,13 @@ ALTER TABLE ONLY public.controlled_vocab_entries ALTER COLUMN controlled_vocab_e
 
 
 --
+-- Name: controlled_vocab_entry_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocab_entry_settings ALTER COLUMN controlled_vocab_entry_setting_id SET DEFAULT nextval('public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq'::regclass);
+
+
+--
 -- Name: controlled_vocab_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
@@ -4510,10 +5984,24 @@ ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects ALTER COLUMN objec
 
 
 --
+-- Name: tombstone_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.data_object_tombstone_settings ALTER COLUMN tombstone_setting_id SET DEFAULT nextval('public.data_object_tombstone_settings_tombstone_setting_id_seq'::regclass);
+
+
+--
 -- Name: tombstone_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstones ALTER COLUMN tombstone_id SET DEFAULT nextval('public.data_object_tombstones_tombstone_id_seq'::regclass);
+
+
+--
+-- Name: doi_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.doi_settings ALTER COLUMN doi_setting_id SET DEFAULT nextval('public.doi_settings_doi_setting_id_seq'::regclass);
 
 
 --
@@ -4538,6 +6026,13 @@ ALTER TABLE ONLY public.email_log ALTER COLUMN log_id SET DEFAULT nextval('publi
 
 
 --
+-- Name: email_log_user_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.email_log_users ALTER COLUMN email_log_user_id SET DEFAULT nextval('public.email_log_users_email_log_user_id_seq'::regclass);
+
+
+--
 -- Name: email_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
@@ -4545,10 +6040,31 @@ ALTER TABLE ONLY public.email_templates ALTER COLUMN email_id SET DEFAULT nextva
 
 
 --
+-- Name: email_templates_default_data_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.email_templates_default_data ALTER COLUMN email_templates_default_data_id SET DEFAULT nextval('public.email_templates_default_data_email_templates_default_data_i_seq'::regclass);
+
+
+--
+-- Name: email_template_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.email_templates_settings ALTER COLUMN email_template_setting_id SET DEFAULT nextval('public.email_templates_settings_email_template_setting_id_seq'::regclass);
+
+
+--
 -- Name: log_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.event_log ALTER COLUMN log_id SET DEFAULT nextval('public.event_log_log_id_seq'::regclass);
+
+
+--
+-- Name: event_log_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.event_log_settings ALTER COLUMN event_log_setting_id SET DEFAULT nextval('public.event_log_settings_event_log_setting_id_seq'::regclass);
 
 
 --
@@ -4573,10 +6089,24 @@ ALTER TABLE ONLY public.filter_groups ALTER COLUMN filter_group_id SET DEFAULT n
 
 
 --
+-- Name: filter_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.filter_settings ALTER COLUMN filter_setting_id SET DEFAULT nextval('public.filter_settings_filter_setting_id_seq'::regclass);
+
+
+--
 -- Name: filter_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.filters ALTER COLUMN filter_id SET DEFAULT nextval('public.filters_filter_id_seq'::regclass);
+
+
+--
+-- Name: genre_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.genre_settings ALTER COLUMN genre_setting_id SET DEFAULT nextval('public.genre_settings_genre_setting_id_seq'::regclass);
 
 
 --
@@ -4594,6 +6124,13 @@ ALTER TABLE ONLY public.institution_ip ALTER COLUMN institution_ip_id SET DEFAUL
 
 
 --
+-- Name: institution_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.institution_settings ALTER COLUMN institution_setting_id SET DEFAULT nextval('public.institution_settings_institution_setting_id_seq'::regclass);
+
+
+--
 -- Name: institution_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
@@ -4608,6 +6145,13 @@ ALTER TABLE ONLY public.jobs ALTER COLUMN id SET DEFAULT nextval('public.jobs_id
 
 
 --
+-- Name: library_file_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.library_file_settings ALTER COLUMN library_file_setting_id SET DEFAULT nextval('public.library_file_settings_library_file_setting_id_seq'::regclass);
+
+
+--
 -- Name: file_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
@@ -4615,10 +6159,80 @@ ALTER TABLE ONLY public.library_files ALTER COLUMN file_id SET DEFAULT nextval('
 
 
 --
+-- Name: metrics_context_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_context ALTER COLUMN metrics_context_id SET DEFAULT nextval('public.metrics_context_metrics_context_id_seq'::regclass);
+
+
+--
+-- Name: metrics_counter_submission_daily_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_daily ALTER COLUMN metrics_counter_submission_daily_id SET DEFAULT nextval('public.metrics_counter_submission_da_metrics_counter_submission_da_seq'::regclass);
+
+
+--
+-- Name: metrics_counter_submission_institution_daily_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily ALTER COLUMN metrics_counter_submission_institution_daily_id SET DEFAULT nextval('public.metrics_counter_submission_in_metrics_counter_submission_in_seq'::regclass);
+
+
+--
+-- Name: metrics_counter_submission_institution_monthly_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly ALTER COLUMN metrics_counter_submission_institution_monthly_id SET DEFAULT nextval('public.metrics_counter_submission_in_metrics_counter_submission_i_seq1'::regclass);
+
+
+--
+-- Name: metrics_counter_submission_monthly_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_monthly ALTER COLUMN metrics_counter_submission_monthly_id SET DEFAULT nextval('public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq'::regclass);
+
+
+--
+-- Name: metrics_submission_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission ALTER COLUMN metrics_submission_id SET DEFAULT nextval('public.metrics_submission_metrics_submission_id_seq'::regclass);
+
+
+--
+-- Name: metrics_submission_geo_daily_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_daily ALTER COLUMN metrics_submission_geo_daily_id SET DEFAULT nextval('public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq'::regclass);
+
+
+--
+-- Name: metrics_submission_geo_monthly_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_monthly ALTER COLUMN metrics_submission_geo_monthly_id SET DEFAULT nextval('public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq'::regclass);
+
+
+--
+-- Name: navigation_menu_item_assignment_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_assignment_settings ALTER COLUMN navigation_menu_item_assignment_setting_id SET DEFAULT nextval('public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1'::regclass);
+
+
+--
 -- Name: navigation_menu_item_assignment_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignments ALTER COLUMN navigation_menu_item_assignment_id SET DEFAULT nextval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq'::regclass);
+
+
+--
+-- Name: navigation_menu_item_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_settings ALTER COLUMN navigation_menu_item_setting_id SET DEFAULT nextval('public.navigation_menu_item_settings_navigation_menu_item_setting__seq'::regclass);
 
 
 --
@@ -4643,6 +6257,13 @@ ALTER TABLE ONLY public.notes ALTER COLUMN note_id SET DEFAULT nextval('public.n
 
 
 --
+-- Name: notification_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.notification_settings ALTER COLUMN notification_setting_id SET DEFAULT nextval('public.notification_settings_notification_setting_id_seq'::regclass);
+
+
+--
 -- Name: setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
@@ -4657,10 +6278,45 @@ ALTER TABLE ONLY public.notifications ALTER COLUMN notification_id SET DEFAULT n
 
 
 --
+-- Name: oai_resumption_token_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.oai_resumption_tokens ALTER COLUMN oai_resumption_token_id SET DEFAULT nextval('public.oai_resumption_tokens_oai_resumption_token_id_seq'::regclass);
+
+
+--
+-- Name: plugin_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.plugin_settings ALTER COLUMN plugin_setting_id SET DEFAULT nextval('public.plugin_settings_plugin_setting_id_seq'::regclass);
+
+
+--
+-- Name: publication_category_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.publication_categories ALTER COLUMN publication_category_id SET DEFAULT nextval('public.publication_categories_publication_category_id_seq'::regclass);
+
+
+--
+-- Name: publication_galley_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.publication_galley_settings ALTER COLUMN publication_galley_setting_id SET DEFAULT nextval('public.publication_galley_settings_publication_galley_setting_id_seq'::regclass);
+
+
+--
 -- Name: galley_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.publication_galleys ALTER COLUMN galley_id SET DEFAULT nextval('public.publication_galleys_galley_id_seq'::regclass);
+
+
+--
+-- Name: publication_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.publication_settings ALTER COLUMN publication_setting_id SET DEFAULT nextval('public.publication_settings_publication_setting_id_seq'::regclass);
 
 
 --
@@ -4678,10 +6334,31 @@ ALTER TABLE ONLY public.queries ALTER COLUMN query_id SET DEFAULT nextval('publi
 
 
 --
+-- Name: query_participant_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.query_participants ALTER COLUMN query_participant_id SET DEFAULT nextval('public.query_participants_query_participant_id_seq'::regclass);
+
+
+--
 -- Name: review_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.review_assignments ALTER COLUMN review_id SET DEFAULT nextval('public.review_assignments_review_id_seq'::regclass);
+
+
+--
+-- Name: review_file_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.review_files ALTER COLUMN review_file_id SET DEFAULT nextval('public.review_files_review_file_id_seq'::regclass);
+
+
+--
+-- Name: review_form_element_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.review_form_element_settings ALTER COLUMN review_form_element_setting_id SET DEFAULT nextval('public.review_form_element_settings_review_form_element_setting_id_seq'::regclass);
 
 
 --
@@ -4692,10 +6369,31 @@ ALTER TABLE ONLY public.review_form_elements ALTER COLUMN review_form_element_id
 
 
 --
+-- Name: review_form_response_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.review_form_responses ALTER COLUMN review_form_response_id SET DEFAULT nextval('public.review_form_responses_review_form_response_id_seq'::regclass);
+
+
+--
+-- Name: review_form_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.review_form_settings ALTER COLUMN review_form_setting_id SET DEFAULT nextval('public.review_form_settings_review_form_setting_id_seq'::regclass);
+
+
+--
 -- Name: review_form_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.review_forms ALTER COLUMN review_form_id SET DEFAULT nextval('public.review_forms_review_form_id_seq'::regclass);
+
+
+--
+-- Name: review_round_file_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.review_round_files ALTER COLUMN review_round_file_id SET DEFAULT nextval('public.review_round_files_review_round_file_id_seq'::regclass);
 
 
 --
@@ -4706,10 +6404,31 @@ ALTER TABLE ONLY public.review_rounds ALTER COLUMN review_round_id SET DEFAULT n
 
 
 --
+-- Name: scheduled_task_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.scheduled_tasks ALTER COLUMN scheduled_task_id SET DEFAULT nextval('public.scheduled_tasks_scheduled_task_id_seq'::regclass);
+
+
+--
+-- Name: section_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.section_settings ALTER COLUMN section_setting_id SET DEFAULT nextval('public.section_settings_section_setting_id_seq'::regclass);
+
+
+--
 -- Name: section_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.sections ALTER COLUMN section_id SET DEFAULT nextval('public.sections_section_id_seq'::regclass);
+
+
+--
+-- Name: server_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.server_settings ALTER COLUMN server_setting_id SET DEFAULT nextval('public.server_settings_server_setting_id_seq'::regclass);
 
 
 --
@@ -4720,10 +6439,31 @@ ALTER TABLE ONLY public.servers ALTER COLUMN server_id SET DEFAULT nextval('publ
 
 
 --
+-- Name: site_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.site ALTER COLUMN site_id SET DEFAULT nextval('public.site_site_id_seq'::regclass);
+
+
+--
+-- Name: site_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.site_settings ALTER COLUMN site_setting_id SET DEFAULT nextval('public.site_settings_site_setting_id_seq'::regclass);
+
+
+--
 -- Name: stage_assignment_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments ALTER COLUMN stage_assignment_id SET DEFAULT nextval('public.stage_assignments_stage_assignment_id_seq'::regclass);
+
+
+--
+-- Name: subeditor_submission_group_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.subeditor_submission_group ALTER COLUMN subeditor_submission_group_id SET DEFAULT nextval('public.subeditor_submission_group_subeditor_submission_group_id_seq'::regclass);
 
 
 --
@@ -4741,6 +6481,13 @@ ALTER TABLE ONLY public.submission_file_revisions ALTER COLUMN revision_id SET D
 
 
 --
+-- Name: submission_file_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.submission_file_settings ALTER COLUMN submission_file_setting_id SET DEFAULT nextval('public.submission_file_settings_submission_file_setting_id_seq'::regclass);
+
+
+--
 -- Name: submission_file_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
@@ -4755,10 +6502,24 @@ ALTER TABLE ONLY public.submission_search_keyword_list ALTER COLUMN keyword_id S
 
 
 --
+-- Name: submission_search_object_keyword_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.submission_search_object_keywords ALTER COLUMN submission_search_object_keyword_id SET DEFAULT nextval('public.submission_search_object_keyw_submission_search_object_keyw_seq'::regclass);
+
+
+--
 -- Name: object_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.submission_search_objects ALTER COLUMN object_id SET DEFAULT nextval('public.submission_search_objects_object_id_seq'::regclass);
+
+
+--
+-- Name: submission_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.submission_settings ALTER COLUMN submission_setting_id SET DEFAULT nextval('public.submission_settings_submission_setting_id_seq'::regclass);
 
 
 --
@@ -4776,6 +6537,48 @@ ALTER TABLE ONLY public.temporary_files ALTER COLUMN file_id SET DEFAULT nextval
 
 
 --
+-- Name: usage_stats_temp_institution_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_institution_temporary_records ALTER COLUMN usage_stats_temp_institution_id SET DEFAULT nextval('public.usage_stats_institution_tempo_usage_stats_temp_institution__seq'::regclass);
+
+
+--
+-- Name: usage_stats_temp_total_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_total_temporary_records ALTER COLUMN usage_stats_temp_total_id SET DEFAULT nextval('public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq'::regclass);
+
+
+--
+-- Name: usage_stats_temp_unique_item_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records ALTER COLUMN usage_stats_temp_unique_item_id SET DEFAULT nextval('public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq'::regclass);
+
+
+--
+-- Name: usage_stats_temp_item_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records ALTER COLUMN usage_stats_temp_item_id SET DEFAULT nextval('public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq'::regclass);
+
+
+--
+-- Name: user_group_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.user_group_settings ALTER COLUMN user_group_setting_id SET DEFAULT nextval('public.user_group_settings_user_group_setting_id_seq'::regclass);
+
+
+--
+-- Name: user_group_stage_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.user_group_stage ALTER COLUMN user_group_stage_id SET DEFAULT nextval('public.user_group_stage_user_group_stage_id_seq'::regclass);
+
+
+--
 -- Name: user_group_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
@@ -4783,10 +6586,38 @@ ALTER TABLE ONLY public.user_groups ALTER COLUMN user_group_id SET DEFAULT nextv
 
 
 --
+-- Name: user_interest_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.user_interests ALTER COLUMN user_interest_id SET DEFAULT nextval('public.user_interests_user_interest_id_seq'::regclass);
+
+
+--
+-- Name: user_setting_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.user_settings ALTER COLUMN user_setting_id SET DEFAULT nextval('public.user_settings_user_setting_id_seq'::regclass);
+
+
+--
+-- Name: user_user_group_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.user_user_groups ALTER COLUMN user_user_group_id SET DEFAULT nextval('public.user_user_groups_user_user_group_id_seq'::regclass);
+
+
+--
 -- Name: user_id; Type: DEFAULT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.users_user_id_seq'::regclass);
+
+
+--
+-- Name: version_id; Type: DEFAULT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.versions ALTER COLUMN version_id SET DEFAULT nextval('public.versions_version_id_seq'::regclass);
 
 
 --
@@ -4808,16 +6639,30 @@ SELECT pg_catalog.setval('public.access_keys_access_key_id_seq', 1, false);
 -- Data for Name: announcement_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.announcement_settings (announcement_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+COPY public.announcement_settings (announcement_setting_id, announcement_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
+
+
+--
+-- Name: announcement_settings_announcement_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.announcement_settings_announcement_setting_id_seq', 1, false);
 
 
 --
 -- Data for Name: announcement_type_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.announcement_type_settings (type_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+COPY public.announcement_type_settings (announcement_type_setting_id, type_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
+
+
+--
+-- Name: announcement_type_settings_announcement_type_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.announcement_type_settings_announcement_type_setting_id_seq', 1, false);
 
 
 --
@@ -4854,109 +6699,116 @@ SELECT pg_catalog.setval('public.announcements_announcement_id_seq', 1, false);
 -- Data for Name: author_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.author_settings (author_id, locale, setting_name, setting_value) FROM stdin;
-1	en	affiliation	University of Bologna
-1		country	IT
-1	en	familyName	Corino
-1	en	givenName	Carlo
-3	fr_CA	familyName	\N
-3	fr_CA	givenName	\N
-24	en	affiliation	University of Tehran
-24		country	IR
-24	en	familyName	Karbasizaed
-24	en	givenName	Vajiheh
-25	en	affiliation	University of Windsor
-25		country	CA
-25	en	familyName	Williamson
-2	en	affiliation	University of Windsor
-2		country	CA
-2	en	familyName	Kwantes
-2	en	givenName	Catherine
-3		country	FI
-3	en	familyName	Kekkonen
-3	en	givenName	Urho
-5	en	affiliation	University of Alberta
-5		country	CA
-5	en	familyName	Montgomerie
-5	en	givenName	Craig
-6	en	affiliation	University of Victoria
-6		country	CA
-6	en	familyName	Irvine
-6	en	givenName	Mark
-7	en	affiliation	University of Alberta
-7		country	CA
-7	en	familyName	Montgomerie
-7	en	givenName	Craig
-8	en	affiliation	University of Victoria
-8		country	CA
-8	en	familyName	Irvine
-8	en	givenName	Mark
-9	en	affiliation	Alexandria University
-9		country	EG
-9	en	familyName	Diouf
-9	en	givenName	Diaga
-10	en	affiliation	University of Toronto
-10		country	CA
-10	en	familyName	Phillips
-10	en	givenName	Dana
-11	en	affiliation	University College Cork
-11		country	IE
-11	en	familyName	Sokoloff
-11	en	givenName	Domatilia
-12	en	affiliation	Indiana University
-12		country	US
-12	en	familyName	Ostrom
-12	en	givenName	Elinor
-13	en	affiliation	Indiana University
-13		country	US
-13	en	familyName	van Laerhoven
-13	en	givenName	Frank
-14	en	affiliation	University of Rome
-14		country	IT
-14	en	familyName	Paglieri
-14	en	givenName	Fabio
-15	en	affiliation	University of Cape Town
-15		country	ZA
-15	en	familyName	Mwandenga
-15	en	givenName	John
-16	en	affiliation	Aalborg University
-16		country	DK
-16	en	familyName	Novak
-16	en	givenName	John
-17	en	affiliation	Stanford University
-17		country	US
-17	en	familyName	Al-Khafaji
-17	en	givenName	Karim
-18	en	affiliation	Stanford University
-18		country	US
-18	en	familyName	Morse
-18	en	givenName	Margaret
-19	en	affiliation	Australian National University
-19		country	AU
-19	en	familyName	Christopher
-19	en	givenName	Leo
-20	en	affiliation	University of Cape Town
-20		country	ZA
-20	en	familyName	Kumiega
-20	en	givenName	Lise
-21	en	affiliation	University of Wolverhampton
-21		country	GB
-21	en	familyName	Daniel
-21	en	givenName	Patricia
-22	en	affiliation	University of Nairobi
-22		country	KE
-22	en	familyName	Baiyewu
-22	en	givenName	Rana
-23	en	affiliation	Barcelona University
-23		country	ES
-23	en	familyName	Rossi
-23	en	givenName	Rosanna
-25	en	givenName	Valerie
-26	en	affiliation	CUNY
-26		country	US
-26	en	familyName	Woods
-26	en	givenName	Zita
+COPY public.author_settings (author_setting_id, author_id, locale, setting_name, setting_value) FROM stdin;
+1	1	en	affiliation	University of Bologna
+2	1		country	IT
+3	1	en	familyName	Corino
+4	1	en	givenName	Carlo
+14	3	fr_CA	familyName	\N
+16	3	fr_CA	givenName	\N
+95	21	en	affiliation	University of Wolverhampton
+96	21		country	GB
+97	21	en	familyName	Daniel
+98	21	en	givenName	Patricia
+99	22	en	affiliation	University of Nairobi
+100	22		country	KE
+101	22	en	familyName	Baiyewu
+5	2	en	affiliation	University of Windsor
+6	2		country	CA
+7	2	en	familyName	Kwantes
+8	2	en	givenName	Catherine
+13	3		country	FI
+15	3	en	familyName	Kekkonen
+17	3	en	givenName	Urho
+31	5	en	affiliation	University of Alberta
+32	5		country	CA
+33	5	en	familyName	Montgomerie
+34	5	en	givenName	Craig
+35	6	en	affiliation	University of Victoria
+36	6		country	CA
+37	6	en	familyName	Irvine
+38	6	en	givenName	Mark
+39	7	en	affiliation	University of Alberta
+40	7		country	CA
+41	7	en	familyName	Montgomerie
+42	7	en	givenName	Craig
+43	8	en	affiliation	University of Victoria
+44	8		country	CA
+45	8	en	familyName	Irvine
+46	8	en	givenName	Mark
+47	9	en	affiliation	Alexandria University
+48	9		country	EG
+49	9	en	familyName	Diouf
+50	9	en	givenName	Diaga
+51	10	en	affiliation	University of Toronto
+52	10		country	CA
+53	10	en	familyName	Phillips
+54	10	en	givenName	Dana
+55	11	en	affiliation	University College Cork
+56	11		country	IE
+57	11	en	familyName	Sokoloff
+58	11	en	givenName	Domatilia
+59	12	en	affiliation	Indiana University
+60	12		country	US
+61	12	en	familyName	Ostrom
+62	12	en	givenName	Elinor
+63	13	en	affiliation	Indiana University
+64	13		country	US
+65	13	en	familyName	van Laerhoven
+66	13	en	givenName	Frank
+67	14	en	affiliation	University of Rome
+68	14		country	IT
+69	14	en	familyName	Paglieri
+70	14	en	givenName	Fabio
+71	15	en	affiliation	University of Cape Town
+72	15		country	ZA
+73	15	en	familyName	Mwandenga
+74	15	en	givenName	John
+75	16	en	affiliation	Aalborg University
+76	16		country	DK
+77	16	en	familyName	Novak
+78	16	en	givenName	John
+79	17	en	affiliation	Stanford University
+80	17		country	US
+81	17	en	familyName	Al-Khafaji
+82	17	en	givenName	Karim
+83	18	en	affiliation	Stanford University
+84	18		country	US
+85	18	en	familyName	Morse
+86	18	en	givenName	Margaret
+87	19	en	affiliation	Australian National University
+88	19		country	AU
+89	19	en	familyName	Christopher
+90	19	en	givenName	Leo
+91	20	en	affiliation	University of Cape Town
+92	20		country	ZA
+93	20	en	familyName	Kumiega
+94	20	en	givenName	Lise
+102	22	en	givenName	Rana
+103	23	en	affiliation	Barcelona University
+104	23		country	ES
+105	23	en	familyName	Rossi
+106	23	en	givenName	Rosanna
+107	24	en	affiliation	University of Tehran
+108	24		country	IR
+109	24	en	familyName	Karbasizaed
+110	24	en	givenName	Vajiheh
+111	25	en	affiliation	University of Windsor
+112	25		country	CA
+113	25	en	familyName	Williamson
+114	25	en	givenName	Valerie
+115	26	en	affiliation	CUNY
+116	26		country	US
+117	26	en	familyName	Woods
+118	26	en	givenName	Zita
 \.
+
+
+--
+-- Name: author_settings_author_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.author_settings_author_setting_id_seq', 118, true);
 
 
 --
@@ -5023,41 +6875,55 @@ SELECT pg_catalog.setval('public.categories_category_id_seq', 5, true);
 -- Data for Name: category_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.category_settings (category_id, locale, setting_name, setting_value) FROM stdin;
-1		sortOption	title-ASC
-1	en	title	History
-1	fr_CA	title	
-1	en	description	
-1	fr_CA	description	
-2		sortOption	title-ASC
-2	en	title	Biology
-2	fr_CA	title	
-2	en	description	
-2	fr_CA	description	
-3		sortOption	title-ASC
-3	en	title	Social sciences
-3	fr_CA	title	
-3	en	description	
-3	fr_CA	description	
-4		sortOption	title-ASC
-4	en	title	Mathematics
-4	fr_CA	title	
-4	en	description	
-4	fr_CA	description	
-5		sortOption	title-ASC
-5	en	title	Cultural History
-5	fr_CA	title	
-5	en	description	
-5	fr_CA	description	
+COPY public.category_settings (category_setting_id, category_id, locale, setting_name, setting_value) FROM stdin;
+1	1		sortOption	title-ASC
+2	1	en	title	History
+3	1	fr_CA	title	
+4	1	en	description	
+5	1	fr_CA	description	
+6	2		sortOption	title-ASC
+7	2	en	title	Biology
+8	2	fr_CA	title	
+9	2	en	description	
+10	2	fr_CA	description	
+11	3		sortOption	title-ASC
+12	3	en	title	Social sciences
+13	3	fr_CA	title	
+14	3	en	description	
+15	3	fr_CA	description	
+16	4		sortOption	title-ASC
+17	4	en	title	Mathematics
+18	4	fr_CA	title	
+19	4	en	description	
+20	4	fr_CA	description	
+21	5		sortOption	title-ASC
+22	5	en	title	Cultural History
+23	5	fr_CA	title	
+24	5	en	description	
+25	5	fr_CA	description	
 \.
+
+
+--
+-- Name: category_settings_category_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.category_settings_category_setting_id_seq', 25, true);
 
 
 --
 -- Data for Name: citation_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.citation_settings (citation_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+COPY public.citation_settings (citation_setting_id, citation_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
+
+
+--
+-- Name: citation_settings_citation_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.citation_settings_citation_setting_id_seq', 1, false);
 
 
 --
@@ -5139,58 +7005,65 @@ SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry
 
 
 --
+-- Name: controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq', 133, true);
+
+
+--
 -- Data for Name: controlled_vocab_entry_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) FROM stdin;
-3	en	submissionKeyword	employees	string
-4	en	submissionKeyword	survey	string
-76	en	submissionKeyword	education	string
-77	en	submissionKeyword	citizenship	string
-81	en	submissionKeyword	Common pool resource	string
-82	en	submissionKeyword	common property	string
-83	en	submissionKeyword	intellectual developments	string
-85	en	submissionKeyword	water	string
-90	en	submissionKeyword	Development	string
-91	en	submissionKeyword	engineering education	string
-92	en	submissionKeyword	service learning	string
-93	en	submissionKeyword	sustainability	string
-96	en	submissionKeyword	pigs	string
-97	en	submissionKeyword	food security	string
-99	en	submissionKeyword	water	string
-34	en	submissionKeyword	Integrating Technology	string
-35	en	submissionKeyword	Computer Skills	string
-36	en	submissionKeyword	Survey	string
-37	en	submissionKeyword	Alberta	string
-38	en	submissionKeyword	National	string
-39	en	submissionKeyword	Provincial	string
-40	en	submissionKeyword	Professional Development	string
-41	en	submissionKeyword	employees	string
-110	en	submissionKeyword	21st Century	string
-111	en	submissionKeyword	Diversity	string
-112	en	submissionKeyword	Multilingual	string
-113	en	submissionKeyword	Multiethnic	string
-114	en	submissionKeyword	Participatory Pedagogy	string
-115	en	submissionKeyword	Language	string
-116	en	submissionKeyword	Culture	string
-117	en	submissionKeyword	Gender	string
-118	en	submissionKeyword	Egalitarianism	string
-119	en	submissionKeyword	Social Transformation	string
-122	en	submissionKeyword	cattle	string
-123	en	submissionKeyword	food security	string
-127	en	submissionKeyword	Self-Organization	string
-128	en	submissionKeyword	Multi-Level Institutions	string
-66	en	submissionKeyword	Integrating Technology	string
-67	en	submissionKeyword	Computer Skills	string
-68	en	submissionKeyword	Survey	string
-69	en	submissionKeyword	Alberta	string
-70	en	submissionKeyword	National	string
-71	en	submissionKeyword	Provincial	string
-72	en	submissionKeyword	Professional Development	string
-73	en	submissionKeyword	employees	string
-129	en	submissionKeyword	Goverance	string
-132	en	submissionKeyword	education	string
-133	en	submissionKeyword	citizenship	string
+COPY public.controlled_vocab_entry_settings (controlled_vocab_entry_setting_id, controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+3	3	en	submissionKeyword	employees	string
+4	4	en	submissionKeyword	survey	string
+76	76	en	submissionKeyword	education	string
+77	77	en	submissionKeyword	citizenship	string
+81	81	en	submissionKeyword	Common pool resource	string
+82	82	en	submissionKeyword	common property	string
+83	83	en	submissionKeyword	intellectual developments	string
+85	85	en	submissionKeyword	water	string
+90	90	en	submissionKeyword	Development	string
+91	91	en	submissionKeyword	engineering education	string
+92	92	en	submissionKeyword	service learning	string
+93	93	en	submissionKeyword	sustainability	string
+96	96	en	submissionKeyword	pigs	string
+97	97	en	submissionKeyword	food security	string
+99	99	en	submissionKeyword	water	string
+34	34	en	submissionKeyword	Integrating Technology	string
+35	35	en	submissionKeyword	Computer Skills	string
+36	36	en	submissionKeyword	Survey	string
+37	37	en	submissionKeyword	Alberta	string
+38	38	en	submissionKeyword	National	string
+39	39	en	submissionKeyword	Provincial	string
+40	40	en	submissionKeyword	Professional Development	string
+41	41	en	submissionKeyword	employees	string
+110	110	en	submissionKeyword	21st Century	string
+111	111	en	submissionKeyword	Diversity	string
+112	112	en	submissionKeyword	Multilingual	string
+113	113	en	submissionKeyword	Multiethnic	string
+114	114	en	submissionKeyword	Participatory Pedagogy	string
+115	115	en	submissionKeyword	Language	string
+116	116	en	submissionKeyword	Culture	string
+117	117	en	submissionKeyword	Gender	string
+118	118	en	submissionKeyword	Egalitarianism	string
+119	119	en	submissionKeyword	Social Transformation	string
+122	122	en	submissionKeyword	cattle	string
+123	123	en	submissionKeyword	food security	string
+127	127	en	submissionKeyword	Self-Organization	string
+128	128	en	submissionKeyword	Multi-Level Institutions	string
+66	66	en	submissionKeyword	Integrating Technology	string
+67	67	en	submissionKeyword	Computer Skills	string
+68	68	en	submissionKeyword	Survey	string
+69	69	en	submissionKeyword	Alberta	string
+70	70	en	submissionKeyword	National	string
+71	71	en	submissionKeyword	Provincial	string
+72	72	en	submissionKeyword	Professional Development	string
+73	73	en	submissionKeyword	employees	string
+129	129	en	submissionKeyword	Goverance	string
+132	132	en	submissionKeyword	education	string
+133	133	en	submissionKeyword	citizenship	string
 \.
 
 
@@ -5329,8 +7202,15 @@ SELECT pg_catalog.setval('public.data_object_tombstone_oai_set_objects_object_id
 -- Data for Name: data_object_tombstone_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.data_object_tombstone_settings (tombstone_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+COPY public.data_object_tombstone_settings (tombstone_setting_id, tombstone_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
+
+
+--
+-- Name: data_object_tombstone_settings_tombstone_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstone_settings_tombstone_setting_id_seq', 1, false);
 
 
 --
@@ -5352,8 +7232,15 @@ SELECT pg_catalog.setval('public.data_object_tombstones_tombstone_id_seq', 2, tr
 -- Data for Name: doi_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.doi_settings (doi_id, locale, setting_name, setting_value) FROM stdin;
+COPY public.doi_settings (doi_setting_id, doi_id, locale, setting_name, setting_value) FROM stdin;
 \.
+
+
+--
+-- Name: doi_settings_doi_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.doi_settings_doi_setting_id_seq', 1, false);
 
 
 --
@@ -5376,9 +7263,9 @@ SELECT pg_catalog.setval('public.dois_doi_id_seq', 1, false);
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	4	\N	5	\N	3	8	2023-03-24 16:12:46
-2	4	\N	5	\N	3	16	2023-03-24 16:12:54
-3	4	\N	5	\N	3	8	2023-03-24 16:13:01
+1	4	\N	5	\N	3	8	2023-03-25 01:43:07
+2	4	\N	5	\N	3	16	2023-03-25 01:43:15
+3	4	\N	5	\N	3	8	2023-03-25 01:43:22
 \.
 
 
@@ -5394,70 +7281,70 @@ SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 3, true);
 --
 
 COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
-1	1048585	1	0	2023-03-24 16:09:47	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/1">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/1">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-2	1048585	1	0	2023-03-24 16:09:47	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/1">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/1">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-3	1048585	1	0	2023-03-24 16:09:47	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Carlo Corino" <ccorino@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Carlo Corino,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The influence of lactation on the quantity and quality of cashmere production, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/1</p><p>If you have been logged out, you can login again with the username ccorino.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-4	1048585	2	0	2023-03-24 16:11:00	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/2">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-27	1048585	7	0	2023-03-24 16:14:46	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank van Laerhoven" <fvanlaerhoven@mailinator.com>			Submission Acknowledgement	<p>Dear Frank van Laerhoven,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Elinor Ostrom, provided the following details:</p><p>Developing efficacy beliefs in the classroom<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-5	1048585	2	0	2023-03-24 16:11:00	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/2">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-6	1048585	2	0	2023-03-24 16:11:00	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Catherine Kwantes" <ckwantes@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Catherine Kwantes,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/2</p><p>If you have been logged out, you can login again with the username ckwantes.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/2">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-7	1048585	2	0	2023-03-24 16:11:00	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Urho Kekkonen" <notanemailukk@mailinator.com>			Submission Acknowledgement	<p>Dear Urho Kekkonen,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Catherine Kwantes, provided the following details:</p><p>The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-8	1048585	3	0	2023-03-24 16:11:40	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/3">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-9	1048585	3	0	2023-03-24 16:11:40	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/3">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-10	1048585	3	0	2023-03-24 16:11:40	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Craig Montgomerie" <cmontgomerie@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Craig Montgomerie,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/3</p><p>If you have been logged out, you can login again with the username cmontgomerie.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/3">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-11	1048585	3	0	2023-03-24 16:11:40	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Mark Irvine" <mirvine@mailinator.com>			Submission Acknowledgement	<p>Dear Mark Irvine,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Craig Montgomerie, provided the following details:</p><p>Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-12	1048585	4	0	2023-03-24 16:12:36	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/4">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/4">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-13	1048585	4	0	2023-03-24 16:12:36	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/4">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/4">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-14	1048585	4	0	2023-03-24 16:12:36	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Diaga Diouf,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Genetic transformation of forest trees, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/4</p><p>If you have been logged out, you can login again with the username ddiouf.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-15	1048585	4	3	2023-03-24 16:12:47	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-16	1048585	4	3	2023-03-24 16:12:54	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			We have reversed the decision to decline your submission	<p>Dear Diaga Diouf,</p>\n<p>The decision to decline your submission, Genetic transformation of forest trees, has been reversed. \nA moderator will look further at your submission before deciding whether to decline \nor post the submission.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>\n
-17	1048585	4	3	2023-03-24 16:13:01	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-18	1048585	5	0	2023-03-24 16:13:28	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/5">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-19	1048585	5	0	2023-03-24 16:13:28	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/5">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-20	1048585	5	0	2023-03-24 16:13:28	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Dana Phillips,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/5</p><p>If you have been logged out, you can login again with the username dphillips.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-21	1048585	6	0	2023-03-24 16:14:13	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/6">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/6">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-28	1048585	8	0	2023-03-24 16:15:18	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/8">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-22	1048585	6	0	2023-03-24 16:14:13	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/6">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/6">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-23	1048585	6	0	2023-03-24 16:14:13	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Domatilia Sokoloff" <dsokoloff@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Domatilia Sokoloff,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/6</p><p>If you have been logged out, you can login again with the username dsokoloff.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/6">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-24	1048585	7	0	2023-03-24 16:14:45	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/7">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/7">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-25	1048585	7	0	2023-03-24 16:14:45	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/7">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/7">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-26	1048585	7	0	2023-03-24 16:14:45	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Elinor Ostrom" <eostrom@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Elinor Ostrom,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/7</p><p>If you have been logged out, you can login again with the username eostrom.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-29	1048585	8	0	2023-03-24 16:15:18	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/8">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-30	1048585	8	0	2023-03-24 16:15:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Fabio Paglieri,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hansen & Pinto: Reason Reclaimed, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/8</p><p>If you have been logged out, you can login again with the username fpaglieri.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/8">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-31	1048585	9	0	2023-03-24 16:15:50	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/9">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/9">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-32	1048585	9	0	2023-03-24 16:15:50	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/9">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/9">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-33	1048585	9	0	2023-03-24 16:15:50	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Mwandenga" <jmwandenga@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear John Mwandenga,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/9</p><p>If you have been logged out, you can login again with the username jmwandenga.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/9">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-43	1048585	12	0	2023-03-24 16:17:28	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Leo Christopher" <lchristopher@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Leo Christopher,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Sodium butyrate improves growth performance of weaned piglets during the first period after weaning, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/12</p><p>If you have been logged out, you can login again with the username lchristopher.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/12">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-34	1048585	10	0	2023-03-24 16:16:22	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/10">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-35	1048585	10	0	2023-03-24 16:16:22	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/10">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-36	1048585	10	0	2023-03-24 16:16:22	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Novak" <jnovak@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear John Novak,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Condensing Water Availability Models to Focus on Specific Water Management Systems, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/10</p><p>If you have been logged out, you can login again with the username jnovak.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/10">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-37	1048585	11	0	2023-03-24 16:16:55	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/11">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-45	1048585	13	0	2023-03-24 16:18:00	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/13">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-46	1048585	13	0	2023-03-24 16:18:00	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Lise Kumiega" <lkumiega@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Lise Kumiega,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/13</p><p>If you have been logged out, you can login again with the username lkumiega.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-38	1048585	11	0	2023-03-24 16:16:55	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/11">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-39	1048585	11	0	2023-03-24 16:16:55	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Karim Al-Khafaji" <kalkhafaji@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Karim Al-Khafaji,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Learning Sustainable Design through Service, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/11</p><p>If you have been logged out, you can login again with the username kalkhafaji.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-40	1048585	11	0	2023-03-24 16:16:55	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Margaret Morse" <mmorse@mailinator.com>			Submission Acknowledgement	<p>Dear Margaret Morse,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Karim Al-Khafaji, provided the following details:</p><p>Learning Sustainable Design through Service<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-41	1048585	12	0	2023-03-24 16:17:28	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/12">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-42	1048585	12	0	2023-03-24 16:17:28	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/12">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-44	1048585	13	0	2023-03-24 16:18:00	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/13">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-47	1048585	14	0	2023-03-24 16:18:33	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/14">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/14">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-48	1048585	14	0	2023-03-24 16:18:33	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/14">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/14">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-49	1048585	14	0	2023-03-24 16:18:33	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Patricia Daniel" <pdaniel@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Patricia Daniel,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/14</p><p>If you have been logged out, you can login again with the username pdaniel.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-50	1048585	15	0	2023-03-24 16:19:06	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/15">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-51	1048585	15	0	2023-03-24 16:19:06	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/15">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-52	1048585	15	0	2023-03-24 16:19:06	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Rana Baiyewu,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Yam diseases and its management in Nigeria, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/15</p><p>If you have been logged out, you can login again with the username rbaiyewu.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/15">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-53	1048585	16	0	2023-03-24 16:19:38	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/16">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-54	1048585	16	0	2023-03-24 16:19:38	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/16">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-55	1048585	16	0	2023-03-24 16:19:38	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rosanna Rossi" <rrossi@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Rosanna Rossi,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/16</p><p>If you have been logged out, you can login again with the username rrossi.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/16">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-56	1048585	17	0	2023-03-24 16:20:10	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/17">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-57	1048585	17	0	2023-03-24 16:20:10	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/17">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-58	1048585	17	0	2023-03-24 16:20:10	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Vajiheh Karbasizaed,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/17</p><p>If you have been logged out, you can login again with the username vkarbasizaed.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/17">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-59	1048585	18	0	2023-03-24 16:20:43	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/18">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/18">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-60	1048585	18	0	2023-03-24 16:20:43	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/18">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/18">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-61	1048585	18	0	2023-03-24 16:20:43	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Valerie Williamson" <vwilliamson@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Valerie Williamson,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Self-Organization in Multi-Level Institutions in Networked Environments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/18</p><p>If you have been logged out, you can login again with the username vwilliamson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/18">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-62	1048585	19	0	2023-03-24 16:21:16	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/19">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/19">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-63	1048585	19	0	2023-03-24 16:21:16	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/19">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/19">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-64	1048585	19	0	2023-03-24 16:21:16	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Zita Woods" <zwoods@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Zita Woods,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Finocchiaro: Arguments About Arguments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/19</p><p>If you have been logged out, you can login again with the username zwoods.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/19">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+1	1048585	1	0	2023-03-25 01:40:15	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/1">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/1">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+2	1048585	1	0	2023-03-25 01:40:16	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/1">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/1">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+3	1048585	1	0	2023-03-25 01:40:16	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Carlo Corino" <ccorino@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Carlo Corino,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The influence of lactation on the quantity and quality of cashmere production, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/1</p><p>If you have been logged out, you can login again with the username ccorino.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+4	1048585	2	0	2023-03-25 01:41:25	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/2">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+27	1048585	7	0	2023-03-25 01:45:04	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank van Laerhoven" <fvanlaerhoven@mailinator.com>			Submission Acknowledgement	<p>Dear Frank van Laerhoven,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Elinor Ostrom, provided the following details:</p><p>Developing efficacy beliefs in the classroom<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+5	1048585	2	0	2023-03-25 01:41:25	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/2">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+6	1048585	2	0	2023-03-25 01:41:26	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Catherine Kwantes" <ckwantes@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Catherine Kwantes,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/2</p><p>If you have been logged out, you can login again with the username ckwantes.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/2">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+7	1048585	2	0	2023-03-25 01:41:26	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Urho Kekkonen" <notanemailukk@mailinator.com>			Submission Acknowledgement	<p>Dear Urho Kekkonen,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Catherine Kwantes, provided the following details:</p><p>The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+8	1048585	3	0	2023-03-25 01:42:03	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/3">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+9	1048585	3	0	2023-03-25 01:42:03	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/3">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+10	1048585	3	0	2023-03-25 01:42:04	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Craig Montgomerie" <cmontgomerie@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Craig Montgomerie,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/3</p><p>If you have been logged out, you can login again with the username cmontgomerie.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/3">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+11	1048585	3	0	2023-03-25 01:42:04	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Mark Irvine" <mirvine@mailinator.com>			Submission Acknowledgement	<p>Dear Mark Irvine,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Craig Montgomerie, provided the following details:</p><p>Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+12	1048585	4	0	2023-03-25 01:42:57	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/4">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/4">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+13	1048585	4	0	2023-03-25 01:42:57	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/4">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/4">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+14	1048585	4	0	2023-03-25 01:42:57	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Diaga Diouf,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Genetic transformation of forest trees, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/4</p><p>If you have been logged out, you can login again with the username ddiouf.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+15	1048585	4	3	2023-03-25 01:43:08	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+16	1048585	4	3	2023-03-25 01:43:15	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			We have reversed the decision to decline your submission	<p>Dear Diaga Diouf,</p>\n<p>The decision to decline your submission, Genetic transformation of forest trees, has been reversed. \nA moderator will look further at your submission before deciding whether to decline \nor post the submission.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>\n
+17	1048585	4	3	2023-03-25 01:43:22	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+18	1048585	5	0	2023-03-25 01:43:48	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/5">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+19	1048585	5	0	2023-03-25 01:43:48	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/5">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+20	1048585	5	0	2023-03-25 01:43:48	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Dana Phillips,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/5</p><p>If you have been logged out, you can login again with the username dphillips.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+21	1048585	6	0	2023-03-25 01:44:32	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/6">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/6">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+28	1048585	8	0	2023-03-25 01:45:35	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/8">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+22	1048585	6	0	2023-03-25 01:44:32	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/6">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/6">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+23	1048585	6	0	2023-03-25 01:44:32	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Domatilia Sokoloff" <dsokoloff@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Domatilia Sokoloff,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/6</p><p>If you have been logged out, you can login again with the username dsokoloff.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/6">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+24	1048585	7	0	2023-03-25 01:45:04	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/7">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/7">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+25	1048585	7	0	2023-03-25 01:45:04	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/7">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/7">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+26	1048585	7	0	2023-03-25 01:45:04	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Elinor Ostrom" <eostrom@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Elinor Ostrom,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/7</p><p>If you have been logged out, you can login again with the username eostrom.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+29	1048585	8	0	2023-03-25 01:45:35	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/8">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+30	1048585	8	0	2023-03-25 01:45:35	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Fabio Paglieri,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hansen & Pinto: Reason Reclaimed, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/8</p><p>If you have been logged out, you can login again with the username fpaglieri.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/8">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+31	1048585	9	0	2023-03-25 01:46:07	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/9">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/9">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+32	1048585	9	0	2023-03-25 01:46:07	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/9">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/9">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+33	1048585	9	0	2023-03-25 01:46:07	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Mwandenga" <jmwandenga@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear John Mwandenga,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/9</p><p>If you have been logged out, you can login again with the username jmwandenga.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/9">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+43	1048585	12	0	2023-03-25 01:47:44	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Leo Christopher" <lchristopher@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Leo Christopher,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Sodium butyrate improves growth performance of weaned piglets during the first period after weaning, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/12</p><p>If you have been logged out, you can login again with the username lchristopher.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/12">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+34	1048585	10	0	2023-03-25 01:46:39	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/10">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+35	1048585	10	0	2023-03-25 01:46:39	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/10">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+36	1048585	10	0	2023-03-25 01:46:39	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Novak" <jnovak@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear John Novak,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Condensing Water Availability Models to Focus on Specific Water Management Systems, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/10</p><p>If you have been logged out, you can login again with the username jnovak.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/10">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+37	1048585	11	0	2023-03-25 01:47:11	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/11">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+45	1048585	13	0	2023-03-25 01:48:16	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/13">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+46	1048585	13	0	2023-03-25 01:48:16	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Lise Kumiega" <lkumiega@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Lise Kumiega,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/13</p><p>If you have been logged out, you can login again with the username lkumiega.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+38	1048585	11	0	2023-03-25 01:47:11	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/11">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+39	1048585	11	0	2023-03-25 01:47:11	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Karim Al-Khafaji" <kalkhafaji@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Karim Al-Khafaji,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Learning Sustainable Design through Service, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/11</p><p>If you have been logged out, you can login again with the username kalkhafaji.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+40	1048585	11	0	2023-03-25 01:47:12	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Margaret Morse" <mmorse@mailinator.com>			Submission Acknowledgement	<p>Dear Margaret Morse,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Karim Al-Khafaji, provided the following details:</p><p>Learning Sustainable Design through Service<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+41	1048585	12	0	2023-03-25 01:47:44	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/12">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+42	1048585	12	0	2023-03-25 01:47:44	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/12">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+44	1048585	13	0	2023-03-25 01:48:16	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/13">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+47	1048585	14	0	2023-03-25 01:48:48	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/14">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/14">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+48	1048585	14	0	2023-03-25 01:48:48	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/14">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/14">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+49	1048585	14	0	2023-03-25 01:48:48	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Patricia Daniel" <pdaniel@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Patricia Daniel,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/14</p><p>If you have been logged out, you can login again with the username pdaniel.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+50	1048585	15	0	2023-03-25 01:49:20	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/15">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+51	1048585	15	0	2023-03-25 01:49:20	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/15">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+52	1048585	15	0	2023-03-25 01:49:20	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Rana Baiyewu,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Yam diseases and its management in Nigeria, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/15</p><p>If you have been logged out, you can login again with the username rbaiyewu.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/15">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+53	1048585	16	0	2023-03-25 01:49:52	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/16">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+54	1048585	16	0	2023-03-25 01:49:52	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/16">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+55	1048585	16	0	2023-03-25 01:49:52	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rosanna Rossi" <rrossi@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Rosanna Rossi,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/16</p><p>If you have been logged out, you can login again with the username rrossi.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/16">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+56	1048585	17	0	2023-03-25 01:50:24	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/17">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+57	1048585	17	0	2023-03-25 01:50:24	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/17">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+58	1048585	17	0	2023-03-25 01:50:24	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Vajiheh Karbasizaed,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/17</p><p>If you have been logged out, you can login again with the username vkarbasizaed.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/17">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+59	1048585	18	0	2023-03-25 01:50:57	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/18">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/18">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+60	1048585	18	0	2023-03-25 01:50:57	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/18">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/18">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+61	1048585	18	0	2023-03-25 01:50:57	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Valerie Williamson" <vwilliamson@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Valerie Williamson,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Self-Organization in Multi-Level Institutions in Networked Environments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/18</p><p>If you have been logged out, you can login again with the username vwilliamson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/18">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+62	1048585	19	0	2023-03-25 01:51:29	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/19">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/19">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+63	1048585	19	0	2023-03-25 01:51:29	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/19">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/workflow/access/19">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+64	1048585	19	0	2023-03-25 01:51:29	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Zita Woods" <zwoods@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Zita Woods,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Finocchiaro: Arguments About Arguments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/19</p><p>If you have been logged out, you can login again with the username zwoods.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/19">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
 \.
 
 
@@ -5472,68 +7359,75 @@ SELECT pg_catalog.setval('public.email_log_log_id_seq', 64, true);
 -- Data for Name: email_log_users; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.email_log_users (email_log_id, user_id) FROM stdin;
-1	5
-2	4
-3	7
-4	5
-5	4
-6	8
-8	5
-9	4
-10	9
-12	5
-13	4
-14	10
-15	10
-16	10
-17	10
-18	5
-19	4
-20	11
-21	5
-22	4
-23	12
-24	5
-25	4
-26	13
-28	5
-29	4
-30	14
-31	5
-32	4
-33	15
-34	5
-35	4
-36	16
-37	4
-38	5
-39	17
-41	4
-42	5
-43	18
-44	4
-45	5
-46	19
-47	4
-48	5
-49	20
-50	4
-51	5
-52	21
-53	4
-54	5
-55	22
-56	4
-57	5
-58	23
-59	4
-60	5
-61	24
-62	4
-63	5
-64	25
+COPY public.email_log_users (email_log_user_id, email_log_id, user_id) FROM stdin;
+1	1	5
+2	2	4
+3	3	7
+4	4	5
+5	5	4
+6	6	8
+7	8	5
+8	9	4
+9	10	9
+10	12	5
+11	13	4
+12	14	10
+13	15	10
+14	16	10
+15	17	10
+16	18	5
+17	19	4
+18	20	11
+19	21	5
+20	22	4
+21	23	12
+22	24	5
+23	25	4
+24	26	13
+25	28	5
+26	29	4
+27	30	14
+28	31	5
+29	32	4
+30	33	15
+31	34	4
+32	35	5
+33	36	16
+34	37	4
+35	38	5
+36	39	17
+37	41	4
+38	42	5
+39	43	18
+40	44	4
+41	45	5
+42	46	19
+43	47	4
+44	48	5
+45	49	20
+46	50	4
+47	51	5
+48	52	21
+49	53	4
+50	54	5
+51	55	22
+52	56	4
+53	57	5
+54	58	23
+55	59	4
+56	60	5
+57	61	24
+58	62	4
+59	63	5
+60	64	25
 \.
+
+
+--
+-- Name: email_log_users_email_log_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.email_log_users_email_log_user_id_seq', 60, true);
 
 
 --
@@ -5549,54 +7443,61 @@ COPY public.email_templates (email_id, email_key, context_id, alternate_to) FROM
 -- Data for Name: email_templates_default_data; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.email_templates_default_data (email_key, locale, name, subject, body) FROM stdin;
-PASSWORD_RESET_CONFIRM	en	Password Reset Confirm	Password Reset Confirmation	We have received a request to reset your password for the {$siteTitle} web site.<br />\n<br />\nIf you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.<br />\n<br />\nReset my password: {$passwordResetUrl}<br />\n<br />\n{$siteContactName}
-USER_REGISTER	en	User Created	Server Registration	{$recipientName}<br />\n<br />\nYou have now been registered as a user with {$serverName}. We have included your username and password in this email, which are needed for all work with this server through its website. At any point, you can ask to be removed from the server's list of users by contacting me.<br />\n<br />\nUsername: {$recipientUsername}<br />\nPassword: {$password}<br />\n<br />\nThank you,<br />\n{$signature}
-USER_VALIDATE_CONTEXT	en	Validate Email (Server Registration)	Validate Your Account	{$recipientName}<br />\n<br />\nYou have created an account with {$serverName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />\n<br />\n{$activateUrl}<br />\n<br />\nThank you,<br />\n{$serverSignature}
-USER_VALIDATE_SITE	en	Validate Email (Site)	Validate Your Account	{$recipientName}<br />\n<br />\nYou have created an account with {$siteTitle}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />\n<br />\n{$activateUrl}<br />\n<br />\nThank you,<br />\n{$siteSignature}
-SUBMISSION_ACK	en	Submission Acknowledgement (Pending Moderation)	Thank you for your submission to {$serverName}	<p>Dear {$recipientName},</p><p>Thank you for your submission to {$serverName}. We have received your preprint, {$submissionTitle}, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: {$authorSubmissionUrl}</p><p>If you have been logged out, you can login again with the username {$recipientUsername}.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>Thank you for considering {$serverName} as a venue for your work.</p>{$serverSignature}
-POSTED_ACK	en	Posted Acknowledgement	Preprint Posted Acknowledgement	{$recipientName}:<br />\n<br />\nYour preprint, &quot;{$submissionTitle}&quot; has been posted online on {$serverName}.<br />\n<br />\nPreprint URL: {$submissionUrl}<br />\n<br />\nIf you have any questions, please contact me.<br />\n<br />\n{$signature}
-POSTED_NEW_VERSION_ACK	en	New Version Posted	New Version Posted Acknowledgement	<p>Dear {$recipientName},</p><p>Thank you for posting a new version of your preprint to {$serverName}. The new version is now <a href="{$submissionPublishedUrl}">available</a>.</p><p>If you have any questions, please contact me.</p>{$signature}
-SUBMISSION_ACK_CAN_POST	en	Submission Acknowledgement (No Moderation Required)	Thank you for your submission to {$serverName}	<p>Dear {$recipientName},</p><p>Thank you for your submission to {$serverName}. This is an automated message to let you know that we have received your preprint, {$submissionTitle}. As a trusted author, no moderation is required, so we invite you to <a href="{$authorSubmissionUrl}">post your preprint</a> as soon as you are ready.</p><p>If you have been logged out, you can login again with the username {$recipientUsername}.</p><p>Thank you for considering {$serverName} as a venue for your work.</p>{$serverSignature}
-SUBMISSION_ACK_NOT_USER	en	Submission Confirmation (Other Authors)	Submission Acknowledgement	<p>Dear {$recipientName},</p><p>You have been named as a co-author on a preprint submitted to {$serverName}. The submitter, {$submitterName}, provided the following details:</p><p>{$submissionTitle}<br>{$authorsWithAffiliation}</p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p>{$serverSignature}
-EDITOR_ASSIGN	en	Editor Assigned	You have been assigned as a moderator on a submission to {$serverName}	<p>Dear {$recipientName},</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please login to <a href="{$submissionUrl}">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p>{$serverSignature}
-EDITOR_DECISION_ACCEPT	en	Submission Accepted	Your submission has passed moderation at {$serverName}	<p>Dear {$recipientName},</p><p>I am pleased to inform you that a moderator has decided to accept your preprint at {$serverName}. We found your submission, {$submissionTitle}, to meet the requirements for preprints posted to {$serverName} and thank you for choosing our server as a venue for your work.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>Kind regards,</p>{$signature}
-EDITOR_DECISION_INITIAL_DECLINE	en	Submission Declined	Your submission has been declined	<p>Dear {$recipientName},</p><p>I’m sorry to inform you that, after reviewing your submission, {$submissionTitle}, the editor has found that it does not meet our requirements for publication in {$serverName}.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p>{$signature}
-EDITOR_DECISION_REVERT_INITIAL_DECLINE	en	Reinstate Submission Declined Without Review	We have reversed the decision to decline your submission	<p>Dear {$recipientName},</p>\n<p>The decision to decline your submission, {$submissionTitle}, has been reversed. \nA moderator will look further at your submission before deciding whether to decline \nor post the submission.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p>{$signature}</p>\n
-EDITOR_DECISION_NOTIFY_OTHER_AUTHORS	en	Notify Other Authors	An update regarding your submission	<p>The following email was sent to {$submittingAuthorName} from {$serverName} regarding {$submissionTitle}.</p>\n<p>You are receiving a copy of this notification because you are identified as an author of the submission. Any instructions in the message below are intended for the submitting author, {$submittingAuthorName}, and no action is required of you at this time.</p>\n\n{$messageToSubmittingAuthor}
-STATISTICS_REPORT_NOTIFICATION	en	Statistics Report Notification	Preprint Server activity for {$month}, {$year}	\n{$recipientName}, <br />\n<br />\nYour preprint health report for {$month}, {$year} is now available. Your key stats for this month are below.<br />\n<ul>\n\t<li>New submissions this month: {$newSubmissions}</li>\n\t<li>Declined submissions this month: {$declinedSubmissions}</li>\n\t<li>Accepted submissions this month: {$acceptedSubmissions}</li>\n\t<li>Total submissions in the system: {$totalSubmissions}</li>\n</ul>\nLogin to the the preprint server to view more detailed <a href="{$editorialStatsLink}">trends</a> and <a href="{$publicationStatsLink}">posted preprint stats</a>. A full copy of this month's trends is attached.<br />\n<br />\nSincerely,<br />\n{$serverSignature}
-ANNOUNCEMENT	en	New Announcement	{$announcementTitle}	<b>{$announcementTitle}</b><br />\n<br />\n{$announcementSummary}<br />\n<br />\nVisit our website to read the <a href="{$announcementUrl}">full announcement</a>.
-DISCUSSION_NOTIFICATION_PRODUCTION	en	Discussion (Production)	A message regarding {$serverName}	Please enter your message.
-EDITOR_ASSIGN_PRODUCTION	en	Editor Assigned	You have been assigned as a moderator on a submission to {$serverName}	<p>Dear {$recipientName},</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please login to <a href="{$submissionUrl}">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p>{$serverSignature}
-VERSION_CREATED	en	Version Created	A new version was created for {$submissionTitle}	<p>Dear {$recipientName}, </p><p>This is an automated message to inform you that a new version of your submission, {$submissionTitle}, was created. You can view this version from your submission dashboard at the following link:</p><p><a href="{$submissionUrl}">{$submissionTitle}</a></p><hr><p>This is an automatic email sent from <a href="{$serverUrl}">{$serverName}</a>.</p>
-SUBMISSION_SAVED_FOR_LATER	en	Submission Saved for Later	Resume your submission to {$serverName}	<p>Dear {$recipientName},</p><p>Your submission details have been saved in our system, but it has not yet been submitted for consideration. You can return to complete your submission at any time by following the link below.</p><p><a href="{$submissionWizardUrl}">{$authorsShort} — {$submissionTitle}</a></p><hr><p>This is an automated email from <a href="{$serverUrl}">{$serverName}</a>.</p>
-SUBMISSION_NEEDS_EDITOR	en	Submission Needs Editor	A new submission needs an editor to be assigned: {$submissionTitle}	<p>Dear {$recipientName},</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="{$serverUrl}">{$serverName}</a>.</p>
-ORCID_COLLECT_AUTHOR_ID	en	orcidCollectAuthorId	Submission ORCID	Dear {$recipientName},<br/>\n<br/>\nYou have been listed as an author on a manuscript submission to {$serverName}.<br/>\nTo confirm your authorship, please add your ORCID id to this submission by visiting the link provided below.<br/>\n<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://info.orcid.org/wp-content/uploads/2020/12/ORCIDiD_icon16x16.png" width='16' height='16' alt="ORCID iD icon" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Register or connect your ORCID iD</a><br/>\n<br/>\n<br>\n<a href="{$orcidAboutUrl}">More information about ORCID at {$serverName}</a><br/>\n<br/>\nIf you have any questions, please contact me.<br/>\n<br/>\n{$principalContactSignature}<br/>\n
-ORCID_REQUEST_AUTHOR_AUTHORIZATION	en	orcidRequestAuthorAuthorization	Requesting ORCID record access	Dear {$recipientName},<br>\n<br>\nYou have been listed as an author on the manuscript submission "{$submissionTitle}" to {$serverName}.\n<br>\n<br>\nPlease allow us to add your ORCID id to this submission and also to add the submission to your ORCID profile on publication.<br>\nVisit the link to the official ORCID website, login with your profile and authorize the access by following the instructions.<br>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://info.orcid.org/wp-content/uploads/2020/12/ORCIDiD_icon16x16.png" width='16' height='16' alt="ORCID iD icon" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Register or Connect your ORCID iD</a><br/>\n<br>\n<br>\n<a href="{$orcidAboutUrl}">More about ORCID at {$serverName}</a><br/>\n<br>\nIf you have any questions, please contact me.<br>\n<br>\n{$principalContactSignature}<br>\n
-PASSWORD_RESET_CONFIRM	fr_CA		Confirmation de la réinitialisation du mot de passe	Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site Web {$siteTitle}.<br />\n<br />\nSi vous n'avez pas fait cette demande, veuillez ne pas tenir compte du présent message, votre mot de passe restera le même. Si vous souhaitez réinitialiser votre mot de passe, cliquer sur l'URL ci-dessous.<br />\n<br />\nRéinitialisation de mon mot de passe : {$passwordResetUrl}<br />\n<br />\n{$siteContactName}
-USER_REGISTER	fr_CA		Inscription au serveur	{$recipientName},<br />\n<br />\nVous êtes désormais inscrit-e en tant qu'utilisateur-trice pour {$serverName}. Votre nom d'utilisateur-trice et votre mot de passe figurent dans ce courriel, lesquels sont requis pour toute interaction avec le serveur via son site Web. À n'importe quel moment, vous pouvez demander à être retiré-e de la liste des utilisateurs-trices du serveur en nous contactant.<br />\n<br />\nNom d'utilisateur-trice : {$recipientUsername}<br />\nMot de passe : {$password}<br />\n<br />\nMerci,<br />\n{$signature}
-USER_VALIDATE_CONTEXT	fr_CA		Valider votre compte	{$recipientName},<br />\n<br />\nVous avez créé un compte avec {$serverName}. Pour pouvoir commencer à l'utiliser vous devez d'abord valider votre compte de courriel. Pour ce faire, vous n'avez qu'à suivre le lien ci-dessous :<br />\n<br />\n{$activateUrl}<br />\n<br />\nMerci,<br />\n{$serverSignature}
-USER_VALIDATE_SITE	fr_CA			
-SUBMISSION_ACK	fr_CA		Accusé de réception de la soumission	{$recipientName},<br />\n<br />\nNous vous remercions d'avoir soumis le manuscrit intitulé « {$submissionTitle} » à la revue {$serverName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition en accédant au site Web de la revue :<br />\n<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$recipientUsername}<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à notre revue pour la publication de vos travaux.<br />\n<br />\n{$serverSignature}
-POSTED_ACK	fr_CA			
-POSTED_NEW_VERSION_ACK	fr_CA			
-SUBMISSION_ACK_CAN_POST	fr_CA		Accusé de réception de la soumission	
-SUBMISSION_ACK_NOT_USER	fr_CA		Accusé de réception de la soumission	Bonjour,<br />\n<br />\nLe manuscrit intitulé , « {$submissionTitle} » , a été soumis par {$submitterName} à {$serverName}.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à {$serverName} pour la publication de vos travaux.<br />\n<br />\n{$serverSignature}
-EDITOR_ASSIGN	fr_CA			
-EDITOR_DECISION_ACCEPT	fr_CA			
-EDITOR_DECISION_INITIAL_DECLINE	fr_CA		Décision du rédacteur	\n\t\t\t{$authors},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à  la revue {$serverName}.<br />\n<br />\nNotre décision est de refuser votre soumission.
-EDITOR_DECISION_REVERT_INITIAL_DECLINE	fr_CA			
-EDITOR_DECISION_NOTIFY_OTHER_AUTHORS	fr_CA			
-STATISTICS_REPORT_NOTIFICATION	fr_CA			
-ANNOUNCEMENT	fr_CA			
-DISCUSSION_NOTIFICATION_PRODUCTION	fr_CA		Un message à propos de la revue {$serverName}	Prière de saisir votre message.
-EDITOR_ASSIGN_PRODUCTION	fr_CA			
-VERSION_CREATED	fr_CA			
-SUBMISSION_SAVED_FOR_LATER	fr_CA			
-SUBMISSION_NEEDS_EDITOR	fr_CA			
-ORCID_COLLECT_AUTHOR_ID	fr_CA		Soumission ORCID	{$recipientName},<br/>\n<br/>\nVous avez été inscrit ou inscrite en tant qu'auteur ou auteure pour un manuscrit soumis à {$serverName}.<br/>\nPour confirmer votre statut d'auteur ou d'auteure, veuillez ajouter votre identifiant ORCID à cette soumission en cliquant sur le lien ci-dessous.<br/>\n<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://info.orcid.org/wp-content/uploads/2020/12/ORCIDiD_icon16x16.png" width='16' height='16' alt="icône identifiant ORCID" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Se connecter avec votre identifiant ORCID ou s'inscrire</a><br/>\n<br/>\n<br/>\n<a href="{$orcidAboutUrl}">Plus de renseignements sur votre identifiant ORCID dans {$serverName}</a><br/>\n<br/>\nSi vous avez des questions, veuillez communiquer avec nous.<br/>\n<br/>\n{$principalContactSignature}<br/>\n
-ORCID_REQUEST_AUTHOR_AUTHORIZATION	fr_CA		Demande d'accès au dossier ORCID	{$recipientName},<br/>\n<br/>\nVous avez été inscrit ou inscrite en tant qu'auteur ou auteure pour le manuscrit « {$submissionTitle} » soumis à {$serverName}.\n<br/>\n<br/>\nVeuillez nous autoriser à ajouter votre identifiant ORCID à cette soumission et à ajouter également la soumission à votre dossier ORCID suite à sa publication.\n<br/>\nSuivre le lien vers le site officiel ORCID, vous connecter avec votre profil et autoriser l'accès en suivant les instructions.<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://info.orcid.org/wp-content/uploads/2020/12/ORCIDiD_icon16x16.png" width='16' height='16' alt="icône identifiant ORCID" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Se connecter avec votre identifiant ORCID ou s'inscrire</a><br/>\n<br/>\n<br/>\n<a href="{$orcidAboutUrl}">Plus de renseignements sur votre identifiant ORCID dans {$serverName}</a><br/>\n<br/>\nSi vous avez des questions, veuillez communiquer avec nous.<br/>\n<br/>\n{$principalContactSignature}<br/>\n
+COPY public.email_templates_default_data (email_templates_default_data_id, email_key, locale, name, subject, body) FROM stdin;
+1	PASSWORD_RESET_CONFIRM	en	Password Reset Confirm	Password Reset Confirmation	We have received a request to reset your password for the {$siteTitle} web site.<br />\n<br />\nIf you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.<br />\n<br />\nReset my password: {$passwordResetUrl}<br />\n<br />\n{$siteContactName}
+3	USER_REGISTER	en	User Created	Server Registration	{$recipientName}<br />\n<br />\nYou have now been registered as a user with {$serverName}. We have included your username and password in this email, which are needed for all work with this server through its website. At any point, you can ask to be removed from the server's list of users by contacting me.<br />\n<br />\nUsername: {$recipientUsername}<br />\nPassword: {$password}<br />\n<br />\nThank you,<br />\n{$signature}
+5	USER_VALIDATE_CONTEXT	en	Validate Email (Server Registration)	Validate Your Account	{$recipientName}<br />\n<br />\nYou have created an account with {$serverName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />\n<br />\n{$activateUrl}<br />\n<br />\nThank you,<br />\n{$serverSignature}
+7	USER_VALIDATE_SITE	en	Validate Email (Site)	Validate Your Account	{$recipientName}<br />\n<br />\nYou have created an account with {$siteTitle}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />\n<br />\n{$activateUrl}<br />\n<br />\nThank you,<br />\n{$siteSignature}
+9	SUBMISSION_ACK	en	Submission Acknowledgement (Pending Moderation)	Thank you for your submission to {$serverName}	<p>Dear {$recipientName},</p><p>Thank you for your submission to {$serverName}. We have received your preprint, {$submissionTitle}, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: {$authorSubmissionUrl}</p><p>If you have been logged out, you can login again with the username {$recipientUsername}.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>Thank you for considering {$serverName} as a venue for your work.</p>{$serverSignature}
+11	POSTED_ACK	en	Posted Acknowledgement	Preprint Posted Acknowledgement	{$recipientName}:<br />\n<br />\nYour preprint, &quot;{$submissionTitle}&quot; has been posted online on {$serverName}.<br />\n<br />\nPreprint URL: {$submissionUrl}<br />\n<br />\nIf you have any questions, please contact me.<br />\n<br />\n{$signature}
+13	POSTED_NEW_VERSION_ACK	en	New Version Posted	New Version Posted Acknowledgement	<p>Dear {$recipientName},</p><p>Thank you for posting a new version of your preprint to {$serverName}. The new version is now <a href="{$submissionPublishedUrl}">available</a>.</p><p>If you have any questions, please contact me.</p>{$signature}
+15	SUBMISSION_ACK_CAN_POST	en	Submission Acknowledgement (No Moderation Required)	Thank you for your submission to {$serverName}	<p>Dear {$recipientName},</p><p>Thank you for your submission to {$serverName}. This is an automated message to let you know that we have received your preprint, {$submissionTitle}. As a trusted author, no moderation is required, so we invite you to <a href="{$authorSubmissionUrl}">post your preprint</a> as soon as you are ready.</p><p>If you have been logged out, you can login again with the username {$recipientUsername}.</p><p>Thank you for considering {$serverName} as a venue for your work.</p>{$serverSignature}
+17	SUBMISSION_ACK_NOT_USER	en	Submission Confirmation (Other Authors)	Submission Acknowledgement	<p>Dear {$recipientName},</p><p>You have been named as a co-author on a preprint submitted to {$serverName}. The submitter, {$submitterName}, provided the following details:</p><p>{$submissionTitle}<br>{$authorsWithAffiliation}</p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p>{$serverSignature}
+67	SUBMISSION_NEEDS_EDITOR	fr_CA			
+68	ORCID_COLLECT_AUTHOR_ID	fr_CA		Soumission ORCID	{$recipientName},<br/>\n<br/>\nVous avez été inscrit ou inscrite en tant qu'auteur ou auteure pour un manuscrit soumis à {$serverName}.<br/>\nPour confirmer votre statut d'auteur ou d'auteure, veuillez ajouter votre identifiant ORCID à cette soumission en cliquant sur le lien ci-dessous.<br/>\n<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://info.orcid.org/wp-content/uploads/2020/12/ORCIDiD_icon16x16.png" width='16' height='16' alt="icône identifiant ORCID" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Se connecter avec votre identifiant ORCID ou s'inscrire</a><br/>\n<br/>\n<br/>\n<a href="{$orcidAboutUrl}">Plus de renseignements sur votre identifiant ORCID dans {$serverName}</a><br/>\n<br/>\nSi vous avez des questions, veuillez communiquer avec nous.<br/>\n<br/>\n{$principalContactSignature}<br/>\n
+19	EDITOR_ASSIGN	en	Editor Assigned	You have been assigned as a moderator on a submission to {$serverName}	<p>Dear {$recipientName},</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please login to <a href="{$submissionUrl}">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p>{$serverSignature}
+21	EDITOR_DECISION_ACCEPT	en	Submission Accepted	Your submission has passed moderation at {$serverName}	<p>Dear {$recipientName},</p><p>I am pleased to inform you that a moderator has decided to accept your preprint at {$serverName}. We found your submission, {$submissionTitle}, to meet the requirements for preprints posted to {$serverName} and thank you for choosing our server as a venue for your work.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>Kind regards,</p>{$signature}
+23	EDITOR_DECISION_INITIAL_DECLINE	en	Submission Declined	Your submission has been declined	<p>Dear {$recipientName},</p><p>I’m sorry to inform you that, after reviewing your submission, {$submissionTitle}, the editor has found that it does not meet our requirements for publication in {$serverName}.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p>{$signature}
+25	EDITOR_DECISION_REVERT_INITIAL_DECLINE	en	Reinstate Submission Declined Without Review	We have reversed the decision to decline your submission	<p>Dear {$recipientName},</p>\n<p>The decision to decline your submission, {$submissionTitle}, has been reversed. \nA moderator will look further at your submission before deciding whether to decline \nor post the submission.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p>{$signature}</p>\n
+27	EDITOR_DECISION_NOTIFY_OTHER_AUTHORS	en	Notify Other Authors	An update regarding your submission	<p>The following email was sent to {$submittingAuthorName} from {$serverName} regarding {$submissionTitle}.</p>\n<p>You are receiving a copy of this notification because you are identified as an author of the submission. Any instructions in the message below are intended for the submitting author, {$submittingAuthorName}, and no action is required of you at this time.</p>\n\n{$messageToSubmittingAuthor}
+29	STATISTICS_REPORT_NOTIFICATION	en	Statistics Report Notification	Preprint Server activity for {$month}, {$year}	\n{$recipientName}, <br />\n<br />\nYour preprint health report for {$month}, {$year} is now available. Your key stats for this month are below.<br />\n<ul>\n\t<li>New submissions this month: {$newSubmissions}</li>\n\t<li>Declined submissions this month: {$declinedSubmissions}</li>\n\t<li>Accepted submissions this month: {$acceptedSubmissions}</li>\n\t<li>Total submissions in the system: {$totalSubmissions}</li>\n</ul>\nLogin to the the preprint server to view more detailed <a href="{$editorialStatsLink}">trends</a> and <a href="{$publicationStatsLink}">posted preprint stats</a>. A full copy of this month's trends is attached.<br />\n<br />\nSincerely,<br />\n{$serverSignature}
+31	ANNOUNCEMENT	en	New Announcement	{$announcementTitle}	<b>{$announcementTitle}</b><br />\n<br />\n{$announcementSummary}<br />\n<br />\nVisit our website to read the <a href="{$announcementUrl}">full announcement</a>.
+33	DISCUSSION_NOTIFICATION_PRODUCTION	en	Discussion (Production)	A message regarding {$serverName}	Please enter your message.
+35	EDITOR_ASSIGN_PRODUCTION	en	Editor Assigned	You have been assigned as a moderator on a submission to {$serverName}	<p>Dear {$recipientName},</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please login to <a href="{$submissionUrl}">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p>{$serverSignature}
+37	VERSION_CREATED	en	Version Created	A new version was created for {$submissionTitle}	<p>Dear {$recipientName}, </p><p>This is an automated message to inform you that a new version of your submission, {$submissionTitle}, was created. You can view this version from your submission dashboard at the following link:</p><p><a href="{$submissionUrl}">{$submissionTitle}</a></p><hr><p>This is an automatic email sent from <a href="{$serverUrl}">{$serverName}</a>.</p>
+39	SUBMISSION_SAVED_FOR_LATER	en	Submission Saved for Later	Resume your submission to {$serverName}	<p>Dear {$recipientName},</p><p>Your submission details have been saved in our system, but it has not yet been submitted for consideration. You can return to complete your submission at any time by following the link below.</p><p><a href="{$submissionWizardUrl}">{$authorsShort} — {$submissionTitle}</a></p><hr><p>This is an automated email from <a href="{$serverUrl}">{$serverName}</a>.</p>
+41	SUBMISSION_NEEDS_EDITOR	en	Submission Needs Editor	A new submission needs an editor to be assigned: {$submissionTitle}	<p>Dear {$recipientName},</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="{$serverUrl}">{$serverName}</a>.</p>
+43	ORCID_COLLECT_AUTHOR_ID	en	orcidCollectAuthorId	Submission ORCID	Dear {$recipientName},<br/>\n<br/>\nYou have been listed as an author on a manuscript submission to {$serverName}.<br/>\nTo confirm your authorship, please add your ORCID id to this submission by visiting the link provided below.<br/>\n<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://info.orcid.org/wp-content/uploads/2020/12/ORCIDiD_icon16x16.png" width='16' height='16' alt="ORCID iD icon" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Register or connect your ORCID iD</a><br/>\n<br/>\n<br>\n<a href="{$orcidAboutUrl}">More information about ORCID at {$serverName}</a><br/>\n<br/>\nIf you have any questions, please contact me.<br/>\n<br/>\n{$principalContactSignature}<br/>\n
+45	ORCID_REQUEST_AUTHOR_AUTHORIZATION	en	orcidRequestAuthorAuthorization	Requesting ORCID record access	Dear {$recipientName},<br>\n<br>\nYou have been listed as an author on the manuscript submission "{$submissionTitle}" to {$serverName}.\n<br>\n<br>\nPlease allow us to add your ORCID id to this submission and also to add the submission to your ORCID profile on publication.<br>\nVisit the link to the official ORCID website, login with your profile and authorize the access by following the instructions.<br>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://info.orcid.org/wp-content/uploads/2020/12/ORCIDiD_icon16x16.png" width='16' height='16' alt="ORCID iD icon" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Register or Connect your ORCID iD</a><br/>\n<br>\n<br>\n<a href="{$orcidAboutUrl}">More about ORCID at {$serverName}</a><br/>\n<br>\nIf you have any questions, please contact me.<br>\n<br>\n{$principalContactSignature}<br>\n
+47	PASSWORD_RESET_CONFIRM	fr_CA		Confirmation de la réinitialisation du mot de passe	Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site Web {$siteTitle}.<br />\n<br />\nSi vous n'avez pas fait cette demande, veuillez ne pas tenir compte du présent message, votre mot de passe restera le même. Si vous souhaitez réinitialiser votre mot de passe, cliquer sur l'URL ci-dessous.<br />\n<br />\nRéinitialisation de mon mot de passe : {$passwordResetUrl}<br />\n<br />\n{$siteContactName}
+48	USER_REGISTER	fr_CA		Inscription au serveur	{$recipientName},<br />\n<br />\nVous êtes désormais inscrit-e en tant qu'utilisateur-trice pour {$serverName}. Votre nom d'utilisateur-trice et votre mot de passe figurent dans ce courriel, lesquels sont requis pour toute interaction avec le serveur via son site Web. À n'importe quel moment, vous pouvez demander à être retiré-e de la liste des utilisateurs-trices du serveur en nous contactant.<br />\n<br />\nNom d'utilisateur-trice : {$recipientUsername}<br />\nMot de passe : {$password}<br />\n<br />\nMerci,<br />\n{$signature}
+49	USER_VALIDATE_CONTEXT	fr_CA		Valider votre compte	{$recipientName},<br />\n<br />\nVous avez créé un compte avec {$serverName}. Pour pouvoir commencer à l'utiliser vous devez d'abord valider votre compte de courriel. Pour ce faire, vous n'avez qu'à suivre le lien ci-dessous :<br />\n<br />\n{$activateUrl}<br />\n<br />\nMerci,<br />\n{$serverSignature}
+50	USER_VALIDATE_SITE	fr_CA			
+51	SUBMISSION_ACK	fr_CA		Accusé de réception de la soumission	{$recipientName},<br />\n<br />\nNous vous remercions d'avoir soumis le manuscrit intitulé « {$submissionTitle} » à la revue {$serverName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition en accédant au site Web de la revue :<br />\n<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$recipientUsername}<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à notre revue pour la publication de vos travaux.<br />\n<br />\n{$serverSignature}
+52	POSTED_ACK	fr_CA			
+53	POSTED_NEW_VERSION_ACK	fr_CA			
+54	SUBMISSION_ACK_CAN_POST	fr_CA		Accusé de réception de la soumission	
+55	SUBMISSION_ACK_NOT_USER	fr_CA		Accusé de réception de la soumission	Bonjour,<br />\n<br />\nLe manuscrit intitulé , « {$submissionTitle} » , a été soumis par {$submitterName} à {$serverName}.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à {$serverName} pour la publication de vos travaux.<br />\n<br />\n{$serverSignature}
+56	EDITOR_ASSIGN	fr_CA			
+57	EDITOR_DECISION_ACCEPT	fr_CA			
+58	EDITOR_DECISION_INITIAL_DECLINE	fr_CA		Décision du rédacteur	\n\t\t\t{$authors},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à  la revue {$serverName}.<br />\n<br />\nNotre décision est de refuser votre soumission.
+59	EDITOR_DECISION_REVERT_INITIAL_DECLINE	fr_CA			
+60	EDITOR_DECISION_NOTIFY_OTHER_AUTHORS	fr_CA			
+61	STATISTICS_REPORT_NOTIFICATION	fr_CA			
+62	ANNOUNCEMENT	fr_CA			
+63	DISCUSSION_NOTIFICATION_PRODUCTION	fr_CA		Un message à propos de la revue {$serverName}	Prière de saisir votre message.
+64	EDITOR_ASSIGN_PRODUCTION	fr_CA			
+65	VERSION_CREATED	fr_CA			
+66	SUBMISSION_SAVED_FOR_LATER	fr_CA			
+69	ORCID_REQUEST_AUTHOR_AUTHORIZATION	fr_CA		Demande d'accès au dossier ORCID	{$recipientName},<br/>\n<br/>\nVous avez été inscrit ou inscrite en tant qu'auteur ou auteure pour le manuscrit « {$submissionTitle} » soumis à {$serverName}.\n<br/>\n<br/>\nVeuillez nous autoriser à ajouter votre identifiant ORCID à cette soumission et à ajouter également la soumission à votre dossier ORCID suite à sa publication.\n<br/>\nSuivre le lien vers le site officiel ORCID, vous connecter avec votre profil et autoriser l'accès en suivant les instructions.<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://info.orcid.org/wp-content/uploads/2020/12/ORCIDiD_icon16x16.png" width='16' height='16' alt="icône identifiant ORCID" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Se connecter avec votre identifiant ORCID ou s'inscrire</a><br/>\n<br/>\n<br/>\n<a href="{$orcidAboutUrl}">Plus de renseignements sur votre identifiant ORCID dans {$serverName}</a><br/>\n<br/>\nSi vous avez des questions, veuillez communiquer avec nous.<br/>\n<br/>\n{$principalContactSignature}<br/>\n
 \.
+
+
+--
+-- Name: email_templates_default_data_email_templates_default_data_i_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_default_data_email_templates_default_data_i_seq', 69, true);
 
 
 --
@@ -5610,8 +7511,15 @@ SELECT pg_catalog.setval('public.email_templates_email_id_seq', 1, true);
 -- Data for Name: email_templates_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.email_templates_settings (email_id, locale, setting_name, setting_value) FROM stdin;
+COPY public.email_templates_settings (email_template_setting_id, email_id, locale, setting_name, setting_value) FROM stdin;
 \.
+
+
+--
+-- Name: email_templates_settings_email_template_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_settings_email_template_setting_id_seq', 1, false);
 
 
 --
@@ -5619,169 +7527,169 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	7	2023-03-24 16:09:32	268435458	submission.event.general.metadataUpdated	0
-2	1048585	1	7	2023-03-24 16:09:32	268435458	submission.event.general.metadataUpdated	0
-3	515	1	7	2023-03-24 16:09:43	1342177281	submission.event.fileUploaded	0
-4	1048585	1	7	2023-03-24 16:09:43	1342177288	submission.event.fileRevised	0
-5	515	1	7	2023-03-24 16:09:46	1342177296	submission.event.fileEdited	0
-6	1048585	1	7	2023-03-24 16:09:46	1342177296	submission.event.fileEdited	0
-7	1048585	1	7	2023-03-24 16:09:47	268435457	submission.event.submissionSubmitted	0
-8	1048585	2	8	2023-03-24 16:09:58	268435458	submission.event.general.metadataUpdated	0
-9	1048585	2	8	2023-03-24 16:09:59	268435458	submission.event.general.metadataUpdated	0
-10	1048585	2	8	2023-03-24 16:10:21	268435458	submission.event.general.metadataUpdated	0
-11	515	2	8	2023-03-24 16:10:29	1342177281	submission.event.fileUploaded	0
-12	1048585	2	8	2023-03-24 16:10:29	1342177288	submission.event.fileRevised	0
-13	515	2	8	2023-03-24 16:10:32	1342177296	submission.event.fileEdited	0
-14	1048585	2	8	2023-03-24 16:10:32	1342177296	submission.event.fileEdited	0
-15	1048585	2	8	2023-03-24 16:11:00	268435457	submission.event.submissionSubmitted	0
-16	1048585	2	3	2023-03-24 16:11:16	268435462	publication.event.published	0
-17	1048585	3	9	2023-03-24 16:11:25	268435458	submission.event.general.metadataUpdated	0
-18	1048585	3	9	2023-03-24 16:11:26	268435458	submission.event.general.metadataUpdated	0
-19	515	3	9	2023-03-24 16:11:36	1342177281	submission.event.fileUploaded	0
-20	1048585	3	9	2023-03-24 16:11:36	1342177288	submission.event.fileRevised	0
-21	515	3	9	2023-03-24 16:11:39	1342177296	submission.event.fileEdited	0
-22	1048585	3	9	2023-03-24 16:11:39	1342177296	submission.event.fileEdited	0
-23	1048585	3	9	2023-03-24 16:11:40	268435457	submission.event.submissionSubmitted	0
-24	1048585	3	3	2023-03-24 16:11:49	268435462	publication.event.published	0
-25	1048585	3	3	2023-03-24 16:11:57	268435463	publication.event.unpublished	0
-26	1048585	3	3	2023-03-24 16:11:59	268435458	submission.event.general.metadataUpdated	0
-27	1048585	3	3	2023-03-24 16:12:03	268435462	publication.event.published	0
-28	1048585	3	3	2023-03-24 16:12:06	268435458	submission.event.general.metadataUpdated	0
-29	1048585	3	3	2023-03-24 16:12:06	268435464	publication.event.versionCreated	0
-30	1048585	3	3	2023-03-24 16:12:09	268435458	submission.event.general.metadataUpdated	0
-31	1048585	3	3	2023-03-24 16:12:12	268435462	publication.event.versionPublished	0
-32	1048585	4	10	2023-03-24 16:12:21	268435458	submission.event.general.metadataUpdated	0
-33	1048585	4	10	2023-03-24 16:12:22	268435458	submission.event.general.metadataUpdated	0
-34	515	4	10	2023-03-24 16:12:32	1342177281	submission.event.fileUploaded	0
-35	1048585	4	10	2023-03-24 16:12:32	1342177288	submission.event.fileRevised	0
-36	515	4	10	2023-03-24 16:12:35	1342177296	submission.event.fileEdited	0
-37	1048585	4	10	2023-03-24 16:12:35	1342177296	submission.event.fileEdited	0
-38	1048585	4	10	2023-03-24 16:12:36	268435457	submission.event.submissionSubmitted	0
-39	1048585	4	3	2023-03-24 16:12:46	805306371	editor.submission.decision.decline.log	0
-40	1048585	4	3	2023-03-24 16:12:54	805306371	editor.submission.decision.revertDecline.log	0
-41	1048585	4	3	2023-03-24 16:13:01	805306371	editor.submission.decision.decline.log	0
-42	1048585	5	11	2023-03-24 16:13:14	268435458	submission.event.general.metadataUpdated	0
-43	1048585	5	11	2023-03-24 16:13:14	268435458	submission.event.general.metadataUpdated	0
-44	515	5	11	2023-03-24 16:13:25	1342177281	submission.event.fileUploaded	0
-45	1048585	5	11	2023-03-24 16:13:25	1342177288	submission.event.fileRevised	0
-46	515	5	11	2023-03-24 16:13:27	1342177296	submission.event.fileEdited	0
-47	1048585	5	11	2023-03-24 16:13:27	1342177296	submission.event.fileEdited	0
-48	1048585	5	11	2023-03-24 16:13:28	268435457	submission.event.submissionSubmitted	0
-49	1048585	5	3	2023-03-24 16:13:36	268435462	publication.event.published	0
-50	1048585	5	3	2023-03-24 16:13:42	268435463	publication.event.unpublished	0
-51	1048585	5	3	2023-03-24 16:13:49	268435462	publication.event.published	0
-52	1048585	6	12	2023-03-24 16:13:58	268435458	submission.event.general.metadataUpdated	0
-53	1048585	6	12	2023-03-24 16:13:59	268435458	submission.event.general.metadataUpdated	0
-54	515	6	12	2023-03-24 16:14:10	1342177281	submission.event.fileUploaded	0
-55	1048585	6	12	2023-03-24 16:14:10	1342177288	submission.event.fileRevised	0
-56	515	6	12	2023-03-24 16:14:12	1342177296	submission.event.fileEdited	0
-57	1048585	6	12	2023-03-24 16:14:12	1342177296	submission.event.fileEdited	0
-58	1048585	6	12	2023-03-24 16:14:13	268435457	submission.event.submissionSubmitted	0
-59	1048585	6	3	2023-03-24 16:14:21	268435462	publication.event.published	0
-60	1048585	7	13	2023-03-24 16:14:30	268435458	submission.event.general.metadataUpdated	0
-61	1048585	7	13	2023-03-24 16:14:31	268435458	submission.event.general.metadataUpdated	0
-62	515	7	13	2023-03-24 16:14:42	1342177281	submission.event.fileUploaded	0
-63	1048585	7	13	2023-03-24 16:14:42	1342177288	submission.event.fileRevised	0
-64	515	7	13	2023-03-24 16:14:44	1342177296	submission.event.fileEdited	0
-65	1048585	7	13	2023-03-24 16:14:44	1342177296	submission.event.fileEdited	0
-66	1048585	7	13	2023-03-24 16:14:45	268435457	submission.event.submissionSubmitted	0
-67	1048585	7	3	2023-03-24 16:14:54	268435462	publication.event.published	0
-68	1048585	8	14	2023-03-24 16:15:03	268435458	submission.event.general.metadataUpdated	0
-69	1048585	8	14	2023-03-24 16:15:04	268435458	submission.event.general.metadataUpdated	0
-70	515	8	14	2023-03-24 16:15:14	1342177281	submission.event.fileUploaded	0
-71	1048585	8	14	2023-03-24 16:15:14	1342177288	submission.event.fileRevised	0
-72	515	8	14	2023-03-24 16:15:17	1342177296	submission.event.fileEdited	0
-73	1048585	8	14	2023-03-24 16:15:17	1342177296	submission.event.fileEdited	0
-74	1048585	8	14	2023-03-24 16:15:18	268435457	submission.event.submissionSubmitted	0
-75	1048585	8	3	2023-03-24 16:15:26	268435462	publication.event.published	0
-76	1048585	9	15	2023-03-24 16:15:35	268435458	submission.event.general.metadataUpdated	0
-77	1048585	9	15	2023-03-24 16:15:36	268435458	submission.event.general.metadataUpdated	0
-78	515	9	15	2023-03-24 16:15:46	1342177281	submission.event.fileUploaded	0
-79	1048585	9	15	2023-03-24 16:15:46	1342177288	submission.event.fileRevised	0
-80	515	9	15	2023-03-24 16:15:49	1342177296	submission.event.fileEdited	0
-81	1048585	9	15	2023-03-24 16:15:49	1342177296	submission.event.fileEdited	0
-82	1048585	9	15	2023-03-24 16:15:50	268435457	submission.event.submissionSubmitted	0
-83	1048585	9	3	2023-03-24 16:15:58	268435462	publication.event.published	0
-84	1048585	10	16	2023-03-24 16:16:07	268435458	submission.event.general.metadataUpdated	0
-85	1048585	10	16	2023-03-24 16:16:08	268435458	submission.event.general.metadataUpdated	0
-86	515	10	16	2023-03-24 16:16:19	1342177281	submission.event.fileUploaded	0
-87	1048585	10	16	2023-03-24 16:16:19	1342177288	submission.event.fileRevised	0
-88	515	10	16	2023-03-24 16:16:21	1342177296	submission.event.fileEdited	0
-89	1048585	10	16	2023-03-24 16:16:21	1342177296	submission.event.fileEdited	0
-90	1048585	10	16	2023-03-24 16:16:22	268435457	submission.event.submissionSubmitted	0
-91	1048585	10	3	2023-03-24 16:16:30	268435462	publication.event.published	0
-92	1048585	11	17	2023-03-24 16:16:40	268435458	submission.event.general.metadataUpdated	0
-93	1048585	11	17	2023-03-24 16:16:41	268435458	submission.event.general.metadataUpdated	0
-94	515	11	17	2023-03-24 16:16:51	1342177281	submission.event.fileUploaded	0
-95	1048585	11	17	2023-03-24 16:16:51	1342177288	submission.event.fileRevised	0
-96	515	11	17	2023-03-24 16:16:54	1342177296	submission.event.fileEdited	0
-97	1048585	11	17	2023-03-24 16:16:54	1342177296	submission.event.fileEdited	0
-98	1048585	11	17	2023-03-24 16:16:55	268435457	submission.event.submissionSubmitted	0
-99	1048585	11	3	2023-03-24 16:17:04	268435462	publication.event.published	0
-100	1048585	12	18	2023-03-24 16:17:14	268435458	submission.event.general.metadataUpdated	0
-101	1048585	12	18	2023-03-24 16:17:14	268435458	submission.event.general.metadataUpdated	0
-102	515	12	18	2023-03-24 16:17:25	1342177281	submission.event.fileUploaded	0
-103	1048585	12	18	2023-03-24 16:17:25	1342177288	submission.event.fileRevised	0
-104	515	12	18	2023-03-24 16:17:27	1342177296	submission.event.fileEdited	0
-105	1048585	12	18	2023-03-24 16:17:27	1342177296	submission.event.fileEdited	0
-106	1048585	12	18	2023-03-24 16:17:28	268435457	submission.event.submissionSubmitted	0
-107	1048585	12	3	2023-03-24 16:17:36	268435462	publication.event.published	0
-108	1048585	13	19	2023-03-24 16:17:46	268435458	submission.event.general.metadataUpdated	0
-109	1048585	13	19	2023-03-24 16:17:46	268435458	submission.event.general.metadataUpdated	0
-110	515	13	19	2023-03-24 16:17:57	1342177281	submission.event.fileUploaded	0
-111	1048585	13	19	2023-03-24 16:17:57	1342177288	submission.event.fileRevised	0
-112	515	13	19	2023-03-24 16:17:59	1342177296	submission.event.fileEdited	0
-113	1048585	13	19	2023-03-24 16:17:59	1342177296	submission.event.fileEdited	0
-114	1048585	13	19	2023-03-24 16:18:00	268435457	submission.event.submissionSubmitted	0
-115	1048585	13	3	2023-03-24 16:18:09	268435462	publication.event.published	0
-116	1048585	14	20	2023-03-24 16:18:18	268435458	submission.event.general.metadataUpdated	0
-117	1048585	14	20	2023-03-24 16:18:19	268435458	submission.event.general.metadataUpdated	0
-118	515	14	20	2023-03-24 16:18:29	1342177281	submission.event.fileUploaded	0
-119	1048585	14	20	2023-03-24 16:18:29	1342177288	submission.event.fileRevised	0
-120	515	14	20	2023-03-24 16:18:32	1342177296	submission.event.fileEdited	0
-121	1048585	14	20	2023-03-24 16:18:32	1342177296	submission.event.fileEdited	0
-122	1048585	14	20	2023-03-24 16:18:33	268435457	submission.event.submissionSubmitted	0
-123	1048585	14	3	2023-03-24 16:18:41	268435462	publication.event.published	0
-124	1048585	15	21	2023-03-24 16:18:51	268435458	submission.event.general.metadataUpdated	0
-125	1048585	15	21	2023-03-24 16:18:51	268435458	submission.event.general.metadataUpdated	0
-126	515	15	21	2023-03-24 16:19:02	1342177281	submission.event.fileUploaded	0
-127	1048585	15	21	2023-03-24 16:19:02	1342177288	submission.event.fileRevised	0
-128	515	15	21	2023-03-24 16:19:04	1342177296	submission.event.fileEdited	0
-129	1048585	15	21	2023-03-24 16:19:04	1342177296	submission.event.fileEdited	0
-130	1048585	15	21	2023-03-24 16:19:05	268435457	submission.event.submissionSubmitted	0
-131	1048585	15	3	2023-03-24 16:19:14	268435462	publication.event.published	0
-132	1048585	16	22	2023-03-24 16:19:24	268435458	submission.event.general.metadataUpdated	0
-133	1048585	16	22	2023-03-24 16:19:24	268435458	submission.event.general.metadataUpdated	0
-134	515	16	22	2023-03-24 16:19:35	1342177281	submission.event.fileUploaded	0
-135	1048585	16	22	2023-03-24 16:19:35	1342177288	submission.event.fileRevised	0
-136	515	16	22	2023-03-24 16:19:37	1342177296	submission.event.fileEdited	0
-137	1048585	16	22	2023-03-24 16:19:37	1342177296	submission.event.fileEdited	0
-138	1048585	16	22	2023-03-24 16:19:38	268435457	submission.event.submissionSubmitted	0
-139	1048585	16	3	2023-03-24 16:19:46	268435462	publication.event.published	0
-140	1048585	17	23	2023-03-24 16:19:56	268435458	submission.event.general.metadataUpdated	0
-141	1048585	17	23	2023-03-24 16:19:56	268435458	submission.event.general.metadataUpdated	0
-142	515	17	23	2023-03-24 16:20:07	1342177281	submission.event.fileUploaded	0
-143	1048585	17	23	2023-03-24 16:20:07	1342177288	submission.event.fileRevised	0
-144	515	17	23	2023-03-24 16:20:09	1342177296	submission.event.fileEdited	0
-145	1048585	17	23	2023-03-24 16:20:09	1342177296	submission.event.fileEdited	0
-146	1048585	17	23	2023-03-24 16:20:10	268435457	submission.event.submissionSubmitted	0
-147	1048585	17	3	2023-03-24 16:20:19	268435462	publication.event.published	0
-148	1048585	18	24	2023-03-24 16:20:28	268435458	submission.event.general.metadataUpdated	0
-149	1048585	18	24	2023-03-24 16:20:29	268435458	submission.event.general.metadataUpdated	0
-150	515	18	24	2023-03-24 16:20:39	1342177281	submission.event.fileUploaded	0
-151	1048585	18	24	2023-03-24 16:20:39	1342177288	submission.event.fileRevised	0
-152	515	18	24	2023-03-24 16:20:42	1342177296	submission.event.fileEdited	0
-153	1048585	18	24	2023-03-24 16:20:42	1342177296	submission.event.fileEdited	0
-154	1048585	18	24	2023-03-24 16:20:43	268435457	submission.event.submissionSubmitted	0
-155	1048585	18	3	2023-03-24 16:20:51	268435462	publication.event.published	0
-156	1048585	19	25	2023-03-24 16:21:01	268435458	submission.event.general.metadataUpdated	0
-157	1048585	19	25	2023-03-24 16:21:01	268435458	submission.event.general.metadataUpdated	0
-158	515	19	25	2023-03-24 16:21:12	1342177281	submission.event.fileUploaded	0
-159	1048585	19	25	2023-03-24 16:21:12	1342177288	submission.event.fileRevised	0
-160	515	19	25	2023-03-24 16:21:15	1342177296	submission.event.fileEdited	0
-161	1048585	19	25	2023-03-24 16:21:15	1342177296	submission.event.fileEdited	0
-162	1048585	19	25	2023-03-24 16:21:15	268435457	submission.event.submissionSubmitted	0
-163	1048585	19	3	2023-03-24 16:21:24	268435462	publication.event.published	0
+1	1048585	1	7	2023-03-25 01:40:01	268435458	submission.event.general.metadataUpdated	0
+2	1048585	1	7	2023-03-25 01:40:01	268435458	submission.event.general.metadataUpdated	0
+3	515	1	7	2023-03-25 01:40:12	1342177281	submission.event.fileUploaded	0
+4	1048585	1	7	2023-03-25 01:40:12	1342177288	submission.event.fileRevised	0
+5	515	1	7	2023-03-25 01:40:14	1342177296	submission.event.fileEdited	0
+6	1048585	1	7	2023-03-25 01:40:14	1342177296	submission.event.fileEdited	0
+7	1048585	1	7	2023-03-25 01:40:15	268435457	submission.event.submissionSubmitted	0
+8	1048585	2	8	2023-03-25 01:40:27	268435458	submission.event.general.metadataUpdated	0
+9	1048585	2	8	2023-03-25 01:40:27	268435458	submission.event.general.metadataUpdated	0
+10	1048585	2	8	2023-03-25 01:40:49	268435458	submission.event.general.metadataUpdated	0
+11	515	2	8	2023-03-25 01:40:57	1342177281	submission.event.fileUploaded	0
+12	1048585	2	8	2023-03-25 01:40:57	1342177288	submission.event.fileRevised	0
+13	515	2	8	2023-03-25 01:40:59	1342177296	submission.event.fileEdited	0
+14	1048585	2	8	2023-03-25 01:40:59	1342177296	submission.event.fileEdited	0
+15	1048585	2	8	2023-03-25 01:41:25	268435457	submission.event.submissionSubmitted	0
+16	1048585	2	3	2023-03-25 01:41:39	268435462	publication.event.published	0
+17	1048585	3	9	2023-03-25 01:41:48	268435458	submission.event.general.metadataUpdated	0
+18	1048585	3	9	2023-03-25 01:41:49	268435458	submission.event.general.metadataUpdated	0
+19	515	3	9	2023-03-25 01:41:59	1342177281	submission.event.fileUploaded	0
+20	1048585	3	9	2023-03-25 01:41:59	1342177288	submission.event.fileRevised	0
+21	515	3	9	2023-03-25 01:42:02	1342177296	submission.event.fileEdited	0
+22	1048585	3	9	2023-03-25 01:42:02	1342177296	submission.event.fileEdited	0
+23	1048585	3	9	2023-03-25 01:42:03	268435457	submission.event.submissionSubmitted	0
+24	1048585	3	3	2023-03-25 01:42:11	268435462	publication.event.published	0
+25	1048585	3	3	2023-03-25 01:42:19	268435463	publication.event.unpublished	0
+26	1048585	3	3	2023-03-25 01:42:22	268435458	submission.event.general.metadataUpdated	0
+27	1048585	3	3	2023-03-25 01:42:25	268435462	publication.event.published	0
+28	1048585	3	3	2023-03-25 01:42:28	268435458	submission.event.general.metadataUpdated	0
+29	1048585	3	3	2023-03-25 01:42:28	268435464	publication.event.versionCreated	0
+30	1048585	3	3	2023-03-25 01:42:31	268435458	submission.event.general.metadataUpdated	0
+31	1048585	3	3	2023-03-25 01:42:34	268435462	publication.event.versionPublished	0
+32	1048585	4	10	2023-03-25 01:42:43	268435458	submission.event.general.metadataUpdated	0
+33	1048585	4	10	2023-03-25 01:42:43	268435458	submission.event.general.metadataUpdated	0
+34	515	4	10	2023-03-25 01:42:54	1342177281	submission.event.fileUploaded	0
+35	1048585	4	10	2023-03-25 01:42:54	1342177288	submission.event.fileRevised	0
+36	515	4	10	2023-03-25 01:42:56	1342177296	submission.event.fileEdited	0
+37	1048585	4	10	2023-03-25 01:42:56	1342177296	submission.event.fileEdited	0
+38	1048585	4	10	2023-03-25 01:42:57	268435457	submission.event.submissionSubmitted	0
+39	1048585	4	3	2023-03-25 01:43:07	805306371	editor.submission.decision.decline.log	0
+40	1048585	4	3	2023-03-25 01:43:15	805306371	editor.submission.decision.revertDecline.log	0
+41	1048585	4	3	2023-03-25 01:43:22	805306371	editor.submission.decision.decline.log	0
+42	1048585	5	11	2023-03-25 01:43:34	268435458	submission.event.general.metadataUpdated	0
+43	1048585	5	11	2023-03-25 01:43:34	268435458	submission.event.general.metadataUpdated	0
+44	515	5	11	2023-03-25 01:43:45	1342177281	submission.event.fileUploaded	0
+45	1048585	5	11	2023-03-25 01:43:45	1342177288	submission.event.fileRevised	0
+46	515	5	11	2023-03-25 01:43:47	1342177296	submission.event.fileEdited	0
+47	1048585	5	11	2023-03-25 01:43:47	1342177296	submission.event.fileEdited	0
+48	1048585	5	11	2023-03-25 01:43:48	268435457	submission.event.submissionSubmitted	0
+49	1048585	5	3	2023-03-25 01:43:56	268435462	publication.event.published	0
+50	1048585	5	3	2023-03-25 01:44:01	268435463	publication.event.unpublished	0
+51	1048585	5	3	2023-03-25 01:44:09	268435462	publication.event.published	0
+52	1048585	6	12	2023-03-25 01:44:18	268435458	submission.event.general.metadataUpdated	0
+53	1048585	6	12	2023-03-25 01:44:18	268435458	submission.event.general.metadataUpdated	0
+54	515	6	12	2023-03-25 01:44:29	1342177281	submission.event.fileUploaded	0
+55	1048585	6	12	2023-03-25 01:44:29	1342177288	submission.event.fileRevised	0
+56	515	6	12	2023-03-25 01:44:31	1342177296	submission.event.fileEdited	0
+57	1048585	6	12	2023-03-25 01:44:31	1342177296	submission.event.fileEdited	0
+58	1048585	6	12	2023-03-25 01:44:32	268435457	submission.event.submissionSubmitted	0
+59	1048585	6	3	2023-03-25 01:44:40	268435462	publication.event.published	0
+60	1048585	7	13	2023-03-25 01:44:49	268435458	submission.event.general.metadataUpdated	0
+61	1048585	7	13	2023-03-25 01:44:49	268435458	submission.event.general.metadataUpdated	0
+62	515	7	13	2023-03-25 01:45:00	1342177281	submission.event.fileUploaded	0
+63	1048585	7	13	2023-03-25 01:45:00	1342177288	submission.event.fileRevised	0
+64	515	7	13	2023-03-25 01:45:02	1342177296	submission.event.fileEdited	0
+65	1048585	7	13	2023-03-25 01:45:02	1342177296	submission.event.fileEdited	0
+66	1048585	7	13	2023-03-25 01:45:04	268435457	submission.event.submissionSubmitted	0
+67	1048585	7	3	2023-03-25 01:45:12	268435462	publication.event.published	0
+68	1048585	8	14	2023-03-25 01:45:21	268435458	submission.event.general.metadataUpdated	0
+69	1048585	8	14	2023-03-25 01:45:21	268435458	submission.event.general.metadataUpdated	0
+70	515	8	14	2023-03-25 01:45:32	1342177281	submission.event.fileUploaded	0
+71	1048585	8	14	2023-03-25 01:45:32	1342177288	submission.event.fileRevised	0
+72	515	8	14	2023-03-25 01:45:34	1342177296	submission.event.fileEdited	0
+73	1048585	8	14	2023-03-25 01:45:34	1342177296	submission.event.fileEdited	0
+74	1048585	8	14	2023-03-25 01:45:35	268435457	submission.event.submissionSubmitted	0
+75	1048585	8	3	2023-03-25 01:45:43	268435462	publication.event.published	0
+76	1048585	9	15	2023-03-25 01:45:52	268435458	submission.event.general.metadataUpdated	0
+77	1048585	9	15	2023-03-25 01:45:53	268435458	submission.event.general.metadataUpdated	0
+78	515	9	15	2023-03-25 01:46:04	1342177281	submission.event.fileUploaded	0
+79	1048585	9	15	2023-03-25 01:46:04	1342177288	submission.event.fileRevised	0
+80	515	9	15	2023-03-25 01:46:06	1342177296	submission.event.fileEdited	0
+81	1048585	9	15	2023-03-25 01:46:06	1342177296	submission.event.fileEdited	0
+82	1048585	9	15	2023-03-25 01:46:07	268435457	submission.event.submissionSubmitted	0
+83	1048585	9	3	2023-03-25 01:46:15	268435462	publication.event.published	0
+84	1048585	10	16	2023-03-25 01:46:24	268435458	submission.event.general.metadataUpdated	0
+85	1048585	10	16	2023-03-25 01:46:25	268435458	submission.event.general.metadataUpdated	0
+86	515	10	16	2023-03-25 01:46:35	1342177281	submission.event.fileUploaded	0
+87	1048585	10	16	2023-03-25 01:46:35	1342177288	submission.event.fileRevised	0
+88	515	10	16	2023-03-25 01:46:38	1342177296	submission.event.fileEdited	0
+89	1048585	10	16	2023-03-25 01:46:38	1342177296	submission.event.fileEdited	0
+90	1048585	10	16	2023-03-25 01:46:39	268435457	submission.event.submissionSubmitted	0
+91	1048585	10	3	2023-03-25 01:46:47	268435462	publication.event.published	0
+92	1048585	11	17	2023-03-25 01:46:56	268435458	submission.event.general.metadataUpdated	0
+93	1048585	11	17	2023-03-25 01:46:57	268435458	submission.event.general.metadataUpdated	0
+94	515	11	17	2023-03-25 01:47:08	1342177281	submission.event.fileUploaded	0
+95	1048585	11	17	2023-03-25 01:47:08	1342177288	submission.event.fileRevised	0
+96	515	11	17	2023-03-25 01:47:10	1342177296	submission.event.fileEdited	0
+97	1048585	11	17	2023-03-25 01:47:10	1342177296	submission.event.fileEdited	0
+98	1048585	11	17	2023-03-25 01:47:11	268435457	submission.event.submissionSubmitted	0
+99	1048585	11	3	2023-03-25 01:47:20	268435462	publication.event.published	0
+100	1048585	12	18	2023-03-25 01:47:29	268435458	submission.event.general.metadataUpdated	0
+101	1048585	12	18	2023-03-25 01:47:30	268435458	submission.event.general.metadataUpdated	0
+102	515	12	18	2023-03-25 01:47:40	1342177281	submission.event.fileUploaded	0
+103	1048585	12	18	2023-03-25 01:47:40	1342177288	submission.event.fileRevised	0
+104	515	12	18	2023-03-25 01:47:43	1342177296	submission.event.fileEdited	0
+105	1048585	12	18	2023-03-25 01:47:43	1342177296	submission.event.fileEdited	0
+106	1048585	12	18	2023-03-25 01:47:44	268435457	submission.event.submissionSubmitted	0
+107	1048585	12	3	2023-03-25 01:47:52	268435462	publication.event.published	0
+108	1048585	13	19	2023-03-25 01:48:01	268435458	submission.event.general.metadataUpdated	0
+109	1048585	13	19	2023-03-25 01:48:01	268435458	submission.event.general.metadataUpdated	0
+110	515	13	19	2023-03-25 01:48:12	1342177281	submission.event.fileUploaded	0
+111	1048585	13	19	2023-03-25 01:48:12	1342177288	submission.event.fileRevised	0
+112	515	13	19	2023-03-25 01:48:14	1342177296	submission.event.fileEdited	0
+113	1048585	13	19	2023-03-25 01:48:14	1342177296	submission.event.fileEdited	0
+114	1048585	13	19	2023-03-25 01:48:16	268435457	submission.event.submissionSubmitted	0
+115	1048585	13	3	2023-03-25 01:48:24	268435462	publication.event.published	0
+116	1048585	14	20	2023-03-25 01:48:33	268435458	submission.event.general.metadataUpdated	0
+117	1048585	14	20	2023-03-25 01:48:34	268435458	submission.event.general.metadataUpdated	0
+118	515	14	20	2023-03-25 01:48:45	1342177281	submission.event.fileUploaded	0
+119	1048585	14	20	2023-03-25 01:48:45	1342177288	submission.event.fileRevised	0
+120	515	14	20	2023-03-25 01:48:47	1342177296	submission.event.fileEdited	0
+121	1048585	14	20	2023-03-25 01:48:47	1342177296	submission.event.fileEdited	0
+122	1048585	14	20	2023-03-25 01:48:48	268435457	submission.event.submissionSubmitted	0
+123	1048585	14	3	2023-03-25 01:48:56	268435462	publication.event.published	0
+124	1048585	15	21	2023-03-25 01:49:06	268435458	submission.event.general.metadataUpdated	0
+125	1048585	15	21	2023-03-25 01:49:06	268435458	submission.event.general.metadataUpdated	0
+126	515	15	21	2023-03-25 01:49:17	1342177281	submission.event.fileUploaded	0
+127	1048585	15	21	2023-03-25 01:49:17	1342177288	submission.event.fileRevised	0
+128	515	15	21	2023-03-25 01:49:19	1342177296	submission.event.fileEdited	0
+129	1048585	15	21	2023-03-25 01:49:19	1342177296	submission.event.fileEdited	0
+130	1048585	15	21	2023-03-25 01:49:20	268435457	submission.event.submissionSubmitted	0
+131	1048585	15	3	2023-03-25 01:49:28	268435462	publication.event.published	0
+132	1048585	16	22	2023-03-25 01:49:37	268435458	submission.event.general.metadataUpdated	0
+133	1048585	16	22	2023-03-25 01:49:38	268435458	submission.event.general.metadataUpdated	0
+134	515	16	22	2023-03-25 01:49:49	1342177281	submission.event.fileUploaded	0
+135	1048585	16	22	2023-03-25 01:49:49	1342177288	submission.event.fileRevised	0
+136	515	16	22	2023-03-25 01:49:51	1342177296	submission.event.fileEdited	0
+137	1048585	16	22	2023-03-25 01:49:51	1342177296	submission.event.fileEdited	0
+138	1048585	16	22	2023-03-25 01:49:52	268435457	submission.event.submissionSubmitted	0
+139	1048585	16	3	2023-03-25 01:50:00	268435462	publication.event.published	0
+140	1048585	17	23	2023-03-25 01:50:10	268435458	submission.event.general.metadataUpdated	0
+141	1048585	17	23	2023-03-25 01:50:10	268435458	submission.event.general.metadataUpdated	0
+142	515	17	23	2023-03-25 01:50:21	1342177281	submission.event.fileUploaded	0
+143	1048585	17	23	2023-03-25 01:50:21	1342177288	submission.event.fileRevised	0
+144	515	17	23	2023-03-25 01:50:23	1342177296	submission.event.fileEdited	0
+145	1048585	17	23	2023-03-25 01:50:23	1342177296	submission.event.fileEdited	0
+146	1048585	17	23	2023-03-25 01:50:24	268435457	submission.event.submissionSubmitted	0
+147	1048585	17	3	2023-03-25 01:50:33	268435462	publication.event.published	0
+148	1048585	18	24	2023-03-25 01:50:42	268435458	submission.event.general.metadataUpdated	0
+149	1048585	18	24	2023-03-25 01:50:43	268435458	submission.event.general.metadataUpdated	0
+150	515	18	24	2023-03-25 01:50:53	1342177281	submission.event.fileUploaded	0
+151	1048585	18	24	2023-03-25 01:50:53	1342177288	submission.event.fileRevised	0
+152	515	18	24	2023-03-25 01:50:56	1342177296	submission.event.fileEdited	0
+153	1048585	18	24	2023-03-25 01:50:56	1342177296	submission.event.fileEdited	0
+154	1048585	18	24	2023-03-25 01:50:57	268435457	submission.event.submissionSubmitted	0
+155	1048585	18	3	2023-03-25 01:51:05	268435462	publication.event.published	0
+156	1048585	19	25	2023-03-25 01:51:14	268435458	submission.event.general.metadataUpdated	0
+157	1048585	19	25	2023-03-25 01:51:15	268435458	submission.event.general.metadataUpdated	0
+158	515	19	25	2023-03-25 01:51:25	1342177281	submission.event.fileUploaded	0
+159	1048585	19	25	2023-03-25 01:51:25	1342177288	submission.event.fileRevised	0
+160	515	19	25	2023-03-25 01:51:28	1342177296	submission.event.fileEdited	0
+161	1048585	19	25	2023-03-25 01:51:28	1342177296	submission.event.fileEdited	0
+162	1048585	19	25	2023-03-25 01:51:29	268435457	submission.event.submissionSubmitted	0
+163	1048585	19	3	2023-03-25 01:51:37	268435462	publication.event.published	0
 \.
 
 
@@ -5796,552 +7704,559 @@ SELECT pg_catalog.setval('public.event_log_log_id_seq', 163, true);
 -- Data for Name: event_log_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.event_log_settings (log_id, setting_name, setting_value, setting_type) FROM stdin;
-3	fileStage	10	int
-3	sourceSubmissionFileId	\N	string
-3	submissionFileId	1	int
-3	fileId	1	int
-3	submissionId	1	int
-3	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-3	username	ccorino	string
-4	fileStage	10	int
-4	submissionFileId	1	int
-4	fileId	1	int
-4	submissionId	1	int
-4	username	ccorino	string
-4	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-5	fileStage	10	int
-5	sourceSubmissionFileId	\N	string
-5	submissionFileId	1	int
-5	fileId	1	int
-5	submissionId	1	int
-5	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-5	username	ccorino	string
-6	fileStage	10	int
-6	sourceSubmissionFileId	\N	string
-6	submissionFileId	1	int
-6	fileId	1	int
-6	submissionId	1	int
-6	username	ccorino	string
-6	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-6	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-11	fileStage	10	int
-11	sourceSubmissionFileId	\N	string
-11	submissionFileId	2	int
-11	fileId	2	int
-11	submissionId	2	int
-11	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-11	username	ckwantes	string
-12	fileStage	10	int
-12	submissionFileId	2	int
-12	fileId	2	int
-12	submissionId	2	int
-12	username	ckwantes	string
-12	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-13	fileStage	10	int
-13	sourceSubmissionFileId	\N	string
-13	submissionFileId	2	int
-13	fileId	2	int
-13	submissionId	2	int
-13	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-13	username	ckwantes	string
-14	fileStage	10	int
-14	sourceSubmissionFileId	\N	string
-14	submissionFileId	2	int
-14	fileId	2	int
-14	submissionId	2	int
-14	username	ckwantes	string
-14	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-14	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-19	fileStage	10	int
-19	sourceSubmissionFileId	\N	string
-19	submissionFileId	3	int
-19	fileId	3	int
-19	submissionId	3	int
-19	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-19	username	cmontgomerie	string
-20	fileStage	10	int
-20	submissionFileId	3	int
-20	fileId	3	int
-20	submissionId	3	int
-20	username	cmontgomerie	string
-20	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-21	fileStage	10	int
-21	sourceSubmissionFileId	\N	string
-21	submissionFileId	3	int
-21	fileId	3	int
-21	submissionId	3	int
-21	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-21	username	cmontgomerie	string
-22	fileStage	10	int
-22	sourceSubmissionFileId	\N	string
-22	submissionFileId	3	int
-22	fileId	3	int
-22	submissionId	3	int
-22	username	cmontgomerie	string
-22	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-22	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-34	fileStage	10	int
-34	sourceSubmissionFileId	\N	string
-34	submissionFileId	4	int
-34	fileId	4	int
-34	submissionId	4	int
-34	originalFileName	Genetic transformation of forest trees.pdf	string
-34	username	ddiouf	string
-35	fileStage	10	int
-35	submissionFileId	4	int
-35	fileId	4	int
-35	submissionId	4	int
-35	username	ddiouf	string
-35	name	Genetic transformation of forest trees.pdf	string
-36	fileStage	10	int
-36	sourceSubmissionFileId	\N	string
-36	submissionFileId	4	int
-36	fileId	4	int
-36	submissionId	4	int
-36	originalFileName	Genetic transformation of forest trees.pdf	string
-36	username	ddiouf	string
-37	fileStage	10	int
-37	sourceSubmissionFileId	\N	string
-37	submissionFileId	4	int
-37	fileId	4	int
-37	submissionId	4	int
-37	username	ddiouf	string
-37	originalFileName	Genetic transformation of forest trees.pdf	string
-37	name	Genetic transformation of forest trees.pdf	string
-39	editorId	3	int
-39	editorName	Daniel Barnes	string
-39	submissionId	4	int
-39	decision	8	int
-40	editorId	3	int
-40	editorName	Daniel Barnes	string
-40	submissionId	4	int
-40	decision	16	int
-41	editorId	3	int
-41	editorName	Daniel Barnes	string
-41	submissionId	4	int
-41	decision	8	int
-44	fileStage	10	int
-44	sourceSubmissionFileId	\N	string
-44	submissionFileId	5	int
-44	fileId	5	int
-44	submissionId	5	int
-44	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-44	username	dphillips	string
-45	fileStage	10	int
-45	submissionFileId	5	int
-45	fileId	5	int
-45	submissionId	5	int
-45	username	dphillips	string
-45	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-46	fileStage	10	int
-46	sourceSubmissionFileId	\N	string
-46	submissionFileId	5	int
-46	fileId	5	int
-46	submissionId	5	int
-46	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-46	username	dphillips	string
-47	fileStage	10	int
-47	sourceSubmissionFileId	\N	string
-47	submissionFileId	5	int
-47	fileId	5	int
-47	submissionId	5	int
-47	username	dphillips	string
-47	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-47	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-54	fileStage	10	int
-54	sourceSubmissionFileId	\N	string
-54	submissionFileId	6	int
-54	fileId	6	int
-54	submissionId	6	int
-54	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-54	username	dsokoloff	string
-55	fileStage	10	int
-55	submissionFileId	6	int
-55	fileId	6	int
-55	submissionId	6	int
-55	username	dsokoloff	string
-55	name	Developing efficacy beliefs in the classroom.pdf	string
-56	fileStage	10	int
-56	sourceSubmissionFileId	\N	string
-56	submissionFileId	6	int
-56	fileId	6	int
-56	submissionId	6	int
-56	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-56	username	dsokoloff	string
-57	fileStage	10	int
-57	sourceSubmissionFileId	\N	string
-57	submissionFileId	6	int
-57	fileId	6	int
-57	submissionId	6	int
-57	username	dsokoloff	string
-57	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-57	name	Developing efficacy beliefs in the classroom.pdf	string
-62	fileStage	10	int
-62	sourceSubmissionFileId	\N	string
-62	submissionFileId	7	int
-62	fileId	7	int
-62	submissionId	7	int
-62	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-62	username	eostrom	string
-63	fileStage	10	int
-63	submissionFileId	7	int
-63	fileId	7	int
-63	submissionId	7	int
-63	username	eostrom	string
-63	name	Developing efficacy beliefs in the classroom.pdf	string
-64	fileStage	10	int
-64	sourceSubmissionFileId	\N	string
-64	submissionFileId	7	int
-64	fileId	7	int
-64	submissionId	7	int
-64	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-64	username	eostrom	string
-65	fileStage	10	int
-65	sourceSubmissionFileId	\N	string
-65	submissionFileId	7	int
-65	fileId	7	int
-65	submissionId	7	int
-65	username	eostrom	string
-65	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-65	name	Developing efficacy beliefs in the classroom.pdf	string
-70	fileStage	10	int
-70	sourceSubmissionFileId	\N	string
-70	submissionFileId	8	int
-70	fileId	8	int
-70	submissionId	8	int
-70	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-70	username	fpaglieri	string
-71	fileStage	10	int
-71	submissionFileId	8	int
-71	fileId	8	int
-71	submissionId	8	int
-71	username	fpaglieri	string
-71	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-72	fileStage	10	int
-72	sourceSubmissionFileId	\N	string
-72	submissionFileId	8	int
-72	fileId	8	int
-72	submissionId	8	int
-72	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-72	username	fpaglieri	string
-73	fileStage	10	int
-73	sourceSubmissionFileId	\N	string
-73	submissionFileId	8	int
-73	fileId	8	int
-73	submissionId	8	int
-73	username	fpaglieri	string
-73	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-73	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-78	fileStage	10	int
-78	sourceSubmissionFileId	\N	string
-78	submissionFileId	9	int
-78	fileId	9	int
-78	submissionId	9	int
-78	originalFileName	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
-78	username	jmwandenga	string
-79	fileStage	10	int
-79	submissionFileId	9	int
-79	fileId	9	int
-79	submissionId	9	int
-79	username	jmwandenga	string
-79	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
-80	fileStage	10	int
-80	sourceSubmissionFileId	\N	string
-80	submissionFileId	9	int
-80	fileId	9	int
-80	submissionId	9	int
-80	originalFileName	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
-80	username	jmwandenga	string
-81	fileStage	10	int
-81	sourceSubmissionFileId	\N	string
-81	submissionFileId	9	int
-81	fileId	9	int
-81	submissionId	9	int
-81	username	jmwandenga	string
-81	originalFileName	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
-81	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
-86	fileStage	10	int
-86	sourceSubmissionFileId	\N	string
-86	submissionFileId	10	int
-86	fileId	10	int
-86	submissionId	10	int
-86	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-86	username	jnovak	string
-87	fileStage	10	int
-87	submissionFileId	10	int
-87	fileId	10	int
-87	submissionId	10	int
-87	username	jnovak	string
-87	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-88	fileStage	10	int
-88	sourceSubmissionFileId	\N	string
-88	submissionFileId	10	int
-88	fileId	10	int
-88	submissionId	10	int
-88	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-88	username	jnovak	string
-89	fileStage	10	int
-89	sourceSubmissionFileId	\N	string
-89	submissionFileId	10	int
-89	fileId	10	int
-89	submissionId	10	int
-89	username	jnovak	string
-89	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-89	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-94	fileStage	10	int
-94	sourceSubmissionFileId	\N	string
-94	submissionFileId	11	int
-94	fileId	11	int
-94	submissionId	11	int
-94	originalFileName	Learning Sustainable Design through Service.pdf	string
-94	username	kalkhafaji	string
-95	fileStage	10	int
-95	submissionFileId	11	int
-95	fileId	11	int
-95	submissionId	11	int
-95	username	kalkhafaji	string
-95	name	Learning Sustainable Design through Service.pdf	string
-96	fileStage	10	int
-96	sourceSubmissionFileId	\N	string
-96	submissionFileId	11	int
-96	fileId	11	int
-96	submissionId	11	int
-96	originalFileName	Learning Sustainable Design through Service.pdf	string
-96	username	kalkhafaji	string
-97	fileStage	10	int
-97	sourceSubmissionFileId	\N	string
-97	submissionFileId	11	int
-97	fileId	11	int
-97	submissionId	11	int
-97	username	kalkhafaji	string
-97	originalFileName	Learning Sustainable Design through Service.pdf	string
-97	name	Learning Sustainable Design through Service.pdf	string
-102	fileStage	10	int
-102	sourceSubmissionFileId	\N	string
-102	submissionFileId	12	int
-102	fileId	12	int
-102	submissionId	12	int
-102	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-102	username	lchristopher	string
-103	fileStage	10	int
-103	submissionFileId	12	int
-103	fileId	12	int
-103	submissionId	12	int
-103	username	lchristopher	string
-103	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-104	fileStage	10	int
-104	sourceSubmissionFileId	\N	string
-104	submissionFileId	12	int
-104	fileId	12	int
-104	submissionId	12	int
-104	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-104	username	lchristopher	string
-105	fileStage	10	int
-105	sourceSubmissionFileId	\N	string
-105	submissionFileId	12	int
-105	fileId	12	int
-105	submissionId	12	int
-105	username	lchristopher	string
-105	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-105	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-110	fileStage	10	int
-110	sourceSubmissionFileId	\N	string
-110	submissionFileId	13	int
-110	fileId	13	int
-110	submissionId	13	int
-110	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-110	username	lkumiega	string
-111	fileStage	10	int
-111	submissionFileId	13	int
-111	fileId	13	int
-111	submissionId	13	int
-111	username	lkumiega	string
-111	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-112	fileStage	10	int
-112	sourceSubmissionFileId	\N	string
-112	submissionFileId	13	int
-112	fileId	13	int
-112	submissionId	13	int
-112	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-112	username	lkumiega	string
-113	fileStage	10	int
-113	sourceSubmissionFileId	\N	string
-113	submissionFileId	13	int
-113	fileId	13	int
-113	submissionId	13	int
-113	username	lkumiega	string
-113	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-113	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-118	fileStage	10	int
-118	sourceSubmissionFileId	\N	string
-118	submissionFileId	14	int
-118	fileId	14	int
-118	submissionId	14	int
-118	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-118	username	pdaniel	string
-119	fileStage	10	int
-119	submissionFileId	14	int
-119	fileId	14	int
-119	submissionId	14	int
-119	username	pdaniel	string
-119	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-120	fileStage	10	int
-120	sourceSubmissionFileId	\N	string
-120	submissionFileId	14	int
-120	fileId	14	int
-120	submissionId	14	int
-120	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-120	username	pdaniel	string
-121	fileStage	10	int
-121	sourceSubmissionFileId	\N	string
-121	submissionFileId	14	int
-121	fileId	14	int
-121	submissionId	14	int
-121	username	pdaniel	string
-121	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-121	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-126	fileStage	10	int
-126	sourceSubmissionFileId	\N	string
-126	submissionFileId	15	int
-126	fileId	15	int
-126	submissionId	15	int
-126	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-126	username	rbaiyewu	string
-127	fileStage	10	int
-127	submissionFileId	15	int
-127	fileId	15	int
-127	submissionId	15	int
-127	username	rbaiyewu	string
-127	name	Yam diseases and its management in Nigeria.pdf	string
-128	fileStage	10	int
-128	sourceSubmissionFileId	\N	string
-128	submissionFileId	15	int
-128	fileId	15	int
-128	submissionId	15	int
-128	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-128	username	rbaiyewu	string
-129	fileStage	10	int
-129	sourceSubmissionFileId	\N	string
-129	submissionFileId	15	int
-129	fileId	15	int
-129	submissionId	15	int
-129	username	rbaiyewu	string
-129	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-129	name	Yam diseases and its management in Nigeria.pdf	string
-134	fileStage	10	int
-134	sourceSubmissionFileId	\N	string
-134	submissionFileId	16	int
-134	fileId	16	int
-134	submissionId	16	int
-134	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-134	username	rrossi	string
-135	fileStage	10	int
-135	submissionFileId	16	int
-135	fileId	16	int
-135	submissionId	16	int
-135	username	rrossi	string
-135	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-136	fileStage	10	int
-136	sourceSubmissionFileId	\N	string
-136	submissionFileId	16	int
-136	fileId	16	int
-136	submissionId	16	int
-136	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-136	username	rrossi	string
-137	fileStage	10	int
-137	sourceSubmissionFileId	\N	string
-137	submissionFileId	16	int
-137	fileId	16	int
-137	submissionId	16	int
-137	username	rrossi	string
-137	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-137	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-142	fileStage	10	int
-142	sourceSubmissionFileId	\N	string
-142	submissionFileId	17	int
-142	fileId	17	int
-142	submissionId	17	int
-142	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-142	username	vkarbasizaed	string
-143	fileStage	10	int
-143	submissionFileId	17	int
-143	fileId	17	int
-143	submissionId	17	int
-143	username	vkarbasizaed	string
-143	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-144	fileStage	10	int
-144	sourceSubmissionFileId	\N	string
-144	submissionFileId	17	int
-144	fileId	17	int
-144	submissionId	17	int
-144	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-144	username	vkarbasizaed	string
-145	fileStage	10	int
-145	sourceSubmissionFileId	\N	string
-145	submissionFileId	17	int
-145	fileId	17	int
-145	submissionId	17	int
-145	username	vkarbasizaed	string
-145	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-145	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-150	fileStage	10	int
-150	sourceSubmissionFileId	\N	string
-150	submissionFileId	18	int
-150	fileId	18	int
-150	submissionId	18	int
-150	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-150	username	vwilliamson	string
-151	fileStage	10	int
-151	submissionFileId	18	int
-151	fileId	18	int
-151	submissionId	18	int
-151	username	vwilliamson	string
-151	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-152	fileStage	10	int
-152	sourceSubmissionFileId	\N	string
-152	submissionFileId	18	int
-152	fileId	18	int
-152	submissionId	18	int
-152	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-152	username	vwilliamson	string
-153	fileStage	10	int
-153	sourceSubmissionFileId	\N	string
-153	submissionFileId	18	int
-153	fileId	18	int
-153	submissionId	18	int
-153	username	vwilliamson	string
-153	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-153	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-158	fileStage	10	int
-158	sourceSubmissionFileId	\N	string
-158	submissionFileId	19	int
-158	fileId	19	int
-158	submissionId	19	int
-158	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-158	username	zwoods	string
-159	fileStage	10	int
-159	submissionFileId	19	int
-159	fileId	19	int
-159	submissionId	19	int
-159	username	zwoods	string
-159	name	Finocchiaro: Arguments About Arguments.pdf	string
-160	fileStage	10	int
-160	sourceSubmissionFileId	\N	string
-160	submissionFileId	19	int
-160	fileId	19	int
-160	submissionId	19	int
-160	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-160	username	zwoods	string
-161	fileStage	10	int
-161	sourceSubmissionFileId	\N	string
-161	submissionFileId	19	int
-161	fileId	19	int
-161	submissionId	19	int
-161	username	zwoods	string
-161	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-161	name	Finocchiaro: Arguments About Arguments.pdf	string
+COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, setting_value, setting_type) FROM stdin;
+1	3	fileStage	10	int
+2	3	sourceSubmissionFileId	\N	string
+3	3	submissionFileId	1	int
+4	3	fileId	1	int
+5	3	submissionId	1	int
+6	3	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+7	3	username	ccorino	string
+8	4	fileStage	10	int
+9	4	submissionFileId	1	int
+10	4	fileId	1	int
+11	4	submissionId	1	int
+12	4	username	ccorino	string
+13	4	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+14	5	fileStage	10	int
+15	5	sourceSubmissionFileId	\N	string
+16	5	submissionFileId	1	int
+17	5	fileId	1	int
+18	5	submissionId	1	int
+19	5	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+20	5	username	ccorino	string
+21	6	fileStage	10	int
+22	6	sourceSubmissionFileId	\N	string
+23	6	submissionFileId	1	int
+24	6	fileId	1	int
+25	6	submissionId	1	int
+26	6	username	ccorino	string
+27	6	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+28	6	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+29	11	fileStage	10	int
+30	11	sourceSubmissionFileId	\N	string
+31	11	submissionFileId	2	int
+32	11	fileId	2	int
+33	11	submissionId	2	int
+34	11	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+35	11	username	ckwantes	string
+36	12	fileStage	10	int
+37	12	submissionFileId	2	int
+38	12	fileId	2	int
+39	12	submissionId	2	int
+40	12	username	ckwantes	string
+41	12	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+42	13	fileStage	10	int
+43	13	sourceSubmissionFileId	\N	string
+44	13	submissionFileId	2	int
+45	13	fileId	2	int
+46	13	submissionId	2	int
+47	13	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+48	13	username	ckwantes	string
+49	14	fileStage	10	int
+50	14	sourceSubmissionFileId	\N	string
+51	14	submissionFileId	2	int
+52	14	fileId	2	int
+53	14	submissionId	2	int
+54	14	username	ckwantes	string
+55	14	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+56	14	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+57	19	fileStage	10	int
+58	19	sourceSubmissionFileId	\N	string
+59	19	submissionFileId	3	int
+60	19	fileId	3	int
+61	19	submissionId	3	int
+62	19	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+63	19	username	cmontgomerie	string
+64	20	fileStage	10	int
+65	20	submissionFileId	3	int
+66	20	fileId	3	int
+67	20	submissionId	3	int
+68	20	username	cmontgomerie	string
+69	20	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+70	21	fileStage	10	int
+71	21	sourceSubmissionFileId	\N	string
+72	21	submissionFileId	3	int
+73	21	fileId	3	int
+74	21	submissionId	3	int
+75	21	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+76	21	username	cmontgomerie	string
+77	22	fileStage	10	int
+78	22	sourceSubmissionFileId	\N	string
+79	22	submissionFileId	3	int
+80	22	fileId	3	int
+81	22	submissionId	3	int
+82	22	username	cmontgomerie	string
+83	22	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+84	22	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+85	34	fileStage	10	int
+86	34	sourceSubmissionFileId	\N	string
+87	34	submissionFileId	4	int
+88	34	fileId	4	int
+89	34	submissionId	4	int
+90	34	originalFileName	Genetic transformation of forest trees.pdf	string
+91	34	username	ddiouf	string
+92	35	fileStage	10	int
+93	35	submissionFileId	4	int
+94	35	fileId	4	int
+95	35	submissionId	4	int
+96	35	username	ddiouf	string
+97	35	name	Genetic transformation of forest trees.pdf	string
+98	36	fileStage	10	int
+99	36	sourceSubmissionFileId	\N	string
+100	36	submissionFileId	4	int
+101	36	fileId	4	int
+102	36	submissionId	4	int
+103	36	originalFileName	Genetic transformation of forest trees.pdf	string
+104	36	username	ddiouf	string
+105	37	fileStage	10	int
+106	37	sourceSubmissionFileId	\N	string
+107	37	submissionFileId	4	int
+108	37	fileId	4	int
+109	37	submissionId	4	int
+110	37	username	ddiouf	string
+111	37	originalFileName	Genetic transformation of forest trees.pdf	string
+112	37	name	Genetic transformation of forest trees.pdf	string
+113	39	editorId	3	int
+114	39	editorName	Daniel Barnes	string
+115	39	submissionId	4	int
+116	39	decision	8	int
+117	40	editorId	3	int
+118	40	editorName	Daniel Barnes	string
+119	40	submissionId	4	int
+120	40	decision	16	int
+121	41	editorId	3	int
+122	41	editorName	Daniel Barnes	string
+123	41	submissionId	4	int
+124	41	decision	8	int
+125	44	fileStage	10	int
+126	44	sourceSubmissionFileId	\N	string
+127	44	submissionFileId	5	int
+128	44	fileId	5	int
+129	44	submissionId	5	int
+130	44	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+131	44	username	dphillips	string
+132	45	fileStage	10	int
+133	45	submissionFileId	5	int
+134	45	fileId	5	int
+135	45	submissionId	5	int
+136	45	username	dphillips	string
+137	45	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+138	46	fileStage	10	int
+139	46	sourceSubmissionFileId	\N	string
+140	46	submissionFileId	5	int
+141	46	fileId	5	int
+142	46	submissionId	5	int
+143	46	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+144	46	username	dphillips	string
+145	47	fileStage	10	int
+146	47	sourceSubmissionFileId	\N	string
+147	47	submissionFileId	5	int
+148	47	fileId	5	int
+149	47	submissionId	5	int
+150	47	username	dphillips	string
+151	47	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+152	47	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+153	54	fileStage	10	int
+154	54	sourceSubmissionFileId	\N	string
+155	54	submissionFileId	6	int
+156	54	fileId	6	int
+157	54	submissionId	6	int
+158	54	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+159	54	username	dsokoloff	string
+160	55	fileStage	10	int
+161	55	submissionFileId	6	int
+162	55	fileId	6	int
+163	55	submissionId	6	int
+164	55	username	dsokoloff	string
+165	55	name	Developing efficacy beliefs in the classroom.pdf	string
+166	56	fileStage	10	int
+167	56	sourceSubmissionFileId	\N	string
+168	56	submissionFileId	6	int
+169	56	fileId	6	int
+170	56	submissionId	6	int
+171	56	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+172	56	username	dsokoloff	string
+173	57	fileStage	10	int
+174	57	sourceSubmissionFileId	\N	string
+175	57	submissionFileId	6	int
+176	57	fileId	6	int
+177	57	submissionId	6	int
+178	57	username	dsokoloff	string
+179	57	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+180	57	name	Developing efficacy beliefs in the classroom.pdf	string
+181	62	fileStage	10	int
+182	62	sourceSubmissionFileId	\N	string
+183	62	submissionFileId	7	int
+184	62	fileId	7	int
+185	62	submissionId	7	int
+186	62	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+187	62	username	eostrom	string
+188	63	fileStage	10	int
+189	63	submissionFileId	7	int
+190	63	fileId	7	int
+191	63	submissionId	7	int
+192	63	username	eostrom	string
+193	63	name	Developing efficacy beliefs in the classroom.pdf	string
+194	64	fileStage	10	int
+195	64	sourceSubmissionFileId	\N	string
+196	64	submissionFileId	7	int
+197	64	fileId	7	int
+198	64	submissionId	7	int
+199	64	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+200	64	username	eostrom	string
+201	65	fileStage	10	int
+202	65	sourceSubmissionFileId	\N	string
+203	65	submissionFileId	7	int
+204	65	fileId	7	int
+205	65	submissionId	7	int
+206	65	username	eostrom	string
+207	65	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+208	65	name	Developing efficacy beliefs in the classroom.pdf	string
+209	70	fileStage	10	int
+210	70	sourceSubmissionFileId	\N	string
+211	70	submissionFileId	8	int
+212	70	fileId	8	int
+213	70	submissionId	8	int
+214	70	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
+215	70	username	fpaglieri	string
+216	71	fileStage	10	int
+217	71	submissionFileId	8	int
+218	71	fileId	8	int
+219	71	submissionId	8	int
+220	71	username	fpaglieri	string
+221	71	name	Hansen & Pinto: Reason Reclaimed.pdf	string
+222	72	fileStage	10	int
+223	72	sourceSubmissionFileId	\N	string
+224	72	submissionFileId	8	int
+225	72	fileId	8	int
+226	72	submissionId	8	int
+227	72	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
+228	72	username	fpaglieri	string
+229	73	fileStage	10	int
+230	73	sourceSubmissionFileId	\N	string
+231	73	submissionFileId	8	int
+232	73	fileId	8	int
+233	73	submissionId	8	int
+234	73	username	fpaglieri	string
+235	73	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
+236	73	name	Hansen & Pinto: Reason Reclaimed.pdf	string
+237	78	fileStage	10	int
+238	78	sourceSubmissionFileId	\N	string
+239	78	submissionFileId	9	int
+240	78	fileId	9	int
+241	78	submissionId	9	int
+242	78	originalFileName	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
+243	78	username	jmwandenga	string
+244	79	fileStage	10	int
+245	79	submissionFileId	9	int
+246	79	fileId	9	int
+247	79	submissionId	9	int
+248	79	username	jmwandenga	string
+249	79	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
+250	80	fileStage	10	int
+251	80	sourceSubmissionFileId	\N	string
+252	80	submissionFileId	9	int
+253	80	fileId	9	int
+254	80	submissionId	9	int
+255	80	originalFileName	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
+256	80	username	jmwandenga	string
+257	81	fileStage	10	int
+258	81	sourceSubmissionFileId	\N	string
+259	81	submissionFileId	9	int
+260	81	fileId	9	int
+261	81	submissionId	9	int
+262	81	username	jmwandenga	string
+263	81	originalFileName	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
+264	81	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
+265	86	fileStage	10	int
+266	86	sourceSubmissionFileId	\N	string
+267	86	submissionFileId	10	int
+268	86	fileId	10	int
+269	86	submissionId	10	int
+270	86	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+271	86	username	jnovak	string
+272	87	fileStage	10	int
+273	87	submissionFileId	10	int
+274	87	fileId	10	int
+275	87	submissionId	10	int
+276	87	username	jnovak	string
+277	87	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+278	88	fileStage	10	int
+279	88	sourceSubmissionFileId	\N	string
+280	88	submissionFileId	10	int
+281	88	fileId	10	int
+282	88	submissionId	10	int
+283	88	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+284	88	username	jnovak	string
+285	89	fileStage	10	int
+286	89	sourceSubmissionFileId	\N	string
+287	89	submissionFileId	10	int
+288	89	fileId	10	int
+289	89	submissionId	10	int
+290	89	username	jnovak	string
+291	89	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+292	89	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+293	94	fileStage	10	int
+294	94	sourceSubmissionFileId	\N	string
+295	94	submissionFileId	11	int
+296	94	fileId	11	int
+297	94	submissionId	11	int
+298	94	originalFileName	Learning Sustainable Design through Service.pdf	string
+299	94	username	kalkhafaji	string
+300	95	fileStage	10	int
+301	95	submissionFileId	11	int
+302	95	fileId	11	int
+303	95	submissionId	11	int
+304	95	username	kalkhafaji	string
+305	95	name	Learning Sustainable Design through Service.pdf	string
+306	96	fileStage	10	int
+307	96	sourceSubmissionFileId	\N	string
+308	96	submissionFileId	11	int
+309	96	fileId	11	int
+310	96	submissionId	11	int
+311	96	originalFileName	Learning Sustainable Design through Service.pdf	string
+312	96	username	kalkhafaji	string
+313	97	fileStage	10	int
+314	97	sourceSubmissionFileId	\N	string
+315	97	submissionFileId	11	int
+316	97	fileId	11	int
+317	97	submissionId	11	int
+318	97	username	kalkhafaji	string
+319	97	originalFileName	Learning Sustainable Design through Service.pdf	string
+320	97	name	Learning Sustainable Design through Service.pdf	string
+321	102	fileStage	10	int
+322	102	sourceSubmissionFileId	\N	string
+323	102	submissionFileId	12	int
+324	102	fileId	12	int
+325	102	submissionId	12	int
+326	102	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+327	102	username	lchristopher	string
+328	103	fileStage	10	int
+329	103	submissionFileId	12	int
+330	103	fileId	12	int
+331	103	submissionId	12	int
+332	103	username	lchristopher	string
+333	103	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+334	104	fileStage	10	int
+335	104	sourceSubmissionFileId	\N	string
+336	104	submissionFileId	12	int
+337	104	fileId	12	int
+338	104	submissionId	12	int
+339	104	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+340	104	username	lchristopher	string
+341	105	fileStage	10	int
+342	105	sourceSubmissionFileId	\N	string
+343	105	submissionFileId	12	int
+344	105	fileId	12	int
+345	105	submissionId	12	int
+346	105	username	lchristopher	string
+347	105	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+348	105	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+349	110	fileStage	10	int
+350	110	sourceSubmissionFileId	\N	string
+351	110	submissionFileId	13	int
+352	110	fileId	13	int
+353	110	submissionId	13	int
+354	110	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+355	110	username	lkumiega	string
+356	111	fileStage	10	int
+357	111	submissionFileId	13	int
+358	111	fileId	13	int
+359	111	submissionId	13	int
+360	111	username	lkumiega	string
+361	111	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+362	112	fileStage	10	int
+363	112	sourceSubmissionFileId	\N	string
+364	112	submissionFileId	13	int
+365	112	fileId	13	int
+366	112	submissionId	13	int
+367	112	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+368	112	username	lkumiega	string
+369	113	fileStage	10	int
+370	113	sourceSubmissionFileId	\N	string
+371	113	submissionFileId	13	int
+372	113	fileId	13	int
+373	113	submissionId	13	int
+374	113	username	lkumiega	string
+375	113	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+376	113	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+377	118	fileStage	10	int
+378	118	sourceSubmissionFileId	\N	string
+379	118	submissionFileId	14	int
+380	118	fileId	14	int
+381	118	submissionId	14	int
+382	118	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+383	118	username	pdaniel	string
+384	119	fileStage	10	int
+385	119	submissionFileId	14	int
+386	119	fileId	14	int
+387	119	submissionId	14	int
+388	119	username	pdaniel	string
+389	119	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+390	120	fileStage	10	int
+391	120	sourceSubmissionFileId	\N	string
+392	120	submissionFileId	14	int
+393	120	fileId	14	int
+394	120	submissionId	14	int
+395	120	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+396	120	username	pdaniel	string
+397	121	fileStage	10	int
+398	121	sourceSubmissionFileId	\N	string
+399	121	submissionFileId	14	int
+400	121	fileId	14	int
+401	121	submissionId	14	int
+402	121	username	pdaniel	string
+403	121	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+404	121	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+405	126	fileStage	10	int
+406	126	sourceSubmissionFileId	\N	string
+407	126	submissionFileId	15	int
+408	126	fileId	15	int
+409	126	submissionId	15	int
+410	126	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+411	126	username	rbaiyewu	string
+412	127	fileStage	10	int
+413	127	submissionFileId	15	int
+414	127	fileId	15	int
+415	127	submissionId	15	int
+416	127	username	rbaiyewu	string
+417	127	name	Yam diseases and its management in Nigeria.pdf	string
+418	128	fileStage	10	int
+419	128	sourceSubmissionFileId	\N	string
+420	128	submissionFileId	15	int
+421	128	fileId	15	int
+422	128	submissionId	15	int
+423	128	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+424	128	username	rbaiyewu	string
+425	129	fileStage	10	int
+426	129	sourceSubmissionFileId	\N	string
+427	129	submissionFileId	15	int
+428	129	fileId	15	int
+429	129	submissionId	15	int
+430	129	username	rbaiyewu	string
+431	129	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+432	129	name	Yam diseases and its management in Nigeria.pdf	string
+433	134	fileStage	10	int
+434	134	sourceSubmissionFileId	\N	string
+435	134	submissionFileId	16	int
+436	134	fileId	16	int
+437	134	submissionId	16	int
+438	134	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+439	134	username	rrossi	string
+440	135	fileStage	10	int
+441	135	submissionFileId	16	int
+442	135	fileId	16	int
+443	135	submissionId	16	int
+444	135	username	rrossi	string
+445	135	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+446	136	fileStage	10	int
+447	136	sourceSubmissionFileId	\N	string
+448	136	submissionFileId	16	int
+449	136	fileId	16	int
+450	136	submissionId	16	int
+451	136	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+452	136	username	rrossi	string
+453	137	fileStage	10	int
+454	137	sourceSubmissionFileId	\N	string
+455	137	submissionFileId	16	int
+456	137	fileId	16	int
+457	137	submissionId	16	int
+458	137	username	rrossi	string
+459	137	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+460	137	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+461	142	fileStage	10	int
+462	142	sourceSubmissionFileId	\N	string
+463	142	submissionFileId	17	int
+464	142	fileId	17	int
+465	142	submissionId	17	int
+466	142	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+467	142	username	vkarbasizaed	string
+468	143	fileStage	10	int
+469	143	submissionFileId	17	int
+470	143	fileId	17	int
+471	143	submissionId	17	int
+472	143	username	vkarbasizaed	string
+473	143	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+474	144	fileStage	10	int
+475	144	sourceSubmissionFileId	\N	string
+476	144	submissionFileId	17	int
+477	144	fileId	17	int
+478	144	submissionId	17	int
+479	144	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+480	144	username	vkarbasizaed	string
+481	145	fileStage	10	int
+482	145	sourceSubmissionFileId	\N	string
+483	145	submissionFileId	17	int
+484	145	fileId	17	int
+485	145	submissionId	17	int
+486	145	username	vkarbasizaed	string
+487	145	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+488	145	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+489	150	fileStage	10	int
+490	150	sourceSubmissionFileId	\N	string
+491	150	submissionFileId	18	int
+492	150	fileId	18	int
+493	150	submissionId	18	int
+494	150	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+495	150	username	vwilliamson	string
+496	151	fileStage	10	int
+497	151	submissionFileId	18	int
+498	151	fileId	18	int
+499	151	submissionId	18	int
+500	151	username	vwilliamson	string
+501	151	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+502	152	fileStage	10	int
+503	152	sourceSubmissionFileId	\N	string
+504	152	submissionFileId	18	int
+505	152	fileId	18	int
+506	152	submissionId	18	int
+507	152	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+508	152	username	vwilliamson	string
+509	153	fileStage	10	int
+510	153	sourceSubmissionFileId	\N	string
+511	153	submissionFileId	18	int
+512	153	fileId	18	int
+513	153	submissionId	18	int
+514	153	username	vwilliamson	string
+515	153	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+516	153	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+517	158	fileStage	10	int
+518	158	sourceSubmissionFileId	\N	string
+519	158	submissionFileId	19	int
+520	158	fileId	19	int
+521	158	submissionId	19	int
+522	158	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+523	158	username	zwoods	string
+524	159	fileStage	10	int
+525	159	submissionFileId	19	int
+526	159	fileId	19	int
+527	159	submissionId	19	int
+528	159	username	zwoods	string
+529	159	name	Finocchiaro: Arguments About Arguments.pdf	string
+530	160	fileStage	10	int
+531	160	sourceSubmissionFileId	\N	string
+532	160	submissionFileId	19	int
+533	160	fileId	19	int
+534	160	submissionId	19	int
+535	160	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+536	160	username	zwoods	string
+537	161	fileStage	10	int
+538	161	sourceSubmissionFileId	\N	string
+539	161	submissionFileId	19	int
+540	161	fileId	19	int
+541	161	submissionId	19	int
+542	161	username	zwoods	string
+543	161	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+544	161	name	Finocchiaro: Arguments About Arguments.pdf	string
 \.
+
+
+--
+-- Name: event_log_settings_event_log_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.event_log_settings_event_log_setting_id_seq', 544, true);
 
 
 --
@@ -6364,25 +8279,25 @@ SELECT pg_catalog.setval('public.failed_jobs_id_seq', 1, false);
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	contexts/1/submissions/1/641dcb47b7a03.pdf	application/pdf
-2	contexts/1/submissions/2/641dcb75e4959.pdf	application/pdf
-3	contexts/1/submissions/3/641dcbb8e3468.pdf	application/pdf
-4	contexts/1/submissions/4/641dcbf0d1b0c.pdf	application/pdf
-5	contexts/1/submissions/5/641dcc251f1d5.pdf	application/pdf
-6	contexts/1/submissions/6/641dcc5200414.pdf	application/pdf
-7	contexts/1/submissions/7/641dcc721d71e.pdf	application/pdf
-8	contexts/1/submissions/8/641dcc92e4738.pdf	application/pdf
-9	contexts/1/submissions/9/641dccb2c9fd5.pdf	application/pdf
-10	contexts/1/submissions/10/641dccd31aae7.pdf	application/pdf
-11	contexts/1/submissions/11/641dccf3ee61a.pdf	application/pdf
-12	contexts/1/submissions/12/641dcd152266d.pdf	application/pdf
-13	contexts/1/submissions/13/641dcd3528565.pdf	application/pdf
-14	contexts/1/submissions/14/641dcd55b98bc.pdf	application/pdf
-15	contexts/1/submissions/15/641dcd7661a2c.pdf	application/pdf
-16	contexts/1/submissions/16/641dcd972b28f.pdf	application/pdf
-17	contexts/1/submissions/17/641dcdb753949.pdf	application/pdf
-18	contexts/1/submissions/18/641dcdd7c6714.pdf	application/pdf
-19	contexts/1/submissions/19/641dcdf88c8e2.pdf	application/pdf
+1	contexts/1/submissions/1/641e50fc6cb45.pdf	application/pdf
+2	contexts/1/submissions/2/641e512920aff.pdf	application/pdf
+3	contexts/1/submissions/3/641e5167e81f5.pdf	application/pdf
+4	contexts/1/submissions/4/641e519e4f58a.pdf	application/pdf
+5	contexts/1/submissions/5/641e51d16080a.pdf	application/pdf
+6	contexts/1/submissions/6/641e51fd35336.pdf	application/pdf
+7	contexts/1/submissions/7/641e521c68b8c.pdf	application/pdf
+8	contexts/1/submissions/8/641e523c51a89.pdf	application/pdf
+9	contexts/1/submissions/9/641e525c046f6.pdf	application/pdf
+10	contexts/1/submissions/10/641e527bc59e5.pdf	application/pdf
+11	contexts/1/submissions/11/641e529c04358.pdf	application/pdf
+12	contexts/1/submissions/12/641e52bce26c2.pdf	application/pdf
+13	contexts/1/submissions/13/641e52dc7c934.pdf	application/pdf
+14	contexts/1/submissions/14/641e52fd0280d.pdf	application/pdf
+15	contexts/1/submissions/15/641e531d6022f.pdf	application/pdf
+16	contexts/1/submissions/16/641e533d0b463.pdf	application/pdf
+17	contexts/1/submissions/17/641e535d0a06a.pdf	application/pdf
+18	contexts/1/submissions/18/641e537dddf8c.pdf	application/pdf
+19	contexts/1/submissions/19/641e539db3689.pdf	application/pdf
 \.
 
 
@@ -6424,8 +8339,15 @@ SELECT pg_catalog.setval('public.filter_groups_filter_group_id_seq', 12, true);
 -- Data for Name: filter_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.filter_settings (filter_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+COPY public.filter_settings (filter_setting_id, filter_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
+
+
+--
+-- Name: filter_settings_filter_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.filter_settings_filter_setting_id_seq', 1, false);
 
 
 --
@@ -6459,32 +8381,39 @@ SELECT pg_catalog.setval('public.filters_filter_id_seq', 12, true);
 -- Data for Name: genre_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.genre_settings (genre_id, locale, setting_name, setting_value, setting_type) FROM stdin;
-1	en	name	Preprint Text	string
-1	fr_CA	name	Texte de la prépublication	string
-2	en	name	Research Instrument	string
-2	fr_CA	name	##default.genres.researchInstrument##	string
-3	en	name	Research Materials	string
-3	fr_CA	name	##default.genres.researchMaterials##	string
-4	en	name	Research Results	string
-4	fr_CA	name	##default.genres.researchResults##	string
-5	en	name	Transcripts	string
-5	fr_CA	name	##default.genres.transcripts##	string
-6	en	name	Data Analysis	string
-6	fr_CA	name	##default.genres.dataAnalysis##	string
-7	en	name	Data Set	string
-7	fr_CA	name	##default.genres.dataSet##	string
-8	en	name	Source Texts	string
-8	fr_CA	name	##default.genres.sourceTexts##	string
-9	en	name	Multimedia	string
-9	fr_CA	name	Multimédias	string
-10	en	name	Image	string
-10	fr_CA	name	Image	string
-11	en	name	HTML Stylesheet	string
-11	fr_CA	name	Feuille de style HTML	string
-12	en	name	Other	string
-12	fr_CA	name	Autre	string
+COPY public.genre_settings (genre_setting_id, genre_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+1	1	en	name	Preprint Text	string
+2	1	fr_CA	name	Texte de la prépublication	string
+3	2	en	name	Research Instrument	string
+4	2	fr_CA	name	##default.genres.researchInstrument##	string
+5	3	en	name	Research Materials	string
+6	3	fr_CA	name	##default.genres.researchMaterials##	string
+7	4	en	name	Research Results	string
+8	4	fr_CA	name	##default.genres.researchResults##	string
+9	5	en	name	Transcripts	string
+10	5	fr_CA	name	##default.genres.transcripts##	string
+11	6	en	name	Data Analysis	string
+12	6	fr_CA	name	##default.genres.dataAnalysis##	string
+13	7	en	name	Data Set	string
+14	7	fr_CA	name	##default.genres.dataSet##	string
+15	8	en	name	Source Texts	string
+16	8	fr_CA	name	##default.genres.sourceTexts##	string
+17	9	en	name	Multimedia	string
+18	9	fr_CA	name	Multimédias	string
+19	10	en	name	Image	string
+20	10	fr_CA	name	Image	string
+21	11	en	name	HTML Stylesheet	string
+22	11	fr_CA	name	Feuille de style HTML	string
+23	12	en	name	Other	string
+24	12	fr_CA	name	Autre	string
 \.
+
+
+--
+-- Name: genre_settings_genre_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.genre_settings_genre_setting_id_seq', 24, true);
 
 
 --
@@ -6533,8 +8462,15 @@ SELECT pg_catalog.setval('public.institution_ip_institution_ip_id_seq', 1, false
 -- Data for Name: institution_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.institution_settings (institution_id, locale, setting_name, setting_value) FROM stdin;
+COPY public.institution_settings (institution_setting_id, institution_id, locale, setting_name, setting_value) FROM stdin;
 \.
+
+
+--
+-- Name: institution_settings_institution_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.institution_settings_institution_setting_id_seq', 1, false);
 
 
 --
@@ -6557,7 +8493,7 @@ SELECT pg_catalog.setval('public.institutions_institution_id_seq', 1, false);
 --
 
 COPY public.job_batches (id, name, total_jobs, pending_jobs, failed_jobs, failed_job_ids, options, cancelled_at, created_at, finished_at) FROM stdin;
-98c3f535-9b58-422b-b55e-f7da43d6dc7f		0	0	0	[]	YTowOnt9	\N	1679673999	\N
+98c4c131-6b49-4c7e-a691-b5043885fe93		0	0	0	[]	YTowOnt9	\N	1679708222	\N
 \.
 
 
@@ -6580,8 +8516,15 @@ SELECT pg_catalog.setval('public.jobs_id_seq', 41, true);
 -- Data for Name: library_file_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.library_file_settings (file_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+COPY public.library_file_settings (library_file_setting_id, file_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
+
+
+--
+-- Name: library_file_settings_library_file_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.library_file_settings_library_file_setting_id_seq', 1, false);
 
 
 --
@@ -6603,23 +8546,51 @@ SELECT pg_catalog.setval('public.library_files_file_id_seq', 1, false);
 -- Data for Name: metrics_context; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.metrics_context (load_id, context_id, date, metric) FROM stdin;
+COPY public.metrics_context (metrics_context_id, load_id, context_id, date, metric) FROM stdin;
 \.
+
+
+--
+-- Name: metrics_context_metrics_context_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_context_metrics_context_id_seq', 1, false);
+
+
+--
+-- Name: metrics_counter_submission_da_metrics_counter_submission_da_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_da_metrics_counter_submission_da_seq', 1, false);
 
 
 --
 -- Data for Name: metrics_counter_submission_daily; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.metrics_counter_submission_daily (load_id, context_id, submission_id, date, metric_investigations, metric_investigations_unique, metric_requests, metric_requests_unique) FROM stdin;
+COPY public.metrics_counter_submission_daily (metrics_counter_submission_daily_id, load_id, context_id, submission_id, date, metric_investigations, metric_investigations_unique, metric_requests, metric_requests_unique) FROM stdin;
 \.
+
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_i_seq1; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_in_metrics_counter_submission_i_seq1', 1, false);
+
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_in_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_in_metrics_counter_submission_in_seq', 1, false);
 
 
 --
 -- Data for Name: metrics_counter_submission_institution_daily; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.metrics_counter_submission_institution_daily (load_id, context_id, submission_id, institution_id, date, metric_investigations, metric_investigations_unique, metric_requests, metric_requests_unique) FROM stdin;
+COPY public.metrics_counter_submission_institution_daily (metrics_counter_submission_institution_daily_id, load_id, context_id, submission_id, institution_id, date, metric_investigations, metric_investigations_unique, metric_requests, metric_requests_unique) FROM stdin;
 \.
 
 
@@ -6627,15 +8598,22 @@ COPY public.metrics_counter_submission_institution_daily (load_id, context_id, s
 -- Data for Name: metrics_counter_submission_institution_monthly; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.metrics_counter_submission_institution_monthly (context_id, submission_id, institution_id, month, metric_investigations, metric_investigations_unique, metric_requests, metric_requests_unique) FROM stdin;
+COPY public.metrics_counter_submission_institution_monthly (metrics_counter_submission_institution_monthly_id, context_id, submission_id, institution_id, month, metric_investigations, metric_investigations_unique, metric_requests, metric_requests_unique) FROM stdin;
 \.
+
+
+--
+-- Name: metrics_counter_submission_mo_metrics_counter_submission_mo_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq', 1, false);
 
 
 --
 -- Data for Name: metrics_counter_submission_monthly; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.metrics_counter_submission_monthly (context_id, submission_id, month, metric_investigations, metric_investigations_unique, metric_requests, metric_requests_unique) FROM stdin;
+COPY public.metrics_counter_submission_monthly (metrics_counter_submission_monthly_id, context_id, submission_id, month, metric_investigations, metric_investigations_unique, metric_requests, metric_requests_unique) FROM stdin;
 \.
 
 
@@ -6643,7 +8621,7 @@ COPY public.metrics_counter_submission_monthly (context_id, submission_id, month
 -- Data for Name: metrics_submission; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.metrics_submission (load_id, context_id, submission_id, representation_id, submission_file_id, file_type, assoc_type, date, metric) FROM stdin;
+COPY public.metrics_submission (metrics_submission_id, load_id, context_id, submission_id, representation_id, submission_file_id, file_type, assoc_type, date, metric) FROM stdin;
 \.
 
 
@@ -6651,16 +8629,44 @@ COPY public.metrics_submission (load_id, context_id, submission_id, representati
 -- Data for Name: metrics_submission_geo_daily; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.metrics_submission_geo_daily (load_id, context_id, submission_id, country, region, city, date, metric, metric_unique) FROM stdin;
+COPY public.metrics_submission_geo_daily (metrics_submission_geo_daily_id, load_id, context_id, submission_id, country, region, city, date, metric, metric_unique) FROM stdin;
 \.
+
+
+--
+-- Name: metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq', 1, false);
+
+
+--
+-- Name: metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq', 1, false);
 
 
 --
 -- Data for Name: metrics_submission_geo_monthly; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.metrics_submission_geo_monthly (context_id, submission_id, country, region, city, month, metric, metric_unique) FROM stdin;
+COPY public.metrics_submission_geo_monthly (metrics_submission_geo_monthly_id, context_id, submission_id, country, region, city, month, metric, metric_unique) FROM stdin;
 \.
+
+
+--
+-- Name: metrics_submission_metrics_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_submission_metrics_submission_id_seq', 1, false);
+
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignm_seq1; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1', 1, false);
 
 
 --
@@ -6674,7 +8680,7 @@ SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_i
 -- Data for Name: navigation_menu_item_assignment_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.navigation_menu_item_assignment_settings (navigation_menu_item_assignment_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+COPY public.navigation_menu_item_assignment_settings (navigation_menu_item_assignment_setting_id, navigation_menu_item_assignment_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
 
 
@@ -6712,31 +8718,38 @@ COPY public.navigation_menu_item_assignments (navigation_menu_item_assignment_id
 -- Data for Name: navigation_menu_item_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.navigation_menu_item_settings (navigation_menu_item_id, locale, setting_name, setting_value, setting_type) FROM stdin;
-1		titleLocaleKey	navigation.register	string
-2		titleLocaleKey	navigation.login	string
-3		titleLocaleKey	{$loggedInUsername}	string
-4		titleLocaleKey	navigation.dashboard	string
-5		titleLocaleKey	common.viewProfile	string
-6		titleLocaleKey	navigation.admin	string
-7		titleLocaleKey	user.logOut	string
-8		titleLocaleKey	navigation.register	string
-9		titleLocaleKey	navigation.login	string
-10		titleLocaleKey	{$loggedInUsername}	string
-11		titleLocaleKey	navigation.dashboard	string
-12		titleLocaleKey	common.viewProfile	string
-13		titleLocaleKey	navigation.admin	string
-14		titleLocaleKey	user.logOut	string
-15		titleLocaleKey	manager.announcements	string
-16		titleLocaleKey	navigation.archives	string
-17		titleLocaleKey	navigation.about	string
-18		titleLocaleKey	about.aboutContext	string
-19		titleLocaleKey	about.submissions	string
-20		titleLocaleKey	about.editorialTeam	string
-21		titleLocaleKey	manager.setup.privacyStatement	string
-22		titleLocaleKey	about.contact	string
-23		titleLocaleKey	common.search	string
+COPY public.navigation_menu_item_settings (navigation_menu_item_setting_id, navigation_menu_item_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+1	1		titleLocaleKey	navigation.register	string
+2	2		titleLocaleKey	navigation.login	string
+3	3		titleLocaleKey	{$loggedInUsername}	string
+4	4		titleLocaleKey	navigation.dashboard	string
+5	5		titleLocaleKey	common.viewProfile	string
+6	6		titleLocaleKey	navigation.admin	string
+7	7		titleLocaleKey	user.logOut	string
+8	8		titleLocaleKey	navigation.register	string
+9	9		titleLocaleKey	navigation.login	string
+10	10		titleLocaleKey	{$loggedInUsername}	string
+11	11		titleLocaleKey	navigation.dashboard	string
+12	12		titleLocaleKey	common.viewProfile	string
+13	13		titleLocaleKey	navigation.admin	string
+14	14		titleLocaleKey	user.logOut	string
+15	15		titleLocaleKey	manager.announcements	string
+16	16		titleLocaleKey	navigation.archives	string
+17	17		titleLocaleKey	navigation.about	string
+18	18		titleLocaleKey	about.aboutContext	string
+19	19		titleLocaleKey	about.submissions	string
+20	20		titleLocaleKey	about.editorialTeam	string
+21	21		titleLocaleKey	manager.setup.privacyStatement	string
+22	22		titleLocaleKey	about.contact	string
+23	23		titleLocaleKey	common.search	string
 \.
+
+
+--
+-- Name: navigation_menu_item_settings_navigation_menu_item_setting__seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_item_settings_navigation_menu_item_setting__seq', 23, true);
 
 
 --
@@ -6814,8 +8827,15 @@ SELECT pg_catalog.setval('public.notes_note_id_seq', 1, false);
 -- Data for Name: notification_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.notification_settings (notification_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+COPY public.notification_settings (notification_setting_id, notification_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
+
+
+--
+-- Name: notification_settings_notification_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.notification_settings_notification_setting_id_seq', 1, true);
 
 
 --
@@ -6857,86 +8877,86 @@ SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_s
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-76	1	\N	3	16777222	2023-03-24 16:20:43	\N	1048585	18
-77	1	\N	3	16777223	2023-03-24 16:20:43	\N	1048585	18
-3	1	\N	3	16777222	2023-03-24 16:09:47	\N	1048585	1
-4	1	\N	3	16777223	2023-03-24 16:09:47	\N	1048585	1
-5	1	4	2	16777217	2023-03-24 16:09:47	\N	1048585	1
-6	1	5	2	16777217	2023-03-24 16:09:47	\N	1048585	1
-7	1	\N	3	16777222	2023-03-24 16:11:00	\N	1048585	2
-8	1	\N	3	16777223	2023-03-24 16:11:00	\N	1048585	2
-9	1	4	2	16777217	2023-03-24 16:11:00	\N	1048585	2
-10	1	5	2	16777217	2023-03-24 16:11:00	\N	1048585	2
-11	1	\N	3	16777222	2023-03-24 16:11:40	\N	1048585	3
-12	1	\N	3	16777223	2023-03-24 16:11:40	\N	1048585	3
-13	1	4	2	16777217	2023-03-24 16:11:40	\N	1048585	3
-14	1	5	2	16777217	2023-03-24 16:11:40	\N	1048585	3
-15	1	4	3	16777259	2023-03-24 16:12:06	\N	1048585	3
-16	1	5	3	16777259	2023-03-24 16:12:06	\N	1048585	3
-17	1	9	3	16777259	2023-03-24 16:12:06	\N	1048585	3
-18	1	\N	3	16777222	2023-03-24 16:12:36	\N	1048585	4
-19	1	\N	3	16777223	2023-03-24 16:12:36	\N	1048585	4
-20	1	4	2	16777217	2023-03-24 16:12:36	\N	1048585	4
-21	1	5	2	16777217	2023-03-24 16:12:36	\N	1048585	4
-23	1	10	2	16777234	2023-03-24 16:13:01	\N	1048585	4
-24	1	\N	3	16777222	2023-03-24 16:13:28	\N	1048585	5
-25	1	\N	3	16777223	2023-03-24 16:13:28	\N	1048585	5
-26	1	4	2	16777217	2023-03-24 16:13:28	\N	1048585	5
-27	1	5	2	16777217	2023-03-24 16:13:28	\N	1048585	5
-28	1	\N	3	16777222	2023-03-24 16:14:13	\N	1048585	6
-29	1	\N	3	16777223	2023-03-24 16:14:13	\N	1048585	6
-30	1	4	2	16777217	2023-03-24 16:14:13	\N	1048585	6
-31	1	5	2	16777217	2023-03-24 16:14:13	\N	1048585	6
-32	1	\N	3	16777222	2023-03-24 16:14:45	\N	1048585	7
-33	1	\N	3	16777223	2023-03-24 16:14:45	\N	1048585	7
-34	1	4	2	16777217	2023-03-24 16:14:45	\N	1048585	7
-35	1	5	2	16777217	2023-03-24 16:14:45	\N	1048585	7
-36	1	\N	3	16777222	2023-03-24 16:15:18	\N	1048585	8
-37	1	\N	3	16777223	2023-03-24 16:15:18	\N	1048585	8
-38	1	4	2	16777217	2023-03-24 16:15:18	\N	1048585	8
-39	1	5	2	16777217	2023-03-24 16:15:18	\N	1048585	8
-40	1	\N	3	16777222	2023-03-24 16:15:50	\N	1048585	9
-41	1	\N	3	16777223	2023-03-24 16:15:50	\N	1048585	9
-42	1	4	2	16777217	2023-03-24 16:15:50	\N	1048585	9
-43	1	5	2	16777217	2023-03-24 16:15:50	\N	1048585	9
-44	1	\N	3	16777222	2023-03-24 16:16:22	\N	1048585	10
-45	1	\N	3	16777223	2023-03-24 16:16:22	\N	1048585	10
-46	1	4	2	16777217	2023-03-24 16:16:22	\N	1048585	10
-47	1	5	2	16777217	2023-03-24 16:16:22	\N	1048585	10
-48	1	\N	3	16777222	2023-03-24 16:16:55	\N	1048585	11
-49	1	\N	3	16777223	2023-03-24 16:16:55	\N	1048585	11
-50	1	4	2	16777217	2023-03-24 16:16:55	\N	1048585	11
-51	1	5	2	16777217	2023-03-24 16:16:55	\N	1048585	11
-52	1	\N	3	16777222	2023-03-24 16:17:28	\N	1048585	12
-53	1	\N	3	16777223	2023-03-24 16:17:28	\N	1048585	12
-54	1	4	2	16777217	2023-03-24 16:17:28	\N	1048585	12
-55	1	5	2	16777217	2023-03-24 16:17:28	\N	1048585	12
-56	1	\N	3	16777222	2023-03-24 16:18:00	\N	1048585	13
-57	1	\N	3	16777223	2023-03-24 16:18:00	\N	1048585	13
-58	1	4	2	16777217	2023-03-24 16:18:00	\N	1048585	13
-59	1	5	2	16777217	2023-03-24 16:18:00	\N	1048585	13
-60	1	\N	3	16777222	2023-03-24 16:18:33	\N	1048585	14
-61	1	\N	3	16777223	2023-03-24 16:18:33	\N	1048585	14
-62	1	4	2	16777217	2023-03-24 16:18:33	\N	1048585	14
-63	1	5	2	16777217	2023-03-24 16:18:33	\N	1048585	14
-64	1	\N	3	16777222	2023-03-24 16:19:05	\N	1048585	15
-65	1	\N	3	16777223	2023-03-24 16:19:06	\N	1048585	15
-66	1	4	2	16777217	2023-03-24 16:19:06	\N	1048585	15
-67	1	5	2	16777217	2023-03-24 16:19:06	\N	1048585	15
-68	1	\N	3	16777222	2023-03-24 16:19:38	\N	1048585	16
-69	1	\N	3	16777223	2023-03-24 16:19:38	\N	1048585	16
-70	1	4	2	16777217	2023-03-24 16:19:38	\N	1048585	16
-71	1	5	2	16777217	2023-03-24 16:19:38	\N	1048585	16
-72	1	\N	3	16777222	2023-03-24 16:20:10	\N	1048585	17
-73	1	\N	3	16777223	2023-03-24 16:20:10	\N	1048585	17
-74	1	4	2	16777217	2023-03-24 16:20:10	\N	1048585	17
-75	1	5	2	16777217	2023-03-24 16:20:10	\N	1048585	17
-78	1	4	2	16777217	2023-03-24 16:20:43	\N	1048585	18
-79	1	5	2	16777217	2023-03-24 16:20:43	\N	1048585	18
-80	1	\N	3	16777222	2023-03-24 16:21:15	\N	1048585	19
-81	1	\N	3	16777223	2023-03-24 16:21:15	\N	1048585	19
-82	1	4	2	16777217	2023-03-24 16:21:15	\N	1048585	19
-83	1	5	2	16777217	2023-03-24 16:21:15	\N	1048585	19
+76	1	\N	3	16777222	2023-03-25 01:50:57	\N	1048585	18
+77	1	\N	3	16777223	2023-03-25 01:50:57	\N	1048585	18
+3	1	\N	3	16777222	2023-03-25 01:40:15	\N	1048585	1
+4	1	\N	3	16777223	2023-03-25 01:40:15	\N	1048585	1
+5	1	4	2	16777217	2023-03-25 01:40:15	\N	1048585	1
+6	1	5	2	16777217	2023-03-25 01:40:15	\N	1048585	1
+7	1	\N	3	16777222	2023-03-25 01:41:25	\N	1048585	2
+8	1	\N	3	16777223	2023-03-25 01:41:25	\N	1048585	2
+9	1	4	2	16777217	2023-03-25 01:41:25	\N	1048585	2
+10	1	5	2	16777217	2023-03-25 01:41:25	\N	1048585	2
+11	1	\N	3	16777222	2023-03-25 01:42:03	\N	1048585	3
+12	1	\N	3	16777223	2023-03-25 01:42:03	\N	1048585	3
+13	1	4	2	16777217	2023-03-25 01:42:03	\N	1048585	3
+14	1	5	2	16777217	2023-03-25 01:42:03	\N	1048585	3
+15	1	4	3	16777259	2023-03-25 01:42:28	\N	1048585	3
+16	1	5	3	16777259	2023-03-25 01:42:28	\N	1048585	3
+17	1	9	3	16777259	2023-03-25 01:42:28	\N	1048585	3
+18	1	\N	3	16777222	2023-03-25 01:42:57	\N	1048585	4
+19	1	\N	3	16777223	2023-03-25 01:42:57	\N	1048585	4
+20	1	4	2	16777217	2023-03-25 01:42:57	\N	1048585	4
+21	1	5	2	16777217	2023-03-25 01:42:57	\N	1048585	4
+23	1	10	2	16777234	2023-03-25 01:43:22	\N	1048585	4
+24	1	\N	3	16777222	2023-03-25 01:43:48	\N	1048585	5
+25	1	\N	3	16777223	2023-03-25 01:43:48	\N	1048585	5
+26	1	4	2	16777217	2023-03-25 01:43:48	\N	1048585	5
+27	1	5	2	16777217	2023-03-25 01:43:48	\N	1048585	5
+28	1	\N	3	16777222	2023-03-25 01:44:32	\N	1048585	6
+29	1	\N	3	16777223	2023-03-25 01:44:32	\N	1048585	6
+30	1	4	2	16777217	2023-03-25 01:44:32	\N	1048585	6
+31	1	5	2	16777217	2023-03-25 01:44:32	\N	1048585	6
+32	1	\N	3	16777222	2023-03-25 01:45:04	\N	1048585	7
+33	1	\N	3	16777223	2023-03-25 01:45:04	\N	1048585	7
+34	1	4	2	16777217	2023-03-25 01:45:04	\N	1048585	7
+35	1	5	2	16777217	2023-03-25 01:45:04	\N	1048585	7
+36	1	\N	3	16777222	2023-03-25 01:45:35	\N	1048585	8
+37	1	\N	3	16777223	2023-03-25 01:45:35	\N	1048585	8
+38	1	4	2	16777217	2023-03-25 01:45:35	\N	1048585	8
+39	1	5	2	16777217	2023-03-25 01:45:35	\N	1048585	8
+40	1	\N	3	16777222	2023-03-25 01:46:07	\N	1048585	9
+41	1	\N	3	16777223	2023-03-25 01:46:07	\N	1048585	9
+42	1	4	2	16777217	2023-03-25 01:46:07	\N	1048585	9
+43	1	5	2	16777217	2023-03-25 01:46:07	\N	1048585	9
+44	1	\N	3	16777222	2023-03-25 01:46:39	\N	1048585	10
+45	1	\N	3	16777223	2023-03-25 01:46:39	\N	1048585	10
+46	1	4	2	16777217	2023-03-25 01:46:39	\N	1048585	10
+47	1	5	2	16777217	2023-03-25 01:46:39	\N	1048585	10
+48	1	\N	3	16777222	2023-03-25 01:47:11	\N	1048585	11
+49	1	\N	3	16777223	2023-03-25 01:47:11	\N	1048585	11
+50	1	4	2	16777217	2023-03-25 01:47:11	\N	1048585	11
+51	1	5	2	16777217	2023-03-25 01:47:11	\N	1048585	11
+52	1	\N	3	16777222	2023-03-25 01:47:44	\N	1048585	12
+53	1	\N	3	16777223	2023-03-25 01:47:44	\N	1048585	12
+54	1	4	2	16777217	2023-03-25 01:47:44	\N	1048585	12
+55	1	5	2	16777217	2023-03-25 01:47:44	\N	1048585	12
+56	1	\N	3	16777222	2023-03-25 01:48:16	\N	1048585	13
+57	1	\N	3	16777223	2023-03-25 01:48:16	\N	1048585	13
+58	1	4	2	16777217	2023-03-25 01:48:16	\N	1048585	13
+59	1	5	2	16777217	2023-03-25 01:48:16	\N	1048585	13
+60	1	\N	3	16777222	2023-03-25 01:48:48	\N	1048585	14
+61	1	\N	3	16777223	2023-03-25 01:48:48	\N	1048585	14
+62	1	4	2	16777217	2023-03-25 01:48:48	\N	1048585	14
+63	1	5	2	16777217	2023-03-25 01:48:48	\N	1048585	14
+64	1	\N	3	16777222	2023-03-25 01:49:20	\N	1048585	15
+65	1	\N	3	16777223	2023-03-25 01:49:20	\N	1048585	15
+66	1	4	2	16777217	2023-03-25 01:49:20	\N	1048585	15
+67	1	5	2	16777217	2023-03-25 01:49:20	\N	1048585	15
+68	1	\N	3	16777222	2023-03-25 01:49:52	\N	1048585	16
+69	1	\N	3	16777223	2023-03-25 01:49:52	\N	1048585	16
+70	1	4	2	16777217	2023-03-25 01:49:52	\N	1048585	16
+71	1	5	2	16777217	2023-03-25 01:49:52	\N	1048585	16
+72	1	\N	3	16777222	2023-03-25 01:50:24	\N	1048585	17
+73	1	\N	3	16777223	2023-03-25 01:50:24	\N	1048585	17
+74	1	4	2	16777217	2023-03-25 01:50:24	\N	1048585	17
+75	1	5	2	16777217	2023-03-25 01:50:24	\N	1048585	17
+78	1	4	2	16777217	2023-03-25 01:50:57	\N	1048585	18
+79	1	5	2	16777217	2023-03-25 01:50:57	\N	1048585	18
+80	1	\N	3	16777222	2023-03-25 01:51:29	\N	1048585	19
+81	1	\N	3	16777223	2023-03-25 01:51:29	\N	1048585	19
+82	1	4	2	16777217	2023-03-25 01:51:29	\N	1048585	19
+83	1	5	2	16777217	2023-03-25 01:51:29	\N	1048585	19
 \.
 
 
@@ -6951,60 +8971,88 @@ SELECT pg_catalog.setval('public.notifications_notification_id_seq', 83, true);
 -- Data for Name: oai_resumption_tokens; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.oai_resumption_tokens (token, expire, record_offset, params) FROM stdin;
+COPY public.oai_resumption_tokens (oai_resumption_token_id, token, expire, record_offset, params) FROM stdin;
 \.
+
+
+--
+-- Name: oai_resumption_tokens_oai_resumption_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.oai_resumption_tokens_oai_resumption_token_id_seq', 1, false);
 
 
 --
 -- Data for Name: plugin_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.plugin_settings (plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
-defaultthemeplugin	0	enabled	1	bool
-usageeventplugin	0	enabled	1	bool
-usageeventplugin	0	uniqueSiteId		string
-acronplugin	0	enabled	1	bool
-acronplugin	0	crontab	[{"className":"PKP\\\\task\\\\StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\RemoveUnvalidatedExpiredUsers","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\UpdateIPGeoDB","frequency":{"day":"10"},"args":[]},{"className":"APP\\\\tasks\\\\UsageStatsLoader","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\ProcessQueueJobs","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\RemoveFailedJobs","frequency":{"day":"1"},"args":[]}]	object
-tinymceplugin	0	enabled	1	bool
-developedbyblockplugin	0	enabled	0	bool
-developedbyblockplugin	0	seq	0	int
-languagetoggleblockplugin	0	enabled	1	bool
-languagetoggleblockplugin	0	seq	4	int
-tinymceplugin	1	enabled	1	bool
-defaultthemeplugin	1	enabled	1	bool
-developedbyblockplugin	1	enabled	0	bool
-developedbyblockplugin	1	seq	0	int
-languagetoggleblockplugin	1	enabled	1	bool
-languagetoggleblockplugin	1	seq	4	int
-googlescholarplugin	1	enabled	1	bool
-pdfjsviewerplugin	1	enabled	1	bool
-webfeedplugin	1	enabled	1	bool
-webfeedplugin	1	displayPage	homepage	string
-webfeedplugin	1	displayItems	1	bool
-webfeedplugin	1	recentItems	30	int
-webfeedplugin	1	includeIdentifiers	0	bool
-defaultthemeplugin	1	typography	notoSans	string
-defaultthemeplugin	1	baseColour	#1E6292	string
-defaultthemeplugin	1	showDescriptionInServerIndex	false	string
-defaultthemeplugin	1	useHomepageImageAsHeader	false	string
-defaultthemeplugin	1	displayStats	none	string
+COPY public.plugin_settings (plugin_setting_id, plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
+1	defaultthemeplugin	0	enabled	1	bool
+2	usageeventplugin	0	enabled	1	bool
+3	usageeventplugin	0	uniqueSiteId		string
+4	acronplugin	0	enabled	1	bool
+5	acronplugin	0	crontab	[{"className":"PKP\\\\task\\\\StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\RemoveUnvalidatedExpiredUsers","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\UpdateIPGeoDB","frequency":{"day":"10"},"args":[]},{"className":"APP\\\\tasks\\\\UsageStatsLoader","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\ProcessQueueJobs","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\RemoveFailedJobs","frequency":{"day":"1"},"args":[]}]	object
+6	tinymceplugin	0	enabled	1	bool
+7	developedbyblockplugin	0	enabled	0	bool
+8	developedbyblockplugin	0	seq	0	int
+9	languagetoggleblockplugin	0	enabled	1	bool
+10	languagetoggleblockplugin	0	seq	4	int
+11	tinymceplugin	1	enabled	1	bool
+12	defaultthemeplugin	1	enabled	1	bool
+13	developedbyblockplugin	1	enabled	0	bool
+14	developedbyblockplugin	1	seq	0	int
+15	languagetoggleblockplugin	1	enabled	1	bool
+16	languagetoggleblockplugin	1	seq	4	int
+17	googlescholarplugin	1	enabled	1	bool
+18	pdfjsviewerplugin	1	enabled	1	bool
+19	webfeedplugin	1	enabled	1	bool
+20	webfeedplugin	1	displayPage	homepage	string
+21	webfeedplugin	1	displayItems	1	bool
+22	webfeedplugin	1	recentItems	30	int
+23	webfeedplugin	1	includeIdentifiers	0	bool
+24	defaultthemeplugin	1	typography	notoSans	string
+25	defaultthemeplugin	1	baseColour	#1E6292	string
+26	defaultthemeplugin	1	showDescriptionInServerIndex	false	string
+27	defaultthemeplugin	1	useHomepageImageAsHeader	false	string
+28	defaultthemeplugin	1	displayStats	none	string
 \.
+
+
+--
+-- Name: plugin_settings_plugin_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.plugin_settings_plugin_setting_id_seq', 28, true);
 
 
 --
 -- Data for Name: publication_categories; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.publication_categories (publication_id, category_id) FROM stdin;
+COPY public.publication_categories (publication_category_id, publication_id, category_id) FROM stdin;
 \.
+
+
+--
+-- Name: publication_categories_publication_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.publication_categories_publication_category_id_seq', 1, false);
 
 
 --
 -- Data for Name: publication_galley_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.publication_galley_settings (galley_id, locale, setting_name, setting_value) FROM stdin;
+COPY public.publication_galley_settings (publication_galley_setting_id, galley_id, locale, setting_name, setting_value) FROM stdin;
 \.
+
+
+--
+-- Name: publication_galley_settings_publication_galley_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.publication_galley_settings_publication_galley_setting_id_seq', 1, false);
 
 
 --
@@ -7046,123 +9094,130 @@ SELECT pg_catalog.setval('public.publication_galleys_galley_id_seq', 20, true);
 -- Data for Name: publication_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.publication_settings (publication_id, locale, setting_name, setting_value) FROM stdin;
-1	en	abstract	The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P>0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P<0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P<0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P<0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.
-1		categoryIds	[]
-1	en	title	The influence of lactation on the quantity and quality of cashmere production
-2	en	abstract	<p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p>
-2		categoryIds	[]
-2	en	copyrightHolder	Public Knowledge Preprint Server
-2	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-2		copyrightYear	2023
-2	en	title	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence
-2	fr_CA	title	
-3	en	abstract	The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.
-3		categoryIds	[]
-3	en	copyrightHolder	Public Knowledge Preprint Server
-3	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-3		copyrightYear	2023
-3	en	title	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice
-7	en	abstract	A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.
-7		categoryIds	[]
-7	en	copyrightHolder	Public Knowledge Preprint Server
-7	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-4	en	abstract	The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.
-4		categoryIds	[]
-4	en	copyrightHolder	Craig Montgomerie
-4	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-4		copyrightYear	2023
-4	en	title	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice
-5	en	abstract	In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.
-5		categoryIds	[]
-5	en	title	Genetic transformation of forest trees
-7		copyrightYear	2023
-7	en	title	Developing efficacy beliefs in the classroom
-6	en	abstract	Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.
-6		categoryIds	[]
-6	en	copyrightHolder	Public Knowledge Preprint Server
-6	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-6		copyrightYear	2023
-6	en	title	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement
-8	en	abstract	The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.
-8		categoryIds	[]
-8	en	copyrightHolder	Public Knowledge Preprint Server
-8	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-8		copyrightYear	2023
-8	en	title	Developing efficacy beliefs in the classroom
-9	en	abstract	None.
-9		categoryIds	[]
-9	en	copyrightHolder	Public Knowledge Preprint Server
-9	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-9		copyrightYear	2023
-9	en	title	Hansen & Pinto: Reason Reclaimed
-10	en	abstract	The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.
-10		categoryIds	[]
-10	en	copyrightHolder	Public Knowledge Preprint Server
-10	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-10		copyrightYear	2023
-10	en	title	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence
-11	en	abstract	The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.
-11		categoryIds	[]
-11	en	copyrightHolder	Public Knowledge Preprint Server
-11	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-11		copyrightYear	2023
-11	en	title	Condensing Water Availability Models to Focus on Specific Water Management Systems
-12	en	abstract	Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.
-12		categoryIds	[]
-12	en	copyrightHolder	Public Knowledge Preprint Server
-12	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-12		copyrightYear	2023
-12	en	title	Learning Sustainable Design through Service
-13	en	abstract	The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P<0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.
-13		categoryIds	[]
-13	en	copyrightHolder	Public Knowledge Preprint Server
-13	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-13		copyrightYear	2023
-13	en	title	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning
-14	en	abstract	The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.
-14		categoryIds	[]
-14	en	copyrightHolder	Public Knowledge Preprint Server
-14	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-14		copyrightYear	2023
-14	en	title	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions
-15	en	abstract	One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.
-15		categoryIds	[]
-15	en	copyrightHolder	Public Knowledge Preprint Server
-15	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-15		copyrightYear	2023
-15	en	title	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua
-16	en	abstract	This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.
-16		categoryIds	[]
-16	en	copyrightHolder	Public Knowledge Preprint Server
-16	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-16		copyrightYear	2023
-16	en	title	Yam diseases and its management in Nigeria
-17	en	abstract	Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.
-17		categoryIds	[]
-17	en	copyrightHolder	Public Knowledge Preprint Server
-17	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-17		copyrightYear	2023
-17	en	title	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat
-18	en	abstract	The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (>56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.
-18		categoryIds	[]
-18	en	copyrightHolder	Public Knowledge Preprint Server
-18	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-18		copyrightYear	2023
-18	en	title	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran
-19	en	abstract	We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.
-19		categoryIds	[]
-19	en	copyrightHolder	Public Knowledge Preprint Server
-19	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-19		copyrightYear	2023
-19	en	title	Self-Organization in Multi-Level Institutions in Networked Environments
-20	en	abstract	None.
-20		categoryIds	[]
-20	en	copyrightHolder	Public Knowledge Preprint Server
-20	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
-20		copyrightYear	2023
-20	en	title	Finocchiaro: Arguments About Arguments
+COPY public.publication_settings (publication_setting_id, publication_id, locale, setting_name, setting_value) FROM stdin;
+1	1	en	abstract	The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P>0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P<0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P<0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P<0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.
+2	1		categoryIds	[]
+3	1	en	title	The influence of lactation on the quantity and quality of cashmere production
+6	2	en	abstract	<p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p>
+4	2		categoryIds	[]
+8	2	en	copyrightHolder	Public Knowledge Preprint Server
+9	2	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+10	2		copyrightYear	2023
+5	2	en	title	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence
+7	2	fr_CA	title	
+11	3	en	abstract	The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.
+12	3		categoryIds	[]
+14	3	en	copyrightHolder	Public Knowledge Preprint Server
+15	3	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+16	3		copyrightYear	2023
+13	3	en	title	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice
+32	7	en	abstract	A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.
+33	7		categoryIds	[]
+35	7	en	copyrightHolder	Public Knowledge Preprint Server
+36	7	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+17	4	en	abstract	The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.
+18	4		categoryIds	[]
+19	4	en	copyrightHolder	Craig Montgomerie
+20	4	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+21	4		copyrightYear	2023
+22	4	en	title	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice
+23	5	en	abstract	In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.
+24	5		categoryIds	[]
+25	5	en	title	Genetic transformation of forest trees
+37	7		copyrightYear	2023
+34	7	en	title	Developing efficacy beliefs in the classroom
+26	6	en	abstract	Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.
+27	6		categoryIds	[]
+29	6	en	copyrightHolder	Public Knowledge Preprint Server
+30	6	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+31	6		copyrightYear	2023
+28	6	en	title	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement
+38	8	en	abstract	The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.
+39	8		categoryIds	[]
+41	8	en	copyrightHolder	Public Knowledge Preprint Server
+42	8	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+43	8		copyrightYear	2023
+40	8	en	title	Developing efficacy beliefs in the classroom
+44	9	en	abstract	None.
+45	9		categoryIds	[]
+47	9	en	copyrightHolder	Public Knowledge Preprint Server
+48	9	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+49	9		copyrightYear	2023
+46	9	en	title	Hansen & Pinto: Reason Reclaimed
+50	10	en	abstract	The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.
+51	10		categoryIds	[]
+53	10	en	copyrightHolder	Public Knowledge Preprint Server
+54	10	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+55	10		copyrightYear	2023
+52	10	en	title	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence
+56	11	en	abstract	The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.
+57	11		categoryIds	[]
+59	11	en	copyrightHolder	Public Knowledge Preprint Server
+60	11	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+61	11		copyrightYear	2023
+58	11	en	title	Condensing Water Availability Models to Focus on Specific Water Management Systems
+62	12	en	abstract	Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.
+63	12		categoryIds	[]
+65	12	en	copyrightHolder	Public Knowledge Preprint Server
+66	12	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+67	12		copyrightYear	2023
+64	12	en	title	Learning Sustainable Design through Service
+68	13	en	abstract	The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P<0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.
+69	13		categoryIds	[]
+71	13	en	copyrightHolder	Public Knowledge Preprint Server
+72	13	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+73	13		copyrightYear	2023
+70	13	en	title	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning
+75	14		categoryIds	[]
+76	14	en	title	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions
+74	14	en	abstract	The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.
+77	14	en	copyrightHolder	Public Knowledge Preprint Server
+78	14	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+79	14		copyrightYear	2023
+80	15	en	abstract	One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.
+81	15		categoryIds	[]
+83	15	en	copyrightHolder	Public Knowledge Preprint Server
+84	15	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+85	15		copyrightYear	2023
+82	15	en	title	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua
+86	16	en	abstract	This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.
+87	16		categoryIds	[]
+89	16	en	copyrightHolder	Public Knowledge Preprint Server
+90	16	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+91	16		copyrightYear	2023
+88	16	en	title	Yam diseases and its management in Nigeria
+93	17		categoryIds	[]
+94	17	en	title	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat
+92	17	en	abstract	Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.
+95	17	en	copyrightHolder	Public Knowledge Preprint Server
+96	17	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+97	17		copyrightYear	2023
+98	18	en	abstract	The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (>56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.
+99	18		categoryIds	[]
+101	18	en	copyrightHolder	Public Knowledge Preprint Server
+102	18	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+103	18		copyrightYear	2023
+100	18	en	title	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran
+104	19	en	abstract	We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.
+105	19		categoryIds	[]
+107	19	en	copyrightHolder	Public Knowledge Preprint Server
+108	19	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+109	19		copyrightYear	2023
+106	19	en	title	Self-Organization in Multi-Level Institutions in Networked Environments
+110	20	en	abstract	None.
+111	20		categoryIds	[]
+113	20	en	copyrightHolder	Public Knowledge Preprint Server
+114	20	fr_CA	copyrightHolder	Serveur de prépublication de la connaissance du public
+115	20		copyrightYear	2023
+112	20	en	title	Finocchiaro: Arguments About Arguments
 \.
+
+
+--
+-- Name: publication_settings_publication_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.publication_settings_publication_setting_id_seq', 115, true);
 
 
 --
@@ -7170,26 +9225,26 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, access_status, date_published, last_modified, primary_contact_id, section_id, submission_id, status, url_path, version, doi_id) FROM stdin;
-1	0	\N	2023-03-24 16:09:32	1	1	1	1	\N	1	\N
-18	0	2023-03-24	2023-03-24 16:20:18	24	1	17	3	\N	1	\N
-2	0	2023-03-24	2023-03-24 16:11:15	2	1	2	3	\N	1	\N
-19	0	2023-03-24	2023-03-24 16:20:51	25	1	18	3	\N	1	\N
-3	0	2023-03-24	2023-03-24 16:12:02	5	1	3	3	\N	1	\N
-4	0	2023-03-24	2023-03-24 16:12:12	7	1	3	3	\N	2	\N
-20	0	2023-03-24	2023-03-24 16:21:24	26	1	19	3	\N	1	\N
-5	0	\N	2023-03-24 16:12:22	9	1	4	1	\N	1	\N
-6	0	2023-03-24	2023-03-24 16:13:49	10	1	5	3	\N	1	\N
-7	0	2023-03-24	2023-03-24 16:14:21	11	1	6	3	\N	1	\N
-8	0	2023-03-24	2023-03-24 16:14:53	12	1	7	3	\N	1	\N
-9	0	2023-03-24	2023-03-24 16:15:26	14	1	8	3	\N	1	\N
-10	0	2023-03-24	2023-03-24 16:15:57	15	1	9	3	\N	1	\N
-11	0	2023-03-24	2023-03-24 16:16:30	16	1	10	3	\N	1	\N
-12	0	2023-03-24	2023-03-24 16:17:04	17	1	11	3	\N	1	\N
-13	0	2023-03-24	2023-03-24 16:17:36	19	1	12	3	\N	1	\N
-14	0	2023-03-24	2023-03-24 16:18:08	20	1	13	3	\N	1	\N
-15	0	2023-03-24	2023-03-24 16:18:41	21	1	14	3	\N	1	\N
-16	0	2023-03-24	2023-03-24 16:19:14	22	1	15	3	\N	1	\N
-17	0	2023-03-24	2023-03-24 16:19:46	23	1	16	3	\N	1	\N
+1	0	\N	2023-03-25 01:40:01	1	1	1	1	\N	1	\N
+18	0	2023-03-25	2023-03-25 01:50:33	24	1	17	3	\N	1	\N
+2	0	2023-03-25	2023-03-25 01:41:39	2	1	2	3	\N	1	\N
+19	0	2023-03-25	2023-03-25 01:51:05	25	1	18	3	\N	1	\N
+3	0	2023-03-25	2023-03-25 01:42:24	5	1	3	3	\N	1	\N
+4	0	2023-03-25	2023-03-25 01:42:34	7	1	3	3	\N	2	\N
+5	0	\N	2023-03-25 01:42:43	9	1	4	1	\N	1	\N
+20	0	2023-03-25	2023-03-25 01:51:37	26	1	19	3	\N	1	\N
+6	0	2023-03-25	2023-03-25 01:44:09	10	1	5	3	\N	1	\N
+7	0	2023-03-25	2023-03-25 01:44:40	11	1	6	3	\N	1	\N
+8	0	2023-03-25	2023-03-25 01:45:12	12	1	7	3	\N	1	\N
+9	0	2023-03-25	2023-03-25 01:45:43	14	1	8	3	\N	1	\N
+10	0	2023-03-25	2023-03-25 01:46:15	15	1	9	3	\N	1	\N
+11	0	2023-03-25	2023-03-25 01:46:47	16	1	10	3	\N	1	\N
+12	0	2023-03-25	2023-03-25 01:47:19	17	1	11	3	\N	1	\N
+13	0	2023-03-25	2023-03-25 01:47:52	19	1	12	3	\N	1	\N
+14	0	2023-03-25	2023-03-25 01:48:24	20	1	13	3	\N	1	\N
+15	0	2023-03-25	2023-03-25 01:48:56	21	1	14	3	\N	1	\N
+16	0	2023-03-25	2023-03-25 01:49:28	22	1	15	3	\N	1	\N
+17	0	2023-03-25	2023-03-25 01:50:00	23	1	16	3	\N	1	\N
 \.
 
 
@@ -7219,8 +9274,15 @@ SELECT pg_catalog.setval('public.queries_query_id_seq', 1, false);
 -- Data for Name: query_participants; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.query_participants (query_id, user_id) FROM stdin;
+COPY public.query_participants (query_participant_id, query_id, user_id) FROM stdin;
 \.
+
+
+--
+-- Name: query_participants_query_participant_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.query_participants_query_participant_id_seq', 1, false);
 
 
 --
@@ -7242,16 +9304,30 @@ SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 1, false);
 -- Data for Name: review_files; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.review_files (review_id, submission_file_id) FROM stdin;
+COPY public.review_files (review_file_id, review_id, submission_file_id) FROM stdin;
 \.
+
+
+--
+-- Name: review_files_review_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.review_files_review_file_id_seq', 1, false);
 
 
 --
 -- Data for Name: review_form_element_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.review_form_element_settings (review_form_element_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+COPY public.review_form_element_settings (review_form_element_setting_id, review_form_element_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
+
+
+--
+-- Name: review_form_element_settings_review_form_element_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_element_settings_review_form_element_setting_id_seq', 1, false);
 
 
 --
@@ -7273,16 +9349,30 @@ SELECT pg_catalog.setval('public.review_form_elements_review_form_element_id_seq
 -- Data for Name: review_form_responses; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.review_form_responses (review_form_element_id, review_id, response_type, response_value) FROM stdin;
+COPY public.review_form_responses (review_form_response_id, review_form_element_id, review_id, response_type, response_value) FROM stdin;
 \.
+
+
+--
+-- Name: review_form_responses_review_form_response_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_responses_review_form_response_id_seq', 1, false);
 
 
 --
 -- Data for Name: review_form_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.review_form_settings (review_form_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+COPY public.review_form_settings (review_form_setting_id, review_form_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
+
+
+--
+-- Name: review_form_settings_review_form_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_settings_review_form_setting_id_seq', 1, false);
 
 
 --
@@ -7304,8 +9394,15 @@ SELECT pg_catalog.setval('public.review_forms_review_form_id_seq', 1, false);
 -- Data for Name: review_round_files; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.review_round_files (submission_id, review_round_id, stage_id, submission_file_id) FROM stdin;
+COPY public.review_round_files (review_round_file_id, submission_id, review_round_id, stage_id, submission_file_id) FROM stdin;
 \.
+
+
+--
+-- Name: review_round_files_review_round_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.review_round_files_review_round_file_id_seq', 1, false);
 
 
 --
@@ -7327,33 +9424,47 @@ SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 1, false);
 -- Data for Name: scheduled_tasks; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-PKP\\task\\StatisticsReport	2023-03-24 16:06:39
-PKP\\task\\RemoveUnvalidatedExpiredUsers	2023-03-24 16:06:39
-PKP\\task\\UpdateIPGeoDB	2023-03-24 16:06:39
-APP\\tasks\\UsageStatsLoader	2023-03-24 16:06:41
-PKP\\task\\ProcessQueueJobs	2023-03-24 16:06:41
-PKP\\task\\RemoveFailedJobs	2023-03-24 16:06:41
+COPY public.scheduled_tasks (scheduled_task_id, class_name, last_run) FROM stdin;
+1	PKP\\task\\StatisticsReport	2023-03-25 01:37:02
+2	PKP\\task\\RemoveUnvalidatedExpiredUsers	2023-03-25 01:37:02
+3	PKP\\task\\UpdateIPGeoDB	2023-03-25 01:37:02
+4	APP\\tasks\\UsageStatsLoader	2023-03-25 01:37:03
+5	PKP\\task\\ProcessQueueJobs	2023-03-25 01:37:03
+6	PKP\\task\\RemoveFailedJobs	2023-03-25 01:37:03
 \.
+
+
+--
+-- Name: scheduled_tasks_scheduled_task_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.scheduled_tasks_scheduled_task_id_seq', 6, true);
 
 
 --
 -- Data for Name: section_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.section_settings (section_id, locale, setting_name, setting_value) FROM stdin;
-1	en	title	Preprints
-1	fr_CA	title	
-1	en	abbrev	PRE
-1	fr_CA	abbrev	
-1	en	description	
-1	fr_CA	description	
-1	en	identifyType	
-1	fr_CA	identifyType	
-1		path	preprints
-1	en	policy	<p>Section default policy</p>
-1	fr_CA	policy	
+COPY public.section_settings (section_setting_id, section_id, locale, setting_name, setting_value) FROM stdin;
+1	1	en	title	Preprints
+5	1	fr_CA	title	
+2	1	en	abbrev	PRE
+6	1	fr_CA	abbrev	
+7	1	en	description	
+8	1	fr_CA	description	
+9	1	en	identifyType	
+10	1	fr_CA	identifyType	
+3	1		path	preprints
+4	1	en	policy	<p>Section default policy</p>
+11	1	fr_CA	policy	
 \.
+
+
+--
+-- Name: section_settings_section_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.section_settings_section_setting_id_seq', 11, true);
 
 
 --
@@ -7376,77 +9487,84 @@ SELECT pg_catalog.setval('public.sections_section_id_seq', 1, true);
 -- Data for Name: server_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.server_settings (server_id, locale, setting_name, setting_value, setting_type) FROM stdin;
-1	en	contributorsHelp	<p>Add details for all of the contributors to this submission. Contributors added here will be sent an email confirmation of the submission.</p><p> If a contributor can not be contacted by email, because they must remain anonymous or do not have an email account, please do not enter a fake email address. You can add information about this contributor in a message to the moderators at a later step in the submission process.</p>	\N
-1	en	description	<p>The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.</p>	\N
-1	en	detailsHelp	<p>Please provide the following details to help us manage your submission in our system.</p>	\N
-1	fr_CA	detailsHelp	##default.submission.step.details##	\N
-1		copySubmissionAckAddress		\N
-1		enableDois	1	\N
-1		doiSuffixType	default	\N
-1		disableSubmissions	0	\N
-1		editorialStatsEmail	1	\N
-1	fr_CA	forTheEditorsHelp	##default.submission.step.forTheEditors##	\N
-1		itemsPerPage	25	\N
-1		keywords	request	\N
-1	en	librarianInformation	We encourage research librarians to list this server among their library's holdings. As well, it may be worth noting that this server's open source system is suitable for libraries to host for their faculty members to use (see <a href="https://pkp.sfu.ca">Public Knowledge Project</a>).	\N
-1	fr_CA	librarianInformation	##default.contextSettings.forLibrarians##	\N
-1	en	name	Public Knowledge Preprint Server	\N
-1	fr_CA	name	Serveur de prépublication de la connaissance du public	\N
-1		notifyAllAuthors	1	\N
-1		numPageLinks	10	\N
-1		numWeeksPerResponse	4	\N
-1		numWeeksPerReview	4	\N
-1	en	openAccessPolicy	This server provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.	\N
-1	fr_CA	openAccessPolicy	##default.contextSettings.openAccessPolicy##	\N
-1	en	privacyStatement	<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>	\N
-1	fr_CA	privacyStatement	##default.contextSettings.privacyStatement##	\N
-1	en	readerInformation	We encourage readers to sign up for the posting notification service for this server. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the home page. This list also allows the server to claim a certain level of support or readership. See the <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.	\N
-1	fr_CA	readerInformation	##default.contextSettings.forReaders##	\N
-1	en	reviewHelp	<p>Review the information you have entered before you complete your submission. You can change any of the details displayed here by clicking the edit button at the top of each section.</p>	\N
-1	fr_CA	reviewHelp	##default.submission.step.review##	\N
-1		submissionAcknowledgement	allAuthors	\N
-1	en	acronym	JPKPKP	\N
-1	fr_CA	authorGuidelines	##default.contextSettings.authorGuidelines##	\N
-1	en	authorInformation	Interested in submitting to this server? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About</a> page for the policies, as well as the <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> prior to submitting or, if already registered, can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the process.	\N
-1	fr_CA	authorInformation	##default.contextSettings.forAuthors##	\N
-1	en	beginSubmissionHelp	<p>Thank you for posting your preprint at Public Knowledge Preprint Server. You will be asked to upload files, identify co-authors, and provide information such as the title and abstract.<p><p>Please read our <a href="http://localhost/index.php/publicknowledge/about/submissions" target="_blank">Submission Guidelines</a> if you have not done so already. When filling out the forms, provide as many details as possible in order to help our readers find your work.</p><p>Once you begin, you can save your submission and come back to it later. You will be able to review and correct any information before you submit.</p>	\N
-1	fr_CA	beginSubmissionHelp	##default.submission.step.beforeYouBegin##	\N
-1		contactEmail	rvaca@mailinator.com	\N
-1		contactName	Ramiro Vaca	\N
-1	fr_CA	contributorsHelp	##default.submission.step.contributors##	\N
-1		country	IS	\N
-1		defaultReviewMode	2	\N
-1	fr_CA	description	<p>Le Serveur de prépublication de la connaissance du public est une service trimestrielle évaluée par les pairs sur le thème de l'accès du public à la science.</p>	\N
-1		copySubmissionAckPrimaryContact	0	\N
-1		emailSignature	<br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>	\N
-1		registrationAgency		\N
-1	en	forTheEditorsHelp	<p>Please provide the following details in order to help readers discover your preprint.</p><p>When entering metadata such as keywords, provide entries that you think would be most helpful to readers looking for research like yours.</p>	\N
-1		enableInstitutionUsageStats	0	\N
-1		isSushiApiPublic	1	\N
-1	en	abbreviation	publicknowledgePub Know Pre	\N
-1		enableAuthorScreening	0	\N
-1		enabledDoiTypes	["publication"]	\N
-1		postedAcknowledgement	1	\N
-1		enableOai	1	\N
-1		doiVersioning	1	\N
-1	en	authorGuidelines	<p>Researchers are invited to submit a preprint to be posted on this server. All preprints will be moderated to determine whether they meet the aims and scope of this server. Those considered to be a good fit will be posted and the author will be notified.</p><p>Before submitting a preprint, authors are responsible for obtaining permission to share any material included with the preprint, such as photos, documents and datasets. All authors identified on the preprint must consent to be identified as an author. Where appropriate, research should be approved by an appropriate ethics committee in accordance with the legal requirements of the study's country.</p><p> When you're satisfied that your preprint meets this standard, please follow the checklist below to prepare your submission.</p>	\N
-1	en	customHeaders	<meta name="pkp" content="Test metatag.">	\N
-1		mailingAddress	123 456th Street\nBurnaby, British Columbia\nCanada	\N
-1	en	searchDescription	The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.	\N
-1	en	submissionChecklist	<p>All submissions must meet the following requirements.</p><ul><li>This submission meets the requirements outlined in the <a href="http://localhost/index.php/publicknowledge/about/submissions">Author Guidelines</a>.</li><li>This submission has not been previously posted.</li><li>All references have been checked for accuracy and completeness.</li><li>All tables and figures have been numbered and labeled.</li><li>Permission has been obtained to post all photos, datasets and other material provided with this preprint.</li></ul>	\N
-1	fr_CA	submissionChecklist	##default.contextSettings.checklist##	\N
-1		submitWithCategories	0	\N
-1		supportedFormLocales	["en","fr_CA"]	\N
-1		supportedLocales	["en","fr_CA"]	\N
-1		supportedSubmissionLocales	["en","fr_CA"]	\N
-1		supportEmail	rvaca@mailinator.com	\N
-1		supportName	Ramiro Vaca	\N
-1		themePluginPath	default	\N
-1	en	uploadFilesHelp	<p>Upload the preprint you would like to share. In addition to the main work, you may wish to upload data sets or other supplementary files that will help researchers understand and evaluate your work.</p>	\N
-1	fr_CA	uploadFilesHelp	##default.submission.step.uploadFiles##	\N
-1		enableGeoUsageStats	disabled	\N
+COPY public.server_settings (server_setting_id, server_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+6	1	fr_CA	authorInformation	##default.contextSettings.forAuthors##	\N
+7	1	en	beginSubmissionHelp	<p>Thank you for posting your preprint at Public Knowledge Preprint Server. You will be asked to upload files, identify co-authors, and provide information such as the title and abstract.<p><p>Please read our <a href="http://localhost/index.php/publicknowledge/about/submissions" target="_blank">Submission Guidelines</a> if you have not done so already. When filling out the forms, provide as many details as possible in order to help our readers find your work.</p><p>Once you begin, you can save your submission and come back to it later. You will be able to review and correct any information before you submit.</p>	\N
+12	1	fr_CA	contributorsHelp	##default.submission.step.contributors##	\N
+13	1		country	IS	\N
+14	1		defaultReviewMode	2	\N
+15	1	en	description	<p>The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.</p>	\N
+16	1	fr_CA	description	<p>Le Serveur de prépublication de la connaissance du public est une service trimestrielle évaluée par les pairs sur le thème de l'accès du public à la science.</p>	\N
+17	1	en	detailsHelp	<p>Please provide the following details to help us manage your submission in our system.</p>	\N
+18	1	fr_CA	detailsHelp	##default.submission.step.details##	\N
+19	1		copySubmissionAckPrimaryContact	0	\N
+20	1		copySubmissionAckAddress		\N
+21	1		emailSignature	<br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>	\N
+22	1		enableDois	1	\N
+23	1		doiSuffixType	default	\N
+24	1		registrationAgency		\N
+25	1		disableSubmissions	0	\N
+26	1		editorialStatsEmail	1	\N
+27	1	en	forTheEditorsHelp	<p>Please provide the following details in order to help readers discover your preprint.</p><p>When entering metadata such as keywords, provide entries that you think would be most helpful to readers looking for research like yours.</p>	\N
+28	1	fr_CA	forTheEditorsHelp	##default.submission.step.forTheEditors##	\N
+29	1		itemsPerPage	25	\N
+30	1		keywords	request	\N
+31	1	en	librarianInformation	We encourage research librarians to list this server among their library's holdings. As well, it may be worth noting that this server's open source system is suitable for libraries to host for their faculty members to use (see <a href="https://pkp.sfu.ca">Public Knowledge Project</a>).	\N
+32	1	fr_CA	librarianInformation	##default.contextSettings.forLibrarians##	\N
+33	1	en	name	Public Knowledge Preprint Server	\N
+34	1	fr_CA	name	Serveur de prépublication de la connaissance du public	\N
+35	1		notifyAllAuthors	1	\N
+36	1		numPageLinks	10	\N
+37	1		numWeeksPerResponse	4	\N
+38	1		numWeeksPerReview	4	\N
+39	1	en	openAccessPolicy	This server provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.	\N
+40	1	fr_CA	openAccessPolicy	##default.contextSettings.openAccessPolicy##	\N
+41	1	en	privacyStatement	<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>	\N
+42	1	fr_CA	privacyStatement	##default.contextSettings.privacyStatement##	\N
+43	1	en	readerInformation	We encourage readers to sign up for the posting notification service for this server. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the home page. This list also allows the server to claim a certain level of support or readership. See the <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.	\N
+44	1	fr_CA	readerInformation	##default.contextSettings.forReaders##	\N
+45	1	en	reviewHelp	<p>Review the information you have entered before you complete your submission. You can change any of the details displayed here by clicking the edit button at the top of each section.</p>	\N
+1	1	en	acronym	JPKPKP	\N
+4	1	fr_CA	authorGuidelines	##default.contextSettings.authorGuidelines##	\N
+5	1	en	authorInformation	Interested in submitting to this server? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About</a> page for the policies, as well as the <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> prior to submitting or, if already registered, can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the process.	\N
+8	1	fr_CA	beginSubmissionHelp	##default.submission.step.beforeYouBegin##	\N
+9	1		contactEmail	rvaca@mailinator.com	\N
+10	1		contactName	Ramiro Vaca	\N
+11	1	en	contributorsHelp	<p>Add details for all of the contributors to this submission. Contributors added here will be sent an email confirmation of the submission.</p><p> If a contributor can not be contacted by email, because they must remain anonymous or do not have an email account, please do not enter a fake email address. You can add information about this contributor in a message to the moderators at a later step in the submission process.</p>	\N
+72	1		supportName	Ramiro Vaca	\N
+54	1		themePluginPath	default	\N
+55	1	en	uploadFilesHelp	<p>Upload the preprint you would like to share. In addition to the main work, you may wish to upload data sets or other supplementary files that will help researchers understand and evaluate your work.</p>	\N
+56	1	fr_CA	uploadFilesHelp	##default.submission.step.uploadFiles##	\N
+57	1		enableGeoUsageStats	disabled	\N
+58	1		enableInstitutionUsageStats	0	\N
+59	1		isSushiApiPublic	1	\N
+69	1	en	abbreviation	publicknowledgePub Know Pre	\N
+62	1		enableAuthorScreening	0	\N
+63	1		enabledDoiTypes	["publication"]	\N
+64	1		postedAcknowledgement	1	\N
+65	1		enableOai	1	\N
+66	1		doiVersioning	1	\N
+3	1	en	authorGuidelines	<p>Researchers are invited to submit a preprint to be posted on this server. All preprints will be moderated to determine whether they meet the aims and scope of this server. Those considered to be a good fit will be posted and the author will be notified.</p><p>Before submitting a preprint, authors are responsible for obtaining permission to share any material included with the preprint, such as photos, documents and datasets. All authors identified on the preprint must consent to be identified as an author. Where appropriate, research should be approved by an appropriate ethics committee in accordance with the legal requirements of the study's country.</p><p> When you're satisfied that your preprint meets this standard, please follow the checklist below to prepare your submission.</p>	\N
+67	1	en	customHeaders	<meta name="pkp" content="Test metatag.">	\N
+70	1		mailingAddress	123 456th Street\nBurnaby, British Columbia\nCanada	\N
+46	1	fr_CA	reviewHelp	##default.submission.step.review##	\N
+68	1	en	searchDescription	The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.	\N
+47	1		submissionAcknowledgement	allAuthors	\N
+49	1	fr_CA	submissionChecklist	##default.contextSettings.checklist##	\N
+48	1	en	submissionChecklist	<p>All submissions must meet the following requirements.</p><ul><li>This submission meets the requirements outlined in the <a href="http://localhost/index.php/publicknowledge/about/submissions">Author Guidelines</a>.</li><li>This submission has not been previously posted.</li><li>All references have been checked for accuracy and completeness.</li><li>All tables and figures have been numbered and labeled.</li><li>Permission has been obtained to post all photos, datasets and other material provided with this preprint.</li></ul>	\N
+50	1		submitWithCategories	0	\N
+51	1		supportedFormLocales	["en","fr_CA"]	\N
+52	1		supportedLocales	["en","fr_CA"]	\N
+53	1		supportedSubmissionLocales	["en","fr_CA"]	\N
+71	1		supportEmail	rvaca@mailinator.com	\N
 \.
+
+
+--
+-- Name: server_settings_server_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.server_settings_server_setting_id_seq', 72, true);
 
 
 --
@@ -7470,54 +9588,54 @@ SELECT pg_catalog.setval('public.servers_server_id_seq', 1, true);
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-6cv3nt16us5fk1634and5caeip	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674028	1679674053	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679674053;s:5:"token";s:32:"bca95dfbf9881adb1b3d7a90a6b75ca4";}	localhost
-f1t2f5t0srd9m0dlo4v0ob1150	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674116	1679674125	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1679674124;s:5:"token";s:32:"fc24cb4eb3efdcafaec825b25ed0e5d6";}	localhost
-cgc68g4itj6tqp9jo63toka9sg	8	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674190	1679674266	0	csrf|a:2:{s:9:"timestamp";i:1679674267;s:5:"token";s:32:"b0538d3df6e41aa36589138450d92284";}username|s:8:"ckwantes";userId|i:8;	localhost
-acfb1qmghcd2qlr98ulkuhrfas	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679673999	1679674027	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679674027;s:5:"token";s:32:"dc4ffd01a3b127d706dc6bd6de266cae";}	localhost
-7sc25ihas1vd2l0c1p42mavd3c	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674138	1679674163	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679674163;s:5:"token";s:32:"262a916345cf5df12cfcd15e16c55452";}	localhost
-vl55rneonstanq0gdv2b320tib	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674055	1679674064	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679674064;s:5:"token";s:32:"2eb79bfe058496f368c5c8ec9f97910e";}	localhost
-oatltp5h6usn7f67qjjsu624j5	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674066	1679674073	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679674073;s:5:"token";s:32:"28d6343ef4b2caabeb7f7fd2168211ae";}	localhost
-4mqbsubp686cqvnmf9qqhrk0no	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674077	1679674116	0	username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679674115;s:5:"token";s:32:"2012bb9a46551cd8bf2615c905f5e90e";}	localhost
-0vfaembrqvvhh4p05it2nja675	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674128	1679674137	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679674137;s:5:"token";s:32:"bc39dc883c667f6d988b70e801f1433b";}	localhost
-pfb9puufbh03ur3odbos7bdbgb	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674268	1679674277	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674277;s:5:"token";s:32:"408073e01d0db6357f9a7e423f3f5004";}	localhost
-jbspd6n8ql29ndn1kt1nt3pu18	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674310	1679674333	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674333;s:5:"token";s:32:"974c85f4cc86509761e702e7bdea17d2";}	localhost
-4s3jdelhjt2m9go1gj6eu3jged	7	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674166	1679674187	0	csrf|a:2:{s:9:"timestamp";i:1679674187;s:5:"token";s:32:"f3ca6bc17ca3582164d50911e2e3848b";}username|s:7:"ccorino";userId|i:7;	localhost
-9ol941aibcp2783rsbrdn6t1s0	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674279	1679674301	0	csrf|a:2:{s:9:"timestamp";i:1679674301;s:5:"token";s:32:"a307b92d95670d27090ced086154df0f";}username|s:12:"cmontgomerie";	localhost
-hdr70vupv72ja3f0qvnertrn94	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674301	1679674309	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674309;s:5:"token";s:32:"44e7c51521dabf866f0e734b9f99aed9";}	localhost
-moadks5kavn9gnaooq40ut9dip	10	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674336	1679674356	0	csrf|a:2:{s:9:"timestamp";i:1679674356;s:5:"token";s:32:"bff37621e7fdd64bfdf42c7112a6468f";}username|s:6:"ddiouf";userId|i:10;	localhost
-t1puaunbmnhdqcm2skudf3m7af	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674357	1679674385	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674385;s:5:"token";s:32:"aac991eac4c8da15875621c788995537";}	localhost
-mf4q4hcb0m6ch3almnfdk9gjrg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674388	1679674408	0	csrf|a:2:{s:9:"timestamp";i:1679674408;s:5:"token";s:32:"80133b23b79c0b75ae5dc2911317cf3b";}username|s:9:"dphillips";	localhost
-31312rtohb3r3212p8jei9hihe	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674409	1679674417	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674417;s:5:"token";s:32:"70c72823798a4a6f586dcb323abc9832";}	localhost
-cm1ovsmi92n5n4gr07tfdoib6j	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674418	1679674424	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674424;s:5:"token";s:32:"cd8febacc2878a27213a790fda0b504c";}	localhost
-2facm0ovcqmgpb1v08t29u55gv	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674424	1679674430	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674430;s:5:"token";s:32:"156278fc525b73a564333fd3f54e80d9";}	localhost
-k444nei3a2rm1cc51959jugud3	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674433	1679674453	0	csrf|a:2:{s:9:"timestamp";i:1679674453;s:5:"token";s:32:"4b793cd944289d892490ec480239560a";}username|s:9:"dsokoloff";	localhost
-aeh5laf6t39gg8i4ckd8s2147u	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674562	1679674583	0	csrf|a:2:{s:9:"timestamp";i:1679674582;s:5:"token";s:32:"39d814edfec3d7356025775a894197e4";}username|s:6:"jnovak";	localhost
-meattkngjivgasq8lnb6ouccee	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674551	1679674558	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674559;s:5:"token";s:32:"17bedbfa8b8a454d6911eba814f2e40e";}	localhost
-lj1eqn1vfonvp27js1mp34uqbd	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674519	1679674527	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674527;s:5:"token";s:32:"f64422e88a967d48f58456cde7f9eddb";}	localhost
-ilp90cap5satlqlg56t04mqdt2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674454	1679674462	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674462;s:5:"token";s:32:"38318f8c08d7b86ad544f8c7abeee879";}	localhost
-mtdur2ae0j1sbmq823p47cb5pt	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674486	1679674494	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674495;s:5:"token";s:32:"465171ca922d0042d2f1f712b041db84";}	localhost
-lt94pgi059i0a6130etrps7ffs	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674465	1679674486	0	csrf|a:2:{s:9:"timestamp";i:1679674486;s:5:"token";s:32:"f16c3b9f70a55c8c1c5c4e977688e340";}username|s:7:"eostrom";	localhost
-klpn867qk69cqtnqfk4an79d27	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674497	1679674518	0	csrf|a:2:{s:9:"timestamp";i:1679674518;s:5:"token";s:32:"e5b0f202ef588415ce4fb406f194b413";}username|s:9:"fpaglieri";	localhost
-r94ckid9ptfopnm3uqe36q54eu	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674530	1679674550	0	csrf|a:2:{s:9:"timestamp";i:1679674550;s:5:"token";s:32:"73126b732cde71387bc82204c5c490fa";}username|s:10:"jmwandenga";	localhost
-bqsqp98k3t78prs9rikd0rb0sq	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674649	1679674657	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674657;s:5:"token";s:32:"5caf6246a08a67d2258a9ee5d6837900";}	localhost
-ojf6vptlev0fntc7tv7q62qtcr	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674594	1679674616	0	csrf|a:2:{s:9:"timestamp";i:1679674616;s:5:"token";s:32:"33dfe452d731f9f1e2750c20c3a0bb23";}username|s:10:"kalkhafaji";	localhost
-3pmfi0lqvao42co5b63q3e9vom	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674583	1679674591	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674592;s:5:"token";s:32:"4eafd9eb60f8a240e91a345f74475dd1";}	localhost
-14td95920fclkh1pnoksqfi8l0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674616	1679674625	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674625;s:5:"token";s:32:"73834b2c1cc9f5bcc9c7a45c1fbbf947";}	localhost
-e2sl6lsj44hhjv3slrg5istgph	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674628	1679674649	0	csrf|a:2:{s:9:"timestamp";i:1679674648;s:5:"token";s:32:"687ecb55f04bd7932a2f0fdda45b711e";}username|s:12:"lchristopher";	localhost
-qtru7lbqn048oulcphm11a4ar1	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674660	1679674681	0	csrf|a:2:{s:9:"timestamp";i:1679674681;s:5:"token";s:32:"cfa177bd4485ee1b9f3eb7266f73693f";}username|s:8:"lkumiega";	localhost
-dthve0hl5nebr4vj3ao6ipu86p	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674692	1679674713	0	csrf|a:2:{s:9:"timestamp";i:1679674713;s:5:"token";s:32:"0cfbac7dbcfd4af380d4fbdec43f15d4";}username|s:7:"pdaniel";	localhost
-mvopcj6s7pf6d1ncfnf2q8s6g0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674681	1679674689	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674690;s:5:"token";s:32:"a70c82c941d2274106099fff16e30fe3";}	localhost
-ov615vv9unj65ofa9g90tp8pus	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674714	1679674722	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674722;s:5:"token";s:32:"2dc4c0bc772e3b5a188152b424b3033f";}	localhost
-nkl61tlmo95r9uich88pd6qlb0	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674725	1679674746	0	csrf|a:2:{s:9:"timestamp";i:1679674746;s:5:"token";s:32:"cc0fb2d340e629281d8773b5e5fb84ed";}username|s:8:"rbaiyewu";	localhost
-fm1l8dk50lks0vbeo85s37n0ci	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674746	1679674755	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674755;s:5:"token";s:32:"bd09d833af7878fb2be35b68a4a6fdad";}	localhost
-v4e7oe259ag6b855ope8r2u221	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674758	1679674779	0	csrf|a:2:{s:9:"timestamp";i:1679674779;s:5:"token";s:32:"4911583b4e482baa61a605790ec701b5";}username|s:6:"rrossi";	localhost
-pdehh507in3v4tod1a9dobkn4v	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674779	1679674787	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674788;s:5:"token";s:32:"2ac38778d521d65cfebce380bbb0441c";}	localhost
-pffbnsh2c9f2m4db6s3ejbg33d	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674876	1679674885	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674885;s:5:"token";s:32:"da3ccabfa788f94b31345bdea3691c3a";}	localhost
-gp6ssspbcjfa35e0lrtlqgn0sc	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674844	1679674852	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674852;s:5:"token";s:32:"a5196117813f8c354808762e70f29ff6";}	localhost
-d4sjj01jcrif9oapp8e7vdn7iq	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674822	1679674843	0	csrf|a:2:{s:9:"timestamp";i:1679674843;s:5:"token";s:32:"3474ae55021cceb969cdbba229358e9d";}username|s:11:"vwilliamson";	localhost
-up5p6mlqj1sq0u5matktrp3c6r	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674790	1679674811	0	csrf|a:2:{s:9:"timestamp";i:1679674811;s:5:"token";s:32:"9b242f17b82e659f79ddef065b6e53d9";}username|s:12:"vkarbasizaed";	localhost
-18s6m5nat0d398jqac2ee6mgag	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674811	1679674819	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679674820;s:5:"token";s:32:"d6628a28aead31c189b446ed74fd05ea";}	localhost
-r5r6clpno5hnmhnnu3v9a44o74	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679674855	1679674876	0	csrf|a:2:{s:9:"timestamp";i:1679674876;s:5:"token";s:32:"f4ba38369ef3d28bfdf5eca167b77291";}username|s:6:"zwoods";	localhost
+toc3q52pcgvo4ega6c7v2t80cc	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708245	1679708275	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679708275;s:5:"token";s:32:"0a2ac2730adcd221bf2082d81de242e6";}	localhost
+be96lib2tk0cb8qj72dan92906	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708343	1679708355	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1679708354;s:5:"token";s:32:"4e1d45cd477ddb196aa6a158781e77f6";}	localhost
+0u3dgberlq293upo2hje0bniqv	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708222	1679708244	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679708244;s:5:"token";s:32:"3211e5f01746c426b0364dab519012f0";}	localhost
+pheqi3trtg5ikvl3ithpduoo26	8	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708419	1679708492	0	csrf|a:2:{s:9:"timestamp";i:1679708492;s:5:"token";s:32:"88cd5483980d50b58d7d54639232d224";}username|s:8:"ckwantes";userId|i:8;	localhost
+segsroeil3vts31d9ai3cbqqof	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708276	1679708291	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679708291;s:5:"token";s:32:"4de515edf9865e80c5f645d6035b1065";}	localhost
+41v6t97panq1qgret233hmjpk2	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708368	1679708392	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679708392;s:5:"token";s:32:"0f56a8597ff440caa9de2920a51db030";}	localhost
+pmd7thrqj9p72fh6b6qbvncve9	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708293	1679708301	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679708301;s:5:"token";s:32:"c7fe24747000e14e0e4fc5958730d8c1";}	localhost
+invn9fo99qsp4605dadk1k4usn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708304	1679708342	0	username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679708342;s:5:"token";s:32:"67c58f3955d924ddd972df12e3ac3d33";}	localhost
+q0l119rceeka1rggic3hv4hi55	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708358	1679708367	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1679708366;s:5:"token";s:32:"98f35ac4909d6b00c28cc8ed37f7ffdb";}	localhost
+ut0l2pf2u8d7jbgvfb1120df5v	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708493	1679708500	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708500;s:5:"token";s:32:"ee48a577800ed428e4543bf1c48d4ce2";}	localhost
+4hfcibpum041a188b75e2t78i3	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708532	1679708555	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708555;s:5:"token";s:32:"87aecda6b69cb0a96f8ff6e7a8b10bc7";}	localhost
+v685mne6soe3iuntc2vfo726vl	7	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708395	1679708415	0	csrf|a:2:{s:9:"timestamp";i:1679708415;s:5:"token";s:32:"9f7170c2da3437735a26bd11280c7317";}username|s:7:"ccorino";userId|i:7;	localhost
+n0j424vdidhpg6k5om6tdvnnlb	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708503	1679708524	0	csrf|a:2:{s:9:"timestamp";i:1679708524;s:5:"token";s:32:"a6761dabaa3a7d8db312a9c00ea72d49";}username|s:12:"cmontgomerie";	localhost
+nhjia1l4ifui1lm4vlq9jsossn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708524	1679708532	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708531;s:5:"token";s:32:"93324c52d22feea7510bf45c97ef8fa7";}	localhost
+voungqtu0eaouhqtlebnd2fthb	10	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708558	1679708577	0	csrf|a:2:{s:9:"timestamp";i:1679708577;s:5:"token";s:32:"1789232aee51c16aaff0209170921952";}username|s:6:"ddiouf";userId|i:10;	localhost
+s6lq6ci7ecvm5sjsvjk1qdpogu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708579	1679708606	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708606;s:5:"token";s:32:"2885f5724c0367cc743d8913c8e40efb";}	localhost
+rfiomgvsq5657dpqocntcn1q4i	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708609	1679708629	0	csrf|a:2:{s:9:"timestamp";i:1679708629;s:5:"token";s:32:"99467a94af924bd9b71202927baad3dc";}username|s:9:"dphillips";	localhost
+l23f2b8flu2k2l59rfjtkiolv2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708629	1679708637	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708637;s:5:"token";s:32:"3edb083d3727282d87f6dd92ba3f9d11";}	localhost
+luqigm8i7hudnhtgqtb1c80e4f	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708638	1679708644	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708644;s:5:"token";s:32:"d6dbe1f031f33d00a547c3f054fee58b";}	localhost
+7j0ev092ppp3o8ioj8in79v1jl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708644	1679708650	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708650;s:5:"token";s:32:"4d576db7e95422a69088b0f23978e4a6";}	localhost
+9m44va1755eh6ku7rdl0pcisvr	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708652	1679708673	0	csrf|a:2:{s:9:"timestamp";i:1679708672;s:5:"token";s:32:"146c6bc4e4134a619d22d23d80357d34";}username|s:9:"dsokoloff";	localhost
+d8lkmfhdkdc1l9leqdcnmuflf0	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708876	1679708896	0	csrf|a:2:{s:9:"timestamp";i:1679708896;s:5:"token";s:32:"2ad1541ac5f586a56cf8d7afbac63708";}username|s:8:"lkumiega";	localhost
+jad0p3dd1smaifp4hbj1b5nbpj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708768	1679708776	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708776;s:5:"token";s:32:"fd7900413d0a0bf4568c575a04a61cf6";}	localhost
+fn49q7e2jpc8625p1a7gltgko2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708705	1679708713	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708713;s:5:"token";s:32:"4a231ae73de3d180c027300867ac73e8";}	localhost
+t7fbi6r6jmb0vkdt8d40p25h3b	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708716	1679708736	0	csrf|a:2:{s:9:"timestamp";i:1679708736;s:5:"token";s:32:"97154ab28912c0decf6eca01cd329afe";}username|s:9:"fpaglieri";	localhost
+h5bkfdsolhviej6rkd7iiuqd4i	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708865	1679708873	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708873;s:5:"token";s:32:"a9c486fbfec9f21898c3ac75e77e5d4a";}	localhost
+gj7gippk7a557ih92lml67s21f	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708736	1679708744	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708744;s:5:"token";s:32:"065c3a08a333b4c8f7dfadfec9969235";}	localhost
+k54ba985vpfv5vg3cbt6ud9ruh	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708673	1679708681	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708681;s:5:"token";s:32:"09c8a83b10009b4f9b0423a25c2d83a2";}	localhost
+435uegdbjjfuv53si8pklpfioe	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708684	1679708704	0	csrf|a:2:{s:9:"timestamp";i:1679708704;s:5:"token";s:32:"42066c54e6844674aecc811f02cb0916";}username|s:7:"eostrom";	localhost
+7hulcukqn271u4rcrbpr7dt8qv	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708800	1679708808	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708808;s:5:"token";s:32:"743cade37b0e678c52cc157d1143409a";}	localhost
+a5t8l9btsqp30qvv9g5nihe317	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708747	1679708767	0	csrf|a:2:{s:9:"timestamp";i:1679708767;s:5:"token";s:32:"cc1cf09c8e6d58b32259254713fd3e6a";}username|s:10:"jmwandenga";	localhost
+qijqtsp93b1jfthdvjlk7a3pm7	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708779	1679708799	0	csrf|a:2:{s:9:"timestamp";i:1679708799;s:5:"token";s:32:"49514eada92f115e42b9303ca857f2e4";}username|s:6:"jnovak";	localhost
+47ct20i2u43pncd67q805r3l2r	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708811	1679708832	0	csrf|a:2:{s:9:"timestamp";i:1679708832;s:5:"token";s:32:"109c877dac8a81b2ecbe48a7ae14f675";}username|s:10:"kalkhafaji";	localhost
+oog5gp0lqg5miqcem5jbhjg7fr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708832	1679708841	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708841;s:5:"token";s:32:"57b69757e3b4eedfe8004a45f2a736da";}	localhost
+h695omsp9gqf6uji46j0velrd6	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708844	1679708864	0	csrf|a:2:{s:9:"timestamp";i:1679708864;s:5:"token";s:32:"5b50a8021f3d779846d17361128dcad1";}username|s:12:"lchristopher";	localhost
+g2ioq6clbj9sij5ur0ds885da9	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708896	1679708905	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708905;s:5:"token";s:32:"5a182f1de837b00e973e2bb6aa5290d7";}	localhost
+e6nhgh51ao4h3kkd1vetanu8ag	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708940	1679708961	0	csrf|a:2:{s:9:"timestamp";i:1679708961;s:5:"token";s:32:"918c8813f56a547a1dcde646934a76a4";}username|s:8:"rbaiyewu";	localhost
+05nblbahpvj921pvdhc19m9e7f	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708929	1679708937	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708937;s:5:"token";s:32:"534d2961b0137baa5495810626940346";}	localhost
+inm70kfo68tj7s0v0gk40ts8oj	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708908	1679708929	0	csrf|a:2:{s:9:"timestamp";i:1679708928;s:5:"token";s:32:"58a60408138cc0c408a6aa8ec16cacda";}username|s:7:"pdaniel";	localhost
+nu6koedcaqvuls139nq9sskmgh	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708961	1679708969	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679708969;s:5:"token";s:32:"03815a4d3387c4c792633e89fe7e9572";}	localhost
+efbuh77d2b7on41at1fimtavpf	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708972	1679708992	0	csrf|a:2:{s:9:"timestamp";i:1679708992;s:5:"token";s:32:"6294b6d46a83227d289099cbd9e38a4a";}username|s:6:"rrossi";	localhost
+tj41n3u4m6ph3jotffs91jd3d8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679708993	1679709001	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679709001;s:5:"token";s:32:"ec984a0242360782ebb5797398f9bb91";}	localhost
+7ppsgs886rrketkac98qdul0q0	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679709004	1679709024	0	csrf|a:2:{s:9:"timestamp";i:1679709024;s:5:"token";s:32:"9e24168bf3948bb4e3b84e4cc53859ec";}username|s:12:"vkarbasizaed";	localhost
+a3sbtljfi7besv303mq8iji4um	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679709089	1679709098	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679709098;s:5:"token";s:32:"e3620dda8e85d97bc4729af414760324";}	localhost
+cg35tkhp604nahesejlhqlte5t	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679709037	1679709057	0	csrf|a:2:{s:9:"timestamp";i:1679709057;s:5:"token";s:32:"fa0687fae8d7c88a5ef9bd71e45199cc";}username|s:11:"vwilliamson";	localhost
+7k9171vd1mqljrojeia81i4qnp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679709025	1679709034	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679709034;s:5:"token";s:32:"8156adbb66e07a828de90aecb39278e3";}	localhost
+7a4h9lho8evr0strumcseeg87k	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679709058	1679709066	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1679709066;s:5:"token";s:32:"3c20d3f50844373c25ef52322196dd54";}	localhost
+gmkik6fa98i3bu7grtiivdd6sj	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1679709069	1679709089	0	csrf|a:2:{s:9:"timestamp";i:1679709089;s:5:"token";s:32:"f5b4b677c3aa05474f59d24621342928";}username|s:6:"zwoods";	localhost
 \.
 
 
@@ -7525,8 +9643,8 @@ r5r6clpno5hnmhnnu3v9a44o74	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWeb
 -- Data for Name: site; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.site (redirect, primary_locale, min_password_length, installed_locales, supported_locales, original_style_file_name) FROM stdin;
-0	en	6	["en","fr_CA"]	["en","fr_CA"]	\N
+COPY public.site (site_id, redirect, primary_locale, min_password_length, installed_locales, supported_locales, original_style_file_name) FROM stdin;
+1	0	en	6	["en","fr_CA"]	["en","fr_CA"]	\N
 \.
 
 
@@ -7534,18 +9652,32 @@ COPY public.site (redirect, primary_locale, min_password_length, installed_local
 -- Data for Name: site_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.site_settings (setting_name, locale, setting_value) FROM stdin;
-contactEmail	en	pkpadmin@mailinator.com
-contactName	en	Open Preprint Systems
-contactName	fr_CA	Open Preprint Systems
-compressStatsLogs		0
-enableGeoUsageStats		disabled
-enableInstitutionUsageStats		0
-keepDailyUsageStats		0
-isSiteSushiPlatform		0
-isSushiApiPublic		1
-themePluginPath		default
+COPY public.site_settings (site_setting_id, setting_name, locale, setting_value) FROM stdin;
+1	contactEmail	en	pkpadmin@mailinator.com
+2	contactName	en	Open Preprint Systems
+3	contactName	fr_CA	Open Preprint Systems
+4	compressStatsLogs		0
+5	enableGeoUsageStats		disabled
+6	enableInstitutionUsageStats		0
+7	keepDailyUsageStats		0
+8	isSiteSushiPlatform		0
+9	isSushiApiPublic		1
+10	themePluginPath		default
 \.
+
+
+--
+-- Name: site_settings_site_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.site_settings_site_setting_id_seq', 10, true);
+
+
+--
+-- Name: site_site_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.site_site_id_seq', 1, true);
 
 
 --
@@ -7553,63 +9685,63 @@ themePluginPath		default
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-2	1	3	4	2023-03-24 16:09:47	0	1
-3	1	3	5	2023-03-24 16:09:47	0	1
-50	17	3	4	2023-03-24 16:20:10	0	1
-51	17	3	5	2023-03-24 16:20:10	0	1
-1	1	4	7	2023-03-24 16:09:47	0	1
-5	2	3	4	2023-03-24 16:11:00	0	1
-6	2	3	5	2023-03-24 16:11:00	0	1
-4	2	4	8	2023-03-24 16:11:00	0	1
-8	3	3	4	2023-03-24 16:11:40	0	1
-9	3	3	5	2023-03-24 16:11:40	0	1
-49	17	4	23	2023-03-24 16:20:10	0	1
-7	3	4	9	2023-03-24 16:11:40	0	1
-11	4	3	4	2023-03-24 16:12:36	0	1
-12	4	3	5	2023-03-24 16:12:36	0	1
-53	18	3	4	2023-03-24 16:20:43	0	1
-54	18	3	5	2023-03-24 16:20:43	0	1
-10	4	4	10	2023-03-24 16:12:36	0	1
-14	5	3	4	2023-03-24 16:13:28	0	1
-15	5	3	5	2023-03-24 16:13:28	0	1
-13	5	4	11	2023-03-24 16:13:28	0	1
-17	6	3	4	2023-03-24 16:14:13	0	1
-18	6	3	5	2023-03-24 16:14:13	0	1
-52	18	4	24	2023-03-24 16:20:43	0	1
-16	6	4	12	2023-03-24 16:14:13	0	1
-20	7	3	4	2023-03-24 16:14:45	0	1
-21	7	3	5	2023-03-24 16:14:45	0	1
-56	19	3	4	2023-03-24 16:21:15	0	1
-57	19	3	5	2023-03-24 16:21:15	0	1
-19	7	4	13	2023-03-24 16:14:45	0	1
-23	8	3	4	2023-03-24 16:15:18	0	1
-24	8	3	5	2023-03-24 16:15:18	0	1
-22	8	4	14	2023-03-24 16:15:18	0	1
-26	9	3	4	2023-03-24 16:15:50	0	1
-27	9	3	5	2023-03-24 16:15:50	0	1
-55	19	4	25	2023-03-24 16:21:16	0	1
-25	9	4	15	2023-03-24 16:15:50	0	1
-29	10	3	4	2023-03-24 16:16:22	0	1
-30	10	3	5	2023-03-24 16:16:22	0	1
-28	10	4	16	2023-03-24 16:16:22	0	1
-32	11	3	4	2023-03-24 16:16:55	0	1
-33	11	3	5	2023-03-24 16:16:55	0	1
-31	11	4	17	2023-03-24 16:16:55	0	1
-35	12	3	4	2023-03-24 16:17:28	0	1
-36	12	3	5	2023-03-24 16:17:28	0	1
-34	12	4	18	2023-03-24 16:17:28	0	1
-38	13	3	4	2023-03-24 16:18:00	0	1
-39	13	3	5	2023-03-24 16:18:00	0	1
-37	13	4	19	2023-03-24 16:18:00	0	1
-41	14	3	4	2023-03-24 16:18:33	0	1
-42	14	3	5	2023-03-24 16:18:33	0	1
-40	14	4	20	2023-03-24 16:18:33	0	1
-44	15	3	4	2023-03-24 16:19:05	0	1
-45	15	3	5	2023-03-24 16:19:05	0	1
-43	15	4	21	2023-03-24 16:19:06	0	1
-47	16	3	4	2023-03-24 16:19:38	0	1
-48	16	3	5	2023-03-24 16:19:38	0	1
-46	16	4	22	2023-03-24 16:19:38	0	1
+2	1	3	4	2023-03-25 01:40:15	0	1
+3	1	3	5	2023-03-25 01:40:15	0	1
+50	17	3	4	2023-03-25 01:50:24	0	1
+51	17	3	5	2023-03-25 01:50:24	0	1
+1	1	4	7	2023-03-25 01:40:16	0	1
+5	2	3	4	2023-03-25 01:41:25	0	1
+6	2	3	5	2023-03-25 01:41:25	0	1
+4	2	4	8	2023-03-25 01:41:25	0	1
+8	3	3	4	2023-03-25 01:42:03	0	1
+9	3	3	5	2023-03-25 01:42:03	0	1
+49	17	4	23	2023-03-25 01:50:24	0	1
+7	3	4	9	2023-03-25 01:42:04	0	1
+11	4	3	4	2023-03-25 01:42:57	0	1
+12	4	3	5	2023-03-25 01:42:57	0	1
+53	18	3	4	2023-03-25 01:50:57	0	1
+54	18	3	5	2023-03-25 01:50:57	0	1
+10	4	4	10	2023-03-25 01:42:57	0	1
+14	5	3	4	2023-03-25 01:43:48	0	1
+15	5	3	5	2023-03-25 01:43:48	0	1
+13	5	4	11	2023-03-25 01:43:48	0	1
+17	6	3	4	2023-03-25 01:44:32	0	1
+18	6	3	5	2023-03-25 01:44:32	0	1
+52	18	4	24	2023-03-25 01:50:57	0	1
+16	6	4	12	2023-03-25 01:44:32	0	1
+20	7	3	4	2023-03-25 01:45:04	0	1
+21	7	3	5	2023-03-25 01:45:04	0	1
+56	19	3	4	2023-03-25 01:51:29	0	1
+57	19	3	5	2023-03-25 01:51:29	0	1
+19	7	4	13	2023-03-25 01:45:04	0	1
+23	8	3	4	2023-03-25 01:45:35	0	1
+24	8	3	5	2023-03-25 01:45:35	0	1
+22	8	4	14	2023-03-25 01:45:35	0	1
+26	9	3	4	2023-03-25 01:46:07	0	1
+27	9	3	5	2023-03-25 01:46:07	0	1
+55	19	4	25	2023-03-25 01:51:29	0	1
+25	9	4	15	2023-03-25 01:46:07	0	1
+29	10	3	4	2023-03-25 01:46:39	0	1
+30	10	3	5	2023-03-25 01:46:39	0	1
+28	10	4	16	2023-03-25 01:46:39	0	1
+32	11	3	4	2023-03-25 01:47:11	0	1
+33	11	3	5	2023-03-25 01:47:11	0	1
+31	11	4	17	2023-03-25 01:47:11	0	1
+35	12	3	4	2023-03-25 01:47:44	0	1
+36	12	3	5	2023-03-25 01:47:44	0	1
+34	12	4	18	2023-03-25 01:47:44	0	1
+38	13	3	4	2023-03-25 01:48:16	0	1
+39	13	3	5	2023-03-25 01:48:16	0	1
+37	13	4	19	2023-03-25 01:48:16	0	1
+41	14	3	4	2023-03-25 01:48:48	0	1
+42	14	3	5	2023-03-25 01:48:48	0	1
+40	14	4	20	2023-03-25 01:48:48	0	1
+44	15	3	4	2023-03-25 01:49:20	0	1
+45	15	3	5	2023-03-25 01:49:20	0	1
+43	15	4	21	2023-03-25 01:49:20	0	1
+47	16	3	4	2023-03-25 01:49:52	0	1
+48	16	3	5	2023-03-25 01:49:52	0	1
+46	16	4	22	2023-03-25 01:49:52	0	1
 \.
 
 
@@ -7624,10 +9756,17 @@ SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 57,
 -- Data for Name: subeditor_submission_group; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.subeditor_submission_group (context_id, assoc_id, assoc_type, user_id, user_group_id) FROM stdin;
-1	1	530	4	3
-1	1	530	5	3
+COPY public.subeditor_submission_group (subeditor_submission_group_id, context_id, assoc_id, assoc_type, user_id, user_group_id) FROM stdin;
+1	1	1	530	4	3
+2	1	1	530	5	3
 \.
+
+
+--
+-- Name: subeditor_submission_group_subeditor_submission_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.subeditor_submission_group_subeditor_submission_group_id_seq', 2, true);
 
 
 --
@@ -7683,46 +9822,53 @@ SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 19,
 -- Data for Name: submission_file_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.submission_file_settings (submission_file_id, locale, setting_name, setting_value, setting_type) FROM stdin;
-1	en	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-1	fr_CA	name		string
-2	en	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-2	fr_CA	name		string
-3	en	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-3	fr_CA	name		string
-4	en	name	Genetic transformation of forest trees.pdf	string
-4	fr_CA	name		string
-5	en	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-5	fr_CA	name		string
-6	en	name	Developing efficacy beliefs in the classroom.pdf	string
-6	fr_CA	name		string
-7	en	name	Developing efficacy beliefs in the classroom.pdf	string
-7	fr_CA	name		string
-8	en	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-8	fr_CA	name		string
-9	en	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
-9	fr_CA	name		string
-10	en	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-10	fr_CA	name		string
-11	en	name	Learning Sustainable Design through Service.pdf	string
-11	fr_CA	name		string
-12	en	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-12	fr_CA	name		string
-13	en	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-13	fr_CA	name		string
-14	en	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-14	fr_CA	name		string
-15	en	name	Yam diseases and its management in Nigeria.pdf	string
-15	fr_CA	name		string
-16	en	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-16	fr_CA	name		string
-17	en	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-17	fr_CA	name		string
-18	en	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-18	fr_CA	name		string
-19	en	name	Finocchiaro: Arguments About Arguments.pdf	string
-19	fr_CA	name		string
+COPY public.submission_file_settings (submission_file_setting_id, submission_file_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+1	1	en	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+2	1	fr_CA	name		string
+3	2	en	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+4	2	fr_CA	name		string
+5	3	en	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+6	3	fr_CA	name		string
+7	4	en	name	Genetic transformation of forest trees.pdf	string
+8	4	fr_CA	name		string
+9	5	en	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+10	5	fr_CA	name		string
+11	6	en	name	Developing efficacy beliefs in the classroom.pdf	string
+12	6	fr_CA	name		string
+13	7	en	name	Developing efficacy beliefs in the classroom.pdf	string
+14	7	fr_CA	name		string
+15	8	en	name	Hansen & Pinto: Reason Reclaimed.pdf	string
+16	8	fr_CA	name		string
+17	9	en	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
+18	9	fr_CA	name		string
+19	10	en	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+20	10	fr_CA	name		string
+21	11	en	name	Learning Sustainable Design through Service.pdf	string
+22	11	fr_CA	name		string
+23	12	en	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+24	12	fr_CA	name		string
+25	13	en	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+26	13	fr_CA	name		string
+27	14	en	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+28	14	fr_CA	name		string
+29	15	en	name	Yam diseases and its management in Nigeria.pdf	string
+30	15	fr_CA	name		string
+31	16	en	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+32	16	fr_CA	name		string
+33	17	en	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+34	17	fr_CA	name		string
+35	18	en	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+36	18	fr_CA	name		string
+37	19	en	name	Finocchiaro: Arguments About Arguments.pdf	string
+38	19	fr_CA	name		string
 \.
+
+
+--
+-- Name: submission_file_settings_submission_file_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.submission_file_settings_submission_file_setting_id_seq', 38, true);
 
 
 --
@@ -7730,25 +9876,25 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	1	10	\N	\N	\N	2023-03-24 16:09:43	2023-03-24 16:09:46	7	521	1
-2	2	2	\N	1	10	\N	\N	\N	2023-03-24 16:10:29	2023-03-24 16:10:32	8	521	2
-3	3	3	\N	1	10	\N	\N	\N	2023-03-24 16:11:36	2023-03-24 16:11:39	9	521	3
-4	4	4	\N	1	10	\N	\N	\N	2023-03-24 16:12:32	2023-03-24 16:12:35	10	521	5
-5	5	5	\N	1	10	\N	\N	\N	2023-03-24 16:13:25	2023-03-24 16:13:27	11	521	6
-6	6	6	\N	1	10	\N	\N	\N	2023-03-24 16:14:10	2023-03-24 16:14:12	12	521	7
-7	7	7	\N	1	10	\N	\N	\N	2023-03-24 16:14:42	2023-03-24 16:14:44	13	521	8
-8	8	8	\N	1	10	\N	\N	\N	2023-03-24 16:15:14	2023-03-24 16:15:17	14	521	9
-9	9	9	\N	1	10	\N	\N	\N	2023-03-24 16:15:46	2023-03-24 16:15:49	15	521	10
-10	10	10	\N	1	10	\N	\N	\N	2023-03-24 16:16:19	2023-03-24 16:16:21	16	521	11
-11	11	11	\N	1	10	\N	\N	\N	2023-03-24 16:16:51	2023-03-24 16:16:54	17	521	12
-12	12	12	\N	1	10	\N	\N	\N	2023-03-24 16:17:25	2023-03-24 16:17:27	18	521	13
-13	13	13	\N	1	10	\N	\N	\N	2023-03-24 16:17:57	2023-03-24 16:17:59	19	521	14
-14	14	14	\N	1	10	\N	\N	\N	2023-03-24 16:18:29	2023-03-24 16:18:32	20	521	15
-15	15	15	\N	1	10	\N	\N	\N	2023-03-24 16:19:02	2023-03-24 16:19:04	21	521	16
-16	16	16	\N	1	10	\N	\N	\N	2023-03-24 16:19:35	2023-03-24 16:19:37	22	521	17
-17	17	17	\N	1	10	\N	\N	\N	2023-03-24 16:20:07	2023-03-24 16:20:09	23	521	18
-18	18	18	\N	1	10	\N	\N	\N	2023-03-24 16:20:39	2023-03-24 16:20:42	24	521	19
-19	19	19	\N	1	10	\N	\N	\N	2023-03-24 16:21:12	2023-03-24 16:21:14	25	521	20
+1	1	1	\N	1	10	\N	\N	\N	2023-03-25 01:40:12	2023-03-25 01:40:14	7	521	1
+2	2	2	\N	1	10	\N	\N	\N	2023-03-25 01:40:57	2023-03-25 01:40:59	8	521	2
+3	3	3	\N	1	10	\N	\N	\N	2023-03-25 01:41:59	2023-03-25 01:42:02	9	521	3
+4	4	4	\N	1	10	\N	\N	\N	2023-03-25 01:42:54	2023-03-25 01:42:56	10	521	5
+5	5	5	\N	1	10	\N	\N	\N	2023-03-25 01:43:45	2023-03-25 01:43:47	11	521	6
+6	6	6	\N	1	10	\N	\N	\N	2023-03-25 01:44:29	2023-03-25 01:44:31	12	521	7
+7	7	7	\N	1	10	\N	\N	\N	2023-03-25 01:45:00	2023-03-25 01:45:02	13	521	8
+8	8	8	\N	1	10	\N	\N	\N	2023-03-25 01:45:32	2023-03-25 01:45:34	14	521	9
+9	9	9	\N	1	10	\N	\N	\N	2023-03-25 01:46:04	2023-03-25 01:46:06	15	521	10
+10	10	10	\N	1	10	\N	\N	\N	2023-03-25 01:46:35	2023-03-25 01:46:38	16	521	11
+11	11	11	\N	1	10	\N	\N	\N	2023-03-25 01:47:08	2023-03-25 01:47:10	17	521	12
+12	12	12	\N	1	10	\N	\N	\N	2023-03-25 01:47:40	2023-03-25 01:47:43	18	521	13
+13	13	13	\N	1	10	\N	\N	\N	2023-03-25 01:48:12	2023-03-25 01:48:14	19	521	14
+14	14	14	\N	1	10	\N	\N	\N	2023-03-25 01:48:45	2023-03-25 01:48:47	20	521	15
+15	15	15	\N	1	10	\N	\N	\N	2023-03-25 01:49:17	2023-03-25 01:49:19	21	521	16
+16	16	16	\N	1	10	\N	\N	\N	2023-03-25 01:49:49	2023-03-25 01:49:51	22	521	17
+17	17	17	\N	1	10	\N	\N	\N	2023-03-25 01:50:21	2023-03-25 01:50:23	23	521	18
+18	18	18	\N	1	10	\N	\N	\N	2023-03-25 01:50:53	2023-03-25 01:50:56	24	521	19
+19	19	19	\N	1	10	\N	\N	\N	2023-03-25 01:51:25	2023-03-25 01:51:28	25	521	20
 \.
 
 
@@ -8791,1788 +10937,1795 @@ SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq',
 
 
 --
+-- Name: submission_search_object_keyw_submission_search_object_keyw_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_object_keyw_submission_search_object_keyw_seq', 3842, true);
+
+
+--
 -- Data for Name: submission_search_object_keywords; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM stdin;
-1	1	0
-1	2	1
-1	3	2
-1	4	3
-2	5	0
-2	6	1
-2	7	2
-2	8	3
-2	9	4
-2	10	5
-3	11	0
-3	12	1
-3	13	2
-3	14	3
-3	15	4
-3	16	5
-3	17	6
-3	18	7
-3	19	8
-3	20	9
-3	21	10
-3	22	11
-3	23	12
-3	24	13
-3	25	14
-3	26	15
-3	27	16
-3	22	17
-3	28	18
-3	29	19
-3	30	20
-3	31	21
-3	32	22
-3	33	23
-3	34	24
-3	35	25
-3	36	26
-3	37	27
-3	38	28
-3	22	29
-3	23	30
-3	39	31
-3	40	32
-3	41	33
-3	42	34
-3	43	35
-3	44	36
-3	45	37
-3	46	38
-3	47	39
-3	16	40
-3	48	41
-3	18	42
-3	19	43
-3	49	44
-3	50	45
-3	51	46
-3	52	47
-3	53	48
-3	19	49
-3	16	50
-3	48	51
-3	18	52
-3	19	53
-3	54	54
-3	49	55
-3	26	56
-3	55	57
-3	24	58
-3	25	59
-3	56	60
-3	57	61
-3	58	62
-3	59	63
-3	60	64
-3	61	65
-3	62	66
-3	63	67
-3	22	68
-3	26	69
-3	64	70
-3	65	71
-3	16	72
-3	66	73
-3	67	74
-3	68	75
-3	69	76
-3	70	77
-3	71	78
-3	72	79
-3	69	80
-3	73	81
-3	71	82
-3	74	83
-3	30	84
-3	75	85
-3	76	86
-3	77	87
-3	67	88
-3	78	89
-3	79	90
-3	22	91
-3	80	92
-3	81	93
-3	72	94
-3	82	95
-3	83	96
-3	84	97
-3	85	98
-3	86	99
-3	74	100
-3	73	101
-3	87	102
-3	26	103
-3	88	104
-3	89	105
-3	90	106
-3	22	107
-3	91	108
-3	16	109
-3	66	110
-3	72	111
-3	92	112
-3	93	113
-3	94	114
-3	95	115
-3	96	116
-3	97	117
-3	16	118
-3	98	119
-3	17	120
-3	18	121
-3	24	122
-3	45	123
-3	21	124
-3	99	125
-3	10	126
-3	100	127
-3	101	128
-3	102	129
-3	103	130
-49	262	0
-49	263	1
-49	3	2
-49	264	3
-50	265	0
-50	266	1
-50	267	2
-50	210	3
-50	268	4
-50	269	5
-50	270	6
-50	271	7
-50	272	8
-50	273	9
-51	274	0
-51	275	1
-51	276	2
-51	277	3
-51	278	4
-51	279	5
-51	267	6
-51	280	7
-51	281	8
-51	282	9
-51	283	10
-51	284	11
-51	268	12
-51	285	13
-51	286	14
-51	287	15
-51	265	16
-51	266	17
-51	267	18
-51	210	19
-51	288	20
-51	268	21
-51	289	22
-51	267	23
-51	290	24
-51	291	25
-51	280	26
-51	292	27
-51	293	28
-51	266	29
-51	294	30
-51	281	31
-51	295	32
-51	160	33
-51	275	34
-51	296	35
-51	297	36
-51	96	37
-51	266	38
-51	280	39
-51	298	40
-51	210	41
-51	267	42
-51	288	43
-51	268	44
-51	299	45
-51	300	46
-51	301	47
-51	302	48
-51	303	49
-51	280	50
-51	304	51
-51	305	52
-51	292	53
-51	293	54
-65	354	0
-65	355	1
-65	356	2
-65	3	3
-65	393	4
-65	394	5
-65	395	6
-65	356	7
-65	3	8
-66	310	0
-9	104	0
-9	105	1
-9	3	2
-9	106	3
-9	165	4
-9	166	5
-10	107	0
-10	108	1
-10	109	2
-10	110	3
-10	111	4
-10	112	5
-10	113	6
-10	114	7
-11	115	0
-11	116	1
-11	117	2
-11	118	3
-11	119	4
-11	120	5
-11	121	6
-11	122	7
-11	123	8
-11	83	9
-11	124	10
-11	125	11
-11	126	12
-11	127	13
-11	108	14
-11	109	15
-11	128	16
-11	129	17
-11	130	18
-11	131	19
-11	132	20
-11	133	21
-11	134	22
-11	135	23
-11	136	24
-11	137	25
-11	138	26
-11	139	27
-11	140	28
-11	141	29
-11	140	30
-11	142	31
-11	143	32
-11	140	33
-11	144	34
-11	145	35
-11	146	36
-11	147	37
-11	136	38
-11	148	39
-11	140	40
-11	141	41
-11	149	42
-11	113	43
-11	114	44
-11	145	45
-11	146	46
-11	150	47
-11	119	48
-11	151	49
-11	150	50
-11	152	51
-11	153	52
-11	154	53
-11	155	54
-11	156	55
-11	157	56
-11	133	57
-11	158	58
-11	68	59
-11	109	60
-11	159	61
-11	155	62
-11	160	63
-11	124	64
-11	161	65
-11	162	66
-11	163	67
-11	164	68
-11	127	69
-11	108	70
-11	109	71
-13	119	0
-13	118	1
-66	311	1
-66	280	2
-66	180	3
-67	112	0
-67	357	1
-67	358	2
-67	359	3
-67	360	4
-67	60	5
-67	216	6
-67	361	7
-67	362	8
-67	363	9
-67	364	10
-67	365	11
-67	366	12
-67	20	13
-67	367	14
-67	368	15
-67	369	16
-67	370	17
-67	371	18
-67	372	19
-67	373	20
-67	374	21
-67	375	22
-67	376	23
-67	377	24
-67	378	25
-67	20	26
-67	367	27
-67	357	28
-67	379	29
-67	380	30
-67	381	31
-67	317	32
-67	382	33
-67	364	34
-67	365	35
-67	383	36
-67	384	37
-67	385	38
-67	100	39
-67	386	40
-67	387	41
-69	291	0
-69	388	1
-69	389	2
-69	291	3
-69	390	4
-69	391	5
-69	392	6
-90	448	8
-91	449	0
-91	444	1
-91	445	2
-91	450	3
-91	451	4
-91	452	5
-91	453	6
-91	454	7
-91	444	8
-91	455	9
-91	456	10
-91	451	11
-91	457	12
-91	458	13
-91	459	14
-91	460	15
-91	461	16
-91	462	17
-91	450	18
-91	444	19
-91	427	20
-91	463	21
-91	464	22
-91	465	23
-91	466	24
-91	444	25
-91	467	26
-81	403	0
-81	404	1
-81	3	2
-81	405	3
-81	406	4
-82	407	0
-82	408	1
-82	409	2
-82	248	3
-82	410	4
-82	411	5
-82	412	6
-83	413	0
-83	408	1
-83	414	2
-83	409	3
-83	415	4
-83	416	5
-83	417	6
-83	418	7
-83	249	8
-83	411	9
-83	412	10
-83	419	11
-83	420	12
-83	412	13
-83	182	14
-83	421	15
-83	176	16
-83	175	17
-83	422	18
-83	423	19
-83	424	20
-83	425	21
-83	176	22
-83	426	23
-83	427	24
-83	173	25
-83	428	26
-83	429	27
-83	430	28
-83	431	29
-83	432	30
-83	433	31
-83	434	32
-83	435	33
-83	436	34
-83	437	35
-83	427	36
-83	425	37
-83	435	38
-83	438	39
-83	439	40
-83	440	41
-89	403	0
-89	441	1
-89	442	2
-89	3	3
-90	443	0
-90	444	1
-90	445	2
-57	306	0
-57	307	1
-57	3	2
-57	308	3
-57	309	4
-58	310	0
-58	311	1
-58	280	2
-58	180	3
-59	181	0
-59	223	1
-59	183	2
-59	312	3
-59	313	4
-59	314	5
-59	187	6
-59	315	7
-59	316	8
-59	317	9
-59	318	10
-59	318	11
-59	319	12
-59	320	13
-59	321	14
-59	224	15
-59	322	16
-59	323	17
-59	324	18
-59	311	19
-59	280	20
-59	282	21
-59	325	22
-59	326	23
-59	212	24
-59	327	25
-59	159	26
-59	155	27
-59	328	28
-59	329	29
-59	330	30
-59	162	31
-59	331	32
-59	332	33
-59	333	34
-59	334	35
-59	335	36
-59	336	37
-59	209	38
-59	298	39
-59	159	40
-59	337	41
-59	338	42
-59	339	43
-59	340	44
-59	341	45
-59	313	46
-59	342	47
-59	343	48
-59	144	49
-59	209	50
-59	344	51
-59	340	52
-59	345	53
-59	11	54
-59	336	55
-59	209	56
-59	346	57
-59	279	58
-59	347	59
-59	313	60
-59	348	61
-59	349	62
-59	329	63
-59	350	64
-59	175	65
-59	351	66
-59	336	67
-59	352	68
-59	325	69
-59	180	70
-59	251	71
-61	183	0
-61	353	1
-90	446	3
-90	447	4
-90	367	5
-90	444	6
-90	427	7
-97	508	0
-97	509	1
-97	510	2
-97	3	3
-97	549	4
-97	550	5
-97	510	6
-97	3	7
-98	209	0
-98	511	1
-98	512	2
-98	513	3
-99	514	0
-99	515	1
-99	511	2
-99	216	3
-99	516	4
-99	517	5
-99	518	6
-99	253	7
-99	183	8
-99	519	9
-99	520	10
-99	521	11
-99	522	12
-99	523	13
-99	329	14
-99	513	15
-99	524	16
-99	525	17
-99	526	18
-99	527	19
-99	528	20
-25	167	0
-25	168	1
-25	3	2
-25	169	3
-25	238	4
-25	239	5
-25	3	6
-25	240	7
-26	170	0
-26	171	1
-26	172	2
-26	173	3
-26	174	4
-26	175	5
-26	176	6
-26	177	7
-27	178	0
-27	179	1
-27	180	2
-27	181	3
-27	182	4
-27	183	5
-27	184	6
-27	124	7
-27	185	8
-27	186	9
-27	179	10
-27	187	11
-27	188	12
-27	189	13
-27	190	14
-27	191	15
-27	192	16
-27	193	17
-27	169	18
-27	194	19
-27	195	20
-27	196	21
-27	197	22
-27	198	23
-27	199	24
-27	200	25
-27	201	26
-27	141	27
-27	179	28
-27	197	29
-27	202	30
-27	203	31
-27	204	32
-27	205	33
-27	188	34
-27	206	35
-27	207	36
-27	208	37
-27	169	38
-27	209	39
-27	174	40
-27	210	41
-27	211	42
-27	197	43
-27	212	44
-27	213	45
-27	214	46
-27	215	47
-27	216	48
-27	217	49
-27	218	50
-27	219	51
-27	220	52
-27	221	53
-27	170	54
-27	187	55
-27	222	56
-27	223	57
-27	224	58
-27	225	59
-27	226	60
-27	227	61
-27	118	62
-27	228	63
-27	229	64
-27	212	65
-27	213	66
-27	193	67
-27	169	68
-27	230	69
-27	231	70
-27	232	71
-27	170	72
-27	187	73
-27	212	74
-27	213	75
-27	233	76
-27	234	77
-27	235	78
-27	174	79
-27	144	80
-27	217	81
-27	236	82
-27	236	83
-27	174	84
-29	237	0
-29	179	1
-29	170	2
-29	187	3
-29	118	4
-29	169	5
-29	124	6
-29	185	7
-29	215	8
-29	216	9
-29	119	10
-33	241	0
-33	242	1
-33	243	2
-33	3	3
-34	244	0
-34	245	1
-34	246	2
-34	247	3
-35	248	0
-35	249	1
-35	250	2
-35	244	3
-35	245	4
-35	246	5
-35	247	6
-35	251	7
-35	252	8
-35	244	9
-35	253	10
-35	254	11
-35	246	12
-35	247	13
-35	255	14
-35	256	15
-35	257	16
-35	258	17
-35	259	18
-35	260	19
-35	261	20
-99	529	21
-99	511	22
-99	512	23
-99	416	24
-99	530	25
-99	531	26
-99	501	27
-99	522	28
-99	529	29
-99	511	30
-99	512	31
-99	506	32
-99	532	33
-99	510	34
-99	533	35
-99	530	36
-99	511	37
-99	387	38
-99	501	39
-99	534	40
-99	535	41
-99	536	42
-99	537	43
-99	538	44
-73	396	0
-73	397	1
-73	3	2
-73	398	3
-74	399	0
-74	400	1
-74	401	2
-74	402	3
-99	539	45
-99	540	46
-99	541	47
-99	512	48
-99	542	49
-99	543	50
-99	537	51
-99	538	52
-99	501	53
-99	544	54
-99	545	55
-99	546	56
-99	547	57
-99	251	58
-99	416	59
-99	548	60
-99	460	61
-99	501	62
-101	216	0
-101	253	1
-101	183	2
-101	513	3
-101	209	4
-101	515	5
-91	468	27
-91	469	28
-91	470	29
-91	471	30
-91	472	31
-91	473	32
-91	474	33
-91	475	34
-91	450	35
-91	451	36
-91	476	37
-91	450	38
-91	477	39
-91	478	40
-91	479	41
-91	252	42
-91	480	43
-91	252	44
-91	481	45
-91	482	46
-91	483	47
-91	484	48
-91	469	49
-91	447	50
-91	444	51
-91	427	52
-91	448	53
-91	485	54
-91	331	55
-91	310	56
-91	486	57
-91	487	58
-91	488	59
-91	489	60
-91	451	61
-91	466	62
-91	490	63
-91	444	64
-91	455	65
-91	491	66
-91	468	67
-91	492	68
-91	493	69
-91	494	70
-91	487	71
-91	495	72
-91	496	73
-91	476	74
-91	497	75
-91	498	76
-91	488	77
-91	451	78
-91	11	79
-91	444	80
-91	455	81
-91	463	82
-91	499	83
-91	500	84
-91	493	85
-91	494	86
-91	501	87
-91	484	88
-91	487	89
-91	502	90
-91	486	91
-91	487	92
-91	485	93
-91	453	94
-91	503	95
-91	486	96
-91	501	97
-91	504	98
-91	463	99
-91	505	100
-91	489	101
-91	451	102
-91	506	103
-91	507	104
-91	449	105
-91	444	106
-91	445	107
-91	450	108
-91	451	109
-91	487	110
-91	504	111
-91	463	112
-91	499	113
-93	444	0
-129	793	0
-115	642	136
-115	700	137
-115	706	138
-115	609	139
-115	644	140
-115	707	141
-115	697	142
-115	700	143
-115	643	144
-115	642	145
-115	705	146
-115	672	147
-115	708	148
-115	67	149
-115	709	150
-115	710	151
-115	609	152
-115	644	153
-115	707	154
-115	697	155
-115	650	156
-115	127	157
-115	711	158
-115	712	159
-115	705	160
-115	713	161
-115	714	162
-115	444	163
-115	191	164
-115	230	165
-115	700	166
-115	715	167
-115	716	168
-115	717	169
-115	718	170
-115	719	171
-115	720	172
-115	639	173
-115	711	174
-115	5	175
-115	83	176
-115	636	177
-115	721	178
-115	640	179
-115	641	180
-115	643	181
-115	642	182
-115	722	183
-115	723	184
-115	60	185
-115	724	186
-115	444	187
-115	725	188
-115	700	189
-115	701	190
-115	101	191
-115	726	192
-115	727	193
-115	669	194
-115	191	195
-115	728	196
-115	666	197
-115	640	198
-105	551	0
-105	552	1
-105	553	2
-105	124	3
-105	3	4
-106	554	0
-106	555	1
-106	556	2
-106	60	3
-106	557	4
-106	558	5
-106	559	6
-106	49	7
-106	560	8
-107	561	0
-107	112	1
-107	562	2
-107	5	3
-107	563	4
-107	73	5
-107	564	6
-107	84	7
-107	85	8
-107	565	9
-107	21	10
-107	99	11
-107	566	12
-107	567	13
-107	568	14
-107	471	15
-107	569	16
-107	31	17
-107	570	18
-107	571	19
-107	572	20
-107	573	21
-107	574	22
-107	26	23
-107	575	24
-107	576	25
-107	577	26
-107	578	27
-107	579	28
-107	578	29
-107	580	30
-107	581	31
-107	23	32
-107	582	33
-107	583	34
-107	584	35
-107	585	36
-107	586	37
-107	587	38
-107	588	39
-107	589	40
-107	590	41
-107	84	42
-107	85	43
-107	86	44
-107	584	45
-107	591	46
-107	592	47
-107	84	48
-107	85	49
-107	86	50
-107	575	51
-107	580	52
-107	584	53
-107	22	54
-107	23	55
-107	593	56
-107	594	57
-107	84	58
-107	85	59
-107	595	60
-107	596	61
-107	23	62
-107	593	63
-107	595	64
-107	597	65
-107	84	66
-107	85	67
-107	598	68
-107	599	69
-107	600	70
-107	84	71
-107	85	72
-107	601	73
-107	595	74
-107	23	75
-107	593	76
-107	595	77
-107	602	78
-107	85	79
-107	603	80
-107	604	81
-107	605	82
-107	606	83
-107	85	84
-107	607	85
-107	589	86
-107	164	87
-107	608	88
-107	85	89
-107	609	90
-107	610	91
-107	584	92
-107	611	93
-107	65	94
-107	609	95
-107	68	96
-107	603	97
-107	612	98
-107	613	99
-107	614	100
-107	615	101
-107	74	102
-107	616	103
-107	617	104
-107	618	105
-107	619	106
-107	584	107
-107	567	108
-107	620	109
-107	67	110
-107	621	111
-107	226	112
-107	622	113
-107	563	114
-107	623	115
-107	564	116
-107	580	117
-107	84	118
-107	85	119
-107	565	120
-107	21	121
-107	99	122
-107	566	123
-107	567	124
-107	564	125
-107	579	126
-107	578	127
-107	624	128
-107	625	129
-107	626	130
-107	84	131
-107	627	132
-107	99	133
-107	73	134
-107	254	135
-107	628	136
-107	8	137
-107	11	138
-107	629	139
-107	8	140
-107	73	141
-107	630	142
-107	631	143
-109	22	0
-109	632	1
-109	633	2
-113	634	0
-113	635	1
-113	3	2
-113	405	3
-113	406	4
-114	636	0
-114	637	1
-114	638	2
-114	639	3
-114	640	4
-114	641	5
-114	642	6
-114	643	7
-114	642	8
-114	644	9
-114	645	10
-115	638	0
-115	639	1
-115	646	2
-115	647	3
-115	444	4
-115	648	5
-115	649	6
-115	449	7
-115	650	8
-115	181	9
-115	642	10
-115	310	11
-115	651	12
-115	652	13
-115	653	14
-115	654	15
-115	655	16
-115	656	17
-115	640	18
-115	641	19
-115	642	20
-115	657	21
-115	658	22
-115	659	23
-115	660	24
-115	636	25
-115	661	26
-115	640	27
-115	662	28
-115	643	29
-115	642	30
-115	663	31
-115	638	32
-115	639	33
-115	644	34
-115	645	35
-115	521	36
-115	657	37
-115	664	38
-115	116	39
-115	665	40
-115	666	41
-115	667	42
-115	112	43
-115	328	44
-115	137	45
-115	668	46
-115	116	47
-115	669	48
-115	661	49
-115	670	50
-115	671	51
-115	672	52
-115	673	53
-115	661	54
-115	674	55
-115	675	56
-115	676	57
-115	463	58
-115	677	59
-115	678	60
-115	636	61
-115	645	62
-115	137	63
-115	116	64
-115	586	65
-115	644	66
-115	414	67
-115	669	68
-115	661	69
-115	679	70
-115	680	71
-115	681	72
-115	682	73
-115	663	74
-115	683	75
-115	428	76
-115	669	77
-115	684	78
-115	361	79
-115	640	80
-115	641	81
-115	642	82
-115	643	83
-115	642	84
-115	181	85
-115	685	86
-115	175	87
-115	686	88
-115	427	89
-115	445	90
-115	669	91
-115	638	92
-115	639	93
-115	687	94
-115	688	95
-115	689	96
-115	501	97
-115	160	98
-115	690	99
-115	691	100
-115	361	101
-115	640	102
-115	641	103
-115	643	104
-115	642	105
-115	644	106
-115	645	107
-115	669	108
-115	661	109
-115	692	110
-115	693	111
-115	694	112
-115	674	113
-115	675	114
-115	676	115
-115	463	116
-115	692	117
-115	695	118
-115	696	119
-115	697	120
-115	694	121
-115	698	122
-115	699	123
-115	671	124
-115	700	125
-115	701	126
-115	116	127
-115	495	128
-115	702	129
-115	703	130
-115	704	131
-115	705	132
-115	672	133
-115	640	134
-115	641	135
-115	641	199
-115	642	200
-115	701	201
-115	473	202
-115	116	203
-115	416	204
-115	667	205
-115	729	206
-115	730	207
-117	444	0
-129	794	1
-129	3	2
-129	795	3
-130	796	0
-130	797	1
-130	427	2
-130	798	3
-131	248	0
-131	799	1
-131	797	2
-131	796	3
-131	427	4
-131	217	5
-131	236	6
-131	800	7
-131	801	8
-131	798	9
-131	802	10
-131	803	11
-131	797	12
-131	331	13
-131	804	14
-131	805	15
-131	305	16
-131	806	17
-131	802	18
-131	797	19
-131	796	20
-131	807	21
-131	808	22
-131	809	23
-131	810	24
-131	811	25
-131	75	26
-131	812	27
-131	46	28
-131	813	29
-131	810	30
-131	814	31
-131	803	32
-131	797	33
-131	796	34
-131	46	35
-131	813	36
-131	812	37
-131	78	38
-131	815	39
-131	7	40
-131	816	41
-131	817	42
-131	818	43
-131	819	44
-131	820	45
-131	811	46
-131	821	47
-131	812	48
-131	427	49
-131	217	50
-131	822	51
-131	823	52
-131	800	53
-131	802	54
-131	797	55
-131	824	56
-131	825	57
-131	826	58
-131	827	59
-131	828	60
-131	829	61
-131	830	62
-131	831	63
-131	832	64
-131	825	65
-131	833	66
-131	834	67
-131	833	68
-131	803	69
-131	797	70
-131	835	71
-131	836	72
-131	837	73
-131	838	74
-131	46	75
-131	839	76
-131	840	77
-131	841	78
-131	803	79
-131	842	80
-131	652	81
-131	796	82
-131	819	83
-131	843	84
-131	844	85
-131	803	86
-131	845	87
-131	846	88
-131	796	89
-131	819	90
-131	847	91
-131	848	92
-131	624	93
-131	849	94
-131	850	95
-131	49	96
-131	851	97
-131	852	98
-121	731	0
-121	732	1
-121	3	2
-121	733	3
-122	734	0
-122	735	1
-122	197	2
-122	736	3
-122	112	4
-122	737	5
-122	738	6
-122	739	7
-123	546	0
-123	740	1
-123	741	2
-123	742	3
-123	743	4
-123	744	5
-123	745	6
-123	183	7
-123	746	8
-123	747	9
-123	319	10
-123	547	11
-123	748	12
-123	19	13
-123	749	14
-123	125	15
-123	750	16
-123	736	17
-123	112	18
-123	751	19
-123	737	20
-123	738	21
-123	739	22
-123	752	23
-123	753	24
-123	385	25
-123	754	26
-123	755	27
-123	3	28
-123	756	29
-123	757	30
-123	216	31
-123	758	32
-123	759	33
-123	760	34
-123	159	35
-123	761	36
-123	3	37
-123	762	38
-123	188	39
-123	763	40
-123	764	41
-123	735	42
-123	197	43
-123	217	44
-123	765	45
-123	501	46
-123	19	47
-123	766	48
-123	501	49
-123	755	50
-123	255	51
-123	767	52
-123	197	53
-123	768	54
-123	769	55
-123	770	56
-123	771	57
-123	772	58
-123	773	59
-123	774	60
-123	139	61
-123	775	62
-123	216	63
-123	735	64
-123	197	65
-123	776	66
-123	777	67
-123	778	68
-123	779	69
-123	780	70
-123	772	71
-123	646	72
-123	781	73
-123	782	74
-123	783	75
-123	385	76
-123	784	77
-123	785	78
-123	786	79
-123	3	80
-123	159	81
-123	787	82
-123	788	83
-123	760	84
-123	789	85
-123	19	86
-123	790	87
-123	758	88
-123	791	89
-123	792	90
-123	329	91
-123	245	92
-125	741	0
-125	742	1
-125	745	2
-125	752	3
-125	753	4
-125	760	5
-125	789	6
-125	749	7
-125	125	8
-125	750	9
-125	786	10
-125	329	11
-125	245	12
-137	853	0
-137	854	1
-137	855	2
-137	3	3
-138	5	0
-138	563	1
-138	856	2
-138	623	3
-138	580	4
-138	84	5
-138	85	6
-138	86	7
-138	21	8
-138	22	9
-138	584	10
-139	561	0
-139	159	1
-139	473	2
-139	857	3
-139	858	4
-139	859	5
-139	860	6
-139	861	7
-139	862	8
-139	863	9
-139	864	10
-139	865	11
-139	8	12
-139	866	13
-139	867	14
-139	868	15
-139	869	16
-139	870	17
-139	861	18
-139	810	19
-139	871	20
-139	872	21
-139	873	22
-139	645	23
-139	874	24
-139	859	25
-139	875	26
-139	876	27
-139	877	28
-139	878	29
-139	583	30
-139	875	31
-139	488	32
-139	879	33
-139	880	34
-139	860	35
-139	8	36
-139	61	37
-139	86	38
-139	877	39
-139	878	40
-139	761	41
-139	881	42
-139	859	43
-139	882	44
-139	883	45
-139	884	46
-139	885	47
-139	291	48
-139	10	49
-139	451	50
-139	886	51
-139	569	52
-139	887	53
-139	888	54
-139	889	55
-139	890	56
-139	891	57
-139	892	58
-139	30	59
-139	893	60
-139	894	61
-139	451	62
-139	859	63
-139	895	64
-139	896	65
-139	897	66
-139	852	67
-139	898	68
-139	8	69
-139	73	70
-139	595	71
-139	703	72
-139	899	73
-139	890	74
-139	886	75
-139	66	76
-139	900	77
-139	898	78
-139	901	79
-139	860	80
-139	902	81
-139	291	82
-139	903	83
-139	645	84
-139	904	85
-139	905	86
-139	906	87
-139	907	88
-139	908	89
-139	909	90
-139	910	91
-139	911	92
-139	912	93
-139	913	94
-139	914	95
-139	915	96
-139	916	97
-139	910	98
-139	875	99
-139	917	100
-139	918	101
-139	919	102
-139	920	103
-139	921	104
-139	918	105
-139	922	106
-139	923	107
-139	893	108
-139	924	109
-139	116	110
-139	925	111
-139	926	112
-139	927	113
-139	928	114
-139	561	115
-139	929	116
-139	859	117
-139	10	118
-139	930	119
-139	867	120
-139	648	121
-139	38	122
-139	931	123
-139	59	124
-139	797	125
-139	932	126
-139	457	127
-139	933	128
-141	859	0
-141	632	1
-141	633	2
-145	934	0
-145	935	1
-145	3	2
-145	936	3
-146	937	0
-146	21	1
-146	938	2
-146	939	3
-146	940	4
-146	565	5
-146	941	6
-146	942	7
-146	943	8
-146	944	9
-146	945	10
-146	946	11
-146	947	12
-147	937	0
-147	21	1
-147	938	2
-147	939	3
-147	948	4
-147	940	5
-147	949	6
-147	941	7
-147	950	8
-147	942	9
-147	943	10
-147	944	11
-147	829	12
-147	951	13
-147	952	14
-147	135	15
-147	953	16
-147	954	17
-147	943	18
-147	944	19
-147	955	20
-147	956	21
-147	957	22
-147	958	23
-147	959	24
-147	960	25
-147	961	26
-147	962	27
-147	963	28
-147	942	29
-147	943	30
-147	944	31
-147	964	32
-147	965	33
-147	939	34
-147	966	35
-147	135	36
-147	963	37
-147	829	38
-147	951	39
-147	952	40
-147	967	41
-147	968	42
-147	969	43
-147	970	44
-147	971	45
-147	93	46
-147	963	47
-147	972	48
-147	973	49
-147	952	50
-147	21	51
-147	974	52
-147	57	53
-147	963	54
-147	942	55
-147	945	56
-147	975	57
-147	21	58
-147	938	59
-147	829	60
-147	976	61
-147	153	62
-147	977	63
-147	940	64
-147	565	65
-147	56	66
-147	937	67
-147	939	68
-147	978	69
-147	979	70
-147	940	71
-147	980	72
-147	939	73
-147	21	74
-147	974	75
-147	966	76
-147	981	77
-147	963	78
-147	942	79
-147	943	80
-147	944	81
-147	226	82
-147	982	83
-147	941	84
-147	428	85
-147	943	86
-147	844	87
-147	385	88
-153	983	0
-153	984	1
-153	3	2
-153	106	3
-154	985	0
-154	986	1
-154	987	2
-154	988	3
-154	989	4
-155	990	0
-155	525	1
-155	991	2
-155	134	3
-155	992	4
-155	993	5
-155	525	6
-155	994	7
-155	995	8
-155	991	9
-155	996	10
-155	997	11
-155	998	12
-155	999	13
-155	1000	14
-155	1001	15
-155	435	16
-155	1002	17
-155	922	18
-155	1003	19
-155	1004	20
-155	1005	21
-155	1006	22
-155	838	23
-155	996	24
-155	1007	25
-155	1001	26
-155	1008	27
-155	883	28
-155	1009	29
-155	771	30
-155	991	31
-155	1010	32
-155	1000	33
-155	1001	34
-155	435	35
-155	100	36
-155	56	37
-157	985	0
-157	986	1
-157	987	2
-157	1011	3
-161	1012	0
-161	1013	1
-161	1014	2
-162	1015	0
-162	1016	1
-162	1016	2
-165	183	0
-165	353	1
+COPY public.submission_search_object_keywords (submission_search_object_keyword_id, object_id, keyword_id, pos) FROM stdin;
+1	1	1	0
+2	1	2	1
+3	1	3	2
+4	1	4	3
+5	2	5	0
+6	2	6	1
+7	2	7	2
+8	2	8	3
+9	2	9	4
+10	2	10	5
+11	3	11	0
+12	3	12	1
+13	3	13	2
+14	3	14	3
+15	3	15	4
+16	3	16	5
+17	3	17	6
+18	3	18	7
+19	3	19	8
+20	3	20	9
+21	3	21	10
+22	3	22	11
+23	3	23	12
+24	3	24	13
+25	3	25	14
+26	3	26	15
+27	3	27	16
+28	3	22	17
+29	3	28	18
+30	3	29	19
+31	3	30	20
+32	3	31	21
+33	3	32	22
+34	3	33	23
+35	3	34	24
+36	3	35	25
+37	3	36	26
+38	3	37	27
+39	3	38	28
+40	3	22	29
+41	3	23	30
+42	3	39	31
+43	3	40	32
+44	3	41	33
+45	3	42	34
+46	3	43	35
+47	3	44	36
+48	3	45	37
+49	3	46	38
+50	3	47	39
+51	3	16	40
+52	3	48	41
+53	3	18	42
+54	3	19	43
+55	3	49	44
+56	3	50	45
+57	3	51	46
+58	3	52	47
+59	3	53	48
+60	3	19	49
+61	3	16	50
+62	3	48	51
+63	3	18	52
+64	3	19	53
+65	3	54	54
+66	3	49	55
+67	3	26	56
+68	3	55	57
+69	3	24	58
+70	3	25	59
+71	3	56	60
+72	3	57	61
+73	3	58	62
+74	3	59	63
+75	3	60	64
+76	3	61	65
+77	3	62	66
+78	3	63	67
+79	3	22	68
+80	3	26	69
+81	3	64	70
+82	3	65	71
+83	3	16	72
+84	3	66	73
+85	3	67	74
+86	3	68	75
+87	3	69	76
+88	3	70	77
+89	3	71	78
+90	3	72	79
+91	3	69	80
+92	3	73	81
+93	3	71	82
+94	3	74	83
+95	3	30	84
+96	3	75	85
+97	3	76	86
+98	3	77	87
+99	3	67	88
+100	3	78	89
+101	3	79	90
+102	3	22	91
+103	3	80	92
+104	3	81	93
+105	3	72	94
+106	3	82	95
+107	3	83	96
+108	3	84	97
+109	3	85	98
+110	3	86	99
+111	3	74	100
+112	3	73	101
+113	3	87	102
+114	3	26	103
+115	3	88	104
+116	3	89	105
+117	3	90	106
+118	3	22	107
+119	3	91	108
+120	3	16	109
+121	3	66	110
+122	3	72	111
+123	3	92	112
+124	3	93	113
+125	3	94	114
+126	3	95	115
+127	3	96	116
+128	3	97	117
+129	3	16	118
+130	3	98	119
+131	3	17	120
+132	3	18	121
+133	3	24	122
+134	3	45	123
+135	3	21	124
+136	3	99	125
+137	3	10	126
+138	3	100	127
+139	3	101	128
+140	3	102	129
+141	3	103	130
+3112	129	793	0
+3113	129	794	1
+3114	129	3	2
+3115	129	795	3
+3116	130	796	0
+3117	130	797	1
+3118	130	427	2
+3119	130	798	3
+1529	81	403	0
+1530	81	404	1
+1531	81	3	2
+1532	81	405	3
+1533	81	406	4
+1534	82	407	0
+1535	82	408	1
+1536	82	409	2
+1537	82	248	3
+1538	82	410	4
+1539	82	411	5
+1540	82	412	6
+1541	83	413	0
+1542	83	408	1
+1543	83	414	2
+1544	83	409	3
+1545	83	415	4
+1546	83	416	5
+1547	83	417	6
+1548	83	418	7
+1549	83	249	8
+1550	83	411	9
+1551	83	412	10
+1552	83	419	11
+1553	83	420	12
+1554	83	412	13
+1555	83	182	14
+1556	83	421	15
+1557	83	176	16
+1558	83	175	17
+1559	83	422	18
+1560	83	423	19
+1561	83	424	20
+1562	83	425	21
+1563	83	176	22
+1564	83	426	23
+1565	83	427	24
+1566	83	173	25
+1567	83	428	26
+1568	83	429	27
+1569	83	430	28
+1570	83	431	29
+1571	83	432	30
+1572	83	433	31
+1573	83	434	32
+1574	83	435	33
+1575	83	436	34
+1576	83	437	35
+1577	83	427	36
+1578	83	425	37
+1579	83	435	38
+1580	83	438	39
+1581	83	439	40
+1582	83	440	41
+3120	131	248	0
+3121	131	799	1
+3122	131	797	2
+3123	131	796	3
+3124	131	427	4
+3125	131	217	5
+3126	131	236	6
+1105	49	262	0
+1106	49	263	1
+1107	49	3	2
+1108	49	264	3
+1109	50	265	0
+1110	50	266	1
+1111	50	267	2
+1112	50	210	3
+1113	50	268	4
+1114	50	269	5
+1115	50	270	6
+1116	50	271	7
+1117	50	272	8
+1118	50	273	9
+1119	51	274	0
+1120	51	275	1
+1121	51	276	2
+228	9	104	0
+229	9	105	1
+230	9	3	2
+231	9	106	3
+232	9	165	4
+233	9	166	5
+234	10	107	0
+235	10	108	1
+236	10	109	2
+237	10	110	3
+238	10	111	4
+239	10	112	5
+240	10	113	6
+241	10	114	7
+242	11	115	0
+243	11	116	1
+244	11	117	2
+245	11	118	3
+246	11	119	4
+247	11	120	5
+248	11	121	6
+249	11	122	7
+250	11	123	8
+251	11	83	9
+252	11	124	10
+253	11	125	11
+254	11	126	12
+255	11	127	13
+256	11	108	14
+257	11	109	15
+258	11	128	16
+259	11	129	17
+260	11	130	18
+261	11	131	19
+262	11	132	20
+263	11	133	21
+264	11	134	22
+265	11	135	23
+266	11	136	24
+267	11	137	25
+268	11	138	26
+269	11	139	27
+270	11	140	28
+271	11	141	29
+272	11	140	30
+273	11	142	31
+274	11	143	32
+275	11	140	33
+276	11	144	34
+277	11	145	35
+278	11	146	36
+279	11	147	37
+280	11	136	38
+281	11	148	39
+282	11	140	40
+283	11	141	41
+284	11	149	42
+285	11	113	43
+286	11	114	44
+287	11	145	45
+288	11	146	46
+289	11	150	47
+290	11	119	48
+291	11	151	49
+292	11	150	50
+293	11	152	51
+294	11	153	52
+295	11	154	53
+296	11	155	54
+297	11	156	55
+298	11	157	56
+299	11	133	57
+300	11	158	58
+301	11	68	59
+302	11	109	60
+303	11	159	61
+304	11	155	62
+305	11	160	63
+306	11	124	64
+307	11	161	65
+308	11	162	66
+309	11	163	67
+310	11	164	68
+311	11	127	69
+312	11	108	70
+313	11	109	71
+314	13	119	0
+315	13	118	1
+1467	73	396	0
+1468	73	397	1
+1469	73	3	2
+1470	73	398	3
+1471	74	399	0
+1472	74	400	1
+1473	74	401	2
+1474	74	402	3
+3127	131	800	7
+3128	131	801	8
+3129	131	798	9
+3130	131	802	10
+3131	131	803	11
+3132	131	797	12
+3133	131	331	13
+3134	131	804	14
+3135	131	805	15
+3136	131	305	16
+3137	131	806	17
+3138	131	802	18
+3139	131	797	19
+3140	131	796	20
+3141	131	807	21
+3142	131	808	22
+3143	131	809	23
+3144	131	810	24
+869	33	241	0
+870	33	242	1
+871	33	243	2
+872	33	3	3
+873	34	244	0
+874	34	245	1
+875	34	246	2
+876	34	247	3
+877	35	248	0
+878	35	249	1
+879	35	250	2
+880	35	244	3
+881	35	245	4
+882	35	246	5
+883	35	247	6
+884	35	251	7
+885	35	252	8
+886	35	244	9
+887	35	253	10
+888	35	254	11
+889	35	246	12
+890	35	247	13
+891	35	255	14
+892	35	256	15
+893	35	257	16
+894	35	258	17
+895	35	259	18
+896	35	260	19
+897	35	261	20
+3145	131	811	25
+3146	131	75	26
+3147	131	812	27
+3148	131	46	28
+3149	131	813	29
+3150	131	810	30
+3151	131	814	31
+3152	131	803	32
+3153	131	797	33
+3154	131	796	34
+3155	131	46	35
+3156	131	813	36
+3157	131	812	37
+3158	131	78	38
+3159	131	815	39
+3160	131	7	40
+3161	131	816	41
+3162	131	817	42
+3163	131	818	43
+3164	131	819	44
+3165	131	820	45
+3166	131	811	46
+3167	131	821	47
+3168	131	812	48
+3169	131	427	49
+3170	131	217	50
+3171	131	822	51
+3172	131	823	52
+3173	131	800	53
+3174	131	802	54
+3175	131	797	55
+3176	131	824	56
+3177	131	825	57
+3178	131	826	58
+3179	131	827	59
+3180	131	828	60
+3181	131	829	61
+3182	131	830	62
+757	25	167	0
+758	25	168	1
+759	25	3	2
+760	25	169	3
+761	25	238	4
+762	25	239	5
+763	25	3	6
+764	25	240	7
+765	26	170	0
+766	26	171	1
+767	26	172	2
+768	26	173	3
+769	26	174	4
+770	26	175	5
+771	26	176	6
+772	26	177	7
+773	27	178	0
+774	27	179	1
+775	27	180	2
+776	27	181	3
+777	27	182	4
+778	27	183	5
+779	27	184	6
+780	27	124	7
+781	27	185	8
+782	27	186	9
+783	27	179	10
+784	27	187	11
+785	27	188	12
+786	27	189	13
+787	27	190	14
+788	27	191	15
+789	27	192	16
+790	27	193	17
+791	27	169	18
+792	27	194	19
+793	27	195	20
+794	27	196	21
+795	27	197	22
+796	27	198	23
+797	27	199	24
+798	27	200	25
+799	27	201	26
+800	27	141	27
+801	27	179	28
+802	27	197	29
+803	27	202	30
+804	27	203	31
+805	27	204	32
+806	27	205	33
+807	27	188	34
+808	27	206	35
+809	27	207	36
+810	27	208	37
+811	27	169	38
+812	27	209	39
+813	27	174	40
+814	27	210	41
+815	27	211	42
+816	27	197	43
+817	27	212	44
+818	27	213	45
+819	27	214	46
+820	27	215	47
+821	27	216	48
+822	27	217	49
+823	27	218	50
+824	27	219	51
+825	27	220	52
+826	27	221	53
+827	27	170	54
+828	27	187	55
+829	27	222	56
+830	27	223	57
+831	27	224	58
+832	27	225	59
+833	27	226	60
+834	27	227	61
+835	27	118	62
+836	27	228	63
+837	27	229	64
+838	27	212	65
+839	27	213	66
+840	27	193	67
+841	27	169	68
+842	27	230	69
+843	27	231	70
+844	27	232	71
+845	27	170	72
+846	27	187	73
+847	27	212	74
+848	27	213	75
+849	27	233	76
+850	27	234	77
+851	27	235	78
+852	27	174	79
+853	27	144	80
+854	27	217	81
+855	27	236	82
+856	27	236	83
+857	27	174	84
+858	29	237	0
+859	29	179	1
+860	29	170	2
+861	29	187	3
+862	29	118	4
+863	29	169	5
+864	29	124	6
+865	29	185	7
+866	29	215	8
+867	29	216	9
+1257	57	306	0
+1258	57	307	1
+1259	57	3	2
+1260	57	308	3
+1261	57	309	4
+1122	51	277	3
+1123	51	278	4
+1124	51	279	5
+1125	51	267	6
+1126	51	280	7
+1127	51	281	8
+1128	51	282	9
+1129	51	283	10
+1130	51	284	11
+1131	51	268	12
+1132	51	285	13
+1133	51	286	14
+1134	51	287	15
+1135	51	265	16
+1136	51	266	17
+1137	51	267	18
+1138	51	210	19
+1139	51	288	20
+1140	51	268	21
+1262	58	310	0
+1263	58	311	1
+1264	58	280	2
+1265	58	180	3
+1266	59	181	0
+1267	59	223	1
+1268	59	183	2
+1269	59	312	3
+1270	59	313	4
+1271	59	314	5
+1272	59	187	6
+1273	59	315	7
+1274	59	316	8
+1275	59	317	9
+1276	59	318	10
+1277	59	318	11
+1278	59	319	12
+1279	59	320	13
+1280	59	321	14
+1281	59	224	15
+1282	59	322	16
+1283	59	323	17
+1284	59	324	18
+1285	59	311	19
+1286	59	280	20
+1287	59	282	21
+1288	59	325	22
+1289	59	326	23
+1290	59	212	24
+1291	59	327	25
+1292	59	159	26
+1293	59	155	27
+1294	59	328	28
+1295	59	329	29
+1296	59	330	30
+1297	59	162	31
+1298	59	331	32
+1299	59	332	33
+1300	59	333	34
+1301	59	334	35
+1302	59	335	36
+1303	59	336	37
+1304	59	209	38
+1305	59	298	39
+1306	59	159	40
+1307	59	337	41
+1308	59	338	42
+1309	59	339	43
+1310	59	340	44
+1311	59	341	45
+1312	59	313	46
+1313	59	342	47
+1314	59	343	48
+1315	59	144	49
+1316	59	209	50
+1317	59	344	51
+1318	59	340	52
+1319	59	345	53
+1320	59	11	54
+1321	59	336	55
+1322	59	209	56
+1323	59	346	57
+1324	59	279	58
+1325	59	347	59
+1326	59	313	60
+1327	59	348	61
+1328	59	349	62
+1329	59	329	63
+1330	59	350	64
+1141	51	289	22
+1142	51	267	23
+1143	51	290	24
+1144	51	291	25
+1145	51	280	26
+1146	51	292	27
+1147	51	293	28
+1148	51	266	29
+1149	51	294	30
+1150	51	281	31
+1151	51	295	32
+1152	51	160	33
+1153	51	275	34
+1154	51	296	35
+1155	51	297	36
+1156	51	96	37
+1157	51	266	38
+1158	51	280	39
+868	29	119	10
+1159	51	298	40
+1160	51	210	41
+1161	51	267	42
+1162	51	288	43
+1163	51	268	44
+1164	51	299	45
+1165	51	300	46
+1166	51	301	47
+1167	51	302	48
+1168	51	303	49
+1169	51	280	50
+1170	51	304	51
+1171	51	305	52
+1172	51	292	53
+1173	51	293	54
+1331	59	175	65
+1332	59	351	66
+1333	59	336	67
+1334	59	352	68
+1335	59	325	69
+1336	59	180	70
+1337	59	251	71
+1338	61	183	0
+1339	61	353	1
+3183	131	831	63
+3184	131	832	64
+3185	131	825	65
+3186	131	833	66
+3187	131	834	67
+3188	131	833	68
+3189	131	803	69
+1397	65	354	0
+1398	65	355	1
+1399	65	356	2
+1400	65	3	3
+1401	65	393	4
+1402	65	394	5
+1403	65	395	6
+1404	65	356	7
+1405	65	3	8
+1406	66	310	0
+1407	66	311	1
+1408	66	280	2
+1409	66	180	3
+1410	67	112	0
+1411	67	357	1
+1412	67	358	2
+1413	67	359	3
+1414	67	360	4
+1415	67	60	5
+1416	67	216	6
+1417	67	361	7
+1418	67	362	8
+1419	67	363	9
+1420	67	364	10
+1421	67	365	11
+1422	67	366	12
+1423	67	20	13
+1424	67	367	14
+1425	67	368	15
+1426	67	369	16
+1427	67	370	17
+1428	67	371	18
+1429	67	372	19
+1430	67	373	20
+1431	67	374	21
+1432	67	375	22
+1433	67	376	23
+1434	67	377	24
+1435	67	378	25
+1436	67	20	26
+1437	67	367	27
+1438	67	357	28
+1439	67	379	29
+1440	67	380	30
+1441	67	381	31
+1442	67	317	32
+1443	67	382	33
+1444	67	364	34
+1445	67	365	35
+1446	67	383	36
+1447	67	384	37
+1448	67	385	38
+1449	67	100	39
+1450	67	386	40
+1451	67	387	41
+1452	69	291	0
+1453	69	388	1
+1454	69	389	2
+1455	69	291	3
+1456	69	390	4
+1457	69	391	5
+1458	69	392	6
+3190	131	797	70
+3191	131	835	71
+3192	131	836	72
+3193	131	837	73
+3194	131	838	74
+3195	131	46	75
+3196	131	839	76
+3197	131	840	77
+3198	131	841	78
+3199	131	803	79
+3200	131	842	80
+3201	131	652	81
+3202	131	796	82
+3203	131	819	83
+3204	131	843	84
+3205	131	844	85
+3206	131	803	86
+3207	131	845	87
+3208	131	846	88
+3209	131	796	89
+3210	131	819	90
+3211	131	847	91
+3212	131	848	92
+3213	131	624	93
+3214	131	849	94
+3215	131	850	95
+3216	131	49	96
+3217	131	851	97
+3218	131	852	98
+3420	139	877	39
+3421	139	878	40
+3422	139	761	41
+3423	139	881	42
+3424	139	859	43
+3425	139	882	44
+3426	139	883	45
+3427	139	884	46
+3428	139	885	47
+3429	139	291	48
+3430	139	10	49
+3431	139	451	50
+3432	139	886	51
+3433	139	569	52
+3434	139	887	53
+3435	139	888	54
+3436	139	889	55
+3437	139	890	56
+3438	139	891	57
+3439	139	892	58
+3440	139	30	59
+3441	139	893	60
+3442	139	894	61
+3443	139	451	62
+3444	139	859	63
+3445	139	895	64
+3446	139	896	65
+3447	139	897	66
+3448	139	852	67
+3449	139	898	68
+3450	139	8	69
+3451	139	73	70
+3452	139	595	71
+3453	139	703	72
+3454	139	899	73
+3455	139	890	74
+3456	139	886	75
+3457	139	66	76
+3458	139	900	77
+3459	139	898	78
+3460	139	901	79
+3461	139	860	80
+3462	139	902	81
+3463	139	291	82
+3464	139	903	83
+3465	139	645	84
+3466	139	904	85
+3467	139	905	86
+3468	139	906	87
+3469	139	907	88
+3470	139	908	89
+3471	139	909	90
+3472	139	910	91
+3473	139	911	92
+3474	139	912	93
+3475	139	913	94
+2158	105	551	0
+2159	105	552	1
+2160	105	553	2
+2161	105	124	3
+2162	105	3	4
+2163	106	554	0
+2164	106	555	1
+2165	106	556	2
+2166	106	60	3
+2167	106	557	4
+2168	106	558	5
+2169	106	559	6
+2170	106	49	7
+2171	106	560	8
+2172	107	561	0
+2173	107	112	1
+2174	107	562	2
+2175	107	5	3
+2176	107	563	4
+2177	107	73	5
+2178	107	564	6
+1711	89	403	0
+1712	89	441	1
+1713	89	442	2
+1714	89	3	3
+1715	90	443	0
+1716	90	444	1
+1717	90	445	2
+1718	90	446	3
+1719	90	447	4
+1720	90	367	5
+1721	90	444	6
+1722	90	427	7
+1723	90	448	8
+1724	91	449	0
+1725	91	444	1
+1726	91	445	2
+1727	91	450	3
+1728	91	451	4
+1729	91	452	5
+1730	91	453	6
+1731	91	454	7
+1732	91	444	8
+1733	91	455	9
+1734	91	456	10
+1735	91	451	11
+1736	91	457	12
+1737	91	458	13
+1738	91	459	14
+1739	91	460	15
+1740	91	461	16
+1741	91	462	17
+1742	91	450	18
+1743	91	444	19
+1744	91	427	20
+1745	91	463	21
+1746	91	464	22
+1747	91	465	23
+1748	91	466	24
+1749	91	444	25
+1750	91	467	26
+1751	91	468	27
+1752	91	469	28
+1753	91	470	29
+1754	91	471	30
+1755	91	472	31
+1756	91	473	32
+1757	91	474	33
+1758	91	475	34
+1759	91	450	35
+1760	91	451	36
+1761	91	476	37
+1762	91	450	38
+1763	91	477	39
+1764	91	478	40
+1765	91	479	41
+1766	91	252	42
+1767	91	480	43
+1768	91	252	44
+1769	91	481	45
+1770	91	482	46
+1771	91	483	47
+1772	91	484	48
+1773	91	469	49
+1774	91	447	50
+1775	91	444	51
+1776	91	427	52
+1777	91	448	53
+1778	91	485	54
+1779	91	331	55
+1780	91	310	56
+1781	91	486	57
+1782	91	487	58
+1783	91	488	59
+1784	91	489	60
+1785	91	451	61
+1786	91	466	62
+1787	91	490	63
+1788	91	444	64
+1789	91	455	65
+1790	91	491	66
+1791	91	468	67
+1792	91	492	68
+1793	91	493	69
+1794	91	494	70
+1795	91	487	71
+1796	91	495	72
+1797	91	496	73
+1798	91	476	74
+1799	91	497	75
+1800	91	498	76
+1801	91	488	77
+1802	91	451	78
+1803	91	11	79
+1804	91	444	80
+1805	91	455	81
+1806	91	463	82
+1807	91	499	83
+1808	91	500	84
+1809	91	493	85
+1810	91	494	86
+1811	91	501	87
+1812	91	484	88
+1813	91	487	89
+1814	91	502	90
+1815	91	486	91
+1816	91	487	92
+1817	91	485	93
+1818	91	453	94
+1819	91	503	95
+1820	91	486	96
+1821	91	501	97
+1822	91	504	98
+1823	91	463	99
+1824	91	505	100
+1825	91	489	101
+1826	91	451	102
+1827	91	506	103
+1828	91	507	104
+1829	91	449	105
+1830	91	444	106
+1831	91	445	107
+1832	91	450	108
+1833	91	451	109
+1834	91	487	110
+1835	91	504	111
+1836	91	463	112
+1837	91	499	113
+1838	93	444	0
+2179	107	84	7
+2180	107	85	8
+2181	107	565	9
+2182	107	21	10
+2183	107	99	11
+2184	107	566	12
+2185	107	567	13
+2186	107	568	14
+2187	107	471	15
+2188	107	569	16
+2189	107	31	17
+2190	107	570	18
+2191	107	571	19
+2192	107	572	20
+2193	107	573	21
+2194	107	574	22
+2195	107	26	23
+2196	107	575	24
+2197	107	576	25
+2198	107	577	26
+2199	107	578	27
+2200	107	579	28
+2201	107	578	29
+2202	107	580	30
+2203	107	581	31
+2204	107	23	32
+2205	107	582	33
+2206	107	583	34
+2207	107	584	35
+2208	107	585	36
+2209	107	586	37
+2210	107	587	38
+2211	107	588	39
+2212	107	589	40
+2213	107	590	41
+2214	107	84	42
+2215	107	85	43
+2216	107	86	44
+2217	107	584	45
+2218	107	591	46
+2219	107	592	47
+2220	107	84	48
+2221	107	85	49
+2222	107	86	50
+2223	107	575	51
+2224	107	580	52
+2225	107	584	53
+2226	107	22	54
+2227	107	23	55
+2228	107	593	56
+2229	107	594	57
+2230	107	84	58
+2231	107	85	59
+2232	107	595	60
+2233	107	596	61
+2234	107	23	62
+2235	107	593	63
+2236	107	595	64
+2237	107	597	65
+2238	107	84	66
+2239	107	85	67
+2240	107	598	68
+2241	107	599	69
+2242	107	600	70
+2243	107	84	71
+2244	107	85	72
+2245	107	601	73
+2246	107	595	74
+2247	107	23	75
+2248	107	593	76
+2249	107	595	77
+2250	107	602	78
+2251	107	85	79
+2252	107	603	80
+2253	107	604	81
+2254	107	605	82
+2255	107	606	83
+1916	97	508	0
+1917	97	509	1
+1918	97	510	2
+1919	97	3	3
+1920	97	549	4
+1921	97	550	5
+1922	97	510	6
+1923	97	3	7
+1924	98	209	0
+1925	98	511	1
+1926	98	512	2
+1927	98	513	3
+1928	99	514	0
+1929	99	515	1
+1930	99	511	2
+1931	99	216	3
+1932	99	516	4
+1933	99	517	5
+1934	99	518	6
+1935	99	253	7
+1936	99	183	8
+1937	99	519	9
+1938	99	520	10
+1939	99	521	11
+1940	99	522	12
+1941	99	523	13
+1942	99	329	14
+1943	99	513	15
+1944	99	524	16
+1945	99	525	17
+1946	99	526	18
+1947	99	527	19
+1948	99	528	20
+1949	99	529	21
+1950	99	511	22
+1951	99	512	23
+1952	99	416	24
+1953	99	530	25
+1954	99	531	26
+1955	99	501	27
+1956	99	522	28
+1957	99	529	29
+1958	99	511	30
+1959	99	512	31
+1960	99	506	32
+1961	99	532	33
+1962	99	510	34
+1963	99	533	35
+1964	99	530	36
+1965	99	511	37
+1966	99	387	38
+1967	99	501	39
+1968	99	534	40
+1969	99	535	41
+1970	99	536	42
+1971	99	537	43
+1972	99	538	44
+1973	99	539	45
+1974	99	540	46
+1975	99	541	47
+1976	99	512	48
+1977	99	542	49
+1978	99	543	50
+1979	99	537	51
+1980	99	538	52
+1981	99	501	53
+1982	99	544	54
+1983	99	545	55
+1984	99	546	56
+1985	99	547	57
+1986	99	251	58
+1987	99	416	59
+1988	99	548	60
+1989	99	460	61
+1990	99	501	62
+1991	101	216	0
+1992	101	253	1
+1993	101	183	2
+1994	101	513	3
+1995	101	209	4
+1996	101	515	5
+2256	107	85	84
+2257	107	607	85
+2258	107	589	86
+2259	107	164	87
+2260	107	608	88
+2261	107	85	89
+2262	107	609	90
+2263	107	610	91
+2264	107	584	92
+2265	107	611	93
+2266	107	65	94
+2267	107	609	95
+2268	107	68	96
+2269	107	603	97
+2270	107	612	98
+2271	107	613	99
+2272	107	614	100
+2273	107	615	101
+2274	107	74	102
+2275	107	616	103
+2276	107	617	104
+2277	107	618	105
+2278	107	619	106
+2279	107	584	107
+2280	107	567	108
+2281	107	620	109
+2282	107	67	110
+2283	107	621	111
+2284	107	226	112
+2285	107	622	113
+2286	107	563	114
+2287	107	623	115
+2288	107	564	116
+2289	107	580	117
+2290	107	84	118
+2291	107	85	119
+2292	107	565	120
+2293	107	21	121
+2294	107	99	122
+2295	107	566	123
+2296	107	567	124
+2297	107	564	125
+2298	107	579	126
+2299	107	578	127
+2300	107	624	128
+2301	107	625	129
+2302	107	626	130
+2303	107	84	131
+2304	107	627	132
+2305	107	99	133
+2306	107	73	134
+2307	107	254	135
+2308	107	628	136
+2309	107	8	137
+2310	107	11	138
+2311	107	629	139
+2312	107	8	140
+2313	107	73	141
+2314	107	630	142
+2315	107	631	143
+2316	109	22	0
+2317	109	632	1
+2318	109	633	2
+3835	161	1012	0
+3836	161	1013	1
+3837	161	1014	2
+3838	162	1015	0
+3839	162	1016	1
+3840	162	1016	2
+3841	165	183	0
+3842	165	353	1
+2544	113	634	0
+2545	113	635	1
+2546	113	3	2
+2547	113	405	3
+2548	113	406	4
+2549	114	636	0
+2550	114	637	1
+2551	114	638	2
+2552	114	639	3
+2553	114	640	4
+2554	114	641	5
+2555	114	642	6
+2556	114	643	7
+2557	114	642	8
+2558	114	644	9
+2559	114	645	10
+2560	115	638	0
+2561	115	639	1
+2562	115	646	2
+2563	115	647	3
+2564	115	444	4
+2565	115	648	5
+2566	115	649	6
+2567	115	449	7
+2568	115	650	8
+2569	115	181	9
+2570	115	642	10
+2571	115	310	11
+2572	115	651	12
+2573	115	652	13
+2574	115	653	14
+2575	115	654	15
+2576	115	655	16
+2577	115	656	17
+2578	115	640	18
+2579	115	641	19
+2580	115	642	20
+2581	115	657	21
+2582	115	658	22
+2583	115	659	23
+2584	115	660	24
+2585	115	636	25
+2586	115	661	26
+2587	115	640	27
+2588	115	662	28
+2589	115	643	29
+2590	115	642	30
+2591	115	663	31
+2592	115	638	32
+2593	115	639	33
+2594	115	644	34
+2595	115	645	35
+2596	115	521	36
+2597	115	657	37
+2598	115	664	38
+2599	115	116	39
+2600	115	665	40
+2601	115	666	41
+2602	115	667	42
+2603	115	112	43
+2604	115	328	44
+2605	115	137	45
+2606	115	668	46
+2607	115	116	47
+2608	115	669	48
+2609	115	661	49
+2610	115	670	50
+2611	115	671	51
+2612	115	672	52
+2613	115	673	53
+2614	115	661	54
+2615	115	674	55
+2616	115	675	56
+2617	115	676	57
+2618	115	463	58
+2619	115	677	59
+2620	115	678	60
+2621	115	636	61
+2622	115	645	62
+2623	115	137	63
+2624	115	116	64
+2625	115	586	65
+2626	115	644	66
+2627	115	414	67
+2628	115	669	68
+2629	115	661	69
+2630	115	679	70
+2631	115	680	71
+2632	115	681	72
+2633	115	682	73
+2634	115	663	74
+2635	115	683	75
+2636	115	428	76
+2637	115	669	77
+2638	115	684	78
+2639	115	361	79
+2640	115	640	80
+2641	115	641	81
+2642	115	642	82
+2643	115	643	83
+2644	115	642	84
+2645	115	181	85
+2646	115	685	86
+2647	115	175	87
+2648	115	686	88
+2649	115	427	89
+2650	115	445	90
+2651	115	669	91
+2652	115	638	92
+2653	115	639	93
+2654	115	687	94
+2655	115	688	95
+2656	115	689	96
+2657	115	501	97
+2658	115	160	98
+2659	115	690	99
+2660	115	691	100
+2661	115	361	101
+2662	115	640	102
+2663	115	641	103
+2664	115	643	104
+2665	115	642	105
+2666	115	644	106
+2667	115	645	107
+2668	115	669	108
+2669	115	661	109
+2670	115	692	110
+2671	115	693	111
+2672	115	694	112
+2673	115	674	113
+2674	115	675	114
+2675	115	676	115
+2676	115	463	116
+2677	115	692	117
+2678	115	695	118
+2679	115	696	119
+2680	115	697	120
+2681	115	694	121
+2682	115	698	122
+2683	115	699	123
+2684	115	671	124
+2685	115	700	125
+2686	115	701	126
+2687	115	116	127
+2688	115	495	128
+2689	115	702	129
+2690	115	703	130
+2691	115	704	131
+2692	115	705	132
+2693	115	672	133
+2694	115	640	134
+2695	115	641	135
+2696	115	642	136
+2697	115	700	137
+2698	115	706	138
+2699	115	609	139
+2700	115	644	140
+2701	115	707	141
+2702	115	697	142
+2703	115	700	143
+2704	115	643	144
+2705	115	642	145
+2706	115	705	146
+2707	115	672	147
+2708	115	708	148
+2709	115	67	149
+2710	115	709	150
+2711	115	710	151
+2712	115	609	152
+2713	115	644	153
+2714	115	707	154
+2715	115	697	155
+2716	115	650	156
+2717	115	127	157
+2718	115	711	158
+2719	115	712	159
+2720	115	705	160
+2721	115	713	161
+2722	115	714	162
+2723	115	444	163
+2724	115	191	164
+2725	115	230	165
+2726	115	700	166
+2727	115	715	167
+2728	115	716	168
+2729	115	717	169
+2730	115	718	170
+2731	115	719	171
+2732	115	720	172
+2733	115	639	173
+2734	115	711	174
+2735	115	5	175
+2736	115	83	176
+2737	115	636	177
+2738	115	721	178
+2739	115	640	179
+2740	115	641	180
+2741	115	643	181
+2742	115	642	182
+2743	115	722	183
+2744	115	723	184
+2745	115	60	185
+2746	115	724	186
+2747	115	444	187
+2748	115	725	188
+2749	115	700	189
+2750	115	701	190
+2751	115	101	191
+2752	115	726	192
+2753	115	727	193
+2754	115	669	194
+2755	115	191	195
+2756	115	728	196
+2757	115	666	197
+2758	115	640	198
+2759	115	641	199
+2760	115	642	200
+2761	115	701	201
+2762	115	473	202
+2763	115	116	203
+2764	115	416	204
+2765	115	667	205
+2766	115	729	206
+2767	115	730	207
+2768	117	444	0
+3476	139	914	95
+3477	139	915	96
+3478	139	916	97
+3479	139	910	98
+3480	139	875	99
+3481	139	917	100
+3482	139	918	101
+3483	139	919	102
+3484	139	920	103
+3485	139	921	104
+3486	139	918	105
+3487	139	922	106
+3488	139	923	107
+3489	139	893	108
+3490	139	924	109
+3491	139	116	110
+3492	139	925	111
+3493	139	926	112
+3494	139	927	113
+3495	139	928	114
+3496	139	561	115
+3497	139	929	116
+3498	139	859	117
+3499	139	10	118
+3500	139	930	119
+3501	139	867	120
+3502	139	648	121
+3503	139	38	122
+3504	139	931	123
+3505	139	59	124
+3506	139	797	125
+3507	139	932	126
+3508	139	457	127
+3509	139	933	128
+3510	141	859	0
+3511	141	632	1
+3512	141	633	2
+3366	137	853	0
+3367	137	854	1
+3368	137	855	2
+3369	137	3	3
+3370	138	5	0
+3371	138	563	1
+3372	138	856	2
+3373	138	623	3
+3374	138	580	4
+3375	138	84	5
+3376	138	85	6
+3377	138	86	7
+3378	138	21	8
+3379	138	22	9
+3380	138	584	10
+3381	139	561	0
+3382	139	159	1
+3383	139	473	2
+3384	139	857	3
+3385	139	858	4
+3386	139	859	5
+3387	139	860	6
+3388	139	861	7
+3389	139	862	8
+3390	139	863	9
+3391	139	864	10
+3392	139	865	11
+3393	139	8	12
+3394	139	866	13
+3395	139	867	14
+3396	139	868	15
+3397	139	869	16
+3398	139	870	17
+3399	139	861	18
+3400	139	810	19
+3401	139	871	20
+3402	139	872	21
+3403	139	873	22
+3404	139	645	23
+3405	139	874	24
+2887	121	731	0
+2888	121	732	1
+2889	121	3	2
+2890	121	733	3
+2891	122	734	0
+2892	122	735	1
+2893	122	197	2
+2894	122	736	3
+2895	122	112	4
+2896	122	737	5
+2897	122	738	6
+2898	122	739	7
+2899	123	546	0
+2900	123	740	1
+2901	123	741	2
+2902	123	742	3
+2903	123	743	4
+2904	123	744	5
+2905	123	745	6
+2906	123	183	7
+2907	123	746	8
+2908	123	747	9
+2909	123	319	10
+2910	123	547	11
+2911	123	748	12
+2912	123	19	13
+2913	123	749	14
+2914	123	125	15
+2915	123	750	16
+2916	123	736	17
+2917	123	112	18
+2918	123	751	19
+2919	123	737	20
+2920	123	738	21
+2921	123	739	22
+2922	123	752	23
+2923	123	753	24
+2924	123	385	25
+2925	123	754	26
+2926	123	755	27
+2927	123	3	28
+2928	123	756	29
+2929	123	757	30
+2930	123	216	31
+2931	123	758	32
+2932	123	759	33
+2933	123	760	34
+2934	123	159	35
+2935	123	761	36
+2936	123	3	37
+2937	123	762	38
+2938	123	188	39
+2939	123	763	40
+2940	123	764	41
+2941	123	735	42
+2942	123	197	43
+2943	123	217	44
+2944	123	765	45
+2945	123	501	46
+2946	123	19	47
+2947	123	766	48
+2948	123	501	49
+2949	123	755	50
+2950	123	255	51
+2951	123	767	52
+2952	123	197	53
+2953	123	768	54
+2954	123	769	55
+2955	123	770	56
+2956	123	771	57
+2957	123	772	58
+2958	123	773	59
+2959	123	774	60
+2960	123	139	61
+2961	123	775	62
+2962	123	216	63
+2963	123	735	64
+2964	123	197	65
+2965	123	776	66
+2966	123	777	67
+2967	123	778	68
+2968	123	779	69
+2969	123	780	70
+2970	123	772	71
+2971	123	646	72
+2972	123	781	73
+2973	123	782	74
+2974	123	783	75
+2975	123	385	76
+2976	123	784	77
+2977	123	785	78
+2978	123	786	79
+2979	123	3	80
+2980	123	159	81
+2981	123	787	82
+2982	123	788	83
+2983	123	760	84
+2984	123	789	85
+2985	123	19	86
+2986	123	790	87
+2987	123	758	88
+2988	123	791	89
+2989	123	792	90
+2990	123	329	91
+2991	123	245	92
+2992	125	741	0
+2993	125	742	1
+2994	125	745	2
+2995	125	752	3
+2996	125	753	4
+2997	125	760	5
+2998	125	789	6
+2999	125	749	7
+3000	125	125	8
+3001	125	750	9
+3002	125	786	10
+3003	125	329	11
+3004	125	245	12
+3406	139	859	25
+3407	139	875	26
+3408	139	876	27
+3409	139	877	28
+3410	139	878	29
+3411	139	583	30
+3412	139	875	31
+3413	139	488	32
+3414	139	879	33
+3415	139	880	34
+3416	139	860	35
+3417	139	8	36
+3418	139	61	37
+3419	139	86	38
+3619	145	934	0
+3620	145	935	1
+3621	145	3	2
+3622	145	936	3
+3623	146	937	0
+3624	146	21	1
+3625	146	938	2
+3626	146	939	3
+3627	146	940	4
+3628	146	565	5
+3629	146	941	6
+3630	146	942	7
+3631	146	943	8
+3632	146	944	9
+3633	146	945	10
+3634	146	946	11
+3635	146	947	12
+3636	147	937	0
+3637	147	21	1
+3638	147	938	2
+3639	147	939	3
+3640	147	948	4
+3641	147	940	5
+3642	147	949	6
+3643	147	941	7
+3644	147	950	8
+3645	147	942	9
+3646	147	943	10
+3647	147	944	11
+3648	147	829	12
+3649	147	951	13
+3650	147	952	14
+3651	147	135	15
+3652	147	953	16
+3653	147	954	17
+3654	147	943	18
+3655	147	944	19
+3656	147	955	20
+3657	147	956	21
+3658	147	957	22
+3659	147	958	23
+3660	147	959	24
+3661	147	960	25
+3662	147	961	26
+3663	147	962	27
+3664	147	963	28
+3665	147	942	29
+3666	147	943	30
+3667	147	944	31
+3668	147	964	32
+3669	147	965	33
+3670	147	939	34
+3671	147	966	35
+3672	147	135	36
+3673	147	963	37
+3674	147	829	38
+3675	147	951	39
+3676	147	952	40
+3677	147	967	41
+3678	147	968	42
+3679	147	969	43
+3680	147	970	44
+3681	147	971	45
+3682	147	93	46
+3683	147	963	47
+3684	147	972	48
+3685	147	973	49
+3686	147	952	50
+3687	147	21	51
+3688	147	974	52
+3689	147	57	53
+3690	147	963	54
+3691	147	942	55
+3692	147	945	56
+3693	147	975	57
+3694	147	21	58
+3695	147	938	59
+3696	147	829	60
+3697	147	976	61
+3698	147	153	62
+3699	147	977	63
+3700	147	940	64
+3701	147	565	65
+3702	147	56	66
+3703	147	937	67
+3704	147	939	68
+3705	147	978	69
+3706	147	979	70
+3707	147	940	71
+3708	147	980	72
+3709	147	939	73
+3710	147	21	74
+3711	147	974	75
+3712	147	966	76
+3713	147	981	77
+3714	147	963	78
+3715	147	942	79
+3716	147	943	80
+3717	147	944	81
+3718	147	226	82
+3719	147	982	83
+3720	147	941	84
+3721	147	428	85
+3722	147	943	86
+3723	147	844	87
+3724	147	385	88
+3776	153	983	0
+3777	153	984	1
+3778	153	3	2
+3779	153	106	3
+3780	154	985	0
+3781	154	986	1
+3782	154	987	2
+3783	154	988	3
+3784	154	989	4
+3785	155	990	0
+3786	155	525	1
+3787	155	991	2
+3788	155	134	3
+3789	155	992	4
+3790	155	993	5
+3791	155	525	6
+3792	155	994	7
+3793	155	995	8
+3794	155	991	9
+3795	155	996	10
+3796	155	997	11
+3797	155	998	12
+3798	155	999	13
+3799	155	1000	14
+3800	155	1001	15
+3801	155	435	16
+3802	155	1002	17
+3803	155	922	18
+3804	155	1003	19
+3805	155	1004	20
+3806	155	1005	21
+3807	155	1006	22
+3808	155	838	23
+3809	155	996	24
+3810	155	1007	25
+3811	155	1001	26
+3812	155	1008	27
+3813	155	883	28
+3814	155	1009	29
+3815	155	771	30
+3816	155	991	31
+3817	155	1010	32
+3818	155	1000	33
+3819	155	1001	34
+3820	155	435	35
+3821	155	100	36
+3822	155	56	37
+3823	157	985	0
+3824	157	986	1
+3825	157	987	2
+3826	157	1011	3
 \.
 
 
@@ -10747,8 +12900,15 @@ SELECT pg_catalog.setval('public.submission_search_objects_object_id_seq', 168, 
 -- Data for Name: submission_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.submission_settings (submission_id, locale, setting_name, setting_value) FROM stdin;
+COPY public.submission_settings (submission_setting_id, submission_id, locale, setting_name, setting_value) FROM stdin;
 \.
+
+
+--
+-- Name: submission_settings_submission_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.submission_settings_submission_setting_id_seq', 1, false);
 
 
 --
@@ -10756,25 +12916,25 @@ COPY public.submission_settings (submission_id, locale, setting_name, setting_va
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-4	1	5	2023-03-24 16:13:01	2023-03-24 16:12:36	2023-03-24 16:12:36	5	en	4		0
-9	1	10	2023-03-24 16:15:58	2023-03-24 16:15:50	2023-03-24 16:15:50	5	en	3		0
-1	1	1	2023-03-24 16:09:47	2023-03-24 16:09:47	2023-03-24 16:09:47	5	en	1		0
-15	1	16	2023-03-24 16:19:14	2023-03-24 16:19:05	2023-03-24 16:19:05	5	en	3		0
-10	1	11	2023-03-24 16:16:30	2023-03-24 16:16:22	2023-03-24 16:16:22	5	en	3		0
-2	1	2	2023-03-24 16:11:16	2023-03-24 16:11:00	2023-03-24 16:11:00	5	en	3		0
-5	1	6	2023-03-24 16:13:49	2023-03-24 16:13:28	2023-03-24 16:13:28	5	en	3		0
-6	1	7	2023-03-24 16:14:21	2023-03-24 16:14:13	2023-03-24 16:14:13	5	en	3		0
-16	1	17	2023-03-24 16:19:46	2023-03-24 16:19:38	2023-03-24 16:19:38	5	en	3		0
-11	1	12	2023-03-24 16:17:04	2023-03-24 16:16:55	2023-03-24 16:16:55	5	en	3		0
-3	1	4	2023-03-24 16:12:12	2023-03-24 16:11:40	2023-03-24 16:11:40	5	en	3		0
-7	1	8	2023-03-24 16:14:54	2023-03-24 16:14:45	2023-03-24 16:14:45	5	en	3		0
-12	1	13	2023-03-24 16:17:36	2023-03-24 16:17:28	2023-03-24 16:17:28	5	en	3		0
-17	1	18	2023-03-24 16:20:19	2023-03-24 16:20:10	2023-03-24 16:20:10	5	en	3		0
-8	1	9	2023-03-24 16:15:26	2023-03-24 16:15:18	2023-03-24 16:15:18	5	en	3		0
-13	1	14	2023-03-24 16:18:09	2023-03-24 16:18:00	2023-03-24 16:18:00	5	en	3		0
-18	1	19	2023-03-24 16:20:51	2023-03-24 16:20:43	2023-03-24 16:20:43	5	en	3		0
-14	1	15	2023-03-24 16:18:41	2023-03-24 16:18:33	2023-03-24 16:18:33	5	en	3		0
-19	1	20	2023-03-24 16:21:24	2023-03-24 16:21:15	2023-03-24 16:21:15	5	en	3		0
+15	1	16	2023-03-25 01:49:28	2023-03-25 01:49:20	2023-03-25 01:49:20	5	en	3		0
+1	1	1	2023-03-25 01:40:15	2023-03-25 01:40:15	2023-03-25 01:40:15	5	en	1		0
+10	1	11	2023-03-25 01:46:47	2023-03-25 01:46:39	2023-03-25 01:46:39	5	en	3		0
+5	1	6	2023-03-25 01:44:09	2023-03-25 01:43:48	2023-03-25 01:43:48	5	en	3		0
+2	1	2	2023-03-25 01:41:39	2023-03-25 01:41:25	2023-03-25 01:41:25	5	en	3		0
+16	1	17	2023-03-25 01:50:00	2023-03-25 01:49:52	2023-03-25 01:49:52	5	en	3		0
+11	1	12	2023-03-25 01:47:20	2023-03-25 01:47:11	2023-03-25 01:47:11	5	en	3		0
+6	1	7	2023-03-25 01:44:40	2023-03-25 01:44:32	2023-03-25 01:44:32	5	en	3		0
+17	1	18	2023-03-25 01:50:33	2023-03-25 01:50:24	2023-03-25 01:50:24	5	en	3		0
+7	1	8	2023-03-25 01:45:12	2023-03-25 01:45:04	2023-03-25 01:45:04	5	en	3		0
+3	1	4	2023-03-25 01:42:34	2023-03-25 01:42:03	2023-03-25 01:42:03	5	en	3		0
+12	1	13	2023-03-25 01:47:52	2023-03-25 01:47:44	2023-03-25 01:47:44	5	en	3		0
+8	1	9	2023-03-25 01:45:43	2023-03-25 01:45:35	2023-03-25 01:45:35	5	en	3		0
+18	1	19	2023-03-25 01:51:05	2023-03-25 01:50:57	2023-03-25 01:50:57	5	en	3		0
+4	1	5	2023-03-25 01:43:22	2023-03-25 01:42:57	2023-03-25 01:42:57	5	en	4		0
+13	1	14	2023-03-25 01:48:24	2023-03-25 01:48:16	2023-03-25 01:48:16	5	en	3		0
+9	1	10	2023-03-25 01:46:15	2023-03-25 01:46:07	2023-03-25 01:46:07	5	en	3		0
+14	1	15	2023-03-25 01:48:56	2023-03-25 01:48:48	2023-03-25 01:48:48	5	en	3		0
+19	1	20	2023-03-25 01:51:37	2023-03-25 01:51:29	2023-03-25 01:51:29	5	en	3		0
 \.
 
 
@@ -10801,34 +12961,62 @@ SELECT pg_catalog.setval('public.temporary_files_file_id_seq', 1, false);
 
 
 --
+-- Name: usage_stats_institution_tempo_usage_stats_temp_institution__seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_institution_tempo_usage_stats_temp_institution__seq', 1, false);
+
+
+--
 -- Data for Name: usage_stats_institution_temporary_records; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.usage_stats_institution_temporary_records (load_id, line_number, institution_id) FROM stdin;
+COPY public.usage_stats_institution_temporary_records (usage_stats_temp_institution_id, load_id, line_number, institution_id) FROM stdin;
 \.
+
+
+--
+-- Name: usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq', 1, false);
 
 
 --
 -- Data for Name: usage_stats_total_temporary_records; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.usage_stats_total_temporary_records (date, ip, user_agent, line_number, canonical_url, context_id, submission_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
+COPY public.usage_stats_total_temporary_records (usage_stats_temp_total_id, date, ip, user_agent, line_number, canonical_url, context_id, submission_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
 \.
+
+
+--
+-- Name: usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq', 1, false);
 
 
 --
 -- Data for Name: usage_stats_unique_item_investigations_temporary_records; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.usage_stats_unique_item_investigations_temporary_records (date, ip, user_agent, line_number, context_id, submission_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
+COPY public.usage_stats_unique_item_investigations_temporary_records (usage_stats_temp_unique_item_id, date, ip, user_agent, line_number, context_id, submission_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
 \.
+
+
+--
+-- Name: usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq', 1, false);
 
 
 --
 -- Data for Name: usage_stats_unique_item_requests_temporary_records; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.usage_stats_unique_item_requests_temporary_records (date, ip, user_agent, line_number, context_id, submission_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
+COPY public.usage_stats_unique_item_requests_temporary_records (usage_stats_temp_item_id, date, ip, user_agent, line_number, context_id, submission_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
 \.
 
 
@@ -10836,48 +13024,62 @@ COPY public.usage_stats_unique_item_requests_temporary_records (date, ip, user_a
 -- Data for Name: user_group_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.user_group_settings (user_group_id, locale, setting_name, setting_value) FROM stdin;
-1	en	name	Site Admin
-1	fr_CA	name	Administrateur-trice du site
-2	fr_CA	abbrev	##default.groups.abbrev.manager##
-2	en	abbrev	PSM
-2	fr_CA	name	##default.groups.name.manager##
-2	en	name	Preprint Server manager
-2		nameLocaleKey	default.groups.name.manager
-2		abbrevLocaleKey	default.groups.abbrev.manager
-3	fr_CA	abbrev	##default.groups.abbrev.sectionEditor##
-3	en	abbrev	MOD
-3	fr_CA	name	##default.groups.name.sectionEditor##
-3	en	name	Moderator
-3		nameLocaleKey	default.groups.name.sectionEditor
-3		abbrevLocaleKey	default.groups.abbrev.sectionEditor
-4	fr_CA	abbrev	AU
-4	en	abbrev	AU
-4	fr_CA	name	Auteur-e
-4	en	name	Author
-4		nameLocaleKey	default.groups.name.author
-4		abbrevLocaleKey	default.groups.abbrev.author
-5	en	abbrev	Read
-5	fr_CA	abbrev	Lect
-5	en	name	Reader
-5	fr_CA	name	Lecteur-trice
-5		nameLocaleKey	default.groups.name.reader
-5		abbrevLocaleKey	default.groups.abbrev.reader
+COPY public.user_group_settings (user_group_setting_id, user_group_id, locale, setting_name, setting_value) FROM stdin;
+1	1	en	name	Site Admin
+2	1	fr_CA	name	Administrateur-trice du site
+7	2	fr_CA	abbrev	##default.groups.abbrev.manager##
+5	2	en	abbrev	PSM
+8	2	fr_CA	name	##default.groups.name.manager##
+6	2	en	name	Preprint Server manager
+3	2		nameLocaleKey	default.groups.name.manager
+4	2		abbrevLocaleKey	default.groups.abbrev.manager
+13	3	fr_CA	abbrev	##default.groups.abbrev.sectionEditor##
+11	3	en	abbrev	MOD
+14	3	fr_CA	name	##default.groups.name.sectionEditor##
+12	3	en	name	Moderator
+9	3		nameLocaleKey	default.groups.name.sectionEditor
+10	3		abbrevLocaleKey	default.groups.abbrev.sectionEditor
+19	4	fr_CA	abbrev	AU
+17	4	en	abbrev	AU
+20	4	fr_CA	name	Auteur-e
+18	4	en	name	Author
+15	4		nameLocaleKey	default.groups.name.author
+16	4		abbrevLocaleKey	default.groups.abbrev.author
+23	5	en	abbrev	Read
+25	5	fr_CA	abbrev	Lect
+24	5	en	name	Reader
+26	5	fr_CA	name	Lecteur-trice
+21	5		nameLocaleKey	default.groups.name.reader
+22	5		abbrevLocaleKey	default.groups.abbrev.reader
 \.
+
+
+--
+-- Name: user_group_settings_user_group_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.user_group_settings_user_group_setting_id_seq', 26, true);
 
 
 --
 -- Data for Name: user_group_stage; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.user_group_stage (context_id, user_group_id, stage_id) FROM stdin;
-1	2	1
-1	2	5
-1	3	1
-1	3	5
-1	4	1
-1	4	5
+COPY public.user_group_stage (user_group_stage_id, context_id, user_group_id, stage_id) FROM stdin;
+1	1	2	1
+2	1	2	5
+3	1	3	1
+4	1	3	5
+5	1	4	1
+6	1	4	5
 \.
+
+
+--
+-- Name: user_group_stage_user_group_stage_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.user_group_stage_user_group_stage_id_seq', 6, true);
 
 
 --
@@ -10904,193 +13106,214 @@ SELECT pg_catalog.setval('public.user_groups_user_group_id_seq', 5, true);
 -- Data for Name: user_interests; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.user_interests (user_id, controlled_vocab_entry_id) FROM stdin;
+COPY public.user_interests (user_interest_id, user_id, controlled_vocab_entry_id) FROM stdin;
 \.
+
+
+--
+-- Name: user_interests_user_interest_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.user_interests_user_interest_id_seq', 1, false);
 
 
 --
 -- Data for Name: user_settings; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.user_settings (user_id, locale, setting_name, setting_value) FROM stdin;
-7	en	affiliation	University of Bologna
-7	en	familyName	Corino
-7	en	givenName	Carlo
-8	en	affiliation	University of Windsor
-8	en	familyName	Kwantes
-8	en	givenName	Catherine
-17	en	affiliation	Stanford University
-4	en	affiliation	University of Chicago
-4	fr_CA	affiliation	
-4	en	biography	
-4	fr_CA	biography	
-4	en	familyName	Buskins
-4	fr_CA	familyName	
-4	en	givenName	David
-4	fr_CA	givenName	
-4		orcid	
-4	en	preferredPublicName	
-4	fr_CA	preferredPublicName	
-4	en	signature	
-4	fr_CA	signature	
-5	en	affiliation	University of Toronto
-5	fr_CA	affiliation	
-5	en	biography	
-5	fr_CA	biography	
-5	en	familyName	Berardo
-5	fr_CA	familyName	
-5	en	givenName	Stephanie
-5	fr_CA	givenName	
-5		orcid	
-5	en	preferredPublicName	
-5	fr_CA	preferredPublicName	
-5	en	signature	
-5	fr_CA	signature	
-6	en	affiliation	Kyoto University
-6	fr_CA	affiliation	
-6	en	biography	
-6	fr_CA	biography	
-6	en	familyName	Inoue
-6	fr_CA	familyName	
-6	en	givenName	Minoti
-6	fr_CA	givenName	
-6		orcid	
-6	en	preferredPublicName	
-6	fr_CA	preferredPublicName	
-6	en	signature	
-6	fr_CA	signature	
-17	en	familyName	Al-Khafaji
-17	en	givenName	Karim
-10	en	affiliation	Alexandria University
-10	en	familyName	Diouf
-10	en	givenName	Diaga
-9	en	affiliation	University of Alberta
-9	en	familyName	Montgomerie
-9	en	givenName	Craig
-13	en	affiliation	Indiana University
-13	en	familyName	Ostrom
-13	en	givenName	Elinor
-16	en	affiliation	Aalborg University
-16	en	familyName	Novak
-16	en	givenName	John
-2	en	affiliation	Universidad Nacional Autónoma de México
-2	fr_CA	affiliation	
-2	en	biography	
-2	fr_CA	biography	
-2	en	familyName	Vaca
-2	fr_CA	familyName	
-2	en	givenName	Ramiro
-2	fr_CA	givenName	
-2		orcid	
-2	en	preferredPublicName	
-2	fr_CA	preferredPublicName	
-2	en	signature	
-2	fr_CA	signature	
-1	en	familyName	admin
-1	en	givenName	admin
-21	en	affiliation	University of Nairobi
-21	en	familyName	Baiyewu
-3	fr_CA	affiliation	
-12	en	affiliation	University College Cork
-12	en	familyName	Sokoloff
-11	en	affiliation	University of Toronto
-11	en	familyName	Phillips
-11	en	givenName	Dana
-12	en	givenName	Domatilia
-15	en	affiliation	University of Cape Town
-18	en	affiliation	Australian National University
-18	en	familyName	Christopher
-18	en	givenName	Leo
-3	en	familyName	Barnes
-3	en	givenName	Daniel
-14	en	affiliation	University of Rome
-14	en	familyName	Paglieri
-14	en	givenName	Fabio
-15	en	familyName	Mwandenga
-15	en	givenName	John
-3	fr_CA	biography	
-20	en	affiliation	University of Wolverhampton
-19	en	affiliation	University of Cape Town
-19	en	familyName	Kumiega
-3	en	preferredPublicName	
-20	en	familyName	Daniel
-20	en	givenName	Patricia
-3	en	signature	
-19	en	givenName	Lise
-3	fr_CA	signature	
-21	en	givenName	Rana
-3		orcid	
-3	fr_CA	preferredPublicName	
-22	en	affiliation	Barcelona University
-22	en	familyName	Rossi
-22	en	givenName	Rosanna
-3	fr_CA	givenName	
-23	en	affiliation	University of Tehran
-23	en	familyName	Karbasizaed
-23	en	givenName	Vajiheh
-3	fr_CA	familyName	
-24	en	affiliation	University of Windsor
-24	en	familyName	Williamson
-24	en	givenName	Valerie
-3	en	biography	
-25	en	affiliation	CUNY
-25	en	familyName	Woods
-25	en	givenName	Zita
-3	en	affiliation	University of Melbourne
+COPY public.user_settings (user_setting_id, user_id, locale, setting_name, setting_value) FROM stdin;
+8	2	fr_CA	familyName	
+9	2	en	givenName	Ramiro
+10	2	fr_CA	givenName	
+11	2		orcid	
+12	2	en	preferredPublicName	
+13	2	fr_CA	preferredPublicName	
+14	2	en	signature	
+15	2	fr_CA	signature	
+74	9	en	affiliation	University of Alberta
+75	9	en	familyName	Montgomerie
+29	4	en	affiliation	University of Chicago
+30	4	fr_CA	affiliation	
+31	4	en	biography	
+32	4	fr_CA	biography	
+33	4	en	familyName	Buskins
+34	4	fr_CA	familyName	
+35	4	en	givenName	David
+36	4	fr_CA	givenName	
+37	4		orcid	
+38	4	en	preferredPublicName	
+39	4	fr_CA	preferredPublicName	
+40	4	en	signature	
+41	4	fr_CA	signature	
+42	5	en	affiliation	University of Toronto
+43	5	fr_CA	affiliation	
+44	5	en	biography	
+45	5	fr_CA	biography	
+46	5	en	familyName	Berardo
+47	5	fr_CA	familyName	
+48	5	en	givenName	Stephanie
+49	5	fr_CA	givenName	
+50	5		orcid	
+51	5	en	preferredPublicName	
+52	5	fr_CA	preferredPublicName	
+53	5	en	signature	
+54	5	fr_CA	signature	
+55	6	en	affiliation	Kyoto University
+56	6	fr_CA	affiliation	
+57	6	en	biography	
+58	6	fr_CA	biography	
+59	6	en	familyName	Inoue
+60	6	fr_CA	familyName	
+61	6	en	givenName	Minoti
+62	6	fr_CA	givenName	
+63	6		orcid	
+64	6	en	preferredPublicName	
+65	6	fr_CA	preferredPublicName	
+66	6	en	signature	
+67	6	fr_CA	signature	
+76	9	en	givenName	Craig
+77	10	en	affiliation	Alexandria University
+1	1	en	familyName	admin
+2	1	en	givenName	admin
+68	7	en	affiliation	University of Bologna
+69	7	en	familyName	Corino
+70	7	en	givenName	Carlo
+71	8	en	affiliation	University of Windsor
+72	8	en	familyName	Kwantes
+73	8	en	givenName	Catherine
+78	10	en	familyName	Diouf
+79	10	en	givenName	Diaga
+92	15	en	affiliation	University of Cape Town
+26	3	fr_CA	preferredPublicName	
+28	3	fr_CA	signature	
+93	15	en	familyName	Mwandenga
+94	15	en	givenName	John
+21	3	fr_CA	familyName	
+22	3	en	givenName	Daniel
+3	2	en	affiliation	Universidad Nacional Autónoma de México
+4	2	fr_CA	affiliation	
+5	2	en	biography	
+6	2	fr_CA	biography	
+7	2	en	familyName	Vaca
+16	3	en	affiliation	University of Melbourne
+101	18	en	affiliation	Australian National University
+80	11	en	affiliation	University of Toronto
+81	11	en	familyName	Phillips
+82	11	en	givenName	Dana
+83	12	en	affiliation	University College Cork
+84	12	en	familyName	Sokoloff
+85	12	en	givenName	Domatilia
+89	14	en	affiliation	University of Rome
+90	14	en	familyName	Paglieri
+98	17	en	affiliation	Stanford University
+95	16	en	affiliation	Aalborg University
+96	16	en	familyName	Novak
+97	16	en	givenName	John
+19	3	fr_CA	biography	
+86	13	en	affiliation	Indiana University
+87	13	en	familyName	Ostrom
+88	13	en	givenName	Elinor
+18	3	en	biography	
+99	17	en	familyName	Al-Khafaji
+100	17	en	givenName	Karim
+91	14	en	givenName	Fabio
+23	3	fr_CA	givenName	
+17	3	fr_CA	affiliation	
+20	3	en	familyName	Barnes
+102	18	en	familyName	Christopher
+103	18	en	givenName	Leo
+104	19	en	affiliation	University of Cape Town
+105	19	en	familyName	Kumiega
+106	19	en	givenName	Lise
+27	3	en	signature	
+107	20	en	affiliation	University of Wolverhampton
+108	20	en	familyName	Daniel
+109	20	en	givenName	Patricia
+25	3	en	preferredPublicName	
+111	21	en	familyName	Baiyewu
+112	21	en	givenName	Rana
+24	3		orcid	
+110	21	en	affiliation	University of Nairobi
+113	22	en	affiliation	Barcelona University
+114	22	en	familyName	Rossi
+115	22	en	givenName	Rosanna
+116	23	en	affiliation	University of Tehran
+117	23	en	familyName	Karbasizaed
+118	23	en	givenName	Vajiheh
+119	24	en	affiliation	University of Windsor
+120	24	en	familyName	Williamson
+121	24	en	givenName	Valerie
+122	25	en	affiliation	CUNY
+123	25	en	familyName	Woods
+124	25	en	givenName	Zita
 \.
+
+
+--
+-- Name: user_settings_user_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.user_settings_user_setting_id_seq', 124, true);
 
 
 --
 -- Data for Name: user_user_groups; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
-1	1
-2	1
-2	2
-2	3
-3	4
-3	5
-3	6
-5	7
-4	7
-5	8
-4	8
-5	9
-4	9
-5	10
-4	10
-5	11
-4	11
-5	12
-4	12
-5	13
-4	13
-5	14
-4	14
-5	15
-4	15
-5	16
-4	16
-5	17
-4	17
-5	18
-4	18
-5	19
-4	19
-5	20
-4	20
-5	21
-4	21
-5	22
-4	22
-5	23
-4	23
-5	24
-4	24
-5	25
-4	25
+COPY public.user_user_groups (user_user_group_id, user_group_id, user_id) FROM stdin;
+1	1	1
+2	2	1
+3	2	2
+4	2	3
+5	3	4
+6	3	5
+7	3	6
+8	5	7
+9	4	7
+10	5	8
+11	4	8
+12	5	9
+13	4	9
+14	5	10
+15	4	10
+16	5	11
+17	4	11
+18	5	12
+19	4	12
+20	5	13
+21	4	13
+22	5	14
+23	4	14
+24	5	15
+25	4	15
+26	5	16
+27	4	16
+28	5	17
+29	4	17
+30	5	18
+31	4	18
+32	5	19
+33	4	19
+34	5	20
+35	4	20
+36	5	21
+37	4	21
+38	5	22
+39	4	22
+40	5	23
+41	4	23
+42	5	24
+43	4	24
+44	5	25
+45	4	25
 \.
+
+
+--
+-- Name: user_user_groups_user_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.user_user_groups_user_user_group_id_seq', 45, true);
 
 
 --
@@ -11098,31 +13321,31 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-16	jnovak	$2y$10$vM7hCN6/UlsqNOj364APyeAO6bNiUDuQ9RX.6l13nw2BNxmyzPQFi	jnovak@mailinator.com	\N	\N	\N	\N	DK	[]	\N	\N	2023-03-24 16:16:05	\N	2023-03-24 16:16:05	\N	\N	\N	0	\N	1
-25	zwoods	$2y$10$tr2OPjOW2NaRWF63kFU0N.S7WYFAADkNzxRGErC/FzYK0kyTbMEVS	zwoods@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2023-03-24 16:20:58	\N	2023-03-24 16:20:58	\N	\N	\N	0	\N	1
-4	dbuskins	$2y$10$w1RmA9Kjj3vIyIGwgTJgVefKXHA7ZTnCqvdR01yJ2E8b8wCRKDETK	dbuskins@mailinator.com				\N	US	[]	\N	\N	2023-03-24 16:08:19	\N	\N	0	\N	\N	0	\N	1
-5	sberardo	$2y$10$mTnlucklW7RSR6lUz8FzMOmeCNz0MaQcqrfmnbUg4PqBfLGj6V.uu	sberardo@mailinator.com				\N	CA	[]	\N	\N	2023-03-24 16:08:26	\N	\N	0	\N	\N	0	\N	1
-6	minoue	$2y$10$rW6hSdVZReAAVxATvjOyI.ixazB9PBb6noDaeeBOr2/oInhOaNTBm	minoue@mailinator.com				\N	JP	[]	\N	\N	2023-03-24 16:08:34	\N	\N	0	\N	\N	0	\N	1
-17	kalkhafaji	$2y$10$Z4kMeoT8wZmk9G8vydupRebxuC9bWtWM5DBgZcnYG5Banv1zU7EBi	kalkhafaji@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2023-03-24 16:16:37	\N	2023-03-24 16:16:37	\N	\N	\N	0	\N	1
-3	dbarnes	$2y$10$MfsO9.wtO0phZ2hHGd9JOOGsuoAwvHB3GEgld07PigDozUw3GG1Eq	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2023-03-24 16:08:13	\N	2023-03-24 16:21:16	0	\N	\N	0	\N	1
-2	rvaca	$2y$10$YqkBO/Y2y5e4J6k2B4AsMuYJWIMIuU/bVk05.3gDseAvbjIHqvUaa	rvaca@mailinator.com				\N	MX	[]	\N	\N	2023-03-24 16:08:07	\N	2023-03-24 16:08:42	0	\N	\N	0	\N	1
-1	admin	$2y$10$EIMr3kWMsdWXFQmyZFnx3OZY4OtSVQ4iSdrJ5NeqZj6IFyOH239n6	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	[]	\N	\N	2023-03-24 16:06:33	\N	2023-03-24 16:08:58	\N	\N	\N	0	\N	1
-7	ccorino	$2y$10$.4sLXlnzwdeQHF9RIi7uAelzSDLsx2UvJB7jjf7fAbdkC0L6t67Aa	ccorino@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2023-03-24 16:09:29	\N	2023-03-24 16:09:29	\N	\N	\N	0	\N	1
-8	ckwantes	$2y$10$OmMbxA5FxD/A7uNLOJJSK.0Zl99FvVcPFbhcoNHwoUC/OA3FXqhNC	ckwantes@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-24 16:09:53	\N	2023-03-24 16:09:53	\N	\N	\N	0	\N	1
-18	lchristopher	$2y$10$FcN/hhXVIOMQabcp75ppCuJZVyZrN4vKTzGfJ/5kh67x5AAMnA35q	lchristopher@mailinator.com	\N	\N	\N	\N	AU	[]	\N	\N	2023-03-24 16:17:11	\N	2023-03-24 16:17:11	\N	\N	\N	0	\N	1
-9	cmontgomerie	$2y$10$uVv9GmSTg4L21TualuE6rOrRkXU7CIeOipI/9Xz4ep7LUAD82qRpe	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-24 16:11:22	\N	2023-03-24 16:11:22	\N	\N	\N	0	\N	1
-10	ddiouf	$2y$10$cqRGX.NoMxNO7.XYN6fXI.yo1gZvFqTZ4ZL7Il2mIy.qiY/fdCLMK	ddiouf@mailinator.com	\N	\N	\N	\N	EG	[]	\N	\N	2023-03-24 16:12:18	\N	2023-03-24 16:12:19	\N	\N	\N	0	\N	1
-19	lkumiega	$2y$10$zjoFiwO1v6nSkebvaJKhKO5nHNcrLoHMBQOc9./ZeyeDGa87mDn3m	lkumiega@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2023-03-24 16:17:43	\N	2023-03-24 16:17:43	\N	\N	\N	0	\N	1
-11	dphillips	$2y$10$LFARbSOqX1/sg8wp2JqsQel9H9FuPGHCglV7RQWGQFv41yGXOV66y	dphillips@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-24 16:13:11	\N	2023-03-24 16:13:11	\N	\N	\N	0	\N	1
-20	pdaniel	$2y$10$pm6Ur6ExwkHvMen.xgmZ2uJeIHIPpSkFKg5EdZlHx6bIOzpfmVDj6	pdaniel@mailinator.com	\N	\N	\N	\N	GB	[]	\N	\N	2023-03-24 16:18:15	\N	2023-03-24 16:18:16	\N	\N	\N	0	\N	1
-12	dsokoloff	$2y$10$CIgy6iVOH3LgXaT8jyeT1uYIaafVE0FoMoLitbMXTSOm7p.v2YjzC	dsokoloff@mailinator.com	\N	\N	\N	\N	IE	[]	\N	\N	2023-03-24 16:13:55	\N	2023-03-24 16:13:56	\N	\N	\N	0	\N	1
-13	eostrom	$2y$10$DlvyDxd00P3LtUH1dfsr3Osc6amNK3NBLyPLrRnViFufkM5I8XCwe	eostrom@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2023-03-24 16:14:28	\N	2023-03-24 16:14:28	\N	\N	\N	0	\N	1
-14	fpaglieri	$2y$10$UCunNu4BXDu..xAaIVDH9uwODASeCvhu8IN/7/a5wZkWSmg5C1HX6	fpaglieri@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2023-03-24 16:15:00	\N	2023-03-24 16:15:00	\N	\N	\N	0	\N	1
-15	jmwandenga	$2y$10$pt4ibG9xpPyDT/Ygc/iqsOp7k4CpWMPOMRBXUM.Lwttk64sU7rknS	jmwandenga@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2023-03-24 16:15:33	\N	2023-03-24 16:15:33	\N	\N	\N	0	\N	1
-21	rbaiyewu	$2y$10$4PhNCbZX/NRA3EMI2jKftO9a1hBU/7XEIgxTSHbwZYHnq0Rkpjp2G	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE	[]	\N	\N	2023-03-24 16:18:48	\N	2023-03-24 16:18:48	\N	\N	\N	0	\N	1
-22	rrossi	$2y$10$NUqCrIGffxwmvEvmf9tpgOyZ74v4yJe0za1l7X3ZdnqFc45UgBUI6	rrossi@mailinator.com	\N	\N	\N	\N	ES	[]	\N	\N	2023-03-24 16:19:21	\N	2023-03-24 16:19:21	\N	\N	\N	0	\N	1
-23	vkarbasizaed	$2y$10$Gs2JhNBR67GyEe1XYgz1RudqKGebvA4WjN2GvQnD9rtD8OzsxSE2y	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR	[]	\N	\N	2023-03-24 16:19:53	\N	2023-03-24 16:19:53	\N	\N	\N	0	\N	1
-24	vwilliamson	$2y$10$2U5TW8FYU.01xZwXTgJW3.RwPbyQ0/g80ByUttgWnFSCEqY3MgqNu	vwilliamson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-24 16:20:25	\N	2023-03-24 16:20:26	\N	\N	\N	0	\N	1
+16	jnovak	$2y$10$Ikr8FcN.e9phQ1A5pKlAOeX/52BrBjmb15JGaalDTHmU.WKPIPC5y	jnovak@mailinator.com	\N	\N	\N	\N	DK	[]	\N	\N	2023-03-25 01:46:21	\N	2023-03-25 01:46:22	\N	\N	\N	0	\N	1
+25	zwoods	$2y$10$88qzweoTjqS.zrT9mNVUxO4MwKN6hd7.oCwAmdfVg6RBqUt9zKh.m	zwoods@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2023-03-25 01:51:12	\N	2023-03-25 01:51:12	\N	\N	\N	0	\N	1
+4	dbuskins	$2y$10$8XTg1NRs8KCFo1WBfArpLeRMSn8xXlUfhaN9OdwC8i8Wzk85.dgTK	dbuskins@mailinator.com				\N	US	[]	\N	\N	2023-03-25 01:38:47	\N	\N	0	\N	\N	0	\N	1
+5	sberardo	$2y$10$Ckw7jOggoIQ77xKw6tKyL.U/oL9wWy8ycgM.Getz59QJhLEYKt7b6	sberardo@mailinator.com				\N	CA	[]	\N	\N	2023-03-25 01:38:54	\N	\N	0	\N	\N	0	\N	1
+6	minoue	$2y$10$5o0J0YuzONuNbsUA9DkeAO2FaWWgcnYycu2EgHXim1TFFrJV5l3dW	minoue@mailinator.com				\N	JP	[]	\N	\N	2023-03-25 01:39:01	\N	\N	0	\N	\N	0	\N	1
+17	kalkhafaji	$2y$10$86fds5ynoWnlm4KfAIYu..ywuUJ3Rn/cftFLdFw3BIRmpg8Bbl9Re	kalkhafaji@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2023-03-25 01:46:54	\N	2023-03-25 01:46:54	\N	\N	\N	0	\N	1
+3	dbarnes	$2y$10$TrY8YfE9NmNywAY1XeCydeS8p2g0EK3/0Nf6mw3zF8cOOUBDjoKs6	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2023-03-25 01:38:40	\N	2023-03-25 01:51:29	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$StVJx8jaoelk3T68Rx3iOOzqVHsuPxpgSwE7jof1uQ9FnRHdhT0xm	rvaca@mailinator.com				\N	MX	[]	\N	\N	2023-03-25 01:38:34	\N	2023-03-25 01:39:12	0	\N	\N	0	\N	1
+1	admin	$2y$10$ZMKxYjYWLDCpF4flnaVpEuPHZvKLb7zsnRWuy46Pq8WrNnbJtoe6C	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	[]	\N	\N	2023-03-25 01:36:56	\N	2023-03-25 01:39:28	\N	\N	\N	0	\N	1
+7	ccorino	$2y$10$YTlZu/s0XFemDgWiUCGNpeHjTkx4rkLQTnyBqnfV30EZlbBMeemZe	ccorino@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2023-03-25 01:39:58	\N	2023-03-25 01:39:58	\N	\N	\N	0	\N	1
+8	ckwantes	$2y$10$Cdng4Kinj0gRGLeFJP6SteKjyXXSms5E2f5PWy4wh0uygpaOr5wDq	ckwantes@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-25 01:40:21	\N	2023-03-25 01:40:21	\N	\N	\N	0	\N	1
+18	lchristopher	$2y$10$FtrDwKcES.ExFco.aHxsS.Ju7WqfIs5J/hvzLbPszx01ZUlmvpLj2	lchristopher@mailinator.com	\N	\N	\N	\N	AU	[]	\N	\N	2023-03-25 01:47:27	\N	2023-03-25 01:47:27	\N	\N	\N	0	\N	1
+9	cmontgomerie	$2y$10$3.trlPFf6dgtHT56CQi5qu.ztcbdXVs.3leyTmAkbY0lhNo5nDPnK	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-25 01:41:45	\N	2023-03-25 01:41:46	\N	\N	\N	0	\N	1
+10	ddiouf	$2y$10$s7A.4nCetaQx9762WWq4fu/rOFZgyRwEpl3iA6ohoHQVI/0H.kGjK	ddiouf@mailinator.com	\N	\N	\N	\N	EG	[]	\N	\N	2023-03-25 01:42:40	\N	2023-03-25 01:42:40	\N	\N	\N	0	\N	1
+19	lkumiega	$2y$10$sFFsj3euBH6CifrJqmst2OfwQSV/EI42RoIw/jfDsbTfb0/hpLq/G	lkumiega@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2023-03-25 01:47:58	\N	2023-03-25 01:47:59	\N	\N	\N	0	\N	1
+11	dphillips	$2y$10$D7wjWdGWmmi0UYpixlIFDuF4gaHdLvePVt8RaWsmpeVUefWJBrAYO	dphillips@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-25 01:43:31	\N	2023-03-25 01:43:31	\N	\N	\N	0	\N	1
+20	pdaniel	$2y$10$nWeF68w49gD63FykThgJGuwjhfJh2/4P7gMsDM//g9D01mczivJzS	pdaniel@mailinator.com	\N	\N	\N	\N	GB	[]	\N	\N	2023-03-25 01:48:31	\N	2023-03-25 01:48:31	\N	\N	\N	0	\N	1
+12	dsokoloff	$2y$10$sk0XfIThrYVW/R3wXvO18eyAhSnSwiGZiRwlkmrE/.S4Ez4ML2jWm	dsokoloff@mailinator.com	\N	\N	\N	\N	IE	[]	\N	\N	2023-03-25 01:44:15	\N	2023-03-25 01:44:15	\N	\N	\N	0	\N	1
+13	eostrom	$2y$10$xgEQJdDuY6cXpa78ZHS9rOiUfONUrihpXvxsQAaDZNinNva6C0yV6	eostrom@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2023-03-25 01:44:46	\N	2023-03-25 01:44:46	\N	\N	\N	0	\N	1
+14	fpaglieri	$2y$10$GuDuOn.w1nYAXpISQ27UJOt6uEsc./vjXDY8kpN57ddTzqxAkLPAy	fpaglieri@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2023-03-25 01:45:18	\N	2023-03-25 01:45:18	\N	\N	\N	0	\N	1
+15	jmwandenga	$2y$10$MfRjRi/g5uFxcPGUv3jvXeOE8cBYZuv56M51OhvoYIddJK0VA/xA.	jmwandenga@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2023-03-25 01:45:50	\N	2023-03-25 01:45:50	\N	\N	\N	0	\N	1
+21	rbaiyewu	$2y$10$vbkwv2NxnKP3DtWjQadPX.RYCUX.teL6MqtZ2qyDfxprv9pCXcn8K	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE	[]	\N	\N	2023-03-25 01:49:03	\N	2023-03-25 01:49:03	\N	\N	\N	0	\N	1
+22	rrossi	$2y$10$LERPYIQFYkgkR6dWYbbiY.xrdozZr2m5OhQc8CKyWV6opcsk8t8q2	rrossi@mailinator.com	\N	\N	\N	\N	ES	[]	\N	\N	2023-03-25 01:49:35	\N	2023-03-25 01:49:35	\N	\N	\N	0	\N	1
+23	vkarbasizaed	$2y$10$/QLRWcxUYdnxg7reYK20lOv/GSjVyXKjQAjsByoWtD8WwtqjGVRTS	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR	[]	\N	\N	2023-03-25 01:50:07	\N	2023-03-25 01:50:07	\N	\N	\N	0	\N	1
+24	vwilliamson	$2y$10$P1scZGUVmd8Pa/w/3NQzEuUl4jFUHEcBm3oNnMObGY13LWeGc8uDC	vwilliamson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-25 01:50:40	\N	2023-03-25 01:50:40	\N	\N	\N	0	\N	1
 \.
 
 
@@ -11137,27 +13360,34 @@ SELECT pg_catalog.setval('public.users_user_id_seq', 25, true);
 -- Data for Name: versions; Type: TABLE DATA; Schema: public; Owner: ops-ci
 --
 
-COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2023-03-24 16:06:33	1	plugins.metadata	dc11		0	0
-1	0	1	0	2023-03-24 16:06:33	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2023-03-24 16:06:33	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	0	0	2023-03-24 16:06:33	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	3	4	3	2023-03-24 16:06:33	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
-1	0	0	0	2023-03-24 16:06:33	1	plugins.generic	usageEvent		0	0
-1	1	0	0	2023-03-24 16:06:33	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	3	0	0	2023-03-24 16:06:33	1	plugins.generic	acron	AcronPlugin	1	1
-1	0	1	0	2023-03-24 16:06:33	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	0	0	0	2023-03-24 16:06:33	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	2	0	0	2023-03-24 16:06:33	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	0	0	0	2023-03-24 16:06:33	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-2	2	0	0	2023-03-24 16:06:33	1	plugins.generic	crossref		0	0
-1	0	0	0	2023-03-24 16:06:33	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-0	1	0	0	2023-03-24 16:06:33	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
-1	0	0	0	2023-03-24 16:06:33	1	plugins.importexport	native		0	0
-1	0	0	0	2023-03-24 16:06:33	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2023-03-24 16:06:33	1	plugins.themes	default	DefaultThemePlugin	1	0
-3	4	0	0	2023-03-24 16:06:32	1	core	ops		0	1
+COPY public.versions (version_id, major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
+1	1	0	0	0	2023-03-25 01:36:56	1	plugins.metadata	dc11		0	0
+2	1	0	1	0	2023-03-25 01:36:56	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+3	1	0	0	0	2023-03-25 01:36:56	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+4	1	0	0	0	2023-03-25 01:36:56	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+5	1	3	4	3	2023-03-25 01:36:56	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
+6	1	0	0	0	2023-03-25 01:36:56	1	plugins.generic	usageEvent		0	0
+7	1	1	0	0	2023-03-25 01:36:56	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+8	1	3	0	0	2023-03-25 01:36:56	1	plugins.generic	acron	AcronPlugin	1	1
+9	1	0	1	0	2023-03-25 01:36:56	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+10	1	0	0	0	2023-03-25 01:36:56	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+11	1	2	0	0	2023-03-25 01:36:56	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+12	1	0	0	0	2023-03-25 01:36:56	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+13	2	2	0	0	2023-03-25 01:36:56	1	plugins.generic	crossref		0	0
+14	1	0	0	0	2023-03-25 01:36:56	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+15	0	1	0	0	2023-03-25 01:36:56	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+16	1	0	0	0	2023-03-25 01:36:56	1	plugins.importexport	native		0	0
+17	1	0	0	0	2023-03-25 01:36:56	1	plugins.oaiMetadataFormats	dc		0	0
+18	1	0	0	0	2023-03-25 01:36:56	1	plugins.themes	default	DefaultThemePlugin	1	0
+19	3	4	0	0	2023-03-25 01:36:55	1	core	ops		0	1
 \.
+
+
+--
+-- Name: versions_version_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
+--
+
+SELECT pg_catalog.setval('public.versions_version_id_seq', 19, true);
 
 
 --
@@ -11173,7 +13403,15 @@ ALTER TABLE ONLY public.access_keys
 --
 
 ALTER TABLE ONLY public.announcement_settings
-    ADD CONSTRAINT announcement_settings_pkey UNIQUE (announcement_id, locale, setting_name);
+    ADD CONSTRAINT announcement_settings_pkey PRIMARY KEY (announcement_setting_id);
+
+
+--
+-- Name: announcement_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.announcement_settings
+    ADD CONSTRAINT announcement_settings_unique UNIQUE (announcement_id, locale, setting_name);
 
 
 --
@@ -11181,7 +13419,15 @@ ALTER TABLE ONLY public.announcement_settings
 --
 
 ALTER TABLE ONLY public.announcement_type_settings
-    ADD CONSTRAINT announcement_type_settings_pkey UNIQUE (type_id, locale, setting_name);
+    ADD CONSTRAINT announcement_type_settings_pkey PRIMARY KEY (announcement_type_setting_id);
+
+
+--
+-- Name: announcement_type_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.announcement_type_settings
+    ADD CONSTRAINT announcement_type_settings_unique UNIQUE (type_id, locale, setting_name);
 
 
 --
@@ -11205,7 +13451,15 @@ ALTER TABLE ONLY public.announcements
 --
 
 ALTER TABLE ONLY public.author_settings
-    ADD CONSTRAINT author_settings_pkey UNIQUE (author_id, locale, setting_name);
+    ADD CONSTRAINT author_settings_pkey PRIMARY KEY (author_setting_id);
+
+
+--
+-- Name: author_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.author_settings
+    ADD CONSTRAINT author_settings_unique UNIQUE (author_id, locale, setting_name);
 
 
 --
@@ -11245,7 +13499,15 @@ ALTER TABLE ONLY public.categories
 --
 
 ALTER TABLE ONLY public.category_settings
-    ADD CONSTRAINT category_settings_pkey UNIQUE (category_id, locale, setting_name);
+    ADD CONSTRAINT category_settings_pkey PRIMARY KEY (category_setting_id);
+
+
+--
+-- Name: category_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.category_settings
+    ADD CONSTRAINT category_settings_unique UNIQUE (category_id, locale, setting_name);
 
 
 --
@@ -11253,7 +13515,15 @@ ALTER TABLE ONLY public.category_settings
 --
 
 ALTER TABLE ONLY public.citation_settings
-    ADD CONSTRAINT citation_settings_pkey UNIQUE (citation_id, locale, setting_name);
+    ADD CONSTRAINT citation_settings_pkey PRIMARY KEY (citation_setting_id);
+
+
+--
+-- Name: citation_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.citation_settings
+    ADD CONSTRAINT citation_settings_unique UNIQUE (citation_id, locale, setting_name);
 
 
 --
@@ -11278,6 +13548,14 @@ ALTER TABLE ONLY public.citations
 
 ALTER TABLE ONLY public.controlled_vocab_entries
     ADD CONSTRAINT controlled_vocab_entries_pkey PRIMARY KEY (controlled_vocab_entry_id);
+
+
+--
+-- Name: controlled_vocab_entry_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocab_entry_settings
+    ADD CONSTRAINT controlled_vocab_entry_settings_pkey PRIMARY KEY (controlled_vocab_entry_setting_id);
 
 
 --
@@ -11309,7 +13587,15 @@ ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_settings
-    ADD CONSTRAINT data_object_tombstone_settings_pkey UNIQUE (tombstone_id, locale, setting_name);
+    ADD CONSTRAINT data_object_tombstone_settings_pkey PRIMARY KEY (tombstone_setting_id);
+
+
+--
+-- Name: data_object_tombstone_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.data_object_tombstone_settings
+    ADD CONSTRAINT data_object_tombstone_settings_unique UNIQUE (tombstone_id, locale, setting_name);
 
 
 --
@@ -11325,7 +13611,15 @@ ALTER TABLE ONLY public.data_object_tombstones
 --
 
 ALTER TABLE ONLY public.doi_settings
-    ADD CONSTRAINT doi_settings_pkey UNIQUE (doi_id, locale, setting_name);
+    ADD CONSTRAINT doi_settings_pkey PRIMARY KEY (doi_setting_id);
+
+
+--
+-- Name: doi_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.doi_settings
+    ADD CONSTRAINT doi_settings_unique UNIQUE (doi_id, locale, setting_name);
 
 
 --
@@ -11361,11 +13655,11 @@ ALTER TABLE ONLY public.email_log_users
 
 
 --
--- Name: email_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+-- Name: email_log_users_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
 --
 
-ALTER TABLE ONLY public.email_templates_settings
-    ADD CONSTRAINT email_settings_pkey UNIQUE (email_id, locale, setting_name);
+ALTER TABLE ONLY public.email_log_users
+    ADD CONSTRAINT email_log_users_pkey PRIMARY KEY (email_log_user_id);
 
 
 --
@@ -11373,7 +13667,15 @@ ALTER TABLE ONLY public.email_templates_settings
 --
 
 ALTER TABLE ONLY public.email_templates_default_data
-    ADD CONSTRAINT email_templates_default_data_pkey UNIQUE (email_key, locale);
+    ADD CONSTRAINT email_templates_default_data_pkey PRIMARY KEY (email_templates_default_data_id);
+
+
+--
+-- Name: email_templates_default_data_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.email_templates_default_data
+    ADD CONSTRAINT email_templates_default_data_unique UNIQUE (email_key, locale);
 
 
 --
@@ -11393,6 +13695,22 @@ ALTER TABLE ONLY public.email_templates
 
 
 --
+-- Name: email_templates_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.email_templates_settings
+    ADD CONSTRAINT email_templates_settings_pkey PRIMARY KEY (email_template_setting_id);
+
+
+--
+-- Name: email_templates_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.email_templates_settings
+    ADD CONSTRAINT email_templates_settings_unique UNIQUE (email_id, locale, setting_name);
+
+
+--
 -- Name: event_log_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
 --
 
@@ -11405,7 +13723,15 @@ ALTER TABLE ONLY public.event_log
 --
 
 ALTER TABLE ONLY public.event_log_settings
-    ADD CONSTRAINT event_log_settings_pkey UNIQUE (log_id, setting_name);
+    ADD CONSTRAINT event_log_settings_pkey PRIMARY KEY (event_log_setting_id);
+
+
+--
+-- Name: event_log_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.event_log_settings
+    ADD CONSTRAINT event_log_settings_unique UNIQUE (log_id, setting_name);
 
 
 --
@@ -11445,7 +13771,15 @@ ALTER TABLE ONLY public.filter_groups
 --
 
 ALTER TABLE ONLY public.filter_settings
-    ADD CONSTRAINT filter_settings_pkey UNIQUE (filter_id, locale, setting_name);
+    ADD CONSTRAINT filter_settings_pkey PRIMARY KEY (filter_setting_id);
+
+
+--
+-- Name: filter_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.filter_settings
+    ADD CONSTRAINT filter_settings_unique UNIQUE (filter_id, locale, setting_name);
 
 
 --
@@ -11461,7 +13795,15 @@ ALTER TABLE ONLY public.filters
 --
 
 ALTER TABLE ONLY public.genre_settings
-    ADD CONSTRAINT genre_settings_pkey UNIQUE (genre_id, locale, setting_name);
+    ADD CONSTRAINT genre_settings_pkey PRIMARY KEY (genre_setting_id);
+
+
+--
+-- Name: genre_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.genre_settings
+    ADD CONSTRAINT genre_settings_unique UNIQUE (genre_id, locale, setting_name);
 
 
 --
@@ -11485,7 +13827,15 @@ ALTER TABLE ONLY public.institution_ip
 --
 
 ALTER TABLE ONLY public.institution_settings
-    ADD CONSTRAINT institution_settings_pkey UNIQUE (institution_id, locale, setting_name);
+    ADD CONSTRAINT institution_settings_pkey PRIMARY KEY (institution_setting_id);
+
+
+--
+-- Name: institution_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.institution_settings
+    ADD CONSTRAINT institution_settings_unique UNIQUE (institution_id, locale, setting_name);
 
 
 --
@@ -11517,7 +13867,15 @@ ALTER TABLE ONLY public.jobs
 --
 
 ALTER TABLE ONLY public.library_file_settings
-    ADD CONSTRAINT library_file_settings_pkey UNIQUE (file_id, locale, setting_name);
+    ADD CONSTRAINT library_file_settings_pkey PRIMARY KEY (library_file_setting_id);
+
+
+--
+-- Name: library_file_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.library_file_settings
+    ADD CONSTRAINT library_file_settings_unique UNIQUE (file_id, locale, setting_name);
 
 
 --
@@ -11526,6 +13884,70 @@ ALTER TABLE ONLY public.library_file_settings
 
 ALTER TABLE ONLY public.library_files
     ADD CONSTRAINT library_files_pkey PRIMARY KEY (file_id);
+
+
+--
+-- Name: metrics_context_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_context
+    ADD CONSTRAINT metrics_context_pkey PRIMARY KEY (metrics_context_id);
+
+
+--
+-- Name: metrics_counter_submission_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_daily
+    ADD CONSTRAINT metrics_counter_submission_daily_pkey PRIMARY KEY (metrics_counter_submission_daily_id);
+
+
+--
+-- Name: metrics_counter_submission_institution_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
+    ADD CONSTRAINT metrics_counter_submission_institution_daily_pkey PRIMARY KEY (metrics_counter_submission_institution_daily_id);
+
+
+--
+-- Name: metrics_counter_submission_institution_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
+    ADD CONSTRAINT metrics_counter_submission_institution_monthly_pkey PRIMARY KEY (metrics_counter_submission_institution_monthly_id);
+
+
+--
+-- Name: metrics_counter_submission_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_monthly
+    ADD CONSTRAINT metrics_counter_submission_monthly_pkey PRIMARY KEY (metrics_counter_submission_monthly_id);
+
+
+--
+-- Name: metrics_submission_geo_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_daily
+    ADD CONSTRAINT metrics_submission_geo_daily_pkey PRIMARY KEY (metrics_submission_geo_daily_id);
+
+
+--
+-- Name: metrics_submission_geo_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_monthly
+    ADD CONSTRAINT metrics_submission_geo_monthly_pkey PRIMARY KEY (metrics_submission_geo_monthly_id);
+
+
+--
+-- Name: metrics_submission_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission
+    ADD CONSTRAINT metrics_submission_pkey PRIMARY KEY (metrics_submission_id);
 
 
 --
@@ -11581,7 +14003,15 @@ ALTER TABLE ONLY public.metrics_counter_submission_monthly
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
-    ADD CONSTRAINT navigation_menu_item_assignment_settings_pkey UNIQUE (navigation_menu_item_assignment_id, locale, setting_name);
+    ADD CONSTRAINT navigation_menu_item_assignment_settings_pkey PRIMARY KEY (navigation_menu_item_assignment_setting_id);
+
+
+--
+-- Name: navigation_menu_item_assignment_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
+    ADD CONSTRAINT navigation_menu_item_assignment_settings_unique UNIQUE (navigation_menu_item_assignment_id, locale, setting_name);
 
 
 --
@@ -11597,7 +14027,15 @@ ALTER TABLE ONLY public.navigation_menu_item_assignments
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_settings
-    ADD CONSTRAINT navigation_menu_item_settings_pkey UNIQUE (navigation_menu_item_id, locale, setting_name);
+    ADD CONSTRAINT navigation_menu_item_settings_pkey PRIMARY KEY (navigation_menu_item_setting_id);
+
+
+--
+-- Name: navigation_menu_item_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_settings
+    ADD CONSTRAINT navigation_menu_item_settings_unique UNIQUE (navigation_menu_item_id, locale, setting_name);
 
 
 --
@@ -11629,7 +14067,15 @@ ALTER TABLE ONLY public.notes
 --
 
 ALTER TABLE ONLY public.notification_settings
-    ADD CONSTRAINT notification_settings_pkey UNIQUE (notification_id, locale, setting_name);
+    ADD CONSTRAINT notification_settings_pkey PRIMARY KEY (notification_setting_id);
+
+
+--
+-- Name: notification_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.notification_settings
+    ADD CONSTRAINT notification_settings_unique UNIQUE (notification_id, locale, setting_name);
 
 
 --
@@ -11653,7 +14099,15 @@ ALTER TABLE ONLY public.notifications
 --
 
 ALTER TABLE ONLY public.oai_resumption_tokens
-    ADD CONSTRAINT oai_resumption_tokens_pkey UNIQUE (token);
+    ADD CONSTRAINT oai_resumption_tokens_pkey PRIMARY KEY (oai_resumption_token_id);
+
+
+--
+-- Name: oai_resumption_tokens_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.oai_resumption_tokens
+    ADD CONSTRAINT oai_resumption_tokens_unique UNIQUE (token);
 
 
 --
@@ -11661,7 +14115,15 @@ ALTER TABLE ONLY public.oai_resumption_tokens
 --
 
 ALTER TABLE ONLY public.plugin_settings
-    ADD CONSTRAINT plugin_settings_pkey UNIQUE (plugin_name, context_id, setting_name);
+    ADD CONSTRAINT plugin_settings_pkey PRIMARY KEY (plugin_setting_id);
+
+
+--
+-- Name: plugin_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.plugin_settings
+    ADD CONSTRAINT plugin_settings_unique UNIQUE (plugin_name, context_id, setting_name);
 
 
 --
@@ -11673,11 +14135,27 @@ ALTER TABLE ONLY public.publication_categories
 
 
 --
+-- Name: publication_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.publication_categories
+    ADD CONSTRAINT publication_categories_pkey PRIMARY KEY (publication_category_id);
+
+
+--
 -- Name: publication_galley_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.publication_galley_settings
-    ADD CONSTRAINT publication_galley_settings_pkey UNIQUE (galley_id, locale, setting_name);
+    ADD CONSTRAINT publication_galley_settings_pkey PRIMARY KEY (publication_galley_setting_id);
+
+
+--
+-- Name: publication_galley_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.publication_galley_settings
+    ADD CONSTRAINT publication_galley_settings_unique UNIQUE (galley_id, locale, setting_name);
 
 
 --
@@ -11693,7 +14171,15 @@ ALTER TABLE ONLY public.publication_galleys
 --
 
 ALTER TABLE ONLY public.publication_settings
-    ADD CONSTRAINT publication_settings_pkey UNIQUE (publication_id, locale, setting_name);
+    ADD CONSTRAINT publication_settings_pkey PRIMARY KEY (publication_setting_id);
+
+
+--
+-- Name: publication_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.publication_settings
+    ADD CONSTRAINT publication_settings_unique UNIQUE (publication_id, locale, setting_name);
 
 
 --
@@ -11717,7 +14203,15 @@ ALTER TABLE ONLY public.queries
 --
 
 ALTER TABLE ONLY public.query_participants
-    ADD CONSTRAINT query_participants_pkey UNIQUE (query_id, user_id);
+    ADD CONSTRAINT query_participants_pkey PRIMARY KEY (query_participant_id);
+
+
+--
+-- Name: query_participants_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.query_participants
+    ADD CONSTRAINT query_participants_unique UNIQUE (query_id, user_id);
 
 
 --
@@ -11733,7 +14227,15 @@ ALTER TABLE ONLY public.review_assignments
 --
 
 ALTER TABLE ONLY public.review_files
-    ADD CONSTRAINT review_files_pkey UNIQUE (review_id, submission_file_id);
+    ADD CONSTRAINT review_files_pkey PRIMARY KEY (review_file_id);
+
+
+--
+-- Name: review_files_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.review_files
+    ADD CONSTRAINT review_files_unique UNIQUE (review_id, submission_file_id);
 
 
 --
@@ -11741,7 +14243,15 @@ ALTER TABLE ONLY public.review_files
 --
 
 ALTER TABLE ONLY public.review_form_element_settings
-    ADD CONSTRAINT review_form_element_settings_pkey UNIQUE (review_form_element_id, locale, setting_name);
+    ADD CONSTRAINT review_form_element_settings_pkey PRIMARY KEY (review_form_element_setting_id);
+
+
+--
+-- Name: review_form_element_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.review_form_element_settings
+    ADD CONSTRAINT review_form_element_settings_unique UNIQUE (review_form_element_id, locale, setting_name);
 
 
 --
@@ -11753,11 +14263,27 @@ ALTER TABLE ONLY public.review_form_elements
 
 
 --
+-- Name: review_form_responses_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.review_form_responses
+    ADD CONSTRAINT review_form_responses_pkey PRIMARY KEY (review_form_response_id);
+
+
+--
 -- Name: review_form_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.review_form_settings
-    ADD CONSTRAINT review_form_settings_pkey UNIQUE (review_form_id, locale, setting_name);
+    ADD CONSTRAINT review_form_settings_pkey PRIMARY KEY (review_form_setting_id);
+
+
+--
+-- Name: review_form_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.review_form_settings
+    ADD CONSTRAINT review_form_settings_unique UNIQUE (review_form_id, locale, setting_name);
 
 
 --
@@ -11773,7 +14299,15 @@ ALTER TABLE ONLY public.review_forms
 --
 
 ALTER TABLE ONLY public.review_round_files
-    ADD CONSTRAINT review_round_files_pkey UNIQUE (submission_id, review_round_id, submission_file_id);
+    ADD CONSTRAINT review_round_files_pkey PRIMARY KEY (review_round_file_id);
+
+
+--
+-- Name: review_round_files_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.review_round_files
+    ADD CONSTRAINT review_round_files_unique UNIQUE (submission_id, review_round_id, submission_file_id);
 
 
 --
@@ -11797,15 +14331,23 @@ ALTER TABLE ONLY public.review_rounds
 --
 
 ALTER TABLE ONLY public.scheduled_tasks
-    ADD CONSTRAINT scheduled_tasks_pkey UNIQUE (class_name);
+    ADD CONSTRAINT scheduled_tasks_pkey PRIMARY KEY (scheduled_task_id);
 
 
 --
--- Name: section_editors_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+-- Name: scheduled_tasks_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.scheduled_tasks
+    ADD CONSTRAINT scheduled_tasks_unique UNIQUE (class_name);
+
+
+--
+-- Name: section_editors_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.subeditor_submission_group
-    ADD CONSTRAINT section_editors_pkey UNIQUE (context_id, assoc_id, assoc_type, user_id, user_group_id);
+    ADD CONSTRAINT section_editors_unique UNIQUE (context_id, assoc_id, assoc_type, user_id, user_group_id);
 
 
 --
@@ -11813,7 +14355,15 @@ ALTER TABLE ONLY public.subeditor_submission_group
 --
 
 ALTER TABLE ONLY public.section_settings
-    ADD CONSTRAINT section_settings_pkey UNIQUE (section_id, locale, setting_name);
+    ADD CONSTRAINT section_settings_pkey PRIMARY KEY (section_setting_id);
+
+
+--
+-- Name: section_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.section_settings
+    ADD CONSTRAINT section_settings_unique UNIQUE (section_id, locale, setting_name);
 
 
 --
@@ -11829,7 +14379,15 @@ ALTER TABLE ONLY public.sections
 --
 
 ALTER TABLE ONLY public.server_settings
-    ADD CONSTRAINT server_settings_pkey UNIQUE (server_id, locale, setting_name);
+    ADD CONSTRAINT server_settings_pkey PRIMARY KEY (server_setting_id);
+
+
+--
+-- Name: server_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.server_settings
+    ADD CONSTRAINT server_settings_unique UNIQUE (server_id, locale, setting_name);
 
 
 --
@@ -11857,11 +14415,27 @@ ALTER TABLE ONLY public.sessions
 
 
 --
+-- Name: site_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.site
+    ADD CONSTRAINT site_pkey PRIMARY KEY (site_id);
+
+
+--
 -- Name: site_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.site_settings
-    ADD CONSTRAINT site_settings_pkey UNIQUE (setting_name, locale);
+    ADD CONSTRAINT site_settings_pkey PRIMARY KEY (site_setting_id);
+
+
+--
+-- Name: site_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.site_settings
+    ADD CONSTRAINT site_settings_unique UNIQUE (setting_name, locale);
 
 
 --
@@ -11878,6 +14452,14 @@ ALTER TABLE ONLY public.stage_assignments
 
 ALTER TABLE ONLY public.stage_assignments
     ADD CONSTRAINT stage_assignments_pkey PRIMARY KEY (stage_assignment_id);
+
+
+--
+-- Name: subeditor_submission_group_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.subeditor_submission_group
+    ADD CONSTRAINT subeditor_submission_group_pkey PRIMARY KEY (subeditor_submission_group_id);
 
 
 --
@@ -11901,7 +14483,15 @@ ALTER TABLE ONLY public.submission_file_revisions
 --
 
 ALTER TABLE ONLY public.submission_file_settings
-    ADD CONSTRAINT submission_file_settings_pkey UNIQUE (submission_file_id, locale, setting_name);
+    ADD CONSTRAINT submission_file_settings_pkey PRIMARY KEY (submission_file_setting_id);
+
+
+--
+-- Name: submission_file_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.submission_file_settings
+    ADD CONSTRAINT submission_file_settings_unique UNIQUE (submission_file_id, locale, setting_name);
 
 
 --
@@ -11933,7 +14523,15 @@ ALTER TABLE ONLY public.submission_search_keyword_list
 --
 
 ALTER TABLE ONLY public.submission_search_object_keywords
-    ADD CONSTRAINT submission_search_object_keywords_pkey UNIQUE (object_id, pos);
+    ADD CONSTRAINT submission_search_object_keywords_pkey PRIMARY KEY (submission_search_object_keyword_id);
+
+
+--
+-- Name: submission_search_object_keywords_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.submission_search_object_keywords
+    ADD CONSTRAINT submission_search_object_keywords_unique UNIQUE (object_id, pos);
 
 
 --
@@ -11949,7 +14547,15 @@ ALTER TABLE ONLY public.submission_search_objects
 --
 
 ALTER TABLE ONLY public.submission_settings
-    ADD CONSTRAINT submission_settings_pkey UNIQUE (submission_id, locale, setting_name);
+    ADD CONSTRAINT submission_settings_pkey PRIMARY KEY (submission_setting_id);
+
+
+--
+-- Name: submission_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.submission_settings
+    ADD CONSTRAINT submission_settings_unique UNIQUE (submission_id, locale, setting_name);
 
 
 --
@@ -11977,11 +14583,51 @@ ALTER TABLE ONLY public.user_interests
 
 
 --
+-- Name: usage_stats_institution_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_institution_temporary_records
+    ADD CONSTRAINT usage_stats_institution_temporary_records_pkey PRIMARY KEY (usage_stats_temp_institution_id);
+
+
+--
+-- Name: usage_stats_total_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_total_temporary_records
+    ADD CONSTRAINT usage_stats_total_temporary_records_pkey PRIMARY KEY (usage_stats_temp_total_id);
+
+
+--
+-- Name: usage_stats_unique_item_investigations_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
+    ADD CONSTRAINT usage_stats_unique_item_investigations_temporary_records_pkey PRIMARY KEY (usage_stats_temp_unique_item_id);
+
+
+--
+-- Name: usage_stats_unique_item_requests_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
+    ADD CONSTRAINT usage_stats_unique_item_requests_temporary_records_pkey PRIMARY KEY (usage_stats_temp_item_id);
+
+
+--
 -- Name: user_group_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.user_group_settings
-    ADD CONSTRAINT user_group_settings_pkey UNIQUE (user_group_id, locale, setting_name);
+    ADD CONSTRAINT user_group_settings_pkey PRIMARY KEY (user_group_setting_id);
+
+
+--
+-- Name: user_group_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.user_group_settings
+    ADD CONSTRAINT user_group_settings_unique UNIQUE (user_group_id, locale, setting_name);
 
 
 --
@@ -11989,7 +14635,15 @@ ALTER TABLE ONLY public.user_group_settings
 --
 
 ALTER TABLE ONLY public.user_group_stage
-    ADD CONSTRAINT user_group_stage_pkey UNIQUE (context_id, user_group_id, stage_id);
+    ADD CONSTRAINT user_group_stage_pkey PRIMARY KEY (user_group_stage_id);
+
+
+--
+-- Name: user_group_stage_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.user_group_stage
+    ADD CONSTRAINT user_group_stage_unique UNIQUE (context_id, user_group_id, stage_id);
 
 
 --
@@ -12001,11 +14655,27 @@ ALTER TABLE ONLY public.user_groups
 
 
 --
+-- Name: user_interests_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.user_interests
+    ADD CONSTRAINT user_interests_pkey PRIMARY KEY (user_interest_id);
+
+
+--
 -- Name: user_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ops-ci
 --
 
 ALTER TABLE ONLY public.user_settings
-    ADD CONSTRAINT user_settings_pkey UNIQUE (user_id, locale, setting_name);
+    ADD CONSTRAINT user_settings_pkey PRIMARY KEY (user_setting_id);
+
+
+--
+-- Name: user_settings_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.user_settings
+    ADD CONSTRAINT user_settings_unique UNIQUE (user_id, locale, setting_name);
 
 
 --
@@ -12013,7 +14683,15 @@ ALTER TABLE ONLY public.user_settings
 --
 
 ALTER TABLE ONLY public.user_user_groups
-    ADD CONSTRAINT user_user_groups_pkey UNIQUE (user_group_id, user_id);
+    ADD CONSTRAINT user_user_groups_pkey PRIMARY KEY (user_user_group_id);
+
+
+--
+-- Name: user_user_groups_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.user_user_groups
+    ADD CONSTRAINT user_user_groups_unique UNIQUE (user_group_id, user_id);
 
 
 --
@@ -12037,7 +14715,15 @@ ALTER TABLE ONLY public.usage_stats_institution_temporary_records
 --
 
 ALTER TABLE ONLY public.versions
-    ADD CONSTRAINT versions_pkey UNIQUE (product_type, product, major, minor, revision, build);
+    ADD CONSTRAINT versions_pkey PRIMARY KEY (version_id);
+
+
+--
+-- Name: versions_unique; Type: CONSTRAINT; Schema: public; Owner: ops-ci
+--
+
+ALTER TABLE ONLY public.versions
+    ADD CONSTRAINT versions_unique UNIQUE (product_type, product, major, minor, revision, build);
 
 
 --
@@ -12895,13 +15581,6 @@ CREATE INDEX review_form_elements_review_form_id ON public.review_form_elements 
 
 
 --
--- Name: review_form_responses_pkey; Type: INDEX; Schema: public; Owner: ops-ci
---
-
-CREATE INDEX review_form_responses_pkey ON public.review_form_responses USING btree (review_form_element_id, review_id);
-
-
---
 -- Name: review_form_responses_review_form_element_id; Type: INDEX; Schema: public; Owner: ops-ci
 --
 
@@ -12913,6 +15592,13 @@ CREATE INDEX review_form_responses_review_form_element_id ON public.review_form_
 --
 
 CREATE INDEX review_form_responses_review_id ON public.review_form_responses USING btree (review_id);
+
+
+--
+-- Name: review_form_responses_unique; Type: INDEX; Schema: public; Owner: ops-ci
+--
+
+CREATE INDEX review_form_responses_unique ON public.review_form_responses USING btree (review_form_element_id, review_id);
 
 
 --
