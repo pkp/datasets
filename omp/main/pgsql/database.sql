@@ -2,11 +2,12 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.5.25
--- Dumped by pg_dump version 9.5.25
+-- Dumped from database version 13.10 (Ubuntu 13.10-1.pgdg20.04+1)
+-- Dumped by pg_dump version 13.10 (Ubuntu 13.10-1.pgdg20.04+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -996,41 +997,9 @@ DROP SEQUENCE public.announcement_settings_announcement_setting_id_seq;
 DROP TABLE public.announcement_settings;
 DROP SEQUENCE public.access_keys_access_key_id_seq;
 DROP TABLE public.access_keys;
-DROP EXTENSION plpgsql;
-DROP SCHEMA public;
---
--- Name: public; Type: SCHEMA; Schema: -; Owner: postgres
---
-
-CREATE SCHEMA public;
-
-
-ALTER SCHEMA public OWNER TO postgres;
-
---
--- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: postgres
---
-
-COMMENT ON SCHEMA public IS 'standard public schema';
-
-
---
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
---
-
-CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
-
-
---
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
---
-
-COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
-
-
 SET default_tablespace = '';
 
-SET default_with_oids = false;
+SET default_table_access_method = heap;
 
 --
 -- Name: access_keys; Type: TABLE; Schema: public; Owner: omp-ci
@@ -2290,7 +2259,7 @@ CREATE TABLE public.failed_jobs (
     queue text NOT NULL,
     payload text NOT NULL,
     exception text NOT NULL,
-    failed_at timestamp(0) without time zone DEFAULT now() NOT NULL
+    failed_at timestamp(0) without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL
 );
 
 
@@ -6945,868 +6914,868 @@ ALTER SEQUENCE public.versions_version_id_seq OWNED BY public.versions.version_i
 
 
 --
--- Name: access_key_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: access_keys access_key_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.access_keys ALTER COLUMN access_key_id SET DEFAULT nextval('public.access_keys_access_key_id_seq'::regclass);
 
 
 --
--- Name: announcement_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: announcement_settings announcement_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_settings ALTER COLUMN announcement_setting_id SET DEFAULT nextval('public.announcement_settings_announcement_setting_id_seq'::regclass);
 
 
 --
--- Name: announcement_type_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: announcement_type_settings announcement_type_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_type_settings ALTER COLUMN announcement_type_setting_id SET DEFAULT nextval('public.announcement_type_settings_announcement_type_setting_id_seq'::regclass);
 
 
 --
--- Name: type_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: announcement_types type_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_types ALTER COLUMN type_id SET DEFAULT nextval('public.announcement_types_type_id_seq'::regclass);
 
 
 --
--- Name: announcement_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: announcements announcement_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcements ALTER COLUMN announcement_id SET DEFAULT nextval('public.announcements_announcement_id_seq'::regclass);
 
 
 --
--- Name: author_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: author_settings author_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.author_settings ALTER COLUMN author_setting_id SET DEFAULT nextval('public.author_settings_author_setting_id_seq'::regclass);
 
 
 --
--- Name: author_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: authors author_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.authors ALTER COLUMN author_id SET DEFAULT nextval('public.authors_author_id_seq'::regclass);
 
 
 --
--- Name: category_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: categories category_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.categories ALTER COLUMN category_id SET DEFAULT nextval('public.categories_category_id_seq'::regclass);
 
 
 --
--- Name: category_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: category_settings category_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.category_settings ALTER COLUMN category_setting_id SET DEFAULT nextval('public.category_settings_category_setting_id_seq'::regclass);
 
 
 --
--- Name: citation_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: citation_settings citation_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citation_settings ALTER COLUMN citation_setting_id SET DEFAULT nextval('public.citation_settings_citation_setting_id_seq'::regclass);
 
 
 --
--- Name: citation_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: citations citation_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citations ALTER COLUMN citation_id SET DEFAULT nextval('public.citations_citation_id_seq'::regclass);
 
 
 --
--- Name: completed_payment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: completed_payments completed_payment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.completed_payments ALTER COLUMN completed_payment_id SET DEFAULT nextval('public.completed_payments_completed_payment_id_seq'::regclass);
 
 
 --
--- Name: controlled_vocab_entry_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocab_entries controlled_vocab_entry_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entries ALTER COLUMN controlled_vocab_entry_id SET DEFAULT nextval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq'::regclass);
 
 
 --
--- Name: controlled_vocab_entry_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocab_entry_settings controlled_vocab_entry_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entry_settings ALTER COLUMN controlled_vocab_entry_setting_id SET DEFAULT nextval('public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq'::regclass);
 
 
 --
--- Name: controlled_vocab_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocabs controlled_vocab_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs ALTER COLUMN controlled_vocab_id SET DEFAULT nextval('public.controlled_vocabs_controlled_vocab_id_seq'::regclass);
 
 
 --
--- Name: object_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstone_oai_set_objects object_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects ALTER COLUMN object_id SET DEFAULT nextval('public.data_object_tombstone_oai_set_objects_object_id_seq'::regclass);
 
 
 --
--- Name: tombstone_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstone_settings tombstone_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_settings ALTER COLUMN tombstone_setting_id SET DEFAULT nextval('public.data_object_tombstone_settings_tombstone_setting_id_seq'::regclass);
 
 
 --
--- Name: tombstone_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstones tombstone_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstones ALTER COLUMN tombstone_id SET DEFAULT nextval('public.data_object_tombstones_tombstone_id_seq'::regclass);
 
 
 --
--- Name: doi_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: doi_settings doi_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.doi_settings ALTER COLUMN doi_setting_id SET DEFAULT nextval('public.doi_settings_doi_setting_id_seq'::regclass);
 
 
 --
--- Name: doi_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: dois doi_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.dois ALTER COLUMN doi_id SET DEFAULT nextval('public.dois_doi_id_seq'::regclass);
 
 
 --
--- Name: edit_decision_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: edit_decisions edit_decision_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.edit_decisions ALTER COLUMN edit_decision_id SET DEFAULT nextval('public.edit_decisions_edit_decision_id_seq'::regclass);
 
 
 --
--- Name: log_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: email_log log_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_log ALTER COLUMN log_id SET DEFAULT nextval('public.email_log_log_id_seq'::regclass);
 
 
 --
--- Name: email_log_user_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: email_log_users email_log_user_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_log_users ALTER COLUMN email_log_user_id SET DEFAULT nextval('public.email_log_users_email_log_user_id_seq'::regclass);
 
 
 --
--- Name: email_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: email_templates email_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates ALTER COLUMN email_id SET DEFAULT nextval('public.email_templates_email_id_seq'::regclass);
 
 
 --
--- Name: email_templates_default_data_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: email_templates_default_data email_templates_default_data_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default_data ALTER COLUMN email_templates_default_data_id SET DEFAULT nextval('public.email_templates_default_data_email_templates_default_data_i_seq'::regclass);
 
 
 --
--- Name: email_template_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: email_templates_settings email_template_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates_settings ALTER COLUMN email_template_setting_id SET DEFAULT nextval('public.email_templates_settings_email_template_setting_id_seq'::regclass);
 
 
 --
--- Name: log_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: event_log log_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.event_log ALTER COLUMN log_id SET DEFAULT nextval('public.event_log_log_id_seq'::regclass);
 
 
 --
--- Name: event_log_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: event_log_settings event_log_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.event_log_settings ALTER COLUMN event_log_setting_id SET DEFAULT nextval('public.event_log_settings_event_log_setting_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: failed_jobs id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.failed_jobs ALTER COLUMN id SET DEFAULT nextval('public.failed_jobs_id_seq'::regclass);
 
 
 --
--- Name: feature_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: features feature_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.features ALTER COLUMN feature_id SET DEFAULT nextval('public.features_feature_id_seq'::regclass);
 
 
 --
--- Name: file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: files file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.files ALTER COLUMN file_id SET DEFAULT nextval('public.files_file_id_seq'::regclass);
 
 
 --
--- Name: filter_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: filter_groups filter_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filter_groups ALTER COLUMN filter_group_id SET DEFAULT nextval('public.filter_groups_filter_group_id_seq'::regclass);
 
 
 --
--- Name: filter_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: filter_settings filter_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filter_settings ALTER COLUMN filter_setting_id SET DEFAULT nextval('public.filter_settings_filter_setting_id_seq'::regclass);
 
 
 --
--- Name: filter_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: filters filter_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filters ALTER COLUMN filter_id SET DEFAULT nextval('public.filters_filter_id_seq'::regclass);
 
 
 --
--- Name: genre_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: genre_settings genre_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.genre_settings ALTER COLUMN genre_setting_id SET DEFAULT nextval('public.genre_settings_genre_setting_id_seq'::regclass);
 
 
 --
--- Name: genre_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: genres genre_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.genres ALTER COLUMN genre_id SET DEFAULT nextval('public.genres_genre_id_seq'::regclass);
 
 
 --
--- Name: identification_code_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: identification_codes identification_code_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.identification_codes ALTER COLUMN identification_code_id SET DEFAULT nextval('public.identification_codes_identification_code_id_seq'::regclass);
 
 
 --
--- Name: institution_ip_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: institution_ip institution_ip_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.institution_ip ALTER COLUMN institution_ip_id SET DEFAULT nextval('public.institution_ip_institution_ip_id_seq'::regclass);
 
 
 --
--- Name: institution_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: institution_settings institution_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.institution_settings ALTER COLUMN institution_setting_id SET DEFAULT nextval('public.institution_settings_institution_setting_id_seq'::regclass);
 
 
 --
--- Name: institution_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: institutions institution_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.institutions ALTER COLUMN institution_id SET DEFAULT nextval('public.institutions_institution_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: jobs id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.jobs ALTER COLUMN id SET DEFAULT nextval('public.jobs_id_seq'::regclass);
 
 
 --
--- Name: library_file_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: library_file_settings library_file_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.library_file_settings ALTER COLUMN library_file_setting_id SET DEFAULT nextval('public.library_file_settings_library_file_setting_id_seq'::regclass);
 
 
 --
--- Name: file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: library_files file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.library_files ALTER COLUMN file_id SET DEFAULT nextval('public.library_files_file_id_seq'::regclass);
 
 
 --
--- Name: market_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: markets market_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.markets ALTER COLUMN market_id SET DEFAULT nextval('public.markets_market_id_seq'::regclass);
 
 
 --
--- Name: metrics_context_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: metrics_context metrics_context_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_context ALTER COLUMN metrics_context_id SET DEFAULT nextval('public.metrics_context_metrics_context_id_seq'::regclass);
 
 
 --
--- Name: metrics_counter_submission_daily_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_daily metrics_counter_submission_daily_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_daily ALTER COLUMN metrics_counter_submission_daily_id SET DEFAULT nextval('public.metrics_counter_submission_da_metrics_counter_submission_da_seq'::regclass);
 
 
 --
--- Name: metrics_counter_submission_institution_daily_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_daily metrics_counter_submission_institution_daily_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_daily ALTER COLUMN metrics_counter_submission_institution_daily_id SET DEFAULT nextval('public.metrics_counter_submission_in_metrics_counter_submission_in_seq'::regclass);
 
 
 --
--- Name: metrics_counter_submission_institution_monthly_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_monthly metrics_counter_submission_institution_monthly_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly ALTER COLUMN metrics_counter_submission_institution_monthly_id SET DEFAULT nextval('public.metrics_counter_submission_in_metrics_counter_submission_i_seq1'::regclass);
 
 
 --
--- Name: metrics_counter_submission_monthly_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_monthly metrics_counter_submission_monthly_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_monthly ALTER COLUMN metrics_counter_submission_monthly_id SET DEFAULT nextval('public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq'::regclass);
 
 
 --
--- Name: metrics_series_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: metrics_series metrics_series_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_series ALTER COLUMN metrics_series_id SET DEFAULT nextval('public.metrics_series_metrics_series_id_seq'::regclass);
 
 
 --
--- Name: metrics_submission_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission metrics_submission_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission ALTER COLUMN metrics_submission_id SET DEFAULT nextval('public.metrics_submission_metrics_submission_id_seq'::regclass);
 
 
 --
--- Name: metrics_submission_geo_daily_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission_geo_daily metrics_submission_geo_daily_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission_geo_daily ALTER COLUMN metrics_submission_geo_daily_id SET DEFAULT nextval('public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq'::regclass);
 
 
 --
--- Name: metrics_submission_geo_monthly_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission_geo_monthly metrics_submission_geo_monthly_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission_geo_monthly ALTER COLUMN metrics_submission_geo_monthly_id SET DEFAULT nextval('public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq'::regclass);
 
 
 --
--- Name: navigation_menu_item_assignment_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_assignment_settings navigation_menu_item_assignment_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignment_settings ALTER COLUMN navigation_menu_item_assignment_setting_id SET DEFAULT nextval('public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1'::regclass);
 
 
 --
--- Name: navigation_menu_item_assignment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_assignments navigation_menu_item_assignment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignments ALTER COLUMN navigation_menu_item_assignment_id SET DEFAULT nextval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq'::regclass);
 
 
 --
--- Name: navigation_menu_item_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_settings navigation_menu_item_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_settings ALTER COLUMN navigation_menu_item_setting_id SET DEFAULT nextval('public.navigation_menu_item_settings_navigation_menu_item_setting__seq'::regclass);
 
 
 --
--- Name: navigation_menu_item_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_items navigation_menu_item_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_items ALTER COLUMN navigation_menu_item_id SET DEFAULT nextval('public.navigation_menu_items_navigation_menu_item_id_seq'::regclass);
 
 
 --
--- Name: navigation_menu_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: navigation_menus navigation_menu_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menus ALTER COLUMN navigation_menu_id SET DEFAULT nextval('public.navigation_menus_navigation_menu_id_seq'::regclass);
 
 
 --
--- Name: new_release_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: new_releases new_release_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.new_releases ALTER COLUMN new_release_id SET DEFAULT nextval('public.new_releases_new_release_id_seq'::regclass);
 
 
 --
--- Name: note_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: notes note_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notes ALTER COLUMN note_id SET DEFAULT nextval('public.notes_note_id_seq'::regclass);
 
 
 --
--- Name: notification_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: notification_settings notification_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_settings ALTER COLUMN notification_setting_id SET DEFAULT nextval('public.notification_settings_notification_setting_id_seq'::regclass);
 
 
 --
--- Name: setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: notification_subscription_settings setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_subscription_settings ALTER COLUMN setting_id SET DEFAULT nextval('public.notification_subscription_settings_setting_id_seq'::regclass);
 
 
 --
--- Name: notification_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: notifications notification_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notifications ALTER COLUMN notification_id SET DEFAULT nextval('public.notifications_notification_id_seq'::regclass);
 
 
 --
--- Name: oai_resumption_token_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: oai_resumption_tokens oai_resumption_token_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.oai_resumption_tokens ALTER COLUMN oai_resumption_token_id SET DEFAULT nextval('public.oai_resumption_tokens_oai_resumption_token_id_seq'::regclass);
 
 
 --
--- Name: plugin_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: plugin_settings plugin_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.plugin_settings ALTER COLUMN plugin_setting_id SET DEFAULT nextval('public.plugin_settings_plugin_setting_id_seq'::regclass);
 
 
 --
--- Name: press_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: press_settings press_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.press_settings ALTER COLUMN press_setting_id SET DEFAULT nextval('public.press_settings_press_setting_id_seq'::regclass);
 
 
 --
--- Name: press_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: presses press_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.presses ALTER COLUMN press_id SET DEFAULT nextval('public.presses_press_id_seq'::regclass);
 
 
 --
--- Name: publication_category_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: publication_categories publication_category_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_categories ALTER COLUMN publication_category_id SET DEFAULT nextval('public.publication_categories_publication_category_id_seq'::regclass);
 
 
 --
--- Name: publication_date_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: publication_dates publication_date_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_dates ALTER COLUMN publication_date_id SET DEFAULT nextval('public.publication_dates_publication_date_id_seq'::regclass);
 
 
 --
--- Name: publication_format_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: publication_format_settings publication_format_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_format_settings ALTER COLUMN publication_format_setting_id SET DEFAULT nextval('public.publication_format_settings_publication_format_setting_id_seq'::regclass);
 
 
 --
--- Name: publication_format_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: publication_formats publication_format_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_formats ALTER COLUMN publication_format_id SET DEFAULT nextval('public.publication_formats_publication_format_id_seq'::regclass);
 
 
 --
--- Name: publication_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: publication_settings publication_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_settings ALTER COLUMN publication_setting_id SET DEFAULT nextval('public.publication_settings_publication_setting_id_seq'::regclass);
 
 
 --
--- Name: publication_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: publications publication_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publications ALTER COLUMN publication_id SET DEFAULT nextval('public.publications_publication_id_seq'::regclass);
 
 
 --
--- Name: query_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: queries query_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.queries ALTER COLUMN query_id SET DEFAULT nextval('public.queries_query_id_seq'::regclass);
 
 
 --
--- Name: query_participant_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: query_participants query_participant_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.query_participants ALTER COLUMN query_participant_id SET DEFAULT nextval('public.query_participants_query_participant_id_seq'::regclass);
 
 
 --
--- Name: queued_payment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: queued_payments queued_payment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.queued_payments ALTER COLUMN queued_payment_id SET DEFAULT nextval('public.queued_payments_queued_payment_id_seq'::regclass);
 
 
 --
--- Name: representative_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: representatives representative_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.representatives ALTER COLUMN representative_id SET DEFAULT nextval('public.representatives_representative_id_seq'::regclass);
 
 
 --
--- Name: review_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_assignments review_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_assignments ALTER COLUMN review_id SET DEFAULT nextval('public.review_assignments_review_id_seq'::regclass);
 
 
 --
--- Name: review_file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_files review_file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_files ALTER COLUMN review_file_id SET DEFAULT nextval('public.review_files_review_file_id_seq'::regclass);
 
 
 --
--- Name: review_form_element_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_form_element_settings review_form_element_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_element_settings ALTER COLUMN review_form_element_setting_id SET DEFAULT nextval('public.review_form_element_settings_review_form_element_setting_id_seq'::regclass);
 
 
 --
--- Name: review_form_element_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_form_elements review_form_element_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_elements ALTER COLUMN review_form_element_id SET DEFAULT nextval('public.review_form_elements_review_form_element_id_seq'::regclass);
 
 
 --
--- Name: review_form_response_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_form_responses review_form_response_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_responses ALTER COLUMN review_form_response_id SET DEFAULT nextval('public.review_form_responses_review_form_response_id_seq'::regclass);
 
 
 --
--- Name: review_form_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_form_settings review_form_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_settings ALTER COLUMN review_form_setting_id SET DEFAULT nextval('public.review_form_settings_review_form_setting_id_seq'::regclass);
 
 
 --
--- Name: review_form_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_forms review_form_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_forms ALTER COLUMN review_form_id SET DEFAULT nextval('public.review_forms_review_form_id_seq'::regclass);
 
 
 --
--- Name: review_round_file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_round_files review_round_file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_round_files ALTER COLUMN review_round_file_id SET DEFAULT nextval('public.review_round_files_review_round_file_id_seq'::regclass);
 
 
 --
--- Name: review_round_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: review_rounds review_round_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_rounds ALTER COLUMN review_round_id SET DEFAULT nextval('public.review_rounds_review_round_id_seq'::regclass);
 
 
 --
--- Name: sales_rights_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: sales_rights sales_rights_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.sales_rights ALTER COLUMN sales_rights_id SET DEFAULT nextval('public.sales_rights_sales_rights_id_seq'::regclass);
 
 
 --
--- Name: scheduled_task_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: scheduled_tasks scheduled_task_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.scheduled_tasks ALTER COLUMN scheduled_task_id SET DEFAULT nextval('public.scheduled_tasks_scheduled_task_id_seq'::regclass);
 
 
 --
--- Name: series_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: series series_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series ALTER COLUMN series_id SET DEFAULT nextval('public.series_series_id_seq'::regclass);
 
 
 --
--- Name: series_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: series_settings series_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series_settings ALTER COLUMN series_setting_id SET DEFAULT nextval('public.series_settings_series_setting_id_seq'::regclass);
 
 
 --
--- Name: site_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: site site_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.site ALTER COLUMN site_id SET DEFAULT nextval('public.site_site_id_seq'::regclass);
 
 
 --
--- Name: site_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: site_settings site_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.site_settings ALTER COLUMN site_setting_id SET DEFAULT nextval('public.site_settings_site_setting_id_seq'::regclass);
 
 
 --
--- Name: spotlight_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: spotlight_settings spotlight_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.spotlight_settings ALTER COLUMN spotlight_setting_id SET DEFAULT nextval('public.spotlight_settings_spotlight_setting_id_seq'::regclass);
 
 
 --
--- Name: spotlight_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: spotlights spotlight_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.spotlights ALTER COLUMN spotlight_id SET DEFAULT nextval('public.spotlights_spotlight_id_seq'::regclass);
 
 
 --
--- Name: stage_assignment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: stage_assignments stage_assignment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments ALTER COLUMN stage_assignment_id SET DEFAULT nextval('public.stage_assignments_stage_assignment_id_seq'::regclass);
 
 
 --
--- Name: static_page_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: static_page_settings static_page_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.static_page_settings ALTER COLUMN static_page_setting_id SET DEFAULT nextval('public.static_page_settings_static_page_setting_id_seq'::regclass);
 
 
 --
--- Name: static_page_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: static_pages static_page_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.static_pages ALTER COLUMN static_page_id SET DEFAULT nextval('public.static_pages_static_page_id_seq'::regclass);
 
 
 --
--- Name: subeditor_submission_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: subeditor_submission_group subeditor_submission_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.subeditor_submission_group ALTER COLUMN subeditor_submission_group_id SET DEFAULT nextval('public.subeditor_submission_group_subeditor_submission_group_id_seq'::regclass);
 
 
 --
--- Name: submission_chapter_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_chapter_settings submission_chapter_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapter_settings ALTER COLUMN submission_chapter_setting_id SET DEFAULT nextval('public.submission_chapter_settings_submission_chapter_setting_id_seq'::regclass);
 
 
 --
--- Name: chapter_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_chapters chapter_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapters ALTER COLUMN chapter_id SET DEFAULT nextval('public.submission_chapters_chapter_id_seq'::regclass);
 
 
 --
--- Name: comment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_comments comment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_comments ALTER COLUMN comment_id SET DEFAULT nextval('public.submission_comments_comment_id_seq'::regclass);
 
 
 --
--- Name: revision_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_file_revisions revision_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions ALTER COLUMN revision_id SET DEFAULT nextval('public.submission_file_revisions_revision_id_seq'::regclass);
 
 
 --
--- Name: submission_file_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_file_settings submission_file_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_settings ALTER COLUMN submission_file_setting_id SET DEFAULT nextval('public.submission_file_settings_submission_file_setting_id_seq'::regclass);
 
 
 --
--- Name: submission_file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_files submission_file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_files ALTER COLUMN submission_file_id SET DEFAULT nextval('public.submission_files_submission_file_id_seq'::regclass);
 
 
 --
--- Name: keyword_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_search_keyword_list keyword_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list ALTER COLUMN keyword_id SET DEFAULT nextval('public.submission_search_keyword_list_keyword_id_seq'::regclass);
 
 
 --
--- Name: submission_search_object_keyword_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_search_object_keywords submission_search_object_keyword_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_object_keywords ALTER COLUMN submission_search_object_keyword_id SET DEFAULT nextval('public.submission_search_object_keyw_submission_search_object_keyw_seq'::regclass);
 
 
 --
--- Name: object_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_search_objects object_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_objects ALTER COLUMN object_id SET DEFAULT nextval('public.submission_search_objects_object_id_seq'::regclass);
 
 
 --
--- Name: submission_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submission_settings submission_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_settings ALTER COLUMN submission_setting_id SET DEFAULT nextval('public.submission_settings_submission_setting_id_seq'::regclass);
 
 
 --
--- Name: submission_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: submissions submission_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submissions ALTER COLUMN submission_id SET DEFAULT nextval('public.submissions_submission_id_seq'::regclass);
 
 
 --
--- Name: file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: temporary_files file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.temporary_files ALTER COLUMN file_id SET DEFAULT nextval('public.temporary_files_file_id_seq'::regclass);
 
 
 --
--- Name: usage_stats_temp_institution_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_institution_temporary_records usage_stats_temp_institution_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_institution_temporary_records ALTER COLUMN usage_stats_temp_institution_id SET DEFAULT nextval('public.usage_stats_institution_tempo_usage_stats_temp_institution__seq'::regclass);
 
 
 --
--- Name: usage_stats_temp_total_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_total_temporary_records usage_stats_temp_total_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_total_temporary_records ALTER COLUMN usage_stats_temp_total_id SET DEFAULT nextval('public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq'::regclass);
 
 
 --
--- Name: usage_stats_temp_unique_item_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_investigations_temporary_records usage_stats_temp_unique_item_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records ALTER COLUMN usage_stats_temp_unique_item_id SET DEFAULT nextval('public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq'::regclass);
 
 
 --
--- Name: usage_stats_temp_item_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_requests_temporary_records usage_stats_temp_item_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records ALTER COLUMN usage_stats_temp_item_id SET DEFAULT nextval('public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq'::regclass);
 
 
 --
--- Name: usage_stats_temp_unique_investigations_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_investigations_temporary_records usage_stats_temp_unique_investigations_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records ALTER COLUMN usage_stats_temp_unique_investigations_id SET DEFAULT nextval('public.usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq'::regclass);
 
 
 --
--- Name: usage_stats_temp_unique_requests_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_requests_temporary_records usage_stats_temp_unique_requests_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records ALTER COLUMN usage_stats_temp_unique_requests_id SET DEFAULT nextval('public.usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq'::regclass);
 
 
 --
--- Name: user_group_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: user_group_settings user_group_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_group_settings ALTER COLUMN user_group_setting_id SET DEFAULT nextval('public.user_group_settings_user_group_setting_id_seq'::regclass);
 
 
 --
--- Name: user_group_stage_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: user_group_stage user_group_stage_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_group_stage ALTER COLUMN user_group_stage_id SET DEFAULT nextval('public.user_group_stage_user_group_stage_id_seq'::regclass);
 
 
 --
--- Name: user_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: user_groups user_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_groups ALTER COLUMN user_group_id SET DEFAULT nextval('public.user_groups_user_group_id_seq'::regclass);
 
 
 --
--- Name: user_interest_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: user_interests user_interest_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_interests ALTER COLUMN user_interest_id SET DEFAULT nextval('public.user_interests_user_interest_id_seq'::regclass);
 
 
 --
--- Name: user_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: user_settings user_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_settings ALTER COLUMN user_setting_id SET DEFAULT nextval('public.user_settings_user_setting_id_seq'::regclass);
 
 
 --
--- Name: user_user_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: user_user_groups user_user_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_user_groups ALTER COLUMN user_user_group_id SET DEFAULT nextval('public.user_user_groups_user_user_group_id_seq'::regclass);
 
 
 --
--- Name: user_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: users user_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.users_user_id_seq'::regclass);
 
 
 --
--- Name: version_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+-- Name: versions version_id; Type: DEFAULT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.versions ALTER COLUMN version_id SET DEFAULT nextval('public.versions_version_id_seq'::regclass);
@@ -7821,25 +7790,11 @@ COPY public.access_keys (access_key_id, context, key_hash, user_id, assoc_id, ex
 
 
 --
--- Name: access_keys_access_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.access_keys_access_key_id_seq', 1, false);
-
-
---
 -- Data for Name: announcement_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.announcement_settings (announcement_setting_id, announcement_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
-
-
---
--- Name: announcement_settings_announcement_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.announcement_settings_announcement_setting_id_seq', 1, false);
 
 
 --
@@ -7851,13 +7806,6 @@ COPY public.announcement_type_settings (announcement_type_setting_id, type_id, l
 
 
 --
--- Name: announcement_type_settings_announcement_type_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.announcement_type_settings_announcement_type_setting_id_seq', 1, false);
-
-
---
 -- Data for Name: announcement_types; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -7866,25 +7814,11 @@ COPY public.announcement_types (type_id, context_id) FROM stdin;
 
 
 --
--- Name: announcement_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.announcement_types_type_id_seq', 1, false);
-
-
---
 -- Data for Name: announcements; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.announcements (announcement_id, assoc_type, assoc_id, type_id, date_expire, date_posted) FROM stdin;
 \.
-
-
---
--- Name: announcements_announcement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.announcements_announcement_id_seq', 1, false);
 
 
 --
@@ -8149,13 +8083,6 @@ COPY public.author_settings (author_setting_id, author_id, locale, setting_name,
 
 
 --
--- Name: author_settings_author_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.author_settings_author_setting_id_seq', 271, true);
-
-
---
 -- Data for Name: authors; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -8220,13 +8147,6 @@ COPY public.authors (author_id, email, include_in_browse, publication_id, seq, u
 
 
 --
--- Name: authors_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.authors_author_id_seq', 57, true);
-
-
---
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -8238,13 +8158,6 @@ COPY public.categories (category_id, context_id, parent_id, seq, path, image) FR
 5	1	4	6	sociology	\N
 6	1	4	10000	anthropology	\N
 \.
-
-
---
--- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.categories_category_id_seq', 6, true);
 
 
 --
@@ -8286,25 +8199,11 @@ COPY public.category_settings (category_setting_id, category_id, locale, setting
 
 
 --
--- Name: category_settings_category_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.category_settings_category_setting_id_seq', 30, true);
-
-
---
 -- Data for Name: citation_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.citation_settings (citation_setting_id, citation_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
-
-
---
--- Name: citation_settings_citation_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.citation_settings_citation_setting_id_seq', 1, false);
 
 
 --
@@ -8316,25 +8215,11 @@ COPY public.citations (citation_id, publication_id, raw_citation, seq) FROM stdi
 
 
 --
--- Name: citations_citation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.citations_citation_id_seq', 1, false);
-
-
---
 -- Data for Name: completed_payments; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.completed_payments (completed_payment_id, "timestamp", payment_type, context_id, user_id, assoc_id, amount, currency_code_alpha, payment_method_plugin_name) FROM stdin;
 \.
-
-
---
--- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.completed_payments_completed_payment_id_seq', 1, false);
 
 
 --
@@ -8365,20 +8250,6 @@ COPY public.controlled_vocab_entries (controlled_vocab_entry_id, controlled_voca
 31	82	1
 32	82	2
 \.
-
-
---
--- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq', 32, true);
-
-
---
--- Name: controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq', 32, true);
 
 
 --
@@ -8506,25 +8377,11 @@ COPY public.controlled_vocabs (controlled_vocab_id, symbolic, assoc_type, assoc_
 
 
 --
--- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.controlled_vocabs_controlled_vocab_id_seq', 86, true);
-
-
---
 -- Data for Name: data_object_tombstone_oai_set_objects; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.data_object_tombstone_oai_set_objects (object_id, tombstone_id, assoc_type, assoc_id) FROM stdin;
 \.
-
-
---
--- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.data_object_tombstone_oai_set_objects_object_id_seq', 6, true);
 
 
 --
@@ -8536,25 +8393,11 @@ COPY public.data_object_tombstone_settings (tombstone_setting_id, tombstone_id, 
 
 
 --
--- Name: data_object_tombstone_settings_tombstone_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.data_object_tombstone_settings_tombstone_setting_id_seq', 1, false);
-
-
---
 -- Data for Name: data_object_tombstones; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.data_object_tombstones (tombstone_id, data_object_id, date_deleted, set_spec, set_name, oai_identifier) FROM stdin;
 \.
-
-
---
--- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.data_object_tombstones_tombstone_id_seq', 3, true);
 
 
 --
@@ -8566,13 +8409,6 @@ COPY public.doi_settings (doi_setting_id, doi_id, locale, setting_name, setting_
 
 
 --
--- Name: doi_settings_doi_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.doi_settings_doi_setting_id_seq', 1, false);
-
-
---
 -- Data for Name: dois; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -8581,55 +8417,41 @@ COPY public.dois (doi_id, context_id, doi, status) FROM stdin;
 
 
 --
--- Name: dois_doi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.dois_doi_id_seq', 1, false);
-
-
---
 -- Data for Name: edit_decisions; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	\N	1	\N	3	18	2023-03-31 23:45:30
-2	1	1	3	1	3	2	2023-03-31 23:45:47
-3	2	\N	1	\N	3	18	2023-03-31 23:48:38
-4	4	\N	1	\N	3	1	2023-03-31 23:51:01
-5	4	3	2	1	3	3	2023-03-31 23:51:18
-6	4	4	3	1	3	2	2023-03-31 23:51:35
-7	4	\N	4	\N	3	7	2023-03-31 23:51:53
-8	5	\N	1	\N	3	1	2023-03-31 23:53:30
-9	5	5	2	1	3	3	2023-03-31 23:53:49
-10	5	6	3	1	3	2	2023-03-31 23:54:07
-11	5	\N	4	\N	3	7	2023-03-31 23:54:26
-12	6	\N	1	\N	3	1	2023-03-31 23:56:28
-13	6	7	2	1	6	23	2023-03-31 23:56:59
-14	7	\N	1	\N	3	18	2023-03-31 23:58:27
-15	7	8	3	1	3	2	2023-03-31 23:58:44
-16	9	\N	1	\N	3	1	2023-04-01 00:00:22
-17	11	\N	1	\N	3	1	2023-04-01 00:02:49
-18	11	10	2	1	3	3	2023-04-01 00:03:04
-19	11	11	3	1	3	2	2023-04-01 00:04:05
-20	12	\N	1	\N	3	1	2023-04-01 00:05:05
-21	13	\N	1	\N	3	1	2023-04-01 00:06:38
-22	13	13	2	1	3	3	2023-04-01 00:06:54
-23	13	14	3	1	3	2	2023-04-01 00:08:08
-24	14	\N	1	\N	3	1	2023-04-01 00:09:20
-25	14	15	2	1	3	3	2023-04-01 00:09:37
-26	14	16	3	1	3	2	2023-04-01 00:09:55
-27	14	\N	4	\N	3	7	2023-04-01 00:10:12
-28	15	\N	1	\N	3	18	2023-04-01 00:12:17
-29	16	\N	1	\N	3	18	2023-04-01 00:13:32
-30	17	\N	1	\N	3	1	2023-04-01 00:15:44
+1	1	\N	1	\N	3	18	2023-04-03 19:53:38
+2	1	1	3	1	3	2	2023-04-03 19:53:55
+3	2	\N	1	\N	3	18	2023-04-03 19:57:03
+4	4	\N	1	\N	3	1	2023-04-03 19:59:36
+5	4	3	2	1	3	3	2023-04-03 19:59:54
+6	4	4	3	1	3	2	2023-04-03 20:00:13
+7	4	\N	4	\N	3	7	2023-04-03 20:00:32
+8	5	\N	1	\N	3	1	2023-04-03 20:02:19
+9	5	5	2	1	3	3	2023-04-03 20:02:40
+10	5	6	3	1	3	2	2023-04-03 20:03:00
+11	5	\N	4	\N	3	7	2023-04-03 20:03:20
+12	6	\N	1	\N	3	1	2023-04-03 20:05:34
+13	6	7	2	1	6	23	2023-04-03 20:06:09
+14	7	\N	1	\N	3	18	2023-04-03 20:07:44
+15	7	8	3	1	3	2	2023-04-03 20:08:03
+16	9	\N	1	\N	3	1	2023-04-03 20:09:50
+17	11	\N	1	\N	3	1	2023-04-03 20:12:31
+18	11	10	2	1	3	3	2023-04-03 20:12:47
+19	11	11	3	1	3	2	2023-04-03 20:13:54
+20	12	\N	1	\N	3	1	2023-04-03 20:14:59
+21	13	\N	1	\N	3	1	2023-04-03 20:16:38
+22	13	13	2	1	3	3	2023-04-03 20:16:56
+23	13	14	3	1	3	2	2023-04-03 20:18:16
+24	14	\N	1	\N	3	1	2023-04-03 20:19:35
+25	14	15	2	1	3	3	2023-04-03 20:19:56
+26	14	16	3	1	3	2	2023-04-03 20:20:15
+27	14	\N	4	\N	3	7	2023-04-03 20:20:35
+28	15	\N	1	\N	3	18	2023-04-03 20:22:55
+29	16	\N	1	\N	3	18	2023-04-03 20:24:16
+30	17	\N	1	\N	3	1	2023-04-03 20:26:36
 \.
-
-
---
--- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true);
 
 
 --
@@ -8637,114 +8459,107 @@ SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true)
 --
 
 COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
-1	1048585	1	0	2023-03-31 23:45:18	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/1">The ABCs of Human Survival: A Paradigm for Global Citizenship</a><br />Arthur Clark</p><p><b>Abstract</b></p>The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-2	1048585	1	0	2023-03-31 23:45:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/1</p><p>If you have been logged out, you can login again with the username aclark.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-3	1048585	1	3	2023-03-31 23:45:31	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been sent for review	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that an editor has reviewed your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-4	1048585	1	3	2023-03-31 23:45:47	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-5	1048585	2	0	2023-03-31 23:48:12	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-18	1048585	4	3	2023-03-31 23:51:01	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for internal review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-6	1048585	2	0	2023-03-31 23:48:12	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-7	1048585	2	0	2023-03-31 23:48:12	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-8	1048585	2	0	2023-03-31 23:48:12	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Alvin Finkel,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The West and Beyond: New Perspectives on an Imagined Region, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/2</p><p>If you have been logged out, you can login again with the username afinkel.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/2">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-9	1048585	2	0	2023-03-31 23:48:12	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Sarah Carter" <scarter@mailinator.com>, "Peter Fortna" <pfortna@mailinator.com>, "Gerald Friesen" <gfriesen@mailinator.com>, "Lyle Dick" <ldick@mailinator.com>, "Winona Wheeler" <wwheeler@mailinator.com>, "Matt Dyce" <mdyce@mailinator.com>, "James Opp" <jopp@mailinator.com>			Submission confirmation	<p>Dear Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Alvin Finkel, provided the following details:</p><p>The West and Beyond: New Perspectives on an Imagined Region<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-10	1048585	2	3	2023-03-31 23:48:38	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Your submission has been sent for review	<p>Dear Alvin Finkel,</p><p>I am pleased to inform you that an editor has reviewed your submission, The West and Beyond: New Perspectives on an Imagined Region, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-11	1048585	3	0	2023-03-31 23:49:59	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-12	1048585	3	0	2023-03-31 23:49:59	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-13	1048585	3	0	2023-03-31 23:49:59	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-14	1048585	3	0	2023-03-31 23:49:59	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Bob Barnetson" <bbarnetson@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Bob Barnetson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Political Economy of Workplace Injury in Canada, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/3</p><p>If you have been logged out, you can login again with the username bbarnetson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/3">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-15	1048585	4	0	2023-03-31 23:50:46	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/4">How Canadians Communicate: Contexts of Canadian Popular Culture</a><br />Bart Beaty, Toby Miller, Ira Wagman, Will Straw</p><p><b>Abstract</b></p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-16	1048585	4	0	2023-03-31 23:50:46	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/4</p><p>If you have been logged out, you can login again with the username bbeaty.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-17	1048585	4	0	2023-03-31 23:50:46	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>			Submission confirmation	<p>Dear Toby Miller, Ira Wagman, Will Straw,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Bart Beaty, provided the following details:</p><p>How Canadians Communicate: Contexts of Canadian Popular Culture<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-19	1048585	4	3	2023-03-31 23:51:18	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-20	1048585	4	3	2023-03-31 23:51:35	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-21	1048585	4	3	2023-03-31 23:51:53	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Next steps for publishing your submission	<p>Dear Bart Beaty,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-22	1048585	5	0	2023-03-31 23:53:13	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-23	1048585	5	0	2023-03-31 23:53:13	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-24	1048585	5	0	2023-03-31 23:53:13	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-25	1048585	5	0	2023-03-31 23:53:13	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Bomb Canada and Other Unkind Remarks in the American Media, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/5</p><p>If you have been logged out, you can login again with the username callan.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-26	1048585	5	3	2023-03-31 23:53:30	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for internal review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-27	1048585	5	3	2023-03-31 23:53:49	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-28	1048585	5	3	2023-03-31 23:54:07	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Bomb Canada and Other Unkind Remarks in the American Media, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-29	1048585	5	3	2023-03-31 23:54:26	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Next steps for publishing your submission	<p>Dear Chantal Allan,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, Bomb Canada and Other Unkind Remarks in the American Media, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-30	1048585	6	0	2023-03-31 23:56:13	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/6">The Information Literacy User’s Guide</a><br />Deborah Bernnard, Greg Bobish, Daryl Bullis, Jenna Hecker</p><p><b>Abstract</b></p>Good researchers have a host of tools at their disposal that make navigating today’s complex information ecosystem much more manageable. Gaining the knowledge, abilities, and self-reflection necessary to be a good researcher helps not only in academic settings, but is invaluable in any career, and throughout one’s life. The Information Literacy User’s Guide will start you on this route to success.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-45	1048585	9	0	2023-04-01 00:00:05	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Robin Mansell" <rmansell@mailinator.com>, "Hernan Galperin" <hgalperin@mailinator.com>, "Pablo Bello" <pbello@mailinator.com>, "Eleonora Rabinovich" <erabinovich@mailinator.com>			Submission confirmation	<p>Dear Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Fernando Perini, provided the following details:</p><p>Enabling Openness: The future of the information society in Latin America and the Caribbean<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-31	1048585	6	0	2023-03-31 23:56:13	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Deborah Bernnard,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Information Literacy User’s Guide, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/6</p><p>If you have been logged out, you can login again with the username dbernnard.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/6">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-32	1048585	6	0	2023-03-31 23:56:13	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Greg Bobish" <gbobish@mailinator.com>, "Daryl Bullis" <dbullis@mailinator.com>, "Jenna Hecker" <jhecker@mailinator.com>			Submission confirmation	<p>Dear Greg Bobish, Daryl Bullis, Jenna Hecker,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Deborah Bernnard, provided the following details:</p><p>The Information Literacy User’s Guide<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-33	1048585	6	3	2023-03-31 23:56:28	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Your submission has been sent for internal review	<p>Dear Deborah Bernnard,</p><p>I am pleased to inform you that an editor has reviewed your submission, The Information Literacy User’s Guide, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-34	1048585	7	0	2023-03-31 23:58:11	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/7">Accessible Elements: Teaching Science Online and at a Distance</a><br />Dietmar Kennepohl, Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer</p><p><b>Abstract</b></p>Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-35	1048585	7	0	2023-03-31 23:58:11	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Accessible Elements: Teaching Science Online and at a Distance, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/7</p><p>If you have been logged out, you can login again with the username dkennepohl.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-36	1048585	7	0	2023-03-31 23:58:11	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Terry Anderson" <tanderson@mailinator.com>, "Paul Gorsky" <pgorsky@mailinator.com>, "Gale Parchoma" <gparchoma@mailinator.com>, "Stuart Palmer" <spalmer@mailinator.com>			Submission confirmation	<p>Dear Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Dietmar Kennepohl, provided the following details:</p><p>Accessible Elements: Teaching Science Online and at a Distance<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-37	1048585	7	3	2023-03-31 23:58:27	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been sent for review	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that an editor has reviewed your submission, Accessible Elements: Teaching Science Online and at a Distance, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-38	1048585	7	3	2023-03-31 23:58:44	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Accessible Elements: Teaching Science Online and at a Distance, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-39	1048585	8	0	2023-03-31 23:59:10	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-40	1048585	8	0	2023-03-31 23:59:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-41	1048585	8	0	2023-03-31 23:59:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-42	1048585	8	0	2023-03-31 23:59:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-43	1048585	9	0	2023-04-01 00:00:05	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/9">Enabling Openness: The future of the information society in Latin America and the Caribbean</a><br />Fernando Perini, Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich</p><p><b>Abstract</b></p>In recent years, the Internet and other network technologies have emerged as a central issue for development in Latin America and the Caribbean. They have shown their potential to increase productivity and economic competitiveness, to create new ways to deliver education and health services, and to be driving forces for the modernization of the provision of public services.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-44	1048585	9	0	2023-04-01 00:00:05	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Fernando Perini,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/9</p><p>If you have been logged out, you can login again with the username fperini.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/9">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-46	1048585	9	3	2023-04-01 00:00:22	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Your submission has been sent for internal review	<p>Dear Fernando Perini,</p><p>I am pleased to inform you that an editor has reviewed your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-47	1048585	10	0	2023-04-01 00:02:07	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-48	1048585	10	0	2023-04-01 00:02:07	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-49	1048585	10	0	2023-04-01 00:02:07	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-50	1048585	10	0	2023-04-01 00:02:07	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Jennifer Brower" <jbrower@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Jennifer Brower,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Lost Tracks: Buffalo National Park, 1909-1939, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/10</p><p>If you have been logged out, you can login again with the username jbrower.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/10">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-51	1048585	11	0	2023-04-01 00:02:35	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-52	1048585	11	0	2023-04-01 00:02:35	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-53	1048585	11	0	2023-04-01 00:02:35	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-54	1048585	11	0	2023-04-01 00:02:35	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Dreamwork, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/11</p><p>If you have been logged out, you can login again with the username jlockehart.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-55	1048585	11	3	2023-04-01 00:02:49	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for internal review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-56	1048585	11	3	2023-04-01 00:03:04	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-57	1048585	11	10	2023-04-01 00:03:30	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #11 Locke Hart — Dreamwork	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-04-29</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/11">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
-58	1048585	11	12	2023-04-01 00:03:42	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Gonzalo Favio accepted review assignment for #11 Locke Hart — Dreamwork	<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-04-29</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/11">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
-59	1048585	11	3	2023-04-01 00:04:05	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Dreamwork, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-60	1048585	12	0	2023-04-01 00:04:49	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-61	1048585	12	0	2023-04-01 00:04:49	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-62	1048585	12	0	2023-04-01 00:04:49	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-63	1048585	12	0	2023-04-01 00:04:49	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Laurent Elder,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Connecting ICTs to Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/12</p><p>If you have been logged out, you can login again with the username lelder.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/12">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-64	1048585	12	0	2023-04-01 00:04:49	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank Tulus" <ftulus@mailinator.com>, "Raymond Hyma" <rhyma@mailinator.com>, "John Valk" <jvalk@mailinator.com>, "Khaled Fourati" <fkourati@mailinator.com>, "Jeremy de Beer" <jdebeer@mailinator.com>, "Sara Bannerman" <sbannerman@mailinator.com>			Submission confirmation	<p>Dear Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Laurent Elder, provided the following details:</p><p>Connecting ICTs to Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-65	1048585	12	3	2023-04-01 00:05:05	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Your submission has been sent for internal review	<p>Dear Laurent Elder,</p><p>I am pleased to inform you that an editor has reviewed your submission, Connecting ICTs to Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-66	1048585	12	8	2023-04-01 00:05:40	1073741829	"Paul Hudson" <phudson@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Paul Hudson accepted review assignment for #12 Elder et al. — Connecting ICTs to Development	<p>Dear Ramiro Vaca,</p><p>Paul Hudson has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">#12 Elder et al. — Connecting ICTs to Development</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-04-29</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/12">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
-67	1048585	13	0	2023-04-01 00:06:22	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-68	1048585	13	0	2023-04-01 00:06:22	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-69	1048585	13	0	2023-04-01 00:06:22	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-70	1048585	13	0	2023-04-01 00:06:22	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Mobile Learning: Transforming the Delivery of Education and Training, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/13</p><p>If you have been logged out, you can login again with the username mally.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-71	1048585	13	0	2023-04-01 00:06:22	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Traxler" <jtraxler@mailinator.com>, "Marguerite Koole" <mkoole@mailinator.com>, "Torstein Rekkedal" <trekkedal@mailinator.com>			Submission confirmation	<p>Dear John Traxler, Marguerite Koole, Torstein Rekkedal,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Mohamed Ally, provided the following details:</p><p>Mobile Learning: Transforming the Delivery of Education and Training<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-72	1048585	13	3	2023-04-01 00:06:38	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for internal review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-73	1048585	13	3	2023-04-01 00:06:54	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-74	1048585	13	10	2023-04-01 00:07:29	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-04-29</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/13">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
-75	1048585	13	12	2023-04-01 00:07:42	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Gonzalo Favio accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-04-29</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/13">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
-76	1048585	13	3	2023-04-01 00:08:08	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Mobile Learning: Transforming the Delivery of Education and Training, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-77	1048585	14	0	2023-04-01 00:09:02	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/14">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a><br />Michael Dawson, Brian Dupuis, Michael Wilson</p><p><b>Abstract</b></p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-78	1048585	14	0	2023-04-01 00:09:02	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/14</p><p>If you have been logged out, you can login again with the username mdawson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-79	1048585	14	0	2023-04-01 00:09:02	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>			Submission confirmation	<p>Dear Brian Dupuis, Michael Wilson,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Michael Dawson, provided the following details:</p><p>From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-80	1048585	14	3	2023-04-01 00:09:20	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for internal review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-81	1048585	14	3	2023-04-01 00:09:37	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-82	1048585	14	3	2023-04-01 00:09:55	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-83	1048585	14	3	2023-04-01 00:10:12	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Next steps for publishing your submission	<p>Dear Michael Dawson,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-84	1048585	15	0	2023-04-01 00:12:01	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-85	1048585	15	0	2023-04-01 00:12:01	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-86	1048585	15	0	2023-04-01 00:12:01	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-87	1048585	15	0	2023-04-01 00:12:01	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Max Foran,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/15</p><p>If you have been logged out, you can login again with the username mforan.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/15">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-88	1048585	15	3	2023-04-01 00:12:17	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Your submission has been sent for review	<p>Dear Max Foran,</p><p>I am pleased to inform you that an editor has reviewed your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-89	1048585	16	0	2023-04-01 00:13:14	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-90	1048585	16	0	2023-04-01 00:13:14	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-91	1048585	16	0	2023-04-01 00:13:14	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-92	1048585	16	0	2023-04-01 00:13:14	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Michael Power,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, A Designer's Log: Case Studies in Instructional Design, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/16</p><p>If you have been logged out, you can login again with the username mpower.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/16">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-93	1048585	16	3	2023-04-01 00:13:32	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Power,</p><p>I am pleased to inform you that an editor has reviewed your submission, A Designer's Log: Case Studies in Instructional Design, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-94	1048585	16	10	2023-04-01 00:14:09	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #16 Power — A Designer's Log: Case Studies in Instructional Design	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">#16 Power — A Designer's Log: Case Studies in Instructional Design</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-04-29</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/16">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
-95	1048585	17	0	2023-04-01 00:15:24	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-96	1048585	17	0	2023-04-01 00:15:24	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-97	1048585	17	0	2023-04-01 00:15:24	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-98	1048585	17	0	2023-04-01 00:15:24	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Matthew Smith,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Open Development: Networked Innovations in International Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/17</p><p>If you have been logged out, you can login again with the username msmith.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/17">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-99	1048585	17	0	2023-04-01 00:15:24	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Yochai Benkler" <ybenkler@mailinator.com>, "Katherine Reilly" <kreilly@mailinator.com>, "Melissa Loudon" <mloudon@mailinator.com>, "Ulrike Rivett" <urivett@mailinator.com>, "Mark Graham" <mgraham@mailinator.com>, "Håvard Haarstad" <hhaarstad@mailinator.com>, "Marshall Smith" <masmith@mailinator.com>			Submission confirmation	<p>Dear Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Matthew Smith, provided the following details:</p><p>Open Development: Networked Innovations in International Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-100	1048585	17	3	2023-04-01 00:15:44	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Your submission has been sent for internal review	<p>Dear Matthew Smith,</p><p>I am pleased to inform you that an editor has reviewed your submission, Open Development: Networked Innovations in International Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+1	1048585	1	0	2023-04-03 19:53:23	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/1">The ABCs of Human Survival: A Paradigm for Global Citizenship</a><br />Arthur Clark</p><p><b>Abstract</b></p>The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+2	1048585	1	0	2023-04-03 19:53:24	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/1</p><p>If you have been logged out, you can login again with the username aclark.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+3	1048585	1	3	2023-04-03 19:53:38	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been sent for review	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that an editor has reviewed your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+4	1048585	1	3	2023-04-03 19:53:55	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+5	1048585	2	0	2023-04-03 19:56:33	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+18	1048585	4	3	2023-04-03 19:59:36	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for internal review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+6	1048585	2	0	2023-04-03 19:56:33	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+7	1048585	2	0	2023-04-03 19:56:33	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+8	1048585	2	0	2023-04-03 19:56:33	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Alvin Finkel,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The West and Beyond: New Perspectives on an Imagined Region, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/2</p><p>If you have been logged out, you can login again with the username afinkel.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/2">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+9	1048585	2	0	2023-04-03 19:56:34	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Sarah Carter" <scarter@mailinator.com>, "Peter Fortna" <pfortna@mailinator.com>, "Gerald Friesen" <gfriesen@mailinator.com>, "Lyle Dick" <ldick@mailinator.com>, "Winona Wheeler" <wwheeler@mailinator.com>, "Matt Dyce" <mdyce@mailinator.com>, "James Opp" <jopp@mailinator.com>			Submission confirmation	<p>Dear Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Alvin Finkel, provided the following details:</p><p>The West and Beyond: New Perspectives on an Imagined Region<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+10	1048585	2	3	2023-04-03 19:57:03	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Your submission has been sent for review	<p>Dear Alvin Finkel,</p><p>I am pleased to inform you that an editor has reviewed your submission, The West and Beyond: New Perspectives on an Imagined Region, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+11	1048585	3	0	2023-04-03 19:58:30	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+12	1048585	3	0	2023-04-03 19:58:30	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+13	1048585	3	0	2023-04-03 19:58:30	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+14	1048585	3	0	2023-04-03 19:58:30	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Bob Barnetson" <bbarnetson@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Bob Barnetson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Political Economy of Workplace Injury in Canada, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/3</p><p>If you have been logged out, you can login again with the username bbarnetson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/3">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+15	1048585	4	0	2023-04-03 19:59:20	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/4">How Canadians Communicate: Contexts of Canadian Popular Culture</a><br />Bart Beaty, Toby Miller, Ira Wagman, Will Straw</p><p><b>Abstract</b></p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+16	1048585	4	0	2023-04-03 19:59:20	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/4</p><p>If you have been logged out, you can login again with the username bbeaty.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+17	1048585	4	0	2023-04-03 19:59:20	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>			Submission confirmation	<p>Dear Toby Miller, Ira Wagman, Will Straw,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Bart Beaty, provided the following details:</p><p>How Canadians Communicate: Contexts of Canadian Popular Culture<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+19	1048585	4	3	2023-04-03 19:59:55	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+20	1048585	4	3	2023-04-03 20:00:13	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+21	1048585	4	3	2023-04-03 20:00:32	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Next steps for publishing your submission	<p>Dear Bart Beaty,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+22	1048585	5	0	2023-04-03 20:02:00	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+23	1048585	5	0	2023-04-03 20:02:00	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+24	1048585	5	0	2023-04-03 20:02:00	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+25	1048585	5	0	2023-04-03 20:02:00	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Bomb Canada and Other Unkind Remarks in the American Media, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/5</p><p>If you have been logged out, you can login again with the username callan.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+26	1048585	5	3	2023-04-03 20:02:19	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for internal review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+27	1048585	5	3	2023-04-03 20:02:40	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+28	1048585	5	3	2023-04-03 20:03:00	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Bomb Canada and Other Unkind Remarks in the American Media, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+29	1048585	5	3	2023-04-03 20:03:20	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Next steps for publishing your submission	<p>Dear Chantal Allan,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, Bomb Canada and Other Unkind Remarks in the American Media, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+30	1048585	6	0	2023-04-03 20:05:18	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/6">The Information Literacy User’s Guide</a><br />Deborah Bernnard, Greg Bobish, Daryl Bullis, Jenna Hecker</p><p><b>Abstract</b></p>Good researchers have a host of tools at their disposal that make navigating today’s complex information ecosystem much more manageable. Gaining the knowledge, abilities, and self-reflection necessary to be a good researcher helps not only in academic settings, but is invaluable in any career, and throughout one’s life. The Information Literacy User’s Guide will start you on this route to success.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+45	1048585	9	0	2023-04-03 20:09:31	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Robin Mansell" <rmansell@mailinator.com>, "Hernan Galperin" <hgalperin@mailinator.com>, "Pablo Bello" <pbello@mailinator.com>, "Eleonora Rabinovich" <erabinovich@mailinator.com>			Submission confirmation	<p>Dear Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Fernando Perini, provided the following details:</p><p>Enabling Openness: The future of the information society in Latin America and the Caribbean<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+31	1048585	6	0	2023-04-03 20:05:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Deborah Bernnard,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Information Literacy User’s Guide, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/6</p><p>If you have been logged out, you can login again with the username dbernnard.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/6">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+32	1048585	6	0	2023-04-03 20:05:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Greg Bobish" <gbobish@mailinator.com>, "Daryl Bullis" <dbullis@mailinator.com>, "Jenna Hecker" <jhecker@mailinator.com>			Submission confirmation	<p>Dear Greg Bobish, Daryl Bullis, Jenna Hecker,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Deborah Bernnard, provided the following details:</p><p>The Information Literacy User’s Guide<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+33	1048585	6	3	2023-04-03 20:05:35	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Your submission has been sent for internal review	<p>Dear Deborah Bernnard,</p><p>I am pleased to inform you that an editor has reviewed your submission, The Information Literacy User’s Guide, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+34	1048585	7	0	2023-04-03 20:07:26	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/7">Accessible Elements: Teaching Science Online and at a Distance</a><br />Dietmar Kennepohl, Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer</p><p><b>Abstract</b></p>Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+35	1048585	7	0	2023-04-03 20:07:26	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Accessible Elements: Teaching Science Online and at a Distance, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/7</p><p>If you have been logged out, you can login again with the username dkennepohl.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+36	1048585	7	0	2023-04-03 20:07:26	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Terry Anderson" <tanderson@mailinator.com>, "Paul Gorsky" <pgorsky@mailinator.com>, "Gale Parchoma" <gparchoma@mailinator.com>, "Stuart Palmer" <spalmer@mailinator.com>			Submission confirmation	<p>Dear Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Dietmar Kennepohl, provided the following details:</p><p>Accessible Elements: Teaching Science Online and at a Distance<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+37	1048585	7	3	2023-04-03 20:07:44	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been sent for review	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that an editor has reviewed your submission, Accessible Elements: Teaching Science Online and at a Distance, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+38	1048585	7	3	2023-04-03 20:08:03	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Accessible Elements: Teaching Science Online and at a Distance, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+39	1048585	8	0	2023-04-03 20:08:32	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+40	1048585	8	0	2023-04-03 20:08:32	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+41	1048585	8	0	2023-04-03 20:08:33	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+42	1048585	8	0	2023-04-03 20:08:33	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+43	1048585	9	0	2023-04-03 20:09:31	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/9">Enabling Openness: The future of the information society in Latin America and the Caribbean</a><br />Fernando Perini, Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich</p><p><b>Abstract</b></p>In recent years, the Internet and other network technologies have emerged as a central issue for development in Latin America and the Caribbean. They have shown their potential to increase productivity and economic competitiveness, to create new ways to deliver education and health services, and to be driving forces for the modernization of the provision of public services.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+44	1048585	9	0	2023-04-03 20:09:31	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Fernando Perini,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/9</p><p>If you have been logged out, you can login again with the username fperini.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/9">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+46	1048585	9	3	2023-04-03 20:09:50	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Your submission has been sent for internal review	<p>Dear Fernando Perini,</p><p>I am pleased to inform you that an editor has reviewed your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+47	1048585	10	0	2023-04-03 20:11:44	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+48	1048585	10	0	2023-04-03 20:11:44	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+49	1048585	10	0	2023-04-03 20:11:44	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+50	1048585	10	0	2023-04-03 20:11:44	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Jennifer Brower" <jbrower@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Jennifer Brower,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Lost Tracks: Buffalo National Park, 1909-1939, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/10</p><p>If you have been logged out, you can login again with the username jbrower.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/10">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+51	1048585	11	0	2023-04-03 20:12:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+52	1048585	11	0	2023-04-03 20:12:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+53	1048585	11	0	2023-04-03 20:12:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+54	1048585	11	0	2023-04-03 20:12:15	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Dreamwork, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/11</p><p>If you have been logged out, you can login again with the username jlockehart.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+55	1048585	11	3	2023-04-03 20:12:31	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for internal review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+56	1048585	11	3	2023-04-03 20:12:47	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+57	1048585	11	10	2023-04-03 20:13:15	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #11 Locke Hart — Dreamwork	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-01</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/11">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+58	1048585	11	12	2023-04-03 20:13:28	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Gonzalo Favio accepted review assignment for #11 Locke Hart — Dreamwork	<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-01</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/11">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+59	1048585	11	3	2023-04-03 20:13:54	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Dreamwork, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+60	1048585	12	0	2023-04-03 20:14:41	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+61	1048585	12	0	2023-04-03 20:14:41	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+62	1048585	12	0	2023-04-03 20:14:41	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+63	1048585	12	0	2023-04-03 20:14:41	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Laurent Elder,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Connecting ICTs to Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/12</p><p>If you have been logged out, you can login again with the username lelder.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/12">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+64	1048585	12	0	2023-04-03 20:14:41	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank Tulus" <ftulus@mailinator.com>, "Raymond Hyma" <rhyma@mailinator.com>, "John Valk" <jvalk@mailinator.com>, "Khaled Fourati" <fkourati@mailinator.com>, "Jeremy de Beer" <jdebeer@mailinator.com>, "Sara Bannerman" <sbannerman@mailinator.com>			Submission confirmation	<p>Dear Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Laurent Elder, provided the following details:</p><p>Connecting ICTs to Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+65	1048585	12	3	2023-04-03 20:14:59	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Your submission has been sent for internal review	<p>Dear Laurent Elder,</p><p>I am pleased to inform you that an editor has reviewed your submission, Connecting ICTs to Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+66	1048585	12	8	2023-04-03 20:15:35	1073741829	"Paul Hudson" <phudson@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Paul Hudson accepted review assignment for #12 Elder et al. — Connecting ICTs to Development	<p>Dear Ramiro Vaca,</p><p>Paul Hudson has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">#12 Elder et al. — Connecting ICTs to Development</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-01</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/12">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+67	1048585	13	0	2023-04-03 20:16:21	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+68	1048585	13	0	2023-04-03 20:16:21	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+69	1048585	13	0	2023-04-03 20:16:21	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+70	1048585	13	0	2023-04-03 20:16:21	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Mobile Learning: Transforming the Delivery of Education and Training, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/13</p><p>If you have been logged out, you can login again with the username mally.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+71	1048585	13	0	2023-04-03 20:16:21	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Traxler" <jtraxler@mailinator.com>, "Marguerite Koole" <mkoole@mailinator.com>, "Torstein Rekkedal" <trekkedal@mailinator.com>			Submission confirmation	<p>Dear John Traxler, Marguerite Koole, Torstein Rekkedal,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Mohamed Ally, provided the following details:</p><p>Mobile Learning: Transforming the Delivery of Education and Training<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+72	1048585	13	3	2023-04-03 20:16:38	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for internal review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+73	1048585	13	3	2023-04-03 20:16:56	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+74	1048585	13	10	2023-04-03 20:17:33	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-01</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/13">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+75	1048585	13	12	2023-04-03 20:17:48	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Gonzalo Favio accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-01</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/13">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+76	1048585	13	3	2023-04-03 20:18:16	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Mobile Learning: Transforming the Delivery of Education and Training, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+77	1048585	14	0	2023-04-03 20:19:16	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/14">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a><br />Michael Dawson, Brian Dupuis, Michael Wilson</p><p><b>Abstract</b></p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+78	1048585	14	0	2023-04-03 20:19:16	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/14</p><p>If you have been logged out, you can login again with the username mdawson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+79	1048585	14	0	2023-04-03 20:19:16	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>			Submission confirmation	<p>Dear Brian Dupuis, Michael Wilson,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Michael Dawson, provided the following details:</p><p>From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+80	1048585	14	3	2023-04-03 20:19:36	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for internal review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+81	1048585	14	3	2023-04-03 20:19:56	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+82	1048585	14	3	2023-04-03 20:20:15	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+83	1048585	14	3	2023-04-03 20:20:35	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Next steps for publishing your submission	<p>Dear Michael Dawson,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+84	1048585	15	0	2023-04-03 20:22:37	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+85	1048585	15	0	2023-04-03 20:22:37	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+86	1048585	15	0	2023-04-03 20:22:37	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+87	1048585	15	0	2023-04-03 20:22:37	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Max Foran,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/15</p><p>If you have been logged out, you can login again with the username mforan.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/15">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+88	1048585	15	3	2023-04-03 20:22:55	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Your submission has been sent for review	<p>Dear Max Foran,</p><p>I am pleased to inform you that an editor has reviewed your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+89	1048585	16	0	2023-04-03 20:23:56	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+90	1048585	16	0	2023-04-03 20:23:56	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+91	1048585	16	0	2023-04-03 20:23:56	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+92	1048585	16	0	2023-04-03 20:23:56	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Michael Power,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, A Designer's Log: Case Studies in Instructional Design, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/16</p><p>If you have been logged out, you can login again with the username mpower.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/16">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+93	1048585	16	3	2023-04-03 20:24:16	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Power,</p><p>I am pleased to inform you that an editor has reviewed your submission, A Designer's Log: Case Studies in Instructional Design, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+94	1048585	16	10	2023-04-03 20:24:55	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #16 Power — A Designer's Log: Case Studies in Instructional Design	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">#16 Power — A Designer's Log: Case Studies in Instructional Design</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-01</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/16">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+95	1048585	17	0	2023-04-03 20:26:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+96	1048585	17	0	2023-04-03 20:26:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+97	1048585	17	0	2023-04-03 20:26:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+98	1048585	17	0	2023-04-03 20:26:15	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Matthew Smith,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Open Development: Networked Innovations in International Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/17</p><p>If you have been logged out, you can login again with the username msmith.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/17">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+99	1048585	17	0	2023-04-03 20:26:15	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Yochai Benkler" <ybenkler@mailinator.com>, "Katherine Reilly" <kreilly@mailinator.com>, "Melissa Loudon" <mloudon@mailinator.com>, "Ulrike Rivett" <urivett@mailinator.com>, "Mark Graham" <mgraham@mailinator.com>, "Håvard Haarstad" <hhaarstad@mailinator.com>, "Marshall Smith" <masmith@mailinator.com>			Submission confirmation	<p>Dear Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Matthew Smith, provided the following details:</p><p>Open Development: Networked Innovations in International Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+100	1048585	17	3	2023-04-03 20:26:36	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Your submission has been sent for internal review	<p>Dear Matthew Smith,</p><p>I am pleased to inform you that an editor has reviewed your submission, Open Development: Networked Innovations in International Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
 \.
-
-
---
--- Name: email_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.email_log_log_id_seq', 100, true);
 
 
 --
@@ -8844,13 +8659,6 @@ COPY public.email_log_users (email_log_user_id, email_log_id, user_id) FROM stdi
 90	98	34
 91	100	34
 \.
-
-
---
--- Name: email_log_users_email_log_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.email_log_users_email_log_user_id_seq', 91, true);
 
 
 --
@@ -8995,20 +8803,6 @@ COPY public.email_templates_default_data (email_templates_default_data_id, email
 
 
 --
--- Name: email_templates_default_data_email_templates_default_data_i_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.email_templates_default_data_email_templates_default_data_i_seq', 175, true);
-
-
---
--- Name: email_templates_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.email_templates_email_id_seq', 8, true);
-
-
---
 -- Data for Name: email_templates_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -9017,636 +8811,622 @@ COPY public.email_templates_settings (email_template_setting_id, email_id, local
 
 
 --
--- Name: email_templates_settings_email_template_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.email_templates_settings_email_template_setting_id_seq', 1, false);
-
-
---
 -- Data for Name: event_log; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	19	2023-03-31 23:44:52	268435458	submission.event.general.metadataUpdated	0
-2	1048585	1	19	2023-03-31 23:44:52	268435458	submission.event.general.metadataUpdated	0
-3	515	1	19	2023-03-31 23:44:56	1342177281	submission.event.fileUploaded	0
-4	1048585	1	19	2023-03-31 23:44:56	1342177288	submission.event.fileRevised	0
-5	515	1	19	2023-03-31 23:44:56	1342177296	submission.event.fileEdited	0
-6	1048585	1	19	2023-03-31 23:44:56	1342177296	submission.event.fileEdited	0
-7	515	2	19	2023-03-31 23:44:57	1342177281	submission.event.fileUploaded	0
-8	1048585	1	19	2023-03-31 23:44:57	1342177288	submission.event.fileRevised	0
-9	515	2	19	2023-03-31 23:44:57	1342177296	submission.event.fileEdited	0
-10	1048585	1	19	2023-03-31 23:44:57	1342177296	submission.event.fileEdited	0
-11	515	3	19	2023-03-31 23:44:58	1342177281	submission.event.fileUploaded	0
-12	1048585	1	19	2023-03-31 23:44:58	1342177288	submission.event.fileRevised	0
-13	515	3	19	2023-03-31 23:44:58	1342177296	submission.event.fileEdited	0
-14	1048585	1	19	2023-03-31 23:44:58	1342177296	submission.event.fileEdited	0
-15	1048585	1	19	2023-03-31 23:45:17	268435457	submission.event.submissionSubmitted	0
-16	1048585	1	3	2023-03-31 23:45:30	805306371	editor.submission.decision.sendExternalReview.log	0
-17	515	4	3	2023-03-31 23:45:31	1342177281	submission.event.fileUploaded	0
-18	1048585	1	3	2023-03-31 23:45:31	1342177288	submission.event.fileRevised	0
-19	515	5	3	2023-03-31 23:45:31	1342177281	submission.event.fileUploaded	0
-20	1048585	1	3	2023-03-31 23:45:31	1342177288	submission.event.fileRevised	0
-21	515	6	3	2023-03-31 23:45:31	1342177281	submission.event.fileUploaded	0
-22	1048585	1	3	2023-03-31 23:45:31	1342177288	submission.event.fileRevised	0
-23	1048585	1	3	2023-03-31 23:45:41	1073741825	log.review.reviewerAssigned	0
-24	1048585	1	3	2023-03-31 23:45:47	805306371	editor.submission.decision.accept.log	0
-25	1048585	1	3	2023-03-31 23:45:55	268435459	submission.event.participantAdded	0
-26	1048585	2	20	2023-03-31 23:46:07	268435458	submission.event.general.metadataUpdated	0
-27	1048585	2	20	2023-03-31 23:46:08	268435458	submission.event.general.metadataUpdated	0
-28	1048585	2	20	2023-03-31 23:46:21	268435458	submission.event.general.metadataUpdated	0
-29	515	7	20	2023-03-31 23:46:21	1342177281	submission.event.fileUploaded	0
-30	1048585	2	20	2023-03-31 23:46:21	1342177288	submission.event.fileRevised	0
-31	515	7	20	2023-03-31 23:46:21	1342177296	submission.event.fileEdited	0
-32	1048585	2	20	2023-03-31 23:46:21	1342177296	submission.event.fileEdited	0
-33	515	8	20	2023-03-31 23:46:22	1342177281	submission.event.fileUploaded	0
-34	1048585	2	20	2023-03-31 23:46:22	1342177288	submission.event.fileRevised	0
-35	515	8	20	2023-03-31 23:46:22	1342177296	submission.event.fileEdited	0
-36	1048585	2	20	2023-03-31 23:46:22	1342177296	submission.event.fileEdited	0
-37	515	9	20	2023-03-31 23:46:23	1342177281	submission.event.fileUploaded	0
-38	1048585	2	20	2023-03-31 23:46:23	1342177288	submission.event.fileRevised	0
-39	515	9	20	2023-03-31 23:46:24	1342177296	submission.event.fileEdited	0
-40	1048585	2	20	2023-03-31 23:46:24	1342177296	submission.event.fileEdited	0
-41	515	10	20	2023-03-31 23:46:24	1342177281	submission.event.fileUploaded	0
-42	1048585	2	20	2023-03-31 23:46:24	1342177288	submission.event.fileRevised	0
-43	515	10	20	2023-03-31 23:46:25	1342177296	submission.event.fileEdited	0
-44	1048585	2	20	2023-03-31 23:46:25	1342177296	submission.event.fileEdited	0
-45	515	11	20	2023-03-31 23:46:26	1342177281	submission.event.fileUploaded	0
-46	1048585	2	20	2023-03-31 23:46:26	1342177288	submission.event.fileRevised	0
-47	515	11	20	2023-03-31 23:46:26	1342177296	submission.event.fileEdited	0
-48	1048585	2	20	2023-03-31 23:46:26	1342177296	submission.event.fileEdited	0
-49	515	11	20	2023-03-31 23:46:27	1342177282	submission.event.fileDeleted	0
-50	1048585	2	20	2023-03-31 23:48:12	268435457	submission.event.submissionSubmitted	0
-51	1048585	2	3	2023-03-31 23:48:38	805306371	editor.submission.decision.sendExternalReview.log	0
-52	515	12	3	2023-03-31 23:48:39	1342177281	submission.event.fileUploaded	0
-53	1048585	2	3	2023-03-31 23:48:39	1342177288	submission.event.fileRevised	0
-54	515	13	3	2023-03-31 23:48:39	1342177281	submission.event.fileUploaded	0
-55	1048585	2	3	2023-03-31 23:48:39	1342177288	submission.event.fileRevised	0
-56	515	14	3	2023-03-31 23:48:39	1342177281	submission.event.fileUploaded	0
-57	1048585	2	3	2023-03-31 23:48:39	1342177288	submission.event.fileRevised	0
-58	515	15	3	2023-03-31 23:48:40	1342177281	submission.event.fileUploaded	0
-59	1048585	2	3	2023-03-31 23:48:40	1342177288	submission.event.fileRevised	0
-60	1048585	2	3	2023-03-31 23:48:53	1073741825	log.review.reviewerAssigned	0
-61	1048585	2	3	2023-03-31 23:49:03	1073741825	log.review.reviewerAssigned	0
-62	1048585	3	21	2023-03-31 23:49:14	268435458	submission.event.general.metadataUpdated	0
-63	1048585	3	21	2023-03-31 23:49:15	268435458	submission.event.general.metadataUpdated	0
-64	515	16	21	2023-03-31 23:49:18	1342177281	submission.event.fileUploaded	0
-65	1048585	3	21	2023-03-31 23:49:18	1342177288	submission.event.fileRevised	0
-66	515	16	21	2023-03-31 23:49:18	1342177296	submission.event.fileEdited	0
-67	1048585	3	21	2023-03-31 23:49:18	1342177296	submission.event.fileEdited	0
-68	515	17	21	2023-03-31 23:49:19	1342177281	submission.event.fileUploaded	0
-69	1048585	3	21	2023-03-31 23:49:19	1342177288	submission.event.fileRevised	0
-70	515	17	21	2023-03-31 23:49:20	1342177296	submission.event.fileEdited	0
-71	1048585	3	21	2023-03-31 23:49:20	1342177296	submission.event.fileEdited	0
-72	515	18	21	2023-03-31 23:49:20	1342177281	submission.event.fileUploaded	0
-73	1048585	3	21	2023-03-31 23:49:20	1342177288	submission.event.fileRevised	0
-74	515	18	21	2023-03-31 23:49:21	1342177296	submission.event.fileEdited	0
-75	1048585	3	21	2023-03-31 23:49:21	1342177296	submission.event.fileEdited	0
-76	515	19	21	2023-03-31 23:49:22	1342177281	submission.event.fileUploaded	0
-77	1048585	3	21	2023-03-31 23:49:22	1342177288	submission.event.fileRevised	0
-78	515	19	21	2023-03-31 23:49:22	1342177296	submission.event.fileEdited	0
-79	1048585	3	21	2023-03-31 23:49:22	1342177296	submission.event.fileEdited	0
-80	515	20	21	2023-03-31 23:49:23	1342177281	submission.event.fileUploaded	0
-81	1048585	3	21	2023-03-31 23:49:23	1342177288	submission.event.fileRevised	0
-82	515	20	21	2023-03-31 23:49:23	1342177296	submission.event.fileEdited	0
-83	1048585	3	21	2023-03-31 23:49:23	1342177296	submission.event.fileEdited	0
-84	1048585	3	21	2023-03-31 23:49:59	268435457	submission.event.submissionSubmitted	0
-85	1048585	4	22	2023-03-31 23:50:09	268435458	submission.event.general.metadataUpdated	0
-86	1048585	4	22	2023-03-31 23:50:09	268435458	submission.event.general.metadataUpdated	0
-87	515	21	22	2023-03-31 23:50:12	1342177281	submission.event.fileUploaded	0
-88	1048585	4	22	2023-03-31 23:50:12	1342177288	submission.event.fileRevised	0
-89	515	21	22	2023-03-31 23:50:13	1342177296	submission.event.fileEdited	0
-90	1048585	4	22	2023-03-31 23:50:13	1342177296	submission.event.fileEdited	0
-91	515	22	22	2023-03-31 23:50:14	1342177281	submission.event.fileUploaded	0
-92	1048585	4	22	2023-03-31 23:50:14	1342177288	submission.event.fileRevised	0
-93	515	22	22	2023-03-31 23:50:14	1342177296	submission.event.fileEdited	0
-94	1048585	4	22	2023-03-31 23:50:14	1342177296	submission.event.fileEdited	0
-95	515	23	22	2023-03-31 23:50:15	1342177281	submission.event.fileUploaded	0
-96	1048585	4	22	2023-03-31 23:50:15	1342177288	submission.event.fileRevised	0
-97	515	23	22	2023-03-31 23:50:15	1342177296	submission.event.fileEdited	0
-98	1048585	4	22	2023-03-31 23:50:15	1342177296	submission.event.fileEdited	0
-99	515	24	22	2023-03-31 23:50:16	1342177281	submission.event.fileUploaded	0
-100	1048585	4	22	2023-03-31 23:50:16	1342177288	submission.event.fileRevised	0
-101	515	24	22	2023-03-31 23:50:16	1342177296	submission.event.fileEdited	0
-102	1048585	4	22	2023-03-31 23:50:16	1342177296	submission.event.fileEdited	0
-103	1048585	4	22	2023-03-31 23:50:46	268435457	submission.event.submissionSubmitted	0
-104	1048585	4	3	2023-03-31 23:51:01	805306371	editor.submission.decision.sendInternalReview.log	0
-105	515	25	3	2023-03-31 23:51:01	1342177281	submission.event.fileUploaded	0
-106	1048585	4	3	2023-03-31 23:51:01	1342177288	submission.event.fileRevised	0
-107	515	26	3	2023-03-31 23:51:01	1342177281	submission.event.fileUploaded	0
-108	1048585	4	3	2023-03-31 23:51:01	1342177288	submission.event.fileRevised	0
-109	515	27	3	2023-03-31 23:51:02	1342177281	submission.event.fileUploaded	0
-110	1048585	4	3	2023-03-31 23:51:02	1342177288	submission.event.fileRevised	0
-111	515	28	3	2023-03-31 23:51:02	1342177281	submission.event.fileUploaded	0
-112	1048585	4	3	2023-03-31 23:51:02	1342177288	submission.event.fileRevised	0
-113	1048585	4	3	2023-03-31 23:51:12	1073741825	log.review.reviewerAssigned	0
-114	1048585	4	3	2023-03-31 23:51:18	805306371	editor.submission.decision.sendExternalReview.log	0
-115	1048585	4	3	2023-03-31 23:51:29	1073741825	log.review.reviewerAssigned	0
-116	1048585	4	3	2023-03-31 23:51:35	805306371	editor.submission.decision.accept.log	0
-117	1048585	4	3	2023-03-31 23:51:45	268435459	submission.event.participantAdded	0
-118	1048585	4	3	2023-03-31 23:51:53	805306371	editor.submission.decision.sendToProduction.log	0
-119	1048585	4	3	2023-03-31 23:52:03	268435459	submission.event.participantAdded	0
-120	1048585	4	3	2023-03-31 23:52:11	268435474	submission.event.publicationFormatCreated	0
-121	1048585	5	23	2023-03-31 23:52:19	268435458	submission.event.general.metadataUpdated	0
-122	1048585	5	23	2023-03-31 23:52:20	268435458	submission.event.general.metadataUpdated	0
-123	515	29	23	2023-03-31 23:52:23	1342177281	submission.event.fileUploaded	0
-124	1048585	5	23	2023-03-31 23:52:23	1342177288	submission.event.fileRevised	0
-125	515	29	23	2023-03-31 23:52:24	1342177296	submission.event.fileEdited	0
-126	1048585	5	23	2023-03-31 23:52:24	1342177296	submission.event.fileEdited	0
-127	515	30	23	2023-03-31 23:52:24	1342177281	submission.event.fileUploaded	0
-128	1048585	5	23	2023-03-31 23:52:24	1342177288	submission.event.fileRevised	0
-129	515	30	23	2023-03-31 23:52:25	1342177296	submission.event.fileEdited	0
-130	1048585	5	23	2023-03-31 23:52:25	1342177296	submission.event.fileEdited	0
-131	515	31	23	2023-03-31 23:52:25	1342177281	submission.event.fileUploaded	0
-132	1048585	5	23	2023-03-31 23:52:26	1342177288	submission.event.fileRevised	0
-133	515	31	23	2023-03-31 23:52:26	1342177296	submission.event.fileEdited	0
-134	1048585	5	23	2023-03-31 23:52:26	1342177296	submission.event.fileEdited	0
-135	515	32	23	2023-03-31 23:52:27	1342177281	submission.event.fileUploaded	0
-136	1048585	5	23	2023-03-31 23:52:27	1342177288	submission.event.fileRevised	0
-137	515	32	23	2023-03-31 23:52:27	1342177296	submission.event.fileEdited	0
-138	1048585	5	23	2023-03-31 23:52:27	1342177296	submission.event.fileEdited	0
-139	515	33	23	2023-03-31 23:52:28	1342177281	submission.event.fileUploaded	0
-140	1048585	5	23	2023-03-31 23:52:28	1342177288	submission.event.fileRevised	0
-141	515	33	23	2023-03-31 23:52:28	1342177296	submission.event.fileEdited	0
-142	1048585	5	23	2023-03-31 23:52:28	1342177296	submission.event.fileEdited	0
-143	515	34	23	2023-03-31 23:52:29	1342177281	submission.event.fileUploaded	0
-144	1048585	5	23	2023-03-31 23:52:29	1342177288	submission.event.fileRevised	0
-145	515	34	23	2023-03-31 23:52:30	1342177296	submission.event.fileEdited	0
-146	1048585	5	23	2023-03-31 23:52:30	1342177296	submission.event.fileEdited	0
-147	1048585	5	23	2023-03-31 23:53:13	268435457	submission.event.submissionSubmitted	0
-148	1048585	5	3	2023-03-31 23:53:30	805306371	editor.submission.decision.sendInternalReview.log	0
-149	515	35	3	2023-03-31 23:53:31	1342177281	submission.event.fileUploaded	0
-150	1048585	5	3	2023-03-31 23:53:31	1342177288	submission.event.fileRevised	0
-151	515	36	3	2023-03-31 23:53:31	1342177281	submission.event.fileUploaded	0
-152	1048585	5	3	2023-03-31 23:53:31	1342177288	submission.event.fileRevised	0
-153	515	37	3	2023-03-31 23:53:31	1342177281	submission.event.fileUploaded	0
-154	1048585	5	3	2023-03-31 23:53:31	1342177288	submission.event.fileRevised	0
-155	515	38	3	2023-03-31 23:53:31	1342177281	submission.event.fileUploaded	0
-156	1048585	5	3	2023-03-31 23:53:31	1342177288	submission.event.fileRevised	0
-157	515	39	3	2023-03-31 23:53:31	1342177281	submission.event.fileUploaded	0
-158	1048585	5	3	2023-03-31 23:53:31	1342177288	submission.event.fileRevised	0
-159	515	40	3	2023-03-31 23:53:31	1342177281	submission.event.fileUploaded	0
-160	1048585	5	3	2023-03-31 23:53:31	1342177288	submission.event.fileRevised	0
-161	1048585	5	3	2023-03-31 23:53:43	1073741825	log.review.reviewerAssigned	0
-162	1048585	5	3	2023-03-31 23:53:49	805306371	editor.submission.decision.sendExternalReview.log	0
-163	1048585	5	3	2023-03-31 23:54:01	1073741825	log.review.reviewerAssigned	0
-164	1048585	5	3	2023-03-31 23:54:07	805306371	editor.submission.decision.accept.log	0
-165	1048585	5	3	2023-03-31 23:54:18	268435459	submission.event.participantAdded	0
-166	1048585	5	3	2023-03-31 23:54:26	805306371	editor.submission.decision.sendToProduction.log	0
-167	1048585	5	3	2023-03-31 23:54:37	268435459	submission.event.participantAdded	0
-168	1048585	5	3	2023-03-31 23:54:44	268435459	submission.event.participantAdded	0
-169	1048585	5	3	2023-03-31 23:54:50	268435474	submission.event.publicationFormatCreated	0
-170	515	41	3	2023-03-31 23:54:54	1342177281	submission.event.fileUploaded	0
-171	1048585	5	3	2023-03-31 23:54:54	1342177288	submission.event.fileRevised	0
-172	1048585	5	3	2023-03-31 23:54:56	268435464	submission.event.publicationFormatPublished	0
-173	1048585	5	3	2023-03-31 23:54:59	268435476	submission.event.publicationFormatMadeAvailable	0
-174	515	41	3	2023-03-31 23:55:01	1342177296	submission.event.fileEdited	0
-175	1048585	5	3	2023-03-31 23:55:01	1342177296	submission.event.fileEdited	0
-176	515	41	3	2023-03-31 23:55:01	1342177287	submission.event.signoffSignoff	0
-177	515	41	3	2023-03-31 23:55:05	1342177296	submission.event.fileEdited	0
-178	1048585	5	3	2023-03-31 23:55:05	1342177296	submission.event.fileEdited	0
-179	1048585	5	3	2023-03-31 23:55:07	268435462	publication.event.published	0
-180	1048585	5	3	2023-03-31 23:55:18	268435463	publication.event.unpublished	0
-181	1048585	5	3	2023-03-31 23:55:29	268435462	publication.event.published	0
-182	1048585	6	24	2023-03-31 23:55:38	268435458	submission.event.general.metadataUpdated	0
-183	1048585	6	24	2023-03-31 23:55:38	268435458	submission.event.general.metadataUpdated	0
-184	515	42	24	2023-03-31 23:55:41	1342177281	submission.event.fileUploaded	0
-185	1048585	6	24	2023-03-31 23:55:42	1342177288	submission.event.fileRevised	0
-186	515	42	24	2023-03-31 23:55:42	1342177296	submission.event.fileEdited	0
-187	1048585	6	24	2023-03-31 23:55:42	1342177296	submission.event.fileEdited	0
-188	515	43	24	2023-03-31 23:55:43	1342177281	submission.event.fileUploaded	0
-189	1048585	6	24	2023-03-31 23:55:43	1342177288	submission.event.fileRevised	0
-190	515	43	24	2023-03-31 23:55:43	1342177296	submission.event.fileEdited	0
-191	1048585	6	24	2023-03-31 23:55:43	1342177296	submission.event.fileEdited	0
-192	515	44	24	2023-03-31 23:55:44	1342177281	submission.event.fileUploaded	0
-193	1048585	6	24	2023-03-31 23:55:44	1342177288	submission.event.fileRevised	0
-194	515	44	24	2023-03-31 23:55:44	1342177296	submission.event.fileEdited	0
-195	1048585	6	24	2023-03-31 23:55:44	1342177296	submission.event.fileEdited	0
-196	515	45	24	2023-03-31 23:55:45	1342177281	submission.event.fileUploaded	0
-197	1048585	6	24	2023-03-31 23:55:45	1342177288	submission.event.fileRevised	0
-198	515	45	24	2023-03-31 23:55:45	1342177296	submission.event.fileEdited	0
-199	1048585	6	24	2023-03-31 23:55:45	1342177296	submission.event.fileEdited	0
-200	1048585	6	24	2023-03-31 23:56:13	268435457	submission.event.submissionSubmitted	0
-201	1048585	6	3	2023-03-31 23:56:28	805306371	editor.submission.decision.sendInternalReview.log	0
-202	515	46	3	2023-03-31 23:56:28	1342177281	submission.event.fileUploaded	0
-203	1048585	6	3	2023-03-31 23:56:28	1342177288	submission.event.fileRevised	0
-204	515	47	3	2023-03-31 23:56:29	1342177281	submission.event.fileUploaded	0
-205	1048585	6	3	2023-03-31 23:56:29	1342177288	submission.event.fileRevised	0
-206	515	48	3	2023-03-31 23:56:29	1342177281	submission.event.fileUploaded	0
-207	1048585	6	3	2023-03-31 23:56:29	1342177288	submission.event.fileRevised	0
-208	515	49	3	2023-03-31 23:56:29	1342177281	submission.event.fileUploaded	0
-209	1048585	6	3	2023-03-31 23:56:29	1342177288	submission.event.fileRevised	0
-210	1048585	6	3	2023-03-31 23:56:38	268435459	submission.event.participantAdded	0
-211	1048585	6	3	2023-03-31 23:56:44	268435459	submission.event.participantAdded	0
-212	1048585	6	6	2023-03-31 23:56:59	805306372	editor.submission.recommend.accept.log	0
-213	1048585	7	25	2023-03-31 23:57:24	268435458	submission.event.general.metadataUpdated	0
-214	1048585	7	25	2023-03-31 23:57:25	268435458	submission.event.general.metadataUpdated	0
-215	515	50	25	2023-03-31 23:57:28	1342177281	submission.event.fileUploaded	0
-216	1048585	7	25	2023-03-31 23:57:28	1342177288	submission.event.fileRevised	0
-217	515	50	25	2023-03-31 23:57:28	1342177296	submission.event.fileEdited	0
-218	1048585	7	25	2023-03-31 23:57:28	1342177296	submission.event.fileEdited	0
-219	515	51	25	2023-03-31 23:57:29	1342177281	submission.event.fileUploaded	0
-220	1048585	7	25	2023-03-31 23:57:29	1342177288	submission.event.fileRevised	0
-221	515	51	25	2023-03-31 23:57:29	1342177296	submission.event.fileEdited	0
-222	1048585	7	25	2023-03-31 23:57:29	1342177296	submission.event.fileEdited	0
-223	515	52	25	2023-03-31 23:57:30	1342177281	submission.event.fileUploaded	0
-224	1048585	7	25	2023-03-31 23:57:30	1342177288	submission.event.fileRevised	0
-225	515	52	25	2023-03-31 23:57:30	1342177296	submission.event.fileEdited	0
-226	1048585	7	25	2023-03-31 23:57:30	1342177296	submission.event.fileEdited	0
-227	515	53	25	2023-03-31 23:57:31	1342177281	submission.event.fileUploaded	0
-228	1048585	7	25	2023-03-31 23:57:31	1342177288	submission.event.fileRevised	0
-229	515	53	25	2023-03-31 23:57:32	1342177296	submission.event.fileEdited	0
-230	1048585	7	25	2023-03-31 23:57:32	1342177296	submission.event.fileEdited	0
-231	515	54	25	2023-03-31 23:57:33	1342177281	submission.event.fileUploaded	0
-232	1048585	7	25	2023-03-31 23:57:33	1342177288	submission.event.fileRevised	0
-233	515	54	25	2023-03-31 23:57:33	1342177296	submission.event.fileEdited	0
-234	1048585	7	25	2023-03-31 23:57:33	1342177296	submission.event.fileEdited	0
-235	1048585	7	25	2023-03-31 23:58:11	268435457	submission.event.submissionSubmitted	0
-236	1048585	7	3	2023-03-31 23:58:27	805306371	editor.submission.decision.sendExternalReview.log	0
-237	515	55	3	2023-03-31 23:58:27	1342177281	submission.event.fileUploaded	0
-238	1048585	7	3	2023-03-31 23:58:27	1342177288	submission.event.fileRevised	0
-239	515	56	3	2023-03-31 23:58:27	1342177281	submission.event.fileUploaded	0
-240	1048585	7	3	2023-03-31 23:58:27	1342177288	submission.event.fileRevised	0
-241	515	57	3	2023-03-31 23:58:27	1342177281	submission.event.fileUploaded	0
-242	1048585	7	3	2023-03-31 23:58:27	1342177288	submission.event.fileRevised	0
-243	515	58	3	2023-03-31 23:58:28	1342177281	submission.event.fileUploaded	0
-244	1048585	7	3	2023-03-31 23:58:28	1342177288	submission.event.fileRevised	0
-245	515	59	3	2023-03-31 23:58:28	1342177281	submission.event.fileUploaded	0
-246	1048585	7	3	2023-03-31 23:58:28	1342177288	submission.event.fileRevised	0
-247	1048585	7	3	2023-03-31 23:58:38	1073741825	log.review.reviewerAssigned	0
-248	1048585	7	3	2023-03-31 23:58:44	805306371	editor.submission.decision.accept.log	0
-249	1048585	7	3	2023-03-31 23:58:55	268435459	submission.event.participantAdded	0
-250	1048585	8	3	2023-03-31 23:59:06	268435458	submission.event.general.metadataUpdated	0
-251	515	60	3	2023-03-31 23:59:09	1342177281	submission.event.fileUploaded	0
-252	1048585	8	3	2023-03-31 23:59:09	1342177288	submission.event.fileRevised	0
-253	515	60	3	2023-03-31 23:59:09	1342177296	submission.event.fileEdited	0
-254	1048585	8	3	2023-03-31 23:59:09	1342177296	submission.event.fileEdited	0
-255	1048585	8	3	2023-03-31 23:59:10	268435457	submission.event.submissionSubmitted	0
-256	1048585	9	26	2023-03-31 23:59:18	268435458	submission.event.general.metadataUpdated	0
-257	1048585	9	26	2023-03-31 23:59:19	268435458	submission.event.general.metadataUpdated	0
-258	515	61	26	2023-03-31 23:59:22	1342177281	submission.event.fileUploaded	0
-259	1048585	9	26	2023-03-31 23:59:22	1342177288	submission.event.fileRevised	0
-260	515	61	26	2023-03-31 23:59:22	1342177296	submission.event.fileEdited	0
-261	1048585	9	26	2023-03-31 23:59:22	1342177296	submission.event.fileEdited	0
-262	515	62	26	2023-03-31 23:59:23	1342177281	submission.event.fileUploaded	0
-263	1048585	9	26	2023-03-31 23:59:23	1342177288	submission.event.fileRevised	0
-264	515	62	26	2023-03-31 23:59:24	1342177296	submission.event.fileEdited	0
-265	1048585	9	26	2023-03-31 23:59:24	1342177296	submission.event.fileEdited	0
-266	515	63	26	2023-03-31 23:59:24	1342177281	submission.event.fileUploaded	0
-267	1048585	9	26	2023-03-31 23:59:24	1342177288	submission.event.fileRevised	0
-268	515	63	26	2023-03-31 23:59:25	1342177296	submission.event.fileEdited	0
-269	1048585	9	26	2023-03-31 23:59:25	1342177296	submission.event.fileEdited	0
-270	515	64	26	2023-03-31 23:59:26	1342177281	submission.event.fileUploaded	0
-271	1048585	9	26	2023-03-31 23:59:26	1342177288	submission.event.fileRevised	0
-272	515	64	26	2023-03-31 23:59:26	1342177296	submission.event.fileEdited	0
-273	1048585	9	26	2023-03-31 23:59:26	1342177296	submission.event.fileEdited	0
-274	515	65	26	2023-03-31 23:59:27	1342177281	submission.event.fileUploaded	0
-275	1048585	9	26	2023-03-31 23:59:27	1342177288	submission.event.fileRevised	0
-276	515	65	26	2023-03-31 23:59:27	1342177296	submission.event.fileEdited	0
-277	1048585	9	26	2023-03-31 23:59:27	1342177296	submission.event.fileEdited	0
-278	1048585	9	26	2023-04-01 00:00:05	268435457	submission.event.submissionSubmitted	0
-279	1048585	9	3	2023-04-01 00:00:22	805306371	editor.submission.decision.sendInternalReview.log	0
-280	515	66	3	2023-04-01 00:00:22	1342177281	submission.event.fileUploaded	0
-281	1048585	9	3	2023-04-01 00:00:22	1342177288	submission.event.fileRevised	0
-282	515	67	3	2023-04-01 00:00:22	1342177281	submission.event.fileUploaded	0
-283	1048585	9	3	2023-04-01 00:00:22	1342177288	submission.event.fileRevised	0
-284	515	68	3	2023-04-01 00:00:23	1342177281	submission.event.fileUploaded	0
-285	1048585	9	3	2023-04-01 00:00:23	1342177288	submission.event.fileRevised	0
-286	515	69	3	2023-04-01 00:00:23	1342177281	submission.event.fileUploaded	0
-287	1048585	9	3	2023-04-01 00:00:23	1342177288	submission.event.fileRevised	0
-288	515	70	3	2023-04-01 00:00:23	1342177281	submission.event.fileUploaded	0
-289	1048585	9	3	2023-04-01 00:00:23	1342177288	submission.event.fileRevised	0
-290	1048585	10	27	2023-04-01 00:00:37	268435458	submission.event.general.metadataUpdated	0
-291	1048585	10	27	2023-04-01 00:00:38	268435458	submission.event.general.metadataUpdated	0
-292	515	71	27	2023-04-01 00:00:41	1342177281	submission.event.fileUploaded	0
-293	1048585	10	27	2023-04-01 00:00:41	1342177288	submission.event.fileRevised	0
-294	515	71	27	2023-04-01 00:00:41	1342177296	submission.event.fileEdited	0
-295	1048585	10	27	2023-04-01 00:00:41	1342177296	submission.event.fileEdited	0
-296	515	72	27	2023-04-01 00:00:42	1342177281	submission.event.fileUploaded	0
-297	1048585	10	27	2023-04-01 00:00:42	1342177288	submission.event.fileRevised	0
-298	515	72	27	2023-04-01 00:00:42	1342177296	submission.event.fileEdited	0
-299	1048585	10	27	2023-04-01 00:00:42	1342177296	submission.event.fileEdited	0
-300	515	73	27	2023-04-01 00:00:43	1342177281	submission.event.fileUploaded	0
-301	1048585	10	27	2023-04-01 00:00:43	1342177288	submission.event.fileRevised	0
-302	515	73	27	2023-04-01 00:00:44	1342177296	submission.event.fileEdited	0
-303	1048585	10	27	2023-04-01 00:00:44	1342177296	submission.event.fileEdited	0
-304	515	74	27	2023-04-01 00:00:44	1342177281	submission.event.fileUploaded	0
-305	1048585	10	27	2023-04-01 00:00:44	1342177288	submission.event.fileRevised	0
-306	515	74	27	2023-04-01 00:00:45	1342177296	submission.event.fileEdited	0
-307	1048585	10	27	2023-04-01 00:00:45	1342177296	submission.event.fileEdited	0
-308	515	75	27	2023-04-01 00:00:46	1342177281	submission.event.fileUploaded	0
-309	1048585	10	27	2023-04-01 00:00:46	1342177288	submission.event.fileRevised	0
-310	515	75	27	2023-04-01 00:00:46	1342177296	submission.event.fileEdited	0
-311	1048585	10	27	2023-04-01 00:00:46	1342177296	submission.event.fileEdited	0
-312	515	76	27	2023-04-01 00:00:47	1342177281	submission.event.fileUploaded	0
-313	1048585	10	27	2023-04-01 00:00:47	1342177288	submission.event.fileRevised	0
-314	515	76	27	2023-04-01 00:00:47	1342177296	submission.event.fileEdited	0
-315	1048585	10	27	2023-04-01 00:00:47	1342177296	submission.event.fileEdited	0
-316	515	77	27	2023-04-01 00:00:48	1342177281	submission.event.fileUploaded	0
-317	1048585	10	27	2023-04-01 00:00:48	1342177288	submission.event.fileRevised	0
-318	515	77	27	2023-04-01 00:00:48	1342177296	submission.event.fileEdited	0
-319	1048585	10	27	2023-04-01 00:00:48	1342177296	submission.event.fileEdited	0
-320	515	78	27	2023-04-01 00:00:49	1342177281	submission.event.fileUploaded	0
-321	1048585	10	27	2023-04-01 00:00:49	1342177288	submission.event.fileRevised	0
-322	515	78	27	2023-04-01 00:00:50	1342177296	submission.event.fileEdited	0
-323	1048585	10	27	2023-04-01 00:00:50	1342177296	submission.event.fileEdited	0
-324	515	79	27	2023-04-01 00:00:51	1342177281	submission.event.fileUploaded	0
-325	1048585	10	27	2023-04-01 00:00:51	1342177288	submission.event.fileRevised	0
-326	515	79	27	2023-04-01 00:00:51	1342177296	submission.event.fileEdited	0
-327	1048585	10	27	2023-04-01 00:00:51	1342177296	submission.event.fileEdited	0
-328	1048585	10	27	2023-04-01 00:02:07	268435457	submission.event.submissionSubmitted	0
-329	1048585	11	28	2023-04-01 00:02:17	268435458	submission.event.general.metadataUpdated	0
-330	1048585	11	28	2023-04-01 00:02:18	268435458	submission.event.general.metadataUpdated	0
-331	515	80	28	2023-04-01 00:02:21	1342177281	submission.event.fileUploaded	0
-332	1048585	11	28	2023-04-01 00:02:21	1342177288	submission.event.fileRevised	0
-333	515	80	28	2023-04-01 00:02:21	1342177296	submission.event.fileEdited	0
-334	1048585	11	28	2023-04-01 00:02:21	1342177296	submission.event.fileEdited	0
-335	515	81	28	2023-04-01 00:02:22	1342177281	submission.event.fileUploaded	0
-336	1048585	11	28	2023-04-01 00:02:22	1342177288	submission.event.fileRevised	0
-337	515	81	28	2023-04-01 00:02:22	1342177296	submission.event.fileEdited	0
-338	1048585	11	28	2023-04-01 00:02:22	1342177296	submission.event.fileEdited	0
-339	1048585	11	28	2023-04-01 00:02:35	268435457	submission.event.submissionSubmitted	0
-340	1048585	11	3	2023-04-01 00:02:49	805306371	editor.submission.decision.sendInternalReview.log	0
-341	515	82	3	2023-04-01 00:02:49	1342177281	submission.event.fileUploaded	0
-342	1048585	11	3	2023-04-01 00:02:49	1342177288	submission.event.fileRevised	0
-343	515	83	3	2023-04-01 00:02:50	1342177281	submission.event.fileUploaded	0
-344	1048585	11	3	2023-04-01 00:02:50	1342177288	submission.event.fileRevised	0
-345	1048585	11	3	2023-04-01 00:02:59	1073741825	log.review.reviewerAssigned	0
-346	1048585	11	3	2023-04-01 00:03:04	805306371	editor.submission.decision.sendExternalReview.log	0
-347	1048585	11	3	2023-04-01 00:03:15	1073741825	log.review.reviewerAssigned	0
-348	1048585	11	3	2023-04-01 00:03:22	1073741825	log.review.reviewerAssigned	0
-349	1048585	11	10	2023-04-01 00:03:30	1073741830	log.review.reviewAccepted	0
-350	1048585	11	10	2023-04-01 00:03:35	1073741848	log.review.reviewReady	0
-351	1048585	11	12	2023-04-01 00:03:42	1073741830	log.review.reviewAccepted	0
-352	1048585	11	12	2023-04-01 00:03:47	1073741848	log.review.reviewReady	0
-353	1048585	11	3	2023-04-01 00:04:05	805306371	editor.submission.decision.accept.log	0
-354	1048585	11	3	2023-04-01 00:04:05	1073741856	submission.event.decisionReviewerEmailSent	0
-355	1048585	12	29	2023-04-01 00:04:19	268435458	submission.event.general.metadataUpdated	0
-356	1048585	12	29	2023-04-01 00:04:19	268435458	submission.event.general.metadataUpdated	0
-357	515	84	29	2023-04-01 00:04:23	1342177281	submission.event.fileUploaded	0
-358	1048585	12	29	2023-04-01 00:04:23	1342177288	submission.event.fileRevised	0
-359	515	84	29	2023-04-01 00:04:23	1342177296	submission.event.fileEdited	0
-360	1048585	12	29	2023-04-01 00:04:23	1342177296	submission.event.fileEdited	0
-361	515	85	29	2023-04-01 00:04:24	1342177281	submission.event.fileUploaded	0
-362	1048585	12	29	2023-04-01 00:04:24	1342177288	submission.event.fileRevised	0
-363	515	85	29	2023-04-01 00:04:24	1342177296	submission.event.fileEdited	0
-364	1048585	12	29	2023-04-01 00:04:24	1342177296	submission.event.fileEdited	0
-365	515	86	29	2023-04-01 00:04:25	1342177281	submission.event.fileUploaded	0
-366	1048585	12	29	2023-04-01 00:04:25	1342177288	submission.event.fileRevised	0
-367	515	86	29	2023-04-01 00:04:25	1342177296	submission.event.fileEdited	0
-368	1048585	12	29	2023-04-01 00:04:25	1342177296	submission.event.fileEdited	0
-369	1048585	12	29	2023-04-01 00:04:49	268435457	submission.event.submissionSubmitted	0
-370	1048585	12	3	2023-04-01 00:05:05	805306371	editor.submission.decision.sendInternalReview.log	0
-371	515	87	3	2023-04-01 00:05:05	1342177281	submission.event.fileUploaded	0
-372	1048585	12	3	2023-04-01 00:05:05	1342177288	submission.event.fileRevised	0
-373	515	88	3	2023-04-01 00:05:06	1342177281	submission.event.fileUploaded	0
-374	1048585	12	3	2023-04-01 00:05:06	1342177288	submission.event.fileRevised	0
-375	515	89	3	2023-04-01 00:05:06	1342177281	submission.event.fileUploaded	0
-376	1048585	12	3	2023-04-01 00:05:06	1342177288	submission.event.fileRevised	0
-377	1048585	12	3	2023-04-01 00:05:16	1073741825	log.review.reviewerAssigned	0
-378	1048585	12	3	2023-04-01 00:05:24	1073741825	log.review.reviewerAssigned	0
-379	1048585	12	3	2023-04-01 00:05:32	1073741825	log.review.reviewerAssigned	0
-380	1048585	12	8	2023-04-01 00:05:40	1073741830	log.review.reviewAccepted	0
-381	1048585	12	8	2023-04-01 00:05:44	1073741848	log.review.reviewReady	0
-382	1048585	13	30	2023-04-01 00:05:54	268435458	submission.event.general.metadataUpdated	0
-383	1048585	13	30	2023-04-01 00:05:54	268435458	submission.event.general.metadataUpdated	0
-384	515	90	30	2023-04-01 00:05:57	1342177281	submission.event.fileUploaded	0
-385	1048585	13	30	2023-04-01 00:05:58	1342177288	submission.event.fileRevised	0
-386	515	90	30	2023-04-01 00:05:58	1342177296	submission.event.fileEdited	0
-387	1048585	13	30	2023-04-01 00:05:58	1342177296	submission.event.fileEdited	0
-388	515	91	30	2023-04-01 00:05:59	1342177281	submission.event.fileUploaded	0
-389	1048585	13	30	2023-04-01 00:05:59	1342177288	submission.event.fileRevised	0
-390	515	91	30	2023-04-01 00:05:59	1342177296	submission.event.fileEdited	0
-391	1048585	13	30	2023-04-01 00:05:59	1342177296	submission.event.fileEdited	0
-392	515	92	30	2023-04-01 00:06:00	1342177281	submission.event.fileUploaded	0
-393	1048585	13	30	2023-04-01 00:06:00	1342177288	submission.event.fileRevised	0
-394	515	92	30	2023-04-01 00:06:00	1342177296	submission.event.fileEdited	0
-395	1048585	13	30	2023-04-01 00:06:00	1342177296	submission.event.fileEdited	0
-396	1048585	13	30	2023-04-01 00:06:22	268435457	submission.event.submissionSubmitted	0
-397	1048585	13	3	2023-04-01 00:06:38	805306371	editor.submission.decision.sendInternalReview.log	0
-398	515	93	3	2023-04-01 00:06:39	1342177281	submission.event.fileUploaded	0
-399	1048585	13	3	2023-04-01 00:06:39	1342177288	submission.event.fileRevised	0
-400	515	94	3	2023-04-01 00:06:39	1342177281	submission.event.fileUploaded	0
-401	1048585	13	3	2023-04-01 00:06:39	1342177288	submission.event.fileRevised	0
-402	515	95	3	2023-04-01 00:06:39	1342177281	submission.event.fileUploaded	0
-403	1048585	13	3	2023-04-01 00:06:39	1342177288	submission.event.fileRevised	0
-404	1048585	13	3	2023-04-01 00:06:48	1073741825	log.review.reviewerAssigned	0
-405	1048585	13	3	2023-04-01 00:06:54	805306371	editor.submission.decision.sendExternalReview.log	0
-406	1048585	13	3	2023-04-01 00:07:05	1073741825	log.review.reviewerAssigned	0
-407	1048585	13	3	2023-04-01 00:07:12	1073741825	log.review.reviewerAssigned	0
-408	1048585	13	3	2023-04-01 00:07:21	1073741825	log.review.reviewerAssigned	0
-409	1048585	13	10	2023-04-01 00:07:29	1073741830	log.review.reviewAccepted	0
-410	1048585	13	10	2023-04-01 00:07:34	1073741848	log.review.reviewReady	0
-411	1048585	13	12	2023-04-01 00:07:42	1073741830	log.review.reviewAccepted	0
-412	1048585	13	12	2023-04-01 00:07:47	1073741848	log.review.reviewReady	0
-413	1048585	13	3	2023-04-01 00:08:08	805306371	editor.submission.decision.accept.log	0
-414	1048585	13	3	2023-04-01 00:08:08	1073741856	submission.event.decisionReviewerEmailSent	0
-415	1048585	14	31	2023-04-01 00:08:22	268435458	submission.event.general.metadataUpdated	0
-416	1048585	14	31	2023-04-01 00:08:23	268435458	submission.event.general.metadataUpdated	0
-417	515	96	31	2023-04-01 00:08:26	1342177281	submission.event.fileUploaded	0
-418	1048585	14	31	2023-04-01 00:08:26	1342177288	submission.event.fileRevised	0
-419	515	96	31	2023-04-01 00:08:26	1342177296	submission.event.fileEdited	0
-420	1048585	14	31	2023-04-01 00:08:26	1342177296	submission.event.fileEdited	0
-421	515	97	31	2023-04-01 00:08:27	1342177281	submission.event.fileUploaded	0
-422	1048585	14	31	2023-04-01 00:08:27	1342177288	submission.event.fileRevised	0
-423	515	97	31	2023-04-01 00:08:27	1342177296	submission.event.fileEdited	0
-424	1048585	14	31	2023-04-01 00:08:27	1342177296	submission.event.fileEdited	0
-425	515	98	31	2023-04-01 00:08:28	1342177281	submission.event.fileUploaded	0
-426	1048585	14	31	2023-04-01 00:08:28	1342177288	submission.event.fileRevised	0
-427	515	98	31	2023-04-01 00:08:28	1342177296	submission.event.fileEdited	0
-428	1048585	14	31	2023-04-01 00:08:28	1342177296	submission.event.fileEdited	0
-429	515	99	31	2023-04-01 00:08:29	1342177281	submission.event.fileUploaded	0
-430	1048585	14	31	2023-04-01 00:08:29	1342177288	submission.event.fileRevised	0
-431	515	99	31	2023-04-01 00:08:30	1342177296	submission.event.fileEdited	0
-432	1048585	14	31	2023-04-01 00:08:30	1342177296	submission.event.fileEdited	0
-433	515	100	31	2023-04-01 00:08:31	1342177281	submission.event.fileUploaded	0
-434	1048585	14	31	2023-04-01 00:08:31	1342177288	submission.event.fileRevised	0
-435	515	100	31	2023-04-01 00:08:31	1342177296	submission.event.fileEdited	0
-436	1048585	14	31	2023-04-01 00:08:31	1342177296	submission.event.fileEdited	0
-437	515	101	31	2023-04-01 00:08:32	1342177281	submission.event.fileUploaded	0
-438	1048585	14	31	2023-04-01 00:08:32	1342177288	submission.event.fileRevised	0
-439	515	101	31	2023-04-01 00:08:32	1342177296	submission.event.fileEdited	0
-440	1048585	14	31	2023-04-01 00:08:32	1342177296	submission.event.fileEdited	0
-441	1048585	14	31	2023-04-01 00:09:02	268435457	submission.event.submissionSubmitted	0
-442	1048585	14	3	2023-04-01 00:09:20	805306371	editor.submission.decision.sendInternalReview.log	0
-443	515	102	3	2023-04-01 00:09:20	1342177281	submission.event.fileUploaded	0
-444	1048585	14	3	2023-04-01 00:09:20	1342177288	submission.event.fileRevised	0
-445	515	103	3	2023-04-01 00:09:20	1342177281	submission.event.fileUploaded	0
-446	1048585	14	3	2023-04-01 00:09:20	1342177288	submission.event.fileRevised	0
-447	515	104	3	2023-04-01 00:09:20	1342177281	submission.event.fileUploaded	0
-448	1048585	14	3	2023-04-01 00:09:20	1342177288	submission.event.fileRevised	0
-449	515	105	3	2023-04-01 00:09:20	1342177281	submission.event.fileUploaded	0
-450	1048585	14	3	2023-04-01 00:09:21	1342177288	submission.event.fileRevised	0
-451	515	106	3	2023-04-01 00:09:21	1342177281	submission.event.fileUploaded	0
-452	1048585	14	3	2023-04-01 00:09:21	1342177288	submission.event.fileRevised	0
-453	515	107	3	2023-04-01 00:09:21	1342177281	submission.event.fileUploaded	0
-454	1048585	14	3	2023-04-01 00:09:21	1342177288	submission.event.fileRevised	0
-455	1048585	14	3	2023-04-01 00:09:31	1073741825	log.review.reviewerAssigned	0
-456	1048585	14	3	2023-04-01 00:09:37	805306371	editor.submission.decision.sendExternalReview.log	0
-457	1048585	14	3	2023-04-01 00:09:48	1073741825	log.review.reviewerAssigned	0
-458	1048585	14	3	2023-04-01 00:09:55	805306371	editor.submission.decision.accept.log	0
-459	1048585	14	3	2023-04-01 00:10:05	268435459	submission.event.participantAdded	0
-460	1048585	14	3	2023-04-01 00:10:12	805306371	editor.submission.decision.sendToProduction.log	0
-461	1048585	14	3	2023-04-01 00:10:22	268435459	submission.event.participantAdded	0
-462	1048585	14	3	2023-04-01 00:10:29	268435459	submission.event.participantAdded	0
-463	1048585	14	3	2023-04-01 00:10:35	268435474	submission.event.publicationFormatCreated	0
-464	515	108	3	2023-04-01 00:10:42	1342177281	submission.event.fileUploaded	0
-465	1048585	14	3	2023-04-01 00:10:42	1342177288	submission.event.fileRevised	0
-466	515	109	3	2023-04-01 00:10:42	1342177281	submission.event.fileUploaded	0
-467	1048585	14	3	2023-04-01 00:10:42	1342177288	submission.event.fileRevised	0
-468	515	110	3	2023-04-01 00:10:42	1342177281	submission.event.fileUploaded	0
-469	1048585	14	3	2023-04-01 00:10:42	1342177288	submission.event.fileRevised	0
-470	515	111	3	2023-04-01 00:10:42	1342177281	submission.event.fileUploaded	0
-471	1048585	14	3	2023-04-01 00:10:42	1342177288	submission.event.fileRevised	0
-472	515	112	3	2023-04-01 00:10:42	1342177281	submission.event.fileUploaded	0
-473	1048585	14	3	2023-04-01 00:10:42	1342177288	submission.event.fileRevised	0
-474	515	113	3	2023-04-01 00:10:42	1342177281	submission.event.fileUploaded	0
-475	1048585	14	3	2023-04-01 00:10:42	1342177288	submission.event.fileRevised	0
-476	1048585	14	3	2023-04-01 00:10:44	268435464	submission.event.publicationFormatPublished	0
-477	1048585	14	3	2023-04-01 00:10:47	268435476	submission.event.publicationFormatMadeAvailable	0
-478	515	113	3	2023-04-01 00:10:50	1342177296	submission.event.fileEdited	0
-479	1048585	14	3	2023-04-01 00:10:50	1342177296	submission.event.fileEdited	0
-480	515	113	3	2023-04-01 00:10:50	1342177287	submission.event.signoffSignoff	0
-481	515	113	3	2023-04-01 00:10:52	1342177296	submission.event.fileEdited	0
-482	1048585	14	3	2023-04-01 00:10:52	1342177296	submission.event.fileEdited	0
-483	515	112	3	2023-04-01 00:10:55	1342177296	submission.event.fileEdited	0
-484	1048585	14	3	2023-04-01 00:10:55	1342177296	submission.event.fileEdited	0
-485	515	112	3	2023-04-01 00:10:55	1342177287	submission.event.signoffSignoff	0
-486	515	112	3	2023-04-01 00:10:58	1342177296	submission.event.fileEdited	0
-487	1048585	14	3	2023-04-01 00:10:58	1342177296	submission.event.fileEdited	0
-488	515	111	3	2023-04-01 00:11:01	1342177296	submission.event.fileEdited	0
-489	1048585	14	3	2023-04-01 00:11:01	1342177296	submission.event.fileEdited	0
-490	515	111	3	2023-04-01 00:11:01	1342177287	submission.event.signoffSignoff	0
-491	515	111	3	2023-04-01 00:11:04	1342177296	submission.event.fileEdited	0
-492	1048585	14	3	2023-04-01 00:11:04	1342177296	submission.event.fileEdited	0
-493	515	110	3	2023-04-01 00:11:07	1342177296	submission.event.fileEdited	0
-494	1048585	14	3	2023-04-01 00:11:07	1342177296	submission.event.fileEdited	0
-495	515	110	3	2023-04-01 00:11:07	1342177287	submission.event.signoffSignoff	0
-496	515	110	3	2023-04-01 00:11:10	1342177296	submission.event.fileEdited	0
-497	1048585	14	3	2023-04-01 00:11:10	1342177296	submission.event.fileEdited	0
-498	515	109	3	2023-04-01 00:11:12	1342177296	submission.event.fileEdited	0
-499	1048585	14	3	2023-04-01 00:11:12	1342177296	submission.event.fileEdited	0
-500	515	109	3	2023-04-01 00:11:12	1342177287	submission.event.signoffSignoff	0
-501	515	109	3	2023-04-01 00:11:16	1342177296	submission.event.fileEdited	0
-502	1048585	14	3	2023-04-01 00:11:16	1342177296	submission.event.fileEdited	0
-503	515	108	3	2023-04-01 00:11:19	1342177296	submission.event.fileEdited	0
-504	1048585	14	3	2023-04-01 00:11:19	1342177296	submission.event.fileEdited	0
-505	515	108	3	2023-04-01 00:11:19	1342177287	submission.event.signoffSignoff	0
-506	515	108	3	2023-04-01 00:11:22	1342177296	submission.event.fileEdited	0
-507	1048585	14	3	2023-04-01 00:11:22	1342177296	submission.event.fileEdited	0
-508	1048585	14	3	2023-04-01 00:11:25	268435462	publication.event.published	0
-509	1048585	15	32	2023-04-01 00:11:35	268435458	submission.event.general.metadataUpdated	0
-510	1048585	15	32	2023-04-01 00:11:36	268435458	submission.event.general.metadataUpdated	0
-511	515	114	32	2023-04-01 00:11:39	1342177281	submission.event.fileUploaded	0
-512	1048585	15	32	2023-04-01 00:11:39	1342177288	submission.event.fileRevised	0
-513	515	114	32	2023-04-01 00:11:39	1342177296	submission.event.fileEdited	0
-514	1048585	15	32	2023-04-01 00:11:39	1342177296	submission.event.fileEdited	0
-515	515	115	32	2023-04-01 00:11:40	1342177281	submission.event.fileUploaded	0
-516	1048585	15	32	2023-04-01 00:11:40	1342177288	submission.event.fileRevised	0
-517	515	115	32	2023-04-01 00:11:40	1342177296	submission.event.fileEdited	0
-518	1048585	15	32	2023-04-01 00:11:40	1342177296	submission.event.fileEdited	0
-519	515	116	32	2023-04-01 00:11:41	1342177281	submission.event.fileUploaded	0
-520	1048585	15	32	2023-04-01 00:11:41	1342177288	submission.event.fileRevised	0
-521	515	116	32	2023-04-01 00:11:42	1342177296	submission.event.fileEdited	0
-522	1048585	15	32	2023-04-01 00:11:42	1342177296	submission.event.fileEdited	0
-523	1048585	15	32	2023-04-01 00:12:01	268435457	submission.event.submissionSubmitted	0
-524	1048585	15	3	2023-04-01 00:12:17	805306371	editor.submission.decision.sendExternalReview.log	0
-525	515	117	3	2023-04-01 00:12:18	1342177281	submission.event.fileUploaded	0
-526	1048585	15	3	2023-04-01 00:12:18	1342177288	submission.event.fileRevised	0
-527	515	118	3	2023-04-01 00:12:18	1342177281	submission.event.fileUploaded	0
-528	1048585	15	3	2023-04-01 00:12:18	1342177288	submission.event.fileRevised	0
-529	515	119	3	2023-04-01 00:12:18	1342177281	submission.event.fileUploaded	0
-530	1048585	15	3	2023-04-01 00:12:18	1342177288	submission.event.fileRevised	0
-531	1048585	16	33	2023-04-01 00:12:31	268435458	submission.event.general.metadataUpdated	0
-532	1048585	16	33	2023-04-01 00:12:31	268435458	submission.event.general.metadataUpdated	0
-533	515	120	33	2023-04-01 00:12:34	1342177281	submission.event.fileUploaded	0
-534	1048585	16	33	2023-04-01 00:12:34	1342177288	submission.event.fileRevised	0
-535	515	120	33	2023-04-01 00:12:35	1342177296	submission.event.fileEdited	0
-536	1048585	16	33	2023-04-01 00:12:35	1342177296	submission.event.fileEdited	0
-537	515	121	33	2023-04-01 00:12:36	1342177281	submission.event.fileUploaded	0
-538	1048585	16	33	2023-04-01 00:12:36	1342177288	submission.event.fileRevised	0
-539	515	121	33	2023-04-01 00:12:36	1342177296	submission.event.fileEdited	0
-540	1048585	16	33	2023-04-01 00:12:36	1342177296	submission.event.fileEdited	0
-541	515	122	33	2023-04-01 00:12:37	1342177281	submission.event.fileUploaded	0
-542	1048585	16	33	2023-04-01 00:12:37	1342177288	submission.event.fileRevised	0
-543	515	122	33	2023-04-01 00:12:37	1342177296	submission.event.fileEdited	0
-544	1048585	16	33	2023-04-01 00:12:37	1342177296	submission.event.fileEdited	0
-545	515	123	33	2023-04-01 00:12:38	1342177281	submission.event.fileUploaded	0
-546	1048585	16	33	2023-04-01 00:12:38	1342177288	submission.event.fileRevised	0
-547	515	123	33	2023-04-01 00:12:38	1342177296	submission.event.fileEdited	0
-548	1048585	16	33	2023-04-01 00:12:38	1342177296	submission.event.fileEdited	0
-549	515	124	33	2023-04-01 00:12:39	1342177281	submission.event.fileUploaded	0
-550	1048585	16	33	2023-04-01 00:12:39	1342177288	submission.event.fileRevised	0
-551	515	124	33	2023-04-01 00:12:40	1342177296	submission.event.fileEdited	0
-552	1048585	16	33	2023-04-01 00:12:40	1342177296	submission.event.fileEdited	0
-553	1048585	16	33	2023-04-01 00:13:14	268435457	submission.event.submissionSubmitted	0
-554	1048585	16	3	2023-04-01 00:13:32	805306371	editor.submission.decision.sendExternalReview.log	0
-555	515	125	3	2023-04-01 00:13:32	1342177281	submission.event.fileUploaded	0
-556	1048585	16	3	2023-04-01 00:13:32	1342177288	submission.event.fileRevised	0
-557	515	126	3	2023-04-01 00:13:32	1342177281	submission.event.fileUploaded	0
-558	1048585	16	3	2023-04-01 00:13:32	1342177288	submission.event.fileRevised	0
-559	515	127	3	2023-04-01 00:13:33	1342177281	submission.event.fileUploaded	0
-560	1048585	16	3	2023-04-01 00:13:33	1342177288	submission.event.fileRevised	0
-561	515	128	3	2023-04-01 00:13:33	1342177281	submission.event.fileUploaded	0
-562	1048585	16	3	2023-04-01 00:13:33	1342177288	submission.event.fileRevised	0
-563	515	129	3	2023-04-01 00:13:33	1342177281	submission.event.fileUploaded	0
-564	1048585	16	3	2023-04-01 00:13:33	1342177288	submission.event.fileRevised	0
-565	1048585	16	3	2023-04-01 00:13:44	1073741825	log.review.reviewerAssigned	0
-566	1048585	16	3	2023-04-01 00:13:52	1073741825	log.review.reviewerAssigned	0
-567	1048585	16	3	2023-04-01 00:14:01	1073741825	log.review.reviewerAssigned	0
-568	1048585	16	10	2023-04-01 00:14:09	1073741830	log.review.reviewAccepted	0
-569	1048585	16	10	2023-04-01 00:14:14	1073741848	log.review.reviewReady	0
-570	1048585	17	34	2023-04-01 00:14:24	268435458	submission.event.general.metadataUpdated	0
-571	1048585	17	34	2023-04-01 00:14:25	268435458	submission.event.general.metadataUpdated	0
-572	515	130	34	2023-04-01 00:14:28	1342177281	submission.event.fileUploaded	0
-573	1048585	17	34	2023-04-01 00:14:28	1342177288	submission.event.fileRevised	0
-574	515	130	34	2023-04-01 00:14:28	1342177296	submission.event.fileEdited	0
-575	1048585	17	34	2023-04-01 00:14:28	1342177296	submission.event.fileEdited	0
-576	515	131	34	2023-04-01 00:14:29	1342177281	submission.event.fileUploaded	0
-577	1048585	17	34	2023-04-01 00:14:29	1342177288	submission.event.fileRevised	0
-578	515	131	34	2023-04-01 00:14:29	1342177296	submission.event.fileEdited	0
-579	1048585	17	34	2023-04-01 00:14:29	1342177296	submission.event.fileEdited	0
-580	515	132	34	2023-04-01 00:14:30	1342177281	submission.event.fileUploaded	0
-581	1048585	17	34	2023-04-01 00:14:30	1342177288	submission.event.fileRevised	0
-582	515	132	34	2023-04-01 00:14:30	1342177296	submission.event.fileEdited	0
-583	1048585	17	34	2023-04-01 00:14:30	1342177296	submission.event.fileEdited	0
-584	515	133	34	2023-04-01 00:14:31	1342177281	submission.event.fileUploaded	0
-585	1048585	17	34	2023-04-01 00:14:31	1342177288	submission.event.fileRevised	0
-586	515	133	34	2023-04-01 00:14:32	1342177296	submission.event.fileEdited	0
-587	1048585	17	34	2023-04-01 00:14:32	1342177296	submission.event.fileEdited	0
-588	515	134	34	2023-04-01 00:14:33	1342177281	submission.event.fileUploaded	0
-589	1048585	17	34	2023-04-01 00:14:33	1342177288	submission.event.fileRevised	0
-590	515	134	34	2023-04-01 00:14:33	1342177296	submission.event.fileEdited	0
-591	1048585	17	34	2023-04-01 00:14:33	1342177296	submission.event.fileEdited	0
-592	515	135	34	2023-04-01 00:14:34	1342177281	submission.event.fileUploaded	0
-593	1048585	17	34	2023-04-01 00:14:34	1342177288	submission.event.fileRevised	0
-594	515	135	34	2023-04-01 00:14:34	1342177296	submission.event.fileEdited	0
-595	1048585	17	34	2023-04-01 00:14:34	1342177296	submission.event.fileEdited	0
-596	1048585	17	34	2023-04-01 00:15:24	268435457	submission.event.submissionSubmitted	0
-597	1048585	17	3	2023-04-01 00:15:44	805306371	editor.submission.decision.sendInternalReview.log	0
-598	515	136	3	2023-04-01 00:15:44	1342177281	submission.event.fileUploaded	0
-599	1048585	17	3	2023-04-01 00:15:45	1342177288	submission.event.fileRevised	0
-600	515	137	3	2023-04-01 00:15:45	1342177281	submission.event.fileUploaded	0
-601	1048585	17	3	2023-04-01 00:15:45	1342177288	submission.event.fileRevised	0
-602	515	138	3	2023-04-01 00:15:45	1342177281	submission.event.fileUploaded	0
-603	1048585	17	3	2023-04-01 00:15:45	1342177288	submission.event.fileRevised	0
-604	515	139	3	2023-04-01 00:15:45	1342177281	submission.event.fileUploaded	0
-605	1048585	17	3	2023-04-01 00:15:45	1342177288	submission.event.fileRevised	0
-606	515	140	3	2023-04-01 00:15:45	1342177281	submission.event.fileUploaded	0
-607	1048585	17	3	2023-04-01 00:15:45	1342177288	submission.event.fileRevised	0
-608	515	141	3	2023-04-01 00:15:45	1342177281	submission.event.fileUploaded	0
-609	1048585	17	3	2023-04-01 00:15:45	1342177288	submission.event.fileRevised	0
-610	1048585	17	3	2023-04-01 00:15:56	1073741825	log.review.reviewerAssigned	0
-611	1048585	17	3	2023-04-01 00:16:05	1073741825	log.review.reviewerAssigned	0
+1	1048585	1	19	2023-04-03 19:52:56	268435458	submission.event.general.metadataUpdated	0
+2	1048585	1	19	2023-04-03 19:52:57	268435458	submission.event.general.metadataUpdated	0
+3	515	1	19	2023-04-03 19:53:01	1342177281	submission.event.fileUploaded	0
+4	1048585	1	19	2023-04-03 19:53:01	1342177288	submission.event.fileRevised	0
+5	515	1	19	2023-04-03 19:53:01	1342177296	submission.event.fileEdited	0
+6	1048585	1	19	2023-04-03 19:53:01	1342177296	submission.event.fileEdited	0
+7	515	2	19	2023-04-03 19:53:02	1342177281	submission.event.fileUploaded	0
+8	1048585	1	19	2023-04-03 19:53:02	1342177288	submission.event.fileRevised	0
+9	515	2	19	2023-04-03 19:53:02	1342177296	submission.event.fileEdited	0
+10	1048585	1	19	2023-04-03 19:53:02	1342177296	submission.event.fileEdited	0
+11	515	3	19	2023-04-03 19:53:03	1342177281	submission.event.fileUploaded	0
+12	1048585	1	19	2023-04-03 19:53:03	1342177288	submission.event.fileRevised	0
+13	515	3	19	2023-04-03 19:53:03	1342177296	submission.event.fileEdited	0
+14	1048585	1	19	2023-04-03 19:53:03	1342177296	submission.event.fileEdited	0
+15	1048585	1	19	2023-04-03 19:53:23	268435457	submission.event.submissionSubmitted	0
+16	1048585	1	3	2023-04-03 19:53:38	805306371	editor.submission.decision.sendExternalReview.log	0
+17	515	4	3	2023-04-03 19:53:38	1342177281	submission.event.fileUploaded	0
+18	1048585	1	3	2023-04-03 19:53:38	1342177288	submission.event.fileRevised	0
+19	515	5	3	2023-04-03 19:53:38	1342177281	submission.event.fileUploaded	0
+20	1048585	1	3	2023-04-03 19:53:38	1342177288	submission.event.fileRevised	0
+21	515	6	3	2023-04-03 19:53:38	1342177281	submission.event.fileUploaded	0
+22	1048585	1	3	2023-04-03 19:53:38	1342177288	submission.event.fileRevised	0
+23	1048585	1	3	2023-04-03 19:53:49	1073741825	log.review.reviewerAssigned	0
+24	1048585	1	3	2023-04-03 19:53:55	805306371	editor.submission.decision.accept.log	0
+25	1048585	1	3	2023-04-03 19:54:05	268435459	submission.event.participantAdded	0
+26	1048585	2	20	2023-04-03 19:54:18	268435458	submission.event.general.metadataUpdated	0
+27	1048585	2	20	2023-04-03 19:54:19	268435458	submission.event.general.metadataUpdated	0
+28	515	7	20	2023-04-03 19:54:32	1342177281	submission.event.fileUploaded	0
+29	1048585	2	20	2023-04-03 19:54:32	1342177288	submission.event.fileRevised	0
+30	1048585	2	20	2023-04-03 19:54:32	268435458	submission.event.general.metadataUpdated	0
+31	515	7	20	2023-04-03 19:54:33	1342177296	submission.event.fileEdited	0
+32	1048585	2	20	2023-04-03 19:54:33	1342177296	submission.event.fileEdited	0
+33	515	8	20	2023-04-03 19:54:34	1342177281	submission.event.fileUploaded	0
+34	1048585	2	20	2023-04-03 19:54:34	1342177288	submission.event.fileRevised	0
+35	515	8	20	2023-04-03 19:54:34	1342177296	submission.event.fileEdited	0
+36	1048585	2	20	2023-04-03 19:54:34	1342177296	submission.event.fileEdited	0
+37	515	9	20	2023-04-03 19:54:35	1342177281	submission.event.fileUploaded	0
+38	1048585	2	20	2023-04-03 19:54:35	1342177288	submission.event.fileRevised	0
+39	515	9	20	2023-04-03 19:54:35	1342177296	submission.event.fileEdited	0
+40	1048585	2	20	2023-04-03 19:54:35	1342177296	submission.event.fileEdited	0
+41	515	10	20	2023-04-03 19:54:36	1342177281	submission.event.fileUploaded	0
+42	1048585	2	20	2023-04-03 19:54:36	1342177288	submission.event.fileRevised	0
+43	515	10	20	2023-04-03 19:54:37	1342177296	submission.event.fileEdited	0
+44	1048585	2	20	2023-04-03 19:54:37	1342177296	submission.event.fileEdited	0
+45	515	11	20	2023-04-03 19:54:37	1342177281	submission.event.fileUploaded	0
+46	1048585	2	20	2023-04-03 19:54:37	1342177288	submission.event.fileRevised	0
+47	515	11	20	2023-04-03 19:54:38	1342177296	submission.event.fileEdited	0
+48	1048585	2	20	2023-04-03 19:54:38	1342177296	submission.event.fileEdited	0
+49	515	11	20	2023-04-03 19:54:39	1342177282	submission.event.fileDeleted	0
+50	1048585	2	20	2023-04-03 19:56:33	268435457	submission.event.submissionSubmitted	0
+51	1048585	2	3	2023-04-03 19:57:03	805306371	editor.submission.decision.sendExternalReview.log	0
+52	515	12	3	2023-04-03 19:57:03	1342177281	submission.event.fileUploaded	0
+53	1048585	2	3	2023-04-03 19:57:03	1342177288	submission.event.fileRevised	0
+54	515	13	3	2023-04-03 19:57:04	1342177281	submission.event.fileUploaded	0
+55	1048585	2	3	2023-04-03 19:57:04	1342177288	submission.event.fileRevised	0
+56	515	14	3	2023-04-03 19:57:04	1342177281	submission.event.fileUploaded	0
+57	1048585	2	3	2023-04-03 19:57:04	1342177288	submission.event.fileRevised	0
+58	515	15	3	2023-04-03 19:57:04	1342177281	submission.event.fileUploaded	0
+59	1048585	2	3	2023-04-03 19:57:04	1342177288	submission.event.fileRevised	0
+60	1048585	2	3	2023-04-03 19:57:19	1073741825	log.review.reviewerAssigned	0
+61	1048585	2	3	2023-04-03 19:57:29	1073741825	log.review.reviewerAssigned	0
+62	1048585	3	21	2023-04-03 19:57:42	268435458	submission.event.general.metadataUpdated	0
+63	1048585	3	21	2023-04-03 19:57:43	268435458	submission.event.general.metadataUpdated	0
+64	515	16	21	2023-04-03 19:57:46	1342177281	submission.event.fileUploaded	0
+65	1048585	3	21	2023-04-03 19:57:46	1342177288	submission.event.fileRevised	0
+66	515	16	21	2023-04-03 19:57:46	1342177296	submission.event.fileEdited	0
+67	1048585	3	21	2023-04-03 19:57:46	1342177296	submission.event.fileEdited	0
+68	515	17	21	2023-04-03 19:57:47	1342177281	submission.event.fileUploaded	0
+69	1048585	3	21	2023-04-03 19:57:47	1342177288	submission.event.fileRevised	0
+70	515	17	21	2023-04-03 19:57:48	1342177296	submission.event.fileEdited	0
+71	1048585	3	21	2023-04-03 19:57:48	1342177296	submission.event.fileEdited	0
+72	515	18	21	2023-04-03 19:57:48	1342177281	submission.event.fileUploaded	0
+73	1048585	3	21	2023-04-03 19:57:49	1342177288	submission.event.fileRevised	0
+74	515	18	21	2023-04-03 19:57:49	1342177296	submission.event.fileEdited	0
+75	1048585	3	21	2023-04-03 19:57:49	1342177296	submission.event.fileEdited	0
+76	515	19	21	2023-04-03 19:57:50	1342177281	submission.event.fileUploaded	0
+77	1048585	3	21	2023-04-03 19:57:50	1342177288	submission.event.fileRevised	0
+78	515	19	21	2023-04-03 19:57:50	1342177296	submission.event.fileEdited	0
+79	1048585	3	21	2023-04-03 19:57:50	1342177296	submission.event.fileEdited	0
+80	515	20	21	2023-04-03 19:57:51	1342177281	submission.event.fileUploaded	0
+81	1048585	3	21	2023-04-03 19:57:51	1342177288	submission.event.fileRevised	0
+82	515	20	21	2023-04-03 19:57:52	1342177296	submission.event.fileEdited	0
+83	1048585	3	21	2023-04-03 19:57:52	1342177296	submission.event.fileEdited	0
+84	1048585	3	21	2023-04-03 19:58:30	268435457	submission.event.submissionSubmitted	0
+85	1048585	4	22	2023-04-03 19:58:40	268435458	submission.event.general.metadataUpdated	0
+86	1048585	4	22	2023-04-03 19:58:41	268435458	submission.event.general.metadataUpdated	0
+87	515	21	22	2023-04-03 19:58:44	1342177281	submission.event.fileUploaded	0
+88	1048585	4	22	2023-04-03 19:58:44	1342177288	submission.event.fileRevised	0
+89	515	21	22	2023-04-03 19:58:45	1342177296	submission.event.fileEdited	0
+90	1048585	4	22	2023-04-03 19:58:45	1342177296	submission.event.fileEdited	0
+91	515	22	22	2023-04-03 19:58:46	1342177281	submission.event.fileUploaded	0
+92	1048585	4	22	2023-04-03 19:58:46	1342177288	submission.event.fileRevised	0
+93	515	22	22	2023-04-03 19:58:46	1342177296	submission.event.fileEdited	0
+94	1048585	4	22	2023-04-03 19:58:46	1342177296	submission.event.fileEdited	0
+95	515	23	22	2023-04-03 19:58:47	1342177281	submission.event.fileUploaded	0
+96	1048585	4	22	2023-04-03 19:58:47	1342177288	submission.event.fileRevised	0
+97	515	23	22	2023-04-03 19:58:47	1342177296	submission.event.fileEdited	0
+98	1048585	4	22	2023-04-03 19:58:47	1342177296	submission.event.fileEdited	0
+99	515	24	22	2023-04-03 19:58:48	1342177281	submission.event.fileUploaded	0
+100	1048585	4	22	2023-04-03 19:58:48	1342177288	submission.event.fileRevised	0
+101	515	24	22	2023-04-03 19:58:49	1342177296	submission.event.fileEdited	0
+102	1048585	4	22	2023-04-03 19:58:49	1342177296	submission.event.fileEdited	0
+103	1048585	4	22	2023-04-03 19:59:20	268435457	submission.event.submissionSubmitted	0
+104	1048585	4	3	2023-04-03 19:59:36	805306371	editor.submission.decision.sendInternalReview.log	0
+105	515	25	3	2023-04-03 19:59:36	1342177281	submission.event.fileUploaded	0
+106	1048585	4	3	2023-04-03 19:59:36	1342177288	submission.event.fileRevised	0
+107	515	26	3	2023-04-03 19:59:36	1342177281	submission.event.fileUploaded	0
+108	1048585	4	3	2023-04-03 19:59:36	1342177288	submission.event.fileRevised	0
+109	515	27	3	2023-04-03 19:59:37	1342177281	submission.event.fileUploaded	0
+110	1048585	4	3	2023-04-03 19:59:37	1342177288	submission.event.fileRevised	0
+111	515	28	3	2023-04-03 19:59:37	1342177281	submission.event.fileUploaded	0
+112	1048585	4	3	2023-04-03 19:59:37	1342177288	submission.event.fileRevised	0
+113	1048585	4	3	2023-04-03 19:59:48	1073741825	log.review.reviewerAssigned	0
+114	1048585	4	3	2023-04-03 19:59:54	805306371	editor.submission.decision.sendExternalReview.log	0
+115	1048585	4	3	2023-04-03 20:00:06	1073741825	log.review.reviewerAssigned	0
+116	1048585	4	3	2023-04-03 20:00:13	805306371	editor.submission.decision.accept.log	0
+117	1048585	4	3	2023-04-03 20:00:24	268435459	submission.event.participantAdded	0
+118	1048585	4	3	2023-04-03 20:00:32	805306371	editor.submission.decision.sendToProduction.log	0
+119	1048585	4	3	2023-04-03 20:00:43	268435459	submission.event.participantAdded	0
+120	1048585	4	3	2023-04-03 20:00:52	268435474	submission.event.publicationFormatCreated	0
+121	1048585	5	23	2023-04-03 20:01:01	268435458	submission.event.general.metadataUpdated	0
+122	1048585	5	23	2023-04-03 20:01:02	268435458	submission.event.general.metadataUpdated	0
+123	515	29	23	2023-04-03 20:01:05	1342177281	submission.event.fileUploaded	0
+124	1048585	5	23	2023-04-03 20:01:05	1342177288	submission.event.fileRevised	0
+125	515	29	23	2023-04-03 20:01:06	1342177296	submission.event.fileEdited	0
+126	1048585	5	23	2023-04-03 20:01:06	1342177296	submission.event.fileEdited	0
+127	515	30	23	2023-04-03 20:01:07	1342177281	submission.event.fileUploaded	0
+128	1048585	5	23	2023-04-03 20:01:07	1342177288	submission.event.fileRevised	0
+129	515	30	23	2023-04-03 20:01:07	1342177296	submission.event.fileEdited	0
+130	1048585	5	23	2023-04-03 20:01:07	1342177296	submission.event.fileEdited	0
+131	515	31	23	2023-04-03 20:01:08	1342177281	submission.event.fileUploaded	0
+132	1048585	5	23	2023-04-03 20:01:08	1342177288	submission.event.fileRevised	0
+133	515	31	23	2023-04-03 20:01:08	1342177296	submission.event.fileEdited	0
+134	1048585	5	23	2023-04-03 20:01:08	1342177296	submission.event.fileEdited	0
+135	515	32	23	2023-04-03 20:01:09	1342177281	submission.event.fileUploaded	0
+136	1048585	5	23	2023-04-03 20:01:09	1342177288	submission.event.fileRevised	0
+137	515	32	23	2023-04-03 20:01:10	1342177296	submission.event.fileEdited	0
+138	1048585	5	23	2023-04-03 20:01:10	1342177296	submission.event.fileEdited	0
+139	515	33	23	2023-04-03 20:01:11	1342177281	submission.event.fileUploaded	0
+140	1048585	5	23	2023-04-03 20:01:11	1342177288	submission.event.fileRevised	0
+141	515	33	23	2023-04-03 20:01:11	1342177296	submission.event.fileEdited	0
+142	1048585	5	23	2023-04-03 20:01:11	1342177296	submission.event.fileEdited	0
+143	515	34	23	2023-04-03 20:01:12	1342177281	submission.event.fileUploaded	0
+144	1048585	5	23	2023-04-03 20:01:12	1342177288	submission.event.fileRevised	0
+145	515	34	23	2023-04-03 20:01:12	1342177296	submission.event.fileEdited	0
+146	1048585	5	23	2023-04-03 20:01:12	1342177296	submission.event.fileEdited	0
+147	1048585	5	23	2023-04-03 20:02:00	268435457	submission.event.submissionSubmitted	0
+148	1048585	5	3	2023-04-03 20:02:19	805306371	editor.submission.decision.sendInternalReview.log	0
+149	515	35	3	2023-04-03 20:02:19	1342177281	submission.event.fileUploaded	0
+150	1048585	5	3	2023-04-03 20:02:19	1342177288	submission.event.fileRevised	0
+151	515	36	3	2023-04-03 20:02:19	1342177281	submission.event.fileUploaded	0
+152	1048585	5	3	2023-04-03 20:02:19	1342177288	submission.event.fileRevised	0
+153	515	37	3	2023-04-03 20:02:20	1342177281	submission.event.fileUploaded	0
+154	1048585	5	3	2023-04-03 20:02:20	1342177288	submission.event.fileRevised	0
+155	515	38	3	2023-04-03 20:02:20	1342177281	submission.event.fileUploaded	0
+156	1048585	5	3	2023-04-03 20:02:20	1342177288	submission.event.fileRevised	0
+157	515	39	3	2023-04-03 20:02:20	1342177281	submission.event.fileUploaded	0
+158	1048585	5	3	2023-04-03 20:02:20	1342177288	submission.event.fileRevised	0
+159	515	40	3	2023-04-03 20:02:20	1342177281	submission.event.fileUploaded	0
+160	1048585	5	3	2023-04-03 20:02:20	1342177288	submission.event.fileRevised	0
+161	1048585	5	3	2023-04-03 20:02:32	1073741825	log.review.reviewerAssigned	0
+162	1048585	5	3	2023-04-03 20:02:40	805306371	editor.submission.decision.sendExternalReview.log	0
+163	1048585	5	3	2023-04-03 20:02:52	1073741825	log.review.reviewerAssigned	0
+164	1048585	5	3	2023-04-03 20:03:00	805306371	editor.submission.decision.accept.log	0
+165	1048585	5	3	2023-04-03 20:03:11	268435459	submission.event.participantAdded	0
+166	1048585	5	3	2023-04-03 20:03:20	805306371	editor.submission.decision.sendToProduction.log	0
+167	1048585	5	3	2023-04-03 20:03:32	268435459	submission.event.participantAdded	0
+168	1048585	5	3	2023-04-03 20:03:40	268435459	submission.event.participantAdded	0
+169	1048585	5	3	2023-04-03 20:03:47	268435474	submission.event.publicationFormatCreated	0
+170	515	41	3	2023-04-03 20:03:51	1342177281	submission.event.fileUploaded	0
+171	1048585	5	3	2023-04-03 20:03:51	1342177288	submission.event.fileRevised	0
+172	1048585	5	3	2023-04-03 20:03:54	268435464	submission.event.publicationFormatPublished	0
+173	1048585	5	3	2023-04-03 20:03:56	268435476	submission.event.publicationFormatMadeAvailable	0
+174	515	41	3	2023-04-03 20:03:59	1342177296	submission.event.fileEdited	0
+175	1048585	5	3	2023-04-03 20:03:59	1342177296	submission.event.fileEdited	0
+176	515	41	3	2023-04-03 20:03:59	1342177287	submission.event.signoffSignoff	0
+177	515	41	3	2023-04-03 20:04:02	1342177296	submission.event.fileEdited	0
+178	1048585	5	3	2023-04-03 20:04:02	1342177296	submission.event.fileEdited	0
+179	1048585	5	3	2023-04-03 20:04:05	268435462	publication.event.published	0
+180	1048585	5	3	2023-04-03 20:04:18	268435463	publication.event.unpublished	0
+181	1048585	5	3	2023-04-03 20:04:29	268435462	publication.event.published	0
+182	1048585	6	24	2023-04-03 20:04:40	268435458	submission.event.general.metadataUpdated	0
+183	1048585	6	24	2023-04-03 20:04:40	268435458	submission.event.general.metadataUpdated	0
+184	515	42	24	2023-04-03 20:04:44	1342177281	submission.event.fileUploaded	0
+185	1048585	6	24	2023-04-03 20:04:44	1342177288	submission.event.fileRevised	0
+186	515	42	24	2023-04-03 20:04:45	1342177296	submission.event.fileEdited	0
+187	1048585	6	24	2023-04-03 20:04:45	1342177296	submission.event.fileEdited	0
+188	515	43	24	2023-04-03 20:04:45	1342177281	submission.event.fileUploaded	0
+189	1048585	6	24	2023-04-03 20:04:45	1342177288	submission.event.fileRevised	0
+190	515	43	24	2023-04-03 20:04:46	1342177296	submission.event.fileEdited	0
+191	1048585	6	24	2023-04-03 20:04:46	1342177296	submission.event.fileEdited	0
+192	515	44	24	2023-04-03 20:04:47	1342177281	submission.event.fileUploaded	0
+193	1048585	6	24	2023-04-03 20:04:47	1342177288	submission.event.fileRevised	0
+194	515	44	24	2023-04-03 20:04:47	1342177296	submission.event.fileEdited	0
+195	1048585	6	24	2023-04-03 20:04:47	1342177296	submission.event.fileEdited	0
+196	515	45	24	2023-04-03 20:04:48	1342177281	submission.event.fileUploaded	0
+197	1048585	6	24	2023-04-03 20:04:48	1342177288	submission.event.fileRevised	0
+198	515	45	24	2023-04-03 20:04:48	1342177296	submission.event.fileEdited	0
+199	1048585	6	24	2023-04-03 20:04:48	1342177296	submission.event.fileEdited	0
+200	1048585	6	24	2023-04-03 20:05:18	268435457	submission.event.submissionSubmitted	0
+201	1048585	6	3	2023-04-03 20:05:34	805306371	editor.submission.decision.sendInternalReview.log	0
+202	515	46	3	2023-04-03 20:05:35	1342177281	submission.event.fileUploaded	0
+203	1048585	6	3	2023-04-03 20:05:35	1342177288	submission.event.fileRevised	0
+204	515	47	3	2023-04-03 20:05:35	1342177281	submission.event.fileUploaded	0
+205	1048585	6	3	2023-04-03 20:05:35	1342177288	submission.event.fileRevised	0
+206	515	48	3	2023-04-03 20:05:35	1342177281	submission.event.fileUploaded	0
+207	1048585	6	3	2023-04-03 20:05:35	1342177288	submission.event.fileRevised	0
+208	515	49	3	2023-04-03 20:05:36	1342177281	submission.event.fileUploaded	0
+209	1048585	6	3	2023-04-03 20:05:36	1342177288	submission.event.fileRevised	0
+210	1048585	6	3	2023-04-03 20:05:46	268435459	submission.event.participantAdded	0
+211	1048585	6	3	2023-04-03 20:05:52	268435459	submission.event.participantAdded	0
+212	1048585	6	6	2023-04-03 20:06:09	805306372	editor.submission.recommend.accept.log	0
+213	1048585	7	25	2023-04-03 20:06:36	268435458	submission.event.general.metadataUpdated	0
+214	1048585	7	25	2023-04-03 20:06:36	268435458	submission.event.general.metadataUpdated	0
+215	515	50	25	2023-04-03 20:06:40	1342177281	submission.event.fileUploaded	0
+216	1048585	7	25	2023-04-03 20:06:40	1342177288	submission.event.fileRevised	0
+217	515	50	25	2023-04-03 20:06:40	1342177296	submission.event.fileEdited	0
+218	1048585	7	25	2023-04-03 20:06:40	1342177296	submission.event.fileEdited	0
+219	515	51	25	2023-04-03 20:06:41	1342177281	submission.event.fileUploaded	0
+220	1048585	7	25	2023-04-03 20:06:41	1342177288	submission.event.fileRevised	0
+221	515	51	25	2023-04-03 20:06:41	1342177296	submission.event.fileEdited	0
+222	1048585	7	25	2023-04-03 20:06:41	1342177296	submission.event.fileEdited	0
+223	515	52	25	2023-04-03 20:06:42	1342177281	submission.event.fileUploaded	0
+224	1048585	7	25	2023-04-03 20:06:42	1342177288	submission.event.fileRevised	0
+225	515	52	25	2023-04-03 20:06:43	1342177296	submission.event.fileEdited	0
+226	1048585	7	25	2023-04-03 20:06:43	1342177296	submission.event.fileEdited	0
+227	515	53	25	2023-04-03 20:06:43	1342177281	submission.event.fileUploaded	0
+228	1048585	7	25	2023-04-03 20:06:43	1342177288	submission.event.fileRevised	0
+229	515	53	25	2023-04-03 20:06:44	1342177296	submission.event.fileEdited	0
+230	1048585	7	25	2023-04-03 20:06:44	1342177296	submission.event.fileEdited	0
+231	515	54	25	2023-04-03 20:06:45	1342177281	submission.event.fileUploaded	0
+232	1048585	7	25	2023-04-03 20:06:45	1342177288	submission.event.fileRevised	0
+233	515	54	25	2023-04-03 20:06:45	1342177296	submission.event.fileEdited	0
+234	1048585	7	25	2023-04-03 20:06:45	1342177296	submission.event.fileEdited	0
+235	1048585	7	25	2023-04-03 20:07:26	268435457	submission.event.submissionSubmitted	0
+236	1048585	7	3	2023-04-03 20:07:44	805306371	editor.submission.decision.sendExternalReview.log	0
+237	515	55	3	2023-04-03 20:07:45	1342177281	submission.event.fileUploaded	0
+238	1048585	7	3	2023-04-03 20:07:45	1342177288	submission.event.fileRevised	0
+239	515	56	3	2023-04-03 20:07:45	1342177281	submission.event.fileUploaded	0
+240	1048585	7	3	2023-04-03 20:07:45	1342177288	submission.event.fileRevised	0
+241	515	57	3	2023-04-03 20:07:45	1342177281	submission.event.fileUploaded	0
+242	1048585	7	3	2023-04-03 20:07:45	1342177288	submission.event.fileRevised	0
+243	515	58	3	2023-04-03 20:07:45	1342177281	submission.event.fileUploaded	0
+244	1048585	7	3	2023-04-03 20:07:45	1342177288	submission.event.fileRevised	0
+245	515	59	3	2023-04-03 20:07:45	1342177281	submission.event.fileUploaded	0
+246	1048585	7	3	2023-04-03 20:07:45	1342177288	submission.event.fileRevised	0
+247	1048585	7	3	2023-04-03 20:07:56	1073741825	log.review.reviewerAssigned	0
+248	1048585	7	3	2023-04-03 20:08:03	805306371	editor.submission.decision.accept.log	0
+249	1048585	7	3	2023-04-03 20:08:14	268435459	submission.event.participantAdded	0
+250	1048585	8	3	2023-04-03 20:08:28	268435458	submission.event.general.metadataUpdated	0
+251	515	60	3	2023-04-03 20:08:31	1342177281	submission.event.fileUploaded	0
+252	1048585	8	3	2023-04-03 20:08:31	1342177288	submission.event.fileRevised	0
+253	515	60	3	2023-04-03 20:08:31	1342177296	submission.event.fileEdited	0
+254	1048585	8	3	2023-04-03 20:08:31	1342177296	submission.event.fileEdited	0
+255	1048585	8	3	2023-04-03 20:08:32	268435457	submission.event.submissionSubmitted	0
+256	1048585	9	26	2023-04-03 20:08:42	268435458	submission.event.general.metadataUpdated	0
+257	1048585	9	26	2023-04-03 20:08:42	268435458	submission.event.general.metadataUpdated	0
+258	515	61	26	2023-04-03 20:08:46	1342177281	submission.event.fileUploaded	0
+259	1048585	9	26	2023-04-03 20:08:46	1342177288	submission.event.fileRevised	0
+260	515	61	26	2023-04-03 20:08:46	1342177296	submission.event.fileEdited	0
+261	1048585	9	26	2023-04-03 20:08:46	1342177296	submission.event.fileEdited	0
+262	515	62	26	2023-04-03 20:08:47	1342177281	submission.event.fileUploaded	0
+263	1048585	9	26	2023-04-03 20:08:47	1342177288	submission.event.fileRevised	0
+264	515	62	26	2023-04-03 20:08:47	1342177296	submission.event.fileEdited	0
+265	1048585	9	26	2023-04-03 20:08:47	1342177296	submission.event.fileEdited	0
+266	515	63	26	2023-04-03 20:08:48	1342177281	submission.event.fileUploaded	0
+267	1048585	9	26	2023-04-03 20:08:48	1342177288	submission.event.fileRevised	0
+268	515	63	26	2023-04-03 20:08:49	1342177296	submission.event.fileEdited	0
+269	1048585	9	26	2023-04-03 20:08:49	1342177296	submission.event.fileEdited	0
+270	515	64	26	2023-04-03 20:08:50	1342177281	submission.event.fileUploaded	0
+271	1048585	9	26	2023-04-03 20:08:50	1342177288	submission.event.fileRevised	0
+272	515	64	26	2023-04-03 20:08:50	1342177296	submission.event.fileEdited	0
+273	1048585	9	26	2023-04-03 20:08:50	1342177296	submission.event.fileEdited	0
+274	515	65	26	2023-04-03 20:08:51	1342177281	submission.event.fileUploaded	0
+275	1048585	9	26	2023-04-03 20:08:51	1342177288	submission.event.fileRevised	0
+276	515	65	26	2023-04-03 20:08:51	1342177296	submission.event.fileEdited	0
+277	1048585	9	26	2023-04-03 20:08:51	1342177296	submission.event.fileEdited	0
+278	1048585	9	26	2023-04-03 20:09:31	268435457	submission.event.submissionSubmitted	0
+279	1048585	9	3	2023-04-03 20:09:50	805306371	editor.submission.decision.sendInternalReview.log	0
+280	515	66	3	2023-04-03 20:09:50	1342177281	submission.event.fileUploaded	0
+281	1048585	9	3	2023-04-03 20:09:50	1342177288	submission.event.fileRevised	0
+282	515	67	3	2023-04-03 20:09:51	1342177281	submission.event.fileUploaded	0
+283	1048585	9	3	2023-04-03 20:09:51	1342177288	submission.event.fileRevised	0
+284	515	68	3	2023-04-03 20:09:51	1342177281	submission.event.fileUploaded	0
+285	1048585	9	3	2023-04-03 20:09:51	1342177288	submission.event.fileRevised	0
+286	515	69	3	2023-04-03 20:09:51	1342177281	submission.event.fileUploaded	0
+287	1048585	9	3	2023-04-03 20:09:51	1342177288	submission.event.fileRevised	0
+288	515	70	3	2023-04-03 20:09:51	1342177281	submission.event.fileUploaded	0
+289	1048585	9	3	2023-04-03 20:09:51	1342177288	submission.event.fileRevised	0
+290	1048585	10	27	2023-04-03 20:10:07	268435458	submission.event.general.metadataUpdated	0
+291	1048585	10	27	2023-04-03 20:10:08	268435458	submission.event.general.metadataUpdated	0
+292	515	71	27	2023-04-03 20:10:11	1342177281	submission.event.fileUploaded	0
+293	1048585	10	27	2023-04-03 20:10:11	1342177288	submission.event.fileRevised	0
+294	515	71	27	2023-04-03 20:10:11	1342177296	submission.event.fileEdited	0
+295	1048585	10	27	2023-04-03 20:10:11	1342177296	submission.event.fileEdited	0
+296	515	72	27	2023-04-03 20:10:12	1342177281	submission.event.fileUploaded	0
+297	1048585	10	27	2023-04-03 20:10:12	1342177288	submission.event.fileRevised	0
+298	515	72	27	2023-04-03 20:10:13	1342177296	submission.event.fileEdited	0
+299	1048585	10	27	2023-04-03 20:10:13	1342177296	submission.event.fileEdited	0
+300	515	73	27	2023-04-03 20:10:13	1342177281	submission.event.fileUploaded	0
+301	1048585	10	27	2023-04-03 20:10:13	1342177288	submission.event.fileRevised	0
+302	515	73	27	2023-04-03 20:10:14	1342177296	submission.event.fileEdited	0
+303	1048585	10	27	2023-04-03 20:10:14	1342177296	submission.event.fileEdited	0
+304	515	74	27	2023-04-03 20:10:15	1342177281	submission.event.fileUploaded	0
+305	1048585	10	27	2023-04-03 20:10:15	1342177288	submission.event.fileRevised	0
+306	515	74	27	2023-04-03 20:10:15	1342177296	submission.event.fileEdited	0
+307	1048585	10	27	2023-04-03 20:10:15	1342177296	submission.event.fileEdited	0
+308	515	75	27	2023-04-03 20:10:16	1342177281	submission.event.fileUploaded	0
+309	1048585	10	27	2023-04-03 20:10:16	1342177288	submission.event.fileRevised	0
+310	515	75	27	2023-04-03 20:10:16	1342177296	submission.event.fileEdited	0
+311	1048585	10	27	2023-04-03 20:10:17	1342177296	submission.event.fileEdited	0
+312	515	76	27	2023-04-03 20:10:17	1342177281	submission.event.fileUploaded	0
+313	1048585	10	27	2023-04-03 20:10:17	1342177288	submission.event.fileRevised	0
+314	515	76	27	2023-04-03 20:10:18	1342177296	submission.event.fileEdited	0
+315	1048585	10	27	2023-04-03 20:10:18	1342177296	submission.event.fileEdited	0
+316	515	77	27	2023-04-03 20:10:19	1342177281	submission.event.fileUploaded	0
+317	1048585	10	27	2023-04-03 20:10:19	1342177288	submission.event.fileRevised	0
+318	515	77	27	2023-04-03 20:10:19	1342177296	submission.event.fileEdited	0
+319	1048585	10	27	2023-04-03 20:10:19	1342177296	submission.event.fileEdited	0
+320	515	78	27	2023-04-03 20:10:20	1342177281	submission.event.fileUploaded	0
+321	1048585	10	27	2023-04-03 20:10:20	1342177288	submission.event.fileRevised	0
+322	515	78	27	2023-04-03 20:10:20	1342177296	submission.event.fileEdited	0
+323	1048585	10	27	2023-04-03 20:10:20	1342177296	submission.event.fileEdited	0
+324	515	79	27	2023-04-03 20:10:21	1342177281	submission.event.fileUploaded	0
+325	1048585	10	27	2023-04-03 20:10:22	1342177288	submission.event.fileRevised	0
+326	515	79	27	2023-04-03 20:10:22	1342177296	submission.event.fileEdited	0
+327	1048585	10	27	2023-04-03 20:10:22	1342177296	submission.event.fileEdited	0
+328	1048585	10	27	2023-04-03 20:11:44	268435457	submission.event.submissionSubmitted	0
+329	1048585	11	28	2023-04-03 20:11:56	268435458	submission.event.general.metadataUpdated	0
+330	1048585	11	28	2023-04-03 20:11:57	268435458	submission.event.general.metadataUpdated	0
+331	515	80	28	2023-04-03 20:12:00	1342177281	submission.event.fileUploaded	0
+332	1048585	11	28	2023-04-03 20:12:00	1342177288	submission.event.fileRevised	0
+333	515	80	28	2023-04-03 20:12:00	1342177296	submission.event.fileEdited	0
+334	1048585	11	28	2023-04-03 20:12:00	1342177296	submission.event.fileEdited	0
+335	515	81	28	2023-04-03 20:12:01	1342177281	submission.event.fileUploaded	0
+336	1048585	11	28	2023-04-03 20:12:01	1342177288	submission.event.fileRevised	0
+337	515	81	28	2023-04-03 20:12:02	1342177296	submission.event.fileEdited	0
+338	1048585	11	28	2023-04-03 20:12:02	1342177296	submission.event.fileEdited	0
+339	1048585	11	28	2023-04-03 20:12:15	268435457	submission.event.submissionSubmitted	0
+340	1048585	11	3	2023-04-03 20:12:31	805306371	editor.submission.decision.sendInternalReview.log	0
+341	515	82	3	2023-04-03 20:12:31	1342177281	submission.event.fileUploaded	0
+342	1048585	11	3	2023-04-03 20:12:31	1342177288	submission.event.fileRevised	0
+343	515	83	3	2023-04-03 20:12:31	1342177281	submission.event.fileUploaded	0
+344	1048585	11	3	2023-04-03 20:12:31	1342177288	submission.event.fileRevised	0
+345	1048585	11	3	2023-04-03 20:12:42	1073741825	log.review.reviewerAssigned	0
+346	1048585	11	3	2023-04-03 20:12:47	805306371	editor.submission.decision.sendExternalReview.log	0
+347	1048585	11	3	2023-04-03 20:12:59	1073741825	log.review.reviewerAssigned	0
+348	1048585	11	3	2023-04-03 20:13:06	1073741825	log.review.reviewerAssigned	0
+349	1048585	11	10	2023-04-03 20:13:15	1073741830	log.review.reviewAccepted	0
+350	1048585	11	10	2023-04-03 20:13:20	1073741848	log.review.reviewReady	0
+351	1048585	11	12	2023-04-03 20:13:28	1073741830	log.review.reviewAccepted	0
+352	1048585	11	12	2023-04-03 20:13:34	1073741848	log.review.reviewReady	0
+353	1048585	11	3	2023-04-03 20:13:54	805306371	editor.submission.decision.accept.log	0
+354	1048585	11	3	2023-04-03 20:13:54	1073741856	submission.event.decisionReviewerEmailSent	0
+355	1048585	12	29	2023-04-03 20:14:09	268435458	submission.event.general.metadataUpdated	0
+356	1048585	12	29	2023-04-03 20:14:10	268435458	submission.event.general.metadataUpdated	0
+357	515	84	29	2023-04-03 20:14:13	1342177281	submission.event.fileUploaded	0
+358	1048585	12	29	2023-04-03 20:14:13	1342177288	submission.event.fileRevised	0
+359	515	84	29	2023-04-03 20:14:14	1342177296	submission.event.fileEdited	0
+360	1048585	12	29	2023-04-03 20:14:14	1342177296	submission.event.fileEdited	0
+361	515	85	29	2023-04-03 20:14:15	1342177281	submission.event.fileUploaded	0
+362	1048585	12	29	2023-04-03 20:14:15	1342177288	submission.event.fileRevised	0
+363	515	85	29	2023-04-03 20:14:15	1342177296	submission.event.fileEdited	0
+364	1048585	12	29	2023-04-03 20:14:15	1342177296	submission.event.fileEdited	0
+365	515	86	29	2023-04-03 20:14:16	1342177281	submission.event.fileUploaded	0
+366	1048585	12	29	2023-04-03 20:14:16	1342177288	submission.event.fileRevised	0
+367	515	86	29	2023-04-03 20:14:16	1342177296	submission.event.fileEdited	0
+368	1048585	12	29	2023-04-03 20:14:16	1342177296	submission.event.fileEdited	0
+369	1048585	12	29	2023-04-03 20:14:41	268435457	submission.event.submissionSubmitted	0
+370	1048585	12	3	2023-04-03 20:14:59	805306371	editor.submission.decision.sendInternalReview.log	0
+371	515	87	3	2023-04-03 20:14:59	1342177281	submission.event.fileUploaded	0
+372	1048585	12	3	2023-04-03 20:14:59	1342177288	submission.event.fileRevised	0
+373	515	88	3	2023-04-03 20:14:59	1342177281	submission.event.fileUploaded	0
+374	1048585	12	3	2023-04-03 20:14:59	1342177288	submission.event.fileRevised	0
+375	515	89	3	2023-04-03 20:14:59	1342177281	submission.event.fileUploaded	0
+376	1048585	12	3	2023-04-03 20:14:59	1342177288	submission.event.fileRevised	0
+377	1048585	12	3	2023-04-03 20:15:10	1073741825	log.review.reviewerAssigned	0
+378	1048585	12	3	2023-04-03 20:15:18	1073741825	log.review.reviewerAssigned	0
+379	1048585	12	3	2023-04-03 20:15:27	1073741825	log.review.reviewerAssigned	0
+380	1048585	12	8	2023-04-03 20:15:35	1073741830	log.review.reviewAccepted	0
+381	1048585	12	8	2023-04-03 20:15:41	1073741848	log.review.reviewReady	0
+382	1048585	13	30	2023-04-03 20:15:51	268435458	submission.event.general.metadataUpdated	0
+383	1048585	13	30	2023-04-03 20:15:52	268435458	submission.event.general.metadataUpdated	0
+384	515	90	30	2023-04-03 20:15:55	1342177281	submission.event.fileUploaded	0
+385	1048585	13	30	2023-04-03 20:15:55	1342177288	submission.event.fileRevised	0
+386	515	90	30	2023-04-03 20:15:56	1342177296	submission.event.fileEdited	0
+387	1048585	13	30	2023-04-03 20:15:56	1342177296	submission.event.fileEdited	0
+388	515	91	30	2023-04-03 20:15:57	1342177281	submission.event.fileUploaded	0
+389	1048585	13	30	2023-04-03 20:15:57	1342177288	submission.event.fileRevised	0
+390	515	91	30	2023-04-03 20:15:57	1342177296	submission.event.fileEdited	0
+391	1048585	13	30	2023-04-03 20:15:57	1342177296	submission.event.fileEdited	0
+392	515	92	30	2023-04-03 20:15:58	1342177281	submission.event.fileUploaded	0
+393	1048585	13	30	2023-04-03 20:15:58	1342177288	submission.event.fileRevised	0
+394	515	92	30	2023-04-03 20:15:58	1342177296	submission.event.fileEdited	0
+395	1048585	13	30	2023-04-03 20:15:58	1342177296	submission.event.fileEdited	0
+396	1048585	13	30	2023-04-03 20:16:21	268435457	submission.event.submissionSubmitted	0
+397	1048585	13	3	2023-04-03 20:16:38	805306371	editor.submission.decision.sendInternalReview.log	0
+398	515	93	3	2023-04-03 20:16:39	1342177281	submission.event.fileUploaded	0
+399	1048585	13	3	2023-04-03 20:16:39	1342177288	submission.event.fileRevised	0
+400	515	94	3	2023-04-03 20:16:39	1342177281	submission.event.fileUploaded	0
+401	1048585	13	3	2023-04-03 20:16:39	1342177288	submission.event.fileRevised	0
+402	515	95	3	2023-04-03 20:16:39	1342177281	submission.event.fileUploaded	0
+403	1048585	13	3	2023-04-03 20:16:39	1342177288	submission.event.fileRevised	0
+404	1048585	13	3	2023-04-03 20:16:49	1073741825	log.review.reviewerAssigned	0
+405	1048585	13	3	2023-04-03 20:16:56	805306371	editor.submission.decision.sendExternalReview.log	0
+406	1048585	13	3	2023-04-03 20:17:07	1073741825	log.review.reviewerAssigned	0
+407	1048585	13	3	2023-04-03 20:17:15	1073741825	log.review.reviewerAssigned	0
+408	1048585	13	3	2023-04-03 20:17:24	1073741825	log.review.reviewerAssigned	0
+409	1048585	13	10	2023-04-03 20:17:33	1073741830	log.review.reviewAccepted	0
+410	1048585	13	10	2023-04-03 20:17:39	1073741848	log.review.reviewReady	0
+411	1048585	13	12	2023-04-03 20:17:48	1073741830	log.review.reviewAccepted	0
+412	1048585	13	12	2023-04-03 20:17:53	1073741848	log.review.reviewReady	0
+413	1048585	13	3	2023-04-03 20:18:16	805306371	editor.submission.decision.accept.log	0
+414	1048585	13	3	2023-04-03 20:18:16	1073741856	submission.event.decisionReviewerEmailSent	0
+415	1048585	14	31	2023-04-03 20:18:32	268435458	submission.event.general.metadataUpdated	0
+416	1048585	14	31	2023-04-03 20:18:33	268435458	submission.event.general.metadataUpdated	0
+417	515	96	31	2023-04-03 20:18:37	1342177281	submission.event.fileUploaded	0
+418	1048585	14	31	2023-04-03 20:18:37	1342177288	submission.event.fileRevised	0
+419	515	96	31	2023-04-03 20:18:37	1342177296	submission.event.fileEdited	0
+420	1048585	14	31	2023-04-03 20:18:37	1342177296	submission.event.fileEdited	0
+421	515	97	31	2023-04-03 20:18:38	1342177281	submission.event.fileUploaded	0
+422	1048585	14	31	2023-04-03 20:18:38	1342177288	submission.event.fileRevised	0
+423	515	97	31	2023-04-03 20:18:38	1342177296	submission.event.fileEdited	0
+424	1048585	14	31	2023-04-03 20:18:38	1342177296	submission.event.fileEdited	0
+425	515	98	31	2023-04-03 20:18:39	1342177281	submission.event.fileUploaded	0
+426	1048585	14	31	2023-04-03 20:18:39	1342177288	submission.event.fileRevised	0
+427	515	98	31	2023-04-03 20:18:39	1342177296	submission.event.fileEdited	0
+428	1048585	14	31	2023-04-03 20:18:39	1342177296	submission.event.fileEdited	0
+429	515	99	31	2023-04-03 20:18:40	1342177281	submission.event.fileUploaded	0
+430	1048585	14	31	2023-04-03 20:18:40	1342177288	submission.event.fileRevised	0
+431	515	99	31	2023-04-03 20:18:41	1342177296	submission.event.fileEdited	0
+432	1048585	14	31	2023-04-03 20:18:41	1342177296	submission.event.fileEdited	0
+433	515	100	31	2023-04-03 20:18:42	1342177281	submission.event.fileUploaded	0
+434	1048585	14	31	2023-04-03 20:18:42	1342177288	submission.event.fileRevised	0
+435	515	100	31	2023-04-03 20:18:42	1342177296	submission.event.fileEdited	0
+436	1048585	14	31	2023-04-03 20:18:42	1342177296	submission.event.fileEdited	0
+437	515	101	31	2023-04-03 20:18:43	1342177281	submission.event.fileUploaded	0
+438	1048585	14	31	2023-04-03 20:18:43	1342177288	submission.event.fileRevised	0
+439	515	101	31	2023-04-03 20:18:44	1342177296	submission.event.fileEdited	0
+440	1048585	14	31	2023-04-03 20:18:44	1342177296	submission.event.fileEdited	0
+441	1048585	14	31	2023-04-03 20:19:16	268435457	submission.event.submissionSubmitted	0
+442	1048585	14	3	2023-04-03 20:19:35	805306371	editor.submission.decision.sendInternalReview.log	0
+443	515	102	3	2023-04-03 20:19:36	1342177281	submission.event.fileUploaded	0
+444	1048585	14	3	2023-04-03 20:19:36	1342177288	submission.event.fileRevised	0
+445	515	103	3	2023-04-03 20:19:36	1342177281	submission.event.fileUploaded	0
+446	1048585	14	3	2023-04-03 20:19:36	1342177288	submission.event.fileRevised	0
+447	515	104	3	2023-04-03 20:19:36	1342177281	submission.event.fileUploaded	0
+448	1048585	14	3	2023-04-03 20:19:36	1342177288	submission.event.fileRevised	0
+449	515	105	3	2023-04-03 20:19:37	1342177281	submission.event.fileUploaded	0
+450	1048585	14	3	2023-04-03 20:19:37	1342177288	submission.event.fileRevised	0
+451	515	106	3	2023-04-03 20:19:37	1342177281	submission.event.fileUploaded	0
+452	1048585	14	3	2023-04-03 20:19:37	1342177288	submission.event.fileRevised	0
+453	515	107	3	2023-04-03 20:19:37	1342177281	submission.event.fileUploaded	0
+454	1048585	14	3	2023-04-03 20:19:37	1342177288	submission.event.fileRevised	0
+455	1048585	14	3	2023-04-03 20:19:49	1073741825	log.review.reviewerAssigned	0
+456	1048585	14	3	2023-04-03 20:19:56	805306371	editor.submission.decision.sendExternalReview.log	0
+457	1048585	14	3	2023-04-03 20:20:08	1073741825	log.review.reviewerAssigned	0
+458	1048585	14	3	2023-04-03 20:20:15	805306371	editor.submission.decision.accept.log	0
+459	1048585	14	3	2023-04-03 20:20:27	268435459	submission.event.participantAdded	0
+460	1048585	14	3	2023-04-03 20:20:35	805306371	editor.submission.decision.sendToProduction.log	0
+461	1048585	14	3	2023-04-03 20:20:48	268435459	submission.event.participantAdded	0
+462	1048585	14	3	2023-04-03 20:20:56	268435459	submission.event.participantAdded	0
+463	1048585	14	3	2023-04-03 20:21:02	268435474	submission.event.publicationFormatCreated	0
+464	515	108	3	2023-04-03 20:21:10	1342177281	submission.event.fileUploaded	0
+465	1048585	14	3	2023-04-03 20:21:10	1342177288	submission.event.fileRevised	0
+466	515	109	3	2023-04-03 20:21:10	1342177281	submission.event.fileUploaded	0
+467	1048585	14	3	2023-04-03 20:21:10	1342177288	submission.event.fileRevised	0
+468	515	110	3	2023-04-03 20:21:10	1342177281	submission.event.fileUploaded	0
+469	1048585	14	3	2023-04-03 20:21:10	1342177288	submission.event.fileRevised	0
+470	515	111	3	2023-04-03 20:21:10	1342177281	submission.event.fileUploaded	0
+471	1048585	14	3	2023-04-03 20:21:10	1342177288	submission.event.fileRevised	0
+472	515	112	3	2023-04-03 20:21:10	1342177281	submission.event.fileUploaded	0
+473	1048585	14	3	2023-04-03 20:21:10	1342177288	submission.event.fileRevised	0
+474	515	113	3	2023-04-03 20:21:10	1342177281	submission.event.fileUploaded	0
+475	1048585	14	3	2023-04-03 20:21:10	1342177288	submission.event.fileRevised	0
+476	1048585	14	3	2023-04-03 20:21:13	268435464	submission.event.publicationFormatPublished	0
+477	1048585	14	3	2023-04-03 20:21:15	268435476	submission.event.publicationFormatMadeAvailable	0
+478	515	113	3	2023-04-03 20:21:18	1342177296	submission.event.fileEdited	0
+479	1048585	14	3	2023-04-03 20:21:18	1342177296	submission.event.fileEdited	0
+480	515	113	3	2023-04-03 20:21:18	1342177287	submission.event.signoffSignoff	0
+481	515	113	3	2023-04-03 20:21:21	1342177296	submission.event.fileEdited	0
+482	1048585	14	3	2023-04-03 20:21:21	1342177296	submission.event.fileEdited	0
+483	515	112	3	2023-04-03 20:21:25	1342177296	submission.event.fileEdited	0
+484	1048585	14	3	2023-04-03 20:21:25	1342177296	submission.event.fileEdited	0
+485	515	112	3	2023-04-03 20:21:25	1342177287	submission.event.signoffSignoff	0
+486	515	112	3	2023-04-03 20:21:28	1342177296	submission.event.fileEdited	0
+487	1048585	14	3	2023-04-03 20:21:28	1342177296	submission.event.fileEdited	0
+488	515	111	3	2023-04-03 20:21:31	1342177296	submission.event.fileEdited	0
+489	1048585	14	3	2023-04-03 20:21:31	1342177296	submission.event.fileEdited	0
+490	515	111	3	2023-04-03 20:21:31	1342177287	submission.event.signoffSignoff	0
+491	515	111	3	2023-04-03 20:21:34	1342177296	submission.event.fileEdited	0
+492	1048585	14	3	2023-04-03 20:21:34	1342177296	submission.event.fileEdited	0
+493	515	110	3	2023-04-03 20:21:37	1342177296	submission.event.fileEdited	0
+494	1048585	14	3	2023-04-03 20:21:37	1342177296	submission.event.fileEdited	0
+495	515	110	3	2023-04-03 20:21:37	1342177287	submission.event.signoffSignoff	0
+496	515	110	3	2023-04-03 20:21:40	1342177296	submission.event.fileEdited	0
+497	1048585	14	3	2023-04-03 20:21:40	1342177296	submission.event.fileEdited	0
+498	515	109	3	2023-04-03 20:21:44	1342177296	submission.event.fileEdited	0
+499	1048585	14	3	2023-04-03 20:21:44	1342177296	submission.event.fileEdited	0
+500	515	109	3	2023-04-03 20:21:44	1342177287	submission.event.signoffSignoff	0
+501	515	109	3	2023-04-03 20:21:47	1342177296	submission.event.fileEdited	0
+502	1048585	14	3	2023-04-03 20:21:47	1342177296	submission.event.fileEdited	0
+503	515	108	3	2023-04-03 20:21:50	1342177296	submission.event.fileEdited	0
+504	1048585	14	3	2023-04-03 20:21:50	1342177296	submission.event.fileEdited	0
+505	515	108	3	2023-04-03 20:21:50	1342177287	submission.event.signoffSignoff	0
+506	515	108	3	2023-04-03 20:21:54	1342177296	submission.event.fileEdited	0
+507	1048585	14	3	2023-04-03 20:21:54	1342177296	submission.event.fileEdited	0
+508	1048585	14	3	2023-04-03 20:21:57	268435462	publication.event.published	0
+509	1048585	15	32	2023-04-03 20:22:10	268435458	submission.event.general.metadataUpdated	0
+510	1048585	15	32	2023-04-03 20:22:11	268435458	submission.event.general.metadataUpdated	0
+511	515	114	32	2023-04-03 20:22:14	1342177281	submission.event.fileUploaded	0
+512	1048585	15	32	2023-04-03 20:22:14	1342177288	submission.event.fileRevised	0
+513	515	114	32	2023-04-03 20:22:14	1342177296	submission.event.fileEdited	0
+514	1048585	15	32	2023-04-03 20:22:14	1342177296	submission.event.fileEdited	0
+515	515	115	32	2023-04-03 20:22:15	1342177281	submission.event.fileUploaded	0
+516	1048585	15	32	2023-04-03 20:22:15	1342177288	submission.event.fileRevised	0
+517	515	115	32	2023-04-03 20:22:16	1342177296	submission.event.fileEdited	0
+518	1048585	15	32	2023-04-03 20:22:16	1342177296	submission.event.fileEdited	0
+519	515	116	32	2023-04-03 20:22:16	1342177281	submission.event.fileUploaded	0
+520	1048585	15	32	2023-04-03 20:22:16	1342177288	submission.event.fileRevised	0
+521	515	116	32	2023-04-03 20:22:17	1342177296	submission.event.fileEdited	0
+522	1048585	15	32	2023-04-03 20:22:17	1342177296	submission.event.fileEdited	0
+523	1048585	15	32	2023-04-03 20:22:37	268435457	submission.event.submissionSubmitted	0
+524	1048585	15	3	2023-04-03 20:22:55	805306371	editor.submission.decision.sendExternalReview.log	0
+525	515	117	3	2023-04-03 20:22:55	1342177281	submission.event.fileUploaded	0
+526	1048585	15	3	2023-04-03 20:22:55	1342177288	submission.event.fileRevised	0
+527	515	118	3	2023-04-03 20:22:55	1342177281	submission.event.fileUploaded	0
+528	1048585	15	3	2023-04-03 20:22:55	1342177288	submission.event.fileRevised	0
+529	515	119	3	2023-04-03 20:22:56	1342177281	submission.event.fileUploaded	0
+530	1048585	15	3	2023-04-03 20:22:56	1342177288	submission.event.fileRevised	0
+531	1048585	16	33	2023-04-03 20:23:10	268435458	submission.event.general.metadataUpdated	0
+532	1048585	16	33	2023-04-03 20:23:11	268435458	submission.event.general.metadataUpdated	0
+533	515	120	33	2023-04-03 20:23:14	1342177281	submission.event.fileUploaded	0
+534	1048585	16	33	2023-04-03 20:23:14	1342177288	submission.event.fileRevised	0
+535	515	120	33	2023-04-03 20:23:14	1342177296	submission.event.fileEdited	0
+536	1048585	16	33	2023-04-03 20:23:14	1342177296	submission.event.fileEdited	0
+537	515	121	33	2023-04-03 20:23:15	1342177281	submission.event.fileUploaded	0
+538	1048585	16	33	2023-04-03 20:23:15	1342177288	submission.event.fileRevised	0
+539	515	121	33	2023-04-03 20:23:16	1342177296	submission.event.fileEdited	0
+540	1048585	16	33	2023-04-03 20:23:16	1342177296	submission.event.fileEdited	0
+541	515	122	33	2023-04-03 20:23:16	1342177281	submission.event.fileUploaded	0
+542	1048585	16	33	2023-04-03 20:23:16	1342177288	submission.event.fileRevised	0
+543	515	122	33	2023-04-03 20:23:17	1342177296	submission.event.fileEdited	0
+544	1048585	16	33	2023-04-03 20:23:17	1342177296	submission.event.fileEdited	0
+545	515	123	33	2023-04-03 20:23:18	1342177281	submission.event.fileUploaded	0
+546	1048585	16	33	2023-04-03 20:23:18	1342177288	submission.event.fileRevised	0
+547	515	123	33	2023-04-03 20:23:18	1342177296	submission.event.fileEdited	0
+548	1048585	16	33	2023-04-03 20:23:18	1342177296	submission.event.fileEdited	0
+549	515	124	33	2023-04-03 20:23:19	1342177281	submission.event.fileUploaded	0
+550	1048585	16	33	2023-04-03 20:23:19	1342177288	submission.event.fileRevised	0
+551	515	124	33	2023-04-03 20:23:20	1342177296	submission.event.fileEdited	0
+552	1048585	16	33	2023-04-03 20:23:20	1342177296	submission.event.fileEdited	0
+553	1048585	16	33	2023-04-03 20:23:56	268435457	submission.event.submissionSubmitted	0
+554	1048585	16	3	2023-04-03 20:24:16	805306371	editor.submission.decision.sendExternalReview.log	0
+555	515	125	3	2023-04-03 20:24:16	1342177281	submission.event.fileUploaded	0
+556	1048585	16	3	2023-04-03 20:24:16	1342177288	submission.event.fileRevised	0
+557	515	126	3	2023-04-03 20:24:17	1342177281	submission.event.fileUploaded	0
+558	1048585	16	3	2023-04-03 20:24:17	1342177288	submission.event.fileRevised	0
+559	515	127	3	2023-04-03 20:24:17	1342177281	submission.event.fileUploaded	0
+560	1048585	16	3	2023-04-03 20:24:17	1342177288	submission.event.fileRevised	0
+561	515	128	3	2023-04-03 20:24:17	1342177281	submission.event.fileUploaded	0
+562	1048585	16	3	2023-04-03 20:24:17	1342177288	submission.event.fileRevised	0
+563	515	129	3	2023-04-03 20:24:17	1342177281	submission.event.fileUploaded	0
+564	1048585	16	3	2023-04-03 20:24:17	1342177288	submission.event.fileRevised	0
+565	1048585	16	3	2023-04-03 20:24:28	1073741825	log.review.reviewerAssigned	0
+566	1048585	16	3	2023-04-03 20:24:37	1073741825	log.review.reviewerAssigned	0
+567	1048585	16	3	2023-04-03 20:24:45	1073741825	log.review.reviewerAssigned	0
+568	1048585	16	10	2023-04-03 20:24:55	1073741830	log.review.reviewAccepted	0
+569	1048585	16	10	2023-04-03 20:25:01	1073741848	log.review.reviewReady	0
+570	1048585	17	34	2023-04-03 20:25:11	268435458	submission.event.general.metadataUpdated	0
+571	1048585	17	34	2023-04-03 20:25:12	268435458	submission.event.general.metadataUpdated	0
+572	515	130	34	2023-04-03 20:25:15	1342177281	submission.event.fileUploaded	0
+573	1048585	17	34	2023-04-03 20:25:15	1342177288	submission.event.fileRevised	0
+574	515	130	34	2023-04-03 20:25:15	1342177296	submission.event.fileEdited	0
+575	1048585	17	34	2023-04-03 20:25:15	1342177296	submission.event.fileEdited	0
+576	515	131	34	2023-04-03 20:25:16	1342177281	submission.event.fileUploaded	0
+577	1048585	17	34	2023-04-03 20:25:16	1342177288	submission.event.fileRevised	0
+578	515	131	34	2023-04-03 20:25:17	1342177296	submission.event.fileEdited	0
+579	1048585	17	34	2023-04-03 20:25:17	1342177296	submission.event.fileEdited	0
+580	515	132	34	2023-04-03 20:25:18	1342177281	submission.event.fileUploaded	0
+581	1048585	17	34	2023-04-03 20:25:18	1342177288	submission.event.fileRevised	0
+582	515	132	34	2023-04-03 20:25:18	1342177296	submission.event.fileEdited	0
+583	1048585	17	34	2023-04-03 20:25:18	1342177296	submission.event.fileEdited	0
+584	515	133	34	2023-04-03 20:25:19	1342177281	submission.event.fileUploaded	0
+585	1048585	17	34	2023-04-03 20:25:19	1342177288	submission.event.fileRevised	0
+586	515	133	34	2023-04-03 20:25:19	1342177296	submission.event.fileEdited	0
+587	1048585	17	34	2023-04-03 20:25:19	1342177296	submission.event.fileEdited	0
+588	515	134	34	2023-04-03 20:25:20	1342177281	submission.event.fileUploaded	0
+589	1048585	17	34	2023-04-03 20:25:20	1342177288	submission.event.fileRevised	0
+590	515	134	34	2023-04-03 20:25:21	1342177296	submission.event.fileEdited	0
+591	1048585	17	34	2023-04-03 20:25:21	1342177296	submission.event.fileEdited	0
+592	515	135	34	2023-04-03 20:25:21	1342177281	submission.event.fileUploaded	0
+593	1048585	17	34	2023-04-03 20:25:21	1342177288	submission.event.fileRevised	0
+594	515	135	34	2023-04-03 20:25:22	1342177296	submission.event.fileEdited	0
+595	1048585	17	34	2023-04-03 20:25:22	1342177296	submission.event.fileEdited	0
+596	1048585	17	34	2023-04-03 20:26:14	268435457	submission.event.submissionSubmitted	0
+597	1048585	17	3	2023-04-03 20:26:36	805306371	editor.submission.decision.sendInternalReview.log	0
+598	515	136	3	2023-04-03 20:26:37	1342177281	submission.event.fileUploaded	0
+599	1048585	17	3	2023-04-03 20:26:37	1342177288	submission.event.fileRevised	0
+600	515	137	3	2023-04-03 20:26:37	1342177281	submission.event.fileUploaded	0
+601	1048585	17	3	2023-04-03 20:26:37	1342177288	submission.event.fileRevised	0
+602	515	138	3	2023-04-03 20:26:37	1342177281	submission.event.fileUploaded	0
+603	1048585	17	3	2023-04-03 20:26:37	1342177288	submission.event.fileRevised	0
+604	515	139	3	2023-04-03 20:26:37	1342177281	submission.event.fileUploaded	0
+605	1048585	17	3	2023-04-03 20:26:37	1342177288	submission.event.fileRevised	0
+606	515	140	3	2023-04-03 20:26:37	1342177281	submission.event.fileUploaded	0
+607	1048585	17	3	2023-04-03 20:26:37	1342177288	submission.event.fileRevised	0
+608	515	141	3	2023-04-03 20:26:38	1342177281	submission.event.fileUploaded	0
+609	1048585	17	3	2023-04-03 20:26:38	1342177288	submission.event.fileRevised	0
+610	1048585	17	3	2023-04-03 20:26:50	1073741825	log.review.reviewerAssigned	0
+611	1048585	17	3	2023-04-03 20:26:59	1073741825	log.review.reviewerAssigned	0
 \.
-
-
---
--- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.event_log_log_id_seq', 611, true);
 
 
 --
@@ -9793,19 +9573,19 @@ COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, sett
 137	25	name	Sarah Vogt	string
 138	25	username	svogt	string
 139	25	userGroupName	Copyeditor	string
-140	29	fileStage	2	int
-141	29	sourceSubmissionFileId	\N	string
-142	29	submissionFileId	7	int
-143	29	fileId	4	int
-144	29	submissionId	2	int
-145	29	originalFileName	chapter1.pdf	string
-146	29	username	afinkel	string
-147	30	fileStage	2	int
-148	30	submissionFileId	7	int
-149	30	fileId	4	int
-150	30	submissionId	2	int
-151	30	username	afinkel	string
-152	30	name	chapter1.pdf	string
+140	28	fileStage	2	int
+141	28	sourceSubmissionFileId	\N	string
+142	28	submissionFileId	7	int
+143	28	fileId	4	int
+144	28	submissionId	2	int
+145	28	originalFileName	chapter1.pdf	string
+146	28	username	afinkel	string
+147	29	fileStage	2	int
+148	29	submissionFileId	7	int
+149	29	fileId	4	int
+150	29	submissionId	2	int
+151	29	username	afinkel	string
+152	29	name	chapter1.pdf	string
 153	31	fileStage	2	int
 154	31	sourceSubmissionFileId	\N	string
 155	31	submissionFileId	7	int
@@ -9956,31 +9736,31 @@ COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, sett
 300	53	username	dbarnes	string
 301	53	name	chapter4.pdf	string
 302	54	fileStage	4	int
-303	54	sourceSubmissionFileId	8	int
+303	54	sourceSubmissionFileId	9	int
 304	54	submissionFileId	13	int
-305	54	fileId	5	int
+305	54	fileId	6	int
 306	54	submissionId	2	int
-307	54	originalFileName	chapter2.pdf	string
+307	54	originalFileName	chapter3.pdf	string
 308	54	username	dbarnes	string
 309	55	fileStage	4	int
 310	55	submissionFileId	13	int
-311	55	fileId	5	int
+311	55	fileId	6	int
 312	55	submissionId	2	int
 313	55	username	dbarnes	string
-314	55	name	chapter2.pdf	string
+314	55	name	chapter3.pdf	string
 315	56	fileStage	4	int
-316	56	sourceSubmissionFileId	9	int
+316	56	sourceSubmissionFileId	8	int
 317	56	submissionFileId	14	int
-318	56	fileId	6	int
+318	56	fileId	5	int
 319	56	submissionId	2	int
-320	56	originalFileName	chapter3.pdf	string
+320	56	originalFileName	chapter2.pdf	string
 321	56	username	dbarnes	string
 322	57	fileStage	4	int
 323	57	submissionFileId	14	int
-324	57	fileId	6	int
+324	57	fileId	5	int
 325	57	submissionId	2	int
 326	57	username	dbarnes	string
-327	57	name	chapter3.pdf	string
+327	57	name	chapter2.pdf	string
 328	58	fileStage	4	int
 329	58	sourceSubmissionFileId	7	int
 330	58	submissionFileId	15	int
@@ -10261,31 +10041,31 @@ COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, sett
 605	104	submissionId	4	int
 606	104	decision	1	int
 607	105	fileStage	19	int
-608	105	sourceSubmissionFileId	23	int
+608	105	sourceSubmissionFileId	24	int
 609	105	submissionFileId	25	int
-610	105	fileId	16	int
+610	105	fileId	17	int
 611	105	submissionId	4	int
-612	105	originalFileName	chapter3.pdf	string
+612	105	originalFileName	intro.pdf	string
 613	105	username	dbarnes	string
 614	106	fileStage	19	int
 615	106	submissionFileId	25	int
-616	106	fileId	16	int
+616	106	fileId	17	int
 617	106	submissionId	4	int
 618	106	username	dbarnes	string
-619	106	name	chapter3.pdf	string
+619	106	name	intro.pdf	string
 620	107	fileStage	19	int
-621	107	sourceSubmissionFileId	24	int
+621	107	sourceSubmissionFileId	23	int
 622	107	submissionFileId	26	int
-623	107	fileId	17	int
+623	107	fileId	16	int
 624	107	submissionId	4	int
-625	107	originalFileName	intro.pdf	string
+625	107	originalFileName	chapter3.pdf	string
 626	107	username	dbarnes	string
 627	108	fileStage	19	int
 628	108	submissionFileId	26	int
-629	108	fileId	17	int
+629	108	fileId	16	int
 630	108	submissionId	4	int
 631	108	username	dbarnes	string
-632	108	name	intro.pdf	string
+632	108	name	chapter3.pdf	string
 633	109	fileStage	19	int
 634	109	sourceSubmissionFileId	22	int
 635	109	submissionFileId	27	int
@@ -10566,31 +10346,31 @@ COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, sett
 910	156	username	dbarnes	string
 911	156	name	chapter2.pdf	string
 912	157	fileStage	19	int
-913	157	sourceSubmissionFileId	29	int
+913	157	sourceSubmissionFileId	30	int
 914	157	submissionFileId	39	int
-915	157	fileId	18	int
+915	157	fileId	19	int
 916	157	submissionId	5	int
-917	157	originalFileName	prologue.pdf	string
+917	157	originalFileName	chapter1.pdf	string
 918	157	username	dbarnes	string
 919	158	fileStage	19	int
 920	158	submissionFileId	39	int
-921	158	fileId	18	int
+921	158	fileId	19	int
 922	158	submissionId	5	int
 923	158	username	dbarnes	string
-924	158	name	prologue.pdf	string
+924	158	name	chapter1.pdf	string
 925	159	fileStage	19	int
-926	159	sourceSubmissionFileId	30	int
+926	159	sourceSubmissionFileId	29	int
 927	159	submissionFileId	40	int
-928	159	fileId	19	int
+928	159	fileId	18	int
 929	159	submissionId	5	int
-930	159	originalFileName	chapter1.pdf	string
+930	159	originalFileName	prologue.pdf	string
 931	159	username	dbarnes	string
 932	160	fileStage	19	int
 933	160	submissionFileId	40	int
-934	160	fileId	19	int
+934	160	fileId	18	int
 935	160	submissionId	5	int
 936	160	username	dbarnes	string
-937	160	name	chapter1.pdf	string
+937	160	name	prologue.pdf	string
 938	161	reviewAssignmentId	6	int
 939	161	reviewerName	Paul Hudson	string
 940	161	submissionId	5	int
@@ -10801,31 +10581,31 @@ COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, sett
 1145	203	username	dbarnes	string
 1146	203	name	chapter4.pdf	string
 1147	204	fileStage	19	int
-1148	204	sourceSubmissionFileId	43	int
+1148	204	sourceSubmissionFileId	44	int
 1149	204	submissionFileId	47	int
-1150	204	fileId	25	int
+1150	204	fileId	26	int
 1151	204	submissionId	6	int
-1152	204	originalFileName	chapter2.pdf	string
+1152	204	originalFileName	chapter3.pdf	string
 1153	204	username	dbarnes	string
 1154	205	fileStage	19	int
 1155	205	submissionFileId	47	int
-1156	205	fileId	25	int
+1156	205	fileId	26	int
 1157	205	submissionId	6	int
 1158	205	username	dbarnes	string
-1159	205	name	chapter2.pdf	string
+1159	205	name	chapter3.pdf	string
 1160	206	fileStage	19	int
-1161	206	sourceSubmissionFileId	44	int
+1161	206	sourceSubmissionFileId	43	int
 1162	206	submissionFileId	48	int
-1163	206	fileId	26	int
+1163	206	fileId	25	int
 1164	206	submissionId	6	int
-1165	206	originalFileName	chapter3.pdf	string
+1165	206	originalFileName	chapter2.pdf	string
 1166	206	username	dbarnes	string
 1167	207	fileStage	19	int
 1168	207	submissionFileId	48	int
-1169	207	fileId	26	int
+1169	207	fileId	25	int
 1170	207	submissionId	6	int
 1171	207	username	dbarnes	string
-1172	207	name	chapter3.pdf	string
+1172	207	name	chapter2.pdf	string
 1173	208	fileStage	19	int
 1174	208	sourceSubmissionFileId	42	int
 1175	208	submissionFileId	49	int
@@ -11033,31 +10813,31 @@ COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, sett
 1377	242	username	dbarnes	string
 1378	242	name	chapter2.pdf	string
 1379	243	fileStage	4	int
-1380	243	sourceSubmissionFileId	50	int
+1380	243	sourceSubmissionFileId	51	int
 1381	243	submissionFileId	58	int
-1382	243	fileId	28	int
+1382	243	fileId	29	int
 1383	243	submissionId	7	int
-1384	243	originalFileName	intro.pdf	string
+1384	243	originalFileName	chapter1.pdf	string
 1385	243	username	dbarnes	string
 1386	244	fileStage	4	int
 1387	244	submissionFileId	58	int
-1388	244	fileId	28	int
+1388	244	fileId	29	int
 1389	244	submissionId	7	int
 1390	244	username	dbarnes	string
-1391	244	name	intro.pdf	string
+1391	244	name	chapter1.pdf	string
 1392	245	fileStage	4	int
-1393	245	sourceSubmissionFileId	51	int
+1393	245	sourceSubmissionFileId	50	int
 1394	245	submissionFileId	59	int
-1395	245	fileId	29	int
+1395	245	fileId	28	int
 1396	245	submissionId	7	int
-1397	245	originalFileName	chapter1.pdf	string
+1397	245	originalFileName	intro.pdf	string
 1398	245	username	dbarnes	string
 1399	246	fileStage	4	int
 1400	246	submissionFileId	59	int
-1401	246	fileId	29	int
+1401	246	fileId	28	int
 1402	246	submissionId	7	int
 1403	246	username	dbarnes	string
-1404	246	name	chapter1.pdf	string
+1404	246	name	intro.pdf	string
 1405	247	reviewAssignmentId	8	int
 1406	247	reviewerName	Adela Gallego	string
 1407	247	submissionId	7	int
@@ -11244,31 +11024,31 @@ COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, sett
 1587	279	submissionId	9	int
 1588	279	decision	1	int
 1589	280	fileStage	19	int
-1590	280	sourceSubmissionFileId	65	int
+1590	280	sourceSubmissionFileId	64	int
 1591	280	submissionFileId	66	int
-1592	280	fileId	38	int
+1592	280	fileId	37	int
 1593	280	submissionId	9	int
-1594	280	originalFileName	chapter5.pdf	string
+1594	280	originalFileName	chapter4.pdf	string
 1595	280	username	dbarnes	string
 1596	281	fileStage	19	int
 1597	281	submissionFileId	66	int
-1598	281	fileId	38	int
+1598	281	fileId	37	int
 1599	281	submissionId	9	int
 1600	281	username	dbarnes	string
-1601	281	name	chapter5.pdf	string
+1601	281	name	chapter4.pdf	string
 1602	282	fileStage	19	int
-1603	282	sourceSubmissionFileId	64	int
+1603	282	sourceSubmissionFileId	65	int
 1604	282	submissionFileId	67	int
-1605	282	fileId	37	int
+1605	282	fileId	38	int
 1606	282	submissionId	9	int
-1607	282	originalFileName	chapter4.pdf	string
+1607	282	originalFileName	chapter5.pdf	string
 1608	282	username	dbarnes	string
 1609	283	fileStage	19	int
 1610	283	submissionFileId	67	int
-1611	283	fileId	37	int
+1611	283	fileId	38	int
 1612	283	submissionId	9	int
 1613	283	username	dbarnes	string
-1614	283	name	chapter4.pdf	string
+1614	283	name	chapter5.pdf	string
 1615	284	fileStage	19	int
 1616	284	sourceSubmissionFileId	63	int
 1617	284	submissionFileId	68	int
@@ -12182,83 +11962,83 @@ COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, sett
 2526	442	submissionId	14	int
 2527	442	decision	1	int
 2528	443	fileStage	19	int
-2529	443	sourceSubmissionFileId	100	int
+2529	443	sourceSubmissionFileId	101	int
 2530	443	submissionFileId	102	int
-2531	443	fileId	60	int
+2531	443	fileId	61	int
 2532	443	submissionId	14	int
-2533	443	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+2533	443	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 2534	443	username	dbarnes	string
 2535	444	fileStage	19	int
 2536	444	submissionFileId	102	int
-2537	444	fileId	60	int
+2537	444	fileId	61	int
 2538	444	submissionId	14	int
 2539	444	username	dbarnes	string
-2540	444	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+2540	444	name	The Canadian Nutrient File: Nutrient Val.pdf	string
 2541	445	fileStage	19	int
-2542	445	sourceSubmissionFileId	101	int
+2542	445	sourceSubmissionFileId	100	int
 2543	445	submissionFileId	103	int
-2544	445	fileId	61	int
+2544	445	fileId	60	int
 2545	445	submissionId	14	int
-2546	445	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+2546	445	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 2547	445	username	dbarnes	string
 2548	446	fileStage	19	int
 2549	446	submissionFileId	103	int
-2550	446	fileId	61	int
+2550	446	fileId	60	int
 2551	446	submissionId	14	int
 2552	446	username	dbarnes	string
-2553	446	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+2553	446	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 2554	447	fileStage	19	int
-2555	447	sourceSubmissionFileId	99	int
+2555	447	sourceSubmissionFileId	98	int
 2556	447	submissionFileId	104	int
-2557	447	fileId	59	int
+2557	447	fileId	58	int
 2558	447	submissionId	14	int
-2559	447	originalFileName	chapter4.pdf	string
+2559	447	originalFileName	chapter3.pdf	string
 2560	447	username	dbarnes	string
 2561	448	fileStage	19	int
 2562	448	submissionFileId	104	int
-2563	448	fileId	59	int
+2563	448	fileId	58	int
 2564	448	submissionId	14	int
 2565	448	username	dbarnes	string
-2566	448	name	chapter4.pdf	string
+2566	448	name	chapter3.pdf	string
 2567	449	fileStage	19	int
-2568	449	sourceSubmissionFileId	98	int
+2568	449	sourceSubmissionFileId	97	int
 2569	449	submissionFileId	105	int
-2570	449	fileId	58	int
+2570	449	fileId	57	int
 2571	449	submissionId	14	int
-2572	449	originalFileName	chapter3.pdf	string
+2572	449	originalFileName	chapter2.pdf	string
 2573	449	username	dbarnes	string
 2574	450	fileStage	19	int
 2575	450	submissionFileId	105	int
-2576	450	fileId	58	int
+2576	450	fileId	57	int
 2577	450	submissionId	14	int
 2578	450	username	dbarnes	string
-2579	450	name	chapter3.pdf	string
+2579	450	name	chapter2.pdf	string
 2580	451	fileStage	19	int
-2581	451	sourceSubmissionFileId	97	int
+2581	451	sourceSubmissionFileId	96	int
 2582	451	submissionFileId	106	int
-2583	451	fileId	57	int
+2583	451	fileId	56	int
 2584	451	submissionId	14	int
-2585	451	originalFileName	chapter2.pdf	string
+2585	451	originalFileName	chapter1.pdf	string
 2586	451	username	dbarnes	string
 2587	452	fileStage	19	int
 2588	452	submissionFileId	106	int
-2589	452	fileId	57	int
+2589	452	fileId	56	int
 2590	452	submissionId	14	int
 2591	452	username	dbarnes	string
-2592	452	name	chapter2.pdf	string
+2592	452	name	chapter1.pdf	string
 2593	453	fileStage	19	int
-2594	453	sourceSubmissionFileId	96	int
+2594	453	sourceSubmissionFileId	99	int
 2595	453	submissionFileId	107	int
-2596	453	fileId	56	int
+2596	453	fileId	59	int
 2597	453	submissionId	14	int
-2598	453	originalFileName	chapter1.pdf	string
+2598	453	originalFileName	chapter4.pdf	string
 2599	453	username	dbarnes	string
 2600	454	fileStage	19	int
 2601	454	submissionFileId	107	int
-2602	454	fileId	56	int
+2602	454	fileId	59	int
 2603	454	submissionId	14	int
 2604	454	username	dbarnes	string
-2605	454	name	chapter1.pdf	string
+2605	454	name	chapter4.pdf	string
 2606	455	reviewAssignmentId	19	int
 2607	455	reviewerName	Julie Janssen	string
 2608	455	submissionId	14	int
@@ -12854,57 +12634,57 @@ COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, sett
 3198	556	username	dbarnes	string
 3199	556	name	bibliography.pdf	string
 3200	557	fileStage	4	int
-3201	557	sourceSubmissionFileId	122	int
+3201	557	sourceSubmissionFileId	121	int
 3202	557	submissionFileId	126	int
-3203	557	fileId	67	int
+3203	557	fileId	66	int
 3204	557	submissionId	16	int
-3205	557	originalFileName	cases.pdf	string
+3205	557	originalFileName	preface.pdf	string
 3206	557	username	dbarnes	string
 3207	558	fileStage	4	int
 3208	558	submissionFileId	126	int
-3209	558	fileId	67	int
+3209	558	fileId	66	int
 3210	558	submissionId	16	int
 3211	558	username	dbarnes	string
-3212	558	name	cases.pdf	string
+3212	558	name	preface.pdf	string
 3213	559	fileStage	4	int
-3214	559	sourceSubmissionFileId	121	int
+3214	559	sourceSubmissionFileId	120	int
 3215	559	submissionFileId	127	int
-3216	559	fileId	66	int
+3216	559	fileId	65	int
 3217	559	submissionId	16	int
-3218	559	originalFileName	preface.pdf	string
+3218	559	originalFileName	foreward.pdf	string
 3219	559	username	dbarnes	string
 3220	560	fileStage	4	int
 3221	560	submissionFileId	127	int
-3222	560	fileId	66	int
+3222	560	fileId	65	int
 3223	560	submissionId	16	int
 3224	560	username	dbarnes	string
-3225	560	name	preface.pdf	string
+3225	560	name	foreward.pdf	string
 3226	561	fileStage	4	int
-3227	561	sourceSubmissionFileId	123	int
+3227	561	sourceSubmissionFileId	122	int
 3228	561	submissionFileId	128	int
-3229	561	fileId	68	int
+3229	561	fileId	67	int
 3230	561	submissionId	16	int
-3231	561	originalFileName	conclusion.pdf	string
+3231	561	originalFileName	cases.pdf	string
 3232	561	username	dbarnes	string
 3233	562	fileStage	4	int
 3234	562	submissionFileId	128	int
-3235	562	fileId	68	int
+3235	562	fileId	67	int
 3236	562	submissionId	16	int
 3237	562	username	dbarnes	string
-3238	562	name	conclusion.pdf	string
+3238	562	name	cases.pdf	string
 3239	563	fileStage	4	int
-3240	563	sourceSubmissionFileId	120	int
+3240	563	sourceSubmissionFileId	123	int
 3241	563	submissionFileId	129	int
-3242	563	fileId	65	int
+3242	563	fileId	68	int
 3243	563	submissionId	16	int
-3244	563	originalFileName	foreward.pdf	string
+3244	563	originalFileName	conclusion.pdf	string
 3245	563	username	dbarnes	string
 3246	564	fileStage	4	int
 3247	564	submissionFileId	129	int
-3248	564	fileId	65	int
+3248	564	fileId	68	int
 3249	564	submissionId	16	int
 3250	564	username	dbarnes	string
-3251	564	name	foreward.pdf	string
+3251	564	name	conclusion.pdf	string
 3252	565	reviewAssignmentId	21	int
 3253	565	reviewerName	Adela Gallego	string
 3254	565	submissionId	16	int
@@ -13101,83 +12881,83 @@ COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, sett
 3445	597	submissionId	17	int
 3446	597	decision	1	int
 3447	598	fileStage	19	int
-3448	598	sourceSubmissionFileId	134	int
+3448	598	sourceSubmissionFileId	135	int
 3449	598	submissionFileId	136	int
-3450	598	fileId	74	int
+3450	598	fileId	75	int
 3451	598	submissionId	17	int
-3452	598	originalFileName	chapter3.pdf	string
+3452	598	originalFileName	chapter4.pdf	string
 3453	598	username	dbarnes	string
 3454	599	fileStage	19	int
 3455	599	submissionFileId	136	int
-3456	599	fileId	74	int
+3456	599	fileId	75	int
 3457	599	submissionId	17	int
 3458	599	username	dbarnes	string
-3459	599	name	chapter3.pdf	string
+3459	599	name	chapter4.pdf	string
 3460	600	fileStage	19	int
-3461	600	sourceSubmissionFileId	133	int
+3461	600	sourceSubmissionFileId	134	int
 3462	600	submissionFileId	137	int
-3463	600	fileId	73	int
+3463	600	fileId	74	int
 3464	600	submissionId	17	int
-3465	600	originalFileName	chapter2.pdf	string
+3465	600	originalFileName	chapter3.pdf	string
 3466	600	username	dbarnes	string
 3467	601	fileStage	19	int
 3468	601	submissionFileId	137	int
-3469	601	fileId	73	int
+3469	601	fileId	74	int
 3470	601	submissionId	17	int
 3471	601	username	dbarnes	string
-3472	601	name	chapter2.pdf	string
+3472	601	name	chapter3.pdf	string
 3473	602	fileStage	19	int
-3474	602	sourceSubmissionFileId	135	int
+3474	602	sourceSubmissionFileId	132	int
 3475	602	submissionFileId	138	int
-3476	602	fileId	75	int
+3476	602	fileId	72	int
 3477	602	submissionId	17	int
-3478	602	originalFileName	chapter4.pdf	string
+3478	602	originalFileName	chapter1.pdf	string
 3479	602	username	dbarnes	string
 3480	603	fileStage	19	int
 3481	603	submissionFileId	138	int
-3482	603	fileId	75	int
+3482	603	fileId	72	int
 3483	603	submissionId	17	int
 3484	603	username	dbarnes	string
-3485	603	name	chapter4.pdf	string
+3485	603	name	chapter1.pdf	string
 3486	604	fileStage	19	int
-3487	604	sourceSubmissionFileId	132	int
+3487	604	sourceSubmissionFileId	130	int
 3488	604	submissionFileId	139	int
-3489	604	fileId	72	int
+3489	604	fileId	70	int
 3490	604	submissionId	17	int
-3491	604	originalFileName	chapter1.pdf	string
+3491	604	originalFileName	preface.pdf	string
 3492	604	username	dbarnes	string
 3493	605	fileStage	19	int
 3494	605	submissionFileId	139	int
-3495	605	fileId	72	int
+3495	605	fileId	70	int
 3496	605	submissionId	17	int
 3497	605	username	dbarnes	string
-3498	605	name	chapter1.pdf	string
+3498	605	name	preface.pdf	string
 3499	606	fileStage	19	int
-3500	606	sourceSubmissionFileId	130	int
+3500	606	sourceSubmissionFileId	131	int
 3501	606	submissionFileId	140	int
-3502	606	fileId	70	int
+3502	606	fileId	71	int
 3503	606	submissionId	17	int
-3504	606	originalFileName	preface.pdf	string
+3504	606	originalFileName	introduction.pdf	string
 3505	606	username	dbarnes	string
 3506	607	fileStage	19	int
 3507	607	submissionFileId	140	int
-3508	607	fileId	70	int
+3508	607	fileId	71	int
 3509	607	submissionId	17	int
 3510	607	username	dbarnes	string
-3511	607	name	preface.pdf	string
+3511	607	name	introduction.pdf	string
 3512	608	fileStage	19	int
-3513	608	sourceSubmissionFileId	131	int
+3513	608	sourceSubmissionFileId	133	int
 3514	608	submissionFileId	141	int
-3515	608	fileId	71	int
+3515	608	fileId	73	int
 3516	608	submissionId	17	int
-3517	608	originalFileName	introduction.pdf	string
+3517	608	originalFileName	chapter2.pdf	string
 3518	608	username	dbarnes	string
 3519	609	fileStage	19	int
 3520	609	submissionFileId	141	int
-3521	609	fileId	71	int
+3521	609	fileId	73	int
 3522	609	submissionId	17	int
 3523	609	username	dbarnes	string
-3524	609	name	introduction.pdf	string
+3524	609	name	chapter2.pdf	string
 3525	610	reviewAssignmentId	24	int
 3526	610	reviewerName	Julie Janssen	string
 3527	610	submissionId	17	int
@@ -13192,25 +12972,11 @@ COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, sett
 
 
 --
--- Name: event_log_settings_event_log_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.event_log_settings_event_log_setting_id_seq', 3534, true);
-
-
---
 -- Data for Name: failed_jobs; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.failed_jobs (id, connection, queue, payload, exception, failed_at) FROM stdin;
 \.
-
-
---
--- Name: failed_jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.failed_jobs_id_seq', 1, false);
 
 
 --
@@ -13222,99 +12988,85 @@ COPY public.features (feature_id, submission_id, assoc_type, assoc_id, seq) FROM
 
 
 --
--- Name: features_feature_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.features_feature_id_seq', 1, false);
-
-
---
 -- Data for Name: files; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	presses/1/monographs/1/642770782f5fe.pdf	application/pdf
-2	presses/1/monographs/1/6427707950761.pdf	application/pdf
-3	presses/1/monographs/1/6427707a7c557.pdf	application/pdf
-4	presses/1/monographs/2/642770cd405a9.pdf	application/pdf
-5	presses/1/monographs/2/642770ce6a66b.pdf	application/pdf
-6	presses/1/monographs/2/642770cfaa541.pdf	application/pdf
-7	presses/1/monographs/2/642770d0d6417.pdf	application/pdf
-9	presses/1/monographs/3/6427717e8b0a8.pdf	application/pdf
-10	presses/1/monographs/3/6427717fa5206.pdf	application/pdf
-11	presses/1/monographs/3/64277180d96e9.pdf	application/pdf
-12	presses/1/monographs/3/642771821504b.pdf	application/pdf
-13	presses/1/monographs/3/642771835dd1e.pdf	application/pdf
-14	presses/1/monographs/4/642771b4dee4f.pdf	application/pdf
-15	presses/1/monographs/4/642771b614a16.pdf	application/pdf
-16	presses/1/monographs/4/642771b7584de.pdf	application/pdf
-17	presses/1/monographs/4/642771b88f95d.pdf	application/pdf
-18	presses/1/monographs/5/642772379fca7.pdf	application/pdf
-19	presses/1/monographs/5/64277238bbcbd.pdf	application/pdf
-20	presses/1/monographs/5/64277239ebf79.pdf	application/pdf
-21	presses/1/monographs/5/6427723b1c17a.pdf	application/pdf
-22	presses/1/monographs/5/6427723c64be9.pdf	application/pdf
-23	presses/1/monographs/5/6427723d8cbfb.pdf	application/pdf
-24	presses/1/monographs/6/642772fdec503.pdf	application/pdf
-25	presses/1/monographs/6/642772ff1c34c.pdf	application/pdf
-26	presses/1/monographs/6/6427730049b2f.pdf	application/pdf
-27	presses/1/monographs/6/6427730179a47.pdf	application/pdf
-28	presses/1/monographs/7/6427736837a34.pdf	application/pdf
-29	presses/1/monographs/7/642773695ca29.pdf	application/pdf
-30	presses/1/monographs/7/6427736a88d12.pdf	application/pdf
-31	presses/1/monographs/7/6427736bb10ea.pdf	application/pdf
-32	presses/1/monographs/7/6427736d07677.pdf	application/pdf
-33	presses/1/monographs/8/642773cd66414.pdf	application/pdf
-34	presses/1/monographs/9/642773da951a1.pdf	application/pdf
-35	presses/1/monographs/9/642773dbb8aa9.pdf	application/pdf
-36	presses/1/monographs/9/642773dcddba9.pdf	application/pdf
-37	presses/1/monographs/9/642773de1bae7.pdf	application/pdf
-38	presses/1/monographs/9/642773df783af.pdf	application/pdf
-39	presses/1/monographs/10/64277429549f9.pdf	application/pdf
-40	presses/1/monographs/10/6427742a75f15.pdf	application/pdf
-41	presses/1/monographs/10/6427742b9d146.pdf	application/pdf
-42	presses/1/monographs/10/6427742cc59c9.pdf	application/pdf
-43	presses/1/monographs/10/6427742e212b9.pdf	application/pdf
-44	presses/1/monographs/10/6427742f514cb.pdf	application/pdf
-45	presses/1/monographs/10/6427743087e39.pdf	application/pdf
-46	presses/1/monographs/10/64277431bfa13.pdf	application/pdf
-47	presses/1/monographs/10/642774331ccd5.pdf	application/pdf
-48	presses/1/monographs/11/6427748d5ef05.pdf	application/pdf
-49	presses/1/monographs/11/6427748e877df.pdf	application/pdf
-50	presses/1/monographs/12/642775070a25b.pdf	application/pdf
-51	presses/1/monographs/12/6427750835231.pdf	application/pdf
-52	presses/1/monographs/12/642775095d827.pdf	application/pdf
-53	presses/1/monographs/13/64277565e9d17.pdf	application/pdf
-54	presses/1/monographs/13/6427756720e98.pdf	application/pdf
-55	presses/1/monographs/13/642775685088b.pdf	application/pdf
-56	presses/1/monographs/14/642775fa1397c.pdf	application/pdf
-57	presses/1/monographs/14/642775fb42989.pdf	application/pdf
-58	presses/1/monographs/14/642775fc79bfd.pdf	application/pdf
-59	presses/1/monographs/14/642775fdaf429.pdf	application/pdf
-60	presses/1/monographs/14/642775ff06b6f.pdf	application/pdf
-61	presses/1/monographs/14/6427760021d69.pdf	application/pdf
-62	presses/1/monographs/15/642776bb54f8a.pdf	application/pdf
-63	presses/1/monographs/15/642776bc78f42.pdf	application/pdf
-64	presses/1/monographs/15/642776bda9fb8.pdf	application/pdf
-65	presses/1/monographs/16/642776f2da681.pdf	application/pdf
-66	presses/1/monographs/16/642776f411eb2.pdf	application/pdf
-67	presses/1/monographs/16/642776f53daca.pdf	application/pdf
-68	presses/1/monographs/16/642776f666861.pdf	application/pdf
-69	presses/1/monographs/16/642776f7b4d6b.pdf	application/pdf
-70	presses/1/monographs/17/642777643e3f2.pdf	application/pdf
-71	presses/1/monographs/17/642777655d64a.pdf	application/pdf
-72	presses/1/monographs/17/64277766844b8.pdf	application/pdf
-73	presses/1/monographs/17/64277767b4269.pdf	application/pdf
-74	presses/1/monographs/17/642777690f00c.pdf	application/pdf
-75	presses/1/monographs/17/6427776a3801c.pdf	application/pdf
+1	presses/1/monographs/1/642b2e9cf0e04.pdf	application/pdf
+2	presses/1/monographs/1/642b2e9e3b9d7.pdf	application/pdf
+3	presses/1/monographs/1/642b2e9f7a691.pdf	application/pdf
+4	presses/1/monographs/2/642b2ef85b59a.pdf	application/pdf
+5	presses/1/monographs/2/642b2ef9ef285.pdf	application/pdf
+6	presses/1/monographs/2/642b2efb44af7.pdf	application/pdf
+7	presses/1/monographs/2/642b2efc8c8f7.pdf	application/pdf
+9	presses/1/monographs/3/642b2fba754e9.pdf	application/pdf
+10	presses/1/monographs/3/642b2fbba9f50.pdf	application/pdf
+11	presses/1/monographs/3/642b2fbceab8b.pdf	application/pdf
+12	presses/1/monographs/3/642b2fbe36123.pdf	application/pdf
+13	presses/1/monographs/3/642b2fbf962bb.pdf	application/pdf
+14	presses/1/monographs/4/642b2ff4cf8d0.pdf	application/pdf
+15	presses/1/monographs/4/642b2ff614117.pdf	application/pdf
+16	presses/1/monographs/4/642b2ff751067.pdf	application/pdf
+17	presses/1/monographs/4/642b2ff88b457.pdf	application/pdf
+18	presses/1/monographs/5/642b3081dc911.pdf	application/pdf
+19	presses/1/monographs/5/642b3083233d1.pdf	application/pdf
+20	presses/1/monographs/5/642b30845f448.pdf	application/pdf
+21	presses/1/monographs/5/642b30859b236.pdf	application/pdf
+22	presses/1/monographs/5/642b3086f2962.pdf	application/pdf
+23	presses/1/monographs/5/642b30883cd74.pdf	application/pdf
+24	presses/1/monographs/6/642b315c7a452.pdf	application/pdf
+25	presses/1/monographs/6/642b315dc4a54.pdf	application/pdf
+26	presses/1/monographs/6/642b315f0a564.pdf	application/pdf
+27	presses/1/monographs/6/642b316051f46.pdf	application/pdf
+28	presses/1/monographs/7/642b31d02bfbc.pdf	application/pdf
+29	presses/1/monographs/7/642b31d163d07.pdf	application/pdf
+30	presses/1/monographs/7/642b31d29fc51.pdf	application/pdf
+31	presses/1/monographs/7/642b31d3d71a1.pdf	application/pdf
+32	presses/1/monographs/7/642b31d51f912.pdf	application/pdf
+33	presses/1/monographs/8/642b323f8ef4d.pdf	application/pdf
+34	presses/1/monographs/9/642b324e25ffb.pdf	application/pdf
+35	presses/1/monographs/9/642b324f700ef.pdf	application/pdf
+36	presses/1/monographs/9/642b3250b0de6.pdf	application/pdf
+37	presses/1/monographs/9/642b3251f146a.pdf	application/pdf
+38	presses/1/monographs/9/642b3253440a8.pdf	application/pdf
+39	presses/1/monographs/10/642b32a35ade1.pdf	application/pdf
+40	presses/1/monographs/10/642b32a491519.pdf	application/pdf
+41	presses/1/monographs/10/642b32a5d0797.pdf	application/pdf
+42	presses/1/monographs/10/642b32a71d958.pdf	application/pdf
+43	presses/1/monographs/10/642b32a88145c.pdf	application/pdf
+44	presses/1/monographs/10/642b32a9c4d2c.pdf	application/pdf
+45	presses/1/monographs/10/642b32ab212cb.pdf	application/pdf
+46	presses/1/monographs/10/642b32ac6f11c.pdf	application/pdf
+47	presses/1/monographs/10/642b32addfd2c.pdf	application/pdf
+48	presses/1/monographs/11/642b331067c7c.pdf	application/pdf
+49	presses/1/monographs/11/642b3311a3d7a.pdf	application/pdf
+50	presses/1/monographs/12/642b3395b9362.pdf	application/pdf
+51	presses/1/monographs/12/642b339702132.pdf	application/pdf
+52	presses/1/monographs/12/642b33983fd13.pdf	application/pdf
+53	presses/1/monographs/13/642b33fbbd553.pdf	application/pdf
+54	presses/1/monographs/13/642b33fcf309f.pdf	application/pdf
+55	presses/1/monographs/13/642b33fe3afe7.pdf	application/pdf
+56	presses/1/monographs/14/642b349cecd6b.pdf	application/pdf
+57	presses/1/monographs/14/642b349e30ca4.pdf	application/pdf
+58	presses/1/monographs/14/642b349f68d39.pdf	application/pdf
+59	presses/1/monographs/14/642b34a0a5c89.pdf	application/pdf
+60	presses/1/monographs/14/642b34a215b03.pdf	application/pdf
+61	presses/1/monographs/14/642b34a357684.pdf	application/pdf
+62	presses/1/monographs/15/642b35767218d.pdf	application/pdf
+63	presses/1/monographs/15/642b3577a30d1.pdf	application/pdf
+64	presses/1/monographs/15/642b3578e0aaf.pdf	application/pdf
+65	presses/1/monographs/16/642b35b26e69d.pdf	application/pdf
+66	presses/1/monographs/16/642b35b3aad2d.pdf	application/pdf
+67	presses/1/monographs/16/642b35b4e28cc.pdf	application/pdf
+68	presses/1/monographs/16/642b35b634864.pdf	application/pdf
+69	presses/1/monographs/16/642b35b798f88.pdf	application/pdf
+70	presses/1/monographs/17/642b362b845fc.pdf	application/pdf
+71	presses/1/monographs/17/642b362cb611f.pdf	application/pdf
+72	presses/1/monographs/17/642b362e0027e.pdf	application/pdf
+73	presses/1/monographs/17/642b362f4492d.pdf	application/pdf
+74	presses/1/monographs/17/642b3630a5bd4.pdf	application/pdf
+75	presses/1/monographs/17/642b3631e5f81.pdf	application/pdf
 \.
-
-
---
--- Name: files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.files_file_id_seq', 75, true);
 
 
 --
@@ -13327,28 +13079,21 @@ COPY public.filter_groups (filter_group_id, symbolic, display_name, description,
 3	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
 4	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
 5	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
-6	monographs=>onix30-xml	plugins.importexport.onix30.displayName	plugins.importexport.onix30.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/onix30/ONIX_BookProduct_3.0_reference.xsd)
-7	monograph=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
-8	native-xml=>monograph	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
-9	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.author.Author[]	xml::schema(plugins/importexport/native/native.xsd)
-10	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.author.Author[]
-11	publication-format=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publicationFormat.PublicationFormat	xml::schema(plugins/importexport/native/native.xsd)
-12	native-xml=>PublicationFormat	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publicationFormat.PublicationFormat[]
-13	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submissionFile.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
-14	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submissionFile.SubmissionFile[]
-15	monograph=>onix30-xml	plugins.importexport.onix30.displayName	plugins.importexport.onix30.description	class::classes.submission.Submission	xml::schema(plugins/importexport/native/ONIX_BookProduct_3.0_reference_notstrict.xsd)
-16	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
-17	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication[]
-18	chapter=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.monograph.Chapter[]	xml::schema(plugins/importexport/native/native.xsd)
-19	native-xml=>chapter	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.monograph.Chapter[]
+6	monograph=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
+7	native-xml=>monograph	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
+8	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.author.Author[]	xml::schema(plugins/importexport/native/native.xsd)
+9	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.author.Author[]
+10	publication-format=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publicationFormat.PublicationFormat	xml::schema(plugins/importexport/native/native.xsd)
+11	native-xml=>PublicationFormat	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publicationFormat.PublicationFormat[]
+12	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submissionFile.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
+13	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submissionFile.SubmissionFile[]
+14	monograph=>onix30-xml	plugins.importexport.onix30.displayName	plugins.importexport.onix30.description	class::classes.submission.Submission	xml::schema(plugins/importexport/native/ONIX_BookProduct_3.0_reference_notstrict.xsd)
+15	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
+16	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication[]
+17	chapter=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.monograph.Chapter[]	xml::schema(plugins/importexport/native/native.xsd)
+18	native-xml=>chapter	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.monograph.Chapter[]
+19	monographs=>onix30-xml	plugins.importexport.onix30.displayName	plugins.importexport.onix30.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/onix30/ONIX_BookProduct_3.0_reference.xsd)
 \.
-
-
---
--- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.filter_groups_filter_group_id_seq', 19, true);
 
 
 --
@@ -13357,13 +13102,6 @@ SELECT pg_catalog.setval('public.filter_groups_filter_group_id_seq', 19, true);
 
 COPY public.filter_settings (filter_setting_id, filter_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
-
-
---
--- Name: filter_settings_filter_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.filter_settings_filter_setting_id_seq', 1, false);
 
 
 --
@@ -13376,28 +13114,21 @@ COPY public.filters (filter_id, filter_group_id, context_id, display_name, class
 3	3	0	User XML user import	PKP\\plugins\\importexport\\users\\filter\\UserXmlPKPUserFilter	0	0	0
 4	4	0	Native XML user group export	PKP\\plugins\\importexport\\users\\filter\\UserGroupNativeXmlFilter	0	0	0
 5	5	0	Native XML user group import	PKP\\plugins\\importexport\\users\\filter\\NativeXmlUserGroupFilter	0	0	0
-6	6	0	ONIX 3.0 XML monograph export	APP\\plugins\\importexport\\onix30\\filter\\MonographONIX30XmlFilter	0	0	0
-7	7	0	Native XML submission export	APP\\plugins\\importexport\\native\\filter\\MonographNativeXmlFilter	0	0	0
-8	8	0	Native XML submission import	APP\\plugins\\importexport\\native\\filter\\NativeXmlMonographFilter	0	0	0
-9	9	0	Native XML author export	APP\\plugins\\importexport\\native\\filter\\AuthorNativeXmlFilter	0	0	0
-10	10	0	Native XML author import	APP\\plugins\\importexport\\native\\filter\\NativeXmlAuthorFilter	0	0	0
-11	11	0	Native XML representation export	APP\\plugins\\importexport\\native\\filter\\PublicationFormatNativeXmlFilter	0	0	0
-12	12	0	Native XML representation import	APP\\plugins\\importexport\\native\\filter\\NativeXmlPublicationFormatFilter	0	0	0
-13	14	0	Native XML submission file import	APP\\plugins\\importexport\\native\\filter\\NativeXmlMonographFileFilter	0	0	0
-14	13	0	Native XML submission file export	PKP\\plugins\\importexport\\native\\filter\\SubmissionFileNativeXmlFilter	0	0	0
-15	15	0	ONIX 3.0 XML monograph export	APP\\plugins\\importexport\\onix30\\filter\\MonographONIX30XmlFilter	0	0	0
-16	16	0	Native XML Publication export	APP\\plugins\\importexport\\native\\filter\\PublicationNativeXmlFilter	0	0	0
-17	17	0	Native XML publication import	APP\\plugins\\importexport\\native\\filter\\NativeXmlPublicationFilter	0	0	0
-18	18	0	Native XML chapter export	APP\\plugins\\importexport\\native\\filter\\ChapterNativeXmlFilter	0	0	0
-19	19	0	Native XML Chapter import	APP\\plugins\\importexport\\native\\filter\\NativeXmlChapterFilter	0	0	0
+6	6	0	Native XML submission export	APP\\plugins\\importexport\\native\\filter\\MonographNativeXmlFilter	0	0	0
+7	7	0	Native XML submission import	APP\\plugins\\importexport\\native\\filter\\NativeXmlMonographFilter	0	0	0
+8	8	0	Native XML author export	APP\\plugins\\importexport\\native\\filter\\AuthorNativeXmlFilter	0	0	0
+9	9	0	Native XML author import	APP\\plugins\\importexport\\native\\filter\\NativeXmlAuthorFilter	0	0	0
+10	10	0	Native XML representation export	APP\\plugins\\importexport\\native\\filter\\PublicationFormatNativeXmlFilter	0	0	0
+11	11	0	Native XML representation import	APP\\plugins\\importexport\\native\\filter\\NativeXmlPublicationFormatFilter	0	0	0
+12	13	0	Native XML submission file import	APP\\plugins\\importexport\\native\\filter\\NativeXmlMonographFileFilter	0	0	0
+13	12	0	Native XML submission file export	PKP\\plugins\\importexport\\native\\filter\\SubmissionFileNativeXmlFilter	0	0	0
+14	14	0	ONIX 3.0 XML monograph export	APP\\plugins\\importexport\\onix30\\filter\\MonographONIX30XmlFilter	0	0	0
+15	15	0	Native XML Publication export	APP\\plugins\\importexport\\native\\filter\\PublicationNativeXmlFilter	0	0	0
+16	16	0	Native XML publication import	APP\\plugins\\importexport\\native\\filter\\NativeXmlPublicationFilter	0	0	0
+17	17	0	Native XML chapter export	APP\\plugins\\importexport\\native\\filter\\ChapterNativeXmlFilter	0	0	0
+18	18	0	Native XML Chapter import	APP\\plugins\\importexport\\native\\filter\\NativeXmlChapterFilter	0	0	0
+19	19	0	ONIX 3.0 XML monograph export	APP\\plugins\\importexport\\onix30\\filter\\MonographONIX30XmlFilter	0	0	0
 \.
-
-
---
--- Name: filters_filter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.filters_filter_id_seq', 19, true);
 
 
 --
@@ -13439,13 +13170,6 @@ COPY public.genre_settings (genre_setting_id, genre_id, locale, setting_name, se
 
 
 --
--- Name: genre_settings_genre_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.genre_settings_genre_setting_id_seq', 30, true);
-
-
---
 -- Data for Name: genres; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -13469,13 +13193,6 @@ COPY public.genres (genre_id, context_id, seq, enabled, category, dependent, sup
 
 
 --
--- Name: genres_genre_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.genres_genre_id_seq', 15, true);
-
-
---
 -- Data for Name: identification_codes; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -13483,13 +13200,6 @@ COPY public.identification_codes (identification_code_id, publication_format_id,
 1	1	02	951-98548-9-4
 2	1	15	978-951-98548-9-2
 \.
-
-
---
--- Name: identification_codes_identification_code_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.identification_codes_identification_code_id_seq', 2, true);
 
 
 --
@@ -13501,25 +13211,11 @@ COPY public.institution_ip (institution_ip_id, institution_id, ip_string, ip_sta
 
 
 --
--- Name: institution_ip_institution_ip_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.institution_ip_institution_ip_id_seq', 1, false);
-
-
---
 -- Data for Name: institution_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.institution_settings (institution_setting_id, institution_id, locale, setting_name, setting_value) FROM stdin;
 \.
-
-
---
--- Name: institution_settings_institution_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.institution_settings_institution_setting_id_seq', 1, false);
 
 
 --
@@ -13531,18 +13227,11 @@ COPY public.institutions (institution_id, context_id, ror, deleted_at) FROM stdi
 
 
 --
--- Name: institutions_institution_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.institutions_institution_id_seq', 1, false);
-
-
---
 -- Data for Name: job_batches; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.job_batches (id, name, total_jobs, pending_jobs, failed_jobs, failed_job_ids, options, cancelled_at, created_at, finished_at) FROM stdin;
-98d2ac1f-45bf-43dc-9058-ded02aff28d7		0	0	0	[]	YTowOnt9	\N	1680305982	\N
+98d861e5-ea1a-40a7-962d-a86b7db26c30		0	0	0	[]	YTowOnt9	\N	1680551228	\N
 \.
 
 
@@ -13555,25 +13244,11 @@ COPY public.jobs (id, queue, payload, attempts, reserved_at, available_at, creat
 
 
 --
--- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.jobs_id_seq', 4, true);
-
-
---
 -- Data for Name: library_file_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.library_file_settings (library_file_setting_id, file_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
-
-
---
--- Name: library_file_settings_library_file_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.library_file_settings_library_file_setting_id_seq', 1, false);
 
 
 --
@@ -13585,25 +13260,11 @@ COPY public.library_files (file_id, context_id, file_name, original_file_name, f
 
 
 --
--- Name: library_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.library_files_file_id_seq', 1, false);
-
-
---
 -- Data for Name: markets; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.markets (market_id, publication_format_id, countries_included, countries_excluded, regions_included, regions_excluded, market_date_role, market_date_format, market_date, price, discount, price_type_code, currency_code, tax_rate_code, tax_type_code, agent_id, supplier_id) FROM stdin;
 \.
-
-
---
--- Name: markets_market_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.markets_market_id_seq', 1, false);
 
 
 --
@@ -13615,39 +13276,11 @@ COPY public.metrics_context (metrics_context_id, load_id, context_id, date, metr
 
 
 --
--- Name: metrics_context_metrics_context_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.metrics_context_metrics_context_id_seq', 1, false);
-
-
---
--- Name: metrics_counter_submission_da_metrics_counter_submission_da_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.metrics_counter_submission_da_metrics_counter_submission_da_seq', 1, false);
-
-
---
 -- Data for Name: metrics_counter_submission_daily; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.metrics_counter_submission_daily (metrics_counter_submission_daily_id, load_id, context_id, submission_id, date, metric_book_investigations, metric_book_investigations_unique, metric_book_requests, metric_book_requests_unique, metric_chapter_investigations, metric_chapter_investigations_unique, metric_chapter_requests, metric_chapter_requests_unique, metric_title_investigations_unique, metric_title_requests_unique) FROM stdin;
 \.
-
-
---
--- Name: metrics_counter_submission_in_metrics_counter_submission_i_seq1; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.metrics_counter_submission_in_metrics_counter_submission_i_seq1', 1, false);
-
-
---
--- Name: metrics_counter_submission_in_metrics_counter_submission_in_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.metrics_counter_submission_in_metrics_counter_submission_in_seq', 1, false);
 
 
 --
@@ -13667,13 +13300,6 @@ COPY public.metrics_counter_submission_institution_monthly (metrics_counter_subm
 
 
 --
--- Name: metrics_counter_submission_mo_metrics_counter_submission_mo_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq', 1, false);
-
-
---
 -- Data for Name: metrics_counter_submission_monthly; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -13687,13 +13313,6 @@ COPY public.metrics_counter_submission_monthly (metrics_counter_submission_month
 
 COPY public.metrics_series (metrics_series_id, load_id, context_id, series_id, date, metric) FROM stdin;
 \.
-
-
---
--- Name: metrics_series_metrics_series_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.metrics_series_metrics_series_id_seq', 1, false);
 
 
 --
@@ -13713,46 +13332,11 @@ COPY public.metrics_submission_geo_daily (metrics_submission_geo_daily_id, load_
 
 
 --
--- Name: metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq', 1, false);
-
-
---
--- Name: metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq', 1, false);
-
-
---
 -- Data for Name: metrics_submission_geo_monthly; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.metrics_submission_geo_monthly (metrics_submission_geo_monthly_id, context_id, submission_id, country, region, city, month, metric, metric_unique) FROM stdin;
 \.
-
-
---
--- Name: metrics_submission_metrics_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.metrics_submission_metrics_submission_id_seq', 1, false);
-
-
---
--- Name: navigation_menu_item_assignme_navigation_menu_item_assignm_seq1; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1', 1, false);
-
-
---
--- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq', 22, true);
 
 
 --
@@ -13825,13 +13409,6 @@ COPY public.navigation_menu_item_settings (navigation_menu_item_setting_id, navi
 
 
 --
--- Name: navigation_menu_item_settings_navigation_menu_item_setting__seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menu_item_settings_navigation_menu_item_setting__seq', 23, true);
-
-
---
 -- Data for Name: navigation_menu_items; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -13863,13 +13440,6 @@ COPY public.navigation_menu_items (navigation_menu_item_id, context_id, path, ty
 
 
 --
--- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menu_items_navigation_menu_item_id_seq', 23, true);
-
-
---
 -- Data for Name: navigation_menus; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -13881,13 +13451,6 @@ COPY public.navigation_menus (navigation_menu_id, context_id, area_name, title) 
 
 
 --
--- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menus_navigation_menu_id_seq', 3, true);
-
-
---
 -- Data for Name: new_releases; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -13896,26 +13459,12 @@ COPY public.new_releases (new_release_id, submission_id, assoc_type, assoc_id) F
 
 
 --
--- Name: new_releases_new_release_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.new_releases_new_release_id_seq', 1, false);
-
-
---
 -- Data for Name: notes; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2023-03-31 23:56:59	2023-03-31 23:56:59	Editor Recommendation	<p>Dear Daniel Barnes, David Buskins,</p><p>After considering the reviewers' feedback, I would like to make the following recommendation regarding the submission The Information Literacy User’s Guide.</p><p>My recommendation is: Accept Submission.</p><p>Please visit the submission's <a href="http://localhost/index.php/publicknowledge/workflow/access/6">editorial workflow</a> to act on this recommendation.</p><p>Please feel free to contact me with any questions.</p><p>Kind regards,</p><p>Minoti Inoue</p>
+1	1048586	1	6	2023-04-03 20:06:09	2023-04-03 20:06:09	Editor Recommendation	<p>Dear Daniel Barnes, David Buskins,</p><p>After considering the reviewers' feedback, I would like to make the following recommendation regarding the submission The Information Literacy User’s Guide.</p><p>My recommendation is: Accept Submission.</p><p>Please visit the submission's <a href="http://localhost/index.php/publicknowledge/workflow/access/6">editorial workflow</a> to act on this recommendation.</p><p>Please feel free to contact me with any questions.</p><p>Kind regards,</p><p>Minoti Inoue</p>
 \.
-
-
---
--- Name: notes_note_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.notes_note_id_seq', 1, true);
 
 
 --
@@ -13924,13 +13473,6 @@ SELECT pg_catalog.setval('public.notes_note_id_seq', 1, true);
 
 COPY public.notification_settings (notification_setting_id, notification_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
-
-
---
--- Name: notification_settings_notification_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.notification_settings_notification_setting_id_seq', 38, true);
 
 
 --
@@ -13958,161 +13500,147 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 
 
 --
--- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_seq', 16, true);
-
-
---
 -- Data for Name: notifications; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-255	1	30	2	16777230	2023-04-01 00:08:08	\N	1048585	13
-67	1	\N	2	16777236	2023-03-31 23:51:01	2023-03-31 23:51:07	523	3
-69	1	9	3	16777227	2023-03-31 23:51:12	\N	517	4
-71	1	\N	2	16777236	2023-03-31 23:51:18	2023-03-31 23:51:23	523	4
-73	1	11	3	16777227	2023-03-31 23:51:29	\N	517	5
-100	1	\N	2	16777236	2023-03-31 23:53:30	2023-03-31 23:53:37	523	5
-102	1	8	3	16777227	2023-03-31 23:53:43	\N	517	6
-78	1	22	2	16777235	2023-03-31 23:51:53	\N	1048585	4
-79	1	3	2	16777254	2023-03-31 23:51:53	\N	1048585	4
-51	1	\N	3	16777220	2023-03-31 23:49:59	\N	1048585	3
-191	1	\N	3	16777220	2023-04-01 00:02:35	\N	1048585	11
-52	1	\N	3	16777222	2023-03-31 23:49:59	\N	1048585	3
-53	1	\N	3	16777223	2023-03-31 23:49:59	\N	1048585	3
-14	1	4	2	16777217	2023-03-31 23:45:17	\N	1048585	1
-54	1	\N	3	16777224	2023-03-31 23:49:59	\N	1048585	3
-15	1	\N	2	16777236	2023-03-31 23:45:30	2023-03-31 23:45:36	523	1
-16	1	12	3	16777227	2023-03-31 23:45:41	\N	517	1
-55	1	1	3	16777247	2023-03-31 23:49:59	\N	1048585	3
-18	1	19	2	16777230	2023-03-31 23:45:47	\N	1048585	1
-19	1	4	2	16777251	2023-03-31 23:45:47	\N	1048585	1
-56	1	2	3	16777247	2023-03-31 23:49:59	\N	1048585	3
-57	1	3	3	16777247	2023-03-31 23:49:59	\N	1048585	3
-104	1	\N	2	16777236	2023-03-31 23:53:49	2023-03-31 23:53:55	523	6
-106	1	12	3	16777227	2023-03-31 23:54:01	\N	517	7
-124	1	24	2	16777229	2023-03-31 23:56:28	\N	1048585	6
-180	1	\N	3	16777220	2023-04-01 00:02:07	\N	1048585	10
-181	1	\N	3	16777222	2023-04-01 00:02:07	\N	1048585	10
-123	1	\N	2	16777236	2023-03-31 23:56:28	2023-03-31 23:56:34	523	7
-29	1	\N	3	16777220	2023-03-31 23:48:12	\N	1048585	2
-30	1	\N	3	16777222	2023-03-31 23:48:12	\N	1048585	2
-31	1	\N	3	16777223	2023-03-31 23:48:12	\N	1048585	2
-32	1	\N	3	16777224	2023-03-31 23:48:12	\N	1048585	2
-33	1	1	3	16777247	2023-03-31 23:48:12	\N	1048585	2
-34	1	2	3	16777247	2023-03-31 23:48:12	\N	1048585	2
-35	1	3	3	16777247	2023-03-31 23:48:12	\N	1048585	2
-36	1	\N	2	16777236	2023-03-31 23:48:38	2023-03-31 23:48:47	523	2
-37	1	11	3	16777227	2023-03-31 23:48:53	\N	517	2
-182	1	\N	3	16777223	2023-04-01 00:02:07	\N	1048585	10
-110	1	23	2	16777235	2023-03-31 23:54:26	\N	1048585	5
-39	1	12	3	16777227	2023-03-31 23:49:03	\N	517	3
-183	1	\N	3	16777224	2023-04-01 00:02:07	\N	1048585	10
-184	1	1	3	16777247	2023-04-01 00:02:07	\N	1048585	10
-185	1	2	3	16777247	2023-04-01 00:02:07	\N	1048585	10
-93	1	\N	3	16777220	2023-03-31 23:53:13	\N	1048585	5
-94	1	\N	3	16777222	2023-03-31 23:53:13	\N	1048585	5
-95	1	\N	3	16777223	2023-03-31 23:53:13	\N	1048585	5
-96	1	\N	3	16777224	2023-03-31 23:53:13	\N	1048585	5
-97	1	1	3	16777247	2023-03-31 23:53:13	\N	1048585	5
-98	1	2	3	16777247	2023-03-31 23:53:13	\N	1048585	5
-99	1	3	3	16777247	2023-03-31 23:53:13	\N	1048585	5
-186	1	3	3	16777247	2023-04-01 00:02:07	\N	1048585	10
-192	1	\N	3	16777222	2023-04-01 00:02:35	\N	1048585	11
-66	1	3	2	16777217	2023-03-31 23:50:46	\N	1048585	4
-113	1	\N	2	16777246	2023-03-31 23:55:07	2023-03-31 23:55:17	1048585	5
-193	1	\N	3	16777223	2023-04-01 00:02:35	\N	1048585	11
-194	1	\N	3	16777224	2023-04-01 00:02:35	\N	1048585	11
-140	1	\N	2	16777236	2023-03-31 23:58:27	2023-03-31 23:58:32	523	8
-127	1	3	3	16777249	2023-03-31 23:56:59	\N	1048586	1
-195	1	1	3	16777247	2023-04-01 00:02:35	\N	1048585	11
-128	1	4	3	16777249	2023-03-31 23:56:59	\N	1048586	1
-196	1	2	3	16777247	2023-04-01 00:02:35	\N	1048585	11
-197	1	3	3	16777247	2023-04-01 00:02:35	\N	1048585	11
-141	1	10	3	16777227	2023-03-31 23:58:38	\N	517	8
-198	1	\N	2	16777236	2023-04-01 00:02:49	2023-04-01 00:02:54	523	10
-200	1	9	3	16777227	2023-04-01 00:02:59	\N	517	9
-122	1	4	2	16777217	2023-03-31 23:56:13	\N	1048585	6
-143	1	25	2	16777230	2023-03-31 23:58:44	\N	1048585	7
-202	1	\N	2	16777236	2023-04-01 00:03:04	2023-04-01 00:03:09	523	11
-144	1	3	2	16777251	2023-03-31 23:58:44	2023-03-31 23:58:49	1048585	7
-208	1	28	2	16777230	2023-04-01 00:04:05	\N	1048585	11
-146	1	1	3	16777247	2023-03-31 23:59:10	\N	1048585	8
-147	1	2	3	16777247	2023-03-31 23:59:10	\N	1048585	8
-139	1	3	2	16777217	2023-03-31 23:58:11	\N	1048585	7
-148	1	3	3	16777247	2023-03-31 23:59:10	\N	1048585	8
-215	1	\N	3	16777220	2023-04-01 00:04:49	\N	1048585	12
-216	1	\N	3	16777222	2023-04-01 00:04:49	\N	1048585	12
-217	1	\N	3	16777223	2023-04-01 00:04:49	\N	1048585	12
-218	1	\N	3	16777224	2023-04-01 00:04:49	\N	1048585	12
-159	1	4	2	16777217	2023-04-01 00:00:05	\N	1048585	9
-161	1	26	2	16777229	2023-04-01 00:00:22	\N	1048585	9
-160	1	\N	2	16777236	2023-04-01 00:00:22	2023-04-01 00:00:28	523	9
-219	1	1	3	16777247	2023-04-01 00:04:49	\N	1048585	12
-220	1	2	3	16777247	2023-04-01 00:04:49	\N	1048585	12
-221	1	3	3	16777247	2023-04-01 00:04:49	\N	1048585	12
-223	1	29	2	16777229	2023-04-01 00:05:05	\N	1048585	12
-222	1	\N	2	16777236	2023-04-01 00:05:05	2023-04-01 00:05:10	523	12
-224	1	7	3	16777227	2023-04-01 00:05:16	\N	517	12
-294	1	\N	2	16777236	2023-04-01 00:12:17	2023-04-01 00:12:22	523	17
-228	1	9	3	16777227	2023-04-01 00:05:32	\N	517	14
-264	1	3	2	16777217	2023-04-01 00:09:02	\N	1048585	14
-236	1	\N	3	16777220	2023-04-01 00:06:22	\N	1048585	13
-237	1	\N	3	16777222	2023-04-01 00:06:22	\N	1048585	13
-238	1	\N	3	16777223	2023-04-01 00:06:22	\N	1048585	13
-239	1	\N	3	16777224	2023-04-01 00:06:22	\N	1048585	13
-240	1	1	3	16777247	2023-04-01 00:06:22	\N	1048585	13
-241	1	2	3	16777247	2023-04-01 00:06:22	\N	1048585	13
-242	1	3	3	16777247	2023-04-01 00:06:22	\N	1048585	13
-265	1	\N	2	16777236	2023-04-01 00:09:20	2023-04-01 00:09:25	523	15
-267	1	7	3	16777227	2023-04-01 00:09:31	\N	517	19
-243	1	\N	2	16777236	2023-04-01 00:06:38	2023-04-01 00:06:43	523	13
-245	1	8	3	16777227	2023-04-01 00:06:48	\N	517	15
-247	1	\N	2	16777236	2023-04-01 00:06:54	2023-04-01 00:06:59	523	14
-269	1	\N	2	16777236	2023-04-01 00:09:37	2023-04-01 00:09:43	523	16
-251	1	11	3	16777227	2023-04-01 00:07:12	\N	517	17
-271	1	11	3	16777227	2023-04-01 00:09:48	\N	517	20
-276	1	31	2	16777235	2023-04-01 00:10:12	\N	1048585	14
-277	1	3	2	16777254	2023-04-01 00:10:12	\N	1048585	14
-339	1	34	2	16777229	2023-04-01 00:15:44	\N	1048585	17
-280	1	\N	2	16777246	2023-04-01 00:11:25	\N	1048585	14
-338	1	\N	2	16777236	2023-04-01 00:15:44	2023-04-01 00:15:51	523	19
-287	1	\N	3	16777220	2023-04-01 00:12:01	\N	1048585	15
-288	1	\N	3	16777222	2023-04-01 00:12:01	\N	1048585	15
-289	1	\N	3	16777223	2023-04-01 00:12:01	\N	1048585	15
-290	1	\N	3	16777224	2023-04-01 00:12:01	\N	1048585	15
-291	1	1	3	16777247	2023-04-01 00:12:01	\N	1048585	15
-292	1	2	3	16777247	2023-04-01 00:12:01	\N	1048585	15
-293	1	3	3	16777247	2023-04-01 00:12:01	\N	1048585	15
-340	1	7	3	16777227	2023-04-01 00:15:56	\N	517	24
-305	1	\N	3	16777220	2023-04-01 00:13:14	\N	1048585	16
-306	1	\N	3	16777222	2023-04-01 00:13:14	\N	1048585	16
-307	1	\N	3	16777223	2023-04-01 00:13:14	\N	1048585	16
-308	1	\N	3	16777224	2023-04-01 00:13:14	\N	1048585	16
-309	1	1	3	16777247	2023-04-01 00:13:14	\N	1048585	16
-310	1	2	3	16777247	2023-04-01 00:13:14	\N	1048585	16
-311	1	3	3	16777247	2023-04-01 00:13:14	\N	1048585	16
-312	1	\N	2	16777236	2023-04-01 00:13:32	2023-04-01 00:13:38	523	18
-315	1	11	3	16777227	2023-04-01 00:13:52	\N	517	22
-317	1	12	3	16777227	2023-04-01 00:14:01	\N	517	23
-342	1	8	3	16777227	2023-04-01 00:16:05	\N	517	25
-331	1	\N	3	16777220	2023-04-01 00:15:24	\N	1048585	17
-332	1	\N	3	16777222	2023-04-01 00:15:24	\N	1048585	17
-333	1	\N	3	16777223	2023-04-01 00:15:24	\N	1048585	17
-334	1	\N	3	16777224	2023-04-01 00:15:24	\N	1048585	17
-335	1	1	3	16777247	2023-04-01 00:15:24	\N	1048585	17
-336	1	2	3	16777247	2023-04-01 00:15:24	\N	1048585	17
-337	1	3	3	16777247	2023-04-01 00:15:24	\N	1048585	17
+106	1	12	3	16777227	2023-04-03 20:02:52	\N	517	7
+78	1	22	2	16777235	2023-04-03 20:00:32	\N	1048585	4
+208	1	28	2	16777230	2023-04-03 20:13:54	\N	1048585	11
+79	1	3	2	16777254	2023-04-03 20:00:32	\N	1048585	4
+340	1	7	3	16777227	2023-04-03 20:26:50	\N	517	24
+110	1	23	2	16777235	2023-04-03 20:03:20	\N	1048585	5
+127	1	3	3	16777249	2023-04-03 20:06:09	\N	1048586	1
+128	1	4	3	16777249	2023-04-03 20:06:09	\N	1048586	1
+113	1	\N	2	16777246	2023-04-03 20:04:05	2023-04-03 20:04:17	1048585	5
+215	1	\N	3	16777220	2023-04-03 20:14:41	\N	1048585	12
+216	1	\N	3	16777222	2023-04-03 20:14:41	\N	1048585	12
+217	1	\N	3	16777223	2023-04-03 20:14:41	\N	1048585	12
+143	1	25	2	16777230	2023-04-03 20:08:04	\N	1048585	7
+51	1	\N	3	16777220	2023-04-03 19:58:30	\N	1048585	3
+52	1	\N	3	16777222	2023-04-03 19:58:30	\N	1048585	3
+53	1	\N	3	16777223	2023-04-03 19:58:30	\N	1048585	3
+54	1	\N	3	16777224	2023-04-03 19:58:30	\N	1048585	3
+55	1	1	3	16777247	2023-04-03 19:58:30	\N	1048585	3
+56	1	2	3	16777247	2023-04-03 19:58:30	\N	1048585	3
+14	1	4	2	16777217	2023-04-03 19:53:23	\N	1048585	1
+57	1	3	3	16777247	2023-04-03 19:58:30	\N	1048585	3
+15	1	\N	2	16777236	2023-04-03 19:53:38	2023-04-03 19:53:43	523	1
+16	1	12	3	16777227	2023-04-03 19:53:49	\N	517	1
+18	1	19	2	16777230	2023-04-03 19:53:56	\N	1048585	1
+19	1	4	2	16777251	2023-04-03 19:53:56	\N	1048585	1
+144	1	3	2	16777251	2023-04-03 20:08:04	2023-04-03 20:08:09	1048585	7
+122	1	4	2	16777217	2023-04-03 20:05:18	\N	1048585	6
+124	1	24	2	16777229	2023-04-03 20:05:35	\N	1048585	6
+123	1	\N	2	16777236	2023-04-03 20:05:35	2023-04-03 20:05:41	523	7
+66	1	3	2	16777217	2023-04-03 19:59:20	\N	1048585	4
+29	1	\N	3	16777220	2023-04-03 19:56:33	\N	1048585	2
+30	1	\N	3	16777222	2023-04-03 19:56:33	\N	1048585	2
+31	1	\N	3	16777223	2023-04-03 19:56:33	\N	1048585	2
+32	1	\N	3	16777224	2023-04-03 19:56:33	\N	1048585	2
+33	1	1	3	16777247	2023-04-03 19:56:33	\N	1048585	2
+34	1	2	3	16777247	2023-04-03 19:56:33	\N	1048585	2
+35	1	3	3	16777247	2023-04-03 19:56:33	\N	1048585	2
+36	1	\N	2	16777236	2023-04-03 19:57:03	2023-04-03 19:57:12	523	2
+37	1	11	3	16777227	2023-04-03 19:57:19	\N	517	2
+67	1	\N	2	16777236	2023-04-03 19:59:36	2023-04-03 19:59:42	523	3
+69	1	9	3	16777227	2023-04-03 19:59:48	\N	517	4
+39	1	12	3	16777227	2023-04-03 19:57:29	\N	517	3
+146	1	1	3	16777247	2023-04-03 20:08:32	\N	1048585	8
+71	1	\N	2	16777236	2023-04-03 19:59:55	2023-04-03 20:00:01	523	4
+73	1	11	3	16777227	2023-04-03 20:00:06	\N	517	5
+147	1	2	3	16777247	2023-04-03 20:08:32	\N	1048585	8
+148	1	3	3	16777247	2023-04-03 20:08:32	\N	1048585	8
+139	1	3	2	16777217	2023-04-03 20:07:26	\N	1048585	7
+140	1	\N	2	16777236	2023-04-03 20:07:44	2023-04-03 20:07:51	523	8
+141	1	10	3	16777227	2023-04-03 20:07:56	\N	517	8
+93	1	\N	3	16777220	2023-04-03 20:02:00	\N	1048585	5
+94	1	\N	3	16777222	2023-04-03 20:02:00	\N	1048585	5
+95	1	\N	3	16777223	2023-04-03 20:02:00	\N	1048585	5
+96	1	\N	3	16777224	2023-04-03 20:02:00	\N	1048585	5
+97	1	1	3	16777247	2023-04-03 20:02:00	\N	1048585	5
+98	1	2	3	16777247	2023-04-03 20:02:00	\N	1048585	5
+99	1	3	3	16777247	2023-04-03 20:02:00	\N	1048585	5
+100	1	\N	2	16777236	2023-04-03 20:02:19	2023-04-03 20:02:26	523	5
+102	1	8	3	16777227	2023-04-03 20:02:32	\N	517	6
+104	1	\N	2	16777236	2023-04-03 20:02:40	2023-04-03 20:02:45	523	6
+159	1	4	2	16777217	2023-04-03 20:09:31	\N	1048585	9
+181	1	\N	3	16777222	2023-04-03 20:11:44	\N	1048585	10
+161	1	26	2	16777229	2023-04-03 20:09:50	\N	1048585	9
+160	1	\N	2	16777236	2023-04-03 20:09:50	2023-04-03 20:09:57	523	9
+182	1	\N	3	16777223	2023-04-03 20:11:44	\N	1048585	10
+183	1	\N	3	16777224	2023-04-03 20:11:44	\N	1048585	10
+184	1	1	3	16777247	2023-04-03 20:11:44	\N	1048585	10
+185	1	2	3	16777247	2023-04-03 20:11:44	\N	1048585	10
+186	1	3	3	16777247	2023-04-03 20:11:44	\N	1048585	10
+180	1	\N	3	16777220	2023-04-03 20:11:44	\N	1048585	10
+191	1	\N	3	16777220	2023-04-03 20:12:15	\N	1048585	11
+192	1	\N	3	16777222	2023-04-03 20:12:15	\N	1048585	11
+193	1	\N	3	16777223	2023-04-03 20:12:15	\N	1048585	11
+194	1	\N	3	16777224	2023-04-03 20:12:15	\N	1048585	11
+195	1	1	3	16777247	2023-04-03 20:12:15	\N	1048585	11
+196	1	2	3	16777247	2023-04-03 20:12:15	\N	1048585	11
+197	1	3	3	16777247	2023-04-03 20:12:15	\N	1048585	11
+198	1	\N	2	16777236	2023-04-03 20:12:31	2023-04-03 20:12:36	523	10
+200	1	9	3	16777227	2023-04-03 20:12:42	\N	517	9
+202	1	\N	2	16777236	2023-04-03 20:12:47	2023-04-03 20:12:53	523	11
+218	1	\N	3	16777224	2023-04-03 20:14:41	\N	1048585	12
+219	1	1	3	16777247	2023-04-03 20:14:41	\N	1048585	12
+220	1	2	3	16777247	2023-04-03 20:14:41	\N	1048585	12
+221	1	3	3	16777247	2023-04-03 20:14:41	\N	1048585	12
+223	1	29	2	16777229	2023-04-03 20:14:59	\N	1048585	12
+222	1	\N	2	16777236	2023-04-03 20:14:59	2023-04-03 20:15:05	523	12
+224	1	7	3	16777227	2023-04-03 20:15:10	\N	517	12
+342	1	8	3	16777227	2023-04-03 20:26:59	\N	517	25
+228	1	9	3	16777227	2023-04-03 20:15:27	\N	517	14
+269	1	\N	2	16777236	2023-04-03 20:19:56	2023-04-03 20:20:01	523	16
+271	1	11	3	16777227	2023-04-03 20:20:08	\N	517	20
+236	1	\N	3	16777220	2023-04-03 20:16:21	\N	1048585	13
+237	1	\N	3	16777222	2023-04-03 20:16:21	\N	1048585	13
+238	1	\N	3	16777223	2023-04-03 20:16:21	\N	1048585	13
+239	1	\N	3	16777224	2023-04-03 20:16:21	\N	1048585	13
+240	1	1	3	16777247	2023-04-03 20:16:21	\N	1048585	13
+241	1	2	3	16777247	2023-04-03 20:16:21	\N	1048585	13
+242	1	3	3	16777247	2023-04-03 20:16:21	\N	1048585	13
+243	1	\N	2	16777236	2023-04-03 20:16:38	2023-04-03 20:16:44	523	13
+245	1	8	3	16777227	2023-04-03 20:16:49	\N	517	15
+247	1	\N	2	16777236	2023-04-03 20:16:56	2023-04-03 20:17:01	523	14
+251	1	11	3	16777227	2023-04-03 20:17:15	\N	517	17
+276	1	31	2	16777235	2023-04-03 20:20:35	\N	1048585	14
+255	1	30	2	16777230	2023-04-03 20:18:16	\N	1048585	13
+277	1	3	2	16777254	2023-04-03 20:20:35	\N	1048585	14
+280	1	\N	2	16777246	2023-04-03 20:21:57	\N	1048585	14
+264	1	3	2	16777217	2023-04-03 20:19:16	\N	1048585	14
+265	1	\N	2	16777236	2023-04-03 20:19:35	2023-04-03 20:19:42	523	15
+267	1	7	3	16777227	2023-04-03 20:19:49	\N	517	19
+305	1	\N	3	16777220	2023-04-03 20:23:56	\N	1048585	16
+306	1	\N	3	16777222	2023-04-03 20:23:56	\N	1048585	16
+287	1	\N	3	16777220	2023-04-03 20:22:37	\N	1048585	15
+288	1	\N	3	16777222	2023-04-03 20:22:37	\N	1048585	15
+289	1	\N	3	16777223	2023-04-03 20:22:37	\N	1048585	15
+290	1	\N	3	16777224	2023-04-03 20:22:37	\N	1048585	15
+291	1	1	3	16777247	2023-04-03 20:22:37	\N	1048585	15
+292	1	2	3	16777247	2023-04-03 20:22:37	\N	1048585	15
+293	1	3	3	16777247	2023-04-03 20:22:37	\N	1048585	15
+307	1	\N	3	16777223	2023-04-03 20:23:56	\N	1048585	16
+294	1	\N	2	16777236	2023-04-03 20:22:55	2023-04-03 20:23:00	523	17
+308	1	\N	3	16777224	2023-04-03 20:23:56	\N	1048585	16
+309	1	1	3	16777247	2023-04-03 20:23:56	\N	1048585	16
+310	1	2	3	16777247	2023-04-03 20:23:56	\N	1048585	16
+311	1	3	3	16777247	2023-04-03 20:23:56	\N	1048585	16
+312	1	\N	2	16777236	2023-04-03 20:24:16	2023-04-03 20:24:22	523	18
+315	1	11	3	16777227	2023-04-03 20:24:37	\N	517	22
+317	1	12	3	16777227	2023-04-03 20:24:45	\N	517	23
+331	1	\N	3	16777220	2023-04-03 20:26:15	\N	1048585	17
+332	1	\N	3	16777222	2023-04-03 20:26:15	\N	1048585	17
+333	1	\N	3	16777223	2023-04-03 20:26:15	\N	1048585	17
+334	1	\N	3	16777224	2023-04-03 20:26:15	\N	1048585	17
+335	1	1	3	16777247	2023-04-03 20:26:15	\N	1048585	17
+336	1	2	3	16777247	2023-04-03 20:26:15	\N	1048585	17
+337	1	3	3	16777247	2023-04-03 20:26:15	\N	1048585	17
+339	1	34	2	16777229	2023-04-03 20:26:36	\N	1048585	17
+338	1	\N	2	16777236	2023-04-03 20:26:36	2023-04-03 20:26:44	523	19
 \.
-
-
---
--- Name: notifications_notification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.notifications_notification_id_seq', 343, true);
 
 
 --
@@ -14124,29 +13652,22 @@ COPY public.oai_resumption_tokens (oai_resumption_token_id, token, expire, recor
 
 
 --
--- Name: oai_resumption_tokens_oai_resumption_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.oai_resumption_tokens_oai_resumption_token_id_seq', 1, false);
-
-
---
 -- Data for Name: plugin_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.plugin_settings (plugin_setting_id, plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
-1	usageeventplugin	0	enabled	1	bool
-2	usageeventplugin	0	uniqueSiteId		string
-3	acronplugin	0	enabled	1	bool
-4	acronplugin	0	crontab	[{"className":"PKP\\\\task\\\\ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\PublishSubmissions","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\RemoveUnvalidatedExpiredUsers","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\UpdateIPGeoDB","frequency":{"day":"10"},"args":[]},{"className":"APP\\\\tasks\\\\UsageStatsLoader","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\EditorialReminders","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\ProcessQueueJobs","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\RemoveFailedJobs","frequency":{"day":"1"},"args":[]}]	object
-5	defaultthemeplugin	0	enabled	1	bool
+1	defaultthemeplugin	0	enabled	1	bool
+2	acronplugin	0	enabled	1	bool
+3	acronplugin	0	crontab	[{"className":"PKP\\\\task\\\\ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\PublishSubmissions","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\RemoveUnvalidatedExpiredUsers","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\UpdateIPGeoDB","frequency":{"day":"10"},"args":[]},{"className":"APP\\\\tasks\\\\UsageStatsLoader","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\EditorialReminders","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\ProcessQueueJobs","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\RemoveFailedJobs","frequency":{"day":"1"},"args":[]}]	object
+4	usageeventplugin	0	enabled	1	bool
+5	usageeventplugin	0	uniqueSiteId		string
 6	tinymceplugin	0	enabled	1	bool
-7	developedbyblockplugin	0	enabled	0	bool
-8	developedbyblockplugin	0	seq	0	int
-9	developedbyblockplugin	0	context	1	int
-10	languagetoggleblockplugin	0	enabled	1	bool
-11	languagetoggleblockplugin	0	seq	4	int
-12	languagetoggleblockplugin	0	context	1	int
+7	languagetoggleblockplugin	0	enabled	1	bool
+8	languagetoggleblockplugin	0	seq	4	int
+9	languagetoggleblockplugin	0	context	1	int
+10	developedbyblockplugin	0	enabled	0	bool
+11	developedbyblockplugin	0	seq	0	int
+12	developedbyblockplugin	0	context	1	int
 13	tinymceplugin	1	enabled	1	bool
 14	defaultthemeplugin	1	enabled	1	bool
 15	browseblockplugin	1	enabled	1	bool
@@ -14155,24 +13676,24 @@ COPY public.plugin_settings (plugin_setting_id, plugin_name, context_id, setting
 18	browseblockplugin	1	browseNewReleases	1	bool
 19	browseblockplugin	1	browseCategories	1	bool
 20	browseblockplugin	1	browseSeries	1	bool
-21	developedbyblockplugin	1	enabled	0	bool
-22	developedbyblockplugin	1	seq	0	int
-23	developedbyblockplugin	1	context	1	int
+21	informationblockplugin	1	enabled	1	bool
+22	informationblockplugin	1	seq	7	int
+23	informationblockplugin	1	context	1	int
 24	languagetoggleblockplugin	1	enabled	1	bool
 25	languagetoggleblockplugin	1	seq	4	int
 26	languagetoggleblockplugin	1	context	1	int
-27	informationblockplugin	1	enabled	1	bool
-28	informationblockplugin	1	seq	7	int
-29	informationblockplugin	1	context	1	int
-30	googlescholarplugin	1	enabled	1	bool
-31	dublincoremetaplugin	1	enabled	1	bool
-32	pdfjsviewerplugin	1	enabled	1	bool
-33	webfeedplugin	1	enabled	1	bool
-34	webfeedplugin	1	displayPage	homepage	string
-35	webfeedplugin	1	displayItems	1	bool
-36	webfeedplugin	1	recentItems	30	int
-37	webfeedplugin	1	includeIdentifiers	0	bool
-38	htmlmonographfileplugin	1	enabled	1	bool
+27	developedbyblockplugin	1	enabled	0	bool
+28	developedbyblockplugin	1	seq	0	int
+29	developedbyblockplugin	1	context	1	int
+30	dublincoremetaplugin	1	enabled	1	bool
+31	webfeedplugin	1	enabled	1	bool
+32	webfeedplugin	1	displayPage	homepage	string
+33	webfeedplugin	1	displayItems	1	bool
+34	webfeedplugin	1	recentItems	30	int
+35	webfeedplugin	1	includeIdentifiers	0	bool
+36	pdfjsviewerplugin	1	enabled	1	bool
+37	htmlmonographfileplugin	1	enabled	1	bool
+38	googlescholarplugin	1	enabled	1	bool
 39	defaultthemeplugin	1	typography	notoSans	string
 40	defaultthemeplugin	1	useHomepageImageAsHeader	false	string
 41	defaultthemeplugin	1	baseColour	#1E6292	string
@@ -14182,93 +13703,79 @@ COPY public.plugin_settings (plugin_setting_id, plugin_name, context_id, setting
 
 
 --
--- Name: plugin_settings_plugin_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.plugin_settings_plugin_setting_id_seq', 43, true);
-
-
---
 -- Data for Name: press_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.press_settings (press_setting_id, press_id, locale, setting_name, setting_value, setting_type) FROM stdin;
-21	1		doiSuffixType	default	\N
+13	1		country	IS	\N
+17	1	en	detailsHelp	<p>Please provide the following details to help us manage your submission in our system.</p>	\N
 27	1		itemsPerPage	25	\N
 28	1		keywords	request	\N
 30	1	fr_CA	librarianInformation	Nous encourageons les bibliothécaires de recherche à ajouter cette presse à la liste électronique des ressources documentaires de la bibliothèque. De plus, ce système d'édition à libre accès convient à toutes les bibliothèques et permet aux membres des facultés de l'utiliser pour les presses auxquelles ils contribuent à titre de rédacteur en chef. (voir <a href="http://pkp.sfu.ca/omp">Open Monograph Press</a>).	\N
 29	1	en	librarianInformation	We encourage research librarians to list this press among their library's electronic press holdings. As well, this open source publishing system is suitable for libraries to host for their faculty members to use with presses they are involved in editing (see <a href="https://pkp.sfu.ca/omp">Open Monograph Press</a>).	\N
-31	1	en	name	Public Knowledge Press	\N
 33	1		notifyAllAuthors	1	\N
 34	1		numPageLinks	10	\N
 1	1	en	acronym	JPK	\N
 4	1	fr_CA	authorGuidelines	##default.contextSettings.authorGuidelines##	\N
-5	1	en	authorInformation	Interested in submitting to this press? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About the Press</a> page for the press' section policies and <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> with the press prior to submitting, or if already registered can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the 5 step process.	\N
 6	1	fr_CA	authorInformation	Vous souhaitez soumettre une contribution à cette presse ? Nous vous recommandons de lire la page\n <a href="http://localhost/index.php/publicknowledge/about">À propos de cette presse</a> pour connaitre ses règlements et la page\n <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Lignes directrices à l'intention des auteurs-es</a>. Les auteurs-es doivent <a href="http://localhost/index.php/publicknowledge/user/register">s'inscrire</a> auprès de la presse avant d'envoyer une soumission. Si vous êtes déjà inscrit-e, il suffit simplement <a href="http://localhost/index.php/index/login">d'ouvrir une session</a> pour débuter la procédure en 5 étapes.	\N
-7	1	en	beginSubmissionHelp	<p>Thank you for submitting to the Public Knowledge Press. You will be asked to upload files, identify co-authors, and provide information such as the title and abstract.<p><p>Please read our <a href="http://localhost/index.php/publicknowledge/about/submissions" target="_blank">Submission Guidelines</a> if you have not done so already. When filling out the forms, provide as many details as possible in order to help our editors evaluate your work.</p><p>Once you begin, you can save your submission and come back to it later. You will be able to review and correct any information before you submit.</p>	\N
+5	1	en	authorInformation	Interested in submitting to this press? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About the Press</a> page for the press' section policies and <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> with the press prior to submitting, or if already registered can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the 5 step process.	\N
 8	1	fr_CA	beginSubmissionHelp	##default.submission.step.beforeYouBegin##	\N
+7	1	en	beginSubmissionHelp	<p>Thank you for submitting to the Public Knowledge Press. You will be asked to upload files, identify co-authors, and provide information such as the title and abstract.<p><p>Please read our <a href="http://localhost/index.php/publicknowledge/about/submissions" target="_blank">Submission Guidelines</a> if you have not done so already. When filling out the forms, provide as many details as possible in order to help our editors evaluate your work.</p><p>Once you begin, you can save your submission and come back to it later. You will be able to review and correct any information before you submit.</p>	\N
 9	1		contactEmail	rvaca@mailinator.com	\N
 10	1		contactName	Ramiro Vaca	\N
-11	1	en	contributorsHelp	<p>Add details for all of the contributors to this submission. Contributors added here will be sent an email confirmation of the submission, as well as a copy of all editorial decisions recorded against this submission.</p><p>If a contributor can not be contacted by email, because they must remain anonymous or do not have an email account, please do not enter a fake email address. You can add information about this contributor in a message to the editor at a later step in the submission process.</p>	\N
 12	1	fr_CA	contributorsHelp	##default.submission.step.contributors##	\N
-13	1		country	IS	\N
+11	1	en	contributorsHelp	<p>Add details for all of the contributors to this submission. Contributors added here will be sent an email confirmation of the submission, as well as a copy of all editorial decisions recorded against this submission.</p><p>If a contributor can not be contacted by email, because they must remain anonymous or do not have an email account, please do not enter a fake email address. You can add information about this contributor in a message to the editor at a later step in the submission process.</p>	\N
 14	1		defaultReviewMode	2	\N
 15	1	en	description	<p>Public Knowledge Press is a publisher dedicated to the subject of public access to science.</p>	\N
-17	1	en	detailsHelp	<p>Please provide the following details to help us manage your submission in our system.</p>	\N
-18	1	fr_CA	detailsHelp	##default.submission.step.details##	\N
 19	1		emailSignature	<br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>	\N
 20	1		enableDois	1	\N
+21	1		doiSuffixType	default	\N
 22	1		registrationAgency		\N
 23	1		disableSubmissions	0	\N
 24	1		editorialStatsEmail	1	\N
-32	1	fr_CA	name	Press de la connaissance du public	\N
-35	1		numWeeksPerResponse	4	\N
-36	1		numWeeksPerReview	4	\N
-37	1	en	openAccessPolicy	This press provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.	\N
-16	1	fr_CA	description	<p>Le Press de Public Knowledge est une presse sur le thème de l'accès du public à la science.</p>	\N
 26	1	fr_CA	forTheEditorsHelp	##default.submission.step.forTheEditors##	\N
 25	1	en	forTheEditorsHelp	<p>Please provide the following details in order to help our editorial team manage your submission.</p><p>When entering metadata, provide entries that you think would be most helpful to the person managing your submission. This information can be changed before publication.</p>	\N
+31	1	en	name	Public Knowledge Press	\N
+32	1	fr_CA	name	Press de la connaissance du public	\N
+35	1		numWeeksPerResponse	4	\N
+16	1	fr_CA	description	<p>Le Press de Public Knowledge est une presse sur le thème de l'accès du public à la science.</p>	\N
+18	1	fr_CA	detailsHelp	##default.submission.step.details##	\N
+36	1		numWeeksPerReview	4	\N
+37	1	en	openAccessPolicy	This press provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.	\N
 54	1	en	uploadFilesHelp	<p>Provide any files our editorial team may need to evaluate your submission. In addition to the main work, you may wish to submit data sets, conflict of interest statements, or other supplementary files if these will be helpful for our editors.</p>	\N
-42	1	fr_CA	readerInformation	Nous encourageons les lecteurs à s'abonner au service d'avis de publication de cette presse. Utilisez le lien <a href="http://localhost/index.php/publicknowledge/user/register">d'inscription</a> situé en haut de la page d'accueil de la presse. Cette inscription permettra au lecteur de recevoir la table des matières de chaque nouvelle monographie de cette presse par courriel. Cette liste permet également à la presse d'affirmer qu'elle compte un certain nombre de lecteurs. Consultez <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">l'énoncé de confidentialité </a> de la presse, lequel stipule que les noms et adresses courriel de ses lecteurs ne seront pas utilisés à d'autres fins.	\N
-41	1	en	readerInformation	We encourage readers to sign up for the publishing notification service for this press. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the homepage for the press. This registration will result in the reader receiving the Table of Contents by email for each new monograph of the press. This list also allows the press to claim a certain level of support or readership. See the press <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a> which assures readers that their name and email address will not be used for other purposes.	\N
-43	1	en	reviewHelp	<p>Review the information you have entered before you complete your submission. You can change any of the details displayed here by clicking the edit button at the top of each section.</p><p>Once you complete your submission, a member of our editorial team will be assigned to review it. Please ensure the details you have entered here are as accurate as possible.</p>	\N
+39	1	en	privacyStatement	<p>The names and email addresses entered in this press site will be used exclusively for the stated purposes of this press and will not be made available for any other purpose or to any other party.</p>	\N
+40	1	fr_CA	privacyStatement	<p>Les noms et adresses courriel saisis sur ce site de presse seront utilisés exclusivement pour les fins convenues de cette presse. Ils ne seront pas utilisés pour d'autres fins ou transmis à une tierce partie.</p>	\N
 44	1	fr_CA	reviewHelp	##default.submission.step.review##	\N
-66	1	en	searchDescription	Public Knowledge Press is a publisher dedicated to the subject of public access to science.	\N
-45	1		submissionAcknowledgement	allAuthors	\N
-46	1	en	submissionChecklist	<p>All submissions must meet the following requirements.</p><ul><li>This submission meets the requirements outlined in the <a href="http://localhost/index.php/publicknowledge/about/submissions">Author Guidelines</a>.</li><li>This submission has not been previously published, nor is it before another press for consideration.</li><li>All references have been checked for accuracy and completeness.</li><li>All tables and figures have been numbered and labeled.</li><li>Permission has been obtained to publish all photos, datasets and other material provided with this submission.</li></ul>	\N
 55	1	fr_CA	uploadFilesHelp	##default.submission.step.uploadFiles##	\N
 56	1		enableGeoUsageStats	disabled	\N
 57	1		enableInstitutionUsageStats	0	\N
 58	1		isSushiApiPublic	1	\N
 59	1		coverThumbnailsMaxWidth	106	\N
+60	1		coverThumbnailsMaxHeight	100	\N
+61	1		enabledDoiTypes	["publication"]	\N
+62	1		doiCreationTime	copyEditCreationTime	\N
+42	1	fr_CA	readerInformation	Nous encourageons les lecteurs à s'abonner au service d'avis de publication de cette presse. Utilisez le lien <a href="http://localhost/index.php/publicknowledge/user/register">d'inscription</a> situé en haut de la page d'accueil de la presse. Cette inscription permettra au lecteur de recevoir la table des matières de chaque nouvelle monographie de cette presse par courriel. Cette liste permet également à la presse d'affirmer qu'elle compte un certain nombre de lecteurs. Consultez <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">l'énoncé de confidentialité </a> de la presse, lequel stipule que les noms et adresses courriel de ses lecteurs ne seront pas utilisés à d'autres fins.	\N
+41	1	en	readerInformation	We encourage readers to sign up for the publishing notification service for this press. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the homepage for the press. This registration will result in the reader receiving the Table of Contents by email for each new monograph of the press. This list also allows the press to claim a certain level of support or readership. See the press <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a> which assures readers that their name and email address will not be used for other purposes.	\N
+43	1	en	reviewHelp	<p>Review the information you have entered before you complete your submission. You can change any of the details displayed here by clicking the edit button at the top of each section.</p><p>Once you complete your submission, a member of our editorial team will be assigned to review it. Please ensure the details you have entered here are as accurate as possible.</p>	\N
+45	1		submissionAcknowledgement	allAuthors	\N
 47	1	fr_CA	submissionChecklist	##default.contextSettings.checklist##	\N
+46	1	en	submissionChecklist	<p>All submissions must meet the following requirements.</p><ul><li>This submission meets the requirements outlined in the <a href="http://localhost/index.php/publicknowledge/about/submissions">Author Guidelines</a>.</li><li>This submission has not been previously published, nor is it before another press for consideration.</li><li>All references have been checked for accuracy and completeness.</li><li>All tables and figures have been numbered and labeled.</li><li>Permission has been obtained to publish all photos, datasets and other material provided with this submission.</li></ul>	\N
 48	1		submitWithCategories	0	\N
 49	1		supportedFormLocales	["en","fr_CA"]	\N
 50	1		supportedLocales	["en","fr_CA"]	\N
 51	1		supportedSubmissionLocales	["en","fr_CA"]	\N
 52	1		themePluginPath	default	\N
-53	1		type	enable	\N
-60	1		coverThumbnailsMaxHeight	100	\N
-61	1		enabledDoiTypes	["publication"]	\N
-65	1	en	customHeaders	<meta name="pkp" content="Test metatag.">	\N
-62	1		doiCreationTime	copyEditCreationTime	\N
 63	1		paymentPluginName	ManualPayment	\N
 64	1		doiVersioning	0	\N
+53	1		type	enable	\N
 38	1	fr_CA	openAccessPolicy	Cette presse offre un accès libre immédiat à son contenu en partant du principe que la recherche doit être accessible au grand public, car cela favorise un meilleur échange des connaissances à l'échelle mondiale.	\N
-39	1	en	privacyStatement	<p>The names and email addresses entered in this press site will be used exclusively for the stated purposes of this press and will not be made available for any other purpose or to any other party.</p>	\N
-40	1	fr_CA	privacyStatement	<p>Les noms et adresses courriel saisis sur ce site de presse seront utilisés exclusivement pour les fins convenues de cette presse. Ils ne seront pas utilisés pour d'autres fins ou transmis à une tierce partie.</p>	\N
 3	1	en	authorGuidelines	<p>Authors are invited to make a submission to this press. Those submissions considered to be a good fit will be sent for peer review before determining whether they will be accepted or rejected.</p><p>Before making a submission, authors are responsible for obtaining permission to publish any material included with the submission, such as photos, documents and datasets. All authors identified on the submission must consent to be identified as an author. Where appropriate, research should be approved by an appropriate ethics committee in accordance with the legal requirements of the study's country.</p><p>An editor may desk reject a submission if it does not meet minimum standards of quality. Before submitting, please ensure that the scope and outline of the book are structured and articulated properly. The title should be concise and the abstract should be able to stand on its own. This will increase the likelihood of reviewers agreeing to review the book. When you're satisfied that your submission meets this standard, please follow the checklist below to prepare your submission.</p>	\N
+65	1	en	customHeaders	<meta name="pkp" content="Test metatag.">	\N
 67	1		mailingAddress	123 456th Street\nBurnaby, British Columbia\nCanada	\N
+66	1	en	searchDescription	Public Knowledge Press is a publisher dedicated to the subject of public access to science.	\N
 68	1		supportEmail	rvaca@mailinator.com	\N
 69	1		supportName	Ramiro Vaca	\N
 \.
-
-
---
--- Name: press_settings_press_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.press_settings_press_setting_id_seq', 69, true);
 
 
 --
@@ -14281,13 +13788,6 @@ COPY public.presses (press_id, path, seq, primary_locale, enabled) FROM stdin;
 
 
 --
--- Name: presses_press_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.presses_press_id_seq', 1, true);
-
-
---
 -- Data for Name: publication_categories; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -14296,25 +13796,11 @@ COPY public.publication_categories (publication_category_id, publication_id, cat
 
 
 --
--- Name: publication_categories_publication_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.publication_categories_publication_category_id_seq', 1, false);
-
-
---
 -- Data for Name: publication_dates; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.publication_dates (publication_date_id, publication_format_id, role, date_format, date) FROM stdin;
 \.
-
-
---
--- Name: publication_dates_publication_date_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.publication_dates_publication_date_id_seq', 1, false);
 
 
 --
@@ -14332,13 +13818,6 @@ COPY public.publication_format_settings (publication_format_setting_id, publicat
 
 
 --
--- Name: publication_format_settings_publication_format_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.publication_format_settings_publication_format_setting_id_seq', 6, true);
-
-
---
 -- Data for Name: publication_formats; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -14347,13 +13826,6 @@ COPY public.publication_formats (publication_format_id, publication_id, submissi
 2	5	\N	0	DA	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N			1	1	\N
 3	14	\N	0	DA	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N			1	1	\N
 \.
-
-
---
--- Name: publication_formats_publication_format_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.publication_formats_publication_format_id_seq', 3, true);
 
 
 --
@@ -14423,42 +13895,28 @@ COPY public.publication_settings (publication_setting_id, publication_id, locale
 
 
 --
--- Name: publication_settings_publication_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.publication_settings_publication_setting_id_seq', 58, true);
-
-
---
 -- Data for Name: publications; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.publications (publication_id, date_published, last_modified, primary_contact_id, publication_date_type, publication_type, seq, series_id, series_position, submission_id, status, url_path, version, doi_id) FROM stdin;
-1	\N	2023-03-31 23:44:52	1	pub	publication	0	1	\N	1	1	\N	1	\N
-2	\N	2023-03-31 23:46:21	2	pub	publication	0	\N	\N	2	1	\N	1	\N
-3	\N	2023-03-31 23:49:15	11	pub	publication	0	\N	\N	3	1	\N	1	\N
-4	\N	2023-03-31 23:50:09	12	pub	publication	0	3	\N	4	1	\N	1	\N
-5	2023-03-31	2023-03-31 23:55:29	16	pub	publication	0	\N	\N	5	3	\N	1	\N
-6	\N	2023-03-31 23:55:38	17	pub	publication	0	1	\N	6	1	\N	1	\N
-7	\N	2023-03-31 23:57:25	21	pub	publication	0	4	\N	7	1	\N	1	\N
-8	\N	2023-03-31 23:59:06	\N	pub	publication	0	\N	\N	8	1	\N	1	\N
-9	\N	2023-03-31 23:59:19	26	pub	publication	0	1	\N	9	1	\N	1	\N
-10	\N	2023-04-01 00:00:38	31	pub	publication	0	\N	\N	10	1	\N	1	\N
-11	\N	2023-04-01 00:02:18	32	pub	publication	0	\N	\N	11	1	\N	1	\N
-12	\N	2023-04-01 00:04:19	33	pub	publication	0	\N	\N	12	1	\N	1	\N
-13	\N	2023-04-01 00:05:54	41	pub	publication	0	\N	\N	13	1	\N	1	\N
-14	2023-04-01	2023-04-01 00:11:25	45	pub	publication	0	5	\N	14	3	\N	1	\N
-15	\N	2023-04-01 00:11:36	48	pub	publication	0	\N	\N	15	1	\N	1	\N
-16	\N	2023-04-01 00:12:31	49	pub	publication	0	\N	\N	16	1	\N	1	\N
-17	\N	2023-04-01 00:14:25	50	pub	publication	0	\N	\N	17	1	\N	1	\N
+1	\N	2023-04-03 19:52:57	1	pub	publication	0	1	\N	1	1	\N	1	\N
+2	\N	2023-04-03 19:54:32	2	pub	publication	0	\N	\N	2	1	\N	1	\N
+3	\N	2023-04-03 19:57:42	11	pub	publication	0	\N	\N	3	1	\N	1	\N
+4	\N	2023-04-03 19:58:41	12	pub	publication	0	3	\N	4	1	\N	1	\N
+5	2023-04-03	2023-04-03 20:04:29	16	pub	publication	0	\N	\N	5	3	\N	1	\N
+6	\N	2023-04-03 20:04:40	17	pub	publication	0	1	\N	6	1	\N	1	\N
+7	\N	2023-04-03 20:06:36	21	pub	publication	0	4	\N	7	1	\N	1	\N
+8	\N	2023-04-03 20:08:28	\N	pub	publication	0	\N	\N	8	1	\N	1	\N
+9	\N	2023-04-03 20:08:42	26	pub	publication	0	1	\N	9	1	\N	1	\N
+10	\N	2023-04-03 20:10:08	31	pub	publication	0	\N	\N	10	1	\N	1	\N
+11	\N	2023-04-03 20:11:56	32	pub	publication	0	\N	\N	11	1	\N	1	\N
+12	\N	2023-04-03 20:14:10	33	pub	publication	0	\N	\N	12	1	\N	1	\N
+13	\N	2023-04-03 20:15:52	41	pub	publication	0	\N	\N	13	1	\N	1	\N
+14	2023-04-03	2023-04-03 20:21:57	45	pub	publication	0	5	\N	14	3	\N	1	\N
+15	\N	2023-04-03 20:22:11	48	pub	publication	0	\N	\N	15	1	\N	1	\N
+16	\N	2023-04-03 20:23:10	49	pub	publication	0	\N	\N	16	1	\N	1	\N
+17	\N	2023-04-03 20:25:12	50	pub	publication	0	\N	\N	17	1	\N	1	\N
 \.
-
-
---
--- Name: publications_publication_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.publications_publication_id_seq', 17, true);
 
 
 --
@@ -14468,13 +13926,6 @@ SELECT pg_catalog.setval('public.publications_publication_id_seq', 17, true);
 COPY public.queries (query_id, assoc_type, assoc_id, stage_id, seq, date_posted, date_modified, closed) FROM stdin;
 1	1048585	6	2	1	\N	\N	0
 \.
-
-
---
--- Name: queries_query_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.queries_query_id_seq', 1, true);
 
 
 --
@@ -14488,25 +13939,11 @@ COPY public.query_participants (query_participant_id, query_id, user_id) FROM st
 
 
 --
--- Name: query_participants_query_participant_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.query_participants_query_participant_id_seq', 2, true);
-
-
---
 -- Data for Name: queued_payments; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.queued_payments (queued_payment_id, date_created, date_modified, expiry_date, payment_data) FROM stdin;
 \.
-
-
---
--- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.queued_payments_queued_payment_id_seq', 1, false);
 
 
 --
@@ -14518,50 +13955,36 @@ COPY public.representatives (representative_id, submission_id, role, representat
 
 
 --
--- Name: representatives_representative_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.representatives_representative_id_seq', 1, false);
-
-
---
 -- Data for Name: review_assignments; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, considered, request_resent) FROM stdin;
-1	1	12	\N	\N	2023-03-31 23:45:41	2023-03-31 23:45:41	\N	\N	\N	2023-04-28 00:00:00	2023-04-28 00:00:00	2023-03-31 23:45:41	0	0	0	\N	\N	\N	\N	1	3	2	1	0	\N	0	0
-2	2	11	\N	\N	2023-03-31 23:48:53	2023-03-31 23:48:53	\N	\N	\N	2023-04-28 00:00:00	2023-04-28 00:00:00	2023-03-31 23:48:53	0	0	0	\N	\N	\N	\N	2	3	1	1	0	\N	0	0
-15	13	8	\N	\N	2023-04-01 00:06:48	2023-04-01 00:06:49	\N	\N	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:06:49	0	0	0	\N	\N	\N	\N	13	2	2	1	0	\N	0	0
-3	2	12	\N	\N	2023-03-31 23:49:03	2023-03-31 23:49:03	\N	\N	\N	2023-04-28 00:00:00	2023-04-28 00:00:00	2023-03-31 23:49:03	0	0	0	\N	\N	\N	\N	2	3	2	1	0	\N	0	0
-4	4	9	\N	\N	2023-03-31 23:51:12	2023-03-31 23:51:12	\N	\N	\N	2023-04-28 00:00:00	2023-04-28 00:00:00	2023-03-31 23:51:12	0	0	0	\N	\N	\N	\N	3	2	2	1	0	\N	0	0
-21	16	10	\N	0	2023-04-01 00:13:44	2023-04-01 00:13:44	2023-04-01 00:14:09	2023-04-01 00:14:14	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:14:14	0	0	0	\N	\N	\N	\N	18	3	2	1	4	\N	0	0
-5	4	11	\N	\N	2023-03-31 23:51:29	2023-03-31 23:51:29	\N	\N	\N	2023-04-28 00:00:00	2023-04-28 00:00:00	2023-03-31 23:51:29	0	0	0	\N	\N	\N	\N	4	3	2	1	0	\N	0	0
-6	5	8	\N	\N	2023-03-31 23:53:43	2023-03-31 23:53:43	\N	\N	\N	2023-04-28 00:00:00	2023-04-28 00:00:00	2023-03-31 23:53:43	0	0	0	\N	\N	\N	\N	5	2	2	1	0	\N	0	0
-7	5	12	\N	\N	2023-03-31 23:54:00	2023-03-31 23:54:01	\N	\N	\N	2023-04-28 00:00:00	2023-04-28 00:00:00	2023-03-31 23:54:01	0	0	0	\N	\N	\N	\N	6	3	2	1	0	\N	0	0
-8	7	10	\N	\N	2023-03-31 23:58:38	2023-03-31 23:58:38	\N	\N	\N	2023-04-28 00:00:00	2023-04-28 00:00:00	2023-03-31 23:58:38	0	0	0	\N	\N	\N	\N	8	3	2	1	0	\N	0	0
-17	13	11	\N	\N	2023-04-01 00:07:12	2023-04-01 00:07:12	\N	\N	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:07:12	0	0	0	\N	\N	\N	\N	14	3	2	1	0	\N	0	0
-9	11	9	\N	\N	2023-04-01 00:02:59	2023-04-01 00:03:00	\N	\N	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:03:00	0	0	0	\N	\N	\N	\N	10	2	2	1	0	\N	0	0
-24	17	7	\N	\N	2023-04-01 00:15:56	2023-04-01 00:15:57	\N	\N	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:15:57	0	0	0	\N	\N	\N	\N	19	2	2	1	0	\N	0	0
-25	17	8	\N	\N	2023-04-01 00:16:05	2023-04-01 00:16:05	\N	\N	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:16:05	0	0	0	\N	\N	\N	\N	19	2	2	1	0	\N	0	0
-16	13	10	\N	0	2023-04-01 00:07:05	2023-04-01 00:07:05	2023-04-01 00:07:29	2023-04-01 00:07:34	2023-04-01 00:08:08	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:08:08	0	0	0	\N	\N	\N	\N	14	3	2	1	4	\N	0	0
-10	11	10	\N	0	2023-04-01 00:03:15	2023-04-01 00:03:15	2023-04-01 00:03:30	2023-04-01 00:03:35	2023-04-01 00:04:05	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:04:05	0	0	0	\N	\N	\N	\N	11	3	2	1	4	\N	0	0
-11	11	12	\N	0	2023-04-01 00:03:22	2023-04-01 00:03:22	2023-04-01 00:03:42	2023-04-01 00:03:47	2023-04-01 00:04:05	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:04:05	0	0	0	\N	\N	\N	\N	11	3	2	1	4	\N	0	0
-18	13	12	\N	0	2023-04-01 00:07:21	2023-04-01 00:07:21	2023-04-01 00:07:42	2023-04-01 00:07:47	2023-04-01 00:08:08	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:08:08	0	0	0	\N	\N	\N	\N	14	3	2	1	4	\N	0	0
-12	12	7	\N	\N	2023-04-01 00:05:16	2023-04-01 00:05:16	\N	\N	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:05:16	0	0	0	\N	\N	\N	\N	12	2	2	1	0	\N	0	0
-19	14	7	\N	\N	2023-04-01 00:09:31	2023-04-01 00:09:31	\N	\N	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:09:31	0	0	0	\N	\N	\N	\N	15	2	2	1	0	\N	0	0
-14	12	9	\N	\N	2023-04-01 00:05:32	2023-04-01 00:05:32	\N	\N	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:05:32	0	0	0	\N	\N	\N	\N	12	2	2	1	0	\N	0	0
-20	14	11	\N	\N	2023-04-01 00:09:48	2023-04-01 00:09:48	\N	\N	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:09:48	0	0	0	\N	\N	\N	\N	16	3	2	1	0	\N	0	0
-13	12	8	\N	0	2023-04-01 00:05:24	2023-04-01 00:05:24	2023-04-01 00:05:40	2023-04-01 00:05:44	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:05:44	0	0	0	\N	\N	\N	\N	12	2	2	1	4	\N	0	0
-22	16	11	\N	\N	2023-04-01 00:13:52	2023-04-01 00:13:52	\N	\N	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:13:52	0	0	0	\N	\N	\N	\N	18	3	2	1	0	\N	0	0
-23	16	12	\N	\N	2023-04-01 00:14:01	2023-04-01 00:14:01	\N	\N	\N	2023-04-29 00:00:00	2023-04-29 00:00:00	2023-04-01 00:14:01	0	0	0	\N	\N	\N	\N	18	3	2	1	0	\N	0	0
+1	1	12	\N	\N	2023-04-03 19:53:49	2023-04-03 19:53:49	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 19:53:49	0	0	0	\N	\N	\N	\N	1	3	2	1	0	\N	0	0
+2	2	11	\N	\N	2023-04-03 19:57:19	2023-04-03 19:57:19	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 19:57:19	0	0	0	\N	\N	\N	\N	2	3	1	1	0	\N	0	0
+15	13	8	\N	\N	2023-04-03 20:16:49	2023-04-03 20:16:50	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:16:50	0	0	0	\N	\N	\N	\N	13	2	2	1	0	\N	0	0
+3	2	12	\N	\N	2023-04-03 19:57:29	2023-04-03 19:57:29	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 19:57:29	0	0	0	\N	\N	\N	\N	2	3	2	1	0	\N	0	0
+4	4	9	\N	\N	2023-04-03 19:59:48	2023-04-03 19:59:48	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 19:59:48	0	0	0	\N	\N	\N	\N	3	2	2	1	0	\N	0	0
+21	16	10	\N	0	2023-04-03 20:24:28	2023-04-03 20:24:28	2023-04-03 20:24:55	2023-04-03 20:25:00	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:25:00	0	0	0	\N	\N	\N	\N	18	3	2	1	4	\N	0	0
+5	4	11	\N	\N	2023-04-03 20:00:06	2023-04-03 20:00:06	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:00:06	0	0	0	\N	\N	\N	\N	4	3	2	1	0	\N	0	0
+6	5	8	\N	\N	2023-04-03 20:02:32	2023-04-03 20:02:32	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:02:32	0	0	0	\N	\N	\N	\N	5	2	2	1	0	\N	0	0
+7	5	12	\N	\N	2023-04-03 20:02:52	2023-04-03 20:02:52	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:02:52	0	0	0	\N	\N	\N	\N	6	3	2	1	0	\N	0	0
+8	7	10	\N	\N	2023-04-03 20:07:56	2023-04-03 20:07:56	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:07:56	0	0	0	\N	\N	\N	\N	8	3	2	1	0	\N	0	0
+17	13	11	\N	\N	2023-04-03 20:17:15	2023-04-03 20:17:16	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:17:16	0	0	0	\N	\N	\N	\N	14	3	2	1	0	\N	0	0
+9	11	9	\N	\N	2023-04-03 20:12:41	2023-04-03 20:12:42	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:12:42	0	0	0	\N	\N	\N	\N	10	2	2	1	0	\N	0	0
+24	17	7	\N	\N	2023-04-03 20:26:50	2023-04-03 20:26:50	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:26:50	0	0	0	\N	\N	\N	\N	19	2	2	1	0	\N	0	0
+25	17	8	\N	\N	2023-04-03 20:26:59	2023-04-03 20:26:59	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:26:59	0	0	0	\N	\N	\N	\N	19	2	2	1	0	\N	0	0
+16	13	10	\N	0	2023-04-03 20:17:07	2023-04-03 20:17:08	2023-04-03 20:17:33	2023-04-03 20:17:39	2023-04-03 20:18:16	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:18:16	0	0	0	\N	\N	\N	\N	14	3	2	1	4	\N	0	0
+10	11	10	\N	0	2023-04-03 20:12:59	2023-04-03 20:12:59	2023-04-03 20:13:15	2023-04-03 20:13:20	2023-04-03 20:13:54	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:13:54	0	0	0	\N	\N	\N	\N	11	3	2	1	4	\N	0	0
+11	11	12	\N	0	2023-04-03 20:13:06	2023-04-03 20:13:07	2023-04-03 20:13:28	2023-04-03 20:13:33	2023-04-03 20:13:54	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:13:54	0	0	0	\N	\N	\N	\N	11	3	2	1	4	\N	0	0
+18	13	12	\N	0	2023-04-03 20:17:24	2023-04-03 20:17:24	2023-04-03 20:17:48	2023-04-03 20:17:53	2023-04-03 20:18:16	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:18:16	0	0	0	\N	\N	\N	\N	14	3	2	1	4	\N	0	0
+12	12	7	\N	\N	2023-04-03 20:15:10	2023-04-03 20:15:11	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:15:11	0	0	0	\N	\N	\N	\N	12	2	2	1	0	\N	0	0
+19	14	7	\N	\N	2023-04-03 20:19:49	2023-04-03 20:19:49	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:19:49	0	0	0	\N	\N	\N	\N	15	2	2	1	0	\N	0	0
+14	12	9	\N	\N	2023-04-03 20:15:26	2023-04-03 20:15:27	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:15:27	0	0	0	\N	\N	\N	\N	12	2	2	1	0	\N	0	0
+20	14	11	\N	\N	2023-04-03 20:20:08	2023-04-03 20:20:08	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:20:08	0	0	0	\N	\N	\N	\N	16	3	2	1	0	\N	0	0
+13	12	8	\N	0	2023-04-03 20:15:18	2023-04-03 20:15:18	2023-04-03 20:15:35	2023-04-03 20:15:41	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:15:41	0	0	0	\N	\N	\N	\N	12	2	2	1	4	\N	0	0
+22	16	11	\N	\N	2023-04-03 20:24:37	2023-04-03 20:24:37	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:24:37	0	0	0	\N	\N	\N	\N	18	3	2	1	0	\N	0	0
+23	16	12	\N	\N	2023-04-03 20:24:45	2023-04-03 20:24:45	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 20:24:45	0	0	0	\N	\N	\N	\N	18	3	2	1	0	\N	0	0
 \.
-
-
---
--- Name: review_assignments_review_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 25, true);
 
 
 --
@@ -14569,34 +13992,34 @@ SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 25, true);
 --
 
 COPY public.review_files (review_file_id, review_id, submission_file_id) FROM stdin;
-1	1	6
+1	1	4
 2	1	5
-3	1	4
-4	2	15
+3	1	6
+4	2	13
 5	2	14
-6	2	13
+6	2	15
 7	2	12
-8	3	15
+8	3	13
 9	3	14
-10	3	13
+10	3	15
 11	3	12
-12	4	28
-13	4	27
-14	4	26
-15	4	25
-16	6	36
-17	6	37
-18	6	38
-19	6	39
-20	6	40
-21	6	35
-22	8	58
-23	8	59
-24	8	55
-25	8	56
-26	8	57
-27	9	83
-28	9	82
+12	4	27
+13	4	28
+14	4	25
+15	4	26
+16	6	37
+17	6	38
+18	6	39
+19	6	40
+20	6	35
+21	6	36
+22	8	55
+23	8	56
+24	8	57
+25	8	58
+26	8	59
+27	9	82
+28	9	83
 29	12	89
 30	12	88
 31	12	87
@@ -14609,47 +14032,40 @@ COPY public.review_files (review_file_id, review_id, submission_file_id) FROM st
 38	15	95
 39	15	94
 40	15	93
-41	19	107
-42	19	106
-43	19	105
+41	19	106
+42	19	105
+43	19	107
 44	19	104
-45	19	102
-46	19	103
-47	21	129
-48	21	127
+45	19	103
+46	19	102
+47	21	127
+48	21	126
 49	21	128
-50	21	126
+50	21	129
 51	21	125
-52	22	129
-53	22	127
+52	22	127
+53	22	126
 54	22	128
-55	22	126
+55	22	129
 56	22	125
-57	23	129
-58	23	127
+57	23	127
+58	23	126
 59	23	128
-60	23	126
+60	23	129
 61	23	125
-62	24	140
-63	24	141
-64	24	139
-65	24	137
-66	24	138
+62	24	141
+63	24	139
+64	24	140
+65	24	138
+66	24	137
 67	24	136
-68	25	140
-69	25	141
-70	25	139
-71	25	137
-72	25	138
+68	25	141
+69	25	139
+70	25	140
+71	25	138
+72	25	137
 73	25	136
 \.
-
-
---
--- Name: review_files_review_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_files_review_file_id_seq', 73, true);
 
 
 --
@@ -14661,25 +14077,11 @@ COPY public.review_form_element_settings (review_form_element_setting_id, review
 
 
 --
--- Name: review_form_element_settings_review_form_element_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_form_element_settings_review_form_element_setting_id_seq', 1, false);
-
-
---
 -- Data for Name: review_form_elements; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.review_form_elements (review_form_element_id, review_form_id, seq, element_type, required, included) FROM stdin;
 \.
-
-
---
--- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_form_elements_review_form_element_id_seq', 1, false);
 
 
 --
@@ -14691,13 +14093,6 @@ COPY public.review_form_responses (review_form_response_id, review_form_element_
 
 
 --
--- Name: review_form_responses_review_form_response_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_form_responses_review_form_response_id_seq', 1, false);
-
-
---
 -- Data for Name: review_form_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -14706,25 +14101,11 @@ COPY public.review_form_settings (review_form_setting_id, review_form_id, locale
 
 
 --
--- Name: review_form_settings_review_form_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_form_settings_review_form_setting_id_seq', 1, false);
-
-
---
 -- Data for Name: review_forms; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.review_forms (review_form_id, assoc_type, assoc_id, seq, is_active) FROM stdin;
 \.
-
-
---
--- Name: review_forms_review_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_forms_review_form_id_seq', 1, false);
 
 
 --
@@ -14795,24 +14176,16 @@ COPY public.review_round_files (review_round_file_id, submission_id, review_roun
 
 
 --
--- Name: review_round_files_review_round_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_round_files_review_round_file_id_seq', 59, true);
-
-
---
 -- Data for Name: review_rounds; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.review_rounds (review_round_id, submission_id, stage_id, round, review_revision, status) FROM stdin;
-16	14	3	1	\N	4
 17	15	3	1	\N	6
 1	1	3	1	\N	4
 2	2	3	1	\N	7
 3	4	2	1	\N	4
-4	4	3	1	\N	4
 18	16	3	1	\N	8
+4	4	3	1	\N	4
 5	5	2	1	\N	4
 6	5	3	1	\N	4
 7	6	2	1	\N	14
@@ -14825,14 +14198,8 @@ COPY public.review_rounds (review_round_id, submission_id, stage_id, round, revi
 13	13	2	1	\N	4
 14	13	3	1	\N	4
 15	14	2	1	\N	4
+16	14	3	1	\N	4
 \.
-
-
---
--- Name: review_rounds_review_round_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 19, true);
 
 
 --
@@ -14844,34 +14211,20 @@ COPY public.sales_rights (sales_rights_id, publication_format_id, type, row_sett
 
 
 --
--- Name: sales_rights_sales_rights_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.sales_rights_sales_rights_id_seq', 1, false);
-
-
---
 -- Data for Name: scheduled_tasks; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.scheduled_tasks (scheduled_task_id, class_name, last_run) FROM stdin;
-1	PKP\\task\\ReviewReminder	2023-03-31 23:39:42
-2	PKP\\task\\PublishSubmissions	2023-03-31 23:39:42
-3	PKP\\task\\StatisticsReport	2023-03-31 23:39:42
-4	PKP\\task\\RemoveUnvalidatedExpiredUsers	2023-03-31 23:39:42
-5	PKP\\task\\UpdateIPGeoDB	2023-03-31 23:39:42
-6	APP\\tasks\\UsageStatsLoader	2023-03-31 23:39:44
-7	PKP\\task\\EditorialReminders	2023-03-31 23:39:44
-8	PKP\\task\\ProcessQueueJobs	2023-03-31 23:39:44
-9	PKP\\task\\RemoveFailedJobs	2023-03-31 23:39:44
+1	PKP\\task\\ReviewReminder	2023-04-03 19:47:08
+2	PKP\\task\\PublishSubmissions	2023-04-03 19:47:08
+3	PKP\\task\\StatisticsReport	2023-04-03 19:47:08
+4	PKP\\task\\RemoveUnvalidatedExpiredUsers	2023-04-03 19:47:08
+5	PKP\\task\\UpdateIPGeoDB	2023-04-03 19:47:08
+6	APP\\tasks\\UsageStatsLoader	2023-04-03 19:47:09
+7	PKP\\task\\EditorialReminders	2023-04-03 19:47:09
+8	PKP\\task\\ProcessQueueJobs	2023-04-03 19:47:09
+9	PKP\\task\\RemoveFailedJobs	2023-04-03 19:47:09
 \.
-
-
---
--- Name: scheduled_tasks_scheduled_task_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.scheduled_tasks_scheduled_task_id_seq', 9, true);
 
 
 --
@@ -14893,13 +14246,6 @@ COPY public.series (series_id, press_id, review_form_id, seq, featured, editor_r
 
 COPY public.series_categories (series_id, category_id) FROM stdin;
 \.
-
-
---
--- Name: series_series_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.series_series_id_seq', 5, true);
 
 
 --
@@ -14966,69 +14312,62 @@ COPY public.series_settings (series_setting_id, series_id, locale, setting_name,
 
 
 --
--- Name: series_settings_series_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.series_settings_series_setting_id_seq', 55, true);
-
-
---
 -- Data for Name: sessions; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-9v80mhq26ih9fbfmiilfql3af8	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306070	1680306222	0	username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680306221;s:5:"token";s:32:"300f30cebb5e024ae8c095f848f94c14";}	localhost
-ra04svdaipgopp1umo4upil3tg	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680305982	1680306008	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680306008;s:5:"token";s:32:"f83f01bb1f185edc224abd512cec8b64";}	localhost
-5tag318ig9h7iiaq7klb0bqfb6	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306030	1680306049	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680306049;s:5:"token";s:32:"34c3bb91e5e669904bc5bb7c7f2677cd";}	localhost
-dbbrb0jdolq9f9v89kle2siriu	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306008	1680306027	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680306027;s:5:"token";s:32:"24f2e7530c70fb9e199bd6ffd2649d25";}	localhost
-4e26jhq0gaq3andjcqjflj25bn	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306051	1680306059	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680306059;s:5:"token";s:32:"f14810bfaa5e3c5afa69ed481dcd1e5a";}	localhost
-chsmmgd063htuarandagnqd8bg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306223	1680306236	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1680306235;s:5:"token";s:32:"5707f6b5a9cbde9fafcddf24f4f7d549";}	localhost
-gfgdaf6nheq1n7t98fefspff6c	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306060	1680306066	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680306066;s:5:"token";s:32:"f173bf86ed7ea3eed59edd4c2915a0c9";}	localhost
-5n6h6hao65m1lfds1j1n95gef8	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306240	1680306261	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680306261;s:5:"token";s:32:"fc61c1eea202a408635c043297a10b40";}	localhost
-pt3l07f99f5d26o3ku9hvqaete	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306264	1680306284	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680306284;s:5:"token";s:32:"0e18d0cefb4b1aff3811b6ab55939dff";}	localhost
-hihbpdtvpfdbei8u7gqdmfmvad	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306319	1680306356	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680306357;s:5:"token";s:32:"46e8f4cf033b83387e896ce0665ac4b0";}	localhost
-rn9pgb9t5hm8bo9hdf5iup157u	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306287	1680306319	0	csrf|a:2:{s:9:"timestamp";i:1680306319;s:5:"token";s:32:"4664400734096b75984cb74a71955b4b";}username|s:6:"aclark";	localhost
-krj3drmr4320prl3f7hkbmfdq2	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306604	1680306648	0	csrf|a:2:{s:9:"timestamp";i:1680306647;s:5:"token";s:32:"5b832ecd793d73ef407d7d2353666d48";}username|s:6:"bbeaty";	localhost
-e2ec1rgau1269vn8qslsv4thrb	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306360	1680306501	0	csrf|a:2:{s:9:"timestamp";i:1680306501;s:5:"token";s:32:"c3d73746c310f2abce60898eef2acb75";}username|s:7:"afinkel";	localhost
-r06obvs23jdpdb6sdvajhoejeq	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306549	1680306600	0	csrf|a:2:{s:9:"timestamp";i:1680306600;s:5:"token";s:32:"6f1f9d30cf6f6a94e2157c0532c35a21";}username|s:10:"bbarnetson";userId|i:21;	localhost
-du44ktgh5nc9lftbvilcju8u0g	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306502	1680306544	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680306543;s:5:"token";s:32:"74b1e7d2df5338449d8f8cbba7c4f6c5";}	localhost
-hi8buodc2m6fpae3g67qmincaa	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306735	1680306795	0	csrf|a:2:{s:9:"timestamp";i:1680306795;s:5:"token";s:32:"318288d8fee3508238866f2f9c7c32ec";}username|s:6:"callan";	localhost
-b728f2ud7kflr5pq8akflini44	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306648	1680306731	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680306731;s:5:"token";s:32:"4f748461acfc4c27bfec14bebbf8b455";}	localhost
-kelpt7sdb0kes454a7s702njgq	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306796	1680306909	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680306909;s:5:"token";s:32:"8eb420b35fc5dcbb42bf089d8a25a58b";}	localhost
-q18u7a7uao27u99j2ie0fc7j8l	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306910	1680306920	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680306920;s:5:"token";s:32:"981909a73b83a2a2df693e8dce3357e3";}	localhost
-mng0vl47qtmta14528n5s73hn1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306921	1680306930	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680306930;s:5:"token";s:32:"2b4c705d6d75cb8d7717fc867f3b6dee";}	localhost
-g5t1k84g0h7tb6ciq7hbqu9g00	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306933	1680306975	0	csrf|a:2:{s:9:"timestamp";i:1680306974;s:5:"token";s:32:"2d47722691318b8c21d09dc6442d2ca6";}username|s:9:"dbernnard";	localhost
-sbcldcgn5j224kjcj1u1ajj3aj	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307357	1680307404	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307404;s:5:"token";s:32:"91068bb8d39741450b0ff3017ec3ca7d";}	localhost
-jcpcv2sd82af7aurf2nrl90a5d	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680306975	1680307006	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307006;s:5:"token";s:32:"9df870d36089f182d49d87a4ee655377";}	localhost
-o8rflabl9bii3hfs4sh9kbo7qs	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307093	1680307136	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307136;s:5:"token";s:32:"7c6577cda9aa2105f5750880179d35d3";}	localhost
-gh9r6s1mrigdeq4gr25cod0vvc	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307006	1680307023	0	username|s:6:"minoue";csrf|a:2:{s:9:"timestamp";i:1680307023;s:5:"token";s:32:"f840e92d382c1bf3a3fd285b0aeb6374";}	localhost
-pql75pvto4cbchrp8e2g1auv0k	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307140	1680307150	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307150;s:5:"token";s:32:"39339275af338459141e9b68c4f286b4";}	localhost
-c7qlej8caqmnhuidb39vm3hjqu	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307039	1680307092	0	csrf|a:2:{s:9:"timestamp";i:1680307092;s:5:"token";s:32:"ca8eb1cc57924fd203e9347e881cec8e";}username|s:10:"dkennepohl";	localhost
-4pth11m4vp800ae5igkab4088e	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307024	1680307036	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307036;s:5:"token";s:32:"86bb5feb1928ec7ddf2b72e8334eeed9";}	localhost
-gbuu1h662ig2clebq6cio88bpv	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307153	1680307207	0	csrf|a:2:{s:9:"timestamp";i:1680307207;s:5:"token";s:32:"1485cd83bd5a61ec48be2ac4051f4d35";}username|s:7:"fperini";	localhost
-2udb183udfphafd01qhotd69ul	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307428	1680307451	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307451;s:5:"token";s:32:"eb8804ab1b614cd720992f53a9255196";}	localhost
-6mlqglhd681h2tp7oqafmvge2g	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307207	1680307229	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307229;s:5:"token";s:32:"63854e81bf989b5f43d589029d86cb7a";}	localhost
-egj262jgi3pf2ul4j8h83080ip	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307332	1680307356	0	csrf|a:2:{s:9:"timestamp";i:1680307356;s:5:"token";s:32:"014b0018650a0142f07cc8644235bcc7";}username|s:10:"jlockehart";	localhost
-539m7tesblg829favblibmlfgi	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307232	1680307328	0	csrf|a:2:{s:9:"timestamp";i:1680307328;s:5:"token";s:32:"beab740c94b8f96bb43c452a758a928a";}username|s:7:"jbrower";userId|i:27;	localhost
-gbu9ms4sciburhnvk1u6hn2sct	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307404	1680307415	0	username|s:8:"agallego";csrf|a:2:{s:9:"timestamp";i:1680307415;s:5:"token";s:32:"d06933f037aea3c5abc8f3fa5f78aa10";}	localhost
-5b6b4ko231lm70sj40nl985fio	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307416	1680307427	0	username|s:6:"gfavio";csrf|a:2:{s:9:"timestamp";i:1680307427;s:5:"token";s:32:"63341ce802f01b6ddba978bddf5f978a";}	localhost
-hck03o7b9p1fbpqgd6pq9japf9	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307454	1680307490	0	csrf|a:2:{s:9:"timestamp";i:1680307490;s:5:"token";s:32:"78739df8239e742f20edef73d2217b15";}username|s:6:"lelder";	localhost
-t689ovjgtb4e06dald0kkfd7k7	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307491	1680307533	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307533;s:5:"token";s:32:"e57af604c693e73827ce0983b057cf1c";}	localhost
-p2k1ke0hb4h2cj1m8kak0b50u1	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307534	1680307545	0	username|s:7:"phudson";csrf|a:2:{s:9:"timestamp";i:1680307545;s:5:"token";s:32:"4856a9a1a5303b61a8d321a5cbde5dd7";}	localhost
-noo3314krupm65761git0jv6sd	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307584	1680307642	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307642;s:5:"token";s:32:"7d7b51c144233a3f89862b7abc2dc1cf";}	localhost
-1qitphfkbc0h270e82mac6act3	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307549	1680307584	0	csrf|a:2:{s:9:"timestamp";i:1680307583;s:5:"token";s:32:"b2ea03952c5eb66f1c2707cc9c6eeb94";}username|s:5:"mally";	localhost
-72641v4r6bevbr618sslq7gsm0	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307643	1680307655	0	username|s:8:"agallego";csrf|a:2:{s:9:"timestamp";i:1680307655;s:5:"token";s:32:"be26565d9adb9cc02d0496bf3a523cdb";}	localhost
-ehm73j4cd5cmckota9ekf310i3	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307656	1680307668	0	username|s:6:"gfavio";csrf|a:2:{s:9:"timestamp";i:1680307668;s:5:"token";s:32:"a22bed944f3931aab48f8075be1f27cb";}	localhost
-6cfejtdmqh7dblu7sa1m4dr1b3	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307669	1680307694	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307694;s:5:"token";s:32:"a2a1bff05a292593cbecb4e6a61936d1";}	localhost
-gijqj1qn0us07o0ff08020feo8	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680308043	1680308055	0	username|s:8:"agallego";csrf|a:2:{s:9:"timestamp";i:1680308055;s:5:"token";s:32:"cc9a59496c19d29c19966f38c8f2ecd6";}	localhost
-un3rldq5tnhlobgfa6hrpnv0fm	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307890	1680307922	0	csrf|a:2:{s:9:"timestamp";i:1680307922;s:5:"token";s:32:"fd8399f29b179aa983884da077125b4b";}username|s:6:"mforan";	localhost
-jnjtk54nl0633o16rc59ti4l89	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307697	1680307743	0	csrf|a:2:{s:9:"timestamp";i:1680307743;s:5:"token";s:32:"0a298e5079888fbd0d224abecdba3436";}username|s:7:"mdawson";	localhost
-8qu5jghf204o0mdd3v2giu75ot	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307946	1680307995	0	csrf|a:2:{s:9:"timestamp";i:1680307995;s:5:"token";s:32:"4c86cc8f3427640fba929e0d45631a03";}username|s:6:"mpower";	localhost
-a1lbjlt0nm68it2m5cqseqmrqa	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680308059	1680308126	0	csrf|a:2:{s:9:"timestamp";i:1680308125;s:5:"token";s:32:"7a9a3dd19feeab491696672542fae12e";}username|s:6:"msmith";	localhost
-ad9if30cv06nerksum4e33b6ln	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680308126	1680308166	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680308165;s:5:"token";s:32:"c14edfe6d33d5fbf847123e1fca108fc";}	localhost
-99uv500dvfdm0k8lb6a1rn29vi	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307996	1680308042	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680308042;s:5:"token";s:32:"98598119937de0d6458138cc9c8387d5";}	localhost
-lgrrtd7huql1gv6q6pf1legv1q	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307744	1680307887	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307887;s:5:"token";s:32:"898b2ef65a35a6aba07f3ec08ad202c9";}	localhost
-u7uc2kevf0prt1r8h43thrqlat	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680307923	1680307943	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680307943;s:5:"token";s:32:"15e5173f02a53602bff7df065348b1f3";}	localhost
+h7c1c9rrohskl7v2f67u80os94	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551257	1680551292	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680551292;s:5:"token";s:32:"b99c8ebbb556b242b46b834e291ffce5";}	localhost
+5kttennafglblkuereo081ouve	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551324	1680551331	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680551330;s:5:"token";s:32:"463e527ac2aef3bf1c92041f4b127d78";}	localhost
+9hjgpri2lr37ms8hfh682qheuk	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551228	1680551257	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680551257;s:5:"token";s:32:"3ebe6857369bc7df0fda3e4620df22af";}	localhost
+j84kqmnrrlilqf0kb9jl9lilqc	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551334	1680551498	0	username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680551497;s:5:"token";s:32:"b4c7563542f0268cb48ae2bc0be93e34";}	localhost
+4ovh361irgqq6rvkukdmo45scq	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551298	1680551311	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680551311;s:5:"token";s:32:"d97df535997c81d2eb17686c8f2daf86";}	localhost
+qm18g0bpgbi8frhfkikvvc2u2h	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551313	1680551322	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680551322;s:5:"token";s:32:"d0d5dbba51c4f25e4a929c5009528162";}	localhost
+vvkpk8fbl5gjm91uisa8tdqmqv	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551499	1680551516	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1680551516;s:5:"token";s:32:"c62c4c4c328db84570eb70ee15d2974c";}	localhost
+0f4g1n772070g40rj6t0um9eqn	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551804	1680551850	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680551849;s:5:"token";s:32:"80c5494f8ac768b6fd813ffc164c635b";}	localhost
+723liiaa474ttq7hch5tpjjttu	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551520	1680551543	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680551543;s:5:"token";s:32:"ceadcf1efe013170fc60218d8f13e93a";}	localhost
+5e0je90pdo5ifpi43vdkgaj958	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551546	1680551568	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680551567;s:5:"token";s:32:"148404fe2a2464b40c17c195507b8c50";}	localhost
+paiesnrrmo5appdqhb3bg6rt24	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551570	1680551605	0	csrf|a:2:{s:9:"timestamp";i:1680551605;s:5:"token";s:32:"ea3231e8a8a03b2b1bfd02463173f37f";}username|s:6:"aclark";	localhost
+33va0bk8a8s8p6t9ds8ujlbb9g	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551605	1680551646	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680551646;s:5:"token";s:32:"bbd5808ceb7b4dd312b4c26d43251657";}	localhost
+viirvgfpoiqjlkkqs2d9l5v80i	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551962	1680552052	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552052;s:5:"token";s:32:"ace22b82e1d131e05dbe653ae0962a76";}	localhost
+fcu0705g4jftegld4b1er2122n	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551651	1680551803	0	csrf|a:2:{s:9:"timestamp";i:1680551803;s:5:"token";s:32:"b21241795e4dc4ca6b601745870e593b";}username|s:7:"afinkel";	localhost
+50o5brgva4mcchimrqple6hmep	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551915	1680551962	0	csrf|a:2:{s:9:"timestamp";i:1680551961;s:5:"token";s:32:"b79b7abf97bb8e5206144a42ebf662c0";}username|s:6:"bbeaty";	localhost
+2f1jk12cnmdkm1n64b433t6sbf	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680551856	1680551911	0	csrf|a:2:{s:9:"timestamp";i:1680551911;s:5:"token";s:32:"5a6a54dd67540ea3ad1ac46e781c5a99";}username|s:10:"bbarnetson";userId|i:21;	localhost
+ssgq51vutr6i3p8mresbta7f9j	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552056	1680552122	0	csrf|a:2:{s:9:"timestamp";i:1680552122;s:5:"token";s:32:"612f179424d3ecfc314013de19a52eae";}username|s:6:"callan";	localhost
+0nnjh37hhrf0e662j3b4vda2fl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552123	1680552247	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552247;s:5:"token";s:32:"c5ed5c9dafd73cdf43faf43ce50a5c70";}	localhost
+m7ov8vu3gmnhk6fad3j0hinauu	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552248	1680552260	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552260;s:5:"token";s:32:"fa3f9c5bb0c190710f40ca0ec211aabd";}	localhost
+vparrlmlal095t87pism4imf19	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552260	1680552271	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552271;s:5:"token";s:32:"e650dd8b9a985c979c6d093faaee68c6";}	localhost
+nccha2e83kgj8okdasfmjecun0	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552273	1680552320	0	csrf|a:2:{s:9:"timestamp";i:1680552320;s:5:"token";s:32:"d68661841f0952e5996d6cb15c5e5cf5";}username|s:9:"dbernnard";	localhost
+a458mvus731q2bil02fc5b2b35	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552737	1680552788	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552788;s:5:"token";s:32:"a133cf976f549f5daea0a9c68f57a2b4";}	localhost
+vmftqkgnaplbcdmpv93gnmtta0	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552448	1680552496	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552496;s:5:"token";s:32:"358322c1d0a364f93c47aa66d5ff09c3";}	localhost
+7mmb7lasc5r8hddp8r0sj1n890	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552355	1680552374	0	username|s:6:"minoue";csrf|a:2:{s:9:"timestamp";i:1680552374;s:5:"token";s:32:"a4937b9bdd4dc8c265f9222a13aaa639";}	localhost
+lur5nckrbflfuo4pajqeguuksu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552500	1680552512	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552512;s:5:"token";s:32:"057cb80e88dbeecb3175342b00748427";}	localhost
+kvjdj3a1dtiav07uvakrq8j6sj	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552390	1680552448	0	csrf|a:2:{s:9:"timestamp";i:1680552448;s:5:"token";s:32:"e1245aa73500abf51028ccb3db62dab7";}username|s:10:"dkennepohl";	localhost
+hilsr17dgctrevo47fvgcl5ggt	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552375	1680552385	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552386;s:5:"token";s:32:"624486675d6c1ff8b64dd6d101481037";}	localhost
+jfkp0n3gt5mv9aif6eoa3rice3	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552320	1680552354	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552354;s:5:"token";s:32:"4bc9511e9b3176d585dd87ff3a24248f";}	localhost
+tq56to5132ian8b1vedifd7ogj	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552516	1680552573	0	csrf|a:2:{s:9:"timestamp";i:1680552573;s:5:"token";s:32:"013459f555b0f80f1edf491e58ed0101";}username|s:7:"fperini";	localhost
+hm4bfvh20cotqcm2ujlhcoraus	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552815	1680552841	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552841;s:5:"token";s:32:"61103f199748325e7419e3d97f110478";}	localhost
+4rop848vj9fjijr2gueqqhem41	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552574	1680552599	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552599;s:5:"token";s:32:"6c3807b54e68dd38f124caed1bcdd6d8";}	localhost
+jrvu897adqnvqn30ujsro5mfgo	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552710	1680552737	0	csrf|a:2:{s:9:"timestamp";i:1680552736;s:5:"token";s:32:"cdd1b00a83685064b49581263c3344d9";}username|s:10:"jlockehart";	localhost
+g44kh49lhcfrn5kfc36iknl965	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552601	1680552705	0	csrf|a:2:{s:9:"timestamp";i:1680552706;s:5:"token";s:32:"26279e51dbc3b0728bc6f602b64e46f3";}username|s:7:"jbrower";userId|i:27;	localhost
+vpgq3c8h2qflrnssco2fm23dio	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552788	1680552801	0	username|s:8:"agallego";csrf|a:2:{s:9:"timestamp";i:1680552801;s:5:"token";s:32:"ea4d7e2bfbf1a8b11ebfa5f4b2231bf5";}	localhost
+1jj0rlns3jbu1ajlm2dste879u	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552801	1680552814	0	username|s:6:"gfavio";csrf|a:2:{s:9:"timestamp";i:1680552814;s:5:"token";s:32:"e6b67e053023c259e68e1f5842d6123a";}	localhost
+umn36rse6j2rhbch5hvrieqeup	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552844	1680552883	0	csrf|a:2:{s:9:"timestamp";i:1680552883;s:5:"token";s:32:"94c6bc0a07ccb4389fe8099af39973b5";}username|s:6:"lelder";	localhost
+ri0jd80qom8u38k1crhj9roijk	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552883	1680552928	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680552928;s:5:"token";s:32:"ee078f7d48454f5da0e2d1bece4b94d2";}	localhost
+1egg2gt0gi4rt465psl470mksi	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552929	1680552942	0	username|s:7:"phudson";csrf|a:2:{s:9:"timestamp";i:1680552942;s:5:"token";s:32:"e778f646af6b13a79f2fd2e685b9f680";}	localhost
+i14u84eijr9spahbkp33gm5o1k	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552983	1680553046	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680553046;s:5:"token";s:32:"5102327e3d36609d3b02dc7b68f156ec";}	localhost
+g7fblk3uhfrh2hj2308st1f5sc	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680552946	1680552983	0	csrf|a:2:{s:9:"timestamp";i:1680552982;s:5:"token";s:32:"dbc42f806ac6a7ead3b43adbaa615596";}username|s:5:"mally";	localhost
+nsg6dursg4ic2g0i5offc0bqk4	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553047	1680553059	0	username|s:8:"agallego";csrf|a:2:{s:9:"timestamp";i:1680553059;s:5:"token";s:32:"d3975bcdec2c8eb28d75bf1645a31fe5";}	localhost
+5kr7susaiotap75fgengqpnh64	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553060	1680553074	0	username|s:6:"gfavio";csrf|a:2:{s:9:"timestamp";i:1680553074;s:5:"token";s:32:"1d0febb8dc82eec5baeebc63b0cd8bdf";}	localhost
+h5rk669ok2292h45bef77jhfu6	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553075	1680553104	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680553104;s:5:"token";s:32:"dd8332d80269441ef1ed01d134aa2c73";}	localhost
+i2ksuopelh49cnjo1sfe836n0o	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553384	1680553438	0	csrf|a:2:{s:9:"timestamp";i:1680553438;s:5:"token";s:32:"b6983e6af301294e50227cea4d5f08e5";}username|s:6:"mpower";	localhost
+d8q3uea421qgk91hot55g5fssa	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553359	1680553381	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680553382;s:5:"token";s:32:"f4b4b709253535feeb8dca43a52fbc15";}	localhost
+9oara5ljmfrrhqor7frekqg2cd	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553107	1680553158	0	csrf|a:2:{s:9:"timestamp";i:1680553157;s:5:"token";s:32:"1d11668cbb0ccc19d4054388e35aad01";}username|s:7:"mdawson";	localhost
+mgeig4h1ktong454kqhelp3s9b	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553488	1680553501	0	username|s:8:"agallego";csrf|a:2:{s:9:"timestamp";i:1680553501;s:5:"token";s:32:"881b988fd9d0c77f025603a4b6fb525b";}	localhost
+71i5oetc3b0vg52rpcr35mgdf8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553158	1680553319	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680553320;s:5:"token";s:32:"4a32751ec295a55dbacfe5c875293b8b";}	localhost
+8hi49ipeun8cf38afvr4jigg2p	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553322	1680553359	0	csrf|a:2:{s:9:"timestamp";i:1680553359;s:5:"token";s:32:"73cd8edbf7b574c51f1040539d693879";}username|s:6:"mforan";	localhost
+78e6r0hfnqeqv28a1hevb1buiu	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553439	1680553487	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680553487;s:5:"token";s:32:"d55de9fa5a6f7b20e0d39d3cdfc1ccb6";}	localhost
+5bp0g551i4fqbn7fvuq34lr5qs	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553577	1680553620	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680553619;s:5:"token";s:32:"08a49720bd8779e8023a458dfc06b39d";}	localhost
+jlv2bsj10vuam6vttdfpj8p5bl	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680553506	1680553577	0	csrf|a:2:{s:9:"timestamp";i:1680553576;s:5:"token";s:32:"c2eebb4582b27ff8e3ecb22a34ddf164";}username|s:6:"msmith";	localhost
 \.
 
 
@@ -15060,32 +14399,11 @@ COPY public.site_settings (site_setting_id, setting_name, locale, setting_value)
 
 
 --
--- Name: site_settings_site_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.site_settings_site_setting_id_seq', 10, true);
-
-
---
--- Name: site_site_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.site_site_id_seq', 1, true);
-
-
---
 -- Data for Name: spotlight_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.spotlight_settings (spotlight_setting_id, spotlight_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 \.
-
-
---
--- Name: spotlight_settings_spotlight_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.spotlight_settings_spotlight_setting_id_seq', 1, false);
 
 
 --
@@ -15097,60 +14415,46 @@ COPY public.spotlights (spotlight_id, assoc_type, assoc_id, press_id) FROM stdin
 
 
 --
--- Name: spotlights_spotlight_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.spotlights_spotlight_id_seq', 1, false);
-
-
---
 -- Data for Name: stage_assignments; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-2	1	5	4	2023-03-31 23:45:17	0	1
-1	1	13	19	2023-03-31 23:45:18	0	0
-3	1	6	14	2023-03-31 23:45:55	0	0
-26	12	13	29	2023-04-01 00:04:49	0	0
-4	2	13	20	2023-03-31 23:48:12	0	0
-27	13	13	30	2023-04-01 00:06:22	0	0
-5	3	13	21	2023-03-31 23:49:59	0	0
-7	4	3	3	2023-03-31 23:50:46	0	1
-29	14	3	3	2023-04-01 00:09:02	0	1
-6	4	13	22	2023-03-31 23:50:46	0	0
-8	4	6	13	2023-03-31 23:51:45	0	0
-9	4	10	15	2023-03-31 23:52:03	0	0
-28	14	13	31	2023-04-01 00:09:02	0	0
-30	14	6	13	2023-04-01 00:10:05	0	0
-31	14	10	15	2023-04-01 00:10:22	0	0
-32	14	12	18	2023-04-01 00:10:29	0	0
-10	5	13	23	2023-03-31 23:53:13	0	0
-11	5	6	14	2023-03-31 23:54:18	0	0
-12	5	10	16	2023-03-31 23:54:37	0	0
-13	5	12	17	2023-03-31 23:54:44	0	0
-15	6	5	4	2023-03-31 23:56:13	0	1
-14	6	13	24	2023-03-31 23:56:13	0	0
-16	6	3	3	2023-03-31 23:56:38	0	1
-17	6	5	6	2023-03-31 23:56:44	1	0
-19	7	3	3	2023-03-31 23:58:11	0	1
-33	15	13	32	2023-04-01 00:12:01	0	0
-18	7	13	25	2023-03-31 23:58:11	0	0
-20	7	6	13	2023-03-31 23:58:55	0	0
-21	8	3	3	2023-03-31 23:59:06	0	1
-23	9	5	4	2023-04-01 00:00:05	0	1
-34	16	13	33	2023-04-01 00:13:14	0	0
-22	9	13	26	2023-04-01 00:00:05	0	0
-24	10	13	27	2023-04-01 00:02:07	0	0
-35	17	13	34	2023-04-01 00:15:24	0	0
-25	11	13	28	2023-04-01 00:02:35	0	0
+1	1	13	19	2023-04-03 19:53:23	0	0
+2	1	5	4	2023-04-03 19:53:23	0	1
+3	1	6	14	2023-04-03 19:54:05	0	0
+25	11	13	28	2023-04-03 20:12:15	0	0
+4	2	13	20	2023-04-03 19:56:33	0	0
+26	12	13	29	2023-04-03 20:14:41	0	0
+5	3	13	21	2023-04-03 19:58:30	0	0
+6	4	13	22	2023-04-03 19:59:20	0	0
+7	4	3	3	2023-04-03 19:59:20	0	1
+8	4	6	13	2023-04-03 20:00:24	0	0
+9	4	10	15	2023-04-03 20:00:43	0	0
+27	13	13	30	2023-04-03 20:16:21	0	0
+10	5	13	23	2023-04-03 20:02:00	0	0
+11	5	6	14	2023-04-03 20:03:11	0	0
+12	5	10	16	2023-04-03 20:03:32	0	0
+13	5	12	17	2023-04-03 20:03:40	0	0
+28	14	13	31	2023-04-03 20:19:16	0	0
+29	14	3	3	2023-04-03 20:19:16	0	1
+30	14	6	13	2023-04-03 20:20:27	0	0
+14	6	13	24	2023-04-03 20:05:18	0	0
+15	6	5	4	2023-04-03 20:05:18	0	1
+16	6	3	3	2023-04-03 20:05:46	0	1
+17	6	5	6	2023-04-03 20:05:52	1	0
+31	14	10	15	2023-04-03 20:20:48	0	0
+32	14	12	18	2023-04-03 20:20:56	0	0
+18	7	13	25	2023-04-03 20:07:26	0	0
+19	7	3	3	2023-04-03 20:07:26	0	1
+20	7	6	13	2023-04-03 20:08:14	0	0
+21	8	3	3	2023-04-03 20:08:27	0	1
+33	15	13	32	2023-04-03 20:22:37	0	0
+22	9	13	26	2023-04-03 20:09:31	0	0
+23	9	5	4	2023-04-03 20:09:31	0	1
+24	10	13	27	2023-04-03 20:11:44	0	0
+34	16	13	33	2023-04-03 20:23:56	0	0
+35	17	13	34	2023-04-03 20:26:14	0	0
 \.
-
-
---
--- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 35, true);
 
 
 --
@@ -15162,25 +14466,11 @@ COPY public.static_page_settings (static_page_setting_id, static_page_id, locale
 
 
 --
--- Name: static_page_settings_static_page_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.static_page_settings_static_page_setting_id_seq', 1, false);
-
-
---
 -- Data for Name: static_pages; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.static_pages (static_page_id, path, context_id) FROM stdin;
 \.
-
-
---
--- Name: static_pages_static_page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.static_pages_static_page_id_seq', 1, false);
 
 
 --
@@ -15197,70 +14487,60 @@ COPY public.subeditor_submission_group (subeditor_submission_group_id, context_i
 
 
 --
--- Name: subeditor_submission_group_subeditor_submission_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.subeditor_submission_group_subeditor_submission_group_id_seq', 5, true);
-
-
---
 -- Data for Name: submission_chapter_authors; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.submission_chapter_authors (author_id, chapter_id, primary_contact, seq) FROM stdin;
 1	1	0	0
-48	58	0	0
+49	61	0	0
 1	2	0	0
 1	3	0	0
-48	59	0	0
+49	62	0	0
 5	4	0	0
 6	5	0	0
-48	60	0	0
+49	63	0	0
 7	6	0	0
-49	61	0	0
+49	64	0	0
 8	7	0	0
 9	7	0	1
 11	8	0	0
-49	62	0	0
+49	65	0	0
 11	9	0	0
 11	10	0	0
-49	63	0	0
+51	66	0	0
 11	11	0	0
 11	12	0	0
-49	64	0	0
 12	13	0	0
+50	67	0	0
 13	14	0	0
-49	65	0	0
+52	67	0	1
 14	15	0	0
 15	16	0	0
-51	66	0	0
 16	17	0	0
-16	18	0	0
-16	19	0	0
-50	67	0	0
-16	20	0	0
-52	67	0	1
-16	21	0	0
-16	22	0	0
-17	23	0	0
 50	68	0	0
-18	24	0	0
+16	18	0	0
 52	68	0	1
-19	25	0	0
-20	26	0	0
-21	27	0	0
+16	19	0	0
+16	20	0	0
+16	21	0	0
 53	69	0	0
-22	28	0	0
+16	22	0	0
 54	69	0	1
+17	23	0	0
+18	24	0	0
+19	25	0	0
+55	70	0	0
+20	26	0	0
+56	70	0	1
+21	27	0	0
+22	28	0	0
+57	71	0	0
 23	29	0	0
 24	30	0	0
 25	31	0	0
-55	70	0	0
 26	32	0	0
-56	70	0	1
 27	33	0	0
 28	34	0	0
-57	71	0	0
 29	35	0	0
 30	36	0	0
 31	37	0	0
@@ -15287,6 +14567,9 @@ COPY public.submission_chapter_authors (author_id, chapter_id, primary_contact, 
 46	55	0	0
 47	56	0	0
 45	57	0	0
+48	58	0	0
+48	59	0	0
+48	60	0	0
 \.
 
 
@@ -16009,13 +15292,6 @@ COPY public.submission_chapter_settings (submission_chapter_setting_id, chapter_
 
 
 --
--- Name: submission_chapter_settings_submission_chapter_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_chapter_settings_submission_chapter_setting_id_seq', 710, true);
-
-
---
 -- Data for Name: submission_chapters; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -16023,67 +15299,67 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 1	\N	1	1	1	\N
 2	\N	1	2	2	\N
 3	\N	1	3	3	\N
-27	\N	7	1	27	\N
-28	\N	7	2	28	\N
-29	\N	7	3	29	\N
+13	\N	4	1	13	\N
+14	\N	4	2	14	\N
+15	\N	4	3	15	\N
+16	\N	4	4	16	\N
 4	\N	2	1	4	\N
 5	\N	2	2	5	\N
 6	\N	2	3	6	\N
-30	\N	7	4	30	\N
 7	\N	2	4	7	\N
 51	\N	13	1	51	\N
-31	\N	7	5	31	\N
 52	\N	13	2	52	\N
 61	\N	16	1	61	\N
 53	\N	13	3	53	\N
+27	\N	7	1	27	\N
+28	\N	7	2	28	\N
+29	\N	7	3	29	\N
+30	\N	7	4	30	\N
+31	\N	7	5	31	\N
+8	\N	3	1	8	\N
+9	\N	3	2	9	\N
+10	\N	3	3	10	\N
+11	\N	3	4	11	\N
+62	\N	16	2	62	\N
+12	\N	3	5	12	\N
+63	\N	16	3	63	\N
+64	\N	16	4	64	\N
+65	\N	16	5	65	\N
 17	\N	5	1	17	\N
 18	\N	5	2	18	\N
 19	\N	5	3	19	\N
 20	\N	5	4	20	\N
 21	\N	5	5	21	\N
 22	\N	5	6	22	\N
-62	\N	16	2	62	\N
-8	\N	3	1	8	\N
-9	\N	3	2	9	\N
-10	\N	3	3	10	\N
-11	\N	3	4	11	\N
-63	\N	16	3	63	\N
-12	\N	3	5	12	\N
-64	\N	16	4	64	\N
-37	\N	10	1	37	\N
-38	\N	10	2	38	\N
-39	\N	10	3	39	\N
-13	\N	4	1	13	\N
-14	\N	4	2	14	\N
-15	\N	4	3	15	\N
+54	\N	14	1	54	\N
+55	\N	14	2	55	\N
 23	\N	6	1	23	\N
-16	\N	4	4	16	\N
 24	\N	6	2	24	\N
 25	\N	6	3	25	\N
-40	\N	10	4	40	\N
-26	\N	6	4	26	\N
-41	\N	10	5	41	\N
-42	\N	10	6	42	\N
-65	\N	16	5	65	\N
-43	\N	10	7	43	\N
 32	\N	9	1	32	\N
-44	\N	10	8	44	\N
+26	\N	6	4	26	\N
 33	\N	9	2	33	\N
 34	\N	9	3	34	\N
 35	\N	9	4	35	\N
-36	\N	9	5	36	\N
-45	\N	10	9	45	\N
-46	\N	11	1	46	\N
-54	\N	14	1	54	\N
-55	\N	14	2	55	\N
-47	\N	11	2	47	\N
 56	\N	14	3	56	\N
+36	\N	9	5	36	\N
 57	\N	14	4	57	\N
+37	\N	10	1	37	\N
+38	\N	10	2	38	\N
+39	\N	10	3	39	\N
+40	\N	10	4	40	\N
+41	\N	10	5	41	\N
+42	\N	10	6	42	\N
+43	\N	10	7	43	\N
+44	\N	10	8	44	\N
+45	\N	10	9	45	\N
+58	\N	15	1	58	\N
+46	\N	11	1	46	\N
+59	\N	15	2	59	\N
+47	\N	11	2	47	\N
+60	\N	15	3	60	\N
 48	\N	12	1	48	\N
 49	\N	12	2	49	\N
-58	\N	15	1	58	\N
-59	\N	15	2	59	\N
-60	\N	15	3	60	\N
 50	\N	12	3	50	\N
 66	\N	17	1	66	\N
 67	\N	17	2	67	\N
@@ -16095,31 +15371,17 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 
 
 --
--- Name: submission_chapters_chapter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_chapters_chapter_id_seq', 71, true);
-
-
---
 -- Data for Name: submission_comments; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2023-04-01 00:03:35	\N	1
-2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2023-04-01 00:03:47	\N	1
-3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2023-04-01 00:05:44	\N	1
-4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2023-04-01 00:07:34	\N	1
-5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2023-04-01 00:07:47	\N	1
-6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2023-04-01 00:14:14	\N	1
+1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2023-04-03 20:13:20	\N	1
+2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2023-04-03 20:13:33	\N	1
+3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2023-04-03 20:15:41	\N	1
+4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2023-04-03 20:17:39	\N	1
+5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2023-04-03 20:17:53	\N	1
+6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2023-04-03 20:25:00	\N	1
 \.
-
-
---
--- Name: submission_comments_comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
 
 
 --
@@ -16138,8 +15400,8 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 9	9	6
 10	10	7
 12	12	7
-13	13	5
-14	14	6
+13	13	6
+14	14	5
 15	15	4
 16	16	9
 17	17	10
@@ -16150,8 +15412,8 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 22	22	15
 23	23	16
 24	24	17
-25	25	16
-26	26	17
+25	25	17
+26	26	16
 27	27	15
 28	28	14
 29	29	18
@@ -16164,16 +15426,16 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 36	36	22
 37	37	21
 38	38	20
-39	39	18
-40	40	19
+39	39	19
+40	40	18
 41	41	23
 42	42	24
 43	43	25
 44	44	26
 45	45	27
 46	46	27
-47	47	25
-48	48	26
+47	47	26
+48	48	25
 49	49	24
 50	50	28
 51	51	29
@@ -16183,16 +15445,16 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 55	55	32
 56	56	31
 57	57	30
-58	58	28
-59	59	29
+58	58	29
+59	59	28
 60	60	33
 61	61	34
 62	62	35
 63	63	36
 64	64	37
 65	65	38
-66	66	38
-67	67	37
+66	66	37
+67	67	38
 68	68	36
 69	69	35
 70	70	34
@@ -16227,12 +15489,12 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 99	99	59
 100	100	60
 101	101	61
-102	102	60
-103	103	61
-104	104	59
-105	105	58
-106	106	57
-107	107	56
+102	102	61
+103	103	60
+104	104	58
+105	105	57
+106	106	56
+107	107	59
 108	108	61
 109	109	60
 110	110	59
@@ -16251,30 +15513,23 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 123	123	68
 124	124	69
 125	125	69
-126	126	67
-127	127	66
-128	128	68
-129	129	65
+126	126	66
+127	127	65
+128	128	67
+129	129	68
 130	130	70
 131	131	71
 132	132	72
 133	133	73
 134	134	74
 135	135	75
-136	136	74
-137	137	73
-138	138	75
-139	139	72
-140	140	70
-141	141	71
+136	136	75
+137	137	74
+138	138	72
+139	139	70
+140	140	71
+141	141	73
 \.
-
-
---
--- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 141, true);
 
 
 --
@@ -16304,10 +15559,10 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 21	10		chapterId	7	string
 22	12	en	name	chapter4.pdf	string
 23	12		chapterId	7	string
-24	13	en	name	chapter2.pdf	string
-25	13		chapterId	5	string
-26	14	en	name	chapter3.pdf	string
-27	14		chapterId	6	string
+24	13	en	name	chapter3.pdf	string
+25	13		chapterId	6	string
+26	14	en	name	chapter2.pdf	string
+27	14		chapterId	5	string
 28	15	en	name	chapter1.pdf	string
 29	15		chapterId	4	string
 30	16	en	name	chapter1.pdf	string
@@ -16328,10 +15583,10 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 45	21		chapterId	14	string
 46	22		chapterId	15	string
 47	23		chapterId	16	string
-48	25	en	name	chapter3.pdf	string
-49	25		chapterId	16	string
-50	26	en	name	intro.pdf	string
-51	26		chapterId	13	string
+48	25	en	name	intro.pdf	string
+49	25		chapterId	13	string
+50	26	en	name	chapter3.pdf	string
+51	26		chapterId	16	string
 52	27	en	name	chapter2.pdf	string
 53	27		chapterId	15	string
 54	28	en	name	chapter1.pdf	string
@@ -16356,10 +15611,10 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 73	37		chapterId	20	string
 74	38	en	name	chapter2.pdf	string
 75	38		chapterId	19	string
-76	39	en	name	prologue.pdf	string
-77	39		chapterId	17	string
-78	40	en	name	chapter1.pdf	string
-79	40		chapterId	18	string
+76	39	en	name	chapter1.pdf	string
+77	39		chapterId	18	string
+78	40	en	name	prologue.pdf	string
+79	40		chapterId	17	string
 96	49	en	name	chapter1.pdf	string
 97	49		chapterId	23	string
 80	41	en	name	epilogue.pdf	string
@@ -16374,10 +15629,10 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 89	45		chapterId	26	string
 90	46	en	name	chapter4.pdf	string
 91	46		chapterId	26	string
-92	47	en	name	chapter2.pdf	string
-93	47		chapterId	24	string
-94	48	en	name	chapter3.pdf	string
-95	48		chapterId	25	string
+92	47	en	name	chapter3.pdf	string
+93	47		chapterId	25	string
+94	48	en	name	chapter2.pdf	string
+95	48		chapterId	24	string
 98	50	en	name	intro.pdf	string
 99	51	en	name	chapter1.pdf	string
 100	52	en	name	chapter2.pdf	string
@@ -16394,10 +15649,10 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 111	56		chapterId	30	string
 112	57	en	name	chapter2.pdf	string
 113	57		chapterId	29	string
-114	58	en	name	intro.pdf	string
-115	58		chapterId	27	string
-116	59	en	name	chapter1.pdf	string
-117	59		chapterId	28	string
+114	58	en	name	chapter1.pdf	string
+115	58		chapterId	28	string
+116	59	en	name	intro.pdf	string
+117	59		chapterId	27	string
 118	60	en	name	note.pdf	string
 119	61	en	name	chapter1.pdf	string
 120	62	en	name	chapter2.pdf	string
@@ -16409,10 +15664,10 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 126	63		chapterId	34	string
 127	64		chapterId	35	string
 128	65		chapterId	36	string
-129	66	en	name	chapter5.pdf	string
-130	66		chapterId	36	string
-131	67	en	name	chapter4.pdf	string
-132	67		chapterId	35	string
+129	66	en	name	chapter4.pdf	string
+130	66		chapterId	35	string
+131	67	en	name	chapter5.pdf	string
+132	67		chapterId	36	string
 133	68	en	name	chapter3.pdf	string
 134	68		chapterId	34	string
 135	69	en	name	chapter2.pdf	string
@@ -16479,16 +15734,16 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 196	97		chapterId	55	string
 197	98		chapterId	56	string
 198	99		chapterId	57	string
-199	102	en	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-200	103	en	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-201	104	en	name	chapter4.pdf	string
-202	104		chapterId	57	string
-203	105	en	name	chapter3.pdf	string
-204	105		chapterId	56	string
-205	106	en	name	chapter2.pdf	string
-206	106		chapterId	55	string
-207	107	en	name	chapter1.pdf	string
-208	107		chapterId	54	string
+199	102	en	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+200	103	en	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+201	104	en	name	chapter3.pdf	string
+202	104		chapterId	56	string
+203	105	en	name	chapter2.pdf	string
+204	105		chapterId	55	string
+205	106	en	name	chapter1.pdf	string
+206	106		chapterId	54	string
+207	107	en	name	chapter4.pdf	string
+208	107		chapterId	57	string
 218	113		chapterId	54	string
 216	112		chapterId	55	string
 217	113	en	name	chapter1.pdf	string
@@ -16523,14 +15778,14 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 240	124		chapterId	65	string
 241	125	en	name	bibliography.pdf	string
 242	125		chapterId	65	string
-243	126	en	name	cases.pdf	string
-244	126		chapterId	63	string
-245	127	en	name	preface.pdf	string
-246	127		chapterId	62	string
-247	128	en	name	conclusion.pdf	string
-248	128		chapterId	64	string
-249	129	en	name	foreward.pdf	string
-250	129		chapterId	61	string
+243	126	en	name	preface.pdf	string
+244	126		chapterId	62	string
+245	127	en	name	foreward.pdf	string
+246	127		chapterId	61	string
+247	128	en	name	cases.pdf	string
+248	128		chapterId	63	string
+249	129	en	name	conclusion.pdf	string
+250	129		chapterId	64	string
 251	130	en	name	preface.pdf	string
 252	131	en	name	introduction.pdf	string
 253	132	en	name	chapter1.pdf	string
@@ -16543,26 +15798,19 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 260	133		chapterId	69	string
 261	134		chapterId	70	string
 262	135		chapterId	71	string
-263	136	en	name	chapter3.pdf	string
-264	136		chapterId	70	string
-265	137	en	name	chapter2.pdf	string
-266	137		chapterId	69	string
-267	138	en	name	chapter4.pdf	string
-268	138		chapterId	71	string
-269	139	en	name	chapter1.pdf	string
-270	139		chapterId	68	string
-271	140	en	name	preface.pdf	string
-272	140		chapterId	66	string
-273	141	en	name	introduction.pdf	string
-274	141		chapterId	67	string
+263	136	en	name	chapter4.pdf	string
+264	136		chapterId	71	string
+265	137	en	name	chapter3.pdf	string
+266	137		chapterId	70	string
+267	138	en	name	chapter1.pdf	string
+268	138		chapterId	68	string
+269	139	en	name	preface.pdf	string
+270	139		chapterId	66	string
+271	140	en	name	introduction.pdf	string
+272	140		chapterId	67	string
+273	141	en	name	chapter2.pdf	string
+274	141		chapterId	69	string
 \.
-
-
---
--- Name: submission_file_settings_submission_file_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_file_settings_submission_file_setting_id_seq', 274, true);
 
 
 --
@@ -16570,154 +15818,147 @@ SELECT pg_catalog.setval('public.submission_file_settings_submission_file_settin
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id, doi_id) FROM stdin;
-1	1	1	\N	3	2	\N	\N	\N	2023-03-31 23:44:56	2023-03-31 23:44:56	19	\N	\N	\N
-2	1	2	\N	3	2	\N	\N	\N	2023-03-31 23:44:57	2023-03-31 23:44:57	19	\N	\N	\N
-3	1	3	\N	3	2	\N	\N	\N	2023-03-31 23:44:58	2023-03-31 23:44:58	19	\N	\N	\N
-4	1	3	3	3	4	\N	\N	\N	2023-03-31 23:45:31	2023-03-31 23:45:31	19	523	1	\N
-5	1	2	2	3	4	\N	\N	\N	2023-03-31 23:45:31	2023-03-31 23:45:31	19	523	1	\N
-6	1	1	1	3	4	\N	\N	\N	2023-03-31 23:45:31	2023-03-31 23:45:31	19	523	1	\N
-7	2	4	\N	3	2	\N	\N	\N	2023-03-31 23:46:21	2023-03-31 23:46:21	20	\N	\N	\N
-8	2	5	\N	3	2	\N	\N	\N	2023-03-31 23:46:22	2023-03-31 23:46:22	20	\N	\N	\N
-9	2	6	\N	3	2	\N	\N	\N	2023-03-31 23:46:23	2023-03-31 23:46:24	20	\N	\N	\N
-10	2	7	\N	3	2	\N	\N	\N	2023-03-31 23:46:24	2023-03-31 23:46:25	20	\N	\N	\N
-12	2	7	10	3	4	\N	\N	\N	2023-03-31 23:48:39	2023-03-31 23:48:39	20	523	2	\N
-13	2	5	8	3	4	\N	\N	\N	2023-03-31 23:48:39	2023-03-31 23:48:39	20	523	2	\N
-14	2	6	9	3	4	\N	\N	\N	2023-03-31 23:48:39	2023-03-31 23:48:39	20	523	2	\N
-15	2	4	7	3	4	\N	\N	\N	2023-03-31 23:48:40	2023-03-31 23:48:40	20	523	2	\N
-16	3	9	\N	3	2	\N	\N	\N	2023-03-31 23:49:18	2023-03-31 23:49:18	21	\N	\N	\N
-17	3	10	\N	3	2	\N	\N	\N	2023-03-31 23:49:19	2023-03-31 23:49:20	21	\N	\N	\N
-18	3	11	\N	3	2	\N	\N	\N	2023-03-31 23:49:20	2023-03-31 23:49:21	21	\N	\N	\N
-19	3	12	\N	3	2	\N	\N	\N	2023-03-31 23:49:22	2023-03-31 23:49:22	21	\N	\N	\N
-20	3	13	\N	3	2	\N	\N	\N	2023-03-31 23:49:23	2023-03-31 23:49:23	21	\N	\N	\N
-21	4	14	\N	3	2	\N	\N	\N	2023-03-31 23:50:12	2023-03-31 23:50:13	22	\N	\N	\N
-22	4	15	\N	3	2	\N	\N	\N	2023-03-31 23:50:14	2023-03-31 23:50:14	22	\N	\N	\N
-23	4	16	\N	3	2	\N	\N	\N	2023-03-31 23:50:15	2023-03-31 23:50:15	22	\N	\N	\N
-24	4	17	\N	3	2	\N	\N	\N	2023-03-31 23:50:16	2023-03-31 23:50:16	22	\N	\N	\N
-25	4	16	23	3	19	\N	\N	\N	2023-03-31 23:51:01	2023-03-31 23:51:01	22	523	3	\N
-26	4	17	24	3	19	\N	\N	\N	2023-03-31 23:51:01	2023-03-31 23:51:01	22	523	3	\N
-27	4	15	22	3	19	\N	\N	\N	2023-03-31 23:51:02	2023-03-31 23:51:02	22	523	3	\N
-28	4	14	21	3	19	\N	\N	\N	2023-03-31 23:51:02	2023-03-31 23:51:02	22	523	3	\N
-29	5	18	\N	3	2	\N	\N	\N	2023-03-31 23:52:23	2023-03-31 23:52:24	23	\N	\N	\N
-30	5	19	\N	3	2	\N	\N	\N	2023-03-31 23:52:24	2023-03-31 23:52:25	23	\N	\N	\N
-31	5	20	\N	3	2	\N	\N	\N	2023-03-31 23:52:25	2023-03-31 23:52:26	23	\N	\N	\N
-32	5	21	\N	3	2	\N	\N	\N	2023-03-31 23:52:27	2023-03-31 23:52:27	23	\N	\N	\N
-33	5	22	\N	3	2	\N	\N	\N	2023-03-31 23:52:28	2023-03-31 23:52:28	23	\N	\N	\N
-34	5	23	\N	3	2	\N	\N	\N	2023-03-31 23:52:29	2023-03-31 23:52:29	23	\N	\N	\N
-35	5	23	34	3	19	\N	\N	\N	2023-03-31 23:53:30	2023-03-31 23:53:30	23	523	5	\N
-36	5	22	33	3	19	\N	\N	\N	2023-03-31 23:53:31	2023-03-31 23:53:31	23	523	5	\N
-37	5	21	32	3	19	\N	\N	\N	2023-03-31 23:53:31	2023-03-31 23:53:31	23	523	5	\N
-38	5	20	31	3	19	\N	\N	\N	2023-03-31 23:53:31	2023-03-31 23:53:31	23	523	5	\N
-39	5	18	29	3	19	\N	\N	\N	2023-03-31 23:53:31	2023-03-31 23:53:31	23	523	5	\N
-40	5	19	30	3	19	\N	\N	\N	2023-03-31 23:53:31	2023-03-31 23:53:31	23	523	5	\N
-44	6	26	\N	3	2	\N	\N	\N	2023-03-31 23:55:44	2023-03-31 23:55:44	24	\N	\N	\N
-41	5	23	34	3	10	0	openAccess	1	2023-03-31 23:54:54	2023-03-31 23:55:05	23	521	2	\N
-42	6	24	\N	3	2	\N	\N	\N	2023-03-31 23:55:41	2023-03-31 23:55:42	24	\N	\N	\N
-43	6	25	\N	3	2	\N	\N	\N	2023-03-31 23:55:43	2023-03-31 23:55:43	24	\N	\N	\N
-45	6	27	\N	3	2	\N	\N	\N	2023-03-31 23:55:45	2023-03-31 23:55:45	24	\N	\N	\N
-46	6	27	45	3	19	\N	\N	\N	2023-03-31 23:56:28	2023-03-31 23:56:28	24	523	7	\N
-47	6	25	43	3	19	\N	\N	\N	2023-03-31 23:56:29	2023-03-31 23:56:29	24	523	7	\N
-48	6	26	44	3	19	\N	\N	\N	2023-03-31 23:56:29	2023-03-31 23:56:29	24	523	7	\N
-49	6	24	42	3	19	\N	\N	\N	2023-03-31 23:56:29	2023-03-31 23:56:29	24	523	7	\N
-50	7	28	\N	3	2	\N	\N	\N	2023-03-31 23:57:28	2023-03-31 23:57:28	25	\N	\N	\N
-51	7	29	\N	3	2	\N	\N	\N	2023-03-31 23:57:29	2023-03-31 23:57:29	25	\N	\N	\N
-52	7	30	\N	3	2	\N	\N	\N	2023-03-31 23:57:30	2023-03-31 23:57:30	25	\N	\N	\N
-53	7	31	\N	3	2	\N	\N	\N	2023-03-31 23:57:31	2023-03-31 23:57:32	25	\N	\N	\N
-54	7	32	\N	3	2	\N	\N	\N	2023-03-31 23:57:33	2023-03-31 23:57:33	25	\N	\N	\N
-55	7	32	54	3	4	\N	\N	\N	2023-03-31 23:58:27	2023-03-31 23:58:27	25	523	8	\N
-56	7	31	53	3	4	\N	\N	\N	2023-03-31 23:58:27	2023-03-31 23:58:27	25	523	8	\N
-57	7	30	52	3	4	\N	\N	\N	2023-03-31 23:58:27	2023-03-31 23:58:27	25	523	8	\N
-58	7	28	50	3	4	\N	\N	\N	2023-03-31 23:58:28	2023-03-31 23:58:28	25	523	8	\N
-59	7	29	51	3	4	\N	\N	\N	2023-03-31 23:58:28	2023-03-31 23:58:28	25	523	8	\N
-60	8	33	\N	3	2	\N	\N	\N	2023-03-31 23:59:09	2023-03-31 23:59:09	3	\N	\N	\N
-61	9	34	\N	3	2	\N	\N	\N	2023-03-31 23:59:22	2023-03-31 23:59:22	26	\N	\N	\N
-62	9	35	\N	3	2	\N	\N	\N	2023-03-31 23:59:23	2023-03-31 23:59:24	26	\N	\N	\N
-63	9	36	\N	3	2	\N	\N	\N	2023-03-31 23:59:24	2023-03-31 23:59:25	26	\N	\N	\N
-64	9	37	\N	3	2	\N	\N	\N	2023-03-31 23:59:26	2023-03-31 23:59:26	26	\N	\N	\N
-65	9	38	\N	3	2	\N	\N	\N	2023-03-31 23:59:27	2023-03-31 23:59:27	26	\N	\N	\N
-66	9	38	65	3	19	\N	\N	\N	2023-04-01 00:00:22	2023-04-01 00:00:22	26	523	9	\N
-67	9	37	64	3	19	\N	\N	\N	2023-04-01 00:00:22	2023-04-01 00:00:22	26	523	9	\N
-68	9	36	63	3	19	\N	\N	\N	2023-04-01 00:00:23	2023-04-01 00:00:23	26	523	9	\N
-69	9	35	62	3	19	\N	\N	\N	2023-04-01 00:00:23	2023-04-01 00:00:23	26	523	9	\N
-70	9	34	61	3	19	\N	\N	\N	2023-04-01 00:00:23	2023-04-01 00:00:23	26	523	9	\N
-71	10	39	\N	3	2	\N	\N	\N	2023-04-01 00:00:41	2023-04-01 00:00:41	27	\N	\N	\N
-72	10	40	\N	3	2	\N	\N	\N	2023-04-01 00:00:42	2023-04-01 00:00:42	27	\N	\N	\N
-73	10	41	\N	3	2	\N	\N	\N	2023-04-01 00:00:43	2023-04-01 00:00:44	27	\N	\N	\N
-117	15	64	116	3	4	\N	\N	\N	2023-04-01 00:12:17	2023-04-01 00:12:17	32	523	17	\N
-74	10	42	\N	3	2	\N	\N	\N	2023-04-01 00:00:44	2023-04-01 00:00:45	27	\N	\N	\N
-118	15	63	115	3	4	\N	\N	\N	2023-04-01 00:12:18	2023-04-01 00:12:18	32	523	17	\N
-75	10	43	\N	3	2	\N	\N	\N	2023-04-01 00:00:46	2023-04-01 00:00:46	27	\N	\N	\N
-119	15	62	114	3	4	\N	\N	\N	2023-04-01 00:12:18	2023-04-01 00:12:18	32	523	17	\N
-76	10	44	\N	3	2	\N	\N	\N	2023-04-01 00:00:47	2023-04-01 00:00:47	27	\N	\N	\N
-120	16	65	\N	3	2	\N	\N	\N	2023-04-01 00:12:34	2023-04-01 00:12:35	33	\N	\N	\N
-77	10	45	\N	3	2	\N	\N	\N	2023-04-01 00:00:48	2023-04-01 00:00:48	27	\N	\N	\N
-121	16	66	\N	3	2	\N	\N	\N	2023-04-01 00:12:36	2023-04-01 00:12:36	33	\N	\N	\N
-78	10	46	\N	3	2	\N	\N	\N	2023-04-01 00:00:49	2023-04-01 00:00:50	27	\N	\N	\N
-122	16	67	\N	3	2	\N	\N	\N	2023-04-01 00:12:37	2023-04-01 00:12:37	33	\N	\N	\N
-79	10	47	\N	3	2	\N	\N	\N	2023-04-01 00:00:51	2023-04-01 00:00:51	27	\N	\N	\N
-123	16	68	\N	3	2	\N	\N	\N	2023-04-01 00:12:38	2023-04-01 00:12:38	33	\N	\N	\N
-80	11	48	\N	3	2	\N	\N	\N	2023-04-01 00:02:21	2023-04-01 00:02:21	28	\N	\N	\N
-124	16	69	\N	3	2	\N	\N	\N	2023-04-01 00:12:39	2023-04-01 00:12:40	33	\N	\N	\N
-81	11	49	\N	3	2	\N	\N	\N	2023-04-01 00:02:22	2023-04-01 00:02:22	28	\N	\N	\N
-82	11	49	81	3	19	\N	\N	\N	2023-04-01 00:02:49	2023-04-01 00:02:49	28	523	10	\N
-83	11	48	80	3	19	\N	\N	\N	2023-04-01 00:02:50	2023-04-01 00:02:50	28	523	10	\N
-125	16	69	124	3	4	\N	\N	\N	2023-04-01 00:13:32	2023-04-01 00:13:32	33	523	18	\N
-84	12	50	\N	3	2	\N	\N	\N	2023-04-01 00:04:23	2023-04-01 00:04:23	29	\N	\N	\N
-126	16	67	122	3	4	\N	\N	\N	2023-04-01 00:13:32	2023-04-01 00:13:32	33	523	18	\N
-85	12	51	\N	3	2	\N	\N	\N	2023-04-01 00:04:24	2023-04-01 00:04:24	29	\N	\N	\N
-127	16	66	121	3	4	\N	\N	\N	2023-04-01 00:13:33	2023-04-01 00:13:33	33	523	18	\N
-86	12	52	\N	3	2	\N	\N	\N	2023-04-01 00:04:25	2023-04-01 00:04:25	29	\N	\N	\N
-87	12	52	86	3	19	\N	\N	\N	2023-04-01 00:05:05	2023-04-01 00:05:05	29	523	12	\N
-88	12	51	85	3	19	\N	\N	\N	2023-04-01 00:05:06	2023-04-01 00:05:06	29	523	12	\N
-89	12	50	84	3	19	\N	\N	\N	2023-04-01 00:05:06	2023-04-01 00:05:06	29	523	12	\N
-128	16	68	123	3	4	\N	\N	\N	2023-04-01 00:13:33	2023-04-01 00:13:33	33	523	18	\N
-90	13	53	\N	3	2	\N	\N	\N	2023-04-01 00:05:57	2023-04-01 00:05:58	30	\N	\N	\N
-129	16	65	120	3	4	\N	\N	\N	2023-04-01 00:13:33	2023-04-01 00:13:33	33	523	18	\N
-91	13	54	\N	3	2	\N	\N	\N	2023-04-01 00:05:59	2023-04-01 00:05:59	30	\N	\N	\N
-130	17	70	\N	3	2	\N	\N	\N	2023-04-01 00:14:28	2023-04-01 00:14:28	34	\N	\N	\N
-92	13	55	\N	3	2	\N	\N	\N	2023-04-01 00:06:00	2023-04-01 00:06:00	30	\N	\N	\N
-93	13	55	92	3	19	\N	\N	\N	2023-04-01 00:06:39	2023-04-01 00:06:39	30	523	13	\N
-94	13	54	91	3	19	\N	\N	\N	2023-04-01 00:06:39	2023-04-01 00:06:39	30	523	13	\N
-95	13	53	90	3	19	\N	\N	\N	2023-04-01 00:06:39	2023-04-01 00:06:39	30	523	13	\N
-131	17	71	\N	3	2	\N	\N	\N	2023-04-01 00:14:29	2023-04-01 00:14:29	34	\N	\N	\N
-96	14	56	\N	3	2	\N	\N	\N	2023-04-01 00:08:26	2023-04-01 00:08:26	31	\N	\N	\N
-132	17	72	\N	3	2	\N	\N	\N	2023-04-01 00:14:30	2023-04-01 00:14:30	34	\N	\N	\N
-97	14	57	\N	3	2	\N	\N	\N	2023-04-01 00:08:27	2023-04-01 00:08:27	31	\N	\N	\N
-133	17	73	\N	3	2	\N	\N	\N	2023-04-01 00:14:31	2023-04-01 00:14:32	34	\N	\N	\N
-98	14	58	\N	3	2	\N	\N	\N	2023-04-01 00:08:28	2023-04-01 00:08:28	31	\N	\N	\N
-134	17	74	\N	3	2	\N	\N	\N	2023-04-01 00:14:33	2023-04-01 00:14:33	34	\N	\N	\N
-99	14	59	\N	3	2	\N	\N	\N	2023-04-01 00:08:29	2023-04-01 00:08:30	31	\N	\N	\N
-135	17	75	\N	3	2	\N	\N	\N	2023-04-01 00:14:34	2023-04-01 00:14:34	34	\N	\N	\N
-100	14	60	\N	13	2	\N	\N	\N	2023-04-01 00:08:31	2023-04-01 00:08:31	31	\N	\N	\N
-136	17	74	134	3	19	\N	\N	\N	2023-04-01 00:15:44	2023-04-01 00:15:44	34	523	19	\N
-101	14	61	\N	9	2	\N	\N	\N	2023-04-01 00:08:32	2023-04-01 00:08:32	31	\N	\N	\N
-102	14	60	100	13	19	\N	\N	\N	2023-04-01 00:09:20	2023-04-01 00:09:20	31	523	15	\N
-103	14	61	101	9	19	\N	\N	\N	2023-04-01 00:09:20	2023-04-01 00:09:20	31	523	15	\N
-104	14	59	99	3	19	\N	\N	\N	2023-04-01 00:09:20	2023-04-01 00:09:20	31	523	15	\N
-105	14	58	98	3	19	\N	\N	\N	2023-04-01 00:09:20	2023-04-01 00:09:20	31	523	15	\N
-106	14	57	97	3	19	\N	\N	\N	2023-04-01 00:09:21	2023-04-01 00:09:21	31	523	15	\N
-107	14	56	96	3	19	\N	\N	\N	2023-04-01 00:09:21	2023-04-01 00:09:21	31	523	15	\N
-110	14	59	99	3	10	0	openAccess	1	2023-04-01 00:10:42	2023-04-01 00:11:10	31	521	3	\N
-113	14	56	96	3	10	0	openAccess	1	2023-04-01 00:10:42	2023-04-01 00:10:52	31	521	3	\N
-137	17	73	133	3	19	\N	\N	\N	2023-04-01 00:15:45	2023-04-01 00:15:45	34	523	19	\N
-112	14	57	97	3	10	0	openAccess	1	2023-04-01 00:10:42	2023-04-01 00:10:58	31	521	3	\N
-109	14	60	100	13	10	0	openAccess	1	2023-04-01 00:10:42	2023-04-01 00:11:16	31	521	3	\N
-111	14	58	98	3	10	0	openAccess	1	2023-04-01 00:10:42	2023-04-01 00:11:04	31	521	3	\N
-138	17	75	135	3	19	\N	\N	\N	2023-04-01 00:15:45	2023-04-01 00:15:45	34	523	19	\N
-139	17	72	132	3	19	\N	\N	\N	2023-04-01 00:15:45	2023-04-01 00:15:45	34	523	19	\N
-108	14	61	101	9	10	0	openAccess	1	2023-04-01 00:10:42	2023-04-01 00:11:22	31	521	3	\N
-140	17	70	130	3	19	\N	\N	\N	2023-04-01 00:15:45	2023-04-01 00:15:45	34	523	19	\N
-114	15	62	\N	3	2	\N	\N	\N	2023-04-01 00:11:39	2023-04-01 00:11:39	32	\N	\N	\N
-141	17	71	131	3	19	\N	\N	\N	2023-04-01 00:15:45	2023-04-01 00:15:45	34	523	19	\N
-115	15	63	\N	3	2	\N	\N	\N	2023-04-01 00:11:40	2023-04-01 00:11:40	32	\N	\N	\N
-116	15	64	\N	3	2	\N	\N	\N	2023-04-01 00:11:41	2023-04-01 00:11:42	32	\N	\N	\N
+1	1	1	\N	3	2	\N	\N	\N	2023-04-03 19:53:01	2023-04-03 19:53:01	19	\N	\N	\N
+2	1	2	\N	3	2	\N	\N	\N	2023-04-03 19:53:02	2023-04-03 19:53:02	19	\N	\N	\N
+3	1	3	\N	3	2	\N	\N	\N	2023-04-03 19:53:03	2023-04-03 19:53:03	19	\N	\N	\N
+4	1	3	3	3	4	\N	\N	\N	2023-04-03 19:53:38	2023-04-03 19:53:38	19	523	1	\N
+5	1	2	2	3	4	\N	\N	\N	2023-04-03 19:53:38	2023-04-03 19:53:38	19	523	1	\N
+6	1	1	1	3	4	\N	\N	\N	2023-04-03 19:53:38	2023-04-03 19:53:38	19	523	1	\N
+7	2	4	\N	3	2	\N	\N	\N	2023-04-03 19:54:32	2023-04-03 19:54:33	20	\N	\N	\N
+8	2	5	\N	3	2	\N	\N	\N	2023-04-03 19:54:34	2023-04-03 19:54:34	20	\N	\N	\N
+9	2	6	\N	3	2	\N	\N	\N	2023-04-03 19:54:35	2023-04-03 19:54:35	20	\N	\N	\N
+10	2	7	\N	3	2	\N	\N	\N	2023-04-03 19:54:36	2023-04-03 19:54:37	20	\N	\N	\N
+12	2	7	10	3	4	\N	\N	\N	2023-04-03 19:57:03	2023-04-03 19:57:03	20	523	2	\N
+13	2	6	9	3	4	\N	\N	\N	2023-04-03 19:57:04	2023-04-03 19:57:04	20	523	2	\N
+14	2	5	8	3	4	\N	\N	\N	2023-04-03 19:57:04	2023-04-03 19:57:04	20	523	2	\N
+15	2	4	7	3	4	\N	\N	\N	2023-04-03 19:57:04	2023-04-03 19:57:04	20	523	2	\N
+16	3	9	\N	3	2	\N	\N	\N	2023-04-03 19:57:46	2023-04-03 19:57:46	21	\N	\N	\N
+17	3	10	\N	3	2	\N	\N	\N	2023-04-03 19:57:47	2023-04-03 19:57:48	21	\N	\N	\N
+18	3	11	\N	3	2	\N	\N	\N	2023-04-03 19:57:48	2023-04-03 19:57:49	21	\N	\N	\N
+19	3	12	\N	3	2	\N	\N	\N	2023-04-03 19:57:50	2023-04-03 19:57:50	21	\N	\N	\N
+20	3	13	\N	3	2	\N	\N	\N	2023-04-03 19:57:51	2023-04-03 19:57:52	21	\N	\N	\N
+21	4	14	\N	3	2	\N	\N	\N	2023-04-03 19:58:44	2023-04-03 19:58:45	22	\N	\N	\N
+22	4	15	\N	3	2	\N	\N	\N	2023-04-03 19:58:46	2023-04-03 19:58:46	22	\N	\N	\N
+23	4	16	\N	3	2	\N	\N	\N	2023-04-03 19:58:47	2023-04-03 19:58:47	22	\N	\N	\N
+24	4	17	\N	3	2	\N	\N	\N	2023-04-03 19:58:48	2023-04-03 19:58:49	22	\N	\N	\N
+25	4	17	24	3	19	\N	\N	\N	2023-04-03 19:59:36	2023-04-03 19:59:36	22	523	3	\N
+26	4	16	23	3	19	\N	\N	\N	2023-04-03 19:59:36	2023-04-03 19:59:36	22	523	3	\N
+27	4	15	22	3	19	\N	\N	\N	2023-04-03 19:59:37	2023-04-03 19:59:37	22	523	3	\N
+28	4	14	21	3	19	\N	\N	\N	2023-04-03 19:59:37	2023-04-03 19:59:37	22	523	3	\N
+29	5	18	\N	3	2	\N	\N	\N	2023-04-03 20:01:05	2023-04-03 20:01:06	23	\N	\N	\N
+30	5	19	\N	3	2	\N	\N	\N	2023-04-03 20:01:07	2023-04-03 20:01:07	23	\N	\N	\N
+31	5	20	\N	3	2	\N	\N	\N	2023-04-03 20:01:08	2023-04-03 20:01:08	23	\N	\N	\N
+32	5	21	\N	3	2	\N	\N	\N	2023-04-03 20:01:09	2023-04-03 20:01:10	23	\N	\N	\N
+33	5	22	\N	3	2	\N	\N	\N	2023-04-03 20:01:11	2023-04-03 20:01:11	23	\N	\N	\N
+34	5	23	\N	3	2	\N	\N	\N	2023-04-03 20:01:12	2023-04-03 20:01:12	23	\N	\N	\N
+35	5	23	34	3	19	\N	\N	\N	2023-04-03 20:02:19	2023-04-03 20:02:19	23	523	5	\N
+36	5	22	33	3	19	\N	\N	\N	2023-04-03 20:02:19	2023-04-03 20:02:19	23	523	5	\N
+37	5	21	32	3	19	\N	\N	\N	2023-04-03 20:02:20	2023-04-03 20:02:20	23	523	5	\N
+38	5	20	31	3	19	\N	\N	\N	2023-04-03 20:02:20	2023-04-03 20:02:20	23	523	5	\N
+39	5	19	30	3	19	\N	\N	\N	2023-04-03 20:02:20	2023-04-03 20:02:20	23	523	5	\N
+40	5	18	29	3	19	\N	\N	\N	2023-04-03 20:02:20	2023-04-03 20:02:20	23	523	5	\N
+44	6	26	\N	3	2	\N	\N	\N	2023-04-03 20:04:47	2023-04-03 20:04:47	24	\N	\N	\N
+41	5	23	34	3	10	0	openAccess	1	2023-04-03 20:03:51	2023-04-03 20:04:02	23	521	2	\N
+42	6	24	\N	3	2	\N	\N	\N	2023-04-03 20:04:44	2023-04-03 20:04:45	24	\N	\N	\N
+43	6	25	\N	3	2	\N	\N	\N	2023-04-03 20:04:45	2023-04-03 20:04:46	24	\N	\N	\N
+45	6	27	\N	3	2	\N	\N	\N	2023-04-03 20:04:48	2023-04-03 20:04:48	24	\N	\N	\N
+46	6	27	45	3	19	\N	\N	\N	2023-04-03 20:05:35	2023-04-03 20:05:35	24	523	7	\N
+47	6	26	44	3	19	\N	\N	\N	2023-04-03 20:05:35	2023-04-03 20:05:35	24	523	7	\N
+48	6	25	43	3	19	\N	\N	\N	2023-04-03 20:05:35	2023-04-03 20:05:35	24	523	7	\N
+49	6	24	42	3	19	\N	\N	\N	2023-04-03 20:05:36	2023-04-03 20:05:36	24	523	7	\N
+50	7	28	\N	3	2	\N	\N	\N	2023-04-03 20:06:40	2023-04-03 20:06:40	25	\N	\N	\N
+51	7	29	\N	3	2	\N	\N	\N	2023-04-03 20:06:41	2023-04-03 20:06:41	25	\N	\N	\N
+52	7	30	\N	3	2	\N	\N	\N	2023-04-03 20:06:42	2023-04-03 20:06:43	25	\N	\N	\N
+53	7	31	\N	3	2	\N	\N	\N	2023-04-03 20:06:43	2023-04-03 20:06:44	25	\N	\N	\N
+54	7	32	\N	3	2	\N	\N	\N	2023-04-03 20:06:45	2023-04-03 20:06:45	25	\N	\N	\N
+55	7	32	54	3	4	\N	\N	\N	2023-04-03 20:07:45	2023-04-03 20:07:45	25	523	8	\N
+56	7	31	53	3	4	\N	\N	\N	2023-04-03 20:07:45	2023-04-03 20:07:45	25	523	8	\N
+57	7	30	52	3	4	\N	\N	\N	2023-04-03 20:07:45	2023-04-03 20:07:45	25	523	8	\N
+58	7	29	51	3	4	\N	\N	\N	2023-04-03 20:07:45	2023-04-03 20:07:45	25	523	8	\N
+59	7	28	50	3	4	\N	\N	\N	2023-04-03 20:07:45	2023-04-03 20:07:45	25	523	8	\N
+60	8	33	\N	3	2	\N	\N	\N	2023-04-03 20:08:31	2023-04-03 20:08:31	3	\N	\N	\N
+61	9	34	\N	3	2	\N	\N	\N	2023-04-03 20:08:46	2023-04-03 20:08:46	26	\N	\N	\N
+62	9	35	\N	3	2	\N	\N	\N	2023-04-03 20:08:47	2023-04-03 20:08:47	26	\N	\N	\N
+63	9	36	\N	3	2	\N	\N	\N	2023-04-03 20:08:48	2023-04-03 20:08:49	26	\N	\N	\N
+64	9	37	\N	3	2	\N	\N	\N	2023-04-03 20:08:50	2023-04-03 20:08:50	26	\N	\N	\N
+65	9	38	\N	3	2	\N	\N	\N	2023-04-03 20:08:51	2023-04-03 20:08:51	26	\N	\N	\N
+66	9	37	64	3	19	\N	\N	\N	2023-04-03 20:09:50	2023-04-03 20:09:50	26	523	9	\N
+67	9	38	65	3	19	\N	\N	\N	2023-04-03 20:09:51	2023-04-03 20:09:51	26	523	9	\N
+68	9	36	63	3	19	\N	\N	\N	2023-04-03 20:09:51	2023-04-03 20:09:51	26	523	9	\N
+69	9	35	62	3	19	\N	\N	\N	2023-04-03 20:09:51	2023-04-03 20:09:51	26	523	9	\N
+70	9	34	61	3	19	\N	\N	\N	2023-04-03 20:09:51	2023-04-03 20:09:51	26	523	9	\N
+71	10	39	\N	3	2	\N	\N	\N	2023-04-03 20:10:11	2023-04-03 20:10:11	27	\N	\N	\N
+72	10	40	\N	3	2	\N	\N	\N	2023-04-03 20:10:12	2023-04-03 20:10:13	27	\N	\N	\N
+73	10	41	\N	3	2	\N	\N	\N	2023-04-03 20:10:13	2023-04-03 20:10:14	27	\N	\N	\N
+125	16	69	124	3	4	\N	\N	\N	2023-04-03 20:24:16	2023-04-03 20:24:16	33	523	18	\N
+74	10	42	\N	3	2	\N	\N	\N	2023-04-03 20:10:15	2023-04-03 20:10:15	27	\N	\N	\N
+126	16	66	121	3	4	\N	\N	\N	2023-04-03 20:24:17	2023-04-03 20:24:17	33	523	18	\N
+75	10	43	\N	3	2	\N	\N	\N	2023-04-03 20:10:16	2023-04-03 20:10:16	27	\N	\N	\N
+127	16	65	120	3	4	\N	\N	\N	2023-04-03 20:24:17	2023-04-03 20:24:17	33	523	18	\N
+76	10	44	\N	3	2	\N	\N	\N	2023-04-03 20:10:17	2023-04-03 20:10:18	27	\N	\N	\N
+128	16	67	122	3	4	\N	\N	\N	2023-04-03 20:24:17	2023-04-03 20:24:17	33	523	18	\N
+77	10	45	\N	3	2	\N	\N	\N	2023-04-03 20:10:19	2023-04-03 20:10:19	27	\N	\N	\N
+129	16	68	123	3	4	\N	\N	\N	2023-04-03 20:24:17	2023-04-03 20:24:17	33	523	18	\N
+78	10	46	\N	3	2	\N	\N	\N	2023-04-03 20:10:20	2023-04-03 20:10:20	27	\N	\N	\N
+130	17	70	\N	3	2	\N	\N	\N	2023-04-03 20:25:15	2023-04-03 20:25:15	34	\N	\N	\N
+79	10	47	\N	3	2	\N	\N	\N	2023-04-03 20:10:21	2023-04-03 20:10:22	27	\N	\N	\N
+131	17	71	\N	3	2	\N	\N	\N	2023-04-03 20:25:16	2023-04-03 20:25:17	34	\N	\N	\N
+80	11	48	\N	3	2	\N	\N	\N	2023-04-03 20:12:00	2023-04-03 20:12:00	28	\N	\N	\N
+132	17	72	\N	3	2	\N	\N	\N	2023-04-03 20:25:18	2023-04-03 20:25:18	34	\N	\N	\N
+81	11	49	\N	3	2	\N	\N	\N	2023-04-03 20:12:01	2023-04-03 20:12:02	28	\N	\N	\N
+82	11	49	81	3	19	\N	\N	\N	2023-04-03 20:12:31	2023-04-03 20:12:31	28	523	10	\N
+83	11	48	80	3	19	\N	\N	\N	2023-04-03 20:12:31	2023-04-03 20:12:31	28	523	10	\N
+133	17	73	\N	3	2	\N	\N	\N	2023-04-03 20:25:19	2023-04-03 20:25:19	34	\N	\N	\N
+84	12	50	\N	3	2	\N	\N	\N	2023-04-03 20:14:13	2023-04-03 20:14:14	29	\N	\N	\N
+134	17	74	\N	3	2	\N	\N	\N	2023-04-03 20:25:20	2023-04-03 20:25:21	34	\N	\N	\N
+85	12	51	\N	3	2	\N	\N	\N	2023-04-03 20:14:15	2023-04-03 20:14:15	29	\N	\N	\N
+135	17	75	\N	3	2	\N	\N	\N	2023-04-03 20:25:21	2023-04-03 20:25:22	34	\N	\N	\N
+86	12	52	\N	3	2	\N	\N	\N	2023-04-03 20:14:16	2023-04-03 20:14:16	29	\N	\N	\N
+87	12	52	86	3	19	\N	\N	\N	2023-04-03 20:14:59	2023-04-03 20:14:59	29	523	12	\N
+88	12	51	85	3	19	\N	\N	\N	2023-04-03 20:14:59	2023-04-03 20:14:59	29	523	12	\N
+89	12	50	84	3	19	\N	\N	\N	2023-04-03 20:14:59	2023-04-03 20:14:59	29	523	12	\N
+136	17	75	135	3	19	\N	\N	\N	2023-04-03 20:26:37	2023-04-03 20:26:37	34	523	19	\N
+90	13	53	\N	3	2	\N	\N	\N	2023-04-03 20:15:55	2023-04-03 20:15:56	30	\N	\N	\N
+137	17	74	134	3	19	\N	\N	\N	2023-04-03 20:26:37	2023-04-03 20:26:37	34	523	19	\N
+91	13	54	\N	3	2	\N	\N	\N	2023-04-03 20:15:57	2023-04-03 20:15:57	30	\N	\N	\N
+138	17	72	132	3	19	\N	\N	\N	2023-04-03 20:26:37	2023-04-03 20:26:37	34	523	19	\N
+92	13	55	\N	3	2	\N	\N	\N	2023-04-03 20:15:58	2023-04-03 20:15:58	30	\N	\N	\N
+93	13	55	92	3	19	\N	\N	\N	2023-04-03 20:16:39	2023-04-03 20:16:39	30	523	13	\N
+94	13	54	91	3	19	\N	\N	\N	2023-04-03 20:16:39	2023-04-03 20:16:39	30	523	13	\N
+95	13	53	90	3	19	\N	\N	\N	2023-04-03 20:16:39	2023-04-03 20:16:39	30	523	13	\N
+139	17	70	130	3	19	\N	\N	\N	2023-04-03 20:26:37	2023-04-03 20:26:37	34	523	19	\N
+96	14	56	\N	3	2	\N	\N	\N	2023-04-03 20:18:36	2023-04-03 20:18:37	31	\N	\N	\N
+140	17	71	131	3	19	\N	\N	\N	2023-04-03 20:26:37	2023-04-03 20:26:37	34	523	19	\N
+97	14	57	\N	3	2	\N	\N	\N	2023-04-03 20:18:38	2023-04-03 20:18:38	31	\N	\N	\N
+141	17	73	133	3	19	\N	\N	\N	2023-04-03 20:26:38	2023-04-03 20:26:38	34	523	19	\N
+98	14	58	\N	3	2	\N	\N	\N	2023-04-03 20:18:39	2023-04-03 20:18:39	31	\N	\N	\N
+99	14	59	\N	3	2	\N	\N	\N	2023-04-03 20:18:40	2023-04-03 20:18:41	31	\N	\N	\N
+100	14	60	\N	13	2	\N	\N	\N	2023-04-03 20:18:42	2023-04-03 20:18:42	31	\N	\N	\N
+101	14	61	\N	9	2	\N	\N	\N	2023-04-03 20:18:43	2023-04-03 20:18:44	31	\N	\N	\N
+102	14	61	101	9	19	\N	\N	\N	2023-04-03 20:19:36	2023-04-03 20:19:36	31	523	15	\N
+103	14	60	100	13	19	\N	\N	\N	2023-04-03 20:19:36	2023-04-03 20:19:36	31	523	15	\N
+104	14	58	98	3	19	\N	\N	\N	2023-04-03 20:19:36	2023-04-03 20:19:36	31	523	15	\N
+105	14	57	97	3	19	\N	\N	\N	2023-04-03 20:19:37	2023-04-03 20:19:37	31	523	15	\N
+106	14	56	96	3	19	\N	\N	\N	2023-04-03 20:19:37	2023-04-03 20:19:37	31	523	15	\N
+107	14	59	99	3	19	\N	\N	\N	2023-04-03 20:19:37	2023-04-03 20:19:37	31	523	15	\N
+110	14	59	99	3	10	0	openAccess	1	2023-04-03 20:21:10	2023-04-03 20:21:40	31	521	3	\N
+113	14	56	96	3	10	0	openAccess	1	2023-04-03 20:21:10	2023-04-03 20:21:21	31	521	3	\N
+112	14	57	97	3	10	0	openAccess	1	2023-04-03 20:21:10	2023-04-03 20:21:28	31	521	3	\N
+109	14	60	100	13	10	0	openAccess	1	2023-04-03 20:21:10	2023-04-03 20:21:47	31	521	3	\N
+111	14	58	98	3	10	0	openAccess	1	2023-04-03 20:21:10	2023-04-03 20:21:34	31	521	3	\N
+108	14	61	101	9	10	0	openAccess	1	2023-04-03 20:21:10	2023-04-03 20:21:54	31	521	3	\N
+114	15	62	\N	3	2	\N	\N	\N	2023-04-03 20:22:14	2023-04-03 20:22:14	32	\N	\N	\N
+115	15	63	\N	3	2	\N	\N	\N	2023-04-03 20:22:15	2023-04-03 20:22:16	32	\N	\N	\N
+116	15	64	\N	3	2	\N	\N	\N	2023-04-03 20:22:16	2023-04-03 20:22:17	32	\N	\N	\N
+117	15	64	116	3	4	\N	\N	\N	2023-04-03 20:22:55	2023-04-03 20:22:55	32	523	17	\N
+118	15	63	115	3	4	\N	\N	\N	2023-04-03 20:22:55	2023-04-03 20:22:55	32	523	17	\N
+119	15	62	114	3	4	\N	\N	\N	2023-04-03 20:22:56	2023-04-03 20:22:56	32	523	17	\N
+120	16	65	\N	3	2	\N	\N	\N	2023-04-03 20:23:14	2023-04-03 20:23:14	33	\N	\N	\N
+121	16	66	\N	3	2	\N	\N	\N	2023-04-03 20:23:15	2023-04-03 20:23:16	33	\N	\N	\N
+122	16	67	\N	3	2	\N	\N	\N	2023-04-03 20:23:16	2023-04-03 20:23:17	33	\N	\N	\N
+123	16	68	\N	3	2	\N	\N	\N	2023-04-03 20:23:18	2023-04-03 20:23:18	33	\N	\N	\N
+124	16	69	\N	3	2	\N	\N	\N	2023-04-03 20:23:19	2023-04-03 20:23:20	33	\N	\N	\N
 \.
-
-
---
--- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 141, true);
 
 
 --
@@ -16836,20 +16077,6 @@ COPY public.submission_search_keyword_list (keyword_id, keyword_text) FROM stdin
 109	world
 110	psychology
 \.
-
-
---
--- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq', 110, true);
-
-
---
--- Name: submission_search_object_keyw_submission_search_object_keyw_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_search_object_keyw_submission_search_object_keyw_seq', 277, true);
 
 
 --
@@ -17032,13 +16259,6 @@ COPY public.submission_search_objects (object_id, submission_id, type, assoc_id)
 
 
 --
--- Name: submission_search_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_search_objects_object_id_seq', 24, true);
-
-
---
 -- Data for Name: submission_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -17047,42 +16267,28 @@ COPY public.submission_settings (submission_setting_id, submission_id, locale, s
 
 
 --
--- Name: submission_settings_submission_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submission_settings_submission_setting_id_seq', 1, false);
-
-
---
 -- Data for Name: submissions; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-3	1	3	2023-03-31 23:49:59	2023-03-31 23:49:59	2023-03-31 23:49:59	1	en	1		0
-10	1	10	2023-04-01 00:02:07	2023-04-01 00:02:07	2023-04-01 00:02:07	1	en	1		0
-16	1	16	2023-04-01 00:14:14	2023-04-01 00:13:14	2023-04-01 00:13:14	3	en	1		0
-7	1	7	2023-03-31 23:58:55	2023-03-31 23:58:11	2023-03-31 23:58:11	4	en	1		0
-1	1	1	2023-03-31 23:45:55	2023-03-31 23:45:17	2023-03-31 23:45:17	4	en	1		0
-5	1	5	2023-03-31 23:55:29	2023-03-31 23:53:13	2023-03-31 23:53:13	5	en	3		0
-8	1	8	2023-03-31 23:59:10	2023-03-31 23:59:10	2023-03-31 23:59:10	1	en	1		0
-13	1	13	2023-04-01 00:08:08	2023-04-01 00:06:22	2023-04-01 00:06:22	4	en	1		0
-14	1	14	2023-04-01 00:11:25	2023-04-01 00:09:02	2023-04-01 00:09:02	5	en	3		0
-4	1	4	2023-03-31 23:52:11	2023-03-31 23:50:46	2023-03-31 23:50:46	5	en	1		0
-11	1	11	2023-04-01 00:04:05	2023-04-01 00:02:35	2023-04-01 00:02:35	4	en	1		0
-2	1	2	2023-03-31 23:49:03	2023-03-31 23:48:12	2023-03-31 23:48:12	3	en	1		1
-6	1	6	2023-03-31 23:56:59	2023-03-31 23:56:13	2023-03-31 23:56:13	2	en	1		0
-9	1	9	2023-04-01 00:00:23	2023-04-01 00:00:05	2023-04-01 00:00:05	2	en	1		0
-15	1	15	2023-04-01 00:12:18	2023-04-01 00:12:01	2023-04-01 00:12:01	3	en	1		0
-17	1	17	2023-04-01 00:16:05	2023-04-01 00:15:24	2023-04-01 00:15:24	2	en	1		0
-12	1	12	2023-04-01 00:05:44	2023-04-01 00:04:49	2023-04-01 00:04:49	2	en	1		0
+6	1	6	2023-04-03 20:06:09	2023-04-03 20:05:18	2023-04-03 20:05:18	2	en	1		0
+11	1	11	2023-04-03 20:13:54	2023-04-03 20:12:15	2023-04-03 20:12:15	4	en	1		0
+3	1	3	2023-04-03 19:58:30	2023-04-03 19:58:30	2023-04-03 19:58:30	1	en	1		0
+9	1	9	2023-04-03 20:09:51	2023-04-03 20:09:31	2023-04-03 20:09:31	2	en	1		0
+1	1	1	2023-04-03 19:54:05	2023-04-03 19:53:23	2023-04-03 19:53:23	4	en	1		0
+15	1	15	2023-04-03 20:22:56	2023-04-03 20:22:37	2023-04-03 20:22:37	3	en	1		0
+17	1	17	2023-04-03 20:26:59	2023-04-03 20:26:14	2023-04-03 20:26:14	2	en	1		0
+7	1	7	2023-04-03 20:08:14	2023-04-03 20:07:26	2023-04-03 20:07:26	4	en	1		0
+12	1	12	2023-04-03 20:15:41	2023-04-03 20:14:41	2023-04-03 20:14:41	2	en	1		0
+5	1	5	2023-04-03 20:04:29	2023-04-03 20:02:00	2023-04-03 20:02:00	5	en	3		0
+10	1	10	2023-04-03 20:11:44	2023-04-03 20:11:44	2023-04-03 20:11:44	1	en	1		0
+4	1	4	2023-04-03 20:00:52	2023-04-03 19:59:20	2023-04-03 19:59:20	5	en	1		0
+8	1	8	2023-04-03 20:08:32	2023-04-03 20:08:32	2023-04-03 20:08:32	1	en	1		0
+2	1	2	2023-04-03 19:57:29	2023-04-03 19:56:33	2023-04-03 19:56:33	3	en	1		1
+16	1	16	2023-04-03 20:25:01	2023-04-03 20:23:56	2023-04-03 20:23:56	3	en	1		0
+13	1	13	2023-04-03 20:18:16	2023-04-03 20:16:21	2023-04-03 20:16:21	4	en	1		0
+14	1	14	2023-04-03 20:21:57	2023-04-03 20:19:16	2023-04-03 20:19:16	5	en	3		0
 \.
-
-
---
--- Name: submissions_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.submissions_submission_id_seq', 17, true);
 
 
 --
@@ -17094,32 +16300,11 @@ COPY public.temporary_files (file_id, user_id, file_name, file_type, file_size, 
 
 
 --
--- Name: temporary_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.temporary_files_file_id_seq', 1, false);
-
-
---
--- Name: usage_stats_institution_tempo_usage_stats_temp_institution__seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.usage_stats_institution_tempo_usage_stats_temp_institution__seq', 1, false);
-
-
---
 -- Data for Name: usage_stats_institution_temporary_records; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.usage_stats_institution_temporary_records (usage_stats_temp_institution_id, load_id, line_number, institution_id) FROM stdin;
 \.
-
-
---
--- Name: usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq', 1, false);
 
 
 --
@@ -17131,25 +16316,11 @@ COPY public.usage_stats_total_temporary_records (usage_stats_temp_total_id, date
 
 
 --
--- Name: usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq', 1, false);
-
-
---
 -- Data for Name: usage_stats_unique_item_investigations_temporary_records; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.usage_stats_unique_item_investigations_temporary_records (usage_stats_temp_unique_item_id, date, ip, user_agent, line_number, context_id, submission_id, chapter_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
 \.
-
-
---
--- Name: usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq', 1, false);
 
 
 --
@@ -17161,25 +16332,11 @@ COPY public.usage_stats_unique_item_requests_temporary_records (usage_stats_temp
 
 
 --
--- Name: usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq', 1, false);
-
-
---
 -- Data for Name: usage_stats_unique_title_investigations_temporary_records; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.usage_stats_unique_title_investigations_temporary_records (usage_stats_temp_unique_investigations_id, date, ip, user_agent, line_number, context_id, submission_id, chapter_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
 \.
-
-
---
--- Name: usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq', 1, false);
 
 
 --
@@ -17197,102 +16354,102 @@ COPY public.usage_stats_unique_title_requests_temporary_records (usage_stats_tem
 COPY public.user_group_settings (user_group_setting_id, user_group_id, locale, setting_name, setting_value) FROM stdin;
 1	1	en	name	Site Admin
 2	1	fr_CA	name	Administrateur-trice du site
-31	6	fr_CA	abbrev	RÉV
-29	6	en	abbrev	CE
-37	7	fr_CA	abbrev	Design
-35	7	en	abbrev	Design
-77	14	en	abbrev	VE
+24	5	en	name	Series editor
+26	5	fr_CA	name	Rédacteur/Rédactrice en chef de la série
+38	7	fr_CA	name	Designer
+36	7	en	name	Designer
+98	17	fr_CA	name	Évaluateur-trice interne
 32	6	fr_CA	name	Réviseur-e
 30	6	en	name	Copyeditor
 27	6		nameLocaleKey	default.groups.name.copyeditor
-73	13	fr_CA	abbrev	AU
-80	14	fr_CA	name	Rédacteur/Rédactrice en chef du volume
-78	14	en	name	Volume editor
-71	13	en	abbrev	AU
-97	17	fr_CA	abbrev	EvalInt
-99	18		nameLocaleKey	default.groups.name.externalReviewer
-55	10	fr_CA	abbrev	RespMP
-85	15	fr_CA	abbrev	AC
-61	11	fr_CA	abbrev	CVM
-12	3	en	name	Press editor
-9	3		nameLocaleKey	default.groups.name.editor
-89	16	en	abbrev	Trans
-92	16	fr_CA	name	Traducteur-trice
-17	4	en	abbrev	ProdE
-25	5	fr_CA	abbrev	RS
-90	16	en	name	Translator
-87	16		nameLocaleKey	default.groups.name.translator
-23	5	en	abbrev	AcqE
-26	5	fr_CA	name	Rédacteur/Rédactrice en chef de la série
-24	5	en	name	Series editor
-95	17	en	abbrev	IR
-98	17	fr_CA	name	Évaluateur-trice interne
-96	17	en	name	Internal Reviewer
-94	17		abbrevLocaleKey	default.groups.abbrev.internalReviewer
-75	14		nameLocaleKey	default.groups.name.volumeEditor
-49	9	fr_CA	abbrev	Indx
-47	9	en	abbrev	IND
-50	9	fr_CA	name	Indexeur-e
-48	9	en	name	Indexer
-83	15	en	abbrev	CA
-59	11	en	abbrev	MS
-60	11	en	name	Marketing and sales coordinator
-86	15	fr_CA	name	Auteur du chapitre
-84	15	en	name	Chapter Author
-58	11		abbrevLocaleKey	default.groups.abbrev.marketing
-21	5		nameLocaleKey	default.groups.name.sectionEditor
 74	13	fr_CA	name	Auteur-e
+93	17		nameLocaleKey	default.groups.name.internalReviewer
+80	14	fr_CA	name	Rédacteur/Rédactrice en chef du volume
+72	13	en	name	Author
+33	7		nameLocaleKey	default.groups.name.designer
+50	9	fr_CA	name	Indexeur-e
+54	10	en	name	Layout Editor
+51	10		nameLocaleKey	default.groups.name.layoutEditor
+86	15	fr_CA	name	Auteur du chapitre
+13	3	fr_CA	abbrev	RP
+14	3	fr_CA	name	Rédacteur/Rédactrice en chef de la presse
+9	3		nameLocaleKey	default.groups.name.editor
+10	3		abbrevLocaleKey	default.groups.abbrev.editor
+92	16	fr_CA	name	Traducteur-trice
+87	16		nameLocaleKey	default.groups.name.translator
+66	12	en	name	Proofreader
+68	12	fr_CA	name	Correcteur-trice d'épreuves
+89	16	en	abbrev	Trans
+91	16	fr_CA	abbrev	Trad
+63	12		nameLocaleKey	default.groups.name.proofreader
+21	5		nameLocaleKey	default.groups.name.sectionEditor
+22	5		abbrevLocaleKey	default.groups.abbrev.sectionEditor
+34	7		abbrevLocaleKey	default.groups.abbrev.designer
+95	17	en	abbrev	IR
+97	17	fr_CA	abbrev	EvalInt
 76	14		abbrevLocaleKey	default.groups.abbrev.volumeEditor
 45	9		nameLocaleKey	default.groups.name.indexer
 46	9		abbrevLocaleKey	default.groups.abbrev.indexer
-53	10	en	abbrev	LE
-88	16		abbrevLocaleKey	default.groups.abbrev.translator
-56	10	fr_CA	name	Responsable de la mise en page
-51	10		nameLocaleKey	default.groups.name.layoutEditor
-4	2		abbrevLocaleKey	default.groups.abbrev.manager
-68	12	fr_CA	name	Correcteur-trice d'épreuves
-66	12	en	name	Proofreader
-72	13	en	name	Author
-79	14	fr_CA	abbrev	RV
-22	5		abbrevLocaleKey	default.groups.abbrev.sectionEditor
-38	7	fr_CA	name	Designer
-36	7	en	name	Designer
+99	18		nameLocaleKey	default.groups.name.externalReviewer
 52	10		abbrevLocaleKey	default.groups.abbrev.layoutEditor
-28	6		abbrevLocaleKey	default.groups.abbrev.copyeditor
-33	7		nameLocaleKey	default.groups.name.designer
-81	15		nameLocaleKey	default.groups.name.chapterAuthor
-13	3	fr_CA	abbrev	RP
-69	13		nameLocaleKey	default.groups.name.author
-70	13		abbrevLocaleKey	default.groups.abbrev.author
-63	12		nameLocaleKey	default.groups.name.proofreader
-64	12		abbrevLocaleKey	default.groups.abbrev.proofreader
-34	7		abbrevLocaleKey	default.groups.abbrev.designer
-82	15		abbrevLocaleKey	default.groups.abbrev.chapterAuthor
-11	3	en	abbrev	PE
-14	3	fr_CA	name	Rédacteur/Rédactrice en chef de la presse
-5	2	en	abbrev	PM
-10	3		abbrevLocaleKey	default.groups.abbrev.editor
-91	16	fr_CA	abbrev	Trad
-6	2	en	name	Press manager
-3	2		nameLocaleKey	default.groups.name.manager
-16	4		abbrevLocaleKey	default.groups.abbrev.productionEditor
-67	12	fr_CA	abbrev	CorEp
-65	12	en	abbrev	PR
-62	11	fr_CA	name	Coordonnateur-trice des ventes et du marketing
 57	11		nameLocaleKey	default.groups.name.marketing
+85	15	fr_CA	abbrev	AC
+81	15		nameLocaleKey	default.groups.name.chapterAuthor
+82	15		abbrevLocaleKey	default.groups.abbrev.chapterAuthor
+61	11	fr_CA	abbrev	CVM
+31	6	fr_CA	abbrev	RÉV
+69	13		nameLocaleKey	default.groups.name.author
+79	14	fr_CA	abbrev	RV
+78	14	en	name	Volume editor
+47	9	en	abbrev	IND
+49	9	fr_CA	abbrev	Indx
+48	9	en	name	Indexer
+53	10	en	abbrev	LE
+3	2		nameLocaleKey	default.groups.name.manager
+88	16		abbrevLocaleKey	default.groups.abbrev.translator
+55	10	fr_CA	abbrev	RespMP
+83	15	en	abbrev	CA
+17	4	en	abbrev	ProdE
+59	11	en	abbrev	MS
+64	12		abbrevLocaleKey	default.groups.abbrev.proofreader
+70	13		abbrevLocaleKey	default.groups.abbrev.author
+4	2		abbrevLocaleKey	default.groups.abbrev.manager
+29	6	en	abbrev	CE
+37	7	fr_CA	abbrev	Design
+35	7	en	abbrev	Design
+84	15	en	name	Chapter Author
+28	6		abbrevLocaleKey	default.groups.abbrev.copyeditor
+75	14		nameLocaleKey	default.groups.name.volumeEditor
+60	11	en	name	Marketing and sales coordinator
+73	13	fr_CA	abbrev	AU
+71	13	en	abbrev	AU
+23	5	en	abbrev	AcqE
+25	5	fr_CA	abbrev	RS
+77	14	en	abbrev	VE
+7	2	fr_CA	abbrev	MP
+12	3	en	name	Press editor
+6	2	en	name	Press manager
+90	16	en	name	Translator
+19	4	fr_CA	abbrev	DirProd
+96	17	en	name	Internal Reviewer
+16	4		abbrevLocaleKey	default.groups.abbrev.productionEditor
+65	12	en	abbrev	PR
+67	12	fr_CA	abbrev	CorEp
+62	11	fr_CA	name	Coordonnateur-trice des ventes et du marketing
+58	11		abbrevLocaleKey	default.groups.abbrev.marketing
 18	4	en	name	Production editor
 15	4		nameLocaleKey	default.groups.name.productionEditor
-19	4	fr_CA	abbrev	DirProd
+11	3	en	abbrev	PE
 20	4	fr_CA	name	Directeur-trice de production
-93	17		nameLocaleKey	default.groups.name.internalReviewer
+94	17		abbrevLocaleKey	default.groups.abbrev.internalReviewer
 42	8	en	name	Funding coordinator
 39	8		nameLocaleKey	default.groups.name.funding
 40	8		abbrevLocaleKey	default.groups.abbrev.funding
-41	8	en	abbrev	FC
-44	8	fr_CA	name	Coordonnateur-trice du financement
 43	8	fr_CA	abbrev	CF
-54	10	en	name	Layout Editor
-7	2	fr_CA	abbrev	MP
+44	8	fr_CA	name	Coordonnateur-trice du financement
+41	8	en	abbrev	FC
+56	10	fr_CA	name	Responsable de la mise en page
+5	2	en	abbrev	PM
 8	2	fr_CA	name	Gestionnaire de la presse
 107	19	en	abbrev	Read
 109	19	fr_CA	abbrev	Lect
@@ -17300,20 +16457,13 @@ COPY public.user_group_settings (user_group_setting_id, user_group_id, locale, s
 110	19	fr_CA	name	Lecteur-trice
 105	19		nameLocaleKey	default.groups.name.reader
 106	19		abbrevLocaleKey	default.groups.abbrev.reader
-103	18	fr_CA	abbrev	EvEx
 101	18	en	abbrev	ER
-104	18	fr_CA	name	Évaluateur-trice externe
+103	18	fr_CA	abbrev	EvEx
 102	18	en	name	External Reviewer
+104	18	fr_CA	name	Évaluateur-trice externe
 100	18		abbrevLocaleKey	default.groups.abbrev.externalReviewer
 111	14		recommendOnly	0
 \.
-
-
---
--- Name: user_group_settings_user_group_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.user_group_settings_user_group_setting_id_seq', 111, true);
 
 
 --
@@ -17365,13 +16515,6 @@ COPY public.user_group_stage (user_group_stage_id, context_id, user_group_id, st
 
 
 --
--- Name: user_group_stage_user_group_stage_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.user_group_stage_user_group_stage_id_seq', 45, true);
-
-
---
 -- Data for Name: user_groups; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -17399,25 +16542,11 @@ COPY public.user_groups (user_group_id, context_id, role_id, is_default, show_ti
 
 
 --
--- Name: user_groups_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.user_groups_user_group_id_seq', 19, true);
-
-
---
 -- Data for Name: user_interests; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.user_interests (user_interest_id, user_id, controlled_vocab_entry_id) FROM stdin;
 \.
-
-
---
--- Name: user_interests_user_interest_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.user_interests_user_interest_id_seq', 1, false);
 
 
 --
@@ -17700,13 +16829,6 @@ COPY public.user_settings (user_setting_id, user_id, locale, setting_name, setti
 
 
 --
--- Name: user_settings_user_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.user_settings_user_setting_id_seq', 271, true);
-
-
---
 -- Data for Name: user_user_groups; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
@@ -17766,52 +16888,937 @@ COPY public.user_user_groups (user_user_group_id, user_group_id, user_id) FROM s
 
 
 --
--- Name: user_user_groups_user_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
---
-
-SELECT pg_catalog.setval('public.user_user_groups_user_user_group_id_seq', 51, true);
-
-
---
 -- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: omp-ci
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-24	dbernnard	$2y$10$beuJ4lEh2TEA2/C3vuDZH.XBJ4yEMLKazvRMpl9u45VhNwIrgOzPS	dbernnard@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2023-03-31 23:55:35	\N	2023-03-31 23:55:35	\N	\N	\N	0	\N	1
-29	lelder	$2y$10$YujO.rrT.BdgKLqQUOaRiuqWd/n7h1cl9KUI3RZIiz.MaYpXYa3nK	lelder@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-01 00:04:16	\N	2023-04-01 00:04:16	\N	\N	\N	0	\N	1
-6	minoue	$2y$10$fbPGu6cPxIbpow70GX8cZuN7Sj7iVGIuboWtBDlEpMR1K43eMcE8O	minoue@mailinator.com				\N	JP	[]	\N	\N	2023-03-31 23:41:45	\N	2023-03-31 23:56:47	0	\N	\N	0	\N	1
-4	dbuskins	$2y$10$RhTG.Is6xZ2U0nndePNenu7LGdAnS1RJjivXpC1ZbJBumGIyx.IBq	dbuskins@mailinator.com				\N	US	[]	\N	\N	2023-03-31 23:41:32	\N	\N	0	\N	\N	0	\N	1
-5	sberardo	$2y$10$q1xgvnfoTvVt2H8T81cTJOGts0aBAh0tU2LAtg9/nSCzVjqKuazMu	sberardo@mailinator.com				\N	CA	[]	\N	\N	2023-03-31 23:41:39	\N	\N	0	\N	\N	0	\N	1
-7	jjanssen	$2y$10$0kyMPB7XsOrzYOQx9Dl9vuW03THbObCD6K89Rp1DE3i1h3hb8ul0C	jjanssen@mailinator.com				\N	NL	[]	\N	\N	2023-03-31 23:41:53	\N	\N	0	\N	\N	0	\N	1
-9	amccrae	$2y$10$a8nFaPa3KMYhX0cyFnMfW.HcDnoCGSTnjyAaWEexZEP/K9sUoT1w6	amccrae@mailinator.com				\N	CA	[]	\N	\N	2023-03-31 23:42:08	\N	\N	0	\N	\N	0	\N	1
-11	alzacharia	$2y$10$OybnUWcoG91593LX4hPCEu5EcoH.ZnVV9j6ISCrp5q6DyzKsin0hm	alzacharia@mailinator.com				\N	GH	[]	\N	\N	2023-03-31 23:42:25	\N	\N	0	\N	\N	0	\N	1
-13	mfritz	$2y$10$6HR6rGIVrIFsGtoydGbU8.g8G5aaBVffcDv5ygnuVe5/dF6P5or7y	mfritz@mailinator.com				\N	BE	[]	\N	\N	2023-03-31 23:42:43	\N	\N	0	\N	\N	0	\N	1
-14	svogt	$2y$10$cwFz0vOac.l5p81mRsH7Peb29gtjMy5N/V36R2oxjHYPhS7aooPwu	svogt@mailinator.com				\N	CL	[]	\N	\N	2023-03-31 23:42:53	\N	\N	0	\N	\N	0	\N	1
-15	gcox	$2y$10$jBjnnvh.YqwvDjBy/wwYgeQN6k0d4b/vhMpe/N36cpD.ikfXEMa0u	gcox@mailinator.com				\N	US	[]	\N	\N	2023-03-31 23:43:04	\N	\N	0	\N	\N	0	\N	1
-16	shellier	$2y$10$/QUsoAtvgur/lrlYqW0PRuYAIHoMxt1GUBOwihiVuDfSVwa9kUDcG	shellier@mailinator.com				\N	ZA	[]	\N	\N	2023-03-31 23:43:15	\N	\N	0	\N	\N	0	\N	1
-17	cturner	$2y$10$MV8p90vTu2sGWj3CNYoHv.MPUBTnADxdYQAc9.M2iLidkWgijLNUK	cturner@mailinator.com				\N	GB	[]	\N	\N	2023-03-31 23:43:26	\N	\N	0	\N	\N	0	\N	1
-18	skumar	$2y$10$eGHVpf7ay55kIXcNNEDgWePZsGAe9k2rxk8ckpwXNNde7iGoeImK.	skumar@mailinator.com				\N	SG	[]	\N	\N	2023-03-31 23:43:38	\N	\N	0	\N	\N	0	\N	1
-25	dkennepohl	$2y$10$QjWgvcmlxDVZF/1c/F3np.0oCX6UpflBWGK5fevfhhNdgp9WzJvsm	dkennepohl@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-31 23:57:21	\N	2023-03-31 23:57:22	\N	\N	\N	0	\N	1
-8	phudson	$2y$10$wGpdR2IBD.RInOfwb4tKN.jRnTFO0KcdgHfyCI7mI2UxiHOzWF3ea	phudson@mailinator.com				\N	CA	[]	\N	\N	2023-03-31 23:42:00	\N	2023-04-01 00:05:34	0	\N	\N	0	\N	1
-2	rvaca	$2y$10$Ot/xBjEJVaMhavffMZtuB.iL7/O/yV0dAUUI07S1xXDjabPGDAG5W	rvaca@mailinator.com				\N	MX	[]	\N	\N	2023-03-31 23:41:19	\N	2023-03-31 23:43:52	0	\N	\N	0	\N	1
-1	admin	$2y$10$l6XLZiq5/1.BVTZWGbpS6uPlDT.xz1a6AjNHAN/FArY.443SlLxDG	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	[]	\N	\N	2023-03-31 23:39:36	\N	2023-03-31 23:44:24	\N	\N	\N	0	\N	1
-19	aclark	$2y$10$MlVwakuaor.vSUO4DeOou.VFtZIg/683KG1t9weWqpOgOno2wcoGC	aclark@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-31 23:44:49	\N	2023-03-31 23:44:49	\N	\N	\N	0	\N	1
-20	afinkel	$2y$10$jj2JXCogsxEHFdEdGnTpce4F4ExTzKVeyo7slSkkufIhBuEy3tyjS	afinkel@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-31 23:46:03	\N	2023-03-31 23:46:03	\N	\N	\N	0	\N	1
-26	fperini	$2y$10$BLB1KqXJB/ydE8ii/PVyX.tnpKD3sNv7FG/nd45DsVvNYnQV1Raba	fperini@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-31 23:59:16	\N	2023-03-31 23:59:16	\N	\N	\N	0	\N	1
-21	bbarnetson	$2y$10$PbWQn9krVuj4/pcEz.FlRu5uHoipoUHqbXzFioi9r5Qvy1LusReMO	bbarnetson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-31 23:49:11	\N	2023-03-31 23:49:12	\N	\N	\N	0	\N	1
-22	bbeaty	$2y$10$kmdLUHQFoK35X6IXdrVtqu0c2S677qSlvq.2mepZ3kBAFcLjDkOrq	bbeaty@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-31 23:50:06	\N	2023-03-31 23:50:06	\N	\N	\N	0	\N	1
-30	mally	$2y$10$lOTa9cdhJ/.TkwiDmAnZdOviVFZyF9O1rPvBawm5jLzOixpijyFA6	mally@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-01 00:05:51	\N	2023-04-01 00:05:51	\N	\N	\N	0	\N	1
-23	callan	$2y$10$SShC7D7d.OeqUbTakkeGC.69NnQWB2Hp6qAMi4Hvu0IMvoe/LUqAi	callan@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-03-31 23:52:17	\N	2023-03-31 23:52:17	\N	\N	\N	0	\N	1
-27	jbrower	$2y$10$blCe5fAQRVFqv4EwpJCir.GHpFhEO.UXfD7q6mAYBn3ZyFDUIbPXW	jbrower@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-01 00:00:34	\N	2023-04-01 00:00:35	\N	\N	\N	0	\N	1
-33	mpower	$2y$10$ncuRjFVLdQ1.oTgg7ZD22ekoIiWg5wn9l8JQSUK2YujlZ2MzpCV9m	mpower@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-01 00:12:28	\N	2023-04-01 00:12:28	\N	\N	\N	0	\N	1
-28	jlockehart	$2y$10$OZKJEw83pWBT9bkXjOB.9elynqfOum3lxeINB7495sHQti/oAz7s2	jlockehart@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-01 00:02:15	\N	2023-04-01 00:02:15	\N	\N	\N	0	\N	1
-10	agallego	$2y$10$JBXhmFx6HZe3y3riezE6R.kAVjv0WwgSnr6lDH7bIJYGQ1ub0Csoi	agallego@mailinator.com				\N	US	[]	\N	\N	2023-03-31 23:42:16	\N	2023-04-01 00:14:03	0	\N	\N	0	\N	1
-12	gfavio	$2y$10$huDbxYnaf.xfAggg03HyYOv77NpJB8BVuIuMn4nCPIoR0kXalWIhy	gfavio@mailinator.com				\N	ES	[]	\N	\N	2023-03-31 23:42:34	\N	2023-04-01 00:07:36	0	\N	\N	0	\N	1
-34	msmith	$2y$10$XNwAycDtwcDoOlKdfFL2MO/OhgjrGKv5O9yQx7WFCBi5O02ZvHnYu	msmith@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-01 00:14:21	\N	2023-04-01 00:14:22	\N	\N	\N	0	\N	1
-31	mdawson	$2y$10$MihoeUFcHWUhwCAUS7zbFOP5pJg3FnrA/zoGO.fupOY3lsh9BIFvG	mdawson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-01 00:08:19	\N	2023-04-01 00:08:19	\N	\N	\N	0	\N	1
-3	dbarnes	$2y$10$5BA9xpI4F0JZtFUC2Bd2MeD3KxnXZTZcHvhUy2t1RKlp0wVisZlE2	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2023-03-31 23:41:26	\N	2023-04-01 00:15:26	0	\N	\N	0	\N	1
-32	mforan	$2y$10$f9CxlbVpba0Vt4PBLYO4mu7Y8hoNmlk9eJuacpDGchfPxukRXnVNW	mforan@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-01 00:11:33	\N	2023-04-01 00:11:33	\N	\N	\N	0	\N	1
+24	dbernnard	$2y$10$knLfyjdBVUaVWFTvoTeEEeVWk/MOzKmMP3RwaUdw3r/UXAhJ2fNaa	dbernnard@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2023-04-03 20:04:36	\N	2023-04-03 20:04:36	\N	\N	\N	0	\N	1
+29	lelder	$2y$10$L6GdUPxlCQvM.fu4CgENWODKKhVr5IBLAJjQbhr4SrklV8lIbg8Vi	lelder@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 20:14:06	\N	2023-04-03 20:14:06	\N	\N	\N	0	\N	1
+6	minoue	$2y$10$yQ46QJEbYudZUTAZiCjKk.IKnvjYqkUvPKFQH4ROxT35fCB7sS7kG	minoue@mailinator.com				\N	JP	[]	\N	\N	2023-04-03 19:49:32	\N	2023-04-03 20:05:55	0	\N	\N	0	\N	1
+4	dbuskins	$2y$10$WHT/AqnmmIXcbVl5N2aNvuEX1g3Xc6oxHLTPm460ViI4tHEtFc1dW	dbuskins@mailinator.com				\N	US	[]	\N	\N	2023-04-03 19:49:17	\N	\N	0	\N	\N	0	\N	1
+5	sberardo	$2y$10$bdP7FC5hZbkw1syTDC2pTuEiOf9WG6GW1KnQUfMvYpVfS5KlY6CCm	sberardo@mailinator.com				\N	CA	[]	\N	\N	2023-04-03 19:49:24	\N	\N	0	\N	\N	0	\N	1
+7	jjanssen	$2y$10$ez33UK6gM90.XBOqikx3QOOZd6ah9NFDhoSitSDfCXb9x6SCVRVF2	jjanssen@mailinator.com				\N	NL	[]	\N	\N	2023-04-03 19:49:39	\N	\N	0	\N	\N	0	\N	1
+9	amccrae	$2y$10$q.SeyyUqE3JtW/CXxbx8DOZlZbv6B1geWDyzqWDONVNyKGbPGFZ3W	amccrae@mailinator.com				\N	CA	[]	\N	\N	2023-04-03 19:49:57	\N	\N	0	\N	\N	0	\N	1
+11	alzacharia	$2y$10$7mRpj9S/WufvwPuJriHJjeElqSbaCmndo01HXGKUDf61a0wy87L3a	alzacharia@mailinator.com				\N	GH	[]	\N	\N	2023-04-03 19:50:15	\N	\N	0	\N	\N	0	\N	1
+13	mfritz	$2y$10$F.4aZAAclZL/JyjPDD/EpOC8gJ0Xigm32f2AVw6Y/cJUAx13gBbre	mfritz@mailinator.com				\N	BE	[]	\N	\N	2023-04-03 19:50:35	\N	\N	0	\N	\N	0	\N	1
+14	svogt	$2y$10$Y0omCM3WriXld.TGKh.mJu/OwuJWUpnvlfLM0c.kuUu3FDbjHSz5u	svogt@mailinator.com				\N	CL	[]	\N	\N	2023-04-03 19:50:46	\N	\N	0	\N	\N	0	\N	1
+15	gcox	$2y$10$cYum7SQ0/OSBLh4TIf2NVuLACzH13oEJtEh5akg9..FC/Xfiyrt8C	gcox@mailinator.com				\N	US	[]	\N	\N	2023-04-03 19:50:57	\N	\N	0	\N	\N	0	\N	1
+16	shellier	$2y$10$L0Mtq.gUK/ofWLGPsv6U2OQUCNeDcwE.XAZ.mtiLfaSxTfZ92mt3K	shellier@mailinator.com				\N	ZA	[]	\N	\N	2023-04-03 19:51:09	\N	\N	0	\N	\N	0	\N	1
+17	cturner	$2y$10$Bp9z8aBSJWWbpesb1HMi.O5GcilIICkwtLIp1SQql1KBMjVSVZdDC	cturner@mailinator.com				\N	GB	[]	\N	\N	2023-04-03 19:51:21	\N	\N	0	\N	\N	0	\N	1
+18	skumar	$2y$10$fhRNFLBscxlDbmBIaUQGUOqks.Dz5SwbjJHElfVEsYfdggm8Krq7u	skumar@mailinator.com				\N	SG	[]	\N	\N	2023-04-03 19:51:35	\N	\N	0	\N	\N	0	\N	1
+25	dkennepohl	$2y$10$TaU4msE/zGmPef9ztdOa1e6lk8P62LdCRLo8pZGdTo0XXMx/sJE7G	dkennepohl@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 20:06:32	\N	2023-04-03 20:06:33	\N	\N	\N	0	\N	1
+8	phudson	$2y$10$BEdFhr2dTAA7sSUe.lFWsebAHgEZmX/XU2MNWJySjCNE2Pf87mL6m	phudson@mailinator.com				\N	CA	[]	\N	\N	2023-04-03 19:49:48	\N	2023-04-03 20:15:29	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$Mjn.gHJUmLehYbw/WHod5OtJkzdyPKiXBM94HMK3gRfGcDGq6wkdG	rvaca@mailinator.com				\N	MX	[]	\N	\N	2023-04-03 19:49:04	\N	2023-04-03 19:51:53	0	\N	\N	0	\N	1
+1	admin	$2y$10$JQBl7BfdOEEeTtNuq4zn4.jnmVl1BI/M6c16W0QjguifyjB8PJ/5q	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	[]	\N	\N	2023-04-03 19:47:01	\N	2023-04-03 19:52:26	\N	\N	\N	0	\N	1
+19	aclark	$2y$10$FLvrPYAeofyliTbn/wkBQ.yZHgaMle8ZvbgjKxmQ/d1G72pzherTi	aclark@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 19:52:53	\N	2023-04-03 19:52:53	\N	\N	\N	0	\N	1
+20	afinkel	$2y$10$ieKCjD/sweFT3kMGyYkVvu1ajLKmRzELjgDb1P4dUgMLUPl8r8BZa	afinkel@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 19:54:13	\N	2023-04-03 19:54:13	\N	\N	\N	0	\N	1
+26	fperini	$2y$10$NNaCV9Ecb1R1.WguahfISe5osOvBJbK7pAASxaQhlu5AqYq2XN1Uy	fperini@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 20:08:38	\N	2023-04-03 20:08:38	\N	\N	\N	0	\N	1
+21	bbarnetson	$2y$10$EsQ2QyW24RgDkZvPw.xQeepoZCBOKkY7t2lqcUvaI5UfkNRnPUt.e	bbarnetson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 19:57:39	\N	2023-04-03 19:57:39	\N	\N	\N	0	\N	1
+22	bbeaty	$2y$10$LJG5cvEdCnkNs0ZCNxzaRuQHQ2Vu1SzrMqZnpEtDnDeWlJt6Xw.qK	bbeaty@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 19:58:37	\N	2023-04-03 19:58:37	\N	\N	\N	0	\N	1
+30	mally	$2y$10$9PkT/chLjCPw37eB3/Hfh.hjAUC/zkAcvbzg1S/Rdyw9QBydCJFxi	mally@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 20:15:48	\N	2023-04-03 20:15:48	\N	\N	\N	0	\N	1
+23	callan	$2y$10$T4JoTMjn5TNLriUYZbLRpOHLnfKwpikQM7SlWtw8ZtNYp4IDZHwF.	callan@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 20:00:58	\N	2023-04-03 20:00:59	\N	\N	\N	0	\N	1
+27	jbrower	$2y$10$kDoHSxtzHd46CgSRR8I7yez3rCUke7IlwnikWeu0hj8iy8Dkzi5JW	jbrower@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 20:10:04	\N	2023-04-03 20:10:04	\N	\N	\N	0	\N	1
+33	mpower	$2y$10$WpOPDmpMcTyjlfAwDS0QNup/RjNGvkibjLl0/IFmvk1A8kiOYz2iK	mpower@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 20:23:07	\N	2023-04-03 20:23:07	\N	\N	\N	0	\N	1
+28	jlockehart	$2y$10$jvL2gMcyr4NXBXs.9YjwDugFSVocLwtNTqZN.eoWMutoPp0iT9bDC	jlockehart@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 20:11:52	\N	2023-04-03 20:11:52	\N	\N	\N	0	\N	1
+10	agallego	$2y$10$M95IsFcOnCV0GAzHSFsFGO9/E/LeLgFWeo.ethoBt1PFcy8T9oC6a	agallego@mailinator.com				\N	US	[]	\N	\N	2023-04-03 19:50:05	\N	2023-04-03 20:24:48	0	\N	\N	0	\N	1
+12	gfavio	$2y$10$j70nUp92TTypboeh2aQntujV.susb0VGkDGmUglGR5AcHJrczeWrK	gfavio@mailinator.com				\N	ES	[]	\N	\N	2023-04-03 19:50:25	\N	2023-04-03 20:17:40	0	\N	\N	0	\N	1
+34	msmith	$2y$10$ee8NOBKtOK3JqYsezr4tDu7yIifpm4W4i0uc/haassAl5xj.zRxJ.	msmith@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 20:25:08	\N	2023-04-03 20:25:08	\N	\N	\N	0	\N	1
+31	mdawson	$2y$10$9HwBz92w.JoAH0dPJ1JPneJfYnUzZx8mL5Gpl7E44RtilCrE1dPki	mdawson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 20:18:29	\N	2023-04-03 20:18:30	\N	\N	\N	0	\N	1
+3	dbarnes	$2y$10$az2qFGNJ4II5Tk3SH/wpTuhHgni1Kl97UT9s0xC8zlXXvEudtpwvW	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2023-04-03 19:49:11	\N	2023-04-03 20:26:17	0	\N	\N	0	\N	1
+32	mforan	$2y$10$yGRU.BVOTpnaGiEcumf7tOzvrKWqeK8WtebzzLl4CtzDvYpkEm7ze	mforan@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-03 20:22:05	\N	2023-04-03 20:22:05	\N	\N	\N	0	\N	1
 \.
+
+
+--
+-- Data for Name: versions; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.versions (version_id, major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
+1	1	0	0	0	2023-04-03 19:47:01	1	plugins.metadata	dc11		0	0
+2	1	0	0	0	2023-04-03 19:47:01	1	plugins.pubIds	urn	\\APP\\plugins\\pubIds\\urn\\URNPubIdPlugin	0	0
+3	1	0	0	0	2023-04-03 19:47:01	1	plugins.blocks	browse	\\APP\\plugins\\blocks\\browse\\BrowseBlockPlugin	1	0
+4	1	0	0	0	2023-04-03 19:47:01	1	plugins.blocks	information	InformationBlockPlugin	1	0
+5	1	0	0	0	2023-04-03 19:47:01	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+6	1	0	0	0	2023-04-03 19:47:01	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+7	1	0	0	0	2023-04-03 19:47:01	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+8	1	2	0	0	2023-04-03 19:47:01	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+9	1	2	0	0	2023-04-03 19:47:01	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+10	1	0	0	0	2023-04-03 19:47:01	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+11	1	0	0	0	2023-04-03 19:47:01	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+12	1	0	0	0	2023-04-03 19:47:01	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+13	1	3	0	0	2023-04-03 19:47:01	1	plugins.generic	acron	AcronPlugin	1	1
+14	0	1	0	0	2023-04-03 19:47:01	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+15	1	0	0	0	2023-04-03 19:47:01	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+16	1	0	0	0	2023-04-03 19:47:01	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
+17	1	0	0	0	2023-04-03 19:47:01	1	plugins.generic	usageEvent		0	1
+18	1	0	0	0	2023-04-03 19:47:01	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+19	1	0	0	0	2023-04-03 19:47:01	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+20	1	0	0	0	2023-04-03 19:47:01	1	plugins.themes	default	DefaultThemePlugin	1	0
+21	1	0	0	0	2023-04-03 19:47:01	1	plugins.importexport	users		0	0
+22	1	0	0	0	2023-04-03 19:47:01	1	plugins.importexport	native		0	0
+23	1	0	0	0	2023-04-03 19:47:01	1	plugins.importexport	onix30		0	0
+24	1	0	0	0	2023-04-03 19:47:01	1	plugins.importexport	csv		0	0
+25	1	0	0	0	2023-04-03 19:47:01	1	plugins.oaiMetadataFormats	dc		0	0
+26	1	0	0	0	2023-04-03 19:47:01	1	plugins.paymethod	paypal		0	0
+27	1	0	0	0	2023-04-03 19:47:01	1	plugins.paymethod	manual		0	0
+28	2	0	1	0	2023-04-03 19:47:01	1	plugins.reports	reviewReport		0	0
+29	1	0	0	0	2023-04-03 19:47:01	1	plugins.reports	monographReport		0	0
+30	3	4	0	0	2023-04-03 19:46:58	1	core	omp		0	1
+\.
+
+
+--
+-- Name: access_keys_access_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.access_keys_access_key_id_seq', 1, false);
+
+
+--
+-- Name: announcement_settings_announcement_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.announcement_settings_announcement_setting_id_seq', 1, false);
+
+
+--
+-- Name: announcement_type_settings_announcement_type_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.announcement_type_settings_announcement_type_setting_id_seq', 1, false);
+
+
+--
+-- Name: announcement_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.announcement_types_type_id_seq', 1, false);
+
+
+--
+-- Name: announcements_announcement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.announcements_announcement_id_seq', 1, false);
+
+
+--
+-- Name: author_settings_author_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.author_settings_author_setting_id_seq', 271, true);
+
+
+--
+-- Name: authors_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.authors_author_id_seq', 57, true);
+
+
+--
+-- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.categories_category_id_seq', 6, true);
+
+
+--
+-- Name: category_settings_category_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.category_settings_category_setting_id_seq', 30, true);
+
+
+--
+-- Name: citation_settings_citation_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.citation_settings_citation_setting_id_seq', 1, false);
+
+
+--
+-- Name: citations_citation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.citations_citation_id_seq', 1, false);
+
+
+--
+-- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.completed_payments_completed_payment_id_seq', 1, false);
+
+
+--
+-- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq', 32, true);
+
+
+--
+-- Name: controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq', 32, true);
+
+
+--
+-- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocabs_controlled_vocab_id_seq', 86, true);
+
+
+--
+-- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstone_oai_set_objects_object_id_seq', 6, true);
+
+
+--
+-- Name: data_object_tombstone_settings_tombstone_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstone_settings_tombstone_setting_id_seq', 1, false);
+
+
+--
+-- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstones_tombstone_id_seq', 3, true);
+
+
+--
+-- Name: doi_settings_doi_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.doi_settings_doi_setting_id_seq', 1, false);
+
+
+--
+-- Name: dois_doi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.dois_doi_id_seq', 1, false);
+
+
+--
+-- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true);
+
+
+--
+-- Name: email_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_log_log_id_seq', 100, true);
+
+
+--
+-- Name: email_log_users_email_log_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_log_users_email_log_user_id_seq', 91, true);
+
+
+--
+-- Name: email_templates_default_data_email_templates_default_data_i_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_default_data_email_templates_default_data_i_seq', 175, true);
+
+
+--
+-- Name: email_templates_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_email_id_seq', 8, true);
+
+
+--
+-- Name: email_templates_settings_email_template_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_settings_email_template_setting_id_seq', 1, false);
+
+
+--
+-- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.event_log_log_id_seq', 611, true);
+
+
+--
+-- Name: event_log_settings_event_log_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.event_log_settings_event_log_setting_id_seq', 3534, true);
+
+
+--
+-- Name: failed_jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.failed_jobs_id_seq', 1, false);
+
+
+--
+-- Name: features_feature_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.features_feature_id_seq', 1, false);
+
+
+--
+-- Name: files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.files_file_id_seq', 75, true);
+
+
+--
+-- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.filter_groups_filter_group_id_seq', 19, true);
+
+
+--
+-- Name: filter_settings_filter_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.filter_settings_filter_setting_id_seq', 1, false);
+
+
+--
+-- Name: filters_filter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.filters_filter_id_seq', 19, true);
+
+
+--
+-- Name: genre_settings_genre_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.genre_settings_genre_setting_id_seq', 30, true);
+
+
+--
+-- Name: genres_genre_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.genres_genre_id_seq', 15, true);
+
+
+--
+-- Name: identification_codes_identification_code_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.identification_codes_identification_code_id_seq', 2, true);
+
+
+--
+-- Name: institution_ip_institution_ip_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.institution_ip_institution_ip_id_seq', 1, false);
+
+
+--
+-- Name: institution_settings_institution_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.institution_settings_institution_setting_id_seq', 1, false);
+
+
+--
+-- Name: institutions_institution_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.institutions_institution_id_seq', 1, false);
+
+
+--
+-- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.jobs_id_seq', 4, true);
+
+
+--
+-- Name: library_file_settings_library_file_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.library_file_settings_library_file_setting_id_seq', 1, false);
+
+
+--
+-- Name: library_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.library_files_file_id_seq', 1, false);
+
+
+--
+-- Name: markets_market_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.markets_market_id_seq', 1, false);
+
+
+--
+-- Name: metrics_context_metrics_context_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_context_metrics_context_id_seq', 1, false);
+
+
+--
+-- Name: metrics_counter_submission_da_metrics_counter_submission_da_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_da_metrics_counter_submission_da_seq', 1, false);
+
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_i_seq1; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_in_metrics_counter_submission_i_seq1', 1, false);
+
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_in_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_in_metrics_counter_submission_in_seq', 1, false);
+
+
+--
+-- Name: metrics_counter_submission_mo_metrics_counter_submission_mo_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq', 1, false);
+
+
+--
+-- Name: metrics_series_metrics_series_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_series_metrics_series_id_seq', 1, false);
+
+
+--
+-- Name: metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq', 1, false);
+
+
+--
+-- Name: metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq', 1, false);
+
+
+--
+-- Name: metrics_submission_metrics_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_submission_metrics_submission_id_seq', 1, false);
+
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignm_seq1; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1', 1, false);
+
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq', 22, true);
+
+
+--
+-- Name: navigation_menu_item_settings_navigation_menu_item_setting__seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_item_settings_navigation_menu_item_setting__seq', 23, true);
+
+
+--
+-- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_items_navigation_menu_item_id_seq', 23, true);
+
+
+--
+-- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menus_navigation_menu_id_seq', 3, true);
+
+
+--
+-- Name: new_releases_new_release_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.new_releases_new_release_id_seq', 1, false);
+
+
+--
+-- Name: notes_note_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notes_note_id_seq', 1, true);
+
+
+--
+-- Name: notification_settings_notification_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notification_settings_notification_setting_id_seq', 38, true);
+
+
+--
+-- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_seq', 16, true);
+
+
+--
+-- Name: notifications_notification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notifications_notification_id_seq', 343, true);
+
+
+--
+-- Name: oai_resumption_tokens_oai_resumption_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.oai_resumption_tokens_oai_resumption_token_id_seq', 1, false);
+
+
+--
+-- Name: plugin_settings_plugin_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.plugin_settings_plugin_setting_id_seq', 43, true);
+
+
+--
+-- Name: press_settings_press_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.press_settings_press_setting_id_seq', 69, true);
+
+
+--
+-- Name: presses_press_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.presses_press_id_seq', 1, true);
+
+
+--
+-- Name: publication_categories_publication_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_categories_publication_category_id_seq', 1, false);
+
+
+--
+-- Name: publication_dates_publication_date_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_dates_publication_date_id_seq', 1, false);
+
+
+--
+-- Name: publication_format_settings_publication_format_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_format_settings_publication_format_setting_id_seq', 6, true);
+
+
+--
+-- Name: publication_formats_publication_format_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_formats_publication_format_id_seq', 3, true);
+
+
+--
+-- Name: publication_settings_publication_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_settings_publication_setting_id_seq', 58, true);
+
+
+--
+-- Name: publications_publication_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publications_publication_id_seq', 17, true);
+
+
+--
+-- Name: queries_query_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.queries_query_id_seq', 1, true);
+
+
+--
+-- Name: query_participants_query_participant_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.query_participants_query_participant_id_seq', 2, true);
+
+
+--
+-- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.queued_payments_queued_payment_id_seq', 1, false);
+
+
+--
+-- Name: representatives_representative_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.representatives_representative_id_seq', 1, false);
+
+
+--
+-- Name: review_assignments_review_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 25, true);
+
+
+--
+-- Name: review_files_review_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_files_review_file_id_seq', 73, true);
+
+
+--
+-- Name: review_form_element_settings_review_form_element_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_element_settings_review_form_element_setting_id_seq', 1, false);
+
+
+--
+-- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_elements_review_form_element_id_seq', 1, false);
+
+
+--
+-- Name: review_form_responses_review_form_response_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_responses_review_form_response_id_seq', 1, false);
+
+
+--
+-- Name: review_form_settings_review_form_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_settings_review_form_setting_id_seq', 1, false);
+
+
+--
+-- Name: review_forms_review_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_forms_review_form_id_seq', 1, false);
+
+
+--
+-- Name: review_round_files_review_round_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_round_files_review_round_file_id_seq', 59, true);
+
+
+--
+-- Name: review_rounds_review_round_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 19, true);
+
+
+--
+-- Name: sales_rights_sales_rights_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.sales_rights_sales_rights_id_seq', 1, false);
+
+
+--
+-- Name: scheduled_tasks_scheduled_task_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.scheduled_tasks_scheduled_task_id_seq', 9, true);
+
+
+--
+-- Name: series_series_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.series_series_id_seq', 5, true);
+
+
+--
+-- Name: series_settings_series_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.series_settings_series_setting_id_seq', 55, true);
+
+
+--
+-- Name: site_settings_site_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.site_settings_site_setting_id_seq', 10, true);
+
+
+--
+-- Name: site_site_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.site_site_id_seq', 1, true);
+
+
+--
+-- Name: spotlight_settings_spotlight_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.spotlight_settings_spotlight_setting_id_seq', 1, false);
+
+
+--
+-- Name: spotlights_spotlight_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.spotlights_spotlight_id_seq', 1, false);
+
+
+--
+-- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 35, true);
+
+
+--
+-- Name: static_page_settings_static_page_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.static_page_settings_static_page_setting_id_seq', 1, false);
+
+
+--
+-- Name: static_pages_static_page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.static_pages_static_page_id_seq', 1, false);
+
+
+--
+-- Name: subeditor_submission_group_subeditor_submission_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.subeditor_submission_group_subeditor_submission_group_id_seq', 5, true);
+
+
+--
+-- Name: submission_chapter_settings_submission_chapter_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_chapter_settings_submission_chapter_setting_id_seq', 710, true);
+
+
+--
+-- Name: submission_chapters_chapter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_chapters_chapter_id_seq', 71, true);
+
+
+--
+-- Name: submission_comments_comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
+
+
+--
+-- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 141, true);
+
+
+--
+-- Name: submission_file_settings_submission_file_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_file_settings_submission_file_setting_id_seq', 274, true);
+
+
+--
+-- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 141, true);
+
+
+--
+-- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq', 110, true);
+
+
+--
+-- Name: submission_search_object_keyw_submission_search_object_keyw_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_object_keyw_submission_search_object_keyw_seq', 277, true);
+
+
+--
+-- Name: submission_search_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_objects_object_id_seq', 24, true);
+
+
+--
+-- Name: submission_settings_submission_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_settings_submission_setting_id_seq', 1, false);
+
+
+--
+-- Name: submissions_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submissions_submission_id_seq', 17, true);
+
+
+--
+-- Name: temporary_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.temporary_files_file_id_seq', 1, false);
+
+
+--
+-- Name: usage_stats_institution_tempo_usage_stats_temp_institution__seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_institution_tempo_usage_stats_temp_institution__seq', 1, false);
+
+
+--
+-- Name: usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq', 1, false);
+
+
+--
+-- Name: usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq', 1, false);
+
+
+--
+-- Name: usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq', 1, false);
+
+
+--
+-- Name: usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq', 1, false);
+
+
+--
+-- Name: usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq', 1, false);
+
+
+--
+-- Name: user_group_settings_user_group_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_group_settings_user_group_setting_id_seq', 111, true);
+
+
+--
+-- Name: user_group_stage_user_group_stage_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_group_stage_user_group_stage_id_seq', 45, true);
+
+
+--
+-- Name: user_groups_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_groups_user_group_id_seq', 19, true);
+
+
+--
+-- Name: user_interests_user_interest_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_interests_user_interest_id_seq', 1, false);
+
+
+--
+-- Name: user_settings_user_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_settings_user_setting_id_seq', 271, true);
+
+
+--
+-- Name: user_user_groups_user_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_user_groups_user_user_group_id_seq', 51, true);
 
 
 --
@@ -17822,44 +17829,6 @@ SELECT pg_catalog.setval('public.users_user_id_seq', 34, true);
 
 
 --
--- Data for Name: versions; Type: TABLE DATA; Schema: public; Owner: omp-ci
---
-
-COPY public.versions (version_id, major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	1	0	0	0	2023-03-31 23:39:37	1	plugins.metadata	dc11		0	0
-2	1	0	0	0	2023-03-31 23:39:37	1	plugins.pubIds	urn	\\APP\\plugins\\pubIds\\urn\\URNPubIdPlugin	0	0
-3	1	0	0	0	2023-03-31 23:39:37	1	plugins.blocks	browse	\\APP\\plugins\\blocks\\browse\\BrowseBlockPlugin	1	0
-4	1	0	0	0	2023-03-31 23:39:37	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-5	1	0	0	0	2023-03-31 23:39:37	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-6	1	0	0	0	2023-03-31 23:39:37	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-7	1	0	0	0	2023-03-31 23:39:37	1	plugins.blocks	information	InformationBlockPlugin	1	0
-8	1	0	0	0	2023-03-31 23:39:37	1	plugins.generic	usageEvent		0	1
-9	1	0	0	0	2023-03-31 23:39:37	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-10	1	3	0	0	2023-03-31 23:39:37	1	plugins.generic	acron	AcronPlugin	1	1
-11	1	0	0	0	2023-03-31 23:39:37	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-12	1	0	0	0	2023-03-31 23:39:37	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-13	1	0	0	0	2023-03-31 23:39:37	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-14	1	2	0	0	2023-03-31 23:39:37	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-15	1	0	0	0	2023-03-31 23:39:37	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-16	1	0	0	0	2023-03-31 23:39:37	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
-17	1	0	0	0	2023-03-31 23:39:37	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-18	1	2	0	0	2023-03-31 23:39:37	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-19	0	1	0	0	2023-03-31 23:39:37	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
-20	1	0	0	0	2023-03-31 23:39:37	1	plugins.themes	default	DefaultThemePlugin	1	0
-21	1	0	0	0	2023-03-31 23:39:37	1	plugins.importexport	users		0	0
-22	1	0	0	0	2023-03-31 23:39:37	1	plugins.importexport	onix30		0	0
-23	1	0	0	0	2023-03-31 23:39:37	1	plugins.importexport	csv		0	0
-24	1	0	0	0	2023-03-31 23:39:37	1	plugins.importexport	native		0	0
-25	1	0	0	0	2023-03-31 23:39:37	1	plugins.oaiMetadataFormats	dc		0	0
-26	1	0	0	0	2023-03-31 23:39:37	1	plugins.paymethod	manual		0	0
-27	1	0	0	0	2023-03-31 23:39:37	1	plugins.paymethod	paypal		0	0
-28	2	0	1	0	2023-03-31 23:39:37	1	plugins.reports	reviewReport		0	0
-29	1	0	0	0	2023-03-31 23:39:37	1	plugins.reports	monographReport		0	0
-30	3	4	0	0	2023-03-31 23:39:35	1	core	omp		0	1
-\.
-
-
---
 -- Name: versions_version_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
 --
 
@@ -17867,7 +17836,7 @@ SELECT pg_catalog.setval('public.versions_version_id_seq', 30, true);
 
 
 --
--- Name: access_keys_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: access_keys access_keys_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.access_keys
@@ -17875,7 +17844,7 @@ ALTER TABLE ONLY public.access_keys
 
 
 --
--- Name: announcement_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcement_settings announcement_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_settings
@@ -17883,7 +17852,7 @@ ALTER TABLE ONLY public.announcement_settings
 
 
 --
--- Name: announcement_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcement_settings announcement_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_settings
@@ -17891,7 +17860,7 @@ ALTER TABLE ONLY public.announcement_settings
 
 
 --
--- Name: announcement_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcement_type_settings announcement_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_type_settings
@@ -17899,7 +17868,7 @@ ALTER TABLE ONLY public.announcement_type_settings
 
 
 --
--- Name: announcement_type_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcement_type_settings announcement_type_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_type_settings
@@ -17907,7 +17876,7 @@ ALTER TABLE ONLY public.announcement_type_settings
 
 
 --
--- Name: announcement_types_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcement_types announcement_types_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_types
@@ -17915,7 +17884,7 @@ ALTER TABLE ONLY public.announcement_types
 
 
 --
--- Name: announcements_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcements announcements_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcements
@@ -17923,7 +17892,7 @@ ALTER TABLE ONLY public.announcements
 
 
 --
--- Name: author_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: author_settings author_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.author_settings
@@ -17931,7 +17900,7 @@ ALTER TABLE ONLY public.author_settings
 
 
 --
--- Name: author_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: author_settings author_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.author_settings
@@ -17939,7 +17908,7 @@ ALTER TABLE ONLY public.author_settings
 
 
 --
--- Name: authors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: authors authors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.authors
@@ -17947,7 +17916,7 @@ ALTER TABLE ONLY public.authors
 
 
 --
--- Name: c_v_e_s_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocab_entry_settings c_v_e_s_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entry_settings
@@ -17955,7 +17924,7 @@ ALTER TABLE ONLY public.controlled_vocab_entry_settings
 
 
 --
--- Name: categories_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.categories
@@ -17963,7 +17932,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: category_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: categories category_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.categories
@@ -17971,7 +17940,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: category_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: category_settings category_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.category_settings
@@ -17979,7 +17948,7 @@ ALTER TABLE ONLY public.category_settings
 
 
 --
--- Name: category_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: category_settings category_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.category_settings
@@ -17987,7 +17956,7 @@ ALTER TABLE ONLY public.category_settings
 
 
 --
--- Name: chapter_authors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapter_authors chapter_authors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapter_authors
@@ -17995,7 +17964,7 @@ ALTER TABLE ONLY public.submission_chapter_authors
 
 
 --
--- Name: citation_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: citation_settings citation_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citation_settings
@@ -18003,7 +17972,7 @@ ALTER TABLE ONLY public.citation_settings
 
 
 --
--- Name: citation_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: citation_settings citation_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citation_settings
@@ -18011,7 +17980,7 @@ ALTER TABLE ONLY public.citation_settings
 
 
 --
--- Name: citations_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: citations citations_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citations
@@ -18019,7 +17988,7 @@ ALTER TABLE ONLY public.citations
 
 
 --
--- Name: citations_publication_seq; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: citations citations_publication_seq; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citations
@@ -18027,7 +17996,7 @@ ALTER TABLE ONLY public.citations
 
 
 --
--- Name: completed_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: completed_payments completed_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.completed_payments
@@ -18035,7 +18004,7 @@ ALTER TABLE ONLY public.completed_payments
 
 
 --
--- Name: controlled_vocab_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocab_entries controlled_vocab_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entries
@@ -18043,7 +18012,7 @@ ALTER TABLE ONLY public.controlled_vocab_entries
 
 
 --
--- Name: controlled_vocab_entry_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocab_entry_settings controlled_vocab_entry_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entry_settings
@@ -18051,7 +18020,7 @@ ALTER TABLE ONLY public.controlled_vocab_entry_settings
 
 
 --
--- Name: controlled_vocab_symbolic; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocabs controlled_vocab_symbolic; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs
@@ -18059,7 +18028,7 @@ ALTER TABLE ONLY public.controlled_vocabs
 
 
 --
--- Name: controlled_vocabs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocabs controlled_vocabs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs
@@ -18067,7 +18036,7 @@ ALTER TABLE ONLY public.controlled_vocabs
 
 
 --
--- Name: data_object_tombstone_oai_set_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstone_oai_set_objects data_object_tombstone_oai_set_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
@@ -18075,7 +18044,7 @@ ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
 
 
 --
--- Name: data_object_tombstone_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstone_settings data_object_tombstone_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_settings
@@ -18083,7 +18052,7 @@ ALTER TABLE ONLY public.data_object_tombstone_settings
 
 
 --
--- Name: data_object_tombstone_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstone_settings data_object_tombstone_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_settings
@@ -18091,7 +18060,7 @@ ALTER TABLE ONLY public.data_object_tombstone_settings
 
 
 --
--- Name: data_object_tombstones_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstones data_object_tombstones_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstones
@@ -18099,7 +18068,7 @@ ALTER TABLE ONLY public.data_object_tombstones
 
 
 --
--- Name: doi_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: doi_settings doi_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.doi_settings
@@ -18107,7 +18076,7 @@ ALTER TABLE ONLY public.doi_settings
 
 
 --
--- Name: doi_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: doi_settings doi_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.doi_settings
@@ -18115,7 +18084,7 @@ ALTER TABLE ONLY public.doi_settings
 
 
 --
--- Name: dois_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: dois dois_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.dois
@@ -18123,7 +18092,7 @@ ALTER TABLE ONLY public.dois
 
 
 --
--- Name: edit_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: edit_decisions edit_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.edit_decisions
@@ -18131,7 +18100,7 @@ ALTER TABLE ONLY public.edit_decisions
 
 
 --
--- Name: email_log_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_log email_log_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_log
@@ -18139,7 +18108,7 @@ ALTER TABLE ONLY public.email_log
 
 
 --
--- Name: email_log_user_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_log_users email_log_user_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_log_users
@@ -18147,7 +18116,7 @@ ALTER TABLE ONLY public.email_log_users
 
 
 --
--- Name: email_log_users_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_log_users email_log_users_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_log_users
@@ -18155,7 +18124,7 @@ ALTER TABLE ONLY public.email_log_users
 
 
 --
--- Name: email_templates_default_data_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates_default_data email_templates_default_data_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default_data
@@ -18163,7 +18132,7 @@ ALTER TABLE ONLY public.email_templates_default_data
 
 
 --
--- Name: email_templates_default_data_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates_default_data email_templates_default_data_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default_data
@@ -18171,7 +18140,7 @@ ALTER TABLE ONLY public.email_templates_default_data
 
 
 --
--- Name: email_templates_email_key; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates email_templates_email_key; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates
@@ -18179,7 +18148,7 @@ ALTER TABLE ONLY public.email_templates
 
 
 --
--- Name: email_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates email_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates
@@ -18187,7 +18156,7 @@ ALTER TABLE ONLY public.email_templates
 
 
 --
--- Name: email_templates_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates_settings email_templates_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates_settings
@@ -18195,7 +18164,7 @@ ALTER TABLE ONLY public.email_templates_settings
 
 
 --
--- Name: email_templates_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates_settings email_templates_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates_settings
@@ -18203,7 +18172,7 @@ ALTER TABLE ONLY public.email_templates_settings
 
 
 --
--- Name: event_log_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: event_log event_log_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.event_log
@@ -18211,7 +18180,7 @@ ALTER TABLE ONLY public.event_log
 
 
 --
--- Name: event_log_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: event_log_settings event_log_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.event_log_settings
@@ -18219,7 +18188,7 @@ ALTER TABLE ONLY public.event_log_settings
 
 
 --
--- Name: event_log_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: event_log_settings event_log_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.event_log_settings
@@ -18227,7 +18196,7 @@ ALTER TABLE ONLY public.event_log_settings
 
 
 --
--- Name: failed_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: failed_jobs failed_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.failed_jobs
@@ -18235,7 +18204,7 @@ ALTER TABLE ONLY public.failed_jobs
 
 
 --
--- Name: features_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: features features_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.features
@@ -18243,7 +18212,7 @@ ALTER TABLE ONLY public.features
 
 
 --
--- Name: files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: files files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.files
@@ -18251,7 +18220,7 @@ ALTER TABLE ONLY public.files
 
 
 --
--- Name: filter_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: filter_groups filter_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filter_groups
@@ -18259,7 +18228,7 @@ ALTER TABLE ONLY public.filter_groups
 
 
 --
--- Name: filter_groups_symbolic; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: filter_groups filter_groups_symbolic; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filter_groups
@@ -18267,7 +18236,7 @@ ALTER TABLE ONLY public.filter_groups
 
 
 --
--- Name: filter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: filter_settings filter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filter_settings
@@ -18275,7 +18244,7 @@ ALTER TABLE ONLY public.filter_settings
 
 
 --
--- Name: filter_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: filter_settings filter_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filter_settings
@@ -18283,7 +18252,7 @@ ALTER TABLE ONLY public.filter_settings
 
 
 --
--- Name: filters_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: filters filters_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filters
@@ -18291,7 +18260,7 @@ ALTER TABLE ONLY public.filters
 
 
 --
--- Name: genre_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: genre_settings genre_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.genre_settings
@@ -18299,7 +18268,7 @@ ALTER TABLE ONLY public.genre_settings
 
 
 --
--- Name: genre_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: genre_settings genre_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.genre_settings
@@ -18307,7 +18276,7 @@ ALTER TABLE ONLY public.genre_settings
 
 
 --
--- Name: genres_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: genres genres_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.genres
@@ -18315,7 +18284,7 @@ ALTER TABLE ONLY public.genres
 
 
 --
--- Name: identification_codes_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: identification_codes identification_codes_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.identification_codes
@@ -18323,7 +18292,7 @@ ALTER TABLE ONLY public.identification_codes
 
 
 --
--- Name: institution_ip_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: institution_ip institution_ip_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.institution_ip
@@ -18331,7 +18300,7 @@ ALTER TABLE ONLY public.institution_ip
 
 
 --
--- Name: institution_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: institution_settings institution_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.institution_settings
@@ -18339,7 +18308,7 @@ ALTER TABLE ONLY public.institution_settings
 
 
 --
--- Name: institution_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: institution_settings institution_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.institution_settings
@@ -18347,7 +18316,7 @@ ALTER TABLE ONLY public.institution_settings
 
 
 --
--- Name: institutions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: institutions institutions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.institutions
@@ -18355,7 +18324,7 @@ ALTER TABLE ONLY public.institutions
 
 
 --
--- Name: job_batches_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: job_batches job_batches_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.job_batches
@@ -18363,7 +18332,7 @@ ALTER TABLE ONLY public.job_batches
 
 
 --
--- Name: jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: jobs jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.jobs
@@ -18371,7 +18340,7 @@ ALTER TABLE ONLY public.jobs
 
 
 --
--- Name: library_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: library_file_settings library_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.library_file_settings
@@ -18379,7 +18348,7 @@ ALTER TABLE ONLY public.library_file_settings
 
 
 --
--- Name: library_file_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: library_file_settings library_file_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.library_file_settings
@@ -18387,7 +18356,7 @@ ALTER TABLE ONLY public.library_file_settings
 
 
 --
--- Name: library_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: library_files library_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.library_files
@@ -18395,7 +18364,7 @@ ALTER TABLE ONLY public.library_files
 
 
 --
--- Name: markets_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: markets markets_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.markets
@@ -18403,7 +18372,7 @@ ALTER TABLE ONLY public.markets
 
 
 --
--- Name: metrics_context_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_context metrics_context_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_context
@@ -18411,7 +18380,7 @@ ALTER TABLE ONLY public.metrics_context
 
 
 --
--- Name: metrics_counter_submission_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_daily metrics_counter_submission_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_daily
@@ -18419,7 +18388,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_daily
 
 
 --
--- Name: metrics_counter_submission_institution_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_daily metrics_counter_submission_institution_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
@@ -18427,7 +18396,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
 
 
 --
--- Name: metrics_counter_submission_institution_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_monthly metrics_counter_submission_institution_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
@@ -18435,7 +18404,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
 
 
 --
--- Name: metrics_counter_submission_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_monthly metrics_counter_submission_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_monthly
@@ -18443,7 +18412,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_monthly
 
 
 --
--- Name: metrics_series_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_series metrics_series_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_series
@@ -18451,7 +18420,7 @@ ALTER TABLE ONLY public.metrics_series
 
 
 --
--- Name: metrics_submission_geo_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission_geo_daily metrics_submission_geo_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission_geo_daily
@@ -18459,7 +18428,7 @@ ALTER TABLE ONLY public.metrics_submission_geo_daily
 
 
 --
--- Name: metrics_submission_geo_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission_geo_monthly metrics_submission_geo_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission_geo_monthly
@@ -18467,7 +18436,7 @@ ALTER TABLE ONLY public.metrics_submission_geo_monthly
 
 
 --
--- Name: metrics_submission_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission metrics_submission_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission
@@ -18475,7 +18444,7 @@ ALTER TABLE ONLY public.metrics_submission
 
 
 --
--- Name: msd_uc_load_id_context_id_submission_id_date; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_daily msd_uc_load_id_context_id_submission_id_date; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_daily
@@ -18483,7 +18452,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_daily
 
 
 --
--- Name: msgd_uc_load_context_submission_c_r_c_date; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission_geo_daily msgd_uc_load_context_submission_c_r_c_date; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission_geo_daily
@@ -18491,7 +18460,7 @@ ALTER TABLE ONLY public.metrics_submission_geo_daily
 
 
 --
--- Name: msgm_uc_context_submission_c_r_c_month; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission_geo_monthly msgm_uc_context_submission_c_r_c_month; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission_geo_monthly
@@ -18499,7 +18468,7 @@ ALTER TABLE ONLY public.metrics_submission_geo_monthly
 
 
 --
--- Name: msid_uc_load_id_context_id_submission_id_institution_id_date; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_daily msid_uc_load_id_context_id_submission_id_institution_id_date; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
@@ -18507,7 +18476,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
 
 
 --
--- Name: msim_uc_context_id_submission_id_institution_id_month; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_monthly msim_uc_context_id_submission_id_institution_id_month; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
@@ -18515,7 +18484,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
 
 
 --
--- Name: msm_uc_context_id_submission_id_month; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_monthly msm_uc_context_id_submission_id_month; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_monthly
@@ -18523,7 +18492,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_monthly
 
 
 --
--- Name: navigation_menu_item_assignment_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_assignment_settings navigation_menu_item_assignment_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
@@ -18531,7 +18500,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
 
 
 --
--- Name: navigation_menu_item_assignment_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_assignment_settings navigation_menu_item_assignment_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
@@ -18539,7 +18508,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
 
 
 --
--- Name: navigation_menu_item_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_assignments navigation_menu_item_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignments
@@ -18547,7 +18516,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignments
 
 
 --
--- Name: navigation_menu_item_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_settings navigation_menu_item_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_settings
@@ -18555,7 +18524,7 @@ ALTER TABLE ONLY public.navigation_menu_item_settings
 
 
 --
--- Name: navigation_menu_item_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_settings navigation_menu_item_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_settings
@@ -18563,7 +18532,7 @@ ALTER TABLE ONLY public.navigation_menu_item_settings
 
 
 --
--- Name: navigation_menu_items_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_items navigation_menu_items_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_items
@@ -18571,7 +18540,7 @@ ALTER TABLE ONLY public.navigation_menu_items
 
 
 --
--- Name: navigation_menus_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menus navigation_menus_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menus
@@ -18579,7 +18548,7 @@ ALTER TABLE ONLY public.navigation_menus
 
 
 --
--- Name: new_releases_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: new_releases new_releases_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.new_releases
@@ -18587,7 +18556,7 @@ ALTER TABLE ONLY public.new_releases
 
 
 --
--- Name: new_releases_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: new_releases new_releases_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.new_releases
@@ -18595,7 +18564,7 @@ ALTER TABLE ONLY public.new_releases
 
 
 --
--- Name: notes_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notes notes_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notes
@@ -18603,7 +18572,7 @@ ALTER TABLE ONLY public.notes
 
 
 --
--- Name: notification_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notification_settings notification_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_settings
@@ -18611,7 +18580,7 @@ ALTER TABLE ONLY public.notification_settings
 
 
 --
--- Name: notification_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notification_settings notification_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_settings
@@ -18619,7 +18588,7 @@ ALTER TABLE ONLY public.notification_settings
 
 
 --
--- Name: notification_subscription_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notification_subscription_settings notification_subscription_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_subscription_settings
@@ -18627,7 +18596,7 @@ ALTER TABLE ONLY public.notification_subscription_settings
 
 
 --
--- Name: notifications_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notifications notifications_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notifications
@@ -18635,7 +18604,7 @@ ALTER TABLE ONLY public.notifications
 
 
 --
--- Name: oai_resumption_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: oai_resumption_tokens oai_resumption_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.oai_resumption_tokens
@@ -18643,7 +18612,7 @@ ALTER TABLE ONLY public.oai_resumption_tokens
 
 
 --
--- Name: oai_resumption_tokens_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: oai_resumption_tokens oai_resumption_tokens_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.oai_resumption_tokens
@@ -18651,7 +18620,7 @@ ALTER TABLE ONLY public.oai_resumption_tokens
 
 
 --
--- Name: plugin_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: plugin_settings plugin_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.plugin_settings
@@ -18659,7 +18628,7 @@ ALTER TABLE ONLY public.plugin_settings
 
 
 --
--- Name: plugin_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: plugin_settings plugin_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.plugin_settings
@@ -18667,7 +18636,7 @@ ALTER TABLE ONLY public.plugin_settings
 
 
 --
--- Name: press_features_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: features press_features_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.features
@@ -18675,7 +18644,7 @@ ALTER TABLE ONLY public.features
 
 
 --
--- Name: press_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: presses press_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.presses
@@ -18683,7 +18652,7 @@ ALTER TABLE ONLY public.presses
 
 
 --
--- Name: press_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: press_settings press_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.press_settings
@@ -18691,7 +18660,7 @@ ALTER TABLE ONLY public.press_settings
 
 
 --
--- Name: press_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: press_settings press_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.press_settings
@@ -18699,7 +18668,7 @@ ALTER TABLE ONLY public.press_settings
 
 
 --
--- Name: presses_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: presses presses_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.presses
@@ -18707,7 +18676,7 @@ ALTER TABLE ONLY public.presses
 
 
 --
--- Name: publication_categories_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_categories publication_categories_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_categories
@@ -18715,7 +18684,7 @@ ALTER TABLE ONLY public.publication_categories
 
 
 --
--- Name: publication_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_categories publication_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_categories
@@ -18723,7 +18692,7 @@ ALTER TABLE ONLY public.publication_categories
 
 
 --
--- Name: publication_dates_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_dates publication_dates_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_dates
@@ -18731,7 +18700,7 @@ ALTER TABLE ONLY public.publication_dates
 
 
 --
--- Name: publication_format_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_format_settings publication_format_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_format_settings
@@ -18739,7 +18708,7 @@ ALTER TABLE ONLY public.publication_format_settings
 
 
 --
--- Name: publication_format_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_format_settings publication_format_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_format_settings
@@ -18747,7 +18716,7 @@ ALTER TABLE ONLY public.publication_format_settings
 
 
 --
--- Name: publication_formats_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_formats publication_formats_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_formats
@@ -18755,7 +18724,7 @@ ALTER TABLE ONLY public.publication_formats
 
 
 --
--- Name: publication_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_settings publication_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_settings
@@ -18763,7 +18732,7 @@ ALTER TABLE ONLY public.publication_settings
 
 
 --
--- Name: publication_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_settings publication_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_settings
@@ -18771,7 +18740,7 @@ ALTER TABLE ONLY public.publication_settings
 
 
 --
--- Name: publications_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publications publications_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publications
@@ -18779,7 +18748,7 @@ ALTER TABLE ONLY public.publications
 
 
 --
--- Name: queries_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: queries queries_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.queries
@@ -18787,7 +18756,7 @@ ALTER TABLE ONLY public.queries
 
 
 --
--- Name: query_participants_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: query_participants query_participants_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.query_participants
@@ -18795,7 +18764,7 @@ ALTER TABLE ONLY public.query_participants
 
 
 --
--- Name: query_participants_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: query_participants query_participants_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.query_participants
@@ -18803,7 +18772,7 @@ ALTER TABLE ONLY public.query_participants
 
 
 --
--- Name: queued_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: queued_payments queued_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.queued_payments
@@ -18811,7 +18780,7 @@ ALTER TABLE ONLY public.queued_payments
 
 
 --
--- Name: representatives_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: representatives representatives_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.representatives
@@ -18819,7 +18788,7 @@ ALTER TABLE ONLY public.representatives
 
 
 --
--- Name: review_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_assignments review_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -18827,7 +18796,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_files review_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_files
@@ -18835,7 +18804,7 @@ ALTER TABLE ONLY public.review_files
 
 
 --
--- Name: review_files_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_files review_files_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_files
@@ -18843,7 +18812,7 @@ ALTER TABLE ONLY public.review_files
 
 
 --
--- Name: review_form_element_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_element_settings review_form_element_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_element_settings
@@ -18851,7 +18820,7 @@ ALTER TABLE ONLY public.review_form_element_settings
 
 
 --
--- Name: review_form_element_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_element_settings review_form_element_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_element_settings
@@ -18859,7 +18828,7 @@ ALTER TABLE ONLY public.review_form_element_settings
 
 
 --
--- Name: review_form_elements_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_elements review_form_elements_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_elements
@@ -18867,7 +18836,7 @@ ALTER TABLE ONLY public.review_form_elements
 
 
 --
--- Name: review_form_responses_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_responses review_form_responses_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_responses
@@ -18875,7 +18844,7 @@ ALTER TABLE ONLY public.review_form_responses
 
 
 --
--- Name: review_form_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_settings review_form_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_settings
@@ -18883,7 +18852,7 @@ ALTER TABLE ONLY public.review_form_settings
 
 
 --
--- Name: review_form_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_settings review_form_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_settings
@@ -18891,7 +18860,7 @@ ALTER TABLE ONLY public.review_form_settings
 
 
 --
--- Name: review_forms_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_forms review_forms_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_forms
@@ -18899,7 +18868,7 @@ ALTER TABLE ONLY public.review_forms
 
 
 --
--- Name: review_round_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_round_files review_round_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_round_files
@@ -18907,7 +18876,7 @@ ALTER TABLE ONLY public.review_round_files
 
 
 --
--- Name: review_round_files_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_round_files review_round_files_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_round_files
@@ -18915,7 +18884,7 @@ ALTER TABLE ONLY public.review_round_files
 
 
 --
--- Name: review_rounds_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_rounds review_rounds_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_rounds
@@ -18923,7 +18892,7 @@ ALTER TABLE ONLY public.review_rounds
 
 
 --
--- Name: review_rounds_submission_id_stage_id_round_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_rounds review_rounds_submission_id_stage_id_round_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_rounds
@@ -18931,7 +18900,7 @@ ALTER TABLE ONLY public.review_rounds
 
 
 --
--- Name: sales_rights_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: sales_rights sales_rights_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.sales_rights
@@ -18939,7 +18908,7 @@ ALTER TABLE ONLY public.sales_rights
 
 
 --
--- Name: scheduled_tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: scheduled_tasks scheduled_tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.scheduled_tasks
@@ -18947,7 +18916,7 @@ ALTER TABLE ONLY public.scheduled_tasks
 
 
 --
--- Name: scheduled_tasks_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: scheduled_tasks scheduled_tasks_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.scheduled_tasks
@@ -18955,7 +18924,7 @@ ALTER TABLE ONLY public.scheduled_tasks
 
 
 --
--- Name: section_editors_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: subeditor_submission_group section_editors_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.subeditor_submission_group
@@ -18963,7 +18932,7 @@ ALTER TABLE ONLY public.subeditor_submission_group
 
 
 --
--- Name: series_categories_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series_categories series_categories_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series_categories
@@ -18971,7 +18940,7 @@ ALTER TABLE ONLY public.series_categories
 
 
 --
--- Name: series_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series series_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series
@@ -18979,7 +18948,7 @@ ALTER TABLE ONLY public.series
 
 
 --
--- Name: series_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series series_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series
@@ -18987,7 +18956,7 @@ ALTER TABLE ONLY public.series
 
 
 --
--- Name: series_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series_settings series_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series_settings
@@ -18995,7 +18964,7 @@ ALTER TABLE ONLY public.series_settings
 
 
 --
--- Name: series_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series_settings series_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series_settings
@@ -19003,7 +18972,7 @@ ALTER TABLE ONLY public.series_settings
 
 
 --
--- Name: sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: sessions sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.sessions
@@ -19011,7 +18980,7 @@ ALTER TABLE ONLY public.sessions
 
 
 --
--- Name: site_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: site site_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.site
@@ -19019,7 +18988,7 @@ ALTER TABLE ONLY public.site
 
 
 --
--- Name: site_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: site_settings site_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.site_settings
@@ -19027,7 +18996,7 @@ ALTER TABLE ONLY public.site_settings
 
 
 --
--- Name: site_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: site_settings site_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.site_settings
@@ -19035,7 +19004,7 @@ ALTER TABLE ONLY public.site_settings
 
 
 --
--- Name: spotlight_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: spotlight_settings spotlight_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.spotlight_settings
@@ -19043,7 +19012,7 @@ ALTER TABLE ONLY public.spotlight_settings
 
 
 --
--- Name: spotlight_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: spotlight_settings spotlight_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.spotlight_settings
@@ -19051,7 +19020,7 @@ ALTER TABLE ONLY public.spotlight_settings
 
 
 --
--- Name: spotlights_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: spotlights spotlights_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.spotlights
@@ -19059,7 +19028,7 @@ ALTER TABLE ONLY public.spotlights
 
 
 --
--- Name: stage_assignment; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: stage_assignments stage_assignment; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments
@@ -19067,7 +19036,7 @@ ALTER TABLE ONLY public.stage_assignments
 
 
 --
--- Name: stage_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: stage_assignments stage_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments
@@ -19075,7 +19044,7 @@ ALTER TABLE ONLY public.stage_assignments
 
 
 --
--- Name: static_page_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: static_page_settings static_page_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.static_page_settings
@@ -19083,7 +19052,7 @@ ALTER TABLE ONLY public.static_page_settings
 
 
 --
--- Name: static_pages_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: static_pages static_pages_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.static_pages
@@ -19091,7 +19060,7 @@ ALTER TABLE ONLY public.static_pages
 
 
 --
--- Name: subeditor_submission_group_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: subeditor_submission_group subeditor_submission_group_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.subeditor_submission_group
@@ -19099,7 +19068,7 @@ ALTER TABLE ONLY public.subeditor_submission_group
 
 
 --
--- Name: submission_chapter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapter_settings submission_chapter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapter_settings
@@ -19107,7 +19076,7 @@ ALTER TABLE ONLY public.submission_chapter_settings
 
 
 --
--- Name: submission_chapter_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapter_settings submission_chapter_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapter_settings
@@ -19115,7 +19084,7 @@ ALTER TABLE ONLY public.submission_chapter_settings
 
 
 --
--- Name: submission_chapters_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapters submission_chapters_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapters
@@ -19123,7 +19092,7 @@ ALTER TABLE ONLY public.submission_chapters
 
 
 --
--- Name: submission_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_comments submission_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_comments
@@ -19131,7 +19100,7 @@ ALTER TABLE ONLY public.submission_comments
 
 
 --
--- Name: submission_file_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_file_revisions submission_file_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -19139,7 +19108,7 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_file_settings submission_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_settings
@@ -19147,7 +19116,7 @@ ALTER TABLE ONLY public.submission_file_settings
 
 
 --
--- Name: submission_file_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_file_settings submission_file_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_settings
@@ -19155,7 +19124,7 @@ ALTER TABLE ONLY public.submission_file_settings
 
 
 --
--- Name: submission_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_files submission_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -19163,7 +19132,7 @@ ALTER TABLE ONLY public.submission_files
 
 
 --
--- Name: submission_search_keyword_list_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_keyword_list submission_search_keyword_list_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list
@@ -19171,7 +19140,7 @@ ALTER TABLE ONLY public.submission_search_keyword_list
 
 
 --
--- Name: submission_search_keyword_text; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_keyword_list submission_search_keyword_text; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list
@@ -19179,7 +19148,7 @@ ALTER TABLE ONLY public.submission_search_keyword_list
 
 
 --
--- Name: submission_search_object_keywords_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_object_keywords submission_search_object_keywords_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_object_keywords
@@ -19187,7 +19156,7 @@ ALTER TABLE ONLY public.submission_search_object_keywords
 
 
 --
--- Name: submission_search_object_keywords_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_object_keywords submission_search_object_keywords_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_object_keywords
@@ -19195,7 +19164,7 @@ ALTER TABLE ONLY public.submission_search_object_keywords
 
 
 --
--- Name: submission_search_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_objects submission_search_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_objects
@@ -19203,7 +19172,7 @@ ALTER TABLE ONLY public.submission_search_objects
 
 
 --
--- Name: submission_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_settings submission_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_settings
@@ -19211,7 +19180,7 @@ ALTER TABLE ONLY public.submission_settings
 
 
 --
--- Name: submission_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_settings submission_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_settings
@@ -19219,7 +19188,7 @@ ALTER TABLE ONLY public.submission_settings
 
 
 --
--- Name: submissions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submissions submissions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submissions
@@ -19227,7 +19196,7 @@ ALTER TABLE ONLY public.submissions
 
 
 --
--- Name: temporary_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: temporary_files temporary_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.temporary_files
@@ -19235,7 +19204,7 @@ ALTER TABLE ONLY public.temporary_files
 
 
 --
--- Name: u_e_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_interests u_e_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_interests
@@ -19243,7 +19212,7 @@ ALTER TABLE ONLY public.user_interests
 
 
 --
--- Name: usage_stats_institution_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_institution_temporary_records usage_stats_institution_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_institution_temporary_records
@@ -19251,7 +19220,7 @@ ALTER TABLE ONLY public.usage_stats_institution_temporary_records
 
 
 --
--- Name: usage_stats_total_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_total_temporary_records usage_stats_total_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_total_temporary_records
@@ -19259,7 +19228,7 @@ ALTER TABLE ONLY public.usage_stats_total_temporary_records
 
 
 --
--- Name: usage_stats_unique_item_investigations_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_investigations_temporary_records usage_stats_unique_item_investigations_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
@@ -19267,7 +19236,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
 
 
 --
--- Name: usage_stats_unique_item_requests_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_requests_temporary_records usage_stats_unique_item_requests_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
@@ -19275,7 +19244,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
 
 
 --
--- Name: usage_stats_unique_title_investigations_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_investigations_temporary_records usage_stats_unique_title_investigations_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
@@ -19283,7 +19252,7 @@ ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_record
 
 
 --
--- Name: usage_stats_unique_title_requests_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_requests_temporary_records usage_stats_unique_title_requests_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
@@ -19291,7 +19260,7 @@ ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
 
 
 --
--- Name: user_group_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_group_settings user_group_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_group_settings
@@ -19299,7 +19268,7 @@ ALTER TABLE ONLY public.user_group_settings
 
 
 --
--- Name: user_group_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_group_settings user_group_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_group_settings
@@ -19307,7 +19276,7 @@ ALTER TABLE ONLY public.user_group_settings
 
 
 --
--- Name: user_group_stage_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_group_stage user_group_stage_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_group_stage
@@ -19315,7 +19284,7 @@ ALTER TABLE ONLY public.user_group_stage
 
 
 --
--- Name: user_group_stage_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_group_stage user_group_stage_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_group_stage
@@ -19323,7 +19292,7 @@ ALTER TABLE ONLY public.user_group_stage
 
 
 --
--- Name: user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_groups user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_groups
@@ -19331,7 +19300,7 @@ ALTER TABLE ONLY public.user_groups
 
 
 --
--- Name: user_interests_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_interests user_interests_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_interests
@@ -19339,7 +19308,7 @@ ALTER TABLE ONLY public.user_interests
 
 
 --
--- Name: user_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_settings user_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_settings
@@ -19347,7 +19316,7 @@ ALTER TABLE ONLY public.user_settings
 
 
 --
--- Name: user_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_settings user_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_settings
@@ -19355,7 +19324,7 @@ ALTER TABLE ONLY public.user_settings
 
 
 --
--- Name: user_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_user_groups user_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_user_groups
@@ -19363,7 +19332,7 @@ ALTER TABLE ONLY public.user_user_groups
 
 
 --
--- Name: user_user_groups_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_user_groups user_user_groups_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_user_groups
@@ -19371,7 +19340,7 @@ ALTER TABLE ONLY public.user_user_groups
 
 
 --
--- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.users
@@ -19379,7 +19348,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: usi_load_id_line_number_institution_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_institution_temporary_records usi_load_id_line_number_institution_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_institution_temporary_records
@@ -19387,7 +19356,7 @@ ALTER TABLE ONLY public.usage_stats_institution_temporary_records
 
 
 --
--- Name: versions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: versions versions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.versions
@@ -19395,7 +19364,7 @@ ALTER TABLE ONLY public.versions
 
 
 --
--- Name: versions_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: versions versions_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.versions
@@ -21020,7 +20989,7 @@ CREATE INDEX ustr_submission_id ON public.usage_stats_unique_title_requests_temp
 
 
 --
--- Name: access_keys_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: access_keys access_keys_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.access_keys
@@ -21028,7 +20997,7 @@ ALTER TABLE ONLY public.access_keys
 
 
 --
--- Name: announcement_settings_announcement_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcement_settings announcement_settings_announcement_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_settings
@@ -21036,7 +21005,7 @@ ALTER TABLE ONLY public.announcement_settings
 
 
 --
--- Name: announcement_type_settings_type_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcement_type_settings announcement_type_settings_type_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_type_settings
@@ -21044,7 +21013,7 @@ ALTER TABLE ONLY public.announcement_type_settings
 
 
 --
--- Name: announcement_types_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcement_types announcement_types_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcement_types
@@ -21052,7 +21021,7 @@ ALTER TABLE ONLY public.announcement_types
 
 
 --
--- Name: announcements_type_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: announcements announcements_type_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.announcements
@@ -21060,7 +21029,7 @@ ALTER TABLE ONLY public.announcements
 
 
 --
--- Name: assignment_settings_navigation_menu_item_assignment_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_assignment_settings assignment_settings_navigation_menu_item_assignment_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
@@ -21068,7 +21037,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
 
 
 --
--- Name: author_settings_author_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: author_settings author_settings_author_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.author_settings
@@ -21076,7 +21045,7 @@ ALTER TABLE ONLY public.author_settings
 
 
 --
--- Name: authors_publication_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: authors authors_publication_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.authors
@@ -21084,7 +21053,7 @@ ALTER TABLE ONLY public.authors
 
 
 --
--- Name: authors_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: authors authors_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.authors
@@ -21092,7 +21061,7 @@ ALTER TABLE ONLY public.authors
 
 
 --
--- Name: c_v_e_s_entry_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocab_entry_settings c_v_e_s_entry_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entry_settings
@@ -21100,7 +21069,7 @@ ALTER TABLE ONLY public.controlled_vocab_entry_settings
 
 
 --
--- Name: categories_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: categories categories_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.categories
@@ -21108,7 +21077,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: categories_parent_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: categories categories_parent_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.categories
@@ -21116,7 +21085,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: category_settings_category_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: category_settings category_settings_category_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.category_settings
@@ -21124,7 +21093,7 @@ ALTER TABLE ONLY public.category_settings
 
 
 --
--- Name: citation_settings_citation_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: citation_settings citation_settings_citation_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citation_settings
@@ -21132,7 +21101,7 @@ ALTER TABLE ONLY public.citation_settings
 
 
 --
--- Name: citations_publication; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: citations citations_publication; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.citations
@@ -21140,7 +21109,7 @@ ALTER TABLE ONLY public.citations
 
 
 --
--- Name: completed_payments_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: completed_payments completed_payments_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.completed_payments
@@ -21148,7 +21117,7 @@ ALTER TABLE ONLY public.completed_payments
 
 
 --
--- Name: completed_payments_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: completed_payments completed_payments_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.completed_payments
@@ -21156,7 +21125,7 @@ ALTER TABLE ONLY public.completed_payments
 
 
 --
--- Name: controlled_vocab_entries_controlled_vocab_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: controlled_vocab_entries controlled_vocab_entries_controlled_vocab_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entries
@@ -21164,7 +21133,7 @@ ALTER TABLE ONLY public.controlled_vocab_entries
 
 
 --
--- Name: data_object_tombstone_oai_set_objects_tombstone_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstone_oai_set_objects data_object_tombstone_oai_set_objects_tombstone_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
@@ -21172,7 +21141,7 @@ ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
 
 
 --
--- Name: data_object_tombstone_settings_tombstone_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: data_object_tombstone_settings data_object_tombstone_settings_tombstone_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_settings
@@ -21180,7 +21149,7 @@ ALTER TABLE ONLY public.data_object_tombstone_settings
 
 
 --
--- Name: doi_settings_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: doi_settings doi_settings_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.doi_settings
@@ -21188,7 +21157,7 @@ ALTER TABLE ONLY public.doi_settings
 
 
 --
--- Name: dois_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: dois dois_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.dois
@@ -21196,7 +21165,7 @@ ALTER TABLE ONLY public.dois
 
 
 --
--- Name: edit_decisions_editor_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: edit_decisions edit_decisions_editor_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.edit_decisions
@@ -21204,7 +21173,7 @@ ALTER TABLE ONLY public.edit_decisions
 
 
 --
--- Name: edit_decisions_review_round_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: edit_decisions edit_decisions_review_round_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.edit_decisions
@@ -21212,7 +21181,7 @@ ALTER TABLE ONLY public.edit_decisions
 
 
 --
--- Name: edit_decisions_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: edit_decisions edit_decisions_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.edit_decisions
@@ -21220,7 +21189,7 @@ ALTER TABLE ONLY public.edit_decisions
 
 
 --
--- Name: email_log_users_email_log_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_log_users email_log_users_email_log_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_log_users
@@ -21228,7 +21197,7 @@ ALTER TABLE ONLY public.email_log_users
 
 
 --
--- Name: email_log_users_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_log_users email_log_users_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_log_users
@@ -21236,7 +21205,7 @@ ALTER TABLE ONLY public.email_log_users
 
 
 --
--- Name: email_templates_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates email_templates_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates
@@ -21244,7 +21213,7 @@ ALTER TABLE ONLY public.email_templates
 
 
 --
--- Name: email_templates_settings_email_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: email_templates_settings email_templates_settings_email_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.email_templates_settings
@@ -21252,7 +21221,7 @@ ALTER TABLE ONLY public.email_templates_settings
 
 
 --
--- Name: event_log_settings_log_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: event_log_settings event_log_settings_log_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.event_log_settings
@@ -21260,7 +21229,7 @@ ALTER TABLE ONLY public.event_log_settings
 
 
 --
--- Name: event_log_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: event_log event_log_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.event_log
@@ -21268,7 +21237,7 @@ ALTER TABLE ONLY public.event_log
 
 
 --
--- Name: features_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: features features_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.features
@@ -21276,7 +21245,7 @@ ALTER TABLE ONLY public.features
 
 
 --
--- Name: filter_settings_filter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: filter_settings filter_settings_filter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filter_settings
@@ -21284,7 +21253,7 @@ ALTER TABLE ONLY public.filter_settings
 
 
 --
--- Name: filters_filter_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: filters filters_filter_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.filters
@@ -21292,7 +21261,7 @@ ALTER TABLE ONLY public.filters
 
 
 --
--- Name: genre_settings_genre_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: genre_settings genre_settings_genre_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.genre_settings
@@ -21300,7 +21269,7 @@ ALTER TABLE ONLY public.genre_settings
 
 
 --
--- Name: genres_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: genres genres_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.genres
@@ -21308,7 +21277,7 @@ ALTER TABLE ONLY public.genres
 
 
 --
--- Name: identification_codes_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: identification_codes identification_codes_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.identification_codes
@@ -21316,7 +21285,7 @@ ALTER TABLE ONLY public.identification_codes
 
 
 --
--- Name: institution_ip_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: institution_ip institution_ip_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.institution_ip
@@ -21324,7 +21293,7 @@ ALTER TABLE ONLY public.institution_ip
 
 
 --
--- Name: institution_settings_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: institution_settings institution_settings_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.institution_settings
@@ -21332,7 +21301,7 @@ ALTER TABLE ONLY public.institution_settings
 
 
 --
--- Name: institutions_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: institutions institutions_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.institutions
@@ -21340,7 +21309,7 @@ ALTER TABLE ONLY public.institutions
 
 
 --
--- Name: library_file_settings_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: library_file_settings library_file_settings_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.library_file_settings
@@ -21348,7 +21317,7 @@ ALTER TABLE ONLY public.library_file_settings
 
 
 --
--- Name: library_files_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: library_files library_files_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.library_files
@@ -21356,7 +21325,7 @@ ALTER TABLE ONLY public.library_files
 
 
 --
--- Name: library_files_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: library_files library_files_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.library_files
@@ -21364,7 +21333,7 @@ ALTER TABLE ONLY public.library_files
 
 
 --
--- Name: markets_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: markets markets_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.markets
@@ -21372,7 +21341,7 @@ ALTER TABLE ONLY public.markets
 
 
 --
--- Name: metrics_context_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_context metrics_context_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_context
@@ -21380,7 +21349,7 @@ ALTER TABLE ONLY public.metrics_context
 
 
 --
--- Name: metrics_series_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_series metrics_series_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_series
@@ -21388,7 +21357,7 @@ ALTER TABLE ONLY public.metrics_series
 
 
 --
--- Name: metrics_series_series_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_series metrics_series_series_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_series
@@ -21396,7 +21365,7 @@ ALTER TABLE ONLY public.metrics_series
 
 
 --
--- Name: metrics_submission_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission metrics_submission_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission
@@ -21404,7 +21373,7 @@ ALTER TABLE ONLY public.metrics_submission
 
 
 --
--- Name: metrics_submission_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission metrics_submission_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission
@@ -21412,7 +21381,7 @@ ALTER TABLE ONLY public.metrics_submission
 
 
 --
--- Name: metrics_submission_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission metrics_submission_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission
@@ -21420,7 +21389,7 @@ ALTER TABLE ONLY public.metrics_submission
 
 
 --
--- Name: metrics_submission_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission metrics_submission_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission
@@ -21428,7 +21397,7 @@ ALTER TABLE ONLY public.metrics_submission
 
 
 --
--- Name: metrics_submission_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission metrics_submission_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission
@@ -21436,7 +21405,7 @@ ALTER TABLE ONLY public.metrics_submission
 
 
 --
--- Name: msd_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_daily msd_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_daily
@@ -21444,7 +21413,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_daily
 
 
 --
--- Name: msd_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_daily msd_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_daily
@@ -21452,7 +21421,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_daily
 
 
 --
--- Name: msgd_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission_geo_daily msgd_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission_geo_daily
@@ -21460,7 +21429,7 @@ ALTER TABLE ONLY public.metrics_submission_geo_daily
 
 
 --
--- Name: msgd_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission_geo_daily msgd_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission_geo_daily
@@ -21468,7 +21437,7 @@ ALTER TABLE ONLY public.metrics_submission_geo_daily
 
 
 --
--- Name: msgm_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission_geo_monthly msgm_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission_geo_monthly
@@ -21476,7 +21445,7 @@ ALTER TABLE ONLY public.metrics_submission_geo_monthly
 
 
 --
--- Name: msgm_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_submission_geo_monthly msgm_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_submission_geo_monthly
@@ -21484,7 +21453,7 @@ ALTER TABLE ONLY public.metrics_submission_geo_monthly
 
 
 --
--- Name: msid_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_daily msid_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
@@ -21492,7 +21461,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
 
 
 --
--- Name: msid_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_daily msid_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
@@ -21500,7 +21469,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
 
 
 --
--- Name: msid_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_daily msid_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
@@ -21508,7 +21477,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
 
 
 --
--- Name: msim_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_monthly msim_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
@@ -21516,7 +21485,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
 
 
 --
--- Name: msim_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_monthly msim_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
@@ -21524,7 +21493,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
 
 
 --
--- Name: msim_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_institution_monthly msim_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
@@ -21532,7 +21501,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
 
 
 --
--- Name: msm_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_monthly msm_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_monthly
@@ -21540,7 +21509,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_monthly
 
 
 --
--- Name: msm_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: metrics_counter_submission_monthly msm_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.metrics_counter_submission_monthly
@@ -21548,7 +21517,7 @@ ALTER TABLE ONLY public.metrics_counter_submission_monthly
 
 
 --
--- Name: navigation_menu_item_assignments_navigation_menu_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_assignments navigation_menu_item_assignments_navigation_menu_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignments
@@ -21556,7 +21525,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignments
 
 
 --
--- Name: navigation_menu_item_assignments_navigation_menu_item_id_foreig; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_assignments navigation_menu_item_assignments_navigation_menu_item_id_foreig; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignments
@@ -21564,7 +21533,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignments
 
 
 --
--- Name: navigation_menu_item_settings_navigation_menu_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: navigation_menu_item_settings navigation_menu_item_settings_navigation_menu_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_settings
@@ -21572,7 +21541,7 @@ ALTER TABLE ONLY public.navigation_menu_item_settings
 
 
 --
--- Name: new_releases_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: new_releases new_releases_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.new_releases
@@ -21580,7 +21549,7 @@ ALTER TABLE ONLY public.new_releases
 
 
 --
--- Name: notes_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notes notes_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notes
@@ -21588,7 +21557,7 @@ ALTER TABLE ONLY public.notes
 
 
 --
--- Name: notification_settings_notification_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notification_settings notification_settings_notification_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_settings
@@ -21596,7 +21565,7 @@ ALTER TABLE ONLY public.notification_settings
 
 
 --
--- Name: notification_subscription_settings_context_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notification_subscription_settings notification_subscription_settings_context_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_subscription_settings
@@ -21604,7 +21573,7 @@ ALTER TABLE ONLY public.notification_subscription_settings
 
 
 --
--- Name: notification_subscription_settings_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notification_subscription_settings notification_subscription_settings_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notification_subscription_settings
@@ -21612,7 +21581,7 @@ ALTER TABLE ONLY public.notification_subscription_settings
 
 
 --
--- Name: notifications_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notifications notifications_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notifications
@@ -21620,7 +21589,7 @@ ALTER TABLE ONLY public.notifications
 
 
 --
--- Name: notifications_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: notifications notifications_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.notifications
@@ -21628,7 +21597,7 @@ ALTER TABLE ONLY public.notifications
 
 
 --
--- Name: press_settings_press_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: press_settings press_settings_press_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.press_settings
@@ -21636,7 +21605,7 @@ ALTER TABLE ONLY public.press_settings
 
 
 --
--- Name: publication_categories_category_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_categories publication_categories_category_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_categories
@@ -21644,7 +21613,7 @@ ALTER TABLE ONLY public.publication_categories
 
 
 --
--- Name: publication_categories_publication_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_categories publication_categories_publication_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_categories
@@ -21652,7 +21621,7 @@ ALTER TABLE ONLY public.publication_categories
 
 
 --
--- Name: publication_dates_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_dates publication_dates_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_dates
@@ -21660,7 +21629,7 @@ ALTER TABLE ONLY public.publication_dates
 
 
 --
--- Name: publication_format_settings_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_format_settings publication_format_settings_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_format_settings
@@ -21668,7 +21637,7 @@ ALTER TABLE ONLY public.publication_format_settings
 
 
 --
--- Name: publication_formats_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_formats publication_formats_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_formats
@@ -21676,7 +21645,7 @@ ALTER TABLE ONLY public.publication_formats
 
 
 --
--- Name: publication_formats_publication_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_formats publication_formats_publication_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_formats
@@ -21684,7 +21653,7 @@ ALTER TABLE ONLY public.publication_formats
 
 
 --
--- Name: publication_settings_publication_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publication_settings publication_settings_publication_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publication_settings
@@ -21692,7 +21661,7 @@ ALTER TABLE ONLY public.publication_settings
 
 
 --
--- Name: publications_author_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publications publications_author_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publications
@@ -21700,7 +21669,7 @@ ALTER TABLE ONLY public.publications
 
 
 --
--- Name: publications_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publications publications_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publications
@@ -21708,7 +21677,7 @@ ALTER TABLE ONLY public.publications
 
 
 --
--- Name: publications_series_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publications publications_series_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publications
@@ -21716,7 +21685,7 @@ ALTER TABLE ONLY public.publications
 
 
 --
--- Name: publications_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: publications publications_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.publications
@@ -21724,7 +21693,7 @@ ALTER TABLE ONLY public.publications
 
 
 --
--- Name: query_participants_query_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: query_participants query_participants_query_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.query_participants
@@ -21732,7 +21701,7 @@ ALTER TABLE ONLY public.query_participants
 
 
 --
--- Name: query_participants_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: query_participants query_participants_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.query_participants
@@ -21740,7 +21709,7 @@ ALTER TABLE ONLY public.query_participants
 
 
 --
--- Name: representatives_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: representatives representatives_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.representatives
@@ -21748,7 +21717,7 @@ ALTER TABLE ONLY public.representatives
 
 
 --
--- Name: review_assignments_review_form_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_assignments review_assignments_review_form_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -21756,7 +21725,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_assignments_review_round_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_assignments review_assignments_review_round_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -21764,7 +21733,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_assignments_reviewer_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_assignments review_assignments_reviewer_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -21772,7 +21741,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_assignments_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_assignments review_assignments_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -21780,7 +21749,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_files_review_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_files review_files_review_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_files
@@ -21788,7 +21757,7 @@ ALTER TABLE ONLY public.review_files
 
 
 --
--- Name: review_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_files review_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_files
@@ -21796,7 +21765,7 @@ ALTER TABLE ONLY public.review_files
 
 
 --
--- Name: review_form_element_settings_review_form_element_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_element_settings review_form_element_settings_review_form_element_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_element_settings
@@ -21804,7 +21773,7 @@ ALTER TABLE ONLY public.review_form_element_settings
 
 
 --
--- Name: review_form_elements_review_form_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_elements review_form_elements_review_form_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_elements
@@ -21812,7 +21781,7 @@ ALTER TABLE ONLY public.review_form_elements
 
 
 --
--- Name: review_form_responses_review_form_element_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_responses review_form_responses_review_form_element_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_responses
@@ -21820,7 +21789,7 @@ ALTER TABLE ONLY public.review_form_responses
 
 
 --
--- Name: review_form_responses_review_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_responses review_form_responses_review_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_responses
@@ -21828,7 +21797,7 @@ ALTER TABLE ONLY public.review_form_responses
 
 
 --
--- Name: review_form_settings_review_form_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_form_settings review_form_settings_review_form_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_form_settings
@@ -21836,7 +21805,7 @@ ALTER TABLE ONLY public.review_form_settings
 
 
 --
--- Name: review_round_files_review_round_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_round_files review_round_files_review_round_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_round_files
@@ -21844,7 +21813,7 @@ ALTER TABLE ONLY public.review_round_files
 
 
 --
--- Name: review_round_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_round_files review_round_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_round_files
@@ -21852,7 +21821,7 @@ ALTER TABLE ONLY public.review_round_files
 
 
 --
--- Name: review_round_files_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_round_files review_round_files_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_round_files
@@ -21860,7 +21829,7 @@ ALTER TABLE ONLY public.review_round_files
 
 
 --
--- Name: review_rounds_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: review_rounds review_rounds_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.review_rounds
@@ -21868,7 +21837,7 @@ ALTER TABLE ONLY public.review_rounds
 
 
 --
--- Name: sales_rights_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: sales_rights sales_rights_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.sales_rights
@@ -21876,7 +21845,7 @@ ALTER TABLE ONLY public.sales_rights
 
 
 --
--- Name: section_editors_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: subeditor_submission_group section_editors_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.subeditor_submission_group
@@ -21884,7 +21853,7 @@ ALTER TABLE ONLY public.subeditor_submission_group
 
 
 --
--- Name: series_categories_category_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series_categories series_categories_category_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series_categories
@@ -21892,7 +21861,7 @@ ALTER TABLE ONLY public.series_categories
 
 
 --
--- Name: series_categories_series_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series_categories series_categories_series_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series_categories
@@ -21900,7 +21869,7 @@ ALTER TABLE ONLY public.series_categories
 
 
 --
--- Name: series_press_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series series_press_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series
@@ -21908,7 +21877,7 @@ ALTER TABLE ONLY public.series
 
 
 --
--- Name: series_review_form_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series series_review_form_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series
@@ -21916,7 +21885,7 @@ ALTER TABLE ONLY public.series
 
 
 --
--- Name: series_settings_series_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: series_settings series_settings_series_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.series_settings
@@ -21924,7 +21893,7 @@ ALTER TABLE ONLY public.series_settings
 
 
 --
--- Name: sessions_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: sessions sessions_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.sessions
@@ -21932,7 +21901,7 @@ ALTER TABLE ONLY public.sessions
 
 
 --
--- Name: spotlight_settings_spotlight_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: spotlight_settings spotlight_settings_spotlight_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.spotlight_settings
@@ -21940,7 +21909,7 @@ ALTER TABLE ONLY public.spotlight_settings
 
 
 --
--- Name: spotlights_press_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: spotlights spotlights_press_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.spotlights
@@ -21948,7 +21917,7 @@ ALTER TABLE ONLY public.spotlights
 
 
 --
--- Name: stage_assignments_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: stage_assignments stage_assignments_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments
@@ -21956,7 +21925,7 @@ ALTER TABLE ONLY public.stage_assignments
 
 
 --
--- Name: stage_assignments_user_group_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: stage_assignments stage_assignments_user_group_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments
@@ -21964,7 +21933,7 @@ ALTER TABLE ONLY public.stage_assignments
 
 
 --
--- Name: stage_assignments_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: stage_assignments stage_assignments_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments
@@ -21972,7 +21941,7 @@ ALTER TABLE ONLY public.stage_assignments
 
 
 --
--- Name: static_page_settings_static_page_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: static_page_settings static_page_settings_static_page_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.static_page_settings
@@ -21980,7 +21949,7 @@ ALTER TABLE ONLY public.static_page_settings
 
 
 --
--- Name: subeditor_submission_group_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: subeditor_submission_group subeditor_submission_group_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.subeditor_submission_group
@@ -21988,7 +21957,7 @@ ALTER TABLE ONLY public.subeditor_submission_group
 
 
 --
--- Name: subeditor_submission_group_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: subeditor_submission_group subeditor_submission_group_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.subeditor_submission_group
@@ -21996,7 +21965,7 @@ ALTER TABLE ONLY public.subeditor_submission_group
 
 
 --
--- Name: submission_chapter_authors_author_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapter_authors submission_chapter_authors_author_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapter_authors
@@ -22004,7 +21973,7 @@ ALTER TABLE ONLY public.submission_chapter_authors
 
 
 --
--- Name: submission_chapter_authors_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapter_authors submission_chapter_authors_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapter_authors
@@ -22012,7 +21981,7 @@ ALTER TABLE ONLY public.submission_chapter_authors
 
 
 --
--- Name: submission_chapter_settings_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapter_settings submission_chapter_settings_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapter_settings
@@ -22020,7 +21989,7 @@ ALTER TABLE ONLY public.submission_chapter_settings
 
 
 --
--- Name: submission_chapters_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapters submission_chapters_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapters
@@ -22028,7 +21997,7 @@ ALTER TABLE ONLY public.submission_chapters
 
 
 --
--- Name: submission_chapters_primary_contact_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapters submission_chapters_primary_contact_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapters
@@ -22036,7 +22005,7 @@ ALTER TABLE ONLY public.submission_chapters
 
 
 --
--- Name: submission_chapters_publication_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapters submission_chapters_publication_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapters
@@ -22044,7 +22013,7 @@ ALTER TABLE ONLY public.submission_chapters
 
 
 --
--- Name: submission_chapters_source_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_chapters submission_chapters_source_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_chapters
@@ -22052,7 +22021,7 @@ ALTER TABLE ONLY public.submission_chapters
 
 
 --
--- Name: submission_comments_author_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_comments submission_comments_author_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_comments
@@ -22060,7 +22029,7 @@ ALTER TABLE ONLY public.submission_comments
 
 
 --
--- Name: submission_comments_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_comments submission_comments_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_comments
@@ -22068,7 +22037,7 @@ ALTER TABLE ONLY public.submission_comments
 
 
 --
--- Name: submission_file_revisions_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_file_revisions submission_file_revisions_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -22076,7 +22045,7 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_file_revisions_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_file_revisions submission_file_revisions_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -22084,7 +22053,7 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_file_settings_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_file_settings submission_file_settings_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_file_settings
@@ -22092,7 +22061,7 @@ ALTER TABLE ONLY public.submission_file_settings
 
 
 --
--- Name: submission_files_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_files submission_files_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -22100,7 +22069,7 @@ ALTER TABLE ONLY public.submission_files
 
 
 --
--- Name: submission_files_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_files submission_files_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -22108,7 +22077,7 @@ ALTER TABLE ONLY public.submission_files
 
 
 --
--- Name: submission_files_genre_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_files submission_files_genre_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -22116,7 +22085,7 @@ ALTER TABLE ONLY public.submission_files
 
 
 --
--- Name: submission_files_source_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_files submission_files_source_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -22124,7 +22093,7 @@ ALTER TABLE ONLY public.submission_files
 
 
 --
--- Name: submission_files_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_files submission_files_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -22132,7 +22101,7 @@ ALTER TABLE ONLY public.submission_files
 
 
 --
--- Name: submission_files_uploader_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_files submission_files_uploader_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -22140,7 +22109,7 @@ ALTER TABLE ONLY public.submission_files
 
 
 --
--- Name: submission_search_object_keywords_keyword_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_object_keywords submission_search_object_keywords_keyword_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_object_keywords
@@ -22148,7 +22117,7 @@ ALTER TABLE ONLY public.submission_search_object_keywords
 
 
 --
--- Name: submission_search_object_keywords_object_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_object_keywords submission_search_object_keywords_object_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_object_keywords
@@ -22156,7 +22125,7 @@ ALTER TABLE ONLY public.submission_search_object_keywords
 
 
 --
--- Name: submission_search_object_submission; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_search_objects submission_search_object_submission; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_search_objects
@@ -22164,7 +22133,7 @@ ALTER TABLE ONLY public.submission_search_objects
 
 
 --
--- Name: submission_settings_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submission_settings submission_settings_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submission_settings
@@ -22172,7 +22141,7 @@ ALTER TABLE ONLY public.submission_settings
 
 
 --
--- Name: submissions_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submissions submissions_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submissions
@@ -22180,7 +22149,7 @@ ALTER TABLE ONLY public.submissions
 
 
 --
--- Name: submissions_publication_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: submissions submissions_publication_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.submissions
@@ -22188,7 +22157,7 @@ ALTER TABLE ONLY public.submissions
 
 
 --
--- Name: temporary_files_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: temporary_files temporary_files_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.temporary_files
@@ -22196,7 +22165,7 @@ ALTER TABLE ONLY public.temporary_files
 
 
 --
--- Name: user_group_settings_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_group_settings user_group_settings_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_group_settings
@@ -22204,7 +22173,7 @@ ALTER TABLE ONLY public.user_group_settings
 
 
 --
--- Name: user_group_stage_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_group_stage user_group_stage_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_group_stage
@@ -22212,7 +22181,7 @@ ALTER TABLE ONLY public.user_group_stage
 
 
 --
--- Name: user_group_stage_user_group_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_group_stage user_group_stage_user_group_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_group_stage
@@ -22220,7 +22189,7 @@ ALTER TABLE ONLY public.user_group_stage
 
 
 --
--- Name: user_interests_controlled_vocab_entry_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_interests user_interests_controlled_vocab_entry_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_interests
@@ -22228,7 +22197,7 @@ ALTER TABLE ONLY public.user_interests
 
 
 --
--- Name: user_interests_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_interests user_interests_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_interests
@@ -22236,7 +22205,7 @@ ALTER TABLE ONLY public.user_interests
 
 
 --
--- Name: user_settings_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_settings user_settings_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_settings
@@ -22244,7 +22213,7 @@ ALTER TABLE ONLY public.user_settings
 
 
 --
--- Name: user_user_groups_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_user_groups user_user_groups_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_user_groups
@@ -22252,7 +22221,7 @@ ALTER TABLE ONLY public.user_user_groups
 
 
 --
--- Name: user_user_groups_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: user_user_groups user_user_groups_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.user_user_groups
@@ -22260,7 +22229,7 @@ ALTER TABLE ONLY public.user_user_groups
 
 
 --
--- Name: usi_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_institution_temporary_records usi_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_institution_temporary_records
@@ -22268,7 +22237,7 @@ ALTER TABLE ONLY public.usage_stats_institution_temporary_records
 
 
 --
--- Name: usii_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_investigations_temporary_records usii_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
@@ -22276,7 +22245,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
 
 
 --
--- Name: usii_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_investigations_temporary_records usii_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
@@ -22284,7 +22253,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
 
 
 --
--- Name: usii_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_investigations_temporary_records usii_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
@@ -22292,7 +22261,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
 
 
 --
--- Name: usii_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_investigations_temporary_records usii_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
@@ -22300,7 +22269,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
 
 
 --
--- Name: usii_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_investigations_temporary_records usii_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
@@ -22308,7 +22277,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
 
 
 --
--- Name: usir_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_requests_temporary_records usir_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
@@ -22316,7 +22285,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
 
 
 --
--- Name: usir_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_requests_temporary_records usir_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
@@ -22324,7 +22293,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
 
 
 --
--- Name: usir_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_requests_temporary_records usir_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
@@ -22332,7 +22301,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
 
 
 --
--- Name: usir_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_requests_temporary_records usir_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
@@ -22340,7 +22309,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
 
 
 --
--- Name: usir_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_item_requests_temporary_records usir_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
@@ -22348,7 +22317,7 @@ ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
 
 
 --
--- Name: ust_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_total_temporary_records ust_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_total_temporary_records
@@ -22356,7 +22325,7 @@ ALTER TABLE ONLY public.usage_stats_total_temporary_records
 
 
 --
--- Name: ust_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_total_temporary_records ust_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_total_temporary_records
@@ -22364,7 +22333,7 @@ ALTER TABLE ONLY public.usage_stats_total_temporary_records
 
 
 --
--- Name: ust_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_total_temporary_records ust_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_total_temporary_records
@@ -22372,7 +22341,7 @@ ALTER TABLE ONLY public.usage_stats_total_temporary_records
 
 
 --
--- Name: ust_series_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_total_temporary_records ust_series_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_total_temporary_records
@@ -22380,7 +22349,7 @@ ALTER TABLE ONLY public.usage_stats_total_temporary_records
 
 
 --
--- Name: ust_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_total_temporary_records ust_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_total_temporary_records
@@ -22388,7 +22357,7 @@ ALTER TABLE ONLY public.usage_stats_total_temporary_records
 
 
 --
--- Name: ust_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_total_temporary_records ust_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_total_temporary_records
@@ -22396,7 +22365,7 @@ ALTER TABLE ONLY public.usage_stats_total_temporary_records
 
 
 --
--- Name: usti_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_investigations_temporary_records usti_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
@@ -22404,7 +22373,7 @@ ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_record
 
 
 --
--- Name: usti_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_investigations_temporary_records usti_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
@@ -22412,7 +22381,7 @@ ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_record
 
 
 --
--- Name: usti_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_investigations_temporary_records usti_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
@@ -22420,7 +22389,7 @@ ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_record
 
 
 --
--- Name: usti_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_investigations_temporary_records usti_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
@@ -22428,7 +22397,7 @@ ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_record
 
 
 --
--- Name: usti_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_investigations_temporary_records usti_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
@@ -22436,7 +22405,7 @@ ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_record
 
 
 --
--- Name: ustr_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_requests_temporary_records ustr_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
@@ -22444,7 +22413,7 @@ ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
 
 
 --
--- Name: ustr_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_requests_temporary_records ustr_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
@@ -22452,7 +22421,7 @@ ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
 
 
 --
--- Name: ustr_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_requests_temporary_records ustr_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
@@ -22460,7 +22429,7 @@ ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
 
 
 --
--- Name: ustr_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_requests_temporary_records ustr_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
@@ -22468,21 +22437,11 @@ ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
 
 
 --
--- Name: ustr_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+-- Name: usage_stats_unique_title_requests_temporary_records ustr_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
 --
 
 ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
     ADD CONSTRAINT ustr_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
-
-
---
--- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 --
