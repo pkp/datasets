@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.7.41, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.32, for Linux (x86_64)
 --
 -- Host: localhost    Database: ops-ci
 -- ------------------------------------------------------
--- Server version	5.7.41-0ubuntu0.18.04.1
+-- Server version	8.0.32-0ubuntu0.20.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,19 +21,19 @@
 
 DROP TABLE IF EXISTS `access_keys`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `access_keys` (
-  `access_key_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `access_key_id` bigint NOT NULL AUTO_INCREMENT,
   `context` varchar(40) NOT NULL,
   `key_hash` varchar(40) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `user_id` bigint NOT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   `expiry_date` datetime NOT NULL,
   PRIMARY KEY (`access_key_id`),
   KEY `access_keys_user_id` (`user_id`),
   KEY `access_keys_hash` (`key_hash`,`user_id`,`context`),
   CONSTRAINT `access_keys_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Access keys are used to provide pseudo-login functionality for security-minimal tasks. Passkeys can be emailed directly to users, who can use them for a limited time in lieu of standard username and password.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Access keys are used to provide pseudo-login functionality for security-minimal tasks. Passkeys can be emailed directly to users, who can use them for a limited time in lieu of standard username and password.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -51,10 +51,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_settings` (
-  `announcement_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `announcement_id` bigint(20) NOT NULL,
+  `announcement_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `announcement_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -63,7 +63,7 @@ CREATE TABLE `announcement_settings` (
   UNIQUE KEY `announcement_settings_unique` (`announcement_id`,`locale`,`setting_name`),
   KEY `announcement_settings_announcement_id` (`announcement_id`),
   CONSTRAINT `announcement_settings_announcement_id_foreign` FOREIGN KEY (`announcement_id`) REFERENCES `announcements` (`announcement_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about announcements, including localized properties like names and contents.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about announcements, including localized properties like names and contents.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -81,10 +81,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_type_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_type_settings` (
-  `announcement_type_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `type_id` bigint(20) NOT NULL,
+  `announcement_type_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `type_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -93,7 +93,7 @@ CREATE TABLE `announcement_type_settings` (
   UNIQUE KEY `announcement_type_settings_unique` (`type_id`,`locale`,`setting_name`),
   KEY `announcement_type_settings_type_id` (`type_id`),
   CONSTRAINT `announcement_type_settings_type_id_foreign` FOREIGN KEY (`type_id`) REFERENCES `announcement_types` (`type_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about announcement types, including localized properties like their names.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about announcement types, including localized properties like their names.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -111,14 +111,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_types`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_types` (
-  `type_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `type_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   PRIMARY KEY (`type_id`),
   KEY `announcement_types_context_id` (`context_id`),
   CONSTRAINT `announcement_types_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Announcement types allow for announcements to optionally be categorized.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Announcement types allow for announcements to optionally be categorized.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -136,19 +136,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcements`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcements` (
-  `announcement_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` smallint(6) DEFAULT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `type_id` bigint(20) DEFAULT NULL,
+  `announcement_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` smallint DEFAULT NULL,
+  `assoc_id` bigint NOT NULL,
+  `type_id` bigint DEFAULT NULL,
   `date_expire` date DEFAULT NULL,
   `date_posted` datetime NOT NULL,
   PRIMARY KEY (`announcement_id`),
   KEY `announcements_type_id` (`type_id`),
   KEY `announcements_assoc` (`assoc_type`,`assoc_id`),
   CONSTRAINT `announcements_type_id_foreign` FOREIGN KEY (`type_id`) REFERENCES `announcement_types` (`type_id`) ON DELETE SET NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Announcements are messages that can be presented to users e.g. on the homepage.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Announcements are messages that can be presented to users e.g. on the homepage.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -166,10 +166,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `author_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `author_settings` (
-  `author_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `author_id` bigint(20) NOT NULL,
+  `author_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `author_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -177,7 +177,7 @@ CREATE TABLE `author_settings` (
   UNIQUE KEY `author_settings_unique` (`author_id`,`locale`,`setting_name`),
   KEY `author_settings_author_id` (`author_id`),
   CONSTRAINT `author_settings_author_id` FOREIGN KEY (`author_id`) REFERENCES `authors` (`author_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=utf8 COMMENT='More data about authors, including localized properties such as their name and affiliation.';
+) ENGINE=InnoDB AUTO_INCREMENT=119 DEFAULT CHARSET=utf8mb3 COMMENT='More data about authors, including localized properties such as their name and affiliation.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -196,20 +196,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `authors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `authors` (
-  `author_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `author_id` bigint NOT NULL AUTO_INCREMENT,
   `email` varchar(90) NOT NULL,
-  `include_in_browse` smallint(6) NOT NULL DEFAULT '1',
-  `publication_id` bigint(20) NOT NULL,
+  `include_in_browse` smallint NOT NULL DEFAULT '1',
+  `publication_id` bigint NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
-  `user_group_id` bigint(20) DEFAULT NULL,
+  `user_group_id` bigint DEFAULT NULL,
   PRIMARY KEY (`author_id`),
   KEY `authors_user_group_id` (`user_group_id`),
   KEY `authors_publication_id` (`publication_id`),
   CONSTRAINT `authors_publication_id` FOREIGN KEY (`publication_id`) REFERENCES `publications` (`publication_id`) ON DELETE CASCADE,
   CONSTRAINT `authors_user_group_id_foreign` FOREIGN KEY (`user_group_id`) REFERENCES `user_groups` (`user_group_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COMMENT='The authors of a publication.';
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb3 COMMENT='The authors of a publication.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -228,12 +228,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categories` (
-  `category_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `parent_id` bigint(20) DEFAULT NULL,
-  `seq` bigint(20) DEFAULT NULL,
+  `category_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `parent_id` bigint DEFAULT NULL,
+  `seq` bigint DEFAULT NULL,
   `path` varchar(255) NOT NULL,
   `image` text,
   PRIMARY KEY (`category_id`),
@@ -243,7 +243,7 @@ CREATE TABLE `categories` (
   KEY `category_parent_id` (`parent_id`),
   CONSTRAINT `categories_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `categories_parent_id_foreign` FOREIGN KEY (`parent_id`) REFERENCES `categories` (`category_id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='Categories permit the organization of submissions into a heirarchical structure.';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COMMENT='Categories permit the organization of submissions into a heirarchical structure.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -262,10 +262,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `category_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `category_settings` (
-  `category_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `category_id` bigint(20) NOT NULL,
+  `category_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `category_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -273,7 +273,7 @@ CREATE TABLE `category_settings` (
   UNIQUE KEY `category_settings_unique` (`category_id`,`locale`,`setting_name`),
   KEY `category_settings_category_id` (`category_id`),
   CONSTRAINT `category_settings_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='More data about categories, including localized properties such as names.';
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3 COMMENT='More data about categories, including localized properties such as names.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -292,10 +292,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `citation_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `citation_settings` (
-  `citation_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `citation_id` bigint(20) NOT NULL,
+  `citation_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `citation_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -304,7 +304,7 @@ CREATE TABLE `citation_settings` (
   UNIQUE KEY `citation_settings_unique` (`citation_id`,`locale`,`setting_name`),
   KEY `citation_settings_citation_id` (`citation_id`),
   CONSTRAINT `citation_settings_citation_id` FOREIGN KEY (`citation_id`) REFERENCES `citations` (`citation_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Additional data about citations, including localized content.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Additional data about citations, including localized content.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -322,17 +322,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `citations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `citations` (
-  `citation_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `publication_id` bigint(20) NOT NULL,
+  `citation_id` bigint NOT NULL AUTO_INCREMENT,
+  `publication_id` bigint NOT NULL,
   `raw_citation` text NOT NULL,
-  `seq` bigint(20) NOT NULL DEFAULT '0',
+  `seq` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`citation_id`),
   UNIQUE KEY `citations_publication_seq` (`publication_id`,`seq`),
   KEY `citations_publication` (`publication_id`),
   CONSTRAINT `citations_publication` FOREIGN KEY (`publication_id`) REFERENCES `publications` (`publication_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='A citation made by an associated publication.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='A citation made by an associated publication.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -350,16 +350,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocab_entries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocab_entries` (
-  `controlled_vocab_entry_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `controlled_vocab_id` bigint(20) NOT NULL,
+  `controlled_vocab_entry_id` bigint NOT NULL AUTO_INCREMENT,
+  `controlled_vocab_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
   PRIMARY KEY (`controlled_vocab_entry_id`),
   KEY `controlled_vocab_entries_controlled_vocab_id` (`controlled_vocab_id`),
   KEY `controlled_vocab_entries_cv_id` (`controlled_vocab_id`,`seq`),
   CONSTRAINT `controlled_vocab_entries_controlled_vocab_id_foreign` FOREIGN KEY (`controlled_vocab_id`) REFERENCES `controlled_vocabs` (`controlled_vocab_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=134 DEFAULT CHARSET=utf8 COMMENT='The order that a word or phrase used in a controlled vocabulary should appear. For example, the order of keywords in a publication.';
+) ENGINE=InnoDB AUTO_INCREMENT=134 DEFAULT CHARSET=utf8mb3 COMMENT='The order that a word or phrase used in a controlled vocabulary should appear. For example, the order of keywords in a publication.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -378,10 +378,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocab_entry_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocab_entry_settings` (
-  `controlled_vocab_entry_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `controlled_vocab_entry_id` bigint(20) NOT NULL,
+  `controlled_vocab_entry_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `controlled_vocab_entry_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -390,7 +390,7 @@ CREATE TABLE `controlled_vocab_entry_settings` (
   UNIQUE KEY `c_v_e_s_pkey` (`controlled_vocab_entry_id`,`locale`,`setting_name`),
   KEY `c_v_e_s_entry_id` (`controlled_vocab_entry_id`),
   CONSTRAINT `c_v_e_s_entry_id` FOREIGN KEY (`controlled_vocab_entry_id`) REFERENCES `controlled_vocab_entries` (`controlled_vocab_entry_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=134 DEFAULT CHARSET=utf8 COMMENT='More data about a controlled vocabulary entry, including localized properties such as the actual word or phrase.';
+) ENGINE=InnoDB AUTO_INCREMENT=134 DEFAULT CHARSET=utf8mb3 COMMENT='More data about a controlled vocabulary entry, including localized properties such as the actual word or phrase.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -409,15 +409,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocabs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocabs` (
-  `controlled_vocab_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `controlled_vocab_id` bigint NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(64) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL DEFAULT '0',
-  `assoc_id` bigint(20) NOT NULL DEFAULT '0',
+  `assoc_type` bigint NOT NULL DEFAULT '0',
+  `assoc_id` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`controlled_vocab_id`),
   UNIQUE KEY `controlled_vocab_symbolic` (`symbolic`,`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8 COMMENT='Every word or phrase used in a controlled vocabulary. Controlled vocabularies are used for submission metadata like keywords and subjects, reviewer interests, and wherever a similar dictionary of words or phrases is required. Each entry corresponds to a word or phrase like "cellular reproduction" and a type like "submissionKeyword".';
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb3 COMMENT='Every word or phrase used in a controlled vocabulary. Controlled vocabularies are used for submission metadata like keywords and subjects, reviewer interests, and wherever a similar dictionary of words or phrases is required. Each entry corresponds to a word or phrase like "cellular reproduction" and a type like "submissionKeyword".';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -436,16 +436,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstone_oai_set_objects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstone_oai_set_objects` (
-  `object_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `tombstone_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `object_id` bigint NOT NULL AUTO_INCREMENT,
+  `tombstone_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   PRIMARY KEY (`object_id`),
   KEY `data_object_tombstone_oai_set_objects_tombstone_id` (`tombstone_id`),
   CONSTRAINT `data_object_tombstone_oai_set_objects_tombstone_id` FOREIGN KEY (`tombstone_id`) REFERENCES `data_object_tombstones` (`tombstone_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Relationships between tombstones and other data that can be collected in OAI sets, e.g. sections.';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COMMENT='Relationships between tombstones and other data that can be collected in OAI sets, e.g. sections.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -463,10 +463,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstone_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstone_settings` (
-  `tombstone_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `tombstone_id` bigint(20) NOT NULL,
+  `tombstone_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `tombstone_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -475,7 +475,7 @@ CREATE TABLE `data_object_tombstone_settings` (
   UNIQUE KEY `data_object_tombstone_settings_unique` (`tombstone_id`,`locale`,`setting_name`),
   KEY `data_object_tombstone_settings_tombstone_id` (`tombstone_id`),
   CONSTRAINT `data_object_tombstone_settings_tombstone_id` FOREIGN KEY (`tombstone_id`) REFERENCES `data_object_tombstones` (`tombstone_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about data object tombstones, including localized content.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about data object tombstones, including localized content.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -493,17 +493,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstones` (
-  `tombstone_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `data_object_id` bigint(20) NOT NULL,
+  `tombstone_id` bigint NOT NULL AUTO_INCREMENT,
+  `data_object_id` bigint NOT NULL,
   `date_deleted` datetime NOT NULL,
   `set_spec` varchar(255) NOT NULL,
   `set_name` varchar(255) NOT NULL,
   `oai_identifier` varchar(255) NOT NULL,
   PRIMARY KEY (`tombstone_id`),
   KEY `data_object_tombstones_data_object_id` (`data_object_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Entries for published data that has been removed. Usually used in the OAI endpoint.';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COMMENT='Entries for published data that has been removed. Usually used in the OAI endpoint.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -521,10 +521,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `doi_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `doi_settings` (
-  `doi_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `doi_id` bigint(20) NOT NULL,
+  `doi_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `doi_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -532,7 +532,7 @@ CREATE TABLE `doi_settings` (
   UNIQUE KEY `doi_settings_unique` (`doi_id`,`locale`,`setting_name`),
   KEY `doi_settings_doi_id` (`doi_id`),
   CONSTRAINT `doi_settings_doi_id_foreign` FOREIGN KEY (`doi_id`) REFERENCES `dois` (`doi_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about DOIs, including the registration agency.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about DOIs, including the registration agency.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -550,16 +550,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `dois`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `dois` (
-  `doi_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `doi_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `doi` varchar(255) NOT NULL,
-  `status` smallint(6) NOT NULL DEFAULT '1',
+  `status` smallint NOT NULL DEFAULT '1',
   PRIMARY KEY (`doi_id`),
   KEY `dois_context_id` (`context_id`),
   CONSTRAINT `dois_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Stores all DOIs used in the system.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Stores all DOIs used in the system.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -577,15 +577,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `edit_decisions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `edit_decisions` (
-  `edit_decision_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `review_round_id` bigint(20) DEFAULT NULL,
-  `stage_id` bigint(20) DEFAULT NULL,
-  `round` smallint(6) DEFAULT NULL,
-  `editor_id` bigint(20) NOT NULL,
-  `decision` smallint(6) NOT NULL,
+  `edit_decision_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `review_round_id` bigint DEFAULT NULL,
+  `stage_id` bigint DEFAULT NULL,
+  `round` smallint DEFAULT NULL,
+  `editor_id` bigint NOT NULL,
+  `decision` smallint NOT NULL,
   `date_decided` datetime NOT NULL,
   PRIMARY KEY (`edit_decision_id`),
   KEY `edit_decisions_submission_id` (`submission_id`),
@@ -594,7 +594,7 @@ CREATE TABLE `edit_decisions` (
   CONSTRAINT `edit_decisions_editor_id` FOREIGN KEY (`editor_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE,
   CONSTRAINT `edit_decisions_review_round_id_foreign` FOREIGN KEY (`review_round_id`) REFERENCES `review_rounds` (`review_round_id`) ON DELETE CASCADE,
   CONSTRAINT `edit_decisions_submission_id` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Editorial decisions recorded on a submission, such as decisions to accept or decline the submission, as well as decisions to send for review, send to copyediting, request revisions, and more.';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COMMENT='Editorial decisions recorded on a submission, such as decisions to accept or decline the submission, as well as decisions to send for review, send to copyediting, request revisions, and more.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -603,7 +603,7 @@ CREATE TABLE `edit_decisions` (
 
 LOCK TABLES `edit_decisions` WRITE;
 /*!40000 ALTER TABLE `edit_decisions` DISABLE KEYS */;
-INSERT INTO `edit_decisions` VALUES (1,4,NULL,5,NULL,3,8,'2023-03-31 23:11:02'),(2,4,NULL,5,NULL,3,16,'2023-03-31 23:11:08'),(3,4,NULL,5,NULL,3,8,'2023-03-31 23:11:15');
+INSERT INTO `edit_decisions` VALUES (1,4,NULL,5,NULL,3,8,'2023-04-03 19:32:35'),(2,4,NULL,5,NULL,3,16,'2023-04-03 19:32:42'),(3,4,NULL,5,NULL,3,8,'2023-04-03 19:32:49');
 /*!40000 ALTER TABLE `edit_decisions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -613,14 +613,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_log` (
-  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `sender_id` bigint(20) NOT NULL,
+  `log_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `sender_id` bigint NOT NULL,
   `date_sent` datetime NOT NULL,
-  `event_type` bigint(20) DEFAULT NULL,
+  `event_type` bigint DEFAULT NULL,
   `from_address` varchar(255) DEFAULT NULL,
   `recipients` text,
   `cc_recipients` text,
@@ -629,7 +629,7 @@ CREATE TABLE `email_log` (
   `body` text,
   PRIMARY KEY (`log_id`),
   KEY `email_log_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8 COMMENT='A record of email messages that are sent in relation to an associated entity, such as a submission.';
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb3 COMMENT='A record of email messages that are sent in relation to an associated entity, such as a submission.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -638,7 +638,7 @@ CREATE TABLE `email_log` (
 
 LOCK TABLES `email_log` WRITE;
 /*!40000 ALTER TABLE `email_log` DISABLE KEYS */;
-INSERT INTO `email_log` VALUES (1,1048585,1,0,'2023-03-31 23:08:25',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/1\">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) \"L\", \"a\" and \"Chroma\" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/1\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(2,1048585,1,0,'2023-03-31 23:08:25',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/1\">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) \"L\", \"a\" and \"Chroma\" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/1\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(3,1048585,1,0,'2023-03-31 23:08:25',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Carlo Corino\" <ccorino@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Carlo Corino,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The influence of lactation on the quantity and quality of cashmere production, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/1</p><p>If you have been logged out, you can login again with the username ccorino.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/1\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(4,1048585,2,0,'2023-03-31 23:09:29',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/2\">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/2\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(5,1048585,2,0,'2023-03-31 23:09:29',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/2\">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/2\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(6,1048585,2,0,'2023-03-31 23:09:29',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Catherine Kwantes\" <ckwantes@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Catherine Kwantes,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/2</p><p>If you have been logged out, you can login again with the username ckwantes.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/2\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(7,1048585,2,0,'2023-03-31 23:09:29',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Urho Kekkonen\" <notanemailukk@mailinator.com>','','','Submission Acknowledgement','<p>Dear Urho Kekkonen,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Catherine Kwantes, provided the following details:</p><p>The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(8,1048585,3,0,'2023-03-31 23:10:03',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/3\">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/3\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(9,1048585,3,0,'2023-03-31 23:10:03',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/3\">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/3\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(10,1048585,3,0,'2023-03-31 23:10:03',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Craig Montgomerie\" <cmontgomerie@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Craig Montgomerie,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/3</p><p>If you have been logged out, you can login again with the username cmontgomerie.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/3\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(11,1048585,3,0,'2023-03-31 23:10:03',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Mark Irvine\" <mirvine@mailinator.com>','','','Submission Acknowledgement','<p>Dear Mark Irvine,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Craig Montgomerie, provided the following details:</p><p>Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(12,1048585,4,0,'2023-03-31 23:10:53',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/4\">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/4\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(13,1048585,4,0,'2023-03-31 23:10:53',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/4\">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/4\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(14,1048585,4,0,'2023-03-31 23:10:53',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Diaga Diouf,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Genetic transformation of forest trees, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/4</p><p>If you have been logged out, you can login again with the username ddiouf.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/4\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(15,1048585,4,3,'2023-03-31 23:11:02',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','Your submission has been declined','<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),(16,1048585,4,3,'2023-03-31 23:11:08',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','We have reversed the decision to decline your submission','<p>Dear Diaga Diouf,</p>\n<p>The decision to decline your submission, Genetic transformation of forest trees, has been reversed. \nA moderator will look further at your submission before deciding whether to decline \nor post the submission.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/4\">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>\n'),(17,1048585,4,3,'2023-03-31 23:11:15',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','Your submission has been declined','<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),(18,1048585,5,0,'2023-03-31 23:11:39',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/5\">Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/5\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(19,1048585,5,0,'2023-03-31 23:11:39',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/5\">Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/5\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(20,1048585,5,0,'2023-03-31 23:11:39',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Dana Phillips\" <dphillips@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Dana Phillips,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/5</p><p>If you have been logged out, you can login again with the username dphillips.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/5\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(21,1048585,6,0,'2023-03-31 23:12:19',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/6\">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/6\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(22,1048585,6,0,'2023-03-31 23:12:19',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/6\">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/6\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(23,1048585,6,0,'2023-03-31 23:12:19',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Domatilia Sokoloff\" <dsokoloff@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Domatilia Sokoloff,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/6</p><p>If you have been logged out, you can login again with the username dsokoloff.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/6\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(24,1048585,7,0,'2023-03-31 23:12:48',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/7\">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/7\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(25,1048585,7,0,'2023-03-31 23:12:48',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/7\">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/7\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(26,1048585,7,0,'2023-03-31 23:12:48',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Elinor Ostrom\" <eostrom@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Elinor Ostrom,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/7</p><p>If you have been logged out, you can login again with the username eostrom.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/7\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(27,1048585,7,0,'2023-03-31 23:12:48',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Frank van Laerhoven\" <fvanlaerhoven@mailinator.com>','','','Submission Acknowledgement','<p>Dear Frank van Laerhoven,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Elinor Ostrom, provided the following details:</p><p>Developing efficacy beliefs in the classroom<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(28,1048585,8,0,'2023-03-31 23:13:17',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/8\">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/8\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(29,1048585,8,0,'2023-03-31 23:13:17',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/8\">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/8\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(30,1048585,8,0,'2023-03-31 23:13:17',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Fabio Paglieri\" <fpaglieri@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Fabio Paglieri,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hansen & Pinto: Reason Reclaimed, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/8</p><p>If you have been logged out, you can login again with the username fpaglieri.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/8\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(31,1048585,9,0,'2023-03-31 23:13:46',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/9\">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/9\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(32,1048585,9,0,'2023-03-31 23:13:46',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/9\">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/9\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(33,1048585,9,0,'2023-03-31 23:13:46',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"John Mwandenga\" <jmwandenga@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear John Mwandenga,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/9</p><p>If you have been logged out, you can login again with the username jmwandenga.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/9\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(34,1048585,10,0,'2023-03-31 23:14:14',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/10\">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/10\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(35,1048585,10,0,'2023-03-31 23:14:14',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/10\">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/10\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(36,1048585,10,0,'2023-03-31 23:14:14',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"John Novak\" <jnovak@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear John Novak,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Condensing Water Availability Models to Focus on Specific Water Management Systems, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/10</p><p>If you have been logged out, you can login again with the username jnovak.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/10\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(37,1048585,11,0,'2023-03-31 23:14:43',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/11\">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/11\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(38,1048585,11,0,'2023-03-31 23:14:43',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/11\">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/11\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(39,1048585,11,0,'2023-03-31 23:14:43',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Karim Al-Khafaji\" <kalkhafaji@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Karim Al-Khafaji,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Learning Sustainable Design through Service, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/11</p><p>If you have been logged out, you can login again with the username kalkhafaji.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/11\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(40,1048585,11,0,'2023-03-31 23:14:43',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Margaret Morse\" <mmorse@mailinator.com>','','','Submission Acknowledgement','<p>Dear Margaret Morse,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Karim Al-Khafaji, provided the following details:</p><p>Learning Sustainable Design through Service<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(41,1048585,12,0,'2023-03-31 23:15:13',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/12\">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/12\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(42,1048585,12,0,'2023-03-31 23:15:13',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/12\">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/12\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(43,1048585,12,0,'2023-03-31 23:15:13',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Leo Christopher\" <lchristopher@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Leo Christopher,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Sodium butyrate improves growth performance of weaned piglets during the first period after weaning, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/12</p><p>If you have been logged out, you can login again with the username lchristopher.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/12\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(44,1048585,13,0,'2023-03-31 23:15:42',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/13\">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/13\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(45,1048585,13,0,'2023-03-31 23:15:42',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/13\">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/13\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(46,1048585,13,0,'2023-03-31 23:15:42',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Lise Kumiega\" <lkumiega@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Lise Kumiega,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/13</p><p>If you have been logged out, you can login again with the username lkumiega.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/13\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(47,1048585,14,0,'2023-03-31 23:16:12',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/14\">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/14\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(48,1048585,14,0,'2023-03-31 23:16:12',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/14\">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/14\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(49,1048585,14,0,'2023-03-31 23:16:12',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Patricia Daniel\" <pdaniel@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Patricia Daniel,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/14</p><p>If you have been logged out, you can login again with the username pdaniel.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/14\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(50,1048585,15,0,'2023-03-31 23:16:41',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/15\">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/15\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(51,1048585,15,0,'2023-03-31 23:16:41',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/15\">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/15\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(52,1048585,15,0,'2023-03-31 23:16:41',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Rana Baiyewu\" <rbaiyewu@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Rana Baiyewu,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Yam diseases and its management in Nigeria, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/15</p><p>If you have been logged out, you can login again with the username rbaiyewu.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/15\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(53,1048585,16,0,'2023-03-31 23:17:10',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/16\">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/16\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(54,1048585,16,0,'2023-03-31 23:17:10',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/16\">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/16\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(55,1048585,16,0,'2023-03-31 23:17:10',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Rosanna Rossi\" <rrossi@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Rosanna Rossi,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/16</p><p>If you have been logged out, you can login again with the username rrossi.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/16\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(56,1048585,17,0,'2023-03-31 23:17:40',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/17\">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/17\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(57,1048585,17,0,'2023-03-31 23:17:40',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/17\">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/17\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(58,1048585,17,0,'2023-03-31 23:17:40',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Vajiheh Karbasizaed\" <vkarbasizaed@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Vajiheh Karbasizaed,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/17</p><p>If you have been logged out, you can login again with the username vkarbasizaed.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/17\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(59,1048585,18,0,'2023-03-31 23:18:09',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/18\">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/18\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(60,1048585,18,0,'2023-03-31 23:18:09',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/18\">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/18\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(61,1048585,18,0,'2023-03-31 23:18:09',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Valerie Williamson\" <vwilliamson@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Valerie Williamson,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Self-Organization in Multi-Level Institutions in Networked Environments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/18</p><p>If you have been logged out, you can login again with the username vwilliamson.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/18\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(62,1048585,19,0,'2023-03-31 23:18:38',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/19\">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/19\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(63,1048585,19,0,'2023-03-31 23:18:38',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/19\">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/19\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(64,1048585,19,0,'2023-03-31 23:18:38',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Zita Woods\" <zwoods@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Zita Woods,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Finocchiaro: Arguments About Arguments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/19</p><p>If you have been logged out, you can login again with the username zwoods.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/19\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>');
+INSERT INTO `email_log` VALUES (1,1048585,1,0,'2023-04-03 19:29:40',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/1\">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) \"L\", \"a\" and \"Chroma\" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/1\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(2,1048585,1,0,'2023-04-03 19:29:40',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/1\">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) \"L\", \"a\" and \"Chroma\" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/1\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(3,1048585,1,0,'2023-04-03 19:29:40',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Carlo Corino\" <ccorino@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Carlo Corino,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The influence of lactation on the quantity and quality of cashmere production, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/1</p><p>If you have been logged out, you can login again with the username ccorino.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/1\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(4,1048585,2,0,'2023-04-03 19:30:49',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/2\">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/2\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(5,1048585,2,0,'2023-04-03 19:30:49',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/2\">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/2\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(6,1048585,2,0,'2023-04-03 19:30:49',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Catherine Kwantes\" <ckwantes@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Catherine Kwantes,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/2</p><p>If you have been logged out, you can login again with the username ckwantes.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/2\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(7,1048585,2,0,'2023-04-03 19:30:49',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Urho Kekkonen\" <notanemailukk@mailinator.com>','','','Submission Acknowledgement','<p>Dear Urho Kekkonen,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Catherine Kwantes, provided the following details:</p><p>The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(8,1048585,3,0,'2023-04-03 19:31:29',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/3\">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/3\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(9,1048585,3,0,'2023-04-03 19:31:29',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/3\">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/3\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(10,1048585,3,0,'2023-04-03 19:31:29',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Craig Montgomerie\" <cmontgomerie@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Craig Montgomerie,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/3</p><p>If you have been logged out, you can login again with the username cmontgomerie.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/3\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(11,1048585,3,0,'2023-04-03 19:31:29',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Mark Irvine\" <mirvine@mailinator.com>','','','Submission Acknowledgement','<p>Dear Mark Irvine,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Craig Montgomerie, provided the following details:</p><p>Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(12,1048585,4,0,'2023-04-03 19:32:25',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/4\">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/4\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(13,1048585,4,0,'2023-04-03 19:32:25',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/4\">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/4\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(14,1048585,4,0,'2023-04-03 19:32:25',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Diaga Diouf,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Genetic transformation of forest trees, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/4</p><p>If you have been logged out, you can login again with the username ddiouf.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/4\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(15,1048585,4,3,'2023-04-03 19:32:35',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','Your submission has been declined','<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),(16,1048585,4,3,'2023-04-03 19:32:42',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','We have reversed the decision to decline your submission','<p>Dear Diaga Diouf,</p>\n<p>The decision to decline your submission, Genetic transformation of forest trees, has been reversed. \nA moderator will look further at your submission before deciding whether to decline \nor post the submission.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/4\">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>\n'),(17,1048585,4,3,'2023-04-03 19:32:49',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Diaga Diouf\" <ddiouf@mailinator.com>','','','Your submission has been declined','<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),(18,1048585,5,0,'2023-04-03 19:33:16',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/5\">Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/5\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(19,1048585,5,0,'2023-04-03 19:33:16',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/5\">Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/5\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(20,1048585,5,0,'2023-04-03 19:33:16',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Dana Phillips\" <dphillips@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Dana Phillips,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/5</p><p>If you have been logged out, you can login again with the username dphillips.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/5\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(21,1048585,6,0,'2023-04-03 19:33:59',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/6\">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/6\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(22,1048585,6,0,'2023-04-03 19:33:59',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/6\">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/6\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(23,1048585,6,0,'2023-04-03 19:33:59',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Domatilia Sokoloff\" <dsokoloff@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Domatilia Sokoloff,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/6</p><p>If you have been logged out, you can login again with the username dsokoloff.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/6\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(24,1048585,7,0,'2023-04-03 19:34:31',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/7\">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/7\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(25,1048585,7,0,'2023-04-03 19:34:31',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/7\">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/7\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(26,1048585,7,0,'2023-04-03 19:34:31',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Elinor Ostrom\" <eostrom@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Elinor Ostrom,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/7</p><p>If you have been logged out, you can login again with the username eostrom.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/7\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(27,1048585,7,0,'2023-04-03 19:34:31',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Frank van Laerhoven\" <fvanlaerhoven@mailinator.com>','','','Submission Acknowledgement','<p>Dear Frank van Laerhoven,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Elinor Ostrom, provided the following details:</p><p>Developing efficacy beliefs in the classroom<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(28,1048585,8,0,'2023-04-03 19:35:02',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/8\">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/8\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(29,1048585,8,0,'2023-04-03 19:35:02',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/8\">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/8\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(30,1048585,8,0,'2023-04-03 19:35:02',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Fabio Paglieri\" <fpaglieri@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Fabio Paglieri,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hansen & Pinto: Reason Reclaimed, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/8</p><p>If you have been logged out, you can login again with the username fpaglieri.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/8\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(31,1048585,9,0,'2023-04-03 19:35:33',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/9\">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/9\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(32,1048585,9,0,'2023-04-03 19:35:33',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/9\">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/9\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(33,1048585,9,0,'2023-04-03 19:35:33',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"John Mwandenga\" <jmwandenga@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear John Mwandenga,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/9</p><p>If you have been logged out, you can login again with the username jmwandenga.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/9\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(34,1048585,10,0,'2023-04-03 19:36:04',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/10\">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/10\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(35,1048585,10,0,'2023-04-03 19:36:04',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/10\">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/10\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(36,1048585,10,0,'2023-04-03 19:36:04',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"John Novak\" <jnovak@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear John Novak,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Condensing Water Availability Models to Focus on Specific Water Management Systems, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/10</p><p>If you have been logged out, you can login again with the username jnovak.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/10\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(37,1048585,11,0,'2023-04-03 19:36:36',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/11\">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/11\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(38,1048585,11,0,'2023-04-03 19:36:36',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/11\">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/11\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(39,1048585,11,0,'2023-04-03 19:36:36',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Karim Al-Khafaji\" <kalkhafaji@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Karim Al-Khafaji,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Learning Sustainable Design through Service, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/11</p><p>If you have been logged out, you can login again with the username kalkhafaji.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/11\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(40,1048585,11,0,'2023-04-03 19:36:36',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Margaret Morse\" <mmorse@mailinator.com>','','','Submission Acknowledgement','<p>Dear Margaret Morse,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Karim Al-Khafaji, provided the following details:</p><p>Learning Sustainable Design through Service<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(41,1048585,12,0,'2023-04-03 19:37:08',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/12\">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/12\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(42,1048585,12,0,'2023-04-03 19:37:08',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/12\">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/12\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(43,1048585,12,0,'2023-04-03 19:37:08',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Leo Christopher\" <lchristopher@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Leo Christopher,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Sodium butyrate improves growth performance of weaned piglets during the first period after weaning, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/12</p><p>If you have been logged out, you can login again with the username lchristopher.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/12\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(44,1048585,13,0,'2023-04-03 19:37:41',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/13\">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/13\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(45,1048585,13,0,'2023-04-03 19:37:41',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/13\">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/13\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(46,1048585,13,0,'2023-04-03 19:37:41',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Lise Kumiega\" <lkumiega@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Lise Kumiega,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/13</p><p>If you have been logged out, you can login again with the username lkumiega.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/13\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(47,1048585,14,0,'2023-04-03 19:38:13',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/14\">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/14\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(48,1048585,14,0,'2023-04-03 19:38:13',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/14\">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/14\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(49,1048585,14,0,'2023-04-03 19:38:13',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Patricia Daniel\" <pdaniel@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Patricia Daniel,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/14</p><p>If you have been logged out, you can login again with the username pdaniel.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/14\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(50,1048585,15,0,'2023-04-03 19:38:44',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/15\">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/15\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(51,1048585,15,0,'2023-04-03 19:38:44',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/15\">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/15\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(52,1048585,15,0,'2023-04-03 19:38:44',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Rana Baiyewu\" <rbaiyewu@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Rana Baiyewu,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Yam diseases and its management in Nigeria, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/15</p><p>If you have been logged out, you can login again with the username rbaiyewu.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/15\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(53,1048585,16,0,'2023-04-03 19:39:16',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/16\">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/16\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(54,1048585,16,0,'2023-04-03 19:39:16',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/16\">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/16\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(55,1048585,16,0,'2023-04-03 19:39:16',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Rosanna Rossi\" <rrossi@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Rosanna Rossi,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/16</p><p>If you have been logged out, you can login again with the username rrossi.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/16\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(56,1048585,17,0,'2023-04-03 19:39:49',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/17\">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/17\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(57,1048585,17,0,'2023-04-03 19:39:49',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/17\">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/17\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(58,1048585,17,0,'2023-04-03 19:39:49',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Vajiheh Karbasizaed\" <vkarbasizaed@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Vajiheh Karbasizaed,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/17</p><p>If you have been logged out, you can login again with the username vkarbasizaed.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/17\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(59,1048585,18,0,'2023-04-03 19:40:20',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/18\">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/18\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(60,1048585,18,0,'2023-04-03 19:40:20',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/18\">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/18\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(61,1048585,18,0,'2023-04-03 19:40:20',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Valerie Williamson\" <vwilliamson@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Valerie Williamson,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Self-Organization in Multi-Level Institutions in Networked Environments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/18</p><p>If you have been logged out, you can login again with the username vwilliamson.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/18\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(62,1048585,19,0,'2023-04-03 19:40:52',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/19\">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/19\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(63,1048585,19,0,'2023-04-03 19:40:52',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Stephanie Berardo\" <sberardo@mailinator.com>','','','You have been assigned as a moderator on a submission to Public Knowledge Preprint Server','<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href=\"http://localhost/index.php/publicknowledge/workflow/access/19\">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href=\"http://localhost/index.php/publicknowledge/workflow/access/19\">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>'),(64,1048585,19,0,'2023-04-03 19:40:52',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Zita Woods\" <zwoods@mailinator.com>','','','Thank you for your submission to Public Knowledge Preprint Server','<p>Dear Zita Woods,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Finocchiaro: Arguments About Arguments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/19</p><p>If you have been logged out, you can login again with the username zwoods.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/authorDashboard/submission/19\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Preprint Server</a>.</p>');
 /*!40000 ALTER TABLE `email_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -648,18 +648,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_log_users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_log_users` (
-  `email_log_user_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `email_log_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `email_log_user_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `email_log_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   PRIMARY KEY (`email_log_user_id`),
   UNIQUE KEY `email_log_user_id` (`email_log_id`,`user_id`),
   KEY `email_log_users_email_log_id` (`email_log_id`),
   KEY `email_log_users_user_id` (`user_id`),
   CONSTRAINT `email_log_users_email_log_id_foreign` FOREIGN KEY (`email_log_id`) REFERENCES `email_log` (`log_id`) ON DELETE CASCADE,
   CONSTRAINT `email_log_users_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8 COMMENT='A record of users associated with an email log entry.';
+) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8mb3 COMMENT='A record of users associated with an email log entry.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -678,18 +678,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates` (
-  `email_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email_id` bigint NOT NULL AUTO_INCREMENT,
   `email_key` varchar(255) NOT NULL COMMENT 'Unique identifier for this email.',
-  `context_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
   `alternate_to` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`email_id`),
   UNIQUE KEY `email_templates_email_key` (`email_key`,`context_id`),
   KEY `email_templates_context_id` (`context_id`),
   KEY `email_templates_alternate_to` (`alternate_to`),
   CONSTRAINT `email_templates_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Custom email templates created by each context, and overrides of the default templates.';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COMMENT='Custom email templates created by each context, and overrides of the default templates.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -708,9 +708,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_default_data`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_default_data` (
-  `email_templates_default_data_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `email_templates_default_data_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `email_key` varchar(255) NOT NULL COMMENT 'Unique identifier for this email.',
   `locale` varchar(14) NOT NULL DEFAULT 'en',
   `name` varchar(255) NOT NULL,
@@ -718,7 +718,7 @@ CREATE TABLE `email_templates_default_data` (
   `body` text,
   PRIMARY KEY (`email_templates_default_data_id`),
   UNIQUE KEY `email_templates_default_data_unique` (`email_key`,`locale`)
-) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8 COMMENT='Default email templates created for every installed locale.';
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8mb3 COMMENT='Default email templates created for every installed locale.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -737,10 +737,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_settings` (
-  `email_template_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `email_id` bigint(20) NOT NULL,
+  `email_template_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `email_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -748,7 +748,7 @@ CREATE TABLE `email_templates_settings` (
   UNIQUE KEY `email_templates_settings_unique` (`email_id`,`locale`,`setting_name`),
   KEY `email_templates_settings_email_id` (`email_id`),
   CONSTRAINT `email_templates_settings_email_id` FOREIGN KEY (`email_id`) REFERENCES `email_templates` (`email_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about custom email templates, including localized properties such as the subject and body.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about custom email templates, including localized properties such as the subject and body.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -766,21 +766,21 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `event_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_log` (
-  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `log_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_logged` datetime NOT NULL,
-  `event_type` bigint(20) DEFAULT NULL,
+  `event_type` bigint DEFAULT NULL,
   `message` text,
-  `is_translated` smallint(6) DEFAULT NULL,
+  `is_translated` smallint DEFAULT NULL,
   PRIMARY KEY (`log_id`),
   KEY `event_log_user_id` (`user_id`),
   KEY `event_log_assoc` (`assoc_type`,`assoc_id`),
   CONSTRAINT `event_log_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=164 DEFAULT CHARSET=utf8 COMMENT='A log of all events related to an object like a submission.';
+) ENGINE=InnoDB AUTO_INCREMENT=164 DEFAULT CHARSET=utf8mb3 COMMENT='A log of all events related to an object like a submission.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -789,7 +789,7 @@ CREATE TABLE `event_log` (
 
 LOCK TABLES `event_log` WRITE;
 /*!40000 ALTER TABLE `event_log` DISABLE KEYS */;
-INSERT INTO `event_log` VALUES (1,1048585,1,7,'2023-03-31 23:08:11',268435458,'submission.event.general.metadataUpdated',0),(2,1048585,1,7,'2023-03-31 23:08:12',268435458,'submission.event.general.metadataUpdated',0),(3,515,1,7,'2023-03-31 23:08:22',1342177281,'submission.event.fileUploaded',0),(4,1048585,1,7,'2023-03-31 23:08:22',1342177288,'submission.event.fileRevised',0),(5,515,1,7,'2023-03-31 23:08:24',1342177296,'submission.event.fileEdited',0),(6,1048585,1,7,'2023-03-31 23:08:24',1342177296,'submission.event.fileEdited',0),(7,1048585,1,7,'2023-03-31 23:08:25',268435457,'submission.event.submissionSubmitted',0),(8,1048585,2,8,'2023-03-31 23:08:36',268435458,'submission.event.general.metadataUpdated',0),(9,1048585,2,8,'2023-03-31 23:08:36',268435458,'submission.event.general.metadataUpdated',0),(10,1048585,2,8,'2023-03-31 23:08:57',268435458,'submission.event.general.metadataUpdated',0),(11,515,2,8,'2023-03-31 23:09:04',1342177281,'submission.event.fileUploaded',0),(12,1048585,2,8,'2023-03-31 23:09:04',1342177288,'submission.event.fileRevised',0),(13,515,2,8,'2023-03-31 23:09:07',1342177296,'submission.event.fileEdited',0),(14,1048585,2,8,'2023-03-31 23:09:07',1342177296,'submission.event.fileEdited',0),(15,1048585,2,8,'2023-03-31 23:09:29',268435457,'submission.event.submissionSubmitted',0),(16,1048585,2,3,'2023-03-31 23:09:41',268435462,'publication.event.published',0),(17,1048585,3,9,'2023-03-31 23:09:49',268435458,'submission.event.general.metadataUpdated',0),(18,1048585,3,9,'2023-03-31 23:09:49',268435458,'submission.event.general.metadataUpdated',0),(19,515,3,9,'2023-03-31 23:10:00',1342177281,'submission.event.fileUploaded',0),(20,1048585,3,9,'2023-03-31 23:10:00',1342177288,'submission.event.fileRevised',0),(21,515,3,9,'2023-03-31 23:10:02',1342177296,'submission.event.fileEdited',0),(22,1048585,3,9,'2023-03-31 23:10:02',1342177296,'submission.event.fileEdited',0),(23,1048585,3,9,'2023-03-31 23:10:03',268435457,'submission.event.submissionSubmitted',0),(24,1048585,3,3,'2023-03-31 23:10:10',268435462,'publication.event.published',0),(25,1048585,3,3,'2023-03-31 23:10:17',268435463,'publication.event.unpublished',0),(26,1048585,3,3,'2023-03-31 23:10:19',268435458,'submission.event.general.metadataUpdated',0),(27,1048585,3,3,'2023-03-31 23:10:22',268435462,'publication.event.published',0),(28,1048585,3,3,'2023-03-31 23:10:25',268435458,'submission.event.general.metadataUpdated',0),(29,1048585,3,3,'2023-03-31 23:10:25',268435464,'publication.event.versionCreated',0),(30,1048585,3,3,'2023-03-31 23:10:28',268435458,'submission.event.general.metadataUpdated',0),(31,1048585,3,3,'2023-03-31 23:10:31',268435462,'publication.event.versionPublished',0),(32,1048585,4,10,'2023-03-31 23:10:39',268435458,'submission.event.general.metadataUpdated',0),(33,1048585,4,10,'2023-03-31 23:10:39',268435458,'submission.event.general.metadataUpdated',0),(34,515,4,10,'2023-03-31 23:10:49',1342177281,'submission.event.fileUploaded',0),(35,1048585,4,10,'2023-03-31 23:10:49',1342177288,'submission.event.fileRevised',0),(36,515,4,10,'2023-03-31 23:10:52',1342177296,'submission.event.fileEdited',0),(37,1048585,4,10,'2023-03-31 23:10:52',1342177296,'submission.event.fileEdited',0),(38,1048585,4,10,'2023-03-31 23:10:52',268435457,'submission.event.submissionSubmitted',0),(39,1048585,4,3,'2023-03-31 23:11:02',805306371,'editor.submission.decision.decline.log',0),(40,1048585,4,3,'2023-03-31 23:11:08',805306371,'editor.submission.decision.revertDecline.log',0),(41,1048585,4,3,'2023-03-31 23:11:15',805306371,'editor.submission.decision.decline.log',0),(42,1048585,5,11,'2023-03-31 23:11:25',268435458,'submission.event.general.metadataUpdated',0),(43,1048585,5,11,'2023-03-31 23:11:25',268435458,'submission.event.general.metadataUpdated',0),(44,515,5,11,'2023-03-31 23:11:36',1342177281,'submission.event.fileUploaded',0),(45,1048585,5,11,'2023-03-31 23:11:36',1342177288,'submission.event.fileRevised',0),(46,515,5,11,'2023-03-31 23:11:38',1342177296,'submission.event.fileEdited',0),(47,1048585,5,11,'2023-03-31 23:11:38',1342177296,'submission.event.fileEdited',0),(48,1048585,5,11,'2023-03-31 23:11:39',268435457,'submission.event.submissionSubmitted',0),(49,1048585,5,3,'2023-03-31 23:11:46',268435462,'publication.event.published',0),(50,1048585,5,3,'2023-03-31 23:11:51',268435463,'publication.event.unpublished',0),(51,1048585,5,3,'2023-03-31 23:11:57',268435462,'publication.event.published',0),(52,1048585,6,12,'2023-03-31 23:12:05',268435458,'submission.event.general.metadataUpdated',0),(53,1048585,6,12,'2023-03-31 23:12:05',268435458,'submission.event.general.metadataUpdated',0),(54,515,6,12,'2023-03-31 23:12:16',1342177281,'submission.event.fileUploaded',0),(55,1048585,6,12,'2023-03-31 23:12:16',1342177288,'submission.event.fileRevised',0),(56,515,6,12,'2023-03-31 23:12:18',1342177296,'submission.event.fileEdited',0),(57,1048585,6,12,'2023-03-31 23:12:18',1342177296,'submission.event.fileEdited',0),(58,1048585,6,12,'2023-03-31 23:12:19',268435457,'submission.event.submissionSubmitted',0),(59,1048585,6,3,'2023-03-31 23:12:26',268435462,'publication.event.published',0),(60,1048585,7,13,'2023-03-31 23:12:34',268435458,'submission.event.general.metadataUpdated',0),(61,1048585,7,13,'2023-03-31 23:12:34',268435458,'submission.event.general.metadataUpdated',0),(62,515,7,13,'2023-03-31 23:12:44',1342177281,'submission.event.fileUploaded',0),(63,1048585,7,13,'2023-03-31 23:12:44',1342177288,'submission.event.fileRevised',0),(64,515,7,13,'2023-03-31 23:12:47',1342177296,'submission.event.fileEdited',0),(65,1048585,7,13,'2023-03-31 23:12:47',1342177296,'submission.event.fileEdited',0),(66,1048585,7,13,'2023-03-31 23:12:48',268435457,'submission.event.submissionSubmitted',0),(67,1048585,7,3,'2023-03-31 23:12:55',268435462,'publication.event.published',0),(68,1048585,8,14,'2023-03-31 23:13:03',268435458,'submission.event.general.metadataUpdated',0),(69,1048585,8,14,'2023-03-31 23:13:03',268435458,'submission.event.general.metadataUpdated',0),(70,515,8,14,'2023-03-31 23:13:14',1342177281,'submission.event.fileUploaded',0),(71,1048585,8,14,'2023-03-31 23:13:14',1342177288,'submission.event.fileRevised',0),(72,515,8,14,'2023-03-31 23:13:16',1342177296,'submission.event.fileEdited',0),(73,1048585,8,14,'2023-03-31 23:13:16',1342177296,'submission.event.fileEdited',0),(74,1048585,8,14,'2023-03-31 23:13:17',268435457,'submission.event.submissionSubmitted',0),(75,1048585,8,3,'2023-03-31 23:13:23',268435462,'publication.event.published',0),(76,1048585,9,15,'2023-03-31 23:13:32',268435458,'submission.event.general.metadataUpdated',0),(77,1048585,9,15,'2023-03-31 23:13:32',268435458,'submission.event.general.metadataUpdated',0),(78,515,9,15,'2023-03-31 23:13:43',1342177281,'submission.event.fileUploaded',0),(79,1048585,9,15,'2023-03-31 23:13:43',1342177288,'submission.event.fileRevised',0),(80,515,9,15,'2023-03-31 23:13:45',1342177296,'submission.event.fileEdited',0),(81,1048585,9,15,'2023-03-31 23:13:45',1342177296,'submission.event.fileEdited',0),(82,1048585,9,15,'2023-03-31 23:13:45',268435457,'submission.event.submissionSubmitted',0),(83,1048585,9,3,'2023-03-31 23:13:52',268435462,'publication.event.published',0),(84,1048585,10,16,'2023-03-31 23:14:00',268435458,'submission.event.general.metadataUpdated',0),(85,1048585,10,16,'2023-03-31 23:14:01',268435458,'submission.event.general.metadataUpdated',0),(86,515,10,16,'2023-03-31 23:14:11',1342177281,'submission.event.fileUploaded',0),(87,1048585,10,16,'2023-03-31 23:14:11',1342177288,'submission.event.fileRevised',0),(88,515,10,16,'2023-03-31 23:14:13',1342177296,'submission.event.fileEdited',0),(89,1048585,10,16,'2023-03-31 23:14:13',1342177296,'submission.event.fileEdited',0),(90,1048585,10,16,'2023-03-31 23:14:14',268435457,'submission.event.submissionSubmitted',0),(91,1048585,10,3,'2023-03-31 23:14:21',268435462,'publication.event.published',0),(92,1048585,11,17,'2023-03-31 23:14:29',268435458,'submission.event.general.metadataUpdated',0),(93,1048585,11,17,'2023-03-31 23:14:29',268435458,'submission.event.general.metadataUpdated',0),(94,515,11,17,'2023-03-31 23:14:40',1342177281,'submission.event.fileUploaded',0),(95,1048585,11,17,'2023-03-31 23:14:40',1342177288,'submission.event.fileRevised',0),(96,515,11,17,'2023-03-31 23:14:42',1342177296,'submission.event.fileEdited',0),(97,1048585,11,17,'2023-03-31 23:14:42',1342177296,'submission.event.fileEdited',0),(98,1048585,11,17,'2023-03-31 23:14:43',268435457,'submission.event.submissionSubmitted',0),(99,1048585,11,3,'2023-03-31 23:14:51',268435462,'publication.event.published',0),(100,1048585,12,18,'2023-03-31 23:14:59',268435458,'submission.event.general.metadataUpdated',0),(101,1048585,12,18,'2023-03-31 23:15:00',268435458,'submission.event.general.metadataUpdated',0),(102,515,12,18,'2023-03-31 23:15:10',1342177281,'submission.event.fileUploaded',0),(103,1048585,12,18,'2023-03-31 23:15:10',1342177288,'submission.event.fileRevised',0),(104,515,12,18,'2023-03-31 23:15:12',1342177296,'submission.event.fileEdited',0),(105,1048585,12,18,'2023-03-31 23:15:12',1342177296,'submission.event.fileEdited',0),(106,1048585,12,18,'2023-03-31 23:15:13',268435457,'submission.event.submissionSubmitted',0),(107,1048585,12,3,'2023-03-31 23:15:20',268435462,'publication.event.published',0),(108,1048585,13,19,'2023-03-31 23:15:28',268435458,'submission.event.general.metadataUpdated',0),(109,1048585,13,19,'2023-03-31 23:15:28',268435458,'submission.event.general.metadataUpdated',0),(110,515,13,19,'2023-03-31 23:15:39',1342177281,'submission.event.fileUploaded',0),(111,1048585,13,19,'2023-03-31 23:15:39',1342177288,'submission.event.fileRevised',0),(112,515,13,19,'2023-03-31 23:15:41',1342177296,'submission.event.fileEdited',0),(113,1048585,13,19,'2023-03-31 23:15:41',1342177296,'submission.event.fileEdited',0),(114,1048585,13,19,'2023-03-31 23:15:42',268435457,'submission.event.submissionSubmitted',0),(115,1048585,13,3,'2023-03-31 23:15:49',268435462,'publication.event.published',0),(116,1048585,14,20,'2023-03-31 23:15:57',268435458,'submission.event.general.metadataUpdated',0),(117,1048585,14,20,'2023-03-31 23:15:58',268435458,'submission.event.general.metadataUpdated',0),(118,515,14,20,'2023-03-31 23:16:08',1342177281,'submission.event.fileUploaded',0),(119,1048585,14,20,'2023-03-31 23:16:08',1342177288,'submission.event.fileRevised',0),(120,515,14,20,'2023-03-31 23:16:11',1342177296,'submission.event.fileEdited',0),(121,1048585,14,20,'2023-03-31 23:16:11',1342177296,'submission.event.fileEdited',0),(122,1048585,14,20,'2023-03-31 23:16:11',268435457,'submission.event.submissionSubmitted',0),(123,1048585,14,3,'2023-03-31 23:16:19',268435462,'publication.event.published',0),(124,1048585,15,21,'2023-03-31 23:16:28',268435458,'submission.event.general.metadataUpdated',0),(125,1048585,15,21,'2023-03-31 23:16:28',268435458,'submission.event.general.metadataUpdated',0),(126,515,15,21,'2023-03-31 23:16:38',1342177281,'submission.event.fileUploaded',0),(127,1048585,15,21,'2023-03-31 23:16:38',1342177288,'submission.event.fileRevised',0),(128,515,15,21,'2023-03-31 23:16:40',1342177296,'submission.event.fileEdited',0),(129,1048585,15,21,'2023-03-31 23:16:40',1342177296,'submission.event.fileEdited',0),(130,1048585,15,21,'2023-03-31 23:16:41',268435457,'submission.event.submissionSubmitted',0),(131,1048585,15,3,'2023-03-31 23:16:48',268435462,'publication.event.published',0),(132,1048585,16,22,'2023-03-31 23:16:57',268435458,'submission.event.general.metadataUpdated',0),(133,1048585,16,22,'2023-03-31 23:16:57',268435458,'submission.event.general.metadataUpdated',0),(134,515,16,22,'2023-03-31 23:17:07',1342177281,'submission.event.fileUploaded',0),(135,1048585,16,22,'2023-03-31 23:17:07',1342177288,'submission.event.fileRevised',0),(136,515,16,22,'2023-03-31 23:17:10',1342177296,'submission.event.fileEdited',0),(137,1048585,16,22,'2023-03-31 23:17:10',1342177296,'submission.event.fileEdited',0),(138,1048585,16,22,'2023-03-31 23:17:10',268435457,'submission.event.submissionSubmitted',0),(139,1048585,16,3,'2023-03-31 23:17:17',268435462,'publication.event.published',0),(140,1048585,17,23,'2023-03-31 23:17:26',268435458,'submission.event.general.metadataUpdated',0),(141,1048585,17,23,'2023-03-31 23:17:26',268435458,'submission.event.general.metadataUpdated',0),(142,515,17,23,'2023-03-31 23:17:37',1342177281,'submission.event.fileUploaded',0),(143,1048585,17,23,'2023-03-31 23:17:37',1342177288,'submission.event.fileRevised',0),(144,515,17,23,'2023-03-31 23:17:39',1342177296,'submission.event.fileEdited',0),(145,1048585,17,23,'2023-03-31 23:17:39',1342177296,'submission.event.fileEdited',0),(146,1048585,17,23,'2023-03-31 23:17:40',268435457,'submission.event.submissionSubmitted',0),(147,1048585,17,3,'2023-03-31 23:17:47',268435462,'publication.event.published',0),(148,1048585,18,24,'2023-03-31 23:17:55',268435458,'submission.event.general.metadataUpdated',0),(149,1048585,18,24,'2023-03-31 23:17:56',268435458,'submission.event.general.metadataUpdated',0),(150,515,18,24,'2023-03-31 23:18:06',1342177281,'submission.event.fileUploaded',0),(151,1048585,18,24,'2023-03-31 23:18:06',1342177288,'submission.event.fileRevised',0),(152,515,18,24,'2023-03-31 23:18:08',1342177296,'submission.event.fileEdited',0),(153,1048585,18,24,'2023-03-31 23:18:08',1342177296,'submission.event.fileEdited',0),(154,1048585,18,24,'2023-03-31 23:18:09',268435457,'submission.event.submissionSubmitted',0),(155,1048585,18,3,'2023-03-31 23:18:16',268435462,'publication.event.published',0),(156,1048585,19,25,'2023-03-31 23:18:25',268435458,'submission.event.general.metadataUpdated',0),(157,1048585,19,25,'2023-03-31 23:18:25',268435458,'submission.event.general.metadataUpdated',0),(158,515,19,25,'2023-03-31 23:18:35',1342177281,'submission.event.fileUploaded',0),(159,1048585,19,25,'2023-03-31 23:18:35',1342177288,'submission.event.fileRevised',0),(160,515,19,25,'2023-03-31 23:18:38',1342177296,'submission.event.fileEdited',0),(161,1048585,19,25,'2023-03-31 23:18:38',1342177296,'submission.event.fileEdited',0),(162,1048585,19,25,'2023-03-31 23:18:38',268435457,'submission.event.submissionSubmitted',0),(163,1048585,19,3,'2023-03-31 23:18:46',268435462,'publication.event.published',0);
+INSERT INTO `event_log` VALUES (1,1048585,1,7,'2023-04-03 19:29:24',268435458,'submission.event.general.metadataUpdated',0),(2,1048585,1,7,'2023-04-03 19:29:25',268435458,'submission.event.general.metadataUpdated',0),(3,515,1,7,'2023-04-03 19:29:36',1342177281,'submission.event.fileUploaded',0),(4,1048585,1,7,'2023-04-03 19:29:36',1342177288,'submission.event.fileRevised',0),(5,515,1,7,'2023-04-03 19:29:38',1342177296,'submission.event.fileEdited',0),(6,1048585,1,7,'2023-04-03 19:29:38',1342177296,'submission.event.fileEdited',0),(7,1048585,1,7,'2023-04-03 19:29:39',268435457,'submission.event.submissionSubmitted',0),(8,1048585,2,8,'2023-04-03 19:29:51',268435458,'submission.event.general.metadataUpdated',0),(9,1048585,2,8,'2023-04-03 19:29:51',268435458,'submission.event.general.metadataUpdated',0),(10,1048585,2,8,'2023-04-03 19:30:13',268435458,'submission.event.general.metadataUpdated',0),(11,515,2,8,'2023-04-03 19:30:21',1342177281,'submission.event.fileUploaded',0),(12,1048585,2,8,'2023-04-03 19:30:21',1342177288,'submission.event.fileRevised',0),(13,515,2,8,'2023-04-03 19:30:23',1342177296,'submission.event.fileEdited',0),(14,1048585,2,8,'2023-04-03 19:30:23',1342177296,'submission.event.fileEdited',0),(15,1048585,2,8,'2023-04-03 19:30:49',268435457,'submission.event.submissionSubmitted',0),(16,1048585,2,3,'2023-04-03 19:31:05',268435462,'publication.event.published',0),(17,1048585,3,9,'2023-04-03 19:31:14',268435458,'submission.event.general.metadataUpdated',0),(18,1048585,3,9,'2023-04-03 19:31:14',268435458,'submission.event.general.metadataUpdated',0),(19,515,3,9,'2023-04-03 19:31:25',1342177281,'submission.event.fileUploaded',0),(20,1048585,3,9,'2023-04-03 19:31:25',1342177288,'submission.event.fileRevised',0),(21,515,3,9,'2023-04-03 19:31:27',1342177296,'submission.event.fileEdited',0),(22,1048585,3,9,'2023-04-03 19:31:27',1342177296,'submission.event.fileEdited',0),(23,1048585,3,9,'2023-04-03 19:31:29',268435457,'submission.event.submissionSubmitted',0),(24,1048585,3,3,'2023-04-03 19:31:37',268435462,'publication.event.published',0),(25,1048585,3,3,'2023-04-03 19:31:46',268435463,'publication.event.unpublished',0),(26,1048585,3,3,'2023-04-03 19:31:49',268435458,'submission.event.general.metadataUpdated',0),(27,1048585,3,3,'2023-04-03 19:31:52',268435462,'publication.event.published',0),(28,1048585,3,3,'2023-04-03 19:31:55',268435458,'submission.event.general.metadataUpdated',0),(29,1048585,3,3,'2023-04-03 19:31:55',268435464,'publication.event.versionCreated',0),(30,1048585,3,3,'2023-04-03 19:31:59',268435458,'submission.event.general.metadataUpdated',0),(31,1048585,3,3,'2023-04-03 19:32:02',268435462,'publication.event.versionPublished',0),(32,1048585,4,10,'2023-04-03 19:32:10',268435458,'submission.event.general.metadataUpdated',0),(33,1048585,4,10,'2023-04-03 19:32:11',268435458,'submission.event.general.metadataUpdated',0),(34,515,4,10,'2023-04-03 19:32:21',1342177281,'submission.event.fileUploaded',0),(35,1048585,4,10,'2023-04-03 19:32:21',1342177288,'submission.event.fileRevised',0),(36,515,4,10,'2023-04-03 19:32:24',1342177296,'submission.event.fileEdited',0),(37,1048585,4,10,'2023-04-03 19:32:24',1342177296,'submission.event.fileEdited',0),(38,1048585,4,10,'2023-04-03 19:32:25',268435457,'submission.event.submissionSubmitted',0),(39,1048585,4,3,'2023-04-03 19:32:35',805306371,'editor.submission.decision.decline.log',0),(40,1048585,4,3,'2023-04-03 19:32:42',805306371,'editor.submission.decision.revertDecline.log',0),(41,1048585,4,3,'2023-04-03 19:32:49',805306371,'editor.submission.decision.decline.log',0),(42,1048585,5,11,'2023-04-03 19:33:01',268435458,'submission.event.general.metadataUpdated',0),(43,1048585,5,11,'2023-04-03 19:33:01',268435458,'submission.event.general.metadataUpdated',0),(44,515,5,11,'2023-04-03 19:33:12',1342177281,'submission.event.fileUploaded',0),(45,1048585,5,11,'2023-04-03 19:33:12',1342177288,'submission.event.fileRevised',0),(46,515,5,11,'2023-04-03 19:33:15',1342177296,'submission.event.fileEdited',0),(47,1048585,5,11,'2023-04-03 19:33:15',1342177296,'submission.event.fileEdited',0),(48,1048585,5,11,'2023-04-03 19:33:16',268435457,'submission.event.submissionSubmitted',0),(49,1048585,5,3,'2023-04-03 19:33:24',268435462,'publication.event.published',0),(50,1048585,5,3,'2023-04-03 19:33:29',268435463,'publication.event.unpublished',0),(51,1048585,5,3,'2023-04-03 19:33:36',268435462,'publication.event.published',0),(52,1048585,6,12,'2023-04-03 19:33:44',268435458,'submission.event.general.metadataUpdated',0),(53,1048585,6,12,'2023-04-03 19:33:45',268435458,'submission.event.general.metadataUpdated',0),(54,515,6,12,'2023-04-03 19:33:55',1342177281,'submission.event.fileUploaded',0),(55,1048585,6,12,'2023-04-03 19:33:55',1342177288,'submission.event.fileRevised',0),(56,515,6,12,'2023-04-03 19:33:58',1342177296,'submission.event.fileEdited',0),(57,1048585,6,12,'2023-04-03 19:33:58',1342177296,'submission.event.fileEdited',0),(58,1048585,6,12,'2023-04-03 19:33:59',268435457,'submission.event.submissionSubmitted',0),(59,1048585,6,3,'2023-04-03 19:34:07',268435462,'publication.event.published',0),(60,1048585,7,13,'2023-04-03 19:34:16',268435458,'submission.event.general.metadataUpdated',0),(61,1048585,7,13,'2023-04-03 19:34:16',268435458,'submission.event.general.metadataUpdated',0),(62,515,7,13,'2023-04-03 19:34:27',1342177281,'submission.event.fileUploaded',0),(63,1048585,7,13,'2023-04-03 19:34:27',1342177288,'submission.event.fileRevised',0),(64,515,7,13,'2023-04-03 19:34:29',1342177296,'submission.event.fileEdited',0),(65,1048585,7,13,'2023-04-03 19:34:29',1342177296,'submission.event.fileEdited',0),(66,1048585,7,13,'2023-04-03 19:34:31',268435457,'submission.event.submissionSubmitted',0),(67,1048585,7,3,'2023-04-03 19:34:39',268435462,'publication.event.published',0),(68,1048585,8,14,'2023-04-03 19:34:48',268435458,'submission.event.general.metadataUpdated',0),(69,1048585,8,14,'2023-04-03 19:34:48',268435458,'submission.event.general.metadataUpdated',0),(70,515,8,14,'2023-04-03 19:34:59',1342177281,'submission.event.fileUploaded',0),(71,1048585,8,14,'2023-04-03 19:34:59',1342177288,'submission.event.fileRevised',0),(72,515,8,14,'2023-04-03 19:35:01',1342177296,'submission.event.fileEdited',0),(73,1048585,8,14,'2023-04-03 19:35:01',1342177296,'submission.event.fileEdited',0),(74,1048585,8,14,'2023-04-03 19:35:02',268435457,'submission.event.submissionSubmitted',0),(75,1048585,8,3,'2023-04-03 19:35:09',268435462,'publication.event.published',0),(76,1048585,9,15,'2023-04-03 19:35:18',268435458,'submission.event.general.metadataUpdated',0),(77,1048585,9,15,'2023-04-03 19:35:19',268435458,'submission.event.general.metadataUpdated',0),(78,515,9,15,'2023-04-03 19:35:29',1342177281,'submission.event.fileUploaded',0),(79,1048585,9,15,'2023-04-03 19:35:29',1342177288,'submission.event.fileRevised',0),(80,515,9,15,'2023-04-03 19:35:32',1342177296,'submission.event.fileEdited',0),(81,1048585,9,15,'2023-04-03 19:35:32',1342177296,'submission.event.fileEdited',0),(82,1048585,9,15,'2023-04-03 19:35:33',268435457,'submission.event.submissionSubmitted',0),(83,1048585,9,3,'2023-04-03 19:35:41',268435462,'publication.event.published',0),(84,1048585,10,16,'2023-04-03 19:35:50',268435458,'submission.event.general.metadataUpdated',0),(85,1048585,10,16,'2023-04-03 19:35:50',268435458,'submission.event.general.metadataUpdated',0),(86,515,10,16,'2023-04-03 19:36:01',1342177281,'submission.event.fileUploaded',0),(87,1048585,10,16,'2023-04-03 19:36:01',1342177288,'submission.event.fileRevised',0),(88,515,10,16,'2023-04-03 19:36:03',1342177296,'submission.event.fileEdited',0),(89,1048585,10,16,'2023-04-03 19:36:03',1342177296,'submission.event.fileEdited',0),(90,1048585,10,16,'2023-04-03 19:36:04',268435457,'submission.event.submissionSubmitted',0),(91,1048585,10,3,'2023-04-03 19:36:12',268435462,'publication.event.published',0),(92,1048585,11,17,'2023-04-03 19:36:21',268435458,'submission.event.general.metadataUpdated',0),(93,1048585,11,17,'2023-04-03 19:36:22',268435458,'submission.event.general.metadataUpdated',0),(94,515,11,17,'2023-04-03 19:36:32',1342177281,'submission.event.fileUploaded',0),(95,1048585,11,17,'2023-04-03 19:36:32',1342177288,'submission.event.fileRevised',0),(96,515,11,17,'2023-04-03 19:36:35',1342177296,'submission.event.fileEdited',0),(97,1048585,11,17,'2023-04-03 19:36:35',1342177296,'submission.event.fileEdited',0),(98,1048585,11,17,'2023-04-03 19:36:36',268435457,'submission.event.submissionSubmitted',0),(99,1048585,11,3,'2023-04-03 19:36:44',268435462,'publication.event.published',0),(100,1048585,12,18,'2023-04-03 19:36:53',268435458,'submission.event.general.metadataUpdated',0),(101,1048585,12,18,'2023-04-03 19:36:54',268435458,'submission.event.general.metadataUpdated',0),(102,515,12,18,'2023-04-03 19:37:04',1342177281,'submission.event.fileUploaded',0),(103,1048585,12,18,'2023-04-03 19:37:04',1342177288,'submission.event.fileRevised',0),(104,515,12,18,'2023-04-03 19:37:07',1342177296,'submission.event.fileEdited',0),(105,1048585,12,18,'2023-04-03 19:37:07',1342177296,'submission.event.fileEdited',0),(106,1048585,12,18,'2023-04-03 19:37:08',268435457,'submission.event.submissionSubmitted',0),(107,1048585,12,3,'2023-04-03 19:37:16',268435462,'publication.event.published',0),(108,1048585,13,19,'2023-04-03 19:37:26',268435458,'submission.event.general.metadataUpdated',0),(109,1048585,13,19,'2023-04-03 19:37:26',268435458,'submission.event.general.metadataUpdated',0),(110,515,13,19,'2023-04-03 19:37:37',1342177281,'submission.event.fileUploaded',0),(111,1048585,13,19,'2023-04-03 19:37:37',1342177288,'submission.event.fileRevised',0),(112,515,13,19,'2023-04-03 19:37:39',1342177296,'submission.event.fileEdited',0),(113,1048585,13,19,'2023-04-03 19:37:39',1342177296,'submission.event.fileEdited',0),(114,1048585,13,19,'2023-04-03 19:37:41',268435457,'submission.event.submissionSubmitted',0),(115,1048585,13,3,'2023-04-03 19:37:48',268435462,'publication.event.published',0),(116,1048585,14,20,'2023-04-03 19:37:58',268435458,'submission.event.general.metadataUpdated',0),(117,1048585,14,20,'2023-04-03 19:37:58',268435458,'submission.event.general.metadataUpdated',0),(118,515,14,20,'2023-04-03 19:38:09',1342177281,'submission.event.fileUploaded',0),(119,1048585,14,20,'2023-04-03 19:38:09',1342177288,'submission.event.fileRevised',0),(120,515,14,20,'2023-04-03 19:38:11',1342177296,'submission.event.fileEdited',0),(121,1048585,14,20,'2023-04-03 19:38:11',1342177296,'submission.event.fileEdited',0),(122,1048585,14,20,'2023-04-03 19:38:12',268435457,'submission.event.submissionSubmitted',0),(123,1048585,14,3,'2023-04-03 19:38:21',268435462,'publication.event.published',0),(124,1048585,15,21,'2023-04-03 19:38:30',268435458,'submission.event.general.metadataUpdated',0),(125,1048585,15,21,'2023-04-03 19:38:30',268435458,'submission.event.general.metadataUpdated',0),(126,515,15,21,'2023-04-03 19:38:41',1342177281,'submission.event.fileUploaded',0),(127,1048585,15,21,'2023-04-03 19:38:41',1342177288,'submission.event.fileRevised',0),(128,515,15,21,'2023-04-03 19:38:43',1342177296,'submission.event.fileEdited',0),(129,1048585,15,21,'2023-04-03 19:38:43',1342177296,'submission.event.fileEdited',0),(130,1048585,15,21,'2023-04-03 19:38:44',268435457,'submission.event.submissionSubmitted',0),(131,1048585,15,3,'2023-04-03 19:38:53',268435462,'publication.event.published',0),(132,1048585,16,22,'2023-04-03 19:39:02',268435458,'submission.event.general.metadataUpdated',0),(133,1048585,16,22,'2023-04-03 19:39:02',268435458,'submission.event.general.metadataUpdated',0),(134,515,16,22,'2023-04-03 19:39:13',1342177281,'submission.event.fileUploaded',0),(135,1048585,16,22,'2023-04-03 19:39:13',1342177288,'submission.event.fileRevised',0),(136,515,16,22,'2023-04-03 19:39:15',1342177296,'submission.event.fileEdited',0),(137,1048585,16,22,'2023-04-03 19:39:15',1342177296,'submission.event.fileEdited',0),(138,1048585,16,22,'2023-04-03 19:39:16',268435457,'submission.event.submissionSubmitted',0),(139,1048585,16,3,'2023-04-03 19:39:25',268435462,'publication.event.published',0),(140,1048585,17,23,'2023-04-03 19:39:34',268435458,'submission.event.general.metadataUpdated',0),(141,1048585,17,23,'2023-04-03 19:39:34',268435458,'submission.event.general.metadataUpdated',0),(142,515,17,23,'2023-04-03 19:39:45',1342177281,'submission.event.fileUploaded',0),(143,1048585,17,23,'2023-04-03 19:39:45',1342177288,'submission.event.fileRevised',0),(144,515,17,23,'2023-04-03 19:39:47',1342177296,'submission.event.fileEdited',0),(145,1048585,17,23,'2023-04-03 19:39:47',1342177296,'submission.event.fileEdited',0),(146,1048585,17,23,'2023-04-03 19:39:48',268435457,'submission.event.submissionSubmitted',0),(147,1048585,17,3,'2023-04-03 19:39:56',268435462,'publication.event.published',0),(148,1048585,18,24,'2023-04-03 19:40:06',268435458,'submission.event.general.metadataUpdated',0),(149,1048585,18,24,'2023-04-03 19:40:06',268435458,'submission.event.general.metadataUpdated',0),(150,515,18,24,'2023-04-03 19:40:17',1342177281,'submission.event.fileUploaded',0),(151,1048585,18,24,'2023-04-03 19:40:17',1342177288,'submission.event.fileRevised',0),(152,515,18,24,'2023-04-03 19:40:19',1342177296,'submission.event.fileEdited',0),(153,1048585,18,24,'2023-04-03 19:40:19',1342177296,'submission.event.fileEdited',0),(154,1048585,18,24,'2023-04-03 19:40:20',268435457,'submission.event.submissionSubmitted',0),(155,1048585,18,3,'2023-04-03 19:40:28',268435462,'publication.event.published',0),(156,1048585,19,25,'2023-04-03 19:40:38',268435458,'submission.event.general.metadataUpdated',0),(157,1048585,19,25,'2023-04-03 19:40:38',268435458,'submission.event.general.metadataUpdated',0),(158,515,19,25,'2023-04-03 19:40:49',1342177281,'submission.event.fileUploaded',0),(159,1048585,19,25,'2023-04-03 19:40:49',1342177288,'submission.event.fileRevised',0),(160,515,19,25,'2023-04-03 19:40:51',1342177296,'submission.event.fileEdited',0),(161,1048585,19,25,'2023-04-03 19:40:51',1342177296,'submission.event.fileEdited',0),(162,1048585,19,25,'2023-04-03 19:40:52',268435457,'submission.event.submissionSubmitted',0),(163,1048585,19,3,'2023-04-03 19:41:00',268435462,'publication.event.published',0);
 /*!40000 ALTER TABLE `event_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -799,10 +799,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `event_log_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_log_settings` (
-  `event_log_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `log_id` bigint(20) NOT NULL,
+  `event_log_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `log_id` bigint NOT NULL,
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
@@ -811,7 +811,7 @@ CREATE TABLE `event_log_settings` (
   KEY `event_log_settings_log_id` (`log_id`),
   KEY `event_log_settings_name_value` (`setting_name`(50),`setting_value`(150)),
   CONSTRAINT `event_log_settings_log_id` FOREIGN KEY (`log_id`) REFERENCES `event_log` (`log_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=545 DEFAULT CHARSET=utf8 COMMENT='Data about an event log entry. This data is commonly used to display information about an event to a user.';
+) ENGINE=InnoDB AUTO_INCREMENT=545 DEFAULT CHARSET=utf8mb3 COMMENT='Data about an event log entry. This data is commonly used to display information about an event to a user.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -830,16 +830,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `failed_jobs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `failed_jobs` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `connection` text NOT NULL,
   `queue` text NOT NULL,
   `payload` longtext NOT NULL,
   `exception` longtext NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='A log of all failed jobs.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='A log of all failed jobs.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -857,13 +857,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `files` (
-  `file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `file_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `path` varchar(255) NOT NULL,
   `mimetype` varchar(255) NOT NULL,
   PRIMARY KEY (`file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='Records information in the database about files tracked by the system, linking them to the local filesystem.';
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3 COMMENT='Records information in the database about files tracked by the system, linking them to the local filesystem.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -872,7 +872,7 @@ CREATE TABLE `files` (
 
 LOCK TABLES `files` WRITE;
 /*!40000 ALTER TABLE `files` DISABLE KEYS */;
-INSERT INTO `files` VALUES (1,'contexts/1/submissions/1/642767e693c20.pdf','application/pdf'),(2,'contexts/1/submissions/2/64276810c57e6.pdf','application/pdf'),(3,'contexts/1/submissions/3/642768482d6bb.pdf','application/pdf'),(4,'contexts/1/submissions/4/64276879ecaf9.pdf','application/pdf'),(5,'contexts/1/submissions/5/642768a80a9fb.pdf','application/pdf'),(6,'contexts/1/submissions/6/642768d012eb3.pdf','application/pdf'),(7,'contexts/1/submissions/7/642768ecdccf1.pdf','application/pdf'),(8,'contexts/1/submissions/8/6427690a23d36.pdf','application/pdf'),(9,'contexts/1/submissions/9/64276926f2d6c.pdf','application/pdf'),(10,'contexts/1/submissions/10/642769438a6b7.pdf','application/pdf'),(11,'contexts/1/submissions/11/64276960382d5.pdf','application/pdf'),(12,'contexts/1/submissions/12/6427697e2b05d.pdf','application/pdf'),(13,'contexts/1/submissions/13/6427699b30ca0.pdf','application/pdf'),(14,'contexts/1/submissions/14/642769b8b66bd.pdf','application/pdf'),(15,'contexts/1/submissions/15/642769d67845d.pdf','application/pdf'),(16,'contexts/1/submissions/16/642769f3b49bb.pdf','application/pdf'),(17,'contexts/1/submissions/17/64276a1108175.pdf','application/pdf'),(18,'contexts/1/submissions/18/64276a2e8497b.pdf','application/pdf'),(19,'contexts/1/submissions/19/64276a4bbf631.pdf','application/pdf');
+INSERT INTO `files` VALUES (1,'contexts/1/submissions/1/642b29201d42e.pdf','application/pdf'),(2,'contexts/1/submissions/2/642b294d6debd.pdf','application/pdf'),(3,'contexts/1/submissions/3/642b298d6b826.pdf','application/pdf'),(4,'contexts/1/submissions/4/642b29c5b141a.pdf','application/pdf'),(5,'contexts/1/submissions/5/642b29f895f8c.pdf','application/pdf'),(6,'contexts/1/submissions/6/642b2a23d348d.pdf','application/pdf'),(7,'contexts/1/submissions/7/642b2a433ae43.pdf','application/pdf'),(8,'contexts/1/submissions/8/642b2a630e65c.pdf','application/pdf'),(9,'contexts/1/submissions/9/642b2a81a13ae.pdf','application/pdf'),(10,'contexts/1/submissions/10/642b2aa12d453.pdf','application/pdf'),(11,'contexts/1/submissions/11/642b2ac0d9ca5.pdf','application/pdf'),(12,'contexts/1/submissions/12/642b2ae0d7d17.pdf','application/pdf'),(13,'contexts/1/submissions/13/642b2b012e4a5.pdf','application/pdf'),(14,'contexts/1/submissions/14/642b2b214a69c.pdf','application/pdf'),(15,'contexts/1/submissions/15/642b2b413d1e7.pdf','application/pdf'),(16,'contexts/1/submissions/16/642b2b612b8c6.pdf','application/pdf'),(17,'contexts/1/submissions/17/642b2b8167a74.pdf','application/pdf'),(18,'contexts/1/submissions/18/642b2ba124985.pdf','application/pdf'),(19,'contexts/1/submissions/19/642b2bc152dac.pdf','application/pdf');
 /*!40000 ALTER TABLE `files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -882,9 +882,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filter_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filter_groups` (
-  `filter_group_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `filter_group_id` bigint NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(255) DEFAULT NULL,
   `display_name` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
@@ -892,7 +892,7 @@ CREATE TABLE `filter_groups` (
   `output_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`filter_group_id`),
   UNIQUE KEY `filter_groups_symbolic` (`symbolic`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='Filter groups are used to organized filters into named sets, which can be retrieved by the application for invocation.';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3 COMMENT='Filter groups are used to organized filters into named sets, which can be retrieved by the application for invocation.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -911,10 +911,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filter_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filter_settings` (
-  `filter_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `filter_id` bigint(20) NOT NULL,
+  `filter_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `filter_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -923,7 +923,7 @@ CREATE TABLE `filter_settings` (
   UNIQUE KEY `filter_settings_unique` (`filter_id`,`locale`,`setting_name`),
   KEY `filter_settings_id` (`filter_id`),
   CONSTRAINT `filter_settings_filter_id_foreign` FOREIGN KEY (`filter_id`) REFERENCES `filters` (`filter_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about filters, including localized content.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about filters, including localized content.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -941,20 +941,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filters`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filters` (
-  `filter_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `filter_group_id` bigint(20) NOT NULL DEFAULT '0',
-  `context_id` bigint(20) NOT NULL DEFAULT '0',
+  `filter_id` bigint NOT NULL AUTO_INCREMENT,
+  `filter_group_id` bigint NOT NULL DEFAULT '0',
+  `context_id` bigint NOT NULL DEFAULT '0',
   `display_name` varchar(255) DEFAULT NULL,
   `class_name` varchar(255) DEFAULT NULL,
-  `is_template` smallint(6) NOT NULL DEFAULT '0',
-  `parent_filter_id` bigint(20) NOT NULL DEFAULT '0',
-  `seq` bigint(20) NOT NULL DEFAULT '0',
+  `is_template` smallint NOT NULL DEFAULT '0',
+  `parent_filter_id` bigint NOT NULL DEFAULT '0',
+  `seq` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`filter_id`),
   KEY `filters_filter_group_id` (`filter_group_id`),
   CONSTRAINT `filters_filter_group_id_foreign` FOREIGN KEY (`filter_group_id`) REFERENCES `filter_groups` (`filter_group_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='Filters represent a transformation of a supported piece of data from one form to another, such as a PHP object into an XML document.';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3 COMMENT='Filters represent a transformation of a supported piece of data from one form to another, such as a PHP object into an XML document.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -973,10 +973,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `genre_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `genre_settings` (
-  `genre_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `genre_id` bigint(20) NOT NULL,
+  `genre_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `genre_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -985,7 +985,7 @@ CREATE TABLE `genre_settings` (
   UNIQUE KEY `genre_settings_unique` (`genre_id`,`locale`,`setting_name`),
   KEY `genre_settings_genre_id` (`genre_id`),
   CONSTRAINT `genre_settings_genre_id_foreign` FOREIGN KEY (`genre_id`) REFERENCES `genres` (`genre_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COMMENT='More data about file genres, including localized properties such as the genre name.';
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb3 COMMENT='More data about file genres, including localized properties such as the genre name.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1004,21 +1004,21 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `genres`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `genres` (
-  `genre_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `seq` bigint(20) NOT NULL,
-  `enabled` smallint(6) NOT NULL DEFAULT '1',
-  `category` bigint(20) NOT NULL DEFAULT '1',
-  `dependent` smallint(6) NOT NULL DEFAULT '0',
-  `supplementary` smallint(6) NOT NULL DEFAULT '0',
-  `required` smallint(6) NOT NULL DEFAULT '0' COMMENT 'Whether or not at least one file of this genre is required for a new submission.',
+  `genre_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `seq` bigint NOT NULL,
+  `enabled` smallint NOT NULL DEFAULT '1',
+  `category` bigint NOT NULL DEFAULT '1',
+  `dependent` smallint NOT NULL DEFAULT '0',
+  `supplementary` smallint NOT NULL DEFAULT '0',
+  `required` smallint NOT NULL DEFAULT '0' COMMENT 'Whether or not at least one file of this genre is required for a new submission.',
   `entry_key` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`genre_id`),
   KEY `genres_context_id` (`context_id`),
   CONSTRAINT `genres_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='The types of submission files configured for each context, such as Article Text, Data Set, Transcript, etc.';
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3 COMMENT='The types of submission files configured for each context, such as Article Text, Data Set, Transcript, etc.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1037,19 +1037,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `institution_ip`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `institution_ip` (
-  `institution_ip_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `institution_id` bigint(20) NOT NULL,
+  `institution_ip_id` bigint NOT NULL AUTO_INCREMENT,
+  `institution_id` bigint NOT NULL,
   `ip_string` varchar(40) NOT NULL,
-  `ip_start` bigint(20) NOT NULL,
-  `ip_end` bigint(20) DEFAULT NULL,
+  `ip_start` bigint NOT NULL,
+  `ip_end` bigint DEFAULT NULL,
   PRIMARY KEY (`institution_ip_id`),
   KEY `institution_ip_institution_id` (`institution_id`),
   KEY `institution_ip_start` (`ip_start`),
   KEY `institution_ip_end` (`ip_end`),
   CONSTRAINT `institution_ip_institution_id_foreign` FOREIGN KEY (`institution_id`) REFERENCES `institutions` (`institution_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Records IP address ranges and associates them with institutions.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Records IP address ranges and associates them with institutions.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1067,10 +1067,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `institution_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `institution_settings` (
-  `institution_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `institution_id` bigint(20) NOT NULL,
+  `institution_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `institution_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -1078,7 +1078,7 @@ CREATE TABLE `institution_settings` (
   UNIQUE KEY `institution_settings_unique` (`institution_id`,`locale`,`setting_name`),
   KEY `institution_settings_institution_id` (`institution_id`),
   CONSTRAINT `institution_settings_institution_id_foreign` FOREIGN KEY (`institution_id`) REFERENCES `institutions` (`institution_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about institutions, including localized properties like names.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about institutions, including localized properties like names.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1096,16 +1096,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `institutions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `institutions` (
-  `institution_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `institution_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `ror` varchar(255) DEFAULT NULL COMMENT 'ROR (Research Organization Registry) ID',
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`institution_id`),
   KEY `institutions_context_id` (`context_id`),
   CONSTRAINT `institutions_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Institutions for statistics and subscriptions.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Institutions for statistics and subscriptions.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1123,20 +1123,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `job_batches`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `job_batches` (
   `id` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `total_jobs` int(11) NOT NULL,
-  `pending_jobs` int(11) NOT NULL,
-  `failed_jobs` int(11) NOT NULL,
+  `total_jobs` int NOT NULL,
+  `pending_jobs` int NOT NULL,
+  `failed_jobs` int NOT NULL,
   `failed_job_ids` text NOT NULL,
   `options` mediumtext,
-  `cancelled_at` int(11) DEFAULT NULL,
-  `created_at` int(11) NOT NULL,
-  `finished_at` int(11) DEFAULT NULL,
+  `cancelled_at` int DEFAULT NULL,
+  `created_at` int NOT NULL,
+  `finished_at` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Job batches allow jobs to be collected into groups for managed processing.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Job batches allow jobs to be collected into groups for managed processing.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1145,7 +1145,7 @@ CREATE TABLE `job_batches` (
 
 LOCK TABLES `job_batches` WRITE;
 /*!40000 ALTER TABLE `job_batches` DISABLE KEYS */;
-INSERT INTO `job_batches` VALUES ('98d29feb-9074-4010-939a-838bd8e8c530','',0,0,0,'[]','a:0:{}',NULL,1680303935,NULL);
+INSERT INTO `job_batches` VALUES ('98d85a78-d249-4d91-bfbb-3b722aeed629','',0,0,0,'[]','a:0:{}',NULL,1680549982,NULL);
 /*!40000 ALTER TABLE `job_batches` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1155,18 +1155,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `jobs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jobs` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `queue` varchar(255) NOT NULL,
   `payload` longtext NOT NULL,
-  `attempts` tinyint(3) unsigned NOT NULL,
-  `reserved_at` int(10) unsigned DEFAULT NULL,
-  `available_at` int(10) unsigned NOT NULL,
-  `created_at` int(10) unsigned NOT NULL,
+  `attempts` tinyint unsigned NOT NULL,
+  `reserved_at` int unsigned DEFAULT NULL,
+  `available_at` int unsigned NOT NULL,
+  `created_at` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `jobs_queue_reserved_at_index` (`queue`,`reserved_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COMMENT='All pending or in-progress jobs.';
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8mb3 COMMENT='All pending or in-progress jobs.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1184,10 +1184,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `library_file_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `library_file_settings` (
-  `library_file_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `file_id` bigint(20) NOT NULL,
+  `library_file_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `file_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -1196,7 +1196,7 @@ CREATE TABLE `library_file_settings` (
   UNIQUE KEY `library_file_settings_unique` (`file_id`,`locale`,`setting_name`),
   KEY `library_file_settings_file_id` (`file_id`),
   CONSTRAINT `library_file_settings_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `library_files` (`file_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about library files, including localized content such as names.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about library files, including localized content such as names.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1214,25 +1214,25 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `library_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `library_files` (
-  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `file_name` varchar(255) NOT NULL,
   `original_file_name` varchar(255) NOT NULL,
   `file_type` varchar(255) NOT NULL,
-  `file_size` bigint(20) NOT NULL,
-  `type` smallint(6) NOT NULL,
+  `file_size` bigint NOT NULL,
+  `type` smallint NOT NULL,
   `date_uploaded` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
-  `submission_id` bigint(20) DEFAULT NULL,
-  `public_access` smallint(6) DEFAULT '0',
+  `submission_id` bigint DEFAULT NULL,
+  `public_access` smallint DEFAULT '0',
   PRIMARY KEY (`file_id`),
   KEY `library_files_context_id` (`context_id`),
   KEY `library_files_submission_id` (`submission_id`),
   CONSTRAINT `library_files_context_id` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `library_files_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Library files can be associated with the context (press/server/journal) or with individual submissions, and are typically forms, agreements, and other administrative documents that are not part of the scholarly content.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Library files can be associated with the context (press/server/journal) or with individual submissions, and are typically forms, agreements, and other administrative documents that are not part of the scholarly content.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1250,18 +1250,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_context`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_context` (
-  `metrics_context_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `metrics_context_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(255) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
   `date` date NOT NULL,
-  `metric` int(11) NOT NULL,
+  `metric` int NOT NULL,
   PRIMARY KEY (`metrics_context_id`),
   KEY `metrics_context_load_id` (`load_id`),
   KEY `metrics_context_context_id` (`context_id`),
   CONSTRAINT `metrics_context_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Daily statistics for views of the homepage.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Daily statistics for views of the homepage.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1279,17 +1279,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_counter_submission_daily`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_counter_submission_daily` (
-  `metrics_counter_submission_daily_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `metrics_counter_submission_daily_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(255) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
   `date` date NOT NULL,
-  `metric_investigations` int(11) NOT NULL,
-  `metric_investigations_unique` int(11) NOT NULL,
-  `metric_requests` int(11) NOT NULL,
-  `metric_requests_unique` int(11) NOT NULL,
+  `metric_investigations` int NOT NULL,
+  `metric_investigations_unique` int NOT NULL,
+  `metric_requests` int NOT NULL,
+  `metric_requests_unique` int NOT NULL,
   PRIMARY KEY (`metrics_counter_submission_daily_id`),
   UNIQUE KEY `msd_uc_load_id_context_id_submission_id_date` (`load_id`,`context_id`,`submission_id`,`date`),
   KEY `msd_load_id` (`load_id`),
@@ -1298,7 +1298,7 @@ CREATE TABLE `metrics_counter_submission_daily` (
   KEY `msd_context_id_submission_id` (`context_id`,`submission_id`),
   CONSTRAINT `msd_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `msd_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Daily statistics matching the COUNTER R5 protocol for views and downloads of published submissions and galleys.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Daily statistics matching the COUNTER R5 protocol for views and downloads of published submissions and galleys.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1316,18 +1316,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_counter_submission_institution_daily`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_counter_submission_institution_daily` (
-  `metrics_counter_submission_institution_daily_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `metrics_counter_submission_institution_daily_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(255) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `institution_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `institution_id` bigint NOT NULL,
   `date` date NOT NULL,
-  `metric_investigations` int(11) NOT NULL,
-  `metric_investigations_unique` int(11) NOT NULL,
-  `metric_requests` int(11) NOT NULL,
-  `metric_requests_unique` int(11) NOT NULL,
+  `metric_investigations` int NOT NULL,
+  `metric_investigations_unique` int NOT NULL,
+  `metric_requests` int NOT NULL,
+  `metric_requests_unique` int NOT NULL,
   PRIMARY KEY (`metrics_counter_submission_institution_daily_id`),
   UNIQUE KEY `msid_uc_load_id_context_id_submission_id_institution_id_date` (`load_id`,`context_id`,`submission_id`,`institution_id`,`date`),
   KEY `msid_load_id` (`load_id`),
@@ -1338,7 +1338,7 @@ CREATE TABLE `metrics_counter_submission_institution_daily` (
   CONSTRAINT `msid_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `msid_institution_id_foreign` FOREIGN KEY (`institution_id`) REFERENCES `institutions` (`institution_id`) ON DELETE CASCADE,
   CONSTRAINT `msid_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Daily statistics matching the COUNTER R5 protocol for views and downloads from institutions.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Daily statistics matching the COUNTER R5 protocol for views and downloads from institutions.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1356,17 +1356,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_counter_submission_institution_monthly`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_counter_submission_institution_monthly` (
-  `metrics_counter_submission_institution_monthly_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `institution_id` bigint(20) NOT NULL,
-  `month` int(11) NOT NULL,
-  `metric_investigations` int(11) NOT NULL,
-  `metric_investigations_unique` int(11) NOT NULL,
-  `metric_requests` int(11) NOT NULL,
-  `metric_requests_unique` int(11) NOT NULL,
+  `metrics_counter_submission_institution_monthly_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `institution_id` bigint NOT NULL,
+  `month` int NOT NULL,
+  `metric_investigations` int NOT NULL,
+  `metric_investigations_unique` int NOT NULL,
+  `metric_requests` int NOT NULL,
+  `metric_requests_unique` int NOT NULL,
   PRIMARY KEY (`metrics_counter_submission_institution_monthly_id`),
   UNIQUE KEY `msim_uc_context_id_submission_id_institution_id_month` (`context_id`,`submission_id`,`institution_id`,`month`),
   KEY `msim_context_id` (`context_id`),
@@ -1376,7 +1376,7 @@ CREATE TABLE `metrics_counter_submission_institution_monthly` (
   CONSTRAINT `msim_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `msim_institution_id_foreign` FOREIGN KEY (`institution_id`) REFERENCES `institutions` (`institution_id`) ON DELETE CASCADE,
   CONSTRAINT `msim_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Monthly statistics matching the COUNTER R5 protocol for views and downloads from institutions.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Monthly statistics matching the COUNTER R5 protocol for views and downloads from institutions.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1394,16 +1394,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_counter_submission_monthly`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_counter_submission_monthly` (
-  `metrics_counter_submission_monthly_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `month` int(11) NOT NULL,
-  `metric_investigations` int(11) NOT NULL,
-  `metric_investigations_unique` int(11) NOT NULL,
-  `metric_requests` int(11) NOT NULL,
-  `metric_requests_unique` int(11) NOT NULL,
+  `metrics_counter_submission_monthly_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `month` int NOT NULL,
+  `metric_investigations` int NOT NULL,
+  `metric_investigations_unique` int NOT NULL,
+  `metric_requests` int NOT NULL,
+  `metric_requests_unique` int NOT NULL,
   PRIMARY KEY (`metrics_counter_submission_monthly_id`),
   UNIQUE KEY `msm_uc_context_id_submission_id_month` (`context_id`,`submission_id`,`month`),
   KEY `metrics_counter_submission_monthly_context_id` (`context_id`),
@@ -1411,7 +1411,7 @@ CREATE TABLE `metrics_counter_submission_monthly` (
   KEY `msm_context_id_submission_id` (`context_id`,`submission_id`),
   CONSTRAINT `msm_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `msm_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Monthly statistics matching the COUNTER R5 protocol for views and downloads of published submissions and galleys.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Monthly statistics matching the COUNTER R5 protocol for views and downloads of published submissions and galleys.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1429,18 +1429,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_submission`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_submission` (
-  `metrics_submission_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `metrics_submission_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(255) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `representation_id` bigint(20) DEFAULT NULL,
-  `submission_file_id` bigint(20) unsigned DEFAULT NULL,
-  `file_type` bigint(20) DEFAULT NULL,
-  `assoc_type` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `representation_id` bigint DEFAULT NULL,
+  `submission_file_id` bigint unsigned DEFAULT NULL,
+  `file_type` bigint DEFAULT NULL,
+  `assoc_type` bigint NOT NULL,
   `date` date NOT NULL,
-  `metric` int(11) NOT NULL,
+  `metric` int NOT NULL,
   PRIMARY KEY (`metrics_submission_id`),
   KEY `ms_load_id` (`load_id`),
   KEY `metrics_submission_context_id` (`context_id`),
@@ -1452,7 +1452,7 @@ CREATE TABLE `metrics_submission` (
   CONSTRAINT `metrics_submission_representation_id_foreign` FOREIGN KEY (`representation_id`) REFERENCES `publication_galleys` (`galley_id`) ON DELETE CASCADE,
   CONSTRAINT `metrics_submission_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE,
   CONSTRAINT `metrics_submission_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Daily statistics for views and downloads of published submissions and galleys.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Daily statistics for views and downloads of published submissions and galleys.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1470,18 +1470,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_submission_geo_daily`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_submission_geo_daily` (
-  `metrics_submission_geo_daily_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `metrics_submission_geo_daily_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(255) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
   `country` varchar(2) NOT NULL DEFAULT '',
   `region` varchar(3) NOT NULL DEFAULT '',
   `city` varchar(255) NOT NULL DEFAULT '',
   `date` date NOT NULL,
-  `metric` int(11) NOT NULL,
-  `metric_unique` int(11) NOT NULL,
+  `metric` int NOT NULL,
+  `metric_unique` int NOT NULL,
   PRIMARY KEY (`metrics_submission_geo_daily_id`),
   UNIQUE KEY `msgd_uc_load_context_submission_c_r_c_date` (`load_id`,`context_id`,`submission_id`,`country`,`region`,`city`,`date`),
   KEY `msgd_load_id` (`load_id`),
@@ -1490,7 +1490,7 @@ CREATE TABLE `metrics_submission_geo_daily` (
   KEY `msgd_context_id_submission_id` (`context_id`,`submission_id`),
   CONSTRAINT `msgd_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `msgd_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Daily statistics by country, region and city for views and downloads of published submissions and galleys.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Daily statistics by country, region and city for views and downloads of published submissions and galleys.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1508,17 +1508,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_submission_geo_monthly`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_submission_geo_monthly` (
-  `metrics_submission_geo_monthly_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
+  `metrics_submission_geo_monthly_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
   `country` varchar(2) NOT NULL DEFAULT '',
   `region` varchar(3) NOT NULL DEFAULT '',
   `city` varchar(255) NOT NULL DEFAULT '',
-  `month` int(11) NOT NULL,
-  `metric` int(11) NOT NULL,
-  `metric_unique` int(11) NOT NULL,
+  `month` int NOT NULL,
+  `metric` int NOT NULL,
+  `metric_unique` int NOT NULL,
   PRIMARY KEY (`metrics_submission_geo_monthly_id`),
   UNIQUE KEY `msgm_uc_context_submission_c_r_c_month` (`context_id`,`submission_id`,`country`,`region`,`city`,`month`),
   KEY `msgm_context_id` (`context_id`),
@@ -1526,7 +1526,7 @@ CREATE TABLE `metrics_submission_geo_monthly` (
   KEY `msgm_context_id_submission_id` (`context_id`,`submission_id`),
   CONSTRAINT `msgm_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `msgm_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Monthly statistics by country, region and city for views and downloads of published submissions and galleys.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Monthly statistics by country, region and city for views and downloads of published submissions and galleys.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1544,10 +1544,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_assignment_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_assignment_settings` (
-  `navigation_menu_item_assignment_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `navigation_menu_item_assignment_id` bigint(20) NOT NULL,
+  `navigation_menu_item_assignment_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `navigation_menu_item_assignment_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -1556,7 +1556,7 @@ CREATE TABLE `navigation_menu_item_assignment_settings` (
   UNIQUE KEY `navigation_menu_item_assignment_settings_unique` (`navigation_menu_item_assignment_id`,`locale`,`setting_name`),
   KEY `navigation_menu_item_assignment_settings_n_m_i_a_id` (`navigation_menu_item_assignment_id`),
   CONSTRAINT `assignment_settings_navigation_menu_item_assignment_id` FOREIGN KEY (`navigation_menu_item_assignment_id`) REFERENCES `navigation_menu_item_assignments` (`navigation_menu_item_assignment_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about navigation menu item assignments to navigation menus, including localized content.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about navigation menu item assignments to navigation menus, including localized content.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1574,19 +1574,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_assignments` (
-  `navigation_menu_item_assignment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `navigation_menu_id` bigint(20) NOT NULL,
-  `navigation_menu_item_id` bigint(20) NOT NULL,
-  `parent_id` bigint(20) DEFAULT NULL,
-  `seq` bigint(20) DEFAULT '0',
+  `navigation_menu_item_assignment_id` bigint NOT NULL AUTO_INCREMENT,
+  `navigation_menu_id` bigint NOT NULL,
+  `navigation_menu_item_id` bigint NOT NULL,
+  `parent_id` bigint DEFAULT NULL,
+  `seq` bigint DEFAULT '0',
   PRIMARY KEY (`navigation_menu_item_assignment_id`),
   KEY `navigation_menu_item_assignments_navigation_menu_id` (`navigation_menu_id`),
   KEY `navigation_menu_item_assignments_navigation_menu_item_id` (`navigation_menu_item_id`),
   CONSTRAINT `navigation_menu_item_assignments_navigation_menu_id_foreign` FOREIGN KEY (`navigation_menu_id`) REFERENCES `navigation_menus` (`navigation_menu_id`) ON DELETE CASCADE,
   CONSTRAINT `navigation_menu_item_assignments_navigation_menu_item_id_foreign` FOREIGN KEY (`navigation_menu_item_id`) REFERENCES `navigation_menu_items` (`navigation_menu_item_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COMMENT='Links navigation menu items to navigation menus.';
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3 COMMENT='Links navigation menu items to navigation menus.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1605,10 +1605,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_settings` (
-  `navigation_menu_item_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `navigation_menu_item_id` bigint(20) NOT NULL,
+  `navigation_menu_item_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `navigation_menu_item_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` longtext,
@@ -1617,7 +1617,7 @@ CREATE TABLE `navigation_menu_item_settings` (
   UNIQUE KEY `navigation_menu_item_settings_unique` (`navigation_menu_item_id`,`locale`,`setting_name`),
   KEY `navigation_menu_item_settings_navigation_menu_item_id` (`navigation_menu_item_id`),
   CONSTRAINT `navigation_menu_item_settings_navigation_menu_id` FOREIGN KEY (`navigation_menu_item_id`) REFERENCES `navigation_menu_items` (`navigation_menu_item_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COMMENT='More data about navigation menu items, including localized content such as names.';
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3 COMMENT='More data about navigation menu items, including localized content such as names.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1636,14 +1636,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_items` (
-  `navigation_menu_item_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `navigation_menu_item_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `path` varchar(255) DEFAULT '',
   `type` varchar(255) DEFAULT '',
   PRIMARY KEY (`navigation_menu_item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COMMENT='Navigation menu items are single elements within a navigation menu.';
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3 COMMENT='Navigation menu items are single elements within a navigation menu.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1662,14 +1662,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menus`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menus` (
-  `navigation_menu_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `navigation_menu_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `area_name` varchar(255) DEFAULT '',
   `title` varchar(255) NOT NULL,
   PRIMARY KEY (`navigation_menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Navigation menus on the website are installed with the software as a default set, and can be customized.';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COMMENT='Navigation menus on the website are installed with the software as a default set, and can be customized.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1688,12 +1688,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notes` (
-  `note_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `note_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_created` datetime NOT NULL,
   `date_modified` datetime DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
@@ -1702,7 +1702,7 @@ CREATE TABLE `notes` (
   KEY `notes_user_id` (`user_id`),
   KEY `notes_assoc` (`assoc_type`,`assoc_id`),
   CONSTRAINT `notes_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Notes allow users to annotate associated entities, such as submissions.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Notes allow users to annotate associated entities, such as submissions.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1720,10 +1720,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_settings` (
-  `notification_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `notification_id` bigint(20) NOT NULL,
+  `notification_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `notification_id` bigint NOT NULL,
   `locale` varchar(14) DEFAULT NULL,
   `setting_name` varchar(64) NOT NULL,
   `setting_value` mediumtext NOT NULL,
@@ -1732,7 +1732,7 @@ CREATE TABLE `notification_settings` (
   UNIQUE KEY `notification_settings_unique` (`notification_id`,`locale`,`setting_name`),
   KEY `notification_settings_notification_id` (`notification_id`),
   CONSTRAINT `notification_settings_notification_id_foreign` FOREIGN KEY (`notification_id`) REFERENCES `notifications` (`notification_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='More data about notifications, including localized properties.';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COMMENT='More data about notifications, including localized properties.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1750,20 +1750,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_subscription_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_subscription_settings` (
-  `setting_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `setting_id` bigint NOT NULL AUTO_INCREMENT,
   `setting_name` varchar(64) NOT NULL,
   `setting_value` mediumtext NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `context` bigint(20) NOT NULL,
+  `user_id` bigint NOT NULL,
+  `context` bigint NOT NULL,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   PRIMARY KEY (`setting_id`),
   KEY `notification_subscription_settings_user_id` (`user_id`),
   KEY `notification_subscription_settings_context` (`context`),
   CONSTRAINT `notification_subscription_settings_context_foreign` FOREIGN KEY (`context`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `notification_subscription_settings_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='Which email notifications a user has chosen to unsubscribe from.';
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3 COMMENT='Which email notifications a user has chosen to unsubscribe from.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1782,17 +1782,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notifications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notifications` (
-  `notification_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) DEFAULT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
-  `level` bigint(20) NOT NULL,
-  `type` bigint(20) NOT NULL,
+  `notification_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint DEFAULT NULL,
+  `user_id` bigint DEFAULT NULL,
+  `level` bigint NOT NULL,
+  `type` bigint NOT NULL,
   `date_created` datetime NOT NULL,
   `date_read` datetime DEFAULT NULL,
-  `assoc_type` bigint(20) DEFAULT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `assoc_type` bigint DEFAULT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   PRIMARY KEY (`notification_id`),
   KEY `notifications_context_id` (`context_id`),
   KEY `notifications_user_id` (`user_id`),
@@ -1802,7 +1802,7 @@ CREATE TABLE `notifications` (
   KEY `notifications_user_id_level` (`user_id`,`level`),
   CONSTRAINT `notifications_context_id_foreign` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `notifications_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8 COMMENT='User notifications created during certain operations.';
+) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8mb3 COMMENT='User notifications created during certain operations.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1811,7 +1811,7 @@ CREATE TABLE `notifications` (
 
 LOCK TABLES `notifications` WRITE;
 /*!40000 ALTER TABLE `notifications` DISABLE KEYS */;
-INSERT INTO `notifications` VALUES (3,1,NULL,3,16777222,'2023-03-31 23:08:25',NULL,1048585,1),(4,1,NULL,3,16777223,'2023-03-31 23:08:25',NULL,1048585,1),(5,1,4,2,16777217,'2023-03-31 23:08:25',NULL,1048585,1),(6,1,5,2,16777217,'2023-03-31 23:08:25',NULL,1048585,1),(7,1,NULL,3,16777222,'2023-03-31 23:09:29',NULL,1048585,2),(8,1,NULL,3,16777223,'2023-03-31 23:09:29',NULL,1048585,2),(9,1,4,2,16777217,'2023-03-31 23:09:29',NULL,1048585,2),(10,1,5,2,16777217,'2023-03-31 23:09:29',NULL,1048585,2),(11,1,NULL,3,16777222,'2023-03-31 23:10:03',NULL,1048585,3),(12,1,NULL,3,16777223,'2023-03-31 23:10:03',NULL,1048585,3),(13,1,4,2,16777217,'2023-03-31 23:10:03',NULL,1048585,3),(14,1,5,2,16777217,'2023-03-31 23:10:03',NULL,1048585,3),(15,1,4,3,16777259,'2023-03-31 23:10:25',NULL,1048585,3),(16,1,5,3,16777259,'2023-03-31 23:10:25',NULL,1048585,3),(17,1,9,3,16777259,'2023-03-31 23:10:25',NULL,1048585,3),(18,1,NULL,3,16777222,'2023-03-31 23:10:53',NULL,1048585,4),(19,1,NULL,3,16777223,'2023-03-31 23:10:53',NULL,1048585,4),(20,1,4,2,16777217,'2023-03-31 23:10:53',NULL,1048585,4),(21,1,5,2,16777217,'2023-03-31 23:10:53',NULL,1048585,4),(23,1,10,2,16777234,'2023-03-31 23:11:15',NULL,1048585,4),(24,1,NULL,3,16777222,'2023-03-31 23:11:39',NULL,1048585,5),(25,1,NULL,3,16777223,'2023-03-31 23:11:39',NULL,1048585,5),(26,1,4,2,16777217,'2023-03-31 23:11:39',NULL,1048585,5),(27,1,5,2,16777217,'2023-03-31 23:11:39',NULL,1048585,5),(28,1,NULL,3,16777222,'2023-03-31 23:12:19',NULL,1048585,6),(29,1,NULL,3,16777223,'2023-03-31 23:12:19',NULL,1048585,6),(30,1,4,2,16777217,'2023-03-31 23:12:19',NULL,1048585,6),(31,1,5,2,16777217,'2023-03-31 23:12:19',NULL,1048585,6),(32,1,NULL,3,16777222,'2023-03-31 23:12:48',NULL,1048585,7),(33,1,NULL,3,16777223,'2023-03-31 23:12:48',NULL,1048585,7),(34,1,4,2,16777217,'2023-03-31 23:12:48',NULL,1048585,7),(35,1,5,2,16777217,'2023-03-31 23:12:48',NULL,1048585,7),(36,1,NULL,3,16777222,'2023-03-31 23:13:17',NULL,1048585,8),(37,1,NULL,3,16777223,'2023-03-31 23:13:17',NULL,1048585,8),(38,1,4,2,16777217,'2023-03-31 23:13:17',NULL,1048585,8),(39,1,5,2,16777217,'2023-03-31 23:13:17',NULL,1048585,8),(40,1,NULL,3,16777222,'2023-03-31 23:13:45',NULL,1048585,9),(41,1,NULL,3,16777223,'2023-03-31 23:13:45',NULL,1048585,9),(42,1,4,2,16777217,'2023-03-31 23:13:46',NULL,1048585,9),(43,1,5,2,16777217,'2023-03-31 23:13:46',NULL,1048585,9),(44,1,NULL,3,16777222,'2023-03-31 23:14:14',NULL,1048585,10),(45,1,NULL,3,16777223,'2023-03-31 23:14:14',NULL,1048585,10),(46,1,4,2,16777217,'2023-03-31 23:14:14',NULL,1048585,10),(47,1,5,2,16777217,'2023-03-31 23:14:14',NULL,1048585,10),(48,1,NULL,3,16777222,'2023-03-31 23:14:43',NULL,1048585,11),(49,1,NULL,3,16777223,'2023-03-31 23:14:43',NULL,1048585,11),(50,1,4,2,16777217,'2023-03-31 23:14:43',NULL,1048585,11),(51,1,5,2,16777217,'2023-03-31 23:14:43',NULL,1048585,11),(52,1,NULL,3,16777222,'2023-03-31 23:15:13',NULL,1048585,12),(53,1,NULL,3,16777223,'2023-03-31 23:15:13',NULL,1048585,12),(54,1,4,2,16777217,'2023-03-31 23:15:13',NULL,1048585,12),(55,1,5,2,16777217,'2023-03-31 23:15:13',NULL,1048585,12),(56,1,NULL,3,16777222,'2023-03-31 23:15:42',NULL,1048585,13),(57,1,NULL,3,16777223,'2023-03-31 23:15:42',NULL,1048585,13),(58,1,4,2,16777217,'2023-03-31 23:15:42',NULL,1048585,13),(59,1,5,2,16777217,'2023-03-31 23:15:42',NULL,1048585,13),(60,1,NULL,3,16777222,'2023-03-31 23:16:12',NULL,1048585,14),(61,1,NULL,3,16777223,'2023-03-31 23:16:12',NULL,1048585,14),(62,1,4,2,16777217,'2023-03-31 23:16:12',NULL,1048585,14),(63,1,5,2,16777217,'2023-03-31 23:16:12',NULL,1048585,14),(64,1,NULL,3,16777222,'2023-03-31 23:16:41',NULL,1048585,15),(65,1,NULL,3,16777223,'2023-03-31 23:16:41',NULL,1048585,15),(66,1,4,2,16777217,'2023-03-31 23:16:41',NULL,1048585,15),(67,1,5,2,16777217,'2023-03-31 23:16:41',NULL,1048585,15),(68,1,NULL,3,16777222,'2023-03-31 23:17:10',NULL,1048585,16),(69,1,NULL,3,16777223,'2023-03-31 23:17:10',NULL,1048585,16),(70,1,4,2,16777217,'2023-03-31 23:17:10',NULL,1048585,16),(71,1,5,2,16777217,'2023-03-31 23:17:10',NULL,1048585,16),(72,1,NULL,3,16777222,'2023-03-31 23:17:40',NULL,1048585,17),(73,1,NULL,3,16777223,'2023-03-31 23:17:40',NULL,1048585,17),(74,1,4,2,16777217,'2023-03-31 23:17:40',NULL,1048585,17),(75,1,5,2,16777217,'2023-03-31 23:17:40',NULL,1048585,17),(76,1,NULL,3,16777222,'2023-03-31 23:18:09',NULL,1048585,18),(77,1,NULL,3,16777223,'2023-03-31 23:18:09',NULL,1048585,18),(78,1,4,2,16777217,'2023-03-31 23:18:09',NULL,1048585,18),(79,1,5,2,16777217,'2023-03-31 23:18:09',NULL,1048585,18),(80,1,NULL,3,16777222,'2023-03-31 23:18:38',NULL,1048585,19),(81,1,NULL,3,16777223,'2023-03-31 23:18:38',NULL,1048585,19),(82,1,4,2,16777217,'2023-03-31 23:18:38',NULL,1048585,19),(83,1,5,2,16777217,'2023-03-31 23:18:38',NULL,1048585,19);
+INSERT INTO `notifications` VALUES (3,1,NULL,3,16777222,'2023-04-03 19:29:39',NULL,1048585,1),(4,1,NULL,3,16777223,'2023-04-03 19:29:39',NULL,1048585,1),(5,1,4,2,16777217,'2023-04-03 19:29:39',NULL,1048585,1),(6,1,5,2,16777217,'2023-04-03 19:29:39',NULL,1048585,1),(7,1,NULL,3,16777222,'2023-04-03 19:30:49',NULL,1048585,2),(8,1,NULL,3,16777223,'2023-04-03 19:30:49',NULL,1048585,2),(9,1,4,2,16777217,'2023-04-03 19:30:49',NULL,1048585,2),(10,1,5,2,16777217,'2023-04-03 19:30:49',NULL,1048585,2),(11,1,NULL,3,16777222,'2023-04-03 19:31:29',NULL,1048585,3),(12,1,NULL,3,16777223,'2023-04-03 19:31:29',NULL,1048585,3),(13,1,4,2,16777217,'2023-04-03 19:31:29',NULL,1048585,3),(14,1,5,2,16777217,'2023-04-03 19:31:29',NULL,1048585,3),(15,1,4,3,16777259,'2023-04-03 19:31:55',NULL,1048585,3),(16,1,5,3,16777259,'2023-04-03 19:31:55',NULL,1048585,3),(17,1,9,3,16777259,'2023-04-03 19:31:56',NULL,1048585,3),(18,1,NULL,3,16777222,'2023-04-03 19:32:25',NULL,1048585,4),(19,1,NULL,3,16777223,'2023-04-03 19:32:25',NULL,1048585,4),(20,1,4,2,16777217,'2023-04-03 19:32:25',NULL,1048585,4),(21,1,5,2,16777217,'2023-04-03 19:32:25',NULL,1048585,4),(23,1,10,2,16777234,'2023-04-03 19:32:49',NULL,1048585,4),(24,1,NULL,3,16777222,'2023-04-03 19:33:16',NULL,1048585,5),(25,1,NULL,3,16777223,'2023-04-03 19:33:16',NULL,1048585,5),(26,1,4,2,16777217,'2023-04-03 19:33:16',NULL,1048585,5),(27,1,5,2,16777217,'2023-04-03 19:33:16',NULL,1048585,5),(28,1,NULL,3,16777222,'2023-04-03 19:33:59',NULL,1048585,6),(29,1,NULL,3,16777223,'2023-04-03 19:33:59',NULL,1048585,6),(30,1,4,2,16777217,'2023-04-03 19:33:59',NULL,1048585,6),(31,1,5,2,16777217,'2023-04-03 19:33:59',NULL,1048585,6),(32,1,NULL,3,16777222,'2023-04-03 19:34:31',NULL,1048585,7),(33,1,NULL,3,16777223,'2023-04-03 19:34:31',NULL,1048585,7),(34,1,4,2,16777217,'2023-04-03 19:34:31',NULL,1048585,7),(35,1,5,2,16777217,'2023-04-03 19:34:31',NULL,1048585,7),(36,1,NULL,3,16777222,'2023-04-03 19:35:02',NULL,1048585,8),(37,1,NULL,3,16777223,'2023-04-03 19:35:02',NULL,1048585,8),(38,1,4,2,16777217,'2023-04-03 19:35:02',NULL,1048585,8),(39,1,5,2,16777217,'2023-04-03 19:35:02',NULL,1048585,8),(40,1,NULL,3,16777222,'2023-04-03 19:35:33',NULL,1048585,9),(41,1,NULL,3,16777223,'2023-04-03 19:35:33',NULL,1048585,9),(42,1,4,2,16777217,'2023-04-03 19:35:33',NULL,1048585,9),(43,1,5,2,16777217,'2023-04-03 19:35:33',NULL,1048585,9),(44,1,NULL,3,16777222,'2023-04-03 19:36:04',NULL,1048585,10),(45,1,NULL,3,16777223,'2023-04-03 19:36:04',NULL,1048585,10),(46,1,4,2,16777217,'2023-04-03 19:36:04',NULL,1048585,10),(47,1,5,2,16777217,'2023-04-03 19:36:04',NULL,1048585,10),(48,1,NULL,3,16777222,'2023-04-03 19:36:36',NULL,1048585,11),(49,1,NULL,3,16777223,'2023-04-03 19:36:36',NULL,1048585,11),(50,1,4,2,16777217,'2023-04-03 19:36:36',NULL,1048585,11),(51,1,5,2,16777217,'2023-04-03 19:36:36',NULL,1048585,11),(52,1,NULL,3,16777222,'2023-04-03 19:37:08',NULL,1048585,12),(53,1,NULL,3,16777223,'2023-04-03 19:37:08',NULL,1048585,12),(54,1,4,2,16777217,'2023-04-03 19:37:08',NULL,1048585,12),(55,1,5,2,16777217,'2023-04-03 19:37:08',NULL,1048585,12),(56,1,NULL,3,16777222,'2023-04-03 19:37:41',NULL,1048585,13),(57,1,NULL,3,16777223,'2023-04-03 19:37:41',NULL,1048585,13),(58,1,4,2,16777217,'2023-04-03 19:37:41',NULL,1048585,13),(59,1,5,2,16777217,'2023-04-03 19:37:41',NULL,1048585,13),(60,1,NULL,3,16777222,'2023-04-03 19:38:13',NULL,1048585,14),(61,1,NULL,3,16777223,'2023-04-03 19:38:13',NULL,1048585,14),(62,1,4,2,16777217,'2023-04-03 19:38:13',NULL,1048585,14),(63,1,5,2,16777217,'2023-04-03 19:38:13',NULL,1048585,14),(64,1,NULL,3,16777222,'2023-04-03 19:38:44',NULL,1048585,15),(65,1,NULL,3,16777223,'2023-04-03 19:38:44',NULL,1048585,15),(66,1,4,2,16777217,'2023-04-03 19:38:44',NULL,1048585,15),(67,1,5,2,16777217,'2023-04-03 19:38:44',NULL,1048585,15),(68,1,NULL,3,16777222,'2023-04-03 19:39:16',NULL,1048585,16),(69,1,NULL,3,16777223,'2023-04-03 19:39:16',NULL,1048585,16),(70,1,4,2,16777217,'2023-04-03 19:39:16',NULL,1048585,16),(71,1,5,2,16777217,'2023-04-03 19:39:16',NULL,1048585,16),(72,1,NULL,3,16777222,'2023-04-03 19:39:48',NULL,1048585,17),(73,1,NULL,3,16777223,'2023-04-03 19:39:48',NULL,1048585,17),(74,1,4,2,16777217,'2023-04-03 19:39:49',NULL,1048585,17),(75,1,5,2,16777217,'2023-04-03 19:39:49',NULL,1048585,17),(76,1,NULL,3,16777222,'2023-04-03 19:40:20',NULL,1048585,18),(77,1,NULL,3,16777223,'2023-04-03 19:40:20',NULL,1048585,18),(78,1,4,2,16777217,'2023-04-03 19:40:20',NULL,1048585,18),(79,1,5,2,16777217,'2023-04-03 19:40:20',NULL,1048585,18),(80,1,NULL,3,16777222,'2023-04-03 19:40:52',NULL,1048585,19),(81,1,NULL,3,16777223,'2023-04-03 19:40:52',NULL,1048585,19),(82,1,4,2,16777217,'2023-04-03 19:40:52',NULL,1048585,19),(83,1,5,2,16777217,'2023-04-03 19:40:52',NULL,1048585,19);
 /*!40000 ALTER TABLE `notifications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1821,16 +1821,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `oai_resumption_tokens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `oai_resumption_tokens` (
-  `oai_resumption_token_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `oai_resumption_token_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `token` varchar(32) NOT NULL,
-  `expire` bigint(20) NOT NULL,
-  `record_offset` int(11) NOT NULL,
+  `expire` bigint NOT NULL,
+  `record_offset` int NOT NULL,
   `params` text,
   PRIMARY KEY (`oai_resumption_token_id`),
   UNIQUE KEY `oai_resumption_tokens_unique` (`token`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='OAI resumption tokens are used to allow for pagination of large result sets into manageable pieces.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='OAI resumption tokens are used to allow for pagination of large result sets into manageable pieces.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1848,18 +1848,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `plugin_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `plugin_settings` (
-  `plugin_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `plugin_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `plugin_name` varchar(80) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
   `setting_name` varchar(80) NOT NULL,
   `setting_value` mediumtext,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   PRIMARY KEY (`plugin_setting_id`),
   UNIQUE KEY `plugin_settings_unique` (`plugin_name`,`context_id`,`setting_name`),
   KEY `plugin_settings_plugin_name` (`plugin_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='More data about plugins, including localized properties. This table is frequently used to store plugin-specific configuration.';
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3 COMMENT='More data about plugins, including localized properties. This table is frequently used to store plugin-specific configuration.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1868,7 +1868,7 @@ CREATE TABLE `plugin_settings` (
 
 LOCK TABLES `plugin_settings` WRITE;
 /*!40000 ALTER TABLE `plugin_settings` DISABLE KEYS */;
-INSERT INTO `plugin_settings` VALUES (1,'defaultthemeplugin',0,'enabled','1','bool'),(2,'usageeventplugin',0,'enabled','1','bool'),(3,'usageeventplugin',0,'uniqueSiteId','','string'),(4,'acronplugin',0,'enabled','1','bool'),(5,'acronplugin',0,'crontab','[{\"className\":\"PKP\\\\task\\\\StatisticsReport\",\"frequency\":{\"day\":\"1\"},\"args\":[]},{\"className\":\"PKP\\\\task\\\\RemoveUnvalidatedExpiredUsers\",\"frequency\":{\"day\":\"1\"},\"args\":[]},{\"className\":\"PKP\\\\task\\\\UpdateIPGeoDB\",\"frequency\":{\"day\":\"10\"},\"args\":[]},{\"className\":\"APP\\\\tasks\\\\UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"PKP\\\\task\\\\ProcessQueueJobs\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"PKP\\\\task\\\\RemoveFailedJobs\",\"frequency\":{\"day\":\"1\"},\"args\":[]}]','object'),(6,'tinymceplugin',0,'enabled','1','bool'),(7,'developedbyblockplugin',0,'enabled','0','bool'),(8,'developedbyblockplugin',0,'seq','0','int'),(9,'languagetoggleblockplugin',0,'enabled','1','bool'),(10,'languagetoggleblockplugin',0,'seq','4','int'),(11,'tinymceplugin',1,'enabled','1','bool'),(12,'defaultthemeplugin',1,'enabled','1','bool'),(13,'developedbyblockplugin',1,'enabled','0','bool'),(14,'developedbyblockplugin',1,'seq','0','int'),(15,'languagetoggleblockplugin',1,'enabled','1','bool'),(16,'languagetoggleblockplugin',1,'seq','4','int'),(17,'googlescholarplugin',1,'enabled','1','bool'),(18,'pdfjsviewerplugin',1,'enabled','1','bool'),(19,'webfeedplugin',1,'enabled','1','bool'),(20,'webfeedplugin',1,'displayPage','homepage','string'),(21,'webfeedplugin',1,'displayItems','1','bool'),(22,'webfeedplugin',1,'recentItems','30','int'),(23,'webfeedplugin',1,'includeIdentifiers','0','bool'),(24,'defaultthemeplugin',1,'typography','notoSans','string'),(25,'defaultthemeplugin',1,'baseColour','#1E6292','string'),(26,'defaultthemeplugin',1,'showDescriptionInServerIndex','false','string'),(27,'defaultthemeplugin',1,'useHomepageImageAsHeader','false','string'),(28,'defaultthemeplugin',1,'displayStats','none','string');
+INSERT INTO `plugin_settings` VALUES (1,'defaultthemeplugin',0,'enabled','1','bool'),(2,'acronplugin',0,'enabled','1','bool'),(3,'acronplugin',0,'crontab','[{\"className\":\"PKP\\\\task\\\\StatisticsReport\",\"frequency\":{\"day\":\"1\"},\"args\":[]},{\"className\":\"PKP\\\\task\\\\RemoveUnvalidatedExpiredUsers\",\"frequency\":{\"day\":\"1\"},\"args\":[]},{\"className\":\"PKP\\\\task\\\\UpdateIPGeoDB\",\"frequency\":{\"day\":\"10\"},\"args\":[]},{\"className\":\"APP\\\\tasks\\\\UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"PKP\\\\task\\\\ProcessQueueJobs\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"PKP\\\\task\\\\RemoveFailedJobs\",\"frequency\":{\"day\":\"1\"},\"args\":[]}]','object'),(4,'usageeventplugin',0,'enabled','1','bool'),(5,'usageeventplugin',0,'uniqueSiteId','','string'),(6,'tinymceplugin',0,'enabled','1','bool'),(7,'languagetoggleblockplugin',0,'enabled','1','bool'),(8,'languagetoggleblockplugin',0,'seq','4','int'),(9,'developedbyblockplugin',0,'enabled','0','bool'),(10,'developedbyblockplugin',0,'seq','0','int'),(11,'defaultthemeplugin',1,'enabled','1','bool'),(12,'tinymceplugin',1,'enabled','1','bool'),(13,'languagetoggleblockplugin',1,'enabled','1','bool'),(14,'languagetoggleblockplugin',1,'seq','4','int'),(15,'developedbyblockplugin',1,'enabled','0','bool'),(16,'developedbyblockplugin',1,'seq','0','int'),(17,'webfeedplugin',1,'enabled','1','bool'),(18,'webfeedplugin',1,'displayPage','homepage','string'),(19,'webfeedplugin',1,'displayItems','1','bool'),(20,'webfeedplugin',1,'recentItems','30','int'),(21,'webfeedplugin',1,'includeIdentifiers','0','bool'),(22,'pdfjsviewerplugin',1,'enabled','1','bool'),(23,'googlescholarplugin',1,'enabled','1','bool'),(24,'defaultthemeplugin',1,'typography','notoSans','string'),(25,'defaultthemeplugin',1,'baseColour','#1E6292','string'),(26,'defaultthemeplugin',1,'showDescriptionInServerIndex','false','string'),(27,'defaultthemeplugin',1,'useHomepageImageAsHeader','false','string'),(28,'defaultthemeplugin',1,'displayStats','none','string');
 /*!40000 ALTER TABLE `plugin_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1878,18 +1878,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_categories` (
-  `publication_category_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `publication_id` bigint(20) NOT NULL,
-  `category_id` bigint(20) NOT NULL,
+  `publication_category_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `publication_id` bigint NOT NULL,
+  `category_id` bigint NOT NULL,
   PRIMARY KEY (`publication_category_id`),
   UNIQUE KEY `publication_categories_id` (`publication_id`,`category_id`),
   KEY `publication_categories_publication_id` (`publication_id`),
   KEY `publication_categories_category_id` (`category_id`),
   CONSTRAINT `publication_categories_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`) ON DELETE CASCADE,
   CONSTRAINT `publication_categories_publication_id_foreign` FOREIGN KEY (`publication_id`) REFERENCES `publications` (`publication_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Associates publications (and thus submissions) with categories.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Associates publications (and thus submissions) with categories.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1907,10 +1907,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_galley_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_galley_settings` (
-  `publication_galley_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `galley_id` bigint(20) NOT NULL,
+  `publication_galley_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `galley_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
@@ -1919,7 +1919,7 @@ CREATE TABLE `publication_galley_settings` (
   KEY `publication_galley_settings_galley_id` (`galley_id`),
   KEY `publication_galley_settings_name_value` (`setting_name`(50),`setting_value`(150)),
   CONSTRAINT `publication_galley_settings_galley_id_foreign` FOREIGN KEY (`galley_id`) REFERENCES `publication_galleys` (`galley_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about publication galleys, including localized properties such as labels.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about publication galleys, including localized properties such as labels.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1937,18 +1937,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_galleys`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_galleys` (
-  `galley_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `galley_id` bigint NOT NULL AUTO_INCREMENT,
   `locale` varchar(14) DEFAULT NULL,
-  `publication_id` bigint(20) NOT NULL,
+  `publication_id` bigint NOT NULL,
   `label` varchar(255) DEFAULT NULL,
-  `submission_file_id` bigint(20) unsigned DEFAULT NULL,
+  `submission_file_id` bigint unsigned DEFAULT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   `remote_url` varchar(2047) DEFAULT NULL,
-  `is_approved` tinyint(4) NOT NULL DEFAULT '0',
+  `is_approved` tinyint NOT NULL DEFAULT '0',
   `url_path` varchar(64) DEFAULT NULL,
-  `doi_id` bigint(20) DEFAULT NULL,
+  `doi_id` bigint DEFAULT NULL,
   PRIMARY KEY (`galley_id`),
   KEY `publication_galleys_publication_id` (`publication_id`),
   KEY `publication_galleys_submission_file_id` (`submission_file_id`),
@@ -1957,7 +1957,7 @@ CREATE TABLE `publication_galleys` (
   CONSTRAINT `publication_galleys_doi_id_foreign` FOREIGN KEY (`doi_id`) REFERENCES `dois` (`doi_id`) ON DELETE SET NULL,
   CONSTRAINT `publication_galleys_publication_id` FOREIGN KEY (`publication_id`) REFERENCES `publications` (`publication_id`) ON DELETE CASCADE,
   CONSTRAINT `publication_galleys_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='Publication galleys are representations of publications in a particular format, such as a PDF file.';
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb3 COMMENT='Publication galleys are representations of publications in a particular format, such as a PDF file.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1976,10 +1976,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_settings` (
-  `publication_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `publication_id` bigint(20) NOT NULL,
+  `publication_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `publication_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -1987,7 +1987,7 @@ CREATE TABLE `publication_settings` (
   UNIQUE KEY `publication_settings_unique` (`publication_id`,`locale`,`setting_name`),
   KEY `publication_settings_name_value` (`setting_name`(50),`setting_value`(150)),
   CONSTRAINT `publication_settings_publication_id` FOREIGN KEY (`publication_id`) REFERENCES `publications` (`publication_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8 COMMENT='More data about publications, including localized properties such as the title and abstract.';
+) ENGINE=InnoDB AUTO_INCREMENT=116 DEFAULT CHARSET=utf8mb3 COMMENT='More data about publications, including localized properties such as the title and abstract.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2006,19 +2006,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publications` (
-  `publication_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `access_status` bigint(20) DEFAULT '0',
+  `publication_id` bigint NOT NULL AUTO_INCREMENT,
+  `access_status` bigint DEFAULT '0',
   `date_published` date DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
-  `primary_contact_id` bigint(20) DEFAULT NULL,
-  `section_id` bigint(20) DEFAULT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT '1',
+  `primary_contact_id` bigint DEFAULT NULL,
+  `section_id` bigint DEFAULT NULL,
+  `submission_id` bigint NOT NULL,
+  `status` tinyint NOT NULL DEFAULT '1',
   `url_path` varchar(64) DEFAULT NULL,
-  `version` bigint(20) DEFAULT NULL,
-  `doi_id` bigint(20) DEFAULT NULL,
+  `version` bigint DEFAULT NULL,
+  `doi_id` bigint DEFAULT NULL,
   PRIMARY KEY (`publication_id`),
   KEY `publications_author_id` (`primary_contact_id`),
   KEY `publications_section_id` (`section_id`),
@@ -2029,7 +2029,7 @@ CREATE TABLE `publications` (
   CONSTRAINT `publications_doi_id_foreign` FOREIGN KEY (`doi_id`) REFERENCES `dois` (`doi_id`) ON DELETE SET NULL,
   CONSTRAINT `publications_section_id_foreign` FOREIGN KEY (`section_id`) REFERENCES `sections` (`section_id`) ON DELETE SET NULL,
   CONSTRAINT `publications_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COMMENT='Each publication is one version of a submission.';
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb3 COMMENT='Each publication is one version of a submission.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2038,7 +2038,7 @@ CREATE TABLE `publications` (
 
 LOCK TABLES `publications` WRITE;
 /*!40000 ALTER TABLE `publications` DISABLE KEYS */;
-INSERT INTO `publications` VALUES (1,0,NULL,'2023-03-31 23:08:12',1,1,1,1,NULL,1,NULL),(2,0,'2023-03-31','2023-03-31 23:09:41',2,1,2,3,NULL,1,NULL),(3,0,'2023-03-31','2023-03-31 23:10:22',5,1,3,3,NULL,1,NULL),(4,0,'2023-03-31','2023-03-31 23:10:30',7,1,3,3,NULL,2,NULL),(5,0,NULL,'2023-03-31 23:10:39',9,1,4,1,NULL,1,NULL),(6,0,'2023-03-31','2023-03-31 23:11:57',10,1,5,3,NULL,1,NULL),(7,0,'2023-03-31','2023-03-31 23:12:25',11,1,6,3,NULL,1,NULL),(8,0,'2023-03-31','2023-03-31 23:12:55',12,1,7,3,NULL,1,NULL),(9,0,'2023-03-31','2023-03-31 23:13:23',14,1,8,3,NULL,1,NULL),(10,0,'2023-03-31','2023-03-31 23:13:52',15,1,9,3,NULL,1,NULL),(11,0,'2023-03-31','2023-03-31 23:14:21',16,1,10,3,NULL,1,NULL),(12,0,'2023-03-31','2023-03-31 23:14:51',17,1,11,3,NULL,1,NULL),(13,0,'2023-03-31','2023-03-31 23:15:20',19,1,12,3,NULL,1,NULL),(14,0,'2023-03-31','2023-03-31 23:15:49',20,1,13,3,NULL,1,NULL),(15,0,'2023-03-31','2023-03-31 23:16:19',21,1,14,3,NULL,1,NULL),(16,0,'2023-03-31','2023-03-31 23:16:48',22,1,15,3,NULL,1,NULL),(17,0,'2023-03-31','2023-03-31 23:17:17',23,1,16,3,NULL,1,NULL),(18,0,'2023-03-31','2023-03-31 23:17:47',24,1,17,3,NULL,1,NULL),(19,0,'2023-03-31','2023-03-31 23:18:16',25,1,18,3,NULL,1,NULL),(20,0,'2023-03-31','2023-03-31 23:18:46',26,1,19,3,NULL,1,NULL);
+INSERT INTO `publications` VALUES (1,0,NULL,'2023-04-03 19:29:25',1,1,1,1,NULL,1,NULL),(2,0,'2023-04-03','2023-04-03 19:31:04',2,1,2,3,NULL,1,NULL),(3,0,'2023-04-03','2023-04-03 19:31:52',5,1,3,3,NULL,1,NULL),(4,0,'2023-04-03','2023-04-03 19:32:01',7,1,3,3,NULL,2,NULL),(5,0,NULL,'2023-04-03 19:32:11',9,1,4,1,NULL,1,NULL),(6,0,'2023-04-03','2023-04-03 19:33:35',10,1,5,3,NULL,1,NULL),(7,0,'2023-04-03','2023-04-03 19:34:07',11,1,6,3,NULL,1,NULL),(8,0,'2023-04-03','2023-04-03 19:34:39',12,1,7,3,NULL,1,NULL),(9,0,'2023-04-03','2023-04-03 19:35:09',14,1,8,3,NULL,1,NULL),(10,0,'2023-04-03','2023-04-03 19:35:41',15,1,9,3,NULL,1,NULL),(11,0,'2023-04-03','2023-04-03 19:36:12',16,1,10,3,NULL,1,NULL),(12,0,'2023-04-03','2023-04-03 19:36:44',17,1,11,3,NULL,1,NULL),(13,0,'2023-04-03','2023-04-03 19:37:16',19,1,12,3,NULL,1,NULL),(14,0,'2023-04-03','2023-04-03 19:37:48',20,1,13,3,NULL,1,NULL),(15,0,'2023-04-03','2023-04-03 19:38:20',21,1,14,3,NULL,1,NULL),(16,0,'2023-04-03','2023-04-03 19:38:53',22,1,15,3,NULL,1,NULL),(17,0,'2023-04-03','2023-04-03 19:39:25',23,1,16,3,NULL,1,NULL),(18,0,'2023-04-03','2023-04-03 19:39:56',24,1,17,3,NULL,1,NULL),(19,0,'2023-04-03','2023-04-03 19:40:28',25,1,18,3,NULL,1,NULL),(20,0,'2023-04-03','2023-04-03 19:41:00',26,1,19,3,NULL,1,NULL);
 /*!40000 ALTER TABLE `publications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2048,19 +2048,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `queries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `queries` (
-  `query_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
+  `query_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   `date_posted` datetime DEFAULT NULL,
   `date_modified` datetime DEFAULT NULL,
-  `closed` smallint(6) NOT NULL DEFAULT '0',
+  `closed` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`query_id`),
   KEY `queries_assoc_id` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Discussions, usually related to a submission, created by editors, authors and other editorial staff.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Discussions, usually related to a submission, created by editors, authors and other editorial staff.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2078,18 +2078,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `query_participants`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `query_participants` (
-  `query_participant_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `query_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `query_participant_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `query_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   PRIMARY KEY (`query_participant_id`),
   UNIQUE KEY `query_participants_unique` (`query_id`,`user_id`),
   KEY `query_participants_query_id` (`query_id`),
   KEY `query_participants_user_id` (`user_id`),
   CONSTRAINT `query_participants_query_id_foreign` FOREIGN KEY (`query_id`) REFERENCES `queries` (`query_id`) ON DELETE CASCADE,
   CONSTRAINT `query_participants_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='The users assigned to a discussion.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='The users assigned to a discussion.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2107,13 +2107,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_assignments` (
-  `review_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `reviewer_id` bigint(20) NOT NULL,
+  `review_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `reviewer_id` bigint NOT NULL,
   `competing_interests` text,
-  `recommendation` smallint(6) DEFAULT NULL,
+  `recommendation` smallint DEFAULT NULL,
   `date_assigned` datetime DEFAULT NULL,
   `date_notified` datetime DEFAULT NULL,
   `date_confirmed` datetime DEFAULT NULL,
@@ -2122,21 +2122,21 @@ CREATE TABLE `review_assignments` (
   `date_due` datetime DEFAULT NULL,
   `date_response_due` datetime DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
-  `reminder_was_automatic` smallint(6) NOT NULL DEFAULT '0',
-  `declined` smallint(6) NOT NULL DEFAULT '0',
-  `cancelled` smallint(6) NOT NULL DEFAULT '0',
-  `reviewer_file_id` bigint(20) DEFAULT NULL,
+  `reminder_was_automatic` smallint NOT NULL DEFAULT '0',
+  `declined` smallint NOT NULL DEFAULT '0',
+  `cancelled` smallint NOT NULL DEFAULT '0',
+  `reviewer_file_id` bigint DEFAULT NULL,
   `date_rated` datetime DEFAULT NULL,
   `date_reminded` datetime DEFAULT NULL,
-  `quality` smallint(6) DEFAULT NULL,
-  `review_round_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
-  `review_method` smallint(6) NOT NULL DEFAULT '1',
-  `round` smallint(6) NOT NULL DEFAULT '1',
-  `step` smallint(6) NOT NULL DEFAULT '1',
-  `review_form_id` bigint(20) DEFAULT NULL,
-  `considered` smallint(6) DEFAULT NULL,
-  `request_resent` smallint(6) NOT NULL DEFAULT '0',
+  `quality` smallint DEFAULT NULL,
+  `review_round_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
+  `review_method` smallint NOT NULL DEFAULT '1',
+  `round` smallint NOT NULL DEFAULT '1',
+  `step` smallint NOT NULL DEFAULT '1',
+  `review_form_id` bigint DEFAULT NULL,
+  `considered` smallint DEFAULT NULL,
+  `request_resent` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`review_id`),
   KEY `review_assignments_submission_id` (`submission_id`),
   KEY `review_assignments_reviewer_id` (`reviewer_id`),
@@ -2147,7 +2147,7 @@ CREATE TABLE `review_assignments` (
   CONSTRAINT `review_assignments_review_round_id_foreign` FOREIGN KEY (`review_round_id`) REFERENCES `review_rounds` (`review_round_id`),
   CONSTRAINT `review_assignments_reviewer_id_foreign` FOREIGN KEY (`reviewer_id`) REFERENCES `users` (`user_id`),
   CONSTRAINT `review_assignments_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Data about peer review assignments for all submissions.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Data about peer review assignments for all submissions.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2165,18 +2165,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_files` (
-  `review_file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `review_id` bigint(20) NOT NULL,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
+  `review_file_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `review_id` bigint NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL,
   PRIMARY KEY (`review_file_id`),
   UNIQUE KEY `review_files_unique` (`review_id`,`submission_file_id`),
   KEY `review_files_review_id` (`review_id`),
   KEY `review_files_submission_file_id` (`submission_file_id`),
   CONSTRAINT `review_files_review_id_foreign` FOREIGN KEY (`review_id`) REFERENCES `review_assignments` (`review_id`) ON DELETE CASCADE,
   CONSTRAINT `review_files_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='A list of the submission files made available to each assigned reviewer.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='A list of the submission files made available to each assigned reviewer.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2194,10 +2194,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_element_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_element_settings` (
-  `review_form_element_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `review_form_element_id` bigint(20) NOT NULL,
+  `review_form_element_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `review_form_element_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -2206,7 +2206,7 @@ CREATE TABLE `review_form_element_settings` (
   UNIQUE KEY `review_form_element_settings_unique` (`review_form_element_id`,`locale`,`setting_name`),
   KEY `review_form_element_settings_review_form_element_id` (`review_form_element_id`),
   CONSTRAINT `review_form_element_settings_review_form_element_id` FOREIGN KEY (`review_form_element_id`) REFERENCES `review_form_elements` (`review_form_element_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about review form elements, including localized content such as question text.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about review form elements, including localized content such as question text.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2224,18 +2224,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_elements`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_elements` (
-  `review_form_element_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `review_form_id` bigint(20) NOT NULL,
+  `review_form_element_id` bigint NOT NULL AUTO_INCREMENT,
+  `review_form_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
-  `element_type` bigint(20) DEFAULT NULL,
-  `required` smallint(6) DEFAULT NULL,
-  `included` smallint(6) DEFAULT NULL,
+  `element_type` bigint DEFAULT NULL,
+  `required` smallint DEFAULT NULL,
+  `included` smallint DEFAULT NULL,
   PRIMARY KEY (`review_form_element_id`),
   KEY `review_form_elements_review_form_id` (`review_form_id`),
   CONSTRAINT `review_form_elements_review_form_id` FOREIGN KEY (`review_form_id`) REFERENCES `review_forms` (`review_form_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Each review form element represents a single question on a review form.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Each review form element represents a single question on a review form.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2253,11 +2253,11 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_responses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_responses` (
-  `review_form_response_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `review_form_element_id` bigint(20) NOT NULL,
-  `review_id` bigint(20) NOT NULL,
+  `review_form_response_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `review_form_element_id` bigint NOT NULL,
+  `review_id` bigint NOT NULL,
   `response_type` varchar(6) DEFAULT NULL,
   `response_value` text,
   PRIMARY KEY (`review_form_response_id`),
@@ -2266,7 +2266,7 @@ CREATE TABLE `review_form_responses` (
   KEY `review_form_responses_unique` (`review_form_element_id`,`review_id`),
   CONSTRAINT `review_form_responses_review_form_element_id_foreign` FOREIGN KEY (`review_form_element_id`) REFERENCES `review_form_elements` (`review_form_element_id`) ON DELETE CASCADE,
   CONSTRAINT `review_form_responses_review_id_foreign` FOREIGN KEY (`review_id`) REFERENCES `review_assignments` (`review_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Each review form response records a reviewer''s answer to a review form element associated with a peer review.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Each review form response records a reviewer''s answer to a review form element associated with a peer review.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2284,10 +2284,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_settings` (
-  `review_form_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `review_form_id` bigint(20) NOT NULL,
+  `review_form_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `review_form_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -2296,7 +2296,7 @@ CREATE TABLE `review_form_settings` (
   UNIQUE KEY `review_form_settings_unique` (`review_form_id`,`locale`,`setting_name`),
   KEY `review_form_settings_review_form_id` (`review_form_id`),
   CONSTRAINT `review_form_settings_review_form_id` FOREIGN KEY (`review_form_id`) REFERENCES `review_forms` (`review_form_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='More data about review forms, including localized content such as names.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='More data about review forms, including localized content such as names.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2314,15 +2314,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_forms`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_forms` (
-  `review_form_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `review_form_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
-  `is_active` smallint(6) DEFAULT NULL,
+  `is_active` smallint DEFAULT NULL,
   PRIMARY KEY (`review_form_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Review forms provide custom templates for peer reviews with several types of questions.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Review forms provide custom templates for peer reviews with several types of questions.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2340,13 +2340,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_round_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_round_files` (
-  `review_round_file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `review_round_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
+  `review_round_file_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `review_round_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL,
   PRIMARY KEY (`review_round_file_id`),
   UNIQUE KEY `review_round_files_unique` (`submission_id`,`review_round_id`,`submission_file_id`),
   KEY `review_round_files_submission_id` (`submission_id`),
@@ -2355,7 +2355,7 @@ CREATE TABLE `review_round_files` (
   CONSTRAINT `review_round_files_review_round_id_foreign` FOREIGN KEY (`review_round_id`) REFERENCES `review_rounds` (`review_round_id`) ON DELETE CASCADE,
   CONSTRAINT `review_round_files_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE,
   CONSTRAINT `review_round_files_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Records the files made available to reviewers for a round of reviews. These can be further customized on a per review basis with review_files.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Records the files made available to reviewers for a round of reviews. These can be further customized on a per review basis with review_files.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2373,19 +2373,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_rounds`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_rounds` (
-  `review_round_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) DEFAULT NULL,
-  `round` smallint(6) NOT NULL,
-  `review_revision` bigint(20) DEFAULT NULL,
-  `status` bigint(20) DEFAULT NULL,
+  `review_round_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `stage_id` bigint DEFAULT NULL,
+  `round` smallint NOT NULL,
+  `review_revision` bigint DEFAULT NULL,
+  `status` bigint DEFAULT NULL,
   PRIMARY KEY (`review_round_id`),
   UNIQUE KEY `review_rounds_submission_id_stage_id_round_pkey` (`submission_id`,`stage_id`,`round`),
   KEY `review_rounds_submission_id` (`submission_id`),
   CONSTRAINT `review_rounds_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Peer review assignments are organized into multiple rounds on a submission.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Peer review assignments are organized into multiple rounds on a submission.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2403,14 +2403,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `scheduled_tasks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `scheduled_tasks` (
-  `scheduled_task_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `scheduled_task_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `class_name` varchar(255) NOT NULL,
   `last_run` datetime DEFAULT NULL,
   PRIMARY KEY (`scheduled_task_id`),
   UNIQUE KEY `scheduled_tasks_unique` (`class_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='The last time each scheduled task was run.';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3 COMMENT='The last time each scheduled task was run.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2419,7 +2419,7 @@ CREATE TABLE `scheduled_tasks` (
 
 LOCK TABLES `scheduled_tasks` WRITE;
 /*!40000 ALTER TABLE `scheduled_tasks` DISABLE KEYS */;
-INSERT INTO `scheduled_tasks` VALUES (1,'PKP\\task\\StatisticsReport','2023-03-31 23:05:35'),(2,'PKP\\task\\RemoveUnvalidatedExpiredUsers','2023-03-31 23:05:35'),(3,'PKP\\task\\UpdateIPGeoDB','2023-03-31 23:05:35'),(4,'APP\\tasks\\UsageStatsLoader','2023-03-31 23:05:36'),(5,'PKP\\task\\ProcessQueueJobs','2023-03-31 23:05:36'),(6,'PKP\\task\\RemoveFailedJobs','2023-03-31 23:05:36');
+INSERT INTO `scheduled_tasks` VALUES (1,'PKP\\task\\StatisticsReport','2023-04-03 19:26:22'),(2,'PKP\\task\\RemoveUnvalidatedExpiredUsers','2023-04-03 19:26:22'),(3,'PKP\\task\\UpdateIPGeoDB','2023-04-03 19:26:22'),(4,'APP\\tasks\\UsageStatsLoader','2023-04-03 19:26:23'),(5,'PKP\\task\\ProcessQueueJobs','2023-04-03 19:26:23'),(6,'PKP\\task\\RemoveFailedJobs','2023-04-03 19:26:23');
 /*!40000 ALTER TABLE `scheduled_tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2429,10 +2429,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `section_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `section_settings` (
-  `section_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `section_id` bigint(20) NOT NULL,
+  `section_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `section_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
@@ -2440,7 +2440,7 @@ CREATE TABLE `section_settings` (
   UNIQUE KEY `section_settings_unique` (`section_id`,`locale`,`setting_name`),
   KEY `section_settings_section_id` (`section_id`),
   CONSTRAINT `section_settings_section_id_foreign` FOREIGN KEY (`section_id`) REFERENCES `sections` (`section_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COMMENT='More data about sections, including localized properties such as section titles.';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3 COMMENT='More data about sections, including localized properties such as section titles.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2459,26 +2459,26 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sections`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sections` (
-  `section_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `server_id` bigint(20) NOT NULL,
-  `review_form_id` bigint(20) DEFAULT NULL,
+  `section_id` bigint NOT NULL AUTO_INCREMENT,
+  `server_id` bigint NOT NULL,
+  `review_form_id` bigint DEFAULT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
-  `editor_restricted` tinyint(4) NOT NULL DEFAULT '0',
-  `meta_indexed` tinyint(4) NOT NULL DEFAULT '0',
-  `meta_reviewed` tinyint(4) NOT NULL DEFAULT '1',
-  `abstracts_not_required` tinyint(4) NOT NULL DEFAULT '0',
-  `hide_title` tinyint(4) NOT NULL DEFAULT '0',
-  `hide_author` tinyint(4) NOT NULL DEFAULT '0',
-  `is_inactive` tinyint(4) NOT NULL DEFAULT '0',
-  `abstract_word_count` bigint(20) DEFAULT NULL,
+  `editor_restricted` tinyint NOT NULL DEFAULT '0',
+  `meta_indexed` tinyint NOT NULL DEFAULT '0',
+  `meta_reviewed` tinyint NOT NULL DEFAULT '1',
+  `abstracts_not_required` tinyint NOT NULL DEFAULT '0',
+  `hide_title` tinyint NOT NULL DEFAULT '0',
+  `hide_author` tinyint NOT NULL DEFAULT '0',
+  `is_inactive` tinyint NOT NULL DEFAULT '0',
+  `abstract_word_count` bigint DEFAULT NULL,
   PRIMARY KEY (`section_id`),
   KEY `sections_server_id` (`server_id`),
   KEY `sections_review_form_id` (`review_form_id`),
   CONSTRAINT `sections_review_form_id_foreign` FOREIGN KEY (`review_form_id`) REFERENCES `review_forms` (`review_form_id`) ON DELETE SET NULL,
   CONSTRAINT `sections_server_id_foreign` FOREIGN KEY (`server_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Submissions can be organized into sections, which determine the front-end presentation and provide options for selective harvesting in the OAI-PMH interface.';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COMMENT='Submissions can be organized into sections, which determine the front-end presentation and provide options for selective harvesting in the OAI-PMH interface.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2497,10 +2497,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `server_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `server_settings` (
-  `server_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `server_id` bigint(20) NOT NULL,
+  `server_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `server_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
@@ -2509,7 +2509,7 @@ CREATE TABLE `server_settings` (
   UNIQUE KEY `server_settings_unique` (`server_id`,`locale`,`setting_name`),
   KEY `server_settings_server_id` (`server_id`),
   CONSTRAINT `server_settings_server_id` FOREIGN KEY (`server_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8 COMMENT='More data about server settings, including localized properties such as policies.';
+) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8mb3 COMMENT='More data about server settings, including localized properties such as policies.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2528,16 +2528,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `servers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `servers` (
-  `server_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `server_id` bigint NOT NULL AUTO_INCREMENT,
   `path` varchar(32) NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00' COMMENT 'Used to order lists of servers',
   `primary_locale` varchar(14) NOT NULL,
-  `enabled` tinyint(4) NOT NULL DEFAULT '1' COMMENT 'Controls whether or not the server is considered "live" and will appear on the website. (Note that disabled servers may still be accessible, but only if the user knows the URL.)',
+  `enabled` tinyint NOT NULL DEFAULT '1' COMMENT 'Controls whether or not the server is considered "live" and will appear on the website. (Note that disabled servers may still be accessible, but only if the user knows the URL.)',
   PRIMARY KEY (`server_id`),
   UNIQUE KEY `servers_path` (`path`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='A list of preprint servers managed by the installation.';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COMMENT='A list of preprint servers managed by the installation.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2556,21 +2556,21 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sessions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sessions` (
   `session_id` varchar(128) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
+  `user_id` bigint DEFAULT NULL,
   `ip_address` varchar(39) NOT NULL,
   `user_agent` varchar(255) DEFAULT NULL,
-  `created` bigint(20) NOT NULL DEFAULT '0',
-  `last_used` bigint(20) NOT NULL DEFAULT '0',
-  `remember` smallint(6) NOT NULL DEFAULT '0',
+  `created` bigint NOT NULL DEFAULT '0',
+  `last_used` bigint NOT NULL DEFAULT '0',
+  `remember` smallint NOT NULL DEFAULT '0',
   `data` text NOT NULL,
   `domain` varchar(255) DEFAULT NULL,
   UNIQUE KEY `sessions_pkey` (`session_id`),
   KEY `sessions_user_id` (`user_id`),
   CONSTRAINT `sessions_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Session data for logged-in users.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Session data for logged-in users.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2579,7 +2579,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('17a1e7f4od7gcmp1ks075n2auu',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304040,1680304049,0,'username|s:5:\"rvaca\";csrf|a:2:{s:9:\"timestamp\";i:1680304049;s:5:\"token\";s:32:\"959fcc0b0af99df9badb755fcf43c67e\";}','localhost'),('2ckraioa4v5ll8lge1vmpgb9dc',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680303954,1680303975,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680303975;s:5:\"token\";s:32:\"ad8aa53306c0c566ec3e9446218e9cb9\";}','localhost'),('2itb8mc8tkhbrpfcpiu50r8beu',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304254,1680304278,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304278;s:5:\"token\";s:32:\"0764638c44230b36dac04e2212ed7ec0\";}','localhost'),('2m7eu8l8ulubgu9hm4m7442nbs',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304719,1680304726,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304727;s:5:\"token\";s:32:\"3f98912274ff58a7ad126832bfe793ce\";}','localhost'),('37ihdvri39h2ilq49tf70fruau',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304184,1680304204,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304204;s:5:\"token\";s:32:\"cec061c66729368ca568c287e73ecee7\";}username|s:12:\"cmontgomerie\";','localhost'),('424n7isq98eiun9r4bli3mnlrj',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304426,1680304433,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304433;s:5:\"token\";s:32:\"2f1b79f579fe3fbe212bbf7b602bcea5\";}','localhost'),('4a51iv9fs0rs6iatfulfhtach4',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304349,1680304368,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304368;s:5:\"token\";s:32:\"54dc5a8e9d27662027cd98913d30c77f\";}username|s:7:\"eostrom\";','localhost'),('4n1141a5mse4p31bh95trfv50g',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304307,1680304313,0,'username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304313;s:5:\"token\";s:32:\"85d8783b5b6882469465da8714b96afa\";}','localhost'),('57qcu4hivdofug05fvu6cfsqb0',10,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304234,1680304252,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304252;s:5:\"token\";s:32:\"957a61bd9ae7c66c46af509bef433095\";}username|s:6:\"ddiouf\";userId|i:10;','localhost'),('67fumj0asatogk93vj4pb25n33',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304700,1680304719,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304719;s:5:\"token\";s:32:\"428b13f5c87515adb70ff0260b8cf448\";}username|s:6:\"zwoods\";','localhost'),('6q6isu2esbingh7ll2p3crce0k',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304407,1680304426,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304426;s:5:\"token\";s:32:\"87c58b88bde67008712b1cb03c08cd47\";}username|s:10:\"jmwandenga\";','localhost'),('99jba11e4c7sebpe23tft13sdo',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304494,1680304513,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304513;s:5:\"token\";s:32:\"2313c49eee7606d5b7ebf6680860964e\";}username|s:12:\"lchristopher\";','localhost'),('9jr0423gbbbicvbomtt690uo1l',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304176,1680304182,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304182;s:5:\"token\";s:32:\"71ebc40ea16d34ecc4ad548ed9b554dc\";}','localhost'),('9o2r22469locea5scvgtq3ecup',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304690,1680304697,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304697;s:5:\"token\";s:32:\"1115560ab964be1b4b2d5b497ca9250c\";}','localhost'),('9vrgcj6o3l4gi1fjt39o1ikq1i',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680303935,1680303954,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680303954;s:5:\"token\";s:32:\"4ac04db59141121b99fcf59f76002d13\";}','localhost'),('cguf4gqktf9r7f23vu21krnbjr',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304631,1680304638,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304638;s:5:\"token\";s:32:\"060ad7d90b7ae9844ab41a28b17295ae\";}','localhost'),('chp38gkueqljgnp4qnd1lkbjt0',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304313,1680304317,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304318;s:5:\"token\";s:32:\"fbd9fcacdd224f1d655cd18a17e5deaa\";}','localhost'),('cldt2om3kps8s9rhkqhv56n7qi',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304455,1680304461,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304461;s:5:\"token\";s:32:\"665e17c71aff71f7a0fff3daa75e9ea9\";}','localhost'),('d1f28fr5b88leclhngvclks8ij',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304211,1680304231,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304231;s:5:\"token\";s:32:\"77010a217cd63d695f64e8eacbec82ca\";}','localhost'),('d5vp7eq4lal41j5oulo5oo0uik',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304061,1680304084,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680304084;s:5:\"token\";s:32:\"86384840293e615947f131db8e50f349\";}','localhost'),('e5evgb55b84n3lnp4r0k67l7ht',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304280,1680304299,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304299;s:5:\"token\";s:32:\"d966974c70394b95c770b0cebf2e6cbc\";}username|s:9:\"dphillips\";','localhost'),('fmmmb1vq4t0fkgbnhamdk61s0l',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304052,1680304060,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680304060;s:5:\"token\";s:32:\"bfa35486b3e66c4700e136b700f8e02b\";}','localhost'),('hjcvkuso0ffokljhgopajroqe9',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304339,1680304346,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304346;s:5:\"token\";s:32:\"6dbf11c8ed4eaca6d55204ef5bf79e93\";}','localhost'),('hmuen2dptinccmv73juprhatob',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304582,1680304602,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304601;s:5:\"token\";s:32:\"238cc0afd3bad09fdce4fbdc6c088032\";}username|s:8:\"rbaiyewu\";','localhost'),('ht80jn0mh4ppd9g1sc9togaepu',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304378,1680304397,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304397;s:5:\"token\";s:32:\"3e5d1337d3c3be811c50251d19e9f4a3\";}username|s:9:\"fpaglieri\";','localhost'),('j529d1cjqrn3bpv1vqmjf687nq',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680303977,1680303988,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680303988;s:5:\"token\";s:32:\"83f275f3a9b8bc304c63cbb18a8efc81\";}','localhost'),('jjr31kdjh1vftc6iqh0pr9eido',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304572,1680304580,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304580;s:5:\"token\";s:32:\"b88de99d084b9d8bb70f65dabae97d79\";}','localhost'),('k6psdshl8847j1bkcr289ae7nn',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304397,1680304404,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304404;s:5:\"token\";s:32:\"57cb09f9e7be31e1be0623a508821fe9\";}','localhost'),('kf4qtoplu4nicakonlc2r38o6b',7,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304086,1680304105,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304105;s:5:\"token\";s:32:\"d5234d5c0b80746dd16b87dab2d8dbea\";}username|s:7:\"ccorino\";userId|i:7;','localhost'),('lmo7q22l6rt70ft7jscbm8s2ib',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304552,1680304572,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304572;s:5:\"token\";s:32:\"1687bafb8f2a25bc652551ac8cb120ea\";}username|s:7:\"pdaniel\";','localhost'),('lpbqac757d1u9jr5n1r2njiha5',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304523,1680304542,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304542;s:5:\"token\";s:32:\"56a8a702ac00147512f2f3730dba2dd4\";}username|s:8:\"lkumiega\";','localhost'),('mhohhdbav0nfe73tj7qbmsubme',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304641,1680304660,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304660;s:5:\"token\";s:32:\"11ef5536d1bd0ed76fe922341a94807f\";}username|s:12:\"vkarbasizaed\";','localhost'),('n32pn25j67eumr1jblb9fdrmcc',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304543,1680304550,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304550;s:5:\"token\";s:32:\"e26a0072b892b3112711c116b344f5ce\";}','localhost'),('n568g2rc8mcbs37dfo8ih9hnvq',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304464,1680304484,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304483;s:5:\"token\";s:32:\"9753447f5f14e513451ce78b9f575615\";}username|s:10:\"kalkhafaji\";','localhost'),('ndki18kq1egp2fdbj9tknm6lhl',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304368,1680304375,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304375;s:5:\"token\";s:32:\"ecbf9b4502ab02e0fde79a4f2a32ccba\";}','localhost'),('nfdhbj2fil27bklq7q2nq333h0',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680303990,1680304000,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680304001;s:5:\"token\";s:32:\"eec41b6b9205def663c8d66a4b629eef\";}','localhost'),('njpt2n3lderg458ejn3c7p7mkg',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304435,1680304455,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304454;s:5:\"token\";s:32:\"665de4df646aff0bff11e43c470c55db\";}username|s:6:\"jnovak\";','localhost'),('oji11d977d3ssuff24p5du46i5',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304612,1680304631,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304631;s:5:\"token\";s:32:\"a17adeb7ef82dba6735b445d4bdad2bd\";}username|s:6:\"rrossi\";','localhost'),('os0lnr89n7nnjqhruglso6pp2n',8,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304109,1680304175,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304175;s:5:\"token\";s:32:\"12ad17a8f2aa363018c49a075feeb888\";}username|s:8:\"ckwantes\";userId|i:8;','localhost'),('otn303luf37hj2j0o8r2uv7j2i',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304602,1680304609,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304609;s:5:\"token\";s:32:\"a97032075e638efe9c2cac346c7f3902\";}','localhost'),('oudhgnflan5l39muocpfs6q4i9',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304299,1680304306,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304307;s:5:\"token\";s:32:\"602a99f8ac50a4e8b190d4c0c19ddee9\";}','localhost'),('r67phql3rggfvh9v4vp6mrtn16',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304660,1680304667,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304668;s:5:\"token\";s:32:\"ccd6597a2e68d1ca6fae30ecd26a7b36\";}','localhost'),('s422216bq3r6r3ug92usdoqjco',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304670,1680304689,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304689;s:5:\"token\";s:32:\"206043d52c4479180e9cd20d15de80de\";}username|s:11:\"vwilliamson\";','localhost'),('smdsfeqbfj68d5hf5ko6jnc6a7',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304484,1680304491,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304492;s:5:\"token\";s:32:\"336258ced529aa65220021d90af83e22\";}','localhost'),('sspbgapokia43gbak9k987cikm',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304513,1680304520,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304521;s:5:\"token\";s:32:\"a619f7afb0313ff1545734c08c39ba0e\";}','localhost'),('t358b1po0k09loamnct0jalol6',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304320,1680304339,0,'csrf|a:2:{s:9:\"timestamp\";i:1680304339;s:5:\"token\";s:32:\"cdda687023fa8ca27f11852e456ed96f\";}username|s:9:\"dsokoloff\";','localhost'),('tgp6fen0lq1ul0s82vrklg2jun',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304004,1680304040,0,'username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680304039;s:5:\"token\";s:32:\"e4143e1de31ae6a7ecc7daa717341d3d\";}','localhost'),('ts8abncngpe09rs8166ar7ippa',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680304204,1680304210,0,'username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680304210;s:5:\"token\";s:32:\"7e84f618b74e37e1a4f35fbeb634dbdb\";}','localhost');
+INSERT INTO `sessions` VALUES ('0kmv9hqgca59l9u94m9kesitnj',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550038,1680550057,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680550057;s:5:\"token\";s:32:\"0907de5a28fc3edad1e622629d074118\";}','localhost'),('2o439mddvmcbgu0gc5qatvdm1i',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550122,1680550131,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680550131;s:5:\"token\";s:32:\"b34746aac83d96da3864d20fccb1dca6\";}','localhost'),('3t036kv2cver642s3mmcf4valo',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550853,1680550861,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550861;s:5:\"token\";s:32:\"b49276f74ec75b5c89e26c1fceb38a04\";}','localhost'),('49v0pe1t7ctah566qr3gfgkfel',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550411,1680550417,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550416;s:5:\"token\";s:32:\"85880af4288de00500bf227120d87470\";}','localhost'),('51eo7h4u5g28l9jotvhnf5808o',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550471,1680550480,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550480;s:5:\"token\";s:32:\"c183cf8f66066e9f1ffa5b59bcc0a28c\";}','localhost'),('6pq1o2rvub24rdd93n6gibp539',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550821,1680550829,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550829;s:5:\"token\";s:32:\"a2f7610c5c3cec940547b09951cd3e52\";}','localhost'),('7urgsf305q294cp5q720bnt56m',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550503,1680550510,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550510;s:5:\"token\";s:32:\"f450619dad1b689c201ab51859d7d3ae\";}','localhost'),('893u6tqueq3nnbp5pgk114arm2',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550597,1680550605,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550605;s:5:\"token\";s:32:\"5895fd053a30663f1a7426a415960b0d\";}','localhost'),('8hd51ohb4poi06bb90hi0p4q1n',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550544,1680550565,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550565;s:5:\"token\";s:32:\"4acd2a11029c2ae1525d724e63c6bedf\";}username|s:6:\"jnovak\";','localhost'),('8s9j6hijv3i44km5pi6bv7vvdk',10,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550325,1680550345,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550345;s:5:\"token\";s:32:\"1a77320282618381e741537624de23e6\";}username|s:6:\"ddiouf\";userId|i:10;','localhost'),('9e74vpure912bcvlmq0c8rl0dq',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550693,1680550701,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550702;s:5:\"token\";s:32:\"96e1496aad5172501ecebc2b5d669f97\";}','localhost'),('ab6h2gb8tu1kn8l753j4fse55v',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550290,1680550298,0,'username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550298;s:5:\"token\";s:32:\"c9d4e0b5fcac7fb06ddebad503cd8672\";}','localhost'),('act1kkiq9sr945orqnlqlbp8h1',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550704,1680550725,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550725;s:5:\"token\";s:32:\"4bdcd70f743d1c235511d3ebcb151708\";}username|s:8:\"rbaiyewu\";','localhost'),('bmsjih9pnrbidbocmaqnq5b7t6',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550069,1680550108,0,'username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680550107;s:5:\"token\";s:32:\"375743ceacee499eee578f803e1bd17a\";}','localhost'),('bok1dfcfa73ksl103k9pl34q0d',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550565,1680550573,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550573;s:5:\"token\";s:32:\"5977fd3b4fd5a11e56506318e6640098\";}','localhost'),('e9ug2c0ak0b5qesngjij6tja3k',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680549982,1680550003,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680550003;s:5:\"token\";s:32:\"aeb33fad73e362ed4a6423fd27a2610d\";}','localhost'),('fclofk8e4usfh6n9cdi2khtifk',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550576,1680550597,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550597;s:5:\"token\";s:32:\"f8bff4cb2aa46b70333ff5e36681ffdd\";}username|s:10:\"kalkhafaji\";','localhost'),('fgadaepc288slbh2gpa6vb3gt6',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550661,1680550669,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550670;s:5:\"token\";s:32:\"2e24a96b029d1edea12fb4294e08b724\";}','localhost'),('fpdb3i61t0fsd0pqrd6smvg5ro',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550298,1680550323,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550323;s:5:\"token\";s:32:\"c4fcd7efd491e45a4b9a06b537a690c0\";}','localhost'),('g2f588oeoprplm6kgnb3l42p0m',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550736,1680550757,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550757;s:5:\"token\";s:32:\"7f80c4648af328d29b46ee2ecd6b4373\";}username|s:6:\"rrossi\";','localhost'),('gjoicjuoufpp5frt8eudi2tcsj',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550672,1680550693,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550693;s:5:\"token\";s:32:\"a4014ba029b6993ff0acfec51be0d597\";}username|s:7:\"pdaniel\";','localhost'),('gmri603uttkf76577mhb0hq3gr',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550768,1680550789,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550789;s:5:\"token\";s:32:\"b2d1fcb1068c52396278c6abaf936f03\";}username|s:12:\"vkarbasizaed\";','localhost'),('grcrfo70bhdsai2jft2opad76l',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550440,1680550448,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550448;s:5:\"token\";s:32:\"ac05119ac55cbf0de7f3058e357e7199\";}','localhost'),('gtga1tttfbl79ct1j0suuorhqe',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550397,1680550404,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550404;s:5:\"token\";s:32:\"7ff8be51d2cea91ac1ca58aed0bec59a\";}','localhost'),('hil5get3bhkcvdbt34mnvgkq50',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550109,1680550119,0,'username|s:5:\"rvaca\";csrf|a:2:{s:9:\"timestamp\";i:1680550119;s:5:\"token\";s:32:\"02902024c3c9fd962ca1309fded88f14\";}','localhost'),('hohcl8h6k07h1f1ck8ne08em28',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550800,1680550821,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550820;s:5:\"token\";s:32:\"48add27ab6522bc7326488237307ab78\";}username|s:11:\"vwilliamson\";','localhost'),('hqf20868jah1c4s4ultd414p4l',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550450,1680550471,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550471;s:5:\"token\";s:32:\"4dcf71a7fc4f37f1b792963f435a4f38\";}username|s:7:\"eostrom\";','localhost'),('i36tckooqfg3pa93bkv68eqqdk',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550482,1680550502,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550502;s:5:\"token\";s:32:\"dbea84d5c7c34d00c2e37d13b504d2c5\";}username|s:9:\"fpaglieri\";','localhost'),('ij4vhuemf6d2h1tmgbcu3kuuqp',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550346,1680550373,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550373;s:5:\"token\";s:32:\"cae6bb31fc1d6065728eb65f050499de\";}','localhost'),('itla32337cpkcjggurphqdjnpe',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550258,1680550266,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550266;s:5:\"token\";s:32:\"108833b39a0b5b8d7229f00eb09b8462\";}','localhost'),('jc4m7r4ovjfov9icrcfjjtepup',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550608,1680550629,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550628;s:5:\"token\";s:32:\"52a08d70892e544a2a4838f5b9a8d7e2\";}username|s:12:\"lchristopher\";','localhost'),('jgg109pu72luqbevqip0s2aq32',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550003,1680550036,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680550036;s:5:\"token\";s:32:\"5d4d02d5c26111f8d1134d7c2acee4ab\";}','localhost'),('k4b9resanlc6gl6rmrto1ht9t2',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550268,1680550290,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550290;s:5:\"token\";s:32:\"73eb4ce9ddbb0669ad77dca9fb843bd9\";}username|s:12:\"cmontgomerie\";','localhost'),('l2soodd49i9kg5ni765095ok40',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550789,1680550797,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550797;s:5:\"token\";s:32:\"03e447c104a116aecf3efe06b00e1043\";}','localhost'),('lkmj5litkuk3niaigjjpiin88r',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550640,1680550661,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550661;s:5:\"token\";s:32:\"b60ed74fba33579eef7b5ff0fd6a9bd6\";}username|s:8:\"lkumiega\";','localhost'),('m49e450fr1onpt4j7mgsa4hcp3',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550832,1680550853,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550853;s:5:\"token\";s:32:\"155f6289ce1f559095bf84f81607b9f6\";}username|s:6:\"zwoods\";','localhost'),('m89ekptk7cciraddm7988898hc',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550376,1680550396,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550396;s:5:\"token\";s:32:\"0b0680302d88fa75d7689e2ae1f32d8c\";}username|s:9:\"dphillips\";','localhost'),('n2tjelnvogl04ihkjgvq5gkkim',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550405,1680550411,0,'username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550411;s:5:\"token\";s:32:\"2b4e06607f325ae7b7f00b49a2cdf09c\";}','localhost'),('nphcggnl5642g7cmjcvub8gp80',7,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550159,1680550179,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550179;s:5:\"token\";s:32:\"ccde7ad5e1b963f94be30e0cad52ea16\";}username|s:7:\"ccorino\";userId|i:7;','localhost'),('oi2rbvq328t0nai3f4dh954mlh',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550058,1680550065,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680550065;s:5:\"token\";s:32:\"6e0a180eabbd3ecebe69f56296fdf785\";}','localhost'),('pg8qvhkc14lksu7rugidt1rrkn',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550419,1680550439,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550439;s:5:\"token\";s:32:\"9210b6997dc8db2687423a757562ee54\";}username|s:9:\"dsokoloff\";','localhost'),('ss21f2rdnqkvrrdrk38ts6v2b3',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550757,1680550766,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550766;s:5:\"token\";s:32:\"f339294dd46b5f9d8a91fcfa8fa194e5\";}','localhost'),('t6mlek65htfgt9ilntr1roi0e4',8,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550183,1680550257,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550257;s:5:\"token\";s:32:\"568bf222b9c125925fc42e1d79a4e957\";}username|s:8:\"ckwantes\";userId|i:8;','localhost'),('tfpbaam8f2enkkhigd0if0pl4n',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550513,1680550533,0,'csrf|a:2:{s:9:\"timestamp\";i:1680550533;s:5:\"token\";s:32:\"dfb5a88d8f57aaf270593c5e42c76ada\";}username|s:10:\"jmwandenga\";','localhost'),('urjg1qini2l8unouirn4bk337k',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550534,1680550542,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550542;s:5:\"token\";s:32:\"1611081b5038a91a26daed95846d6f27\";}','localhost'),('v2sh09os533qd5lrj224ubv03f',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550132,1680550156,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680550156;s:5:\"token\";s:32:\"b5a963c0c8621434f5127208bc8b2f39\";}','localhost'),('vgags06075g8sqpoo0uj4ee7ua',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550629,1680550637,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550637;s:5:\"token\";s:32:\"6d404fabb5e77cd88225b775b5ae2b89\";}','localhost'),('vsl0fgdloa0miom6utuhkptftc',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680550725,1680550733,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680550734;s:5:\"token\";s:32:\"6f1c70201d3e6c2e1ab85f87e5cc6b82\";}','localhost');
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2589,17 +2589,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `site`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `site` (
-  `site_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `redirect` bigint(20) NOT NULL DEFAULT '0' COMMENT 'If not 0, redirect to the specified journal/conference/... site.',
+  `site_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `redirect` bigint NOT NULL DEFAULT '0' COMMENT 'If not 0, redirect to the specified journal/conference/... site.',
   `primary_locale` varchar(14) NOT NULL COMMENT 'Primary locale for the site.',
-  `min_password_length` smallint(6) NOT NULL DEFAULT '6',
+  `min_password_length` smallint NOT NULL DEFAULT '6',
   `installed_locales` varchar(1024) NOT NULL DEFAULT 'en' COMMENT 'Locales for which support has been installed.',
   `supported_locales` varchar(1024) DEFAULT NULL COMMENT 'Locales supported by the site (for hosted journals/conferences/...).',
   `original_style_file_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`site_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='A singleton table describing basic information about the site.';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COMMENT='A singleton table describing basic information about the site.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2618,15 +2618,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `site_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `site_settings` (
-  `site_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `site_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `setting_name` varchar(255) NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_value` mediumtext,
   PRIMARY KEY (`site_setting_id`),
   UNIQUE KEY `site_settings_unique` (`setting_name`,`locale`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COMMENT='More data about the site, including localized properties such as its name.';
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COMMENT='More data about the site, including localized properties such as its name.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2645,15 +2645,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `stage_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `stage_assignments` (
-  `stage_assignment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `user_group_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `stage_assignment_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `user_group_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_assigned` datetime NOT NULL,
-  `recommend_only` smallint(6) NOT NULL DEFAULT '0',
-  `can_change_metadata` smallint(6) NOT NULL DEFAULT '0',
+  `recommend_only` smallint NOT NULL DEFAULT '0',
+  `can_change_metadata` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`stage_assignment_id`),
   UNIQUE KEY `stage_assignment` (`submission_id`,`user_group_id`,`user_id`),
   KEY `stage_assignments_user_group_id` (`user_group_id`),
@@ -2662,7 +2662,7 @@ CREATE TABLE `stage_assignments` (
   CONSTRAINT `stage_assignments_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE,
   CONSTRAINT `stage_assignments_user_group_id` FOREIGN KEY (`user_group_id`) REFERENCES `user_groups` (`user_group_id`) ON DELETE CASCADE,
   CONSTRAINT `stage_assignments_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8 COMMENT='Who can access a submission while it is in the editorial workflow. Includes all editorial and author assignments. For reviewers, see review_assignments.';
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb3 COMMENT='Who can access a submission while it is in the editorial workflow. Includes all editorial and author assignments. For reviewers, see review_assignments.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2671,7 +2671,7 @@ CREATE TABLE `stage_assignments` (
 
 LOCK TABLES `stage_assignments` WRITE;
 /*!40000 ALTER TABLE `stage_assignments` DISABLE KEYS */;
-INSERT INTO `stage_assignments` VALUES (1,1,4,7,'2023-03-31 23:08:25',0,1),(2,1,3,4,'2023-03-31 23:08:25',0,1),(3,1,3,5,'2023-03-31 23:08:25',0,1),(4,2,4,8,'2023-03-31 23:09:29',0,1),(5,2,3,4,'2023-03-31 23:09:29',0,1),(6,2,3,5,'2023-03-31 23:09:29',0,1),(7,3,4,9,'2023-03-31 23:10:03',0,1),(8,3,3,4,'2023-03-31 23:10:03',0,1),(9,3,3,5,'2023-03-31 23:10:03',0,1),(10,4,4,10,'2023-03-31 23:10:53',0,1),(11,4,3,4,'2023-03-31 23:10:53',0,1),(12,4,3,5,'2023-03-31 23:10:53',0,1),(13,5,4,11,'2023-03-31 23:11:39',0,1),(14,5,3,4,'2023-03-31 23:11:39',0,1),(15,5,3,5,'2023-03-31 23:11:39',0,1),(16,6,4,12,'2023-03-31 23:12:19',0,1),(17,6,3,4,'2023-03-31 23:12:19',0,1),(18,6,3,5,'2023-03-31 23:12:19',0,1),(19,7,4,13,'2023-03-31 23:12:48',0,1),(20,7,3,4,'2023-03-31 23:12:48',0,1),(21,7,3,5,'2023-03-31 23:12:48',0,1),(22,8,4,14,'2023-03-31 23:13:17',0,1),(23,8,3,4,'2023-03-31 23:13:17',0,1),(24,8,3,5,'2023-03-31 23:13:17',0,1),(25,9,4,15,'2023-03-31 23:13:46',0,1),(26,9,3,4,'2023-03-31 23:13:45',0,1),(27,9,3,5,'2023-03-31 23:13:45',0,1),(28,10,4,16,'2023-03-31 23:14:14',0,1),(29,10,3,4,'2023-03-31 23:14:14',0,1),(30,10,3,5,'2023-03-31 23:14:14',0,1),(31,11,4,17,'2023-03-31 23:14:43',0,1),(32,11,3,4,'2023-03-31 23:14:43',0,1),(33,11,3,5,'2023-03-31 23:14:43',0,1),(34,12,4,18,'2023-03-31 23:15:13',0,1),(35,12,3,4,'2023-03-31 23:15:13',0,1),(36,12,3,5,'2023-03-31 23:15:13',0,1),(37,13,4,19,'2023-03-31 23:15:42',0,1),(38,13,3,4,'2023-03-31 23:15:42',0,1),(39,13,3,5,'2023-03-31 23:15:42',0,1),(40,14,4,20,'2023-03-31 23:16:12',0,1),(41,14,3,4,'2023-03-31 23:16:11',0,1),(42,14,3,5,'2023-03-31 23:16:12',0,1),(43,15,4,21,'2023-03-31 23:16:41',0,1),(44,15,3,4,'2023-03-31 23:16:41',0,1),(45,15,3,5,'2023-03-31 23:16:41',0,1),(46,16,4,22,'2023-03-31 23:17:10',0,1),(47,16,3,4,'2023-03-31 23:17:10',0,1),(48,16,3,5,'2023-03-31 23:17:10',0,1),(49,17,4,23,'2023-03-31 23:17:40',0,1),(50,17,3,4,'2023-03-31 23:17:40',0,1),(51,17,3,5,'2023-03-31 23:17:40',0,1),(52,18,4,24,'2023-03-31 23:18:09',0,1),(53,18,3,4,'2023-03-31 23:18:09',0,1),(54,18,3,5,'2023-03-31 23:18:09',0,1),(55,19,4,25,'2023-03-31 23:18:38',0,1),(56,19,3,4,'2023-03-31 23:18:38',0,1),(57,19,3,5,'2023-03-31 23:18:38',0,1);
+INSERT INTO `stage_assignments` VALUES (1,1,4,7,'2023-04-03 19:29:39',0,1),(2,1,3,4,'2023-04-03 19:29:39',0,1),(3,1,3,5,'2023-04-03 19:29:39',0,1),(4,2,4,8,'2023-04-03 19:30:49',0,1),(5,2,3,4,'2023-04-03 19:30:49',0,1),(6,2,3,5,'2023-04-03 19:30:49',0,1),(7,3,4,9,'2023-04-03 19:31:29',0,1),(8,3,3,4,'2023-04-03 19:31:29',0,1),(9,3,3,5,'2023-04-03 19:31:29',0,1),(10,4,4,10,'2023-04-03 19:32:25',0,1),(11,4,3,4,'2023-04-03 19:32:25',0,1),(12,4,3,5,'2023-04-03 19:32:25',0,1),(13,5,4,11,'2023-04-03 19:33:16',0,1),(14,5,3,4,'2023-04-03 19:33:16',0,1),(15,5,3,5,'2023-04-03 19:33:16',0,1),(16,6,4,12,'2023-04-03 19:33:59',0,1),(17,6,3,4,'2023-04-03 19:33:59',0,1),(18,6,3,5,'2023-04-03 19:33:59',0,1),(19,7,4,13,'2023-04-03 19:34:31',0,1),(20,7,3,4,'2023-04-03 19:34:31',0,1),(21,7,3,5,'2023-04-03 19:34:31',0,1),(22,8,4,14,'2023-04-03 19:35:02',0,1),(23,8,3,4,'2023-04-03 19:35:02',0,1),(24,8,3,5,'2023-04-03 19:35:02',0,1),(25,9,4,15,'2023-04-03 19:35:33',0,1),(26,9,3,4,'2023-04-03 19:35:33',0,1),(27,9,3,5,'2023-04-03 19:35:33',0,1),(28,10,4,16,'2023-04-03 19:36:04',0,1),(29,10,3,4,'2023-04-03 19:36:04',0,1),(30,10,3,5,'2023-04-03 19:36:04',0,1),(31,11,4,17,'2023-04-03 19:36:36',0,1),(32,11,3,4,'2023-04-03 19:36:36',0,1),(33,11,3,5,'2023-04-03 19:36:36',0,1),(34,12,4,18,'2023-04-03 19:37:08',0,1),(35,12,3,4,'2023-04-03 19:37:08',0,1),(36,12,3,5,'2023-04-03 19:37:08',0,1),(37,13,4,19,'2023-04-03 19:37:41',0,1),(38,13,3,4,'2023-04-03 19:37:41',0,1),(39,13,3,5,'2023-04-03 19:37:41',0,1),(40,14,4,20,'2023-04-03 19:38:12',0,1),(41,14,3,4,'2023-04-03 19:38:13',0,1),(42,14,3,5,'2023-04-03 19:38:13',0,1),(43,15,4,21,'2023-04-03 19:38:44',0,1),(44,15,3,4,'2023-04-03 19:38:44',0,1),(45,15,3,5,'2023-04-03 19:38:44',0,1),(46,16,4,22,'2023-04-03 19:39:16',0,1),(47,16,3,4,'2023-04-03 19:39:16',0,1),(48,16,3,5,'2023-04-03 19:39:16',0,1),(49,17,4,23,'2023-04-03 19:39:48',0,1),(50,17,3,4,'2023-04-03 19:39:48',0,1),(51,17,3,5,'2023-04-03 19:39:48',0,1),(52,18,4,24,'2023-04-03 19:40:20',0,1),(53,18,3,4,'2023-04-03 19:40:20',0,1),(54,18,3,5,'2023-04-03 19:40:20',0,1),(55,19,4,25,'2023-04-03 19:40:52',0,1),(56,19,3,4,'2023-04-03 19:40:52',0,1),(57,19,3,5,'2023-04-03 19:40:52',0,1);
 /*!40000 ALTER TABLE `stage_assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2681,14 +2681,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `subeditor_submission_group`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `subeditor_submission_group` (
-  `subeditor_submission_group_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `user_group_id` bigint(20) NOT NULL,
+  `subeditor_submission_group_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
+  `user_group_id` bigint NOT NULL,
   PRIMARY KEY (`subeditor_submission_group_id`),
   UNIQUE KEY `section_editors_unique` (`context_id`,`assoc_id`,`assoc_type`,`user_id`,`user_group_id`),
   KEY `subeditor_submission_group_context_id` (`context_id`),
@@ -2698,7 +2698,7 @@ CREATE TABLE `subeditor_submission_group` (
   CONSTRAINT `section_editors_context_id` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `subeditor_submission_group_user_group_id_foreign` FOREIGN KEY (`user_group_id`) REFERENCES `user_groups` (`user_group_id`) ON DELETE CASCADE,
   CONSTRAINT `subeditor_submission_group_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Subeditor assignments to e.g. sections and categories';
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3 COMMENT='Subeditor assignments to e.g. sections and categories';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2717,25 +2717,25 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_comments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_comments` (
-  `comment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `comment_type` bigint(20) DEFAULT NULL,
-  `role_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `author_id` bigint(20) NOT NULL,
+  `comment_id` bigint NOT NULL AUTO_INCREMENT,
+  `comment_type` bigint DEFAULT NULL,
+  `role_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `author_id` bigint NOT NULL,
   `comment_title` text NOT NULL,
   `comments` text,
   `date_posted` datetime DEFAULT NULL,
   `date_modified` datetime DEFAULT NULL,
-  `viewable` smallint(6) DEFAULT NULL,
+  `viewable` smallint DEFAULT NULL,
   PRIMARY KEY (`comment_id`),
   KEY `submission_comments_submission_id` (`submission_id`),
   KEY `submission_comments_author_id` (`author_id`),
   CONSTRAINT `submission_comments_author_id_foreign` FOREIGN KEY (`author_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE,
   CONSTRAINT `submission_comments_submission_id` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Comments on a submission, e.g. peer review comments';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Comments on a submission, e.g. peer review comments';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2753,17 +2753,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_file_revisions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_file_revisions` (
-  `revision_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
-  `file_id` bigint(20) unsigned NOT NULL,
+  `revision_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `submission_file_id` bigint unsigned NOT NULL,
+  `file_id` bigint unsigned NOT NULL,
   PRIMARY KEY (`revision_id`),
   KEY `submission_file_revisions_submission_file_id` (`submission_file_id`),
   KEY `submission_file_revisions_file_id` (`file_id`),
   CONSTRAINT `submission_file_revisions_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`file_id`) ON DELETE CASCADE,
   CONSTRAINT `submission_file_revisions_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='Revisions map submission_file entries to files on the data store.';
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3 COMMENT='Revisions map submission_file entries to files on the data store.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2782,10 +2782,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_file_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_file_settings` (
-  `submission_file_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
+  `submission_file_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `submission_file_id` bigint unsigned NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -2794,7 +2794,7 @@ CREATE TABLE `submission_file_settings` (
   UNIQUE KEY `submission_file_settings_unique` (`submission_file_id`,`locale`,`setting_name`),
   KEY `submission_file_settings_submission_file_id` (`submission_file_id`),
   CONSTRAINT `submission_file_settings_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COMMENT='Localized data about submission files like published metadata.';
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb3 COMMENT='Localized data about submission files like published metadata.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2813,22 +2813,22 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_files` (
-  `submission_file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `file_id` bigint(20) unsigned NOT NULL,
-  `source_submission_file_id` bigint(20) unsigned DEFAULT NULL,
-  `genre_id` bigint(20) DEFAULT NULL,
-  `file_stage` bigint(20) NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `file_id` bigint unsigned NOT NULL,
+  `source_submission_file_id` bigint unsigned DEFAULT NULL,
+  `genre_id` bigint DEFAULT NULL,
+  `file_stage` bigint NOT NULL,
   `direct_sales_price` varchar(255) DEFAULT NULL,
   `sales_type` varchar(255) DEFAULT NULL,
-  `viewable` smallint(6) DEFAULT NULL,
+  `viewable` smallint DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  `uploader_user_id` bigint(20) DEFAULT NULL,
-  `assoc_type` bigint(20) DEFAULT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `uploader_user_id` bigint DEFAULT NULL,
+  `assoc_type` bigint DEFAULT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   PRIMARY KEY (`submission_file_id`),
   KEY `submission_files_submission_id` (`submission_id`),
   KEY `submission_files_file_id` (`file_id`),
@@ -2841,7 +2841,7 @@ CREATE TABLE `submission_files` (
   CONSTRAINT `submission_files_source_submission_file_id_foreign` FOREIGN KEY (`source_submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE,
   CONSTRAINT `submission_files_submission_id` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE,
   CONSTRAINT `submission_files_uploader_user_id_foreign` FOREIGN KEY (`uploader_user_id`) REFERENCES `users` (`user_id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='All files associated with a submission, such as those uploaded during submission, as revisions, or by copyeditors or layout editors for production.';
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3 COMMENT='All files associated with a submission, such as those uploaded during submission, as revisions, or by copyeditors or layout editors for production.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2850,7 +2850,7 @@ CREATE TABLE `submission_files` (
 
 LOCK TABLES `submission_files` WRITE;
 /*!40000 ALTER TABLE `submission_files` DISABLE KEYS */;
-INSERT INTO `submission_files` VALUES (1,1,1,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:08:22','2023-03-31 23:08:24',7,521,1),(2,2,2,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:09:04','2023-03-31 23:09:07',8,521,2),(3,3,3,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:10:00','2023-03-31 23:10:02',9,521,3),(4,4,4,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:10:49','2023-03-31 23:10:52',10,521,5),(5,5,5,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:11:36','2023-03-31 23:11:38',11,521,6),(6,6,6,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:12:16','2023-03-31 23:12:18',12,521,7),(7,7,7,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:12:44','2023-03-31 23:12:47',13,521,8),(8,8,8,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:13:14','2023-03-31 23:13:16',14,521,9),(9,9,9,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:13:42','2023-03-31 23:13:45',15,521,10),(10,10,10,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:14:11','2023-03-31 23:14:13',16,521,11),(11,11,11,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:14:40','2023-03-31 23:14:42',17,521,12),(12,12,12,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:15:10','2023-03-31 23:15:12',18,521,13),(13,13,13,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:15:39','2023-03-31 23:15:41',19,521,14),(14,14,14,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:16:08','2023-03-31 23:16:11',20,521,15),(15,15,15,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:16:38','2023-03-31 23:16:40',21,521,16),(16,16,16,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:17:07','2023-03-31 23:17:10',22,521,17),(17,17,17,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:17:37','2023-03-31 23:17:39',23,521,18),(18,18,18,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:18:06','2023-03-31 23:18:08',24,521,19),(19,19,19,NULL,1,10,NULL,NULL,NULL,'2023-03-31 23:18:35','2023-03-31 23:18:38',25,521,20);
+INSERT INTO `submission_files` VALUES (1,1,1,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:29:36','2023-04-03 19:29:38',7,521,1),(2,2,2,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:30:21','2023-04-03 19:30:23',8,521,2),(3,3,3,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:31:25','2023-04-03 19:31:27',9,521,3),(4,4,4,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:32:21','2023-04-03 19:32:24',10,521,5),(5,5,5,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:33:12','2023-04-03 19:33:15',11,521,6),(6,6,6,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:33:55','2023-04-03 19:33:58',12,521,7),(7,7,7,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:34:27','2023-04-03 19:34:29',13,521,8),(8,8,8,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:34:59','2023-04-03 19:35:01',14,521,9),(9,9,9,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:35:29','2023-04-03 19:35:32',15,521,10),(10,10,10,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:36:01','2023-04-03 19:36:03',16,521,11),(11,11,11,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:36:32','2023-04-03 19:36:35',17,521,12),(12,12,12,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:37:04','2023-04-03 19:37:07',18,521,13),(13,13,13,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:37:37','2023-04-03 19:37:39',19,521,14),(14,14,14,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:38:09','2023-04-03 19:38:11',20,521,15),(15,15,15,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:38:41','2023-04-03 19:38:43',21,521,16),(16,16,16,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:39:13','2023-04-03 19:39:15',22,521,17),(17,17,17,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:39:45','2023-04-03 19:39:47',23,521,18),(18,18,18,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:40:17','2023-04-03 19:40:19',24,521,19),(19,19,19,NULL,1,10,NULL,NULL,NULL,'2023-04-03 19:40:49','2023-04-03 19:40:51',25,521,20);
 /*!40000 ALTER TABLE `submission_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2860,13 +2860,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_keyword_list`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_keyword_list` (
-  `keyword_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `keyword_id` bigint NOT NULL AUTO_INCREMENT,
   `keyword_text` varchar(60) NOT NULL,
   PRIMARY KEY (`keyword_id`),
   UNIQUE KEY `submission_search_keyword_text` (`keyword_text`)
-) ENGINE=InnoDB AUTO_INCREMENT=1017 DEFAULT CHARSET=utf8 COMMENT='A list of all keywords used in the search index';
+) ENGINE=InnoDB AUTO_INCREMENT=1017 DEFAULT CHARSET=utf8mb3 COMMENT='A list of all keywords used in the search index';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2885,19 +2885,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_object_keywords`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_object_keywords` (
-  `submission_search_object_keyword_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `object_id` bigint(20) NOT NULL,
-  `keyword_id` bigint(20) NOT NULL,
-  `pos` int(11) NOT NULL COMMENT 'Word position of the keyword in the object.',
+  `submission_search_object_keyword_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `object_id` bigint NOT NULL,
+  `keyword_id` bigint NOT NULL,
+  `pos` int NOT NULL COMMENT 'Word position of the keyword in the object.',
   PRIMARY KEY (`submission_search_object_keyword_id`),
   UNIQUE KEY `submission_search_object_keywords_unique` (`object_id`,`pos`),
   KEY `submission_search_object_keywords_object_id` (`object_id`),
   KEY `submission_search_object_keywords_keyword_id` (`keyword_id`),
   CONSTRAINT `submission_search_object_keywords_keyword_id` FOREIGN KEY (`keyword_id`) REFERENCES `submission_search_keyword_list` (`keyword_id`) ON DELETE CASCADE,
   CONSTRAINT `submission_search_object_keywords_object_id_foreign` FOREIGN KEY (`object_id`) REFERENCES `submission_search_objects` (`object_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3843 DEFAULT CHARSET=utf8 COMMENT='Relationships between search objects and keywords in the search index';
+) ENGINE=InnoDB AUTO_INCREMENT=3843 DEFAULT CHARSET=utf8mb3 COMMENT='Relationships between search objects and keywords in the search index';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2916,16 +2916,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_objects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_objects` (
-  `object_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `type` int(11) NOT NULL COMMENT 'Type of item. E.g., abstract, fulltext, etc.',
-  `assoc_id` bigint(20) DEFAULT NULL COMMENT 'Optional ID of an associated record (e.g., a file_id)',
+  `object_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `type` int NOT NULL COMMENT 'Type of item. E.g., abstract, fulltext, etc.',
+  `assoc_id` bigint DEFAULT NULL COMMENT 'Optional ID of an associated record (e.g., a file_id)',
   PRIMARY KEY (`object_id`),
   KEY `submission_search_objects_submission_id` (`submission_id`),
   CONSTRAINT `submission_search_object_submission` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=169 DEFAULT CHARSET=utf8 COMMENT='A list of all search objects indexed in the search index';
+) ENGINE=InnoDB AUTO_INCREMENT=169 DEFAULT CHARSET=utf8mb3 COMMENT='A list of all search objects indexed in the search index';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2944,10 +2944,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_settings` (
-  `submission_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
+  `submission_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -2955,7 +2955,7 @@ CREATE TABLE `submission_settings` (
   UNIQUE KEY `submission_settings_unique` (`submission_id`,`locale`,`setting_name`),
   KEY `submission_settings_submission_id` (`submission_id`),
   CONSTRAINT `submission_settings_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Localized data about submissions';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Localized data about submissions';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2973,25 +2973,25 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submissions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submissions` (
-  `submission_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `current_publication_id` bigint(20) DEFAULT NULL,
+  `submission_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `current_publication_id` bigint DEFAULT NULL,
   `date_last_activity` datetime DEFAULT NULL,
   `date_submitted` datetime DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
-  `stage_id` bigint(20) NOT NULL DEFAULT '5',
+  `stage_id` bigint NOT NULL DEFAULT '5',
   `locale` varchar(14) DEFAULT NULL,
-  `status` smallint(6) NOT NULL DEFAULT '1',
+  `status` smallint NOT NULL DEFAULT '1',
   `submission_progress` varchar(50) NOT NULL DEFAULT 'start',
-  `work_type` smallint(6) DEFAULT '0',
+  `work_type` smallint DEFAULT '0',
   PRIMARY KEY (`submission_id`),
   KEY `submissions_context_id` (`context_id`),
   KEY `submissions_current_publication_id` (`current_publication_id`),
   CONSTRAINT `submissions_context_id` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `submissions_current_publication_id` FOREIGN KEY (`current_publication_id`) REFERENCES `publications` (`publication_id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='All submissions submitted to the context, including incomplete, declined and unpublished submissions.';
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3 COMMENT='All submissions submitted to the context, including incomplete, declined and unpublished submissions.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3000,7 +3000,7 @@ CREATE TABLE `submissions` (
 
 LOCK TABLES `submissions` WRITE;
 /*!40000 ALTER TABLE `submissions` DISABLE KEYS */;
-INSERT INTO `submissions` VALUES (1,1,1,'2023-03-31 23:08:25','2023-03-31 23:08:25','2023-03-31 23:08:25',5,'en',1,'',0),(2,1,2,'2023-03-31 23:09:41','2023-03-31 23:09:29','2023-03-31 23:09:29',5,'en',3,'',0),(3,1,4,'2023-03-31 23:10:31','2023-03-31 23:10:03','2023-03-31 23:10:03',5,'en',3,'',0),(4,1,5,'2023-03-31 23:11:15','2023-03-31 23:10:52','2023-03-31 23:10:52',5,'en',4,'',0),(5,1,6,'2023-03-31 23:11:57','2023-03-31 23:11:39','2023-03-31 23:11:39',5,'en',3,'',0),(6,1,7,'2023-03-31 23:12:26','2023-03-31 23:12:19','2023-03-31 23:12:19',5,'en',3,'',0),(7,1,8,'2023-03-31 23:12:55','2023-03-31 23:12:48','2023-03-31 23:12:48',5,'en',3,'',0),(8,1,9,'2023-03-31 23:13:23','2023-03-31 23:13:17','2023-03-31 23:13:17',5,'en',3,'',0),(9,1,10,'2023-03-31 23:13:52','2023-03-31 23:13:45','2023-03-31 23:13:45',5,'en',3,'',0),(10,1,11,'2023-03-31 23:14:21','2023-03-31 23:14:14','2023-03-31 23:14:14',5,'en',3,'',0),(11,1,12,'2023-03-31 23:14:51','2023-03-31 23:14:43','2023-03-31 23:14:43',5,'en',3,'',0),(12,1,13,'2023-03-31 23:15:20','2023-03-31 23:15:13','2023-03-31 23:15:13',5,'en',3,'',0),(13,1,14,'2023-03-31 23:15:49','2023-03-31 23:15:42','2023-03-31 23:15:42',5,'en',3,'',0),(14,1,15,'2023-03-31 23:16:19','2023-03-31 23:16:11','2023-03-31 23:16:11',5,'en',3,'',0),(15,1,16,'2023-03-31 23:16:48','2023-03-31 23:16:41','2023-03-31 23:16:41',5,'en',3,'',0),(16,1,17,'2023-03-31 23:17:17','2023-03-31 23:17:10','2023-03-31 23:17:10',5,'en',3,'',0),(17,1,18,'2023-03-31 23:17:47','2023-03-31 23:17:40','2023-03-31 23:17:40',5,'en',3,'',0),(18,1,19,'2023-03-31 23:18:16','2023-03-31 23:18:09','2023-03-31 23:18:09',5,'en',3,'',0),(19,1,20,'2023-03-31 23:18:46','2023-03-31 23:18:38','2023-03-31 23:18:38',5,'en',3,'',0);
+INSERT INTO `submissions` VALUES (1,1,1,'2023-04-03 19:29:39','2023-04-03 19:29:39','2023-04-03 19:29:39',5,'en',1,'',0),(2,1,2,'2023-04-03 19:31:05','2023-04-03 19:30:49','2023-04-03 19:30:49',5,'en',3,'',0),(3,1,4,'2023-04-03 19:32:02','2023-04-03 19:31:29','2023-04-03 19:31:29',5,'en',3,'',0),(4,1,5,'2023-04-03 19:32:49','2023-04-03 19:32:25','2023-04-03 19:32:25',5,'en',4,'',0),(5,1,6,'2023-04-03 19:33:36','2023-04-03 19:33:16','2023-04-03 19:33:16',5,'en',3,'',0),(6,1,7,'2023-04-03 19:34:07','2023-04-03 19:33:59','2023-04-03 19:33:59',5,'en',3,'',0),(7,1,8,'2023-04-03 19:34:39','2023-04-03 19:34:31','2023-04-03 19:34:31',5,'en',3,'',0),(8,1,9,'2023-04-03 19:35:09','2023-04-03 19:35:02','2023-04-03 19:35:02',5,'en',3,'',0),(9,1,10,'2023-04-03 19:35:41','2023-04-03 19:35:33','2023-04-03 19:35:33',5,'en',3,'',0),(10,1,11,'2023-04-03 19:36:12','2023-04-03 19:36:04','2023-04-03 19:36:04',5,'en',3,'',0),(11,1,12,'2023-04-03 19:36:44','2023-04-03 19:36:36','2023-04-03 19:36:36',5,'en',3,'',0),(12,1,13,'2023-04-03 19:37:16','2023-04-03 19:37:08','2023-04-03 19:37:08',5,'en',3,'',0),(13,1,14,'2023-04-03 19:37:49','2023-04-03 19:37:40','2023-04-03 19:37:40',5,'en',3,'',0),(14,1,15,'2023-04-03 19:38:21','2023-04-03 19:38:12','2023-04-03 19:38:12',5,'en',3,'',0),(15,1,16,'2023-04-03 19:38:53','2023-04-03 19:38:44','2023-04-03 19:38:44',5,'en',3,'',0),(16,1,17,'2023-04-03 19:39:25','2023-04-03 19:39:16','2023-04-03 19:39:16',5,'en',3,'',0),(17,1,18,'2023-04-03 19:39:56','2023-04-03 19:39:48','2023-04-03 19:39:48',5,'en',3,'',0),(18,1,19,'2023-04-03 19:40:28','2023-04-03 19:40:20','2023-04-03 19:40:20',5,'en',3,'',0),(19,1,20,'2023-04-03 19:41:00','2023-04-03 19:40:52','2023-04-03 19:40:52',5,'en',3,'',0);
 /*!40000 ALTER TABLE `submissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3010,19 +3010,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `temporary_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `temporary_files` (
-  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL,
   `file_name` varchar(90) NOT NULL,
   `file_type` varchar(255) DEFAULT NULL,
-  `file_size` bigint(20) NOT NULL,
+  `file_size` bigint NOT NULL,
   `original_file_name` varchar(127) DEFAULT NULL,
   `date_uploaded` datetime NOT NULL,
   PRIMARY KEY (`file_id`),
   KEY `temporary_files_user_id` (`user_id`),
   CONSTRAINT `temporary_files_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Temporary files, e.g. where files are kept during an upload process before they are moved somewhere more appropriate.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Temporary files, e.g. where files are kept during an upload process before they are moved somewhere more appropriate.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3040,17 +3040,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_institution_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_institution_temporary_records` (
-  `usage_stats_temp_institution_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `usage_stats_temp_institution_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(255) NOT NULL,
-  `line_number` bigint(20) NOT NULL,
-  `institution_id` bigint(20) NOT NULL,
+  `line_number` bigint NOT NULL,
+  `institution_id` bigint NOT NULL,
   PRIMARY KEY (`usage_stats_temp_institution_id`),
   UNIQUE KEY `usitr_load_id_line_number_institution_id` (`load_id`,`line_number`,`institution_id`),
   KEY `usi_institution_id` (`institution_id`),
   CONSTRAINT `usi_institution_id_foreign` FOREIGN KEY (`institution_id`) REFERENCES `institutions` (`institution_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Temporary stats for views and downloads from institutions based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Temporary stats for views and downloads from institutions based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3068,20 +3068,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_total_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_total_temporary_records` (
-  `usage_stats_temp_total_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `usage_stats_temp_total_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL,
   `ip` varchar(255) NOT NULL,
   `user_agent` varchar(255) NOT NULL,
-  `line_number` bigint(20) NOT NULL,
+  `line_number` bigint NOT NULL,
   `canonical_url` varchar(255) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) DEFAULT NULL,
-  `representation_id` bigint(20) DEFAULT NULL,
-  `submission_file_id` bigint(20) unsigned DEFAULT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `file_type` smallint(6) DEFAULT NULL,
+  `context_id` bigint NOT NULL,
+  `submission_id` bigint DEFAULT NULL,
+  `representation_id` bigint DEFAULT NULL,
+  `submission_file_id` bigint unsigned DEFAULT NULL,
+  `assoc_type` bigint NOT NULL,
+  `file_type` smallint DEFAULT NULL,
   `country` varchar(2) NOT NULL DEFAULT '',
   `region` varchar(3) NOT NULL DEFAULT '',
   `city` varchar(255) NOT NULL DEFAULT '',
@@ -3095,7 +3095,7 @@ CREATE TABLE `usage_stats_total_temporary_records` (
   CONSTRAINT `ust_representation_id_foreign` FOREIGN KEY (`representation_id`) REFERENCES `publication_galleys` (`galley_id`) ON DELETE CASCADE,
   CONSTRAINT `ust_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE,
   CONSTRAINT `ust_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Temporary stats totals based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Temporary stats totals based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3113,19 +3113,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_unique_item_investigations_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_unique_item_investigations_temporary_records` (
-  `usage_stats_temp_unique_item_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `usage_stats_temp_unique_item_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL,
   `ip` varchar(255) NOT NULL,
   `user_agent` varchar(255) NOT NULL,
-  `line_number` bigint(20) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `representation_id` bigint(20) DEFAULT NULL,
-  `submission_file_id` bigint(20) unsigned DEFAULT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `file_type` smallint(6) DEFAULT NULL,
+  `line_number` bigint NOT NULL,
+  `context_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `representation_id` bigint DEFAULT NULL,
+  `submission_file_id` bigint unsigned DEFAULT NULL,
+  `assoc_type` bigint NOT NULL,
+  `file_type` smallint DEFAULT NULL,
   `country` varchar(2) NOT NULL DEFAULT '',
   `region` varchar(3) NOT NULL DEFAULT '',
   `city` varchar(255) NOT NULL DEFAULT '',
@@ -3139,7 +3139,7 @@ CREATE TABLE `usage_stats_unique_item_investigations_temporary_records` (
   CONSTRAINT `usii_representation_id_foreign` FOREIGN KEY (`representation_id`) REFERENCES `publication_galleys` (`galley_id`) ON DELETE CASCADE,
   CONSTRAINT `usii_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE,
   CONSTRAINT `usii_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Temporary stats on unique downloads based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Temporary stats on unique downloads based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3157,19 +3157,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_unique_item_requests_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_unique_item_requests_temporary_records` (
-  `usage_stats_temp_item_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `usage_stats_temp_item_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL,
   `ip` varchar(255) NOT NULL,
   `user_agent` varchar(255) NOT NULL,
-  `line_number` bigint(20) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `representation_id` bigint(20) DEFAULT NULL,
-  `submission_file_id` bigint(20) unsigned DEFAULT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `file_type` smallint(6) DEFAULT NULL,
+  `line_number` bigint NOT NULL,
+  `context_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `representation_id` bigint DEFAULT NULL,
+  `submission_file_id` bigint unsigned DEFAULT NULL,
+  `assoc_type` bigint NOT NULL,
+  `file_type` smallint DEFAULT NULL,
   `country` varchar(2) NOT NULL DEFAULT '',
   `region` varchar(3) NOT NULL DEFAULT '',
   `city` varchar(255) NOT NULL DEFAULT '',
@@ -3183,7 +3183,7 @@ CREATE TABLE `usage_stats_unique_item_requests_temporary_records` (
   CONSTRAINT `usir_representation_id_foreign` FOREIGN KEY (`representation_id`) REFERENCES `publication_galleys` (`galley_id`) ON DELETE CASCADE,
   CONSTRAINT `usir_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`) ON DELETE CASCADE,
   CONSTRAINT `usir_submission_id_foreign` FOREIGN KEY (`submission_id`) REFERENCES `submissions` (`submission_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Temporary stats on unique views based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Temporary stats on unique views based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3201,10 +3201,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_group_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_group_settings` (
-  `user_group_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `user_group_id` bigint(20) NOT NULL,
+  `user_group_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `user_group_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -3212,7 +3212,7 @@ CREATE TABLE `user_group_settings` (
   UNIQUE KEY `user_group_settings_unique` (`user_group_id`,`locale`,`setting_name`),
   KEY `user_group_settings_user_group_id` (`user_group_id`),
   CONSTRAINT `user_group_settings_user_group_id_foreign` FOREIGN KEY (`user_group_id`) REFERENCES `user_groups` (`user_group_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COMMENT='More data about user groups, including localized properties such as the name.';
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb3 COMMENT='More data about user groups, including localized properties such as the name.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3231,12 +3231,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_group_stage`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_group_stage` (
-  `user_group_stage_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `user_group_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) NOT NULL,
+  `user_group_stage_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `user_group_id` bigint NOT NULL,
+  `stage_id` bigint NOT NULL,
   PRIMARY KEY (`user_group_stage_id`),
   UNIQUE KEY `user_group_stage_unique` (`context_id`,`user_group_id`,`stage_id`),
   KEY `user_group_stage_context_id` (`context_id`),
@@ -3244,7 +3244,7 @@ CREATE TABLE `user_group_stage` (
   KEY `user_group_stage_stage_id` (`stage_id`),
   CONSTRAINT `user_group_stage_context_id` FOREIGN KEY (`context_id`) REFERENCES `servers` (`server_id`) ON DELETE CASCADE,
   CONSTRAINT `user_group_stage_user_group_id` FOREIGN KEY (`user_group_id`) REFERENCES `user_groups` (`user_group_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='Which stages of the editorial workflow the user_groups can access.';
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3 COMMENT='Which stages of the editorial workflow the user_groups can access.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3263,20 +3263,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_groups` (
-  `user_group_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `role_id` bigint(20) NOT NULL,
-  `is_default` smallint(6) NOT NULL DEFAULT '0',
-  `show_title` smallint(6) NOT NULL DEFAULT '1',
-  `permit_self_registration` smallint(6) NOT NULL DEFAULT '0',
-  `permit_metadata_edit` smallint(6) NOT NULL DEFAULT '0',
+  `user_group_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `role_id` bigint NOT NULL,
+  `is_default` smallint NOT NULL DEFAULT '0',
+  `show_title` smallint NOT NULL DEFAULT '1',
+  `permit_self_registration` smallint NOT NULL DEFAULT '0',
+  `permit_metadata_edit` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_group_id`),
   KEY `user_groups_user_group_id` (`user_group_id`),
   KEY `user_groups_context_id` (`context_id`),
   KEY `user_groups_role_id` (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='All defined user roles in a context, such as Author, Reviewer, Section Editor and Journal Manager.';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COMMENT='All defined user roles in a context, such as Author, Reviewer, Section Editor and Journal Manager.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3295,18 +3295,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_interests`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_interests` (
-  `user_interest_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(20) NOT NULL,
-  `controlled_vocab_entry_id` bigint(20) NOT NULL,
+  `user_interest_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL,
+  `controlled_vocab_entry_id` bigint NOT NULL,
   PRIMARY KEY (`user_interest_id`),
   UNIQUE KEY `u_e_pkey` (`user_id`,`controlled_vocab_entry_id`),
   KEY `user_interests_user_id` (`user_id`),
   KEY `user_interests_controlled_vocab_entry_id` (`controlled_vocab_entry_id`),
   CONSTRAINT `user_interests_controlled_vocab_entry_id_foreign` FOREIGN KEY (`controlled_vocab_entry_id`) REFERENCES `controlled_vocab_entries` (`controlled_vocab_entry_id`) ON DELETE CASCADE,
   CONSTRAINT `user_interests_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Associates users with user interests (which are stored in the controlled vocabulary tables).';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COMMENT='Associates users with user interests (which are stored in the controlled vocabulary tables).';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3324,10 +3324,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_settings` (
-  `user_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(20) NOT NULL,
+  `user_setting_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
@@ -3336,7 +3336,7 @@ CREATE TABLE `user_settings` (
   KEY `user_settings_user_id` (`user_id`),
   KEY `user_settings_locale_setting_name_index` (`setting_name`,`locale`),
   CONSTRAINT `user_settings_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8 COMMENT='More data about users, including localized properties like their name and affiliation.';
+) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8mb3 COMMENT='More data about users, including localized properties like their name and affiliation.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3355,18 +3355,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_user_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_user_groups` (
-  `user_user_group_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `user_group_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `user_user_group_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `user_group_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   PRIMARY KEY (`user_user_group_id`),
   UNIQUE KEY `user_user_groups_unique` (`user_group_id`,`user_id`),
   KEY `user_user_groups_user_group_id` (`user_group_id`),
   KEY `user_user_groups_user_id` (`user_id`),
   CONSTRAINT `user_user_groups_user_group_id_foreign` FOREIGN KEY (`user_group_id`) REFERENCES `user_groups` (`user_group_id`) ON DELETE CASCADE,
   CONSTRAINT `user_user_groups_user_id` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8 COMMENT='Maps users to their assigned user_groups.';
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb3 COMMENT='Maps users to their assigned user_groups.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3385,9 +3385,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `user_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL AUTO_INCREMENT,
   `username` varchar(32) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -3402,16 +3402,16 @@ CREATE TABLE `users` (
   `date_registered` datetime NOT NULL,
   `date_validated` datetime DEFAULT NULL,
   `date_last_login` datetime DEFAULT NULL,
-  `must_change_password` smallint(6) DEFAULT NULL,
-  `auth_id` bigint(20) DEFAULT NULL,
+  `must_change_password` smallint DEFAULT NULL,
+  `auth_id` bigint DEFAULT NULL,
   `auth_str` varchar(255) DEFAULT NULL,
-  `disabled` smallint(6) NOT NULL DEFAULT '0',
+  `disabled` smallint NOT NULL DEFAULT '0',
   `disabled_reason` text,
-  `inline_help` smallint(6) DEFAULT NULL,
+  `inline_help` smallint DEFAULT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `users_username` (`username`),
   UNIQUE KEY `users_email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='All registered users, including authentication data and profile data.';
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3 COMMENT='All registered users, including authentication data and profile data.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3420,7 +3420,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','$2y$10$Nirmk.XOEDjWJqb0YbbsdehY8kXQXozt9cJ88yT/ysvVLCoyhXg6q','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'[]',NULL,NULL,'2023-03-31 23:05:29',NULL,'2023-03-31 23:07:41',NULL,NULL,NULL,0,NULL,1),(2,'rvaca','$2y$10$qEQIUUJK6Q8e3/Wfy/cFiu8yEXClfViURdZyGwmxirhxUnJCNgceG','rvaca@mailinator.com','','','',NULL,'MX','[]',NULL,NULL,'2023-03-31 23:06:54',NULL,'2023-03-31 23:07:26',0,NULL,NULL,0,NULL,1),(3,'dbarnes','$2y$10$P8cWbwc6MhbCi9kPqh97auBZz4ucaPXD13yRFFJCi0ztYcfuJEeUy','dbarnes@mailinator.com','','','',NULL,'AU','[]',NULL,NULL,'2023-03-31 23:06:59',NULL,'2023-03-31 23:18:39',0,NULL,NULL,0,NULL,1),(4,'dbuskins','$2y$10$yyL0gL.QCVXQAR7WMbxnl.bInAZKC.5qxKy0NQ7zCLH8kTBvNaFNq','dbuskins@mailinator.com','','','',NULL,'US','[]',NULL,NULL,'2023-03-31 23:07:05',NULL,NULL,0,NULL,NULL,0,NULL,1),(5,'sberardo','$2y$10$N.YbWazI7nvWTo76KoIC2uHR89qiIo6sRRnAOKy3GyTOzhC8sfvyO','sberardo@mailinator.com','','','',NULL,'CA','[]',NULL,NULL,'2023-03-31 23:07:12',NULL,NULL,0,NULL,NULL,0,NULL,1),(6,'minoue','$2y$10$0HzqHJrkCLoLqW/sVksnZe9vDZW1XGT9LEY5zHxRVkYjDPRm8Kxp2','minoue@mailinator.com','','','',NULL,'JP','[]',NULL,NULL,'2023-03-31 23:07:18',NULL,NULL,0,NULL,NULL,0,NULL,1),(7,'ccorino','$2y$10$PjdTp10dk9FXqaaL3mAYIOPhTK1EHdnoqAQV4jjGQtBfnwPNi3XjW','ccorino@mailinator.com',NULL,NULL,NULL,NULL,'IT','[]',NULL,NULL,'2023-03-31 23:08:09',NULL,'2023-03-31 23:08:09',NULL,NULL,NULL,0,NULL,1),(8,'ckwantes','$2y$10$DgvwmK9uPI3luaVrxv050uBC3hebTAZYqPqlaoWPCYdfY71JMrwJG','ckwantes@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2023-03-31 23:08:31',NULL,'2023-03-31 23:08:31',NULL,NULL,NULL,0,NULL,1),(9,'cmontgomerie','$2y$10$kWfcSwLWaZL2ZdZiLZpHQuGyf9QI3D8nzFSXX7/mk6.WxUim3UWuq','cmontgomerie@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2023-03-31 23:09:47',NULL,'2023-03-31 23:09:47',NULL,NULL,NULL,0,NULL,1),(10,'ddiouf','$2y$10$MvI7dcwXA8P0qXkvZebn2e57AbxmOZbjUlJlO8e4fVqbPAKCCYpKS','ddiouf@mailinator.com',NULL,NULL,NULL,NULL,'EG','[]',NULL,NULL,'2023-03-31 23:10:36',NULL,'2023-03-31 23:10:36',NULL,NULL,NULL,0,NULL,1),(11,'dphillips','$2y$10$/PmmrgOnzD3lRqAUn2VIrOx42P17y6UmNLKGxe0/V69kio8FUOd.m','dphillips@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2023-03-31 23:11:23',NULL,'2023-03-31 23:11:23',NULL,NULL,NULL,0,NULL,1),(12,'dsokoloff','$2y$10$ygoN1axILT0iUyL4fCwBQ.mpI1NMRLEkV4R2gw7jUuOwgRlqmLX1q','dsokoloff@mailinator.com',NULL,NULL,NULL,NULL,'IE','[]',NULL,NULL,'2023-03-31 23:12:03',NULL,'2023-03-31 23:12:03',NULL,NULL,NULL,0,NULL,1),(13,'eostrom','$2y$10$xMrpPXxpIpNTfhnzLHRIU.ltc/frxC5U32hxv5.DethwWJn.j61AK','eostrom@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2023-03-31 23:12:31',NULL,'2023-03-31 23:12:32',NULL,NULL,NULL,0,NULL,1),(14,'fpaglieri','$2y$10$itu9E1hY7kvnTRVnEty4Y..4IAok8HXxRivL3nFJ1sO8zUnjps7sG','fpaglieri@mailinator.com',NULL,NULL,NULL,NULL,'IT','[]',NULL,NULL,'2023-03-31 23:13:01',NULL,'2023-03-31 23:13:01',NULL,NULL,NULL,0,NULL,1),(15,'jmwandenga','$2y$10$.PpT1bdWY8dR3m4mSjtveuafh/TZt.4KZvj6bAtF9grWyYYPmU682','jmwandenga@mailinator.com',NULL,NULL,NULL,NULL,'ZA','[]',NULL,NULL,'2023-03-31 23:13:30',NULL,'2023-03-31 23:13:30',NULL,NULL,NULL,0,NULL,1),(16,'jnovak','$2y$10$uP4Z9tTcD3RvAoqVuv6PC.KJxhIa5lJovv02.WvsoPC3tDN7qtSrm','jnovak@mailinator.com',NULL,NULL,NULL,NULL,'DK','[]',NULL,NULL,'2023-03-31 23:13:58',NULL,'2023-03-31 23:13:58',NULL,NULL,NULL,0,NULL,1),(17,'kalkhafaji','$2y$10$tZWLnZ/1YuwkHK1rzf3QFejWlDU28kiIMS1hrczPw8tXH8hLonw7K','kalkhafaji@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2023-03-31 23:14:27',NULL,'2023-03-31 23:14:27',NULL,NULL,NULL,0,NULL,1),(18,'lchristopher','$2y$10$LFVjkKAyN8xdry.FzZvdb.P015DOHJZcdI4jvpgGVzHD5A2ezT4/G','lchristopher@mailinator.com',NULL,NULL,NULL,NULL,'AU','[]',NULL,NULL,'2023-03-31 23:14:57',NULL,'2023-03-31 23:14:57',NULL,NULL,NULL,0,NULL,1),(19,'lkumiega','$2y$10$WWljRZ9POayZ.qcnbKYbNuIOUceA/j.qV26ycGKY/xQHIrKrxw8KS','lkumiega@mailinator.com',NULL,NULL,NULL,NULL,'ZA','[]',NULL,NULL,'2023-03-31 23:15:26',NULL,'2023-03-31 23:15:26',NULL,NULL,NULL,0,NULL,1),(20,'pdaniel','$2y$10$N7GV7Pp5WMXzmhvw.YbBnec3AG1fxQk8M.gG5EyQ1NH46sKRnh4i2','pdaniel@mailinator.com',NULL,NULL,NULL,NULL,'GB','[]',NULL,NULL,'2023-03-31 23:15:55',NULL,'2023-03-31 23:15:55',NULL,NULL,NULL,0,NULL,1),(21,'rbaiyewu','$2y$10$pKSsXq6faezNUENlFa0zjuM.3bdk6Lj9m0aZKKaYAqyZWjyLNpDSm','rbaiyewu@mailinator.com',NULL,NULL,NULL,NULL,'KE','[]',NULL,NULL,'2023-03-31 23:16:25',NULL,'2023-03-31 23:16:25',NULL,NULL,NULL,0,NULL,1),(22,'rrossi','$2y$10$odFyW/WmI7i2GXTAXw391eZrkHDxsZKciacEcwVVZvRYwrDHXOvVu','rrossi@mailinator.com',NULL,NULL,NULL,NULL,'ES','[]',NULL,NULL,'2023-03-31 23:16:54',NULL,'2023-03-31 23:16:55',NULL,NULL,NULL,0,NULL,1),(23,'vkarbasizaed','$2y$10$4exz5OH6tXuKn34vILo5c.WVXXTg/ZwEQ/SpX77vS0.U1Hz4/72Zi','vkarbasizaed@mailinator.com',NULL,NULL,NULL,NULL,'IR','[]',NULL,NULL,'2023-03-31 23:17:24',NULL,'2023-03-31 23:17:24',NULL,NULL,NULL,0,NULL,1),(24,'vwilliamson','$2y$10$ZuDJDo8QeRnmHz1Lz4l19e3FPXOzj5LXh7hIt3sEubo/48UM6NqHC','vwilliamson@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2023-03-31 23:17:53',NULL,'2023-03-31 23:17:53',NULL,NULL,NULL,0,NULL,1),(25,'zwoods','$2y$10$qStKX2N4.5geuo8L/CNXVerprYslARWt9610YKjbgB2cqkQqy.Jpa','zwoods@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2023-03-31 23:18:22',NULL,'2023-03-31 23:18:23',NULL,NULL,NULL,0,NULL,1);
+INSERT INTO `users` VALUES (1,'admin','$2y$10$VCNM8FWaF5Z0QbOVoofs5eR.NR0vgppGdSsF8laP35qnmdVFycAii','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'[]',NULL,NULL,'2023-04-03 19:26:15',NULL,'2023-04-03 19:28:52',NULL,NULL,NULL,0,NULL,1),(2,'rvaca','$2y$10$clqg0mzJR6tbN2Z5IKHFbuddBB.m5acwUcCbzY7zxJ.FgkqLC61f2','rvaca@mailinator.com','','','',NULL,'MX','[]',NULL,NULL,'2023-04-03 19:27:59',NULL,'2023-04-03 19:28:36',0,NULL,NULL,0,NULL,1),(3,'dbarnes','$2y$10$2k6aD.R3B13b35bFarIudOJ/cOAnUbJldBQNu/AOVQUFEycKt99PK','dbarnes@mailinator.com','','','',NULL,'AU','[]',NULL,NULL,'2023-04-03 19:28:05',NULL,'2023-04-03 19:40:53',0,NULL,NULL,0,NULL,1),(4,'dbuskins','$2y$10$U3v6eJrWQN0o3PMb4L6VYuQaifP1iwg/LCqiyklrd2SZ4j1DSCAtG','dbuskins@mailinator.com','','','',NULL,'US','[]',NULL,NULL,'2023-04-03 19:28:12',NULL,NULL,0,NULL,NULL,0,NULL,1),(5,'sberardo','$2y$10$W7c0jnaNCuD.wUMmq7WBVO5eAfNwBuBN8RuAlHoSaPoxt4GaqX1He','sberardo@mailinator.com','','','',NULL,'CA','[]',NULL,NULL,'2023-04-03 19:28:19',NULL,NULL,0,NULL,NULL,0,NULL,1),(6,'minoue','$2y$10$A.utAcnqxNMil8D9QEAzKODp7SvexUV0ZlLV0oHzM0WL2r0mWGDe6','minoue@mailinator.com','','','',NULL,'JP','[]',NULL,NULL,'2023-04-03 19:28:26',NULL,NULL,0,NULL,NULL,0,NULL,1),(7,'ccorino','$2y$10$VqBn4hj6r.8Tr0kemQWzE.jmkIaoLlJC42KJHOp1CbJNQRWcNzaJ2','ccorino@mailinator.com',NULL,NULL,NULL,NULL,'IT','[]',NULL,NULL,'2023-04-03 19:29:21',NULL,'2023-04-03 19:29:22',NULL,NULL,NULL,0,NULL,1),(8,'ckwantes','$2y$10$BZLL.J/mgDLHthyA5fx.vOOHTa4degDuNhJ2LNKwRh1rAqjnIE2A.','ckwantes@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2023-04-03 19:29:45',NULL,'2023-04-03 19:29:45',NULL,NULL,NULL,0,NULL,1),(9,'cmontgomerie','$2y$10$i0DwQV.OVztqWy3GrSA/IeOnCMH1sPnb6zQ/NCnd10T2jmeVFNOMK','cmontgomerie@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2023-04-03 19:31:11',NULL,'2023-04-03 19:31:11',NULL,NULL,NULL,0,NULL,1),(10,'ddiouf','$2y$10$oK78h5I3FTDS8jXUsrZ5du2H4PUWvOAKz4xMnxuGfWu.3wJS6mPjO','ddiouf@mailinator.com',NULL,NULL,NULL,NULL,'EG','[]',NULL,NULL,'2023-04-03 19:32:08',NULL,'2023-04-03 19:32:08',NULL,NULL,NULL,0,NULL,1),(11,'dphillips','$2y$10$n48Yg6U4EaYg9FaPPIU5qunnTlcIEUA7blHNi5fqFkAvnc84LNiMy','dphillips@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2023-04-03 19:32:58',NULL,'2023-04-03 19:32:58',NULL,NULL,NULL,0,NULL,1),(12,'dsokoloff','$2y$10$fFqMQ1GRa0luhX6DqEtFq.t0d0AryUWFY9EZAdu6j9Ngd3e8ZXClm','dsokoloff@mailinator.com',NULL,NULL,NULL,NULL,'IE','[]',NULL,NULL,'2023-04-03 19:33:42',NULL,'2023-04-03 19:33:42',NULL,NULL,NULL,0,NULL,1),(13,'eostrom','$2y$10$xAMGlgmqe6GYehPve/fgr.ASufJUbBYrqjy7wFh6oFEcxYvcP1YZW','eostrom@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2023-04-03 19:34:13',NULL,'2023-04-03 19:34:13',NULL,NULL,NULL,0,NULL,1),(14,'fpaglieri','$2y$10$HF6Ck9OkIQjR0pbmNe6fA.984Euc7PYBW4DqffprxisCp.Lk2E1v.','fpaglieri@mailinator.com',NULL,NULL,NULL,NULL,'IT','[]',NULL,NULL,'2023-04-03 19:34:45',NULL,'2023-04-03 19:34:45',NULL,NULL,NULL,0,NULL,1),(15,'jmwandenga','$2y$10$slB5N/fDJr8NDle7jKw0M.rz.LC0j/TV3EzUm53cvE8v57O.Fof4q','jmwandenga@mailinator.com',NULL,NULL,NULL,NULL,'ZA','[]',NULL,NULL,'2023-04-03 19:35:15',NULL,'2023-04-03 19:35:16',NULL,NULL,NULL,0,NULL,1),(16,'jnovak','$2y$10$YFZVJOTjBaMcwS6JHM4UqOaaRaB8fvD4xiRCUavHpLKtAUDHQHHOC','jnovak@mailinator.com',NULL,NULL,NULL,NULL,'DK','[]',NULL,NULL,'2023-04-03 19:35:47',NULL,'2023-04-03 19:35:47',NULL,NULL,NULL,0,NULL,1),(17,'kalkhafaji','$2y$10$zZOzuGEK3m7YGgEh6HPnpel0qobxUWggfTqpStfQIHcgXyepvUjgG','kalkhafaji@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2023-04-03 19:36:19',NULL,'2023-04-03 19:36:19',NULL,NULL,NULL,0,NULL,1),(18,'lchristopher','$2y$10$KKVAS7OLtz8jLSFD4RgGo.DeVLReepyBl2vkPKsFY6hjIiewkJafe','lchristopher@mailinator.com',NULL,NULL,NULL,NULL,'AU','[]',NULL,NULL,'2023-04-03 19:36:51',NULL,'2023-04-03 19:36:51',NULL,NULL,NULL,0,NULL,1),(19,'lkumiega','$2y$10$LaHan/n8vkIvuBpae1v2EuAgayJTAfdMEeFsxGA8z2sbm1Mg.CK.O','lkumiega@mailinator.com',NULL,NULL,NULL,NULL,'ZA','[]',NULL,NULL,'2023-04-03 19:37:23',NULL,'2023-04-03 19:37:23',NULL,NULL,NULL,0,NULL,1),(20,'pdaniel','$2y$10$mipeK33Oh3Svcj9AzNIkIewTjg41hwElwcu9gC9ZQnum6TjMb4HRG','pdaniel@mailinator.com',NULL,NULL,NULL,NULL,'GB','[]',NULL,NULL,'2023-04-03 19:37:55',NULL,'2023-04-03 19:37:55',NULL,NULL,NULL,0,NULL,1),(21,'rbaiyewu','$2y$10$KIxRR.lidlCQrEMVBwlEdu7xVKCjBks.n.8DT6D4HpSlnE9bRMAPK','rbaiyewu@mailinator.com',NULL,NULL,NULL,NULL,'KE','[]',NULL,NULL,'2023-04-03 19:38:27',NULL,'2023-04-03 19:38:27',NULL,NULL,NULL,0,NULL,1),(22,'rrossi','$2y$10$gir.Zi2d8cUlNHstS4RmaOD3EFcsi5UgMaz73tkhc83zOoLMhSIC6','rrossi@mailinator.com',NULL,NULL,NULL,NULL,'ES','[]',NULL,NULL,'2023-04-03 19:38:59',NULL,'2023-04-03 19:38:59',NULL,NULL,NULL,0,NULL,1),(23,'vkarbasizaed','$2y$10$GfXAMjD/jVs79zakzdRaZOdlcUI4Fp90wFrRyEICrqHNAnGmJcVba','vkarbasizaed@mailinator.com',NULL,NULL,NULL,NULL,'IR','[]',NULL,NULL,'2023-04-03 19:39:31',NULL,'2023-04-03 19:39:31',NULL,NULL,NULL,0,NULL,1),(24,'vwilliamson','$2y$10$EEPLdvCB07v9yQV01wC5FuVq8KA05zR7x574CYY7OGVCOHZkm0ER6','vwilliamson@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2023-04-03 19:40:03',NULL,'2023-04-03 19:40:03',NULL,NULL,NULL,0,NULL,1),(25,'zwoods','$2y$10$VST1y0FZl8zD08bZX6oSQ.rUhyadQiRhRmFMFUqXPQmKS7GLioUnK','zwoods@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2023-04-03 19:40:35',NULL,'2023-04-03 19:40:35',NULL,NULL,NULL,0,NULL,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3430,23 +3430,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `versions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `versions` (
-  `version_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `major` int(11) NOT NULL DEFAULT '0' COMMENT 'Major component of version number, e.g. the 2 in OJS 2.3.8-0',
-  `minor` int(11) NOT NULL DEFAULT '0' COMMENT 'Minor component of version number, e.g. the 3 in OJS 2.3.8-0',
-  `revision` int(11) NOT NULL DEFAULT '0' COMMENT 'Revision component of version number, e.g. the 8 in OJS 2.3.8-0',
-  `build` int(11) NOT NULL DEFAULT '0' COMMENT 'Build component of version number, e.g. the 0 in OJS 2.3.8-0',
+  `version_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `major` int NOT NULL DEFAULT '0' COMMENT 'Major component of version number, e.g. the 2 in OJS 2.3.8-0',
+  `minor` int NOT NULL DEFAULT '0' COMMENT 'Minor component of version number, e.g. the 3 in OJS 2.3.8-0',
+  `revision` int NOT NULL DEFAULT '0' COMMENT 'Revision component of version number, e.g. the 8 in OJS 2.3.8-0',
+  `build` int NOT NULL DEFAULT '0' COMMENT 'Build component of version number, e.g. the 0 in OJS 2.3.8-0',
   `date_installed` datetime NOT NULL,
-  `current` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the version entry being described is currently active. This permits the table to store past installation history for forensic purposes.',
+  `current` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the version entry being described is currently active. This permits the table to store past installation history for forensic purposes.',
   `product_type` varchar(30) DEFAULT NULL COMMENT 'Describes the type of product this row describes, e.g. "plugins.generic" (for a generic plugin) or "core" for the application itelf',
   `product` varchar(30) DEFAULT NULL COMMENT 'Uniquely identifies the product this version row describes, e.g. "ojs2" for OJS 2.x, "languageToggle" for the language toggle block plugin, etc.',
   `product_class_name` varchar(80) DEFAULT NULL COMMENT 'Specifies the class name associated with this product, for plugins, or the empty string where not applicable.',
-  `lazy_load` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a lazy-load plugin; 0 otherwise',
-  `sitewide` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a site-wide plugin; 0 otherwise',
+  `lazy_load` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a lazy-load plugin; 0 otherwise',
+  `sitewide` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a site-wide plugin; 0 otherwise',
   PRIMARY KEY (`version_id`),
   UNIQUE KEY `versions_unique` (`product_type`,`product`,`major`,`minor`,`revision`,`build`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COMMENT='Describes the installation and upgrade version history for the application and all installed plugins.';
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3 COMMENT='Describes the installation and upgrade version history for the application and all installed plugins.';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3455,7 +3455,7 @@ CREATE TABLE `versions` (
 
 LOCK TABLES `versions` WRITE;
 /*!40000 ALTER TABLE `versions` DISABLE KEYS */;
-INSERT INTO `versions` VALUES (1,1,0,0,0,'2023-03-31 23:05:29',1,'plugins.metadata','dc11','',0,0),(2,1,0,1,0,'2023-03-31 23:05:29',1,'plugins.blocks','browse','BrowseBlockPlugin',1,0),(3,1,0,0,0,'2023-03-31 23:05:29',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),(4,1,0,0,0,'2023-03-31 23:05:29',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),(5,1,3,4,3,'2023-03-31 23:05:29',1,'plugins.generic','orcidProfile','OrcidProfilePlugin',1,0),(6,1,0,0,0,'2023-03-31 23:05:29',1,'plugins.generic','usageEvent','',0,0),(7,1,1,0,0,'2023-03-31 23:05:29',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),(8,1,3,0,0,'2023-03-31 23:05:29',1,'plugins.generic','acron','AcronPlugin',1,1),(9,1,0,1,0,'2023-03-31 23:05:29',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),(10,1,0,0,0,'2023-03-31 23:05:29',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),(11,1,2,0,0,'2023-03-31 23:05:29',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),(12,1,0,0,0,'2023-03-31 23:05:29',1,'plugins.generic','webFeed','WebFeedPlugin',1,0),(13,2,2,0,0,'2023-03-31 23:05:29',1,'plugins.generic','crossref','',0,0),(14,1,0,0,0,'2023-03-31 23:05:29',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),(15,0,1,0,0,'2023-03-31 23:05:29',1,'plugins.generic','citationStyleLanguage','CitationStyleLanguagePlugin',1,0),(16,1,0,0,0,'2023-03-31 23:05:29',1,'plugins.importexport','native','',0,0),(17,1,0,0,0,'2023-03-31 23:05:29',1,'plugins.oaiMetadataFormats','dc','',0,0),(18,1,0,0,0,'2023-03-31 23:05:29',1,'plugins.themes','default','DefaultThemePlugin',1,0),(19,3,4,0,0,'2023-03-31 23:05:24',1,'core','ops','',0,1);
+INSERT INTO `versions` VALUES (1,1,0,0,0,'2023-04-03 19:26:15',1,'plugins.metadata','dc11','',0,0),(2,1,0,1,0,'2023-04-03 19:26:15',1,'plugins.blocks','browse','BrowseBlockPlugin',1,0),(3,1,0,0,0,'2023-04-03 19:26:15',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),(4,1,0,0,0,'2023-04-03 19:26:15',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),(5,2,2,0,0,'2023-04-03 19:26:15',1,'plugins.generic','crossref','',0,0),(6,1,2,0,0,'2023-04-03 19:26:15',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),(7,1,0,0,0,'2023-04-03 19:26:15',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),(8,1,0,0,0,'2023-04-03 19:26:15',1,'plugins.generic','webFeed','WebFeedPlugin',1,0),(9,1,3,0,0,'2023-04-03 19:26:15',1,'plugins.generic','acron','AcronPlugin',1,1),(10,0,1,0,0,'2023-04-03 19:26:15',1,'plugins.generic','citationStyleLanguage','CitationStyleLanguagePlugin',1,0),(11,1,0,1,0,'2023-04-03 19:26:15',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),(12,1,3,4,3,'2023-04-03 19:26:15',1,'plugins.generic','orcidProfile','OrcidProfilePlugin',1,0),(13,1,0,0,0,'2023-04-03 19:26:15',1,'plugins.generic','usageEvent','',0,0),(14,1,1,0,0,'2023-04-03 19:26:15',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),(15,1,0,0,0,'2023-04-03 19:26:15',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),(16,1,0,0,0,'2023-04-03 19:26:15',1,'plugins.importexport','native','',0,0),(17,1,0,0,0,'2023-04-03 19:26:15',1,'plugins.oaiMetadataFormats','dc','',0,0),(18,1,0,0,0,'2023-04-03 19:26:15',1,'plugins.themes','default','DefaultThemePlugin',1,0),(19,3,4,0,0,'2023-04-03 19:25:58',1,'core','ops','',0,1);
 /*!40000 ALTER TABLE `versions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -3468,4 +3468,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-31 23:18:48
+-- Dump completed on 2023-04-03 19:41:03
