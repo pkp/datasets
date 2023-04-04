@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.7.41, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.32, for Linux (x86_64)
 --
 -- Host: localhost    Database: ojs-ci
 -- ------------------------------------------------------
--- Server version	5.7.41-0ubuntu0.18.04.1
+-- Server version	8.0.32-0ubuntu0.20.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,17 +21,17 @@
 
 DROP TABLE IF EXISTS `access_keys`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `access_keys` (
-  `access_key_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `access_key_id` bigint NOT NULL AUTO_INCREMENT,
   `context` varchar(40) NOT NULL,
   `key_hash` varchar(40) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `user_id` bigint NOT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   `expiry_date` datetime NOT NULL,
   PRIMARY KEY (`access_key_id`),
   KEY `access_keys_hash` (`key_hash`,`user_id`,`context`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,16 +49,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_settings` (
-  `announcement_id` bigint(20) NOT NULL,
+  `announcement_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) DEFAULT NULL,
   UNIQUE KEY `announcement_settings_pkey` (`announcement_id`,`locale`,`setting_name`),
   KEY `announcement_settings_announcement_id` (`announcement_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,16 +76,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_type_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_type_settings` (
-  `type_id` bigint(20) NOT NULL,
+  `type_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `announcement_type_settings_pkey` (`type_id`,`locale`,`setting_name`),
   KEY `announcement_type_settings_type_id` (`type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,14 +103,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_types`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_types` (
-  `type_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` smallint(6) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `type_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` smallint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   PRIMARY KEY (`type_id`),
   KEY `announcement_types_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,17 +128,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcements`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcements` (
-  `announcement_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` smallint(6) DEFAULT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `type_id` bigint(20) DEFAULT NULL,
+  `announcement_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` smallint DEFAULT NULL,
+  `assoc_id` bigint NOT NULL,
+  `type_id` bigint DEFAULT NULL,
   `date_expire` date DEFAULT NULL,
   `date_posted` datetime NOT NULL,
   PRIMARY KEY (`announcement_id`),
   KEY `announcements_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -156,15 +156,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `auth_sources`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `auth_sources` (
-  `auth_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `auth_id` bigint NOT NULL AUTO_INCREMENT,
   `title` varchar(60) NOT NULL,
   `plugin` varchar(32) NOT NULL,
-  `auth_default` smallint(6) NOT NULL DEFAULT '0',
+  `auth_default` smallint NOT NULL DEFAULT '0',
   `settings` text,
   PRIMARY KEY (`auth_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -182,15 +182,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `author_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `author_settings` (
-  `author_id` bigint(20) NOT NULL,
+  `author_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   UNIQUE KEY `author_settings_pkey` (`author_id`,`locale`,`setting_name`),
   KEY `author_settings_author_id` (`author_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,17 +209,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `authors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `authors` (
-  `author_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `author_id` bigint NOT NULL AUTO_INCREMENT,
   `email` varchar(90) NOT NULL,
-  `include_in_browse` smallint(6) NOT NULL DEFAULT '1',
-  `publication_id` bigint(20) NOT NULL,
+  `include_in_browse` smallint NOT NULL DEFAULT '1',
+  `publication_id` bigint NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
-  `user_group_id` bigint(20) DEFAULT NULL,
+  `user_group_id` bigint DEFAULT NULL,
   PRIMARY KEY (`author_id`),
   KEY `authors_publication_id` (`publication_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -238,18 +238,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categories` (
-  `category_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `parent_id` bigint(20) NOT NULL,
-  `seq` bigint(20) DEFAULT NULL,
+  `category_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `parent_id` bigint NOT NULL,
+  `seq` bigint DEFAULT NULL,
   `path` varchar(255) NOT NULL,
   `image` text,
   PRIMARY KEY (`category_id`),
   UNIQUE KEY `category_path` (`context_id`,`path`),
   KEY `category_context_id` (`context_id`,`parent_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -267,15 +267,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `category_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `category_settings` (
-  `category_id` bigint(20) NOT NULL,
+  `category_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `category_settings_pkey` (`category_id`,`locale`,`setting_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -293,16 +293,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `citation_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `citation_settings` (
-  `citation_id` bigint(20) NOT NULL,
+  `citation_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `citation_settings_pkey` (`citation_id`,`locale`,`setting_name`),
   KEY `citation_settings_citation_id` (`citation_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -320,16 +320,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `citations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `citations` (
-  `citation_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `publication_id` bigint(20) NOT NULL DEFAULT '0',
+  `citation_id` bigint NOT NULL AUTO_INCREMENT,
+  `publication_id` bigint NOT NULL DEFAULT '0',
   `raw_citation` text NOT NULL,
-  `seq` bigint(20) NOT NULL DEFAULT '0',
+  `seq` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`citation_id`),
   UNIQUE KEY `citations_publication_seq` (`publication_id`,`seq`),
   KEY `citations_publication` (`publication_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -347,19 +347,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `completed_payments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `completed_payments` (
-  `completed_payment_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `completed_payment_id` bigint NOT NULL AUTO_INCREMENT,
   `timestamp` datetime NOT NULL,
-  `payment_type` bigint(20) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `payment_type` bigint NOT NULL,
+  `context_id` bigint NOT NULL,
+  `user_id` bigint DEFAULT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   `amount` double(8,2) NOT NULL,
   `currency_code_alpha` varchar(3) DEFAULT NULL,
   `payment_method_plugin_name` varchar(80) DEFAULT NULL,
   PRIMARY KEY (`completed_payment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -377,14 +377,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocab_entries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocab_entries` (
-  `controlled_vocab_entry_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `controlled_vocab_id` bigint(20) NOT NULL,
+  `controlled_vocab_entry_id` bigint NOT NULL AUTO_INCREMENT,
+  `controlled_vocab_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
   PRIMARY KEY (`controlled_vocab_entry_id`),
   KEY `controlled_vocab_entries_cv_id` (`controlled_vocab_id`,`seq`)
-) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -403,16 +403,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocab_entry_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocab_entry_settings` (
-  `controlled_vocab_entry_id` bigint(20) NOT NULL,
+  `controlled_vocab_entry_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `c_v_e_s_pkey` (`controlled_vocab_entry_id`,`locale`,`setting_name`),
   KEY `c_v_e_s_entry_id` (`controlled_vocab_entry_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -431,15 +431,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocabs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocabs` (
-  `controlled_vocab_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `controlled_vocab_id` bigint NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(64) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL DEFAULT '0',
-  `assoc_id` bigint(20) NOT NULL DEFAULT '0',
+  `assoc_type` bigint NOT NULL DEFAULT '0',
+  `assoc_id` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`controlled_vocab_id`),
   UNIQUE KEY `controlled_vocab_symbolic` (`symbolic`,`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -458,13 +458,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `custom_issue_orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `custom_issue_orders` (
-  `issue_id` bigint(20) NOT NULL,
-  `journal_id` bigint(20) NOT NULL,
+  `issue_id` bigint NOT NULL,
+  `journal_id` bigint NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   UNIQUE KEY `custom_issue_orders_pkey` (`issue_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -482,13 +482,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `custom_section_orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `custom_section_orders` (
-  `issue_id` bigint(20) NOT NULL,
-  `section_id` bigint(20) NOT NULL,
+  `issue_id` bigint NOT NULL,
+  `section_id` bigint NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   UNIQUE KEY `custom_section_orders_pkey` (`issue_id`,`section_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -506,15 +506,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstone_oai_set_objects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstone_oai_set_objects` (
-  `object_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `tombstone_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `object_id` bigint NOT NULL AUTO_INCREMENT,
+  `tombstone_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   PRIMARY KEY (`object_id`),
   KEY `data_object_tombstone_oai_set_objects_tombstone_id` (`tombstone_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -532,16 +532,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstone_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstone_settings` (
-  `tombstone_id` bigint(20) NOT NULL,
+  `tombstone_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `data_object_tombstone_settings_pkey` (`tombstone_id`,`locale`,`setting_name`),
   KEY `data_object_tombstone_settings_tombstone_id` (`tombstone_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -559,17 +559,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstones` (
-  `tombstone_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `data_object_id` bigint(20) NOT NULL,
+  `tombstone_id` bigint NOT NULL AUTO_INCREMENT,
+  `data_object_id` bigint NOT NULL,
   `date_deleted` datetime NOT NULL,
   `set_spec` varchar(255) NOT NULL,
   `set_name` varchar(255) NOT NULL,
   `oai_identifier` varchar(255) NOT NULL,
   PRIMARY KEY (`tombstone_id`),
   KEY `data_object_tombstones_data_object_id` (`data_object_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -587,20 +587,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `edit_decisions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `edit_decisions` (
-  `edit_decision_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `review_round_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) DEFAULT NULL,
-  `round` smallint(6) NOT NULL,
-  `editor_id` bigint(20) NOT NULL,
-  `decision` smallint(6) NOT NULL,
+  `edit_decision_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `review_round_id` bigint NOT NULL,
+  `stage_id` bigint DEFAULT NULL,
+  `round` smallint NOT NULL,
+  `editor_id` bigint NOT NULL,
+  `decision` smallint NOT NULL,
   `date_decided` datetime NOT NULL,
   PRIMARY KEY (`edit_decision_id`),
   KEY `edit_decisions_submission_id` (`submission_id`),
   KEY `edit_decisions_editor_id` (`editor_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -609,7 +609,7 @@ CREATE TABLE `edit_decisions` (
 
 LOCK TABLES `edit_decisions` WRITE;
 /*!40000 ALTER TABLE `edit_decisions` DISABLE KEYS */;
-INSERT INTO `edit_decisions` VALUES (1,1,0,1,0,3,8,'2023-04-03 21:42:34'),(2,1,1,3,1,3,1,'2023-04-03 21:42:51'),(3,1,0,4,0,3,7,'2023-04-03 21:42:59'),(4,2,0,1,0,3,8,'2023-04-03 21:45:07'),(5,2,2,3,1,6,11,'2023-04-03 21:45:21'),(6,3,0,1,0,3,8,'2023-04-03 21:45:43'),(7,3,3,3,1,3,1,'2023-04-03 21:45:56'),(8,5,0,1,0,3,8,'2023-04-03 21:46:33'),(9,5,4,3,1,3,1,'2023-04-03 21:46:46'),(10,5,0,4,0,3,7,'2023-04-03 21:46:53'),(11,6,0,1,0,3,8,'2023-04-03 21:47:19'),(12,6,5,3,1,3,1,'2023-04-03 21:47:32'),(13,6,0,4,0,3,7,'2023-04-03 21:47:40'),(14,7,0,1,0,3,8,'2023-04-03 21:48:02'),(15,9,0,1,0,3,8,'2023-04-03 21:48:57'),(16,9,7,3,1,3,1,'2023-04-03 21:49:10'),(17,9,0,4,0,3,7,'2023-04-03 21:49:17'),(18,10,0,1,0,3,8,'2023-04-03 21:49:43'),(19,12,0,1,0,3,8,'2023-04-03 21:50:43'),(20,13,0,1,0,3,8,'2023-04-03 21:51:12'),(21,13,10,3,1,3,2,'2023-04-03 21:52:02'),(22,15,0,1,0,3,8,'2023-04-03 21:52:33'),(23,15,11,3,1,3,1,'2023-04-03 21:52:44'),(24,15,0,4,0,3,7,'2023-04-03 21:52:51'),(25,17,0,1,0,3,8,'2023-04-03 21:53:30'),(26,17,12,3,1,3,1,'2023-04-03 21:53:41'),(27,17,0,4,0,3,7,'2023-04-03 21:53:48'),(28,18,0,1,0,3,9,'2023-04-03 21:55:16'),(29,19,0,1,0,3,8,'2023-04-03 21:55:36'),(30,19,13,3,1,3,1,'2023-04-03 21:55:48');
+INSERT INTO `edit_decisions` VALUES (1,1,0,1,0,3,8,'2023-04-04 20:40:34'),(2,1,1,3,1,3,1,'2023-04-04 20:40:53'),(3,1,0,4,0,3,7,'2023-04-04 20:41:02'),(4,2,0,1,0,3,8,'2023-04-04 20:43:18'),(5,2,2,3,1,6,11,'2023-04-04 20:43:33'),(6,3,0,1,0,3,8,'2023-04-04 20:43:56'),(7,3,3,3,1,3,1,'2023-04-04 20:44:10'),(8,5,0,1,0,3,8,'2023-04-04 20:44:50'),(9,5,4,3,1,3,1,'2023-04-04 20:45:04'),(10,5,0,4,0,3,7,'2023-04-04 20:45:12'),(11,6,0,1,0,3,8,'2023-04-04 20:45:40'),(12,6,5,3,1,3,1,'2023-04-04 20:45:54'),(13,6,0,4,0,3,7,'2023-04-04 20:46:02'),(14,7,0,1,0,3,8,'2023-04-04 20:46:27'),(15,9,0,1,0,3,8,'2023-04-04 20:47:25'),(16,9,7,3,1,3,1,'2023-04-04 20:47:39'),(17,9,0,4,0,3,7,'2023-04-04 20:47:47'),(18,10,0,1,0,3,8,'2023-04-04 20:48:18'),(19,12,0,1,0,3,8,'2023-04-04 20:49:24'),(20,13,0,1,0,3,8,'2023-04-04 20:49:55'),(21,13,10,3,1,3,2,'2023-04-04 20:50:50'),(22,15,0,1,0,3,8,'2023-04-04 20:51:23'),(23,15,11,3,1,3,1,'2023-04-04 20:51:35'),(24,15,0,4,0,3,7,'2023-04-04 20:51:43'),(25,17,0,1,0,3,8,'2023-04-04 20:52:23'),(26,17,12,3,1,3,1,'2023-04-04 20:52:35'),(27,17,0,4,0,3,7,'2023-04-04 20:52:43'),(28,18,0,1,0,3,9,'2023-04-04 20:54:20'),(29,19,0,1,0,3,8,'2023-04-04 20:54:42'),(30,19,13,3,1,3,1,'2023-04-04 20:54:54');
 /*!40000 ALTER TABLE `edit_decisions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -619,14 +619,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_log` (
-  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `sender_id` bigint(20) NOT NULL,
+  `log_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `sender_id` bigint NOT NULL,
   `date_sent` datetime NOT NULL,
-  `event_type` bigint(20) DEFAULT NULL,
+  `event_type` bigint DEFAULT NULL,
   `from_address` varchar(255) DEFAULT NULL,
   `recipients` text,
   `cc_recipients` text,
@@ -635,7 +635,7 @@ CREATE TABLE `email_log` (
   `body` text,
   PRIMARY KEY (`log_id`),
   KEY `email_log_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -653,12 +653,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_log_users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_log_users` (
-  `email_log_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `email_log_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `email_log_user_id` (`email_log_id`,`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -676,15 +676,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates` (
-  `email_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email_id` bigint NOT NULL AUTO_INCREMENT,
   `email_key` varchar(64) NOT NULL COMMENT 'Unique identifier for this email.',
-  `context_id` bigint(20) NOT NULL,
-  `enabled` smallint(6) NOT NULL DEFAULT '1',
+  `context_id` bigint NOT NULL,
+  `enabled` smallint NOT NULL DEFAULT '1',
   PRIMARY KEY (`email_id`),
   UNIQUE KEY `email_templates_email_key` (`email_key`,`context_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -702,18 +702,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_default`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_default` (
-  `email_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email_id` bigint NOT NULL AUTO_INCREMENT,
   `email_key` varchar(64) NOT NULL COMMENT 'Unique identifier for this email.',
-  `can_disable` smallint(6) NOT NULL DEFAULT '0',
-  `can_edit` smallint(6) NOT NULL DEFAULT '0',
-  `from_role_id` bigint(20) DEFAULT NULL,
-  `to_role_id` bigint(20) DEFAULT NULL,
-  `stage_id` bigint(20) DEFAULT NULL,
+  `can_disable` smallint NOT NULL DEFAULT '0',
+  `can_edit` smallint NOT NULL DEFAULT '0',
+  `from_role_id` bigint DEFAULT NULL,
+  `to_role_id` bigint DEFAULT NULL,
+  `stage_id` bigint DEFAULT NULL,
   PRIMARY KEY (`email_id`),
   KEY `email_templates_default_email_key` (`email_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -722,7 +722,7 @@ CREATE TABLE `email_templates_default` (
 
 LOCK TABLES `email_templates_default` WRITE;
 /*!40000 ALTER TABLE `email_templates_default` DISABLE KEYS */;
-INSERT INTO `email_templates_default` VALUES (1,'NOTIFICATION',0,1,NULL,NULL,NULL),(2,'NOTIFICATION_CENTER_DEFAULT',0,1,NULL,NULL,NULL),(3,'PASSWORD_RESET_CONFIRM',0,1,NULL,NULL,NULL),(4,'USER_REGISTER',0,1,NULL,NULL,NULL),(5,'USER_VALIDATE',0,1,NULL,NULL,NULL),(6,'REVIEWER_REGISTER',0,1,NULL,NULL,NULL),(7,'PUBLISH_NOTIFY',0,1,NULL,NULL,NULL),(8,'LOCKSS_EXISTING_ARCHIVE',0,1,NULL,NULL,NULL),(9,'LOCKSS_NEW_ARCHIVE',0,1,NULL,NULL,NULL),(10,'SUBMISSION_ACK',1,1,NULL,65536,1),(11,'SUBMISSION_ACK_NOT_USER',1,1,NULL,65536,1),(12,'EDITOR_ASSIGN',1,1,16,16,1),(13,'REVIEW_CANCEL',1,1,16,4096,3),(14,'REVIEW_REINSTATE',1,1,16,4096,3),(15,'REVIEW_REQUEST',1,1,16,4096,3),(16,'REVIEW_REQUEST_SUBSEQUENT',1,1,16,4096,3),(17,'REVIEW_REQUEST_ONECLICK',1,1,16,4096,3),(18,'REVIEW_REQUEST_ONECLICK_SUBSEQUENT',1,1,16,4096,3),(19,'REVIEW_REQUEST_ATTACHED',0,1,16,4096,3),(20,'REVIEW_REQUEST_ATTACHED_SUBSEQUENT',0,1,16,4096,3),(21,'REVIEW_REQUEST_REMIND_AUTO',0,1,NULL,4096,3),(22,'REVIEW_REQUEST_REMIND_AUTO_ONECLICK',0,1,NULL,4096,3),(23,'REVIEW_CONFIRM',1,1,4096,16,3),(24,'REVIEW_DECLINE',1,1,4096,16,3),(25,'REVIEW_ACK',1,1,16,4096,3),(26,'REVIEW_REMIND',0,1,16,4096,3),(27,'REVIEW_REMIND_AUTO',0,1,NULL,4096,3),(28,'REVIEW_REMIND_ONECLICK',0,1,16,4096,3),(29,'REVIEW_REMIND_AUTO_ONECLICK',0,1,NULL,4096,3),(30,'EDITOR_DECISION_ACCEPT',0,1,16,65536,3),(31,'EDITOR_DECISION_SEND_TO_EXTERNAL',0,1,16,65536,3),(32,'EDITOR_DECISION_SEND_TO_PRODUCTION',0,1,16,65536,5),(33,'EDITOR_DECISION_REVISIONS',0,1,16,65536,3),(34,'EDITOR_DECISION_RESUBMIT',0,1,16,65536,3),(35,'EDITOR_DECISION_DECLINE',0,1,16,65536,3),(36,'EDITOR_DECISION_INITIAL_DECLINE',0,1,16,65536,1),(37,'EDITOR_RECOMMENDATION',0,1,16,16,3),(38,'COPYEDIT_REQUEST',1,1,16,4097,4),(39,'LAYOUT_REQUEST',1,1,16,4097,5),(40,'LAYOUT_COMPLETE',1,1,4097,16,5),(41,'EMAIL_LINK',0,1,1048576,NULL,NULL),(42,'SUBSCRIPTION_NOTIFY',0,1,NULL,1048576,NULL),(43,'OPEN_ACCESS_NOTIFY',0,1,NULL,1048576,NULL),(44,'SUBSCRIPTION_BEFORE_EXPIRY',0,1,NULL,1048576,NULL),(45,'SUBSCRIPTION_AFTER_EXPIRY',0,1,NULL,1048576,NULL),(46,'SUBSCRIPTION_AFTER_EXPIRY_LAST',0,1,NULL,1048576,NULL),(47,'SUBSCRIPTION_PURCHASE_INDL',0,1,NULL,2097152,NULL),(48,'SUBSCRIPTION_PURCHASE_INSTL',0,1,NULL,2097152,NULL),(49,'SUBSCRIPTION_RENEW_INDL',0,1,NULL,2097152,NULL),(50,'SUBSCRIPTION_RENEW_INSTL',0,1,NULL,2097152,NULL),(51,'CITATION_EDITOR_AUTHOR_QUERY',0,1,NULL,NULL,4),(52,'REVISED_VERSION_NOTIFY',0,1,NULL,16,3),(53,'STATISTICS_REPORT_NOTIFICATION',1,1,16,17,NULL),(54,'ANNOUNCEMENT',0,1,16,1048576,NULL),(55,'ORCID_COLLECT_AUTHOR_ID',0,1,NULL,NULL,NULL),(56,'ORCID_REQUEST_AUTHOR_AUTHORIZATION',0,1,NULL,NULL,NULL),(57,'MANUAL_PAYMENT_NOTIFICATION',0,1,NULL,NULL,NULL),(58,'PAYPAL_INVESTIGATE_PAYMENT',0,1,NULL,NULL,NULL);
+INSERT INTO `email_templates_default` VALUES (1,'NOTIFICATION',0,1,NULL,NULL,NULL),(2,'NOTIFICATION_CENTER_DEFAULT',0,1,NULL,NULL,NULL),(3,'PASSWORD_RESET_CONFIRM',0,1,NULL,NULL,NULL),(4,'USER_REGISTER',0,1,NULL,NULL,NULL),(5,'USER_VALIDATE',0,1,NULL,NULL,NULL),(6,'REVIEWER_REGISTER',0,1,NULL,NULL,NULL),(7,'PUBLISH_NOTIFY',0,1,NULL,NULL,NULL),(8,'LOCKSS_EXISTING_ARCHIVE',0,1,NULL,NULL,NULL),(9,'LOCKSS_NEW_ARCHIVE',0,1,NULL,NULL,NULL),(10,'SUBMISSION_ACK',1,1,NULL,65536,1),(11,'SUBMISSION_ACK_NOT_USER',1,1,NULL,65536,1),(12,'EDITOR_ASSIGN',1,1,16,16,1),(13,'REVIEW_CANCEL',1,1,16,4096,3),(14,'REVIEW_REINSTATE',1,1,16,4096,3),(15,'REVIEW_REQUEST',1,1,16,4096,3),(16,'REVIEW_REQUEST_SUBSEQUENT',1,1,16,4096,3),(17,'REVIEW_REQUEST_ONECLICK',1,1,16,4096,3),(18,'REVIEW_REQUEST_ONECLICK_SUBSEQUENT',1,1,16,4096,3),(19,'REVIEW_REQUEST_ATTACHED',0,1,16,4096,3),(20,'REVIEW_REQUEST_ATTACHED_SUBSEQUENT',0,1,16,4096,3),(21,'REVIEW_REQUEST_REMIND_AUTO',0,1,NULL,4096,3),(22,'REVIEW_REQUEST_REMIND_AUTO_ONECLICK',0,1,NULL,4096,3),(23,'REVIEW_CONFIRM',1,1,4096,16,3),(24,'REVIEW_DECLINE',1,1,4096,16,3),(25,'REVIEW_ACK',1,1,16,4096,3),(26,'REVIEW_REMIND',0,1,16,4096,3),(27,'REVIEW_REMIND_AUTO',0,1,NULL,4096,3),(28,'REVIEW_REMIND_ONECLICK',0,1,16,4096,3),(29,'REVIEW_REMIND_AUTO_ONECLICK',0,1,NULL,4096,3),(30,'EDITOR_DECISION_ACCEPT',0,1,16,65536,3),(31,'EDITOR_DECISION_SEND_TO_EXTERNAL',0,1,16,65536,3),(32,'EDITOR_DECISION_SEND_TO_PRODUCTION',0,1,16,65536,5),(33,'EDITOR_DECISION_REVISIONS',0,1,16,65536,3),(34,'EDITOR_DECISION_RESUBMIT',0,1,16,65536,3),(35,'EDITOR_DECISION_DECLINE',0,1,16,65536,3),(36,'EDITOR_DECISION_INITIAL_DECLINE',0,1,16,65536,1),(37,'EDITOR_RECOMMENDATION',0,1,16,16,3),(38,'COPYEDIT_REQUEST',1,1,16,4097,4),(39,'LAYOUT_REQUEST',1,1,16,4097,5),(40,'LAYOUT_COMPLETE',1,1,4097,16,5),(41,'EMAIL_LINK',0,1,1048576,NULL,NULL),(42,'SUBSCRIPTION_NOTIFY',0,1,NULL,1048576,NULL),(43,'OPEN_ACCESS_NOTIFY',0,1,NULL,1048576,NULL),(44,'SUBSCRIPTION_BEFORE_EXPIRY',0,1,NULL,1048576,NULL),(45,'SUBSCRIPTION_AFTER_EXPIRY',0,1,NULL,1048576,NULL),(46,'SUBSCRIPTION_AFTER_EXPIRY_LAST',0,1,NULL,1048576,NULL),(47,'SUBSCRIPTION_PURCHASE_INDL',0,1,NULL,2097152,NULL),(48,'SUBSCRIPTION_PURCHASE_INSTL',0,1,NULL,2097152,NULL),(49,'SUBSCRIPTION_RENEW_INDL',0,1,NULL,2097152,NULL),(50,'SUBSCRIPTION_RENEW_INSTL',0,1,NULL,2097152,NULL),(51,'CITATION_EDITOR_AUTHOR_QUERY',0,1,NULL,NULL,4),(52,'REVISED_VERSION_NOTIFY',0,1,NULL,16,3),(53,'STATISTICS_REPORT_NOTIFICATION',1,1,16,17,NULL),(54,'ANNOUNCEMENT',0,1,16,1048576,NULL),(55,'ORCID_COLLECT_AUTHOR_ID',0,1,NULL,NULL,NULL),(56,'ORCID_REQUEST_AUTHOR_AUTHORIZATION',0,1,NULL,NULL,NULL),(57,'PAYPAL_INVESTIGATE_PAYMENT',0,1,NULL,NULL,NULL),(58,'MANUAL_PAYMENT_NOTIFICATION',0,1,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `email_templates_default` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -732,7 +732,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_default_data`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_default_data` (
   `email_key` varchar(64) NOT NULL COMMENT 'Unique identifier for this email.',
   `locale` varchar(14) NOT NULL DEFAULT 'en_US',
@@ -740,7 +740,7 @@ CREATE TABLE `email_templates_default_data` (
   `body` text,
   `description` text,
   UNIQUE KEY `email_templates_default_data_pkey` (`email_key`,`locale`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -759,15 +759,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_settings` (
-  `email_id` bigint(20) NOT NULL,
+  `email_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   UNIQUE KEY `email_settings_pkey` (`email_id`,`locale`,`setting_name`),
   KEY `email_settings_email_id` (`email_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -785,19 +785,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `event_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_log` (
-  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `log_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_logged` datetime NOT NULL,
-  `event_type` bigint(20) DEFAULT NULL,
+  `event_type` bigint DEFAULT NULL,
   `message` text,
-  `is_translated` smallint(6) DEFAULT NULL,
+  `is_translated` smallint DEFAULT NULL,
   PRIMARY KEY (`log_id`),
   KEY `event_log_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=274 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=274 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -806,7 +806,7 @@ CREATE TABLE `event_log` (
 
 LOCK TABLES `event_log` WRITE;
 /*!40000 ALTER TABLE `event_log` DISABLE KEYS */;
-INSERT INTO `event_log` VALUES (1,1048585,1,17,'2023-04-03 21:42:24',268435458,'submission.event.general.metadataUpdated',0),(2,515,1,17,'2023-04-03 21:42:25',1342177281,'submission.event.fileUploaded',0),(3,1048585,1,17,'2023-04-03 21:42:25',1342177288,'submission.event.fileRevised',0),(4,515,1,17,'2023-04-03 21:42:25',1342177296,'submission.event.fileEdited',0),(5,1048585,1,17,'2023-04-03 21:42:25',1342177296,'submission.event.fileEdited',0),(6,1048585,1,17,'2023-04-03 21:42:27',268435458,'submission.event.general.metadataUpdated',0),(7,1048585,1,17,'2023-04-03 21:42:28',268435457,'submission.event.submissionSubmitted',0),(8,1048585,1,3,'2023-04-03 21:42:34',805306371,'log.editor.decision',0),(9,515,2,3,'2023-04-03 21:42:34',1342177281,'submission.event.fileUploaded',0),(10,1048585,1,3,'2023-04-03 21:42:34',1342177288,'submission.event.fileRevised',0),(11,1048585,1,3,'2023-04-03 21:42:39',1073741825,'log.review.reviewerAssigned',0),(12,1048585,1,3,'2023-04-03 21:42:44',1073741825,'log.review.reviewerAssigned',0),(13,1048585,1,3,'2023-04-03 21:42:49',1073741825,'log.review.reviewerAssigned',0),(14,1048585,1,3,'2023-04-03 21:42:51',805306371,'log.editor.decision',0),(15,1048585,1,3,'2023-04-03 21:42:56',268435459,'submission.event.participantAdded',0),(16,1048585,1,3,'2023-04-03 21:42:59',805306371,'log.editor.decision',0),(17,1048585,1,3,'2023-04-03 21:43:04',268435459,'submission.event.participantAdded',0),(18,1048585,1,3,'2023-04-03 21:43:08',268435459,'submission.event.participantAdded',0),(19,1048585,1,3,'2023-04-03 21:43:15',268435458,'submission.event.general.metadataUpdated',0),(20,1048585,1,3,'2023-04-03 21:43:17',268435458,'submission.event.general.metadataUpdated',0),(21,1048585,1,3,'2023-04-03 21:43:18',268435458,'submission.event.general.metadataUpdated',0),(22,1048585,1,3,'2023-04-03 21:43:21',268435458,'submission.event.general.metadataUpdated',0),(23,515,3,3,'2023-04-03 21:43:31',1342177281,'submission.event.fileUploaded',0),(24,1048585,1,3,'2023-04-03 21:43:31',1342177288,'submission.event.fileRevised',0),(25,515,3,3,'2023-04-03 21:43:31',1342177296,'submission.event.fileEdited',0),(26,1048585,1,3,'2023-04-03 21:43:31',1342177296,'submission.event.fileEdited',0),(27,1048585,1,3,'2023-04-03 21:43:39',268435459,'submission.event.participantAdded',0),(28,1048585,1,17,'2023-04-03 21:43:44',268435458,'submission.event.general.metadataUpdated',0),(29,1048585,1,3,'2023-04-03 21:43:48',268435458,'submission.event.general.metadataUpdated',0),(30,1048585,1,3,'2023-04-03 21:43:49',268435462,'publication.event.published',0),(31,1048585,1,3,'2023-04-03 21:43:57',268435463,'publication.event.unpublished',0),(32,1048585,1,3,'2023-04-03 21:44:01',268435462,'publication.event.published',0),(33,1048585,1,3,'2023-04-03 21:44:04',268435458,'submission.event.general.metadataUpdated',0),(34,1048585,1,3,'2023-04-03 21:44:04',268435464,'publication.event.versionCreated',0),(35,1048585,1,3,'2023-04-03 21:44:14',268435458,'submission.event.general.metadataUpdated',0),(36,1048585,1,3,'2023-04-03 21:44:19',268435458,'submission.event.general.metadataUpdated',0),(37,1048585,1,3,'2023-04-03 21:44:25',268435458,'submission.event.general.metadataUpdated',0),(38,1048585,1,3,'2023-04-03 21:44:26',268435462,'publication.event.versionPublished',0),(39,1048585,1,3,'2023-04-03 21:44:34',268435463,'publication.event.versionUnpublished',0),(40,1048585,1,3,'2023-04-03 21:44:39',268435459,'submission.event.participantAdded',0),(41,1048585,1,3,'2023-04-03 21:44:47',268435459,'submission.event.participantAdded',0),(42,1048585,2,18,'2023-04-03 21:44:58',268435458,'submission.event.general.metadataUpdated',0),(43,515,4,18,'2023-04-03 21:44:59',1342177281,'submission.event.fileUploaded',0),(44,1048585,2,18,'2023-04-03 21:44:59',1342177288,'submission.event.fileRevised',0),(45,515,4,18,'2023-04-03 21:44:59',1342177296,'submission.event.fileEdited',0),(46,1048585,2,18,'2023-04-03 21:44:59',1342177296,'submission.event.fileEdited',0),(47,1048585,2,18,'2023-04-03 21:45:01',268435458,'submission.event.general.metadataUpdated',0),(48,1048585,2,18,'2023-04-03 21:45:02',268435457,'submission.event.submissionSubmitted',0),(49,1048585,2,3,'2023-04-03 21:45:07',805306371,'log.editor.decision',0),(50,515,5,3,'2023-04-03 21:45:07',1342177281,'submission.event.fileUploaded',0),(51,1048585,2,3,'2023-04-03 21:45:07',1342177288,'submission.event.fileRevised',0),(52,1048585,2,3,'2023-04-03 21:45:11',268435459,'submission.event.participantAdded',0),(53,1048585,2,3,'2023-04-03 21:45:15',268435458,'submission.event.general.metadataUpdated',0),(54,1048585,2,6,'2023-04-03 21:45:21',805306372,'log.editor.recommendation',0),(55,1048585,3,19,'2023-04-03 21:45:34',268435458,'submission.event.general.metadataUpdated',0),(56,515,6,19,'2023-04-03 21:45:35',1342177281,'submission.event.fileUploaded',0),(57,1048585,3,19,'2023-04-03 21:45:35',1342177288,'submission.event.fileRevised',0),(58,515,6,19,'2023-04-03 21:45:35',1342177296,'submission.event.fileEdited',0),(59,1048585,3,19,'2023-04-03 21:45:35',1342177296,'submission.event.fileEdited',0),(60,1048585,3,19,'2023-04-03 21:45:37',268435458,'submission.event.general.metadataUpdated',0),(61,1048585,3,19,'2023-04-03 21:45:38',268435457,'submission.event.submissionSubmitted',0),(62,1048585,3,3,'2023-04-03 21:45:43',805306371,'log.editor.decision',0),(63,515,7,3,'2023-04-03 21:45:43',1342177281,'submission.event.fileUploaded',0),(64,1048585,3,3,'2023-04-03 21:45:43',1342177288,'submission.event.fileRevised',0),(65,1048585,3,3,'2023-04-03 21:45:48',1073741825,'log.review.reviewerAssigned',0),(66,1048585,3,3,'2023-04-03 21:45:54',1073741825,'log.review.reviewerAssigned',0),(67,1048585,3,3,'2023-04-03 21:45:56',805306371,'log.editor.decision',0),(68,1048585,3,3,'2023-04-03 21:46:01',268435459,'submission.event.participantAdded',0),(69,1048585,4,20,'2023-04-03 21:46:09',268435458,'submission.event.general.metadataUpdated',0),(70,515,8,20,'2023-04-03 21:46:10',1342177281,'submission.event.fileUploaded',0),(71,1048585,4,20,'2023-04-03 21:46:10',1342177288,'submission.event.fileRevised',0),(72,515,8,20,'2023-04-03 21:46:11',1342177296,'submission.event.fileEdited',0),(73,1048585,4,20,'2023-04-03 21:46:11',1342177296,'submission.event.fileEdited',0),(74,1048585,4,20,'2023-04-03 21:46:16',268435458,'submission.event.general.metadataUpdated',0),(75,1048585,4,20,'2023-04-03 21:46:17',268435457,'submission.event.submissionSubmitted',0),(76,1048585,5,21,'2023-04-03 21:46:24',268435458,'submission.event.general.metadataUpdated',0),(77,515,9,21,'2023-04-03 21:46:25',1342177281,'submission.event.fileUploaded',0),(78,1048585,5,21,'2023-04-03 21:46:25',1342177288,'submission.event.fileRevised',0),(79,515,9,21,'2023-04-03 21:46:25',1342177296,'submission.event.fileEdited',0),(80,1048585,5,21,'2023-04-03 21:46:25',1342177296,'submission.event.fileEdited',0),(81,1048585,5,21,'2023-04-03 21:46:27',268435458,'submission.event.general.metadataUpdated',0),(82,1048585,5,21,'2023-04-03 21:46:28',268435457,'submission.event.submissionSubmitted',0),(83,1048585,5,3,'2023-04-03 21:46:33',805306371,'log.editor.decision',0),(84,1048585,5,3,'2023-04-03 21:46:38',1073741825,'log.review.reviewerAssigned',0),(85,1048585,5,3,'2023-04-03 21:46:44',1073741825,'log.review.reviewerAssigned',0),(86,1048585,5,3,'2023-04-03 21:46:46',805306371,'log.editor.decision',0),(87,1048585,5,3,'2023-04-03 21:46:51',268435459,'submission.event.participantAdded',0),(88,1048585,5,3,'2023-04-03 21:46:53',805306371,'log.editor.decision',0),(89,1048585,5,3,'2023-04-03 21:46:58',268435459,'submission.event.participantAdded',0),(90,1048585,5,3,'2023-04-03 21:47:01',268435459,'submission.event.participantAdded',0),(91,1048585,6,22,'2023-04-03 21:47:10',268435458,'submission.event.general.metadataUpdated',0),(92,515,10,22,'2023-04-03 21:47:11',1342177281,'submission.event.fileUploaded',0),(93,1048585,6,22,'2023-04-03 21:47:11',1342177288,'submission.event.fileRevised',0),(94,515,10,22,'2023-04-03 21:47:11',1342177296,'submission.event.fileEdited',0),(95,1048585,6,22,'2023-04-03 21:47:11',1342177296,'submission.event.fileEdited',0),(96,1048585,6,22,'2023-04-03 21:47:13',268435458,'submission.event.general.metadataUpdated',0),(97,1048585,6,22,'2023-04-03 21:47:14',268435457,'submission.event.submissionSubmitted',0),(98,1048585,6,3,'2023-04-03 21:47:19',805306371,'log.editor.decision',0),(99,1048585,6,3,'2023-04-03 21:47:25',1073741825,'log.review.reviewerAssigned',0),(100,1048585,6,3,'2023-04-03 21:47:31',1073741825,'log.review.reviewerAssigned',0),(101,1048585,6,3,'2023-04-03 21:47:32',805306371,'log.editor.decision',0),(102,1048585,6,3,'2023-04-03 21:47:37',268435459,'submission.event.participantAdded',0),(103,1048585,6,3,'2023-04-03 21:47:40',805306371,'log.editor.decision',0),(104,1048585,6,3,'2023-04-03 21:47:45',268435459,'submission.event.participantAdded',0),(105,1048585,7,23,'2023-04-03 21:47:53',268435458,'submission.event.general.metadataUpdated',0),(106,515,11,23,'2023-04-03 21:47:54',1342177281,'submission.event.fileUploaded',0),(107,1048585,7,23,'2023-04-03 21:47:54',1342177288,'submission.event.fileRevised',0),(108,515,11,23,'2023-04-03 21:47:54',1342177296,'submission.event.fileEdited',0),(109,1048585,7,23,'2023-04-03 21:47:54',1342177296,'submission.event.fileEdited',0),(110,1048585,7,23,'2023-04-03 21:47:56',268435458,'submission.event.general.metadataUpdated',0),(111,1048585,7,23,'2023-04-03 21:47:57',268435457,'submission.event.submissionSubmitted',0),(112,1048585,7,3,'2023-04-03 21:48:02',805306371,'log.editor.decision',0),(113,1048585,7,3,'2023-04-03 21:48:08',1073741825,'log.review.reviewerAssigned',0),(114,1048585,7,3,'2023-04-03 21:48:12',1073741825,'log.review.reviewerAssigned',0),(115,1048585,7,3,'2023-04-03 21:48:18',1073741825,'log.review.reviewerAssigned',0),(116,1048585,7,8,'2023-04-03 21:48:21',1073741830,'log.review.reviewAccepted',0),(117,1048585,7,8,'2023-04-03 21:48:25',1073741848,'log.review.reviewReady',0),(118,1048585,8,24,'2023-04-03 21:48:33',268435458,'submission.event.general.metadataUpdated',0),(119,515,12,24,'2023-04-03 21:48:34',1342177281,'submission.event.fileUploaded',0),(120,1048585,8,24,'2023-04-03 21:48:34',1342177288,'submission.event.fileRevised',0),(121,515,12,24,'2023-04-03 21:48:34',1342177296,'submission.event.fileEdited',0),(122,1048585,8,24,'2023-04-03 21:48:34',1342177296,'submission.event.fileEdited',0),(123,1048585,8,24,'2023-04-03 21:48:39',268435458,'submission.event.general.metadataUpdated',0),(124,1048585,8,24,'2023-04-03 21:48:40',268435457,'submission.event.submissionSubmitted',0),(125,1048585,9,25,'2023-04-03 21:48:47',268435458,'submission.event.general.metadataUpdated',0),(126,515,13,25,'2023-04-03 21:48:49',1342177281,'submission.event.fileUploaded',0),(127,1048585,9,25,'2023-04-03 21:48:49',1342177288,'submission.event.fileRevised',0),(128,515,13,25,'2023-04-03 21:48:49',1342177296,'submission.event.fileEdited',0),(129,1048585,9,25,'2023-04-03 21:48:49',1342177296,'submission.event.fileEdited',0),(130,1048585,9,25,'2023-04-03 21:48:51',268435458,'submission.event.general.metadataUpdated',0),(131,1048585,9,25,'2023-04-03 21:48:51',268435457,'submission.event.submissionSubmitted',0),(132,1048585,9,3,'2023-04-03 21:48:57',805306371,'log.editor.decision',0),(133,1048585,9,3,'2023-04-03 21:49:02',1073741825,'log.review.reviewerAssigned',0),(134,1048585,9,3,'2023-04-03 21:49:08',1073741825,'log.review.reviewerAssigned',0),(135,1048585,9,3,'2023-04-03 21:49:10',805306371,'log.editor.decision',0),(136,1048585,9,3,'2023-04-03 21:49:14',268435459,'submission.event.participantAdded',0),(137,1048585,9,3,'2023-04-03 21:49:17',805306371,'log.editor.decision',0),(138,1048585,9,3,'2023-04-03 21:49:22',268435459,'submission.event.participantAdded',0),(139,1048585,9,3,'2023-04-03 21:49:25',268435459,'submission.event.participantAdded',0),(140,1048585,10,26,'2023-04-03 21:49:33',268435458,'submission.event.general.metadataUpdated',0),(141,515,14,26,'2023-04-03 21:49:35',1342177281,'submission.event.fileUploaded',0),(142,1048585,10,26,'2023-04-03 21:49:35',1342177288,'submission.event.fileRevised',0),(143,515,14,26,'2023-04-03 21:49:35',1342177296,'submission.event.fileEdited',0),(144,1048585,10,26,'2023-04-03 21:49:35',1342177296,'submission.event.fileEdited',0),(145,1048585,10,26,'2023-04-03 21:49:37',268435458,'submission.event.general.metadataUpdated',0),(146,1048585,10,26,'2023-04-03 21:49:38',268435457,'submission.event.submissionSubmitted',0),(147,1048585,10,3,'2023-04-03 21:49:43',805306371,'log.editor.decision',0),(148,1048585,10,3,'2023-04-03 21:49:49',1073741825,'log.review.reviewerAssigned',0),(149,1048585,10,3,'2023-04-03 21:49:55',1073741825,'log.review.reviewerAssigned',0),(150,1048585,10,9,'2023-04-03 21:49:59',1073741830,'log.review.reviewAccepted',0),(151,1048585,10,9,'2023-04-03 21:50:02',1073741848,'log.review.reviewReady',0),(152,1048585,10,10,'2023-04-03 21:50:06',1073741830,'log.review.reviewAccepted',0),(153,1048585,10,10,'2023-04-03 21:50:10',1073741848,'log.review.reviewReady',0),(154,1048585,11,27,'2023-04-03 21:50:18',268435458,'submission.event.general.metadataUpdated',0),(155,515,15,27,'2023-04-03 21:50:19',1342177281,'submission.event.fileUploaded',0),(156,1048585,11,27,'2023-04-03 21:50:19',1342177288,'submission.event.fileRevised',0),(157,515,15,27,'2023-04-03 21:50:20',1342177296,'submission.event.fileEdited',0),(158,1048585,11,27,'2023-04-03 21:50:20',1342177296,'submission.event.fileEdited',0),(159,1048585,11,27,'2023-04-03 21:50:24',268435458,'submission.event.general.metadataUpdated',0),(160,1048585,11,27,'2023-04-03 21:50:25',268435457,'submission.event.submissionSubmitted',0),(161,1048585,12,28,'2023-04-03 21:50:33',268435458,'submission.event.general.metadataUpdated',0),(162,515,16,28,'2023-04-03 21:50:34',1342177281,'submission.event.fileUploaded',0),(163,1048585,12,28,'2023-04-03 21:50:34',1342177288,'submission.event.fileRevised',0),(164,515,16,28,'2023-04-03 21:50:34',1342177296,'submission.event.fileEdited',0),(165,1048585,12,28,'2023-04-03 21:50:34',1342177296,'submission.event.fileEdited',0),(166,1048585,12,28,'2023-04-03 21:50:36',268435458,'submission.event.general.metadataUpdated',0),(167,1048585,12,28,'2023-04-03 21:50:37',268435457,'submission.event.submissionSubmitted',0),(168,1048585,12,3,'2023-04-03 21:50:43',805306371,'log.editor.decision',0),(169,1048585,12,3,'2023-04-03 21:50:49',1073741825,'log.review.reviewerAssigned',0),(170,1048585,12,3,'2023-04-03 21:50:53',1073741825,'log.review.reviewerAssigned',0),(171,1048585,13,29,'2023-04-03 21:51:00',268435458,'submission.event.general.metadataUpdated',0),(172,515,17,29,'2023-04-03 21:51:01',1342177281,'submission.event.fileUploaded',0),(173,1048585,13,29,'2023-04-03 21:51:01',1342177288,'submission.event.fileRevised',0),(174,515,17,29,'2023-04-03 21:51:01',1342177296,'submission.event.fileEdited',0),(175,1048585,13,29,'2023-04-03 21:51:01',1342177296,'submission.event.fileEdited',0),(176,1048585,13,29,'2023-04-03 21:51:04',268435458,'submission.event.general.metadataUpdated',0),(177,1048585,13,29,'2023-04-03 21:51:05',268435457,'submission.event.submissionSubmitted',0),(178,1048585,13,3,'2023-04-03 21:51:12',805306371,'log.editor.decision',0),(179,515,18,3,'2023-04-03 21:51:12',1342177281,'submission.event.fileUploaded',0),(180,1048585,13,3,'2023-04-03 21:51:12',1342177288,'submission.event.fileRevised',0),(181,1048585,13,3,'2023-04-03 21:51:17',1073741825,'log.review.reviewerAssigned',0),(182,1048585,13,3,'2023-04-03 21:51:22',1073741825,'log.review.reviewerAssigned',0),(183,1048585,13,3,'2023-04-03 21:51:28',1073741825,'log.review.reviewerAssigned',0),(184,1048585,13,7,'2023-04-03 21:51:32',1073741830,'log.review.reviewAccepted',0),(185,1048585,13,7,'2023-04-03 21:51:35',1073741848,'log.review.reviewReady',0),(186,1048585,13,9,'2023-04-03 21:51:40',1073741830,'log.review.reviewAccepted',0),(187,1048585,13,9,'2023-04-03 21:51:44',1073741848,'log.review.reviewReady',0),(188,1048585,13,10,'2023-04-03 21:51:48',1073741830,'log.review.reviewAccepted',0),(189,1048585,13,10,'2023-04-03 21:51:53',1073741848,'log.review.reviewReady',0),(190,1048585,13,3,'2023-04-03 21:52:02',805306371,'log.editor.decision',0),(191,1048585,14,30,'2023-04-03 21:52:10',268435458,'submission.event.general.metadataUpdated',0),(192,515,19,30,'2023-04-03 21:52:11',1342177281,'submission.event.fileUploaded',0),(193,1048585,14,30,'2023-04-03 21:52:11',1342177288,'submission.event.fileRevised',0),(194,515,19,30,'2023-04-03 21:52:11',1342177296,'submission.event.fileEdited',0),(195,1048585,14,30,'2023-04-03 21:52:11',1342177296,'submission.event.fileEdited',0),(196,1048585,14,30,'2023-04-03 21:52:14',268435458,'submission.event.general.metadataUpdated',0),(197,1048585,14,30,'2023-04-03 21:52:15',268435457,'submission.event.submissionSubmitted',0),(198,1048585,15,31,'2023-04-03 21:52:22',268435458,'submission.event.general.metadataUpdated',0),(199,515,20,31,'2023-04-03 21:52:23',1342177281,'submission.event.fileUploaded',0),(200,1048585,15,31,'2023-04-03 21:52:23',1342177288,'submission.event.fileRevised',0),(201,515,20,31,'2023-04-03 21:52:23',1342177296,'submission.event.fileEdited',0),(202,1048585,15,31,'2023-04-03 21:52:23',1342177296,'submission.event.fileEdited',0),(203,1048585,15,31,'2023-04-03 21:52:25',268435458,'submission.event.general.metadataUpdated',0),(204,1048585,15,31,'2023-04-03 21:52:26',268435457,'submission.event.submissionSubmitted',0),(205,1048585,15,3,'2023-04-03 21:52:33',805306371,'log.editor.decision',0),(206,515,21,3,'2023-04-03 21:52:33',1342177281,'submission.event.fileUploaded',0),(207,1048585,15,3,'2023-04-03 21:52:33',1342177288,'submission.event.fileRevised',0),(208,1048585,15,3,'2023-04-03 21:52:38',1073741825,'log.review.reviewerAssigned',0),(209,1048585,15,3,'2023-04-03 21:52:43',1073741825,'log.review.reviewerAssigned',0),(210,1048585,15,3,'2023-04-03 21:52:44',805306371,'log.editor.decision',0),(211,1048585,15,3,'2023-04-03 21:52:49',268435459,'submission.event.participantAdded',0),(212,1048585,15,3,'2023-04-03 21:52:51',805306371,'log.editor.decision',0),(213,1048585,15,3,'2023-04-03 21:52:56',268435459,'submission.event.participantAdded',0),(214,1048585,16,32,'2023-04-03 21:53:04',268435458,'submission.event.general.metadataUpdated',0),(215,515,22,32,'2023-04-03 21:53:06',1342177281,'submission.event.fileUploaded',0),(216,1048585,16,32,'2023-04-03 21:53:06',1342177288,'submission.event.fileRevised',0),(217,515,22,32,'2023-04-03 21:53:06',1342177296,'submission.event.fileEdited',0),(218,1048585,16,32,'2023-04-03 21:53:06',1342177296,'submission.event.fileEdited',0),(219,1048585,16,32,'2023-04-03 21:53:08',268435458,'submission.event.general.metadataUpdated',0),(220,1048585,16,32,'2023-04-03 21:53:09',268435457,'submission.event.submissionSubmitted',0),(221,1048585,17,33,'2023-04-03 21:53:18',268435458,'submission.event.general.metadataUpdated',0),(222,515,23,33,'2023-04-03 21:53:19',1342177281,'submission.event.fileUploaded',0),(223,1048585,17,33,'2023-04-03 21:53:19',1342177288,'submission.event.fileRevised',0),(224,515,23,33,'2023-04-03 21:53:19',1342177296,'submission.event.fileEdited',0),(225,1048585,17,33,'2023-04-03 21:53:19',1342177296,'submission.event.fileEdited',0),(226,1048585,17,33,'2023-04-03 21:53:21',268435458,'submission.event.general.metadataUpdated',0),(227,1048585,17,33,'2023-04-03 21:53:22',268435457,'submission.event.submissionSubmitted',0),(228,1048585,17,3,'2023-04-03 21:53:30',805306371,'log.editor.decision',0),(229,515,24,3,'2023-04-03 21:53:30',1342177281,'submission.event.fileUploaded',0),(230,1048585,17,3,'2023-04-03 21:53:30',1342177288,'submission.event.fileRevised',0),(231,1048585,17,3,'2023-04-03 21:53:35',1073741825,'log.review.reviewerAssigned',0),(232,1048585,17,3,'2023-04-03 21:53:39',1073741825,'log.review.reviewerAssigned',0),(233,1048585,17,3,'2023-04-03 21:53:41',805306371,'log.editor.decision',0),(234,1048585,17,3,'2023-04-03 21:53:46',268435459,'submission.event.participantAdded',0),(235,1048585,17,3,'2023-04-03 21:53:48',805306371,'log.editor.decision',0),(236,1048585,17,3,'2023-04-03 21:53:53',268435459,'submission.event.participantAdded',0),(237,1048585,17,3,'2023-04-03 21:53:57',268435459,'submission.event.participantAdded',0),(238,515,25,3,'2023-04-03 21:54:03',1342177281,'submission.event.fileUploaded',0),(239,1048585,17,3,'2023-04-03 21:54:03',1342177288,'submission.event.fileRevised',0),(240,515,25,3,'2023-04-03 21:54:04',1342177296,'submission.event.fileEdited',0),(241,1048585,17,3,'2023-04-03 21:54:04',1342177296,'submission.event.fileEdited',0),(242,1048585,17,3,'2023-04-03 21:54:12',268435458,'submission.event.general.metadataUpdated',0),(243,1048585,17,3,'2023-04-03 21:54:13',268435462,'publication.event.scheduled',0),(244,1048585,17,3,'2023-04-03 21:54:16',268435462,'publication.event.published',0),(245,1048585,17,3,'2023-04-03 21:54:24',268435463,'publication.event.unpublished',0),(246,1048585,17,3,'2023-04-03 21:54:24',268435462,'publication.event.scheduled',0),(247,1048585,17,3,'2023-04-03 21:54:31',268435462,'publication.event.published',0),(248,1048585,17,3,'2023-04-03 21:54:39',268435463,'publication.event.unpublished',0),(249,1048585,17,3,'2023-04-03 21:54:39',268435458,'submission.event.general.metadataUpdated',0),(250,1048585,17,3,'2023-04-03 21:54:52',268435458,'submission.event.general.metadataUpdated',0),(251,1048585,17,3,'2023-04-03 21:54:53',268435462,'publication.event.published',0),(252,1048585,18,34,'2023-04-03 21:55:04',268435458,'submission.event.general.metadataUpdated',0),(253,515,26,34,'2023-04-03 21:55:06',1342177281,'submission.event.fileUploaded',0),(254,1048585,18,34,'2023-04-03 21:55:06',1342177288,'submission.event.fileRevised',0),(255,515,26,34,'2023-04-03 21:55:06',1342177296,'submission.event.fileEdited',0),(256,1048585,18,34,'2023-04-03 21:55:06',1342177296,'submission.event.fileEdited',0),(257,1048585,18,34,'2023-04-03 21:55:08',268435458,'submission.event.general.metadataUpdated',0),(258,1048585,18,34,'2023-04-03 21:55:09',268435457,'submission.event.submissionSubmitted',0),(259,1048585,18,3,'2023-04-03 21:55:16',805306371,'log.editor.decision',0),(260,1048585,19,35,'2023-04-03 21:55:25',268435458,'submission.event.general.metadataUpdated',0),(261,515,27,35,'2023-04-03 21:55:26',1342177281,'submission.event.fileUploaded',0),(262,1048585,19,35,'2023-04-03 21:55:26',1342177288,'submission.event.fileRevised',0),(263,515,27,35,'2023-04-03 21:55:26',1342177296,'submission.event.fileEdited',0),(264,1048585,19,35,'2023-04-03 21:55:26',1342177296,'submission.event.fileEdited',0),(265,1048585,19,35,'2023-04-03 21:55:28',268435458,'submission.event.general.metadataUpdated',0),(266,1048585,19,35,'2023-04-03 21:55:29',268435457,'submission.event.submissionSubmitted',0),(267,1048585,19,3,'2023-04-03 21:55:36',805306371,'log.editor.decision',0),(268,515,28,3,'2023-04-03 21:55:36',1342177281,'submission.event.fileUploaded',0),(269,1048585,19,3,'2023-04-03 21:55:36',1342177288,'submission.event.fileRevised',0),(270,1048585,19,3,'2023-04-03 21:55:42',1073741825,'log.review.reviewerAssigned',0),(271,1048585,19,3,'2023-04-03 21:55:46',1073741825,'log.review.reviewerAssigned',0),(272,1048585,19,3,'2023-04-03 21:55:48',805306371,'log.editor.decision',0),(273,1048585,19,3,'2023-04-03 21:55:53',268435459,'submission.event.participantAdded',0);
+INSERT INTO `event_log` VALUES (1,1048585,1,17,'2023-04-04 20:40:25',268435458,'submission.event.general.metadataUpdated',0),(2,515,1,17,'2023-04-04 20:40:26',1342177281,'submission.event.fileUploaded',0),(3,1048585,1,17,'2023-04-04 20:40:26',1342177288,'submission.event.fileRevised',0),(4,515,1,17,'2023-04-04 20:40:26',1342177296,'submission.event.fileEdited',0),(5,1048585,1,17,'2023-04-04 20:40:26',1342177296,'submission.event.fileEdited',0),(6,1048585,1,17,'2023-04-04 20:40:29',268435458,'submission.event.general.metadataUpdated',0),(7,1048585,1,17,'2023-04-04 20:40:30',268435457,'submission.event.submissionSubmitted',0),(8,1048585,1,3,'2023-04-04 20:40:34',805306371,'log.editor.decision',0),(9,1048585,1,3,'2023-04-04 20:40:40',1073741825,'log.review.reviewerAssigned',0),(10,1048585,1,3,'2023-04-04 20:40:45',1073741825,'log.review.reviewerAssigned',0),(11,1048585,1,3,'2023-04-04 20:40:51',1073741825,'log.review.reviewerAssigned',0),(12,1048585,1,3,'2023-04-04 20:40:53',805306371,'log.editor.decision',0),(13,1048585,1,3,'2023-04-04 20:40:59',268435459,'submission.event.participantAdded',0),(14,1048585,1,3,'2023-04-04 20:41:02',805306371,'log.editor.decision',0),(15,1048585,1,3,'2023-04-04 20:41:07',268435459,'submission.event.participantAdded',0),(16,1048585,1,3,'2023-04-04 20:41:11',268435459,'submission.event.participantAdded',0),(17,1048585,1,3,'2023-04-04 20:41:18',268435458,'submission.event.general.metadataUpdated',0),(18,1048585,1,3,'2023-04-04 20:41:21',268435458,'submission.event.general.metadataUpdated',0),(19,1048585,1,3,'2023-04-04 20:41:22',268435458,'submission.event.general.metadataUpdated',0),(20,1048585,1,3,'2023-04-04 20:41:26',268435458,'submission.event.general.metadataUpdated',0),(21,515,2,3,'2023-04-04 20:41:35',1342177281,'submission.event.fileUploaded',0),(22,1048585,1,3,'2023-04-04 20:41:35',1342177288,'submission.event.fileRevised',0),(23,515,2,3,'2023-04-04 20:41:36',1342177296,'submission.event.fileEdited',0),(24,1048585,1,3,'2023-04-04 20:41:36',1342177296,'submission.event.fileEdited',0),(25,1048585,1,3,'2023-04-04 20:41:45',268435459,'submission.event.participantAdded',0),(26,1048585,1,17,'2023-04-04 20:41:50',268435458,'submission.event.general.metadataUpdated',0),(27,1048585,1,3,'2023-04-04 20:41:54',268435458,'submission.event.general.metadataUpdated',0),(28,1048585,1,3,'2023-04-04 20:41:56',268435462,'publication.event.published',0),(29,1048585,1,3,'2023-04-04 20:42:04',268435463,'publication.event.unpublished',0),(30,1048585,1,3,'2023-04-04 20:42:08',268435462,'publication.event.published',0),(31,1048585,1,3,'2023-04-04 20:42:12',268435458,'submission.event.general.metadataUpdated',0),(32,1048585,1,3,'2023-04-04 20:42:12',268435464,'publication.event.versionCreated',0),(33,1048585,1,3,'2023-04-04 20:42:22',268435458,'submission.event.general.metadataUpdated',0),(34,1048585,1,3,'2023-04-04 20:42:27',268435458,'submission.event.general.metadataUpdated',0),(35,1048585,1,3,'2023-04-04 20:42:33',268435458,'submission.event.general.metadataUpdated',0),(36,1048585,1,3,'2023-04-04 20:42:35',268435462,'publication.event.versionPublished',0),(37,1048585,1,3,'2023-04-04 20:42:44',268435463,'publication.event.versionUnpublished',0),(38,1048585,1,3,'2023-04-04 20:42:49',268435459,'submission.event.participantAdded',0),(39,1048585,1,3,'2023-04-04 20:42:57',268435459,'submission.event.participantAdded',0),(40,1048585,2,18,'2023-04-04 20:43:08',268435458,'submission.event.general.metadataUpdated',0),(41,515,3,18,'2023-04-04 20:43:10',1342177281,'submission.event.fileUploaded',0),(42,1048585,2,18,'2023-04-04 20:43:10',1342177288,'submission.event.fileRevised',0),(43,515,3,18,'2023-04-04 20:43:10',1342177296,'submission.event.fileEdited',0),(44,1048585,2,18,'2023-04-04 20:43:10',1342177296,'submission.event.fileEdited',0),(45,1048585,2,18,'2023-04-04 20:43:12',268435458,'submission.event.general.metadataUpdated',0),(46,1048585,2,18,'2023-04-04 20:43:13',268435457,'submission.event.submissionSubmitted',0),(47,1048585,2,3,'2023-04-04 20:43:18',805306371,'log.editor.decision',0),(48,1048585,2,3,'2023-04-04 20:43:23',268435459,'submission.event.participantAdded',0),(49,1048585,2,3,'2023-04-04 20:43:27',268435458,'submission.event.general.metadataUpdated',0),(50,1048585,2,6,'2023-04-04 20:43:33',805306372,'log.editor.recommendation',0),(51,1048585,3,19,'2023-04-04 20:43:46',268435458,'submission.event.general.metadataUpdated',0),(52,515,4,19,'2023-04-04 20:43:48',1342177281,'submission.event.fileUploaded',0),(53,1048585,3,19,'2023-04-04 20:43:48',1342177288,'submission.event.fileRevised',0),(54,515,4,19,'2023-04-04 20:43:48',1342177296,'submission.event.fileEdited',0),(55,1048585,3,19,'2023-04-04 20:43:48',1342177296,'submission.event.fileEdited',0),(56,1048585,3,19,'2023-04-04 20:43:51',268435458,'submission.event.general.metadataUpdated',0),(57,1048585,3,19,'2023-04-04 20:43:52',268435457,'submission.event.submissionSubmitted',0),(58,1048585,3,3,'2023-04-04 20:43:56',805306371,'log.editor.decision',0),(59,1048585,3,3,'2023-04-04 20:44:02',1073741825,'log.review.reviewerAssigned',0),(60,1048585,3,3,'2023-04-04 20:44:09',1073741825,'log.review.reviewerAssigned',0),(61,1048585,3,3,'2023-04-04 20:44:10',805306371,'log.editor.decision',0),(62,1048585,3,3,'2023-04-04 20:44:16',268435459,'submission.event.participantAdded',0),(63,1048585,4,20,'2023-04-04 20:44:24',268435458,'submission.event.general.metadataUpdated',0),(64,515,5,20,'2023-04-04 20:44:26',1342177281,'submission.event.fileUploaded',0),(65,1048585,4,20,'2023-04-04 20:44:26',1342177288,'submission.event.fileRevised',0),(66,515,5,20,'2023-04-04 20:44:26',1342177296,'submission.event.fileEdited',0),(67,1048585,4,20,'2023-04-04 20:44:26',1342177296,'submission.event.fileEdited',0),(68,1048585,4,20,'2023-04-04 20:44:31',268435458,'submission.event.general.metadataUpdated',0),(69,1048585,4,20,'2023-04-04 20:44:33',268435457,'submission.event.submissionSubmitted',0),(70,1048585,5,21,'2023-04-04 20:44:40',268435458,'submission.event.general.metadataUpdated',0),(71,515,6,21,'2023-04-04 20:44:41',1342177281,'submission.event.fileUploaded',0),(72,1048585,5,21,'2023-04-04 20:44:41',1342177288,'submission.event.fileRevised',0),(73,515,6,21,'2023-04-04 20:44:42',1342177296,'submission.event.fileEdited',0),(74,1048585,5,21,'2023-04-04 20:44:42',1342177296,'submission.event.fileEdited',0),(75,1048585,5,21,'2023-04-04 20:44:44',268435458,'submission.event.general.metadataUpdated',0),(76,1048585,5,21,'2023-04-04 20:44:45',268435457,'submission.event.submissionSubmitted',0),(77,1048585,5,3,'2023-04-04 20:44:50',805306371,'log.editor.decision',0),(78,515,7,3,'2023-04-04 20:44:50',1342177281,'submission.event.fileUploaded',0),(79,1048585,5,3,'2023-04-04 20:44:50',1342177288,'submission.event.fileRevised',0),(80,1048585,5,3,'2023-04-04 20:44:56',1073741825,'log.review.reviewerAssigned',0),(81,1048585,5,3,'2023-04-04 20:45:02',1073741825,'log.review.reviewerAssigned',0),(82,1048585,5,3,'2023-04-04 20:45:04',805306371,'log.editor.decision',0),(83,1048585,5,3,'2023-04-04 20:45:09',268435459,'submission.event.participantAdded',0),(84,1048585,5,3,'2023-04-04 20:45:12',805306371,'log.editor.decision',0),(85,1048585,5,3,'2023-04-04 20:45:17',268435459,'submission.event.participantAdded',0),(86,1048585,5,3,'2023-04-04 20:45:21',268435459,'submission.event.participantAdded',0),(87,1048585,6,22,'2023-04-04 20:45:30',268435458,'submission.event.general.metadataUpdated',0),(88,515,8,22,'2023-04-04 20:45:31',1342177281,'submission.event.fileUploaded',0),(89,1048585,6,22,'2023-04-04 20:45:31',1342177288,'submission.event.fileRevised',0),(90,515,8,22,'2023-04-04 20:45:32',1342177296,'submission.event.fileEdited',0),(91,1048585,6,22,'2023-04-04 20:45:32',1342177296,'submission.event.fileEdited',0),(92,1048585,6,22,'2023-04-04 20:45:34',268435458,'submission.event.general.metadataUpdated',0),(93,1048585,6,22,'2023-04-04 20:45:35',268435457,'submission.event.submissionSubmitted',0),(94,1048585,6,3,'2023-04-04 20:45:40',805306371,'log.editor.decision',0),(95,1048585,6,3,'2023-04-04 20:45:46',1073741825,'log.review.reviewerAssigned',0),(96,1048585,6,3,'2023-04-04 20:45:52',1073741825,'log.review.reviewerAssigned',0),(97,1048585,6,3,'2023-04-04 20:45:54',805306371,'log.editor.decision',0),(98,1048585,6,3,'2023-04-04 20:45:59',268435459,'submission.event.participantAdded',0),(99,1048585,6,3,'2023-04-04 20:46:02',805306371,'log.editor.decision',0),(100,1048585,6,3,'2023-04-04 20:46:07',268435459,'submission.event.participantAdded',0),(101,1048585,7,23,'2023-04-04 20:46:16',268435458,'submission.event.general.metadataUpdated',0),(102,515,9,23,'2023-04-04 20:46:18',1342177281,'submission.event.fileUploaded',0),(103,1048585,7,23,'2023-04-04 20:46:18',1342177288,'submission.event.fileRevised',0),(104,515,9,23,'2023-04-04 20:46:18',1342177296,'submission.event.fileEdited',0),(105,1048585,7,23,'2023-04-04 20:46:18',1342177296,'submission.event.fileEdited',0),(106,1048585,7,23,'2023-04-04 20:46:20',268435458,'submission.event.general.metadataUpdated',0),(107,1048585,7,23,'2023-04-04 20:46:21',268435457,'submission.event.submissionSubmitted',0),(108,1048585,7,3,'2023-04-04 20:46:27',805306371,'log.editor.decision',0),(109,515,10,3,'2023-04-04 20:46:27',1342177281,'submission.event.fileUploaded',0),(110,1048585,7,3,'2023-04-04 20:46:27',1342177288,'submission.event.fileRevised',0),(111,1048585,7,3,'2023-04-04 20:46:33',1073741825,'log.review.reviewerAssigned',0),(112,1048585,7,3,'2023-04-04 20:46:37',1073741825,'log.review.reviewerAssigned',0),(113,1048585,7,3,'2023-04-04 20:46:43',1073741825,'log.review.reviewerAssigned',0),(114,1048585,7,8,'2023-04-04 20:46:47',1073741830,'log.review.reviewAccepted',0),(115,1048585,7,8,'2023-04-04 20:46:52',1073741848,'log.review.reviewReady',0),(116,1048585,8,24,'2023-04-04 20:47:00',268435458,'submission.event.general.metadataUpdated',0),(117,515,11,24,'2023-04-04 20:47:01',1342177281,'submission.event.fileUploaded',0),(118,1048585,8,24,'2023-04-04 20:47:01',1342177288,'submission.event.fileRevised',0),(119,515,11,24,'2023-04-04 20:47:01',1342177296,'submission.event.fileEdited',0),(120,1048585,8,24,'2023-04-04 20:47:01',1342177296,'submission.event.fileEdited',0),(121,1048585,8,24,'2023-04-04 20:47:06',268435458,'submission.event.general.metadataUpdated',0),(122,1048585,8,24,'2023-04-04 20:47:08',268435457,'submission.event.submissionSubmitted',0),(123,1048585,9,25,'2023-04-04 20:47:15',268435458,'submission.event.general.metadataUpdated',0),(124,515,12,25,'2023-04-04 20:47:17',1342177281,'submission.event.fileUploaded',0),(125,1048585,9,25,'2023-04-04 20:47:17',1342177288,'submission.event.fileRevised',0),(126,515,12,25,'2023-04-04 20:47:17',1342177296,'submission.event.fileEdited',0),(127,1048585,9,25,'2023-04-04 20:47:17',1342177296,'submission.event.fileEdited',0),(128,1048585,9,25,'2023-04-04 20:47:19',268435458,'submission.event.general.metadataUpdated',0),(129,1048585,9,25,'2023-04-04 20:47:20',268435457,'submission.event.submissionSubmitted',0),(130,1048585,9,3,'2023-04-04 20:47:25',805306371,'log.editor.decision',0),(131,1048585,9,3,'2023-04-04 20:47:31',1073741825,'log.review.reviewerAssigned',0),(132,1048585,9,3,'2023-04-04 20:47:37',1073741825,'log.review.reviewerAssigned',0),(133,1048585,9,3,'2023-04-04 20:47:39',805306371,'log.editor.decision',0),(134,1048585,9,3,'2023-04-04 20:47:44',268435459,'submission.event.participantAdded',0),(135,1048585,9,3,'2023-04-04 20:47:47',805306371,'log.editor.decision',0),(136,1048585,9,3,'2023-04-04 20:47:52',268435459,'submission.event.participantAdded',0),(137,1048585,9,3,'2023-04-04 20:47:56',268435459,'submission.event.participantAdded',0),(138,1048585,10,26,'2023-04-04 20:48:07',268435458,'submission.event.general.metadataUpdated',0),(139,515,13,26,'2023-04-04 20:48:08',1342177281,'submission.event.fileUploaded',0),(140,1048585,10,26,'2023-04-04 20:48:08',1342177288,'submission.event.fileRevised',0),(141,515,13,26,'2023-04-04 20:48:09',1342177296,'submission.event.fileEdited',0),(142,1048585,10,26,'2023-04-04 20:48:09',1342177296,'submission.event.fileEdited',0),(143,1048585,10,26,'2023-04-04 20:48:11',268435458,'submission.event.general.metadataUpdated',0),(144,1048585,10,26,'2023-04-04 20:48:12',268435457,'submission.event.submissionSubmitted',0),(145,1048585,10,3,'2023-04-04 20:48:18',805306371,'log.editor.decision',0),(146,515,14,3,'2023-04-04 20:48:18',1342177281,'submission.event.fileUploaded',0),(147,1048585,10,3,'2023-04-04 20:48:18',1342177288,'submission.event.fileRevised',0),(148,1048585,10,3,'2023-04-04 20:48:24',1073741825,'log.review.reviewerAssigned',0),(149,1048585,10,3,'2023-04-04 20:48:30',1073741825,'log.review.reviewerAssigned',0),(150,1048585,10,9,'2023-04-04 20:48:35',1073741830,'log.review.reviewAccepted',0),(151,1048585,10,9,'2023-04-04 20:48:38',1073741848,'log.review.reviewReady',0),(152,1048585,10,10,'2023-04-04 20:48:43',1073741830,'log.review.reviewAccepted',0),(153,1048585,10,10,'2023-04-04 20:48:47',1073741848,'log.review.reviewReady',0),(154,1048585,11,27,'2023-04-04 20:48:55',268435458,'submission.event.general.metadataUpdated',0),(155,515,15,27,'2023-04-04 20:48:57',1342177281,'submission.event.fileUploaded',0),(156,1048585,11,27,'2023-04-04 20:48:57',1342177288,'submission.event.fileRevised',0),(157,515,15,27,'2023-04-04 20:48:57',1342177296,'submission.event.fileEdited',0),(158,1048585,11,27,'2023-04-04 20:48:57',1342177296,'submission.event.fileEdited',0),(159,1048585,11,27,'2023-04-04 20:49:03',268435458,'submission.event.general.metadataUpdated',0),(160,1048585,11,27,'2023-04-04 20:49:04',268435457,'submission.event.submissionSubmitted',0),(161,1048585,12,28,'2023-04-04 20:49:12',268435458,'submission.event.general.metadataUpdated',0),(162,515,16,28,'2023-04-04 20:49:13',1342177281,'submission.event.fileUploaded',0),(163,1048585,12,28,'2023-04-04 20:49:13',1342177288,'submission.event.fileRevised',0),(164,515,16,28,'2023-04-04 20:49:13',1342177296,'submission.event.fileEdited',0),(165,1048585,12,28,'2023-04-04 20:49:13',1342177296,'submission.event.fileEdited',0),(166,1048585,12,28,'2023-04-04 20:49:16',268435458,'submission.event.general.metadataUpdated',0),(167,1048585,12,28,'2023-04-04 20:49:17',268435457,'submission.event.submissionSubmitted',0),(168,1048585,12,3,'2023-04-04 20:49:24',805306371,'log.editor.decision',0),(169,515,17,3,'2023-04-04 20:49:24',1342177281,'submission.event.fileUploaded',0),(170,1048585,12,3,'2023-04-04 20:49:24',1342177288,'submission.event.fileRevised',0),(171,1048585,12,3,'2023-04-04 20:49:30',1073741825,'log.review.reviewerAssigned',0),(172,1048585,12,3,'2023-04-04 20:49:35',1073741825,'log.review.reviewerAssigned',0),(173,1048585,13,29,'2023-04-04 20:49:43',268435458,'submission.event.general.metadataUpdated',0),(174,515,18,29,'2023-04-04 20:49:44',1342177281,'submission.event.fileUploaded',0),(175,1048585,13,29,'2023-04-04 20:49:44',1342177288,'submission.event.fileRevised',0),(176,515,18,29,'2023-04-04 20:49:45',1342177296,'submission.event.fileEdited',0),(177,1048585,13,29,'2023-04-04 20:49:45',1342177296,'submission.event.fileEdited',0),(178,1048585,13,29,'2023-04-04 20:49:47',268435458,'submission.event.general.metadataUpdated',0),(179,1048585,13,29,'2023-04-04 20:49:49',268435457,'submission.event.submissionSubmitted',0),(180,1048585,13,3,'2023-04-04 20:49:55',805306371,'log.editor.decision',0),(181,515,19,3,'2023-04-04 20:49:56',1342177281,'submission.event.fileUploaded',0),(182,1048585,13,3,'2023-04-04 20:49:56',1342177288,'submission.event.fileRevised',0),(183,1048585,13,3,'2023-04-04 20:50:02',1073741825,'log.review.reviewerAssigned',0),(184,1048585,13,3,'2023-04-04 20:50:06',1073741825,'log.review.reviewerAssigned',0),(185,1048585,13,3,'2023-04-04 20:50:12',1073741825,'log.review.reviewerAssigned',0),(186,1048585,13,7,'2023-04-04 20:50:17',1073741830,'log.review.reviewAccepted',0),(187,1048585,13,7,'2023-04-04 20:50:21',1073741848,'log.review.reviewReady',0),(188,1048585,13,9,'2023-04-04 20:50:26',1073741830,'log.review.reviewAccepted',0),(189,1048585,13,9,'2023-04-04 20:50:30',1073741848,'log.review.reviewReady',0),(190,1048585,13,10,'2023-04-04 20:50:35',1073741830,'log.review.reviewAccepted',0),(191,1048585,13,10,'2023-04-04 20:50:40',1073741848,'log.review.reviewReady',0),(192,1048585,13,3,'2023-04-04 20:50:50',805306371,'log.editor.decision',0),(193,1048585,14,30,'2023-04-04 20:50:58',268435458,'submission.event.general.metadataUpdated',0),(194,515,20,30,'2023-04-04 20:51:00',1342177281,'submission.event.fileUploaded',0),(195,1048585,14,30,'2023-04-04 20:51:00',1342177288,'submission.event.fileRevised',0),(196,515,20,30,'2023-04-04 20:51:00',1342177296,'submission.event.fileEdited',0),(197,1048585,14,30,'2023-04-04 20:51:00',1342177296,'submission.event.fileEdited',0),(198,1048585,14,30,'2023-04-04 20:51:03',268435458,'submission.event.general.metadataUpdated',0),(199,1048585,14,30,'2023-04-04 20:51:04',268435457,'submission.event.submissionSubmitted',0),(200,1048585,15,31,'2023-04-04 20:51:11',268435458,'submission.event.general.metadataUpdated',0),(201,515,21,31,'2023-04-04 20:51:13',1342177281,'submission.event.fileUploaded',0),(202,1048585,15,31,'2023-04-04 20:51:13',1342177288,'submission.event.fileRevised',0),(203,515,21,31,'2023-04-04 20:51:13',1342177296,'submission.event.fileEdited',0),(204,1048585,15,31,'2023-04-04 20:51:13',1342177296,'submission.event.fileEdited',0),(205,1048585,15,31,'2023-04-04 20:51:15',268435458,'submission.event.general.metadataUpdated',0),(206,1048585,15,31,'2023-04-04 20:51:16',268435457,'submission.event.submissionSubmitted',0),(207,1048585,15,3,'2023-04-04 20:51:23',805306371,'log.editor.decision',0),(208,515,22,3,'2023-04-04 20:51:23',1342177281,'submission.event.fileUploaded',0),(209,1048585,15,3,'2023-04-04 20:51:24',1342177288,'submission.event.fileRevised',0),(210,1048585,15,3,'2023-04-04 20:51:29',1073741825,'log.review.reviewerAssigned',0),(211,1048585,15,3,'2023-04-04 20:51:33',1073741825,'log.review.reviewerAssigned',0),(212,1048585,15,3,'2023-04-04 20:51:35',805306371,'log.editor.decision',0),(213,1048585,15,3,'2023-04-04 20:51:40',268435459,'submission.event.participantAdded',0),(214,1048585,15,3,'2023-04-04 20:51:43',805306371,'log.editor.decision',0),(215,1048585,15,3,'2023-04-04 20:51:49',268435459,'submission.event.participantAdded',0),(216,1048585,16,32,'2023-04-04 20:51:58',268435458,'submission.event.general.metadataUpdated',0),(217,515,23,32,'2023-04-04 20:51:59',1342177281,'submission.event.fileUploaded',0),(218,1048585,16,32,'2023-04-04 20:51:59',1342177288,'submission.event.fileRevised',0),(219,515,23,32,'2023-04-04 20:51:59',1342177296,'submission.event.fileEdited',0),(220,1048585,16,32,'2023-04-04 20:51:59',1342177296,'submission.event.fileEdited',0),(221,1048585,16,32,'2023-04-04 20:52:02',268435458,'submission.event.general.metadataUpdated',0),(222,1048585,16,32,'2023-04-04 20:52:03',268435457,'submission.event.submissionSubmitted',0),(223,1048585,17,33,'2023-04-04 20:52:10',268435458,'submission.event.general.metadataUpdated',0),(224,515,24,33,'2023-04-04 20:52:11',1342177281,'submission.event.fileUploaded',0),(225,1048585,17,33,'2023-04-04 20:52:11',1342177288,'submission.event.fileRevised',0),(226,515,24,33,'2023-04-04 20:52:12',1342177296,'submission.event.fileEdited',0),(227,1048585,17,33,'2023-04-04 20:52:12',1342177296,'submission.event.fileEdited',0),(228,1048585,17,33,'2023-04-04 20:52:14',268435458,'submission.event.general.metadataUpdated',0),(229,1048585,17,33,'2023-04-04 20:52:16',268435457,'submission.event.submissionSubmitted',0),(230,1048585,17,3,'2023-04-04 20:52:23',805306371,'log.editor.decision',0),(231,1048585,17,3,'2023-04-04 20:52:29',1073741825,'log.review.reviewerAssigned',0),(232,1048585,17,3,'2023-04-04 20:52:33',1073741825,'log.review.reviewerAssigned',0),(233,1048585,17,3,'2023-04-04 20:52:35',805306371,'log.editor.decision',0),(234,1048585,17,3,'2023-04-04 20:52:40',268435459,'submission.event.participantAdded',0),(235,1048585,17,3,'2023-04-04 20:52:43',805306371,'log.editor.decision',0),(236,1048585,17,3,'2023-04-04 20:52:48',268435459,'submission.event.participantAdded',0),(237,1048585,17,3,'2023-04-04 20:52:53',268435459,'submission.event.participantAdded',0),(238,515,25,3,'2023-04-04 20:52:59',1342177281,'submission.event.fileUploaded',0),(239,1048585,17,3,'2023-04-04 20:52:59',1342177288,'submission.event.fileRevised',0),(240,515,25,3,'2023-04-04 20:53:00',1342177296,'submission.event.fileEdited',0),(241,1048585,17,3,'2023-04-04 20:53:00',1342177296,'submission.event.fileEdited',0),(242,1048585,17,3,'2023-04-04 20:53:09',268435458,'submission.event.general.metadataUpdated',0),(243,1048585,17,3,'2023-04-04 20:53:10',268435462,'publication.event.scheduled',0),(244,1048585,17,3,'2023-04-04 20:53:14',268435462,'publication.event.published',0),(245,1048585,17,3,'2023-04-04 20:53:23',268435463,'publication.event.unpublished',0),(246,1048585,17,3,'2023-04-04 20:53:23',268435462,'publication.event.scheduled',0),(247,1048585,17,3,'2023-04-04 20:53:31',268435462,'publication.event.published',0),(248,1048585,17,3,'2023-04-04 20:53:40',268435463,'publication.event.unpublished',0),(249,1048585,17,3,'2023-04-04 20:53:40',268435458,'submission.event.general.metadataUpdated',0),(250,1048585,17,3,'2023-04-04 20:53:54',268435458,'submission.event.general.metadataUpdated',0),(251,1048585,17,3,'2023-04-04 20:53:55',268435462,'publication.event.published',0),(252,1048585,18,34,'2023-04-04 20:54:07',268435458,'submission.event.general.metadataUpdated',0),(253,515,26,34,'2023-04-04 20:54:09',1342177281,'submission.event.fileUploaded',0),(254,1048585,18,34,'2023-04-04 20:54:09',1342177288,'submission.event.fileRevised',0),(255,515,26,34,'2023-04-04 20:54:09',1342177296,'submission.event.fileEdited',0),(256,1048585,18,34,'2023-04-04 20:54:09',1342177296,'submission.event.fileEdited',0),(257,1048585,18,34,'2023-04-04 20:54:11',268435458,'submission.event.general.metadataUpdated',0),(258,1048585,18,34,'2023-04-04 20:54:12',268435457,'submission.event.submissionSubmitted',0),(259,1048585,18,3,'2023-04-04 20:54:20',805306371,'log.editor.decision',0),(260,1048585,19,35,'2023-04-04 20:54:29',268435458,'submission.event.general.metadataUpdated',0),(261,515,27,35,'2023-04-04 20:54:31',1342177281,'submission.event.fileUploaded',0),(262,1048585,19,35,'2023-04-04 20:54:31',1342177288,'submission.event.fileRevised',0),(263,515,27,35,'2023-04-04 20:54:31',1342177296,'submission.event.fileEdited',0),(264,1048585,19,35,'2023-04-04 20:54:31',1342177296,'submission.event.fileEdited',0),(265,1048585,19,35,'2023-04-04 20:54:33',268435458,'submission.event.general.metadataUpdated',0),(266,1048585,19,35,'2023-04-04 20:54:34',268435457,'submission.event.submissionSubmitted',0),(267,1048585,19,3,'2023-04-04 20:54:42',805306371,'log.editor.decision',0),(268,515,28,3,'2023-04-04 20:54:42',1342177281,'submission.event.fileUploaded',0),(269,1048585,19,3,'2023-04-04 20:54:42',1342177288,'submission.event.fileRevised',0),(270,1048585,19,3,'2023-04-04 20:54:48',1073741825,'log.review.reviewerAssigned',0),(271,1048585,19,3,'2023-04-04 20:54:52',1073741825,'log.review.reviewerAssigned',0),(272,1048585,19,3,'2023-04-04 20:54:54',805306371,'log.editor.decision',0),(273,1048585,19,3,'2023-04-04 20:54:59',268435459,'submission.event.participantAdded',0);
 /*!40000 ALTER TABLE `event_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -816,16 +816,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `event_log_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_log_settings` (
-  `log_id` bigint(20) NOT NULL,
+  `log_id` bigint NOT NULL,
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `event_log_settings_pkey` (`log_id`,`setting_name`),
   KEY `event_log_settings_log_id` (`log_id`),
   KEY `event_log_settings_name_value` (`setting_name`(50),`setting_value`(150))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -834,7 +834,7 @@ CREATE TABLE `event_log_settings` (
 
 LOCK TABLES `event_log_settings` WRITE;
 /*!40000 ALTER TABLE `event_log_settings` DISABLE KEYS */;
-INSERT INTO `event_log_settings` VALUES (2,'fileId','1','int'),(2,'fileStage','2','int'),(2,'originalFileName','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(2,'sourceSubmissionFileId',NULL,'string'),(2,'submissionFileId','1','int'),(2,'submissionId','1','int'),(2,'username','amwandenga','string'),(3,'fileId','1','int'),(3,'fileStage','2','int'),(3,'name','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(3,'submissionFileId','1','int'),(3,'submissionId','1','int'),(3,'username','amwandenga','string'),(4,'fileId','1','int'),(4,'fileStage','2','int'),(4,'originalFileName','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(4,'sourceSubmissionFileId',NULL,'string'),(4,'submissionFileId','1','int'),(4,'submissionId','1','int'),(4,'username','amwandenga','string'),(5,'fileId','1','int'),(5,'fileStage','2','int'),(5,'name','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(5,'originalFileName','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(5,'sourceSubmissionFileId',NULL,'string'),(5,'submissionFileId','1','int'),(5,'submissionId','1','int'),(5,'username','amwandenga','string'),(8,'decision','Send to Review','string'),(8,'editorName','Daniel Barnes','string'),(8,'submissionId','1','int'),(9,'fileId','1','int'),(9,'fileStage','4','int'),(9,'originalFileName','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(9,'sourceSubmissionFileId','1','int'),(9,'submissionFileId','2','int'),(9,'submissionId','1','int'),(9,'username','dbarnes','string'),(10,'fileId','1','int'),(10,'fileStage','4','int'),(10,'name','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(10,'submissionFileId','2','int'),(10,'submissionId','1','int'),(10,'username','dbarnes','string'),(11,'reviewAssignmentId','1','string'),(11,'reviewerName','Julie Janssen','string'),(11,'round','1','int'),(11,'stageId','3','int'),(11,'submissionId','1','int'),(12,'reviewAssignmentId','2','string'),(12,'reviewerName','Aisla McCrae','string'),(12,'round','1','int'),(12,'stageId','3','int'),(12,'submissionId','1','int'),(13,'reviewAssignmentId','3','string'),(13,'reviewerName','Adela Gallego','string'),(13,'round','1','int'),(13,'stageId','3','int'),(13,'submissionId','1','int'),(14,'decision','Accept Submission','string'),(14,'editorName','Daniel Barnes','string'),(14,'submissionId','1','int'),(15,'name','Sarah Vogt','string'),(15,'userGroupName','Copyeditor','string'),(15,'username','svogt','string'),(16,'decision','Send To Production','string'),(16,'editorName','Daniel Barnes','string'),(16,'submissionId','1','int'),(17,'name','Stephen Hellier','string'),(17,'userGroupName','Layout Editor','string'),(17,'username','shellier','string'),(18,'name','Sabine Kumar','string'),(18,'userGroupName','Proofreader','string'),(18,'username','skumar','string'),(23,'fileId','2','int'),(23,'fileStage','10','int'),(23,'originalFileName','article.pdf','string'),(23,'sourceSubmissionFileId',NULL,'string'),(23,'submissionFileId','3','int'),(23,'submissionId','1','int'),(23,'username','dbarnes','string'),(24,'fileId','2','int'),(24,'fileStage','10','int'),(24,'name','article.pdf','string'),(24,'submissionFileId','3','int'),(24,'submissionId','1','int'),(24,'username','dbarnes','string'),(25,'fileId','2','int'),(25,'fileStage','10','int'),(25,'originalFileName','article.pdf','string'),(25,'sourceSubmissionFileId',NULL,'string'),(25,'submissionFileId','3','int'),(25,'submissionId','1','int'),(25,'username','dbarnes','string'),(26,'fileId','2','int'),(26,'fileStage','10','int'),(26,'name','article.pdf','string'),(26,'originalFileName','article.pdf','string'),(26,'sourceSubmissionFileId',NULL,'string'),(26,'submissionFileId','3','int'),(26,'submissionId','1','int'),(26,'username','dbarnes','string'),(27,'name','Alan Mwandenga','string'),(27,'userGroupName','Author','string'),(27,'username','amwandenga','string'),(40,'name','Stephanie Berardo','string'),(40,'userGroupName','Section editor','string'),(40,'username','sberardo','string'),(41,'name','Stephanie Berardo','string'),(41,'userGroupName','Section editor','string'),(41,'username','sberardo','string'),(43,'fileId','3','int'),(43,'fileStage','2','int'),(43,'originalFileName','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(43,'sourceSubmissionFileId',NULL,'string'),(43,'submissionFileId','4','int'),(43,'submissionId','2','int'),(43,'username','ccorino','string'),(44,'fileId','3','int'),(44,'fileStage','2','int'),(44,'name','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(44,'submissionFileId','4','int'),(44,'submissionId','2','int'),(44,'username','ccorino','string'),(45,'fileId','3','int'),(45,'fileStage','2','int'),(45,'originalFileName','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(45,'sourceSubmissionFileId',NULL,'string'),(45,'submissionFileId','4','int'),(45,'submissionId','2','int'),(45,'username','ccorino','string'),(46,'fileId','3','int'),(46,'fileStage','2','int'),(46,'name','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(46,'originalFileName','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(46,'sourceSubmissionFileId',NULL,'string'),(46,'submissionFileId','4','int'),(46,'submissionId','2','int'),(46,'username','ccorino','string'),(49,'decision','Send to Review','string'),(49,'editorName','Daniel Barnes','string'),(49,'submissionId','2','int'),(50,'fileId','3','int'),(50,'fileStage','4','int'),(50,'originalFileName','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(50,'sourceSubmissionFileId','4','int'),(50,'submissionFileId','5','int'),(50,'submissionId','2','int'),(50,'username','dbarnes','string'),(51,'fileId','3','int'),(51,'fileStage','4','int'),(51,'name','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(51,'submissionFileId','5','int'),(51,'submissionId','2','int'),(51,'username','dbarnes','string'),(52,'name','Minoti Inoue','string'),(52,'userGroupName','Section editor','string'),(52,'username','minoue','string'),(54,'decision','Accept Submission','string'),(54,'editorName','Minoti Inoue','string'),(54,'submissionId','2','int'),(56,'fileId','4','int'),(56,'fileStage','2','int'),(56,'originalFileName','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(56,'sourceSubmissionFileId',NULL,'string'),(56,'submissionFileId','6','int'),(56,'submissionId','3','int'),(56,'username','ckwantes','string'),(57,'fileId','4','int'),(57,'fileStage','2','int'),(57,'name','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(57,'submissionFileId','6','int'),(57,'submissionId','3','int'),(57,'username','ckwantes','string'),(58,'fileId','4','int'),(58,'fileStage','2','int'),(58,'originalFileName','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(58,'sourceSubmissionFileId',NULL,'string'),(58,'submissionFileId','6','int'),(58,'submissionId','3','int'),(58,'username','ckwantes','string'),(59,'fileId','4','int'),(59,'fileStage','2','int'),(59,'name','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(59,'originalFileName','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(59,'sourceSubmissionFileId',NULL,'string'),(59,'submissionFileId','6','int'),(59,'submissionId','3','int'),(59,'username','ckwantes','string'),(62,'decision','Send to Review','string'),(62,'editorName','Daniel Barnes','string'),(62,'submissionId','3','int'),(63,'fileId','4','int'),(63,'fileStage','4','int'),(63,'originalFileName','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(63,'sourceSubmissionFileId','6','int'),(63,'submissionFileId','7','int'),(63,'submissionId','3','int'),(63,'username','dbarnes','string'),(64,'fileId','4','int'),(64,'fileStage','4','int'),(64,'name','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(64,'submissionFileId','7','int'),(64,'submissionId','3','int'),(64,'username','dbarnes','string'),(65,'reviewAssignmentId','4','string'),(65,'reviewerName','Aisla McCrae','string'),(65,'round','1','int'),(65,'stageId','3','int'),(65,'submissionId','3','int'),(66,'reviewAssignmentId','5','string'),(66,'reviewerName','Adela Gallego','string'),(66,'round','1','int'),(66,'stageId','3','int'),(66,'submissionId','3','int'),(67,'decision','Accept Submission','string'),(67,'editorName','Daniel Barnes','string'),(67,'submissionId','3','int'),(68,'name','Maria Fritz','string'),(68,'userGroupName','Copyeditor','string'),(68,'username','mfritz','string'),(70,'fileId','5','int'),(70,'fileStage','2','int'),(70,'originalFileName','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(70,'sourceSubmissionFileId',NULL,'string'),(70,'submissionFileId','8','int'),(70,'submissionId','4','int'),(70,'username','cmontgomerie','string'),(71,'fileId','5','int'),(71,'fileStage','2','int'),(71,'name','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(71,'submissionFileId','8','int'),(71,'submissionId','4','int'),(71,'username','cmontgomerie','string'),(72,'fileId','5','int'),(72,'fileStage','2','int'),(72,'originalFileName','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(72,'sourceSubmissionFileId',NULL,'string'),(72,'submissionFileId','8','int'),(72,'submissionId','4','int'),(72,'username','cmontgomerie','string'),(73,'fileId','5','int'),(73,'fileStage','2','int'),(73,'name','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(73,'originalFileName','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(73,'sourceSubmissionFileId',NULL,'string'),(73,'submissionFileId','8','int'),(73,'submissionId','4','int'),(73,'username','cmontgomerie','string'),(77,'fileId','6','int'),(77,'fileStage','2','int'),(77,'originalFileName','Genetic transformation of forest trees.pdf','string'),(77,'sourceSubmissionFileId',NULL,'string'),(77,'submissionFileId','9','int'),(77,'submissionId','5','int'),(77,'username','ddiouf','string'),(78,'fileId','6','int'),(78,'fileStage','2','int'),(78,'name','Genetic transformation of forest trees.pdf','string'),(78,'submissionFileId','9','int'),(78,'submissionId','5','int'),(78,'username','ddiouf','string'),(79,'fileId','6','int'),(79,'fileStage','2','int'),(79,'originalFileName','Genetic transformation of forest trees.pdf','string'),(79,'sourceSubmissionFileId',NULL,'string'),(79,'submissionFileId','9','int'),(79,'submissionId','5','int'),(79,'username','ddiouf','string'),(80,'fileId','6','int'),(80,'fileStage','2','int'),(80,'name','Genetic transformation of forest trees.pdf','string'),(80,'originalFileName','Genetic transformation of forest trees.pdf','string'),(80,'sourceSubmissionFileId',NULL,'string'),(80,'submissionFileId','9','int'),(80,'submissionId','5','int'),(80,'username','ddiouf','string'),(83,'decision','Send to Review','string'),(83,'editorName','Daniel Barnes','string'),(83,'submissionId','5','int'),(84,'reviewAssignmentId','6','string'),(84,'reviewerName','Paul Hudson','string'),(84,'round','1','int'),(84,'stageId','3','int'),(84,'submissionId','5','int'),(85,'reviewAssignmentId','7','string'),(85,'reviewerName','Adela Gallego','string'),(85,'round','1','int'),(85,'stageId','3','int'),(85,'submissionId','5','int'),(86,'decision','Accept Submission','string'),(86,'editorName','Daniel Barnes','string'),(86,'submissionId','5','int'),(87,'name','Maria Fritz','string'),(87,'userGroupName','Copyeditor','string'),(87,'username','mfritz','string'),(88,'decision','Send To Production','string'),(88,'editorName','Daniel Barnes','string'),(88,'submissionId','5','int'),(89,'name','Graham Cox','string'),(89,'userGroupName','Layout Editor','string'),(89,'username','gcox','string'),(90,'name','Catherine Turner','string'),(90,'userGroupName','Proofreader','string'),(90,'username','cturner','string'),(92,'fileId','7','int'),(92,'fileStage','2','int'),(92,'originalFileName','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(92,'sourceSubmissionFileId',NULL,'string'),(92,'submissionFileId','10','int'),(92,'submissionId','6','int'),(92,'username','dphillips','string'),(93,'fileId','7','int'),(93,'fileStage','2','int'),(93,'name','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(93,'submissionFileId','10','int'),(93,'submissionId','6','int'),(93,'username','dphillips','string'),(94,'fileId','7','int'),(94,'fileStage','2','int'),(94,'originalFileName','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(94,'sourceSubmissionFileId',NULL,'string'),(94,'submissionFileId','10','int'),(94,'submissionId','6','int'),(94,'username','dphillips','string'),(95,'fileId','7','int'),(95,'fileStage','2','int'),(95,'name','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(95,'originalFileName','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(95,'sourceSubmissionFileId',NULL,'string'),(95,'submissionFileId','10','int'),(95,'submissionId','6','int'),(95,'username','dphillips','string'),(98,'decision','Send to Review','string'),(98,'editorName','Daniel Barnes','string'),(98,'submissionId','6','int'),(99,'reviewAssignmentId','8','string'),(99,'reviewerName','Julie Janssen','string'),(99,'round','1','int'),(99,'stageId','3','int'),(99,'submissionId','6','int'),(100,'reviewAssignmentId','9','string'),(100,'reviewerName','Adela Gallego','string'),(100,'round','1','int'),(100,'stageId','3','int'),(100,'submissionId','6','int'),(101,'decision','Accept Submission','string'),(101,'editorName','Daniel Barnes','string'),(101,'submissionId','6','int'),(102,'name','Maria Fritz','string'),(102,'userGroupName','Copyeditor','string'),(102,'username','mfritz','string'),(103,'decision','Send To Production','string'),(103,'editorName','Daniel Barnes','string'),(103,'submissionId','6','int'),(104,'name','Graham Cox','string'),(104,'userGroupName','Layout Editor','string'),(104,'username','gcox','string'),(106,'fileId','8','int'),(106,'fileStage','2','int'),(106,'originalFileName','Developing efficacy beliefs in the classroom.pdf','string'),(106,'sourceSubmissionFileId',NULL,'string'),(106,'submissionFileId','11','int'),(106,'submissionId','7','int'),(106,'username','dsokoloff','string'),(107,'fileId','8','int'),(107,'fileStage','2','int'),(107,'name','Developing efficacy beliefs in the classroom.pdf','string'),(107,'submissionFileId','11','int'),(107,'submissionId','7','int'),(107,'username','dsokoloff','string'),(108,'fileId','8','int'),(108,'fileStage','2','int'),(108,'originalFileName','Developing efficacy beliefs in the classroom.pdf','string'),(108,'sourceSubmissionFileId',NULL,'string'),(108,'submissionFileId','11','int'),(108,'submissionId','7','int'),(108,'username','dsokoloff','string'),(109,'fileId','8','int'),(109,'fileStage','2','int'),(109,'name','Developing efficacy beliefs in the classroom.pdf','string'),(109,'originalFileName','Developing efficacy beliefs in the classroom.pdf','string'),(109,'sourceSubmissionFileId',NULL,'string'),(109,'submissionFileId','11','int'),(109,'submissionId','7','int'),(109,'username','dsokoloff','string'),(112,'decision','Send to Review','string'),(112,'editorName','Daniel Barnes','string'),(112,'submissionId','7','int'),(113,'reviewAssignmentId','10','string'),(113,'reviewerName','Paul Hudson','string'),(113,'round','1','int'),(113,'stageId','3','int'),(113,'submissionId','7','int'),(114,'reviewAssignmentId','11','string'),(114,'reviewerName','Aisla McCrae','string'),(114,'round','1','int'),(114,'stageId','3','int'),(114,'submissionId','7','int'),(115,'reviewAssignmentId','12','string'),(115,'reviewerName','Adela Gallego','string'),(115,'round','1','int'),(115,'stageId','3','int'),(115,'submissionId','7','int'),(116,'reviewAssignmentId','10','int'),(116,'reviewerName','Paul Hudson','string'),(116,'round','1','int'),(116,'submissionId','7','int'),(117,'reviewAssignmentId','10','int'),(117,'reviewerName','Paul Hudson','string'),(117,'round','1','int'),(117,'submissionId','7','int'),(119,'fileId','9','int'),(119,'fileStage','2','int'),(119,'originalFileName','Traditions and Trends in the Study of the Commons.pdf','string'),(119,'sourceSubmissionFileId',NULL,'string'),(119,'submissionFileId','12','int'),(119,'submissionId','8','int'),(119,'username','eostrom','string'),(120,'fileId','9','int'),(120,'fileStage','2','int'),(120,'name','Traditions and Trends in the Study of the Commons.pdf','string'),(120,'submissionFileId','12','int'),(120,'submissionId','8','int'),(120,'username','eostrom','string'),(121,'fileId','9','int'),(121,'fileStage','2','int'),(121,'originalFileName','Traditions and Trends in the Study of the Commons.pdf','string'),(121,'sourceSubmissionFileId',NULL,'string'),(121,'submissionFileId','12','int'),(121,'submissionId','8','int'),(121,'username','eostrom','string'),(122,'fileId','9','int'),(122,'fileStage','2','int'),(122,'name','Traditions and Trends in the Study of the Commons.pdf','string'),(122,'originalFileName','Traditions and Trends in the Study of the Commons.pdf','string'),(122,'sourceSubmissionFileId',NULL,'string'),(122,'submissionFileId','12','int'),(122,'submissionId','8','int'),(122,'username','eostrom','string'),(126,'fileId','10','int'),(126,'fileStage','2','int'),(126,'originalFileName','Hansen & Pinto: Reason Reclaimed.pdf','string'),(126,'sourceSubmissionFileId',NULL,'string'),(126,'submissionFileId','13','int'),(126,'submissionId','9','int'),(126,'username','fpaglieri','string'),(127,'fileId','10','int'),(127,'fileStage','2','int'),(127,'name','Hansen & Pinto: Reason Reclaimed.pdf','string'),(127,'submissionFileId','13','int'),(127,'submissionId','9','int'),(127,'username','fpaglieri','string'),(128,'fileId','10','int'),(128,'fileStage','2','int'),(128,'originalFileName','Hansen & Pinto: Reason Reclaimed.pdf','string'),(128,'sourceSubmissionFileId',NULL,'string'),(128,'submissionFileId','13','int'),(128,'submissionId','9','int'),(128,'username','fpaglieri','string'),(129,'fileId','10','int'),(129,'fileStage','2','int'),(129,'name','Hansen & Pinto: Reason Reclaimed.pdf','string'),(129,'originalFileName','Hansen & Pinto: Reason Reclaimed.pdf','string'),(129,'sourceSubmissionFileId',NULL,'string'),(129,'submissionFileId','13','int'),(129,'submissionId','9','int'),(129,'username','fpaglieri','string'),(132,'decision','Send to Review','string'),(132,'editorName','Daniel Barnes','string'),(132,'submissionId','9','int'),(133,'reviewAssignmentId','13','string'),(133,'reviewerName','Julie Janssen','string'),(133,'round','1','int'),(133,'stageId','3','int'),(133,'submissionId','9','int'),(134,'reviewAssignmentId','14','string'),(134,'reviewerName','Adela Gallego','string'),(134,'round','1','int'),(134,'stageId','3','int'),(134,'submissionId','9','int'),(135,'decision','Accept Submission','string'),(135,'editorName','Daniel Barnes','string'),(135,'submissionId','9','int'),(136,'name','Sarah Vogt','string'),(136,'userGroupName','Copyeditor','string'),(136,'username','svogt','string'),(137,'decision','Send To Production','string'),(137,'editorName','Daniel Barnes','string'),(137,'submissionId','9','int'),(138,'name','Stephen Hellier','string'),(138,'userGroupName','Layout Editor','string'),(138,'username','shellier','string'),(139,'name','Sabine Kumar','string'),(139,'userGroupName','Proofreader','string'),(139,'username','skumar','string'),(141,'fileId','11','int'),(141,'fileStage','2','int'),(141,'originalFileName','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(141,'sourceSubmissionFileId',NULL,'string'),(141,'submissionFileId','14','int'),(141,'submissionId','10','int'),(141,'username','jnovak','string'),(142,'fileId','11','int'),(142,'fileStage','2','int'),(142,'name','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(142,'submissionFileId','14','int'),(142,'submissionId','10','int'),(142,'username','jnovak','string'),(143,'fileId','11','int'),(143,'fileStage','2','int'),(143,'originalFileName','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(143,'sourceSubmissionFileId',NULL,'string'),(143,'submissionFileId','14','int'),(143,'submissionId','10','int'),(143,'username','jnovak','string'),(144,'fileId','11','int'),(144,'fileStage','2','int'),(144,'name','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(144,'originalFileName','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(144,'sourceSubmissionFileId',NULL,'string'),(144,'submissionFileId','14','int'),(144,'submissionId','10','int'),(144,'username','jnovak','string'),(147,'decision','Send to Review','string'),(147,'editorName','Daniel Barnes','string'),(147,'submissionId','10','int'),(148,'reviewAssignmentId','15','string'),(148,'reviewerName','Aisla McCrae','string'),(148,'round','1','int'),(148,'stageId','3','int'),(148,'submissionId','10','int'),(149,'reviewAssignmentId','16','string'),(149,'reviewerName','Adela Gallego','string'),(149,'round','1','int'),(149,'stageId','3','int'),(149,'submissionId','10','int'),(150,'reviewAssignmentId','15','int'),(150,'reviewerName','Aisla McCrae','string'),(150,'round','1','int'),(150,'submissionId','10','int'),(151,'reviewAssignmentId','15','int'),(151,'reviewerName','Aisla McCrae','string'),(151,'round','1','int'),(151,'submissionId','10','int'),(152,'reviewAssignmentId','16','int'),(152,'reviewerName','Adela Gallego','string'),(152,'round','1','int'),(152,'submissionId','10','int'),(153,'reviewAssignmentId','16','int'),(153,'reviewerName','Adela Gallego','string'),(153,'round','1','int'),(153,'submissionId','10','int'),(155,'fileId','12','int'),(155,'fileStage','2','int'),(155,'originalFileName','Learning Sustainable Design through Service.pdf','string'),(155,'sourceSubmissionFileId',NULL,'string'),(155,'submissionFileId','15','int'),(155,'submissionId','11','int'),(155,'username','kalkhafaji','string'),(156,'fileId','12','int'),(156,'fileStage','2','int'),(156,'name','Learning Sustainable Design through Service.pdf','string'),(156,'submissionFileId','15','int'),(156,'submissionId','11','int'),(156,'username','kalkhafaji','string'),(157,'fileId','12','int'),(157,'fileStage','2','int'),(157,'originalFileName','Learning Sustainable Design through Service.pdf','string'),(157,'sourceSubmissionFileId',NULL,'string'),(157,'submissionFileId','15','int'),(157,'submissionId','11','int'),(157,'username','kalkhafaji','string'),(158,'fileId','12','int'),(158,'fileStage','2','int'),(158,'name','Learning Sustainable Design through Service.pdf','string'),(158,'originalFileName','Learning Sustainable Design through Service.pdf','string'),(158,'sourceSubmissionFileId',NULL,'string'),(158,'submissionFileId','15','int'),(158,'submissionId','11','int'),(158,'username','kalkhafaji','string'),(162,'fileId','13','int'),(162,'fileStage','2','int'),(162,'originalFileName','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(162,'sourceSubmissionFileId',NULL,'string'),(162,'submissionFileId','16','int'),(162,'submissionId','12','int'),(162,'username','lchristopher','string'),(163,'fileId','13','int'),(163,'fileStage','2','int'),(163,'name','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(163,'submissionFileId','16','int'),(163,'submissionId','12','int'),(163,'username','lchristopher','string'),(164,'fileId','13','int'),(164,'fileStage','2','int'),(164,'originalFileName','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(164,'sourceSubmissionFileId',NULL,'string'),(164,'submissionFileId','16','int'),(164,'submissionId','12','int'),(164,'username','lchristopher','string'),(165,'fileId','13','int'),(165,'fileStage','2','int'),(165,'name','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(165,'originalFileName','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(165,'sourceSubmissionFileId',NULL,'string'),(165,'submissionFileId','16','int'),(165,'submissionId','12','int'),(165,'username','lchristopher','string'),(168,'decision','Send to Review','string'),(168,'editorName','Daniel Barnes','string'),(168,'submissionId','12','int'),(169,'reviewAssignmentId','17','string'),(169,'reviewerName','Julie Janssen','string'),(169,'round','1','int'),(169,'stageId','3','int'),(169,'submissionId','12','int'),(170,'reviewAssignmentId','18','string'),(170,'reviewerName','Paul Hudson','string'),(170,'round','1','int'),(170,'stageId','3','int'),(170,'submissionId','12','int'),(172,'fileId','14','int'),(172,'fileStage','2','int'),(172,'originalFileName','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(172,'sourceSubmissionFileId',NULL,'string'),(172,'submissionFileId','17','int'),(172,'submissionId','13','int'),(172,'username','lkumiega','string'),(173,'fileId','14','int'),(173,'fileStage','2','int'),(173,'name','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(173,'submissionFileId','17','int'),(173,'submissionId','13','int'),(173,'username','lkumiega','string'),(174,'fileId','14','int'),(174,'fileStage','2','int'),(174,'originalFileName','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(174,'sourceSubmissionFileId',NULL,'string'),(174,'submissionFileId','17','int'),(174,'submissionId','13','int'),(174,'username','lkumiega','string'),(175,'fileId','14','int'),(175,'fileStage','2','int'),(175,'name','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(175,'originalFileName','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(175,'sourceSubmissionFileId',NULL,'string'),(175,'submissionFileId','17','int'),(175,'submissionId','13','int'),(175,'username','lkumiega','string'),(178,'decision','Send to Review','string'),(178,'editorName','Daniel Barnes','string'),(178,'submissionId','13','int'),(179,'fileId','14','int'),(179,'fileStage','4','int'),(179,'originalFileName','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(179,'sourceSubmissionFileId','17','int'),(179,'submissionFileId','18','int'),(179,'submissionId','13','int'),(179,'username','dbarnes','string'),(180,'fileId','14','int'),(180,'fileStage','4','int'),(180,'name','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(180,'submissionFileId','18','int'),(180,'submissionId','13','int'),(180,'username','dbarnes','string'),(181,'reviewAssignmentId','19','string'),(181,'reviewerName','Julie Janssen','string'),(181,'round','1','int'),(181,'stageId','3','int'),(181,'submissionId','13','int'),(182,'reviewAssignmentId','20','string'),(182,'reviewerName','Aisla McCrae','string'),(182,'round','1','int'),(182,'stageId','3','int'),(182,'submissionId','13','int'),(183,'reviewAssignmentId','21','string'),(183,'reviewerName','Adela Gallego','string'),(183,'round','1','int'),(183,'stageId','3','int'),(183,'submissionId','13','int'),(184,'reviewAssignmentId','19','int'),(184,'reviewerName','Julie Janssen','string'),(184,'round','1','int'),(184,'submissionId','13','int'),(185,'reviewAssignmentId','19','int'),(185,'reviewerName','Julie Janssen','string'),(185,'round','1','int'),(185,'submissionId','13','int'),(186,'reviewAssignmentId','20','int'),(186,'reviewerName','Aisla McCrae','string'),(186,'round','1','int'),(186,'submissionId','13','int'),(187,'reviewAssignmentId','20','int'),(187,'reviewerName','Aisla McCrae','string'),(187,'round','1','int'),(187,'submissionId','13','int'),(188,'reviewAssignmentId','21','int'),(188,'reviewerName','Adela Gallego','string'),(188,'round','1','int'),(188,'submissionId','13','int'),(189,'reviewAssignmentId','21','int'),(189,'reviewerName','Adela Gallego','string'),(189,'round','1','int'),(189,'submissionId','13','int'),(190,'decision','Request Revisions','string'),(190,'editorName','Daniel Barnes','string'),(190,'submissionId','13','int'),(192,'fileId','15','int'),(192,'fileStage','2','int'),(192,'originalFileName','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(192,'sourceSubmissionFileId',NULL,'string'),(192,'submissionFileId','19','int'),(192,'submissionId','14','int'),(192,'username','pdaniel','string'),(193,'fileId','15','int'),(193,'fileStage','2','int'),(193,'name','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(193,'submissionFileId','19','int'),(193,'submissionId','14','int'),(193,'username','pdaniel','string'),(194,'fileId','15','int'),(194,'fileStage','2','int'),(194,'originalFileName','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(194,'sourceSubmissionFileId',NULL,'string'),(194,'submissionFileId','19','int'),(194,'submissionId','14','int'),(194,'username','pdaniel','string'),(195,'fileId','15','int'),(195,'fileStage','2','int'),(195,'name','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(195,'originalFileName','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(195,'sourceSubmissionFileId',NULL,'string'),(195,'submissionFileId','19','int'),(195,'submissionId','14','int'),(195,'username','pdaniel','string'),(199,'fileId','16','int'),(199,'fileStage','2','int'),(199,'originalFileName','Yam diseases and its management in Nigeria.pdf','string'),(199,'sourceSubmissionFileId',NULL,'string'),(199,'submissionFileId','20','int'),(199,'submissionId','15','int'),(199,'username','rbaiyewu','string'),(200,'fileId','16','int'),(200,'fileStage','2','int'),(200,'name','Yam diseases and its management in Nigeria.pdf','string'),(200,'submissionFileId','20','int'),(200,'submissionId','15','int'),(200,'username','rbaiyewu','string'),(201,'fileId','16','int'),(201,'fileStage','2','int'),(201,'originalFileName','Yam diseases and its management in Nigeria.pdf','string'),(201,'sourceSubmissionFileId',NULL,'string'),(201,'submissionFileId','20','int'),(201,'submissionId','15','int'),(201,'username','rbaiyewu','string'),(202,'fileId','16','int'),(202,'fileStage','2','int'),(202,'name','Yam diseases and its management in Nigeria.pdf','string'),(202,'originalFileName','Yam diseases and its management in Nigeria.pdf','string'),(202,'sourceSubmissionFileId',NULL,'string'),(202,'submissionFileId','20','int'),(202,'submissionId','15','int'),(202,'username','rbaiyewu','string'),(205,'decision','Send to Review','string'),(205,'editorName','Daniel Barnes','string'),(205,'submissionId','15','int'),(206,'fileId','16','int'),(206,'fileStage','4','int'),(206,'originalFileName','Yam diseases and its management in Nigeria.pdf','string'),(206,'sourceSubmissionFileId','20','int'),(206,'submissionFileId','21','int'),(206,'submissionId','15','int'),(206,'username','dbarnes','string'),(207,'fileId','16','int'),(207,'fileStage','4','int'),(207,'name','Yam diseases and its management in Nigeria.pdf','string'),(207,'submissionFileId','21','int'),(207,'submissionId','15','int'),(207,'username','dbarnes','string'),(208,'reviewAssignmentId','22','string'),(208,'reviewerName','Paul Hudson','string'),(208,'round','1','int'),(208,'stageId','3','int'),(208,'submissionId','15','int'),(209,'reviewAssignmentId','23','string'),(209,'reviewerName','Aisla McCrae','string'),(209,'round','1','int'),(209,'stageId','3','int'),(209,'submissionId','15','int'),(210,'decision','Accept Submission','string'),(210,'editorName','Daniel Barnes','string'),(210,'submissionId','15','int'),(211,'name','Sarah Vogt','string'),(211,'userGroupName','Copyeditor','string'),(211,'username','svogt','string'),(212,'decision','Send To Production','string'),(212,'editorName','Daniel Barnes','string'),(212,'submissionId','15','int'),(213,'name','Stephen Hellier','string'),(213,'userGroupName','Layout Editor','string'),(213,'username','shellier','string'),(215,'fileId','17','int'),(215,'fileStage','2','int'),(215,'originalFileName','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(215,'sourceSubmissionFileId',NULL,'string'),(215,'submissionFileId','22','int'),(215,'submissionId','16','int'),(215,'username','rrossi','string'),(216,'fileId','17','int'),(216,'fileStage','2','int'),(216,'name','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(216,'submissionFileId','22','int'),(216,'submissionId','16','int'),(216,'username','rrossi','string'),(217,'fileId','17','int'),(217,'fileStage','2','int'),(217,'originalFileName','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(217,'sourceSubmissionFileId',NULL,'string'),(217,'submissionFileId','22','int'),(217,'submissionId','16','int'),(217,'username','rrossi','string'),(218,'fileId','17','int'),(218,'fileStage','2','int'),(218,'name','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(218,'originalFileName','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(218,'sourceSubmissionFileId',NULL,'string'),(218,'submissionFileId','22','int'),(218,'submissionId','16','int'),(218,'username','rrossi','string'),(222,'fileId','18','int'),(222,'fileStage','2','int'),(222,'originalFileName','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(222,'sourceSubmissionFileId',NULL,'string'),(222,'submissionFileId','23','int'),(222,'submissionId','17','int'),(222,'username','vkarbasizaed','string'),(223,'fileId','18','int'),(223,'fileStage','2','int'),(223,'name','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(223,'submissionFileId','23','int'),(223,'submissionId','17','int'),(223,'username','vkarbasizaed','string'),(224,'fileId','18','int'),(224,'fileStage','2','int'),(224,'originalFileName','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(224,'sourceSubmissionFileId',NULL,'string'),(224,'submissionFileId','23','int'),(224,'submissionId','17','int'),(224,'username','vkarbasizaed','string'),(225,'fileId','18','int'),(225,'fileStage','2','int'),(225,'name','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(225,'originalFileName','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(225,'sourceSubmissionFileId',NULL,'string'),(225,'submissionFileId','23','int'),(225,'submissionId','17','int'),(225,'username','vkarbasizaed','string'),(228,'decision','Send to Review','string'),(228,'editorName','Daniel Barnes','string'),(228,'submissionId','17','int'),(229,'fileId','18','int'),(229,'fileStage','4','int'),(229,'originalFileName','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(229,'sourceSubmissionFileId','23','int'),(229,'submissionFileId','24','int'),(229,'submissionId','17','int'),(229,'username','dbarnes','string'),(230,'fileId','18','int'),(230,'fileStage','4','int'),(230,'name','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(230,'submissionFileId','24','int'),(230,'submissionId','17','int'),(230,'username','dbarnes','string'),(231,'reviewAssignmentId','24','string'),(231,'reviewerName','Julie Janssen','string'),(231,'round','1','int'),(231,'stageId','3','int'),(231,'submissionId','17','int'),(232,'reviewAssignmentId','25','string'),(232,'reviewerName','Paul Hudson','string'),(232,'round','1','int'),(232,'stageId','3','int'),(232,'submissionId','17','int'),(233,'decision','Accept Submission','string'),(233,'editorName','Daniel Barnes','string'),(233,'submissionId','17','int'),(234,'name','Maria Fritz','string'),(234,'userGroupName','Copyeditor','string'),(234,'username','mfritz','string'),(235,'decision','Send To Production','string'),(235,'editorName','Daniel Barnes','string'),(235,'submissionId','17','int'),(236,'name','Graham Cox','string'),(236,'userGroupName','Layout Editor','string'),(236,'username','gcox','string'),(237,'name','Catherine Turner','string'),(237,'userGroupName','Proofreader','string'),(237,'username','cturner','string'),(238,'fileId','19','int'),(238,'fileStage','10','int'),(238,'originalFileName','article.pdf','string'),(238,'sourceSubmissionFileId',NULL,'string'),(238,'submissionFileId','25','int'),(238,'submissionId','17','int'),(238,'username','dbarnes','string'),(239,'fileId','19','int'),(239,'fileStage','10','int'),(239,'name','article.pdf','string'),(239,'submissionFileId','25','int'),(239,'submissionId','17','int'),(239,'username','dbarnes','string'),(240,'fileId','19','int'),(240,'fileStage','10','int'),(240,'originalFileName','article.pdf','string'),(240,'sourceSubmissionFileId',NULL,'string'),(240,'submissionFileId','25','int'),(240,'submissionId','17','int'),(240,'username','dbarnes','string'),(241,'fileId','19','int'),(241,'fileStage','10','int'),(241,'name','article.pdf','string'),(241,'originalFileName','article.pdf','string'),(241,'sourceSubmissionFileId',NULL,'string'),(241,'submissionFileId','25','int'),(241,'submissionId','17','int'),(241,'username','dbarnes','string'),(253,'fileId','20','int'),(253,'fileStage','2','int'),(253,'originalFileName','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(253,'sourceSubmissionFileId',NULL,'string'),(253,'submissionFileId','26','int'),(253,'submissionId','18','int'),(253,'username','vwilliamson','string'),(254,'fileId','20','int'),(254,'fileStage','2','int'),(254,'name','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(254,'submissionFileId','26','int'),(254,'submissionId','18','int'),(254,'username','vwilliamson','string'),(255,'fileId','20','int'),(255,'fileStage','2','int'),(255,'originalFileName','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(255,'sourceSubmissionFileId',NULL,'string'),(255,'submissionFileId','26','int'),(255,'submissionId','18','int'),(255,'username','vwilliamson','string'),(256,'fileId','20','int'),(256,'fileStage','2','int'),(256,'name','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(256,'originalFileName','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(256,'sourceSubmissionFileId',NULL,'string'),(256,'submissionFileId','26','int'),(256,'submissionId','18','int'),(256,'username','vwilliamson','string'),(259,'decision','Decline Submission','string'),(259,'editorName','Daniel Barnes','string'),(259,'submissionId','18','int'),(261,'fileId','21','int'),(261,'fileStage','2','int'),(261,'originalFileName','Finocchiaro: Arguments About Arguments.pdf','string'),(261,'sourceSubmissionFileId',NULL,'string'),(261,'submissionFileId','27','int'),(261,'submissionId','19','int'),(261,'username','zwoods','string'),(262,'fileId','21','int'),(262,'fileStage','2','int'),(262,'name','Finocchiaro: Arguments About Arguments.pdf','string'),(262,'submissionFileId','27','int'),(262,'submissionId','19','int'),(262,'username','zwoods','string'),(263,'fileId','21','int'),(263,'fileStage','2','int'),(263,'originalFileName','Finocchiaro: Arguments About Arguments.pdf','string'),(263,'sourceSubmissionFileId',NULL,'string'),(263,'submissionFileId','27','int'),(263,'submissionId','19','int'),(263,'username','zwoods','string'),(264,'fileId','21','int'),(264,'fileStage','2','int'),(264,'name','Finocchiaro: Arguments About Arguments.pdf','string'),(264,'originalFileName','Finocchiaro: Arguments About Arguments.pdf','string'),(264,'sourceSubmissionFileId',NULL,'string'),(264,'submissionFileId','27','int'),(264,'submissionId','19','int'),(264,'username','zwoods','string'),(267,'decision','Send to Review','string'),(267,'editorName','Daniel Barnes','string'),(267,'submissionId','19','int'),(268,'fileId','21','int'),(268,'fileStage','4','int'),(268,'originalFileName','Finocchiaro: Arguments About Arguments.pdf','string'),(268,'sourceSubmissionFileId','27','int'),(268,'submissionFileId','28','int'),(268,'submissionId','19','int'),(268,'username','dbarnes','string'),(269,'fileId','21','int'),(269,'fileStage','4','int'),(269,'name','Finocchiaro: Arguments About Arguments.pdf','string'),(269,'submissionFileId','28','int'),(269,'submissionId','19','int'),(269,'username','dbarnes','string'),(270,'reviewAssignmentId','26','string'),(270,'reviewerName','Paul Hudson','string'),(270,'round','1','int'),(270,'stageId','3','int'),(270,'submissionId','19','int'),(271,'reviewAssignmentId','27','string'),(271,'reviewerName','Aisla McCrae','string'),(271,'round','1','int'),(271,'stageId','3','int'),(271,'submissionId','19','int'),(272,'decision','Accept Submission','string'),(272,'editorName','Daniel Barnes','string'),(272,'submissionId','19','int'),(273,'name','Sarah Vogt','string'),(273,'userGroupName','Copyeditor','string'),(273,'username','svogt','string');
+INSERT INTO `event_log_settings` VALUES (2,'fileId','1','int'),(2,'fileStage','2','int'),(2,'originalFileName','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(2,'sourceSubmissionFileId',NULL,'string'),(2,'submissionFileId','1','int'),(2,'submissionId','1','int'),(2,'username','amwandenga','string'),(3,'fileId','1','int'),(3,'fileStage','2','int'),(3,'name','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(3,'submissionFileId','1','int'),(3,'submissionId','1','int'),(3,'username','amwandenga','string'),(4,'fileId','1','int'),(4,'fileStage','2','int'),(4,'originalFileName','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(4,'sourceSubmissionFileId',NULL,'string'),(4,'submissionFileId','1','int'),(4,'submissionId','1','int'),(4,'username','amwandenga','string'),(5,'fileId','1','int'),(5,'fileStage','2','int'),(5,'name','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(5,'originalFileName','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(5,'sourceSubmissionFileId',NULL,'string'),(5,'submissionFileId','1','int'),(5,'submissionId','1','int'),(5,'username','amwandenga','string'),(8,'decision','Send to Review','string'),(8,'editorName','Daniel Barnes','string'),(8,'submissionId','1','int'),(9,'reviewAssignmentId','1','string'),(9,'reviewerName','Julie Janssen','string'),(9,'round','1','int'),(9,'stageId','3','int'),(9,'submissionId','1','int'),(10,'reviewAssignmentId','2','string'),(10,'reviewerName','Aisla McCrae','string'),(10,'round','1','int'),(10,'stageId','3','int'),(10,'submissionId','1','int'),(11,'reviewAssignmentId','3','string'),(11,'reviewerName','Adela Gallego','string'),(11,'round','1','int'),(11,'stageId','3','int'),(11,'submissionId','1','int'),(12,'decision','Accept Submission','string'),(12,'editorName','Daniel Barnes','string'),(12,'submissionId','1','int'),(13,'name','Sarah Vogt','string'),(13,'userGroupName','Copyeditor','string'),(13,'username','svogt','string'),(14,'decision','Send To Production','string'),(14,'editorName','Daniel Barnes','string'),(14,'submissionId','1','int'),(15,'name','Stephen Hellier','string'),(15,'userGroupName','Layout Editor','string'),(15,'username','shellier','string'),(16,'name','Sabine Kumar','string'),(16,'userGroupName','Proofreader','string'),(16,'username','skumar','string'),(21,'fileId','2','int'),(21,'fileStage','10','int'),(21,'originalFileName','article.pdf','string'),(21,'sourceSubmissionFileId',NULL,'string'),(21,'submissionFileId','2','int'),(21,'submissionId','1','int'),(21,'username','dbarnes','string'),(22,'fileId','2','int'),(22,'fileStage','10','int'),(22,'name','article.pdf','string'),(22,'submissionFileId','2','int'),(22,'submissionId','1','int'),(22,'username','dbarnes','string'),(23,'fileId','2','int'),(23,'fileStage','10','int'),(23,'originalFileName','article.pdf','string'),(23,'sourceSubmissionFileId',NULL,'string'),(23,'submissionFileId','2','int'),(23,'submissionId','1','int'),(23,'username','dbarnes','string'),(24,'fileId','2','int'),(24,'fileStage','10','int'),(24,'name','article.pdf','string'),(24,'originalFileName','article.pdf','string'),(24,'sourceSubmissionFileId',NULL,'string'),(24,'submissionFileId','2','int'),(24,'submissionId','1','int'),(24,'username','dbarnes','string'),(25,'name','Alan Mwandenga','string'),(25,'userGroupName','Author','string'),(25,'username','amwandenga','string'),(38,'name','Stephanie Berardo','string'),(38,'userGroupName','Section editor','string'),(38,'username','sberardo','string'),(39,'name','Stephanie Berardo','string'),(39,'userGroupName','Section editor','string'),(39,'username','sberardo','string'),(41,'fileId','3','int'),(41,'fileStage','2','int'),(41,'originalFileName','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(41,'sourceSubmissionFileId',NULL,'string'),(41,'submissionFileId','3','int'),(41,'submissionId','2','int'),(41,'username','ccorino','string'),(42,'fileId','3','int'),(42,'fileStage','2','int'),(42,'name','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(42,'submissionFileId','3','int'),(42,'submissionId','2','int'),(42,'username','ccorino','string'),(43,'fileId','3','int'),(43,'fileStage','2','int'),(43,'originalFileName','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(43,'sourceSubmissionFileId',NULL,'string'),(43,'submissionFileId','3','int'),(43,'submissionId','2','int'),(43,'username','ccorino','string'),(44,'fileId','3','int'),(44,'fileStage','2','int'),(44,'name','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(44,'originalFileName','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(44,'sourceSubmissionFileId',NULL,'string'),(44,'submissionFileId','3','int'),(44,'submissionId','2','int'),(44,'username','ccorino','string'),(47,'decision','Send to Review','string'),(47,'editorName','Daniel Barnes','string'),(47,'submissionId','2','int'),(48,'name','Minoti Inoue','string'),(48,'userGroupName','Section editor','string'),(48,'username','minoue','string'),(50,'decision','Accept Submission','string'),(50,'editorName','Minoti Inoue','string'),(50,'submissionId','2','int'),(52,'fileId','4','int'),(52,'fileStage','2','int'),(52,'originalFileName','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(52,'sourceSubmissionFileId',NULL,'string'),(52,'submissionFileId','4','int'),(52,'submissionId','3','int'),(52,'username','ckwantes','string'),(53,'fileId','4','int'),(53,'fileStage','2','int'),(53,'name','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(53,'submissionFileId','4','int'),(53,'submissionId','3','int'),(53,'username','ckwantes','string'),(54,'fileId','4','int'),(54,'fileStage','2','int'),(54,'originalFileName','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(54,'sourceSubmissionFileId',NULL,'string'),(54,'submissionFileId','4','int'),(54,'submissionId','3','int'),(54,'username','ckwantes','string'),(55,'fileId','4','int'),(55,'fileStage','2','int'),(55,'name','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(55,'originalFileName','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(55,'sourceSubmissionFileId',NULL,'string'),(55,'submissionFileId','4','int'),(55,'submissionId','3','int'),(55,'username','ckwantes','string'),(58,'decision','Send to Review','string'),(58,'editorName','Daniel Barnes','string'),(58,'submissionId','3','int'),(59,'reviewAssignmentId','4','string'),(59,'reviewerName','Aisla McCrae','string'),(59,'round','1','int'),(59,'stageId','3','int'),(59,'submissionId','3','int'),(60,'reviewAssignmentId','5','string'),(60,'reviewerName','Adela Gallego','string'),(60,'round','1','int'),(60,'stageId','3','int'),(60,'submissionId','3','int'),(61,'decision','Accept Submission','string'),(61,'editorName','Daniel Barnes','string'),(61,'submissionId','3','int'),(62,'name','Maria Fritz','string'),(62,'userGroupName','Copyeditor','string'),(62,'username','mfritz','string'),(64,'fileId','5','int'),(64,'fileStage','2','int'),(64,'originalFileName','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(64,'sourceSubmissionFileId',NULL,'string'),(64,'submissionFileId','5','int'),(64,'submissionId','4','int'),(64,'username','cmontgomerie','string'),(65,'fileId','5','int'),(65,'fileStage','2','int'),(65,'name','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(65,'submissionFileId','5','int'),(65,'submissionId','4','int'),(65,'username','cmontgomerie','string'),(66,'fileId','5','int'),(66,'fileStage','2','int'),(66,'originalFileName','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(66,'sourceSubmissionFileId',NULL,'string'),(66,'submissionFileId','5','int'),(66,'submissionId','4','int'),(66,'username','cmontgomerie','string'),(67,'fileId','5','int'),(67,'fileStage','2','int'),(67,'name','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(67,'originalFileName','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(67,'sourceSubmissionFileId',NULL,'string'),(67,'submissionFileId','5','int'),(67,'submissionId','4','int'),(67,'username','cmontgomerie','string'),(71,'fileId','6','int'),(71,'fileStage','2','int'),(71,'originalFileName','Genetic transformation of forest trees.pdf','string'),(71,'sourceSubmissionFileId',NULL,'string'),(71,'submissionFileId','6','int'),(71,'submissionId','5','int'),(71,'username','ddiouf','string'),(72,'fileId','6','int'),(72,'fileStage','2','int'),(72,'name','Genetic transformation of forest trees.pdf','string'),(72,'submissionFileId','6','int'),(72,'submissionId','5','int'),(72,'username','ddiouf','string'),(73,'fileId','6','int'),(73,'fileStage','2','int'),(73,'originalFileName','Genetic transformation of forest trees.pdf','string'),(73,'sourceSubmissionFileId',NULL,'string'),(73,'submissionFileId','6','int'),(73,'submissionId','5','int'),(73,'username','ddiouf','string'),(74,'fileId','6','int'),(74,'fileStage','2','int'),(74,'name','Genetic transformation of forest trees.pdf','string'),(74,'originalFileName','Genetic transformation of forest trees.pdf','string'),(74,'sourceSubmissionFileId',NULL,'string'),(74,'submissionFileId','6','int'),(74,'submissionId','5','int'),(74,'username','ddiouf','string'),(77,'decision','Send to Review','string'),(77,'editorName','Daniel Barnes','string'),(77,'submissionId','5','int'),(78,'fileId','6','int'),(78,'fileStage','4','int'),(78,'originalFileName','Genetic transformation of forest trees.pdf','string'),(78,'sourceSubmissionFileId','6','int'),(78,'submissionFileId','7','int'),(78,'submissionId','5','int'),(78,'username','dbarnes','string'),(79,'fileId','6','int'),(79,'fileStage','4','int'),(79,'name','Genetic transformation of forest trees.pdf','string'),(79,'submissionFileId','7','int'),(79,'submissionId','5','int'),(79,'username','dbarnes','string'),(80,'reviewAssignmentId','6','string'),(80,'reviewerName','Paul Hudson','string'),(80,'round','1','int'),(80,'stageId','3','int'),(80,'submissionId','5','int'),(81,'reviewAssignmentId','7','string'),(81,'reviewerName','Adela Gallego','string'),(81,'round','1','int'),(81,'stageId','3','int'),(81,'submissionId','5','int'),(82,'decision','Accept Submission','string'),(82,'editorName','Daniel Barnes','string'),(82,'submissionId','5','int'),(83,'name','Maria Fritz','string'),(83,'userGroupName','Copyeditor','string'),(83,'username','mfritz','string'),(84,'decision','Send To Production','string'),(84,'editorName','Daniel Barnes','string'),(84,'submissionId','5','int'),(85,'name','Graham Cox','string'),(85,'userGroupName','Layout Editor','string'),(85,'username','gcox','string'),(86,'name','Catherine Turner','string'),(86,'userGroupName','Proofreader','string'),(86,'username','cturner','string'),(88,'fileId','7','int'),(88,'fileStage','2','int'),(88,'originalFileName','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(88,'sourceSubmissionFileId',NULL,'string'),(88,'submissionFileId','8','int'),(88,'submissionId','6','int'),(88,'username','dphillips','string'),(89,'fileId','7','int'),(89,'fileStage','2','int'),(89,'name','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(89,'submissionFileId','8','int'),(89,'submissionId','6','int'),(89,'username','dphillips','string'),(90,'fileId','7','int'),(90,'fileStage','2','int'),(90,'originalFileName','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(90,'sourceSubmissionFileId',NULL,'string'),(90,'submissionFileId','8','int'),(90,'submissionId','6','int'),(90,'username','dphillips','string'),(91,'fileId','7','int'),(91,'fileStage','2','int'),(91,'name','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(91,'originalFileName','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(91,'sourceSubmissionFileId',NULL,'string'),(91,'submissionFileId','8','int'),(91,'submissionId','6','int'),(91,'username','dphillips','string'),(94,'decision','Send to Review','string'),(94,'editorName','Daniel Barnes','string'),(94,'submissionId','6','int'),(95,'reviewAssignmentId','8','string'),(95,'reviewerName','Julie Janssen','string'),(95,'round','1','int'),(95,'stageId','3','int'),(95,'submissionId','6','int'),(96,'reviewAssignmentId','9','string'),(96,'reviewerName','Adela Gallego','string'),(96,'round','1','int'),(96,'stageId','3','int'),(96,'submissionId','6','int'),(97,'decision','Accept Submission','string'),(97,'editorName','Daniel Barnes','string'),(97,'submissionId','6','int'),(98,'name','Maria Fritz','string'),(98,'userGroupName','Copyeditor','string'),(98,'username','mfritz','string'),(99,'decision','Send To Production','string'),(99,'editorName','Daniel Barnes','string'),(99,'submissionId','6','int'),(100,'name','Graham Cox','string'),(100,'userGroupName','Layout Editor','string'),(100,'username','gcox','string'),(102,'fileId','8','int'),(102,'fileStage','2','int'),(102,'originalFileName','Developing efficacy beliefs in the classroom.pdf','string'),(102,'sourceSubmissionFileId',NULL,'string'),(102,'submissionFileId','9','int'),(102,'submissionId','7','int'),(102,'username','dsokoloff','string'),(103,'fileId','8','int'),(103,'fileStage','2','int'),(103,'name','Developing efficacy beliefs in the classroom.pdf','string'),(103,'submissionFileId','9','int'),(103,'submissionId','7','int'),(103,'username','dsokoloff','string'),(104,'fileId','8','int'),(104,'fileStage','2','int'),(104,'originalFileName','Developing efficacy beliefs in the classroom.pdf','string'),(104,'sourceSubmissionFileId',NULL,'string'),(104,'submissionFileId','9','int'),(104,'submissionId','7','int'),(104,'username','dsokoloff','string'),(105,'fileId','8','int'),(105,'fileStage','2','int'),(105,'name','Developing efficacy beliefs in the classroom.pdf','string'),(105,'originalFileName','Developing efficacy beliefs in the classroom.pdf','string'),(105,'sourceSubmissionFileId',NULL,'string'),(105,'submissionFileId','9','int'),(105,'submissionId','7','int'),(105,'username','dsokoloff','string'),(108,'decision','Send to Review','string'),(108,'editorName','Daniel Barnes','string'),(108,'submissionId','7','int'),(109,'fileId','8','int'),(109,'fileStage','4','int'),(109,'originalFileName','Developing efficacy beliefs in the classroom.pdf','string'),(109,'sourceSubmissionFileId','9','int'),(109,'submissionFileId','10','int'),(109,'submissionId','7','int'),(109,'username','dbarnes','string'),(110,'fileId','8','int'),(110,'fileStage','4','int'),(110,'name','Developing efficacy beliefs in the classroom.pdf','string'),(110,'submissionFileId','10','int'),(110,'submissionId','7','int'),(110,'username','dbarnes','string'),(111,'reviewAssignmentId','10','string'),(111,'reviewerName','Paul Hudson','string'),(111,'round','1','int'),(111,'stageId','3','int'),(111,'submissionId','7','int'),(112,'reviewAssignmentId','11','string'),(112,'reviewerName','Aisla McCrae','string'),(112,'round','1','int'),(112,'stageId','3','int'),(112,'submissionId','7','int'),(113,'reviewAssignmentId','12','string'),(113,'reviewerName','Adela Gallego','string'),(113,'round','1','int'),(113,'stageId','3','int'),(113,'submissionId','7','int'),(114,'reviewAssignmentId','10','int'),(114,'reviewerName','Paul Hudson','string'),(114,'round','1','int'),(114,'submissionId','7','int'),(115,'reviewAssignmentId','10','int'),(115,'reviewerName','Paul Hudson','string'),(115,'round','1','int'),(115,'submissionId','7','int'),(117,'fileId','9','int'),(117,'fileStage','2','int'),(117,'originalFileName','Traditions and Trends in the Study of the Commons.pdf','string'),(117,'sourceSubmissionFileId',NULL,'string'),(117,'submissionFileId','11','int'),(117,'submissionId','8','int'),(117,'username','eostrom','string'),(118,'fileId','9','int'),(118,'fileStage','2','int'),(118,'name','Traditions and Trends in the Study of the Commons.pdf','string'),(118,'submissionFileId','11','int'),(118,'submissionId','8','int'),(118,'username','eostrom','string'),(119,'fileId','9','int'),(119,'fileStage','2','int'),(119,'originalFileName','Traditions and Trends in the Study of the Commons.pdf','string'),(119,'sourceSubmissionFileId',NULL,'string'),(119,'submissionFileId','11','int'),(119,'submissionId','8','int'),(119,'username','eostrom','string'),(120,'fileId','9','int'),(120,'fileStage','2','int'),(120,'name','Traditions and Trends in the Study of the Commons.pdf','string'),(120,'originalFileName','Traditions and Trends in the Study of the Commons.pdf','string'),(120,'sourceSubmissionFileId',NULL,'string'),(120,'submissionFileId','11','int'),(120,'submissionId','8','int'),(120,'username','eostrom','string'),(124,'fileId','10','int'),(124,'fileStage','2','int'),(124,'originalFileName','Hansen & Pinto: Reason Reclaimed.pdf','string'),(124,'sourceSubmissionFileId',NULL,'string'),(124,'submissionFileId','12','int'),(124,'submissionId','9','int'),(124,'username','fpaglieri','string'),(125,'fileId','10','int'),(125,'fileStage','2','int'),(125,'name','Hansen & Pinto: Reason Reclaimed.pdf','string'),(125,'submissionFileId','12','int'),(125,'submissionId','9','int'),(125,'username','fpaglieri','string'),(126,'fileId','10','int'),(126,'fileStage','2','int'),(126,'originalFileName','Hansen & Pinto: Reason Reclaimed.pdf','string'),(126,'sourceSubmissionFileId',NULL,'string'),(126,'submissionFileId','12','int'),(126,'submissionId','9','int'),(126,'username','fpaglieri','string'),(127,'fileId','10','int'),(127,'fileStage','2','int'),(127,'name','Hansen & Pinto: Reason Reclaimed.pdf','string'),(127,'originalFileName','Hansen & Pinto: Reason Reclaimed.pdf','string'),(127,'sourceSubmissionFileId',NULL,'string'),(127,'submissionFileId','12','int'),(127,'submissionId','9','int'),(127,'username','fpaglieri','string'),(130,'decision','Send to Review','string'),(130,'editorName','Daniel Barnes','string'),(130,'submissionId','9','int'),(131,'reviewAssignmentId','13','string'),(131,'reviewerName','Julie Janssen','string'),(131,'round','1','int'),(131,'stageId','3','int'),(131,'submissionId','9','int'),(132,'reviewAssignmentId','14','string'),(132,'reviewerName','Adela Gallego','string'),(132,'round','1','int'),(132,'stageId','3','int'),(132,'submissionId','9','int'),(133,'decision','Accept Submission','string'),(133,'editorName','Daniel Barnes','string'),(133,'submissionId','9','int'),(134,'name','Sarah Vogt','string'),(134,'userGroupName','Copyeditor','string'),(134,'username','svogt','string'),(135,'decision','Send To Production','string'),(135,'editorName','Daniel Barnes','string'),(135,'submissionId','9','int'),(136,'name','Stephen Hellier','string'),(136,'userGroupName','Layout Editor','string'),(136,'username','shellier','string'),(137,'name','Sabine Kumar','string'),(137,'userGroupName','Proofreader','string'),(137,'username','skumar','string'),(139,'fileId','11','int'),(139,'fileStage','2','int'),(139,'originalFileName','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(139,'sourceSubmissionFileId',NULL,'string'),(139,'submissionFileId','13','int'),(139,'submissionId','10','int'),(139,'username','jnovak','string'),(140,'fileId','11','int'),(140,'fileStage','2','int'),(140,'name','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(140,'submissionFileId','13','int'),(140,'submissionId','10','int'),(140,'username','jnovak','string'),(141,'fileId','11','int'),(141,'fileStage','2','int'),(141,'originalFileName','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(141,'sourceSubmissionFileId',NULL,'string'),(141,'submissionFileId','13','int'),(141,'submissionId','10','int'),(141,'username','jnovak','string'),(142,'fileId','11','int'),(142,'fileStage','2','int'),(142,'name','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(142,'originalFileName','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(142,'sourceSubmissionFileId',NULL,'string'),(142,'submissionFileId','13','int'),(142,'submissionId','10','int'),(142,'username','jnovak','string'),(145,'decision','Send to Review','string'),(145,'editorName','Daniel Barnes','string'),(145,'submissionId','10','int'),(146,'fileId','11','int'),(146,'fileStage','4','int'),(146,'originalFileName','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(146,'sourceSubmissionFileId','13','int'),(146,'submissionFileId','14','int'),(146,'submissionId','10','int'),(146,'username','dbarnes','string'),(147,'fileId','11','int'),(147,'fileStage','4','int'),(147,'name','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(147,'submissionFileId','14','int'),(147,'submissionId','10','int'),(147,'username','dbarnes','string'),(148,'reviewAssignmentId','15','string'),(148,'reviewerName','Aisla McCrae','string'),(148,'round','1','int'),(148,'stageId','3','int'),(148,'submissionId','10','int'),(149,'reviewAssignmentId','16','string'),(149,'reviewerName','Adela Gallego','string'),(149,'round','1','int'),(149,'stageId','3','int'),(149,'submissionId','10','int'),(150,'reviewAssignmentId','15','int'),(150,'reviewerName','Aisla McCrae','string'),(150,'round','1','int'),(150,'submissionId','10','int'),(151,'reviewAssignmentId','15','int'),(151,'reviewerName','Aisla McCrae','string'),(151,'round','1','int'),(151,'submissionId','10','int'),(152,'reviewAssignmentId','16','int'),(152,'reviewerName','Adela Gallego','string'),(152,'round','1','int'),(152,'submissionId','10','int'),(153,'reviewAssignmentId','16','int'),(153,'reviewerName','Adela Gallego','string'),(153,'round','1','int'),(153,'submissionId','10','int'),(155,'fileId','12','int'),(155,'fileStage','2','int'),(155,'originalFileName','Learning Sustainable Design through Service.pdf','string'),(155,'sourceSubmissionFileId',NULL,'string'),(155,'submissionFileId','15','int'),(155,'submissionId','11','int'),(155,'username','kalkhafaji','string'),(156,'fileId','12','int'),(156,'fileStage','2','int'),(156,'name','Learning Sustainable Design through Service.pdf','string'),(156,'submissionFileId','15','int'),(156,'submissionId','11','int'),(156,'username','kalkhafaji','string'),(157,'fileId','12','int'),(157,'fileStage','2','int'),(157,'originalFileName','Learning Sustainable Design through Service.pdf','string'),(157,'sourceSubmissionFileId',NULL,'string'),(157,'submissionFileId','15','int'),(157,'submissionId','11','int'),(157,'username','kalkhafaji','string'),(158,'fileId','12','int'),(158,'fileStage','2','int'),(158,'name','Learning Sustainable Design through Service.pdf','string'),(158,'originalFileName','Learning Sustainable Design through Service.pdf','string'),(158,'sourceSubmissionFileId',NULL,'string'),(158,'submissionFileId','15','int'),(158,'submissionId','11','int'),(158,'username','kalkhafaji','string'),(162,'fileId','13','int'),(162,'fileStage','2','int'),(162,'originalFileName','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(162,'sourceSubmissionFileId',NULL,'string'),(162,'submissionFileId','16','int'),(162,'submissionId','12','int'),(162,'username','lchristopher','string'),(163,'fileId','13','int'),(163,'fileStage','2','int'),(163,'name','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(163,'submissionFileId','16','int'),(163,'submissionId','12','int'),(163,'username','lchristopher','string'),(164,'fileId','13','int'),(164,'fileStage','2','int'),(164,'originalFileName','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(164,'sourceSubmissionFileId',NULL,'string'),(164,'submissionFileId','16','int'),(164,'submissionId','12','int'),(164,'username','lchristopher','string'),(165,'fileId','13','int'),(165,'fileStage','2','int'),(165,'name','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(165,'originalFileName','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(165,'sourceSubmissionFileId',NULL,'string'),(165,'submissionFileId','16','int'),(165,'submissionId','12','int'),(165,'username','lchristopher','string'),(168,'decision','Send to Review','string'),(168,'editorName','Daniel Barnes','string'),(168,'submissionId','12','int'),(169,'fileId','13','int'),(169,'fileStage','4','int'),(169,'originalFileName','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(169,'sourceSubmissionFileId','16','int'),(169,'submissionFileId','17','int'),(169,'submissionId','12','int'),(169,'username','dbarnes','string'),(170,'fileId','13','int'),(170,'fileStage','4','int'),(170,'name','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(170,'submissionFileId','17','int'),(170,'submissionId','12','int'),(170,'username','dbarnes','string'),(171,'reviewAssignmentId','17','string'),(171,'reviewerName','Julie Janssen','string'),(171,'round','1','int'),(171,'stageId','3','int'),(171,'submissionId','12','int'),(172,'reviewAssignmentId','18','string'),(172,'reviewerName','Paul Hudson','string'),(172,'round','1','int'),(172,'stageId','3','int'),(172,'submissionId','12','int'),(174,'fileId','14','int'),(174,'fileStage','2','int'),(174,'originalFileName','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(174,'sourceSubmissionFileId',NULL,'string'),(174,'submissionFileId','18','int'),(174,'submissionId','13','int'),(174,'username','lkumiega','string'),(175,'fileId','14','int'),(175,'fileStage','2','int'),(175,'name','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(175,'submissionFileId','18','int'),(175,'submissionId','13','int'),(175,'username','lkumiega','string'),(176,'fileId','14','int'),(176,'fileStage','2','int'),(176,'originalFileName','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(176,'sourceSubmissionFileId',NULL,'string'),(176,'submissionFileId','18','int'),(176,'submissionId','13','int'),(176,'username','lkumiega','string'),(177,'fileId','14','int'),(177,'fileStage','2','int'),(177,'name','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(177,'originalFileName','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(177,'sourceSubmissionFileId',NULL,'string'),(177,'submissionFileId','18','int'),(177,'submissionId','13','int'),(177,'username','lkumiega','string'),(180,'decision','Send to Review','string'),(180,'editorName','Daniel Barnes','string'),(180,'submissionId','13','int'),(181,'fileId','14','int'),(181,'fileStage','4','int'),(181,'originalFileName','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(181,'sourceSubmissionFileId','18','int'),(181,'submissionFileId','19','int'),(181,'submissionId','13','int'),(181,'username','dbarnes','string'),(182,'fileId','14','int'),(182,'fileStage','4','int'),(182,'name','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(182,'submissionFileId','19','int'),(182,'submissionId','13','int'),(182,'username','dbarnes','string'),(183,'reviewAssignmentId','19','string'),(183,'reviewerName','Julie Janssen','string'),(183,'round','1','int'),(183,'stageId','3','int'),(183,'submissionId','13','int'),(184,'reviewAssignmentId','20','string'),(184,'reviewerName','Aisla McCrae','string'),(184,'round','1','int'),(184,'stageId','3','int'),(184,'submissionId','13','int'),(185,'reviewAssignmentId','21','string'),(185,'reviewerName','Adela Gallego','string'),(185,'round','1','int'),(185,'stageId','3','int'),(185,'submissionId','13','int'),(186,'reviewAssignmentId','19','int'),(186,'reviewerName','Julie Janssen','string'),(186,'round','1','int'),(186,'submissionId','13','int'),(187,'reviewAssignmentId','19','int'),(187,'reviewerName','Julie Janssen','string'),(187,'round','1','int'),(187,'submissionId','13','int'),(188,'reviewAssignmentId','20','int'),(188,'reviewerName','Aisla McCrae','string'),(188,'round','1','int'),(188,'submissionId','13','int'),(189,'reviewAssignmentId','20','int'),(189,'reviewerName','Aisla McCrae','string'),(189,'round','1','int'),(189,'submissionId','13','int'),(190,'reviewAssignmentId','21','int'),(190,'reviewerName','Adela Gallego','string'),(190,'round','1','int'),(190,'submissionId','13','int'),(191,'reviewAssignmentId','21','int'),(191,'reviewerName','Adela Gallego','string'),(191,'round','1','int'),(191,'submissionId','13','int'),(192,'decision','Request Revisions','string'),(192,'editorName','Daniel Barnes','string'),(192,'submissionId','13','int'),(194,'fileId','15','int'),(194,'fileStage','2','int'),(194,'originalFileName','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(194,'sourceSubmissionFileId',NULL,'string'),(194,'submissionFileId','20','int'),(194,'submissionId','14','int'),(194,'username','pdaniel','string'),(195,'fileId','15','int'),(195,'fileStage','2','int'),(195,'name','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(195,'submissionFileId','20','int'),(195,'submissionId','14','int'),(195,'username','pdaniel','string'),(196,'fileId','15','int'),(196,'fileStage','2','int'),(196,'originalFileName','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(196,'sourceSubmissionFileId',NULL,'string'),(196,'submissionFileId','20','int'),(196,'submissionId','14','int'),(196,'username','pdaniel','string'),(197,'fileId','15','int'),(197,'fileStage','2','int'),(197,'name','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(197,'originalFileName','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(197,'sourceSubmissionFileId',NULL,'string'),(197,'submissionFileId','20','int'),(197,'submissionId','14','int'),(197,'username','pdaniel','string'),(201,'fileId','16','int'),(201,'fileStage','2','int'),(201,'originalFileName','Yam diseases and its management in Nigeria.pdf','string'),(201,'sourceSubmissionFileId',NULL,'string'),(201,'submissionFileId','21','int'),(201,'submissionId','15','int'),(201,'username','rbaiyewu','string'),(202,'fileId','16','int'),(202,'fileStage','2','int'),(202,'name','Yam diseases and its management in Nigeria.pdf','string'),(202,'submissionFileId','21','int'),(202,'submissionId','15','int'),(202,'username','rbaiyewu','string'),(203,'fileId','16','int'),(203,'fileStage','2','int'),(203,'originalFileName','Yam diseases and its management in Nigeria.pdf','string'),(203,'sourceSubmissionFileId',NULL,'string'),(203,'submissionFileId','21','int'),(203,'submissionId','15','int'),(203,'username','rbaiyewu','string'),(204,'fileId','16','int'),(204,'fileStage','2','int'),(204,'name','Yam diseases and its management in Nigeria.pdf','string'),(204,'originalFileName','Yam diseases and its management in Nigeria.pdf','string'),(204,'sourceSubmissionFileId',NULL,'string'),(204,'submissionFileId','21','int'),(204,'submissionId','15','int'),(204,'username','rbaiyewu','string'),(207,'decision','Send to Review','string'),(207,'editorName','Daniel Barnes','string'),(207,'submissionId','15','int'),(208,'fileId','16','int'),(208,'fileStage','4','int'),(208,'originalFileName','Yam diseases and its management in Nigeria.pdf','string'),(208,'sourceSubmissionFileId','21','int'),(208,'submissionFileId','22','int'),(208,'submissionId','15','int'),(208,'username','dbarnes','string'),(209,'fileId','16','int'),(209,'fileStage','4','int'),(209,'name','Yam diseases and its management in Nigeria.pdf','string'),(209,'submissionFileId','22','int'),(209,'submissionId','15','int'),(209,'username','dbarnes','string'),(210,'reviewAssignmentId','22','string'),(210,'reviewerName','Paul Hudson','string'),(210,'round','1','int'),(210,'stageId','3','int'),(210,'submissionId','15','int'),(211,'reviewAssignmentId','23','string'),(211,'reviewerName','Aisla McCrae','string'),(211,'round','1','int'),(211,'stageId','3','int'),(211,'submissionId','15','int'),(212,'decision','Accept Submission','string'),(212,'editorName','Daniel Barnes','string'),(212,'submissionId','15','int'),(213,'name','Sarah Vogt','string'),(213,'userGroupName','Copyeditor','string'),(213,'username','svogt','string'),(214,'decision','Send To Production','string'),(214,'editorName','Daniel Barnes','string'),(214,'submissionId','15','int'),(215,'name','Stephen Hellier','string'),(215,'userGroupName','Layout Editor','string'),(215,'username','shellier','string'),(217,'fileId','17','int'),(217,'fileStage','2','int'),(217,'originalFileName','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(217,'sourceSubmissionFileId',NULL,'string'),(217,'submissionFileId','23','int'),(217,'submissionId','16','int'),(217,'username','rrossi','string'),(218,'fileId','17','int'),(218,'fileStage','2','int'),(218,'name','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(218,'submissionFileId','23','int'),(218,'submissionId','16','int'),(218,'username','rrossi','string'),(219,'fileId','17','int'),(219,'fileStage','2','int'),(219,'originalFileName','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(219,'sourceSubmissionFileId',NULL,'string'),(219,'submissionFileId','23','int'),(219,'submissionId','16','int'),(219,'username','rrossi','string'),(220,'fileId','17','int'),(220,'fileStage','2','int'),(220,'name','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(220,'originalFileName','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(220,'sourceSubmissionFileId',NULL,'string'),(220,'submissionFileId','23','int'),(220,'submissionId','16','int'),(220,'username','rrossi','string'),(224,'fileId','18','int'),(224,'fileStage','2','int'),(224,'originalFileName','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(224,'sourceSubmissionFileId',NULL,'string'),(224,'submissionFileId','24','int'),(224,'submissionId','17','int'),(224,'username','vkarbasizaed','string'),(225,'fileId','18','int'),(225,'fileStage','2','int'),(225,'name','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(225,'submissionFileId','24','int'),(225,'submissionId','17','int'),(225,'username','vkarbasizaed','string'),(226,'fileId','18','int'),(226,'fileStage','2','int'),(226,'originalFileName','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(226,'sourceSubmissionFileId',NULL,'string'),(226,'submissionFileId','24','int'),(226,'submissionId','17','int'),(226,'username','vkarbasizaed','string'),(227,'fileId','18','int'),(227,'fileStage','2','int'),(227,'name','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(227,'originalFileName','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(227,'sourceSubmissionFileId',NULL,'string'),(227,'submissionFileId','24','int'),(227,'submissionId','17','int'),(227,'username','vkarbasizaed','string'),(230,'decision','Send to Review','string'),(230,'editorName','Daniel Barnes','string'),(230,'submissionId','17','int'),(231,'reviewAssignmentId','24','string'),(231,'reviewerName','Julie Janssen','string'),(231,'round','1','int'),(231,'stageId','3','int'),(231,'submissionId','17','int'),(232,'reviewAssignmentId','25','string'),(232,'reviewerName','Paul Hudson','string'),(232,'round','1','int'),(232,'stageId','3','int'),(232,'submissionId','17','int'),(233,'decision','Accept Submission','string'),(233,'editorName','Daniel Barnes','string'),(233,'submissionId','17','int'),(234,'name','Maria Fritz','string'),(234,'userGroupName','Copyeditor','string'),(234,'username','mfritz','string'),(235,'decision','Send To Production','string'),(235,'editorName','Daniel Barnes','string'),(235,'submissionId','17','int'),(236,'name','Graham Cox','string'),(236,'userGroupName','Layout Editor','string'),(236,'username','gcox','string'),(237,'name','Catherine Turner','string'),(237,'userGroupName','Proofreader','string'),(237,'username','cturner','string'),(238,'fileId','19','int'),(238,'fileStage','10','int'),(238,'originalFileName','article.pdf','string'),(238,'sourceSubmissionFileId',NULL,'string'),(238,'submissionFileId','25','int'),(238,'submissionId','17','int'),(238,'username','dbarnes','string'),(239,'fileId','19','int'),(239,'fileStage','10','int'),(239,'name','article.pdf','string'),(239,'submissionFileId','25','int'),(239,'submissionId','17','int'),(239,'username','dbarnes','string'),(240,'fileId','19','int'),(240,'fileStage','10','int'),(240,'originalFileName','article.pdf','string'),(240,'sourceSubmissionFileId',NULL,'string'),(240,'submissionFileId','25','int'),(240,'submissionId','17','int'),(240,'username','dbarnes','string'),(241,'fileId','19','int'),(241,'fileStage','10','int'),(241,'name','article.pdf','string'),(241,'originalFileName','article.pdf','string'),(241,'sourceSubmissionFileId',NULL,'string'),(241,'submissionFileId','25','int'),(241,'submissionId','17','int'),(241,'username','dbarnes','string'),(253,'fileId','20','int'),(253,'fileStage','2','int'),(253,'originalFileName','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(253,'sourceSubmissionFileId',NULL,'string'),(253,'submissionFileId','26','int'),(253,'submissionId','18','int'),(253,'username','vwilliamson','string'),(254,'fileId','20','int'),(254,'fileStage','2','int'),(254,'name','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(254,'submissionFileId','26','int'),(254,'submissionId','18','int'),(254,'username','vwilliamson','string'),(255,'fileId','20','int'),(255,'fileStage','2','int'),(255,'originalFileName','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(255,'sourceSubmissionFileId',NULL,'string'),(255,'submissionFileId','26','int'),(255,'submissionId','18','int'),(255,'username','vwilliamson','string'),(256,'fileId','20','int'),(256,'fileStage','2','int'),(256,'name','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(256,'originalFileName','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(256,'sourceSubmissionFileId',NULL,'string'),(256,'submissionFileId','26','int'),(256,'submissionId','18','int'),(256,'username','vwilliamson','string'),(259,'decision','Decline Submission','string'),(259,'editorName','Daniel Barnes','string'),(259,'submissionId','18','int'),(261,'fileId','21','int'),(261,'fileStage','2','int'),(261,'originalFileName','Finocchiaro: Arguments About Arguments.pdf','string'),(261,'sourceSubmissionFileId',NULL,'string'),(261,'submissionFileId','27','int'),(261,'submissionId','19','int'),(261,'username','zwoods','string'),(262,'fileId','21','int'),(262,'fileStage','2','int'),(262,'name','Finocchiaro: Arguments About Arguments.pdf','string'),(262,'submissionFileId','27','int'),(262,'submissionId','19','int'),(262,'username','zwoods','string'),(263,'fileId','21','int'),(263,'fileStage','2','int'),(263,'originalFileName','Finocchiaro: Arguments About Arguments.pdf','string'),(263,'sourceSubmissionFileId',NULL,'string'),(263,'submissionFileId','27','int'),(263,'submissionId','19','int'),(263,'username','zwoods','string'),(264,'fileId','21','int'),(264,'fileStage','2','int'),(264,'name','Finocchiaro: Arguments About Arguments.pdf','string'),(264,'originalFileName','Finocchiaro: Arguments About Arguments.pdf','string'),(264,'sourceSubmissionFileId',NULL,'string'),(264,'submissionFileId','27','int'),(264,'submissionId','19','int'),(264,'username','zwoods','string'),(267,'decision','Send to Review','string'),(267,'editorName','Daniel Barnes','string'),(267,'submissionId','19','int'),(268,'fileId','21','int'),(268,'fileStage','4','int'),(268,'originalFileName','Finocchiaro: Arguments About Arguments.pdf','string'),(268,'sourceSubmissionFileId','27','int'),(268,'submissionFileId','28','int'),(268,'submissionId','19','int'),(268,'username','dbarnes','string'),(269,'fileId','21','int'),(269,'fileStage','4','int'),(269,'name','Finocchiaro: Arguments About Arguments.pdf','string'),(269,'submissionFileId','28','int'),(269,'submissionId','19','int'),(269,'username','dbarnes','string'),(270,'reviewAssignmentId','26','string'),(270,'reviewerName','Paul Hudson','string'),(270,'round','1','int'),(270,'stageId','3','int'),(270,'submissionId','19','int'),(271,'reviewAssignmentId','27','string'),(271,'reviewerName','Aisla McCrae','string'),(271,'round','1','int'),(271,'stageId','3','int'),(271,'submissionId','19','int'),(272,'decision','Accept Submission','string'),(272,'editorName','Daniel Barnes','string'),(272,'submissionId','19','int'),(273,'name','Sarah Vogt','string'),(273,'userGroupName','Copyeditor','string'),(273,'username','svogt','string');
 /*!40000 ALTER TABLE `event_log_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -844,13 +844,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `files` (
-  `file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `file_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `path` varchar(255) NOT NULL,
   `mimetype` varchar(255) NOT NULL,
   PRIMARY KEY (`file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -859,7 +859,7 @@ CREATE TABLE `files` (
 
 LOCK TABLES `files` WRITE;
 /*!40000 ALTER TABLE `files` DISABLE KEYS */;
-INSERT INTO `files` VALUES (1,'journals/1/articles/1/642b484120cde.pdf','application/pdf'),(2,'journals/1/articles/1/642b488321bd6.pdf','application/pdf'),(3,'journals/1/articles/2/642b48db30d57.pdf','application/pdf'),(4,'journals/1/articles/3/642b48ff6e2a2.pdf','application/pdf'),(5,'journals/1/articles/4/642b4922d02e4.pdf','application/pdf'),(6,'journals/1/articles/5/642b493183adc.pdf','application/pdf'),(7,'journals/1/articles/6/642b495f21d38.pdf','application/pdf'),(8,'journals/1/articles/7/642b498a51323.pdf','application/pdf'),(9,'journals/1/articles/8/642b49b273047.pdf','application/pdf'),(10,'journals/1/articles/9/642b49c10208a.pdf','application/pdf'),(11,'journals/1/articles/10/642b49ef11f67.pdf','application/pdf'),(12,'journals/1/articles/11/642b4a1bca590.pdf','application/pdf'),(13,'journals/1/articles/12/642b4a2a188d5.pdf','application/pdf'),(14,'journals/1/articles/13/642b4a459f051.pdf','application/pdf'),(15,'journals/1/articles/14/642b4a8b69915.pdf','application/pdf'),(16,'journals/1/articles/15/642b4a9749b18.pdf','application/pdf'),(17,'journals/1/articles/16/642b4ac208291.pdf','application/pdf'),(18,'journals/1/articles/17/642b4acf2046d.pdf','application/pdf'),(19,'journals/1/articles/17/642b4afba4a04.pdf','application/pdf'),(20,'journals/1/articles/18/642b4b3a0d5ea.pdf','application/pdf'),(21,'journals/1/articles/19/642b4b4e6655f.pdf','application/pdf');
+INSERT INTO `files` VALUES (1,'journals/1/articles/1/642c8b3a37f8f.pdf','application/pdf'),(2,'journals/1/articles/1/642c8b7fb32d2.pdf','application/pdf'),(3,'journals/1/articles/2/642c8bdde6599.pdf','application/pdf'),(4,'journals/1/articles/3/642c8c04023b1.pdf','application/pdf'),(5,'journals/1/articles/4/642c8c29f181b.pdf','application/pdf'),(6,'journals/1/articles/5/642c8c39b1756.pdf','application/pdf'),(7,'journals/1/articles/6/642c8c6badac6.pdf','application/pdf'),(8,'journals/1/articles/7/642c8c99e9f04.pdf','application/pdf'),(9,'journals/1/articles/8/642c8cc545a9c.pdf','application/pdf'),(10,'journals/1/articles/9/642c8cd4e9e7a.pdf','application/pdf'),(11,'journals/1/articles/10/642c8d08dd318.pdf','application/pdf'),(12,'journals/1/articles/11/642c8d3972c23.pdf','application/pdf'),(13,'journals/1/articles/12/642c8d495eb7b.pdf','application/pdf'),(14,'journals/1/articles/13/642c8d68ae6cf.pdf','application/pdf'),(15,'journals/1/articles/14/642c8db4154a4.pdf','application/pdf'),(16,'journals/1/articles/15/642c8dc1021a0.pdf','application/pdf'),(17,'journals/1/articles/16/642c8def4c91f.pdf','application/pdf'),(18,'journals/1/articles/17/642c8dfbd3fd9.pdf','application/pdf'),(19,'journals/1/articles/17/642c8e2b829bc.pdf','application/pdf'),(20,'journals/1/articles/18/642c8e70eb624.pdf','application/pdf'),(21,'journals/1/articles/19/642c8e870fe6b.pdf','application/pdf');
 /*!40000 ALTER TABLE `files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -869,9 +869,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filter_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filter_groups` (
-  `filter_group_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `filter_group_id` bigint NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(255) DEFAULT NULL,
   `display_name` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
@@ -879,7 +879,7 @@ CREATE TABLE `filter_groups` (
   `output_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`filter_group_id`),
   UNIQUE KEY `filter_groups_symbolic` (`symbolic`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -888,7 +888,7 @@ CREATE TABLE `filter_groups` (
 
 LOCK TABLES `filter_groups` WRITE;
 /*!40000 ALTER TABLE `filter_groups` DISABLE KEYS */;
-INSERT INTO `filter_groups` VALUES (1,'article=>dc11','plugins.metadata.dc11.articleAdapter.displayName','plugins.metadata.dc11.articleAdapter.description','class::classes.submission.Submission','metadata::plugins.metadata.dc11.schema.Dc11Schema(ARTICLE)'),(2,'article=>doaj-xml','plugins.importexport.doaj.displayName','plugins.importexport.doaj.description','class::classes.submission.Submission[]','xml::schema(plugins/importexport/doaj/doajArticles.xsd)'),(3,'article=>doaj-json','plugins.importexport.doaj.displayName','plugins.importexport.doaj.description','class::classes.submission.Submission','primitive::string'),(4,'issue=>datacite-xml','plugins.importexport.datacite.displayName','plugins.importexport.datacite.description','class::classes.issue.Issue','xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)'),(5,'article=>datacite-xml','plugins.importexport.datacite.displayName','plugins.importexport.datacite.description','class::classes.submission.Submission','xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)'),(6,'galley=>datacite-xml','plugins.importexport.datacite.displayName','plugins.importexport.datacite.description','class::classes.article.ArticleGalley','xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)'),(7,'user=>user-xml','plugins.importexport.users.displayName','plugins.importexport.users.description','class::lib.pkp.classes.user.User[]','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)'),(8,'user-xml=>user','plugins.importexport.users.displayName','plugins.importexport.users.description','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)','class::classes.users.User[]'),(9,'usergroup=>user-xml','plugins.importexport.users.displayName','plugins.importexport.users.description','class::lib.pkp.classes.security.UserGroup[]','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)'),(10,'user-xml=>usergroup','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)','class::lib.pkp.classes.security.UserGroup[]'),(11,'issue=>crossref-xml','plugins.importexport.crossref.displayName','plugins.importexport.crossref.description','class::classes.issue.Issue[]','xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)'),(12,'article=>crossref-xml','plugins.importexport.crossref.displayName','plugins.importexport.crossref.description','class::classes.submission.Submission[]','xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)'),(13,'article=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.submission.Submission[]','xml::schema(plugins/importexport/native/native.xsd)'),(14,'native-xml=>article','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.submission.Submission[]'),(15,'issue=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.issue.Issue[]','xml::schema(plugins/importexport/native/native.xsd)'),(16,'native-xml=>issue','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.issue.Issue[]'),(17,'issuegalley=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.issue.IssueGalley[]','xml::schema(plugins/importexport/native/native.xsd)'),(18,'native-xml=>issuegalley','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.issue.IssueGalley[]'),(19,'author=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.article.Author[]','xml::schema(plugins/importexport/native/native.xsd)'),(20,'native-xml=>author','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.article.Author[]'),(21,'SubmissionFile=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::lib.pkp.classes.submission.SubmissionFile','xml::schema(plugins/importexport/native/native.xsd)'),(22,'native-xml=>SubmissionFile','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::lib.pkp.classes.submission.SubmissionFile'),(23,'article-galley=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.article.ArticleGalley','xml::schema(plugins/importexport/native/native.xsd)'),(24,'native-xml=>ArticleGalley','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.article.ArticleGalley[]'),(25,'publication=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.publication.Publication','xml::schema(plugins/importexport/native/native.xsd)'),(26,'native-xml=>Publication','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.publication.Publication'),(27,'article=>pubmed-xml','plugins.importexport.pubmed.displayName','plugins.importexport.pubmed.description','class::classes.submission.Submission[]','xml::dtd');
+INSERT INTO `filter_groups` VALUES (1,'article=>dc11','plugins.metadata.dc11.articleAdapter.displayName','plugins.metadata.dc11.articleAdapter.description','class::classes.submission.Submission','metadata::plugins.metadata.dc11.schema.Dc11Schema(ARTICLE)'),(2,'user=>user-xml','plugins.importexport.users.displayName','plugins.importexport.users.description','class::lib.pkp.classes.user.User[]','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)'),(3,'user-xml=>user','plugins.importexport.users.displayName','plugins.importexport.users.description','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)','class::classes.users.User[]'),(4,'usergroup=>user-xml','plugins.importexport.users.displayName','plugins.importexport.users.description','class::lib.pkp.classes.security.UserGroup[]','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)'),(5,'user-xml=>usergroup','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)','class::lib.pkp.classes.security.UserGroup[]'),(6,'issue=>crossref-xml','plugins.importexport.crossref.displayName','plugins.importexport.crossref.description','class::classes.issue.Issue[]','xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)'),(7,'article=>crossref-xml','plugins.importexport.crossref.displayName','plugins.importexport.crossref.description','class::classes.submission.Submission[]','xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)'),(8,'article=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.submission.Submission[]','xml::schema(plugins/importexport/native/native.xsd)'),(9,'native-xml=>article','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.submission.Submission[]'),(10,'issue=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.issue.Issue[]','xml::schema(plugins/importexport/native/native.xsd)'),(11,'native-xml=>issue','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.issue.Issue[]'),(12,'issuegalley=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.issue.IssueGalley[]','xml::schema(plugins/importexport/native/native.xsd)'),(13,'native-xml=>issuegalley','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.issue.IssueGalley[]'),(14,'author=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.article.Author[]','xml::schema(plugins/importexport/native/native.xsd)'),(15,'native-xml=>author','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.article.Author[]'),(16,'SubmissionFile=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::lib.pkp.classes.submission.SubmissionFile','xml::schema(plugins/importexport/native/native.xsd)'),(17,'native-xml=>SubmissionFile','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::lib.pkp.classes.submission.SubmissionFile'),(18,'article-galley=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.article.ArticleGalley','xml::schema(plugins/importexport/native/native.xsd)'),(19,'native-xml=>ArticleGalley','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.article.ArticleGalley[]'),(20,'publication=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.publication.Publication','xml::schema(plugins/importexport/native/native.xsd)'),(21,'native-xml=>Publication','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.publication.Publication'),(22,'article=>pubmed-xml','plugins.importexport.pubmed.displayName','plugins.importexport.pubmed.description','class::classes.submission.Submission[]','xml::dtd'),(23,'article=>doaj-xml','plugins.importexport.doaj.displayName','plugins.importexport.doaj.description','class::classes.submission.Submission[]','xml::schema(plugins/importexport/doaj/doajArticles.xsd)'),(24,'article=>doaj-json','plugins.importexport.doaj.displayName','plugins.importexport.doaj.description','class::classes.submission.Submission','primitive::string'),(25,'issue=>datacite-xml','plugins.importexport.datacite.displayName','plugins.importexport.datacite.description','class::classes.issue.Issue','xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)'),(26,'article=>datacite-xml','plugins.importexport.datacite.displayName','plugins.importexport.datacite.description','class::classes.submission.Submission','xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)'),(27,'galley=>datacite-xml','plugins.importexport.datacite.displayName','plugins.importexport.datacite.description','class::classes.article.ArticleGalley','xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)');
 /*!40000 ALTER TABLE `filter_groups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -898,16 +898,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filter_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filter_settings` (
-  `filter_id` bigint(20) NOT NULL,
+  `filter_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `filter_settings_pkey` (`filter_id`,`locale`,`setting_name`),
   KEY `filter_settings_id` (`filter_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -925,18 +925,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filters`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filters` (
-  `filter_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `filter_group_id` bigint(20) NOT NULL DEFAULT '0',
-  `context_id` bigint(20) NOT NULL DEFAULT '0',
+  `filter_id` bigint NOT NULL AUTO_INCREMENT,
+  `filter_group_id` bigint NOT NULL DEFAULT '0',
+  `context_id` bigint NOT NULL DEFAULT '0',
   `display_name` varchar(255) DEFAULT NULL,
   `class_name` varchar(255) DEFAULT NULL,
-  `is_template` smallint(6) NOT NULL DEFAULT '0',
-  `parent_filter_id` bigint(20) NOT NULL DEFAULT '0',
-  `seq` bigint(20) NOT NULL DEFAULT '0',
+  `is_template` smallint NOT NULL DEFAULT '0',
+  `parent_filter_id` bigint NOT NULL DEFAULT '0',
+  `seq` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`filter_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -945,7 +945,7 @@ CREATE TABLE `filters` (
 
 LOCK TABLES `filters` WRITE;
 /*!40000 ALTER TABLE `filters` DISABLE KEYS */;
-INSERT INTO `filters` VALUES (1,1,0,'Extract metadata from a(n) Submission','plugins.metadata.dc11.filter.Dc11SchemaArticleAdapter',0,0,0),(2,2,0,'DOAJ XML export','plugins.importexport.doaj.filter.DOAJXmlFilter',0,0,0),(3,3,0,'DOAJ JSON export','plugins.importexport.doaj.filter.DOAJJsonFilter',0,0,0),(4,4,0,'DataCite XML export','plugins.importexport.datacite.filter.DataciteXmlFilter',0,0,0),(5,5,0,'DataCite XML export','plugins.importexport.datacite.filter.DataciteXmlFilter',0,0,0),(6,6,0,'DataCite XML export','plugins.importexport.datacite.filter.DataciteXmlFilter',0,0,0),(7,7,0,'User XML user export','lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter',0,0,0),(8,8,0,'User XML user import','lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter',0,0,0),(9,9,0,'Native XML user group export','lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter',0,0,0),(10,10,0,'Native XML user group import','lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter',0,0,0),(11,11,0,'Crossref XML issue export','plugins.importexport.crossref.filter.IssueCrossrefXmlFilter',0,0,0),(12,12,0,'Crossref XML issue export','plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter',0,0,0),(13,13,0,'Native XML submission export','plugins.importexport.native.filter.ArticleNativeXmlFilter',0,0,0),(14,14,0,'Native XML submission import','plugins.importexport.native.filter.NativeXmlArticleFilter',0,0,0),(15,15,0,'Native XML issue export','plugins.importexport.native.filter.IssueNativeXmlFilter',0,0,0),(16,16,0,'Native XML issue import','plugins.importexport.native.filter.NativeXmlIssueFilter',0,0,0),(17,17,0,'Native XML issue galley export','plugins.importexport.native.filter.IssueGalleyNativeXmlFilter',0,0,0),(18,18,0,'Native XML issue galley import','plugins.importexport.native.filter.NativeXmlIssueGalleyFilter',0,0,0),(19,19,0,'Native XML author export','plugins.importexport.native.filter.AuthorNativeXmlFilter',0,0,0),(20,20,0,'Native XML author import','plugins.importexport.native.filter.NativeXmlAuthorFilter',0,0,0),(21,22,0,'Native XML submission file import','plugins.importexport.native.filter.NativeXmlArticleFileFilter',0,0,0),(22,21,0,'Native XML submission file export','lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter',0,0,0),(23,23,0,'Native XML representation export','plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter',0,0,0),(24,24,0,'Native XML representation import','plugins.importexport.native.filter.NativeXmlArticleGalleyFilter',0,0,0),(25,25,0,'Native XML Publication export','plugins.importexport.native.filter.PublicationNativeXmlFilter',0,0,0),(26,26,0,'Native XML publication import','plugins.importexport.native.filter.NativeXmlPublicationFilter',0,0,0),(27,27,0,'ArticlePubMedXmlFilter','plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter',0,0,0);
+INSERT INTO `filters` VALUES (1,1,0,'Extract metadata from a(n) Submission','plugins.metadata.dc11.filter.Dc11SchemaArticleAdapter',0,0,0),(2,2,0,'User XML user export','lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter',0,0,0),(3,3,0,'User XML user import','lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter',0,0,0),(4,4,0,'Native XML user group export','lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter',0,0,0),(5,5,0,'Native XML user group import','lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter',0,0,0),(6,6,0,'Crossref XML issue export','plugins.importexport.crossref.filter.IssueCrossrefXmlFilter',0,0,0),(7,7,0,'Crossref XML issue export','plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter',0,0,0),(8,8,0,'Native XML submission export','plugins.importexport.native.filter.ArticleNativeXmlFilter',0,0,0),(9,9,0,'Native XML submission import','plugins.importexport.native.filter.NativeXmlArticleFilter',0,0,0),(10,10,0,'Native XML issue export','plugins.importexport.native.filter.IssueNativeXmlFilter',0,0,0),(11,11,0,'Native XML issue import','plugins.importexport.native.filter.NativeXmlIssueFilter',0,0,0),(12,12,0,'Native XML issue galley export','plugins.importexport.native.filter.IssueGalleyNativeXmlFilter',0,0,0),(13,13,0,'Native XML issue galley import','plugins.importexport.native.filter.NativeXmlIssueGalleyFilter',0,0,0),(14,14,0,'Native XML author export','plugins.importexport.native.filter.AuthorNativeXmlFilter',0,0,0),(15,15,0,'Native XML author import','plugins.importexport.native.filter.NativeXmlAuthorFilter',0,0,0),(16,17,0,'Native XML submission file import','plugins.importexport.native.filter.NativeXmlArticleFileFilter',0,0,0),(17,16,0,'Native XML submission file export','lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter',0,0,0),(18,18,0,'Native XML representation export','plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter',0,0,0),(19,19,0,'Native XML representation import','plugins.importexport.native.filter.NativeXmlArticleGalleyFilter',0,0,0),(20,20,0,'Native XML Publication export','plugins.importexport.native.filter.PublicationNativeXmlFilter',0,0,0),(21,21,0,'Native XML publication import','plugins.importexport.native.filter.NativeXmlPublicationFilter',0,0,0),(22,22,0,'ArticlePubMedXmlFilter','plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter',0,0,0),(23,23,0,'DOAJ XML export','plugins.importexport.doaj.filter.DOAJXmlFilter',0,0,0),(24,24,0,'DOAJ JSON export','plugins.importexport.doaj.filter.DOAJJsonFilter',0,0,0),(25,25,0,'DataCite XML export','plugins.importexport.datacite.filter.DataciteXmlFilter',0,0,0),(26,26,0,'DataCite XML export','plugins.importexport.datacite.filter.DataciteXmlFilter',0,0,0),(27,27,0,'DataCite XML export','plugins.importexport.datacite.filter.DataciteXmlFilter',0,0,0);
 /*!40000 ALTER TABLE `filters` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -955,16 +955,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `genre_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `genre_settings` (
-  `genre_id` bigint(20) NOT NULL,
+  `genre_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `genre_settings_pkey` (`genre_id`,`locale`,`setting_name`),
   KEY `genre_settings_genre_id` (`genre_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -983,18 +983,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `genres`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `genres` (
-  `genre_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `seq` bigint(20) NOT NULL,
-  `enabled` smallint(6) NOT NULL DEFAULT '1',
-  `category` bigint(20) NOT NULL DEFAULT '1',
-  `dependent` smallint(6) NOT NULL DEFAULT '0',
-  `supplementary` smallint(6) NOT NULL DEFAULT '0',
+  `genre_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `seq` bigint NOT NULL,
+  `enabled` smallint NOT NULL DEFAULT '1',
+  `category` bigint NOT NULL DEFAULT '1',
+  `dependent` smallint NOT NULL DEFAULT '0',
+  `supplementary` smallint NOT NULL DEFAULT '0',
   `entry_key` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`genre_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1013,18 +1013,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `institutional_subscription_ip`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `institutional_subscription_ip` (
-  `institutional_subscription_ip_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `subscription_id` bigint(20) NOT NULL,
+  `institutional_subscription_ip_id` bigint NOT NULL AUTO_INCREMENT,
+  `subscription_id` bigint NOT NULL,
   `ip_string` varchar(40) NOT NULL,
-  `ip_start` bigint(20) NOT NULL,
-  `ip_end` bigint(20) DEFAULT NULL,
+  `ip_start` bigint NOT NULL,
+  `ip_end` bigint DEFAULT NULL,
   PRIMARY KEY (`institutional_subscription_ip_id`),
   KEY `institutional_subscription_ip_subscription_id` (`subscription_id`),
   KEY `institutional_subscription_ip_start` (`ip_start`),
   KEY `institutional_subscription_ip_end` (`ip_end`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1042,17 +1042,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `institutional_subscriptions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `institutional_subscriptions` (
-  `institutional_subscription_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `subscription_id` bigint(20) NOT NULL,
+  `institutional_subscription_id` bigint NOT NULL AUTO_INCREMENT,
+  `subscription_id` bigint NOT NULL,
   `institution_name` varchar(255) NOT NULL,
   `mailing_address` varchar(255) DEFAULT NULL,
   `domain` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`institutional_subscription_id`),
   KEY `institutional_subscriptions_subscription_id` (`subscription_id`),
   KEY `institutional_subscriptions_domain` (`domain`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1070,20 +1070,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `issue_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `issue_files` (
-  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `issue_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL AUTO_INCREMENT,
+  `issue_id` bigint NOT NULL,
   `file_name` varchar(90) NOT NULL,
   `file_type` varchar(255) NOT NULL,
-  `file_size` bigint(20) NOT NULL,
-  `content_type` bigint(20) NOT NULL,
+  `file_size` bigint NOT NULL,
+  `content_type` bigint NOT NULL,
   `original_file_name` varchar(127) DEFAULT NULL,
   `date_uploaded` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   PRIMARY KEY (`file_id`),
   KEY `issue_files_issue_id` (`issue_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1101,16 +1101,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `issue_galley_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `issue_galley_settings` (
-  `galley_id` bigint(20) NOT NULL,
+  `galley_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `issue_galley_settings_pkey` (`galley_id`,`locale`,`setting_name`),
   KEY `issue_galley_settings_galley_id` (`galley_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1128,19 +1128,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `issue_galleys`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `issue_galleys` (
-  `galley_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `galley_id` bigint NOT NULL AUTO_INCREMENT,
   `locale` varchar(14) DEFAULT NULL,
-  `issue_id` bigint(20) NOT NULL,
-  `file_id` bigint(20) NOT NULL,
+  `issue_id` bigint NOT NULL,
+  `file_id` bigint NOT NULL,
   `label` varchar(32) DEFAULT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   `url_path` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`galley_id`),
   KEY `issue_galleys_issue_id` (`issue_id`),
   KEY `issue_galleys_url_path` (`url_path`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1158,9 +1158,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `issue_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `issue_settings` (
-  `issue_id` bigint(20) NOT NULL,
+  `issue_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
@@ -1168,7 +1168,7 @@ CREATE TABLE `issue_settings` (
   UNIQUE KEY `issue_settings_pkey` (`issue_id`,`locale`,`setting_name`),
   KEY `issue_settings_issue_id` (`issue_id`),
   KEY `issue_settings_name_value` (`setting_name`(50),`setting_value`(150))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1187,31 +1187,31 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `issues`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `issues` (
-  `issue_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `journal_id` bigint(20) NOT NULL,
-  `volume` smallint(6) DEFAULT NULL,
+  `issue_id` bigint NOT NULL AUTO_INCREMENT,
+  `journal_id` bigint NOT NULL,
+  `volume` smallint DEFAULT NULL,
   `number` varchar(40) DEFAULT NULL,
-  `year` smallint(6) DEFAULT NULL,
-  `published` smallint(6) NOT NULL DEFAULT '0',
-  `current` smallint(6) NOT NULL DEFAULT '0',
+  `year` smallint DEFAULT NULL,
+  `published` smallint NOT NULL DEFAULT '0',
+  `current` smallint NOT NULL DEFAULT '0',
   `date_published` datetime DEFAULT NULL,
   `date_notified` datetime DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
-  `access_status` smallint(6) NOT NULL DEFAULT '1',
+  `access_status` smallint NOT NULL DEFAULT '1',
   `open_access_date` datetime DEFAULT NULL,
-  `show_volume` smallint(6) NOT NULL DEFAULT '0',
-  `show_number` smallint(6) NOT NULL DEFAULT '0',
-  `show_year` smallint(6) NOT NULL DEFAULT '0',
-  `show_title` smallint(6) NOT NULL DEFAULT '0',
+  `show_volume` smallint NOT NULL DEFAULT '0',
+  `show_number` smallint NOT NULL DEFAULT '0',
+  `show_year` smallint NOT NULL DEFAULT '0',
+  `show_title` smallint NOT NULL DEFAULT '0',
   `style_file_name` varchar(90) DEFAULT NULL,
   `original_style_file_name` varchar(255) DEFAULT NULL,
   `url_path` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`issue_id`),
   KEY `issues_journal_id` (`journal_id`),
   KEY `issues_url_path` (`url_path`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1220,7 +1220,7 @@ CREATE TABLE `issues` (
 
 LOCK TABLES `issues` WRITE;
 /*!40000 ALTER TABLE `issues` DISABLE KEYS */;
-INSERT INTO `issues` VALUES (1,1,1,'2',2014,1,1,'2023-04-03 21:42:00',NULL,'2023-04-03 21:54:57',1,NULL,1,1,1,0,NULL,NULL,''),(2,1,2,'1',2015,0,0,NULL,NULL,'2023-04-03 21:54:56',1,NULL,1,1,1,0,NULL,NULL,'');
+INSERT INTO `issues` VALUES (1,1,1,'2',2014,1,1,'2023-04-04 20:40:04',NULL,'2023-04-04 20:53:59',1,NULL,1,1,1,0,NULL,NULL,''),(2,1,2,'1',2015,0,0,NULL,NULL,'2023-04-04 20:53:59',1,NULL,1,1,1,0,NULL,NULL,'');
 /*!40000 ALTER TABLE `issues` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1230,14 +1230,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `item_views`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `item_views` (
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `user_id` bigint DEFAULT NULL,
   `date_last_viewed` datetime DEFAULT NULL,
   UNIQUE KEY `item_views_pkey` (`assoc_type`,`assoc_id`,`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1255,18 +1255,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `jobs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jobs` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `queue` varchar(255) NOT NULL,
   `payload` longtext NOT NULL,
-  `attempts` tinyint(3) unsigned NOT NULL,
-  `reserved_at` int(10) unsigned DEFAULT NULL,
-  `available_at` int(10) unsigned NOT NULL,
-  `created_at` int(10) unsigned NOT NULL,
+  `attempts` tinyint unsigned NOT NULL,
+  `reserved_at` int unsigned DEFAULT NULL,
+  `available_at` int unsigned NOT NULL,
+  `created_at` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `jobs_queue_reserved_at_index` (`queue`,`reserved_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1284,16 +1284,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `journal_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `journal_settings` (
-  `journal_id` bigint(20) NOT NULL,
+  `journal_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
   `setting_type` varchar(6) DEFAULT NULL,
   UNIQUE KEY `journal_settings_pkey` (`journal_id`,`locale`,`setting_name`),
   KEY `journal_settings_journal_id` (`journal_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1312,16 +1312,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `journals`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `journals` (
-  `journal_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `journal_id` bigint NOT NULL AUTO_INCREMENT,
   `path` varchar(32) NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00' COMMENT 'Used to order lists of journals',
   `primary_locale` varchar(14) NOT NULL,
-  `enabled` smallint(6) NOT NULL DEFAULT '1' COMMENT 'Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)',
+  `enabled` smallint NOT NULL DEFAULT '1' COMMENT 'Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)',
   PRIMARY KEY (`journal_id`),
   UNIQUE KEY `journals_path` (`path`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1340,16 +1340,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `library_file_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `library_file_settings` (
-  `file_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object|date)',
   UNIQUE KEY `library_file_settings_pkey` (`file_id`,`locale`,`setting_name`),
   KEY `library_file_settings_id` (`file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1367,23 +1367,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `library_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `library_files` (
-  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `file_name` varchar(255) NOT NULL,
   `original_file_name` varchar(255) NOT NULL,
   `file_type` varchar(255) NOT NULL,
-  `file_size` bigint(20) NOT NULL,
-  `type` smallint(6) NOT NULL,
+  `file_size` bigint NOT NULL,
+  `type` smallint NOT NULL,
   `date_uploaded` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `public_access` smallint(6) DEFAULT '0',
+  `submission_id` bigint NOT NULL,
+  `public_access` smallint DEFAULT '0',
   PRIMARY KEY (`file_id`),
   KEY `library_files_context_id` (`context_id`),
   KEY `library_files_submission_id` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1401,16 +1401,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metadata_description_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metadata_description_settings` (
-  `metadata_description_id` bigint(20) NOT NULL,
+  `metadata_description_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `metadata_descripton_settings_pkey` (`metadata_description_id`,`locale`,`setting_name`),
   KEY `metadata_description_settings_id` (`metadata_description_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1428,18 +1428,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metadata_descriptions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metadata_descriptions` (
-  `metadata_description_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL DEFAULT '0',
-  `assoc_id` bigint(20) NOT NULL DEFAULT '0',
+  `metadata_description_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL DEFAULT '0',
+  `assoc_id` bigint NOT NULL DEFAULT '0',
   `schema_namespace` varchar(255) NOT NULL,
   `schema_name` varchar(255) NOT NULL,
   `display_name` varchar(255) DEFAULT NULL,
-  `seq` bigint(20) NOT NULL DEFAULT '0',
+  `seq` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`metadata_description_id`),
   KEY `metadata_descriptions_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1457,30 +1457,30 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics` (
   `load_id` varchar(255) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `pkp_section_id` bigint(20) DEFAULT NULL,
-  `assoc_object_type` bigint(20) DEFAULT NULL,
-  `assoc_object_id` bigint(20) DEFAULT NULL,
-  `submission_id` bigint(20) DEFAULT NULL,
-  `representation_id` bigint(20) DEFAULT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `pkp_section_id` bigint DEFAULT NULL,
+  `assoc_object_type` bigint DEFAULT NULL,
+  `assoc_object_id` bigint DEFAULT NULL,
+  `submission_id` bigint DEFAULT NULL,
+  `representation_id` bigint DEFAULT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   `day` varchar(8) DEFAULT NULL,
   `month` varchar(6) DEFAULT NULL,
-  `file_type` smallint(6) DEFAULT NULL,
+  `file_type` smallint DEFAULT NULL,
   `country_id` varchar(2) DEFAULT NULL,
   `region` varchar(2) DEFAULT NULL,
   `city` varchar(255) DEFAULT NULL,
   `metric_type` varchar(255) NOT NULL,
-  `metric` int(11) NOT NULL,
+  `metric` int NOT NULL,
   KEY `metrics_load_id` (`load_id`),
   KEY `metrics_metric_type_context_id` (`metric_type`,`context_id`),
   KEY `metrics_metric_type_submission_id_assoc_type` (`metric_type`,`submission_id`,`assoc_type`),
   KEY `metrics_metric_type_submission_id_assoc` (`metric_type`,`context_id`,`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1498,16 +1498,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_assignment_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_assignment_settings` (
-  `navigation_menu_item_assignment_id` bigint(20) NOT NULL,
+  `navigation_menu_item_assignment_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `navigation_menu_item_assignment_settings_pkey` (`navigation_menu_item_assignment_id`,`locale`,`setting_name`),
   KEY `assignment_settings_navigation_menu_item_assignment_id` (`navigation_menu_item_assignment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1525,15 +1525,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_assignments` (
-  `navigation_menu_item_assignment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `navigation_menu_id` bigint(20) NOT NULL,
-  `navigation_menu_item_id` bigint(20) NOT NULL,
-  `parent_id` bigint(20) DEFAULT NULL,
-  `seq` bigint(20) DEFAULT '0',
+  `navigation_menu_item_assignment_id` bigint NOT NULL AUTO_INCREMENT,
+  `navigation_menu_id` bigint NOT NULL,
+  `navigation_menu_item_id` bigint NOT NULL,
+  `parent_id` bigint DEFAULT NULL,
+  `seq` bigint DEFAULT '0',
   PRIMARY KEY (`navigation_menu_item_assignment_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1552,16 +1552,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_settings` (
-  `navigation_menu_item_id` bigint(20) NOT NULL,
+  `navigation_menu_item_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` longtext,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `navigation_menu_item_settings_pkey` (`navigation_menu_item_id`,`locale`,`setting_name`),
   KEY `navigation_menu_item_settings_navigation_menu_id` (`navigation_menu_item_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1580,14 +1580,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_items` (
-  `navigation_menu_item_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `navigation_menu_item_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `path` varchar(255) DEFAULT '',
   `type` varchar(255) DEFAULT '',
   PRIMARY KEY (`navigation_menu_item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1606,14 +1606,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menus`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menus` (
-  `navigation_menu_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `navigation_menu_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `area_name` varchar(255) DEFAULT '',
   `title` varchar(255) NOT NULL,
   PRIMARY KEY (`navigation_menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1632,19 +1632,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notes` (
-  `note_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `note_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_created` datetime NOT NULL,
   `date_modified` datetime DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `contents` text,
   PRIMARY KEY (`note_id`),
   KEY `notes_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1653,7 +1653,7 @@ CREATE TABLE `notes` (
 
 LOCK TABLES `notes` WRITE;
 /*!40000 ALTER TABLE `notes` DISABLE KEYS */;
-INSERT INTO `notes` VALUES (1,1048586,1,6,'2023-04-03 21:45:21','2023-04-03 21:45:21','Recommendation','<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, \"The influence of lactation on the quantity and quality of cashmere production\" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href=\"http://localhost/index.php/publicknowledge\">Journal of Public Knowledge</a>');
+INSERT INTO `notes` VALUES (1,1048586,1,6,'2023-04-04 20:43:33','2023-04-04 20:43:33','Recommendation','<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, \"The influence of lactation on the quantity and quality of cashmere production\" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href=\"http://localhost/index.php/publicknowledge\">Journal of Public Knowledge</a>');
 /*!40000 ALTER TABLE `notes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1663,16 +1663,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_mail_list`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_mail_list` (
-  `notification_mail_list_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `notification_mail_list_id` bigint NOT NULL AUTO_INCREMENT,
   `email` varchar(90) NOT NULL,
-  `confirmed` smallint(6) NOT NULL DEFAULT '0',
+  `confirmed` smallint NOT NULL DEFAULT '0',
   `token` varchar(40) NOT NULL,
-  `context` bigint(20) NOT NULL,
+  `context` bigint NOT NULL,
   PRIMARY KEY (`notification_mail_list_id`),
   UNIQUE KEY `notification_mail_list_email_context` (`email`,`context`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1690,15 +1690,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_settings` (
-  `notification_id` bigint(20) NOT NULL,
+  `notification_id` bigint NOT NULL,
   `locale` varchar(14) DEFAULT NULL,
   `setting_name` varchar(64) NOT NULL,
   `setting_value` text NOT NULL,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `notification_settings_pkey` (`notification_id`,`locale`,`setting_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1716,16 +1716,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_subscription_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_subscription_settings` (
-  `setting_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `setting_id` bigint NOT NULL AUTO_INCREMENT,
   `setting_name` varchar(64) NOT NULL,
   `setting_value` text NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `context` bigint(20) NOT NULL,
+  `user_id` bigint NOT NULL,
+  `context` bigint NOT NULL,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   PRIMARY KEY (`setting_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1744,23 +1744,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notifications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notifications` (
-  `notification_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
-  `level` bigint(20) NOT NULL,
-  `type` bigint(20) NOT NULL,
+  `notification_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `user_id` bigint DEFAULT NULL,
+  `level` bigint NOT NULL,
+  `type` bigint NOT NULL,
   `date_created` datetime NOT NULL,
   `date_read` datetime DEFAULT NULL,
-  `assoc_type` bigint(20) DEFAULT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `assoc_type` bigint DEFAULT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   PRIMARY KEY (`notification_id`),
   KEY `notifications_context_id_user_id` (`context_id`,`user_id`,`level`),
   KEY `notifications_context_id` (`context_id`,`level`),
   KEY `notifications_assoc` (`assoc_type`,`assoc_id`),
   KEY `notifications_user_id_level` (`user_id`,`level`)
-) ENGINE=InnoDB AUTO_INCREMENT=444 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=444 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1769,7 +1769,7 @@ CREATE TABLE `notifications` (
 
 LOCK TABLES `notifications` WRITE;
 /*!40000 ALTER TABLE `notifications` DISABLE KEYS */;
-INSERT INTO `notifications` VALUES (6,1,3,2,16777217,'2023-04-03 21:42:28',NULL,1048585,1),(8,1,5,2,16777217,'2023-04-03 21:42:28',NULL,1048585,1),(10,1,4,2,16777217,'2023-04-03 21:42:28',NULL,1048585,1),(12,1,0,2,16777243,'2023-04-03 21:42:28',NULL,1048585,1),(13,1,0,2,16777245,'2023-04-03 21:42:28',NULL,1048585,1),(15,1,0,2,16777236,'2023-04-03 21:42:34','2023-04-03 21:42:35',523,1),(17,1,7,3,16777227,'2023-04-03 21:42:39',NULL,517,1),(20,1,9,3,16777227,'2023-04-03 21:42:44',NULL,517,2),(23,1,10,3,16777227,'2023-04-03 21:42:49',NULL,517,3),(33,1,17,2,16777235,'2023-04-03 21:42:59',NULL,1048585,1),(41,1,17,3,16777259,'2023-04-03 21:44:04',NULL,1048585,1),(43,1,16,3,16777259,'2023-04-03 21:44:04',NULL,1048585,1),(45,1,14,3,16777259,'2023-04-03 21:44:04',NULL,1048585,1),(47,1,12,3,16777259,'2023-04-03 21:44:05',NULL,1048585,1),(49,1,5,3,16777259,'2023-04-03 21:44:05',NULL,1048585,1),(51,1,4,3,16777259,'2023-04-03 21:44:05',NULL,1048585,1),(53,1,3,3,16777259,'2023-04-03 21:44:05',NULL,1048585,1),(58,1,3,2,16777217,'2023-04-03 21:45:02',NULL,1048585,2),(60,1,5,2,16777217,'2023-04-03 21:45:02',NULL,1048585,2),(62,1,4,2,16777217,'2023-04-03 21:45:02',NULL,1048585,2),(64,1,0,2,16777243,'2023-04-03 21:45:02',NULL,1048585,2),(65,1,0,2,16777245,'2023-04-03 21:45:02',NULL,1048585,2),(67,1,0,2,16777236,'2023-04-03 21:45:07','2023-04-03 21:45:08',523,2),(68,1,18,2,16777231,'2023-04-03 21:45:07',NULL,1048585,2),(71,1,3,3,16777249,'2023-04-03 21:45:21',NULL,1048586,1),(73,1,4,3,16777249,'2023-04-03 21:45:21',NULL,1048586,1),(75,1,5,3,16777249,'2023-04-03 21:45:21',NULL,1048586,1),(77,1,3,2,16777217,'2023-04-03 21:45:38',NULL,1048585,3),(79,1,5,2,16777217,'2023-04-03 21:45:38',NULL,1048585,3),(81,1,4,2,16777217,'2023-04-03 21:45:38',NULL,1048585,3),(83,1,0,2,16777243,'2023-04-03 21:45:38',NULL,1048585,3),(84,1,0,2,16777245,'2023-04-03 21:45:38',NULL,1048585,3),(86,1,0,2,16777236,'2023-04-03 21:45:43','2023-04-03 21:45:45',523,3),(88,1,9,3,16777227,'2023-04-03 21:45:48',NULL,517,4),(91,1,10,3,16777227,'2023-04-03 21:45:54',NULL,517,5),(95,1,19,2,16777230,'2023-04-03 21:45:56',NULL,1048585,3),(96,1,3,2,16777251,'2023-04-03 21:45:56','2023-04-03 21:45:57',1048585,3),(97,1,4,2,16777251,'2023-04-03 21:45:56',NULL,1048585,3),(98,1,5,2,16777251,'2023-04-03 21:45:56',NULL,1048585,3),(101,1,3,2,16777217,'2023-04-03 21:46:17',NULL,1048585,4),(103,1,5,2,16777217,'2023-04-03 21:46:17',NULL,1048585,4),(105,1,4,2,16777217,'2023-04-03 21:46:17',NULL,1048585,4),(107,1,0,2,16777243,'2023-04-03 21:46:17',NULL,1048585,4),(108,1,0,2,16777245,'2023-04-03 21:46:17',NULL,1048585,4),(111,1,3,2,16777217,'2023-04-03 21:46:28',NULL,1048585,5),(113,1,5,2,16777217,'2023-04-03 21:46:28',NULL,1048585,5),(115,1,4,2,16777217,'2023-04-03 21:46:28',NULL,1048585,5),(117,1,0,2,16777243,'2023-04-03 21:46:28',NULL,1048585,5),(118,1,0,2,16777245,'2023-04-03 21:46:28',NULL,1048585,5),(120,1,0,2,16777236,'2023-04-03 21:46:33','2023-04-03 21:46:35',523,4),(122,1,8,3,16777227,'2023-04-03 21:46:38',NULL,517,6),(125,1,10,3,16777227,'2023-04-03 21:46:44',NULL,517,7),(135,1,21,2,16777235,'2023-04-03 21:46:53',NULL,1048585,5),(136,1,3,2,16777254,'2023-04-03 21:46:53','2023-04-03 21:46:55',1048585,5),(137,1,4,2,16777254,'2023-04-03 21:46:53',NULL,1048585,5),(138,1,5,2,16777254,'2023-04-03 21:46:53',NULL,1048585,5),(141,1,3,2,16777217,'2023-04-03 21:47:14',NULL,1048585,6),(143,1,5,2,16777217,'2023-04-03 21:47:14',NULL,1048585,6),(145,1,4,2,16777217,'2023-04-03 21:47:14',NULL,1048585,6),(147,1,0,2,16777243,'2023-04-03 21:47:14',NULL,1048585,6),(148,1,0,2,16777245,'2023-04-03 21:47:14',NULL,1048585,6),(150,1,0,2,16777236,'2023-04-03 21:47:19','2023-04-03 21:47:21',523,5),(152,1,7,3,16777227,'2023-04-03 21:47:25',NULL,517,8),(155,1,10,3,16777227,'2023-04-03 21:47:31',NULL,517,9),(165,1,22,2,16777235,'2023-04-03 21:47:40',NULL,1048585,6),(166,1,3,2,16777254,'2023-04-03 21:47:40','2023-04-03 21:47:42',1048585,6),(167,1,4,2,16777254,'2023-04-03 21:47:40',NULL,1048585,6),(168,1,5,2,16777254,'2023-04-03 21:47:40',NULL,1048585,6),(170,1,3,2,16777217,'2023-04-03 21:47:57',NULL,1048585,7),(172,1,5,2,16777217,'2023-04-03 21:47:57',NULL,1048585,7),(174,1,4,2,16777217,'2023-04-03 21:47:57',NULL,1048585,7),(176,1,0,2,16777243,'2023-04-03 21:47:57',NULL,1048585,7),(177,1,0,2,16777245,'2023-04-03 21:47:57',NULL,1048585,7),(179,1,0,2,16777236,'2023-04-03 21:48:02','2023-04-03 21:48:04',523,6),(180,1,23,2,16777231,'2023-04-03 21:48:02',NULL,1048585,7),(184,1,9,3,16777227,'2023-04-03 21:48:12',NULL,517,11),(187,1,10,3,16777227,'2023-04-03 21:48:18',NULL,517,12),(191,1,3,2,16777219,'2023-04-03 21:48:25',NULL,517,10),(193,1,4,2,16777219,'2023-04-03 21:48:25',NULL,517,10),(195,1,5,2,16777219,'2023-04-03 21:48:25',NULL,517,10),(198,1,3,2,16777217,'2023-04-03 21:48:40',NULL,1048585,8),(200,1,5,2,16777217,'2023-04-03 21:48:40',NULL,1048585,8),(202,1,4,2,16777217,'2023-04-03 21:48:40',NULL,1048585,8),(204,1,0,2,16777243,'2023-04-03 21:48:40',NULL,1048585,8),(205,1,0,2,16777245,'2023-04-03 21:48:40',NULL,1048585,8),(208,1,3,2,16777217,'2023-04-03 21:48:51',NULL,1048585,9),(210,1,6,2,16777217,'2023-04-03 21:48:51',NULL,1048585,9),(212,1,0,2,16777243,'2023-04-03 21:48:51',NULL,1048585,9),(213,1,0,2,16777245,'2023-04-03 21:48:51',NULL,1048585,9),(215,1,0,2,16777236,'2023-04-03 21:48:57','2023-04-03 21:48:59',523,7),(217,1,7,3,16777227,'2023-04-03 21:49:02',NULL,517,13),(220,1,10,3,16777227,'2023-04-03 21:49:08',NULL,517,14),(229,1,25,2,16777235,'2023-04-03 21:49:17',NULL,1048585,9),(230,1,3,2,16777254,'2023-04-03 21:49:17','2023-04-03 21:49:19',1048585,9),(231,1,6,2,16777254,'2023-04-03 21:49:17',NULL,1048585,9),(234,1,3,2,16777217,'2023-04-03 21:49:38',NULL,1048585,10),(236,1,5,2,16777217,'2023-04-03 21:49:38',NULL,1048585,10),(238,1,4,2,16777217,'2023-04-03 21:49:38',NULL,1048585,10),(240,1,0,2,16777243,'2023-04-03 21:49:38',NULL,1048585,10),(241,1,0,2,16777245,'2023-04-03 21:49:38',NULL,1048585,10),(243,1,0,2,16777236,'2023-04-03 21:49:43','2023-04-03 21:49:45',523,8),(244,1,26,2,16777231,'2023-04-03 21:49:43',NULL,1048585,10),(252,1,3,2,16777219,'2023-04-03 21:50:02',NULL,517,15),(254,1,4,2,16777219,'2023-04-03 21:50:02',NULL,517,15),(256,1,5,2,16777219,'2023-04-03 21:50:02',NULL,517,15),(259,1,3,2,16777219,'2023-04-03 21:50:10',NULL,517,16),(261,1,4,2,16777219,'2023-04-03 21:50:10',NULL,517,16),(263,1,5,2,16777219,'2023-04-03 21:50:10',NULL,517,16),(266,1,3,2,16777217,'2023-04-03 21:50:25',NULL,1048585,11),(268,1,5,2,16777217,'2023-04-03 21:50:25',NULL,1048585,11),(270,1,4,2,16777217,'2023-04-03 21:50:25',NULL,1048585,11),(272,1,0,2,16777243,'2023-04-03 21:50:25',NULL,1048585,11),(273,1,0,2,16777245,'2023-04-03 21:50:25',NULL,1048585,11),(276,1,3,2,16777217,'2023-04-03 21:50:37',NULL,1048585,12),(278,1,5,2,16777217,'2023-04-03 21:50:37',NULL,1048585,12),(280,1,4,2,16777217,'2023-04-03 21:50:37',NULL,1048585,12),(282,1,0,2,16777243,'2023-04-03 21:50:37',NULL,1048585,12),(283,1,0,2,16777245,'2023-04-03 21:50:37',NULL,1048585,12),(285,1,0,2,16777236,'2023-04-03 21:50:43','2023-04-03 21:50:45',523,9),(286,1,28,2,16777231,'2023-04-03 21:50:43',NULL,1048585,12),(287,1,7,3,16777227,'2023-04-03 21:50:49',NULL,517,17),(290,1,8,3,16777227,'2023-04-03 21:50:53',NULL,517,18),(293,1,3,2,16777217,'2023-04-03 21:51:05',NULL,1048585,13),(295,1,5,2,16777217,'2023-04-03 21:51:05',NULL,1048585,13),(297,1,4,2,16777217,'2023-04-03 21:51:05',NULL,1048585,13),(299,1,0,2,16777243,'2023-04-03 21:51:05',NULL,1048585,13),(300,1,0,2,16777245,'2023-04-03 21:51:05',NULL,1048585,13),(302,1,0,2,16777236,'2023-04-03 21:51:12','2023-04-03 21:51:14',523,10),(314,1,3,2,16777219,'2023-04-03 21:51:35',NULL,517,19),(316,1,4,2,16777219,'2023-04-03 21:51:35',NULL,517,19),(318,1,5,2,16777219,'2023-04-03 21:51:35',NULL,517,19),(321,1,3,2,16777219,'2023-04-03 21:51:44',NULL,517,20),(323,1,4,2,16777219,'2023-04-03 21:51:44',NULL,517,20),(325,1,5,2,16777219,'2023-04-03 21:51:44',NULL,517,20),(328,1,3,2,16777219,'2023-04-03 21:51:53',NULL,517,21),(330,1,4,2,16777219,'2023-04-03 21:51:53',NULL,517,21),(332,1,5,2,16777219,'2023-04-03 21:51:53',NULL,517,21),(335,1,29,3,16777232,'2023-04-03 21:52:02',NULL,1048585,13),(336,1,3,2,16777217,'2023-04-03 21:52:14',NULL,1048585,14),(338,1,5,2,16777217,'2023-04-03 21:52:14',NULL,1048585,14),(340,1,4,2,16777217,'2023-04-03 21:52:15',NULL,1048585,14),(342,1,0,2,16777243,'2023-04-03 21:52:15',NULL,1048585,14),(343,1,0,2,16777245,'2023-04-03 21:52:15',NULL,1048585,14),(345,1,3,2,16777217,'2023-04-03 21:52:26',NULL,1048585,15),(347,1,5,2,16777217,'2023-04-03 21:52:26',NULL,1048585,15),(349,1,4,2,16777217,'2023-04-03 21:52:26',NULL,1048585,15),(351,1,0,2,16777243,'2023-04-03 21:52:26',NULL,1048585,15),(352,1,0,2,16777245,'2023-04-03 21:52:26',NULL,1048585,15),(354,1,0,2,16777236,'2023-04-03 21:52:33','2023-04-03 21:52:35',523,11),(356,1,8,3,16777227,'2023-04-03 21:52:38',NULL,517,22),(359,1,9,3,16777227,'2023-04-03 21:52:43',NULL,517,23),(369,1,31,2,16777235,'2023-04-03 21:52:52',NULL,1048585,15),(370,1,3,2,16777254,'2023-04-03 21:52:52','2023-04-03 21:52:53',1048585,15),(371,1,4,2,16777254,'2023-04-03 21:52:52',NULL,1048585,15),(372,1,5,2,16777254,'2023-04-03 21:52:52',NULL,1048585,15),(374,1,3,2,16777217,'2023-04-03 21:53:09',NULL,1048585,16),(376,1,5,2,16777217,'2023-04-03 21:53:09',NULL,1048585,16),(378,1,4,2,16777217,'2023-04-03 21:53:09',NULL,1048585,16),(380,1,0,2,16777243,'2023-04-03 21:53:09',NULL,1048585,16),(381,1,0,2,16777245,'2023-04-03 21:53:09',NULL,1048585,16),(383,1,3,2,16777217,'2023-04-03 21:53:22',NULL,1048585,17),(385,1,5,2,16777217,'2023-04-03 21:53:22',NULL,1048585,17),(387,1,4,2,16777217,'2023-04-03 21:53:22',NULL,1048585,17),(389,1,0,2,16777243,'2023-04-03 21:53:22',NULL,1048585,17),(390,1,0,2,16777245,'2023-04-03 21:53:22',NULL,1048585,17),(392,1,0,2,16777236,'2023-04-03 21:53:30','2023-04-03 21:53:31',523,12),(394,1,7,3,16777227,'2023-04-03 21:53:35',NULL,517,24),(397,1,8,3,16777227,'2023-04-03 21:53:39',NULL,517,25),(407,1,33,2,16777235,'2023-04-03 21:53:48',NULL,1048585,17),(413,1,3,2,16777217,'2023-04-03 21:55:09',NULL,1048585,18),(415,1,5,2,16777217,'2023-04-03 21:55:09',NULL,1048585,18),(417,1,4,2,16777217,'2023-04-03 21:55:09',NULL,1048585,18),(419,1,0,2,16777243,'2023-04-03 21:55:09',NULL,1048585,18),(420,1,0,2,16777245,'2023-04-03 21:55:09',NULL,1048585,18),(423,1,34,2,16777234,'2023-04-03 21:55:16',NULL,1048585,18),(424,1,3,2,16777217,'2023-04-03 21:55:29',NULL,1048585,19),(426,1,6,2,16777217,'2023-04-03 21:55:29',NULL,1048585,19),(428,1,0,2,16777243,'2023-04-03 21:55:29',NULL,1048585,19),(429,1,0,2,16777245,'2023-04-03 21:55:29',NULL,1048585,19),(431,1,0,2,16777236,'2023-04-03 21:55:36','2023-04-03 21:55:38',523,13),(433,1,8,3,16777227,'2023-04-03 21:55:42',NULL,517,26),(436,1,9,3,16777227,'2023-04-03 21:55:46',NULL,517,27),(440,1,35,2,16777230,'2023-04-03 21:55:48',NULL,1048585,19),(441,1,3,2,16777251,'2023-04-03 21:55:48','2023-04-03 21:55:50',1048585,19),(442,1,6,2,16777251,'2023-04-03 21:55:48',NULL,1048585,19);
+INSERT INTO `notifications` VALUES (6,1,3,2,16777217,'2023-04-04 20:40:30',NULL,1048585,1),(8,1,5,2,16777217,'2023-04-04 20:40:30',NULL,1048585,1),(10,1,4,2,16777217,'2023-04-04 20:40:30',NULL,1048585,1),(12,1,0,2,16777243,'2023-04-04 20:40:30',NULL,1048585,1),(13,1,0,2,16777245,'2023-04-04 20:40:30',NULL,1048585,1),(15,1,0,2,16777236,'2023-04-04 20:40:34','2023-04-04 20:40:36',523,1),(17,1,7,3,16777227,'2023-04-04 20:40:40',NULL,517,1),(20,1,9,3,16777227,'2023-04-04 20:40:45',NULL,517,2),(23,1,10,3,16777227,'2023-04-04 20:40:51',NULL,517,3),(33,1,17,2,16777235,'2023-04-04 20:41:02',NULL,1048585,1),(41,1,17,3,16777259,'2023-04-04 20:42:12',NULL,1048585,1),(43,1,16,3,16777259,'2023-04-04 20:42:12',NULL,1048585,1),(45,1,14,3,16777259,'2023-04-04 20:42:12',NULL,1048585,1),(47,1,12,3,16777259,'2023-04-04 20:42:12',NULL,1048585,1),(49,1,5,3,16777259,'2023-04-04 20:42:12',NULL,1048585,1),(51,1,4,3,16777259,'2023-04-04 20:42:12',NULL,1048585,1),(53,1,3,3,16777259,'2023-04-04 20:42:13',NULL,1048585,1),(58,1,3,2,16777217,'2023-04-04 20:43:13',NULL,1048585,2),(60,1,5,2,16777217,'2023-04-04 20:43:13',NULL,1048585,2),(62,1,4,2,16777217,'2023-04-04 20:43:13',NULL,1048585,2),(64,1,0,2,16777243,'2023-04-04 20:43:13',NULL,1048585,2),(65,1,0,2,16777245,'2023-04-04 20:43:13',NULL,1048585,2),(67,1,0,2,16777236,'2023-04-04 20:43:18','2023-04-04 20:43:20',523,2),(68,1,18,2,16777231,'2023-04-04 20:43:18',NULL,1048585,2),(71,1,3,3,16777249,'2023-04-04 20:43:33',NULL,1048586,1),(73,1,4,3,16777249,'2023-04-04 20:43:33',NULL,1048586,1),(75,1,5,3,16777249,'2023-04-04 20:43:33',NULL,1048586,1),(77,1,3,2,16777217,'2023-04-04 20:43:51',NULL,1048585,3),(79,1,5,2,16777217,'2023-04-04 20:43:51',NULL,1048585,3),(81,1,4,2,16777217,'2023-04-04 20:43:52',NULL,1048585,3),(83,1,0,2,16777243,'2023-04-04 20:43:52',NULL,1048585,3),(84,1,0,2,16777245,'2023-04-04 20:43:52',NULL,1048585,3),(86,1,0,2,16777236,'2023-04-04 20:43:56','2023-04-04 20:43:58',523,3),(88,1,9,3,16777227,'2023-04-04 20:44:02',NULL,517,4),(91,1,10,3,16777227,'2023-04-04 20:44:09',NULL,517,5),(95,1,19,2,16777230,'2023-04-04 20:44:11',NULL,1048585,3),(96,1,3,2,16777251,'2023-04-04 20:44:11','2023-04-04 20:44:12',1048585,3),(97,1,4,2,16777251,'2023-04-04 20:44:11',NULL,1048585,3),(98,1,5,2,16777251,'2023-04-04 20:44:11',NULL,1048585,3),(101,1,3,2,16777217,'2023-04-04 20:44:32',NULL,1048585,4),(103,1,5,2,16777217,'2023-04-04 20:44:32',NULL,1048585,4),(105,1,4,2,16777217,'2023-04-04 20:44:32',NULL,1048585,4),(107,1,0,2,16777243,'2023-04-04 20:44:33',NULL,1048585,4),(108,1,0,2,16777245,'2023-04-04 20:44:33',NULL,1048585,4),(111,1,3,2,16777217,'2023-04-04 20:44:45',NULL,1048585,5),(113,1,5,2,16777217,'2023-04-04 20:44:45',NULL,1048585,5),(115,1,4,2,16777217,'2023-04-04 20:44:45',NULL,1048585,5),(117,1,0,2,16777243,'2023-04-04 20:44:45',NULL,1048585,5),(118,1,0,2,16777245,'2023-04-04 20:44:45',NULL,1048585,5),(120,1,0,2,16777236,'2023-04-04 20:44:50','2023-04-04 20:44:52',523,4),(122,1,8,3,16777227,'2023-04-04 20:44:56',NULL,517,6),(125,1,10,3,16777227,'2023-04-04 20:45:02',NULL,517,7),(135,1,21,2,16777235,'2023-04-04 20:45:12',NULL,1048585,5),(136,1,3,2,16777254,'2023-04-04 20:45:12','2023-04-04 20:45:14',1048585,5),(137,1,4,2,16777254,'2023-04-04 20:45:12',NULL,1048585,5),(138,1,5,2,16777254,'2023-04-04 20:45:12',NULL,1048585,5),(141,1,3,2,16777217,'2023-04-04 20:45:35',NULL,1048585,6),(143,1,5,2,16777217,'2023-04-04 20:45:35',NULL,1048585,6),(145,1,4,2,16777217,'2023-04-04 20:45:35',NULL,1048585,6),(147,1,0,2,16777243,'2023-04-04 20:45:35',NULL,1048585,6),(148,1,0,2,16777245,'2023-04-04 20:45:35',NULL,1048585,6),(150,1,0,2,16777236,'2023-04-04 20:45:40','2023-04-04 20:45:42',523,5),(152,1,7,3,16777227,'2023-04-04 20:45:46',NULL,517,8),(155,1,10,3,16777227,'2023-04-04 20:45:52',NULL,517,9),(165,1,22,2,16777235,'2023-04-04 20:46:02',NULL,1048585,6),(166,1,3,2,16777254,'2023-04-04 20:46:02','2023-04-04 20:46:04',1048585,6),(167,1,4,2,16777254,'2023-04-04 20:46:02',NULL,1048585,6),(168,1,5,2,16777254,'2023-04-04 20:46:02',NULL,1048585,6),(170,1,3,2,16777217,'2023-04-04 20:46:21',NULL,1048585,7),(172,1,5,2,16777217,'2023-04-04 20:46:21',NULL,1048585,7),(174,1,4,2,16777217,'2023-04-04 20:46:21',NULL,1048585,7),(176,1,0,2,16777243,'2023-04-04 20:46:21',NULL,1048585,7),(177,1,0,2,16777245,'2023-04-04 20:46:21',NULL,1048585,7),(179,1,0,2,16777236,'2023-04-04 20:46:27','2023-04-04 20:46:29',523,6),(180,1,23,2,16777231,'2023-04-04 20:46:27',NULL,1048585,7),(184,1,9,3,16777227,'2023-04-04 20:46:37',NULL,517,11),(187,1,10,3,16777227,'2023-04-04 20:46:43',NULL,517,12),(191,1,3,2,16777219,'2023-04-04 20:46:51',NULL,517,10),(193,1,4,2,16777219,'2023-04-04 20:46:51',NULL,517,10),(195,1,5,2,16777219,'2023-04-04 20:46:51',NULL,517,10),(198,1,3,2,16777217,'2023-04-04 20:47:07',NULL,1048585,8),(200,1,5,2,16777217,'2023-04-04 20:47:08',NULL,1048585,8),(202,1,4,2,16777217,'2023-04-04 20:47:08',NULL,1048585,8),(204,1,0,2,16777243,'2023-04-04 20:47:08',NULL,1048585,8),(205,1,0,2,16777245,'2023-04-04 20:47:08',NULL,1048585,8),(208,1,3,2,16777217,'2023-04-04 20:47:20',NULL,1048585,9),(210,1,6,2,16777217,'2023-04-04 20:47:20',NULL,1048585,9),(212,1,0,2,16777243,'2023-04-04 20:47:20',NULL,1048585,9),(213,1,0,2,16777245,'2023-04-04 20:47:20',NULL,1048585,9),(215,1,0,2,16777236,'2023-04-04 20:47:25','2023-04-04 20:47:27',523,7),(217,1,7,3,16777227,'2023-04-04 20:47:31',NULL,517,13),(220,1,10,3,16777227,'2023-04-04 20:47:37',NULL,517,14),(229,1,25,2,16777235,'2023-04-04 20:47:47',NULL,1048585,9),(230,1,3,2,16777254,'2023-04-04 20:47:47','2023-04-04 20:47:49',1048585,9),(231,1,6,2,16777254,'2023-04-04 20:47:47',NULL,1048585,9),(234,1,3,2,16777217,'2023-04-04 20:48:12',NULL,1048585,10),(236,1,5,2,16777217,'2023-04-04 20:48:12',NULL,1048585,10),(238,1,4,2,16777217,'2023-04-04 20:48:12',NULL,1048585,10),(240,1,0,2,16777243,'2023-04-04 20:48:12',NULL,1048585,10),(241,1,0,2,16777245,'2023-04-04 20:48:12',NULL,1048585,10),(243,1,0,2,16777236,'2023-04-04 20:48:18','2023-04-04 20:48:20',523,8),(244,1,26,2,16777231,'2023-04-04 20:48:18',NULL,1048585,10),(252,1,3,2,16777219,'2023-04-04 20:48:38',NULL,517,15),(254,1,4,2,16777219,'2023-04-04 20:48:38',NULL,517,15),(256,1,5,2,16777219,'2023-04-04 20:48:38',NULL,517,15),(259,1,3,2,16777219,'2023-04-04 20:48:47',NULL,517,16),(261,1,4,2,16777219,'2023-04-04 20:48:47',NULL,517,16),(263,1,5,2,16777219,'2023-04-04 20:48:47',NULL,517,16),(266,1,3,2,16777217,'2023-04-04 20:49:03',NULL,1048585,11),(268,1,5,2,16777217,'2023-04-04 20:49:04',NULL,1048585,11),(270,1,4,2,16777217,'2023-04-04 20:49:04',NULL,1048585,11),(272,1,0,2,16777243,'2023-04-04 20:49:04',NULL,1048585,11),(273,1,0,2,16777245,'2023-04-04 20:49:04',NULL,1048585,11),(276,1,3,2,16777217,'2023-04-04 20:49:17',NULL,1048585,12),(278,1,5,2,16777217,'2023-04-04 20:49:17',NULL,1048585,12),(280,1,4,2,16777217,'2023-04-04 20:49:17',NULL,1048585,12),(282,1,0,2,16777243,'2023-04-04 20:49:17',NULL,1048585,12),(283,1,0,2,16777245,'2023-04-04 20:49:17',NULL,1048585,12),(285,1,0,2,16777236,'2023-04-04 20:49:24','2023-04-04 20:49:26',523,9),(286,1,28,2,16777231,'2023-04-04 20:49:24',NULL,1048585,12),(287,1,7,3,16777227,'2023-04-04 20:49:30',NULL,517,17),(290,1,8,3,16777227,'2023-04-04 20:49:35',NULL,517,18),(293,1,3,2,16777217,'2023-04-04 20:49:48',NULL,1048585,13),(295,1,5,2,16777217,'2023-04-04 20:49:48',NULL,1048585,13),(297,1,4,2,16777217,'2023-04-04 20:49:49',NULL,1048585,13),(299,1,0,2,16777243,'2023-04-04 20:49:49',NULL,1048585,13),(300,1,0,2,16777245,'2023-04-04 20:49:49',NULL,1048585,13),(302,1,0,2,16777236,'2023-04-04 20:49:56','2023-04-04 20:49:58',523,10),(314,1,3,2,16777219,'2023-04-04 20:50:21',NULL,517,19),(316,1,4,2,16777219,'2023-04-04 20:50:21',NULL,517,19),(318,1,5,2,16777219,'2023-04-04 20:50:21',NULL,517,19),(321,1,3,2,16777219,'2023-04-04 20:50:30',NULL,517,20),(323,1,4,2,16777219,'2023-04-04 20:50:30',NULL,517,20),(325,1,5,2,16777219,'2023-04-04 20:50:30',NULL,517,20),(328,1,3,2,16777219,'2023-04-04 20:50:40',NULL,517,21),(330,1,4,2,16777219,'2023-04-04 20:50:40',NULL,517,21),(332,1,5,2,16777219,'2023-04-04 20:50:40',NULL,517,21),(335,1,29,3,16777232,'2023-04-04 20:50:51',NULL,1048585,13),(336,1,3,2,16777217,'2023-04-04 20:51:03',NULL,1048585,14),(338,1,5,2,16777217,'2023-04-04 20:51:04',NULL,1048585,14),(340,1,4,2,16777217,'2023-04-04 20:51:04',NULL,1048585,14),(342,1,0,2,16777243,'2023-04-04 20:51:04',NULL,1048585,14),(343,1,0,2,16777245,'2023-04-04 20:51:04',NULL,1048585,14),(345,1,3,2,16777217,'2023-04-04 20:51:16',NULL,1048585,15),(347,1,5,2,16777217,'2023-04-04 20:51:16',NULL,1048585,15),(349,1,4,2,16777217,'2023-04-04 20:51:16',NULL,1048585,15),(351,1,0,2,16777243,'2023-04-04 20:51:16',NULL,1048585,15),(352,1,0,2,16777245,'2023-04-04 20:51:16',NULL,1048585,15),(354,1,0,2,16777236,'2023-04-04 20:51:23','2023-04-04 20:51:25',523,11),(356,1,8,3,16777227,'2023-04-04 20:51:29',NULL,517,22),(359,1,9,3,16777227,'2023-04-04 20:51:33',NULL,517,23),(369,1,31,2,16777235,'2023-04-04 20:51:43',NULL,1048585,15),(370,1,3,2,16777254,'2023-04-04 20:51:44','2023-04-04 20:51:45',1048585,15),(371,1,4,2,16777254,'2023-04-04 20:51:44',NULL,1048585,15),(372,1,5,2,16777254,'2023-04-04 20:51:44',NULL,1048585,15),(374,1,3,2,16777217,'2023-04-04 20:52:03',NULL,1048585,16),(376,1,5,2,16777217,'2023-04-04 20:52:03',NULL,1048585,16),(378,1,4,2,16777217,'2023-04-04 20:52:03',NULL,1048585,16),(380,1,0,2,16777243,'2023-04-04 20:52:03',NULL,1048585,16),(381,1,0,2,16777245,'2023-04-04 20:52:03',NULL,1048585,16),(383,1,3,2,16777217,'2023-04-04 20:52:15',NULL,1048585,17),(385,1,5,2,16777217,'2023-04-04 20:52:15',NULL,1048585,17),(387,1,4,2,16777217,'2023-04-04 20:52:15',NULL,1048585,17),(389,1,0,2,16777243,'2023-04-04 20:52:16',NULL,1048585,17),(390,1,0,2,16777245,'2023-04-04 20:52:16',NULL,1048585,17),(392,1,0,2,16777236,'2023-04-04 20:52:23','2023-04-04 20:52:25',523,12),(394,1,7,3,16777227,'2023-04-04 20:52:29',NULL,517,24),(397,1,8,3,16777227,'2023-04-04 20:52:33',NULL,517,25),(407,1,33,2,16777235,'2023-04-04 20:52:43',NULL,1048585,17),(413,1,3,2,16777217,'2023-04-04 20:54:12',NULL,1048585,18),(415,1,5,2,16777217,'2023-04-04 20:54:12',NULL,1048585,18),(417,1,4,2,16777217,'2023-04-04 20:54:12',NULL,1048585,18),(419,1,0,2,16777243,'2023-04-04 20:54:12',NULL,1048585,18),(420,1,0,2,16777245,'2023-04-04 20:54:12',NULL,1048585,18),(423,1,34,2,16777234,'2023-04-04 20:54:20',NULL,1048585,18),(424,1,3,2,16777217,'2023-04-04 20:54:34',NULL,1048585,19),(426,1,6,2,16777217,'2023-04-04 20:54:34',NULL,1048585,19),(428,1,0,2,16777243,'2023-04-04 20:54:34',NULL,1048585,19),(429,1,0,2,16777245,'2023-04-04 20:54:34',NULL,1048585,19),(431,1,0,2,16777236,'2023-04-04 20:54:42','2023-04-04 20:54:44',523,13),(433,1,8,3,16777227,'2023-04-04 20:54:48',NULL,517,26),(436,1,9,3,16777227,'2023-04-04 20:54:52',NULL,517,27),(440,1,35,2,16777230,'2023-04-04 20:54:54',NULL,1048585,19),(441,1,3,2,16777251,'2023-04-04 20:54:54','2023-04-04 20:54:56',1048585,19),(442,1,6,2,16777251,'2023-04-04 20:54:54',NULL,1048585,19);
 /*!40000 ALTER TABLE `notifications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1779,14 +1779,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `oai_resumption_tokens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `oai_resumption_tokens` (
   `token` varchar(32) NOT NULL,
-  `expire` bigint(20) NOT NULL,
-  `record_offset` int(11) NOT NULL,
+  `expire` bigint NOT NULL,
+  `record_offset` int NOT NULL,
   `params` text,
   UNIQUE KEY `oai_resumption_tokens_pkey` (`token`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1804,16 +1804,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `plugin_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `plugin_settings` (
   `plugin_name` varchar(80) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
   `setting_name` varchar(80) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `plugin_settings_pkey` (`plugin_name`,`context_id`,`setting_name`),
   KEY `plugin_settings_plugin_name` (`plugin_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1822,7 +1822,7 @@ CREATE TABLE `plugin_settings` (
 
 LOCK TABLES `plugin_settings` WRITE;
 /*!40000 ALTER TABLE `plugin_settings` DISABLE KEYS */;
-INSERT INTO `plugin_settings` VALUES ('acronplugin',0,'crontab','[{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.importexport.doaj.DOAJInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.datacite.DataciteInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.crossref.CrossrefInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.importexport.doaj.DOAJInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.datacite.DataciteInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.crossref.CrossrefInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.importexport.doaj.DOAJInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.datacite.DataciteInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.crossref.CrossrefInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.importexport.doaj.DOAJInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.datacite.DataciteInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.crossref.CrossrefInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.importexport.doaj.DOAJInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.datacite.DataciteInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.crossref.CrossrefInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"lib.pkp.classes.task.ReviewReminder\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"lib.pkp.classes.task.StatisticsReport\",\"frequency\":{\"day\":\"1\"},\"args\":[]},{\"className\":\"classes.tasks.SubscriptionExpiryReminder\",\"frequency\":{\"day\":\"1\"},\"args\":[]}]','object'),('acronplugin',0,'enabled','1','bool'),('defaultthemeplugin',0,'enabled','1','bool'),('defaultthemeplugin',1,'baseColour','#1E6292','string'),('defaultthemeplugin',1,'enabled','1','bool'),('defaultthemeplugin',1,'showDescriptionInJournalIndex','false','string'),('defaultthemeplugin',1,'typography','notoSans','string'),('defaultthemeplugin',1,'useHomepageImageAsHeader','false','string'),('developedbyblockplugin',0,'enabled','0','bool'),('developedbyblockplugin',0,'seq','0','int'),('developedbyblockplugin',1,'enabled','0','bool'),('developedbyblockplugin',1,'seq','0','int'),('dublincoremetaplugin',1,'enabled','1','bool'),('googlescholarplugin',1,'enabled','1','bool'),('htmlarticlegalleyplugin',1,'enabled','1','bool'),('informationblockplugin',1,'enabled','1','bool'),('informationblockplugin',1,'seq','7','int'),('languagetoggleblockplugin',0,'enabled','1','bool'),('languagetoggleblockplugin',0,'seq','4','int'),('languagetoggleblockplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',1,'seq','4','int'),('lensgalleyplugin',1,'enabled','1','bool'),('pdfjsviewerplugin',1,'enabled','1','bool'),('resolverplugin',1,'enabled','1','bool'),('subscriptionblockplugin',1,'enabled','1','bool'),('subscriptionblockplugin',1,'seq','2','int'),('tinymceplugin',0,'enabled','1','bool'),('tinymceplugin',1,'enabled','1','bool'),('usageeventplugin',0,'enabled','1','bool'),('usageeventplugin',0,'uniqueSiteId','642b477594acd','string'),('usagestatsplugin',0,'accessLogFileParseRegex','/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] \"\\S+ (?P<url>\\S+).*?\" (?P<returnCode>\\S+) \\S+ \".*?\" \"(?P<userAgent>.*?)\"/','string'),('usagestatsplugin',0,'chartType','bar','string'),('usagestatsplugin',0,'createLogFiles','1','bool'),('usagestatsplugin',0,'datasetMaxCount','4','string'),('usagestatsplugin',0,'enabled','1','bool'),('usagestatsplugin',0,'optionalColumns','[\"city\",\"region\"]','object'),('webfeedplugin',1,'displayItems','1','bool'),('webfeedplugin',1,'displayPage','homepage','string'),('webfeedplugin',1,'enabled','1','bool');
+INSERT INTO `plugin_settings` VALUES ('acronplugin',0,'crontab','[{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.importexport.crossref.CrossrefInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.doaj.DOAJInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.datacite.DataciteInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.importexport.crossref.CrossrefInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.doaj.DOAJInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.datacite.DataciteInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.importexport.crossref.CrossrefInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.doaj.DOAJInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.datacite.DataciteInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.importexport.crossref.CrossrefInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.doaj.DOAJInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.datacite.DataciteInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.importexport.crossref.CrossrefInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.doaj.DOAJInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"plugins.importexport.datacite.DataciteInfoSender\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"lib.pkp.classes.task.ReviewReminder\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"lib.pkp.classes.task.StatisticsReport\",\"frequency\":{\"day\":\"1\"},\"args\":[]},{\"className\":\"classes.tasks.SubscriptionExpiryReminder\",\"frequency\":{\"day\":\"1\"},\"args\":[]}]','object'),('acronplugin',0,'enabled','1','bool'),('defaultthemeplugin',0,'enabled','1','bool'),('defaultthemeplugin',1,'baseColour','#1E6292','string'),('defaultthemeplugin',1,'enabled','1','bool'),('defaultthemeplugin',1,'showDescriptionInJournalIndex','false','string'),('defaultthemeplugin',1,'typography','notoSans','string'),('defaultthemeplugin',1,'useHomepageImageAsHeader','false','string'),('developedbyblockplugin',0,'enabled','0','bool'),('developedbyblockplugin',0,'seq','0','int'),('developedbyblockplugin',1,'enabled','0','bool'),('developedbyblockplugin',1,'seq','0','int'),('dublincoremetaplugin',1,'enabled','1','bool'),('googlescholarplugin',1,'enabled','1','bool'),('htmlarticlegalleyplugin',1,'enabled','1','bool'),('informationblockplugin',1,'enabled','1','bool'),('informationblockplugin',1,'seq','7','int'),('languagetoggleblockplugin',0,'enabled','1','bool'),('languagetoggleblockplugin',0,'seq','4','int'),('languagetoggleblockplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',1,'seq','4','int'),('lensgalleyplugin',1,'enabled','1','bool'),('pdfjsviewerplugin',1,'enabled','1','bool'),('resolverplugin',1,'enabled','1','bool'),('subscriptionblockplugin',1,'enabled','1','bool'),('subscriptionblockplugin',1,'seq','2','int'),('tinymceplugin',0,'enabled','1','bool'),('tinymceplugin',1,'enabled','1','bool'),('usageeventplugin',0,'enabled','1','bool'),('usageeventplugin',0,'uniqueSiteId','642c8a6623e37','string'),('usagestatsplugin',0,'accessLogFileParseRegex','/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] \"\\S+ (?P<url>\\S+).*?\" (?P<returnCode>\\S+) \\S+ \".*?\" \"(?P<userAgent>.*?)\"/','string'),('usagestatsplugin',0,'chartType','bar','string'),('usagestatsplugin',0,'createLogFiles','1','bool'),('usagestatsplugin',0,'datasetMaxCount','4','string'),('usagestatsplugin',0,'enabled','1','bool'),('usagestatsplugin',0,'optionalColumns','[\"city\",\"region\"]','object'),('webfeedplugin',1,'displayItems','1','bool'),('webfeedplugin',1,'displayPage','homepage','string'),('webfeedplugin',1,'enabled','1','bool');
 /*!40000 ALTER TABLE `plugin_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1832,12 +1832,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_categories` (
-  `publication_id` bigint(20) NOT NULL,
-  `category_id` bigint(20) NOT NULL,
+  `publication_id` bigint NOT NULL,
+  `category_id` bigint NOT NULL,
   UNIQUE KEY `publication_categories_id` (`publication_id`,`category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1855,16 +1855,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_galley_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_galley_settings` (
-  `galley_id` bigint(20) NOT NULL,
+  `galley_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   UNIQUE KEY `publication_galley_settings_pkey` (`galley_id`,`locale`,`setting_name`),
   KEY `publication_galley_settings_galley_id` (`galley_id`),
   KEY `publication_galley_settings_name_value` (`setting_name`(50),`setting_value`(150))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1882,23 +1882,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_galleys`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_galleys` (
-  `galley_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `galley_id` bigint NOT NULL AUTO_INCREMENT,
   `locale` varchar(14) DEFAULT NULL,
-  `publication_id` bigint(20) NOT NULL,
+  `publication_id` bigint NOT NULL,
   `label` varchar(255) DEFAULT NULL,
-  `submission_file_id` bigint(20) unsigned DEFAULT NULL,
+  `submission_file_id` bigint unsigned DEFAULT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   `remote_url` varchar(2047) DEFAULT NULL,
-  `is_approved` smallint(6) NOT NULL DEFAULT '0',
+  `is_approved` smallint NOT NULL DEFAULT '0',
   `url_path` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`galley_id`),
   KEY `publication_galleys_publication_id` (`publication_id`),
   KEY `publication_galleys_url_path` (`url_path`),
   KEY `publication_galleys_submission_file_id_foreign` (`submission_file_id`),
   CONSTRAINT `publication_galleys_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1907,7 +1907,7 @@ CREATE TABLE `publication_galleys` (
 
 LOCK TABLES `publication_galleys` WRITE;
 /*!40000 ALTER TABLE `publication_galleys` DISABLE KEYS */;
-INSERT INTO `publication_galleys` VALUES (1,'en_US',1,'PDF',3,0.00,'',0,''),(2,'en_US',2,'PDF Version 2',3,0.00,'',0,'pdf'),(3,'en_US',18,'PDF',25,0.00,'',0,'');
+INSERT INTO `publication_galleys` VALUES (1,'en_US',1,'PDF',2,0.00,'',0,''),(2,'en_US',2,'PDF Version 2',2,0.00,'',0,'pdf'),(3,'en_US',18,'PDF',25,0.00,'',0,'');
 /*!40000 ALTER TABLE `publication_galleys` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1917,16 +1917,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_settings` (
-  `publication_id` bigint(20) NOT NULL,
+  `publication_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   UNIQUE KEY `publication_settings_pkey` (`publication_id`,`locale`,`setting_name`),
   KEY `publication_settings_publication_id` (`publication_id`),
   KEY `publication_settings_name_value` (`setting_name`(50),`setting_value`(150))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1945,25 +1945,25 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publications` (
-  `publication_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `access_status` bigint(20) DEFAULT '0',
+  `publication_id` bigint NOT NULL AUTO_INCREMENT,
+  `access_status` bigint DEFAULT '0',
   `date_published` date DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
   `locale` varchar(14) DEFAULT NULL,
-  `primary_contact_id` bigint(20) DEFAULT NULL,
-  `section_id` bigint(20) DEFAULT NULL,
+  `primary_contact_id` bigint DEFAULT NULL,
+  `section_id` bigint DEFAULT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
-  `submission_id` bigint(20) NOT NULL,
-  `status` smallint(6) NOT NULL DEFAULT '1',
+  `submission_id` bigint NOT NULL,
+  `status` smallint NOT NULL DEFAULT '1',
   `url_path` varchar(64) DEFAULT NULL,
-  `version` bigint(20) DEFAULT NULL,
+  `version` bigint DEFAULT NULL,
   PRIMARY KEY (`publication_id`),
   KEY `publications_submission_id` (`submission_id`),
   KEY `publications_section_id` (`section_id`),
   KEY `publications_url_path` (`url_path`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1972,7 +1972,7 @@ CREATE TABLE `publications` (
 
 LOCK TABLES `publications` WRITE;
 /*!40000 ALTER TABLE `publications` DISABLE KEYS */;
-INSERT INTO `publications` VALUES (1,0,'2023-04-03','2023-04-03 21:44:01',NULL,1,1,0.00,1,3,'mwandenga-signalling-theory',1),(2,0,'2023-04-03','2023-04-03 21:44:34',NULL,3,1,0.00,1,1,'mwandenga',2),(3,0,NULL,'2023-04-03 21:45:15',NULL,5,1,0.00,2,1,NULL,1),(4,0,NULL,'2023-04-03 21:45:37',NULL,6,1,0.00,3,1,NULL,1),(5,0,NULL,'2023-04-03 21:46:16',NULL,7,1,0.00,4,1,NULL,1),(6,0,NULL,'2023-04-03 21:46:27',NULL,9,1,0.00,5,1,NULL,1),(7,0,NULL,'2023-04-03 21:47:13',NULL,10,1,0.00,6,1,NULL,1),(8,0,NULL,'2023-04-03 21:47:56',NULL,11,1,0.00,7,1,NULL,1),(9,0,NULL,'2023-04-03 21:48:39',NULL,12,1,0.00,8,1,NULL,1),(10,0,NULL,'2023-04-03 21:48:51',NULL,14,2,0.00,9,1,NULL,1),(11,0,NULL,'2023-04-03 21:49:37',NULL,15,1,0.00,10,1,NULL,1),(12,0,NULL,'2023-04-03 21:50:24',NULL,16,1,0.00,11,1,NULL,1),(13,0,NULL,'2023-04-03 21:50:36',NULL,18,1,0.00,12,1,NULL,1),(14,0,NULL,'2023-04-03 21:51:04',NULL,19,1,0.00,13,1,NULL,1),(15,0,NULL,'2023-04-03 21:52:14',NULL,20,1,0.00,14,1,NULL,1),(16,0,NULL,'2023-04-03 21:52:25',NULL,21,1,0.00,15,1,NULL,1),(17,0,NULL,'2023-04-03 21:53:08',NULL,22,1,0.00,16,1,NULL,1),(18,0,'2023-04-03','2023-04-03 21:54:53',NULL,23,1,0.00,17,3,NULL,1),(19,0,NULL,'2023-04-03 21:55:08',NULL,24,1,0.00,18,1,NULL,1),(20,0,NULL,'2023-04-03 21:55:28',NULL,25,2,0.00,19,1,NULL,1);
+INSERT INTO `publications` VALUES (1,0,'2023-04-04','2023-04-04 20:42:08',NULL,1,1,0.00,1,3,'mwandenga-signalling-theory',1),(2,0,'2023-04-04','2023-04-04 20:42:43',NULL,3,1,0.00,1,1,'mwandenga',2),(3,0,NULL,'2023-04-04 20:43:27',NULL,5,1,0.00,2,1,NULL,1),(4,0,NULL,'2023-04-04 20:43:50',NULL,6,1,0.00,3,1,NULL,1),(5,0,NULL,'2023-04-04 20:44:31',NULL,7,1,0.00,4,1,NULL,1),(6,0,NULL,'2023-04-04 20:44:44',NULL,9,1,0.00,5,1,NULL,1),(7,0,NULL,'2023-04-04 20:45:34',NULL,10,1,0.00,6,1,NULL,1),(8,0,NULL,'2023-04-04 20:46:20',NULL,11,1,0.00,7,1,NULL,1),(9,0,NULL,'2023-04-04 20:47:06',NULL,12,1,0.00,8,1,NULL,1),(10,0,NULL,'2023-04-04 20:47:19',NULL,14,2,0.00,9,1,NULL,1),(11,0,NULL,'2023-04-04 20:48:11',NULL,15,1,0.00,10,1,NULL,1),(12,0,NULL,'2023-04-04 20:49:02',NULL,16,1,0.00,11,1,NULL,1),(13,0,NULL,'2023-04-04 20:49:16',NULL,18,1,0.00,12,1,NULL,1),(14,0,NULL,'2023-04-04 20:49:47',NULL,19,1,0.00,13,1,NULL,1),(15,0,NULL,'2023-04-04 20:51:02',NULL,20,1,0.00,14,1,NULL,1),(16,0,NULL,'2023-04-04 20:51:15',NULL,21,1,0.00,15,1,NULL,1),(17,0,NULL,'2023-04-04 20:52:02',NULL,22,1,0.00,16,1,NULL,1),(18,0,'2023-04-04','2023-04-04 20:53:55',NULL,23,1,0.00,17,3,NULL,1),(19,0,NULL,'2023-04-04 20:54:11',NULL,24,1,0.00,18,1,NULL,1),(20,0,NULL,'2023-04-04 20:54:33',NULL,25,2,0.00,19,1,NULL,1);
 /*!40000 ALTER TABLE `publications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1982,19 +1982,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `queries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `queries` (
-  `query_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
+  `query_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   `date_posted` datetime DEFAULT NULL,
   `date_modified` datetime DEFAULT NULL,
-  `closed` smallint(6) NOT NULL DEFAULT '0',
+  `closed` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`query_id`),
   KEY `queries_assoc_id` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2013,12 +2013,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `query_participants`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `query_participants` (
-  `query_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `query_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `query_participants_pkey` (`query_id`,`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2037,15 +2037,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `queued_payments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `queued_payments` (
-  `queued_payment_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `queued_payment_id` bigint NOT NULL AUTO_INCREMENT,
   `date_created` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   `expiry_date` date DEFAULT NULL,
   `payment_data` text,
   PRIMARY KEY (`queued_payment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2063,13 +2063,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_assignments` (
-  `review_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `reviewer_id` bigint(20) NOT NULL,
+  `review_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `reviewer_id` bigint NOT NULL,
   `competing_interests` text,
-  `recommendation` smallint(6) DEFAULT NULL,
+  `recommendation` smallint DEFAULT NULL,
   `date_assigned` datetime DEFAULT NULL,
   `date_notified` datetime DEFAULT NULL,
   `date_confirmed` datetime DEFAULT NULL,
@@ -2078,26 +2078,26 @@ CREATE TABLE `review_assignments` (
   `date_due` datetime DEFAULT NULL,
   `date_response_due` datetime DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
-  `reminder_was_automatic` smallint(6) NOT NULL DEFAULT '0',
-  `declined` smallint(6) NOT NULL DEFAULT '0',
-  `cancelled` smallint(6) NOT NULL DEFAULT '0',
-  `reviewer_file_id` bigint(20) DEFAULT NULL,
+  `reminder_was_automatic` smallint NOT NULL DEFAULT '0',
+  `declined` smallint NOT NULL DEFAULT '0',
+  `cancelled` smallint NOT NULL DEFAULT '0',
+  `reviewer_file_id` bigint DEFAULT NULL,
   `date_rated` datetime DEFAULT NULL,
   `date_reminded` datetime DEFAULT NULL,
-  `quality` smallint(6) DEFAULT NULL,
-  `review_round_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
-  `review_method` smallint(6) NOT NULL DEFAULT '1',
-  `round` smallint(6) NOT NULL DEFAULT '1',
-  `step` smallint(6) NOT NULL DEFAULT '1',
-  `review_form_id` bigint(20) DEFAULT NULL,
-  `unconsidered` smallint(6) DEFAULT NULL,
+  `quality` smallint DEFAULT NULL,
+  `review_round_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
+  `review_method` smallint NOT NULL DEFAULT '1',
+  `round` smallint NOT NULL DEFAULT '1',
+  `step` smallint NOT NULL DEFAULT '1',
+  `review_form_id` bigint DEFAULT NULL,
+  `unconsidered` smallint DEFAULT NULL,
   PRIMARY KEY (`review_id`),
   KEY `review_assignments_submission_id` (`submission_id`),
   KEY `review_assignments_reviewer_id` (`reviewer_id`),
   KEY `review_assignments_form_id` (`review_form_id`),
   KEY `review_assignments_reviewer_review` (`reviewer_id`,`review_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2106,7 +2106,7 @@ CREATE TABLE `review_assignments` (
 
 LOCK TABLES `review_assignments` WRITE;
 /*!40000 ALTER TABLE `review_assignments` DISABLE KEYS */;
-INSERT INTO `review_assignments` VALUES (1,1,7,NULL,NULL,'2023-04-03 21:42:39','2023-04-03 21:42:39',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:42:39',0,0,0,NULL,NULL,NULL,NULL,1,3,2,1,1,NULL,0),(2,1,9,NULL,NULL,'2023-04-03 21:42:44','2023-04-03 21:42:44',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:42:44',0,0,0,NULL,NULL,NULL,NULL,1,3,2,1,1,NULL,0),(3,1,10,NULL,NULL,'2023-04-03 21:42:49','2023-04-03 21:42:49',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:42:49',0,0,0,NULL,NULL,NULL,NULL,1,3,2,1,1,NULL,0),(4,3,9,NULL,NULL,'2023-04-03 21:45:48','2023-04-03 21:45:48',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:45:48',0,0,0,NULL,NULL,NULL,NULL,3,3,2,1,1,NULL,0),(5,3,10,NULL,NULL,'2023-04-03 21:45:54','2023-04-03 21:45:54',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:45:54',0,0,0,NULL,NULL,NULL,NULL,3,3,2,1,1,NULL,0),(6,5,8,NULL,NULL,'2023-04-03 21:46:38','2023-04-03 21:46:38',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:46:38',0,0,0,NULL,NULL,NULL,NULL,4,3,2,1,1,NULL,0),(7,5,10,NULL,NULL,'2023-04-03 21:46:44','2023-04-03 21:46:44',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:46:44',0,0,0,NULL,NULL,NULL,NULL,4,3,2,1,1,NULL,0),(8,6,7,NULL,NULL,'2023-04-03 21:47:25','2023-04-03 21:47:25',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:47:25',0,0,0,NULL,NULL,NULL,NULL,5,3,2,1,1,NULL,0),(9,6,10,NULL,NULL,'2023-04-03 21:47:31','2023-04-03 21:47:31',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:47:31',0,0,0,NULL,NULL,NULL,NULL,5,3,2,1,1,NULL,0),(10,7,8,NULL,5,'2023-04-03 21:48:07','2023-04-03 21:48:08','2023-04-03 21:48:21','2023-04-03 21:48:25',NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:48:25',0,0,0,NULL,NULL,NULL,NULL,6,3,2,1,4,NULL,0),(11,7,9,NULL,NULL,'2023-04-03 21:48:12','2023-04-03 21:48:12',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:48:12',0,0,0,NULL,NULL,NULL,NULL,6,3,2,1,1,NULL,0),(12,7,10,NULL,NULL,'2023-04-03 21:48:18','2023-04-03 21:48:18',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:48:18',0,0,0,NULL,NULL,NULL,NULL,6,3,2,1,1,NULL,0),(13,9,7,NULL,NULL,'2023-04-03 21:49:02','2023-04-03 21:49:02',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:49:02',0,0,0,NULL,NULL,NULL,NULL,7,3,2,1,1,NULL,0),(14,9,10,NULL,NULL,'2023-04-03 21:49:08','2023-04-03 21:49:08',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:49:08',0,0,0,NULL,NULL,NULL,NULL,7,3,2,1,1,NULL,0),(15,10,9,NULL,2,'2023-04-03 21:49:49','2023-04-03 21:49:49','2023-04-03 21:49:59','2023-04-03 21:50:02',NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:50:02',0,0,0,NULL,NULL,NULL,NULL,8,3,2,1,4,NULL,0),(16,10,10,NULL,3,'2023-04-03 21:49:55','2023-04-03 21:49:55','2023-04-03 21:50:06','2023-04-03 21:50:10',NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:50:10',0,0,0,NULL,NULL,NULL,NULL,8,3,2,1,4,NULL,0),(17,12,7,NULL,NULL,'2023-04-03 21:50:49','2023-04-03 21:50:49',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:50:49',0,0,0,NULL,NULL,NULL,NULL,9,3,2,1,1,NULL,0),(18,12,8,NULL,NULL,'2023-04-03 21:50:53','2023-04-03 21:50:53',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:50:53',0,0,0,NULL,NULL,NULL,NULL,9,3,2,1,1,NULL,0),(19,13,7,NULL,2,'2023-04-03 21:51:17','2023-04-03 21:51:17','2023-04-03 21:51:32','2023-04-03 21:51:35',NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:51:35',0,0,0,NULL,NULL,NULL,NULL,10,3,2,1,4,NULL,0),(20,13,9,NULL,2,'2023-04-03 21:51:22','2023-04-03 21:51:22','2023-04-03 21:51:40','2023-04-03 21:51:44',NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:51:44',0,0,0,NULL,NULL,NULL,NULL,10,3,2,1,4,NULL,0),(21,13,10,NULL,3,'2023-04-03 21:51:28','2023-04-03 21:51:28','2023-04-03 21:51:48','2023-04-03 21:51:53',NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:51:53',0,0,0,NULL,NULL,NULL,NULL,10,3,2,1,4,NULL,0),(22,15,8,NULL,NULL,'2023-04-03 21:52:38','2023-04-03 21:52:38',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:52:38',0,0,0,NULL,NULL,NULL,NULL,11,3,2,1,1,NULL,0),(23,15,9,NULL,NULL,'2023-04-03 21:52:43','2023-04-03 21:52:43',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:52:43',0,0,0,NULL,NULL,NULL,NULL,11,3,2,1,1,NULL,0),(24,17,7,NULL,NULL,'2023-04-03 21:53:35','2023-04-03 21:53:35',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:53:35',0,0,0,NULL,NULL,NULL,NULL,12,3,2,1,1,NULL,0),(25,17,8,NULL,NULL,'2023-04-03 21:53:39','2023-04-03 21:53:39',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:53:39',0,0,0,NULL,NULL,NULL,NULL,12,3,2,1,1,NULL,0),(26,19,8,NULL,NULL,'2023-04-03 21:55:42','2023-04-03 21:55:42',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:55:42',0,0,0,NULL,NULL,NULL,NULL,13,3,2,1,1,NULL,0),(27,19,9,NULL,NULL,'2023-04-03 21:55:46','2023-04-03 21:55:46',NULL,NULL,NULL,'2023-05-01 00:00:00','2023-05-01 00:00:00','2023-04-03 21:55:46',0,0,0,NULL,NULL,NULL,NULL,13,3,2,1,1,NULL,0);
+INSERT INTO `review_assignments` VALUES (1,1,7,NULL,NULL,'2023-04-04 20:40:40','2023-04-04 20:40:41',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:40:41',0,0,0,NULL,NULL,NULL,NULL,1,3,2,1,1,NULL,0),(2,1,9,NULL,NULL,'2023-04-04 20:40:45','2023-04-04 20:40:45',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:40:45',0,0,0,NULL,NULL,NULL,NULL,1,3,2,1,1,NULL,0),(3,1,10,NULL,NULL,'2023-04-04 20:40:51','2023-04-04 20:40:51',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:40:51',0,0,0,NULL,NULL,NULL,NULL,1,3,2,1,1,NULL,0),(4,3,9,NULL,NULL,'2023-04-04 20:44:02','2023-04-04 20:44:03',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:44:03',0,0,0,NULL,NULL,NULL,NULL,3,3,2,1,1,NULL,0),(5,3,10,NULL,NULL,'2023-04-04 20:44:09','2023-04-04 20:44:09',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:44:09',0,0,0,NULL,NULL,NULL,NULL,3,3,2,1,1,NULL,0),(6,5,8,NULL,NULL,'2023-04-04 20:44:56','2023-04-04 20:44:56',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:44:56',0,0,0,NULL,NULL,NULL,NULL,4,3,2,1,1,NULL,0),(7,5,10,NULL,NULL,'2023-04-04 20:45:02','2023-04-04 20:45:02',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:45:02',0,0,0,NULL,NULL,NULL,NULL,4,3,2,1,1,NULL,0),(8,6,7,NULL,NULL,'2023-04-04 20:45:46','2023-04-04 20:45:46',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:45:46',0,0,0,NULL,NULL,NULL,NULL,5,3,2,1,1,NULL,0),(9,6,10,NULL,NULL,'2023-04-04 20:45:52','2023-04-04 20:45:52',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:45:52',0,0,0,NULL,NULL,NULL,NULL,5,3,2,1,1,NULL,0),(10,7,8,NULL,5,'2023-04-04 20:46:32','2023-04-04 20:46:33','2023-04-04 20:46:47','2023-04-04 20:46:52',NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:46:52',0,0,0,NULL,NULL,NULL,NULL,6,3,2,1,4,NULL,0),(11,7,9,NULL,NULL,'2023-04-04 20:46:37','2023-04-04 20:46:37',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:46:37',0,0,0,NULL,NULL,NULL,NULL,6,3,2,1,1,NULL,0),(12,7,10,NULL,NULL,'2023-04-04 20:46:43','2023-04-04 20:46:43',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:46:43',0,0,0,NULL,NULL,NULL,NULL,6,3,2,1,1,NULL,0),(13,9,7,NULL,NULL,'2023-04-04 20:47:31','2023-04-04 20:47:31',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:47:31',0,0,0,NULL,NULL,NULL,NULL,7,3,2,1,1,NULL,0),(14,9,10,NULL,NULL,'2023-04-04 20:47:37','2023-04-04 20:47:37',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:47:37',0,0,0,NULL,NULL,NULL,NULL,7,3,2,1,1,NULL,0),(15,10,9,NULL,2,'2023-04-04 20:48:24','2023-04-04 20:48:24','2023-04-04 20:48:35','2023-04-04 20:48:38',NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:48:38',0,0,0,NULL,NULL,NULL,NULL,8,3,2,1,4,NULL,0),(16,10,10,NULL,3,'2023-04-04 20:48:30','2023-04-04 20:48:30','2023-04-04 20:48:43','2023-04-04 20:48:47',NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:48:47',0,0,0,NULL,NULL,NULL,NULL,8,3,2,1,4,NULL,0),(17,12,7,NULL,NULL,'2023-04-04 20:49:30','2023-04-04 20:49:30',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:49:30',0,0,0,NULL,NULL,NULL,NULL,9,3,2,1,1,NULL,0),(18,12,8,NULL,NULL,'2023-04-04 20:49:35','2023-04-04 20:49:35',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:49:35',0,0,0,NULL,NULL,NULL,NULL,9,3,2,1,1,NULL,0),(19,13,7,NULL,2,'2023-04-04 20:50:01','2023-04-04 20:50:02','2023-04-04 20:50:17','2023-04-04 20:50:21',NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:50:21',0,0,0,NULL,NULL,NULL,NULL,10,3,2,1,4,NULL,0),(20,13,9,NULL,2,'2023-04-04 20:50:06','2023-04-04 20:50:06','2023-04-04 20:50:25','2023-04-04 20:50:30',NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:50:30',0,0,0,NULL,NULL,NULL,NULL,10,3,2,1,4,NULL,0),(21,13,10,NULL,3,'2023-04-04 20:50:12','2023-04-04 20:50:12','2023-04-04 20:50:35','2023-04-04 20:50:40',NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:50:40',0,0,0,NULL,NULL,NULL,NULL,10,3,2,1,4,NULL,0),(22,15,8,NULL,NULL,'2023-04-04 20:51:29','2023-04-04 20:51:29',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:51:29',0,0,0,NULL,NULL,NULL,NULL,11,3,2,1,1,NULL,0),(23,15,9,NULL,NULL,'2023-04-04 20:51:33','2023-04-04 20:51:33',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:51:33',0,0,0,NULL,NULL,NULL,NULL,11,3,2,1,1,NULL,0),(24,17,7,NULL,NULL,'2023-04-04 20:52:29','2023-04-04 20:52:29',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:52:29',0,0,0,NULL,NULL,NULL,NULL,12,3,2,1,1,NULL,0),(25,17,8,NULL,NULL,'2023-04-04 20:52:33','2023-04-04 20:52:33',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:52:33',0,0,0,NULL,NULL,NULL,NULL,12,3,2,1,1,NULL,0),(26,19,8,NULL,NULL,'2023-04-04 20:54:48','2023-04-04 20:54:48',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:54:48',0,0,0,NULL,NULL,NULL,NULL,13,3,2,1,1,NULL,0),(27,19,9,NULL,NULL,'2023-04-04 20:54:52','2023-04-04 20:54:52',NULL,NULL,NULL,'2023-05-02 00:00:00','2023-05-02 00:00:00','2023-04-04 20:54:52',0,0,0,NULL,NULL,NULL,NULL,13,3,2,1,1,NULL,0);
 /*!40000 ALTER TABLE `review_assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2116,15 +2116,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_files` (
-  `review_id` bigint(20) NOT NULL,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
+  `review_id` bigint NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL,
   UNIQUE KEY `review_files_pkey` (`review_id`,`submission_file_id`),
   KEY `review_files_review_id` (`review_id`),
   KEY `review_files_submission_file_id_foreign` (`submission_file_id`),
   CONSTRAINT `review_files_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2133,7 +2133,7 @@ CREATE TABLE `review_files` (
 
 LOCK TABLES `review_files` WRITE;
 /*!40000 ALTER TABLE `review_files` DISABLE KEYS */;
-INSERT INTO `review_files` VALUES (1,2),(2,2),(3,2),(4,7),(5,7),(19,18),(20,18),(21,18),(22,21),(23,21),(24,24),(25,24),(26,28),(27,28);
+INSERT INTO `review_files` VALUES (6,7),(7,7),(10,10),(11,10),(12,10),(15,14),(16,14),(17,17),(18,17),(19,19),(20,19),(21,19),(22,22),(23,22),(26,28),(27,28);
 /*!40000 ALTER TABLE `review_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2143,16 +2143,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_element_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_element_settings` (
-  `review_form_element_id` bigint(20) NOT NULL,
+  `review_form_element_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `review_form_element_settings_pkey` (`review_form_element_id`,`locale`,`setting_name`),
   KEY `review_form_element_settings_review_form_element_id` (`review_form_element_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2170,17 +2170,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_elements`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_elements` (
-  `review_form_element_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `review_form_id` bigint(20) NOT NULL,
+  `review_form_element_id` bigint NOT NULL AUTO_INCREMENT,
+  `review_form_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
-  `element_type` bigint(20) DEFAULT NULL,
-  `required` smallint(6) DEFAULT NULL,
-  `included` smallint(6) DEFAULT NULL,
+  `element_type` bigint DEFAULT NULL,
+  `required` smallint DEFAULT NULL,
+  `included` smallint DEFAULT NULL,
   PRIMARY KEY (`review_form_element_id`),
   KEY `review_form_elements_review_form_id` (`review_form_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2198,14 +2198,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_responses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_responses` (
-  `review_form_element_id` bigint(20) NOT NULL,
-  `review_id` bigint(20) NOT NULL,
+  `review_form_element_id` bigint NOT NULL,
+  `review_id` bigint NOT NULL,
   `response_type` varchar(6) DEFAULT NULL,
   `response_value` text,
   KEY `review_form_responses_pkey` (`review_form_element_id`,`review_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2223,16 +2223,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_settings` (
-  `review_form_id` bigint(20) NOT NULL,
+  `review_form_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `review_form_settings_pkey` (`review_form_id`,`locale`,`setting_name`),
   KEY `review_form_settings_review_form_id` (`review_form_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2250,15 +2250,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_forms`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_forms` (
-  `review_form_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `review_form_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
-  `is_active` smallint(6) DEFAULT NULL,
+  `is_active` smallint DEFAULT NULL,
   PRIMARY KEY (`review_form_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2276,17 +2276,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_round_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_round_files` (
-  `submission_id` bigint(20) NOT NULL,
-  `review_round_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `review_round_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL,
   UNIQUE KEY `review_round_files_pkey` (`submission_id`,`review_round_id`,`submission_file_id`),
   KEY `review_round_files_submission_id` (`submission_id`),
   KEY `review_round_files_submission_file_id_foreign` (`submission_file_id`),
   CONSTRAINT `review_round_files_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2295,7 +2295,7 @@ CREATE TABLE `review_round_files` (
 
 LOCK TABLES `review_round_files` WRITE;
 /*!40000 ALTER TABLE `review_round_files` DISABLE KEYS */;
-INSERT INTO `review_round_files` VALUES (1,1,3,2),(2,2,3,5),(3,3,3,7),(13,10,3,18),(15,11,3,21),(17,12,3,24),(19,13,3,28);
+INSERT INTO `review_round_files` VALUES (5,4,3,7),(7,6,3,10),(10,8,3,14),(12,9,3,17),(13,10,3,19),(15,11,3,22),(19,13,3,28);
 /*!40000 ALTER TABLE `review_round_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2305,18 +2305,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_rounds`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_rounds` (
-  `review_round_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) DEFAULT NULL,
-  `round` smallint(6) NOT NULL,
-  `review_revision` bigint(20) DEFAULT NULL,
-  `status` bigint(20) DEFAULT NULL,
+  `review_round_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `stage_id` bigint DEFAULT NULL,
+  `round` smallint NOT NULL,
+  `review_revision` bigint DEFAULT NULL,
+  `status` bigint DEFAULT NULL,
   PRIMARY KEY (`review_round_id`),
   UNIQUE KEY `review_rounds_submission_id_stage_id_round_pkey` (`submission_id`,`stage_id`,`round`),
   KEY `review_rounds_submission_id` (`submission_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2335,12 +2335,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `scheduled_tasks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `scheduled_tasks` (
   `class_name` varchar(255) NOT NULL,
   `last_run` datetime DEFAULT NULL,
   UNIQUE KEY `scheduled_tasks_pkey` (`class_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2349,7 +2349,7 @@ CREATE TABLE `scheduled_tasks` (
 
 LOCK TABLES `scheduled_tasks` WRITE;
 /*!40000 ALTER TABLE `scheduled_tasks` DISABLE KEYS */;
-INSERT INTO `scheduled_tasks` VALUES ('classes.tasks.SubscriptionExpiryReminder','2023-04-03 21:38:49'),('lib.pkp.classes.task.ReviewReminder','2023-04-03 21:38:49'),('lib.pkp.classes.task.StatisticsReport','2023-04-03 21:38:49'),('plugins.generic.usageStats.UsageStatsLoader','2023-04-03 21:38:49'),('plugins.importexport.crossref.CrossrefInfoSender','2023-04-03 21:38:49'),('plugins.importexport.datacite.DataciteInfoSender','2023-04-03 21:38:49'),('plugins.importexport.doaj.DOAJInfoSender','2023-04-03 21:38:49');
+INSERT INTO `scheduled_tasks` VALUES ('classes.tasks.SubscriptionExpiryReminder','2023-04-04 20:36:36'),('lib.pkp.classes.task.ReviewReminder','2023-04-04 20:36:36'),('lib.pkp.classes.task.StatisticsReport','2023-04-04 20:36:36'),('plugins.generic.usageStats.UsageStatsLoader','2023-04-04 20:36:36'),('plugins.importexport.crossref.CrossrefInfoSender','2023-04-04 20:36:36'),('plugins.importexport.datacite.DataciteInfoSender','2023-04-04 20:36:36'),('plugins.importexport.doaj.DOAJInfoSender','2023-04-04 20:36:36');
 /*!40000 ALTER TABLE `scheduled_tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2359,16 +2359,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `section_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `section_settings` (
-  `section_id` bigint(20) NOT NULL,
+  `section_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `section_settings_pkey` (`section_id`,`locale`,`setting_name`),
   KEY `section_settings_section_id` (`section_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2387,23 +2387,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sections`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sections` (
-  `section_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `journal_id` bigint(20) NOT NULL,
-  `review_form_id` bigint(20) DEFAULT NULL,
+  `section_id` bigint NOT NULL AUTO_INCREMENT,
+  `journal_id` bigint NOT NULL,
+  `review_form_id` bigint DEFAULT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
-  `editor_restricted` smallint(6) NOT NULL DEFAULT '0',
-  `meta_indexed` smallint(6) NOT NULL DEFAULT '0',
-  `meta_reviewed` smallint(6) NOT NULL DEFAULT '1',
-  `abstracts_not_required` smallint(6) NOT NULL DEFAULT '0',
-  `hide_title` smallint(6) NOT NULL DEFAULT '0',
-  `hide_author` smallint(6) NOT NULL DEFAULT '0',
-  `is_inactive` smallint(6) NOT NULL DEFAULT '0',
-  `abstract_word_count` bigint(20) DEFAULT NULL,
+  `editor_restricted` smallint NOT NULL DEFAULT '0',
+  `meta_indexed` smallint NOT NULL DEFAULT '0',
+  `meta_reviewed` smallint NOT NULL DEFAULT '1',
+  `abstracts_not_required` smallint NOT NULL DEFAULT '0',
+  `hide_title` smallint NOT NULL DEFAULT '0',
+  `hide_author` smallint NOT NULL DEFAULT '0',
+  `is_inactive` smallint NOT NULL DEFAULT '0',
+  `abstract_word_count` bigint DEFAULT NULL,
   PRIMARY KEY (`section_id`),
   KEY `sections_journal_id` (`journal_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2422,20 +2422,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sessions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sessions` (
   `session_id` varchar(128) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
+  `user_id` bigint DEFAULT NULL,
   `ip_address` varchar(39) NOT NULL,
   `user_agent` varchar(255) DEFAULT NULL,
-  `created` bigint(20) NOT NULL DEFAULT '0',
-  `last_used` bigint(20) NOT NULL DEFAULT '0',
-  `remember` smallint(6) NOT NULL DEFAULT '0',
+  `created` bigint NOT NULL DEFAULT '0',
+  `last_used` bigint NOT NULL DEFAULT '0',
+  `remember` smallint NOT NULL DEFAULT '0',
   `data` text NOT NULL,
   `domain` varchar(255) DEFAULT NULL,
   UNIQUE KEY `sessions_pkey` (`session_id`),
   KEY `sessions_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2444,7 +2444,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('2pt15p57lkn3kokku3uc8fj64a',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558234,1680558241,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680558241;s:5:\"token\";s:32:\"ab008561af7051052490ff5f66b00c31\";}','localhost'),('2sfranr70bcu6msnsj7s02shr8',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558920,1680558954,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558954;s:5:\"token\";s:32:\"cdb8327a8777af010af48f7fddfbd0e2\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('55k6q3ec3b0scpumin0llh2nvu',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558266,1680558271,0,'','localhost'),('5qjjbrf8evv11d9q5uq8tsn2dp',32,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558779,1680558789,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558789;s:5:\"token\";s:32:\"c9d2d7d168159630f19045f50ba65613\";}username|s:6:\"rrossi\";userId|i:32;','localhost'),('6pjkg1ifv7ioqerkfv9rv9rdqf',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558225,1680558234,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680558234;s:5:\"token\";s:32:\"14b786e45981ec91533d7419a39fa5b2\";}','localhost'),('7jumocnqkjt4l1cjtepcm9ne6g',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558845,1680558855,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680558855;s:5:\"token\";s:32:\"ed68671e5ec5d8bcad51a54b6b544ae8\";}','localhost'),('7vdb0kk3u9rqm69il4p8s0cagt',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558138,1680558189,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558189;s:5:\"token\";s:32:\"3158da039897a1bf9113767ef05939e1\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('807l2dqdhqgbi4lempnki10okk',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558793,1680558844,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558844;s:5:\"token\";s:32:\"f49606f043e0e5548527fdbc1890c2e0\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('ab3s3iuj24nfaofdnv23bqi74n',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558271,1680558275,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680558276;s:5:\"token\";s:32:\"3e70dfcab2eba093419470b21de35975\";}','localhost'),('ac0hjv3adjtgfo4app5sfv0smo',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558292,1680558327,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558327;s:5:\"token\";s:32:\"285dd38ea2d7616e7175ce564af69fbf\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('acr49dj6qd9tbgb66me1gnb5gd',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680557962,1680557968,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680557968;s:5:\"token\";s:32:\"ae3814addf290eefff9f2603f8d425e4\";}','localhost'),('b1hkv4ae7qhiqktsnb38jiusd4',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680557929,1680557941,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680557941;s:5:\"token\";s:32:\"6660d5a8d7293a4a6a362a5193498f61\";}','localhost'),('b2lb78gove7afohs2r4t3o229u',17,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558216,1680558225,0,'username|s:10:\"amwandenga\";csrf|a:2:{s:9:\"timestamp\";i:1680558225;s:5:\"token\";s:32:\"0d412ae4a6000dcb31f515772425b2d3\";}userId|i:17;','localhost'),('bnphn86dlt3hmskb0v211d1l6g',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558329,1680558362,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558362;s:5:\"token\";s:32:\"b9ed7e6d075fb14a2f629a6aecbd14d9\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('d6pu991qklmpkm6s9freqpgno1',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558885,1680558897,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680558897;s:5:\"token\";s:32:\"ce66393226f69616f72d0622475ab273\";}','localhost'),('dql46nj3od2ppd1ams6b81s807',30,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558725,1680558735,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558734;s:5:\"token\";s:32:\"443b9f0fa90788520140b9bc9efdb264\";}username|s:7:\"pdaniel\";userId|i:30;','localhost'),('dsc1svm8ul638gs1acd65fdpba',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558877,1680558885,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680558885;s:5:\"token\";s:32:\"be7fdc8a4cec05eb816b12beec301e76\";}','localhost'),('ek87rja34pov7t384gfdv8ec6t',20,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558364,1680558377,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558377;s:5:\"token\";s:32:\"6bccaf86e7f4725b976a0dafdb489457\";}username|s:12:\"cmontgomerie\";userId|i:20;','localhost'),('fvu4hfqgtkcmhj8ence8cf9k95',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558190,1680558212,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680558212;s:5:\"token\";s:32:\"1fbdbb47c8e7f9112d493108b5cec96b\";}','localhost'),('g9edtt10vhccg8sk7mprtu2fon',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558899,1680558919,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558919;s:5:\"token\";s:32:\"62ce677f60d0f8135d1243f872963be8\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('h07r0i2pr14h7cq3d2m62pehau',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558467,1680558506,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558506;s:5:\"token\";s:32:\"0e374e08abb22fd15e253026b2e0df40\";}username|s:7:\"phudson\";','localhost'),('hklrgbqbnj1h2ha3680h79o2ce',5,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558276,1680558284,0,'userId|i:5;username|s:8:\"sberardo\";csrf|a:2:{s:9:\"timestamp\";i:1680558284;s:5:\"token\";s:32:\"e62a37c1b73b8dfb01e9450e7b507ef5\";}signedInAs|i:3;','localhost'),('htn33qkcthv4ttcab9c5pco03t',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558870,1680558877,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680558877;s:5:\"token\";s:32:\"797643b7bcc0105718a7660bd5f771de\";}','localhost'),('in30fs4adv17b1b9gnhnmp0r03',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558736,1680558777,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558777;s:5:\"token\";s:32:\"5beb48995968a05efab4188a4be174ae\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('m6v2285r8olml6tbi5epidtr61',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558522,1680558566,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558566;s:5:\"token\";s:32:\"eb1c123d69c6dc10a9274b4faa4ac7fc\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('mhunt2kdq0hf44guvdqetver09',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680557941,1680557954,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680557954;s:5:\"token\";s:32:\"11f04ad49342536a70fb3dd7a1d34c20\";}','localhost'),('nbdsdpajeormqhq29fseks1g69',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680557955,1680557962,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680557962;s:5:\"token\";s:32:\"9c09b66b13400e8974bed70b30261591\";}','localhost'),('o439geotf2t23ivm35fnius1c4',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558863,1680558870,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680558870;s:5:\"token\";s:32:\"dc7749e113e4637d5692e6a6ffe5b82e\";}','localhost'),('o545jounv1aq7i55ggdff9oue8',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558855,1680558863,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680558863;s:5:\"token\";s:32:\"fe117f036648080ef2f3b6a9000bbdcb\";}','localhost'),('oh3849moaot2if8aieibqhare1',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558128,1680558136,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680558136;s:5:\"token\";s:32:\"60083d858c95471f891c7f574e517c53\";}','localhost'),('othmkgc2tvktrug8lqii0p9gn1',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558424,1680558465,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558466;s:5:\"token\";s:32:\"4cb26f247faaaf354f0b23c9d88cfb85\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('ou2rk1afpk3om6b30gorrgjaqq',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558241,1680558266,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680558266;s:5:\"token\";s:32:\"64fa5fd6bebc5d450948ca5927d3919c\";}','localhost'),('qc1ngjn56lgh4i1lfj7t8qf4h1',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558379,1680558422,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558422;s:5:\"token\";s:32:\"473b1c00cc345410e4157c5417a28d19\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('qs3j8pqhlqigr99aa6g30uipb7',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558568,1680558611,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558611;s:5:\"token\";s:32:\"5bbd83c65bcad49bc53cd3bef18e71ea\";}username|s:8:\"agallego\";','localhost'),('rj22f9ogpcfl6a56vi072qpgmp',24,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558508,1680558520,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558520;s:5:\"token\";s:32:\"263e3515fde542aab24a4924235896b4\";}username|s:7:\"eostrom\";userId|i:24;','localhost'),('saifb863eqhjulqti9de0777ur',17,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558212,1680558215,0,'userId|i:17;username|s:10:\"amwandenga\";csrf|a:2:{s:9:\"timestamp\";i:1680558215;s:5:\"token\";s:32:\"f1c45c9c88d347fdc82c839b2c8961a3\";}','localhost'),('svo75su7t5ke5thmd4odd6aon9',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558655,1680558723,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558722;s:5:\"token\";s:32:\"12147e799956c4a07111b42032db5a69\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('t8gb9ufoo8qqeva9p8g0gdk6sc',5,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558284,1680558291,0,'userId|i:5;username|s:8:\"sberardo\";csrf|a:2:{s:9:\"timestamp\";i:1680558291;s:5:\"token\";s:32:\"76935ae7d40f146f91943837f30809fa\";}signedInAs|i:3;','localhost'),('tae5q54h7d3ecil627n6enq54c',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558627,1680558653,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558653;s:5:\"token\";s:32:\"05a19d5b599892028f30ff9c7dfce4fd\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('u2drnnaecpeq23epu2dd13bjuv',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680557927,1680557927,0,'','localhost'),('u85rheeq03ju8cejlff4hrj0b4',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680557971,1680558113,0,'username|s:5:\"rvaca\";csrf|a:2:{s:9:\"timestamp\";i:1680558113;s:5:\"token\";s:32:\"ef43be990355ea84af2eee12d4f46e81\";}','localhost'),('uq1gijohciflr4b9rgc6kgao83',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558115,1680558123,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680558123;s:5:\"token\";s:32:\"5a3e1bfa61a33d96e611a42819a9c699\";}','localhost'),('v7mao9odrntqjd9jg703si50lk',27,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680558613,1680558625,0,'csrf|a:2:{s:9:\"timestamp\";i:1680558625;s:5:\"token\";s:32:\"af7ffed3bb9a5b57465b608dc61657df\";}username|s:10:\"kalkhafaji\";userId|i:27;','localhost');
+INSERT INTO `sessions` VALUES ('0do3egnr6jeco7b51mumpslcld',17,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640902,1680640911,0,'username|s:10:\"amwandenga\";csrf|a:2:{s:9:\"timestamp\";i:1680640911;s:5:\"token\";s:32:\"2d94d6d40fa9684974a56bef0a391d92\";}userId|i:17;','localhost'),('0u8lj23rgm3idqio6qrh5vlni5',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641230,1680641277,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641277;s:5:\"token\";s:32:\"aa96780852e6594059cf4140218d85b8\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('231mabg3dgmh2rt9eit50ok76j',17,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640897,1680640900,0,'userId|i:17;username|s:10:\"amwandenga\";csrf|a:2:{s:9:\"timestamp\";i:1680640900;s:5:\"token\";s:32:\"6826ebc50c52cf3f1fac9dabd15f6a03\";}','localhost'),('2410mmerbqj53geahk4ubkeoud',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641525,1680641580,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641580;s:5:\"token\";s:32:\"66ec1de5b11279b59d1033054361d0a5\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('2er0vu9om99daqfv5e4efjm6hn',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641601,1680641601,0,'','localhost'),('2n2l78gs95k2h4ap7diau601iq',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641664,1680641700,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641700;s:5:\"token\";s:32:\"258d8e1cab07a7cb552cdc7c34be19b8\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('31kv8mol6gbjpoaf5t23qsoh5d',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641617,1680641626,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680641626;s:5:\"token\";s:32:\"e0230ced0a9cd430ceb7b1776e67df01\";}','localhost'),('3vdsopv649ihf7h6ca31os8ca8',20,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641059,1680641073,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641072;s:5:\"token\";s:32:\"bf47f736e61f122b4d6ef726ca742b2b\";}username|s:12:\"cmontgomerie\";userId|i:20;','localhost'),('40qnp2nr439lqnheor6gf6s3ie',5,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640974,1680640981,0,'userId|i:5;username|s:8:\"sberardo\";csrf|a:2:{s:9:\"timestamp\";i:1680640982;s:5:\"token\";s:32:\"c14c51052f9d8931e7decb1d1638d7be\";}signedInAs|i:3;','localhost'),('5lkoioptsk7nq1d9j3p7morv5r',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640637,1680640645,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680640645;s:5:\"token\";s:32:\"966bb1e58f5792fcd7c9d52957104950\";}','localhost'),('5mo90j24jlffgh6gg19nvkerkq',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640613,1680640629,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680640629;s:5:\"token\";s:32:\"6bf46d3ee0c2d0b2acfe90a54cecd201\";}','localhost'),('7bhe0i5h466r4c1j834da8al0d',27,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641330,1680641344,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641343;s:5:\"token\";s:32:\"16f60b4b72febdfde775f264ab85c0e1\";}username|s:10:\"kalkhafaji\";userId|i:27;','localhost'),('7luko68oc3d3n2t4lplvvundbr',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640594,1680640594,0,'','localhost'),('7o90s7dra8e4pub0r7974ok4fe',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640629,1680640637,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680640637;s:5:\"token\";s:32:\"c05fe9195fc9b0d838f2cf297ce4dce3\";}','localhost'),('8fhlrh4memopu03tvl5vndsmr3',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640955,1680640960,0,'','localhost'),('92domk8lhg7t9v7shq43e8cfeh',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641124,1680641168,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641168;s:5:\"token\";s:32:\"64050ec24c71b2f600f81130728c6709\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('a3ojce1mthvos7bnhhc256d3s4',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640799,1680640807,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680640807;s:5:\"token\";s:32:\"eda1ab1e77894490da882218009bb469\";}','localhost'),('adif76a9q6etenc0hihb99u8r0',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640819,1680640872,0,'csrf|a:2:{s:9:\"timestamp\";i:1680640872;s:5:\"token\";s:32:\"fdd13c496cac65e85243e9c11e4e1c38\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('b5g2ian1db34ejutgf9p9b112s',5,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640965,1680640974,0,'userId|i:5;username|s:8:\"sberardo\";csrf|a:2:{s:9:\"timestamp\";i:1680640974;s:5:\"token\";s:32:\"f2e21f15a1a7800e62863b45dff73998\";}signedInAs|i:3;','localhost'),('bal4p0glj59ktna196e35ne9la',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641642,1680641660,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641660;s:5:\"token\";s:32:\"a6df7687f5db0f7747b728cb20ebed34\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('c4gvt59satq3gtj6p6fsa2j3o3',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641466,1680641510,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641510;s:5:\"token\";s:32:\"5ea4708a6f05a7248b90934d2ee12d05\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('ccq3pmdl23p7b3tcqm3is1bk44',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640809,1680640817,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680640817;s:5:\"token\";s:32:\"20a3b9c086b3b6000cb8cbcaa1de4957\";}','localhost'),('de0cgkadobt4cv5tloj74ado0d',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641021,1680641057,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641057;s:5:\"token\";s:32:\"b188809cc33e11a567868d8774ca5090\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('e1h8th5mnnhoemleeo6k0i9idb',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641592,1680641601,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680641601;s:5:\"token\";s:32:\"bcc2e455ad5771fdd806de47058c327d\";}','localhost'),('f8vdv3pt5pc4gg7o98gvsgaijm',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641281,1680641328,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641328;s:5:\"token\";s:32:\"76ddda8fb01e31d7d19b79c429a85131\";}username|s:8:\"agallego\";','localhost'),('fo4eggcvr3p961d70p07rkokj2',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641377,1680641451,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641450;s:5:\"token\";s:32:\"2376e3e3ab7b5a1676ec5fae23e05a14\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('g63idestai70shshtttrs3g1ms',24,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641214,1680641228,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641227;s:5:\"token\";s:32:\"d36331d73c747f3d5540ad725c1f993f\";}username|s:7:\"eostrom\";userId|i:24;','localhost'),('gj61dmsliu7ud0lptp2dbckf2t',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641581,1680641592,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680641592;s:5:\"token\";s:32:\"7ba7ff07981358b1405212b8e2f5f10b\";}','localhost'),('gk7dl56fcmdh1fa9ijh36993j4',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641601,1680641609,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680641609;s:5:\"token\";s:32:\"f1c6a642fc82e263af31a61991bc07e8\";}','localhost'),('hmog79na673krg97femoukupd9',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640929,1680640954,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680640955;s:5:\"token\";s:32:\"46f995721c5132938763b98cbc0d8ecd\";}','localhost'),('ho4sc6kagfknssve13c9bp846j',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640596,1680640613,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680640613;s:5:\"token\";s:32:\"57d59ea139a4b05ecfae428aa390c569\";}','localhost'),('kpupv8lctcmgoltu52udq3er18',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640911,1680640921,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680640921;s:5:\"token\";s:32:\"56539a92cb695f60e3e698dca8d89522\";}','localhost'),('ku198j4o3kaiiosrqvb3sfngtq',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640921,1680640928,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680640928;s:5:\"token\";s:32:\"0688c111edd079e4b0e67ed79ad4ab4e\";}','localhost'),('mnhuqu0oclpo9fia2ukjgogfn2',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641601,1680641601,0,'','localhost'),('o801o4q7nktnepe33o7mlhvu7q',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640960,1680640965,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680640965;s:5:\"token\";s:32:\"56a4d6182744156f03852ce4801d50ca\";}','localhost'),('p5a4ikd8t73c2m223c1srvkckh',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641626,1680641640,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680641640;s:5:\"token\";s:32:\"b2c374758e483a4ad520cfa8289f161e\";}','localhost'),('pi6id8gh0j84iq0jadm7e2r25g',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640873,1680640896,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680640896;s:5:\"token\";s:32:\"c2724f3398f3b3ea3546d2f2bb8d7205\";}','localhost'),('pjeceoghni94k97n3fu36tmdpa',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640648,1680640796,0,'username|s:5:\"rvaca\";csrf|a:2:{s:9:\"timestamp\";i:1680640796;s:5:\"token\";s:32:\"2c69bb6d0d631eaac8ff45e939dee3fb\";}','localhost'),('q0ric2apgu2e3u8790bv3f4bgl',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641609,1680641617,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680641617;s:5:\"token\";s:32:\"b6c62dfedac2283a707410b61bc05712\";}','localhost'),('qf4l5dggb3nvgg6t2426f59m90',32,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641512,1680641523,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641523;s:5:\"token\";s:32:\"b0407beb1c6eee167b2fd57eb17dc295\";}username|s:6:\"rrossi\";userId|i:32;','localhost'),('qncmd6r13t2ta6dqfjocf8ghuq',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680640983,1680641019,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641019;s:5:\"token\";s:32:\"ed9ac5600fda5a09280ad6058f640615\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('qu3ooi70594i718ftikoim5l1h',30,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641453,1680641464,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641463;s:5:\"token\";s:32:\"80077c52f3f9f4bbbe6674a5ea5fc437\";}username|s:7:\"pdaniel\";userId|i:30;','localhost'),('ro490u09isfn6uln435uobs74g',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641171,1680641212,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641212;s:5:\"token\";s:32:\"18b9008731179977393a677939792510\";}username|s:7:\"phudson\";','localhost'),('rppq26987h1barvv8li5ed31tf',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641346,1680641375,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641375;s:5:\"token\";s:32:\"3207277cd7cb036104d4c1b652b54ad4\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('vttia3gns2oatkpk9sgafsi34k',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680641075,1680641122,0,'csrf|a:2:{s:9:\"timestamp\";i:1680641122;s:5:\"token\";s:32:\"319d067e74e11088f578bd2a1b791ac8\";}username|s:7:\"dbarnes\";userId|i:3;','localhost');
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2454,15 +2454,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `site`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `site` (
-  `redirect` bigint(20) NOT NULL DEFAULT '0' COMMENT 'If not 0, redirect to the specified journal/conference/... site.',
+  `redirect` bigint NOT NULL DEFAULT '0' COMMENT 'If not 0, redirect to the specified journal/conference/... site.',
   `primary_locale` varchar(14) NOT NULL COMMENT 'Primary locale for the site.',
-  `min_password_length` smallint(6) NOT NULL DEFAULT '6',
+  `min_password_length` smallint NOT NULL DEFAULT '6',
   `installed_locales` varchar(1024) NOT NULL DEFAULT 'en_US' COMMENT 'Locales for which support has been installed.',
   `supported_locales` varchar(1024) DEFAULT NULL COMMENT 'Locales supported by the site (for hosted journals/conferences/...).',
   `original_style_file_name` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2481,13 +2481,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `site_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `site_settings` (
   `setting_name` varchar(255) NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_value` text,
   UNIQUE KEY `site_settings_pkey` (`setting_name`,`locale`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2506,21 +2506,21 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `stage_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `stage_assignments` (
-  `stage_assignment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `user_group_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `stage_assignment_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `user_group_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_assigned` datetime NOT NULL,
-  `recommend_only` smallint(6) NOT NULL DEFAULT '0',
-  `can_change_metadata` smallint(6) NOT NULL DEFAULT '0',
+  `recommend_only` smallint NOT NULL DEFAULT '0',
+  `can_change_metadata` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`stage_assignment_id`),
   UNIQUE KEY `stage_assignment` (`submission_id`,`user_group_id`,`user_id`),
   KEY `stage_assignments_submission_id` (`submission_id`),
   KEY `stage_assignments_user_group_id` (`user_group_id`),
   KEY `stage_assignments_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2529,7 +2529,7 @@ CREATE TABLE `stage_assignments` (
 
 LOCK TABLES `stage_assignments` WRITE;
 /*!40000 ALTER TABLE `stage_assignments` DISABLE KEYS */;
-INSERT INTO `stage_assignments` VALUES (1,1,14,17,'2023-04-03 21:43:39',0,1),(2,1,3,3,'2023-04-03 21:42:28',0,1),(3,1,5,5,'2023-04-03 21:44:47',1,0),(4,1,5,4,'2023-04-03 21:42:28',0,1),(5,1,7,12,'2023-04-03 21:42:56',0,0),(6,1,11,14,'2023-04-03 21:43:04',0,0),(7,1,13,16,'2023-04-03 21:43:08',0,0),(8,2,14,18,'2023-04-03 21:44:58',0,0),(9,2,3,3,'2023-04-03 21:45:02',0,1),(10,2,5,5,'2023-04-03 21:45:02',0,1),(11,2,5,4,'2023-04-03 21:45:02',0,1),(12,2,5,6,'2023-04-03 21:45:11',1,1),(13,3,14,19,'2023-04-03 21:45:34',0,0),(14,3,3,3,'2023-04-03 21:45:38',0,1),(15,3,5,5,'2023-04-03 21:45:38',0,1),(16,3,5,4,'2023-04-03 21:45:38',0,1),(17,3,7,11,'2023-04-03 21:46:01',0,0),(18,4,14,20,'2023-04-03 21:46:09',0,0),(19,4,3,3,'2023-04-03 21:46:17',0,1),(20,4,5,5,'2023-04-03 21:46:17',0,1),(21,4,5,4,'2023-04-03 21:46:17',0,1),(22,5,14,21,'2023-04-03 21:46:24',0,0),(23,5,3,3,'2023-04-03 21:46:28',0,1),(24,5,5,5,'2023-04-03 21:46:28',0,1),(25,5,5,4,'2023-04-03 21:46:28',0,1),(26,5,7,11,'2023-04-03 21:46:51',0,0),(27,5,11,13,'2023-04-03 21:46:58',0,0),(28,5,13,15,'2023-04-03 21:47:01',0,0),(29,6,14,22,'2023-04-03 21:47:10',0,0),(30,6,3,3,'2023-04-03 21:47:14',0,1),(31,6,5,5,'2023-04-03 21:47:14',0,1),(32,6,5,4,'2023-04-03 21:47:14',0,1),(33,6,7,11,'2023-04-03 21:47:37',0,0),(34,6,11,13,'2023-04-03 21:47:45',0,0),(35,7,14,23,'2023-04-03 21:47:53',0,0),(36,7,3,3,'2023-04-03 21:47:57',0,1),(37,7,5,5,'2023-04-03 21:47:57',0,1),(38,7,5,4,'2023-04-03 21:47:57',0,1),(39,8,14,24,'2023-04-03 21:48:33',0,0),(40,8,3,3,'2023-04-03 21:48:40',0,1),(41,8,5,5,'2023-04-03 21:48:40',0,1),(42,8,5,4,'2023-04-03 21:48:40',0,1),(43,9,14,25,'2023-04-03 21:48:47',0,0),(44,9,3,3,'2023-04-03 21:48:51',0,1),(45,9,5,6,'2023-04-03 21:48:51',0,1),(46,9,7,12,'2023-04-03 21:49:14',0,0),(47,9,11,14,'2023-04-03 21:49:22',0,0),(48,9,13,16,'2023-04-03 21:49:25',0,0),(49,10,14,26,'2023-04-03 21:49:33',0,0),(50,10,3,3,'2023-04-03 21:49:38',0,1),(51,10,5,5,'2023-04-03 21:49:38',0,1),(52,10,5,4,'2023-04-03 21:49:38',0,1),(53,11,14,27,'2023-04-03 21:50:18',0,0),(54,11,3,3,'2023-04-03 21:50:25',0,1),(55,11,5,5,'2023-04-03 21:50:25',0,1),(56,11,5,4,'2023-04-03 21:50:25',0,1),(57,12,14,28,'2023-04-03 21:50:33',0,0),(58,12,3,3,'2023-04-03 21:50:37',0,1),(59,12,5,5,'2023-04-03 21:50:37',0,1),(60,12,5,4,'2023-04-03 21:50:37',0,1),(61,13,14,29,'2023-04-03 21:51:00',0,0),(62,13,3,3,'2023-04-03 21:51:05',0,1),(63,13,5,5,'2023-04-03 21:51:05',0,1),(64,13,5,4,'2023-04-03 21:51:05',0,1),(65,14,14,30,'2023-04-03 21:52:10',0,0),(66,14,3,3,'2023-04-03 21:52:14',0,1),(67,14,5,5,'2023-04-03 21:52:14',0,1),(68,14,5,4,'2023-04-03 21:52:14',0,1),(69,15,14,31,'2023-04-03 21:52:22',0,0),(70,15,3,3,'2023-04-03 21:52:26',0,1),(71,15,5,5,'2023-04-03 21:52:26',0,1),(72,15,5,4,'2023-04-03 21:52:26',0,1),(73,15,7,12,'2023-04-03 21:52:49',0,0),(74,15,11,14,'2023-04-03 21:52:56',0,0),(75,16,14,32,'2023-04-03 21:53:04',0,0),(76,16,3,3,'2023-04-03 21:53:09',0,1),(77,16,5,5,'2023-04-03 21:53:09',0,1),(78,16,5,4,'2023-04-03 21:53:09',0,1),(79,17,14,33,'2023-04-03 21:53:18',0,0),(80,17,3,3,'2023-04-03 21:53:22',0,1),(81,17,5,5,'2023-04-03 21:53:22',0,1),(82,17,5,4,'2023-04-03 21:53:22',0,1),(83,17,7,11,'2023-04-03 21:53:46',0,0),(84,17,11,13,'2023-04-03 21:53:53',0,0),(85,17,13,15,'2023-04-03 21:53:57',0,0),(86,18,14,34,'2023-04-03 21:55:04',0,0),(87,18,3,3,'2023-04-03 21:55:09',0,1),(88,18,5,5,'2023-04-03 21:55:09',0,1),(89,18,5,4,'2023-04-03 21:55:09',0,1),(90,19,14,35,'2023-04-03 21:55:25',0,0),(91,19,3,3,'2023-04-03 21:55:29',0,1),(92,19,5,6,'2023-04-03 21:55:29',0,1),(93,19,7,12,'2023-04-03 21:55:53',0,0);
+INSERT INTO `stage_assignments` VALUES (1,1,14,17,'2023-04-04 20:41:45',0,1),(2,1,3,3,'2023-04-04 20:40:29',0,1),(3,1,5,5,'2023-04-04 20:42:57',1,0),(4,1,5,4,'2023-04-04 20:40:30',0,1),(5,1,7,12,'2023-04-04 20:40:59',0,0),(6,1,11,14,'2023-04-04 20:41:07',0,0),(7,1,13,16,'2023-04-04 20:41:11',0,0),(8,2,14,18,'2023-04-04 20:43:08',0,0),(9,2,3,3,'2023-04-04 20:43:13',0,1),(10,2,5,5,'2023-04-04 20:43:13',0,1),(11,2,5,4,'2023-04-04 20:43:13',0,1),(12,2,5,6,'2023-04-04 20:43:23',1,1),(13,3,14,19,'2023-04-04 20:43:46',0,0),(14,3,3,3,'2023-04-04 20:43:51',0,1),(15,3,5,5,'2023-04-04 20:43:51',0,1),(16,3,5,4,'2023-04-04 20:43:51',0,1),(17,3,7,11,'2023-04-04 20:44:16',0,0),(18,4,14,20,'2023-04-04 20:44:24',0,0),(19,4,3,3,'2023-04-04 20:44:32',0,1),(20,4,5,5,'2023-04-04 20:44:32',0,1),(21,4,5,4,'2023-04-04 20:44:32',0,1),(22,5,14,21,'2023-04-04 20:44:40',0,0),(23,5,3,3,'2023-04-04 20:44:45',0,1),(24,5,5,5,'2023-04-04 20:44:45',0,1),(25,5,5,4,'2023-04-04 20:44:45',0,1),(26,5,7,11,'2023-04-04 20:45:09',0,0),(27,5,11,13,'2023-04-04 20:45:17',0,0),(28,5,13,15,'2023-04-04 20:45:21',0,0),(29,6,14,22,'2023-04-04 20:45:30',0,0),(30,6,3,3,'2023-04-04 20:45:35',0,1),(31,6,5,5,'2023-04-04 20:45:35',0,1),(32,6,5,4,'2023-04-04 20:45:35',0,1),(33,6,7,11,'2023-04-04 20:45:59',0,0),(34,6,11,13,'2023-04-04 20:46:07',0,0),(35,7,14,23,'2023-04-04 20:46:16',0,0),(36,7,3,3,'2023-04-04 20:46:21',0,1),(37,7,5,5,'2023-04-04 20:46:21',0,1),(38,7,5,4,'2023-04-04 20:46:21',0,1),(39,8,14,24,'2023-04-04 20:47:00',0,0),(40,8,3,3,'2023-04-04 20:47:07',0,1),(41,8,5,5,'2023-04-04 20:47:07',0,1),(42,8,5,4,'2023-04-04 20:47:07',0,1),(43,9,14,25,'2023-04-04 20:47:15',0,0),(44,9,3,3,'2023-04-04 20:47:19',0,1),(45,9,5,6,'2023-04-04 20:47:20',0,1),(46,9,7,12,'2023-04-04 20:47:44',0,0),(47,9,11,14,'2023-04-04 20:47:52',0,0),(48,9,13,16,'2023-04-04 20:47:56',0,0),(49,10,14,26,'2023-04-04 20:48:07',0,0),(50,10,3,3,'2023-04-04 20:48:12',0,1),(51,10,5,5,'2023-04-04 20:48:12',0,1),(52,10,5,4,'2023-04-04 20:48:12',0,1),(53,11,14,27,'2023-04-04 20:48:55',0,0),(54,11,3,3,'2023-04-04 20:49:03',0,1),(55,11,5,5,'2023-04-04 20:49:03',0,1),(56,11,5,4,'2023-04-04 20:49:03',0,1),(57,12,14,28,'2023-04-04 20:49:12',0,0),(58,12,3,3,'2023-04-04 20:49:17',0,1),(59,12,5,5,'2023-04-04 20:49:17',0,1),(60,12,5,4,'2023-04-04 20:49:17',0,1),(61,13,14,29,'2023-04-04 20:49:43',0,0),(62,13,3,3,'2023-04-04 20:49:48',0,1),(63,13,5,5,'2023-04-04 20:49:48',0,1),(64,13,5,4,'2023-04-04 20:49:48',0,1),(65,14,14,30,'2023-04-04 20:50:58',0,0),(66,14,3,3,'2023-04-04 20:51:03',0,1),(67,14,5,5,'2023-04-04 20:51:03',0,1),(68,14,5,4,'2023-04-04 20:51:03',0,1),(69,15,14,31,'2023-04-04 20:51:11',0,0),(70,15,3,3,'2023-04-04 20:51:16',0,1),(71,15,5,5,'2023-04-04 20:51:16',0,1),(72,15,5,4,'2023-04-04 20:51:16',0,1),(73,15,7,12,'2023-04-04 20:51:40',0,0),(74,15,11,14,'2023-04-04 20:51:49',0,0),(75,16,14,32,'2023-04-04 20:51:58',0,0),(76,16,3,3,'2023-04-04 20:52:03',0,1),(77,16,5,5,'2023-04-04 20:52:03',0,1),(78,16,5,4,'2023-04-04 20:52:03',0,1),(79,17,14,33,'2023-04-04 20:52:10',0,0),(80,17,3,3,'2023-04-04 20:52:15',0,1),(81,17,5,5,'2023-04-04 20:52:15',0,1),(82,17,5,4,'2023-04-04 20:52:15',0,1),(83,17,7,11,'2023-04-04 20:52:40',0,0),(84,17,11,13,'2023-04-04 20:52:48',0,0),(85,17,13,15,'2023-04-04 20:52:52',0,0),(86,18,14,34,'2023-04-04 20:54:07',0,0),(87,18,3,3,'2023-04-04 20:54:12',0,1),(88,18,5,5,'2023-04-04 20:54:12',0,1),(89,18,5,4,'2023-04-04 20:54:12',0,1),(90,19,14,35,'2023-04-04 20:54:29',0,0),(91,19,3,3,'2023-04-04 20:54:34',0,1),(92,19,5,6,'2023-04-04 20:54:34',0,1),(93,19,7,12,'2023-04-04 20:54:59',0,0);
 /*!40000 ALTER TABLE `stage_assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2539,16 +2539,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `static_page_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `static_page_settings` (
-  `static_page_id` bigint(20) NOT NULL,
+  `static_page_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` longtext,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `static_page_settings_pkey` (`static_page_id`,`locale`,`setting_name`),
   KEY `static_page_settings_static_page_id` (`static_page_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2566,13 +2566,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `static_pages`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `static_pages` (
-  `static_page_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `static_page_id` bigint NOT NULL AUTO_INCREMENT,
   `path` varchar(255) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
   PRIMARY KEY (`static_page_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2590,17 +2590,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `subeditor_submission_group`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `subeditor_submission_group` (
-  `context_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `section_editors_pkey` (`context_id`,`assoc_id`,`assoc_type`,`user_id`),
   KEY `section_editors_context_id` (`context_id`),
   KEY `subeditor_submission_group_assoc_id` (`assoc_id`,`assoc_type`),
   KEY `subeditor_submission_group_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2619,22 +2619,22 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_comments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_comments` (
-  `comment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `comment_type` bigint(20) DEFAULT NULL,
-  `role_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `author_id` bigint(20) NOT NULL,
+  `comment_id` bigint NOT NULL AUTO_INCREMENT,
+  `comment_type` bigint DEFAULT NULL,
+  `role_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `author_id` bigint NOT NULL,
   `comment_title` text NOT NULL,
   `comments` text,
   `date_posted` datetime DEFAULT NULL,
   `date_modified` datetime DEFAULT NULL,
-  `viewable` smallint(6) DEFAULT NULL,
+  `viewable` smallint DEFAULT NULL,
   PRIMARY KEY (`comment_id`),
   KEY `submission_comments_submission_id` (`submission_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2643,7 +2643,7 @@ CREATE TABLE `submission_comments` (
 
 LOCK TABLES `submission_comments` WRITE;
 /*!40000 ALTER TABLE `submission_comments` DISABLE KEYS */;
-INSERT INTO `submission_comments` VALUES (1,1,4096,7,10,8,'','<p>Here are my review comments</p>','2023-04-03 21:48:25',NULL,1),(2,1,4096,10,15,9,'','<p>Here are my review comments</p>','2023-04-03 21:50:02',NULL,1),(3,1,4096,10,16,10,'','<p>Here are my review comments</p>','2023-04-03 21:50:10',NULL,1),(4,1,4096,13,19,7,'','<p>Here are my review comments</p>','2023-04-03 21:51:35',NULL,1),(5,1,4096,13,20,9,'','<p>Here are my review comments</p>','2023-04-03 21:51:44',NULL,1),(6,1,4096,13,21,10,'','<p>Here are my review comments</p>','2023-04-03 21:51:53',NULL,1);
+INSERT INTO `submission_comments` VALUES (1,1,4096,7,10,8,'','<p>Here are my review comments</p>','2023-04-04 20:46:51',NULL,1),(2,1,4096,10,15,9,'','<p>Here are my review comments</p>','2023-04-04 20:48:38',NULL,1),(3,1,4096,10,16,10,'','<p>Here are my review comments</p>','2023-04-04 20:48:47',NULL,1),(4,1,4096,13,19,7,'','<p>Here are my review comments</p>','2023-04-04 20:50:21',NULL,1),(5,1,4096,13,20,9,'','<p>Here are my review comments</p>','2023-04-04 20:50:30',NULL,1),(6,1,4096,13,21,10,'','<p>Here are my review comments</p>','2023-04-04 20:50:40',NULL,1);
 /*!40000 ALTER TABLE `submission_comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2653,17 +2653,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_file_revisions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_file_revisions` (
-  `revision_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
-  `file_id` bigint(20) unsigned NOT NULL,
+  `revision_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `submission_file_id` bigint unsigned NOT NULL,
+  `file_id` bigint unsigned NOT NULL,
   PRIMARY KEY (`revision_id`),
   KEY `submission_file_revisions_submission_file_id_foreign` (`submission_file_id`),
   KEY `submission_file_revisions_file_id_foreign` (`file_id`),
   CONSTRAINT `submission_file_revisions_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`file_id`),
   CONSTRAINT `submission_file_revisions_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2672,7 +2672,7 @@ CREATE TABLE `submission_file_revisions` (
 
 LOCK TABLES `submission_file_revisions` WRITE;
 /*!40000 ALTER TABLE `submission_file_revisions` DISABLE KEYS */;
-INSERT INTO `submission_file_revisions` VALUES (1,1,1),(2,2,1),(3,3,2),(4,4,3),(5,5,3),(6,6,4),(7,7,4),(8,8,5),(9,9,6),(10,10,7),(11,11,8),(12,12,9),(13,13,10),(14,14,11),(15,15,12),(16,16,13),(17,17,14),(18,18,14),(19,19,15),(20,20,16),(21,21,16),(22,22,17),(23,23,18),(24,24,18),(25,25,19),(26,26,20),(27,27,21),(28,28,21);
+INSERT INTO `submission_file_revisions` VALUES (1,1,1),(2,2,2),(3,3,3),(4,4,4),(5,5,5),(6,6,6),(7,7,6),(8,8,7),(9,9,8),(10,10,8),(11,11,9),(12,12,10),(13,13,11),(14,14,11),(15,15,12),(16,16,13),(17,17,13),(18,18,14),(19,19,14),(20,20,15),(21,21,16),(22,22,16),(23,23,17),(24,24,18),(25,25,19),(26,26,20),(27,27,21),(28,28,21);
 /*!40000 ALTER TABLE `submission_file_revisions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2682,16 +2682,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_file_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_file_settings` (
-  `submission_file_id` bigint(20) NOT NULL,
+  `submission_file_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL DEFAULT 'string' COMMENT '(bool|int|float|string|object|date)',
   UNIQUE KEY `submission_file_settings_pkey` (`submission_file_id`,`locale`,`setting_name`),
   KEY `submission_file_settings_id` (`submission_file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2700,7 +2700,7 @@ CREATE TABLE `submission_file_settings` (
 
 LOCK TABLES `submission_file_settings` WRITE;
 /*!40000 ALTER TABLE `submission_file_settings` DISABLE KEYS */;
-INSERT INTO `submission_file_settings` VALUES (1,'en_US','name','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(2,'en_US','name','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(3,'en_US','name','article.pdf','string'),(3,'fr_CA','name','','string'),(4,'en_US','name','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(5,'en_US','name','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(6,'en_US','name','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(7,'en_US','name','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(8,'en_US','name','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(9,'en_US','name','Genetic transformation of forest trees.pdf','string'),(10,'en_US','name','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(11,'en_US','name','Developing efficacy beliefs in the classroom.pdf','string'),(12,'en_US','name','Traditions and Trends in the Study of the Commons.pdf','string'),(13,'en_US','name','Hansen & Pinto: Reason Reclaimed.pdf','string'),(14,'en_US','name','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(15,'en_US','name','Learning Sustainable Design through Service.pdf','string'),(16,'en_US','name','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(17,'en_US','name','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(18,'en_US','name','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(19,'en_US','name','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(20,'en_US','name','Yam diseases and its management in Nigeria.pdf','string'),(21,'en_US','name','Yam diseases and its management in Nigeria.pdf','string'),(22,'en_US','name','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(23,'en_US','name','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(24,'en_US','name','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(25,'en_US','name','article.pdf','string'),(25,'fr_CA','name','','string'),(26,'en_US','name','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(27,'en_US','name','Finocchiaro: Arguments About Arguments.pdf','string'),(28,'en_US','name','Finocchiaro: Arguments About Arguments.pdf','string');
+INSERT INTO `submission_file_settings` VALUES (1,'en_US','name','Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf','string'),(2,'en_US','name','article.pdf','string'),(2,'fr_CA','name','','string'),(3,'en_US','name','The influence of lactation on the quantity and quality of cashmere production.pdf','string'),(4,'en_US','name','The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf','string'),(5,'en_US','name','Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf','string'),(6,'en_US','name','Genetic transformation of forest trees.pdf','string'),(7,'en_US','name','Genetic transformation of forest trees.pdf','string'),(8,'en_US','name','Investigating the Shared Background Required for Argument: A Critique of Fogelin\'s Thesis on Deep Disagreement.pdf','string'),(9,'en_US','name','Developing efficacy beliefs in the classroom.pdf','string'),(10,'en_US','name','Developing efficacy beliefs in the classroom.pdf','string'),(11,'en_US','name','Traditions and Trends in the Study of the Commons.pdf','string'),(12,'en_US','name','Hansen & Pinto: Reason Reclaimed.pdf','string'),(13,'en_US','name','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(14,'en_US','name','Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf','string'),(15,'en_US','name','Learning Sustainable Design through Service.pdf','string'),(16,'en_US','name','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(17,'en_US','name','Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf','string'),(18,'en_US','name','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(19,'en_US','name','Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf','string'),(20,'en_US','name','Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf','string'),(21,'en_US','name','Yam diseases and its management in Nigeria.pdf','string'),(22,'en_US','name','Yam diseases and its management in Nigeria.pdf','string'),(23,'en_US','name','Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf','string'),(24,'en_US','name','Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf','string'),(25,'en_US','name','article.pdf','string'),(25,'fr_CA','name','','string'),(26,'en_US','name','Self-Organization in Multi-Level Institutions in Networked Environments.pdf','string'),(27,'en_US','name','Finocchiaro: Arguments About Arguments.pdf','string'),(28,'en_US','name','Finocchiaro: Arguments About Arguments.pdf','string');
 /*!40000 ALTER TABLE `submission_file_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2710,28 +2710,28 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_files` (
-  `submission_file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `file_id` bigint(20) unsigned NOT NULL,
-  `source_submission_file_id` bigint(20) DEFAULT NULL,
-  `genre_id` bigint(20) DEFAULT NULL,
-  `file_stage` bigint(20) NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `file_id` bigint unsigned NOT NULL,
+  `source_submission_file_id` bigint DEFAULT NULL,
+  `genre_id` bigint DEFAULT NULL,
+  `file_stage` bigint NOT NULL,
   `direct_sales_price` varchar(255) DEFAULT NULL,
   `sales_type` varchar(255) DEFAULT NULL,
-  `viewable` smallint(6) DEFAULT NULL,
+  `viewable` smallint DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  `uploader_user_id` bigint(20) DEFAULT NULL,
-  `assoc_type` bigint(20) DEFAULT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `uploader_user_id` bigint DEFAULT NULL,
+  `assoc_type` bigint DEFAULT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   PRIMARY KEY (`submission_file_id`),
   KEY `submission_files_submission_id` (`submission_id`),
   KEY `submission_files_stage_assoc` (`file_stage`,`assoc_type`,`assoc_id`),
   KEY `submission_files_file_id_foreign` (`file_id`),
   CONSTRAINT `submission_files_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2740,7 +2740,7 @@ CREATE TABLE `submission_files` (
 
 LOCK TABLES `submission_files` WRITE;
 /*!40000 ALTER TABLE `submission_files` DISABLE KEYS */;
-INSERT INTO `submission_files` VALUES (1,1,1,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:42:25','2023-04-03 21:42:25',17,NULL,NULL),(2,1,1,1,1,4,NULL,NULL,NULL,'2023-04-03 21:42:34','2023-04-03 21:42:34',17,NULL,NULL),(3,1,2,NULL,1,10,NULL,NULL,NULL,'2023-04-03 21:43:31','2023-04-03 21:43:31',3,521,1),(4,2,3,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:44:59','2023-04-03 21:44:59',18,NULL,NULL),(5,2,3,4,1,4,NULL,NULL,NULL,'2023-04-03 21:45:07','2023-04-03 21:45:07',18,NULL,NULL),(6,3,4,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:45:35','2023-04-03 21:45:35',19,NULL,NULL),(7,3,4,6,1,4,NULL,NULL,NULL,'2023-04-03 21:45:43','2023-04-03 21:45:43',19,NULL,NULL),(8,4,5,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:46:10','2023-04-03 21:46:11',20,NULL,NULL),(9,5,6,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:46:25','2023-04-03 21:46:25',21,NULL,NULL),(10,6,7,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:47:11','2023-04-03 21:47:11',22,NULL,NULL),(11,7,8,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:47:54','2023-04-03 21:47:54',23,NULL,NULL),(12,8,9,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:48:34','2023-04-03 21:48:34',24,NULL,NULL),(13,9,10,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:48:49','2023-04-03 21:48:49',25,NULL,NULL),(14,10,11,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:49:35','2023-04-03 21:49:35',26,NULL,NULL),(15,11,12,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:50:19','2023-04-03 21:50:20',27,NULL,NULL),(16,12,13,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:50:34','2023-04-03 21:50:34',28,NULL,NULL),(17,13,14,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:51:01','2023-04-03 21:51:01',29,NULL,NULL),(18,13,14,17,1,4,NULL,NULL,NULL,'2023-04-03 21:51:12','2023-04-03 21:51:12',29,NULL,NULL),(19,14,15,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:52:11','2023-04-03 21:52:11',30,NULL,NULL),(20,15,16,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:52:23','2023-04-03 21:52:23',31,NULL,NULL),(21,15,16,20,1,4,NULL,NULL,NULL,'2023-04-03 21:52:33','2023-04-03 21:52:33',31,NULL,NULL),(22,16,17,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:53:06','2023-04-03 21:53:06',32,NULL,NULL),(23,17,18,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:53:19','2023-04-03 21:53:19',33,NULL,NULL),(24,17,18,23,1,4,NULL,NULL,NULL,'2023-04-03 21:53:30','2023-04-03 21:53:30',33,NULL,NULL),(25,17,19,NULL,1,10,NULL,NULL,NULL,'2023-04-03 21:54:03','2023-04-03 21:54:04',3,521,3),(26,18,20,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:55:06','2023-04-03 21:55:06',34,NULL,NULL),(27,19,21,NULL,1,2,NULL,NULL,NULL,'2023-04-03 21:55:26','2023-04-03 21:55:26',35,NULL,NULL),(28,19,21,27,1,4,NULL,NULL,NULL,'2023-04-03 21:55:36','2023-04-03 21:55:36',35,NULL,NULL);
+INSERT INTO `submission_files` VALUES (1,1,1,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:40:26','2023-04-04 20:40:26',17,NULL,NULL),(2,1,2,NULL,1,10,NULL,NULL,NULL,'2023-04-04 20:41:35','2023-04-04 20:41:36',3,521,1),(3,2,3,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:43:09','2023-04-04 20:43:10',18,NULL,NULL),(4,3,4,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:43:48','2023-04-04 20:43:48',19,NULL,NULL),(5,4,5,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:44:26','2023-04-04 20:44:26',20,NULL,NULL),(6,5,6,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:44:41','2023-04-04 20:44:42',21,NULL,NULL),(7,5,6,6,1,4,NULL,NULL,NULL,'2023-04-04 20:44:50','2023-04-04 20:44:50',21,NULL,NULL),(8,6,7,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:45:31','2023-04-04 20:45:32',22,NULL,NULL),(9,7,8,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:46:17','2023-04-04 20:46:18',23,NULL,NULL),(10,7,8,9,1,4,NULL,NULL,NULL,'2023-04-04 20:46:27','2023-04-04 20:46:27',23,NULL,NULL),(11,8,9,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:47:01','2023-04-04 20:47:01',24,NULL,NULL),(12,9,10,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:47:16','2023-04-04 20:47:17',25,NULL,NULL),(13,10,11,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:48:08','2023-04-04 20:48:09',26,NULL,NULL),(14,10,11,13,1,4,NULL,NULL,NULL,'2023-04-04 20:48:18','2023-04-04 20:48:18',26,NULL,NULL),(15,11,12,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:48:57','2023-04-04 20:48:57',27,NULL,NULL),(16,12,13,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:49:13','2023-04-04 20:49:13',28,NULL,NULL),(17,12,13,16,1,4,NULL,NULL,NULL,'2023-04-04 20:49:24','2023-04-04 20:49:24',28,NULL,NULL),(18,13,14,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:49:44','2023-04-04 20:49:45',29,NULL,NULL),(19,13,14,18,1,4,NULL,NULL,NULL,'2023-04-04 20:49:56','2023-04-04 20:49:56',29,NULL,NULL),(20,14,15,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:51:00','2023-04-04 20:51:00',30,NULL,NULL),(21,15,16,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:51:13','2023-04-04 20:51:13',31,NULL,NULL),(22,15,16,21,1,4,NULL,NULL,NULL,'2023-04-04 20:51:23','2023-04-04 20:51:23',31,NULL,NULL),(23,16,17,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:51:59','2023-04-04 20:51:59',32,NULL,NULL),(24,17,18,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:52:11','2023-04-04 20:52:12',33,NULL,NULL),(25,17,19,NULL,1,10,NULL,NULL,NULL,'2023-04-04 20:52:59','2023-04-04 20:53:00',3,521,3),(26,18,20,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:54:08','2023-04-04 20:54:09',34,NULL,NULL),(27,19,21,NULL,1,2,NULL,NULL,NULL,'2023-04-04 20:54:31','2023-04-04 20:54:31',35,NULL,NULL),(28,19,21,27,1,4,NULL,NULL,NULL,'2023-04-04 20:54:42','2023-04-04 20:54:42',35,NULL,NULL);
 /*!40000 ALTER TABLE `submission_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2750,13 +2750,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_keyword_list`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_keyword_list` (
-  `keyword_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `keyword_id` bigint NOT NULL AUTO_INCREMENT,
   `keyword_text` varchar(60) NOT NULL,
   PRIMARY KEY (`keyword_id`),
   UNIQUE KEY `submission_search_keyword_text` (`keyword_text`)
-) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=113 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2775,14 +2775,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_object_keywords`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_object_keywords` (
-  `object_id` bigint(20) NOT NULL,
-  `keyword_id` bigint(20) NOT NULL,
-  `pos` int(11) NOT NULL COMMENT 'Word position of the keyword in the object.',
+  `object_id` bigint NOT NULL,
+  `keyword_id` bigint NOT NULL,
+  `pos` int NOT NULL COMMENT 'Word position of the keyword in the object.',
   UNIQUE KEY `submission_search_object_keywords_pkey` (`object_id`,`pos`),
   KEY `submission_search_object_keywords_keyword_id` (`keyword_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2801,15 +2801,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_objects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_objects` (
-  `object_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `type` int(11) NOT NULL COMMENT 'Type of item. E.g., abstract, fulltext, etc.',
-  `assoc_id` bigint(20) DEFAULT NULL COMMENT 'Optional ID of an associated record (e.g., a file_id)',
+  `object_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `type` int NOT NULL COMMENT 'Type of item. E.g., abstract, fulltext, etc.',
+  `assoc_id` bigint DEFAULT NULL COMMENT 'Optional ID of an associated record (e.g., a file_id)',
   PRIMARY KEY (`object_id`),
   KEY `submission_search_object_submission` (`submission_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2828,15 +2828,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_settings` (
-  `submission_id` bigint(20) NOT NULL,
+  `submission_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
   UNIQUE KEY `submission_settings_pkey` (`submission_id`,`locale`,`setting_name`),
   KEY `submission_settings_submission_id` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2854,20 +2854,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_tombstones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_tombstones` (
-  `tombstone_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
+  `tombstone_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
   `date_deleted` datetime NOT NULL,
-  `journal_id` bigint(20) NOT NULL,
-  `section_id` bigint(20) NOT NULL,
+  `journal_id` bigint NOT NULL,
+  `section_id` bigint NOT NULL,
   `set_spec` varchar(255) NOT NULL,
   `set_name` varchar(255) NOT NULL,
   `oai_identifier` varchar(255) NOT NULL,
   PRIMARY KEY (`tombstone_id`),
   KEY `submission_tombstones_journal_id` (`journal_id`),
   KEY `submission_tombstones_submission_id` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2885,23 +2885,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submissions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submissions` (
-  `submission_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `current_publication_id` bigint(20) DEFAULT NULL,
+  `submission_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `current_publication_id` bigint DEFAULT NULL,
   `date_last_activity` datetime DEFAULT NULL,
   `date_submitted` datetime DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
-  `stage_id` bigint(20) NOT NULL DEFAULT '1',
+  `stage_id` bigint NOT NULL DEFAULT '1',
   `locale` varchar(14) DEFAULT NULL,
-  `status` smallint(6) NOT NULL DEFAULT '1',
-  `submission_progress` smallint(6) NOT NULL DEFAULT '1',
-  `work_type` smallint(6) DEFAULT '0',
+  `status` smallint NOT NULL DEFAULT '1',
+  `submission_progress` smallint NOT NULL DEFAULT '1',
+  `work_type` smallint DEFAULT '0',
   PRIMARY KEY (`submission_id`),
   KEY `submissions_context_id` (`context_id`),
   KEY `submissions_publication_id` (`current_publication_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2910,7 +2910,7 @@ CREATE TABLE `submissions` (
 
 LOCK TABLES `submissions` WRITE;
 /*!40000 ALTER TABLE `submissions` DISABLE KEYS */;
-INSERT INTO `submissions` VALUES (1,1,1,'2023-04-03 21:44:47','2023-04-03 21:42:28','2023-04-03 21:42:28',5,'en_US',3,0,0),(2,1,3,'2023-04-03 21:45:21','2023-04-03 21:45:02','2023-04-03 21:45:02',3,'en_US',1,0,0),(3,1,4,'2023-04-03 21:46:01','2023-04-03 21:45:38','2023-04-03 21:45:38',4,'en_US',1,0,0),(4,1,5,'2023-04-03 21:46:17','2023-04-03 21:46:17','2023-04-03 21:46:17',1,'en_US',1,0,0),(5,1,6,'2023-04-03 21:47:01','2023-04-03 21:46:28','2023-04-03 21:46:28',5,'en_US',1,0,0),(6,1,7,'2023-04-03 21:47:45','2023-04-03 21:47:14','2023-04-03 21:47:14',5,'en_US',1,0,0),(7,1,8,'2023-04-03 21:48:25','2023-04-03 21:47:57','2023-04-03 21:47:57',3,'en_US',1,0,0),(8,1,9,'2023-04-03 21:48:40','2023-04-03 21:48:40','2023-04-03 21:48:40',1,'en_US',1,0,0),(9,1,10,'2023-04-03 21:49:25','2023-04-03 21:48:51','2023-04-03 21:48:51',5,'en_US',1,0,0),(10,1,11,'2023-04-03 21:50:10','2023-04-03 21:49:38','2023-04-03 21:49:38',3,'en_US',1,0,0),(11,1,12,'2023-04-03 21:50:25','2023-04-03 21:50:25','2023-04-03 21:50:25',1,'en_US',1,0,0),(12,1,13,'2023-04-03 21:50:53','2023-04-03 21:50:37','2023-04-03 21:50:37',3,'en_US',1,0,0),(13,1,14,'2023-04-03 21:52:02','2023-04-03 21:51:05','2023-04-03 21:51:05',3,'en_US',1,0,0),(14,1,15,'2023-04-03 21:52:15','2023-04-03 21:52:14','2023-04-03 21:52:14',1,'en_US',1,0,0),(15,1,16,'2023-04-03 21:52:56','2023-04-03 21:52:26','2023-04-03 21:52:26',5,'en_US',1,0,0),(16,1,17,'2023-04-03 21:53:09','2023-04-03 21:53:09','2023-04-03 21:53:09',1,'en_US',1,0,0),(17,1,18,'2023-04-03 21:54:53','2023-04-03 21:53:22','2023-04-03 21:53:22',5,'en_US',3,0,0),(18,1,19,'2023-04-03 21:55:16','2023-04-03 21:55:09','2023-04-03 21:55:09',1,'en_US',4,0,0),(19,1,20,'2023-04-03 21:55:53','2023-04-03 21:55:29','2023-04-03 21:55:29',4,'en_US',1,0,0);
+INSERT INTO `submissions` VALUES (1,1,1,'2023-04-04 20:42:57','2023-04-04 20:40:29','2023-04-04 20:40:29',5,'en_US',3,0,0),(2,1,3,'2023-04-04 20:43:33','2023-04-04 20:43:13','2023-04-04 20:43:13',3,'en_US',1,0,0),(3,1,4,'2023-04-04 20:44:16','2023-04-04 20:43:51','2023-04-04 20:43:51',4,'en_US',1,0,0),(4,1,5,'2023-04-04 20:44:33','2023-04-04 20:44:32','2023-04-04 20:44:32',1,'en_US',1,0,0),(5,1,6,'2023-04-04 20:45:21','2023-04-04 20:44:45','2023-04-04 20:44:45',5,'en_US',1,0,0),(6,1,7,'2023-04-04 20:46:07','2023-04-04 20:45:35','2023-04-04 20:45:35',5,'en_US',1,0,0),(7,1,8,'2023-04-04 20:46:52','2023-04-04 20:46:21','2023-04-04 20:46:21',3,'en_US',1,0,0),(8,1,9,'2023-04-04 20:47:08','2023-04-04 20:47:07','2023-04-04 20:47:07',1,'en_US',1,0,0),(9,1,10,'2023-04-04 20:47:56','2023-04-04 20:47:19','2023-04-04 20:47:19',5,'en_US',1,0,0),(10,1,11,'2023-04-04 20:48:47','2023-04-04 20:48:12','2023-04-04 20:48:12',3,'en_US',1,0,0),(11,1,12,'2023-04-04 20:49:04','2023-04-04 20:49:03','2023-04-04 20:49:03',1,'en_US',1,0,0),(12,1,13,'2023-04-04 20:49:35','2023-04-04 20:49:17','2023-04-04 20:49:17',3,'en_US',1,0,0),(13,1,14,'2023-04-04 20:50:50','2023-04-04 20:49:48','2023-04-04 20:49:48',3,'en_US',1,0,0),(14,1,15,'2023-04-04 20:51:04','2023-04-04 20:51:03','2023-04-04 20:51:03',1,'en_US',1,0,0),(15,1,16,'2023-04-04 20:51:49','2023-04-04 20:51:16','2023-04-04 20:51:16',5,'en_US',1,0,0),(16,1,17,'2023-04-04 20:52:03','2023-04-04 20:52:03','2023-04-04 20:52:03',1,'en_US',1,0,0),(17,1,18,'2023-04-04 20:53:55','2023-04-04 20:52:15','2023-04-04 20:52:15',5,'en_US',3,0,0),(18,1,19,'2023-04-04 20:54:20','2023-04-04 20:54:12','2023-04-04 20:54:12',1,'en_US',4,0,0),(19,1,20,'2023-04-04 20:54:59','2023-04-04 20:54:34','2023-04-04 20:54:34',4,'en_US',1,0,0);
 /*!40000 ALTER TABLE `submissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2920,16 +2920,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `subscription_type_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `subscription_type_settings` (
-  `type_id` bigint(20) NOT NULL,
+  `type_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `subscription_type_settings_pkey` (`type_id`,`locale`,`setting_name`),
   KEY `subscription_type_settings_type_id` (`type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2947,20 +2947,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `subscription_types`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `subscription_types` (
-  `type_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `journal_id` bigint(20) NOT NULL,
+  `type_id` bigint NOT NULL AUTO_INCREMENT,
+  `journal_id` bigint NOT NULL,
   `cost` double(8,2) NOT NULL,
   `currency_code_alpha` varchar(3) NOT NULL,
-  `duration` smallint(6) DEFAULT NULL,
-  `format` smallint(6) NOT NULL,
-  `institutional` smallint(6) NOT NULL DEFAULT '0',
-  `membership` smallint(6) NOT NULL DEFAULT '0',
-  `disable_public_display` smallint(6) NOT NULL,
+  `duration` smallint DEFAULT NULL,
+  `format` smallint NOT NULL,
+  `institutional` smallint NOT NULL DEFAULT '0',
+  `membership` smallint NOT NULL DEFAULT '0',
+  `disable_public_display` smallint NOT NULL,
   `seq` double(8,2) NOT NULL,
   PRIMARY KEY (`type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2978,20 +2978,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `subscriptions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `subscriptions` (
-  `subscription_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `journal_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `type_id` bigint(20) NOT NULL,
+  `subscription_id` bigint NOT NULL AUTO_INCREMENT,
+  `journal_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
+  `type_id` bigint NOT NULL,
   `date_start` date DEFAULT NULL,
   `date_end` datetime DEFAULT NULL,
-  `status` smallint(6) NOT NULL DEFAULT '1',
+  `status` smallint NOT NULL DEFAULT '1',
   `membership` varchar(40) DEFAULT NULL,
   `reference_number` varchar(40) DEFAULT NULL,
   `notes` text,
   PRIMARY KEY (`subscription_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3009,18 +3009,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `temporary_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `temporary_files` (
-  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL,
   `file_name` varchar(90) NOT NULL,
   `file_type` varchar(255) DEFAULT NULL,
-  `file_size` bigint(20) NOT NULL,
+  `file_size` bigint NOT NULL,
   `original_file_name` varchar(127) DEFAULT NULL,
   `date_uploaded` datetime NOT NULL,
   PRIMARY KEY (`file_id`),
   KEY `temporary_files_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3038,19 +3038,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_temporary_records` (
-  `assoc_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `day` bigint(20) NOT NULL,
-  `entry_time` bigint(20) NOT NULL,
-  `metric` bigint(20) NOT NULL DEFAULT '1',
+  `assoc_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `day` bigint NOT NULL,
+  `entry_time` bigint NOT NULL,
+  `metric` bigint NOT NULL DEFAULT '1',
   `country_id` varchar(2) DEFAULT NULL,
   `region` varchar(2) DEFAULT NULL,
   `city` varchar(255) DEFAULT NULL,
   `load_id` varchar(255) NOT NULL,
-  `file_type` smallint(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `file_type` smallint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3068,15 +3068,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_group_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_group_settings` (
-  `user_group_id` bigint(20) NOT NULL,
+  `user_group_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `user_group_settings_pkey` (`user_group_id`,`locale`,`setting_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3095,16 +3095,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_group_stage`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_group_stage` (
-  `context_id` bigint(20) NOT NULL,
-  `user_group_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `user_group_id` bigint NOT NULL,
+  `stage_id` bigint NOT NULL,
   UNIQUE KEY `user_group_stage_pkey` (`context_id`,`user_group_id`,`stage_id`),
   KEY `user_group_stage_context_id` (`context_id`),
   KEY `user_group_stage_user_group_id` (`user_group_id`),
   KEY `user_group_stage_stage_id` (`stage_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3123,20 +3123,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_groups` (
-  `user_group_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `role_id` bigint(20) NOT NULL,
-  `is_default` smallint(6) NOT NULL DEFAULT '0',
-  `show_title` smallint(6) NOT NULL DEFAULT '1',
-  `permit_self_registration` smallint(6) NOT NULL DEFAULT '0',
-  `permit_metadata_edit` smallint(6) NOT NULL DEFAULT '0',
+  `user_group_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `role_id` bigint NOT NULL,
+  `is_default` smallint NOT NULL DEFAULT '0',
+  `show_title` smallint NOT NULL DEFAULT '1',
+  `permit_self_registration` smallint NOT NULL DEFAULT '0',
+  `permit_metadata_edit` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_group_id`),
   KEY `user_groups_user_group_id` (`user_group_id`),
   KEY `user_groups_context_id` (`context_id`),
   KEY `user_groups_role_id` (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3155,12 +3155,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_interests`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_interests` (
-  `user_id` bigint(20) NOT NULL,
-  `controlled_vocab_entry_id` bigint(20) NOT NULL,
+  `user_id` bigint NOT NULL,
+  `controlled_vocab_entry_id` bigint NOT NULL,
   UNIQUE KEY `u_e_pkey` (`user_id`,`controlled_vocab_entry_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3178,19 +3178,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_settings` (
-  `user_id` bigint(20) NOT NULL,
+  `user_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL DEFAULT '0',
-  `assoc_id` bigint(20) NOT NULL DEFAULT '0',
+  `assoc_type` bigint NOT NULL DEFAULT '0',
+  `assoc_id` bigint NOT NULL DEFAULT '0',
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `user_settings_pkey` (`user_id`,`locale`,`setting_name`,`assoc_type`,`assoc_id`),
   KEY `user_settings_user_id` (`user_id`),
   KEY `user_settings_locale_setting_name_index` (`setting_name`,`locale`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3209,14 +3209,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_user_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_user_groups` (
-  `user_group_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `user_group_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `user_user_groups_pkey` (`user_group_id`,`user_id`),
   KEY `user_user_groups_user_group_id` (`user_group_id`),
   KEY `user_user_groups_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3235,9 +3235,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `user_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL AUTO_INCREMENT,
   `username` varchar(32) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -3252,16 +3252,16 @@ CREATE TABLE `users` (
   `date_registered` datetime NOT NULL,
   `date_validated` datetime DEFAULT NULL,
   `date_last_login` datetime NOT NULL,
-  `must_change_password` smallint(6) DEFAULT NULL,
-  `auth_id` bigint(20) DEFAULT NULL,
+  `must_change_password` smallint DEFAULT NULL,
+  `auth_id` bigint DEFAULT NULL,
   `auth_str` varchar(255) DEFAULT NULL,
-  `disabled` smallint(6) NOT NULL DEFAULT '0',
+  `disabled` smallint NOT NULL DEFAULT '0',
   `disabled_reason` text,
-  `inline_help` smallint(6) DEFAULT NULL,
+  `inline_help` smallint DEFAULT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `users_username` (`username`),
   UNIQUE KEY `users_email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3270,7 +3270,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','$2y$10$t9ntruAh6YAiYQrkZOggquLkjlxun8.5Vp6uxpbaLUns0bUMUoi8G','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'',NULL,NULL,'2023-04-03 21:38:45',NULL,'2023-04-03 21:42:08',0,NULL,NULL,0,NULL,1),(2,'rvaca','$2y$10$jxA7M.R9U8EiIbzSNRJG0eAZOCV11S2qV8yZarMcVU/uehzyXoxlK','rvaca@mailinator.com','','','',NULL,'MX','',NULL,NULL,'2023-04-03 21:39:41',NULL,'2023-04-03 21:41:52',0,0,NULL,0,NULL,1),(3,'dbarnes','$2y$10$./INXUAHp5smvNfNI.9z3.6JNcRLcS4f7MYlgAr6KPR8any2Z1tYq','dbarnes@mailinator.com','','','',NULL,'AU','',NULL,NULL,'2023-04-03 21:39:47',NULL,'2023-04-03 21:55:30',0,0,NULL,0,NULL,1),(4,'dbuskins','$2y$10$ydsUEN23PLHDL3b1Xw050OfqwQN7X4mntW/9e9zZL9VtrwaBQlDvq','dbuskins@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-04-03 21:39:56',NULL,'2023-04-03 21:39:56',0,0,NULL,0,NULL,1),(5,'sberardo','$2y$10$Y1GYSHk8TN7Nr9jDmMl8cuYfjs1wEqxl6cQ1KPzAusFLRcB6qwC7q','sberardo@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-04-03 21:40:02',NULL,'2023-04-03 21:40:02',0,0,NULL,0,NULL,1),(6,'minoue','$2y$10$SF/Mzaz2XqPHINtrWCrjaOj7j31gwZG5wpl2Ron3cb7q7NXPTN8k2','minoue@mailinator.com','','','',NULL,'JP','',NULL,NULL,'2023-04-03 21:40:09',NULL,'2023-04-03 21:45:16',0,0,NULL,0,NULL,1),(7,'jjanssen','$2y$10$C7g9JUq68OehmzS.i1XvP.auhiGfXxLjIWRCAWjgcMgkhombK3hQO','jjanssen@mailinator.com','','','',NULL,'NL','',NULL,NULL,'2023-04-03 21:40:16',NULL,'2023-04-03 21:51:29',0,0,NULL,0,NULL,1),(8,'phudson','$2y$10$XdGeZFTP1UHG7eLl98kwdOzSmxmsgxUkmuYbM0Yv/BQU96gPug7fK','phudson@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-04-03 21:40:24',NULL,'2023-04-03 21:48:19',0,0,NULL,0,NULL,1),(9,'amccrae','$2y$10$baZeoIvJcouvMYbyoPAs3efdyjmHQ8j/d5FCYLQbJ4mYCzQQr4hjW','amccrae@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-04-03 21:40:33',NULL,'2023-04-03 21:51:37',0,0,NULL,0,NULL,1),(10,'agallego','$2y$10$xMcZEkqeduWSkzz1bORnj.Zb3LaleHo0j9RIocjFyoBe5pvZEakWm','agallego@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-04-03 21:40:41',NULL,'2023-04-03 21:51:45',0,0,NULL,0,NULL,1),(11,'mfritz','$2y$10$bPOeJaE9972c/v5cZb/n6.q3Isqap/TtzoKxa3vKEi9LK5USiQrWe','mfritz@mailinator.com','','','',NULL,'BE','',NULL,NULL,'2023-04-03 21:40:50',NULL,'2023-04-03 21:40:50',0,0,NULL,0,NULL,1),(12,'svogt','$2y$10$1NLTHvfxzRJUPQuuPwLYVe3gTc0E7vrfL6jnePhPQQln3VHq3lGWW','svogt@mailinator.com','','','',NULL,'CL','',NULL,NULL,'2023-04-03 21:41:00',NULL,'2023-04-03 21:41:00',0,0,NULL,0,NULL,1),(13,'gcox','$2y$10$woAhaLxJr5iVt091m64GMetoovyjf7rBE0bV7eSaC0fYMBkeTE4Aq','gcox@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-04-03 21:41:09',NULL,'2023-04-03 21:41:09',0,0,NULL,0,NULL,1),(14,'shellier','$2y$10$fDl5zpyMNjeXskRiZtHni.rQqgcIAb9L9FISusBO4E2T44XMAH8qK','shellier@mailinator.com','','','',NULL,'ZA','',NULL,NULL,'2023-04-03 21:41:20',NULL,'2023-04-03 21:41:20',0,0,NULL,0,NULL,1),(15,'cturner','$2y$10$PGothIKT7n.n95n7jMMUfu0N7/gVhHRhsFQjgJ1mCFkNPEqWSfEwi','cturner@mailinator.com','','','',NULL,'GB','',NULL,NULL,'2023-04-03 21:41:32',NULL,'2023-04-03 21:41:32',0,0,NULL,0,NULL,1),(16,'skumar','$2y$10$I1GTPqn1ZfzShaH8RqMeEumJf516s912/tnSA9ivJRJTVLJLkKAxC','skumar@mailinator.com','','','',NULL,'SG','',NULL,NULL,'2023-04-03 21:41:43',NULL,'2023-04-03 21:41:43',0,0,NULL,0,NULL,1),(17,'amwandenga','$2y$10$TyC6QhSqls1DAMmIKyzL6OlLjqTYDgEKAXnaJ9DS5noHHbM64bZX.','amwandenga@mailinator.com',NULL,NULL,NULL,NULL,'ZA','',NULL,NULL,'2023-04-03 21:42:21',NULL,'2023-04-03 21:43:42',0,NULL,NULL,0,NULL,1),(18,'ccorino','$2y$10$adLcRa/4Dh5zFvsYvywe5Oa8u6HLzCZJD8PVbwzA1NDEg3oljbmLi','ccorino@mailinator.com',NULL,NULL,NULL,NULL,'IT','',NULL,NULL,'2023-04-03 21:44:55',NULL,'2023-04-03 21:44:55',0,NULL,NULL,0,NULL,1),(19,'ckwantes','$2y$10$.SxUj3tb.LWx5.oI9vp8B.NFsjghV9fS7zhRJLBPR8o1ij9nzncDa','ckwantes@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-03 21:45:31',NULL,'2023-04-03 21:45:32',0,NULL,NULL,0,NULL,1),(20,'cmontgomerie','$2y$10$9uNJFF6mj.btg9Wt5KoIsO/U9fPDCacn5LGMuH/mExj8UGHm2DpFO','cmontgomerie@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-03 21:46:07',NULL,'2023-04-03 21:46:07',0,NULL,NULL,0,NULL,1),(21,'ddiouf','$2y$10$XbNZ6BZJRb3yVacIw4rjkuZ1iJ1KO9mLqCdHCUEoyFtz3YgktTdNC','ddiouf@mailinator.com',NULL,NULL,NULL,NULL,'EG','',NULL,NULL,'2023-04-03 21:46:21',NULL,'2023-04-03 21:46:21',0,NULL,NULL,0,NULL,1),(22,'dphillips','$2y$10$olOYjNf6WjTs0n7j.MmO7OQlLwrdMUCGnGBPe/1BV6p4qURvF0Bwy','dphillips@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-03 21:47:07',NULL,'2023-04-03 21:47:07',0,NULL,NULL,0,NULL,1),(23,'dsokoloff','$2y$10$.tYSfKKQAfb1CZX2Wk7nwuZ0XnA.yD2YoYP7r59dr0U98WPh9wkNu','dsokoloff@mailinator.com',NULL,NULL,NULL,NULL,'IE','',NULL,NULL,'2023-04-03 21:47:50',NULL,'2023-04-03 21:47:50',0,NULL,NULL,0,NULL,1),(24,'eostrom','$2y$10$H.vG6LL/UMvD1FR5cy.izO.nhOXf5hC66mXVZ3wBYGA14bJpKlJTy','eostrom@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-04-03 21:48:30',NULL,'2023-04-03 21:48:31',0,NULL,NULL,0,NULL,1),(25,'fpaglieri','$2y$10$/Z.z9NjYGOh5OOOFkMRkF.8SLFAjjs55ALAIFtbktfGLBKxAgD4Xi','fpaglieri@mailinator.com',NULL,NULL,NULL,NULL,'IT','',NULL,NULL,'2023-04-03 21:48:45',NULL,'2023-04-03 21:48:45',0,NULL,NULL,0,NULL,1),(26,'jnovak','$2y$10$JGSrlFHryysGfMd15SMB3uOd1TdNjrV9dll6mB5FECBdwcUwTrQX.','jnovak@mailinator.com',NULL,NULL,NULL,NULL,'DK','',NULL,NULL,'2023-04-03 21:49:31',NULL,'2023-04-03 21:49:31',0,NULL,NULL,0,NULL,1),(27,'kalkhafaji','$2y$10$fPHlezaX1QnZUxh0bjz4/eDQSociwaIRgJW2Wa7.ZE/HhYRP4kdwC','kalkhafaji@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-04-03 21:50:16',NULL,'2023-04-03 21:50:16',0,NULL,NULL,0,NULL,1),(28,'lchristopher','$2y$10$b8ppsxs71vy8uIEfcphD4OTl/3B75JAKAN3pAfaXXyfVQyDwooiR2','lchristopher@mailinator.com',NULL,NULL,NULL,NULL,'AU','',NULL,NULL,'2023-04-03 21:50:30',NULL,'2023-04-03 21:50:30',0,NULL,NULL,0,NULL,1),(29,'lkumiega','$2y$10$i7DkdAbIE3MJ/KSOmdCrfu2EiETpdsw/mifjCRKpU1EtVQqRLR0Wu','lkumiega@mailinator.com',NULL,NULL,NULL,NULL,'ZA','',NULL,NULL,'2023-04-03 21:50:58',NULL,'2023-04-03 21:50:58',0,NULL,NULL,0,NULL,1),(30,'pdaniel','$2y$10$r8Gv8FqQbX974s/LhQ/q9uMKzIIyu9dr01Cwlhtu6qcW0.3w6bCSi','pdaniel@mailinator.com',NULL,NULL,NULL,NULL,'GB','',NULL,NULL,'2023-04-03 21:52:07',NULL,'2023-04-03 21:52:07',0,NULL,NULL,0,NULL,1),(31,'rbaiyewu','$2y$10$1c3GwLjxxl1xHC/m45HRE.9fI/x0IvzaV6JhbnkRkcOO7hviRof82','rbaiyewu@mailinator.com',NULL,NULL,NULL,NULL,'KE','',NULL,NULL,'2023-04-03 21:52:19',NULL,'2023-04-03 21:52:19',0,NULL,NULL,0,NULL,1),(32,'rrossi','$2y$10$yZF2CpVRyhnoOV.Oq7s38OIQJY5ZIr6HwJnVDc1W8eSwO5Ciqlvx6','rrossi@mailinator.com',NULL,NULL,NULL,NULL,'ES','',NULL,NULL,'2023-04-03 21:53:02',NULL,'2023-04-03 21:53:02',0,NULL,NULL,0,NULL,1),(33,'vkarbasizaed','$2y$10$4ZcqBH3Am3Zo6J7lU.jobuo6L8rwc7cPhaxrvqjiar5lpGfo/wtea','vkarbasizaed@mailinator.com',NULL,NULL,NULL,NULL,'IR','',NULL,NULL,'2023-04-03 21:53:15',NULL,'2023-04-03 21:53:16',0,NULL,NULL,0,NULL,1),(34,'vwilliamson','$2y$10$xfTgkkt8Nz2OO1iGnYPOmeYrumjszAFle3ntHUh292gwCeiqL3lfC','vwilliamson@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-03 21:55:02',NULL,'2023-04-03 21:55:02',0,NULL,NULL,0,NULL,1),(35,'zwoods','$2y$10$yNb/mozNC3ewnGRBfQcG7Ol8wXnwJBi9Pq3Hb6orZlWPTV03m6M.a','zwoods@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-04-03 21:55:22',NULL,'2023-04-03 21:55:23',0,NULL,NULL,0,NULL,1);
+INSERT INTO `users` VALUES (1,'admin','$2y$10$4pCtd6s3ufh0F5xUuxWZje34Dlu8nuw2oANmnX1JPEj95X2dRx0iG','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'',NULL,NULL,'2023-04-04 20:36:31',NULL,'2023-04-04 20:40:09',0,NULL,NULL,0,NULL,1),(2,'rvaca','$2y$10$Nb/Cyp//UCO0F/y.XUEP9OYm3snEQXZ5K889MdQP9ySfndEY3Qb1i','rvaca@mailinator.com','','','',NULL,'MX','',NULL,NULL,'2023-04-04 20:37:38',NULL,'2023-04-04 20:39:54',0,0,NULL,0,NULL,1),(3,'dbarnes','$2y$10$ayBXvqKz6TQHrdHJBcmBQehE7ur6pZUiqvc6xBYa4T9QaYeuqJkwS','dbarnes@mailinator.com','','','',NULL,'AU','',NULL,NULL,'2023-04-04 20:37:46',NULL,'2023-04-04 20:54:35',0,0,NULL,0,NULL,1),(4,'dbuskins','$2y$10$Ibckq1.XNQLoaYDONJZMwOq6m71RFgWateFY9cEr0unqNhjhfeVjq','dbuskins@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-04-04 20:37:55',NULL,'2023-04-04 20:37:55',0,0,NULL,0,NULL,1),(5,'sberardo','$2y$10$O/l/52U7qjwXaMtCABEXHuy0AwIekUscsusqH80ebQegE1r/4jQSq','sberardo@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-04-04 20:38:02',NULL,'2023-04-04 20:38:02',0,0,NULL,0,NULL,1),(6,'minoue','$2y$10$HWHAPQNAAA8MDB2TnL7asepxUr8jQZATvlXRLtUQAlrgdqNUteZ2S','minoue@mailinator.com','','','',NULL,'JP','',NULL,NULL,'2023-04-04 20:38:09',NULL,'2023-04-04 20:43:28',0,0,NULL,0,NULL,1),(7,'jjanssen','$2y$10$EwAF5iJqvThDRvFlPde4l.T0K1zsU4XFzwiRv1gcot4Mt5JdcLMPO','jjanssen@mailinator.com','','','',NULL,'NL','',NULL,NULL,'2023-04-04 20:38:17',NULL,'2023-04-04 20:50:14',0,0,NULL,0,NULL,1),(8,'phudson','$2y$10$3FQ.N.EDophXt5FTe.vR/.mK4BFgm91oUwOv3O0GKq4HTWrGNgWsm','phudson@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-04-04 20:38:25',NULL,'2023-04-04 20:46:45',0,0,NULL,0,NULL,1),(9,'amccrae','$2y$10$5lJe9gfNMVw68XoN7QFkfOZed/5XGm/DK0gmk.QDGvl.8eL0diopS','amccrae@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-04-04 20:38:33',NULL,'2023-04-04 20:50:22',0,0,NULL,0,NULL,1),(10,'agallego','$2y$10$8e9/Yzz4NpJbpkyVoV5oR.2RemQRkRbIL9CZPjscFMei3Al/Qla/i','agallego@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-04-04 20:38:43',NULL,'2023-04-04 20:50:31',0,0,NULL,0,NULL,1),(11,'mfritz','$2y$10$ZapoCxdeA05PEgvU1OiH7umcfeJhKW8PnE/gjMSzvAC0Qk2SsBsOS','mfritz@mailinator.com','','','',NULL,'BE','',NULL,NULL,'2023-04-04 20:38:52',NULL,'2023-04-04 20:38:52',0,0,NULL,0,NULL,1),(12,'svogt','$2y$10$AC01SXO8xp67ksuLjO3YJuTJF05CzGbBweEILRXHinpyB6nJPbKAS','svogt@mailinator.com','','','',NULL,'CL','',NULL,NULL,'2023-04-04 20:39:01',NULL,'2023-04-04 20:39:01',0,0,NULL,0,NULL,1),(13,'gcox','$2y$10$AAmbmI0tY.2Zw71Sg/y6s.wbWehY4YvuOVulzv3sQXDrP4f3yrsZ2','gcox@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-04-04 20:39:11',NULL,'2023-04-04 20:39:11',0,0,NULL,0,NULL,1),(14,'shellier','$2y$10$J5rg5tet6CLnsk/BLPlhf.gPouVgB.GWtv8VxBKRN8usw0tX.FMAO','shellier@mailinator.com','','','',NULL,'ZA','',NULL,NULL,'2023-04-04 20:39:22',NULL,'2023-04-04 20:39:22',0,0,NULL,0,NULL,1),(15,'cturner','$2y$10$GF7eLED2QqgG1p8YRtEHsuhULNgvrc9NEo0FcCSMrVVdouSEWXTUC','cturner@mailinator.com','','','',NULL,'GB','',NULL,NULL,'2023-04-04 20:39:33',NULL,'2023-04-04 20:39:33',0,0,NULL,0,NULL,1),(16,'skumar','$2y$10$LMZzb.bueGWwzfIcMKj//e/CAlhXlUmPeey3ghYKuqKkSwvqsl60m','skumar@mailinator.com','','','',NULL,'SG','',NULL,NULL,'2023-04-04 20:39:45',NULL,'2023-04-04 20:39:45',0,0,NULL,0,NULL,1),(17,'amwandenga','$2y$10$e9XXaI.eURTIq2CBCod8TOqHYMmb8sT/ZJYoGinOqG1mgkskA9IBG','amwandenga@mailinator.com',NULL,NULL,NULL,NULL,'ZA','',NULL,NULL,'2023-04-04 20:40:22',NULL,'2023-04-04 20:41:48',0,NULL,NULL,0,NULL,1),(18,'ccorino','$2y$10$LHSOpKuw.aiujxtNPpyzjeBucFVW7vM.0tULoUVHYaJo2UK9ihFhu','ccorino@mailinator.com',NULL,NULL,NULL,NULL,'IT','',NULL,NULL,'2023-04-04 20:43:05',NULL,'2023-04-04 20:43:06',0,NULL,NULL,0,NULL,1),(19,'ckwantes','$2y$10$eZkFMosv6/d3dP.kIJ3/7OXLdzl5U0xavu3O4FZ4QrQPk.K9jqari','ckwantes@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-04 20:43:43',NULL,'2023-04-04 20:43:44',0,NULL,NULL,0,NULL,1),(20,'cmontgomerie','$2y$10$UlFwnRjbRJSnZz5QrRz.KODr3jHpLRPHjqb0GUJa0t2OYcjB7OPMa','cmontgomerie@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-04 20:44:21',NULL,'2023-04-04 20:44:22',0,NULL,NULL,0,NULL,1),(21,'ddiouf','$2y$10$YPdR8ZykTuQ1wbSAymKXsedxNbs2ATdTH166Lo5O4RnVLiud/doKe','ddiouf@mailinator.com',NULL,NULL,NULL,NULL,'EG','',NULL,NULL,'2023-04-04 20:44:37',NULL,'2023-04-04 20:44:37',0,NULL,NULL,0,NULL,1),(22,'dphillips','$2y$10$BborOZbpziyEwjWkOCEFQeEgh8jEtvat4EtYV8obwweKSEGqH5ybS','dphillips@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-04 20:45:27',NULL,'2023-04-04 20:45:27',0,NULL,NULL,0,NULL,1),(23,'dsokoloff','$2y$10$DO/6FOhXGbg8Q6sRWmOCgOFYQXBVxJftDZgCp7K9udZxp3anW0oau','dsokoloff@mailinator.com',NULL,NULL,NULL,NULL,'IE','',NULL,NULL,'2023-04-04 20:46:13',NULL,'2023-04-04 20:46:14',0,NULL,NULL,0,NULL,1),(24,'eostrom','$2y$10$139rlaMhx4D3AUASp4djBenCnOne.mUogJ2Ei11YM61cMwXX1zFfa','eostrom@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-04-04 20:46:57',NULL,'2023-04-04 20:46:57',0,NULL,NULL,0,NULL,1),(25,'fpaglieri','$2y$10$C61RDZFeyGU/3gzImtNpie/UPnz5SyLKz/snsCZdnbnVrY/fKCpsS','fpaglieri@mailinator.com',NULL,NULL,NULL,NULL,'IT','',NULL,NULL,'2023-04-04 20:47:12',NULL,'2023-04-04 20:47:13',0,NULL,NULL,0,NULL,1),(26,'jnovak','$2y$10$aHS1JV9sm/4s2nqpiJG25ebxU45cs7JJk0T/8IviY8dATYkPKcZ.K','jnovak@mailinator.com',NULL,NULL,NULL,NULL,'DK','',NULL,NULL,'2023-04-04 20:48:04',NULL,'2023-04-04 20:48:04',0,NULL,NULL,0,NULL,1),(27,'kalkhafaji','$2y$10$KXFM2xvEENnQnNCiBtyXiOcXKe8/KN4Dv2wShbaRdb6g5pncE8PjG','kalkhafaji@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-04-04 20:48:53',NULL,'2023-04-04 20:48:53',0,NULL,NULL,0,NULL,1),(28,'lchristopher','$2y$10$nMvzWDGjFo8Bda35ItlCSuj4MlDr..9/HNahQM2MolHmCM6CvP3z6','lchristopher@mailinator.com',NULL,NULL,NULL,NULL,'AU','',NULL,NULL,'2023-04-04 20:49:09',NULL,'2023-04-04 20:49:09',0,NULL,NULL,0,NULL,1),(29,'lkumiega','$2y$10$rnL2fqQsYJAXr3gDXgQd2evn3FAJDHcPCg9hmzsp02.CWUgOfEZT6','lkumiega@mailinator.com',NULL,NULL,NULL,NULL,'ZA','',NULL,NULL,'2023-04-04 20:49:40',NULL,'2023-04-04 20:49:40',0,NULL,NULL,0,NULL,1),(30,'pdaniel','$2y$10$9/vDbFvV81Ed3u9OXFgCA.aQ1xSstIECFZd12p4SKU4wr6Z58TXwy','pdaniel@mailinator.com',NULL,NULL,NULL,NULL,'GB','',NULL,NULL,'2023-04-04 20:50:56',NULL,'2023-04-04 20:50:56',0,NULL,NULL,0,NULL,1),(31,'rbaiyewu','$2y$10$KVYoqTRFfouHrz.mQ5mr/OzesUbUG7Xg.AlnnAgmkd9c8ajGM4bli','rbaiyewu@mailinator.com',NULL,NULL,NULL,NULL,'KE','',NULL,NULL,'2023-04-04 20:51:09',NULL,'2023-04-04 20:51:09',0,NULL,NULL,0,NULL,1),(32,'rrossi','$2y$10$MDLLZwg6.fxvr/LK0qebJedqUrTlsGxZDpLFd3yPYAwMCk9hY9TES','rrossi@mailinator.com',NULL,NULL,NULL,NULL,'ES','',NULL,NULL,'2023-04-04 20:51:55',NULL,'2023-04-04 20:51:55',0,NULL,NULL,0,NULL,1),(33,'vkarbasizaed','$2y$10$H7dker08m6Vir0/NWkHwCeBV9s6shcuXSJ0uM3Yf9z2olMbLUojjy','vkarbasizaed@mailinator.com',NULL,NULL,NULL,NULL,'IR','',NULL,NULL,'2023-04-04 20:52:08',NULL,'2023-04-04 20:52:08',0,NULL,NULL,0,NULL,1),(34,'vwilliamson','$2y$10$pqvHDzH8MQY1zub.U2glU.NeaAgKBCsK0j4alPlyu3PTLMNX1BESC','vwilliamson@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-04 20:54:05',NULL,'2023-04-04 20:54:05',0,NULL,NULL,0,NULL,1),(35,'zwoods','$2y$10$w7wwoeRW78BmUxWcxdjs/er778BuVBIlG2vHgmMvTD9gBuoccJoOi','zwoods@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-04-04 20:54:27',NULL,'2023-04-04 20:54:27',0,NULL,NULL,0,NULL,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3280,21 +3280,21 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `versions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `versions` (
-  `major` int(11) NOT NULL DEFAULT '0' COMMENT 'Major component of version number, e.g. the 2 in OJS 2.3.8-0',
-  `minor` int(11) NOT NULL DEFAULT '0' COMMENT 'Minor component of version number, e.g. the 3 in OJS 2.3.8-0',
-  `revision` int(11) NOT NULL DEFAULT '0' COMMENT 'Revision component of version number, e.g. the 8 in OJS 2.3.8-0',
-  `build` int(11) NOT NULL DEFAULT '0' COMMENT 'Build component of version number, e.g. the 0 in OJS 2.3.8-0',
+  `major` int NOT NULL DEFAULT '0' COMMENT 'Major component of version number, e.g. the 2 in OJS 2.3.8-0',
+  `minor` int NOT NULL DEFAULT '0' COMMENT 'Minor component of version number, e.g. the 3 in OJS 2.3.8-0',
+  `revision` int NOT NULL DEFAULT '0' COMMENT 'Revision component of version number, e.g. the 8 in OJS 2.3.8-0',
+  `build` int NOT NULL DEFAULT '0' COMMENT 'Build component of version number, e.g. the 0 in OJS 2.3.8-0',
   `date_installed` datetime NOT NULL,
-  `current` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the version entry being described is currently active. This permits the table to store past installation history for forensic purposes.',
+  `current` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the version entry being described is currently active. This permits the table to store past installation history for forensic purposes.',
   `product_type` varchar(30) DEFAULT NULL COMMENT 'Describes the type of product this row describes, e.g. "plugins.generic" (for a generic plugin) or "core" for the application itelf',
   `product` varchar(30) DEFAULT NULL COMMENT 'Uniquely identifies the product this version row describes, e.g. "ojs2" for OJS 2.x, "languageToggle" for the language toggle block plugin, etc.',
   `product_class_name` varchar(80) DEFAULT NULL COMMENT 'Specifies the class name associated with this product, for plugins, or the empty string where not applicable.',
-  `lazy_load` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a lazy-load plugin; 0 otherwise',
-  `sitewide` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a site-wide plugin; 0 otherwise',
+  `lazy_load` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a lazy-load plugin; 0 otherwise',
+  `sitewide` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a site-wide plugin; 0 otherwise',
   UNIQUE KEY `versions_pkey` (`product_type`,`product`,`major`,`minor`,`revision`,`build`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3303,7 +3303,7 @@ CREATE TABLE `versions` (
 
 LOCK TABLES `versions` WRITE;
 /*!40000 ALTER TABLE `versions` DISABLE KEYS */;
-INSERT INTO `versions` VALUES (1,0,0,0,'2023-04-03 21:38:46',1,'plugins.metadata','dc11','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.auth','ldap','',0,0),(1,0,1,0,'2023-04-03 21:38:46',1,'plugins.blocks','browse','BrowseBlockPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.blocks','makeSubmission','MakeSubmissionBlockPlugin',1,0),(1,1,0,0,'2023-04-03 21:38:46',1,'plugins.blocks','subscription','SubscriptionBlockPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.blocks','information','InformationBlockPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.gateways','resolver','',0,0),(1,1,3,4,'2023-04-03 21:38:46',1,'plugins.generic','orcidProfile','OrcidProfilePlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.generic','usageEvent','',0,0),(1,1,0,0,'2023-04-03 21:38:46',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),(1,2,0,0,'2023-04-03 21:38:46',1,'plugins.generic','acron','AcronPlugin',1,1),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.generic','dublinCoreMeta','DublinCoreMetaPlugin',1,0),(1,0,1,0,'2023-04-03 21:38:46',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),(1,0,1,0,'2023-04-03 21:38:46',1,'plugins.generic','lensGalley','LensGalleyPlugin',1,0),(1,2,0,0,'2023-04-03 21:38:46',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.generic','webFeed','WebFeedPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.generic','recommendByAuthor','RecommendByAuthorPlugin',1,1),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.generic','recommendBySimilarity','RecommendBySimilarityPlugin',1,1),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.generic','driver','DRIVERPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),(1,2,0,0,'2023-04-03 21:38:46',1,'plugins.generic','staticPages','StaticPagesPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.generic','announcementFeed','AnnouncementFeedPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.generic','usageStats','UsageStatsPlugin',0,1),(0,1,0,0,'2023-04-03 21:38:46',1,'plugins.generic','citationStyleLanguage','CitationStyleLanguagePlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.generic','htmlArticleGalley','HtmlArticleGalleyPlugin',1,0),(1,1,0,0,'2023-04-03 21:38:46',1,'plugins.importexport','doaj','',0,0),(2,0,0,0,'2023-04-03 21:38:46',1,'plugins.importexport','datacite','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.importexport','users','',0,0),(2,1,0,0,'2023-04-03 21:38:46',1,'plugins.importexport','crossref','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.importexport','native','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.importexport','pubmed','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.oaiMetadataFormats','rfc1807','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.oaiMetadataFormats','marcxml','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.oaiMetadataFormats','marc','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.oaiMetadataFormats','dc','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.paymethod','manual','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.paymethod','paypal','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.pubIds','doi','DOIPubIdPlugin',1,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.pubIds','urn','URNPubIdPlugin',1,0),(1,1,0,0,'2023-04-03 21:38:46',1,'plugins.reports','counterReport','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.reports','articles','',0,0),(2,0,0,0,'2023-04-03 21:38:46',1,'plugins.reports','reviewReport','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.reports','subscriptions','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.reports','views','',0,0),(1,0,0,0,'2023-04-03 21:38:46',1,'plugins.themes','default','DefaultThemePlugin',1,0),(3,3,0,14,'2023-04-03 21:38:43',1,'core','ojs2','',0,1);
+INSERT INTO `versions` VALUES (1,0,0,0,'2023-04-04 20:36:32',1,'plugins.metadata','dc11','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.auth','ldap','',0,0),(1,0,1,0,'2023-04-04 20:36:32',1,'plugins.blocks','browse','BrowseBlockPlugin',1,0),(1,1,0,0,'2023-04-04 20:36:32',1,'plugins.blocks','subscription','SubscriptionBlockPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.blocks','information','InformationBlockPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.blocks','makeSubmission','MakeSubmissionBlockPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.gateways','resolver','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.generic','recommendBySimilarity','RecommendBySimilarityPlugin',1,1),(1,2,0,0,'2023-04-04 20:36:32',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),(1,2,0,0,'2023-04-04 20:36:32',1,'plugins.generic','staticPages','StaticPagesPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.generic','driver','DRIVERPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.generic','htmlArticleGalley','HtmlArticleGalleyPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.generic','dublinCoreMeta','DublinCoreMetaPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.generic','webFeed','WebFeedPlugin',1,0),(1,2,0,0,'2023-04-04 20:36:32',1,'plugins.generic','acron','AcronPlugin',1,1),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.generic','recommendByAuthor','RecommendByAuthorPlugin',1,1),(0,1,0,0,'2023-04-04 20:36:32',1,'plugins.generic','citationStyleLanguage','CitationStyleLanguagePlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.generic','usageStats','UsageStatsPlugin',0,1),(1,0,1,0,'2023-04-04 20:36:32',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),(1,1,3,4,'2023-04-04 20:36:32',1,'plugins.generic','orcidProfile','OrcidProfilePlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.generic','usageEvent','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.generic','announcementFeed','AnnouncementFeedPlugin',1,0),(1,0,1,0,'2023-04-04 20:36:32',1,'plugins.generic','lensGalley','LensGalleyPlugin',1,0),(1,1,0,0,'2023-04-04 20:36:32',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.importexport','users','',0,0),(2,1,0,0,'2023-04-04 20:36:32',1,'plugins.importexport','crossref','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.importexport','native','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.importexport','pubmed','',0,0),(1,1,0,0,'2023-04-04 20:36:32',1,'plugins.importexport','doaj','',0,0),(2,0,0,0,'2023-04-04 20:36:32',1,'plugins.importexport','datacite','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.oaiMetadataFormats','marc','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.oaiMetadataFormats','dc','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.oaiMetadataFormats','marcxml','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.oaiMetadataFormats','rfc1807','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.paymethod','paypal','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.paymethod','manual','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.pubIds','doi','DOIPubIdPlugin',1,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.pubIds','urn','URNPubIdPlugin',1,0),(1,1,0,0,'2023-04-04 20:36:32',1,'plugins.reports','counterReport','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.reports','views','',0,0),(2,0,0,0,'2023-04-04 20:36:32',1,'plugins.reports','reviewReport','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.reports','articles','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.reports','subscriptions','',0,0),(1,0,0,0,'2023-04-04 20:36:32',1,'plugins.themes','default','DefaultThemePlugin',1,0),(3,3,0,14,'2023-04-04 20:36:22',1,'core','ojs2','',0,1);
 /*!40000 ALTER TABLE `versions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -3316,4 +3316,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-04-03 21:55:55
+-- Dump completed on 2023-04-04 20:55:02
