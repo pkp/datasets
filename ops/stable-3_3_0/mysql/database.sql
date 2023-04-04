@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.7.41, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.32, for Linux (x86_64)
 --
 -- Host: localhost    Database: ops-ci
 -- ------------------------------------------------------
--- Server version	5.7.41-0ubuntu0.18.04.1
+-- Server version	8.0.32-0ubuntu0.20.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,17 +21,17 @@
 
 DROP TABLE IF EXISTS `access_keys`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `access_keys` (
-  `access_key_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `access_key_id` bigint NOT NULL AUTO_INCREMENT,
   `context` varchar(40) NOT NULL,
   `key_hash` varchar(40) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `user_id` bigint NOT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   `expiry_date` datetime NOT NULL,
   PRIMARY KEY (`access_key_id`),
   KEY `access_keys_hash` (`key_hash`,`user_id`,`context`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,16 +49,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_settings` (
-  `announcement_id` bigint(20) NOT NULL,
+  `announcement_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) DEFAULT NULL,
   UNIQUE KEY `announcement_settings_pkey` (`announcement_id`,`locale`,`setting_name`),
   KEY `announcement_settings_announcement_id` (`announcement_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,16 +76,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_type_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_type_settings` (
-  `type_id` bigint(20) NOT NULL,
+  `type_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `announcement_type_settings_pkey` (`type_id`,`locale`,`setting_name`),
   KEY `announcement_type_settings_type_id` (`type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,14 +103,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_types`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_types` (
-  `type_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` smallint(6) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `type_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` smallint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   PRIMARY KEY (`type_id`),
   KEY `announcement_types_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,17 +128,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcements`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcements` (
-  `announcement_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` smallint(6) DEFAULT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `type_id` bigint(20) DEFAULT NULL,
+  `announcement_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` smallint DEFAULT NULL,
+  `assoc_id` bigint NOT NULL,
+  `type_id` bigint DEFAULT NULL,
   `date_expire` date DEFAULT NULL,
   `date_posted` datetime NOT NULL,
   PRIMARY KEY (`announcement_id`),
   KEY `announcements_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -156,15 +156,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `auth_sources`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `auth_sources` (
-  `auth_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `auth_id` bigint NOT NULL AUTO_INCREMENT,
   `title` varchar(60) NOT NULL,
   `plugin` varchar(32) NOT NULL,
-  `auth_default` smallint(6) NOT NULL DEFAULT '0',
+  `auth_default` smallint NOT NULL DEFAULT '0',
   `settings` text,
   PRIMARY KEY (`auth_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -182,15 +182,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `author_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `author_settings` (
-  `author_id` bigint(20) NOT NULL,
+  `author_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   UNIQUE KEY `author_settings_pkey` (`author_id`,`locale`,`setting_name`),
   KEY `author_settings_author_id` (`author_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,17 +209,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `authors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `authors` (
-  `author_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `author_id` bigint NOT NULL AUTO_INCREMENT,
   `email` varchar(90) NOT NULL,
-  `include_in_browse` smallint(6) NOT NULL DEFAULT '1',
-  `publication_id` bigint(20) NOT NULL,
+  `include_in_browse` smallint NOT NULL DEFAULT '1',
+  `publication_id` bigint NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
-  `user_group_id` bigint(20) DEFAULT NULL,
+  `user_group_id` bigint DEFAULT NULL,
   PRIMARY KEY (`author_id`),
   KEY `authors_publication_id` (`publication_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -238,18 +238,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categories` (
-  `category_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `parent_id` bigint(20) NOT NULL,
-  `seq` bigint(20) DEFAULT NULL,
+  `category_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `parent_id` bigint NOT NULL,
+  `seq` bigint DEFAULT NULL,
   `path` varchar(255) NOT NULL,
   `image` text,
   PRIMARY KEY (`category_id`),
   UNIQUE KEY `category_path` (`context_id`,`path`),
   KEY `category_context_id` (`context_id`,`parent_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -268,15 +268,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `category_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `category_settings` (
-  `category_id` bigint(20) NOT NULL,
+  `category_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `category_settings_pkey` (`category_id`,`locale`,`setting_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -295,16 +295,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `citation_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `citation_settings` (
-  `citation_id` bigint(20) NOT NULL,
+  `citation_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `citation_settings_pkey` (`citation_id`,`locale`,`setting_name`),
   KEY `citation_settings_citation_id` (`citation_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -322,16 +322,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `citations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `citations` (
-  `citation_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `publication_id` bigint(20) NOT NULL DEFAULT '0',
+  `citation_id` bigint NOT NULL AUTO_INCREMENT,
+  `publication_id` bigint NOT NULL DEFAULT '0',
   `raw_citation` text NOT NULL,
-  `seq` bigint(20) NOT NULL DEFAULT '0',
+  `seq` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`citation_id`),
   UNIQUE KEY `citations_publication_seq` (`publication_id`,`seq`),
   KEY `citations_publication` (`publication_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -349,14 +349,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocab_entries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocab_entries` (
-  `controlled_vocab_entry_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `controlled_vocab_id` bigint(20) NOT NULL,
+  `controlled_vocab_entry_id` bigint NOT NULL AUTO_INCREMENT,
+  `controlled_vocab_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
   PRIMARY KEY (`controlled_vocab_entry_id`),
   KEY `controlled_vocab_entries_cv_id` (`controlled_vocab_id`,`seq`)
-) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=139 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -375,16 +375,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocab_entry_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocab_entry_settings` (
-  `controlled_vocab_entry_id` bigint(20) NOT NULL,
+  `controlled_vocab_entry_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `c_v_e_s_pkey` (`controlled_vocab_entry_id`,`locale`,`setting_name`),
   KEY `c_v_e_s_entry_id` (`controlled_vocab_entry_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -403,15 +403,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocabs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocabs` (
-  `controlled_vocab_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `controlled_vocab_id` bigint NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(64) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL DEFAULT '0',
-  `assoc_id` bigint(20) NOT NULL DEFAULT '0',
+  `assoc_type` bigint NOT NULL DEFAULT '0',
+  `assoc_id` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`controlled_vocab_id`),
   UNIQUE KEY `controlled_vocab_symbolic` (`symbolic`,`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=102 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -430,15 +430,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstone_oai_set_objects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstone_oai_set_objects` (
-  `object_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `tombstone_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `object_id` bigint NOT NULL AUTO_INCREMENT,
+  `tombstone_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   PRIMARY KEY (`object_id`),
   KEY `data_object_tombstone_oai_set_objects_tombstone_id` (`tombstone_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -456,16 +456,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstone_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstone_settings` (
-  `tombstone_id` bigint(20) NOT NULL,
+  `tombstone_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `data_object_tombstone_settings_pkey` (`tombstone_id`,`locale`,`setting_name`),
   KEY `data_object_tombstone_settings_tombstone_id` (`tombstone_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -483,17 +483,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstones` (
-  `tombstone_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `data_object_id` bigint(20) NOT NULL,
+  `tombstone_id` bigint NOT NULL AUTO_INCREMENT,
+  `data_object_id` bigint NOT NULL,
   `date_deleted` datetime NOT NULL,
   `set_spec` varchar(255) NOT NULL,
   `set_name` varchar(255) NOT NULL,
   `oai_identifier` varchar(255) NOT NULL,
   PRIMARY KEY (`tombstone_id`),
   KEY `data_object_tombstones_data_object_id` (`data_object_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -511,20 +511,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `edit_decisions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `edit_decisions` (
-  `edit_decision_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `review_round_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) DEFAULT NULL,
-  `round` smallint(6) NOT NULL,
-  `editor_id` bigint(20) NOT NULL,
-  `decision` smallint(6) NOT NULL,
+  `edit_decision_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `review_round_id` bigint NOT NULL,
+  `stage_id` bigint DEFAULT NULL,
+  `round` smallint NOT NULL,
+  `editor_id` bigint NOT NULL,
+  `decision` smallint NOT NULL,
   `date_decided` datetime NOT NULL,
   PRIMARY KEY (`edit_decision_id`),
   KEY `edit_decisions_submission_id` (`submission_id`),
   KEY `edit_decisions_editor_id` (`editor_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -542,14 +542,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_log` (
-  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `sender_id` bigint(20) NOT NULL,
+  `log_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `sender_id` bigint NOT NULL,
   `date_sent` datetime NOT NULL,
-  `event_type` bigint(20) DEFAULT NULL,
+  `event_type` bigint DEFAULT NULL,
   `from_address` varchar(255) DEFAULT NULL,
   `recipients` text,
   `cc_recipients` text,
@@ -558,7 +558,7 @@ CREATE TABLE `email_log` (
   `body` text,
   PRIMARY KEY (`log_id`),
   KEY `email_log_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -576,12 +576,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_log_users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_log_users` (
-  `email_log_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `email_log_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `email_log_user_id` (`email_log_id`,`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -599,15 +599,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates` (
-  `email_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email_id` bigint NOT NULL AUTO_INCREMENT,
   `email_key` varchar(64) NOT NULL COMMENT 'Unique identifier for this email.',
-  `context_id` bigint(20) NOT NULL,
-  `enabled` smallint(6) NOT NULL DEFAULT '1',
+  `context_id` bigint NOT NULL,
+  `enabled` smallint NOT NULL DEFAULT '1',
   PRIMARY KEY (`email_id`),
   UNIQUE KEY `email_templates_email_key` (`email_key`,`context_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -625,18 +625,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_default`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_default` (
-  `email_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email_id` bigint NOT NULL AUTO_INCREMENT,
   `email_key` varchar(64) NOT NULL COMMENT 'Unique identifier for this email.',
-  `can_disable` smallint(6) NOT NULL DEFAULT '0',
-  `can_edit` smallint(6) NOT NULL DEFAULT '0',
-  `from_role_id` bigint(20) DEFAULT NULL,
-  `to_role_id` bigint(20) DEFAULT NULL,
-  `stage_id` bigint(20) DEFAULT NULL,
+  `can_disable` smallint NOT NULL DEFAULT '0',
+  `can_edit` smallint NOT NULL DEFAULT '0',
+  `from_role_id` bigint DEFAULT NULL,
+  `to_role_id` bigint DEFAULT NULL,
+  `stage_id` bigint DEFAULT NULL,
   PRIMARY KEY (`email_id`),
   KEY `email_templates_default_email_key` (`email_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -655,7 +655,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_default_data`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_default_data` (
   `email_key` varchar(64) NOT NULL COMMENT 'Unique identifier for this email.',
   `locale` varchar(14) NOT NULL DEFAULT 'en_US',
@@ -663,7 +663,7 @@ CREATE TABLE `email_templates_default_data` (
   `body` text,
   `description` text,
   UNIQUE KEY `email_templates_default_data_pkey` (`email_key`,`locale`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -682,15 +682,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_settings` (
-  `email_id` bigint(20) NOT NULL,
+  `email_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   UNIQUE KEY `email_settings_pkey` (`email_id`,`locale`,`setting_name`),
   KEY `email_settings_email_id` (`email_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -708,19 +708,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `event_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_log` (
-  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `log_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_logged` datetime NOT NULL,
-  `event_type` bigint(20) DEFAULT NULL,
+  `event_type` bigint DEFAULT NULL,
   `message` text,
-  `is_translated` smallint(6) DEFAULT NULL,
+  `is_translated` smallint DEFAULT NULL,
   PRIMARY KEY (`log_id`),
   KEY `event_log_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=161 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=161 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -729,7 +729,7 @@ CREATE TABLE `event_log` (
 
 LOCK TABLES `event_log` WRITE;
 /*!40000 ALTER TABLE `event_log` DISABLE KEYS */;
-INSERT INTO `event_log` VALUES (1,1048585,1,7,'2023-03-31 01:06:08',268435458,'submission.event.general.metadataUpdated',0),(2,515,1,7,'2023-03-31 01:06:17',1342177281,'submission.event.fileUploaded',0),(3,1048585,1,7,'2023-03-31 01:06:17',1342177288,'submission.event.fileRevised',0),(4,515,1,7,'2023-03-31 01:06:19',1342177296,'submission.event.fileEdited',0),(5,1048585,1,7,'2023-03-31 01:06:19',1342177296,'submission.event.fileEdited',0),(6,1048585,1,7,'2023-03-31 01:06:22',268435458,'submission.event.general.metadataUpdated',0),(7,1048585,1,7,'2023-03-31 01:06:23',268435457,'submission.event.submissionSubmitted',0),(8,1048585,2,8,'2023-03-31 01:06:29',268435458,'submission.event.general.metadataUpdated',0),(9,515,2,8,'2023-03-31 01:06:38',1342177281,'submission.event.fileUploaded',0),(10,1048585,2,8,'2023-03-31 01:06:38',1342177288,'submission.event.fileRevised',0),(11,515,2,8,'2023-03-31 01:06:40',1342177296,'submission.event.fileEdited',0),(12,1048585,2,8,'2023-03-31 01:06:40',1342177296,'submission.event.fileEdited',0),(13,1048585,2,8,'2023-03-31 01:06:43',268435458,'submission.event.general.metadataUpdated',0),(14,1048585,2,8,'2023-03-31 01:06:44',268435457,'submission.event.submissionSubmitted',0),(15,1048585,2,8,'2023-03-31 01:06:47',268435458,'submission.event.general.metadataUpdated',0),(16,1048585,2,8,'2023-03-31 01:06:55',268435458,'submission.event.general.metadataUpdated',0),(17,1048585,2,3,'2023-03-31 01:07:00',268435462,'publication.event.published',0),(18,1048585,3,9,'2023-03-31 01:07:06',268435458,'submission.event.general.metadataUpdated',0),(19,515,3,9,'2023-03-31 01:07:15',1342177281,'submission.event.fileUploaded',0),(20,1048585,3,9,'2023-03-31 01:07:15',1342177288,'submission.event.fileRevised',0),(21,515,3,9,'2023-03-31 01:07:17',1342177296,'submission.event.fileEdited',0),(22,1048585,3,9,'2023-03-31 01:07:17',1342177296,'submission.event.fileEdited',0),(23,1048585,3,9,'2023-03-31 01:07:23',268435458,'submission.event.general.metadataUpdated',0),(24,1048585,3,9,'2023-03-31 01:07:24',268435457,'submission.event.submissionSubmitted',0),(25,1048585,3,3,'2023-03-31 01:07:29',268435462,'publication.event.published',0),(26,1048585,3,3,'2023-03-31 01:07:35',268435463,'publication.event.unpublished',0),(27,1048585,3,3,'2023-03-31 01:07:37',268435458,'submission.event.general.metadataUpdated',0),(28,1048585,3,3,'2023-03-31 01:07:40',268435462,'publication.event.published',0),(29,1048585,3,3,'2023-03-31 01:07:43',268435458,'submission.event.general.metadataUpdated',0),(30,1048585,3,3,'2023-03-31 01:07:43',268435464,'publication.event.versionCreated',0),(31,1048585,3,3,'2023-03-31 01:07:47',268435458,'submission.event.general.metadataUpdated',0),(32,1048585,3,3,'2023-03-31 01:07:50',268435462,'publication.event.versionPublished',0),(33,1048585,4,10,'2023-03-31 01:07:56',268435458,'submission.event.general.metadataUpdated',0),(34,515,4,10,'2023-03-31 01:08:05',1342177281,'submission.event.fileUploaded',0),(35,1048585,4,10,'2023-03-31 01:08:05',1342177288,'submission.event.fileRevised',0),(36,515,4,10,'2023-03-31 01:08:07',1342177296,'submission.event.fileEdited',0),(37,1048585,4,10,'2023-03-31 01:08:07',1342177296,'submission.event.fileEdited',0),(38,1048585,4,10,'2023-03-31 01:08:10',268435458,'submission.event.general.metadataUpdated',0),(39,1048585,4,10,'2023-03-31 01:08:11',268435457,'submission.event.submissionSubmitted',0),(40,1048585,4,3,'2023-03-31 01:08:16',268435462,'publication.event.published',0),(41,1048585,5,11,'2023-03-31 01:08:22',268435458,'submission.event.general.metadataUpdated',0),(42,515,5,11,'2023-03-31 01:08:31',1342177281,'submission.event.fileUploaded',0),(43,1048585,5,11,'2023-03-31 01:08:31',1342177288,'submission.event.fileRevised',0),(44,515,5,11,'2023-03-31 01:08:33',1342177296,'submission.event.fileEdited',0),(45,1048585,5,11,'2023-03-31 01:08:33',1342177296,'submission.event.fileEdited',0),(46,1048585,5,11,'2023-03-31 01:08:36',268435458,'submission.event.general.metadataUpdated',0),(47,1048585,5,11,'2023-03-31 01:08:37',268435457,'submission.event.submissionSubmitted',0),(48,1048585,5,3,'2023-03-31 01:08:42',268435462,'publication.event.published',0),(49,1048585,6,12,'2023-03-31 01:08:49',268435458,'submission.event.general.metadataUpdated',0),(50,515,6,12,'2023-03-31 01:08:57',1342177281,'submission.event.fileUploaded',0),(51,1048585,6,12,'2023-03-31 01:08:57',1342177288,'submission.event.fileRevised',0),(52,515,6,12,'2023-03-31 01:09:00',1342177296,'submission.event.fileEdited',0),(53,1048585,6,12,'2023-03-31 01:09:00',1342177296,'submission.event.fileEdited',0),(54,1048585,6,12,'2023-03-31 01:09:02',268435458,'submission.event.general.metadataUpdated',0),(55,1048585,6,12,'2023-03-31 01:09:03',268435457,'submission.event.submissionSubmitted',0),(56,1048585,6,3,'2023-03-31 01:09:08',268435462,'publication.event.published',0),(57,1048585,7,13,'2023-03-31 01:09:15',268435458,'submission.event.general.metadataUpdated',0),(58,515,7,13,'2023-03-31 01:09:24',1342177281,'submission.event.fileUploaded',0),(59,1048585,7,13,'2023-03-31 01:09:24',1342177288,'submission.event.fileRevised',0),(60,515,7,13,'2023-03-31 01:09:26',1342177296,'submission.event.fileEdited',0),(61,1048585,7,13,'2023-03-31 01:09:26',1342177296,'submission.event.fileEdited',0),(62,1048585,7,13,'2023-03-31 01:09:31',268435458,'submission.event.general.metadataUpdated',0),(63,1048585,7,13,'2023-03-31 01:09:32',268435457,'submission.event.submissionSubmitted',0),(64,1048585,7,3,'2023-03-31 01:09:37',268435462,'publication.event.published',0),(65,1048585,8,14,'2023-03-31 01:09:44',268435458,'submission.event.general.metadataUpdated',0),(66,515,8,14,'2023-03-31 01:09:53',1342177281,'submission.event.fileUploaded',0),(67,1048585,8,14,'2023-03-31 01:09:53',1342177288,'submission.event.fileRevised',0),(68,515,8,14,'2023-03-31 01:09:55',1342177296,'submission.event.fileEdited',0),(69,1048585,8,14,'2023-03-31 01:09:55',1342177296,'submission.event.fileEdited',0),(70,1048585,8,14,'2023-03-31 01:09:57',268435458,'submission.event.general.metadataUpdated',0),(71,1048585,8,14,'2023-03-31 01:09:58',268435457,'submission.event.submissionSubmitted',0),(72,1048585,8,3,'2023-03-31 01:10:03',268435462,'publication.event.published',0),(73,1048585,9,15,'2023-03-31 01:10:10',268435458,'submission.event.general.metadataUpdated',0),(74,515,9,15,'2023-03-31 01:10:18',1342177281,'submission.event.fileUploaded',0),(75,1048585,9,15,'2023-03-31 01:10:18',1342177288,'submission.event.fileRevised',0),(76,515,9,15,'2023-03-31 01:10:21',1342177296,'submission.event.fileEdited',0),(77,1048585,9,15,'2023-03-31 01:10:21',1342177296,'submission.event.fileEdited',0),(78,1048585,9,15,'2023-03-31 01:10:23',268435458,'submission.event.general.metadataUpdated',0),(79,1048585,9,15,'2023-03-31 01:10:24',268435457,'submission.event.submissionSubmitted',0),(80,1048585,9,3,'2023-03-31 01:10:29',268435462,'publication.event.published',0),(81,1048585,10,16,'2023-03-31 01:10:36',268435458,'submission.event.general.metadataUpdated',0),(82,515,10,16,'2023-03-31 01:10:44',1342177281,'submission.event.fileUploaded',0),(83,1048585,10,16,'2023-03-31 01:10:44',1342177288,'submission.event.fileRevised',0),(84,515,10,16,'2023-03-31 01:10:47',1342177296,'submission.event.fileEdited',0),(85,1048585,10,16,'2023-03-31 01:10:47',1342177296,'submission.event.fileEdited',0),(86,1048585,10,16,'2023-03-31 01:10:50',268435458,'submission.event.general.metadataUpdated',0),(87,1048585,10,16,'2023-03-31 01:10:51',268435457,'submission.event.submissionSubmitted',0),(88,1048585,10,3,'2023-03-31 01:10:56',268435462,'publication.event.published',0),(89,1048585,11,17,'2023-03-31 01:11:02',268435458,'submission.event.general.metadataUpdated',0),(90,515,11,17,'2023-03-31 01:11:11',1342177281,'submission.event.fileUploaded',0),(91,1048585,11,17,'2023-03-31 01:11:11',1342177288,'submission.event.fileRevised',0),(92,515,11,17,'2023-03-31 01:11:13',1342177296,'submission.event.fileEdited',0),(93,1048585,11,17,'2023-03-31 01:11:13',1342177296,'submission.event.fileEdited',0),(94,1048585,11,17,'2023-03-31 01:11:19',268435458,'submission.event.general.metadataUpdated',0),(95,1048585,11,17,'2023-03-31 01:11:20',268435457,'submission.event.submissionSubmitted',0),(96,1048585,11,3,'2023-03-31 01:11:25',268435462,'publication.event.published',0),(97,1048585,12,18,'2023-03-31 01:11:32',268435458,'submission.event.general.metadataUpdated',0),(98,515,12,18,'2023-03-31 01:11:41',1342177281,'submission.event.fileUploaded',0),(99,1048585,12,18,'2023-03-31 01:11:41',1342177288,'submission.event.fileRevised',0),(100,515,12,18,'2023-03-31 01:11:44',1342177296,'submission.event.fileEdited',0),(101,1048585,12,18,'2023-03-31 01:11:44',1342177296,'submission.event.fileEdited',0),(102,1048585,12,18,'2023-03-31 01:11:46',268435458,'submission.event.general.metadataUpdated',0),(103,1048585,12,18,'2023-03-31 01:11:47',268435457,'submission.event.submissionSubmitted',0),(104,1048585,12,3,'2023-03-31 01:11:52',268435462,'publication.event.published',0),(105,1048585,13,19,'2023-03-31 01:11:59',268435458,'submission.event.general.metadataUpdated',0),(106,515,13,19,'2023-03-31 01:12:08',1342177281,'submission.event.fileUploaded',0),(107,1048585,13,19,'2023-03-31 01:12:08',1342177288,'submission.event.fileRevised',0),(108,515,13,19,'2023-03-31 01:12:10',1342177296,'submission.event.fileEdited',0),(109,1048585,13,19,'2023-03-31 01:12:10',1342177296,'submission.event.fileEdited',0),(110,1048585,13,19,'2023-03-31 01:12:13',268435458,'submission.event.general.metadataUpdated',0),(111,1048585,13,19,'2023-03-31 01:12:14',268435457,'submission.event.submissionSubmitted',0),(112,1048585,13,3,'2023-03-31 01:12:19',268435462,'publication.event.published',0),(113,1048585,14,20,'2023-03-31 01:12:26',268435458,'submission.event.general.metadataUpdated',0),(114,515,14,20,'2023-03-31 01:12:35',1342177281,'submission.event.fileUploaded',0),(115,1048585,14,20,'2023-03-31 01:12:35',1342177288,'submission.event.fileRevised',0),(116,515,14,20,'2023-03-31 01:12:37',1342177296,'submission.event.fileEdited',0),(117,1048585,14,20,'2023-03-31 01:12:37',1342177296,'submission.event.fileEdited',0),(118,1048585,14,20,'2023-03-31 01:12:40',268435458,'submission.event.general.metadataUpdated',0),(119,1048585,14,20,'2023-03-31 01:12:41',268435457,'submission.event.submissionSubmitted',0),(120,1048585,14,3,'2023-03-31 01:12:46',268435462,'publication.event.published',0),(121,1048585,15,21,'2023-03-31 01:12:53',268435458,'submission.event.general.metadataUpdated',0),(122,515,15,21,'2023-03-31 01:13:02',1342177281,'submission.event.fileUploaded',0),(123,1048585,15,21,'2023-03-31 01:13:02',1342177288,'submission.event.fileRevised',0),(124,515,15,21,'2023-03-31 01:13:04',1342177296,'submission.event.fileEdited',0),(125,1048585,15,21,'2023-03-31 01:13:04',1342177296,'submission.event.fileEdited',0),(126,1048585,15,21,'2023-03-31 01:13:07',268435458,'submission.event.general.metadataUpdated',0),(127,1048585,15,21,'2023-03-31 01:13:08',268435457,'submission.event.submissionSubmitted',0),(128,1048585,15,3,'2023-03-31 01:13:13',268435462,'publication.event.published',0),(129,1048585,16,22,'2023-03-31 01:13:19',268435458,'submission.event.general.metadataUpdated',0),(130,515,16,22,'2023-03-31 01:13:28',1342177281,'submission.event.fileUploaded',0),(131,1048585,16,22,'2023-03-31 01:13:28',1342177288,'submission.event.fileRevised',0),(132,515,16,22,'2023-03-31 01:13:31',1342177296,'submission.event.fileEdited',0),(133,1048585,16,22,'2023-03-31 01:13:31',1342177296,'submission.event.fileEdited',0),(134,1048585,16,22,'2023-03-31 01:13:34',268435458,'submission.event.general.metadataUpdated',0),(135,1048585,16,22,'2023-03-31 01:13:35',268435457,'submission.event.submissionSubmitted',0),(136,1048585,16,3,'2023-03-31 01:13:40',268435462,'publication.event.published',0),(137,1048585,17,23,'2023-03-31 01:13:46',268435458,'submission.event.general.metadataUpdated',0),(138,515,17,23,'2023-03-31 01:13:55',1342177281,'submission.event.fileUploaded',0),(139,1048585,17,23,'2023-03-31 01:13:55',1342177288,'submission.event.fileRevised',0),(140,515,17,23,'2023-03-31 01:13:58',1342177296,'submission.event.fileEdited',0),(141,1048585,17,23,'2023-03-31 01:13:58',1342177296,'submission.event.fileEdited',0),(142,1048585,17,23,'2023-03-31 01:14:01',268435458,'submission.event.general.metadataUpdated',0),(143,1048585,17,23,'2023-03-31 01:14:02',268435457,'submission.event.submissionSubmitted',0),(144,1048585,17,3,'2023-03-31 01:14:07',268435462,'publication.event.published',0),(145,1048585,18,24,'2023-03-31 01:14:14',268435458,'submission.event.general.metadataUpdated',0),(146,515,18,24,'2023-03-31 01:14:23',1342177281,'submission.event.fileUploaded',0),(147,1048585,18,24,'2023-03-31 01:14:23',1342177288,'submission.event.fileRevised',0),(148,515,18,24,'2023-03-31 01:14:25',1342177296,'submission.event.fileEdited',0),(149,1048585,18,24,'2023-03-31 01:14:25',1342177296,'submission.event.fileEdited',0),(150,1048585,18,24,'2023-03-31 01:14:28',268435458,'submission.event.general.metadataUpdated',0),(151,1048585,18,24,'2023-03-31 01:14:29',268435457,'submission.event.submissionSubmitted',0),(152,1048585,18,3,'2023-03-31 01:14:34',268435462,'publication.event.published',0),(153,1048585,19,25,'2023-03-31 01:14:41',268435458,'submission.event.general.metadataUpdated',0),(154,515,19,25,'2023-03-31 01:14:50',1342177281,'submission.event.fileUploaded',0),(155,1048585,19,25,'2023-03-31 01:14:50',1342177288,'submission.event.fileRevised',0),(156,515,19,25,'2023-03-31 01:14:52',1342177296,'submission.event.fileEdited',0),(157,1048585,19,25,'2023-03-31 01:14:52',1342177296,'submission.event.fileEdited',0),(158,1048585,19,25,'2023-03-31 01:14:55',268435458,'submission.event.general.metadataUpdated',0),(159,1048585,19,25,'2023-03-31 01:14:56',268435457,'submission.event.submissionSubmitted',0),(160,1048585,19,3,'2023-03-31 01:15:01',268435462,'publication.event.published',0);
+INSERT INTO `event_log` VALUES (1,1048585,1,7,'2023-04-04 22:05:52',268435458,'submission.event.general.metadataUpdated',0),(2,515,1,7,'2023-04-04 22:06:01',1342177281,'submission.event.fileUploaded',0),(3,1048585,1,7,'2023-04-04 22:06:01',1342177288,'submission.event.fileRevised',0),(4,515,1,7,'2023-04-04 22:06:03',1342177296,'submission.event.fileEdited',0),(5,1048585,1,7,'2023-04-04 22:06:03',1342177296,'submission.event.fileEdited',0),(6,1048585,1,7,'2023-04-04 22:06:07',268435458,'submission.event.general.metadataUpdated',0),(7,1048585,1,7,'2023-04-04 22:06:08',268435457,'submission.event.submissionSubmitted',0),(8,1048585,2,8,'2023-04-04 22:06:15',268435458,'submission.event.general.metadataUpdated',0),(9,515,2,8,'2023-04-04 22:06:24',1342177281,'submission.event.fileUploaded',0),(10,1048585,2,8,'2023-04-04 22:06:24',1342177288,'submission.event.fileRevised',0),(11,515,2,8,'2023-04-04 22:06:27',1342177296,'submission.event.fileEdited',0),(12,1048585,2,8,'2023-04-04 22:06:27',1342177296,'submission.event.fileEdited',0),(13,1048585,2,8,'2023-04-04 22:06:30',268435458,'submission.event.general.metadataUpdated',0),(14,1048585,2,8,'2023-04-04 22:06:31',268435457,'submission.event.submissionSubmitted',0),(15,1048585,2,8,'2023-04-04 22:06:35',268435458,'submission.event.general.metadataUpdated',0),(16,1048585,2,8,'2023-04-04 22:06:44',268435458,'submission.event.general.metadataUpdated',0),(17,1048585,2,3,'2023-04-04 22:06:49',268435462,'publication.event.published',0),(18,1048585,3,9,'2023-04-04 22:06:57',268435458,'submission.event.general.metadataUpdated',0),(19,515,3,9,'2023-04-04 22:07:06',1342177281,'submission.event.fileUploaded',0),(20,1048585,3,9,'2023-04-04 22:07:06',1342177288,'submission.event.fileRevised',0),(21,515,3,9,'2023-04-04 22:07:08',1342177296,'submission.event.fileEdited',0),(22,1048585,3,9,'2023-04-04 22:07:08',1342177296,'submission.event.fileEdited',0),(23,1048585,3,9,'2023-04-04 22:07:15',268435458,'submission.event.general.metadataUpdated',0),(24,1048585,3,9,'2023-04-04 22:07:16',268435457,'submission.event.submissionSubmitted',0),(25,1048585,3,3,'2023-04-04 22:07:22',268435462,'publication.event.published',0),(26,1048585,3,3,'2023-04-04 22:07:27',268435463,'publication.event.unpublished',0),(27,1048585,3,3,'2023-04-04 22:07:31',268435458,'submission.event.general.metadataUpdated',0),(28,1048585,3,3,'2023-04-04 22:07:34',268435462,'publication.event.published',0),(29,1048585,3,3,'2023-04-04 22:07:37',268435458,'submission.event.general.metadataUpdated',0),(30,1048585,3,3,'2023-04-04 22:07:37',268435464,'publication.event.versionCreated',0),(31,1048585,3,3,'2023-04-04 22:07:41',268435458,'submission.event.general.metadataUpdated',0),(32,1048585,3,3,'2023-04-04 22:07:45',268435462,'publication.event.versionPublished',0),(33,1048585,4,10,'2023-04-04 22:07:52',268435458,'submission.event.general.metadataUpdated',0),(34,515,4,10,'2023-04-04 22:08:01',1342177281,'submission.event.fileUploaded',0),(35,1048585,4,10,'2023-04-04 22:08:01',1342177288,'submission.event.fileRevised',0),(36,515,4,10,'2023-04-04 22:08:03',1342177296,'submission.event.fileEdited',0),(37,1048585,4,10,'2023-04-04 22:08:03',1342177296,'submission.event.fileEdited',0),(38,1048585,4,10,'2023-04-04 22:08:06',268435458,'submission.event.general.metadataUpdated',0),(39,1048585,4,10,'2023-04-04 22:08:07',268435457,'submission.event.submissionSubmitted',0),(40,1048585,4,3,'2023-04-04 22:08:12',268435462,'publication.event.published',0),(41,1048585,5,11,'2023-04-04 22:08:20',268435458,'submission.event.general.metadataUpdated',0),(42,515,5,11,'2023-04-04 22:08:29',1342177281,'submission.event.fileUploaded',0),(43,1048585,5,11,'2023-04-04 22:08:29',1342177288,'submission.event.fileRevised',0),(44,515,5,11,'2023-04-04 22:08:31',1342177296,'submission.event.fileEdited',0),(45,1048585,5,11,'2023-04-04 22:08:31',1342177296,'submission.event.fileEdited',0),(46,1048585,5,11,'2023-04-04 22:08:35',268435458,'submission.event.general.metadataUpdated',0),(47,1048585,5,11,'2023-04-04 22:08:36',268435457,'submission.event.submissionSubmitted',0),(48,1048585,5,3,'2023-04-04 22:08:41',268435462,'publication.event.published',0),(49,1048585,6,12,'2023-04-04 22:08:48',268435458,'submission.event.general.metadataUpdated',0),(50,515,6,12,'2023-04-04 22:08:57',1342177281,'submission.event.fileUploaded',0),(51,1048585,6,12,'2023-04-04 22:08:57',1342177288,'submission.event.fileRevised',0),(52,515,6,12,'2023-04-04 22:08:59',1342177296,'submission.event.fileEdited',0),(53,1048585,6,12,'2023-04-04 22:08:59',1342177296,'submission.event.fileEdited',0),(54,1048585,6,12,'2023-04-04 22:09:02',268435458,'submission.event.general.metadataUpdated',0),(55,1048585,6,12,'2023-04-04 22:09:03',268435457,'submission.event.submissionSubmitted',0),(56,1048585,6,3,'2023-04-04 22:09:08',268435462,'publication.event.published',0),(57,1048585,7,13,'2023-04-04 22:09:16',268435458,'submission.event.general.metadataUpdated',0),(58,515,7,13,'2023-04-04 22:09:25',1342177281,'submission.event.fileUploaded',0),(59,1048585,7,13,'2023-04-04 22:09:25',1342177288,'submission.event.fileRevised',0),(60,515,7,13,'2023-04-04 22:09:27',1342177296,'submission.event.fileEdited',0),(61,1048585,7,13,'2023-04-04 22:09:27',1342177296,'submission.event.fileEdited',0),(62,1048585,7,13,'2023-04-04 22:09:33',268435458,'submission.event.general.metadataUpdated',0),(63,1048585,7,13,'2023-04-04 22:09:34',268435457,'submission.event.submissionSubmitted',0),(64,1048585,7,3,'2023-04-04 22:09:41',268435462,'publication.event.published',0),(65,1048585,8,14,'2023-04-04 22:09:48',268435458,'submission.event.general.metadataUpdated',0),(66,515,8,14,'2023-04-04 22:09:57',1342177281,'submission.event.fileUploaded',0),(67,1048585,8,14,'2023-04-04 22:09:57',1342177288,'submission.event.fileRevised',0),(68,515,8,14,'2023-04-04 22:09:59',1342177296,'submission.event.fileEdited',0),(69,1048585,8,14,'2023-04-04 22:09:59',1342177296,'submission.event.fileEdited',0),(70,1048585,8,14,'2023-04-04 22:10:02',268435458,'submission.event.general.metadataUpdated',0),(71,1048585,8,14,'2023-04-04 22:10:03',268435457,'submission.event.submissionSubmitted',0),(72,1048585,8,3,'2023-04-04 22:10:08',268435462,'publication.event.published',0),(73,1048585,9,15,'2023-04-04 22:10:16',268435458,'submission.event.general.metadataUpdated',0),(74,515,9,15,'2023-04-04 22:10:25',1342177281,'submission.event.fileUploaded',0),(75,1048585,9,15,'2023-04-04 22:10:25',1342177288,'submission.event.fileRevised',0),(76,515,9,15,'2023-04-04 22:10:27',1342177296,'submission.event.fileEdited',0),(77,1048585,9,15,'2023-04-04 22:10:27',1342177296,'submission.event.fileEdited',0),(78,1048585,9,15,'2023-04-04 22:10:30',268435458,'submission.event.general.metadataUpdated',0),(79,1048585,9,15,'2023-04-04 22:10:32',268435457,'submission.event.submissionSubmitted',0),(80,1048585,9,3,'2023-04-04 22:10:37',268435462,'publication.event.published',0),(81,1048585,10,16,'2023-04-04 22:10:44',268435458,'submission.event.general.metadataUpdated',0),(82,515,10,16,'2023-04-04 22:10:53',1342177281,'submission.event.fileUploaded',0),(83,1048585,10,16,'2023-04-04 22:10:53',1342177288,'submission.event.fileRevised',0),(84,515,10,16,'2023-04-04 22:10:55',1342177296,'submission.event.fileEdited',0),(85,1048585,10,16,'2023-04-04 22:10:55',1342177296,'submission.event.fileEdited',0),(86,1048585,10,16,'2023-04-04 22:10:59',268435458,'submission.event.general.metadataUpdated',0),(87,1048585,10,16,'2023-04-04 22:11:00',268435457,'submission.event.submissionSubmitted',0),(88,1048585,10,3,'2023-04-04 22:11:05',268435462,'publication.event.published',0),(89,1048585,11,17,'2023-04-04 22:11:13',268435458,'submission.event.general.metadataUpdated',0),(90,515,11,17,'2023-04-04 22:11:22',1342177281,'submission.event.fileUploaded',0),(91,1048585,11,17,'2023-04-04 22:11:22',1342177288,'submission.event.fileRevised',0),(92,515,11,17,'2023-04-04 22:11:24',1342177296,'submission.event.fileEdited',0),(93,1048585,11,17,'2023-04-04 22:11:24',1342177296,'submission.event.fileEdited',0),(94,1048585,11,17,'2023-04-04 22:11:30',268435458,'submission.event.general.metadataUpdated',0),(95,1048585,11,17,'2023-04-04 22:11:31',268435457,'submission.event.submissionSubmitted',0),(96,1048585,11,3,'2023-04-04 22:11:37',268435462,'publication.event.published',0),(97,1048585,12,18,'2023-04-04 22:11:44',268435458,'submission.event.general.metadataUpdated',0),(98,515,12,18,'2023-04-04 22:11:53',1342177281,'submission.event.fileUploaded',0),(99,1048585,12,18,'2023-04-04 22:11:53',1342177288,'submission.event.fileRevised',0),(100,515,12,18,'2023-04-04 22:11:56',1342177296,'submission.event.fileEdited',0),(101,1048585,12,18,'2023-04-04 22:11:56',1342177296,'submission.event.fileEdited',0),(102,1048585,12,18,'2023-04-04 22:11:59',268435458,'submission.event.general.metadataUpdated',0),(103,1048585,12,18,'2023-04-04 22:12:00',268435457,'submission.event.submissionSubmitted',0),(104,1048585,12,3,'2023-04-04 22:12:06',268435462,'publication.event.published',0),(105,1048585,13,19,'2023-04-04 22:12:13',268435458,'submission.event.general.metadataUpdated',0),(106,515,13,19,'2023-04-04 22:12:22',1342177281,'submission.event.fileUploaded',0),(107,1048585,13,19,'2023-04-04 22:12:22',1342177288,'submission.event.fileRevised',0),(108,515,13,19,'2023-04-04 22:12:25',1342177296,'submission.event.fileEdited',0),(109,1048585,13,19,'2023-04-04 22:12:25',1342177296,'submission.event.fileEdited',0),(110,1048585,13,19,'2023-04-04 22:12:28',268435458,'submission.event.general.metadataUpdated',0),(111,1048585,13,19,'2023-04-04 22:12:29',268435457,'submission.event.submissionSubmitted',0),(112,1048585,13,3,'2023-04-04 22:12:35',268435462,'publication.event.published',0),(113,1048585,14,20,'2023-04-04 22:12:42',268435458,'submission.event.general.metadataUpdated',0),(114,515,14,20,'2023-04-04 22:12:51',1342177281,'submission.event.fileUploaded',0),(115,1048585,14,20,'2023-04-04 22:12:51',1342177288,'submission.event.fileRevised',0),(116,515,14,20,'2023-04-04 22:12:54',1342177296,'submission.event.fileEdited',0),(117,1048585,14,20,'2023-04-04 22:12:54',1342177296,'submission.event.fileEdited',0),(118,1048585,14,20,'2023-04-04 22:12:57',268435458,'submission.event.general.metadataUpdated',0),(119,1048585,14,20,'2023-04-04 22:12:58',268435457,'submission.event.submissionSubmitted',0),(120,1048585,14,3,'2023-04-04 22:13:04',268435462,'publication.event.published',0),(121,1048585,15,21,'2023-04-04 22:13:12',268435458,'submission.event.general.metadataUpdated',0),(122,515,15,21,'2023-04-04 22:13:21',1342177281,'submission.event.fileUploaded',0),(123,1048585,15,21,'2023-04-04 22:13:21',1342177288,'submission.event.fileRevised',0),(124,515,15,21,'2023-04-04 22:13:23',1342177296,'submission.event.fileEdited',0),(125,1048585,15,21,'2023-04-04 22:13:23',1342177296,'submission.event.fileEdited',0),(126,1048585,15,21,'2023-04-04 22:13:26',268435458,'submission.event.general.metadataUpdated',0),(127,1048585,15,21,'2023-04-04 22:13:27',268435457,'submission.event.submissionSubmitted',0),(128,1048585,15,3,'2023-04-04 22:13:32',268435462,'publication.event.published',0),(129,1048585,16,22,'2023-04-04 22:13:39',268435458,'submission.event.general.metadataUpdated',0),(130,515,16,22,'2023-04-04 22:13:48',1342177281,'submission.event.fileUploaded',0),(131,1048585,16,22,'2023-04-04 22:13:48',1342177288,'submission.event.fileRevised',0),(132,515,16,22,'2023-04-04 22:13:51',1342177296,'submission.event.fileEdited',0),(133,1048585,16,22,'2023-04-04 22:13:51',1342177296,'submission.event.fileEdited',0),(134,1048585,16,22,'2023-04-04 22:13:54',268435458,'submission.event.general.metadataUpdated',0),(135,1048585,16,22,'2023-04-04 22:13:55',268435457,'submission.event.submissionSubmitted',0),(136,1048585,16,3,'2023-04-04 22:14:01',268435462,'publication.event.published',0),(137,1048585,17,23,'2023-04-04 22:14:08',268435458,'submission.event.general.metadataUpdated',0),(138,515,17,23,'2023-04-04 22:14:17',1342177281,'submission.event.fileUploaded',0),(139,1048585,17,23,'2023-04-04 22:14:17',1342177288,'submission.event.fileRevised',0),(140,515,17,23,'2023-04-04 22:14:20',1342177296,'submission.event.fileEdited',0),(141,1048585,17,23,'2023-04-04 22:14:20',1342177296,'submission.event.fileEdited',0),(142,1048585,17,23,'2023-04-04 22:14:23',268435458,'submission.event.general.metadataUpdated',0),(143,1048585,17,23,'2023-04-04 22:14:24',268435457,'submission.event.submissionSubmitted',0),(144,1048585,17,3,'2023-04-04 22:14:30',268435462,'publication.event.published',0),(145,1048585,18,24,'2023-04-04 22:14:37',268435458,'submission.event.general.metadataUpdated',0),(146,515,18,24,'2023-04-04 22:14:46',1342177281,'submission.event.fileUploaded',0),(147,1048585,18,24,'2023-04-04 22:14:46',1342177288,'submission.event.fileRevised',0),(148,515,18,24,'2023-04-04 22:14:49',1342177296,'submission.event.fileEdited',0),(149,1048585,18,24,'2023-04-04 22:14:49',1342177296,'submission.event.fileEdited',0),(150,1048585,18,24,'2023-04-04 22:14:52',268435458,'submission.event.general.metadataUpdated',0),(151,1048585,18,24,'2023-04-04 22:14:53',268435457,'submission.event.submissionSubmitted',0),(152,1048585,18,3,'2023-04-04 22:14:59',268435462,'publication.event.published',0),(153,1048585,19,25,'2023-04-04 22:15:06',268435458,'submission.event.general.metadataUpdated',0),(154,515,19,25,'2023-04-04 22:15:15',1342177281,'submission.event.fileUploaded',0),(155,1048585,19,25,'2023-04-04 22:15:15',1342177288,'submission.event.fileRevised',0),(156,515,19,25,'2023-04-04 22:15:17',1342177296,'submission.event.fileEdited',0),(157,1048585,19,25,'2023-04-04 22:15:17',1342177296,'submission.event.fileEdited',0),(158,1048585,19,25,'2023-04-04 22:15:20',268435458,'submission.event.general.metadataUpdated',0),(159,1048585,19,25,'2023-04-04 22:15:21',268435457,'submission.event.submissionSubmitted',0),(160,1048585,19,3,'2023-04-04 22:15:27',268435462,'publication.event.published',0);
 /*!40000 ALTER TABLE `event_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -739,16 +739,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `event_log_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_log_settings` (
-  `log_id` bigint(20) NOT NULL,
+  `log_id` bigint NOT NULL,
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `event_log_settings_pkey` (`log_id`,`setting_name`),
   KEY `event_log_settings_log_id` (`log_id`),
   KEY `event_log_settings_name_value` (`setting_name`(50),`setting_value`(150))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -767,13 +767,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `files` (
-  `file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `file_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `path` varchar(255) NOT NULL,
   `mimetype` varchar(255) NOT NULL,
   PRIMARY KEY (`file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -782,7 +782,7 @@ CREATE TABLE `files` (
 
 LOCK TABLES `files` WRITE;
 /*!40000 ALTER TABLE `files` DISABLE KEYS */;
-INSERT INTO `files` VALUES (1,'journals/1/articles/1/642632090b39c.pdf','application/pdf'),(2,'journals/1/articles/2/6426321e34c3b.pdf','application/pdf'),(3,'journals/1/articles/3/6426324394df1.pdf','application/pdf'),(4,'journals/1/articles/4/642632756da88.pdf','application/pdf'),(5,'journals/1/articles/5/6426328f71099.pdf','application/pdf'),(6,'journals/1/articles/6/642632a9dfd95.pdf','application/pdf'),(7,'journals/1/articles/7/642632c40509e.pdf','application/pdf'),(8,'journals/1/articles/8/642632e113a33.pdf','application/pdf'),(9,'journals/1/articles/9/642632fabd9c8.pdf','application/pdf'),(10,'journals/1/articles/10/64263314e7604.pdf','application/pdf'),(11,'journals/1/articles/11/6426332f82fd5.pdf','application/pdf'),(12,'journals/1/articles/12/6426334da796d.pdf','application/pdf'),(13,'journals/1/articles/13/6426336843671.pdf','application/pdf'),(14,'journals/1/articles/14/642633832e127.pdf','application/pdf'),(15,'journals/1/articles/15/6426339e4738f.pdf','application/pdf'),(16,'journals/1/articles/16/642633b8b0b59.pdf','application/pdf'),(17,'journals/1/articles/17/642633d3c32fb.pdf','application/pdf'),(18,'journals/1/articles/18/642633ef9a990.pdf','application/pdf'),(19,'journals/1/articles/19/6426340a6662d.pdf','application/pdf');
+INSERT INTO `files` VALUES (1,'journals/1/articles/1/642c9f4967446.pdf','application/pdf'),(2,'journals/1/articles/2/642c9f60bf426.pdf','application/pdf'),(3,'journals/1/articles/3/642c9f8a23fac.pdf','application/pdf'),(4,'journals/1/articles/4/642c9fc13abc2.pdf','application/pdf'),(5,'journals/1/articles/5/642c9fdd68af8.pdf','application/pdf'),(6,'journals/1/articles/6/642c9ff90ab40.pdf','application/pdf'),(7,'journals/1/articles/7/642ca01506f0f.pdf','application/pdf'),(8,'journals/1/articles/8/642ca035151ec.pdf','application/pdf'),(9,'journals/1/articles/9/642ca05160a71.pdf','application/pdf'),(10,'journals/1/articles/10/642ca06d79814.pdf','application/pdf'),(11,'journals/1/articles/11/642ca08a319b2.pdf','application/pdf'),(12,'journals/1/articles/12/642ca0a9d1f7c.pdf','application/pdf'),(13,'journals/1/articles/13/642ca0c6af290.pdf','application/pdf'),(14,'journals/1/articles/14/642ca0e3cebdb.pdf','application/pdf'),(15,'journals/1/articles/15/642ca10116faf.pdf','application/pdf'),(16,'journals/1/articles/16/642ca11cc352a.pdf','application/pdf'),(17,'journals/1/articles/17/642ca13999008.pdf','application/pdf'),(18,'journals/1/articles/18/642ca1569f213.pdf','application/pdf'),(19,'journals/1/articles/19/642ca17329616.pdf','application/pdf');
 /*!40000 ALTER TABLE `files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -792,9 +792,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filter_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filter_groups` (
-  `filter_group_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `filter_group_id` bigint NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(255) DEFAULT NULL,
   `display_name` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
@@ -802,7 +802,7 @@ CREATE TABLE `filter_groups` (
   `output_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`filter_group_id`),
   UNIQUE KEY `filter_groups_symbolic` (`symbolic`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -821,16 +821,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filter_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filter_settings` (
-  `filter_id` bigint(20) NOT NULL,
+  `filter_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `filter_settings_pkey` (`filter_id`,`locale`,`setting_name`),
   KEY `filter_settings_id` (`filter_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -848,18 +848,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filters`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filters` (
-  `filter_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `filter_group_id` bigint(20) NOT NULL DEFAULT '0',
-  `context_id` bigint(20) NOT NULL DEFAULT '0',
+  `filter_id` bigint NOT NULL AUTO_INCREMENT,
+  `filter_group_id` bigint NOT NULL DEFAULT '0',
+  `context_id` bigint NOT NULL DEFAULT '0',
   `display_name` varchar(255) DEFAULT NULL,
   `class_name` varchar(255) DEFAULT NULL,
-  `is_template` smallint(6) NOT NULL DEFAULT '0',
-  `parent_filter_id` bigint(20) NOT NULL DEFAULT '0',
-  `seq` bigint(20) NOT NULL DEFAULT '0',
+  `is_template` smallint NOT NULL DEFAULT '0',
+  `parent_filter_id` bigint NOT NULL DEFAULT '0',
+  `seq` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`filter_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -878,16 +878,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `genre_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `genre_settings` (
-  `genre_id` bigint(20) NOT NULL,
+  `genre_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `genre_settings_pkey` (`genre_id`,`locale`,`setting_name`),
   KEY `genre_settings_genre_id` (`genre_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -906,18 +906,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `genres`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `genres` (
-  `genre_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `seq` bigint(20) NOT NULL,
-  `enabled` smallint(6) NOT NULL DEFAULT '1',
-  `category` bigint(20) NOT NULL DEFAULT '1',
-  `dependent` smallint(6) NOT NULL DEFAULT '0',
-  `supplementary` smallint(6) NOT NULL DEFAULT '0',
+  `genre_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `seq` bigint NOT NULL,
+  `enabled` smallint NOT NULL DEFAULT '1',
+  `category` bigint NOT NULL DEFAULT '1',
+  `dependent` smallint NOT NULL DEFAULT '0',
+  `supplementary` smallint NOT NULL DEFAULT '0',
   `entry_key` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`genre_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -936,14 +936,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `item_views`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `item_views` (
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `user_id` bigint DEFAULT NULL,
   `date_last_viewed` datetime DEFAULT NULL,
   UNIQUE KEY `item_views_pkey` (`assoc_type`,`assoc_id`,`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -961,18 +961,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `jobs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jobs` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `queue` varchar(255) NOT NULL,
   `payload` longtext NOT NULL,
-  `attempts` tinyint(3) unsigned NOT NULL,
-  `reserved_at` int(10) unsigned DEFAULT NULL,
-  `available_at` int(10) unsigned NOT NULL,
-  `created_at` int(10) unsigned NOT NULL,
+  `attempts` tinyint unsigned NOT NULL,
+  `reserved_at` int unsigned DEFAULT NULL,
+  `available_at` int unsigned NOT NULL,
+  `created_at` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `jobs_queue_reserved_at_index` (`queue`,`reserved_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -990,16 +990,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `journal_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `journal_settings` (
-  `journal_id` bigint(20) NOT NULL,
+  `journal_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) DEFAULT NULL,
   UNIQUE KEY `journal_settings_pkey` (`journal_id`,`locale`,`setting_name`),
   KEY `journal_settings_journal_id` (`journal_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1018,16 +1018,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `journals`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `journals` (
-  `journal_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `journal_id` bigint NOT NULL AUTO_INCREMENT,
   `path` varchar(32) NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00' COMMENT 'Used to order lists of journals',
   `primary_locale` varchar(14) NOT NULL,
-  `enabled` tinyint(4) NOT NULL DEFAULT '1' COMMENT 'Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)',
+  `enabled` tinyint NOT NULL DEFAULT '1' COMMENT 'Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)',
   PRIMARY KEY (`journal_id`),
   UNIQUE KEY `journals_path` (`path`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1046,16 +1046,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `library_file_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `library_file_settings` (
-  `file_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object|date)',
   UNIQUE KEY `library_file_settings_pkey` (`file_id`,`locale`,`setting_name`),
   KEY `library_file_settings_id` (`file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1073,23 +1073,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `library_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `library_files` (
-  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `file_name` varchar(255) NOT NULL,
   `original_file_name` varchar(255) NOT NULL,
   `file_type` varchar(255) NOT NULL,
-  `file_size` bigint(20) NOT NULL,
-  `type` smallint(6) NOT NULL,
+  `file_size` bigint NOT NULL,
+  `type` smallint NOT NULL,
   `date_uploaded` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `public_access` smallint(6) DEFAULT '0',
+  `submission_id` bigint NOT NULL,
+  `public_access` smallint DEFAULT '0',
   PRIMARY KEY (`file_id`),
   KEY `library_files_context_id` (`context_id`),
   KEY `library_files_submission_id` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1107,16 +1107,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metadata_description_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metadata_description_settings` (
-  `metadata_description_id` bigint(20) NOT NULL,
+  `metadata_description_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `metadata_descripton_settings_pkey` (`metadata_description_id`,`locale`,`setting_name`),
   KEY `metadata_description_settings_id` (`metadata_description_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1134,18 +1134,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metadata_descriptions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metadata_descriptions` (
-  `metadata_description_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL DEFAULT '0',
-  `assoc_id` bigint(20) NOT NULL DEFAULT '0',
+  `metadata_description_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL DEFAULT '0',
+  `assoc_id` bigint NOT NULL DEFAULT '0',
   `schema_namespace` varchar(255) NOT NULL,
   `schema_name` varchar(255) NOT NULL,
   `display_name` varchar(255) DEFAULT NULL,
-  `seq` bigint(20) NOT NULL DEFAULT '0',
+  `seq` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`metadata_description_id`),
   KEY `metadata_descriptions_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1163,30 +1163,30 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics` (
   `load_id` varchar(255) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `pkp_section_id` bigint(20) DEFAULT NULL,
-  `assoc_object_type` bigint(20) DEFAULT NULL,
-  `assoc_object_id` bigint(20) DEFAULT NULL,
-  `submission_id` bigint(20) DEFAULT NULL,
-  `representation_id` bigint(20) DEFAULT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `pkp_section_id` bigint DEFAULT NULL,
+  `assoc_object_type` bigint DEFAULT NULL,
+  `assoc_object_id` bigint DEFAULT NULL,
+  `submission_id` bigint DEFAULT NULL,
+  `representation_id` bigint DEFAULT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   `day` varchar(8) DEFAULT NULL,
   `month` varchar(6) DEFAULT NULL,
-  `file_type` smallint(6) DEFAULT NULL,
+  `file_type` smallint DEFAULT NULL,
   `country_id` varchar(2) DEFAULT NULL,
   `region` varchar(2) DEFAULT NULL,
   `city` varchar(255) DEFAULT NULL,
   `metric_type` varchar(255) NOT NULL,
-  `metric` int(11) NOT NULL,
+  `metric` int NOT NULL,
   KEY `metrics_load_id` (`load_id`),
   KEY `metrics_metric_type_context_id` (`metric_type`,`context_id`),
   KEY `metrics_metric_type_submission_id_assoc_type` (`metric_type`,`submission_id`,`assoc_type`),
   KEY `metrics_metric_type_submission_id_assoc` (`metric_type`,`context_id`,`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1204,16 +1204,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_assignment_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_assignment_settings` (
-  `navigation_menu_item_assignment_id` bigint(20) NOT NULL,
+  `navigation_menu_item_assignment_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `navigation_menu_item_assignment_settings_pkey` (`navigation_menu_item_assignment_id`,`locale`,`setting_name`),
   KEY `assignment_settings_navigation_menu_item_assignment_id` (`navigation_menu_item_assignment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1231,15 +1231,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_assignments` (
-  `navigation_menu_item_assignment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `navigation_menu_id` bigint(20) NOT NULL,
-  `navigation_menu_item_id` bigint(20) NOT NULL,
-  `parent_id` bigint(20) DEFAULT NULL,
-  `seq` bigint(20) DEFAULT '0',
+  `navigation_menu_item_assignment_id` bigint NOT NULL AUTO_INCREMENT,
+  `navigation_menu_id` bigint NOT NULL,
+  `navigation_menu_item_id` bigint NOT NULL,
+  `parent_id` bigint DEFAULT NULL,
+  `seq` bigint DEFAULT '0',
   PRIMARY KEY (`navigation_menu_item_assignment_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1258,16 +1258,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_settings` (
-  `navigation_menu_item_id` bigint(20) NOT NULL,
+  `navigation_menu_item_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` longtext,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `navigation_menu_item_settings_pkey` (`navigation_menu_item_id`,`locale`,`setting_name`),
   KEY `navigation_menu_item_settings_navigation_menu_id` (`navigation_menu_item_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1286,14 +1286,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_items` (
-  `navigation_menu_item_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `navigation_menu_item_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `path` varchar(255) DEFAULT '',
   `type` varchar(255) DEFAULT '',
   PRIMARY KEY (`navigation_menu_item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1312,14 +1312,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menus`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menus` (
-  `navigation_menu_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `navigation_menu_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `area_name` varchar(255) DEFAULT '',
   `title` varchar(255) NOT NULL,
   PRIMARY KEY (`navigation_menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1338,19 +1338,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notes` (
-  `note_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `note_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_created` datetime NOT NULL,
   `date_modified` datetime DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `contents` text,
   PRIMARY KEY (`note_id`),
   KEY `notes_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1368,16 +1368,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_mail_list`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_mail_list` (
-  `notification_mail_list_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `notification_mail_list_id` bigint NOT NULL AUTO_INCREMENT,
   `email` varchar(90) NOT NULL,
-  `confirmed` smallint(6) NOT NULL DEFAULT '0',
+  `confirmed` smallint NOT NULL DEFAULT '0',
   `token` varchar(40) NOT NULL,
-  `context` bigint(20) NOT NULL,
+  `context` bigint NOT NULL,
   PRIMARY KEY (`notification_mail_list_id`),
   UNIQUE KEY `notification_mail_list_email_context` (`email`,`context`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1395,15 +1395,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_settings` (
-  `notification_id` bigint(20) NOT NULL,
+  `notification_id` bigint NOT NULL,
   `locale` varchar(14) DEFAULT NULL,
   `setting_name` varchar(64) NOT NULL,
   `setting_value` text NOT NULL,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `notification_settings_pkey` (`notification_id`,`locale`,`setting_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1422,16 +1422,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_subscription_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_subscription_settings` (
-  `setting_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `setting_id` bigint NOT NULL AUTO_INCREMENT,
   `setting_name` varchar(64) NOT NULL,
   `setting_value` text NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `context` bigint(20) NOT NULL,
+  `user_id` bigint NOT NULL,
+  `context` bigint NOT NULL,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   PRIMARY KEY (`setting_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1450,23 +1450,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notifications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notifications` (
-  `notification_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
-  `level` bigint(20) NOT NULL,
-  `type` bigint(20) NOT NULL,
+  `notification_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `user_id` bigint DEFAULT NULL,
+  `level` bigint NOT NULL,
+  `type` bigint NOT NULL,
   `date_created` datetime NOT NULL,
   `date_read` datetime DEFAULT NULL,
-  `assoc_type` bigint(20) DEFAULT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `assoc_type` bigint DEFAULT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   PRIMARY KEY (`notification_id`),
   KEY `notifications_context_id_user_id` (`context_id`,`user_id`,`level`),
   KEY `notifications_context_id` (`context_id`,`level`),
   KEY `notifications_assoc` (`assoc_type`,`assoc_id`),
   KEY `notifications_user_id_level` (`user_id`,`level`)
-) ENGINE=InnoDB AUTO_INCREMENT=206 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=206 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1475,7 +1475,7 @@ CREATE TABLE `notifications` (
 
 LOCK TABLES `notifications` WRITE;
 /*!40000 ALTER TABLE `notifications` DISABLE KEYS */;
-INSERT INTO `notifications` VALUES (3,1,0,3,16777222,'2023-03-31 01:06:23',NULL,1048585,1),(4,1,0,3,16777223,'2023-03-31 01:06:23',NULL,1048585,1),(5,1,5,2,16777217,'2023-03-31 01:06:23',NULL,1048585,1),(7,1,4,2,16777217,'2023-03-31 01:06:23',NULL,1048585,1),(9,1,0,2,16777243,'2023-03-31 01:06:23',NULL,1048585,1),(10,1,0,2,16777245,'2023-03-31 01:06:23',NULL,1048585,1),(12,1,0,3,16777222,'2023-03-31 01:06:44',NULL,1048585,2),(13,1,0,3,16777223,'2023-03-31 01:06:44',NULL,1048585,2),(14,1,5,2,16777217,'2023-03-31 01:06:44',NULL,1048585,2),(16,1,4,2,16777217,'2023-03-31 01:06:44',NULL,1048585,2),(18,1,0,2,16777243,'2023-03-31 01:06:44',NULL,1048585,2),(19,1,0,2,16777245,'2023-03-31 01:06:44',NULL,1048585,2),(24,1,0,3,16777222,'2023-03-31 01:07:24',NULL,1048585,3),(25,1,0,3,16777223,'2023-03-31 01:07:24',NULL,1048585,3),(26,1,5,2,16777217,'2023-03-31 01:07:24',NULL,1048585,3),(28,1,4,2,16777217,'2023-03-31 01:07:24',NULL,1048585,3),(30,1,0,2,16777243,'2023-03-31 01:07:24',NULL,1048585,3),(31,1,0,2,16777245,'2023-03-31 01:07:24',NULL,1048585,3),(36,1,9,3,16777259,'2023-03-31 01:07:43',NULL,1048585,3),(38,1,5,3,16777259,'2023-03-31 01:07:43',NULL,1048585,3),(40,1,4,3,16777259,'2023-03-31 01:07:43',NULL,1048585,3),(42,1,0,3,16777222,'2023-03-31 01:08:10',NULL,1048585,4),(43,1,0,3,16777223,'2023-03-31 01:08:10',NULL,1048585,4),(44,1,5,2,16777217,'2023-03-31 01:08:10',NULL,1048585,4),(46,1,4,2,16777217,'2023-03-31 01:08:11',NULL,1048585,4),(48,1,0,2,16777243,'2023-03-31 01:08:11',NULL,1048585,4),(49,1,0,2,16777245,'2023-03-31 01:08:11',NULL,1048585,4),(52,1,0,3,16777222,'2023-03-31 01:08:37',NULL,1048585,5),(53,1,0,3,16777223,'2023-03-31 01:08:37',NULL,1048585,5),(54,1,5,2,16777217,'2023-03-31 01:08:37',NULL,1048585,5),(56,1,4,2,16777217,'2023-03-31 01:08:37',NULL,1048585,5),(58,1,0,2,16777243,'2023-03-31 01:08:37',NULL,1048585,5),(59,1,0,2,16777245,'2023-03-31 01:08:37',NULL,1048585,5),(62,1,0,3,16777222,'2023-03-31 01:09:03',NULL,1048585,6),(63,1,0,3,16777223,'2023-03-31 01:09:03',NULL,1048585,6),(64,1,5,2,16777217,'2023-03-31 01:09:03',NULL,1048585,6),(66,1,4,2,16777217,'2023-03-31 01:09:03',NULL,1048585,6),(68,1,0,2,16777243,'2023-03-31 01:09:03',NULL,1048585,6),(69,1,0,2,16777245,'2023-03-31 01:09:03',NULL,1048585,6),(73,1,0,3,16777222,'2023-03-31 01:09:32',NULL,1048585,7),(74,1,0,3,16777223,'2023-03-31 01:09:32',NULL,1048585,7),(75,1,5,2,16777217,'2023-03-31 01:09:32',NULL,1048585,7),(77,1,4,2,16777217,'2023-03-31 01:09:32',NULL,1048585,7),(79,1,0,2,16777243,'2023-03-31 01:09:32',NULL,1048585,7),(80,1,0,2,16777245,'2023-03-31 01:09:32',NULL,1048585,7),(84,1,0,3,16777222,'2023-03-31 01:09:58',NULL,1048585,8),(85,1,0,3,16777223,'2023-03-31 01:09:58',NULL,1048585,8),(86,1,5,2,16777217,'2023-03-31 01:09:58',NULL,1048585,8),(88,1,4,2,16777217,'2023-03-31 01:09:58',NULL,1048585,8),(90,1,0,2,16777243,'2023-03-31 01:09:58',NULL,1048585,8),(91,1,0,2,16777245,'2023-03-31 01:09:58',NULL,1048585,8),(94,1,0,3,16777222,'2023-03-31 01:10:24',NULL,1048585,9),(95,1,0,3,16777223,'2023-03-31 01:10:24',NULL,1048585,9),(96,1,5,2,16777217,'2023-03-31 01:10:24',NULL,1048585,9),(98,1,4,2,16777217,'2023-03-31 01:10:24',NULL,1048585,9),(100,1,0,2,16777243,'2023-03-31 01:10:24',NULL,1048585,9),(101,1,0,2,16777245,'2023-03-31 01:10:24',NULL,1048585,9),(104,1,0,3,16777222,'2023-03-31 01:10:50',NULL,1048585,10),(105,1,0,3,16777223,'2023-03-31 01:10:50',NULL,1048585,10),(106,1,5,2,16777217,'2023-03-31 01:10:50',NULL,1048585,10),(108,1,4,2,16777217,'2023-03-31 01:10:50',NULL,1048585,10),(110,1,0,2,16777243,'2023-03-31 01:10:50',NULL,1048585,10),(111,1,0,2,16777245,'2023-03-31 01:10:50',NULL,1048585,10),(115,1,0,3,16777222,'2023-03-31 01:11:20',NULL,1048585,11),(116,1,0,3,16777223,'2023-03-31 01:11:20',NULL,1048585,11),(117,1,5,2,16777217,'2023-03-31 01:11:20',NULL,1048585,11),(119,1,4,2,16777217,'2023-03-31 01:11:20',NULL,1048585,11),(121,1,0,2,16777243,'2023-03-31 01:11:20',NULL,1048585,11),(122,1,0,2,16777245,'2023-03-31 01:11:20',NULL,1048585,11),(126,1,0,3,16777222,'2023-03-31 01:11:47',NULL,1048585,12),(127,1,0,3,16777223,'2023-03-31 01:11:47',NULL,1048585,12),(128,1,5,2,16777217,'2023-03-31 01:11:47',NULL,1048585,12),(130,1,4,2,16777217,'2023-03-31 01:11:47',NULL,1048585,12),(132,1,0,2,16777243,'2023-03-31 01:11:47',NULL,1048585,12),(133,1,0,2,16777245,'2023-03-31 01:11:47',NULL,1048585,12),(136,1,0,3,16777222,'2023-03-31 01:12:14',NULL,1048585,13),(137,1,0,3,16777223,'2023-03-31 01:12:14',NULL,1048585,13),(138,1,5,2,16777217,'2023-03-31 01:12:14',NULL,1048585,13),(140,1,4,2,16777217,'2023-03-31 01:12:14',NULL,1048585,13),(142,1,0,2,16777243,'2023-03-31 01:12:14',NULL,1048585,13),(143,1,0,2,16777245,'2023-03-31 01:12:14',NULL,1048585,13),(146,1,0,3,16777222,'2023-03-31 01:12:41',NULL,1048585,14),(147,1,0,3,16777223,'2023-03-31 01:12:41',NULL,1048585,14),(148,1,5,2,16777217,'2023-03-31 01:12:41',NULL,1048585,14),(150,1,4,2,16777217,'2023-03-31 01:12:41',NULL,1048585,14),(152,1,0,2,16777243,'2023-03-31 01:12:41',NULL,1048585,14),(153,1,0,2,16777245,'2023-03-31 01:12:41',NULL,1048585,14),(156,1,0,3,16777222,'2023-03-31 01:13:07',NULL,1048585,15),(157,1,0,3,16777223,'2023-03-31 01:13:07',NULL,1048585,15),(158,1,5,2,16777217,'2023-03-31 01:13:07',NULL,1048585,15),(160,1,4,2,16777217,'2023-03-31 01:13:08',NULL,1048585,15),(162,1,0,2,16777243,'2023-03-31 01:13:08',NULL,1048585,15),(163,1,0,2,16777245,'2023-03-31 01:13:08',NULL,1048585,15),(166,1,0,3,16777222,'2023-03-31 01:13:34',NULL,1048585,16),(167,1,0,3,16777223,'2023-03-31 01:13:34',NULL,1048585,16),(168,1,5,2,16777217,'2023-03-31 01:13:34',NULL,1048585,16),(170,1,4,2,16777217,'2023-03-31 01:13:34',NULL,1048585,16),(172,1,0,2,16777243,'2023-03-31 01:13:35',NULL,1048585,16),(173,1,0,2,16777245,'2023-03-31 01:13:35',NULL,1048585,16),(176,1,0,3,16777222,'2023-03-31 01:14:02',NULL,1048585,17),(177,1,0,3,16777223,'2023-03-31 01:14:02',NULL,1048585,17),(178,1,5,2,16777217,'2023-03-31 01:14:02',NULL,1048585,17),(180,1,4,2,16777217,'2023-03-31 01:14:02',NULL,1048585,17),(182,1,0,2,16777243,'2023-03-31 01:14:02',NULL,1048585,17),(183,1,0,2,16777245,'2023-03-31 01:14:02',NULL,1048585,17),(186,1,0,3,16777222,'2023-03-31 01:14:29',NULL,1048585,18),(187,1,0,3,16777223,'2023-03-31 01:14:29',NULL,1048585,18),(188,1,5,2,16777217,'2023-03-31 01:14:29',NULL,1048585,18),(190,1,4,2,16777217,'2023-03-31 01:14:29',NULL,1048585,18),(192,1,0,2,16777243,'2023-03-31 01:14:29',NULL,1048585,18),(193,1,0,2,16777245,'2023-03-31 01:14:29',NULL,1048585,18),(196,1,0,3,16777222,'2023-03-31 01:14:55',NULL,1048585,19),(197,1,0,3,16777223,'2023-03-31 01:14:55',NULL,1048585,19),(198,1,5,2,16777217,'2023-03-31 01:14:55',NULL,1048585,19),(200,1,4,2,16777217,'2023-03-31 01:14:56',NULL,1048585,19),(202,1,0,2,16777243,'2023-03-31 01:14:56',NULL,1048585,19),(203,1,0,2,16777245,'2023-03-31 01:14:56',NULL,1048585,19),(205,0,3,1,3,'2023-03-31 01:15:01',NULL,0,0);
+INSERT INTO `notifications` VALUES (3,1,0,3,16777222,'2023-04-04 22:06:08',NULL,1048585,1),(4,1,0,3,16777223,'2023-04-04 22:06:08',NULL,1048585,1),(5,1,5,2,16777217,'2023-04-04 22:06:08',NULL,1048585,1),(7,1,4,2,16777217,'2023-04-04 22:06:08',NULL,1048585,1),(9,1,0,2,16777243,'2023-04-04 22:06:08',NULL,1048585,1),(10,1,0,2,16777245,'2023-04-04 22:06:08',NULL,1048585,1),(12,1,0,3,16777222,'2023-04-04 22:06:31',NULL,1048585,2),(13,1,0,3,16777223,'2023-04-04 22:06:31',NULL,1048585,2),(14,1,5,2,16777217,'2023-04-04 22:06:31',NULL,1048585,2),(16,1,4,2,16777217,'2023-04-04 22:06:31',NULL,1048585,2),(18,1,0,2,16777243,'2023-04-04 22:06:31',NULL,1048585,2),(19,1,0,2,16777245,'2023-04-04 22:06:31',NULL,1048585,2),(24,1,0,3,16777222,'2023-04-04 22:07:16',NULL,1048585,3),(25,1,0,3,16777223,'2023-04-04 22:07:16',NULL,1048585,3),(26,1,5,2,16777217,'2023-04-04 22:07:16',NULL,1048585,3),(28,1,4,2,16777217,'2023-04-04 22:07:16',NULL,1048585,3),(30,1,0,2,16777243,'2023-04-04 22:07:16',NULL,1048585,3),(31,1,0,2,16777245,'2023-04-04 22:07:16',NULL,1048585,3),(36,1,9,3,16777259,'2023-04-04 22:07:38',NULL,1048585,3),(38,1,5,3,16777259,'2023-04-04 22:07:38',NULL,1048585,3),(40,1,4,3,16777259,'2023-04-04 22:07:38',NULL,1048585,3),(42,1,0,3,16777222,'2023-04-04 22:08:07',NULL,1048585,4),(43,1,0,3,16777223,'2023-04-04 22:08:07',NULL,1048585,4),(44,1,5,2,16777217,'2023-04-04 22:08:07',NULL,1048585,4),(46,1,4,2,16777217,'2023-04-04 22:08:07',NULL,1048585,4),(48,1,0,2,16777243,'2023-04-04 22:08:07',NULL,1048585,4),(49,1,0,2,16777245,'2023-04-04 22:08:07',NULL,1048585,4),(52,1,0,3,16777222,'2023-04-04 22:08:35',NULL,1048585,5),(53,1,0,3,16777223,'2023-04-04 22:08:35',NULL,1048585,5),(54,1,5,2,16777217,'2023-04-04 22:08:35',NULL,1048585,5),(56,1,4,2,16777217,'2023-04-04 22:08:36',NULL,1048585,5),(58,1,0,2,16777243,'2023-04-04 22:08:36',NULL,1048585,5),(59,1,0,2,16777245,'2023-04-04 22:08:36',NULL,1048585,5),(62,1,0,3,16777222,'2023-04-04 22:09:03',NULL,1048585,6),(63,1,0,3,16777223,'2023-04-04 22:09:03',NULL,1048585,6),(64,1,5,2,16777217,'2023-04-04 22:09:03',NULL,1048585,6),(66,1,4,2,16777217,'2023-04-04 22:09:03',NULL,1048585,6),(68,1,0,2,16777243,'2023-04-04 22:09:03',NULL,1048585,6),(69,1,0,2,16777245,'2023-04-04 22:09:03',NULL,1048585,6),(73,1,0,3,16777222,'2023-04-04 22:09:34',NULL,1048585,7),(74,1,0,3,16777223,'2023-04-04 22:09:34',NULL,1048585,7),(75,1,5,2,16777217,'2023-04-04 22:09:34',NULL,1048585,7),(77,1,4,2,16777217,'2023-04-04 22:09:34',NULL,1048585,7),(79,1,0,2,16777243,'2023-04-04 22:09:34',NULL,1048585,7),(80,1,0,2,16777245,'2023-04-04 22:09:34',NULL,1048585,7),(84,1,0,3,16777222,'2023-04-04 22:10:03',NULL,1048585,8),(85,1,0,3,16777223,'2023-04-04 22:10:03',NULL,1048585,8),(86,1,5,2,16777217,'2023-04-04 22:10:03',NULL,1048585,8),(88,1,4,2,16777217,'2023-04-04 22:10:03',NULL,1048585,8),(90,1,0,2,16777243,'2023-04-04 22:10:03',NULL,1048585,8),(91,1,0,2,16777245,'2023-04-04 22:10:03',NULL,1048585,8),(94,1,0,3,16777222,'2023-04-04 22:10:31',NULL,1048585,9),(95,1,0,3,16777223,'2023-04-04 22:10:31',NULL,1048585,9),(96,1,5,2,16777217,'2023-04-04 22:10:31',NULL,1048585,9),(98,1,4,2,16777217,'2023-04-04 22:10:31',NULL,1048585,9),(100,1,0,2,16777243,'2023-04-04 22:10:31',NULL,1048585,9),(101,1,0,2,16777245,'2023-04-04 22:10:31',NULL,1048585,9),(104,1,0,3,16777222,'2023-04-04 22:10:59',NULL,1048585,10),(105,1,0,3,16777223,'2023-04-04 22:10:59',NULL,1048585,10),(106,1,5,2,16777217,'2023-04-04 22:10:59',NULL,1048585,10),(108,1,4,2,16777217,'2023-04-04 22:11:00',NULL,1048585,10),(110,1,0,2,16777243,'2023-04-04 22:11:00',NULL,1048585,10),(111,1,0,2,16777245,'2023-04-04 22:11:00',NULL,1048585,10),(115,1,0,3,16777222,'2023-04-04 22:11:31',NULL,1048585,11),(116,1,0,3,16777223,'2023-04-04 22:11:31',NULL,1048585,11),(117,1,5,2,16777217,'2023-04-04 22:11:31',NULL,1048585,11),(119,1,4,2,16777217,'2023-04-04 22:11:31',NULL,1048585,11),(121,1,0,2,16777243,'2023-04-04 22:11:31',NULL,1048585,11),(122,1,0,2,16777245,'2023-04-04 22:11:31',NULL,1048585,11),(126,1,0,3,16777222,'2023-04-04 22:12:00',NULL,1048585,12),(127,1,0,3,16777223,'2023-04-04 22:12:00',NULL,1048585,12),(128,1,5,2,16777217,'2023-04-04 22:12:00',NULL,1048585,12),(130,1,4,2,16777217,'2023-04-04 22:12:00',NULL,1048585,12),(132,1,0,2,16777243,'2023-04-04 22:12:00',NULL,1048585,12),(133,1,0,2,16777245,'2023-04-04 22:12:00',NULL,1048585,12),(136,1,0,3,16777222,'2023-04-04 22:12:29',NULL,1048585,13),(137,1,0,3,16777223,'2023-04-04 22:12:29',NULL,1048585,13),(138,1,5,2,16777217,'2023-04-04 22:12:29',NULL,1048585,13),(140,1,4,2,16777217,'2023-04-04 22:12:29',NULL,1048585,13),(142,1,0,2,16777243,'2023-04-04 22:12:29',NULL,1048585,13),(143,1,0,2,16777245,'2023-04-04 22:12:29',NULL,1048585,13),(146,1,0,3,16777222,'2023-04-04 22:12:58',NULL,1048585,14),(147,1,0,3,16777223,'2023-04-04 22:12:58',NULL,1048585,14),(148,1,5,2,16777217,'2023-04-04 22:12:58',NULL,1048585,14),(150,1,4,2,16777217,'2023-04-04 22:12:58',NULL,1048585,14),(152,1,0,2,16777243,'2023-04-04 22:12:58',NULL,1048585,14),(153,1,0,2,16777245,'2023-04-04 22:12:58',NULL,1048585,14),(156,1,0,3,16777222,'2023-04-04 22:13:27',NULL,1048585,15),(157,1,0,3,16777223,'2023-04-04 22:13:27',NULL,1048585,15),(158,1,5,2,16777217,'2023-04-04 22:13:27',NULL,1048585,15),(160,1,4,2,16777217,'2023-04-04 22:13:27',NULL,1048585,15),(162,1,0,2,16777243,'2023-04-04 22:13:27',NULL,1048585,15),(163,1,0,2,16777245,'2023-04-04 22:13:27',NULL,1048585,15),(166,1,0,3,16777222,'2023-04-04 22:13:55',NULL,1048585,16),(167,1,0,3,16777223,'2023-04-04 22:13:55',NULL,1048585,16),(168,1,5,2,16777217,'2023-04-04 22:13:55',NULL,1048585,16),(170,1,4,2,16777217,'2023-04-04 22:13:55',NULL,1048585,16),(172,1,0,2,16777243,'2023-04-04 22:13:55',NULL,1048585,16),(173,1,0,2,16777245,'2023-04-04 22:13:55',NULL,1048585,16),(176,1,0,3,16777222,'2023-04-04 22:14:24',NULL,1048585,17),(177,1,0,3,16777223,'2023-04-04 22:14:24',NULL,1048585,17),(178,1,5,2,16777217,'2023-04-04 22:14:24',NULL,1048585,17),(180,1,4,2,16777217,'2023-04-04 22:14:24',NULL,1048585,17),(182,1,0,2,16777243,'2023-04-04 22:14:24',NULL,1048585,17),(183,1,0,2,16777245,'2023-04-04 22:14:24',NULL,1048585,17),(186,1,0,3,16777222,'2023-04-04 22:14:52',NULL,1048585,18),(187,1,0,3,16777223,'2023-04-04 22:14:52',NULL,1048585,18),(188,1,5,2,16777217,'2023-04-04 22:14:52',NULL,1048585,18),(190,1,4,2,16777217,'2023-04-04 22:14:53',NULL,1048585,18),(192,1,0,2,16777243,'2023-04-04 22:14:53',NULL,1048585,18),(193,1,0,2,16777245,'2023-04-04 22:14:53',NULL,1048585,18),(196,1,0,3,16777222,'2023-04-04 22:15:21',NULL,1048585,19),(197,1,0,3,16777223,'2023-04-04 22:15:21',NULL,1048585,19),(198,1,5,2,16777217,'2023-04-04 22:15:21',NULL,1048585,19),(200,1,4,2,16777217,'2023-04-04 22:15:21',NULL,1048585,19),(202,1,0,2,16777243,'2023-04-04 22:15:21',NULL,1048585,19),(203,1,0,2,16777245,'2023-04-04 22:15:21',NULL,1048585,19),(205,0,3,1,3,'2023-04-04 22:15:27',NULL,0,0);
 /*!40000 ALTER TABLE `notifications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1485,14 +1485,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `oai_resumption_tokens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `oai_resumption_tokens` (
   `token` varchar(32) NOT NULL,
-  `expire` bigint(20) NOT NULL,
-  `record_offset` int(11) NOT NULL,
+  `expire` bigint NOT NULL,
+  `record_offset` int NOT NULL,
   `params` text,
   UNIQUE KEY `oai_resumption_tokens_pkey` (`token`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1510,16 +1510,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `plugin_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `plugin_settings` (
   `plugin_name` varchar(80) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
   `setting_name` varchar(80) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `plugin_settings_pkey` (`plugin_name`,`context_id`,`setting_name`),
   KEY `plugin_settings_plugin_name` (`plugin_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1528,7 +1528,7 @@ CREATE TABLE `plugin_settings` (
 
 LOCK TABLES `plugin_settings` WRITE;
 /*!40000 ALTER TABLE `plugin_settings` DISABLE KEYS */;
-INSERT INTO `plugin_settings` VALUES ('acronplugin',0,'crontab','[{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"lib.pkp.classes.task.StatisticsReport\",\"frequency\":{\"day\":\"1\"},\"args\":[]}]','object'),('acronplugin',0,'enabled','1','bool'),('defaultthemeplugin',0,'enabled','1','bool'),('defaultthemeplugin',1,'baseColour','#1E6292','string'),('defaultthemeplugin',1,'enabled','1','bool'),('defaultthemeplugin',1,'showDescriptionInServerIndex','false','string'),('defaultthemeplugin',1,'typography','notoSans','string'),('defaultthemeplugin',1,'useHomepageImageAsHeader','false','string'),('developedbyblockplugin',0,'enabled','0','bool'),('developedbyblockplugin',0,'seq','0','int'),('developedbyblockplugin',1,'enabled','0','bool'),('developedbyblockplugin',1,'seq','0','int'),('googlescholarplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',0,'enabled','1','bool'),('languagetoggleblockplugin',0,'seq','4','int'),('languagetoggleblockplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',1,'seq','4','int'),('pdfjsviewerplugin',1,'enabled','1','bool'),('tinymceplugin',0,'enabled','1','bool'),('tinymceplugin',1,'enabled','1','bool'),('usageeventplugin',0,'enabled','1','bool'),('usageeventplugin',0,'uniqueSiteId','6426319bb188d','string'),('usagestatsplugin',0,'accessLogFileParseRegex','/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] \"\\S+ (?P<url>\\S+).*?\" (?P<returnCode>\\S+) \\S+ \".*?\" \"(?P<userAgent>.*?)\"/','string'),('usagestatsplugin',0,'chartType','bar','string'),('usagestatsplugin',0,'createLogFiles','1','bool'),('usagestatsplugin',0,'datasetMaxCount','4','string'),('usagestatsplugin',0,'enabled','1','bool'),('usagestatsplugin',0,'optionalColumns','[\"city\",\"region\"]','object'),('webfeedplugin',1,'displayPage','homepage','string'),('webfeedplugin',1,'enabled','1','bool'),('webfeedplugin',1,'includeIdentifiers','0','bool'),('webfeedplugin',1,'recentItems','30','int');
+INSERT INTO `plugin_settings` VALUES ('acronplugin',0,'crontab','[{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"lib.pkp.classes.task.StatisticsReport\",\"frequency\":{\"day\":\"1\"},\"args\":[]}]','object'),('acronplugin',0,'enabled','1','bool'),('defaultthemeplugin',0,'enabled','1','bool'),('defaultthemeplugin',1,'baseColour','#1E6292','string'),('defaultthemeplugin',1,'enabled','1','bool'),('defaultthemeplugin',1,'showDescriptionInServerIndex','false','string'),('defaultthemeplugin',1,'typography','notoSans','string'),('defaultthemeplugin',1,'useHomepageImageAsHeader','false','string'),('developedbyblockplugin',0,'enabled','0','bool'),('developedbyblockplugin',0,'seq','0','int'),('developedbyblockplugin',1,'enabled','0','bool'),('developedbyblockplugin',1,'seq','0','int'),('googlescholarplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',0,'enabled','1','bool'),('languagetoggleblockplugin',0,'seq','4','int'),('languagetoggleblockplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',1,'seq','4','int'),('pdfjsviewerplugin',1,'enabled','1','bool'),('tinymceplugin',0,'enabled','1','bool'),('tinymceplugin',1,'enabled','1','bool'),('usageeventplugin',0,'enabled','1','bool'),('usageeventplugin',0,'uniqueSiteId','642c9ecd37031','string'),('usagestatsplugin',0,'accessLogFileParseRegex','/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] \"\\S+ (?P<url>\\S+).*?\" (?P<returnCode>\\S+) \\S+ \".*?\" \"(?P<userAgent>.*?)\"/','string'),('usagestatsplugin',0,'chartType','bar','string'),('usagestatsplugin',0,'createLogFiles','1','bool'),('usagestatsplugin',0,'datasetMaxCount','4','string'),('usagestatsplugin',0,'enabled','1','bool'),('usagestatsplugin',0,'optionalColumns','[\"city\",\"region\"]','object'),('webfeedplugin',1,'displayPage','homepage','string'),('webfeedplugin',1,'enabled','1','bool'),('webfeedplugin',1,'includeIdentifiers','0','bool'),('webfeedplugin',1,'recentItems','30','int');
 /*!40000 ALTER TABLE `plugin_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1538,12 +1538,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_categories` (
-  `publication_id` bigint(20) NOT NULL,
-  `category_id` bigint(20) NOT NULL,
+  `publication_id` bigint NOT NULL,
+  `category_id` bigint NOT NULL,
   UNIQUE KEY `publication_categories_id` (`publication_id`,`category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1561,16 +1561,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_galley_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_galley_settings` (
-  `galley_id` bigint(20) NOT NULL,
+  `galley_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   UNIQUE KEY `publication_galley_settings_pkey` (`galley_id`,`locale`,`setting_name`),
   KEY `publication_galley_settings_galley_id` (`galley_id`),
   KEY `publication_galley_settings_name_value` (`setting_name`(50),`setting_value`(150))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1588,23 +1588,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_galleys`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_galleys` (
-  `galley_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `galley_id` bigint NOT NULL AUTO_INCREMENT,
   `locale` varchar(14) DEFAULT NULL,
-  `publication_id` bigint(20) NOT NULL,
+  `publication_id` bigint NOT NULL,
   `label` varchar(255) DEFAULT NULL,
-  `submission_file_id` bigint(20) unsigned DEFAULT NULL,
+  `submission_file_id` bigint unsigned DEFAULT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   `remote_url` varchar(2047) DEFAULT NULL,
-  `is_approved` tinyint(4) NOT NULL DEFAULT '0',
+  `is_approved` tinyint NOT NULL DEFAULT '0',
   `url_path` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`galley_id`),
   KEY `publication_galleys_publication_id` (`publication_id`),
   KEY `publication_galleys_url_path` (`url_path`),
   KEY `publication_galleys_submission_file_id_foreign` (`submission_file_id`),
   CONSTRAINT `publication_galleys_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1623,16 +1623,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_settings` (
-  `publication_id` bigint(20) NOT NULL,
+  `publication_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   UNIQUE KEY `publication_settings_pkey` (`publication_id`,`locale`,`setting_name`),
   KEY `publication_settings_publication_id` (`publication_id`),
   KEY `publication_settings_name_value` (`setting_name`(50),`setting_value`(150))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1651,24 +1651,24 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publications` (
-  `publication_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `access_status` bigint(20) DEFAULT '0',
+  `publication_id` bigint NOT NULL AUTO_INCREMENT,
+  `access_status` bigint DEFAULT '0',
   `date_published` date DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
   `locale` varchar(14) DEFAULT NULL,
-  `primary_contact_id` bigint(20) DEFAULT NULL,
-  `section_id` bigint(20) DEFAULT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT '1',
+  `primary_contact_id` bigint DEFAULT NULL,
+  `section_id` bigint DEFAULT NULL,
+  `submission_id` bigint NOT NULL,
+  `status` tinyint NOT NULL DEFAULT '1',
   `url_path` varchar(64) DEFAULT NULL,
-  `version` bigint(20) DEFAULT NULL,
+  `version` bigint DEFAULT NULL,
   PRIMARY KEY (`publication_id`),
   KEY `publications_submission_id` (`submission_id`),
   KEY `publications_section_id` (`section_id`),
   KEY `publications_url_path` (`url_path`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1677,7 +1677,7 @@ CREATE TABLE `publications` (
 
 LOCK TABLES `publications` WRITE;
 /*!40000 ALTER TABLE `publications` DISABLE KEYS */;
-INSERT INTO `publications` VALUES (1,0,NULL,'2023-03-31 01:06:22',NULL,1,1,1,1,NULL,1),(2,0,'2023-03-31','2023-03-31 01:07:00',NULL,2,1,2,3,NULL,1),(3,0,'2023-03-31','2023-03-31 01:07:40',NULL,4,1,3,3,NULL,1),(4,0,'2023-03-31','2023-03-31 01:07:49',NULL,6,1,3,3,NULL,2),(5,0,'2023-03-31','2023-03-31 01:08:15',NULL,8,1,4,3,NULL,1),(6,0,'2023-03-31','2023-03-31 01:08:42',NULL,9,1,5,3,NULL,1),(7,0,'2023-03-31','2023-03-31 01:09:08',NULL,10,1,6,3,NULL,1),(8,0,'2023-03-31','2023-03-31 01:09:37',NULL,11,1,7,3,NULL,1),(9,0,'2023-03-31','2023-03-31 01:10:03',NULL,13,1,8,3,NULL,1),(10,0,'2023-03-31','2023-03-31 01:10:29',NULL,14,1,9,3,NULL,1),(11,0,'2023-03-31','2023-03-31 01:10:56',NULL,15,1,10,3,NULL,1),(12,0,'2023-03-31','2023-03-31 01:11:25',NULL,16,1,11,3,NULL,1),(13,0,'2023-03-31','2023-03-31 01:11:52',NULL,18,1,12,3,NULL,1),(14,0,'2023-03-31','2023-03-31 01:12:19',NULL,19,1,13,3,NULL,1),(15,0,'2023-03-31','2023-03-31 01:12:46',NULL,20,1,14,3,NULL,1),(16,0,'2023-03-31','2023-03-31 01:13:13',NULL,21,1,15,3,NULL,1),(17,0,'2023-03-31','2023-03-31 01:13:39',NULL,22,1,16,3,NULL,1),(18,0,'2023-03-31','2023-03-31 01:14:07',NULL,23,1,17,3,NULL,1),(19,0,'2023-03-31','2023-03-31 01:14:34',NULL,24,1,18,3,NULL,1),(20,0,'2023-03-31','2023-03-31 01:15:01',NULL,25,1,19,3,NULL,1);
+INSERT INTO `publications` VALUES (1,0,NULL,'2023-04-04 22:06:07',NULL,1,1,1,1,NULL,1),(2,0,'2023-04-04','2023-04-04 22:06:49',NULL,2,1,2,3,NULL,1),(3,0,'2023-04-04','2023-04-04 22:07:33',NULL,4,1,3,3,NULL,1),(4,0,'2023-04-04','2023-04-04 22:07:44',NULL,6,1,3,3,NULL,2),(5,0,'2023-04-04','2023-04-04 22:08:12',NULL,8,1,4,3,NULL,1),(6,0,'2023-04-04','2023-04-04 22:08:41',NULL,9,1,5,3,NULL,1),(7,0,'2023-04-04','2023-04-04 22:09:08',NULL,10,1,6,3,NULL,1),(8,0,'2023-04-04','2023-04-04 22:09:40',NULL,11,1,7,3,NULL,1),(9,0,'2023-04-04','2023-04-04 22:10:08',NULL,13,1,8,3,NULL,1),(10,0,'2023-04-04','2023-04-04 22:10:37',NULL,14,1,9,3,NULL,1),(11,0,'2023-04-04','2023-04-04 22:11:05',NULL,15,1,10,3,NULL,1),(12,0,'2023-04-04','2023-04-04 22:11:37',NULL,16,1,11,3,NULL,1),(13,0,'2023-04-04','2023-04-04 22:12:05',NULL,18,1,12,3,NULL,1),(14,0,'2023-04-04','2023-04-04 22:12:35',NULL,19,1,13,3,NULL,1),(15,0,'2023-04-04','2023-04-04 22:13:04',NULL,20,1,14,3,NULL,1),(16,0,'2023-04-04','2023-04-04 22:13:32',NULL,21,1,15,3,NULL,1),(17,0,'2023-04-04','2023-04-04 22:14:01',NULL,22,1,16,3,NULL,1),(18,0,'2023-04-04','2023-04-04 22:14:30',NULL,23,1,17,3,NULL,1),(19,0,'2023-04-04','2023-04-04 22:14:58',NULL,24,1,18,3,NULL,1),(20,0,'2023-04-04','2023-04-04 22:15:26',NULL,25,1,19,3,NULL,1);
 /*!40000 ALTER TABLE `publications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1687,19 +1687,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `queries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `queries` (
-  `query_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
+  `query_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   `date_posted` datetime DEFAULT NULL,
   `date_modified` datetime DEFAULT NULL,
-  `closed` smallint(6) NOT NULL DEFAULT '0',
+  `closed` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`query_id`),
   KEY `queries_assoc_id` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1717,12 +1717,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `query_participants`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `query_participants` (
-  `query_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `query_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `query_participants_pkey` (`query_id`,`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1740,13 +1740,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_assignments` (
-  `review_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `reviewer_id` bigint(20) NOT NULL,
+  `review_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `reviewer_id` bigint NOT NULL,
   `competing_interests` text,
-  `recommendation` smallint(6) DEFAULT NULL,
+  `recommendation` smallint DEFAULT NULL,
   `date_assigned` datetime DEFAULT NULL,
   `date_notified` datetime DEFAULT NULL,
   `date_confirmed` datetime DEFAULT NULL,
@@ -1755,26 +1755,26 @@ CREATE TABLE `review_assignments` (
   `date_due` datetime DEFAULT NULL,
   `date_response_due` datetime DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
-  `reminder_was_automatic` smallint(6) NOT NULL DEFAULT '0',
-  `declined` smallint(6) NOT NULL DEFAULT '0',
-  `cancelled` smallint(6) NOT NULL DEFAULT '0',
-  `reviewer_file_id` bigint(20) DEFAULT NULL,
+  `reminder_was_automatic` smallint NOT NULL DEFAULT '0',
+  `declined` smallint NOT NULL DEFAULT '0',
+  `cancelled` smallint NOT NULL DEFAULT '0',
+  `reviewer_file_id` bigint DEFAULT NULL,
   `date_rated` datetime DEFAULT NULL,
   `date_reminded` datetime DEFAULT NULL,
-  `quality` smallint(6) DEFAULT NULL,
-  `review_round_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
-  `review_method` smallint(6) NOT NULL DEFAULT '1',
-  `round` smallint(6) NOT NULL DEFAULT '1',
-  `step` smallint(6) NOT NULL DEFAULT '1',
-  `review_form_id` bigint(20) DEFAULT NULL,
-  `unconsidered` smallint(6) DEFAULT NULL,
+  `quality` smallint DEFAULT NULL,
+  `review_round_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
+  `review_method` smallint NOT NULL DEFAULT '1',
+  `round` smallint NOT NULL DEFAULT '1',
+  `step` smallint NOT NULL DEFAULT '1',
+  `review_form_id` bigint DEFAULT NULL,
+  `unconsidered` smallint DEFAULT NULL,
   PRIMARY KEY (`review_id`),
   KEY `review_assignments_submission_id` (`submission_id`),
   KEY `review_assignments_reviewer_id` (`reviewer_id`),
   KEY `review_assignments_form_id` (`review_form_id`),
   KEY `review_assignments_reviewer_review` (`reviewer_id`,`review_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1792,15 +1792,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_files` (
-  `review_id` bigint(20) NOT NULL,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
+  `review_id` bigint NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL,
   UNIQUE KEY `review_files_pkey` (`review_id`,`submission_file_id`),
   KEY `review_files_review_id` (`review_id`),
   KEY `review_files_submission_file_id_foreign` (`submission_file_id`),
   CONSTRAINT `review_files_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1818,16 +1818,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_element_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_element_settings` (
-  `review_form_element_id` bigint(20) NOT NULL,
+  `review_form_element_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `review_form_element_settings_pkey` (`review_form_element_id`,`locale`,`setting_name`),
   KEY `review_form_element_settings_review_form_element_id` (`review_form_element_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1845,17 +1845,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_elements`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_elements` (
-  `review_form_element_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `review_form_id` bigint(20) NOT NULL,
+  `review_form_element_id` bigint NOT NULL AUTO_INCREMENT,
+  `review_form_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
-  `element_type` bigint(20) DEFAULT NULL,
-  `required` smallint(6) DEFAULT NULL,
-  `included` smallint(6) DEFAULT NULL,
+  `element_type` bigint DEFAULT NULL,
+  `required` smallint DEFAULT NULL,
+  `included` smallint DEFAULT NULL,
   PRIMARY KEY (`review_form_element_id`),
   KEY `review_form_elements_review_form_id` (`review_form_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1873,14 +1873,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_responses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_responses` (
-  `review_form_element_id` bigint(20) NOT NULL,
-  `review_id` bigint(20) NOT NULL,
+  `review_form_element_id` bigint NOT NULL,
+  `review_id` bigint NOT NULL,
   `response_type` varchar(6) DEFAULT NULL,
   `response_value` text,
   KEY `review_form_responses_pkey` (`review_form_element_id`,`review_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1898,16 +1898,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_settings` (
-  `review_form_id` bigint(20) NOT NULL,
+  `review_form_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `review_form_settings_pkey` (`review_form_id`,`locale`,`setting_name`),
   KEY `review_form_settings_review_form_id` (`review_form_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1925,15 +1925,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_forms`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_forms` (
-  `review_form_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `review_form_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
-  `is_active` smallint(6) DEFAULT NULL,
+  `is_active` smallint DEFAULT NULL,
   PRIMARY KEY (`review_form_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1951,17 +1951,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_round_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_round_files` (
-  `submission_id` bigint(20) NOT NULL,
-  `review_round_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `review_round_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL,
   UNIQUE KEY `review_round_files_pkey` (`submission_id`,`review_round_id`,`submission_file_id`),
   KEY `review_round_files_submission_id` (`submission_id`),
   KEY `review_round_files_submission_file_id_foreign` (`submission_file_id`),
   CONSTRAINT `review_round_files_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1979,18 +1979,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_rounds`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_rounds` (
-  `review_round_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) DEFAULT NULL,
-  `round` smallint(6) NOT NULL,
-  `review_revision` bigint(20) DEFAULT NULL,
-  `status` bigint(20) DEFAULT NULL,
+  `review_round_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `stage_id` bigint DEFAULT NULL,
+  `round` smallint NOT NULL,
+  `review_revision` bigint DEFAULT NULL,
+  `status` bigint DEFAULT NULL,
   PRIMARY KEY (`review_round_id`),
   UNIQUE KEY `review_rounds_submission_id_stage_id_round_pkey` (`submission_id`,`stage_id`,`round`),
   KEY `review_rounds_submission_id` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2008,12 +2008,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `scheduled_tasks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `scheduled_tasks` (
   `class_name` varchar(255) NOT NULL,
   `last_run` datetime DEFAULT NULL,
   UNIQUE KEY `scheduled_tasks_pkey` (`class_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2022,7 +2022,7 @@ CREATE TABLE `scheduled_tasks` (
 
 LOCK TABLES `scheduled_tasks` WRITE;
 /*!40000 ALTER TABLE `scheduled_tasks` DISABLE KEYS */;
-INSERT INTO `scheduled_tasks` VALUES ('lib.pkp.classes.task.StatisticsReport','2023-03-31 01:04:16'),('plugins.generic.usageStats.UsageStatsLoader','2023-03-31 01:04:16');
+INSERT INTO `scheduled_tasks` VALUES ('lib.pkp.classes.task.StatisticsReport','2023-04-04 22:03:44'),('plugins.generic.usageStats.UsageStatsLoader','2023-04-04 22:03:44');
 /*!40000 ALTER TABLE `scheduled_tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2032,16 +2032,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `section_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `section_settings` (
-  `section_id` bigint(20) NOT NULL,
+  `section_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `section_settings_pkey` (`section_id`,`locale`,`setting_name`),
   KEY `section_settings_section_id` (`section_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2060,23 +2060,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sections`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sections` (
-  `section_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `journal_id` bigint(20) NOT NULL,
-  `review_form_id` bigint(20) DEFAULT NULL,
+  `section_id` bigint NOT NULL AUTO_INCREMENT,
+  `journal_id` bigint NOT NULL,
+  `review_form_id` bigint DEFAULT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
-  `editor_restricted` tinyint(4) NOT NULL DEFAULT '0',
-  `meta_indexed` tinyint(4) NOT NULL DEFAULT '0',
-  `meta_reviewed` tinyint(4) NOT NULL DEFAULT '1',
-  `abstracts_not_required` tinyint(4) NOT NULL DEFAULT '0',
-  `hide_title` tinyint(4) NOT NULL DEFAULT '0',
-  `hide_author` tinyint(4) NOT NULL DEFAULT '0',
-  `is_inactive` tinyint(4) NOT NULL DEFAULT '0',
-  `abstract_word_count` bigint(20) DEFAULT NULL,
+  `editor_restricted` tinyint NOT NULL DEFAULT '0',
+  `meta_indexed` tinyint NOT NULL DEFAULT '0',
+  `meta_reviewed` tinyint NOT NULL DEFAULT '1',
+  `abstracts_not_required` tinyint NOT NULL DEFAULT '0',
+  `hide_title` tinyint NOT NULL DEFAULT '0',
+  `hide_author` tinyint NOT NULL DEFAULT '0',
+  `is_inactive` tinyint NOT NULL DEFAULT '0',
+  `abstract_word_count` bigint DEFAULT NULL,
   PRIMARY KEY (`section_id`),
   KEY `sections_journal_id` (`journal_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2095,20 +2095,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sessions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sessions` (
   `session_id` varchar(128) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
+  `user_id` bigint DEFAULT NULL,
   `ip_address` varchar(39) NOT NULL,
   `user_agent` varchar(255) DEFAULT NULL,
-  `created` bigint(20) NOT NULL DEFAULT '0',
-  `last_used` bigint(20) NOT NULL DEFAULT '0',
-  `remember` smallint(6) NOT NULL DEFAULT '0',
+  `created` bigint NOT NULL DEFAULT '0',
+  `last_used` bigint NOT NULL DEFAULT '0',
+  `remember` smallint NOT NULL DEFAULT '0',
   `data` text NOT NULL,
   `domain` varchar(255) DEFAULT NULL,
   UNIQUE KEY `sessions_pkey` (`session_id`),
   KEY `sessions_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2117,7 +2117,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('0ols04b47bojtv62dbme0lgn7p',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224817,1680224820,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680224820;s:5:\"token\";s:32:\"4f7d1252a8b6f4ab9ececfeafc750f40\";}','localhost'),('11lse60f2r80if39346hasrrv8',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224667,1680224679,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680224679;s:5:\"token\";s:32:\"467c6c1b749d9003018057ce531ee681\";}','localhost'),('1q70e0h360phkcqmcd8l2knstk',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224654,1680224654,0,'','localhost'),('5q2assljqo08ompgherl3pbn08',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224897,1680224923,0,'csrf|a:2:{s:9:\"timestamp\";i:1680224923;s:5:\"token\";s:32:\"d4fe87e5d8d99cf786da70a92c61f78e\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('8va4oisoc0kflgm2st7oabi79o',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680225221,1680225247,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225247;s:5:\"token\";s:32:\"c8ad4d5acb4d9622ad595ca53b821327\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('ao2k8n5kacg52vk0mddrapc2ht',7,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224762,1680224783,0,'csrf|a:2:{s:9:\"timestamp\";i:1680224783;s:5:\"token\";s:32:\"c893ddd282b416f7e442ce6ef7e4a3d8\";}username|s:7:\"ccorino\";userId|i:7;','localhost'),('c8fks6ip01ps1oljqt0igfco4n',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680225004,1680225029,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225029;s:5:\"token\";s:32:\"d104e99311646e0cadc632e9003fda8b\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('cqls8aa4oj1296kt0vau3oib8d',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224692,1680224730,0,'username|s:5:\"rvaca\";csrf|a:2:{s:9:\"timestamp\";i:1680224730;s:5:\"token\";s:32:\"bcfd9431ef0dd7f260ec61afb3f76acf\";}','localhost'),('d6sm0njqua8tr3pivam5d08dun',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224656,1680224667,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680224667;s:5:\"token\";s:32:\"ff62bb64291a6eeae6a0f654a70d76e7\";}','localhost'),('eho26fbughm2jv9bla2k06c9as',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224685,1680224691,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680224691;s:5:\"token\";s:32:\"fcc88edd3c9c2650f16a1f336b8ca772\";}','localhost'),('esm45qh9emsrrg1idoe8sovi3c',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680225141,1680225166,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225166;s:5:\"token\";s:32:\"f784209fc7b3a4f045f60f25c1bd91d9\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('fvjgse41edglhf1t5ukvst67rb',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680225168,1680225193,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225193;s:5:\"token\";s:32:\"071057a125a2f589a20499c1a5d1aa6e\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('g3bq9mgnao45ook8ool5aar0r3',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224924,1680224948,0,'csrf|a:2:{s:9:\"timestamp\";i:1680224948;s:5:\"token\";s:32:\"eded650a761c1d9edd47079c9da90593\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('hr17cp5junkas1pvdnuags28q8',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224785,1680224816,0,'csrf|a:2:{s:9:\"timestamp\";i:1680224816;s:5:\"token\";s:32:\"05338f99cbbf9f178cc436508ee26714\";}username|s:8:\"ckwantes\";','localhost'),('huhl3um9iuej4uii55epddtd5j',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224979,1680225003,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225003;s:5:\"token\";s:32:\"2221569700412d36944b4a329a8263cb\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('il17lbip929vdk75kurg1hipmd',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224821,1680224869,0,'csrf|a:2:{s:9:\"timestamp\";i:1680224869;s:5:\"token\";s:32:\"37d8e79806d3c9c9942b60734e34c014\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('mks8bbaurc9nt1ttljhu5oidhk',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680225194,1680225219,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225219;s:5:\"token\";s:32:\"ec76983f1c9b95625c75ad8d90f4b252\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('n3bkn40djovr5msu3n5ag7bed7',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680225114,1680225139,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225139;s:5:\"token\";s:32:\"849bf70f2cde1d1d82aa1ce47803ef76\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('n72bq3gohnba1jhb1odq4hh4fj',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680225031,1680225055,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225055;s:5:\"token\";s:32:\"1d6ef4c158a4bb0df08d5d6bc2ca2b80\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('ph9qr3pgukhpb8a0hkk8ajo39d',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224737,1680224759,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680224759;s:5:\"token\";s:32:\"cda96a7bdb9ee57165a3e767472c29c0\";}','localhost'),('pppob7ngfvpu0uoc20hd73soge',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224871,1680224895,0,'csrf|a:2:{s:9:\"timestamp\";i:1680224895;s:5:\"token\";s:32:\"ead25b8ca05846c99625393aaf0a8219\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('q0qskhfb0usppe9huc2m8vgadc',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680225057,1680225085,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225085;s:5:\"token\";s:32:\"4a189d9059e94b5179addf430bc9637f\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('qrnjv5bp7r4f7cufvmj61pu5lv',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224679,1680224684,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680224684;s:5:\"token\";s:32:\"ea3cbb44af7a57662441b726eeab422e\";}','localhost'),('ro8q16m7edkftf8r6n6u2ftq7g',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224950,1680224977,0,'csrf|a:2:{s:9:\"timestamp\";i:1680224977;s:5:\"token\";s:32:\"d87ebf27c3b67c67b88a188633113fb9\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('spva43v4at44ai83nlefb9vhsm',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680225249,1680225274,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225274;s:5:\"token\";s:32:\"a5fe9536d9cb0af35601c4e33db50be8\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('tgqb5egikgrdnn17hvuisbjn52',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680225276,1680225301,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225301;s:5:\"token\";s:32:\"5ea8a5cdc6b7391e7b7a4cd5094ccc92\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('top8fkpflluj4rsdk55q4bq4ue',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680224732,1680224737,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680224737;s:5:\"token\";s:32:\"2e8d919c9619418db4f6b7f837e6d191\";}','localhost'),('vffpmfv5i237350e92o0qqgi8q',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680225087,1680225112,0,'csrf|a:2:{s:9:\"timestamp\";i:1680225112;s:5:\"token\";s:32:\"0cb638bc2f8bfcf735a67ab3f8e0d352\";}username|s:7:\"dbarnes\";userId|i:3;','localhost');
+INSERT INTO `sessions` VALUES ('0vfhl4pae0v0icq25m3ikg7pki',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646150,1680646180,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646180;s:5:\"token\";s:32:\"d4bd15d2b169605db4ccd98a8588dd2c\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('1a9hpn466cl7bkk9ttj9ckcrdj',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646357,1680646384,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646384;s:5:\"token\";s:32:\"7c842a7e3d1f03d05f5c1b88b1e365db\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('1if93da4k186nicg3u19hnv6rn',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646239,1680646265,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646265;s:5:\"token\";s:32:\"d379f6248ae8f19d2af2fa8048044a95\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('1nntgs7bldbhmh24l69e0k8vik',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646443,1680646470,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646470;s:5:\"token\";s:32:\"f0aca7ef2b78b165ee27c00f6a234461\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('2u15pih70f05lkmjdvki3atla2',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646122,1680646148,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646148;s:5:\"token\";s:32:\"3af6493ffa84d460549798086e34cd3e\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('3occs4ljgo1hok8kovukt20pbv',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646066,1680646092,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646092;s:5:\"token\";s:32:\"73f03f5e546a442e94ce9231ed0a85b9\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('4lto34tsl0r7mgjqmjc26hv8fq',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680645850,1680645856,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680645856;s:5:\"token\";s:32:\"72935a3d585d664ddc40fd2211ec7950\";}','localhost'),('4v6revth5lc73kc7tsnm2iu7fc',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680645837,1680645850,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680645850;s:5:\"token\";s:32:\"fef0cc5e9c193f92785dd502b63e650f\";}','localhost'),('53o8sr0vdg7r5u7sm7inac7m0p',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646005,1680646009,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680646009;s:5:\"token\";s:32:\"4af0f47cb05bc530a08ee1d53dc7e9e9\";}','localhost'),('5ahpetu4sdg13p43li3uu0jtpa',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646386,1680646412,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646412;s:5:\"token\";s:32:\"b68b88ad3afd645358f99fe64aeeedd1\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('6c644o6hntrhqf2ujbdo54qrbb',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680645824,1680645835,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680645836;s:5:\"token\";s:32:\"5d501c9408d0d92093aacc31141deb90\";}','localhost'),('6r9pbfc8f5aihk0ab922ldnftb',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680645970,1680646005,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646005;s:5:\"token\";s:32:\"422f4b1df3956c8bc935917e4845af97\";}username|s:8:\"ckwantes\";','localhost'),('94icebrgiratnii6a2mspvki6c',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646414,1680646441,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646441;s:5:\"token\";s:32:\"777f06a1440da09bc47e69437f82b33a\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('c1rvitl9ch53r32667robvfecr',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646500,1680646526,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646526;s:5:\"token\";s:32:\"58bdbcc58c491cc809faa4736f6e50ce\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('cke0uipotlcuscirtqvc05iahc',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680645865,1680645916,0,'username|s:5:\"rvaca\";csrf|a:2:{s:9:\"timestamp\";i:1680645916;s:5:\"token\";s:32:\"e7d3f2f9d04a3d0c658cba5f37b2d219\";}','localhost'),('h8bm6titrt31189d1cq7n464uj',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680645923,1680645944,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680645944;s:5:\"token\";s:32:\"686f7a7e549251114871913821f17ba1\";}','localhost'),('i0j3nn3hi6h2ua2rc6uq7sj5dr',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646011,1680646064,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646064;s:5:\"token\";s:32:\"65e466360a9778b9054231b5cb3e34b6\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('jf26jk6dukp4ebftf6cjih92ii',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646267,1680646297,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646297;s:5:\"token\";s:32:\"9bd48c56d0ed26b82c9539629ce06b8c\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('jidmg3hij081htgftp5jiasg3d',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680645822,1680645822,0,'','localhost'),('klnhjvkcanmmo6hvipulg5mq0k',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646299,1680646325,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646325;s:5:\"token\";s:32:\"76e5b46846dc707dc10c298e8fb79463\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('ln6rs1id761547t4la1ntdtm3t',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680645918,1680645923,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680645923;s:5:\"token\";s:32:\"77db3cddc249cb63c2967e8ec3de2c57\";}','localhost'),('ohn4p6o8j3iugfmqlrlo4h540f',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680645856,1680645863,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680645863;s:5:\"token\";s:32:\"2f29fd714d40108b336b6e864d7912b8\";}','localhost'),('tesgmf6rtvdi89edeeg9igq7fh',7,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680645946,1680645968,0,'csrf|a:2:{s:9:\"timestamp\";i:1680645968;s:5:\"token\";s:32:\"b4c3deb121219c8d180e6133d3a99cc1\";}username|s:7:\"ccorino\";userId|i:7;','localhost'),('ua01f1vi8ulhffmjtu1kfqqkrl',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646210,1680646237,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646237;s:5:\"token\";s:32:\"e38a8a2cf22e48e1772b569a81f07043\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('ujm7hst98qq3f4tk0gk0tefkqk',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680645923,1680645923,0,'','localhost'),('v8pkrb3djp3nlr5sjsukl1tju1',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646182,1680646208,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646208;s:5:\"token\";s:32:\"55025ad437a0b1839001e76d32c43c74\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('vj3tgrg67lpmvfmomeu340p9k9',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646472,1680646498,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646498;s:5:\"token\";s:32:\"fa306fc9b2c598552e2eca34f2442d8c\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('vka944rurhbqc5uv1v29n6lfss',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646094,1680646121,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646121;s:5:\"token\";s:32:\"9c506e6090dd8d1d8bf2cb77fd787d4f\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('vqluss071c3g2ufb17hvu725cv',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680646328,1680646354,0,'csrf|a:2:{s:9:\"timestamp\";i:1680646354;s:5:\"token\";s:32:\"5631421e7849209c2371f178dabec2c5\";}username|s:7:\"dbarnes\";userId|i:3;','localhost');
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2127,15 +2127,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `site`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `site` (
-  `redirect` bigint(20) NOT NULL DEFAULT '0' COMMENT 'If not 0, redirect to the specified journal/conference/... site.',
+  `redirect` bigint NOT NULL DEFAULT '0' COMMENT 'If not 0, redirect to the specified journal/conference/... site.',
   `primary_locale` varchar(14) NOT NULL COMMENT 'Primary locale for the site.',
-  `min_password_length` smallint(6) NOT NULL DEFAULT '6',
+  `min_password_length` smallint NOT NULL DEFAULT '6',
   `installed_locales` varchar(1024) NOT NULL DEFAULT 'en_US' COMMENT 'Locales for which support has been installed.',
   `supported_locales` varchar(1024) DEFAULT NULL COMMENT 'Locales supported by the site (for hosted journals/conferences/...).',
   `original_style_file_name` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2154,13 +2154,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `site_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `site_settings` (
   `setting_name` varchar(255) NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_value` text,
   UNIQUE KEY `site_settings_pkey` (`setting_name`,`locale`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2179,21 +2179,21 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `stage_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `stage_assignments` (
-  `stage_assignment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `user_group_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `stage_assignment_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `user_group_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_assigned` datetime NOT NULL,
-  `recommend_only` smallint(6) NOT NULL DEFAULT '0',
-  `can_change_metadata` smallint(6) NOT NULL DEFAULT '0',
+  `recommend_only` smallint NOT NULL DEFAULT '0',
+  `can_change_metadata` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`stage_assignment_id`),
   UNIQUE KEY `stage_assignment` (`submission_id`,`user_group_id`,`user_id`),
   KEY `stage_assignments_submission_id` (`submission_id`),
   KEY `stage_assignments_user_group_id` (`user_group_id`),
   KEY `stage_assignments_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2202,7 +2202,7 @@ CREATE TABLE `stage_assignments` (
 
 LOCK TABLES `stage_assignments` WRITE;
 /*!40000 ALTER TABLE `stage_assignments` DISABLE KEYS */;
-INSERT INTO `stage_assignments` VALUES (1,1,4,7,'2023-03-31 01:06:08',0,1),(2,1,3,5,'2023-03-31 01:06:23',0,1),(3,1,3,4,'2023-03-31 01:06:23',0,1),(4,2,4,8,'2023-03-31 01:06:29',0,1),(5,2,3,5,'2023-03-31 01:06:44',0,1),(6,2,3,4,'2023-03-31 01:06:44',0,1),(7,3,4,9,'2023-03-31 01:07:06',0,1),(8,3,3,5,'2023-03-31 01:07:24',0,1),(9,3,3,4,'2023-03-31 01:07:24',0,1),(10,4,4,10,'2023-03-31 01:07:56',0,1),(11,4,3,5,'2023-03-31 01:08:10',0,1),(12,4,3,4,'2023-03-31 01:08:10',0,1),(13,5,4,11,'2023-03-31 01:08:22',0,1),(14,5,3,5,'2023-03-31 01:08:37',0,1),(15,5,3,4,'2023-03-31 01:08:37',0,1),(16,6,4,12,'2023-03-31 01:08:49',0,1),(17,6,3,5,'2023-03-31 01:09:03',0,1),(18,6,3,4,'2023-03-31 01:09:03',0,1),(19,7,4,13,'2023-03-31 01:09:15',0,1),(20,7,3,5,'2023-03-31 01:09:32',0,1),(21,7,3,4,'2023-03-31 01:09:32',0,1),(22,8,4,14,'2023-03-31 01:09:44',0,1),(23,8,3,5,'2023-03-31 01:09:58',0,1),(24,8,3,4,'2023-03-31 01:09:58',0,1),(25,9,4,15,'2023-03-31 01:10:10',0,1),(26,9,3,5,'2023-03-31 01:10:24',0,1),(27,9,3,4,'2023-03-31 01:10:24',0,1),(28,10,4,16,'2023-03-31 01:10:36',0,1),(29,10,3,5,'2023-03-31 01:10:50',0,1),(30,10,3,4,'2023-03-31 01:10:50',0,1),(31,11,4,17,'2023-03-31 01:11:02',0,1),(32,11,3,5,'2023-03-31 01:11:20',0,1),(33,11,3,4,'2023-03-31 01:11:20',0,1),(34,12,4,18,'2023-03-31 01:11:32',0,1),(35,12,3,5,'2023-03-31 01:11:47',0,1),(36,12,3,4,'2023-03-31 01:11:47',0,1),(37,13,4,19,'2023-03-31 01:11:59',0,1),(38,13,3,5,'2023-03-31 01:12:14',0,1),(39,13,3,4,'2023-03-31 01:12:14',0,1),(40,14,4,20,'2023-03-31 01:12:26',0,1),(41,14,3,5,'2023-03-31 01:12:41',0,1),(42,14,3,4,'2023-03-31 01:12:41',0,1),(43,15,4,21,'2023-03-31 01:12:53',0,1),(44,15,3,5,'2023-03-31 01:13:07',0,1),(45,15,3,4,'2023-03-31 01:13:07',0,1),(46,16,4,22,'2023-03-31 01:13:19',0,1),(47,16,3,5,'2023-03-31 01:13:34',0,1),(48,16,3,4,'2023-03-31 01:13:34',0,1),(49,17,4,23,'2023-03-31 01:13:46',0,1),(50,17,3,5,'2023-03-31 01:14:02',0,1),(51,17,3,4,'2023-03-31 01:14:02',0,1),(52,18,4,24,'2023-03-31 01:14:14',0,1),(53,18,3,5,'2023-03-31 01:14:29',0,1),(54,18,3,4,'2023-03-31 01:14:29',0,1),(55,19,4,25,'2023-03-31 01:14:41',0,1),(56,19,3,5,'2023-03-31 01:14:55',0,1),(57,19,3,4,'2023-03-31 01:14:55',0,1);
+INSERT INTO `stage_assignments` VALUES (1,1,4,7,'2023-04-04 22:05:52',0,1),(2,1,3,5,'2023-04-04 22:06:08',0,1),(3,1,3,4,'2023-04-04 22:06:08',0,1),(4,2,4,8,'2023-04-04 22:06:15',0,1),(5,2,3,5,'2023-04-04 22:06:31',0,1),(6,2,3,4,'2023-04-04 22:06:31',0,1),(7,3,4,9,'2023-04-04 22:06:57',0,1),(8,3,3,5,'2023-04-04 22:07:16',0,1),(9,3,3,4,'2023-04-04 22:07:16',0,1),(10,4,4,10,'2023-04-04 22:07:52',0,1),(11,4,3,5,'2023-04-04 22:08:07',0,1),(12,4,3,4,'2023-04-04 22:08:07',0,1),(13,5,4,11,'2023-04-04 22:08:20',0,1),(14,5,3,5,'2023-04-04 22:08:35',0,1),(15,5,3,4,'2023-04-04 22:08:35',0,1),(16,6,4,12,'2023-04-04 22:08:48',0,1),(17,6,3,5,'2023-04-04 22:09:03',0,1),(18,6,3,4,'2023-04-04 22:09:03',0,1),(19,7,4,13,'2023-04-04 22:09:16',0,1),(20,7,3,5,'2023-04-04 22:09:34',0,1),(21,7,3,4,'2023-04-04 22:09:34',0,1),(22,8,4,14,'2023-04-04 22:09:48',0,1),(23,8,3,5,'2023-04-04 22:10:03',0,1),(24,8,3,4,'2023-04-04 22:10:03',0,1),(25,9,4,15,'2023-04-04 22:10:16',0,1),(26,9,3,5,'2023-04-04 22:10:31',0,1),(27,9,3,4,'2023-04-04 22:10:31',0,1),(28,10,4,16,'2023-04-04 22:10:44',0,1),(29,10,3,5,'2023-04-04 22:10:59',0,1),(30,10,3,4,'2023-04-04 22:10:59',0,1),(31,11,4,17,'2023-04-04 22:11:13',0,1),(32,11,3,5,'2023-04-04 22:11:31',0,1),(33,11,3,4,'2023-04-04 22:11:31',0,1),(34,12,4,18,'2023-04-04 22:11:44',0,1),(35,12,3,5,'2023-04-04 22:12:00',0,1),(36,12,3,4,'2023-04-04 22:12:00',0,1),(37,13,4,19,'2023-04-04 22:12:13',0,1),(38,13,3,5,'2023-04-04 22:12:29',0,1),(39,13,3,4,'2023-04-04 22:12:29',0,1),(40,14,4,20,'2023-04-04 22:12:42',0,1),(41,14,3,5,'2023-04-04 22:12:58',0,1),(42,14,3,4,'2023-04-04 22:12:58',0,1),(43,15,4,21,'2023-04-04 22:13:12',0,1),(44,15,3,5,'2023-04-04 22:13:27',0,1),(45,15,3,4,'2023-04-04 22:13:27',0,1),(46,16,4,22,'2023-04-04 22:13:39',0,1),(47,16,3,5,'2023-04-04 22:13:55',0,1),(48,16,3,4,'2023-04-04 22:13:55',0,1),(49,17,4,23,'2023-04-04 22:14:08',0,1),(50,17,3,5,'2023-04-04 22:14:24',0,1),(51,17,3,4,'2023-04-04 22:14:24',0,1),(52,18,4,24,'2023-04-04 22:14:37',0,1),(53,18,3,5,'2023-04-04 22:14:52',0,1),(54,18,3,4,'2023-04-04 22:14:52',0,1),(55,19,4,25,'2023-04-04 22:15:06',0,1),(56,19,3,5,'2023-04-04 22:15:21',0,1),(57,19,3,4,'2023-04-04 22:15:21',0,1);
 /*!40000 ALTER TABLE `stage_assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2212,17 +2212,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `subeditor_submission_group`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `subeditor_submission_group` (
-  `context_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `section_editors_pkey` (`context_id`,`assoc_id`,`assoc_type`,`user_id`),
   KEY `section_editors_context_id` (`context_id`),
   KEY `subeditor_submission_group_assoc_id` (`assoc_id`,`assoc_type`),
   KEY `subeditor_submission_group_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2241,22 +2241,22 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_comments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_comments` (
-  `comment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `comment_type` bigint(20) DEFAULT NULL,
-  `role_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `author_id` bigint(20) NOT NULL,
+  `comment_id` bigint NOT NULL AUTO_INCREMENT,
+  `comment_type` bigint DEFAULT NULL,
+  `role_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `author_id` bigint NOT NULL,
   `comment_title` text NOT NULL,
   `comments` text,
   `date_posted` datetime DEFAULT NULL,
   `date_modified` datetime DEFAULT NULL,
-  `viewable` smallint(6) DEFAULT NULL,
+  `viewable` smallint DEFAULT NULL,
   PRIMARY KEY (`comment_id`),
   KEY `submission_comments_submission_id` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2274,17 +2274,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_file_revisions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_file_revisions` (
-  `revision_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
-  `file_id` bigint(20) unsigned NOT NULL,
+  `revision_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `submission_file_id` bigint unsigned NOT NULL,
+  `file_id` bigint unsigned NOT NULL,
   PRIMARY KEY (`revision_id`),
   KEY `submission_file_revisions_submission_file_id_foreign` (`submission_file_id`),
   KEY `submission_file_revisions_file_id_foreign` (`file_id`),
   CONSTRAINT `submission_file_revisions_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`file_id`),
   CONSTRAINT `submission_file_revisions_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2303,16 +2303,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_file_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_file_settings` (
-  `submission_file_id` bigint(20) NOT NULL,
+  `submission_file_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL DEFAULT 'string' COMMENT '(bool|int|float|string|object|date)',
   UNIQUE KEY `submission_file_settings_pkey` (`submission_file_id`,`locale`,`setting_name`),
   KEY `submission_file_settings_id` (`submission_file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2331,28 +2331,28 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_files` (
-  `submission_file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `file_id` bigint(20) unsigned NOT NULL,
-  `source_submission_file_id` bigint(20) DEFAULT NULL,
-  `genre_id` bigint(20) DEFAULT NULL,
-  `file_stage` bigint(20) NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `file_id` bigint unsigned NOT NULL,
+  `source_submission_file_id` bigint DEFAULT NULL,
+  `genre_id` bigint DEFAULT NULL,
+  `file_stage` bigint NOT NULL,
   `direct_sales_price` varchar(255) DEFAULT NULL,
   `sales_type` varchar(255) DEFAULT NULL,
-  `viewable` smallint(6) DEFAULT NULL,
+  `viewable` smallint DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  `uploader_user_id` bigint(20) DEFAULT NULL,
-  `assoc_type` bigint(20) DEFAULT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `uploader_user_id` bigint DEFAULT NULL,
+  `assoc_type` bigint DEFAULT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   PRIMARY KEY (`submission_file_id`),
   KEY `submission_files_submission_id` (`submission_id`),
   KEY `submission_files_stage_assoc` (`file_stage`,`assoc_type`,`assoc_id`),
   KEY `submission_files_file_id_foreign` (`file_id`),
   CONSTRAINT `submission_files_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2361,7 +2361,7 @@ CREATE TABLE `submission_files` (
 
 LOCK TABLES `submission_files` WRITE;
 /*!40000 ALTER TABLE `submission_files` DISABLE KEYS */;
-INSERT INTO `submission_files` VALUES (1,1,1,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:06:17','2023-03-31 01:06:19',7,521,1),(2,2,2,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:06:38','2023-03-31 01:06:40',8,521,2),(3,3,3,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:07:15','2023-03-31 01:07:17',9,521,3),(4,4,4,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:08:05','2023-03-31 01:08:07',10,521,5),(5,5,5,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:08:31','2023-03-31 01:08:33',11,521,6),(6,6,6,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:08:57','2023-03-31 01:09:00',12,521,7),(7,7,7,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:09:24','2023-03-31 01:09:26',13,521,8),(8,8,8,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:09:53','2023-03-31 01:09:55',14,521,9),(9,9,9,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:10:18','2023-03-31 01:10:21',15,521,10),(10,10,10,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:10:44','2023-03-31 01:10:47',16,521,11),(11,11,11,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:11:11','2023-03-31 01:11:13',17,521,12),(12,12,12,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:11:41','2023-03-31 01:11:44',18,521,13),(13,13,13,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:12:08','2023-03-31 01:12:10',19,521,14),(14,14,14,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:12:35','2023-03-31 01:12:37',20,521,15),(15,15,15,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:13:02','2023-03-31 01:13:04',21,521,16),(16,16,16,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:13:28','2023-03-31 01:13:31',22,521,17),(17,17,17,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:13:55','2023-03-31 01:13:58',23,521,18),(18,18,18,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:14:23','2023-03-31 01:14:25',24,521,19),(19,19,19,NULL,1,10,NULL,NULL,NULL,'2023-03-31 01:14:50','2023-03-31 01:14:52',25,521,20);
+INSERT INTO `submission_files` VALUES (1,1,1,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:06:01','2023-04-04 22:06:03',7,521,1),(2,2,2,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:06:24','2023-04-04 22:06:27',8,521,2),(3,3,3,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:07:06','2023-04-04 22:07:08',9,521,3),(4,4,4,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:08:01','2023-04-04 22:08:03',10,521,5),(5,5,5,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:08:29','2023-04-04 22:08:31',11,521,6),(6,6,6,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:08:57','2023-04-04 22:08:59',12,521,7),(7,7,7,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:09:25','2023-04-04 22:09:27',13,521,8),(8,8,8,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:09:57','2023-04-04 22:09:59',14,521,9),(9,9,9,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:10:25','2023-04-04 22:10:27',15,521,10),(10,10,10,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:10:53','2023-04-04 22:10:55',16,521,11),(11,11,11,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:11:22','2023-04-04 22:11:24',17,521,12),(12,12,12,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:11:53','2023-04-04 22:11:56',18,521,13),(13,13,13,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:12:22','2023-04-04 22:12:25',19,521,14),(14,14,14,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:12:51','2023-04-04 22:12:54',20,521,15),(15,15,15,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:13:21','2023-04-04 22:13:23',21,521,16),(16,16,16,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:13:48','2023-04-04 22:13:51',22,521,17),(17,17,17,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:14:17','2023-04-04 22:14:20',23,521,18),(18,18,18,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:14:46','2023-04-04 22:14:49',24,521,19),(19,19,19,NULL,1,10,NULL,NULL,NULL,'2023-04-04 22:15:15','2023-04-04 22:15:17',25,521,20);
 /*!40000 ALTER TABLE `submission_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2371,13 +2371,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_keyword_list`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_keyword_list` (
-  `keyword_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `keyword_id` bigint NOT NULL AUTO_INCREMENT,
   `keyword_text` varchar(60) NOT NULL,
   PRIMARY KEY (`keyword_id`),
   UNIQUE KEY `submission_search_keyword_text` (`keyword_text`)
-) ENGINE=InnoDB AUTO_INCREMENT=957 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=957 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2396,14 +2396,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_object_keywords`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_object_keywords` (
-  `object_id` bigint(20) NOT NULL,
-  `keyword_id` bigint(20) NOT NULL,
-  `pos` int(11) NOT NULL COMMENT 'Word position of the keyword in the object.',
+  `object_id` bigint NOT NULL,
+  `keyword_id` bigint NOT NULL,
+  `pos` int NOT NULL COMMENT 'Word position of the keyword in the object.',
   UNIQUE KEY `submission_search_object_keywords_pkey` (`object_id`,`pos`),
   KEY `submission_search_object_keywords_keyword_id` (`keyword_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2422,15 +2422,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_objects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_objects` (
-  `object_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `type` int(11) NOT NULL COMMENT 'Type of item. E.g., abstract, fulltext, etc.',
-  `assoc_id` bigint(20) DEFAULT NULL COMMENT 'Optional ID of an associated record (e.g., a file_id)',
+  `object_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `type` int NOT NULL COMMENT 'Type of item. E.g., abstract, fulltext, etc.',
+  `assoc_id` bigint DEFAULT NULL COMMENT 'Optional ID of an associated record (e.g., a file_id)',
   PRIMARY KEY (`object_id`),
   KEY `submission_search_object_submission` (`submission_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=153 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=153 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2449,15 +2449,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_settings` (
-  `submission_id` bigint(20) NOT NULL,
+  `submission_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
   UNIQUE KEY `submission_settings_pkey` (`submission_id`,`locale`,`setting_name`),
   KEY `submission_settings_submission_id` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2475,20 +2475,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_tombstones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_tombstones` (
-  `tombstone_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
+  `tombstone_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
   `date_deleted` datetime NOT NULL,
-  `journal_id` bigint(20) NOT NULL,
-  `section_id` bigint(20) NOT NULL,
+  `journal_id` bigint NOT NULL,
+  `section_id` bigint NOT NULL,
   `set_spec` varchar(255) NOT NULL,
   `set_name` varchar(255) NOT NULL,
   `oai_identifier` varchar(255) NOT NULL,
   PRIMARY KEY (`tombstone_id`),
   KEY `submission_tombstones_journal_id` (`journal_id`),
   KEY `submission_tombstones_submission_id` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2506,23 +2506,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submissions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submissions` (
-  `submission_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `current_publication_id` bigint(20) DEFAULT NULL,
+  `submission_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `current_publication_id` bigint DEFAULT NULL,
   `date_last_activity` datetime DEFAULT NULL,
   `date_submitted` datetime DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
-  `stage_id` bigint(20) NOT NULL DEFAULT '1',
+  `stage_id` bigint NOT NULL DEFAULT '1',
   `locale` varchar(14) DEFAULT NULL,
-  `status` smallint(6) NOT NULL DEFAULT '1',
-  `submission_progress` smallint(6) NOT NULL DEFAULT '1',
-  `work_type` smallint(6) DEFAULT '0',
+  `status` smallint NOT NULL DEFAULT '1',
+  `submission_progress` smallint NOT NULL DEFAULT '1',
+  `work_type` smallint DEFAULT '0',
   PRIMARY KEY (`submission_id`),
   KEY `submissions_context_id` (`context_id`),
   KEY `submissions_publication_id` (`current_publication_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2531,7 +2531,7 @@ CREATE TABLE `submissions` (
 
 LOCK TABLES `submissions` WRITE;
 /*!40000 ALTER TABLE `submissions` DISABLE KEYS */;
-INSERT INTO `submissions` VALUES (1,1,1,'2023-03-31 01:06:23','2023-03-31 01:06:23','2023-03-31 01:06:23',5,'en_US',1,0,0),(2,1,2,'2023-03-31 01:07:00','2023-03-31 01:06:44','2023-03-31 01:06:44',5,'en_US',3,0,0),(3,1,4,'2023-03-31 01:07:50','2023-03-31 01:07:24','2023-03-31 01:07:24',5,'en_US',3,0,0),(4,1,5,'2023-03-31 01:08:16','2023-03-31 01:08:10','2023-03-31 01:08:10',5,'en_US',3,0,0),(5,1,6,'2023-03-31 01:08:42','2023-03-31 01:08:37','2023-03-31 01:08:37',5,'en_US',3,0,0),(6,1,7,'2023-03-31 01:09:08','2023-03-31 01:09:03','2023-03-31 01:09:03',5,'en_US',3,0,0),(7,1,8,'2023-03-31 01:09:37','2023-03-31 01:09:32','2023-03-31 01:09:32',5,'en_US',3,0,0),(8,1,9,'2023-03-31 01:10:03','2023-03-31 01:09:58','2023-03-31 01:09:58',5,'en_US',3,0,0),(9,1,10,'2023-03-31 01:10:29','2023-03-31 01:10:24','2023-03-31 01:10:24',5,'en_US',3,0,0),(10,1,11,'2023-03-31 01:10:56','2023-03-31 01:10:50','2023-03-31 01:10:50',5,'en_US',3,0,0),(11,1,12,'2023-03-31 01:11:25','2023-03-31 01:11:20','2023-03-31 01:11:20',5,'en_US',3,0,0),(12,1,13,'2023-03-31 01:11:52','2023-03-31 01:11:47','2023-03-31 01:11:47',5,'en_US',3,0,0),(13,1,14,'2023-03-31 01:12:19','2023-03-31 01:12:14','2023-03-31 01:12:14',5,'en_US',3,0,0),(14,1,15,'2023-03-31 01:12:46','2023-03-31 01:12:41','2023-03-31 01:12:41',5,'en_US',3,0,0),(15,1,16,'2023-03-31 01:13:13','2023-03-31 01:13:07','2023-03-31 01:13:07',5,'en_US',3,0,0),(16,1,17,'2023-03-31 01:13:40','2023-03-31 01:13:34','2023-03-31 01:13:34',5,'en_US',3,0,0),(17,1,18,'2023-03-31 01:14:07','2023-03-31 01:14:02','2023-03-31 01:14:02',5,'en_US',3,0,0),(18,1,19,'2023-03-31 01:14:34','2023-03-31 01:14:29','2023-03-31 01:14:29',5,'en_US',3,0,0),(19,1,20,'2023-03-31 01:15:01','2023-03-31 01:14:55','2023-03-31 01:14:55',5,'en_US',3,0,0);
+INSERT INTO `submissions` VALUES (1,1,1,'2023-04-04 22:06:08','2023-04-04 22:06:08','2023-04-04 22:06:08',5,'en_US',1,0,0),(2,1,2,'2023-04-04 22:06:49','2023-04-04 22:06:31','2023-04-04 22:06:31',5,'en_US',3,0,0),(3,1,4,'2023-04-04 22:07:45','2023-04-04 22:07:16','2023-04-04 22:07:16',5,'en_US',3,0,0),(4,1,5,'2023-04-04 22:08:12','2023-04-04 22:08:07','2023-04-04 22:08:07',5,'en_US',3,0,0),(5,1,6,'2023-04-04 22:08:41','2023-04-04 22:08:35','2023-04-04 22:08:35',5,'en_US',3,0,0),(6,1,7,'2023-04-04 22:09:08','2023-04-04 22:09:03','2023-04-04 22:09:03',5,'en_US',3,0,0),(7,1,8,'2023-04-04 22:09:41','2023-04-04 22:09:34','2023-04-04 22:09:34',5,'en_US',3,0,0),(8,1,9,'2023-04-04 22:10:08','2023-04-04 22:10:03','2023-04-04 22:10:03',5,'en_US',3,0,0),(9,1,10,'2023-04-04 22:10:37','2023-04-04 22:10:31','2023-04-04 22:10:31',5,'en_US',3,0,0),(10,1,11,'2023-04-04 22:11:05','2023-04-04 22:10:59','2023-04-04 22:10:59',5,'en_US',3,0,0),(11,1,12,'2023-04-04 22:11:37','2023-04-04 22:11:31','2023-04-04 22:11:31',5,'en_US',3,0,0),(12,1,13,'2023-04-04 22:12:06','2023-04-04 22:12:00','2023-04-04 22:12:00',5,'en_US',3,0,0),(13,1,14,'2023-04-04 22:12:35','2023-04-04 22:12:29','2023-04-04 22:12:29',5,'en_US',3,0,0),(14,1,15,'2023-04-04 22:13:04','2023-04-04 22:12:58','2023-04-04 22:12:58',5,'en_US',3,0,0),(15,1,16,'2023-04-04 22:13:32','2023-04-04 22:13:27','2023-04-04 22:13:27',5,'en_US',3,0,0),(16,1,17,'2023-04-04 22:14:01','2023-04-04 22:13:55','2023-04-04 22:13:55',5,'en_US',3,0,0),(17,1,18,'2023-04-04 22:14:30','2023-04-04 22:14:24','2023-04-04 22:14:24',5,'en_US',3,0,0),(18,1,19,'2023-04-04 22:14:59','2023-04-04 22:14:52','2023-04-04 22:14:52',5,'en_US',3,0,0),(19,1,20,'2023-04-04 22:15:27','2023-04-04 22:15:21','2023-04-04 22:15:21',5,'en_US',3,0,0);
 /*!40000 ALTER TABLE `submissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2541,18 +2541,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `temporary_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `temporary_files` (
-  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL,
   `file_name` varchar(90) NOT NULL,
   `file_type` varchar(255) DEFAULT NULL,
-  `file_size` bigint(20) NOT NULL,
+  `file_size` bigint NOT NULL,
   `original_file_name` varchar(127) DEFAULT NULL,
   `date_uploaded` datetime NOT NULL,
   PRIMARY KEY (`file_id`),
   KEY `temporary_files_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2570,19 +2570,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_temporary_records` (
-  `assoc_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `day` bigint(20) NOT NULL,
-  `entry_time` bigint(20) NOT NULL,
-  `metric` bigint(20) NOT NULL DEFAULT '1',
+  `assoc_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `day` bigint NOT NULL,
+  `entry_time` bigint NOT NULL,
+  `metric` bigint NOT NULL DEFAULT '1',
   `country_id` varchar(2) DEFAULT NULL,
   `region` varchar(2) DEFAULT NULL,
   `city` varchar(255) DEFAULT NULL,
   `load_id` varchar(255) NOT NULL,
-  `file_type` smallint(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `file_type` smallint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2600,15 +2600,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_group_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_group_settings` (
-  `user_group_id` bigint(20) NOT NULL,
+  `user_group_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `user_group_settings_pkey` (`user_group_id`,`locale`,`setting_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2627,16 +2627,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_group_stage`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_group_stage` (
-  `context_id` bigint(20) NOT NULL,
-  `user_group_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `user_group_id` bigint NOT NULL,
+  `stage_id` bigint NOT NULL,
   UNIQUE KEY `user_group_stage_pkey` (`context_id`,`user_group_id`,`stage_id`),
   KEY `user_group_stage_context_id` (`context_id`),
   KEY `user_group_stage_user_group_id` (`user_group_id`),
   KEY `user_group_stage_stage_id` (`stage_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2655,20 +2655,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_groups` (
-  `user_group_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `role_id` bigint(20) NOT NULL,
-  `is_default` smallint(6) NOT NULL DEFAULT '0',
-  `show_title` smallint(6) NOT NULL DEFAULT '1',
-  `permit_self_registration` smallint(6) NOT NULL DEFAULT '0',
-  `permit_metadata_edit` smallint(6) NOT NULL DEFAULT '0',
+  `user_group_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `role_id` bigint NOT NULL,
+  `is_default` smallint NOT NULL DEFAULT '0',
+  `show_title` smallint NOT NULL DEFAULT '1',
+  `permit_self_registration` smallint NOT NULL DEFAULT '0',
+  `permit_metadata_edit` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_group_id`),
   KEY `user_groups_user_group_id` (`user_group_id`),
   KEY `user_groups_context_id` (`context_id`),
   KEY `user_groups_role_id` (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2687,12 +2687,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_interests`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_interests` (
-  `user_id` bigint(20) NOT NULL,
-  `controlled_vocab_entry_id` bigint(20) NOT NULL,
+  `user_id` bigint NOT NULL,
+  `controlled_vocab_entry_id` bigint NOT NULL,
   UNIQUE KEY `u_e_pkey` (`user_id`,`controlled_vocab_entry_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2710,19 +2710,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_settings` (
-  `user_id` bigint(20) NOT NULL,
+  `user_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL DEFAULT '0',
-  `assoc_id` bigint(20) NOT NULL DEFAULT '0',
+  `assoc_type` bigint NOT NULL DEFAULT '0',
+  `assoc_id` bigint NOT NULL DEFAULT '0',
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `user_settings_pkey` (`user_id`,`locale`,`setting_name`,`assoc_type`,`assoc_id`),
   KEY `user_settings_user_id` (`user_id`),
   KEY `user_settings_locale_setting_name_index` (`setting_name`,`locale`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2741,14 +2741,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_user_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_user_groups` (
-  `user_group_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `user_group_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `user_user_groups_pkey` (`user_group_id`,`user_id`),
   KEY `user_user_groups_user_group_id` (`user_group_id`),
   KEY `user_user_groups_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2767,9 +2767,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `user_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL AUTO_INCREMENT,
   `username` varchar(32) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -2784,16 +2784,16 @@ CREATE TABLE `users` (
   `date_registered` datetime NOT NULL,
   `date_validated` datetime DEFAULT NULL,
   `date_last_login` datetime NOT NULL,
-  `must_change_password` smallint(6) DEFAULT NULL,
-  `auth_id` bigint(20) DEFAULT NULL,
+  `must_change_password` smallint DEFAULT NULL,
+  `auth_id` bigint DEFAULT NULL,
   `auth_str` varchar(255) DEFAULT NULL,
-  `disabled` smallint(6) NOT NULL DEFAULT '0',
+  `disabled` smallint NOT NULL DEFAULT '0',
   `disabled_reason` text,
-  `inline_help` smallint(6) DEFAULT NULL,
+  `inline_help` smallint DEFAULT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `users_username` (`username`),
   UNIQUE KEY `users_email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2802,7 +2802,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','$2y$10$EJI5qEN99FQDjUQON7vXSukDRs3UxMW7T2rutVXRNmt4gmZXJ50ZW','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'',NULL,NULL,'2023-03-31 01:04:14',NULL,'2023-03-31 01:05:37',0,NULL,NULL,0,NULL,1),(2,'rvaca','$2y$10$briAsdTjE3VzExtII4rrGOS4gJzqdIP4.Wh//CV/MpwU6U9sBdHLa','rvaca@mailinator.com','','','',NULL,'MX','',NULL,NULL,'2023-03-31 01:04:59',NULL,'2023-03-31 01:05:29',0,0,NULL,0,NULL,1),(3,'dbarnes','$2y$10$ezPVUb5gNL4USiQMAq18w.KBi14cuRhIqOHs851Ue1xrZeIfW4qLy','dbarnes@mailinator.com','','','',NULL,'AU','',NULL,NULL,'2023-03-31 01:05:05',NULL,'2023-03-31 01:14:56',0,0,NULL,0,NULL,1),(4,'dbuskins','$2y$10$wYuRHdWYOCzjWrIEclPcqeDbQMHuuvymNRlK6Wy9S85ThWfoZdTBO','dbuskins@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-03-31 01:05:11',NULL,'2023-03-31 01:05:11',0,0,NULL,0,NULL,1),(5,'sberardo','$2y$10$osXGDvr.hssxCrsCm5OuPuZVR7HHdaoVC/eWzHEFIUu8Y8o1wFiI2','sberardo@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-03-31 01:05:17',NULL,'2023-03-31 01:05:17',0,0,NULL,0,NULL,1),(6,'minoue','$2y$10$pxdog8kEApjIxz7R.tXkCOmMM8IGhlfmKPpEuDklGtH4bUDW5Oytm','minoue@mailinator.com','','','',NULL,'JP','',NULL,NULL,'2023-03-31 01:05:24',NULL,'2023-03-31 01:05:24',0,0,NULL,0,NULL,1),(7,'ccorino','$2y$10$2w25JWH5HRID6eH231KLquRt5/EyEbfjqI0USgvT7MecB3MsyAdS2','ccorino@mailinator.com',NULL,NULL,NULL,NULL,'IT','',NULL,NULL,'2023-03-31 01:06:05',NULL,'2023-03-31 01:06:05',0,NULL,NULL,0,NULL,1),(8,'ckwantes','$2y$10$9uJQqNlDz95a3ka9yrC2kOF/wR8OEbZdh/./Mu8tSi1E3Ov8HXw42','ckwantes@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-31 01:06:27',NULL,'2023-03-31 01:06:27',0,NULL,NULL,0,NULL,1),(9,'cmontgomerie','$2y$10$NUonbVn2NA.5uMaNaABZ/O8eI0ZvvPlNHuJzQtS4/JXpyxN5nF3Eu','cmontgomerie@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-31 01:07:04',NULL,'2023-03-31 01:07:04',0,NULL,NULL,0,NULL,1),(10,'ddiouf','$2y$10$EID6KmEy17ACOBTK/2LLFuY.Wiy9tAn/bCBAp0EjLt.LL5Cb5f.gW','ddiouf@mailinator.com',NULL,NULL,NULL,NULL,'EG','',NULL,NULL,'2023-03-31 01:07:54',NULL,'2023-03-31 01:07:54',0,NULL,NULL,0,NULL,1),(11,'dphillips','$2y$10$hLGDP8NXtuOhhQS3Ko6IJuo2cV3dlVclcaKbMHQ5Wna5BhX/3lnse','dphillips@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-31 01:08:20',NULL,'2023-03-31 01:08:20',0,NULL,NULL,0,NULL,1),(12,'dsokoloff','$2y$10$1CenHUbBAj9Ug7za13nz6.xxgmfz7GNKU5/.0LWOwuv5uCzZHokWK','dsokoloff@mailinator.com',NULL,NULL,NULL,NULL,'IE','',NULL,NULL,'2023-03-31 01:08:46',NULL,'2023-03-31 01:08:46',0,NULL,NULL,0,NULL,1),(13,'eostrom','$2y$10$T941NmwwRslaGz9Ym5AQx.SSG0L9.U/zRLbC1jr9gS6Ey0wBCDFom','eostrom@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-03-31 01:09:12',NULL,'2023-03-31 01:09:12',0,NULL,NULL,0,NULL,1),(14,'fpaglieri','$2y$10$nRUZVm5/iSyPY7AaG3t1luwqmfQG7nsvJYqiIhnNjuBOUVomeY4j6','fpaglieri@mailinator.com',NULL,NULL,NULL,NULL,'IT','',NULL,NULL,'2023-03-31 01:09:42',NULL,'2023-03-31 01:09:42',0,NULL,NULL,0,NULL,1),(15,'jmwandenga','$2y$10$NNO5ioYOValT7AURB5I96.2EZ/bLxzXytvCO7rTqIYK4M9kSyQ99e','jmwandenga@mailinator.com',NULL,NULL,NULL,NULL,'ZA','',NULL,NULL,'2023-03-31 01:10:07',NULL,'2023-03-31 01:10:07',0,NULL,NULL,0,NULL,1),(16,'jnovak','$2y$10$7qMDOsKKM/diFdVww4us9ebyICrFJW.AlpDm78j/q0AlGrqbUnBEi','jnovak@mailinator.com',NULL,NULL,NULL,NULL,'DK','',NULL,NULL,'2023-03-31 01:10:33',NULL,'2023-03-31 01:10:33',0,NULL,NULL,0,NULL,1),(17,'kalkhafaji','$2y$10$OUcLQCusA8Q/hEFsEGleu.flNzmBxMjy7qrMBB8cPvWscChLTKTtu','kalkhafaji@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-03-31 01:11:00',NULL,'2023-03-31 01:11:00',0,NULL,NULL,0,NULL,1),(18,'lchristopher','$2y$10$Zk/EZgxCRl7rXqcsmy3DXuWugmJn6XDZKddj4LkHhyzTUk.xyspie','lchristopher@mailinator.com',NULL,NULL,NULL,NULL,'AU','',NULL,NULL,'2023-03-31 01:11:30',NULL,'2023-03-31 01:11:30',0,NULL,NULL,0,NULL,1),(19,'lkumiega','$2y$10$S4F5TuFJjHnJVFkIrs7h7ODkru2RzSJS/ZkIMmarQYU7Z60Cvwpom','lkumiega@mailinator.com',NULL,NULL,NULL,NULL,'ZA','',NULL,NULL,'2023-03-31 01:11:57',NULL,'2023-03-31 01:11:57',0,NULL,NULL,0,NULL,1),(20,'pdaniel','$2y$10$x5IQ4IZaIcDjA9vvg7hXrupGEV/fXGhN4i/G4uSNVXcxyn0SyCe92','pdaniel@mailinator.com',NULL,NULL,NULL,NULL,'GB','',NULL,NULL,'2023-03-31 01:12:24',NULL,'2023-03-31 01:12:24',0,NULL,NULL,0,NULL,1),(21,'rbaiyewu','$2y$10$3pR2jji2w55g/8.xt9cpCeiQR6mji8i1fRB54WkousyIFMnNa7b3u','rbaiyewu@mailinator.com',NULL,NULL,NULL,NULL,'KE','',NULL,NULL,'2023-03-31 01:12:51',NULL,'2023-03-31 01:12:51',0,NULL,NULL,0,NULL,1),(22,'rrossi','$2y$10$P41a3Y2V0mTcfVDfbv0EXulltoJTSK76f.hD7pi2aWSMxWsya9cX6','rrossi@mailinator.com',NULL,NULL,NULL,NULL,'ES','',NULL,NULL,'2023-03-31 01:13:17',NULL,'2023-03-31 01:13:17',0,NULL,NULL,0,NULL,1),(23,'vkarbasizaed','$2y$10$ZqHS.ndAAHto7wK0nXlBKOpeTkLpnO4neeyNLP0oCAMzWK3Q2Ap4m','vkarbasizaed@mailinator.com',NULL,NULL,NULL,NULL,'IR','',NULL,NULL,'2023-03-31 01:13:44',NULL,'2023-03-31 01:13:44',0,NULL,NULL,0,NULL,1),(24,'vwilliamson','$2y$10$zN2sBAVR.YGs7kpdnYOryOeGKR.5NpoMwKpr5wzNT23aEy4nRBhMy','vwilliamson@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-31 01:14:12',NULL,'2023-03-31 01:14:12',0,NULL,NULL,0,NULL,1),(25,'zwoods','$2y$10$.kQdLjrYbeaGMibaKtIPP.WaasNPK6x/4D0DQAHw95XEReXy5CW/O','zwoods@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-03-31 01:14:39',NULL,'2023-03-31 01:14:39',0,NULL,NULL,0,NULL,1);
+INSERT INTO `users` VALUES (1,'admin','$2y$10$W9gY2p6KmXzRlpHOhH7BauA7KlcCsq31H1RMgiS7npobaaRvTM802','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'',NULL,NULL,'2023-04-04 22:03:41',NULL,'2023-04-04 22:05:23',0,NULL,NULL,0,NULL,1),(2,'rvaca','$2y$10$UN6cbfukm6ldH.GVGVeTv.Bn7qVNdgE/RP/UY3b2zrlluwfneo4Bm','rvaca@mailinator.com','','','',NULL,'MX','',NULL,NULL,'2023-04-04 22:04:33',NULL,'2023-04-04 22:05:15',0,0,NULL,0,NULL,1),(3,'dbarnes','$2y$10$bp/9p2VM9Hnpj8Tb.0IMruE0Kjr.sKpezQMTjAGKcRmrSWqEuqgGG','dbarnes@mailinator.com','','','',NULL,'AU','',NULL,NULL,'2023-04-04 22:04:40',NULL,'2023-04-04 22:15:22',0,0,NULL,0,NULL,1),(4,'dbuskins','$2y$10$UDD4OI6N2y/m38Z0wXvvEOfX9HPTL7SUPBuBTX.Va5eDKuRK3vmVi','dbuskins@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-04-04 22:04:49',NULL,'2023-04-04 22:04:49',0,0,NULL,0,NULL,1),(5,'sberardo','$2y$10$acjzVC1Acw4I5x9Eb6865eZPfezaj0yNiIZRf578d6Cxg5L202HwG','sberardo@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-04-04 22:04:59',NULL,'2023-04-04 22:04:59',0,0,NULL,0,NULL,1),(6,'minoue','$2y$10$vWG3NMGL2M99yJlS/friZ.mkLzzLTDZIWlNFD0d85XzK/diXBoQQi','minoue@mailinator.com','','','',NULL,'JP','',NULL,NULL,'2023-04-04 22:05:08',NULL,'2023-04-04 22:05:08',0,0,NULL,0,NULL,1),(7,'ccorino','$2y$10$TMmfAFIxldWbwVSMaRZ5WeQB2obpHfrVYc342N4qFEAXSK0V5YAga','ccorino@mailinator.com',NULL,NULL,NULL,NULL,'IT','',NULL,NULL,'2023-04-04 22:05:49',NULL,'2023-04-04 22:05:49',0,NULL,NULL,0,NULL,1),(8,'ckwantes','$2y$10$7qltnkPuaYPfTV32rA7EQudGBITu1jgZUhJ2WZB4IBsQfOwsT5m7K','ckwantes@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-04 22:06:13',NULL,'2023-04-04 22:06:13',0,NULL,NULL,0,NULL,1),(9,'cmontgomerie','$2y$10$O1xDV8JjqRE6CXltX6zhE.D5w0PfQOBmBCeievS1bmIYWcSXjcz0W','cmontgomerie@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-04 22:06:54',NULL,'2023-04-04 22:06:54',0,NULL,NULL,0,NULL,1),(10,'ddiouf','$2y$10$evxwJaGfhDiajFfYZvuKkeZegTPF2OUgI0/VxU/W33wniMtk8ZPnK','ddiouf@mailinator.com',NULL,NULL,NULL,NULL,'EG','',NULL,NULL,'2023-04-04 22:07:49',NULL,'2023-04-04 22:07:49',0,NULL,NULL,0,NULL,1),(11,'dphillips','$2y$10$N8VdlXlvyJ9L8IkSJt5QHuhH0iwWcCL0ey8Te6wbqzZD5f7M5iU.2','dphillips@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-04 22:08:17',NULL,'2023-04-04 22:08:17',0,NULL,NULL,0,NULL,1),(12,'dsokoloff','$2y$10$.BZiEww86TYGVrHdw7y1y.E/2f3DMrL0.A3giDe9nTdUhMTqSkfgO','dsokoloff@mailinator.com',NULL,NULL,NULL,NULL,'IE','',NULL,NULL,'2023-04-04 22:08:45',NULL,'2023-04-04 22:08:45',0,NULL,NULL,0,NULL,1),(13,'eostrom','$2y$10$7PTxRxvDTcHhXU/ND9jXPu6roj87u5WKqbTgjKli6mhoclSL9agle','eostrom@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-04-04 22:09:13',NULL,'2023-04-04 22:09:13',0,NULL,NULL,0,NULL,1),(14,'fpaglieri','$2y$10$5WksyhdM2S.xt48HK.yT9eKsXsJzXRxZF6tjJTXLmsZ3fNekFuY/O','fpaglieri@mailinator.com',NULL,NULL,NULL,NULL,'IT','',NULL,NULL,'2023-04-04 22:09:45',NULL,'2023-04-04 22:09:45',0,NULL,NULL,0,NULL,1),(15,'jmwandenga','$2y$10$1XZQXXtgeMJecAc3PbysSO6VRGolArW9toB4iRS7uUHZ8F9xaCGhu','jmwandenga@mailinator.com',NULL,NULL,NULL,NULL,'ZA','',NULL,NULL,'2023-04-04 22:10:13',NULL,'2023-04-04 22:10:13',0,NULL,NULL,0,NULL,1),(16,'jnovak','$2y$10$GyeFbwXZcSSDDMTQSrXQc.nz1xDryUP7VzY0kMtjcLYW7zWVPc5xa','jnovak@mailinator.com',NULL,NULL,NULL,NULL,'DK','',NULL,NULL,'2023-04-04 22:10:42',NULL,'2023-04-04 22:10:42',0,NULL,NULL,0,NULL,1),(17,'kalkhafaji','$2y$10$i3hsLG0io0KdnXj3W8fddeyXfIMflP0aKvprerYjomdun4NG25cJC','kalkhafaji@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-04-04 22:11:10',NULL,'2023-04-04 22:11:10',0,NULL,NULL,0,NULL,1),(18,'lchristopher','$2y$10$VrnEv2nX8M6UVVTiqyTkeeVS0p/tpxcXDMuL.s5rbIQdaglet9yUS','lchristopher@mailinator.com',NULL,NULL,NULL,NULL,'AU','',NULL,NULL,'2023-04-04 22:11:42',NULL,'2023-04-04 22:11:42',0,NULL,NULL,0,NULL,1),(19,'lkumiega','$2y$10$ojala9gLnTBmm1tphkSKo.6F8jthD0lqcEfqzNmQ.RxiI3tzvcSKG','lkumiega@mailinator.com',NULL,NULL,NULL,NULL,'ZA','',NULL,NULL,'2023-04-04 22:12:11',NULL,'2023-04-04 22:12:11',0,NULL,NULL,0,NULL,1),(20,'pdaniel','$2y$10$AOtOFWePXULOYDKpLDL/qOwQKmp5yfwieODHBmBF.N9kJYMVA1p9G','pdaniel@mailinator.com',NULL,NULL,NULL,NULL,'GB','',NULL,NULL,'2023-04-04 22:12:40',NULL,'2023-04-04 22:12:40',0,NULL,NULL,0,NULL,1),(21,'rbaiyewu','$2y$10$0iWOYAqNyfmtkVFSA7FwN.2eK8p5UphliqRlRuLImv9lZe14gD3oK','rbaiyewu@mailinator.com',NULL,NULL,NULL,NULL,'KE','',NULL,NULL,'2023-04-04 22:13:09',NULL,'2023-04-04 22:13:09',0,NULL,NULL,0,NULL,1),(22,'rrossi','$2y$10$56abQAb2BSZB/tuJsWNauOpmqdfl.VEmk.FmHiErQz592RJUm4HZW','rrossi@mailinator.com',NULL,NULL,NULL,NULL,'ES','',NULL,NULL,'2023-04-04 22:13:37',NULL,'2023-04-04 22:13:37',0,NULL,NULL,0,NULL,1),(23,'vkarbasizaed','$2y$10$xoC.sArGHCMACZHHT4HjG.H9rRfZOcWuQamRVbLZjNnBKC/b4cENG','vkarbasizaed@mailinator.com',NULL,NULL,NULL,NULL,'IR','',NULL,NULL,'2023-04-04 22:14:06',NULL,'2023-04-04 22:14:06',0,NULL,NULL,0,NULL,1),(24,'vwilliamson','$2y$10$qRDcSVzlFv9wdBp72GW9xOvYNzH.vRgLN9Ioa8XAHsbk54rBeaeHm','vwilliamson@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-04 22:14:35',NULL,'2023-04-04 22:14:35',0,NULL,NULL,0,NULL,1),(25,'zwoods','$2y$10$tavRs64ZIw3yqPXB3e9KYOR.2GGBICwHf91Mbx8WafRrvhRzGcbqq','zwoods@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-04-04 22:15:03',NULL,'2023-04-04 22:15:03',0,NULL,NULL,0,NULL,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2812,21 +2812,21 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `versions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `versions` (
-  `major` int(11) NOT NULL DEFAULT '0' COMMENT 'Major component of version number, e.g. the 2 in OJS 2.3.8-0',
-  `minor` int(11) NOT NULL DEFAULT '0' COMMENT 'Minor component of version number, e.g. the 3 in OJS 2.3.8-0',
-  `revision` int(11) NOT NULL DEFAULT '0' COMMENT 'Revision component of version number, e.g. the 8 in OJS 2.3.8-0',
-  `build` int(11) NOT NULL DEFAULT '0' COMMENT 'Build component of version number, e.g. the 0 in OJS 2.3.8-0',
+  `major` int NOT NULL DEFAULT '0' COMMENT 'Major component of version number, e.g. the 2 in OJS 2.3.8-0',
+  `minor` int NOT NULL DEFAULT '0' COMMENT 'Minor component of version number, e.g. the 3 in OJS 2.3.8-0',
+  `revision` int NOT NULL DEFAULT '0' COMMENT 'Revision component of version number, e.g. the 8 in OJS 2.3.8-0',
+  `build` int NOT NULL DEFAULT '0' COMMENT 'Build component of version number, e.g. the 0 in OJS 2.3.8-0',
   `date_installed` datetime NOT NULL,
-  `current` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the version entry being described is currently active. This permits the table to store past installation history for forensic purposes.',
+  `current` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the version entry being described is currently active. This permits the table to store past installation history for forensic purposes.',
   `product_type` varchar(30) DEFAULT NULL COMMENT 'Describes the type of product this row describes, e.g. "plugins.generic" (for a generic plugin) or "core" for the application itelf',
   `product` varchar(30) DEFAULT NULL COMMENT 'Uniquely identifies the product this version row describes, e.g. "ojs2" for OJS 2.x, "languageToggle" for the language toggle block plugin, etc.',
   `product_class_name` varchar(80) DEFAULT NULL COMMENT 'Specifies the class name associated with this product, for plugins, or the empty string where not applicable.',
-  `lazy_load` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a lazy-load plugin; 0 otherwise',
-  `sitewide` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a site-wide plugin; 0 otherwise',
+  `lazy_load` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a lazy-load plugin; 0 otherwise',
+  `sitewide` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a site-wide plugin; 0 otherwise',
   UNIQUE KEY `versions_pkey` (`product_type`,`product`,`major`,`minor`,`revision`,`build`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2835,7 +2835,7 @@ CREATE TABLE `versions` (
 
 LOCK TABLES `versions` WRITE;
 /*!40000 ALTER TABLE `versions` DISABLE KEYS */;
-INSERT INTO `versions` VALUES (1,0,0,0,'2023-03-31 01:04:14',1,'plugins.metadata','dc11','',0,0),(1,0,1,0,'2023-03-31 01:04:14',1,'plugins.blocks','browse','BrowseBlockPlugin',1,0),(1,0,0,0,'2023-03-31 01:04:14',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),(1,0,0,0,'2023-03-31 01:04:14',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),(1,1,3,4,'2023-03-31 01:04:14',1,'plugins.generic','orcidProfile','OrcidProfilePlugin',1,0),(1,0,0,0,'2023-03-31 01:04:14',1,'plugins.generic','usageEvent','',0,0),(1,1,0,0,'2023-03-31 01:04:14',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),(1,2,0,0,'2023-03-31 01:04:14',1,'plugins.generic','acron','AcronPlugin',1,1),(1,0,1,0,'2023-03-31 01:04:14',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),(1,0,0,0,'2023-03-31 01:04:14',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),(1,2,0,0,'2023-03-31 01:04:14',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),(1,0,0,0,'2023-03-31 01:04:14',1,'plugins.generic','webFeed','WebFeedPlugin',1,0),(1,0,0,0,'2023-03-31 01:04:14',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),(1,0,0,0,'2023-03-31 01:04:14',1,'plugins.generic','crossrefDeposit','CrossrefDepositPlugin',1,0),(1,0,0,0,'2023-03-31 01:04:14',1,'plugins.generic','usageStats','UsageStatsPlugin',0,1),(2,2,0,0,'2023-03-31 01:04:14',1,'plugins.importexport','crossref','',0,0),(1,0,0,0,'2023-03-31 01:04:14',1,'plugins.oaiMetadataFormats','dc','',0,0),(1,0,0,0,'2023-03-31 01:04:14',1,'plugins.pubIds','doi','DOIPubIdPlugin',1,0),(1,1,0,0,'2023-03-31 01:04:14',1,'plugins.reports','counterReport','',0,0),(1,0,0,0,'2023-03-31 01:04:14',1,'plugins.themes','default','DefaultThemePlugin',1,0),(3,3,0,14,'2023-03-31 01:04:11',1,'core','ops','',0,1);
+INSERT INTO `versions` VALUES (1,0,0,0,'2023-04-04 22:03:41',1,'plugins.metadata','dc11','',0,0),(1,0,1,0,'2023-04-04 22:03:41',1,'plugins.blocks','browse','BrowseBlockPlugin',1,0),(1,0,0,0,'2023-04-04 22:03:41',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),(1,0,0,0,'2023-04-04 22:03:41',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),(1,0,0,0,'2023-04-04 22:03:41',1,'plugins.generic','crossrefDeposit','CrossrefDepositPlugin',1,0),(1,2,0,0,'2023-04-04 22:03:41',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),(1,0,0,0,'2023-04-04 22:03:41',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),(1,0,0,0,'2023-04-04 22:03:41',1,'plugins.generic','webFeed','WebFeedPlugin',1,0),(1,2,0,0,'2023-04-04 22:03:41',1,'plugins.generic','acron','AcronPlugin',1,1),(1,0,0,0,'2023-04-04 22:03:41',1,'plugins.generic','usageStats','UsageStatsPlugin',0,1),(1,0,1,0,'2023-04-04 22:03:41',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),(1,1,3,4,'2023-04-04 22:03:41',1,'plugins.generic','orcidProfile','OrcidProfilePlugin',1,0),(1,0,0,0,'2023-04-04 22:03:41',1,'plugins.generic','usageEvent','',0,0),(1,1,0,0,'2023-04-04 22:03:41',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),(1,0,0,0,'2023-04-04 22:03:41',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),(2,2,0,0,'2023-04-04 22:03:41',1,'plugins.importexport','crossref','',0,0),(1,0,0,0,'2023-04-04 22:03:41',1,'plugins.oaiMetadataFormats','dc','',0,0),(1,0,0,0,'2023-04-04 22:03:41',1,'plugins.pubIds','doi','DOIPubIdPlugin',1,0),(1,1,0,0,'2023-04-04 22:03:41',1,'plugins.reports','counterReport','',0,0),(1,0,0,0,'2023-04-04 22:03:41',1,'plugins.themes','default','DefaultThemePlugin',1,0),(3,3,0,14,'2023-04-04 22:03:33',1,'core','ops','',0,1);
 /*!40000 ALTER TABLE `versions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2848,4 +2848,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-31  1:15:02
+-- Dump completed on 2023-04-04 22:15:28
