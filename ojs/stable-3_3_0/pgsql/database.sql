@@ -2,11 +2,12 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.5.25
--- Dumped by pg_dump version 9.5.25
+-- Dumped from database version 13.10 (Ubuntu 13.10-1.pgdg20.04+1)
+-- Dumped by pg_dump version 13.10 (Ubuntu 13.10-1.pgdg20.04+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SELECT pg_catalog.set_config('search_path', '', false);
@@ -488,41 +489,9 @@ DROP TABLE public.announcement_type_settings;
 DROP TABLE public.announcement_settings;
 DROP SEQUENCE public.access_keys_access_key_id_seq;
 DROP TABLE public.access_keys;
-DROP EXTENSION plpgsql;
-DROP SCHEMA public;
---
--- Name: public; Type: SCHEMA; Schema: -; Owner: postgres
---
-
-CREATE SCHEMA public;
-
-
-ALTER SCHEMA public OWNER TO postgres;
-
---
--- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: postgres
---
-
-COMMENT ON SCHEMA public IS 'standard public schema';
-
-
---
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
---
-
-CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
-
-
---
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
---
-
-COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
-
-
 SET default_tablespace = '';
 
-SET default_with_oids = false;
+SET default_table_access_method = heap;
 
 --
 -- Name: access_keys; Type: TABLE; Schema: public; Owner: ojs-ci
@@ -3878,420 +3847,420 @@ COMMENT ON COLUMN public.versions.sitewide IS '1 iff the row describes a site-wi
 
 
 --
--- Name: access_key_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: access_keys access_key_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.access_keys ALTER COLUMN access_key_id SET DEFAULT nextval('public.access_keys_access_key_id_seq'::regclass);
 
 
 --
--- Name: type_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: announcement_types type_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcement_types ALTER COLUMN type_id SET DEFAULT nextval('public.announcement_types_type_id_seq'::regclass);
 
 
 --
--- Name: announcement_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: announcements announcement_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcements ALTER COLUMN announcement_id SET DEFAULT nextval('public.announcements_announcement_id_seq'::regclass);
 
 
 --
--- Name: auth_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: auth_sources auth_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.auth_sources ALTER COLUMN auth_id SET DEFAULT nextval('public.auth_sources_auth_id_seq'::regclass);
 
 
 --
--- Name: author_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: authors author_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.authors ALTER COLUMN author_id SET DEFAULT nextval('public.authors_author_id_seq'::regclass);
 
 
 --
--- Name: category_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: categories category_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.categories ALTER COLUMN category_id SET DEFAULT nextval('public.categories_category_id_seq'::regclass);
 
 
 --
--- Name: citation_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: citations citation_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.citations ALTER COLUMN citation_id SET DEFAULT nextval('public.citations_citation_id_seq'::regclass);
 
 
 --
--- Name: completed_payment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: completed_payments completed_payment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.completed_payments ALTER COLUMN completed_payment_id SET DEFAULT nextval('public.completed_payments_completed_payment_id_seq'::regclass);
 
 
 --
--- Name: controlled_vocab_entry_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: controlled_vocab_entries controlled_vocab_entry_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entries ALTER COLUMN controlled_vocab_entry_id SET DEFAULT nextval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq'::regclass);
 
 
 --
--- Name: controlled_vocab_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: controlled_vocabs controlled_vocab_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs ALTER COLUMN controlled_vocab_id SET DEFAULT nextval('public.controlled_vocabs_controlled_vocab_id_seq'::regclass);
 
 
 --
--- Name: object_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: data_object_tombstone_oai_set_objects object_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects ALTER COLUMN object_id SET DEFAULT nextval('public.data_object_tombstone_oai_set_objects_object_id_seq'::regclass);
 
 
 --
--- Name: tombstone_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: data_object_tombstones tombstone_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstones ALTER COLUMN tombstone_id SET DEFAULT nextval('public.data_object_tombstones_tombstone_id_seq'::regclass);
 
 
 --
--- Name: edit_decision_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: edit_decisions edit_decision_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.edit_decisions ALTER COLUMN edit_decision_id SET DEFAULT nextval('public.edit_decisions_edit_decision_id_seq'::regclass);
 
 
 --
--- Name: log_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: email_log log_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_log ALTER COLUMN log_id SET DEFAULT nextval('public.email_log_log_id_seq'::regclass);
 
 
 --
--- Name: email_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: email_templates email_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates ALTER COLUMN email_id SET DEFAULT nextval('public.email_templates_email_id_seq'::regclass);
 
 
 --
--- Name: email_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: email_templates_default email_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default ALTER COLUMN email_id SET DEFAULT nextval('public.email_templates_default_email_id_seq'::regclass);
 
 
 --
--- Name: log_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: event_log log_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.event_log ALTER COLUMN log_id SET DEFAULT nextval('public.event_log_log_id_seq'::regclass);
 
 
 --
--- Name: file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: files file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.files ALTER COLUMN file_id SET DEFAULT nextval('public.files_file_id_seq'::regclass);
 
 
 --
--- Name: filter_group_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: filter_groups filter_group_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filter_groups ALTER COLUMN filter_group_id SET DEFAULT nextval('public.filter_groups_filter_group_id_seq'::regclass);
 
 
 --
--- Name: filter_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: filters filter_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filters ALTER COLUMN filter_id SET DEFAULT nextval('public.filters_filter_id_seq'::regclass);
 
 
 --
--- Name: genre_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: genres genre_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.genres ALTER COLUMN genre_id SET DEFAULT nextval('public.genres_genre_id_seq'::regclass);
 
 
 --
--- Name: institutional_subscription_ip_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: institutional_subscription_ip institutional_subscription_ip_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.institutional_subscription_ip ALTER COLUMN institutional_subscription_ip_id SET DEFAULT nextval('public.institutional_subscription_ip_institutional_subscription_ip_seq'::regclass);
 
 
 --
--- Name: institutional_subscription_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: institutional_subscriptions institutional_subscription_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.institutional_subscriptions ALTER COLUMN institutional_subscription_id SET DEFAULT nextval('public.institutional_subscriptions_institutional_subscription_id_seq'::regclass);
 
 
 --
--- Name: file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: issue_files file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_files ALTER COLUMN file_id SET DEFAULT nextval('public.issue_files_file_id_seq'::regclass);
 
 
 --
--- Name: galley_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: issue_galleys galley_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_galleys ALTER COLUMN galley_id SET DEFAULT nextval('public.issue_galleys_galley_id_seq'::regclass);
 
 
 --
--- Name: issue_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: issues issue_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issues ALTER COLUMN issue_id SET DEFAULT nextval('public.issues_issue_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: jobs id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.jobs ALTER COLUMN id SET DEFAULT nextval('public.jobs_id_seq'::regclass);
 
 
 --
--- Name: journal_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: journals journal_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.journals ALTER COLUMN journal_id SET DEFAULT nextval('public.journals_journal_id_seq'::regclass);
 
 
 --
--- Name: file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: library_files file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.library_files ALTER COLUMN file_id SET DEFAULT nextval('public.library_files_file_id_seq'::regclass);
 
 
 --
--- Name: metadata_description_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: metadata_descriptions metadata_description_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.metadata_descriptions ALTER COLUMN metadata_description_id SET DEFAULT nextval('public.metadata_descriptions_metadata_description_id_seq'::regclass);
 
 
 --
--- Name: navigation_menu_item_assignment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_item_assignments navigation_menu_item_assignment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignments ALTER COLUMN navigation_menu_item_assignment_id SET DEFAULT nextval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq'::regclass);
 
 
 --
--- Name: navigation_menu_item_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_items navigation_menu_item_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_items ALTER COLUMN navigation_menu_item_id SET DEFAULT nextval('public.navigation_menu_items_navigation_menu_item_id_seq'::regclass);
 
 
 --
--- Name: navigation_menu_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menus navigation_menu_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menus ALTER COLUMN navigation_menu_id SET DEFAULT nextval('public.navigation_menus_navigation_menu_id_seq'::regclass);
 
 
 --
--- Name: note_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: notes note_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notes ALTER COLUMN note_id SET DEFAULT nextval('public.notes_note_id_seq'::regclass);
 
 
 --
--- Name: notification_mail_list_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: notification_mail_list notification_mail_list_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_mail_list ALTER COLUMN notification_mail_list_id SET DEFAULT nextval('public.notification_mail_list_notification_mail_list_id_seq'::regclass);
 
 
 --
--- Name: setting_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: notification_subscription_settings setting_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_subscription_settings ALTER COLUMN setting_id SET DEFAULT nextval('public.notification_subscription_settings_setting_id_seq'::regclass);
 
 
 --
--- Name: notification_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: notifications notification_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notifications ALTER COLUMN notification_id SET DEFAULT nextval('public.notifications_notification_id_seq'::regclass);
 
 
 --
--- Name: galley_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: publication_galleys galley_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_galleys ALTER COLUMN galley_id SET DEFAULT nextval('public.publication_galleys_galley_id_seq'::regclass);
 
 
 --
--- Name: publication_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: publications publication_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publications ALTER COLUMN publication_id SET DEFAULT nextval('public.publications_publication_id_seq'::regclass);
 
 
 --
--- Name: query_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: queries query_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.queries ALTER COLUMN query_id SET DEFAULT nextval('public.queries_query_id_seq'::regclass);
 
 
 --
--- Name: queued_payment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: queued_payments queued_payment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.queued_payments ALTER COLUMN queued_payment_id SET DEFAULT nextval('public.queued_payments_queued_payment_id_seq'::regclass);
 
 
 --
--- Name: review_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: review_assignments review_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_assignments ALTER COLUMN review_id SET DEFAULT nextval('public.review_assignments_review_id_seq'::regclass);
 
 
 --
--- Name: review_form_element_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: review_form_elements review_form_element_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_form_elements ALTER COLUMN review_form_element_id SET DEFAULT nextval('public.review_form_elements_review_form_element_id_seq'::regclass);
 
 
 --
--- Name: review_form_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: review_forms review_form_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_forms ALTER COLUMN review_form_id SET DEFAULT nextval('public.review_forms_review_form_id_seq'::regclass);
 
 
 --
--- Name: review_round_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: review_rounds review_round_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_rounds ALTER COLUMN review_round_id SET DEFAULT nextval('public.review_rounds_review_round_id_seq'::regclass);
 
 
 --
--- Name: section_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: sections section_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.sections ALTER COLUMN section_id SET DEFAULT nextval('public.sections_section_id_seq'::regclass);
 
 
 --
--- Name: stage_assignment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: stage_assignments stage_assignment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments ALTER COLUMN stage_assignment_id SET DEFAULT nextval('public.stage_assignments_stage_assignment_id_seq'::regclass);
 
 
 --
--- Name: static_page_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: static_pages static_page_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.static_pages ALTER COLUMN static_page_id SET DEFAULT nextval('public.static_pages_static_page_id_seq'::regclass);
 
 
 --
--- Name: comment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: submission_comments comment_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_comments ALTER COLUMN comment_id SET DEFAULT nextval('public.submission_comments_comment_id_seq'::regclass);
 
 
 --
--- Name: revision_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: submission_file_revisions revision_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions ALTER COLUMN revision_id SET DEFAULT nextval('public.submission_file_revisions_revision_id_seq'::regclass);
 
 
 --
--- Name: submission_file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: submission_files submission_file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_files ALTER COLUMN submission_file_id SET DEFAULT nextval('public.submission_files_submission_file_id_seq'::regclass);
 
 
 --
--- Name: keyword_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: submission_search_keyword_list keyword_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list ALTER COLUMN keyword_id SET DEFAULT nextval('public.submission_search_keyword_list_keyword_id_seq'::regclass);
 
 
 --
--- Name: object_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: submission_search_objects object_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_objects ALTER COLUMN object_id SET DEFAULT nextval('public.submission_search_objects_object_id_seq'::regclass);
 
 
 --
--- Name: tombstone_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: submission_tombstones tombstone_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_tombstones ALTER COLUMN tombstone_id SET DEFAULT nextval('public.submission_tombstones_tombstone_id_seq'::regclass);
 
 
 --
--- Name: submission_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: submissions submission_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submissions ALTER COLUMN submission_id SET DEFAULT nextval('public.submissions_submission_id_seq'::regclass);
 
 
 --
--- Name: type_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: subscription_types type_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subscription_types ALTER COLUMN type_id SET DEFAULT nextval('public.subscription_types_type_id_seq'::regclass);
 
 
 --
--- Name: subscription_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: subscriptions subscription_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subscriptions ALTER COLUMN subscription_id SET DEFAULT nextval('public.subscriptions_subscription_id_seq'::regclass);
 
 
 --
--- Name: file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: temporary_files file_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.temporary_files ALTER COLUMN file_id SET DEFAULT nextval('public.temporary_files_file_id_seq'::regclass);
 
 
 --
--- Name: user_group_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: user_groups user_group_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_groups ALTER COLUMN user_group_id SET DEFAULT nextval('public.user_groups_user_group_id_seq'::regclass);
 
 
 --
--- Name: user_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
+-- Name: users user_id; Type: DEFAULT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.users_user_id_seq'::regclass);
@@ -4303,13 +4272,6 @@ ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.u
 
 COPY public.access_keys (access_key_id, context, key_hash, user_id, assoc_id, expiry_date) FROM stdin;
 \.
-
-
---
--- Name: access_keys_access_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.access_keys_access_key_id_seq', 1, false);
 
 
 --
@@ -4337,13 +4299,6 @@ COPY public.announcement_types (type_id, assoc_type, assoc_id) FROM stdin;
 
 
 --
--- Name: announcement_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.announcement_types_type_id_seq', 1, false);
-
-
---
 -- Data for Name: announcements; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -4352,25 +4307,11 @@ COPY public.announcements (announcement_id, assoc_type, assoc_id, type_id, date_
 
 
 --
--- Name: announcements_announcement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.announcements_announcement_id_seq', 1, false);
-
-
---
 -- Data for Name: auth_sources; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.auth_sources (auth_id, title, plugin, auth_default, settings) FROM stdin;
 \.
-
-
---
--- Name: auth_sources_auth_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.auth_sources_auth_id_seq', 1, false);
 
 
 --
@@ -4569,25 +4510,11 @@ COPY public.authors (author_id, email, include_in_browse, publication_id, seq, u
 
 
 --
--- Name: authors_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.authors_author_id_seq', 25, true);
-
-
---
 -- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.categories (category_id, context_id, parent_id, seq, path, image) FROM stdin;
 \.
-
-
---
--- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.categories_category_id_seq', 1, false);
 
 
 --
@@ -4615,25 +4542,11 @@ COPY public.citations (citation_id, publication_id, raw_citation, seq) FROM stdi
 
 
 --
--- Name: citations_citation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.citations_citation_id_seq', 1, false);
-
-
---
 -- Data for Name: completed_payments; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.completed_payments (completed_payment_id, "timestamp", payment_type, context_id, user_id, assoc_id, amount, currency_code_alpha, payment_method_plugin_name) FROM stdin;
 \.
-
-
---
--- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.completed_payments_completed_payment_id_seq', 1, false);
 
 
 --
@@ -4687,13 +4600,6 @@ COPY public.controlled_vocab_entries (controlled_vocab_entry_id, controlled_voca
 72	92	2
 73	92	3
 \.
-
-
---
--- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq', 73, true);
 
 
 --
@@ -4859,13 +4765,6 @@ COPY public.controlled_vocabs (controlled_vocab_id, symbolic, assoc_type, assoc_
 
 
 --
--- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.controlled_vocabs_controlled_vocab_id_seq', 101, true);
-
-
---
 -- Data for Name: custom_issue_orders; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -4890,13 +4789,6 @@ COPY public.data_object_tombstone_oai_set_objects (object_id, tombstone_id, asso
 
 
 --
--- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.data_object_tombstone_oai_set_objects_object_id_seq', 6, true);
-
-
---
 -- Data for Name: data_object_tombstone_settings; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -4913,55 +4805,41 @@ COPY public.data_object_tombstones (tombstone_id, data_object_id, date_deleted, 
 
 
 --
--- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.data_object_tombstones_tombstone_id_seq', 3, true);
-
-
---
 -- Data for Name: edit_decisions; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	0	1	0	3	8	2023-04-03 21:13:15
-2	1	1	3	1	3	1	2023-04-03 21:13:34
-3	1	0	4	0	3	7	2023-04-03 21:13:42
-4	2	0	1	0	3	8	2023-04-03 21:16:02
-5	2	2	3	1	6	11	2023-04-03 21:16:18
-6	3	0	1	0	3	8	2023-04-03 21:16:42
-7	3	3	3	1	3	1	2023-04-03 21:16:55
-8	5	0	1	0	3	8	2023-04-03 21:17:35
-9	5	4	3	1	3	1	2023-04-03 21:17:49
-10	5	0	4	0	3	7	2023-04-03 21:17:56
-11	6	0	1	0	3	8	2023-04-03 21:18:25
-12	6	5	3	1	3	1	2023-04-03 21:18:38
-13	6	0	4	0	3	7	2023-04-03 21:18:46
-14	7	0	1	0	3	8	2023-04-03 21:19:11
-15	9	0	1	0	3	8	2023-04-03 21:20:10
-16	9	7	3	1	3	1	2023-04-03 21:20:24
-17	9	0	4	0	3	7	2023-04-03 21:20:31
-18	10	0	1	0	3	8	2023-04-03 21:21:01
-19	12	0	1	0	3	8	2023-04-03 21:22:06
-20	13	0	1	0	3	8	2023-04-03 21:22:37
-21	13	10	3	1	3	2	2023-04-03 21:23:32
-22	15	0	1	0	3	8	2023-04-03 21:24:05
-23	15	11	3	1	3	1	2023-04-03 21:24:17
-24	15	0	4	0	3	7	2023-04-03 21:24:25
-25	17	0	1	0	3	8	2023-04-03 21:25:06
-26	17	12	3	1	3	1	2023-04-03 21:25:19
-27	17	0	4	0	3	7	2023-04-03 21:25:27
-28	18	0	1	0	3	9	2023-04-03 21:27:08
-29	19	0	1	0	3	8	2023-04-03 21:27:31
-30	19	13	3	1	3	1	2023-04-03 21:27:43
+1	1	0	1	0	3	8	2023-04-04 20:13:33
+2	1	1	3	1	3	1	2023-04-04 20:13:52
+3	1	0	4	0	3	7	2023-04-04 20:14:01
+4	2	0	1	0	3	8	2023-04-04 20:16:29
+5	2	2	3	1	6	11	2023-04-04 20:16:46
+6	3	0	1	0	3	8	2023-04-04 20:17:11
+7	3	3	3	1	3	1	2023-04-04 20:17:25
+8	5	0	1	0	3	8	2023-04-04 20:18:06
+9	5	4	3	1	3	1	2023-04-04 20:18:20
+10	5	0	4	0	3	7	2023-04-04 20:18:29
+11	6	0	1	0	3	8	2023-04-04 20:19:00
+12	6	5	3	1	3	1	2023-04-04 20:19:14
+13	6	0	4	0	3	7	2023-04-04 20:19:23
+14	7	0	1	0	3	8	2023-04-04 20:19:48
+15	9	0	1	0	3	8	2023-04-04 20:20:49
+16	9	7	3	1	3	1	2023-04-04 20:21:04
+17	9	0	4	0	3	7	2023-04-04 20:21:12
+18	10	0	1	0	3	8	2023-04-04 20:21:43
+19	12	0	1	0	3	8	2023-04-04 20:22:50
+20	13	0	1	0	3	8	2023-04-04 20:23:22
+21	13	10	3	1	3	2	2023-04-04 20:24:19
+22	15	0	1	0	3	8	2023-04-04 20:24:54
+23	15	11	3	1	3	1	2023-04-04 20:25:07
+24	15	0	4	0	3	7	2023-04-04 20:25:15
+25	17	0	1	0	3	8	2023-04-04 20:25:58
+26	17	12	3	1	3	1	2023-04-04 20:26:11
+27	17	0	4	0	3	7	2023-04-04 20:26:19
+28	18	0	1	0	3	9	2023-04-04 20:28:04
+29	19	0	1	0	3	8	2023-04-04 20:28:28
+30	19	13	3	1	3	1	2023-04-04 20:28:41
 \.
-
-
---
--- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true);
 
 
 --
@@ -4970,13 +4848,6 @@ SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true)
 
 COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
 \.
-
-
---
--- Name: email_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.email_log_log_id_seq', 1, false);
 
 
 --
@@ -5056,8 +4927,8 @@ COPY public.email_templates_default (email_id, email_key, can_disable, can_edit,
 54	ANNOUNCEMENT	0	1	16	1048576	\N
 55	ORCID_COLLECT_AUTHOR_ID	0	1	\N	\N	\N
 56	ORCID_REQUEST_AUTHOR_AUTHORIZATION	0	1	\N	\N	\N
-57	MANUAL_PAYMENT_NOTIFICATION	0	1	\N	\N	\N
-58	PAYPAL_INVESTIGATE_PAYMENT	0	1	\N	\N	\N
+57	PAYPAL_INVESTIGATE_PAYMENT	0	1	\N	\N	\N
+58	MANUAL_PAYMENT_NOTIFICATION	0	1	\N	\N	\N
 \.
 
 
@@ -5122,8 +4993,8 @@ STATISTICS_REPORT_NOTIFICATION	en_US	Editorial activity for {$month}, {$year}	\n
 ANNOUNCEMENT	en_US	{$title}	<b>{$title}</b><br />\n<br />\n{$summary}<br />\n<br />\nVisit our website to read the <a href="{$url}">full announcement</a>.	This email is sent when a new announcement is created.
 ORCID_COLLECT_AUTHOR_ID	en_US	Submission ORCID	Dear {$authorName},<br/>\n<br/>\nYou have been listed as an author on a manuscript submission to {$contextName}.<br/>\nTo confirm your authorship, please add your ORCID id to this submission by visiting the link provided below.<br/>\n<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="ORCID iD icon" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Register or connect your ORCID iD</a><br/>\n<br/>\n<br>\n<a href="{$orcidAboutUrl}">More information about ORCID at {$contextName}</a><br/>\n<br/>\nIf you have any questions, please contact me.<br/>\n<br/>\n{$principalContactSignature}<br/>\n	This email template is used to collect the ORCID id's from authors.
 ORCID_REQUEST_AUTHOR_AUTHORIZATION	en_US	Requesting ORCID record access	Dear {$authorName},<br>\n<br>\nYou have been listed as an author on the manuscript submission "{$submissionTitle}" to {$contextName}.\n<br>\n<br>\nPlease allow us to add your ORCID id to this submission and also to add the submission to your ORCID profile on publication.<br>\nVisit the link to the official ORCID website, login with your profile and authorize the access by following the instructions.<br>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="ORCID iD icon" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Register or Connect your ORCID iD</a><br/>\n<br>\n<br>\n<a href="{$orcidAboutUrl}">More about ORCID at {$contextName}</a><br/>\n<br>\nIf you have any questions, please contact me.<br>\n<br>\n{$principalContactSignature}<br>\n	This email template is used to request ORCID record access from authors.
-MANUAL_PAYMENT_NOTIFICATION	en_US	Manual Payment Notification	A manual payment needs to be processed for the journal {$contextName} and the user {$userFullName} (username &quot;{$userName}&quot;).<br />\n<br />\nThe item being paid for is &quot;{$itemName}&quot;.<br />\nThe cost is {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nThis email was generated by Open Journal Systems' Manual Payment plugin.	This email template is used to notify a journal manager contact that a manual payment was requested.
 PAYPAL_INVESTIGATE_PAYMENT	en_US	Unusual PayPal Activity	Open Journal Systems has encountered unusual activity relating to PayPal payment support for the journal {$contextName}. This activity may need further investigation or manual intervention.<br />\n                       <br />\nThis email was generated by Open Journal Systems' PayPal plugin.<br />\n<br />\nFull post information for the request:<br />\n{$postInfo}<br />\n<br />\nAdditional information (if supplied):<br />\n{$additionalInfo}<br />\n<br />\nServer vars:<br />\n{$serverVars}<br />\n	This email template is used to notify a journal's primary contact that suspicious activity or activity requiring manual intervention was encountered by the PayPal plugin.
+MANUAL_PAYMENT_NOTIFICATION	en_US	Manual Payment Notification	A manual payment needs to be processed for the journal {$contextName} and the user {$userFullName} (username &quot;{$userName}&quot;).<br />\n<br />\nThe item being paid for is &quot;{$itemName}&quot;.<br />\nThe cost is {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nThis email was generated by Open Journal Systems' Manual Payment plugin.	This email template is used to notify a journal manager contact that a manual payment was requested.
 NOTIFICATION	fr_CA	Nouvel avis de {$siteTitle}	Vous avez un nouvel avis de {$siteTitle} :<br />\n<br />\n{$notificationContents}<br />\n<br />\nLien : {$url}<br />\n<br />\n{$principalContactSignature}	Ce courriel est envoyé aux utilisateurs-trices inscrits-es qui ont choisi de recevoir par courriel ce type d'avis.
 NOTIFICATION_CENTER_DEFAULT	fr_CA	Un message à propos de la revue {$contextName}	Prière de saisir votre message.	Message blanc par défaut utilisé pour concevoir d'autres messages.
 PASSWORD_RESET_CONFIRM	fr_CA	Confirmation de la réinitialisation du mot de passe	Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site Web {$siteTitle}.<br />\n<br />\nSi vous n'avez pas fait cette demande, veuillez ne pas tenir compte du présent message, votre mot de passe restera le même. Si vous souhaitez réinitialiser votre mot de passe, cliquer sur l'URL ci-dessous.<br />\n<br />\nRéinitialisation de mon mot de passe : {$url}<br />\n<br />\n{$principalContactSignature}	Ce courriel est envoyé à l'utilisateur-trice inscrit-e qui nous signale avoir oublié son mot de passe ou qui est incapable d'ouvrir une session. Il fournit le lien URL à cliquer pour pouvoir réinitialiser son mot de passe.
@@ -5131,7 +5002,6 @@ USER_REGISTER	fr_CA	Inscription à la revue	{$userFullName},<br />\n<br />\nVous
 USER_VALIDATE	fr_CA	Valider votre compte	{$userFullName},<br />\n<br />\nVous avez créé un compte pour la revue {$contextName}. Pour pouvoir commencer à l'utiliser il nous faut d'abord valider votre adresse de courriel. Pour ce faire, vous n'avez qu'à suivre le lien ci-dessous :<br />\n<br />\n{$activateUrl}<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel est envoyé à un,une utilisateur-trice nouvellement inscrit-e pour valider son compte de courriel.
 REVIEWER_REGISTER	fr_CA	Inscription en tant qu'évaluateur-trice pour la revue {$contextName}	Compte tenu de votre expertise, nous avons pris l'initiative d'inscrire votre nom dans la base de données des évaluateurs-trices de la revue {$contextName}. Cela ne vous engage d'aucune façon, mais nous permet simplement de solliciter vos services pour l'évaluation d'une soumission. Si vous êtes invité-e à effectuer une évaluation, vous recevrez le titre et le résumé de l'article en question, et serez toujours libre d'accepter ou de refuser une telle invitation. À tout moment, il vous est également possible de demander à ce que votre nom soit retiré de la liste des évaluateurs-trices.<br />\n<br />\nNous vous acheminons un nom d'utilisateur-trice et un mot de passe, car tous deux sont requis pour tout échange avec la revue via son site Web. Vous pouvez, par exemple, si vous le souhaitez, effectuer la mise à jour de votre profil, y compris vos domaines d'intérêt en matière d'évaluation.<br />\n<br />\nNom d'utilisateur-trice : {$username}<br />\nMot de passe : {$password}<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel est envoyé à un,une évaluateur-trice nouvellement inscrit-e, afin de lui souhaiter la bienvenue dans le système et l'informer de son nom d'utilisateur-trice et de son mot de passe.
 PUBLISH_NOTIFY	fr_CA	Parution du dernier numéro	Lecteurs-trices,<br />\n<br />\nLe plus récent numéro de la revue {$contextName} vient d'être publié à l'adresse suivante : {$contextUrl}. Nous vous invitons à consulter le sommaire, puis à visiter notre site Web pour y lire les articles qui vous intéressent.<br />\n<br />\nNous vous remercions de l'intérêt que vous portez à notre revue,<br />\n{$editorialContactSignature}	Ce courriel est envoyé à tous et toutes les lecteurs-trices inscrits-es, via le lien « Aviser les utilisateurs-trices » sur la page d'accueil du,de la rédacteur-trice. Il avise les lecteurs-trices qu'un nouveau numéro est publié et les invite à visiter la revue en cliquant sur l'URL fourni.
-COPYEDIT_REQUEST	fr_CA	Demande de révision d'une soumission	{$participantName},<br />\n<br />\nJ'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} à l'aide des étapes suivantes.<br />\n1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n2. Ouvrir le(s) fichier(s) disponible(s) sous Fichiers des ébauches finales et effectuer votre révision, tout en ajoutant des discussions sur la révision, le cas échéant.<br />\n3. Enregistrer le(s) fichier(s) révisé(s) et le(s) téléverser dans la section Version(s) révisée(s).<br />\n4. Informer le,la rédacteur-trice que tous les fichiers ont été révisés et que l'étape de production peut débuter.<br />\n<br />\nURL de la revue {$contextName} : {$contextUrl}<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$participantUsername}	Ce courriel du, de la rédacteur-trice de rubrique à un-e réviseur-e lui demande de procéder à la révision. Il fournit les renseignements sur la soumission et comment accéder à celle-ci.
 LOCKSS_EXISTING_ARCHIVE	fr_CA	Demande d'archivage pour la revue {$contextName}	Cher,Chère [Bibliothécaire universitaire],<br />\n<br />\n{$contextName} &lt;{$contextUrl}&gt; est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la position occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires assurent la sécurité) avec votre bibliothèque ainsi que celles d'autres universités.<br />\n<br />\n[Brève description de la revue]<br />\n<br />\nL'adresse URL pour le LOCKSS Publisher Manifest pour notre revue est : {$contextUrl}/gateway/lockss<br />\n<br />\nNous croyons savoir que vous participez déjà à LOCKSS. Si nous pouvons vous fournir des métadonnées supplémentaires afin d'inscrire notre revue avec votre version de LOCKSS, il nous fera plaisir de vous les fournir.<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel demande à un-e conservateur,trice d'archives LOCKSS d'envisager d'inclure cette revue dans leur archive. Il fournit l'adresse URL du LOCKSS Publisher Manifest de la revue.
 LOCKSS_NEW_ARCHIVE	fr_CA	Demande d'archivage pour la revue {$contextName}	Cher,Chère [Bibliothécaire universitaire],<br />\n<br />\n{$contextName} &lt;{$contextUrl}&gt;, est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la fonction occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe) avec votre bibliothèque et celles d'autres universités.<br />\n<br />\n[Brève description de la revue]<br />\n<br />\nLe programme LOCKSS &lt;http://lockss.org/&gt;, une initiative de bibliothécaires et d'éditeurs internationaux, est une belle démonstration d'un dépôt d'archives assurant la préservation des documents. Voir les détails ci-dessous. Le logiciel est gratuit et fonctionne sur tout ordinateur personnel. Il est facile de le mettre en ligne et ne requiert que très peu de maintenance.<br />\n<br />\nPour nous aider dans le processus d'archivage de notre revue, nous vous invitons à devenir membre de la communauté LOCKSS, pour aider à recueillir et préserver des titres produits par votre faculté et par d'autres chercheurs à travers le monde. Pour ce faire, veuillez demander à quelqu'un de votre personnel de visiter le site Internet de LOCKSS pour voir les informations sur le fonctionnement du système. Nous attendons de vos nouvelles sur la faisabilité, pour vous, de fournir un support d'archivage pour cette revue.<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel encourage le ou la destinaire à participer à l'initiative LOCKSS et à inclure cette revue dans leur archives. Il fournit de l'information au sujet de LOCKSS et des façons de s'impliquer dans le projet.
 SUBMISSION_ACK	fr_CA	Accusé de réception de la soumission	{$authorName},<br />\n<br />\nNous vous remercions d'avoir soumis le manuscrit intitulé « {$submissionTitle} » à la revue {$contextName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition en accédant au site Web de la revue :<br />\n<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$authorUsername}<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à notre revue pour la publication de vos travaux.<br />\n<br />\n{$editorialContactSignature}	Ce courriel, lorsqu'activé, est envoyé automatiquement à un-e auteur-e quand il ou elle a complété le processus de soumission d'un manuscrit à la revue. Il fournit les informations sur comment suivre la soumission à travers le processus éditorial, et remercie l'auteur-e pour sa soumission.
@@ -5139,12 +5009,12 @@ SUBMISSION_ACK_NOT_USER	fr_CA	Accusé de réception de la soumission	Bonjour,<br
 EDITOR_ASSIGN	fr_CA	Assignation d'un-e rédacteur-trice	{$editorialContactName},<br />\n<br />\nLa soumission intitulée « {$submissionTitle} » pour la revue {$contextName} vous a été attribuée. Vous êtes responsable, en tant que rédacteur-trice de rubrique, de la faire cheminer à travers le processus éditorial.<br />\n<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$editorUsername}<br />\n<br />\nMerci.	Ce courriel avise un,une rédacteur-trice de rubrique que le,la rédacteur-trice lui a assigné la tâche de suivre une soumission durant le processus éditorial. Il fournit des renseignements sur la soumission, et comment accéder au site Web de la revue.
 REVIEW_CANCEL	fr_CA	Annulation de la demande d'évaluation	{$reviewerName},<br />\n<br />\nNous avons décidé d'annuler notre demande concernant l'évaluation du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName}. Nous sommes désolés des inconvénients que cela pourrait vous causer et espérons que nous pourrons de nouveau faire appel à vous pour contribuer au processus de révision par les pairs de cette revue dans le futur.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous.	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice qui a une évaluation en cours, pour l'aviser que celle-ci a été annulée.
 REVIEW_REINSTATE	fr_CA	Réintégration de la demande d'évaluation	{$reviewerName},<br />\n<br />\nNous souhaitons rétablir notre demande d'évaluation de la soumission, « {$ submissionTitle} » pour  la revue {$ contextName}. Nous espérons que vous pourrez contribuer au processus d'évaluation de cette revue.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec moi.	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice qui a une évaluation en cours, pour l'aviser que la demande préalablement annulée a été rétablie.
-REVIEW_REQUEST_ATTACHED	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} ». Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue. Les directives d'évaluation de la revue se trouvent ci-dessous et la soumission est jointe au présent courriel. Votre évaluation de la soumission, ainsi que vos recommandations, devraient nous parvenir par courriel d'ici le {$reviewDueDate}.<br />\n<br />\nVeuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n<br />\nDirectives pour l'évaluation<br />\n<br />\n{$reviewGuidelines}<br />\n	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui demander s'il ou elle accepte ou refuse la tâche d'évaluation d'une soumission. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de « Demande d'évaluation par pièce-jointe de courriel » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation . (Autrement, voir « Demande d'évaluation ».)
 REVIEW_REQUEST	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />\n<br />\nVeuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : {$contextUrl}<br />\n<br />\nLa date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.<br />\n<br />\nSi vous n'avez pas de nom d'utilisateur-trice et de mot de passe pour le site Web de la revue, cliquez sur le lien ci-dessous pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou refuse la tâche d'évaluation d'une soumission. Il fournit de l'information sur la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation. (Autrement voir « Demande d'évaluation d'un article (en pièce jointe) ».)
 REVIEW_REQUEST_SUBSEQUENT	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nCeci concerne le manuscrit « {$submissionTitle} », qui est présentement évalué par {$contextName}.<br />\n<br />\nSuivant l'évaluation de la dernière version du manuscrit, l'auteur a soumis une version révisée de son document. Nous apprécierions que vous évaluiez cette nouvelle version.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue avant le {$responseDueDate} pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations. Le site Web est {$contextUrl}<br />\n<br />\nL'évaluation est due pour le {$reviewDueDate}.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} » <br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice de rubrique à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou décline la tâche d'évaluation d'une soumission pour un cycle subséquent d'évaluation. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation (Autrement voir « Demande d'évaluation d'un article (cycle subséquent) ».)
 REVIEW_REQUEST_ONECLICK	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />\n<br />\nVeuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation.<br />\n<br />\nDate limite pour l'évaluation {$reviewDueDate}.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice de rubrique à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou décline la tâche d'évaluation d'une soumission. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation et que l'accès de l'évaluateur-trice en un clic a été activé.
 REVIEW_REQUEST_ONECLICK_SUBSEQUENT	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nCeci concerne le manuscrit « {$submissionTitle} », qui est présentement évalué par la revue {$contextName}.<br />\n<br />\nSuivant l'évaluation de la dernière version du manuscrit, l'auteur a soumis une version révisée de son document. Nous apprécierions que vous évaluiez cette nouvelle version.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue avant le {$responseDueDate} pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations.<br />\n<br />\nL'évaluation est due pour le {$reviewDueDate}.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} » <br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice de rubrique à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou décline la tâche d'évaluation d'une soumission pour un cycle subséquent d'évaluation. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation et que l'accès de l'évaluateur-trice en un clic est activé.
-MANUAL_PAYMENT_NOTIFICATION	fr_CA	Avis de paiement manuel	Un paiement manuel doit être traité pour la revue {$contextName} et l'utilisateur {$userFullName} (nom d'utilisateur &quot;{$userName}&quot;).<br />\n<br />\nL'élément facturé est &quot;{$itemName}&quot;.<br />\nLe coût est de {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nCe courriel a été généré par le plugiciel de paiement manuel du Open Journal Systems.	Ce modèle de courriel est utilisé pour aviser un directeur de revue que le paiement manuel a été demandé.
+REVIEW_REQUEST_ATTACHED	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} ». Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue. Les directives d'évaluation de la revue se trouvent ci-dessous et la soumission est jointe au présent courriel. Votre évaluation de la soumission, ainsi que vos recommandations, devraient nous parvenir par courriel d'ici le {$reviewDueDate}.<br />\n<br />\nVeuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n<br />\nDirectives pour l'évaluation<br />\n<br />\n{$reviewGuidelines}<br />\n	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui demander s'il ou elle accepte ou refuse la tâche d'évaluation d'une soumission. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de « Demande d'évaluation par pièce-jointe de courriel » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation . (Autrement, voir « Demande d'évaluation ».)
+REVIEW_REMIND_AUTO	fr_CA	Rappel automatique d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, votre évaluation avant le {$reviewDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai. Nous serions toutefois heureux de recevoir votre évaluation dès que possible.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de remise d'une évaluation est révolue (voir Options d'évaluation sous Paramètres > Flux des travaux > Évaluation) et que l'accès de l'évaluateur-trice en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
 REVIEW_REQUEST_ATTACHED_SUBSEQUENT	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nCeci concerne le manuscrit « {$submissionTitle} », qui est présentement évalué par la revue {$contextName}.<br />\n<br />\nSuivant l'évaluation de la dernière version du manuscrit, l'auteur-e a soumis une version révisée de son document. Nous apprécierions que vous évaluiez cette nouvelle version.<br />\n<br />\nLes directives d'évaluation de la revue se trouvent ci-dessous et la soumission est jointe au présent courriel. Votre évaluation de la soumission, ainsi que vos recommandations, devraient nous parvenir par courriel d'ici le {$reviewDueDate}.<br />\n<br />\nVeuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n<br />\nDirectives pour l'évaluation<br />\n<br />\n{$reviewGuidelines}<br />\n	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui demander s'il ou elle accepte ou refuse la tâche d'évaluation d'une soumission pour un cycle subséquent d'évaluation. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de « Demande d'évaluation par pièce-jointe de courriel » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation . (Autrement voir « Demande d'évaluation (cycle subséquent)».)
 REVIEW_REQUEST_REMIND_AUTO	fr_CA	Rappel de demande d'évaluation d'un article	{$reviewerName},<br />\nCeci est un petit rappel concernant notre demande d'évaluation de « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, une réponse avant le {$responseDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai.\n<br />\nNous pensons que vous seriez un-e excellent-e évaluateur-trice pour le manuscrit. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations. Le site Web est {$contextUrl}<br />\n<br />\nL'évaluation est dû pour le {$reviewDueDate}.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de confirmation d'un,une évaluateur-trice est révolue (voir Options d'évaluation sous Paramètres &gt; Flux des travaux &gt; Évaluation) et que l'accès de l'évaluateur-trice en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
 REVIEW_REQUEST_REMIND_AUTO_ONECLICK	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, une réponse avant le {$responseDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai.\n<br />\nNous pensons que vous seriez un-e excellent-e évaluateur-trice pour le manuscrit. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations.<br />\n<br />\nL'évaluation est dû pour le {$reviewDueDate}.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel est automatiquement envoyé lorsque la date d'échéance de confirmation d'un,une évaluateur-trice est écoulée (voir Options de révision sous Paramètres &gt; Flux des travaux &gt; Révision) et l'accès de l'évaluateur-trice en un clic est activé. Les tâches planifiées doivent être configurées et activées (voir le fichier de configuration du site).
@@ -5152,7 +5022,6 @@ REVIEW_CONFIRM	fr_CA	Acceptation d'évaluation	Rédacteurs-trices,<br />\n<br />
 REVIEW_DECLINE	fr_CA	Refus d'évaluation	Rédacteurs-trices,<br />\n<br />\nPour le moment, il m'est impossible d'évaluer la soumission intitulée « {$submissionTitle} » pour la revue {$contextName}. Je vous remercie d'avoir pensé à moi. N'hésitez pas à communiquer avec moi pour un autre projet.<br />\n<br />\n{$reviewerName}	Ce courriel est envoyé par l'évaluateur-trice au,à la rédacteur-trice de rubrique en réponse à la demande d'évaluation, pour l'aviser qu'il ou elle ne peut effectuer l'évaluation.
 REVIEW_ACK	fr_CA	Accusé de réception de l'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nNous vous remercions d'avoir évalué la soumission intitulée « {$submissionTitle} » pour la revue {$contextName}. Nous vous sommes reconnaissants de votre contribution à la qualité des travaux que nous publions.	Ce courriel est envoyé par le,la rédacteur-trice de rubrique, pour accuser réception d'une évaluation terminée et remercier l'évaluateur-trice de sa contribution.
 REVIEW_REMIND	fr_CA	Rappel d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Nous espérions recevoir votre évaluation avant le {$reviewDueDate}. Nous serions heureux de la recevoir dès que possible.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé par le,la rédacteur-trice de rubrique pour rappeler à un,une évaluateur-trice que son évaluation est due.
-REVIEW_REMIND_AUTO	fr_CA	Rappel automatique d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, votre évaluation avant le {$reviewDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai. Nous serions toutefois heureux de recevoir votre évaluation dès que possible.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de remise d'une évaluation est révolue (voir Options d'évaluation sous Paramètres > Flux des travaux > Évaluation) et que l'accès de l'évaluateur-trice en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
 REVIEW_REMIND_ONECLICK	fr_CA	Rappel d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Nous espérions recevoir votre évaluation avant le {$reviewDueDate}. Nous serions heureux de la recevoir dès que possible.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui rappeler que son évaluation est due.
 REVIEW_REMIND_AUTO_ONECLICK	fr_CA	Rappel automatique d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, votre évaluation avant le {$reviewDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai. Nous serions toutefois heureux de recevoir votre évaluation dès que possible.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de remise d'une évaluation est révolue (voir Options d'évaluation sous Paramètres > Flux des travaux > Évaluation) et que l'accès de l'évaluateur-trice en un clic est activé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
 EDITOR_DECISION_ACCEPT	fr_CA	Décision du rédacteur	{$authorName},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à la revue {$contextName}.<br />\n<br />\nNotre décision est d'accepter votre soumission.	Ce courriel du,de la rédacteur-trice ou du,de la rédacteur-trice de rubrique à un-e auteur-e le,la notifie de la décision finale concernant sa soumission, soit d'accepter sa soumission.
@@ -5163,6 +5032,8 @@ EDITOR_DECISION_RESUBMIT	fr_CA	Décision du rédacteur	{$authorName},<br />\n<br
 EDITOR_DECISION_DECLINE	fr_CA	Décision du rédacteur	{$authorName}:<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à la revue {$contextName}.<br />\n<br />\nNotre décision est de refuser votre soumission.	Ce courriel du,de la rédacteur-trice ou du,de la rédacteur-trice de rubrique à un-e auteur-e le,la notifie de la décision concernant sa soumission, soit de refuser la soumission.
 EDITOR_DECISION_INITIAL_DECLINE	fr_CA	Décision du rédacteur	\n\t\t\t{$authorName},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à  la revue {$contextName}.<br />\n<br />\nNotre décision est de refuser votre soumission.	Cet courriel est envoyé à l'auteur-e si la soumission est refusée avant même l'étape d'évaluation
 EDITOR_RECOMMENDATION	fr_CA	Recommandation du rédacteur	{$editors},<br />\n<br />\nLa recommandation concernant la soumission « {$submissionTitle} » à la revue {$contextName} est de : {$recommendation}	Ce courriel envoyé par le,la rédacteur-trice ou le,la rédacteur-trice de rubrique en charge de la recommandation au,à la rédacteur-trice ou au,à la rédacteur-trice de rubrique en charge de la prise de décisions l'informe d'une recommandation finale concernant la soumission.
+COPYEDIT_REQUEST	fr_CA	Demande de révision d'une soumission	{$participantName},<br />\n<br />\nJ'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} à l'aide des étapes suivantes.<br />\n1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n2. Ouvrir le(s) fichier(s) disponible(s) sous Fichiers des ébauches finales et effectuer votre révision, tout en ajoutant des discussions sur la révision, le cas échéant.<br />\n3. Enregistrer le(s) fichier(s) révisé(s) et le(s) téléverser dans la section Version(s) révisée(s).<br />\n4. Informer le,la rédacteur-trice que tous les fichiers ont été révisés et que l'étape de production peut débuter.<br />\n<br />\nURL de la revue {$contextName} : {$contextUrl}<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$participantUsername}	Ce courriel du, de la rédacteur-trice de rubrique à un-e réviseur-e lui demande de procéder à la révision. Il fournit les renseignements sur la soumission et comment accéder à celle-ci.
+PAYPAL_INVESTIGATE_PAYMENT	fr_CA	Activité inhabituelle de PayPal	L'Open Journal Systems a remarqué une activité inhabituelle concernant la prise en charge du paiement PayPal pour la revue {$contextName}. Cette activité pourrait nécessiter une attention particulière ou une intervention manuelle.<br />\n                       <br />\nCe courriel a été généré par le plugiciel PayPal du Open Journal Systems.<br />\n<br />\nInformation complète de la demande :<br />\n{$postInfo}<br />\n<br />\nInformation supplémentaire (si fournie) :<br />\n{$additionalInfo}<br />\n<br />\nVariables serveur :<br />\n{$serverVars}<br />\n	Ce modèle de courriel est utilisé pour aviser un contact principal d'une revue qu'une activité inhabituelle ou requérant une intervention manuelle a été remarquée par le plugiciel PayPal.
 LAYOUT_REQUEST	fr_CA	Demande de mise en page des épreuves	{$participantName},<br />\n<br />\nJ'aimerais que vous prépariez les épreuves du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} à l'aide des étapes suivantes.<br />\n1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n2. Se connecter au site Web de la revue et utiliser les fichiers disponibles sous Fichiers prêts pour la production pour créer les épreuves en fonction des normes de la revue.<br />\n3. Téléverser les épreuves dans la section Épreuves.<br />\n4. Informer le,la rédacteur-trice, via une discussion sur la production, que les épreuves ont été téléversées et qu'elles sont prêtes.<br />\n<br />\nURL de la revue {$contextName} : {$contextUrl}<br />\nURL du manuscrit : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$participantUsername}<br />\n<br />\nSi vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.	Ce courriel du,de la rédacteur-trice de rubrique au, à la responsable de la mise en page l'avise qu'il ou elle a été assigné-e à la réalisation de la mise en page de la soumission. Il fournit les renseignements sur la soumission et comment accéder à celle-ci.
 LAYOUT_COMPLETE	fr_CA	Mise en page des épreuves terminée	{$editorialContactName},<br />\n<br />\nLes épreuves du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} sont maintenant prêtes pour la relecture.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec moi.<br />\n<br />\n{$participantName}	Ce courriel du,de la responsable de la mise en page au,à la rédacteur-trice de rubrique l'avise que l'étape de mise en page est complétée.
 EMAIL_LINK	fr_CA	Article potentiellement intéressant	Je pense que l'article suivant pourrait vous intéresser : « {$submissionTitle} » par {$authorName}, publié dans le volume {$volume}, numéro {$number} de ({$year}) de la revue {$contextName}, à l'adresse suivante : {$articleUrl}.	Ce modèle de courriel fournit à un,une lecteur-trice inscrit-e l'occasion d'envoyer de l'information à quelqu'un qui peut être intéressé par un article en particulier. Il est disponible via Outils de lecture et doit être activé par le,la directeur-trice de la revue à la page Gestion des outils de lecture.
@@ -5172,6 +5043,7 @@ SUBSCRIPTION_BEFORE_EXPIRY	fr_CA	Avis d'expiration de l'abonnement	{$subscriberN
 SUBSCRIPTION_AFTER_EXPIRY	fr_CA	Abonnement expiré	{$subscriberName},<br />\n<br />\nVotre abonnement à la revue {$contextName} est expiré.<br />\n<br />\n{$subscriptionType}<br />\nDate d'expiration : {$expiryDate}<br />\n<br />\nPour renouveler votre abonnement, veuillez vous rendre sur le site Web de la revue. Vous pouvez y ouvrir une session en utilisant votre nom d'utilisateur-trice, soit « {$username} ».<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous.<br />\n<br />\n{$subscriptionContactSignature}	Ce courriel avise un-e abonné-e que son abonnement est expiré. Il fournit l'adresse URL de la revue, ainsi que les instructions pour y accéder.
 SUBSCRIPTION_AFTER_EXPIRY_LAST	fr_CA	Abonnement expiré - Dernier rappel	{$subscriberName},<br />\n<br />\nVotre abonnement à la revue {$contextName} est expiré. Veuillez prendre note que ceci est le dernier rappel qui vous sera envoyé.<br />\n<br />\n{$subscriptionType}<br />\nDate d'expiration : {$expiryDate}<br />\n<br />\nPour renouveller votre abonnement, aveuillez vous rendre sur le site Web de la revue. Vous pouvez y ouvrir une session avec votre nom d'utilisateur-trice, soit « {$username} ».<br />\n<br />\nSi vous avez des questions, ne hésitez pas à communiquer avec nous.<br />\n<br />\n{$subscriptionContactSignature}	Ce courriel avise un-e abonné-e que son abonnement est expiré. Il donne l'adresse URL de la revue ainsi que les instructions pour y accéder.
 SUBSCRIPTION_PURCHASE_INDL	fr_CA	Souscription à un abonnement individuel	Une souscription en ligne à un abonnement individuel pour la revue {$contextName} avec les renseignements suivants :<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nUtilisateur-trice :<br />\n{$userDetails}<br />\n<br />\nInformation d'adhésion (si fournie) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivante.<br />\n<br />\nURL d'abonnement : {$subscriptionUrl}<br/>\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement individuel a été souscrit en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit.
+MANUAL_PAYMENT_NOTIFICATION	fr_CA	Avis de paiement manuel	Un paiement manuel doit être traité pour la revue {$contextName} et l'utilisateur {$userFullName} (nom d'utilisateur &quot;{$userName}&quot;).<br />\n<br />\nL'élément facturé est &quot;{$itemName}&quot;.<br />\nLe coût est de {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nCe courriel a été généré par le plugiciel de paiement manuel du Open Journal Systems.	Ce modèle de courriel est utilisé pour aviser un directeur de revue que le paiement manuel a été demandé.
 SUBSCRIPTION_PURCHASE_INSTL	fr_CA	Souscription à un abonnement institutionnel	Souscription en ligne à un abonnement institutionnel pour la revue {$contextName} avec les renseignements suivants. Pour activer cet abonnement, veuillez utiliser l'URL d'abonnement fourni et fixer le statut de l'abonnement à « actif ».<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nÉtablissement :<br />\n{$institutionName}<br />\n{$institutionMailingAddress}<br />\n<br />\nDomaine (si fourni) :<br />\n{$domain}<br />\n<br />\nPlage d'adresses IP (si fournie) :<br />\n{$ipRanges}<br />\n<br />\nPersonne-ressource :<br />\n{$userDetails}<br />\n<br />\nRenseignements d'adhésion (si fournis) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant :<br />\n<br />\nURL de l'abonnement : {$subscriptionUrl}<br />\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement institutionnel a été souscrit en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit.
 SUBSCRIPTION_RENEW_INDL	fr_CA	Renouvellement d'abonnement individuel	Un abonnement individuel a été renouvelé en ligne pour la revue {$contextName} avec les renseignements suivants.<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nUtilisateur-trice :<br />\n{$userDetails}<br />\n<br />\nRenseignements d'adhésion (si fournis) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant.<br />\n<br />\nURL de l'abonnement : {$subscriptionUrl}<br />\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement individuel a été renouvelé en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement renouvelé.
 SUBSCRIPTION_RENEW_INSTL	fr_CA	Renouvellement d'abonnement institutionnel	Un abonnement institutionnel a été renouvelé en ligne pour la revue {$contextName} avec les renseignements suivants.<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nÉtablissement :<br />\n{$institutionName}<br />\n{$institutionMailingAddress}<br />\n<br />\nDomaine (si fourni) :<br />\n{$domain}<br />\n<br />\nPlage d'adresses IP (si fournie) :<br />\n{$ipRanges}<br />\n<br />\nPersonne-ressource :<br />\n{$userDetails}<br />\n<br />\nRenseignements d'adhésion (si fournis) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant.<br />\n<br />\nURL de l'abonnement : {$subscriptionUrl}<br />\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement institutionnel a été renouvelé en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement renouvelé.
@@ -5181,22 +5053,7 @@ STATISTICS_REPORT_NOTIFICATION	fr_CA	Activité éditoriale pour {$month} {$year}
 ANNOUNCEMENT	fr_CA	{$title}	<b>{$title}</b><br />\n<br />\n{$summary}<br />\n<br />\nVisiter notre site Web pour consulter <a href="{$url}">l'annonce complète</a>.	Ce courriel est envoyé lorsqu'une nouvelle annonce est créée.
 ORCID_COLLECT_AUTHOR_ID	fr_CA	Soumission ORCID	{$authorName},<br/>\n<br/>\nVous avez été inscrit ou inscrite en tant qu'auteur ou auteure pour un manuscrit soumis à {$contextName}.<br/>\nPour confirmer votre statut d'auteur ou d'auteure, veuillez ajouter votre identifiant ORCID à cette soumission en cliquant sur le lien ci-dessous.<br/>\n<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="icône identifiant ORCID" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Se connecter avec votre identifiant ORCID ou s'inscrire</a><br/>\n<br/>\n<br/>\n<a href="{$orcidAboutUrl}">Plus de renseignements sur votre identifiant ORCID dans {$contextName}</a><br/>\n<br/>\nSi vous avez des questions, veuillez communiquer avec nous.<br/>\n<br/>\n{$principalContactSignature}<br/>\n	Ce modèle de courriel est utilisé pour récupérer les identifiants ORCID des auteurs-es.
 ORCID_REQUEST_AUTHOR_AUTHORIZATION	fr_CA	Demande d'accès au dossier ORCID	{$authorName},<br/>\n<br/>\nVous avez été inscrit ou inscrite en tant qu'auteur ou auteure pour le manuscrit « {$submissionTitle} » soumis à {$contextName}.\n<br/>\n<br/>\nVeuillez nous autoriser à ajouter votre identifiant ORCID à cette soumission et à ajouter également la soumission à votre dossier ORCID suite à sa publication.\n<br/>\nSuivre le lien vers le site officiel ORCID, vous connecter avec votre profil et autoriser l'accès en suivant les instructions.<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="icône identifiant ORCID" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Se connecter avec votre identifiant ORCID ou s'inscrire</a><br/>\n<br/>\n<br/>\n<a href="{$orcidAboutUrl}">Plus de renseignements sur votre identifiant ORCID dans {$contextName}</a><br/>\n<br/>\nSi vous avez des questions, veuillez communiquer avec nous.<br/>\n<br/>\n{$principalContactSignature}<br/>\n	Ce modèle de courriel est utilisé pour demander aux auteurs-es l'accès à leur dossier ORCID.
-PAYPAL_INVESTIGATE_PAYMENT	fr_CA	Activité inhabituelle de PayPal	L'Open Journal Systems a remarqué une activité inhabituelle concernant la prise en charge du paiement PayPal pour la revue {$contextName}. Cette activité pourrait nécessiter une attention particulière ou une intervention manuelle.<br />\n                       <br />\nCe courriel a été généré par le plugiciel PayPal du Open Journal Systems.<br />\n<br />\nInformation complète de la demande :<br />\n{$postInfo}<br />\n<br />\nInformation supplémentaire (si fournie) :<br />\n{$additionalInfo}<br />\n<br />\nVariables serveur :<br />\n{$serverVars}<br />\n	Ce modèle de courriel est utilisé pour aviser un contact principal d'une revue qu'une activité inhabituelle ou requérant une intervention manuelle a été remarquée par le plugiciel PayPal.
 \.
-
-
---
--- Name: email_templates_default_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.email_templates_default_email_id_seq', 58, true);
-
-
---
--- Name: email_templates_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.email_templates_email_id_seq', 1, false);
 
 
 --
@@ -5212,285 +5069,272 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	17	2023-04-03 21:13:05	268435458	submission.event.general.metadataUpdated	0
-2	515	1	17	2023-04-03 21:13:06	1342177281	submission.event.fileUploaded	0
-3	1048585	1	17	2023-04-03 21:13:06	1342177288	submission.event.fileRevised	0
-4	515	1	17	2023-04-03 21:13:07	1342177296	submission.event.fileEdited	0
-5	1048585	1	17	2023-04-03 21:13:07	1342177296	submission.event.fileEdited	0
-6	1048585	1	17	2023-04-03 21:13:09	268435458	submission.event.general.metadataUpdated	0
-7	1048585	1	17	2023-04-03 21:13:10	268435457	submission.event.submissionSubmitted	0
-8	1048585	1	3	2023-04-03 21:13:15	805306371	log.editor.decision	0
-9	1048585	1	3	2023-04-03 21:13:21	1073741825	log.review.reviewerAssigned	0
-10	1048585	1	3	2023-04-03 21:13:25	1073741825	log.review.reviewerAssigned	0
-11	1048585	1	3	2023-04-03 21:13:32	1073741825	log.review.reviewerAssigned	0
-12	1048585	1	3	2023-04-03 21:13:34	805306371	log.editor.decision	0
-13	1048585	1	3	2023-04-03 21:13:39	268435459	submission.event.participantAdded	0
-14	1048585	1	3	2023-04-03 21:13:42	805306371	log.editor.decision	0
-15	1048585	1	3	2023-04-03 21:13:48	268435459	submission.event.participantAdded	0
-16	1048585	1	3	2023-04-03 21:13:52	268435459	submission.event.participantAdded	0
-17	1048585	1	3	2023-04-03 21:13:59	268435458	submission.event.general.metadataUpdated	0
-18	1048585	1	3	2023-04-03 21:14:01	268435458	submission.event.general.metadataUpdated	0
-19	1048585	1	3	2023-04-03 21:14:02	268435458	submission.event.general.metadataUpdated	0
-20	1048585	1	3	2023-04-03 21:14:06	268435458	submission.event.general.metadataUpdated	0
-21	515	2	3	2023-04-03 21:14:16	1342177281	submission.event.fileUploaded	0
-22	1048585	1	3	2023-04-03 21:14:16	1342177288	submission.event.fileRevised	0
-23	515	2	3	2023-04-03 21:14:16	1342177296	submission.event.fileEdited	0
-24	1048585	1	3	2023-04-03 21:14:16	1342177296	submission.event.fileEdited	0
-25	1048585	1	3	2023-04-03 21:14:25	268435459	submission.event.participantAdded	0
-26	1048585	1	17	2023-04-03 21:14:31	268435458	submission.event.general.metadataUpdated	0
-27	1048585	1	3	2023-04-03 21:14:35	268435458	submission.event.general.metadataUpdated	0
-28	1048585	1	3	2023-04-03 21:14:37	268435462	publication.event.published	0
-29	1048585	1	3	2023-04-03 21:14:45	268435463	publication.event.unpublished	0
-30	1048585	1	3	2023-04-03 21:14:50	268435462	publication.event.published	0
-31	1048585	1	3	2023-04-03 21:14:53	268435458	submission.event.general.metadataUpdated	0
-32	1048585	1	3	2023-04-03 21:14:53	268435464	publication.event.versionCreated	0
-33	1048585	1	3	2023-04-03 21:15:04	268435458	submission.event.general.metadataUpdated	0
-34	1048585	1	3	2023-04-03 21:15:08	268435458	submission.event.general.metadataUpdated	0
-35	1048585	1	3	2023-04-03 21:15:15	268435458	submission.event.general.metadataUpdated	0
-36	1048585	1	3	2023-04-03 21:15:16	268435462	publication.event.versionPublished	0
-37	1048585	1	3	2023-04-03 21:15:26	268435463	publication.event.versionUnpublished	0
-38	1048585	1	3	2023-04-03 21:15:31	268435459	submission.event.participantAdded	0
-39	1048585	1	3	2023-04-03 21:15:40	268435459	submission.event.participantAdded	0
-40	1048585	2	18	2023-04-03 21:15:53	268435458	submission.event.general.metadataUpdated	0
-41	515	3	18	2023-04-03 21:15:54	1342177281	submission.event.fileUploaded	0
-42	1048585	2	18	2023-04-03 21:15:54	1342177288	submission.event.fileRevised	0
-43	515	3	18	2023-04-03 21:15:54	1342177296	submission.event.fileEdited	0
-44	1048585	2	18	2023-04-03 21:15:54	1342177296	submission.event.fileEdited	0
-45	1048585	2	18	2023-04-03 21:15:56	268435458	submission.event.general.metadataUpdated	0
-46	1048585	2	18	2023-04-03 21:15:58	268435457	submission.event.submissionSubmitted	0
-47	1048585	2	3	2023-04-03 21:16:02	805306371	log.editor.decision	0
-48	1048585	2	3	2023-04-03 21:16:07	268435459	submission.event.participantAdded	0
-49	1048585	2	3	2023-04-03 21:16:11	268435458	submission.event.general.metadataUpdated	0
-50	1048585	2	6	2023-04-03 21:16:18	805306372	log.editor.recommendation	0
-51	1048585	3	19	2023-04-03 21:16:32	268435458	submission.event.general.metadataUpdated	0
-52	515	4	19	2023-04-03 21:16:33	1342177281	submission.event.fileUploaded	0
-53	1048585	3	19	2023-04-03 21:16:33	1342177288	submission.event.fileRevised	0
-54	515	4	19	2023-04-03 21:16:33	1342177296	submission.event.fileEdited	0
-55	1048585	3	19	2023-04-03 21:16:33	1342177296	submission.event.fileEdited	0
-56	1048585	3	19	2023-04-03 21:16:36	268435458	submission.event.general.metadataUpdated	0
-57	1048585	3	19	2023-04-03 21:16:37	268435457	submission.event.submissionSubmitted	0
-58	1048585	3	3	2023-04-03 21:16:42	805306371	log.editor.decision	0
-59	1048585	3	3	2023-04-03 21:16:47	1073741825	log.review.reviewerAssigned	0
-60	1048585	3	3	2023-04-03 21:16:53	1073741825	log.review.reviewerAssigned	0
-61	1048585	3	3	2023-04-03 21:16:55	805306371	log.editor.decision	0
-62	1048585	3	3	2023-04-03 21:17:01	268435459	submission.event.participantAdded	0
-63	1048585	4	20	2023-04-03 21:17:09	268435458	submission.event.general.metadataUpdated	0
-64	515	5	20	2023-04-03 21:17:11	1342177281	submission.event.fileUploaded	0
-65	1048585	4	20	2023-04-03 21:17:11	1342177288	submission.event.fileRevised	0
-66	515	5	20	2023-04-03 21:17:11	1342177296	submission.event.fileEdited	0
-67	1048585	4	20	2023-04-03 21:17:11	1342177296	submission.event.fileEdited	0
-68	1048585	4	20	2023-04-03 21:17:16	268435458	submission.event.general.metadataUpdated	0
-69	1048585	4	20	2023-04-03 21:17:18	268435457	submission.event.submissionSubmitted	0
-70	1048585	5	21	2023-04-03 21:17:25	268435458	submission.event.general.metadataUpdated	0
-71	515	6	21	2023-04-03 21:17:26	1342177281	submission.event.fileUploaded	0
-72	1048585	5	21	2023-04-03 21:17:26	1342177288	submission.event.fileRevised	0
-73	515	6	21	2023-04-03 21:17:27	1342177296	submission.event.fileEdited	0
-74	1048585	5	21	2023-04-03 21:17:27	1342177296	submission.event.fileEdited	0
-75	1048585	5	21	2023-04-03 21:17:29	268435458	submission.event.general.metadataUpdated	0
-76	1048585	5	21	2023-04-03 21:17:30	268435457	submission.event.submissionSubmitted	0
-77	1048585	5	3	2023-04-03 21:17:35	805306371	log.editor.decision	0
-78	515	7	3	2023-04-03 21:17:35	1342177281	submission.event.fileUploaded	0
-79	1048585	5	3	2023-04-03 21:17:35	1342177288	submission.event.fileRevised	0
-80	1048585	5	3	2023-04-03 21:17:41	1073741825	log.review.reviewerAssigned	0
-81	1048585	5	3	2023-04-03 21:17:47	1073741825	log.review.reviewerAssigned	0
-82	1048585	5	3	2023-04-03 21:17:49	805306371	log.editor.decision	0
-83	1048585	5	3	2023-04-03 21:17:54	268435459	submission.event.participantAdded	0
-84	1048585	5	3	2023-04-03 21:17:56	805306371	log.editor.decision	0
-85	1048585	5	3	2023-04-03 21:18:01	268435459	submission.event.participantAdded	0
-86	1048585	5	3	2023-04-03 21:18:05	268435459	submission.event.participantAdded	0
-87	1048585	6	22	2023-04-03 21:18:14	268435458	submission.event.general.metadataUpdated	0
-88	515	8	22	2023-04-03 21:18:15	1342177281	submission.event.fileUploaded	0
-89	1048585	6	22	2023-04-03 21:18:15	1342177288	submission.event.fileRevised	0
-90	515	8	22	2023-04-03 21:18:15	1342177296	submission.event.fileEdited	0
-91	1048585	6	22	2023-04-03 21:18:15	1342177296	submission.event.fileEdited	0
-92	1048585	6	22	2023-04-03 21:18:18	268435458	submission.event.general.metadataUpdated	0
-93	1048585	6	22	2023-04-03 21:18:19	268435457	submission.event.submissionSubmitted	0
-94	1048585	6	3	2023-04-03 21:18:25	805306371	log.editor.decision	0
-95	515	9	3	2023-04-03 21:18:25	1342177281	submission.event.fileUploaded	0
-96	1048585	6	3	2023-04-03 21:18:25	1342177288	submission.event.fileRevised	0
-97	1048585	6	3	2023-04-03 21:18:30	1073741825	log.review.reviewerAssigned	0
-98	1048585	6	3	2023-04-03 21:18:36	1073741825	log.review.reviewerAssigned	0
-99	1048585	6	3	2023-04-03 21:18:38	805306371	log.editor.decision	0
-100	1048585	6	3	2023-04-03 21:18:43	268435459	submission.event.participantAdded	0
-101	1048585	6	3	2023-04-03 21:18:46	805306371	log.editor.decision	0
-102	1048585	6	3	2023-04-03 21:18:51	268435459	submission.event.participantAdded	0
-103	1048585	7	23	2023-04-03 21:19:01	268435458	submission.event.general.metadataUpdated	0
-104	515	10	23	2023-04-03 21:19:02	1342177281	submission.event.fileUploaded	0
-105	1048585	7	23	2023-04-03 21:19:02	1342177288	submission.event.fileRevised	0
-106	515	10	23	2023-04-03 21:19:02	1342177296	submission.event.fileEdited	0
-107	1048585	7	23	2023-04-03 21:19:02	1342177296	submission.event.fileEdited	0
-108	1048585	7	23	2023-04-03 21:19:04	268435458	submission.event.general.metadataUpdated	0
-109	1048585	7	23	2023-04-03 21:19:05	268435457	submission.event.submissionSubmitted	0
-110	1048585	7	3	2023-04-03 21:19:11	805306371	log.editor.decision	0
-111	515	11	3	2023-04-03 21:19:11	1342177281	submission.event.fileUploaded	0
-112	1048585	7	3	2023-04-03 21:19:11	1342177288	submission.event.fileRevised	0
-113	1048585	7	3	2023-04-03 21:19:17	1073741825	log.review.reviewerAssigned	0
-114	1048585	7	3	2023-04-03 21:19:21	1073741825	log.review.reviewerAssigned	0
-115	1048585	7	3	2023-04-03 21:19:27	1073741825	log.review.reviewerAssigned	0
-116	1048585	7	8	2023-04-03 21:19:31	1073741830	log.review.reviewAccepted	0
-117	1048585	7	8	2023-04-03 21:19:35	1073741848	log.review.reviewReady	0
-118	1048585	8	24	2023-04-03 21:19:44	268435458	submission.event.general.metadataUpdated	0
-119	515	12	24	2023-04-03 21:19:45	1342177281	submission.event.fileUploaded	0
-120	1048585	8	24	2023-04-03 21:19:45	1342177288	submission.event.fileRevised	0
-121	515	12	24	2023-04-03 21:19:45	1342177296	submission.event.fileEdited	0
-122	1048585	8	24	2023-04-03 21:19:45	1342177296	submission.event.fileEdited	0
-123	1048585	8	24	2023-04-03 21:19:50	268435458	submission.event.general.metadataUpdated	0
-124	1048585	8	24	2023-04-03 21:19:52	268435457	submission.event.submissionSubmitted	0
-125	1048585	9	25	2023-04-03 21:19:59	268435458	submission.event.general.metadataUpdated	0
-126	515	13	25	2023-04-03 21:20:00	1342177281	submission.event.fileUploaded	0
-127	1048585	9	25	2023-04-03 21:20:00	1342177288	submission.event.fileRevised	0
-128	515	13	25	2023-04-03 21:20:01	1342177296	submission.event.fileEdited	0
-129	1048585	9	25	2023-04-03 21:20:01	1342177296	submission.event.fileEdited	0
-130	1048585	9	25	2023-04-03 21:20:03	268435458	submission.event.general.metadataUpdated	0
-131	1048585	9	25	2023-04-03 21:20:03	268435457	submission.event.submissionSubmitted	0
-132	1048585	9	3	2023-04-03 21:20:10	805306371	log.editor.decision	0
-133	515	14	3	2023-04-03 21:20:10	1342177281	submission.event.fileUploaded	0
-134	1048585	9	3	2023-04-03 21:20:10	1342177288	submission.event.fileRevised	0
-135	1048585	9	3	2023-04-03 21:20:16	1073741825	log.review.reviewerAssigned	0
-136	1048585	9	3	2023-04-03 21:20:22	1073741825	log.review.reviewerAssigned	0
-137	1048585	9	3	2023-04-03 21:20:24	805306371	log.editor.decision	0
-138	1048585	9	3	2023-04-03 21:20:29	268435459	submission.event.participantAdded	0
-139	1048585	9	3	2023-04-03 21:20:31	805306371	log.editor.decision	0
-140	1048585	9	3	2023-04-03 21:20:37	268435459	submission.event.participantAdded	0
-141	1048585	9	3	2023-04-03 21:20:41	268435459	submission.event.participantAdded	0
-142	1048585	10	26	2023-04-03 21:20:50	268435458	submission.event.general.metadataUpdated	0
-143	515	15	26	2023-04-03 21:20:51	1342177281	submission.event.fileUploaded	0
-144	1048585	10	26	2023-04-03 21:20:51	1342177288	submission.event.fileRevised	0
-145	515	15	26	2023-04-03 21:20:51	1342177296	submission.event.fileEdited	0
-146	1048585	10	26	2023-04-03 21:20:51	1342177296	submission.event.fileEdited	0
-147	1048585	10	26	2023-04-03 21:20:54	268435458	submission.event.general.metadataUpdated	0
-148	1048585	10	26	2023-04-03 21:20:55	268435457	submission.event.submissionSubmitted	0
-149	1048585	10	3	2023-04-03 21:21:01	805306371	log.editor.decision	0
-150	1048585	10	3	2023-04-03 21:21:07	1073741825	log.review.reviewerAssigned	0
-151	1048585	10	3	2023-04-03 21:21:13	1073741825	log.review.reviewerAssigned	0
-152	1048585	10	9	2023-04-03 21:21:17	1073741830	log.review.reviewAccepted	0
-153	1048585	10	9	2023-04-03 21:21:21	1073741848	log.review.reviewReady	0
-154	1048585	10	10	2023-04-03 21:21:26	1073741830	log.review.reviewAccepted	0
-155	1048585	10	10	2023-04-03 21:21:30	1073741848	log.review.reviewReady	0
-156	1048585	11	27	2023-04-03 21:21:38	268435458	submission.event.general.metadataUpdated	0
-157	515	16	27	2023-04-03 21:21:39	1342177281	submission.event.fileUploaded	0
-158	1048585	11	27	2023-04-03 21:21:39	1342177288	submission.event.fileRevised	0
-159	515	16	27	2023-04-03 21:21:40	1342177296	submission.event.fileEdited	0
-160	1048585	11	27	2023-04-03 21:21:40	1342177296	submission.event.fileEdited	0
-161	1048585	11	27	2023-04-03 21:21:45	268435458	submission.event.general.metadataUpdated	0
-162	1048585	11	27	2023-04-03 21:21:46	268435457	submission.event.submissionSubmitted	0
-163	1048585	12	28	2023-04-03 21:21:53	268435458	submission.event.general.metadataUpdated	0
-164	515	17	28	2023-04-03 21:21:54	1342177281	submission.event.fileUploaded	0
-165	1048585	12	28	2023-04-03 21:21:54	1342177288	submission.event.fileRevised	0
-166	515	17	28	2023-04-03 21:21:55	1342177296	submission.event.fileEdited	0
-167	1048585	12	28	2023-04-03 21:21:55	1342177296	submission.event.fileEdited	0
-168	1048585	12	28	2023-04-03 21:21:57	268435458	submission.event.general.metadataUpdated	0
-169	1048585	12	28	2023-04-03 21:21:58	268435457	submission.event.submissionSubmitted	0
-170	1048585	12	3	2023-04-03 21:22:06	805306371	log.editor.decision	0
-171	1048585	12	3	2023-04-03 21:22:11	1073741825	log.review.reviewerAssigned	0
-172	1048585	12	3	2023-04-03 21:22:16	1073741825	log.review.reviewerAssigned	0
-173	1048585	13	29	2023-04-03 21:22:24	268435458	submission.event.general.metadataUpdated	0
-174	515	18	29	2023-04-03 21:22:25	1342177281	submission.event.fileUploaded	0
-175	1048585	13	29	2023-04-03 21:22:25	1342177288	submission.event.fileRevised	0
-176	515	18	29	2023-04-03 21:22:25	1342177296	submission.event.fileEdited	0
-177	1048585	13	29	2023-04-03 21:22:25	1342177296	submission.event.fileEdited	0
-178	1048585	13	29	2023-04-03 21:22:28	268435458	submission.event.general.metadataUpdated	0
-179	1048585	13	29	2023-04-03 21:22:29	268435457	submission.event.submissionSubmitted	0
-180	1048585	13	3	2023-04-03 21:22:37	805306371	log.editor.decision	0
-181	515	19	3	2023-04-03 21:22:37	1342177281	submission.event.fileUploaded	0
-182	1048585	13	3	2023-04-03 21:22:37	1342177288	submission.event.fileRevised	0
-183	1048585	13	3	2023-04-03 21:22:43	1073741825	log.review.reviewerAssigned	0
-184	1048585	13	3	2023-04-03 21:22:47	1073741825	log.review.reviewerAssigned	0
-185	1048585	13	3	2023-04-03 21:22:53	1073741825	log.review.reviewerAssigned	0
-186	1048585	13	7	2023-04-03 21:22:58	1073741830	log.review.reviewAccepted	0
-187	1048585	13	7	2023-04-03 21:23:02	1073741848	log.review.reviewReady	0
-188	1048585	13	9	2023-04-03 21:23:07	1073741830	log.review.reviewAccepted	0
-189	1048585	13	9	2023-04-03 21:23:11	1073741848	log.review.reviewReady	0
-190	1048585	13	10	2023-04-03 21:23:17	1073741830	log.review.reviewAccepted	0
-191	1048585	13	10	2023-04-03 21:23:21	1073741848	log.review.reviewReady	0
-192	1048585	13	3	2023-04-03 21:23:32	805306371	log.editor.decision	0
-193	1048585	14	30	2023-04-03 21:23:40	268435458	submission.event.general.metadataUpdated	0
-194	515	20	30	2023-04-03 21:23:41	1342177281	submission.event.fileUploaded	0
-195	1048585	14	30	2023-04-03 21:23:41	1342177288	submission.event.fileRevised	0
-196	515	20	30	2023-04-03 21:23:42	1342177296	submission.event.fileEdited	0
-197	1048585	14	30	2023-04-03 21:23:42	1342177296	submission.event.fileEdited	0
-198	1048585	14	30	2023-04-03 21:23:44	268435458	submission.event.general.metadataUpdated	0
-199	1048585	14	30	2023-04-03 21:23:45	268435457	submission.event.submissionSubmitted	0
-200	1048585	15	31	2023-04-03 21:23:53	268435458	submission.event.general.metadataUpdated	0
-201	515	21	31	2023-04-03 21:23:54	1342177281	submission.event.fileUploaded	0
-202	1048585	15	31	2023-04-03 21:23:54	1342177288	submission.event.fileRevised	0
-203	515	21	31	2023-04-03 21:23:54	1342177296	submission.event.fileEdited	0
-204	1048585	15	31	2023-04-03 21:23:54	1342177296	submission.event.fileEdited	0
-205	1048585	15	31	2023-04-03 21:23:56	268435458	submission.event.general.metadataUpdated	0
-206	1048585	15	31	2023-04-03 21:23:57	268435457	submission.event.submissionSubmitted	0
-207	1048585	15	3	2023-04-03 21:24:05	805306371	log.editor.decision	0
-208	515	22	3	2023-04-03 21:24:06	1342177281	submission.event.fileUploaded	0
-209	1048585	15	3	2023-04-03 21:24:06	1342177288	submission.event.fileRevised	0
-210	1048585	15	3	2023-04-03 21:24:11	1073741825	log.review.reviewerAssigned	0
-211	1048585	15	3	2023-04-03 21:24:16	1073741825	log.review.reviewerAssigned	0
-212	1048585	15	3	2023-04-03 21:24:17	805306371	log.editor.decision	0
-213	1048585	15	3	2023-04-03 21:24:23	268435459	submission.event.participantAdded	0
-214	1048585	15	3	2023-04-03 21:24:25	805306371	log.editor.decision	0
-215	1048585	15	3	2023-04-03 21:24:31	268435459	submission.event.participantAdded	0
-216	1048585	16	32	2023-04-03 21:24:40	268435458	submission.event.general.metadataUpdated	0
-217	515	23	32	2023-04-03 21:24:41	1342177281	submission.event.fileUploaded	0
-218	1048585	16	32	2023-04-03 21:24:41	1342177288	submission.event.fileRevised	0
-219	515	23	32	2023-04-03 21:24:42	1342177296	submission.event.fileEdited	0
-220	1048585	16	32	2023-04-03 21:24:42	1342177296	submission.event.fileEdited	0
-221	1048585	16	32	2023-04-03 21:24:44	268435458	submission.event.general.metadataUpdated	0
-222	1048585	16	32	2023-04-03 21:24:45	268435457	submission.event.submissionSubmitted	0
-223	1048585	17	33	2023-04-03 21:24:52	268435458	submission.event.general.metadataUpdated	0
-224	515	24	33	2023-04-03 21:24:54	1342177281	submission.event.fileUploaded	0
-225	1048585	17	33	2023-04-03 21:24:54	1342177288	submission.event.fileRevised	0
-226	515	24	33	2023-04-03 21:24:54	1342177296	submission.event.fileEdited	0
-227	1048585	17	33	2023-04-03 21:24:54	1342177296	submission.event.fileEdited	0
-228	1048585	17	33	2023-04-03 21:24:57	268435458	submission.event.general.metadataUpdated	0
-229	1048585	17	33	2023-04-03 21:24:58	268435457	submission.event.submissionSubmitted	0
-230	1048585	17	3	2023-04-03 21:25:06	805306371	log.editor.decision	0
-231	1048585	17	3	2023-04-03 21:25:12	1073741825	log.review.reviewerAssigned	0
-232	1048585	17	3	2023-04-03 21:25:17	1073741825	log.review.reviewerAssigned	0
-233	1048585	17	3	2023-04-03 21:25:19	805306371	log.editor.decision	0
-234	1048585	17	3	2023-04-03 21:25:24	268435459	submission.event.participantAdded	0
-235	1048585	17	3	2023-04-03 21:25:27	805306371	log.editor.decision	0
-236	1048585	17	3	2023-04-03 21:25:32	268435459	submission.event.participantAdded	0
-237	1048585	17	3	2023-04-03 21:25:36	268435459	submission.event.participantAdded	0
-238	515	25	3	2023-04-03 21:25:42	1342177281	submission.event.fileUploaded	0
-239	1048585	17	3	2023-04-03 21:25:42	1342177288	submission.event.fileRevised	0
-240	515	25	3	2023-04-03 21:25:43	1342177296	submission.event.fileEdited	0
-241	1048585	17	3	2023-04-03 21:25:43	1342177296	submission.event.fileEdited	0
-242	1048585	17	3	2023-04-03 21:25:53	268435458	submission.event.general.metadataUpdated	0
-243	1048585	17	3	2023-04-03 21:25:54	268435462	publication.event.scheduled	0
-244	1048585	17	3	2023-04-03 21:25:58	268435462	publication.event.published	0
-245	1048585	17	3	2023-04-03 21:26:07	268435463	publication.event.unpublished	0
-246	1048585	17	3	2023-04-03 21:26:07	268435462	publication.event.scheduled	0
-247	1048585	17	3	2023-04-03 21:26:16	268435462	publication.event.published	0
-248	1048585	17	3	2023-04-03 21:26:26	268435463	publication.event.unpublished	0
-249	1048585	17	3	2023-04-03 21:26:26	268435458	submission.event.general.metadataUpdated	0
-250	1048585	17	3	2023-04-03 21:26:41	268435458	submission.event.general.metadataUpdated	0
-251	1048585	17	3	2023-04-03 21:26:43	268435462	publication.event.published	0
-252	1048585	18	34	2023-04-03 21:26:55	268435458	submission.event.general.metadataUpdated	0
-253	515	26	34	2023-04-03 21:26:56	1342177281	submission.event.fileUploaded	0
-254	1048585	18	34	2023-04-03 21:26:56	1342177288	submission.event.fileRevised	0
-255	515	26	34	2023-04-03 21:26:56	1342177296	submission.event.fileEdited	0
-256	1048585	18	34	2023-04-03 21:26:56	1342177296	submission.event.fileEdited	0
-257	1048585	18	34	2023-04-03 21:26:59	268435458	submission.event.general.metadataUpdated	0
-258	1048585	18	34	2023-04-03 21:27:00	268435457	submission.event.submissionSubmitted	0
-259	1048585	18	3	2023-04-03 21:27:08	805306371	log.editor.decision	0
-260	1048585	19	35	2023-04-03 21:27:18	268435458	submission.event.general.metadataUpdated	0
-261	515	27	35	2023-04-03 21:27:19	1342177281	submission.event.fileUploaded	0
-262	1048585	19	35	2023-04-03 21:27:19	1342177288	submission.event.fileRevised	0
-263	515	27	35	2023-04-03 21:27:19	1342177296	submission.event.fileEdited	0
-264	1048585	19	35	2023-04-03 21:27:19	1342177296	submission.event.fileEdited	0
-265	1048585	19	35	2023-04-03 21:27:21	268435458	submission.event.general.metadataUpdated	0
-266	1048585	19	35	2023-04-03 21:27:22	268435457	submission.event.submissionSubmitted	0
-267	1048585	19	3	2023-04-03 21:27:31	805306371	log.editor.decision	0
-268	1048585	19	3	2023-04-03 21:27:37	1073741825	log.review.reviewerAssigned	0
-269	1048585	19	3	2023-04-03 21:27:41	1073741825	log.review.reviewerAssigned	0
-270	1048585	19	3	2023-04-03 21:27:43	805306371	log.editor.decision	0
-271	1048585	19	3	2023-04-03 21:27:48	268435459	submission.event.participantAdded	0
+1	1048585	1	17	2023-04-04 20:13:22	268435458	submission.event.general.metadataUpdated	0
+2	515	1	17	2023-04-04 20:13:24	1342177281	submission.event.fileUploaded	0
+3	1048585	1	17	2023-04-04 20:13:24	1342177288	submission.event.fileRevised	0
+4	515	1	17	2023-04-04 20:13:24	1342177296	submission.event.fileEdited	0
+5	1048585	1	17	2023-04-04 20:13:24	1342177296	submission.event.fileEdited	0
+6	1048585	1	17	2023-04-04 20:13:27	268435458	submission.event.general.metadataUpdated	0
+7	1048585	1	17	2023-04-04 20:13:28	268435457	submission.event.submissionSubmitted	0
+8	1048585	1	3	2023-04-04 20:13:33	805306371	log.editor.decision	0
+9	1048585	1	3	2023-04-04 20:13:40	1073741825	log.review.reviewerAssigned	0
+10	1048585	1	3	2023-04-04 20:13:44	1073741825	log.review.reviewerAssigned	0
+11	1048585	1	3	2023-04-04 20:13:50	1073741825	log.review.reviewerAssigned	0
+12	1048585	1	3	2023-04-04 20:13:52	805306371	log.editor.decision	0
+13	1048585	1	3	2023-04-04 20:13:58	268435459	submission.event.participantAdded	0
+14	1048585	1	3	2023-04-04 20:14:01	805306371	log.editor.decision	0
+15	1048585	1	3	2023-04-04 20:14:07	268435459	submission.event.participantAdded	0
+16	1048585	1	3	2023-04-04 20:14:11	268435459	submission.event.participantAdded	0
+17	1048585	1	3	2023-04-04 20:14:19	268435458	submission.event.general.metadataUpdated	0
+18	1048585	1	3	2023-04-04 20:14:22	268435458	submission.event.general.metadataUpdated	0
+19	1048585	1	3	2023-04-04 20:14:23	268435458	submission.event.general.metadataUpdated	0
+20	1048585	1	3	2023-04-04 20:14:26	268435458	submission.event.general.metadataUpdated	0
+21	515	2	3	2023-04-04 20:14:37	1342177281	submission.event.fileUploaded	0
+22	1048585	1	3	2023-04-04 20:14:37	1342177288	submission.event.fileRevised	0
+23	515	2	3	2023-04-04 20:14:37	1342177296	submission.event.fileEdited	0
+24	1048585	1	3	2023-04-04 20:14:38	1342177296	submission.event.fileEdited	0
+25	1048585	1	3	2023-04-04 20:14:47	268435459	submission.event.participantAdded	0
+26	1048585	1	17	2023-04-04 20:14:52	268435458	submission.event.general.metadataUpdated	0
+27	1048585	1	3	2023-04-04 20:14:57	268435458	submission.event.general.metadataUpdated	0
+28	1048585	1	3	2023-04-04 20:14:59	268435462	publication.event.published	0
+29	1048585	1	3	2023-04-04 20:15:08	268435463	publication.event.unpublished	0
+30	1048585	1	3	2023-04-04 20:15:12	268435462	publication.event.published	0
+31	1048585	1	3	2023-04-04 20:15:16	268435458	submission.event.general.metadataUpdated	0
+32	1048585	1	3	2023-04-04 20:15:16	268435464	publication.event.versionCreated	0
+33	1048585	1	3	2023-04-04 20:15:27	268435458	submission.event.general.metadataUpdated	0
+34	1048585	1	3	2023-04-04 20:15:31	268435458	submission.event.general.metadataUpdated	0
+35	1048585	1	3	2023-04-04 20:15:38	268435458	submission.event.general.metadataUpdated	0
+36	1048585	1	3	2023-04-04 20:15:40	268435462	publication.event.versionPublished	0
+37	1048585	1	3	2023-04-04 20:15:50	268435463	publication.event.versionUnpublished	0
+38	1048585	1	3	2023-04-04 20:15:56	268435459	submission.event.participantAdded	0
+39	1048585	1	3	2023-04-04 20:16:05	268435459	submission.event.participantAdded	0
+40	1048585	2	18	2023-04-04 20:16:18	268435458	submission.event.general.metadataUpdated	0
+41	515	3	18	2023-04-04 20:16:20	1342177281	submission.event.fileUploaded	0
+42	1048585	2	18	2023-04-04 20:16:20	1342177288	submission.event.fileRevised	0
+43	515	3	18	2023-04-04 20:16:20	1342177296	submission.event.fileEdited	0
+44	1048585	2	18	2023-04-04 20:16:20	1342177296	submission.event.fileEdited	0
+45	1048585	2	18	2023-04-04 20:16:22	268435458	submission.event.general.metadataUpdated	0
+46	1048585	2	18	2023-04-04 20:16:24	268435457	submission.event.submissionSubmitted	0
+47	1048585	2	3	2023-04-04 20:16:29	805306371	log.editor.decision	0
+48	1048585	2	3	2023-04-04 20:16:34	268435459	submission.event.participantAdded	0
+49	1048585	2	3	2023-04-04 20:16:39	268435458	submission.event.general.metadataUpdated	0
+50	1048585	2	6	2023-04-04 20:16:46	805306372	log.editor.recommendation	0
+51	1048585	3	19	2023-04-04 20:17:00	268435458	submission.event.general.metadataUpdated	0
+52	515	4	19	2023-04-04 20:17:01	1342177281	submission.event.fileUploaded	0
+53	1048585	3	19	2023-04-04 20:17:01	1342177288	submission.event.fileRevised	0
+54	515	4	19	2023-04-04 20:17:02	1342177296	submission.event.fileEdited	0
+55	1048585	3	19	2023-04-04 20:17:02	1342177296	submission.event.fileEdited	0
+56	1048585	3	19	2023-04-04 20:17:04	268435458	submission.event.general.metadataUpdated	0
+57	1048585	3	19	2023-04-04 20:17:05	268435457	submission.event.submissionSubmitted	0
+58	1048585	3	3	2023-04-04 20:17:11	805306371	log.editor.decision	0
+59	1048585	3	3	2023-04-04 20:17:17	1073741825	log.review.reviewerAssigned	0
+60	1048585	3	3	2023-04-04 20:17:23	1073741825	log.review.reviewerAssigned	0
+61	1048585	3	3	2023-04-04 20:17:25	805306371	log.editor.decision	0
+62	1048585	3	3	2023-04-04 20:17:30	268435459	submission.event.participantAdded	0
+63	1048585	4	20	2023-04-04 20:17:39	268435458	submission.event.general.metadataUpdated	0
+64	515	5	20	2023-04-04 20:17:40	1342177281	submission.event.fileUploaded	0
+65	1048585	4	20	2023-04-04 20:17:40	1342177288	submission.event.fileRevised	0
+66	515	5	20	2023-04-04 20:17:41	1342177296	submission.event.fileEdited	0
+67	1048585	4	20	2023-04-04 20:17:41	1342177296	submission.event.fileEdited	0
+68	1048585	4	20	2023-04-04 20:17:46	268435458	submission.event.general.metadataUpdated	0
+69	1048585	4	20	2023-04-04 20:17:48	268435457	submission.event.submissionSubmitted	0
+70	1048585	5	21	2023-04-04 20:17:55	268435458	submission.event.general.metadataUpdated	0
+71	515	6	21	2023-04-04 20:17:57	1342177281	submission.event.fileUploaded	0
+72	1048585	5	21	2023-04-04 20:17:57	1342177288	submission.event.fileRevised	0
+73	515	6	21	2023-04-04 20:17:57	1342177296	submission.event.fileEdited	0
+74	1048585	5	21	2023-04-04 20:17:57	1342177296	submission.event.fileEdited	0
+75	1048585	5	21	2023-04-04 20:17:59	268435458	submission.event.general.metadataUpdated	0
+76	1048585	5	21	2023-04-04 20:18:01	268435457	submission.event.submissionSubmitted	0
+77	1048585	5	3	2023-04-04 20:18:06	805306371	log.editor.decision	0
+78	1048585	5	3	2023-04-04 20:18:12	1073741825	log.review.reviewerAssigned	0
+79	1048585	5	3	2023-04-04 20:18:18	1073741825	log.review.reviewerAssigned	0
+80	1048585	5	3	2023-04-04 20:18:20	805306371	log.editor.decision	0
+81	1048585	5	3	2023-04-04 20:18:26	268435459	submission.event.participantAdded	0
+82	1048585	5	3	2023-04-04 20:18:29	805306371	log.editor.decision	0
+83	1048585	5	3	2023-04-04 20:18:35	268435459	submission.event.participantAdded	0
+84	1048585	5	3	2023-04-04 20:18:39	268435459	submission.event.participantAdded	0
+85	1048585	6	22	2023-04-04 20:18:48	268435458	submission.event.general.metadataUpdated	0
+86	515	7	22	2023-04-04 20:18:50	1342177281	submission.event.fileUploaded	0
+87	1048585	6	22	2023-04-04 20:18:50	1342177288	submission.event.fileRevised	0
+88	515	7	22	2023-04-04 20:18:50	1342177296	submission.event.fileEdited	0
+89	1048585	6	22	2023-04-04 20:18:50	1342177296	submission.event.fileEdited	0
+90	1048585	6	22	2023-04-04 20:18:53	268435458	submission.event.general.metadataUpdated	0
+91	1048585	6	22	2023-04-04 20:18:54	268435457	submission.event.submissionSubmitted	0
+92	1048585	6	3	2023-04-04 20:19:00	805306371	log.editor.decision	0
+93	515	8	3	2023-04-04 20:19:00	1342177281	submission.event.fileUploaded	0
+94	1048585	6	3	2023-04-04 20:19:00	1342177288	submission.event.fileRevised	0
+95	1048585	6	3	2023-04-04 20:19:06	1073741825	log.review.reviewerAssigned	0
+96	1048585	6	3	2023-04-04 20:19:12	1073741825	log.review.reviewerAssigned	0
+97	1048585	6	3	2023-04-04 20:19:14	805306371	log.editor.decision	0
+98	1048585	6	3	2023-04-04 20:19:19	268435459	submission.event.participantAdded	0
+99	1048585	6	3	2023-04-04 20:19:23	805306371	log.editor.decision	0
+100	1048585	6	3	2023-04-04 20:19:28	268435459	submission.event.participantAdded	0
+101	1048585	7	23	2023-04-04 20:19:37	268435458	submission.event.general.metadataUpdated	0
+102	515	9	23	2023-04-04 20:19:38	1342177281	submission.event.fileUploaded	0
+103	1048585	7	23	2023-04-04 20:19:38	1342177288	submission.event.fileRevised	0
+104	515	9	23	2023-04-04 20:19:39	1342177296	submission.event.fileEdited	0
+105	1048585	7	23	2023-04-04 20:19:39	1342177296	submission.event.fileEdited	0
+106	1048585	7	23	2023-04-04 20:19:41	268435458	submission.event.general.metadataUpdated	0
+107	1048585	7	23	2023-04-04 20:19:42	268435457	submission.event.submissionSubmitted	0
+108	1048585	7	3	2023-04-04 20:19:48	805306371	log.editor.decision	0
+109	515	10	3	2023-04-04 20:19:48	1342177281	submission.event.fileUploaded	0
+110	1048585	7	3	2023-04-04 20:19:48	1342177288	submission.event.fileRevised	0
+111	1048585	7	3	2023-04-04 20:19:54	1073741825	log.review.reviewerAssigned	0
+112	1048585	7	3	2023-04-04 20:19:58	1073741825	log.review.reviewerAssigned	0
+113	1048585	7	3	2023-04-04 20:20:04	1073741825	log.review.reviewerAssigned	0
+114	1048585	7	8	2023-04-04 20:20:09	1073741830	log.review.reviewAccepted	0
+115	1048585	7	8	2023-04-04 20:20:13	1073741848	log.review.reviewReady	0
+116	1048585	8	24	2023-04-04 20:20:22	268435458	submission.event.general.metadataUpdated	0
+117	515	11	24	2023-04-04 20:20:23	1342177281	submission.event.fileUploaded	0
+118	1048585	8	24	2023-04-04 20:20:23	1342177288	submission.event.fileRevised	0
+119	515	11	24	2023-04-04 20:20:24	1342177296	submission.event.fileEdited	0
+120	1048585	8	24	2023-04-04 20:20:24	1342177296	submission.event.fileEdited	0
+121	1048585	8	24	2023-04-04 20:20:29	268435458	submission.event.general.metadataUpdated	0
+122	1048585	8	24	2023-04-04 20:20:30	268435457	submission.event.submissionSubmitted	0
+123	1048585	9	25	2023-04-04 20:20:38	268435458	submission.event.general.metadataUpdated	0
+124	515	12	25	2023-04-04 20:20:39	1342177281	submission.event.fileUploaded	0
+125	1048585	9	25	2023-04-04 20:20:39	1342177288	submission.event.fileRevised	0
+126	515	12	25	2023-04-04 20:20:40	1342177296	submission.event.fileEdited	0
+127	1048585	9	25	2023-04-04 20:20:40	1342177296	submission.event.fileEdited	0
+128	1048585	9	25	2023-04-04 20:20:42	268435458	submission.event.general.metadataUpdated	0
+129	1048585	9	25	2023-04-04 20:20:43	268435457	submission.event.submissionSubmitted	0
+130	1048585	9	3	2023-04-04 20:20:49	805306371	log.editor.decision	0
+131	1048585	9	3	2023-04-04 20:20:56	1073741825	log.review.reviewerAssigned	0
+132	1048585	9	3	2023-04-04 20:21:02	1073741825	log.review.reviewerAssigned	0
+133	1048585	9	3	2023-04-04 20:21:04	805306371	log.editor.decision	0
+134	1048585	9	3	2023-04-04 20:21:09	268435459	submission.event.participantAdded	0
+135	1048585	9	3	2023-04-04 20:21:12	805306371	log.editor.decision	0
+136	1048585	9	3	2023-04-04 20:21:18	268435459	submission.event.participantAdded	0
+137	1048585	9	3	2023-04-04 20:21:22	268435459	submission.event.participantAdded	0
+138	1048585	10	26	2023-04-04 20:21:31	268435458	submission.event.general.metadataUpdated	0
+139	515	13	26	2023-04-04 20:21:32	1342177281	submission.event.fileUploaded	0
+140	1048585	10	26	2023-04-04 20:21:32	1342177288	submission.event.fileRevised	0
+141	515	13	26	2023-04-04 20:21:33	1342177296	submission.event.fileEdited	0
+142	1048585	10	26	2023-04-04 20:21:33	1342177296	submission.event.fileEdited	0
+143	1048585	10	26	2023-04-04 20:21:35	268435458	submission.event.general.metadataUpdated	0
+144	1048585	10	26	2023-04-04 20:21:36	268435457	submission.event.submissionSubmitted	0
+145	1048585	10	3	2023-04-04 20:21:43	805306371	log.editor.decision	0
+146	1048585	10	3	2023-04-04 20:21:49	1073741825	log.review.reviewerAssigned	0
+147	1048585	10	3	2023-04-04 20:21:55	1073741825	log.review.reviewerAssigned	0
+148	1048585	10	9	2023-04-04 20:22:00	1073741830	log.review.reviewAccepted	0
+149	1048585	10	9	2023-04-04 20:22:03	1073741848	log.review.reviewReady	0
+150	1048585	10	10	2023-04-04 20:22:08	1073741830	log.review.reviewAccepted	0
+151	1048585	10	10	2023-04-04 20:22:12	1073741848	log.review.reviewReady	0
+152	1048585	11	27	2023-04-04 20:22:21	268435458	submission.event.general.metadataUpdated	0
+153	515	14	27	2023-04-04 20:22:22	1342177281	submission.event.fileUploaded	0
+154	1048585	11	27	2023-04-04 20:22:22	1342177288	submission.event.fileRevised	0
+155	515	14	27	2023-04-04 20:22:23	1342177296	submission.event.fileEdited	0
+156	1048585	11	27	2023-04-04 20:22:23	1342177296	submission.event.fileEdited	0
+157	1048585	11	27	2023-04-04 20:22:28	268435458	submission.event.general.metadataUpdated	0
+158	1048585	11	27	2023-04-04 20:22:29	268435457	submission.event.submissionSubmitted	0
+159	1048585	12	28	2023-04-04 20:22:37	268435458	submission.event.general.metadataUpdated	0
+160	515	15	28	2023-04-04 20:22:38	1342177281	submission.event.fileUploaded	0
+161	1048585	12	28	2023-04-04 20:22:38	1342177288	submission.event.fileRevised	0
+162	515	15	28	2023-04-04 20:22:39	1342177296	submission.event.fileEdited	0
+163	1048585	12	28	2023-04-04 20:22:39	1342177296	submission.event.fileEdited	0
+164	1048585	12	28	2023-04-04 20:22:41	268435458	submission.event.general.metadataUpdated	0
+165	1048585	12	28	2023-04-04 20:22:42	268435457	submission.event.submissionSubmitted	0
+166	1048585	12	3	2023-04-04 20:22:50	805306371	log.editor.decision	0
+167	1048585	12	3	2023-04-04 20:22:56	1073741825	log.review.reviewerAssigned	0
+168	1048585	12	3	2023-04-04 20:23:01	1073741825	log.review.reviewerAssigned	0
+169	1048585	13	29	2023-04-04 20:23:09	268435458	submission.event.general.metadataUpdated	0
+170	515	16	29	2023-04-04 20:23:10	1342177281	submission.event.fileUploaded	0
+171	1048585	13	29	2023-04-04 20:23:10	1342177288	submission.event.fileRevised	0
+172	515	16	29	2023-04-04 20:23:11	1342177296	submission.event.fileEdited	0
+173	1048585	13	29	2023-04-04 20:23:11	1342177296	submission.event.fileEdited	0
+174	1048585	13	29	2023-04-04 20:23:14	268435458	submission.event.general.metadataUpdated	0
+175	1048585	13	29	2023-04-04 20:23:15	268435457	submission.event.submissionSubmitted	0
+176	1048585	13	3	2023-04-04 20:23:22	805306371	log.editor.decision	0
+177	1048585	13	3	2023-04-04 20:23:28	1073741825	log.review.reviewerAssigned	0
+178	1048585	13	3	2023-04-04 20:23:33	1073741825	log.review.reviewerAssigned	0
+179	1048585	13	3	2023-04-04 20:23:39	1073741825	log.review.reviewerAssigned	0
+180	1048585	13	7	2023-04-04 20:23:44	1073741830	log.review.reviewAccepted	0
+181	1048585	13	7	2023-04-04 20:23:48	1073741848	log.review.reviewReady	0
+182	1048585	13	9	2023-04-04 20:23:53	1073741830	log.review.reviewAccepted	0
+183	1048585	13	9	2023-04-04 20:23:57	1073741848	log.review.reviewReady	0
+184	1048585	13	10	2023-04-04 20:24:03	1073741830	log.review.reviewAccepted	0
+185	1048585	13	10	2023-04-04 20:24:07	1073741848	log.review.reviewReady	0
+186	1048585	13	3	2023-04-04 20:24:19	805306371	log.editor.decision	0
+187	1048585	14	30	2023-04-04 20:24:27	268435458	submission.event.general.metadataUpdated	0
+188	515	17	30	2023-04-04 20:24:28	1342177281	submission.event.fileUploaded	0
+189	1048585	14	30	2023-04-04 20:24:28	1342177288	submission.event.fileRevised	0
+190	515	17	30	2023-04-04 20:24:29	1342177296	submission.event.fileEdited	0
+191	1048585	14	30	2023-04-04 20:24:29	1342177296	submission.event.fileEdited	0
+192	1048585	14	30	2023-04-04 20:24:31	268435458	submission.event.general.metadataUpdated	0
+193	1048585	14	30	2023-04-04 20:24:33	268435457	submission.event.submissionSubmitted	0
+194	1048585	15	31	2023-04-04 20:24:40	268435458	submission.event.general.metadataUpdated	0
+195	515	18	31	2023-04-04 20:24:42	1342177281	submission.event.fileUploaded	0
+196	1048585	15	31	2023-04-04 20:24:42	1342177288	submission.event.fileRevised	0
+197	515	18	31	2023-04-04 20:24:42	1342177296	submission.event.fileEdited	0
+198	1048585	15	31	2023-04-04 20:24:42	1342177296	submission.event.fileEdited	0
+199	1048585	15	31	2023-04-04 20:24:44	268435458	submission.event.general.metadataUpdated	0
+200	1048585	15	31	2023-04-04 20:24:45	268435457	submission.event.submissionSubmitted	0
+201	1048585	15	3	2023-04-04 20:24:54	805306371	log.editor.decision	0
+202	1048585	15	3	2023-04-04 20:25:00	1073741825	log.review.reviewerAssigned	0
+203	1048585	15	3	2023-04-04 20:25:05	1073741825	log.review.reviewerAssigned	0
+204	1048585	15	3	2023-04-04 20:25:07	805306371	log.editor.decision	0
+205	1048585	15	3	2023-04-04 20:25:12	268435459	submission.event.participantAdded	0
+206	1048585	15	3	2023-04-04 20:25:15	805306371	log.editor.decision	0
+207	1048585	15	3	2023-04-04 20:25:21	268435459	submission.event.participantAdded	0
+208	1048585	16	32	2023-04-04 20:25:30	268435458	submission.event.general.metadataUpdated	0
+209	515	19	32	2023-04-04 20:25:32	1342177281	submission.event.fileUploaded	0
+210	1048585	16	32	2023-04-04 20:25:32	1342177288	submission.event.fileRevised	0
+211	515	19	32	2023-04-04 20:25:32	1342177296	submission.event.fileEdited	0
+212	1048585	16	32	2023-04-04 20:25:32	1342177296	submission.event.fileEdited	0
+213	1048585	16	32	2023-04-04 20:25:35	268435458	submission.event.general.metadataUpdated	0
+214	1048585	16	32	2023-04-04 20:25:36	268435457	submission.event.submissionSubmitted	0
+215	1048585	17	33	2023-04-04 20:25:44	268435458	submission.event.general.metadataUpdated	0
+216	515	20	33	2023-04-04 20:25:45	1342177281	submission.event.fileUploaded	0
+217	1048585	17	33	2023-04-04 20:25:45	1342177288	submission.event.fileRevised	0
+218	515	20	33	2023-04-04 20:25:45	1342177296	submission.event.fileEdited	0
+219	1048585	17	33	2023-04-04 20:25:45	1342177296	submission.event.fileEdited	0
+220	1048585	17	33	2023-04-04 20:25:48	268435458	submission.event.general.metadataUpdated	0
+221	1048585	17	33	2023-04-04 20:25:50	268435457	submission.event.submissionSubmitted	0
+222	1048585	17	3	2023-04-04 20:25:58	805306371	log.editor.decision	0
+223	1048585	17	3	2023-04-04 20:26:04	1073741825	log.review.reviewerAssigned	0
+224	1048585	17	3	2023-04-04 20:26:09	1073741825	log.review.reviewerAssigned	0
+225	1048585	17	3	2023-04-04 20:26:11	805306371	log.editor.decision	0
+226	1048585	17	3	2023-04-04 20:26:16	268435459	submission.event.participantAdded	0
+227	1048585	17	3	2023-04-04 20:26:19	805306371	log.editor.decision	0
+228	1048585	17	3	2023-04-04 20:26:25	268435459	submission.event.participantAdded	0
+229	1048585	17	3	2023-04-04 20:26:29	268435459	submission.event.participantAdded	0
+230	515	21	3	2023-04-04 20:26:36	1342177281	submission.event.fileUploaded	0
+231	1048585	17	3	2023-04-04 20:26:36	1342177288	submission.event.fileRevised	0
+232	515	21	3	2023-04-04 20:26:37	1342177296	submission.event.fileEdited	0
+233	1048585	17	3	2023-04-04 20:26:37	1342177296	submission.event.fileEdited	0
+234	1048585	17	3	2023-04-04 20:26:47	268435458	submission.event.general.metadataUpdated	0
+235	1048585	17	3	2023-04-04 20:26:48	268435462	publication.event.scheduled	0
+236	1048585	17	3	2023-04-04 20:26:53	268435462	publication.event.published	0
+237	1048585	17	3	2023-04-04 20:27:02	268435463	publication.event.unpublished	0
+238	1048585	17	3	2023-04-04 20:27:02	268435462	publication.event.scheduled	0
+239	1048585	17	3	2023-04-04 20:27:10	268435462	publication.event.published	0
+240	1048585	17	3	2023-04-04 20:27:20	268435463	publication.event.unpublished	0
+241	1048585	17	3	2023-04-04 20:27:20	268435458	submission.event.general.metadataUpdated	0
+242	1048585	17	3	2023-04-04 20:27:36	268435458	submission.event.general.metadataUpdated	0
+243	1048585	17	3	2023-04-04 20:27:37	268435462	publication.event.published	0
+244	1048585	18	34	2023-04-04 20:27:50	268435458	submission.event.general.metadataUpdated	0
+245	515	22	34	2023-04-04 20:27:51	1342177281	submission.event.fileUploaded	0
+246	1048585	18	34	2023-04-04 20:27:51	1342177288	submission.event.fileRevised	0
+247	515	22	34	2023-04-04 20:27:51	1342177296	submission.event.fileEdited	0
+248	1048585	18	34	2023-04-04 20:27:51	1342177296	submission.event.fileEdited	0
+249	1048585	18	34	2023-04-04 20:27:54	268435458	submission.event.general.metadataUpdated	0
+250	1048585	18	34	2023-04-04 20:27:55	268435457	submission.event.submissionSubmitted	0
+251	1048585	18	3	2023-04-04 20:28:04	805306371	log.editor.decision	0
+252	1048585	19	35	2023-04-04 20:28:14	268435458	submission.event.general.metadataUpdated	0
+253	515	23	35	2023-04-04 20:28:15	1342177281	submission.event.fileUploaded	0
+254	1048585	19	35	2023-04-04 20:28:16	1342177288	submission.event.fileRevised	0
+255	515	23	35	2023-04-04 20:28:16	1342177296	submission.event.fileEdited	0
+256	1048585	19	35	2023-04-04 20:28:16	1342177296	submission.event.fileEdited	0
+257	1048585	19	35	2023-04-04 20:28:18	268435458	submission.event.general.metadataUpdated	0
+258	1048585	19	35	2023-04-04 20:28:19	268435457	submission.event.submissionSubmitted	0
+259	1048585	19	3	2023-04-04 20:28:28	805306371	log.editor.decision	0
+260	515	24	3	2023-04-04 20:28:28	1342177281	submission.event.fileUploaded	0
+261	1048585	19	3	2023-04-04 20:28:28	1342177288	submission.event.fileRevised	0
+262	1048585	19	3	2023-04-04 20:28:34	1073741825	log.review.reviewerAssigned	0
+263	1048585	19	3	2023-04-04 20:28:39	1073741825	log.review.reviewerAssigned	0
+264	1048585	19	3	2023-04-04 20:28:41	805306371	log.editor.decision	0
+265	1048585	19	3	2023-04-04 20:28:47	268435459	submission.event.participantAdded	0
 \.
-
-
---
--- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.event_log_log_id_seq', 271, true);
 
 
 --
@@ -5739,770 +5583,731 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 77	editorName	Daniel Barnes	string
 77	submissionId	5	int
 77	decision	Send to Review	string
-78	fileStage	4	int
-78	sourceSubmissionFileId	6	int
-78	submissionFileId	7	int
-78	fileId	6	int
+78	reviewAssignmentId	6	string
+78	reviewerName	Paul Hudson	string
 78	submissionId	5	int
-78	originalFileName	Genetic transformation of forest trees.pdf	string
-78	username	dbarnes	string
-79	fileStage	4	int
-79	submissionFileId	7	int
-79	fileId	6	int
+78	stageId	3	int
+78	round	1	int
+79	reviewAssignmentId	7	string
+79	reviewerName	Adela Gallego	string
 79	submissionId	5	int
-79	username	dbarnes	string
-79	name	Genetic transformation of forest trees.pdf	string
-80	reviewAssignmentId	6	string
-80	reviewerName	Paul Hudson	string
+79	stageId	3	int
+79	round	1	int
+80	editorName	Daniel Barnes	string
 80	submissionId	5	int
-80	stageId	3	int
-80	round	1	int
-81	reviewAssignmentId	7	string
-81	reviewerName	Adela Gallego	string
-81	submissionId	5	int
-81	stageId	3	int
-81	round	1	int
+80	decision	Accept Submission	string
+81	name	Maria Fritz	string
+81	username	mfritz	string
+81	userGroupName	Copyeditor	string
 82	editorName	Daniel Barnes	string
 82	submissionId	5	int
-82	decision	Accept Submission	string
-83	name	Maria Fritz	string
-83	username	mfritz	string
-83	userGroupName	Copyeditor	string
-84	editorName	Daniel Barnes	string
-84	submissionId	5	int
-84	decision	Send To Production	string
-85	name	Graham Cox	string
-85	username	gcox	string
-85	userGroupName	Layout Editor	string
-86	name	Catherine Turner	string
-86	username	cturner	string
-86	userGroupName	Proofreader	string
+82	decision	Send To Production	string
+83	name	Graham Cox	string
+83	username	gcox	string
+83	userGroupName	Layout Editor	string
+84	name	Catherine Turner	string
+84	username	cturner	string
+84	userGroupName	Proofreader	string
+86	fileStage	2	int
+86	sourceSubmissionFileId	\N	string
+86	submissionFileId	7	int
+86	fileId	7	int
+86	submissionId	6	int
+86	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+86	username	dphillips	string
+87	fileStage	2	int
+87	submissionFileId	7	int
+87	fileId	7	int
+87	submissionId	6	int
+87	username	dphillips	string
+87	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 88	fileStage	2	int
 88	sourceSubmissionFileId	\N	string
-88	submissionFileId	8	int
+88	submissionFileId	7	int
 88	fileId	7	int
 88	submissionId	6	int
 88	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 88	username	dphillips	string
 89	fileStage	2	int
-89	submissionFileId	8	int
+89	sourceSubmissionFileId	\N	string
+89	submissionFileId	7	int
 89	fileId	7	int
 89	submissionId	6	int
 89	username	dphillips	string
+89	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 89	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-90	fileStage	2	int
-90	sourceSubmissionFileId	\N	string
-90	submissionFileId	8	int
-90	fileId	7	int
-90	submissionId	6	int
-90	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-90	username	dphillips	string
-91	fileStage	2	int
-91	sourceSubmissionFileId	\N	string
-91	submissionFileId	8	int
-91	fileId	7	int
-91	submissionId	6	int
-91	username	dphillips	string
-91	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-91	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-94	editorName	Daniel Barnes	string
+92	editorName	Daniel Barnes	string
+92	submissionId	6	int
+92	decision	Send to Review	string
+93	fileStage	4	int
+93	sourceSubmissionFileId	7	int
+93	submissionFileId	8	int
+93	fileId	7	int
+93	submissionId	6	int
+93	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+93	username	dbarnes	string
+94	fileStage	4	int
+94	submissionFileId	8	int
+94	fileId	7	int
 94	submissionId	6	int
-94	decision	Send to Review	string
-95	fileStage	4	int
-95	sourceSubmissionFileId	8	int
-95	submissionFileId	9	int
-95	fileId	7	int
+94	username	dbarnes	string
+94	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+95	reviewAssignmentId	8	string
+95	reviewerName	Julie Janssen	string
 95	submissionId	6	int
-95	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-95	username	dbarnes	string
-96	fileStage	4	int
-96	submissionFileId	9	int
-96	fileId	7	int
+95	stageId	3	int
+95	round	1	int
+96	reviewAssignmentId	9	string
+96	reviewerName	Adela Gallego	string
 96	submissionId	6	int
-96	username	dbarnes	string
-96	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-97	reviewAssignmentId	8	string
-97	reviewerName	Julie Janssen	string
+96	stageId	3	int
+96	round	1	int
+97	editorName	Daniel Barnes	string
 97	submissionId	6	int
-97	stageId	3	int
-97	round	1	int
-98	reviewAssignmentId	9	string
-98	reviewerName	Adela Gallego	string
-98	submissionId	6	int
-98	stageId	3	int
-98	round	1	int
+97	decision	Accept Submission	string
+98	name	Maria Fritz	string
+98	username	mfritz	string
+98	userGroupName	Copyeditor	string
 99	editorName	Daniel Barnes	string
 99	submissionId	6	int
-99	decision	Accept Submission	string
-100	name	Maria Fritz	string
-100	username	mfritz	string
-100	userGroupName	Copyeditor	string
-101	editorName	Daniel Barnes	string
-101	submissionId	6	int
-101	decision	Send To Production	string
-102	name	Graham Cox	string
-102	username	gcox	string
-102	userGroupName	Layout Editor	string
+99	decision	Send To Production	string
+100	name	Graham Cox	string
+100	username	gcox	string
+100	userGroupName	Layout Editor	string
+102	fileStage	2	int
+102	sourceSubmissionFileId	\N	string
+102	submissionFileId	9	int
+102	fileId	8	int
+102	submissionId	7	int
+102	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+102	username	dsokoloff	string
+103	fileStage	2	int
+103	submissionFileId	9	int
+103	fileId	8	int
+103	submissionId	7	int
+103	username	dsokoloff	string
+103	name	Developing efficacy beliefs in the classroom.pdf	string
 104	fileStage	2	int
 104	sourceSubmissionFileId	\N	string
-104	submissionFileId	10	int
+104	submissionFileId	9	int
 104	fileId	8	int
 104	submissionId	7	int
 104	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
 104	username	dsokoloff	string
 105	fileStage	2	int
-105	submissionFileId	10	int
+105	sourceSubmissionFileId	\N	string
+105	submissionFileId	9	int
 105	fileId	8	int
 105	submissionId	7	int
 105	username	dsokoloff	string
+105	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
 105	name	Developing efficacy beliefs in the classroom.pdf	string
-106	fileStage	2	int
-106	sourceSubmissionFileId	\N	string
-106	submissionFileId	10	int
-106	fileId	8	int
-106	submissionId	7	int
-106	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-106	username	dsokoloff	string
-107	fileStage	2	int
-107	sourceSubmissionFileId	\N	string
-107	submissionFileId	10	int
-107	fileId	8	int
-107	submissionId	7	int
-107	username	dsokoloff	string
-107	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-107	name	Developing efficacy beliefs in the classroom.pdf	string
-110	editorName	Daniel Barnes	string
+108	editorName	Daniel Barnes	string
+108	submissionId	7	int
+108	decision	Send to Review	string
+109	fileStage	4	int
+109	sourceSubmissionFileId	9	int
+109	submissionFileId	10	int
+109	fileId	8	int
+109	submissionId	7	int
+109	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+109	username	dbarnes	string
+110	fileStage	4	int
+110	submissionFileId	10	int
+110	fileId	8	int
 110	submissionId	7	int
-110	decision	Send to Review	string
-111	fileStage	4	int
-111	sourceSubmissionFileId	10	int
-111	submissionFileId	11	int
-111	fileId	8	int
+110	username	dbarnes	string
+110	name	Developing efficacy beliefs in the classroom.pdf	string
+111	reviewAssignmentId	10	string
+111	reviewerName	Paul Hudson	string
 111	submissionId	7	int
-111	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-111	username	dbarnes	string
-112	fileStage	4	int
-112	submissionFileId	11	int
-112	fileId	8	int
+111	stageId	3	int
+111	round	1	int
+112	reviewAssignmentId	11	string
+112	reviewerName	Aisla McCrae	string
 112	submissionId	7	int
-112	username	dbarnes	string
-112	name	Developing efficacy beliefs in the classroom.pdf	string
-113	reviewAssignmentId	10	string
-113	reviewerName	Paul Hudson	string
+112	stageId	3	int
+112	round	1	int
+113	reviewAssignmentId	12	string
+113	reviewerName	Adela Gallego	string
 113	submissionId	7	int
 113	stageId	3	int
 113	round	1	int
-114	reviewAssignmentId	11	string
-114	reviewerName	Aisla McCrae	string
+114	reviewAssignmentId	10	int
+114	reviewerName	Paul Hudson	string
 114	submissionId	7	int
-114	stageId	3	int
 114	round	1	int
-115	reviewAssignmentId	12	string
-115	reviewerName	Adela Gallego	string
+115	reviewAssignmentId	10	int
+115	reviewerName	Paul Hudson	string
 115	submissionId	7	int
-115	stageId	3	int
 115	round	1	int
-116	reviewAssignmentId	10	int
-116	reviewerName	Paul Hudson	string
-116	submissionId	7	int
-116	round	1	int
-117	reviewAssignmentId	10	int
-117	reviewerName	Paul Hudson	string
-117	submissionId	7	int
-117	round	1	int
+117	fileStage	2	int
+117	sourceSubmissionFileId	\N	string
+117	submissionFileId	11	int
+117	fileId	9	int
+117	submissionId	8	int
+117	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
+117	username	eostrom	string
+118	fileStage	2	int
+118	submissionFileId	11	int
+118	fileId	9	int
+118	submissionId	8	int
+118	username	eostrom	string
+118	name	Traditions and Trends in the Study of the Commons.pdf	string
 119	fileStage	2	int
 119	sourceSubmissionFileId	\N	string
-119	submissionFileId	12	int
+119	submissionFileId	11	int
 119	fileId	9	int
 119	submissionId	8	int
 119	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
 119	username	eostrom	string
 120	fileStage	2	int
-120	submissionFileId	12	int
+120	sourceSubmissionFileId	\N	string
+120	submissionFileId	11	int
 120	fileId	9	int
 120	submissionId	8	int
 120	username	eostrom	string
+120	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
 120	name	Traditions and Trends in the Study of the Commons.pdf	string
-121	fileStage	2	int
-121	sourceSubmissionFileId	\N	string
-121	submissionFileId	12	int
-121	fileId	9	int
-121	submissionId	8	int
-121	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
-121	username	eostrom	string
-122	fileStage	2	int
-122	sourceSubmissionFileId	\N	string
-122	submissionFileId	12	int
-122	fileId	9	int
-122	submissionId	8	int
-122	username	eostrom	string
-122	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
-122	name	Traditions and Trends in the Study of the Commons.pdf	string
+124	fileStage	2	int
+124	sourceSubmissionFileId	\N	string
+124	submissionFileId	12	int
+124	fileId	10	int
+124	submissionId	9	int
+124	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
+124	username	fpaglieri	string
+125	fileStage	2	int
+125	submissionFileId	12	int
+125	fileId	10	int
+125	submissionId	9	int
+125	username	fpaglieri	string
+125	name	Hansen & Pinto: Reason Reclaimed.pdf	string
 126	fileStage	2	int
 126	sourceSubmissionFileId	\N	string
-126	submissionFileId	13	int
+126	submissionFileId	12	int
 126	fileId	10	int
 126	submissionId	9	int
 126	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
 126	username	fpaglieri	string
 127	fileStage	2	int
-127	submissionFileId	13	int
+127	sourceSubmissionFileId	\N	string
+127	submissionFileId	12	int
 127	fileId	10	int
 127	submissionId	9	int
 127	username	fpaglieri	string
+127	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
 127	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-128	fileStage	2	int
-128	sourceSubmissionFileId	\N	string
-128	submissionFileId	13	int
-128	fileId	10	int
-128	submissionId	9	int
-128	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-128	username	fpaglieri	string
-129	fileStage	2	int
-129	sourceSubmissionFileId	\N	string
-129	submissionFileId	13	int
-129	fileId	10	int
-129	submissionId	9	int
-129	username	fpaglieri	string
-129	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-129	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-132	editorName	Daniel Barnes	string
+130	editorName	Daniel Barnes	string
+130	submissionId	9	int
+130	decision	Send to Review	string
+131	reviewAssignmentId	13	string
+131	reviewerName	Julie Janssen	string
+131	submissionId	9	int
+131	stageId	3	int
+131	round	1	int
+132	reviewAssignmentId	14	string
+132	reviewerName	Adela Gallego	string
 132	submissionId	9	int
-132	decision	Send to Review	string
-133	fileStage	4	int
-133	sourceSubmissionFileId	13	int
-133	submissionFileId	14	int
-133	fileId	10	int
+132	stageId	3	int
+132	round	1	int
+133	editorName	Daniel Barnes	string
 133	submissionId	9	int
-133	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-133	username	dbarnes	string
-134	fileStage	4	int
-134	submissionFileId	14	int
-134	fileId	10	int
-134	submissionId	9	int
-134	username	dbarnes	string
-134	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-135	reviewAssignmentId	13	string
-135	reviewerName	Julie Janssen	string
+133	decision	Accept Submission	string
+134	name	Sarah Vogt	string
+134	username	svogt	string
+134	userGroupName	Copyeditor	string
+135	editorName	Daniel Barnes	string
 135	submissionId	9	int
-135	stageId	3	int
-135	round	1	int
-136	reviewAssignmentId	14	string
-136	reviewerName	Adela Gallego	string
-136	submissionId	9	int
-136	stageId	3	int
-136	round	1	int
-137	editorName	Daniel Barnes	string
-137	submissionId	9	int
-137	decision	Accept Submission	string
-138	name	Sarah Vogt	string
-138	username	svogt	string
-138	userGroupName	Copyeditor	string
-139	editorName	Daniel Barnes	string
-139	submissionId	9	int
-139	decision	Send To Production	string
-140	name	Stephen Hellier	string
-140	username	shellier	string
-140	userGroupName	Layout Editor	string
-141	name	Sabine Kumar	string
-141	username	skumar	string
-141	userGroupName	Proofreader	string
-143	fileStage	2	int
-143	sourceSubmissionFileId	\N	string
-143	submissionFileId	15	int
-143	fileId	11	int
-143	submissionId	10	int
-143	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-143	username	jnovak	string
-144	fileStage	2	int
-144	submissionFileId	15	int
-144	fileId	11	int
-144	submissionId	10	int
-144	username	jnovak	string
-144	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-145	fileStage	2	int
-145	sourceSubmissionFileId	\N	string
-145	submissionFileId	15	int
-145	fileId	11	int
+135	decision	Send To Production	string
+136	name	Stephen Hellier	string
+136	username	shellier	string
+136	userGroupName	Layout Editor	string
+137	name	Sabine Kumar	string
+137	username	skumar	string
+137	userGroupName	Proofreader	string
+139	fileStage	2	int
+139	sourceSubmissionFileId	\N	string
+139	submissionFileId	13	int
+139	fileId	11	int
+139	submissionId	10	int
+139	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+139	username	jnovak	string
+140	fileStage	2	int
+140	submissionFileId	13	int
+140	fileId	11	int
+140	submissionId	10	int
+140	username	jnovak	string
+140	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+141	fileStage	2	int
+141	sourceSubmissionFileId	\N	string
+141	submissionFileId	13	int
+141	fileId	11	int
+141	submissionId	10	int
+141	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+141	username	jnovak	string
+142	fileStage	2	int
+142	sourceSubmissionFileId	\N	string
+142	submissionFileId	13	int
+142	fileId	11	int
+142	submissionId	10	int
+142	username	jnovak	string
+142	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+142	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+145	editorName	Daniel Barnes	string
 145	submissionId	10	int
-145	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-145	username	jnovak	string
-146	fileStage	2	int
-146	sourceSubmissionFileId	\N	string
-146	submissionFileId	15	int
-146	fileId	11	int
+145	decision	Send to Review	string
+146	reviewAssignmentId	15	string
+146	reviewerName	Aisla McCrae	string
 146	submissionId	10	int
-146	username	jnovak	string
-146	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-146	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-149	editorName	Daniel Barnes	string
+146	stageId	3	int
+146	round	1	int
+147	reviewAssignmentId	16	string
+147	reviewerName	Adela Gallego	string
+147	submissionId	10	int
+147	stageId	3	int
+147	round	1	int
+148	reviewAssignmentId	15	int
+148	reviewerName	Aisla McCrae	string
+148	submissionId	10	int
+148	round	1	int
+149	reviewAssignmentId	15	int
+149	reviewerName	Aisla McCrae	string
 149	submissionId	10	int
-149	decision	Send to Review	string
-150	reviewAssignmentId	15	string
-150	reviewerName	Aisla McCrae	string
+149	round	1	int
+150	reviewAssignmentId	16	int
+150	reviewerName	Adela Gallego	string
 150	submissionId	10	int
-150	stageId	3	int
 150	round	1	int
-151	reviewAssignmentId	16	string
+151	reviewAssignmentId	16	int
 151	reviewerName	Adela Gallego	string
 151	submissionId	10	int
-151	stageId	3	int
 151	round	1	int
-152	reviewAssignmentId	15	int
-152	reviewerName	Aisla McCrae	string
-152	submissionId	10	int
-152	round	1	int
-153	reviewAssignmentId	15	int
-153	reviewerName	Aisla McCrae	string
-153	submissionId	10	int
-153	round	1	int
-154	reviewAssignmentId	16	int
-154	reviewerName	Adela Gallego	string
-154	submissionId	10	int
-154	round	1	int
-155	reviewAssignmentId	16	int
-155	reviewerName	Adela Gallego	string
-155	submissionId	10	int
-155	round	1	int
-157	fileStage	2	int
-157	sourceSubmissionFileId	\N	string
-157	submissionFileId	16	int
-157	fileId	12	int
-157	submissionId	11	int
-157	originalFileName	Learning Sustainable Design through Service.pdf	string
-157	username	kalkhafaji	string
-158	fileStage	2	int
-158	submissionFileId	16	int
-158	fileId	12	int
-158	submissionId	11	int
-158	username	kalkhafaji	string
-158	name	Learning Sustainable Design through Service.pdf	string
-159	fileStage	2	int
-159	sourceSubmissionFileId	\N	string
-159	submissionFileId	16	int
-159	fileId	12	int
-159	submissionId	11	int
-159	originalFileName	Learning Sustainable Design through Service.pdf	string
-159	username	kalkhafaji	string
+153	fileStage	2	int
+153	sourceSubmissionFileId	\N	string
+153	submissionFileId	14	int
+153	fileId	12	int
+153	submissionId	11	int
+153	originalFileName	Learning Sustainable Design through Service.pdf	string
+153	username	kalkhafaji	string
+154	fileStage	2	int
+154	submissionFileId	14	int
+154	fileId	12	int
+154	submissionId	11	int
+154	username	kalkhafaji	string
+154	name	Learning Sustainable Design through Service.pdf	string
+155	fileStage	2	int
+155	sourceSubmissionFileId	\N	string
+155	submissionFileId	14	int
+155	fileId	12	int
+155	submissionId	11	int
+155	originalFileName	Learning Sustainable Design through Service.pdf	string
+155	username	kalkhafaji	string
+156	fileStage	2	int
+156	sourceSubmissionFileId	\N	string
+156	submissionFileId	14	int
+156	fileId	12	int
+156	submissionId	11	int
+156	username	kalkhafaji	string
+156	originalFileName	Learning Sustainable Design through Service.pdf	string
+156	name	Learning Sustainable Design through Service.pdf	string
 160	fileStage	2	int
 160	sourceSubmissionFileId	\N	string
-160	submissionFileId	16	int
-160	fileId	12	int
-160	submissionId	11	int
-160	username	kalkhafaji	string
-160	originalFileName	Learning Sustainable Design through Service.pdf	string
-160	name	Learning Sustainable Design through Service.pdf	string
-164	fileStage	2	int
-164	sourceSubmissionFileId	\N	string
-164	submissionFileId	17	int
-164	fileId	13	int
-164	submissionId	12	int
-164	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-164	username	lchristopher	string
-165	fileStage	2	int
-165	submissionFileId	17	int
-165	fileId	13	int
-165	submissionId	12	int
-165	username	lchristopher	string
-165	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-166	fileStage	2	int
-166	sourceSubmissionFileId	\N	string
-166	submissionFileId	17	int
-166	fileId	13	int
+160	submissionFileId	15	int
+160	fileId	13	int
+160	submissionId	12	int
+160	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+160	username	lchristopher	string
+161	fileStage	2	int
+161	submissionFileId	15	int
+161	fileId	13	int
+161	submissionId	12	int
+161	username	lchristopher	string
+161	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+162	fileStage	2	int
+162	sourceSubmissionFileId	\N	string
+162	submissionFileId	15	int
+162	fileId	13	int
+162	submissionId	12	int
+162	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+162	username	lchristopher	string
+163	fileStage	2	int
+163	sourceSubmissionFileId	\N	string
+163	submissionFileId	15	int
+163	fileId	13	int
+163	submissionId	12	int
+163	username	lchristopher	string
+163	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+163	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+166	editorName	Daniel Barnes	string
 166	submissionId	12	int
-166	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-166	username	lchristopher	string
-167	fileStage	2	int
-167	sourceSubmissionFileId	\N	string
-167	submissionFileId	17	int
-167	fileId	13	int
+166	decision	Send to Review	string
+167	reviewAssignmentId	17	string
+167	reviewerName	Julie Janssen	string
 167	submissionId	12	int
-167	username	lchristopher	string
-167	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-167	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-170	editorName	Daniel Barnes	string
-170	submissionId	12	int
-170	decision	Send to Review	string
-171	reviewAssignmentId	17	string
-171	reviewerName	Julie Janssen	string
-171	submissionId	12	int
-171	stageId	3	int
-171	round	1	int
-172	reviewAssignmentId	18	string
-172	reviewerName	Paul Hudson	string
-172	submissionId	12	int
-172	stageId	3	int
-172	round	1	int
-174	fileStage	2	int
-174	sourceSubmissionFileId	\N	string
-174	submissionFileId	18	int
-174	fileId	14	int
-174	submissionId	13	int
-174	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-174	username	lkumiega	string
-175	fileStage	2	int
-175	submissionFileId	18	int
-175	fileId	14	int
-175	submissionId	13	int
-175	username	lkumiega	string
-175	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-176	fileStage	2	int
-176	sourceSubmissionFileId	\N	string
-176	submissionFileId	18	int
-176	fileId	14	int
+167	stageId	3	int
+167	round	1	int
+168	reviewAssignmentId	18	string
+168	reviewerName	Paul Hudson	string
+168	submissionId	12	int
+168	stageId	3	int
+168	round	1	int
+170	fileStage	2	int
+170	sourceSubmissionFileId	\N	string
+170	submissionFileId	16	int
+170	fileId	14	int
+170	submissionId	13	int
+170	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+170	username	lkumiega	string
+171	fileStage	2	int
+171	submissionFileId	16	int
+171	fileId	14	int
+171	submissionId	13	int
+171	username	lkumiega	string
+171	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+172	fileStage	2	int
+172	sourceSubmissionFileId	\N	string
+172	submissionFileId	16	int
+172	fileId	14	int
+172	submissionId	13	int
+172	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+172	username	lkumiega	string
+173	fileStage	2	int
+173	sourceSubmissionFileId	\N	string
+173	submissionFileId	16	int
+173	fileId	14	int
+173	submissionId	13	int
+173	username	lkumiega	string
+173	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+173	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+176	editorName	Daniel Barnes	string
 176	submissionId	13	int
-176	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-176	username	lkumiega	string
-177	fileStage	2	int
-177	sourceSubmissionFileId	\N	string
-177	submissionFileId	18	int
-177	fileId	14	int
+176	decision	Send to Review	string
+177	reviewAssignmentId	19	string
+177	reviewerName	Julie Janssen	string
 177	submissionId	13	int
-177	username	lkumiega	string
-177	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-177	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-180	editorName	Daniel Barnes	string
+177	stageId	3	int
+177	round	1	int
+178	reviewAssignmentId	20	string
+178	reviewerName	Aisla McCrae	string
+178	submissionId	13	int
+178	stageId	3	int
+178	round	1	int
+179	reviewAssignmentId	21	string
+179	reviewerName	Adela Gallego	string
+179	submissionId	13	int
+179	stageId	3	int
+179	round	1	int
+180	reviewAssignmentId	19	int
+180	reviewerName	Julie Janssen	string
 180	submissionId	13	int
-180	decision	Send to Review	string
-181	fileStage	4	int
-181	sourceSubmissionFileId	18	int
-181	submissionFileId	19	int
-181	fileId	14	int
+180	round	1	int
+181	reviewAssignmentId	19	int
+181	reviewerName	Julie Janssen	string
 181	submissionId	13	int
-181	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-181	username	dbarnes	string
-182	fileStage	4	int
-182	submissionFileId	19	int
-182	fileId	14	int
+181	round	1	int
+182	reviewAssignmentId	20	int
+182	reviewerName	Aisla McCrae	string
 182	submissionId	13	int
-182	username	dbarnes	string
-182	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-183	reviewAssignmentId	19	string
-183	reviewerName	Julie Janssen	string
+182	round	1	int
+183	reviewAssignmentId	20	int
+183	reviewerName	Aisla McCrae	string
 183	submissionId	13	int
-183	stageId	3	int
 183	round	1	int
-184	reviewAssignmentId	20	string
-184	reviewerName	Aisla McCrae	string
+184	reviewAssignmentId	21	int
+184	reviewerName	Adela Gallego	string
 184	submissionId	13	int
-184	stageId	3	int
 184	round	1	int
-185	reviewAssignmentId	21	string
+185	reviewAssignmentId	21	int
 185	reviewerName	Adela Gallego	string
 185	submissionId	13	int
-185	stageId	3	int
 185	round	1	int
-186	reviewAssignmentId	19	int
-186	reviewerName	Julie Janssen	string
+186	editorName	Daniel Barnes	string
 186	submissionId	13	int
-186	round	1	int
-187	reviewAssignmentId	19	int
-187	reviewerName	Julie Janssen	string
-187	submissionId	13	int
-187	round	1	int
-188	reviewAssignmentId	20	int
-188	reviewerName	Aisla McCrae	string
-188	submissionId	13	int
-188	round	1	int
-189	reviewAssignmentId	20	int
-189	reviewerName	Aisla McCrae	string
-189	submissionId	13	int
-189	round	1	int
-190	reviewAssignmentId	21	int
-190	reviewerName	Adela Gallego	string
-190	submissionId	13	int
-190	round	1	int
-191	reviewAssignmentId	21	int
-191	reviewerName	Adela Gallego	string
-191	submissionId	13	int
-191	round	1	int
-192	editorName	Daniel Barnes	string
-192	submissionId	13	int
-192	decision	Request Revisions	string
-194	fileStage	2	int
-194	sourceSubmissionFileId	\N	string
-194	submissionFileId	20	int
-194	fileId	15	int
-194	submissionId	14	int
-194	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-194	username	pdaniel	string
+186	decision	Request Revisions	string
+188	fileStage	2	int
+188	sourceSubmissionFileId	\N	string
+188	submissionFileId	17	int
+188	fileId	15	int
+188	submissionId	14	int
+188	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+188	username	pdaniel	string
+189	fileStage	2	int
+189	submissionFileId	17	int
+189	fileId	15	int
+189	submissionId	14	int
+189	username	pdaniel	string
+189	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+190	fileStage	2	int
+190	sourceSubmissionFileId	\N	string
+190	submissionFileId	17	int
+190	fileId	15	int
+190	submissionId	14	int
+190	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+190	username	pdaniel	string
+191	fileStage	2	int
+191	sourceSubmissionFileId	\N	string
+191	submissionFileId	17	int
+191	fileId	15	int
+191	submissionId	14	int
+191	username	pdaniel	string
+191	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+191	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
 195	fileStage	2	int
-195	submissionFileId	20	int
-195	fileId	15	int
-195	submissionId	14	int
-195	username	pdaniel	string
-195	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+195	sourceSubmissionFileId	\N	string
+195	submissionFileId	18	int
+195	fileId	16	int
+195	submissionId	15	int
+195	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+195	username	rbaiyewu	string
 196	fileStage	2	int
-196	sourceSubmissionFileId	\N	string
-196	submissionFileId	20	int
-196	fileId	15	int
-196	submissionId	14	int
-196	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-196	username	pdaniel	string
+196	submissionFileId	18	int
+196	fileId	16	int
+196	submissionId	15	int
+196	username	rbaiyewu	string
+196	name	Yam diseases and its management in Nigeria.pdf	string
 197	fileStage	2	int
 197	sourceSubmissionFileId	\N	string
-197	submissionFileId	20	int
-197	fileId	15	int
-197	submissionId	14	int
-197	username	pdaniel	string
-197	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-197	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-201	fileStage	2	int
-201	sourceSubmissionFileId	\N	string
-201	submissionFileId	21	int
-201	fileId	16	int
+197	submissionFileId	18	int
+197	fileId	16	int
+197	submissionId	15	int
+197	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+197	username	rbaiyewu	string
+198	fileStage	2	int
+198	sourceSubmissionFileId	\N	string
+198	submissionFileId	18	int
+198	fileId	16	int
+198	submissionId	15	int
+198	username	rbaiyewu	string
+198	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+198	name	Yam diseases and its management in Nigeria.pdf	string
+201	editorName	Daniel Barnes	string
 201	submissionId	15	int
-201	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-201	username	rbaiyewu	string
-202	fileStage	2	int
-202	submissionFileId	21	int
-202	fileId	16	int
+201	decision	Send to Review	string
+202	reviewAssignmentId	22	string
+202	reviewerName	Paul Hudson	string
 202	submissionId	15	int
-202	username	rbaiyewu	string
-202	name	Yam diseases and its management in Nigeria.pdf	string
-203	fileStage	2	int
-203	sourceSubmissionFileId	\N	string
-203	submissionFileId	21	int
-203	fileId	16	int
+202	stageId	3	int
+202	round	1	int
+203	reviewAssignmentId	23	string
+203	reviewerName	Aisla McCrae	string
 203	submissionId	15	int
-203	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-203	username	rbaiyewu	string
-204	fileStage	2	int
-204	sourceSubmissionFileId	\N	string
-204	submissionFileId	21	int
-204	fileId	16	int
+203	stageId	3	int
+203	round	1	int
+204	editorName	Daniel Barnes	string
 204	submissionId	15	int
-204	username	rbaiyewu	string
-204	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-204	name	Yam diseases and its management in Nigeria.pdf	string
-207	editorName	Daniel Barnes	string
-207	submissionId	15	int
-207	decision	Send to Review	string
-208	fileStage	4	int
-208	sourceSubmissionFileId	21	int
-208	submissionFileId	22	int
-208	fileId	16	int
-208	submissionId	15	int
-208	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-208	username	dbarnes	string
-209	fileStage	4	int
-209	submissionFileId	22	int
-209	fileId	16	int
-209	submissionId	15	int
-209	username	dbarnes	string
-209	name	Yam diseases and its management in Nigeria.pdf	string
-210	reviewAssignmentId	22	string
-210	reviewerName	Paul Hudson	string
-210	submissionId	15	int
-210	stageId	3	int
-210	round	1	int
-211	reviewAssignmentId	23	string
-211	reviewerName	Aisla McCrae	string
-211	submissionId	15	int
-211	stageId	3	int
-211	round	1	int
-212	editorName	Daniel Barnes	string
-212	submissionId	15	int
-212	decision	Accept Submission	string
-213	name	Sarah Vogt	string
-213	username	svogt	string
-213	userGroupName	Copyeditor	string
-214	editorName	Daniel Barnes	string
-214	submissionId	15	int
-214	decision	Send To Production	string
-215	name	Stephen Hellier	string
-215	username	shellier	string
-215	userGroupName	Layout Editor	string
+204	decision	Accept Submission	string
+205	name	Sarah Vogt	string
+205	username	svogt	string
+205	userGroupName	Copyeditor	string
+206	editorName	Daniel Barnes	string
+206	submissionId	15	int
+206	decision	Send To Production	string
+207	name	Stephen Hellier	string
+207	username	shellier	string
+207	userGroupName	Layout Editor	string
+209	fileStage	2	int
+209	sourceSubmissionFileId	\N	string
+209	submissionFileId	19	int
+209	fileId	17	int
+209	submissionId	16	int
+209	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+209	username	rrossi	string
+210	fileStage	2	int
+210	submissionFileId	19	int
+210	fileId	17	int
+210	submissionId	16	int
+210	username	rrossi	string
+210	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+211	fileStage	2	int
+211	sourceSubmissionFileId	\N	string
+211	submissionFileId	19	int
+211	fileId	17	int
+211	submissionId	16	int
+211	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+211	username	rrossi	string
+212	fileStage	2	int
+212	sourceSubmissionFileId	\N	string
+212	submissionFileId	19	int
+212	fileId	17	int
+212	submissionId	16	int
+212	username	rrossi	string
+212	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+212	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+216	fileStage	2	int
+216	sourceSubmissionFileId	\N	string
+216	submissionFileId	20	int
+216	fileId	18	int
+216	submissionId	17	int
+216	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+216	username	vkarbasizaed	string
 217	fileStage	2	int
-217	sourceSubmissionFileId	\N	string
-217	submissionFileId	23	int
-217	fileId	17	int
-217	submissionId	16	int
-217	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-217	username	rrossi	string
+217	submissionFileId	20	int
+217	fileId	18	int
+217	submissionId	17	int
+217	username	vkarbasizaed	string
+217	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
 218	fileStage	2	int
-218	submissionFileId	23	int
-218	fileId	17	int
-218	submissionId	16	int
-218	username	rrossi	string
-218	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+218	sourceSubmissionFileId	\N	string
+218	submissionFileId	20	int
+218	fileId	18	int
+218	submissionId	17	int
+218	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+218	username	vkarbasizaed	string
 219	fileStage	2	int
 219	sourceSubmissionFileId	\N	string
-219	submissionFileId	23	int
-219	fileId	17	int
-219	submissionId	16	int
-219	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-219	username	rrossi	string
-220	fileStage	2	int
-220	sourceSubmissionFileId	\N	string
-220	submissionFileId	23	int
-220	fileId	17	int
-220	submissionId	16	int
-220	username	rrossi	string
-220	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-220	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-224	fileStage	2	int
-224	sourceSubmissionFileId	\N	string
-224	submissionFileId	24	int
-224	fileId	18	int
+219	submissionFileId	20	int
+219	fileId	18	int
+219	submissionId	17	int
+219	username	vkarbasizaed	string
+259	decision	Send to Review	string
+219	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+219	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+222	editorName	Daniel Barnes	string
+222	submissionId	17	int
+222	decision	Send to Review	string
+223	reviewAssignmentId	24	string
+223	reviewerName	Julie Janssen	string
+223	submissionId	17	int
+223	stageId	3	int
+223	round	1	int
+224	reviewAssignmentId	25	string
+224	reviewerName	Paul Hudson	string
 224	submissionId	17	int
-224	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-224	username	vkarbasizaed	string
-225	fileStage	2	int
-225	submissionFileId	24	int
-225	fileId	18	int
+224	stageId	3	int
+224	round	1	int
+225	editorName	Daniel Barnes	string
 225	submissionId	17	int
-225	username	vkarbasizaed	string
-225	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-226	fileStage	2	int
-226	sourceSubmissionFileId	\N	string
-226	submissionFileId	24	int
-226	fileId	18	int
-226	submissionId	17	int
-226	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-226	username	vkarbasizaed	string
-227	fileStage	2	int
-227	sourceSubmissionFileId	\N	string
-227	submissionFileId	24	int
-227	fileId	18	int
+225	decision	Accept Submission	string
+226	name	Maria Fritz	string
+226	username	mfritz	string
+226	userGroupName	Copyeditor	string
+227	editorName	Daniel Barnes	string
 227	submissionId	17	int
-227	username	vkarbasizaed	string
-227	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-227	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-230	editorName	Daniel Barnes	string
+227	decision	Send To Production	string
+228	name	Graham Cox	string
+228	username	gcox	string
+228	userGroupName	Layout Editor	string
+229	name	Catherine Turner	string
+229	username	cturner	string
+229	userGroupName	Proofreader	string
+230	fileStage	10	int
+230	sourceSubmissionFileId	\N	string
+230	submissionFileId	21	int
+230	fileId	19	int
 230	submissionId	17	int
-230	decision	Send to Review	string
-231	reviewAssignmentId	24	string
-231	reviewerName	Julie Janssen	string
+230	originalFileName	article.pdf	string
+230	username	dbarnes	string
+231	fileStage	10	int
+231	submissionFileId	21	int
+231	fileId	19	int
 231	submissionId	17	int
-231	stageId	3	int
-231	round	1	int
-232	reviewAssignmentId	25	string
-232	reviewerName	Paul Hudson	string
+231	username	dbarnes	string
+231	name	article.pdf	string
+232	fileStage	10	int
+232	sourceSubmissionFileId	\N	string
+232	submissionFileId	21	int
+232	fileId	19	int
 232	submissionId	17	int
-232	stageId	3	int
-232	round	1	int
-233	editorName	Daniel Barnes	string
+232	originalFileName	article.pdf	string
+232	username	dbarnes	string
+233	fileStage	10	int
+233	sourceSubmissionFileId	\N	string
+233	submissionFileId	21	int
+233	fileId	19	int
 233	submissionId	17	int
-233	decision	Accept Submission	string
-234	name	Maria Fritz	string
-234	username	mfritz	string
-234	userGroupName	Copyeditor	string
-235	editorName	Daniel Barnes	string
-235	submissionId	17	int
-235	decision	Send To Production	string
-236	name	Graham Cox	string
-236	username	gcox	string
-236	userGroupName	Layout Editor	string
-237	name	Catherine Turner	string
-237	username	cturner	string
-237	userGroupName	Proofreader	string
-238	fileStage	10	int
-238	sourceSubmissionFileId	\N	string
-238	submissionFileId	25	int
-238	fileId	19	int
-238	submissionId	17	int
-238	originalFileName	article.pdf	string
-238	username	dbarnes	string
-239	fileStage	10	int
-239	submissionFileId	25	int
-239	fileId	19	int
-239	submissionId	17	int
-239	username	dbarnes	string
-239	name	article.pdf	string
-240	fileStage	10	int
-240	sourceSubmissionFileId	\N	string
-240	submissionFileId	25	int
-240	fileId	19	int
-240	submissionId	17	int
-240	originalFileName	article.pdf	string
-240	username	dbarnes	string
-241	fileStage	10	int
-241	sourceSubmissionFileId	\N	string
-241	submissionFileId	25	int
-241	fileId	19	int
-241	submissionId	17	int
-241	username	dbarnes	string
-241	originalFileName	article.pdf	string
-241	name	article.pdf	string
+233	username	dbarnes	string
+233	originalFileName	article.pdf	string
+233	name	article.pdf	string
+245	fileStage	2	int
+245	sourceSubmissionFileId	\N	string
+245	submissionFileId	22	int
+245	fileId	20	int
+245	submissionId	18	int
+245	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+245	username	vwilliamson	string
+246	fileStage	2	int
+246	submissionFileId	22	int
+246	fileId	20	int
+246	submissionId	18	int
+246	username	vwilliamson	string
+246	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+247	fileStage	2	int
+247	sourceSubmissionFileId	\N	string
+247	submissionFileId	22	int
+247	fileId	20	int
+247	submissionId	18	int
+247	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+247	username	vwilliamson	string
+248	fileStage	2	int
+248	sourceSubmissionFileId	\N	string
+248	submissionFileId	22	int
+248	fileId	20	int
+248	submissionId	18	int
+248	username	vwilliamson	string
+248	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+248	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+251	editorName	Daniel Barnes	string
+251	submissionId	18	int
+251	decision	Decline Submission	string
 253	fileStage	2	int
 253	sourceSubmissionFileId	\N	string
-253	submissionFileId	26	int
-253	fileId	20	int
-253	submissionId	18	int
-253	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-253	username	vwilliamson	string
+253	submissionFileId	23	int
+253	fileId	21	int
+253	submissionId	19	int
+253	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+253	username	zwoods	string
 254	fileStage	2	int
-254	submissionFileId	26	int
-254	fileId	20	int
-254	submissionId	18	int
-254	username	vwilliamson	string
-254	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+254	submissionFileId	23	int
+254	fileId	21	int
+254	submissionId	19	int
+254	username	zwoods	string
+254	name	Finocchiaro: Arguments About Arguments.pdf	string
 255	fileStage	2	int
 255	sourceSubmissionFileId	\N	string
-255	submissionFileId	26	int
-255	fileId	20	int
-255	submissionId	18	int
-255	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-255	username	vwilliamson	string
+255	submissionFileId	23	int
+255	fileId	21	int
+255	submissionId	19	int
+255	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+255	username	zwoods	string
 256	fileStage	2	int
 256	sourceSubmissionFileId	\N	string
-256	submissionFileId	26	int
-256	fileId	20	int
-256	submissionId	18	int
-256	username	vwilliamson	string
-256	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-256	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+256	submissionFileId	23	int
+256	fileId	21	int
+256	submissionId	19	int
+256	username	zwoods	string
+256	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+256	name	Finocchiaro: Arguments About Arguments.pdf	string
 259	editorName	Daniel Barnes	string
-259	submissionId	18	int
-259	decision	Decline Submission	string
-261	fileStage	2	int
-261	sourceSubmissionFileId	\N	string
-261	submissionFileId	27	int
+259	submissionId	19	int
+260	fileStage	4	int
+260	sourceSubmissionFileId	23	int
+260	submissionFileId	24	int
+260	fileId	21	int
+260	submissionId	19	int
+260	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+260	username	dbarnes	string
+261	fileStage	4	int
+261	submissionFileId	24	int
 261	fileId	21	int
 261	submissionId	19	int
-261	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-261	username	zwoods	string
-262	fileStage	2	int
-262	submissionFileId	27	int
-262	fileId	21	int
+261	username	dbarnes	string
+261	name	Finocchiaro: Arguments About Arguments.pdf	string
+262	reviewAssignmentId	26	string
+262	reviewerName	Paul Hudson	string
 262	submissionId	19	int
-262	username	zwoods	string
-262	name	Finocchiaro: Arguments About Arguments.pdf	string
-263	fileStage	2	int
-263	sourceSubmissionFileId	\N	string
-263	submissionFileId	27	int
-263	fileId	21	int
+262	stageId	3	int
+262	round	1	int
+263	reviewAssignmentId	27	string
+263	reviewerName	Aisla McCrae	string
 263	submissionId	19	int
-263	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-263	username	zwoods	string
-264	fileStage	2	int
-264	sourceSubmissionFileId	\N	string
-264	submissionFileId	27	int
-264	fileId	21	int
+263	stageId	3	int
+263	round	1	int
+264	editorName	Daniel Barnes	string
 264	submissionId	19	int
-264	username	zwoods	string
-264	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-264	name	Finocchiaro: Arguments About Arguments.pdf	string
-267	editorName	Daniel Barnes	string
-267	submissionId	19	int
-267	decision	Send to Review	string
-268	reviewAssignmentId	26	string
-268	reviewerName	Paul Hudson	string
-268	submissionId	19	int
-268	stageId	3	int
-268	round	1	int
-269	reviewAssignmentId	27	string
-269	reviewerName	Aisla McCrae	string
-269	submissionId	19	int
-269	stageId	3	int
-269	round	1	int
-270	editorName	Daniel Barnes	string
-270	submissionId	19	int
-270	decision	Accept Submission	string
-271	name	Sarah Vogt	string
-271	username	svogt	string
-271	userGroupName	Copyeditor	string
+264	decision	Accept Submission	string
+265	name	Sarah Vogt	string
+265	username	svogt	string
+265	userGroupName	Copyeditor	string
 \.
 
 
@@ -6511,35 +6316,28 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	journals/1/articles/1/642b4162b2709.pdf	application/pdf
-2	journals/1/articles/1/642b41a80b6f8.pdf	application/pdf
-3	journals/1/articles/2/642b420a49edf.pdf	application/pdf
-4	journals/1/articles/3/642b423149d4a.pdf	application/pdf
-5	journals/1/articles/4/642b425705f95.pdf	application/pdf
-6	journals/1/articles/5/642b4266a5770.pdf	application/pdf
-7	journals/1/articles/6/642b429791fd7.pdf	application/pdf
-8	journals/1/articles/7/642b42c644f30.pdf	application/pdf
-9	journals/1/articles/8/642b42f152914.pdf	application/pdf
-10	journals/1/articles/9/642b4300baf88.pdf	application/pdf
-11	journals/1/articles/10/642b43336138e.pdf	application/pdf
-12	journals/1/articles/11/642b4363a8ea2.pdf	application/pdf
-13	journals/1/articles/12/642b4372d1a23.pdf	application/pdf
-14	journals/1/articles/13/642b43914a2da.pdf	application/pdf
-15	journals/1/articles/14/642b43ddc6f00.pdf	application/pdf
-16	journals/1/articles/15/642b43ea4ca36.pdf	application/pdf
-17	journals/1/articles/16/642b4419ad055.pdf	application/pdf
-18	journals/1/articles/17/642b44261bfee.pdf	application/pdf
-19	journals/1/articles/17/642b4456e66a9.pdf	application/pdf
-20	journals/1/articles/18/642b44a099129.pdf	application/pdf
-21	journals/1/articles/19/642b44b7833ac.pdf	application/pdf
+1	journals/1/articles/1/642c84e439832.pdf	application/pdf
+2	journals/1/articles/1/642c852d3817e.pdf	application/pdf
+3	journals/1/articles/2/642c8593f17ef.pdf	application/pdf
+4	journals/1/articles/3/642c85bdb20b8.pdf	application/pdf
+5	journals/1/articles/4/642c85e4cd8d7.pdf	application/pdf
+6	journals/1/articles/5/642c85f53b914.pdf	application/pdf
+7	journals/1/articles/6/642c862a4fb8a.pdf	application/pdf
+8	journals/1/articles/7/642c865ac6d29.pdf	application/pdf
+9	journals/1/articles/8/642c86879ac77.pdf	application/pdf
+10	journals/1/articles/9/642c8697c61c9.pdf	application/pdf
+11	journals/1/articles/10/642c86ccbc8ec.pdf	application/pdf
+12	journals/1/articles/11/642c86fea827f.pdf	application/pdf
+13	journals/1/articles/12/642c870ea1e1a.pdf	application/pdf
+14	journals/1/articles/13/642c872ed16c0.pdf	application/pdf
+15	journals/1/articles/14/642c877c9b5cc.pdf	application/pdf
+16	journals/1/articles/15/642c878a0754e.pdf	application/pdf
+17	journals/1/articles/16/642c87bc153a4.pdf	application/pdf
+18	journals/1/articles/17/642c87c95dcc0.pdf	application/pdf
+19	journals/1/articles/17/642c87fc8c2de.pdf	application/pdf
+20	journals/1/articles/18/642c88477981c.pdf	application/pdf
+21	journals/1/articles/19/642c885fe532e.pdf	application/pdf
 \.
-
-
---
--- Name: files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.files_file_id_seq', 21, true);
 
 
 --
@@ -6548,40 +6346,33 @@ SELECT pg_catalog.setval('public.files_file_id_seq', 21, true);
 
 COPY public.filter_groups (filter_group_id, symbolic, display_name, description, input_type, output_type) FROM stdin;
 1	article=>dc11	plugins.metadata.dc11.articleAdapter.displayName	plugins.metadata.dc11.articleAdapter.description	class::classes.submission.Submission	metadata::plugins.metadata.dc11.schema.Dc11Schema(ARTICLE)
-2	article=>doaj-xml	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/doaj/doajArticles.xsd)
-3	article=>doaj-json	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission	primitive::string
-4	issue=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.issue.Issue	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-5	article=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.submission.Submission	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-6	galley=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.article.ArticleGalley	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-7	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-8	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
-9	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-10	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
-11	issue=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.issue.Issue[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
-12	article=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.submission.Submission[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
-13	article=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
-14	native-xml=>article	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
-15	issue=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.Issue[]	xml::schema(plugins/importexport/native/native.xsd)
-16	native-xml=>issue	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.Issue[]
-17	issuegalley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.IssueGalley[]	xml::schema(plugins/importexport/native/native.xsd)
-18	native-xml=>issuegalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.IssueGalley[]
-19	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.Author[]	xml::schema(plugins/importexport/native/native.xsd)
-20	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.Author[]
-21	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
-22	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
-23	article-galley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.ArticleGalley	xml::schema(plugins/importexport/native/native.xsd)
-24	native-xml=>ArticleGalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.ArticleGalley[]
-25	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
-26	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
-27	article=>pubmed-xml	plugins.importexport.pubmed.displayName	plugins.importexport.pubmed.description	class::classes.submission.Submission[]	xml::dtd
+2	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+3	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
+4	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+5	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
+6	issue=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.issue.Issue[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
+7	article=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.submission.Submission[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
+8	article=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
+9	native-xml=>article	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
+10	issue=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.Issue[]	xml::schema(plugins/importexport/native/native.xsd)
+11	native-xml=>issue	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.Issue[]
+12	issuegalley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.IssueGalley[]	xml::schema(plugins/importexport/native/native.xsd)
+13	native-xml=>issuegalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.IssueGalley[]
+14	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.Author[]	xml::schema(plugins/importexport/native/native.xsd)
+15	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.Author[]
+16	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
+17	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
+18	article-galley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.ArticleGalley	xml::schema(plugins/importexport/native/native.xsd)
+19	native-xml=>ArticleGalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.ArticleGalley[]
+20	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
+21	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
+22	article=>pubmed-xml	plugins.importexport.pubmed.displayName	plugins.importexport.pubmed.description	class::classes.submission.Submission[]	xml::dtd
+23	article=>doaj-xml	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/doaj/doajArticles.xsd)
+24	article=>doaj-json	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission	primitive::string
+25	issue=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.issue.Issue	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+26	article=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.submission.Submission	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+27	galley=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.article.ArticleGalley	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
 \.
-
-
---
--- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.filter_groups_filter_group_id_seq', 27, true);
 
 
 --
@@ -6598,40 +6389,33 @@ COPY public.filter_settings (filter_id, locale, setting_name, setting_value, set
 
 COPY public.filters (filter_id, filter_group_id, context_id, display_name, class_name, is_template, parent_filter_id, seq) FROM stdin;
 1	1	0	Extract metadata from a(n) Submission	plugins.metadata.dc11.filter.Dc11SchemaArticleAdapter	0	0	0
-2	2	0	DOAJ XML export	plugins.importexport.doaj.filter.DOAJXmlFilter	0	0	0
-3	3	0	DOAJ JSON export	plugins.importexport.doaj.filter.DOAJJsonFilter	0	0	0
-4	4	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-5	5	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-6	6	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-7	7	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
-8	8	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
-9	9	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
-10	10	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
-11	11	0	Crossref XML issue export	plugins.importexport.crossref.filter.IssueCrossrefXmlFilter	0	0	0
-12	12	0	Crossref XML issue export	plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter	0	0	0
-13	13	0	Native XML submission export	plugins.importexport.native.filter.ArticleNativeXmlFilter	0	0	0
-14	14	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlArticleFilter	0	0	0
-15	15	0	Native XML issue export	plugins.importexport.native.filter.IssueNativeXmlFilter	0	0	0
-16	16	0	Native XML issue import	plugins.importexport.native.filter.NativeXmlIssueFilter	0	0	0
-17	17	0	Native XML issue galley export	plugins.importexport.native.filter.IssueGalleyNativeXmlFilter	0	0	0
-18	18	0	Native XML issue galley import	plugins.importexport.native.filter.NativeXmlIssueGalleyFilter	0	0	0
-19	19	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
-20	20	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
-21	22	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlArticleFileFilter	0	0	0
-22	21	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
-23	23	0	Native XML representation export	plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter	0	0	0
-24	24	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlArticleGalleyFilter	0	0	0
-25	25	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
-26	26	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
-27	27	0	ArticlePubMedXmlFilter	plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter	0	0	0
+2	2	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
+3	3	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
+4	4	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
+5	5	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
+6	6	0	Crossref XML issue export	plugins.importexport.crossref.filter.IssueCrossrefXmlFilter	0	0	0
+7	7	0	Crossref XML issue export	plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter	0	0	0
+8	8	0	Native XML submission export	plugins.importexport.native.filter.ArticleNativeXmlFilter	0	0	0
+9	9	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlArticleFilter	0	0	0
+10	10	0	Native XML issue export	plugins.importexport.native.filter.IssueNativeXmlFilter	0	0	0
+11	11	0	Native XML issue import	plugins.importexport.native.filter.NativeXmlIssueFilter	0	0	0
+12	12	0	Native XML issue galley export	plugins.importexport.native.filter.IssueGalleyNativeXmlFilter	0	0	0
+13	13	0	Native XML issue galley import	plugins.importexport.native.filter.NativeXmlIssueGalleyFilter	0	0	0
+14	14	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
+15	15	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
+16	17	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlArticleFileFilter	0	0	0
+17	16	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
+18	18	0	Native XML representation export	plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter	0	0	0
+19	19	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlArticleGalleyFilter	0	0	0
+20	20	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
+21	21	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
+22	22	0	ArticlePubMedXmlFilter	plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter	0	0	0
+23	23	0	DOAJ XML export	plugins.importexport.doaj.filter.DOAJXmlFilter	0	0	0
+24	24	0	DOAJ JSON export	plugins.importexport.doaj.filter.DOAJJsonFilter	0	0	0
+25	25	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+26	26	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+27	27	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
 \.
-
-
---
--- Name: filters_filter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.filters_filter_id_seq', 27, true);
 
 
 --
@@ -6687,25 +6471,11 @@ COPY public.genres (genre_id, context_id, seq, enabled, category, dependent, sup
 
 
 --
--- Name: genres_genre_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.genres_genre_id_seq', 12, true);
-
-
---
 -- Data for Name: institutional_subscription_ip; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.institutional_subscription_ip (institutional_subscription_ip_id, subscription_id, ip_string, ip_start, ip_end) FROM stdin;
 \.
-
-
---
--- Name: institutional_subscription_ip_institutional_subscription_ip_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.institutional_subscription_ip_institutional_subscription_ip_seq', 1, false);
 
 
 --
@@ -6717,25 +6487,11 @@ COPY public.institutional_subscriptions (institutional_subscription_id, subscrip
 
 
 --
--- Name: institutional_subscriptions_institutional_subscription_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.institutional_subscriptions_institutional_subscription_id_seq', 1, false);
-
-
---
 -- Data for Name: issue_files; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.issue_files (file_id, issue_id, file_name, file_type, file_size, content_type, original_file_name, date_uploaded, date_modified) FROM stdin;
 \.
-
-
---
--- Name: issue_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.issue_files_file_id_seq', 1, false);
 
 
 --
@@ -6752,13 +6508,6 @@ COPY public.issue_galley_settings (galley_id, locale, setting_name, setting_valu
 
 COPY public.issue_galleys (galley_id, locale, issue_id, file_id, label, seq, url_path) FROM stdin;
 \.
-
-
---
--- Name: issue_galleys_galley_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.issue_galleys_galley_id_seq', 1, false);
 
 
 --
@@ -6782,16 +6531,9 @@ COPY public.issue_settings (issue_id, locale, setting_name, setting_value, setti
 --
 
 COPY public.issues (issue_id, journal_id, volume, number, year, published, current, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name, url_path) FROM stdin;
-2	1	2	1	2015	0	0	\N	\N	2023-04-03 21:26:46	1	\N	1	1	1	0	\N	\N	
-1	1	1	2	2014	1	1	2023-04-03 21:12:44	\N	2023-04-03 21:26:47	1	\N	1	1	1	0	\N	\N	
+2	1	2	1	2015	0	0	\N	\N	2023-04-04 20:27:41	1	\N	1	1	1	0	\N	\N	
+1	1	1	2	2014	1	1	2023-04-04 20:13:01	\N	2023-04-04 20:27:42	1	\N	1	1	1	0	\N	\N	
 \.
-
-
---
--- Name: issues_issue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.issues_issue_id_seq', 2, true);
 
 
 --
@@ -6808,13 +6550,6 @@ COPY public.item_views (assoc_type, assoc_id, user_id, date_last_viewed) FROM st
 
 COPY public.jobs (id, queue, payload, attempts, reserved_at, available_at, created_at) FROM stdin;
 \.
-
-
---
--- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.jobs_id_seq', 1, false);
 
 
 --
@@ -6882,13 +6617,6 @@ COPY public.journals (journal_id, path, seq, primary_locale, enabled) FROM stdin
 
 
 --
--- Name: journals_journal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.journals_journal_id_seq', 1, true);
-
-
---
 -- Data for Name: library_file_settings; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -6902,13 +6630,6 @@ COPY public.library_file_settings (file_id, locale, setting_name, setting_value,
 
 COPY public.library_files (file_id, context_id, file_name, original_file_name, file_type, file_size, type, date_uploaded, date_modified, submission_id, public_access) FROM stdin;
 \.
-
-
---
--- Name: library_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.library_files_file_id_seq', 1, false);
 
 
 --
@@ -6928,25 +6649,11 @@ COPY public.metadata_descriptions (metadata_description_id, assoc_type, assoc_id
 
 
 --
--- Name: metadata_descriptions_metadata_description_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.metadata_descriptions_metadata_description_id_seq', 1, false);
-
-
---
 -- Data for Name: metrics; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.metrics (load_id, context_id, pkp_section_id, assoc_object_type, assoc_object_id, submission_id, representation_id, assoc_type, assoc_id, day, month, file_type, country_id, region, city, metric_type, metric) FROM stdin;
 \.
-
-
---
--- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq', 23, true);
 
 
 --
@@ -7053,13 +6760,6 @@ COPY public.navigation_menu_items (navigation_menu_item_id, context_id, path, ty
 
 
 --
--- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menu_items_navigation_menu_item_id_seq', 24, true);
-
-
---
 -- Data for Name: navigation_menus; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -7071,26 +6771,12 @@ COPY public.navigation_menus (navigation_menu_id, context_id, area_name, title) 
 
 
 --
--- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.navigation_menus_navigation_menu_id_seq', 3, true);
-
-
---
 -- Data for Name: notes; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2023-04-03 21:16:18	2023-04-03 21:16:18	Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+1	1048586	1	6	2023-04-04 20:16:46	2023-04-04 20:16:46	Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
 \.
-
-
---
--- Name: notes_note_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.notes_note_id_seq', 1, true);
 
 
 --
@@ -7099,13 +6785,6 @@ SELECT pg_catalog.setval('public.notes_note_id_seq', 1, true);
 
 COPY public.notification_mail_list (notification_mail_list_id, email, confirmed, token, context) FROM stdin;
 \.
-
-
---
--- Name: notification_mail_list_notification_mail_list_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.notification_mail_list_notification_mail_list_id_seq', 1, false);
 
 
 --
@@ -7163,210 +6842,196 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 
 
 --
--- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_seq', 38, true);
-
-
---
 -- Data for Name: notifications; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-41	1	17	3	16777259	2023-04-03 21:14:53	\N	1048585	1
-155	1	10	3	16777227	2023-04-03 21:18:36	\N	517	9
-43	1	16	3	16777259	2023-04-03 21:14:53	\N	1048585	1
-374	1	3	2	16777217	2023-04-03 21:24:45	\N	1048585	16
-45	1	14	3	16777259	2023-04-03 21:14:54	\N	1048585	1
-234	1	3	2	16777217	2023-04-03 21:20:54	\N	1048585	10
-47	1	12	3	16777259	2023-04-03 21:14:54	\N	1048585	1
-49	1	5	3	16777259	2023-04-03 21:14:54	\N	1048585	1
-236	1	5	2	16777217	2023-04-03 21:20:55	\N	1048585	10
-6	1	3	2	16777217	2023-04-03 21:13:10	\N	1048585	1
-51	1	4	3	16777259	2023-04-03 21:14:54	\N	1048585	1
-8	1	5	2	16777217	2023-04-03 21:13:10	\N	1048585	1
-10	1	4	2	16777217	2023-04-03 21:13:10	\N	1048585	1
-53	1	3	3	16777259	2023-04-03 21:14:54	\N	1048585	1
-12	1	0	2	16777243	2023-04-03 21:13:10	\N	1048585	1
-13	1	0	2	16777245	2023-04-03 21:13:10	\N	1048585	1
-137	1	4	2	16777254	2023-04-03 21:17:56	\N	1048585	5
-125	1	10	3	16777227	2023-04-03 21:17:47	\N	517	7
-15	1	0	2	16777236	2023-04-03 21:13:15	2023-04-03 21:13:17	523	1
-17	1	7	3	16777227	2023-04-03 21:13:21	\N	517	1
-167	1	4	2	16777254	2023-04-03 21:18:46	\N	1048585	6
-165	1	22	2	16777235	2023-04-03 21:18:46	\N	1048585	6
-86	1	0	2	16777236	2023-04-03 21:16:42	2023-04-03 21:16:44	523	3
-20	1	9	3	16777227	2023-04-03 21:13:25	\N	517	2
-88	1	9	3	16777227	2023-04-03 21:16:47	\N	517	4
-168	1	5	2	16777254	2023-04-03 21:18:46	\N	1048585	6
-23	1	10	3	16777227	2023-04-03 21:13:32	\N	517	3
-58	1	3	2	16777217	2023-04-03 21:15:57	\N	1048585	2
-60	1	5	2	16777217	2023-04-03 21:15:57	\N	1048585	2
-166	1	3	2	16777254	2023-04-03 21:18:46	2023-04-03 21:18:48	1048585	6
-62	1	4	2	16777217	2023-04-03 21:15:57	\N	1048585	2
-176	1	0	2	16777243	2023-04-03 21:19:05	\N	1048585	7
-64	1	0	2	16777243	2023-04-03 21:15:58	\N	1048585	2
-65	1	0	2	16777245	2023-04-03 21:15:58	\N	1048585	2
-170	1	3	2	16777217	2023-04-03 21:19:05	\N	1048585	7
-172	1	5	2	16777217	2023-04-03 21:19:05	\N	1048585	7
-111	1	3	2	16777217	2023-04-03 21:17:29	\N	1048585	5
-91	1	10	3	16777227	2023-04-03 21:16:53	\N	517	5
-33	1	17	2	16777235	2023-04-03 21:13:42	\N	1048585	1
-68	1	18	2	16777231	2023-04-03 21:16:02	\N	1048585	2
-67	1	0	2	16777236	2023-04-03 21:16:02	2023-04-03 21:16:04	523	2
-174	1	4	2	16777217	2023-04-03 21:19:05	\N	1048585	7
-71	1	3	3	16777249	2023-04-03 21:16:18	\N	1048586	1
-177	1	0	2	16777245	2023-04-03 21:19:05	\N	1048585	7
-73	1	4	3	16777249	2023-04-03 21:16:18	\N	1048586	1
-75	1	5	3	16777249	2023-04-03 21:16:18	\N	1048586	1
-180	1	23	2	16777231	2023-04-03 21:19:11	\N	1048585	7
-179	1	0	2	16777236	2023-04-03 21:19:11	2023-04-03 21:19:13	523	6
-113	1	5	2	16777217	2023-04-03 21:17:29	\N	1048585	5
-77	1	3	2	16777217	2023-04-03 21:16:36	\N	1048585	3
-79	1	5	2	16777217	2023-04-03 21:16:36	\N	1048585	3
-81	1	4	2	16777217	2023-04-03 21:16:37	\N	1048585	3
-184	1	9	3	16777227	2023-04-03 21:19:21	\N	517	11
-83	1	0	2	16777243	2023-04-03 21:16:37	\N	1048585	3
-84	1	0	2	16777245	2023-04-03 21:16:37	\N	1048585	3
-95	1	19	2	16777230	2023-04-03 21:16:55	\N	1048585	3
-97	1	4	2	16777251	2023-04-03 21:16:55	\N	1048585	3
-98	1	5	2	16777251	2023-04-03 21:16:55	\N	1048585	3
-96	1	3	2	16777251	2023-04-03 21:16:55	2023-04-03 21:16:57	1048585	3
-115	1	4	2	16777217	2023-04-03 21:17:30	\N	1048585	5
-101	1	3	2	16777217	2023-04-03 21:17:17	\N	1048585	4
-103	1	5	2	16777217	2023-04-03 21:17:17	\N	1048585	4
-105	1	4	2	16777217	2023-04-03 21:17:17	\N	1048585	4
-107	1	0	2	16777243	2023-04-03 21:17:18	\N	1048585	4
-108	1	0	2	16777245	2023-04-03 21:17:18	\N	1048585	4
-117	1	0	2	16777243	2023-04-03 21:17:30	\N	1048585	5
-118	1	0	2	16777245	2023-04-03 21:17:30	\N	1048585	5
-138	1	5	2	16777254	2023-04-03 21:17:56	\N	1048585	5
-147	1	0	2	16777243	2023-04-03 21:18:19	\N	1048585	6
-120	1	0	2	16777236	2023-04-03 21:17:35	2023-04-03 21:17:37	523	4
-122	1	8	3	16777227	2023-04-03 21:17:41	\N	517	6
-136	1	3	2	16777254	2023-04-03 21:17:56	2023-04-03 21:17:58	1048585	5
-148	1	0	2	16777245	2023-04-03 21:18:19	\N	1048585	6
-135	1	21	2	16777235	2023-04-03 21:17:56	\N	1048585	5
-152	1	7	3	16777227	2023-04-03 21:18:30	\N	517	8
-141	1	3	2	16777217	2023-04-03 21:18:19	\N	1048585	6
-143	1	5	2	16777217	2023-04-03 21:18:19	\N	1048585	6
-145	1	4	2	16777217	2023-04-03 21:18:19	\N	1048585	6
-150	1	0	2	16777236	2023-04-03 21:18:25	2023-04-03 21:18:26	523	5
-187	1	10	3	16777227	2023-04-03 21:19:27	\N	517	12
-272	1	0	2	16777243	2023-04-03 21:21:46	\N	1048585	11
-376	1	5	2	16777217	2023-04-03 21:24:45	\N	1048585	16
-238	1	4	2	16777217	2023-04-03 21:20:55	\N	1048585	10
-240	1	0	2	16777243	2023-04-03 21:20:55	\N	1048585	10
-241	1	0	2	16777245	2023-04-03 21:20:55	\N	1048585	10
-191	1	3	2	16777219	2023-04-03 21:19:35	\N	517	10
-378	1	4	2	16777217	2023-04-03 21:24:45	\N	1048585	16
-193	1	4	2	16777219	2023-04-03 21:19:35	\N	517	10
-195	1	5	2	16777219	2023-04-03 21:19:35	\N	517	10
-273	1	0	2	16777245	2023-04-03 21:21:46	\N	1048585	11
-244	1	26	2	16777231	2023-04-03 21:21:01	\N	1048585	10
-243	1	0	2	16777236	2023-04-03 21:21:01	2023-04-03 21:21:03	523	8
-198	1	3	2	16777217	2023-04-03 21:19:51	\N	1048585	8
-200	1	5	2	16777217	2023-04-03 21:19:51	\N	1048585	8
-202	1	4	2	16777217	2023-04-03 21:19:51	\N	1048585	8
-204	1	0	2	16777243	2023-04-03 21:19:52	\N	1048585	8
-205	1	0	2	16777245	2023-04-03 21:19:52	\N	1048585	8
-299	1	0	2	16777243	2023-04-03 21:22:29	\N	1048585	13
-300	1	0	2	16777245	2023-04-03 21:22:29	\N	1048585	13
-342	1	0	2	16777243	2023-04-03 21:23:45	\N	1048585	14
-208	1	3	2	16777217	2023-04-03 21:20:03	\N	1048585	9
-210	1	6	2	16777217	2023-04-03 21:20:03	\N	1048585	9
-343	1	0	2	16777245	2023-04-03 21:23:45	\N	1048585	14
-212	1	0	2	16777243	2023-04-03 21:20:03	\N	1048585	9
-213	1	0	2	16777245	2023-04-03 21:20:03	\N	1048585	9
-252	1	3	2	16777219	2023-04-03 21:21:21	\N	517	15
-254	1	4	2	16777219	2023-04-03 21:21:21	\N	517	15
-256	1	5	2	16777219	2023-04-03 21:21:21	\N	517	15
-215	1	0	2	16777236	2023-04-03 21:20:10	2023-04-03 21:20:12	523	7
-217	1	7	3	16777227	2023-04-03 21:20:16	\N	517	13
-276	1	3	2	16777217	2023-04-03 21:21:58	\N	1048585	12
-278	1	5	2	16777217	2023-04-03 21:21:58	\N	1048585	12
-220	1	10	3	16777227	2023-04-03 21:20:22	\N	517	14
-259	1	3	2	16777219	2023-04-03 21:21:29	\N	517	16
-261	1	4	2	16777219	2023-04-03 21:21:30	\N	517	16
-263	1	5	2	16777219	2023-04-03 21:21:30	\N	517	16
-280	1	4	2	16777217	2023-04-03 21:21:58	\N	1048585	12
-282	1	0	2	16777243	2023-04-03 21:21:58	\N	1048585	12
-283	1	0	2	16777245	2023-04-03 21:21:58	\N	1048585	12
-229	1	25	2	16777235	2023-04-03 21:20:32	\N	1048585	9
-231	1	6	2	16777254	2023-04-03 21:20:32	\N	1048585	9
-266	1	3	2	16777217	2023-04-03 21:21:46	\N	1048585	11
-230	1	3	2	16777254	2023-04-03 21:20:32	2023-04-03 21:20:34	1048585	9
-268	1	5	2	16777217	2023-04-03 21:21:46	\N	1048585	11
-270	1	4	2	16777217	2023-04-03 21:21:46	\N	1048585	11
-286	1	28	2	16777231	2023-04-03 21:22:06	\N	1048585	12
-285	1	0	2	16777236	2023-04-03 21:22:06	2023-04-03 21:22:08	523	9
-287	1	7	3	16777227	2023-04-03 21:22:11	\N	517	17
-302	1	0	2	16777236	2023-04-03 21:22:37	2023-04-03 21:22:38	523	10
-290	1	8	3	16777227	2023-04-03 21:22:16	\N	517	18
-293	1	3	2	16777217	2023-04-03 21:22:29	\N	1048585	13
-295	1	5	2	16777217	2023-04-03 21:22:29	\N	1048585	13
-297	1	4	2	16777217	2023-04-03 21:22:29	\N	1048585	13
-314	1	3	2	16777219	2023-04-03 21:23:02	\N	517	19
-316	1	5	2	16777219	2023-04-03 21:23:02	\N	517	19
-318	1	4	2	16777219	2023-04-03 21:23:02	\N	517	19
-328	1	3	2	16777219	2023-04-03 21:23:21	\N	517	21
-321	1	3	2	16777219	2023-04-03 21:23:11	\N	517	20
-323	1	5	2	16777219	2023-04-03 21:23:11	\N	517	20
-325	1	4	2	16777219	2023-04-03 21:23:11	\N	517	20
-330	1	5	2	16777219	2023-04-03 21:23:21	\N	517	21
-332	1	4	2	16777219	2023-04-03 21:23:21	\N	517	21
-335	1	29	3	16777232	2023-04-03 21:23:33	\N	1048585	13
-351	1	0	2	16777243	2023-04-03 21:23:57	\N	1048585	15
-336	1	3	2	16777217	2023-04-03 21:23:45	\N	1048585	14
-338	1	5	2	16777217	2023-04-03 21:23:45	\N	1048585	14
-340	1	4	2	16777217	2023-04-03 21:23:45	\N	1048585	14
-352	1	0	2	16777245	2023-04-03 21:23:57	\N	1048585	15
-345	1	3	2	16777217	2023-04-03 21:23:57	\N	1048585	15
-347	1	5	2	16777217	2023-04-03 21:23:57	\N	1048585	15
-349	1	4	2	16777217	2023-04-03 21:23:57	\N	1048585	15
-354	1	0	2	16777236	2023-04-03 21:24:05	2023-04-03 21:24:08	523	11
-356	1	8	3	16777227	2023-04-03 21:24:11	\N	517	22
-359	1	9	3	16777227	2023-04-03 21:24:16	\N	517	23
-380	1	0	2	16777243	2023-04-03 21:24:45	\N	1048585	16
-381	1	0	2	16777245	2023-04-03 21:24:45	\N	1048585	16
-369	1	31	2	16777235	2023-04-03 21:24:25	\N	1048585	15
-371	1	5	2	16777254	2023-04-03 21:24:25	\N	1048585	15
-372	1	4	2	16777254	2023-04-03 21:24:25	\N	1048585	15
-428	1	0	2	16777243	2023-04-03 21:27:22	\N	1048585	19
-370	1	3	2	16777254	2023-04-03 21:24:25	2023-04-03 21:24:28	1048585	15
-383	1	3	2	16777217	2023-04-03 21:24:58	\N	1048585	17
-385	1	5	2	16777217	2023-04-03 21:24:58	\N	1048585	17
-387	1	4	2	16777217	2023-04-03 21:24:58	\N	1048585	17
-389	1	0	2	16777243	2023-04-03 21:24:58	\N	1048585	17
-390	1	0	2	16777245	2023-04-03 21:24:58	\N	1048585	17
-429	1	0	2	16777245	2023-04-03 21:27:22	\N	1048585	19
-392	1	0	2	16777236	2023-04-03 21:25:06	2023-04-03 21:25:08	523	12
-394	1	7	3	16777227	2023-04-03 21:25:12	\N	517	24
-397	1	8	3	16777227	2023-04-03 21:25:17	\N	517	25
-431	1	0	2	16777236	2023-04-03 21:27:31	2023-04-03 21:27:33	523	13
-433	1	8	3	16777227	2023-04-03 21:27:37	\N	517	26
-407	1	33	2	16777235	2023-04-03 21:25:27	\N	1048585	17
-436	1	9	3	16777227	2023-04-03 21:27:41	\N	517	27
-413	1	3	2	16777217	2023-04-03 21:27:00	\N	1048585	18
-415	1	5	2	16777217	2023-04-03 21:27:00	\N	1048585	18
-417	1	4	2	16777217	2023-04-03 21:27:00	\N	1048585	18
-419	1	0	2	16777243	2023-04-03 21:27:00	\N	1048585	18
-420	1	0	2	16777245	2023-04-03 21:27:00	\N	1048585	18
-423	1	34	2	16777234	2023-04-03 21:27:08	\N	1048585	18
-440	1	35	2	16777230	2023-04-03 21:27:43	\N	1048585	19
-424	1	3	2	16777217	2023-04-03 21:27:22	\N	1048585	19
-426	1	6	2	16777217	2023-04-03 21:27:22	\N	1048585	19
-442	1	6	2	16777251	2023-04-03 21:27:43	\N	1048585	19
-441	1	3	2	16777251	2023-04-03 21:27:43	2023-04-03 21:27:45	1048585	19
+208	1	3	2	16777217	2023-04-04 20:20:43	\N	1048585	9
+101	1	3	2	16777217	2023-04-04 20:17:47	\N	1048585	4
+336	1	3	2	16777217	2023-04-04 20:24:32	\N	1048585	14
+71	1	3	3	16777249	2023-04-04 20:16:46	\N	1048586	1
+210	1	6	2	16777217	2023-04-04 20:20:43	\N	1048585	9
+73	1	4	3	16777249	2023-04-04 20:16:46	\N	1048586	1
+75	1	5	3	16777249	2023-04-04 20:16:46	\N	1048586	1
+6	1	3	2	16777217	2023-04-04 20:13:28	\N	1048585	1
+103	1	5	2	16777217	2023-04-04 20:17:48	\N	1048585	4
+8	1	5	2	16777217	2023-04-04 20:13:28	\N	1048585	1
+10	1	4	2	16777217	2023-04-04 20:13:28	\N	1048585	1
+105	1	4	2	16777217	2023-04-04 20:17:48	\N	1048585	4
+12	1	0	2	16777243	2023-04-04 20:13:28	\N	1048585	1
+13	1	0	2	16777245	2023-04-04 20:13:28	\N	1048585	1
+77	1	3	2	16777217	2023-04-04 20:17:05	\N	1048585	3
+79	1	5	2	16777217	2023-04-04 20:17:05	\N	1048585	3
+81	1	4	2	16777217	2023-04-04 20:17:05	\N	1048585	3
+15	1	0	2	16777236	2023-04-04 20:13:33	2023-04-04 20:13:35	523	1
+17	1	7	3	16777227	2023-04-04 20:13:40	\N	517	1
+83	1	0	2	16777243	2023-04-04 20:17:05	\N	1048585	3
+84	1	0	2	16777245	2023-04-04 20:17:05	\N	1048585	3
+20	1	9	3	16777227	2023-04-04 20:13:44	\N	517	2
+107	1	0	2	16777243	2023-04-04 20:17:48	\N	1048585	4
+108	1	0	2	16777245	2023-04-04 20:17:48	\N	1048585	4
+23	1	10	3	16777227	2023-04-04 20:13:50	\N	517	3
+86	1	0	2	16777236	2023-04-04 20:17:11	2023-04-04 20:17:13	523	3
+58	1	3	2	16777217	2023-04-04 20:16:23	\N	1048585	2
+88	1	9	3	16777227	2023-04-04 20:17:17	\N	517	4
+137	1	4	2	16777254	2023-04-04 20:18:29	\N	1048585	5
+91	1	10	3	16777227	2023-04-04 20:17:23	\N	517	5
+60	1	5	2	16777217	2023-04-04 20:16:24	\N	1048585	2
+62	1	4	2	16777217	2023-04-04 20:16:24	\N	1048585	2
+138	1	5	2	16777254	2023-04-04 20:18:29	\N	1048585	5
+33	1	17	2	16777235	2023-04-04 20:14:01	\N	1048585	1
+125	1	10	3	16777227	2023-04-04 20:18:18	\N	517	7
+95	1	19	2	16777230	2023-04-04 20:17:25	\N	1048585	3
+64	1	0	2	16777243	2023-04-04 20:16:24	\N	1048585	2
+97	1	4	2	16777251	2023-04-04 20:17:25	\N	1048585	3
+65	1	0	2	16777245	2023-04-04 20:16:24	\N	1048585	2
+98	1	5	2	16777251	2023-04-04 20:17:25	\N	1048585	3
+96	1	3	2	16777251	2023-04-04 20:17:25	2023-04-04 20:17:27	1048585	3
+41	1	17	3	16777259	2023-04-04 20:15:16	\N	1048585	1
+152	1	7	3	16777227	2023-04-04 20:19:06	\N	517	8
+43	1	16	3	16777259	2023-04-04 20:15:17	\N	1048585	1
+111	1	3	2	16777217	2023-04-04 20:18:00	\N	1048585	5
+45	1	14	3	16777259	2023-04-04 20:15:17	\N	1048585	1
+47	1	12	3	16777259	2023-04-04 20:15:17	\N	1048585	1
+113	1	5	2	16777217	2023-04-04 20:18:00	\N	1048585	5
+49	1	5	3	16777259	2023-04-04 20:15:17	\N	1048585	1
+51	1	4	3	16777259	2023-04-04 20:15:17	\N	1048585	1
+115	1	4	2	16777217	2023-04-04 20:18:00	\N	1048585	5
+53	1	3	3	16777259	2023-04-04 20:15:17	\N	1048585	1
+117	1	0	2	16777243	2023-04-04 20:18:00	\N	1048585	5
+118	1	0	2	16777245	2023-04-04 20:18:01	\N	1048585	5
+68	1	18	2	16777231	2023-04-04 20:16:29	\N	1048585	2
+67	1	0	2	16777236	2023-04-04 20:16:29	2023-04-04 20:16:31	523	2
+136	1	3	2	16777254	2023-04-04 20:18:29	2023-04-04 20:18:31	1048585	5
+120	1	0	2	16777236	2023-04-04 20:18:06	2023-04-04 20:18:08	523	4
+122	1	8	3	16777227	2023-04-04 20:18:12	\N	517	6
+135	1	21	2	16777235	2023-04-04 20:18:29	\N	1048585	5
+141	1	3	2	16777217	2023-04-04 20:18:54	\N	1048585	6
+143	1	5	2	16777217	2023-04-04 20:18:54	\N	1048585	6
+145	1	4	2	16777217	2023-04-04 20:18:54	\N	1048585	6
+147	1	0	2	16777243	2023-04-04 20:18:54	\N	1048585	6
+148	1	0	2	16777245	2023-04-04 20:18:54	\N	1048585	6
+150	1	0	2	16777236	2023-04-04 20:19:00	2023-04-04 20:19:02	523	5
+155	1	10	3	16777227	2023-04-04 20:19:12	\N	517	9
+165	1	22	2	16777235	2023-04-04 20:19:23	\N	1048585	6
+167	1	4	2	16777254	2023-04-04 20:19:23	\N	1048585	6
+168	1	5	2	16777254	2023-04-04 20:19:23	\N	1048585	6
+166	1	3	2	16777254	2023-04-04 20:19:23	2023-04-04 20:19:25	1048585	6
+176	1	0	2	16777243	2023-04-04 20:19:42	\N	1048585	7
+170	1	3	2	16777217	2023-04-04 20:19:42	\N	1048585	7
+172	1	5	2	16777217	2023-04-04 20:19:42	\N	1048585	7
+174	1	4	2	16777217	2023-04-04 20:19:42	\N	1048585	7
+177	1	0	2	16777245	2023-04-04 20:19:42	\N	1048585	7
+180	1	23	2	16777231	2023-04-04 20:19:48	\N	1048585	7
+179	1	0	2	16777236	2023-04-04 20:19:48	2023-04-04 20:19:50	523	6
+184	1	9	3	16777227	2023-04-04 20:19:58	\N	517	11
+212	1	0	2	16777243	2023-04-04 20:20:43	\N	1048585	9
+213	1	0	2	16777245	2023-04-04 20:20:43	\N	1048585	9
+338	1	5	2	16777217	2023-04-04 20:24:32	\N	1048585	14
+187	1	10	3	16777227	2023-04-04 20:20:04	\N	517	12
+340	1	4	2	16777217	2023-04-04 20:24:32	\N	1048585	14
+282	1	0	2	16777243	2023-04-04 20:22:42	\N	1048585	12
+215	1	0	2	16777236	2023-04-04 20:20:49	2023-04-04 20:20:52	523	7
+217	1	7	3	16777227	2023-04-04 20:20:56	\N	517	13
+191	1	3	2	16777219	2023-04-04 20:20:13	\N	517	10
+342	1	0	2	16777243	2023-04-04 20:24:33	\N	1048585	14
+193	1	4	2	16777219	2023-04-04 20:20:13	\N	517	10
+343	1	0	2	16777245	2023-04-04 20:24:33	\N	1048585	14
+195	1	5	2	16777219	2023-04-04 20:20:13	\N	517	10
+252	1	3	2	16777219	2023-04-04 20:22:03	\N	517	15
+220	1	10	3	16777227	2023-04-04 20:21:02	\N	517	14
+351	1	0	2	16777243	2023-04-04 20:24:45	\N	1048585	15
+352	1	0	2	16777245	2023-04-04 20:24:45	\N	1048585	15
+254	1	5	2	16777219	2023-04-04 20:22:03	\N	517	15
+198	1	3	2	16777217	2023-04-04 20:20:30	\N	1048585	8
+200	1	5	2	16777217	2023-04-04 20:20:30	\N	1048585	8
+202	1	4	2	16777217	2023-04-04 20:20:30	\N	1048585	8
+345	1	3	2	16777217	2023-04-04 20:24:45	\N	1048585	15
+204	1	0	2	16777243	2023-04-04 20:20:30	\N	1048585	8
+205	1	0	2	16777245	2023-04-04 20:20:30	\N	1048585	8
+347	1	5	2	16777217	2023-04-04 20:24:45	\N	1048585	15
+256	1	4	2	16777219	2023-04-04 20:22:03	\N	517	15
+349	1	4	2	16777217	2023-04-04 20:24:45	\N	1048585	15
+283	1	0	2	16777245	2023-04-04 20:22:42	\N	1048585	12
+229	1	25	2	16777235	2023-04-04 20:21:12	\N	1048585	9
+231	1	6	2	16777254	2023-04-04 20:21:12	\N	1048585	9
+230	1	3	2	16777254	2023-04-04 20:21:12	2023-04-04 20:21:14	1048585	9
+354	1	0	2	16777236	2023-04-04 20:24:54	2023-04-04 20:24:56	523	11
+321	1	3	2	16777219	2023-04-04 20:23:57	\N	517	20
+356	1	8	3	16777227	2023-04-04 20:25:00	\N	517	22
+234	1	3	2	16777217	2023-04-04 20:21:36	\N	1048585	10
+236	1	5	2	16777217	2023-04-04 20:21:36	\N	1048585	10
+359	1	9	3	16777227	2023-04-04 20:25:05	\N	517	23
+238	1	4	2	16777217	2023-04-04 20:21:36	\N	1048585	10
+240	1	0	2	16777243	2023-04-04 20:21:36	\N	1048585	10
+241	1	0	2	16777245	2023-04-04 20:21:36	\N	1048585	10
+259	1	3	2	16777219	2023-04-04 20:22:12	\N	517	16
+261	1	5	2	16777219	2023-04-04 20:22:12	\N	517	16
+244	1	26	2	16777231	2023-04-04 20:21:43	\N	1048585	10
+243	1	0	2	16777236	2023-04-04 20:21:43	2023-04-04 20:21:45	523	8
+263	1	4	2	16777219	2023-04-04 20:22:12	\N	517	16
+369	1	31	2	16777235	2023-04-04 20:25:15	\N	1048585	15
+371	1	5	2	16777254	2023-04-04 20:25:15	\N	1048585	15
+372	1	4	2	16777254	2023-04-04 20:25:15	\N	1048585	15
+286	1	28	2	16777231	2023-04-04 20:22:50	\N	1048585	12
+285	1	0	2	16777236	2023-04-04 20:22:50	2023-04-04 20:22:52	523	9
+370	1	3	2	16777254	2023-04-04 20:25:15	2023-04-04 20:25:18	1048585	15
+287	1	7	3	16777227	2023-04-04 20:22:56	\N	517	17
+266	1	3	2	16777217	2023-04-04 20:22:29	\N	1048585	11
+268	1	5	2	16777217	2023-04-04 20:22:29	\N	1048585	11
+374	1	3	2	16777217	2023-04-04 20:25:36	\N	1048585	16
+270	1	4	2	16777217	2023-04-04 20:22:29	\N	1048585	11
+272	1	0	2	16777243	2023-04-04 20:22:29	\N	1048585	11
+273	1	0	2	16777245	2023-04-04 20:22:29	\N	1048585	11
+302	1	0	2	16777236	2023-04-04 20:23:22	2023-04-04 20:23:25	523	10
+290	1	8	3	16777227	2023-04-04 20:23:01	\N	517	18
+276	1	3	2	16777217	2023-04-04 20:22:42	\N	1048585	12
+278	1	5	2	16777217	2023-04-04 20:22:42	\N	1048585	12
+280	1	4	2	16777217	2023-04-04 20:22:42	\N	1048585	12
+293	1	3	2	16777217	2023-04-04 20:23:14	\N	1048585	13
+295	1	5	2	16777217	2023-04-04 20:23:14	\N	1048585	13
+297	1	4	2	16777217	2023-04-04 20:23:14	\N	1048585	13
+299	1	0	2	16777243	2023-04-04 20:23:15	\N	1048585	13
+300	1	0	2	16777245	2023-04-04 20:23:15	\N	1048585	13
+323	1	5	2	16777219	2023-04-04 20:23:57	\N	517	20
+314	1	3	2	16777219	2023-04-04 20:23:48	\N	517	19
+316	1	5	2	16777219	2023-04-04 20:23:48	\N	517	19
+318	1	4	2	16777219	2023-04-04 20:23:48	\N	517	19
+325	1	4	2	16777219	2023-04-04 20:23:57	\N	517	20
+335	1	29	3	16777232	2023-04-04 20:24:19	\N	1048585	13
+328	1	3	2	16777219	2023-04-04 20:24:07	\N	517	21
+330	1	5	2	16777219	2023-04-04 20:24:07	\N	517	21
+332	1	4	2	16777219	2023-04-04 20:24:07	\N	517	21
+376	1	5	2	16777217	2023-04-04 20:25:36	\N	1048585	16
+378	1	4	2	16777217	2023-04-04 20:25:36	\N	1048585	16
+380	1	0	2	16777243	2023-04-04 20:25:36	\N	1048585	16
+381	1	0	2	16777245	2023-04-04 20:25:36	\N	1048585	16
+428	1	0	2	16777243	2023-04-04 20:28:19	\N	1048585	19
+429	1	0	2	16777245	2023-04-04 20:28:19	\N	1048585	19
+383	1	3	2	16777217	2023-04-04 20:25:49	\N	1048585	17
+385	1	5	2	16777217	2023-04-04 20:25:49	\N	1048585	17
+387	1	4	2	16777217	2023-04-04 20:25:49	\N	1048585	17
+389	1	0	2	16777243	2023-04-04 20:25:50	\N	1048585	17
+390	1	0	2	16777245	2023-04-04 20:25:50	\N	1048585	17
+392	1	0	2	16777236	2023-04-04 20:25:58	2023-04-04 20:26:01	523	12
+394	1	7	3	16777227	2023-04-04 20:26:04	\N	517	24
+431	1	0	2	16777236	2023-04-04 20:28:28	2023-04-04 20:28:30	523	13
+397	1	8	3	16777227	2023-04-04 20:26:09	\N	517	25
+433	1	8	3	16777227	2023-04-04 20:28:34	\N	517	26
+407	1	33	2	16777235	2023-04-04 20:26:19	\N	1048585	17
+436	1	9	3	16777227	2023-04-04 20:28:39	\N	517	27
+413	1	3	2	16777217	2023-04-04 20:27:55	\N	1048585	18
+415	1	5	2	16777217	2023-04-04 20:27:55	\N	1048585	18
+417	1	4	2	16777217	2023-04-04 20:27:55	\N	1048585	18
+419	1	0	2	16777243	2023-04-04 20:27:55	\N	1048585	18
+420	1	0	2	16777245	2023-04-04 20:27:55	\N	1048585	18
+440	1	35	2	16777230	2023-04-04 20:28:41	\N	1048585	19
+423	1	34	2	16777234	2023-04-04 20:28:04	\N	1048585	18
+442	1	6	2	16777251	2023-04-04 20:28:41	\N	1048585	19
+424	1	3	2	16777217	2023-04-04 20:28:19	\N	1048585	19
+426	1	6	2	16777217	2023-04-04 20:28:19	\N	1048585	19
+441	1	3	2	16777251	2023-04-04 20:28:41	2023-04-04 20:28:43	1048585	19
 \.
-
-
---
--- Name: notifications_notification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.notifications_notification_id_seq', 443, true);
 
 
 --
@@ -7383,40 +7048,40 @@ COPY public.oai_resumption_tokens (token, expire, record_offset, params) FROM st
 
 COPY public.plugin_settings (plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
 defaultthemeplugin	0	enabled	1	bool
-usageeventplugin	0	enabled	1	bool
 acronplugin	0	enabled	1	bool
-tinymceplugin	0	enabled	1	bool
 usagestatsplugin	0	enabled	1	bool
 usagestatsplugin	0	createLogFiles	1	bool
 usagestatsplugin	0	accessLogFileParseRegex	/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] "\\S+ (?P<url>\\S+).*?" (?P<returnCode>\\S+) \\S+ ".*?" "(?P<userAgent>.*?)"/	string
 usagestatsplugin	0	optionalColumns	["city","region"]	object
 usagestatsplugin	0	chartType	bar	string
 usagestatsplugin	0	datasetMaxCount	4	string
-developedbyblockplugin	0	enabled	0	bool
-developedbyblockplugin	0	seq	0	int
+usageeventplugin	0	enabled	1	bool
+tinymceplugin	0	enabled	1	bool
 languagetoggleblockplugin	0	enabled	1	bool
 languagetoggleblockplugin	0	seq	4	int
-acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"classes.tasks.SubscriptionExpiryReminder","frequency":{"day":"1"},"args":[]}]	object
-tinymceplugin	1	enabled	1	bool
+developedbyblockplugin	0	enabled	0	bool
+developedbyblockplugin	0	seq	0	int
+acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"classes.tasks.SubscriptionExpiryReminder","frequency":{"day":"1"},"args":[]}]	object
 defaultthemeplugin	1	enabled	1	bool
-developedbyblockplugin	1	enabled	0	bool
-developedbyblockplugin	1	seq	0	int
+tinymceplugin	1	enabled	1	bool
 subscriptionblockplugin	1	enabled	1	bool
 subscriptionblockplugin	1	seq	2	int
-languagetoggleblockplugin	1	enabled	1	bool
-languagetoggleblockplugin	1	seq	4	int
 informationblockplugin	1	enabled	1	bool
 informationblockplugin	1	seq	7	int
+languagetoggleblockplugin	1	enabled	1	bool
+languagetoggleblockplugin	1	seq	4	int
+developedbyblockplugin	1	enabled	0	bool
+developedbyblockplugin	1	seq	0	int
 resolverplugin	1	enabled	1	bool
-googlescholarplugin	1	enabled	1	bool
+htmlarticlegalleyplugin	1	enabled	1	bool
 dublincoremetaplugin	1	enabled	1	bool
-pdfjsviewerplugin	1	enabled	1	bool
-lensgalleyplugin	1	enabled	1	bool
 webfeedplugin	1	enabled	1	bool
 webfeedplugin	1	displayPage	homepage	string
 webfeedplugin	1	displayItems	1	bool
-htmlarticlegalleyplugin	1	enabled	1	bool
-usageeventplugin	0	uniqueSiteId	642b409a6f68c	string
+pdfjsviewerplugin	1	enabled	1	bool
+lensgalleyplugin	1	enabled	1	bool
+googlescholarplugin	1	enabled	1	bool
+usageeventplugin	0	uniqueSiteId	642c840d049c3	string
 defaultthemeplugin	1	typography	notoSans	string
 defaultthemeplugin	1	baseColour	#1E6292	string
 defaultthemeplugin	1	showDescriptionInJournalIndex	false	string
@@ -7447,15 +7112,8 @@ COPY public.publication_galley_settings (galley_id, locale, setting_name, settin
 COPY public.publication_galleys (galley_id, locale, publication_id, label, submission_file_id, seq, remote_url, is_approved, url_path) FROM stdin;
 1	en_US	1	PDF	2	0		0	
 2	en_US	2	PDF Version 2	2	0		0	pdf
-3	en_US	18	PDF	25	0		0	
+3	en_US	18	PDF	21	0		0	
 \.
-
-
---
--- Name: publication_galleys_galley_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.publication_galleys_galley_id_seq', 3, true);
 
 
 --
@@ -7620,13 +7278,13 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 17	fr_CA	title	
 18	fr_CA	abstract	
 18		categoryIds	[]
-18	fr_CA	copyrightHolder	Journal de la connaissance du public
 18	en_US	copyrightHolder	Journal of Public Knowledge
+18	fr_CA	copyrightHolder	Journal de la connaissance du public
 18		copyrightYear	2023
-18	fr_CA	prefix	
 18	en_US	prefix	
-18	fr_CA	subtitle	
+18	fr_CA	prefix	
 18	en_US	subtitle	
+18	fr_CA	subtitle	
 18	fr_CA	title	
 18	en_US	title	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran
 18		issueId	1
@@ -7657,34 +7315,27 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, access_status, date_published, last_modified, locale, primary_contact_id, section_id, seq, submission_id, status, url_path, version) FROM stdin;
-1	0	2023-04-03	2023-04-03 21:14:50	\N	1	1	0	1	3	mwandenga-signalling-theory	1
-18	0	2023-04-03	2023-04-03 21:26:42	\N	23	1	0	17	3	\N	1
-2	0	2023-04-03	2023-04-03 21:15:25	\N	3	1	0	1	1	mwandenga	2
-19	0	\N	2023-04-03 21:26:59	\N	24	1	0	18	1	\N	1
-3	0	\N	2023-04-03 21:16:11	\N	5	1	0	2	1	\N	1
-4	0	\N	2023-04-03 21:16:36	\N	6	1	0	3	1	\N	1
-20	0	\N	2023-04-03 21:27:21	\N	25	2	0	19	1	\N	1
-5	0	\N	2023-04-03 21:17:16	\N	7	1	0	4	1	\N	1
-6	0	\N	2023-04-03 21:17:28	\N	9	1	0	5	1	\N	1
-7	0	\N	2023-04-03 21:18:18	\N	10	1	0	6	1	\N	1
-8	0	\N	2023-04-03 21:19:04	\N	11	1	0	7	1	\N	1
-9	0	\N	2023-04-03 21:19:50	\N	12	1	0	8	1	\N	1
-10	0	\N	2023-04-03 21:20:02	\N	14	2	0	9	1	\N	1
-11	0	\N	2023-04-03 21:20:54	\N	15	1	0	10	1	\N	1
-12	0	\N	2023-04-03 21:21:45	\N	16	1	0	11	1	\N	1
-13	0	\N	2023-04-03 21:21:57	\N	18	1	0	12	1	\N	1
-14	0	\N	2023-04-03 21:22:28	\N	19	1	0	13	1	\N	1
-15	0	\N	2023-04-03 21:23:44	\N	20	1	0	14	1	\N	1
-16	0	\N	2023-04-03 21:23:56	\N	21	1	0	15	1	\N	1
-17	0	\N	2023-04-03 21:24:44	\N	22	1	0	16	1	\N	1
+1	0	2023-04-04	2023-04-04 20:15:12	\N	1	1	0	1	3	mwandenga-signalling-theory	1
+18	0	2023-04-04	2023-04-04 20:27:37	\N	23	1	0	17	3	\N	1
+2	0	2023-04-04	2023-04-04 20:15:50	\N	3	1	0	1	1	mwandenga	2
+19	0	\N	2023-04-04 20:27:54	\N	24	1	0	18	1	\N	1
+3	0	\N	2023-04-04 20:16:39	\N	5	1	0	2	1	\N	1
+4	0	\N	2023-04-04 20:17:04	\N	6	1	0	3	1	\N	1
+20	0	\N	2023-04-04 20:28:18	\N	25	2	0	19	1	\N	1
+5	0	\N	2023-04-04 20:17:46	\N	7	1	0	4	1	\N	1
+6	0	\N	2023-04-04 20:17:59	\N	9	1	0	5	1	\N	1
+7	0	\N	2023-04-04 20:18:53	\N	10	1	0	6	1	\N	1
+8	0	\N	2023-04-04 20:19:41	\N	11	1	0	7	1	\N	1
+9	0	\N	2023-04-04 20:20:29	\N	12	1	0	8	1	\N	1
+10	0	\N	2023-04-04 20:20:42	\N	14	2	0	9	1	\N	1
+11	0	\N	2023-04-04 20:21:35	\N	15	1	0	10	1	\N	1
+12	0	\N	2023-04-04 20:22:28	\N	16	1	0	11	1	\N	1
+13	0	\N	2023-04-04 20:22:41	\N	18	1	0	12	1	\N	1
+14	0	\N	2023-04-04 20:23:13	\N	19	1	0	13	1	\N	1
+15	0	\N	2023-04-04 20:24:31	\N	20	1	0	14	1	\N	1
+16	0	\N	2023-04-04 20:24:44	\N	21	1	0	15	1	\N	1
+17	0	\N	2023-04-04 20:25:35	\N	22	1	0	16	1	\N	1
 \.
-
-
---
--- Name: publications_publication_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.publications_publication_id_seq', 20, true);
 
 
 --
@@ -7694,13 +7345,6 @@ SELECT pg_catalog.setval('public.publications_publication_id_seq', 20, true);
 COPY public.queries (query_id, assoc_type, assoc_id, stage_id, seq, date_posted, date_modified, closed) FROM stdin;
 1	1048585	2	3	1	\N	\N	0
 \.
-
-
---
--- Name: queries_query_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.queries_query_id_seq', 1, true);
 
 
 --
@@ -7723,52 +7367,38 @@ COPY public.queued_payments (queued_payment_id, date_created, date_modified, exp
 
 
 --
--- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.queued_payments_queued_payment_id_seq', 1, false);
-
-
---
 -- Data for Name: review_assignments; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, unconsidered) FROM stdin;
-1	1	7	\N	\N	2023-04-03 21:13:21	2023-04-03 21:13:21	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:13:21	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-2	1	9	\N	\N	2023-04-03 21:13:25	2023-04-03 21:13:25	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:13:25	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-16	10	10	\N	3	2023-04-03 21:21:13	2023-04-03 21:21:13	2023-04-03 21:21:25	2023-04-03 21:21:30	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:21:30	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
-3	1	10	\N	\N	2023-04-03 21:13:32	2023-04-03 21:13:32	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:13:32	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-4	3	9	\N	\N	2023-04-03 21:16:47	2023-04-03 21:16:47	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:16:47	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-24	17	7	\N	\N	2023-04-03 21:25:12	2023-04-03 21:25:12	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:25:12	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-5	3	10	\N	\N	2023-04-03 21:16:53	2023-04-03 21:16:53	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:16:53	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-17	12	7	\N	\N	2023-04-03 21:22:11	2023-04-03 21:22:11	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:22:11	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-6	5	8	\N	\N	2023-04-03 21:17:41	2023-04-03 21:17:41	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:17:41	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-7	5	10	\N	\N	2023-04-03 21:17:47	2023-04-03 21:17:47	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:17:47	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-8	6	7	\N	\N	2023-04-03 21:18:30	2023-04-03 21:18:30	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:18:30	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-18	12	8	\N	\N	2023-04-03 21:22:16	2023-04-03 21:22:16	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:22:16	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-9	6	10	\N	\N	2023-04-03 21:18:36	2023-04-03 21:18:36	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:18:36	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-25	17	8	\N	\N	2023-04-03 21:25:17	2023-04-03 21:25:17	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:25:17	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-11	7	9	\N	\N	2023-04-03 21:19:21	2023-04-03 21:19:21	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:19:21	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-12	7	10	\N	\N	2023-04-03 21:19:27	2023-04-03 21:19:27	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:19:27	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-26	19	8	\N	\N	2023-04-03 21:27:36	2023-04-03 21:27:37	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:27:37	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-10	7	8	\N	5	2023-04-03 21:19:16	2023-04-03 21:19:17	2023-04-03 21:19:31	2023-04-03 21:19:35	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:19:35	0	0	0	\N	\N	\N	\N	6	3	2	1	4	\N	0
-13	9	7	\N	\N	2023-04-03 21:20:16	2023-04-03 21:20:16	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:20:16	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-14	9	10	\N	\N	2023-04-03 21:20:22	2023-04-03 21:20:22	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:20:22	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-27	19	9	\N	\N	2023-04-03 21:27:41	2023-04-03 21:27:41	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:27:41	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-19	13	7	\N	2	2023-04-03 21:22:43	2023-04-03 21:22:43	2023-04-03 21:22:58	2023-04-03 21:23:02	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:23:02	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-15	10	9	\N	2	2023-04-03 21:21:07	2023-04-03 21:21:07	2023-04-03 21:21:17	2023-04-03 21:21:21	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:21:21	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
-20	13	9	\N	2	2023-04-03 21:22:47	2023-04-03 21:22:47	2023-04-03 21:23:07	2023-04-03 21:23:11	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:23:11	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-21	13	10	\N	3	2023-04-03 21:22:53	2023-04-03 21:22:53	2023-04-03 21:23:17	2023-04-03 21:23:21	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:23:21	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-22	15	8	\N	\N	2023-04-03 21:24:11	2023-04-03 21:24:11	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:24:11	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
-23	15	9	\N	\N	2023-04-03 21:24:15	2023-04-03 21:24:16	\N	\N	\N	2023-05-01 00:00:00	2023-05-01 00:00:00	2023-04-03 21:24:16	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+1	1	7	\N	\N	2023-04-04 20:13:40	2023-04-04 20:13:40	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:13:40	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+2	1	9	\N	\N	2023-04-04 20:13:44	2023-04-04 20:13:44	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:13:44	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+16	10	10	\N	3	2023-04-04 20:21:55	2023-04-04 20:21:55	2023-04-04 20:22:08	2023-04-04 20:22:12	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:22:12	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
+3	1	10	\N	\N	2023-04-04 20:13:50	2023-04-04 20:13:50	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:13:50	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+4	3	9	\N	\N	2023-04-04 20:17:17	2023-04-04 20:17:17	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:17:17	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+24	17	7	\N	\N	2023-04-04 20:26:04	2023-04-04 20:26:04	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:26:04	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+5	3	10	\N	\N	2023-04-04 20:17:23	2023-04-04 20:17:23	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:17:23	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+17	12	7	\N	\N	2023-04-04 20:22:56	2023-04-04 20:22:56	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:22:56	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+6	5	8	\N	\N	2023-04-04 20:18:12	2023-04-04 20:18:12	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:18:12	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+7	5	10	\N	\N	2023-04-04 20:18:18	2023-04-04 20:18:18	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:18:18	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+8	6	7	\N	\N	2023-04-04 20:19:06	2023-04-04 20:19:06	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:19:06	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+18	12	8	\N	\N	2023-04-04 20:23:01	2023-04-04 20:23:01	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:23:01	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+9	6	10	\N	\N	2023-04-04 20:19:12	2023-04-04 20:19:12	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:19:12	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+25	17	8	\N	\N	2023-04-04 20:26:09	2023-04-04 20:26:09	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:26:09	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+11	7	9	\N	\N	2023-04-04 20:19:58	2023-04-04 20:19:58	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:19:58	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+12	7	10	\N	\N	2023-04-04 20:20:04	2023-04-04 20:20:04	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:20:04	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+26	19	8	\N	\N	2023-04-04 20:28:34	2023-04-04 20:28:34	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:28:34	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+10	7	8	\N	5	2023-04-04 20:19:54	2023-04-04 20:19:54	2023-04-04 20:20:09	2023-04-04 20:20:13	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:20:13	0	0	0	\N	\N	\N	\N	6	3	2	1	4	\N	0
+13	9	7	\N	\N	2023-04-04 20:20:56	2023-04-04 20:20:56	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:20:56	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+14	9	10	\N	\N	2023-04-04 20:21:02	2023-04-04 20:21:02	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:21:02	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+27	19	9	\N	\N	2023-04-04 20:28:39	2023-04-04 20:28:39	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:28:39	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+19	13	7	\N	2	2023-04-04 20:23:28	2023-04-04 20:23:28	2023-04-04 20:23:44	2023-04-04 20:23:48	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:23:48	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+15	10	9	\N	2	2023-04-04 20:21:49	2023-04-04 20:21:49	2023-04-04 20:22:00	2023-04-04 20:22:03	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:22:03	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
+20	13	9	\N	2	2023-04-04 20:23:33	2023-04-04 20:23:33	2023-04-04 20:23:53	2023-04-04 20:23:57	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:23:57	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+21	13	10	\N	3	2023-04-04 20:23:39	2023-04-04 20:23:39	2023-04-04 20:24:03	2023-04-04 20:24:07	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:24:07	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+22	15	8	\N	\N	2023-04-04 20:25:00	2023-04-04 20:25:00	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:25:00	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+23	15	9	\N	\N	2023-04-04 20:25:05	2023-04-04 20:25:05	\N	\N	\N	2023-05-02 00:00:00	2023-05-02 00:00:00	2023-04-04 20:25:05	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
 \.
-
-
---
--- Name: review_assignments_review_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 27, true);
 
 
 --
@@ -7776,20 +7406,13 @@ SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 27, true);
 --
 
 COPY public.review_files (review_id, submission_file_id) FROM stdin;
-6	7
-7	7
-8	9
-9	9
-10	11
-11	11
-12	11
-13	14
-14	14
-19	19
-20	19
-21	19
-22	22
-23	22
+8	8
+9	8
+10	10
+11	10
+12	10
+26	24
+27	24
 \.
 
 
@@ -7807,13 +7430,6 @@ COPY public.review_form_element_settings (review_form_element_id, locale, settin
 
 COPY public.review_form_elements (review_form_element_id, review_form_id, seq, element_type, required, included) FROM stdin;
 \.
-
-
---
--- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.review_form_elements_review_form_element_id_seq', 1, false);
 
 
 --
@@ -7841,23 +7457,13 @@ COPY public.review_forms (review_form_id, assoc_type, assoc_id, seq, is_active) 
 
 
 --
--- Name: review_forms_review_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.review_forms_review_form_id_seq', 1, false);
-
-
---
 -- Data for Name: review_round_files; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.review_round_files (submission_id, review_round_id, stage_id, submission_file_id) FROM stdin;
-5	4	3	7
-6	5	3	9
-7	6	3	11
-9	7	3	14
-13	10	3	19
-15	11	3	22
+6	5	3	8
+7	6	3	10
+19	13	3	24
 \.
 
 
@@ -7883,24 +7489,17 @@ COPY public.review_rounds (review_round_id, submission_id, stage_id, round, revi
 
 
 --
--- Name: review_rounds_review_round_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 13, true);
-
-
---
 -- Data for Name: scheduled_tasks; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2023-04-03 21:09:32
-plugins.importexport.doaj.DOAJInfoSender	2023-04-03 21:09:32
-plugins.importexport.datacite.DataciteInfoSender	2023-04-03 21:09:32
-plugins.importexport.crossref.CrossrefInfoSender	2023-04-03 21:09:32
-lib.pkp.classes.task.ReviewReminder	2023-04-03 21:09:32
-lib.pkp.classes.task.StatisticsReport	2023-04-03 21:09:32
-classes.tasks.SubscriptionExpiryReminder	2023-04-03 21:09:32
+plugins.generic.usageStats.UsageStatsLoader	2023-04-04 20:09:35
+plugins.importexport.crossref.CrossrefInfoSender	2023-04-04 20:09:35
+plugins.importexport.doaj.DOAJInfoSender	2023-04-04 20:09:35
+plugins.importexport.datacite.DataciteInfoSender	2023-04-04 20:09:35
+lib.pkp.classes.task.ReviewReminder	2023-04-04 20:09:36
+lib.pkp.classes.task.StatisticsReport	2023-04-04 20:09:36
+classes.tasks.SubscriptionExpiryReminder	2023-04-04 20:09:36
 \.
 
 
@@ -7939,62 +7538,53 @@ COPY public.sections (section_id, journal_id, review_form_id, seq, editor_restri
 
 
 --
--- Name: sections_section_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.sections_section_id_seq', 2, true);
-
-
---
 -- Data for Name: sessions; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-u0c3q84sqt4ma3pqb4178cpjh5	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556169	1680556169	0		localhost
-0dapfpujpneh3qs306r28idjcr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556586	1680556622	0	csrf|a:2:{s:9:"timestamp";i:1680556622;s:5:"token";s:32:"25fab62237d90f31d0c36af5e6a233a3";}username|s:7:"dbarnes";userId|i:3;	localhost
-qth4tvse501peo5hmt7qa5ug7n	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556186	1680556199	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680556199;s:5:"token";s:32:"8886634bf6f713d75507f7ba54cdf9c8";}	localhost
-cuq4lj8so425di3e8ldt81ss42	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556199	1680556207	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680556207;s:5:"token";s:32:"21f9132291c5a8716fd2187cc2c4108d";}	localhost
-krs9liuvulhrokmqsui810qrll	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556207	1680556213	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680556214;s:5:"token";s:32:"7b3f65063bf7cfcf2ccfa3a4f504abdc";}	localhost
-tr7dtbf5v3fknmpeaod9c7bqom	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556171	1680556184	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680556185;s:5:"token";s:32:"058e675e351039b4638729d86a1d3676";}	localhost
-3957sgmpq946unfrnpqpmdsokq	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556369	1680556377	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680556377;s:5:"token";s:32:"3083eaee7975a9ea4c0f00376c7428be";}	localhost
-kpaehach7g25kevjif6dt1d1vg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556216	1680556357	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1680556357;s:5:"token";s:32:"d4ed54e12e4d87be2eb7aceb3ccf8957";}	localhost
-n6t7hdjqds1t17lkir7t9gakdi	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556380	1680556433	0	csrf|a:2:{s:9:"timestamp";i:1680556433;s:5:"token";s:32:"3e5132698bf61129d0684e8bdb2dfd04";}username|s:7:"dbarnes";userId|i:3;	localhost
-9dkgcfnjk8vrsb1ngc100k22ku	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557183	1680557183	0		localhost
-2ko3vug25j1o8insokcvp76rec	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556359	1680556368	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680556367;s:5:"token";s:32:"c0013c0b4b2c199e0bc6751605df6fc5";}	localhost
-v1bfecegvb0gm9v2dn1hgj4fvm	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556472	1680556482	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680556482;s:5:"token";s:32:"26ab3fb4653304613bcccf81ca781df6";}	localhost
-gblu6t3ap9r1qlmcnc54ib6qqd	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556433	1680556457	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680556457;s:5:"token";s:32:"f90e004ce9f949f184a7dff1e66a26e9";}	localhost
-5o15e8tsr8n9c9b5r11u8hc8ro	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556457	1680556460	0	userId|i:17;username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1680556461;s:5:"token";s:32:"79d14e6b2425205213d945e3014cb4f4";}	localhost
-c5nbsvg72heea0b6vh9rr0p8fr	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556462	1680556471	0	username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1680556472;s:5:"token";s:32:"e989c711312852ef2e655342538e5720";}userId|i:17;	localhost
-ugp546n4363n0g7oeteql1egif	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556490	1680556516	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680556516;s:5:"token";s:32:"f7fb5e20e048eaca71e2d7245c4b6d75";}	localhost
-pho6g8jpv1d8u5bek12ov3ne22	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556482	1680556490	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680556490;s:5:"token";s:32:"298b130eb8177b91d435c5d3a4dfae44";}	localhost
-fp7chqnqic6lnau2i1hgke22pr	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556527	1680556536	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1680556537;s:5:"token";s:32:"e4f9e949aa6a973c41b2863ae9951c0d";}signedInAs|i:3;	localhost
-v2c5ce5ehbvmnijphhc2eab0ve	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556522	1680556527	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680556527;s:5:"token";s:32:"f886b7fd11d7e5b92af5687a572429ca";}	localhost
-acd9nj33j9v86iiqd2sg093huf	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556516	1680556522	0		localhost
-i5lgr4747cbpmq5npiand7sbrc	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556537	1680556544	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1680556545;s:5:"token";s:32:"988526fe6596da405ea24c48ce88eaec";}signedInAs|i:3;	localhost
-er1f96qll2623td7ij28pn9tn1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556547	1680556584	0	csrf|a:2:{s:9:"timestamp";i:1680556584;s:5:"token";s:32:"c7d187a890fd10818e8e4b1234f392f0";}username|s:7:"dbarnes";userId|i:3;	localhost
-85v3nav0cc4jg26gchgvflusrq	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557157	1680557166	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680557166;s:5:"token";s:32:"182f252b0937b792eda2e5e4bdb5c29f";}	localhost
-qscqam18n43hf7rkb9uta4h7em	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557027	1680557072	0	csrf|a:2:{s:9:"timestamp";i:1680557072;s:5:"token";s:32:"107270a995554d63b2e0a1cc6fce7ac6";}username|s:7:"dbarnes";userId|i:3;	localhost
-niddip0f0t3f3tifiuvqkukk4b	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556624	1680556638	0	csrf|a:2:{s:9:"timestamp";i:1680556637;s:5:"token";s:32:"0c03069edafe02067e0fbdf64345bf60";}username|s:12:"cmontgomerie";userId|i:20;	localhost
-9vrp22m1lggmlvo79vfj8ghmv4	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556640	1680556686	0	csrf|a:2:{s:9:"timestamp";i:1680556687;s:5:"token";s:32:"34f343f9ca8587c95a3ca8ac1ea24f44";}username|s:7:"dbarnes";userId|i:3;	localhost
-i40hijd5mf7rsn492bj81tj8bg	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557015	1680557025	0	csrf|a:2:{s:9:"timestamp";i:1680557025;s:5:"token";s:32:"eaa3c6078c4c9879463ead0d8f7341cb";}username|s:7:"pdaniel";userId|i:30;	localhost
-d1l8ksoh0mlmv6bpdj1ea6tcoj	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556892	1680556906	0	csrf|a:2:{s:9:"timestamp";i:1680556905;s:5:"token";s:32:"8a65f0338ea9abe73aa57fb521f328da";}username|s:10:"kalkhafaji";userId|i:27;	localhost
-94v0vr9el447sdva6alvak34em	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556938	1680557013	0	csrf|a:2:{s:9:"timestamp";i:1680557012;s:5:"token";s:32:"0293499a127bea5323a96d429d0a7207";}username|s:7:"dbarnes";userId|i:3;	localhost
-mutpg73hcjlgnsidgji29tpr5c	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556688	1680556732	0	csrf|a:2:{s:9:"timestamp";i:1680556733;s:5:"token";s:32:"e0d2d2ff754ab1286a696e7515ab14e6";}username|s:7:"dbarnes";userId|i:3;	localhost
-fjeog2q5v1glrmdfare7g45m3p	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556794	1680556842	0	csrf|a:2:{s:9:"timestamp";i:1680556843;s:5:"token";s:32:"436ccff61b8ddfd3e46917d91c85aa46";}username|s:7:"dbarnes";userId|i:3;	localhost
-skv092c9b840qvh0qnk5klbk5r	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557074	1680557085	0	csrf|a:2:{s:9:"timestamp";i:1680557085;s:5:"token";s:32:"edc5d76ae64b194b1db842f5adf6f327";}username|s:6:"rrossi";userId|i:32;	localhost
-qm821i1lr7iduda59co2fppk1t	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556734	1680556776	0	csrf|a:2:{s:9:"timestamp";i:1680556776;s:5:"token";s:32:"694c1de5ecab4c54389f1cdfcf0e496a";}username|s:7:"phudson";	localhost
-31scpa318l278to22hf8oetqbi	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556778	1680556792	0	csrf|a:2:{s:9:"timestamp";i:1680556791;s:5:"token";s:32:"a9deb7b8023a4d8034a7bdbff98cdc47";}username|s:7:"eostrom";userId|i:24;	localhost
-te7e20lg5jcvf18fdhfoju6e4g	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556844	1680556890	0	csrf|a:2:{s:9:"timestamp";i:1680556890;s:5:"token";s:32:"1e9fe71a75414a6018e1f019ed704520";}username|s:8:"agallego";	localhost
-elhhs097ebe6qje77b9q1dekc3	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557175	1680557183	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680557183;s:5:"token";s:32:"71bc8da48ed3cb18560d414e46b5e013";}	localhost
-6gc2v7ap8n1bn1jb592bcv5f26	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557087	1680557144	0	csrf|a:2:{s:9:"timestamp";i:1680557144;s:5:"token";s:32:"2a4834c65e5a20a0ee7eb0fdb136a3bc";}username|s:7:"dbarnes";userId|i:3;	localhost
-jdivgiahj259ejfr6jtsvc7j38	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680556908	1680556936	0	csrf|a:2:{s:9:"timestamp";i:1680556936;s:5:"token";s:32:"c08b025118099afa229421c63efa154b";}username|s:7:"dbarnes";userId|i:3;	localhost
-k9vf2hsgsh2i0998v6b5chitua	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557145	1680557156	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680557156;s:5:"token";s:32:"72bbb96c8bb72813310f43597a7d8985";}	localhost
-m6dug4vmhhn83uf5b1rcsdvo82	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557184	1680557184	0		localhost
-qn3nkq03fb0pepbtuqgi2gm0ek	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557166	1680557174	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680557175;s:5:"token";s:32:"2f74afb8612c514af34afb28133a1042";}	localhost
-vikm6gtkqh6jfj6igldrljqsdr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557184	1680557193	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680557193;s:5:"token";s:32:"73b5ddca09769aa3e0a81d4a4526cd0e";}	localhost
-u7nlplc0b5ol5vopnr3j1e6369	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557193	1680557207	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680557207;s:5:"token";s:32:"1a02920f625ec6319c130fb6e07ceda5";}	localhost
-t5uood670o02scnetqblgs42di	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557209	1680557231	0	csrf|a:2:{s:9:"timestamp";i:1680557231;s:5:"token";s:32:"54b26b6093ebba34380b267193bf0b62";}username|s:7:"dbarnes";userId|i:3;	localhost
-qkia4bgjodotg07gmnu1r6n8ar	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36	1680557232	1680557269	0	csrf|a:2:{s:9:"timestamp";i:1680557270;s:5:"token";s:32:"18f70f06ae49c370d196c7ef733de22a";}username|s:7:"dbarnes";userId|i:3;	localhost
+2ji0avt5l14kdmh5poc802cn2h	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680638973	1680638973	0		localhost
+pfqf28i8omsp00fs26q1hs112e	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639186	1680639195	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680639195;s:5:"token";s:32:"97fccba4b0101a511a88b58b1dc18be7";}	localhost
+90s4rj4cvc0825ocmji24hegph	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639176	1680639185	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680639185;s:5:"token";s:32:"24e65afc81774d5b023656ac06b60549";}	localhost
+jmkhks6c91p9cdo4gloibkdcv9	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680638988	1680639002	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680639002;s:5:"token";s:32:"368a8a7062f952442733b16e0ff80985";}	localhost
+k8i4uqtdi9u2h1drevhdi8hu0n	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639003	1680639011	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680639011;s:5:"token";s:32:"7b9ed55d8d8f276ae528588e2d7b1248";}	localhost
+g3jrm43s0g7vou9tjacf748sbb	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639011	1680639017	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680639017;s:5:"token";s:32:"e46f8f1950eb63e4cf2838718f123357";}	localhost
+vq1qpovqbkfk01g0uvu1gfnn9b	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680638975	1680638988	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1680638988;s:5:"token";s:32:"2169f7eab8f1137cd6c1fc5ea1effce9";}	localhost
+2dtj5dn7643m2i7ekkc99pfd5k	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639019	1680639173	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1680639173;s:5:"token";s:32:"6697f92f6194a5a5500fad650b366cde";}	localhost
+fi22tu5s2gcntk0v4jptju6o18	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639197	1680639252	0	csrf|a:2:{s:9:"timestamp";i:1680639253;s:5:"token";s:32:"9a56bb9b41c905593001a0253e1cd1ff";}username|s:7:"dbarnes";userId|i:3;	localhost
+06t0qc9lg4v14jg74709l2b185	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639293	1680639304	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680639304;s:5:"token";s:32:"55a36de581d3fef7041cf91bd8187cf7";}	localhost
+uuip0u1l2jl8ebejgg4ihea4fd	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639253	1680639278	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680639278;s:5:"token";s:32:"b5b7d19603e36e68285d72f44ff52f53";}	localhost
+ivcv8rtrt4perd7elm6mfbncoe	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639278	1680639282	0	userId|i:17;username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1680639282;s:5:"token";s:32:"79173b43126e9b689eabc59986f499dd";}	localhost
+kqoc7a4pokhc4nk3n7cunpg8qs	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639283	1680639293	0	username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1680639293;s:5:"token";s:32:"cb1fbf96143676fc623e91cb44d796e9";}userId|i:17;	localhost
+8p9eeijdikrkv8tldtbkl88gek	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639313	1680639340	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680639340;s:5:"token";s:32:"05e436e93bc8c5a955263ac8cc8dc032";}	localhost
+k6ncc8uqm5km7nq24eef5hj84u	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639305	1680639312	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680639312;s:5:"token";s:32:"348ecb320fa6641ef6f47cfdbc3a2559";}	localhost
+g3g98cg4n4qotml2kv1el85g0d	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639352	1680639361	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1680639361;s:5:"token";s:32:"e85884582f526a4068395047c6a5b045";}signedInAs|i:3;	localhost
+7dgvo5l8m19ivo382v10icuhch	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639347	1680639352	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680639352;s:5:"token";s:32:"6c0f706ec11e5f069cbdd09fc71bc453";}	localhost
+2ac8l0vqtns0jmm5luc51na5ea	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639340	1680639346	0		localhost
+0agi5ji9fktib2bnj6mm1ss675	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639362	1680639370	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1680639370;s:5:"token";s:32:"ee0729ac5cbdb91e1312b2b5f274ab60";}signedInAs|i:3;	localhost
+39gubilt6r11dnpds7hgucj6qr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639371	1680639413	0	csrf|a:2:{s:9:"timestamp";i:1680639413;s:5:"token";s:32:"79637df183747801d5208cf64ce70fc4";}username|s:7:"dbarnes";userId|i:3;	localhost
+2kllj6va7qnaq2neisihp9ajh1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639414	1680639451	0	csrf|a:2:{s:9:"timestamp";i:1680639451;s:5:"token";s:32:"efdc3aa1b9c4016b3ab474c720a1887e";}username|s:7:"dbarnes";userId|i:3;	localhost
+foe8ta3flkifk103eddvv2dmdn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639571	1680639614	0	csrf|a:2:{s:9:"timestamp";i:1680639614;s:5:"token";s:32:"8032bf6e0280dacb945b0a5b5d87d3a4";}username|s:7:"phudson";	localhost
+vhluoldl5e7i4rpgm273ve6lbv	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639616	1680639631	0	csrf|a:2:{s:9:"timestamp";i:1680639630;s:5:"token";s:32:"70496878f0e6f8ecb3fee48d40879618";}username|s:7:"eostrom";userId|i:24;	localhost
+de9146i2geu6aaigpbrk8b50qd	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639861	1680639873	0	csrf|a:2:{s:9:"timestamp";i:1680639872;s:5:"token";s:32:"f240098eb1192e027daa12051d408002";}username|s:7:"pdaniel";userId|i:30;	localhost
+5j9cfg6qq17fkt5a9knf16vsgm	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639938	1680639997	0	csrf|a:2:{s:9:"timestamp";i:1680639997;s:5:"token";s:32:"16e606020671cd7495ad1696084165d7";}username|s:7:"dbarnes";userId|i:3;	localhost
+v8e6jg4plvfg0roepc0ml13s61	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639453	1680639468	0	csrf|a:2:{s:9:"timestamp";i:1680639467;s:5:"token";s:32:"c93bbbb4bdf1c7d067757c56bd910d08";}username|s:12:"cmontgomerie";userId|i:20;	localhost
+6u1707lrljqkpgc6i0nr6snhpa	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639875	1680639922	0	csrf|a:2:{s:9:"timestamp";i:1680639922;s:5:"token";s:32:"ff63deee8713f6905e09d754bafa7401";}username|s:7:"dbarnes";userId|i:3;	localhost
+reoij7l575sgg9bnu54qjhamjj	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639735	1680639749	0	csrf|a:2:{s:9:"timestamp";i:1680639749;s:5:"token";s:32:"9b5dbbe35138ac940fe3a6d27d8e6f1a";}username|s:10:"kalkhafaji";userId|i:27;	localhost
+ce29566hmr1djh56j61vi1l78r	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680640029	1680640038	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680640038;s:5:"token";s:32:"76423327ee917346e36d103e8a60e04e";}	localhost
+ui5nm1bk28j6l15l3i8vrdttt2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639470	1680639520	0	csrf|a:2:{s:9:"timestamp";i:1680639520;s:5:"token";s:32:"a4e251c0771d021a3dbd07e836c0d9fe";}username|s:7:"dbarnes";userId|i:3;	localhost
+acbfc3dl7gtf89uu1v3in9hoh5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639998	1680640010	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680640011;s:5:"token";s:32:"718850b03672c3cf7a97b06fff58d754";}	localhost
+epf6h4q00j99qeu50ps230lvrb	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639924	1680639936	0	csrf|a:2:{s:9:"timestamp";i:1680639936;s:5:"token";s:32:"786aae9d07a0381159e0d6dd1530da77";}username|s:6:"rrossi";userId|i:32;	localhost
+0mq4q3oa4jiu0hcfcp3uqas842	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639523	1680639569	0	csrf|a:2:{s:9:"timestamp";i:1680639569;s:5:"token";s:32:"190e926da4d4a21903f859def3404bb9";}username|s:7:"dbarnes";userId|i:3;	localhost
+j23etp32qatri1i4qhg4h75kpt	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680640011	1680640020	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680640020;s:5:"token";s:32:"36eb43911e22b070ab8123a35d58ac76";}	localhost
+r53dau2mt5d1petnhmq8ouqmfd	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680640020	1680640029	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680640029;s:5:"token";s:32:"fef7c7cd5788122c9aeefacf564c19bf";}	localhost
+pserqt4cmstkqe8ggdfrn4uif3	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639632	1680639683	0	csrf|a:2:{s:9:"timestamp";i:1680639683;s:5:"token";s:32:"a16a70631905471d30c6ca01cc658074";}username|s:7:"dbarnes";userId|i:3;	localhost
+c70h6fq63o64d8t4tq671qp0oq	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680640038	1680640047	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680640047;s:5:"token";s:32:"a3dda5e02a566093f181f6cf902a169e";}	localhost
+e7ntorg2q1m02o36k9oucm72ni	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680640047	1680640062	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1680640062;s:5:"token";s:32:"e9f06746c9eaad9353ee7175eb027a73";}	localhost
+vvs2manldicp8d36boghpn649a	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639685	1680639733	0	csrf|a:2:{s:9:"timestamp";i:1680639733;s:5:"token";s:32:"fe54d374f7669b83d04c26d0ecf7e418";}username|s:8:"agallego";	localhost
+ol197lf44odmq6gvii8pst9344	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680640064	1680640086	0	csrf|a:2:{s:9:"timestamp";i:1680640086;s:5:"token";s:32:"a06707befcf9e57d10a4a5dbedce04ad";}username|s:7:"dbarnes";userId|i:3;	localhost
+e30s23mmo3jubspu9avlr4rbso	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639751	1680639781	0	csrf|a:2:{s:9:"timestamp";i:1680639781;s:5:"token";s:32:"2b1f443b630c1dcf9f4d5d6fc674ea52";}username|s:7:"dbarnes";userId|i:3;	localhost
+45jqvi52n50jicpulkhdph8ehc	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680639783	1680639859	0	csrf|a:2:{s:9:"timestamp";i:1680639859;s:5:"token";s:32:"c6601b7aaaf13c7f262d812f18d7e2cf";}username|s:7:"dbarnes";userId|i:3;	localhost
+nakv4o7l4hqdbp75tm2u5t64hj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1680640089	1680640128	0	csrf|a:2:{s:9:"timestamp";i:1680640128;s:5:"token";s:32:"6a343d2eb3c9897dce6a4a440efce525";}username|s:7:"dbarnes";userId|i:3;	localhost
 \.
 
 
@@ -8024,107 +7614,100 @@ themePluginPath		default
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-2	1	3	3	2023-04-03 21:13:10	0	1
-4	1	5	4	2023-04-03 21:13:10	0	1
-5	1	7	12	2023-04-03 21:13:39	0	0
-6	1	11	14	2023-04-03 21:13:48	0	0
-7	1	13	16	2023-04-03 21:13:52	0	0
-1	1	14	17	2023-04-03 21:14:25	0	1
-3	1	5	5	2023-04-03 21:15:40	1	0
-8	2	14	18	2023-04-03 21:15:53	0	0
-9	2	3	3	2023-04-03 21:15:57	0	1
-10	2	5	5	2023-04-03 21:15:57	0	1
-11	2	5	4	2023-04-03 21:15:57	0	1
-12	2	5	6	2023-04-03 21:16:07	1	1
-13	3	14	19	2023-04-03 21:16:32	0	0
-14	3	3	3	2023-04-03 21:16:36	0	1
-15	3	5	5	2023-04-03 21:16:36	0	1
-16	3	5	4	2023-04-03 21:16:36	0	1
-17	3	7	11	2023-04-03 21:17:01	0	0
-18	4	14	20	2023-04-03 21:17:09	0	0
-19	4	3	3	2023-04-03 21:17:17	0	1
-20	4	5	5	2023-04-03 21:17:17	0	1
-21	4	5	4	2023-04-03 21:17:17	0	1
-22	5	14	21	2023-04-03 21:17:25	0	0
-23	5	3	3	2023-04-03 21:17:29	0	1
-24	5	5	5	2023-04-03 21:17:29	0	1
-25	5	5	4	2023-04-03 21:17:29	0	1
-26	5	7	11	2023-04-03 21:17:54	0	0
-27	5	11	13	2023-04-03 21:18:01	0	0
-28	5	13	15	2023-04-03 21:18:05	0	0
-29	6	14	22	2023-04-03 21:18:14	0	0
-30	6	3	3	2023-04-03 21:18:19	0	1
-31	6	5	5	2023-04-03 21:18:19	0	1
-32	6	5	4	2023-04-03 21:18:19	0	1
-33	6	7	11	2023-04-03 21:18:43	0	0
-34	6	11	13	2023-04-03 21:18:51	0	0
-35	7	14	23	2023-04-03 21:19:01	0	0
-36	7	3	3	2023-04-03 21:19:05	0	1
-37	7	5	5	2023-04-03 21:19:05	0	1
-38	7	5	4	2023-04-03 21:19:05	0	1
-39	8	14	24	2023-04-03 21:19:44	0	0
-40	8	3	3	2023-04-03 21:19:51	0	1
-41	8	5	5	2023-04-03 21:19:51	0	1
-42	8	5	4	2023-04-03 21:19:51	0	1
-43	9	14	25	2023-04-03 21:19:59	0	0
-44	9	3	3	2023-04-03 21:20:03	0	1
-45	9	5	6	2023-04-03 21:20:03	0	1
-46	9	7	12	2023-04-03 21:20:29	0	0
-47	9	11	14	2023-04-03 21:20:37	0	0
-48	9	13	16	2023-04-03 21:20:41	0	0
-49	10	14	26	2023-04-03 21:20:50	0	0
-50	10	3	3	2023-04-03 21:20:54	0	1
-51	10	5	5	2023-04-03 21:20:54	0	1
-52	10	5	4	2023-04-03 21:20:54	0	1
-53	11	14	27	2023-04-03 21:21:38	0	0
-54	11	3	3	2023-04-03 21:21:45	0	1
-55	11	5	5	2023-04-03 21:21:45	0	1
-56	11	5	4	2023-04-03 21:21:45	0	1
-57	12	14	28	2023-04-03 21:21:53	0	0
-58	12	3	3	2023-04-03 21:21:58	0	1
-59	12	5	5	2023-04-03 21:21:58	0	1
-60	12	5	4	2023-04-03 21:21:58	0	1
-61	13	14	29	2023-04-03 21:22:24	0	0
-62	13	3	3	2023-04-03 21:22:29	0	1
-63	13	5	5	2023-04-03 21:22:29	0	1
-64	13	5	4	2023-04-03 21:22:29	0	1
-65	14	14	30	2023-04-03 21:23:40	0	0
-66	14	3	3	2023-04-03 21:23:45	0	1
-67	14	5	5	2023-04-03 21:23:45	0	1
-68	14	5	4	2023-04-03 21:23:45	0	1
-69	15	14	31	2023-04-03 21:23:53	0	0
-70	15	3	3	2023-04-03 21:23:57	0	1
-71	15	5	5	2023-04-03 21:23:57	0	1
-72	15	5	4	2023-04-03 21:23:57	0	1
-73	15	7	12	2023-04-03 21:24:23	0	0
-74	15	11	14	2023-04-03 21:24:31	0	0
-75	16	14	32	2023-04-03 21:24:40	0	0
-76	16	3	3	2023-04-03 21:24:45	0	1
-77	16	5	5	2023-04-03 21:24:45	0	1
-78	16	5	4	2023-04-03 21:24:45	0	1
-79	17	14	33	2023-04-03 21:24:52	0	0
-80	17	3	3	2023-04-03 21:24:58	0	1
-81	17	5	5	2023-04-03 21:24:58	0	1
-82	17	5	4	2023-04-03 21:24:58	0	1
-83	17	7	11	2023-04-03 21:25:24	0	0
-84	17	11	13	2023-04-03 21:25:32	0	0
-85	17	13	15	2023-04-03 21:25:36	0	0
-86	18	14	34	2023-04-03 21:26:55	0	0
-87	18	3	3	2023-04-03 21:26:59	0	1
-88	18	5	5	2023-04-03 21:27:00	0	1
-89	18	5	4	2023-04-03 21:27:00	0	1
-90	19	14	35	2023-04-03 21:27:18	0	0
-91	19	3	3	2023-04-03 21:27:22	0	1
-92	19	5	6	2023-04-03 21:27:22	0	1
-93	19	7	12	2023-04-03 21:27:48	0	0
+2	1	3	3	2023-04-04 20:13:28	0	1
+4	1	5	4	2023-04-04 20:13:28	0	1
+5	1	7	12	2023-04-04 20:13:58	0	0
+6	1	11	14	2023-04-04 20:14:07	0	0
+7	1	13	16	2023-04-04 20:14:11	0	0
+1	1	14	17	2023-04-04 20:14:47	0	1
+3	1	5	5	2023-04-04 20:16:05	1	0
+8	2	14	18	2023-04-04 20:16:18	0	0
+9	2	3	3	2023-04-04 20:16:23	0	1
+10	2	5	5	2023-04-04 20:16:23	0	1
+11	2	5	4	2023-04-04 20:16:23	0	1
+12	2	5	6	2023-04-04 20:16:34	1	1
+13	3	14	19	2023-04-04 20:17:00	0	0
+14	3	3	3	2023-04-04 20:17:05	0	1
+15	3	5	5	2023-04-04 20:17:05	0	1
+16	3	5	4	2023-04-04 20:17:05	0	1
+17	3	7	11	2023-04-04 20:17:30	0	0
+18	4	14	20	2023-04-04 20:17:39	0	0
+19	4	3	3	2023-04-04 20:17:47	0	1
+20	4	5	5	2023-04-04 20:17:47	0	1
+21	4	5	4	2023-04-04 20:17:47	0	1
+22	5	14	21	2023-04-04 20:17:55	0	0
+23	5	3	3	2023-04-04 20:18:00	0	1
+24	5	5	5	2023-04-04 20:18:00	0	1
+25	5	5	4	2023-04-04 20:18:00	0	1
+26	5	7	11	2023-04-04 20:18:26	0	0
+27	5	11	13	2023-04-04 20:18:35	0	0
+28	5	13	15	2023-04-04 20:18:39	0	0
+29	6	14	22	2023-04-04 20:18:48	0	0
+30	6	3	3	2023-04-04 20:18:54	0	1
+31	6	5	5	2023-04-04 20:18:54	0	1
+32	6	5	4	2023-04-04 20:18:54	0	1
+33	6	7	11	2023-04-04 20:19:19	0	0
+34	6	11	13	2023-04-04 20:19:28	0	0
+35	7	14	23	2023-04-04 20:19:37	0	0
+36	7	3	3	2023-04-04 20:19:42	0	1
+37	7	5	5	2023-04-04 20:19:42	0	1
+38	7	5	4	2023-04-04 20:19:42	0	1
+39	8	14	24	2023-04-04 20:20:22	0	0
+40	8	3	3	2023-04-04 20:20:30	0	1
+41	8	5	5	2023-04-04 20:20:30	0	1
+42	8	5	4	2023-04-04 20:20:30	0	1
+43	9	14	25	2023-04-04 20:20:38	0	0
+44	9	3	3	2023-04-04 20:20:43	0	1
+45	9	5	6	2023-04-04 20:20:43	0	1
+46	9	7	12	2023-04-04 20:21:09	0	0
+47	9	11	14	2023-04-04 20:21:18	0	0
+48	9	13	16	2023-04-04 20:21:22	0	0
+49	10	14	26	2023-04-04 20:21:31	0	0
+50	10	3	3	2023-04-04 20:21:36	0	1
+51	10	5	5	2023-04-04 20:21:36	0	1
+52	10	5	4	2023-04-04 20:21:36	0	1
+53	11	14	27	2023-04-04 20:22:21	0	0
+54	11	3	3	2023-04-04 20:22:29	0	1
+55	11	5	5	2023-04-04 20:22:29	0	1
+56	11	5	4	2023-04-04 20:22:29	0	1
+57	12	14	28	2023-04-04 20:22:37	0	0
+58	12	3	3	2023-04-04 20:22:42	0	1
+59	12	5	5	2023-04-04 20:22:42	0	1
+60	12	5	4	2023-04-04 20:22:42	0	1
+61	13	14	29	2023-04-04 20:23:09	0	0
+62	13	3	3	2023-04-04 20:23:14	0	1
+63	13	5	5	2023-04-04 20:23:14	0	1
+64	13	5	4	2023-04-04 20:23:14	0	1
+65	14	14	30	2023-04-04 20:24:27	0	0
+66	14	3	3	2023-04-04 20:24:32	0	1
+67	14	5	5	2023-04-04 20:24:32	0	1
+68	14	5	4	2023-04-04 20:24:32	0	1
+69	15	14	31	2023-04-04 20:24:40	0	0
+70	15	3	3	2023-04-04 20:24:45	0	1
+71	15	5	5	2023-04-04 20:24:45	0	1
+72	15	5	4	2023-04-04 20:24:45	0	1
+73	15	7	12	2023-04-04 20:25:12	0	0
+74	15	11	14	2023-04-04 20:25:21	0	0
+75	16	14	32	2023-04-04 20:25:30	0	0
+76	16	3	3	2023-04-04 20:25:36	0	1
+77	16	5	5	2023-04-04 20:25:36	0	1
+78	16	5	4	2023-04-04 20:25:36	0	1
+79	17	14	33	2023-04-04 20:25:44	0	0
+80	17	3	3	2023-04-04 20:25:49	0	1
+81	17	5	5	2023-04-04 20:25:49	0	1
+82	17	5	4	2023-04-04 20:25:49	0	1
+83	17	7	11	2023-04-04 20:26:16	0	0
+84	17	11	13	2023-04-04 20:26:25	0	0
+85	17	13	15	2023-04-04 20:26:29	0	0
+86	18	14	34	2023-04-04 20:27:50	0	0
+87	18	3	3	2023-04-04 20:27:55	0	1
+88	18	5	5	2023-04-04 20:27:55	0	1
+89	18	5	4	2023-04-04 20:27:55	0	1
+90	19	14	35	2023-04-04 20:28:14	0	0
+91	19	3	3	2023-04-04 20:28:19	0	1
+92	19	5	6	2023-04-04 20:28:19	0	1
+93	19	7	12	2023-04-04 20:28:46	0	0
 \.
-
-
---
--- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 93, true);
 
 
 --
@@ -8144,13 +7727,6 @@ COPY public.static_pages (static_page_id, path, context_id) FROM stdin;
 
 
 --
--- Name: static_pages_static_page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.static_pages_static_page_id_seq', 1, false);
-
-
---
 -- Data for Name: subeditor_submission_group; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -8166,20 +7742,13 @@ COPY public.subeditor_submission_group (context_id, assoc_id, assoc_type, user_i
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	7	10	8		<p>Here are my review comments</p>	2023-04-03 21:19:35	\N	1
-2	1	4096	10	15	9		<p>Here are my review comments</p>	2023-04-03 21:21:21	\N	1
-3	1	4096	10	16	10		<p>Here are my review comments</p>	2023-04-03 21:21:29	\N	1
-4	1	4096	13	19	7		<p>Here are my review comments</p>	2023-04-03 21:23:02	\N	1
-5	1	4096	13	20	9		<p>Here are my review comments</p>	2023-04-03 21:23:11	\N	1
-6	1	4096	13	21	10		<p>Here are my review comments</p>	2023-04-03 21:23:21	\N	1
+1	1	4096	7	10	8		<p>Here are my review comments</p>	2023-04-04 20:20:13	\N	1
+2	1	4096	10	15	9		<p>Here are my review comments</p>	2023-04-04 20:22:03	\N	1
+3	1	4096	10	16	10		<p>Here are my review comments</p>	2023-04-04 20:22:12	\N	1
+4	1	4096	13	19	7		<p>Here are my review comments</p>	2023-04-04 20:23:48	\N	1
+5	1	4096	13	20	9		<p>Here are my review comments</p>	2023-04-04 20:23:57	\N	1
+6	1	4096	13	21	10		<p>Here are my review comments</p>	2023-04-04 20:24:07	\N	1
 \.
-
-
---
--- Name: submission_comments_comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
 
 
 --
@@ -8193,35 +7762,25 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 4	4	4
 5	5	5
 6	6	6
-7	7	6
+7	7	7
 8	8	7
-9	9	7
+9	9	8
 10	10	8
-11	11	8
-12	12	9
-13	13	10
-14	14	10
-15	15	11
-16	16	12
-17	17	13
-18	18	14
-19	19	14
-20	20	15
-21	21	16
-22	22	16
-23	23	17
-24	24	18
-25	25	19
-26	26	20
-27	27	21
+11	11	9
+12	12	10
+13	13	11
+14	14	12
+15	15	13
+16	16	14
+17	17	15
+18	18	16
+19	19	17
+20	20	18
+21	21	19
+22	22	20
+23	23	21
+24	24	21
 \.
-
-
---
--- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 27, true);
 
 
 --
@@ -8236,28 +7795,25 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 4	en_US	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 5	en_US	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 6	en_US	name	Genetic transformation of forest trees.pdf	string
-7	en_US	name	Genetic transformation of forest trees.pdf	string
+7	en_US	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 8	en_US	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-9	en_US	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+9	en_US	name	Developing efficacy beliefs in the classroom.pdf	string
 10	en_US	name	Developing efficacy beliefs in the classroom.pdf	string
-11	en_US	name	Developing efficacy beliefs in the classroom.pdf	string
-12	en_US	name	Traditions and Trends in the Study of the Commons.pdf	string
-13	en_US	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-14	en_US	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-15	en_US	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-16	en_US	name	Learning Sustainable Design through Service.pdf	string
-17	en_US	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-18	en_US	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-19	en_US	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-20	en_US	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-21	en_US	name	Yam diseases and its management in Nigeria.pdf	string
-22	en_US	name	Yam diseases and its management in Nigeria.pdf	string
-23	en_US	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-24	en_US	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-25	en_US	name	article.pdf	string
-25	fr_CA	name		string
-26	en_US	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-27	en_US	name	Finocchiaro: Arguments About Arguments.pdf	string
+11	en_US	name	Traditions and Trends in the Study of the Commons.pdf	string
+12	en_US	name	Hansen & Pinto: Reason Reclaimed.pdf	string
+13	en_US	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+14	en_US	name	Learning Sustainable Design through Service.pdf	string
+15	en_US	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+16	en_US	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+17	en_US	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+18	en_US	name	Yam diseases and its management in Nigeria.pdf	string
+19	en_US	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+20	en_US	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+21	en_US	name	article.pdf	string
+21	fr_CA	name		string
+22	en_US	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+23	en_US	name	Finocchiaro: Arguments About Arguments.pdf	string
+24	en_US	name	Finocchiaro: Arguments About Arguments.pdf	string
 \.
 
 
@@ -8266,41 +7822,31 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	1	2	\N	\N	\N	2023-04-03 21:13:06	2023-04-03 21:13:07	17	\N	\N
-2	1	2	\N	1	10	\N	\N	\N	2023-04-03 21:14:16	2023-04-03 21:14:16	3	521	1
-3	2	3	\N	1	2	\N	\N	\N	2023-04-03 21:15:54	2023-04-03 21:15:54	18	\N	\N
-4	3	4	\N	1	2	\N	\N	\N	2023-04-03 21:16:33	2023-04-03 21:16:33	19	\N	\N
-5	4	5	\N	1	2	\N	\N	\N	2023-04-03 21:17:11	2023-04-03 21:17:11	20	\N	\N
-6	5	6	\N	1	2	\N	\N	\N	2023-04-03 21:17:26	2023-04-03 21:17:27	21	\N	\N
-7	5	6	6	1	4	\N	\N	\N	2023-04-03 21:17:35	2023-04-03 21:17:35	21	\N	\N
-8	6	7	\N	1	2	\N	\N	\N	2023-04-03 21:18:15	2023-04-03 21:18:15	22	\N	\N
-9	6	7	8	1	4	\N	\N	\N	2023-04-03 21:18:25	2023-04-03 21:18:25	22	\N	\N
-10	7	8	\N	1	2	\N	\N	\N	2023-04-03 21:19:02	2023-04-03 21:19:02	23	\N	\N
-11	7	8	10	1	4	\N	\N	\N	2023-04-03 21:19:11	2023-04-03 21:19:11	23	\N	\N
-12	8	9	\N	1	2	\N	\N	\N	2023-04-03 21:19:45	2023-04-03 21:19:45	24	\N	\N
-13	9	10	\N	1	2	\N	\N	\N	2023-04-03 21:20:00	2023-04-03 21:20:01	25	\N	\N
-14	9	10	13	1	4	\N	\N	\N	2023-04-03 21:20:10	2023-04-03 21:20:10	25	\N	\N
-15	10	11	\N	1	2	\N	\N	\N	2023-04-03 21:20:51	2023-04-03 21:20:51	26	\N	\N
-16	11	12	\N	1	2	\N	\N	\N	2023-04-03 21:21:39	2023-04-03 21:21:40	27	\N	\N
-17	12	13	\N	1	2	\N	\N	\N	2023-04-03 21:21:54	2023-04-03 21:21:55	28	\N	\N
-18	13	14	\N	1	2	\N	\N	\N	2023-04-03 21:22:25	2023-04-03 21:22:25	29	\N	\N
-19	13	14	18	1	4	\N	\N	\N	2023-04-03 21:22:37	2023-04-03 21:22:37	29	\N	\N
-20	14	15	\N	1	2	\N	\N	\N	2023-04-03 21:23:41	2023-04-03 21:23:42	30	\N	\N
-21	15	16	\N	1	2	\N	\N	\N	2023-04-03 21:23:54	2023-04-03 21:23:54	31	\N	\N
-22	15	16	21	1	4	\N	\N	\N	2023-04-03 21:24:05	2023-04-03 21:24:05	31	\N	\N
-23	16	17	\N	1	2	\N	\N	\N	2023-04-03 21:24:41	2023-04-03 21:24:42	32	\N	\N
-24	17	18	\N	1	2	\N	\N	\N	2023-04-03 21:24:54	2023-04-03 21:24:54	33	\N	\N
-25	17	19	\N	1	10	\N	\N	\N	2023-04-03 21:25:42	2023-04-03 21:25:43	3	521	3
-26	18	20	\N	1	2	\N	\N	\N	2023-04-03 21:26:56	2023-04-03 21:26:56	34	\N	\N
-27	19	21	\N	1	2	\N	\N	\N	2023-04-03 21:27:19	2023-04-03 21:27:19	35	\N	\N
+1	1	1	\N	1	2	\N	\N	\N	2023-04-04 20:13:24	2023-04-04 20:13:24	17	\N	\N
+2	1	2	\N	1	10	\N	\N	\N	2023-04-04 20:14:37	2023-04-04 20:14:37	3	521	1
+3	2	3	\N	1	2	\N	\N	\N	2023-04-04 20:16:20	2023-04-04 20:16:20	18	\N	\N
+4	3	4	\N	1	2	\N	\N	\N	2023-04-04 20:17:01	2023-04-04 20:17:02	19	\N	\N
+5	4	5	\N	1	2	\N	\N	\N	2023-04-04 20:17:40	2023-04-04 20:17:41	20	\N	\N
+6	5	6	\N	1	2	\N	\N	\N	2023-04-04 20:17:57	2023-04-04 20:17:57	21	\N	\N
+7	6	7	\N	1	2	\N	\N	\N	2023-04-04 20:18:50	2023-04-04 20:18:50	22	\N	\N
+8	6	7	7	1	4	\N	\N	\N	2023-04-04 20:19:00	2023-04-04 20:19:00	22	\N	\N
+9	7	8	\N	1	2	\N	\N	\N	2023-04-04 20:19:38	2023-04-04 20:19:39	23	\N	\N
+10	7	8	9	1	4	\N	\N	\N	2023-04-04 20:19:48	2023-04-04 20:19:48	23	\N	\N
+11	8	9	\N	1	2	\N	\N	\N	2023-04-04 20:20:23	2023-04-04 20:20:24	24	\N	\N
+12	9	10	\N	1	2	\N	\N	\N	2023-04-04 20:20:39	2023-04-04 20:20:40	25	\N	\N
+13	10	11	\N	1	2	\N	\N	\N	2023-04-04 20:21:32	2023-04-04 20:21:33	26	\N	\N
+14	11	12	\N	1	2	\N	\N	\N	2023-04-04 20:22:22	2023-04-04 20:22:23	27	\N	\N
+15	12	13	\N	1	2	\N	\N	\N	2023-04-04 20:22:38	2023-04-04 20:22:39	28	\N	\N
+16	13	14	\N	1	2	\N	\N	\N	2023-04-04 20:23:10	2023-04-04 20:23:11	29	\N	\N
+17	14	15	\N	1	2	\N	\N	\N	2023-04-04 20:24:28	2023-04-04 20:24:29	30	\N	\N
+18	15	16	\N	1	2	\N	\N	\N	2023-04-04 20:24:42	2023-04-04 20:24:42	31	\N	\N
+19	16	17	\N	1	2	\N	\N	\N	2023-04-04 20:25:32	2023-04-04 20:25:32	32	\N	\N
+20	17	18	\N	1	2	\N	\N	\N	2023-04-04 20:25:45	2023-04-04 20:25:45	33	\N	\N
+21	17	19	\N	1	10	\N	\N	\N	2023-04-04 20:26:36	2023-04-04 20:26:37	3	521	3
+22	18	20	\N	1	2	\N	\N	\N	2023-04-04 20:27:51	2023-04-04 20:27:51	34	\N	\N
+23	19	21	\N	1	2	\N	\N	\N	2023-04-04 20:28:15	2023-04-04 20:28:16	35	\N	\N
+24	19	21	23	1	4	\N	\N	\N	2023-04-04 20:28:28	2023-04-04 20:28:28	35	\N	\N
 \.
-
-
---
--- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 27, true);
 
 
 --
@@ -8424,13 +7970,6 @@ COPY public.submission_search_keyword_list (keyword_id, keyword_text) FROM stdin
 
 
 --
--- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq', 112, true);
-
-
---
 -- Data for Name: submission_search_object_keywords; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -8529,18 +8068,6 @@ COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM 
 35	57	74
 35	98	75
 35	89	76
-35	108	77
-35	86	78
-35	63	79
-35	64	80
-35	65	81
-35	109	82
-35	110	83
-35	62	84
-35	35	85
-35	64	86
-35	111	87
-35	112	88
 9	1	0
 9	2	1
 9	3	2
@@ -8601,6 +8128,18 @@ COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM 
 13	49	1
 13	50	2
 13	51	3
+35	108	77
+35	86	78
+35	63	79
+35	64	80
+35	65	81
+35	109	82
+35	110	83
+35	62	84
+35	35	85
+35	64	86
+35	111	87
+35	112	88
 \.
 
 
@@ -8629,13 +8168,6 @@ COPY public.submission_search_objects (object_id, submission_id, type, assoc_id)
 
 
 --
--- Name: submission_search_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submission_search_objects_object_id_seq', 40, true);
-
-
---
 -- Data for Name: submission_settings; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -8652,44 +8184,30 @@ COPY public.submission_tombstones (tombstone_id, submission_id, date_deleted, jo
 
 
 --
--- Name: submission_tombstones_tombstone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submission_tombstones_tombstone_id_seq', 1, false);
-
-
---
 -- Data for Name: submissions; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-9	1	10	2023-04-03 21:20:41	2023-04-03 21:20:03	2023-04-03 21:20:03	5	en_US	1	0	0
-6	1	7	2023-04-03 21:18:51	2023-04-03 21:18:19	2023-04-03 21:18:19	5	en_US	1	0	0
-3	1	4	2023-04-03 21:17:01	2023-04-03 21:16:36	2023-04-03 21:16:36	4	en_US	1	0	0
-19	1	20	2023-04-03 21:27:48	2023-04-03 21:27:22	2023-04-03 21:27:22	4	en_US	1	0	0
-13	1	14	2023-04-03 21:23:32	2023-04-03 21:22:29	2023-04-03 21:22:29	3	en_US	1	0	0
-4	1	5	2023-04-03 21:17:18	2023-04-03 21:17:17	2023-04-03 21:17:17	1	en_US	1	0	0
-10	1	11	2023-04-03 21:21:30	2023-04-03 21:20:54	2023-04-03 21:20:54	3	en_US	1	0	0
-7	1	8	2023-04-03 21:19:35	2023-04-03 21:19:05	2023-04-03 21:19:05	3	en_US	1	0	0
-14	1	15	2023-04-03 21:23:45	2023-04-03 21:23:45	2023-04-03 21:23:45	1	en_US	1	0	0
-11	1	12	2023-04-03 21:21:46	2023-04-03 21:21:45	2023-04-03 21:21:45	1	en_US	1	0	0
-8	1	9	2023-04-03 21:19:52	2023-04-03 21:19:51	2023-04-03 21:19:51	1	en_US	1	0	0
-5	1	6	2023-04-03 21:18:05	2023-04-03 21:17:29	2023-04-03 21:17:29	5	en_US	1	0	0
-1	1	1	2023-04-03 21:15:40	2023-04-03 21:13:10	2023-04-03 21:13:10	5	en_US	3	0	0
-12	1	13	2023-04-03 21:22:16	2023-04-03 21:21:58	2023-04-03 21:21:58	3	en_US	1	0	0
-2	1	3	2023-04-03 21:16:18	2023-04-03 21:15:57	2023-04-03 21:15:57	3	en_US	1	0	0
-17	1	18	2023-04-03 21:26:43	2023-04-03 21:24:58	2023-04-03 21:24:58	5	en_US	3	0	0
-15	1	16	2023-04-03 21:24:31	2023-04-03 21:23:57	2023-04-03 21:23:57	5	en_US	1	0	0
-16	1	17	2023-04-03 21:24:45	2023-04-03 21:24:45	2023-04-03 21:24:45	1	en_US	1	0	0
-18	1	19	2023-04-03 21:27:08	2023-04-03 21:26:59	2023-04-03 21:26:59	1	en_US	4	0	0
+2	1	3	2023-04-04 20:16:46	2023-04-04 20:16:23	2023-04-04 20:16:23	3	en_US	1	0	0
+6	1	7	2023-04-04 20:19:28	2023-04-04 20:18:54	2023-04-04 20:18:54	5	en_US	1	0	0
+19	1	20	2023-04-04 20:28:47	2023-04-04 20:28:19	2023-04-04 20:28:19	4	en_US	1	0	0
+14	1	15	2023-04-04 20:24:33	2023-04-04 20:24:32	2023-04-04 20:24:32	1	en_US	1	0	0
+10	1	11	2023-04-04 20:22:12	2023-04-04 20:21:36	2023-04-04 20:21:36	3	en_US	1	0	0
+3	1	4	2023-04-04 20:17:30	2023-04-04 20:17:05	2023-04-04 20:17:05	4	en_US	1	0	0
+7	1	8	2023-04-04 20:20:13	2023-04-04 20:19:42	2023-04-04 20:19:42	3	en_US	1	0	0
+4	1	5	2023-04-04 20:17:48	2023-04-04 20:17:47	2023-04-04 20:17:47	1	en_US	1	0	0
+11	1	12	2023-04-04 20:22:29	2023-04-04 20:22:29	2023-04-04 20:22:29	1	en_US	1	0	0
+8	1	9	2023-04-04 20:20:30	2023-04-04 20:20:30	2023-04-04 20:20:30	1	en_US	1	0	0
+17	1	18	2023-04-04 20:27:37	2023-04-04 20:25:49	2023-04-04 20:25:49	5	en_US	3	0	0
+1	1	1	2023-04-04 20:16:05	2023-04-04 20:13:28	2023-04-04 20:13:28	5	en_US	3	0	0
+15	1	16	2023-04-04 20:25:21	2023-04-04 20:24:45	2023-04-04 20:24:45	5	en_US	1	0	0
+12	1	13	2023-04-04 20:23:01	2023-04-04 20:22:42	2023-04-04 20:22:42	3	en_US	1	0	0
+5	1	6	2023-04-04 20:18:39	2023-04-04 20:18:00	2023-04-04 20:18:00	5	en_US	1	0	0
+16	1	17	2023-04-04 20:25:36	2023-04-04 20:25:36	2023-04-04 20:25:36	1	en_US	1	0	0
+9	1	10	2023-04-04 20:21:22	2023-04-04 20:20:43	2023-04-04 20:20:43	5	en_US	1	0	0
+18	1	19	2023-04-04 20:28:04	2023-04-04 20:27:55	2023-04-04 20:27:55	1	en_US	4	0	0
+13	1	14	2023-04-04 20:24:19	2023-04-04 20:23:14	2023-04-04 20:23:14	3	en_US	1	0	0
 \.
-
-
---
--- Name: submissions_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.submissions_submission_id_seq', 19, true);
 
 
 --
@@ -8709,13 +8227,6 @@ COPY public.subscription_types (type_id, journal_id, cost, currency_code_alpha, 
 
 
 --
--- Name: subscription_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.subscription_types_type_id_seq', 1, false);
-
-
---
 -- Data for Name: subscriptions; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
@@ -8724,25 +8235,11 @@ COPY public.subscriptions (subscription_id, journal_id, user_id, type_id, date_s
 
 
 --
--- Name: subscriptions_subscription_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.subscriptions_subscription_id_seq', 1, false);
-
-
---
 -- Data for Name: temporary_files; Type: TABLE DATA; Schema: public; Owner: ojs-ci
 --
 
 COPY public.temporary_files (file_id, user_id, file_name, file_type, file_size, original_file_name, date_uploaded) FROM stdin;
 \.
-
-
---
--- Name: temporary_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.temporary_files_file_id_seq', 1, false);
 
 
 --
@@ -8928,13 +8425,6 @@ COPY public.user_groups (user_group_id, context_id, role_id, is_default, show_ti
 17	1	1048576	1	0	1	0
 18	1	2097152	1	0	0	0
 \.
-
-
---
--- Name: user_groups_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
---
-
-SELECT pg_catalog.setval('public.user_groups_user_group_id_seq', 18, true);
 
 
 --
@@ -9275,42 +8765,512 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-6	minoue	$2y$10$hfKpsveCKao62Hs3nzQPaeqLJckV0Y72HbYk3PYn6PYuhxOW1bnQe	minoue@mailinator.com				\N	JP		\N	\N	2023-04-03 21:10:53	\N	2023-04-03 21:16:13	0	0	\N	0	\N	1
-26	jnovak	$2y$10$sKXTlpU1jgiHv7WBc9wfgOTKfOv1DM5G3uRHZaXNNN8CW.81cDpN6	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2023-04-03 21:20:47	\N	2023-04-03 21:20:47	0	\N	\N	0	\N	1
-19	ckwantes	$2y$10$laHMRxvwLyRg2DJxlhBqNedqo9sY7.AHc/AhqmKaADMdBSsMGBHIm	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2023-04-03 21:16:29	\N	2023-04-03 21:16:29	0	\N	\N	0	\N	1
-4	dbuskins	$2y$10$f9G3ahaNZl65Vv0vL5jF4.ZscbHbYNfsqZJYhB5JvwQ3gsidEhNwS	dbuskins@mailinator.com				\N	US		\N	\N	2023-04-03 21:10:35	\N	2023-04-03 21:10:35	0	0	\N	0	\N	1
-5	sberardo	$2y$10$Z.NowaS/F71t8.ccgjDV.OyhHgQ2lViGwx3zKJEa4zdoAPuXJfiHK	sberardo@mailinator.com				\N	CA		\N	\N	2023-04-03 21:10:44	\N	2023-04-03 21:10:44	0	0	\N	0	\N	1
-11	mfritz	$2y$10$iHpSbtW.rxuSIJMrTDJQ1.4WVqQMffNYgUuTxJciIFvGHQGAgaqUu	mfritz@mailinator.com				\N	BE		\N	\N	2023-04-03 21:11:35	\N	2023-04-03 21:11:35	0	0	\N	0	\N	1
-12	svogt	$2y$10$4dahW0Hv2d4JuN0rN1vKS.WxbvucykiKipuCYVQTSVzUO4X7inDHm	svogt@mailinator.com				\N	CL		\N	\N	2023-04-03 21:11:44	\N	2023-04-03 21:11:44	0	0	\N	0	\N	1
-13	gcox	$2y$10$1XVW/3Wa2ODmmhNQHDKhD.thuGVyAquqPiTNW/IQQFM.cMZId/4va	gcox@mailinator.com				\N	US		\N	\N	2023-04-03 21:11:54	\N	2023-04-03 21:11:54	0	0	\N	0	\N	1
-14	shellier	$2y$10$67IJwOu6Ke50FCfU48Yluu.sD4zOydJDUNEF3eb1eurHFe8BOKqq6	shellier@mailinator.com				\N	ZA		\N	\N	2023-04-03 21:12:04	\N	2023-04-03 21:12:04	0	0	\N	0	\N	1
-15	cturner	$2y$10$AD..P1oEFB9WTYYTgerLxu4AwjL3n4Qy.OZ.gmtKSPq4M2zQ.rBG6	cturner@mailinator.com				\N	GB		\N	\N	2023-04-03 21:12:15	\N	2023-04-03 21:12:15	0	0	\N	0	\N	1
-16	skumar	$2y$10$BiKUYfn/ZvPXRZTft7iyMuCs1kECc3Um1ZLKpOczJUvMhPxAniQza	skumar@mailinator.com				\N	SG		\N	\N	2023-04-03 21:12:26	\N	2023-04-03 21:12:26	0	0	\N	0	\N	1
-2	rvaca	$2y$10$KS65QcSD8yRqIWpcy5M3ne0vW0iRu9ObNrhA8yHTbalIqEktVVBoi	rvaca@mailinator.com				\N	MX		\N	\N	2023-04-03 21:10:23	\N	2023-04-03 21:12:35	0	0	\N	0	\N	1
-20	cmontgomerie	$2y$10$HEQkgQetdaj14eKiltPIPuif.yadyWMG1k8EOZd7/dVZ9wqRStoc2	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2023-04-03 21:17:07	\N	2023-04-03 21:17:07	0	\N	\N	0	\N	1
-1	admin	$2y$10$MwSnmfv79I/IGCTIrCp2Ku0j2Xk.Y4v4OlrU5LBDZiBe6MmtQKoB.	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2023-04-03 21:09:28	\N	2023-04-03 21:12:49	0	\N	\N	0	\N	1
-21	ddiouf	$2y$10$/ATj/3CB8iF5YLLghT7qge6DVpejS0G/ceLpRkmhQekxaBp.PQHg.	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2023-04-03 21:17:22	\N	2023-04-03 21:17:22	0	\N	\N	0	\N	1
-22	dphillips	$2y$10$PEV4dabEdOIGdHzE9pO1kuW/uFUYsD1U2U158wkes1e0nrWZliOB2	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2023-04-03 21:18:11	\N	2023-04-03 21:18:11	0	\N	\N	0	\N	1
-17	amwandenga	$2y$10$V0vwU9/NqZUMIn2.eib1zeO7RAEVeJsI4dhbhE2xviAyjNcmOMNkK	amwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2023-04-03 21:13:02	\N	2023-04-03 21:14:29	0	\N	\N	0	\N	1
-30	pdaniel	$2y$10$x3PtuB6EFiNJtdToI3.EDOcuak.6kajvwNdy.A.GrQS/wRfCjkVCO	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2023-04-03 21:23:37	\N	2023-04-03 21:23:38	0	\N	\N	0	\N	1
-23	dsokoloff	$2y$10$3wCVV72l2AwqdNC9Xa5dSeRu4YwQM7SK/qDBXChBQ4hd5hpPyKpi2	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2023-04-03 21:18:58	\N	2023-04-03 21:18:58	0	\N	\N	0	\N	1
-8	phudson	$2y$10$mI8z1Kgnk0vcIh5aab.RM.QFowfGsoszvA24LscxvzKlGDWrIkujG	phudson@mailinator.com				\N	CA		\N	\N	2023-04-03 21:11:09	\N	2023-04-03 21:19:29	0	0	\N	0	\N	1
-27	kalkhafaji	$2y$10$8OmsVEs3N1Z0S44sQzotD.uk9zqiQFJHtGuH73T5jixlePdvhkb66	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2023-04-03 21:21:35	\N	2023-04-03 21:21:35	0	\N	\N	0	\N	1
-18	ccorino	$2y$10$nmBUlOCl6ZIqN.PRMFcFJOgKF4jHRyjGjnaGcidbrmko/U3Sr.x2O	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2023-04-03 21:15:50	\N	2023-04-03 21:15:50	0	\N	\N	0	\N	1
-24	eostrom	$2y$10$cRg96.fk4pmbu1SgVPdc4OMIynhb9/6UTy8IdGiNJ6AkOa5g.HFCW	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2023-04-03 21:19:41	\N	2023-04-03 21:19:41	0	\N	\N	0	\N	1
-25	fpaglieri	$2y$10$7hJfQjnwIRk5YvMTaM9Jq.OUcku/jgyF2mooIa1kgArOmDFbVpSX.	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2023-04-03 21:19:56	\N	2023-04-03 21:19:57	0	\N	\N	0	\N	1
-28	lchristopher	$2y$10$Q/eBUkp4jGOOAURp5jAmqOAxJeZkgIACPrXsEpEFBuuMNBzVKRsma	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2023-04-03 21:21:51	\N	2023-04-03 21:21:51	0	\N	\N	0	\N	1
-31	rbaiyewu	$2y$10$pRghaBNXRkGJB.w8p/Z3GuX2ikFmt1gxda35X8qJGcoJbQTcXJvou	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2023-04-03 21:23:50	\N	2023-04-03 21:23:50	0	\N	\N	0	\N	1
-29	lkumiega	$2y$10$dfRky7kIXp4ae/0op/ahyu2uYiuB56xOEffYTZhT8yf9GlhVKtgeS	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2023-04-03 21:22:21	\N	2023-04-03 21:22:21	0	\N	\N	0	\N	1
-35	zwoods	$2y$10$KSdq/xBXOEVqVqlqGEy.Iu7F3uY0N9X95zC8Uecw7dvuWLcdCJQw.	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2023-04-03 21:27:15	\N	2023-04-03 21:27:15	0	\N	\N	0	\N	1
-7	jjanssen	$2y$10$4rouewxe7k87m4qnfT3rN.nTViwIQITlntbgMrX4CR2/mhkFBh1.G	jjanssen@mailinator.com				\N	NL		\N	\N	2023-04-03 21:11:01	\N	2023-04-03 21:22:56	0	0	\N	0	\N	1
-9	amccrae	$2y$10$vUFfHp9B3WjwpT8Tw9Ysn.OhTrps0RQNutsowdPmbu.LVReuKu9WC	amccrae@mailinator.com				\N	CA		\N	\N	2023-04-03 21:11:17	\N	2023-04-03 21:23:03	0	0	\N	0	\N	1
-10	agallego	$2y$10$NESMKu1XyNfo2D38L1CMPO.YU7tSVfGD6qPb9slOQR99JYSTYuMly	agallego@mailinator.com				\N	US		\N	\N	2023-04-03 21:11:26	\N	2023-04-03 21:23:13	0	0	\N	0	\N	1
-3	dbarnes	$2y$10$QfVCgpXV9BjTrQ6ZmLBZi.Vzunv2qNJyb6tOArMGbbxFkS8MCp6QG	dbarnes@mailinator.com				\N	AU		\N	\N	2023-04-03 21:10:29	\N	2023-04-03 21:27:23	0	0	\N	0	\N	1
-32	rrossi	$2y$10$KpEj6TildmR3TwnsW0TBwu4V3fl4ysOW0c9W72.rfpOD5IRIOGO/6	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2023-04-03 21:24:37	\N	2023-04-03 21:24:37	0	\N	\N	0	\N	1
-33	vkarbasizaed	$2y$10$kbiEiXrw0srstHmWyrWr6u48mBGCVhP0jY/8WgQzuI3Y7U1ZZTBjm	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2023-04-03 21:24:50	\N	2023-04-03 21:24:50	0	\N	\N	0	\N	1
-34	vwilliamson	$2y$10$czWKyTJOKsVMsEoehqRduuiBuhu.1gwM/8qXcZPUequyYmLktg9l6	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2023-04-03 21:26:52	\N	2023-04-03 21:26:52	0	\N	\N	0	\N	1
+6	minoue	$2y$10$tkAdiycEibkbIxO0P8FLo.P8452IselrqByIGq5Zci3kowkM3gupS	minoue@mailinator.com				\N	JP		\N	\N	2023-04-04 20:10:54	\N	2023-04-04 20:16:40	0	0	\N	0	\N	1
+26	jnovak	$2y$10$DhiSjdWziTVGqsX4VlTYWuxLh4XCPn9epuO8Z4egUEUXQosLO2BcG	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2023-04-04 20:21:28	\N	2023-04-04 20:21:28	0	\N	\N	0	\N	1
+19	ckwantes	$2y$10$9VUvGz4aI6/Dj/F/uDpy7u6PsnFiVl7uJOVxs7/fPnjOBwF8znZW.	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2023-04-04 20:16:57	\N	2023-04-04 20:16:57	0	\N	\N	0	\N	1
+4	dbuskins	$2y$10$YTvHe9awlfEcCQYpFkzptOd8DvknyuZY9K/FQD23CmayIPoCmAL4u	dbuskins@mailinator.com				\N	US		\N	\N	2023-04-04 20:10:39	\N	2023-04-04 20:10:39	0	0	\N	0	\N	1
+5	sberardo	$2y$10$t8GExYzAaCecCArTPVX07O1WF0eQ.EgMOmUHQHDvRmeDsjB99lpOm	sberardo@mailinator.com				\N	CA		\N	\N	2023-04-04 20:10:46	\N	2023-04-04 20:10:46	0	0	\N	0	\N	1
+11	mfritz	$2y$10$DN/EPYKQEvlC2UkAV6j7DudNshY7.Or3g5O9bmeUX3AbkK1HQMlLm	mfritz@mailinator.com				\N	BE		\N	\N	2023-04-04 20:11:47	\N	2023-04-04 20:11:47	0	0	\N	0	\N	1
+12	svogt	$2y$10$fdfMyTcFWgnUtNWPCgr0geooC4y6AqzzSfAsxcIQMRICoPFD59dRy	svogt@mailinator.com				\N	CL		\N	\N	2023-04-04 20:11:57	\N	2023-04-04 20:11:57	0	0	\N	0	\N	1
+13	gcox	$2y$10$k4/XtKvLdr6A7VcAfVPPRO5mhcpKuWpSgvP27.4OrUiG/ae.mG.LK	gcox@mailinator.com				\N	US		\N	\N	2023-04-04 20:12:07	\N	2023-04-04 20:12:07	0	0	\N	0	\N	1
+14	shellier	$2y$10$KrR1INlI0RDS5YIEbadFLe/92JiD970eBIdvXbZETGlbpPIrs1kh6	shellier@mailinator.com				\N	ZA		\N	\N	2023-04-04 20:12:19	\N	2023-04-04 20:12:19	0	0	\N	0	\N	1
+15	cturner	$2y$10$mpUH7/r9znp8OsYTVkQ28eeJeLhIIsOJNbRUrFBT68Id0yUhRTlhK	cturner@mailinator.com				\N	GB		\N	\N	2023-04-04 20:12:30	\N	2023-04-04 20:12:30	0	0	\N	0	\N	1
+16	skumar	$2y$10$kTeTHKAKjshpn8o4GH7R7ujK43OGYvSAkd2NwRn4iHpmZh9IXoMfG	skumar@mailinator.com				\N	SG		\N	\N	2023-04-04 20:12:42	\N	2023-04-04 20:12:42	0	0	\N	0	\N	1
+2	rvaca	$2y$10$qEpaSlBP/RdWEyFAnJb3.OKsDufjw4KcO6fxoiBJ40a9vSISiMC.O	rvaca@mailinator.com				\N	MX		\N	\N	2023-04-04 20:10:27	\N	2023-04-04 20:12:51	0	0	\N	0	\N	1
+20	cmontgomerie	$2y$10$Q7jZbhviNmq5eyj4oKEQv.BOnnh.T3fnbTYnGF1fphyDnf3sDBOkW	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2023-04-04 20:17:36	\N	2023-04-04 20:17:36	0	\N	\N	0	\N	1
+1	admin	$2y$10$qDfGI5GWuc1lhPMv14j4tOOoOykPwOohfKrKlKRFMVVsx153hGsJ6	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2023-04-04 20:09:31	\N	2023-04-04 20:13:06	0	\N	\N	0	\N	1
+21	ddiouf	$2y$10$yKsitbqFxEcGhfdcRCXMau4ii1rGaGHgDIcK/dcyBRzG1r.vVz0y.	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2023-04-04 20:17:53	\N	2023-04-04 20:17:53	0	\N	\N	0	\N	1
+22	dphillips	$2y$10$IDIPJ3XLXD6iWUGZXwz/5emd6LZWwziEX5t7L09K18cbO9fA92Wdu	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2023-04-04 20:18:46	\N	2023-04-04 20:18:46	0	\N	\N	0	\N	1
+17	amwandenga	$2y$10$8l/Hz0MAIZl.IMmyFodZReraNNVfysYV1/9vdMWqz8JADEMf7/9zi	amwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2023-04-04 20:13:20	\N	2023-04-04 20:14:50	0	\N	\N	0	\N	1
+30	pdaniel	$2y$10$VRavPKpsNT7M6T19vg0skO5uqhLop5O7sCrYRqFbMixb.aREEj7lC	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2023-04-04 20:24:24	\N	2023-04-04 20:24:24	0	\N	\N	0	\N	1
+23	dsokoloff	$2y$10$amDYNv5YJO0yaWbzby4HeuLnzD1cDwymITI44VA1KRk1QLELBFLbC	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2023-04-04 20:19:34	\N	2023-04-04 20:19:34	0	\N	\N	0	\N	1
+8	phudson	$2y$10$pb9kXYBSKS5.gYu9uvzY4.6IwpVV2AqqeydG4cQ/cim/CiyR8b/ny	phudson@mailinator.com				\N	CA		\N	\N	2023-04-04 20:11:14	\N	2023-04-04 20:20:06	0	0	\N	0	\N	1
+27	kalkhafaji	$2y$10$3DRTNkYPCTM2fq6Y9jSvpOMaFzV2vhgFkqa39i2tuDTQbSkJBXj9m	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2023-04-04 20:22:18	\N	2023-04-04 20:22:18	0	\N	\N	0	\N	1
+18	ccorino	$2y$10$LZu5r2TgEX.gCFs9yODoU.Uohuy9l24rw4cac6a9p21KykhphsHDu	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2023-04-04 20:16:14	\N	2023-04-04 20:16:14	0	\N	\N	0	\N	1
+24	eostrom	$2y$10$2FJJ3mi55.u27UhnvMatnuurH282FagZY.2qbL6bJzEvoVQzzdACK	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2023-04-04 20:20:19	\N	2023-04-04 20:20:19	0	\N	\N	0	\N	1
+25	fpaglieri	$2y$10$T3I2Wna2hIEzrlENiHnvcuoW6N5.mVng7enL/XqrPGW2S/7baJ3MS	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2023-04-04 20:20:35	\N	2023-04-04 20:20:35	0	\N	\N	0	\N	1
+28	lchristopher	$2y$10$Gm/HJsEpK2eo3c8CRoMOo.dQouaHjbphLb.iaw37DuQuRN/nFlYQO	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2023-04-04 20:22:34	\N	2023-04-04 20:22:34	0	\N	\N	0	\N	1
+31	rbaiyewu	$2y$10$qxtuH9JEr/U9xZBPna9Sh.PcCQCbat8RpuIFbtmQSv6qxTd3h7mnS	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2023-04-04 20:24:37	\N	2023-04-04 20:24:38	0	\N	\N	0	\N	1
+29	lkumiega	$2y$10$eBFI/32c6HPAjbnwXvE1y.9If.Hc16SDbl4iQvQcOecLyfWTSUpbW	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2023-04-04 20:23:06	\N	2023-04-04 20:23:06	0	\N	\N	0	\N	1
+35	zwoods	$2y$10$JMmhmJDO6dZCdcGK1BeFRuOS7/z/D.nxQMzAr.7EbdYglPYuqbhyq	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2023-04-04 20:28:11	\N	2023-04-04 20:28:11	0	\N	\N	0	\N	1
+7	jjanssen	$2y$10$7ejCp3IDjmRC5tLjwI0GieFvfF.niKoIe8BbZp7Q4QqSnoqTjcm1y	jjanssen@mailinator.com				\N	NL		\N	\N	2023-04-04 20:11:03	\N	2023-04-04 20:23:41	0	0	\N	0	\N	1
+9	amccrae	$2y$10$qs2XCrCOaSsEw2w3ZQrvRejPI/7RQZB7rcrY8lRIVueIAohAJNrZa	amccrae@mailinator.com				\N	CA		\N	\N	2023-04-04 20:11:28	\N	2023-04-04 20:23:49	0	0	\N	0	\N	1
+10	agallego	$2y$10$U78FsN4FVGATJiwiIPf.x.fWgQcz5ZrFvRulOtW2//zIssQxW5xvO	agallego@mailinator.com				\N	US		\N	\N	2023-04-04 20:11:38	\N	2023-04-04 20:23:59	0	0	\N	0	\N	1
+3	dbarnes	$2y$10$9zEzuuY.hbW5ZC.iN04DeOmEqy4pcDGCBdC7mC5Cc8Q3qEEt4fhcm	dbarnes@mailinator.com				\N	AU		\N	\N	2023-04-04 20:10:33	\N	2023-04-04 20:28:20	0	0	\N	0	\N	1
+32	rrossi	$2y$10$x3vnssCmIEN3YsVciFZa6ujuvrXPJj00RCnxvW6WnRJ33oWBWwpxq	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2023-04-04 20:25:27	\N	2023-04-04 20:25:27	0	\N	\N	0	\N	1
+33	vkarbasizaed	$2y$10$ZCCvXTtZke3o3ByG5PJAFegn2J4MQ8M60dlYqjg80EDdXXPsLgZCe	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2023-04-04 20:25:41	\N	2023-04-04 20:25:41	0	\N	\N	0	\N	1
+34	vwilliamson	$2y$10$ytMk6/XOlyjx993Yoq3ZPeeYO255HyYtgq4mhIs5ZG77oat57GZji	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2023-04-04 20:27:47	\N	2023-04-04 20:27:47	0	\N	\N	0	\N	1
 \.
+
+
+--
+-- Data for Name: versions; Type: TABLE DATA; Schema: public; Owner: ojs-ci
+--
+
+COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
+1	0	0	0	2023-04-04 20:09:32	1	plugins.metadata	dc11		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.auth	ldap		0	0
+1	0	1	0	2023-04-04 20:09:32	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	1	0	0	2023-04-04 20:09:32	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.blocks	information	InformationBlockPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.gateways	resolver		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
+1	2	0	0	2023-04-04 20:09:32	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	2	0	0	2023-04-04 20:09:32	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.generic	driver	DRIVERPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+1	2	0	0	2023-04-04 20:09:32	1	plugins.generic	acron	AcronPlugin	1	1
+1	0	0	0	2023-04-04 20:09:32	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
+0	1	0	0	2023-04-04 20:09:32	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	0	1	0	2023-04-04 20:09:32	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	1	3	4	2023-04-04 20:09:32	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.generic	usageEvent		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
+1	0	1	0	2023-04-04 20:09:32	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
+1	1	0	0	2023-04-04 20:09:32	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.importexport	users		0	0
+2	1	0	0	2023-04-04 20:09:32	1	plugins.importexport	crossref		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.importexport	native		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.importexport	pubmed		0	0
+1	1	0	0	2023-04-04 20:09:32	1	plugins.importexport	doaj		0	0
+2	0	0	0	2023-04-04 20:09:32	1	plugins.importexport	datacite		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.oaiMetadataFormats	marc		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.oaiMetadataFormats	marcxml		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.oaiMetadataFormats	rfc1807		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.paymethod	paypal		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.paymethod	manual		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.reports	views		0	0
+2	0	0	0	2023-04-04 20:09:32	1	plugins.reports	reviewReport		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.reports	articles		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.reports	subscriptions		0	0
+1	0	0	0	2023-04-04 20:09:32	1	plugins.themes	default	DefaultThemePlugin	1	0
+3	3	0	14	2023-04-04 20:09:30	1	core	ojs2		0	1
+1	1	0	0	2023-04-04 20:09:32	1	plugins.reports	counterReport		0	0
+\.
+
+
+--
+-- Name: access_keys_access_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.access_keys_access_key_id_seq', 1, false);
+
+
+--
+-- Name: announcement_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.announcement_types_type_id_seq', 1, false);
+
+
+--
+-- Name: announcements_announcement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.announcements_announcement_id_seq', 1, false);
+
+
+--
+-- Name: auth_sources_auth_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.auth_sources_auth_id_seq', 1, false);
+
+
+--
+-- Name: authors_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.authors_author_id_seq', 25, true);
+
+
+--
+-- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.categories_category_id_seq', 1, false);
+
+
+--
+-- Name: citations_citation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.citations_citation_id_seq', 1, false);
+
+
+--
+-- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.completed_payments_completed_payment_id_seq', 1, false);
+
+
+--
+-- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq', 73, true);
+
+
+--
+-- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocabs_controlled_vocab_id_seq', 101, true);
+
+
+--
+-- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstone_oai_set_objects_object_id_seq', 6, true);
+
+
+--
+-- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstones_tombstone_id_seq', 3, true);
+
+
+--
+-- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true);
+
+
+--
+-- Name: email_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.email_log_log_id_seq', 1, false);
+
+
+--
+-- Name: email_templates_default_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_default_email_id_seq', 58, true);
+
+
+--
+-- Name: email_templates_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_email_id_seq', 1, false);
+
+
+--
+-- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.event_log_log_id_seq', 265, true);
+
+
+--
+-- Name: files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.files_file_id_seq', 21, true);
+
+
+--
+-- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.filter_groups_filter_group_id_seq', 27, true);
+
+
+--
+-- Name: filters_filter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.filters_filter_id_seq', 27, true);
+
+
+--
+-- Name: genres_genre_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.genres_genre_id_seq', 12, true);
+
+
+--
+-- Name: institutional_subscription_ip_institutional_subscription_ip_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.institutional_subscription_ip_institutional_subscription_ip_seq', 1, false);
+
+
+--
+-- Name: institutional_subscriptions_institutional_subscription_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.institutional_subscriptions_institutional_subscription_id_seq', 1, false);
+
+
+--
+-- Name: issue_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.issue_files_file_id_seq', 1, false);
+
+
+--
+-- Name: issue_galleys_galley_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.issue_galleys_galley_id_seq', 1, false);
+
+
+--
+-- Name: issues_issue_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.issues_issue_id_seq', 2, true);
+
+
+--
+-- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.jobs_id_seq', 1, false);
+
+
+--
+-- Name: journals_journal_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.journals_journal_id_seq', 1, true);
+
+
+--
+-- Name: library_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.library_files_file_id_seq', 1, false);
+
+
+--
+-- Name: metadata_descriptions_metadata_description_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.metadata_descriptions_metadata_description_id_seq', 1, false);
+
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq', 23, true);
+
+
+--
+-- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_items_navigation_menu_item_id_seq', 24, true);
+
+
+--
+-- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menus_navigation_menu_id_seq', 3, true);
+
+
+--
+-- Name: notes_note_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.notes_note_id_seq', 1, true);
+
+
+--
+-- Name: notification_mail_list_notification_mail_list_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.notification_mail_list_notification_mail_list_id_seq', 1, false);
+
+
+--
+-- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_seq', 38, true);
+
+
+--
+-- Name: notifications_notification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.notifications_notification_id_seq', 443, true);
+
+
+--
+-- Name: publication_galleys_galley_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.publication_galleys_galley_id_seq', 3, true);
+
+
+--
+-- Name: publications_publication_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.publications_publication_id_seq', 20, true);
+
+
+--
+-- Name: queries_query_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.queries_query_id_seq', 1, true);
+
+
+--
+-- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.queued_payments_queued_payment_id_seq', 1, false);
+
+
+--
+-- Name: review_assignments_review_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 27, true);
+
+
+--
+-- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_elements_review_form_element_id_seq', 1, false);
+
+
+--
+-- Name: review_forms_review_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.review_forms_review_form_id_seq', 1, false);
+
+
+--
+-- Name: review_rounds_review_round_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 13, true);
+
+
+--
+-- Name: sections_section_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.sections_section_id_seq', 2, true);
+
+
+--
+-- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 93, true);
+
+
+--
+-- Name: static_pages_static_page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.static_pages_static_page_id_seq', 1, false);
+
+
+--
+-- Name: submission_comments_comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
+
+
+--
+-- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 24, true);
+
+
+--
+-- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 24, true);
+
+
+--
+-- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq', 112, true);
+
+
+--
+-- Name: submission_search_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_objects_object_id_seq', 40, true);
+
+
+--
+-- Name: submission_tombstones_tombstone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submission_tombstones_tombstone_id_seq', 1, false);
+
+
+--
+-- Name: submissions_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.submissions_submission_id_seq', 19, true);
+
+
+--
+-- Name: subscription_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.subscription_types_type_id_seq', 1, false);
+
+
+--
+-- Name: subscriptions_subscription_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.subscriptions_subscription_id_seq', 1, false);
+
+
+--
+-- Name: temporary_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.temporary_files_file_id_seq', 1, false);
+
+
+--
+-- Name: user_groups_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
+--
+
+SELECT pg_catalog.setval('public.user_groups_user_group_id_seq', 18, true);
 
 
 --
@@ -9321,64 +9281,7 @@ SELECT pg_catalog.setval('public.users_user_id_seq', 35, true);
 
 
 --
--- Data for Name: versions; Type: TABLE DATA; Schema: public; Owner: ojs-ci
---
-
-COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2023-04-03 21:09:29	1	plugins.metadata	dc11		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.auth	ldap		0	0
-1	0	1	0	2023-04-03 21:09:29	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-1	1	0	0	2023-04-03 21:09:29	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.blocks	information	InformationBlockPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.gateways	resolver		0	0
-1	1	3	4	2023-04-03 21:09:29	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.generic	usageEvent		0	0
-1	1	0	0	2023-04-03 21:09:29	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	2	0	0	2023-04-03 21:09:29	1	plugins.generic	acron	AcronPlugin	1	1
-1	0	0	0	2023-04-03 21:09:29	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-1	0	1	0	2023-04-03 21:09:29	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	0	1	0	2023-04-03 21:09:29	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
-1	2	0	0	2023-04-03 21:09:29	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
-1	0	0	0	2023-04-03 21:09:29	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
-1	0	0	0	2023-04-03 21:09:29	1	plugins.generic	driver	DRIVERPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	2	0	0	2023-04-03 21:09:29	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-0	1	0	0	2023-04-03 21:09:29	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
-1	1	0	0	2023-04-03 21:09:29	1	plugins.importexport	doaj		0	0
-2	0	0	0	2023-04-03 21:09:29	1	plugins.importexport	datacite		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.importexport	users		0	0
-2	1	0	0	2023-04-03 21:09:29	1	plugins.importexport	crossref		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.importexport	native		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.importexport	pubmed		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.oaiMetadataFormats	rfc1807		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.oaiMetadataFormats	marcxml		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.oaiMetadataFormats	marc		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.paymethod	manual		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.paymethod	paypal		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.reports	articles		0	0
-2	0	0	0	2023-04-03 21:09:29	1	plugins.reports	reviewReport		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.reports	subscriptions		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.reports	views		0	0
-1	0	0	0	2023-04-03 21:09:29	1	plugins.themes	default	DefaultThemePlugin	1	0
-3	3	0	14	2023-04-03 21:09:28	1	core	ojs2		0	1
-1	1	0	0	2023-04-03 21:09:29	1	plugins.reports	counterReport		0	0
-\.
-
-
---
--- Name: access_keys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: access_keys access_keys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.access_keys
@@ -9386,7 +9289,7 @@ ALTER TABLE ONLY public.access_keys
 
 
 --
--- Name: announcement_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcement_settings announcement_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcement_settings
@@ -9394,7 +9297,7 @@ ALTER TABLE ONLY public.announcement_settings
 
 
 --
--- Name: announcement_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcement_type_settings announcement_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcement_type_settings
@@ -9402,7 +9305,7 @@ ALTER TABLE ONLY public.announcement_type_settings
 
 
 --
--- Name: announcement_types_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcement_types announcement_types_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcement_types
@@ -9410,7 +9313,7 @@ ALTER TABLE ONLY public.announcement_types
 
 
 --
--- Name: announcements_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: announcements announcements_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.announcements
@@ -9418,7 +9321,7 @@ ALTER TABLE ONLY public.announcements
 
 
 --
--- Name: auth_sources_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: auth_sources auth_sources_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.auth_sources
@@ -9426,7 +9329,7 @@ ALTER TABLE ONLY public.auth_sources
 
 
 --
--- Name: author_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: author_settings author_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.author_settings
@@ -9434,7 +9337,7 @@ ALTER TABLE ONLY public.author_settings
 
 
 --
--- Name: authors_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: authors authors_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.authors
@@ -9442,7 +9345,7 @@ ALTER TABLE ONLY public.authors
 
 
 --
--- Name: c_v_e_s_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: controlled_vocab_entry_settings c_v_e_s_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entry_settings
@@ -9450,7 +9353,7 @@ ALTER TABLE ONLY public.controlled_vocab_entry_settings
 
 
 --
--- Name: categories_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.categories
@@ -9458,7 +9361,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: category_path; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: categories category_path; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.categories
@@ -9466,7 +9369,7 @@ ALTER TABLE ONLY public.categories
 
 
 --
--- Name: category_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: category_settings category_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.category_settings
@@ -9474,7 +9377,7 @@ ALTER TABLE ONLY public.category_settings
 
 
 --
--- Name: citation_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: citation_settings citation_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.citation_settings
@@ -9482,7 +9385,7 @@ ALTER TABLE ONLY public.citation_settings
 
 
 --
--- Name: citations_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: citations citations_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.citations
@@ -9490,7 +9393,7 @@ ALTER TABLE ONLY public.citations
 
 
 --
--- Name: citations_publication_seq; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: citations citations_publication_seq; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.citations
@@ -9498,7 +9401,7 @@ ALTER TABLE ONLY public.citations
 
 
 --
--- Name: completed_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: completed_payments completed_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.completed_payments
@@ -9506,7 +9409,7 @@ ALTER TABLE ONLY public.completed_payments
 
 
 --
--- Name: controlled_vocab_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: controlled_vocab_entries controlled_vocab_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocab_entries
@@ -9514,7 +9417,7 @@ ALTER TABLE ONLY public.controlled_vocab_entries
 
 
 --
--- Name: controlled_vocab_symbolic; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: controlled_vocabs controlled_vocab_symbolic; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs
@@ -9522,7 +9425,7 @@ ALTER TABLE ONLY public.controlled_vocabs
 
 
 --
--- Name: controlled_vocabs_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: controlled_vocabs controlled_vocabs_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.controlled_vocabs
@@ -9530,7 +9433,7 @@ ALTER TABLE ONLY public.controlled_vocabs
 
 
 --
--- Name: custom_issue_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: custom_issue_orders custom_issue_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.custom_issue_orders
@@ -9538,7 +9441,7 @@ ALTER TABLE ONLY public.custom_issue_orders
 
 
 --
--- Name: custom_section_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: custom_section_orders custom_section_orders_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.custom_section_orders
@@ -9546,7 +9449,7 @@ ALTER TABLE ONLY public.custom_section_orders
 
 
 --
--- Name: data_object_tombstone_oai_set_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: data_object_tombstone_oai_set_objects data_object_tombstone_oai_set_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
@@ -9554,7 +9457,7 @@ ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
 
 
 --
--- Name: data_object_tombstone_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: data_object_tombstone_settings data_object_tombstone_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstone_settings
@@ -9562,7 +9465,7 @@ ALTER TABLE ONLY public.data_object_tombstone_settings
 
 
 --
--- Name: data_object_tombstones_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: data_object_tombstones data_object_tombstones_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.data_object_tombstones
@@ -9570,7 +9473,7 @@ ALTER TABLE ONLY public.data_object_tombstones
 
 
 --
--- Name: edit_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: edit_decisions edit_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.edit_decisions
@@ -9578,7 +9481,7 @@ ALTER TABLE ONLY public.edit_decisions
 
 
 --
--- Name: email_log_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_log email_log_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_log
@@ -9586,7 +9489,7 @@ ALTER TABLE ONLY public.email_log
 
 
 --
--- Name: email_log_user_id; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_log_users email_log_user_id; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_log_users
@@ -9594,7 +9497,7 @@ ALTER TABLE ONLY public.email_log_users
 
 
 --
--- Name: email_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_templates_settings email_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates_settings
@@ -9602,7 +9505,7 @@ ALTER TABLE ONLY public.email_templates_settings
 
 
 --
--- Name: email_templates_default_data_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_templates_default_data email_templates_default_data_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default_data
@@ -9610,7 +9513,7 @@ ALTER TABLE ONLY public.email_templates_default_data
 
 
 --
--- Name: email_templates_default_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_templates_default email_templates_default_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates_default
@@ -9618,7 +9521,7 @@ ALTER TABLE ONLY public.email_templates_default
 
 
 --
--- Name: email_templates_email_key; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_templates email_templates_email_key; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates
@@ -9626,7 +9529,7 @@ ALTER TABLE ONLY public.email_templates
 
 
 --
--- Name: email_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: email_templates email_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.email_templates
@@ -9634,7 +9537,7 @@ ALTER TABLE ONLY public.email_templates
 
 
 --
--- Name: event_log_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: event_log event_log_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.event_log
@@ -9642,7 +9545,7 @@ ALTER TABLE ONLY public.event_log
 
 
 --
--- Name: event_log_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: event_log_settings event_log_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.event_log_settings
@@ -9650,7 +9553,7 @@ ALTER TABLE ONLY public.event_log_settings
 
 
 --
--- Name: files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: files files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.files
@@ -9658,7 +9561,7 @@ ALTER TABLE ONLY public.files
 
 
 --
--- Name: filter_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: filter_groups filter_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filter_groups
@@ -9666,7 +9569,7 @@ ALTER TABLE ONLY public.filter_groups
 
 
 --
--- Name: filter_groups_symbolic; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: filter_groups filter_groups_symbolic; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filter_groups
@@ -9674,7 +9577,7 @@ ALTER TABLE ONLY public.filter_groups
 
 
 --
--- Name: filter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: filter_settings filter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filter_settings
@@ -9682,7 +9585,7 @@ ALTER TABLE ONLY public.filter_settings
 
 
 --
--- Name: filters_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: filters filters_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.filters
@@ -9690,7 +9593,7 @@ ALTER TABLE ONLY public.filters
 
 
 --
--- Name: genre_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: genre_settings genre_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.genre_settings
@@ -9698,7 +9601,7 @@ ALTER TABLE ONLY public.genre_settings
 
 
 --
--- Name: genres_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: genres genres_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.genres
@@ -9706,7 +9609,7 @@ ALTER TABLE ONLY public.genres
 
 
 --
--- Name: institutional_subscription_ip_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: institutional_subscription_ip institutional_subscription_ip_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.institutional_subscription_ip
@@ -9714,7 +9617,7 @@ ALTER TABLE ONLY public.institutional_subscription_ip
 
 
 --
--- Name: institutional_subscriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: institutional_subscriptions institutional_subscriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.institutional_subscriptions
@@ -9722,7 +9625,7 @@ ALTER TABLE ONLY public.institutional_subscriptions
 
 
 --
--- Name: issue_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: issue_files issue_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_files
@@ -9730,7 +9633,7 @@ ALTER TABLE ONLY public.issue_files
 
 
 --
--- Name: issue_galley_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: issue_galley_settings issue_galley_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_galley_settings
@@ -9738,7 +9641,7 @@ ALTER TABLE ONLY public.issue_galley_settings
 
 
 --
--- Name: issue_galleys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: issue_galleys issue_galleys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_galleys
@@ -9746,7 +9649,7 @@ ALTER TABLE ONLY public.issue_galleys
 
 
 --
--- Name: issue_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: issue_settings issue_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issue_settings
@@ -9754,7 +9657,7 @@ ALTER TABLE ONLY public.issue_settings
 
 
 --
--- Name: issues_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: issues issues_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.issues
@@ -9762,7 +9665,7 @@ ALTER TABLE ONLY public.issues
 
 
 --
--- Name: item_views_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: item_views item_views_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.item_views
@@ -9770,7 +9673,7 @@ ALTER TABLE ONLY public.item_views
 
 
 --
--- Name: jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: jobs jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.jobs
@@ -9778,7 +9681,7 @@ ALTER TABLE ONLY public.jobs
 
 
 --
--- Name: journal_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: journal_settings journal_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.journal_settings
@@ -9786,7 +9689,7 @@ ALTER TABLE ONLY public.journal_settings
 
 
 --
--- Name: journals_path; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: journals journals_path; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.journals
@@ -9794,7 +9697,7 @@ ALTER TABLE ONLY public.journals
 
 
 --
--- Name: journals_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: journals journals_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.journals
@@ -9802,7 +9705,7 @@ ALTER TABLE ONLY public.journals
 
 
 --
--- Name: library_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: library_file_settings library_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.library_file_settings
@@ -9810,7 +9713,7 @@ ALTER TABLE ONLY public.library_file_settings
 
 
 --
--- Name: library_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: library_files library_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.library_files
@@ -9818,7 +9721,7 @@ ALTER TABLE ONLY public.library_files
 
 
 --
--- Name: metadata_descriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: metadata_descriptions metadata_descriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.metadata_descriptions
@@ -9826,7 +9729,7 @@ ALTER TABLE ONLY public.metadata_descriptions
 
 
 --
--- Name: metadata_descripton_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: metadata_description_settings metadata_descripton_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.metadata_description_settings
@@ -9834,7 +9737,7 @@ ALTER TABLE ONLY public.metadata_description_settings
 
 
 --
--- Name: navigation_menu_item_assignment_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_item_assignment_settings navigation_menu_item_assignment_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
@@ -9842,7 +9745,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
 
 
 --
--- Name: navigation_menu_item_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_item_assignments navigation_menu_item_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_assignments
@@ -9850,7 +9753,7 @@ ALTER TABLE ONLY public.navigation_menu_item_assignments
 
 
 --
--- Name: navigation_menu_item_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_item_settings navigation_menu_item_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_item_settings
@@ -9858,7 +9761,7 @@ ALTER TABLE ONLY public.navigation_menu_item_settings
 
 
 --
--- Name: navigation_menu_items_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menu_items navigation_menu_items_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menu_items
@@ -9866,7 +9769,7 @@ ALTER TABLE ONLY public.navigation_menu_items
 
 
 --
--- Name: navigation_menus_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: navigation_menus navigation_menus_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.navigation_menus
@@ -9874,7 +9777,7 @@ ALTER TABLE ONLY public.navigation_menus
 
 
 --
--- Name: notes_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notes notes_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notes
@@ -9882,7 +9785,7 @@ ALTER TABLE ONLY public.notes
 
 
 --
--- Name: notification_mail_list_email_context; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notification_mail_list notification_mail_list_email_context; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_mail_list
@@ -9890,7 +9793,7 @@ ALTER TABLE ONLY public.notification_mail_list
 
 
 --
--- Name: notification_mail_list_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notification_mail_list notification_mail_list_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_mail_list
@@ -9898,7 +9801,7 @@ ALTER TABLE ONLY public.notification_mail_list
 
 
 --
--- Name: notification_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notification_settings notification_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_settings
@@ -9906,7 +9809,7 @@ ALTER TABLE ONLY public.notification_settings
 
 
 --
--- Name: notification_subscription_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notification_subscription_settings notification_subscription_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notification_subscription_settings
@@ -9914,7 +9817,7 @@ ALTER TABLE ONLY public.notification_subscription_settings
 
 
 --
--- Name: notifications_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: notifications notifications_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.notifications
@@ -9922,7 +9825,7 @@ ALTER TABLE ONLY public.notifications
 
 
 --
--- Name: oai_resumption_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: oai_resumption_tokens oai_resumption_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.oai_resumption_tokens
@@ -9930,7 +9833,7 @@ ALTER TABLE ONLY public.oai_resumption_tokens
 
 
 --
--- Name: plugin_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: plugin_settings plugin_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.plugin_settings
@@ -9938,7 +9841,7 @@ ALTER TABLE ONLY public.plugin_settings
 
 
 --
--- Name: publication_categories_id; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publication_categories publication_categories_id; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_categories
@@ -9946,7 +9849,7 @@ ALTER TABLE ONLY public.publication_categories
 
 
 --
--- Name: publication_galley_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publication_galley_settings publication_galley_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_galley_settings
@@ -9954,7 +9857,7 @@ ALTER TABLE ONLY public.publication_galley_settings
 
 
 --
--- Name: publication_galleys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publication_galleys publication_galleys_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_galleys
@@ -9962,7 +9865,7 @@ ALTER TABLE ONLY public.publication_galleys
 
 
 --
--- Name: publication_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publication_settings publication_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_settings
@@ -9970,7 +9873,7 @@ ALTER TABLE ONLY public.publication_settings
 
 
 --
--- Name: publications_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publications publications_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publications
@@ -9978,7 +9881,7 @@ ALTER TABLE ONLY public.publications
 
 
 --
--- Name: queries_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: queries queries_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.queries
@@ -9986,7 +9889,7 @@ ALTER TABLE ONLY public.queries
 
 
 --
--- Name: query_participants_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: query_participants query_participants_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.query_participants
@@ -9994,7 +9897,7 @@ ALTER TABLE ONLY public.query_participants
 
 
 --
--- Name: queued_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: queued_payments queued_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.queued_payments
@@ -10002,7 +9905,7 @@ ALTER TABLE ONLY public.queued_payments
 
 
 --
--- Name: review_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_assignments review_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_assignments
@@ -10010,7 +9913,7 @@ ALTER TABLE ONLY public.review_assignments
 
 
 --
--- Name: review_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_files review_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_files
@@ -10018,7 +9921,7 @@ ALTER TABLE ONLY public.review_files
 
 
 --
--- Name: review_form_element_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_form_element_settings review_form_element_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_form_element_settings
@@ -10026,7 +9929,7 @@ ALTER TABLE ONLY public.review_form_element_settings
 
 
 --
--- Name: review_form_elements_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_form_elements review_form_elements_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_form_elements
@@ -10034,7 +9937,7 @@ ALTER TABLE ONLY public.review_form_elements
 
 
 --
--- Name: review_form_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_form_settings review_form_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_form_settings
@@ -10042,7 +9945,7 @@ ALTER TABLE ONLY public.review_form_settings
 
 
 --
--- Name: review_forms_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_forms review_forms_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_forms
@@ -10050,7 +9953,7 @@ ALTER TABLE ONLY public.review_forms
 
 
 --
--- Name: review_round_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_round_files review_round_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_round_files
@@ -10058,7 +9961,7 @@ ALTER TABLE ONLY public.review_round_files
 
 
 --
--- Name: review_rounds_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_rounds review_rounds_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_rounds
@@ -10066,7 +9969,7 @@ ALTER TABLE ONLY public.review_rounds
 
 
 --
--- Name: review_rounds_submission_id_stage_id_round_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_rounds review_rounds_submission_id_stage_id_round_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_rounds
@@ -10074,7 +9977,7 @@ ALTER TABLE ONLY public.review_rounds
 
 
 --
--- Name: scheduled_tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: scheduled_tasks scheduled_tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.scheduled_tasks
@@ -10082,7 +9985,7 @@ ALTER TABLE ONLY public.scheduled_tasks
 
 
 --
--- Name: section_editors_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: subeditor_submission_group section_editors_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subeditor_submission_group
@@ -10090,7 +9993,7 @@ ALTER TABLE ONLY public.subeditor_submission_group
 
 
 --
--- Name: section_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: section_settings section_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.section_settings
@@ -10098,7 +10001,7 @@ ALTER TABLE ONLY public.section_settings
 
 
 --
--- Name: sections_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: sections sections_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.sections
@@ -10106,7 +10009,7 @@ ALTER TABLE ONLY public.sections
 
 
 --
--- Name: sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: sessions sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.sessions
@@ -10114,7 +10017,7 @@ ALTER TABLE ONLY public.sessions
 
 
 --
--- Name: site_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: site_settings site_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.site_settings
@@ -10122,7 +10025,7 @@ ALTER TABLE ONLY public.site_settings
 
 
 --
--- Name: stage_assignment; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: stage_assignments stage_assignment; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments
@@ -10130,7 +10033,7 @@ ALTER TABLE ONLY public.stage_assignments
 
 
 --
--- Name: stage_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: stage_assignments stage_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.stage_assignments
@@ -10138,7 +10041,7 @@ ALTER TABLE ONLY public.stage_assignments
 
 
 --
--- Name: static_page_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: static_page_settings static_page_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.static_page_settings
@@ -10146,7 +10049,7 @@ ALTER TABLE ONLY public.static_page_settings
 
 
 --
--- Name: static_pages_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: static_pages static_pages_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.static_pages
@@ -10154,7 +10057,7 @@ ALTER TABLE ONLY public.static_pages
 
 
 --
--- Name: submission_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_comments submission_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_comments
@@ -10162,7 +10065,7 @@ ALTER TABLE ONLY public.submission_comments
 
 
 --
--- Name: submission_file_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_file_revisions submission_file_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -10170,7 +10073,7 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_file_settings submission_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_file_settings
@@ -10178,7 +10081,7 @@ ALTER TABLE ONLY public.submission_file_settings
 
 
 --
--- Name: submission_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_files submission_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_files
@@ -10186,7 +10089,7 @@ ALTER TABLE ONLY public.submission_files
 
 
 --
--- Name: submission_search_keyword_list_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_search_keyword_list submission_search_keyword_list_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list
@@ -10194,7 +10097,7 @@ ALTER TABLE ONLY public.submission_search_keyword_list
 
 
 --
--- Name: submission_search_keyword_text; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_search_keyword_list submission_search_keyword_text; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_keyword_list
@@ -10202,7 +10105,7 @@ ALTER TABLE ONLY public.submission_search_keyword_list
 
 
 --
--- Name: submission_search_object_keywords_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_search_object_keywords submission_search_object_keywords_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_object_keywords
@@ -10210,7 +10113,7 @@ ALTER TABLE ONLY public.submission_search_object_keywords
 
 
 --
--- Name: submission_search_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_search_objects submission_search_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_search_objects
@@ -10218,7 +10121,7 @@ ALTER TABLE ONLY public.submission_search_objects
 
 
 --
--- Name: submission_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_settings submission_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_settings
@@ -10226,7 +10129,7 @@ ALTER TABLE ONLY public.submission_settings
 
 
 --
--- Name: submission_tombstones_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_tombstones submission_tombstones_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_tombstones
@@ -10234,7 +10137,7 @@ ALTER TABLE ONLY public.submission_tombstones
 
 
 --
--- Name: submissions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submissions submissions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submissions
@@ -10242,7 +10145,7 @@ ALTER TABLE ONLY public.submissions
 
 
 --
--- Name: subscription_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: subscription_type_settings subscription_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subscription_type_settings
@@ -10250,7 +10153,7 @@ ALTER TABLE ONLY public.subscription_type_settings
 
 
 --
--- Name: subscription_types_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: subscription_types subscription_types_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subscription_types
@@ -10258,7 +10161,7 @@ ALTER TABLE ONLY public.subscription_types
 
 
 --
--- Name: subscriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: subscriptions subscriptions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.subscriptions
@@ -10266,7 +10169,7 @@ ALTER TABLE ONLY public.subscriptions
 
 
 --
--- Name: temporary_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: temporary_files temporary_files_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.temporary_files
@@ -10274,7 +10177,7 @@ ALTER TABLE ONLY public.temporary_files
 
 
 --
--- Name: u_e_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: user_interests u_e_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_interests
@@ -10282,7 +10185,7 @@ ALTER TABLE ONLY public.user_interests
 
 
 --
--- Name: user_group_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: user_group_settings user_group_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_group_settings
@@ -10290,7 +10193,7 @@ ALTER TABLE ONLY public.user_group_settings
 
 
 --
--- Name: user_group_stage_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: user_group_stage user_group_stage_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_group_stage
@@ -10298,7 +10201,7 @@ ALTER TABLE ONLY public.user_group_stage
 
 
 --
--- Name: user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: user_groups user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_groups
@@ -10306,7 +10209,7 @@ ALTER TABLE ONLY public.user_groups
 
 
 --
--- Name: user_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: user_settings user_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_settings
@@ -10314,7 +10217,7 @@ ALTER TABLE ONLY public.user_settings
 
 
 --
--- Name: user_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: user_user_groups user_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.user_user_groups
@@ -10322,7 +10225,7 @@ ALTER TABLE ONLY public.user_user_groups
 
 
 --
--- Name: users_email; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: users users_email; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.users
@@ -10330,7 +10233,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.users
@@ -10338,7 +10241,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users_username; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: users users_username; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.users
@@ -10346,7 +10249,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: versions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: versions versions_pkey; Type: CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.versions
@@ -11131,7 +11034,7 @@ CREATE INDEX user_user_groups_user_id ON public.user_user_groups USING btree (us
 
 
 --
--- Name: publication_galleys_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: publication_galleys publication_galleys_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.publication_galleys
@@ -11139,7 +11042,7 @@ ALTER TABLE ONLY public.publication_galleys
 
 
 --
--- Name: review_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_files review_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_files
@@ -11147,7 +11050,7 @@ ALTER TABLE ONLY public.review_files
 
 
 --
--- Name: review_round_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: review_round_files review_round_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.review_round_files
@@ -11155,7 +11058,7 @@ ALTER TABLE ONLY public.review_round_files
 
 
 --
--- Name: submission_file_revisions_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_file_revisions submission_file_revisions_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -11163,7 +11066,7 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_file_revisions_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_file_revisions submission_file_revisions_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_file_revisions
@@ -11171,21 +11074,11 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 
 --
--- Name: submission_files_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
+-- Name: submission_files submission_files_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: ojs-ci
 --
 
 ALTER TABLE ONLY public.submission_files
     ADD CONSTRAINT submission_files_file_id_foreign FOREIGN KEY (file_id) REFERENCES public.files(file_id);
-
-
---
--- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 --
