@@ -1,13 +1,13 @@
--- MySQL dump 10.13  Distrib 5.7.41, for Linux (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.32, for Linux (x86_64)
 --
 -- Host: localhost    Database: omp-ci
 -- ------------------------------------------------------
--- Server version	5.7.41-0ubuntu0.18.04.1
+-- Server version	8.0.32-0ubuntu0.20.04.2
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8 */;
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
 /*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
@@ -21,17 +21,17 @@
 
 DROP TABLE IF EXISTS `access_keys`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `access_keys` (
-  `access_key_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `access_key_id` bigint NOT NULL AUTO_INCREMENT,
   `context` varchar(40) NOT NULL,
   `key_hash` varchar(40) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `user_id` bigint NOT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   `expiry_date` datetime NOT NULL,
   PRIMARY KEY (`access_key_id`),
   KEY `access_keys_hash` (`key_hash`,`user_id`,`context`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -49,16 +49,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_settings` (
-  `announcement_id` bigint(20) NOT NULL,
+  `announcement_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) DEFAULT NULL,
   UNIQUE KEY `announcement_settings_pkey` (`announcement_id`,`locale`,`setting_name`),
   KEY `announcement_settings_announcement_id` (`announcement_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,16 +76,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_type_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_type_settings` (
-  `type_id` bigint(20) NOT NULL,
+  `type_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `announcement_type_settings_pkey` (`type_id`,`locale`,`setting_name`),
   KEY `announcement_type_settings_type_id` (`type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,14 +103,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_types`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_types` (
-  `type_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` smallint(6) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `type_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` smallint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   PRIMARY KEY (`type_id`),
   KEY `announcement_types_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,17 +128,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcements`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcements` (
-  `announcement_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` smallint(6) DEFAULT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `type_id` bigint(20) DEFAULT NULL,
+  `announcement_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` smallint DEFAULT NULL,
+  `assoc_id` bigint NOT NULL,
+  `type_id` bigint DEFAULT NULL,
   `date_expire` date DEFAULT NULL,
   `date_posted` datetime NOT NULL,
   PRIMARY KEY (`announcement_id`),
   KEY `announcements_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -156,15 +156,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `auth_sources`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `auth_sources` (
-  `auth_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `auth_id` bigint NOT NULL AUTO_INCREMENT,
   `title` varchar(60) NOT NULL,
   `plugin` varchar(32) NOT NULL,
-  `auth_default` smallint(6) NOT NULL DEFAULT '0',
+  `auth_default` smallint NOT NULL DEFAULT '0',
   `settings` text,
   PRIMARY KEY (`auth_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -182,15 +182,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `author_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `author_settings` (
-  `author_id` bigint(20) NOT NULL,
+  `author_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   UNIQUE KEY `author_settings_pkey` (`author_id`,`locale`,`setting_name`),
   KEY `author_settings_author_id` (`author_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,17 +209,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `authors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `authors` (
-  `author_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `author_id` bigint NOT NULL AUTO_INCREMENT,
   `email` varchar(90) NOT NULL,
-  `include_in_browse` smallint(6) NOT NULL DEFAULT '1',
-  `publication_id` bigint(20) NOT NULL,
+  `include_in_browse` smallint NOT NULL DEFAULT '1',
+  `publication_id` bigint NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
-  `user_group_id` bigint(20) DEFAULT NULL,
+  `user_group_id` bigint DEFAULT NULL,
   PRIMARY KEY (`author_id`),
   KEY `authors_publication_id` (`publication_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -238,18 +238,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categories` (
-  `category_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `parent_id` bigint(20) NOT NULL,
-  `seq` bigint(20) DEFAULT NULL,
+  `category_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `parent_id` bigint NOT NULL,
+  `seq` bigint DEFAULT NULL,
   `path` varchar(255) NOT NULL,
   `image` text,
   PRIMARY KEY (`category_id`),
   UNIQUE KEY `category_path` (`context_id`,`path`),
   KEY `category_context_id` (`context_id`,`parent_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -267,15 +267,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `category_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `category_settings` (
-  `category_id` bigint(20) NOT NULL,
+  `category_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `category_settings_pkey` (`category_id`,`locale`,`setting_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -293,16 +293,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `citation_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `citation_settings` (
-  `citation_id` bigint(20) NOT NULL,
+  `citation_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `citation_settings_pkey` (`citation_id`,`locale`,`setting_name`),
   KEY `citation_settings_citation_id` (`citation_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -320,16 +320,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `citations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `citations` (
-  `citation_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `publication_id` bigint(20) NOT NULL DEFAULT '0',
+  `citation_id` bigint NOT NULL AUTO_INCREMENT,
+  `publication_id` bigint NOT NULL DEFAULT '0',
   `raw_citation` text NOT NULL,
-  `seq` bigint(20) NOT NULL DEFAULT '0',
+  `seq` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`citation_id`),
   UNIQUE KEY `citations_publication_seq` (`publication_id`,`seq`),
   KEY `citations_publication` (`publication_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -347,19 +347,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `completed_payments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `completed_payments` (
-  `completed_payment_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `completed_payment_id` bigint NOT NULL AUTO_INCREMENT,
   `timestamp` datetime NOT NULL,
-  `payment_type` bigint(20) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
+  `payment_type` bigint NOT NULL,
+  `context_id` bigint NOT NULL,
+  `user_id` bigint DEFAULT NULL,
   `assoc_id` varchar(16) DEFAULT NULL,
   `amount` double(8,2) NOT NULL,
   `currency_code_alpha` varchar(3) DEFAULT NULL,
   `payment_method_plugin_name` varchar(80) DEFAULT NULL,
   PRIMARY KEY (`completed_payment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -377,14 +377,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocab_entries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocab_entries` (
-  `controlled_vocab_entry_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `controlled_vocab_id` bigint(20) NOT NULL,
+  `controlled_vocab_entry_id` bigint NOT NULL AUTO_INCREMENT,
+  `controlled_vocab_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
   PRIMARY KEY (`controlled_vocab_entry_id`),
   KEY `controlled_vocab_entries_cv_id` (`controlled_vocab_id`,`seq`)
-) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -403,16 +403,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocab_entry_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocab_entry_settings` (
-  `controlled_vocab_entry_id` bigint(20) NOT NULL,
+  `controlled_vocab_entry_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `c_v_e_s_pkey` (`controlled_vocab_entry_id`,`locale`,`setting_name`),
   KEY `c_v_e_s_entry_id` (`controlled_vocab_entry_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -431,15 +431,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocabs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocabs` (
-  `controlled_vocab_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `controlled_vocab_id` bigint NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(64) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL DEFAULT '0',
-  `assoc_id` bigint(20) NOT NULL DEFAULT '0',
+  `assoc_type` bigint NOT NULL DEFAULT '0',
+  `assoc_id` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`controlled_vocab_id`),
   UNIQUE KEY `controlled_vocab_symbolic` (`symbolic`,`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -458,15 +458,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstone_oai_set_objects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstone_oai_set_objects` (
-  `object_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `tombstone_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `object_id` bigint NOT NULL AUTO_INCREMENT,
+  `tombstone_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   PRIMARY KEY (`object_id`),
   KEY `data_object_tombstone_oai_set_objects_tombstone_id` (`tombstone_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -484,16 +484,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstone_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstone_settings` (
-  `tombstone_id` bigint(20) NOT NULL,
+  `tombstone_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `data_object_tombstone_settings_pkey` (`tombstone_id`,`locale`,`setting_name`),
   KEY `data_object_tombstone_settings_tombstone_id` (`tombstone_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -511,17 +511,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstones` (
-  `tombstone_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `data_object_id` bigint(20) NOT NULL,
+  `tombstone_id` bigint NOT NULL AUTO_INCREMENT,
+  `data_object_id` bigint NOT NULL,
   `date_deleted` datetime NOT NULL,
   `set_spec` varchar(255) NOT NULL,
   `set_name` varchar(255) NOT NULL,
   `oai_identifier` varchar(255) NOT NULL,
   PRIMARY KEY (`tombstone_id`),
   KEY `data_object_tombstones_data_object_id` (`data_object_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -539,20 +539,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `edit_decisions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `edit_decisions` (
-  `edit_decision_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `review_round_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) DEFAULT NULL,
-  `round` smallint(6) NOT NULL,
-  `editor_id` bigint(20) NOT NULL,
-  `decision` smallint(6) NOT NULL,
+  `edit_decision_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `review_round_id` bigint NOT NULL,
+  `stage_id` bigint DEFAULT NULL,
+  `round` smallint NOT NULL,
+  `editor_id` bigint NOT NULL,
+  `decision` smallint NOT NULL,
   `date_decided` datetime NOT NULL,
   PRIMARY KEY (`edit_decision_id`),
   KEY `edit_decisions_submission_id` (`submission_id`),
   KEY `edit_decisions_editor_id` (`editor_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -561,7 +561,7 @@ CREATE TABLE `edit_decisions` (
 
 LOCK TABLES `edit_decisions` WRITE;
 /*!40000 ALTER TABLE `edit_decisions` DISABLE KEYS */;
-INSERT INTO `edit_decisions` VALUES (1,1,0,1,0,3,3,'2023-03-30 06:26:04'),(2,1,1,3,1,3,2,'2023-03-30 06:26:13'),(3,2,0,1,0,3,3,'2023-03-30 06:27:43'),(4,4,0,1,0,3,1,'2023-03-30 06:29:37'),(5,4,3,2,1,3,3,'2023-03-30 06:29:48'),(6,4,4,3,1,3,2,'2023-03-30 06:30:01'),(7,4,0,4,0,3,7,'2023-03-30 06:30:13'),(8,5,0,1,0,3,1,'2023-03-30 06:31:06'),(9,5,5,2,1,3,3,'2023-03-30 06:31:16'),(10,5,6,3,1,3,2,'2023-03-30 06:31:27'),(11,5,0,4,0,3,7,'2023-03-30 06:31:37'),(12,6,0,1,0,3,1,'2023-03-30 06:33:10'),(13,6,7,2,1,6,15,'2023-03-30 06:33:27'),(14,7,0,1,0,3,3,'2023-03-30 06:34:58'),(15,7,8,3,1,3,2,'2023-03-30 06:35:10'),(16,9,0,1,0,3,1,'2023-03-30 06:36:46'),(17,11,0,1,0,3,1,'2023-03-30 06:38:06'),(18,11,10,2,1,3,3,'2023-03-30 06:38:15'),(19,11,11,3,1,3,2,'2023-03-30 06:38:55'),(20,12,0,1,0,3,1,'2023-03-30 06:40:09'),(21,13,0,1,0,3,1,'2023-03-30 06:41:37'),(22,13,13,2,1,3,3,'2023-03-30 06:41:48'),(23,13,14,3,1,3,2,'2023-03-30 06:42:41'),(24,14,0,1,0,3,1,'2023-03-30 06:43:52'),(25,14,15,2,1,3,3,'2023-03-30 06:44:03'),(26,14,16,3,1,3,2,'2023-03-30 06:44:15'),(27,14,0,4,0,3,7,'2023-03-30 06:44:26'),(28,15,0,1,0,3,3,'2023-03-30 06:46:08'),(29,16,0,1,0,3,3,'2023-03-30 06:46:50'),(30,17,0,1,0,3,1,'2023-03-30 06:49:09');
+INSERT INTO `edit_decisions` VALUES (1,1,0,1,0,3,3,'2023-04-05 01:16:16'),(2,1,1,3,1,3,2,'2023-04-05 01:16:25'),(3,2,0,1,0,3,3,'2023-04-05 01:17:58'),(4,4,0,1,0,3,1,'2023-04-05 01:19:56'),(5,4,3,2,1,3,3,'2023-04-05 01:20:08'),(6,4,4,3,1,3,2,'2023-04-05 01:20:20'),(7,4,0,4,0,3,7,'2023-04-05 01:20:33'),(8,5,0,1,0,3,1,'2023-04-05 01:21:28'),(9,5,5,2,1,3,3,'2023-04-05 01:21:38'),(10,5,6,3,1,3,2,'2023-04-05 01:21:50'),(11,5,0,4,0,3,7,'2023-04-05 01:22:00'),(12,6,0,1,0,3,1,'2023-04-05 01:23:37'),(13,6,7,2,1,6,15,'2023-04-05 01:23:55'),(14,7,0,1,0,3,3,'2023-04-05 01:25:28'),(15,7,8,3,1,3,2,'2023-04-05 01:25:41'),(16,9,0,1,0,3,1,'2023-04-05 01:27:23'),(17,11,0,1,0,3,1,'2023-04-05 01:28:47'),(18,11,10,2,1,3,3,'2023-04-05 01:28:56'),(19,11,11,3,1,3,2,'2023-04-05 01:29:38'),(20,12,0,1,0,3,1,'2023-04-05 01:30:59'),(21,13,0,1,0,3,1,'2023-04-05 01:32:29'),(22,13,13,2,1,3,3,'2023-04-05 01:32:41'),(23,13,14,3,1,3,2,'2023-04-05 01:33:36'),(24,14,0,1,0,3,1,'2023-04-05 01:34:49'),(25,14,15,2,1,3,3,'2023-04-05 01:35:02'),(26,14,16,3,1,3,2,'2023-04-05 01:35:14'),(27,14,0,4,0,3,7,'2023-04-05 01:35:27'),(28,15,0,1,0,3,3,'2023-04-05 01:37:14'),(29,16,0,1,0,3,3,'2023-04-05 01:37:59'),(30,17,0,1,0,3,1,'2023-04-05 01:40:24');
 /*!40000 ALTER TABLE `edit_decisions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -571,14 +571,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_log` (
-  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `sender_id` bigint(20) NOT NULL,
+  `log_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `sender_id` bigint NOT NULL,
   `date_sent` datetime NOT NULL,
-  `event_type` bigint(20) DEFAULT NULL,
+  `event_type` bigint DEFAULT NULL,
   `from_address` varchar(255) DEFAULT NULL,
   `recipients` text,
   `cc_recipients` text,
@@ -587,7 +587,7 @@ CREATE TABLE `email_log` (
   `body` text,
   PRIMARY KEY (`log_id`),
   KEY `email_log_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -605,12 +605,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_log_users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_log_users` (
-  `email_log_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `email_log_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `email_log_user_id` (`email_log_id`,`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -628,15 +628,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates` (
-  `email_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email_id` bigint NOT NULL AUTO_INCREMENT,
   `email_key` varchar(64) NOT NULL COMMENT 'Unique identifier for this email.',
-  `context_id` bigint(20) NOT NULL,
-  `enabled` smallint(6) NOT NULL DEFAULT '1',
+  `context_id` bigint NOT NULL,
+  `enabled` smallint NOT NULL DEFAULT '1',
   PRIMARY KEY (`email_id`),
   UNIQUE KEY `email_templates_email_key` (`email_key`,`context_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -654,18 +654,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_default`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_default` (
-  `email_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `email_id` bigint NOT NULL AUTO_INCREMENT,
   `email_key` varchar(64) NOT NULL COMMENT 'Unique identifier for this email.',
-  `can_disable` smallint(6) NOT NULL DEFAULT '0',
-  `can_edit` smallint(6) NOT NULL DEFAULT '0',
-  `from_role_id` bigint(20) DEFAULT NULL,
-  `to_role_id` bigint(20) DEFAULT NULL,
-  `stage_id` bigint(20) DEFAULT NULL,
+  `can_disable` smallint NOT NULL DEFAULT '0',
+  `can_edit` smallint NOT NULL DEFAULT '0',
+  `from_role_id` bigint DEFAULT NULL,
+  `to_role_id` bigint DEFAULT NULL,
+  `stage_id` bigint DEFAULT NULL,
   PRIMARY KEY (`email_id`),
   KEY `email_templates_default_email_key` (`email_key`)
-) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -674,7 +674,7 @@ CREATE TABLE `email_templates_default` (
 
 LOCK TABLES `email_templates_default` WRITE;
 /*!40000 ALTER TABLE `email_templates_default` DISABLE KEYS */;
-INSERT INTO `email_templates_default` VALUES (1,'NOTIFICATION',0,1,NULL,NULL,NULL),(2,'NOTIFICATION_CENTER_DEFAULT',0,1,NULL,NULL,NULL),(3,'PASSWORD_RESET_CONFIRM',0,1,NULL,NULL,NULL),(4,'USER_REGISTER',0,1,NULL,NULL,NULL),(5,'USER_VALIDATE',0,1,NULL,NULL,NULL),(6,'REVIEWER_REGISTER',0,1,NULL,NULL,NULL),(7,'PUBLISH_NOTIFY',0,1,NULL,NULL,NULL),(8,'SUBMISSION_ACK',1,1,NULL,65536,1),(9,'SUBMISSION_ACK_NOT_USER',1,1,NULL,65536,1),(10,'EDITOR_ASSIGN',1,1,16,16,1),(11,'REVIEW_CANCEL',1,1,16,4096,3),(12,'REVIEW_REINSTATE',1,1,16,4096,3),(13,'REVIEW_REQUEST',1,1,16,4096,3),(14,'REVIEW_REQUEST_ONECLICK',1,1,16,4096,3),(15,'REVIEW_REQUEST_REMIND_AUTO',0,1,NULL,4096,3),(16,'REVIEW_REQUEST_REMIND_AUTO_ONECLICK',0,1,NULL,4096,3),(17,'REVIEW_REQUEST_ATTACHED',0,1,16,4096,3),(18,'REVIEW_CONFIRM',1,1,4096,16,3),(19,'REVIEW_DECLINE',1,1,4096,16,3),(20,'REVIEW_ACK',1,1,16,4096,3),(21,'REVIEW_REMIND',0,1,16,4096,3),(22,'REVIEW_REMIND_AUTO',0,1,NULL,4096,3),(23,'REVIEW_REMIND_ONECLICK',0,1,16,4096,3),(24,'REVIEW_REMIND_AUTO_ONECLICK',0,1,NULL,4096,3),(25,'EDITOR_DECISION_ACCEPT',0,1,16,65536,3),(26,'EDITOR_DECISION_SEND_TO_EXTERNAL',0,1,16,65536,3),(27,'EDITOR_DECISION_SEND_TO_PRODUCTION',0,1,16,65536,5),(28,'EDITOR_DECISION_REVISIONS',0,1,16,65536,3),(29,'EDITOR_DECISION_RESUBMIT',0,1,16,65536,3),(30,'EDITOR_DECISION_DECLINE',0,1,16,65536,3),(31,'EDITOR_DECISION_INITIAL_DECLINE',0,1,16,65536,1),(32,'EDITOR_RECOMMENDATION',0,1,16,16,3),(33,'COPYEDIT_REQUEST',1,1,16,4097,4),(34,'LAYOUT_REQUEST',1,1,16,4097,5),(35,'LAYOUT_COMPLETE',1,1,4097,16,5),(36,'INDEX_REQUEST',1,1,16,4097,5),(37,'INDEX_COMPLETE',1,1,4097,16,5),(38,'EMAIL_LINK',0,1,1048576,NULL,NULL),(39,'STATISTICS_REPORT_NOTIFICATION',1,1,16,17,NULL),(40,'ANNOUNCEMENT',0,1,16,1048576,NULL),(41,'MANUAL_PAYMENT_NOTIFICATION',0,1,NULL,NULL,NULL),(42,'PAYPAL_INVESTIGATE_PAYMENT',0,1,NULL,NULL,NULL);
+INSERT INTO `email_templates_default` VALUES (1,'NOTIFICATION',0,1,NULL,NULL,NULL),(2,'NOTIFICATION_CENTER_DEFAULT',0,1,NULL,NULL,NULL),(3,'PASSWORD_RESET_CONFIRM',0,1,NULL,NULL,NULL),(4,'USER_REGISTER',0,1,NULL,NULL,NULL),(5,'USER_VALIDATE',0,1,NULL,NULL,NULL),(6,'REVIEWER_REGISTER',0,1,NULL,NULL,NULL),(7,'PUBLISH_NOTIFY',0,1,NULL,NULL,NULL),(8,'SUBMISSION_ACK',1,1,NULL,65536,1),(9,'SUBMISSION_ACK_NOT_USER',1,1,NULL,65536,1),(10,'EDITOR_ASSIGN',1,1,16,16,1),(11,'REVIEW_CANCEL',1,1,16,4096,3),(12,'REVIEW_REINSTATE',1,1,16,4096,3),(13,'REVIEW_REQUEST',1,1,16,4096,3),(14,'REVIEW_REQUEST_ONECLICK',1,1,16,4096,3),(15,'REVIEW_REQUEST_REMIND_AUTO',0,1,NULL,4096,3),(16,'REVIEW_REQUEST_REMIND_AUTO_ONECLICK',0,1,NULL,4096,3),(17,'REVIEW_REQUEST_ATTACHED',0,1,16,4096,3),(18,'REVIEW_CONFIRM',1,1,4096,16,3),(19,'REVIEW_DECLINE',1,1,4096,16,3),(20,'REVIEW_ACK',1,1,16,4096,3),(21,'REVIEW_REMIND',0,1,16,4096,3),(22,'REVIEW_REMIND_AUTO',0,1,NULL,4096,3),(23,'REVIEW_REMIND_ONECLICK',0,1,16,4096,3),(24,'REVIEW_REMIND_AUTO_ONECLICK',0,1,NULL,4096,3),(25,'EDITOR_DECISION_ACCEPT',0,1,16,65536,3),(26,'EDITOR_DECISION_SEND_TO_EXTERNAL',0,1,16,65536,3),(27,'EDITOR_DECISION_SEND_TO_PRODUCTION',0,1,16,65536,5),(28,'EDITOR_DECISION_REVISIONS',0,1,16,65536,3),(29,'EDITOR_DECISION_RESUBMIT',0,1,16,65536,3),(30,'EDITOR_DECISION_DECLINE',0,1,16,65536,3),(31,'EDITOR_DECISION_INITIAL_DECLINE',0,1,16,65536,1),(32,'EDITOR_RECOMMENDATION',0,1,16,16,3),(33,'COPYEDIT_REQUEST',1,1,16,4097,4),(34,'LAYOUT_REQUEST',1,1,16,4097,5),(35,'LAYOUT_COMPLETE',1,1,4097,16,5),(36,'INDEX_REQUEST',1,1,16,4097,5),(37,'INDEX_COMPLETE',1,1,4097,16,5),(38,'EMAIL_LINK',0,1,1048576,NULL,NULL),(39,'STATISTICS_REPORT_NOTIFICATION',1,1,16,17,NULL),(40,'ANNOUNCEMENT',0,1,16,1048576,NULL),(41,'PAYPAL_INVESTIGATE_PAYMENT',0,1,NULL,NULL,NULL),(42,'MANUAL_PAYMENT_NOTIFICATION',0,1,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `email_templates_default` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -684,7 +684,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_default_data`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_default_data` (
   `email_key` varchar(64) NOT NULL COMMENT 'Unique identifier for this email.',
   `locale` varchar(14) NOT NULL DEFAULT 'en_US',
@@ -692,7 +692,7 @@ CREATE TABLE `email_templates_default_data` (
   `body` text,
   `description` text,
   UNIQUE KEY `email_templates_default_data_pkey` (`email_key`,`locale`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -711,15 +711,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_settings` (
-  `email_id` bigint(20) NOT NULL,
+  `email_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   UNIQUE KEY `email_settings_pkey` (`email_id`,`locale`,`setting_name`),
   KEY `email_settings_email_id` (`email_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -737,19 +737,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `event_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_log` (
-  `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `log_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_logged` datetime NOT NULL,
-  `event_type` bigint(20) DEFAULT NULL,
+  `event_type` bigint DEFAULT NULL,
   `message` text,
-  `is_translated` smallint(6) DEFAULT NULL,
+  `is_translated` smallint DEFAULT NULL,
   PRIMARY KEY (`log_id`),
   KEY `event_log_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=460 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=452 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -758,7 +758,7 @@ CREATE TABLE `event_log` (
 
 LOCK TABLES `event_log` WRITE;
 /*!40000 ALTER TABLE `event_log` DISABLE KEYS */;
-INSERT INTO `event_log` VALUES (1,1048585,1,19,'2023-03-30 06:25:42',268435458,'submission.event.general.metadataUpdated',0),(2,1048585,1,19,'2023-03-30 06:25:43',268435458,'submission.event.general.metadataUpdated',0),(3,515,1,19,'2023-03-30 06:25:44',1342177281,'submission.event.fileUploaded',0),(4,1048585,1,19,'2023-03-30 06:25:44',1342177288,'submission.event.fileRevised',0),(5,515,1,19,'2023-03-30 06:25:44',1342177296,'submission.event.fileEdited',0),(6,1048585,1,19,'2023-03-30 06:25:44',1342177296,'submission.event.fileEdited',0),(7,1048585,1,19,'2023-03-30 06:25:57',268435458,'submission.event.general.metadataUpdated',0),(8,1048585,1,19,'2023-03-30 06:25:59',268435457,'submission.event.submissionSubmitted',0),(9,1048585,1,3,'2023-03-30 06:26:04',805306371,'log.editor.decision',0),(10,515,2,3,'2023-03-30 06:26:04',1342177281,'submission.event.fileUploaded',0),(11,1048585,1,3,'2023-03-30 06:26:04',1342177288,'submission.event.fileRevised',0),(12,1048585,1,3,'2023-03-30 06:26:11',1073741825,'log.review.reviewerAssigned',0),(13,1048585,1,3,'2023-03-30 06:26:13',805306371,'log.editor.decision',0),(14,1048585,1,3,'2023-03-30 06:26:19',268435459,'submission.event.participantAdded',0),(15,1048585,2,20,'2023-03-30 06:26:28',268435458,'submission.event.general.metadataUpdated',0),(16,1048585,2,20,'2023-03-30 06:26:28',268435458,'submission.event.general.metadataUpdated',0),(17,515,3,20,'2023-03-30 06:26:29',1342177281,'submission.event.fileUploaded',0),(18,1048585,2,20,'2023-03-30 06:26:29',1342177288,'submission.event.fileRevised',0),(19,515,3,20,'2023-03-30 06:26:29',1342177296,'submission.event.fileEdited',0),(20,1048585,2,20,'2023-03-30 06:26:29',1342177296,'submission.event.fileEdited',0),(21,515,4,20,'2023-03-30 06:26:29',1342177281,'submission.event.fileUploaded',0),(22,1048585,2,20,'2023-03-30 06:26:29',1342177288,'submission.event.fileRevised',0),(23,515,4,20,'2023-03-30 06:26:30',1342177296,'submission.event.fileEdited',0),(24,1048585,2,20,'2023-03-30 06:26:30',1342177296,'submission.event.fileEdited',0),(25,515,5,20,'2023-03-30 06:26:30',1342177281,'submission.event.fileUploaded',0),(26,1048585,2,20,'2023-03-30 06:26:30',1342177288,'submission.event.fileRevised',0),(27,515,5,20,'2023-03-30 06:26:30',1342177296,'submission.event.fileEdited',0),(28,1048585,2,20,'2023-03-30 06:26:30',1342177296,'submission.event.fileEdited',0),(29,515,6,20,'2023-03-30 06:26:30',1342177281,'submission.event.fileUploaded',0),(30,1048585,2,20,'2023-03-30 06:26:30',1342177288,'submission.event.fileRevised',0),(31,515,6,20,'2023-03-30 06:26:31',1342177296,'submission.event.fileEdited',0),(32,1048585,2,20,'2023-03-30 06:26:31',1342177296,'submission.event.fileEdited',0),(33,1048585,2,20,'2023-03-30 06:27:33',268435458,'submission.event.general.metadataUpdated',0),(34,1048585,2,20,'2023-03-30 06:27:35',268435457,'submission.event.submissionSubmitted',0),(35,1048585,2,3,'2023-03-30 06:27:43',805306371,'log.editor.decision',0),(36,515,7,3,'2023-03-30 06:27:43',1342177281,'submission.event.fileUploaded',0),(37,1048585,2,3,'2023-03-30 06:27:43',1342177288,'submission.event.fileRevised',0),(38,515,8,3,'2023-03-30 06:27:43',1342177281,'submission.event.fileUploaded',0),(39,1048585,2,3,'2023-03-30 06:27:43',1342177288,'submission.event.fileRevised',0),(40,515,9,3,'2023-03-30 06:27:43',1342177281,'submission.event.fileUploaded',0),(41,1048585,2,3,'2023-03-30 06:27:43',1342177288,'submission.event.fileRevised',0),(42,515,10,3,'2023-03-30 06:27:43',1342177281,'submission.event.fileUploaded',0),(43,1048585,2,3,'2023-03-30 06:27:43',1342177288,'submission.event.fileRevised',0),(44,1048585,2,3,'2023-03-30 06:27:53',1073741825,'log.review.reviewerAssigned',0),(45,1048585,2,3,'2023-03-30 06:27:59',1073741825,'log.review.reviewerAssigned',0),(46,1048585,3,21,'2023-03-30 06:28:08',268435458,'submission.event.general.metadataUpdated',0),(47,1048585,3,21,'2023-03-30 06:28:08',268435458,'submission.event.general.metadataUpdated',0),(48,515,11,21,'2023-03-30 06:28:09',1342177281,'submission.event.fileUploaded',0),(49,1048585,3,21,'2023-03-30 06:28:09',1342177288,'submission.event.fileRevised',0),(50,515,11,21,'2023-03-30 06:28:09',1342177296,'submission.event.fileEdited',0),(51,1048585,3,21,'2023-03-30 06:28:09',1342177296,'submission.event.fileEdited',0),(52,1048585,3,21,'2023-03-30 06:28:32',268435458,'submission.event.general.metadataUpdated',0),(53,1048585,3,21,'2023-03-30 06:28:34',268435457,'submission.event.submissionSubmitted',0),(54,1048585,4,22,'2023-03-30 06:28:41',268435458,'submission.event.general.metadataUpdated',0),(55,1048585,4,22,'2023-03-30 06:28:41',268435458,'submission.event.general.metadataUpdated',0),(56,515,12,22,'2023-03-30 06:28:42',1342177281,'submission.event.fileUploaded',0),(57,1048585,4,22,'2023-03-30 06:28:42',1342177288,'submission.event.fileRevised',0),(58,515,12,22,'2023-03-30 06:28:43',1342177296,'submission.event.fileEdited',0),(59,1048585,4,22,'2023-03-30 06:28:43',1342177296,'submission.event.fileEdited',0),(60,515,13,22,'2023-03-30 06:28:43',1342177281,'submission.event.fileUploaded',0),(61,1048585,4,22,'2023-03-30 06:28:43',1342177288,'submission.event.fileRevised',0),(62,515,13,22,'2023-03-30 06:28:43',1342177296,'submission.event.fileEdited',0),(63,1048585,4,22,'2023-03-30 06:28:43',1342177296,'submission.event.fileEdited',0),(64,515,14,22,'2023-03-30 06:28:43',1342177281,'submission.event.fileUploaded',0),(65,1048585,4,22,'2023-03-30 06:28:43',1342177288,'submission.event.fileRevised',0),(66,515,14,22,'2023-03-30 06:28:44',1342177296,'submission.event.fileEdited',0),(67,1048585,4,22,'2023-03-30 06:28:44',1342177296,'submission.event.fileEdited',0),(68,515,15,22,'2023-03-30 06:28:44',1342177281,'submission.event.fileUploaded',0),(69,1048585,4,22,'2023-03-30 06:28:44',1342177288,'submission.event.fileRevised',0),(70,515,15,22,'2023-03-30 06:28:44',1342177296,'submission.event.fileEdited',0),(71,1048585,4,22,'2023-03-30 06:28:44',1342177296,'submission.event.fileEdited',0),(72,1048585,4,22,'2023-03-30 06:29:28',268435458,'submission.event.general.metadataUpdated',0),(73,1048585,4,22,'2023-03-30 06:29:30',268435457,'submission.event.submissionSubmitted',0),(74,1048585,4,3,'2023-03-30 06:29:37',805306371,'log.editor.decision',0),(75,515,16,3,'2023-03-30 06:29:37',1342177281,'submission.event.fileUploaded',0),(76,1048585,4,3,'2023-03-30 06:29:37',1342177288,'submission.event.fileRevised',0),(77,515,17,3,'2023-03-30 06:29:37',1342177281,'submission.event.fileUploaded',0),(78,1048585,4,3,'2023-03-30 06:29:37',1342177288,'submission.event.fileRevised',0),(79,515,18,3,'2023-03-30 06:29:37',1342177281,'submission.event.fileUploaded',0),(80,1048585,4,3,'2023-03-30 06:29:37',1342177288,'submission.event.fileRevised',0),(81,515,19,3,'2023-03-30 06:29:37',1342177281,'submission.event.fileUploaded',0),(82,1048585,4,3,'2023-03-30 06:29:37',1342177288,'submission.event.fileRevised',0),(83,1048585,4,3,'2023-03-30 06:29:45',1073741825,'log.review.reviewerAssigned',0),(84,1048585,4,3,'2023-03-30 06:29:48',805306371,'log.editor.decision',0),(85,1048585,4,3,'2023-03-30 06:29:58',1073741825,'log.review.reviewerAssigned',0),(86,1048585,4,3,'2023-03-30 06:30:01',805306371,'log.editor.decision',0),(87,1048585,4,3,'2023-03-30 06:30:09',268435459,'submission.event.participantAdded',0),(88,1048585,4,3,'2023-03-30 06:30:13',805306371,'log.editor.decision',0),(89,1048585,4,3,'2023-03-30 06:30:21',268435459,'submission.event.participantAdded',0),(90,1048585,5,23,'2023-03-30 06:30:30',268435458,'submission.event.general.metadataUpdated',0),(91,1048585,5,23,'2023-03-30 06:30:30',268435458,'submission.event.general.metadataUpdated',0),(92,515,20,23,'2023-03-30 06:30:31',1342177281,'submission.event.fileUploaded',0),(93,1048585,5,23,'2023-03-30 06:30:31',1342177288,'submission.event.fileRevised',0),(94,515,20,23,'2023-03-30 06:30:31',1342177296,'submission.event.fileEdited',0),(95,1048585,5,23,'2023-03-30 06:30:31',1342177296,'submission.event.fileEdited',0),(96,1048585,5,23,'2023-03-30 06:30:58',268435458,'submission.event.general.metadataUpdated',0),(97,1048585,5,23,'2023-03-30 06:30:59',268435457,'submission.event.submissionSubmitted',0),(98,1048585,5,3,'2023-03-30 06:31:06',805306371,'log.editor.decision',0),(99,515,21,3,'2023-03-30 06:31:06',1342177281,'submission.event.fileUploaded',0),(100,1048585,5,3,'2023-03-30 06:31:06',1342177288,'submission.event.fileRevised',0),(101,1048585,5,3,'2023-03-30 06:31:14',1073741825,'log.review.reviewerAssigned',0),(102,1048585,5,3,'2023-03-30 06:31:16',805306371,'log.editor.decision',0),(103,1048585,5,3,'2023-03-30 06:31:24',1073741825,'log.review.reviewerAssigned',0),(104,1048585,5,3,'2023-03-30 06:31:27',805306371,'log.editor.decision',0),(105,1048585,5,3,'2023-03-30 06:31:34',268435459,'submission.event.participantAdded',0),(106,1048585,5,3,'2023-03-30 06:31:37',805306371,'log.editor.decision',0),(107,1048585,5,3,'2023-03-30 06:31:44',268435459,'submission.event.participantAdded',0),(108,1048585,5,3,'2023-03-30 06:31:49',268435459,'submission.event.participantAdded',0),(109,1048585,5,3,'2023-03-30 06:31:54',268435474,'submission.event.publicationFormatCreated',0),(110,515,22,3,'2023-03-30 06:31:57',1342177281,'submission.event.fileUploaded',0),(111,1048585,5,3,'2023-03-30 06:31:57',1342177288,'submission.event.fileRevised',0),(112,1048585,5,3,'2023-03-30 06:31:59',268435464,'submission.event.publicationFormatPublished',0),(113,1048585,5,3,'2023-03-30 06:32:01',268435476,'submission.event.publicationFormatMadeAvailable',0),(114,515,22,3,'2023-03-30 06:32:03',1342177296,'submission.event.fileEdited',0),(115,1048585,5,3,'2023-03-30 06:32:03',1342177296,'submission.event.fileEdited',0),(116,515,22,3,'2023-03-30 06:32:03',1342177287,'submission.event.signoffSignoff',0),(117,1048585,5,3,'2023-03-30 06:32:08',268435462,'publication.event.published',0),(118,1048585,6,24,'2023-03-30 06:32:16',268435458,'submission.event.general.metadataUpdated',0),(119,1048585,6,24,'2023-03-30 06:32:16',268435458,'submission.event.general.metadataUpdated',0),(120,515,23,24,'2023-03-30 06:32:17',1342177281,'submission.event.fileUploaded',0),(121,1048585,6,24,'2023-03-30 06:32:17',1342177288,'submission.event.fileRevised',0),(122,515,23,24,'2023-03-30 06:32:18',1342177296,'submission.event.fileEdited',0),(123,1048585,6,24,'2023-03-30 06:32:18',1342177296,'submission.event.fileEdited',0),(124,515,24,24,'2023-03-30 06:32:18',1342177281,'submission.event.fileUploaded',0),(125,1048585,6,24,'2023-03-30 06:32:18',1342177288,'submission.event.fileRevised',0),(126,515,24,24,'2023-03-30 06:32:18',1342177296,'submission.event.fileEdited',0),(127,1048585,6,24,'2023-03-30 06:32:18',1342177296,'submission.event.fileEdited',0),(128,515,25,24,'2023-03-30 06:32:18',1342177281,'submission.event.fileUploaded',0),(129,1048585,6,24,'2023-03-30 06:32:18',1342177288,'submission.event.fileRevised',0),(130,515,25,24,'2023-03-30 06:32:19',1342177296,'submission.event.fileEdited',0),(131,1048585,6,24,'2023-03-30 06:32:19',1342177296,'submission.event.fileEdited',0),(132,515,26,24,'2023-03-30 06:32:19',1342177281,'submission.event.fileUploaded',0),(133,1048585,6,24,'2023-03-30 06:32:19',1342177288,'submission.event.fileRevised',0),(134,515,26,24,'2023-03-30 06:32:19',1342177296,'submission.event.fileEdited',0),(135,1048585,6,24,'2023-03-30 06:32:19',1342177296,'submission.event.fileEdited',0),(136,1048585,6,24,'2023-03-30 06:33:00',268435458,'submission.event.general.metadataUpdated',0),(137,1048585,6,24,'2023-03-30 06:33:02',268435457,'submission.event.submissionSubmitted',0),(138,1048585,6,3,'2023-03-30 06:33:10',805306371,'log.editor.decision',0),(139,515,27,3,'2023-03-30 06:33:10',1342177281,'submission.event.fileUploaded',0),(140,1048585,6,3,'2023-03-30 06:33:10',1342177288,'submission.event.fileRevised',0),(141,515,28,3,'2023-03-30 06:33:10',1342177281,'submission.event.fileUploaded',0),(142,1048585,6,3,'2023-03-30 06:33:10',1342177288,'submission.event.fileRevised',0),(143,515,29,3,'2023-03-30 06:33:10',1342177281,'submission.event.fileUploaded',0),(144,1048585,6,3,'2023-03-30 06:33:10',1342177288,'submission.event.fileRevised',0),(145,515,30,3,'2023-03-30 06:33:10',1342177281,'submission.event.fileUploaded',0),(146,1048585,6,3,'2023-03-30 06:33:10',1342177288,'submission.event.fileRevised',0),(147,1048585,6,3,'2023-03-30 06:33:18',268435459,'submission.event.participantAdded',0),(148,1048585,6,6,'2023-03-30 06:33:27',805306372,'log.editor.recommendation',0),(149,1048585,7,25,'2023-03-30 06:33:44',268435458,'submission.event.general.metadataUpdated',0),(150,1048585,7,25,'2023-03-30 06:33:44',268435458,'submission.event.general.metadataUpdated',0),(151,515,31,25,'2023-03-30 06:33:46',1342177281,'submission.event.fileUploaded',0),(152,1048585,7,25,'2023-03-30 06:33:46',1342177288,'submission.event.fileRevised',0),(153,515,31,25,'2023-03-30 06:33:46',1342177296,'submission.event.fileEdited',0),(154,1048585,7,25,'2023-03-30 06:33:46',1342177296,'submission.event.fileEdited',0),(155,515,32,25,'2023-03-30 06:33:46',1342177281,'submission.event.fileUploaded',0),(156,1048585,7,25,'2023-03-30 06:33:46',1342177288,'submission.event.fileRevised',0),(157,515,32,25,'2023-03-30 06:33:46',1342177296,'submission.event.fileEdited',0),(158,1048585,7,25,'2023-03-30 06:33:46',1342177296,'submission.event.fileEdited',0),(159,515,33,25,'2023-03-30 06:33:47',1342177281,'submission.event.fileUploaded',0),(160,1048585,7,25,'2023-03-30 06:33:47',1342177288,'submission.event.fileRevised',0),(161,515,33,25,'2023-03-30 06:33:47',1342177296,'submission.event.fileEdited',0),(162,1048585,7,25,'2023-03-30 06:33:47',1342177296,'submission.event.fileEdited',0),(163,515,34,25,'2023-03-30 06:33:47',1342177281,'submission.event.fileUploaded',0),(164,1048585,7,25,'2023-03-30 06:33:47',1342177288,'submission.event.fileRevised',0),(165,515,34,25,'2023-03-30 06:33:48',1342177296,'submission.event.fileEdited',0),(166,1048585,7,25,'2023-03-30 06:33:48',1342177296,'submission.event.fileEdited',0),(167,515,35,25,'2023-03-30 06:33:48',1342177281,'submission.event.fileUploaded',0),(168,1048585,7,25,'2023-03-30 06:33:48',1342177288,'submission.event.fileRevised',0),(169,515,35,25,'2023-03-30 06:33:48',1342177296,'submission.event.fileEdited',0),(170,1048585,7,25,'2023-03-30 06:33:48',1342177296,'submission.event.fileEdited',0),(171,1048585,7,25,'2023-03-30 06:34:48',268435458,'submission.event.general.metadataUpdated',0),(172,1048585,7,25,'2023-03-30 06:34:49',268435457,'submission.event.submissionSubmitted',0),(173,1048585,7,3,'2023-03-30 06:34:58',805306371,'log.editor.decision',0),(174,515,36,3,'2023-03-30 06:34:58',1342177281,'submission.event.fileUploaded',0),(175,1048585,7,3,'2023-03-30 06:34:58',1342177288,'submission.event.fileRevised',0),(176,515,37,3,'2023-03-30 06:34:58',1342177281,'submission.event.fileUploaded',0),(177,1048585,7,3,'2023-03-30 06:34:58',1342177288,'submission.event.fileRevised',0),(178,515,38,3,'2023-03-30 06:34:58',1342177281,'submission.event.fileUploaded',0),(179,1048585,7,3,'2023-03-30 06:34:58',1342177288,'submission.event.fileRevised',0),(180,515,39,3,'2023-03-30 06:34:58',1342177281,'submission.event.fileUploaded',0),(181,1048585,7,3,'2023-03-30 06:34:58',1342177288,'submission.event.fileRevised',0),(182,515,40,3,'2023-03-30 06:34:58',1342177281,'submission.event.fileUploaded',0),(183,1048585,7,3,'2023-03-30 06:34:58',1342177288,'submission.event.fileRevised',0),(184,1048585,7,3,'2023-03-30 06:35:07',1073741825,'log.review.reviewerAssigned',0),(185,1048585,7,3,'2023-03-30 06:35:10',805306371,'log.editor.decision',0),(186,1048585,7,3,'2023-03-30 06:35:18',268435459,'submission.event.participantAdded',0),(187,1048585,8,3,'2023-03-30 06:35:25',268435458,'submission.event.general.metadataUpdated',0),(188,1048585,8,3,'2023-03-30 06:35:25',268435458,'submission.event.general.metadataUpdated',0),(189,515,41,3,'2023-03-30 06:35:26',1342177281,'submission.event.fileUploaded',0),(190,1048585,8,3,'2023-03-30 06:35:26',1342177288,'submission.event.fileRevised',0),(191,515,41,3,'2023-03-30 06:35:26',1342177296,'submission.event.fileEdited',0),(192,1048585,8,3,'2023-03-30 06:35:26',1342177296,'submission.event.fileEdited',0),(193,1048585,8,3,'2023-03-30 06:35:28',268435458,'submission.event.general.metadataUpdated',0),(194,1048585,8,3,'2023-03-30 06:35:29',268435457,'submission.event.submissionSubmitted',0),(195,1048585,9,26,'2023-03-30 06:35:36',268435458,'submission.event.general.metadataUpdated',0),(196,1048585,9,26,'2023-03-30 06:35:36',268435458,'submission.event.general.metadataUpdated',0),(197,515,42,26,'2023-03-30 06:35:37',1342177281,'submission.event.fileUploaded',0),(198,1048585,9,26,'2023-03-30 06:35:37',1342177288,'submission.event.fileRevised',0),(199,515,42,26,'2023-03-30 06:35:38',1342177296,'submission.event.fileEdited',0),(200,1048585,9,26,'2023-03-30 06:35:38',1342177296,'submission.event.fileEdited',0),(201,515,43,26,'2023-03-30 06:35:38',1342177281,'submission.event.fileUploaded',0),(202,1048585,9,26,'2023-03-30 06:35:38',1342177288,'submission.event.fileRevised',0),(203,515,43,26,'2023-03-30 06:35:38',1342177296,'submission.event.fileEdited',0),(204,1048585,9,26,'2023-03-30 06:35:38',1342177296,'submission.event.fileEdited',0),(205,515,44,26,'2023-03-30 06:35:38',1342177281,'submission.event.fileUploaded',0),(206,1048585,9,26,'2023-03-30 06:35:38',1342177288,'submission.event.fileRevised',0),(207,515,44,26,'2023-03-30 06:35:39',1342177296,'submission.event.fileEdited',0),(208,1048585,9,26,'2023-03-30 06:35:39',1342177296,'submission.event.fileEdited',0),(209,515,45,26,'2023-03-30 06:35:39',1342177281,'submission.event.fileUploaded',0),(210,1048585,9,26,'2023-03-30 06:35:39',1342177288,'submission.event.fileRevised',0),(211,515,45,26,'2023-03-30 06:35:39',1342177296,'submission.event.fileEdited',0),(212,1048585,9,26,'2023-03-30 06:35:39',1342177296,'submission.event.fileEdited',0),(213,515,46,26,'2023-03-30 06:35:40',1342177281,'submission.event.fileUploaded',0),(214,1048585,9,26,'2023-03-30 06:35:40',1342177288,'submission.event.fileRevised',0),(215,515,46,26,'2023-03-30 06:35:40',1342177296,'submission.event.fileEdited',0),(216,1048585,9,26,'2023-03-30 06:35:40',1342177296,'submission.event.fileEdited',0),(217,1048585,9,26,'2023-03-30 06:36:35',268435458,'submission.event.general.metadataUpdated',0),(218,1048585,9,26,'2023-03-30 06:36:37',268435457,'submission.event.submissionSubmitted',0),(219,1048585,9,3,'2023-03-30 06:36:46',805306371,'log.editor.decision',0),(220,515,47,3,'2023-03-30 06:36:46',1342177281,'submission.event.fileUploaded',0),(221,1048585,9,3,'2023-03-30 06:36:46',1342177288,'submission.event.fileRevised',0),(222,515,48,3,'2023-03-30 06:36:46',1342177281,'submission.event.fileUploaded',0),(223,1048585,9,3,'2023-03-30 06:36:46',1342177288,'submission.event.fileRevised',0),(224,515,49,3,'2023-03-30 06:36:46',1342177281,'submission.event.fileUploaded',0),(225,1048585,9,3,'2023-03-30 06:36:46',1342177288,'submission.event.fileRevised',0),(226,515,50,3,'2023-03-30 06:36:46',1342177281,'submission.event.fileUploaded',0),(227,1048585,9,3,'2023-03-30 06:36:46',1342177288,'submission.event.fileRevised',0),(228,515,51,3,'2023-03-30 06:36:46',1342177281,'submission.event.fileUploaded',0),(229,1048585,9,3,'2023-03-30 06:36:46',1342177288,'submission.event.fileRevised',0),(230,1048585,10,27,'2023-03-30 06:36:57',268435458,'submission.event.general.metadataUpdated',0),(231,1048585,10,27,'2023-03-30 06:36:57',268435458,'submission.event.general.metadataUpdated',0),(232,515,52,27,'2023-03-30 06:36:58',1342177281,'submission.event.fileUploaded',0),(233,1048585,10,27,'2023-03-30 06:36:58',1342177288,'submission.event.fileRevised',0),(234,515,52,27,'2023-03-30 06:36:59',1342177296,'submission.event.fileEdited',0),(235,1048585,10,27,'2023-03-30 06:36:59',1342177296,'submission.event.fileEdited',0),(236,1048585,10,27,'2023-03-30 06:37:39',268435458,'submission.event.general.metadataUpdated',0),(237,1048585,10,27,'2023-03-30 06:37:41',268435457,'submission.event.submissionSubmitted',0),(238,1048585,11,28,'2023-03-30 06:37:48',268435458,'submission.event.general.metadataUpdated',0),(239,1048585,11,28,'2023-03-30 06:37:48',268435458,'submission.event.general.metadataUpdated',0),(240,515,53,28,'2023-03-30 06:37:50',1342177281,'submission.event.fileUploaded',0),(241,1048585,11,28,'2023-03-30 06:37:50',1342177288,'submission.event.fileRevised',0),(242,515,53,28,'2023-03-30 06:37:50',1342177296,'submission.event.fileEdited',0),(243,1048585,11,28,'2023-03-30 06:37:50',1342177296,'submission.event.fileEdited',0),(244,1048585,11,28,'2023-03-30 06:37:59',268435458,'submission.event.general.metadataUpdated',0),(245,1048585,11,28,'2023-03-30 06:38:00',268435457,'submission.event.submissionSubmitted',0),(246,1048585,11,3,'2023-03-30 06:38:06',805306371,'log.editor.decision',0),(247,515,54,3,'2023-03-30 06:38:06',1342177281,'submission.event.fileUploaded',0),(248,1048585,11,3,'2023-03-30 06:38:06',1342177288,'submission.event.fileRevised',0),(249,1048585,11,3,'2023-03-30 06:38:13',1073741825,'log.review.reviewerAssigned',0),(250,1048585,11,3,'2023-03-30 06:38:15',805306371,'log.editor.decision',0),(251,1048585,11,3,'2023-03-30 06:38:22',1073741825,'log.review.reviewerAssigned',0),(252,1048585,11,3,'2023-03-30 06:38:28',1073741825,'log.review.reviewerAssigned',0),(253,1048585,11,10,'2023-03-30 06:38:33',1073741830,'log.review.reviewAccepted',0),(254,1048585,11,10,'2023-03-30 06:38:37',1073741848,'log.review.reviewReady',0),(255,1048585,11,12,'2023-03-30 06:38:41',1073741830,'log.review.reviewAccepted',0),(256,1048585,11,12,'2023-03-30 06:38:45',1073741848,'log.review.reviewReady',0),(257,1048585,11,3,'2023-03-30 06:38:55',805306371,'log.editor.decision',0),(258,1048585,12,29,'2023-03-30 06:39:05',268435458,'submission.event.general.metadataUpdated',0),(259,1048585,12,29,'2023-03-30 06:39:05',268435458,'submission.event.general.metadataUpdated',0),(260,515,55,29,'2023-03-30 06:39:06',1342177281,'submission.event.fileUploaded',0),(261,1048585,12,29,'2023-03-30 06:39:06',1342177288,'submission.event.fileRevised',0),(262,515,55,29,'2023-03-30 06:39:06',1342177296,'submission.event.fileEdited',0),(263,1048585,12,29,'2023-03-30 06:39:06',1342177296,'submission.event.fileEdited',0),(264,515,56,29,'2023-03-30 06:39:07',1342177281,'submission.event.fileUploaded',0),(265,1048585,12,29,'2023-03-30 06:39:07',1342177288,'submission.event.fileRevised',0),(266,515,56,29,'2023-03-30 06:39:07',1342177296,'submission.event.fileEdited',0),(267,1048585,12,29,'2023-03-30 06:39:07',1342177296,'submission.event.fileEdited',0),(268,515,57,29,'2023-03-30 06:39:07',1342177281,'submission.event.fileUploaded',0),(269,1048585,12,29,'2023-03-30 06:39:07',1342177288,'submission.event.fileRevised',0),(270,515,57,29,'2023-03-30 06:39:08',1342177296,'submission.event.fileEdited',0),(271,1048585,12,29,'2023-03-30 06:39:08',1342177296,'submission.event.fileEdited',0),(272,1048585,12,29,'2023-03-30 06:39:58',268435458,'submission.event.general.metadataUpdated',0),(273,1048585,12,29,'2023-03-30 06:40:00',268435457,'submission.event.submissionSubmitted',0),(274,1048585,12,3,'2023-03-30 06:40:09',805306371,'log.editor.decision',0),(275,515,58,3,'2023-03-30 06:40:09',1342177281,'submission.event.fileUploaded',0),(276,1048585,12,3,'2023-03-30 06:40:09',1342177288,'submission.event.fileRevised',0),(277,515,59,3,'2023-03-30 06:40:09',1342177281,'submission.event.fileUploaded',0),(278,1048585,12,3,'2023-03-30 06:40:09',1342177288,'submission.event.fileRevised',0),(279,515,60,3,'2023-03-30 06:40:09',1342177281,'submission.event.fileUploaded',0),(280,1048585,12,3,'2023-03-30 06:40:09',1342177288,'submission.event.fileRevised',0),(281,1048585,12,3,'2023-03-30 06:40:19',1073741825,'log.review.reviewerAssigned',0),(282,1048585,12,3,'2023-03-30 06:40:25',1073741825,'log.review.reviewerAssigned',0),(283,1048585,12,3,'2023-03-30 06:40:32',1073741825,'log.review.reviewerAssigned',0),(284,1048585,12,8,'2023-03-30 06:40:37',1073741830,'log.review.reviewAccepted',0),(285,1048585,12,8,'2023-03-30 06:40:42',1073741848,'log.review.reviewReady',0),(286,1048585,13,30,'2023-03-30 06:40:51',268435458,'submission.event.general.metadataUpdated',0),(287,1048585,13,30,'2023-03-30 06:40:51',268435458,'submission.event.general.metadataUpdated',0),(288,515,61,30,'2023-03-30 06:40:52',1342177281,'submission.event.fileUploaded',0),(289,1048585,13,30,'2023-03-30 06:40:52',1342177288,'submission.event.fileRevised',0),(290,515,61,30,'2023-03-30 06:40:52',1342177296,'submission.event.fileEdited',0),(291,1048585,13,30,'2023-03-30 06:40:52',1342177296,'submission.event.fileEdited',0),(292,515,62,30,'2023-03-30 06:40:53',1342177281,'submission.event.fileUploaded',0),(293,1048585,13,30,'2023-03-30 06:40:53',1342177288,'submission.event.fileRevised',0),(294,515,62,30,'2023-03-30 06:40:53',1342177296,'submission.event.fileEdited',0),(295,1048585,13,30,'2023-03-30 06:40:53',1342177296,'submission.event.fileEdited',0),(296,515,63,30,'2023-03-30 06:40:53',1342177281,'submission.event.fileUploaded',0),(297,1048585,13,30,'2023-03-30 06:40:53',1342177288,'submission.event.fileRevised',0),(298,515,63,30,'2023-03-30 06:40:54',1342177296,'submission.event.fileEdited',0),(299,1048585,13,30,'2023-03-30 06:40:54',1342177296,'submission.event.fileEdited',0),(300,1048585,13,30,'2023-03-30 06:41:27',268435458,'submission.event.general.metadataUpdated',0),(301,1048585,13,30,'2023-03-30 06:41:28',268435457,'submission.event.submissionSubmitted',0),(302,1048585,13,3,'2023-03-30 06:41:37',805306371,'log.editor.decision',0),(303,515,64,3,'2023-03-30 06:41:37',1342177281,'submission.event.fileUploaded',0),(304,1048585,13,3,'2023-03-30 06:41:37',1342177288,'submission.event.fileRevised',0),(305,515,65,3,'2023-03-30 06:41:37',1342177281,'submission.event.fileUploaded',0),(306,1048585,13,3,'2023-03-30 06:41:37',1342177288,'submission.event.fileRevised',0),(307,515,66,3,'2023-03-30 06:41:37',1342177281,'submission.event.fileUploaded',0),(308,1048585,13,3,'2023-03-30 06:41:37',1342177288,'submission.event.fileRevised',0),(309,1048585,13,3,'2023-03-30 06:41:45',1073741825,'log.review.reviewerAssigned',0),(310,1048585,13,3,'2023-03-30 06:41:48',805306371,'log.editor.decision',0),(311,1048585,13,3,'2023-03-30 06:41:56',1073741825,'log.review.reviewerAssigned',0),(312,1048585,13,3,'2023-03-30 06:42:02',1073741825,'log.review.reviewerAssigned',0),(313,1048585,13,3,'2023-03-30 06:42:08',1073741825,'log.review.reviewerAssigned',0),(314,1048585,13,10,'2023-03-30 06:42:14',1073741830,'log.review.reviewAccepted',0),(315,1048585,13,10,'2023-03-30 06:42:19',1073741848,'log.review.reviewReady',0),(316,1048585,13,12,'2023-03-30 06:42:24',1073741830,'log.review.reviewAccepted',0),(317,1048585,13,12,'2023-03-30 06:42:29',1073741848,'log.review.reviewReady',0),(318,1048585,13,3,'2023-03-30 06:42:41',805306371,'log.editor.decision',0),(319,1048585,14,31,'2023-03-30 06:42:56',268435458,'submission.event.general.metadataUpdated',0),(320,1048585,14,31,'2023-03-30 06:42:56',268435458,'submission.event.general.metadataUpdated',0),(321,515,67,31,'2023-03-30 06:42:57',1342177281,'submission.event.fileUploaded',0),(322,1048585,14,31,'2023-03-30 06:42:57',1342177288,'submission.event.fileRevised',0),(323,515,67,31,'2023-03-30 06:42:58',1342177296,'submission.event.fileEdited',0),(324,1048585,14,31,'2023-03-30 06:42:58',1342177296,'submission.event.fileEdited',0),(325,515,68,31,'2023-03-30 06:42:58',1342177281,'submission.event.fileUploaded',0),(326,1048585,14,31,'2023-03-30 06:42:58',1342177288,'submission.event.fileRevised',0),(327,515,68,31,'2023-03-30 06:42:58',1342177296,'submission.event.fileEdited',0),(328,1048585,14,31,'2023-03-30 06:42:58',1342177296,'submission.event.fileEdited',0),(329,515,69,31,'2023-03-30 06:42:58',1342177281,'submission.event.fileUploaded',0),(330,1048585,14,31,'2023-03-30 06:42:58',1342177288,'submission.event.fileRevised',0),(331,515,69,31,'2023-03-30 06:42:59',1342177296,'submission.event.fileEdited',0),(332,1048585,14,31,'2023-03-30 06:42:59',1342177296,'submission.event.fileEdited',0),(333,515,70,31,'2023-03-30 06:42:59',1342177281,'submission.event.fileUploaded',0),(334,1048585,14,31,'2023-03-30 06:42:59',1342177288,'submission.event.fileRevised',0),(335,515,70,31,'2023-03-30 06:42:59',1342177296,'submission.event.fileEdited',0),(336,1048585,14,31,'2023-03-30 06:42:59',1342177296,'submission.event.fileEdited',0),(337,515,71,31,'2023-03-30 06:43:00',1342177281,'submission.event.fileUploaded',0),(338,1048585,14,31,'2023-03-30 06:43:00',1342177288,'submission.event.fileRevised',0),(339,515,71,31,'2023-03-30 06:43:00',1342177296,'submission.event.fileEdited',0),(340,1048585,14,31,'2023-03-30 06:43:00',1342177296,'submission.event.fileEdited',0),(341,515,72,31,'2023-03-30 06:43:00',1342177281,'submission.event.fileUploaded',0),(342,1048585,14,31,'2023-03-30 06:43:00',1342177288,'submission.event.fileRevised',0),(343,515,72,31,'2023-03-30 06:43:01',1342177296,'submission.event.fileEdited',0),(344,1048585,14,31,'2023-03-30 06:43:01',1342177296,'submission.event.fileEdited',0),(345,1048585,14,31,'2023-03-30 06:43:41',268435458,'submission.event.general.metadataUpdated',0),(346,1048585,14,31,'2023-03-30 06:43:42',268435457,'submission.event.submissionSubmitted',0),(347,1048585,14,3,'2023-03-30 06:43:52',805306371,'log.editor.decision',0),(348,1048585,14,3,'2023-03-30 06:44:00',1073741825,'log.review.reviewerAssigned',0),(349,1048585,14,3,'2023-03-30 06:44:03',805306371,'log.editor.decision',0),(350,1048585,14,3,'2023-03-30 06:44:12',1073741825,'log.review.reviewerAssigned',0),(351,1048585,14,3,'2023-03-30 06:44:15',805306371,'log.editor.decision',0),(352,1048585,14,3,'2023-03-30 06:44:23',268435459,'submission.event.participantAdded',0),(353,1048585,14,3,'2023-03-30 06:44:26',805306371,'log.editor.decision',0),(354,1048585,14,3,'2023-03-30 06:44:35',268435459,'submission.event.participantAdded',0),(355,1048585,14,3,'2023-03-30 06:44:40',268435459,'submission.event.participantAdded',0),(356,1048585,14,3,'2023-03-30 06:44:46',268435474,'submission.event.publicationFormatCreated',0),(357,515,73,3,'2023-03-30 06:44:54',1342177281,'submission.event.fileUploaded',0),(358,1048585,14,3,'2023-03-30 06:44:54',1342177288,'submission.event.fileRevised',0),(359,515,74,3,'2023-03-30 06:44:54',1342177281,'submission.event.fileUploaded',0),(360,1048585,14,3,'2023-03-30 06:44:54',1342177288,'submission.event.fileRevised',0),(361,515,75,3,'2023-03-30 06:44:54',1342177281,'submission.event.fileUploaded',0),(362,1048585,14,3,'2023-03-30 06:44:54',1342177288,'submission.event.fileRevised',0),(363,515,76,3,'2023-03-30 06:44:54',1342177281,'submission.event.fileUploaded',0),(364,1048585,14,3,'2023-03-30 06:44:54',1342177288,'submission.event.fileRevised',0),(365,515,77,3,'2023-03-30 06:44:54',1342177281,'submission.event.fileUploaded',0),(366,1048585,14,3,'2023-03-30 06:44:54',1342177288,'submission.event.fileRevised',0),(367,515,78,3,'2023-03-30 06:44:54',1342177281,'submission.event.fileUploaded',0),(368,1048585,14,3,'2023-03-30 06:44:54',1342177288,'submission.event.fileRevised',0),(369,1048585,14,3,'2023-03-30 06:44:56',268435464,'submission.event.publicationFormatPublished',0),(370,1048585,14,3,'2023-03-30 06:44:59',268435476,'submission.event.publicationFormatMadeAvailable',0),(371,515,73,3,'2023-03-30 06:45:01',1342177296,'submission.event.fileEdited',0),(372,1048585,14,3,'2023-03-30 06:45:01',1342177296,'submission.event.fileEdited',0),(373,515,73,3,'2023-03-30 06:45:01',1342177287,'submission.event.signoffSignoff',0),(374,515,74,3,'2023-03-30 06:45:07',1342177296,'submission.event.fileEdited',0),(375,1048585,14,3,'2023-03-30 06:45:07',1342177296,'submission.event.fileEdited',0),(376,515,74,3,'2023-03-30 06:45:07',1342177287,'submission.event.signoffSignoff',0),(377,515,75,3,'2023-03-30 06:45:12',1342177296,'submission.event.fileEdited',0),(378,1048585,14,3,'2023-03-30 06:45:12',1342177296,'submission.event.fileEdited',0),(379,515,75,3,'2023-03-30 06:45:12',1342177287,'submission.event.signoffSignoff',0),(380,515,76,3,'2023-03-30 06:45:18',1342177296,'submission.event.fileEdited',0),(381,1048585,14,3,'2023-03-30 06:45:18',1342177296,'submission.event.fileEdited',0),(382,515,76,3,'2023-03-30 06:45:18',1342177287,'submission.event.signoffSignoff',0),(383,515,77,3,'2023-03-30 06:45:24',1342177296,'submission.event.fileEdited',0),(384,1048585,14,3,'2023-03-30 06:45:24',1342177296,'submission.event.fileEdited',0),(385,515,77,3,'2023-03-30 06:45:24',1342177287,'submission.event.signoffSignoff',0),(386,515,78,3,'2023-03-30 06:45:30',1342177296,'submission.event.fileEdited',0),(387,1048585,14,3,'2023-03-30 06:45:30',1342177296,'submission.event.fileEdited',0),(388,515,78,3,'2023-03-30 06:45:30',1342177287,'submission.event.signoffSignoff',0),(389,1048585,14,3,'2023-03-30 06:45:36',268435462,'publication.event.published',0),(390,1048585,15,32,'2023-03-30 06:45:44',268435458,'submission.event.general.metadataUpdated',0),(391,1048585,15,32,'2023-03-30 06:45:44',268435458,'submission.event.general.metadataUpdated',0),(392,515,79,32,'2023-03-30 06:45:45',1342177281,'submission.event.fileUploaded',0),(393,1048585,15,32,'2023-03-30 06:45:45',1342177288,'submission.event.fileRevised',0),(394,515,79,32,'2023-03-30 06:45:45',1342177296,'submission.event.fileEdited',0),(395,1048585,15,32,'2023-03-30 06:45:45',1342177296,'submission.event.fileEdited',0),(396,1048585,15,32,'2023-03-30 06:45:59',268435458,'submission.event.general.metadataUpdated',0),(397,1048585,15,32,'2023-03-30 06:46:00',268435457,'submission.event.submissionSubmitted',0),(398,1048585,15,3,'2023-03-30 06:46:08',805306371,'log.editor.decision',0),(399,515,80,3,'2023-03-30 06:46:08',1342177281,'submission.event.fileUploaded',0),(400,1048585,15,3,'2023-03-30 06:46:08',1342177288,'submission.event.fileRevised',0),(401,1048585,16,33,'2023-03-30 06:46:18',268435458,'submission.event.general.metadataUpdated',0),(402,1048585,16,33,'2023-03-30 06:46:18',268435458,'submission.event.general.metadataUpdated',0),(403,515,81,33,'2023-03-30 06:46:19',1342177281,'submission.event.fileUploaded',0),(404,1048585,16,33,'2023-03-30 06:46:19',1342177288,'submission.event.fileRevised',0),(405,515,81,33,'2023-03-30 06:46:19',1342177296,'submission.event.fileEdited',0),(406,1048585,16,33,'2023-03-30 06:46:19',1342177296,'submission.event.fileEdited',0),(407,1048585,16,33,'2023-03-30 06:46:40',268435458,'submission.event.general.metadataUpdated',0),(408,1048585,16,33,'2023-03-30 06:46:42',268435457,'submission.event.submissionSubmitted',0),(409,1048585,16,3,'2023-03-30 06:46:50',805306371,'log.editor.decision',0),(410,515,82,3,'2023-03-30 06:46:50',1342177281,'submission.event.fileUploaded',0),(411,1048585,16,3,'2023-03-30 06:46:50',1342177288,'submission.event.fileRevised',0),(412,1048585,16,3,'2023-03-30 06:46:58',1073741825,'log.review.reviewerAssigned',0),(413,1048585,16,3,'2023-03-30 06:47:03',1073741825,'log.review.reviewerAssigned',0),(414,1048585,16,3,'2023-03-30 06:47:09',1073741825,'log.review.reviewerAssigned',0),(415,1048585,16,10,'2023-03-30 06:47:14',1073741830,'log.review.reviewAccepted',0),(416,1048585,16,10,'2023-03-30 06:47:18',1073741848,'log.review.reviewReady',0),(417,1048585,17,34,'2023-03-30 06:47:26',268435458,'submission.event.general.metadataUpdated',0),(418,1048585,17,34,'2023-03-30 06:47:26',268435458,'submission.event.general.metadataUpdated',0),(419,515,83,34,'2023-03-30 06:47:27',1342177281,'submission.event.fileUploaded',0),(420,1048585,17,34,'2023-03-30 06:47:27',1342177288,'submission.event.fileRevised',0),(421,515,83,34,'2023-03-30 06:47:28',1342177296,'submission.event.fileEdited',0),(422,1048585,17,34,'2023-03-30 06:47:28',1342177296,'submission.event.fileEdited',0),(423,515,84,34,'2023-03-30 06:47:28',1342177281,'submission.event.fileUploaded',0),(424,1048585,17,34,'2023-03-30 06:47:28',1342177288,'submission.event.fileRevised',0),(425,515,84,34,'2023-03-30 06:47:28',1342177296,'submission.event.fileEdited',0),(426,1048585,17,34,'2023-03-30 06:47:28',1342177296,'submission.event.fileEdited',0),(427,515,85,34,'2023-03-30 06:47:28',1342177281,'submission.event.fileUploaded',0),(428,1048585,17,34,'2023-03-30 06:47:28',1342177288,'submission.event.fileRevised',0),(429,515,85,34,'2023-03-30 06:47:29',1342177296,'submission.event.fileEdited',0),(430,1048585,17,34,'2023-03-30 06:47:29',1342177296,'submission.event.fileEdited',0),(431,515,86,34,'2023-03-30 06:47:29',1342177281,'submission.event.fileUploaded',0),(432,1048585,17,34,'2023-03-30 06:47:29',1342177288,'submission.event.fileRevised',0),(433,515,86,34,'2023-03-30 06:47:29',1342177296,'submission.event.fileEdited',0),(434,1048585,17,34,'2023-03-30 06:47:29',1342177296,'submission.event.fileEdited',0),(435,515,87,34,'2023-03-30 06:47:29',1342177281,'submission.event.fileUploaded',0),(436,1048585,17,34,'2023-03-30 06:47:29',1342177288,'submission.event.fileRevised',0),(437,515,87,34,'2023-03-30 06:47:30',1342177296,'submission.event.fileEdited',0),(438,1048585,17,34,'2023-03-30 06:47:30',1342177296,'submission.event.fileEdited',0),(439,515,88,34,'2023-03-30 06:47:30',1342177281,'submission.event.fileUploaded',0),(440,1048585,17,34,'2023-03-30 06:47:30',1342177288,'submission.event.fileRevised',0),(441,515,88,34,'2023-03-30 06:47:31',1342177296,'submission.event.fileEdited',0),(442,1048585,17,34,'2023-03-30 06:47:31',1342177296,'submission.event.fileEdited',0),(443,1048585,17,34,'2023-03-30 06:48:56',268435458,'submission.event.general.metadataUpdated',0),(444,1048585,17,34,'2023-03-30 06:48:58',268435457,'submission.event.submissionSubmitted',0),(445,1048585,17,3,'2023-03-30 06:49:09',805306371,'log.editor.decision',0),(446,515,89,3,'2023-03-30 06:49:09',1342177281,'submission.event.fileUploaded',0),(447,1048585,17,3,'2023-03-30 06:49:09',1342177288,'submission.event.fileRevised',0),(448,515,90,3,'2023-03-30 06:49:09',1342177281,'submission.event.fileUploaded',0),(449,1048585,17,3,'2023-03-30 06:49:09',1342177288,'submission.event.fileRevised',0),(450,515,91,3,'2023-03-30 06:49:10',1342177281,'submission.event.fileUploaded',0),(451,1048585,17,3,'2023-03-30 06:49:10',1342177288,'submission.event.fileRevised',0),(452,515,92,3,'2023-03-30 06:49:10',1342177281,'submission.event.fileUploaded',0),(453,1048585,17,3,'2023-03-30 06:49:10',1342177288,'submission.event.fileRevised',0),(454,515,93,3,'2023-03-30 06:49:10',1342177281,'submission.event.fileUploaded',0),(455,1048585,17,3,'2023-03-30 06:49:10',1342177288,'submission.event.fileRevised',0),(456,515,94,3,'2023-03-30 06:49:10',1342177281,'submission.event.fileUploaded',0),(457,1048585,17,3,'2023-03-30 06:49:10',1342177288,'submission.event.fileRevised',0),(458,1048585,17,3,'2023-03-30 06:49:20',1073741825,'log.review.reviewerAssigned',0),(459,1048585,17,3,'2023-03-30 06:49:26',1073741825,'log.review.reviewerAssigned',0);
+INSERT INTO `event_log` VALUES (1,1048585,1,19,'2023-04-05 01:15:54',268435458,'submission.event.general.metadataUpdated',0),(2,1048585,1,19,'2023-04-05 01:15:54',268435458,'submission.event.general.metadataUpdated',0),(3,515,1,19,'2023-04-05 01:15:55',1342177281,'submission.event.fileUploaded',0),(4,1048585,1,19,'2023-04-05 01:15:55',1342177288,'submission.event.fileRevised',0),(5,515,1,19,'2023-04-05 01:15:55',1342177296,'submission.event.fileEdited',0),(6,1048585,1,19,'2023-04-05 01:15:55',1342177296,'submission.event.fileEdited',0),(7,1048585,1,19,'2023-04-05 01:16:09',268435458,'submission.event.general.metadataUpdated',0),(8,1048585,1,19,'2023-04-05 01:16:10',268435457,'submission.event.submissionSubmitted',0),(9,1048585,1,3,'2023-04-05 01:16:16',805306371,'log.editor.decision',0),(10,515,2,3,'2023-04-05 01:16:16',1342177281,'submission.event.fileUploaded',0),(11,1048585,1,3,'2023-04-05 01:16:16',1342177288,'submission.event.fileRevised',0),(12,1048585,1,3,'2023-04-05 01:16:22',1073741825,'log.review.reviewerAssigned',0),(13,1048585,1,3,'2023-04-05 01:16:25',805306371,'log.editor.decision',0),(14,1048585,1,3,'2023-04-05 01:16:31',268435459,'submission.event.participantAdded',0),(15,1048585,2,20,'2023-04-05 01:16:39',268435458,'submission.event.general.metadataUpdated',0),(16,1048585,2,20,'2023-04-05 01:16:39',268435458,'submission.event.general.metadataUpdated',0),(17,515,3,20,'2023-04-05 01:16:41',1342177281,'submission.event.fileUploaded',0),(18,1048585,2,20,'2023-04-05 01:16:41',1342177288,'submission.event.fileRevised',0),(19,515,3,20,'2023-04-05 01:16:41',1342177296,'submission.event.fileEdited',0),(20,1048585,2,20,'2023-04-05 01:16:41',1342177296,'submission.event.fileEdited',0),(21,515,4,20,'2023-04-05 01:16:41',1342177281,'submission.event.fileUploaded',0),(22,1048585,2,20,'2023-04-05 01:16:41',1342177288,'submission.event.fileRevised',0),(23,515,4,20,'2023-04-05 01:16:42',1342177296,'submission.event.fileEdited',0),(24,1048585,2,20,'2023-04-05 01:16:42',1342177296,'submission.event.fileEdited',0),(25,515,5,20,'2023-04-05 01:16:42',1342177281,'submission.event.fileUploaded',0),(26,1048585,2,20,'2023-04-05 01:16:42',1342177288,'submission.event.fileRevised',0),(27,515,5,20,'2023-04-05 01:16:42',1342177296,'submission.event.fileEdited',0),(28,1048585,2,20,'2023-04-05 01:16:42',1342177296,'submission.event.fileEdited',0),(29,515,6,20,'2023-04-05 01:16:43',1342177281,'submission.event.fileUploaded',0),(30,1048585,2,20,'2023-04-05 01:16:43',1342177288,'submission.event.fileRevised',0),(31,515,6,20,'2023-04-05 01:16:43',1342177296,'submission.event.fileEdited',0),(32,1048585,2,20,'2023-04-05 01:16:43',1342177296,'submission.event.fileEdited',0),(33,1048585,2,20,'2023-04-05 01:17:47',268435458,'submission.event.general.metadataUpdated',0),(34,1048585,2,20,'2023-04-05 01:17:49',268435457,'submission.event.submissionSubmitted',0),(35,1048585,2,3,'2023-04-05 01:17:58',805306371,'log.editor.decision',0),(36,515,7,3,'2023-04-05 01:17:58',1342177281,'submission.event.fileUploaded',0),(37,1048585,2,3,'2023-04-05 01:17:58',1342177288,'submission.event.fileRevised',0),(38,515,8,3,'2023-04-05 01:17:58',1342177281,'submission.event.fileUploaded',0),(39,1048585,2,3,'2023-04-05 01:17:58',1342177288,'submission.event.fileRevised',0),(40,515,9,3,'2023-04-05 01:17:58',1342177281,'submission.event.fileUploaded',0),(41,1048585,2,3,'2023-04-05 01:17:58',1342177288,'submission.event.fileRevised',0),(42,515,10,3,'2023-04-05 01:17:58',1342177281,'submission.event.fileUploaded',0),(43,1048585,2,3,'2023-04-05 01:17:58',1342177288,'submission.event.fileRevised',0),(44,1048585,2,3,'2023-04-05 01:18:07',1073741825,'log.review.reviewerAssigned',0),(45,1048585,2,3,'2023-04-05 01:18:14',1073741825,'log.review.reviewerAssigned',0),(46,1048585,3,21,'2023-04-05 01:18:23',268435458,'submission.event.general.metadataUpdated',0),(47,1048585,3,21,'2023-04-05 01:18:23',268435458,'submission.event.general.metadataUpdated',0),(48,515,11,21,'2023-04-05 01:18:24',1342177281,'submission.event.fileUploaded',0),(49,1048585,3,21,'2023-04-05 01:18:24',1342177288,'submission.event.fileRevised',0),(50,515,11,21,'2023-04-05 01:18:25',1342177296,'submission.event.fileEdited',0),(51,1048585,3,21,'2023-04-05 01:18:25',1342177296,'submission.event.fileEdited',0),(52,1048585,3,21,'2023-04-05 01:18:48',268435458,'submission.event.general.metadataUpdated',0),(53,1048585,3,21,'2023-04-05 01:18:50',268435457,'submission.event.submissionSubmitted',0),(54,1048585,4,22,'2023-04-05 01:18:57',268435458,'submission.event.general.metadataUpdated',0),(55,1048585,4,22,'2023-04-05 01:18:57',268435458,'submission.event.general.metadataUpdated',0),(56,515,12,22,'2023-04-05 01:18:59',1342177281,'submission.event.fileUploaded',0),(57,1048585,4,22,'2023-04-05 01:18:59',1342177288,'submission.event.fileRevised',0),(58,515,12,22,'2023-04-05 01:18:59',1342177296,'submission.event.fileEdited',0),(59,1048585,4,22,'2023-04-05 01:18:59',1342177296,'submission.event.fileEdited',0),(60,515,13,22,'2023-04-05 01:18:59',1342177281,'submission.event.fileUploaded',0),(61,1048585,4,22,'2023-04-05 01:18:59',1342177288,'submission.event.fileRevised',0),(62,515,13,22,'2023-04-05 01:19:00',1342177296,'submission.event.fileEdited',0),(63,1048585,4,22,'2023-04-05 01:19:00',1342177296,'submission.event.fileEdited',0),(64,515,14,22,'2023-04-05 01:19:00',1342177281,'submission.event.fileUploaded',0),(65,1048585,4,22,'2023-04-05 01:19:00',1342177288,'submission.event.fileRevised',0),(66,515,14,22,'2023-04-05 01:19:00',1342177296,'submission.event.fileEdited',0),(67,1048585,4,22,'2023-04-05 01:19:00',1342177296,'submission.event.fileEdited',0),(68,515,15,22,'2023-04-05 01:19:01',1342177281,'submission.event.fileUploaded',0),(69,1048585,4,22,'2023-04-05 01:19:01',1342177288,'submission.event.fileRevised',0),(70,515,15,22,'2023-04-05 01:19:01',1342177296,'submission.event.fileEdited',0),(71,1048585,4,22,'2023-04-05 01:19:01',1342177296,'submission.event.fileEdited',0),(72,1048585,4,22,'2023-04-05 01:19:47',268435458,'submission.event.general.metadataUpdated',0),(73,1048585,4,22,'2023-04-05 01:19:49',268435457,'submission.event.submissionSubmitted',0),(74,1048585,4,3,'2023-04-05 01:19:56',805306371,'log.editor.decision',0),(75,1048585,4,3,'2023-04-05 01:20:05',1073741825,'log.review.reviewerAssigned',0),(76,1048585,4,3,'2023-04-05 01:20:08',805306371,'log.editor.decision',0),(77,1048585,4,3,'2023-04-05 01:20:18',1073741825,'log.review.reviewerAssigned',0),(78,1048585,4,3,'2023-04-05 01:20:20',805306371,'log.editor.decision',0),(79,1048585,4,3,'2023-04-05 01:20:30',268435459,'submission.event.participantAdded',0),(80,1048585,4,3,'2023-04-05 01:20:33',805306371,'log.editor.decision',0),(81,1048585,4,3,'2023-04-05 01:20:42',268435459,'submission.event.participantAdded',0),(82,1048585,5,23,'2023-04-05 01:20:51',268435458,'submission.event.general.metadataUpdated',0),(83,1048585,5,23,'2023-04-05 01:20:51',268435458,'submission.event.general.metadataUpdated',0),(84,515,16,23,'2023-04-05 01:20:52',1342177281,'submission.event.fileUploaded',0),(85,1048585,5,23,'2023-04-05 01:20:52',1342177288,'submission.event.fileRevised',0),(86,515,16,23,'2023-04-05 01:20:52',1342177296,'submission.event.fileEdited',0),(87,1048585,5,23,'2023-04-05 01:20:52',1342177296,'submission.event.fileEdited',0),(88,1048585,5,23,'2023-04-05 01:21:20',268435458,'submission.event.general.metadataUpdated',0),(89,1048585,5,23,'2023-04-05 01:21:21',268435457,'submission.event.submissionSubmitted',0),(90,1048585,5,3,'2023-04-05 01:21:28',805306371,'log.editor.decision',0),(91,515,17,3,'2023-04-05 01:21:28',1342177281,'submission.event.fileUploaded',0),(92,1048585,5,3,'2023-04-05 01:21:28',1342177288,'submission.event.fileRevised',0),(93,1048585,5,3,'2023-04-05 01:21:36',1073741825,'log.review.reviewerAssigned',0),(94,1048585,5,3,'2023-04-05 01:21:38',805306371,'log.editor.decision',0),(95,1048585,5,3,'2023-04-05 01:21:47',1073741825,'log.review.reviewerAssigned',0),(96,1048585,5,3,'2023-04-05 01:21:50',805306371,'log.editor.decision',0),(97,1048585,5,3,'2023-04-05 01:21:57',268435459,'submission.event.participantAdded',0),(98,1048585,5,3,'2023-04-05 01:22:00',805306371,'log.editor.decision',0),(99,1048585,5,3,'2023-04-05 01:22:08',268435459,'submission.event.participantAdded',0),(100,1048585,5,3,'2023-04-05 01:22:13',268435459,'submission.event.participantAdded',0),(101,1048585,5,3,'2023-04-05 01:22:18',268435474,'submission.event.publicationFormatCreated',0),(102,515,18,3,'2023-04-05 01:22:22',1342177281,'submission.event.fileUploaded',0),(103,1048585,5,3,'2023-04-05 01:22:22',1342177288,'submission.event.fileRevised',0),(104,1048585,5,3,'2023-04-05 01:22:24',268435464,'submission.event.publicationFormatPublished',0),(105,1048585,5,3,'2023-04-05 01:22:26',268435476,'submission.event.publicationFormatMadeAvailable',0),(106,515,18,3,'2023-04-05 01:22:28',1342177296,'submission.event.fileEdited',0),(107,1048585,5,3,'2023-04-05 01:22:28',1342177296,'submission.event.fileEdited',0),(108,515,18,3,'2023-04-05 01:22:28',1342177287,'submission.event.signoffSignoff',0),(109,1048585,5,3,'2023-04-05 01:22:33',268435462,'publication.event.published',0),(110,1048585,6,24,'2023-04-05 01:22:41',268435458,'submission.event.general.metadataUpdated',0),(111,1048585,6,24,'2023-04-05 01:22:41',268435458,'submission.event.general.metadataUpdated',0),(112,515,19,24,'2023-04-05 01:22:42',1342177281,'submission.event.fileUploaded',0),(113,1048585,6,24,'2023-04-05 01:22:42',1342177288,'submission.event.fileRevised',0),(114,515,19,24,'2023-04-05 01:22:42',1342177296,'submission.event.fileEdited',0),(115,1048585,6,24,'2023-04-05 01:22:42',1342177296,'submission.event.fileEdited',0),(116,515,20,24,'2023-04-05 01:22:43',1342177281,'submission.event.fileUploaded',0),(117,1048585,6,24,'2023-04-05 01:22:43',1342177288,'submission.event.fileRevised',0),(118,515,20,24,'2023-04-05 01:22:43',1342177296,'submission.event.fileEdited',0),(119,1048585,6,24,'2023-04-05 01:22:43',1342177296,'submission.event.fileEdited',0),(120,515,21,24,'2023-04-05 01:22:43',1342177281,'submission.event.fileUploaded',0),(121,1048585,6,24,'2023-04-05 01:22:43',1342177288,'submission.event.fileRevised',0),(122,515,21,24,'2023-04-05 01:22:44',1342177296,'submission.event.fileEdited',0),(123,1048585,6,24,'2023-04-05 01:22:44',1342177296,'submission.event.fileEdited',0),(124,515,22,24,'2023-04-05 01:22:44',1342177281,'submission.event.fileUploaded',0),(125,1048585,6,24,'2023-04-05 01:22:44',1342177288,'submission.event.fileRevised',0),(126,515,22,24,'2023-04-05 01:22:44',1342177296,'submission.event.fileEdited',0),(127,1048585,6,24,'2023-04-05 01:22:44',1342177296,'submission.event.fileEdited',0),(128,1048585,6,24,'2023-04-05 01:23:27',268435458,'submission.event.general.metadataUpdated',0),(129,1048585,6,24,'2023-04-05 01:23:29',268435457,'submission.event.submissionSubmitted',0),(130,1048585,6,3,'2023-04-05 01:23:37',805306371,'log.editor.decision',0),(131,515,23,3,'2023-04-05 01:23:37',1342177281,'submission.event.fileUploaded',0),(132,1048585,6,3,'2023-04-05 01:23:37',1342177288,'submission.event.fileRevised',0),(133,515,24,3,'2023-04-05 01:23:37',1342177281,'submission.event.fileUploaded',0),(134,1048585,6,3,'2023-04-05 01:23:37',1342177288,'submission.event.fileRevised',0),(135,515,25,3,'2023-04-05 01:23:37',1342177281,'submission.event.fileUploaded',0),(136,1048585,6,3,'2023-04-05 01:23:37',1342177288,'submission.event.fileRevised',0),(137,515,26,3,'2023-04-05 01:23:37',1342177281,'submission.event.fileUploaded',0),(138,1048585,6,3,'2023-04-05 01:23:37',1342177288,'submission.event.fileRevised',0),(139,1048585,6,3,'2023-04-05 01:23:46',268435459,'submission.event.participantAdded',0),(140,1048585,6,6,'2023-04-05 01:23:55',805306372,'log.editor.recommendation',0),(141,1048585,7,25,'2023-04-05 01:24:12',268435458,'submission.event.general.metadataUpdated',0),(142,1048585,7,25,'2023-04-05 01:24:12',268435458,'submission.event.general.metadataUpdated',0),(143,515,27,25,'2023-04-05 01:24:14',1342177281,'submission.event.fileUploaded',0),(144,1048585,7,25,'2023-04-05 01:24:14',1342177288,'submission.event.fileRevised',0),(145,515,27,25,'2023-04-05 01:24:14',1342177296,'submission.event.fileEdited',0),(146,1048585,7,25,'2023-04-05 01:24:14',1342177296,'submission.event.fileEdited',0),(147,515,28,25,'2023-04-05 01:24:14',1342177281,'submission.event.fileUploaded',0),(148,1048585,7,25,'2023-04-05 01:24:14',1342177288,'submission.event.fileRevised',0),(149,515,28,25,'2023-04-05 01:24:15',1342177296,'submission.event.fileEdited',0),(150,1048585,7,25,'2023-04-05 01:24:15',1342177296,'submission.event.fileEdited',0),(151,515,29,25,'2023-04-05 01:24:15',1342177281,'submission.event.fileUploaded',0),(152,1048585,7,25,'2023-04-05 01:24:15',1342177288,'submission.event.fileRevised',0),(153,515,29,25,'2023-04-05 01:24:15',1342177296,'submission.event.fileEdited',0),(154,1048585,7,25,'2023-04-05 01:24:15',1342177296,'submission.event.fileEdited',0),(155,515,30,25,'2023-04-05 01:24:15',1342177281,'submission.event.fileUploaded',0),(156,1048585,7,25,'2023-04-05 01:24:15',1342177288,'submission.event.fileRevised',0),(157,515,30,25,'2023-04-05 01:24:16',1342177296,'submission.event.fileEdited',0),(158,1048585,7,25,'2023-04-05 01:24:16',1342177296,'submission.event.fileEdited',0),(159,515,31,25,'2023-04-05 01:24:16',1342177281,'submission.event.fileUploaded',0),(160,1048585,7,25,'2023-04-05 01:24:16',1342177288,'submission.event.fileRevised',0),(161,515,31,25,'2023-04-05 01:24:17',1342177296,'submission.event.fileEdited',0),(162,1048585,7,25,'2023-04-05 01:24:17',1342177296,'submission.event.fileEdited',0),(163,1048585,7,25,'2023-04-05 01:25:18',268435458,'submission.event.general.metadataUpdated',0),(164,1048585,7,25,'2023-04-05 01:25:19',268435457,'submission.event.submissionSubmitted',0),(165,1048585,7,3,'2023-04-05 01:25:28',805306371,'log.editor.decision',0),(166,515,32,3,'2023-04-05 01:25:28',1342177281,'submission.event.fileUploaded',0),(167,1048585,7,3,'2023-04-05 01:25:29',1342177288,'submission.event.fileRevised',0),(168,515,33,3,'2023-04-05 01:25:29',1342177281,'submission.event.fileUploaded',0),(169,1048585,7,3,'2023-04-05 01:25:29',1342177288,'submission.event.fileRevised',0),(170,515,34,3,'2023-04-05 01:25:29',1342177281,'submission.event.fileUploaded',0),(171,1048585,7,3,'2023-04-05 01:25:29',1342177288,'submission.event.fileRevised',0),(172,515,35,3,'2023-04-05 01:25:29',1342177281,'submission.event.fileUploaded',0),(173,1048585,7,3,'2023-04-05 01:25:29',1342177288,'submission.event.fileRevised',0),(174,515,36,3,'2023-04-05 01:25:29',1342177281,'submission.event.fileUploaded',0),(175,1048585,7,3,'2023-04-05 01:25:29',1342177288,'submission.event.fileRevised',0),(176,1048585,7,3,'2023-04-05 01:25:38',1073741825,'log.review.reviewerAssigned',0),(177,1048585,7,3,'2023-04-05 01:25:41',805306371,'log.editor.decision',0),(178,1048585,7,3,'2023-04-05 01:25:50',268435459,'submission.event.participantAdded',0),(179,1048585,8,3,'2023-04-05 01:25:58',268435458,'submission.event.general.metadataUpdated',0),(180,1048585,8,3,'2023-04-05 01:25:58',268435458,'submission.event.general.metadataUpdated',0),(181,515,37,3,'2023-04-05 01:25:59',1342177281,'submission.event.fileUploaded',0),(182,1048585,8,3,'2023-04-05 01:25:59',1342177288,'submission.event.fileRevised',0),(183,515,37,3,'2023-04-05 01:26:00',1342177296,'submission.event.fileEdited',0),(184,1048585,8,3,'2023-04-05 01:26:00',1342177296,'submission.event.fileEdited',0),(185,1048585,8,3,'2023-04-05 01:26:02',268435458,'submission.event.general.metadataUpdated',0),(186,1048585,8,3,'2023-04-05 01:26:03',268435457,'submission.event.submissionSubmitted',0),(187,1048585,9,26,'2023-04-05 01:26:10',268435458,'submission.event.general.metadataUpdated',0),(188,1048585,9,26,'2023-04-05 01:26:10',268435458,'submission.event.general.metadataUpdated',0),(189,515,38,26,'2023-04-05 01:26:11',1342177281,'submission.event.fileUploaded',0),(190,1048585,9,26,'2023-04-05 01:26:11',1342177288,'submission.event.fileRevised',0),(191,515,38,26,'2023-04-05 01:26:12',1342177296,'submission.event.fileEdited',0),(192,1048585,9,26,'2023-04-05 01:26:12',1342177296,'submission.event.fileEdited',0),(193,515,39,26,'2023-04-05 01:26:12',1342177281,'submission.event.fileUploaded',0),(194,1048585,9,26,'2023-04-05 01:26:12',1342177288,'submission.event.fileRevised',0),(195,515,39,26,'2023-04-05 01:26:12',1342177296,'submission.event.fileEdited',0),(196,1048585,9,26,'2023-04-05 01:26:12',1342177296,'submission.event.fileEdited',0),(197,515,40,26,'2023-04-05 01:26:13',1342177281,'submission.event.fileUploaded',0),(198,1048585,9,26,'2023-04-05 01:26:13',1342177288,'submission.event.fileRevised',0),(199,515,40,26,'2023-04-05 01:26:13',1342177296,'submission.event.fileEdited',0),(200,1048585,9,26,'2023-04-05 01:26:13',1342177296,'submission.event.fileEdited',0),(201,515,41,26,'2023-04-05 01:26:13',1342177281,'submission.event.fileUploaded',0),(202,1048585,9,26,'2023-04-05 01:26:13',1342177288,'submission.event.fileRevised',0),(203,515,41,26,'2023-04-05 01:26:14',1342177296,'submission.event.fileEdited',0),(204,1048585,9,26,'2023-04-05 01:26:14',1342177296,'submission.event.fileEdited',0),(205,515,42,26,'2023-04-05 01:26:14',1342177281,'submission.event.fileUploaded',0),(206,1048585,9,26,'2023-04-05 01:26:14',1342177288,'submission.event.fileRevised',0),(207,515,42,26,'2023-04-05 01:26:15',1342177296,'submission.event.fileEdited',0),(208,1048585,9,26,'2023-04-05 01:26:15',1342177296,'submission.event.fileEdited',0),(209,1048585,9,26,'2023-04-05 01:27:12',268435458,'submission.event.general.metadataUpdated',0),(210,1048585,9,26,'2023-04-05 01:27:14',268435457,'submission.event.submissionSubmitted',0),(211,1048585,9,3,'2023-04-05 01:27:23',805306371,'log.editor.decision',0),(212,1048585,10,27,'2023-04-05 01:27:35',268435458,'submission.event.general.metadataUpdated',0),(213,1048585,10,27,'2023-04-05 01:27:35',268435458,'submission.event.general.metadataUpdated',0),(214,515,43,27,'2023-04-05 01:27:37',1342177281,'submission.event.fileUploaded',0),(215,1048585,10,27,'2023-04-05 01:27:37',1342177288,'submission.event.fileRevised',0),(216,515,43,27,'2023-04-05 01:27:37',1342177296,'submission.event.fileEdited',0),(217,1048585,10,27,'2023-04-05 01:27:37',1342177296,'submission.event.fileEdited',0),(218,1048585,10,27,'2023-04-05 01:28:19',268435458,'submission.event.general.metadataUpdated',0),(219,1048585,10,27,'2023-04-05 01:28:20',268435457,'submission.event.submissionSubmitted',0),(220,1048585,11,28,'2023-04-05 01:28:28',268435458,'submission.event.general.metadataUpdated',0),(221,1048585,11,28,'2023-04-05 01:28:28',268435458,'submission.event.general.metadataUpdated',0),(222,515,44,28,'2023-04-05 01:28:30',1342177281,'submission.event.fileUploaded',0),(223,1048585,11,28,'2023-04-05 01:28:30',1342177288,'submission.event.fileRevised',0),(224,515,44,28,'2023-04-05 01:28:30',1342177296,'submission.event.fileEdited',0),(225,1048585,11,28,'2023-04-05 01:28:30',1342177296,'submission.event.fileEdited',0),(226,1048585,11,28,'2023-04-05 01:28:39',268435458,'submission.event.general.metadataUpdated',0),(227,1048585,11,28,'2023-04-05 01:28:40',268435457,'submission.event.submissionSubmitted',0),(228,1048585,11,3,'2023-04-05 01:28:47',805306371,'log.editor.decision',0),(229,1048585,11,3,'2023-04-05 01:28:54',1073741825,'log.review.reviewerAssigned',0),(230,1048585,11,3,'2023-04-05 01:28:56',805306371,'log.editor.decision',0),(231,1048585,11,3,'2023-04-05 01:29:04',1073741825,'log.review.reviewerAssigned',0),(232,1048585,11,3,'2023-04-05 01:29:10',1073741825,'log.review.reviewerAssigned',0),(233,1048585,11,10,'2023-04-05 01:29:15',1073741830,'log.review.reviewAccepted',0),(234,1048585,11,10,'2023-04-05 01:29:18',1073741848,'log.review.reviewReady',0),(235,1048585,11,12,'2023-04-05 01:29:23',1073741830,'log.review.reviewAccepted',0),(236,1048585,11,12,'2023-04-05 01:29:28',1073741848,'log.review.reviewReady',0),(237,1048585,11,3,'2023-04-05 01:29:38',805306371,'log.editor.decision',0),(238,1048585,12,29,'2023-04-05 01:29:49',268435458,'submission.event.general.metadataUpdated',0),(239,1048585,12,29,'2023-04-05 01:29:49',268435458,'submission.event.general.metadataUpdated',0),(240,515,45,29,'2023-04-05 01:29:51',1342177281,'submission.event.fileUploaded',0),(241,1048585,12,29,'2023-04-05 01:29:51',1342177288,'submission.event.fileRevised',0),(242,515,45,29,'2023-04-05 01:29:51',1342177296,'submission.event.fileEdited',0),(243,1048585,12,29,'2023-04-05 01:29:51',1342177296,'submission.event.fileEdited',0),(244,515,46,29,'2023-04-05 01:29:51',1342177281,'submission.event.fileUploaded',0),(245,1048585,12,29,'2023-04-05 01:29:51',1342177288,'submission.event.fileRevised',0),(246,515,46,29,'2023-04-05 01:29:52',1342177296,'submission.event.fileEdited',0),(247,1048585,12,29,'2023-04-05 01:29:52',1342177296,'submission.event.fileEdited',0),(248,515,47,29,'2023-04-05 01:29:52',1342177281,'submission.event.fileUploaded',0),(249,1048585,12,29,'2023-04-05 01:29:52',1342177288,'submission.event.fileRevised',0),(250,515,47,29,'2023-04-05 01:29:52',1342177296,'submission.event.fileEdited',0),(251,1048585,12,29,'2023-04-05 01:29:52',1342177296,'submission.event.fileEdited',0),(252,1048585,12,29,'2023-04-05 01:30:46',268435458,'submission.event.general.metadataUpdated',0),(253,1048585,12,29,'2023-04-05 01:30:48',268435457,'submission.event.submissionSubmitted',0),(254,1048585,12,3,'2023-04-05 01:30:59',805306371,'log.editor.decision',0),(255,515,48,3,'2023-04-05 01:30:59',1342177281,'submission.event.fileUploaded',0),(256,1048585,12,3,'2023-04-05 01:30:59',1342177288,'submission.event.fileRevised',0),(257,515,49,3,'2023-04-05 01:30:59',1342177281,'submission.event.fileUploaded',0),(258,1048585,12,3,'2023-04-05 01:30:59',1342177288,'submission.event.fileRevised',0),(259,515,50,3,'2023-04-05 01:30:59',1342177281,'submission.event.fileUploaded',0),(260,1048585,12,3,'2023-04-05 01:30:59',1342177288,'submission.event.fileRevised',0),(261,1048585,12,3,'2023-04-05 01:31:08',1073741825,'log.review.reviewerAssigned',0),(262,1048585,12,3,'2023-04-05 01:31:14',1073741825,'log.review.reviewerAssigned',0),(263,1048585,12,3,'2023-04-05 01:31:21',1073741825,'log.review.reviewerAssigned',0),(264,1048585,12,8,'2023-04-05 01:31:27',1073741830,'log.review.reviewAccepted',0),(265,1048585,12,8,'2023-04-05 01:31:32',1073741848,'log.review.reviewReady',0),(266,1048585,13,30,'2023-04-05 01:31:41',268435458,'submission.event.general.metadataUpdated',0),(267,1048585,13,30,'2023-04-05 01:31:41',268435458,'submission.event.general.metadataUpdated',0),(268,515,51,30,'2023-04-05 01:31:43',1342177281,'submission.event.fileUploaded',0),(269,1048585,13,30,'2023-04-05 01:31:43',1342177288,'submission.event.fileRevised',0),(270,515,51,30,'2023-04-05 01:31:43',1342177296,'submission.event.fileEdited',0),(271,1048585,13,30,'2023-04-05 01:31:43',1342177296,'submission.event.fileEdited',0),(272,515,52,30,'2023-04-05 01:31:43',1342177281,'submission.event.fileUploaded',0),(273,1048585,13,30,'2023-04-05 01:31:43',1342177288,'submission.event.fileRevised',0),(274,515,52,30,'2023-04-05 01:31:44',1342177296,'submission.event.fileEdited',0),(275,1048585,13,30,'2023-04-05 01:31:44',1342177296,'submission.event.fileEdited',0),(276,515,53,30,'2023-04-05 01:31:44',1342177281,'submission.event.fileUploaded',0),(277,1048585,13,30,'2023-04-05 01:31:44',1342177288,'submission.event.fileRevised',0),(278,515,53,30,'2023-04-05 01:31:44',1342177296,'submission.event.fileEdited',0),(279,1048585,13,30,'2023-04-05 01:31:44',1342177296,'submission.event.fileEdited',0),(280,1048585,13,30,'2023-04-05 01:32:19',268435458,'submission.event.general.metadataUpdated',0),(281,1048585,13,30,'2023-04-05 01:32:20',268435457,'submission.event.submissionSubmitted',0),(282,1048585,13,3,'2023-04-05 01:32:29',805306371,'log.editor.decision',0),(283,515,54,3,'2023-04-05 01:32:30',1342177281,'submission.event.fileUploaded',0),(284,1048585,13,3,'2023-04-05 01:32:30',1342177288,'submission.event.fileRevised',0),(285,515,55,3,'2023-04-05 01:32:30',1342177281,'submission.event.fileUploaded',0),(286,1048585,13,3,'2023-04-05 01:32:30',1342177288,'submission.event.fileRevised',0),(287,515,56,3,'2023-04-05 01:32:30',1342177281,'submission.event.fileUploaded',0),(288,1048585,13,3,'2023-04-05 01:32:30',1342177288,'submission.event.fileRevised',0),(289,1048585,13,3,'2023-04-05 01:32:38',1073741825,'log.review.reviewerAssigned',0),(290,1048585,13,3,'2023-04-05 01:32:41',805306371,'log.editor.decision',0),(291,1048585,13,3,'2023-04-05 01:32:50',1073741825,'log.review.reviewerAssigned',0),(292,1048585,13,3,'2023-04-05 01:32:55',1073741825,'log.review.reviewerAssigned',0),(293,1048585,13,3,'2023-04-05 01:33:02',1073741825,'log.review.reviewerAssigned',0),(294,1048585,13,10,'2023-04-05 01:33:08',1073741830,'log.review.reviewAccepted',0),(295,1048585,13,10,'2023-04-05 01:33:13',1073741848,'log.review.reviewReady',0),(296,1048585,13,12,'2023-04-05 01:33:19',1073741830,'log.review.reviewAccepted',0),(297,1048585,13,12,'2023-04-05 01:33:23',1073741848,'log.review.reviewReady',0),(298,1048585,13,3,'2023-04-05 01:33:36',805306371,'log.editor.decision',0),(299,1048585,14,31,'2023-04-05 01:33:50',268435458,'submission.event.general.metadataUpdated',0),(300,1048585,14,31,'2023-04-05 01:33:50',268435458,'submission.event.general.metadataUpdated',0),(301,515,57,31,'2023-04-05 01:33:51',1342177281,'submission.event.fileUploaded',0),(302,1048585,14,31,'2023-04-05 01:33:51',1342177288,'submission.event.fileRevised',0),(303,515,57,31,'2023-04-05 01:33:52',1342177296,'submission.event.fileEdited',0),(304,1048585,14,31,'2023-04-05 01:33:52',1342177296,'submission.event.fileEdited',0),(305,515,58,31,'2023-04-05 01:33:52',1342177281,'submission.event.fileUploaded',0),(306,1048585,14,31,'2023-04-05 01:33:52',1342177288,'submission.event.fileRevised',0),(307,515,58,31,'2023-04-05 01:33:52',1342177296,'submission.event.fileEdited',0),(308,1048585,14,31,'2023-04-05 01:33:52',1342177296,'submission.event.fileEdited',0),(309,515,59,31,'2023-04-05 01:33:53',1342177281,'submission.event.fileUploaded',0),(310,1048585,14,31,'2023-04-05 01:33:53',1342177288,'submission.event.fileRevised',0),(311,515,59,31,'2023-04-05 01:33:53',1342177296,'submission.event.fileEdited',0),(312,1048585,14,31,'2023-04-05 01:33:53',1342177296,'submission.event.fileEdited',0),(313,515,60,31,'2023-04-05 01:33:53',1342177281,'submission.event.fileUploaded',0),(314,1048585,14,31,'2023-04-05 01:33:53',1342177288,'submission.event.fileRevised',0),(315,515,60,31,'2023-04-05 01:33:54',1342177296,'submission.event.fileEdited',0),(316,1048585,14,31,'2023-04-05 01:33:54',1342177296,'submission.event.fileEdited',0),(317,515,61,31,'2023-04-05 01:33:54',1342177281,'submission.event.fileUploaded',0),(318,1048585,14,31,'2023-04-05 01:33:54',1342177288,'submission.event.fileRevised',0),(319,515,61,31,'2023-04-05 01:33:55',1342177296,'submission.event.fileEdited',0),(320,1048585,14,31,'2023-04-05 01:33:55',1342177296,'submission.event.fileEdited',0),(321,515,62,31,'2023-04-05 01:33:56',1342177281,'submission.event.fileUploaded',0),(322,1048585,14,31,'2023-04-05 01:33:56',1342177288,'submission.event.fileRevised',0),(323,515,62,31,'2023-04-05 01:33:56',1342177296,'submission.event.fileEdited',0),(324,1048585,14,31,'2023-04-05 01:33:56',1342177296,'submission.event.fileEdited',0),(325,1048585,14,31,'2023-04-05 01:34:37',268435458,'submission.event.general.metadataUpdated',0),(326,1048585,14,31,'2023-04-05 01:34:39',268435457,'submission.event.submissionSubmitted',0),(327,1048585,14,3,'2023-04-05 01:34:49',805306371,'log.editor.decision',0),(328,515,63,3,'2023-04-05 01:34:49',1342177281,'submission.event.fileUploaded',0),(329,1048585,14,3,'2023-04-05 01:34:49',1342177288,'submission.event.fileRevised',0),(330,515,64,3,'2023-04-05 01:34:49',1342177281,'submission.event.fileUploaded',0),(331,1048585,14,3,'2023-04-05 01:34:50',1342177288,'submission.event.fileRevised',0),(332,515,65,3,'2023-04-05 01:34:50',1342177281,'submission.event.fileUploaded',0),(333,1048585,14,3,'2023-04-05 01:34:50',1342177288,'submission.event.fileRevised',0),(334,515,66,3,'2023-04-05 01:34:50',1342177281,'submission.event.fileUploaded',0),(335,1048585,14,3,'2023-04-05 01:34:50',1342177288,'submission.event.fileRevised',0),(336,515,67,3,'2023-04-05 01:34:50',1342177281,'submission.event.fileUploaded',0),(337,1048585,14,3,'2023-04-05 01:34:50',1342177288,'submission.event.fileRevised',0),(338,515,68,3,'2023-04-05 01:34:50',1342177281,'submission.event.fileUploaded',0),(339,1048585,14,3,'2023-04-05 01:34:50',1342177288,'submission.event.fileRevised',0),(340,1048585,14,3,'2023-04-05 01:34:59',1073741825,'log.review.reviewerAssigned',0),(341,1048585,14,3,'2023-04-05 01:35:02',805306371,'log.editor.decision',0),(342,1048585,14,3,'2023-04-05 01:35:12',1073741825,'log.review.reviewerAssigned',0),(343,1048585,14,3,'2023-04-05 01:35:14',805306371,'log.editor.decision',0),(344,1048585,14,3,'2023-04-05 01:35:24',268435459,'submission.event.participantAdded',0),(345,1048585,14,3,'2023-04-05 01:35:27',805306371,'log.editor.decision',0),(346,1048585,14,3,'2023-04-05 01:35:36',268435459,'submission.event.participantAdded',0),(347,1048585,14,3,'2023-04-05 01:35:42',268435459,'submission.event.participantAdded',0),(348,1048585,14,3,'2023-04-05 01:35:48',268435474,'submission.event.publicationFormatCreated',0),(349,515,69,3,'2023-04-05 01:35:57',1342177281,'submission.event.fileUploaded',0),(350,1048585,14,3,'2023-04-05 01:35:57',1342177288,'submission.event.fileRevised',0),(351,515,70,3,'2023-04-05 01:35:57',1342177281,'submission.event.fileUploaded',0),(352,1048585,14,3,'2023-04-05 01:35:57',1342177288,'submission.event.fileRevised',0),(353,515,71,3,'2023-04-05 01:35:57',1342177281,'submission.event.fileUploaded',0),(354,1048585,14,3,'2023-04-05 01:35:57',1342177288,'submission.event.fileRevised',0),(355,515,72,3,'2023-04-05 01:35:57',1342177281,'submission.event.fileUploaded',0),(356,1048585,14,3,'2023-04-05 01:35:57',1342177288,'submission.event.fileRevised',0),(357,515,73,3,'2023-04-05 01:35:57',1342177281,'submission.event.fileUploaded',0),(358,1048585,14,3,'2023-04-05 01:35:57',1342177288,'submission.event.fileRevised',0),(359,515,74,3,'2023-04-05 01:35:57',1342177281,'submission.event.fileUploaded',0),(360,1048585,14,3,'2023-04-05 01:35:57',1342177288,'submission.event.fileRevised',0),(361,1048585,14,3,'2023-04-05 01:35:59',268435464,'submission.event.publicationFormatPublished',0),(362,1048585,14,3,'2023-04-05 01:36:02',268435476,'submission.event.publicationFormatMadeAvailable',0),(363,515,69,3,'2023-04-05 01:36:05',1342177296,'submission.event.fileEdited',0),(364,1048585,14,3,'2023-04-05 01:36:05',1342177296,'submission.event.fileEdited',0),(365,515,69,3,'2023-04-05 01:36:05',1342177287,'submission.event.signoffSignoff',0),(366,515,70,3,'2023-04-05 01:36:11',1342177296,'submission.event.fileEdited',0),(367,1048585,14,3,'2023-04-05 01:36:11',1342177296,'submission.event.fileEdited',0),(368,515,70,3,'2023-04-05 01:36:11',1342177287,'submission.event.signoffSignoff',0),(369,515,71,3,'2023-04-05 01:36:16',1342177296,'submission.event.fileEdited',0),(370,1048585,14,3,'2023-04-05 01:36:16',1342177296,'submission.event.fileEdited',0),(371,515,71,3,'2023-04-05 01:36:16',1342177287,'submission.event.signoffSignoff',0),(372,515,72,3,'2023-04-05 01:36:22',1342177296,'submission.event.fileEdited',0),(373,1048585,14,3,'2023-04-05 01:36:22',1342177296,'submission.event.fileEdited',0),(374,515,72,3,'2023-04-05 01:36:22',1342177287,'submission.event.signoffSignoff',0),(375,515,73,3,'2023-04-05 01:36:29',1342177296,'submission.event.fileEdited',0),(376,1048585,14,3,'2023-04-05 01:36:29',1342177296,'submission.event.fileEdited',0),(377,515,73,3,'2023-04-05 01:36:29',1342177287,'submission.event.signoffSignoff',0),(378,515,74,3,'2023-04-05 01:36:35',1342177296,'submission.event.fileEdited',0),(379,1048585,14,3,'2023-04-05 01:36:35',1342177296,'submission.event.fileEdited',0),(380,515,74,3,'2023-04-05 01:36:35',1342177287,'submission.event.signoffSignoff',0),(381,1048585,14,3,'2023-04-05 01:36:41',268435462,'publication.event.published',0),(382,1048585,15,32,'2023-04-05 01:36:49',268435458,'submission.event.general.metadataUpdated',0),(383,1048585,15,32,'2023-04-05 01:36:49',268435458,'submission.event.general.metadataUpdated',0),(384,515,75,32,'2023-04-05 01:36:50',1342177281,'submission.event.fileUploaded',0),(385,1048585,15,32,'2023-04-05 01:36:50',1342177288,'submission.event.fileRevised',0),(386,515,75,32,'2023-04-05 01:36:51',1342177296,'submission.event.fileEdited',0),(387,1048585,15,32,'2023-04-05 01:36:51',1342177296,'submission.event.fileEdited',0),(388,1048585,15,32,'2023-04-05 01:37:05',268435458,'submission.event.general.metadataUpdated',0),(389,1048585,15,32,'2023-04-05 01:37:06',268435457,'submission.event.submissionSubmitted',0),(390,1048585,15,3,'2023-04-05 01:37:14',805306371,'log.editor.decision',0),(391,515,76,3,'2023-04-05 01:37:15',1342177281,'submission.event.fileUploaded',0),(392,1048585,15,3,'2023-04-05 01:37:15',1342177288,'submission.event.fileRevised',0),(393,1048585,16,33,'2023-04-05 01:37:25',268435458,'submission.event.general.metadataUpdated',0),(394,1048585,16,33,'2023-04-05 01:37:25',268435458,'submission.event.general.metadataUpdated',0),(395,515,77,33,'2023-04-05 01:37:26',1342177281,'submission.event.fileUploaded',0),(396,1048585,16,33,'2023-04-05 01:37:26',1342177288,'submission.event.fileRevised',0),(397,515,77,33,'2023-04-05 01:37:27',1342177296,'submission.event.fileEdited',0),(398,1048585,16,33,'2023-04-05 01:37:27',1342177296,'submission.event.fileEdited',0),(399,1048585,16,33,'2023-04-05 01:37:49',268435458,'submission.event.general.metadataUpdated',0),(400,1048585,16,33,'2023-04-05 01:37:50',268435457,'submission.event.submissionSubmitted',0),(401,1048585,16,3,'2023-04-05 01:37:59',805306371,'log.editor.decision',0),(402,515,78,3,'2023-04-05 01:37:59',1342177281,'submission.event.fileUploaded',0),(403,1048585,16,3,'2023-04-05 01:37:59',1342177288,'submission.event.fileRevised',0),(404,1048585,16,3,'2023-04-05 01:38:08',1073741825,'log.review.reviewerAssigned',0),(405,1048585,16,3,'2023-04-05 01:38:13',1073741825,'log.review.reviewerAssigned',0),(406,1048585,16,3,'2023-04-05 01:38:19',1073741825,'log.review.reviewerAssigned',0),(407,1048585,16,10,'2023-04-05 01:38:24',1073741830,'log.review.reviewAccepted',0),(408,1048585,16,10,'2023-04-05 01:38:28',1073741848,'log.review.reviewReady',0),(409,1048585,17,34,'2023-04-05 01:38:37',268435458,'submission.event.general.metadataUpdated',0),(410,1048585,17,34,'2023-04-05 01:38:37',268435458,'submission.event.general.metadataUpdated',0),(411,515,79,34,'2023-04-05 01:38:38',1342177281,'submission.event.fileUploaded',0),(412,1048585,17,34,'2023-04-05 01:38:38',1342177288,'submission.event.fileRevised',0),(413,515,79,34,'2023-04-05 01:38:38',1342177296,'submission.event.fileEdited',0),(414,1048585,17,34,'2023-04-05 01:38:38',1342177296,'submission.event.fileEdited',0),(415,515,80,34,'2023-04-05 01:38:38',1342177281,'submission.event.fileUploaded',0),(416,1048585,17,34,'2023-04-05 01:38:38',1342177288,'submission.event.fileRevised',0),(417,515,80,34,'2023-04-05 01:38:39',1342177296,'submission.event.fileEdited',0),(418,1048585,17,34,'2023-04-05 01:38:39',1342177296,'submission.event.fileEdited',0),(419,515,81,34,'2023-04-05 01:38:39',1342177281,'submission.event.fileUploaded',0),(420,1048585,17,34,'2023-04-05 01:38:39',1342177288,'submission.event.fileRevised',0),(421,515,81,34,'2023-04-05 01:38:39',1342177296,'submission.event.fileEdited',0),(422,1048585,17,34,'2023-04-05 01:38:40',1342177296,'submission.event.fileEdited',0),(423,515,82,34,'2023-04-05 01:38:40',1342177281,'submission.event.fileUploaded',0),(424,1048585,17,34,'2023-04-05 01:38:40',1342177288,'submission.event.fileRevised',0),(425,515,82,34,'2023-04-05 01:38:40',1342177296,'submission.event.fileEdited',0),(426,1048585,17,34,'2023-04-05 01:38:40',1342177296,'submission.event.fileEdited',0),(427,515,83,34,'2023-04-05 01:38:40',1342177281,'submission.event.fileUploaded',0),(428,1048585,17,34,'2023-04-05 01:38:41',1342177288,'submission.event.fileRevised',0),(429,515,83,34,'2023-04-05 01:38:41',1342177296,'submission.event.fileEdited',0),(430,1048585,17,34,'2023-04-05 01:38:41',1342177296,'submission.event.fileEdited',0),(431,515,84,34,'2023-04-05 01:38:41',1342177281,'submission.event.fileUploaded',0),(432,1048585,17,34,'2023-04-05 01:38:41',1342177288,'submission.event.fileRevised',0),(433,515,84,34,'2023-04-05 01:38:42',1342177296,'submission.event.fileEdited',0),(434,1048585,17,34,'2023-04-05 01:38:42',1342177296,'submission.event.fileEdited',0),(435,1048585,17,34,'2023-04-05 01:40:10',268435458,'submission.event.general.metadataUpdated',0),(436,1048585,17,34,'2023-04-05 01:40:12',268435457,'submission.event.submissionSubmitted',0),(437,1048585,17,3,'2023-04-05 01:40:24',805306371,'log.editor.decision',0),(438,515,85,3,'2023-04-05 01:40:24',1342177281,'submission.event.fileUploaded',0),(439,1048585,17,3,'2023-04-05 01:40:24',1342177288,'submission.event.fileRevised',0),(440,515,86,3,'2023-04-05 01:40:24',1342177281,'submission.event.fileUploaded',0),(441,1048585,17,3,'2023-04-05 01:40:24',1342177288,'submission.event.fileRevised',0),(442,515,87,3,'2023-04-05 01:40:24',1342177281,'submission.event.fileUploaded',0),(443,1048585,17,3,'2023-04-05 01:40:25',1342177288,'submission.event.fileRevised',0),(444,515,88,3,'2023-04-05 01:40:25',1342177281,'submission.event.fileUploaded',0),(445,1048585,17,3,'2023-04-05 01:40:25',1342177288,'submission.event.fileRevised',0),(446,515,89,3,'2023-04-05 01:40:25',1342177281,'submission.event.fileUploaded',0),(447,1048585,17,3,'2023-04-05 01:40:25',1342177288,'submission.event.fileRevised',0),(448,515,90,3,'2023-04-05 01:40:25',1342177281,'submission.event.fileUploaded',0),(449,1048585,17,3,'2023-04-05 01:40:25',1342177288,'submission.event.fileRevised',0),(450,1048585,17,3,'2023-04-05 01:40:35',1073741825,'log.review.reviewerAssigned',0),(451,1048585,17,3,'2023-04-05 01:40:41',1073741825,'log.review.reviewerAssigned',0);
 /*!40000 ALTER TABLE `event_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -768,16 +768,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `event_log_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_log_settings` (
-  `log_id` bigint(20) NOT NULL,
+  `log_id` bigint NOT NULL,
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `event_log_settings_pkey` (`log_id`,`setting_name`),
   KEY `event_log_settings_log_id` (`log_id`),
   KEY `event_log_settings_name_value` (`setting_name`(50),`setting_value`(150))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -786,7 +786,7 @@ CREATE TABLE `event_log_settings` (
 
 LOCK TABLES `event_log_settings` WRITE;
 /*!40000 ALTER TABLE `event_log_settings` DISABLE KEYS */;
-INSERT INTO `event_log_settings` VALUES (3,'fileId','1','int'),(3,'fileStage','2','int'),(3,'originalFileName','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(3,'sourceSubmissionFileId',NULL,'string'),(3,'submissionFileId','1','int'),(3,'submissionId','1','int'),(3,'username','aclark','string'),(4,'fileId','1','int'),(4,'fileStage','2','int'),(4,'name','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(4,'submissionFileId','1','int'),(4,'submissionId','1','int'),(4,'username','aclark','string'),(5,'fileId','1','int'),(5,'fileStage','2','int'),(5,'originalFileName','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(5,'sourceSubmissionFileId',NULL,'string'),(5,'submissionFileId','1','int'),(5,'submissionId','1','int'),(5,'username','aclark','string'),(6,'fileId','1','int'),(6,'fileStage','2','int'),(6,'name','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(6,'originalFileName','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(6,'sourceSubmissionFileId',NULL,'string'),(6,'submissionFileId','1','int'),(6,'submissionId','1','int'),(6,'username','aclark','string'),(9,'decision','Send to External Review','string'),(9,'editorName','Daniel Barnes','string'),(9,'submissionId','1','int'),(10,'fileId','1','int'),(10,'fileStage','4','int'),(10,'originalFileName','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(10,'sourceSubmissionFileId','1','int'),(10,'submissionFileId','2','int'),(10,'submissionId','1','int'),(10,'username','dbarnes','string'),(11,'fileId','1','int'),(11,'fileStage','4','int'),(11,'name','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(11,'submissionFileId','2','int'),(11,'submissionId','1','int'),(11,'username','dbarnes','string'),(12,'reviewAssignmentId','1','string'),(12,'reviewerName','Gonzalo Favio','string'),(12,'round','1','int'),(12,'stageId','3','int'),(12,'submissionId','1','int'),(13,'decision','Accept Submission','string'),(13,'editorName','Daniel Barnes','string'),(13,'submissionId','1','int'),(14,'name','Sarah Vogt','string'),(14,'userGroupName','Copyeditor','string'),(14,'username','svogt','string'),(17,'fileId','2','int'),(17,'fileStage','2','int'),(17,'originalFileName','Critical History in Western Canada 1900–.pdf','string'),(17,'sourceSubmissionFileId',NULL,'string'),(17,'submissionFileId','3','int'),(17,'submissionId','2','int'),(17,'username','afinkel','string'),(18,'fileId','2','int'),(18,'fileStage','2','int'),(18,'name','Critical History in Western Canada 1900–.pdf','string'),(18,'submissionFileId','3','int'),(18,'submissionId','2','int'),(18,'username','afinkel','string'),(19,'fileId','2','int'),(19,'fileStage','2','int'),(19,'originalFileName','Critical History in Western Canada 1900–.pdf','string'),(19,'sourceSubmissionFileId',NULL,'string'),(19,'submissionFileId','3','int'),(19,'submissionId','2','int'),(19,'username','afinkel','string'),(20,'fileId','2','int'),(20,'fileStage','2','int'),(20,'name','Critical History in Western Canada 1900–.pdf','string'),(20,'originalFileName','Critical History in Western Canada 1900–.pdf','string'),(20,'sourceSubmissionFileId',NULL,'string'),(20,'submissionFileId','3','int'),(20,'submissionId','2','int'),(20,'username','afinkel','string'),(21,'fileId','3','int'),(21,'fileStage','2','int'),(21,'originalFileName','Vernacular Currents in Western Canadian .pdf','string'),(21,'sourceSubmissionFileId',NULL,'string'),(21,'submissionFileId','4','int'),(21,'submissionId','2','int'),(21,'username','afinkel','string'),(22,'fileId','3','int'),(22,'fileStage','2','int'),(22,'name','Vernacular Currents in Western Canadian .pdf','string'),(22,'submissionFileId','4','int'),(22,'submissionId','2','int'),(22,'username','afinkel','string'),(23,'fileId','3','int'),(23,'fileStage','2','int'),(23,'originalFileName','Vernacular Currents in Western Canadian .pdf','string'),(23,'sourceSubmissionFileId',NULL,'string'),(23,'submissionFileId','4','int'),(23,'submissionId','2','int'),(23,'username','afinkel','string'),(24,'fileId','3','int'),(24,'fileStage','2','int'),(24,'name','Vernacular Currents in Western Canadian .pdf','string'),(24,'originalFileName','Vernacular Currents in Western Canadian .pdf','string'),(24,'sourceSubmissionFileId',NULL,'string'),(24,'submissionFileId','4','int'),(24,'submissionId','2','int'),(24,'username','afinkel','string'),(25,'fileId','4','int'),(25,'fileStage','2','int'),(25,'originalFileName','Cree Intellectual Traditions in History.pdf','string'),(25,'sourceSubmissionFileId',NULL,'string'),(25,'submissionFileId','5','int'),(25,'submissionId','2','int'),(25,'username','afinkel','string'),(26,'fileId','4','int'),(26,'fileStage','2','int'),(26,'name','Cree Intellectual Traditions in History.pdf','string'),(26,'submissionFileId','5','int'),(26,'submissionId','2','int'),(26,'username','afinkel','string'),(27,'fileId','4','int'),(27,'fileStage','2','int'),(27,'originalFileName','Cree Intellectual Traditions in History.pdf','string'),(27,'sourceSubmissionFileId',NULL,'string'),(27,'submissionFileId','5','int'),(27,'submissionId','2','int'),(27,'username','afinkel','string'),(28,'fileId','4','int'),(28,'fileStage','2','int'),(28,'name','Cree Intellectual Traditions in History.pdf','string'),(28,'originalFileName','Cree Intellectual Traditions in History.pdf','string'),(28,'sourceSubmissionFileId',NULL,'string'),(28,'submissionFileId','5','int'),(28,'submissionId','2','int'),(28,'username','afinkel','string'),(29,'fileId','5','int'),(29,'fileStage','2','int'),(29,'originalFileName','Visualizing Space, Race, and History in .pdf','string'),(29,'sourceSubmissionFileId',NULL,'string'),(29,'submissionFileId','6','int'),(29,'submissionId','2','int'),(29,'username','afinkel','string'),(30,'fileId','5','int'),(30,'fileStage','2','int'),(30,'name','Visualizing Space, Race, and History in .pdf','string'),(30,'submissionFileId','6','int'),(30,'submissionId','2','int'),(30,'username','afinkel','string'),(31,'fileId','5','int'),(31,'fileStage','2','int'),(31,'originalFileName','Visualizing Space, Race, and History in .pdf','string'),(31,'sourceSubmissionFileId',NULL,'string'),(31,'submissionFileId','6','int'),(31,'submissionId','2','int'),(31,'username','afinkel','string'),(32,'fileId','5','int'),(32,'fileStage','2','int'),(32,'name','Visualizing Space, Race, and History in .pdf','string'),(32,'originalFileName','Visualizing Space, Race, and History in .pdf','string'),(32,'sourceSubmissionFileId',NULL,'string'),(32,'submissionFileId','6','int'),(32,'submissionId','2','int'),(32,'username','afinkel','string'),(35,'decision','Send to External Review','string'),(35,'editorName','Daniel Barnes','string'),(35,'submissionId','2','int'),(36,'fileId','2','int'),(36,'fileStage','4','int'),(36,'originalFileName','Critical History in Western Canada 1900–.pdf','string'),(36,'sourceSubmissionFileId','3','int'),(36,'submissionFileId','7','int'),(36,'submissionId','2','int'),(36,'username','dbarnes','string'),(37,'fileId','2','int'),(37,'fileStage','4','int'),(37,'name','Critical History in Western Canada 1900–.pdf','string'),(37,'submissionFileId','7','int'),(37,'submissionId','2','int'),(37,'username','dbarnes','string'),(38,'fileId','3','int'),(38,'fileStage','4','int'),(38,'originalFileName','Vernacular Currents in Western Canadian .pdf','string'),(38,'sourceSubmissionFileId','4','int'),(38,'submissionFileId','8','int'),(38,'submissionId','2','int'),(38,'username','dbarnes','string'),(39,'fileId','3','int'),(39,'fileStage','4','int'),(39,'name','Vernacular Currents in Western Canadian .pdf','string'),(39,'submissionFileId','8','int'),(39,'submissionId','2','int'),(39,'username','dbarnes','string'),(40,'fileId','4','int'),(40,'fileStage','4','int'),(40,'originalFileName','Cree Intellectual Traditions in History.pdf','string'),(40,'sourceSubmissionFileId','5','int'),(40,'submissionFileId','9','int'),(40,'submissionId','2','int'),(40,'username','dbarnes','string'),(41,'fileId','4','int'),(41,'fileStage','4','int'),(41,'name','Cree Intellectual Traditions in History.pdf','string'),(41,'submissionFileId','9','int'),(41,'submissionId','2','int'),(41,'username','dbarnes','string'),(42,'fileId','5','int'),(42,'fileStage','4','int'),(42,'originalFileName','Visualizing Space, Race, and History in .pdf','string'),(42,'sourceSubmissionFileId','6','int'),(42,'submissionFileId','10','int'),(42,'submissionId','2','int'),(42,'username','dbarnes','string'),(43,'fileId','5','int'),(43,'fileStage','4','int'),(43,'name','Visualizing Space, Race, and History in .pdf','string'),(43,'submissionFileId','10','int'),(43,'submissionId','2','int'),(43,'username','dbarnes','string'),(44,'reviewAssignmentId','2','string'),(44,'reviewerName','Al Zacharia','string'),(44,'round','1','int'),(44,'stageId','3','int'),(44,'submissionId','2','int'),(45,'reviewAssignmentId','3','string'),(45,'reviewerName','Gonzalo Favio','string'),(45,'round','1','int'),(45,'stageId','3','int'),(45,'submissionId','2','int'),(48,'fileId','6','int'),(48,'fileStage','2','int'),(48,'originalFileName','The Political Economy of Workplace Injury in Canada.pdf','string'),(48,'sourceSubmissionFileId',NULL,'string'),(48,'submissionFileId','11','int'),(48,'submissionId','3','int'),(48,'username','bbarnetson','string'),(49,'fileId','6','int'),(49,'fileStage','2','int'),(49,'name','The Political Economy of Workplace Injury in Canada.pdf','string'),(49,'submissionFileId','11','int'),(49,'submissionId','3','int'),(49,'username','bbarnetson','string'),(50,'fileId','6','int'),(50,'fileStage','2','int'),(50,'originalFileName','The Political Economy of Workplace Injury in Canada.pdf','string'),(50,'sourceSubmissionFileId',NULL,'string'),(50,'submissionFileId','11','int'),(50,'submissionId','3','int'),(50,'username','bbarnetson','string'),(51,'fileId','6','int'),(51,'fileStage','2','int'),(51,'name','The Political Economy of Workplace Injury in Canada.pdf','string'),(51,'originalFileName','The Political Economy of Workplace Injury in Canada.pdf','string'),(51,'sourceSubmissionFileId',NULL,'string'),(51,'submissionFileId','11','int'),(51,'submissionId','3','int'),(51,'username','bbarnetson','string'),(56,'fileId','7','int'),(56,'fileStage','2','int'),(56,'originalFileName','Introduction: Contexts of Popular Cultur.pdf','string'),(56,'sourceSubmissionFileId',NULL,'string'),(56,'submissionFileId','12','int'),(56,'submissionId','4','int'),(56,'username','bbeaty','string'),(57,'fileId','7','int'),(57,'fileStage','2','int'),(57,'name','Introduction: Contexts of Popular Cultur.pdf','string'),(57,'submissionFileId','12','int'),(57,'submissionId','4','int'),(57,'username','bbeaty','string'),(58,'fileId','7','int'),(58,'fileStage','2','int'),(58,'originalFileName','Introduction: Contexts of Popular Cultur.pdf','string'),(58,'sourceSubmissionFileId',NULL,'string'),(58,'submissionFileId','12','int'),(58,'submissionId','4','int'),(58,'username','bbeaty','string'),(59,'fileId','7','int'),(59,'fileStage','2','int'),(59,'name','Introduction: Contexts of Popular Cultur.pdf','string'),(59,'originalFileName','Introduction: Contexts of Popular Cultur.pdf','string'),(59,'sourceSubmissionFileId',NULL,'string'),(59,'submissionFileId','12','int'),(59,'submissionId','4','int'),(59,'username','bbeaty','string'),(60,'fileId','8','int'),(60,'fileStage','2','int'),(60,'originalFileName','Chapter 1. A Future for Media Studies: C.pdf','string'),(60,'sourceSubmissionFileId',NULL,'string'),(60,'submissionFileId','13','int'),(60,'submissionId','4','int'),(60,'username','bbeaty','string'),(61,'fileId','8','int'),(61,'fileStage','2','int'),(61,'name','Chapter 1. A Future for Media Studies: C.pdf','string'),(61,'submissionFileId','13','int'),(61,'submissionId','4','int'),(61,'username','bbeaty','string'),(62,'fileId','8','int'),(62,'fileStage','2','int'),(62,'originalFileName','Chapter 1. A Future for Media Studies: C.pdf','string'),(62,'sourceSubmissionFileId',NULL,'string'),(62,'submissionFileId','13','int'),(62,'submissionId','4','int'),(62,'username','bbeaty','string'),(63,'fileId','8','int'),(63,'fileStage','2','int'),(63,'name','Chapter 1. A Future for Media Studies: C.pdf','string'),(63,'originalFileName','Chapter 1. A Future for Media Studies: C.pdf','string'),(63,'sourceSubmissionFileId',NULL,'string'),(63,'submissionFileId','13','int'),(63,'submissionId','4','int'),(63,'username','bbeaty','string'),(64,'fileId','9','int'),(64,'fileStage','2','int'),(64,'originalFileName','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(64,'sourceSubmissionFileId',NULL,'string'),(64,'submissionFileId','14','int'),(64,'submissionId','4','int'),(64,'username','bbeaty','string'),(65,'fileId','9','int'),(65,'fileStage','2','int'),(65,'name','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(65,'submissionFileId','14','int'),(65,'submissionId','4','int'),(65,'username','bbeaty','string'),(66,'fileId','9','int'),(66,'fileStage','2','int'),(66,'originalFileName','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(66,'sourceSubmissionFileId',NULL,'string'),(66,'submissionFileId','14','int'),(66,'submissionId','4','int'),(66,'username','bbeaty','string'),(67,'fileId','9','int'),(67,'fileStage','2','int'),(67,'name','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(67,'originalFileName','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(67,'sourceSubmissionFileId',NULL,'string'),(67,'submissionFileId','14','int'),(67,'submissionId','4','int'),(67,'username','bbeaty','string'),(68,'fileId','10','int'),(68,'fileStage','2','int'),(68,'originalFileName','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(68,'sourceSubmissionFileId',NULL,'string'),(68,'submissionFileId','15','int'),(68,'submissionId','4','int'),(68,'username','bbeaty','string'),(69,'fileId','10','int'),(69,'fileStage','2','int'),(69,'name','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(69,'submissionFileId','15','int'),(69,'submissionId','4','int'),(69,'username','bbeaty','string'),(70,'fileId','10','int'),(70,'fileStage','2','int'),(70,'originalFileName','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(70,'sourceSubmissionFileId',NULL,'string'),(70,'submissionFileId','15','int'),(70,'submissionId','4','int'),(70,'username','bbeaty','string'),(71,'fileId','10','int'),(71,'fileStage','2','int'),(71,'name','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(71,'originalFileName','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(71,'sourceSubmissionFileId',NULL,'string'),(71,'submissionFileId','15','int'),(71,'submissionId','4','int'),(71,'username','bbeaty','string'),(74,'decision','Send to Internal Review','string'),(74,'editorName','Daniel Barnes','string'),(74,'submissionId','4','int'),(75,'fileId','7','int'),(75,'fileStage','19','int'),(75,'originalFileName','Introduction: Contexts of Popular Cultur.pdf','string'),(75,'sourceSubmissionFileId','12','int'),(75,'submissionFileId','16','int'),(75,'submissionId','4','int'),(75,'username','dbarnes','string'),(76,'fileId','7','int'),(76,'fileStage','19','int'),(76,'name','Introduction: Contexts of Popular Cultur.pdf','string'),(76,'submissionFileId','16','int'),(76,'submissionId','4','int'),(76,'username','dbarnes','string'),(77,'fileId','8','int'),(77,'fileStage','19','int'),(77,'originalFileName','Chapter 1. A Future for Media Studies: C.pdf','string'),(77,'sourceSubmissionFileId','13','int'),(77,'submissionFileId','17','int'),(77,'submissionId','4','int'),(77,'username','dbarnes','string'),(78,'fileId','8','int'),(78,'fileStage','19','int'),(78,'name','Chapter 1. A Future for Media Studies: C.pdf','string'),(78,'submissionFileId','17','int'),(78,'submissionId','4','int'),(78,'username','dbarnes','string'),(79,'fileId','9','int'),(79,'fileStage','19','int'),(79,'originalFileName','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(79,'sourceSubmissionFileId','14','int'),(79,'submissionFileId','18','int'),(79,'submissionId','4','int'),(79,'username','dbarnes','string'),(80,'fileId','9','int'),(80,'fileStage','19','int'),(80,'name','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(80,'submissionFileId','18','int'),(80,'submissionId','4','int'),(80,'username','dbarnes','string'),(81,'fileId','10','int'),(81,'fileStage','19','int'),(81,'originalFileName','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(81,'sourceSubmissionFileId','15','int'),(81,'submissionFileId','19','int'),(81,'submissionId','4','int'),(81,'username','dbarnes','string'),(82,'fileId','10','int'),(82,'fileStage','19','int'),(82,'name','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(82,'submissionFileId','19','int'),(82,'submissionId','4','int'),(82,'username','dbarnes','string'),(83,'reviewAssignmentId','4','string'),(83,'reviewerName','Aisla McCrae','string'),(83,'round','1','int'),(83,'stageId','2','int'),(83,'submissionId','4','int'),(84,'decision','Send to External Review','string'),(84,'editorName','Daniel Barnes','string'),(84,'submissionId','4','int'),(85,'reviewAssignmentId','5','string'),(85,'reviewerName','Al Zacharia','string'),(85,'round','1','int'),(85,'stageId','3','int'),(85,'submissionId','4','int'),(86,'decision','Accept Submission','string'),(86,'editorName','Daniel Barnes','string'),(86,'submissionId','4','int'),(87,'name','Maria Fritz','string'),(87,'userGroupName','Copyeditor','string'),(87,'username','mfritz','string'),(88,'decision','Send To Production','string'),(88,'editorName','Daniel Barnes','string'),(88,'submissionId','4','int'),(89,'name','Graham Cox','string'),(89,'userGroupName','Layout Editor','string'),(89,'username','gcox','string'),(92,'fileId','11','int'),(92,'fileStage','2','int'),(92,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(92,'sourceSubmissionFileId',NULL,'string'),(92,'submissionFileId','20','int'),(92,'submissionId','5','int'),(92,'username','callan','string'),(93,'fileId','11','int'),(93,'fileStage','2','int'),(93,'name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(93,'submissionFileId','20','int'),(93,'submissionId','5','int'),(93,'username','callan','string'),(94,'fileId','11','int'),(94,'fileStage','2','int'),(94,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(94,'sourceSubmissionFileId',NULL,'string'),(94,'submissionFileId','20','int'),(94,'submissionId','5','int'),(94,'username','callan','string'),(95,'fileId','11','int'),(95,'fileStage','2','int'),(95,'name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(95,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(95,'sourceSubmissionFileId',NULL,'string'),(95,'submissionFileId','20','int'),(95,'submissionId','5','int'),(95,'username','callan','string'),(98,'decision','Send to Internal Review','string'),(98,'editorName','Daniel Barnes','string'),(98,'submissionId','5','int'),(99,'fileId','11','int'),(99,'fileStage','19','int'),(99,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(99,'sourceSubmissionFileId','20','int'),(99,'submissionFileId','21','int'),(99,'submissionId','5','int'),(99,'username','dbarnes','string'),(100,'fileId','11','int'),(100,'fileStage','19','int'),(100,'name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(100,'submissionFileId','21','int'),(100,'submissionId','5','int'),(100,'username','dbarnes','string'),(101,'reviewAssignmentId','6','string'),(101,'reviewerName','Paul Hudson','string'),(101,'round','1','int'),(101,'stageId','2','int'),(101,'submissionId','5','int'),(102,'decision','Send to External Review','string'),(102,'editorName','Daniel Barnes','string'),(102,'submissionId','5','int'),(103,'reviewAssignmentId','7','string'),(103,'reviewerName','Gonzalo Favio','string'),(103,'round','1','int'),(103,'stageId','3','int'),(103,'submissionId','5','int'),(104,'decision','Accept Submission','string'),(104,'editorName','Daniel Barnes','string'),(104,'submissionId','5','int'),(105,'name','Sarah Vogt','string'),(105,'userGroupName','Copyeditor','string'),(105,'username','svogt','string'),(106,'decision','Send To Production','string'),(106,'editorName','Daniel Barnes','string'),(106,'submissionId','5','int'),(107,'name','Stephen Hellier','string'),(107,'userGroupName','Layout Editor','string'),(107,'username','shellier','string'),(108,'name','Catherine Turner','string'),(108,'userGroupName','Proofreader','string'),(108,'username','cturner','string'),(109,'formatName','PDF','string'),(110,'fileId','11','int'),(110,'fileStage','10','int'),(110,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(110,'sourceSubmissionFileId','20','int'),(110,'submissionFileId','22','int'),(110,'submissionId','5','int'),(110,'username','dbarnes','string'),(111,'fileId','11','int'),(111,'fileStage','10','int'),(111,'name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(111,'submissionFileId','22','int'),(111,'submissionId','5','int'),(111,'username','dbarnes','string'),(112,'publicationFormatName','PDF','string'),(113,'publicationFormatName','PDF','string'),(114,'fileId','11','int'),(114,'fileStage','10','int'),(114,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(114,'sourceSubmissionFileId','20','int'),(114,'submissionFileId','22','int'),(114,'submissionId','5','int'),(114,'username','dbarnes','string'),(115,'fileId','11','int'),(115,'fileStage','10','int'),(115,'name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(115,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(115,'sourceSubmissionFileId','20','int'),(115,'submissionFileId','22','int'),(115,'submissionId','5','int'),(115,'username','dbarnes','string'),(116,'file','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(116,'name','Daniel Barnes','string'),(116,'username','dbarnes','string'),(120,'fileId','12','int'),(120,'fileStage','2','int'),(120,'originalFileName','Identify: Understanding Your Information.pdf','string'),(120,'sourceSubmissionFileId',NULL,'string'),(120,'submissionFileId','23','int'),(120,'submissionId','6','int'),(120,'username','dbernnard','string'),(121,'fileId','12','int'),(121,'fileStage','2','int'),(121,'name','Identify: Understanding Your Information.pdf','string'),(121,'submissionFileId','23','int'),(121,'submissionId','6','int'),(121,'username','dbernnard','string'),(122,'fileId','12','int'),(122,'fileStage','2','int'),(122,'originalFileName','Identify: Understanding Your Information.pdf','string'),(122,'sourceSubmissionFileId',NULL,'string'),(122,'submissionFileId','23','int'),(122,'submissionId','6','int'),(122,'username','dbernnard','string'),(123,'fileId','12','int'),(123,'fileStage','2','int'),(123,'name','Identify: Understanding Your Information.pdf','string'),(123,'originalFileName','Identify: Understanding Your Information.pdf','string'),(123,'sourceSubmissionFileId',NULL,'string'),(123,'submissionFileId','23','int'),(123,'submissionId','6','int'),(123,'username','dbernnard','string'),(124,'fileId','13','int'),(124,'fileStage','2','int'),(124,'originalFileName','Scope: Knowing What Is Available.pdf','string'),(124,'sourceSubmissionFileId',NULL,'string'),(124,'submissionFileId','24','int'),(124,'submissionId','6','int'),(124,'username','dbernnard','string'),(125,'fileId','13','int'),(125,'fileStage','2','int'),(125,'name','Scope: Knowing What Is Available.pdf','string'),(125,'submissionFileId','24','int'),(125,'submissionId','6','int'),(125,'username','dbernnard','string'),(126,'fileId','13','int'),(126,'fileStage','2','int'),(126,'originalFileName','Scope: Knowing What Is Available.pdf','string'),(126,'sourceSubmissionFileId',NULL,'string'),(126,'submissionFileId','24','int'),(126,'submissionId','6','int'),(126,'username','dbernnard','string'),(127,'fileId','13','int'),(127,'fileStage','2','int'),(127,'name','Scope: Knowing What Is Available.pdf','string'),(127,'originalFileName','Scope: Knowing What Is Available.pdf','string'),(127,'sourceSubmissionFileId',NULL,'string'),(127,'submissionFileId','24','int'),(127,'submissionId','6','int'),(127,'username','dbernnard','string'),(128,'fileId','14','int'),(128,'fileStage','2','int'),(128,'originalFileName','Plan: Developing Research Strategies.pdf','string'),(128,'sourceSubmissionFileId',NULL,'string'),(128,'submissionFileId','25','int'),(128,'submissionId','6','int'),(128,'username','dbernnard','string'),(129,'fileId','14','int'),(129,'fileStage','2','int'),(129,'name','Plan: Developing Research Strategies.pdf','string'),(129,'submissionFileId','25','int'),(129,'submissionId','6','int'),(129,'username','dbernnard','string'),(130,'fileId','14','int'),(130,'fileStage','2','int'),(130,'originalFileName','Plan: Developing Research Strategies.pdf','string'),(130,'sourceSubmissionFileId',NULL,'string'),(130,'submissionFileId','25','int'),(130,'submissionId','6','int'),(130,'username','dbernnard','string'),(131,'fileId','14','int'),(131,'fileStage','2','int'),(131,'name','Plan: Developing Research Strategies.pdf','string'),(131,'originalFileName','Plan: Developing Research Strategies.pdf','string'),(131,'sourceSubmissionFileId',NULL,'string'),(131,'submissionFileId','25','int'),(131,'submissionId','6','int'),(131,'username','dbernnard','string'),(132,'fileId','15','int'),(132,'fileStage','2','int'),(132,'originalFileName','Gather: Finding What You Need.pdf','string'),(132,'sourceSubmissionFileId',NULL,'string'),(132,'submissionFileId','26','int'),(132,'submissionId','6','int'),(132,'username','dbernnard','string'),(133,'fileId','15','int'),(133,'fileStage','2','int'),(133,'name','Gather: Finding What You Need.pdf','string'),(133,'submissionFileId','26','int'),(133,'submissionId','6','int'),(133,'username','dbernnard','string'),(134,'fileId','15','int'),(134,'fileStage','2','int'),(134,'originalFileName','Gather: Finding What You Need.pdf','string'),(134,'sourceSubmissionFileId',NULL,'string'),(134,'submissionFileId','26','int'),(134,'submissionId','6','int'),(134,'username','dbernnard','string'),(135,'fileId','15','int'),(135,'fileStage','2','int'),(135,'name','Gather: Finding What You Need.pdf','string'),(135,'originalFileName','Gather: Finding What You Need.pdf','string'),(135,'sourceSubmissionFileId',NULL,'string'),(135,'submissionFileId','26','int'),(135,'submissionId','6','int'),(135,'username','dbernnard','string'),(138,'decision','Send to Internal Review','string'),(138,'editorName','Daniel Barnes','string'),(138,'submissionId','6','int'),(139,'fileId','12','int'),(139,'fileStage','19','int'),(139,'originalFileName','Identify: Understanding Your Information.pdf','string'),(139,'sourceSubmissionFileId','23','int'),(139,'submissionFileId','27','int'),(139,'submissionId','6','int'),(139,'username','dbarnes','string'),(140,'fileId','12','int'),(140,'fileStage','19','int'),(140,'name','Identify: Understanding Your Information.pdf','string'),(140,'submissionFileId','27','int'),(140,'submissionId','6','int'),(140,'username','dbarnes','string'),(141,'fileId','13','int'),(141,'fileStage','19','int'),(141,'originalFileName','Scope: Knowing What Is Available.pdf','string'),(141,'sourceSubmissionFileId','24','int'),(141,'submissionFileId','28','int'),(141,'submissionId','6','int'),(141,'username','dbarnes','string'),(142,'fileId','13','int'),(142,'fileStage','19','int'),(142,'name','Scope: Knowing What Is Available.pdf','string'),(142,'submissionFileId','28','int'),(142,'submissionId','6','int'),(142,'username','dbarnes','string'),(143,'fileId','14','int'),(143,'fileStage','19','int'),(143,'originalFileName','Plan: Developing Research Strategies.pdf','string'),(143,'sourceSubmissionFileId','25','int'),(143,'submissionFileId','29','int'),(143,'submissionId','6','int'),(143,'username','dbarnes','string'),(144,'fileId','14','int'),(144,'fileStage','19','int'),(144,'name','Plan: Developing Research Strategies.pdf','string'),(144,'submissionFileId','29','int'),(144,'submissionId','6','int'),(144,'username','dbarnes','string'),(145,'fileId','15','int'),(145,'fileStage','19','int'),(145,'originalFileName','Gather: Finding What You Need.pdf','string'),(145,'sourceSubmissionFileId','26','int'),(145,'submissionFileId','30','int'),(145,'submissionId','6','int'),(145,'username','dbarnes','string'),(146,'fileId','15','int'),(146,'fileStage','19','int'),(146,'name','Gather: Finding What You Need.pdf','string'),(146,'submissionFileId','30','int'),(146,'submissionId','6','int'),(146,'username','dbarnes','string'),(147,'name','Minoti Inoue','string'),(147,'userGroupName','Series editor','string'),(147,'username','minoue','string'),(148,'decision','Send to External Review','string'),(148,'editorName','Minoti Inoue','string'),(148,'submissionId','6','int'),(151,'fileId','16','int'),(151,'fileStage','2','int'),(151,'originalFileName','Introduction.pdf','string'),(151,'sourceSubmissionFileId',NULL,'string'),(151,'submissionFileId','31','int'),(151,'submissionId','7','int'),(151,'username','dkennepohl','string'),(152,'fileId','16','int'),(152,'fileStage','2','int'),(152,'name','Introduction.pdf','string'),(152,'submissionFileId','31','int'),(152,'submissionId','7','int'),(152,'username','dkennepohl','string'),(153,'fileId','16','int'),(153,'fileStage','2','int'),(153,'originalFileName','Introduction.pdf','string'),(153,'sourceSubmissionFileId',NULL,'string'),(153,'submissionFileId','31','int'),(153,'submissionId','7','int'),(153,'username','dkennepohl','string'),(154,'fileId','16','int'),(154,'fileStage','2','int'),(154,'name','Introduction.pdf','string'),(154,'originalFileName','Introduction.pdf','string'),(154,'sourceSubmissionFileId',NULL,'string'),(154,'submissionFileId','31','int'),(154,'submissionId','7','int'),(154,'username','dkennepohl','string'),(155,'fileId','17','int'),(155,'fileStage','2','int'),(155,'originalFileName','Chapter 1: Interactions Affording Distan.pdf','string'),(155,'sourceSubmissionFileId',NULL,'string'),(155,'submissionFileId','32','int'),(155,'submissionId','7','int'),(155,'username','dkennepohl','string'),(156,'fileId','17','int'),(156,'fileStage','2','int'),(156,'name','Chapter 1: Interactions Affording Distan.pdf','string'),(156,'submissionFileId','32','int'),(156,'submissionId','7','int'),(156,'username','dkennepohl','string'),(157,'fileId','17','int'),(157,'fileStage','2','int'),(157,'originalFileName','Chapter 1: Interactions Affording Distan.pdf','string'),(157,'sourceSubmissionFileId',NULL,'string'),(157,'submissionFileId','32','int'),(157,'submissionId','7','int'),(157,'username','dkennepohl','string'),(158,'fileId','17','int'),(158,'fileStage','2','int'),(158,'name','Chapter 1: Interactions Affording Distan.pdf','string'),(158,'originalFileName','Chapter 1: Interactions Affording Distan.pdf','string'),(158,'sourceSubmissionFileId',NULL,'string'),(158,'submissionFileId','32','int'),(158,'submissionId','7','int'),(158,'username','dkennepohl','string'),(159,'fileId','18','int'),(159,'fileStage','2','int'),(159,'originalFileName','Chapter 2: Learning Science at a Distanc.pdf','string'),(159,'sourceSubmissionFileId',NULL,'string'),(159,'submissionFileId','33','int'),(159,'submissionId','7','int'),(159,'username','dkennepohl','string'),(160,'fileId','18','int'),(160,'fileStage','2','int'),(160,'name','Chapter 2: Learning Science at a Distanc.pdf','string'),(160,'submissionFileId','33','int'),(160,'submissionId','7','int'),(160,'username','dkennepohl','string'),(161,'fileId','18','int'),(161,'fileStage','2','int'),(161,'originalFileName','Chapter 2: Learning Science at a Distanc.pdf','string'),(161,'sourceSubmissionFileId',NULL,'string'),(161,'submissionFileId','33','int'),(161,'submissionId','7','int'),(161,'username','dkennepohl','string'),(162,'fileId','18','int'),(162,'fileStage','2','int'),(162,'name','Chapter 2: Learning Science at a Distanc.pdf','string'),(162,'originalFileName','Chapter 2: Learning Science at a Distanc.pdf','string'),(162,'sourceSubmissionFileId',NULL,'string'),(162,'submissionFileId','33','int'),(162,'submissionId','7','int'),(162,'username','dkennepohl','string'),(163,'fileId','19','int'),(163,'fileStage','2','int'),(163,'originalFileName','Chapter 3: Leadership Strategies for Coo.pdf','string'),(163,'sourceSubmissionFileId',NULL,'string'),(163,'submissionFileId','34','int'),(163,'submissionId','7','int'),(163,'username','dkennepohl','string'),(164,'fileId','19','int'),(164,'fileStage','2','int'),(164,'name','Chapter 3: Leadership Strategies for Coo.pdf','string'),(164,'submissionFileId','34','int'),(164,'submissionId','7','int'),(164,'username','dkennepohl','string'),(165,'fileId','19','int'),(165,'fileStage','2','int'),(165,'originalFileName','Chapter 3: Leadership Strategies for Coo.pdf','string'),(165,'sourceSubmissionFileId',NULL,'string'),(165,'submissionFileId','34','int'),(165,'submissionId','7','int'),(165,'username','dkennepohl','string'),(166,'fileId','19','int'),(166,'fileStage','2','int'),(166,'name','Chapter 3: Leadership Strategies for Coo.pdf','string'),(166,'originalFileName','Chapter 3: Leadership Strategies for Coo.pdf','string'),(166,'sourceSubmissionFileId',NULL,'string'),(166,'submissionFileId','34','int'),(166,'submissionId','7','int'),(166,'username','dkennepohl','string'),(167,'fileId','20','int'),(167,'fileStage','2','int'),(167,'originalFileName','Chapter 4: Toward New Models of Flexible.pdf','string'),(167,'sourceSubmissionFileId',NULL,'string'),(167,'submissionFileId','35','int'),(167,'submissionId','7','int'),(167,'username','dkennepohl','string'),(168,'fileId','20','int'),(168,'fileStage','2','int'),(168,'name','Chapter 4: Toward New Models of Flexible.pdf','string'),(168,'submissionFileId','35','int'),(168,'submissionId','7','int'),(168,'username','dkennepohl','string'),(169,'fileId','20','int'),(169,'fileStage','2','int'),(169,'originalFileName','Chapter 4: Toward New Models of Flexible.pdf','string'),(169,'sourceSubmissionFileId',NULL,'string'),(169,'submissionFileId','35','int'),(169,'submissionId','7','int'),(169,'username','dkennepohl','string'),(170,'fileId','20','int'),(170,'fileStage','2','int'),(170,'name','Chapter 4: Toward New Models of Flexible.pdf','string'),(170,'originalFileName','Chapter 4: Toward New Models of Flexible.pdf','string'),(170,'sourceSubmissionFileId',NULL,'string'),(170,'submissionFileId','35','int'),(170,'submissionId','7','int'),(170,'username','dkennepohl','string'),(173,'decision','Send to External Review','string'),(173,'editorName','Daniel Barnes','string'),(173,'submissionId','7','int'),(174,'fileId','16','int'),(174,'fileStage','4','int'),(174,'originalFileName','Introduction.pdf','string'),(174,'sourceSubmissionFileId','31','int'),(174,'submissionFileId','36','int'),(174,'submissionId','7','int'),(174,'username','dbarnes','string'),(175,'fileId','16','int'),(175,'fileStage','4','int'),(175,'name','Introduction.pdf','string'),(175,'submissionFileId','36','int'),(175,'submissionId','7','int'),(175,'username','dbarnes','string'),(176,'fileId','17','int'),(176,'fileStage','4','int'),(176,'originalFileName','Chapter 1: Interactions Affording Distan.pdf','string'),(176,'sourceSubmissionFileId','32','int'),(176,'submissionFileId','37','int'),(176,'submissionId','7','int'),(176,'username','dbarnes','string'),(177,'fileId','17','int'),(177,'fileStage','4','int'),(177,'name','Chapter 1: Interactions Affording Distan.pdf','string'),(177,'submissionFileId','37','int'),(177,'submissionId','7','int'),(177,'username','dbarnes','string'),(178,'fileId','18','int'),(178,'fileStage','4','int'),(178,'originalFileName','Chapter 2: Learning Science at a Distanc.pdf','string'),(178,'sourceSubmissionFileId','33','int'),(178,'submissionFileId','38','int'),(178,'submissionId','7','int'),(178,'username','dbarnes','string'),(179,'fileId','18','int'),(179,'fileStage','4','int'),(179,'name','Chapter 2: Learning Science at a Distanc.pdf','string'),(179,'submissionFileId','38','int'),(179,'submissionId','7','int'),(179,'username','dbarnes','string'),(180,'fileId','19','int'),(180,'fileStage','4','int'),(180,'originalFileName','Chapter 3: Leadership Strategies for Coo.pdf','string'),(180,'sourceSubmissionFileId','34','int'),(180,'submissionFileId','39','int'),(180,'submissionId','7','int'),(180,'username','dbarnes','string'),(181,'fileId','19','int'),(181,'fileStage','4','int'),(181,'name','Chapter 3: Leadership Strategies for Coo.pdf','string'),(181,'submissionFileId','39','int'),(181,'submissionId','7','int'),(181,'username','dbarnes','string'),(182,'fileId','20','int'),(182,'fileStage','4','int'),(182,'originalFileName','Chapter 4: Toward New Models of Flexible.pdf','string'),(182,'sourceSubmissionFileId','35','int'),(182,'submissionFileId','40','int'),(182,'submissionId','7','int'),(182,'username','dbarnes','string'),(183,'fileId','20','int'),(183,'fileStage','4','int'),(183,'name','Chapter 4: Toward New Models of Flexible.pdf','string'),(183,'submissionFileId','40','int'),(183,'submissionId','7','int'),(183,'username','dbarnes','string'),(184,'reviewAssignmentId','8','string'),(184,'reviewerName','Adela Gallego','string'),(184,'round','1','int'),(184,'stageId','3','int'),(184,'submissionId','7','int'),(185,'decision','Accept Submission','string'),(185,'editorName','Daniel Barnes','string'),(185,'submissionId','7','int'),(186,'name','Maria Fritz','string'),(186,'userGroupName','Copyeditor','string'),(186,'username','mfritz','string'),(189,'fileId','21','int'),(189,'fileStage','2','int'),(189,'originalFileName','Editorial.pdf','string'),(189,'sourceSubmissionFileId',NULL,'string'),(189,'submissionFileId','41','int'),(189,'submissionId','8','int'),(189,'username','dbarnes','string'),(190,'fileId','21','int'),(190,'fileStage','2','int'),(190,'name','Editorial.pdf','string'),(190,'submissionFileId','41','int'),(190,'submissionId','8','int'),(190,'username','dbarnes','string'),(191,'fileId','21','int'),(191,'fileStage','2','int'),(191,'originalFileName','Editorial.pdf','string'),(191,'sourceSubmissionFileId',NULL,'string'),(191,'submissionFileId','41','int'),(191,'submissionId','8','int'),(191,'username','dbarnes','string'),(192,'fileId','21','int'),(192,'fileStage','2','int'),(192,'name','Editorial.pdf','string'),(192,'originalFileName','Editorial.pdf','string'),(192,'sourceSubmissionFileId',NULL,'string'),(192,'submissionFileId','41','int'),(192,'submissionId','8','int'),(192,'username','dbarnes','string'),(197,'fileId','22','int'),(197,'fileStage','2','int'),(197,'originalFileName','Internet, openness and the future of the.pdf','string'),(197,'sourceSubmissionFileId',NULL,'string'),(197,'submissionFileId','42','int'),(197,'submissionId','9','int'),(197,'username','fperini','string'),(198,'fileId','22','int'),(198,'fileStage','2','int'),(198,'name','Internet, openness and the future of the.pdf','string'),(198,'submissionFileId','42','int'),(198,'submissionId','9','int'),(198,'username','fperini','string'),(199,'fileId','22','int'),(199,'fileStage','2','int'),(199,'originalFileName','Internet, openness and the future of the.pdf','string'),(199,'sourceSubmissionFileId',NULL,'string'),(199,'submissionFileId','42','int'),(199,'submissionId','9','int'),(199,'username','fperini','string'),(200,'fileId','22','int'),(200,'fileStage','2','int'),(200,'name','Internet, openness and the future of the.pdf','string'),(200,'originalFileName','Internet, openness and the future of the.pdf','string'),(200,'sourceSubmissionFileId',NULL,'string'),(200,'submissionFileId','42','int'),(200,'submissionId','9','int'),(200,'username','fperini','string'),(201,'fileId','23','int'),(201,'fileStage','2','int'),(201,'originalFileName','Imagining the Internet: Open, closed or .pdf','string'),(201,'sourceSubmissionFileId',NULL,'string'),(201,'submissionFileId','43','int'),(201,'submissionId','9','int'),(201,'username','fperini','string'),(202,'fileId','23','int'),(202,'fileStage','2','int'),(202,'name','Imagining the Internet: Open, closed or .pdf','string'),(202,'submissionFileId','43','int'),(202,'submissionId','9','int'),(202,'username','fperini','string'),(203,'fileId','23','int'),(203,'fileStage','2','int'),(203,'originalFileName','Imagining the Internet: Open, closed or .pdf','string'),(203,'sourceSubmissionFileId',NULL,'string'),(203,'submissionFileId','43','int'),(203,'submissionId','9','int'),(203,'username','fperini','string'),(204,'fileId','23','int'),(204,'fileStage','2','int'),(204,'name','Imagining the Internet: Open, closed or .pdf','string'),(204,'originalFileName','Imagining the Internet: Open, closed or .pdf','string'),(204,'sourceSubmissionFileId',NULL,'string'),(204,'submissionFileId','43','int'),(204,'submissionId','9','int'),(204,'username','fperini','string'),(205,'fileId','24','int'),(205,'fileStage','2','int'),(205,'originalFileName','The internet in LAC will remain free, pu.pdf','string'),(205,'sourceSubmissionFileId',NULL,'string'),(205,'submissionFileId','44','int'),(205,'submissionId','9','int'),(205,'username','fperini','string'),(206,'fileId','24','int'),(206,'fileStage','2','int'),(206,'name','The internet in LAC will remain free, pu.pdf','string'),(206,'submissionFileId','44','int'),(206,'submissionId','9','int'),(206,'username','fperini','string'),(207,'fileId','24','int'),(207,'fileStage','2','int'),(207,'originalFileName','The internet in LAC will remain free, pu.pdf','string'),(207,'sourceSubmissionFileId',NULL,'string'),(207,'submissionFileId','44','int'),(207,'submissionId','9','int'),(207,'username','fperini','string'),(208,'fileId','24','int'),(208,'fileStage','2','int'),(208,'name','The internet in LAC will remain free, pu.pdf','string'),(208,'originalFileName','The internet in LAC will remain free, pu.pdf','string'),(208,'sourceSubmissionFileId',NULL,'string'),(208,'submissionFileId','44','int'),(208,'submissionId','9','int'),(208,'username','fperini','string'),(209,'fileId','25','int'),(209,'fileStage','2','int'),(209,'originalFileName','Free Internet?.pdf','string'),(209,'sourceSubmissionFileId',NULL,'string'),(209,'submissionFileId','45','int'),(209,'submissionId','9','int'),(209,'username','fperini','string'),(210,'fileId','25','int'),(210,'fileStage','2','int'),(210,'name','Free Internet?.pdf','string'),(210,'submissionFileId','45','int'),(210,'submissionId','9','int'),(210,'username','fperini','string'),(211,'fileId','25','int'),(211,'fileStage','2','int'),(211,'originalFileName','Free Internet?.pdf','string'),(211,'sourceSubmissionFileId',NULL,'string'),(211,'submissionFileId','45','int'),(211,'submissionId','9','int'),(211,'username','fperini','string'),(212,'fileId','25','int'),(212,'fileStage','2','int'),(212,'name','Free Internet?.pdf','string'),(212,'originalFileName','Free Internet?.pdf','string'),(212,'sourceSubmissionFileId',NULL,'string'),(212,'submissionFileId','45','int'),(212,'submissionId','9','int'),(212,'username','fperini','string'),(213,'fileId','26','int'),(213,'fileStage','2','int'),(213,'originalFileName','Risks and challenges for freedom of expr.pdf','string'),(213,'sourceSubmissionFileId',NULL,'string'),(213,'submissionFileId','46','int'),(213,'submissionId','9','int'),(213,'username','fperini','string'),(214,'fileId','26','int'),(214,'fileStage','2','int'),(214,'name','Risks and challenges for freedom of expr.pdf','string'),(214,'submissionFileId','46','int'),(214,'submissionId','9','int'),(214,'username','fperini','string'),(215,'fileId','26','int'),(215,'fileStage','2','int'),(215,'originalFileName','Risks and challenges for freedom of expr.pdf','string'),(215,'sourceSubmissionFileId',NULL,'string'),(215,'submissionFileId','46','int'),(215,'submissionId','9','int'),(215,'username','fperini','string'),(216,'fileId','26','int'),(216,'fileStage','2','int'),(216,'name','Risks and challenges for freedom of expr.pdf','string'),(216,'originalFileName','Risks and challenges for freedom of expr.pdf','string'),(216,'sourceSubmissionFileId',NULL,'string'),(216,'submissionFileId','46','int'),(216,'submissionId','9','int'),(216,'username','fperini','string'),(219,'decision','Send to Internal Review','string'),(219,'editorName','Daniel Barnes','string'),(219,'submissionId','9','int'),(220,'fileId','22','int'),(220,'fileStage','19','int'),(220,'originalFileName','Internet, openness and the future of the.pdf','string'),(220,'sourceSubmissionFileId','42','int'),(220,'submissionFileId','47','int'),(220,'submissionId','9','int'),(220,'username','dbarnes','string'),(221,'fileId','22','int'),(221,'fileStage','19','int'),(221,'name','Internet, openness and the future of the.pdf','string'),(221,'submissionFileId','47','int'),(221,'submissionId','9','int'),(221,'username','dbarnes','string'),(222,'fileId','23','int'),(222,'fileStage','19','int'),(222,'originalFileName','Imagining the Internet: Open, closed or .pdf','string'),(222,'sourceSubmissionFileId','43','int'),(222,'submissionFileId','48','int'),(222,'submissionId','9','int'),(222,'username','dbarnes','string'),(223,'fileId','23','int'),(223,'fileStage','19','int'),(223,'name','Imagining the Internet: Open, closed or .pdf','string'),(223,'submissionFileId','48','int'),(223,'submissionId','9','int'),(223,'username','dbarnes','string'),(224,'fileId','24','int'),(224,'fileStage','19','int'),(224,'originalFileName','The internet in LAC will remain free, pu.pdf','string'),(224,'sourceSubmissionFileId','44','int'),(224,'submissionFileId','49','int'),(224,'submissionId','9','int'),(224,'username','dbarnes','string'),(225,'fileId','24','int'),(225,'fileStage','19','int'),(225,'name','The internet in LAC will remain free, pu.pdf','string'),(225,'submissionFileId','49','int'),(225,'submissionId','9','int'),(225,'username','dbarnes','string'),(226,'fileId','25','int'),(226,'fileStage','19','int'),(226,'originalFileName','Free Internet?.pdf','string'),(226,'sourceSubmissionFileId','45','int'),(226,'submissionFileId','50','int'),(226,'submissionId','9','int'),(226,'username','dbarnes','string'),(227,'fileId','25','int'),(227,'fileStage','19','int'),(227,'name','Free Internet?.pdf','string'),(227,'submissionFileId','50','int'),(227,'submissionId','9','int'),(227,'username','dbarnes','string'),(228,'fileId','26','int'),(228,'fileStage','19','int'),(228,'originalFileName','Risks and challenges for freedom of expr.pdf','string'),(228,'sourceSubmissionFileId','46','int'),(228,'submissionFileId','51','int'),(228,'submissionId','9','int'),(228,'username','dbarnes','string'),(229,'fileId','26','int'),(229,'fileStage','19','int'),(229,'name','Risks and challenges for freedom of expr.pdf','string'),(229,'submissionFileId','51','int'),(229,'submissionId','9','int'),(229,'username','dbarnes','string'),(232,'fileId','27','int'),(232,'fileStage','2','int'),(232,'originalFileName','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(232,'sourceSubmissionFileId',NULL,'string'),(232,'submissionFileId','52','int'),(232,'submissionId','10','int'),(232,'username','jbrower','string'),(233,'fileId','27','int'),(233,'fileStage','2','int'),(233,'name','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(233,'submissionFileId','52','int'),(233,'submissionId','10','int'),(233,'username','jbrower','string'),(234,'fileId','27','int'),(234,'fileStage','2','int'),(234,'originalFileName','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(234,'sourceSubmissionFileId',NULL,'string'),(234,'submissionFileId','52','int'),(234,'submissionId','10','int'),(234,'username','jbrower','string'),(235,'fileId','27','int'),(235,'fileStage','2','int'),(235,'name','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(235,'originalFileName','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(235,'sourceSubmissionFileId',NULL,'string'),(235,'submissionFileId','52','int'),(235,'submissionId','10','int'),(235,'username','jbrower','string'),(240,'fileId','28','int'),(240,'fileStage','2','int'),(240,'originalFileName','Dreamwork.pdf','string'),(240,'sourceSubmissionFileId',NULL,'string'),(240,'submissionFileId','53','int'),(240,'submissionId','11','int'),(240,'username','jlockehart','string'),(241,'fileId','28','int'),(241,'fileStage','2','int'),(241,'name','Dreamwork.pdf','string'),(241,'submissionFileId','53','int'),(241,'submissionId','11','int'),(241,'username','jlockehart','string'),(242,'fileId','28','int'),(242,'fileStage','2','int'),(242,'originalFileName','Dreamwork.pdf','string'),(242,'sourceSubmissionFileId',NULL,'string'),(242,'submissionFileId','53','int'),(242,'submissionId','11','int'),(242,'username','jlockehart','string'),(243,'fileId','28','int'),(243,'fileStage','2','int'),(243,'name','Dreamwork.pdf','string'),(243,'originalFileName','Dreamwork.pdf','string'),(243,'sourceSubmissionFileId',NULL,'string'),(243,'submissionFileId','53','int'),(243,'submissionId','11','int'),(243,'username','jlockehart','string'),(246,'decision','Send to Internal Review','string'),(246,'editorName','Daniel Barnes','string'),(246,'submissionId','11','int'),(247,'fileId','28','int'),(247,'fileStage','19','int'),(247,'originalFileName','Dreamwork.pdf','string'),(247,'sourceSubmissionFileId','53','int'),(247,'submissionFileId','54','int'),(247,'submissionId','11','int'),(247,'username','dbarnes','string'),(248,'fileId','28','int'),(248,'fileStage','19','int'),(248,'name','Dreamwork.pdf','string'),(248,'submissionFileId','54','int'),(248,'submissionId','11','int'),(248,'username','dbarnes','string'),(249,'reviewAssignmentId','9','string'),(249,'reviewerName','Aisla McCrae','string'),(249,'round','1','int'),(249,'stageId','2','int'),(249,'submissionId','11','int'),(250,'decision','Send to External Review','string'),(250,'editorName','Daniel Barnes','string'),(250,'submissionId','11','int'),(251,'reviewAssignmentId','10','string'),(251,'reviewerName','Adela Gallego','string'),(251,'round','1','int'),(251,'stageId','3','int'),(251,'submissionId','11','int'),(252,'reviewAssignmentId','11','string'),(252,'reviewerName','Gonzalo Favio','string'),(252,'round','1','int'),(252,'stageId','3','int'),(252,'submissionId','11','int'),(253,'reviewAssignmentId','10','int'),(253,'reviewerName','Adela Gallego','string'),(253,'round','1','int'),(253,'submissionId','11','int'),(254,'reviewAssignmentId','10','int'),(254,'reviewerName','Adela Gallego','string'),(254,'round','1','int'),(254,'submissionId','11','int'),(255,'reviewAssignmentId','11','int'),(255,'reviewerName','Gonzalo Favio','string'),(255,'round','1','int'),(255,'submissionId','11','int'),(256,'reviewAssignmentId','11','int'),(256,'reviewerName','Gonzalo Favio','string'),(256,'round','1','int'),(256,'submissionId','11','int'),(257,'decision','Accept Submission','string'),(257,'editorName','Daniel Barnes','string'),(257,'submissionId','11','int'),(260,'fileId','29','int'),(260,'fileStage','2','int'),(260,'originalFileName','Catalyzing Access through Social and Tec.pdf','string'),(260,'sourceSubmissionFileId',NULL,'string'),(260,'submissionFileId','55','int'),(260,'submissionId','12','int'),(260,'username','lelder','string'),(261,'fileId','29','int'),(261,'fileStage','2','int'),(261,'name','Catalyzing Access through Social and Tec.pdf','string'),(261,'submissionFileId','55','int'),(261,'submissionId','12','int'),(261,'username','lelder','string'),(262,'fileId','29','int'),(262,'fileStage','2','int'),(262,'originalFileName','Catalyzing Access through Social and Tec.pdf','string'),(262,'sourceSubmissionFileId',NULL,'string'),(262,'submissionFileId','55','int'),(262,'submissionId','12','int'),(262,'username','lelder','string'),(263,'fileId','29','int'),(263,'fileStage','2','int'),(263,'name','Catalyzing Access through Social and Tec.pdf','string'),(263,'originalFileName','Catalyzing Access through Social and Tec.pdf','string'),(263,'sourceSubmissionFileId',NULL,'string'),(263,'submissionFileId','55','int'),(263,'submissionId','12','int'),(263,'username','lelder','string'),(264,'fileId','30','int'),(264,'fileStage','2','int'),(264,'originalFileName','Catalyzing Access via Telecommunications.pdf','string'),(264,'sourceSubmissionFileId',NULL,'string'),(264,'submissionFileId','56','int'),(264,'submissionId','12','int'),(264,'username','lelder','string'),(265,'fileId','30','int'),(265,'fileStage','2','int'),(265,'name','Catalyzing Access via Telecommunications.pdf','string'),(265,'submissionFileId','56','int'),(265,'submissionId','12','int'),(265,'username','lelder','string'),(266,'fileId','30','int'),(266,'fileStage','2','int'),(266,'originalFileName','Catalyzing Access via Telecommunications.pdf','string'),(266,'sourceSubmissionFileId',NULL,'string'),(266,'submissionFileId','56','int'),(266,'submissionId','12','int'),(266,'username','lelder','string'),(267,'fileId','30','int'),(267,'fileStage','2','int'),(267,'name','Catalyzing Access via Telecommunications.pdf','string'),(267,'originalFileName','Catalyzing Access via Telecommunications.pdf','string'),(267,'sourceSubmissionFileId',NULL,'string'),(267,'submissionFileId','56','int'),(267,'submissionId','12','int'),(267,'username','lelder','string'),(268,'fileId','31','int'),(268,'fileStage','2','int'),(268,'originalFileName','Access to Knowledge as a New Paradigm fo.pdf','string'),(268,'sourceSubmissionFileId',NULL,'string'),(268,'submissionFileId','57','int'),(268,'submissionId','12','int'),(268,'username','lelder','string'),(269,'fileId','31','int'),(269,'fileStage','2','int'),(269,'name','Access to Knowledge as a New Paradigm fo.pdf','string'),(269,'submissionFileId','57','int'),(269,'submissionId','12','int'),(269,'username','lelder','string'),(270,'fileId','31','int'),(270,'fileStage','2','int'),(270,'originalFileName','Access to Knowledge as a New Paradigm fo.pdf','string'),(270,'sourceSubmissionFileId',NULL,'string'),(270,'submissionFileId','57','int'),(270,'submissionId','12','int'),(270,'username','lelder','string'),(271,'fileId','31','int'),(271,'fileStage','2','int'),(271,'name','Access to Knowledge as a New Paradigm fo.pdf','string'),(271,'originalFileName','Access to Knowledge as a New Paradigm fo.pdf','string'),(271,'sourceSubmissionFileId',NULL,'string'),(271,'submissionFileId','57','int'),(271,'submissionId','12','int'),(271,'username','lelder','string'),(274,'decision','Send to Internal Review','string'),(274,'editorName','Daniel Barnes','string'),(274,'submissionId','12','int'),(275,'fileId','29','int'),(275,'fileStage','19','int'),(275,'originalFileName','Catalyzing Access through Social and Tec.pdf','string'),(275,'sourceSubmissionFileId','55','int'),(275,'submissionFileId','58','int'),(275,'submissionId','12','int'),(275,'username','dbarnes','string'),(276,'fileId','29','int'),(276,'fileStage','19','int'),(276,'name','Catalyzing Access through Social and Tec.pdf','string'),(276,'submissionFileId','58','int'),(276,'submissionId','12','int'),(276,'username','dbarnes','string'),(277,'fileId','30','int'),(277,'fileStage','19','int'),(277,'originalFileName','Catalyzing Access via Telecommunications.pdf','string'),(277,'sourceSubmissionFileId','56','int'),(277,'submissionFileId','59','int'),(277,'submissionId','12','int'),(277,'username','dbarnes','string'),(278,'fileId','30','int'),(278,'fileStage','19','int'),(278,'name','Catalyzing Access via Telecommunications.pdf','string'),(278,'submissionFileId','59','int'),(278,'submissionId','12','int'),(278,'username','dbarnes','string'),(279,'fileId','31','int'),(279,'fileStage','19','int'),(279,'originalFileName','Access to Knowledge as a New Paradigm fo.pdf','string'),(279,'sourceSubmissionFileId','57','int'),(279,'submissionFileId','60','int'),(279,'submissionId','12','int'),(279,'username','dbarnes','string'),(280,'fileId','31','int'),(280,'fileStage','19','int'),(280,'name','Access to Knowledge as a New Paradigm fo.pdf','string'),(280,'submissionFileId','60','int'),(280,'submissionId','12','int'),(280,'username','dbarnes','string'),(281,'reviewAssignmentId','12','string'),(281,'reviewerName','Julie Janssen','string'),(281,'round','1','int'),(281,'stageId','2','int'),(281,'submissionId','12','int'),(282,'reviewAssignmentId','13','string'),(282,'reviewerName','Paul Hudson','string'),(282,'round','1','int'),(282,'stageId','2','int'),(282,'submissionId','12','int'),(283,'reviewAssignmentId','14','string'),(283,'reviewerName','Aisla McCrae','string'),(283,'round','1','int'),(283,'stageId','2','int'),(283,'submissionId','12','int'),(284,'reviewAssignmentId','13','int'),(284,'reviewerName','Paul Hudson','string'),(284,'round','1','int'),(284,'submissionId','12','int'),(285,'reviewAssignmentId','13','int'),(285,'reviewerName','Paul Hudson','string'),(285,'round','1','int'),(285,'submissionId','12','int'),(288,'fileId','32','int'),(288,'fileStage','2','int'),(288,'originalFileName','Current State of Mobile Learning.pdf','string'),(288,'sourceSubmissionFileId',NULL,'string'),(288,'submissionFileId','61','int'),(288,'submissionId','13','int'),(288,'username','mally','string'),(289,'fileId','32','int'),(289,'fileStage','2','int'),(289,'name','Current State of Mobile Learning.pdf','string'),(289,'submissionFileId','61','int'),(289,'submissionId','13','int'),(289,'username','mally','string'),(290,'fileId','32','int'),(290,'fileStage','2','int'),(290,'originalFileName','Current State of Mobile Learning.pdf','string'),(290,'sourceSubmissionFileId',NULL,'string'),(290,'submissionFileId','61','int'),(290,'submissionId','13','int'),(290,'username','mally','string'),(291,'fileId','32','int'),(291,'fileStage','2','int'),(291,'name','Current State of Mobile Learning.pdf','string'),(291,'originalFileName','Current State of Mobile Learning.pdf','string'),(291,'sourceSubmissionFileId',NULL,'string'),(291,'submissionFileId','61','int'),(291,'submissionId','13','int'),(291,'username','mally','string'),(292,'fileId','33','int'),(292,'fileStage','2','int'),(292,'originalFileName','A Model for Framing Mobile Learning.pdf','string'),(292,'sourceSubmissionFileId',NULL,'string'),(292,'submissionFileId','62','int'),(292,'submissionId','13','int'),(292,'username','mally','string'),(293,'fileId','33','int'),(293,'fileStage','2','int'),(293,'name','A Model for Framing Mobile Learning.pdf','string'),(293,'submissionFileId','62','int'),(293,'submissionId','13','int'),(293,'username','mally','string'),(294,'fileId','33','int'),(294,'fileStage','2','int'),(294,'originalFileName','A Model for Framing Mobile Learning.pdf','string'),(294,'sourceSubmissionFileId',NULL,'string'),(294,'submissionFileId','62','int'),(294,'submissionId','13','int'),(294,'username','mally','string'),(295,'fileId','33','int'),(295,'fileStage','2','int'),(295,'name','A Model for Framing Mobile Learning.pdf','string'),(295,'originalFileName','A Model for Framing Mobile Learning.pdf','string'),(295,'sourceSubmissionFileId',NULL,'string'),(295,'submissionFileId','62','int'),(295,'submissionId','13','int'),(295,'username','mally','string'),(296,'fileId','34','int'),(296,'fileStage','2','int'),(296,'originalFileName','Mobile Distance Learning with PDAs: Deve.pdf','string'),(296,'sourceSubmissionFileId',NULL,'string'),(296,'submissionFileId','63','int'),(296,'submissionId','13','int'),(296,'username','mally','string'),(297,'fileId','34','int'),(297,'fileStage','2','int'),(297,'name','Mobile Distance Learning with PDAs: Deve.pdf','string'),(297,'submissionFileId','63','int'),(297,'submissionId','13','int'),(297,'username','mally','string'),(298,'fileId','34','int'),(298,'fileStage','2','int'),(298,'originalFileName','Mobile Distance Learning with PDAs: Deve.pdf','string'),(298,'sourceSubmissionFileId',NULL,'string'),(298,'submissionFileId','63','int'),(298,'submissionId','13','int'),(298,'username','mally','string'),(299,'fileId','34','int'),(299,'fileStage','2','int'),(299,'name','Mobile Distance Learning with PDAs: Deve.pdf','string'),(299,'originalFileName','Mobile Distance Learning with PDAs: Deve.pdf','string'),(299,'sourceSubmissionFileId',NULL,'string'),(299,'submissionFileId','63','int'),(299,'submissionId','13','int'),(299,'username','mally','string'),(302,'decision','Send to Internal Review','string'),(302,'editorName','Daniel Barnes','string'),(302,'submissionId','13','int'),(303,'fileId','32','int'),(303,'fileStage','19','int'),(303,'originalFileName','Current State of Mobile Learning.pdf','string'),(303,'sourceSubmissionFileId','61','int'),(303,'submissionFileId','64','int'),(303,'submissionId','13','int'),(303,'username','dbarnes','string'),(304,'fileId','32','int'),(304,'fileStage','19','int'),(304,'name','Current State of Mobile Learning.pdf','string'),(304,'submissionFileId','64','int'),(304,'submissionId','13','int'),(304,'username','dbarnes','string'),(305,'fileId','33','int'),(305,'fileStage','19','int'),(305,'originalFileName','A Model for Framing Mobile Learning.pdf','string'),(305,'sourceSubmissionFileId','62','int'),(305,'submissionFileId','65','int'),(305,'submissionId','13','int'),(305,'username','dbarnes','string'),(306,'fileId','33','int'),(306,'fileStage','19','int'),(306,'name','A Model for Framing Mobile Learning.pdf','string'),(306,'submissionFileId','65','int'),(306,'submissionId','13','int'),(306,'username','dbarnes','string'),(307,'fileId','34','int'),(307,'fileStage','19','int'),(307,'originalFileName','Mobile Distance Learning with PDAs: Deve.pdf','string'),(307,'sourceSubmissionFileId','63','int'),(307,'submissionFileId','66','int'),(307,'submissionId','13','int'),(307,'username','dbarnes','string'),(308,'fileId','34','int'),(308,'fileStage','19','int'),(308,'name','Mobile Distance Learning with PDAs: Deve.pdf','string'),(308,'submissionFileId','66','int'),(308,'submissionId','13','int'),(308,'username','dbarnes','string'),(309,'reviewAssignmentId','15','string'),(309,'reviewerName','Paul Hudson','string'),(309,'round','1','int'),(309,'stageId','2','int'),(309,'submissionId','13','int'),(310,'decision','Send to External Review','string'),(310,'editorName','Daniel Barnes','string'),(310,'submissionId','13','int'),(311,'reviewAssignmentId','16','string'),(311,'reviewerName','Adela Gallego','string'),(311,'round','1','int'),(311,'stageId','3','int'),(311,'submissionId','13','int'),(312,'reviewAssignmentId','17','string'),(312,'reviewerName','Al Zacharia','string'),(312,'round','1','int'),(312,'stageId','3','int'),(312,'submissionId','13','int'),(313,'reviewAssignmentId','18','string'),(313,'reviewerName','Gonzalo Favio','string'),(313,'round','1','int'),(313,'stageId','3','int'),(313,'submissionId','13','int'),(314,'reviewAssignmentId','16','int'),(314,'reviewerName','Adela Gallego','string'),(314,'round','1','int'),(314,'submissionId','13','int'),(315,'reviewAssignmentId','16','int'),(315,'reviewerName','Adela Gallego','string'),(315,'round','1','int'),(315,'submissionId','13','int'),(316,'reviewAssignmentId','18','int'),(316,'reviewerName','Gonzalo Favio','string'),(316,'round','1','int'),(316,'submissionId','13','int'),(317,'reviewAssignmentId','18','int'),(317,'reviewerName','Gonzalo Favio','string'),(317,'round','1','int'),(317,'submissionId','13','int'),(318,'decision','Accept Submission','string'),(318,'editorName','Daniel Barnes','string'),(318,'submissionId','13','int'),(321,'fileId','35','int'),(321,'fileStage','2','int'),(321,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(321,'sourceSubmissionFileId',NULL,'string'),(321,'submissionFileId','67','int'),(321,'submissionId','14','int'),(321,'username','mdawson','string'),(322,'fileId','35','int'),(322,'fileStage','2','int'),(322,'name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(322,'submissionFileId','67','int'),(322,'submissionId','14','int'),(322,'username','mdawson','string'),(323,'fileId','35','int'),(323,'fileStage','2','int'),(323,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(323,'sourceSubmissionFileId',NULL,'string'),(323,'submissionFileId','67','int'),(323,'submissionId','14','int'),(323,'username','mdawson','string'),(324,'fileId','35','int'),(324,'fileStage','2','int'),(324,'name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(324,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(324,'sourceSubmissionFileId',NULL,'string'),(324,'submissionFileId','67','int'),(324,'submissionId','14','int'),(324,'username','mdawson','string'),(325,'fileId','36','int'),(325,'fileStage','2','int'),(325,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(325,'sourceSubmissionFileId',NULL,'string'),(325,'submissionFileId','68','int'),(325,'submissionId','14','int'),(325,'username','mdawson','string'),(326,'fileId','36','int'),(326,'fileStage','2','int'),(326,'name','Chapter 2: Classical Music and the Class.pdf','string'),(326,'submissionFileId','68','int'),(326,'submissionId','14','int'),(326,'username','mdawson','string'),(327,'fileId','36','int'),(327,'fileStage','2','int'),(327,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(327,'sourceSubmissionFileId',NULL,'string'),(327,'submissionFileId','68','int'),(327,'submissionId','14','int'),(327,'username','mdawson','string'),(328,'fileId','36','int'),(328,'fileStage','2','int'),(328,'name','Chapter 2: Classical Music and the Class.pdf','string'),(328,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(328,'sourceSubmissionFileId',NULL,'string'),(328,'submissionFileId','68','int'),(328,'submissionId','14','int'),(328,'username','mdawson','string'),(329,'fileId','37','int'),(329,'fileStage','2','int'),(329,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(329,'sourceSubmissionFileId',NULL,'string'),(329,'submissionFileId','69','int'),(329,'submissionId','14','int'),(329,'username','mdawson','string'),(330,'fileId','37','int'),(330,'fileStage','2','int'),(330,'name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(330,'submissionFileId','69','int'),(330,'submissionId','14','int'),(330,'username','mdawson','string'),(331,'fileId','37','int'),(331,'fileStage','2','int'),(331,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(331,'sourceSubmissionFileId',NULL,'string'),(331,'submissionFileId','69','int'),(331,'submissionId','14','int'),(331,'username','mdawson','string'),(332,'fileId','37','int'),(332,'fileStage','2','int'),(332,'name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(332,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(332,'sourceSubmissionFileId',NULL,'string'),(332,'submissionFileId','69','int'),(332,'submissionId','14','int'),(332,'username','mdawson','string'),(333,'fileId','38','int'),(333,'fileStage','2','int'),(333,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(333,'sourceSubmissionFileId',NULL,'string'),(333,'submissionFileId','70','int'),(333,'submissionId','14','int'),(333,'username','mdawson','string'),(334,'fileId','38','int'),(334,'fileStage','2','int'),(334,'name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(334,'submissionFileId','70','int'),(334,'submissionId','14','int'),(334,'username','mdawson','string'),(335,'fileId','38','int'),(335,'fileStage','2','int'),(335,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(335,'sourceSubmissionFileId',NULL,'string'),(335,'submissionFileId','70','int'),(335,'submissionId','14','int'),(335,'username','mdawson','string'),(336,'fileId','38','int'),(336,'fileStage','2','int'),(336,'name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(336,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(336,'sourceSubmissionFileId',NULL,'string'),(336,'submissionFileId','70','int'),(336,'submissionId','14','int'),(336,'username','mdawson','string'),(337,'fileId','39','int'),(337,'fileStage','2','int'),(337,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(337,'sourceSubmissionFileId',NULL,'string'),(337,'submissionFileId','71','int'),(337,'submissionId','14','int'),(337,'username','mdawson','string'),(338,'fileId','39','int'),(338,'fileStage','2','int'),(338,'name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(338,'submissionFileId','71','int'),(338,'submissionId','14','int'),(338,'username','mdawson','string'),(339,'fileId','39','int'),(339,'fileStage','2','int'),(339,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(339,'sourceSubmissionFileId',NULL,'string'),(339,'submissionFileId','71','int'),(339,'submissionId','14','int'),(339,'username','mdawson','string'),(340,'fileId','39','int'),(340,'fileStage','2','int'),(340,'name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(340,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(340,'sourceSubmissionFileId',NULL,'string'),(340,'submissionFileId','71','int'),(340,'submissionId','14','int'),(340,'username','mdawson','string'),(341,'fileId','40','int'),(341,'fileStage','2','int'),(341,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(341,'sourceSubmissionFileId',NULL,'string'),(341,'submissionFileId','72','int'),(341,'submissionId','14','int'),(341,'username','mdawson','string'),(342,'fileId','40','int'),(342,'fileStage','2','int'),(342,'name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(342,'submissionFileId','72','int'),(342,'submissionId','14','int'),(342,'username','mdawson','string'),(343,'fileId','40','int'),(343,'fileStage','2','int'),(343,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(343,'sourceSubmissionFileId',NULL,'string'),(343,'submissionFileId','72','int'),(343,'submissionId','14','int'),(343,'username','mdawson','string'),(344,'fileId','40','int'),(344,'fileStage','2','int'),(344,'name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(344,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(344,'sourceSubmissionFileId',NULL,'string'),(344,'submissionFileId','72','int'),(344,'submissionId','14','int'),(344,'username','mdawson','string'),(347,'decision','Send to Internal Review','string'),(347,'editorName','Daniel Barnes','string'),(347,'submissionId','14','int'),(348,'reviewAssignmentId','19','string'),(348,'reviewerName','Julie Janssen','string'),(348,'round','1','int'),(348,'stageId','2','int'),(348,'submissionId','14','int'),(349,'decision','Send to External Review','string'),(349,'editorName','Daniel Barnes','string'),(349,'submissionId','14','int'),(350,'reviewAssignmentId','20','string'),(350,'reviewerName','Al Zacharia','string'),(350,'round','1','int'),(350,'stageId','3','int'),(350,'submissionId','14','int'),(351,'decision','Accept Submission','string'),(351,'editorName','Daniel Barnes','string'),(351,'submissionId','14','int'),(352,'name','Maria Fritz','string'),(352,'userGroupName','Copyeditor','string'),(352,'username','mfritz','string'),(353,'decision','Send To Production','string'),(353,'editorName','Daniel Barnes','string'),(353,'submissionId','14','int'),(354,'name','Graham Cox','string'),(354,'userGroupName','Layout Editor','string'),(354,'username','gcox','string'),(355,'name','Sabine Kumar','string'),(355,'userGroupName','Proofreader','string'),(355,'username','skumar','string'),(356,'formatName','PDF','string'),(357,'fileId','35','int'),(357,'fileStage','10','int'),(357,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(357,'sourceSubmissionFileId','67','int'),(357,'submissionFileId','73','int'),(357,'submissionId','14','int'),(357,'username','dbarnes','string'),(358,'fileId','35','int'),(358,'fileStage','10','int'),(358,'name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(358,'submissionFileId','73','int'),(358,'submissionId','14','int'),(358,'username','dbarnes','string'),(359,'fileId','36','int'),(359,'fileStage','10','int'),(359,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(359,'sourceSubmissionFileId','68','int'),(359,'submissionFileId','74','int'),(359,'submissionId','14','int'),(359,'username','dbarnes','string'),(360,'fileId','36','int'),(360,'fileStage','10','int'),(360,'name','Chapter 2: Classical Music and the Class.pdf','string'),(360,'submissionFileId','74','int'),(360,'submissionId','14','int'),(360,'username','dbarnes','string'),(361,'fileId','37','int'),(361,'fileStage','10','int'),(361,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(361,'sourceSubmissionFileId','69','int'),(361,'submissionFileId','75','int'),(361,'submissionId','14','int'),(361,'username','dbarnes','string'),(362,'fileId','37','int'),(362,'fileStage','10','int'),(362,'name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(362,'submissionFileId','75','int'),(362,'submissionId','14','int'),(362,'username','dbarnes','string'),(363,'fileId','38','int'),(363,'fileStage','10','int'),(363,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(363,'sourceSubmissionFileId','70','int'),(363,'submissionFileId','76','int'),(363,'submissionId','14','int'),(363,'username','dbarnes','string'),(364,'fileId','38','int'),(364,'fileStage','10','int'),(364,'name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(364,'submissionFileId','76','int'),(364,'submissionId','14','int'),(364,'username','dbarnes','string'),(365,'fileId','39','int'),(365,'fileStage','10','int'),(365,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(365,'sourceSubmissionFileId','71','int'),(365,'submissionFileId','77','int'),(365,'submissionId','14','int'),(365,'username','dbarnes','string'),(366,'fileId','39','int'),(366,'fileStage','10','int'),(366,'name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(366,'submissionFileId','77','int'),(366,'submissionId','14','int'),(366,'username','dbarnes','string'),(367,'fileId','40','int'),(367,'fileStage','10','int'),(367,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(367,'sourceSubmissionFileId','72','int'),(367,'submissionFileId','78','int'),(367,'submissionId','14','int'),(367,'username','dbarnes','string'),(368,'fileId','40','int'),(368,'fileStage','10','int'),(368,'name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(368,'submissionFileId','78','int'),(368,'submissionId','14','int'),(368,'username','dbarnes','string'),(369,'publicationFormatName','PDF','string'),(370,'publicationFormatName','PDF','string'),(371,'fileId','35','int'),(371,'fileStage','10','int'),(371,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(371,'sourceSubmissionFileId','67','int'),(371,'submissionFileId','73','int'),(371,'submissionId','14','int'),(371,'username','dbarnes','string'),(372,'fileId','35','int'),(372,'fileStage','10','int'),(372,'name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(372,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(372,'sourceSubmissionFileId','67','int'),(372,'submissionFileId','73','int'),(372,'submissionId','14','int'),(372,'username','dbarnes','string'),(373,'file','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(373,'name','Daniel Barnes','string'),(373,'username','dbarnes','string'),(374,'fileId','36','int'),(374,'fileStage','10','int'),(374,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(374,'sourceSubmissionFileId','68','int'),(374,'submissionFileId','74','int'),(374,'submissionId','14','int'),(374,'username','dbarnes','string'),(375,'fileId','36','int'),(375,'fileStage','10','int'),(375,'name','Chapter 2: Classical Music and the Class.pdf','string'),(375,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(375,'sourceSubmissionFileId','68','int'),(375,'submissionFileId','74','int'),(375,'submissionId','14','int'),(375,'username','dbarnes','string'),(376,'file','Chapter 2: Classical Music and the Class.pdf','string'),(376,'name','Daniel Barnes','string'),(376,'username','dbarnes','string'),(377,'fileId','37','int'),(377,'fileStage','10','int'),(377,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(377,'sourceSubmissionFileId','69','int'),(377,'submissionFileId','75','int'),(377,'submissionId','14','int'),(377,'username','dbarnes','string'),(378,'fileId','37','int'),(378,'fileStage','10','int'),(378,'name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(378,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(378,'sourceSubmissionFileId','69','int'),(378,'submissionFileId','75','int'),(378,'submissionId','14','int'),(378,'username','dbarnes','string'),(379,'file','Chapter 3: Situated Cognition and Bricol.pdf','string'),(379,'name','Daniel Barnes','string'),(379,'username','dbarnes','string'),(380,'fileId','38','int'),(380,'fileStage','10','int'),(380,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(380,'sourceSubmissionFileId','70','int'),(380,'submissionFileId','76','int'),(380,'submissionId','14','int'),(380,'username','dbarnes','string'),(381,'fileId','38','int'),(381,'fileStage','10','int'),(381,'name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(381,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(381,'sourceSubmissionFileId','70','int'),(381,'submissionFileId','76','int'),(381,'submissionId','14','int'),(381,'username','dbarnes','string'),(382,'file','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(382,'name','Daniel Barnes','string'),(382,'username','dbarnes','string'),(383,'fileId','39','int'),(383,'fileStage','10','int'),(383,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(383,'sourceSubmissionFileId','71','int'),(383,'submissionFileId','77','int'),(383,'submissionId','14','int'),(383,'username','dbarnes','string'),(384,'fileId','39','int'),(384,'fileStage','10','int'),(384,'name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(384,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(384,'sourceSubmissionFileId','71','int'),(384,'submissionFileId','77','int'),(384,'submissionId','14','int'),(384,'username','dbarnes','string'),(385,'file','Segmentation of Vascular Ultrasound Imag.pdf','string'),(385,'name','Daniel Barnes','string'),(385,'username','dbarnes','string'),(386,'fileId','40','int'),(386,'fileStage','10','int'),(386,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(386,'sourceSubmissionFileId','72','int'),(386,'submissionFileId','78','int'),(386,'submissionId','14','int'),(386,'username','dbarnes','string'),(387,'fileId','40','int'),(387,'fileStage','10','int'),(387,'name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(387,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(387,'sourceSubmissionFileId','72','int'),(387,'submissionFileId','78','int'),(387,'submissionId','14','int'),(387,'username','dbarnes','string'),(388,'file','The Canadian Nutrient File: Nutrient Val.pdf','string'),(388,'name','Daniel Barnes','string'),(388,'username','dbarnes','string'),(392,'fileId','41','int'),(392,'fileStage','2','int'),(392,'originalFileName','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(392,'sourceSubmissionFileId',NULL,'string'),(392,'submissionFileId','79','int'),(392,'submissionId','15','int'),(392,'username','mforan','string'),(393,'fileId','41','int'),(393,'fileStage','2','int'),(393,'name','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(393,'submissionFileId','79','int'),(393,'submissionId','15','int'),(393,'username','mforan','string'),(394,'fileId','41','int'),(394,'fileStage','2','int'),(394,'originalFileName','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(394,'sourceSubmissionFileId',NULL,'string'),(394,'submissionFileId','79','int'),(394,'submissionId','15','int'),(394,'username','mforan','string'),(395,'fileId','41','int'),(395,'fileStage','2','int'),(395,'name','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(395,'originalFileName','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(395,'sourceSubmissionFileId',NULL,'string'),(395,'submissionFileId','79','int'),(395,'submissionId','15','int'),(395,'username','mforan','string'),(398,'decision','Send to External Review','string'),(398,'editorName','Daniel Barnes','string'),(398,'submissionId','15','int'),(399,'fileId','41','int'),(399,'fileStage','4','int'),(399,'originalFileName','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(399,'sourceSubmissionFileId','79','int'),(399,'submissionFileId','80','int'),(399,'submissionId','15','int'),(399,'username','dbarnes','string'),(400,'fileId','41','int'),(400,'fileStage','4','int'),(400,'name','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(400,'submissionFileId','80','int'),(400,'submissionId','15','int'),(400,'username','dbarnes','string'),(403,'fileId','42','int'),(403,'fileStage','2','int'),(403,'originalFileName','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(403,'sourceSubmissionFileId',NULL,'string'),(403,'submissionFileId','81','int'),(403,'submissionId','16','int'),(403,'username','mpower','string'),(404,'fileId','42','int'),(404,'fileStage','2','int'),(404,'name','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(404,'submissionFileId','81','int'),(404,'submissionId','16','int'),(404,'username','mpower','string'),(405,'fileId','42','int'),(405,'fileStage','2','int'),(405,'originalFileName','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(405,'sourceSubmissionFileId',NULL,'string'),(405,'submissionFileId','81','int'),(405,'submissionId','16','int'),(405,'username','mpower','string'),(406,'fileId','42','int'),(406,'fileStage','2','int'),(406,'name','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(406,'originalFileName','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(406,'sourceSubmissionFileId',NULL,'string'),(406,'submissionFileId','81','int'),(406,'submissionId','16','int'),(406,'username','mpower','string'),(409,'decision','Send to External Review','string'),(409,'editorName','Daniel Barnes','string'),(409,'submissionId','16','int'),(410,'fileId','42','int'),(410,'fileStage','4','int'),(410,'originalFileName','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(410,'sourceSubmissionFileId','81','int'),(410,'submissionFileId','82','int'),(410,'submissionId','16','int'),(410,'username','dbarnes','string'),(411,'fileId','42','int'),(411,'fileStage','4','int'),(411,'name','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(411,'submissionFileId','82','int'),(411,'submissionId','16','int'),(411,'username','dbarnes','string'),(412,'reviewAssignmentId','21','string'),(412,'reviewerName','Adela Gallego','string'),(412,'round','1','int'),(412,'stageId','3','int'),(412,'submissionId','16','int'),(413,'reviewAssignmentId','22','string'),(413,'reviewerName','Al Zacharia','string'),(413,'round','1','int'),(413,'stageId','3','int'),(413,'submissionId','16','int'),(414,'reviewAssignmentId','23','string'),(414,'reviewerName','Gonzalo Favio','string'),(414,'round','1','int'),(414,'stageId','3','int'),(414,'submissionId','16','int'),(415,'reviewAssignmentId','21','int'),(415,'reviewerName','Adela Gallego','string'),(415,'round','1','int'),(415,'submissionId','16','int'),(416,'reviewAssignmentId','21','int'),(416,'reviewerName','Adela Gallego','string'),(416,'round','1','int'),(416,'submissionId','16','int'),(419,'fileId','43','int'),(419,'fileStage','2','int'),(419,'originalFileName','Preface.pdf','string'),(419,'sourceSubmissionFileId',NULL,'string'),(419,'submissionFileId','83','int'),(419,'submissionId','17','int'),(419,'username','msmith','string'),(420,'fileId','43','int'),(420,'fileStage','2','int'),(420,'name','Preface.pdf','string'),(420,'submissionFileId','83','int'),(420,'submissionId','17','int'),(420,'username','msmith','string'),(421,'fileId','43','int'),(421,'fileStage','2','int'),(421,'originalFileName','Preface.pdf','string'),(421,'sourceSubmissionFileId',NULL,'string'),(421,'submissionFileId','83','int'),(421,'submissionId','17','int'),(421,'username','msmith','string'),(422,'fileId','43','int'),(422,'fileStage','2','int'),(422,'name','Preface.pdf','string'),(422,'originalFileName','Preface.pdf','string'),(422,'sourceSubmissionFileId',NULL,'string'),(422,'submissionFileId','83','int'),(422,'submissionId','17','int'),(422,'username','msmith','string'),(423,'fileId','44','int'),(423,'fileStage','2','int'),(423,'originalFileName','Introduction.pdf','string'),(423,'sourceSubmissionFileId',NULL,'string'),(423,'submissionFileId','84','int'),(423,'submissionId','17','int'),(423,'username','msmith','string'),(424,'fileId','44','int'),(424,'fileStage','2','int'),(424,'name','Introduction.pdf','string'),(424,'submissionFileId','84','int'),(424,'submissionId','17','int'),(424,'username','msmith','string'),(425,'fileId','44','int'),(425,'fileStage','2','int'),(425,'originalFileName','Introduction.pdf','string'),(425,'sourceSubmissionFileId',NULL,'string'),(425,'submissionFileId','84','int'),(425,'submissionId','17','int'),(425,'username','msmith','string'),(426,'fileId','44','int'),(426,'fileStage','2','int'),(426,'name','Introduction.pdf','string'),(426,'originalFileName','Introduction.pdf','string'),(426,'sourceSubmissionFileId',NULL,'string'),(426,'submissionFileId','84','int'),(426,'submissionId','17','int'),(426,'username','msmith','string'),(427,'fileId','45','int'),(427,'fileStage','2','int'),(427,'originalFileName','The Emergence of Open Development in a N.pdf','string'),(427,'sourceSubmissionFileId',NULL,'string'),(427,'submissionFileId','85','int'),(427,'submissionId','17','int'),(427,'username','msmith','string'),(428,'fileId','45','int'),(428,'fileStage','2','int'),(428,'name','The Emergence of Open Development in a N.pdf','string'),(428,'submissionFileId','85','int'),(428,'submissionId','17','int'),(428,'username','msmith','string'),(429,'fileId','45','int'),(429,'fileStage','2','int'),(429,'originalFileName','The Emergence of Open Development in a N.pdf','string'),(429,'sourceSubmissionFileId',NULL,'string'),(429,'submissionFileId','85','int'),(429,'submissionId','17','int'),(429,'username','msmith','string'),(430,'fileId','45','int'),(430,'fileStage','2','int'),(430,'name','The Emergence of Open Development in a N.pdf','string'),(430,'originalFileName','The Emergence of Open Development in a N.pdf','string'),(430,'sourceSubmissionFileId',NULL,'string'),(430,'submissionFileId','85','int'),(430,'submissionId','17','int'),(430,'username','msmith','string'),(431,'fileId','46','int'),(431,'fileStage','2','int'),(431,'originalFileName','Enacting Openness in ICT4D Research.pdf','string'),(431,'sourceSubmissionFileId',NULL,'string'),(431,'submissionFileId','86','int'),(431,'submissionId','17','int'),(431,'username','msmith','string'),(432,'fileId','46','int'),(432,'fileStage','2','int'),(432,'name','Enacting Openness in ICT4D Research.pdf','string'),(432,'submissionFileId','86','int'),(432,'submissionId','17','int'),(432,'username','msmith','string'),(433,'fileId','46','int'),(433,'fileStage','2','int'),(433,'originalFileName','Enacting Openness in ICT4D Research.pdf','string'),(433,'sourceSubmissionFileId',NULL,'string'),(433,'submissionFileId','86','int'),(433,'submissionId','17','int'),(433,'username','msmith','string'),(434,'fileId','46','int'),(434,'fileStage','2','int'),(434,'name','Enacting Openness in ICT4D Research.pdf','string'),(434,'originalFileName','Enacting Openness in ICT4D Research.pdf','string'),(434,'sourceSubmissionFileId',NULL,'string'),(434,'submissionFileId','86','int'),(434,'submissionId','17','int'),(434,'username','msmith','string'),(435,'fileId','47','int'),(435,'fileStage','2','int'),(435,'originalFileName','Transparency and Development: Ethical Co.pdf','string'),(435,'sourceSubmissionFileId',NULL,'string'),(435,'submissionFileId','87','int'),(435,'submissionId','17','int'),(435,'username','msmith','string'),(436,'fileId','47','int'),(436,'fileStage','2','int'),(436,'name','Transparency and Development: Ethical Co.pdf','string'),(436,'submissionFileId','87','int'),(436,'submissionId','17','int'),(436,'username','msmith','string'),(437,'fileId','47','int'),(437,'fileStage','2','int'),(437,'originalFileName','Transparency and Development: Ethical Co.pdf','string'),(437,'sourceSubmissionFileId',NULL,'string'),(437,'submissionFileId','87','int'),(437,'submissionId','17','int'),(437,'username','msmith','string'),(438,'fileId','47','int'),(438,'fileStage','2','int'),(438,'name','Transparency and Development: Ethical Co.pdf','string'),(438,'originalFileName','Transparency and Development: Ethical Co.pdf','string'),(438,'sourceSubmissionFileId',NULL,'string'),(438,'submissionFileId','87','int'),(438,'submissionId','17','int'),(438,'username','msmith','string'),(439,'fileId','48','int'),(439,'fileStage','2','int'),(439,'originalFileName','Open Educational Resources: Opportunitie.pdf','string'),(439,'sourceSubmissionFileId',NULL,'string'),(439,'submissionFileId','88','int'),(439,'submissionId','17','int'),(439,'username','msmith','string'),(440,'fileId','48','int'),(440,'fileStage','2','int'),(440,'name','Open Educational Resources: Opportunitie.pdf','string'),(440,'submissionFileId','88','int'),(440,'submissionId','17','int'),(440,'username','msmith','string'),(441,'fileId','48','int'),(441,'fileStage','2','int'),(441,'originalFileName','Open Educational Resources: Opportunitie.pdf','string'),(441,'sourceSubmissionFileId',NULL,'string'),(441,'submissionFileId','88','int'),(441,'submissionId','17','int'),(441,'username','msmith','string'),(442,'fileId','48','int'),(442,'fileStage','2','int'),(442,'name','Open Educational Resources: Opportunitie.pdf','string'),(442,'originalFileName','Open Educational Resources: Opportunitie.pdf','string'),(442,'sourceSubmissionFileId',NULL,'string'),(442,'submissionFileId','88','int'),(442,'submissionId','17','int'),(442,'username','msmith','string'),(445,'decision','Send to Internal Review','string'),(445,'editorName','Daniel Barnes','string'),(445,'submissionId','17','int'),(446,'fileId','43','int'),(446,'fileStage','19','int'),(446,'originalFileName','Preface.pdf','string'),(446,'sourceSubmissionFileId','83','int'),(446,'submissionFileId','89','int'),(446,'submissionId','17','int'),(446,'username','dbarnes','string'),(447,'fileId','43','int'),(447,'fileStage','19','int'),(447,'name','Preface.pdf','string'),(447,'submissionFileId','89','int'),(447,'submissionId','17','int'),(447,'username','dbarnes','string'),(448,'fileId','44','int'),(448,'fileStage','19','int'),(448,'originalFileName','Introduction.pdf','string'),(448,'sourceSubmissionFileId','84','int'),(448,'submissionFileId','90','int'),(448,'submissionId','17','int'),(448,'username','dbarnes','string'),(449,'fileId','44','int'),(449,'fileStage','19','int'),(449,'name','Introduction.pdf','string'),(449,'submissionFileId','90','int'),(449,'submissionId','17','int'),(449,'username','dbarnes','string'),(450,'fileId','45','int'),(450,'fileStage','19','int'),(450,'originalFileName','The Emergence of Open Development in a N.pdf','string'),(450,'sourceSubmissionFileId','85','int'),(450,'submissionFileId','91','int'),(450,'submissionId','17','int'),(450,'username','dbarnes','string'),(451,'fileId','45','int'),(451,'fileStage','19','int'),(451,'name','The Emergence of Open Development in a N.pdf','string'),(451,'submissionFileId','91','int'),(451,'submissionId','17','int'),(451,'username','dbarnes','string'),(452,'fileId','46','int'),(452,'fileStage','19','int'),(452,'originalFileName','Enacting Openness in ICT4D Research.pdf','string'),(452,'sourceSubmissionFileId','86','int'),(452,'submissionFileId','92','int'),(452,'submissionId','17','int'),(452,'username','dbarnes','string'),(453,'fileId','46','int'),(453,'fileStage','19','int'),(453,'name','Enacting Openness in ICT4D Research.pdf','string'),(453,'submissionFileId','92','int'),(453,'submissionId','17','int'),(453,'username','dbarnes','string'),(454,'fileId','47','int'),(454,'fileStage','19','int'),(454,'originalFileName','Transparency and Development: Ethical Co.pdf','string'),(454,'sourceSubmissionFileId','87','int'),(454,'submissionFileId','93','int'),(454,'submissionId','17','int'),(454,'username','dbarnes','string'),(455,'fileId','47','int'),(455,'fileStage','19','int'),(455,'name','Transparency and Development: Ethical Co.pdf','string'),(455,'submissionFileId','93','int'),(455,'submissionId','17','int'),(455,'username','dbarnes','string'),(456,'fileId','48','int'),(456,'fileStage','19','int'),(456,'originalFileName','Open Educational Resources: Opportunitie.pdf','string'),(456,'sourceSubmissionFileId','88','int'),(456,'submissionFileId','94','int'),(456,'submissionId','17','int'),(456,'username','dbarnes','string'),(457,'fileId','48','int'),(457,'fileStage','19','int'),(457,'name','Open Educational Resources: Opportunitie.pdf','string'),(457,'submissionFileId','94','int'),(457,'submissionId','17','int'),(457,'username','dbarnes','string'),(458,'reviewAssignmentId','24','string'),(458,'reviewerName','Julie Janssen','string'),(458,'round','1','int'),(458,'stageId','2','int'),(458,'submissionId','17','int'),(459,'reviewAssignmentId','25','string'),(459,'reviewerName','Paul Hudson','string'),(459,'round','1','int'),(459,'stageId','2','int'),(459,'submissionId','17','int');
+INSERT INTO `event_log_settings` VALUES (3,'fileId','1','int'),(3,'fileStage','2','int'),(3,'originalFileName','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(3,'sourceSubmissionFileId',NULL,'string'),(3,'submissionFileId','1','int'),(3,'submissionId','1','int'),(3,'username','aclark','string'),(4,'fileId','1','int'),(4,'fileStage','2','int'),(4,'name','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(4,'submissionFileId','1','int'),(4,'submissionId','1','int'),(4,'username','aclark','string'),(5,'fileId','1','int'),(5,'fileStage','2','int'),(5,'originalFileName','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(5,'sourceSubmissionFileId',NULL,'string'),(5,'submissionFileId','1','int'),(5,'submissionId','1','int'),(5,'username','aclark','string'),(6,'fileId','1','int'),(6,'fileStage','2','int'),(6,'name','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(6,'originalFileName','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(6,'sourceSubmissionFileId',NULL,'string'),(6,'submissionFileId','1','int'),(6,'submissionId','1','int'),(6,'username','aclark','string'),(9,'decision','Send to External Review','string'),(9,'editorName','Daniel Barnes','string'),(9,'submissionId','1','int'),(10,'fileId','1','int'),(10,'fileStage','4','int'),(10,'originalFileName','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(10,'sourceSubmissionFileId','1','int'),(10,'submissionFileId','2','int'),(10,'submissionId','1','int'),(10,'username','dbarnes','string'),(11,'fileId','1','int'),(11,'fileStage','4','int'),(11,'name','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(11,'submissionFileId','2','int'),(11,'submissionId','1','int'),(11,'username','dbarnes','string'),(12,'reviewAssignmentId','1','string'),(12,'reviewerName','Gonzalo Favio','string'),(12,'round','1','int'),(12,'stageId','3','int'),(12,'submissionId','1','int'),(13,'decision','Accept Submission','string'),(13,'editorName','Daniel Barnes','string'),(13,'submissionId','1','int'),(14,'name','Sarah Vogt','string'),(14,'userGroupName','Copyeditor','string'),(14,'username','svogt','string'),(17,'fileId','2','int'),(17,'fileStage','2','int'),(17,'originalFileName','Critical History in Western Canada 1900–.pdf','string'),(17,'sourceSubmissionFileId',NULL,'string'),(17,'submissionFileId','3','int'),(17,'submissionId','2','int'),(17,'username','afinkel','string'),(18,'fileId','2','int'),(18,'fileStage','2','int'),(18,'name','Critical History in Western Canada 1900–.pdf','string'),(18,'submissionFileId','3','int'),(18,'submissionId','2','int'),(18,'username','afinkel','string'),(19,'fileId','2','int'),(19,'fileStage','2','int'),(19,'originalFileName','Critical History in Western Canada 1900–.pdf','string'),(19,'sourceSubmissionFileId',NULL,'string'),(19,'submissionFileId','3','int'),(19,'submissionId','2','int'),(19,'username','afinkel','string'),(20,'fileId','2','int'),(20,'fileStage','2','int'),(20,'name','Critical History in Western Canada 1900–.pdf','string'),(20,'originalFileName','Critical History in Western Canada 1900–.pdf','string'),(20,'sourceSubmissionFileId',NULL,'string'),(20,'submissionFileId','3','int'),(20,'submissionId','2','int'),(20,'username','afinkel','string'),(21,'fileId','3','int'),(21,'fileStage','2','int'),(21,'originalFileName','Vernacular Currents in Western Canadian .pdf','string'),(21,'sourceSubmissionFileId',NULL,'string'),(21,'submissionFileId','4','int'),(21,'submissionId','2','int'),(21,'username','afinkel','string'),(22,'fileId','3','int'),(22,'fileStage','2','int'),(22,'name','Vernacular Currents in Western Canadian .pdf','string'),(22,'submissionFileId','4','int'),(22,'submissionId','2','int'),(22,'username','afinkel','string'),(23,'fileId','3','int'),(23,'fileStage','2','int'),(23,'originalFileName','Vernacular Currents in Western Canadian .pdf','string'),(23,'sourceSubmissionFileId',NULL,'string'),(23,'submissionFileId','4','int'),(23,'submissionId','2','int'),(23,'username','afinkel','string'),(24,'fileId','3','int'),(24,'fileStage','2','int'),(24,'name','Vernacular Currents in Western Canadian .pdf','string'),(24,'originalFileName','Vernacular Currents in Western Canadian .pdf','string'),(24,'sourceSubmissionFileId',NULL,'string'),(24,'submissionFileId','4','int'),(24,'submissionId','2','int'),(24,'username','afinkel','string'),(25,'fileId','4','int'),(25,'fileStage','2','int'),(25,'originalFileName','Cree Intellectual Traditions in History.pdf','string'),(25,'sourceSubmissionFileId',NULL,'string'),(25,'submissionFileId','5','int'),(25,'submissionId','2','int'),(25,'username','afinkel','string'),(26,'fileId','4','int'),(26,'fileStage','2','int'),(26,'name','Cree Intellectual Traditions in History.pdf','string'),(26,'submissionFileId','5','int'),(26,'submissionId','2','int'),(26,'username','afinkel','string'),(27,'fileId','4','int'),(27,'fileStage','2','int'),(27,'originalFileName','Cree Intellectual Traditions in History.pdf','string'),(27,'sourceSubmissionFileId',NULL,'string'),(27,'submissionFileId','5','int'),(27,'submissionId','2','int'),(27,'username','afinkel','string'),(28,'fileId','4','int'),(28,'fileStage','2','int'),(28,'name','Cree Intellectual Traditions in History.pdf','string'),(28,'originalFileName','Cree Intellectual Traditions in History.pdf','string'),(28,'sourceSubmissionFileId',NULL,'string'),(28,'submissionFileId','5','int'),(28,'submissionId','2','int'),(28,'username','afinkel','string'),(29,'fileId','5','int'),(29,'fileStage','2','int'),(29,'originalFileName','Visualizing Space, Race, and History in .pdf','string'),(29,'sourceSubmissionFileId',NULL,'string'),(29,'submissionFileId','6','int'),(29,'submissionId','2','int'),(29,'username','afinkel','string'),(30,'fileId','5','int'),(30,'fileStage','2','int'),(30,'name','Visualizing Space, Race, and History in .pdf','string'),(30,'submissionFileId','6','int'),(30,'submissionId','2','int'),(30,'username','afinkel','string'),(31,'fileId','5','int'),(31,'fileStage','2','int'),(31,'originalFileName','Visualizing Space, Race, and History in .pdf','string'),(31,'sourceSubmissionFileId',NULL,'string'),(31,'submissionFileId','6','int'),(31,'submissionId','2','int'),(31,'username','afinkel','string'),(32,'fileId','5','int'),(32,'fileStage','2','int'),(32,'name','Visualizing Space, Race, and History in .pdf','string'),(32,'originalFileName','Visualizing Space, Race, and History in .pdf','string'),(32,'sourceSubmissionFileId',NULL,'string'),(32,'submissionFileId','6','int'),(32,'submissionId','2','int'),(32,'username','afinkel','string'),(35,'decision','Send to External Review','string'),(35,'editorName','Daniel Barnes','string'),(35,'submissionId','2','int'),(36,'fileId','2','int'),(36,'fileStage','4','int'),(36,'originalFileName','Critical History in Western Canada 1900–.pdf','string'),(36,'sourceSubmissionFileId','3','int'),(36,'submissionFileId','7','int'),(36,'submissionId','2','int'),(36,'username','dbarnes','string'),(37,'fileId','2','int'),(37,'fileStage','4','int'),(37,'name','Critical History in Western Canada 1900–.pdf','string'),(37,'submissionFileId','7','int'),(37,'submissionId','2','int'),(37,'username','dbarnes','string'),(38,'fileId','3','int'),(38,'fileStage','4','int'),(38,'originalFileName','Vernacular Currents in Western Canadian .pdf','string'),(38,'sourceSubmissionFileId','4','int'),(38,'submissionFileId','8','int'),(38,'submissionId','2','int'),(38,'username','dbarnes','string'),(39,'fileId','3','int'),(39,'fileStage','4','int'),(39,'name','Vernacular Currents in Western Canadian .pdf','string'),(39,'submissionFileId','8','int'),(39,'submissionId','2','int'),(39,'username','dbarnes','string'),(40,'fileId','4','int'),(40,'fileStage','4','int'),(40,'originalFileName','Cree Intellectual Traditions in History.pdf','string'),(40,'sourceSubmissionFileId','5','int'),(40,'submissionFileId','9','int'),(40,'submissionId','2','int'),(40,'username','dbarnes','string'),(41,'fileId','4','int'),(41,'fileStage','4','int'),(41,'name','Cree Intellectual Traditions in History.pdf','string'),(41,'submissionFileId','9','int'),(41,'submissionId','2','int'),(41,'username','dbarnes','string'),(42,'fileId','5','int'),(42,'fileStage','4','int'),(42,'originalFileName','Visualizing Space, Race, and History in .pdf','string'),(42,'sourceSubmissionFileId','6','int'),(42,'submissionFileId','10','int'),(42,'submissionId','2','int'),(42,'username','dbarnes','string'),(43,'fileId','5','int'),(43,'fileStage','4','int'),(43,'name','Visualizing Space, Race, and History in .pdf','string'),(43,'submissionFileId','10','int'),(43,'submissionId','2','int'),(43,'username','dbarnes','string'),(44,'reviewAssignmentId','2','string'),(44,'reviewerName','Al Zacharia','string'),(44,'round','1','int'),(44,'stageId','3','int'),(44,'submissionId','2','int'),(45,'reviewAssignmentId','3','string'),(45,'reviewerName','Gonzalo Favio','string'),(45,'round','1','int'),(45,'stageId','3','int'),(45,'submissionId','2','int'),(48,'fileId','6','int'),(48,'fileStage','2','int'),(48,'originalFileName','The Political Economy of Workplace Injury in Canada.pdf','string'),(48,'sourceSubmissionFileId',NULL,'string'),(48,'submissionFileId','11','int'),(48,'submissionId','3','int'),(48,'username','bbarnetson','string'),(49,'fileId','6','int'),(49,'fileStage','2','int'),(49,'name','The Political Economy of Workplace Injury in Canada.pdf','string'),(49,'submissionFileId','11','int'),(49,'submissionId','3','int'),(49,'username','bbarnetson','string'),(50,'fileId','6','int'),(50,'fileStage','2','int'),(50,'originalFileName','The Political Economy of Workplace Injury in Canada.pdf','string'),(50,'sourceSubmissionFileId',NULL,'string'),(50,'submissionFileId','11','int'),(50,'submissionId','3','int'),(50,'username','bbarnetson','string'),(51,'fileId','6','int'),(51,'fileStage','2','int'),(51,'name','The Political Economy of Workplace Injury in Canada.pdf','string'),(51,'originalFileName','The Political Economy of Workplace Injury in Canada.pdf','string'),(51,'sourceSubmissionFileId',NULL,'string'),(51,'submissionFileId','11','int'),(51,'submissionId','3','int'),(51,'username','bbarnetson','string'),(56,'fileId','7','int'),(56,'fileStage','2','int'),(56,'originalFileName','Introduction: Contexts of Popular Cultur.pdf','string'),(56,'sourceSubmissionFileId',NULL,'string'),(56,'submissionFileId','12','int'),(56,'submissionId','4','int'),(56,'username','bbeaty','string'),(57,'fileId','7','int'),(57,'fileStage','2','int'),(57,'name','Introduction: Contexts of Popular Cultur.pdf','string'),(57,'submissionFileId','12','int'),(57,'submissionId','4','int'),(57,'username','bbeaty','string'),(58,'fileId','7','int'),(58,'fileStage','2','int'),(58,'originalFileName','Introduction: Contexts of Popular Cultur.pdf','string'),(58,'sourceSubmissionFileId',NULL,'string'),(58,'submissionFileId','12','int'),(58,'submissionId','4','int'),(58,'username','bbeaty','string'),(59,'fileId','7','int'),(59,'fileStage','2','int'),(59,'name','Introduction: Contexts of Popular Cultur.pdf','string'),(59,'originalFileName','Introduction: Contexts of Popular Cultur.pdf','string'),(59,'sourceSubmissionFileId',NULL,'string'),(59,'submissionFileId','12','int'),(59,'submissionId','4','int'),(59,'username','bbeaty','string'),(60,'fileId','8','int'),(60,'fileStage','2','int'),(60,'originalFileName','Chapter 1. A Future for Media Studies: C.pdf','string'),(60,'sourceSubmissionFileId',NULL,'string'),(60,'submissionFileId','13','int'),(60,'submissionId','4','int'),(60,'username','bbeaty','string'),(61,'fileId','8','int'),(61,'fileStage','2','int'),(61,'name','Chapter 1. A Future for Media Studies: C.pdf','string'),(61,'submissionFileId','13','int'),(61,'submissionId','4','int'),(61,'username','bbeaty','string'),(62,'fileId','8','int'),(62,'fileStage','2','int'),(62,'originalFileName','Chapter 1. A Future for Media Studies: C.pdf','string'),(62,'sourceSubmissionFileId',NULL,'string'),(62,'submissionFileId','13','int'),(62,'submissionId','4','int'),(62,'username','bbeaty','string'),(63,'fileId','8','int'),(63,'fileStage','2','int'),(63,'name','Chapter 1. A Future for Media Studies: C.pdf','string'),(63,'originalFileName','Chapter 1. A Future for Media Studies: C.pdf','string'),(63,'sourceSubmissionFileId',NULL,'string'),(63,'submissionFileId','13','int'),(63,'submissionId','4','int'),(63,'username','bbeaty','string'),(64,'fileId','9','int'),(64,'fileStage','2','int'),(64,'originalFileName','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(64,'sourceSubmissionFileId',NULL,'string'),(64,'submissionFileId','14','int'),(64,'submissionId','4','int'),(64,'username','bbeaty','string'),(65,'fileId','9','int'),(65,'fileStage','2','int'),(65,'name','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(65,'submissionFileId','14','int'),(65,'submissionId','4','int'),(65,'username','bbeaty','string'),(66,'fileId','9','int'),(66,'fileStage','2','int'),(66,'originalFileName','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(66,'sourceSubmissionFileId',NULL,'string'),(66,'submissionFileId','14','int'),(66,'submissionId','4','int'),(66,'username','bbeaty','string'),(67,'fileId','9','int'),(67,'fileStage','2','int'),(67,'name','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(67,'originalFileName','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(67,'sourceSubmissionFileId',NULL,'string'),(67,'submissionFileId','14','int'),(67,'submissionId','4','int'),(67,'username','bbeaty','string'),(68,'fileId','10','int'),(68,'fileStage','2','int'),(68,'originalFileName','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(68,'sourceSubmissionFileId',NULL,'string'),(68,'submissionFileId','15','int'),(68,'submissionId','4','int'),(68,'username','bbeaty','string'),(69,'fileId','10','int'),(69,'fileStage','2','int'),(69,'name','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(69,'submissionFileId','15','int'),(69,'submissionId','4','int'),(69,'username','bbeaty','string'),(70,'fileId','10','int'),(70,'fileStage','2','int'),(70,'originalFileName','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(70,'sourceSubmissionFileId',NULL,'string'),(70,'submissionFileId','15','int'),(70,'submissionId','4','int'),(70,'username','bbeaty','string'),(71,'fileId','10','int'),(71,'fileStage','2','int'),(71,'name','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(71,'originalFileName','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(71,'sourceSubmissionFileId',NULL,'string'),(71,'submissionFileId','15','int'),(71,'submissionId','4','int'),(71,'username','bbeaty','string'),(74,'decision','Send to Internal Review','string'),(74,'editorName','Daniel Barnes','string'),(74,'submissionId','4','int'),(75,'reviewAssignmentId','4','string'),(75,'reviewerName','Aisla McCrae','string'),(75,'round','1','int'),(75,'stageId','2','int'),(75,'submissionId','4','int'),(76,'decision','Send to External Review','string'),(76,'editorName','Daniel Barnes','string'),(76,'submissionId','4','int'),(77,'reviewAssignmentId','5','string'),(77,'reviewerName','Al Zacharia','string'),(77,'round','1','int'),(77,'stageId','3','int'),(77,'submissionId','4','int'),(78,'decision','Accept Submission','string'),(78,'editorName','Daniel Barnes','string'),(78,'submissionId','4','int'),(79,'name','Maria Fritz','string'),(79,'userGroupName','Copyeditor','string'),(79,'username','mfritz','string'),(80,'decision','Send To Production','string'),(80,'editorName','Daniel Barnes','string'),(80,'submissionId','4','int'),(81,'name','Graham Cox','string'),(81,'userGroupName','Layout Editor','string'),(81,'username','gcox','string'),(84,'fileId','11','int'),(84,'fileStage','2','int'),(84,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(84,'sourceSubmissionFileId',NULL,'string'),(84,'submissionFileId','16','int'),(84,'submissionId','5','int'),(84,'username','callan','string'),(85,'fileId','11','int'),(85,'fileStage','2','int'),(85,'name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(85,'submissionFileId','16','int'),(85,'submissionId','5','int'),(85,'username','callan','string'),(86,'fileId','11','int'),(86,'fileStage','2','int'),(86,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(86,'sourceSubmissionFileId',NULL,'string'),(86,'submissionFileId','16','int'),(86,'submissionId','5','int'),(86,'username','callan','string'),(87,'fileId','11','int'),(87,'fileStage','2','int'),(87,'name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(87,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(87,'sourceSubmissionFileId',NULL,'string'),(87,'submissionFileId','16','int'),(87,'submissionId','5','int'),(87,'username','callan','string'),(90,'decision','Send to Internal Review','string'),(90,'editorName','Daniel Barnes','string'),(90,'submissionId','5','int'),(91,'fileId','11','int'),(91,'fileStage','19','int'),(91,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(91,'sourceSubmissionFileId','16','int'),(91,'submissionFileId','17','int'),(91,'submissionId','5','int'),(91,'username','dbarnes','string'),(92,'fileId','11','int'),(92,'fileStage','19','int'),(92,'name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(92,'submissionFileId','17','int'),(92,'submissionId','5','int'),(92,'username','dbarnes','string'),(93,'reviewAssignmentId','6','string'),(93,'reviewerName','Paul Hudson','string'),(93,'round','1','int'),(93,'stageId','2','int'),(93,'submissionId','5','int'),(94,'decision','Send to External Review','string'),(94,'editorName','Daniel Barnes','string'),(94,'submissionId','5','int'),(95,'reviewAssignmentId','7','string'),(95,'reviewerName','Gonzalo Favio','string'),(95,'round','1','int'),(95,'stageId','3','int'),(95,'submissionId','5','int'),(96,'decision','Accept Submission','string'),(96,'editorName','Daniel Barnes','string'),(96,'submissionId','5','int'),(97,'name','Sarah Vogt','string'),(97,'userGroupName','Copyeditor','string'),(97,'username','svogt','string'),(98,'decision','Send To Production','string'),(98,'editorName','Daniel Barnes','string'),(98,'submissionId','5','int'),(99,'name','Stephen Hellier','string'),(99,'userGroupName','Layout Editor','string'),(99,'username','shellier','string'),(100,'name','Catherine Turner','string'),(100,'userGroupName','Proofreader','string'),(100,'username','cturner','string'),(101,'formatName','PDF','string'),(102,'fileId','11','int'),(102,'fileStage','10','int'),(102,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(102,'sourceSubmissionFileId','16','int'),(102,'submissionFileId','18','int'),(102,'submissionId','5','int'),(102,'username','dbarnes','string'),(103,'fileId','11','int'),(103,'fileStage','10','int'),(103,'name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(103,'submissionFileId','18','int'),(103,'submissionId','5','int'),(103,'username','dbarnes','string'),(104,'publicationFormatName','PDF','string'),(105,'publicationFormatName','PDF','string'),(106,'fileId','11','int'),(106,'fileStage','10','int'),(106,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(106,'sourceSubmissionFileId','16','int'),(106,'submissionFileId','18','int'),(106,'submissionId','5','int'),(106,'username','dbarnes','string'),(107,'fileId','11','int'),(107,'fileStage','10','int'),(107,'name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(107,'originalFileName','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(107,'sourceSubmissionFileId','16','int'),(107,'submissionFileId','18','int'),(107,'submissionId','5','int'),(107,'username','dbarnes','string'),(108,'file','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(108,'name','Daniel Barnes','string'),(108,'username','dbarnes','string'),(112,'fileId','12','int'),(112,'fileStage','2','int'),(112,'originalFileName','Identify: Understanding Your Information.pdf','string'),(112,'sourceSubmissionFileId',NULL,'string'),(112,'submissionFileId','19','int'),(112,'submissionId','6','int'),(112,'username','dbernnard','string'),(113,'fileId','12','int'),(113,'fileStage','2','int'),(113,'name','Identify: Understanding Your Information.pdf','string'),(113,'submissionFileId','19','int'),(113,'submissionId','6','int'),(113,'username','dbernnard','string'),(114,'fileId','12','int'),(114,'fileStage','2','int'),(114,'originalFileName','Identify: Understanding Your Information.pdf','string'),(114,'sourceSubmissionFileId',NULL,'string'),(114,'submissionFileId','19','int'),(114,'submissionId','6','int'),(114,'username','dbernnard','string'),(115,'fileId','12','int'),(115,'fileStage','2','int'),(115,'name','Identify: Understanding Your Information.pdf','string'),(115,'originalFileName','Identify: Understanding Your Information.pdf','string'),(115,'sourceSubmissionFileId',NULL,'string'),(115,'submissionFileId','19','int'),(115,'submissionId','6','int'),(115,'username','dbernnard','string'),(116,'fileId','13','int'),(116,'fileStage','2','int'),(116,'originalFileName','Scope: Knowing What Is Available.pdf','string'),(116,'sourceSubmissionFileId',NULL,'string'),(116,'submissionFileId','20','int'),(116,'submissionId','6','int'),(116,'username','dbernnard','string'),(117,'fileId','13','int'),(117,'fileStage','2','int'),(117,'name','Scope: Knowing What Is Available.pdf','string'),(117,'submissionFileId','20','int'),(117,'submissionId','6','int'),(117,'username','dbernnard','string'),(118,'fileId','13','int'),(118,'fileStage','2','int'),(118,'originalFileName','Scope: Knowing What Is Available.pdf','string'),(118,'sourceSubmissionFileId',NULL,'string'),(118,'submissionFileId','20','int'),(118,'submissionId','6','int'),(118,'username','dbernnard','string'),(119,'fileId','13','int'),(119,'fileStage','2','int'),(119,'name','Scope: Knowing What Is Available.pdf','string'),(119,'originalFileName','Scope: Knowing What Is Available.pdf','string'),(119,'sourceSubmissionFileId',NULL,'string'),(119,'submissionFileId','20','int'),(119,'submissionId','6','int'),(119,'username','dbernnard','string'),(120,'fileId','14','int'),(120,'fileStage','2','int'),(120,'originalFileName','Plan: Developing Research Strategies.pdf','string'),(120,'sourceSubmissionFileId',NULL,'string'),(120,'submissionFileId','21','int'),(120,'submissionId','6','int'),(120,'username','dbernnard','string'),(121,'fileId','14','int'),(121,'fileStage','2','int'),(121,'name','Plan: Developing Research Strategies.pdf','string'),(121,'submissionFileId','21','int'),(121,'submissionId','6','int'),(121,'username','dbernnard','string'),(122,'fileId','14','int'),(122,'fileStage','2','int'),(122,'originalFileName','Plan: Developing Research Strategies.pdf','string'),(122,'sourceSubmissionFileId',NULL,'string'),(122,'submissionFileId','21','int'),(122,'submissionId','6','int'),(122,'username','dbernnard','string'),(123,'fileId','14','int'),(123,'fileStage','2','int'),(123,'name','Plan: Developing Research Strategies.pdf','string'),(123,'originalFileName','Plan: Developing Research Strategies.pdf','string'),(123,'sourceSubmissionFileId',NULL,'string'),(123,'submissionFileId','21','int'),(123,'submissionId','6','int'),(123,'username','dbernnard','string'),(124,'fileId','15','int'),(124,'fileStage','2','int'),(124,'originalFileName','Gather: Finding What You Need.pdf','string'),(124,'sourceSubmissionFileId',NULL,'string'),(124,'submissionFileId','22','int'),(124,'submissionId','6','int'),(124,'username','dbernnard','string'),(125,'fileId','15','int'),(125,'fileStage','2','int'),(125,'name','Gather: Finding What You Need.pdf','string'),(125,'submissionFileId','22','int'),(125,'submissionId','6','int'),(125,'username','dbernnard','string'),(126,'fileId','15','int'),(126,'fileStage','2','int'),(126,'originalFileName','Gather: Finding What You Need.pdf','string'),(126,'sourceSubmissionFileId',NULL,'string'),(126,'submissionFileId','22','int'),(126,'submissionId','6','int'),(126,'username','dbernnard','string'),(127,'fileId','15','int'),(127,'fileStage','2','int'),(127,'name','Gather: Finding What You Need.pdf','string'),(127,'originalFileName','Gather: Finding What You Need.pdf','string'),(127,'sourceSubmissionFileId',NULL,'string'),(127,'submissionFileId','22','int'),(127,'submissionId','6','int'),(127,'username','dbernnard','string'),(130,'decision','Send to Internal Review','string'),(130,'editorName','Daniel Barnes','string'),(130,'submissionId','6','int'),(131,'fileId','12','int'),(131,'fileStage','19','int'),(131,'originalFileName','Identify: Understanding Your Information.pdf','string'),(131,'sourceSubmissionFileId','19','int'),(131,'submissionFileId','23','int'),(131,'submissionId','6','int'),(131,'username','dbarnes','string'),(132,'fileId','12','int'),(132,'fileStage','19','int'),(132,'name','Identify: Understanding Your Information.pdf','string'),(132,'submissionFileId','23','int'),(132,'submissionId','6','int'),(132,'username','dbarnes','string'),(133,'fileId','13','int'),(133,'fileStage','19','int'),(133,'originalFileName','Scope: Knowing What Is Available.pdf','string'),(133,'sourceSubmissionFileId','20','int'),(133,'submissionFileId','24','int'),(133,'submissionId','6','int'),(133,'username','dbarnes','string'),(134,'fileId','13','int'),(134,'fileStage','19','int'),(134,'name','Scope: Knowing What Is Available.pdf','string'),(134,'submissionFileId','24','int'),(134,'submissionId','6','int'),(134,'username','dbarnes','string'),(135,'fileId','14','int'),(135,'fileStage','19','int'),(135,'originalFileName','Plan: Developing Research Strategies.pdf','string'),(135,'sourceSubmissionFileId','21','int'),(135,'submissionFileId','25','int'),(135,'submissionId','6','int'),(135,'username','dbarnes','string'),(136,'fileId','14','int'),(136,'fileStage','19','int'),(136,'name','Plan: Developing Research Strategies.pdf','string'),(136,'submissionFileId','25','int'),(136,'submissionId','6','int'),(136,'username','dbarnes','string'),(137,'fileId','15','int'),(137,'fileStage','19','int'),(137,'originalFileName','Gather: Finding What You Need.pdf','string'),(137,'sourceSubmissionFileId','22','int'),(137,'submissionFileId','26','int'),(137,'submissionId','6','int'),(137,'username','dbarnes','string'),(138,'fileId','15','int'),(138,'fileStage','19','int'),(138,'name','Gather: Finding What You Need.pdf','string'),(138,'submissionFileId','26','int'),(138,'submissionId','6','int'),(138,'username','dbarnes','string'),(139,'name','Minoti Inoue','string'),(139,'userGroupName','Series editor','string'),(139,'username','minoue','string'),(140,'decision','Send to External Review','string'),(140,'editorName','Minoti Inoue','string'),(140,'submissionId','6','int'),(143,'fileId','16','int'),(143,'fileStage','2','int'),(143,'originalFileName','Introduction.pdf','string'),(143,'sourceSubmissionFileId',NULL,'string'),(143,'submissionFileId','27','int'),(143,'submissionId','7','int'),(143,'username','dkennepohl','string'),(144,'fileId','16','int'),(144,'fileStage','2','int'),(144,'name','Introduction.pdf','string'),(144,'submissionFileId','27','int'),(144,'submissionId','7','int'),(144,'username','dkennepohl','string'),(145,'fileId','16','int'),(145,'fileStage','2','int'),(145,'originalFileName','Introduction.pdf','string'),(145,'sourceSubmissionFileId',NULL,'string'),(145,'submissionFileId','27','int'),(145,'submissionId','7','int'),(145,'username','dkennepohl','string'),(146,'fileId','16','int'),(146,'fileStage','2','int'),(146,'name','Introduction.pdf','string'),(146,'originalFileName','Introduction.pdf','string'),(146,'sourceSubmissionFileId',NULL,'string'),(146,'submissionFileId','27','int'),(146,'submissionId','7','int'),(146,'username','dkennepohl','string'),(147,'fileId','17','int'),(147,'fileStage','2','int'),(147,'originalFileName','Chapter 1: Interactions Affording Distan.pdf','string'),(147,'sourceSubmissionFileId',NULL,'string'),(147,'submissionFileId','28','int'),(147,'submissionId','7','int'),(147,'username','dkennepohl','string'),(148,'fileId','17','int'),(148,'fileStage','2','int'),(148,'name','Chapter 1: Interactions Affording Distan.pdf','string'),(148,'submissionFileId','28','int'),(148,'submissionId','7','int'),(148,'username','dkennepohl','string'),(149,'fileId','17','int'),(149,'fileStage','2','int'),(149,'originalFileName','Chapter 1: Interactions Affording Distan.pdf','string'),(149,'sourceSubmissionFileId',NULL,'string'),(149,'submissionFileId','28','int'),(149,'submissionId','7','int'),(149,'username','dkennepohl','string'),(150,'fileId','17','int'),(150,'fileStage','2','int'),(150,'name','Chapter 1: Interactions Affording Distan.pdf','string'),(150,'originalFileName','Chapter 1: Interactions Affording Distan.pdf','string'),(150,'sourceSubmissionFileId',NULL,'string'),(150,'submissionFileId','28','int'),(150,'submissionId','7','int'),(150,'username','dkennepohl','string'),(151,'fileId','18','int'),(151,'fileStage','2','int'),(151,'originalFileName','Chapter 2: Learning Science at a Distanc.pdf','string'),(151,'sourceSubmissionFileId',NULL,'string'),(151,'submissionFileId','29','int'),(151,'submissionId','7','int'),(151,'username','dkennepohl','string'),(152,'fileId','18','int'),(152,'fileStage','2','int'),(152,'name','Chapter 2: Learning Science at a Distanc.pdf','string'),(152,'submissionFileId','29','int'),(152,'submissionId','7','int'),(152,'username','dkennepohl','string'),(153,'fileId','18','int'),(153,'fileStage','2','int'),(153,'originalFileName','Chapter 2: Learning Science at a Distanc.pdf','string'),(153,'sourceSubmissionFileId',NULL,'string'),(153,'submissionFileId','29','int'),(153,'submissionId','7','int'),(153,'username','dkennepohl','string'),(154,'fileId','18','int'),(154,'fileStage','2','int'),(154,'name','Chapter 2: Learning Science at a Distanc.pdf','string'),(154,'originalFileName','Chapter 2: Learning Science at a Distanc.pdf','string'),(154,'sourceSubmissionFileId',NULL,'string'),(154,'submissionFileId','29','int'),(154,'submissionId','7','int'),(154,'username','dkennepohl','string'),(155,'fileId','19','int'),(155,'fileStage','2','int'),(155,'originalFileName','Chapter 3: Leadership Strategies for Coo.pdf','string'),(155,'sourceSubmissionFileId',NULL,'string'),(155,'submissionFileId','30','int'),(155,'submissionId','7','int'),(155,'username','dkennepohl','string'),(156,'fileId','19','int'),(156,'fileStage','2','int'),(156,'name','Chapter 3: Leadership Strategies for Coo.pdf','string'),(156,'submissionFileId','30','int'),(156,'submissionId','7','int'),(156,'username','dkennepohl','string'),(157,'fileId','19','int'),(157,'fileStage','2','int'),(157,'originalFileName','Chapter 3: Leadership Strategies for Coo.pdf','string'),(157,'sourceSubmissionFileId',NULL,'string'),(157,'submissionFileId','30','int'),(157,'submissionId','7','int'),(157,'username','dkennepohl','string'),(158,'fileId','19','int'),(158,'fileStage','2','int'),(158,'name','Chapter 3: Leadership Strategies for Coo.pdf','string'),(158,'originalFileName','Chapter 3: Leadership Strategies for Coo.pdf','string'),(158,'sourceSubmissionFileId',NULL,'string'),(158,'submissionFileId','30','int'),(158,'submissionId','7','int'),(158,'username','dkennepohl','string'),(159,'fileId','20','int'),(159,'fileStage','2','int'),(159,'originalFileName','Chapter 4: Toward New Models of Flexible.pdf','string'),(159,'sourceSubmissionFileId',NULL,'string'),(159,'submissionFileId','31','int'),(159,'submissionId','7','int'),(159,'username','dkennepohl','string'),(160,'fileId','20','int'),(160,'fileStage','2','int'),(160,'name','Chapter 4: Toward New Models of Flexible.pdf','string'),(160,'submissionFileId','31','int'),(160,'submissionId','7','int'),(160,'username','dkennepohl','string'),(161,'fileId','20','int'),(161,'fileStage','2','int'),(161,'originalFileName','Chapter 4: Toward New Models of Flexible.pdf','string'),(161,'sourceSubmissionFileId',NULL,'string'),(161,'submissionFileId','31','int'),(161,'submissionId','7','int'),(161,'username','dkennepohl','string'),(162,'fileId','20','int'),(162,'fileStage','2','int'),(162,'name','Chapter 4: Toward New Models of Flexible.pdf','string'),(162,'originalFileName','Chapter 4: Toward New Models of Flexible.pdf','string'),(162,'sourceSubmissionFileId',NULL,'string'),(162,'submissionFileId','31','int'),(162,'submissionId','7','int'),(162,'username','dkennepohl','string'),(165,'decision','Send to External Review','string'),(165,'editorName','Daniel Barnes','string'),(165,'submissionId','7','int'),(166,'fileId','16','int'),(166,'fileStage','4','int'),(166,'originalFileName','Introduction.pdf','string'),(166,'sourceSubmissionFileId','27','int'),(166,'submissionFileId','32','int'),(166,'submissionId','7','int'),(166,'username','dbarnes','string'),(167,'fileId','16','int'),(167,'fileStage','4','int'),(167,'name','Introduction.pdf','string'),(167,'submissionFileId','32','int'),(167,'submissionId','7','int'),(167,'username','dbarnes','string'),(168,'fileId','17','int'),(168,'fileStage','4','int'),(168,'originalFileName','Chapter 1: Interactions Affording Distan.pdf','string'),(168,'sourceSubmissionFileId','28','int'),(168,'submissionFileId','33','int'),(168,'submissionId','7','int'),(168,'username','dbarnes','string'),(169,'fileId','17','int'),(169,'fileStage','4','int'),(169,'name','Chapter 1: Interactions Affording Distan.pdf','string'),(169,'submissionFileId','33','int'),(169,'submissionId','7','int'),(169,'username','dbarnes','string'),(170,'fileId','18','int'),(170,'fileStage','4','int'),(170,'originalFileName','Chapter 2: Learning Science at a Distanc.pdf','string'),(170,'sourceSubmissionFileId','29','int'),(170,'submissionFileId','34','int'),(170,'submissionId','7','int'),(170,'username','dbarnes','string'),(171,'fileId','18','int'),(171,'fileStage','4','int'),(171,'name','Chapter 2: Learning Science at a Distanc.pdf','string'),(171,'submissionFileId','34','int'),(171,'submissionId','7','int'),(171,'username','dbarnes','string'),(172,'fileId','19','int'),(172,'fileStage','4','int'),(172,'originalFileName','Chapter 3: Leadership Strategies for Coo.pdf','string'),(172,'sourceSubmissionFileId','30','int'),(172,'submissionFileId','35','int'),(172,'submissionId','7','int'),(172,'username','dbarnes','string'),(173,'fileId','19','int'),(173,'fileStage','4','int'),(173,'name','Chapter 3: Leadership Strategies for Coo.pdf','string'),(173,'submissionFileId','35','int'),(173,'submissionId','7','int'),(173,'username','dbarnes','string'),(174,'fileId','20','int'),(174,'fileStage','4','int'),(174,'originalFileName','Chapter 4: Toward New Models of Flexible.pdf','string'),(174,'sourceSubmissionFileId','31','int'),(174,'submissionFileId','36','int'),(174,'submissionId','7','int'),(174,'username','dbarnes','string'),(175,'fileId','20','int'),(175,'fileStage','4','int'),(175,'name','Chapter 4: Toward New Models of Flexible.pdf','string'),(175,'submissionFileId','36','int'),(175,'submissionId','7','int'),(175,'username','dbarnes','string'),(176,'reviewAssignmentId','8','string'),(176,'reviewerName','Adela Gallego','string'),(176,'round','1','int'),(176,'stageId','3','int'),(176,'submissionId','7','int'),(177,'decision','Accept Submission','string'),(177,'editorName','Daniel Barnes','string'),(177,'submissionId','7','int'),(178,'name','Maria Fritz','string'),(178,'userGroupName','Copyeditor','string'),(178,'username','mfritz','string'),(181,'fileId','21','int'),(181,'fileStage','2','int'),(181,'originalFileName','Editorial.pdf','string'),(181,'sourceSubmissionFileId',NULL,'string'),(181,'submissionFileId','37','int'),(181,'submissionId','8','int'),(181,'username','dbarnes','string'),(182,'fileId','21','int'),(182,'fileStage','2','int'),(182,'name','Editorial.pdf','string'),(182,'submissionFileId','37','int'),(182,'submissionId','8','int'),(182,'username','dbarnes','string'),(183,'fileId','21','int'),(183,'fileStage','2','int'),(183,'originalFileName','Editorial.pdf','string'),(183,'sourceSubmissionFileId',NULL,'string'),(183,'submissionFileId','37','int'),(183,'submissionId','8','int'),(183,'username','dbarnes','string'),(184,'fileId','21','int'),(184,'fileStage','2','int'),(184,'name','Editorial.pdf','string'),(184,'originalFileName','Editorial.pdf','string'),(184,'sourceSubmissionFileId',NULL,'string'),(184,'submissionFileId','37','int'),(184,'submissionId','8','int'),(184,'username','dbarnes','string'),(189,'fileId','22','int'),(189,'fileStage','2','int'),(189,'originalFileName','Internet, openness and the future of the.pdf','string'),(189,'sourceSubmissionFileId',NULL,'string'),(189,'submissionFileId','38','int'),(189,'submissionId','9','int'),(189,'username','fperini','string'),(190,'fileId','22','int'),(190,'fileStage','2','int'),(190,'name','Internet, openness and the future of the.pdf','string'),(190,'submissionFileId','38','int'),(190,'submissionId','9','int'),(190,'username','fperini','string'),(191,'fileId','22','int'),(191,'fileStage','2','int'),(191,'originalFileName','Internet, openness and the future of the.pdf','string'),(191,'sourceSubmissionFileId',NULL,'string'),(191,'submissionFileId','38','int'),(191,'submissionId','9','int'),(191,'username','fperini','string'),(192,'fileId','22','int'),(192,'fileStage','2','int'),(192,'name','Internet, openness and the future of the.pdf','string'),(192,'originalFileName','Internet, openness and the future of the.pdf','string'),(192,'sourceSubmissionFileId',NULL,'string'),(192,'submissionFileId','38','int'),(192,'submissionId','9','int'),(192,'username','fperini','string'),(193,'fileId','23','int'),(193,'fileStage','2','int'),(193,'originalFileName','Imagining the Internet: Open, closed or .pdf','string'),(193,'sourceSubmissionFileId',NULL,'string'),(193,'submissionFileId','39','int'),(193,'submissionId','9','int'),(193,'username','fperini','string'),(194,'fileId','23','int'),(194,'fileStage','2','int'),(194,'name','Imagining the Internet: Open, closed or .pdf','string'),(194,'submissionFileId','39','int'),(194,'submissionId','9','int'),(194,'username','fperini','string'),(195,'fileId','23','int'),(195,'fileStage','2','int'),(195,'originalFileName','Imagining the Internet: Open, closed or .pdf','string'),(195,'sourceSubmissionFileId',NULL,'string'),(195,'submissionFileId','39','int'),(195,'submissionId','9','int'),(195,'username','fperini','string'),(196,'fileId','23','int'),(196,'fileStage','2','int'),(196,'name','Imagining the Internet: Open, closed or .pdf','string'),(196,'originalFileName','Imagining the Internet: Open, closed or .pdf','string'),(196,'sourceSubmissionFileId',NULL,'string'),(196,'submissionFileId','39','int'),(196,'submissionId','9','int'),(196,'username','fperini','string'),(197,'fileId','24','int'),(197,'fileStage','2','int'),(197,'originalFileName','The internet in LAC will remain free, pu.pdf','string'),(197,'sourceSubmissionFileId',NULL,'string'),(197,'submissionFileId','40','int'),(197,'submissionId','9','int'),(197,'username','fperini','string'),(198,'fileId','24','int'),(198,'fileStage','2','int'),(198,'name','The internet in LAC will remain free, pu.pdf','string'),(198,'submissionFileId','40','int'),(198,'submissionId','9','int'),(198,'username','fperini','string'),(199,'fileId','24','int'),(199,'fileStage','2','int'),(199,'originalFileName','The internet in LAC will remain free, pu.pdf','string'),(199,'sourceSubmissionFileId',NULL,'string'),(199,'submissionFileId','40','int'),(199,'submissionId','9','int'),(199,'username','fperini','string'),(200,'fileId','24','int'),(200,'fileStage','2','int'),(200,'name','The internet in LAC will remain free, pu.pdf','string'),(200,'originalFileName','The internet in LAC will remain free, pu.pdf','string'),(200,'sourceSubmissionFileId',NULL,'string'),(200,'submissionFileId','40','int'),(200,'submissionId','9','int'),(200,'username','fperini','string'),(201,'fileId','25','int'),(201,'fileStage','2','int'),(201,'originalFileName','Free Internet?.pdf','string'),(201,'sourceSubmissionFileId',NULL,'string'),(201,'submissionFileId','41','int'),(201,'submissionId','9','int'),(201,'username','fperini','string'),(202,'fileId','25','int'),(202,'fileStage','2','int'),(202,'name','Free Internet?.pdf','string'),(202,'submissionFileId','41','int'),(202,'submissionId','9','int'),(202,'username','fperini','string'),(203,'fileId','25','int'),(203,'fileStage','2','int'),(203,'originalFileName','Free Internet?.pdf','string'),(203,'sourceSubmissionFileId',NULL,'string'),(203,'submissionFileId','41','int'),(203,'submissionId','9','int'),(203,'username','fperini','string'),(204,'fileId','25','int'),(204,'fileStage','2','int'),(204,'name','Free Internet?.pdf','string'),(204,'originalFileName','Free Internet?.pdf','string'),(204,'sourceSubmissionFileId',NULL,'string'),(204,'submissionFileId','41','int'),(204,'submissionId','9','int'),(204,'username','fperini','string'),(205,'fileId','26','int'),(205,'fileStage','2','int'),(205,'originalFileName','Risks and challenges for freedom of expr.pdf','string'),(205,'sourceSubmissionFileId',NULL,'string'),(205,'submissionFileId','42','int'),(205,'submissionId','9','int'),(205,'username','fperini','string'),(206,'fileId','26','int'),(206,'fileStage','2','int'),(206,'name','Risks and challenges for freedom of expr.pdf','string'),(206,'submissionFileId','42','int'),(206,'submissionId','9','int'),(206,'username','fperini','string'),(207,'fileId','26','int'),(207,'fileStage','2','int'),(207,'originalFileName','Risks and challenges for freedom of expr.pdf','string'),(207,'sourceSubmissionFileId',NULL,'string'),(207,'submissionFileId','42','int'),(207,'submissionId','9','int'),(207,'username','fperini','string'),(208,'fileId','26','int'),(208,'fileStage','2','int'),(208,'name','Risks and challenges for freedom of expr.pdf','string'),(208,'originalFileName','Risks and challenges for freedom of expr.pdf','string'),(208,'sourceSubmissionFileId',NULL,'string'),(208,'submissionFileId','42','int'),(208,'submissionId','9','int'),(208,'username','fperini','string'),(211,'decision','Send to Internal Review','string'),(211,'editorName','Daniel Barnes','string'),(211,'submissionId','9','int'),(214,'fileId','27','int'),(214,'fileStage','2','int'),(214,'originalFileName','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(214,'sourceSubmissionFileId',NULL,'string'),(214,'submissionFileId','43','int'),(214,'submissionId','10','int'),(214,'username','jbrower','string'),(215,'fileId','27','int'),(215,'fileStage','2','int'),(215,'name','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(215,'submissionFileId','43','int'),(215,'submissionId','10','int'),(215,'username','jbrower','string'),(216,'fileId','27','int'),(216,'fileStage','2','int'),(216,'originalFileName','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(216,'sourceSubmissionFileId',NULL,'string'),(216,'submissionFileId','43','int'),(216,'submissionId','10','int'),(216,'username','jbrower','string'),(217,'fileId','27','int'),(217,'fileStage','2','int'),(217,'name','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(217,'originalFileName','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(217,'sourceSubmissionFileId',NULL,'string'),(217,'submissionFileId','43','int'),(217,'submissionId','10','int'),(217,'username','jbrower','string'),(222,'fileId','28','int'),(222,'fileStage','2','int'),(222,'originalFileName','Dreamwork.pdf','string'),(222,'sourceSubmissionFileId',NULL,'string'),(222,'submissionFileId','44','int'),(222,'submissionId','11','int'),(222,'username','jlockehart','string'),(223,'fileId','28','int'),(223,'fileStage','2','int'),(223,'name','Dreamwork.pdf','string'),(223,'submissionFileId','44','int'),(223,'submissionId','11','int'),(223,'username','jlockehart','string'),(224,'fileId','28','int'),(224,'fileStage','2','int'),(224,'originalFileName','Dreamwork.pdf','string'),(224,'sourceSubmissionFileId',NULL,'string'),(224,'submissionFileId','44','int'),(224,'submissionId','11','int'),(224,'username','jlockehart','string'),(225,'fileId','28','int'),(225,'fileStage','2','int'),(225,'name','Dreamwork.pdf','string'),(225,'originalFileName','Dreamwork.pdf','string'),(225,'sourceSubmissionFileId',NULL,'string'),(225,'submissionFileId','44','int'),(225,'submissionId','11','int'),(225,'username','jlockehart','string'),(228,'decision','Send to Internal Review','string'),(228,'editorName','Daniel Barnes','string'),(228,'submissionId','11','int'),(229,'reviewAssignmentId','9','string'),(229,'reviewerName','Aisla McCrae','string'),(229,'round','1','int'),(229,'stageId','2','int'),(229,'submissionId','11','int'),(230,'decision','Send to External Review','string'),(230,'editorName','Daniel Barnes','string'),(230,'submissionId','11','int'),(231,'reviewAssignmentId','10','string'),(231,'reviewerName','Adela Gallego','string'),(231,'round','1','int'),(231,'stageId','3','int'),(231,'submissionId','11','int'),(232,'reviewAssignmentId','11','string'),(232,'reviewerName','Gonzalo Favio','string'),(232,'round','1','int'),(232,'stageId','3','int'),(232,'submissionId','11','int'),(233,'reviewAssignmentId','10','int'),(233,'reviewerName','Adela Gallego','string'),(233,'round','1','int'),(233,'submissionId','11','int'),(234,'reviewAssignmentId','10','int'),(234,'reviewerName','Adela Gallego','string'),(234,'round','1','int'),(234,'submissionId','11','int'),(235,'reviewAssignmentId','11','int'),(235,'reviewerName','Gonzalo Favio','string'),(235,'round','1','int'),(235,'submissionId','11','int'),(236,'reviewAssignmentId','11','int'),(236,'reviewerName','Gonzalo Favio','string'),(236,'round','1','int'),(236,'submissionId','11','int'),(237,'decision','Accept Submission','string'),(237,'editorName','Daniel Barnes','string'),(237,'submissionId','11','int'),(240,'fileId','29','int'),(240,'fileStage','2','int'),(240,'originalFileName','Catalyzing Access through Social and Tec.pdf','string'),(240,'sourceSubmissionFileId',NULL,'string'),(240,'submissionFileId','45','int'),(240,'submissionId','12','int'),(240,'username','lelder','string'),(241,'fileId','29','int'),(241,'fileStage','2','int'),(241,'name','Catalyzing Access through Social and Tec.pdf','string'),(241,'submissionFileId','45','int'),(241,'submissionId','12','int'),(241,'username','lelder','string'),(242,'fileId','29','int'),(242,'fileStage','2','int'),(242,'originalFileName','Catalyzing Access through Social and Tec.pdf','string'),(242,'sourceSubmissionFileId',NULL,'string'),(242,'submissionFileId','45','int'),(242,'submissionId','12','int'),(242,'username','lelder','string'),(243,'fileId','29','int'),(243,'fileStage','2','int'),(243,'name','Catalyzing Access through Social and Tec.pdf','string'),(243,'originalFileName','Catalyzing Access through Social and Tec.pdf','string'),(243,'sourceSubmissionFileId',NULL,'string'),(243,'submissionFileId','45','int'),(243,'submissionId','12','int'),(243,'username','lelder','string'),(244,'fileId','30','int'),(244,'fileStage','2','int'),(244,'originalFileName','Catalyzing Access via Telecommunications.pdf','string'),(244,'sourceSubmissionFileId',NULL,'string'),(244,'submissionFileId','46','int'),(244,'submissionId','12','int'),(244,'username','lelder','string'),(245,'fileId','30','int'),(245,'fileStage','2','int'),(245,'name','Catalyzing Access via Telecommunications.pdf','string'),(245,'submissionFileId','46','int'),(245,'submissionId','12','int'),(245,'username','lelder','string'),(246,'fileId','30','int'),(246,'fileStage','2','int'),(246,'originalFileName','Catalyzing Access via Telecommunications.pdf','string'),(246,'sourceSubmissionFileId',NULL,'string'),(246,'submissionFileId','46','int'),(246,'submissionId','12','int'),(246,'username','lelder','string'),(247,'fileId','30','int'),(247,'fileStage','2','int'),(247,'name','Catalyzing Access via Telecommunications.pdf','string'),(247,'originalFileName','Catalyzing Access via Telecommunications.pdf','string'),(247,'sourceSubmissionFileId',NULL,'string'),(247,'submissionFileId','46','int'),(247,'submissionId','12','int'),(247,'username','lelder','string'),(248,'fileId','31','int'),(248,'fileStage','2','int'),(248,'originalFileName','Access to Knowledge as a New Paradigm fo.pdf','string'),(248,'sourceSubmissionFileId',NULL,'string'),(248,'submissionFileId','47','int'),(248,'submissionId','12','int'),(248,'username','lelder','string'),(249,'fileId','31','int'),(249,'fileStage','2','int'),(249,'name','Access to Knowledge as a New Paradigm fo.pdf','string'),(249,'submissionFileId','47','int'),(249,'submissionId','12','int'),(249,'username','lelder','string'),(250,'fileId','31','int'),(250,'fileStage','2','int'),(250,'originalFileName','Access to Knowledge as a New Paradigm fo.pdf','string'),(250,'sourceSubmissionFileId',NULL,'string'),(250,'submissionFileId','47','int'),(250,'submissionId','12','int'),(250,'username','lelder','string'),(251,'fileId','31','int'),(251,'fileStage','2','int'),(251,'name','Access to Knowledge as a New Paradigm fo.pdf','string'),(251,'originalFileName','Access to Knowledge as a New Paradigm fo.pdf','string'),(251,'sourceSubmissionFileId',NULL,'string'),(251,'submissionFileId','47','int'),(251,'submissionId','12','int'),(251,'username','lelder','string'),(254,'decision','Send to Internal Review','string'),(254,'editorName','Daniel Barnes','string'),(254,'submissionId','12','int'),(255,'fileId','29','int'),(255,'fileStage','19','int'),(255,'originalFileName','Catalyzing Access through Social and Tec.pdf','string'),(255,'sourceSubmissionFileId','45','int'),(255,'submissionFileId','48','int'),(255,'submissionId','12','int'),(255,'username','dbarnes','string'),(256,'fileId','29','int'),(256,'fileStage','19','int'),(256,'name','Catalyzing Access through Social and Tec.pdf','string'),(256,'submissionFileId','48','int'),(256,'submissionId','12','int'),(256,'username','dbarnes','string'),(257,'fileId','30','int'),(257,'fileStage','19','int'),(257,'originalFileName','Catalyzing Access via Telecommunications.pdf','string'),(257,'sourceSubmissionFileId','46','int'),(257,'submissionFileId','49','int'),(257,'submissionId','12','int'),(257,'username','dbarnes','string'),(258,'fileId','30','int'),(258,'fileStage','19','int'),(258,'name','Catalyzing Access via Telecommunications.pdf','string'),(258,'submissionFileId','49','int'),(258,'submissionId','12','int'),(258,'username','dbarnes','string'),(259,'fileId','31','int'),(259,'fileStage','19','int'),(259,'originalFileName','Access to Knowledge as a New Paradigm fo.pdf','string'),(259,'sourceSubmissionFileId','47','int'),(259,'submissionFileId','50','int'),(259,'submissionId','12','int'),(259,'username','dbarnes','string'),(260,'fileId','31','int'),(260,'fileStage','19','int'),(260,'name','Access to Knowledge as a New Paradigm fo.pdf','string'),(260,'submissionFileId','50','int'),(260,'submissionId','12','int'),(260,'username','dbarnes','string'),(261,'reviewAssignmentId','12','string'),(261,'reviewerName','Julie Janssen','string'),(261,'round','1','int'),(261,'stageId','2','int'),(261,'submissionId','12','int'),(262,'reviewAssignmentId','13','string'),(262,'reviewerName','Paul Hudson','string'),(262,'round','1','int'),(262,'stageId','2','int'),(262,'submissionId','12','int'),(263,'reviewAssignmentId','14','string'),(263,'reviewerName','Aisla McCrae','string'),(263,'round','1','int'),(263,'stageId','2','int'),(263,'submissionId','12','int'),(264,'reviewAssignmentId','13','int'),(264,'reviewerName','Paul Hudson','string'),(264,'round','1','int'),(264,'submissionId','12','int'),(265,'reviewAssignmentId','13','int'),(265,'reviewerName','Paul Hudson','string'),(265,'round','1','int'),(265,'submissionId','12','int'),(268,'fileId','32','int'),(268,'fileStage','2','int'),(268,'originalFileName','Current State of Mobile Learning.pdf','string'),(268,'sourceSubmissionFileId',NULL,'string'),(268,'submissionFileId','51','int'),(268,'submissionId','13','int'),(268,'username','mally','string'),(269,'fileId','32','int'),(269,'fileStage','2','int'),(269,'name','Current State of Mobile Learning.pdf','string'),(269,'submissionFileId','51','int'),(269,'submissionId','13','int'),(269,'username','mally','string'),(270,'fileId','32','int'),(270,'fileStage','2','int'),(270,'originalFileName','Current State of Mobile Learning.pdf','string'),(270,'sourceSubmissionFileId',NULL,'string'),(270,'submissionFileId','51','int'),(270,'submissionId','13','int'),(270,'username','mally','string'),(271,'fileId','32','int'),(271,'fileStage','2','int'),(271,'name','Current State of Mobile Learning.pdf','string'),(271,'originalFileName','Current State of Mobile Learning.pdf','string'),(271,'sourceSubmissionFileId',NULL,'string'),(271,'submissionFileId','51','int'),(271,'submissionId','13','int'),(271,'username','mally','string'),(272,'fileId','33','int'),(272,'fileStage','2','int'),(272,'originalFileName','A Model for Framing Mobile Learning.pdf','string'),(272,'sourceSubmissionFileId',NULL,'string'),(272,'submissionFileId','52','int'),(272,'submissionId','13','int'),(272,'username','mally','string'),(273,'fileId','33','int'),(273,'fileStage','2','int'),(273,'name','A Model for Framing Mobile Learning.pdf','string'),(273,'submissionFileId','52','int'),(273,'submissionId','13','int'),(273,'username','mally','string'),(274,'fileId','33','int'),(274,'fileStage','2','int'),(274,'originalFileName','A Model for Framing Mobile Learning.pdf','string'),(274,'sourceSubmissionFileId',NULL,'string'),(274,'submissionFileId','52','int'),(274,'submissionId','13','int'),(274,'username','mally','string'),(275,'fileId','33','int'),(275,'fileStage','2','int'),(275,'name','A Model for Framing Mobile Learning.pdf','string'),(275,'originalFileName','A Model for Framing Mobile Learning.pdf','string'),(275,'sourceSubmissionFileId',NULL,'string'),(275,'submissionFileId','52','int'),(275,'submissionId','13','int'),(275,'username','mally','string'),(276,'fileId','34','int'),(276,'fileStage','2','int'),(276,'originalFileName','Mobile Distance Learning with PDAs: Deve.pdf','string'),(276,'sourceSubmissionFileId',NULL,'string'),(276,'submissionFileId','53','int'),(276,'submissionId','13','int'),(276,'username','mally','string'),(277,'fileId','34','int'),(277,'fileStage','2','int'),(277,'name','Mobile Distance Learning with PDAs: Deve.pdf','string'),(277,'submissionFileId','53','int'),(277,'submissionId','13','int'),(277,'username','mally','string'),(278,'fileId','34','int'),(278,'fileStage','2','int'),(278,'originalFileName','Mobile Distance Learning with PDAs: Deve.pdf','string'),(278,'sourceSubmissionFileId',NULL,'string'),(278,'submissionFileId','53','int'),(278,'submissionId','13','int'),(278,'username','mally','string'),(279,'fileId','34','int'),(279,'fileStage','2','int'),(279,'name','Mobile Distance Learning with PDAs: Deve.pdf','string'),(279,'originalFileName','Mobile Distance Learning with PDAs: Deve.pdf','string'),(279,'sourceSubmissionFileId',NULL,'string'),(279,'submissionFileId','53','int'),(279,'submissionId','13','int'),(279,'username','mally','string'),(282,'decision','Send to Internal Review','string'),(282,'editorName','Daniel Barnes','string'),(282,'submissionId','13','int'),(283,'fileId','32','int'),(283,'fileStage','19','int'),(283,'originalFileName','Current State of Mobile Learning.pdf','string'),(283,'sourceSubmissionFileId','51','int'),(283,'submissionFileId','54','int'),(283,'submissionId','13','int'),(283,'username','dbarnes','string'),(284,'fileId','32','int'),(284,'fileStage','19','int'),(284,'name','Current State of Mobile Learning.pdf','string'),(284,'submissionFileId','54','int'),(284,'submissionId','13','int'),(284,'username','dbarnes','string'),(285,'fileId','33','int'),(285,'fileStage','19','int'),(285,'originalFileName','A Model for Framing Mobile Learning.pdf','string'),(285,'sourceSubmissionFileId','52','int'),(285,'submissionFileId','55','int'),(285,'submissionId','13','int'),(285,'username','dbarnes','string'),(286,'fileId','33','int'),(286,'fileStage','19','int'),(286,'name','A Model for Framing Mobile Learning.pdf','string'),(286,'submissionFileId','55','int'),(286,'submissionId','13','int'),(286,'username','dbarnes','string'),(287,'fileId','34','int'),(287,'fileStage','19','int'),(287,'originalFileName','Mobile Distance Learning with PDAs: Deve.pdf','string'),(287,'sourceSubmissionFileId','53','int'),(287,'submissionFileId','56','int'),(287,'submissionId','13','int'),(287,'username','dbarnes','string'),(288,'fileId','34','int'),(288,'fileStage','19','int'),(288,'name','Mobile Distance Learning with PDAs: Deve.pdf','string'),(288,'submissionFileId','56','int'),(288,'submissionId','13','int'),(288,'username','dbarnes','string'),(289,'reviewAssignmentId','15','string'),(289,'reviewerName','Paul Hudson','string'),(289,'round','1','int'),(289,'stageId','2','int'),(289,'submissionId','13','int'),(290,'decision','Send to External Review','string'),(290,'editorName','Daniel Barnes','string'),(290,'submissionId','13','int'),(291,'reviewAssignmentId','16','string'),(291,'reviewerName','Adela Gallego','string'),(291,'round','1','int'),(291,'stageId','3','int'),(291,'submissionId','13','int'),(292,'reviewAssignmentId','17','string'),(292,'reviewerName','Al Zacharia','string'),(292,'round','1','int'),(292,'stageId','3','int'),(292,'submissionId','13','int'),(293,'reviewAssignmentId','18','string'),(293,'reviewerName','Gonzalo Favio','string'),(293,'round','1','int'),(293,'stageId','3','int'),(293,'submissionId','13','int'),(294,'reviewAssignmentId','16','int'),(294,'reviewerName','Adela Gallego','string'),(294,'round','1','int'),(294,'submissionId','13','int'),(295,'reviewAssignmentId','16','int'),(295,'reviewerName','Adela Gallego','string'),(295,'round','1','int'),(295,'submissionId','13','int'),(296,'reviewAssignmentId','18','int'),(296,'reviewerName','Gonzalo Favio','string'),(296,'round','1','int'),(296,'submissionId','13','int'),(297,'reviewAssignmentId','18','int'),(297,'reviewerName','Gonzalo Favio','string'),(297,'round','1','int'),(297,'submissionId','13','int'),(298,'decision','Accept Submission','string'),(298,'editorName','Daniel Barnes','string'),(298,'submissionId','13','int'),(301,'fileId','35','int'),(301,'fileStage','2','int'),(301,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(301,'sourceSubmissionFileId',NULL,'string'),(301,'submissionFileId','57','int'),(301,'submissionId','14','int'),(301,'username','mdawson','string'),(302,'fileId','35','int'),(302,'fileStage','2','int'),(302,'name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(302,'submissionFileId','57','int'),(302,'submissionId','14','int'),(302,'username','mdawson','string'),(303,'fileId','35','int'),(303,'fileStage','2','int'),(303,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(303,'sourceSubmissionFileId',NULL,'string'),(303,'submissionFileId','57','int'),(303,'submissionId','14','int'),(303,'username','mdawson','string'),(304,'fileId','35','int'),(304,'fileStage','2','int'),(304,'name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(304,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(304,'sourceSubmissionFileId',NULL,'string'),(304,'submissionFileId','57','int'),(304,'submissionId','14','int'),(304,'username','mdawson','string'),(305,'fileId','36','int'),(305,'fileStage','2','int'),(305,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(305,'sourceSubmissionFileId',NULL,'string'),(305,'submissionFileId','58','int'),(305,'submissionId','14','int'),(305,'username','mdawson','string'),(306,'fileId','36','int'),(306,'fileStage','2','int'),(306,'name','Chapter 2: Classical Music and the Class.pdf','string'),(306,'submissionFileId','58','int'),(306,'submissionId','14','int'),(306,'username','mdawson','string'),(307,'fileId','36','int'),(307,'fileStage','2','int'),(307,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(307,'sourceSubmissionFileId',NULL,'string'),(307,'submissionFileId','58','int'),(307,'submissionId','14','int'),(307,'username','mdawson','string'),(308,'fileId','36','int'),(308,'fileStage','2','int'),(308,'name','Chapter 2: Classical Music and the Class.pdf','string'),(308,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(308,'sourceSubmissionFileId',NULL,'string'),(308,'submissionFileId','58','int'),(308,'submissionId','14','int'),(308,'username','mdawson','string'),(309,'fileId','37','int'),(309,'fileStage','2','int'),(309,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(309,'sourceSubmissionFileId',NULL,'string'),(309,'submissionFileId','59','int'),(309,'submissionId','14','int'),(309,'username','mdawson','string'),(310,'fileId','37','int'),(310,'fileStage','2','int'),(310,'name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(310,'submissionFileId','59','int'),(310,'submissionId','14','int'),(310,'username','mdawson','string'),(311,'fileId','37','int'),(311,'fileStage','2','int'),(311,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(311,'sourceSubmissionFileId',NULL,'string'),(311,'submissionFileId','59','int'),(311,'submissionId','14','int'),(311,'username','mdawson','string'),(312,'fileId','37','int'),(312,'fileStage','2','int'),(312,'name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(312,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(312,'sourceSubmissionFileId',NULL,'string'),(312,'submissionFileId','59','int'),(312,'submissionId','14','int'),(312,'username','mdawson','string'),(313,'fileId','38','int'),(313,'fileStage','2','int'),(313,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(313,'sourceSubmissionFileId',NULL,'string'),(313,'submissionFileId','60','int'),(313,'submissionId','14','int'),(313,'username','mdawson','string'),(314,'fileId','38','int'),(314,'fileStage','2','int'),(314,'name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(314,'submissionFileId','60','int'),(314,'submissionId','14','int'),(314,'username','mdawson','string'),(315,'fileId','38','int'),(315,'fileStage','2','int'),(315,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(315,'sourceSubmissionFileId',NULL,'string'),(315,'submissionFileId','60','int'),(315,'submissionId','14','int'),(315,'username','mdawson','string'),(316,'fileId','38','int'),(316,'fileStage','2','int'),(316,'name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(316,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(316,'sourceSubmissionFileId',NULL,'string'),(316,'submissionFileId','60','int'),(316,'submissionId','14','int'),(316,'username','mdawson','string'),(317,'fileId','39','int'),(317,'fileStage','2','int'),(317,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(317,'sourceSubmissionFileId',NULL,'string'),(317,'submissionFileId','61','int'),(317,'submissionId','14','int'),(317,'username','mdawson','string'),(318,'fileId','39','int'),(318,'fileStage','2','int'),(318,'name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(318,'submissionFileId','61','int'),(318,'submissionId','14','int'),(318,'username','mdawson','string'),(319,'fileId','39','int'),(319,'fileStage','2','int'),(319,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(319,'sourceSubmissionFileId',NULL,'string'),(319,'submissionFileId','61','int'),(319,'submissionId','14','int'),(319,'username','mdawson','string'),(320,'fileId','39','int'),(320,'fileStage','2','int'),(320,'name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(320,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(320,'sourceSubmissionFileId',NULL,'string'),(320,'submissionFileId','61','int'),(320,'submissionId','14','int'),(320,'username','mdawson','string'),(321,'fileId','40','int'),(321,'fileStage','2','int'),(321,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(321,'sourceSubmissionFileId',NULL,'string'),(321,'submissionFileId','62','int'),(321,'submissionId','14','int'),(321,'username','mdawson','string'),(322,'fileId','40','int'),(322,'fileStage','2','int'),(322,'name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(322,'submissionFileId','62','int'),(322,'submissionId','14','int'),(322,'username','mdawson','string'),(323,'fileId','40','int'),(323,'fileStage','2','int'),(323,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(323,'sourceSubmissionFileId',NULL,'string'),(323,'submissionFileId','62','int'),(323,'submissionId','14','int'),(323,'username','mdawson','string'),(324,'fileId','40','int'),(324,'fileStage','2','int'),(324,'name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(324,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(324,'sourceSubmissionFileId',NULL,'string'),(324,'submissionFileId','62','int'),(324,'submissionId','14','int'),(324,'username','mdawson','string'),(327,'decision','Send to Internal Review','string'),(327,'editorName','Daniel Barnes','string'),(327,'submissionId','14','int'),(328,'fileId','35','int'),(328,'fileStage','19','int'),(328,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(328,'sourceSubmissionFileId','57','int'),(328,'submissionFileId','63','int'),(328,'submissionId','14','int'),(328,'username','dbarnes','string'),(329,'fileId','35','int'),(329,'fileStage','19','int'),(329,'name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(329,'submissionFileId','63','int'),(329,'submissionId','14','int'),(329,'username','dbarnes','string'),(330,'fileId','36','int'),(330,'fileStage','19','int'),(330,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(330,'sourceSubmissionFileId','58','int'),(330,'submissionFileId','64','int'),(330,'submissionId','14','int'),(330,'username','dbarnes','string'),(331,'fileId','36','int'),(331,'fileStage','19','int'),(331,'name','Chapter 2: Classical Music and the Class.pdf','string'),(331,'submissionFileId','64','int'),(331,'submissionId','14','int'),(331,'username','dbarnes','string'),(332,'fileId','37','int'),(332,'fileStage','19','int'),(332,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(332,'sourceSubmissionFileId','59','int'),(332,'submissionFileId','65','int'),(332,'submissionId','14','int'),(332,'username','dbarnes','string'),(333,'fileId','37','int'),(333,'fileStage','19','int'),(333,'name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(333,'submissionFileId','65','int'),(333,'submissionId','14','int'),(333,'username','dbarnes','string'),(334,'fileId','38','int'),(334,'fileStage','19','int'),(334,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(334,'sourceSubmissionFileId','60','int'),(334,'submissionFileId','66','int'),(334,'submissionId','14','int'),(334,'username','dbarnes','string'),(335,'fileId','38','int'),(335,'fileStage','19','int'),(335,'name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(335,'submissionFileId','66','int'),(335,'submissionId','14','int'),(335,'username','dbarnes','string'),(336,'fileId','39','int'),(336,'fileStage','19','int'),(336,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(336,'sourceSubmissionFileId','61','int'),(336,'submissionFileId','67','int'),(336,'submissionId','14','int'),(336,'username','dbarnes','string'),(337,'fileId','39','int'),(337,'fileStage','19','int'),(337,'name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(337,'submissionFileId','67','int'),(337,'submissionId','14','int'),(337,'username','dbarnes','string'),(338,'fileId','40','int'),(338,'fileStage','19','int'),(338,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(338,'sourceSubmissionFileId','62','int'),(338,'submissionFileId','68','int'),(338,'submissionId','14','int'),(338,'username','dbarnes','string'),(339,'fileId','40','int'),(339,'fileStage','19','int'),(339,'name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(339,'submissionFileId','68','int'),(339,'submissionId','14','int'),(339,'username','dbarnes','string'),(340,'reviewAssignmentId','19','string'),(340,'reviewerName','Julie Janssen','string'),(340,'round','1','int'),(340,'stageId','2','int'),(340,'submissionId','14','int'),(341,'decision','Send to External Review','string'),(341,'editorName','Daniel Barnes','string'),(341,'submissionId','14','int'),(342,'reviewAssignmentId','20','string'),(342,'reviewerName','Al Zacharia','string'),(342,'round','1','int'),(342,'stageId','3','int'),(342,'submissionId','14','int'),(343,'decision','Accept Submission','string'),(343,'editorName','Daniel Barnes','string'),(343,'submissionId','14','int'),(344,'name','Maria Fritz','string'),(344,'userGroupName','Copyeditor','string'),(344,'username','mfritz','string'),(345,'decision','Send To Production','string'),(345,'editorName','Daniel Barnes','string'),(345,'submissionId','14','int'),(346,'name','Graham Cox','string'),(346,'userGroupName','Layout Editor','string'),(346,'username','gcox','string'),(347,'name','Sabine Kumar','string'),(347,'userGroupName','Proofreader','string'),(347,'username','skumar','string'),(348,'formatName','PDF','string'),(349,'fileId','35','int'),(349,'fileStage','10','int'),(349,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(349,'sourceSubmissionFileId','57','int'),(349,'submissionFileId','69','int'),(349,'submissionId','14','int'),(349,'username','dbarnes','string'),(350,'fileId','35','int'),(350,'fileStage','10','int'),(350,'name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(350,'submissionFileId','69','int'),(350,'submissionId','14','int'),(350,'username','dbarnes','string'),(351,'fileId','36','int'),(351,'fileStage','10','int'),(351,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(351,'sourceSubmissionFileId','58','int'),(351,'submissionFileId','70','int'),(351,'submissionId','14','int'),(351,'username','dbarnes','string'),(352,'fileId','36','int'),(352,'fileStage','10','int'),(352,'name','Chapter 2: Classical Music and the Class.pdf','string'),(352,'submissionFileId','70','int'),(352,'submissionId','14','int'),(352,'username','dbarnes','string'),(353,'fileId','37','int'),(353,'fileStage','10','int'),(353,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(353,'sourceSubmissionFileId','59','int'),(353,'submissionFileId','71','int'),(353,'submissionId','14','int'),(353,'username','dbarnes','string'),(354,'fileId','37','int'),(354,'fileStage','10','int'),(354,'name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(354,'submissionFileId','71','int'),(354,'submissionId','14','int'),(354,'username','dbarnes','string'),(355,'fileId','38','int'),(355,'fileStage','10','int'),(355,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(355,'sourceSubmissionFileId','60','int'),(355,'submissionFileId','72','int'),(355,'submissionId','14','int'),(355,'username','dbarnes','string'),(356,'fileId','38','int'),(356,'fileStage','10','int'),(356,'name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(356,'submissionFileId','72','int'),(356,'submissionId','14','int'),(356,'username','dbarnes','string'),(357,'fileId','39','int'),(357,'fileStage','10','int'),(357,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(357,'sourceSubmissionFileId','61','int'),(357,'submissionFileId','73','int'),(357,'submissionId','14','int'),(357,'username','dbarnes','string'),(358,'fileId','39','int'),(358,'fileStage','10','int'),(358,'name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(358,'submissionFileId','73','int'),(358,'submissionId','14','int'),(358,'username','dbarnes','string'),(359,'fileId','40','int'),(359,'fileStage','10','int'),(359,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(359,'sourceSubmissionFileId','62','int'),(359,'submissionFileId','74','int'),(359,'submissionId','14','int'),(359,'username','dbarnes','string'),(360,'fileId','40','int'),(360,'fileStage','10','int'),(360,'name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(360,'submissionFileId','74','int'),(360,'submissionId','14','int'),(360,'username','dbarnes','string'),(361,'publicationFormatName','PDF','string'),(362,'publicationFormatName','PDF','string'),(363,'fileId','35','int'),(363,'fileStage','10','int'),(363,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(363,'sourceSubmissionFileId','57','int'),(363,'submissionFileId','69','int'),(363,'submissionId','14','int'),(363,'username','dbarnes','string'),(364,'fileId','35','int'),(364,'fileStage','10','int'),(364,'name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(364,'originalFileName','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(364,'sourceSubmissionFileId','57','int'),(364,'submissionFileId','69','int'),(364,'submissionId','14','int'),(364,'username','dbarnes','string'),(365,'file','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(365,'name','Daniel Barnes','string'),(365,'username','dbarnes','string'),(366,'fileId','36','int'),(366,'fileStage','10','int'),(366,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(366,'sourceSubmissionFileId','58','int'),(366,'submissionFileId','70','int'),(366,'submissionId','14','int'),(366,'username','dbarnes','string'),(367,'fileId','36','int'),(367,'fileStage','10','int'),(367,'name','Chapter 2: Classical Music and the Class.pdf','string'),(367,'originalFileName','Chapter 2: Classical Music and the Class.pdf','string'),(367,'sourceSubmissionFileId','58','int'),(367,'submissionFileId','70','int'),(367,'submissionId','14','int'),(367,'username','dbarnes','string'),(368,'file','Chapter 2: Classical Music and the Class.pdf','string'),(368,'name','Daniel Barnes','string'),(368,'username','dbarnes','string'),(369,'fileId','37','int'),(369,'fileStage','10','int'),(369,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(369,'sourceSubmissionFileId','59','int'),(369,'submissionFileId','71','int'),(369,'submissionId','14','int'),(369,'username','dbarnes','string'),(370,'fileId','37','int'),(370,'fileStage','10','int'),(370,'name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(370,'originalFileName','Chapter 3: Situated Cognition and Bricol.pdf','string'),(370,'sourceSubmissionFileId','59','int'),(370,'submissionFileId','71','int'),(370,'submissionId','14','int'),(370,'username','dbarnes','string'),(371,'file','Chapter 3: Situated Cognition and Bricol.pdf','string'),(371,'name','Daniel Barnes','string'),(371,'username','dbarnes','string'),(372,'fileId','38','int'),(372,'fileStage','10','int'),(372,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(372,'sourceSubmissionFileId','60','int'),(372,'submissionFileId','72','int'),(372,'submissionId','14','int'),(372,'username','dbarnes','string'),(373,'fileId','38','int'),(373,'fileStage','10','int'),(373,'name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(373,'originalFileName','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(373,'sourceSubmissionFileId','60','int'),(373,'submissionFileId','72','int'),(373,'submissionId','14','int'),(373,'username','dbarnes','string'),(374,'file','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(374,'name','Daniel Barnes','string'),(374,'username','dbarnes','string'),(375,'fileId','39','int'),(375,'fileStage','10','int'),(375,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(375,'sourceSubmissionFileId','61','int'),(375,'submissionFileId','73','int'),(375,'submissionId','14','int'),(375,'username','dbarnes','string'),(376,'fileId','39','int'),(376,'fileStage','10','int'),(376,'name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(376,'originalFileName','Segmentation of Vascular Ultrasound Imag.pdf','string'),(376,'sourceSubmissionFileId','61','int'),(376,'submissionFileId','73','int'),(376,'submissionId','14','int'),(376,'username','dbarnes','string'),(377,'file','Segmentation of Vascular Ultrasound Imag.pdf','string'),(377,'name','Daniel Barnes','string'),(377,'username','dbarnes','string'),(378,'fileId','40','int'),(378,'fileStage','10','int'),(378,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(378,'sourceSubmissionFileId','62','int'),(378,'submissionFileId','74','int'),(378,'submissionId','14','int'),(378,'username','dbarnes','string'),(379,'fileId','40','int'),(379,'fileStage','10','int'),(379,'name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(379,'originalFileName','The Canadian Nutrient File: Nutrient Val.pdf','string'),(379,'sourceSubmissionFileId','62','int'),(379,'submissionFileId','74','int'),(379,'submissionId','14','int'),(379,'username','dbarnes','string'),(380,'file','The Canadian Nutrient File: Nutrient Val.pdf','string'),(380,'name','Daniel Barnes','string'),(380,'username','dbarnes','string'),(384,'fileId','41','int'),(384,'fileStage','2','int'),(384,'originalFileName','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(384,'sourceSubmissionFileId',NULL,'string'),(384,'submissionFileId','75','int'),(384,'submissionId','15','int'),(384,'username','mforan','string'),(385,'fileId','41','int'),(385,'fileStage','2','int'),(385,'name','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(385,'submissionFileId','75','int'),(385,'submissionId','15','int'),(385,'username','mforan','string'),(386,'fileId','41','int'),(386,'fileStage','2','int'),(386,'originalFileName','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(386,'sourceSubmissionFileId',NULL,'string'),(386,'submissionFileId','75','int'),(386,'submissionId','15','int'),(386,'username','mforan','string'),(387,'fileId','41','int'),(387,'fileStage','2','int'),(387,'name','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(387,'originalFileName','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(387,'sourceSubmissionFileId',NULL,'string'),(387,'submissionFileId','75','int'),(387,'submissionId','15','int'),(387,'username','mforan','string'),(390,'decision','Send to External Review','string'),(390,'editorName','Daniel Barnes','string'),(390,'submissionId','15','int'),(391,'fileId','41','int'),(391,'fileStage','4','int'),(391,'originalFileName','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(391,'sourceSubmissionFileId','75','int'),(391,'submissionFileId','76','int'),(391,'submissionId','15','int'),(391,'username','dbarnes','string'),(392,'fileId','41','int'),(392,'fileStage','4','int'),(392,'name','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(392,'submissionFileId','76','int'),(392,'submissionId','15','int'),(392,'username','dbarnes','string'),(395,'fileId','42','int'),(395,'fileStage','2','int'),(395,'originalFileName','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(395,'sourceSubmissionFileId',NULL,'string'),(395,'submissionFileId','77','int'),(395,'submissionId','16','int'),(395,'username','mpower','string'),(396,'fileId','42','int'),(396,'fileStage','2','int'),(396,'name','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(396,'submissionFileId','77','int'),(396,'submissionId','16','int'),(396,'username','mpower','string'),(397,'fileId','42','int'),(397,'fileStage','2','int'),(397,'originalFileName','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(397,'sourceSubmissionFileId',NULL,'string'),(397,'submissionFileId','77','int'),(397,'submissionId','16','int'),(397,'username','mpower','string'),(398,'fileId','42','int'),(398,'fileStage','2','int'),(398,'name','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(398,'originalFileName','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(398,'sourceSubmissionFileId',NULL,'string'),(398,'submissionFileId','77','int'),(398,'submissionId','16','int'),(398,'username','mpower','string'),(401,'decision','Send to External Review','string'),(401,'editorName','Daniel Barnes','string'),(401,'submissionId','16','int'),(402,'fileId','42','int'),(402,'fileStage','4','int'),(402,'originalFileName','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(402,'sourceSubmissionFileId','77','int'),(402,'submissionFileId','78','int'),(402,'submissionId','16','int'),(402,'username','dbarnes','string'),(403,'fileId','42','int'),(403,'fileStage','4','int'),(403,'name','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(403,'submissionFileId','78','int'),(403,'submissionId','16','int'),(403,'username','dbarnes','string'),(404,'reviewAssignmentId','21','string'),(404,'reviewerName','Adela Gallego','string'),(404,'round','1','int'),(404,'stageId','3','int'),(404,'submissionId','16','int'),(405,'reviewAssignmentId','22','string'),(405,'reviewerName','Al Zacharia','string'),(405,'round','1','int'),(405,'stageId','3','int'),(405,'submissionId','16','int'),(406,'reviewAssignmentId','23','string'),(406,'reviewerName','Gonzalo Favio','string'),(406,'round','1','int'),(406,'stageId','3','int'),(406,'submissionId','16','int'),(407,'reviewAssignmentId','21','int'),(407,'reviewerName','Adela Gallego','string'),(407,'round','1','int'),(407,'submissionId','16','int'),(408,'reviewAssignmentId','21','int'),(408,'reviewerName','Adela Gallego','string'),(408,'round','1','int'),(408,'submissionId','16','int'),(411,'fileId','43','int'),(411,'fileStage','2','int'),(411,'originalFileName','Preface.pdf','string'),(411,'sourceSubmissionFileId',NULL,'string'),(411,'submissionFileId','79','int'),(411,'submissionId','17','int'),(411,'username','msmith','string'),(412,'fileId','43','int'),(412,'fileStage','2','int'),(412,'name','Preface.pdf','string'),(412,'submissionFileId','79','int'),(412,'submissionId','17','int'),(412,'username','msmith','string'),(413,'fileId','43','int'),(413,'fileStage','2','int'),(413,'originalFileName','Preface.pdf','string'),(413,'sourceSubmissionFileId',NULL,'string'),(413,'submissionFileId','79','int'),(413,'submissionId','17','int'),(413,'username','msmith','string'),(414,'fileId','43','int'),(414,'fileStage','2','int'),(414,'name','Preface.pdf','string'),(414,'originalFileName','Preface.pdf','string'),(414,'sourceSubmissionFileId',NULL,'string'),(414,'submissionFileId','79','int'),(414,'submissionId','17','int'),(414,'username','msmith','string'),(415,'fileId','44','int'),(415,'fileStage','2','int'),(415,'originalFileName','Introduction.pdf','string'),(415,'sourceSubmissionFileId',NULL,'string'),(415,'submissionFileId','80','int'),(415,'submissionId','17','int'),(415,'username','msmith','string'),(416,'fileId','44','int'),(416,'fileStage','2','int'),(416,'name','Introduction.pdf','string'),(416,'submissionFileId','80','int'),(416,'submissionId','17','int'),(416,'username','msmith','string'),(417,'fileId','44','int'),(417,'fileStage','2','int'),(417,'originalFileName','Introduction.pdf','string'),(417,'sourceSubmissionFileId',NULL,'string'),(417,'submissionFileId','80','int'),(417,'submissionId','17','int'),(417,'username','msmith','string'),(418,'fileId','44','int'),(418,'fileStage','2','int'),(418,'name','Introduction.pdf','string'),(418,'originalFileName','Introduction.pdf','string'),(418,'sourceSubmissionFileId',NULL,'string'),(418,'submissionFileId','80','int'),(418,'submissionId','17','int'),(418,'username','msmith','string'),(419,'fileId','45','int'),(419,'fileStage','2','int'),(419,'originalFileName','The Emergence of Open Development in a N.pdf','string'),(419,'sourceSubmissionFileId',NULL,'string'),(419,'submissionFileId','81','int'),(419,'submissionId','17','int'),(419,'username','msmith','string'),(420,'fileId','45','int'),(420,'fileStage','2','int'),(420,'name','The Emergence of Open Development in a N.pdf','string'),(420,'submissionFileId','81','int'),(420,'submissionId','17','int'),(420,'username','msmith','string'),(421,'fileId','45','int'),(421,'fileStage','2','int'),(421,'originalFileName','The Emergence of Open Development in a N.pdf','string'),(421,'sourceSubmissionFileId',NULL,'string'),(421,'submissionFileId','81','int'),(421,'submissionId','17','int'),(421,'username','msmith','string'),(422,'fileId','45','int'),(422,'fileStage','2','int'),(422,'name','The Emergence of Open Development in a N.pdf','string'),(422,'originalFileName','The Emergence of Open Development in a N.pdf','string'),(422,'sourceSubmissionFileId',NULL,'string'),(422,'submissionFileId','81','int'),(422,'submissionId','17','int'),(422,'username','msmith','string'),(423,'fileId','46','int'),(423,'fileStage','2','int'),(423,'originalFileName','Enacting Openness in ICT4D Research.pdf','string'),(423,'sourceSubmissionFileId',NULL,'string'),(423,'submissionFileId','82','int'),(423,'submissionId','17','int'),(423,'username','msmith','string'),(424,'fileId','46','int'),(424,'fileStage','2','int'),(424,'name','Enacting Openness in ICT4D Research.pdf','string'),(424,'submissionFileId','82','int'),(424,'submissionId','17','int'),(424,'username','msmith','string'),(425,'fileId','46','int'),(425,'fileStage','2','int'),(425,'originalFileName','Enacting Openness in ICT4D Research.pdf','string'),(425,'sourceSubmissionFileId',NULL,'string'),(425,'submissionFileId','82','int'),(425,'submissionId','17','int'),(425,'username','msmith','string'),(426,'fileId','46','int'),(426,'fileStage','2','int'),(426,'name','Enacting Openness in ICT4D Research.pdf','string'),(426,'originalFileName','Enacting Openness in ICT4D Research.pdf','string'),(426,'sourceSubmissionFileId',NULL,'string'),(426,'submissionFileId','82','int'),(426,'submissionId','17','int'),(426,'username','msmith','string'),(427,'fileId','47','int'),(427,'fileStage','2','int'),(427,'originalFileName','Transparency and Development: Ethical Co.pdf','string'),(427,'sourceSubmissionFileId',NULL,'string'),(427,'submissionFileId','83','int'),(427,'submissionId','17','int'),(427,'username','msmith','string'),(428,'fileId','47','int'),(428,'fileStage','2','int'),(428,'name','Transparency and Development: Ethical Co.pdf','string'),(428,'submissionFileId','83','int'),(428,'submissionId','17','int'),(428,'username','msmith','string'),(429,'fileId','47','int'),(429,'fileStage','2','int'),(429,'originalFileName','Transparency and Development: Ethical Co.pdf','string'),(429,'sourceSubmissionFileId',NULL,'string'),(429,'submissionFileId','83','int'),(429,'submissionId','17','int'),(429,'username','msmith','string'),(430,'fileId','47','int'),(430,'fileStage','2','int'),(430,'name','Transparency and Development: Ethical Co.pdf','string'),(430,'originalFileName','Transparency and Development: Ethical Co.pdf','string'),(430,'sourceSubmissionFileId',NULL,'string'),(430,'submissionFileId','83','int'),(430,'submissionId','17','int'),(430,'username','msmith','string'),(431,'fileId','48','int'),(431,'fileStage','2','int'),(431,'originalFileName','Open Educational Resources: Opportunitie.pdf','string'),(431,'sourceSubmissionFileId',NULL,'string'),(431,'submissionFileId','84','int'),(431,'submissionId','17','int'),(431,'username','msmith','string'),(432,'fileId','48','int'),(432,'fileStage','2','int'),(432,'name','Open Educational Resources: Opportunitie.pdf','string'),(432,'submissionFileId','84','int'),(432,'submissionId','17','int'),(432,'username','msmith','string'),(433,'fileId','48','int'),(433,'fileStage','2','int'),(433,'originalFileName','Open Educational Resources: Opportunitie.pdf','string'),(433,'sourceSubmissionFileId',NULL,'string'),(433,'submissionFileId','84','int'),(433,'submissionId','17','int'),(433,'username','msmith','string'),(434,'fileId','48','int'),(434,'fileStage','2','int'),(434,'name','Open Educational Resources: Opportunitie.pdf','string'),(434,'originalFileName','Open Educational Resources: Opportunitie.pdf','string'),(434,'sourceSubmissionFileId',NULL,'string'),(434,'submissionFileId','84','int'),(434,'submissionId','17','int'),(434,'username','msmith','string'),(437,'decision','Send to Internal Review','string'),(437,'editorName','Daniel Barnes','string'),(437,'submissionId','17','int'),(438,'fileId','43','int'),(438,'fileStage','19','int'),(438,'originalFileName','Preface.pdf','string'),(438,'sourceSubmissionFileId','79','int'),(438,'submissionFileId','85','int'),(438,'submissionId','17','int'),(438,'username','dbarnes','string'),(439,'fileId','43','int'),(439,'fileStage','19','int'),(439,'name','Preface.pdf','string'),(439,'submissionFileId','85','int'),(439,'submissionId','17','int'),(439,'username','dbarnes','string'),(440,'fileId','44','int'),(440,'fileStage','19','int'),(440,'originalFileName','Introduction.pdf','string'),(440,'sourceSubmissionFileId','80','int'),(440,'submissionFileId','86','int'),(440,'submissionId','17','int'),(440,'username','dbarnes','string'),(441,'fileId','44','int'),(441,'fileStage','19','int'),(441,'name','Introduction.pdf','string'),(441,'submissionFileId','86','int'),(441,'submissionId','17','int'),(441,'username','dbarnes','string'),(442,'fileId','45','int'),(442,'fileStage','19','int'),(442,'originalFileName','The Emergence of Open Development in a N.pdf','string'),(442,'sourceSubmissionFileId','81','int'),(442,'submissionFileId','87','int'),(442,'submissionId','17','int'),(442,'username','dbarnes','string'),(443,'fileId','45','int'),(443,'fileStage','19','int'),(443,'name','The Emergence of Open Development in a N.pdf','string'),(443,'submissionFileId','87','int'),(443,'submissionId','17','int'),(443,'username','dbarnes','string'),(444,'fileId','46','int'),(444,'fileStage','19','int'),(444,'originalFileName','Enacting Openness in ICT4D Research.pdf','string'),(444,'sourceSubmissionFileId','82','int'),(444,'submissionFileId','88','int'),(444,'submissionId','17','int'),(444,'username','dbarnes','string'),(445,'fileId','46','int'),(445,'fileStage','19','int'),(445,'name','Enacting Openness in ICT4D Research.pdf','string'),(445,'submissionFileId','88','int'),(445,'submissionId','17','int'),(445,'username','dbarnes','string'),(446,'fileId','47','int'),(446,'fileStage','19','int'),(446,'originalFileName','Transparency and Development: Ethical Co.pdf','string'),(446,'sourceSubmissionFileId','83','int'),(446,'submissionFileId','89','int'),(446,'submissionId','17','int'),(446,'username','dbarnes','string'),(447,'fileId','47','int'),(447,'fileStage','19','int'),(447,'name','Transparency and Development: Ethical Co.pdf','string'),(447,'submissionFileId','89','int'),(447,'submissionId','17','int'),(447,'username','dbarnes','string'),(448,'fileId','48','int'),(448,'fileStage','19','int'),(448,'originalFileName','Open Educational Resources: Opportunitie.pdf','string'),(448,'sourceSubmissionFileId','84','int'),(448,'submissionFileId','90','int'),(448,'submissionId','17','int'),(448,'username','dbarnes','string'),(449,'fileId','48','int'),(449,'fileStage','19','int'),(449,'name','Open Educational Resources: Opportunitie.pdf','string'),(449,'submissionFileId','90','int'),(449,'submissionId','17','int'),(449,'username','dbarnes','string'),(450,'reviewAssignmentId','24','string'),(450,'reviewerName','Julie Janssen','string'),(450,'round','1','int'),(450,'stageId','2','int'),(450,'submissionId','17','int'),(451,'reviewAssignmentId','25','string'),(451,'reviewerName','Paul Hudson','string'),(451,'round','1','int'),(451,'stageId','2','int'),(451,'submissionId','17','int');
 /*!40000 ALTER TABLE `event_log_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -796,14 +796,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `features`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `features` (
-  `submission_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `seq` bigint(20) NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `seq` bigint NOT NULL,
   UNIQUE KEY `press_features_pkey` (`assoc_type`,`assoc_id`,`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -821,13 +821,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `files` (
-  `file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `file_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `path` varchar(255) NOT NULL,
   `mimetype` varchar(255) NOT NULL,
   PRIMARY KEY (`file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -836,7 +836,7 @@ CREATE TABLE `files` (
 
 LOCK TABLES `files` WRITE;
 /*!40000 ALTER TABLE `files` DISABLE KEYS */;
-INSERT INTO `files` VALUES (1,'presses/1/monographs/1/64252b682448d.pdf','application/pdf'),(2,'presses/1/monographs/2/64252b953c84b.pdf','application/pdf'),(3,'presses/1/monographs/2/64252b95b29d3.pdf','application/pdf'),(4,'presses/1/monographs/2/64252b963c093.pdf','application/pdf'),(5,'presses/1/monographs/2/64252b96bf084.pdf','application/pdf'),(6,'presses/1/monographs/3/64252bf9679c0.pdf','application/pdf'),(7,'presses/1/monographs/4/64252c1ac4d17.pdf','application/pdf'),(8,'presses/1/monographs/4/64252c1b4e7e9.pdf','application/pdf'),(9,'presses/1/monographs/4/64252c1bd49b3.pdf','application/pdf'),(10,'presses/1/monographs/4/64252c1c649f9.pdf','application/pdf'),(11,'presses/1/monographs/5/64252c8777a10.pdf','application/pdf'),(12,'presses/1/monographs/6/64252cf1a3b3c.pdf','application/pdf'),(13,'presses/1/monographs/6/64252cf22d6a6.pdf','application/pdf'),(14,'presses/1/monographs/6/64252cf2ba5b2.pdf','application/pdf'),(15,'presses/1/monographs/6/64252cf352dd5.pdf','application/pdf'),(16,'presses/1/monographs/7/64252d4a0005a.pdf','application/pdf'),(17,'presses/1/monographs/7/64252d4a76a12.pdf','application/pdf'),(18,'presses/1/monographs/7/64252d4b0e486.pdf','application/pdf'),(19,'presses/1/monographs/7/64252d4ba2135.pdf','application/pdf'),(20,'presses/1/monographs/7/64252d4c42931.pdf','application/pdf'),(21,'presses/1/monographs/8/64252dae907d7.pdf','application/pdf'),(22,'presses/1/monographs/9/64252db9cf9ab.pdf','application/pdf'),(23,'presses/1/monographs/9/64252dba532b8.pdf','application/pdf'),(24,'presses/1/monographs/9/64252dbad46e3.pdf','application/pdf'),(25,'presses/1/monographs/9/64252dbb6740d.pdf','application/pdf'),(26,'presses/1/monographs/9/64252dbc19127.pdf','application/pdf'),(27,'presses/1/monographs/10/64252e0ae56f0.pdf','application/pdf'),(28,'presses/1/monographs/11/64252e3def439.pdf','application/pdf'),(29,'presses/1/monographs/12/64252e8a79ba5.pdf','application/pdf'),(30,'presses/1/monographs/12/64252e8b047d7.pdf','application/pdf'),(31,'presses/1/monographs/12/64252e8b9ed5b.pdf','application/pdf'),(32,'presses/1/monographs/13/64252ef48c348.pdf','application/pdf'),(33,'presses/1/monographs/13/64252ef511303.pdf','application/pdf'),(34,'presses/1/monographs/13/64252ef5989aa.pdf','application/pdf'),(35,'presses/1/monographs/14/64252f71aa442.pdf','application/pdf'),(36,'presses/1/monographs/14/64252f722cd3b.pdf','application/pdf'),(37,'presses/1/monographs/14/64252f72b2cee.pdf','application/pdf'),(38,'presses/1/monographs/14/64252f73546e0.pdf','application/pdf'),(39,'presses/1/monographs/14/64252f73f328b.pdf','application/pdf'),(40,'presses/1/monographs/14/64252f74e68b7.pdf','application/pdf'),(41,'presses/1/monographs/15/642530196e123.pdf','application/pdf'),(42,'presses/1/monographs/16/6425303b265f0.pdf','application/pdf'),(43,'presses/1/monographs/17/6425307fb31b0.pdf','application/pdf'),(44,'presses/1/monographs/17/6425308033aa8.pdf','application/pdf'),(45,'presses/1/monographs/17/64253080b8d08.pdf','application/pdf'),(46,'presses/1/monographs/17/642530814f558.pdf','application/pdf'),(47,'presses/1/monographs/17/64253081dda82.pdf','application/pdf'),(48,'presses/1/monographs/17/6425308291f49.pdf','application/pdf');
+INSERT INTO `files` VALUES (1,'presses/1/monographs/1/642ccbcb74a85.pdf','application/pdf'),(2,'presses/1/monographs/2/642ccbf9147a9.pdf','application/pdf'),(3,'presses/1/monographs/2/642ccbf9a0ae6.pdf','application/pdf'),(4,'presses/1/monographs/2/642ccbfa52958.pdf','application/pdf'),(5,'presses/1/monographs/2/642ccbfaec38b.pdf','application/pdf'),(6,'presses/1/monographs/3/642ccc60c891e.pdf','application/pdf'),(7,'presses/1/monographs/4/642ccc83176f5.pdf','application/pdf'),(8,'presses/1/monographs/4/642ccc83a3274.pdf','application/pdf'),(9,'presses/1/monographs/4/642ccc844b6d5.pdf','application/pdf'),(10,'presses/1/monographs/4/642ccc84ee416.pdf','application/pdf'),(11,'presses/1/monographs/5/642cccf461f6c.pdf','application/pdf'),(12,'presses/1/monographs/6/642ccd62715c0.pdf','application/pdf'),(13,'presses/1/monographs/6/642ccd630ed80.pdf','application/pdf'),(14,'presses/1/monographs/6/642ccd63aad16.pdf','application/pdf'),(15,'presses/1/monographs/6/642ccd646317d.pdf','application/pdf'),(16,'presses/1/monographs/7/642ccdbdf0ea2.pdf','application/pdf'),(17,'presses/1/monographs/7/642ccdbe902c4.pdf','application/pdf'),(18,'presses/1/monographs/7/642ccdbf3ac41.pdf','application/pdf'),(19,'presses/1/monographs/7/642ccdbfdcb9e.pdf','application/pdf'),(20,'presses/1/monographs/7/642ccdc09ebf8.pdf','application/pdf'),(21,'presses/1/monographs/8/642cce27c3283.pdf','application/pdf'),(22,'presses/1/monographs/9/642cce33d41f0.pdf','application/pdf'),(23,'presses/1/monographs/9/642cce3479e43.pdf','application/pdf'),(24,'presses/1/monographs/9/642cce35236e6.pdf','application/pdf'),(25,'presses/1/monographs/9/642cce35c5e9c.pdf','application/pdf'),(26,'presses/1/monographs/9/642cce36928a9.pdf','application/pdf'),(27,'presses/1/monographs/10/642cce88f0297.pdf','application/pdf'),(28,'presses/1/monographs/11/642ccebe0079c.pdf','application/pdf'),(29,'presses/1/monographs/12/642ccf0f1ba8b.pdf','application/pdf'),(30,'presses/1/monographs/12/642ccf0fa89dc.pdf','application/pdf'),(31,'presses/1/monographs/12/642ccf1046ebe.pdf','application/pdf'),(32,'presses/1/monographs/13/642ccf7f25e21.pdf','application/pdf'),(33,'presses/1/monographs/13/642ccf7fb8bab.pdf','application/pdf'),(34,'presses/1/monographs/13/642ccf8069edf.pdf','application/pdf'),(35,'presses/1/monographs/14/642ccfff9a814.pdf','application/pdf'),(36,'presses/1/monographs/14/642cd0004489e.pdf','application/pdf'),(37,'presses/1/monographs/14/642cd00111395.pdf','application/pdf'),(38,'presses/1/monographs/14/642cd001cb754.pdf','application/pdf'),(39,'presses/1/monographs/14/642cd002b313f.pdf','application/pdf'),(40,'presses/1/monographs/14/642cd003e2984.pdf','application/pdf'),(41,'presses/1/monographs/15/642cd0b2b15cb.pdf','application/pdf'),(42,'presses/1/monographs/16/642cd0d6cd2bc.pdf','application/pdf'),(43,'presses/1/monographs/17/642cd11e468bd.pdf','application/pdf'),(44,'presses/1/monographs/17/642cd11ed2aa3.pdf','application/pdf'),(45,'presses/1/monographs/17/642cd11f805c4.pdf','application/pdf'),(46,'presses/1/monographs/17/642cd1202ca87.pdf','application/pdf'),(47,'presses/1/monographs/17/642cd120e1920.pdf','application/pdf'),(48,'presses/1/monographs/17/642cd1219bc1b.pdf','application/pdf');
 /*!40000 ALTER TABLE `files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -846,9 +846,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filter_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filter_groups` (
-  `filter_group_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `filter_group_id` bigint NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(255) DEFAULT NULL,
   `display_name` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
@@ -856,7 +856,7 @@ CREATE TABLE `filter_groups` (
   `output_type` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`filter_group_id`),
   UNIQUE KEY `filter_groups_symbolic` (`symbolic`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -865,7 +865,7 @@ CREATE TABLE `filter_groups` (
 
 LOCK TABLES `filter_groups` WRITE;
 /*!40000 ALTER TABLE `filter_groups` DISABLE KEYS */;
-INSERT INTO `filter_groups` VALUES (1,'publicationFormat=>dc11','plugins.metadata.dc11.publicationFormatAdapter.displayName','plugins.metadata.dc11.publicationFormatAdapter.description','class::classes.publicationFormat.PublicationFormat','metadata::plugins.metadata.dc11.schema.Dc11Schema(PUBLICATION_FORMAT)'),(2,'user=>user-xml','plugins.importexport.users.displayName','plugins.importexport.users.description','class::lib.pkp.classes.user.User[]','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)'),(3,'user-xml=>user','plugins.importexport.users.displayName','plugins.importexport.users.description','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)','class::classes.users.User[]'),(4,'usergroup=>user-xml','plugins.importexport.users.displayName','plugins.importexport.users.description','class::lib.pkp.classes.security.UserGroup[]','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)'),(5,'user-xml=>usergroup','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)','class::lib.pkp.classes.security.UserGroup[]'),(6,'monographs=>onix30-xml','plugins.importexport.onix30.displayName','plugins.importexport.onix30.description','class::classes.submission.Submission[]','xml::schema(plugins/importexport/onix30/ONIX_BookProduct_3.0_reference.xsd)'),(7,'monograph=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.submission.Submission[]','xml::schema(plugins/importexport/native/native.xsd)'),(8,'native-xml=>monograph','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.submission.Submission[]'),(9,'author=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.monograph.Author[]','xml::schema(plugins/importexport/native/native.xsd)'),(10,'native-xml=>author','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.monograph.Author[]'),(11,'publication-format=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.publicationFormat.PublicationFormat','xml::schema(plugins/importexport/native/native.xsd)'),(12,'native-xml=>PublicationFormat','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.publicationFormat.PublicationFormat[]'),(13,'SubmissionFile=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::lib.pkp.classes.submission.SubmissionFile','xml::schema(plugins/importexport/native/native.xsd)'),(14,'native-xml=>SubmissionFile','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::lib.pkp.classes.submission.SubmissionFile'),(15,'monograph=>onix30-xml','plugins.importexport.onix30.displayName','plugins.importexport.onix30.description','class::classes.submission.Submission','xml::schema(plugins/importexport/native/ONIX_BookProduct_3.0_reference_notstrict.xsd)'),(16,'publication=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.publication.Publication','xml::schema(plugins/importexport/native/native.xsd)'),(17,'native-xml=>Publication','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.publication.Publication'),(18,'chapter=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.monograph.Chapter[]','xml::schema(plugins/importexport/native/native.xsd)'),(19,'native-xml=>chapter','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.monograph.Chapter');
+INSERT INTO `filter_groups` VALUES (1,'publicationFormat=>dc11','plugins.metadata.dc11.publicationFormatAdapter.displayName','plugins.metadata.dc11.publicationFormatAdapter.description','class::classes.publicationFormat.PublicationFormat','metadata::plugins.metadata.dc11.schema.Dc11Schema(PUBLICATION_FORMAT)'),(2,'user=>user-xml','plugins.importexport.users.displayName','plugins.importexport.users.description','class::lib.pkp.classes.user.User[]','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)'),(3,'user-xml=>user','plugins.importexport.users.displayName','plugins.importexport.users.description','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)','class::classes.users.User[]'),(4,'usergroup=>user-xml','plugins.importexport.users.displayName','plugins.importexport.users.description','class::lib.pkp.classes.security.UserGroup[]','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)'),(5,'user-xml=>usergroup','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)','class::lib.pkp.classes.security.UserGroup[]'),(6,'monograph=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.submission.Submission[]','xml::schema(plugins/importexport/native/native.xsd)'),(7,'native-xml=>monograph','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.submission.Submission[]'),(8,'author=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.monograph.Author[]','xml::schema(plugins/importexport/native/native.xsd)'),(9,'native-xml=>author','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.monograph.Author[]'),(10,'publication-format=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.publicationFormat.PublicationFormat','xml::schema(plugins/importexport/native/native.xsd)'),(11,'native-xml=>PublicationFormat','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.publicationFormat.PublicationFormat[]'),(12,'SubmissionFile=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::lib.pkp.classes.submission.SubmissionFile','xml::schema(plugins/importexport/native/native.xsd)'),(13,'native-xml=>SubmissionFile','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::lib.pkp.classes.submission.SubmissionFile'),(14,'monograph=>onix30-xml','plugins.importexport.onix30.displayName','plugins.importexport.onix30.description','class::classes.submission.Submission','xml::schema(plugins/importexport/native/ONIX_BookProduct_3.0_reference_notstrict.xsd)'),(15,'publication=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.publication.Publication','xml::schema(plugins/importexport/native/native.xsd)'),(16,'native-xml=>Publication','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.publication.Publication'),(17,'chapter=>native-xml','plugins.importexport.native.displayName','plugins.importexport.native.description','class::classes.monograph.Chapter[]','xml::schema(plugins/importexport/native/native.xsd)'),(18,'native-xml=>chapter','plugins.importexport.native.displayName','plugins.importexport.native.description','xml::schema(plugins/importexport/native/native.xsd)','class::classes.monograph.Chapter'),(19,'monographs=>onix30-xml','plugins.importexport.onix30.displayName','plugins.importexport.onix30.description','class::classes.submission.Submission[]','xml::schema(plugins/importexport/onix30/ONIX_BookProduct_3.0_reference.xsd)');
 /*!40000 ALTER TABLE `filter_groups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -875,16 +875,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filter_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filter_settings` (
-  `filter_id` bigint(20) NOT NULL,
+  `filter_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `filter_settings_pkey` (`filter_id`,`locale`,`setting_name`),
   KEY `filter_settings_id` (`filter_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -902,18 +902,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filters`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filters` (
-  `filter_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `filter_group_id` bigint(20) NOT NULL DEFAULT '0',
-  `context_id` bigint(20) NOT NULL DEFAULT '0',
+  `filter_id` bigint NOT NULL AUTO_INCREMENT,
+  `filter_group_id` bigint NOT NULL DEFAULT '0',
+  `context_id` bigint NOT NULL DEFAULT '0',
   `display_name` varchar(255) DEFAULT NULL,
   `class_name` varchar(255) DEFAULT NULL,
-  `is_template` smallint(6) NOT NULL DEFAULT '0',
-  `parent_filter_id` bigint(20) NOT NULL DEFAULT '0',
-  `seq` bigint(20) NOT NULL DEFAULT '0',
+  `is_template` smallint NOT NULL DEFAULT '0',
+  `parent_filter_id` bigint NOT NULL DEFAULT '0',
+  `seq` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`filter_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -922,7 +922,7 @@ CREATE TABLE `filters` (
 
 LOCK TABLES `filters` WRITE;
 /*!40000 ALTER TABLE `filters` DISABLE KEYS */;
-INSERT INTO `filters` VALUES (1,1,0,'Extract metadata from a(n) PublicationFormat','plugins.metadata.dc11.filter.Dc11SchemaPublicationFormatAdapter',0,0,0),(2,2,0,'User XML user export','lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter',0,0,0),(3,3,0,'User XML user import','lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter',0,0,0),(4,4,0,'Native XML user group export','lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter',0,0,0),(5,5,0,'Native XML user group import','lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter',0,0,0),(6,6,0,'ONIX 3.0 XML monograph export','plugins.importexport.onix30.filter.MonographONIX30XmlFilter',0,0,0),(7,7,0,'Native XML submission export','plugins.importexport.native.filter.MonographNativeXmlFilter',0,0,0),(8,8,0,'Native XML submission import','plugins.importexport.native.filter.NativeXmlMonographFilter',0,0,0),(9,9,0,'Native XML author export','plugins.importexport.native.filter.AuthorNativeXmlFilter',0,0,0),(10,10,0,'Native XML author import','plugins.importexport.native.filter.NativeXmlAuthorFilter',0,0,0),(11,11,0,'Native XML representation export','plugins.importexport.native.filter.PublicationFormatNativeXmlFilter',0,0,0),(12,12,0,'Native XML representation import','plugins.importexport.native.filter.NativeXmlPublicationFormatFilter',0,0,0),(13,14,0,'Native XML submission file import','plugins.importexport.native.filter.NativeXmlMonographFileFilter',0,0,0),(14,13,0,'Native XML submission file export','lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter',0,0,0),(15,15,0,'ONIX 3.0 XML monograph export','plugins.importexport.onix30.filter.MonographONIX30XmlFilter',0,0,0),(16,16,0,'Native XML Publication export','plugins.importexport.native.filter.PublicationNativeXmlFilter',0,0,0),(17,17,0,'Native XML publication import','plugins.importexport.native.filter.NativeXmlPublicationFilter',0,0,0),(18,18,0,'Native XML chapter export','plugins.importexport.native.filter.ChapterNativeXmlFilter',0,0,0),(19,19,0,'Native XML Chapter import','plugins.importexport.native.filter.NativeXmlChapterFilter',0,0,0);
+INSERT INTO `filters` VALUES (1,1,0,'Extract metadata from a(n) PublicationFormat','plugins.metadata.dc11.filter.Dc11SchemaPublicationFormatAdapter',0,0,0),(2,2,0,'User XML user export','lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter',0,0,0),(3,3,0,'User XML user import','lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter',0,0,0),(4,4,0,'Native XML user group export','lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter',0,0,0),(5,5,0,'Native XML user group import','lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter',0,0,0),(6,6,0,'Native XML submission export','plugins.importexport.native.filter.MonographNativeXmlFilter',0,0,0),(7,7,0,'Native XML submission import','plugins.importexport.native.filter.NativeXmlMonographFilter',0,0,0),(8,8,0,'Native XML author export','plugins.importexport.native.filter.AuthorNativeXmlFilter',0,0,0),(9,9,0,'Native XML author import','plugins.importexport.native.filter.NativeXmlAuthorFilter',0,0,0),(10,10,0,'Native XML representation export','plugins.importexport.native.filter.PublicationFormatNativeXmlFilter',0,0,0),(11,11,0,'Native XML representation import','plugins.importexport.native.filter.NativeXmlPublicationFormatFilter',0,0,0),(12,13,0,'Native XML submission file import','plugins.importexport.native.filter.NativeXmlMonographFileFilter',0,0,0),(13,12,0,'Native XML submission file export','lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter',0,0,0),(14,14,0,'ONIX 3.0 XML monograph export','plugins.importexport.onix30.filter.MonographONIX30XmlFilter',0,0,0),(15,15,0,'Native XML Publication export','plugins.importexport.native.filter.PublicationNativeXmlFilter',0,0,0),(16,16,0,'Native XML publication import','plugins.importexport.native.filter.NativeXmlPublicationFilter',0,0,0),(17,17,0,'Native XML chapter export','plugins.importexport.native.filter.ChapterNativeXmlFilter',0,0,0),(18,18,0,'Native XML Chapter import','plugins.importexport.native.filter.NativeXmlChapterFilter',0,0,0),(19,19,0,'ONIX 3.0 XML monograph export','plugins.importexport.onix30.filter.MonographONIX30XmlFilter',0,0,0);
 /*!40000 ALTER TABLE `filters` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -932,16 +932,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `genre_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `genre_settings` (
-  `genre_id` bigint(20) NOT NULL,
+  `genre_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `genre_settings_pkey` (`genre_id`,`locale`,`setting_name`),
   KEY `genre_settings_genre_id` (`genre_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -960,18 +960,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `genres`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `genres` (
-  `genre_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `seq` bigint(20) NOT NULL,
-  `enabled` smallint(6) NOT NULL DEFAULT '1',
-  `category` bigint(20) NOT NULL DEFAULT '1',
-  `dependent` smallint(6) NOT NULL DEFAULT '0',
-  `supplementary` smallint(6) NOT NULL DEFAULT '0',
+  `genre_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `seq` bigint NOT NULL,
+  `enabled` smallint NOT NULL DEFAULT '1',
+  `category` bigint NOT NULL DEFAULT '1',
+  `dependent` smallint NOT NULL DEFAULT '0',
+  `supplementary` smallint NOT NULL DEFAULT '0',
   `entry_key` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`genre_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -990,15 +990,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `identification_codes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `identification_codes` (
-  `identification_code_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `publication_format_id` bigint(20) NOT NULL,
+  `identification_code_id` bigint NOT NULL AUTO_INCREMENT,
+  `publication_format_id` bigint NOT NULL,
   `code` varchar(40) NOT NULL,
   `value` varchar(255) NOT NULL,
   PRIMARY KEY (`identification_code_id`),
   KEY `identification_codes_key` (`identification_code_id`,`publication_format_id`,`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1016,14 +1016,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `item_views`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `item_views` (
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `user_id` bigint DEFAULT NULL,
   `date_last_viewed` datetime DEFAULT NULL,
   UNIQUE KEY `item_views_pkey` (`assoc_type`,`assoc_id`,`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1041,18 +1041,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `jobs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jobs` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `queue` varchar(255) NOT NULL,
   `payload` longtext NOT NULL,
-  `attempts` tinyint(3) unsigned NOT NULL,
-  `reserved_at` int(10) unsigned DEFAULT NULL,
-  `available_at` int(10) unsigned NOT NULL,
-  `created_at` int(10) unsigned NOT NULL,
+  `attempts` tinyint unsigned NOT NULL,
+  `reserved_at` int unsigned DEFAULT NULL,
+  `available_at` int unsigned NOT NULL,
+  `created_at` int unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `jobs_queue_reserved_at_index` (`queue`,`reserved_at`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1070,16 +1070,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `library_file_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `library_file_settings` (
-  `file_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object|date)',
   UNIQUE KEY `library_file_settings_pkey` (`file_id`,`locale`,`setting_name`),
   KEY `library_file_settings_id` (`file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1097,23 +1097,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `library_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `library_files` (
-  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `file_name` varchar(255) NOT NULL,
   `original_file_name` varchar(255) NOT NULL,
   `file_type` varchar(255) NOT NULL,
-  `file_size` bigint(20) NOT NULL,
-  `type` smallint(6) NOT NULL,
+  `file_size` bigint NOT NULL,
+  `type` smallint NOT NULL,
   `date_uploaded` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `public_access` smallint(6) DEFAULT '0',
+  `submission_id` bigint NOT NULL,
+  `public_access` smallint DEFAULT '0',
   PRIMARY KEY (`file_id`),
   KEY `library_files_context_id` (`context_id`),
   KEY `library_files_submission_id` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1131,10 +1131,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `markets`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `markets` (
-  `market_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `publication_format_id` bigint(20) NOT NULL,
+  `market_id` bigint NOT NULL AUTO_INCREMENT,
+  `publication_format_id` bigint NOT NULL,
   `countries_included` text,
   `countries_excluded` text,
   `regions_included` text,
@@ -1148,11 +1148,11 @@ CREATE TABLE `markets` (
   `currency_code` varchar(255) DEFAULT NULL,
   `tax_rate_code` varchar(255) DEFAULT NULL,
   `tax_type_code` varchar(255) DEFAULT NULL,
-  `agent_id` bigint(20) DEFAULT NULL,
-  `supplier_id` bigint(20) DEFAULT NULL,
+  `agent_id` bigint DEFAULT NULL,
+  `supplier_id` bigint DEFAULT NULL,
   PRIMARY KEY (`market_id`),
   KEY `format_markets_pkey` (`market_id`,`publication_format_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1170,16 +1170,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metadata_description_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metadata_description_settings` (
-  `metadata_description_id` bigint(20) NOT NULL,
+  `metadata_description_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `metadata_descripton_settings_pkey` (`metadata_description_id`,`locale`,`setting_name`),
   KEY `metadata_description_settings_id` (`metadata_description_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1197,18 +1197,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metadata_descriptions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metadata_descriptions` (
-  `metadata_description_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL DEFAULT '0',
-  `assoc_id` bigint(20) NOT NULL DEFAULT '0',
+  `metadata_description_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL DEFAULT '0',
+  `assoc_id` bigint NOT NULL DEFAULT '0',
   `schema_namespace` varchar(255) NOT NULL,
   `schema_name` varchar(255) NOT NULL,
   `display_name` varchar(255) DEFAULT NULL,
-  `seq` bigint(20) NOT NULL DEFAULT '0',
+  `seq` bigint NOT NULL DEFAULT '0',
   PRIMARY KEY (`metadata_description_id`),
   KEY `metadata_descriptions_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1226,30 +1226,30 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics` (
   `load_id` varchar(255) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
-  `pkp_section_id` bigint(20) DEFAULT NULL,
-  `assoc_object_type` bigint(20) DEFAULT NULL,
-  `assoc_object_id` bigint(20) DEFAULT NULL,
-  `submission_id` bigint(20) DEFAULT NULL,
-  `representation_id` bigint(20) DEFAULT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `pkp_section_id` bigint DEFAULT NULL,
+  `assoc_object_type` bigint DEFAULT NULL,
+  `assoc_object_id` bigint DEFAULT NULL,
+  `submission_id` bigint DEFAULT NULL,
+  `representation_id` bigint DEFAULT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   `day` varchar(8) DEFAULT NULL,
   `month` varchar(6) DEFAULT NULL,
-  `file_type` smallint(6) DEFAULT NULL,
+  `file_type` smallint DEFAULT NULL,
   `country_id` varchar(2) DEFAULT NULL,
   `region` varchar(2) DEFAULT NULL,
   `city` varchar(255) DEFAULT NULL,
   `metric_type` varchar(255) NOT NULL,
-  `metric` int(11) NOT NULL,
+  `metric` int NOT NULL,
   KEY `metrics_load_id` (`load_id`),
   KEY `metrics_metric_type_context_id` (`metric_type`,`context_id`),
   KEY `metrics_metric_type_submission_id_assoc_type` (`metric_type`,`submission_id`,`assoc_type`),
   KEY `metrics_metric_type_submission_id_assoc` (`metric_type`,`context_id`,`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1267,16 +1267,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_assignment_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_assignment_settings` (
-  `navigation_menu_item_assignment_id` bigint(20) NOT NULL,
+  `navigation_menu_item_assignment_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `navigation_menu_item_assignment_settings_pkey` (`navigation_menu_item_assignment_id`,`locale`,`setting_name`),
   KEY `assignment_settings_navigation_menu_item_assignment_id` (`navigation_menu_item_assignment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1294,15 +1294,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_assignments` (
-  `navigation_menu_item_assignment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `navigation_menu_id` bigint(20) NOT NULL,
-  `navigation_menu_item_id` bigint(20) NOT NULL,
-  `parent_id` bigint(20) DEFAULT NULL,
-  `seq` bigint(20) DEFAULT '0',
+  `navigation_menu_item_assignment_id` bigint NOT NULL AUTO_INCREMENT,
+  `navigation_menu_id` bigint NOT NULL,
+  `navigation_menu_item_id` bigint NOT NULL,
+  `parent_id` bigint DEFAULT NULL,
+  `seq` bigint DEFAULT '0',
   PRIMARY KEY (`navigation_menu_item_assignment_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1321,16 +1321,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_settings` (
-  `navigation_menu_item_id` bigint(20) NOT NULL,
+  `navigation_menu_item_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` longtext,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `navigation_menu_item_settings_pkey` (`navigation_menu_item_id`,`locale`,`setting_name`),
   KEY `navigation_menu_item_settings_navigation_menu_id` (`navigation_menu_item_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1349,14 +1349,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_items` (
-  `navigation_menu_item_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `navigation_menu_item_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `path` varchar(255) DEFAULT '',
   `type` varchar(255) DEFAULT '',
   PRIMARY KEY (`navigation_menu_item_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1375,14 +1375,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menus`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menus` (
-  `navigation_menu_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
+  `navigation_menu_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
   `area_name` varchar(255) DEFAULT '',
   `title` varchar(255) NOT NULL,
   PRIMARY KEY (`navigation_menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1401,13 +1401,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `new_releases`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `new_releases` (
-  `submission_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   UNIQUE KEY `new_releases_pkey` (`assoc_type`,`assoc_id`,`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1425,19 +1425,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notes` (
-  `note_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `note_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_created` datetime NOT NULL,
   `date_modified` datetime DEFAULT NULL,
   `title` varchar(255) DEFAULT NULL,
   `contents` text,
   PRIMARY KEY (`note_id`),
   KEY `notes_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1446,7 +1446,7 @@ CREATE TABLE `notes` (
 
 LOCK TABLES `notes` WRITE;
 /*!40000 ALTER TABLE `notes` DISABLE KEYS */;
-INSERT INTO `notes` VALUES (1,1048586,1,6,'2023-03-30 06:33:27','2023-03-30 06:33:27','Recommendation','<p>Daniel Barnes, David Buskins:<br><br>The recommendation regarding the submission to Public Knowledge Press, \"The Information Literacy User’s Guide\" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href=\"{$ldelim}$contextUrl{$rdelim}\">{$ldelim}$contextName{$rdelim}</a>');
+INSERT INTO `notes` VALUES (1,1048586,1,6,'2023-04-05 01:23:55','2023-04-05 01:23:55','Recommendation','<p>Daniel Barnes, David Buskins:<br><br>The recommendation regarding the submission to Public Knowledge Press, \"The Information Literacy User’s Guide\" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href=\"{$ldelim}$contextUrl{$rdelim}\">{$ldelim}$contextName{$rdelim}</a>');
 /*!40000 ALTER TABLE `notes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1456,16 +1456,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_mail_list`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_mail_list` (
-  `notification_mail_list_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `notification_mail_list_id` bigint NOT NULL AUTO_INCREMENT,
   `email` varchar(90) NOT NULL,
-  `confirmed` smallint(6) NOT NULL DEFAULT '0',
+  `confirmed` smallint NOT NULL DEFAULT '0',
   `token` varchar(40) NOT NULL,
-  `context` bigint(20) NOT NULL,
+  `context` bigint NOT NULL,
   PRIMARY KEY (`notification_mail_list_id`),
   UNIQUE KEY `notification_mail_list_email_context` (`email`,`context`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1483,15 +1483,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_settings` (
-  `notification_id` bigint(20) NOT NULL,
+  `notification_id` bigint NOT NULL,
   `locale` varchar(14) DEFAULT NULL,
   `setting_name` varchar(64) NOT NULL,
   `setting_value` text NOT NULL,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `notification_settings_pkey` (`notification_id`,`locale`,`setting_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1509,16 +1509,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_subscription_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_subscription_settings` (
-  `setting_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `setting_id` bigint NOT NULL AUTO_INCREMENT,
   `setting_name` varchar(64) NOT NULL,
   `setting_value` text NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `context` bigint(20) NOT NULL,
+  `user_id` bigint NOT NULL,
+  `context` bigint NOT NULL,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   PRIMARY KEY (`setting_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1537,23 +1537,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notifications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notifications` (
-  `notification_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
-  `level` bigint(20) NOT NULL,
-  `type` bigint(20) NOT NULL,
+  `notification_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `user_id` bigint DEFAULT NULL,
+  `level` bigint NOT NULL,
+  `type` bigint NOT NULL,
   `date_created` datetime NOT NULL,
   `date_read` datetime DEFAULT NULL,
-  `assoc_type` bigint(20) DEFAULT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `assoc_type` bigint DEFAULT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   PRIMARY KEY (`notification_id`),
   KEY `notifications_context_id_user_id` (`context_id`,`user_id`,`level`),
   KEY `notifications_context_id` (`context_id`,`level`),
   KEY `notifications_assoc` (`assoc_type`,`assoc_id`),
   KEY `notifications_user_id_level` (`user_id`,`level`)
-) ENGINE=InnoDB AUTO_INCREMENT=439 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=439 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1562,7 +1562,7 @@ CREATE TABLE `notifications` (
 
 LOCK TABLES `notifications` WRITE;
 /*!40000 ALTER TABLE `notifications` DISABLE KEYS */;
-INSERT INTO `notifications` VALUES (11,1,3,2,16777217,'2023-03-30 06:25:58',NULL,1048585,1),(13,1,0,2,16777243,'2023-03-30 06:25:58',NULL,1048585,1),(14,1,0,2,16777245,'2023-03-30 06:25:58',NULL,1048585,1),(16,1,0,2,16777236,'2023-03-30 06:26:04','2023-03-30 06:26:07',523,1),(18,1,12,3,16777227,'2023-03-30 06:26:11',NULL,517,1),(22,1,19,2,16777230,'2023-03-30 06:26:13',NULL,1048585,1),(23,1,3,2,16777251,'2023-03-30 06:26:13','2023-03-30 06:26:16',1048585,1),(40,1,3,2,16777217,'2023-03-30 06:27:35',NULL,1048585,2),(42,1,0,2,16777243,'2023-03-30 06:27:35',NULL,1048585,2),(43,1,0,2,16777245,'2023-03-30 06:27:35',NULL,1048585,2),(46,1,0,2,16777236,'2023-03-30 06:27:43','2023-03-30 06:27:46',523,2),(47,1,20,2,16777231,'2023-03-30 06:27:43',NULL,1048585,2),(48,1,11,3,16777227,'2023-03-30 06:27:53',NULL,517,2),(51,1,12,3,16777227,'2023-03-30 06:27:59',NULL,517,3),(59,1,3,2,16777217,'2023-03-30 06:28:33',NULL,1048585,3),(61,1,0,2,16777243,'2023-03-30 06:28:33',NULL,1048585,3),(62,1,0,2,16777245,'2023-03-30 06:28:33',NULL,1048585,3),(75,1,3,2,16777217,'2023-03-30 06:29:29',NULL,1048585,4),(77,1,0,2,16777243,'2023-03-30 06:29:30',NULL,1048585,4),(78,1,0,2,16777245,'2023-03-30 06:29:30','2023-03-30 06:30:16',1048585,4),(81,1,0,2,16777236,'2023-03-30 06:29:37','2023-03-30 06:29:40',523,3),(83,1,9,3,16777227,'2023-03-30 06:29:45',NULL,517,4),(86,1,0,2,16777236,'2023-03-30 06:29:48','2023-03-30 06:29:52',523,4),(89,1,11,3,16777227,'2023-03-30 06:29:58',NULL,517,5),(97,1,22,2,16777235,'2023-03-30 06:30:13',NULL,1048585,4),(98,1,3,2,16777254,'2023-03-30 06:30:13',NULL,1048585,4),(106,1,3,2,16777217,'2023-03-30 06:30:59',NULL,1048585,5),(111,1,0,2,16777236,'2023-03-30 06:31:06','2023-03-30 06:31:09',523,5),(113,1,8,3,16777227,'2023-03-30 06:31:14',NULL,517,6),(116,1,0,2,16777236,'2023-03-30 06:31:16','2023-03-30 06:31:19',523,6),(119,1,12,3,16777227,'2023-03-30 06:31:24',NULL,517,7),(127,1,23,2,16777235,'2023-03-30 06:31:37',NULL,1048585,5),(128,1,3,2,16777254,'2023-03-30 06:31:37',NULL,1048585,5),(131,1,0,2,16777246,'2023-03-30 06:32:08',NULL,1048585,5),(143,1,3,2,16777217,'2023-03-30 06:33:02',NULL,1048585,6),(145,1,4,2,16777217,'2023-03-30 06:33:02',NULL,1048585,6),(147,1,0,2,16777243,'2023-03-30 06:33:02',NULL,1048585,6),(148,1,0,2,16777245,'2023-03-30 06:33:02',NULL,1048585,6),(151,1,0,2,16777236,'2023-03-30 06:33:10','2023-03-30 06:33:13',523,7),(152,1,24,2,16777229,'2023-03-30 06:33:10',NULL,1048585,6),(155,1,3,3,16777249,'2023-03-30 06:33:27',NULL,1048586,1),(157,1,4,3,16777249,'2023-03-30 06:33:27',NULL,1048586,1),(173,1,3,2,16777217,'2023-03-30 06:34:49',NULL,1048585,7),(175,1,0,2,16777243,'2023-03-30 06:34:49',NULL,1048585,7),(176,1,0,2,16777245,'2023-03-30 06:34:49',NULL,1048585,7),(179,1,0,2,16777236,'2023-03-30 06:34:58','2023-03-30 06:35:01',523,8),(181,1,10,3,16777227,'2023-03-30 06:35:07',NULL,517,8),(185,1,25,2,16777230,'2023-03-30 06:35:10',NULL,1048585,7),(186,1,3,2,16777251,'2023-03-30 06:35:10','2023-03-30 06:35:13',1048585,7),(188,1,3,2,16777217,'2023-03-30 06:35:29',NULL,1048585,8),(190,1,0,2,16777243,'2023-03-30 06:35:29',NULL,1048585,8),(191,1,0,2,16777245,'2023-03-30 06:35:29',NULL,1048585,8),(207,1,3,2,16777217,'2023-03-30 06:36:37',NULL,1048585,9),(209,1,4,2,16777217,'2023-03-30 06:36:37',NULL,1048585,9),(211,1,0,2,16777243,'2023-03-30 06:36:37',NULL,1048585,9),(212,1,0,2,16777245,'2023-03-30 06:36:37',NULL,1048585,9),(215,1,0,2,16777236,'2023-03-30 06:36:46','2023-03-30 06:36:50',523,9),(216,1,26,2,16777229,'2023-03-30 06:36:46',NULL,1048585,9),(226,1,3,2,16777217,'2023-03-30 06:37:41',NULL,1048585,10),(228,1,0,2,16777243,'2023-03-30 06:37:41',NULL,1048585,10),(229,1,0,2,16777245,'2023-03-30 06:37:41',NULL,1048585,10),(233,1,3,2,16777217,'2023-03-30 06:38:00',NULL,1048585,11),(235,1,0,2,16777243,'2023-03-30 06:38:00',NULL,1048585,11),(236,1,0,2,16777245,'2023-03-30 06:38:00',NULL,1048585,11),(238,1,0,2,16777236,'2023-03-30 06:38:06','2023-03-30 06:38:08',523,10),(240,1,9,3,16777227,'2023-03-30 06:38:13',NULL,517,9),(243,1,0,2,16777236,'2023-03-30 06:38:15','2023-03-30 06:38:18',523,11),(253,1,3,2,16777219,'2023-03-30 06:38:37',NULL,517,10),(256,1,3,2,16777219,'2023-03-30 06:38:45',NULL,517,11),(259,1,28,2,16777230,'2023-03-30 06:38:55',NULL,1048585,11),(260,1,3,2,16777251,'2023-03-30 06:38:55','2023-03-30 06:38:57',1048585,11),(274,1,3,2,16777217,'2023-03-30 06:40:00',NULL,1048585,12),(276,1,0,2,16777243,'2023-03-30 06:40:00',NULL,1048585,12),(277,1,0,2,16777245,'2023-03-30 06:40:00',NULL,1048585,12),(280,1,0,2,16777236,'2023-03-30 06:40:09','2023-03-30 06:40:13',523,12),(281,1,29,2,16777229,'2023-03-30 06:40:09',NULL,1048585,12),(282,1,7,3,16777227,'2023-03-30 06:40:19',NULL,517,12),(288,1,9,3,16777227,'2023-03-30 06:40:32',NULL,517,14),(292,1,3,2,16777219,'2023-03-30 06:40:42',NULL,517,13),(303,1,3,2,16777217,'2023-03-30 06:41:28',NULL,1048585,13),(305,1,0,2,16777243,'2023-03-30 06:41:28',NULL,1048585,13),(306,1,0,2,16777245,'2023-03-30 06:41:28',NULL,1048585,13),(309,1,0,2,16777236,'2023-03-30 06:41:37','2023-03-30 06:41:40',523,13),(311,1,8,3,16777227,'2023-03-30 06:41:45',NULL,517,15),(314,1,0,2,16777236,'2023-03-30 06:41:48','2023-03-30 06:41:51',523,14),(320,1,11,3,16777227,'2023-03-30 06:42:02',NULL,517,17),(327,1,3,2,16777219,'2023-03-30 06:42:19',NULL,517,16),(330,1,3,2,16777219,'2023-03-30 06:42:29',NULL,517,18),(333,1,30,2,16777230,'2023-03-30 06:42:41',NULL,1048585,13),(334,1,3,2,16777251,'2023-03-30 06:42:41','2023-03-30 06:42:44',1048585,13),(345,1,3,2,16777217,'2023-03-30 06:43:42',NULL,1048585,14),(351,1,0,2,16777236,'2023-03-30 06:43:52','2023-03-30 06:43:54',523,15),(353,1,7,3,16777227,'2023-03-30 06:44:00',NULL,517,19),(356,1,0,2,16777236,'2023-03-30 06:44:03','2023-03-30 06:44:06',523,16),(359,1,11,3,16777227,'2023-03-30 06:44:12',NULL,517,20),(367,1,31,2,16777235,'2023-03-30 06:44:26',NULL,1048585,14),(368,1,3,2,16777254,'2023-03-30 06:44:26',NULL,1048585,14),(371,1,0,2,16777246,'2023-03-30 06:45:36',NULL,1048585,14),(375,1,3,2,16777217,'2023-03-30 06:46:00',NULL,1048585,15),(377,1,0,2,16777243,'2023-03-30 06:46:00',NULL,1048585,15),(378,1,0,2,16777245,'2023-03-30 06:46:00',NULL,1048585,15),(380,1,0,2,16777236,'2023-03-30 06:46:08','2023-03-30 06:46:10',523,17),(381,1,32,2,16777231,'2023-03-30 06:46:08',NULL,1048585,15),(387,1,3,2,16777217,'2023-03-30 06:46:42',NULL,1048585,16),(389,1,0,2,16777243,'2023-03-30 06:46:42',NULL,1048585,16),(390,1,0,2,16777245,'2023-03-30 06:46:42',NULL,1048585,16),(392,1,0,2,16777236,'2023-03-30 06:46:50','2023-03-30 06:46:53',523,18),(393,1,33,2,16777231,'2023-03-30 06:46:50',NULL,1048585,16),(397,1,11,3,16777227,'2023-03-30 06:47:03',NULL,517,22),(400,1,12,3,16777227,'2023-03-30 06:47:09',NULL,517,23),(404,1,3,2,16777219,'2023-03-30 06:47:18',NULL,517,21),(425,1,3,2,16777217,'2023-03-30 06:48:58',NULL,1048585,17),(427,1,0,2,16777243,'2023-03-30 06:48:58',NULL,1048585,17),(428,1,0,2,16777245,'2023-03-30 06:48:58',NULL,1048585,17),(431,1,0,2,16777236,'2023-03-30 06:49:09','2023-03-30 06:49:14',523,19),(432,1,34,2,16777229,'2023-03-30 06:49:10',NULL,1048585,17),(433,1,7,3,16777227,'2023-03-30 06:49:20',NULL,517,24),(436,1,8,3,16777227,'2023-03-30 06:49:26',NULL,517,25);
+INSERT INTO `notifications` VALUES (7,0,1,1,1,'2023-04-05 01:15:46',NULL,0,0),(11,1,3,2,16777217,'2023-04-05 01:16:10',NULL,1048585,1),(13,1,0,2,16777243,'2023-04-05 01:16:10',NULL,1048585,1),(14,1,0,2,16777245,'2023-04-05 01:16:10',NULL,1048585,1),(16,1,0,2,16777236,'2023-04-05 01:16:16','2023-04-05 01:16:18',523,1),(18,1,12,3,16777227,'2023-04-05 01:16:22',NULL,517,1),(22,1,19,2,16777230,'2023-04-05 01:16:25',NULL,1048585,1),(23,1,3,2,16777251,'2023-04-05 01:16:25','2023-04-05 01:16:27',1048585,1),(40,1,3,2,16777217,'2023-04-05 01:17:49',NULL,1048585,2),(42,1,0,2,16777243,'2023-04-05 01:17:49',NULL,1048585,2),(43,1,0,2,16777245,'2023-04-05 01:17:49',NULL,1048585,2),(46,1,0,2,16777236,'2023-04-05 01:17:58','2023-04-05 01:18:02',523,2),(47,1,20,2,16777231,'2023-04-05 01:17:58',NULL,1048585,2),(48,1,11,3,16777227,'2023-04-05 01:18:07',NULL,517,2),(51,1,12,3,16777227,'2023-04-05 01:18:14',NULL,517,3),(59,1,3,2,16777217,'2023-04-05 01:18:49',NULL,1048585,3),(61,1,0,2,16777243,'2023-04-05 01:18:50',NULL,1048585,3),(62,1,0,2,16777245,'2023-04-05 01:18:50',NULL,1048585,3),(75,1,3,2,16777217,'2023-04-05 01:19:48',NULL,1048585,4),(77,1,0,2,16777243,'2023-04-05 01:19:48',NULL,1048585,4),(78,1,0,2,16777245,'2023-04-05 01:19:48','2023-04-05 01:20:36',1048585,4),(81,1,0,2,16777236,'2023-04-05 01:19:56','2023-04-05 01:20:00',523,3),(83,1,9,3,16777227,'2023-04-05 01:20:05',NULL,517,4),(86,1,0,2,16777236,'2023-04-05 01:20:08','2023-04-05 01:20:12',523,4),(89,1,11,3,16777227,'2023-04-05 01:20:18',NULL,517,5),(97,1,22,2,16777235,'2023-04-05 01:20:33',NULL,1048585,4),(98,1,3,2,16777254,'2023-04-05 01:20:33',NULL,1048585,4),(106,1,3,2,16777217,'2023-04-05 01:21:21',NULL,1048585,5),(111,1,0,2,16777236,'2023-04-05 01:21:28','2023-04-05 01:21:31',523,5),(113,1,8,3,16777227,'2023-04-05 01:21:36',NULL,517,6),(116,1,0,2,16777236,'2023-04-05 01:21:39','2023-04-05 01:21:42',523,6),(119,1,12,3,16777227,'2023-04-05 01:21:47',NULL,517,7),(127,1,23,2,16777235,'2023-04-05 01:22:00',NULL,1048585,5),(128,1,3,2,16777254,'2023-04-05 01:22:00',NULL,1048585,5),(131,1,0,2,16777246,'2023-04-05 01:22:33',NULL,1048585,5),(143,1,3,2,16777217,'2023-04-05 01:23:28',NULL,1048585,6),(145,1,4,2,16777217,'2023-04-05 01:23:28',NULL,1048585,6),(147,1,0,2,16777243,'2023-04-05 01:23:29',NULL,1048585,6),(148,1,0,2,16777245,'2023-04-05 01:23:29',NULL,1048585,6),(151,1,0,2,16777236,'2023-04-05 01:23:37','2023-04-05 01:23:40',523,7),(152,1,24,2,16777229,'2023-04-05 01:23:37',NULL,1048585,6),(155,1,3,3,16777249,'2023-04-05 01:23:55',NULL,1048586,1),(157,1,4,3,16777249,'2023-04-05 01:23:55',NULL,1048586,1),(173,1,3,2,16777217,'2023-04-05 01:25:19',NULL,1048585,7),(175,1,0,2,16777243,'2023-04-05 01:25:19',NULL,1048585,7),(176,1,0,2,16777245,'2023-04-05 01:25:19',NULL,1048585,7),(179,1,0,2,16777236,'2023-04-05 01:25:28','2023-04-05 01:25:32',523,8),(181,1,10,3,16777227,'2023-04-05 01:25:38',NULL,517,8),(185,1,25,2,16777230,'2023-04-05 01:25:41',NULL,1048585,7),(186,1,3,2,16777251,'2023-04-05 01:25:41','2023-04-05 01:25:45',1048585,7),(188,1,3,2,16777217,'2023-04-05 01:26:02',NULL,1048585,8),(190,1,0,2,16777243,'2023-04-05 01:26:03',NULL,1048585,8),(191,1,0,2,16777245,'2023-04-05 01:26:03',NULL,1048585,8),(207,1,3,2,16777217,'2023-04-05 01:27:14',NULL,1048585,9),(209,1,4,2,16777217,'2023-04-05 01:27:14',NULL,1048585,9),(211,1,0,2,16777243,'2023-04-05 01:27:14',NULL,1048585,9),(212,1,0,2,16777245,'2023-04-05 01:27:14',NULL,1048585,9),(215,1,0,2,16777236,'2023-04-05 01:27:23','2023-04-05 01:27:27',523,9),(216,1,26,2,16777229,'2023-04-05 01:27:23',NULL,1048585,9),(226,1,3,2,16777217,'2023-04-05 01:28:20',NULL,1048585,10),(228,1,0,2,16777243,'2023-04-05 01:28:20',NULL,1048585,10),(229,1,0,2,16777245,'2023-04-05 01:28:20',NULL,1048585,10),(233,1,3,2,16777217,'2023-04-05 01:28:40',NULL,1048585,11),(235,1,0,2,16777243,'2023-04-05 01:28:40',NULL,1048585,11),(236,1,0,2,16777245,'2023-04-05 01:28:40',NULL,1048585,11),(238,1,0,2,16777236,'2023-04-05 01:28:47','2023-04-05 01:28:50',523,10),(240,1,9,3,16777227,'2023-04-05 01:28:54',NULL,517,9),(243,1,0,2,16777236,'2023-04-05 01:28:56','2023-04-05 01:28:59',523,11),(253,1,3,2,16777219,'2023-04-05 01:29:18',NULL,517,10),(256,1,3,2,16777219,'2023-04-05 01:29:27',NULL,517,11),(259,1,28,2,16777230,'2023-04-05 01:29:38',NULL,1048585,11),(260,1,3,2,16777251,'2023-04-05 01:29:38','2023-04-05 01:29:41',1048585,11),(274,1,3,2,16777217,'2023-04-05 01:30:48',NULL,1048585,12),(276,1,0,2,16777243,'2023-04-05 01:30:48',NULL,1048585,12),(277,1,0,2,16777245,'2023-04-05 01:30:48',NULL,1048585,12),(280,1,0,2,16777236,'2023-04-05 01:30:59','2023-04-05 01:31:02',523,12),(281,1,29,2,16777229,'2023-04-05 01:30:59',NULL,1048585,12),(282,1,7,3,16777227,'2023-04-05 01:31:08',NULL,517,12),(288,1,9,3,16777227,'2023-04-05 01:31:21',NULL,517,14),(292,1,3,2,16777219,'2023-04-05 01:31:32',NULL,517,13),(303,1,3,2,16777217,'2023-04-05 01:32:20',NULL,1048585,13),(305,1,0,2,16777243,'2023-04-05 01:32:20',NULL,1048585,13),(306,1,0,2,16777245,'2023-04-05 01:32:20',NULL,1048585,13),(309,1,0,2,16777236,'2023-04-05 01:32:29','2023-04-05 01:32:33',523,13),(311,1,8,3,16777227,'2023-04-05 01:32:38',NULL,517,15),(314,1,0,2,16777236,'2023-04-05 01:32:41','2023-04-05 01:32:44',523,14),(320,1,11,3,16777227,'2023-04-05 01:32:55',NULL,517,17),(327,1,3,2,16777219,'2023-04-05 01:33:13',NULL,517,16),(330,1,3,2,16777219,'2023-04-05 01:33:23',NULL,517,18),(333,1,30,2,16777230,'2023-04-05 01:33:37',NULL,1048585,13),(334,1,3,2,16777251,'2023-04-05 01:33:37','2023-04-05 01:33:40',1048585,13),(345,1,3,2,16777217,'2023-04-05 01:34:39',NULL,1048585,14),(351,1,0,2,16777236,'2023-04-05 01:34:49','2023-04-05 01:34:53',523,15),(353,1,7,3,16777227,'2023-04-05 01:34:59',NULL,517,19),(356,1,0,2,16777236,'2023-04-05 01:35:02','2023-04-05 01:35:06',523,16),(359,1,11,3,16777227,'2023-04-05 01:35:12',NULL,517,20),(367,1,31,2,16777235,'2023-04-05 01:35:27',NULL,1048585,14),(368,1,3,2,16777254,'2023-04-05 01:35:27',NULL,1048585,14),(371,1,0,2,16777246,'2023-04-05 01:36:41',NULL,1048585,14),(375,1,3,2,16777217,'2023-04-05 01:37:06',NULL,1048585,15),(377,1,0,2,16777243,'2023-04-05 01:37:06',NULL,1048585,15),(378,1,0,2,16777245,'2023-04-05 01:37:06',NULL,1048585,15),(380,1,0,2,16777236,'2023-04-05 01:37:15','2023-04-05 01:37:17',523,17),(381,1,32,2,16777231,'2023-04-05 01:37:15',NULL,1048585,15),(387,1,3,2,16777217,'2023-04-05 01:37:50',NULL,1048585,16),(389,1,0,2,16777243,'2023-04-05 01:37:50',NULL,1048585,16),(390,1,0,2,16777245,'2023-04-05 01:37:50',NULL,1048585,16),(392,1,0,2,16777236,'2023-04-05 01:37:59','2023-04-05 01:38:02',523,18),(393,1,33,2,16777231,'2023-04-05 01:37:59',NULL,1048585,16),(397,1,11,3,16777227,'2023-04-05 01:38:13',NULL,517,22),(400,1,12,3,16777227,'2023-04-05 01:38:19',NULL,517,23),(404,1,3,2,16777219,'2023-04-05 01:38:28',NULL,517,21),(425,1,3,2,16777217,'2023-04-05 01:40:12',NULL,1048585,17),(427,1,0,2,16777243,'2023-04-05 01:40:12',NULL,1048585,17),(428,1,0,2,16777245,'2023-04-05 01:40:12',NULL,1048585,17),(431,1,0,2,16777236,'2023-04-05 01:40:24','2023-04-05 01:40:29',523,19),(432,1,34,2,16777229,'2023-04-05 01:40:25',NULL,1048585,17),(433,1,7,3,16777227,'2023-04-05 01:40:35',NULL,517,24),(436,1,8,3,16777227,'2023-04-05 01:40:41',NULL,517,25);
 /*!40000 ALTER TABLE `notifications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1572,14 +1572,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `oai_resumption_tokens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `oai_resumption_tokens` (
   `token` varchar(32) NOT NULL,
-  `expire` bigint(20) NOT NULL,
-  `record_offset` int(11) NOT NULL,
+  `expire` bigint NOT NULL,
+  `record_offset` int NOT NULL,
   `params` text,
   UNIQUE KEY `oai_resumption_tokens_pkey` (`token`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1597,16 +1597,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `plugin_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `plugin_settings` (
   `plugin_name` varchar(80) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
   `setting_name` varchar(80) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `plugin_settings_pkey` (`plugin_name`,`context_id`,`setting_name`),
   KEY `plugin_settings_plugin_name` (`plugin_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1615,7 +1615,7 @@ CREATE TABLE `plugin_settings` (
 
 LOCK TABLES `plugin_settings` WRITE;
 /*!40000 ALTER TABLE `plugin_settings` DISABLE KEYS */;
-INSERT INTO `plugin_settings` VALUES ('acronplugin',0,'crontab','[{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"lib.pkp.classes.task.ReviewReminder\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"lib.pkp.classes.task.PublishSubmissions\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"lib.pkp.classes.task.StatisticsReport\",\"frequency\":{\"day\":\"1\"},\"args\":[]}]','object'),('acronplugin',0,'enabled','1','bool'),('browseblockplugin',1,'browseCategories','1','bool'),('browseblockplugin',1,'browseNewReleases','1','bool'),('browseblockplugin',1,'browseSeries','1','bool'),('browseblockplugin',1,'context','1','int'),('browseblockplugin',1,'enabled','1','bool'),('browseblockplugin',1,'seq','1','int'),('defaultthemeplugin',0,'enabled','1','bool'),('defaultthemeplugin',1,'baseColour','#1E6292','string'),('defaultthemeplugin',1,'enabled','1','bool'),('defaultthemeplugin',1,'typography','notoSans','string'),('defaultthemeplugin',1,'useHomepageImageAsHeader','false','string'),('developedbyblockplugin',0,'context','1','int'),('developedbyblockplugin',0,'enabled','0','bool'),('developedbyblockplugin',0,'seq','0','int'),('developedbyblockplugin',1,'context','1','int'),('developedbyblockplugin',1,'enabled','0','bool'),('developedbyblockplugin',1,'seq','0','int'),('dublincoremetaplugin',1,'enabled','1','bool'),('googlescholarplugin',1,'enabled','1','bool'),('htmlmonographfileplugin',1,'enabled','1','bool'),('informationblockplugin',1,'context','1','int'),('informationblockplugin',1,'enabled','1','bool'),('informationblockplugin',1,'seq','7','int'),('languagetoggleblockplugin',0,'context','1','int'),('languagetoggleblockplugin',0,'enabled','1','bool'),('languagetoggleblockplugin',0,'seq','4','int'),('languagetoggleblockplugin',1,'context','1','int'),('languagetoggleblockplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',1,'seq','4','int'),('pdfjsviewerplugin',1,'enabled','1','bool'),('tinymceplugin',0,'enabled','1','bool'),('tinymceplugin',1,'enabled','1','bool'),('usageeventplugin',0,'enabled','1','bool'),('usageeventplugin',0,'uniqueSiteId','64252a83f2092','string'),('usagestatsplugin',0,'accessLogFileParseRegex','/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] \"\\S+ (?P<url>\\S+).*?\" (?P<returnCode>\\S+) \\S+ \".*?\" \"(?P<userAgent>.*?)\"/','string'),('usagestatsplugin',0,'chartType','bar','string'),('usagestatsplugin',0,'createLogFiles','1','bool'),('usagestatsplugin',0,'datasetMaxCount','4','string'),('usagestatsplugin',0,'enabled','1','bool'),('usagestatsplugin',0,'optionalColumns','[\"city\",\"region\"]','object'),('webfeedplugin',1,'displayItems','1','bool'),('webfeedplugin',1,'displayPage','homepage','string'),('webfeedplugin',1,'enabled','1','bool');
+INSERT INTO `plugin_settings` VALUES ('acronplugin',0,'crontab','[{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"plugins.generic.usageStats.UsageStatsLoader\",\"frequency\":{\"hour\":24},\"args\":[\"autoStage\"]},{\"className\":\"lib.pkp.classes.task.ReviewReminder\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"lib.pkp.classes.task.PublishSubmissions\",\"frequency\":{\"hour\":24},\"args\":[]},{\"className\":\"lib.pkp.classes.task.StatisticsReport\",\"frequency\":{\"day\":\"1\"},\"args\":[]}]','object'),('acronplugin',0,'enabled','1','bool'),('browseblockplugin',1,'browseCategories','1','bool'),('browseblockplugin',1,'browseNewReleases','1','bool'),('browseblockplugin',1,'browseSeries','1','bool'),('browseblockplugin',1,'context','1','int'),('browseblockplugin',1,'enabled','1','bool'),('browseblockplugin',1,'seq','1','int'),('defaultthemeplugin',0,'enabled','1','bool'),('defaultthemeplugin',1,'baseColour','#1E6292','string'),('defaultthemeplugin',1,'enabled','1','bool'),('defaultthemeplugin',1,'typography','notoSans','string'),('defaultthemeplugin',1,'useHomepageImageAsHeader','false','string'),('developedbyblockplugin',0,'context','1','int'),('developedbyblockplugin',0,'enabled','0','bool'),('developedbyblockplugin',0,'seq','0','int'),('developedbyblockplugin',1,'context','1','int'),('developedbyblockplugin',1,'enabled','0','bool'),('developedbyblockplugin',1,'seq','0','int'),('dublincoremetaplugin',1,'enabled','1','bool'),('googlescholarplugin',1,'enabled','1','bool'),('htmlmonographfileplugin',1,'enabled','1','bool'),('informationblockplugin',1,'context','1','int'),('informationblockplugin',1,'enabled','1','bool'),('informationblockplugin',1,'seq','7','int'),('languagetoggleblockplugin',0,'context','1','int'),('languagetoggleblockplugin',0,'enabled','1','bool'),('languagetoggleblockplugin',0,'seq','4','int'),('languagetoggleblockplugin',1,'context','1','int'),('languagetoggleblockplugin',1,'enabled','1','bool'),('languagetoggleblockplugin',1,'seq','4','int'),('pdfjsviewerplugin',1,'enabled','1','bool'),('tinymceplugin',0,'enabled','1','bool'),('tinymceplugin',1,'enabled','1','bool'),('usageeventplugin',0,'enabled','1','bool'),('usageeventplugin',0,'uniqueSiteId','642ccae4148d9','string'),('usagestatsplugin',0,'accessLogFileParseRegex','/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] \"\\S+ (?P<url>\\S+).*?\" (?P<returnCode>\\S+) \\S+ \".*?\" \"(?P<userAgent>.*?)\"/','string'),('usagestatsplugin',0,'chartType','bar','string'),('usagestatsplugin',0,'createLogFiles','1','bool'),('usagestatsplugin',0,'datasetMaxCount','4','string'),('usagestatsplugin',0,'enabled','1','bool'),('usagestatsplugin',0,'optionalColumns','[\"city\",\"region\"]','object'),('webfeedplugin',1,'displayItems','1','bool'),('webfeedplugin',1,'displayPage','homepage','string'),('webfeedplugin',1,'enabled','1','bool');
 /*!40000 ALTER TABLE `plugin_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1625,16 +1625,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `press_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `press_settings` (
-  `press_id` bigint(20) NOT NULL,
+  `press_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) DEFAULT NULL,
   UNIQUE KEY `press_settings_pkey` (`press_id`,`locale`,`setting_name`),
   KEY `press_settings_press_id` (`press_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1653,16 +1653,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `presses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `presses` (
-  `press_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `press_id` bigint NOT NULL AUTO_INCREMENT,
   `path` varchar(32) NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   `primary_locale` varchar(14) NOT NULL,
-  `enabled` smallint(6) NOT NULL DEFAULT '1',
+  `enabled` smallint NOT NULL DEFAULT '1',
   PRIMARY KEY (`press_id`),
   UNIQUE KEY `press_path` (`path`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1681,12 +1681,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_categories` (
-  `publication_id` bigint(20) NOT NULL,
-  `category_id` bigint(20) NOT NULL,
+  `publication_id` bigint NOT NULL,
+  `category_id` bigint NOT NULL,
   UNIQUE KEY `publication_categories_id` (`publication_id`,`category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1704,16 +1704,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_dates`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_dates` (
-  `publication_date_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `publication_format_id` bigint(20) NOT NULL,
+  `publication_date_id` bigint NOT NULL AUTO_INCREMENT,
+  `publication_format_id` bigint NOT NULL,
   `role` varchar(40) NOT NULL,
   `date_format` varchar(40) NOT NULL,
   `date` varchar(255) NOT NULL,
   PRIMARY KEY (`publication_date_id`),
   KEY `format_publication_dates_pkey` (`publication_date_id`,`publication_format_id`,`role`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1731,16 +1731,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_format_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_format_settings` (
-  `publication_format_id` bigint(20) NOT NULL,
+  `publication_format_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `publication_format_settings_pkey` (`publication_format_id`,`locale`,`setting_name`),
   KEY `publication_format_id_key` (`publication_format_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1759,12 +1759,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_formats`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_formats` (
-  `publication_format_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `publication_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) DEFAULT NULL,
-  `physical_format` smallint(6) DEFAULT '1',
+  `publication_format_id` bigint NOT NULL AUTO_INCREMENT,
+  `publication_id` bigint NOT NULL,
+  `submission_id` bigint DEFAULT NULL,
+  `physical_format` smallint DEFAULT '1',
   `entry_key` varchar(64) DEFAULT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   `file_size` varchar(255) DEFAULT NULL,
@@ -1787,11 +1787,11 @@ CREATE TABLE `publication_formats` (
   `returnable_indicator_code` varchar(255) DEFAULT NULL,
   `remote_url` varchar(2047) DEFAULT NULL,
   `url_path` varchar(64) DEFAULT NULL,
-  `is_approved` smallint(6) NOT NULL DEFAULT '0',
-  `is_available` smallint(6) NOT NULL DEFAULT '0',
+  `is_approved` smallint NOT NULL DEFAULT '0',
+  `is_available` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`publication_format_id`),
   KEY `publication_format_submission_id` (`submission_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1810,16 +1810,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_settings` (
-  `publication_id` bigint(20) NOT NULL,
+  `publication_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   UNIQUE KEY `publication_settings_pkey` (`publication_id`,`locale`,`setting_name`),
   KEY `publication_settings_publication_id` (`publication_id`),
   KEY `publication_settings_name_value` (`setting_name`(50),`setting_value`(150))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1838,26 +1838,26 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publications` (
-  `publication_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `publication_id` bigint NOT NULL AUTO_INCREMENT,
   `date_published` date DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
   `locale` varchar(14) DEFAULT NULL,
-  `primary_contact_id` bigint(20) DEFAULT NULL,
+  `primary_contact_id` bigint DEFAULT NULL,
   `publication_date_type` varchar(32) DEFAULT 'pub',
   `publication_type` varchar(32) DEFAULT 'publication',
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
-  `series_id` bigint(20) DEFAULT NULL,
+  `series_id` bigint DEFAULT NULL,
   `series_position` varchar(255) DEFAULT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `status` smallint(6) NOT NULL DEFAULT '1',
+  `submission_id` bigint NOT NULL,
+  `status` smallint NOT NULL DEFAULT '1',
   `url_path` varchar(64) DEFAULT NULL,
-  `version` bigint(20) DEFAULT NULL,
+  `version` bigint DEFAULT NULL,
   PRIMARY KEY (`publication_id`),
   KEY `publications_submission_id` (`submission_id`),
   KEY `publications_section_id` (`series_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1866,7 +1866,7 @@ CREATE TABLE `publications` (
 
 LOCK TABLES `publications` WRITE;
 /*!40000 ALTER TABLE `publications` DISABLE KEYS */;
-INSERT INTO `publications` VALUES (1,NULL,'2023-03-30 06:25:57',NULL,1,'pub','publication',0.00,NULL,NULL,1,1,NULL,1),(2,NULL,'2023-03-30 06:27:33',NULL,2,'pub','publication',0.00,NULL,NULL,2,1,NULL,1),(3,NULL,'2023-03-30 06:28:32',NULL,10,'pub','publication',0.00,NULL,NULL,3,1,NULL,1),(4,NULL,'2023-03-30 06:29:28',NULL,11,'pub','publication',0.00,3,NULL,4,1,NULL,1),(5,'2023-03-30','2023-03-30 06:32:07',NULL,15,'pub','publication',0.00,NULL,NULL,5,3,NULL,1),(6,NULL,'2023-03-30 06:33:00',NULL,16,'pub','publication',0.00,1,NULL,6,1,NULL,1),(7,NULL,'2023-03-30 06:34:47',NULL,20,'pub','publication',0.00,4,NULL,7,1,NULL,1),(8,NULL,'2023-03-30 06:35:28',NULL,25,'pub','publication',0.00,NULL,NULL,8,1,NULL,1),(9,NULL,'2023-03-30 06:36:35',NULL,26,'pub','publication',0.00,1,NULL,9,1,NULL,1),(10,NULL,'2023-03-30 06:37:39',NULL,31,'pub','publication',0.00,NULL,NULL,10,1,NULL,1),(11,NULL,'2023-03-30 06:37:59',NULL,32,'pub','publication',0.00,NULL,NULL,11,1,NULL,1),(12,NULL,'2023-03-30 06:39:58',NULL,33,'pub','publication',0.00,NULL,NULL,12,1,NULL,1),(13,NULL,'2023-03-30 06:41:27',NULL,41,'pub','publication',0.00,NULL,NULL,13,1,NULL,1),(14,'2023-03-30','2023-03-30 06:45:36',NULL,45,'pub','publication',0.00,5,NULL,14,3,NULL,1),(15,NULL,'2023-03-30 06:45:59',NULL,48,'pub','publication',0.00,NULL,NULL,15,1,NULL,1),(16,NULL,'2023-03-30 06:46:40',NULL,49,'pub','publication',0.00,NULL,NULL,16,1,NULL,1),(17,NULL,'2023-03-30 06:48:56',NULL,50,'pub','publication',0.00,NULL,NULL,17,1,NULL,1);
+INSERT INTO `publications` VALUES (1,NULL,'2023-04-05 01:16:09',NULL,1,'pub','publication',0.00,NULL,NULL,1,1,NULL,1),(2,NULL,'2023-04-05 01:17:47',NULL,2,'pub','publication',0.00,NULL,NULL,2,1,NULL,1),(3,NULL,'2023-04-05 01:18:48',NULL,10,'pub','publication',0.00,NULL,NULL,3,1,NULL,1),(4,NULL,'2023-04-05 01:19:47',NULL,11,'pub','publication',0.00,3,NULL,4,1,NULL,1),(5,'2023-04-05','2023-04-05 01:22:33',NULL,15,'pub','publication',0.00,NULL,NULL,5,3,NULL,1),(6,NULL,'2023-04-05 01:23:27',NULL,16,'pub','publication',0.00,1,NULL,6,1,NULL,1),(7,NULL,'2023-04-05 01:25:17',NULL,20,'pub','publication',0.00,4,NULL,7,1,NULL,1),(8,NULL,'2023-04-05 01:26:02',NULL,25,'pub','publication',0.00,NULL,NULL,8,1,NULL,1),(9,NULL,'2023-04-05 01:27:12',NULL,26,'pub','publication',0.00,1,NULL,9,1,NULL,1),(10,NULL,'2023-04-05 01:28:19',NULL,31,'pub','publication',0.00,NULL,NULL,10,1,NULL,1),(11,NULL,'2023-04-05 01:28:39',NULL,32,'pub','publication',0.00,NULL,NULL,11,1,NULL,1),(12,NULL,'2023-04-05 01:30:46',NULL,33,'pub','publication',0.00,NULL,NULL,12,1,NULL,1),(13,NULL,'2023-04-05 01:32:19',NULL,41,'pub','publication',0.00,NULL,NULL,13,1,NULL,1),(14,'2023-04-05','2023-04-05 01:36:41',NULL,45,'pub','publication',0.00,5,NULL,14,3,NULL,1),(15,NULL,'2023-04-05 01:37:05',NULL,48,'pub','publication',0.00,NULL,NULL,15,1,NULL,1),(16,NULL,'2023-04-05 01:37:49',NULL,49,'pub','publication',0.00,NULL,NULL,16,1,NULL,1),(17,NULL,'2023-04-05 01:40:09',NULL,50,'pub','publication',0.00,NULL,NULL,17,1,NULL,1);
 /*!40000 ALTER TABLE `publications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1876,19 +1876,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `queries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `queries` (
-  `query_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
+  `query_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   `date_posted` datetime DEFAULT NULL,
   `date_modified` datetime DEFAULT NULL,
-  `closed` smallint(6) NOT NULL DEFAULT '0',
+  `closed` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`query_id`),
   KEY `queries_assoc_id` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1907,12 +1907,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `query_participants`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `query_participants` (
-  `query_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `query_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `query_participants_pkey` (`query_id`,`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1931,15 +1931,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `queued_payments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `queued_payments` (
-  `queued_payment_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `queued_payment_id` bigint NOT NULL AUTO_INCREMENT,
   `date_created` datetime NOT NULL,
   `date_modified` datetime NOT NULL,
   `expiry_date` date DEFAULT NULL,
   `payment_data` text,
   PRIMARY KEY (`queued_payment_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1957,10 +1957,10 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `representatives`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `representatives` (
-  `representative_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
+  `representative_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
   `role` varchar(40) NOT NULL,
   `representative_id_type` varchar(255) DEFAULT NULL,
   `representative_id_value` varchar(255) DEFAULT NULL,
@@ -1968,10 +1968,10 @@ CREATE TABLE `representatives` (
   `phone` varchar(255) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL,
   `url` varchar(2047) DEFAULT NULL,
-  `is_supplier` smallint(6) NOT NULL DEFAULT '1',
+  `is_supplier` smallint NOT NULL DEFAULT '1',
   PRIMARY KEY (`representative_id`),
   KEY `format_representatives_pkey` (`representative_id`,`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1989,13 +1989,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_assignments` (
-  `review_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `reviewer_id` bigint(20) NOT NULL,
+  `review_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `reviewer_id` bigint NOT NULL,
   `competing_interests` text,
-  `recommendation` smallint(6) DEFAULT NULL,
+  `recommendation` smallint DEFAULT NULL,
   `date_assigned` datetime DEFAULT NULL,
   `date_notified` datetime DEFAULT NULL,
   `date_confirmed` datetime DEFAULT NULL,
@@ -2004,26 +2004,26 @@ CREATE TABLE `review_assignments` (
   `date_due` datetime DEFAULT NULL,
   `date_response_due` datetime DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
-  `reminder_was_automatic` smallint(6) NOT NULL DEFAULT '0',
-  `declined` smallint(6) NOT NULL DEFAULT '0',
-  `cancelled` smallint(6) NOT NULL DEFAULT '0',
-  `reviewer_file_id` bigint(20) DEFAULT NULL,
+  `reminder_was_automatic` smallint NOT NULL DEFAULT '0',
+  `declined` smallint NOT NULL DEFAULT '0',
+  `cancelled` smallint NOT NULL DEFAULT '0',
+  `reviewer_file_id` bigint DEFAULT NULL,
   `date_rated` datetime DEFAULT NULL,
   `date_reminded` datetime DEFAULT NULL,
-  `quality` smallint(6) DEFAULT NULL,
-  `review_round_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
-  `review_method` smallint(6) NOT NULL DEFAULT '1',
-  `round` smallint(6) NOT NULL DEFAULT '1',
-  `step` smallint(6) NOT NULL DEFAULT '1',
-  `review_form_id` bigint(20) DEFAULT NULL,
-  `unconsidered` smallint(6) DEFAULT NULL,
+  `quality` smallint DEFAULT NULL,
+  `review_round_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
+  `review_method` smallint NOT NULL DEFAULT '1',
+  `round` smallint NOT NULL DEFAULT '1',
+  `step` smallint NOT NULL DEFAULT '1',
+  `review_form_id` bigint DEFAULT NULL,
+  `unconsidered` smallint DEFAULT NULL,
   PRIMARY KEY (`review_id`),
   KEY `review_assignments_submission_id` (`submission_id`),
   KEY `review_assignments_reviewer_id` (`reviewer_id`),
   KEY `review_assignments_form_id` (`review_form_id`),
   KEY `review_assignments_reviewer_review` (`reviewer_id`,`review_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2032,7 +2032,7 @@ CREATE TABLE `review_assignments` (
 
 LOCK TABLES `review_assignments` WRITE;
 /*!40000 ALTER TABLE `review_assignments` DISABLE KEYS */;
-INSERT INTO `review_assignments` VALUES (1,1,12,NULL,NULL,'2023-03-30 06:26:11','2023-03-30 06:26:11',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:26:11',0,0,0,NULL,NULL,NULL,NULL,1,3,2,1,1,NULL,0),(2,2,11,NULL,NULL,'2023-03-30 06:27:53','2023-03-30 06:27:53',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:27:53',0,0,0,NULL,NULL,NULL,NULL,2,3,2,1,1,NULL,0),(3,2,12,NULL,NULL,'2023-03-30 06:27:59','2023-03-30 06:27:59',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:27:59',0,0,0,NULL,NULL,NULL,NULL,2,3,2,1,1,NULL,0),(4,4,9,NULL,NULL,'2023-03-30 06:29:45','2023-03-30 06:29:45',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:29:45',0,0,0,NULL,NULL,NULL,NULL,3,2,2,1,1,NULL,0),(5,4,11,NULL,NULL,'2023-03-30 06:29:58','2023-03-30 06:29:58',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:29:58',0,0,0,NULL,NULL,NULL,NULL,4,3,2,1,1,NULL,0),(6,5,8,NULL,NULL,'2023-03-30 06:31:14','2023-03-30 06:31:14',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:31:14',0,0,0,NULL,NULL,NULL,NULL,5,2,2,1,1,NULL,0),(7,5,12,NULL,NULL,'2023-03-30 06:31:24','2023-03-30 06:31:24',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:31:24',0,0,0,NULL,NULL,NULL,NULL,6,3,2,1,1,NULL,0),(8,7,10,NULL,NULL,'2023-03-30 06:35:07','2023-03-30 06:35:07',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:35:07',0,0,0,NULL,NULL,NULL,NULL,8,3,2,1,1,NULL,0),(9,11,9,NULL,NULL,'2023-03-30 06:38:13','2023-03-30 06:38:13',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:38:13',0,0,0,NULL,NULL,NULL,NULL,10,2,2,1,1,NULL,0),(10,11,10,NULL,0,'2023-03-30 06:38:22','2023-03-30 06:38:22','2023-03-30 06:38:33','2023-03-30 06:38:37',NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:38:37',0,0,0,NULL,NULL,NULL,0,11,3,2,1,4,NULL,0),(11,11,12,NULL,0,'2023-03-30 06:38:28','2023-03-30 06:38:28','2023-03-30 06:38:41','2023-03-30 06:38:45',NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:38:45',0,0,0,NULL,NULL,NULL,0,11,3,2,1,4,NULL,0),(12,12,7,NULL,NULL,'2023-03-30 06:40:19','2023-03-30 06:40:19',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:40:19',0,0,0,NULL,NULL,NULL,NULL,12,2,2,1,1,NULL,0),(13,12,8,NULL,0,'2023-03-30 06:40:25','2023-03-30 06:40:25','2023-03-30 06:40:37','2023-03-30 06:40:42',NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:40:42',0,0,0,NULL,NULL,NULL,0,12,2,2,1,4,NULL,0),(14,12,9,NULL,NULL,'2023-03-30 06:40:32','2023-03-30 06:40:32',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:40:32',0,0,0,NULL,NULL,NULL,NULL,12,2,2,1,1,NULL,0),(15,13,8,NULL,NULL,'2023-03-30 06:41:45','2023-03-30 06:41:45',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:41:45',0,0,0,NULL,NULL,NULL,NULL,13,2,2,1,1,NULL,0),(16,13,10,NULL,0,'2023-03-30 06:41:56','2023-03-30 06:41:56','2023-03-30 06:42:14','2023-03-30 06:42:19',NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:42:19',0,0,0,NULL,NULL,NULL,0,14,3,2,1,4,NULL,0),(17,13,11,NULL,NULL,'2023-03-30 06:42:02','2023-03-30 06:42:02',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:42:02',0,0,0,NULL,NULL,NULL,NULL,14,3,2,1,1,NULL,0),(18,13,12,NULL,0,'2023-03-30 06:42:08','2023-03-30 06:42:08','2023-03-30 06:42:24','2023-03-30 06:42:29',NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:42:29',0,0,0,NULL,NULL,NULL,0,14,3,2,1,4,NULL,0),(19,14,7,NULL,NULL,'2023-03-30 06:44:00','2023-03-30 06:44:00',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:44:00',0,0,0,NULL,NULL,NULL,NULL,15,2,2,1,1,NULL,0),(20,14,11,NULL,NULL,'2023-03-30 06:44:12','2023-03-30 06:44:12',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:44:12',0,0,0,NULL,NULL,NULL,NULL,16,3,2,1,1,NULL,0),(21,16,10,NULL,0,'2023-03-30 06:46:58','2023-03-30 06:46:58','2023-03-30 06:47:14','2023-03-30 06:47:18',NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:47:18',0,0,0,NULL,NULL,NULL,0,18,3,2,1,4,NULL,0),(22,16,11,NULL,NULL,'2023-03-30 06:47:03','2023-03-30 06:47:03',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:47:03',0,0,0,NULL,NULL,NULL,NULL,18,3,2,1,1,NULL,0),(23,16,12,NULL,NULL,'2023-03-30 06:47:09','2023-03-30 06:47:09',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:47:09',0,0,0,NULL,NULL,NULL,NULL,18,3,2,1,1,NULL,0),(24,17,7,NULL,NULL,'2023-03-30 06:49:20','2023-03-30 06:49:20',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:49:20',0,0,0,NULL,NULL,NULL,NULL,19,2,2,1,1,NULL,0),(25,17,8,NULL,NULL,'2023-03-30 06:49:26','2023-03-30 06:49:26',NULL,NULL,NULL,'2023-04-27 00:00:00','2023-04-27 00:00:00','2023-03-30 06:49:26',0,0,0,NULL,NULL,NULL,NULL,19,2,2,1,1,NULL,0);
+INSERT INTO `review_assignments` VALUES (1,1,12,NULL,NULL,'2023-04-05 01:16:22','2023-04-05 01:16:22',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:16:22',0,0,0,NULL,NULL,NULL,NULL,1,3,2,1,1,NULL,0),(2,2,11,NULL,NULL,'2023-04-05 01:18:07','2023-04-05 01:18:07',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:18:07',0,0,0,NULL,NULL,NULL,NULL,2,3,2,1,1,NULL,0),(3,2,12,NULL,NULL,'2023-04-05 01:18:14','2023-04-05 01:18:14',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:18:14',0,0,0,NULL,NULL,NULL,NULL,2,3,2,1,1,NULL,0),(4,4,9,NULL,NULL,'2023-04-05 01:20:05','2023-04-05 01:20:05',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:20:05',0,0,0,NULL,NULL,NULL,NULL,3,2,2,1,1,NULL,0),(5,4,11,NULL,NULL,'2023-04-05 01:20:18','2023-04-05 01:20:18',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:20:18',0,0,0,NULL,NULL,NULL,NULL,4,3,2,1,1,NULL,0),(6,5,8,NULL,NULL,'2023-04-05 01:21:36','2023-04-05 01:21:36',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:21:36',0,0,0,NULL,NULL,NULL,NULL,5,2,2,1,1,NULL,0),(7,5,12,NULL,NULL,'2023-04-05 01:21:47','2023-04-05 01:21:47',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:21:47',0,0,0,NULL,NULL,NULL,NULL,6,3,2,1,1,NULL,0),(8,7,10,NULL,NULL,'2023-04-05 01:25:38','2023-04-05 01:25:38',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:25:38',0,0,0,NULL,NULL,NULL,NULL,8,3,2,1,1,NULL,0),(9,11,9,NULL,NULL,'2023-04-05 01:28:54','2023-04-05 01:28:54',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:28:54',0,0,0,NULL,NULL,NULL,NULL,10,2,2,1,1,NULL,0),(10,11,10,NULL,0,'2023-04-05 01:29:04','2023-04-05 01:29:04','2023-04-05 01:29:15','2023-04-05 01:29:18',NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:29:18',0,0,0,NULL,NULL,NULL,0,11,3,2,1,4,NULL,0),(11,11,12,NULL,0,'2023-04-05 01:29:10','2023-04-05 01:29:10','2023-04-05 01:29:23','2023-04-05 01:29:27',NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:29:27',0,0,0,NULL,NULL,NULL,0,11,3,2,1,4,NULL,0),(12,12,7,NULL,NULL,'2023-04-05 01:31:08','2023-04-05 01:31:08',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:31:08',0,0,0,NULL,NULL,NULL,NULL,12,2,2,1,1,NULL,0),(13,12,8,NULL,0,'2023-04-05 01:31:14','2023-04-05 01:31:14','2023-04-05 01:31:27','2023-04-05 01:31:32',NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:31:32',0,0,0,NULL,NULL,NULL,0,12,2,2,1,4,NULL,0),(14,12,9,NULL,NULL,'2023-04-05 01:31:21','2023-04-05 01:31:21',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:31:21',0,0,0,NULL,NULL,NULL,NULL,12,2,2,1,1,NULL,0),(15,13,8,NULL,NULL,'2023-04-05 01:32:38','2023-04-05 01:32:38',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:32:38',0,0,0,NULL,NULL,NULL,NULL,13,2,2,1,1,NULL,0),(16,13,10,NULL,0,'2023-04-05 01:32:50','2023-04-05 01:32:50','2023-04-05 01:33:08','2023-04-05 01:33:13',NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:33:13',0,0,0,NULL,NULL,NULL,0,14,3,2,1,4,NULL,0),(17,13,11,NULL,NULL,'2023-04-05 01:32:55','2023-04-05 01:32:55',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:32:55',0,0,0,NULL,NULL,NULL,NULL,14,3,2,1,1,NULL,0),(18,13,12,NULL,0,'2023-04-05 01:33:02','2023-04-05 01:33:02','2023-04-05 01:33:19','2023-04-05 01:33:23',NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:33:23',0,0,0,NULL,NULL,NULL,0,14,3,2,1,4,NULL,0),(19,14,7,NULL,NULL,'2023-04-05 01:34:59','2023-04-05 01:34:59',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:34:59',0,0,0,NULL,NULL,NULL,NULL,15,2,2,1,1,NULL,0),(20,14,11,NULL,NULL,'2023-04-05 01:35:12','2023-04-05 01:35:12',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:35:12',0,0,0,NULL,NULL,NULL,NULL,16,3,2,1,1,NULL,0),(21,16,10,NULL,0,'2023-04-05 01:38:07','2023-04-05 01:38:08','2023-04-05 01:38:24','2023-04-05 01:38:28',NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:38:28',0,0,0,NULL,NULL,NULL,0,18,3,2,1,4,NULL,0),(22,16,11,NULL,NULL,'2023-04-05 01:38:13','2023-04-05 01:38:13',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:38:13',0,0,0,NULL,NULL,NULL,NULL,18,3,2,1,1,NULL,0),(23,16,12,NULL,NULL,'2023-04-05 01:38:19','2023-04-05 01:38:19',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:38:19',0,0,0,NULL,NULL,NULL,NULL,18,3,2,1,1,NULL,0),(24,17,7,NULL,NULL,'2023-04-05 01:40:35','2023-04-05 01:40:35',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:40:35',0,0,0,NULL,NULL,NULL,NULL,19,2,2,1,1,NULL,0),(25,17,8,NULL,NULL,'2023-04-05 01:40:41','2023-04-05 01:40:41',NULL,NULL,NULL,'2023-05-03 00:00:00','2023-05-03 00:00:00','2023-04-05 01:40:41',0,0,0,NULL,NULL,NULL,NULL,19,2,2,1,1,NULL,0);
 /*!40000 ALTER TABLE `review_assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2042,15 +2042,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_files` (
-  `review_id` bigint(20) NOT NULL,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
+  `review_id` bigint NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL,
   UNIQUE KEY `review_files_pkey` (`review_id`,`submission_file_id`),
   KEY `review_files_review_id` (`review_id`),
   KEY `review_files_submission_file_id_foreign` (`submission_file_id`),
   CONSTRAINT `review_files_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2059,7 +2059,7 @@ CREATE TABLE `review_files` (
 
 LOCK TABLES `review_files` WRITE;
 /*!40000 ALTER TABLE `review_files` DISABLE KEYS */;
-INSERT INTO `review_files` VALUES (1,2),(2,7),(2,8),(2,9),(2,10),(3,7),(3,8),(3,9),(3,10),(4,16),(4,17),(4,18),(4,19),(6,21),(8,36),(8,37),(8,38),(8,39),(8,40),(9,54),(12,58),(12,59),(12,60),(13,58),(13,59),(13,60),(14,58),(14,59),(14,60),(15,64),(15,65),(15,66),(21,82),(22,82),(23,82),(24,89),(24,90),(24,91),(24,92),(24,93),(24,94),(25,89),(25,90),(25,91),(25,92),(25,93),(25,94);
+INSERT INTO `review_files` VALUES (1,2),(2,7),(2,8),(2,9),(2,10),(3,7),(3,8),(3,9),(3,10),(6,17),(8,32),(8,33),(8,34),(8,35),(8,36),(12,48),(12,49),(12,50),(13,48),(13,49),(13,50),(14,48),(14,49),(14,50),(15,54),(15,55),(15,56),(19,63),(19,64),(19,65),(19,66),(19,67),(19,68),(21,78),(22,78),(23,78),(24,85),(24,86),(24,87),(24,88),(24,89),(24,90),(25,85),(25,86),(25,87),(25,88),(25,89),(25,90);
 /*!40000 ALTER TABLE `review_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2069,16 +2069,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_element_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_element_settings` (
-  `review_form_element_id` bigint(20) NOT NULL,
+  `review_form_element_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `review_form_element_settings_pkey` (`review_form_element_id`,`locale`,`setting_name`),
   KEY `review_form_element_settings_review_form_element_id` (`review_form_element_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2096,17 +2096,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_elements`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_elements` (
-  `review_form_element_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `review_form_id` bigint(20) NOT NULL,
+  `review_form_element_id` bigint NOT NULL AUTO_INCREMENT,
+  `review_form_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
-  `element_type` bigint(20) DEFAULT NULL,
-  `required` smallint(6) DEFAULT NULL,
-  `included` smallint(6) DEFAULT NULL,
+  `element_type` bigint DEFAULT NULL,
+  `required` smallint DEFAULT NULL,
+  `included` smallint DEFAULT NULL,
   PRIMARY KEY (`review_form_element_id`),
   KEY `review_form_elements_review_form_id` (`review_form_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2124,14 +2124,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_responses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_responses` (
-  `review_form_element_id` bigint(20) NOT NULL,
-  `review_id` bigint(20) NOT NULL,
+  `review_form_element_id` bigint NOT NULL,
+  `review_id` bigint NOT NULL,
   `response_type` varchar(6) DEFAULT NULL,
   `response_value` text,
   KEY `review_form_responses_pkey` (`review_form_element_id`,`review_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2149,16 +2149,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_settings` (
-  `review_form_id` bigint(20) NOT NULL,
+  `review_form_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `review_form_settings_pkey` (`review_form_id`,`locale`,`setting_name`),
   KEY `review_form_settings_review_form_id` (`review_form_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2176,15 +2176,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_forms`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_forms` (
-  `review_form_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
+  `review_form_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
   `seq` double(8,2) DEFAULT NULL,
-  `is_active` smallint(6) DEFAULT NULL,
+  `is_active` smallint DEFAULT NULL,
   PRIMARY KEY (`review_form_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2202,17 +2202,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_round_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_round_files` (
-  `submission_id` bigint(20) NOT NULL,
-  `review_round_id` bigint(20) NOT NULL,
-  `stage_id` smallint(6) NOT NULL,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `review_round_id` bigint NOT NULL,
+  `stage_id` smallint NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL,
   UNIQUE KEY `review_round_files_pkey` (`submission_id`,`review_round_id`,`submission_file_id`),
   KEY `review_round_files_submission_id` (`submission_id`),
   KEY `review_round_files_submission_file_id_foreign` (`submission_file_id`),
   CONSTRAINT `review_round_files_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2221,7 +2221,7 @@ CREATE TABLE `review_round_files` (
 
 LOCK TABLES `review_round_files` WRITE;
 /*!40000 ALTER TABLE `review_round_files` DISABLE KEYS */;
-INSERT INTO `review_round_files` VALUES (1,1,3,2),(2,2,3,7),(2,2,3,8),(2,2,3,9),(2,2,3,10),(4,3,2,16),(4,3,2,17),(4,3,2,18),(4,3,2,19),(5,5,2,21),(6,7,2,27),(6,7,2,28),(6,7,2,29),(6,7,2,30),(7,8,3,36),(7,8,3,37),(7,8,3,38),(7,8,3,39),(7,8,3,40),(9,9,2,47),(9,9,2,48),(9,9,2,49),(9,9,2,50),(9,9,2,51),(11,10,2,54),(12,12,2,58),(12,12,2,59),(12,12,2,60),(13,13,2,64),(13,13,2,65),(13,13,2,66),(15,17,3,80),(16,18,3,82),(17,19,2,89),(17,19,2,90),(17,19,2,91),(17,19,2,92),(17,19,2,93),(17,19,2,94);
+INSERT INTO `review_round_files` VALUES (1,1,3,2),(2,2,3,7),(2,2,3,8),(2,2,3,9),(2,2,3,10),(5,5,2,17),(6,7,2,23),(6,7,2,24),(6,7,2,25),(6,7,2,26),(7,8,3,32),(7,8,3,33),(7,8,3,34),(7,8,3,35),(7,8,3,36),(12,12,2,48),(12,12,2,49),(12,12,2,50),(13,13,2,54),(13,13,2,55),(13,13,2,56),(14,15,2,63),(14,15,2,64),(14,15,2,65),(14,15,2,66),(14,15,2,67),(14,15,2,68),(15,17,3,76),(16,18,3,78),(17,19,2,85),(17,19,2,86),(17,19,2,87),(17,19,2,88),(17,19,2,89),(17,19,2,90);
 /*!40000 ALTER TABLE `review_round_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2231,18 +2231,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_rounds`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_rounds` (
-  `review_round_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) DEFAULT NULL,
-  `round` smallint(6) NOT NULL,
-  `review_revision` bigint(20) DEFAULT NULL,
-  `status` bigint(20) DEFAULT NULL,
+  `review_round_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `stage_id` bigint DEFAULT NULL,
+  `round` smallint NOT NULL,
+  `review_revision` bigint DEFAULT NULL,
+  `status` bigint DEFAULT NULL,
   PRIMARY KEY (`review_round_id`),
   UNIQUE KEY `review_rounds_submission_id_stage_id_round_pkey` (`submission_id`,`stage_id`,`round`),
   KEY `review_rounds_submission_id` (`submission_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2261,19 +2261,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sales_rights`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sales_rights` (
-  `sales_rights_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `publication_format_id` bigint(20) NOT NULL,
+  `sales_rights_id` bigint NOT NULL AUTO_INCREMENT,
+  `publication_format_id` bigint NOT NULL,
   `type` varchar(40) NOT NULL,
-  `row_setting` smallint(6) NOT NULL DEFAULT '0',
+  `row_setting` smallint NOT NULL DEFAULT '0',
   `countries_included` text,
   `countries_excluded` text,
   `regions_included` text,
   `regions_excluded` text,
   PRIMARY KEY (`sales_rights_id`),
   KEY `format_sales_rights_pkey` (`sales_rights_id`,`publication_format_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2291,12 +2291,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `scheduled_tasks`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `scheduled_tasks` (
   `class_name` varchar(255) NOT NULL,
   `last_run` datetime DEFAULT NULL,
   UNIQUE KEY `scheduled_tasks_pkey` (`class_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2305,7 +2305,7 @@ CREATE TABLE `scheduled_tasks` (
 
 LOCK TABLES `scheduled_tasks` WRITE;
 /*!40000 ALTER TABLE `scheduled_tasks` DISABLE KEYS */;
-INSERT INTO `scheduled_tasks` VALUES ('lib.pkp.classes.task.PublishSubmissions','2023-03-30 06:21:42'),('lib.pkp.classes.task.ReviewReminder','2023-03-30 06:21:42'),('lib.pkp.classes.task.StatisticsReport','2023-03-30 06:21:42'),('plugins.generic.usageStats.UsageStatsLoader','2023-03-30 06:21:42');
+INSERT INTO `scheduled_tasks` VALUES ('lib.pkp.classes.task.PublishSubmissions','2023-04-05 01:11:45'),('lib.pkp.classes.task.ReviewReminder','2023-04-05 01:11:45'),('lib.pkp.classes.task.StatisticsReport','2023-04-05 01:11:45'),('plugins.generic.usageStats.UsageStatsLoader','2023-04-05 01:11:45');
 /*!40000 ALTER TABLE `scheduled_tasks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2315,21 +2315,21 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `series`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `series` (
-  `series_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `press_id` bigint(20) NOT NULL,
-  `review_form_id` bigint(20) DEFAULT NULL,
+  `series_id` bigint NOT NULL AUTO_INCREMENT,
+  `press_id` bigint NOT NULL,
+  `review_form_id` bigint DEFAULT NULL,
   `seq` double(8,2) DEFAULT '0.00',
-  `featured` smallint(6) NOT NULL DEFAULT '0',
-  `editor_restricted` smallint(6) NOT NULL DEFAULT '0',
+  `featured` smallint NOT NULL DEFAULT '0',
+  `editor_restricted` smallint NOT NULL DEFAULT '0',
   `path` varchar(255) NOT NULL,
   `image` text,
-  `is_inactive` smallint(6) NOT NULL DEFAULT '0',
+  `is_inactive` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`series_id`),
   UNIQUE KEY `series_path` (`press_id`,`path`),
   KEY `series_press_id` (`press_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2348,12 +2348,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `series_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `series_categories` (
-  `series_id` bigint(20) NOT NULL,
-  `category_id` bigint(20) NOT NULL,
+  `series_id` bigint NOT NULL,
+  `category_id` bigint NOT NULL,
   UNIQUE KEY `series_categories_id` (`series_id`,`category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2371,15 +2371,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `series_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `series_settings` (
-  `series_id` bigint(20) NOT NULL,
+  `series_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `series_settings_pkey` (`series_id`,`locale`,`setting_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2398,20 +2398,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sessions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sessions` (
   `session_id` varchar(128) NOT NULL,
-  `user_id` bigint(20) DEFAULT NULL,
+  `user_id` bigint DEFAULT NULL,
   `ip_address` varchar(39) NOT NULL,
   `user_agent` varchar(255) DEFAULT NULL,
-  `created` bigint(20) NOT NULL DEFAULT '0',
-  `last_used` bigint(20) NOT NULL DEFAULT '0',
-  `remember` smallint(6) NOT NULL DEFAULT '0',
+  `created` bigint NOT NULL DEFAULT '0',
+  `last_used` bigint NOT NULL DEFAULT '0',
+  `remember` smallint NOT NULL DEFAULT '0',
   `data` text NOT NULL,
   `domain` varchar(255) DEFAULT NULL,
   UNIQUE KEY `sessions_pkey` (`session_id`),
   KEY `sessions_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2420,7 +2420,7 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('03k7e3btqsf36plu2u8rugk0pb',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157520,1680157535,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680157535;s:5:\"token\";s:32:\"2f0b63f029a193758bfaca240542cd07\";}','localhost'),('047bssem2arlb9iep1qk0pvccd',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680158263,1680158338,0,'csrf|a:2:{s:9:\"timestamp\";i:1680158338;s:5:\"token\";s:32:\"58a27afb094cd2c1a15bb248778941d6\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('1br6kcu187p9fuo79p84o3plqh',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680158739,1680158771,0,'csrf|a:2:{s:9:\"timestamp\";i:1680158771;s:5:\"token\";s:32:\"65e1e2792df57afcb9f4f1d59d619ade\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('1emu1pn5bhai4fgndru6huccgc',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157315,1680157328,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680157328;s:5:\"token\";s:32:\"696e7cf92f0d3806196b884113a65365\";}','localhost'),('1uk31p41abmu3gf0h9qohv5jdv',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157715,1680157822,0,'csrf|a:2:{s:9:\"timestamp\";i:1680157822;s:5:\"token\";s:32:\"d3d848f8b4f96d98b37227f3ca94f26b\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('2kv3maigatqhne3654lomm51vb',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157334,1680157341,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680157341;s:5:\"token\";s:32:\"98bfe9b97334e5bc05a0548e0e749ddf\";}','localhost'),('2s3t88ip8f9hrvkduio51cgem6',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680158446,1680158564,0,'csrf|a:2:{s:9:\"timestamp\";i:1680158565;s:5:\"token\";s:32:\"8dbfef4c661c36363ffe327a07bb59c9\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('314fnkudrukpit4hf4qt0g6mc6',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157582,1680157679,0,'csrf|a:2:{s:9:\"timestamp\";i:1680157679;s:5:\"token\";s:32:\"6163234ce783826d7050e9962fc2faba\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('37a367640es79b0gnvg6uj5u1i',21,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157682,1680157714,0,'csrf|a:2:{s:9:\"timestamp\";i:1680157713;s:5:\"token\";s:32:\"c4c7fe6fe7c609a8ab475ed3add44cb9\";}username|s:10:\"bbarnetson\";userId|i:21;','localhost'),('40cp6ld6ahui6bd3f0tit5cq4j',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157299,1680157299,0,'','localhost'),('4u6ce9900n100gcuga63hd39kh',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157537,1680157580,0,'csrf|a:2:{s:9:\"timestamp\";i:1680157580;s:5:\"token\";s:32:\"f4f71dbb2fe1e12395bade22f0ba6e71\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('5t5a62n0ctrthsg68ta4cgqgpi',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157825,1680157929,0,'csrf|a:2:{s:9:\"timestamp\";i:1680157929;s:5:\"token\";s:32:\"743030d6028fde08ca26dbc6358bd52e\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('6b3p36qprlj34ophiof96o6a3k',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680158773,1680158839,0,'csrf|a:2:{s:9:\"timestamp\";i:1680158839;s:5:\"token\";s:32:\"149a86b0624f2895eefa39864730b169\";}username|s:8:\"agallego\";','localhost'),('dfdcjgjve40j3mk4f9tnvb9ifs',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157329,1680157334,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680157334;s:5:\"token\";s:32:\"803748063a199dd67248770fbdaea3c7\";}','localhost'),('f92u3909t2ba8t3qr7fh4i3sht',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157346,1680157518,0,'username|s:5:\"rvaca\";csrf|a:2:{s:9:\"timestamp\";i:1680157518;s:5:\"token\";s:32:\"d4e18a77f9c3e10b5f4912205ae46c8f\";}','localhost'),('gui2ceim9qfpb78oatp5j2t3k1',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157341,1680157344,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680157344;s:5:\"token\";s:32:\"c169c717abee133d61037b367a33651f\";}','localhost'),('ieuq8f796371oi10ao5mod8m1s',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680158841,1680158966,0,'csrf|a:2:{s:9:\"timestamp\";i:1680158966;s:5:\"token\";s:32:\"3be3ffdca241ff33e115659fb666caae\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('if0eha5s2qh5orn8ajg1snmsj3',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680158571,1680158737,0,'csrf|a:2:{s:9:\"timestamp\";i:1680158738;s:5:\"token\";s:32:\"fcbcb66e45070dacd66311c4c8d96a62\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('k3ont8b3mi2flmqnc8pmcr3ekd',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680158019,1680158119,0,'csrf|a:2:{s:9:\"timestamp\";i:1680158119;s:5:\"token\";s:32:\"89c9cdf595d5adf6062fbb8ecf4c7f0e\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('mhc8bnddbfqh41k5ps18f1ecdr',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680158121,1680158129,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680158129;s:5:\"token\";s:32:\"dde5cebbd34b6d617abcb14af163d3f0\";}','localhost'),('nd34t8qq1imp8ehcl14f5itsrm',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680158340,1680158443,0,'csrf|a:2:{s:9:\"timestamp\";i:1680158443;s:5:\"token\";s:32:\"b273a30234c0bb530916648a0969ec5b\";}username|s:7:\"phudson\";','localhost'),('nhq6428povpggafk5hq6lr0lm8',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157931,1680158016,0,'csrf|a:2:{s:9:\"timestamp\";i:1680158017;s:5:\"token\";s:32:\"7fc69c6b21aebcedf44aa14fe64ea0c4\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('nm84hffdnngl2l077oh9sks1cu',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680158131,1680158211,0,'csrf|a:2:{s:9:\"timestamp\";i:1680158211;s:5:\"token\";s:32:\"201348bc5a45b24dd6ea934d0a6fa923\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('no1lbii3p9fhsqtoe1celgfn6b',27,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680158212,1680158261,0,'csrf|a:2:{s:9:\"timestamp\";i:1680158261;s:5:\"token\";s:32:\"cccd49f28c9295e40fb12e6daffaa9b4\";}username|s:7:\"jbrower\";userId|i:27;','localhost'),('vbtouh1e0ln87hrefn4srm2djj',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.100 Safari/537.36',1680157302,1680157314,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680157315;s:5:\"token\";s:32:\"9ec3c57fce47ac7afe7029b1389ce069\";}','localhost');
+INSERT INTO `sessions` VALUES ('0pquqci26sa2d01qmven4i4rli',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657105,1680657122,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680657123;s:5:\"token\";s:32:\"ac9dc9bb5aee60a3faa4fe4d6351387e\";}','localhost'),('29hqftadf8djq62j6msm0qo178',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657155,1680657329,0,'username|s:5:\"rvaca\";csrf|a:2:{s:9:\"timestamp\";i:1680657329;s:5:\"token\";s:32:\"0ae1439eb7ea50d99ce616cf96c52eb8\";}','localhost'),('2genp7262k4a50c2nqojtoqo8p',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680658640,1680658709,0,'csrf|a:2:{s:9:\"timestamp\";i:1680658709;s:5:\"token\";s:32:\"4a5f4cd6070f7e3abd9f6c6de0c8b52a\";}username|s:8:\"agallego\";','localhost'),('315mikl4i6nlsakdgm3hoqv93o',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680658424,1680658601,0,'csrf|a:2:{s:9:\"timestamp\";i:1680658601;s:5:\"token\";s:32:\"479b77c956d06407eb1be8c6a6c23cf4\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('6gu3tiptg83s3gigb3k77vgj72',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680658184,1680658293,0,'csrf|a:2:{s:9:\"timestamp\";i:1680658293;s:5:\"token\";s:32:\"a2fbf87370519eefee9d6bc532013998\";}username|s:7:\"phudson\";','localhost'),('a1m8ujs1c5oqq67oidggrvfk7u',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657846,1680657952,0,'csrf|a:2:{s:9:\"timestamp\";i:1680657952;s:5:\"token\";s:32:\"99d80f8853dd02cfae43cacf224064d5\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('ah21va4ujp0q1hp3vqou0ng75a',27,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680658050,1680658101,0,'csrf|a:2:{s:9:\"timestamp\";i:1680658100;s:5:\"token\";s:32:\"acb76a04c70a026ce6c7372f208d88fd\";}username|s:7:\"jbrower\";userId|i:27;','localhost'),('ail8jv4cfp3069ud9vde6p0e0q',21,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657498,1680657530,0,'csrf|a:2:{s:9:\"timestamp\";i:1680657529;s:5:\"token\";s:32:\"d7302bd76016d7563c30631caab71640\";}username|s:10:\"bbarnetson\";userId|i:21;','localhost'),('br1pt6jgod35o0p4gs05fo35fu',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657954,1680657963,0,'userId|i:3;username|s:7:\"dbarnes\";csrf|a:2:{s:9:\"timestamp\";i:1680657962;s:5:\"token\";s:32:\"60d4a153f1648b1510709db86ba091fb\";}','localhost'),('ct1uqcpm82101p92npma1l5eo0',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657532,1680657643,0,'csrf|a:2:{s:9:\"timestamp\";i:1680657643;s:5:\"token\";s:32:\"a479a4b2076d838de8b84c911d0be9fd\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('dftovc50goha19dofjcq430f4b',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657645,1680657752,0,'csrf|a:2:{s:9:\"timestamp\";i:1680657752;s:5:\"token\";s:32:\"6b9e073ba991b90b450e8fec81deb1fd\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('e7ljh2594atv9iopdavjhg4lfd',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657964,1680658047,0,'csrf|a:2:{s:9:\"timestamp\";i:1680658047;s:5:\"token\";s:32:\"1acfbd97b77a39e16607f5e6867f5b0d\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('eedotqcbt7da99ff6dh9lnhr9k',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657123,1680657136,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680657136;s:5:\"token\";s:32:\"8ce486334e4d30cae5acc023de16adb0\";}','localhost'),('fq47k6npspqq4vh4f2svk0qojf',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657150,1680657154,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680657153;s:5:\"token\";s:32:\"646a68f204fd1b96747249c791c72f46\";}','localhost'),('ghsr317j97iq8celi8ksgnq49a',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680658296,1680658421,0,'csrf|a:2:{s:9:\"timestamp\";i:1680658421;s:5:\"token\";s:32:\"ffead4d9576d90e027d394906b6ab4ef\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('jaonpqo6leplcs4v1mfgr5p46s',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657394,1680657495,0,'csrf|a:2:{s:9:\"timestamp\";i:1680657494;s:5:\"token\";s:32:\"826df2a7d4ee2e7935a2eb593001ea4f\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('kaob3kpr473scn975aa0jd6r60',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657755,1680657844,0,'csrf|a:2:{s:9:\"timestamp\";i:1680657844;s:5:\"token\";s:32:\"c5896004ecb5a50309c273fd481694db\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('lk2pcb11ilcugk2iqp0cgev9bd',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657137,1680657143,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680657143;s:5:\"token\";s:32:\"9a97e40608894a6099254b796f50e42d\";}','localhost'),('oddu5pbrl2s9aohofume55mu7k',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680658711,1680658842,0,'csrf|a:2:{s:9:\"timestamp\";i:1680658841;s:5:\"token\";s:32:\"ab2fbde15a5518e63374246ee6687395\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('pn27hnkkur9svaoko7f6f836pc',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657099,1680657099,0,'','localhost'),('pse9o4ethetei5748d1laikhtb',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657348,1680657392,0,'csrf|a:2:{s:9:\"timestamp\";i:1680657392;s:5:\"token\";s:32:\"697ce176fbfab6998512b99ba5238b57\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('qro6nf6oir7qsl3jdmtchpam84',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657331,1680657346,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680657346;s:5:\"token\";s:32:\"d4db00a282d5db619ec359a55c600f8a\";}','localhost'),('uiinbb6k7pus1hso4nie1pgskn',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680657143,1680657150,0,'userId|i:1;username|s:5:\"admin\";csrf|a:2:{s:9:\"timestamp\";i:1680657150;s:5:\"token\";s:32:\"085e0abbdbbca08bc8841ad989364c3b\";}','localhost'),('us4u3boet4itad38ic20ano4ki',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680658604,1680658638,0,'csrf|a:2:{s:9:\"timestamp\";i:1680658638;s:5:\"token\";s:32:\"c79202057579fb9e69e7d8255c441135\";}username|s:7:\"dbarnes\";userId|i:3;','localhost'),('ut1pv6d4optl3ih1hjs2bam9tt',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36',1680658102,1680658182,0,'csrf|a:2:{s:9:\"timestamp\";i:1680658182;s:5:\"token\";s:32:\"d37a206aa1681d0d1d344f0516da2882\";}username|s:7:\"dbarnes\";userId|i:3;','localhost');
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2430,15 +2430,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `site`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `site` (
-  `redirect` bigint(20) NOT NULL DEFAULT '0' COMMENT 'If not 0, redirect to the specified journal/conference/... site.',
+  `redirect` bigint NOT NULL DEFAULT '0' COMMENT 'If not 0, redirect to the specified journal/conference/... site.',
   `primary_locale` varchar(14) NOT NULL COMMENT 'Primary locale for the site.',
-  `min_password_length` smallint(6) NOT NULL DEFAULT '6',
+  `min_password_length` smallint NOT NULL DEFAULT '6',
   `installed_locales` varchar(1024) NOT NULL DEFAULT 'en_US' COMMENT 'Locales for which support has been installed.',
   `supported_locales` varchar(1024) DEFAULT NULL COMMENT 'Locales supported by the site (for hosted journals/conferences/...).',
   `original_style_file_name` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2457,13 +2457,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `site_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `site_settings` (
   `setting_name` varchar(255) NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_value` text,
   UNIQUE KEY `site_settings_pkey` (`setting_name`,`locale`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2482,16 +2482,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `spotlight_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `spotlight_settings` (
-  `spotlight_id` bigint(20) NOT NULL,
+  `spotlight_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object|date)',
   UNIQUE KEY `spotlight_settings_pkey` (`spotlight_id`,`locale`,`setting_name`),
   KEY `spotlight_settings_id` (`spotlight_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2509,15 +2509,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `spotlights`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `spotlights` (
-  `spotlight_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `assoc_type` smallint(6) NOT NULL,
-  `assoc_id` smallint(6) NOT NULL,
-  `press_id` bigint(20) NOT NULL,
+  `spotlight_id` bigint NOT NULL AUTO_INCREMENT,
+  `assoc_type` smallint NOT NULL,
+  `assoc_id` smallint NOT NULL,
+  `press_id` bigint NOT NULL,
   PRIMARY KEY (`spotlight_id`),
   KEY `spotlights_assoc` (`assoc_type`,`assoc_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2535,21 +2535,21 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `stage_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `stage_assignments` (
-  `stage_assignment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `user_group_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `stage_assignment_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `user_group_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   `date_assigned` datetime NOT NULL,
-  `recommend_only` smallint(6) NOT NULL DEFAULT '0',
-  `can_change_metadata` smallint(6) NOT NULL DEFAULT '0',
+  `recommend_only` smallint NOT NULL DEFAULT '0',
+  `can_change_metadata` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`stage_assignment_id`),
   UNIQUE KEY `stage_assignment` (`submission_id`,`user_group_id`,`user_id`),
   KEY `stage_assignments_submission_id` (`submission_id`),
   KEY `stage_assignments_user_group_id` (`user_group_id`),
   KEY `stage_assignments_user_id` (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2558,7 +2558,7 @@ CREATE TABLE `stage_assignments` (
 
 LOCK TABLES `stage_assignments` WRITE;
 /*!40000 ALTER TABLE `stage_assignments` DISABLE KEYS */;
-INSERT INTO `stage_assignments` VALUES (1,1,13,19,'2023-03-30 06:25:42',0,0),(2,1,3,3,'2023-03-30 06:25:58',0,1),(3,1,6,14,'2023-03-30 06:26:19',0,0),(4,2,14,20,'2023-03-30 06:26:28',0,0),(5,2,3,3,'2023-03-30 06:27:35',0,1),(6,3,13,21,'2023-03-30 06:28:08',0,0),(7,3,3,3,'2023-03-30 06:28:33',0,1),(8,4,14,22,'2023-03-30 06:28:41',0,0),(9,4,3,3,'2023-03-30 06:29:29',0,1),(10,4,6,13,'2023-03-30 06:30:09',0,0),(11,4,10,15,'2023-03-30 06:30:21',0,0),(12,5,13,23,'2023-03-30 06:30:30',0,0),(13,5,3,3,'2023-03-30 06:30:59',0,1),(14,5,6,14,'2023-03-30 06:31:34',0,0),(15,5,10,16,'2023-03-30 06:31:44',0,0),(16,5,12,17,'2023-03-30 06:31:48',0,0),(17,6,14,24,'2023-03-30 06:32:16',0,0),(18,6,3,3,'2023-03-30 06:33:02',0,1),(19,6,5,4,'2023-03-30 06:33:02',0,1),(20,6,5,6,'2023-03-30 06:33:18',1,1),(21,7,14,25,'2023-03-30 06:33:44',0,0),(22,7,3,3,'2023-03-30 06:34:49',0,1),(23,7,6,13,'2023-03-30 06:35:18',0,0),(24,8,13,3,'2023-03-30 06:35:25',0,0),(25,8,3,3,'2023-03-30 06:35:29',0,1),(26,9,14,26,'2023-03-30 06:35:36',0,0),(27,9,3,3,'2023-03-30 06:36:37',0,1),(28,9,5,4,'2023-03-30 06:36:37',0,1),(29,10,13,27,'2023-03-30 06:36:57',0,0),(30,10,3,3,'2023-03-30 06:37:41',0,1),(31,11,13,28,'2023-03-30 06:37:48',0,0),(32,11,3,3,'2023-03-30 06:38:00',0,1),(33,12,14,29,'2023-03-30 06:39:05',0,0),(34,12,3,3,'2023-03-30 06:40:00',0,1),(35,13,14,30,'2023-03-30 06:40:51',0,0),(36,13,3,3,'2023-03-30 06:41:28',0,1),(37,14,14,31,'2023-03-30 06:42:56',0,0),(38,14,3,3,'2023-03-30 06:43:42',0,1),(39,14,6,13,'2023-03-30 06:44:23',0,0),(40,14,10,15,'2023-03-30 06:44:35',0,0),(41,14,12,18,'2023-03-30 06:44:40',0,0),(42,15,13,32,'2023-03-30 06:45:44',0,0),(43,15,3,3,'2023-03-30 06:45:59',0,1),(44,16,13,33,'2023-03-30 06:46:18',0,0),(45,16,3,3,'2023-03-30 06:46:42',0,1),(46,17,14,34,'2023-03-30 06:47:26',0,0),(47,17,3,3,'2023-03-30 06:48:58',0,1);
+INSERT INTO `stage_assignments` VALUES (1,1,13,19,'2023-04-05 01:15:54',0,0),(2,1,3,3,'2023-04-05 01:16:10',0,1),(3,1,6,14,'2023-04-05 01:16:31',0,0),(4,2,14,20,'2023-04-05 01:16:39',0,0),(5,2,3,3,'2023-04-05 01:17:49',0,1),(6,3,13,21,'2023-04-05 01:18:23',0,0),(7,3,3,3,'2023-04-05 01:18:49',0,1),(8,4,14,22,'2023-04-05 01:18:57',0,0),(9,4,3,3,'2023-04-05 01:19:48',0,1),(10,4,6,13,'2023-04-05 01:20:30',0,0),(11,4,10,15,'2023-04-05 01:20:42',0,0),(12,5,13,23,'2023-04-05 01:20:51',0,0),(13,5,3,3,'2023-04-05 01:21:21',0,1),(14,5,6,14,'2023-04-05 01:21:57',0,0),(15,5,10,16,'2023-04-05 01:22:08',0,0),(16,5,12,17,'2023-04-05 01:22:13',0,0),(17,6,14,24,'2023-04-05 01:22:41',0,0),(18,6,3,3,'2023-04-05 01:23:28',0,1),(19,6,5,4,'2023-04-05 01:23:28',0,1),(20,6,5,6,'2023-04-05 01:23:45',1,1),(21,7,14,25,'2023-04-05 01:24:12',0,0),(22,7,3,3,'2023-04-05 01:25:19',0,1),(23,7,6,13,'2023-04-05 01:25:50',0,0),(24,8,13,3,'2023-04-05 01:25:58',0,0),(25,8,3,3,'2023-04-05 01:26:02',0,1),(26,9,14,26,'2023-04-05 01:26:10',0,0),(27,9,3,3,'2023-04-05 01:27:14',0,1),(28,9,5,4,'2023-04-05 01:27:14',0,1),(29,10,13,27,'2023-04-05 01:27:35',0,0),(30,10,3,3,'2023-04-05 01:28:20',0,1),(31,11,13,28,'2023-04-05 01:28:28',0,0),(32,11,3,3,'2023-04-05 01:28:40',0,1),(33,12,14,29,'2023-04-05 01:29:49',0,0),(34,12,3,3,'2023-04-05 01:30:48',0,1),(35,13,14,30,'2023-04-05 01:31:41',0,0),(36,13,3,3,'2023-04-05 01:32:20',0,1),(37,14,14,31,'2023-04-05 01:33:50',0,0),(38,14,3,3,'2023-04-05 01:34:39',0,1),(39,14,6,13,'2023-04-05 01:35:23',0,0),(40,14,10,15,'2023-04-05 01:35:36',0,0),(41,14,12,18,'2023-04-05 01:35:41',0,0),(42,15,13,32,'2023-04-05 01:36:49',0,0),(43,15,3,3,'2023-04-05 01:37:06',0,1),(44,16,13,33,'2023-04-05 01:37:25',0,0),(45,16,3,3,'2023-04-05 01:37:50',0,1),(46,17,14,34,'2023-04-05 01:38:37',0,0),(47,17,3,3,'2023-04-05 01:40:12',0,1);
 /*!40000 ALTER TABLE `stage_assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2568,16 +2568,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `static_page_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `static_page_settings` (
-  `static_page_id` bigint(20) NOT NULL,
+  `static_page_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` longtext,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `static_page_settings_pkey` (`static_page_id`,`locale`,`setting_name`),
   KEY `static_page_settings_static_page_id` (`static_page_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2595,13 +2595,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `static_pages`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `static_pages` (
-  `static_page_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `static_page_id` bigint NOT NULL AUTO_INCREMENT,
   `path` varchar(255) NOT NULL,
-  `context_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
   PRIMARY KEY (`static_page_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2619,17 +2619,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `subeditor_submission_group`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `subeditor_submission_group` (
-  `context_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `section_editors_pkey` (`context_id`,`assoc_id`,`assoc_type`,`user_id`),
   KEY `section_editors_context_id` (`context_id`),
   KEY `subeditor_submission_group_assoc_id` (`assoc_id`,`assoc_type`),
   KEY `subeditor_submission_group_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2648,14 +2648,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_chapter_authors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_chapter_authors` (
-  `author_id` bigint(20) NOT NULL,
-  `chapter_id` bigint(20) NOT NULL,
-  `primary_contact` smallint(6) NOT NULL DEFAULT '0',
+  `author_id` bigint NOT NULL,
+  `chapter_id` bigint NOT NULL,
+  `primary_contact` smallint NOT NULL DEFAULT '0',
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   UNIQUE KEY `chapter_authors_pkey` (`author_id`,`chapter_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2674,16 +2674,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_chapter_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_chapter_settings` (
-  `chapter_id` bigint(20) NOT NULL,
+  `chapter_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `submission_chapter_settings_pkey` (`chapter_id`,`locale`,`setting_name`),
   KEY `submission_chapter_settings_chapter_id` (`chapter_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2702,16 +2702,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_chapters`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_chapters` (
-  `chapter_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `primary_contact_id` bigint(20) DEFAULT NULL,
-  `publication_id` bigint(20) NOT NULL,
+  `chapter_id` bigint NOT NULL AUTO_INCREMENT,
+  `primary_contact_id` bigint DEFAULT NULL,
+  `publication_id` bigint NOT NULL,
   `seq` double(8,2) NOT NULL DEFAULT '0.00',
   PRIMARY KEY (`chapter_id`),
   KEY `chapters_chapter_id` (`chapter_id`),
   KEY `chapters_publication_id` (`publication_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2730,22 +2730,22 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_comments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_comments` (
-  `comment_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `comment_type` bigint(20) DEFAULT NULL,
-  `role_id` bigint(20) NOT NULL,
-  `submission_id` bigint(20) NOT NULL,
-  `assoc_id` bigint(20) NOT NULL,
-  `author_id` bigint(20) NOT NULL,
+  `comment_id` bigint NOT NULL AUTO_INCREMENT,
+  `comment_type` bigint DEFAULT NULL,
+  `role_id` bigint NOT NULL,
+  `submission_id` bigint NOT NULL,
+  `assoc_id` bigint NOT NULL,
+  `author_id` bigint NOT NULL,
   `comment_title` text NOT NULL,
   `comments` text,
   `date_posted` datetime DEFAULT NULL,
   `date_modified` datetime DEFAULT NULL,
-  `viewable` smallint(6) DEFAULT NULL,
+  `viewable` smallint DEFAULT NULL,
   PRIMARY KEY (`comment_id`),
   KEY `submission_comments_submission_id` (`submission_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2754,7 +2754,7 @@ CREATE TABLE `submission_comments` (
 
 LOCK TABLES `submission_comments` WRITE;
 /*!40000 ALTER TABLE `submission_comments` DISABLE KEYS */;
-INSERT INTO `submission_comments` VALUES (1,1,4096,11,10,10,'','<p>I recommend that the author revise this submission.</p>','2023-03-30 06:38:37',NULL,1),(2,1,4096,11,11,12,'','<p>I recommend that the author resubmit this submission.</p>','2023-03-30 06:38:45',NULL,1),(3,1,4096,12,13,8,'','<p>I recommend declining this submission.</p>','2023-03-30 06:40:42',NULL,1),(4,1,4096,13,16,10,'','<p>I recommend requiring revisions.</p>','2023-03-30 06:42:19',NULL,1),(5,1,4096,13,18,12,'','<p>I recommend resubmitting.</p>','2023-03-30 06:42:29',NULL,1),(6,1,4096,16,21,10,'','<p>I recommend that the author revise this submission.</p>','2023-03-30 06:47:18',NULL,1);
+INSERT INTO `submission_comments` VALUES (1,1,4096,11,10,10,'','<p>I recommend that the author revise this submission.</p>','2023-04-05 01:29:18',NULL,1),(2,1,4096,11,11,12,'','<p>I recommend that the author resubmit this submission.</p>','2023-04-05 01:29:27',NULL,1),(3,1,4096,12,13,8,'','<p>I recommend declining this submission.</p>','2023-04-05 01:31:32',NULL,1),(4,1,4096,13,16,10,'','<p>I recommend requiring revisions.</p>','2023-04-05 01:33:13',NULL,1),(5,1,4096,13,18,12,'','<p>I recommend resubmitting.</p>','2023-04-05 01:33:23',NULL,1),(6,1,4096,16,21,10,'','<p>I recommend that the author revise this submission.</p>','2023-04-05 01:38:28',NULL,1);
 /*!40000 ALTER TABLE `submission_comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2764,17 +2764,17 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_file_revisions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_file_revisions` (
-  `revision_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `submission_file_id` bigint(20) unsigned NOT NULL,
-  `file_id` bigint(20) unsigned NOT NULL,
+  `revision_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `submission_file_id` bigint unsigned NOT NULL,
+  `file_id` bigint unsigned NOT NULL,
   PRIMARY KEY (`revision_id`),
   KEY `submission_file_revisions_submission_file_id_foreign` (`submission_file_id`),
   KEY `submission_file_revisions_file_id_foreign` (`file_id`),
   CONSTRAINT `submission_file_revisions_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`file_id`),
   CONSTRAINT `submission_file_revisions_submission_file_id_foreign` FOREIGN KEY (`submission_file_id`) REFERENCES `submission_files` (`submission_file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2783,7 +2783,7 @@ CREATE TABLE `submission_file_revisions` (
 
 LOCK TABLES `submission_file_revisions` WRITE;
 /*!40000 ALTER TABLE `submission_file_revisions` DISABLE KEYS */;
-INSERT INTO `submission_file_revisions` VALUES (1,1,1),(2,2,1),(3,3,2),(4,4,3),(5,5,4),(6,6,5),(7,7,2),(8,8,3),(9,9,4),(10,10,5),(11,11,6),(12,12,7),(13,13,8),(14,14,9),(15,15,10),(16,16,7),(17,17,8),(18,18,9),(19,19,10),(20,20,11),(21,21,11),(22,22,11),(23,23,12),(24,24,13),(25,25,14),(26,26,15),(27,27,12),(28,28,13),(29,29,14),(30,30,15),(31,31,16),(32,32,17),(33,33,18),(34,34,19),(35,35,20),(36,36,16),(37,37,17),(38,38,18),(39,39,19),(40,40,20),(41,41,21),(42,42,22),(43,43,23),(44,44,24),(45,45,25),(46,46,26),(47,47,22),(48,48,23),(49,49,24),(50,50,25),(51,51,26),(52,52,27),(53,53,28),(54,54,28),(55,55,29),(56,56,30),(57,57,31),(58,58,29),(59,59,30),(60,60,31),(61,61,32),(62,62,33),(63,63,34),(64,64,32),(65,65,33),(66,66,34),(67,67,35),(68,68,36),(69,69,37),(70,70,38),(71,71,39),(72,72,40),(73,73,35),(74,74,36),(75,75,37),(76,76,38),(77,77,39),(78,78,40),(79,79,41),(80,80,41),(81,81,42),(82,82,42),(83,83,43),(84,84,44),(85,85,45),(86,86,46),(87,87,47),(88,88,48),(89,89,43),(90,90,44),(91,91,45),(92,92,46),(93,93,47),(94,94,48);
+INSERT INTO `submission_file_revisions` VALUES (1,1,1),(2,2,1),(3,3,2),(4,4,3),(5,5,4),(6,6,5),(7,7,2),(8,8,3),(9,9,4),(10,10,5),(11,11,6),(12,12,7),(13,13,8),(14,14,9),(15,15,10),(16,16,11),(17,17,11),(18,18,11),(19,19,12),(20,20,13),(21,21,14),(22,22,15),(23,23,12),(24,24,13),(25,25,14),(26,26,15),(27,27,16),(28,28,17),(29,29,18),(30,30,19),(31,31,20),(32,32,16),(33,33,17),(34,34,18),(35,35,19),(36,36,20),(37,37,21),(38,38,22),(39,39,23),(40,40,24),(41,41,25),(42,42,26),(43,43,27),(44,44,28),(45,45,29),(46,46,30),(47,47,31),(48,48,29),(49,49,30),(50,50,31),(51,51,32),(52,52,33),(53,53,34),(54,54,32),(55,55,33),(56,56,34),(57,57,35),(58,58,36),(59,59,37),(60,60,38),(61,61,39),(62,62,40),(63,63,35),(64,64,36),(65,65,37),(66,66,38),(67,67,39),(68,68,40),(69,69,35),(70,70,36),(71,71,37),(72,72,38),(73,73,39),(74,74,40),(75,75,41),(76,76,41),(77,77,42),(78,78,42),(79,79,43),(80,80,44),(81,81,45),(82,82,46),(83,83,47),(84,84,48),(85,85,43),(86,86,44),(87,87,45),(88,88,46),(89,89,47),(90,90,48);
 /*!40000 ALTER TABLE `submission_file_revisions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2793,16 +2793,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_file_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_file_settings` (
-  `submission_file_id` bigint(20) NOT NULL,
+  `submission_file_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL DEFAULT 'string' COMMENT '(bool|int|float|string|object|date)',
   UNIQUE KEY `submission_file_settings_pkey` (`submission_file_id`,`locale`,`setting_name`),
   KEY `submission_file_settings_id` (`submission_file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2811,7 +2811,7 @@ CREATE TABLE `submission_file_settings` (
 
 LOCK TABLES `submission_file_settings` WRITE;
 /*!40000 ALTER TABLE `submission_file_settings` DISABLE KEYS */;
-INSERT INTO `submission_file_settings` VALUES (1,'en_US','name','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(2,'en_US','name','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(3,'','chapterId','4','string'),(3,'en_US','name','Critical History in Western Canada 1900–.pdf','string'),(4,'','chapterId','5','string'),(4,'en_US','name','Vernacular Currents in Western Canadian .pdf','string'),(5,'','chapterId','6','string'),(5,'en_US','name','Cree Intellectual Traditions in History.pdf','string'),(6,'','chapterId','7','string'),(6,'en_US','name','Visualizing Space, Race, and History in .pdf','string'),(7,'','chapterId','4','string'),(7,'en_US','name','Critical History in Western Canada 1900–.pdf','string'),(8,'','chapterId','5','string'),(8,'en_US','name','Vernacular Currents in Western Canadian .pdf','string'),(9,'','chapterId','6','string'),(9,'en_US','name','Cree Intellectual Traditions in History.pdf','string'),(10,'','chapterId','7','string'),(10,'en_US','name','Visualizing Space, Race, and History in .pdf','string'),(11,'en_US','name','The Political Economy of Workplace Injury in Canada.pdf','string'),(12,'','chapterId','13','string'),(12,'en_US','name','Introduction: Contexts of Popular Cultur.pdf','string'),(13,'','chapterId','14','string'),(13,'en_US','name','Chapter 1. A Future for Media Studies: C.pdf','string'),(14,'','chapterId','15','string'),(14,'en_US','name','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(15,'','chapterId','16','string'),(15,'en_US','name','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(16,'','chapterId','13','string'),(16,'en_US','name','Introduction: Contexts of Popular Cultur.pdf','string'),(17,'','chapterId','14','string'),(17,'en_US','name','Chapter 1. A Future for Media Studies: C.pdf','string'),(18,'','chapterId','15','string'),(18,'en_US','name','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(19,'','chapterId','16','string'),(19,'en_US','name','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(20,'en_US','name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(21,'en_US','name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(22,'en_US','name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(23,'','chapterId','23','string'),(23,'en_US','name','Identify: Understanding Your Information.pdf','string'),(24,'','chapterId','24','string'),(24,'en_US','name','Scope: Knowing What Is Available.pdf','string'),(25,'','chapterId','25','string'),(25,'en_US','name','Plan: Developing Research Strategies.pdf','string'),(26,'','chapterId','26','string'),(26,'en_US','name','Gather: Finding What You Need.pdf','string'),(27,'','chapterId','23','string'),(27,'en_US','name','Identify: Understanding Your Information.pdf','string'),(28,'','chapterId','24','string'),(28,'en_US','name','Scope: Knowing What Is Available.pdf','string'),(29,'','chapterId','25','string'),(29,'en_US','name','Plan: Developing Research Strategies.pdf','string'),(30,'','chapterId','26','string'),(30,'en_US','name','Gather: Finding What You Need.pdf','string'),(31,'','chapterId','27','string'),(31,'en_US','name','Introduction.pdf','string'),(32,'','chapterId','28','string'),(32,'en_US','name','Chapter 1: Interactions Affording Distan.pdf','string'),(33,'','chapterId','29','string'),(33,'en_US','name','Chapter 2: Learning Science at a Distanc.pdf','string'),(34,'','chapterId','30','string'),(34,'en_US','name','Chapter 3: Leadership Strategies for Coo.pdf','string'),(35,'','chapterId','31','string'),(35,'en_US','name','Chapter 4: Toward New Models of Flexible.pdf','string'),(36,'','chapterId','27','string'),(36,'en_US','name','Introduction.pdf','string'),(37,'','chapterId','28','string'),(37,'en_US','name','Chapter 1: Interactions Affording Distan.pdf','string'),(38,'','chapterId','29','string'),(38,'en_US','name','Chapter 2: Learning Science at a Distanc.pdf','string'),(39,'','chapterId','30','string'),(39,'en_US','name','Chapter 3: Leadership Strategies for Coo.pdf','string'),(40,'','chapterId','31','string'),(40,'en_US','name','Chapter 4: Toward New Models of Flexible.pdf','string'),(41,'en_US','name','Editorial.pdf','string'),(42,'','chapterId','32','string'),(42,'en_US','name','Internet, openness and the future of the.pdf','string'),(43,'','chapterId','33','string'),(43,'en_US','name','Imagining the Internet: Open, closed or .pdf','string'),(44,'','chapterId','34','string'),(44,'en_US','name','The internet in LAC will remain free, pu.pdf','string'),(45,'','chapterId','35','string'),(45,'en_US','name','Free Internet?.pdf','string'),(46,'','chapterId','36','string'),(46,'en_US','name','Risks and challenges for freedom of expr.pdf','string'),(47,'','chapterId','32','string'),(47,'en_US','name','Internet, openness and the future of the.pdf','string'),(48,'','chapterId','33','string'),(48,'en_US','name','Imagining the Internet: Open, closed or .pdf','string'),(49,'','chapterId','34','string'),(49,'en_US','name','The internet in LAC will remain free, pu.pdf','string'),(50,'','chapterId','35','string'),(50,'en_US','name','Free Internet?.pdf','string'),(51,'','chapterId','36','string'),(51,'en_US','name','Risks and challenges for freedom of expr.pdf','string'),(52,'en_US','name','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(53,'en_US','name','Dreamwork.pdf','string'),(54,'en_US','name','Dreamwork.pdf','string'),(55,'','chapterId','48','string'),(55,'en_US','name','Catalyzing Access through Social and Tec.pdf','string'),(56,'','chapterId','49','string'),(56,'en_US','name','Catalyzing Access via Telecommunications.pdf','string'),(57,'','chapterId','50','string'),(57,'en_US','name','Access to Knowledge as a New Paradigm fo.pdf','string'),(58,'','chapterId','48','string'),(58,'en_US','name','Catalyzing Access through Social and Tec.pdf','string'),(59,'','chapterId','49','string'),(59,'en_US','name','Catalyzing Access via Telecommunications.pdf','string'),(60,'','chapterId','50','string'),(60,'en_US','name','Access to Knowledge as a New Paradigm fo.pdf','string'),(61,'','chapterId','51','string'),(61,'en_US','name','Current State of Mobile Learning.pdf','string'),(62,'','chapterId','52','string'),(62,'en_US','name','A Model for Framing Mobile Learning.pdf','string'),(63,'','chapterId','53','string'),(63,'en_US','name','Mobile Distance Learning with PDAs: Deve.pdf','string'),(64,'','chapterId','51','string'),(64,'en_US','name','Current State of Mobile Learning.pdf','string'),(65,'','chapterId','52','string'),(65,'en_US','name','A Model for Framing Mobile Learning.pdf','string'),(66,'','chapterId','53','string'),(66,'en_US','name','Mobile Distance Learning with PDAs: Deve.pdf','string'),(67,'','chapterId','54','string'),(67,'en_US','name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(68,'','chapterId','55','string'),(68,'en_US','name','Chapter 2: Classical Music and the Class.pdf','string'),(69,'','chapterId','56','string'),(69,'en_US','name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(70,'','chapterId','57','string'),(70,'en_US','name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(71,'en_US','name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(72,'en_US','name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(73,'','chapterId','54','string'),(73,'en_US','name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(74,'','chapterId','55','string'),(74,'en_US','name','Chapter 2: Classical Music and the Class.pdf','string'),(75,'','chapterId','56','string'),(75,'en_US','name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(76,'','chapterId','57','string'),(76,'en_US','name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(77,'en_US','name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(78,'en_US','name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(79,'en_US','name','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(80,'en_US','name','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(81,'en_US','name','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(82,'en_US','name','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(83,'','chapterId','66','string'),(83,'en_US','name','Preface.pdf','string'),(84,'','chapterId','67','string'),(84,'en_US','name','Introduction.pdf','string'),(85,'','chapterId','68','string'),(85,'en_US','name','The Emergence of Open Development in a N.pdf','string'),(86,'','chapterId','69','string'),(86,'en_US','name','Enacting Openness in ICT4D Research.pdf','string'),(87,'','chapterId','70','string'),(87,'en_US','name','Transparency and Development: Ethical Co.pdf','string'),(88,'','chapterId','71','string'),(88,'en_US','name','Open Educational Resources: Opportunitie.pdf','string'),(89,'','chapterId','66','string'),(89,'en_US','name','Preface.pdf','string'),(90,'','chapterId','67','string'),(90,'en_US','name','Introduction.pdf','string'),(91,'','chapterId','68','string'),(91,'en_US','name','The Emergence of Open Development in a N.pdf','string'),(92,'','chapterId','69','string'),(92,'en_US','name','Enacting Openness in ICT4D Research.pdf','string'),(93,'','chapterId','70','string'),(93,'en_US','name','Transparency and Development: Ethical Co.pdf','string'),(94,'','chapterId','71','string'),(94,'en_US','name','Open Educational Resources: Opportunitie.pdf','string');
+INSERT INTO `submission_file_settings` VALUES (1,'en_US','name','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(2,'en_US','name','The ABCs of Human Survival: A Paradigm for Global Citizenship.pdf','string'),(3,'','chapterId','4','string'),(3,'en_US','name','Critical History in Western Canada 1900–.pdf','string'),(4,'','chapterId','5','string'),(4,'en_US','name','Vernacular Currents in Western Canadian .pdf','string'),(5,'','chapterId','6','string'),(5,'en_US','name','Cree Intellectual Traditions in History.pdf','string'),(6,'','chapterId','7','string'),(6,'en_US','name','Visualizing Space, Race, and History in .pdf','string'),(7,'','chapterId','4','string'),(7,'en_US','name','Critical History in Western Canada 1900–.pdf','string'),(8,'','chapterId','5','string'),(8,'en_US','name','Vernacular Currents in Western Canadian .pdf','string'),(9,'','chapterId','6','string'),(9,'en_US','name','Cree Intellectual Traditions in History.pdf','string'),(10,'','chapterId','7','string'),(10,'en_US','name','Visualizing Space, Race, and History in .pdf','string'),(11,'en_US','name','The Political Economy of Workplace Injury in Canada.pdf','string'),(12,'','chapterId','13','string'),(12,'en_US','name','Introduction: Contexts of Popular Cultur.pdf','string'),(13,'','chapterId','14','string'),(13,'en_US','name','Chapter 1. A Future for Media Studies: C.pdf','string'),(14,'','chapterId','15','string'),(14,'en_US','name','Chapter 2. Log On, Goof Off, and Look Up.pdf','string'),(15,'','chapterId','16','string'),(15,'en_US','name','Chapter 3. Hawkers and Public Space: Fre.pdf','string'),(16,'en_US','name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(17,'en_US','name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(18,'en_US','name','Bomb Canada and Other Unkind Remarks in the American Media.pdf','string'),(19,'','chapterId','23','string'),(19,'en_US','name','Identify: Understanding Your Information.pdf','string'),(20,'','chapterId','24','string'),(20,'en_US','name','Scope: Knowing What Is Available.pdf','string'),(21,'','chapterId','25','string'),(21,'en_US','name','Plan: Developing Research Strategies.pdf','string'),(22,'','chapterId','26','string'),(22,'en_US','name','Gather: Finding What You Need.pdf','string'),(23,'','chapterId','23','string'),(23,'en_US','name','Identify: Understanding Your Information.pdf','string'),(24,'','chapterId','24','string'),(24,'en_US','name','Scope: Knowing What Is Available.pdf','string'),(25,'','chapterId','25','string'),(25,'en_US','name','Plan: Developing Research Strategies.pdf','string'),(26,'','chapterId','26','string'),(26,'en_US','name','Gather: Finding What You Need.pdf','string'),(27,'','chapterId','27','string'),(27,'en_US','name','Introduction.pdf','string'),(28,'','chapterId','28','string'),(28,'en_US','name','Chapter 1: Interactions Affording Distan.pdf','string'),(29,'','chapterId','29','string'),(29,'en_US','name','Chapter 2: Learning Science at a Distanc.pdf','string'),(30,'','chapterId','30','string'),(30,'en_US','name','Chapter 3: Leadership Strategies for Coo.pdf','string'),(31,'','chapterId','31','string'),(31,'en_US','name','Chapter 4: Toward New Models of Flexible.pdf','string'),(32,'','chapterId','27','string'),(32,'en_US','name','Introduction.pdf','string'),(33,'','chapterId','28','string'),(33,'en_US','name','Chapter 1: Interactions Affording Distan.pdf','string'),(34,'','chapterId','29','string'),(34,'en_US','name','Chapter 2: Learning Science at a Distanc.pdf','string'),(35,'','chapterId','30','string'),(35,'en_US','name','Chapter 3: Leadership Strategies for Coo.pdf','string'),(36,'','chapterId','31','string'),(36,'en_US','name','Chapter 4: Toward New Models of Flexible.pdf','string'),(37,'en_US','name','Editorial.pdf','string'),(38,'','chapterId','32','string'),(38,'en_US','name','Internet, openness and the future of the.pdf','string'),(39,'','chapterId','33','string'),(39,'en_US','name','Imagining the Internet: Open, closed or .pdf','string'),(40,'','chapterId','34','string'),(40,'en_US','name','The internet in LAC will remain free, pu.pdf','string'),(41,'','chapterId','35','string'),(41,'en_US','name','Free Internet?.pdf','string'),(42,'','chapterId','36','string'),(42,'en_US','name','Risks and challenges for freedom of expr.pdf','string'),(43,'en_US','name','Lost Tracks: Buffalo National Park, 1909-1939.pdf','string'),(44,'en_US','name','Dreamwork.pdf','string'),(45,'','chapterId','48','string'),(45,'en_US','name','Catalyzing Access through Social and Tec.pdf','string'),(46,'','chapterId','49','string'),(46,'en_US','name','Catalyzing Access via Telecommunications.pdf','string'),(47,'','chapterId','50','string'),(47,'en_US','name','Access to Knowledge as a New Paradigm fo.pdf','string'),(48,'','chapterId','48','string'),(48,'en_US','name','Catalyzing Access through Social and Tec.pdf','string'),(49,'','chapterId','49','string'),(49,'en_US','name','Catalyzing Access via Telecommunications.pdf','string'),(50,'','chapterId','50','string'),(50,'en_US','name','Access to Knowledge as a New Paradigm fo.pdf','string'),(51,'','chapterId','51','string'),(51,'en_US','name','Current State of Mobile Learning.pdf','string'),(52,'','chapterId','52','string'),(52,'en_US','name','A Model for Framing Mobile Learning.pdf','string'),(53,'','chapterId','53','string'),(53,'en_US','name','Mobile Distance Learning with PDAs: Deve.pdf','string'),(54,'','chapterId','51','string'),(54,'en_US','name','Current State of Mobile Learning.pdf','string'),(55,'','chapterId','52','string'),(55,'en_US','name','A Model for Framing Mobile Learning.pdf','string'),(56,'','chapterId','53','string'),(56,'en_US','name','Mobile Distance Learning with PDAs: Deve.pdf','string'),(57,'','chapterId','54','string'),(57,'en_US','name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(58,'','chapterId','55','string'),(58,'en_US','name','Chapter 2: Classical Music and the Class.pdf','string'),(59,'','chapterId','56','string'),(59,'en_US','name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(60,'','chapterId','57','string'),(60,'en_US','name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(61,'en_US','name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(62,'en_US','name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(63,'','chapterId','54','string'),(63,'en_US','name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(64,'','chapterId','55','string'),(64,'en_US','name','Chapter 2: Classical Music and the Class.pdf','string'),(65,'','chapterId','56','string'),(65,'en_US','name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(66,'','chapterId','57','string'),(66,'en_US','name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(67,'en_US','name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(68,'en_US','name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(69,'','chapterId','54','string'),(69,'en_US','name','Chapter 1: Mind Control—Internal or Exte.pdf','string'),(70,'','chapterId','55','string'),(70,'en_US','name','Chapter 2: Classical Music and the Class.pdf','string'),(71,'','chapterId','56','string'),(71,'en_US','name','Chapter 3: Situated Cognition and Bricol.pdf','string'),(72,'','chapterId','57','string'),(72,'en_US','name','Chapter 4: Braitenberg’s Vehicle 2.pdf','string'),(73,'en_US','name','Segmentation of Vascular Ultrasound Imag.pdf','string'),(74,'en_US','name','The Canadian Nutrient File: Nutrient Val.pdf','string'),(75,'en_US','name','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(76,'en_US','name','Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf','string'),(77,'en_US','name','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(78,'en_US','name','A Designer\'s Log: Case Studies in Instructional Design.pdf','string'),(79,'','chapterId','66','string'),(79,'en_US','name','Preface.pdf','string'),(80,'','chapterId','67','string'),(80,'en_US','name','Introduction.pdf','string'),(81,'','chapterId','68','string'),(81,'en_US','name','The Emergence of Open Development in a N.pdf','string'),(82,'','chapterId','69','string'),(82,'en_US','name','Enacting Openness in ICT4D Research.pdf','string'),(83,'','chapterId','70','string'),(83,'en_US','name','Transparency and Development: Ethical Co.pdf','string'),(84,'','chapterId','71','string'),(84,'en_US','name','Open Educational Resources: Opportunitie.pdf','string'),(85,'','chapterId','66','string'),(85,'en_US','name','Preface.pdf','string'),(86,'','chapterId','67','string'),(86,'en_US','name','Introduction.pdf','string'),(87,'','chapterId','68','string'),(87,'en_US','name','The Emergence of Open Development in a N.pdf','string'),(88,'','chapterId','69','string'),(88,'en_US','name','Enacting Openness in ICT4D Research.pdf','string'),(89,'','chapterId','70','string'),(89,'en_US','name','Transparency and Development: Ethical Co.pdf','string'),(90,'','chapterId','71','string'),(90,'en_US','name','Open Educational Resources: Opportunitie.pdf','string');
 /*!40000 ALTER TABLE `submission_file_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2821,28 +2821,28 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_files` (
-  `submission_file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `file_id` bigint(20) unsigned NOT NULL,
-  `source_submission_file_id` bigint(20) DEFAULT NULL,
-  `genre_id` bigint(20) DEFAULT NULL,
-  `file_stage` bigint(20) NOT NULL,
+  `submission_file_id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `file_id` bigint unsigned NOT NULL,
+  `source_submission_file_id` bigint DEFAULT NULL,
+  `genre_id` bigint DEFAULT NULL,
+  `file_stage` bigint NOT NULL,
   `direct_sales_price` varchar(255) DEFAULT NULL,
   `sales_type` varchar(255) DEFAULT NULL,
-  `viewable` smallint(6) DEFAULT NULL,
+  `viewable` smallint DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime NOT NULL,
-  `uploader_user_id` bigint(20) DEFAULT NULL,
-  `assoc_type` bigint(20) DEFAULT NULL,
-  `assoc_id` bigint(20) DEFAULT NULL,
+  `uploader_user_id` bigint DEFAULT NULL,
+  `assoc_type` bigint DEFAULT NULL,
+  `assoc_id` bigint DEFAULT NULL,
   PRIMARY KEY (`submission_file_id`),
   KEY `submission_files_submission_id` (`submission_id`),
   KEY `submission_files_stage_assoc` (`file_stage`,`assoc_type`,`assoc_id`),
   KEY `submission_files_file_id_foreign` (`file_id`),
   CONSTRAINT `submission_files_file_id_foreign` FOREIGN KEY (`file_id`) REFERENCES `files` (`file_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=91 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2851,7 +2851,7 @@ CREATE TABLE `submission_files` (
 
 LOCK TABLES `submission_files` WRITE;
 /*!40000 ALTER TABLE `submission_files` DISABLE KEYS */;
-INSERT INTO `submission_files` VALUES (1,1,1,NULL,3,2,NULL,NULL,NULL,'2023-03-30 06:25:44','2023-03-30 06:25:44',19,NULL,NULL),(2,1,1,1,3,4,NULL,NULL,NULL,'2023-03-30 06:26:04','2023-03-30 06:26:04',19,NULL,NULL),(3,2,2,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:26:29','2023-03-30 06:26:29',20,NULL,NULL),(4,2,3,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:26:29','2023-03-30 06:26:30',20,NULL,NULL),(5,2,4,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:26:30','2023-03-30 06:26:30',20,NULL,NULL),(6,2,5,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:26:30','2023-03-30 06:26:31',20,NULL,NULL),(7,2,2,3,4,4,NULL,NULL,NULL,'2023-03-30 06:27:43','2023-03-30 06:27:43',20,NULL,NULL),(8,2,3,4,4,4,NULL,NULL,NULL,'2023-03-30 06:27:43','2023-03-30 06:27:43',20,NULL,NULL),(9,2,4,5,4,4,NULL,NULL,NULL,'2023-03-30 06:27:43','2023-03-30 06:27:43',20,NULL,NULL),(10,2,5,6,4,4,NULL,NULL,NULL,'2023-03-30 06:27:43','2023-03-30 06:27:43',20,NULL,NULL),(11,3,6,NULL,3,2,NULL,NULL,NULL,'2023-03-30 06:28:09','2023-03-30 06:28:09',21,NULL,NULL),(12,4,7,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:28:42','2023-03-30 06:28:43',22,NULL,NULL),(13,4,8,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:28:43','2023-03-30 06:28:43',22,NULL,NULL),(14,4,9,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:28:43','2023-03-30 06:28:44',22,NULL,NULL),(15,4,10,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:28:44','2023-03-30 06:28:44',22,NULL,NULL),(16,4,7,12,4,19,NULL,NULL,NULL,'2023-03-30 06:29:37','2023-03-30 06:29:37',22,NULL,NULL),(17,4,8,13,4,19,NULL,NULL,NULL,'2023-03-30 06:29:37','2023-03-30 06:29:37',22,NULL,NULL),(18,4,9,14,4,19,NULL,NULL,NULL,'2023-03-30 06:29:37','2023-03-30 06:29:37',22,NULL,NULL),(19,4,10,15,4,19,NULL,NULL,NULL,'2023-03-30 06:29:37','2023-03-30 06:29:37',22,NULL,NULL),(20,5,11,NULL,3,2,NULL,NULL,NULL,'2023-03-30 06:30:31','2023-03-30 06:30:31',23,NULL,NULL),(21,5,11,20,3,19,NULL,NULL,NULL,'2023-03-30 06:31:06','2023-03-30 06:31:06',23,NULL,NULL),(22,5,11,20,3,10,'0','openAccess',1,'2023-03-30 06:31:57','2023-03-30 06:32:03',23,521,1),(23,6,12,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:32:17','2023-03-30 06:32:18',24,NULL,NULL),(24,6,13,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:32:18','2023-03-30 06:32:18',24,NULL,NULL),(25,6,14,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:32:18','2023-03-30 06:32:19',24,NULL,NULL),(26,6,15,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:32:19','2023-03-30 06:32:19',24,NULL,NULL),(27,6,12,23,4,19,NULL,NULL,NULL,'2023-03-30 06:33:10','2023-03-30 06:33:10',24,NULL,NULL),(28,6,13,24,4,19,NULL,NULL,NULL,'2023-03-30 06:33:10','2023-03-30 06:33:10',24,NULL,NULL),(29,6,14,25,4,19,NULL,NULL,NULL,'2023-03-30 06:33:10','2023-03-30 06:33:10',24,NULL,NULL),(30,6,15,26,4,19,NULL,NULL,NULL,'2023-03-30 06:33:10','2023-03-30 06:33:10',24,NULL,NULL),(31,7,16,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:33:46','2023-03-30 06:33:46',25,NULL,NULL),(32,7,17,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:33:46','2023-03-30 06:33:46',25,NULL,NULL),(33,7,18,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:33:47','2023-03-30 06:33:47',25,NULL,NULL),(34,7,19,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:33:47','2023-03-30 06:33:48',25,NULL,NULL),(35,7,20,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:33:48','2023-03-30 06:33:48',25,NULL,NULL),(36,7,16,31,4,4,NULL,NULL,NULL,'2023-03-30 06:34:58','2023-03-30 06:34:58',25,NULL,NULL),(37,7,17,32,4,4,NULL,NULL,NULL,'2023-03-30 06:34:58','2023-03-30 06:34:58',25,NULL,NULL),(38,7,18,33,4,4,NULL,NULL,NULL,'2023-03-30 06:34:58','2023-03-30 06:34:58',25,NULL,NULL),(39,7,19,34,4,4,NULL,NULL,NULL,'2023-03-30 06:34:58','2023-03-30 06:34:58',25,NULL,NULL),(40,7,20,35,4,4,NULL,NULL,NULL,'2023-03-30 06:34:58','2023-03-30 06:34:58',25,NULL,NULL),(41,8,21,NULL,3,2,NULL,NULL,NULL,'2023-03-30 06:35:26','2023-03-30 06:35:26',3,NULL,NULL),(42,9,22,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:35:37','2023-03-30 06:35:38',26,NULL,NULL),(43,9,23,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:35:38','2023-03-30 06:35:38',26,NULL,NULL),(44,9,24,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:35:38','2023-03-30 06:35:39',26,NULL,NULL),(45,9,25,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:35:39','2023-03-30 06:35:39',26,NULL,NULL),(46,9,26,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:35:40','2023-03-30 06:35:40',26,NULL,NULL),(47,9,22,42,4,19,NULL,NULL,NULL,'2023-03-30 06:36:46','2023-03-30 06:36:46',26,NULL,NULL),(48,9,23,43,4,19,NULL,NULL,NULL,'2023-03-30 06:36:46','2023-03-30 06:36:46',26,NULL,NULL),(49,9,24,44,4,19,NULL,NULL,NULL,'2023-03-30 06:36:46','2023-03-30 06:36:46',26,NULL,NULL),(50,9,25,45,4,19,NULL,NULL,NULL,'2023-03-30 06:36:46','2023-03-30 06:36:46',26,NULL,NULL),(51,9,26,46,4,19,NULL,NULL,NULL,'2023-03-30 06:36:46','2023-03-30 06:36:46',26,NULL,NULL),(52,10,27,NULL,3,2,NULL,NULL,NULL,'2023-03-30 06:36:58','2023-03-30 06:36:59',27,NULL,NULL),(53,11,28,NULL,3,2,NULL,NULL,NULL,'2023-03-30 06:37:50','2023-03-30 06:37:50',28,NULL,NULL),(54,11,28,53,3,19,NULL,NULL,NULL,'2023-03-30 06:38:06','2023-03-30 06:38:06',28,NULL,NULL),(55,12,29,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:39:06','2023-03-30 06:39:06',29,NULL,NULL),(56,12,30,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:39:07','2023-03-30 06:39:07',29,NULL,NULL),(57,12,31,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:39:07','2023-03-30 06:39:08',29,NULL,NULL),(58,12,29,55,4,19,NULL,NULL,NULL,'2023-03-30 06:40:09','2023-03-30 06:40:09',29,NULL,NULL),(59,12,30,56,4,19,NULL,NULL,NULL,'2023-03-30 06:40:09','2023-03-30 06:40:09',29,NULL,NULL),(60,12,31,57,4,19,NULL,NULL,NULL,'2023-03-30 06:40:09','2023-03-30 06:40:09',29,NULL,NULL),(61,13,32,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:40:52','2023-03-30 06:40:52',30,NULL,NULL),(62,13,33,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:40:53','2023-03-30 06:40:53',30,NULL,NULL),(63,13,34,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:40:53','2023-03-30 06:40:54',30,NULL,NULL),(64,13,32,61,4,19,NULL,NULL,NULL,'2023-03-30 06:41:37','2023-03-30 06:41:37',30,NULL,NULL),(65,13,33,62,4,19,NULL,NULL,NULL,'2023-03-30 06:41:37','2023-03-30 06:41:37',30,NULL,NULL),(66,13,34,63,4,19,NULL,NULL,NULL,'2023-03-30 06:41:37','2023-03-30 06:41:37',30,NULL,NULL),(67,14,35,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:42:57','2023-03-30 06:42:58',31,NULL,NULL),(68,14,36,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:42:58','2023-03-30 06:42:58',31,NULL,NULL),(69,14,37,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:42:58','2023-03-30 06:42:59',31,NULL,NULL),(70,14,38,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:42:59','2023-03-30 06:42:59',31,NULL,NULL),(71,14,39,NULL,13,2,NULL,NULL,NULL,'2023-03-30 06:43:00','2023-03-30 06:43:00',31,NULL,NULL),(72,14,40,NULL,9,2,NULL,NULL,NULL,'2023-03-30 06:43:00','2023-03-30 06:43:01',31,NULL,NULL),(73,14,35,67,4,10,'0','openAccess',1,'2023-03-30 06:44:54','2023-03-30 06:45:01',31,521,2),(74,14,36,68,4,10,'0','openAccess',1,'2023-03-30 06:44:54','2023-03-30 06:45:07',31,521,2),(75,14,37,69,4,10,'0','openAccess',1,'2023-03-30 06:44:54','2023-03-30 06:45:12',31,521,2),(76,14,38,70,4,10,'0','openAccess',1,'2023-03-30 06:44:54','2023-03-30 06:45:18',31,521,2),(77,14,39,71,13,10,'0','openAccess',1,'2023-03-30 06:44:54','2023-03-30 06:45:24',31,521,2),(78,14,40,72,9,10,'0','openAccess',1,'2023-03-30 06:44:54','2023-03-30 06:45:30',31,521,2),(79,15,41,NULL,3,2,NULL,NULL,NULL,'2023-03-30 06:45:45','2023-03-30 06:45:45',32,NULL,NULL),(80,15,41,79,3,4,NULL,NULL,NULL,'2023-03-30 06:46:08','2023-03-30 06:46:08',32,NULL,NULL),(81,16,42,NULL,3,2,NULL,NULL,NULL,'2023-03-30 06:46:19','2023-03-30 06:46:19',33,NULL,NULL),(82,16,42,81,3,4,NULL,NULL,NULL,'2023-03-30 06:46:50','2023-03-30 06:46:50',33,NULL,NULL),(83,17,43,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:47:27','2023-03-30 06:47:28',34,NULL,NULL),(84,17,44,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:47:28','2023-03-30 06:47:28',34,NULL,NULL),(85,17,45,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:47:28','2023-03-30 06:47:29',34,NULL,NULL),(86,17,46,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:47:29','2023-03-30 06:47:29',34,NULL,NULL),(87,17,47,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:47:29','2023-03-30 06:47:30',34,NULL,NULL),(88,17,48,NULL,4,2,NULL,NULL,NULL,'2023-03-30 06:47:30','2023-03-30 06:47:31',34,NULL,NULL),(89,17,43,83,4,19,NULL,NULL,NULL,'2023-03-30 06:49:09','2023-03-30 06:49:09',34,NULL,NULL),(90,17,44,84,4,19,NULL,NULL,NULL,'2023-03-30 06:49:09','2023-03-30 06:49:09',34,NULL,NULL),(91,17,45,85,4,19,NULL,NULL,NULL,'2023-03-30 06:49:09','2023-03-30 06:49:09',34,NULL,NULL),(92,17,46,86,4,19,NULL,NULL,NULL,'2023-03-30 06:49:10','2023-03-30 06:49:10',34,NULL,NULL),(93,17,47,87,4,19,NULL,NULL,NULL,'2023-03-30 06:49:10','2023-03-30 06:49:10',34,NULL,NULL),(94,17,48,88,4,19,NULL,NULL,NULL,'2023-03-30 06:49:10','2023-03-30 06:49:10',34,NULL,NULL);
+INSERT INTO `submission_files` VALUES (1,1,1,NULL,3,2,NULL,NULL,NULL,'2023-04-05 01:15:55','2023-04-05 01:15:55',19,NULL,NULL),(2,1,1,1,3,4,NULL,NULL,NULL,'2023-04-05 01:16:16','2023-04-05 01:16:16',19,NULL,NULL),(3,2,2,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:16:41','2023-04-05 01:16:41',20,NULL,NULL),(4,2,3,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:16:41','2023-04-05 01:16:42',20,NULL,NULL),(5,2,4,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:16:42','2023-04-05 01:16:42',20,NULL,NULL),(6,2,5,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:16:42','2023-04-05 01:16:43',20,NULL,NULL),(7,2,2,3,4,4,NULL,NULL,NULL,'2023-04-05 01:17:58','2023-04-05 01:17:58',20,NULL,NULL),(8,2,3,4,4,4,NULL,NULL,NULL,'2023-04-05 01:17:58','2023-04-05 01:17:58',20,NULL,NULL),(9,2,4,5,4,4,NULL,NULL,NULL,'2023-04-05 01:17:58','2023-04-05 01:17:58',20,NULL,NULL),(10,2,5,6,4,4,NULL,NULL,NULL,'2023-04-05 01:17:58','2023-04-05 01:17:58',20,NULL,NULL),(11,3,6,NULL,3,2,NULL,NULL,NULL,'2023-04-05 01:18:24','2023-04-05 01:18:25',21,NULL,NULL),(12,4,7,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:18:59','2023-04-05 01:18:59',22,NULL,NULL),(13,4,8,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:18:59','2023-04-05 01:19:00',22,NULL,NULL),(14,4,9,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:19:00','2023-04-05 01:19:00',22,NULL,NULL),(15,4,10,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:19:01','2023-04-05 01:19:01',22,NULL,NULL),(16,5,11,NULL,3,2,NULL,NULL,NULL,'2023-04-05 01:20:52','2023-04-05 01:20:52',23,NULL,NULL),(17,5,11,16,3,19,NULL,NULL,NULL,'2023-04-05 01:21:28','2023-04-05 01:21:28',23,NULL,NULL),(18,5,11,16,3,10,'0','openAccess',1,'2023-04-05 01:22:22','2023-04-05 01:22:28',23,521,1),(19,6,12,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:22:42','2023-04-05 01:22:42',24,NULL,NULL),(20,6,13,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:22:43','2023-04-05 01:22:43',24,NULL,NULL),(21,6,14,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:22:43','2023-04-05 01:22:44',24,NULL,NULL),(22,6,15,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:22:44','2023-04-05 01:22:44',24,NULL,NULL),(23,6,12,19,4,19,NULL,NULL,NULL,'2023-04-05 01:23:37','2023-04-05 01:23:37',24,NULL,NULL),(24,6,13,20,4,19,NULL,NULL,NULL,'2023-04-05 01:23:37','2023-04-05 01:23:37',24,NULL,NULL),(25,6,14,21,4,19,NULL,NULL,NULL,'2023-04-05 01:23:37','2023-04-05 01:23:37',24,NULL,NULL),(26,6,15,22,4,19,NULL,NULL,NULL,'2023-04-05 01:23:37','2023-04-05 01:23:37',24,NULL,NULL),(27,7,16,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:24:14','2023-04-05 01:24:14',25,NULL,NULL),(28,7,17,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:24:14','2023-04-05 01:24:15',25,NULL,NULL),(29,7,18,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:24:15','2023-04-05 01:24:15',25,NULL,NULL),(30,7,19,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:24:15','2023-04-05 01:24:16',25,NULL,NULL),(31,7,20,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:24:16','2023-04-05 01:24:17',25,NULL,NULL),(32,7,16,27,4,4,NULL,NULL,NULL,'2023-04-05 01:25:28','2023-04-05 01:25:28',25,NULL,NULL),(33,7,17,28,4,4,NULL,NULL,NULL,'2023-04-05 01:25:29','2023-04-05 01:25:29',25,NULL,NULL),(34,7,18,29,4,4,NULL,NULL,NULL,'2023-04-05 01:25:29','2023-04-05 01:25:29',25,NULL,NULL),(35,7,19,30,4,4,NULL,NULL,NULL,'2023-04-05 01:25:29','2023-04-05 01:25:29',25,NULL,NULL),(36,7,20,31,4,4,NULL,NULL,NULL,'2023-04-05 01:25:29','2023-04-05 01:25:29',25,NULL,NULL),(37,8,21,NULL,3,2,NULL,NULL,NULL,'2023-04-05 01:25:59','2023-04-05 01:26:00',3,NULL,NULL),(38,9,22,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:26:11','2023-04-05 01:26:12',26,NULL,NULL),(39,9,23,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:26:12','2023-04-05 01:26:12',26,NULL,NULL),(40,9,24,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:26:13','2023-04-05 01:26:13',26,NULL,NULL),(41,9,25,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:26:13','2023-04-05 01:26:14',26,NULL,NULL),(42,9,26,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:26:14','2023-04-05 01:26:15',26,NULL,NULL),(43,10,27,NULL,3,2,NULL,NULL,NULL,'2023-04-05 01:27:37','2023-04-05 01:27:37',27,NULL,NULL),(44,11,28,NULL,3,2,NULL,NULL,NULL,'2023-04-05 01:28:30','2023-04-05 01:28:30',28,NULL,NULL),(45,12,29,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:29:51','2023-04-05 01:29:51',29,NULL,NULL),(46,12,30,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:29:51','2023-04-05 01:29:52',29,NULL,NULL),(47,12,31,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:29:52','2023-04-05 01:29:52',29,NULL,NULL),(48,12,29,45,4,19,NULL,NULL,NULL,'2023-04-05 01:30:59','2023-04-05 01:30:59',29,NULL,NULL),(49,12,30,46,4,19,NULL,NULL,NULL,'2023-04-05 01:30:59','2023-04-05 01:30:59',29,NULL,NULL),(50,12,31,47,4,19,NULL,NULL,NULL,'2023-04-05 01:30:59','2023-04-05 01:30:59',29,NULL,NULL),(51,13,32,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:31:43','2023-04-05 01:31:43',30,NULL,NULL),(52,13,33,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:31:43','2023-04-05 01:31:44',30,NULL,NULL),(53,13,34,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:31:44','2023-04-05 01:31:44',30,NULL,NULL),(54,13,32,51,4,19,NULL,NULL,NULL,'2023-04-05 01:32:30','2023-04-05 01:32:30',30,NULL,NULL),(55,13,33,52,4,19,NULL,NULL,NULL,'2023-04-05 01:32:30','2023-04-05 01:32:30',30,NULL,NULL),(56,13,34,53,4,19,NULL,NULL,NULL,'2023-04-05 01:32:30','2023-04-05 01:32:30',30,NULL,NULL),(57,14,35,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:33:51','2023-04-05 01:33:52',31,NULL,NULL),(58,14,36,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:33:52','2023-04-05 01:33:52',31,NULL,NULL),(59,14,37,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:33:53','2023-04-05 01:33:53',31,NULL,NULL),(60,14,38,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:33:53','2023-04-05 01:33:54',31,NULL,NULL),(61,14,39,NULL,13,2,NULL,NULL,NULL,'2023-04-05 01:33:54','2023-04-05 01:33:55',31,NULL,NULL),(62,14,40,NULL,9,2,NULL,NULL,NULL,'2023-04-05 01:33:55','2023-04-05 01:33:56',31,NULL,NULL),(63,14,35,57,4,19,NULL,NULL,NULL,'2023-04-05 01:34:49','2023-04-05 01:34:49',31,NULL,NULL),(64,14,36,58,4,19,NULL,NULL,NULL,'2023-04-05 01:34:49','2023-04-05 01:34:49',31,NULL,NULL),(65,14,37,59,4,19,NULL,NULL,NULL,'2023-04-05 01:34:50','2023-04-05 01:34:50',31,NULL,NULL),(66,14,38,60,4,19,NULL,NULL,NULL,'2023-04-05 01:34:50','2023-04-05 01:34:50',31,NULL,NULL),(67,14,39,61,13,19,NULL,NULL,NULL,'2023-04-05 01:34:50','2023-04-05 01:34:50',31,NULL,NULL),(68,14,40,62,9,19,NULL,NULL,NULL,'2023-04-05 01:34:50','2023-04-05 01:34:50',31,NULL,NULL),(69,14,35,57,4,10,'0','openAccess',1,'2023-04-05 01:35:57','2023-04-05 01:36:05',31,521,2),(70,14,36,58,4,10,'0','openAccess',1,'2023-04-05 01:35:57','2023-04-05 01:36:11',31,521,2),(71,14,37,59,4,10,'0','openAccess',1,'2023-04-05 01:35:57','2023-04-05 01:36:16',31,521,2),(72,14,38,60,4,10,'0','openAccess',1,'2023-04-05 01:35:57','2023-04-05 01:36:22',31,521,2),(73,14,39,61,13,10,'0','openAccess',1,'2023-04-05 01:35:57','2023-04-05 01:36:29',31,521,2),(74,14,40,62,9,10,'0','openAccess',1,'2023-04-05 01:35:57','2023-04-05 01:36:35',31,521,2),(75,15,41,NULL,3,2,NULL,NULL,NULL,'2023-04-05 01:36:50','2023-04-05 01:36:51',32,NULL,NULL),(76,15,41,75,3,4,NULL,NULL,NULL,'2023-04-05 01:37:15','2023-04-05 01:37:15',32,NULL,NULL),(77,16,42,NULL,3,2,NULL,NULL,NULL,'2023-04-05 01:37:26','2023-04-05 01:37:27',33,NULL,NULL),(78,16,42,77,3,4,NULL,NULL,NULL,'2023-04-05 01:37:59','2023-04-05 01:37:59',33,NULL,NULL),(79,17,43,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:38:38','2023-04-05 01:38:38',34,NULL,NULL),(80,17,44,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:38:38','2023-04-05 01:38:39',34,NULL,NULL),(81,17,45,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:38:39','2023-04-05 01:38:39',34,NULL,NULL),(82,17,46,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:38:40','2023-04-05 01:38:40',34,NULL,NULL),(83,17,47,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:38:40','2023-04-05 01:38:41',34,NULL,NULL),(84,17,48,NULL,4,2,NULL,NULL,NULL,'2023-04-05 01:38:41','2023-04-05 01:38:42',34,NULL,NULL),(85,17,43,79,4,19,NULL,NULL,NULL,'2023-04-05 01:40:24','2023-04-05 01:40:24',34,NULL,NULL),(86,17,44,80,4,19,NULL,NULL,NULL,'2023-04-05 01:40:24','2023-04-05 01:40:24',34,NULL,NULL),(87,17,45,81,4,19,NULL,NULL,NULL,'2023-04-05 01:40:24','2023-04-05 01:40:24',34,NULL,NULL),(88,17,46,82,4,19,NULL,NULL,NULL,'2023-04-05 01:40:25','2023-04-05 01:40:25',34,NULL,NULL),(89,17,47,83,4,19,NULL,NULL,NULL,'2023-04-05 01:40:25','2023-04-05 01:40:25',34,NULL,NULL),(90,17,48,84,4,19,NULL,NULL,NULL,'2023-04-05 01:40:25','2023-04-05 01:40:25',34,NULL,NULL);
 /*!40000 ALTER TABLE `submission_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2861,13 +2861,13 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_keyword_list`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_keyword_list` (
-  `keyword_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `keyword_id` bigint NOT NULL AUTO_INCREMENT,
   `keyword_text` varchar(60) NOT NULL,
   PRIMARY KEY (`keyword_id`),
   UNIQUE KEY `submission_search_keyword_text` (`keyword_text`)
-) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=111 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2886,14 +2886,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_object_keywords`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_object_keywords` (
-  `object_id` bigint(20) NOT NULL,
-  `keyword_id` bigint(20) NOT NULL,
-  `pos` int(11) NOT NULL COMMENT 'Word position of the keyword in the object.',
+  `object_id` bigint NOT NULL,
+  `keyword_id` bigint NOT NULL,
+  `pos` int NOT NULL COMMENT 'Word position of the keyword in the object.',
   UNIQUE KEY `submission_search_object_keywords_pkey` (`object_id`,`pos`),
   KEY `submission_search_object_keywords_keyword_id` (`keyword_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2912,15 +2912,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_objects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_objects` (
-  `object_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `submission_id` bigint(20) NOT NULL,
-  `type` int(11) NOT NULL COMMENT 'Type of item. E.g., abstract, fulltext, etc.',
-  `assoc_id` bigint(20) DEFAULT NULL COMMENT 'Optional ID of an associated record (e.g., a file_id)',
+  `object_id` bigint NOT NULL AUTO_INCREMENT,
+  `submission_id` bigint NOT NULL,
+  `type` int NOT NULL COMMENT 'Type of item. E.g., abstract, fulltext, etc.',
+  `assoc_id` bigint DEFAULT NULL COMMENT 'Optional ID of an associated record (e.g., a file_id)',
   PRIMARY KEY (`object_id`),
   KEY `submission_search_object_submission` (`submission_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2939,15 +2939,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_settings` (
-  `submission_id` bigint(20) NOT NULL,
+  `submission_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` mediumtext,
   UNIQUE KEY `submission_settings_pkey` (`submission_id`,`locale`,`setting_name`),
   KEY `submission_settings_submission_id` (`submission_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2965,23 +2965,23 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submissions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submissions` (
-  `submission_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `current_publication_id` bigint(20) DEFAULT NULL,
+  `submission_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `current_publication_id` bigint DEFAULT NULL,
   `date_last_activity` datetime DEFAULT NULL,
   `date_submitted` datetime DEFAULT NULL,
   `last_modified` datetime DEFAULT NULL,
-  `stage_id` bigint(20) NOT NULL DEFAULT '1',
+  `stage_id` bigint NOT NULL DEFAULT '1',
   `locale` varchar(14) DEFAULT NULL,
-  `status` smallint(6) NOT NULL DEFAULT '1',
-  `submission_progress` smallint(6) NOT NULL DEFAULT '1',
-  `work_type` smallint(6) DEFAULT '0',
+  `status` smallint NOT NULL DEFAULT '1',
+  `submission_progress` smallint NOT NULL DEFAULT '1',
+  `work_type` smallint DEFAULT '0',
   PRIMARY KEY (`submission_id`),
   KEY `submissions_context_id` (`context_id`),
   KEY `submissions_publication_id` (`current_publication_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2990,7 +2990,7 @@ CREATE TABLE `submissions` (
 
 LOCK TABLES `submissions` WRITE;
 /*!40000 ALTER TABLE `submissions` DISABLE KEYS */;
-INSERT INTO `submissions` VALUES (1,1,1,'2023-03-30 06:26:19','2023-03-30 06:25:58','2023-03-30 06:25:58',4,'en_US',1,0,2),(2,1,2,'2023-03-30 06:27:59','2023-03-30 06:27:35','2023-03-30 06:27:35',3,'en_US',1,0,1),(3,1,3,'2023-03-30 06:28:34','2023-03-30 06:28:33','2023-03-30 06:28:33',1,'en_US',1,0,2),(4,1,4,'2023-03-30 06:30:21','2023-03-30 06:29:29','2023-03-30 06:29:29',5,'en_US',1,0,1),(5,1,5,'2023-03-30 06:32:08','2023-03-30 06:30:59','2023-03-30 06:30:59',5,'en_US',3,0,2),(6,1,6,'2023-03-30 06:33:27','2023-03-30 06:33:02','2023-03-30 06:33:02',2,'en_US',1,0,1),(7,1,7,'2023-03-30 06:35:18','2023-03-30 06:34:49','2023-03-30 06:34:49',4,'en_US',1,0,1),(8,1,8,'2023-03-30 06:35:29','2023-03-30 06:35:29','2023-03-30 06:35:29',1,'en_US',1,0,2),(9,1,9,'2023-03-30 06:36:46','2023-03-30 06:36:37','2023-03-30 06:36:37',2,'en_US',1,0,1),(10,1,10,'2023-03-30 06:37:41','2023-03-30 06:37:41','2023-03-30 06:37:41',1,'en_US',1,0,2),(11,1,11,'2023-03-30 06:38:55','2023-03-30 06:38:00','2023-03-30 06:38:00',4,'en_US',1,0,2),(12,1,12,'2023-03-30 06:40:42','2023-03-30 06:40:00','2023-03-30 06:40:00',2,'en_US',1,0,1),(13,1,13,'2023-03-30 06:42:41','2023-03-30 06:41:28','2023-03-30 06:41:28',4,'en_US',1,0,1),(14,1,14,'2023-03-30 06:45:36','2023-03-30 06:43:42','2023-03-30 06:43:42',5,'en_US',3,0,1),(15,1,15,'2023-03-30 06:46:08','2023-03-30 06:45:59','2023-03-30 06:45:59',3,'en_US',1,0,2),(16,1,16,'2023-03-30 06:47:18','2023-03-30 06:46:42','2023-03-30 06:46:42',3,'en_US',1,0,2),(17,1,17,'2023-03-30 06:49:26','2023-03-30 06:48:58','2023-03-30 06:48:58',2,'en_US',1,0,1);
+INSERT INTO `submissions` VALUES (1,1,1,'2023-04-05 01:16:31','2023-04-05 01:16:10','2023-04-05 01:16:10',4,'en_US',1,0,2),(2,1,2,'2023-04-05 01:18:14','2023-04-05 01:17:49','2023-04-05 01:17:49',3,'en_US',1,0,1),(3,1,3,'2023-04-05 01:18:50','2023-04-05 01:18:49','2023-04-05 01:18:49',1,'en_US',1,0,2),(4,1,4,'2023-04-05 01:20:42','2023-04-05 01:19:48','2023-04-05 01:19:48',5,'en_US',1,0,1),(5,1,5,'2023-04-05 01:22:33','2023-04-05 01:21:21','2023-04-05 01:21:21',5,'en_US',3,0,2),(6,1,6,'2023-04-05 01:23:55','2023-04-05 01:23:28','2023-04-05 01:23:28',2,'en_US',1,0,1),(7,1,7,'2023-04-05 01:25:50','2023-04-05 01:25:19','2023-04-05 01:25:19',4,'en_US',1,0,1),(8,1,8,'2023-04-05 01:26:03','2023-04-05 01:26:02','2023-04-05 01:26:02',1,'en_US',1,0,2),(9,1,9,'2023-04-05 01:27:23','2023-04-05 01:27:14','2023-04-05 01:27:14',2,'en_US',1,0,1),(10,1,10,'2023-04-05 01:28:20','2023-04-05 01:28:20','2023-04-05 01:28:20',1,'en_US',1,0,2),(11,1,11,'2023-04-05 01:29:38','2023-04-05 01:28:40','2023-04-05 01:28:40',4,'en_US',1,0,2),(12,1,12,'2023-04-05 01:31:32','2023-04-05 01:30:48','2023-04-05 01:30:48',2,'en_US',1,0,1),(13,1,13,'2023-04-05 01:33:36','2023-04-05 01:32:20','2023-04-05 01:32:20',4,'en_US',1,0,1),(14,1,14,'2023-04-05 01:36:41','2023-04-05 01:34:39','2023-04-05 01:34:39',5,'en_US',3,0,1),(15,1,15,'2023-04-05 01:37:15','2023-04-05 01:37:06','2023-04-05 01:37:06',3,'en_US',1,0,2),(16,1,16,'2023-04-05 01:38:28','2023-04-05 01:37:50','2023-04-05 01:37:50',3,'en_US',1,0,2),(17,1,17,'2023-04-05 01:40:41','2023-04-05 01:40:12','2023-04-05 01:40:12',2,'en_US',1,0,1);
 /*!40000 ALTER TABLE `submissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3000,18 +3000,18 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `temporary_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `temporary_files` (
-  `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `user_id` bigint(20) NOT NULL,
+  `file_id` bigint NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL,
   `file_name` varchar(90) NOT NULL,
   `file_type` varchar(255) DEFAULT NULL,
-  `file_size` bigint(20) NOT NULL,
+  `file_size` bigint NOT NULL,
   `original_file_name` varchar(127) DEFAULT NULL,
   `date_uploaded` datetime NOT NULL,
   PRIMARY KEY (`file_id`),
   KEY `temporary_files_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3029,19 +3029,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_temporary_records` (
-  `assoc_id` bigint(20) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL,
-  `day` bigint(20) NOT NULL,
-  `entry_time` bigint(20) NOT NULL,
-  `metric` bigint(20) NOT NULL DEFAULT '1',
+  `assoc_id` bigint NOT NULL,
+  `assoc_type` bigint NOT NULL,
+  `day` bigint NOT NULL,
+  `entry_time` bigint NOT NULL,
+  `metric` bigint NOT NULL DEFAULT '1',
   `country_id` varchar(2) DEFAULT NULL,
   `region` varchar(2) DEFAULT NULL,
   `city` varchar(255) DEFAULT NULL,
   `load_id` varchar(255) NOT NULL,
-  `file_type` smallint(6) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `file_type` smallint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3059,15 +3059,15 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_group_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_group_settings` (
-  `user_group_id` bigint(20) NOT NULL,
+  `user_group_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL COMMENT '(bool|int|float|string|object)',
   UNIQUE KEY `user_group_settings_pkey` (`user_group_id`,`locale`,`setting_name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3086,16 +3086,16 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_group_stage`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_group_stage` (
-  `context_id` bigint(20) NOT NULL,
-  `user_group_id` bigint(20) NOT NULL,
-  `stage_id` bigint(20) NOT NULL,
+  `context_id` bigint NOT NULL,
+  `user_group_id` bigint NOT NULL,
+  `stage_id` bigint NOT NULL,
   UNIQUE KEY `user_group_stage_pkey` (`context_id`,`user_group_id`,`stage_id`),
   KEY `user_group_stage_context_id` (`context_id`),
   KEY `user_group_stage_user_group_id` (`user_group_id`),
   KEY `user_group_stage_stage_id` (`stage_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3114,20 +3114,20 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_groups` (
-  `user_group_id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `context_id` bigint(20) NOT NULL,
-  `role_id` bigint(20) NOT NULL,
-  `is_default` smallint(6) NOT NULL DEFAULT '0',
-  `show_title` smallint(6) NOT NULL DEFAULT '1',
-  `permit_self_registration` smallint(6) NOT NULL DEFAULT '0',
-  `permit_metadata_edit` smallint(6) NOT NULL DEFAULT '0',
+  `user_group_id` bigint NOT NULL AUTO_INCREMENT,
+  `context_id` bigint NOT NULL,
+  `role_id` bigint NOT NULL,
+  `is_default` smallint NOT NULL DEFAULT '0',
+  `show_title` smallint NOT NULL DEFAULT '1',
+  `permit_self_registration` smallint NOT NULL DEFAULT '0',
+  `permit_metadata_edit` smallint NOT NULL DEFAULT '0',
   PRIMARY KEY (`user_group_id`),
   KEY `user_groups_user_group_id` (`user_group_id`),
   KEY `user_groups_context_id` (`context_id`),
   KEY `user_groups_role_id` (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3146,12 +3146,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_interests`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_interests` (
-  `user_id` bigint(20) NOT NULL,
-  `controlled_vocab_entry_id` bigint(20) NOT NULL,
+  `user_id` bigint NOT NULL,
+  `controlled_vocab_entry_id` bigint NOT NULL,
   UNIQUE KEY `u_e_pkey` (`user_id`,`controlled_vocab_entry_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3169,19 +3169,19 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_settings` (
-  `user_id` bigint(20) NOT NULL,
+  `user_id` bigint NOT NULL,
   `locale` varchar(14) NOT NULL DEFAULT '',
   `setting_name` varchar(255) NOT NULL,
-  `assoc_type` bigint(20) NOT NULL DEFAULT '0',
-  `assoc_id` bigint(20) NOT NULL DEFAULT '0',
+  `assoc_type` bigint NOT NULL DEFAULT '0',
+  `assoc_id` bigint NOT NULL DEFAULT '0',
   `setting_value` text,
   `setting_type` varchar(6) NOT NULL,
   UNIQUE KEY `user_settings_pkey` (`user_id`,`locale`,`setting_name`,`assoc_type`,`assoc_id`),
   KEY `user_settings_user_id` (`user_id`),
   KEY `user_settings_locale_setting_name_index` (`setting_name`,`locale`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3200,14 +3200,14 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_user_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_user_groups` (
-  `user_group_id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
+  `user_group_id` bigint NOT NULL,
+  `user_id` bigint NOT NULL,
   UNIQUE KEY `user_user_groups_pkey` (`user_group_id`,`user_id`),
   KEY `user_user_groups_user_group_id` (`user_group_id`),
   KEY `user_user_groups_user_id` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3226,9 +3226,9 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
-  `user_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint NOT NULL AUTO_INCREMENT,
   `username` varchar(32) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
@@ -3243,16 +3243,16 @@ CREATE TABLE `users` (
   `date_registered` datetime NOT NULL,
   `date_validated` datetime DEFAULT NULL,
   `date_last_login` datetime NOT NULL,
-  `must_change_password` smallint(6) DEFAULT NULL,
-  `auth_id` bigint(20) DEFAULT NULL,
+  `must_change_password` smallint DEFAULT NULL,
+  `auth_id` bigint DEFAULT NULL,
   `auth_str` varchar(255) DEFAULT NULL,
-  `disabled` smallint(6) NOT NULL DEFAULT '0',
+  `disabled` smallint NOT NULL DEFAULT '0',
   `disabled_reason` text,
-  `inline_help` smallint(6) DEFAULT NULL,
+  `inline_help` smallint DEFAULT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `users_username` (`username`),
   UNIQUE KEY `users_email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3261,7 +3261,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'admin','$2y$10$NHgbb8N4mKzDhpAUa6yYquedNfEHyimFj0GLRP2u.ZPlaXK1jL23.','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'',NULL,NULL,'2023-03-30 06:21:38',NULL,'2023-03-30 06:25:21',0,NULL,NULL,0,NULL,1),(2,'rvaca','$2y$10$mtO9oq.FR2idHiV4YXg1/uTtrdsA4BYwbsGPnYkdwSNUmcxY/w.nq','rvaca@mailinator.com','','','',NULL,'MX','',NULL,NULL,'2023-03-30 06:22:33',NULL,'2023-03-30 06:25:16',0,0,NULL,0,NULL,1),(3,'dbarnes','$2y$10$ekCYWdZACXIv40lHidnSaOiFVog21/zQsALzCT9KuPLeZTHMhNK1i','dbarnes@mailinator.com','','','',NULL,'AU','',NULL,NULL,'2023-03-30 06:22:39',NULL,'2023-03-30 06:49:00',0,0,NULL,0,NULL,1),(4,'dbuskins','$2y$10$QUZXYBh5sxWuabttDDCTC.2vkxEwWIv99IMlqq4eQ..fiKigQccDu','dbuskins@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-03-30 06:22:45',NULL,'2023-03-30 06:22:45',0,0,NULL,0,NULL,1),(5,'sberardo','$2y$10$FRyJyndMhojfPechDdJBeOlxHEY7WFso.b/0zTrXdTiWlGsUzyOJS','sberardo@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-03-30 06:22:52',NULL,'2023-03-30 06:22:52',0,0,NULL,0,NULL,1),(6,'minoue','$2y$10$eDnUd4UvjE126V9/9hItw.Da64hNnff.ohv4osip01BRdO4MLActi','minoue@mailinator.com','','','',NULL,'JP','',NULL,NULL,'2023-03-30 06:23:00',NULL,'2023-03-30 06:33:20',0,0,NULL,0,NULL,1),(7,'jjanssen','$2y$10$pAbFtCjmPbxL6yI50iJFa.5OpKB0Nr/kUAEJ0/qrvp3PgqrxRUfui','jjanssen@mailinator.com','','','',NULL,'NL','',NULL,NULL,'2023-03-30 06:23:09',NULL,'2023-03-30 06:23:09',0,0,NULL,0,NULL,1),(8,'phudson','$2y$10$wRPjScIBSbMASkoDGcawZejLl6ihQOWf0X35uaTfNXWnEDxAkCw2C','phudson@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-03-30 06:23:20',NULL,'2023-03-30 06:40:34',0,0,NULL,0,NULL,1),(9,'amccrae','$2y$10$JIQ4LkUzp0mX0w7bfu3wMe.4Te6umNNOmK9qfXuQqGUuvzelwLLey','amccrae@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-03-30 06:23:28',NULL,'2023-03-30 06:23:28',0,0,NULL,0,NULL,1),(10,'agallego','$2y$10$3t4WloikLHOre25pTOi81e8H.Es1GbARHP0MD1gTUTXKFocLDOd1m','agallego@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-03-30 06:23:37',NULL,'2023-03-30 06:47:10',0,0,NULL,0,NULL,1),(11,'alzacharia','$2y$10$ZuZPIonKGlKZp9PjT48oHuhFHtDR9hNu.wHmedspP8wPKSNpOh7py','alzacharia@mailinator.com','','','',NULL,'GH','',NULL,NULL,'2023-03-30 06:23:47',NULL,'2023-03-30 06:23:47',0,0,NULL,0,NULL,1),(12,'gfavio','$2y$10$iADFNLbD/VD9etSs4/kSQeRRFMELld3uFKm/UeY3/pscy0zGo8QCO','gfavio@mailinator.com','','','',NULL,'ES','',NULL,NULL,'2023-03-30 06:23:57',NULL,'2023-03-30 06:42:20',0,0,NULL,0,NULL,1),(13,'mfritz','$2y$10$FWwz5JUoVsR3g3SUjj76qeNxSHHKKMU7svKmwW6VaWxasfBfyQdm2','mfritz@mailinator.com','','','',NULL,'BE','',NULL,NULL,'2023-03-30 06:24:07',NULL,'2023-03-30 06:24:07',0,0,NULL,0,NULL,1),(14,'svogt','$2y$10$BiZsVwVms3sj.pc0gb6f4ODBWPE.Im2nVG7RHWk9SygWNCAMPpNfq','svogt@mailinator.com','','','',NULL,'CL','',NULL,NULL,'2023-03-30 06:24:17',NULL,'2023-03-30 06:24:17',0,0,NULL,0,NULL,1),(15,'gcox','$2y$10$1zjv.JcHnjdVlFZkVOfOc.WuJF8ZMBZMVO5aZhwTKM8AvhlOt8APW','gcox@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-03-30 06:24:28',NULL,'2023-03-30 06:24:28',0,0,NULL,0,NULL,1),(16,'shellier','$2y$10$RXfcfcFt5CaAlqB4.3HZzeKXdMq/rGZ/qA1cVl2dfEC/RlRWFxKrO','shellier@mailinator.com','','','',NULL,'ZA','',NULL,NULL,'2023-03-30 06:24:40',NULL,'2023-03-30 06:24:40',0,0,NULL,0,NULL,1),(17,'cturner','$2y$10$Hdcvge5eY72Ss8x2JxeUMOYEBW/eK4JyJ9rTVxbHSPYHtxvauaq.y','cturner@mailinator.com','','','',NULL,'GB','',NULL,NULL,'2023-03-30 06:24:52',NULL,'2023-03-30 06:24:52',0,0,NULL,0,NULL,1),(18,'skumar','$2y$10$H8UOEP9xvkv0yrcKgrkGRu4VEeyUgZw00L4zRvJB2.lF2UvfJ66Bu','skumar@mailinator.com','','','',NULL,'SG','',NULL,NULL,'2023-03-30 06:25:05',NULL,'2023-03-30 06:25:05',0,0,NULL,0,NULL,1),(19,'aclark','$2y$10$amrSvsNEYlBvGU1xFMYXjeYGFFpLq6jH/YkYtErUgHhMJYBMTiccK','aclark@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:25:40',NULL,'2023-03-30 06:25:40',0,NULL,NULL,0,NULL,1),(20,'afinkel','$2y$10$zOri4lPp3yT65Kz18DFKceR9Q1ebSMbBVyMTzyMmXOXoZNDV0JJe6','afinkel@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:26:25',NULL,'2023-03-30 06:26:25',0,NULL,NULL,0,NULL,1),(21,'bbarnetson','$2y$10$XEApOPkRSrki8F.pgARQO.t9FMkSYDHhMSf278ZvtIWBbD2q00nZq','bbarnetson@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:28:05',NULL,'2023-03-30 06:28:05',0,NULL,NULL,0,NULL,1),(22,'bbeaty','$2y$10$KEJwLbmk5qFhLLU6kfxp/uzDX0oy0qvnk2UZD653pNYoHoF8.5jSO','bbeaty@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:28:39',NULL,'2023-03-30 06:28:39',0,NULL,NULL,0,NULL,1),(23,'callan','$2y$10$SF2zdHJJ4NslAxJKPyHPQekBTQqulB5aeeBaF6eRfoq.90G0dsN4W','callan@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:30:27',NULL,'2023-03-30 06:30:27',0,NULL,NULL,0,NULL,1),(24,'dbernnard','$2y$10$sNyoA36VEdfFHF6rZXrKledauna5If48BkrhbkQ.zkbF/usJKtgr.','dbernnard@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-03-30 06:32:13',NULL,'2023-03-30 06:32:13',0,NULL,NULL,0,NULL,1),(25,'dkennepohl','$2y$10$vigbWtkATbh5uf7BV0HXTO1TXN.rtw38ekpV.q/FHC5gMQpRvMIA2','dkennepohl@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:33:42',NULL,'2023-03-30 06:33:42',0,NULL,NULL,0,NULL,1),(26,'fperini','$2y$10$EmCxLCPFiA6hnV73PriY2e5FWbFajjYS4phppH4XC2LBE4tK1RFQW','fperini@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:35:33',NULL,'2023-03-30 06:35:33',0,NULL,NULL,0,NULL,1),(27,'jbrower','$2y$10$f0LsOb8BZ5J004rhanGlUOPCJklouc6f6mo/78zR88TtYuBaE0M7S','jbrower@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:36:55',NULL,'2023-03-30 06:36:55',0,NULL,NULL,0,NULL,1),(28,'jlockehart','$2y$10$pPebhoeKyeN.XdQBcKewdOi6T9OZ3kK0YQ.FeVlFmiGcDDEIawB/G','jlockehart@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:37:46',NULL,'2023-03-30 06:37:46',0,NULL,NULL,0,NULL,1),(29,'lelder','$2y$10$87nn9CUNQEqV3j9g2guBVObwihngWAsVKA39eLz9xo5TyPQP9Hggy','lelder@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:39:02',NULL,'2023-03-30 06:39:02',0,NULL,NULL,0,NULL,1),(30,'mally','$2y$10$3CgHfpp1/G92OS2p5YD9GOFNFrLaz3VGJL61xomECJMbuHo0t7qNi','mally@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:40:48',NULL,'2023-03-30 06:40:49',0,NULL,NULL,0,NULL,1),(31,'mdawson','$2y$10$nd3Ap.CqHBDv9Yz4n7qJ1uQw4NlPV3FMM4Dyp4M5sJW8VjDThPqgC','mdawson@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:42:53',NULL,'2023-03-30 06:42:54',0,NULL,NULL,0,NULL,1),(32,'mforan','$2y$10$APmWEEqxod9vXc3os22pS.Ry1yObASjsn2jTX3LbZRbUsWoyipX0q','mforan@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:45:41',NULL,'2023-03-30 06:45:41',0,NULL,NULL,0,NULL,1),(33,'mpower','$2y$10$OCRWtm2Q994eLFvrzwdgW.Z7QCsGhVUwYarjk2aUbrsq7Tg3wNcTi','mpower@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:46:15',NULL,'2023-03-30 06:46:15',0,NULL,NULL,0,NULL,1),(34,'msmith','$2y$10$OYHFgffyWKu3l9dyFD58IuHUn0Y/Bwzwu7bIJug8PpP7aLyNxEnKO','msmith@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-03-30 06:47:24',NULL,'2023-03-30 06:47:24',0,NULL,NULL,0,NULL,1);
+INSERT INTO `users` VALUES (1,'admin','$2y$10$.YP.aou1w.leZdCTA8C3s.6UKrGgw//xXCmj/4tN0POa9S1qXtY..','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'',NULL,NULL,'2023-04-05 01:11:37',NULL,'2023-04-05 01:15:31',0,NULL,NULL,0,NULL,1),(2,'rvaca','$2y$10$85YEjjq0oxiO.yjoFi.HV.hDPdyE6IDXbYXQS4A.2Jr4vF/8vF1R.','rvaca@mailinator.com','','','',NULL,'MX','',NULL,NULL,'2023-04-05 01:12:43',NULL,'2023-04-05 01:15:28',0,0,NULL,0,NULL,1),(3,'dbarnes','$2y$10$9RNm0ZmUsEa//HRUQ0y0cOga1QXpbbxz1ctPJI3vE3m1WNBKA94JO','dbarnes@mailinator.com','','','',NULL,'AU','',NULL,NULL,'2023-04-05 01:12:49',NULL,'2023-04-05 01:40:13',0,0,NULL,0,NULL,1),(4,'dbuskins','$2y$10$EMMF2eq.e1wazTT68wZF6ePw5.5KRPWBtx3H27tNlxfdTPPq0GEqy','dbuskins@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-04-05 01:12:55',NULL,'2023-04-05 01:12:55',0,0,NULL,0,NULL,1),(5,'sberardo','$2y$10$qsF55XR2DoaRitf583h0OuXTWivphSpalQmpijUCSIwLIQqEdNFka','sberardo@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-04-05 01:13:02',NULL,'2023-04-05 01:13:02',0,0,NULL,0,NULL,1),(6,'minoue','$2y$10$o7irl3RnhWq4Kf3SUl.61u4puVbjhP9g.d6SohRbYbJNStIcCT8fO','minoue@mailinator.com','','','',NULL,'JP','',NULL,NULL,'2023-04-05 01:13:10',NULL,'2023-04-05 01:23:48',0,0,NULL,0,NULL,1),(7,'jjanssen','$2y$10$0Q1jwSmEUFuHczdcT8YGhuKolou3QyeabZn8FMSZH4O5xXStxQOSu','jjanssen@mailinator.com','','','',NULL,'NL','',NULL,NULL,'2023-04-05 01:13:20',NULL,'2023-04-05 01:13:20',0,0,NULL,0,NULL,1),(8,'phudson','$2y$10$wiY7NX4j2CkEEyni.pjnEOGIMMRpP9gQMSNs52JuQU/hO/nM/uaaO','phudson@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-04-05 01:13:33',NULL,'2023-04-05 01:31:23',0,0,NULL,0,NULL,1),(9,'amccrae','$2y$10$HUdGhyPg8J9Gh8etBCxqeezwGYpvgNfsQtHPI8eGQAV94vvmKj..a','amccrae@mailinator.com','','','',NULL,'CA','',NULL,NULL,'2023-04-05 01:13:42',NULL,'2023-04-05 01:13:42',0,0,NULL,0,NULL,1),(10,'agallego','$2y$10$z.CBV3ApYRS8Vx2nLGKJTeTxPrU...FWA5JU06JqKUQJ8SxxZX/0G','agallego@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-04-05 01:13:51',NULL,'2023-04-05 01:38:20',0,0,NULL,0,NULL,1),(11,'alzacharia','$2y$10$Z4aHJmA0ZrjwMYND5mBpR.uhM..T4qf0sfg.Lfb73BZUNk0SlN6xy','alzacharia@mailinator.com','','','',NULL,'GH','',NULL,NULL,'2023-04-05 01:14:00',NULL,'2023-04-05 01:14:00',0,0,NULL,0,NULL,1),(12,'gfavio','$2y$10$LPvUTQhlFnY/hhVHKrWy9urUqYFcCeOPr2OJ87FIOHSvJ/WRsAo0G','gfavio@mailinator.com','','','',NULL,'ES','',NULL,NULL,'2023-04-05 01:14:10',NULL,'2023-04-05 01:33:14',0,0,NULL,0,NULL,1),(13,'mfritz','$2y$10$dRcWyDLSR3YvH33e9ySM..ajnWsp0BAOIHsUB6ZN2DQWSm6eNpGFS','mfritz@mailinator.com','','','',NULL,'BE','',NULL,NULL,'2023-04-05 01:14:20',NULL,'2023-04-05 01:14:20',0,0,NULL,0,NULL,1),(14,'svogt','$2y$10$VP6HTNIfBuMyOb7gcRq2Auv6OPB3kqKtBKpb/rG1KZei1O7gwOUou','svogt@mailinator.com','','','',NULL,'CL','',NULL,NULL,'2023-04-05 01:14:31',NULL,'2023-04-05 01:14:31',0,0,NULL,0,NULL,1),(15,'gcox','$2y$10$.84LHlZEqFnS.yWJ2vntJOle/n2LWXTdx1Vwl/Lw2hIrV5sZT/uou','gcox@mailinator.com','','','',NULL,'US','',NULL,NULL,'2023-04-05 01:14:41',NULL,'2023-04-05 01:14:41',0,0,NULL,0,NULL,1),(16,'shellier','$2y$10$9nwMGvTKd7Rnf/lSlLMemOYYd3vypWx3bw3yuf/mLOolh8Ura.sp6','shellier@mailinator.com','','','',NULL,'ZA','',NULL,NULL,'2023-04-05 01:14:54',NULL,'2023-04-05 01:14:54',0,0,NULL,0,NULL,1),(17,'cturner','$2y$10$4NO1Dty94eeL/2YxI4vznesE15vX7uNcDr.OMQCZJKu9ONWiytZQa','cturner@mailinator.com','','','',NULL,'GB','',NULL,NULL,'2023-04-05 01:15:05',NULL,'2023-04-05 01:15:05',0,0,NULL,0,NULL,1),(18,'skumar','$2y$10$c.QGpLJnYwLceoGEJ1YrTe0L6mjbInpwHkBTd9EkbcRYJD.lfY.WK','skumar@mailinator.com','','','',NULL,'SG','',NULL,NULL,'2023-04-05 01:15:18',NULL,'2023-04-05 01:15:18',0,0,NULL,0,NULL,1),(19,'aclark','$2y$10$9Ki9h3tE/DaGKe37ZIH6leudQwrnYkkm9zc3fRW/NIBQARc4k77Bq','aclark@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:15:51',NULL,'2023-04-05 01:15:51',0,NULL,NULL,0,NULL,1),(20,'afinkel','$2y$10$pzxjP51jbZ1f9YxQ.lBn1.3eEEjmBo/d5l2NJELCwXSG7T.TpEaBG','afinkel@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:16:37',NULL,'2023-04-05 01:16:37',0,NULL,NULL,0,NULL,1),(21,'bbarnetson','$2y$10$EeufSL/uD0YYlqCZCfL0WedSYF/OqwpEpwXUF21eDw3JmmI4LcpZq','bbarnetson@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:18:20',NULL,'2023-04-05 01:18:21',0,NULL,NULL,0,NULL,1),(22,'bbeaty','$2y$10$kAictXVJuwyc6bV4A9jY9uXB3MxOa8LfjWWsIHRYftutODrHMmbhO','bbeaty@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:18:54',NULL,'2023-04-05 01:18:55',0,NULL,NULL,0,NULL,1),(23,'callan','$2y$10$CtPoTLzpI6IBcOsE.A0AnOu/feoMSMJ2uJ9ti4wgGuULE0F6/1O/S','callan@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:20:48',NULL,'2023-04-05 01:20:48',0,NULL,NULL,0,NULL,1),(24,'dbernnard','$2y$10$.dgG3wH63PG6kGU9o.ib7.zfOfbhCF6Tm9LyD1yXALGnSwgkJYduW','dbernnard@mailinator.com',NULL,NULL,NULL,NULL,'US','',NULL,NULL,'2023-04-05 01:22:38',NULL,'2023-04-05 01:22:38',0,NULL,NULL,0,NULL,1),(25,'dkennepohl','$2y$10$kyKUX7JDC.sbRSm0QYaqFOVxfPhEKRcnDrctOlApqd810qzy8REWO','dkennepohl@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:24:09',NULL,'2023-04-05 01:24:09',0,NULL,NULL,0,NULL,1),(26,'fperini','$2y$10$7AUsOI5Oiw7gPrwumU8g2uDJgJvyzYLUDIUibw4EbNiGW0MHeCuXa','fperini@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:26:07',NULL,'2023-04-05 01:26:07',0,NULL,NULL,0,NULL,1),(27,'jbrower','$2y$10$XR7IQJAOTmjjU5mDQ9IYauZWi76PG/1leTFHT7iYTh2buELuXiylu','jbrower@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:27:32',NULL,'2023-04-05 01:27:33',0,NULL,NULL,0,NULL,1),(28,'jlockehart','$2y$10$tDQKQ52FA8afBqYVc4GOYefvB/cOfysxft5AdZ5w0Mpq4BaW5zXQa','jlockehart@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:28:25',NULL,'2023-04-05 01:28:25',0,NULL,NULL,0,NULL,1),(29,'lelder','$2y$10$NkYSfXeKIY/u9AGWi0kaSOzj/KGOKguCpByo8XdHEWfsJAQ1LZFgC','lelder@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:29:47',NULL,'2023-04-05 01:29:47',0,NULL,NULL,0,NULL,1),(30,'mally','$2y$10$aCaU5zC8cUBHW8iwr4f1RuPnmoZCsRIyFwiF/ey/wTJ5JNwqiBtoe','mally@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:31:39',NULL,'2023-04-05 01:31:39',0,NULL,NULL,0,NULL,1),(31,'mdawson','$2y$10$loV.ZiksT9e6/8hxcWLnqubT/ie1F8v92gB4iDHAJsl7NI885xogW','mdawson@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:33:47',NULL,'2023-04-05 01:33:47',0,NULL,NULL,0,NULL,1),(32,'mforan','$2y$10$o6BiQfRmgvJd8sQNZlnH0u.08swTvOL/gnUSDu3rryl32jrs5E8W.','mforan@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:36:46',NULL,'2023-04-05 01:36:46',0,NULL,NULL,0,NULL,1),(33,'mpower','$2y$10$628dwSdhGfMXZonvfDDENecma7Z7bobqSPRVNl/a2YRgi6h.ZbtDu','mpower@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:37:22',NULL,'2023-04-05 01:37:23',0,NULL,NULL,0,NULL,1),(34,'msmith','$2y$10$pnTuUzb8lC/7pZcqL/z76O3t3XjQAcq58qEWmwhry9Qpi0rhJNfRK','msmith@mailinator.com',NULL,NULL,NULL,NULL,'CA','',NULL,NULL,'2023-04-05 01:38:34',NULL,'2023-04-05 01:38:34',0,NULL,NULL,0,NULL,1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -3271,21 +3271,21 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `versions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `versions` (
-  `major` int(11) NOT NULL DEFAULT '0' COMMENT 'Major component of version number, e.g. the 2 in OJS 2.3.8-0',
-  `minor` int(11) NOT NULL DEFAULT '0' COMMENT 'Minor component of version number, e.g. the 3 in OJS 2.3.8-0',
-  `revision` int(11) NOT NULL DEFAULT '0' COMMENT 'Revision component of version number, e.g. the 8 in OJS 2.3.8-0',
-  `build` int(11) NOT NULL DEFAULT '0' COMMENT 'Build component of version number, e.g. the 0 in OJS 2.3.8-0',
+  `major` int NOT NULL DEFAULT '0' COMMENT 'Major component of version number, e.g. the 2 in OJS 2.3.8-0',
+  `minor` int NOT NULL DEFAULT '0' COMMENT 'Minor component of version number, e.g. the 3 in OJS 2.3.8-0',
+  `revision` int NOT NULL DEFAULT '0' COMMENT 'Revision component of version number, e.g. the 8 in OJS 2.3.8-0',
+  `build` int NOT NULL DEFAULT '0' COMMENT 'Build component of version number, e.g. the 0 in OJS 2.3.8-0',
   `date_installed` datetime NOT NULL,
-  `current` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the version entry being described is currently active. This permits the table to store past installation history for forensic purposes.',
+  `current` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the version entry being described is currently active. This permits the table to store past installation history for forensic purposes.',
   `product_type` varchar(30) DEFAULT NULL COMMENT 'Describes the type of product this row describes, e.g. "plugins.generic" (for a generic plugin) or "core" for the application itelf',
   `product` varchar(30) DEFAULT NULL COMMENT 'Uniquely identifies the product this version row describes, e.g. "ojs2" for OJS 2.x, "languageToggle" for the language toggle block plugin, etc.',
   `product_class_name` varchar(80) DEFAULT NULL COMMENT 'Specifies the class name associated with this product, for plugins, or the empty string where not applicable.',
-  `lazy_load` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a lazy-load plugin; 0 otherwise',
-  `sitewide` smallint(6) NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a site-wide plugin; 0 otherwise',
+  `lazy_load` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a lazy-load plugin; 0 otherwise',
+  `sitewide` smallint NOT NULL DEFAULT '0' COMMENT '1 iff the row describes a site-wide plugin; 0 otherwise',
   UNIQUE KEY `versions_pkey` (`product_type`,`product`,`major`,`minor`,`revision`,`build`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -3294,7 +3294,7 @@ CREATE TABLE `versions` (
 
 LOCK TABLES `versions` WRITE;
 /*!40000 ALTER TABLE `versions` DISABLE KEYS */;
-INSERT INTO `versions` VALUES (1,0,0,0,'2023-03-30 06:21:39',1,'plugins.metadata','dc11','',0,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.pubIds','doi','DOIPubIdPlugin',0,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.pubIds','urn','URNPubIdPlugin',0,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.blocks','browse','BrowseBlockPlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.blocks','makeSubmission','MakeSubmissionBlockPlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.blocks','information','InformationBlockPlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.generic','usageEvent','',0,1),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.generic','acron','',0,1),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.generic','dublinCoreMeta','DublinCoreMetaPlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),(1,2,0,0,'2023-03-30 06:21:39',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.generic','webFeed','WebFeedPlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.generic','htmlMonographFile','HtmlMonographFilePlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),(1,2,0,0,'2023-03-30 06:21:39',1,'plugins.generic','staticPages','StaticPagesPlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.generic','usageStats','UsageStatsPlugin',0,1),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.themes','default','DefaultThemePlugin',1,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.importexport','users','',0,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.importexport','onix30','',0,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.importexport','csv','',0,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.importexport','native','',0,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.oaiMetadataFormats','dc','',0,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.paymethod','manual','',0,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.paymethod','paypal','',0,0),(2,0,0,0,'2023-03-30 06:21:39',1,'plugins.reports','reviewReport','',0,0),(1,0,0,0,'2023-03-30 06:21:39',1,'plugins.reports','monographReport','',0,0),(3,3,0,14,'2023-03-30 06:21:35',1,'core','omp','',0,1);
+INSERT INTO `versions` VALUES (1,0,0,0,'2023-04-05 01:11:38',1,'plugins.metadata','dc11','',0,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.pubIds','doi','DOIPubIdPlugin',0,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.pubIds','urn','URNPubIdPlugin',0,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.blocks','browse','BrowseBlockPlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.blocks','information','InformationBlockPlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.blocks','makeSubmission','MakeSubmissionBlockPlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),(1,2,0,0,'2023-04-05 01:11:38',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),(1,2,0,0,'2023-04-05 01:11:38',1,'plugins.generic','staticPages','StaticPagesPlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.generic','dublinCoreMeta','DublinCoreMetaPlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.generic','webFeed','WebFeedPlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.generic','acron','',0,1),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.generic','usageStats','UsageStatsPlugin',0,1),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.generic','htmlMonographFile','HtmlMonographFilePlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.generic','usageEvent','',0,1),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.themes','default','DefaultThemePlugin',1,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.importexport','users','',0,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.importexport','native','',0,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.importexport','onix30','',0,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.importexport','csv','',0,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.oaiMetadataFormats','dc','',0,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.paymethod','paypal','',0,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.paymethod','manual','',0,0),(2,0,0,0,'2023-04-05 01:11:38',1,'plugins.reports','reviewReport','',0,0),(1,0,0,0,'2023-04-05 01:11:38',1,'plugins.reports','monographReport','',0,0),(3,3,0,14,'2023-04-05 01:11:31',1,'core','omp','',0,1);
 /*!40000 ALTER TABLE `versions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -3307,4 +3307,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-03-30  6:49:29
+-- Dump completed on 2023-04-05  1:40:44
