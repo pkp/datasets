@@ -1,0 +1,22450 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.10 (Ubuntu 13.10-1.pgdg20.04+1)
+-- Dumped by pg_dump version 13.10 (Ubuntu 13.10-1.pgdg20.04+1)
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records DROP CONSTRAINT ustr_submission_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records DROP CONSTRAINT ustr_submission_file_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records DROP CONSTRAINT ustr_representation_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records DROP CONSTRAINT ustr_context_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records DROP CONSTRAINT ustr_chapter_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records DROP CONSTRAINT usti_submission_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records DROP CONSTRAINT usti_submission_file_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records DROP CONSTRAINT usti_representation_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records DROP CONSTRAINT usti_context_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records DROP CONSTRAINT usti_chapter_id_foreign;
+ALTER TABLE ONLY public.usage_stats_total_temporary_records DROP CONSTRAINT ust_submission_id_foreign;
+ALTER TABLE ONLY public.usage_stats_total_temporary_records DROP CONSTRAINT ust_submission_file_id_foreign;
+ALTER TABLE ONLY public.usage_stats_total_temporary_records DROP CONSTRAINT ust_series_id_foreign;
+ALTER TABLE ONLY public.usage_stats_total_temporary_records DROP CONSTRAINT ust_representation_id_foreign;
+ALTER TABLE ONLY public.usage_stats_total_temporary_records DROP CONSTRAINT ust_context_id_foreign;
+ALTER TABLE ONLY public.usage_stats_total_temporary_records DROP CONSTRAINT ust_chapter_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records DROP CONSTRAINT usir_submission_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records DROP CONSTRAINT usir_submission_file_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records DROP CONSTRAINT usir_representation_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records DROP CONSTRAINT usir_context_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records DROP CONSTRAINT usir_chapter_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records DROP CONSTRAINT usii_submission_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records DROP CONSTRAINT usii_submission_file_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records DROP CONSTRAINT usii_representation_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records DROP CONSTRAINT usii_context_id_foreign;
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records DROP CONSTRAINT usii_chapter_id_foreign;
+ALTER TABLE ONLY public.usage_stats_institution_temporary_records DROP CONSTRAINT usi_institution_id_foreign;
+ALTER TABLE ONLY public.user_user_groups DROP CONSTRAINT user_user_groups_user_id;
+ALTER TABLE ONLY public.user_user_groups DROP CONSTRAINT user_user_groups_user_group_id_foreign;
+ALTER TABLE ONLY public.user_settings DROP CONSTRAINT user_settings_user_id_foreign;
+ALTER TABLE ONLY public.user_interests DROP CONSTRAINT user_interests_user_id_foreign;
+ALTER TABLE ONLY public.user_interests DROP CONSTRAINT user_interests_controlled_vocab_entry_id_foreign;
+ALTER TABLE ONLY public.user_group_stage DROP CONSTRAINT user_group_stage_user_group_id;
+ALTER TABLE ONLY public.user_group_stage DROP CONSTRAINT user_group_stage_context_id;
+ALTER TABLE ONLY public.user_group_settings DROP CONSTRAINT user_group_settings_user_group_id_foreign;
+ALTER TABLE ONLY public.temporary_files DROP CONSTRAINT temporary_files_user_id;
+ALTER TABLE ONLY public.submissions DROP CONSTRAINT submissions_publication_id;
+ALTER TABLE ONLY public.submissions DROP CONSTRAINT submissions_context_id;
+ALTER TABLE ONLY public.submission_settings DROP CONSTRAINT submission_settings_submission_id_foreign;
+ALTER TABLE ONLY public.submission_search_objects DROP CONSTRAINT submission_search_object_submission;
+ALTER TABLE ONLY public.submission_search_object_keywords DROP CONSTRAINT submission_search_object_keywords_object_id_foreign;
+ALTER TABLE ONLY public.submission_search_object_keywords DROP CONSTRAINT submission_search_object_keywords_keyword_id;
+ALTER TABLE ONLY public.submission_files DROP CONSTRAINT submission_files_uploader_user_id_foreign;
+ALTER TABLE ONLY public.submission_files DROP CONSTRAINT submission_files_submission_id;
+ALTER TABLE ONLY public.submission_files DROP CONSTRAINT submission_files_source_submission_file_id_foreign;
+ALTER TABLE ONLY public.submission_files DROP CONSTRAINT submission_files_genre_id_foreign;
+ALTER TABLE ONLY public.submission_files DROP CONSTRAINT submission_files_file_id_foreign;
+ALTER TABLE ONLY public.submission_files DROP CONSTRAINT submission_files_doi_id_foreign;
+ALTER TABLE ONLY public.submission_file_settings DROP CONSTRAINT submission_file_settings_submission_file_id_foreign;
+ALTER TABLE ONLY public.submission_file_revisions DROP CONSTRAINT submission_file_revisions_submission_file_id_foreign;
+ALTER TABLE ONLY public.submission_file_revisions DROP CONSTRAINT submission_file_revisions_file_id_foreign;
+ALTER TABLE ONLY public.submission_comments DROP CONSTRAINT submission_comments_submission_id;
+ALTER TABLE ONLY public.submission_comments DROP CONSTRAINT submission_comments_author_id_foreign;
+ALTER TABLE ONLY public.submission_chapters DROP CONSTRAINT submission_chapters_source_chapter_id_foreign;
+ALTER TABLE ONLY public.submission_chapters DROP CONSTRAINT submission_chapters_publication_id;
+ALTER TABLE ONLY public.submission_chapters DROP CONSTRAINT submission_chapters_primary_contact_id_foreign;
+ALTER TABLE ONLY public.submission_chapters DROP CONSTRAINT submission_chapters_doi_id_foreign;
+ALTER TABLE ONLY public.submission_chapter_settings DROP CONSTRAINT submission_chapter_settings_chapter_id_foreign;
+ALTER TABLE ONLY public.submission_chapter_authors DROP CONSTRAINT submission_chapter_authors_chapter_id_foreign;
+ALTER TABLE ONLY public.submission_chapter_authors DROP CONSTRAINT submission_chapter_authors_author_id_foreign;
+ALTER TABLE ONLY public.subeditor_submission_group DROP CONSTRAINT subeditor_submission_group_user_id;
+ALTER TABLE ONLY public.subeditor_submission_group DROP CONSTRAINT subeditor_submission_group_user_group_id_foreign;
+ALTER TABLE ONLY public.static_page_settings DROP CONSTRAINT static_page_settings_static_page_id;
+ALTER TABLE ONLY public.stage_assignments DROP CONSTRAINT stage_assignments_user_id;
+ALTER TABLE ONLY public.stage_assignments DROP CONSTRAINT stage_assignments_user_group_id;
+ALTER TABLE ONLY public.stage_assignments DROP CONSTRAINT stage_assignments_submission_id_foreign;
+ALTER TABLE ONLY public.spotlights DROP CONSTRAINT spotlights_press_id_foreign;
+ALTER TABLE ONLY public.spotlight_settings DROP CONSTRAINT spotlight_settings_spotlight_id_foreign;
+ALTER TABLE ONLY public.sessions DROP CONSTRAINT sessions_user_id;
+ALTER TABLE ONLY public.series_settings DROP CONSTRAINT series_settings_series_id;
+ALTER TABLE ONLY public.series DROP CONSTRAINT series_review_form_id;
+ALTER TABLE ONLY public.series DROP CONSTRAINT series_press_id;
+ALTER TABLE ONLY public.series_categories DROP CONSTRAINT series_categories_series_id;
+ALTER TABLE ONLY public.series_categories DROP CONSTRAINT series_categories_category_id;
+ALTER TABLE ONLY public.subeditor_submission_group DROP CONSTRAINT section_editors_context_id;
+ALTER TABLE ONLY public.sales_rights DROP CONSTRAINT sales_rights_publication_format_id;
+ALTER TABLE ONLY public.review_rounds DROP CONSTRAINT review_rounds_submission_id_foreign;
+ALTER TABLE ONLY public.review_round_files DROP CONSTRAINT review_round_files_submission_id_foreign;
+ALTER TABLE ONLY public.review_round_files DROP CONSTRAINT review_round_files_submission_file_id_foreign;
+ALTER TABLE ONLY public.review_round_files DROP CONSTRAINT review_round_files_review_round_id_foreign;
+ALTER TABLE ONLY public.review_form_settings DROP CONSTRAINT review_form_settings_review_form_id;
+ALTER TABLE ONLY public.review_form_responses DROP CONSTRAINT review_form_responses_review_id_foreign;
+ALTER TABLE ONLY public.review_form_responses DROP CONSTRAINT review_form_responses_review_form_element_id_foreign;
+ALTER TABLE ONLY public.review_form_elements DROP CONSTRAINT review_form_elements_review_form_id;
+ALTER TABLE ONLY public.review_form_element_settings DROP CONSTRAINT review_form_element_settings_review_form_element_id;
+ALTER TABLE ONLY public.review_files DROP CONSTRAINT review_files_submission_file_id_foreign;
+ALTER TABLE ONLY public.review_files DROP CONSTRAINT review_files_review_id_foreign;
+ALTER TABLE ONLY public.review_assignments DROP CONSTRAINT review_assignments_submission_id_foreign;
+ALTER TABLE ONLY public.review_assignments DROP CONSTRAINT review_assignments_reviewer_id_foreign;
+ALTER TABLE ONLY public.review_assignments DROP CONSTRAINT review_assignments_review_round_id_foreign;
+ALTER TABLE ONLY public.review_assignments DROP CONSTRAINT review_assignments_review_form_id_foreign;
+ALTER TABLE ONLY public.representatives DROP CONSTRAINT representatives_submission_id;
+ALTER TABLE ONLY public.query_participants DROP CONSTRAINT query_participants_user_id_foreign;
+ALTER TABLE ONLY public.query_participants DROP CONSTRAINT query_participants_query_id_foreign;
+ALTER TABLE ONLY public.publications DROP CONSTRAINT publications_submission_id;
+ALTER TABLE ONLY public.publications DROP CONSTRAINT publications_series_id;
+ALTER TABLE ONLY public.publications DROP CONSTRAINT publications_doi_id_foreign;
+ALTER TABLE ONLY public.publications DROP CONSTRAINT publications_author_id;
+ALTER TABLE ONLY public.publication_settings DROP CONSTRAINT publication_settings_publication_id_foreign;
+ALTER TABLE ONLY public.publication_formats DROP CONSTRAINT publication_formats_publication_id;
+ALTER TABLE ONLY public.publication_formats DROP CONSTRAINT publication_formats_doi_id_foreign;
+ALTER TABLE ONLY public.publication_format_settings DROP CONSTRAINT publication_format_settings_publication_format_id;
+ALTER TABLE ONLY public.publication_dates DROP CONSTRAINT publication_dates_publication_format_id;
+ALTER TABLE ONLY public.publication_categories DROP CONSTRAINT publication_categories_publication_id_foreign;
+ALTER TABLE ONLY public.publication_categories DROP CONSTRAINT publication_categories_category_id_foreign;
+ALTER TABLE ONLY public.press_settings DROP CONSTRAINT press_settings_press_id_foreign;
+ALTER TABLE ONLY public.notifications DROP CONSTRAINT notifications_user_id_foreign;
+ALTER TABLE ONLY public.notifications DROP CONSTRAINT notifications_context_id_foreign;
+ALTER TABLE ONLY public.notification_subscription_settings DROP CONSTRAINT notification_subscription_settings_user_id_foreign;
+ALTER TABLE ONLY public.notification_subscription_settings DROP CONSTRAINT notification_subscription_settings_context_foreign;
+ALTER TABLE ONLY public.notification_settings DROP CONSTRAINT notification_settings_notification_id_foreign;
+ALTER TABLE ONLY public.notes DROP CONSTRAINT notes_user_id_foreign;
+ALTER TABLE ONLY public.new_releases DROP CONSTRAINT new_releases_submission_id;
+ALTER TABLE ONLY public.navigation_menu_item_settings DROP CONSTRAINT navigation_menu_item_settings_navigation_menu_id;
+ALTER TABLE ONLY public.navigation_menu_item_assignments DROP CONSTRAINT navigation_menu_item_assignments_navigation_menu_item_id_foreig;
+ALTER TABLE ONLY public.navigation_menu_item_assignments DROP CONSTRAINT navigation_menu_item_assignments_navigation_menu_id_foreign;
+ALTER TABLE ONLY public.metrics_counter_submission_monthly DROP CONSTRAINT msm_submission_id_foreign;
+ALTER TABLE ONLY public.metrics_counter_submission_monthly DROP CONSTRAINT msm_context_id_foreign;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly DROP CONSTRAINT msim_submission_id_foreign;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly DROP CONSTRAINT msim_institution_id_foreign;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly DROP CONSTRAINT msim_context_id_foreign;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily DROP CONSTRAINT msid_submission_id_foreign;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily DROP CONSTRAINT msid_institution_id_foreign;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily DROP CONSTRAINT msid_context_id_foreign;
+ALTER TABLE ONLY public.metrics_submission_geo_monthly DROP CONSTRAINT msgm_submission_id_foreign;
+ALTER TABLE ONLY public.metrics_submission_geo_monthly DROP CONSTRAINT msgm_context_id_foreign;
+ALTER TABLE ONLY public.metrics_submission_geo_daily DROP CONSTRAINT msgd_submission_id_foreign;
+ALTER TABLE ONLY public.metrics_submission_geo_daily DROP CONSTRAINT msgd_context_id_foreign;
+ALTER TABLE ONLY public.metrics_counter_submission_daily DROP CONSTRAINT msd_submission_id_foreign;
+ALTER TABLE ONLY public.metrics_counter_submission_daily DROP CONSTRAINT msd_context_id_foreign;
+ALTER TABLE ONLY public.metrics_submission DROP CONSTRAINT metrics_submission_submission_id_foreign;
+ALTER TABLE ONLY public.metrics_submission DROP CONSTRAINT metrics_submission_submission_file_id_foreign;
+ALTER TABLE ONLY public.metrics_submission DROP CONSTRAINT metrics_submission_representation_id_foreign;
+ALTER TABLE ONLY public.metrics_submission DROP CONSTRAINT metrics_submission_context_id_foreign;
+ALTER TABLE ONLY public.metrics_submission DROP CONSTRAINT metrics_submission_chapter_id_foreign;
+ALTER TABLE ONLY public.metrics_series DROP CONSTRAINT metrics_series_series_id_foreign;
+ALTER TABLE ONLY public.metrics_series DROP CONSTRAINT metrics_series_context_id_foreign;
+ALTER TABLE ONLY public.metrics_context DROP CONSTRAINT metrics_context_context_id_foreign;
+ALTER TABLE ONLY public.markets DROP CONSTRAINT markets_publication_format_id;
+ALTER TABLE ONLY public.library_files DROP CONSTRAINT library_files_submission_id_foreign;
+ALTER TABLE ONLY public.library_files DROP CONSTRAINT library_files_context_id;
+ALTER TABLE ONLY public.library_file_settings DROP CONSTRAINT library_file_settings_file_id_foreign;
+ALTER TABLE ONLY public.institutions DROP CONSTRAINT institutions_context_id_foreign;
+ALTER TABLE ONLY public.institution_settings DROP CONSTRAINT institution_settings_institution_id_foreign;
+ALTER TABLE ONLY public.institution_ip DROP CONSTRAINT institution_ip_institution_id_foreign;
+ALTER TABLE ONLY public.identification_codes DROP CONSTRAINT identification_codes_publication_format_id;
+ALTER TABLE ONLY public.genres DROP CONSTRAINT genres_context_id_foreign;
+ALTER TABLE ONLY public.genre_settings DROP CONSTRAINT genre_settings_genre_id_foreign;
+ALTER TABLE ONLY public.filters DROP CONSTRAINT filters_filter_group_id_foreign;
+ALTER TABLE ONLY public.filter_settings DROP CONSTRAINT filter_settings_filter_id_foreign;
+ALTER TABLE ONLY public.features DROP CONSTRAINT features_submission_id_foreign;
+ALTER TABLE ONLY public.event_log DROP CONSTRAINT event_log_user_id_foreign;
+ALTER TABLE ONLY public.event_log_settings DROP CONSTRAINT event_log_settings_log_id;
+ALTER TABLE ONLY public.email_templates_settings DROP CONSTRAINT email_templates_settings_email_id;
+ALTER TABLE ONLY public.email_templates DROP CONSTRAINT email_templates_context_id_foreign;
+ALTER TABLE ONLY public.email_log_users DROP CONSTRAINT email_log_users_user_id_foreign;
+ALTER TABLE ONLY public.email_log_users DROP CONSTRAINT email_log_users_email_log_id_foreign;
+ALTER TABLE ONLY public.edit_decisions DROP CONSTRAINT edit_decisions_submission_id;
+ALTER TABLE ONLY public.edit_decisions DROP CONSTRAINT edit_decisions_review_round_id_foreign;
+ALTER TABLE ONLY public.edit_decisions DROP CONSTRAINT edit_decisions_editor_id;
+ALTER TABLE ONLY public.dois DROP CONSTRAINT dois_context_id_foreign;
+ALTER TABLE ONLY public.doi_settings DROP CONSTRAINT doi_settings_doi_id_foreign;
+ALTER TABLE ONLY public.data_object_tombstone_settings DROP CONSTRAINT data_object_tombstone_settings_tombstone_id;
+ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects DROP CONSTRAINT data_object_tombstone_oai_set_objects_tombstone_id;
+ALTER TABLE ONLY public.controlled_vocab_entries DROP CONSTRAINT controlled_vocab_entries_controlled_vocab_id_foreign;
+ALTER TABLE ONLY public.completed_payments DROP CONSTRAINT completed_payments_user_id_foreign;
+ALTER TABLE ONLY public.completed_payments DROP CONSTRAINT completed_payments_context_id;
+ALTER TABLE ONLY public.citations DROP CONSTRAINT citations_publication;
+ALTER TABLE ONLY public.citation_settings DROP CONSTRAINT citation_settings_citation_id;
+ALTER TABLE ONLY public.category_settings DROP CONSTRAINT category_settings_category_id_foreign;
+ALTER TABLE ONLY public.categories DROP CONSTRAINT categories_parent_id_foreign;
+ALTER TABLE ONLY public.categories DROP CONSTRAINT categories_context_id_foreign;
+ALTER TABLE ONLY public.controlled_vocab_entry_settings DROP CONSTRAINT c_v_e_s_entry_id;
+ALTER TABLE ONLY public.authors DROP CONSTRAINT authors_user_group_id_foreign;
+ALTER TABLE ONLY public.authors DROP CONSTRAINT authors_publication_id_foreign;
+ALTER TABLE ONLY public.author_settings DROP CONSTRAINT author_settings_author_id;
+ALTER TABLE ONLY public.navigation_menu_item_assignment_settings DROP CONSTRAINT assignment_settings_navigation_menu_item_assignment_id;
+ALTER TABLE ONLY public.announcements DROP CONSTRAINT announcements_type_id_foreign;
+ALTER TABLE ONLY public.announcement_types DROP CONSTRAINT announcement_types_context_id_foreign;
+ALTER TABLE ONLY public.announcement_type_settings DROP CONSTRAINT announcement_type_settings_type_id_foreign;
+ALTER TABLE ONLY public.announcement_settings DROP CONSTRAINT announcement_settings_announcement_id_foreign;
+ALTER TABLE ONLY public.access_keys DROP CONSTRAINT access_keys_user_id_foreign;
+DROP INDEX public.ustr_submission_id;
+DROP INDEX public.ustr_submission_file_id;
+DROP INDEX public.ustr_representation_id;
+DROP INDEX public.ustr_context_id;
+DROP INDEX public.ustr_chapter_id;
+DROP INDEX public.usti_submission_id;
+DROP INDEX public.usti_submission_file_id;
+DROP INDEX public.usti_representation_id;
+DROP INDEX public.usti_context_id;
+DROP INDEX public.usti_chapter_id;
+DROP INDEX public.ust_submission_id;
+DROP INDEX public.ust_submission_file_id;
+DROP INDEX public.ust_series_id;
+DROP INDEX public.ust_representation_id;
+DROP INDEX public.ust_context_id;
+DROP INDEX public.ust_chapter_id;
+DROP INDEX public.usir_submission_id;
+DROP INDEX public.usir_submission_file_id;
+DROP INDEX public.usir_representation_id;
+DROP INDEX public.usir_context_id;
+DROP INDEX public.usir_chapter_id;
+DROP INDEX public.usii_submission_id;
+DROP INDEX public.usii_submission_file_id;
+DROP INDEX public.usii_representation_id;
+DROP INDEX public.usii_context_id;
+DROP INDEX public.usii_chapter_id;
+DROP INDEX public.usi_institution_id;
+DROP INDEX public.users_username;
+DROP INDEX public.users_email;
+DROP INDEX public.user_user_groups_user_id;
+DROP INDEX public.user_user_groups_user_group_id;
+DROP INDEX public.user_settings_user_id;
+DROP INDEX public.user_settings_locale_setting_name_index;
+DROP INDEX public.user_interests_user_id;
+DROP INDEX public.user_interests_controlled_vocab_entry_id;
+DROP INDEX public.user_groups_user_group_id;
+DROP INDEX public.user_groups_role_id;
+DROP INDEX public.user_groups_context_id;
+DROP INDEX public.user_group_stage_user_group_id;
+DROP INDEX public.user_group_stage_stage_id;
+DROP INDEX public.user_group_stage_context_id;
+DROP INDEX public.user_group_settings_user_group_id;
+DROP INDEX public.temporary_files_user_id;
+DROP INDEX public.submissions_context_id;
+DROP INDEX public.submission_settings_submission_id;
+DROP INDEX public.submission_search_objects_submission_id;
+DROP INDEX public.submission_search_object_keywords_object_id;
+DROP INDEX public.submission_search_object_keywords_keyword_id;
+DROP INDEX public.submission_files_uploader_user_id;
+DROP INDEX public.submission_files_submission_id;
+DROP INDEX public.submission_files_stage_assoc;
+DROP INDEX public.submission_files_source_submission_file_id;
+DROP INDEX public.submission_files_genre_id;
+DROP INDEX public.submission_files_file_id;
+DROP INDEX public.submission_files_doi_id;
+DROP INDEX public.submission_file_settings_submission_file_id;
+DROP INDEX public.submission_file_revisions_submission_file_id;
+DROP INDEX public.submission_file_revisions_file_id;
+DROP INDEX public.submission_comments_submission_id;
+DROP INDEX public.submission_comments_author_id;
+DROP INDEX public.submission_chapters_source_chapter_id;
+DROP INDEX public.submission_chapters_publication_id;
+DROP INDEX public.submission_chapters_primary_contact_id;
+DROP INDEX public.submission_chapter_settings_chapter_id;
+DROP INDEX public.submission_chapter_authors_chapter_id;
+DROP INDEX public.submission_chapter_authors_author_id;
+DROP INDEX public.subeditor_submission_group_user_id;
+DROP INDEX public.subeditor_submission_group_user_group_id;
+DROP INDEX public.subeditor_submission_group_context_id;
+DROP INDEX public.subeditor_submission_group_assoc_id;
+DROP INDEX public.static_page_settings_static_page_id;
+DROP INDEX public.stage_assignments_user_id;
+DROP INDEX public.stage_assignments_user_group_id;
+DROP INDEX public.stage_assignments_submission_id;
+DROP INDEX public.spotlights_press_id;
+DROP INDEX public.spotlights_assoc;
+DROP INDEX public.spotlight_settings_id;
+DROP INDEX public.sessions_user_id;
+DROP INDEX public.series_settings_series_id;
+DROP INDEX public.series_review_form_id;
+DROP INDEX public.series_press_id;
+DROP INDEX public.series_categories_series_id;
+DROP INDEX public.series_categories_category_id;
+DROP INDEX public.sales_rights_publication_format_id;
+DROP INDEX public.review_rounds_submission_id;
+DROP INDEX public.review_round_files_submission_id;
+DROP INDEX public.review_round_files_submission_file_id;
+DROP INDEX public.review_round_files_review_round_id;
+DROP INDEX public.review_form_settings_review_form_id;
+DROP INDEX public.review_form_responses_unique;
+DROP INDEX public.review_form_responses_review_id;
+DROP INDEX public.review_form_responses_review_form_element_id;
+DROP INDEX public.review_form_elements_review_form_id;
+DROP INDEX public.review_form_element_settings_review_form_element_id;
+DROP INDEX public.review_files_submission_file_id;
+DROP INDEX public.review_files_review_id;
+DROP INDEX public.review_assignments_submission_id;
+DROP INDEX public.review_assignments_reviewer_review;
+DROP INDEX public.review_assignments_reviewer_id;
+DROP INDEX public.review_assignments_form_id;
+DROP INDEX public.review_assignment_reviewer_round;
+DROP INDEX public.representatives_submission_id;
+DROP INDEX public.query_participants_user_id;
+DROP INDEX public.query_participants_query_id;
+DROP INDEX public.queries_assoc_id;
+DROP INDEX public.publications_submission_id;
+DROP INDEX public.publications_section_id;
+DROP INDEX public.publications_primary_contact_id;
+DROP INDEX public.publications_doi_id;
+DROP INDEX public.publication_settings_name_value;
+DROP INDEX public.publication_formats_publication_id;
+DROP INDEX public.publication_formats_doi_id;
+DROP INDEX public.publication_format_submission_id;
+DROP INDEX public.publication_format_id_key;
+DROP INDEX public.publication_dates_publication_format_id;
+DROP INDEX public.publication_categories_publication_id;
+DROP INDEX public.publication_categories_category_id;
+DROP INDEX public.press_settings_press_id;
+DROP INDEX public.plugin_settings_plugin_name;
+DROP INDEX public.notifications_user_id_level;
+DROP INDEX public.notifications_user_id;
+DROP INDEX public.notifications_context_id_user_id;
+DROP INDEX public.notifications_context_id_level;
+DROP INDEX public.notifications_context_id;
+DROP INDEX public.notifications_assoc;
+DROP INDEX public.notification_subscription_settings_user_id;
+DROP INDEX public.notification_subscription_settings_context;
+DROP INDEX public.notification_settings_notification_id;
+DROP INDEX public.notes_user_id;
+DROP INDEX public.notes_assoc;
+DROP INDEX public.new_releases_submission_id;
+DROP INDEX public.navigation_menu_item_settings_navigation_menu_item_id;
+DROP INDEX public.navigation_menu_item_assignments_navigation_menu_item_id;
+DROP INDEX public.navigation_menu_item_assignments_navigation_menu_id;
+DROP INDEX public.navigation_menu_item_assignment_settings_n_m_i_a_id;
+DROP INDEX public.msm_context_id_submission_id;
+DROP INDEX public.msim_submission_id;
+DROP INDEX public.msim_institution_id;
+DROP INDEX public.msim_context_id_submission_id;
+DROP INDEX public.msim_context_id;
+DROP INDEX public.msid_submission_id;
+DROP INDEX public.msid_load_id;
+DROP INDEX public.msid_institution_id;
+DROP INDEX public.msid_context_id_submission_id;
+DROP INDEX public.msid_context_id;
+DROP INDEX public.msgm_context_id_submission_id;
+DROP INDEX public.msgd_load_id;
+DROP INDEX public.msgd_context_id_submission_id;
+DROP INDEX public.msd_load_id;
+DROP INDEX public.msd_context_id_submission_id;
+DROP INDEX public.ms_load_id;
+DROP INDEX public.ms_context_id_submission_id_assoc_type_file_type;
+DROP INDEX public.metrics_submission_submission_id;
+DROP INDEX public.metrics_submission_submission_file_id;
+DROP INDEX public.metrics_submission_representation_id;
+DROP INDEX public.metrics_submission_geo_monthly_submission_id;
+DROP INDEX public.metrics_submission_geo_monthly_context_id;
+DROP INDEX public.metrics_submission_geo_daily_submission_id;
+DROP INDEX public.metrics_submission_geo_daily_context_id;
+DROP INDEX public.metrics_submission_context_id;
+DROP INDEX public.metrics_submission_chapter_id;
+DROP INDEX public.metrics_series_series_id;
+DROP INDEX public.metrics_series_load_id;
+DROP INDEX public.metrics_series_context_id_series_id;
+DROP INDEX public.metrics_series_context_id;
+DROP INDEX public.metrics_counter_submission_monthly_submission_id;
+DROP INDEX public.metrics_counter_submission_monthly_context_id;
+DROP INDEX public.metrics_counter_submission_daily_submission_id;
+DROP INDEX public.metrics_counter_submission_daily_context_id;
+DROP INDEX public.metrics_context_load_id;
+DROP INDEX public.metrics_context_context_id;
+DROP INDEX public.markets_publication_format_id;
+DROP INDEX public.library_files_submission_id;
+DROP INDEX public.library_files_context_id;
+DROP INDEX public.library_file_settings_file_id;
+DROP INDEX public.jobs_queue_reserved_at_index;
+DROP INDEX public.institutions_context_id;
+DROP INDEX public.institution_settings_institution_id;
+DROP INDEX public.institution_ip_start;
+DROP INDEX public.institution_ip_institution_id;
+DROP INDEX public.institution_ip_end;
+DROP INDEX public.identification_codes_publication_format_id;
+DROP INDEX public.identification_codes_key;
+DROP INDEX public.genres_context_id;
+DROP INDEX public.genre_settings_genre_id;
+DROP INDEX public.format_sales_rights_pkey;
+DROP INDEX public.format_representatives_pkey;
+DROP INDEX public.format_publication_dates_pkey;
+DROP INDEX public.format_markets_pkey;
+DROP INDEX public.filters_filter_group_id;
+DROP INDEX public.filter_settings_id;
+DROP INDEX public.features_submission_id;
+DROP INDEX public.event_log_user_id;
+DROP INDEX public.event_log_settings_name_value;
+DROP INDEX public.event_log_settings_log_id;
+DROP INDEX public.event_log_assoc;
+DROP INDEX public.email_templates_settings_email_id;
+DROP INDEX public.email_templates_context_id;
+DROP INDEX public.email_templates_alternate_to;
+DROP INDEX public.email_log_users_user_id;
+DROP INDEX public.email_log_users_email_log_id;
+DROP INDEX public.email_log_assoc;
+DROP INDEX public.edit_decisions_submission_id;
+DROP INDEX public.edit_decisions_review_round_id;
+DROP INDEX public.edit_decisions_editor_id;
+DROP INDEX public.dois_context_id;
+DROP INDEX public.doi_settings_doi_id;
+DROP INDEX public.data_object_tombstones_data_object_id;
+DROP INDEX public.data_object_tombstone_settings_tombstone_id;
+DROP INDEX public.data_object_tombstone_oai_set_objects_tombstone_id;
+DROP INDEX public.controlled_vocab_entries_cv_id;
+DROP INDEX public.controlled_vocab_entries_controlled_vocab_id;
+DROP INDEX public.completed_payments_user_id;
+DROP INDEX public.completed_payments_context_id;
+DROP INDEX public.citations_publication;
+DROP INDEX public.citation_settings_citation_id;
+DROP INDEX public.chapters_chapter_id;
+DROP INDEX public.category_settings_category_id;
+DROP INDEX public.category_parent_id;
+DROP INDEX public.category_context_parent_id;
+DROP INDEX public.category_context_id;
+DROP INDEX public.c_v_e_s_entry_id;
+DROP INDEX public.authors_user_group_id;
+DROP INDEX public.author_settings_author_id;
+DROP INDEX public.announcements_type_id;
+DROP INDEX public.announcements_assoc;
+DROP INDEX public.announcement_types_context_id;
+DROP INDEX public.announcement_type_settings_type_id;
+DROP INDEX public.announcement_settings_announcement_id;
+DROP INDEX public.access_keys_user_id;
+DROP INDEX public.access_keys_hash;
+ALTER TABLE ONLY public.versions DROP CONSTRAINT versions_unique;
+ALTER TABLE ONLY public.versions DROP CONSTRAINT versions_pkey;
+ALTER TABLE ONLY public.usage_stats_institution_temporary_records DROP CONSTRAINT usi_load_id_line_number_institution_id;
+ALTER TABLE ONLY public.users DROP CONSTRAINT users_pkey;
+ALTER TABLE ONLY public.user_user_groups DROP CONSTRAINT user_user_groups_unique;
+ALTER TABLE ONLY public.user_user_groups DROP CONSTRAINT user_user_groups_pkey;
+ALTER TABLE ONLY public.user_settings DROP CONSTRAINT user_settings_unique;
+ALTER TABLE ONLY public.user_settings DROP CONSTRAINT user_settings_pkey;
+ALTER TABLE ONLY public.user_interests DROP CONSTRAINT user_interests_pkey;
+ALTER TABLE ONLY public.user_groups DROP CONSTRAINT user_groups_pkey;
+ALTER TABLE ONLY public.user_group_stage DROP CONSTRAINT user_group_stage_unique;
+ALTER TABLE ONLY public.user_group_stage DROP CONSTRAINT user_group_stage_pkey;
+ALTER TABLE ONLY public.user_group_settings DROP CONSTRAINT user_group_settings_unique;
+ALTER TABLE ONLY public.user_group_settings DROP CONSTRAINT user_group_settings_pkey;
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records DROP CONSTRAINT usage_stats_unique_title_requests_temporary_records_pkey;
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records DROP CONSTRAINT usage_stats_unique_title_investigations_temporary_records_pkey;
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records DROP CONSTRAINT usage_stats_unique_item_requests_temporary_records_pkey;
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records DROP CONSTRAINT usage_stats_unique_item_investigations_temporary_records_pkey;
+ALTER TABLE ONLY public.usage_stats_total_temporary_records DROP CONSTRAINT usage_stats_total_temporary_records_pkey;
+ALTER TABLE ONLY public.usage_stats_institution_temporary_records DROP CONSTRAINT usage_stats_institution_temporary_records_pkey;
+ALTER TABLE ONLY public.user_interests DROP CONSTRAINT u_e_pkey;
+ALTER TABLE ONLY public.temporary_files DROP CONSTRAINT temporary_files_pkey;
+ALTER TABLE ONLY public.submissions DROP CONSTRAINT submissions_pkey;
+ALTER TABLE ONLY public.submission_settings DROP CONSTRAINT submission_settings_unique;
+ALTER TABLE ONLY public.submission_settings DROP CONSTRAINT submission_settings_pkey;
+ALTER TABLE ONLY public.submission_search_objects DROP CONSTRAINT submission_search_objects_pkey;
+ALTER TABLE ONLY public.submission_search_object_keywords DROP CONSTRAINT submission_search_object_keywords_unique;
+ALTER TABLE ONLY public.submission_search_object_keywords DROP CONSTRAINT submission_search_object_keywords_pkey;
+ALTER TABLE ONLY public.submission_search_keyword_list DROP CONSTRAINT submission_search_keyword_text;
+ALTER TABLE ONLY public.submission_search_keyword_list DROP CONSTRAINT submission_search_keyword_list_pkey;
+ALTER TABLE ONLY public.submission_files DROP CONSTRAINT submission_files_pkey;
+ALTER TABLE ONLY public.submission_file_settings DROP CONSTRAINT submission_file_settings_unique;
+ALTER TABLE ONLY public.submission_file_settings DROP CONSTRAINT submission_file_settings_pkey;
+ALTER TABLE ONLY public.submission_file_revisions DROP CONSTRAINT submission_file_revisions_pkey;
+ALTER TABLE ONLY public.submission_comments DROP CONSTRAINT submission_comments_pkey;
+ALTER TABLE ONLY public.submission_chapters DROP CONSTRAINT submission_chapters_pkey;
+ALTER TABLE ONLY public.submission_chapter_settings DROP CONSTRAINT submission_chapter_settings_unique;
+ALTER TABLE ONLY public.submission_chapter_settings DROP CONSTRAINT submission_chapter_settings_pkey;
+ALTER TABLE ONLY public.subeditor_submission_group DROP CONSTRAINT subeditor_submission_group_pkey;
+ALTER TABLE ONLY public.static_pages DROP CONSTRAINT static_pages_pkey;
+ALTER TABLE ONLY public.static_page_settings DROP CONSTRAINT static_page_settings_pkey;
+ALTER TABLE ONLY public.stage_assignments DROP CONSTRAINT stage_assignments_pkey;
+ALTER TABLE ONLY public.stage_assignments DROP CONSTRAINT stage_assignment;
+ALTER TABLE ONLY public.spotlights DROP CONSTRAINT spotlights_pkey;
+ALTER TABLE ONLY public.spotlight_settings DROP CONSTRAINT spotlight_settings_unique;
+ALTER TABLE ONLY public.spotlight_settings DROP CONSTRAINT spotlight_settings_pkey;
+ALTER TABLE ONLY public.site_settings DROP CONSTRAINT site_settings_unique;
+ALTER TABLE ONLY public.site_settings DROP CONSTRAINT site_settings_pkey;
+ALTER TABLE ONLY public.site DROP CONSTRAINT site_pkey;
+ALTER TABLE ONLY public.sessions DROP CONSTRAINT sessions_pkey;
+ALTER TABLE ONLY public.series_settings DROP CONSTRAINT series_settings_unique;
+ALTER TABLE ONLY public.series_settings DROP CONSTRAINT series_settings_pkey;
+ALTER TABLE ONLY public.series DROP CONSTRAINT series_pkey;
+ALTER TABLE ONLY public.series DROP CONSTRAINT series_path;
+ALTER TABLE ONLY public.series_categories DROP CONSTRAINT series_categories_id;
+ALTER TABLE ONLY public.subeditor_submission_group DROP CONSTRAINT section_editors_unique;
+ALTER TABLE ONLY public.scheduled_tasks DROP CONSTRAINT scheduled_tasks_unique;
+ALTER TABLE ONLY public.scheduled_tasks DROP CONSTRAINT scheduled_tasks_pkey;
+ALTER TABLE ONLY public.sales_rights DROP CONSTRAINT sales_rights_pkey;
+ALTER TABLE ONLY public.review_rounds DROP CONSTRAINT review_rounds_submission_id_stage_id_round_pkey;
+ALTER TABLE ONLY public.review_rounds DROP CONSTRAINT review_rounds_pkey;
+ALTER TABLE ONLY public.review_round_files DROP CONSTRAINT review_round_files_unique;
+ALTER TABLE ONLY public.review_round_files DROP CONSTRAINT review_round_files_pkey;
+ALTER TABLE ONLY public.review_forms DROP CONSTRAINT review_forms_pkey;
+ALTER TABLE ONLY public.review_form_settings DROP CONSTRAINT review_form_settings_unique;
+ALTER TABLE ONLY public.review_form_settings DROP CONSTRAINT review_form_settings_pkey;
+ALTER TABLE ONLY public.review_form_responses DROP CONSTRAINT review_form_responses_pkey;
+ALTER TABLE ONLY public.review_form_elements DROP CONSTRAINT review_form_elements_pkey;
+ALTER TABLE ONLY public.review_form_element_settings DROP CONSTRAINT review_form_element_settings_unique;
+ALTER TABLE ONLY public.review_form_element_settings DROP CONSTRAINT review_form_element_settings_pkey;
+ALTER TABLE ONLY public.review_files DROP CONSTRAINT review_files_unique;
+ALTER TABLE ONLY public.review_files DROP CONSTRAINT review_files_pkey;
+ALTER TABLE ONLY public.review_assignments DROP CONSTRAINT review_assignments_pkey;
+ALTER TABLE ONLY public.representatives DROP CONSTRAINT representatives_pkey;
+ALTER TABLE ONLY public.queued_payments DROP CONSTRAINT queued_payments_pkey;
+ALTER TABLE ONLY public.query_participants DROP CONSTRAINT query_participants_unique;
+ALTER TABLE ONLY public.query_participants DROP CONSTRAINT query_participants_pkey;
+ALTER TABLE ONLY public.queries DROP CONSTRAINT queries_pkey;
+ALTER TABLE ONLY public.publications DROP CONSTRAINT publications_pkey;
+ALTER TABLE ONLY public.publication_settings DROP CONSTRAINT publication_settings_unique;
+ALTER TABLE ONLY public.publication_settings DROP CONSTRAINT publication_settings_pkey;
+ALTER TABLE ONLY public.publication_formats DROP CONSTRAINT publication_formats_pkey;
+ALTER TABLE ONLY public.publication_format_settings DROP CONSTRAINT publication_format_settings_unique;
+ALTER TABLE ONLY public.publication_format_settings DROP CONSTRAINT publication_format_settings_pkey;
+ALTER TABLE ONLY public.publication_dates DROP CONSTRAINT publication_dates_pkey;
+ALTER TABLE ONLY public.publication_categories DROP CONSTRAINT publication_categories_pkey;
+ALTER TABLE ONLY public.publication_categories DROP CONSTRAINT publication_categories_id;
+ALTER TABLE ONLY public.presses DROP CONSTRAINT presses_pkey;
+ALTER TABLE ONLY public.press_settings DROP CONSTRAINT press_settings_unique;
+ALTER TABLE ONLY public.press_settings DROP CONSTRAINT press_settings_pkey;
+ALTER TABLE ONLY public.presses DROP CONSTRAINT press_path;
+ALTER TABLE ONLY public.features DROP CONSTRAINT press_features_unique;
+ALTER TABLE ONLY public.plugin_settings DROP CONSTRAINT plugin_settings_unique;
+ALTER TABLE ONLY public.plugin_settings DROP CONSTRAINT plugin_settings_pkey;
+ALTER TABLE ONLY public.oai_resumption_tokens DROP CONSTRAINT oai_resumption_tokens_unique;
+ALTER TABLE ONLY public.oai_resumption_tokens DROP CONSTRAINT oai_resumption_tokens_pkey;
+ALTER TABLE ONLY public.notifications DROP CONSTRAINT notifications_pkey;
+ALTER TABLE ONLY public.notification_subscription_settings DROP CONSTRAINT notification_subscription_settings_pkey;
+ALTER TABLE ONLY public.notification_settings DROP CONSTRAINT notification_settings_unique;
+ALTER TABLE ONLY public.notification_settings DROP CONSTRAINT notification_settings_pkey;
+ALTER TABLE ONLY public.notes DROP CONSTRAINT notes_pkey;
+ALTER TABLE ONLY public.new_releases DROP CONSTRAINT new_releases_unique;
+ALTER TABLE ONLY public.new_releases DROP CONSTRAINT new_releases_pkey;
+ALTER TABLE ONLY public.navigation_menus DROP CONSTRAINT navigation_menus_pkey;
+ALTER TABLE ONLY public.navigation_menu_items DROP CONSTRAINT navigation_menu_items_pkey;
+ALTER TABLE ONLY public.navigation_menu_item_settings DROP CONSTRAINT navigation_menu_item_settings_unique;
+ALTER TABLE ONLY public.navigation_menu_item_settings DROP CONSTRAINT navigation_menu_item_settings_pkey;
+ALTER TABLE ONLY public.navigation_menu_item_assignments DROP CONSTRAINT navigation_menu_item_assignments_pkey;
+ALTER TABLE ONLY public.navigation_menu_item_assignment_settings DROP CONSTRAINT navigation_menu_item_assignment_settings_unique;
+ALTER TABLE ONLY public.navigation_menu_item_assignment_settings DROP CONSTRAINT navigation_menu_item_assignment_settings_pkey;
+ALTER TABLE ONLY public.metrics_counter_submission_monthly DROP CONSTRAINT msm_uc_context_id_submission_id_month;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly DROP CONSTRAINT msim_uc_context_id_submission_id_institution_id_month;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily DROP CONSTRAINT msid_uc_load_id_context_id_submission_id_institution_id_date;
+ALTER TABLE ONLY public.metrics_submission_geo_monthly DROP CONSTRAINT msgm_uc_context_submission_c_r_c_month;
+ALTER TABLE ONLY public.metrics_submission_geo_daily DROP CONSTRAINT msgd_uc_load_context_submission_c_r_c_date;
+ALTER TABLE ONLY public.metrics_counter_submission_daily DROP CONSTRAINT msd_uc_load_id_context_id_submission_id_date;
+ALTER TABLE ONLY public.metrics_submission DROP CONSTRAINT metrics_submission_pkey;
+ALTER TABLE ONLY public.metrics_submission_geo_monthly DROP CONSTRAINT metrics_submission_geo_monthly_pkey;
+ALTER TABLE ONLY public.metrics_submission_geo_daily DROP CONSTRAINT metrics_submission_geo_daily_pkey;
+ALTER TABLE ONLY public.metrics_series DROP CONSTRAINT metrics_series_pkey;
+ALTER TABLE ONLY public.metrics_counter_submission_monthly DROP CONSTRAINT metrics_counter_submission_monthly_pkey;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly DROP CONSTRAINT metrics_counter_submission_institution_monthly_pkey;
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily DROP CONSTRAINT metrics_counter_submission_institution_daily_pkey;
+ALTER TABLE ONLY public.metrics_counter_submission_daily DROP CONSTRAINT metrics_counter_submission_daily_pkey;
+ALTER TABLE ONLY public.metrics_context DROP CONSTRAINT metrics_context_pkey;
+ALTER TABLE ONLY public.markets DROP CONSTRAINT markets_pkey;
+ALTER TABLE ONLY public.library_files DROP CONSTRAINT library_files_pkey;
+ALTER TABLE ONLY public.library_file_settings DROP CONSTRAINT library_file_settings_unique;
+ALTER TABLE ONLY public.library_file_settings DROP CONSTRAINT library_file_settings_pkey;
+ALTER TABLE ONLY public.jobs DROP CONSTRAINT jobs_pkey;
+ALTER TABLE ONLY public.job_batches DROP CONSTRAINT job_batches_pkey;
+ALTER TABLE ONLY public.institutions DROP CONSTRAINT institutions_pkey;
+ALTER TABLE ONLY public.institution_settings DROP CONSTRAINT institution_settings_unique;
+ALTER TABLE ONLY public.institution_settings DROP CONSTRAINT institution_settings_pkey;
+ALTER TABLE ONLY public.institution_ip DROP CONSTRAINT institution_ip_pkey;
+ALTER TABLE ONLY public.identification_codes DROP CONSTRAINT identification_codes_pkey;
+ALTER TABLE ONLY public.genres DROP CONSTRAINT genres_pkey;
+ALTER TABLE ONLY public.genre_settings DROP CONSTRAINT genre_settings_unique;
+ALTER TABLE ONLY public.genre_settings DROP CONSTRAINT genre_settings_pkey;
+ALTER TABLE ONLY public.filters DROP CONSTRAINT filters_pkey;
+ALTER TABLE ONLY public.filter_settings DROP CONSTRAINT filter_settings_unique;
+ALTER TABLE ONLY public.filter_settings DROP CONSTRAINT filter_settings_pkey;
+ALTER TABLE ONLY public.filter_groups DROP CONSTRAINT filter_groups_symbolic;
+ALTER TABLE ONLY public.filter_groups DROP CONSTRAINT filter_groups_pkey;
+ALTER TABLE ONLY public.files DROP CONSTRAINT files_pkey;
+ALTER TABLE ONLY public.features DROP CONSTRAINT features_pkey;
+ALTER TABLE ONLY public.failed_jobs DROP CONSTRAINT failed_jobs_pkey;
+ALTER TABLE ONLY public.event_log_settings DROP CONSTRAINT event_log_settings_unique;
+ALTER TABLE ONLY public.event_log_settings DROP CONSTRAINT event_log_settings_pkey;
+ALTER TABLE ONLY public.event_log DROP CONSTRAINT event_log_pkey;
+ALTER TABLE ONLY public.email_templates_settings DROP CONSTRAINT email_templates_settings_unique;
+ALTER TABLE ONLY public.email_templates_settings DROP CONSTRAINT email_templates_settings_pkey;
+ALTER TABLE ONLY public.email_templates DROP CONSTRAINT email_templates_pkey;
+ALTER TABLE ONLY public.email_templates DROP CONSTRAINT email_templates_email_key;
+ALTER TABLE ONLY public.email_templates_default_data DROP CONSTRAINT email_templates_default_data_unique;
+ALTER TABLE ONLY public.email_templates_default_data DROP CONSTRAINT email_templates_default_data_pkey;
+ALTER TABLE ONLY public.email_log_users DROP CONSTRAINT email_log_users_pkey;
+ALTER TABLE ONLY public.email_log_users DROP CONSTRAINT email_log_user_id;
+ALTER TABLE ONLY public.email_log DROP CONSTRAINT email_log_pkey;
+ALTER TABLE ONLY public.edit_decisions DROP CONSTRAINT edit_decisions_pkey;
+ALTER TABLE ONLY public.dois DROP CONSTRAINT dois_pkey;
+ALTER TABLE ONLY public.doi_settings DROP CONSTRAINT doi_settings_unique;
+ALTER TABLE ONLY public.doi_settings DROP CONSTRAINT doi_settings_pkey;
+ALTER TABLE ONLY public.data_object_tombstones DROP CONSTRAINT data_object_tombstones_pkey;
+ALTER TABLE ONLY public.data_object_tombstone_settings DROP CONSTRAINT data_object_tombstone_settings_unique;
+ALTER TABLE ONLY public.data_object_tombstone_settings DROP CONSTRAINT data_object_tombstone_settings_pkey;
+ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects DROP CONSTRAINT data_object_tombstone_oai_set_objects_pkey;
+ALTER TABLE ONLY public.controlled_vocabs DROP CONSTRAINT controlled_vocabs_pkey;
+ALTER TABLE ONLY public.controlled_vocabs DROP CONSTRAINT controlled_vocab_symbolic;
+ALTER TABLE ONLY public.controlled_vocab_entry_settings DROP CONSTRAINT controlled_vocab_entry_settings_pkey;
+ALTER TABLE ONLY public.controlled_vocab_entries DROP CONSTRAINT controlled_vocab_entries_pkey;
+ALTER TABLE ONLY public.completed_payments DROP CONSTRAINT completed_payments_pkey;
+ALTER TABLE ONLY public.citations DROP CONSTRAINT citations_publication_seq;
+ALTER TABLE ONLY public.citations DROP CONSTRAINT citations_pkey;
+ALTER TABLE ONLY public.citation_settings DROP CONSTRAINT citation_settings_unique;
+ALTER TABLE ONLY public.citation_settings DROP CONSTRAINT citation_settings_pkey;
+ALTER TABLE ONLY public.submission_chapter_authors DROP CONSTRAINT chapter_authors_pkey;
+ALTER TABLE ONLY public.category_settings DROP CONSTRAINT category_settings_unique;
+ALTER TABLE ONLY public.category_settings DROP CONSTRAINT category_settings_pkey;
+ALTER TABLE ONLY public.categories DROP CONSTRAINT category_path;
+ALTER TABLE ONLY public.categories DROP CONSTRAINT categories_pkey;
+ALTER TABLE ONLY public.controlled_vocab_entry_settings DROP CONSTRAINT c_v_e_s_pkey;
+ALTER TABLE ONLY public.authors DROP CONSTRAINT authors_pkey;
+ALTER TABLE ONLY public.author_settings DROP CONSTRAINT author_settings_unique;
+ALTER TABLE ONLY public.author_settings DROP CONSTRAINT author_settings_pkey;
+ALTER TABLE ONLY public.announcements DROP CONSTRAINT announcements_pkey;
+ALTER TABLE ONLY public.announcement_types DROP CONSTRAINT announcement_types_pkey;
+ALTER TABLE ONLY public.announcement_type_settings DROP CONSTRAINT announcement_type_settings_unique;
+ALTER TABLE ONLY public.announcement_type_settings DROP CONSTRAINT announcement_type_settings_pkey;
+ALTER TABLE ONLY public.announcement_settings DROP CONSTRAINT announcement_settings_unique;
+ALTER TABLE ONLY public.announcement_settings DROP CONSTRAINT announcement_settings_pkey;
+ALTER TABLE ONLY public.access_keys DROP CONSTRAINT access_keys_pkey;
+ALTER TABLE public.versions ALTER COLUMN version_id DROP DEFAULT;
+ALTER TABLE public.users ALTER COLUMN user_id DROP DEFAULT;
+ALTER TABLE public.user_user_groups ALTER COLUMN user_user_group_id DROP DEFAULT;
+ALTER TABLE public.user_settings ALTER COLUMN user_setting_id DROP DEFAULT;
+ALTER TABLE public.user_interests ALTER COLUMN user_interest_id DROP DEFAULT;
+ALTER TABLE public.user_groups ALTER COLUMN user_group_id DROP DEFAULT;
+ALTER TABLE public.user_group_stage ALTER COLUMN user_group_stage_id DROP DEFAULT;
+ALTER TABLE public.user_group_settings ALTER COLUMN user_group_setting_id DROP DEFAULT;
+ALTER TABLE public.usage_stats_unique_title_requests_temporary_records ALTER COLUMN usage_stats_temp_unique_requests_id DROP DEFAULT;
+ALTER TABLE public.usage_stats_unique_title_investigations_temporary_records ALTER COLUMN usage_stats_temp_unique_investigations_id DROP DEFAULT;
+ALTER TABLE public.usage_stats_unique_item_requests_temporary_records ALTER COLUMN usage_stats_temp_item_id DROP DEFAULT;
+ALTER TABLE public.usage_stats_unique_item_investigations_temporary_records ALTER COLUMN usage_stats_temp_unique_item_id DROP DEFAULT;
+ALTER TABLE public.usage_stats_total_temporary_records ALTER COLUMN usage_stats_temp_total_id DROP DEFAULT;
+ALTER TABLE public.usage_stats_institution_temporary_records ALTER COLUMN usage_stats_temp_institution_id DROP DEFAULT;
+ALTER TABLE public.temporary_files ALTER COLUMN file_id DROP DEFAULT;
+ALTER TABLE public.submissions ALTER COLUMN submission_id DROP DEFAULT;
+ALTER TABLE public.submission_settings ALTER COLUMN submission_setting_id DROP DEFAULT;
+ALTER TABLE public.submission_search_objects ALTER COLUMN object_id DROP DEFAULT;
+ALTER TABLE public.submission_search_object_keywords ALTER COLUMN submission_search_object_keyword_id DROP DEFAULT;
+ALTER TABLE public.submission_search_keyword_list ALTER COLUMN keyword_id DROP DEFAULT;
+ALTER TABLE public.submission_files ALTER COLUMN submission_file_id DROP DEFAULT;
+ALTER TABLE public.submission_file_settings ALTER COLUMN submission_file_setting_id DROP DEFAULT;
+ALTER TABLE public.submission_file_revisions ALTER COLUMN revision_id DROP DEFAULT;
+ALTER TABLE public.submission_comments ALTER COLUMN comment_id DROP DEFAULT;
+ALTER TABLE public.submission_chapters ALTER COLUMN chapter_id DROP DEFAULT;
+ALTER TABLE public.submission_chapter_settings ALTER COLUMN submission_chapter_setting_id DROP DEFAULT;
+ALTER TABLE public.subeditor_submission_group ALTER COLUMN subeditor_submission_group_id DROP DEFAULT;
+ALTER TABLE public.static_pages ALTER COLUMN static_page_id DROP DEFAULT;
+ALTER TABLE public.static_page_settings ALTER COLUMN static_page_setting_id DROP DEFAULT;
+ALTER TABLE public.stage_assignments ALTER COLUMN stage_assignment_id DROP DEFAULT;
+ALTER TABLE public.spotlights ALTER COLUMN spotlight_id DROP DEFAULT;
+ALTER TABLE public.spotlight_settings ALTER COLUMN spotlight_setting_id DROP DEFAULT;
+ALTER TABLE public.site_settings ALTER COLUMN site_setting_id DROP DEFAULT;
+ALTER TABLE public.site ALTER COLUMN site_id DROP DEFAULT;
+ALTER TABLE public.series_settings ALTER COLUMN series_setting_id DROP DEFAULT;
+ALTER TABLE public.series ALTER COLUMN series_id DROP DEFAULT;
+ALTER TABLE public.scheduled_tasks ALTER COLUMN scheduled_task_id DROP DEFAULT;
+ALTER TABLE public.sales_rights ALTER COLUMN sales_rights_id DROP DEFAULT;
+ALTER TABLE public.review_rounds ALTER COLUMN review_round_id DROP DEFAULT;
+ALTER TABLE public.review_round_files ALTER COLUMN review_round_file_id DROP DEFAULT;
+ALTER TABLE public.review_forms ALTER COLUMN review_form_id DROP DEFAULT;
+ALTER TABLE public.review_form_settings ALTER COLUMN review_form_setting_id DROP DEFAULT;
+ALTER TABLE public.review_form_responses ALTER COLUMN review_form_response_id DROP DEFAULT;
+ALTER TABLE public.review_form_elements ALTER COLUMN review_form_element_id DROP DEFAULT;
+ALTER TABLE public.review_form_element_settings ALTER COLUMN review_form_element_setting_id DROP DEFAULT;
+ALTER TABLE public.review_files ALTER COLUMN review_file_id DROP DEFAULT;
+ALTER TABLE public.review_assignments ALTER COLUMN review_id DROP DEFAULT;
+ALTER TABLE public.representatives ALTER COLUMN representative_id DROP DEFAULT;
+ALTER TABLE public.queued_payments ALTER COLUMN queued_payment_id DROP DEFAULT;
+ALTER TABLE public.query_participants ALTER COLUMN query_participant_id DROP DEFAULT;
+ALTER TABLE public.queries ALTER COLUMN query_id DROP DEFAULT;
+ALTER TABLE public.publications ALTER COLUMN publication_id DROP DEFAULT;
+ALTER TABLE public.publication_settings ALTER COLUMN publication_setting_id DROP DEFAULT;
+ALTER TABLE public.publication_formats ALTER COLUMN publication_format_id DROP DEFAULT;
+ALTER TABLE public.publication_format_settings ALTER COLUMN publication_format_setting_id DROP DEFAULT;
+ALTER TABLE public.publication_dates ALTER COLUMN publication_date_id DROP DEFAULT;
+ALTER TABLE public.publication_categories ALTER COLUMN publication_category_id DROP DEFAULT;
+ALTER TABLE public.presses ALTER COLUMN press_id DROP DEFAULT;
+ALTER TABLE public.press_settings ALTER COLUMN press_setting_id DROP DEFAULT;
+ALTER TABLE public.plugin_settings ALTER COLUMN plugin_setting_id DROP DEFAULT;
+ALTER TABLE public.oai_resumption_tokens ALTER COLUMN oai_resumption_token_id DROP DEFAULT;
+ALTER TABLE public.notifications ALTER COLUMN notification_id DROP DEFAULT;
+ALTER TABLE public.notification_subscription_settings ALTER COLUMN setting_id DROP DEFAULT;
+ALTER TABLE public.notification_settings ALTER COLUMN notification_setting_id DROP DEFAULT;
+ALTER TABLE public.notes ALTER COLUMN note_id DROP DEFAULT;
+ALTER TABLE public.new_releases ALTER COLUMN new_release_id DROP DEFAULT;
+ALTER TABLE public.navigation_menus ALTER COLUMN navigation_menu_id DROP DEFAULT;
+ALTER TABLE public.navigation_menu_items ALTER COLUMN navigation_menu_item_id DROP DEFAULT;
+ALTER TABLE public.navigation_menu_item_settings ALTER COLUMN navigation_menu_item_setting_id DROP DEFAULT;
+ALTER TABLE public.navigation_menu_item_assignments ALTER COLUMN navigation_menu_item_assignment_id DROP DEFAULT;
+ALTER TABLE public.navigation_menu_item_assignment_settings ALTER COLUMN navigation_menu_item_assignment_setting_id DROP DEFAULT;
+ALTER TABLE public.metrics_submission_geo_monthly ALTER COLUMN metrics_submission_geo_monthly_id DROP DEFAULT;
+ALTER TABLE public.metrics_submission_geo_daily ALTER COLUMN metrics_submission_geo_daily_id DROP DEFAULT;
+ALTER TABLE public.metrics_submission ALTER COLUMN metrics_submission_id DROP DEFAULT;
+ALTER TABLE public.metrics_series ALTER COLUMN metrics_series_id DROP DEFAULT;
+ALTER TABLE public.metrics_counter_submission_monthly ALTER COLUMN metrics_counter_submission_monthly_id DROP DEFAULT;
+ALTER TABLE public.metrics_counter_submission_institution_monthly ALTER COLUMN metrics_counter_submission_institution_monthly_id DROP DEFAULT;
+ALTER TABLE public.metrics_counter_submission_institution_daily ALTER COLUMN metrics_counter_submission_institution_daily_id DROP DEFAULT;
+ALTER TABLE public.metrics_counter_submission_daily ALTER COLUMN metrics_counter_submission_daily_id DROP DEFAULT;
+ALTER TABLE public.metrics_context ALTER COLUMN metrics_context_id DROP DEFAULT;
+ALTER TABLE public.markets ALTER COLUMN market_id DROP DEFAULT;
+ALTER TABLE public.library_files ALTER COLUMN file_id DROP DEFAULT;
+ALTER TABLE public.library_file_settings ALTER COLUMN library_file_setting_id DROP DEFAULT;
+ALTER TABLE public.jobs ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.institutions ALTER COLUMN institution_id DROP DEFAULT;
+ALTER TABLE public.institution_settings ALTER COLUMN institution_setting_id DROP DEFAULT;
+ALTER TABLE public.institution_ip ALTER COLUMN institution_ip_id DROP DEFAULT;
+ALTER TABLE public.identification_codes ALTER COLUMN identification_code_id DROP DEFAULT;
+ALTER TABLE public.genres ALTER COLUMN genre_id DROP DEFAULT;
+ALTER TABLE public.genre_settings ALTER COLUMN genre_setting_id DROP DEFAULT;
+ALTER TABLE public.filters ALTER COLUMN filter_id DROP DEFAULT;
+ALTER TABLE public.filter_settings ALTER COLUMN filter_setting_id DROP DEFAULT;
+ALTER TABLE public.filter_groups ALTER COLUMN filter_group_id DROP DEFAULT;
+ALTER TABLE public.files ALTER COLUMN file_id DROP DEFAULT;
+ALTER TABLE public.features ALTER COLUMN feature_id DROP DEFAULT;
+ALTER TABLE public.failed_jobs ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.event_log_settings ALTER COLUMN event_log_setting_id DROP DEFAULT;
+ALTER TABLE public.event_log ALTER COLUMN log_id DROP DEFAULT;
+ALTER TABLE public.email_templates_settings ALTER COLUMN email_template_setting_id DROP DEFAULT;
+ALTER TABLE public.email_templates_default_data ALTER COLUMN email_templates_default_data_id DROP DEFAULT;
+ALTER TABLE public.email_templates ALTER COLUMN email_id DROP DEFAULT;
+ALTER TABLE public.email_log_users ALTER COLUMN email_log_user_id DROP DEFAULT;
+ALTER TABLE public.email_log ALTER COLUMN log_id DROP DEFAULT;
+ALTER TABLE public.edit_decisions ALTER COLUMN edit_decision_id DROP DEFAULT;
+ALTER TABLE public.dois ALTER COLUMN doi_id DROP DEFAULT;
+ALTER TABLE public.doi_settings ALTER COLUMN doi_setting_id DROP DEFAULT;
+ALTER TABLE public.data_object_tombstones ALTER COLUMN tombstone_id DROP DEFAULT;
+ALTER TABLE public.data_object_tombstone_settings ALTER COLUMN tombstone_setting_id DROP DEFAULT;
+ALTER TABLE public.data_object_tombstone_oai_set_objects ALTER COLUMN object_id DROP DEFAULT;
+ALTER TABLE public.controlled_vocabs ALTER COLUMN controlled_vocab_id DROP DEFAULT;
+ALTER TABLE public.controlled_vocab_entry_settings ALTER COLUMN controlled_vocab_entry_setting_id DROP DEFAULT;
+ALTER TABLE public.controlled_vocab_entries ALTER COLUMN controlled_vocab_entry_id DROP DEFAULT;
+ALTER TABLE public.completed_payments ALTER COLUMN completed_payment_id DROP DEFAULT;
+ALTER TABLE public.citations ALTER COLUMN citation_id DROP DEFAULT;
+ALTER TABLE public.citation_settings ALTER COLUMN citation_setting_id DROP DEFAULT;
+ALTER TABLE public.category_settings ALTER COLUMN category_setting_id DROP DEFAULT;
+ALTER TABLE public.categories ALTER COLUMN category_id DROP DEFAULT;
+ALTER TABLE public.authors ALTER COLUMN author_id DROP DEFAULT;
+ALTER TABLE public.author_settings ALTER COLUMN author_setting_id DROP DEFAULT;
+ALTER TABLE public.announcements ALTER COLUMN announcement_id DROP DEFAULT;
+ALTER TABLE public.announcement_types ALTER COLUMN type_id DROP DEFAULT;
+ALTER TABLE public.announcement_type_settings ALTER COLUMN announcement_type_setting_id DROP DEFAULT;
+ALTER TABLE public.announcement_settings ALTER COLUMN announcement_setting_id DROP DEFAULT;
+ALTER TABLE public.access_keys ALTER COLUMN access_key_id DROP DEFAULT;
+DROP SEQUENCE public.versions_version_id_seq;
+DROP TABLE public.versions;
+DROP SEQUENCE public.users_user_id_seq;
+DROP TABLE public.users;
+DROP SEQUENCE public.user_user_groups_user_user_group_id_seq;
+DROP TABLE public.user_user_groups;
+DROP SEQUENCE public.user_settings_user_setting_id_seq;
+DROP TABLE public.user_settings;
+DROP SEQUENCE public.user_interests_user_interest_id_seq;
+DROP TABLE public.user_interests;
+DROP SEQUENCE public.user_groups_user_group_id_seq;
+DROP TABLE public.user_groups;
+DROP SEQUENCE public.user_group_stage_user_group_stage_id_seq;
+DROP TABLE public.user_group_stage;
+DROP SEQUENCE public.user_group_settings_user_group_setting_id_seq;
+DROP TABLE public.user_group_settings;
+DROP SEQUENCE public.usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq;
+DROP TABLE public.usage_stats_unique_title_requests_temporary_records;
+DROP SEQUENCE public.usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq;
+DROP TABLE public.usage_stats_unique_title_investigations_temporary_records;
+DROP SEQUENCE public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq;
+DROP TABLE public.usage_stats_unique_item_requests_temporary_records;
+DROP SEQUENCE public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq;
+DROP TABLE public.usage_stats_unique_item_investigations_temporary_records;
+DROP SEQUENCE public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq;
+DROP TABLE public.usage_stats_total_temporary_records;
+DROP SEQUENCE public.usage_stats_institution_tempo_usage_stats_temp_institution__seq;
+DROP TABLE public.usage_stats_institution_temporary_records;
+DROP SEQUENCE public.temporary_files_file_id_seq;
+DROP TABLE public.temporary_files;
+DROP SEQUENCE public.submissions_submission_id_seq;
+DROP TABLE public.submissions;
+DROP SEQUENCE public.submission_settings_submission_setting_id_seq;
+DROP TABLE public.submission_settings;
+DROP SEQUENCE public.submission_search_objects_object_id_seq;
+DROP TABLE public.submission_search_objects;
+DROP SEQUENCE public.submission_search_object_keyw_submission_search_object_keyw_seq;
+DROP TABLE public.submission_search_object_keywords;
+DROP SEQUENCE public.submission_search_keyword_list_keyword_id_seq;
+DROP TABLE public.submission_search_keyword_list;
+DROP SEQUENCE public.submission_files_submission_file_id_seq;
+DROP TABLE public.submission_files;
+DROP SEQUENCE public.submission_file_settings_submission_file_setting_id_seq;
+DROP TABLE public.submission_file_settings;
+DROP SEQUENCE public.submission_file_revisions_revision_id_seq;
+DROP TABLE public.submission_file_revisions;
+DROP SEQUENCE public.submission_comments_comment_id_seq;
+DROP TABLE public.submission_comments;
+DROP SEQUENCE public.submission_chapters_chapter_id_seq;
+DROP TABLE public.submission_chapters;
+DROP SEQUENCE public.submission_chapter_settings_submission_chapter_setting_id_seq;
+DROP TABLE public.submission_chapter_settings;
+DROP TABLE public.submission_chapter_authors;
+DROP SEQUENCE public.subeditor_submission_group_subeditor_submission_group_id_seq;
+DROP TABLE public.subeditor_submission_group;
+DROP SEQUENCE public.static_pages_static_page_id_seq;
+DROP TABLE public.static_pages;
+DROP SEQUENCE public.static_page_settings_static_page_setting_id_seq;
+DROP TABLE public.static_page_settings;
+DROP SEQUENCE public.stage_assignments_stage_assignment_id_seq;
+DROP TABLE public.stage_assignments;
+DROP SEQUENCE public.spotlights_spotlight_id_seq;
+DROP TABLE public.spotlights;
+DROP SEQUENCE public.spotlight_settings_spotlight_setting_id_seq;
+DROP TABLE public.spotlight_settings;
+DROP SEQUENCE public.site_site_id_seq;
+DROP SEQUENCE public.site_settings_site_setting_id_seq;
+DROP TABLE public.site_settings;
+DROP TABLE public.site;
+DROP TABLE public.sessions;
+DROP SEQUENCE public.series_settings_series_setting_id_seq;
+DROP TABLE public.series_settings;
+DROP SEQUENCE public.series_series_id_seq;
+DROP TABLE public.series_categories;
+DROP TABLE public.series;
+DROP SEQUENCE public.scheduled_tasks_scheduled_task_id_seq;
+DROP TABLE public.scheduled_tasks;
+DROP SEQUENCE public.sales_rights_sales_rights_id_seq;
+DROP TABLE public.sales_rights;
+DROP SEQUENCE public.review_rounds_review_round_id_seq;
+DROP TABLE public.review_rounds;
+DROP SEQUENCE public.review_round_files_review_round_file_id_seq;
+DROP TABLE public.review_round_files;
+DROP SEQUENCE public.review_forms_review_form_id_seq;
+DROP TABLE public.review_forms;
+DROP SEQUENCE public.review_form_settings_review_form_setting_id_seq;
+DROP TABLE public.review_form_settings;
+DROP SEQUENCE public.review_form_responses_review_form_response_id_seq;
+DROP TABLE public.review_form_responses;
+DROP SEQUENCE public.review_form_elements_review_form_element_id_seq;
+DROP TABLE public.review_form_elements;
+DROP SEQUENCE public.review_form_element_settings_review_form_element_setting_id_seq;
+DROP TABLE public.review_form_element_settings;
+DROP SEQUENCE public.review_files_review_file_id_seq;
+DROP TABLE public.review_files;
+DROP SEQUENCE public.review_assignments_review_id_seq;
+DROP TABLE public.review_assignments;
+DROP SEQUENCE public.representatives_representative_id_seq;
+DROP TABLE public.representatives;
+DROP SEQUENCE public.queued_payments_queued_payment_id_seq;
+DROP TABLE public.queued_payments;
+DROP SEQUENCE public.query_participants_query_participant_id_seq;
+DROP TABLE public.query_participants;
+DROP SEQUENCE public.queries_query_id_seq;
+DROP TABLE public.queries;
+DROP SEQUENCE public.publications_publication_id_seq;
+DROP TABLE public.publications;
+DROP SEQUENCE public.publication_settings_publication_setting_id_seq;
+DROP TABLE public.publication_settings;
+DROP SEQUENCE public.publication_formats_publication_format_id_seq;
+DROP TABLE public.publication_formats;
+DROP SEQUENCE public.publication_format_settings_publication_format_setting_id_seq;
+DROP TABLE public.publication_format_settings;
+DROP SEQUENCE public.publication_dates_publication_date_id_seq;
+DROP TABLE public.publication_dates;
+DROP SEQUENCE public.publication_categories_publication_category_id_seq;
+DROP TABLE public.publication_categories;
+DROP SEQUENCE public.presses_press_id_seq;
+DROP TABLE public.presses;
+DROP SEQUENCE public.press_settings_press_setting_id_seq;
+DROP TABLE public.press_settings;
+DROP SEQUENCE public.plugin_settings_plugin_setting_id_seq;
+DROP TABLE public.plugin_settings;
+DROP SEQUENCE public.oai_resumption_tokens_oai_resumption_token_id_seq;
+DROP TABLE public.oai_resumption_tokens;
+DROP SEQUENCE public.notifications_notification_id_seq;
+DROP TABLE public.notifications;
+DROP SEQUENCE public.notification_subscription_settings_setting_id_seq;
+DROP TABLE public.notification_subscription_settings;
+DROP SEQUENCE public.notification_settings_notification_setting_id_seq;
+DROP TABLE public.notification_settings;
+DROP SEQUENCE public.notes_note_id_seq;
+DROP TABLE public.notes;
+DROP SEQUENCE public.new_releases_new_release_id_seq;
+DROP TABLE public.new_releases;
+DROP SEQUENCE public.navigation_menus_navigation_menu_id_seq;
+DROP TABLE public.navigation_menus;
+DROP SEQUENCE public.navigation_menu_items_navigation_menu_item_id_seq;
+DROP TABLE public.navigation_menu_items;
+DROP SEQUENCE public.navigation_menu_item_settings_navigation_menu_item_setting__seq;
+DROP TABLE public.navigation_menu_item_settings;
+DROP SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq;
+DROP TABLE public.navigation_menu_item_assignments;
+DROP SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1;
+DROP TABLE public.navigation_menu_item_assignment_settings;
+DROP SEQUENCE public.metrics_submission_metrics_submission_id_seq;
+DROP SEQUENCE public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq;
+DROP TABLE public.metrics_submission_geo_monthly;
+DROP SEQUENCE public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq;
+DROP TABLE public.metrics_submission_geo_daily;
+DROP TABLE public.metrics_submission;
+DROP SEQUENCE public.metrics_series_metrics_series_id_seq;
+DROP TABLE public.metrics_series;
+DROP SEQUENCE public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq;
+DROP TABLE public.metrics_counter_submission_monthly;
+DROP SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_in_seq;
+DROP TABLE public.metrics_counter_submission_institution_daily;
+DROP SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_i_seq1;
+DROP TABLE public.metrics_counter_submission_institution_monthly;
+DROP SEQUENCE public.metrics_counter_submission_da_metrics_counter_submission_da_seq;
+DROP TABLE public.metrics_counter_submission_daily;
+DROP SEQUENCE public.metrics_context_metrics_context_id_seq;
+DROP TABLE public.metrics_context;
+DROP SEQUENCE public.markets_market_id_seq;
+DROP TABLE public.markets;
+DROP SEQUENCE public.library_files_file_id_seq;
+DROP TABLE public.library_files;
+DROP SEQUENCE public.library_file_settings_library_file_setting_id_seq;
+DROP TABLE public.library_file_settings;
+DROP SEQUENCE public.jobs_id_seq;
+DROP TABLE public.jobs;
+DROP TABLE public.job_batches;
+DROP SEQUENCE public.institutions_institution_id_seq;
+DROP TABLE public.institutions;
+DROP SEQUENCE public.institution_settings_institution_setting_id_seq;
+DROP TABLE public.institution_settings;
+DROP SEQUENCE public.institution_ip_institution_ip_id_seq;
+DROP TABLE public.institution_ip;
+DROP SEQUENCE public.identification_codes_identification_code_id_seq;
+DROP TABLE public.identification_codes;
+DROP SEQUENCE public.genres_genre_id_seq;
+DROP TABLE public.genres;
+DROP SEQUENCE public.genre_settings_genre_setting_id_seq;
+DROP TABLE public.genre_settings;
+DROP SEQUENCE public.filters_filter_id_seq;
+DROP TABLE public.filters;
+DROP SEQUENCE public.filter_settings_filter_setting_id_seq;
+DROP TABLE public.filter_settings;
+DROP SEQUENCE public.filter_groups_filter_group_id_seq;
+DROP TABLE public.filter_groups;
+DROP SEQUENCE public.files_file_id_seq;
+DROP TABLE public.files;
+DROP SEQUENCE public.features_feature_id_seq;
+DROP TABLE public.features;
+DROP SEQUENCE public.failed_jobs_id_seq;
+DROP TABLE public.failed_jobs;
+DROP SEQUENCE public.event_log_settings_event_log_setting_id_seq;
+DROP TABLE public.event_log_settings;
+DROP SEQUENCE public.event_log_log_id_seq;
+DROP TABLE public.event_log;
+DROP SEQUENCE public.email_templates_settings_email_template_setting_id_seq;
+DROP TABLE public.email_templates_settings;
+DROP SEQUENCE public.email_templates_email_id_seq;
+DROP SEQUENCE public.email_templates_default_data_email_templates_default_data_i_seq;
+DROP TABLE public.email_templates_default_data;
+DROP TABLE public.email_templates;
+DROP SEQUENCE public.email_log_users_email_log_user_id_seq;
+DROP TABLE public.email_log_users;
+DROP SEQUENCE public.email_log_log_id_seq;
+DROP TABLE public.email_log;
+DROP SEQUENCE public.edit_decisions_edit_decision_id_seq;
+DROP TABLE public.edit_decisions;
+DROP SEQUENCE public.dois_doi_id_seq;
+DROP TABLE public.dois;
+DROP SEQUENCE public.doi_settings_doi_setting_id_seq;
+DROP TABLE public.doi_settings;
+DROP SEQUENCE public.data_object_tombstones_tombstone_id_seq;
+DROP TABLE public.data_object_tombstones;
+DROP SEQUENCE public.data_object_tombstone_settings_tombstone_setting_id_seq;
+DROP TABLE public.data_object_tombstone_settings;
+DROP SEQUENCE public.data_object_tombstone_oai_set_objects_object_id_seq;
+DROP TABLE public.data_object_tombstone_oai_set_objects;
+DROP SEQUENCE public.controlled_vocabs_controlled_vocab_id_seq;
+DROP TABLE public.controlled_vocabs;
+DROP SEQUENCE public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq;
+DROP TABLE public.controlled_vocab_entry_settings;
+DROP SEQUENCE public.controlled_vocab_entries_controlled_vocab_entry_id_seq;
+DROP TABLE public.controlled_vocab_entries;
+DROP SEQUENCE public.completed_payments_completed_payment_id_seq;
+DROP TABLE public.completed_payments;
+DROP SEQUENCE public.citations_citation_id_seq;
+DROP TABLE public.citations;
+DROP SEQUENCE public.citation_settings_citation_setting_id_seq;
+DROP TABLE public.citation_settings;
+DROP SEQUENCE public.category_settings_category_setting_id_seq;
+DROP TABLE public.category_settings;
+DROP SEQUENCE public.categories_category_id_seq;
+DROP TABLE public.categories;
+DROP SEQUENCE public.authors_author_id_seq;
+DROP TABLE public.authors;
+DROP SEQUENCE public.author_settings_author_setting_id_seq;
+DROP TABLE public.author_settings;
+DROP SEQUENCE public.announcements_announcement_id_seq;
+DROP TABLE public.announcements;
+DROP SEQUENCE public.announcement_types_type_id_seq;
+DROP TABLE public.announcement_types;
+DROP SEQUENCE public.announcement_type_settings_announcement_type_setting_id_seq;
+DROP TABLE public.announcement_type_settings;
+DROP SEQUENCE public.announcement_settings_announcement_setting_id_seq;
+DROP TABLE public.announcement_settings;
+DROP SEQUENCE public.access_keys_access_key_id_seq;
+DROP TABLE public.access_keys;
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: access_keys; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.access_keys (
+    access_key_id bigint NOT NULL,
+    context character varying(40) NOT NULL,
+    key_hash character varying(40) NOT NULL,
+    user_id bigint NOT NULL,
+    assoc_id bigint,
+    expiry_date timestamp(0) without time zone NOT NULL
+);
+
+
+ALTER TABLE public.access_keys OWNER TO "omp-ci";
+
+--
+-- Name: TABLE access_keys; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.access_keys IS 'Access keys are used to provide pseudo-login functionality for security-minimal tasks. Passkeys can be emailed directly to users, who can use them for a limited time in lieu of standard username and password.';
+
+
+--
+-- Name: access_keys_access_key_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.access_keys_access_key_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.access_keys_access_key_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: access_keys_access_key_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.access_keys_access_key_id_seq OWNED BY public.access_keys.access_key_id;
+
+
+--
+-- Name: announcement_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.announcement_settings (
+    announcement_setting_id bigint NOT NULL,
+    announcement_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6)
+);
+
+
+ALTER TABLE public.announcement_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE announcement_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.announcement_settings IS 'More data about announcements, including localized properties like names and contents.';
+
+
+--
+-- Name: announcement_settings_announcement_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.announcement_settings_announcement_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.announcement_settings_announcement_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: announcement_settings_announcement_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.announcement_settings_announcement_setting_id_seq OWNED BY public.announcement_settings.announcement_setting_id;
+
+
+--
+-- Name: announcement_type_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.announcement_type_settings (
+    announcement_type_setting_id bigint NOT NULL,
+    type_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.announcement_type_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE announcement_type_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.announcement_type_settings IS 'More data about announcement types, including localized properties like their names.';
+
+
+--
+-- Name: announcement_type_settings_announcement_type_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.announcement_type_settings_announcement_type_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.announcement_type_settings_announcement_type_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: announcement_type_settings_announcement_type_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.announcement_type_settings_announcement_type_setting_id_seq OWNED BY public.announcement_type_settings.announcement_type_setting_id;
+
+
+--
+-- Name: announcement_types; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.announcement_types (
+    type_id bigint NOT NULL,
+    context_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.announcement_types OWNER TO "omp-ci";
+
+--
+-- Name: TABLE announcement_types; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.announcement_types IS 'Announcement types allow for announcements to optionally be categorized.';
+
+
+--
+-- Name: announcement_types_type_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.announcement_types_type_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.announcement_types_type_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: announcement_types_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.announcement_types_type_id_seq OWNED BY public.announcement_types.type_id;
+
+
+--
+-- Name: announcements; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.announcements (
+    announcement_id bigint NOT NULL,
+    assoc_type smallint,
+    assoc_id bigint NOT NULL,
+    type_id bigint,
+    date_expire date,
+    date_posted timestamp(0) without time zone NOT NULL
+);
+
+
+ALTER TABLE public.announcements OWNER TO "omp-ci";
+
+--
+-- Name: TABLE announcements; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.announcements IS 'Announcements are messages that can be presented to users e.g. on the homepage.';
+
+
+--
+-- Name: announcements_announcement_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.announcements_announcement_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.announcements_announcement_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: announcements_announcement_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.announcements_announcement_id_seq OWNED BY public.announcements.announcement_id;
+
+
+--
+-- Name: author_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.author_settings (
+    author_setting_id bigint NOT NULL,
+    author_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text
+);
+
+
+ALTER TABLE public.author_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE author_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.author_settings IS 'More data about authors, including localized properties such as their name and affiliation.';
+
+
+--
+-- Name: author_settings_author_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.author_settings_author_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.author_settings_author_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: author_settings_author_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.author_settings_author_setting_id_seq OWNED BY public.author_settings.author_setting_id;
+
+
+--
+-- Name: authors; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.authors (
+    author_id bigint NOT NULL,
+    email character varying(90) NOT NULL,
+    include_in_browse smallint DEFAULT '1'::smallint NOT NULL,
+    publication_id bigint NOT NULL,
+    seq double precision DEFAULT '0'::double precision NOT NULL,
+    user_group_id bigint
+);
+
+
+ALTER TABLE public.authors OWNER TO "omp-ci";
+
+--
+-- Name: TABLE authors; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.authors IS 'The authors of a publication.';
+
+
+--
+-- Name: authors_author_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.authors_author_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.authors_author_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: authors_author_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.authors_author_id_seq OWNED BY public.authors.author_id;
+
+
+--
+-- Name: categories; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.categories (
+    category_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    parent_id bigint,
+    seq bigint,
+    path character varying(255) NOT NULL,
+    image text
+);
+
+
+ALTER TABLE public.categories OWNER TO "omp-ci";
+
+--
+-- Name: TABLE categories; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.categories IS 'Categories permit the organization of submissions into a heirarchical structure.';
+
+
+--
+-- Name: categories_category_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.categories_category_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.categories_category_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: categories_category_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.categories_category_id_seq OWNED BY public.categories.category_id;
+
+
+--
+-- Name: category_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.category_settings (
+    category_setting_id bigint NOT NULL,
+    category_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text
+);
+
+
+ALTER TABLE public.category_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE category_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.category_settings IS 'More data about categories, including localized properties such as names.';
+
+
+--
+-- Name: category_settings_category_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.category_settings_category_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.category_settings_category_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: category_settings_category_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.category_settings_category_setting_id_seq OWNED BY public.category_settings.category_setting_id;
+
+
+--
+-- Name: citation_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.citation_settings (
+    citation_setting_id bigint NOT NULL,
+    citation_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.citation_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE citation_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.citation_settings IS 'Additional data about citations, including localized content.';
+
+
+--
+-- Name: citation_settings_citation_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.citation_settings_citation_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.citation_settings_citation_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: citation_settings_citation_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.citation_settings_citation_setting_id_seq OWNED BY public.citation_settings.citation_setting_id;
+
+
+--
+-- Name: citations; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.citations (
+    citation_id bigint NOT NULL,
+    publication_id bigint NOT NULL,
+    raw_citation text NOT NULL,
+    seq bigint DEFAULT '0'::bigint NOT NULL
+);
+
+
+ALTER TABLE public.citations OWNER TO "omp-ci";
+
+--
+-- Name: TABLE citations; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.citations IS 'A citation made by an associated publication.';
+
+
+--
+-- Name: citations_citation_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.citations_citation_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.citations_citation_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: citations_citation_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.citations_citation_id_seq OWNED BY public.citations.citation_id;
+
+
+--
+-- Name: completed_payments; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.completed_payments (
+    completed_payment_id bigint NOT NULL,
+    "timestamp" timestamp(0) without time zone NOT NULL,
+    payment_type bigint NOT NULL,
+    context_id bigint NOT NULL,
+    user_id bigint,
+    assoc_id character varying(16),
+    amount double precision NOT NULL,
+    currency_code_alpha character varying(3),
+    payment_method_plugin_name character varying(80)
+);
+
+
+ALTER TABLE public.completed_payments OWNER TO "omp-ci";
+
+--
+-- Name: TABLE completed_payments; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.completed_payments IS 'A list of completed (fulfilled) payments, with information about the type of payment and the entity it relates to.';
+
+
+--
+-- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.completed_payments_completed_payment_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.completed_payments_completed_payment_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.completed_payments_completed_payment_id_seq OWNED BY public.completed_payments.completed_payment_id;
+
+
+--
+-- Name: controlled_vocab_entries; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.controlled_vocab_entries (
+    controlled_vocab_entry_id bigint NOT NULL,
+    controlled_vocab_id bigint NOT NULL,
+    seq double precision
+);
+
+
+ALTER TABLE public.controlled_vocab_entries OWNER TO "omp-ci";
+
+--
+-- Name: TABLE controlled_vocab_entries; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.controlled_vocab_entries IS 'The order that a word or phrase used in a controlled vocabulary should appear. For example, the order of keywords in a publication.';
+
+
+--
+-- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.controlled_vocab_entries_controlled_vocab_entry_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.controlled_vocab_entries_controlled_vocab_entry_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.controlled_vocab_entries_controlled_vocab_entry_id_seq OWNED BY public.controlled_vocab_entries.controlled_vocab_entry_id;
+
+
+--
+-- Name: controlled_vocab_entry_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.controlled_vocab_entry_settings (
+    controlled_vocab_entry_setting_id bigint NOT NULL,
+    controlled_vocab_entry_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.controlled_vocab_entry_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE controlled_vocab_entry_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.controlled_vocab_entry_settings IS 'More data about a controlled vocabulary entry, including localized properties such as the actual word or phrase.';
+
+
+--
+-- Name: controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq OWNER TO "omp-ci";
+
+--
+-- Name: controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq OWNED BY public.controlled_vocab_entry_settings.controlled_vocab_entry_setting_id;
+
+
+--
+-- Name: controlled_vocabs; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.controlled_vocabs (
+    controlled_vocab_id bigint NOT NULL,
+    symbolic character varying(64) NOT NULL,
+    assoc_type bigint DEFAULT '0'::bigint NOT NULL,
+    assoc_id bigint DEFAULT '0'::bigint NOT NULL
+);
+
+
+ALTER TABLE public.controlled_vocabs OWNER TO "omp-ci";
+
+--
+-- Name: TABLE controlled_vocabs; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.controlled_vocabs IS 'Every word or phrase used in a controlled vocabulary. Controlled vocabularies are used for submission metadata like keywords and subjects, reviewer interests, and wherever a similar dictionary of words or phrases is required. Each entry corresponds to a word or phrase like "cellular reproduction" and a type like "submissionKeyword".';
+
+
+--
+-- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.controlled_vocabs_controlled_vocab_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.controlled_vocabs_controlled_vocab_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.controlled_vocabs_controlled_vocab_id_seq OWNED BY public.controlled_vocabs.controlled_vocab_id;
+
+
+--
+-- Name: data_object_tombstone_oai_set_objects; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.data_object_tombstone_oai_set_objects (
+    object_id bigint NOT NULL,
+    tombstone_id bigint NOT NULL,
+    assoc_type bigint NOT NULL,
+    assoc_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.data_object_tombstone_oai_set_objects OWNER TO "omp-ci";
+
+--
+-- Name: TABLE data_object_tombstone_oai_set_objects; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.data_object_tombstone_oai_set_objects IS 'Relationships between tombstones and other data that can be collected in OAI sets, e.g. sections.';
+
+
+--
+-- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.data_object_tombstone_oai_set_objects_object_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.data_object_tombstone_oai_set_objects_object_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.data_object_tombstone_oai_set_objects_object_id_seq OWNED BY public.data_object_tombstone_oai_set_objects.object_id;
+
+
+--
+-- Name: data_object_tombstone_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.data_object_tombstone_settings (
+    tombstone_setting_id bigint NOT NULL,
+    tombstone_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.data_object_tombstone_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE data_object_tombstone_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.data_object_tombstone_settings IS 'More data about data object tombstones, including localized content.';
+
+
+--
+-- Name: COLUMN data_object_tombstone_settings.setting_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.data_object_tombstone_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: data_object_tombstone_settings_tombstone_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.data_object_tombstone_settings_tombstone_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.data_object_tombstone_settings_tombstone_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: data_object_tombstone_settings_tombstone_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.data_object_tombstone_settings_tombstone_setting_id_seq OWNED BY public.data_object_tombstone_settings.tombstone_setting_id;
+
+
+--
+-- Name: data_object_tombstones; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.data_object_tombstones (
+    tombstone_id bigint NOT NULL,
+    data_object_id bigint NOT NULL,
+    date_deleted timestamp(0) without time zone NOT NULL,
+    set_spec character varying(255) NOT NULL,
+    set_name character varying(255) NOT NULL,
+    oai_identifier character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.data_object_tombstones OWNER TO "omp-ci";
+
+--
+-- Name: TABLE data_object_tombstones; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.data_object_tombstones IS 'Entries for published data that has been removed. Usually used in the OAI endpoint.';
+
+
+--
+-- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.data_object_tombstones_tombstone_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.data_object_tombstones_tombstone_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.data_object_tombstones_tombstone_id_seq OWNED BY public.data_object_tombstones.tombstone_id;
+
+
+--
+-- Name: doi_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.doi_settings (
+    doi_setting_id bigint NOT NULL,
+    doi_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text
+);
+
+
+ALTER TABLE public.doi_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE doi_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.doi_settings IS 'More data about DOIs, including the registration agency.';
+
+
+--
+-- Name: doi_settings_doi_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.doi_settings_doi_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.doi_settings_doi_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: doi_settings_doi_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.doi_settings_doi_setting_id_seq OWNED BY public.doi_settings.doi_setting_id;
+
+
+--
+-- Name: dois; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.dois (
+    doi_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    doi character varying(255) NOT NULL,
+    status smallint DEFAULT '1'::smallint NOT NULL
+);
+
+
+ALTER TABLE public.dois OWNER TO "omp-ci";
+
+--
+-- Name: TABLE dois; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.dois IS 'Stores all DOIs used in the system.';
+
+
+--
+-- Name: dois_doi_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.dois_doi_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.dois_doi_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: dois_doi_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.dois_doi_id_seq OWNED BY public.dois.doi_id;
+
+
+--
+-- Name: edit_decisions; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.edit_decisions (
+    edit_decision_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    review_round_id bigint,
+    stage_id bigint,
+    round smallint,
+    editor_id bigint NOT NULL,
+    decision smallint NOT NULL,
+    date_decided timestamp(0) without time zone NOT NULL
+);
+
+
+ALTER TABLE public.edit_decisions OWNER TO "omp-ci";
+
+--
+-- Name: TABLE edit_decisions; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.edit_decisions IS 'Editorial decisions recorded on a submission, such as decisions to accept or decline the submission, as well as decisions to send for review, send to copyediting, request revisions, and more.';
+
+
+--
+-- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.edit_decisions_edit_decision_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.edit_decisions_edit_decision_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.edit_decisions_edit_decision_id_seq OWNED BY public.edit_decisions.edit_decision_id;
+
+
+--
+-- Name: email_log; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.email_log (
+    log_id bigint NOT NULL,
+    assoc_type bigint NOT NULL,
+    assoc_id bigint NOT NULL,
+    sender_id bigint NOT NULL,
+    date_sent timestamp(0) without time zone NOT NULL,
+    event_type bigint,
+    from_address character varying(255),
+    recipients text,
+    cc_recipients text,
+    bcc_recipients text,
+    subject character varying(255),
+    body text
+);
+
+
+ALTER TABLE public.email_log OWNER TO "omp-ci";
+
+--
+-- Name: TABLE email_log; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.email_log IS 'A record of email messages that are sent in relation to an associated entity, such as a submission.';
+
+
+--
+-- Name: email_log_log_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.email_log_log_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.email_log_log_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: email_log_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.email_log_log_id_seq OWNED BY public.email_log.log_id;
+
+
+--
+-- Name: email_log_users; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.email_log_users (
+    email_log_user_id bigint NOT NULL,
+    email_log_id bigint NOT NULL,
+    user_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.email_log_users OWNER TO "omp-ci";
+
+--
+-- Name: TABLE email_log_users; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.email_log_users IS 'A record of users associated with an email log entry.';
+
+
+--
+-- Name: email_log_users_email_log_user_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.email_log_users_email_log_user_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.email_log_users_email_log_user_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: email_log_users_email_log_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.email_log_users_email_log_user_id_seq OWNED BY public.email_log_users.email_log_user_id;
+
+
+--
+-- Name: email_templates; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.email_templates (
+    email_id bigint NOT NULL,
+    email_key character varying(255) NOT NULL,
+    context_id bigint NOT NULL,
+    alternate_to character varying(255)
+);
+
+
+ALTER TABLE public.email_templates OWNER TO "omp-ci";
+
+--
+-- Name: TABLE email_templates; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.email_templates IS 'Custom email templates created by each context, and overrides of the default templates.';
+
+
+--
+-- Name: COLUMN email_templates.email_key; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.email_templates.email_key IS 'Unique identifier for this email.';
+
+
+--
+-- Name: email_templates_default_data; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.email_templates_default_data (
+    email_templates_default_data_id bigint NOT NULL,
+    email_key character varying(255) NOT NULL,
+    locale character varying(14) DEFAULT 'en'::character varying NOT NULL,
+    name character varying(255) NOT NULL,
+    subject character varying(255) NOT NULL,
+    body text
+);
+
+
+ALTER TABLE public.email_templates_default_data OWNER TO "omp-ci";
+
+--
+-- Name: TABLE email_templates_default_data; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.email_templates_default_data IS 'Default email templates created for every installed locale.';
+
+
+--
+-- Name: COLUMN email_templates_default_data.email_key; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.email_templates_default_data.email_key IS 'Unique identifier for this email.';
+
+
+--
+-- Name: email_templates_default_data_email_templates_default_data_i_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.email_templates_default_data_email_templates_default_data_i_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.email_templates_default_data_email_templates_default_data_i_seq OWNER TO "omp-ci";
+
+--
+-- Name: email_templates_default_data_email_templates_default_data_i_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.email_templates_default_data_email_templates_default_data_i_seq OWNED BY public.email_templates_default_data.email_templates_default_data_id;
+
+
+--
+-- Name: email_templates_email_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.email_templates_email_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.email_templates_email_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: email_templates_email_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.email_templates_email_id_seq OWNED BY public.email_templates.email_id;
+
+
+--
+-- Name: email_templates_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.email_templates_settings (
+    email_template_setting_id bigint NOT NULL,
+    email_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text
+);
+
+
+ALTER TABLE public.email_templates_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE email_templates_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.email_templates_settings IS 'More data about custom email templates, including localized properties such as the subject and body.';
+
+
+--
+-- Name: email_templates_settings_email_template_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.email_templates_settings_email_template_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.email_templates_settings_email_template_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: email_templates_settings_email_template_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.email_templates_settings_email_template_setting_id_seq OWNED BY public.email_templates_settings.email_template_setting_id;
+
+
+--
+-- Name: event_log; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.event_log (
+    log_id bigint NOT NULL,
+    assoc_type bigint NOT NULL,
+    assoc_id bigint NOT NULL,
+    user_id bigint NOT NULL,
+    date_logged timestamp(0) without time zone NOT NULL,
+    event_type bigint,
+    message text,
+    is_translated smallint
+);
+
+
+ALTER TABLE public.event_log OWNER TO "omp-ci";
+
+--
+-- Name: TABLE event_log; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.event_log IS 'A log of all events related to an object like a submission.';
+
+
+--
+-- Name: event_log_log_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.event_log_log_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.event_log_log_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: event_log_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.event_log_log_id_seq OWNED BY public.event_log.log_id;
+
+
+--
+-- Name: event_log_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.event_log_settings (
+    event_log_setting_id bigint NOT NULL,
+    log_id bigint NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.event_log_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE event_log_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.event_log_settings IS 'Data about an event log entry. This data is commonly used to display information about an event to a user.';
+
+
+--
+-- Name: COLUMN event_log_settings.setting_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.event_log_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: event_log_settings_event_log_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.event_log_settings_event_log_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.event_log_settings_event_log_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: event_log_settings_event_log_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.event_log_settings_event_log_setting_id_seq OWNED BY public.event_log_settings.event_log_setting_id;
+
+
+--
+-- Name: failed_jobs; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.failed_jobs (
+    id bigint NOT NULL,
+    connection text NOT NULL,
+    queue text NOT NULL,
+    payload text NOT NULL,
+    exception text NOT NULL,
+    failed_at timestamp(0) without time zone DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+
+ALTER TABLE public.failed_jobs OWNER TO "omp-ci";
+
+--
+-- Name: TABLE failed_jobs; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.failed_jobs IS 'A log of all failed jobs.';
+
+
+--
+-- Name: failed_jobs_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.failed_jobs_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.failed_jobs_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: failed_jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.failed_jobs_id_seq OWNED BY public.failed_jobs.id;
+
+
+--
+-- Name: features; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.features (
+    feature_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    assoc_type bigint NOT NULL,
+    assoc_id bigint NOT NULL,
+    seq bigint NOT NULL
+);
+
+
+ALTER TABLE public.features OWNER TO "omp-ci";
+
+--
+-- Name: TABLE features; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.features IS 'Information about which submissions are featured in the press.';
+
+
+--
+-- Name: features_feature_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.features_feature_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.features_feature_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: features_feature_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.features_feature_id_seq OWNED BY public.features.feature_id;
+
+
+--
+-- Name: files; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.files (
+    file_id bigint NOT NULL,
+    path character varying(255) NOT NULL,
+    mimetype character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.files OWNER TO "omp-ci";
+
+--
+-- Name: TABLE files; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.files IS 'Records information in the database about files tracked by the system, linking them to the local filesystem.';
+
+
+--
+-- Name: files_file_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.files_file_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.files_file_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: files_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.files_file_id_seq OWNED BY public.files.file_id;
+
+
+--
+-- Name: filter_groups; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.filter_groups (
+    filter_group_id bigint NOT NULL,
+    symbolic character varying(255),
+    display_name character varying(255),
+    description character varying(255),
+    input_type character varying(255),
+    output_type character varying(255)
+);
+
+
+ALTER TABLE public.filter_groups OWNER TO "omp-ci";
+
+--
+-- Name: TABLE filter_groups; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.filter_groups IS 'Filter groups are used to organized filters into named sets, which can be retrieved by the application for invocation.';
+
+
+--
+-- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.filter_groups_filter_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.filter_groups_filter_group_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.filter_groups_filter_group_id_seq OWNED BY public.filter_groups.filter_group_id;
+
+
+--
+-- Name: filter_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.filter_settings (
+    filter_setting_id bigint NOT NULL,
+    filter_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.filter_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE filter_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.filter_settings IS 'More data about filters, including localized content.';
+
+
+--
+-- Name: filter_settings_filter_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.filter_settings_filter_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.filter_settings_filter_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: filter_settings_filter_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.filter_settings_filter_setting_id_seq OWNED BY public.filter_settings.filter_setting_id;
+
+
+--
+-- Name: filters; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.filters (
+    filter_id bigint NOT NULL,
+    filter_group_id bigint DEFAULT '0'::bigint NOT NULL,
+    context_id bigint DEFAULT '0'::bigint NOT NULL,
+    display_name character varying(255),
+    class_name character varying(255),
+    is_template smallint DEFAULT '0'::smallint NOT NULL,
+    parent_filter_id bigint DEFAULT '0'::bigint NOT NULL,
+    seq bigint DEFAULT '0'::bigint NOT NULL
+);
+
+
+ALTER TABLE public.filters OWNER TO "omp-ci";
+
+--
+-- Name: TABLE filters; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.filters IS 'Filters represent a transformation of a supported piece of data from one form to another, such as a PHP object into an XML document.';
+
+
+--
+-- Name: filters_filter_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.filters_filter_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.filters_filter_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: filters_filter_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.filters_filter_id_seq OWNED BY public.filters.filter_id;
+
+
+--
+-- Name: genre_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.genre_settings (
+    genre_setting_id bigint NOT NULL,
+    genre_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.genre_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE genre_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.genre_settings IS 'More data about file genres, including localized properties such as the genre name.';
+
+
+--
+-- Name: COLUMN genre_settings.setting_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.genre_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: genre_settings_genre_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.genre_settings_genre_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.genre_settings_genre_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: genre_settings_genre_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.genre_settings_genre_setting_id_seq OWNED BY public.genre_settings.genre_setting_id;
+
+
+--
+-- Name: genres; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.genres (
+    genre_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    seq bigint NOT NULL,
+    enabled smallint DEFAULT '1'::smallint NOT NULL,
+    category bigint DEFAULT '1'::bigint NOT NULL,
+    dependent smallint DEFAULT '0'::smallint NOT NULL,
+    supplementary smallint DEFAULT '0'::smallint NOT NULL,
+    required smallint DEFAULT '0'::smallint NOT NULL,
+    entry_key character varying(30)
+);
+
+
+ALTER TABLE public.genres OWNER TO "omp-ci";
+
+--
+-- Name: TABLE genres; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.genres IS 'The types of submission files configured for each context, such as Article Text, Data Set, Transcript, etc.';
+
+
+--
+-- Name: COLUMN genres.required; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.genres.required IS 'Whether or not at least one file of this genre is required for a new submission.';
+
+
+--
+-- Name: genres_genre_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.genres_genre_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.genres_genre_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: genres_genre_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.genres_genre_id_seq OWNED BY public.genres.genre_id;
+
+
+--
+-- Name: identification_codes; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.identification_codes (
+    identification_code_id bigint NOT NULL,
+    publication_format_id bigint NOT NULL,
+    code character varying(40) NOT NULL,
+    value character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.identification_codes OWNER TO "omp-ci";
+
+--
+-- Name: TABLE identification_codes; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.identification_codes IS 'ONIX identification codes for publication formats.';
+
+
+--
+-- Name: identification_codes_identification_code_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.identification_codes_identification_code_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.identification_codes_identification_code_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: identification_codes_identification_code_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.identification_codes_identification_code_id_seq OWNED BY public.identification_codes.identification_code_id;
+
+
+--
+-- Name: institution_ip; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.institution_ip (
+    institution_ip_id bigint NOT NULL,
+    institution_id bigint NOT NULL,
+    ip_string character varying(40) NOT NULL,
+    ip_start bigint NOT NULL,
+    ip_end bigint
+);
+
+
+ALTER TABLE public.institution_ip OWNER TO "omp-ci";
+
+--
+-- Name: TABLE institution_ip; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.institution_ip IS 'Records IP address ranges and associates them with institutions.';
+
+
+--
+-- Name: institution_ip_institution_ip_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.institution_ip_institution_ip_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.institution_ip_institution_ip_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: institution_ip_institution_ip_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.institution_ip_institution_ip_id_seq OWNED BY public.institution_ip.institution_ip_id;
+
+
+--
+-- Name: institution_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.institution_settings (
+    institution_setting_id bigint NOT NULL,
+    institution_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text
+);
+
+
+ALTER TABLE public.institution_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE institution_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.institution_settings IS 'More data about institutions, including localized properties like names.';
+
+
+--
+-- Name: institution_settings_institution_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.institution_settings_institution_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.institution_settings_institution_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: institution_settings_institution_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.institution_settings_institution_setting_id_seq OWNED BY public.institution_settings.institution_setting_id;
+
+
+--
+-- Name: institutions; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.institutions (
+    institution_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    ror character varying(255),
+    deleted_at timestamp(0) without time zone
+);
+
+
+ALTER TABLE public.institutions OWNER TO "omp-ci";
+
+--
+-- Name: TABLE institutions; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.institutions IS 'Institutions for statistics and subscriptions.';
+
+
+--
+-- Name: COLUMN institutions.ror; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.institutions.ror IS 'ROR (Research Organization Registry) ID';
+
+
+--
+-- Name: institutions_institution_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.institutions_institution_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.institutions_institution_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: institutions_institution_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.institutions_institution_id_seq OWNED BY public.institutions.institution_id;
+
+
+--
+-- Name: job_batches; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.job_batches (
+    id character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    total_jobs integer NOT NULL,
+    pending_jobs integer NOT NULL,
+    failed_jobs integer NOT NULL,
+    failed_job_ids text NOT NULL,
+    options text,
+    cancelled_at integer,
+    created_at integer NOT NULL,
+    finished_at integer
+);
+
+
+ALTER TABLE public.job_batches OWNER TO "omp-ci";
+
+--
+-- Name: TABLE job_batches; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.job_batches IS 'Job batches allow jobs to be collected into groups for managed processing.';
+
+
+--
+-- Name: jobs; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.jobs (
+    id bigint NOT NULL,
+    queue character varying(255) NOT NULL,
+    payload text NOT NULL,
+    attempts smallint NOT NULL,
+    reserved_at integer,
+    available_at integer NOT NULL,
+    created_at integer NOT NULL
+);
+
+
+ALTER TABLE public.jobs OWNER TO "omp-ci";
+
+--
+-- Name: TABLE jobs; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.jobs IS 'All pending or in-progress jobs.';
+
+
+--
+-- Name: jobs_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.jobs_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.jobs_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.jobs_id_seq OWNED BY public.jobs.id;
+
+
+--
+-- Name: library_file_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.library_file_settings (
+    library_file_setting_id bigint NOT NULL,
+    file_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.library_file_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE library_file_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.library_file_settings IS 'More data about library files, including localized content such as names.';
+
+
+--
+-- Name: COLUMN library_file_settings.setting_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.library_file_settings.setting_type IS '(bool|int|float|string|object|date)';
+
+
+--
+-- Name: library_file_settings_library_file_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.library_file_settings_library_file_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.library_file_settings_library_file_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: library_file_settings_library_file_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.library_file_settings_library_file_setting_id_seq OWNED BY public.library_file_settings.library_file_setting_id;
+
+
+--
+-- Name: library_files; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.library_files (
+    file_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    file_name character varying(255) NOT NULL,
+    original_file_name character varying(255) NOT NULL,
+    file_type character varying(255) NOT NULL,
+    file_size bigint NOT NULL,
+    type smallint NOT NULL,
+    date_uploaded timestamp(0) without time zone NOT NULL,
+    date_modified timestamp(0) without time zone NOT NULL,
+    submission_id bigint,
+    public_access smallint DEFAULT '0'::smallint
+);
+
+
+ALTER TABLE public.library_files OWNER TO "omp-ci";
+
+--
+-- Name: TABLE library_files; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.library_files IS 'Library files can be associated with the context (press/server/journal) or with individual submissions, and are typically forms, agreements, and other administrative documents that are not part of the scholarly content.';
+
+
+--
+-- Name: library_files_file_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.library_files_file_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.library_files_file_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: library_files_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.library_files_file_id_seq OWNED BY public.library_files.file_id;
+
+
+--
+-- Name: markets; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.markets (
+    market_id bigint NOT NULL,
+    publication_format_id bigint NOT NULL,
+    countries_included text,
+    countries_excluded text,
+    regions_included text,
+    regions_excluded text,
+    market_date_role character varying(40) NOT NULL,
+    market_date_format character varying(40) NOT NULL,
+    market_date character varying(255) NOT NULL,
+    price character varying(255),
+    discount character varying(255),
+    price_type_code character varying(255),
+    currency_code character varying(255),
+    tax_rate_code character varying(255),
+    tax_type_code character varying(255),
+    agent_id bigint,
+    supplier_id bigint
+);
+
+
+ALTER TABLE public.markets OWNER TO "omp-ci";
+
+--
+-- Name: TABLE markets; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.markets IS 'ONIX market information for publication formats.';
+
+
+--
+-- Name: markets_market_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.markets_market_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.markets_market_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: markets_market_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.markets_market_id_seq OWNED BY public.markets.market_id;
+
+
+--
+-- Name: metrics_context; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.metrics_context (
+    metrics_context_id bigint NOT NULL,
+    load_id character varying(255) NOT NULL,
+    context_id bigint NOT NULL,
+    date date NOT NULL,
+    metric integer NOT NULL
+);
+
+
+ALTER TABLE public.metrics_context OWNER TO "omp-ci";
+
+--
+-- Name: TABLE metrics_context; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.metrics_context IS 'Daily statistics for views of the homepage.';
+
+
+--
+-- Name: metrics_context_metrics_context_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.metrics_context_metrics_context_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_context_metrics_context_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: metrics_context_metrics_context_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.metrics_context_metrics_context_id_seq OWNED BY public.metrics_context.metrics_context_id;
+
+
+--
+-- Name: metrics_counter_submission_daily; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.metrics_counter_submission_daily (
+    metrics_counter_submission_daily_id bigint NOT NULL,
+    load_id character varying(255) NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    date date NOT NULL,
+    metric_book_investigations integer NOT NULL,
+    metric_book_investigations_unique integer NOT NULL,
+    metric_book_requests integer NOT NULL,
+    metric_book_requests_unique integer NOT NULL,
+    metric_chapter_investigations integer NOT NULL,
+    metric_chapter_investigations_unique integer NOT NULL,
+    metric_chapter_requests integer NOT NULL,
+    metric_chapter_requests_unique integer NOT NULL,
+    metric_title_investigations_unique integer NOT NULL,
+    metric_title_requests_unique integer NOT NULL
+);
+
+
+ALTER TABLE public.metrics_counter_submission_daily OWNER TO "omp-ci";
+
+--
+-- Name: TABLE metrics_counter_submission_daily; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.metrics_counter_submission_daily IS 'Daily statistics matching the COUNTER R5 protocol for views and downloads of published submissions and files.';
+
+
+--
+-- Name: metrics_counter_submission_da_metrics_counter_submission_da_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.metrics_counter_submission_da_metrics_counter_submission_da_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_counter_submission_da_metrics_counter_submission_da_seq OWNER TO "omp-ci";
+
+--
+-- Name: metrics_counter_submission_da_metrics_counter_submission_da_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.metrics_counter_submission_da_metrics_counter_submission_da_seq OWNED BY public.metrics_counter_submission_daily.metrics_counter_submission_daily_id;
+
+
+--
+-- Name: metrics_counter_submission_institution_monthly; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.metrics_counter_submission_institution_monthly (
+    metrics_counter_submission_institution_monthly_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    institution_id bigint NOT NULL,
+    month integer NOT NULL,
+    metric_book_investigations integer NOT NULL,
+    metric_book_investigations_unique integer NOT NULL,
+    metric_book_requests integer NOT NULL,
+    metric_book_requests_unique integer NOT NULL,
+    metric_chapter_investigations integer NOT NULL,
+    metric_chapter_investigations_unique integer NOT NULL,
+    metric_chapter_requests integer NOT NULL,
+    metric_chapter_requests_unique integer NOT NULL,
+    metric_title_investigations_unique integer NOT NULL,
+    metric_title_requests_unique integer NOT NULL
+);
+
+
+ALTER TABLE public.metrics_counter_submission_institution_monthly OWNER TO "omp-ci";
+
+--
+-- Name: TABLE metrics_counter_submission_institution_monthly; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.metrics_counter_submission_institution_monthly IS 'Monthly statistics matching the COUNTER R5 protocol for views and downloads from institutions.';
+
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_i_seq1; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_i_seq1
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_counter_submission_in_metrics_counter_submission_i_seq1 OWNER TO "omp-ci";
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_i_seq1; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_i_seq1 OWNED BY public.metrics_counter_submission_institution_monthly.metrics_counter_submission_institution_monthly_id;
+
+
+--
+-- Name: metrics_counter_submission_institution_daily; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.metrics_counter_submission_institution_daily (
+    metrics_counter_submission_institution_daily_id bigint NOT NULL,
+    load_id character varying(255) NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    institution_id bigint NOT NULL,
+    date date NOT NULL,
+    metric_book_investigations integer NOT NULL,
+    metric_book_investigations_unique integer NOT NULL,
+    metric_book_requests integer NOT NULL,
+    metric_book_requests_unique integer NOT NULL,
+    metric_chapter_investigations integer NOT NULL,
+    metric_chapter_investigations_unique integer NOT NULL,
+    metric_chapter_requests integer NOT NULL,
+    metric_chapter_requests_unique integer NOT NULL,
+    metric_title_investigations_unique integer NOT NULL,
+    metric_title_requests_unique integer NOT NULL
+);
+
+
+ALTER TABLE public.metrics_counter_submission_institution_daily OWNER TO "omp-ci";
+
+--
+-- Name: TABLE metrics_counter_submission_institution_daily; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.metrics_counter_submission_institution_daily IS 'Daily statistics matching the COUNTER R5 protocol for views and downloads from institutions.';
+
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_in_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_in_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_counter_submission_in_metrics_counter_submission_in_seq OWNER TO "omp-ci";
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_in_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.metrics_counter_submission_in_metrics_counter_submission_in_seq OWNED BY public.metrics_counter_submission_institution_daily.metrics_counter_submission_institution_daily_id;
+
+
+--
+-- Name: metrics_counter_submission_monthly; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.metrics_counter_submission_monthly (
+    metrics_counter_submission_monthly_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    month integer NOT NULL,
+    metric_book_investigations integer NOT NULL,
+    metric_book_investigations_unique integer NOT NULL,
+    metric_book_requests integer NOT NULL,
+    metric_book_requests_unique integer NOT NULL,
+    metric_chapter_investigations integer NOT NULL,
+    metric_chapter_investigations_unique integer NOT NULL,
+    metric_chapter_requests integer NOT NULL,
+    metric_chapter_requests_unique integer NOT NULL,
+    metric_title_investigations_unique integer NOT NULL,
+    metric_title_requests_unique integer NOT NULL
+);
+
+
+ALTER TABLE public.metrics_counter_submission_monthly OWNER TO "omp-ci";
+
+--
+-- Name: TABLE metrics_counter_submission_monthly; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.metrics_counter_submission_monthly IS 'Monthly statistics matching the COUNTER R5 protocol for views and downloads of published submissions and files.';
+
+
+--
+-- Name: metrics_counter_submission_mo_metrics_counter_submission_mo_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq OWNER TO "omp-ci";
+
+--
+-- Name: metrics_counter_submission_mo_metrics_counter_submission_mo_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq OWNED BY public.metrics_counter_submission_monthly.metrics_counter_submission_monthly_id;
+
+
+--
+-- Name: metrics_series; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.metrics_series (
+    metrics_series_id bigint NOT NULL,
+    load_id character varying(255) NOT NULL,
+    context_id bigint NOT NULL,
+    series_id bigint NOT NULL,
+    date date NOT NULL,
+    metric integer NOT NULL
+);
+
+
+ALTER TABLE public.metrics_series OWNER TO "omp-ci";
+
+--
+-- Name: TABLE metrics_series; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.metrics_series IS 'Daily statistics for views of published submissions in each series.';
+
+
+--
+-- Name: metrics_series_metrics_series_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.metrics_series_metrics_series_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_series_metrics_series_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: metrics_series_metrics_series_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.metrics_series_metrics_series_id_seq OWNED BY public.metrics_series.metrics_series_id;
+
+
+--
+-- Name: metrics_submission; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.metrics_submission (
+    metrics_submission_id bigint NOT NULL,
+    load_id character varying(255) NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    chapter_id bigint,
+    representation_id bigint,
+    submission_file_id bigint,
+    file_type bigint,
+    assoc_type bigint NOT NULL,
+    date date NOT NULL,
+    metric integer NOT NULL
+);
+
+
+ALTER TABLE public.metrics_submission OWNER TO "omp-ci";
+
+--
+-- Name: TABLE metrics_submission; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.metrics_submission IS 'Daily statistics for views and downloads of published submissions and files.';
+
+
+--
+-- Name: metrics_submission_geo_daily; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.metrics_submission_geo_daily (
+    metrics_submission_geo_daily_id bigint NOT NULL,
+    load_id character varying(255) NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    country character varying(2) DEFAULT ''::character varying NOT NULL,
+    region character varying(3) DEFAULT ''::character varying NOT NULL,
+    city character varying(255) DEFAULT ''::character varying NOT NULL,
+    date date NOT NULL,
+    metric integer NOT NULL,
+    metric_unique integer NOT NULL
+);
+
+
+ALTER TABLE public.metrics_submission_geo_daily OWNER TO "omp-ci";
+
+--
+-- Name: TABLE metrics_submission_geo_daily; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.metrics_submission_geo_daily IS 'Daily statistics by country, region and city for views and downloads of published submissions and files.';
+
+
+--
+-- Name: metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq OWNER TO "omp-ci";
+
+--
+-- Name: metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq OWNED BY public.metrics_submission_geo_daily.metrics_submission_geo_daily_id;
+
+
+--
+-- Name: metrics_submission_geo_monthly; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.metrics_submission_geo_monthly (
+    metrics_submission_geo_monthly_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    country character varying(2) DEFAULT ''::character varying NOT NULL,
+    region character varying(3) DEFAULT ''::character varying NOT NULL,
+    city character varying(255) DEFAULT ''::character varying NOT NULL,
+    month integer NOT NULL,
+    metric integer NOT NULL,
+    metric_unique integer NOT NULL
+);
+
+
+ALTER TABLE public.metrics_submission_geo_monthly OWNER TO "omp-ci";
+
+--
+-- Name: TABLE metrics_submission_geo_monthly; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.metrics_submission_geo_monthly IS 'Monthly statistics by country, region and city for views and downloads of published submissions and files.';
+
+
+--
+-- Name: metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq OWNER TO "omp-ci";
+
+--
+-- Name: metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq OWNED BY public.metrics_submission_geo_monthly.metrics_submission_geo_monthly_id;
+
+
+--
+-- Name: metrics_submission_metrics_submission_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.metrics_submission_metrics_submission_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.metrics_submission_metrics_submission_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: metrics_submission_metrics_submission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.metrics_submission_metrics_submission_id_seq OWNED BY public.metrics_submission.metrics_submission_id;
+
+
+--
+-- Name: navigation_menu_item_assignment_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.navigation_menu_item_assignment_settings (
+    navigation_menu_item_assignment_setting_id bigint NOT NULL,
+    navigation_menu_item_assignment_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.navigation_menu_item_assignment_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE navigation_menu_item_assignment_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.navigation_menu_item_assignment_settings IS 'More data about navigation menu item assignments to navigation menus, including localized content.';
+
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignm_seq1; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1 OWNER TO "omp-ci";
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignm_seq1; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1 OWNED BY public.navigation_menu_item_assignment_settings.navigation_menu_item_assignment_setting_id;
+
+
+--
+-- Name: navigation_menu_item_assignments; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.navigation_menu_item_assignments (
+    navigation_menu_item_assignment_id bigint NOT NULL,
+    navigation_menu_id bigint NOT NULL,
+    navigation_menu_item_id bigint NOT NULL,
+    parent_id bigint,
+    seq bigint DEFAULT '0'::bigint
+);
+
+
+ALTER TABLE public.navigation_menu_item_assignments OWNER TO "omp-ci";
+
+--
+-- Name: TABLE navigation_menu_item_assignments; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.navigation_menu_item_assignments IS 'Links navigation menu items to navigation menus.';
+
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq OWNER TO "omp-ci";
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq OWNED BY public.navigation_menu_item_assignments.navigation_menu_item_assignment_id;
+
+
+--
+-- Name: navigation_menu_item_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.navigation_menu_item_settings (
+    navigation_menu_item_setting_id bigint NOT NULL,
+    navigation_menu_item_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.navigation_menu_item_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE navigation_menu_item_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.navigation_menu_item_settings IS 'More data about navigation menu items, including localized content such as names.';
+
+
+--
+-- Name: navigation_menu_item_settings_navigation_menu_item_setting__seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.navigation_menu_item_settings_navigation_menu_item_setting__seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.navigation_menu_item_settings_navigation_menu_item_setting__seq OWNER TO "omp-ci";
+
+--
+-- Name: navigation_menu_item_settings_navigation_menu_item_setting__seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.navigation_menu_item_settings_navigation_menu_item_setting__seq OWNED BY public.navigation_menu_item_settings.navigation_menu_item_setting_id;
+
+
+--
+-- Name: navigation_menu_items; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.navigation_menu_items (
+    navigation_menu_item_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    path character varying(255) DEFAULT ''::character varying,
+    type character varying(255) DEFAULT ''::character varying
+);
+
+
+ALTER TABLE public.navigation_menu_items OWNER TO "omp-ci";
+
+--
+-- Name: TABLE navigation_menu_items; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.navigation_menu_items IS 'Navigation menu items are single elements within a navigation menu.';
+
+
+--
+-- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.navigation_menu_items_navigation_menu_item_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.navigation_menu_items_navigation_menu_item_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.navigation_menu_items_navigation_menu_item_id_seq OWNED BY public.navigation_menu_items.navigation_menu_item_id;
+
+
+--
+-- Name: navigation_menus; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.navigation_menus (
+    navigation_menu_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    area_name character varying(255) DEFAULT ''::character varying,
+    title character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.navigation_menus OWNER TO "omp-ci";
+
+--
+-- Name: TABLE navigation_menus; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.navigation_menus IS 'Navigation menus on the website are installed with the software as a default set, and can be customized.';
+
+
+--
+-- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.navigation_menus_navigation_menu_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.navigation_menus_navigation_menu_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.navigation_menus_navigation_menu_id_seq OWNED BY public.navigation_menus.navigation_menu_id;
+
+
+--
+-- Name: new_releases; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.new_releases (
+    new_release_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    assoc_type bigint NOT NULL,
+    assoc_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.new_releases OWNER TO "omp-ci";
+
+--
+-- Name: TABLE new_releases; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.new_releases IS 'Information about which submissions in the press are considered new releases.';
+
+
+--
+-- Name: new_releases_new_release_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.new_releases_new_release_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.new_releases_new_release_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: new_releases_new_release_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.new_releases_new_release_id_seq OWNED BY public.new_releases.new_release_id;
+
+
+--
+-- Name: notes; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.notes (
+    note_id bigint NOT NULL,
+    assoc_type bigint NOT NULL,
+    assoc_id bigint NOT NULL,
+    user_id bigint NOT NULL,
+    date_created timestamp(0) without time zone NOT NULL,
+    date_modified timestamp(0) without time zone,
+    title character varying(255),
+    contents text
+);
+
+
+ALTER TABLE public.notes OWNER TO "omp-ci";
+
+--
+-- Name: TABLE notes; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.notes IS 'Notes allow users to annotate associated entities, such as submissions.';
+
+
+--
+-- Name: notes_note_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.notes_note_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.notes_note_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: notes_note_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.notes_note_id_seq OWNED BY public.notes.note_id;
+
+
+--
+-- Name: notification_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.notification_settings (
+    notification_setting_id bigint NOT NULL,
+    notification_id bigint NOT NULL,
+    locale character varying(14),
+    setting_name character varying(64) NOT NULL,
+    setting_value text NOT NULL,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.notification_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE notification_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.notification_settings IS 'More data about notifications, including localized properties.';
+
+
+--
+-- Name: COLUMN notification_settings.setting_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.notification_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: notification_settings_notification_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.notification_settings_notification_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.notification_settings_notification_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: notification_settings_notification_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.notification_settings_notification_setting_id_seq OWNED BY public.notification_settings.notification_setting_id;
+
+
+--
+-- Name: notification_subscription_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.notification_subscription_settings (
+    setting_id bigint NOT NULL,
+    setting_name character varying(64) NOT NULL,
+    setting_value text NOT NULL,
+    user_id bigint NOT NULL,
+    context bigint NOT NULL,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.notification_subscription_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE notification_subscription_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.notification_subscription_settings IS 'Which email notifications a user has chosen to unsubscribe from.';
+
+
+--
+-- Name: COLUMN notification_subscription_settings.setting_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.notification_subscription_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.notification_subscription_settings_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.notification_subscription_settings_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.notification_subscription_settings_setting_id_seq OWNED BY public.notification_subscription_settings.setting_id;
+
+
+--
+-- Name: notifications; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.notifications (
+    notification_id bigint NOT NULL,
+    context_id bigint,
+    user_id bigint,
+    level bigint NOT NULL,
+    type bigint NOT NULL,
+    date_created timestamp(0) without time zone NOT NULL,
+    date_read timestamp(0) without time zone,
+    assoc_type bigint,
+    assoc_id bigint
+);
+
+
+ALTER TABLE public.notifications OWNER TO "omp-ci";
+
+--
+-- Name: TABLE notifications; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.notifications IS 'User notifications created during certain operations.';
+
+
+--
+-- Name: notifications_notification_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.notifications_notification_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.notifications_notification_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: notifications_notification_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.notifications_notification_id_seq OWNED BY public.notifications.notification_id;
+
+
+--
+-- Name: oai_resumption_tokens; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.oai_resumption_tokens (
+    oai_resumption_token_id bigint NOT NULL,
+    token character varying(32) NOT NULL,
+    expire bigint NOT NULL,
+    record_offset integer NOT NULL,
+    params text
+);
+
+
+ALTER TABLE public.oai_resumption_tokens OWNER TO "omp-ci";
+
+--
+-- Name: TABLE oai_resumption_tokens; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.oai_resumption_tokens IS 'OAI resumption tokens are used to allow for pagination of large result sets into manageable pieces.';
+
+
+--
+-- Name: oai_resumption_tokens_oai_resumption_token_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.oai_resumption_tokens_oai_resumption_token_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.oai_resumption_tokens_oai_resumption_token_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: oai_resumption_tokens_oai_resumption_token_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.oai_resumption_tokens_oai_resumption_token_id_seq OWNED BY public.oai_resumption_tokens.oai_resumption_token_id;
+
+
+--
+-- Name: plugin_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.plugin_settings (
+    plugin_setting_id bigint NOT NULL,
+    plugin_name character varying(80) NOT NULL,
+    context_id bigint NOT NULL,
+    setting_name character varying(80) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.plugin_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE plugin_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.plugin_settings IS 'More data about plugins, including localized properties. This table is frequently used to store plugin-specific configuration.';
+
+
+--
+-- Name: COLUMN plugin_settings.setting_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.plugin_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: plugin_settings_plugin_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.plugin_settings_plugin_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.plugin_settings_plugin_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: plugin_settings_plugin_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.plugin_settings_plugin_setting_id_seq OWNED BY public.plugin_settings.plugin_setting_id;
+
+
+--
+-- Name: press_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.press_settings (
+    press_setting_id bigint NOT NULL,
+    press_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6)
+);
+
+
+ALTER TABLE public.press_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE press_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.press_settings IS 'More data about presses, including localized properties such as policies.';
+
+
+--
+-- Name: press_settings_press_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.press_settings_press_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.press_settings_press_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: press_settings_press_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.press_settings_press_setting_id_seq OWNED BY public.press_settings.press_setting_id;
+
+
+--
+-- Name: presses; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.presses (
+    press_id bigint NOT NULL,
+    path character varying(32) NOT NULL,
+    seq double precision DEFAULT '0'::double precision NOT NULL,
+    primary_locale character varying(14) NOT NULL,
+    enabled smallint DEFAULT '1'::smallint NOT NULL
+);
+
+
+ALTER TABLE public.presses OWNER TO "omp-ci";
+
+--
+-- Name: TABLE presses; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.presses IS 'A list of presses managed by the system.';
+
+
+--
+-- Name: presses_press_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.presses_press_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.presses_press_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: presses_press_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.presses_press_id_seq OWNED BY public.presses.press_id;
+
+
+--
+-- Name: publication_categories; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.publication_categories (
+    publication_category_id bigint NOT NULL,
+    publication_id bigint NOT NULL,
+    category_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.publication_categories OWNER TO "omp-ci";
+
+--
+-- Name: TABLE publication_categories; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.publication_categories IS 'Associates publications (and thus submissions) with categories.';
+
+
+--
+-- Name: publication_categories_publication_category_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.publication_categories_publication_category_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.publication_categories_publication_category_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: publication_categories_publication_category_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.publication_categories_publication_category_id_seq OWNED BY public.publication_categories.publication_category_id;
+
+
+--
+-- Name: publication_dates; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.publication_dates (
+    publication_date_id bigint NOT NULL,
+    publication_format_id bigint NOT NULL,
+    role character varying(40) NOT NULL,
+    date_format character varying(40) NOT NULL,
+    date character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.publication_dates OWNER TO "omp-ci";
+
+--
+-- Name: TABLE publication_dates; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.publication_dates IS 'ONIX publication dates for publication formats.';
+
+
+--
+-- Name: publication_dates_publication_date_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.publication_dates_publication_date_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.publication_dates_publication_date_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: publication_dates_publication_date_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.publication_dates_publication_date_id_seq OWNED BY public.publication_dates.publication_date_id;
+
+
+--
+-- Name: publication_format_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.publication_format_settings (
+    publication_format_setting_id bigint NOT NULL,
+    publication_format_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.publication_format_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE publication_format_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.publication_format_settings IS 'More data about publication formats, including localized properties.';
+
+
+--
+-- Name: COLUMN publication_format_settings.setting_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.publication_format_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: publication_format_settings_publication_format_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.publication_format_settings_publication_format_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.publication_format_settings_publication_format_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: publication_format_settings_publication_format_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.publication_format_settings_publication_format_setting_id_seq OWNED BY public.publication_format_settings.publication_format_setting_id;
+
+
+--
+-- Name: publication_formats; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.publication_formats (
+    publication_format_id bigint NOT NULL,
+    publication_id bigint NOT NULL,
+    submission_id bigint,
+    physical_format smallint DEFAULT '1'::smallint,
+    entry_key character varying(64),
+    seq double precision DEFAULT '0'::double precision NOT NULL,
+    file_size character varying(255),
+    front_matter character varying(255),
+    back_matter character varying(255),
+    height character varying(255),
+    height_unit_code character varying(255),
+    width character varying(255),
+    width_unit_code character varying(255),
+    thickness character varying(255),
+    thickness_unit_code character varying(255),
+    weight character varying(255),
+    weight_unit_code character varying(255),
+    product_composition_code character varying(255),
+    product_form_detail_code character varying(255),
+    country_manufacture_code character varying(255),
+    imprint character varying(255),
+    product_availability_code character varying(255),
+    technical_protection_code character varying(255),
+    returnable_indicator_code character varying(255),
+    remote_url character varying(2047),
+    url_path character varying(64),
+    is_approved smallint DEFAULT '0'::smallint NOT NULL,
+    is_available smallint DEFAULT '0'::smallint NOT NULL,
+    doi_id bigint
+);
+
+
+ALTER TABLE public.publication_formats OWNER TO "omp-ci";
+
+--
+-- Name: TABLE publication_formats; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.publication_formats IS 'Publication formats are representations of a publication in a particular format, e.g. PDF, hardcover, etc. Each publication format may contain many chapters.';
+
+
+--
+-- Name: publication_formats_publication_format_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.publication_formats_publication_format_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.publication_formats_publication_format_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: publication_formats_publication_format_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.publication_formats_publication_format_id_seq OWNED BY public.publication_formats.publication_format_id;
+
+
+--
+-- Name: publication_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.publication_settings (
+    publication_setting_id bigint NOT NULL,
+    publication_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text
+);
+
+
+ALTER TABLE public.publication_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE publication_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.publication_settings IS 'More data about publications, including localized properties such as the title and abstract.';
+
+
+--
+-- Name: publication_settings_publication_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.publication_settings_publication_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.publication_settings_publication_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: publication_settings_publication_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.publication_settings_publication_setting_id_seq OWNED BY public.publication_settings.publication_setting_id;
+
+
+--
+-- Name: publications; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.publications (
+    publication_id bigint NOT NULL,
+    date_published date,
+    last_modified timestamp(0) without time zone,
+    primary_contact_id bigint,
+    publication_date_type character varying(32) DEFAULT 'pub'::character varying,
+    publication_type character varying(32) DEFAULT 'publication'::character varying,
+    seq double precision DEFAULT '0'::double precision NOT NULL,
+    series_id bigint,
+    series_position character varying(255),
+    submission_id bigint NOT NULL,
+    status smallint DEFAULT '1'::smallint NOT NULL,
+    url_path character varying(64),
+    version bigint,
+    doi_id bigint
+);
+
+
+ALTER TABLE public.publications OWNER TO "omp-ci";
+
+--
+-- Name: TABLE publications; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.publications IS 'Each publication is one version of a submission.';
+
+
+--
+-- Name: publications_publication_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.publications_publication_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.publications_publication_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: publications_publication_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.publications_publication_id_seq OWNED BY public.publications.publication_id;
+
+
+--
+-- Name: queries; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.queries (
+    query_id bigint NOT NULL,
+    assoc_type bigint NOT NULL,
+    assoc_id bigint NOT NULL,
+    stage_id smallint NOT NULL,
+    seq double precision DEFAULT '0'::double precision NOT NULL,
+    date_posted timestamp(0) without time zone,
+    date_modified timestamp(0) without time zone,
+    closed smallint DEFAULT '0'::smallint NOT NULL
+);
+
+
+ALTER TABLE public.queries OWNER TO "omp-ci";
+
+--
+-- Name: TABLE queries; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.queries IS 'Discussions, usually related to a submission, created by editors, authors and other editorial staff.';
+
+
+--
+-- Name: queries_query_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.queries_query_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.queries_query_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: queries_query_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.queries_query_id_seq OWNED BY public.queries.query_id;
+
+
+--
+-- Name: query_participants; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.query_participants (
+    query_participant_id bigint NOT NULL,
+    query_id bigint NOT NULL,
+    user_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.query_participants OWNER TO "omp-ci";
+
+--
+-- Name: TABLE query_participants; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.query_participants IS 'The users assigned to a discussion.';
+
+
+--
+-- Name: query_participants_query_participant_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.query_participants_query_participant_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.query_participants_query_participant_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: query_participants_query_participant_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.query_participants_query_participant_id_seq OWNED BY public.query_participants.query_participant_id;
+
+
+--
+-- Name: queued_payments; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.queued_payments (
+    queued_payment_id bigint NOT NULL,
+    date_created timestamp(0) without time zone NOT NULL,
+    date_modified timestamp(0) without time zone NOT NULL,
+    expiry_date date,
+    payment_data text
+);
+
+
+ALTER TABLE public.queued_payments OWNER TO "omp-ci";
+
+--
+-- Name: TABLE queued_payments; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.queued_payments IS 'A list of queued (unfilled) payments, i.e. payments that have not yet been completed via an online payment system.';
+
+
+--
+-- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.queued_payments_queued_payment_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.queued_payments_queued_payment_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.queued_payments_queued_payment_id_seq OWNED BY public.queued_payments.queued_payment_id;
+
+
+--
+-- Name: representatives; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.representatives (
+    representative_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    role character varying(40) NOT NULL,
+    representative_id_type character varying(255),
+    representative_id_value character varying(255),
+    name character varying(255),
+    phone character varying(255),
+    email character varying(255),
+    url character varying(2047),
+    is_supplier smallint DEFAULT '1'::smallint NOT NULL
+);
+
+
+ALTER TABLE public.representatives OWNER TO "omp-ci";
+
+--
+-- Name: TABLE representatives; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.representatives IS 'ONIX representatives for publication formats.';
+
+
+--
+-- Name: representatives_representative_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.representatives_representative_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.representatives_representative_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: representatives_representative_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.representatives_representative_id_seq OWNED BY public.representatives.representative_id;
+
+
+--
+-- Name: review_assignments; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.review_assignments (
+    review_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    reviewer_id bigint NOT NULL,
+    competing_interests text,
+    recommendation smallint,
+    date_assigned timestamp(0) without time zone,
+    date_notified timestamp(0) without time zone,
+    date_confirmed timestamp(0) without time zone,
+    date_completed timestamp(0) without time zone,
+    date_acknowledged timestamp(0) without time zone,
+    date_due timestamp(0) without time zone,
+    date_response_due timestamp(0) without time zone,
+    last_modified timestamp(0) without time zone,
+    reminder_was_automatic smallint DEFAULT '0'::smallint NOT NULL,
+    declined smallint DEFAULT '0'::smallint NOT NULL,
+    cancelled smallint DEFAULT '0'::smallint NOT NULL,
+    reviewer_file_id bigint,
+    date_rated timestamp(0) without time zone,
+    date_reminded timestamp(0) without time zone,
+    quality smallint,
+    review_round_id bigint NOT NULL,
+    stage_id smallint NOT NULL,
+    review_method smallint DEFAULT '1'::smallint NOT NULL,
+    round smallint DEFAULT '1'::smallint NOT NULL,
+    step smallint DEFAULT '1'::smallint NOT NULL,
+    review_form_id bigint,
+    considered smallint,
+    request_resent smallint DEFAULT '0'::smallint NOT NULL
+);
+
+
+ALTER TABLE public.review_assignments OWNER TO "omp-ci";
+
+--
+-- Name: TABLE review_assignments; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.review_assignments IS 'Data about peer review assignments for all submissions.';
+
+
+--
+-- Name: review_assignments_review_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.review_assignments_review_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_assignments_review_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: review_assignments_review_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.review_assignments_review_id_seq OWNED BY public.review_assignments.review_id;
+
+
+--
+-- Name: review_files; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.review_files (
+    review_file_id bigint NOT NULL,
+    review_id bigint NOT NULL,
+    submission_file_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.review_files OWNER TO "omp-ci";
+
+--
+-- Name: TABLE review_files; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.review_files IS 'A list of the submission files made available to each assigned reviewer.';
+
+
+--
+-- Name: review_files_review_file_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.review_files_review_file_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_files_review_file_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: review_files_review_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.review_files_review_file_id_seq OWNED BY public.review_files.review_file_id;
+
+
+--
+-- Name: review_form_element_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.review_form_element_settings (
+    review_form_element_setting_id bigint NOT NULL,
+    review_form_element_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.review_form_element_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE review_form_element_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.review_form_element_settings IS 'More data about review form elements, including localized content such as question text.';
+
+
+--
+-- Name: review_form_element_settings_review_form_element_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.review_form_element_settings_review_form_element_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_form_element_settings_review_form_element_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: review_form_element_settings_review_form_element_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.review_form_element_settings_review_form_element_setting_id_seq OWNED BY public.review_form_element_settings.review_form_element_setting_id;
+
+
+--
+-- Name: review_form_elements; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.review_form_elements (
+    review_form_element_id bigint NOT NULL,
+    review_form_id bigint NOT NULL,
+    seq double precision,
+    element_type bigint,
+    required smallint,
+    included smallint
+);
+
+
+ALTER TABLE public.review_form_elements OWNER TO "omp-ci";
+
+--
+-- Name: TABLE review_form_elements; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.review_form_elements IS 'Each review form element represents a single question on a review form.';
+
+
+--
+-- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.review_form_elements_review_form_element_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_form_elements_review_form_element_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.review_form_elements_review_form_element_id_seq OWNED BY public.review_form_elements.review_form_element_id;
+
+
+--
+-- Name: review_form_responses; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.review_form_responses (
+    review_form_response_id bigint NOT NULL,
+    review_form_element_id bigint NOT NULL,
+    review_id bigint NOT NULL,
+    response_type character varying(6),
+    response_value text
+);
+
+
+ALTER TABLE public.review_form_responses OWNER TO "omp-ci";
+
+--
+-- Name: TABLE review_form_responses; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.review_form_responses IS 'Each review form response records a reviewer''s answer to a review form element associated with a peer review.';
+
+
+--
+-- Name: review_form_responses_review_form_response_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.review_form_responses_review_form_response_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_form_responses_review_form_response_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: review_form_responses_review_form_response_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.review_form_responses_review_form_response_id_seq OWNED BY public.review_form_responses.review_form_response_id;
+
+
+--
+-- Name: review_form_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.review_form_settings (
+    review_form_setting_id bigint NOT NULL,
+    review_form_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.review_form_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE review_form_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.review_form_settings IS 'More data about review forms, including localized content such as names.';
+
+
+--
+-- Name: review_form_settings_review_form_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.review_form_settings_review_form_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_form_settings_review_form_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: review_form_settings_review_form_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.review_form_settings_review_form_setting_id_seq OWNED BY public.review_form_settings.review_form_setting_id;
+
+
+--
+-- Name: review_forms; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.review_forms (
+    review_form_id bigint NOT NULL,
+    assoc_type bigint NOT NULL,
+    assoc_id bigint NOT NULL,
+    seq double precision,
+    is_active smallint
+);
+
+
+ALTER TABLE public.review_forms OWNER TO "omp-ci";
+
+--
+-- Name: TABLE review_forms; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.review_forms IS 'Review forms provide custom templates for peer reviews with several types of questions.';
+
+
+--
+-- Name: review_forms_review_form_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.review_forms_review_form_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_forms_review_form_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: review_forms_review_form_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.review_forms_review_form_id_seq OWNED BY public.review_forms.review_form_id;
+
+
+--
+-- Name: review_round_files; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.review_round_files (
+    review_round_file_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    review_round_id bigint NOT NULL,
+    stage_id smallint NOT NULL,
+    submission_file_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.review_round_files OWNER TO "omp-ci";
+
+--
+-- Name: TABLE review_round_files; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.review_round_files IS 'Records the files made available to reviewers for a round of reviews. These can be further customized on a per review basis with review_files.';
+
+
+--
+-- Name: review_round_files_review_round_file_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.review_round_files_review_round_file_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_round_files_review_round_file_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: review_round_files_review_round_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.review_round_files_review_round_file_id_seq OWNED BY public.review_round_files.review_round_file_id;
+
+
+--
+-- Name: review_rounds; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.review_rounds (
+    review_round_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    stage_id bigint,
+    round smallint NOT NULL,
+    review_revision bigint,
+    status bigint
+);
+
+
+ALTER TABLE public.review_rounds OWNER TO "omp-ci";
+
+--
+-- Name: TABLE review_rounds; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.review_rounds IS 'Peer review assignments are organized into multiple rounds on a submission.';
+
+
+--
+-- Name: review_rounds_review_round_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.review_rounds_review_round_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.review_rounds_review_round_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: review_rounds_review_round_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.review_rounds_review_round_id_seq OWNED BY public.review_rounds.review_round_id;
+
+
+--
+-- Name: sales_rights; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.sales_rights (
+    sales_rights_id bigint NOT NULL,
+    publication_format_id bigint NOT NULL,
+    type character varying(40) NOT NULL,
+    row_setting smallint DEFAULT '0'::smallint NOT NULL,
+    countries_included text,
+    countries_excluded text,
+    regions_included text,
+    regions_excluded text
+);
+
+
+ALTER TABLE public.sales_rights OWNER TO "omp-ci";
+
+--
+-- Name: TABLE sales_rights; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.sales_rights IS 'ONIX sales rights for publication formats.';
+
+
+--
+-- Name: sales_rights_sales_rights_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.sales_rights_sales_rights_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.sales_rights_sales_rights_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: sales_rights_sales_rights_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.sales_rights_sales_rights_id_seq OWNED BY public.sales_rights.sales_rights_id;
+
+
+--
+-- Name: scheduled_tasks; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.scheduled_tasks (
+    scheduled_task_id bigint NOT NULL,
+    class_name character varying(255) NOT NULL,
+    last_run timestamp(0) without time zone
+);
+
+
+ALTER TABLE public.scheduled_tasks OWNER TO "omp-ci";
+
+--
+-- Name: TABLE scheduled_tasks; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.scheduled_tasks IS 'The last time each scheduled task was run.';
+
+
+--
+-- Name: scheduled_tasks_scheduled_task_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.scheduled_tasks_scheduled_task_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.scheduled_tasks_scheduled_task_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: scheduled_tasks_scheduled_task_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.scheduled_tasks_scheduled_task_id_seq OWNED BY public.scheduled_tasks.scheduled_task_id;
+
+
+--
+-- Name: series; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.series (
+    series_id bigint NOT NULL,
+    press_id bigint NOT NULL,
+    review_form_id bigint,
+    seq double precision DEFAULT '0'::double precision,
+    featured smallint DEFAULT '0'::smallint NOT NULL,
+    editor_restricted smallint DEFAULT '0'::smallint NOT NULL,
+    path character varying(255) NOT NULL,
+    image text,
+    is_inactive smallint DEFAULT '0'::smallint NOT NULL
+);
+
+
+ALTER TABLE public.series OWNER TO "omp-ci";
+
+--
+-- Name: TABLE series; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.series IS 'A list of press series, into which submissions can be organized.';
+
+
+--
+-- Name: series_categories; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.series_categories (
+    series_id bigint NOT NULL,
+    category_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.series_categories OWNER TO "omp-ci";
+
+--
+-- Name: TABLE series_categories; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.series_categories IS 'A list of relationships between series and category information.';
+
+
+--
+-- Name: series_series_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.series_series_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.series_series_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: series_series_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.series_series_id_seq OWNED BY public.series.series_id;
+
+
+--
+-- Name: series_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.series_settings (
+    series_setting_id bigint NOT NULL,
+    series_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text
+);
+
+
+ALTER TABLE public.series_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE series_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.series_settings IS 'More data about series, including localized properties such as series titles.';
+
+
+--
+-- Name: series_settings_series_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.series_settings_series_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.series_settings_series_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: series_settings_series_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.series_settings_series_setting_id_seq OWNED BY public.series_settings.series_setting_id;
+
+
+--
+-- Name: sessions; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.sessions (
+    session_id character varying(128) NOT NULL,
+    user_id bigint,
+    ip_address character varying(39) NOT NULL,
+    user_agent character varying(255),
+    created bigint DEFAULT '0'::bigint NOT NULL,
+    last_used bigint DEFAULT '0'::bigint NOT NULL,
+    remember smallint DEFAULT '0'::smallint NOT NULL,
+    data text NOT NULL,
+    domain character varying(255)
+);
+
+
+ALTER TABLE public.sessions OWNER TO "omp-ci";
+
+--
+-- Name: TABLE sessions; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.sessions IS 'Session data for logged-in users.';
+
+
+--
+-- Name: site; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.site (
+    site_id bigint NOT NULL,
+    redirect bigint DEFAULT '0'::bigint NOT NULL,
+    primary_locale character varying(14) NOT NULL,
+    min_password_length smallint DEFAULT '6'::smallint NOT NULL,
+    installed_locales character varying(1024) DEFAULT 'en'::character varying NOT NULL,
+    supported_locales character varying(1024),
+    original_style_file_name character varying(255)
+);
+
+
+ALTER TABLE public.site OWNER TO "omp-ci";
+
+--
+-- Name: TABLE site; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.site IS 'A singleton table describing basic information about the site.';
+
+
+--
+-- Name: COLUMN site.redirect; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.site.redirect IS 'If not 0, redirect to the specified journal/conference/... site.';
+
+
+--
+-- Name: COLUMN site.primary_locale; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.site.primary_locale IS 'Primary locale for the site.';
+
+
+--
+-- Name: COLUMN site.installed_locales; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.site.installed_locales IS 'Locales for which support has been installed.';
+
+
+--
+-- Name: COLUMN site.supported_locales; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.site.supported_locales IS 'Locales supported by the site (for hosted journals/conferences/...).';
+
+
+--
+-- Name: site_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.site_settings (
+    site_setting_id bigint NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_value text
+);
+
+
+ALTER TABLE public.site_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE site_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.site_settings IS 'More data about the site, including localized properties such as its name.';
+
+
+--
+-- Name: site_settings_site_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.site_settings_site_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.site_settings_site_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: site_settings_site_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.site_settings_site_setting_id_seq OWNED BY public.site_settings.site_setting_id;
+
+
+--
+-- Name: site_site_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.site_site_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.site_site_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: site_site_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.site_site_id_seq OWNED BY public.site.site_id;
+
+
+--
+-- Name: spotlight_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.spotlight_settings (
+    spotlight_setting_id bigint NOT NULL,
+    spotlight_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.spotlight_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE spotlight_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.spotlight_settings IS 'More data about spotlights, including localized properties.';
+
+
+--
+-- Name: COLUMN spotlight_settings.setting_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.spotlight_settings.setting_type IS '(bool|int|float|string|object|date)';
+
+
+--
+-- Name: spotlight_settings_spotlight_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.spotlight_settings_spotlight_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.spotlight_settings_spotlight_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: spotlight_settings_spotlight_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.spotlight_settings_spotlight_setting_id_seq OWNED BY public.spotlight_settings.spotlight_setting_id;
+
+
+--
+-- Name: spotlights; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.spotlights (
+    spotlight_id bigint NOT NULL,
+    assoc_type smallint NOT NULL,
+    assoc_id smallint NOT NULL,
+    press_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.spotlights OWNER TO "omp-ci";
+
+--
+-- Name: TABLE spotlights; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.spotlights IS 'Information about which submissions to the press are spotlighted.';
+
+
+--
+-- Name: spotlights_spotlight_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.spotlights_spotlight_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.spotlights_spotlight_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: spotlights_spotlight_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.spotlights_spotlight_id_seq OWNED BY public.spotlights.spotlight_id;
+
+
+--
+-- Name: stage_assignments; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.stage_assignments (
+    stage_assignment_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    user_group_id bigint NOT NULL,
+    user_id bigint NOT NULL,
+    date_assigned timestamp(0) without time zone NOT NULL,
+    recommend_only smallint DEFAULT '0'::smallint NOT NULL,
+    can_change_metadata smallint DEFAULT '0'::smallint NOT NULL
+);
+
+
+ALTER TABLE public.stage_assignments OWNER TO "omp-ci";
+
+--
+-- Name: TABLE stage_assignments; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.stage_assignments IS 'Who can access a submission while it is in the editorial workflow. Includes all editorial and author assignments. For reviewers, see review_assignments.';
+
+
+--
+-- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.stage_assignments_stage_assignment_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.stage_assignments_stage_assignment_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.stage_assignments_stage_assignment_id_seq OWNED BY public.stage_assignments.stage_assignment_id;
+
+
+--
+-- Name: static_page_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.static_page_settings (
+    static_page_setting_id bigint NOT NULL,
+    static_page_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.static_page_settings OWNER TO "omp-ci";
+
+--
+-- Name: static_page_settings_static_page_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.static_page_settings_static_page_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.static_page_settings_static_page_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: static_page_settings_static_page_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.static_page_settings_static_page_setting_id_seq OWNED BY public.static_page_settings.static_page_setting_id;
+
+
+--
+-- Name: static_pages; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.static_pages (
+    static_page_id bigint NOT NULL,
+    path character varying(255) NOT NULL,
+    context_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.static_pages OWNER TO "omp-ci";
+
+--
+-- Name: static_pages_static_page_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.static_pages_static_page_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.static_pages_static_page_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: static_pages_static_page_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.static_pages_static_page_id_seq OWNED BY public.static_pages.static_page_id;
+
+
+--
+-- Name: subeditor_submission_group; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.subeditor_submission_group (
+    subeditor_submission_group_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    assoc_id bigint NOT NULL,
+    assoc_type bigint NOT NULL,
+    user_id bigint NOT NULL,
+    user_group_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.subeditor_submission_group OWNER TO "omp-ci";
+
+--
+-- Name: TABLE subeditor_submission_group; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.subeditor_submission_group IS 'Subeditor assignments to e.g. sections and categories';
+
+
+--
+-- Name: subeditor_submission_group_subeditor_submission_group_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.subeditor_submission_group_subeditor_submission_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.subeditor_submission_group_subeditor_submission_group_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: subeditor_submission_group_subeditor_submission_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.subeditor_submission_group_subeditor_submission_group_id_seq OWNED BY public.subeditor_submission_group.subeditor_submission_group_id;
+
+
+--
+-- Name: submission_chapter_authors; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submission_chapter_authors (
+    author_id bigint NOT NULL,
+    chapter_id bigint NOT NULL,
+    primary_contact smallint DEFAULT '0'::smallint NOT NULL,
+    seq double precision DEFAULT '0'::double precision NOT NULL
+);
+
+
+ALTER TABLE public.submission_chapter_authors OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submission_chapter_authors; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submission_chapter_authors IS 'The list of authors associated with each submission chapter.';
+
+
+--
+-- Name: submission_chapter_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submission_chapter_settings (
+    submission_chapter_setting_id bigint NOT NULL,
+    chapter_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) NOT NULL
+);
+
+
+ALTER TABLE public.submission_chapter_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submission_chapter_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submission_chapter_settings IS 'More information about submission chapters, including localized properties such as chapter titles.';
+
+
+--
+-- Name: COLUMN submission_chapter_settings.setting_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.submission_chapter_settings.setting_type IS '(bool|int|float|string|object)';
+
+
+--
+-- Name: submission_chapter_settings_submission_chapter_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.submission_chapter_settings_submission_chapter_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_chapter_settings_submission_chapter_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: submission_chapter_settings_submission_chapter_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.submission_chapter_settings_submission_chapter_setting_id_seq OWNED BY public.submission_chapter_settings.submission_chapter_setting_id;
+
+
+--
+-- Name: submission_chapters; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submission_chapters (
+    chapter_id bigint NOT NULL,
+    primary_contact_id bigint,
+    publication_id bigint NOT NULL,
+    seq double precision DEFAULT '0'::double precision NOT NULL,
+    source_chapter_id bigint,
+    doi_id bigint
+);
+
+
+ALTER TABLE public.submission_chapters OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submission_chapters; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submission_chapters IS 'A list of chapters for each submission (when submissions are divided into chapters).';
+
+
+--
+-- Name: submission_chapters_chapter_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.submission_chapters_chapter_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_chapters_chapter_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: submission_chapters_chapter_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.submission_chapters_chapter_id_seq OWNED BY public.submission_chapters.chapter_id;
+
+
+--
+-- Name: submission_comments; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submission_comments (
+    comment_id bigint NOT NULL,
+    comment_type bigint,
+    role_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    assoc_id bigint NOT NULL,
+    author_id bigint NOT NULL,
+    comment_title text NOT NULL,
+    comments text,
+    date_posted timestamp(0) without time zone,
+    date_modified timestamp(0) without time zone,
+    viewable smallint
+);
+
+
+ALTER TABLE public.submission_comments OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submission_comments; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submission_comments IS 'Comments on a submission, e.g. peer review comments';
+
+
+--
+-- Name: submission_comments_comment_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.submission_comments_comment_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_comments_comment_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: submission_comments_comment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.submission_comments_comment_id_seq OWNED BY public.submission_comments.comment_id;
+
+
+--
+-- Name: submission_file_revisions; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submission_file_revisions (
+    revision_id bigint NOT NULL,
+    submission_file_id bigint NOT NULL,
+    file_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.submission_file_revisions OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submission_file_revisions; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submission_file_revisions IS 'Revisions map submission_file entries to files on the data store.';
+
+
+--
+-- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.submission_file_revisions_revision_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_file_revisions_revision_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.submission_file_revisions_revision_id_seq OWNED BY public.submission_file_revisions.revision_id;
+
+
+--
+-- Name: submission_file_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submission_file_settings (
+    submission_file_setting_id bigint NOT NULL,
+    submission_file_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text,
+    setting_type character varying(6) DEFAULT 'string'::character varying NOT NULL
+);
+
+
+ALTER TABLE public.submission_file_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submission_file_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submission_file_settings IS 'Localized data about submission files like published metadata.';
+
+
+--
+-- Name: COLUMN submission_file_settings.setting_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.submission_file_settings.setting_type IS '(bool|int|float|string|object|date)';
+
+
+--
+-- Name: submission_file_settings_submission_file_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.submission_file_settings_submission_file_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_file_settings_submission_file_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: submission_file_settings_submission_file_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.submission_file_settings_submission_file_setting_id_seq OWNED BY public.submission_file_settings.submission_file_setting_id;
+
+
+--
+-- Name: submission_files; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submission_files (
+    submission_file_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    file_id bigint NOT NULL,
+    source_submission_file_id bigint,
+    genre_id bigint,
+    file_stage bigint NOT NULL,
+    direct_sales_price character varying(255),
+    sales_type character varying(255),
+    viewable smallint,
+    created_at timestamp(0) without time zone NOT NULL,
+    updated_at timestamp(0) without time zone NOT NULL,
+    uploader_user_id bigint,
+    assoc_type bigint,
+    assoc_id bigint,
+    doi_id bigint
+);
+
+
+ALTER TABLE public.submission_files OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submission_files; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submission_files IS 'All files associated with a submission, such as those uploaded during submission, as revisions, or by copyeditors or layout editors for production.';
+
+
+--
+-- Name: submission_files_submission_file_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.submission_files_submission_file_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_files_submission_file_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: submission_files_submission_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.submission_files_submission_file_id_seq OWNED BY public.submission_files.submission_file_id;
+
+
+--
+-- Name: submission_search_keyword_list; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submission_search_keyword_list (
+    keyword_id bigint NOT NULL,
+    keyword_text character varying(60) NOT NULL
+);
+
+
+ALTER TABLE public.submission_search_keyword_list OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submission_search_keyword_list; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submission_search_keyword_list IS 'A list of all keywords used in the search index';
+
+
+--
+-- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.submission_search_keyword_list_keyword_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_search_keyword_list_keyword_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.submission_search_keyword_list_keyword_id_seq OWNED BY public.submission_search_keyword_list.keyword_id;
+
+
+--
+-- Name: submission_search_object_keywords; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submission_search_object_keywords (
+    submission_search_object_keyword_id bigint NOT NULL,
+    object_id bigint NOT NULL,
+    keyword_id bigint NOT NULL,
+    pos integer NOT NULL
+);
+
+
+ALTER TABLE public.submission_search_object_keywords OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submission_search_object_keywords; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submission_search_object_keywords IS 'Relationships between search objects and keywords in the search index';
+
+
+--
+-- Name: COLUMN submission_search_object_keywords.pos; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.submission_search_object_keywords.pos IS 'Word position of the keyword in the object.';
+
+
+--
+-- Name: submission_search_object_keyw_submission_search_object_keyw_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.submission_search_object_keyw_submission_search_object_keyw_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_search_object_keyw_submission_search_object_keyw_seq OWNER TO "omp-ci";
+
+--
+-- Name: submission_search_object_keyw_submission_search_object_keyw_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.submission_search_object_keyw_submission_search_object_keyw_seq OWNED BY public.submission_search_object_keywords.submission_search_object_keyword_id;
+
+
+--
+-- Name: submission_search_objects; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submission_search_objects (
+    object_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    type integer NOT NULL,
+    assoc_id bigint
+);
+
+
+ALTER TABLE public.submission_search_objects OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submission_search_objects; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submission_search_objects IS 'A list of all search objects indexed in the search index';
+
+
+--
+-- Name: COLUMN submission_search_objects.type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.submission_search_objects.type IS 'Type of item. E.g., abstract, fulltext, etc.';
+
+
+--
+-- Name: COLUMN submission_search_objects.assoc_id; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.submission_search_objects.assoc_id IS 'Optional ID of an associated record (e.g., a file_id)';
+
+
+--
+-- Name: submission_search_objects_object_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.submission_search_objects_object_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_search_objects_object_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: submission_search_objects_object_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.submission_search_objects_object_id_seq OWNED BY public.submission_search_objects.object_id;
+
+
+--
+-- Name: submission_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submission_settings (
+    submission_setting_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text
+);
+
+
+ALTER TABLE public.submission_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submission_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submission_settings IS 'Localized data about submissions';
+
+
+--
+-- Name: submission_settings_submission_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.submission_settings_submission_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submission_settings_submission_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: submission_settings_submission_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.submission_settings_submission_setting_id_seq OWNED BY public.submission_settings.submission_setting_id;
+
+
+--
+-- Name: submissions; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.submissions (
+    submission_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    current_publication_id bigint,
+    date_last_activity timestamp(0) without time zone,
+    date_submitted timestamp(0) without time zone,
+    last_modified timestamp(0) without time zone,
+    stage_id bigint DEFAULT '1'::bigint NOT NULL,
+    locale character varying(14),
+    status smallint DEFAULT '1'::smallint NOT NULL,
+    submission_progress character varying(50) DEFAULT 'start'::character varying NOT NULL,
+    work_type smallint DEFAULT '0'::smallint
+);
+
+
+ALTER TABLE public.submissions OWNER TO "omp-ci";
+
+--
+-- Name: TABLE submissions; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.submissions IS 'All submissions submitted to the context, including incomplete, declined and unpublished submissions.';
+
+
+--
+-- Name: submissions_submission_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.submissions_submission_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.submissions_submission_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: submissions_submission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.submissions_submission_id_seq OWNED BY public.submissions.submission_id;
+
+
+--
+-- Name: temporary_files; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.temporary_files (
+    file_id bigint NOT NULL,
+    user_id bigint NOT NULL,
+    file_name character varying(90) NOT NULL,
+    file_type character varying(255),
+    file_size bigint NOT NULL,
+    original_file_name character varying(127),
+    date_uploaded timestamp(0) without time zone NOT NULL
+);
+
+
+ALTER TABLE public.temporary_files OWNER TO "omp-ci";
+
+--
+-- Name: TABLE temporary_files; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.temporary_files IS 'Temporary files, e.g. where files are kept during an upload process before they are moved somewhere more appropriate.';
+
+
+--
+-- Name: temporary_files_file_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.temporary_files_file_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.temporary_files_file_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: temporary_files_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.temporary_files_file_id_seq OWNED BY public.temporary_files.file_id;
+
+
+--
+-- Name: usage_stats_institution_temporary_records; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.usage_stats_institution_temporary_records (
+    usage_stats_temp_institution_id bigint NOT NULL,
+    load_id character varying(255) NOT NULL,
+    line_number bigint NOT NULL,
+    institution_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.usage_stats_institution_temporary_records OWNER TO "omp-ci";
+
+--
+-- Name: TABLE usage_stats_institution_temporary_records; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.usage_stats_institution_temporary_records IS 'Temporary stats by institution. Data in this table is provisional. See the metrics_* tables for compiled stats.';
+
+
+--
+-- Name: usage_stats_institution_tempo_usage_stats_temp_institution__seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.usage_stats_institution_tempo_usage_stats_temp_institution__seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usage_stats_institution_tempo_usage_stats_temp_institution__seq OWNER TO "omp-ci";
+
+--
+-- Name: usage_stats_institution_tempo_usage_stats_temp_institution__seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.usage_stats_institution_tempo_usage_stats_temp_institution__seq OWNED BY public.usage_stats_institution_temporary_records.usage_stats_temp_institution_id;
+
+
+--
+-- Name: usage_stats_total_temporary_records; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.usage_stats_total_temporary_records (
+    usage_stats_temp_total_id bigint NOT NULL,
+    date timestamp(0) without time zone NOT NULL,
+    ip character varying(255) NOT NULL,
+    user_agent character varying(255) NOT NULL,
+    line_number bigint NOT NULL,
+    canonical_url character varying(255) NOT NULL,
+    series_id bigint,
+    context_id bigint NOT NULL,
+    submission_id bigint,
+    chapter_id bigint,
+    representation_id bigint,
+    submission_file_id bigint,
+    assoc_type bigint NOT NULL,
+    file_type smallint,
+    country character varying(2) DEFAULT ''::character varying NOT NULL,
+    region character varying(3) DEFAULT ''::character varying NOT NULL,
+    city character varying(255) DEFAULT ''::character varying NOT NULL,
+    load_id character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.usage_stats_total_temporary_records OWNER TO "omp-ci";
+
+--
+-- Name: TABLE usage_stats_total_temporary_records; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.usage_stats_total_temporary_records IS 'Temporary stats totals based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
+
+
+--
+-- Name: usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq OWNED BY public.usage_stats_total_temporary_records.usage_stats_temp_total_id;
+
+
+--
+-- Name: usage_stats_unique_item_investigations_temporary_records; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.usage_stats_unique_item_investigations_temporary_records (
+    usage_stats_temp_unique_item_id bigint NOT NULL,
+    date timestamp(0) without time zone NOT NULL,
+    ip character varying(255) NOT NULL,
+    user_agent character varying(255) NOT NULL,
+    line_number bigint NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    chapter_id bigint,
+    representation_id bigint,
+    submission_file_id bigint,
+    assoc_type bigint NOT NULL,
+    file_type smallint,
+    country character varying(2) DEFAULT ''::character varying NOT NULL,
+    region character varying(3) DEFAULT ''::character varying NOT NULL,
+    city character varying(255) DEFAULT ''::character varying NOT NULL,
+    load_id character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.usage_stats_unique_item_investigations_temporary_records OWNER TO "omp-ci";
+
+--
+-- Name: TABLE usage_stats_unique_item_investigations_temporary_records; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.usage_stats_unique_item_investigations_temporary_records IS 'Temporary stats on unique downloads based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
+
+
+--
+-- Name: usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq OWNER TO "omp-ci";
+
+--
+-- Name: usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq OWNED BY public.usage_stats_unique_item_investigations_temporary_records.usage_stats_temp_unique_item_id;
+
+
+--
+-- Name: usage_stats_unique_item_requests_temporary_records; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.usage_stats_unique_item_requests_temporary_records (
+    usage_stats_temp_item_id bigint NOT NULL,
+    date timestamp(0) without time zone NOT NULL,
+    ip character varying(255) NOT NULL,
+    user_agent character varying(255) NOT NULL,
+    line_number bigint NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    chapter_id bigint,
+    representation_id bigint,
+    submission_file_id bigint,
+    assoc_type bigint NOT NULL,
+    file_type smallint,
+    country character varying(2) DEFAULT ''::character varying NOT NULL,
+    region character varying(3) DEFAULT ''::character varying NOT NULL,
+    city character varying(255) DEFAULT ''::character varying NOT NULL,
+    load_id character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.usage_stats_unique_item_requests_temporary_records OWNER TO "omp-ci";
+
+--
+-- Name: TABLE usage_stats_unique_item_requests_temporary_records; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.usage_stats_unique_item_requests_temporary_records IS 'Temporary stats on unique views based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
+
+
+--
+-- Name: usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq OWNED BY public.usage_stats_unique_item_requests_temporary_records.usage_stats_temp_item_id;
+
+
+--
+-- Name: usage_stats_unique_title_investigations_temporary_records; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.usage_stats_unique_title_investigations_temporary_records (
+    usage_stats_temp_unique_investigations_id bigint NOT NULL,
+    date timestamp(0) without time zone NOT NULL,
+    ip character varying(255) NOT NULL,
+    user_agent character varying(255) NOT NULL,
+    line_number bigint NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    chapter_id bigint,
+    representation_id bigint,
+    submission_file_id bigint,
+    assoc_type bigint NOT NULL,
+    file_type smallint,
+    country character varying(2) DEFAULT ''::character varying NOT NULL,
+    region character varying(3) DEFAULT ''::character varying NOT NULL,
+    city character varying(255) DEFAULT ''::character varying NOT NULL,
+    load_id character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.usage_stats_unique_title_investigations_temporary_records OWNER TO "omp-ci";
+
+--
+-- Name: TABLE usage_stats_unique_title_investigations_temporary_records; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.usage_stats_unique_title_investigations_temporary_records IS 'Temporary stats for views and downloads from institutions based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.';
+
+
+--
+-- Name: usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq OWNER TO "omp-ci";
+
+--
+-- Name: usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq OWNED BY public.usage_stats_unique_title_investigations_temporary_records.usage_stats_temp_unique_investigations_id;
+
+
+--
+-- Name: usage_stats_unique_title_requests_temporary_records; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.usage_stats_unique_title_requests_temporary_records (
+    usage_stats_temp_unique_requests_id bigint NOT NULL,
+    date timestamp(0) without time zone NOT NULL,
+    ip character varying(255) NOT NULL,
+    user_agent character varying(255) NOT NULL,
+    line_number bigint NOT NULL,
+    context_id bigint NOT NULL,
+    submission_id bigint NOT NULL,
+    chapter_id bigint,
+    representation_id bigint,
+    submission_file_id bigint,
+    assoc_type bigint NOT NULL,
+    file_type smallint,
+    country character varying(2) DEFAULT ''::character varying NOT NULL,
+    region character varying(3) DEFAULT ''::character varying NOT NULL,
+    city character varying(255) DEFAULT ''::character varying NOT NULL,
+    load_id character varying(255) NOT NULL
+);
+
+
+ALTER TABLE public.usage_stats_unique_title_requests_temporary_records OWNER TO "omp-ci";
+
+--
+-- Name: TABLE usage_stats_unique_title_requests_temporary_records; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.usage_stats_unique_title_requests_temporary_records IS 'Temporary stats for unique title requests. Data in this table is provisional. See the metrics_* tables for compiled stats.';
+
+
+--
+-- Name: usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq OWNER TO "omp-ci";
+
+--
+-- Name: usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq OWNED BY public.usage_stats_unique_title_requests_temporary_records.usage_stats_temp_unique_requests_id;
+
+
+--
+-- Name: user_group_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.user_group_settings (
+    user_group_setting_id bigint NOT NULL,
+    user_group_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text
+);
+
+
+ALTER TABLE public.user_group_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE user_group_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.user_group_settings IS 'More data about user groups, including localized properties such as the name.';
+
+
+--
+-- Name: user_group_settings_user_group_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.user_group_settings_user_group_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_group_settings_user_group_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: user_group_settings_user_group_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.user_group_settings_user_group_setting_id_seq OWNED BY public.user_group_settings.user_group_setting_id;
+
+
+--
+-- Name: user_group_stage; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.user_group_stage (
+    user_group_stage_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    user_group_id bigint NOT NULL,
+    stage_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.user_group_stage OWNER TO "omp-ci";
+
+--
+-- Name: TABLE user_group_stage; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.user_group_stage IS 'Which stages of the editorial workflow the user_groups can access.';
+
+
+--
+-- Name: user_group_stage_user_group_stage_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.user_group_stage_user_group_stage_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_group_stage_user_group_stage_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: user_group_stage_user_group_stage_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.user_group_stage_user_group_stage_id_seq OWNED BY public.user_group_stage.user_group_stage_id;
+
+
+--
+-- Name: user_groups; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.user_groups (
+    user_group_id bigint NOT NULL,
+    context_id bigint NOT NULL,
+    role_id bigint NOT NULL,
+    is_default smallint DEFAULT '0'::smallint NOT NULL,
+    show_title smallint DEFAULT '1'::smallint NOT NULL,
+    permit_self_registration smallint DEFAULT '0'::smallint NOT NULL,
+    permit_metadata_edit smallint DEFAULT '0'::smallint NOT NULL
+);
+
+
+ALTER TABLE public.user_groups OWNER TO "omp-ci";
+
+--
+-- Name: TABLE user_groups; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.user_groups IS 'All defined user roles in a context, such as Author, Reviewer, Section Editor and Journal Manager.';
+
+
+--
+-- Name: user_groups_user_group_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.user_groups_user_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_groups_user_group_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: user_groups_user_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.user_groups_user_group_id_seq OWNED BY public.user_groups.user_group_id;
+
+
+--
+-- Name: user_interests; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.user_interests (
+    user_interest_id bigint NOT NULL,
+    user_id bigint NOT NULL,
+    controlled_vocab_entry_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.user_interests OWNER TO "omp-ci";
+
+--
+-- Name: TABLE user_interests; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.user_interests IS 'Associates users with user interests (which are stored in the controlled vocabulary tables).';
+
+
+--
+-- Name: user_interests_user_interest_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.user_interests_user_interest_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_interests_user_interest_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: user_interests_user_interest_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.user_interests_user_interest_id_seq OWNED BY public.user_interests.user_interest_id;
+
+
+--
+-- Name: user_settings; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.user_settings (
+    user_setting_id bigint NOT NULL,
+    user_id bigint NOT NULL,
+    locale character varying(14) DEFAULT ''::character varying NOT NULL,
+    setting_name character varying(255) NOT NULL,
+    setting_value text
+);
+
+
+ALTER TABLE public.user_settings OWNER TO "omp-ci";
+
+--
+-- Name: TABLE user_settings; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.user_settings IS 'More data about users, including localized properties like their name and affiliation.';
+
+
+--
+-- Name: user_settings_user_setting_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.user_settings_user_setting_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_settings_user_setting_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: user_settings_user_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.user_settings_user_setting_id_seq OWNED BY public.user_settings.user_setting_id;
+
+
+--
+-- Name: user_user_groups; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.user_user_groups (
+    user_user_group_id bigint NOT NULL,
+    user_group_id bigint NOT NULL,
+    user_id bigint NOT NULL
+);
+
+
+ALTER TABLE public.user_user_groups OWNER TO "omp-ci";
+
+--
+-- Name: TABLE user_user_groups; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.user_user_groups IS 'Maps users to their assigned user_groups.';
+
+
+--
+-- Name: user_user_groups_user_user_group_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.user_user_groups_user_user_group_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.user_user_groups_user_user_group_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: user_user_groups_user_user_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.user_user_groups_user_user_group_id_seq OWNED BY public.user_user_groups.user_user_group_id;
+
+
+--
+-- Name: users; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.users (
+    user_id bigint NOT NULL,
+    username character varying(32) NOT NULL,
+    password character varying(255) NOT NULL,
+    email character varying(255) NOT NULL,
+    url character varying(2047),
+    phone character varying(32),
+    mailing_address character varying(255),
+    billing_address character varying(255),
+    country character varying(90),
+    locales character varying(255) DEFAULT '[]'::character varying NOT NULL,
+    gossip text,
+    date_last_email timestamp(0) without time zone,
+    date_registered timestamp(0) without time zone NOT NULL,
+    date_validated timestamp(0) without time zone,
+    date_last_login timestamp(0) without time zone,
+    must_change_password smallint,
+    auth_id bigint,
+    auth_str character varying(255),
+    disabled smallint DEFAULT '0'::smallint NOT NULL,
+    disabled_reason text,
+    inline_help smallint
+);
+
+
+ALTER TABLE public.users OWNER TO "omp-ci";
+
+--
+-- Name: TABLE users; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.users IS 'All registered users, including authentication data and profile data.';
+
+
+--
+-- Name: users_user_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.users_user_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.users_user_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: users_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.users_user_id_seq OWNED BY public.users.user_id;
+
+
+--
+-- Name: versions; Type: TABLE; Schema: public; Owner: omp-ci
+--
+
+CREATE TABLE public.versions (
+    version_id bigint NOT NULL,
+    major integer DEFAULT 0 NOT NULL,
+    minor integer DEFAULT 0 NOT NULL,
+    revision integer DEFAULT 0 NOT NULL,
+    build integer DEFAULT 0 NOT NULL,
+    date_installed timestamp(0) without time zone NOT NULL,
+    current smallint DEFAULT '0'::smallint NOT NULL,
+    product_type character varying(30),
+    product character varying(30),
+    product_class_name character varying(80),
+    lazy_load smallint DEFAULT '0'::smallint NOT NULL,
+    sitewide smallint DEFAULT '0'::smallint NOT NULL
+);
+
+
+ALTER TABLE public.versions OWNER TO "omp-ci";
+
+--
+-- Name: TABLE versions; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON TABLE public.versions IS 'Describes the installation and upgrade version history for the application and all installed plugins.';
+
+
+--
+-- Name: COLUMN versions.major; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.versions.major IS 'Major component of version number, e.g. the 2 in OJS 2.3.8-0';
+
+
+--
+-- Name: COLUMN versions.minor; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.versions.minor IS 'Minor component of version number, e.g. the 3 in OJS 2.3.8-0';
+
+
+--
+-- Name: COLUMN versions.revision; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.versions.revision IS 'Revision component of version number, e.g. the 8 in OJS 2.3.8-0';
+
+
+--
+-- Name: COLUMN versions.build; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.versions.build IS 'Build component of version number, e.g. the 0 in OJS 2.3.8-0';
+
+
+--
+-- Name: COLUMN versions.current; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.versions.current IS '1 iff the version entry being described is currently active. This permits the table to store past installation history for forensic purposes.';
+
+
+--
+-- Name: COLUMN versions.product_type; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.versions.product_type IS 'Describes the type of product this row describes, e.g. "plugins.generic" (for a generic plugin) or "core" for the application itelf';
+
+
+--
+-- Name: COLUMN versions.product; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.versions.product IS 'Uniquely identifies the product this version row describes, e.g. "ojs2" for OJS 2.x, "languageToggle" for the language toggle block plugin, etc.';
+
+
+--
+-- Name: COLUMN versions.product_class_name; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.versions.product_class_name IS 'Specifies the class name associated with this product, for plugins, or the empty string where not applicable.';
+
+
+--
+-- Name: COLUMN versions.lazy_load; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.versions.lazy_load IS '1 iff the row describes a lazy-load plugin; 0 otherwise';
+
+
+--
+-- Name: COLUMN versions.sitewide; Type: COMMENT; Schema: public; Owner: omp-ci
+--
+
+COMMENT ON COLUMN public.versions.sitewide IS '1 iff the row describes a site-wide plugin; 0 otherwise';
+
+
+--
+-- Name: versions_version_id_seq; Type: SEQUENCE; Schema: public; Owner: omp-ci
+--
+
+CREATE SEQUENCE public.versions_version_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.versions_version_id_seq OWNER TO "omp-ci";
+
+--
+-- Name: versions_version_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: omp-ci
+--
+
+ALTER SEQUENCE public.versions_version_id_seq OWNED BY public.versions.version_id;
+
+
+--
+-- Name: access_keys access_key_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.access_keys ALTER COLUMN access_key_id SET DEFAULT nextval('public.access_keys_access_key_id_seq'::regclass);
+
+
+--
+-- Name: announcement_settings announcement_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcement_settings ALTER COLUMN announcement_setting_id SET DEFAULT nextval('public.announcement_settings_announcement_setting_id_seq'::regclass);
+
+
+--
+-- Name: announcement_type_settings announcement_type_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcement_type_settings ALTER COLUMN announcement_type_setting_id SET DEFAULT nextval('public.announcement_type_settings_announcement_type_setting_id_seq'::regclass);
+
+
+--
+-- Name: announcement_types type_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcement_types ALTER COLUMN type_id SET DEFAULT nextval('public.announcement_types_type_id_seq'::regclass);
+
+
+--
+-- Name: announcements announcement_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcements ALTER COLUMN announcement_id SET DEFAULT nextval('public.announcements_announcement_id_seq'::regclass);
+
+
+--
+-- Name: author_settings author_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.author_settings ALTER COLUMN author_setting_id SET DEFAULT nextval('public.author_settings_author_setting_id_seq'::regclass);
+
+
+--
+-- Name: authors author_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.authors ALTER COLUMN author_id SET DEFAULT nextval('public.authors_author_id_seq'::regclass);
+
+
+--
+-- Name: categories category_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.categories ALTER COLUMN category_id SET DEFAULT nextval('public.categories_category_id_seq'::regclass);
+
+
+--
+-- Name: category_settings category_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.category_settings ALTER COLUMN category_setting_id SET DEFAULT nextval('public.category_settings_category_setting_id_seq'::regclass);
+
+
+--
+-- Name: citation_settings citation_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.citation_settings ALTER COLUMN citation_setting_id SET DEFAULT nextval('public.citation_settings_citation_setting_id_seq'::regclass);
+
+
+--
+-- Name: citations citation_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.citations ALTER COLUMN citation_id SET DEFAULT nextval('public.citations_citation_id_seq'::regclass);
+
+
+--
+-- Name: completed_payments completed_payment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.completed_payments ALTER COLUMN completed_payment_id SET DEFAULT nextval('public.completed_payments_completed_payment_id_seq'::regclass);
+
+
+--
+-- Name: controlled_vocab_entries controlled_vocab_entry_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocab_entries ALTER COLUMN controlled_vocab_entry_id SET DEFAULT nextval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq'::regclass);
+
+
+--
+-- Name: controlled_vocab_entry_settings controlled_vocab_entry_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocab_entry_settings ALTER COLUMN controlled_vocab_entry_setting_id SET DEFAULT nextval('public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq'::regclass);
+
+
+--
+-- Name: controlled_vocabs controlled_vocab_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocabs ALTER COLUMN controlled_vocab_id SET DEFAULT nextval('public.controlled_vocabs_controlled_vocab_id_seq'::regclass);
+
+
+--
+-- Name: data_object_tombstone_oai_set_objects object_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects ALTER COLUMN object_id SET DEFAULT nextval('public.data_object_tombstone_oai_set_objects_object_id_seq'::regclass);
+
+
+--
+-- Name: data_object_tombstone_settings tombstone_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.data_object_tombstone_settings ALTER COLUMN tombstone_setting_id SET DEFAULT nextval('public.data_object_tombstone_settings_tombstone_setting_id_seq'::regclass);
+
+
+--
+-- Name: data_object_tombstones tombstone_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.data_object_tombstones ALTER COLUMN tombstone_id SET DEFAULT nextval('public.data_object_tombstones_tombstone_id_seq'::regclass);
+
+
+--
+-- Name: doi_settings doi_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.doi_settings ALTER COLUMN doi_setting_id SET DEFAULT nextval('public.doi_settings_doi_setting_id_seq'::regclass);
+
+
+--
+-- Name: dois doi_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.dois ALTER COLUMN doi_id SET DEFAULT nextval('public.dois_doi_id_seq'::regclass);
+
+
+--
+-- Name: edit_decisions edit_decision_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.edit_decisions ALTER COLUMN edit_decision_id SET DEFAULT nextval('public.edit_decisions_edit_decision_id_seq'::regclass);
+
+
+--
+-- Name: email_log log_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_log ALTER COLUMN log_id SET DEFAULT nextval('public.email_log_log_id_seq'::regclass);
+
+
+--
+-- Name: email_log_users email_log_user_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_log_users ALTER COLUMN email_log_user_id SET DEFAULT nextval('public.email_log_users_email_log_user_id_seq'::regclass);
+
+
+--
+-- Name: email_templates email_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_templates ALTER COLUMN email_id SET DEFAULT nextval('public.email_templates_email_id_seq'::regclass);
+
+
+--
+-- Name: email_templates_default_data email_templates_default_data_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_templates_default_data ALTER COLUMN email_templates_default_data_id SET DEFAULT nextval('public.email_templates_default_data_email_templates_default_data_i_seq'::regclass);
+
+
+--
+-- Name: email_templates_settings email_template_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_templates_settings ALTER COLUMN email_template_setting_id SET DEFAULT nextval('public.email_templates_settings_email_template_setting_id_seq'::regclass);
+
+
+--
+-- Name: event_log log_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.event_log ALTER COLUMN log_id SET DEFAULT nextval('public.event_log_log_id_seq'::regclass);
+
+
+--
+-- Name: event_log_settings event_log_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.event_log_settings ALTER COLUMN event_log_setting_id SET DEFAULT nextval('public.event_log_settings_event_log_setting_id_seq'::regclass);
+
+
+--
+-- Name: failed_jobs id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.failed_jobs ALTER COLUMN id SET DEFAULT nextval('public.failed_jobs_id_seq'::regclass);
+
+
+--
+-- Name: features feature_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.features ALTER COLUMN feature_id SET DEFAULT nextval('public.features_feature_id_seq'::regclass);
+
+
+--
+-- Name: files file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.files ALTER COLUMN file_id SET DEFAULT nextval('public.files_file_id_seq'::regclass);
+
+
+--
+-- Name: filter_groups filter_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.filter_groups ALTER COLUMN filter_group_id SET DEFAULT nextval('public.filter_groups_filter_group_id_seq'::regclass);
+
+
+--
+-- Name: filter_settings filter_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.filter_settings ALTER COLUMN filter_setting_id SET DEFAULT nextval('public.filter_settings_filter_setting_id_seq'::regclass);
+
+
+--
+-- Name: filters filter_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.filters ALTER COLUMN filter_id SET DEFAULT nextval('public.filters_filter_id_seq'::regclass);
+
+
+--
+-- Name: genre_settings genre_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.genre_settings ALTER COLUMN genre_setting_id SET DEFAULT nextval('public.genre_settings_genre_setting_id_seq'::regclass);
+
+
+--
+-- Name: genres genre_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.genres ALTER COLUMN genre_id SET DEFAULT nextval('public.genres_genre_id_seq'::regclass);
+
+
+--
+-- Name: identification_codes identification_code_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.identification_codes ALTER COLUMN identification_code_id SET DEFAULT nextval('public.identification_codes_identification_code_id_seq'::regclass);
+
+
+--
+-- Name: institution_ip institution_ip_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.institution_ip ALTER COLUMN institution_ip_id SET DEFAULT nextval('public.institution_ip_institution_ip_id_seq'::regclass);
+
+
+--
+-- Name: institution_settings institution_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.institution_settings ALTER COLUMN institution_setting_id SET DEFAULT nextval('public.institution_settings_institution_setting_id_seq'::regclass);
+
+
+--
+-- Name: institutions institution_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.institutions ALTER COLUMN institution_id SET DEFAULT nextval('public.institutions_institution_id_seq'::regclass);
+
+
+--
+-- Name: jobs id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.jobs ALTER COLUMN id SET DEFAULT nextval('public.jobs_id_seq'::regclass);
+
+
+--
+-- Name: library_file_settings library_file_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.library_file_settings ALTER COLUMN library_file_setting_id SET DEFAULT nextval('public.library_file_settings_library_file_setting_id_seq'::regclass);
+
+
+--
+-- Name: library_files file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.library_files ALTER COLUMN file_id SET DEFAULT nextval('public.library_files_file_id_seq'::regclass);
+
+
+--
+-- Name: markets market_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.markets ALTER COLUMN market_id SET DEFAULT nextval('public.markets_market_id_seq'::regclass);
+
+
+--
+-- Name: metrics_context metrics_context_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_context ALTER COLUMN metrics_context_id SET DEFAULT nextval('public.metrics_context_metrics_context_id_seq'::regclass);
+
+
+--
+-- Name: metrics_counter_submission_daily metrics_counter_submission_daily_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_daily ALTER COLUMN metrics_counter_submission_daily_id SET DEFAULT nextval('public.metrics_counter_submission_da_metrics_counter_submission_da_seq'::regclass);
+
+
+--
+-- Name: metrics_counter_submission_institution_daily metrics_counter_submission_institution_daily_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily ALTER COLUMN metrics_counter_submission_institution_daily_id SET DEFAULT nextval('public.metrics_counter_submission_in_metrics_counter_submission_in_seq'::regclass);
+
+
+--
+-- Name: metrics_counter_submission_institution_monthly metrics_counter_submission_institution_monthly_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly ALTER COLUMN metrics_counter_submission_institution_monthly_id SET DEFAULT nextval('public.metrics_counter_submission_in_metrics_counter_submission_i_seq1'::regclass);
+
+
+--
+-- Name: metrics_counter_submission_monthly metrics_counter_submission_monthly_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_monthly ALTER COLUMN metrics_counter_submission_monthly_id SET DEFAULT nextval('public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq'::regclass);
+
+
+--
+-- Name: metrics_series metrics_series_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_series ALTER COLUMN metrics_series_id SET DEFAULT nextval('public.metrics_series_metrics_series_id_seq'::regclass);
+
+
+--
+-- Name: metrics_submission metrics_submission_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission ALTER COLUMN metrics_submission_id SET DEFAULT nextval('public.metrics_submission_metrics_submission_id_seq'::regclass);
+
+
+--
+-- Name: metrics_submission_geo_daily metrics_submission_geo_daily_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_daily ALTER COLUMN metrics_submission_geo_daily_id SET DEFAULT nextval('public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq'::regclass);
+
+
+--
+-- Name: metrics_submission_geo_monthly metrics_submission_geo_monthly_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_monthly ALTER COLUMN metrics_submission_geo_monthly_id SET DEFAULT nextval('public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq'::regclass);
+
+
+--
+-- Name: navigation_menu_item_assignment_settings navigation_menu_item_assignment_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_assignment_settings ALTER COLUMN navigation_menu_item_assignment_setting_id SET DEFAULT nextval('public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1'::regclass);
+
+
+--
+-- Name: navigation_menu_item_assignments navigation_menu_item_assignment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_assignments ALTER COLUMN navigation_menu_item_assignment_id SET DEFAULT nextval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq'::regclass);
+
+
+--
+-- Name: navigation_menu_item_settings navigation_menu_item_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_settings ALTER COLUMN navigation_menu_item_setting_id SET DEFAULT nextval('public.navigation_menu_item_settings_navigation_menu_item_setting__seq'::regclass);
+
+
+--
+-- Name: navigation_menu_items navigation_menu_item_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_items ALTER COLUMN navigation_menu_item_id SET DEFAULT nextval('public.navigation_menu_items_navigation_menu_item_id_seq'::regclass);
+
+
+--
+-- Name: navigation_menus navigation_menu_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menus ALTER COLUMN navigation_menu_id SET DEFAULT nextval('public.navigation_menus_navigation_menu_id_seq'::regclass);
+
+
+--
+-- Name: new_releases new_release_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.new_releases ALTER COLUMN new_release_id SET DEFAULT nextval('public.new_releases_new_release_id_seq'::regclass);
+
+
+--
+-- Name: notes note_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notes ALTER COLUMN note_id SET DEFAULT nextval('public.notes_note_id_seq'::regclass);
+
+
+--
+-- Name: notification_settings notification_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notification_settings ALTER COLUMN notification_setting_id SET DEFAULT nextval('public.notification_settings_notification_setting_id_seq'::regclass);
+
+
+--
+-- Name: notification_subscription_settings setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notification_subscription_settings ALTER COLUMN setting_id SET DEFAULT nextval('public.notification_subscription_settings_setting_id_seq'::regclass);
+
+
+--
+-- Name: notifications notification_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notifications ALTER COLUMN notification_id SET DEFAULT nextval('public.notifications_notification_id_seq'::regclass);
+
+
+--
+-- Name: oai_resumption_tokens oai_resumption_token_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.oai_resumption_tokens ALTER COLUMN oai_resumption_token_id SET DEFAULT nextval('public.oai_resumption_tokens_oai_resumption_token_id_seq'::regclass);
+
+
+--
+-- Name: plugin_settings plugin_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.plugin_settings ALTER COLUMN plugin_setting_id SET DEFAULT nextval('public.plugin_settings_plugin_setting_id_seq'::regclass);
+
+
+--
+-- Name: press_settings press_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.press_settings ALTER COLUMN press_setting_id SET DEFAULT nextval('public.press_settings_press_setting_id_seq'::regclass);
+
+
+--
+-- Name: presses press_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.presses ALTER COLUMN press_id SET DEFAULT nextval('public.presses_press_id_seq'::regclass);
+
+
+--
+-- Name: publication_categories publication_category_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_categories ALTER COLUMN publication_category_id SET DEFAULT nextval('public.publication_categories_publication_category_id_seq'::regclass);
+
+
+--
+-- Name: publication_dates publication_date_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_dates ALTER COLUMN publication_date_id SET DEFAULT nextval('public.publication_dates_publication_date_id_seq'::regclass);
+
+
+--
+-- Name: publication_format_settings publication_format_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_format_settings ALTER COLUMN publication_format_setting_id SET DEFAULT nextval('public.publication_format_settings_publication_format_setting_id_seq'::regclass);
+
+
+--
+-- Name: publication_formats publication_format_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_formats ALTER COLUMN publication_format_id SET DEFAULT nextval('public.publication_formats_publication_format_id_seq'::regclass);
+
+
+--
+-- Name: publication_settings publication_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_settings ALTER COLUMN publication_setting_id SET DEFAULT nextval('public.publication_settings_publication_setting_id_seq'::regclass);
+
+
+--
+-- Name: publications publication_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publications ALTER COLUMN publication_id SET DEFAULT nextval('public.publications_publication_id_seq'::regclass);
+
+
+--
+-- Name: queries query_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.queries ALTER COLUMN query_id SET DEFAULT nextval('public.queries_query_id_seq'::regclass);
+
+
+--
+-- Name: query_participants query_participant_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.query_participants ALTER COLUMN query_participant_id SET DEFAULT nextval('public.query_participants_query_participant_id_seq'::regclass);
+
+
+--
+-- Name: queued_payments queued_payment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.queued_payments ALTER COLUMN queued_payment_id SET DEFAULT nextval('public.queued_payments_queued_payment_id_seq'::regclass);
+
+
+--
+-- Name: representatives representative_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.representatives ALTER COLUMN representative_id SET DEFAULT nextval('public.representatives_representative_id_seq'::regclass);
+
+
+--
+-- Name: review_assignments review_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_assignments ALTER COLUMN review_id SET DEFAULT nextval('public.review_assignments_review_id_seq'::regclass);
+
+
+--
+-- Name: review_files review_file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_files ALTER COLUMN review_file_id SET DEFAULT nextval('public.review_files_review_file_id_seq'::regclass);
+
+
+--
+-- Name: review_form_element_settings review_form_element_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_element_settings ALTER COLUMN review_form_element_setting_id SET DEFAULT nextval('public.review_form_element_settings_review_form_element_setting_id_seq'::regclass);
+
+
+--
+-- Name: review_form_elements review_form_element_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_elements ALTER COLUMN review_form_element_id SET DEFAULT nextval('public.review_form_elements_review_form_element_id_seq'::regclass);
+
+
+--
+-- Name: review_form_responses review_form_response_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_responses ALTER COLUMN review_form_response_id SET DEFAULT nextval('public.review_form_responses_review_form_response_id_seq'::regclass);
+
+
+--
+-- Name: review_form_settings review_form_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_settings ALTER COLUMN review_form_setting_id SET DEFAULT nextval('public.review_form_settings_review_form_setting_id_seq'::regclass);
+
+
+--
+-- Name: review_forms review_form_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_forms ALTER COLUMN review_form_id SET DEFAULT nextval('public.review_forms_review_form_id_seq'::regclass);
+
+
+--
+-- Name: review_round_files review_round_file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_round_files ALTER COLUMN review_round_file_id SET DEFAULT nextval('public.review_round_files_review_round_file_id_seq'::regclass);
+
+
+--
+-- Name: review_rounds review_round_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_rounds ALTER COLUMN review_round_id SET DEFAULT nextval('public.review_rounds_review_round_id_seq'::regclass);
+
+
+--
+-- Name: sales_rights sales_rights_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.sales_rights ALTER COLUMN sales_rights_id SET DEFAULT nextval('public.sales_rights_sales_rights_id_seq'::regclass);
+
+
+--
+-- Name: scheduled_tasks scheduled_task_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.scheduled_tasks ALTER COLUMN scheduled_task_id SET DEFAULT nextval('public.scheduled_tasks_scheduled_task_id_seq'::regclass);
+
+
+--
+-- Name: series series_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series ALTER COLUMN series_id SET DEFAULT nextval('public.series_series_id_seq'::regclass);
+
+
+--
+-- Name: series_settings series_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series_settings ALTER COLUMN series_setting_id SET DEFAULT nextval('public.series_settings_series_setting_id_seq'::regclass);
+
+
+--
+-- Name: site site_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.site ALTER COLUMN site_id SET DEFAULT nextval('public.site_site_id_seq'::regclass);
+
+
+--
+-- Name: site_settings site_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.site_settings ALTER COLUMN site_setting_id SET DEFAULT nextval('public.site_settings_site_setting_id_seq'::regclass);
+
+
+--
+-- Name: spotlight_settings spotlight_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.spotlight_settings ALTER COLUMN spotlight_setting_id SET DEFAULT nextval('public.spotlight_settings_spotlight_setting_id_seq'::regclass);
+
+
+--
+-- Name: spotlights spotlight_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.spotlights ALTER COLUMN spotlight_id SET DEFAULT nextval('public.spotlights_spotlight_id_seq'::regclass);
+
+
+--
+-- Name: stage_assignments stage_assignment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.stage_assignments ALTER COLUMN stage_assignment_id SET DEFAULT nextval('public.stage_assignments_stage_assignment_id_seq'::regclass);
+
+
+--
+-- Name: static_page_settings static_page_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.static_page_settings ALTER COLUMN static_page_setting_id SET DEFAULT nextval('public.static_page_settings_static_page_setting_id_seq'::regclass);
+
+
+--
+-- Name: static_pages static_page_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.static_pages ALTER COLUMN static_page_id SET DEFAULT nextval('public.static_pages_static_page_id_seq'::regclass);
+
+
+--
+-- Name: subeditor_submission_group subeditor_submission_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.subeditor_submission_group ALTER COLUMN subeditor_submission_group_id SET DEFAULT nextval('public.subeditor_submission_group_subeditor_submission_group_id_seq'::regclass);
+
+
+--
+-- Name: submission_chapter_settings submission_chapter_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapter_settings ALTER COLUMN submission_chapter_setting_id SET DEFAULT nextval('public.submission_chapter_settings_submission_chapter_setting_id_seq'::regclass);
+
+
+--
+-- Name: submission_chapters chapter_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapters ALTER COLUMN chapter_id SET DEFAULT nextval('public.submission_chapters_chapter_id_seq'::regclass);
+
+
+--
+-- Name: submission_comments comment_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_comments ALTER COLUMN comment_id SET DEFAULT nextval('public.submission_comments_comment_id_seq'::regclass);
+
+
+--
+-- Name: submission_file_revisions revision_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_file_revisions ALTER COLUMN revision_id SET DEFAULT nextval('public.submission_file_revisions_revision_id_seq'::regclass);
+
+
+--
+-- Name: submission_file_settings submission_file_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_file_settings ALTER COLUMN submission_file_setting_id SET DEFAULT nextval('public.submission_file_settings_submission_file_setting_id_seq'::regclass);
+
+
+--
+-- Name: submission_files submission_file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_files ALTER COLUMN submission_file_id SET DEFAULT nextval('public.submission_files_submission_file_id_seq'::regclass);
+
+
+--
+-- Name: submission_search_keyword_list keyword_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_search_keyword_list ALTER COLUMN keyword_id SET DEFAULT nextval('public.submission_search_keyword_list_keyword_id_seq'::regclass);
+
+
+--
+-- Name: submission_search_object_keywords submission_search_object_keyword_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_search_object_keywords ALTER COLUMN submission_search_object_keyword_id SET DEFAULT nextval('public.submission_search_object_keyw_submission_search_object_keyw_seq'::regclass);
+
+
+--
+-- Name: submission_search_objects object_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_search_objects ALTER COLUMN object_id SET DEFAULT nextval('public.submission_search_objects_object_id_seq'::regclass);
+
+
+--
+-- Name: submission_settings submission_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_settings ALTER COLUMN submission_setting_id SET DEFAULT nextval('public.submission_settings_submission_setting_id_seq'::regclass);
+
+
+--
+-- Name: submissions submission_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submissions ALTER COLUMN submission_id SET DEFAULT nextval('public.submissions_submission_id_seq'::regclass);
+
+
+--
+-- Name: temporary_files file_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.temporary_files ALTER COLUMN file_id SET DEFAULT nextval('public.temporary_files_file_id_seq'::regclass);
+
+
+--
+-- Name: usage_stats_institution_temporary_records usage_stats_temp_institution_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_institution_temporary_records ALTER COLUMN usage_stats_temp_institution_id SET DEFAULT nextval('public.usage_stats_institution_tempo_usage_stats_temp_institution__seq'::regclass);
+
+
+--
+-- Name: usage_stats_total_temporary_records usage_stats_temp_total_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_total_temporary_records ALTER COLUMN usage_stats_temp_total_id SET DEFAULT nextval('public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq'::regclass);
+
+
+--
+-- Name: usage_stats_unique_item_investigations_temporary_records usage_stats_temp_unique_item_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records ALTER COLUMN usage_stats_temp_unique_item_id SET DEFAULT nextval('public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq'::regclass);
+
+
+--
+-- Name: usage_stats_unique_item_requests_temporary_records usage_stats_temp_item_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records ALTER COLUMN usage_stats_temp_item_id SET DEFAULT nextval('public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq'::regclass);
+
+
+--
+-- Name: usage_stats_unique_title_investigations_temporary_records usage_stats_temp_unique_investigations_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records ALTER COLUMN usage_stats_temp_unique_investigations_id SET DEFAULT nextval('public.usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq'::regclass);
+
+
+--
+-- Name: usage_stats_unique_title_requests_temporary_records usage_stats_temp_unique_requests_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records ALTER COLUMN usage_stats_temp_unique_requests_id SET DEFAULT nextval('public.usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq'::regclass);
+
+
+--
+-- Name: user_group_settings user_group_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_group_settings ALTER COLUMN user_group_setting_id SET DEFAULT nextval('public.user_group_settings_user_group_setting_id_seq'::regclass);
+
+
+--
+-- Name: user_group_stage user_group_stage_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_group_stage ALTER COLUMN user_group_stage_id SET DEFAULT nextval('public.user_group_stage_user_group_stage_id_seq'::regclass);
+
+
+--
+-- Name: user_groups user_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_groups ALTER COLUMN user_group_id SET DEFAULT nextval('public.user_groups_user_group_id_seq'::regclass);
+
+
+--
+-- Name: user_interests user_interest_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_interests ALTER COLUMN user_interest_id SET DEFAULT nextval('public.user_interests_user_interest_id_seq'::regclass);
+
+
+--
+-- Name: user_settings user_setting_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_settings ALTER COLUMN user_setting_id SET DEFAULT nextval('public.user_settings_user_setting_id_seq'::regclass);
+
+
+--
+-- Name: user_user_groups user_user_group_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_user_groups ALTER COLUMN user_user_group_id SET DEFAULT nextval('public.user_user_groups_user_user_group_id_seq'::regclass);
+
+
+--
+-- Name: users user_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.users ALTER COLUMN user_id SET DEFAULT nextval('public.users_user_id_seq'::regclass);
+
+
+--
+-- Name: versions version_id; Type: DEFAULT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.versions ALTER COLUMN version_id SET DEFAULT nextval('public.versions_version_id_seq'::regclass);
+
+
+--
+-- Data for Name: access_keys; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.access_keys (access_key_id, context, key_hash, user_id, assoc_id, expiry_date) FROM stdin;
+\.
+
+
+--
+-- Data for Name: announcement_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.announcement_settings (announcement_setting_id, announcement_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: announcement_type_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.announcement_type_settings (announcement_type_setting_id, type_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: announcement_types; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.announcement_types (type_id, context_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: announcements; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.announcements (announcement_id, assoc_type, assoc_id, type_id, date_expire, date_posted) FROM stdin;
+\.
+
+
+--
+-- Data for Name: author_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.author_settings (author_setting_id, author_id, locale, setting_name, setting_value) FROM stdin;
+1	1	en	affiliation	University of Calgary
+2	1		country	CA
+3	1	en	familyName	Clark
+4	1	en	givenName	Arthur
+14	3	fr_CA	familyName	\N
+16	3	fr_CA	givenName	\N
+105	11	en	affiliation	Athabasca University
+106	11		country	CA
+107	11	en	familyName	Barnetson
+108	11	en	givenName	Bob
+109	12	en	affiliation	University of British Columbia
+110	12		country	CA
+111	12	en	familyName	Beaty
+112	12	en	givenName	Bart
+5	2	en	affiliation	Athabasca University
+6	2		country	CA
+7	2	en	familyName	Finkel
+8	2	en	givenName	Alvin
+13	3		country	CA
+15	3	en	familyName	Carter
+17	3	en	givenName	Sarah
+20	3		isVolumeEditor	0
+21	4	fr_CA	affiliation	\N
+22	4	en	affiliation	\N
+23	4	fr_CA	biography	\N
+24	4	en	biography	\N
+25	4		country	CA
+26	4	fr_CA	familyName	\N
+27	4	en	familyName	Fortna
+28	4	fr_CA	givenName	\N
+29	4	en	givenName	Peter
+30	4	fr_CA	preferredPublicName	\N
+31	4	en	preferredPublicName	\N
+32	4		isVolumeEditor	0
+33	5	fr_CA	affiliation	\N
+34	5	en	affiliation	\N
+35	5	fr_CA	biography	\N
+36	5	en	biography	\N
+37	5		country	CA
+38	5	fr_CA	familyName	\N
+39	5	en	familyName	Friesen
+40	5	fr_CA	givenName	\N
+41	5	en	givenName	Gerald
+42	5	fr_CA	preferredPublicName	\N
+43	5	en	preferredPublicName	\N
+44	5		isVolumeEditor	0
+45	6	fr_CA	affiliation	\N
+46	6	en	affiliation	\N
+47	6	fr_CA	biography	\N
+48	6	en	biography	\N
+49	6		country	CA
+50	6	fr_CA	familyName	\N
+51	6	en	familyName	Dick
+52	6	fr_CA	givenName	\N
+53	6	en	givenName	Lyle
+54	6	fr_CA	preferredPublicName	\N
+55	6	en	preferredPublicName	\N
+56	6		isVolumeEditor	0
+57	7	fr_CA	affiliation	\N
+58	7	en	affiliation	\N
+59	7	fr_CA	biography	\N
+60	7	en	biography	\N
+61	7		country	CA
+62	7	fr_CA	familyName	\N
+63	7	en	familyName	Wheeler
+64	7	fr_CA	givenName	\N
+65	7	en	givenName	Winona
+66	7	fr_CA	preferredPublicName	\N
+67	7	en	preferredPublicName	\N
+68	7		isVolumeEditor	0
+69	8	fr_CA	affiliation	\N
+70	8	en	affiliation	\N
+71	8	fr_CA	biography	\N
+72	8	en	biography	\N
+73	8		country	CA
+74	8	fr_CA	familyName	\N
+75	8	en	familyName	Dyce
+76	8	fr_CA	givenName	\N
+77	8	en	givenName	Matt
+78	8	fr_CA	preferredPublicName	\N
+79	8	en	preferredPublicName	\N
+80	8		isVolumeEditor	0
+81	9	fr_CA	affiliation	\N
+82	9	en	affiliation	\N
+83	9	fr_CA	biography	\N
+84	9	en	biography	\N
+85	9		country	CA
+86	9	fr_CA	familyName	\N
+87	9	en	familyName	Opp
+88	9	fr_CA	givenName	\N
+89	9	en	givenName	James
+90	9	fr_CA	preferredPublicName	\N
+91	9	en	preferredPublicName	\N
+92	9		isVolumeEditor	0
+113	13	en	affiliation	University of Alberta
+114	13		country	CA
+115	13	en	familyName	Miller
+116	13	en	givenName	Toby
+117	14	en	affiliation	Athabasca University
+118	14		country	CA
+119	14	en	familyName	Wagman
+120	14	en	givenName	Ira
+121	15	en	affiliation	University of Calgary
+122	15		country	CA
+123	15	en	familyName	Straw
+124	15	en	givenName	Will
+125	16	en	affiliation	University of Southern California
+126	16		country	CA
+127	16	en	familyName	Allan
+128	16	en	givenName	Chantal
+129	17	en	affiliation	SUNY
+130	17		country	US
+131	17	en	familyName	Bernnard
+132	17	en	givenName	Deborah
+133	18	en	affiliation	SUNY
+134	18		country	US
+135	18	en	familyName	Bobish
+136	18	en	givenName	Greg
+137	19	en	affiliation	SUNY
+138	19		country	US
+139	19	en	familyName	Bullis
+140	19	en	givenName	Daryl
+141	20	en	affiliation	SUNY
+142	20		country	US
+143	20	en	familyName	Hecker
+144	20	en	givenName	Jenna
+145	21	en	affiliation	Athabasca University
+146	21		country	CA
+147	21	en	familyName	Kennepohl
+148	21	en	givenName	Dietmar
+149	22	en	affiliation	University of Calgary
+150	22		country	CA
+151	22	en	familyName	Anderson
+152	22	en	givenName	Terry
+153	23	en	affiliation	University of Alberta
+154	23		country	CA
+155	23	en	familyName	Gorsky
+156	23	en	givenName	Paul
+157	24	en	affiliation	Athabasca University
+158	24		country	CA
+159	24	en	familyName	Parchoma
+160	24	en	givenName	Gale
+161	25	en	affiliation	University of Alberta
+162	25		country	CA
+163	25	en	familyName	Palmer
+164	25	en	givenName	Stuart
+165	26	en	affiliation	University of Sussex
+166	26		country	CA
+167	26	en	familyName	Perini
+168	26	en	givenName	Fernando
+169	27		country	GB
+170	27	en	familyName	Mansell
+171	27	en	givenName	Robin
+172	28		country	AR
+173	28	en	familyName	Galperin
+174	28	en	givenName	Hernan
+175	29		country	CL
+176	29	en	familyName	Bello
+177	29	en	givenName	Pablo
+178	30		country	AR
+179	30	en	familyName	Rabinovich
+180	30	en	givenName	Eleonora
+181	31	en	affiliation	Buffalo National Park Foundation
+182	31		country	CA
+183	31	en	familyName	Brower
+184	31	en	givenName	Jennifer
+185	32	en	affiliation	University of Alberta
+186	32		country	CA
+187	32	en	familyName	Locke Hart
+188	32	en	givenName	Jonathan
+189	33	en	affiliation	International Development Research Centre
+190	33		country	CA
+191	33	en	familyName	Elder
+192	33	en	givenName	Laurent
+193	34		country	CA
+194	34	en	familyName	Emdon
+195	34	en	givenName	Heloise
+196	35		country	CA
+197	35	en	familyName	Tulus
+198	35	en	givenName	Frank
+199	36		country	AR
+200	36	en	familyName	Hyma
+201	36	en	givenName	Raymond
+202	37		country	CA
+203	37	en	familyName	Valk
+204	37	en	givenName	John
+205	38		country	CA
+206	38	en	familyName	Fourati
+207	38	en	givenName	Khaled
+208	39		country	CA
+209	39	en	familyName	de Beer
+210	39	en	givenName	Jeremy
+211	40		country	CA
+212	40	en	familyName	Bannerman
+213	40	en	givenName	Sara
+214	41	en	affiliation	Athabasca University
+215	41		country	CA
+216	41	en	familyName	Ally
+217	41	en	givenName	Mohamed
+218	42		country	GB
+219	42	en	familyName	Traxler
+220	42	en	givenName	John
+221	43		country	CA
+222	43	en	familyName	Koole
+223	43	en	givenName	Marguerite
+224	44		country	NO
+225	44	en	familyName	Rekkedal
+226	44	en	givenName	Torstein
+227	45	en	affiliation	University of Alberta
+228	45		country	CA
+229	45	en	familyName	Dawson
+230	45	en	givenName	Michael
+231	46	en	affiliation	Athabasca University
+232	46		country	CA
+233	46	en	familyName	Dupuis
+234	46	en	givenName	Brian
+235	47	en	affiliation	University of Calgary
+236	47		country	CA
+237	47	en	familyName	Wilson
+238	47	en	givenName	Michael
+239	48	en	affiliation	University of Calgary
+240	48		country	CA
+241	48	en	familyName	Foran
+242	48	en	givenName	Max
+243	49	en	affiliation	London School of Economics
+244	49		country	CA
+245	49	en	familyName	Power
+246	49	en	givenName	Michael
+247	50	en	affiliation	International Development Research Centre
+248	50		country	CA
+249	50	en	familyName	Smith
+250	50	en	givenName	Matthew
+251	51		country	US
+252	51	en	familyName	Benkler
+253	51	en	givenName	Yochai
+254	52		country	CA
+255	52	en	familyName	Reilly
+256	52	en	givenName	Katherine
+257	53		country	US
+258	53	en	familyName	Loudon
+259	53	en	givenName	Melissa
+260	54		country	SA
+261	54	en	familyName	Rivett
+262	54	en	givenName	Ulrike
+263	55		country	GB
+264	55	en	familyName	Graham
+265	55	en	givenName	Mark
+266	56		country	NO
+267	56	en	familyName	Haarstad
+268	56	en	givenName	Håvard
+269	57		country	US
+270	57	en	familyName	Smith
+271	57	en	givenName	Marshall
+\.
+
+
+--
+-- Data for Name: authors; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.authors (author_id, email, include_in_browse, publication_id, seq, user_group_id) FROM stdin;
+1	aclark@mailinator.com	1	1	0	13
+2	afinkel@mailinator.com	1	2	0	13
+3	scarter@mailinator.com	1	2	1	14
+4	pfortna@mailinator.com	1	2	2	14
+5	gfriesen@mailinator.com	1	2	3	15
+6	ldick@mailinator.com	1	2	4	15
+7	wwheeler@mailinator.com	1	2	5	15
+8	mdyce@mailinator.com	1	2	6	15
+9	jopp@mailinator.com	1	2	7	15
+11	bbarnetson@mailinator.com	1	3	0	13
+12	bbeaty@mailinator.com	1	4	0	13
+13	tmiller@mailinator.com	1	4	0	13
+14	awagman@mailinator.com	1	4	0	13
+15	wstraw@mailinator.com	1	4	0	13
+16	callan@mailinator.com	1	5	0	13
+17	dbernnard@mailinator.com	1	6	0	13
+18	gbobish@mailinator.com	1	6	0	13
+19	dbullis@mailinator.com	1	6	0	13
+20	jhecker@mailinator.com	1	6	0	13
+21	dkennepohl@mailinator.com	1	7	0	13
+22	tanderson@mailinator.com	1	7	0	13
+23	pgorsky@mailinator.com	1	7	0	13
+24	gparchoma@mailinator.com	1	7	0	13
+25	spalmer@mailinator.com	1	7	0	13
+26	fperini@mailinator.com	1	9	0	13
+27	rmansell@mailinator.com	1	9	0	13
+28	hgalperin@mailinator.com	1	9	0	13
+29	pbello@mailinator.com	1	9	0	13
+30	erabinovich@mailinator.com	1	9	0	13
+31	jbrower@mailinator.com	1	10	0	13
+32	jlockehart@mailinator.com	1	11	0	13
+33	lelder@mailinator.com	1	12	0	13
+34	lelder@mailinator.com	1	12	0	14
+35	ftulus@mailinator.com	1	12	0	13
+36	rhyma@mailinator.com	1	12	0	13
+37	jvalk@mailinator.com	1	12	0	13
+38	fkourati@mailinator.com	1	12	0	13
+39	jdebeer@mailinator.com	1	12	0	13
+40	sbannerman@mailinator.com	1	12	0	13
+41	mally@mailinator.com	1	13	0	13
+42	jtraxler@mailinator.com	1	13	0	13
+43	mkoole@mailinator.com	1	13	0	13
+44	trekkedal@mailinator.com	1	13	0	13
+45	mdawson@mailinator.com	1	14	0	13
+46	bdupuis@mailinator.com	1	14	0	13
+47	mwilson@mailinator.com	1	14	0	13
+48	mforan@mailinator.com	1	15	0	13
+49	mpower@mailinator.com	1	16	0	13
+50	msmith@mailinator.com	1	17	0	13
+51	ybenkler@mailinator.com	1	17	0	13
+52	kreilly@mailinator.com	1	17	0	13
+53	mloudon@mailinator.com	1	17	0	13
+54	urivett@mailinator.com	1	17	0	13
+55	mgraham@mailinator.com	1	17	0	13
+56	hhaarstad@mailinator.com	1	17	0	13
+57	masmith@mailinator.com	1	17	0	13
+\.
+
+
+--
+-- Data for Name: categories; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.categories (category_id, context_id, parent_id, seq, path, image) FROM stdin;
+1	1	\N	2	applied-science	\N
+2	1	1	3	comp-sci	\N
+3	1	1	4	eng	\N
+4	1	\N	5	social-sciences	\N
+5	1	4	6	sociology	\N
+6	1	4	10000	anthropology	\N
+\.
+
+
+--
+-- Data for Name: category_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.category_settings (category_setting_id, category_id, locale, setting_name, setting_value) FROM stdin;
+1	1		sortOption	title-ASC
+2	1	en	title	Applied Science
+3	1	fr_CA	title	
+4	1	en	description	
+5	1	fr_CA	description	
+6	2		sortOption	title-ASC
+7	2	en	title	Computer Science
+8	2	fr_CA	title	
+9	2	en	description	
+10	2	fr_CA	description	
+11	3		sortOption	title-ASC
+12	3	en	title	Engineering
+13	3	fr_CA	title	
+14	3	en	description	
+15	3	fr_CA	description	
+16	4		sortOption	title-ASC
+17	4	en	title	Social Sciences
+18	4	fr_CA	title	
+19	4	en	description	
+20	4	fr_CA	description	
+21	5		sortOption	title-ASC
+22	5	en	title	Sociology
+23	5	fr_CA	title	
+24	5	en	description	
+25	5	fr_CA	description	
+26	6		sortOption	title-ASC
+27	6	en	title	Anthropology
+28	6	fr_CA	title	
+29	6	en	description	
+30	6	fr_CA	description	
+\.
+
+
+--
+-- Data for Name: citation_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.citation_settings (citation_setting_id, citation_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: citations; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.citations (citation_id, publication_id, raw_citation, seq) FROM stdin;
+\.
+
+
+--
+-- Data for Name: completed_payments; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.completed_payments (completed_payment_id, "timestamp", payment_type, context_id, user_id, assoc_id, amount, currency_code_alpha, payment_method_plugin_name) FROM stdin;
+\.
+
+
+--
+-- Data for Name: controlled_vocab_entries; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.controlled_vocab_entries (controlled_vocab_entry_id, controlled_vocab_id, seq) FROM stdin;
+1	12	1
+2	12	2
+3	17	1
+4	17	2
+14	22	1
+15	22	2
+16	22	3
+17	27	1
+18	27	2
+19	32	1
+20	42	1
+21	42	2
+22	42	3
+23	47	1
+24	47	2
+25	47	3
+26	57	1
+27	57	2
+28	62	1
+30	67	1
+31	82	1
+32	82	2
+\.
+
+
+--
+-- Data for Name: controlled_vocab_entry_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.controlled_vocab_entry_settings (controlled_vocab_entry_setting_id, controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+1	1	en	submissionKeyword	Business & Economics	string
+2	2	en	submissionKeyword	Political & International Studies	string
+3	3	en	submissionKeyword	Canadian Studies	string
+4	4	en	submissionKeyword	Communication & Cultural Studies	string
+14	14	en	submissionKeyword	Canadian Studies	string
+15	15	en	submissionKeyword	Communication & Cultural Studies	string
+16	16	en	submissionKeyword	Political & International Studies	string
+17	17	en	submissionKeyword	information literacy	string
+18	18	en	submissionKeyword	academic libraries	string
+19	19	en	submissionKeyword	Education	string
+20	20	en	submissionKeyword	Information	string
+21	21	en	submissionKeyword	society	string
+22	22	en	submissionKeyword	ICT	string
+23	23	en	submissionKeyword	Biography & Memoir	string
+24	24	en	submissionKeyword	Environmental Studies	string
+25	25	en	submissionKeyword	Political & International Studies	string
+26	26	en	submissionKeyword	International Development	string
+27	27	en	submissionKeyword	ICT	string
+28	28	en	submissionKeyword	Educational Technology	string
+30	30	en	submissionKeyword	Psychology	string
+31	31	en	submissionKeyword	International Development	string
+32	32	en	submissionKeyword	ICT	string
+\.
+
+
+--
+-- Data for Name: controlled_vocabs; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.controlled_vocabs (controlled_vocab_id, symbolic, assoc_type, assoc_id) FROM stdin;
+1	interest	0	0
+2	submissionKeyword	1048588	1
+3	submissionSubject	1048588	1
+4	submissionDiscipline	1048588	1
+5	submissionLanguage	1048588	1
+6	submissionAgency	1048588	1
+7	submissionKeyword	1048588	2
+8	submissionSubject	1048588	2
+9	submissionDiscipline	1048588	2
+10	submissionLanguage	1048588	2
+11	submissionAgency	1048588	2
+12	submissionKeyword	1048588	3
+13	submissionSubject	1048588	3
+14	submissionDiscipline	1048588	3
+15	submissionLanguage	1048588	3
+16	submissionAgency	1048588	3
+17	submissionKeyword	1048588	4
+18	submissionSubject	1048588	4
+19	submissionDiscipline	1048588	4
+20	submissionLanguage	1048588	4
+21	submissionAgency	1048588	4
+22	submissionKeyword	1048588	5
+23	submissionSubject	1048588	5
+24	submissionDiscipline	1048588	5
+25	submissionLanguage	1048588	5
+26	submissionAgency	1048588	5
+27	submissionKeyword	1048588	6
+28	submissionSubject	1048588	6
+29	submissionDiscipline	1048588	6
+30	submissionLanguage	1048588	6
+31	submissionAgency	1048588	6
+32	submissionKeyword	1048588	7
+33	submissionSubject	1048588	7
+34	submissionDiscipline	1048588	7
+35	submissionLanguage	1048588	7
+36	submissionAgency	1048588	7
+37	submissionKeyword	1048588	8
+38	submissionSubject	1048588	8
+39	submissionDiscipline	1048588	8
+40	submissionLanguage	1048588	8
+41	submissionAgency	1048588	8
+42	submissionKeyword	1048588	9
+43	submissionSubject	1048588	9
+44	submissionDiscipline	1048588	9
+45	submissionLanguage	1048588	9
+46	submissionAgency	1048588	9
+47	submissionKeyword	1048588	10
+48	submissionSubject	1048588	10
+49	submissionDiscipline	1048588	10
+50	submissionLanguage	1048588	10
+51	submissionAgency	1048588	10
+52	submissionKeyword	1048588	11
+53	submissionSubject	1048588	11
+54	submissionDiscipline	1048588	11
+55	submissionLanguage	1048588	11
+56	submissionAgency	1048588	11
+57	submissionKeyword	1048588	12
+58	submissionSubject	1048588	12
+59	submissionDiscipline	1048588	12
+60	submissionLanguage	1048588	12
+61	submissionAgency	1048588	12
+62	submissionKeyword	1048588	13
+63	submissionSubject	1048588	13
+64	submissionDiscipline	1048588	13
+65	submissionLanguage	1048588	13
+66	submissionAgency	1048588	13
+67	submissionKeyword	1048588	14
+68	submissionSubject	1048588	14
+69	submissionDiscipline	1048588	14
+70	submissionLanguage	1048588	14
+71	submissionAgency	1048588	14
+72	submissionKeyword	1048588	15
+73	submissionSubject	1048588	15
+74	submissionDiscipline	1048588	15
+75	submissionLanguage	1048588	15
+76	submissionAgency	1048588	15
+77	submissionKeyword	1048588	16
+78	submissionSubject	1048588	16
+79	submissionDiscipline	1048588	16
+80	submissionLanguage	1048588	16
+81	submissionAgency	1048588	16
+82	submissionKeyword	1048588	17
+83	submissionSubject	1048588	17
+84	submissionDiscipline	1048588	17
+85	submissionLanguage	1048588	17
+86	submissionAgency	1048588	17
+\.
+
+
+--
+-- Data for Name: data_object_tombstone_oai_set_objects; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.data_object_tombstone_oai_set_objects (object_id, tombstone_id, assoc_type, assoc_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: data_object_tombstone_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.data_object_tombstone_settings (tombstone_setting_id, tombstone_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: data_object_tombstones; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.data_object_tombstones (tombstone_id, data_object_id, date_deleted, set_spec, set_name, oai_identifier) FROM stdin;
+\.
+
+
+--
+-- Data for Name: doi_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.doi_settings (doi_setting_id, doi_id, locale, setting_name, setting_value) FROM stdin;
+\.
+
+
+--
+-- Data for Name: dois; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.dois (doi_id, context_id, doi, status) FROM stdin;
+\.
+
+
+--
+-- Data for Name: edit_decisions; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
+1	1	\N	1	\N	3	18	2023-04-15 15:34:14
+2	1	1	3	1	3	2	2023-04-15 15:34:31
+3	2	\N	1	\N	3	18	2023-04-15 15:37:30
+4	4	\N	1	\N	3	1	2023-04-15 15:40:00
+5	4	3	2	1	3	3	2023-04-15 15:40:18
+6	4	4	3	1	3	2	2023-04-15 15:40:36
+7	4	\N	4	\N	3	7	2023-04-15 15:40:55
+8	5	\N	1	\N	3	1	2023-04-15 15:42:40
+9	5	5	2	1	3	3	2023-04-15 15:42:59
+10	5	6	3	1	3	2	2023-04-15 15:43:18
+11	5	\N	4	\N	3	7	2023-04-15 15:43:38
+12	6	\N	1	\N	3	1	2023-04-15 15:45:48
+13	6	7	2	1	6	23	2023-04-15 15:46:21
+14	7	\N	1	\N	3	18	2023-04-15 15:47:53
+15	7	8	3	1	3	2	2023-04-15 15:48:12
+16	9	\N	1	\N	3	1	2023-04-15 15:49:53
+17	11	\N	1	\N	3	1	2023-04-15 15:52:29
+18	11	10	2	1	3	3	2023-04-15 15:52:44
+19	11	11	3	1	3	2	2023-04-15 15:53:48
+20	12	\N	1	\N	3	1	2023-04-15 15:54:51
+21	13	\N	1	\N	3	1	2023-04-15 15:56:27
+22	13	13	2	1	3	3	2023-04-15 15:56:44
+23	13	14	3	1	3	2	2023-04-15 15:58:00
+24	14	\N	1	\N	3	1	2023-04-15 15:59:16
+25	14	15	2	1	3	3	2023-04-15 15:59:36
+26	14	16	3	1	3	2	2023-04-15 15:59:53
+27	14	\N	4	\N	3	7	2023-04-15 16:00:12
+28	15	\N	1	\N	3	18	2023-04-15 16:02:27
+29	16	\N	1	\N	3	18	2023-04-15 16:03:47
+30	17	\N	1	\N	3	1	2023-04-15 16:06:04
+\.
+
+
+--
+-- Data for Name: email_log; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
+1	1048585	1	0	2023-04-15 15:34:00	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/1">The ABCs of Human Survival: A Paradigm for Global Citizenship</a><br />Arthur Clark</p><p><b>Abstract</b></p>The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+2	1048585	1	0	2023-04-15 15:34:00	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/1</p><p>If you have been logged out, you can login again with the username aclark.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+3	1048585	1	3	2023-04-15 15:34:14	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been sent for review	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that an editor has reviewed your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+4	1048585	1	3	2023-04-15 15:34:31	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+5	1048585	2	0	2023-04-15 15:37:02	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+18	1048585	4	3	2023-04-15 15:40:00	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for internal review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+6	1048585	2	0	2023-04-15 15:37:02	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+7	1048585	2	0	2023-04-15 15:37:02	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+8	1048585	2	0	2023-04-15 15:37:02	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Alvin Finkel,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The West and Beyond: New Perspectives on an Imagined Region, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/2</p><p>If you have been logged out, you can login again with the username afinkel.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/2">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+9	1048585	2	0	2023-04-15 15:37:03	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Sarah Carter" <scarter@mailinator.com>, "Peter Fortna" <pfortna@mailinator.com>, "Gerald Friesen" <gfriesen@mailinator.com>, "Lyle Dick" <ldick@mailinator.com>, "Winona Wheeler" <wwheeler@mailinator.com>, "Matt Dyce" <mdyce@mailinator.com>, "James Opp" <jopp@mailinator.com>			Submission confirmation	<p>Dear Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Alvin Finkel, provided the following details:</p><p>The West and Beyond: New Perspectives on an Imagined Region<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+10	1048585	2	3	2023-04-15 15:37:30	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Your submission has been sent for review	<p>Dear Alvin Finkel,</p><p>I am pleased to inform you that an editor has reviewed your submission, The West and Beyond: New Perspectives on an Imagined Region, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+11	1048585	3	0	2023-04-15 15:38:55	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+12	1048585	3	0	2023-04-15 15:38:55	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+13	1048585	3	0	2023-04-15 15:38:55	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+14	1048585	3	0	2023-04-15 15:38:55	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Bob Barnetson" <bbarnetson@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Bob Barnetson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Political Economy of Workplace Injury in Canada, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/3</p><p>If you have been logged out, you can login again with the username bbarnetson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/3">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+15	1048585	4	0	2023-04-15 15:39:44	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/4">How Canadians Communicate: Contexts of Canadian Popular Culture</a><br />Bart Beaty, Toby Miller, Ira Wagman, Will Straw</p><p><b>Abstract</b></p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+16	1048585	4	0	2023-04-15 15:39:44	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/4</p><p>If you have been logged out, you can login again with the username bbeaty.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+17	1048585	4	0	2023-04-15 15:39:44	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>			Submission confirmation	<p>Dear Toby Miller, Ira Wagman, Will Straw,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Bart Beaty, provided the following details:</p><p>How Canadians Communicate: Contexts of Canadian Popular Culture<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+19	1048585	4	3	2023-04-15 15:40:18	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+20	1048585	4	3	2023-04-15 15:40:36	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+21	1048585	4	3	2023-04-15 15:40:55	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Next steps for publishing your submission	<p>Dear Bart Beaty,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+22	1048585	5	0	2023-04-15 15:42:22	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+23	1048585	5	0	2023-04-15 15:42:22	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+24	1048585	5	0	2023-04-15 15:42:22	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+25	1048585	5	0	2023-04-15 15:42:22	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Bomb Canada and Other Unkind Remarks in the American Media, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/5</p><p>If you have been logged out, you can login again with the username callan.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+26	1048585	5	3	2023-04-15 15:42:40	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for internal review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+27	1048585	5	3	2023-04-15 15:43:00	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+28	1048585	5	3	2023-04-15 15:43:18	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Bomb Canada and Other Unkind Remarks in the American Media, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+29	1048585	5	3	2023-04-15 15:43:38	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Next steps for publishing your submission	<p>Dear Chantal Allan,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, Bomb Canada and Other Unkind Remarks in the American Media, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+30	1048585	6	0	2023-04-15 15:45:32	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/6">The Information Literacy User’s Guide</a><br />Deborah Bernnard, Greg Bobish, Daryl Bullis, Jenna Hecker</p><p><b>Abstract</b></p>Good researchers have a host of tools at their disposal that make navigating today’s complex information ecosystem much more manageable. Gaining the knowledge, abilities, and self-reflection necessary to be a good researcher helps not only in academic settings, but is invaluable in any career, and throughout one’s life. The Information Literacy User’s Guide will start you on this route to success.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+45	1048585	9	0	2023-04-15 15:49:35	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Robin Mansell" <rmansell@mailinator.com>, "Hernan Galperin" <hgalperin@mailinator.com>, "Pablo Bello" <pbello@mailinator.com>, "Eleonora Rabinovich" <erabinovich@mailinator.com>			Submission confirmation	<p>Dear Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Fernando Perini, provided the following details:</p><p>Enabling Openness: The future of the information society in Latin America and the Caribbean<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+31	1048585	6	0	2023-04-15 15:45:32	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Deborah Bernnard,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Information Literacy User’s Guide, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/6</p><p>If you have been logged out, you can login again with the username dbernnard.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/6">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+32	1048585	6	0	2023-04-15 15:45:32	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Greg Bobish" <gbobish@mailinator.com>, "Daryl Bullis" <dbullis@mailinator.com>, "Jenna Hecker" <jhecker@mailinator.com>			Submission confirmation	<p>Dear Greg Bobish, Daryl Bullis, Jenna Hecker,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Deborah Bernnard, provided the following details:</p><p>The Information Literacy User’s Guide<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+33	1048585	6	3	2023-04-15 15:45:48	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Your submission has been sent for internal review	<p>Dear Deborah Bernnard,</p><p>I am pleased to inform you that an editor has reviewed your submission, The Information Literacy User’s Guide, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+34	1048585	7	0	2023-04-15 15:47:36	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/7">Accessible Elements: Teaching Science Online and at a Distance</a><br />Dietmar Kennepohl, Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer</p><p><b>Abstract</b></p>Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+35	1048585	7	0	2023-04-15 15:47:36	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Accessible Elements: Teaching Science Online and at a Distance, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/7</p><p>If you have been logged out, you can login again with the username dkennepohl.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+36	1048585	7	0	2023-04-15 15:47:36	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Terry Anderson" <tanderson@mailinator.com>, "Paul Gorsky" <pgorsky@mailinator.com>, "Gale Parchoma" <gparchoma@mailinator.com>, "Stuart Palmer" <spalmer@mailinator.com>			Submission confirmation	<p>Dear Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Dietmar Kennepohl, provided the following details:</p><p>Accessible Elements: Teaching Science Online and at a Distance<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+37	1048585	7	3	2023-04-15 15:47:53	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been sent for review	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that an editor has reviewed your submission, Accessible Elements: Teaching Science Online and at a Distance, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+38	1048585	7	3	2023-04-15 15:48:12	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Accessible Elements: Teaching Science Online and at a Distance, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+39	1048585	8	0	2023-04-15 15:48:39	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+40	1048585	8	0	2023-04-15 15:48:39	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+41	1048585	8	0	2023-04-15 15:48:39	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+42	1048585	8	0	2023-04-15 15:48:39	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+43	1048585	9	0	2023-04-15 15:49:35	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/9">Enabling Openness: The future of the information society in Latin America and the Caribbean</a><br />Fernando Perini, Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich</p><p><b>Abstract</b></p>In recent years, the Internet and other network technologies have emerged as a central issue for development in Latin America and the Caribbean. They have shown their potential to increase productivity and economic competitiveness, to create new ways to deliver education and health services, and to be driving forces for the modernization of the provision of public services.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+44	1048585	9	0	2023-04-15 15:49:35	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Fernando Perini,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/9</p><p>If you have been logged out, you can login again with the username fperini.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/9">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+46	1048585	9	3	2023-04-15 15:49:53	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Your submission has been sent for internal review	<p>Dear Fernando Perini,</p><p>I am pleased to inform you that an editor has reviewed your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+47	1048585	10	0	2023-04-15 15:51:43	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+48	1048585	10	0	2023-04-15 15:51:43	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+49	1048585	10	0	2023-04-15 15:51:43	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+50	1048585	10	0	2023-04-15 15:51:43	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Jennifer Brower" <jbrower@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Jennifer Brower,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Lost Tracks: Buffalo National Park, 1909-1939, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/10</p><p>If you have been logged out, you can login again with the username jbrower.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/10">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+51	1048585	11	0	2023-04-15 15:52:13	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+52	1048585	11	0	2023-04-15 15:52:13	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+53	1048585	11	0	2023-04-15 15:52:13	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+54	1048585	11	0	2023-04-15 15:52:13	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Dreamwork, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/11</p><p>If you have been logged out, you can login again with the username jlockehart.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+55	1048585	11	3	2023-04-15 15:52:29	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for internal review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+56	1048585	11	3	2023-04-15 15:52:44	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+57	1048585	11	10	2023-04-15 15:53:10	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #11 Locke Hart — Dreamwork	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-13</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/11">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+58	1048585	11	12	2023-04-15 15:53:23	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Gonzalo Favio accepted review assignment for #11 Locke Hart — Dreamwork	<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/11">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-13</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/11">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+59	1048585	11	3	2023-04-15 15:53:48	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Dreamwork, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+60	1048585	12	0	2023-04-15 15:54:34	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+61	1048585	12	0	2023-04-15 15:54:34	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+62	1048585	12	0	2023-04-15 15:54:34	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+63	1048585	12	0	2023-04-15 15:54:34	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Laurent Elder,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Connecting ICTs to Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/12</p><p>If you have been logged out, you can login again with the username lelder.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/12">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+64	1048585	12	0	2023-04-15 15:54:34	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank Tulus" <ftulus@mailinator.com>, "Raymond Hyma" <rhyma@mailinator.com>, "John Valk" <jvalk@mailinator.com>, "Khaled Fourati" <fkourati@mailinator.com>, "Jeremy de Beer" <jdebeer@mailinator.com>, "Sara Bannerman" <sbannerman@mailinator.com>			Submission confirmation	<p>Dear Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Laurent Elder, provided the following details:</p><p>Connecting ICTs to Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+65	1048585	12	3	2023-04-15 15:54:51	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Your submission has been sent for internal review	<p>Dear Laurent Elder,</p><p>I am pleased to inform you that an editor has reviewed your submission, Connecting ICTs to Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+66	1048585	12	8	2023-04-15 15:55:26	1073741829	"Paul Hudson" <phudson@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Paul Hudson accepted review assignment for #12 Elder et al. — Connecting ICTs to Development	<p>Dear Ramiro Vaca,</p><p>Paul Hudson has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/12">#12 Elder et al. — Connecting ICTs to Development</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-13</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/12">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+67	1048585	13	0	2023-04-15 15:56:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+68	1048585	13	0	2023-04-15 15:56:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+69	1048585	13	0	2023-04-15 15:56:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+70	1048585	13	0	2023-04-15 15:56:10	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Mobile Learning: Transforming the Delivery of Education and Training, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/13</p><p>If you have been logged out, you can login again with the username mally.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+71	1048585	13	0	2023-04-15 15:56:10	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Traxler" <jtraxler@mailinator.com>, "Marguerite Koole" <mkoole@mailinator.com>, "Torstein Rekkedal" <trekkedal@mailinator.com>			Submission confirmation	<p>Dear John Traxler, Marguerite Koole, Torstein Rekkedal,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Mohamed Ally, provided the following details:</p><p>Mobile Learning: Transforming the Delivery of Education and Training<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+72	1048585	13	3	2023-04-15 15:56:28	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for internal review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+73	1048585	13	3	2023-04-15 15:56:45	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+74	1048585	13	10	2023-04-15 15:57:20	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-13</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/13">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+75	1048585	13	12	2023-04-15 15:57:33	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Gonzalo Favio accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/13">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-13</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/13">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+76	1048585	13	3	2023-04-15 15:58:00	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Mobile Learning: Transforming the Delivery of Education and Training, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+77	1048585	14	0	2023-04-15 15:58:57	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/14">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a><br />Michael Dawson, Brian Dupuis, Michael Wilson</p><p><b>Abstract</b></p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+78	1048585	14	0	2023-04-15 15:58:57	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/14</p><p>If you have been logged out, you can login again with the username mdawson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+79	1048585	14	0	2023-04-15 15:58:57	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>			Submission confirmation	<p>Dear Brian Dupuis, Michael Wilson,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Michael Dawson, provided the following details:</p><p>From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+80	1048585	14	3	2023-04-15 15:59:16	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for internal review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+81	1048585	14	3	2023-04-15 15:59:36	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+82	1048585	14	3	2023-04-15 15:59:53	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+83	1048585	14	3	2023-04-15 16:00:13	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Next steps for publishing your submission	<p>Dear Michael Dawson,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+84	1048585	15	0	2023-04-15 16:02:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+85	1048585	15	0	2023-04-15 16:02:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+86	1048585	15	0	2023-04-15 16:02:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+87	1048585	15	0	2023-04-15 16:02:10	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Max Foran,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/15</p><p>If you have been logged out, you can login again with the username mforan.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/15">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+88	1048585	15	3	2023-04-15 16:02:28	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Your submission has been sent for review	<p>Dear Max Foran,</p><p>I am pleased to inform you that an editor has reviewed your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+89	1048585	16	0	2023-04-15 16:03:27	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+90	1048585	16	0	2023-04-15 16:03:27	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+91	1048585	16	0	2023-04-15 16:03:27	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+92	1048585	16	0	2023-04-15 16:03:28	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Michael Power,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, A Designer's Log: Case Studies in Instructional Design, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/16</p><p>If you have been logged out, you can login again with the username mpower.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/16">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+93	1048585	16	3	2023-04-15 16:03:47	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Power,</p><p>I am pleased to inform you that an editor has reviewed your submission, A Designer's Log: Case Studies in Instructional Design, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+94	1048585	16	10	2023-04-15 16:04:25	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #16 Power — A Designer's Log: Case Studies in Instructional Design	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/16">#16 Power — A Designer's Log: Case Studies in Instructional Design</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><b>Review Due:</b> 2023-05-13</p><p>Login to <a href="http://localhost/index.php/publicknowledge/workflow/access/16">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.
+95	1048585	17	0	2023-04-15 16:05:42	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+96	1048585	17	0	2023-04-15 16:05:42	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+97	1048585	17	0	2023-04-15 16:05:42	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+98	1048585	17	0	2023-04-15 16:05:42	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Matthew Smith,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Open Development: Networked Innovations in International Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/authorDashboard/submission/17</p><p>If you have been logged out, you can login again with the username msmith.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/authorDashboard/submission/17">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+99	1048585	17	0	2023-04-15 16:05:42	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Yochai Benkler" <ybenkler@mailinator.com>, "Katherine Reilly" <kreilly@mailinator.com>, "Melissa Loudon" <mloudon@mailinator.com>, "Ulrike Rivett" <urivett@mailinator.com>, "Mark Graham" <mgraham@mailinator.com>, "Håvard Haarstad" <hhaarstad@mailinator.com>, "Marshall Smith" <masmith@mailinator.com>			Submission confirmation	<p>Dear Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Matthew Smith, provided the following details:</p><p>Open Development: Networked Innovations in International Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+100	1048585	17	3	2023-04-15 16:06:04	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Your submission has been sent for internal review	<p>Dear Matthew Smith,</p><p>I am pleased to inform you that an editor has reviewed your submission, Open Development: Networked Innovations in International Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+\.
+
+
+--
+-- Data for Name: email_log_users; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.email_log_users (email_log_user_id, email_log_id, user_id) FROM stdin;
+1	1	4
+2	2	19
+3	3	19
+4	4	19
+5	5	1
+6	6	2
+7	7	3
+8	8	20
+9	10	20
+10	11	1
+11	12	2
+12	13	3
+13	14	21
+14	15	3
+15	16	22
+16	18	22
+17	19	22
+18	20	22
+19	21	22
+20	22	1
+21	23	2
+22	24	3
+23	25	23
+24	26	23
+25	27	23
+26	28	23
+27	29	23
+28	30	4
+29	31	24
+30	33	24
+31	34	3
+32	35	25
+33	37	25
+34	38	25
+35	39	3
+36	40	1
+37	41	2
+38	42	3
+39	43	4
+40	44	26
+41	46	26
+42	47	1
+43	48	2
+44	49	3
+45	50	27
+46	51	1
+47	52	2
+48	53	3
+49	54	28
+50	55	28
+51	56	28
+52	57	2
+53	58	2
+54	59	28
+55	60	1
+56	61	2
+57	62	3
+58	63	29
+59	65	29
+60	66	2
+61	67	1
+62	68	2
+63	69	3
+64	70	30
+65	72	30
+66	73	30
+67	74	2
+68	75	2
+69	76	30
+70	77	3
+71	78	31
+72	80	31
+73	81	31
+74	82	31
+75	83	31
+76	84	1
+77	85	2
+78	86	3
+79	87	32
+80	88	32
+81	89	1
+82	90	2
+83	91	3
+84	92	33
+85	93	33
+86	94	2
+87	95	1
+88	96	2
+89	97	3
+90	98	34
+91	100	34
+\.
+
+
+--
+-- Data for Name: email_templates; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.email_templates (email_id, email_key, context_id, alternate_to) FROM stdin;
+1	COPYEDIT_REQUEST	1	DISCUSSION_NOTIFICATION_COPYEDITING
+2	EDITOR_ASSIGN_SUBMISSION	1	DISCUSSION_NOTIFICATION_SUBMISSION
+3	EDITOR_ASSIGN_REVIEW	1	DISCUSSION_NOTIFICATION_REVIEW
+4	EDITOR_ASSIGN_PRODUCTION	1	DISCUSSION_NOTIFICATION_PRODUCTION
+5	LAYOUT_REQUEST	1	DISCUSSION_NOTIFICATION_PRODUCTION
+6	LAYOUT_COMPLETE	1	DISCUSSION_NOTIFICATION_PRODUCTION
+7	INDEX_REQUEST	1	DISCUSSION_NOTIFICATION_PRODUCTION
+8	INDEX_COMPLETE	1	DISCUSSION_NOTIFICATION_PRODUCTION
+\.
+
+
+--
+-- Data for Name: email_templates_default_data; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.email_templates_default_data (email_templates_default_data_id, email_key, locale, name, subject, body) FROM stdin;
+1	PASSWORD_RESET_CONFIRM	en	Password Reset Confirm	Password Reset Confirmation	We have received a request to reset your password for the {$siteTitle} web site.<br />\n<br />\nIf you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.<br />\n<br />\nReset my password: {$lostPasswordUrl}<br />\n<br />\n{$siteContactName}
+3	USER_REGISTER	en	User Created	Press Registration	{$recipientName}<br />\n<br />\nYou have now been registered as a user with {$pressName}. We have included your username and password in this email, which are needed for all work with this press through its website. At any point, you can ask to be removed from the list of users by contacting me.<br />\n<br />\nUsername: {$recipientUsername}<br />\nPassword: {$password}<br />\n<br />\nThank you,<br />\n{$signature}
+5	USER_VALIDATE_CONTEXT	en	Validate Email (Press Registration)	Validate Your Account	{$recipientName}<br />\n<br />\nYou have created an account with {$pressName}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />\n<br />\n{$activateUrl}<br />\n<br />\nThank you,<br />\n{$pressSignature}
+7	USER_VALIDATE_SITE	en	Validate Email (Site)	Validate Your Account	{$recipientName}<br />\n<br />\nYou have created an account with {$siteTitle}, but before you can start using it, you need to validate your email account. To do this, simply follow the link below:<br />\n<br />\n{$activateUrl}<br />\n<br />\nThank you,<br />\n{$siteSignature}
+9	REVIEWER_REGISTER	en	Reviewer Register	Registration as Reviewer with {$pressName}	In light of your expertise, we have taken the liberty of registering your name in the reviewer database for {$pressName}. This does not entail any form of commitment on your part, but simply enables us to approach you with a submission to possibly review. On being invited to review, you will have an opportunity to see the title and abstract of the paper in question, and you'll always be in a position to accept or decline the invitation. You can also ask at any point to have your name removed from this reviewer list.<br />\n<br />\nWe are providing you with a username and password, which is used in all interactions with the press through its website. You may wish, for example, to update your profile, including your reviewing interests.<br />\n<br />\nUsername: {$recipientUsername}<br />\nPassword: {$password}<br />\n<br />\nThank you,<br />\n{$signature}
+11	SUBMISSION_ACK	en	Submission Confirmation	Thank you for your submission to {$pressName}	<p>Dear {$recipientName},</p><p>Thank you for your submission to {$pressName}. We have received your submission, {$submissionTitle}, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: {$authorSubmissionUrl}</p><p>If you have been logged out, you can login again with the username {$recipientUsername}.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>Thank you for considering {$pressName} as a venue for your work.</p>{$pressSignature}
+13	SUBMISSION_ACK_NOT_USER	en	Submission Confirmation (Other Authors)	Submission confirmation	<p>Dear {$recipientName},</p><p>You have been named as a co-author on a submission to {$pressName}. The submitter, {$submitterName}, provided the following details:</p><p>{$submissionTitle}<br>{$authorsWithAffiliation}</p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering {$pressName} as a venue for your work.</p><p>Kind regards,</p>{$pressSignature}
+15	EDITOR_ASSIGN	en	Editor Assigned	You have been assigned as an editor on a submission to {$pressName}	<p>Dear {$recipientName},</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>If you find the submission to be relevant for {$pressName}, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p>{$pressSignature}
+17	REVIEW_CANCEL	en	Reviewer Unassign	Request for Review Cancelled	{$recipientName}:<br />\n<br />\nWe have decided at this point to cancel our request for you to review the submission, &quot;{$submissionTitle},&quot; for {$pressName}. We apologize for any inconvenience this may cause you and hope that we will be able to call on you to assist with this review process in the future.<br />\n<br />\nIf you have any questions, please contact me.
+19	REVIEW_REINSTATE	en	Reviewer Reinstate	Can you still review something for {$pressName}?	<p>Dear {$recipientName},</p><p>We recently cancelled our request for you to review a submission, {$submissionTitle}, for {$pressName}. We've reversed that decision and we hope that you are still able to conduct the review.</p><p>If you are able to assist with this submission's review, you can <a href="{$reviewAssignmentUrl}">login to the press</a> to view the submission, upload review files, and submit your review request.</p><p>If you have any questions, please contact me.</p><p>Kind regards,</p>{$signature}
+21	REVIEW_RESEND_REQUEST	en	Resend Review Request to Reviewer	Requesting your review again for {$pressName}	<p>Dear {$recipientName},</p><p>Recently, you declined our request to review a submission, {$submissionTitle}, for {$pressName}. I'm writing to see if you are able to conduct the review after all.</p><p>We would be grateful if you're able to perform this review, but we understand if that is not possible at this time. Either way, please <a href="{$reviewAssignmentUrl}">accept or decline the request</a> by {$responseDueDate}, so that we can find an alternate reviewer.<p>If you have any questions, please contact me.</p><p>Kind regards,</p>{$signature}
+23	REVIEW_REQUEST	en	Review Request	Manuscript Review Request	<p>Dear {$recipientName},</p><p>I believe that you would serve as an excellent reviewer for a submission  to {$pressName}. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p><p>If you are able to review this submission, your review is due by {$reviewDueDate}. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p><p><a href="{$reviewAssignmentUrl}">{$submissionTitle}</a></p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please <a href="{$reviewAssignmentUrl}">accept or decline</a> the review by <b>{$responseDueDate}</b>.</p><p>You may contact me with any questions about the submission or the review process.</p><p>Thank you for considering this request. Your help is much appreciated.</p><p>Kind regards,</p>{$signature}
+25	REVIEW_REQUEST_SUBSEQUENT	en	Review Request Subsequent	Request to review a revised submission	<p>Dear {$recipientName},</p><p>Thank you for your review of <a href="{$reviewAssignmentUrl}">{$submissionTitle}</a>. The authors have considered the reviewers' feedback and have now submitted a revised version of their work. I'm writing to ask if you would conduct a second round of peer review for this submission.</p><p>If you are able to review this submission, your review is due by {$reviewDueDate}. You can <a href="{$reviewAssignmentUrl}">follow the review steps</a> to view the submission, upload review files, and submit your review comments.<p><p><a href="{$reviewAssignmentUrl}">{$submissionTitle}</a></p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please <a href="{$reviewAssignmentUrl}">accept or decline</a> the review by <b>{$responseDueDate}</b>.</p><p>Please feel free to contact me with any questions about the submission or the review process.</p><p>Thank you for considering this request. Your help is much appreciated.</p><p>Kind regards,</p>{$signature}
+27	REVIEW_RESPONSE_OVERDUE_AUTO	en	Review Response Overdue (Automated)	Manuscript Review Request	Dear {$recipientName},<br />\nJust a gentle reminder of our request for your review of the submission, &quot;{$submissionTitle},&quot; for {$pressName}. We were hoping to have your response by {$responseDueDate}, and this email has been automatically generated and sent with the passing of that date.\n<br />\n{$messageToReviewer}<br />\n<br />\nPlease log into the press web site to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br />\n<br />\nThe review itself is due {$reviewDueDate}.<br />\n<br />\nSubmission URL: {$reviewAssignmentUrl}<br />\n<br />\nUsername: {$recipientUsername}<br />\n<br />\nThank you for considering this request.<br />\n<br />\n<br />\nSincerely,<br />\n{$pressSignature}<br />\n
+161	DISCUSSION_NOTIFICATION_REVIEW	fr_CA		Un message à propos de la revue {$pressName}	Prière de saisir votre message.
+162	DISCUSSION_NOTIFICATION_COPYEDITING	fr_CA		Un message à propos de la revue {$pressName}	Prière de saisir votre message.
+163	DISCUSSION_NOTIFICATION_PRODUCTION	fr_CA		Un message à propos de la revue {$pressName}	Prière de saisir votre message.
+29	REVIEW_CONFIRM	en	Review Confirm	Review accepted: {$reviewerName} accepted review assignment for #{$submissionId} {$authorsShort} — {$submissionTitle}	<p>Dear {$recipientName},</p><p>{$reviewerName} has accepted the following review:</p><p><a href="{$submissionUrl}">#{$submissionId} {$authorsShort} — {$submissionTitle}</a><br /><b>Type:</b> {$reviewMethod}</p><b>Review Due:</b> {$reviewDueDate}</p><p>Login to <a href="{$submissionUrl}">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="{$pressUrl}">{$pressName}</a>.
+31	REVIEW_DECLINE	en	Review Decline	Unable to Review	Editor(s):<br />\n<br />\nI am afraid that at this time I am unable to review the submission, &quot;{$submissionTitle},&quot; for {$pressName}. Thank you for thinking of me, and another time feel free to call on me.<br />\n<br />\n{$senderName}
+33	REVIEW_ACK	en	Review Acknowledgement	Thank you for your review	<p>Dear {$recipientName},</p>\n<p>Thank you for completing your review of the submission, {$submissionTitle}, for {$pressName}. We appreciate your time and expertise in contributing to the quality of the work that we publish.</p>\n<p>It has been a pleasure to work with you as a reviewer for {$pressName}, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p>{$signature}</p>
+35	REVIEW_REMIND	en	Review Reminder	A reminder to please complete your review	<p>Dear {$recipientName},</p><p>Just a gentle reminder of our request for your review of the submission, "{$submissionTitle}," for {$pressName}. We were expecting to have this review by {$reviewDueDate} and we would be pleased to receive it as soon as you are able to prepare it.</p><p>You can <a href="{$reviewAssignmentUrl}">login to the press</a> and follow the review steps to view the submission, upload review files, and submit your review comments.</p><p>If you need an extension of the deadline, please contact me. I look forward to hearing from you.</p><p>Thank you in advance and kind regards,</p>{$signature}
+37	REVIEW_REMIND_AUTO	en	Review Reminder (Automated)	A reminder to please complete your review	<p>Dear {$recipientName}:</p><p>This email is an automated reminder from {$pressName} in regards to our request for your review of the submission, "{$submissionTitle}."</p><p>We were expecting to have this review by {$reviewDueDate} and we would be pleased to receive it as soon as you are able to prepare it.</p><p>Please <a href="{$reviewAssignmentUrl}">login to the press</a> and follow the review steps to view the submission, upload review files, and submit your review comments.</p><p>If you need an extension of the deadline, please contact me. I look forward to hearing from you.</p><p>Thank you in advance and kind regards,</p>{$pressSignature}
+39	REVIEW_COMPLETE	en	Review Completed	Review complete: {$reviewerName} recommends {$reviewRecommendation} for #{$submissionId} {$authorsShort} — {$submissionTitle}	<p>Dear {$recipientName},</p><p>{$reviewerName} completed the following review:</p><p><a href="{$submissionUrl}">#{$submissionId} {$authorsShort} — {$submissionTitle}</a><br /><b>Recommendation:</b> {$reviewRecommendation}<br /><b>Type:</b> {$reviewMethod}</p><p>Login to <a href="{$submissionUrl}">view all files and comments</a> provided by this reviewer.</p>
+41	REVIEW_EDIT	en	Review Edited	Your review assignment has been changed for {$pressName}	<p>Dear {$recipientName},</p><p>An editor has made changes to your review assignment for {$pressName}. Please review the details below and let us know if you have any questions.</p><p><a href="{$reviewAssignmentUrl}">{$submissionTitle}</a><br /><b>Type:</b> {$reviewMethod}<br /><b>Accept or Decline By:</b> {$responseDueDate}<br /><b>Submit Review By:</b> {$reviewDueDate}</p><p>You can login to <a href="{$reviewAssignmentUrl}">complete this review</a> at any time.</p>
+43	EDITOR_DECISION_ACCEPT	en	Submission Accepted	Your submission has been accepted to {$pressName}	<p>Dear {$recipientName},</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, {$submissionTitle}, to meet or exceed our expectations. We are excited to publish your piece in {$pressName} and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for {$pressName} and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>Kind regards,</p>{$signature}
+45	EDITOR_DECISION_SEND_TO_INTERNAL	en	Sent to Internal Review	Your submission has been sent for internal review	<p>Dear {$recipientName},</p><p>I am pleased to inform you that an editor has reviewed your submission, {$submissionTitle}, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p>{$signature}</p>
+47	EDITOR_DECISION_SEND_TO_EXTERNAL	en	Sent to Review	Your submission has been sent for review	<p>Dear {$recipientName},</p><p>I am pleased to inform you that an editor has reviewed your submission, {$submissionTitle}, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>{$reviewTypeDescription} You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p>{$signature}</p>
+49	EDITOR_DECISION_SEND_TO_PRODUCTION	en	Sent to Production	Next steps for publishing your submission	<p>Dear {$recipientName},</p><p>I am writing from {$pressName} to let you know that the editing of your submission, {$submissionTitle}, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>Kind regards,</p>{$signature}
+51	EDITOR_DECISION_REVISIONS	en	Revisions Requested	Your submission has been reviewed and we encourage you to submit revisions	<p>Dear {$recipientName},</p><p>Your submission {$submissionTitle} has been reviewed and we would like to encourage you to submit revisions that address the reviewers' comments. An editor will review these revisions and if they address the concerns adequately, your submission may be accepted for publication.</p><p>The reviewers' comments are included at the bottom of this email. Please respond to each point in the reviewers' comments and identify what changes you have made. If you find any of the reviewer's comments to be unjustified or inappropriate, please explain your perspective.</p><p>When you have completed your revisions, you can upload revised documents along with your response to the reviewers' comments at your <a href="{$authorSubmissionUrl}">submission dashboard</a>. If you have been logged out, you can login again with the username {$recipientUsername}.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>We look forward to receiving your revised submission.</p><p>Kind regards,</p>{$signature}<hr><p>The following comments were received from reviewers.</p>{$allReviewerComments}
+53	EDITOR_DECISION_RESUBMIT	en	Resubmit for Review	Your submission has been reviewed - please revise and resubmit	<p>Dear {$recipientName},</p><p>After reviewing your submission, {$submissionTitle}, the reviewers have recommended that your submission cannot be accepted for publication in its current form. However, we would like to encourage you to submit a revised version that addresses the reviewers' comments. Your revisions will be reviewed by an editor and may be sent out for another round of peer review.</p><p>Please note that resubmitting your work does not guarantee that it will be accepted.</p><p>The reviewers' comments are included at the bottom of this email. Please respond to each point and identify what changes you have made. If you find any of the reviewer's comments inappropriate, please explain your perspective. If you have questions about the recommendations in your review, please include these in your response.</p><p>When you have completed your revisions, you can upload revised documents along with your response to the reviewers' comments <a href="{$authorSubmissionUrl}">at your submission dashboard</a>. If you have been logged out, you can login again with the username {$recipientUsername}.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>We look forward to receiving your revised submission.</p><p>Kind regards,</p>{$signature}<hr><p>The following comments were received from reviewers.</p>{$allReviewerComments}
+55	EDITOR_DECISION_DECLINE	en	Submission Declined	Your submission has been declined	<p>Dear {$recipientName},</p><p>While we appreciate receiving your submission, we are unable to accept {$submissionTitle} for publication on the basis of the comments from reviewers.</p><p>The reviewers' comments are included at the bottom of this email.</p><p>Thank you for submitting to {$pressName}. Although it is disappointing to have a submission declined, I hope you find the reviewers' comments to be constructive and helpful.</p><p>You are now free to submit the work elsewhere if you choose to do so.</p><p>Kind regards,</p>{$signature}<hr><p>The following comments were received from reviewers.</p>{$allReviewerComments}
+57	EDITOR_DECISION_INITIAL_DECLINE	en	Submission Declined (Pre-Review)	Your submission has been declined	<p>Dear {$recipientName},</p><p>I’m sorry to inform you that, after reviewing your submission, {$submissionTitle}, the editor has found that it does not meet our requirements for publication in {$pressName}.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p>{$signature}
+59	EDITOR_RECOMMENDATION	en	Recommendation Made	Editor Recommendation	<p>Dear {$recipientName},</p><p>After considering the reviewers' feedback, I would like to make the following recommendation regarding the submission {$submissionTitle}.</p><p>My recommendation is: {$recommendation}.</p><p>Please visit the submission's <a href="{$submissionUrl}">editorial workflow</a> to act on this recommendation.</p><p>Please feel free to contact me with any questions.</p><p>Kind regards,</p><p>{$senderName}</p>
+61	EDITOR_DECISION_NOTIFY_OTHER_AUTHORS	en	Notify Other Authors	An update regarding your submission	<p>The following email was sent to {$submittingAuthorName} from {$pressName} regarding {$submissionTitle}.</p>\n<p>You are receiving a copy of this notification because you are identified as an author of the submission. Any instructions in the message below are intended for the submitting author, {$submittingAuthorName}, and no action is required of you at this time.</p>\n\n{$messageToSubmittingAuthor}
+63	EDITOR_DECISION_NOTIFY_REVIEWERS	en	Notify Reviewers of Decision	Thank you for your review	<p>Dear {$recipientName},</p>\n<p>Thank you for completing your review of the submission, {$submissionTitle}, for {$pressName}. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers' comments and the editor's decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>{$decisionDescription}</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor's decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for {$pressName}, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p>{$signature}</p>
+65	EDITOR_DECISION_NEW_ROUND	en	New Review Round Initiated	Your submission has been sent for another round of review	<p>Dear {$recipientName},</p>\n<p>Your revised submission, {$submissionTitle}, has been sent for a new round of peer review. \nYou will hear from us with feedback from the reviewers and information about the next steps.</p>\n<p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p>{$signature}</p>\n
+67	EDITOR_DECISION_REVERT_DECLINE	en	Reinstate Declined Submission	We have reversed the decision to decline your submission	<p>Dear {$recipientName},</p>\n<p>The decision to decline your submission, {$submissionTitle}, has been reversed. \nAn editor will complete the round of review and you will be notified when a \ndecision is made.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p>{$signature}</p>\n
+69	EDITOR_DECISION_REVERT_INITIAL_DECLINE	en	Reinstate Submission Declined Without Review	We have reversed the decision to decline your submission	<p>Dear {$recipientName},</p>\n<p>The decision to decline your submission, {$submissionTitle}, has been reversed. \nAn editor will look further at your submission before deciding whether to decline \nthe submission or send it for review.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p>{$signature}</p>\n
+71	EDITOR_DECISION_SKIP_REVIEW	en	Submission Accepted (Without Review)	Your submission has been sent for copyediting	<p>Dear {$recipientName},</p>\n<p>I am pleased to inform you that we have decided to accept your submission without peer review. We found your submission, {$submissionTitle}, to meet our expectations, and we do not require that work of this type undergo peer review. We are excited to publish your piece in {$pressName} and we thank you for choosing our press as a venue for your work.</p>\n<p>Your submission will soon be published on the press site for {$pressName} and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on your efforts.</p>\n<p>Your submission will now undergo copy editing and formatting to prepare it for publication. </p>\n<p>You will shortly receive further instructions.</p>\n<p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p>{$signature}</p>\n
+73	EDITOR_DECISION_BACK_FROM_PRODUCTION	en	Submission Sent Back to Copyediting	Your submission has been sent back to copyediting	<p>Dear {$recipientName},</p><p>Your submission, {$submissionTitle}, has been sent back to the copyediting stage, where it will undergo further copyediting and formatting to prepare it for publication.</p><p>Occasionally, a submission is sent to the production stage before it is ready for the final galleys to be prepared for publication. Your submission is still forthcoming. I apologize for any confusion.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>We will contact you if we need any further assistance.</p><p>Kind regards,</p><p>{$signature}</p>
+75	EDITOR_DECISION_BACK_FROM_COPYEDITING	en	Submission Sent Back from Copyediting	Your submission has been sent back to review	<p>Dear {$recipientName},</p><p>Your submission, {$submissionTitle}, has been sent back to the review stage. It will undergo further review before it can be accepted for publication.</p><p>Occasionally, a decision to accept a submission will be recorded accidentally in our system and we must send it back to review. I apologize for any confusion this has caused. We will work to complete any further review quickly so that you have a final decision as soon as possible.</p><p>We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>Kind regards,</p><p>{$signature}</p>
+77	EDITOR_DECISION_CANCEL_REVIEW_ROUND	en	Review Round Cancelled	A review round for your submission has been cancelled	<p>Dear {$recipientName},</p><p>We recently opened a new review round for your submission, {$submissionTitle}. We are closing this review round now.</p><p>Occasionally, a decision to open a round of review will be recorded accidentally in our system and we must cancel this review round. I apologize for any confusion this may have caused.</p><p>We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="{$authorSubmissionUrl}">submission dashboard</a>.</p><p>Kind regards,</p><p>{$signature}</p>
+79	REVISED_VERSION_NOTIFY	en	Revised Version Notification	Revised Version Uploaded	<p>Dear {$recipientName},</p><p>The author has uploaded revisions for the submission, <b>{$authorsShort} — {$submissionTitle}</b>. <p>As an assigned editor, we ask that you login and <a href="{$submissionUrl}">view the revisions</a> and make a decision to accept, decline or send the submission for further review.</p><br><br>—<br>This is an automated message from <a href="{$pressUrl}">{$pressName}</a>.
+81	STATISTICS_REPORT_NOTIFICATION	en	Statistics Report Notification	Editorial activity for {$month}, {$year}	\n{$recipientName}, <br />\n<br />\nYour press health report for {$month}, {$year} is now available. Your key stats for this month are below.<br />\n<ul>\n\t<li>New submissions this month: {$newSubmissions}</li>\n\t<li>Declined submissions this month: {$declinedSubmissions}</li>\n\t<li>Accepted submissions this month: {$acceptedSubmissions}</li>\n\t<li>Total submissions in the system: {$totalSubmissions}</li>\n</ul>\nLogin to the the press to view more detailed <a href="{$editorialStatsLink}">editorial trends</a> and <a href="{$publicationStatsLink}">published book stats</a>. A full copy of this month's editorial trends is attached.<br />\n<br />\nSincerely,<br />\n{$pressSignature}
+83	ANNOUNCEMENT	en	New Announcement	{$announcementTitle}	<b>{$announcementTitle}</b><br />\n<br />\n{$announcementSummary}<br />\n<br />\nVisit our website to read the <a href="{$announcementUrl}">full announcement</a>.
+85	DISCUSSION_NOTIFICATION_SUBMISSION	en	Discussion (Submission)	A message regarding {$pressName}	Please enter your message.
+87	DISCUSSION_NOTIFICATION_REVIEW	en	Discussion (Review)	A message regarding {$pressName}	Please enter your message.
+89	DISCUSSION_NOTIFICATION_COPYEDITING	en	Discussion (Copyediting)	A message regarding {$pressName}	Please enter your message.
+91	DISCUSSION_NOTIFICATION_PRODUCTION	en	Discussion (Production)	A message regarding {$pressName}	Please enter your message.
+93	COPYEDIT_REQUEST	en	Request Copyedit	Submission {$submissionId} is ready to be copyedited for {$contextAcronym}	<p>Dear {$recipientName},</p><p>A new submission is ready to be copyedited:</p><p><a href"{$submissionUrl}">{$submissionId} — {$submissionTitle}</a><br />{$pressName}</p><p>Please follow these steps to complete this task:</p><ol><li>Click on the Submission URL below.</li><li>Open any files available under Draft Files and edit the files. Use the Copyediting Discussions area if you need to contact the editor(s) or author(s).</li><li>Save the copyedited file(s) and upload them to the Copyedited panel.</li><li>Use the Copyediting Discussions to notify the editor(s) that all files have been prepared, and that the Production process may begin.</li></ol><p>If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to {$pressName}.</p><p>Kind regards,</p>{$signature}
+95	EDITOR_ASSIGN_SUBMISSION	en	Assign Editor	You have been assigned as an editor on a submission to {$pressName}	<p>Dear {$recipientName},</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>If you find the submission to be relevant for {$pressName}, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p>{$pressSignature}
+97	EDITOR_ASSIGN_REVIEW	en	Assign Editor	You have been assigned as an editor on a submission to {$pressName}	<p>Dear {$recipientName},</p><p>The following submission has been assigned to you to see through the review stage.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please login to <a href="{$submissionUrl}">view the submission</a> and assign qualified reviewers. You can assign a reviewer by clicking "Add Reviewer".</p><p>Thank you in advance.</p><p>Kind regards,</p>{$signature}
+99	EDITOR_ASSIGN_PRODUCTION	en	Assign Editor	You have been assigned as an editor on a submission to {$pressName}	<p>Dear {$recipientName},</p><p>The following submission has been assigned to you to see through the production stage.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please login to <a href="{$submissionUrl}">view the submission</a>. Once production-ready files are available, upload them under the <strong>Publication > Publication Formats</strong> section.</p><p>Thank you in advance.</p><p>Kind regards,</p>{$signature}
+101	LAYOUT_REQUEST	en	Ready for Production	Submission {$submissionId} is ready for production at {$contextAcronym}	<p>Dear {$recipientName},</p><p>A new submission is ready for layout editing:</p><p><a href="{$submissionUrl}">{$submissionId} {$submissionTitle}</a><br />{$pressName}</p><ol><li>Click on the Submission URL above.</li><li>Download the Production Ready files and use them to create the galleys according to the press's standards.</li><li>Upload the galleys to the Publication Formats section of the submission.</li><li>Use the Production Discussions to notify the editor that the galleys are ready.</li></ol><p>If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this press.</p><p>Kind regards,</p>{$signature}
+103	LAYOUT_COMPLETE	en	Galleys Complete	Galleys Complete	<p>Dear {$recipientName},<p><p>Galleys have now been prepared for the following submission and are ready for final review.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$pressName}</p><p>If you have any questions, please contact me.</p><p>Kind regards,</p><p>{$senderName}</p>
+105	INDEX_REQUEST	en	Index Requested	Request Index	{$recipientName}:<br />\n<br />\nThe submission &quot;{$submissionTitle}&quot; to {$pressName} now needs indexes created by following these steps.<br />\n1. Click on the Submission URL below.<br />\n2. Log into the press and use the Page Proofs file to create the galleys according to press standards.<br />\n3. Send the COMPLETE email to the editor.<br />\n<br />\n{$pressName} URL: {$pressUrl}<br />\nSubmission URL: {$submissionUrl}<br />\nUsername: {$recipientUsername}<br />\n<br />\nIf you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this press.<br />\n<br />\n{$signature}
+107	INDEX_COMPLETE	en	Index Completed	Index Galleys Complete	{$recipientName}:<br />\n<br />\nIndexes have now been prepared for the manuscript, &quot;{$submissionTitle},&quot; for {$pressName} and are ready for proofreading.<br />\n<br />\nIf you have any questions, please contact me.<br />\n<br />\n{$signatureFullName}
+109	VERSION_CREATED	en	Version Created	A new version was created for {$submissionTitle}	<p>Dear {$recipientName}, </p><p>This is an automated message to inform you that a new version of your submission, {$submissionTitle}, was created. You can view this version from your submission dashboard at the following link:</p><p><a href="{$submissionUrl}">{$submissionTitle}</a></p><hr><p>This is an automatic email sent from <a href="{$pressUrl}">{$pressName}</a>.</p>
+111	EDITORIAL_REMINDER	en	Editorial Reminder	Outstanding editorial tasks for {$pressName}	<p>Dear {$recipientName},</p><p>You are currently assigned to {$numberOfSubmissions} submissions in <a href="{$pressUrl}">{$pressName}</a>. The following submissions are <b>waiting for your response</b>.</p>{$outstandingTasks}<p>View all of your assignments in your <a href="{$submissionsUrl}">submission dashboard</a>.</p><p>If you have any questions about your assignments, please contact {$contactName} at {$contactEmail}.</p>
+113	SUBMISSION_SAVED_FOR_LATER	en	Submission Saved for Later	Resume your submission to {$pressName}	<p>Dear {$recipientName},</p><p>Your submission details have been saved in our system, but it has not yet been submitted for consideration. You can return to complete your submission at any time by following the link below.</p><p><a href="{$submissionWizardUrl}">{$authorsShort} — {$submissionTitle}</a></p><hr><p>This is an automated email from <a href="{$pressUrl}">{$pressName}</a>.</p>
+115	SUBMISSION_NEEDS_EDITOR	en	Submission Needs Editor	A new submission needs an editor to be assigned: {$submissionTitle}	<p>Dear {$recipientName},</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="{$submissionUrl}">{$submissionTitle}</a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="{$pressUrl}">{$pressName}</a>.</p>
+117	MANUAL_PAYMENT_NOTIFICATION	en	Manual Payment Notify	Manual Payment Notification	A manual payment needs to be processed for the press {$pressName} and the user {$senderName} (username &quot;{$senderUsername}&quot;).<br />\n<br />\nThe item being paid for is &quot;{$paymentName}&quot;.<br />\nThe cost is {$paymentAmount} ({$paymentCurrencyCode}).<br />\n<br />\nThis email was generated by the Open Monograph Press Manual Payment plugin.
+118	PASSWORD_RESET_CONFIRM	fr_CA		Confirmation de réinitialisation du mot de passe	Nous avons reçu une requête de réinitialisation de votre mot de passe pour le site Web {$siteTitle}.<br />\n<br />\nSi vous n'avez pas fait cette requête, veuillez ignorer ce courriel et votre mot de passe demeurera le même. Si vous souhaitez modifier votre mot de passe, cliquez sur l'adresse URL ci-dessous.<br />\n<br />\nModifier mon mot de passe: {$lostPasswordUrl}<br />\n<br />\n{$siteContactName}
+119	USER_REGISTER	fr_CA		Inscription à la presse	{$recipientName}<br />\n<br />\nVous êtes désormais inscrit à la presse {$pressName}. Ce courriel contient votre nom d'utilisateur et votre mot de passe, dont vous aurez besoin pour tous vos travaux au sein de la presse. Vous pouvez demander que l'on retire votre nom de la liste des utilisateurs en tout temps. Il suffit de me contacter.<br />\n<br />\n<br />\nNom d'utilisateur: {$recipientUsername}<br />\nMot de passe: {$password}<br />\n<br />\nMerci,<br />\n{$signature}
+120	USER_VALIDATE_CONTEXT	fr_CA			
+121	USER_VALIDATE_SITE	fr_CA			
+122	REVIEWER_REGISTER	fr_CA		Inscription à titre d'évaluateur pour la presse {$pressName}	En raison de votre expertise, nous avons ajouté votre nom à notre base de données d'évaluateurs pour la presse {$pressName}. Ceci ne vous oblige à rien, mais nous permet simplement de vous approcher si nous recevons une soumission que vous pourriez évaluer. Après avoir reçu une demande d'évaluation, vous aurez la possibilité de lire le titre et le résumé de l'article en question. Vous serez toujours libre d'accepter ou de refuser l'invitation. Vous pouvez demander que l'on retire votre nom de notre liste d'évaluateurs en tout temps.<br />\n<br />\nVoici votre nom d'utilisateur et votre mot de passe, dont vous aurez besoin dans tous vos échanges avec la presse à travers son site Web. Vous pourriez, par exemple, mettre votre profil à jour, y compris vos champs d'intérêt en ce qui concerne l'évaluation des articles.<br />\n<br />\n<br />\nNom d'utilisateur: {$recipientUsername}<br />\nMot de passe: {$password}<br />\n<br />\nMerci,<br />\n{$signature}
+123	SUBMISSION_ACK	fr_CA		Accusé de réception de la soumission	{$recipientName},<br />\n<br />\nNous vous remercions d'avoir soumis le manuscrit intitulé « {$submissionTitle} » à la revue {$pressName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition en accédant au site Web de la revue :<br />\n<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$recipientUsername}<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à notre revue pour la publication de vos travaux.<br />\n<br />\n{$pressSignature}
+124	SUBMISSION_ACK_NOT_USER	fr_CA		Accusé de réception de la soumission	<p>Bonjour,</p><p>Le manuscrit intitulé , « {$submissionTitle} » , a été soumis par {$submitterName} à la revue {$pressName}.</p><p>Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à la revue {$pressName} pour la publication de vos travaux.</p><p>Cordialement,</p>{$pressSignature}
+125	EDITOR_ASSIGN	fr_CA		Travail éditorial	{$recipientName}:<br />\n<br />\nLa soumission &quot;{$submissionTitle}&quot; à la presse {$pressName} vous a été assignée. En tant que rédacteur en chef, vous devrez superviser le processus éditorial de cette soumission.<br />\n<br />\nURL de la soumission: {$submissionUrl}<br />\nNom d'utilisateur: {$recipientUsername}<br />\n<br />\nMerci,
+126	REVIEW_CANCEL	fr_CA		Annulation de la requête d'évaluation	{$recipientName}:<br />\n<br />\n<br />\nNous avons décidé d'annuler notre requête d'évaluation pour la soumission &quot;{$submissionTitle}&quot; de la presse {$pressName}. Nous vous prions de nous excuser pour tout inconvénient que cette décision pourrait occasionner et nous espérons que vous serez en mesure d'évaluer une soumission dans un avenir prochain.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à me contacter.
+127	REVIEW_REINSTATE	fr_CA			
+128	REVIEW_RESEND_REQUEST	fr_CA			
+129	REVIEW_REQUEST	fr_CA		Requête d'évaluation d'un manuscrit	Bonjour {$recipientName},<br />\n<br />\n{$messageToReviewer}<br />\n<br />\nVeuillez ouvrir une session sur le site Web de la presse d'ici le {$responseDueDate} pour indiquer si vous serez en mesure d'évaluer l'article ou non. Ceci vous permettra également d'accéder à la soumission, et de saisir votre évaluation et vos recommandations.<br />\n<br />\n<br />\nL'évaluation doit être terminée d'ici le {$reviewDueDate}.<br />\n<br />\nURL de la soumission: {$reviewAssignmentUrl}<br />\n<br />\nNom d'utilisateur: {$recipientUsername}<br />\n<br />\nMerci de votre intérêt à évaluer des articles pour notre presse.<br />\n<br />\n{$signature}<br />\n
+130	REVIEW_REQUEST_SUBSEQUENT	fr_CA			
+131	REVIEW_RESPONSE_OVERDUE_AUTO	fr_CA			
+132	REVIEW_CONFIRM	fr_CA		Acceptation d'évaluation	Rédacteurs-trices,<br />\n<br />\nJe suis en mesure d'évaluer la soumission intitulée « {$submissionTitle} » pour la revue {$pressName}. Je vous remercie d'avoir pensé à moi. Je devrais être en mesure de compléter l'évaluation pour la date du {$reviewDueDate}, voire avant.<br />\n<br />\n{$senderName}
+133	REVIEW_DECLINE	fr_CA		Ne peux pas évaluer	Éditeurs:<br />\n<br />\nMalheureusement, je ne pourrai pas évaluer &quot;{$submissionTitle}&quot; pour la presse {$pressName}. Merci de m'avoir invité à évaluer cet article et n'hésitez pas à me contacter dans un avenir prochain.<br />\n<br />\n{$senderName}
+134	REVIEW_ACK	fr_CA		Accusé de réception de l'évaluation d'une soumission	{$recipientName},<br />\n<br />\nNous vous remercions d'avoir évalué la soumission intitulée « {$submissionTitle} » pour la revue {$pressName}. Nous vous sommes reconnaissants de votre contribution à la qualité des travaux que nous publions.
+135	REVIEW_REMIND	fr_CA		Rappel d'évaluation	{$recipientName}:<br />\n<br />\nNous vous remercions d'avoir accepté d'évaluer &quot;{$submissionTitle}&quot; pour la presse {$pressName}. Veuillez noter que cette évaluation doit nous parvenir avant le {$reviewDueDate}. Nous vous serions reconnaissants si vous pouviez nous faire parvenir votre évaluation dans les plus brefs délais.<br />\n<br />\nSi vous n'avez plus votre nom d'utilisateur et mot de passe pour le site Web, vous pouvez réinitialiser votre mot de passe en cliquant sur le lien suivant. Votre mot de passe et nom d'utilisateur vous seront envoyés par courriel. {$lostPasswordUrl}<br />\n<br />\nURL de la soumission: {$reviewAssignmentUrl}<br />\n<br />\nNom d'utilisateur: {$recipientUsername}<br />\n<br />\nNous vous prions de confirmer si vous êtes encore disponible pour participer à cette étape cruciale de notre processus éditorial. Nous vous prions d'agréer l'expression de nos sentiments les plus distingués. <br />\n<br />\n{$signature}
+136	REVIEW_REMIND_AUTO	fr_CA		Rappel d'évaluation	{$recipientName}:<br />\n<br />\nNous vous remercions d'avoir accepté d'évaluer &quot;{$submissionTitle}&quot; pour la presse {$pressName}. Veuillez noter que cette évaluation doit nous parvenir avant le {$reviewDueDate}. Ce courriel a été généré et envoyé automatiquement parce que vous avez dépassé la date d'échéance. Toutefois, nous vous serions reconnaissants si vous pouviez nous faire parvenir votre évaluation dans les plus brefs délais.<br />\n<br />\nSi vous n'avez plus votre nom d'utilisateur et mot de passe pour le site Web, vous pouvez réinitialiser votre mot de passe en cliquant sur le lien suivant. Votre mot de passe et nom d'utilisateur vous seront envoyés par courriel. {$lostPasswordUrl}<br />\n<br />\nURL de la soumission: {$reviewAssignmentUrl}<br />\n<br />\nNous vous prions de confirmer si vous êtes encore disponible pour participer à cette étape cruciale de notre processus éditorial. Veuillez agréer l'expression de nos sentiments les plus distingués. <br />\n<br />\n{$pressSignature}
+137	REVIEW_COMPLETE	fr_CA			
+138	REVIEW_EDIT	fr_CA			
+139	EDITOR_DECISION_ACCEPT	fr_CA		Décision du rédacteur en chef	{$authors}:<br />\n<br />\nNous avons pris une décision concernant votre soumission à la presse {$pressName} intitulée &quot;{$submissionTitle}&quot;.<br />\n<br />\nNous avons décidé de:<br />\n<br />\nURL du manuscrit: {$submissionUrl}
+140	EDITOR_DECISION_SEND_TO_INTERNAL	fr_CA			
+141	EDITOR_DECISION_SEND_TO_EXTERNAL	fr_CA		Décision du rédacteur	{$authors},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à la revue {$pressName}.<br />\n<br />\nNotre décision est d'envoyer votre soumission en évaluation.<br />\n<br />\nURL de la soumission : {$submissionUrl}
+142	EDITOR_DECISION_SEND_TO_PRODUCTION	fr_CA		Décision du rédacteur	{$authors},<br />\n<br />\nL'édition de votre soumission « {$submissionTitle} » est complétée. Nous l'envoyons maintenant en production.<br />\n<br />\nURL de la soumission : {$submissionUrl}
+143	EDITOR_DECISION_REVISIONS	fr_CA		Décision du rédacteur	{$authors},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à la revue {$pressName}.<br />\n<br />\nNotre décision est de vous demander d'apporter des révisions à votre soumission.
+144	EDITOR_DECISION_RESUBMIT	fr_CA		Décision du rédacteur	{$authors},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à la revue {$pressName}.<br />\n<br />\nNotre décision est de vous demander d'apporter des révisions à votre soumission et de la soumettre à nouveau.
+145	EDITOR_DECISION_DECLINE	fr_CA		Décision du rédacteur	{$authors}:<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à la revue {$pressName}.<br />\n<br />\nNotre décision est de refuser votre soumission.
+146	EDITOR_DECISION_INITIAL_DECLINE	fr_CA		Décision du rédacteur	\n\t\t\t{$authors},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à  la revue {$pressName}.<br />\n<br />\nNotre décision est de refuser votre soumission.
+147	EDITOR_RECOMMENDATION	fr_CA		Recommandation du rédacteur	{$editors},<br />\n<br />\nLa recommandation concernant la soumission « {$submissionTitle} » à la revue {$pressName} est de : {$recommendation}
+148	EDITOR_DECISION_NOTIFY_OTHER_AUTHORS	fr_CA			
+149	EDITOR_DECISION_NOTIFY_REVIEWERS	fr_CA			
+150	EDITOR_DECISION_NEW_ROUND	fr_CA			
+151	EDITOR_DECISION_REVERT_DECLINE	fr_CA			
+152	EDITOR_DECISION_REVERT_INITIAL_DECLINE	fr_CA			
+153	EDITOR_DECISION_SKIP_REVIEW	fr_CA			
+154	EDITOR_DECISION_BACK_FROM_PRODUCTION	fr_CA			
+155	EDITOR_DECISION_BACK_FROM_COPYEDITING	fr_CA			
+156	EDITOR_DECISION_CANCEL_REVIEW_ROUND	fr_CA			
+157	REVISED_VERSION_NOTIFY	fr_CA			
+158	STATISTICS_REPORT_NOTIFICATION	fr_CA			
+159	ANNOUNCEMENT	fr_CA			
+160	DISCUSSION_NOTIFICATION_SUBMISSION	fr_CA		Un message à propos de la revue {$pressName}	Prière de saisir votre message.
+164	COPYEDIT_REQUEST	fr_CA		Demande de révision d'une soumission	{$recipientName},<br />\n<br />\nJ'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissionTitle} » pour la revue {$pressName} à l'aide des étapes suivantes.<br />\n1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n2. Ouvrir le(s) fichier(s) disponible(s) sous Fichiers des ébauches finales et effectuer votre révision, tout en ajoutant des discussions sur la révision, le cas échéant.<br />\n3. Enregistrer le(s) fichier(s) révisé(s) et le(s) téléverser dans la section Version(s) révisée(s).<br />\n4. Informer le,la rédacteur-trice que tous les fichiers ont été révisés et que l'étape de production peut débuter.<br />\n<br />\nURL de la revue {$pressName} : {$pressUrl}<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$recipientUsername}
+165	EDITOR_ASSIGN_SUBMISSION	fr_CA		Travail éditorial	{$recipientName}:<br />\n<br />\nLa soumission &quot;{$submissionTitle}&quot; à la presse {$pressName} vous a été assignée. En tant que rédacteur en chef, vous devrez superviser le processus éditorial de cette soumission.<br />\n<br />\nURL de la soumission: {$submissionUrl}<br />\nNom d'utilisateur: {$recipientUsername}<br />\n<br />\nMerci,
+166	EDITOR_ASSIGN_REVIEW	fr_CA		Travail éditorial	
+167	EDITOR_ASSIGN_PRODUCTION	fr_CA		Travail éditorial	
+168	LAYOUT_REQUEST	fr_CA		Requête des épreuves en placard	{$recipientName}:<br />\n<br />\nIl faut maintenant préparer les épreuves en placard de la soumission &quot;{$submissionTitle}&quot; pour la presse {$pressName}. Pour ce faire, veuillez suivre les étapes suivantes:<br />\n<br />\n1. Cliquez sur le lien URL de la soumission ci-dessous.<br />\n2. Ouvrez une session sur la presse et utilisez le fichier Version de mise en page pour créer les épreuves en placard conformément aux normes de la presse.<br />\n3. Envoyez le courriel COMPLET au rédacteur en chef.<br />\n<br />\n{$pressName} URL: {$pressUrl}<br />\nURL de la soumission: {$submissionUrl}<br />\nNom d'utilisateur: {$recipientUsername}<br />\n<br />\nSi vous ne pouvez pas faire ce travail en ce moment ou si vous avez des questions, n'hésitez pas à me contacter. Merci d'avoir contribué à cette presse.
+169	LAYOUT_COMPLETE	fr_CA		Épreuves en placard complétées	{$recipientName}:<br />\n<br />\nLes épreuves en placard du manuscrit &quot;{$submissionTitle}&quot; pour la presse {$pressName} ont été préparées et peuvent être révisées.<br />\n<br />\nSi vous avez questions, n'hésitez pas à me contacter.<br />\n<br />\n{$senderName}
+170	INDEX_REQUEST	fr_CA		Requête d'indexage	{$recipientName}:<br />\n<br />\nLa soumission &quot;{$submissionTitle}&quot; par la presse {$pressName} doit désormais être indexée. Veuillez suivre les étapes suivantes:<br />\n<br />\n1. Cliquez sur le lien URL de la soumission ci-dessous.<br />\n2. Ouvrez une session sur la presse et utilisez les fichiers d'épreuves de mise en page pour créer les épreuves en placard conformément aux normes de la presse.<br />\n3. Envoyez le courriel COMPLET au rédacteur en chef.<br />\n<br />\n{$pressName} URL: {$pressUrl}<br />\nURL de la soumission: {$submissionUrl}<br />\nNom d'utilisateur: {$recipientUsername}<br />\n<br />\nSi vous ne pouvez pas faire ce travail en ce moment ou si vous avez des questions, n'hésitez pas à me contacter. Merci d'avoir contribué à cette presse.<br />\n<br />\n{$signature}
+171	INDEX_COMPLETE	fr_CA		Indexage des épreuves en placard complété	{$recipientName}:<br />\n<br />\nLes index du manuscrit &quot;{$submissionTitle}&quot; pour la presse {$pressName} sont prêts et peuvent être révisés.<br />\n<br />\nSi vous avez questions, n'hésitez pas à me contacter.<br />\n<br />\n{$signatureFullName}
+172	VERSION_CREATED	fr_CA			
+173	EDITORIAL_REMINDER	fr_CA			
+174	SUBMISSION_SAVED_FOR_LATER	fr_CA			
+175	SUBMISSION_NEEDS_EDITOR	fr_CA			
+\.
+
+
+--
+-- Data for Name: email_templates_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.email_templates_settings (email_template_setting_id, email_id, locale, setting_name, setting_value) FROM stdin;
+\.
+
+
+--
+-- Data for Name: event_log; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
+1	1048585	1	19	2023-04-15 15:33:33	268435458	submission.event.general.metadataUpdated	0
+2	1048585	1	19	2023-04-15 15:33:34	268435458	submission.event.general.metadataUpdated	0
+3	515	1	19	2023-04-15 15:33:37	1342177281	submission.event.fileUploaded	0
+4	1048585	1	19	2023-04-15 15:33:37	1342177288	submission.event.fileRevised	0
+5	515	1	19	2023-04-15 15:33:38	1342177296	submission.event.fileEdited	0
+6	1048585	1	19	2023-04-15 15:33:38	1342177296	submission.event.fileEdited	0
+7	515	2	19	2023-04-15 15:33:39	1342177281	submission.event.fileUploaded	0
+8	1048585	1	19	2023-04-15 15:33:39	1342177288	submission.event.fileRevised	0
+9	515	2	19	2023-04-15 15:33:39	1342177296	submission.event.fileEdited	0
+10	1048585	1	19	2023-04-15 15:33:39	1342177296	submission.event.fileEdited	0
+11	515	3	19	2023-04-15 15:33:40	1342177281	submission.event.fileUploaded	0
+12	1048585	1	19	2023-04-15 15:33:40	1342177288	submission.event.fileRevised	0
+13	515	3	19	2023-04-15 15:33:40	1342177296	submission.event.fileEdited	0
+14	1048585	1	19	2023-04-15 15:33:40	1342177296	submission.event.fileEdited	0
+15	1048585	1	19	2023-04-15 15:34:00	268435457	submission.event.submissionSubmitted	0
+16	1048585	1	3	2023-04-15 15:34:14	805306371	editor.submission.decision.sendExternalReview.log	0
+17	515	4	3	2023-04-15 15:34:15	1342177281	submission.event.fileUploaded	0
+18	1048585	1	3	2023-04-15 15:34:15	1342177288	submission.event.fileRevised	0
+19	515	5	3	2023-04-15 15:34:15	1342177281	submission.event.fileUploaded	0
+20	1048585	1	3	2023-04-15 15:34:15	1342177288	submission.event.fileRevised	0
+21	515	6	3	2023-04-15 15:34:15	1342177281	submission.event.fileUploaded	0
+22	1048585	1	3	2023-04-15 15:34:15	1342177288	submission.event.fileRevised	0
+23	1048585	1	3	2023-04-15 15:34:25	1073741825	log.review.reviewerAssigned	0
+24	1048585	1	3	2023-04-15 15:34:31	805306371	editor.submission.decision.accept.log	0
+25	1048585	1	3	2023-04-15 15:34:40	268435459	submission.event.participantAdded	0
+26	1048585	2	20	2023-04-15 15:34:53	268435458	submission.event.general.metadataUpdated	0
+27	1048585	2	20	2023-04-15 15:34:54	268435458	submission.event.general.metadataUpdated	0
+28	515	7	20	2023-04-15 15:35:06	1342177281	submission.event.fileUploaded	0
+29	1048585	2	20	2023-04-15 15:35:06	1342177288	submission.event.fileRevised	0
+30	1048585	2	20	2023-04-15 15:35:07	268435458	submission.event.general.metadataUpdated	0
+31	515	7	20	2023-04-15 15:35:07	1342177296	submission.event.fileEdited	0
+32	1048585	2	20	2023-04-15 15:35:07	1342177296	submission.event.fileEdited	0
+33	515	8	20	2023-04-15 15:35:08	1342177281	submission.event.fileUploaded	0
+34	1048585	2	20	2023-04-15 15:35:08	1342177288	submission.event.fileRevised	0
+35	515	8	20	2023-04-15 15:35:08	1342177296	submission.event.fileEdited	0
+36	1048585	2	20	2023-04-15 15:35:08	1342177296	submission.event.fileEdited	0
+37	515	9	20	2023-04-15 15:35:09	1342177281	submission.event.fileUploaded	0
+38	1048585	2	20	2023-04-15 15:35:09	1342177288	submission.event.fileRevised	0
+39	515	9	20	2023-04-15 15:35:10	1342177296	submission.event.fileEdited	0
+40	1048585	2	20	2023-04-15 15:35:10	1342177296	submission.event.fileEdited	0
+41	515	10	20	2023-04-15 15:35:10	1342177281	submission.event.fileUploaded	0
+42	1048585	2	20	2023-04-15 15:35:10	1342177288	submission.event.fileRevised	0
+43	515	10	20	2023-04-15 15:35:11	1342177296	submission.event.fileEdited	0
+44	1048585	2	20	2023-04-15 15:35:11	1342177296	submission.event.fileEdited	0
+45	515	11	20	2023-04-15 15:35:12	1342177281	submission.event.fileUploaded	0
+46	1048585	2	20	2023-04-15 15:35:12	1342177288	submission.event.fileRevised	0
+47	515	11	20	2023-04-15 15:35:12	1342177296	submission.event.fileEdited	0
+48	1048585	2	20	2023-04-15 15:35:12	1342177296	submission.event.fileEdited	0
+49	515	11	20	2023-04-15 15:35:13	1342177282	submission.event.fileDeleted	0
+50	1048585	2	20	2023-04-15 15:37:02	268435457	submission.event.submissionSubmitted	0
+51	1048585	2	3	2023-04-15 15:37:30	805306371	editor.submission.decision.sendExternalReview.log	0
+52	515	12	3	2023-04-15 15:37:31	1342177281	submission.event.fileUploaded	0
+53	1048585	2	3	2023-04-15 15:37:31	1342177288	submission.event.fileRevised	0
+54	515	13	3	2023-04-15 15:37:31	1342177281	submission.event.fileUploaded	0
+55	1048585	2	3	2023-04-15 15:37:31	1342177288	submission.event.fileRevised	0
+56	515	14	3	2023-04-15 15:37:31	1342177281	submission.event.fileUploaded	0
+57	1048585	2	3	2023-04-15 15:37:31	1342177288	submission.event.fileRevised	0
+58	515	15	3	2023-04-15 15:37:31	1342177281	submission.event.fileUploaded	0
+59	1048585	2	3	2023-04-15 15:37:31	1342177288	submission.event.fileRevised	0
+60	1048585	2	3	2023-04-15 15:37:46	1073741825	log.review.reviewerAssigned	0
+61	1048585	2	3	2023-04-15 15:37:56	1073741825	log.review.reviewerAssigned	0
+62	1048585	3	21	2023-04-15 15:38:08	268435458	submission.event.general.metadataUpdated	0
+63	1048585	3	21	2023-04-15 15:38:09	268435458	submission.event.general.metadataUpdated	0
+64	515	16	21	2023-04-15 15:38:12	1342177281	submission.event.fileUploaded	0
+65	1048585	3	21	2023-04-15 15:38:12	1342177288	submission.event.fileRevised	0
+66	515	16	21	2023-04-15 15:38:13	1342177296	submission.event.fileEdited	0
+67	1048585	3	21	2023-04-15 15:38:13	1342177296	submission.event.fileEdited	0
+68	515	17	21	2023-04-15 15:38:14	1342177281	submission.event.fileUploaded	0
+69	1048585	3	21	2023-04-15 15:38:14	1342177288	submission.event.fileRevised	0
+70	515	17	21	2023-04-15 15:38:14	1342177296	submission.event.fileEdited	0
+71	1048585	3	21	2023-04-15 15:38:14	1342177296	submission.event.fileEdited	0
+72	515	18	21	2023-04-15 15:38:15	1342177281	submission.event.fileUploaded	0
+73	1048585	3	21	2023-04-15 15:38:15	1342177288	submission.event.fileRevised	0
+74	515	18	21	2023-04-15 15:38:15	1342177296	submission.event.fileEdited	0
+75	1048585	3	21	2023-04-15 15:38:15	1342177296	submission.event.fileEdited	0
+76	515	19	21	2023-04-15 15:38:16	1342177281	submission.event.fileUploaded	0
+77	1048585	3	21	2023-04-15 15:38:16	1342177288	submission.event.fileRevised	0
+78	515	19	21	2023-04-15 15:38:17	1342177296	submission.event.fileEdited	0
+79	1048585	3	21	2023-04-15 15:38:17	1342177296	submission.event.fileEdited	0
+80	515	20	21	2023-04-15 15:38:17	1342177281	submission.event.fileUploaded	0
+81	1048585	3	21	2023-04-15 15:38:17	1342177288	submission.event.fileRevised	0
+82	515	20	21	2023-04-15 15:38:18	1342177296	submission.event.fileEdited	0
+83	1048585	3	21	2023-04-15 15:38:18	1342177296	submission.event.fileEdited	0
+84	1048585	3	21	2023-04-15 15:38:55	268435457	submission.event.submissionSubmitted	0
+85	1048585	4	22	2023-04-15 15:39:05	268435458	submission.event.general.metadataUpdated	0
+86	1048585	4	22	2023-04-15 15:39:06	268435458	submission.event.general.metadataUpdated	0
+87	515	21	22	2023-04-15 15:39:09	1342177281	submission.event.fileUploaded	0
+88	1048585	4	22	2023-04-15 15:39:09	1342177288	submission.event.fileRevised	0
+89	515	21	22	2023-04-15 15:39:09	1342177296	submission.event.fileEdited	0
+90	1048585	4	22	2023-04-15 15:39:09	1342177296	submission.event.fileEdited	0
+91	515	22	22	2023-04-15 15:39:10	1342177281	submission.event.fileUploaded	0
+92	1048585	4	22	2023-04-15 15:39:10	1342177288	submission.event.fileRevised	0
+93	515	22	22	2023-04-15 15:39:11	1342177296	submission.event.fileEdited	0
+94	1048585	4	22	2023-04-15 15:39:11	1342177296	submission.event.fileEdited	0
+95	515	23	22	2023-04-15 15:39:12	1342177281	submission.event.fileUploaded	0
+96	1048585	4	22	2023-04-15 15:39:12	1342177288	submission.event.fileRevised	0
+97	515	23	22	2023-04-15 15:39:12	1342177296	submission.event.fileEdited	0
+98	1048585	4	22	2023-04-15 15:39:12	1342177296	submission.event.fileEdited	0
+99	515	24	22	2023-04-15 15:39:13	1342177281	submission.event.fileUploaded	0
+100	1048585	4	22	2023-04-15 15:39:13	1342177288	submission.event.fileRevised	0
+101	515	24	22	2023-04-15 15:39:13	1342177296	submission.event.fileEdited	0
+102	1048585	4	22	2023-04-15 15:39:13	1342177296	submission.event.fileEdited	0
+103	1048585	4	22	2023-04-15 15:39:44	268435457	submission.event.submissionSubmitted	0
+104	1048585	4	3	2023-04-15 15:40:00	805306371	editor.submission.decision.sendInternalReview.log	0
+105	515	25	3	2023-04-15 15:40:00	1342177281	submission.event.fileUploaded	0
+106	1048585	4	3	2023-04-15 15:40:00	1342177288	submission.event.fileRevised	0
+107	515	26	3	2023-04-15 15:40:01	1342177281	submission.event.fileUploaded	0
+108	1048585	4	3	2023-04-15 15:40:01	1342177288	submission.event.fileRevised	0
+109	515	27	3	2023-04-15 15:40:01	1342177281	submission.event.fileUploaded	0
+110	1048585	4	3	2023-04-15 15:40:01	1342177288	submission.event.fileRevised	0
+111	515	28	3	2023-04-15 15:40:01	1342177281	submission.event.fileUploaded	0
+112	1048585	4	3	2023-04-15 15:40:01	1342177288	submission.event.fileRevised	0
+113	1048585	4	3	2023-04-15 15:40:12	1073741825	log.review.reviewerAssigned	0
+114	1048585	4	3	2023-04-15 15:40:18	805306371	editor.submission.decision.sendExternalReview.log	0
+115	1048585	4	3	2023-04-15 15:40:29	1073741825	log.review.reviewerAssigned	0
+116	1048585	4	3	2023-04-15 15:40:36	805306371	editor.submission.decision.accept.log	0
+117	1048585	4	3	2023-04-15 15:40:47	268435459	submission.event.participantAdded	0
+118	1048585	4	3	2023-04-15 15:40:55	805306371	editor.submission.decision.sendToProduction.log	0
+119	1048585	4	3	2023-04-15 15:41:07	268435459	submission.event.participantAdded	0
+120	1048585	4	3	2023-04-15 15:41:15	268435474	submission.event.publicationFormatCreated	0
+121	1048585	5	23	2023-04-15 15:41:25	268435458	submission.event.general.metadataUpdated	0
+122	1048585	5	23	2023-04-15 15:41:26	268435458	submission.event.general.metadataUpdated	0
+123	515	29	23	2023-04-15 15:41:29	1342177281	submission.event.fileUploaded	0
+124	1048585	5	23	2023-04-15 15:41:29	1342177288	submission.event.fileRevised	0
+125	515	29	23	2023-04-15 15:41:29	1342177296	submission.event.fileEdited	0
+126	1048585	5	23	2023-04-15 15:41:29	1342177296	submission.event.fileEdited	0
+127	515	30	23	2023-04-15 15:41:30	1342177281	submission.event.fileUploaded	0
+128	1048585	5	23	2023-04-15 15:41:30	1342177288	submission.event.fileRevised	0
+129	515	30	23	2023-04-15 15:41:31	1342177296	submission.event.fileEdited	0
+130	1048585	5	23	2023-04-15 15:41:31	1342177296	submission.event.fileEdited	0
+131	515	31	23	2023-04-15 15:41:32	1342177281	submission.event.fileUploaded	0
+132	1048585	5	23	2023-04-15 15:41:32	1342177288	submission.event.fileRevised	0
+133	515	31	23	2023-04-15 15:41:32	1342177296	submission.event.fileEdited	0
+134	1048585	5	23	2023-04-15 15:41:32	1342177296	submission.event.fileEdited	0
+135	515	32	23	2023-04-15 15:41:33	1342177281	submission.event.fileUploaded	0
+136	1048585	5	23	2023-04-15 15:41:33	1342177288	submission.event.fileRevised	0
+137	515	32	23	2023-04-15 15:41:33	1342177296	submission.event.fileEdited	0
+138	1048585	5	23	2023-04-15 15:41:33	1342177296	submission.event.fileEdited	0
+139	515	33	23	2023-04-15 15:41:34	1342177281	submission.event.fileUploaded	0
+140	1048585	5	23	2023-04-15 15:41:34	1342177288	submission.event.fileRevised	0
+141	515	33	23	2023-04-15 15:41:34	1342177296	submission.event.fileEdited	0
+142	1048585	5	23	2023-04-15 15:41:34	1342177296	submission.event.fileEdited	0
+143	515	34	23	2023-04-15 15:41:35	1342177281	submission.event.fileUploaded	0
+144	1048585	5	23	2023-04-15 15:41:35	1342177288	submission.event.fileRevised	0
+145	515	34	23	2023-04-15 15:41:36	1342177296	submission.event.fileEdited	0
+146	1048585	5	23	2023-04-15 15:41:36	1342177296	submission.event.fileEdited	0
+147	1048585	5	23	2023-04-15 15:42:22	268435457	submission.event.submissionSubmitted	0
+148	1048585	5	3	2023-04-15 15:42:40	805306371	editor.submission.decision.sendInternalReview.log	0
+149	515	35	3	2023-04-15 15:42:40	1342177281	submission.event.fileUploaded	0
+150	1048585	5	3	2023-04-15 15:42:40	1342177288	submission.event.fileRevised	0
+151	515	36	3	2023-04-15 15:42:40	1342177281	submission.event.fileUploaded	0
+152	1048585	5	3	2023-04-15 15:42:40	1342177288	submission.event.fileRevised	0
+153	515	37	3	2023-04-15 15:42:41	1342177281	submission.event.fileUploaded	0
+154	1048585	5	3	2023-04-15 15:42:41	1342177288	submission.event.fileRevised	0
+155	515	38	3	2023-04-15 15:42:41	1342177281	submission.event.fileUploaded	0
+156	1048585	5	3	2023-04-15 15:42:41	1342177288	submission.event.fileRevised	0
+157	515	39	3	2023-04-15 15:42:41	1342177281	submission.event.fileUploaded	0
+158	1048585	5	3	2023-04-15 15:42:41	1342177288	submission.event.fileRevised	0
+159	515	40	3	2023-04-15 15:42:41	1342177281	submission.event.fileUploaded	0
+160	1048585	5	3	2023-04-15 15:42:41	1342177288	submission.event.fileRevised	0
+161	1048585	5	3	2023-04-15 15:42:52	1073741825	log.review.reviewerAssigned	0
+162	1048585	5	3	2023-04-15 15:42:59	805306371	editor.submission.decision.sendExternalReview.log	0
+163	1048585	5	3	2023-04-15 15:43:11	1073741825	log.review.reviewerAssigned	0
+164	1048585	5	3	2023-04-15 15:43:18	805306371	editor.submission.decision.accept.log	0
+165	1048585	5	3	2023-04-15 15:43:30	268435459	submission.event.participantAdded	0
+166	1048585	5	3	2023-04-15 15:43:38	805306371	editor.submission.decision.sendToProduction.log	0
+167	1048585	5	3	2023-04-15 15:43:50	268435459	submission.event.participantAdded	0
+168	1048585	5	3	2023-04-15 15:43:58	268435459	submission.event.participantAdded	0
+169	1048585	5	3	2023-04-15 15:44:04	268435474	submission.event.publicationFormatCreated	0
+170	515	41	3	2023-04-15 15:44:08	1342177281	submission.event.fileUploaded	0
+171	1048585	5	3	2023-04-15 15:44:08	1342177288	submission.event.fileRevised	0
+172	1048585	5	3	2023-04-15 15:44:11	268435464	submission.event.publicationFormatPublished	0
+173	1048585	5	3	2023-04-15 15:44:14	268435476	submission.event.publicationFormatMadeAvailable	0
+174	515	41	3	2023-04-15 15:44:16	1342177296	submission.event.fileEdited	0
+175	1048585	5	3	2023-04-15 15:44:16	1342177296	submission.event.fileEdited	0
+176	515	41	3	2023-04-15 15:44:16	1342177287	submission.event.signoffSignoff	0
+177	515	41	3	2023-04-15 15:44:19	1342177296	submission.event.fileEdited	0
+178	1048585	5	3	2023-04-15 15:44:20	1342177296	submission.event.fileEdited	0
+179	1048585	5	3	2023-04-15 15:44:22	268435462	publication.event.published	0
+180	1048585	5	3	2023-04-15 15:44:34	268435463	publication.event.unpublished	0
+181	1048585	5	3	2023-04-15 15:44:45	268435462	publication.event.published	0
+182	1048585	6	24	2023-04-15 15:44:55	268435458	submission.event.general.metadataUpdated	0
+183	1048585	6	24	2023-04-15 15:44:56	268435458	submission.event.general.metadataUpdated	0
+184	515	42	24	2023-04-15 15:44:59	1342177281	submission.event.fileUploaded	0
+185	1048585	6	24	2023-04-15 15:44:59	1342177288	submission.event.fileRevised	0
+186	515	42	24	2023-04-15 15:44:59	1342177296	submission.event.fileEdited	0
+187	1048585	6	24	2023-04-15 15:44:59	1342177296	submission.event.fileEdited	0
+188	515	43	24	2023-04-15 15:45:00	1342177281	submission.event.fileUploaded	0
+189	1048585	6	24	2023-04-15 15:45:00	1342177288	submission.event.fileRevised	0
+190	515	43	24	2023-04-15 15:45:01	1342177296	submission.event.fileEdited	0
+191	1048585	6	24	2023-04-15 15:45:01	1342177296	submission.event.fileEdited	0
+192	515	44	24	2023-04-15 15:45:01	1342177281	submission.event.fileUploaded	0
+193	1048585	6	24	2023-04-15 15:45:01	1342177288	submission.event.fileRevised	0
+194	515	44	24	2023-04-15 15:45:02	1342177296	submission.event.fileEdited	0
+195	1048585	6	24	2023-04-15 15:45:02	1342177296	submission.event.fileEdited	0
+196	515	45	24	2023-04-15 15:45:03	1342177281	submission.event.fileUploaded	0
+197	1048585	6	24	2023-04-15 15:45:03	1342177288	submission.event.fileRevised	0
+198	515	45	24	2023-04-15 15:45:03	1342177296	submission.event.fileEdited	0
+199	1048585	6	24	2023-04-15 15:45:03	1342177296	submission.event.fileEdited	0
+200	1048585	6	24	2023-04-15 15:45:32	268435457	submission.event.submissionSubmitted	0
+201	1048585	6	3	2023-04-15 15:45:48	805306371	editor.submission.decision.sendInternalReview.log	0
+202	515	46	3	2023-04-15 15:45:48	1342177281	submission.event.fileUploaded	0
+203	1048585	6	3	2023-04-15 15:45:48	1342177288	submission.event.fileRevised	0
+204	515	47	3	2023-04-15 15:45:49	1342177281	submission.event.fileUploaded	0
+205	1048585	6	3	2023-04-15 15:45:49	1342177288	submission.event.fileRevised	0
+206	515	48	3	2023-04-15 15:45:49	1342177281	submission.event.fileUploaded	0
+207	1048585	6	3	2023-04-15 15:45:49	1342177288	submission.event.fileRevised	0
+208	515	49	3	2023-04-15 15:45:49	1342177281	submission.event.fileUploaded	0
+209	1048585	6	3	2023-04-15 15:45:49	1342177288	submission.event.fileRevised	0
+210	1048585	6	3	2023-04-15 15:45:59	268435459	submission.event.participantAdded	0
+211	1048585	6	3	2023-04-15 15:46:05	268435459	submission.event.participantAdded	0
+212	1048585	6	6	2023-04-15 15:46:21	805306372	editor.submission.recommend.accept.log	0
+213	1048585	7	25	2023-04-15 15:46:46	268435458	submission.event.general.metadataUpdated	0
+214	1048585	7	25	2023-04-15 15:46:47	268435458	submission.event.general.metadataUpdated	0
+215	515	50	25	2023-04-15 15:46:50	1342177281	submission.event.fileUploaded	0
+216	1048585	7	25	2023-04-15 15:46:50	1342177288	submission.event.fileRevised	0
+217	515	50	25	2023-04-15 15:46:51	1342177296	submission.event.fileEdited	0
+218	1048585	7	25	2023-04-15 15:46:51	1342177296	submission.event.fileEdited	0
+219	515	51	25	2023-04-15 15:46:52	1342177281	submission.event.fileUploaded	0
+220	1048585	7	25	2023-04-15 15:46:52	1342177288	submission.event.fileRevised	0
+221	515	51	25	2023-04-15 15:46:52	1342177296	submission.event.fileEdited	0
+222	1048585	7	25	2023-04-15 15:46:52	1342177296	submission.event.fileEdited	0
+223	515	52	25	2023-04-15 15:46:53	1342177281	submission.event.fileUploaded	0
+224	1048585	7	25	2023-04-15 15:46:53	1342177288	submission.event.fileRevised	0
+225	515	52	25	2023-04-15 15:46:53	1342177296	submission.event.fileEdited	0
+226	1048585	7	25	2023-04-15 15:46:53	1342177296	submission.event.fileEdited	0
+227	515	53	25	2023-04-15 15:46:54	1342177281	submission.event.fileUploaded	0
+228	1048585	7	25	2023-04-15 15:46:54	1342177288	submission.event.fileRevised	0
+229	515	53	25	2023-04-15 15:46:54	1342177296	submission.event.fileEdited	0
+230	1048585	7	25	2023-04-15 15:46:54	1342177296	submission.event.fileEdited	0
+231	515	54	25	2023-04-15 15:46:55	1342177281	submission.event.fileUploaded	0
+232	1048585	7	25	2023-04-15 15:46:55	1342177288	submission.event.fileRevised	0
+233	515	54	25	2023-04-15 15:46:56	1342177296	submission.event.fileEdited	0
+234	1048585	7	25	2023-04-15 15:46:56	1342177296	submission.event.fileEdited	0
+235	1048585	7	25	2023-04-15 15:47:36	268435457	submission.event.submissionSubmitted	0
+236	1048585	7	3	2023-04-15 15:47:53	805306371	editor.submission.decision.sendExternalReview.log	0
+237	515	55	3	2023-04-15 15:47:53	1342177281	submission.event.fileUploaded	0
+238	1048585	7	3	2023-04-15 15:47:53	1342177288	submission.event.fileRevised	0
+239	515	56	3	2023-04-15 15:47:54	1342177281	submission.event.fileUploaded	0
+240	1048585	7	3	2023-04-15 15:47:54	1342177288	submission.event.fileRevised	0
+241	515	57	3	2023-04-15 15:47:54	1342177281	submission.event.fileUploaded	0
+242	1048585	7	3	2023-04-15 15:47:54	1342177288	submission.event.fileRevised	0
+243	515	58	3	2023-04-15 15:47:54	1342177281	submission.event.fileUploaded	0
+244	1048585	7	3	2023-04-15 15:47:54	1342177288	submission.event.fileRevised	0
+245	515	59	3	2023-04-15 15:47:54	1342177281	submission.event.fileUploaded	0
+246	1048585	7	3	2023-04-15 15:47:54	1342177288	submission.event.fileRevised	0
+247	1048585	7	3	2023-04-15 15:48:05	1073741825	log.review.reviewerAssigned	0
+248	1048585	7	3	2023-04-15 15:48:12	805306371	editor.submission.decision.accept.log	0
+249	1048585	7	3	2023-04-15 15:48:22	268435459	submission.event.participantAdded	0
+250	1048585	8	3	2023-04-15 15:48:35	268435458	submission.event.general.metadataUpdated	0
+251	515	60	3	2023-04-15 15:48:38	1342177281	submission.event.fileUploaded	0
+252	1048585	8	3	2023-04-15 15:48:38	1342177288	submission.event.fileRevised	0
+253	515	60	3	2023-04-15 15:48:38	1342177296	submission.event.fileEdited	0
+254	1048585	8	3	2023-04-15 15:48:38	1342177296	submission.event.fileEdited	0
+255	1048585	8	3	2023-04-15 15:48:39	268435457	submission.event.submissionSubmitted	0
+256	1048585	9	26	2023-04-15 15:48:47	268435458	submission.event.general.metadataUpdated	0
+257	1048585	9	26	2023-04-15 15:48:48	268435458	submission.event.general.metadataUpdated	0
+258	515	61	26	2023-04-15 15:48:51	1342177281	submission.event.fileUploaded	0
+259	1048585	9	26	2023-04-15 15:48:51	1342177288	submission.event.fileRevised	0
+260	515	61	26	2023-04-15 15:48:52	1342177296	submission.event.fileEdited	0
+261	1048585	9	26	2023-04-15 15:48:52	1342177296	submission.event.fileEdited	0
+262	515	62	26	2023-04-15 15:48:53	1342177281	submission.event.fileUploaded	0
+263	1048585	9	26	2023-04-15 15:48:53	1342177288	submission.event.fileRevised	0
+264	515	62	26	2023-04-15 15:48:53	1342177296	submission.event.fileEdited	0
+265	1048585	9	26	2023-04-15 15:48:53	1342177296	submission.event.fileEdited	0
+266	515	63	26	2023-04-15 15:48:54	1342177281	submission.event.fileUploaded	0
+267	1048585	9	26	2023-04-15 15:48:54	1342177288	submission.event.fileRevised	0
+268	515	63	26	2023-04-15 15:48:54	1342177296	submission.event.fileEdited	0
+269	1048585	9	26	2023-04-15 15:48:54	1342177296	submission.event.fileEdited	0
+270	515	64	26	2023-04-15 15:48:55	1342177281	submission.event.fileUploaded	0
+271	1048585	9	26	2023-04-15 15:48:55	1342177288	submission.event.fileRevised	0
+272	515	64	26	2023-04-15 15:48:56	1342177296	submission.event.fileEdited	0
+273	1048585	9	26	2023-04-15 15:48:56	1342177296	submission.event.fileEdited	0
+274	515	65	26	2023-04-15 15:48:56	1342177281	submission.event.fileUploaded	0
+275	1048585	9	26	2023-04-15 15:48:56	1342177288	submission.event.fileRevised	0
+276	515	65	26	2023-04-15 15:48:57	1342177296	submission.event.fileEdited	0
+277	1048585	9	26	2023-04-15 15:48:57	1342177296	submission.event.fileEdited	0
+278	1048585	9	26	2023-04-15 15:49:35	268435457	submission.event.submissionSubmitted	0
+279	1048585	9	3	2023-04-15 15:49:53	805306371	editor.submission.decision.sendInternalReview.log	0
+280	515	66	3	2023-04-15 15:49:54	1342177281	submission.event.fileUploaded	0
+281	1048585	9	3	2023-04-15 15:49:54	1342177288	submission.event.fileRevised	0
+282	515	67	3	2023-04-15 15:49:54	1342177281	submission.event.fileUploaded	0
+283	1048585	9	3	2023-04-15 15:49:54	1342177288	submission.event.fileRevised	0
+284	515	68	3	2023-04-15 15:49:54	1342177281	submission.event.fileUploaded	0
+285	1048585	9	3	2023-04-15 15:49:54	1342177288	submission.event.fileRevised	0
+286	515	69	3	2023-04-15 15:49:54	1342177281	submission.event.fileUploaded	0
+287	1048585	9	3	2023-04-15 15:49:55	1342177288	submission.event.fileRevised	0
+288	515	70	3	2023-04-15 15:49:55	1342177281	submission.event.fileUploaded	0
+289	1048585	9	3	2023-04-15 15:49:55	1342177288	submission.event.fileRevised	0
+290	1048585	10	27	2023-04-15 15:50:09	268435458	submission.event.general.metadataUpdated	0
+291	1048585	10	27	2023-04-15 15:50:10	268435458	submission.event.general.metadataUpdated	0
+292	515	71	27	2023-04-15 15:50:13	1342177281	submission.event.fileUploaded	0
+293	1048585	10	27	2023-04-15 15:50:13	1342177288	submission.event.fileRevised	0
+294	515	71	27	2023-04-15 15:50:13	1342177296	submission.event.fileEdited	0
+295	1048585	10	27	2023-04-15 15:50:13	1342177296	submission.event.fileEdited	0
+296	515	72	27	2023-04-15 15:50:14	1342177281	submission.event.fileUploaded	0
+297	1048585	10	27	2023-04-15 15:50:14	1342177288	submission.event.fileRevised	0
+298	515	72	27	2023-04-15 15:50:15	1342177296	submission.event.fileEdited	0
+299	1048585	10	27	2023-04-15 15:50:15	1342177296	submission.event.fileEdited	0
+300	515	73	27	2023-04-15 15:50:15	1342177281	submission.event.fileUploaded	0
+301	1048585	10	27	2023-04-15 15:50:15	1342177288	submission.event.fileRevised	0
+302	515	73	27	2023-04-15 15:50:16	1342177296	submission.event.fileEdited	0
+303	1048585	10	27	2023-04-15 15:50:16	1342177296	submission.event.fileEdited	0
+304	515	74	27	2023-04-15 15:50:17	1342177281	submission.event.fileUploaded	0
+305	1048585	10	27	2023-04-15 15:50:17	1342177288	submission.event.fileRevised	0
+306	515	74	27	2023-04-15 15:50:17	1342177296	submission.event.fileEdited	0
+307	1048585	10	27	2023-04-15 15:50:17	1342177296	submission.event.fileEdited	0
+308	515	75	27	2023-04-15 15:50:18	1342177281	submission.event.fileUploaded	0
+309	1048585	10	27	2023-04-15 15:50:18	1342177288	submission.event.fileRevised	0
+310	515	75	27	2023-04-15 15:50:19	1342177296	submission.event.fileEdited	0
+311	1048585	10	27	2023-04-15 15:50:19	1342177296	submission.event.fileEdited	0
+312	515	76	27	2023-04-15 15:50:19	1342177281	submission.event.fileUploaded	0
+313	1048585	10	27	2023-04-15 15:50:19	1342177288	submission.event.fileRevised	0
+314	515	76	27	2023-04-15 15:50:20	1342177296	submission.event.fileEdited	0
+315	1048585	10	27	2023-04-15 15:50:20	1342177296	submission.event.fileEdited	0
+316	515	77	27	2023-04-15 15:50:21	1342177281	submission.event.fileUploaded	0
+317	1048585	10	27	2023-04-15 15:50:21	1342177288	submission.event.fileRevised	0
+318	515	77	27	2023-04-15 15:50:21	1342177296	submission.event.fileEdited	0
+319	1048585	10	27	2023-04-15 15:50:21	1342177296	submission.event.fileEdited	0
+320	515	78	27	2023-04-15 15:50:22	1342177281	submission.event.fileUploaded	0
+321	1048585	10	27	2023-04-15 15:50:22	1342177288	submission.event.fileRevised	0
+322	515	78	27	2023-04-15 15:50:23	1342177296	submission.event.fileEdited	0
+323	1048585	10	27	2023-04-15 15:50:23	1342177296	submission.event.fileEdited	0
+324	515	79	27	2023-04-15 15:50:24	1342177281	submission.event.fileUploaded	0
+325	1048585	10	27	2023-04-15 15:50:24	1342177288	submission.event.fileRevised	0
+326	515	79	27	2023-04-15 15:50:24	1342177296	submission.event.fileEdited	0
+327	1048585	10	27	2023-04-15 15:50:24	1342177296	submission.event.fileEdited	0
+328	1048585	10	27	2023-04-15 15:51:43	268435457	submission.event.submissionSubmitted	0
+329	1048585	11	28	2023-04-15 15:51:54	268435458	submission.event.general.metadataUpdated	0
+330	1048585	11	28	2023-04-15 15:51:55	268435458	submission.event.general.metadataUpdated	0
+331	515	80	28	2023-04-15 15:51:58	1342177281	submission.event.fileUploaded	0
+332	1048585	11	28	2023-04-15 15:51:59	1342177288	submission.event.fileRevised	0
+333	515	80	28	2023-04-15 15:51:59	1342177296	submission.event.fileEdited	0
+334	1048585	11	28	2023-04-15 15:51:59	1342177296	submission.event.fileEdited	0
+335	515	81	28	2023-04-15 15:52:00	1342177281	submission.event.fileUploaded	0
+336	1048585	11	28	2023-04-15 15:52:00	1342177288	submission.event.fileRevised	0
+337	515	81	28	2023-04-15 15:52:00	1342177296	submission.event.fileEdited	0
+338	1048585	11	28	2023-04-15 15:52:00	1342177296	submission.event.fileEdited	0
+339	1048585	11	28	2023-04-15 15:52:13	268435457	submission.event.submissionSubmitted	0
+340	1048585	11	3	2023-04-15 15:52:29	805306371	editor.submission.decision.sendInternalReview.log	0
+341	515	82	3	2023-04-15 15:52:29	1342177281	submission.event.fileUploaded	0
+342	1048585	11	3	2023-04-15 15:52:29	1342177288	submission.event.fileRevised	0
+343	515	83	3	2023-04-15 15:52:29	1342177281	submission.event.fileUploaded	0
+344	1048585	11	3	2023-04-15 15:52:29	1342177288	submission.event.fileRevised	0
+345	1048585	11	3	2023-04-15 15:52:39	1073741825	log.review.reviewerAssigned	0
+346	1048585	11	3	2023-04-15 15:52:44	805306371	editor.submission.decision.sendExternalReview.log	0
+347	1048585	11	3	2023-04-15 15:52:54	1073741825	log.review.reviewerAssigned	0
+348	1048585	11	3	2023-04-15 15:53:02	1073741825	log.review.reviewerAssigned	0
+349	1048585	11	10	2023-04-15 15:53:10	1073741830	log.review.reviewAccepted	0
+350	1048585	11	10	2023-04-15 15:53:15	1073741848	log.review.reviewReady	0
+351	1048585	11	12	2023-04-15 15:53:23	1073741830	log.review.reviewAccepted	0
+352	1048585	11	12	2023-04-15 15:53:28	1073741848	log.review.reviewReady	0
+353	1048585	11	3	2023-04-15 15:53:48	805306371	editor.submission.decision.accept.log	0
+354	1048585	11	3	2023-04-15 15:53:48	1073741856	submission.event.decisionReviewerEmailSent	0
+355	1048585	12	29	2023-04-15 15:54:03	268435458	submission.event.general.metadataUpdated	0
+356	1048585	12	29	2023-04-15 15:54:04	268435458	submission.event.general.metadataUpdated	0
+357	515	84	29	2023-04-15 15:54:07	1342177281	submission.event.fileUploaded	0
+358	1048585	12	29	2023-04-15 15:54:07	1342177288	submission.event.fileRevised	0
+359	515	84	29	2023-04-15 15:54:07	1342177296	submission.event.fileEdited	0
+360	1048585	12	29	2023-04-15 15:54:07	1342177296	submission.event.fileEdited	0
+361	515	85	29	2023-04-15 15:54:08	1342177281	submission.event.fileUploaded	0
+362	1048585	12	29	2023-04-15 15:54:08	1342177288	submission.event.fileRevised	0
+363	515	85	29	2023-04-15 15:54:09	1342177296	submission.event.fileEdited	0
+364	1048585	12	29	2023-04-15 15:54:09	1342177296	submission.event.fileEdited	0
+365	515	86	29	2023-04-15 15:54:09	1342177281	submission.event.fileUploaded	0
+366	1048585	12	29	2023-04-15 15:54:09	1342177288	submission.event.fileRevised	0
+367	515	86	29	2023-04-15 15:54:10	1342177296	submission.event.fileEdited	0
+368	1048585	12	29	2023-04-15 15:54:10	1342177296	submission.event.fileEdited	0
+369	1048585	12	29	2023-04-15 15:54:34	268435457	submission.event.submissionSubmitted	0
+370	1048585	12	3	2023-04-15 15:54:51	805306371	editor.submission.decision.sendInternalReview.log	0
+371	515	87	3	2023-04-15 15:54:51	1342177281	submission.event.fileUploaded	0
+372	1048585	12	3	2023-04-15 15:54:51	1342177288	submission.event.fileRevised	0
+373	515	88	3	2023-04-15 15:54:51	1342177281	submission.event.fileUploaded	0
+374	1048585	12	3	2023-04-15 15:54:51	1342177288	submission.event.fileRevised	0
+375	515	89	3	2023-04-15 15:54:52	1342177281	submission.event.fileUploaded	0
+376	1048585	12	3	2023-04-15 15:54:52	1342177288	submission.event.fileRevised	0
+377	1048585	12	3	2023-04-15 15:55:02	1073741825	log.review.reviewerAssigned	0
+378	1048585	12	3	2023-04-15 15:55:09	1073741825	log.review.reviewerAssigned	0
+379	1048585	12	3	2023-04-15 15:55:18	1073741825	log.review.reviewerAssigned	0
+380	1048585	12	8	2023-04-15 15:55:26	1073741830	log.review.reviewAccepted	0
+381	1048585	12	8	2023-04-15 15:55:31	1073741848	log.review.reviewReady	0
+382	1048585	13	30	2023-04-15 15:55:41	268435458	submission.event.general.metadataUpdated	0
+383	1048585	13	30	2023-04-15 15:55:42	268435458	submission.event.general.metadataUpdated	0
+384	515	90	30	2023-04-15 15:55:45	1342177281	submission.event.fileUploaded	0
+385	1048585	13	30	2023-04-15 15:55:45	1342177288	submission.event.fileRevised	0
+386	515	90	30	2023-04-15 15:55:46	1342177296	submission.event.fileEdited	0
+387	1048585	13	30	2023-04-15 15:55:46	1342177296	submission.event.fileEdited	0
+388	515	91	30	2023-04-15 15:55:46	1342177281	submission.event.fileUploaded	0
+389	1048585	13	30	2023-04-15 15:55:46	1342177288	submission.event.fileRevised	0
+390	515	91	30	2023-04-15 15:55:47	1342177296	submission.event.fileEdited	0
+391	1048585	13	30	2023-04-15 15:55:47	1342177296	submission.event.fileEdited	0
+392	515	92	30	2023-04-15 15:55:48	1342177281	submission.event.fileUploaded	0
+393	1048585	13	30	2023-04-15 15:55:48	1342177288	submission.event.fileRevised	0
+394	515	92	30	2023-04-15 15:55:48	1342177296	submission.event.fileEdited	0
+395	1048585	13	30	2023-04-15 15:55:48	1342177296	submission.event.fileEdited	0
+396	1048585	13	30	2023-04-15 15:56:10	268435457	submission.event.submissionSubmitted	0
+397	1048585	13	3	2023-04-15 15:56:28	805306371	editor.submission.decision.sendInternalReview.log	0
+398	515	93	3	2023-04-15 15:56:28	1342177281	submission.event.fileUploaded	0
+399	1048585	13	3	2023-04-15 15:56:28	1342177288	submission.event.fileRevised	0
+400	515	94	3	2023-04-15 15:56:28	1342177281	submission.event.fileUploaded	0
+401	1048585	13	3	2023-04-15 15:56:28	1342177288	submission.event.fileRevised	0
+402	515	95	3	2023-04-15 15:56:28	1342177281	submission.event.fileUploaded	0
+403	1048585	13	3	2023-04-15 15:56:28	1342177288	submission.event.fileRevised	0
+404	1048585	13	3	2023-04-15 15:56:39	1073741825	log.review.reviewerAssigned	0
+405	1048585	13	3	2023-04-15 15:56:44	805306371	editor.submission.decision.sendExternalReview.log	0
+406	1048585	13	3	2023-04-15 15:56:55	1073741825	log.review.reviewerAssigned	0
+407	1048585	13	3	2023-04-15 15:57:03	1073741825	log.review.reviewerAssigned	0
+408	1048585	13	3	2023-04-15 15:57:11	1073741825	log.review.reviewerAssigned	0
+409	1048585	13	10	2023-04-15 15:57:20	1073741830	log.review.reviewAccepted	0
+410	1048585	13	10	2023-04-15 15:57:26	1073741848	log.review.reviewReady	0
+411	1048585	13	12	2023-04-15 15:57:33	1073741830	log.review.reviewAccepted	0
+412	1048585	13	12	2023-04-15 15:57:39	1073741848	log.review.reviewReady	0
+413	1048585	13	3	2023-04-15 15:58:00	805306371	editor.submission.decision.accept.log	0
+414	1048585	13	3	2023-04-15 15:58:00	1073741856	submission.event.decisionReviewerEmailSent	0
+415	1048585	14	31	2023-04-15 15:58:15	268435458	submission.event.general.metadataUpdated	0
+416	1048585	14	31	2023-04-15 15:58:16	268435458	submission.event.general.metadataUpdated	0
+417	515	96	31	2023-04-15 15:58:19	1342177281	submission.event.fileUploaded	0
+418	1048585	14	31	2023-04-15 15:58:19	1342177288	submission.event.fileRevised	0
+419	515	96	31	2023-04-15 15:58:19	1342177296	submission.event.fileEdited	0
+420	1048585	14	31	2023-04-15 15:58:20	1342177296	submission.event.fileEdited	0
+421	515	97	31	2023-04-15 15:58:20	1342177281	submission.event.fileUploaded	0
+422	1048585	14	31	2023-04-15 15:58:20	1342177288	submission.event.fileRevised	0
+423	515	97	31	2023-04-15 15:58:21	1342177296	submission.event.fileEdited	0
+424	1048585	14	31	2023-04-15 15:58:21	1342177296	submission.event.fileEdited	0
+425	515	98	31	2023-04-15 15:58:22	1342177281	submission.event.fileUploaded	0
+426	1048585	14	31	2023-04-15 15:58:22	1342177288	submission.event.fileRevised	0
+427	515	98	31	2023-04-15 15:58:22	1342177296	submission.event.fileEdited	0
+428	1048585	14	31	2023-04-15 15:58:22	1342177296	submission.event.fileEdited	0
+429	515	99	31	2023-04-15 15:58:23	1342177281	submission.event.fileUploaded	0
+430	1048585	14	31	2023-04-15 15:58:23	1342177288	submission.event.fileRevised	0
+431	515	99	31	2023-04-15 15:58:23	1342177296	submission.event.fileEdited	0
+432	1048585	14	31	2023-04-15 15:58:23	1342177296	submission.event.fileEdited	0
+433	515	100	31	2023-04-15 15:58:24	1342177281	submission.event.fileUploaded	0
+434	1048585	14	31	2023-04-15 15:58:24	1342177288	submission.event.fileRevised	0
+435	515	100	31	2023-04-15 15:58:25	1342177296	submission.event.fileEdited	0
+436	1048585	14	31	2023-04-15 15:58:25	1342177296	submission.event.fileEdited	0
+437	515	101	31	2023-04-15 15:58:25	1342177281	submission.event.fileUploaded	0
+438	1048585	14	31	2023-04-15 15:58:25	1342177288	submission.event.fileRevised	0
+439	515	101	31	2023-04-15 15:58:26	1342177296	submission.event.fileEdited	0
+440	1048585	14	31	2023-04-15 15:58:26	1342177296	submission.event.fileEdited	0
+441	1048585	14	31	2023-04-15 15:58:57	268435457	submission.event.submissionSubmitted	0
+442	1048585	14	3	2023-04-15 15:59:16	805306371	editor.submission.decision.sendInternalReview.log	0
+443	515	102	3	2023-04-15 15:59:17	1342177281	submission.event.fileUploaded	0
+444	1048585	14	3	2023-04-15 15:59:17	1342177288	submission.event.fileRevised	0
+445	515	103	3	2023-04-15 15:59:17	1342177281	submission.event.fileUploaded	0
+446	1048585	14	3	2023-04-15 15:59:17	1342177288	submission.event.fileRevised	0
+447	515	104	3	2023-04-15 15:59:17	1342177281	submission.event.fileUploaded	0
+448	1048585	14	3	2023-04-15 15:59:17	1342177288	submission.event.fileRevised	0
+449	515	105	3	2023-04-15 15:59:17	1342177281	submission.event.fileUploaded	0
+450	1048585	14	3	2023-04-15 15:59:17	1342177288	submission.event.fileRevised	0
+451	515	106	3	2023-04-15 15:59:18	1342177281	submission.event.fileUploaded	0
+452	1048585	14	3	2023-04-15 15:59:18	1342177288	submission.event.fileRevised	0
+453	515	107	3	2023-04-15 15:59:18	1342177281	submission.event.fileUploaded	0
+454	1048585	14	3	2023-04-15 15:59:18	1342177288	submission.event.fileRevised	0
+455	1048585	14	3	2023-04-15 15:59:29	1073741825	log.review.reviewerAssigned	0
+456	1048585	14	3	2023-04-15 15:59:36	805306371	editor.submission.decision.sendExternalReview.log	0
+457	1048585	14	3	2023-04-15 15:59:47	1073741825	log.review.reviewerAssigned	0
+458	1048585	14	3	2023-04-15 15:59:53	805306371	editor.submission.decision.accept.log	0
+459	1048585	14	3	2023-04-15 16:00:05	268435459	submission.event.participantAdded	0
+460	1048585	14	3	2023-04-15 16:00:12	805306371	editor.submission.decision.sendToProduction.log	0
+461	1048585	14	3	2023-04-15 16:00:25	268435459	submission.event.participantAdded	0
+462	1048585	14	3	2023-04-15 16:00:32	268435459	submission.event.participantAdded	0
+463	1048585	14	3	2023-04-15 16:00:38	268435474	submission.event.publicationFormatCreated	0
+464	515	108	3	2023-04-15 16:00:46	1342177281	submission.event.fileUploaded	0
+465	1048585	14	3	2023-04-15 16:00:46	1342177288	submission.event.fileRevised	0
+466	515	109	3	2023-04-15 16:00:46	1342177281	submission.event.fileUploaded	0
+467	1048585	14	3	2023-04-15 16:00:46	1342177288	submission.event.fileRevised	0
+468	515	110	3	2023-04-15 16:00:46	1342177281	submission.event.fileUploaded	0
+469	1048585	14	3	2023-04-15 16:00:46	1342177288	submission.event.fileRevised	0
+470	515	111	3	2023-04-15 16:00:46	1342177281	submission.event.fileUploaded	0
+471	1048585	14	3	2023-04-15 16:00:46	1342177288	submission.event.fileRevised	0
+472	515	112	3	2023-04-15 16:00:46	1342177281	submission.event.fileUploaded	0
+473	1048585	14	3	2023-04-15 16:00:46	1342177288	submission.event.fileRevised	0
+474	515	113	3	2023-04-15 16:00:46	1342177281	submission.event.fileUploaded	0
+475	1048585	14	3	2023-04-15 16:00:46	1342177288	submission.event.fileRevised	0
+476	1048585	14	3	2023-04-15 16:00:49	268435464	submission.event.publicationFormatPublished	0
+477	1048585	14	3	2023-04-15 16:00:51	268435476	submission.event.publicationFormatMadeAvailable	0
+478	515	113	3	2023-04-15 16:00:54	1342177296	submission.event.fileEdited	0
+479	1048585	14	3	2023-04-15 16:00:54	1342177296	submission.event.fileEdited	0
+480	515	113	3	2023-04-15 16:00:54	1342177287	submission.event.signoffSignoff	0
+481	515	113	3	2023-04-15 16:00:57	1342177296	submission.event.fileEdited	0
+482	1048585	14	3	2023-04-15 16:00:57	1342177296	submission.event.fileEdited	0
+483	515	112	3	2023-04-15 16:01:00	1342177296	submission.event.fileEdited	0
+484	1048585	14	3	2023-04-15 16:01:00	1342177296	submission.event.fileEdited	0
+485	515	112	3	2023-04-15 16:01:00	1342177287	submission.event.signoffSignoff	0
+486	515	112	3	2023-04-15 16:01:03	1342177296	submission.event.fileEdited	0
+487	1048585	14	3	2023-04-15 16:01:03	1342177296	submission.event.fileEdited	0
+488	515	111	3	2023-04-15 16:01:07	1342177296	submission.event.fileEdited	0
+489	1048585	14	3	2023-04-15 16:01:07	1342177296	submission.event.fileEdited	0
+490	515	111	3	2023-04-15 16:01:07	1342177287	submission.event.signoffSignoff	0
+491	515	111	3	2023-04-15 16:01:10	1342177296	submission.event.fileEdited	0
+492	1048585	14	3	2023-04-15 16:01:10	1342177296	submission.event.fileEdited	0
+493	515	110	3	2023-04-15 16:01:13	1342177296	submission.event.fileEdited	0
+494	1048585	14	3	2023-04-15 16:01:13	1342177296	submission.event.fileEdited	0
+495	515	110	3	2023-04-15 16:01:13	1342177287	submission.event.signoffSignoff	0
+496	515	110	3	2023-04-15 16:01:16	1342177296	submission.event.fileEdited	0
+497	1048585	14	3	2023-04-15 16:01:16	1342177296	submission.event.fileEdited	0
+498	515	109	3	2023-04-15 16:01:19	1342177296	submission.event.fileEdited	0
+499	1048585	14	3	2023-04-15 16:01:19	1342177296	submission.event.fileEdited	0
+500	515	109	3	2023-04-15 16:01:19	1342177287	submission.event.signoffSignoff	0
+501	515	109	3	2023-04-15 16:01:23	1342177296	submission.event.fileEdited	0
+502	1048585	14	3	2023-04-15 16:01:23	1342177296	submission.event.fileEdited	0
+503	515	108	3	2023-04-15 16:01:26	1342177296	submission.event.fileEdited	0
+504	1048585	14	3	2023-04-15 16:01:26	1342177296	submission.event.fileEdited	0
+505	515	108	3	2023-04-15 16:01:26	1342177287	submission.event.signoffSignoff	0
+506	515	108	3	2023-04-15 16:01:30	1342177296	submission.event.fileEdited	0
+507	1048585	14	3	2023-04-15 16:01:30	1342177296	submission.event.fileEdited	0
+508	1048585	14	3	2023-04-15 16:01:33	268435462	publication.event.published	0
+509	1048585	15	32	2023-04-15 16:01:43	268435458	submission.event.general.metadataUpdated	0
+510	1048585	15	32	2023-04-15 16:01:44	268435458	submission.event.general.metadataUpdated	0
+511	515	114	32	2023-04-15 16:01:47	1342177281	submission.event.fileUploaded	0
+512	1048585	15	32	2023-04-15 16:01:47	1342177288	submission.event.fileRevised	0
+513	515	114	32	2023-04-15 16:01:48	1342177296	submission.event.fileEdited	0
+514	1048585	15	32	2023-04-15 16:01:48	1342177296	submission.event.fileEdited	0
+515	515	115	32	2023-04-15 16:01:49	1342177281	submission.event.fileUploaded	0
+516	1048585	15	32	2023-04-15 16:01:49	1342177288	submission.event.fileRevised	0
+517	515	115	32	2023-04-15 16:01:49	1342177296	submission.event.fileEdited	0
+518	1048585	15	32	2023-04-15 16:01:49	1342177296	submission.event.fileEdited	0
+519	515	116	32	2023-04-15 16:01:50	1342177281	submission.event.fileUploaded	0
+520	1048585	15	32	2023-04-15 16:01:50	1342177288	submission.event.fileRevised	0
+521	515	116	32	2023-04-15 16:01:50	1342177296	submission.event.fileEdited	0
+522	1048585	15	32	2023-04-15 16:01:50	1342177296	submission.event.fileEdited	0
+523	1048585	15	32	2023-04-15 16:02:10	268435457	submission.event.submissionSubmitted	0
+524	1048585	15	3	2023-04-15 16:02:28	805306371	editor.submission.decision.sendExternalReview.log	0
+525	515	117	3	2023-04-15 16:02:28	1342177281	submission.event.fileUploaded	0
+526	1048585	15	3	2023-04-15 16:02:28	1342177288	submission.event.fileRevised	0
+527	515	118	3	2023-04-15 16:02:28	1342177281	submission.event.fileUploaded	0
+528	1048585	15	3	2023-04-15 16:02:28	1342177288	submission.event.fileRevised	0
+529	515	119	3	2023-04-15 16:02:28	1342177281	submission.event.fileUploaded	0
+530	1048585	15	3	2023-04-15 16:02:28	1342177288	submission.event.fileRevised	0
+531	1048585	16	33	2023-04-15 16:02:42	268435458	submission.event.general.metadataUpdated	0
+532	1048585	16	33	2023-04-15 16:02:43	268435458	submission.event.general.metadataUpdated	0
+533	515	120	33	2023-04-15 16:02:46	1342177281	submission.event.fileUploaded	0
+534	1048585	16	33	2023-04-15 16:02:46	1342177288	submission.event.fileRevised	0
+535	515	120	33	2023-04-15 16:02:47	1342177296	submission.event.fileEdited	0
+536	1048585	16	33	2023-04-15 16:02:47	1342177296	submission.event.fileEdited	0
+537	515	121	33	2023-04-15 16:02:48	1342177281	submission.event.fileUploaded	0
+538	1048585	16	33	2023-04-15 16:02:48	1342177288	submission.event.fileRevised	0
+539	515	121	33	2023-04-15 16:02:48	1342177296	submission.event.fileEdited	0
+540	1048585	16	33	2023-04-15 16:02:48	1342177296	submission.event.fileEdited	0
+541	515	122	33	2023-04-15 16:02:49	1342177281	submission.event.fileUploaded	0
+542	1048585	16	33	2023-04-15 16:02:49	1342177288	submission.event.fileRevised	0
+543	515	122	33	2023-04-15 16:02:49	1342177296	submission.event.fileEdited	0
+544	1048585	16	33	2023-04-15 16:02:49	1342177296	submission.event.fileEdited	0
+545	515	123	33	2023-04-15 16:02:50	1342177281	submission.event.fileUploaded	0
+546	1048585	16	33	2023-04-15 16:02:50	1342177288	submission.event.fileRevised	0
+547	515	123	33	2023-04-15 16:02:51	1342177296	submission.event.fileEdited	0
+548	1048585	16	33	2023-04-15 16:02:51	1342177296	submission.event.fileEdited	0
+549	515	124	33	2023-04-15 16:02:51	1342177281	submission.event.fileUploaded	0
+550	1048585	16	33	2023-04-15 16:02:51	1342177288	submission.event.fileRevised	0
+551	515	124	33	2023-04-15 16:02:52	1342177296	submission.event.fileEdited	0
+552	1048585	16	33	2023-04-15 16:02:52	1342177296	submission.event.fileEdited	0
+553	1048585	16	33	2023-04-15 16:03:27	268435457	submission.event.submissionSubmitted	0
+554	1048585	16	3	2023-04-15 16:03:47	805306371	editor.submission.decision.sendExternalReview.log	0
+555	515	125	3	2023-04-15 16:03:47	1342177281	submission.event.fileUploaded	0
+556	1048585	16	3	2023-04-15 16:03:47	1342177288	submission.event.fileRevised	0
+557	515	126	3	2023-04-15 16:03:47	1342177281	submission.event.fileUploaded	0
+558	1048585	16	3	2023-04-15 16:03:47	1342177288	submission.event.fileRevised	0
+559	515	127	3	2023-04-15 16:03:48	1342177281	submission.event.fileUploaded	0
+560	1048585	16	3	2023-04-15 16:03:48	1342177288	submission.event.fileRevised	0
+561	515	128	3	2023-04-15 16:03:48	1342177281	submission.event.fileUploaded	0
+562	1048585	16	3	2023-04-15 16:03:48	1342177288	submission.event.fileRevised	0
+563	515	129	3	2023-04-15 16:03:48	1342177281	submission.event.fileUploaded	0
+564	1048585	16	3	2023-04-15 16:03:48	1342177288	submission.event.fileRevised	0
+565	1048585	16	3	2023-04-15 16:03:59	1073741825	log.review.reviewerAssigned	0
+566	1048585	16	3	2023-04-15 16:04:07	1073741825	log.review.reviewerAssigned	0
+567	1048585	16	3	2023-04-15 16:04:15	1073741825	log.review.reviewerAssigned	0
+568	1048585	16	10	2023-04-15 16:04:25	1073741830	log.review.reviewAccepted	0
+569	1048585	16	10	2023-04-15 16:04:30	1073741848	log.review.reviewReady	0
+570	1048585	17	34	2023-04-15 16:04:40	268435458	submission.event.general.metadataUpdated	0
+571	1048585	17	34	2023-04-15 16:04:41	268435458	submission.event.general.metadataUpdated	0
+572	515	130	34	2023-04-15 16:04:44	1342177281	submission.event.fileUploaded	0
+573	1048585	17	34	2023-04-15 16:04:44	1342177288	submission.event.fileRevised	0
+574	515	130	34	2023-04-15 16:04:45	1342177296	submission.event.fileEdited	0
+575	1048585	17	34	2023-04-15 16:04:45	1342177296	submission.event.fileEdited	0
+576	515	131	34	2023-04-15 16:04:46	1342177281	submission.event.fileUploaded	0
+577	1048585	17	34	2023-04-15 16:04:46	1342177288	submission.event.fileRevised	0
+578	515	131	34	2023-04-15 16:04:46	1342177296	submission.event.fileEdited	0
+579	1048585	17	34	2023-04-15 16:04:46	1342177296	submission.event.fileEdited	0
+580	515	132	34	2023-04-15 16:04:47	1342177281	submission.event.fileUploaded	0
+581	1048585	17	34	2023-04-15 16:04:47	1342177288	submission.event.fileRevised	0
+582	515	132	34	2023-04-15 16:04:47	1342177296	submission.event.fileEdited	0
+583	1048585	17	34	2023-04-15 16:04:47	1342177296	submission.event.fileEdited	0
+584	515	133	34	2023-04-15 16:04:48	1342177281	submission.event.fileUploaded	0
+585	1048585	17	34	2023-04-15 16:04:48	1342177288	submission.event.fileRevised	0
+586	515	133	34	2023-04-15 16:04:48	1342177296	submission.event.fileEdited	0
+587	1048585	17	34	2023-04-15 16:04:49	1342177296	submission.event.fileEdited	0
+588	515	134	34	2023-04-15 16:04:49	1342177281	submission.event.fileUploaded	0
+589	1048585	17	34	2023-04-15 16:04:49	1342177288	submission.event.fileRevised	0
+590	515	134	34	2023-04-15 16:04:50	1342177296	submission.event.fileEdited	0
+591	1048585	17	34	2023-04-15 16:04:50	1342177296	submission.event.fileEdited	0
+592	515	135	34	2023-04-15 16:04:51	1342177281	submission.event.fileUploaded	0
+593	1048585	17	34	2023-04-15 16:04:51	1342177288	submission.event.fileRevised	0
+594	515	135	34	2023-04-15 16:04:51	1342177296	submission.event.fileEdited	0
+595	1048585	17	34	2023-04-15 16:04:51	1342177296	submission.event.fileEdited	0
+596	1048585	17	34	2023-04-15 16:05:42	268435457	submission.event.submissionSubmitted	0
+597	1048585	17	3	2023-04-15 16:06:04	805306371	editor.submission.decision.sendInternalReview.log	0
+598	515	136	3	2023-04-15 16:06:05	1342177281	submission.event.fileUploaded	0
+599	1048585	17	3	2023-04-15 16:06:05	1342177288	submission.event.fileRevised	0
+600	515	137	3	2023-04-15 16:06:05	1342177281	submission.event.fileUploaded	0
+601	1048585	17	3	2023-04-15 16:06:05	1342177288	submission.event.fileRevised	0
+602	515	138	3	2023-04-15 16:06:05	1342177281	submission.event.fileUploaded	0
+603	1048585	17	3	2023-04-15 16:06:05	1342177288	submission.event.fileRevised	0
+604	515	139	3	2023-04-15 16:06:05	1342177281	submission.event.fileUploaded	0
+605	1048585	17	3	2023-04-15 16:06:05	1342177288	submission.event.fileRevised	0
+606	515	140	3	2023-04-15 16:06:06	1342177281	submission.event.fileUploaded	0
+607	1048585	17	3	2023-04-15 16:06:06	1342177288	submission.event.fileRevised	0
+608	515	141	3	2023-04-15 16:06:06	1342177281	submission.event.fileUploaded	0
+609	1048585	17	3	2023-04-15 16:06:06	1342177288	submission.event.fileRevised	0
+610	1048585	17	3	2023-04-15 16:06:17	1073741825	log.review.reviewerAssigned	0
+611	1048585	17	3	2023-04-15 16:06:26	1073741825	log.review.reviewerAssigned	0
+\.
+
+
+--
+-- Data for Name: event_log_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.event_log_settings (event_log_setting_id, log_id, setting_name, setting_value, setting_type) FROM stdin;
+1	3	fileStage	2	int
+2	3	sourceSubmissionFileId	\N	string
+3	3	submissionFileId	1	int
+4	3	fileId	1	int
+5	3	submissionId	1	int
+6	3	originalFileName	chapter1.pdf	string
+7	3	username	aclark	string
+8	4	fileStage	2	int
+9	4	submissionFileId	1	int
+10	4	fileId	1	int
+11	4	submissionId	1	int
+12	4	username	aclark	string
+13	4	name	chapter1.pdf	string
+14	5	fileStage	2	int
+15	5	sourceSubmissionFileId	\N	string
+16	5	submissionFileId	1	int
+17	5	fileId	1	int
+18	5	submissionId	1	int
+19	5	originalFileName	chapter1.pdf	string
+20	5	username	aclark	string
+21	6	fileStage	2	int
+22	6	sourceSubmissionFileId	\N	string
+23	6	submissionFileId	1	int
+24	6	fileId	1	int
+25	6	submissionId	1	int
+26	6	username	aclark	string
+27	6	originalFileName	chapter1.pdf	string
+28	6	name	chapter1.pdf	string
+29	7	fileStage	2	int
+30	7	sourceSubmissionFileId	\N	string
+31	7	submissionFileId	2	int
+32	7	fileId	2	int
+33	7	submissionId	1	int
+34	7	originalFileName	chapter2.pdf	string
+35	7	username	aclark	string
+36	8	fileStage	2	int
+37	8	submissionFileId	2	int
+38	8	fileId	2	int
+39	8	submissionId	1	int
+40	8	username	aclark	string
+41	8	name	chapter2.pdf	string
+42	9	fileStage	2	int
+43	9	sourceSubmissionFileId	\N	string
+44	9	submissionFileId	2	int
+45	9	fileId	2	int
+46	9	submissionId	1	int
+47	9	originalFileName	chapter2.pdf	string
+48	9	username	aclark	string
+49	10	fileStage	2	int
+50	10	sourceSubmissionFileId	\N	string
+51	10	submissionFileId	2	int
+52	10	fileId	2	int
+53	10	submissionId	1	int
+54	10	username	aclark	string
+55	10	originalFileName	chapter2.pdf	string
+56	10	name	chapter2.pdf	string
+57	11	fileStage	2	int
+58	11	sourceSubmissionFileId	\N	string
+59	11	submissionFileId	3	int
+60	11	fileId	3	int
+61	11	submissionId	1	int
+62	11	originalFileName	chapter3.pdf	string
+63	11	username	aclark	string
+64	12	fileStage	2	int
+65	12	submissionFileId	3	int
+66	12	fileId	3	int
+67	12	submissionId	1	int
+68	12	username	aclark	string
+69	12	name	chapter3.pdf	string
+70	13	fileStage	2	int
+71	13	sourceSubmissionFileId	\N	string
+72	13	submissionFileId	3	int
+73	13	fileId	3	int
+74	13	submissionId	1	int
+75	13	originalFileName	chapter3.pdf	string
+76	13	username	aclark	string
+77	14	fileStage	2	int
+78	14	sourceSubmissionFileId	\N	string
+79	14	submissionFileId	3	int
+80	14	fileId	3	int
+81	14	submissionId	1	int
+82	14	username	aclark	string
+83	14	originalFileName	chapter3.pdf	string
+84	14	name	chapter3.pdf	string
+85	16	editorId	3	int
+86	16	editorName	Daniel Barnes	string
+87	16	submissionId	1	int
+88	16	decision	18	int
+89	17	fileStage	4	int
+90	17	sourceSubmissionFileId	3	int
+91	17	submissionFileId	4	int
+92	17	fileId	3	int
+93	17	submissionId	1	int
+94	17	originalFileName	chapter3.pdf	string
+95	17	username	dbarnes	string
+96	18	fileStage	4	int
+97	18	submissionFileId	4	int
+98	18	fileId	3	int
+99	18	submissionId	1	int
+100	18	username	dbarnes	string
+101	18	name	chapter3.pdf	string
+102	19	fileStage	4	int
+103	19	sourceSubmissionFileId	2	int
+104	19	submissionFileId	5	int
+105	19	fileId	2	int
+106	19	submissionId	1	int
+107	19	originalFileName	chapter2.pdf	string
+108	19	username	dbarnes	string
+109	20	fileStage	4	int
+110	20	submissionFileId	5	int
+111	20	fileId	2	int
+112	20	submissionId	1	int
+113	20	username	dbarnes	string
+114	20	name	chapter2.pdf	string
+115	21	fileStage	4	int
+116	21	sourceSubmissionFileId	1	int
+117	21	submissionFileId	6	int
+118	21	fileId	1	int
+119	21	submissionId	1	int
+120	21	originalFileName	chapter1.pdf	string
+121	21	username	dbarnes	string
+122	22	fileStage	4	int
+123	22	submissionFileId	6	int
+124	22	fileId	1	int
+125	22	submissionId	1	int
+126	22	username	dbarnes	string
+127	22	name	chapter1.pdf	string
+128	23	reviewAssignmentId	1	int
+129	23	reviewerName	Gonzalo Favio	string
+130	23	submissionId	1	int
+131	23	stageId	3	int
+132	23	round	1	int
+133	24	editorId	3	int
+134	24	editorName	Daniel Barnes	string
+135	24	submissionId	1	int
+136	24	decision	2	int
+137	25	name	Sarah Vogt	string
+138	25	username	svogt	string
+139	25	userGroupName	Copyeditor	string
+140	28	fileStage	2	int
+141	28	sourceSubmissionFileId	\N	string
+142	28	submissionFileId	7	int
+143	28	fileId	4	int
+144	28	submissionId	2	int
+145	28	originalFileName	chapter1.pdf	string
+146	28	username	afinkel	string
+147	29	fileStage	2	int
+148	29	submissionFileId	7	int
+149	29	fileId	4	int
+150	29	submissionId	2	int
+151	29	username	afinkel	string
+152	29	name	chapter1.pdf	string
+153	31	fileStage	2	int
+154	31	sourceSubmissionFileId	\N	string
+155	31	submissionFileId	7	int
+156	31	fileId	4	int
+157	31	submissionId	2	int
+158	31	originalFileName	chapter1.pdf	string
+159	31	username	afinkel	string
+160	32	fileStage	2	int
+161	32	sourceSubmissionFileId	\N	string
+162	32	submissionFileId	7	int
+163	32	fileId	4	int
+164	32	submissionId	2	int
+165	32	username	afinkel	string
+166	32	originalFileName	chapter1.pdf	string
+167	32	name	chapter1.pdf	string
+168	33	fileStage	2	int
+169	33	sourceSubmissionFileId	\N	string
+170	33	submissionFileId	8	int
+171	33	fileId	5	int
+172	33	submissionId	2	int
+173	33	originalFileName	chapter2.pdf	string
+174	33	username	afinkel	string
+175	34	fileStage	2	int
+176	34	submissionFileId	8	int
+177	34	fileId	5	int
+178	34	submissionId	2	int
+179	34	username	afinkel	string
+180	34	name	chapter2.pdf	string
+181	35	fileStage	2	int
+182	35	sourceSubmissionFileId	\N	string
+183	35	submissionFileId	8	int
+184	35	fileId	5	int
+185	35	submissionId	2	int
+186	35	originalFileName	chapter2.pdf	string
+187	35	username	afinkel	string
+188	36	fileStage	2	int
+189	36	sourceSubmissionFileId	\N	string
+190	36	submissionFileId	8	int
+191	36	fileId	5	int
+192	36	submissionId	2	int
+193	36	username	afinkel	string
+194	36	originalFileName	chapter2.pdf	string
+195	36	name	chapter2.pdf	string
+196	37	fileStage	2	int
+197	37	sourceSubmissionFileId	\N	string
+198	37	submissionFileId	9	int
+199	37	fileId	6	int
+200	37	submissionId	2	int
+201	37	originalFileName	chapter3.pdf	string
+202	37	username	afinkel	string
+203	38	fileStage	2	int
+204	38	submissionFileId	9	int
+205	38	fileId	6	int
+206	38	submissionId	2	int
+207	38	username	afinkel	string
+208	38	name	chapter3.pdf	string
+209	39	fileStage	2	int
+210	39	sourceSubmissionFileId	\N	string
+211	39	submissionFileId	9	int
+212	39	fileId	6	int
+213	39	submissionId	2	int
+214	39	originalFileName	chapter3.pdf	string
+215	39	username	afinkel	string
+216	40	fileStage	2	int
+217	40	sourceSubmissionFileId	\N	string
+218	40	submissionFileId	9	int
+219	40	fileId	6	int
+220	40	submissionId	2	int
+221	40	username	afinkel	string
+222	40	originalFileName	chapter3.pdf	string
+223	40	name	chapter3.pdf	string
+224	41	fileStage	2	int
+225	41	sourceSubmissionFileId	\N	string
+226	41	submissionFileId	10	int
+227	41	fileId	7	int
+228	41	submissionId	2	int
+229	41	originalFileName	chapter4.pdf	string
+230	41	username	afinkel	string
+231	42	fileStage	2	int
+232	42	submissionFileId	10	int
+233	42	fileId	7	int
+234	42	submissionId	2	int
+235	42	username	afinkel	string
+236	42	name	chapter4.pdf	string
+237	43	fileStage	2	int
+238	43	sourceSubmissionFileId	\N	string
+239	43	submissionFileId	10	int
+240	43	fileId	7	int
+241	43	submissionId	2	int
+242	43	originalFileName	chapter4.pdf	string
+243	43	username	afinkel	string
+244	44	fileStage	2	int
+245	44	sourceSubmissionFileId	\N	string
+246	44	submissionFileId	10	int
+247	44	fileId	7	int
+248	44	submissionId	2	int
+249	44	username	afinkel	string
+250	44	originalFileName	chapter4.pdf	string
+251	44	name	chapter4.pdf	string
+252	45	fileStage	2	int
+253	45	sourceSubmissionFileId	\N	string
+254	45	submissionFileId	11	int
+255	45	fileId	8	int
+256	45	submissionId	2	int
+257	45	originalFileName	delete-this-file.pdf	string
+258	45	username	afinkel	string
+259	46	fileStage	2	int
+260	46	submissionFileId	11	int
+261	46	fileId	8	int
+262	46	submissionId	2	int
+263	46	username	afinkel	string
+264	46	name	delete-this-file.pdf	string
+265	47	fileStage	2	int
+266	47	sourceSubmissionFileId	\N	string
+267	47	submissionFileId	11	int
+268	47	fileId	8	int
+269	47	submissionId	2	int
+270	47	originalFileName	delete-this-file.pdf	string
+271	47	username	afinkel	string
+272	48	fileStage	2	int
+273	48	sourceSubmissionFileId	\N	string
+274	48	submissionFileId	11	int
+275	48	fileId	8	int
+276	48	submissionId	2	int
+277	48	username	afinkel	string
+278	48	originalFileName	delete-this-file.pdf	string
+279	48	name	delete-this-file.pdf	string
+280	49	fileStage	2	int
+281	49	sourceSubmissionFileId	\N	string
+282	49	submissionFileId	11	int
+283	49	submissionId	2	int
+284	49	username	afinkel	string
+285	51	editorId	3	int
+286	51	editorName	Daniel Barnes	string
+287	51	submissionId	2	int
+288	51	decision	18	int
+289	52	fileStage	4	int
+290	52	sourceSubmissionFileId	10	int
+291	52	submissionFileId	12	int
+292	52	fileId	7	int
+293	52	submissionId	2	int
+294	52	originalFileName	chapter4.pdf	string
+295	52	username	dbarnes	string
+296	53	fileStage	4	int
+297	53	submissionFileId	12	int
+298	53	fileId	7	int
+299	53	submissionId	2	int
+300	53	username	dbarnes	string
+301	53	name	chapter4.pdf	string
+302	54	fileStage	4	int
+303	54	sourceSubmissionFileId	8	int
+304	54	submissionFileId	13	int
+305	54	fileId	5	int
+306	54	submissionId	2	int
+307	54	originalFileName	chapter2.pdf	string
+308	54	username	dbarnes	string
+309	55	fileStage	4	int
+310	55	submissionFileId	13	int
+311	55	fileId	5	int
+312	55	submissionId	2	int
+313	55	username	dbarnes	string
+314	55	name	chapter2.pdf	string
+315	56	fileStage	4	int
+316	56	sourceSubmissionFileId	7	int
+317	56	submissionFileId	14	int
+318	56	fileId	4	int
+319	56	submissionId	2	int
+320	56	originalFileName	chapter1.pdf	string
+321	56	username	dbarnes	string
+322	57	fileStage	4	int
+323	57	submissionFileId	14	int
+324	57	fileId	4	int
+325	57	submissionId	2	int
+326	57	username	dbarnes	string
+327	57	name	chapter1.pdf	string
+328	58	fileStage	4	int
+329	58	sourceSubmissionFileId	9	int
+330	58	submissionFileId	15	int
+331	58	fileId	6	int
+332	58	submissionId	2	int
+333	58	originalFileName	chapter3.pdf	string
+334	58	username	dbarnes	string
+335	59	fileStage	4	int
+336	59	submissionFileId	15	int
+337	59	fileId	6	int
+338	59	submissionId	2	int
+339	59	username	dbarnes	string
+340	59	name	chapter3.pdf	string
+341	60	reviewAssignmentId	2	int
+342	60	reviewerName	Al Zacharia	string
+343	60	submissionId	2	int
+344	60	stageId	3	int
+345	60	round	1	int
+346	61	reviewAssignmentId	3	int
+347	61	reviewerName	Gonzalo Favio	string
+348	61	submissionId	2	int
+349	61	stageId	3	int
+350	61	round	1	int
+351	64	fileStage	2	int
+352	64	sourceSubmissionFileId	\N	string
+353	64	submissionFileId	16	int
+354	64	fileId	9	int
+355	64	submissionId	3	int
+356	64	originalFileName	chapter1.pdf	string
+357	64	username	bbarnetson	string
+358	65	fileStage	2	int
+359	65	submissionFileId	16	int
+360	65	fileId	9	int
+361	65	submissionId	3	int
+362	65	username	bbarnetson	string
+363	65	name	chapter1.pdf	string
+364	66	fileStage	2	int
+365	66	sourceSubmissionFileId	\N	string
+366	66	submissionFileId	16	int
+367	66	fileId	9	int
+368	66	submissionId	3	int
+369	66	originalFileName	chapter1.pdf	string
+370	66	username	bbarnetson	string
+371	67	fileStage	2	int
+372	67	sourceSubmissionFileId	\N	string
+373	67	submissionFileId	16	int
+374	67	fileId	9	int
+375	67	submissionId	3	int
+376	67	username	bbarnetson	string
+377	67	originalFileName	chapter1.pdf	string
+378	67	name	chapter1.pdf	string
+379	68	fileStage	2	int
+380	68	sourceSubmissionFileId	\N	string
+381	68	submissionFileId	17	int
+382	68	fileId	10	int
+383	68	submissionId	3	int
+384	68	originalFileName	chapter2.pdf	string
+385	68	username	bbarnetson	string
+386	69	fileStage	2	int
+387	69	submissionFileId	17	int
+388	69	fileId	10	int
+389	69	submissionId	3	int
+390	69	username	bbarnetson	string
+391	69	name	chapter2.pdf	string
+392	70	fileStage	2	int
+393	70	sourceSubmissionFileId	\N	string
+394	70	submissionFileId	17	int
+395	70	fileId	10	int
+396	70	submissionId	3	int
+397	70	originalFileName	chapter2.pdf	string
+398	70	username	bbarnetson	string
+399	71	fileStage	2	int
+400	71	sourceSubmissionFileId	\N	string
+401	71	submissionFileId	17	int
+402	71	fileId	10	int
+403	71	submissionId	3	int
+404	71	username	bbarnetson	string
+405	71	originalFileName	chapter2.pdf	string
+406	71	name	chapter2.pdf	string
+407	72	fileStage	2	int
+408	72	sourceSubmissionFileId	\N	string
+409	72	submissionFileId	18	int
+410	72	fileId	11	int
+411	72	submissionId	3	int
+412	72	originalFileName	chapter3.pdf	string
+413	72	username	bbarnetson	string
+414	73	fileStage	2	int
+415	73	submissionFileId	18	int
+416	73	fileId	11	int
+417	73	submissionId	3	int
+418	73	username	bbarnetson	string
+419	73	name	chapter3.pdf	string
+420	74	fileStage	2	int
+421	74	sourceSubmissionFileId	\N	string
+422	74	submissionFileId	18	int
+423	74	fileId	11	int
+424	74	submissionId	3	int
+425	74	originalFileName	chapter3.pdf	string
+426	74	username	bbarnetson	string
+427	75	fileStage	2	int
+428	75	sourceSubmissionFileId	\N	string
+429	75	submissionFileId	18	int
+430	75	fileId	11	int
+431	75	submissionId	3	int
+432	75	username	bbarnetson	string
+433	75	originalFileName	chapter3.pdf	string
+434	75	name	chapter3.pdf	string
+435	76	fileStage	2	int
+436	76	sourceSubmissionFileId	\N	string
+437	76	submissionFileId	19	int
+438	76	fileId	12	int
+439	76	submissionId	3	int
+440	76	originalFileName	chapter4.pdf	string
+441	76	username	bbarnetson	string
+442	77	fileStage	2	int
+443	77	submissionFileId	19	int
+444	77	fileId	12	int
+445	77	submissionId	3	int
+446	77	username	bbarnetson	string
+447	77	name	chapter4.pdf	string
+448	78	fileStage	2	int
+449	78	sourceSubmissionFileId	\N	string
+450	78	submissionFileId	19	int
+451	78	fileId	12	int
+452	78	submissionId	3	int
+453	78	originalFileName	chapter4.pdf	string
+454	78	username	bbarnetson	string
+455	79	fileStage	2	int
+456	79	sourceSubmissionFileId	\N	string
+457	79	submissionFileId	19	int
+458	79	fileId	12	int
+459	79	submissionId	3	int
+460	79	username	bbarnetson	string
+461	79	originalFileName	chapter4.pdf	string
+462	79	name	chapter4.pdf	string
+463	80	fileStage	2	int
+464	80	sourceSubmissionFileId	\N	string
+465	80	submissionFileId	20	int
+466	80	fileId	13	int
+467	80	submissionId	3	int
+468	80	originalFileName	chapter5.pdf	string
+469	80	username	bbarnetson	string
+470	81	fileStage	2	int
+471	81	submissionFileId	20	int
+472	81	fileId	13	int
+473	81	submissionId	3	int
+474	81	username	bbarnetson	string
+475	81	name	chapter5.pdf	string
+476	82	fileStage	2	int
+477	82	sourceSubmissionFileId	\N	string
+478	82	submissionFileId	20	int
+479	82	fileId	13	int
+480	82	submissionId	3	int
+481	82	originalFileName	chapter5.pdf	string
+482	82	username	bbarnetson	string
+483	83	fileStage	2	int
+484	83	sourceSubmissionFileId	\N	string
+485	83	submissionFileId	20	int
+486	83	fileId	13	int
+487	83	submissionId	3	int
+488	83	username	bbarnetson	string
+489	83	originalFileName	chapter5.pdf	string
+490	83	name	chapter5.pdf	string
+491	87	fileStage	2	int
+492	87	sourceSubmissionFileId	\N	string
+493	87	submissionFileId	21	int
+494	87	fileId	14	int
+495	87	submissionId	4	int
+496	87	originalFileName	chapter1.pdf	string
+497	87	username	bbeaty	string
+498	88	fileStage	2	int
+499	88	submissionFileId	21	int
+500	88	fileId	14	int
+501	88	submissionId	4	int
+502	88	username	bbeaty	string
+503	88	name	chapter1.pdf	string
+504	89	fileStage	2	int
+505	89	sourceSubmissionFileId	\N	string
+506	89	submissionFileId	21	int
+507	89	fileId	14	int
+508	89	submissionId	4	int
+509	89	originalFileName	chapter1.pdf	string
+510	89	username	bbeaty	string
+511	90	fileStage	2	int
+512	90	sourceSubmissionFileId	\N	string
+513	90	submissionFileId	21	int
+514	90	fileId	14	int
+515	90	submissionId	4	int
+516	90	username	bbeaty	string
+517	90	originalFileName	chapter1.pdf	string
+518	90	name	chapter1.pdf	string
+519	91	fileStage	2	int
+520	91	sourceSubmissionFileId	\N	string
+521	91	submissionFileId	22	int
+522	91	fileId	15	int
+523	91	submissionId	4	int
+524	91	originalFileName	chapter2.pdf	string
+525	91	username	bbeaty	string
+526	92	fileStage	2	int
+527	92	submissionFileId	22	int
+528	92	fileId	15	int
+529	92	submissionId	4	int
+530	92	username	bbeaty	string
+531	92	name	chapter2.pdf	string
+532	93	fileStage	2	int
+533	93	sourceSubmissionFileId	\N	string
+534	93	submissionFileId	22	int
+535	93	fileId	15	int
+536	93	submissionId	4	int
+537	93	originalFileName	chapter2.pdf	string
+538	93	username	bbeaty	string
+539	94	fileStage	2	int
+540	94	sourceSubmissionFileId	\N	string
+541	94	submissionFileId	22	int
+542	94	fileId	15	int
+543	94	submissionId	4	int
+544	94	username	bbeaty	string
+545	94	originalFileName	chapter2.pdf	string
+546	94	name	chapter2.pdf	string
+547	95	fileStage	2	int
+548	95	sourceSubmissionFileId	\N	string
+549	95	submissionFileId	23	int
+550	95	fileId	16	int
+551	95	submissionId	4	int
+552	95	originalFileName	chapter3.pdf	string
+553	95	username	bbeaty	string
+554	96	fileStage	2	int
+555	96	submissionFileId	23	int
+556	96	fileId	16	int
+557	96	submissionId	4	int
+558	96	username	bbeaty	string
+559	96	name	chapter3.pdf	string
+560	97	fileStage	2	int
+561	97	sourceSubmissionFileId	\N	string
+562	97	submissionFileId	23	int
+563	97	fileId	16	int
+564	97	submissionId	4	int
+565	97	originalFileName	chapter3.pdf	string
+566	97	username	bbeaty	string
+567	98	fileStage	2	int
+568	98	sourceSubmissionFileId	\N	string
+569	98	submissionFileId	23	int
+570	98	fileId	16	int
+571	98	submissionId	4	int
+572	98	username	bbeaty	string
+573	98	originalFileName	chapter3.pdf	string
+574	98	name	chapter3.pdf	string
+575	99	fileStage	2	int
+576	99	sourceSubmissionFileId	\N	string
+577	99	submissionFileId	24	int
+578	99	fileId	17	int
+579	99	submissionId	4	int
+580	99	originalFileName	intro.pdf	string
+581	99	username	bbeaty	string
+582	100	fileStage	2	int
+583	100	submissionFileId	24	int
+584	100	fileId	17	int
+585	100	submissionId	4	int
+586	100	username	bbeaty	string
+587	100	name	intro.pdf	string
+588	101	fileStage	2	int
+589	101	sourceSubmissionFileId	\N	string
+590	101	submissionFileId	24	int
+591	101	fileId	17	int
+592	101	submissionId	4	int
+593	101	originalFileName	intro.pdf	string
+594	101	username	bbeaty	string
+595	102	fileStage	2	int
+596	102	sourceSubmissionFileId	\N	string
+597	102	submissionFileId	24	int
+598	102	fileId	17	int
+599	102	submissionId	4	int
+600	102	username	bbeaty	string
+601	102	originalFileName	intro.pdf	string
+602	102	name	intro.pdf	string
+603	104	editorId	3	int
+604	104	editorName	Daniel Barnes	string
+605	104	submissionId	4	int
+606	104	decision	1	int
+607	105	fileStage	19	int
+608	105	sourceSubmissionFileId	24	int
+609	105	submissionFileId	25	int
+610	105	fileId	17	int
+611	105	submissionId	4	int
+612	105	originalFileName	intro.pdf	string
+613	105	username	dbarnes	string
+614	106	fileStage	19	int
+615	106	submissionFileId	25	int
+616	106	fileId	17	int
+617	106	submissionId	4	int
+618	106	username	dbarnes	string
+619	106	name	intro.pdf	string
+620	107	fileStage	19	int
+621	107	sourceSubmissionFileId	23	int
+622	107	submissionFileId	26	int
+623	107	fileId	16	int
+624	107	submissionId	4	int
+625	107	originalFileName	chapter3.pdf	string
+626	107	username	dbarnes	string
+627	108	fileStage	19	int
+628	108	submissionFileId	26	int
+629	108	fileId	16	int
+630	108	submissionId	4	int
+631	108	username	dbarnes	string
+632	108	name	chapter3.pdf	string
+633	109	fileStage	19	int
+634	109	sourceSubmissionFileId	22	int
+635	109	submissionFileId	27	int
+636	109	fileId	15	int
+637	109	submissionId	4	int
+638	109	originalFileName	chapter2.pdf	string
+639	109	username	dbarnes	string
+640	110	fileStage	19	int
+641	110	submissionFileId	27	int
+642	110	fileId	15	int
+643	110	submissionId	4	int
+644	110	username	dbarnes	string
+645	110	name	chapter2.pdf	string
+646	111	fileStage	19	int
+647	111	sourceSubmissionFileId	21	int
+648	111	submissionFileId	28	int
+649	111	fileId	14	int
+650	111	submissionId	4	int
+651	111	originalFileName	chapter1.pdf	string
+652	111	username	dbarnes	string
+653	112	fileStage	19	int
+654	112	submissionFileId	28	int
+655	112	fileId	14	int
+656	112	submissionId	4	int
+657	112	username	dbarnes	string
+658	112	name	chapter1.pdf	string
+659	113	reviewAssignmentId	4	int
+660	113	reviewerName	Aisla McCrae	string
+661	113	submissionId	4	int
+662	113	stageId	2	int
+663	113	round	1	int
+664	114	editorId	3	int
+665	114	editorName	Daniel Barnes	string
+666	114	submissionId	4	int
+667	114	decision	3	int
+668	115	reviewAssignmentId	5	int
+669	115	reviewerName	Al Zacharia	string
+670	115	submissionId	4	int
+671	115	stageId	3	int
+672	115	round	1	int
+673	116	editorId	3	int
+674	116	editorName	Daniel Barnes	string
+675	116	submissionId	4	int
+676	116	decision	2	int
+677	117	name	Maria Fritz	string
+678	117	username	mfritz	string
+679	117	userGroupName	Copyeditor	string
+680	118	editorId	3	int
+681	118	editorName	Daniel Barnes	string
+682	118	submissionId	4	int
+683	118	decision	7	int
+684	119	name	Graham Cox	string
+685	119	username	gcox	string
+686	119	userGroupName	Layout Editor	string
+687	120	formatName	PDF	string
+688	123	fileStage	2	int
+689	123	sourceSubmissionFileId	\N	string
+690	123	submissionFileId	29	int
+691	123	fileId	18	int
+692	123	submissionId	5	int
+693	123	originalFileName	prologue.pdf	string
+694	123	username	callan	string
+695	124	fileStage	2	int
+696	124	submissionFileId	29	int
+697	124	fileId	18	int
+698	124	submissionId	5	int
+699	124	username	callan	string
+700	124	name	prologue.pdf	string
+701	125	fileStage	2	int
+702	125	sourceSubmissionFileId	\N	string
+703	125	submissionFileId	29	int
+704	125	fileId	18	int
+705	125	submissionId	5	int
+706	125	originalFileName	prologue.pdf	string
+707	125	username	callan	string
+708	126	fileStage	2	int
+709	126	sourceSubmissionFileId	\N	string
+710	126	submissionFileId	29	int
+711	126	fileId	18	int
+712	126	submissionId	5	int
+713	126	username	callan	string
+714	126	originalFileName	prologue.pdf	string
+715	126	name	prologue.pdf	string
+716	127	fileStage	2	int
+717	127	sourceSubmissionFileId	\N	string
+718	127	submissionFileId	30	int
+719	127	fileId	19	int
+720	127	submissionId	5	int
+721	127	originalFileName	chapter1.pdf	string
+722	127	username	callan	string
+723	128	fileStage	2	int
+724	128	submissionFileId	30	int
+725	128	fileId	19	int
+726	128	submissionId	5	int
+727	128	username	callan	string
+728	128	name	chapter1.pdf	string
+729	129	fileStage	2	int
+730	129	sourceSubmissionFileId	\N	string
+731	129	submissionFileId	30	int
+732	129	fileId	19	int
+733	129	submissionId	5	int
+734	129	originalFileName	chapter1.pdf	string
+735	129	username	callan	string
+736	130	fileStage	2	int
+737	130	sourceSubmissionFileId	\N	string
+738	130	submissionFileId	30	int
+739	130	fileId	19	int
+740	130	submissionId	5	int
+741	130	username	callan	string
+742	130	originalFileName	chapter1.pdf	string
+743	130	name	chapter1.pdf	string
+744	131	fileStage	2	int
+745	131	sourceSubmissionFileId	\N	string
+746	131	submissionFileId	31	int
+747	131	fileId	20	int
+748	131	submissionId	5	int
+749	131	originalFileName	chapter2.pdf	string
+750	131	username	callan	string
+751	132	fileStage	2	int
+752	132	submissionFileId	31	int
+753	132	fileId	20	int
+754	132	submissionId	5	int
+755	132	username	callan	string
+756	132	name	chapter2.pdf	string
+757	133	fileStage	2	int
+758	133	sourceSubmissionFileId	\N	string
+759	133	submissionFileId	31	int
+760	133	fileId	20	int
+761	133	submissionId	5	int
+762	133	originalFileName	chapter2.pdf	string
+763	133	username	callan	string
+764	134	fileStage	2	int
+765	134	sourceSubmissionFileId	\N	string
+766	134	submissionFileId	31	int
+767	134	fileId	20	int
+768	134	submissionId	5	int
+769	134	username	callan	string
+770	134	originalFileName	chapter2.pdf	string
+771	134	name	chapter2.pdf	string
+772	135	fileStage	2	int
+773	135	sourceSubmissionFileId	\N	string
+774	135	submissionFileId	32	int
+775	135	fileId	21	int
+776	135	submissionId	5	int
+777	135	originalFileName	chapter3.pdf	string
+778	135	username	callan	string
+779	136	fileStage	2	int
+780	136	submissionFileId	32	int
+781	136	fileId	21	int
+782	136	submissionId	5	int
+783	136	username	callan	string
+784	136	name	chapter3.pdf	string
+785	137	fileStage	2	int
+786	137	sourceSubmissionFileId	\N	string
+787	137	submissionFileId	32	int
+788	137	fileId	21	int
+789	137	submissionId	5	int
+790	137	originalFileName	chapter3.pdf	string
+791	137	username	callan	string
+792	138	fileStage	2	int
+793	138	sourceSubmissionFileId	\N	string
+794	138	submissionFileId	32	int
+795	138	fileId	21	int
+796	138	submissionId	5	int
+797	138	username	callan	string
+798	138	originalFileName	chapter3.pdf	string
+799	138	name	chapter3.pdf	string
+800	139	fileStage	2	int
+801	139	sourceSubmissionFileId	\N	string
+802	139	submissionFileId	33	int
+803	139	fileId	22	int
+804	139	submissionId	5	int
+805	139	originalFileName	chapter4.pdf	string
+806	139	username	callan	string
+807	140	fileStage	2	int
+808	140	submissionFileId	33	int
+809	140	fileId	22	int
+810	140	submissionId	5	int
+811	140	username	callan	string
+812	140	name	chapter4.pdf	string
+813	141	fileStage	2	int
+814	141	sourceSubmissionFileId	\N	string
+815	141	submissionFileId	33	int
+816	141	fileId	22	int
+817	141	submissionId	5	int
+818	141	originalFileName	chapter4.pdf	string
+819	141	username	callan	string
+820	142	fileStage	2	int
+821	142	sourceSubmissionFileId	\N	string
+822	142	submissionFileId	33	int
+823	142	fileId	22	int
+824	142	submissionId	5	int
+825	142	username	callan	string
+826	142	originalFileName	chapter4.pdf	string
+827	142	name	chapter4.pdf	string
+828	143	fileStage	2	int
+829	143	sourceSubmissionFileId	\N	string
+830	143	submissionFileId	34	int
+831	143	fileId	23	int
+832	143	submissionId	5	int
+833	143	originalFileName	epilogue.pdf	string
+834	143	username	callan	string
+835	144	fileStage	2	int
+836	144	submissionFileId	34	int
+837	144	fileId	23	int
+838	144	submissionId	5	int
+839	144	username	callan	string
+840	144	name	epilogue.pdf	string
+841	145	fileStage	2	int
+842	145	sourceSubmissionFileId	\N	string
+843	145	submissionFileId	34	int
+844	145	fileId	23	int
+845	145	submissionId	5	int
+846	145	originalFileName	epilogue.pdf	string
+847	145	username	callan	string
+848	146	fileStage	2	int
+849	146	sourceSubmissionFileId	\N	string
+850	146	submissionFileId	34	int
+851	146	fileId	23	int
+852	146	submissionId	5	int
+853	146	username	callan	string
+854	146	originalFileName	epilogue.pdf	string
+855	146	name	epilogue.pdf	string
+856	148	editorId	3	int
+857	148	editorName	Daniel Barnes	string
+858	148	submissionId	5	int
+859	148	decision	1	int
+860	149	fileStage	19	int
+861	149	sourceSubmissionFileId	34	int
+862	149	submissionFileId	35	int
+863	149	fileId	23	int
+864	149	submissionId	5	int
+865	149	originalFileName	epilogue.pdf	string
+866	149	username	dbarnes	string
+867	150	fileStage	19	int
+868	150	submissionFileId	35	int
+869	150	fileId	23	int
+870	150	submissionId	5	int
+871	150	username	dbarnes	string
+872	150	name	epilogue.pdf	string
+873	151	fileStage	19	int
+874	151	sourceSubmissionFileId	32	int
+875	151	submissionFileId	36	int
+876	151	fileId	21	int
+877	151	submissionId	5	int
+878	151	originalFileName	chapter3.pdf	string
+879	151	username	dbarnes	string
+880	152	fileStage	19	int
+881	152	submissionFileId	36	int
+882	152	fileId	21	int
+883	152	submissionId	5	int
+884	152	username	dbarnes	string
+885	152	name	chapter3.pdf	string
+886	153	fileStage	19	int
+887	153	sourceSubmissionFileId	33	int
+888	153	submissionFileId	37	int
+889	153	fileId	22	int
+890	153	submissionId	5	int
+891	153	originalFileName	chapter4.pdf	string
+892	153	username	dbarnes	string
+893	154	fileStage	19	int
+894	154	submissionFileId	37	int
+895	154	fileId	22	int
+896	154	submissionId	5	int
+897	154	username	dbarnes	string
+898	154	name	chapter4.pdf	string
+899	155	fileStage	19	int
+900	155	sourceSubmissionFileId	31	int
+901	155	submissionFileId	38	int
+902	155	fileId	20	int
+903	155	submissionId	5	int
+904	155	originalFileName	chapter2.pdf	string
+905	155	username	dbarnes	string
+906	156	fileStage	19	int
+907	156	submissionFileId	38	int
+908	156	fileId	20	int
+909	156	submissionId	5	int
+910	156	username	dbarnes	string
+911	156	name	chapter2.pdf	string
+912	157	fileStage	19	int
+913	157	sourceSubmissionFileId	30	int
+914	157	submissionFileId	39	int
+915	157	fileId	19	int
+916	157	submissionId	5	int
+917	157	originalFileName	chapter1.pdf	string
+918	157	username	dbarnes	string
+919	158	fileStage	19	int
+920	158	submissionFileId	39	int
+921	158	fileId	19	int
+922	158	submissionId	5	int
+923	158	username	dbarnes	string
+924	158	name	chapter1.pdf	string
+925	159	fileStage	19	int
+926	159	sourceSubmissionFileId	29	int
+927	159	submissionFileId	40	int
+928	159	fileId	18	int
+929	159	submissionId	5	int
+930	159	originalFileName	prologue.pdf	string
+931	159	username	dbarnes	string
+932	160	fileStage	19	int
+933	160	submissionFileId	40	int
+934	160	fileId	18	int
+935	160	submissionId	5	int
+936	160	username	dbarnes	string
+937	160	name	prologue.pdf	string
+938	161	reviewAssignmentId	6	int
+939	161	reviewerName	Paul Hudson	string
+940	161	submissionId	5	int
+941	161	stageId	2	int
+942	161	round	1	int
+943	162	editorId	3	int
+944	162	editorName	Daniel Barnes	string
+945	162	submissionId	5	int
+946	162	decision	3	int
+947	163	reviewAssignmentId	7	int
+948	163	reviewerName	Gonzalo Favio	string
+949	163	submissionId	5	int
+950	163	stageId	3	int
+951	163	round	1	int
+952	164	editorId	3	int
+953	164	editorName	Daniel Barnes	string
+954	164	submissionId	5	int
+955	164	decision	2	int
+956	165	name	Sarah Vogt	string
+957	165	username	svogt	string
+958	165	userGroupName	Copyeditor	string
+959	166	editorId	3	int
+960	166	editorName	Daniel Barnes	string
+961	166	submissionId	5	int
+962	166	decision	7	int
+963	167	name	Stephen Hellier	string
+964	167	username	shellier	string
+965	167	userGroupName	Layout Editor	string
+966	168	name	Catherine Turner	string
+967	168	username	cturner	string
+968	168	userGroupName	Proofreader	string
+969	169	formatName	PDF	string
+970	170	fileStage	10	int
+971	170	sourceSubmissionFileId	34	int
+972	170	submissionFileId	41	int
+973	170	fileId	23	int
+974	170	submissionId	5	int
+975	170	originalFileName	epilogue.pdf	string
+976	170	username	dbarnes	string
+977	171	fileStage	10	int
+978	171	submissionFileId	41	int
+979	171	fileId	23	int
+980	171	submissionId	5	int
+981	171	username	dbarnes	string
+982	171	name	epilogue.pdf	string
+983	172	publicationFormatName	PDF	string
+984	173	publicationFormatName	PDF	string
+985	174	fileStage	10	int
+986	174	sourceSubmissionFileId	34	int
+987	174	submissionFileId	41	int
+988	174	fileId	23	int
+989	174	submissionId	5	int
+990	174	originalFileName	epilogue.pdf	string
+991	174	username	dbarnes	string
+992	175	fileStage	10	int
+993	175	sourceSubmissionFileId	34	int
+994	175	submissionFileId	41	int
+995	175	fileId	23	int
+996	175	submissionId	5	int
+997	175	username	dbarnes	string
+998	175	originalFileName	epilogue.pdf	string
+999	175	name	epilogue.pdf	string
+1000	176	file	epilogue.pdf	string
+1001	176	name	Daniel Barnes	string
+1002	176	username	dbarnes	string
+1003	177	fileStage	10	int
+1004	177	sourceSubmissionFileId	34	int
+1005	177	submissionFileId	41	int
+1006	177	fileId	23	int
+1007	177	submissionId	5	int
+1008	177	originalFileName	epilogue.pdf	string
+1009	177	username	dbarnes	string
+1010	178	fileStage	10	int
+1011	178	sourceSubmissionFileId	34	int
+1012	178	submissionFileId	41	int
+1013	178	fileId	23	int
+1014	178	submissionId	5	int
+1015	178	username	dbarnes	string
+1016	178	originalFileName	epilogue.pdf	string
+1017	178	name	epilogue.pdf	string
+1018	184	fileStage	2	int
+1019	184	sourceSubmissionFileId	\N	string
+1020	184	submissionFileId	42	int
+1021	184	fileId	24	int
+1022	184	submissionId	6	int
+1023	184	originalFileName	chapter1.pdf	string
+1024	184	username	dbernnard	string
+1025	185	fileStage	2	int
+1026	185	submissionFileId	42	int
+1027	185	fileId	24	int
+1028	185	submissionId	6	int
+1029	185	username	dbernnard	string
+1030	185	name	chapter1.pdf	string
+1031	186	fileStage	2	int
+1032	186	sourceSubmissionFileId	\N	string
+1033	186	submissionFileId	42	int
+1034	186	fileId	24	int
+1035	186	submissionId	6	int
+1036	186	originalFileName	chapter1.pdf	string
+1037	186	username	dbernnard	string
+1038	187	fileStage	2	int
+1039	187	sourceSubmissionFileId	\N	string
+1040	187	submissionFileId	42	int
+1041	187	fileId	24	int
+1042	187	submissionId	6	int
+1043	187	username	dbernnard	string
+1044	187	originalFileName	chapter1.pdf	string
+1045	187	name	chapter1.pdf	string
+1046	188	fileStage	2	int
+1047	188	sourceSubmissionFileId	\N	string
+1048	188	submissionFileId	43	int
+1049	188	fileId	25	int
+1050	188	submissionId	6	int
+1051	188	originalFileName	chapter2.pdf	string
+1052	188	username	dbernnard	string
+1053	189	fileStage	2	int
+1054	189	submissionFileId	43	int
+1055	189	fileId	25	int
+1056	189	submissionId	6	int
+1057	189	username	dbernnard	string
+1058	189	name	chapter2.pdf	string
+1059	190	fileStage	2	int
+1060	190	sourceSubmissionFileId	\N	string
+1061	190	submissionFileId	43	int
+1062	190	fileId	25	int
+1063	190	submissionId	6	int
+1064	190	originalFileName	chapter2.pdf	string
+1065	190	username	dbernnard	string
+1066	191	fileStage	2	int
+1067	191	sourceSubmissionFileId	\N	string
+1068	191	submissionFileId	43	int
+1069	191	fileId	25	int
+1070	191	submissionId	6	int
+1071	191	username	dbernnard	string
+1072	191	originalFileName	chapter2.pdf	string
+1073	191	name	chapter2.pdf	string
+1074	192	fileStage	2	int
+1075	192	sourceSubmissionFileId	\N	string
+1076	192	submissionFileId	44	int
+1077	192	fileId	26	int
+1078	192	submissionId	6	int
+1079	192	originalFileName	chapter3.pdf	string
+1080	192	username	dbernnard	string
+1081	193	fileStage	2	int
+1082	193	submissionFileId	44	int
+1083	193	fileId	26	int
+1084	193	submissionId	6	int
+1085	193	username	dbernnard	string
+1086	193	name	chapter3.pdf	string
+1087	194	fileStage	2	int
+1088	194	sourceSubmissionFileId	\N	string
+1089	194	submissionFileId	44	int
+1090	194	fileId	26	int
+1091	194	submissionId	6	int
+1092	194	originalFileName	chapter3.pdf	string
+1093	194	username	dbernnard	string
+1094	195	fileStage	2	int
+1095	195	sourceSubmissionFileId	\N	string
+1096	195	submissionFileId	44	int
+1097	195	fileId	26	int
+1098	195	submissionId	6	int
+1099	195	username	dbernnard	string
+1100	195	originalFileName	chapter3.pdf	string
+1101	195	name	chapter3.pdf	string
+1102	196	fileStage	2	int
+1103	196	sourceSubmissionFileId	\N	string
+1104	196	submissionFileId	45	int
+1105	196	fileId	27	int
+1106	196	submissionId	6	int
+1107	196	originalFileName	chapter4.pdf	string
+1108	196	username	dbernnard	string
+1109	197	fileStage	2	int
+1110	197	submissionFileId	45	int
+1111	197	fileId	27	int
+1112	197	submissionId	6	int
+1113	197	username	dbernnard	string
+1114	197	name	chapter4.pdf	string
+1115	198	fileStage	2	int
+1116	198	sourceSubmissionFileId	\N	string
+1117	198	submissionFileId	45	int
+1118	198	fileId	27	int
+1119	198	submissionId	6	int
+1120	198	originalFileName	chapter4.pdf	string
+1121	198	username	dbernnard	string
+1122	199	fileStage	2	int
+1123	199	sourceSubmissionFileId	\N	string
+1124	199	submissionFileId	45	int
+1125	199	fileId	27	int
+1126	199	submissionId	6	int
+1127	199	username	dbernnard	string
+1128	199	originalFileName	chapter4.pdf	string
+1129	199	name	chapter4.pdf	string
+1130	201	editorId	3	int
+1131	201	editorName	Daniel Barnes	string
+1132	201	submissionId	6	int
+1133	201	decision	1	int
+1134	202	fileStage	19	int
+1135	202	sourceSubmissionFileId	45	int
+1136	202	submissionFileId	46	int
+1137	202	fileId	27	int
+1138	202	submissionId	6	int
+1139	202	originalFileName	chapter4.pdf	string
+1140	202	username	dbarnes	string
+1141	203	fileStage	19	int
+1142	203	submissionFileId	46	int
+1143	203	fileId	27	int
+1144	203	submissionId	6	int
+1145	203	username	dbarnes	string
+1146	203	name	chapter4.pdf	string
+1147	204	fileStage	19	int
+1148	204	sourceSubmissionFileId	44	int
+1149	204	submissionFileId	47	int
+1150	204	fileId	26	int
+1151	204	submissionId	6	int
+1152	204	originalFileName	chapter3.pdf	string
+1153	204	username	dbarnes	string
+1154	205	fileStage	19	int
+1155	205	submissionFileId	47	int
+1156	205	fileId	26	int
+1157	205	submissionId	6	int
+1158	205	username	dbarnes	string
+1159	205	name	chapter3.pdf	string
+1160	206	fileStage	19	int
+1161	206	sourceSubmissionFileId	42	int
+1162	206	submissionFileId	48	int
+1163	206	fileId	24	int
+1164	206	submissionId	6	int
+1165	206	originalFileName	chapter1.pdf	string
+1166	206	username	dbarnes	string
+1167	207	fileStage	19	int
+1168	207	submissionFileId	48	int
+1169	207	fileId	24	int
+1170	207	submissionId	6	int
+1171	207	username	dbarnes	string
+1172	207	name	chapter1.pdf	string
+1173	208	fileStage	19	int
+1174	208	sourceSubmissionFileId	43	int
+1175	208	submissionFileId	49	int
+1176	208	fileId	25	int
+1177	208	submissionId	6	int
+1178	208	originalFileName	chapter2.pdf	string
+1179	208	username	dbarnes	string
+1180	209	fileStage	19	int
+1181	209	submissionFileId	49	int
+1182	209	fileId	25	int
+1183	209	submissionId	6	int
+1184	209	username	dbarnes	string
+1185	209	name	chapter2.pdf	string
+1186	210	name	Daniel Barnes	string
+1187	210	username	dbarnes	string
+1188	210	userGroupName	Press editor	string
+1189	211	name	Minoti Inoue	string
+1190	211	username	minoue	string
+1191	211	userGroupName	Series editor	string
+1192	212	editorId	6	int
+1193	212	editorName	Minoti Inoue	string
+1194	212	submissionId	6	int
+1195	212	decision	23	int
+1196	215	fileStage	2	int
+1197	215	sourceSubmissionFileId	\N	string
+1198	215	submissionFileId	50	int
+1199	215	fileId	28	int
+1200	215	submissionId	7	int
+1201	215	originalFileName	intro.pdf	string
+1202	215	username	dkennepohl	string
+1203	216	fileStage	2	int
+1204	216	submissionFileId	50	int
+1205	216	fileId	28	int
+1206	216	submissionId	7	int
+1207	216	username	dkennepohl	string
+1208	216	name	intro.pdf	string
+1209	217	fileStage	2	int
+1210	217	sourceSubmissionFileId	\N	string
+1211	217	submissionFileId	50	int
+1212	217	fileId	28	int
+1213	217	submissionId	7	int
+1214	217	originalFileName	intro.pdf	string
+1215	217	username	dkennepohl	string
+1216	218	fileStage	2	int
+1217	218	sourceSubmissionFileId	\N	string
+1218	218	submissionFileId	50	int
+1219	218	fileId	28	int
+1220	218	submissionId	7	int
+1221	218	username	dkennepohl	string
+1222	218	originalFileName	intro.pdf	string
+1223	218	name	intro.pdf	string
+1224	219	fileStage	2	int
+1225	219	sourceSubmissionFileId	\N	string
+1226	219	submissionFileId	51	int
+1227	219	fileId	29	int
+1228	219	submissionId	7	int
+1229	219	originalFileName	chapter1.pdf	string
+1230	219	username	dkennepohl	string
+1231	220	fileStage	2	int
+1232	220	submissionFileId	51	int
+1233	220	fileId	29	int
+1234	220	submissionId	7	int
+1235	220	username	dkennepohl	string
+1236	220	name	chapter1.pdf	string
+1237	221	fileStage	2	int
+1238	221	sourceSubmissionFileId	\N	string
+1239	221	submissionFileId	51	int
+1240	221	fileId	29	int
+1241	221	submissionId	7	int
+1242	221	originalFileName	chapter1.pdf	string
+1243	221	username	dkennepohl	string
+1244	222	fileStage	2	int
+1245	222	sourceSubmissionFileId	\N	string
+1246	222	submissionFileId	51	int
+1247	222	fileId	29	int
+1248	222	submissionId	7	int
+1249	222	username	dkennepohl	string
+1250	222	originalFileName	chapter1.pdf	string
+1251	222	name	chapter1.pdf	string
+1252	223	fileStage	2	int
+1253	223	sourceSubmissionFileId	\N	string
+1254	223	submissionFileId	52	int
+1255	223	fileId	30	int
+1256	223	submissionId	7	int
+1257	223	originalFileName	chapter2.pdf	string
+1258	223	username	dkennepohl	string
+1259	224	fileStage	2	int
+1260	224	submissionFileId	52	int
+1261	224	fileId	30	int
+1262	224	submissionId	7	int
+1263	224	username	dkennepohl	string
+1264	224	name	chapter2.pdf	string
+1265	225	fileStage	2	int
+1266	225	sourceSubmissionFileId	\N	string
+1267	225	submissionFileId	52	int
+1268	225	fileId	30	int
+1269	225	submissionId	7	int
+1270	225	originalFileName	chapter2.pdf	string
+1271	225	username	dkennepohl	string
+1272	226	fileStage	2	int
+1273	226	sourceSubmissionFileId	\N	string
+1274	226	submissionFileId	52	int
+1275	226	fileId	30	int
+1276	226	submissionId	7	int
+1277	226	username	dkennepohl	string
+1278	226	originalFileName	chapter2.pdf	string
+1279	226	name	chapter2.pdf	string
+1280	227	fileStage	2	int
+1281	227	sourceSubmissionFileId	\N	string
+1282	227	submissionFileId	53	int
+1283	227	fileId	31	int
+1284	227	submissionId	7	int
+1285	227	originalFileName	chapter3.pdf	string
+1286	227	username	dkennepohl	string
+1287	228	fileStage	2	int
+1288	228	submissionFileId	53	int
+1289	228	fileId	31	int
+1290	228	submissionId	7	int
+1291	228	username	dkennepohl	string
+1292	228	name	chapter3.pdf	string
+1293	229	fileStage	2	int
+1294	229	sourceSubmissionFileId	\N	string
+1295	229	submissionFileId	53	int
+1296	229	fileId	31	int
+1297	229	submissionId	7	int
+1298	229	originalFileName	chapter3.pdf	string
+1299	229	username	dkennepohl	string
+1300	230	fileStage	2	int
+1301	230	sourceSubmissionFileId	\N	string
+1302	230	submissionFileId	53	int
+1303	230	fileId	31	int
+1304	230	submissionId	7	int
+1305	230	username	dkennepohl	string
+1306	230	originalFileName	chapter3.pdf	string
+1307	230	name	chapter3.pdf	string
+1308	231	fileStage	2	int
+1309	231	sourceSubmissionFileId	\N	string
+1310	231	submissionFileId	54	int
+1311	231	fileId	32	int
+1312	231	submissionId	7	int
+1313	231	originalFileName	chapter4.pdf	string
+1314	231	username	dkennepohl	string
+1315	232	fileStage	2	int
+1316	232	submissionFileId	54	int
+1317	232	fileId	32	int
+1318	232	submissionId	7	int
+1319	232	username	dkennepohl	string
+1320	232	name	chapter4.pdf	string
+1321	233	fileStage	2	int
+1322	233	sourceSubmissionFileId	\N	string
+1323	233	submissionFileId	54	int
+1324	233	fileId	32	int
+1325	233	submissionId	7	int
+1326	233	originalFileName	chapter4.pdf	string
+1327	233	username	dkennepohl	string
+1328	234	fileStage	2	int
+1329	234	sourceSubmissionFileId	\N	string
+1330	234	submissionFileId	54	int
+1331	234	fileId	32	int
+1332	234	submissionId	7	int
+1333	234	username	dkennepohl	string
+1334	234	originalFileName	chapter4.pdf	string
+1335	234	name	chapter4.pdf	string
+1336	236	editorId	3	int
+1337	236	editorName	Daniel Barnes	string
+1338	236	submissionId	7	int
+1339	236	decision	18	int
+1340	237	fileStage	4	int
+1341	237	sourceSubmissionFileId	54	int
+1342	237	submissionFileId	55	int
+1343	237	fileId	32	int
+1344	237	submissionId	7	int
+1345	237	originalFileName	chapter4.pdf	string
+1346	237	username	dbarnes	string
+1347	238	fileStage	4	int
+1348	238	submissionFileId	55	int
+1349	238	fileId	32	int
+1350	238	submissionId	7	int
+1351	238	username	dbarnes	string
+1352	238	name	chapter4.pdf	string
+1353	239	fileStage	4	int
+1354	239	sourceSubmissionFileId	52	int
+1355	239	submissionFileId	56	int
+1356	239	fileId	30	int
+1357	239	submissionId	7	int
+1358	239	originalFileName	chapter2.pdf	string
+1359	239	username	dbarnes	string
+1360	240	fileStage	4	int
+1361	240	submissionFileId	56	int
+1362	240	fileId	30	int
+1363	240	submissionId	7	int
+1364	240	username	dbarnes	string
+1365	240	name	chapter2.pdf	string
+1366	241	fileStage	4	int
+1367	241	sourceSubmissionFileId	53	int
+1368	241	submissionFileId	57	int
+1369	241	fileId	31	int
+1370	241	submissionId	7	int
+1371	241	originalFileName	chapter3.pdf	string
+1372	241	username	dbarnes	string
+1373	242	fileStage	4	int
+1374	242	submissionFileId	57	int
+1375	242	fileId	31	int
+1376	242	submissionId	7	int
+1377	242	username	dbarnes	string
+1378	242	name	chapter3.pdf	string
+1379	243	fileStage	4	int
+1380	243	sourceSubmissionFileId	51	int
+1381	243	submissionFileId	58	int
+1382	243	fileId	29	int
+1383	243	submissionId	7	int
+1384	243	originalFileName	chapter1.pdf	string
+1385	243	username	dbarnes	string
+1386	244	fileStage	4	int
+1387	244	submissionFileId	58	int
+1388	244	fileId	29	int
+1389	244	submissionId	7	int
+1390	244	username	dbarnes	string
+1391	244	name	chapter1.pdf	string
+1392	245	fileStage	4	int
+1393	245	sourceSubmissionFileId	50	int
+1394	245	submissionFileId	59	int
+1395	245	fileId	28	int
+1396	245	submissionId	7	int
+1397	245	originalFileName	intro.pdf	string
+1398	245	username	dbarnes	string
+1399	246	fileStage	4	int
+1400	246	submissionFileId	59	int
+1401	246	fileId	28	int
+1402	246	submissionId	7	int
+1403	246	username	dbarnes	string
+1404	246	name	intro.pdf	string
+1405	247	reviewAssignmentId	8	int
+1406	247	reviewerName	Adela Gallego	string
+1407	247	submissionId	7	int
+1408	247	stageId	3	int
+1409	247	round	1	int
+1410	248	editorId	3	int
+1411	248	editorName	Daniel Barnes	string
+1412	248	submissionId	7	int
+1413	248	decision	2	int
+1414	249	name	Maria Fritz	string
+1415	249	username	mfritz	string
+1416	249	userGroupName	Copyeditor	string
+1417	251	fileStage	2	int
+1418	251	sourceSubmissionFileId	\N	string
+1419	251	submissionFileId	60	int
+1420	251	fileId	33	int
+1421	251	submissionId	8	int
+1422	251	originalFileName	note.pdf	string
+1423	251	username	dbarnes	string
+1424	252	fileStage	2	int
+1425	252	submissionFileId	60	int
+1426	252	fileId	33	int
+1427	252	submissionId	8	int
+1428	252	username	dbarnes	string
+1429	252	name	note.pdf	string
+1430	253	fileStage	2	int
+1431	253	sourceSubmissionFileId	\N	string
+1432	253	submissionFileId	60	int
+1433	253	fileId	33	int
+1434	253	submissionId	8	int
+1435	253	originalFileName	note.pdf	string
+1436	253	username	dbarnes	string
+1437	254	fileStage	2	int
+1438	254	sourceSubmissionFileId	\N	string
+1439	254	submissionFileId	60	int
+1440	254	fileId	33	int
+1441	254	submissionId	8	int
+1442	254	username	dbarnes	string
+1443	254	originalFileName	note.pdf	string
+1444	254	name	note.pdf	string
+1445	258	fileStage	2	int
+1446	258	sourceSubmissionFileId	\N	string
+1447	258	submissionFileId	61	int
+1448	258	fileId	34	int
+1449	258	submissionId	9	int
+1450	258	originalFileName	chapter1.pdf	string
+1451	258	username	fperini	string
+1452	259	fileStage	2	int
+1453	259	submissionFileId	61	int
+1454	259	fileId	34	int
+1455	259	submissionId	9	int
+1456	259	username	fperini	string
+1457	259	name	chapter1.pdf	string
+1458	260	fileStage	2	int
+1459	260	sourceSubmissionFileId	\N	string
+1460	260	submissionFileId	61	int
+1461	260	fileId	34	int
+1462	260	submissionId	9	int
+1463	260	originalFileName	chapter1.pdf	string
+1464	260	username	fperini	string
+1465	261	fileStage	2	int
+1466	261	sourceSubmissionFileId	\N	string
+1467	261	submissionFileId	61	int
+1468	261	fileId	34	int
+1469	261	submissionId	9	int
+1470	261	username	fperini	string
+1471	261	originalFileName	chapter1.pdf	string
+1472	261	name	chapter1.pdf	string
+1473	262	fileStage	2	int
+1474	262	sourceSubmissionFileId	\N	string
+1475	262	submissionFileId	62	int
+1476	262	fileId	35	int
+1477	262	submissionId	9	int
+1478	262	originalFileName	chapter2.pdf	string
+1479	262	username	fperini	string
+1480	263	fileStage	2	int
+1481	263	submissionFileId	62	int
+1482	263	fileId	35	int
+1483	263	submissionId	9	int
+1484	263	username	fperini	string
+1485	263	name	chapter2.pdf	string
+1486	264	fileStage	2	int
+1487	264	sourceSubmissionFileId	\N	string
+1488	264	submissionFileId	62	int
+1489	264	fileId	35	int
+1490	264	submissionId	9	int
+1491	264	originalFileName	chapter2.pdf	string
+1492	264	username	fperini	string
+1493	265	fileStage	2	int
+1494	265	sourceSubmissionFileId	\N	string
+1495	265	submissionFileId	62	int
+1496	265	fileId	35	int
+1497	265	submissionId	9	int
+1498	265	username	fperini	string
+1499	265	originalFileName	chapter2.pdf	string
+1500	265	name	chapter2.pdf	string
+1501	266	fileStage	2	int
+1502	266	sourceSubmissionFileId	\N	string
+1503	266	submissionFileId	63	int
+1504	266	fileId	36	int
+1505	266	submissionId	9	int
+1506	266	originalFileName	chapter3.pdf	string
+1507	266	username	fperini	string
+1508	267	fileStage	2	int
+1509	267	submissionFileId	63	int
+1510	267	fileId	36	int
+1511	267	submissionId	9	int
+1512	267	username	fperini	string
+1513	267	name	chapter3.pdf	string
+1514	268	fileStage	2	int
+1515	268	sourceSubmissionFileId	\N	string
+1516	268	submissionFileId	63	int
+1517	268	fileId	36	int
+1518	268	submissionId	9	int
+1519	268	originalFileName	chapter3.pdf	string
+1520	268	username	fperini	string
+1521	269	fileStage	2	int
+1522	269	sourceSubmissionFileId	\N	string
+1523	269	submissionFileId	63	int
+1524	269	fileId	36	int
+1525	269	submissionId	9	int
+1526	269	username	fperini	string
+1527	269	originalFileName	chapter3.pdf	string
+1528	269	name	chapter3.pdf	string
+1529	270	fileStage	2	int
+1648	289	fileStage	19	int
+1530	270	sourceSubmissionFileId	\N	string
+1531	270	submissionFileId	64	int
+1532	270	fileId	37	int
+1533	270	submissionId	9	int
+1534	270	originalFileName	chapter4.pdf	string
+1535	270	username	fperini	string
+1536	271	fileStage	2	int
+1537	271	submissionFileId	64	int
+1538	271	fileId	37	int
+1539	271	submissionId	9	int
+1540	271	username	fperini	string
+1541	271	name	chapter4.pdf	string
+1542	272	fileStage	2	int
+1543	272	sourceSubmissionFileId	\N	string
+1544	272	submissionFileId	64	int
+1545	272	fileId	37	int
+1546	272	submissionId	9	int
+1547	272	originalFileName	chapter4.pdf	string
+1548	272	username	fperini	string
+1549	273	fileStage	2	int
+1550	273	sourceSubmissionFileId	\N	string
+1551	273	submissionFileId	64	int
+1552	273	fileId	37	int
+1553	273	submissionId	9	int
+1554	273	username	fperini	string
+1555	273	originalFileName	chapter4.pdf	string
+1556	273	name	chapter4.pdf	string
+1557	274	fileStage	2	int
+1558	274	sourceSubmissionFileId	\N	string
+1559	274	submissionFileId	65	int
+1560	274	fileId	38	int
+1561	274	submissionId	9	int
+1562	274	originalFileName	chapter5.pdf	string
+1563	274	username	fperini	string
+1564	275	fileStage	2	int
+1565	275	submissionFileId	65	int
+1566	275	fileId	38	int
+1567	275	submissionId	9	int
+1568	275	username	fperini	string
+1569	275	name	chapter5.pdf	string
+1570	276	fileStage	2	int
+1571	276	sourceSubmissionFileId	\N	string
+1572	276	submissionFileId	65	int
+1573	276	fileId	38	int
+1574	276	submissionId	9	int
+1575	276	originalFileName	chapter5.pdf	string
+1576	276	username	fperini	string
+1577	277	fileStage	2	int
+1578	277	sourceSubmissionFileId	\N	string
+1579	277	submissionFileId	65	int
+1580	277	fileId	38	int
+1581	277	submissionId	9	int
+1582	277	username	fperini	string
+1583	277	originalFileName	chapter5.pdf	string
+1584	277	name	chapter5.pdf	string
+1585	279	editorId	3	int
+1586	279	editorName	Daniel Barnes	string
+1587	279	submissionId	9	int
+1588	279	decision	1	int
+1589	280	fileStage	19	int
+1590	280	sourceSubmissionFileId	65	int
+1591	280	submissionFileId	66	int
+1592	280	fileId	38	int
+1593	280	submissionId	9	int
+1594	280	originalFileName	chapter5.pdf	string
+1595	280	username	dbarnes	string
+1596	281	fileStage	19	int
+1597	281	submissionFileId	66	int
+1598	281	fileId	38	int
+1599	281	submissionId	9	int
+1600	281	username	dbarnes	string
+1601	281	name	chapter5.pdf	string
+1602	282	fileStage	19	int
+1603	282	sourceSubmissionFileId	64	int
+1604	282	submissionFileId	67	int
+1605	282	fileId	37	int
+1606	282	submissionId	9	int
+1607	282	originalFileName	chapter4.pdf	string
+1608	282	username	dbarnes	string
+1609	283	fileStage	19	int
+1610	283	submissionFileId	67	int
+1611	283	fileId	37	int
+1612	283	submissionId	9	int
+1613	283	username	dbarnes	string
+1614	283	name	chapter4.pdf	string
+1615	284	fileStage	19	int
+1616	284	sourceSubmissionFileId	63	int
+1617	284	submissionFileId	68	int
+1618	284	fileId	36	int
+1619	284	submissionId	9	int
+1620	284	originalFileName	chapter3.pdf	string
+1621	284	username	dbarnes	string
+1622	285	fileStage	19	int
+1623	285	submissionFileId	68	int
+1624	285	fileId	36	int
+1625	285	submissionId	9	int
+1626	285	username	dbarnes	string
+1627	285	name	chapter3.pdf	string
+1628	286	fileStage	19	int
+1629	286	sourceSubmissionFileId	62	int
+1630	286	submissionFileId	69	int
+1631	286	fileId	35	int
+1632	286	submissionId	9	int
+1633	286	originalFileName	chapter2.pdf	string
+1634	286	username	dbarnes	string
+1635	287	fileStage	19	int
+1636	287	submissionFileId	69	int
+1637	287	fileId	35	int
+1638	287	submissionId	9	int
+1639	287	username	dbarnes	string
+1640	287	name	chapter2.pdf	string
+1641	288	fileStage	19	int
+1642	288	sourceSubmissionFileId	61	int
+1643	288	submissionFileId	70	int
+1644	288	fileId	34	int
+1645	288	submissionId	9	int
+1646	288	originalFileName	chapter1.pdf	string
+1647	288	username	dbarnes	string
+1649	289	submissionFileId	70	int
+1650	289	fileId	34	int
+1651	289	submissionId	9	int
+1652	289	username	dbarnes	string
+1653	289	name	chapter1.pdf	string
+1654	292	fileStage	2	int
+1655	292	sourceSubmissionFileId	\N	string
+1656	292	submissionFileId	71	int
+1657	292	fileId	39	int
+1658	292	submissionId	10	int
+1659	292	originalFileName	intro.pdf	string
+1660	292	username	jbrower	string
+1661	293	fileStage	2	int
+1662	293	submissionFileId	71	int
+1663	293	fileId	39	int
+1664	293	submissionId	10	int
+1665	293	username	jbrower	string
+1666	293	name	intro.pdf	string
+1667	294	fileStage	2	int
+1668	294	sourceSubmissionFileId	\N	string
+1669	294	submissionFileId	71	int
+1670	294	fileId	39	int
+1671	294	submissionId	10	int
+1672	294	originalFileName	intro.pdf	string
+1673	294	username	jbrower	string
+1674	295	fileStage	2	int
+1675	295	sourceSubmissionFileId	\N	string
+1676	295	submissionFileId	71	int
+1677	295	fileId	39	int
+1678	295	submissionId	10	int
+1679	295	username	jbrower	string
+1680	295	originalFileName	intro.pdf	string
+1681	295	name	intro.pdf	string
+1682	296	fileStage	2	int
+1683	296	sourceSubmissionFileId	\N	string
+1684	296	submissionFileId	72	int
+1685	296	fileId	40	int
+1686	296	submissionId	10	int
+1687	296	originalFileName	chapter1.pdf	string
+1688	296	username	jbrower	string
+1689	297	fileStage	2	int
+1690	297	submissionFileId	72	int
+1691	297	fileId	40	int
+1692	297	submissionId	10	int
+1693	297	username	jbrower	string
+1694	297	name	chapter1.pdf	string
+1695	298	fileStage	2	int
+1696	298	sourceSubmissionFileId	\N	string
+1697	298	submissionFileId	72	int
+1698	298	fileId	40	int
+1699	298	submissionId	10	int
+1700	298	originalFileName	chapter1.pdf	string
+1701	298	username	jbrower	string
+1702	299	fileStage	2	int
+1703	299	sourceSubmissionFileId	\N	string
+1704	299	submissionFileId	72	int
+1705	299	fileId	40	int
+1706	299	submissionId	10	int
+1707	299	username	jbrower	string
+1708	299	originalFileName	chapter1.pdf	string
+1709	299	name	chapter1.pdf	string
+1710	300	fileStage	2	int
+1711	300	sourceSubmissionFileId	\N	string
+1712	300	submissionFileId	73	int
+1713	300	fileId	41	int
+1714	300	submissionId	10	int
+1715	300	originalFileName	chapter2.pdf	string
+1716	300	username	jbrower	string
+1717	301	fileStage	2	int
+1718	301	submissionFileId	73	int
+1719	301	fileId	41	int
+1720	301	submissionId	10	int
+1721	301	username	jbrower	string
+1722	301	name	chapter2.pdf	string
+1723	302	fileStage	2	int
+1724	302	sourceSubmissionFileId	\N	string
+1725	302	submissionFileId	73	int
+1726	302	fileId	41	int
+1727	302	submissionId	10	int
+1728	302	originalFileName	chapter2.pdf	string
+1729	302	username	jbrower	string
+1730	303	fileStage	2	int
+1731	303	sourceSubmissionFileId	\N	string
+1732	303	submissionFileId	73	int
+1733	303	fileId	41	int
+1734	303	submissionId	10	int
+1735	303	username	jbrower	string
+1736	303	originalFileName	chapter2.pdf	string
+1737	303	name	chapter2.pdf	string
+1738	304	fileStage	2	int
+1739	304	sourceSubmissionFileId	\N	string
+1740	304	submissionFileId	74	int
+1741	304	fileId	42	int
+1742	304	submissionId	10	int
+1743	304	originalFileName	chapter3.pdf	string
+1744	304	username	jbrower	string
+1745	305	fileStage	2	int
+1746	305	submissionFileId	74	int
+1747	305	fileId	42	int
+1748	305	submissionId	10	int
+1749	305	username	jbrower	string
+1750	305	name	chapter3.pdf	string
+1751	306	fileStage	2	int
+1752	306	sourceSubmissionFileId	\N	string
+1753	306	submissionFileId	74	int
+1754	306	fileId	42	int
+1755	306	submissionId	10	int
+1756	306	originalFileName	chapter3.pdf	string
+1757	306	username	jbrower	string
+1758	307	fileStage	2	int
+1759	307	sourceSubmissionFileId	\N	string
+1760	307	submissionFileId	74	int
+1761	307	fileId	42	int
+1762	307	submissionId	10	int
+1763	307	username	jbrower	string
+1764	307	originalFileName	chapter3.pdf	string
+1765	307	name	chapter3.pdf	string
+1766	308	fileStage	2	int
+1885	325	fileStage	2	int
+1767	308	sourceSubmissionFileId	\N	string
+1768	308	submissionFileId	75	int
+1769	308	fileId	43	int
+1770	308	submissionId	10	int
+1771	308	originalFileName	chapter4.pdf	string
+1772	308	username	jbrower	string
+1773	309	fileStage	2	int
+1774	309	submissionFileId	75	int
+1775	309	fileId	43	int
+1776	309	submissionId	10	int
+1777	309	username	jbrower	string
+1778	309	name	chapter4.pdf	string
+1779	310	fileStage	2	int
+1780	310	sourceSubmissionFileId	\N	string
+1781	310	submissionFileId	75	int
+1782	310	fileId	43	int
+1783	310	submissionId	10	int
+1784	310	originalFileName	chapter4.pdf	string
+1785	310	username	jbrower	string
+1786	311	fileStage	2	int
+1787	311	sourceSubmissionFileId	\N	string
+1788	311	submissionFileId	75	int
+1789	311	fileId	43	int
+1790	311	submissionId	10	int
+1791	311	username	jbrower	string
+1792	311	originalFileName	chapter4.pdf	string
+1793	311	name	chapter4.pdf	string
+1794	312	fileStage	2	int
+1795	312	sourceSubmissionFileId	\N	string
+1796	312	submissionFileId	76	int
+1797	312	fileId	44	int
+1798	312	submissionId	10	int
+1799	312	originalFileName	chapter5.pdf	string
+1800	312	username	jbrower	string
+1801	313	fileStage	2	int
+1802	313	submissionFileId	76	int
+1803	313	fileId	44	int
+1804	313	submissionId	10	int
+1805	313	username	jbrower	string
+1806	313	name	chapter5.pdf	string
+1807	314	fileStage	2	int
+1808	314	sourceSubmissionFileId	\N	string
+1809	314	submissionFileId	76	int
+1810	314	fileId	44	int
+1811	314	submissionId	10	int
+1812	314	originalFileName	chapter5.pdf	string
+1813	314	username	jbrower	string
+1814	315	fileStage	2	int
+1815	315	sourceSubmissionFileId	\N	string
+1816	315	submissionFileId	76	int
+1817	315	fileId	44	int
+1818	315	submissionId	10	int
+1819	315	username	jbrower	string
+1820	315	originalFileName	chapter5.pdf	string
+1821	315	name	chapter5.pdf	string
+1822	316	fileStage	2	int
+1823	316	sourceSubmissionFileId	\N	string
+1824	316	submissionFileId	77	int
+1825	316	fileId	45	int
+1826	316	submissionId	10	int
+1827	316	originalFileName	conclusion.pdf	string
+1828	316	username	jbrower	string
+1829	317	fileStage	2	int
+1830	317	submissionFileId	77	int
+1831	317	fileId	45	int
+1832	317	submissionId	10	int
+1833	317	username	jbrower	string
+1834	317	name	conclusion.pdf	string
+1835	318	fileStage	2	int
+1836	318	sourceSubmissionFileId	\N	string
+1837	318	submissionFileId	77	int
+1838	318	fileId	45	int
+1839	318	submissionId	10	int
+1840	318	originalFileName	conclusion.pdf	string
+1841	318	username	jbrower	string
+1842	319	fileStage	2	int
+1843	319	sourceSubmissionFileId	\N	string
+1844	319	submissionFileId	77	int
+1845	319	fileId	45	int
+1846	319	submissionId	10	int
+1847	319	username	jbrower	string
+1848	319	originalFileName	conclusion.pdf	string
+1849	319	name	conclusion.pdf	string
+1850	320	fileStage	2	int
+1851	320	sourceSubmissionFileId	\N	string
+1852	320	submissionFileId	78	int
+1853	320	fileId	46	int
+1854	320	submissionId	10	int
+1855	320	originalFileName	bibliography.pdf	string
+1856	320	username	jbrower	string
+1857	321	fileStage	2	int
+1858	321	submissionFileId	78	int
+1859	321	fileId	46	int
+1860	321	submissionId	10	int
+1861	321	username	jbrower	string
+1862	321	name	bibliography.pdf	string
+1863	322	fileStage	2	int
+1864	322	sourceSubmissionFileId	\N	string
+1865	322	submissionFileId	78	int
+1866	322	fileId	46	int
+1867	322	submissionId	10	int
+1868	322	originalFileName	bibliography.pdf	string
+1869	322	username	jbrower	string
+1870	323	fileStage	2	int
+1871	323	sourceSubmissionFileId	\N	string
+1872	323	submissionFileId	78	int
+1873	323	fileId	46	int
+1874	323	submissionId	10	int
+1875	323	username	jbrower	string
+1876	323	originalFileName	bibliography.pdf	string
+1877	323	name	bibliography.pdf	string
+1878	324	fileStage	2	int
+1879	324	sourceSubmissionFileId	\N	string
+1880	324	submissionFileId	79	int
+1881	324	fileId	47	int
+1882	324	submissionId	10	int
+1883	324	originalFileName	index.pdf	string
+1884	324	username	jbrower	string
+1886	325	submissionFileId	79	int
+1887	325	fileId	47	int
+1888	325	submissionId	10	int
+1889	325	username	jbrower	string
+1890	325	name	index.pdf	string
+1891	326	fileStage	2	int
+1892	326	sourceSubmissionFileId	\N	string
+1893	326	submissionFileId	79	int
+1894	326	fileId	47	int
+1895	326	submissionId	10	int
+1896	326	originalFileName	index.pdf	string
+1897	326	username	jbrower	string
+1898	327	fileStage	2	int
+1899	327	sourceSubmissionFileId	\N	string
+1900	327	submissionFileId	79	int
+1901	327	fileId	47	int
+1902	327	submissionId	10	int
+1903	327	username	jbrower	string
+1904	327	originalFileName	index.pdf	string
+1905	327	name	index.pdf	string
+1906	331	fileStage	2	int
+1907	331	sourceSubmissionFileId	\N	string
+1908	331	submissionFileId	80	int
+1909	331	fileId	48	int
+1910	331	submissionId	11	int
+1911	331	originalFileName	intro.pdf	string
+1912	331	username	jlockehart	string
+1913	332	fileStage	2	int
+1914	332	submissionFileId	80	int
+1915	332	fileId	48	int
+1916	332	submissionId	11	int
+1917	332	username	jlockehart	string
+1918	332	name	intro.pdf	string
+1919	333	fileStage	2	int
+1920	333	sourceSubmissionFileId	\N	string
+1921	333	submissionFileId	80	int
+1922	333	fileId	48	int
+1923	333	submissionId	11	int
+1924	333	originalFileName	intro.pdf	string
+1925	333	username	jlockehart	string
+1926	334	fileStage	2	int
+1927	334	sourceSubmissionFileId	\N	string
+1928	334	submissionFileId	80	int
+1929	334	fileId	48	int
+1930	334	submissionId	11	int
+1931	334	username	jlockehart	string
+1932	334	originalFileName	intro.pdf	string
+1933	334	name	intro.pdf	string
+1934	335	fileStage	2	int
+1935	335	sourceSubmissionFileId	\N	string
+1936	335	submissionFileId	81	int
+1937	335	fileId	49	int
+1938	335	submissionId	11	int
+1939	335	originalFileName	poems.pdf	string
+1940	335	username	jlockehart	string
+1941	336	fileStage	2	int
+1942	336	submissionFileId	81	int
+1943	336	fileId	49	int
+1944	336	submissionId	11	int
+1945	336	username	jlockehart	string
+1946	336	name	poems.pdf	string
+1947	337	fileStage	2	int
+1948	337	sourceSubmissionFileId	\N	string
+1949	337	submissionFileId	81	int
+1950	337	fileId	49	int
+1951	337	submissionId	11	int
+1952	337	originalFileName	poems.pdf	string
+1953	337	username	jlockehart	string
+1954	338	fileStage	2	int
+1955	338	sourceSubmissionFileId	\N	string
+1956	338	submissionFileId	81	int
+1957	338	fileId	49	int
+1958	338	submissionId	11	int
+1959	338	username	jlockehart	string
+1960	338	originalFileName	poems.pdf	string
+1961	338	name	poems.pdf	string
+1962	340	editorId	3	int
+1963	340	editorName	Daniel Barnes	string
+1964	340	submissionId	11	int
+1965	340	decision	1	int
+1966	341	fileStage	19	int
+1967	341	sourceSubmissionFileId	81	int
+1968	341	submissionFileId	82	int
+1969	341	fileId	49	int
+1970	341	submissionId	11	int
+1971	341	originalFileName	poems.pdf	string
+1972	341	username	dbarnes	string
+1973	342	fileStage	19	int
+1974	342	submissionFileId	82	int
+1975	342	fileId	49	int
+1976	342	submissionId	11	int
+1977	342	username	dbarnes	string
+1978	342	name	poems.pdf	string
+1979	343	fileStage	19	int
+1980	343	sourceSubmissionFileId	80	int
+1981	343	submissionFileId	83	int
+1982	343	fileId	48	int
+1983	343	submissionId	11	int
+1984	343	originalFileName	intro.pdf	string
+1985	343	username	dbarnes	string
+1986	344	fileStage	19	int
+1987	344	submissionFileId	83	int
+1988	344	fileId	48	int
+1989	344	submissionId	11	int
+1990	344	username	dbarnes	string
+1991	344	name	intro.pdf	string
+1992	345	reviewAssignmentId	9	int
+1993	345	reviewerName	Aisla McCrae	string
+1994	345	submissionId	11	int
+1995	345	stageId	2	int
+1996	345	round	1	int
+1997	346	editorId	3	int
+1998	346	editorName	Daniel Barnes	string
+1999	346	submissionId	11	int
+2000	346	decision	3	int
+2001	347	reviewAssignmentId	10	int
+2002	347	reviewerName	Adela Gallego	string
+2003	347	submissionId	11	int
+2004	347	stageId	3	int
+2005	347	round	1	int
+2006	348	reviewAssignmentId	11	int
+2007	348	reviewerName	Gonzalo Favio	string
+2008	348	submissionId	11	int
+2009	348	stageId	3	int
+2010	348	round	1	int
+2011	349	reviewAssignmentId	10	int
+2012	349	reviewerName	Adela Gallego	string
+2013	349	submissionId	11	int
+2014	349	round	1	int
+2015	350	reviewAssignmentId	10	int
+2016	350	reviewerName	Adela Gallego	string
+2017	350	submissionId	11	int
+2018	350	round	1	int
+2019	351	reviewAssignmentId	11	int
+2020	351	reviewerName	Gonzalo Favio	string
+2021	351	submissionId	11	int
+2022	351	round	1	int
+2023	352	reviewAssignmentId	11	int
+2024	352	reviewerName	Gonzalo Favio	string
+2025	352	submissionId	11	int
+2026	352	round	1	int
+2027	353	editorId	3	int
+2028	353	editorName	Daniel Barnes	string
+2029	353	submissionId	11	int
+2030	353	decision	2	int
+2031	354	recipientCount	2	int
+2032	354	subject	Thank you for your review	string
+2033	357	fileStage	2	int
+2034	357	sourceSubmissionFileId	\N	string
+2035	357	submissionFileId	84	int
+2036	357	fileId	50	int
+2037	357	submissionId	12	int
+2038	357	originalFileName	chapter1.pdf	string
+2039	357	username	lelder	string
+2040	358	fileStage	2	int
+2041	358	submissionFileId	84	int
+2042	358	fileId	50	int
+2043	358	submissionId	12	int
+2044	358	username	lelder	string
+2045	358	name	chapter1.pdf	string
+2046	359	fileStage	2	int
+2047	359	sourceSubmissionFileId	\N	string
+2048	359	submissionFileId	84	int
+2049	359	fileId	50	int
+2050	359	submissionId	12	int
+2051	359	originalFileName	chapter1.pdf	string
+2052	359	username	lelder	string
+2053	360	fileStage	2	int
+2054	360	sourceSubmissionFileId	\N	string
+2055	360	submissionFileId	84	int
+2056	360	fileId	50	int
+2057	360	submissionId	12	int
+2058	360	username	lelder	string
+2059	360	originalFileName	chapter1.pdf	string
+2060	360	name	chapter1.pdf	string
+2061	361	fileStage	2	int
+2062	361	sourceSubmissionFileId	\N	string
+2063	361	submissionFileId	85	int
+2064	361	fileId	51	int
+2065	361	submissionId	12	int
+2066	361	originalFileName	chapter2.pdf	string
+2067	361	username	lelder	string
+2068	362	fileStage	2	int
+2069	362	submissionFileId	85	int
+2070	362	fileId	51	int
+2071	362	submissionId	12	int
+2072	362	username	lelder	string
+2073	362	name	chapter2.pdf	string
+2074	363	fileStage	2	int
+2075	363	sourceSubmissionFileId	\N	string
+2076	363	submissionFileId	85	int
+2077	363	fileId	51	int
+2078	363	submissionId	12	int
+2079	363	originalFileName	chapter2.pdf	string
+2080	363	username	lelder	string
+2081	364	fileStage	2	int
+2082	364	sourceSubmissionFileId	\N	string
+2083	364	submissionFileId	85	int
+2084	364	fileId	51	int
+2085	364	submissionId	12	int
+2086	364	username	lelder	string
+2087	364	originalFileName	chapter2.pdf	string
+2088	364	name	chapter2.pdf	string
+2089	365	fileStage	2	int
+2090	365	sourceSubmissionFileId	\N	string
+2091	365	submissionFileId	86	int
+2092	365	fileId	52	int
+2093	365	submissionId	12	int
+2094	365	originalFileName	chapter3.pdf	string
+2095	365	username	lelder	string
+2096	366	fileStage	2	int
+2097	366	submissionFileId	86	int
+2098	366	fileId	52	int
+2099	366	submissionId	12	int
+2100	366	username	lelder	string
+2101	366	name	chapter3.pdf	string
+2102	367	fileStage	2	int
+2103	367	sourceSubmissionFileId	\N	string
+2104	367	submissionFileId	86	int
+2105	367	fileId	52	int
+2106	367	submissionId	12	int
+2107	367	originalFileName	chapter3.pdf	string
+2108	367	username	lelder	string
+2109	368	fileStage	2	int
+2110	368	sourceSubmissionFileId	\N	string
+2111	368	submissionFileId	86	int
+2112	368	fileId	52	int
+2113	368	submissionId	12	int
+2114	368	username	lelder	string
+2115	368	originalFileName	chapter3.pdf	string
+2116	368	name	chapter3.pdf	string
+2117	370	editorId	3	int
+2118	370	editorName	Daniel Barnes	string
+2119	370	submissionId	12	int
+2120	370	decision	1	int
+2121	371	fileStage	19	int
+2122	371	sourceSubmissionFileId	86	int
+2123	371	submissionFileId	87	int
+2124	371	fileId	52	int
+2125	371	submissionId	12	int
+2126	371	originalFileName	chapter3.pdf	string
+2127	371	username	dbarnes	string
+2128	372	fileStage	19	int
+2129	372	submissionFileId	87	int
+2130	372	fileId	52	int
+2131	372	submissionId	12	int
+2132	372	username	dbarnes	string
+2133	372	name	chapter3.pdf	string
+2134	373	fileStage	19	int
+2135	373	sourceSubmissionFileId	85	int
+2136	373	submissionFileId	88	int
+2137	373	fileId	51	int
+2138	373	submissionId	12	int
+2139	373	originalFileName	chapter2.pdf	string
+2140	373	username	dbarnes	string
+2141	374	fileStage	19	int
+2142	374	submissionFileId	88	int
+2143	374	fileId	51	int
+2144	374	submissionId	12	int
+2145	374	username	dbarnes	string
+2146	374	name	chapter2.pdf	string
+2147	375	fileStage	19	int
+2148	375	sourceSubmissionFileId	84	int
+2149	375	submissionFileId	89	int
+2150	375	fileId	50	int
+2151	375	submissionId	12	int
+2152	375	originalFileName	chapter1.pdf	string
+2153	375	username	dbarnes	string
+2154	376	fileStage	19	int
+2155	376	submissionFileId	89	int
+2156	376	fileId	50	int
+2157	376	submissionId	12	int
+2158	376	username	dbarnes	string
+2159	376	name	chapter1.pdf	string
+2160	377	reviewAssignmentId	12	int
+2161	377	reviewerName	Julie Janssen	string
+2162	377	submissionId	12	int
+2163	377	stageId	2	int
+2164	377	round	1	int
+2165	378	reviewAssignmentId	13	int
+2166	378	reviewerName	Paul Hudson	string
+2167	378	submissionId	12	int
+2168	378	stageId	2	int
+2169	378	round	1	int
+2170	379	reviewAssignmentId	14	int
+2171	379	reviewerName	Aisla McCrae	string
+2172	379	submissionId	12	int
+2173	379	stageId	2	int
+2174	379	round	1	int
+2175	380	reviewAssignmentId	13	int
+2176	380	reviewerName	Paul Hudson	string
+2177	380	submissionId	12	int
+2178	380	round	1	int
+2179	381	reviewAssignmentId	13	int
+2180	381	reviewerName	Paul Hudson	string
+2181	381	submissionId	12	int
+2182	381	round	1	int
+2183	384	fileStage	2	int
+2184	384	sourceSubmissionFileId	\N	string
+2185	384	submissionFileId	90	int
+2186	384	fileId	53	int
+2187	384	submissionId	13	int
+2188	384	originalFileName	chapter1.pdf	string
+2189	384	username	mally	string
+2190	385	fileStage	2	int
+2191	385	submissionFileId	90	int
+2192	385	fileId	53	int
+2193	385	submissionId	13	int
+2194	385	username	mally	string
+2195	385	name	chapter1.pdf	string
+2196	386	fileStage	2	int
+2197	386	sourceSubmissionFileId	\N	string
+2198	386	submissionFileId	90	int
+2199	386	fileId	53	int
+2200	386	submissionId	13	int
+2201	386	originalFileName	chapter1.pdf	string
+2202	386	username	mally	string
+2203	387	fileStage	2	int
+2204	387	sourceSubmissionFileId	\N	string
+2205	387	submissionFileId	90	int
+2206	387	fileId	53	int
+2207	387	submissionId	13	int
+2208	387	username	mally	string
+2209	387	originalFileName	chapter1.pdf	string
+2210	387	name	chapter1.pdf	string
+2211	388	fileStage	2	int
+2212	388	sourceSubmissionFileId	\N	string
+2213	388	submissionFileId	91	int
+2214	388	fileId	54	int
+2215	388	submissionId	13	int
+2216	388	originalFileName	chapter2.pdf	string
+2217	388	username	mally	string
+2218	389	fileStage	2	int
+2219	389	submissionFileId	91	int
+2220	389	fileId	54	int
+2221	389	submissionId	13	int
+2222	389	username	mally	string
+2223	389	name	chapter2.pdf	string
+2224	390	fileStage	2	int
+2225	390	sourceSubmissionFileId	\N	string
+2226	390	submissionFileId	91	int
+2227	390	fileId	54	int
+2228	390	submissionId	13	int
+2229	390	originalFileName	chapter2.pdf	string
+2230	390	username	mally	string
+2231	391	fileStage	2	int
+2232	391	sourceSubmissionFileId	\N	string
+2233	391	submissionFileId	91	int
+2234	391	fileId	54	int
+2235	391	submissionId	13	int
+2236	391	username	mally	string
+2237	391	originalFileName	chapter2.pdf	string
+2238	391	name	chapter2.pdf	string
+2239	392	fileStage	2	int
+2240	392	sourceSubmissionFileId	\N	string
+2241	392	submissionFileId	92	int
+2242	392	fileId	55	int
+2243	392	submissionId	13	int
+2244	392	originalFileName	chapter3.pdf	string
+2245	392	username	mally	string
+2246	393	fileStage	2	int
+2247	393	submissionFileId	92	int
+2248	393	fileId	55	int
+2249	393	submissionId	13	int
+2250	393	username	mally	string
+2251	393	name	chapter3.pdf	string
+2252	394	fileStage	2	int
+2253	394	sourceSubmissionFileId	\N	string
+2254	394	submissionFileId	92	int
+2255	394	fileId	55	int
+2256	394	submissionId	13	int
+2257	394	originalFileName	chapter3.pdf	string
+2258	394	username	mally	string
+2259	395	fileStage	2	int
+2260	395	sourceSubmissionFileId	\N	string
+2261	395	submissionFileId	92	int
+2262	395	fileId	55	int
+2263	395	submissionId	13	int
+2264	395	username	mally	string
+2265	395	originalFileName	chapter3.pdf	string
+2266	395	name	chapter3.pdf	string
+2267	397	editorId	3	int
+2268	397	editorName	Daniel Barnes	string
+2269	397	submissionId	13	int
+2270	397	decision	1	int
+2271	398	fileStage	19	int
+2272	398	sourceSubmissionFileId	92	int
+2273	398	submissionFileId	93	int
+2274	398	fileId	55	int
+2275	398	submissionId	13	int
+2276	398	originalFileName	chapter3.pdf	string
+2277	398	username	dbarnes	string
+2278	399	fileStage	19	int
+2279	399	submissionFileId	93	int
+2280	399	fileId	55	int
+2281	399	submissionId	13	int
+2282	399	username	dbarnes	string
+2283	399	name	chapter3.pdf	string
+2284	400	fileStage	19	int
+2285	400	sourceSubmissionFileId	91	int
+2286	400	submissionFileId	94	int
+2287	400	fileId	54	int
+2288	400	submissionId	13	int
+2289	400	originalFileName	chapter2.pdf	string
+2290	400	username	dbarnes	string
+2291	401	fileStage	19	int
+2292	401	submissionFileId	94	int
+2293	401	fileId	54	int
+2294	401	submissionId	13	int
+2295	401	username	dbarnes	string
+2296	401	name	chapter2.pdf	string
+2297	402	fileStage	19	int
+2298	402	sourceSubmissionFileId	90	int
+2299	402	submissionFileId	95	int
+2300	402	fileId	53	int
+2301	402	submissionId	13	int
+2302	402	originalFileName	chapter1.pdf	string
+2303	402	username	dbarnes	string
+2304	403	fileStage	19	int
+2305	403	submissionFileId	95	int
+2306	403	fileId	53	int
+2307	403	submissionId	13	int
+2308	403	username	dbarnes	string
+2309	403	name	chapter1.pdf	string
+2310	404	reviewAssignmentId	15	int
+2311	404	reviewerName	Paul Hudson	string
+2312	404	submissionId	13	int
+2313	404	stageId	2	int
+2314	404	round	1	int
+2315	405	editorId	3	int
+2316	405	editorName	Daniel Barnes	string
+2317	405	submissionId	13	int
+2318	405	decision	3	int
+2319	406	reviewAssignmentId	16	int
+2320	406	reviewerName	Adela Gallego	string
+2321	406	submissionId	13	int
+2322	406	stageId	3	int
+2323	406	round	1	int
+2324	407	reviewAssignmentId	17	int
+2325	407	reviewerName	Al Zacharia	string
+2326	407	submissionId	13	int
+2327	407	stageId	3	int
+2328	407	round	1	int
+2329	408	reviewAssignmentId	18	int
+2330	408	reviewerName	Gonzalo Favio	string
+2331	408	submissionId	13	int
+2332	408	stageId	3	int
+2333	408	round	1	int
+2334	409	reviewAssignmentId	16	int
+2335	409	reviewerName	Adela Gallego	string
+2336	409	submissionId	13	int
+2337	409	round	1	int
+2338	410	reviewAssignmentId	16	int
+2339	410	reviewerName	Adela Gallego	string
+2340	410	submissionId	13	int
+2341	410	round	1	int
+2342	411	reviewAssignmentId	18	int
+2343	411	reviewerName	Gonzalo Favio	string
+2344	411	submissionId	13	int
+2345	411	round	1	int
+2346	412	reviewAssignmentId	18	int
+2347	412	reviewerName	Gonzalo Favio	string
+2348	412	submissionId	13	int
+2349	412	round	1	int
+2350	413	editorId	3	int
+2351	413	editorName	Daniel Barnes	string
+2352	413	submissionId	13	int
+2353	413	decision	2	int
+2354	414	recipientCount	2	int
+2355	414	subject	Thank you for your review	string
+2356	417	fileStage	2	int
+2357	417	sourceSubmissionFileId	\N	string
+2358	417	submissionFileId	96	int
+2359	417	fileId	56	int
+2360	417	submissionId	14	int
+2361	417	originalFileName	chapter1.pdf	string
+2362	417	username	mdawson	string
+2363	418	fileStage	2	int
+2364	418	submissionFileId	96	int
+2365	418	fileId	56	int
+2366	418	submissionId	14	int
+2367	418	username	mdawson	string
+2368	418	name	chapter1.pdf	string
+2369	419	fileStage	2	int
+2370	419	sourceSubmissionFileId	\N	string
+2371	419	submissionFileId	96	int
+2372	419	fileId	56	int
+2373	419	submissionId	14	int
+2374	419	originalFileName	chapter1.pdf	string
+2375	419	username	mdawson	string
+2376	420	fileStage	2	int
+2377	420	sourceSubmissionFileId	\N	string
+2378	420	submissionFileId	96	int
+2379	420	fileId	56	int
+2380	420	submissionId	14	int
+2381	420	username	mdawson	string
+2382	420	originalFileName	chapter1.pdf	string
+2383	420	name	chapter1.pdf	string
+2384	421	fileStage	2	int
+2385	421	sourceSubmissionFileId	\N	string
+2386	421	submissionFileId	97	int
+2387	421	fileId	57	int
+2388	421	submissionId	14	int
+2389	421	originalFileName	chapter2.pdf	string
+2390	421	username	mdawson	string
+2391	422	fileStage	2	int
+2392	422	submissionFileId	97	int
+2393	422	fileId	57	int
+2394	422	submissionId	14	int
+2395	422	username	mdawson	string
+2396	422	name	chapter2.pdf	string
+2397	423	fileStage	2	int
+2398	423	sourceSubmissionFileId	\N	string
+2399	423	submissionFileId	97	int
+2400	423	fileId	57	int
+2401	423	submissionId	14	int
+2402	423	originalFileName	chapter2.pdf	string
+2403	423	username	mdawson	string
+2404	424	fileStage	2	int
+2405	424	sourceSubmissionFileId	\N	string
+2406	424	submissionFileId	97	int
+2407	424	fileId	57	int
+2408	424	submissionId	14	int
+2409	424	username	mdawson	string
+2410	424	originalFileName	chapter2.pdf	string
+2411	424	name	chapter2.pdf	string
+2412	425	fileStage	2	int
+2413	425	sourceSubmissionFileId	\N	string
+2414	425	submissionFileId	98	int
+2415	425	fileId	58	int
+2416	425	submissionId	14	int
+2417	425	originalFileName	chapter3.pdf	string
+2418	425	username	mdawson	string
+2419	426	fileStage	2	int
+2420	426	submissionFileId	98	int
+2421	426	fileId	58	int
+2422	426	submissionId	14	int
+2423	426	username	mdawson	string
+2424	426	name	chapter3.pdf	string
+2425	427	fileStage	2	int
+2426	427	sourceSubmissionFileId	\N	string
+2427	427	submissionFileId	98	int
+2428	427	fileId	58	int
+2429	427	submissionId	14	int
+2430	427	originalFileName	chapter3.pdf	string
+2431	427	username	mdawson	string
+2432	428	fileStage	2	int
+2433	428	sourceSubmissionFileId	\N	string
+2434	428	submissionFileId	98	int
+2435	428	fileId	58	int
+2436	428	submissionId	14	int
+2437	428	username	mdawson	string
+2438	428	originalFileName	chapter3.pdf	string
+2439	428	name	chapter3.pdf	string
+2440	429	fileStage	2	int
+2441	429	sourceSubmissionFileId	\N	string
+2442	429	submissionFileId	99	int
+2443	429	fileId	59	int
+2444	429	submissionId	14	int
+2445	429	originalFileName	chapter4.pdf	string
+2446	429	username	mdawson	string
+2447	430	fileStage	2	int
+2448	430	submissionFileId	99	int
+2449	430	fileId	59	int
+2450	430	submissionId	14	int
+2451	430	username	mdawson	string
+2452	430	name	chapter4.pdf	string
+2453	431	fileStage	2	int
+2454	431	sourceSubmissionFileId	\N	string
+2455	431	submissionFileId	99	int
+2456	431	fileId	59	int
+2457	431	submissionId	14	int
+2458	431	originalFileName	chapter4.pdf	string
+2459	431	username	mdawson	string
+2460	432	fileStage	2	int
+2461	432	sourceSubmissionFileId	\N	string
+2462	432	submissionFileId	99	int
+2463	432	fileId	59	int
+2464	432	submissionId	14	int
+2465	432	username	mdawson	string
+2466	432	originalFileName	chapter4.pdf	string
+2467	432	name	chapter4.pdf	string
+2468	433	fileStage	2	int
+2469	433	sourceSubmissionFileId	\N	string
+2470	433	submissionFileId	100	int
+2471	433	fileId	60	int
+2472	433	submissionId	14	int
+2473	433	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+2474	433	username	mdawson	string
+2475	434	fileStage	2	int
+2476	434	submissionFileId	100	int
+2477	434	fileId	60	int
+2478	434	submissionId	14	int
+2479	434	username	mdawson	string
+2480	434	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+2481	435	fileStage	2	int
+2482	435	sourceSubmissionFileId	\N	string
+2483	435	submissionFileId	100	int
+2484	435	fileId	60	int
+2485	435	submissionId	14	int
+2486	435	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+2487	435	username	mdawson	string
+2488	436	fileStage	2	int
+2489	436	sourceSubmissionFileId	\N	string
+2490	436	submissionFileId	100	int
+2491	436	fileId	60	int
+2492	436	submissionId	14	int
+2493	436	username	mdawson	string
+2494	436	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+2495	436	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+2496	437	fileStage	2	int
+2497	437	sourceSubmissionFileId	\N	string
+2498	437	submissionFileId	101	int
+2499	437	fileId	61	int
+2500	437	submissionId	14	int
+2501	437	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+2502	437	username	mdawson	string
+2503	438	fileStage	2	int
+2504	438	submissionFileId	101	int
+2505	438	fileId	61	int
+2506	438	submissionId	14	int
+2507	438	username	mdawson	string
+2508	438	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+2509	439	fileStage	2	int
+2510	439	sourceSubmissionFileId	\N	string
+2511	439	submissionFileId	101	int
+2512	439	fileId	61	int
+2513	439	submissionId	14	int
+2514	439	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+2515	439	username	mdawson	string
+2516	440	fileStage	2	int
+2517	440	sourceSubmissionFileId	\N	string
+2518	440	submissionFileId	101	int
+2519	440	fileId	61	int
+2520	440	submissionId	14	int
+2521	440	username	mdawson	string
+2522	440	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+2523	440	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+2524	442	editorId	3	int
+2525	442	editorName	Daniel Barnes	string
+2526	442	submissionId	14	int
+2527	442	decision	1	int
+2528	443	fileStage	19	int
+2529	443	sourceSubmissionFileId	101	int
+2530	443	submissionFileId	102	int
+2531	443	fileId	61	int
+2532	443	submissionId	14	int
+2533	443	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+2534	443	username	dbarnes	string
+2535	444	fileStage	19	int
+2536	444	submissionFileId	102	int
+2537	444	fileId	61	int
+2538	444	submissionId	14	int
+2539	444	username	dbarnes	string
+2540	444	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+2541	445	fileStage	19	int
+2542	445	sourceSubmissionFileId	100	int
+2543	445	submissionFileId	103	int
+2544	445	fileId	60	int
+2545	445	submissionId	14	int
+2546	445	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+2547	445	username	dbarnes	string
+2548	446	fileStage	19	int
+2549	446	submissionFileId	103	int
+2550	446	fileId	60	int
+2551	446	submissionId	14	int
+2552	446	username	dbarnes	string
+2553	446	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+2554	447	fileStage	19	int
+2555	447	sourceSubmissionFileId	99	int
+2556	447	submissionFileId	104	int
+2557	447	fileId	59	int
+2558	447	submissionId	14	int
+2559	447	originalFileName	chapter4.pdf	string
+2560	447	username	dbarnes	string
+2561	448	fileStage	19	int
+2562	448	submissionFileId	104	int
+2563	448	fileId	59	int
+2564	448	submissionId	14	int
+2565	448	username	dbarnes	string
+2566	448	name	chapter4.pdf	string
+2567	449	fileStage	19	int
+2568	449	sourceSubmissionFileId	98	int
+2569	449	submissionFileId	105	int
+2570	449	fileId	58	int
+2571	449	submissionId	14	int
+2572	449	originalFileName	chapter3.pdf	string
+2573	449	username	dbarnes	string
+2574	450	fileStage	19	int
+2575	450	submissionFileId	105	int
+2576	450	fileId	58	int
+2577	450	submissionId	14	int
+2578	450	username	dbarnes	string
+2579	450	name	chapter3.pdf	string
+2580	451	fileStage	19	int
+2581	451	sourceSubmissionFileId	97	int
+2582	451	submissionFileId	106	int
+2583	451	fileId	57	int
+2584	451	submissionId	14	int
+2585	451	originalFileName	chapter2.pdf	string
+2586	451	username	dbarnes	string
+2587	452	fileStage	19	int
+2588	452	submissionFileId	106	int
+2589	452	fileId	57	int
+2590	452	submissionId	14	int
+2591	452	username	dbarnes	string
+2592	452	name	chapter2.pdf	string
+2593	453	fileStage	19	int
+2594	453	sourceSubmissionFileId	96	int
+2595	453	submissionFileId	107	int
+2596	453	fileId	56	int
+2597	453	submissionId	14	int
+2598	453	originalFileName	chapter1.pdf	string
+2599	453	username	dbarnes	string
+2600	454	fileStage	19	int
+2601	454	submissionFileId	107	int
+2602	454	fileId	56	int
+2603	454	submissionId	14	int
+2604	454	username	dbarnes	string
+2605	454	name	chapter1.pdf	string
+2606	455	reviewAssignmentId	19	int
+2607	455	reviewerName	Julie Janssen	string
+2608	455	submissionId	14	int
+2609	455	stageId	2	int
+2610	455	round	1	int
+2611	456	editorId	3	int
+2612	456	editorName	Daniel Barnes	string
+2613	456	submissionId	14	int
+2614	456	decision	3	int
+2615	457	reviewAssignmentId	20	int
+2616	457	reviewerName	Al Zacharia	string
+2617	457	submissionId	14	int
+2618	457	stageId	3	int
+2619	457	round	1	int
+2620	458	editorId	3	int
+2621	458	editorName	Daniel Barnes	string
+2622	458	submissionId	14	int
+2623	458	decision	2	int
+2624	459	name	Maria Fritz	string
+2625	459	username	mfritz	string
+2626	459	userGroupName	Copyeditor	string
+2627	460	editorId	3	int
+2628	460	editorName	Daniel Barnes	string
+2629	460	submissionId	14	int
+2630	460	decision	7	int
+2631	461	name	Graham Cox	string
+2632	461	username	gcox	string
+2633	461	userGroupName	Layout Editor	string
+2634	462	name	Sabine Kumar	string
+2635	462	username	skumar	string
+2636	462	userGroupName	Proofreader	string
+2637	463	formatName	PDF	string
+2638	464	fileStage	10	int
+2639	464	sourceSubmissionFileId	101	int
+2640	464	submissionFileId	108	int
+2641	464	fileId	61	int
+2642	464	submissionId	14	int
+2643	464	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+2644	464	username	dbarnes	string
+2645	465	fileStage	10	int
+2646	465	submissionFileId	108	int
+2647	465	fileId	61	int
+2648	465	submissionId	14	int
+2649	465	username	dbarnes	string
+2650	465	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+2651	466	fileStage	10	int
+2652	466	sourceSubmissionFileId	100	int
+2653	466	submissionFileId	109	int
+2654	466	fileId	60	int
+2655	466	submissionId	14	int
+2656	466	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+2657	466	username	dbarnes	string
+2658	467	fileStage	10	int
+2659	467	submissionFileId	109	int
+2660	467	fileId	60	int
+2661	467	submissionId	14	int
+2662	467	username	dbarnes	string
+2663	467	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+2664	468	fileStage	10	int
+2665	468	sourceSubmissionFileId	99	int
+2666	468	submissionFileId	110	int
+2667	468	fileId	59	int
+2668	468	submissionId	14	int
+2669	468	originalFileName	chapter4.pdf	string
+2670	468	username	dbarnes	string
+2671	469	fileStage	10	int
+2672	469	submissionFileId	110	int
+2673	469	fileId	59	int
+2674	469	submissionId	14	int
+2675	469	username	dbarnes	string
+2676	469	name	chapter4.pdf	string
+2677	470	fileStage	10	int
+2678	470	sourceSubmissionFileId	98	int
+2679	470	submissionFileId	111	int
+2680	470	fileId	58	int
+2681	470	submissionId	14	int
+2682	470	originalFileName	chapter3.pdf	string
+2683	470	username	dbarnes	string
+2684	471	fileStage	10	int
+2685	471	submissionFileId	111	int
+2686	471	fileId	58	int
+2687	471	submissionId	14	int
+2688	471	username	dbarnes	string
+2689	471	name	chapter3.pdf	string
+2690	472	fileStage	10	int
+2691	472	sourceSubmissionFileId	97	int
+2692	472	submissionFileId	112	int
+2693	472	fileId	57	int
+2694	472	submissionId	14	int
+2695	472	originalFileName	chapter2.pdf	string
+2696	472	username	dbarnes	string
+2697	473	fileStage	10	int
+2698	473	submissionFileId	112	int
+2699	473	fileId	57	int
+2700	473	submissionId	14	int
+2701	473	username	dbarnes	string
+2702	473	name	chapter2.pdf	string
+2703	474	fileStage	10	int
+2704	474	sourceSubmissionFileId	96	int
+2705	474	submissionFileId	113	int
+2706	474	fileId	56	int
+2707	474	submissionId	14	int
+2708	474	originalFileName	chapter1.pdf	string
+2709	474	username	dbarnes	string
+2710	475	fileStage	10	int
+2711	475	submissionFileId	113	int
+2712	475	fileId	56	int
+2713	475	submissionId	14	int
+2714	475	username	dbarnes	string
+2715	475	name	chapter1.pdf	string
+2716	476	publicationFormatName	PDF	string
+2717	477	publicationFormatName	PDF	string
+2718	478	fileStage	10	int
+2719	478	sourceSubmissionFileId	96	int
+2720	478	submissionFileId	113	int
+2721	478	fileId	56	int
+2722	478	submissionId	14	int
+2723	478	originalFileName	chapter1.pdf	string
+2724	478	username	dbarnes	string
+2725	479	fileStage	10	int
+2726	479	sourceSubmissionFileId	96	int
+2727	479	submissionFileId	113	int
+2728	479	fileId	56	int
+2729	479	submissionId	14	int
+2730	479	username	dbarnes	string
+2731	479	originalFileName	chapter1.pdf	string
+2732	479	name	chapter1.pdf	string
+2733	480	file	chapter1.pdf	string
+2734	480	name	Daniel Barnes	string
+2735	480	username	dbarnes	string
+2736	481	fileStage	10	int
+2737	481	sourceSubmissionFileId	96	int
+2738	481	submissionFileId	113	int
+2739	481	fileId	56	int
+2740	481	submissionId	14	int
+2741	481	originalFileName	chapter1.pdf	string
+2742	481	username	dbarnes	string
+2743	482	fileStage	10	int
+2744	482	sourceSubmissionFileId	96	int
+2745	482	submissionFileId	113	int
+2746	482	fileId	56	int
+2747	482	submissionId	14	int
+2748	482	username	dbarnes	string
+2749	482	originalFileName	chapter1.pdf	string
+2750	482	name	chapter1.pdf	string
+2751	483	fileStage	10	int
+2752	483	sourceSubmissionFileId	97	int
+2753	483	submissionFileId	112	int
+2754	483	fileId	57	int
+2755	483	submissionId	14	int
+2756	483	originalFileName	chapter2.pdf	string
+2757	483	username	dbarnes	string
+2758	484	fileStage	10	int
+2759	484	sourceSubmissionFileId	97	int
+2760	484	submissionFileId	112	int
+2761	484	fileId	57	int
+2762	484	submissionId	14	int
+2763	484	username	dbarnes	string
+2764	484	originalFileName	chapter2.pdf	string
+2765	484	name	chapter2.pdf	string
+2766	485	file	chapter2.pdf	string
+2767	485	name	Daniel Barnes	string
+2768	485	username	dbarnes	string
+2769	486	fileStage	10	int
+2770	486	sourceSubmissionFileId	97	int
+2771	486	submissionFileId	112	int
+2772	486	fileId	57	int
+2773	486	submissionId	14	int
+2774	486	originalFileName	chapter2.pdf	string
+2775	486	username	dbarnes	string
+2776	487	fileStage	10	int
+2777	487	sourceSubmissionFileId	97	int
+2778	487	submissionFileId	112	int
+2779	487	fileId	57	int
+2780	487	submissionId	14	int
+2781	487	username	dbarnes	string
+2782	487	originalFileName	chapter2.pdf	string
+2783	487	name	chapter2.pdf	string
+2784	488	fileStage	10	int
+2785	488	sourceSubmissionFileId	98	int
+2786	488	submissionFileId	111	int
+2787	488	fileId	58	int
+2788	488	submissionId	14	int
+2789	488	originalFileName	chapter3.pdf	string
+2790	488	username	dbarnes	string
+2791	489	fileStage	10	int
+2792	489	sourceSubmissionFileId	98	int
+2793	489	submissionFileId	111	int
+2794	489	fileId	58	int
+2795	489	submissionId	14	int
+2796	489	username	dbarnes	string
+2797	489	originalFileName	chapter3.pdf	string
+2798	489	name	chapter3.pdf	string
+2799	490	file	chapter3.pdf	string
+2800	490	name	Daniel Barnes	string
+2801	490	username	dbarnes	string
+2802	491	fileStage	10	int
+2803	491	sourceSubmissionFileId	98	int
+2804	491	submissionFileId	111	int
+2805	491	fileId	58	int
+2806	491	submissionId	14	int
+2807	491	originalFileName	chapter3.pdf	string
+2808	491	username	dbarnes	string
+2809	492	fileStage	10	int
+2810	492	sourceSubmissionFileId	98	int
+2811	492	submissionFileId	111	int
+2812	492	fileId	58	int
+2813	492	submissionId	14	int
+2814	492	username	dbarnes	string
+2815	492	originalFileName	chapter3.pdf	string
+2816	492	name	chapter3.pdf	string
+2817	493	fileStage	10	int
+2818	493	sourceSubmissionFileId	99	int
+2819	493	submissionFileId	110	int
+2820	493	fileId	59	int
+2821	493	submissionId	14	int
+2822	493	originalFileName	chapter4.pdf	string
+2823	493	username	dbarnes	string
+2824	494	fileStage	10	int
+2825	494	sourceSubmissionFileId	99	int
+2826	494	submissionFileId	110	int
+2827	494	fileId	59	int
+2828	494	submissionId	14	int
+2829	494	username	dbarnes	string
+2830	494	originalFileName	chapter4.pdf	string
+2831	494	name	chapter4.pdf	string
+2832	495	file	chapter4.pdf	string
+2833	495	name	Daniel Barnes	string
+2834	495	username	dbarnes	string
+2835	496	fileStage	10	int
+2836	496	sourceSubmissionFileId	99	int
+2837	496	submissionFileId	110	int
+2838	496	fileId	59	int
+2839	496	submissionId	14	int
+2840	496	originalFileName	chapter4.pdf	string
+2841	496	username	dbarnes	string
+2842	497	fileStage	10	int
+2843	497	sourceSubmissionFileId	99	int
+2844	497	submissionFileId	110	int
+2845	497	fileId	59	int
+2846	497	submissionId	14	int
+2847	497	username	dbarnes	string
+2848	497	originalFileName	chapter4.pdf	string
+2849	497	name	chapter4.pdf	string
+2850	498	fileStage	10	int
+2851	498	sourceSubmissionFileId	100	int
+2852	498	submissionFileId	109	int
+2853	498	fileId	60	int
+2854	498	submissionId	14	int
+2855	498	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+2856	498	username	dbarnes	string
+2857	499	fileStage	10	int
+2858	499	sourceSubmissionFileId	100	int
+2859	499	submissionFileId	109	int
+2860	499	fileId	60	int
+2861	499	submissionId	14	int
+2862	499	username	dbarnes	string
+2863	499	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+2864	499	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+2865	500	file	Segmentation of Vascular Ultrasound Imag.pdf	string
+2866	500	name	Daniel Barnes	string
+2867	500	username	dbarnes	string
+2868	501	fileStage	10	int
+2869	501	sourceSubmissionFileId	100	int
+2870	501	submissionFileId	109	int
+2871	501	fileId	60	int
+2872	501	submissionId	14	int
+2873	501	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+2874	501	username	dbarnes	string
+2875	502	fileStage	10	int
+2876	502	sourceSubmissionFileId	100	int
+2877	502	submissionFileId	109	int
+2878	502	fileId	60	int
+2879	502	submissionId	14	int
+2880	502	username	dbarnes	string
+2881	502	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+2882	502	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+2883	503	fileStage	10	int
+2884	503	sourceSubmissionFileId	101	int
+2885	503	submissionFileId	108	int
+2886	503	fileId	61	int
+2887	503	submissionId	14	int
+2888	503	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+2889	503	username	dbarnes	string
+2890	504	fileStage	10	int
+2891	504	sourceSubmissionFileId	101	int
+2892	504	submissionFileId	108	int
+2893	504	fileId	61	int
+2894	504	submissionId	14	int
+2895	504	username	dbarnes	string
+2896	504	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+2897	504	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+2898	505	file	The Canadian Nutrient File: Nutrient Val.pdf	string
+2899	505	name	Daniel Barnes	string
+2900	505	username	dbarnes	string
+2901	506	fileStage	10	int
+2902	506	sourceSubmissionFileId	101	int
+2903	506	submissionFileId	108	int
+2904	506	fileId	61	int
+2905	506	submissionId	14	int
+2906	506	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+2907	506	username	dbarnes	string
+2908	507	fileStage	10	int
+2909	507	sourceSubmissionFileId	101	int
+2910	507	submissionFileId	108	int
+2911	507	fileId	61	int
+2912	507	submissionId	14	int
+2913	507	username	dbarnes	string
+2914	507	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+2915	507	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+2916	511	fileStage	2	int
+2917	511	sourceSubmissionFileId	\N	string
+2918	511	submissionFileId	114	int
+2919	511	fileId	62	int
+2920	511	submissionId	15	int
+2921	511	originalFileName	chapter1.pdf	string
+2922	511	username	mforan	string
+2923	512	fileStage	2	int
+2924	512	submissionFileId	114	int
+2925	512	fileId	62	int
+2926	512	submissionId	15	int
+2927	512	username	mforan	string
+2928	512	name	chapter1.pdf	string
+2929	513	fileStage	2	int
+2930	513	sourceSubmissionFileId	\N	string
+2931	513	submissionFileId	114	int
+2932	513	fileId	62	int
+2933	513	submissionId	15	int
+2934	513	originalFileName	chapter1.pdf	string
+2935	513	username	mforan	string
+2936	514	fileStage	2	int
+2937	514	sourceSubmissionFileId	\N	string
+2938	514	submissionFileId	114	int
+2939	514	fileId	62	int
+2940	514	submissionId	15	int
+2941	514	username	mforan	string
+2942	514	originalFileName	chapter1.pdf	string
+2943	514	name	chapter1.pdf	string
+2944	515	fileStage	2	int
+2945	515	sourceSubmissionFileId	\N	string
+2946	515	submissionFileId	115	int
+2947	515	fileId	63	int
+2948	515	submissionId	15	int
+2949	515	originalFileName	chapter2.pdf	string
+2950	515	username	mforan	string
+2951	516	fileStage	2	int
+2952	516	submissionFileId	115	int
+2953	516	fileId	63	int
+2954	516	submissionId	15	int
+2955	516	username	mforan	string
+2956	516	name	chapter2.pdf	string
+2957	517	fileStage	2	int
+2958	517	sourceSubmissionFileId	\N	string
+2959	517	submissionFileId	115	int
+2960	517	fileId	63	int
+2961	517	submissionId	15	int
+2962	517	originalFileName	chapter2.pdf	string
+2963	517	username	mforan	string
+2964	518	fileStage	2	int
+2965	518	sourceSubmissionFileId	\N	string
+2966	518	submissionFileId	115	int
+2967	518	fileId	63	int
+2968	518	submissionId	15	int
+2969	518	username	mforan	string
+2970	518	originalFileName	chapter2.pdf	string
+2971	518	name	chapter2.pdf	string
+2972	519	fileStage	2	int
+2973	519	sourceSubmissionFileId	\N	string
+2974	519	submissionFileId	116	int
+2975	519	fileId	64	int
+2976	519	submissionId	15	int
+2977	519	originalFileName	chapter3.pdf	string
+2978	519	username	mforan	string
+2979	520	fileStage	2	int
+2980	520	submissionFileId	116	int
+2981	520	fileId	64	int
+2982	520	submissionId	15	int
+2983	520	username	mforan	string
+2984	520	name	chapter3.pdf	string
+2985	521	fileStage	2	int
+2986	521	sourceSubmissionFileId	\N	string
+2987	521	submissionFileId	116	int
+2988	521	fileId	64	int
+2989	521	submissionId	15	int
+2990	521	originalFileName	chapter3.pdf	string
+2991	521	username	mforan	string
+2992	522	fileStage	2	int
+2993	522	sourceSubmissionFileId	\N	string
+2994	522	submissionFileId	116	int
+2995	522	fileId	64	int
+2996	522	submissionId	15	int
+2997	522	username	mforan	string
+2998	522	originalFileName	chapter3.pdf	string
+2999	522	name	chapter3.pdf	string
+3000	524	editorId	3	int
+3001	524	editorName	Daniel Barnes	string
+3002	524	submissionId	15	int
+3003	524	decision	18	int
+3004	525	fileStage	4	int
+3005	525	sourceSubmissionFileId	116	int
+3006	525	submissionFileId	117	int
+3007	525	fileId	64	int
+3008	525	submissionId	15	int
+3009	525	originalFileName	chapter3.pdf	string
+3010	525	username	dbarnes	string
+3011	526	fileStage	4	int
+3012	526	submissionFileId	117	int
+3013	526	fileId	64	int
+3014	526	submissionId	15	int
+3015	526	username	dbarnes	string
+3016	526	name	chapter3.pdf	string
+3017	527	fileStage	4	int
+3018	527	sourceSubmissionFileId	115	int
+3019	527	submissionFileId	118	int
+3020	527	fileId	63	int
+3021	527	submissionId	15	int
+3022	527	originalFileName	chapter2.pdf	string
+3023	527	username	dbarnes	string
+3024	528	fileStage	4	int
+3025	528	submissionFileId	118	int
+3026	528	fileId	63	int
+3027	528	submissionId	15	int
+3028	528	username	dbarnes	string
+3029	528	name	chapter2.pdf	string
+3030	529	fileStage	4	int
+3031	529	sourceSubmissionFileId	114	int
+3032	529	submissionFileId	119	int
+3033	529	fileId	62	int
+3034	529	submissionId	15	int
+3035	529	originalFileName	chapter1.pdf	string
+3036	529	username	dbarnes	string
+3037	530	fileStage	4	int
+3038	530	submissionFileId	119	int
+3039	530	fileId	62	int
+3040	530	submissionId	15	int
+3041	530	username	dbarnes	string
+3042	530	name	chapter1.pdf	string
+3043	533	fileStage	2	int
+3044	533	sourceSubmissionFileId	\N	string
+3045	533	submissionFileId	120	int
+3046	533	fileId	65	int
+3047	533	submissionId	16	int
+3048	533	originalFileName	foreward.pdf	string
+3049	533	username	mpower	string
+3050	534	fileStage	2	int
+3051	534	submissionFileId	120	int
+3052	534	fileId	65	int
+3053	534	submissionId	16	int
+3054	534	username	mpower	string
+3055	534	name	foreward.pdf	string
+3056	535	fileStage	2	int
+3057	535	sourceSubmissionFileId	\N	string
+3058	535	submissionFileId	120	int
+3059	535	fileId	65	int
+3060	535	submissionId	16	int
+3061	535	originalFileName	foreward.pdf	string
+3062	535	username	mpower	string
+3063	536	fileStage	2	int
+3064	536	sourceSubmissionFileId	\N	string
+3065	536	submissionFileId	120	int
+3066	536	fileId	65	int
+3067	536	submissionId	16	int
+3068	536	username	mpower	string
+3069	536	originalFileName	foreward.pdf	string
+3070	536	name	foreward.pdf	string
+3071	537	fileStage	2	int
+3072	537	sourceSubmissionFileId	\N	string
+3073	537	submissionFileId	121	int
+3074	537	fileId	66	int
+3075	537	submissionId	16	int
+3076	537	originalFileName	preface.pdf	string
+3077	537	username	mpower	string
+3078	538	fileStage	2	int
+3079	538	submissionFileId	121	int
+3080	538	fileId	66	int
+3081	538	submissionId	16	int
+3082	538	username	mpower	string
+3083	538	name	preface.pdf	string
+3084	539	fileStage	2	int
+3085	539	sourceSubmissionFileId	\N	string
+3086	539	submissionFileId	121	int
+3087	539	fileId	66	int
+3088	539	submissionId	16	int
+3089	539	originalFileName	preface.pdf	string
+3090	539	username	mpower	string
+3091	540	fileStage	2	int
+3092	540	sourceSubmissionFileId	\N	string
+3093	540	submissionFileId	121	int
+3094	540	fileId	66	int
+3095	540	submissionId	16	int
+3096	540	username	mpower	string
+3097	540	originalFileName	preface.pdf	string
+3098	540	name	preface.pdf	string
+3099	541	fileStage	2	int
+3100	541	sourceSubmissionFileId	\N	string
+3101	541	submissionFileId	122	int
+3102	541	fileId	67	int
+3103	541	submissionId	16	int
+3104	541	originalFileName	cases.pdf	string
+3105	541	username	mpower	string
+3106	542	fileStage	2	int
+3107	542	submissionFileId	122	int
+3108	542	fileId	67	int
+3109	542	submissionId	16	int
+3110	542	username	mpower	string
+3111	542	name	cases.pdf	string
+3112	543	fileStage	2	int
+3113	543	sourceSubmissionFileId	\N	string
+3114	543	submissionFileId	122	int
+3115	543	fileId	67	int
+3116	543	submissionId	16	int
+3117	543	originalFileName	cases.pdf	string
+3118	543	username	mpower	string
+3119	544	fileStage	2	int
+3120	544	sourceSubmissionFileId	\N	string
+3121	544	submissionFileId	122	int
+3122	544	fileId	67	int
+3123	544	submissionId	16	int
+3124	544	username	mpower	string
+3125	544	originalFileName	cases.pdf	string
+3126	544	name	cases.pdf	string
+3127	545	fileStage	2	int
+3128	545	sourceSubmissionFileId	\N	string
+3129	545	submissionFileId	123	int
+3130	545	fileId	68	int
+3131	545	submissionId	16	int
+3132	545	originalFileName	conclusion.pdf	string
+3133	545	username	mpower	string
+3134	546	fileStage	2	int
+3135	546	submissionFileId	123	int
+3136	546	fileId	68	int
+3137	546	submissionId	16	int
+3138	546	username	mpower	string
+3139	546	name	conclusion.pdf	string
+3140	547	fileStage	2	int
+3141	547	sourceSubmissionFileId	\N	string
+3142	547	submissionFileId	123	int
+3143	547	fileId	68	int
+3144	547	submissionId	16	int
+3145	547	originalFileName	conclusion.pdf	string
+3146	547	username	mpower	string
+3147	548	fileStage	2	int
+3148	548	sourceSubmissionFileId	\N	string
+3149	548	submissionFileId	123	int
+3150	548	fileId	68	int
+3151	548	submissionId	16	int
+3152	548	username	mpower	string
+3153	548	originalFileName	conclusion.pdf	string
+3154	548	name	conclusion.pdf	string
+3155	549	fileStage	2	int
+3156	549	sourceSubmissionFileId	\N	string
+3157	549	submissionFileId	124	int
+3158	549	fileId	69	int
+3159	549	submissionId	16	int
+3160	549	originalFileName	bibliography.pdf	string
+3161	549	username	mpower	string
+3162	550	fileStage	2	int
+3163	550	submissionFileId	124	int
+3164	550	fileId	69	int
+3165	550	submissionId	16	int
+3166	550	username	mpower	string
+3167	550	name	bibliography.pdf	string
+3168	551	fileStage	2	int
+3169	551	sourceSubmissionFileId	\N	string
+3170	551	submissionFileId	124	int
+3171	551	fileId	69	int
+3172	551	submissionId	16	int
+3173	551	originalFileName	bibliography.pdf	string
+3174	551	username	mpower	string
+3175	552	fileStage	2	int
+3176	552	sourceSubmissionFileId	\N	string
+3177	552	submissionFileId	124	int
+3178	552	fileId	69	int
+3179	552	submissionId	16	int
+3180	552	username	mpower	string
+3181	552	originalFileName	bibliography.pdf	string
+3182	552	name	bibliography.pdf	string
+3183	554	editorId	3	int
+3184	554	editorName	Daniel Barnes	string
+3185	554	submissionId	16	int
+3186	554	decision	18	int
+3187	555	fileStage	4	int
+3188	555	sourceSubmissionFileId	124	int
+3189	555	submissionFileId	125	int
+3190	555	fileId	69	int
+3191	555	submissionId	16	int
+3192	555	originalFileName	bibliography.pdf	string
+3193	555	username	dbarnes	string
+3194	556	fileStage	4	int
+3195	556	submissionFileId	125	int
+3196	556	fileId	69	int
+3197	556	submissionId	16	int
+3198	556	username	dbarnes	string
+3199	556	name	bibliography.pdf	string
+3200	557	fileStage	4	int
+3201	557	sourceSubmissionFileId	122	int
+3202	557	submissionFileId	126	int
+3203	557	fileId	67	int
+3204	557	submissionId	16	int
+3205	557	originalFileName	cases.pdf	string
+3206	557	username	dbarnes	string
+3207	558	fileStage	4	int
+3208	558	submissionFileId	126	int
+3209	558	fileId	67	int
+3210	558	submissionId	16	int
+3211	558	username	dbarnes	string
+3212	558	name	cases.pdf	string
+3213	559	fileStage	4	int
+3214	559	sourceSubmissionFileId	121	int
+3215	559	submissionFileId	127	int
+3216	559	fileId	66	int
+3217	559	submissionId	16	int
+3218	559	originalFileName	preface.pdf	string
+3219	559	username	dbarnes	string
+3220	560	fileStage	4	int
+3221	560	submissionFileId	127	int
+3222	560	fileId	66	int
+3223	560	submissionId	16	int
+3224	560	username	dbarnes	string
+3225	560	name	preface.pdf	string
+3226	561	fileStage	4	int
+3227	561	sourceSubmissionFileId	123	int
+3228	561	submissionFileId	128	int
+3229	561	fileId	68	int
+3230	561	submissionId	16	int
+3231	561	originalFileName	conclusion.pdf	string
+3232	561	username	dbarnes	string
+3233	562	fileStage	4	int
+3234	562	submissionFileId	128	int
+3235	562	fileId	68	int
+3236	562	submissionId	16	int
+3237	562	username	dbarnes	string
+3238	562	name	conclusion.pdf	string
+3239	563	fileStage	4	int
+3240	563	sourceSubmissionFileId	120	int
+3241	563	submissionFileId	129	int
+3242	563	fileId	65	int
+3243	563	submissionId	16	int
+3244	563	originalFileName	foreward.pdf	string
+3245	563	username	dbarnes	string
+3246	564	fileStage	4	int
+3247	564	submissionFileId	129	int
+3248	564	fileId	65	int
+3249	564	submissionId	16	int
+3250	564	username	dbarnes	string
+3251	564	name	foreward.pdf	string
+3252	565	reviewAssignmentId	21	int
+3253	565	reviewerName	Adela Gallego	string
+3254	565	submissionId	16	int
+3255	565	stageId	3	int
+3256	565	round	1	int
+3257	566	reviewAssignmentId	22	int
+3258	566	reviewerName	Al Zacharia	string
+3259	566	submissionId	16	int
+3260	566	stageId	3	int
+3261	566	round	1	int
+3262	567	reviewAssignmentId	23	int
+3263	567	reviewerName	Gonzalo Favio	string
+3264	567	submissionId	16	int
+3265	567	stageId	3	int
+3266	567	round	1	int
+3267	568	reviewAssignmentId	21	int
+3268	568	reviewerName	Adela Gallego	string
+3269	568	submissionId	16	int
+3270	568	round	1	int
+3271	569	reviewAssignmentId	21	int
+3272	569	reviewerName	Adela Gallego	string
+3273	569	submissionId	16	int
+3274	569	round	1	int
+3275	572	fileStage	2	int
+3276	572	sourceSubmissionFileId	\N	string
+3277	572	submissionFileId	130	int
+3278	572	fileId	70	int
+3279	572	submissionId	17	int
+3280	572	originalFileName	preface.pdf	string
+3281	572	username	msmith	string
+3282	573	fileStage	2	int
+3283	573	submissionFileId	130	int
+3284	573	fileId	70	int
+3285	573	submissionId	17	int
+3286	573	username	msmith	string
+3287	573	name	preface.pdf	string
+3288	574	fileStage	2	int
+3289	574	sourceSubmissionFileId	\N	string
+3290	574	submissionFileId	130	int
+3291	574	fileId	70	int
+3292	574	submissionId	17	int
+3293	574	originalFileName	preface.pdf	string
+3294	574	username	msmith	string
+3295	575	fileStage	2	int
+3296	575	sourceSubmissionFileId	\N	string
+3297	575	submissionFileId	130	int
+3298	575	fileId	70	int
+3299	575	submissionId	17	int
+3300	575	username	msmith	string
+3301	575	originalFileName	preface.pdf	string
+3302	575	name	preface.pdf	string
+3303	576	fileStage	2	int
+3304	576	sourceSubmissionFileId	\N	string
+3305	576	submissionFileId	131	int
+3306	576	fileId	71	int
+3307	576	submissionId	17	int
+3308	576	originalFileName	introduction.pdf	string
+3309	576	username	msmith	string
+3310	577	fileStage	2	int
+3311	577	submissionFileId	131	int
+3312	577	fileId	71	int
+3313	577	submissionId	17	int
+3314	577	username	msmith	string
+3315	577	name	introduction.pdf	string
+3316	578	fileStage	2	int
+3317	578	sourceSubmissionFileId	\N	string
+3318	578	submissionFileId	131	int
+3319	578	fileId	71	int
+3320	578	submissionId	17	int
+3321	578	originalFileName	introduction.pdf	string
+3322	578	username	msmith	string
+3323	579	fileStage	2	int
+3324	579	sourceSubmissionFileId	\N	string
+3325	579	submissionFileId	131	int
+3326	579	fileId	71	int
+3327	579	submissionId	17	int
+3328	579	username	msmith	string
+3329	579	originalFileName	introduction.pdf	string
+3330	579	name	introduction.pdf	string
+3331	580	fileStage	2	int
+3332	580	sourceSubmissionFileId	\N	string
+3333	580	submissionFileId	132	int
+3334	580	fileId	72	int
+3335	580	submissionId	17	int
+3336	580	originalFileName	chapter1.pdf	string
+3337	580	username	msmith	string
+3338	581	fileStage	2	int
+3339	581	submissionFileId	132	int
+3340	581	fileId	72	int
+3341	581	submissionId	17	int
+3342	581	username	msmith	string
+3343	581	name	chapter1.pdf	string
+3344	582	fileStage	2	int
+3345	582	sourceSubmissionFileId	\N	string
+3346	582	submissionFileId	132	int
+3347	582	fileId	72	int
+3348	582	submissionId	17	int
+3349	582	originalFileName	chapter1.pdf	string
+3350	582	username	msmith	string
+3351	583	fileStage	2	int
+3352	583	sourceSubmissionFileId	\N	string
+3353	583	submissionFileId	132	int
+3354	583	fileId	72	int
+3355	583	submissionId	17	int
+3356	583	username	msmith	string
+3357	583	originalFileName	chapter1.pdf	string
+3358	583	name	chapter1.pdf	string
+3359	584	fileStage	2	int
+3360	584	sourceSubmissionFileId	\N	string
+3361	584	submissionFileId	133	int
+3362	584	fileId	73	int
+3363	584	submissionId	17	int
+3364	584	originalFileName	chapter2.pdf	string
+3365	584	username	msmith	string
+3366	585	fileStage	2	int
+3367	585	submissionFileId	133	int
+3368	585	fileId	73	int
+3369	585	submissionId	17	int
+3370	585	username	msmith	string
+3371	585	name	chapter2.pdf	string
+3372	586	fileStage	2	int
+3373	586	sourceSubmissionFileId	\N	string
+3374	586	submissionFileId	133	int
+3375	586	fileId	73	int
+3376	586	submissionId	17	int
+3377	586	originalFileName	chapter2.pdf	string
+3378	586	username	msmith	string
+3379	587	fileStage	2	int
+3380	587	sourceSubmissionFileId	\N	string
+3381	587	submissionFileId	133	int
+3382	587	fileId	73	int
+3383	587	submissionId	17	int
+3384	587	username	msmith	string
+3385	587	originalFileName	chapter2.pdf	string
+3386	587	name	chapter2.pdf	string
+3387	588	fileStage	2	int
+3388	588	sourceSubmissionFileId	\N	string
+3389	588	submissionFileId	134	int
+3390	588	fileId	74	int
+3391	588	submissionId	17	int
+3392	588	originalFileName	chapter3.pdf	string
+3393	588	username	msmith	string
+3394	589	fileStage	2	int
+3395	589	submissionFileId	134	int
+3396	589	fileId	74	int
+3397	589	submissionId	17	int
+3398	589	username	msmith	string
+3399	589	name	chapter3.pdf	string
+3400	590	fileStage	2	int
+3401	590	sourceSubmissionFileId	\N	string
+3402	590	submissionFileId	134	int
+3403	590	fileId	74	int
+3404	590	submissionId	17	int
+3405	590	originalFileName	chapter3.pdf	string
+3406	590	username	msmith	string
+3407	591	fileStage	2	int
+3408	591	sourceSubmissionFileId	\N	string
+3409	591	submissionFileId	134	int
+3410	591	fileId	74	int
+3411	591	submissionId	17	int
+3412	591	username	msmith	string
+3413	591	originalFileName	chapter3.pdf	string
+3414	591	name	chapter3.pdf	string
+3415	592	fileStage	2	int
+3416	592	sourceSubmissionFileId	\N	string
+3417	592	submissionFileId	135	int
+3418	592	fileId	75	int
+3419	592	submissionId	17	int
+3420	592	originalFileName	chapter4.pdf	string
+3421	592	username	msmith	string
+3422	593	fileStage	2	int
+3423	593	submissionFileId	135	int
+3424	593	fileId	75	int
+3425	593	submissionId	17	int
+3426	593	username	msmith	string
+3427	593	name	chapter4.pdf	string
+3428	594	fileStage	2	int
+3429	594	sourceSubmissionFileId	\N	string
+3430	594	submissionFileId	135	int
+3431	594	fileId	75	int
+3432	594	submissionId	17	int
+3433	594	originalFileName	chapter4.pdf	string
+3434	594	username	msmith	string
+3435	595	fileStage	2	int
+3436	595	sourceSubmissionFileId	\N	string
+3437	595	submissionFileId	135	int
+3438	595	fileId	75	int
+3439	595	submissionId	17	int
+3440	595	username	msmith	string
+3441	595	originalFileName	chapter4.pdf	string
+3442	595	name	chapter4.pdf	string
+3443	597	editorId	3	int
+3444	597	editorName	Daniel Barnes	string
+3445	597	submissionId	17	int
+3446	597	decision	1	int
+3447	598	fileStage	19	int
+3448	598	sourceSubmissionFileId	134	int
+3449	598	submissionFileId	136	int
+3450	598	fileId	74	int
+3451	598	submissionId	17	int
+3452	598	originalFileName	chapter3.pdf	string
+3453	598	username	dbarnes	string
+3454	599	fileStage	19	int
+3455	599	submissionFileId	136	int
+3456	599	fileId	74	int
+3457	599	submissionId	17	int
+3458	599	username	dbarnes	string
+3459	599	name	chapter3.pdf	string
+3460	600	fileStage	19	int
+3461	600	sourceSubmissionFileId	135	int
+3462	600	submissionFileId	137	int
+3463	600	fileId	75	int
+3464	600	submissionId	17	int
+3465	600	originalFileName	chapter4.pdf	string
+3466	600	username	dbarnes	string
+3467	601	fileStage	19	int
+3468	601	submissionFileId	137	int
+3469	601	fileId	75	int
+3470	601	submissionId	17	int
+3471	601	username	dbarnes	string
+3472	601	name	chapter4.pdf	string
+3473	602	fileStage	19	int
+3474	602	sourceSubmissionFileId	133	int
+3475	602	submissionFileId	138	int
+3476	602	fileId	73	int
+3477	602	submissionId	17	int
+3478	602	originalFileName	chapter2.pdf	string
+3479	602	username	dbarnes	string
+3480	603	fileStage	19	int
+3481	603	submissionFileId	138	int
+3482	603	fileId	73	int
+3483	603	submissionId	17	int
+3484	603	username	dbarnes	string
+3485	603	name	chapter2.pdf	string
+3486	604	fileStage	19	int
+3487	604	sourceSubmissionFileId	131	int
+3488	604	submissionFileId	139	int
+3489	604	fileId	71	int
+3490	604	submissionId	17	int
+3491	604	originalFileName	introduction.pdf	string
+3492	604	username	dbarnes	string
+3493	605	fileStage	19	int
+3494	605	submissionFileId	139	int
+3495	605	fileId	71	int
+3496	605	submissionId	17	int
+3497	605	username	dbarnes	string
+3498	605	name	introduction.pdf	string
+3499	606	fileStage	19	int
+3500	606	sourceSubmissionFileId	130	int
+3501	606	submissionFileId	140	int
+3502	606	fileId	70	int
+3503	606	submissionId	17	int
+3504	606	originalFileName	preface.pdf	string
+3505	606	username	dbarnes	string
+3506	607	fileStage	19	int
+3507	607	submissionFileId	140	int
+3508	607	fileId	70	int
+3509	607	submissionId	17	int
+3510	607	username	dbarnes	string
+3511	607	name	preface.pdf	string
+3512	608	fileStage	19	int
+3513	608	sourceSubmissionFileId	132	int
+3514	608	submissionFileId	141	int
+3515	608	fileId	72	int
+3516	608	submissionId	17	int
+3517	608	originalFileName	chapter1.pdf	string
+3518	608	username	dbarnes	string
+3519	609	fileStage	19	int
+3520	609	submissionFileId	141	int
+3521	609	fileId	72	int
+3522	609	submissionId	17	int
+3523	609	username	dbarnes	string
+3524	609	name	chapter1.pdf	string
+3525	610	reviewAssignmentId	24	int
+3526	610	reviewerName	Julie Janssen	string
+3527	610	submissionId	17	int
+3528	610	stageId	2	int
+3529	610	round	1	int
+3530	611	reviewAssignmentId	25	int
+3531	611	reviewerName	Paul Hudson	string
+3532	611	submissionId	17	int
+3533	611	stageId	2	int
+3534	611	round	1	int
+\.
+
+
+--
+-- Data for Name: failed_jobs; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.failed_jobs (id, connection, queue, payload, exception, failed_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: features; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.features (feature_id, submission_id, assoc_type, assoc_id, seq) FROM stdin;
+\.
+
+
+--
+-- Data for Name: files; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.files (file_id, path, mimetype) FROM stdin;
+1	presses/1/monographs/1/643ac3d1d60f4.pdf	application/pdf
+2	presses/1/monographs/1/643ac3d31e790.pdf	application/pdf
+3	presses/1/monographs/1/643ac3d4607e9.pdf	application/pdf
+4	presses/1/monographs/2/643ac42aad3b5.pdf	application/pdf
+5	presses/1/monographs/2/643ac42c50381.pdf	application/pdf
+6	presses/1/monographs/2/643ac42d9b30d.pdf	application/pdf
+7	presses/1/monographs/2/643ac42ee1e00.pdf	application/pdf
+9	presses/1/monographs/3/643ac4e4db77d.pdf	application/pdf
+10	presses/1/monographs/3/643ac4e613e11.pdf	application/pdf
+11	presses/1/monographs/3/643ac4e74be37.pdf	application/pdf
+12	presses/1/monographs/3/643ac4e881f35.pdf	application/pdf
+13	presses/1/monographs/3/643ac4e9cf383.pdf	application/pdf
+14	presses/1/monographs/4/643ac51d880c8.pdf	application/pdf
+15	presses/1/monographs/4/643ac51eb30b4.pdf	application/pdf
+16	presses/1/monographs/4/643ac51feebf0.pdf	application/pdf
+17	presses/1/monographs/4/643ac52132c49.pdf	application/pdf
+18	presses/1/monographs/5/643ac5a971709.pdf	application/pdf
+19	presses/1/monographs/5/643ac5aaa4512.pdf	application/pdf
+20	presses/1/monographs/5/643ac5abea819.pdf	application/pdf
+21	presses/1/monographs/5/643ac5ad4021a.pdf	application/pdf
+22	presses/1/monographs/5/643ac5ae7a4af.pdf	application/pdf
+23	presses/1/monographs/5/643ac5afb5880.pdf	application/pdf
+24	presses/1/monographs/6/643ac67b667f9.pdf	application/pdf
+25	presses/1/monographs/6/643ac67c911d9.pdf	application/pdf
+26	presses/1/monographs/6/643ac67dc2767.pdf	application/pdf
+27	presses/1/monographs/6/643ac67f048e3.pdf	application/pdf
+28	presses/1/monographs/7/643ac6eabbd0e.pdf	application/pdf
+29	presses/1/monographs/7/643ac6ebebce2.pdf	application/pdf
+30	presses/1/monographs/7/643ac6ed37f6a.pdf	application/pdf
+31	presses/1/monographs/7/643ac6ee72a08.pdf	application/pdf
+32	presses/1/monographs/7/643ac6efc5738.pdf	application/pdf
+33	presses/1/monographs/8/643ac75627dcb.pdf	application/pdf
+34	presses/1/monographs/9/643ac763cea24.pdf	application/pdf
+35	presses/1/monographs/9/643ac7650bb8d.pdf	application/pdf
+36	presses/1/monographs/9/643ac76648c84.pdf	application/pdf
+37	presses/1/monographs/9/643ac76783a36.pdf	application/pdf
+38	presses/1/monographs/9/643ac768d873c.pdf	application/pdf
+39	presses/1/monographs/10/643ac7b574974.pdf	application/pdf
+40	presses/1/monographs/10/643ac7b6aa7dc.pdf	application/pdf
+41	presses/1/monographs/10/643ac7b7de701.pdf	application/pdf
+42	presses/1/monographs/10/643ac7b9556d6.pdf	application/pdf
+43	presses/1/monographs/10/643ac7ba8bb7a.pdf	application/pdf
+44	presses/1/monographs/10/643ac7bbc9c1b.pdf	application/pdf
+45	presses/1/monographs/10/643ac7bd1e697.pdf	application/pdf
+46	presses/1/monographs/10/643ac7be6e018.pdf	application/pdf
+47	presses/1/monographs/10/643ac7bff3428.pdf	application/pdf
+48	presses/1/monographs/11/643ac81eea913.pdf	application/pdf
+49	presses/1/monographs/11/643ac82024d13.pdf	application/pdf
+50	presses/1/monographs/12/643ac89f41d6b.pdf	application/pdf
+51	presses/1/monographs/12/643ac8a08b292.pdf	application/pdf
+52	presses/1/monographs/12/643ac8a1c5400.pdf	application/pdf
+53	presses/1/monographs/13/643ac901a60ad.pdf	application/pdf
+54	presses/1/monographs/13/643ac902da8e7.pdf	application/pdf
+55	presses/1/monographs/13/643ac9041c624.pdf	application/pdf
+56	presses/1/monographs/14/643ac99b8ea1f.pdf	application/pdf
+57	presses/1/monographs/14/643ac99cc289b.pdf	application/pdf
+58	presses/1/monographs/14/643ac99e0e8e8.pdf	application/pdf
+59	presses/1/monographs/14/643ac99f4f37a.pdf	application/pdf
+60	presses/1/monographs/14/643ac9a0a7f57.pdf	application/pdf
+61	presses/1/monographs/14/643ac9a1db7d7.pdf	application/pdf
+62	presses/1/monographs/15/643aca6bc0087.pdf	application/pdf
+63	presses/1/monographs/15/643aca6cebaef.pdf	application/pdf
+64	presses/1/monographs/15/643aca6e4134e.pdf	application/pdf
+65	presses/1/monographs/16/643acaa6d3c10.pdf	application/pdf
+66	presses/1/monographs/16/643acaa80dd93.pdf	application/pdf
+67	presses/1/monographs/16/643acaa94436f.pdf	application/pdf
+68	presses/1/monographs/16/643acaaa7aab5.pdf	application/pdf
+69	presses/1/monographs/16/643acaabd907b.pdf	application/pdf
+70	presses/1/monographs/17/643acb1ccd29f.pdf	application/pdf
+71	presses/1/monographs/17/643acb1e086e6.pdf	application/pdf
+72	presses/1/monographs/17/643acb1f3bb72.pdf	application/pdf
+73	presses/1/monographs/17/643acb206fa3d.pdf	application/pdf
+74	presses/1/monographs/17/643acb21c3e93.pdf	application/pdf
+75	presses/1/monographs/17/643acb230a867.pdf	application/pdf
+\.
+
+
+--
+-- Data for Name: filter_groups; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.filter_groups (filter_group_id, symbolic, display_name, description, input_type, output_type) FROM stdin;
+1	publicationFormat=>dc11	plugins.metadata.dc11.publicationFormatAdapter.displayName	plugins.metadata.dc11.publicationFormatAdapter.description	class::classes.publicationFormat.PublicationFormat	metadata::APP\\plugins\\metadata\\dc11\\schema\\Dc11Schema(PUBLICATION_FORMAT)
+2	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+3	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
+4	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+5	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
+6	monograph=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
+7	native-xml=>monograph	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
+8	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.author.Author[]	xml::schema(plugins/importexport/native/native.xsd)
+9	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.author.Author[]
+10	publication-format=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publicationFormat.PublicationFormat	xml::schema(plugins/importexport/native/native.xsd)
+11	native-xml=>PublicationFormat	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publicationFormat.PublicationFormat[]
+12	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submissionFile.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
+13	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submissionFile.SubmissionFile[]
+14	monograph=>onix30-xml	plugins.importexport.onix30.displayName	plugins.importexport.onix30.description	class::classes.submission.Submission	xml::schema(plugins/importexport/native/ONIX_BookProduct_3.0_reference_notstrict.xsd)
+15	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
+16	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication[]
+17	chapter=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.monograph.Chapter[]	xml::schema(plugins/importexport/native/native.xsd)
+18	native-xml=>chapter	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.monograph.Chapter[]
+19	monographs=>onix30-xml	plugins.importexport.onix30.displayName	plugins.importexport.onix30.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/onix30/ONIX_BookProduct_3.0_reference.xsd)
+\.
+
+
+--
+-- Data for Name: filter_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.filter_settings (filter_setting_id, filter_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: filters; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.filters (filter_id, filter_group_id, context_id, display_name, class_name, is_template, parent_filter_id, seq) FROM stdin;
+1	1	0	Extract metadata from a(n) PublicationFormat	APP\\plugins\\metadata\\dc11\\filter\\Dc11SchemaPublicationFormatAdapter	0	0	0
+2	2	0	User XML user export	PKP\\plugins\\importexport\\users\\filter\\PKPUserUserXmlFilter	0	0	0
+3	3	0	User XML user import	PKP\\plugins\\importexport\\users\\filter\\UserXmlPKPUserFilter	0	0	0
+4	4	0	Native XML user group export	PKP\\plugins\\importexport\\users\\filter\\UserGroupNativeXmlFilter	0	0	0
+5	5	0	Native XML user group import	PKP\\plugins\\importexport\\users\\filter\\NativeXmlUserGroupFilter	0	0	0
+6	6	0	Native XML submission export	APP\\plugins\\importexport\\native\\filter\\MonographNativeXmlFilter	0	0	0
+7	7	0	Native XML submission import	APP\\plugins\\importexport\\native\\filter\\NativeXmlMonographFilter	0	0	0
+8	8	0	Native XML author export	APP\\plugins\\importexport\\native\\filter\\AuthorNativeXmlFilter	0	0	0
+9	9	0	Native XML author import	APP\\plugins\\importexport\\native\\filter\\NativeXmlAuthorFilter	0	0	0
+10	10	0	Native XML representation export	APP\\plugins\\importexport\\native\\filter\\PublicationFormatNativeXmlFilter	0	0	0
+11	11	0	Native XML representation import	APP\\plugins\\importexport\\native\\filter\\NativeXmlPublicationFormatFilter	0	0	0
+12	13	0	Native XML submission file import	APP\\plugins\\importexport\\native\\filter\\NativeXmlMonographFileFilter	0	0	0
+13	12	0	Native XML submission file export	PKP\\plugins\\importexport\\native\\filter\\SubmissionFileNativeXmlFilter	0	0	0
+14	14	0	ONIX 3.0 XML monograph export	APP\\plugins\\importexport\\onix30\\filter\\MonographONIX30XmlFilter	0	0	0
+15	15	0	Native XML Publication export	APP\\plugins\\importexport\\native\\filter\\PublicationNativeXmlFilter	0	0	0
+16	16	0	Native XML publication import	APP\\plugins\\importexport\\native\\filter\\NativeXmlPublicationFilter	0	0	0
+17	17	0	Native XML chapter export	APP\\plugins\\importexport\\native\\filter\\ChapterNativeXmlFilter	0	0	0
+18	18	0	Native XML Chapter import	APP\\plugins\\importexport\\native\\filter\\NativeXmlChapterFilter	0	0	0
+19	19	0	ONIX 3.0 XML monograph export	APP\\plugins\\importexport\\onix30\\filter\\MonographONIX30XmlFilter	0	0	0
+\.
+
+
+--
+-- Data for Name: genre_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.genre_settings (genre_setting_id, genre_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+1	1	en	name	Appendix	string
+2	1	fr_CA	name	Annexe	string
+3	2	en	name	Bibliography	string
+4	2	fr_CA	name	Bibliographie	string
+5	3	en	name	Book Manuscript	string
+6	3	fr_CA	name	Manuscrit de livre	string
+7	4	en	name	Chapter Manuscript	string
+8	4	fr_CA	name	Manuscrit de chapitre	string
+9	5	en	name	Glossary	string
+10	5	fr_CA	name	Glossaire	string
+11	6	en	name	Index	string
+12	6	fr_CA	name	Index	string
+13	7	en	name	Preface	string
+14	7	fr_CA	name	Préface	string
+15	8	en	name	Prospectus	string
+16	8	fr_CA	name	Prospectus	string
+17	9	en	name	Table	string
+18	9	fr_CA	name	Tableau	string
+19	10	en	name	Figure	string
+20	10	fr_CA	name	Figure	string
+21	11	en	name	Photo	string
+22	11	fr_CA	name	Photographie	string
+23	12	en	name	Illustration	string
+24	12	fr_CA	name	Illustration	string
+27	14	en	name	Image	string
+28	14	fr_CA	name	Image	string
+29	15	en	name	HTML Stylesheet	string
+30	15	fr_CA	name	Feuille de style HTML	string
+25	13	en	name	Other	string
+26	13	fr_CA	name	Autre	string
+\.
+
+
+--
+-- Data for Name: genres; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.genres (genre_id, context_id, seq, enabled, category, dependent, supplementary, required, entry_key) FROM stdin;
+1	1	0	1	1	0	1	0	APPENDIX
+2	1	1	1	1	0	1	0	BIBLIOGRAPHY
+3	1	2	1	1	0	0	1	MANUSCRIPT
+4	1	3	1	1	0	0	0	CHAPTER
+5	1	4	1	1	0	1	0	GLOSSARY
+6	1	5	1	1	0	1	0	INDEX
+7	1	6	1	1	0	1	0	PREFACE
+8	1	7	1	3	0	1	0	PROSPECTUS
+9	1	8	1	2	0	1	0	TABLE
+10	1	9	1	2	0	1	0	FIGURE
+11	1	10	1	2	0	1	0	PHOTO
+12	1	11	1	2	0	1	0	ILLUSTRATION
+14	1	13	1	2	1	0	0	IMAGE
+15	1	14	1	1	1	0	0	STYLE
+13	1	15	1	3	0	1	0	OTHER
+\.
+
+
+--
+-- Data for Name: identification_codes; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.identification_codes (identification_code_id, publication_format_id, code, value) FROM stdin;
+1	1	02	951-98548-9-4
+2	1	15	978-951-98548-9-2
+\.
+
+
+--
+-- Data for Name: institution_ip; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.institution_ip (institution_ip_id, institution_id, ip_string, ip_start, ip_end) FROM stdin;
+\.
+
+
+--
+-- Data for Name: institution_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.institution_settings (institution_setting_id, institution_id, locale, setting_name, setting_value) FROM stdin;
+\.
+
+
+--
+-- Data for Name: institutions; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.institutions (institution_id, context_id, ror, deleted_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: job_batches; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.job_batches (id, name, total_jobs, pending_jobs, failed_jobs, failed_job_ids, options, cancelled_at, created_at, finished_at) FROM stdin;
+98f02903-1fb0-4c63-93d2-a8a085a9c9c5		0	0	0	[]	YTowOnt9	\N	1681572476	\N
+\.
+
+
+--
+-- Data for Name: jobs; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.jobs (id, queue, payload, attempts, reserved_at, available_at, created_at) FROM stdin;
+\.
+
+
+--
+-- Data for Name: library_file_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.library_file_settings (library_file_setting_id, file_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: library_files; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.library_files (file_id, context_id, file_name, original_file_name, file_type, file_size, type, date_uploaded, date_modified, submission_id, public_access) FROM stdin;
+\.
+
+
+--
+-- Data for Name: markets; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.markets (market_id, publication_format_id, countries_included, countries_excluded, regions_included, regions_excluded, market_date_role, market_date_format, market_date, price, discount, price_type_code, currency_code, tax_rate_code, tax_type_code, agent_id, supplier_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: metrics_context; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.metrics_context (metrics_context_id, load_id, context_id, date, metric) FROM stdin;
+\.
+
+
+--
+-- Data for Name: metrics_counter_submission_daily; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.metrics_counter_submission_daily (metrics_counter_submission_daily_id, load_id, context_id, submission_id, date, metric_book_investigations, metric_book_investigations_unique, metric_book_requests, metric_book_requests_unique, metric_chapter_investigations, metric_chapter_investigations_unique, metric_chapter_requests, metric_chapter_requests_unique, metric_title_investigations_unique, metric_title_requests_unique) FROM stdin;
+\.
+
+
+--
+-- Data for Name: metrics_counter_submission_institution_daily; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.metrics_counter_submission_institution_daily (metrics_counter_submission_institution_daily_id, load_id, context_id, submission_id, institution_id, date, metric_book_investigations, metric_book_investigations_unique, metric_book_requests, metric_book_requests_unique, metric_chapter_investigations, metric_chapter_investigations_unique, metric_chapter_requests, metric_chapter_requests_unique, metric_title_investigations_unique, metric_title_requests_unique) FROM stdin;
+\.
+
+
+--
+-- Data for Name: metrics_counter_submission_institution_monthly; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.metrics_counter_submission_institution_monthly (metrics_counter_submission_institution_monthly_id, context_id, submission_id, institution_id, month, metric_book_investigations, metric_book_investigations_unique, metric_book_requests, metric_book_requests_unique, metric_chapter_investigations, metric_chapter_investigations_unique, metric_chapter_requests, metric_chapter_requests_unique, metric_title_investigations_unique, metric_title_requests_unique) FROM stdin;
+\.
+
+
+--
+-- Data for Name: metrics_counter_submission_monthly; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.metrics_counter_submission_monthly (metrics_counter_submission_monthly_id, context_id, submission_id, month, metric_book_investigations, metric_book_investigations_unique, metric_book_requests, metric_book_requests_unique, metric_chapter_investigations, metric_chapter_investigations_unique, metric_chapter_requests, metric_chapter_requests_unique, metric_title_investigations_unique, metric_title_requests_unique) FROM stdin;
+\.
+
+
+--
+-- Data for Name: metrics_series; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.metrics_series (metrics_series_id, load_id, context_id, series_id, date, metric) FROM stdin;
+\.
+
+
+--
+-- Data for Name: metrics_submission; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.metrics_submission (metrics_submission_id, load_id, context_id, submission_id, chapter_id, representation_id, submission_file_id, file_type, assoc_type, date, metric) FROM stdin;
+\.
+
+
+--
+-- Data for Name: metrics_submission_geo_daily; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.metrics_submission_geo_daily (metrics_submission_geo_daily_id, load_id, context_id, submission_id, country, region, city, date, metric, metric_unique) FROM stdin;
+\.
+
+
+--
+-- Data for Name: metrics_submission_geo_monthly; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.metrics_submission_geo_monthly (metrics_submission_geo_monthly_id, context_id, submission_id, country, region, city, month, metric, metric_unique) FROM stdin;
+\.
+
+
+--
+-- Data for Name: navigation_menu_item_assignment_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.navigation_menu_item_assignment_settings (navigation_menu_item_assignment_setting_id, navigation_menu_item_assignment_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: navigation_menu_item_assignments; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.navigation_menu_item_assignments (navigation_menu_item_assignment_id, navigation_menu_id, navigation_menu_item_id, parent_id, seq) FROM stdin;
+1	1	1	0	0
+2	1	2	0	1
+3	1	3	0	2
+4	1	4	3	0
+5	1	5	3	1
+6	1	6	3	2
+7	1	7	3	3
+8	2	8	0	0
+9	2	9	0	1
+10	2	10	0	2
+11	2	11	10	0
+12	2	12	10	1
+13	2	13	10	2
+14	2	14	10	3
+15	3	15	0	0
+16	3	16	0	1
+17	3	17	0	2
+18	3	18	17	0
+19	3	19	17	1
+20	3	20	17	2
+21	3	21	17	3
+22	3	22	17	4
+\.
+
+
+--
+-- Data for Name: navigation_menu_item_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.navigation_menu_item_settings (navigation_menu_item_setting_id, navigation_menu_item_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+1	1		titleLocaleKey	navigation.register	string
+2	2		titleLocaleKey	navigation.login	string
+3	3		titleLocaleKey	{$loggedInUsername}	string
+4	4		titleLocaleKey	navigation.dashboard	string
+5	5		titleLocaleKey	common.viewProfile	string
+6	6		titleLocaleKey	navigation.admin	string
+7	7		titleLocaleKey	user.logOut	string
+8	8		titleLocaleKey	navigation.register	string
+9	9		titleLocaleKey	navigation.login	string
+10	10		titleLocaleKey	{$loggedInUsername}	string
+11	11		titleLocaleKey	navigation.dashboard	string
+12	12		titleLocaleKey	common.viewProfile	string
+13	13		titleLocaleKey	navigation.admin	string
+14	14		titleLocaleKey	user.logOut	string
+15	15		titleLocaleKey	navigation.catalog	string
+16	16		titleLocaleKey	manager.announcements	string
+17	17		titleLocaleKey	navigation.about	string
+18	18		titleLocaleKey	about.aboutContext	string
+19	19		titleLocaleKey	about.submissions	string
+20	20		titleLocaleKey	about.editorialTeam	string
+21	21		titleLocaleKey	manager.setup.privacyStatement	string
+22	22		titleLocaleKey	about.contact	string
+23	23		titleLocaleKey	common.search	string
+\.
+
+
+--
+-- Data for Name: navigation_menu_items; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.navigation_menu_items (navigation_menu_item_id, context_id, path, type) FROM stdin;
+1	0	\N	NMI_TYPE_USER_REGISTER
+2	0	\N	NMI_TYPE_USER_LOGIN
+3	0	\N	NMI_TYPE_USER_DASHBOARD
+4	0	\N	NMI_TYPE_USER_DASHBOARD
+5	0	\N	NMI_TYPE_USER_PROFILE
+6	0	\N	NMI_TYPE_ADMINISTRATION
+7	0	\N	NMI_TYPE_USER_LOGOUT
+8	1	\N	NMI_TYPE_USER_REGISTER
+9	1	\N	NMI_TYPE_USER_LOGIN
+10	1	\N	NMI_TYPE_USER_DASHBOARD
+11	1	\N	NMI_TYPE_USER_DASHBOARD
+12	1	\N	NMI_TYPE_USER_PROFILE
+13	1	\N	NMI_TYPE_ADMINISTRATION
+14	1	\N	NMI_TYPE_USER_LOGOUT
+15	1	\N	NMI_TYPE_CATALOG
+16	1	\N	NMI_TYPE_ANNOUNCEMENTS
+17	1	\N	NMI_TYPE_ABOUT
+18	1	\N	NMI_TYPE_ABOUT
+19	1	\N	NMI_TYPE_SUBMISSIONS
+20	1	\N	NMI_TYPE_EDITORIAL_TEAM
+21	1	\N	NMI_TYPE_PRIVACY
+22	1	\N	NMI_TYPE_CONTACT
+23	1	\N	NMI_TYPE_SEARCH
+\.
+
+
+--
+-- Data for Name: navigation_menus; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.navigation_menus (navigation_menu_id, context_id, area_name, title) FROM stdin;
+1	0	user	User Navigation Menu
+2	1	user	User Navigation Menu
+3	1	primary	Primary Navigation Menu
+\.
+
+
+--
+-- Data for Name: new_releases; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.new_releases (new_release_id, submission_id, assoc_type, assoc_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: notes; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
+1	1048586	1	6	2023-04-15 15:46:21	2023-04-15 15:46:21	Editor Recommendation	<p>Dear Daniel Barnes, David Buskins,</p><p>After considering the reviewers' feedback, I would like to make the following recommendation regarding the submission The Information Literacy User’s Guide.</p><p>My recommendation is: Accept Submission.</p><p>Please visit the submission's <a href="http://localhost/index.php/publicknowledge/workflow/access/6">editorial workflow</a> to act on this recommendation.</p><p>Please feel free to contact me with any questions.</p><p>Kind regards,</p><p>Minoti Inoue</p>
+\.
+
+
+--
+-- Data for Name: notification_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.notification_settings (notification_setting_id, notification_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: notification_subscription_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.notification_subscription_settings (setting_id, setting_name, setting_value, user_id, context, setting_type) FROM stdin;
+1	blocked_emailed_notification	8	19	1	int
+2	blocked_emailed_notification	8	20	1	int
+3	blocked_emailed_notification	8	21	1	int
+4	blocked_emailed_notification	8	22	1	int
+5	blocked_emailed_notification	8	23	1	int
+6	blocked_emailed_notification	8	24	1	int
+7	blocked_emailed_notification	8	25	1	int
+8	blocked_emailed_notification	8	26	1	int
+9	blocked_emailed_notification	8	27	1	int
+10	blocked_emailed_notification	8	28	1	int
+11	blocked_emailed_notification	8	29	1	int
+12	blocked_emailed_notification	8	30	1	int
+13	blocked_emailed_notification	8	31	1	int
+14	blocked_emailed_notification	8	32	1	int
+15	blocked_emailed_notification	8	33	1	int
+16	blocked_emailed_notification	8	34	1	int
+\.
+
+
+--
+-- Data for Name: notifications; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
+124	1	24	2	16777229	2023-04-15 15:45:48	\N	1048585	6
+123	1	\N	2	16777236	2023-04-15 15:45:48	2023-04-15 15:45:54	523	7
+141	1	10	3	16777227	2023-04-15 15:48:05	\N	517	8
+127	1	3	3	16777249	2023-04-15 15:46:21	\N	1048586	1
+128	1	4	3	16777249	2023-04-15 15:46:21	\N	1048586	1
+51	1	\N	3	16777220	2023-04-15 15:38:55	\N	1048585	3
+52	1	\N	3	16777222	2023-04-15 15:38:55	\N	1048585	3
+53	1	\N	3	16777223	2023-04-15 15:38:55	\N	1048585	3
+54	1	\N	3	16777224	2023-04-15 15:38:55	\N	1048585	3
+55	1	1	3	16777247	2023-04-15 15:38:55	\N	1048585	3
+56	1	2	3	16777247	2023-04-15 15:38:55	\N	1048585	3
+57	1	3	3	16777247	2023-04-15 15:38:55	\N	1048585	3
+143	1	25	2	16777230	2023-04-15 15:48:12	\N	1048585	7
+113	1	\N	2	16777246	2023-04-15 15:44:22	2023-04-15 15:44:33	1048585	5
+14	1	4	2	16777217	2023-04-15 15:34:00	\N	1048585	1
+144	1	3	2	16777251	2023-04-15 15:48:12	2023-04-15 15:48:18	1048585	7
+15	1	\N	2	16777236	2023-04-15 15:34:14	2023-04-15 15:34:20	523	1
+16	1	12	3	16777227	2023-04-15 15:34:25	\N	517	1
+18	1	19	2	16777230	2023-04-15 15:34:31	\N	1048585	1
+19	1	4	2	16777251	2023-04-15 15:34:31	\N	1048585	1
+146	1	1	3	16777247	2023-04-15 15:48:39	\N	1048585	8
+147	1	2	3	16777247	2023-04-15 15:48:39	\N	1048585	8
+66	1	3	2	16777217	2023-04-15 15:39:44	\N	1048585	4
+148	1	3	3	16777247	2023-04-15 15:48:39	\N	1048585	8
+67	1	\N	2	16777236	2023-04-15 15:40:00	2023-04-15 15:40:06	523	3
+69	1	9	3	16777227	2023-04-15 15:40:12	\N	517	4
+139	1	3	2	16777217	2023-04-15 15:47:36	\N	1048585	7
+71	1	\N	2	16777236	2023-04-15 15:40:18	2023-04-15 15:40:24	523	4
+73	1	11	3	16777227	2023-04-15 15:40:29	\N	517	5
+29	1	\N	3	16777220	2023-04-15 15:37:02	\N	1048585	2
+30	1	\N	3	16777222	2023-04-15 15:37:02	\N	1048585	2
+31	1	\N	3	16777223	2023-04-15 15:37:02	\N	1048585	2
+32	1	\N	3	16777224	2023-04-15 15:37:02	\N	1048585	2
+33	1	1	3	16777247	2023-04-15 15:37:02	\N	1048585	2
+34	1	2	3	16777247	2023-04-15 15:37:02	\N	1048585	2
+35	1	3	3	16777247	2023-04-15 15:37:02	\N	1048585	2
+36	1	\N	2	16777236	2023-04-15 15:37:30	2023-04-15 15:37:40	523	2
+37	1	11	3	16777227	2023-04-15 15:37:46	\N	517	2
+140	1	\N	2	16777236	2023-04-15 15:47:53	2023-04-15 15:47:59	523	8
+39	1	12	3	16777227	2023-04-15 15:37:56	\N	517	3
+183	1	\N	3	16777224	2023-04-15 15:51:43	\N	1048585	10
+78	1	22	2	16777235	2023-04-15 15:40:55	\N	1048585	4
+79	1	3	2	16777254	2023-04-15 15:40:55	\N	1048585	4
+159	1	4	2	16777217	2023-04-15 15:49:35	\N	1048585	9
+93	1	\N	3	16777220	2023-04-15 15:42:22	\N	1048585	5
+94	1	\N	3	16777222	2023-04-15 15:42:22	\N	1048585	5
+95	1	\N	3	16777223	2023-04-15 15:42:22	\N	1048585	5
+96	1	\N	3	16777224	2023-04-15 15:42:22	\N	1048585	5
+97	1	1	3	16777247	2023-04-15 15:42:22	\N	1048585	5
+98	1	2	3	16777247	2023-04-15 15:42:22	\N	1048585	5
+99	1	3	3	16777247	2023-04-15 15:42:22	\N	1048585	5
+100	1	\N	2	16777236	2023-04-15 15:42:40	2023-04-15 15:42:47	523	5
+102	1	8	3	16777227	2023-04-15 15:42:52	\N	517	6
+161	1	26	2	16777229	2023-04-15 15:49:54	\N	1048585	9
+160	1	\N	2	16777236	2023-04-15 15:49:53	2023-04-15 15:50:00	523	9
+104	1	\N	2	16777236	2023-04-15 15:42:59	2023-04-15 15:43:05	523	6
+106	1	12	3	16777227	2023-04-15 15:43:11	\N	517	7
+184	1	1	3	16777247	2023-04-15 15:51:43	\N	1048585	10
+110	1	23	2	16777235	2023-04-15 15:43:38	\N	1048585	5
+185	1	2	3	16777247	2023-04-15 15:51:43	\N	1048585	10
+122	1	4	2	16777217	2023-04-15 15:45:32	\N	1048585	6
+186	1	3	3	16777247	2023-04-15 15:51:43	\N	1048585	10
+180	1	\N	3	16777220	2023-04-15 15:51:43	\N	1048585	10
+181	1	\N	3	16777222	2023-04-15 15:51:43	\N	1048585	10
+182	1	\N	3	16777223	2023-04-15 15:51:43	\N	1048585	10
+191	1	\N	3	16777220	2023-04-15 15:52:13	\N	1048585	11
+192	1	\N	3	16777222	2023-04-15 15:52:13	\N	1048585	11
+193	1	\N	3	16777223	2023-04-15 15:52:13	\N	1048585	11
+194	1	\N	3	16777224	2023-04-15 15:52:13	\N	1048585	11
+195	1	1	3	16777247	2023-04-15 15:52:13	\N	1048585	11
+196	1	2	3	16777247	2023-04-15 15:52:13	\N	1048585	11
+197	1	3	3	16777247	2023-04-15 15:52:13	\N	1048585	11
+198	1	\N	2	16777236	2023-04-15 15:52:29	2023-04-15 15:52:33	523	10
+200	1	9	3	16777227	2023-04-15 15:52:39	\N	517	9
+202	1	\N	2	16777236	2023-04-15 15:52:44	2023-04-15 15:52:49	523	11
+208	1	28	2	16777230	2023-04-15 15:53:48	\N	1048585	11
+215	1	\N	3	16777220	2023-04-15 15:54:34	\N	1048585	12
+216	1	\N	3	16777222	2023-04-15 15:54:34	\N	1048585	12
+217	1	\N	3	16777223	2023-04-15 15:54:34	\N	1048585	12
+218	1	\N	3	16777224	2023-04-15 15:54:34	\N	1048585	12
+219	1	1	3	16777247	2023-04-15 15:54:34	\N	1048585	12
+220	1	2	3	16777247	2023-04-15 15:54:34	\N	1048585	12
+221	1	3	3	16777247	2023-04-15 15:54:34	\N	1048585	12
+223	1	29	2	16777229	2023-04-15 15:54:51	\N	1048585	12
+222	1	\N	2	16777236	2023-04-15 15:54:51	2023-04-15 15:54:56	523	12
+224	1	7	3	16777227	2023-04-15 15:55:02	\N	517	12
+236	1	\N	3	16777220	2023-04-15 15:56:10	\N	1048585	13
+228	1	9	3	16777227	2023-04-15 15:55:18	\N	517	14
+237	1	\N	3	16777222	2023-04-15 15:56:10	\N	1048585	13
+238	1	\N	3	16777223	2023-04-15 15:56:10	\N	1048585	13
+239	1	\N	3	16777224	2023-04-15 15:56:10	\N	1048585	13
+240	1	1	3	16777247	2023-04-15 15:56:10	\N	1048585	13
+241	1	2	3	16777247	2023-04-15 15:56:10	\N	1048585	13
+242	1	3	3	16777247	2023-04-15 15:56:10	\N	1048585	13
+243	1	\N	2	16777236	2023-04-15 15:56:28	2023-04-15 15:56:33	523	13
+245	1	8	3	16777227	2023-04-15 15:56:39	\N	517	15
+247	1	\N	2	16777236	2023-04-15 15:56:44	2023-04-15 15:56:50	523	14
+308	1	\N	3	16777224	2023-04-15 16:03:27	\N	1048585	16
+251	1	11	3	16777227	2023-04-15 15:57:03	\N	517	17
+309	1	1	3	16777247	2023-04-15 16:03:27	\N	1048585	16
+255	1	30	2	16777230	2023-04-15 15:58:01	\N	1048585	13
+280	1	\N	2	16777246	2023-04-15 16:01:33	\N	1048585	14
+310	1	2	3	16777247	2023-04-15 16:03:27	\N	1048585	16
+311	1	3	3	16777247	2023-04-15 16:03:27	\N	1048585	16
+264	1	3	2	16777217	2023-04-15 15:58:57	\N	1048585	14
+265	1	\N	2	16777236	2023-04-15 15:59:16	2023-04-15 15:59:23	523	15
+267	1	7	3	16777227	2023-04-15 15:59:29	\N	517	19
+269	1	\N	2	16777236	2023-04-15 15:59:36	2023-04-15 15:59:41	523	16
+271	1	11	3	16777227	2023-04-15 15:59:47	\N	517	20
+312	1	\N	2	16777236	2023-04-15 16:03:47	2023-04-15 16:03:53	523	18
+276	1	31	2	16777235	2023-04-15 16:00:13	\N	1048585	14
+277	1	3	2	16777254	2023-04-15 16:00:13	\N	1048585	14
+287	1	\N	3	16777220	2023-04-15 16:02:10	\N	1048585	15
+288	1	\N	3	16777222	2023-04-15 16:02:10	\N	1048585	15
+289	1	\N	3	16777223	2023-04-15 16:02:10	\N	1048585	15
+290	1	\N	3	16777224	2023-04-15 16:02:10	\N	1048585	15
+291	1	1	3	16777247	2023-04-15 16:02:10	\N	1048585	15
+292	1	2	3	16777247	2023-04-15 16:02:10	\N	1048585	15
+293	1	3	3	16777247	2023-04-15 16:02:10	\N	1048585	15
+294	1	\N	2	16777236	2023-04-15 16:02:28	2023-04-15 16:02:33	523	17
+315	1	11	3	16777227	2023-04-15 16:04:07	\N	517	22
+317	1	12	3	16777227	2023-04-15 16:04:15	\N	517	23
+305	1	\N	3	16777220	2023-04-15 16:03:27	\N	1048585	16
+306	1	\N	3	16777222	2023-04-15 16:03:27	\N	1048585	16
+307	1	\N	3	16777223	2023-04-15 16:03:27	\N	1048585	16
+331	1	\N	3	16777220	2023-04-15 16:05:42	\N	1048585	17
+332	1	\N	3	16777222	2023-04-15 16:05:42	\N	1048585	17
+333	1	\N	3	16777223	2023-04-15 16:05:42	\N	1048585	17
+334	1	\N	3	16777224	2023-04-15 16:05:42	\N	1048585	17
+335	1	1	3	16777247	2023-04-15 16:05:42	\N	1048585	17
+336	1	2	3	16777247	2023-04-15 16:05:42	\N	1048585	17
+337	1	3	3	16777247	2023-04-15 16:05:42	\N	1048585	17
+339	1	34	2	16777229	2023-04-15 16:06:04	\N	1048585	17
+338	1	\N	2	16777236	2023-04-15 16:06:04	2023-04-15 16:06:11	523	19
+340	1	7	3	16777227	2023-04-15 16:06:17	\N	517	24
+342	1	8	3	16777227	2023-04-15 16:06:26	\N	517	25
+\.
+
+
+--
+-- Data for Name: oai_resumption_tokens; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.oai_resumption_tokens (oai_resumption_token_id, token, expire, record_offset, params) FROM stdin;
+\.
+
+
+--
+-- Data for Name: plugin_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.plugin_settings (plugin_setting_id, plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
+1	defaultthemeplugin	0	enabled	1	bool
+2	acronplugin	0	enabled	1	bool
+3	acronplugin	0	crontab	[{"className":"PKP\\\\task\\\\ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\PublishSubmissions","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\RemoveUnvalidatedExpiredUsers","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\UpdateIPGeoDB","frequency":{"day":"10"},"args":[]},{"className":"APP\\\\tasks\\\\UsageStatsLoader","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\EditorialReminders","frequency":{"day":"1"},"args":[]},{"className":"PKP\\\\task\\\\ProcessQueueJobs","frequency":{"hour":24},"args":[]},{"className":"PKP\\\\task\\\\RemoveFailedJobs","frequency":{"day":"1"},"args":[]}]	object
+4	usageeventplugin	0	enabled	1	bool
+5	usageeventplugin	0	uniqueSiteId		string
+6	tinymceplugin	0	enabled	1	bool
+7	languagetoggleblockplugin	0	enabled	1	bool
+8	languagetoggleblockplugin	0	seq	4	int
+9	languagetoggleblockplugin	0	context	1	int
+10	developedbyblockplugin	0	enabled	0	bool
+11	developedbyblockplugin	0	seq	0	int
+12	developedbyblockplugin	0	context	1	int
+13	tinymceplugin	1	enabled	1	bool
+14	defaultthemeplugin	1	enabled	1	bool
+15	browseblockplugin	1	enabled	1	bool
+16	browseblockplugin	1	seq	1	int
+17	browseblockplugin	1	context	1	int
+18	browseblockplugin	1	browseNewReleases	1	bool
+19	browseblockplugin	1	browseCategories	1	bool
+20	browseblockplugin	1	browseSeries	1	bool
+21	informationblockplugin	1	enabled	1	bool
+22	informationblockplugin	1	seq	7	int
+23	informationblockplugin	1	context	1	int
+24	languagetoggleblockplugin	1	enabled	1	bool
+25	languagetoggleblockplugin	1	seq	4	int
+26	languagetoggleblockplugin	1	context	1	int
+27	developedbyblockplugin	1	enabled	0	bool
+28	developedbyblockplugin	1	seq	0	int
+29	developedbyblockplugin	1	context	1	int
+30	dublincoremetaplugin	1	enabled	1	bool
+31	webfeedplugin	1	enabled	1	bool
+32	webfeedplugin	1	displayPage	homepage	string
+33	webfeedplugin	1	displayItems	1	bool
+34	webfeedplugin	1	recentItems	30	int
+35	webfeedplugin	1	includeIdentifiers	0	bool
+36	pdfjsviewerplugin	1	enabled	1	bool
+37	htmlmonographfileplugin	1	enabled	1	bool
+38	googlescholarplugin	1	enabled	1	bool
+39	defaultthemeplugin	1	typography	notoSans	string
+40	defaultthemeplugin	1	useHomepageImageAsHeader	false	string
+41	defaultthemeplugin	1	baseColour	#1E6292	string
+42	defaultthemeplugin	1	showCatalogSeriesListing	false	string
+43	defaultthemeplugin	1	displayStats	none	string
+\.
+
+
+--
+-- Data for Name: press_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.press_settings (press_setting_id, press_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+13	1		country	IS	\N
+17	1	en	detailsHelp	<p>Please provide the following details to help us manage your submission in our system.</p>	\N
+27	1		itemsPerPage	25	\N
+28	1		keywords	request	\N
+30	1	fr_CA	librarianInformation	Nous encourageons les bibliothécaires de recherche à ajouter cette presse à la liste électronique des ressources documentaires de la bibliothèque. De plus, ce système d'édition à libre accès convient à toutes les bibliothèques et permet aux membres des facultés de l'utiliser pour les presses auxquelles ils contribuent à titre de rédacteur en chef. (voir <a href="http://pkp.sfu.ca/omp">Open Monograph Press</a>).	\N
+29	1	en	librarianInformation	We encourage research librarians to list this press among their library's electronic press holdings. As well, this open source publishing system is suitable for libraries to host for their faculty members to use with presses they are involved in editing (see <a href="https://pkp.sfu.ca/omp">Open Monograph Press</a>).	\N
+33	1		notifyAllAuthors	1	\N
+34	1		numPageLinks	10	\N
+1	1	en	acronym	JPK	\N
+4	1	fr_CA	authorGuidelines	##default.contextSettings.authorGuidelines##	\N
+6	1	fr_CA	authorInformation	Vous souhaitez soumettre une contribution à cette presse ? Nous vous recommandons de lire la page\n <a href="http://localhost/index.php/publicknowledge/about">À propos de cette presse</a> pour connaitre ses règlements et la page\n <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Lignes directrices à l'intention des auteurs-es</a>. Les auteurs-es doivent <a href="http://localhost/index.php/publicknowledge/user/register">s'inscrire</a> auprès de la presse avant d'envoyer une soumission. Si vous êtes déjà inscrit-e, il suffit simplement <a href="http://localhost/index.php/index/login">d'ouvrir une session</a> pour débuter la procédure en 5 étapes.	\N
+5	1	en	authorInformation	Interested in submitting to this press? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About the Press</a> page for the press' section policies and <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> with the press prior to submitting, or if already registered can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the 5 step process.	\N
+8	1	fr_CA	beginSubmissionHelp	##default.submission.step.beforeYouBegin##	\N
+7	1	en	beginSubmissionHelp	<p>Thank you for submitting to the Public Knowledge Press. You will be asked to upload files, identify co-authors, and provide information such as the title and abstract.<p><p>Please read our <a href="http://localhost/index.php/publicknowledge/about/submissions" target="_blank">Submission Guidelines</a> if you have not done so already. When filling out the forms, provide as many details as possible in order to help our editors evaluate your work.</p><p>Once you begin, you can save your submission and come back to it later. You will be able to review and correct any information before you submit.</p>	\N
+9	1		contactEmail	rvaca@mailinator.com	\N
+10	1		contactName	Ramiro Vaca	\N
+12	1	fr_CA	contributorsHelp	##default.submission.step.contributors##	\N
+11	1	en	contributorsHelp	<p>Add details for all of the contributors to this submission. Contributors added here will be sent an email confirmation of the submission, as well as a copy of all editorial decisions recorded against this submission.</p><p>If a contributor can not be contacted by email, because they must remain anonymous or do not have an email account, please do not enter a fake email address. You can add information about this contributor in a message to the editor at a later step in the submission process.</p>	\N
+14	1		defaultReviewMode	2	\N
+15	1	en	description	<p>Public Knowledge Press is a publisher dedicated to the subject of public access to science.</p>	\N
+19	1		emailSignature	<br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>	\N
+20	1		enableDois	1	\N
+21	1		doiSuffixType	default	\N
+22	1		registrationAgency		\N
+23	1		disableSubmissions	0	\N
+24	1		editorialStatsEmail	1	\N
+26	1	fr_CA	forTheEditorsHelp	##default.submission.step.forTheEditors##	\N
+25	1	en	forTheEditorsHelp	<p>Please provide the following details in order to help our editorial team manage your submission.</p><p>When entering metadata, provide entries that you think would be most helpful to the person managing your submission. This information can be changed before publication.</p>	\N
+31	1	en	name	Public Knowledge Press	\N
+32	1	fr_CA	name	Press de la connaissance du public	\N
+35	1		numWeeksPerResponse	4	\N
+16	1	fr_CA	description	<p>Le Press de Public Knowledge est une presse sur le thème de l'accès du public à la science.</p>	\N
+18	1	fr_CA	detailsHelp	##default.submission.step.details##	\N
+36	1		numWeeksPerReview	4	\N
+37	1	en	openAccessPolicy	This press provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.	\N
+54	1	en	uploadFilesHelp	<p>Provide any files our editorial team may need to evaluate your submission. In addition to the main work, you may wish to submit data sets, conflict of interest statements, or other supplementary files if these will be helpful for our editors.</p>	\N
+39	1	en	privacyStatement	<p>The names and email addresses entered in this press site will be used exclusively for the stated purposes of this press and will not be made available for any other purpose or to any other party.</p>	\N
+40	1	fr_CA	privacyStatement	<p>Les noms et adresses courriel saisis sur ce site de presse seront utilisés exclusivement pour les fins convenues de cette presse. Ils ne seront pas utilisés pour d'autres fins ou transmis à une tierce partie.</p>	\N
+44	1	fr_CA	reviewHelp	##default.submission.step.review##	\N
+55	1	fr_CA	uploadFilesHelp	##default.submission.step.uploadFiles##	\N
+56	1		enableGeoUsageStats	disabled	\N
+57	1		enableInstitutionUsageStats	0	\N
+58	1		isSushiApiPublic	1	\N
+59	1		coverThumbnailsMaxWidth	106	\N
+60	1		coverThumbnailsMaxHeight	100	\N
+61	1		enabledDoiTypes	["publication"]	\N
+62	1		doiCreationTime	copyEditCreationTime	\N
+42	1	fr_CA	readerInformation	Nous encourageons les lecteurs à s'abonner au service d'avis de publication de cette presse. Utilisez le lien <a href="http://localhost/index.php/publicknowledge/user/register">d'inscription</a> situé en haut de la page d'accueil de la presse. Cette inscription permettra au lecteur de recevoir la table des matières de chaque nouvelle monographie de cette presse par courriel. Cette liste permet également à la presse d'affirmer qu'elle compte un certain nombre de lecteurs. Consultez <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">l'énoncé de confidentialité </a> de la presse, lequel stipule que les noms et adresses courriel de ses lecteurs ne seront pas utilisés à d'autres fins.	\N
+41	1	en	readerInformation	We encourage readers to sign up for the publishing notification service for this press. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the homepage for the press. This registration will result in the reader receiving the Table of Contents by email for each new monograph of the press. This list also allows the press to claim a certain level of support or readership. See the press <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a> which assures readers that their name and email address will not be used for other purposes.	\N
+43	1	en	reviewHelp	<p>Review the information you have entered before you complete your submission. You can change any of the details displayed here by clicking the edit button at the top of each section.</p><p>Once you complete your submission, a member of our editorial team will be assigned to review it. Please ensure the details you have entered here are as accurate as possible.</p>	\N
+45	1		submissionAcknowledgement	allAuthors	\N
+47	1	fr_CA	submissionChecklist	##default.contextSettings.checklist##	\N
+46	1	en	submissionChecklist	<p>All submissions must meet the following requirements.</p><ul><li>This submission meets the requirements outlined in the <a href="http://localhost/index.php/publicknowledge/about/submissions">Author Guidelines</a>.</li><li>This submission has not been previously published, nor is it before another press for consideration.</li><li>All references have been checked for accuracy and completeness.</li><li>All tables and figures have been numbered and labeled.</li><li>Permission has been obtained to publish all photos, datasets and other material provided with this submission.</li></ul>	\N
+48	1		submitWithCategories	0	\N
+49	1		supportedFormLocales	["en","fr_CA"]	\N
+50	1		supportedLocales	["en","fr_CA"]	\N
+51	1		supportedSubmissionLocales	["en","fr_CA"]	\N
+52	1		themePluginPath	default	\N
+63	1		paymentPluginName	ManualPayment	\N
+64	1		doiVersioning	0	\N
+53	1		type	enable	\N
+38	1	fr_CA	openAccessPolicy	Cette presse offre un accès libre immédiat à son contenu en partant du principe que la recherche doit être accessible au grand public, car cela favorise un meilleur échange des connaissances à l'échelle mondiale.	\N
+3	1	en	authorGuidelines	<p>Authors are invited to make a submission to this press. Those submissions considered to be a good fit will be sent for peer review before determining whether they will be accepted or rejected.</p><p>Before making a submission, authors are responsible for obtaining permission to publish any material included with the submission, such as photos, documents and datasets. All authors identified on the submission must consent to be identified as an author. Where appropriate, research should be approved by an appropriate ethics committee in accordance with the legal requirements of the study's country.</p><p>An editor may desk reject a submission if it does not meet minimum standards of quality. Before submitting, please ensure that the scope and outline of the book are structured and articulated properly. The title should be concise and the abstract should be able to stand on its own. This will increase the likelihood of reviewers agreeing to review the book. When you're satisfied that your submission meets this standard, please follow the checklist below to prepare your submission.</p>	\N
+65	1	en	customHeaders	<meta name="pkp" content="Test metatag.">	\N
+67	1		mailingAddress	123 456th Street\nBurnaby, British Columbia\nCanada	\N
+66	1	en	searchDescription	Public Knowledge Press is a publisher dedicated to the subject of public access to science.	\N
+68	1		supportEmail	rvaca@mailinator.com	\N
+69	1		supportName	Ramiro Vaca	\N
+\.
+
+
+--
+-- Data for Name: presses; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.presses (press_id, path, seq, primary_locale, enabled) FROM stdin;
+1	publicknowledge	1	en	1
+\.
+
+
+--
+-- Data for Name: publication_categories; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.publication_categories (publication_category_id, publication_id, category_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: publication_dates; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.publication_dates (publication_date_id, publication_format_id, role, date_format, date) FROM stdin;
+\.
+
+
+--
+-- Data for Name: publication_format_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.publication_format_settings (publication_format_setting_id, publication_format_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+1	1	en	name	PDF	string
+2	1	fr_CA	name		string
+3	2	en	name	PDF	string
+4	2	fr_CA	name		string
+5	3	en	name	PDF	string
+6	3	fr_CA	name		string
+\.
+
+
+--
+-- Data for Name: publication_formats; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.publication_formats (publication_format_id, publication_id, submission_id, physical_format, entry_key, seq, file_size, front_matter, back_matter, height, height_unit_code, width, width_unit_code, thickness, thickness_unit_code, weight, weight_unit_code, product_composition_code, product_form_detail_code, country_manufacture_code, imprint, product_availability_code, technical_protection_code, returnable_indicator_code, remote_url, url_path, is_approved, is_available, doi_id) FROM stdin;
+1	4	\N	0	DA	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	https://file-examples-com.github.io/uploads/2017/10/file-sample_150kB.pdf		0	0	\N
+2	5	\N	0	DA	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N			1	1	\N
+3	14	\N	0	DA	0	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N	\N			1	1	\N
+\.
+
+
+--
+-- Data for Name: publication_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.publication_settings (publication_setting_id, publication_id, locale, setting_name, setting_value) FROM stdin;
+1	1	en	abstract	The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.
+2	1		categoryIds	[]
+3	1	en	title	The ABCs of Human Survival: A Paradigm for Global Citizenship
+6	2	en	abstract	<p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p>
+4	2		categoryIds	[]
+5	2	en	title	The West and Beyond: New Perspectives on an Imagined Region
+7	2	fr_CA	title	
+8	3	en	abstract	Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.
+9	3		categoryIds	[]
+10	3	en	title	The Political Economy of Workplace Injury in Canada
+11	4	en	abstract	What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.
+12	4		categoryIds	[]
+13	4	en	title	How Canadians Communicate: Contexts of Canadian Popular Culture
+23	7	en	abstract	Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.
+24	7		categoryIds	[]
+25	7	en	title	Accessible Elements: Teaching Science Online and at a Distance
+26	8	en	abstract	A Note From The Publisher
+27	8		categoryIds	[]
+28	8	en	title	Editorial
+29	9	en	abstract	In recent years, the Internet and other network technologies have emerged as a central issue for development in Latin America and the Caribbean. They have shown their potential to increase productivity and economic competitiveness, to create new ways to deliver education and health services, and to be driving forces for the modernization of the provision of public services.
+30	9		categoryIds	[]
+31	9	en	title	Enabling Openness: The future of the information society in Latin America and the Caribbean
+14	5	en	abstract	Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.
+15	5		categoryIds	[]
+17	5	en	copyrightHolder	Public Knowledge Press
+18	5	fr_CA	copyrightHolder	Press de la connaissance du public
+19	5		copyrightYear	2023
+16	5	en	title	Bomb Canada and Other Unkind Remarks in the American Media
+20	6	en	abstract	Good researchers have a host of tools at their disposal that make navigating today’s complex information ecosystem much more manageable. Gaining the knowledge, abilities, and self-reflection necessary to be a good researcher helps not only in academic settings, but is invaluable in any career, and throughout one’s life. The Information Literacy User’s Guide will start you on this route to success.
+21	6		categoryIds	[]
+22	6	en	title	The Information Literacy User’s Guide
+32	10	en	abstract	While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.
+33	10		categoryIds	[]
+34	10	en	title	Lost Tracks: Buffalo National Park, 1909-1939
+35	11	en	abstract	Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.
+36	11		categoryIds	[]
+37	11	en	title	Dreamwork
+38	12	en	abstract	Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.
+39	12		categoryIds	[]
+40	12	en	title	Connecting ICTs to Development
+41	13	en	abstract	This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.
+42	13		categoryIds	[]
+43	13	en	title	Mobile Learning: Transforming the Delivery of Education and Training
+44	14	en	abstract	From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.
+45	14		categoryIds	[]
+47	14	en	copyrightHolder	Public Knowledge Press
+48	14	fr_CA	copyrightHolder	Press de la connaissance du public
+49	14		copyrightYear	2023
+46	14	en	title	From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots
+50	15	en	abstract	A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.
+51	15		categoryIds	[]
+52	15	en	title	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978
+53	16	en	abstract	Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.
+54	16		categoryIds	[]
+55	16	en	title	A Designer's Log: Case Studies in Instructional Design
+56	17	en	abstract	The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.
+57	17		categoryIds	[]
+58	17	en	title	Open Development: Networked Innovations in International Development
+\.
+
+
+--
+-- Data for Name: publications; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.publications (publication_id, date_published, last_modified, primary_contact_id, publication_date_type, publication_type, seq, series_id, series_position, submission_id, status, url_path, version, doi_id) FROM stdin;
+1	\N	2023-04-15 15:33:34	1	pub	publication	0	1	\N	1	1	\N	1	\N
+2	\N	2023-04-15 15:35:07	2	pub	publication	0	\N	\N	2	1	\N	1	\N
+3	\N	2023-04-15 15:38:09	11	pub	publication	0	\N	\N	3	1	\N	1	\N
+4	\N	2023-04-15 15:39:06	12	pub	publication	0	3	\N	4	1	\N	1	\N
+5	2023-04-15	2023-04-15 15:44:45	16	pub	publication	0	\N	\N	5	3	\N	1	\N
+6	\N	2023-04-15 15:44:56	17	pub	publication	0	1	\N	6	1	\N	1	\N
+7	\N	2023-04-15 15:46:47	21	pub	publication	0	4	\N	7	1	\N	1	\N
+8	\N	2023-04-15 15:48:35	\N	pub	publication	0	\N	\N	8	1	\N	1	\N
+9	\N	2023-04-15 15:48:48	26	pub	publication	0	1	\N	9	1	\N	1	\N
+10	\N	2023-04-15 15:50:10	31	pub	publication	0	\N	\N	10	1	\N	1	\N
+11	\N	2023-04-15 15:51:55	32	pub	publication	0	\N	\N	11	1	\N	1	\N
+12	\N	2023-04-15 15:54:04	33	pub	publication	0	\N	\N	12	1	\N	1	\N
+13	\N	2023-04-15 15:55:42	41	pub	publication	0	\N	\N	13	1	\N	1	\N
+14	2023-04-15	2023-04-15 16:01:32	45	pub	publication	0	5	\N	14	3	\N	1	\N
+15	\N	2023-04-15 16:01:44	48	pub	publication	0	\N	\N	15	1	\N	1	\N
+16	\N	2023-04-15 16:02:43	49	pub	publication	0	\N	\N	16	1	\N	1	\N
+17	\N	2023-04-15 16:04:41	50	pub	publication	0	\N	\N	17	1	\N	1	\N
+\.
+
+
+--
+-- Data for Name: queries; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.queries (query_id, assoc_type, assoc_id, stage_id, seq, date_posted, date_modified, closed) FROM stdin;
+1	1048585	6	2	1	\N	\N	0
+\.
+
+
+--
+-- Data for Name: query_participants; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.query_participants (query_participant_id, query_id, user_id) FROM stdin;
+1	1	3
+2	1	4
+\.
+
+
+--
+-- Data for Name: queued_payments; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.queued_payments (queued_payment_id, date_created, date_modified, expiry_date, payment_data) FROM stdin;
+\.
+
+
+--
+-- Data for Name: representatives; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.representatives (representative_id, submission_id, role, representative_id_type, representative_id_value, name, phone, email, url, is_supplier) FROM stdin;
+\.
+
+
+--
+-- Data for Name: review_assignments; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, considered, request_resent) FROM stdin;
+1	1	12	\N	\N	2023-04-15 15:34:25	2023-04-15 15:34:25	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:34:25	0	0	0	\N	\N	\N	\N	1	3	2	1	0	\N	0	0
+2	2	11	\N	\N	2023-04-15 15:37:46	2023-04-15 15:37:46	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:37:46	0	0	0	\N	\N	\N	\N	2	3	1	1	0	\N	0	0
+15	13	8	\N	\N	2023-04-15 15:56:39	2023-04-15 15:56:39	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:56:39	0	0	0	\N	\N	\N	\N	13	2	2	1	0	\N	0	0
+3	2	12	\N	\N	2023-04-15 15:37:56	2023-04-15 15:37:57	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:37:57	0	0	0	\N	\N	\N	\N	2	3	2	1	0	\N	0	0
+4	4	9	\N	\N	2023-04-15 15:40:12	2023-04-15 15:40:12	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:40:12	0	0	0	\N	\N	\N	\N	3	2	2	1	0	\N	0	0
+21	16	10	\N	0	2023-04-15 16:03:59	2023-04-15 16:03:59	2023-04-15 16:04:25	2023-04-15 16:04:30	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 16:04:30	0	0	0	\N	\N	\N	\N	18	3	2	1	4	\N	0	0
+5	4	11	\N	\N	2023-04-15 15:40:29	2023-04-15 15:40:29	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:40:29	0	0	0	\N	\N	\N	\N	4	3	2	1	0	\N	0	0
+6	5	8	\N	\N	2023-04-15 15:42:52	2023-04-15 15:42:52	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:42:52	0	0	0	\N	\N	\N	\N	5	2	2	1	0	\N	0	0
+7	5	12	\N	\N	2023-04-15 15:43:11	2023-04-15 15:43:11	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:43:11	0	0	0	\N	\N	\N	\N	6	3	2	1	0	\N	0	0
+8	7	10	\N	\N	2023-04-15 15:48:05	2023-04-15 15:48:05	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:48:05	0	0	0	\N	\N	\N	\N	8	3	2	1	0	\N	0	0
+17	13	11	\N	\N	2023-04-15 15:57:03	2023-04-15 15:57:03	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:57:03	0	0	0	\N	\N	\N	\N	14	3	2	1	0	\N	0	0
+9	11	9	\N	\N	2023-04-15 15:52:39	2023-04-15 15:52:39	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:52:39	0	0	0	\N	\N	\N	\N	10	2	2	1	0	\N	0	0
+24	17	7	\N	\N	2023-04-15 16:06:17	2023-04-15 16:06:17	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 16:06:17	0	0	0	\N	\N	\N	\N	19	2	2	1	0	\N	0	0
+25	17	8	\N	\N	2023-04-15 16:06:26	2023-04-15 16:06:26	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 16:06:26	0	0	0	\N	\N	\N	\N	19	2	2	1	0	\N	0	0
+16	13	10	\N	0	2023-04-15 15:56:55	2023-04-15 15:56:56	2023-04-15 15:57:20	2023-04-15 15:57:26	2023-04-15 15:58:00	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:58:00	0	0	0	\N	\N	\N	\N	14	3	2	1	4	\N	0	0
+10	11	10	\N	0	2023-04-15 15:52:54	2023-04-15 15:52:55	2023-04-15 15:53:10	2023-04-15 15:53:15	2023-04-15 15:53:48	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:53:48	0	0	0	\N	\N	\N	\N	11	3	2	1	4	\N	0	0
+11	11	12	\N	0	2023-04-15 15:53:02	2023-04-15 15:53:02	2023-04-15 15:53:23	2023-04-15 15:53:28	2023-04-15 15:53:48	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:53:48	0	0	0	\N	\N	\N	\N	11	3	2	1	4	\N	0	0
+18	13	12	\N	0	2023-04-15 15:57:11	2023-04-15 15:57:11	2023-04-15 15:57:33	2023-04-15 15:57:39	2023-04-15 15:58:00	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:58:00	0	0	0	\N	\N	\N	\N	14	3	2	1	4	\N	0	0
+12	12	7	\N	\N	2023-04-15 15:55:02	2023-04-15 15:55:02	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:55:02	0	0	0	\N	\N	\N	\N	12	2	2	1	0	\N	0	0
+19	14	7	\N	\N	2023-04-15 15:59:29	2023-04-15 15:59:29	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:59:29	0	0	0	\N	\N	\N	\N	15	2	2	1	0	\N	0	0
+14	12	9	\N	\N	2023-04-15 15:55:18	2023-04-15 15:55:18	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:55:18	0	0	0	\N	\N	\N	\N	12	2	2	1	0	\N	0	0
+20	14	11	\N	\N	2023-04-15 15:59:47	2023-04-15 15:59:47	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:59:47	0	0	0	\N	\N	\N	\N	16	3	2	1	0	\N	0	0
+13	12	8	\N	0	2023-04-15 15:55:09	2023-04-15 15:55:09	2023-04-15 15:55:26	2023-04-15 15:55:31	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 15:55:31	0	0	0	\N	\N	\N	\N	12	2	2	1	4	\N	0	0
+22	16	11	\N	\N	2023-04-15 16:04:07	2023-04-15 16:04:07	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 16:04:07	0	0	0	\N	\N	\N	\N	18	3	2	1	0	\N	0	0
+23	16	12	\N	\N	2023-04-15 16:04:15	2023-04-15 16:04:15	\N	\N	\N	2023-05-13 00:00:00	2023-05-13 00:00:00	2023-04-15 16:04:15	0	0	0	\N	\N	\N	\N	18	3	2	1	0	\N	0	0
+\.
+
+
+--
+-- Data for Name: review_files; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.review_files (review_file_id, review_id, submission_file_id) FROM stdin;
+1	1	4
+2	1	5
+3	1	6
+4	2	12
+5	2	13
+6	2	14
+7	2	15
+8	3	12
+9	3	13
+10	3	14
+11	3	15
+12	4	26
+13	4	27
+14	4	28
+15	4	25
+16	6	37
+17	6	38
+18	6	39
+19	6	40
+20	6	35
+21	6	36
+22	8	56
+23	8	57
+24	8	58
+25	8	59
+26	8	55
+27	9	82
+28	9	83
+29	12	89
+30	12	88
+31	12	87
+32	13	89
+33	13	88
+34	13	87
+35	14	89
+36	14	88
+37	14	87
+38	15	95
+39	15	94
+40	15	93
+41	19	107
+42	19	106
+43	19	105
+44	19	104
+45	19	103
+46	19	102
+47	21	129
+48	21	127
+49	21	128
+50	21	126
+51	21	125
+52	22	129
+53	22	127
+54	22	128
+55	22	126
+56	22	125
+57	23	129
+58	23	127
+59	23	128
+60	23	126
+61	23	125
+62	24	140
+63	24	141
+64	24	139
+65	24	138
+66	24	136
+67	24	137
+68	25	140
+69	25	141
+70	25	139
+71	25	138
+72	25	136
+73	25	137
+\.
+
+
+--
+-- Data for Name: review_form_element_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.review_form_element_settings (review_form_element_setting_id, review_form_element_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: review_form_elements; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.review_form_elements (review_form_element_id, review_form_id, seq, element_type, required, included) FROM stdin;
+\.
+
+
+--
+-- Data for Name: review_form_responses; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.review_form_responses (review_form_response_id, review_form_element_id, review_id, response_type, response_value) FROM stdin;
+\.
+
+
+--
+-- Data for Name: review_form_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.review_form_settings (review_form_setting_id, review_form_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: review_forms; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.review_forms (review_form_id, assoc_type, assoc_id, seq, is_active) FROM stdin;
+\.
+
+
+--
+-- Data for Name: review_round_files; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.review_round_files (review_round_file_id, submission_id, review_round_id, stage_id, submission_file_id) FROM stdin;
+1	1	1	3	4
+2	1	1	3	5
+3	1	1	3	6
+4	2	2	3	12
+5	2	2	3	13
+6	2	2	3	14
+7	2	2	3	15
+8	4	3	2	25
+9	4	3	2	26
+10	4	3	2	27
+11	4	3	2	28
+12	5	5	2	35
+13	5	5	2	36
+14	5	5	2	37
+15	5	5	2	38
+16	5	5	2	39
+17	5	5	2	40
+18	6	7	2	46
+19	6	7	2	47
+20	6	7	2	48
+21	6	7	2	49
+22	7	8	3	55
+23	7	8	3	56
+24	7	8	3	57
+25	7	8	3	58
+26	7	8	3	59
+27	9	9	2	66
+28	9	9	2	67
+29	9	9	2	68
+30	9	9	2	69
+31	9	9	2	70
+32	11	10	2	82
+33	11	10	2	83
+34	12	12	2	87
+35	12	12	2	88
+36	12	12	2	89
+37	13	13	2	93
+38	13	13	2	94
+39	13	13	2	95
+40	14	15	2	102
+41	14	15	2	103
+42	14	15	2	104
+43	14	15	2	105
+44	14	15	2	106
+45	14	15	2	107
+46	15	17	3	117
+47	15	17	3	118
+48	15	17	3	119
+49	16	18	3	125
+50	16	18	3	126
+51	16	18	3	127
+52	16	18	3	128
+53	16	18	3	129
+54	17	19	2	136
+55	17	19	2	137
+56	17	19	2	138
+57	17	19	2	139
+58	17	19	2	140
+59	17	19	2	141
+\.
+
+
+--
+-- Data for Name: review_rounds; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.review_rounds (review_round_id, submission_id, stage_id, round, review_revision, status) FROM stdin;
+17	15	3	1	\N	6
+1	1	3	1	\N	4
+2	2	3	1	\N	7
+3	4	2	1	\N	4
+18	16	3	1	\N	8
+4	4	3	1	\N	4
+5	5	2	1	\N	4
+6	5	3	1	\N	4
+7	6	2	1	\N	14
+19	17	2	1	\N	7
+8	7	3	1	\N	4
+9	9	2	1	\N	6
+10	11	2	1	\N	4
+11	11	3	1	\N	4
+12	12	2	1	\N	8
+13	13	2	1	\N	4
+14	13	3	1	\N	4
+15	14	2	1	\N	4
+16	14	3	1	\N	4
+\.
+
+
+--
+-- Data for Name: sales_rights; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.sales_rights (sales_rights_id, publication_format_id, type, row_setting, countries_included, countries_excluded, regions_included, regions_excluded) FROM stdin;
+\.
+
+
+--
+-- Data for Name: scheduled_tasks; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.scheduled_tasks (scheduled_task_id, class_name, last_run) FROM stdin;
+1	PKP\\task\\ReviewReminder	2023-04-15 15:27:56
+2	PKP\\task\\PublishSubmissions	2023-04-15 15:27:56
+3	PKP\\task\\StatisticsReport	2023-04-15 15:27:56
+4	PKP\\task\\RemoveUnvalidatedExpiredUsers	2023-04-15 15:27:56
+5	PKP\\task\\UpdateIPGeoDB	2023-04-15 15:27:56
+6	APP\\tasks\\UsageStatsLoader	2023-04-15 15:27:57
+7	PKP\\task\\EditorialReminders	2023-04-15 15:27:57
+8	PKP\\task\\ProcessQueueJobs	2023-04-15 15:27:57
+9	PKP\\task\\RemoveFailedJobs	2023-04-15 15:27:57
+\.
+
+
+--
+-- Data for Name: series; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.series (series_id, press_id, review_form_id, seq, featured, editor_restricted, path, image, is_inactive) FROM stdin;
+1	1	\N	0	0	0	lis	[]	0
+2	1	\N	0	0	0	pe	[]	0
+3	1	\N	0	0	0	his	[]	0
+4	1	\N	0	0	0	ed	[]	0
+5	1	\N	0	0	0	psy	[]	0
+\.
+
+
+--
+-- Data for Name: series_categories; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.series_categories (series_id, category_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: series_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.series_settings (series_setting_id, series_id, locale, setting_name, setting_value) FROM stdin;
+1	1	en	title	Library & Information Studies
+2	1	fr_CA	title	
+3	1	en	description	
+4	1	fr_CA	description	
+5	1		onlineIssn	
+6	1	en	prefix	
+7	1	fr_CA	prefix	
+8	1		printIssn	
+9	1		sortOption	title-ASC
+10	1	en	subtitle	
+11	1	fr_CA	subtitle	
+12	2	en	title	Political Economy
+13	2	fr_CA	title	
+14	2	en	description	
+15	2	fr_CA	description	
+16	2		onlineIssn	
+17	2	en	prefix	
+18	2	fr_CA	prefix	
+19	2		printIssn	
+20	2		sortOption	title-ASC
+21	2	en	subtitle	
+22	2	fr_CA	subtitle	
+23	3	en	title	History
+24	3	fr_CA	title	
+25	3	en	description	
+26	3	fr_CA	description	
+27	3		onlineIssn	
+28	3	en	prefix	
+29	3	fr_CA	prefix	
+30	3		printIssn	
+31	3		sortOption	title-ASC
+32	3	en	subtitle	
+33	3	fr_CA	subtitle	
+34	4	en	title	Education
+35	4	fr_CA	title	
+36	4	en	description	
+37	4	fr_CA	description	
+38	4		onlineIssn	
+39	4	en	prefix	
+40	4	fr_CA	prefix	
+41	4		printIssn	
+42	4		sortOption	title-ASC
+43	4	en	subtitle	
+44	4	fr_CA	subtitle	
+45	5	en	title	Psychology
+46	5	fr_CA	title	
+47	5	en	description	
+48	5	fr_CA	description	
+49	5		onlineIssn	
+50	5	en	prefix	
+51	5	fr_CA	prefix	
+52	5		printIssn	
+53	5		sortOption	title-ASC
+54	5	en	subtitle	
+55	5	fr_CA	subtitle	
+\.
+
+
+--
+-- Data for Name: sessions; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
+p705vem3bfqrgndnlcan8apv0u	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573658	1681573704	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681573704;s:5:"token";s:32:"2839016bf5774f7b7ff30a5cc73018ee";}	localhost
+g3td5nposi512n9fmknmpnoo3j	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572577	1681572738	0	username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1681572737;s:5:"token";s:32:"53bcb37b8ee86f7171d283ea1b46452e";}	localhost
+oiddkesnfl5n6t7cvfsco0oskt	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572476	1681572505	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1681572505;s:5:"token";s:32:"b22e39f89e9b3ea32eeda21d76d74343";}	localhost
+4i3bo1rrsqf4cfgn3vbmndvudi	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572535	1681572555	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1681572555;s:5:"token";s:32:"7c5d1b1471c45b0328e61c04d0f4c198";}	localhost
+a0d04v047r7bc1p43e15s8ujh2	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572505	1681572531	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1681572531;s:5:"token";s:32:"2e04c01748e1c9c45eadd4b38de36a65";}	localhost
+vslfs7u183cueggfkh3k2sec91	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572557	1681572565	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1681572565;s:5:"token";s:32:"f0b499b604ea9f8f1876acb37a8da4a2";}	localhost
+61hphvn9fl0lo8rkt2ep840qvc	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572738	1681572754	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1681572754;s:5:"token";s:32:"38f4c25d3811fdabe94d603b21835d39";}	localhost
+ooitdgl4l5n83lghjtotm03aji	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572567	1681572574	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1681572574;s:5:"token";s:32:"f59dea59f5ae2dc46f88fa4603015b22";}	localhost
+1nv9o1mp1ajpadfemetqih26mu	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572758	1681572781	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1681572780;s:5:"token";s:32:"f3f8d5e7a25d1f06dba4ab5059ba3e69";}	localhost
+ac4q3h519mcfbp17931svpbp9n	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572784	1681572805	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1681572805;s:5:"token";s:32:"c5c56d27f0def9502afab7e077684f58";}	localhost
+lv159etgjh1h5c7pu0a67nntjc	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572842	1681572881	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681572882;s:5:"token";s:32:"5c6783cfc1e2e3a7326626155350c14f";}	localhost
+37ueenh7jtr36q0truh192po7d	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572808	1681572842	0	csrf|a:2:{s:9:"timestamp";i:1681572842;s:5:"token";s:32:"2a1e1b86a5738c99d0f1ff2b53df51ce";}username|s:6:"aclark";	localhost
+u29rd3ggpugkelitjatl17kbar	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573139	1681573186	0	csrf|a:2:{s:9:"timestamp";i:1681573185;s:5:"token";s:32:"6b2e1bced8c47d751c079b6563833931";}username|s:6:"bbeaty";	localhost
+gdmfemkk973r6o3uruojicuj1u	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681572885	1681573032	0	csrf|a:2:{s:9:"timestamp";i:1681573031;s:5:"token";s:32:"7591ae66733eb688f4fa01a860c0d07c";}username|s:7:"afinkel";	localhost
+l599qu2757lmbi2hrjsp3k40oe	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573083	1681573136	0	csrf|a:2:{s:9:"timestamp";i:1681573136;s:5:"token";s:32:"d3ce17ab7bf308a6723eca7e88ecfa67";}username|s:10:"bbarnetson";userId|i:21;	localhost
+m6sn8aigiouhmri2gj00rbrjjs	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573033	1681573078	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681573076;s:5:"token";s:32:"bc0cc7ae0230733c7dcc2776fc6ea589";}	localhost
+j1q52eh5f7ulpn5umv4ceisve5	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573279	1681573344	0	csrf|a:2:{s:9:"timestamp";i:1681573344;s:5:"token";s:32:"b42107ee53eb61e200e9d948eb2b03f8";}username|s:6:"callan";	localhost
+osodq2l1k2f0ug7u3rsn48beil	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573186	1681573275	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681573275;s:5:"token";s:32:"e360cfaf31a151b7318fe0221f1291ba";}	localhost
+n44601p90d62d73mn17abiv078	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573344	1681573464	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681573464;s:5:"token";s:32:"14990a7ac2b3a3856c926d353ee83391";}	localhost
+2e33hcn3at2q248d4dak90cpp5	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573465	1681573476	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681573476;s:5:"token";s:32:"632cb7e4c39453233e7a7400ba3f0366";}	localhost
+pihmd6k9e84qas2s0p1kdtio5j	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573476	1681573487	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681573487;s:5:"token";s:32:"75914ffb3fa87ba543e52fa2c73b5e09";}	localhost
+50859cq6kr77in8qigfc2ij70e	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574010	1681574035	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681574035;s:5:"token";s:32:"e5d03f843982c9937df4db752eb37ff0";}	localhost
+l4kl4o2u0nhfcbuuli0gtn6p5q	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573601	1681573658	0	csrf|a:2:{s:9:"timestamp";i:1681573657;s:5:"token";s:32:"8114a49e00b43c1219a7c72970516875";}username|s:10:"dkennepohl";	localhost
+jnqh29euveh9dk2h5p4ji8tgnl	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573489	1681573534	0	csrf|a:2:{s:9:"timestamp";i:1681573534;s:5:"token";s:32:"75e7e0260c6b0c932122f935d93bedbf";}username|s:9:"dbernnard";	localhost
+mg5mm6f0v7pe8liemr8ca7lj8s	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573935	1681573983	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681573983;s:5:"token";s:32:"62fbe9a170c842d1e8b1442e7be2283b";}	localhost
+op1qfj8hhlsckbegu75p6q4g5c	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573708	1681573719	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681573719;s:5:"token";s:32:"4d1204892de5d7bfc32b83767e9fef29";}	localhost
+1nnm9522mmgq619d4e0rps8rgf	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573568	1681573586	0	username|s:6:"minoue";csrf|a:2:{s:9:"timestamp";i:1681573585;s:5:"token";s:32:"59a40af1c0983742501b4be1d1079a47";}	localhost
+402fh4ocuqknba5610lba2a3jb	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573534	1681573567	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681573567;s:5:"token";s:32:"88020a1d4c7ade46fc575670b01cfb59";}	localhost
+n0a9lhen579ngrs7lt9c0hn7gs	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573587	1681573597	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681573597;s:5:"token";s:32:"7ac9b8d14bac94827a9e64f51acdc5ed";}	localhost
+4u08clie3tohdu9t4m7q2bq3hs	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573722	1681573777	0	csrf|a:2:{s:9:"timestamp";i:1681573777;s:5:"token";s:32:"cb64cf517c6f325297edb793983da8b5";}username|s:7:"fperini";	localhost
+lviduib1sb1bdja452prcj6p6v	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573778	1681573801	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681573801;s:5:"token";s:32:"d6dacaa1c71af39fd71d276071d65823";}	localhost
+4924igusas221t9mv7ekkmhpni	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573908	1681573934	0	csrf|a:2:{s:9:"timestamp";i:1681573934;s:5:"token";s:32:"be7e2d604541f84f3ab94515f4b0a6f8";}username|s:10:"jlockehart";	localhost
+3inbde4qnqjs29rlilb48mqrq3	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573804	1681573904	0	csrf|a:2:{s:9:"timestamp";i:1681573905;s:5:"token";s:32:"58d8bfc18bdbdf4fd372e05a32e2b149";}username|s:7:"jbrower";userId|i:27;	localhost
+u7i4g7q6si0q6gioqinsmnso5o	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573984	1681573996	0	username|s:8:"agallego";csrf|a:2:{s:9:"timestamp";i:1681573996;s:5:"token";s:32:"aa9b8526b60ef360e53cb4d725335321";}	localhost
+r4cf28q9199115h6u3a2fjdu1j	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681573997	1681574009	0	username|s:6:"gfavio";csrf|a:2:{s:9:"timestamp";i:1681574009;s:5:"token";s:32:"0f219fda0dd765c159b97c1faebda935";}	localhost
+pmphc2s0mii5johc94ji7u4o1v	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574038	1681574075	0	csrf|a:2:{s:9:"timestamp";i:1681574075;s:5:"token";s:32:"f6dc0296be96f4c8a6d33bbce5394f78";}username|s:6:"lelder";	localhost
+7r6ije005da37sftbrie4p6oji	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574173	1681574233	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681574233;s:5:"token";s:32:"1144179e75493fee5922727031b7ae99";}	localhost
+d69dco0nqotaaqp064pntdic7c	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574076	1681574119	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681574119;s:5:"token";s:32:"92dee6b0de3fa25bab0872c759d0b182";}	localhost
+5tcljfo320foto5ont8itaarbg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574120	1681574132	0	username|s:7:"phudson";csrf|a:2:{s:9:"timestamp";i:1681574132;s:5:"token";s:32:"61ad1d566377677721885e60c6556770";}	localhost
+frsmrqts7sb52be3cb6emprmj6	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574136	1681574172	0	csrf|a:2:{s:9:"timestamp";i:1681574172;s:5:"token";s:32:"317a5857af43e58dbf0d5b6209a5d2bb";}username|s:5:"mally";	localhost
+ccb8flgk1f9n0eh357ncuuvh4l	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574234	1681574246	0	username|s:8:"agallego";csrf|a:2:{s:9:"timestamp";i:1681574246;s:5:"token";s:32:"0e82b6faa2fb3fc914b12be238cdc2d3";}	localhost
+m980n4s7kp1mkrqgiudh5lpeb2	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574247	1681574260	0	username|s:6:"gfavio";csrf|a:2:{s:9:"timestamp";i:1681574260;s:5:"token";s:32:"dbe91d89852f5e64a2e5b949e3aff7b0";}	localhost
+ql5q4rpdj3osa8ji0b7n6po2gk	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574260	1681574287	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681574287;s:5:"token";s:32:"8ba443b42bd992676583f778c887b322";}	localhost
+25rr0fhqq2cbqk2mfqfpbtnljv	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574290	1681574339	0	csrf|a:2:{s:9:"timestamp";i:1681574338;s:5:"token";s:32:"5b7dbc5f1509f6eb5d1e2272cb80d2d8";}username|s:7:"mdawson";	localhost
+f7fl6nv7qonvbuqk9hp919b9d4	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574610	1681574657	0	username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681574658;s:5:"token";s:32:"8e3891656625ea2390bea6e722f795da";}	localhost
+8krnroqqn1hij59jtqauiu1i22	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574339	1681574495	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681574495;s:5:"token";s:32:"9ba9edd85a0a1dbf71b1883be654fb48";}	localhost
+s4gptf8obedt1f9903qvsjf6sg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574498	1681574532	0	csrf|a:2:{s:9:"timestamp";i:1681574532;s:5:"token";s:32:"401b573433d0b3603d2d3e72122a2adc";}username|s:6:"mforan";	localhost
+hkogmuf4vkfe4gqc8pkffk2jac	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574557	1681574609	0	csrf|a:2:{s:9:"timestamp";i:1681574609;s:5:"token";s:32:"c57d4a2545aa8ca5ec09a47c97744400";}username|s:6:"mpower";	localhost
+jq65sm9gj0emu0niilrir7lb6f	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574532	1681574554	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681574554;s:5:"token";s:32:"3d1f85dcd2989c4e0923bcb9ee7ce359";}	localhost
+gp8402lsk83umt05upuak3km2j	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574745	1681574786	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1681574786;s:5:"token";s:32:"8d060dcb35fdea7db8ed21d00c5f05ea";}	localhost
+ec93fi9turdjtmsj29ltuoh19p	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574675	1681574744	0	csrf|a:2:{s:9:"timestamp";i:1681574744;s:5:"token";s:32:"d360f66f75cdf79a71319c516159f039";}username|s:6:"msmith";	localhost
+sdgv6ki4a3vgvgvcrn47p8si05	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/110.0.5481.96 Safari/537.36	1681574658	1681574671	0	username|s:8:"agallego";csrf|a:2:{s:9:"timestamp";i:1681574671;s:5:"token";s:32:"de44ff6cc0c4f8eac43bbdbcd3ff2308";}	localhost
+\.
+
+
+--
+-- Data for Name: site; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.site (site_id, redirect, primary_locale, min_password_length, installed_locales, supported_locales, original_style_file_name) FROM stdin;
+1	0	en	6	["en","fr_CA"]	["en","fr_CA"]	\N
+\.
+
+
+--
+-- Data for Name: site_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.site_settings (site_setting_id, setting_name, locale, setting_value) FROM stdin;
+1	contactEmail	en	pkpadmin@mailinator.com
+2	contactName	en	Open Monograph Press
+3	contactName	fr_CA	Open Monograph Press
+4	compressStatsLogs		0
+5	enableGeoUsageStats		disabled
+6	enableInstitutionUsageStats		0
+7	keepDailyUsageStats		0
+8	isSiteSushiPlatform		0
+9	isSushiApiPublic		1
+10	themePluginPath		default
+\.
+
+
+--
+-- Data for Name: spotlight_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.spotlight_settings (spotlight_setting_id, spotlight_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: spotlights; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.spotlights (spotlight_id, assoc_type, assoc_id, press_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: stage_assignments; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
+1	1	13	19	2023-04-15 15:34:00	0	0
+2	1	5	4	2023-04-15 15:34:00	0	1
+3	1	6	14	2023-04-15 15:34:40	0	0
+26	12	13	29	2023-04-15 15:54:34	0	0
+4	2	13	20	2023-04-15 15:37:02	0	0
+27	13	13	30	2023-04-15 15:56:10	0	0
+5	3	13	21	2023-04-15 15:38:55	0	0
+6	4	13	22	2023-04-15 15:39:44	0	0
+7	4	3	3	2023-04-15 15:39:44	0	1
+8	4	6	13	2023-04-15 15:40:47	0	0
+9	4	10	15	2023-04-15 15:41:06	0	0
+28	14	13	31	2023-04-15 15:58:57	0	0
+29	14	3	3	2023-04-15 15:58:57	0	1
+30	14	6	13	2023-04-15 16:00:05	0	0
+31	14	10	15	2023-04-15 16:00:25	0	0
+32	14	12	18	2023-04-15 16:00:32	0	0
+10	5	13	23	2023-04-15 15:42:22	0	0
+11	5	6	14	2023-04-15 15:43:30	0	0
+12	5	10	16	2023-04-15 15:43:50	0	0
+13	5	12	17	2023-04-15 15:43:58	0	0
+14	6	13	24	2023-04-15 15:45:32	0	0
+15	6	5	4	2023-04-15 15:45:32	0	1
+16	6	3	3	2023-04-15 15:45:59	0	1
+17	6	5	6	2023-04-15 15:46:05	1	0
+33	15	13	32	2023-04-15 16:02:10	0	0
+18	7	13	25	2023-04-15 15:47:36	0	0
+19	7	3	3	2023-04-15 15:47:36	0	1
+20	7	6	13	2023-04-15 15:48:22	0	0
+21	8	3	3	2023-04-15 15:48:34	0	1
+34	16	13	33	2023-04-15 16:03:27	0	0
+22	9	13	26	2023-04-15 15:49:35	0	0
+23	9	5	4	2023-04-15 15:49:35	0	1
+24	10	13	27	2023-04-15 15:51:43	0	0
+35	17	13	34	2023-04-15 16:05:42	0	0
+25	11	13	28	2023-04-15 15:52:13	0	0
+\.
+
+
+--
+-- Data for Name: static_page_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.static_page_settings (static_page_setting_id, static_page_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+\.
+
+
+--
+-- Data for Name: static_pages; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.static_pages (static_page_id, path, context_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: subeditor_submission_group; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.subeditor_submission_group (subeditor_submission_group_id, context_id, assoc_id, assoc_type, user_id, user_group_id) FROM stdin;
+1	1	1	530	4	5
+2	1	2	530	5	5
+3	1	3	530	3	3
+4	1	4	530	3	3
+5	1	5	530	3	3
+\.
+
+
+--
+-- Data for Name: submission_chapter_authors; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submission_chapter_authors (author_id, chapter_id, primary_contact, seq) FROM stdin;
+1	1	0	0
+49	61	0	0
+1	2	0	0
+1	3	0	0
+49	62	0	0
+5	4	0	0
+6	5	0	0
+49	63	0	0
+7	6	0	0
+49	64	0	0
+8	7	0	0
+9	7	0	1
+11	8	0	0
+49	65	0	0
+11	9	0	0
+11	10	0	0
+51	66	0	0
+11	11	0	0
+11	12	0	0
+12	13	0	0
+50	67	0	0
+13	14	0	0
+52	67	0	1
+14	15	0	0
+15	16	0	0
+16	17	0	0
+50	68	0	0
+16	18	0	0
+52	68	0	1
+16	19	0	0
+16	20	0	0
+16	21	0	0
+53	69	0	0
+16	22	0	0
+54	69	0	1
+17	23	0	0
+18	24	0	0
+19	25	0	0
+55	70	0	0
+20	26	0	0
+56	70	0	1
+21	27	0	0
+22	28	0	0
+57	71	0	0
+23	29	0	0
+24	30	0	0
+25	31	0	0
+26	32	0	0
+27	33	0	0
+28	34	0	0
+29	35	0	0
+30	36	0	0
+31	37	0	0
+31	38	0	0
+31	39	0	0
+31	40	0	0
+31	41	0	0
+31	42	0	0
+31	43	0	0
+31	44	0	0
+31	45	0	0
+32	46	0	0
+32	47	0	0
+35	48	0	0
+36	48	0	1
+37	49	0	0
+38	49	0	1
+39	50	0	0
+40	50	0	1
+42	51	0	0
+43	52	0	0
+44	53	0	0
+45	54	0	0
+46	55	0	0
+47	56	0	0
+45	57	0	0
+48	58	0	0
+48	59	0	0
+48	60	0	0
+\.
+
+
+--
+-- Data for Name: submission_chapter_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submission_chapter_settings (submission_chapter_setting_id, chapter_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+1	1	en	title	Choosing the Future	string
+2	1	fr_CA	title		string
+3	1	en	subtitle		string
+4	1	fr_CA	subtitle		string
+5	1	en	abstract		string
+6	1	fr_CA	abstract		string
+7	1		datePublished	\N	string
+8	1		pages		string
+9	1		isPageEnabled	\N	string
+10	1		licenseUrl	\N	string
+11	2	en	title	Axioms	string
+12	2	fr_CA	title		string
+13	2	en	subtitle		string
+14	2	fr_CA	subtitle		string
+15	2	en	abstract		string
+16	2	fr_CA	abstract		string
+17	2		datePublished	\N	string
+18	2		pages		string
+19	2		isPageEnabled	\N	string
+20	2		licenseUrl	\N	string
+21	3	en	title	Paradigm Shift	string
+22	3	fr_CA	title		string
+23	3	en	subtitle		string
+24	3	fr_CA	subtitle		string
+25	3	en	abstract		string
+26	3	fr_CA	abstract		string
+27	3		datePublished	\N	string
+28	3		pages		string
+29	3		isPageEnabled	\N	string
+30	3		licenseUrl	\N	string
+31	4	en	title	Critical History in Western Canada 1900–2000	string
+32	4	fr_CA	title		string
+33	4	en	subtitle		string
+34	4	fr_CA	subtitle		string
+35	4	en	abstract		string
+36	4	fr_CA	abstract		string
+37	4		datePublished	\N	string
+38	4		pages		string
+39	4		isPageEnabled	\N	string
+40	4		licenseUrl		string
+41	5	en	title	Vernacular Currents in Western Canadian Historiography: The Passion and Prose of Katherine Hughes, F.G. Roe, and Roy Ito	string
+42	5	fr_CA	title		string
+43	5	en	subtitle		string
+44	5	fr_CA	subtitle		string
+45	5	en	abstract		string
+46	5	fr_CA	abstract		string
+47	5		datePublished	\N	string
+48	5		pages		string
+49	5		isPageEnabled	\N	string
+50	5		licenseUrl		string
+51	6	en	title	Cree Intellectual Traditions in History	string
+52	6	fr_CA	title		string
+53	6	en	subtitle		string
+54	6	fr_CA	subtitle		string
+55	6	en	abstract		string
+56	6	fr_CA	abstract		string
+57	6		datePublished	\N	string
+58	6		pages		string
+59	6		isPageEnabled	\N	string
+60	6		licenseUrl		string
+61	7	en	title	Visualizing Space, Race, and History in the North: Photographic Narratives of the Athabasca-Mackenzie River Basin	string
+62	7	fr_CA	title		string
+63	7	en	subtitle		string
+64	7	fr_CA	subtitle		string
+65	7	en	abstract		string
+66	7	fr_CA	abstract		string
+67	7		datePublished	\N	string
+68	7		pages		string
+69	7		isPageEnabled	\N	string
+70	7		licenseUrl		string
+71	8	en	title	Introduction	string
+72	8	fr_CA	title		string
+73	8	en	subtitle		string
+74	8	fr_CA	subtitle		string
+75	8	en	abstract		string
+76	8	fr_CA	abstract		string
+77	8		datePublished	\N	string
+78	8		pages		string
+79	8		isPageEnabled	\N	string
+80	8		licenseUrl	\N	string
+81	9	en	title	Part One. Employment Relationships in Canada	string
+82	9	fr_CA	title		string
+83	9	en	subtitle		string
+84	9	fr_CA	subtitle		string
+85	9	en	abstract		string
+86	9	fr_CA	abstract		string
+87	9		datePublished	\N	string
+88	9		pages		string
+89	9		isPageEnabled	\N	string
+90	9		licenseUrl	\N	string
+91	10	en	title	Part Two. Preventing Workplace Injury	string
+92	10	fr_CA	title		string
+93	10	en	subtitle		string
+94	10	fr_CA	subtitle		string
+95	10	en	abstract		string
+96	10	fr_CA	abstract		string
+97	10		datePublished	\N	string
+98	10		pages		string
+99	10		isPageEnabled	\N	string
+100	10		licenseUrl	\N	string
+102	11	fr_CA	title		string
+103	11	en	subtitle		string
+104	11	fr_CA	subtitle		string
+105	11	en	abstract		string
+106	11	fr_CA	abstract		string
+107	11		datePublished	\N	string
+108	11		pages		string
+109	11		isPageEnabled	\N	string
+101	11	en	title	Part Three. Critique of OHS in Canada	string
+110	11		licenseUrl	\N	string
+111	12	en	title	Part Four. Political Economy of Preventing Workplace Injury	string
+112	12	fr_CA	title		string
+113	12	en	subtitle		string
+114	12	fr_CA	subtitle		string
+115	12	en	abstract		string
+116	12	fr_CA	abstract		string
+117	12		datePublished	\N	string
+118	12		pages		string
+119	12		isPageEnabled	\N	string
+120	12		licenseUrl	\N	string
+121	13	en	title	Introduction: Contexts of Popular Culture	string
+122	13	fr_CA	title		string
+123	13	en	subtitle		string
+124	13	fr_CA	subtitle		string
+125	13	en	abstract		string
+126	13	fr_CA	abstract		string
+127	13		datePublished	\N	string
+128	13		pages		string
+129	13		isPageEnabled	\N	string
+130	13		licenseUrl	\N	string
+131	14	en	title	Chapter 1. A Future for Media Studies: Cultural Labour, Cultural Relations, Cultural Politics	string
+132	14	fr_CA	title		string
+133	14	en	subtitle		string
+134	14	fr_CA	subtitle		string
+135	14	en	abstract		string
+136	14	fr_CA	abstract		string
+137	14		datePublished	\N	string
+138	14		pages		string
+139	14		isPageEnabled	\N	string
+140	14		licenseUrl	\N	string
+141	15	en	title	Chapter 2. Log On, Goof Off, and Look Up: Facebook and the Rhythms of Canadian Internet Use	string
+142	15	fr_CA	title		string
+143	15	en	subtitle		string
+144	15	fr_CA	subtitle		string
+145	15	en	abstract		string
+146	15	fr_CA	abstract		string
+147	15		datePublished	\N	string
+148	15		pages		string
+149	15		isPageEnabled	\N	string
+150	15		licenseUrl	\N	string
+151	16	en	title	Chapter 3. Hawkers and Public Space: Free Commuter Newspapers in Canada	string
+152	16	fr_CA	title		string
+153	16	en	subtitle		string
+154	16	fr_CA	subtitle		string
+155	16	en	abstract		string
+156	16	fr_CA	abstract		string
+157	16		datePublished	\N	string
+158	16		pages		string
+159	16		isPageEnabled	\N	string
+160	16		licenseUrl	\N	string
+161	17	en	title	Prologue	string
+162	17	fr_CA	title		string
+163	17	en	subtitle		string
+164	17	fr_CA	subtitle		string
+165	17	en	abstract		string
+166	17	fr_CA	abstract		string
+167	17		datePublished	\N	string
+168	17		pages		string
+169	17		isPageEnabled	\N	string
+170	17		licenseUrl	\N	string
+171	18	en	title	Chapter 1: The First Five Years: 1867-1872	string
+172	18	fr_CA	title		string
+173	18	en	subtitle		string
+174	18	fr_CA	subtitle		string
+175	18	en	abstract		string
+176	18	fr_CA	abstract		string
+177	18		datePublished	\N	string
+178	18		pages		string
+179	18		isPageEnabled	\N	string
+180	18		licenseUrl	\N	string
+181	19	en	title	Chapter 2: Free Trade or "Freedom": 1911	string
+182	19	fr_CA	title		string
+183	19	en	subtitle		string
+184	19	fr_CA	subtitle		string
+185	19	en	abstract		string
+186	19	fr_CA	abstract		string
+187	19		datePublished	\N	string
+188	19		pages		string
+189	19		isPageEnabled	\N	string
+190	19		licenseUrl	\N	string
+191	20	en	title	Chapter 3: Castro, Nukes & the Cold War: 1953-1968	string
+192	20	fr_CA	title		string
+193	20	en	subtitle		string
+194	20	fr_CA	subtitle		string
+195	20	en	abstract		string
+196	20	fr_CA	abstract		string
+197	20		datePublished	\N	string
+198	20		pages		string
+199	20		isPageEnabled	\N	string
+200	20		licenseUrl	\N	string
+201	21	en	title	Chapter 4: Enter the Intellect: 1968-1984	string
+202	21	fr_CA	title		string
+203	21	en	subtitle		string
+204	21	fr_CA	subtitle		string
+205	21	en	abstract		string
+206	21	fr_CA	abstract		string
+207	21		datePublished	\N	string
+208	21		pages		string
+209	21		isPageEnabled	\N	string
+210	21		licenseUrl	\N	string
+212	22	fr_CA	title		string
+213	22	en	subtitle		string
+214	22	fr_CA	subtitle		string
+215	22	en	abstract		string
+211	22	en	title	Epilogue	string
+216	22	fr_CA	abstract		string
+217	22		datePublished	\N	string
+218	22		pages		string
+219	22		isPageEnabled	\N	string
+220	22		licenseUrl	\N	string
+221	23	en	title	Identify: Understanding Your Information Need	string
+222	23	fr_CA	title		string
+223	23	en	subtitle		string
+224	23	fr_CA	subtitle		string
+225	23	en	abstract		string
+226	23	fr_CA	abstract		string
+227	23		datePublished	\N	string
+228	23		pages		string
+229	23		isPageEnabled	\N	string
+230	23		licenseUrl	\N	string
+231	24	en	title	Scope: Knowing What Is Available	string
+232	24	fr_CA	title		string
+233	24	en	subtitle		string
+234	24	fr_CA	subtitle		string
+235	24	en	abstract		string
+236	24	fr_CA	abstract		string
+237	24		datePublished	\N	string
+238	24		pages		string
+239	24		isPageEnabled	\N	string
+240	24		licenseUrl	\N	string
+241	25	en	title	Plan: Developing Research Strategies	string
+242	25	fr_CA	title		string
+243	25	en	subtitle		string
+244	25	fr_CA	subtitle		string
+245	25	en	abstract		string
+246	25	fr_CA	abstract		string
+247	25		datePublished	\N	string
+248	25		pages		string
+249	25		isPageEnabled	\N	string
+250	25		licenseUrl	\N	string
+251	26	en	title	Gather: Finding What You Need	string
+252	26	fr_CA	title		string
+253	26	en	subtitle		string
+254	26	fr_CA	subtitle		string
+255	26	en	abstract		string
+256	26	fr_CA	abstract		string
+257	26		datePublished	\N	string
+258	26		pages		string
+259	26		isPageEnabled	\N	string
+260	26		licenseUrl	\N	string
+261	27	en	title	Introduction	string
+262	27	fr_CA	title		string
+263	27	en	subtitle		string
+264	27	fr_CA	subtitle		string
+265	27	en	abstract		string
+266	27	fr_CA	abstract		string
+267	27		datePublished	\N	string
+268	27		pages		string
+269	27		isPageEnabled	\N	string
+270	27		licenseUrl	\N	string
+271	28	en	title	Chapter 1: Interactions Affording Distance Science Education	string
+272	28	fr_CA	title		string
+273	28	en	subtitle		string
+274	28	fr_CA	subtitle		string
+275	28	en	abstract		string
+276	28	fr_CA	abstract		string
+277	28		datePublished	\N	string
+278	28		pages		string
+279	28		isPageEnabled	\N	string
+280	28		licenseUrl	\N	string
+281	29	en	title	Chapter 2: Learning Science at a Distance: Instructional Dialogues and Resources	string
+282	29	fr_CA	title		string
+283	29	en	subtitle		string
+284	29	fr_CA	subtitle		string
+285	29	en	abstract		string
+286	29	fr_CA	abstract		string
+287	29		datePublished	\N	string
+288	29		pages		string
+289	29		isPageEnabled	\N	string
+290	29		licenseUrl	\N	string
+291	30	en	title	Chapter 3: Leadership Strategies for Coordinating Distance Education Instructional Development Teams	string
+292	30	fr_CA	title		string
+293	30	en	subtitle		string
+294	30	fr_CA	subtitle		string
+295	30	en	abstract		string
+296	30	fr_CA	abstract		string
+297	30		datePublished	\N	string
+298	30		pages		string
+299	30		isPageEnabled	\N	string
+300	30		licenseUrl	\N	string
+301	31	en	title	Chapter 4: Toward New Models of Flexible Education to Enhance Quality in Australian Higher Education	string
+302	31	fr_CA	title		string
+303	31	en	subtitle		string
+304	31	fr_CA	subtitle		string
+305	31	en	abstract		string
+306	31	fr_CA	abstract		string
+307	31		datePublished	\N	string
+308	31		pages		string
+309	31		isPageEnabled	\N	string
+310	31		licenseUrl	\N	string
+311	32	en	title	Internet, openness and the future of the information society in LAC	string
+312	32	fr_CA	title		string
+313	32	en	subtitle		string
+314	32	fr_CA	subtitle		string
+315	32	en	abstract		string
+316	32	fr_CA	abstract		string
+317	32		datePublished	\N	string
+318	32		pages		string
+319	32		isPageEnabled	\N	string
+320	32		licenseUrl	\N	string
+321	33	en	title	Imagining the Internet: Open, closed or in between?	string
+322	33	fr_CA	title		string
+323	33	en	subtitle		string
+324	33	fr_CA	subtitle		string
+325	33	en	abstract		string
+326	33	fr_CA	abstract		string
+327	33		datePublished	\N	string
+328	33		pages		string
+329	33		isPageEnabled	\N	string
+330	33		licenseUrl	\N	string
+331	34	en	title	The internet in LAC will remain free, public and open over the next 10 years	string
+332	34	fr_CA	title		string
+333	34	en	subtitle		string
+334	34	fr_CA	subtitle		string
+335	34	en	abstract		string
+336	34	fr_CA	abstract		string
+337	34		datePublished	\N	string
+338	34		pages		string
+339	34		isPageEnabled	\N	string
+340	34		licenseUrl	\N	string
+341	35	en	title	Free Internet?	string
+342	35	fr_CA	title		string
+343	35	en	subtitle		string
+344	35	fr_CA	subtitle		string
+345	35	en	abstract		string
+346	35	fr_CA	abstract		string
+347	35		datePublished	\N	string
+348	35		pages		string
+349	35		isPageEnabled	\N	string
+350	35		licenseUrl	\N	string
+351	36	en	title	Risks and challenges for freedom of expression on the internet	string
+352	36	fr_CA	title		string
+353	36	en	subtitle		string
+354	36	fr_CA	subtitle		string
+355	36	en	abstract		string
+356	36	fr_CA	abstract		string
+357	36		datePublished	\N	string
+358	36		pages		string
+359	36		isPageEnabled	\N	string
+360	36		licenseUrl	\N	string
+361	37	en	title	Introduction	string
+362	37	fr_CA	title		string
+363	37	en	subtitle		string
+364	37	fr_CA	subtitle		string
+365	37	en	abstract		string
+366	37	fr_CA	abstract		string
+367	37		datePublished	\N	string
+368	37		pages		string
+369	37		isPageEnabled	\N	string
+370	37		licenseUrl	\N	string
+371	38	en	title	CHAPTER ONE: Where the Buffalo Roamed	string
+372	38	fr_CA	title		string
+373	38	en	subtitle		string
+374	38	fr_CA	subtitle		string
+375	38	en	abstract		string
+376	38	fr_CA	abstract		string
+377	38		datePublished	\N	string
+378	38		pages		string
+379	38		isPageEnabled	\N	string
+380	38		licenseUrl	\N	string
+381	39	en	title	CHAPTER TWO: Bison Conservation and Buffalo National Park	string
+382	39	fr_CA	title		string
+383	39	en	subtitle		string
+384	39	fr_CA	subtitle		string
+385	39	en	abstract		string
+386	39	fr_CA	abstract		string
+387	39		datePublished	\N	string
+388	39		pages		string
+389	39		isPageEnabled	\N	string
+390	39		licenseUrl	\N	string
+391	40	en	title	CHAPTER THREE: A Well-Run Ranch	string
+392	40	fr_CA	title		string
+393	40	en	subtitle		string
+394	40	fr_CA	subtitle		string
+395	40	en	abstract		string
+396	40	fr_CA	abstract		string
+397	40		datePublished	\N	string
+398	40		pages		string
+399	40		isPageEnabled	\N	string
+400	40		licenseUrl	\N	string
+401	41	en	title	CHAPTER FOUR: Zookeepers and Animal Breeders	string
+402	41	fr_CA	title		string
+403	41	en	subtitle		string
+404	41	fr_CA	subtitle		string
+405	41	en	abstract		string
+406	41	fr_CA	abstract		string
+407	41		datePublished	\N	string
+408	41		pages		string
+409	41		isPageEnabled	\N	string
+410	41		licenseUrl	\N	string
+411	42	en	title	CHAPTER FIVE: "Evolving the Arctic Cow"	string
+412	42	fr_CA	title		string
+413	42	en	subtitle		string
+414	42	fr_CA	subtitle		string
+415	42	en	abstract		string
+416	42	fr_CA	abstract		string
+417	42		datePublished	\N	string
+418	42		pages		string
+419	42		isPageEnabled	\N	string
+420	42		licenseUrl	\N	string
+422	43	fr_CA	title		string
+423	43	en	subtitle		string
+424	43	fr_CA	subtitle		string
+425	43	en	abstract		string
+426	43	fr_CA	abstract		string
+427	43		datePublished	\N	string
+428	43		pages		string
+429	43		isPageEnabled	\N	string
+421	43	en	title	CONCLUSION: The Forgotten Park	string
+430	43		licenseUrl	\N	string
+431	44	en	title	Bibliography	string
+432	44	fr_CA	title		string
+433	44	en	subtitle		string
+434	44	fr_CA	subtitle		string
+435	44	en	abstract		string
+436	44	fr_CA	abstract		string
+437	44		datePublished	\N	string
+438	44		pages		string
+439	44		isPageEnabled	\N	string
+440	44		licenseUrl	\N	string
+441	45	en	title	Index	string
+442	45	fr_CA	title		string
+443	45	en	subtitle		string
+444	45	fr_CA	subtitle		string
+445	45	en	abstract		string
+446	45	fr_CA	abstract		string
+447	45		datePublished	\N	string
+448	45		pages		string
+449	45		isPageEnabled	\N	string
+450	45		licenseUrl	\N	string
+451	46	en	title	Introduction	string
+452	46	fr_CA	title		string
+453	46	en	subtitle		string
+454	46	fr_CA	subtitle		string
+455	46	en	abstract		string
+456	46	fr_CA	abstract		string
+457	46		datePublished	\N	string
+458	46		pages		string
+459	46		isPageEnabled	\N	string
+460	46		licenseUrl	\N	string
+461	47	en	title	Poems	string
+462	47	fr_CA	title		string
+463	47	en	subtitle		string
+464	47	fr_CA	subtitle		string
+465	47	en	abstract		string
+466	47	fr_CA	abstract		string
+467	47		datePublished	\N	string
+468	47		pages		string
+469	47		isPageEnabled	\N	string
+470	47		licenseUrl	\N	string
+471	48	en	title	Catalyzing Access through Social and Technical Innovation	string
+472	48	fr_CA	title		string
+473	48	en	subtitle		string
+474	48	fr_CA	subtitle		string
+475	48	en	abstract		string
+476	48	fr_CA	abstract		string
+477	48		datePublished	\N	string
+478	48		pages		string
+479	48		isPageEnabled	\N	string
+480	48		licenseUrl	\N	string
+481	49	en	title	Catalyzing Access via Telecommunications Policy	string
+482	49	fr_CA	title		string
+483	49	en	subtitle		string
+484	49	fr_CA	subtitle		string
+485	49	en	abstract		string
+486	49	fr_CA	abstract		string
+487	49		datePublished	\N	string
+488	49		pages		string
+489	49		isPageEnabled	\N	string
+490	49		licenseUrl	\N	string
+491	50	en	title	Access to Knowledge as a New Paradigm for Research on ICTs and Intellectual Property	string
+492	50	fr_CA	title		string
+493	50	en	subtitle		string
+494	50	fr_CA	subtitle		string
+495	50	en	abstract		string
+496	50	fr_CA	abstract		string
+497	50		datePublished	\N	string
+498	50		pages		string
+499	50		isPageEnabled	\N	string
+500	50		licenseUrl	\N	string
+501	51	en	title	Current State of Mobile Learning	string
+502	51	fr_CA	title		string
+503	51	en	subtitle		string
+504	51	fr_CA	subtitle		string
+505	51	en	abstract		string
+506	51	fr_CA	abstract		string
+507	51		datePublished	\N	string
+508	51		pages		string
+509	51		isPageEnabled	\N	string
+510	51		licenseUrl	\N	string
+511	52	en	title	A Model for Framing Mobile Learning	string
+512	52	fr_CA	title		string
+513	52	en	subtitle		string
+514	52	fr_CA	subtitle		string
+515	52	en	abstract		string
+516	52	fr_CA	abstract		string
+517	52		datePublished	\N	string
+518	52		pages		string
+519	52		isPageEnabled	\N	string
+520	52		licenseUrl	\N	string
+521	53	en	title	Mobile Distance Learning with PDAs: Development and Testing of Pedagogical and System Solutions Supporting Mobile Distance Learners	string
+522	53	fr_CA	title		string
+523	53	en	subtitle		string
+524	53	fr_CA	subtitle		string
+525	53	en	abstract		string
+526	53	fr_CA	abstract		string
+527	53		datePublished	\N	string
+528	53		pages		string
+529	53		isPageEnabled	\N	string
+530	53		licenseUrl	\N	string
+532	54	fr_CA	title		string
+533	54	en	subtitle		string
+534	54	fr_CA	subtitle		string
+535	54	en	abstract		string
+536	54	fr_CA	abstract		string
+531	54	en	title	Chapter 1: Mind Control—Internal or External?	string
+537	54		datePublished	\N	string
+538	54		pages		string
+539	54		isPageEnabled	\N	string
+540	54		licenseUrl	\N	string
+541	55	en	title	Chapter 2: Classical Music and the Classical Mind	string
+542	55	fr_CA	title		string
+543	55	en	subtitle		string
+544	55	fr_CA	subtitle		string
+545	55	en	abstract		string
+546	55	fr_CA	abstract		string
+547	55		datePublished	\N	string
+548	55		pages		string
+549	55		isPageEnabled	\N	string
+550	55		licenseUrl	\N	string
+551	56	en	title	Chapter 3: Situated Cognition and Bricolage	string
+552	56	fr_CA	title		string
+553	56	en	subtitle		string
+554	56	fr_CA	subtitle		string
+555	56	en	abstract		string
+556	56	fr_CA	abstract		string
+557	56		datePublished	\N	string
+558	56		pages		string
+559	56		isPageEnabled	\N	string
+560	56		licenseUrl	\N	string
+561	57	en	title	Chapter 4: Braitenberg’s Vehicle 2	string
+562	57	fr_CA	title		string
+563	57	en	subtitle		string
+564	57	fr_CA	subtitle		string
+565	57	en	abstract		string
+566	57	fr_CA	abstract		string
+567	57		datePublished	\N	string
+568	57		pages		string
+569	57		isPageEnabled	\N	string
+570	57		licenseUrl	\N	string
+571	58	en	title	Setting the Stage	string
+572	58	fr_CA	title		string
+573	58	en	subtitle		string
+574	58	fr_CA	subtitle		string
+575	58	en	abstract		string
+576	58	fr_CA	abstract		string
+577	58		datePublished	\N	string
+578	58		pages		string
+579	58		isPageEnabled	\N	string
+580	58		licenseUrl	\N	string
+581	59	en	title	Going It Alone, 1945-1954	string
+582	59	fr_CA	title		string
+583	59	en	subtitle		string
+584	59	fr_CA	subtitle		string
+585	59	en	abstract		string
+586	59	fr_CA	abstract		string
+587	59		datePublished	\N	string
+588	59		pages		string
+589	59		isPageEnabled	\N	string
+590	59		licenseUrl	\N	string
+591	60	en	title	Establishing the Pattern, 1955-1962	string
+592	60	fr_CA	title		string
+593	60	en	subtitle		string
+594	60	fr_CA	subtitle		string
+595	60	en	abstract		string
+596	60	fr_CA	abstract		string
+597	60		datePublished	\N	string
+598	60		pages		string
+599	60		isPageEnabled	\N	string
+600	60		licenseUrl	\N	string
+601	61	en	title	Foreward	string
+602	61	fr_CA	title		string
+603	61	en	subtitle		string
+604	61	fr_CA	subtitle		string
+605	61	en	abstract		string
+606	61	fr_CA	abstract		string
+607	61		datePublished	\N	string
+608	61		pages		string
+609	61		isPageEnabled	\N	string
+610	61		licenseUrl	\N	string
+611	62	en	title	Preface	string
+612	62	fr_CA	title		string
+613	62	en	subtitle		string
+614	62	fr_CA	subtitle		string
+615	62	en	abstract		string
+616	62	fr_CA	abstract		string
+617	62		datePublished	\N	string
+618	62		pages		string
+619	62		isPageEnabled	\N	string
+620	62		licenseUrl	\N	string
+621	63	en	title	The Case Studies	string
+622	63	fr_CA	title		string
+623	63	en	subtitle		string
+624	63	fr_CA	subtitle		string
+625	63	en	abstract		string
+626	63	fr_CA	abstract		string
+627	63		datePublished	\N	string
+628	63		pages		string
+629	63		isPageEnabled	\N	string
+630	63		licenseUrl	\N	string
+631	64	en	title	Conclusion	string
+632	64	fr_CA	title		string
+633	64	en	subtitle		string
+634	64	fr_CA	subtitle		string
+635	64	en	abstract		string
+636	64	fr_CA	abstract		string
+637	64		datePublished	\N	string
+638	64		pages		string
+639	64		isPageEnabled	\N	string
+640	64		licenseUrl	\N	string
+642	65	fr_CA	title		string
+643	65	en	subtitle		string
+644	65	fr_CA	subtitle		string
+645	65	en	abstract		string
+646	65	fr_CA	abstract		string
+641	65	en	title	Bibliography	string
+647	65		datePublished	\N	string
+648	65		pages		string
+649	65		isPageEnabled	\N	string
+650	65		licenseUrl	\N	string
+651	66	en	title	Preface	string
+652	66	fr_CA	title		string
+653	66	en	subtitle		string
+654	66	fr_CA	subtitle		string
+655	66	en	abstract		string
+656	66	fr_CA	abstract		string
+657	66		datePublished	\N	string
+658	66		pages		string
+659	66		isPageEnabled	\N	string
+660	66		licenseUrl	\N	string
+661	67	en	title	Introduction	string
+662	67	fr_CA	title		string
+663	67	en	subtitle		string
+664	67	fr_CA	subtitle		string
+665	67	en	abstract		string
+666	67	fr_CA	abstract		string
+667	67		datePublished	\N	string
+668	67		pages		string
+669	67		isPageEnabled	\N	string
+670	67		licenseUrl	\N	string
+671	68	en	title	The Emergence of Open Development in a Network Society	string
+672	68	fr_CA	title		string
+673	68	en	subtitle		string
+674	68	fr_CA	subtitle		string
+675	68	en	abstract		string
+676	68	fr_CA	abstract		string
+677	68		datePublished	\N	string
+678	68		pages		string
+679	68		isPageEnabled	\N	string
+680	68		licenseUrl	\N	string
+681	69	en	title	Enacting Openness in ICT4D Research	string
+682	69	fr_CA	title		string
+683	69	en	subtitle		string
+684	69	fr_CA	subtitle		string
+685	69	en	abstract		string
+686	69	fr_CA	abstract		string
+687	69		datePublished	\N	string
+688	69		pages		string
+689	69		isPageEnabled	\N	string
+690	69		licenseUrl	\N	string
+691	70	en	title	Transparency and Development: Ethical Consumption through Web 2.0 and the Internet of Things	string
+692	70	fr_CA	title		string
+693	70	en	subtitle		string
+694	70	fr_CA	subtitle		string
+695	70	en	abstract		string
+696	70	fr_CA	abstract		string
+697	70		datePublished	\N	string
+698	70		pages		string
+699	70		isPageEnabled	\N	string
+700	70		licenseUrl	\N	string
+701	71	en	title	Open Educational Resources: Opportunities and Challenges for the Developing World	string
+702	71	fr_CA	title		string
+703	71	en	subtitle		string
+704	71	fr_CA	subtitle		string
+705	71	en	abstract		string
+706	71	fr_CA	abstract		string
+707	71		datePublished	\N	string
+708	71		pages		string
+709	71		isPageEnabled	\N	string
+710	71		licenseUrl	\N	string
+\.
+
+
+--
+-- Data for Name: submission_chapters; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id, seq, source_chapter_id, doi_id) FROM stdin;
+13	\N	4	1	13	\N
+14	\N	4	2	14	\N
+15	\N	4	3	15	\N
+16	\N	4	4	16	\N
+1	\N	1	1	1	\N
+2	\N	1	2	2	\N
+3	\N	1	3	3	\N
+4	\N	2	1	4	\N
+5	\N	2	2	5	\N
+6	\N	2	3	6	\N
+7	\N	2	4	7	\N
+51	\N	13	1	51	\N
+52	\N	13	2	52	\N
+61	\N	16	1	61	\N
+53	\N	13	3	53	\N
+27	\N	7	1	27	\N
+28	\N	7	2	28	\N
+29	\N	7	3	29	\N
+30	\N	7	4	30	\N
+62	\N	16	2	62	\N
+17	\N	5	1	17	\N
+18	\N	5	2	18	\N
+8	\N	3	1	8	\N
+9	\N	3	2	9	\N
+10	\N	3	3	10	\N
+11	\N	3	4	11	\N
+19	\N	5	3	19	\N
+12	\N	3	5	12	\N
+20	\N	5	4	20	\N
+21	\N	5	5	21	\N
+31	\N	7	5	31	\N
+22	\N	5	6	22	\N
+63	\N	16	3	63	\N
+64	\N	16	4	64	\N
+65	\N	16	5	65	\N
+23	\N	6	1	23	\N
+24	\N	6	2	24	\N
+25	\N	6	3	25	\N
+26	\N	6	4	26	\N
+37	\N	10	1	37	\N
+38	\N	10	2	38	\N
+39	\N	10	3	39	\N
+40	\N	10	4	40	\N
+32	\N	9	1	32	\N
+33	\N	9	2	33	\N
+34	\N	9	3	34	\N
+35	\N	9	4	35	\N
+41	\N	10	5	41	\N
+36	\N	9	5	36	\N
+54	\N	14	1	54	\N
+42	\N	10	6	42	\N
+43	\N	10	7	43	\N
+55	\N	14	2	55	\N
+44	\N	10	8	44	\N
+56	\N	14	3	56	\N
+45	\N	10	9	45	\N
+57	\N	14	4	57	\N
+46	\N	11	1	46	\N
+47	\N	11	2	47	\N
+58	\N	15	1	58	\N
+59	\N	15	2	59	\N
+60	\N	15	3	60	\N
+48	\N	12	1	48	\N
+49	\N	12	2	49	\N
+50	\N	12	3	50	\N
+66	\N	17	1	66	\N
+67	\N	17	2	67	\N
+68	\N	17	3	68	\N
+69	\N	17	4	69	\N
+70	\N	17	5	70	\N
+71	\N	17	6	71	\N
+\.
+
+
+--
+-- Data for Name: submission_comments; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
+1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2023-04-15 15:53:15	\N	1
+2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2023-04-15 15:53:28	\N	1
+3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2023-04-15 15:55:31	\N	1
+4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2023-04-15 15:57:26	\N	1
+5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2023-04-15 15:57:39	\N	1
+6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2023-04-15 16:04:30	\N	1
+\.
+
+
+--
+-- Data for Name: submission_file_revisions; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submission_file_revisions (revision_id, submission_file_id, file_id) FROM stdin;
+1	1	1
+2	2	2
+3	3	3
+4	4	3
+5	5	2
+6	6	1
+7	7	4
+8	8	5
+9	9	6
+10	10	7
+12	12	7
+13	13	5
+14	14	4
+15	15	6
+16	16	9
+17	17	10
+18	18	11
+19	19	12
+20	20	13
+21	21	14
+22	22	15
+23	23	16
+24	24	17
+25	25	17
+26	26	16
+27	27	15
+28	28	14
+29	29	18
+30	30	19
+31	31	20
+32	32	21
+33	33	22
+34	34	23
+35	35	23
+36	36	21
+37	37	22
+38	38	20
+39	39	19
+40	40	18
+41	41	23
+42	42	24
+43	43	25
+44	44	26
+45	45	27
+46	46	27
+47	47	26
+48	48	24
+49	49	25
+50	50	28
+51	51	29
+52	52	30
+53	53	31
+54	54	32
+55	55	32
+56	56	30
+57	57	31
+58	58	29
+59	59	28
+60	60	33
+61	61	34
+62	62	35
+63	63	36
+64	64	37
+65	65	38
+66	66	38
+67	67	37
+68	68	36
+69	69	35
+70	70	34
+71	71	39
+72	72	40
+73	73	41
+74	74	42
+75	75	43
+76	76	44
+77	77	45
+78	78	46
+79	79	47
+80	80	48
+81	81	49
+82	82	49
+83	83	48
+84	84	50
+85	85	51
+86	86	52
+87	87	52
+88	88	51
+89	89	50
+90	90	53
+91	91	54
+92	92	55
+93	93	55
+94	94	54
+95	95	53
+96	96	56
+97	97	57
+98	98	58
+99	99	59
+100	100	60
+101	101	61
+102	102	61
+103	103	60
+104	104	59
+105	105	58
+106	106	57
+107	107	56
+108	108	61
+109	109	60
+110	110	59
+111	111	58
+112	112	57
+113	113	56
+114	114	62
+115	115	63
+116	116	64
+117	117	64
+118	118	63
+119	119	62
+120	120	65
+121	121	66
+122	122	67
+123	123	68
+124	124	69
+125	125	69
+126	126	67
+127	127	66
+128	128	68
+129	129	65
+130	130	70
+131	131	71
+132	132	72
+133	133	73
+134	134	74
+135	135	75
+136	136	74
+137	137	75
+138	138	73
+139	139	71
+140	140	70
+141	141	72
+\.
+
+
+--
+-- Data for Name: submission_file_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submission_file_settings (submission_file_setting_id, submission_file_id, locale, setting_name, setting_value, setting_type) FROM stdin;
+1	1	en	name	chapter1.pdf	string
+2	2	en	name	chapter2.pdf	string
+3	3	en	name	chapter3.pdf	string
+4	1		chapterId	1	string
+5	2		chapterId	2	string
+6	3		chapterId	3	string
+7	4	en	name	chapter3.pdf	string
+8	4		chapterId	3	string
+9	5	en	name	chapter2.pdf	string
+10	5		chapterId	2	string
+11	6	en	name	chapter1.pdf	string
+12	6		chapterId	1	string
+13	7	en	name	chapter1.pdf	string
+14	8	en	name	chapter2.pdf	string
+15	9	en	name	chapter3.pdf	string
+16	10	en	name	chapter4.pdf	string
+18	7		chapterId	4	string
+19	8		chapterId	5	string
+20	9		chapterId	6	string
+21	10		chapterId	7	string
+22	12	en	name	chapter4.pdf	string
+23	12		chapterId	7	string
+24	13	en	name	chapter2.pdf	string
+25	13		chapterId	5	string
+26	14	en	name	chapter1.pdf	string
+27	14		chapterId	4	string
+28	15	en	name	chapter3.pdf	string
+29	15		chapterId	6	string
+30	16	en	name	chapter1.pdf	string
+31	17	en	name	chapter2.pdf	string
+32	18	en	name	chapter3.pdf	string
+33	19	en	name	chapter4.pdf	string
+34	20	en	name	chapter5.pdf	string
+35	16		chapterId	8	string
+36	17		chapterId	9	string
+37	18		chapterId	10	string
+38	19		chapterId	11	string
+39	20		chapterId	12	string
+40	21	en	name	chapter1.pdf	string
+41	22	en	name	chapter2.pdf	string
+42	23	en	name	chapter3.pdf	string
+43	24	en	name	intro.pdf	string
+44	24		chapterId	13	string
+45	21		chapterId	14	string
+46	22		chapterId	15	string
+47	23		chapterId	16	string
+48	25	en	name	intro.pdf	string
+49	25		chapterId	13	string
+50	26	en	name	chapter3.pdf	string
+51	26		chapterId	16	string
+52	27	en	name	chapter2.pdf	string
+53	27		chapterId	15	string
+54	28	en	name	chapter1.pdf	string
+55	28		chapterId	14	string
+56	29	en	name	prologue.pdf	string
+57	30	en	name	chapter1.pdf	string
+58	31	en	name	chapter2.pdf	string
+59	32	en	name	chapter3.pdf	string
+60	33	en	name	chapter4.pdf	string
+61	34	en	name	epilogue.pdf	string
+62	29		chapterId	17	string
+63	30		chapterId	18	string
+64	31		chapterId	19	string
+65	32		chapterId	20	string
+66	33		chapterId	21	string
+67	34		chapterId	22	string
+68	35	en	name	epilogue.pdf	string
+69	35		chapterId	22	string
+70	36	en	name	chapter3.pdf	string
+71	36		chapterId	20	string
+72	37	en	name	chapter4.pdf	string
+73	37		chapterId	21	string
+74	38	en	name	chapter2.pdf	string
+75	38		chapterId	19	string
+76	39	en	name	chapter1.pdf	string
+77	39		chapterId	18	string
+78	40	en	name	prologue.pdf	string
+79	40		chapterId	17	string
+96	49	en	name	chapter2.pdf	string
+97	49		chapterId	24	string
+80	41	en	name	epilogue.pdf	string
+81	41		chapterId	22	string
+82	42	en	name	chapter1.pdf	string
+83	43	en	name	chapter2.pdf	string
+84	44	en	name	chapter3.pdf	string
+85	45	en	name	chapter4.pdf	string
+86	42		chapterId	23	string
+87	43		chapterId	24	string
+88	44		chapterId	25	string
+89	45		chapterId	26	string
+90	46	en	name	chapter4.pdf	string
+91	46		chapterId	26	string
+92	47	en	name	chapter3.pdf	string
+93	47		chapterId	25	string
+94	48	en	name	chapter1.pdf	string
+95	48		chapterId	23	string
+98	50	en	name	intro.pdf	string
+99	51	en	name	chapter1.pdf	string
+100	52	en	name	chapter2.pdf	string
+101	53	en	name	chapter3.pdf	string
+102	54	en	name	chapter4.pdf	string
+103	50		chapterId	27	string
+104	51		chapterId	28	string
+105	52		chapterId	29	string
+106	53		chapterId	30	string
+107	54		chapterId	31	string
+108	55	en	name	chapter4.pdf	string
+109	55		chapterId	31	string
+110	56	en	name	chapter2.pdf	string
+111	56		chapterId	29	string
+112	57	en	name	chapter3.pdf	string
+113	57		chapterId	30	string
+114	58	en	name	chapter1.pdf	string
+115	58		chapterId	28	string
+116	59	en	name	intro.pdf	string
+117	59		chapterId	27	string
+118	60	en	name	note.pdf	string
+119	61	en	name	chapter1.pdf	string
+120	62	en	name	chapter2.pdf	string
+121	63	en	name	chapter3.pdf	string
+122	64	en	name	chapter4.pdf	string
+123	65	en	name	chapter5.pdf	string
+124	61		chapterId	32	string
+125	62		chapterId	33	string
+126	63		chapterId	34	string
+127	64		chapterId	35	string
+128	65		chapterId	36	string
+129	66	en	name	chapter5.pdf	string
+130	66		chapterId	36	string
+131	67	en	name	chapter4.pdf	string
+132	67		chapterId	35	string
+133	68	en	name	chapter3.pdf	string
+134	68		chapterId	34	string
+135	69	en	name	chapter2.pdf	string
+136	69		chapterId	33	string
+137	70	en	name	chapter1.pdf	string
+138	70		chapterId	32	string
+139	71	en	name	intro.pdf	string
+140	72	en	name	chapter1.pdf	string
+141	73	en	name	chapter2.pdf	string
+142	74	en	name	chapter3.pdf	string
+143	75	en	name	chapter4.pdf	string
+144	76	en	name	chapter5.pdf	string
+145	77	en	name	conclusion.pdf	string
+146	78	en	name	bibliography.pdf	string
+147	79	en	name	index.pdf	string
+148	71		chapterId	37	string
+149	72		chapterId	38	string
+150	73		chapterId	39	string
+151	74		chapterId	40	string
+152	75		chapterId	41	string
+153	76		chapterId	42	string
+154	77		chapterId	43	string
+155	78		chapterId	44	string
+156	79		chapterId	45	string
+157	80	en	name	intro.pdf	string
+158	81	en	name	poems.pdf	string
+159	80		chapterId	46	string
+160	81		chapterId	47	string
+161	82	en	name	poems.pdf	string
+162	82		chapterId	47	string
+163	83	en	name	intro.pdf	string
+164	83		chapterId	46	string
+165	84	en	name	chapter1.pdf	string
+166	85	en	name	chapter2.pdf	string
+167	86	en	name	chapter3.pdf	string
+168	84		chapterId	48	string
+169	85		chapterId	49	string
+170	86		chapterId	50	string
+171	87	en	name	chapter3.pdf	string
+172	87		chapterId	50	string
+173	88	en	name	chapter2.pdf	string
+174	88		chapterId	49	string
+175	89	en	name	chapter1.pdf	string
+176	89		chapterId	48	string
+177	90	en	name	chapter1.pdf	string
+178	91	en	name	chapter2.pdf	string
+179	92	en	name	chapter3.pdf	string
+180	90		chapterId	51	string
+181	91		chapterId	52	string
+182	92		chapterId	53	string
+183	93	en	name	chapter3.pdf	string
+184	93		chapterId	53	string
+185	94	en	name	chapter2.pdf	string
+186	94		chapterId	52	string
+187	95	en	name	chapter1.pdf	string
+188	95		chapterId	51	string
+189	96	en	name	chapter1.pdf	string
+190	97	en	name	chapter2.pdf	string
+191	98	en	name	chapter3.pdf	string
+192	99	en	name	chapter4.pdf	string
+193	100	en	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+194	101	en	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+195	96		chapterId	54	string
+196	97		chapterId	55	string
+197	98		chapterId	56	string
+198	99		chapterId	57	string
+199	102	en	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+200	103	en	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+201	104	en	name	chapter4.pdf	string
+202	104		chapterId	57	string
+203	105	en	name	chapter3.pdf	string
+204	105		chapterId	56	string
+205	106	en	name	chapter2.pdf	string
+206	106		chapterId	55	string
+207	107	en	name	chapter1.pdf	string
+208	107		chapterId	54	string
+218	113		chapterId	54	string
+216	112		chapterId	55	string
+217	113	en	name	chapter1.pdf	string
+214	111		chapterId	56	string
+215	112	en	name	chapter2.pdf	string
+212	110		chapterId	57	string
+213	111	en	name	chapter3.pdf	string
+211	110	en	name	chapter4.pdf	string
+210	109	en	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+209	108	en	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+219	114	en	name	chapter1.pdf	string
+220	115	en	name	chapter2.pdf	string
+221	116	en	name	chapter3.pdf	string
+222	114		chapterId	58	string
+223	115		chapterId	59	string
+224	116		chapterId	60	string
+225	117	en	name	chapter3.pdf	string
+226	117		chapterId	60	string
+227	118	en	name	chapter2.pdf	string
+228	118		chapterId	59	string
+229	119	en	name	chapter1.pdf	string
+230	119		chapterId	58	string
+231	120	en	name	foreward.pdf	string
+232	121	en	name	preface.pdf	string
+233	122	en	name	cases.pdf	string
+234	123	en	name	conclusion.pdf	string
+235	124	en	name	bibliography.pdf	string
+236	120		chapterId	61	string
+237	121		chapterId	62	string
+238	122		chapterId	63	string
+239	123		chapterId	64	string
+240	124		chapterId	65	string
+241	125	en	name	bibliography.pdf	string
+242	125		chapterId	65	string
+243	126	en	name	cases.pdf	string
+244	126		chapterId	63	string
+245	127	en	name	preface.pdf	string
+246	127		chapterId	62	string
+247	128	en	name	conclusion.pdf	string
+248	128		chapterId	64	string
+249	129	en	name	foreward.pdf	string
+250	129		chapterId	61	string
+251	130	en	name	preface.pdf	string
+252	131	en	name	introduction.pdf	string
+253	132	en	name	chapter1.pdf	string
+254	133	en	name	chapter2.pdf	string
+255	134	en	name	chapter3.pdf	string
+256	135	en	name	chapter4.pdf	string
+257	130		chapterId	66	string
+258	131		chapterId	67	string
+259	132		chapterId	68	string
+260	133		chapterId	69	string
+261	134		chapterId	70	string
+262	135		chapterId	71	string
+263	136	en	name	chapter3.pdf	string
+264	136		chapterId	70	string
+265	137	en	name	chapter4.pdf	string
+266	137		chapterId	71	string
+267	138	en	name	chapter2.pdf	string
+268	138		chapterId	69	string
+269	139	en	name	introduction.pdf	string
+270	139		chapterId	67	string
+271	140	en	name	preface.pdf	string
+272	140		chapterId	66	string
+273	141	en	name	chapter1.pdf	string
+274	141		chapterId	68	string
+\.
+
+
+--
+-- Data for Name: submission_files; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id, doi_id) FROM stdin;
+1	1	1	\N	3	2	\N	\N	\N	2023-04-15 15:33:37	2023-04-15 15:33:38	19	\N	\N	\N
+2	1	2	\N	3	2	\N	\N	\N	2023-04-15 15:33:39	2023-04-15 15:33:39	19	\N	\N	\N
+3	1	3	\N	3	2	\N	\N	\N	2023-04-15 15:33:40	2023-04-15 15:33:40	19	\N	\N	\N
+4	1	3	3	3	4	\N	\N	\N	2023-04-15 15:34:15	2023-04-15 15:34:15	19	523	1	\N
+5	1	2	2	3	4	\N	\N	\N	2023-04-15 15:34:15	2023-04-15 15:34:15	19	523	1	\N
+6	1	1	1	3	4	\N	\N	\N	2023-04-15 15:34:15	2023-04-15 15:34:15	19	523	1	\N
+7	2	4	\N	3	2	\N	\N	\N	2023-04-15 15:35:06	2023-04-15 15:35:07	20	\N	\N	\N
+8	2	5	\N	3	2	\N	\N	\N	2023-04-15 15:35:08	2023-04-15 15:35:08	20	\N	\N	\N
+9	2	6	\N	3	2	\N	\N	\N	2023-04-15 15:35:09	2023-04-15 15:35:10	20	\N	\N	\N
+10	2	7	\N	3	2	\N	\N	\N	2023-04-15 15:35:10	2023-04-15 15:35:11	20	\N	\N	\N
+12	2	7	10	3	4	\N	\N	\N	2023-04-15 15:37:31	2023-04-15 15:37:31	20	523	2	\N
+13	2	5	8	3	4	\N	\N	\N	2023-04-15 15:37:31	2023-04-15 15:37:31	20	523	2	\N
+14	2	4	7	3	4	\N	\N	\N	2023-04-15 15:37:31	2023-04-15 15:37:31	20	523	2	\N
+15	2	6	9	3	4	\N	\N	\N	2023-04-15 15:37:31	2023-04-15 15:37:31	20	523	2	\N
+16	3	9	\N	3	2	\N	\N	\N	2023-04-15 15:38:12	2023-04-15 15:38:13	21	\N	\N	\N
+17	3	10	\N	3	2	\N	\N	\N	2023-04-15 15:38:14	2023-04-15 15:38:14	21	\N	\N	\N
+18	3	11	\N	3	2	\N	\N	\N	2023-04-15 15:38:15	2023-04-15 15:38:15	21	\N	\N	\N
+19	3	12	\N	3	2	\N	\N	\N	2023-04-15 15:38:16	2023-04-15 15:38:16	21	\N	\N	\N
+20	3	13	\N	3	2	\N	\N	\N	2023-04-15 15:38:17	2023-04-15 15:38:18	21	\N	\N	\N
+21	4	14	\N	3	2	\N	\N	\N	2023-04-15 15:39:09	2023-04-15 15:39:09	22	\N	\N	\N
+22	4	15	\N	3	2	\N	\N	\N	2023-04-15 15:39:10	2023-04-15 15:39:11	22	\N	\N	\N
+23	4	16	\N	3	2	\N	\N	\N	2023-04-15 15:39:12	2023-04-15 15:39:12	22	\N	\N	\N
+24	4	17	\N	3	2	\N	\N	\N	2023-04-15 15:39:13	2023-04-15 15:39:13	22	\N	\N	\N
+25	4	17	24	3	19	\N	\N	\N	2023-04-15 15:40:00	2023-04-15 15:40:00	22	523	3	\N
+26	4	16	23	3	19	\N	\N	\N	2023-04-15 15:40:01	2023-04-15 15:40:01	22	523	3	\N
+27	4	15	22	3	19	\N	\N	\N	2023-04-15 15:40:01	2023-04-15 15:40:01	22	523	3	\N
+28	4	14	21	3	19	\N	\N	\N	2023-04-15 15:40:01	2023-04-15 15:40:01	22	523	3	\N
+29	5	18	\N	3	2	\N	\N	\N	2023-04-15 15:41:29	2023-04-15 15:41:29	23	\N	\N	\N
+30	5	19	\N	3	2	\N	\N	\N	2023-04-15 15:41:30	2023-04-15 15:41:31	23	\N	\N	\N
+31	5	20	\N	3	2	\N	\N	\N	2023-04-15 15:41:32	2023-04-15 15:41:32	23	\N	\N	\N
+32	5	21	\N	3	2	\N	\N	\N	2023-04-15 15:41:33	2023-04-15 15:41:33	23	\N	\N	\N
+33	5	22	\N	3	2	\N	\N	\N	2023-04-15 15:41:34	2023-04-15 15:41:34	23	\N	\N	\N
+34	5	23	\N	3	2	\N	\N	\N	2023-04-15 15:41:35	2023-04-15 15:41:36	23	\N	\N	\N
+35	5	23	34	3	19	\N	\N	\N	2023-04-15 15:42:40	2023-04-15 15:42:40	23	523	5	\N
+36	5	21	32	3	19	\N	\N	\N	2023-04-15 15:42:40	2023-04-15 15:42:40	23	523	5	\N
+37	5	22	33	3	19	\N	\N	\N	2023-04-15 15:42:41	2023-04-15 15:42:41	23	523	5	\N
+38	5	20	31	3	19	\N	\N	\N	2023-04-15 15:42:41	2023-04-15 15:42:41	23	523	5	\N
+39	5	19	30	3	19	\N	\N	\N	2023-04-15 15:42:41	2023-04-15 15:42:41	23	523	5	\N
+40	5	18	29	3	19	\N	\N	\N	2023-04-15 15:42:41	2023-04-15 15:42:41	23	523	5	\N
+44	6	26	\N	3	2	\N	\N	\N	2023-04-15 15:45:01	2023-04-15 15:45:02	24	\N	\N	\N
+41	5	23	34	3	10	0	openAccess	1	2023-04-15 15:44:08	2023-04-15 15:44:19	23	521	2	\N
+42	6	24	\N	3	2	\N	\N	\N	2023-04-15 15:44:59	2023-04-15 15:44:59	24	\N	\N	\N
+43	6	25	\N	3	2	\N	\N	\N	2023-04-15 15:45:00	2023-04-15 15:45:01	24	\N	\N	\N
+45	6	27	\N	3	2	\N	\N	\N	2023-04-15 15:45:03	2023-04-15 15:45:03	24	\N	\N	\N
+46	6	27	45	3	19	\N	\N	\N	2023-04-15 15:45:48	2023-04-15 15:45:48	24	523	7	\N
+47	6	26	44	3	19	\N	\N	\N	2023-04-15 15:45:49	2023-04-15 15:45:49	24	523	7	\N
+48	6	24	42	3	19	\N	\N	\N	2023-04-15 15:45:49	2023-04-15 15:45:49	24	523	7	\N
+49	6	25	43	3	19	\N	\N	\N	2023-04-15 15:45:49	2023-04-15 15:45:49	24	523	7	\N
+50	7	28	\N	3	2	\N	\N	\N	2023-04-15 15:46:50	2023-04-15 15:46:51	25	\N	\N	\N
+51	7	29	\N	3	2	\N	\N	\N	2023-04-15 15:46:51	2023-04-15 15:46:52	25	\N	\N	\N
+52	7	30	\N	3	2	\N	\N	\N	2023-04-15 15:46:53	2023-04-15 15:46:53	25	\N	\N	\N
+53	7	31	\N	3	2	\N	\N	\N	2023-04-15 15:46:54	2023-04-15 15:46:54	25	\N	\N	\N
+54	7	32	\N	3	2	\N	\N	\N	2023-04-15 15:46:55	2023-04-15 15:46:56	25	\N	\N	\N
+55	7	32	54	3	4	\N	\N	\N	2023-04-15 15:47:53	2023-04-15 15:47:53	25	523	8	\N
+56	7	30	52	3	4	\N	\N	\N	2023-04-15 15:47:54	2023-04-15 15:47:54	25	523	8	\N
+57	7	31	53	3	4	\N	\N	\N	2023-04-15 15:47:54	2023-04-15 15:47:54	25	523	8	\N
+58	7	29	51	3	4	\N	\N	\N	2023-04-15 15:47:54	2023-04-15 15:47:54	25	523	8	\N
+59	7	28	50	3	4	\N	\N	\N	2023-04-15 15:47:54	2023-04-15 15:47:54	25	523	8	\N
+60	8	33	\N	3	2	\N	\N	\N	2023-04-15 15:48:38	2023-04-15 15:48:38	3	\N	\N	\N
+61	9	34	\N	3	2	\N	\N	\N	2023-04-15 15:48:51	2023-04-15 15:48:52	26	\N	\N	\N
+62	9	35	\N	3	2	\N	\N	\N	2023-04-15 15:48:53	2023-04-15 15:48:53	26	\N	\N	\N
+63	9	36	\N	3	2	\N	\N	\N	2023-04-15 15:48:54	2023-04-15 15:48:54	26	\N	\N	\N
+64	9	37	\N	3	2	\N	\N	\N	2023-04-15 15:48:55	2023-04-15 15:48:56	26	\N	\N	\N
+65	9	38	\N	3	2	\N	\N	\N	2023-04-15 15:48:56	2023-04-15 15:48:57	26	\N	\N	\N
+66	9	38	65	3	19	\N	\N	\N	2023-04-15 15:49:54	2023-04-15 15:49:54	26	523	9	\N
+67	9	37	64	3	19	\N	\N	\N	2023-04-15 15:49:54	2023-04-15 15:49:54	26	523	9	\N
+68	9	36	63	3	19	\N	\N	\N	2023-04-15 15:49:54	2023-04-15 15:49:54	26	523	9	\N
+69	9	35	62	3	19	\N	\N	\N	2023-04-15 15:49:54	2023-04-15 15:49:54	26	523	9	\N
+70	9	34	61	3	19	\N	\N	\N	2023-04-15 15:49:55	2023-04-15 15:49:55	26	523	9	\N
+71	10	39	\N	3	2	\N	\N	\N	2023-04-15 15:50:13	2023-04-15 15:50:13	27	\N	\N	\N
+72	10	40	\N	3	2	\N	\N	\N	2023-04-15 15:50:14	2023-04-15 15:50:15	27	\N	\N	\N
+73	10	41	\N	3	2	\N	\N	\N	2023-04-15 15:50:15	2023-04-15 15:50:16	27	\N	\N	\N
+114	15	62	\N	3	2	\N	\N	\N	2023-04-15 16:01:47	2023-04-15 16:01:48	32	\N	\N	\N
+74	10	42	\N	3	2	\N	\N	\N	2023-04-15 15:50:17	2023-04-15 15:50:17	27	\N	\N	\N
+115	15	63	\N	3	2	\N	\N	\N	2023-04-15 16:01:48	2023-04-15 16:01:49	32	\N	\N	\N
+75	10	43	\N	3	2	\N	\N	\N	2023-04-15 15:50:18	2023-04-15 15:50:18	27	\N	\N	\N
+116	15	64	\N	3	2	\N	\N	\N	2023-04-15 16:01:50	2023-04-15 16:01:50	32	\N	\N	\N
+76	10	44	\N	3	2	\N	\N	\N	2023-04-15 15:50:19	2023-04-15 15:50:20	27	\N	\N	\N
+117	15	64	116	3	4	\N	\N	\N	2023-04-15 16:02:28	2023-04-15 16:02:28	32	523	17	\N
+77	10	45	\N	3	2	\N	\N	\N	2023-04-15 15:50:21	2023-04-15 15:50:21	27	\N	\N	\N
+118	15	63	115	3	4	\N	\N	\N	2023-04-15 16:02:28	2023-04-15 16:02:28	32	523	17	\N
+78	10	46	\N	3	2	\N	\N	\N	2023-04-15 15:50:22	2023-04-15 15:50:23	27	\N	\N	\N
+119	15	62	114	3	4	\N	\N	\N	2023-04-15 16:02:28	2023-04-15 16:02:28	32	523	17	\N
+79	10	47	\N	3	2	\N	\N	\N	2023-04-15 15:50:24	2023-04-15 15:50:24	27	\N	\N	\N
+120	16	65	\N	3	2	\N	\N	\N	2023-04-15 16:02:46	2023-04-15 16:02:47	33	\N	\N	\N
+80	11	48	\N	3	2	\N	\N	\N	2023-04-15 15:51:58	2023-04-15 15:51:59	28	\N	\N	\N
+121	16	66	\N	3	2	\N	\N	\N	2023-04-15 16:02:48	2023-04-15 16:02:48	33	\N	\N	\N
+81	11	49	\N	3	2	\N	\N	\N	2023-04-15 15:52:00	2023-04-15 15:52:00	28	\N	\N	\N
+82	11	49	81	3	19	\N	\N	\N	2023-04-15 15:52:29	2023-04-15 15:52:29	28	523	10	\N
+83	11	48	80	3	19	\N	\N	\N	2023-04-15 15:52:29	2023-04-15 15:52:29	28	523	10	\N
+122	16	67	\N	3	2	\N	\N	\N	2023-04-15 16:02:49	2023-04-15 16:02:49	33	\N	\N	\N
+84	12	50	\N	3	2	\N	\N	\N	2023-04-15 15:54:07	2023-04-15 15:54:07	29	\N	\N	\N
+123	16	68	\N	3	2	\N	\N	\N	2023-04-15 16:02:50	2023-04-15 16:02:51	33	\N	\N	\N
+85	12	51	\N	3	2	\N	\N	\N	2023-04-15 15:54:08	2023-04-15 15:54:09	29	\N	\N	\N
+124	16	69	\N	3	2	\N	\N	\N	2023-04-15 16:02:51	2023-04-15 16:02:52	33	\N	\N	\N
+86	12	52	\N	3	2	\N	\N	\N	2023-04-15 15:54:09	2023-04-15 15:54:10	29	\N	\N	\N
+87	12	52	86	3	19	\N	\N	\N	2023-04-15 15:54:51	2023-04-15 15:54:51	29	523	12	\N
+88	12	51	85	3	19	\N	\N	\N	2023-04-15 15:54:51	2023-04-15 15:54:51	29	523	12	\N
+89	12	50	84	3	19	\N	\N	\N	2023-04-15 15:54:52	2023-04-15 15:54:52	29	523	12	\N
+125	16	69	124	3	4	\N	\N	\N	2023-04-15 16:03:47	2023-04-15 16:03:47	33	523	18	\N
+90	13	53	\N	3	2	\N	\N	\N	2023-04-15 15:55:45	2023-04-15 15:55:46	30	\N	\N	\N
+126	16	67	122	3	4	\N	\N	\N	2023-04-15 16:03:47	2023-04-15 16:03:47	33	523	18	\N
+91	13	54	\N	3	2	\N	\N	\N	2023-04-15 15:55:46	2023-04-15 15:55:47	30	\N	\N	\N
+127	16	66	121	3	4	\N	\N	\N	2023-04-15 16:03:48	2023-04-15 16:03:48	33	523	18	\N
+92	13	55	\N	3	2	\N	\N	\N	2023-04-15 15:55:48	2023-04-15 15:55:48	30	\N	\N	\N
+93	13	55	92	3	19	\N	\N	\N	2023-04-15 15:56:28	2023-04-15 15:56:28	30	523	13	\N
+94	13	54	91	3	19	\N	\N	\N	2023-04-15 15:56:28	2023-04-15 15:56:28	30	523	13	\N
+95	13	53	90	3	19	\N	\N	\N	2023-04-15 15:56:28	2023-04-15 15:56:28	30	523	13	\N
+128	16	68	123	3	4	\N	\N	\N	2023-04-15 16:03:48	2023-04-15 16:03:48	33	523	18	\N
+96	14	56	\N	3	2	\N	\N	\N	2023-04-15 15:58:19	2023-04-15 15:58:19	31	\N	\N	\N
+129	16	65	120	3	4	\N	\N	\N	2023-04-15 16:03:48	2023-04-15 16:03:48	33	523	18	\N
+97	14	57	\N	3	2	\N	\N	\N	2023-04-15 15:58:20	2023-04-15 15:58:21	31	\N	\N	\N
+130	17	70	\N	3	2	\N	\N	\N	2023-04-15 16:04:44	2023-04-15 16:04:45	34	\N	\N	\N
+98	14	58	\N	3	2	\N	\N	\N	2023-04-15 15:58:22	2023-04-15 15:58:22	31	\N	\N	\N
+131	17	71	\N	3	2	\N	\N	\N	2023-04-15 16:04:46	2023-04-15 16:04:46	34	\N	\N	\N
+99	14	59	\N	3	2	\N	\N	\N	2023-04-15 15:58:23	2023-04-15 15:58:23	31	\N	\N	\N
+132	17	72	\N	3	2	\N	\N	\N	2023-04-15 16:04:47	2023-04-15 16:04:47	34	\N	\N	\N
+100	14	60	\N	13	2	\N	\N	\N	2023-04-15 15:58:24	2023-04-15 15:58:25	31	\N	\N	\N
+133	17	73	\N	3	2	\N	\N	\N	2023-04-15 16:04:48	2023-04-15 16:04:48	34	\N	\N	\N
+101	14	61	\N	9	2	\N	\N	\N	2023-04-15 15:58:25	2023-04-15 15:58:26	31	\N	\N	\N
+102	14	61	101	9	19	\N	\N	\N	2023-04-15 15:59:17	2023-04-15 15:59:17	31	523	15	\N
+103	14	60	100	13	19	\N	\N	\N	2023-04-15 15:59:17	2023-04-15 15:59:17	31	523	15	\N
+104	14	59	99	3	19	\N	\N	\N	2023-04-15 15:59:17	2023-04-15 15:59:17	31	523	15	\N
+105	14	58	98	3	19	\N	\N	\N	2023-04-15 15:59:17	2023-04-15 15:59:17	31	523	15	\N
+106	14	57	97	3	19	\N	\N	\N	2023-04-15 15:59:18	2023-04-15 15:59:18	31	523	15	\N
+107	14	56	96	3	19	\N	\N	\N	2023-04-15 15:59:18	2023-04-15 15:59:18	31	523	15	\N
+110	14	59	99	3	10	0	openAccess	1	2023-04-15 16:00:46	2023-04-15 16:01:16	31	521	3	\N
+113	14	56	96	3	10	0	openAccess	1	2023-04-15 16:00:46	2023-04-15 16:00:57	31	521	3	\N
+134	17	74	\N	3	2	\N	\N	\N	2023-04-15 16:04:49	2023-04-15 16:04:50	34	\N	\N	\N
+112	14	57	97	3	10	0	openAccess	1	2023-04-15 16:00:46	2023-04-15 16:01:03	31	521	3	\N
+109	14	60	100	13	10	0	openAccess	1	2023-04-15 16:00:46	2023-04-15 16:01:23	31	521	3	\N
+111	14	58	98	3	10	0	openAccess	1	2023-04-15 16:00:46	2023-04-15 16:01:10	31	521	3	\N
+135	17	75	\N	3	2	\N	\N	\N	2023-04-15 16:04:51	2023-04-15 16:04:51	34	\N	\N	\N
+136	17	74	134	3	19	\N	\N	\N	2023-04-15 16:06:05	2023-04-15 16:06:05	34	523	19	\N
+108	14	61	101	9	10	0	openAccess	1	2023-04-15 16:00:46	2023-04-15 16:01:30	31	521	3	\N
+137	17	75	135	3	19	\N	\N	\N	2023-04-15 16:06:05	2023-04-15 16:06:05	34	523	19	\N
+138	17	73	133	3	19	\N	\N	\N	2023-04-15 16:06:05	2023-04-15 16:06:05	34	523	19	\N
+139	17	71	131	3	19	\N	\N	\N	2023-04-15 16:06:05	2023-04-15 16:06:05	34	523	19	\N
+140	17	70	130	3	19	\N	\N	\N	2023-04-15 16:06:06	2023-04-15 16:06:06	34	523	19	\N
+141	17	72	132	3	19	\N	\N	\N	2023-04-15 16:06:06	2023-04-15 16:06:06	34	523	19	\N
+\.
+
+
+--
+-- Data for Name: submission_search_keyword_list; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submission_search_keyword_list (keyword_id, keyword_text) FROM stdin;
+1	chantal
+2	allan
+3	university
+4	southern
+5	california
+6	bomb
+7	canada
+8	unkind
+9	remarks
+10	american
+11	media
+12	united
+13	states
+14	nations
+15	border
+16	continent
+17	anti-american
+18	sentiment
+19	documented
+20	americans
+21	northern
+22	neighbour
+23	examines
+24	portrayed
+25	confederation
+26	obama’s
+27	election
+28	examining
+29	major
+30	events
+31	tested
+32	bilateral
+33	relations
+34	tracks
+35	history
+36	anti-canadianism
+37	informative
+38	thought
+39	provoking
+40	times
+41	hilarious
+42	book
+43	reveals
+44	layer
+45	complex
+46	relationship
+47	canadian
+48	studies
+49	communication
+50	cultural
+51	political
+52	international
+53	michael
+54	dawson
+55	alberta
+56	brian
+57	dupuis
+58	athabasca
+59	wilson
+60	calgary
+61	bricks
+62	brains
+63	embodied
+64	cognitive
+65	science
+66	lego
+67	robots
+68	introduces
+69	illustrates
+70	foundational
+71	ideas
+72	construction
+73	observation
+74	mindstorms
+75	discussing
+76	characteristics
+77	distinguish
+78	classical
+79	places
+80	renewed
+81	emphasis
+82	sensing
+83	acting
+84	importance
+85	embodiment
+86	exploration
+87	distributed
+88	notions
+89	control
+90	development
+91	theories
+92	synthesizing
+93	simple
+94	systems
+95	exploring
+96	behaviour
+97	numerous
+98	examples
+99	illustrate
+100	key
+101	theme
+102	agent’s
+103	environment
+104	agents
+105	capable
+106	exhibiting
+107	sense
+108	affect
+109	world
+110	psychology
+\.
+
+
+--
+-- Data for Name: submission_search_object_keywords; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submission_search_object_keywords (submission_search_object_keyword_id, object_id, keyword_id, pos) FROM stdin;
+131	17	53	0
+132	17	54	1
+133	17	3	2
+134	17	55	3
+135	17	56	4
+136	17	57	5
+137	17	58	6
+138	17	3	7
+139	17	53	8
+140	17	59	9
+141	17	3	10
+142	17	60	11
+143	18	61	0
+144	18	62	1
+145	18	63	2
+146	18	64	3
+147	18	65	4
+148	18	66	5
+149	18	67	6
+150	19	61	0
+151	19	62	1
+152	19	68	2
+153	19	63	3
+154	19	64	4
+155	19	65	5
+156	19	69	6
+157	19	70	7
+158	19	71	8
+159	19	72	9
+160	19	73	10
+161	19	66	11
+162	19	74	12
+163	19	67	13
+164	19	75	14
+165	19	76	15
+166	19	77	16
+167	19	63	17
+168	19	64	18
+169	19	65	19
+170	19	78	20
+171	19	64	21
+172	19	65	22
+173	19	61	23
+174	19	62	24
+175	19	79	25
+176	19	80	26
+177	19	81	27
+178	19	82	28
+179	19	83	29
+180	19	84	30
+181	19	85	31
+182	19	86	32
+183	19	87	33
+184	19	88	34
+185	19	89	35
+186	19	90	36
+187	19	91	37
+188	19	92	38
+189	19	93	39
+190	19	94	40
+191	19	95	41
+192	19	96	42
+193	19	97	43
+194	19	98	44
+195	19	99	45
+66	9	1	0
+67	9	2	1
+68	9	3	2
+69	9	4	3
+70	9	5	4
+71	10	6	0
+72	10	7	1
+73	10	8	2
+74	10	9	3
+75	10	10	4
+76	10	11	5
+77	11	7	0
+78	11	12	1
+79	11	13	2
+80	11	14	3
+81	11	15	4
+82	11	16	5
+83	11	17	6
+84	11	18	7
+85	11	7	8
+86	11	19	9
+87	11	20	10
+88	11	21	11
+89	11	22	12
+90	11	2	13
+91	11	23	14
+92	11	10	15
+93	11	11	16
+94	11	24	17
+95	11	7	18
+96	11	25	19
+97	11	26	20
+98	11	27	21
+99	11	28	22
+100	11	29	23
+101	11	30	24
+102	11	31	25
+103	11	32	26
+104	11	33	27
+105	11	6	28
+106	11	7	29
+107	11	34	30
+108	11	35	31
+109	11	36	32
+110	11	37	33
+111	11	38	34
+112	11	39	35
+113	11	40	36
+114	11	41	37
+115	11	42	38
+116	11	43	39
+117	11	44	40
+118	11	45	41
+119	11	46	42
+120	11	7	43
+121	11	12	44
+122	11	13	45
+123	13	47	0
+124	13	48	1
+125	13	49	2
+126	13	50	3
+127	13	48	4
+128	13	51	5
+129	13	52	6
+130	13	48	7
+196	19	100	46
+197	19	101	47
+198	19	84	48
+199	19	102	49
+200	19	103	50
+201	19	93	51
+202	19	104	52
+203	19	66	53
+204	19	67	54
+205	19	105	55
+206	19	106	56
+207	19	45	57
+208	19	96	58
+209	19	107	59
+210	19	108	60
+211	19	109	61
+212	21	110	0
+\.
+
+
+--
+-- Data for Name: submission_search_objects; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submission_search_objects (object_id, submission_id, type, assoc_id) FROM stdin;
+9	5	1	0
+10	5	2	0
+11	5	4	0
+12	5	16	0
+13	5	17	0
+14	5	8	0
+15	5	32	0
+16	5	64	0
+17	14	1	0
+18	14	2	0
+19	14	4	0
+20	14	16	0
+21	14	17	0
+22	14	8	0
+23	14	32	0
+24	14	64	0
+\.
+
+
+--
+-- Data for Name: submission_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submission_settings (submission_setting_id, submission_id, locale, setting_name, setting_value) FROM stdin;
+\.
+
+
+--
+-- Data for Name: submissions; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
+3	1	3	2023-04-15 15:38:55	2023-04-15 15:38:55	2023-04-15 15:38:55	1	en	1		0
+15	1	15	2023-04-15 16:02:28	2023-04-15 16:02:10	2023-04-15 16:02:10	3	en	1		0
+17	1	17	2023-04-15 16:06:26	2023-04-15 16:05:42	2023-04-15 16:05:42	2	en	1		0
+12	1	12	2023-04-15 15:55:31	2023-04-15 15:54:34	2023-04-15 15:54:34	2	en	1		0
+10	1	10	2023-04-15 15:51:43	2023-04-15 15:51:43	2023-04-15 15:51:43	1	en	1		0
+1	1	1	2023-04-15 15:34:40	2023-04-15 15:34:00	2023-04-15 15:34:00	4	en	1		0
+7	1	7	2023-04-15 15:48:22	2023-04-15 15:47:36	2023-04-15 15:47:36	4	en	1		0
+5	1	5	2023-04-15 15:44:45	2023-04-15 15:42:22	2023-04-15 15:42:22	5	en	3		0
+4	1	4	2023-04-15 15:41:15	2023-04-15 15:39:44	2023-04-15 15:39:44	5	en	1		0
+8	1	8	2023-04-15 15:48:39	2023-04-15 15:48:39	2023-04-15 15:48:39	1	en	1		0
+2	1	2	2023-04-15 15:37:56	2023-04-15 15:37:02	2023-04-15 15:37:02	3	en	1		1
+16	1	16	2023-04-15 16:04:30	2023-04-15 16:03:27	2023-04-15 16:03:27	3	en	1		0
+11	1	11	2023-04-15 15:53:48	2023-04-15 15:52:13	2023-04-15 15:52:13	4	en	1		0
+13	1	13	2023-04-15 15:58:00	2023-04-15 15:56:10	2023-04-15 15:56:10	4	en	1		0
+6	1	6	2023-04-15 15:46:21	2023-04-15 15:45:32	2023-04-15 15:45:32	2	en	1		0
+14	1	14	2023-04-15 16:01:33	2023-04-15 15:58:57	2023-04-15 15:58:57	5	en	3		0
+9	1	9	2023-04-15 15:49:55	2023-04-15 15:49:35	2023-04-15 15:49:35	2	en	1		0
+\.
+
+
+--
+-- Data for Name: temporary_files; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.temporary_files (file_id, user_id, file_name, file_type, file_size, original_file_name, date_uploaded) FROM stdin;
+\.
+
+
+--
+-- Data for Name: usage_stats_institution_temporary_records; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.usage_stats_institution_temporary_records (usage_stats_temp_institution_id, load_id, line_number, institution_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: usage_stats_total_temporary_records; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.usage_stats_total_temporary_records (usage_stats_temp_total_id, date, ip, user_agent, line_number, canonical_url, series_id, context_id, submission_id, chapter_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: usage_stats_unique_item_investigations_temporary_records; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.usage_stats_unique_item_investigations_temporary_records (usage_stats_temp_unique_item_id, date, ip, user_agent, line_number, context_id, submission_id, chapter_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: usage_stats_unique_item_requests_temporary_records; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.usage_stats_unique_item_requests_temporary_records (usage_stats_temp_item_id, date, ip, user_agent, line_number, context_id, submission_id, chapter_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: usage_stats_unique_title_investigations_temporary_records; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.usage_stats_unique_title_investigations_temporary_records (usage_stats_temp_unique_investigations_id, date, ip, user_agent, line_number, context_id, submission_id, chapter_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: usage_stats_unique_title_requests_temporary_records; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.usage_stats_unique_title_requests_temporary_records (usage_stats_temp_unique_requests_id, date, ip, user_agent, line_number, context_id, submission_id, chapter_id, representation_id, submission_file_id, assoc_type, file_type, country, region, city, load_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: user_group_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.user_group_settings (user_group_setting_id, user_group_id, locale, setting_name, setting_value) FROM stdin;
+1	1	en	name	Site Admin
+2	1	fr_CA	name	Administrateur-trice du site
+24	5	en	name	Series editor
+26	5	fr_CA	name	Rédacteur/Rédactrice en chef de la série
+38	7	fr_CA	name	Designer
+36	7	en	name	Designer
+98	17	fr_CA	name	Évaluateur-trice interne
+32	6	fr_CA	name	Réviseur-e
+30	6	en	name	Copyeditor
+27	6		nameLocaleKey	default.groups.name.copyeditor
+74	13	fr_CA	name	Auteur-e
+93	17		nameLocaleKey	default.groups.name.internalReviewer
+80	14	fr_CA	name	Rédacteur/Rédactrice en chef du volume
+72	13	en	name	Author
+33	7		nameLocaleKey	default.groups.name.designer
+50	9	fr_CA	name	Indexeur-e
+54	10	en	name	Layout Editor
+51	10		nameLocaleKey	default.groups.name.layoutEditor
+86	15	fr_CA	name	Auteur du chapitre
+13	3	fr_CA	abbrev	RP
+14	3	fr_CA	name	Rédacteur/Rédactrice en chef de la presse
+9	3		nameLocaleKey	default.groups.name.editor
+10	3		abbrevLocaleKey	default.groups.abbrev.editor
+92	16	fr_CA	name	Traducteur-trice
+87	16		nameLocaleKey	default.groups.name.translator
+66	12	en	name	Proofreader
+68	12	fr_CA	name	Correcteur-trice d'épreuves
+89	16	en	abbrev	Trans
+91	16	fr_CA	abbrev	Trad
+63	12		nameLocaleKey	default.groups.name.proofreader
+21	5		nameLocaleKey	default.groups.name.sectionEditor
+22	5		abbrevLocaleKey	default.groups.abbrev.sectionEditor
+34	7		abbrevLocaleKey	default.groups.abbrev.designer
+95	17	en	abbrev	IR
+97	17	fr_CA	abbrev	EvalInt
+76	14		abbrevLocaleKey	default.groups.abbrev.volumeEditor
+45	9		nameLocaleKey	default.groups.name.indexer
+46	9		abbrevLocaleKey	default.groups.abbrev.indexer
+99	18		nameLocaleKey	default.groups.name.externalReviewer
+52	10		abbrevLocaleKey	default.groups.abbrev.layoutEditor
+57	11		nameLocaleKey	default.groups.name.marketing
+85	15	fr_CA	abbrev	AC
+81	15		nameLocaleKey	default.groups.name.chapterAuthor
+82	15		abbrevLocaleKey	default.groups.abbrev.chapterAuthor
+61	11	fr_CA	abbrev	CVM
+31	6	fr_CA	abbrev	RÉV
+69	13		nameLocaleKey	default.groups.name.author
+79	14	fr_CA	abbrev	RV
+78	14	en	name	Volume editor
+47	9	en	abbrev	IND
+49	9	fr_CA	abbrev	Indx
+48	9	en	name	Indexer
+53	10	en	abbrev	LE
+3	2		nameLocaleKey	default.groups.name.manager
+88	16		abbrevLocaleKey	default.groups.abbrev.translator
+55	10	fr_CA	abbrev	RespMP
+83	15	en	abbrev	CA
+17	4	en	abbrev	ProdE
+59	11	en	abbrev	MS
+64	12		abbrevLocaleKey	default.groups.abbrev.proofreader
+70	13		abbrevLocaleKey	default.groups.abbrev.author
+4	2		abbrevLocaleKey	default.groups.abbrev.manager
+29	6	en	abbrev	CE
+37	7	fr_CA	abbrev	Design
+35	7	en	abbrev	Design
+84	15	en	name	Chapter Author
+28	6		abbrevLocaleKey	default.groups.abbrev.copyeditor
+75	14		nameLocaleKey	default.groups.name.volumeEditor
+60	11	en	name	Marketing and sales coordinator
+73	13	fr_CA	abbrev	AU
+71	13	en	abbrev	AU
+23	5	en	abbrev	AcqE
+25	5	fr_CA	abbrev	RS
+77	14	en	abbrev	VE
+7	2	fr_CA	abbrev	MP
+12	3	en	name	Press editor
+6	2	en	name	Press manager
+90	16	en	name	Translator
+19	4	fr_CA	abbrev	DirProd
+96	17	en	name	Internal Reviewer
+16	4		abbrevLocaleKey	default.groups.abbrev.productionEditor
+65	12	en	abbrev	PR
+67	12	fr_CA	abbrev	CorEp
+62	11	fr_CA	name	Coordonnateur-trice des ventes et du marketing
+58	11		abbrevLocaleKey	default.groups.abbrev.marketing
+18	4	en	name	Production editor
+15	4		nameLocaleKey	default.groups.name.productionEditor
+11	3	en	abbrev	PE
+20	4	fr_CA	name	Directeur-trice de production
+94	17		abbrevLocaleKey	default.groups.abbrev.internalReviewer
+42	8	en	name	Funding coordinator
+39	8		nameLocaleKey	default.groups.name.funding
+40	8		abbrevLocaleKey	default.groups.abbrev.funding
+43	8	fr_CA	abbrev	CF
+44	8	fr_CA	name	Coordonnateur-trice du financement
+41	8	en	abbrev	FC
+56	10	fr_CA	name	Responsable de la mise en page
+5	2	en	abbrev	PM
+8	2	fr_CA	name	Gestionnaire de la presse
+107	19	en	abbrev	Read
+109	19	fr_CA	abbrev	Lect
+108	19	en	name	Reader
+110	19	fr_CA	name	Lecteur-trice
+105	19		nameLocaleKey	default.groups.name.reader
+106	19		abbrevLocaleKey	default.groups.abbrev.reader
+101	18	en	abbrev	ER
+103	18	fr_CA	abbrev	EvEx
+102	18	en	name	External Reviewer
+104	18	fr_CA	name	Évaluateur-trice externe
+100	18		abbrevLocaleKey	default.groups.abbrev.externalReviewer
+111	14		recommendOnly	0
+\.
+
+
+--
+-- Data for Name: user_group_stage; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.user_group_stage (user_group_stage_id, context_id, user_group_id, stage_id) FROM stdin;
+1	1	3	1
+2	1	3	2
+3	1	3	3
+4	1	3	4
+5	1	3	5
+6	1	4	4
+7	1	4	5
+8	1	5	1
+9	1	5	2
+10	1	5	3
+11	1	5	4
+12	1	5	5
+13	1	6	4
+14	1	7	5
+15	1	8	1
+16	1	8	2
+17	1	8	3
+18	1	9	5
+19	1	10	5
+20	1	11	4
+21	1	12	5
+22	1	13	1
+23	1	13	2
+24	1	13	3
+25	1	13	4
+26	1	13	5
+32	1	15	4
+33	1	15	5
+34	1	16	1
+35	1	16	2
+36	1	16	3
+37	1	16	4
+38	1	16	5
+39	1	17	2
+40	1	18	3
+41	1	14	1
+42	1	14	2
+43	1	14	3
+44	1	14	4
+45	1	14	5
+\.
+
+
+--
+-- Data for Name: user_groups; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.user_groups (user_group_id, context_id, role_id, is_default, show_title, permit_self_registration, permit_metadata_edit) FROM stdin;
+1	0	1	1	1	0	0
+2	1	16	1	1	0	1
+19	1	1048576	1	1	1	0
+3	1	16	1	1	0	1
+16	1	65536	1	1	0	0
+4	1	16	1	1	0	1
+12	1	4097	1	1	0	0
+5	1	17	1	1	0	1
+6	1	4097	1	1	0	0
+13	1	65536	1	1	1	0
+7	1	4097	1	1	0	0
+17	1	4096	1	1	0	0
+8	1	4097	1	1	0	0
+9	1	4097	1	1	0	0
+18	1	4096	1	1	1	0
+10	1	4097	1	1	0	0
+15	1	65536	1	1	1	0
+11	1	4097	1	1	0	0
+14	1	65536	1	1	1	0
+\.
+
+
+--
+-- Data for Name: user_interests; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.user_interests (user_interest_id, user_id, controlled_vocab_entry_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: user_settings; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.user_settings (user_setting_id, user_id, locale, setting_name, setting_value) FROM stdin;
+19	3	fr_CA	biography	
+1	1	en	familyName	admin
+29	4	en	affiliation	University of Chicago
+30	4	fr_CA	affiliation	
+31	4	en	biography	
+32	4	fr_CA	biography	
+33	4	en	familyName	Buskins
+34	4	fr_CA	familyName	
+35	4	en	givenName	David
+36	4	fr_CA	givenName	
+37	4		orcid	
+38	4	en	preferredPublicName	
+39	4	fr_CA	preferredPublicName	
+40	4	en	signature	
+41	4	fr_CA	signature	
+42	5	en	affiliation	University of Toronto
+43	5	fr_CA	affiliation	
+44	5	en	biography	
+45	5	fr_CA	biography	
+46	5	en	familyName	Berardo
+47	5	fr_CA	familyName	
+48	5	en	givenName	Stephanie
+49	5	fr_CA	givenName	
+50	5		orcid	
+51	5	en	preferredPublicName	
+52	5	fr_CA	preferredPublicName	
+53	5	en	signature	
+54	5	fr_CA	signature	
+68	7	en	affiliation	Utrecht University
+69	7	fr_CA	affiliation	
+70	7	en	biography	
+71	7	fr_CA	biography	
+72	7	en	familyName	Janssen
+73	7	fr_CA	familyName	
+74	7	en	givenName	Julie
+75	7	fr_CA	givenName	
+76	7		orcid	
+77	7	en	preferredPublicName	
+78	7	fr_CA	preferredPublicName	
+79	7	en	signature	
+80	7	fr_CA	signature	
+94	9	en	affiliation	University of Manitoba
+95	9	fr_CA	affiliation	
+96	9	en	biography	
+97	9	fr_CA	biography	
+98	9	en	familyName	McCrae
+99	9	fr_CA	familyName	
+100	9	en	givenName	Aisla
+101	9	fr_CA	givenName	
+102	9		orcid	
+103	9	en	preferredPublicName	
+104	9	fr_CA	preferredPublicName	
+105	9	en	signature	
+106	9	fr_CA	signature	
+120	11	en	affiliation	KNUST
+6	2	fr_CA	biography	
+7	2	en	familyName	Vaca
+8	2	fr_CA	familyName	
+9	2	en	givenName	Ramiro
+10	2	fr_CA	givenName	
+11	2		orcid	
+12	2	en	preferredPublicName	
+13	2	fr_CA	preferredPublicName	
+14	2	en	signature	
+15	2	fr_CA	signature	
+2	1	en	givenName	admin
+4	2	fr_CA	affiliation	
+5	2	en	biography	
+20	3	en	familyName	Barnes
+23	3	fr_CA	givenName	
+27	3	en	signature	
+108	10	fr_CA	affiliation	
+22	3	en	givenName	Daniel
+55	6	en	affiliation	Kyoto University
+81	8	en	affiliation	McGill University
+28	3	fr_CA	signature	
+109	10	en	biography	
+107	10	en	affiliation	State University of New York
+18	3	en	biography	
+21	3	fr_CA	familyName	
+56	6	fr_CA	affiliation	
+57	6	en	biography	
+58	6	fr_CA	biography	
+59	6	en	familyName	Inoue
+60	6	fr_CA	familyName	
+61	6	en	givenName	Minoti
+62	6	fr_CA	givenName	
+63	6		orcid	
+64	6	en	preferredPublicName	
+65	6	fr_CA	preferredPublicName	
+66	6	en	signature	
+67	6	fr_CA	signature	
+110	10	fr_CA	biography	
+111	10	en	familyName	Gallego
+112	10	fr_CA	familyName	
+113	10	en	givenName	Adela
+114	10	fr_CA	givenName	
+115	10		orcid	
+116	10	en	preferredPublicName	
+117	10	fr_CA	preferredPublicName	
+118	10	en	signature	
+119	10	fr_CA	signature	
+17	3	fr_CA	affiliation	
+24	3		orcid	
+82	8	fr_CA	affiliation	
+83	8	en	biography	
+84	8	fr_CA	biography	
+85	8	en	familyName	Hudson
+86	8	fr_CA	familyName	
+87	8	en	givenName	Paul
+88	8	fr_CA	givenName	
+89	8		orcid	
+90	8	en	preferredPublicName	
+92	8	en	signature	
+93	8	fr_CA	signature	
+25	3	en	preferredPublicName	
+121	11	fr_CA	affiliation	
+122	11	en	biography	
+123	11	fr_CA	biography	
+124	11	en	familyName	Zacharia
+125	11	fr_CA	familyName	
+126	11	en	givenName	Al
+127	11	fr_CA	givenName	
+128	11		orcid	
+129	11	en	preferredPublicName	
+130	11	fr_CA	preferredPublicName	
+131	11	en	signature	
+132	11	fr_CA	signature	
+146	13	en	affiliation	Ghent University
+147	13	fr_CA	affiliation	
+148	13	en	biography	
+149	13	fr_CA	biography	
+150	13	en	familyName	Fritz
+151	13	fr_CA	familyName	
+152	13	en	givenName	Maria
+153	13	fr_CA	givenName	
+154	13		orcid	
+155	13	en	preferredPublicName	
+156	13	fr_CA	preferredPublicName	
+157	13	en	signature	
+158	13	fr_CA	signature	
+159	14	en	affiliation	Universidad de Chile
+160	14	fr_CA	affiliation	
+161	14	en	biography	
+162	14	fr_CA	biography	
+163	14	en	familyName	Vogt
+164	14	fr_CA	familyName	
+165	14	en	givenName	Sarah
+166	14	fr_CA	givenName	
+167	14		orcid	
+168	14	en	preferredPublicName	
+169	14	fr_CA	preferredPublicName	
+170	14	en	signature	
+171	14	fr_CA	signature	
+172	15	en	affiliation	Duke University
+173	15	fr_CA	affiliation	
+174	15	en	biography	
+175	15	fr_CA	biography	
+176	15	en	familyName	Cox
+177	15	fr_CA	familyName	
+178	15	en	givenName	Graham
+179	15	fr_CA	givenName	
+180	15		orcid	
+181	15	en	preferredPublicName	
+182	15	fr_CA	preferredPublicName	
+183	15	en	signature	
+184	15	fr_CA	signature	
+185	16	en	affiliation	University of Cape Town
+186	16	fr_CA	affiliation	
+187	16	en	biography	
+188	16	fr_CA	biography	
+189	16	en	familyName	Hellier
+190	16	fr_CA	familyName	
+191	16	en	givenName	Stephen
+192	16	fr_CA	givenName	
+193	16		orcid	
+194	16	en	preferredPublicName	
+195	16	fr_CA	preferredPublicName	
+196	16	en	signature	
+197	16	fr_CA	signature	
+198	17	en	affiliation	Imperial College London
+199	17	fr_CA	affiliation	
+200	17	en	biography	
+201	17	fr_CA	biography	
+202	17	en	familyName	Turner
+203	17	fr_CA	familyName	
+204	17	en	givenName	Catherine
+205	17	fr_CA	givenName	
+206	17		orcid	
+207	17	en	preferredPublicName	
+208	17	fr_CA	preferredPublicName	
+209	17	en	signature	
+210	17	fr_CA	signature	
+211	18	en	affiliation	National University of Singapore
+212	18	fr_CA	affiliation	
+213	18	en	biography	
+214	18	fr_CA	biography	
+215	18	en	familyName	Kumar
+216	18	fr_CA	familyName	
+217	18	en	givenName	Sabine
+218	18	fr_CA	givenName	
+219	18		orcid	
+220	18	en	preferredPublicName	
+221	18	fr_CA	preferredPublicName	
+222	18	en	signature	
+223	18	fr_CA	signature	
+224	19	en	affiliation	University of Calgary
+3	2	en	affiliation	Universidad Nacional Autónoma de México
+225	19	en	familyName	Clark
+226	19	en	givenName	Arthur
+227	20	en	affiliation	Athabasca University
+228	20	en	familyName	Finkel
+229	20	en	givenName	Alvin
+230	21	en	affiliation	Athabasca University
+231	21	en	familyName	Barnetson
+232	21	en	givenName	Bob
+233	22	en	affiliation	University of British Columbia
+234	22	en	familyName	Beaty
+235	22	en	givenName	Bart
+134	12	fr_CA	affiliation	
+133	12	en	affiliation	Madrid
+135	12	en	biography	
+136	12	fr_CA	biography	
+137	12	en	familyName	Favio
+138	12	fr_CA	familyName	
+139	12	en	givenName	Gonzalo
+140	12	fr_CA	givenName	
+141	12		orcid	
+142	12	en	preferredPublicName	
+143	12	fr_CA	preferredPublicName	
+144	12	en	signature	
+145	12	fr_CA	signature	
+26	3	fr_CA	preferredPublicName	
+236	23	en	affiliation	University of Southern California
+237	23	en	familyName	Allan
+238	23	en	givenName	Chantal
+239	24	en	affiliation	SUNY
+240	24	en	familyName	Bernnard
+241	24	en	givenName	Deborah
+242	25	en	affiliation	Athabasca University
+243	25	en	familyName	Kennepohl
+244	25	en	givenName	Dietmar
+245	26	en	affiliation	University of Sussex
+246	26	en	familyName	Perini
+247	26	en	givenName	Fernando
+248	27	en	affiliation	Buffalo National Park Foundation
+249	27	en	familyName	Brower
+250	27	en	givenName	Jennifer
+251	28	en	affiliation	University of Alberta
+252	28	en	familyName	Locke Hart
+253	28	en	givenName	Jonathan
+254	29	en	affiliation	International Development Research Centre
+255	29	en	familyName	Elder
+256	29	en	givenName	Laurent
+91	8	fr_CA	preferredPublicName	
+257	30	en	affiliation	Athabasca University
+258	30	en	familyName	Ally
+259	30	en	givenName	Mohamed
+260	31	en	affiliation	University of Alberta
+261	31	en	familyName	Dawson
+262	31	en	givenName	Michael
+263	32	en	affiliation	University of Calgary
+264	32	en	familyName	Foran
+265	32	en	givenName	Max
+266	33	en	affiliation	London School of Economics
+267	33	en	familyName	Power
+268	33	en	givenName	Michael
+269	34	en	affiliation	International Development Research Centre
+270	34	en	familyName	Smith
+271	34	en	givenName	Matthew
+16	3	en	affiliation	University of Melbourne
+\.
+
+
+--
+-- Data for Name: user_user_groups; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.user_user_groups (user_user_group_id, user_group_id, user_id) FROM stdin;
+1	1	1
+2	2	1
+3	2	2
+4	3	3
+5	5	4
+6	5	5
+7	5	6
+8	17	7
+9	17	8
+10	17	9
+11	18	10
+12	18	11
+13	18	12
+14	6	13
+15	6	14
+16	10	15
+17	10	16
+18	12	17
+19	12	18
+20	19	19
+21	13	19
+22	19	20
+23	13	20
+24	19	21
+25	13	21
+26	19	22
+27	13	22
+28	19	23
+29	13	23
+30	19	24
+31	13	24
+32	19	25
+33	13	25
+34	19	26
+35	13	26
+36	19	27
+37	13	27
+38	19	28
+39	13	28
+40	19	29
+41	13	29
+42	19	30
+43	13	30
+44	19	31
+45	13	31
+46	19	32
+47	13	32
+48	19	33
+49	13	33
+50	19	34
+51	13	34
+\.
+
+
+--
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
+24	dbernnard	$2y$10$NDIYOw9V5sT6VJWLy1Br6.Iau8LdOsKbPSHb5eAUsOPenrIdkGeDu	dbernnard@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2023-04-15 15:44:52	\N	2023-04-15 15:44:52	\N	\N	\N	0	\N	1
+29	lelder	$2y$10$qdt4WylnSrdRXjJj360O0O.k/s4uiV0WYmQQ7EVOq/24Z24EHKQgC	lelder@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:54:00	\N	2023-04-15 15:54:00	\N	\N	\N	0	\N	1
+6	minoue	$2y$10$UL6NNF8CV0vykHT6hlleyuJnLXzNREz8WciIC2eX1aVtK6keBz8xe	minoue@mailinator.com				\N	JP	[]	\N	\N	2023-04-15 15:30:14	\N	2023-04-15 15:46:08	0	\N	\N	0	\N	1
+4	dbuskins	$2y$10$udT.cHYPaMXmPiojkwWI/OrnLq7FZDL7n0u41oMB2Z63XPLaQpDhu	dbuskins@mailinator.com				\N	US	[]	\N	\N	2023-04-15 15:30:00	\N	\N	0	\N	\N	0	\N	1
+5	sberardo	$2y$10$HSSKelq4xqmyFC3FSCkGY.rDna8EtVZZVjs/q7tC/pBSGJ/dhHJKm	sberardo@mailinator.com				\N	CA	[]	\N	\N	2023-04-15 15:30:07	\N	\N	0	\N	\N	0	\N	1
+7	jjanssen	$2y$10$GdLWttaD2.BIFTeyypzQQOOIpgPhxb0oAeZIQlNZIBPWp2H/fWJym	jjanssen@mailinator.com				\N	NL	[]	\N	\N	2023-04-15 15:30:22	\N	\N	0	\N	\N	0	\N	1
+9	amccrae	$2y$10$MI3.SZ0.SSpjWSfL1Jx4yOwR0cz8HU8J5D2SmjL81LFYGhHW/Lya6	amccrae@mailinator.com				\N	CA	[]	\N	\N	2023-04-15 15:30:39	\N	\N	0	\N	\N	0	\N	1
+11	alzacharia	$2y$10$h8I0bYSYITRZcy21wqXAAOL4U0tKhTXunK502SJbtGtGXkpe2JUPu	alzacharia@mailinator.com				\N	GH	[]	\N	\N	2023-04-15 15:30:56	\N	\N	0	\N	\N	0	\N	1
+13	mfritz	$2y$10$qYV93/e70GqtKfawagWGQujiszde.zD173PI8JPany47e4BkrmFXy	mfritz@mailinator.com				\N	BE	[]	\N	\N	2023-04-15 15:31:16	\N	\N	0	\N	\N	0	\N	1
+14	svogt	$2y$10$wma35PRudP2rbPYSLS0ri.72pq18by8VK8Y9hTKSBue8eLatZUJQK	svogt@mailinator.com				\N	CL	[]	\N	\N	2023-04-15 15:31:27	\N	\N	0	\N	\N	0	\N	1
+15	gcox	$2y$10$ulP6hRSus5/aG2NlsD9l8un/oaRp40pIKco3jilfs0EM7F07jZuGa	gcox@mailinator.com				\N	US	[]	\N	\N	2023-04-15 15:31:38	\N	\N	0	\N	\N	0	\N	1
+16	shellier	$2y$10$pT4h137LQIygM/x89Xk5B.TVy7hHvCBfn5jfK4jS4Ds6RfP0GFn.6	shellier@mailinator.com				\N	ZA	[]	\N	\N	2023-04-15 15:31:49	\N	\N	0	\N	\N	0	\N	1
+17	cturner	$2y$10$oazZarSpygMJq.i0zZUhl.DJxYvysICM8oym1glS56nAy.YxSN8W2	cturner@mailinator.com				\N	GB	[]	\N	\N	2023-04-15 15:32:01	\N	\N	0	\N	\N	0	\N	1
+18	skumar	$2y$10$OWRzKFYtLTrVmNwAWr1Bd.EdTieXy8JW4n4ovg2vNvGwMG0ck.1kC	skumar@mailinator.com				\N	SG	[]	\N	\N	2023-04-15 15:32:14	\N	\N	0	\N	\N	0	\N	1
+25	dkennepohl	$2y$10$WeTn9Lux0NKj.v4heROwWumY3ByTy4VsZjRneJDqQJ5W6KSjWjqtm	dkennepohl@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:46:43	\N	2023-04-15 15:46:44	\N	\N	\N	0	\N	1
+8	phudson	$2y$10$DCzSWB2kbY4vNqoVZIdvLuTKK7/fylMEAgAPTVPqUrkEFCzjYtfUe	phudson@mailinator.com				\N	CA	[]	\N	\N	2023-04-15 15:30:30	\N	2023-04-15 15:55:20	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$q9q08pwPed.Yoap2ISfD4.jbUCAUDUze82b9q9MZhNLHpMHIEB8AG	rvaca@mailinator.com				\N	MX	[]	\N	\N	2023-04-15 15:29:47	\N	2023-04-15 15:32:31	0	\N	\N	0	\N	1
+1	admin	$2y$10$WPl3HM09MdI0Dj.RpEp4tOJfaLJTVCGOpugbcS9bmGJYAPZ3OnP8y	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	[]	\N	\N	2023-04-15 15:27:49	\N	2023-04-15 15:33:04	\N	\N	\N	0	\N	1
+19	aclark	$2y$10$R1e1EcOlPSNTDrWUSQP0yOUhH3bRQ/gg1oVQVeeaKglD9dvURbT8C	aclark@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:33:30	\N	2023-04-15 15:33:30	\N	\N	\N	0	\N	1
+20	afinkel	$2y$10$TnoO3r2rwlfNa2NqreClwezAsRt0zp2TRudzPyAmboKAyMsx1hOX2	afinkel@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:34:48	\N	2023-04-15 15:34:48	\N	\N	\N	0	\N	1
+26	fperini	$2y$10$2di3zQWu4tsdbUMWgPFEZ.tFnKg8dYUL7TSSY9GRX5R2ZI9qLOn4y	fperini@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:48:45	\N	2023-04-15 15:48:45	\N	\N	\N	0	\N	1
+21	bbarnetson	$2y$10$q1xD5E84F4nRForaZYN5tOpOTvobzIEUtCMqScKg2Fd16ZA6Ut./.	bbarnetson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:38:05	\N	2023-04-15 15:38:06	\N	\N	\N	0	\N	1
+22	bbeaty	$2y$10$e/q7dBVQsQnFfQuOyBQEeOj/9eDj5wh9aVbxQuXjoFRmM819QppSG	bbeaty@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:39:02	\N	2023-04-15 15:39:02	\N	\N	\N	0	\N	1
+30	mally	$2y$10$5a7lsEoH1yp3RrDb17dcoOM6tYx5RP.4MYy9MGvUt54JTa0Elzgd6	mally@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:55:38	\N	2023-04-15 15:55:38	\N	\N	\N	0	\N	1
+23	callan	$2y$10$J82xQK95gX2oNjTldBjKU.qtFAR/KKFCIXjzHWa5weLCdVr2wrAaa	callan@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:41:22	\N	2023-04-15 15:41:22	\N	\N	\N	0	\N	1
+27	jbrower	$2y$10$bIJAyX0IpVOaeT9tPNhiDOfW1HrGr1aP9WJ75CRWF/Psn6NKLoNx6	jbrower@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:50:06	\N	2023-04-15 15:50:06	\N	\N	\N	0	\N	1
+33	mpower	$2y$10$urSDKc2.cDRHT2cyNdTWxOOcrLRmqZ5j3ptFC7Izel0gbIyHLj342	mpower@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 16:02:39	\N	2023-04-15 16:02:39	\N	\N	\N	0	\N	1
+28	jlockehart	$2y$10$g8vQP4ojfw9ITX9cs04snOW8JzPKg1bzQ.rgdq4oIFgOtvjWLbrp.	jlockehart@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:51:51	\N	2023-04-15 15:51:51	\N	\N	\N	0	\N	1
+10	agallego	$2y$10$xRWgKr.0PlTCYWGz67HRpuqyhg6e.IRV7Zd4TYOmTn9JI1qYe2rG6	agallego@mailinator.com				\N	US	[]	\N	\N	2023-04-15 15:30:47	\N	2023-04-15 16:04:18	0	\N	\N	0	\N	1
+12	gfavio	$2y$10$1/i8plqBDPh1gQAmMyMybun6B2HjnIW9vt5G.0rSxGcVaeKHb7sJi	gfavio@mailinator.com				\N	ES	[]	\N	\N	2023-04-15 15:31:06	\N	2023-04-15 15:57:27	0	\N	\N	0	\N	1
+34	msmith	$2y$10$p3ur8GPFIMzIyY.eN1EV4ePaDMXqDglttF2Rn34OC2ufYN6hWs3La	msmith@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 16:04:38	\N	2023-04-15 16:04:38	\N	\N	\N	0	\N	1
+31	mdawson	$2y$10$PDFECLllheFONic86LCwweXoyj6OSdp7kIkJ4C0wY0vmyV2jZvtvO	mdawson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 15:58:12	\N	2023-04-15 15:58:13	\N	\N	\N	0	\N	1
+3	dbarnes	$2y$10$fxlQ2hj1WFFWTxAXb8quB.DrnnZf7tiVCGaZBlbXrHOo5ujpgfsmG	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2023-04-15 15:29:54	\N	2023-04-15 16:05:45	0	\N	\N	0	\N	1
+32	mforan	$2y$10$Ol96LkG4YD5WTJzEhCoJWuhJ0PSrZcgNj9aHCNI3zYAdAZfW.9qNe	mforan@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2023-04-15 16:01:40	\N	2023-04-15 16:01:40	\N	\N	\N	0	\N	1
+\.
+
+
+--
+-- Data for Name: versions; Type: TABLE DATA; Schema: public; Owner: omp-ci
+--
+
+COPY public.versions (version_id, major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
+1	1	0	0	0	2023-04-15 15:27:50	1	plugins.metadata	dc11		0	0
+2	1	0	0	0	2023-04-15 15:27:50	1	plugins.pubIds	urn	\\APP\\plugins\\pubIds\\urn\\URNPubIdPlugin	0	0
+3	1	0	0	0	2023-04-15 15:27:50	1	plugins.blocks	browse	\\APP\\plugins\\blocks\\browse\\BrowseBlockPlugin	1	0
+4	1	0	0	0	2023-04-15 15:27:50	1	plugins.blocks	information	InformationBlockPlugin	1	0
+5	1	0	0	0	2023-04-15 15:27:50	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+6	1	0	0	0	2023-04-15 15:27:50	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+7	1	0	0	0	2023-04-15 15:27:50	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+8	1	2	0	0	2023-04-15 15:27:50	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+9	1	2	0	0	2023-04-15 15:27:50	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+10	1	0	0	0	2023-04-15 15:27:50	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+11	1	0	0	0	2023-04-15 15:27:50	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+12	1	0	0	0	2023-04-15 15:27:50	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+13	1	3	0	0	2023-04-15 15:27:50	1	plugins.generic	acron	AcronPlugin	1	1
+14	0	1	0	0	2023-04-15 15:27:50	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+15	1	0	0	0	2023-04-15 15:27:50	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+16	1	0	0	0	2023-04-15 15:27:50	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
+17	1	0	0	0	2023-04-15 15:27:50	1	plugins.generic	usageEvent		0	1
+18	1	0	0	0	2023-04-15 15:27:50	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+19	1	0	0	0	2023-04-15 15:27:50	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+20	1	0	0	0	2023-04-15 15:27:50	1	plugins.themes	default	DefaultThemePlugin	1	0
+21	1	0	0	0	2023-04-15 15:27:50	1	plugins.importexport	users		0	0
+22	1	0	0	0	2023-04-15 15:27:50	1	plugins.importexport	native		0	0
+23	1	0	0	0	2023-04-15 15:27:50	1	plugins.importexport	onix30		0	0
+24	1	0	0	0	2023-04-15 15:27:50	1	plugins.importexport	csv		0	0
+25	1	0	0	0	2023-04-15 15:27:50	1	plugins.oaiMetadataFormats	dc		0	0
+26	1	0	0	0	2023-04-15 15:27:50	1	plugins.paymethod	paypal		0	0
+27	1	0	0	0	2023-04-15 15:27:50	1	plugins.paymethod	manual		0	0
+28	2	0	1	0	2023-04-15 15:27:50	1	plugins.reports	reviewReport		0	0
+29	1	0	0	0	2023-04-15 15:27:50	1	plugins.reports	monographReport		0	0
+30	3	4	0	0	2023-04-15 15:27:47	1	core	omp		0	1
+\.
+
+
+--
+-- Name: access_keys_access_key_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.access_keys_access_key_id_seq', 1, false);
+
+
+--
+-- Name: announcement_settings_announcement_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.announcement_settings_announcement_setting_id_seq', 1, false);
+
+
+--
+-- Name: announcement_type_settings_announcement_type_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.announcement_type_settings_announcement_type_setting_id_seq', 1, false);
+
+
+--
+-- Name: announcement_types_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.announcement_types_type_id_seq', 1, false);
+
+
+--
+-- Name: announcements_announcement_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.announcements_announcement_id_seq', 1, false);
+
+
+--
+-- Name: author_settings_author_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.author_settings_author_setting_id_seq', 271, true);
+
+
+--
+-- Name: authors_author_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.authors_author_id_seq', 57, true);
+
+
+--
+-- Name: categories_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.categories_category_id_seq', 6, true);
+
+
+--
+-- Name: category_settings_category_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.category_settings_category_setting_id_seq', 30, true);
+
+
+--
+-- Name: citation_settings_citation_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.citation_settings_citation_setting_id_seq', 1, false);
+
+
+--
+-- Name: citations_citation_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.citations_citation_id_seq', 1, false);
+
+
+--
+-- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.completed_payments_completed_payment_id_seq', 1, false);
+
+
+--
+-- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq', 32, true);
+
+
+--
+-- Name: controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocab_entry_settin_controlled_vocab_entry_settin_seq', 32, true);
+
+
+--
+-- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.controlled_vocabs_controlled_vocab_id_seq', 86, true);
+
+
+--
+-- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstone_oai_set_objects_object_id_seq', 6, true);
+
+
+--
+-- Name: data_object_tombstone_settings_tombstone_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstone_settings_tombstone_setting_id_seq', 1, false);
+
+
+--
+-- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.data_object_tombstones_tombstone_id_seq', 3, true);
+
+
+--
+-- Name: doi_settings_doi_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.doi_settings_doi_setting_id_seq', 1, false);
+
+
+--
+-- Name: dois_doi_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.dois_doi_id_seq', 1, false);
+
+
+--
+-- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.edit_decisions_edit_decision_id_seq', 30, true);
+
+
+--
+-- Name: email_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_log_log_id_seq', 100, true);
+
+
+--
+-- Name: email_log_users_email_log_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_log_users_email_log_user_id_seq', 91, true);
+
+
+--
+-- Name: email_templates_default_data_email_templates_default_data_i_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_default_data_email_templates_default_data_i_seq', 175, true);
+
+
+--
+-- Name: email_templates_email_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_email_id_seq', 8, true);
+
+
+--
+-- Name: email_templates_settings_email_template_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.email_templates_settings_email_template_setting_id_seq', 1, false);
+
+
+--
+-- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.event_log_log_id_seq', 611, true);
+
+
+--
+-- Name: event_log_settings_event_log_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.event_log_settings_event_log_setting_id_seq', 3534, true);
+
+
+--
+-- Name: failed_jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.failed_jobs_id_seq', 1, false);
+
+
+--
+-- Name: features_feature_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.features_feature_id_seq', 1, false);
+
+
+--
+-- Name: files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.files_file_id_seq', 75, true);
+
+
+--
+-- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.filter_groups_filter_group_id_seq', 19, true);
+
+
+--
+-- Name: filter_settings_filter_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.filter_settings_filter_setting_id_seq', 1, false);
+
+
+--
+-- Name: filters_filter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.filters_filter_id_seq', 19, true);
+
+
+--
+-- Name: genre_settings_genre_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.genre_settings_genre_setting_id_seq', 30, true);
+
+
+--
+-- Name: genres_genre_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.genres_genre_id_seq', 15, true);
+
+
+--
+-- Name: identification_codes_identification_code_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.identification_codes_identification_code_id_seq', 2, true);
+
+
+--
+-- Name: institution_ip_institution_ip_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.institution_ip_institution_ip_id_seq', 1, false);
+
+
+--
+-- Name: institution_settings_institution_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.institution_settings_institution_setting_id_seq', 1, false);
+
+
+--
+-- Name: institutions_institution_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.institutions_institution_id_seq', 1, false);
+
+
+--
+-- Name: jobs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.jobs_id_seq', 4, true);
+
+
+--
+-- Name: library_file_settings_library_file_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.library_file_settings_library_file_setting_id_seq', 1, false);
+
+
+--
+-- Name: library_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.library_files_file_id_seq', 1, false);
+
+
+--
+-- Name: markets_market_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.markets_market_id_seq', 1, false);
+
+
+--
+-- Name: metrics_context_metrics_context_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_context_metrics_context_id_seq', 1, false);
+
+
+--
+-- Name: metrics_counter_submission_da_metrics_counter_submission_da_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_da_metrics_counter_submission_da_seq', 1, false);
+
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_i_seq1; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_in_metrics_counter_submission_i_seq1', 1, false);
+
+
+--
+-- Name: metrics_counter_submission_in_metrics_counter_submission_in_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_in_metrics_counter_submission_in_seq', 1, false);
+
+
+--
+-- Name: metrics_counter_submission_mo_metrics_counter_submission_mo_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_counter_submission_mo_metrics_counter_submission_mo_seq', 1, false);
+
+
+--
+-- Name: metrics_series_metrics_series_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_series_metrics_series_id_seq', 1, false);
+
+
+--
+-- Name: metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_submission_geo_daily_metrics_submission_geo_daily_i_seq', 1, false);
+
+
+--
+-- Name: metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_submission_geo_monthl_metrics_submission_geo_monthl_seq', 1, false);
+
+
+--
+-- Name: metrics_submission_metrics_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.metrics_submission_metrics_submission_id_seq', 1, false);
+
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignm_seq1; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignm_seq1', 1, false);
+
+
+--
+-- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq', 22, true);
+
+
+--
+-- Name: navigation_menu_item_settings_navigation_menu_item_setting__seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_item_settings_navigation_menu_item_setting__seq', 23, true);
+
+
+--
+-- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menu_items_navigation_menu_item_id_seq', 23, true);
+
+
+--
+-- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.navigation_menus_navigation_menu_id_seq', 3, true);
+
+
+--
+-- Name: new_releases_new_release_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.new_releases_new_release_id_seq', 1, false);
+
+
+--
+-- Name: notes_note_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notes_note_id_seq', 1, true);
+
+
+--
+-- Name: notification_settings_notification_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notification_settings_notification_setting_id_seq', 38, true);
+
+
+--
+-- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notification_subscription_settings_setting_id_seq', 16, true);
+
+
+--
+-- Name: notifications_notification_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.notifications_notification_id_seq', 343, true);
+
+
+--
+-- Name: oai_resumption_tokens_oai_resumption_token_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.oai_resumption_tokens_oai_resumption_token_id_seq', 1, false);
+
+
+--
+-- Name: plugin_settings_plugin_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.plugin_settings_plugin_setting_id_seq', 43, true);
+
+
+--
+-- Name: press_settings_press_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.press_settings_press_setting_id_seq', 69, true);
+
+
+--
+-- Name: presses_press_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.presses_press_id_seq', 1, true);
+
+
+--
+-- Name: publication_categories_publication_category_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_categories_publication_category_id_seq', 1, false);
+
+
+--
+-- Name: publication_dates_publication_date_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_dates_publication_date_id_seq', 1, false);
+
+
+--
+-- Name: publication_format_settings_publication_format_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_format_settings_publication_format_setting_id_seq', 6, true);
+
+
+--
+-- Name: publication_formats_publication_format_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_formats_publication_format_id_seq', 3, true);
+
+
+--
+-- Name: publication_settings_publication_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publication_settings_publication_setting_id_seq', 58, true);
+
+
+--
+-- Name: publications_publication_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.publications_publication_id_seq', 17, true);
+
+
+--
+-- Name: queries_query_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.queries_query_id_seq', 1, true);
+
+
+--
+-- Name: query_participants_query_participant_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.query_participants_query_participant_id_seq', 2, true);
+
+
+--
+-- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.queued_payments_queued_payment_id_seq', 1, false);
+
+
+--
+-- Name: representatives_representative_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.representatives_representative_id_seq', 1, false);
+
+
+--
+-- Name: review_assignments_review_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_assignments_review_id_seq', 25, true);
+
+
+--
+-- Name: review_files_review_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_files_review_file_id_seq', 73, true);
+
+
+--
+-- Name: review_form_element_settings_review_form_element_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_element_settings_review_form_element_setting_id_seq', 1, false);
+
+
+--
+-- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_elements_review_form_element_id_seq', 1, false);
+
+
+--
+-- Name: review_form_responses_review_form_response_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_responses_review_form_response_id_seq', 1, false);
+
+
+--
+-- Name: review_form_settings_review_form_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_form_settings_review_form_setting_id_seq', 1, false);
+
+
+--
+-- Name: review_forms_review_form_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_forms_review_form_id_seq', 1, false);
+
+
+--
+-- Name: review_round_files_review_round_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_round_files_review_round_file_id_seq', 59, true);
+
+
+--
+-- Name: review_rounds_review_round_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.review_rounds_review_round_id_seq', 19, true);
+
+
+--
+-- Name: sales_rights_sales_rights_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.sales_rights_sales_rights_id_seq', 1, false);
+
+
+--
+-- Name: scheduled_tasks_scheduled_task_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.scheduled_tasks_scheduled_task_id_seq', 9, true);
+
+
+--
+-- Name: series_series_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.series_series_id_seq', 5, true);
+
+
+--
+-- Name: series_settings_series_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.series_settings_series_setting_id_seq', 55, true);
+
+
+--
+-- Name: site_settings_site_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.site_settings_site_setting_id_seq', 10, true);
+
+
+--
+-- Name: site_site_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.site_site_id_seq', 1, true);
+
+
+--
+-- Name: spotlight_settings_spotlight_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.spotlight_settings_spotlight_setting_id_seq', 1, false);
+
+
+--
+-- Name: spotlights_spotlight_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.spotlights_spotlight_id_seq', 1, false);
+
+
+--
+-- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.stage_assignments_stage_assignment_id_seq', 35, true);
+
+
+--
+-- Name: static_page_settings_static_page_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.static_page_settings_static_page_setting_id_seq', 1, false);
+
+
+--
+-- Name: static_pages_static_page_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.static_pages_static_page_id_seq', 1, false);
+
+
+--
+-- Name: subeditor_submission_group_subeditor_submission_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.subeditor_submission_group_subeditor_submission_group_id_seq', 5, true);
+
+
+--
+-- Name: submission_chapter_settings_submission_chapter_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_chapter_settings_submission_chapter_setting_id_seq', 710, true);
+
+
+--
+-- Name: submission_chapters_chapter_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_chapters_chapter_id_seq', 71, true);
+
+
+--
+-- Name: submission_comments_comment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
+
+
+--
+-- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 141, true);
+
+
+--
+-- Name: submission_file_settings_submission_file_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_file_settings_submission_file_setting_id_seq', 274, true);
+
+
+--
+-- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 141, true);
+
+
+--
+-- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq', 110, true);
+
+
+--
+-- Name: submission_search_object_keyw_submission_search_object_keyw_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_object_keyw_submission_search_object_keyw_seq', 212, true);
+
+
+--
+-- Name: submission_search_objects_object_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_search_objects_object_id_seq', 24, true);
+
+
+--
+-- Name: submission_settings_submission_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submission_settings_submission_setting_id_seq', 1, false);
+
+
+--
+-- Name: submissions_submission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.submissions_submission_id_seq', 17, true);
+
+
+--
+-- Name: temporary_files_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.temporary_files_file_id_seq', 1, false);
+
+
+--
+-- Name: usage_stats_institution_tempo_usage_stats_temp_institution__seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_institution_tempo_usage_stats_temp_institution__seq', 1, false);
+
+
+--
+-- Name: usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_total_temporary_recor_usage_stats_temp_total_id_seq', 1, false);
+
+
+--
+-- Name: usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_unique_item_inves_usage_stats_temp_unique_item__seq', 1, false);
+
+
+--
+-- Name: usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_unique_item_requests_t_usage_stats_temp_item_id_seq', 1, false);
+
+
+--
+-- Name: usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_unique_title_inve_usage_stats_temp_unique_inves_seq', 1, false);
+
+
+--
+-- Name: usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.usage_stats_unique_title_requ_usage_stats_temp_unique_reque_seq', 1, false);
+
+
+--
+-- Name: user_group_settings_user_group_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_group_settings_user_group_setting_id_seq', 111, true);
+
+
+--
+-- Name: user_group_stage_user_group_stage_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_group_stage_user_group_stage_id_seq', 45, true);
+
+
+--
+-- Name: user_groups_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_groups_user_group_id_seq', 19, true);
+
+
+--
+-- Name: user_interests_user_interest_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_interests_user_interest_id_seq', 1, false);
+
+
+--
+-- Name: user_settings_user_setting_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_settings_user_setting_id_seq', 271, true);
+
+
+--
+-- Name: user_user_groups_user_user_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.user_user_groups_user_user_group_id_seq', 51, true);
+
+
+--
+-- Name: users_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.users_user_id_seq', 34, true);
+
+
+--
+-- Name: versions_version_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
+--
+
+SELECT pg_catalog.setval('public.versions_version_id_seq', 30, true);
+
+
+--
+-- Name: access_keys access_keys_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.access_keys
+    ADD CONSTRAINT access_keys_pkey PRIMARY KEY (access_key_id);
+
+
+--
+-- Name: announcement_settings announcement_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcement_settings
+    ADD CONSTRAINT announcement_settings_pkey PRIMARY KEY (announcement_setting_id);
+
+
+--
+-- Name: announcement_settings announcement_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcement_settings
+    ADD CONSTRAINT announcement_settings_unique UNIQUE (announcement_id, locale, setting_name);
+
+
+--
+-- Name: announcement_type_settings announcement_type_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcement_type_settings
+    ADD CONSTRAINT announcement_type_settings_pkey PRIMARY KEY (announcement_type_setting_id);
+
+
+--
+-- Name: announcement_type_settings announcement_type_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcement_type_settings
+    ADD CONSTRAINT announcement_type_settings_unique UNIQUE (type_id, locale, setting_name);
+
+
+--
+-- Name: announcement_types announcement_types_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcement_types
+    ADD CONSTRAINT announcement_types_pkey PRIMARY KEY (type_id);
+
+
+--
+-- Name: announcements announcements_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcements
+    ADD CONSTRAINT announcements_pkey PRIMARY KEY (announcement_id);
+
+
+--
+-- Name: author_settings author_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.author_settings
+    ADD CONSTRAINT author_settings_pkey PRIMARY KEY (author_setting_id);
+
+
+--
+-- Name: author_settings author_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.author_settings
+    ADD CONSTRAINT author_settings_unique UNIQUE (author_id, locale, setting_name);
+
+
+--
+-- Name: authors authors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.authors
+    ADD CONSTRAINT authors_pkey PRIMARY KEY (author_id);
+
+
+--
+-- Name: controlled_vocab_entry_settings c_v_e_s_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocab_entry_settings
+    ADD CONSTRAINT c_v_e_s_pkey UNIQUE (controlled_vocab_entry_id, locale, setting_name);
+
+
+--
+-- Name: categories categories_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.categories
+    ADD CONSTRAINT categories_pkey PRIMARY KEY (category_id);
+
+
+--
+-- Name: categories category_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.categories
+    ADD CONSTRAINT category_path UNIQUE (context_id, path);
+
+
+--
+-- Name: category_settings category_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.category_settings
+    ADD CONSTRAINT category_settings_pkey PRIMARY KEY (category_setting_id);
+
+
+--
+-- Name: category_settings category_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.category_settings
+    ADD CONSTRAINT category_settings_unique UNIQUE (category_id, locale, setting_name);
+
+
+--
+-- Name: submission_chapter_authors chapter_authors_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapter_authors
+    ADD CONSTRAINT chapter_authors_pkey UNIQUE (author_id, chapter_id);
+
+
+--
+-- Name: citation_settings citation_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.citation_settings
+    ADD CONSTRAINT citation_settings_pkey PRIMARY KEY (citation_setting_id);
+
+
+--
+-- Name: citation_settings citation_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.citation_settings
+    ADD CONSTRAINT citation_settings_unique UNIQUE (citation_id, locale, setting_name);
+
+
+--
+-- Name: citations citations_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.citations
+    ADD CONSTRAINT citations_pkey PRIMARY KEY (citation_id);
+
+
+--
+-- Name: citations citations_publication_seq; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.citations
+    ADD CONSTRAINT citations_publication_seq UNIQUE (publication_id, seq);
+
+
+--
+-- Name: completed_payments completed_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.completed_payments
+    ADD CONSTRAINT completed_payments_pkey PRIMARY KEY (completed_payment_id);
+
+
+--
+-- Name: controlled_vocab_entries controlled_vocab_entries_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocab_entries
+    ADD CONSTRAINT controlled_vocab_entries_pkey PRIMARY KEY (controlled_vocab_entry_id);
+
+
+--
+-- Name: controlled_vocab_entry_settings controlled_vocab_entry_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocab_entry_settings
+    ADD CONSTRAINT controlled_vocab_entry_settings_pkey PRIMARY KEY (controlled_vocab_entry_setting_id);
+
+
+--
+-- Name: controlled_vocabs controlled_vocab_symbolic; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocabs
+    ADD CONSTRAINT controlled_vocab_symbolic UNIQUE (symbolic, assoc_type, assoc_id);
+
+
+--
+-- Name: controlled_vocabs controlled_vocabs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocabs
+    ADD CONSTRAINT controlled_vocabs_pkey PRIMARY KEY (controlled_vocab_id);
+
+
+--
+-- Name: data_object_tombstone_oai_set_objects data_object_tombstone_oai_set_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
+    ADD CONSTRAINT data_object_tombstone_oai_set_objects_pkey PRIMARY KEY (object_id);
+
+
+--
+-- Name: data_object_tombstone_settings data_object_tombstone_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.data_object_tombstone_settings
+    ADD CONSTRAINT data_object_tombstone_settings_pkey PRIMARY KEY (tombstone_setting_id);
+
+
+--
+-- Name: data_object_tombstone_settings data_object_tombstone_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.data_object_tombstone_settings
+    ADD CONSTRAINT data_object_tombstone_settings_unique UNIQUE (tombstone_id, locale, setting_name);
+
+
+--
+-- Name: data_object_tombstones data_object_tombstones_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.data_object_tombstones
+    ADD CONSTRAINT data_object_tombstones_pkey PRIMARY KEY (tombstone_id);
+
+
+--
+-- Name: doi_settings doi_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.doi_settings
+    ADD CONSTRAINT doi_settings_pkey PRIMARY KEY (doi_setting_id);
+
+
+--
+-- Name: doi_settings doi_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.doi_settings
+    ADD CONSTRAINT doi_settings_unique UNIQUE (doi_id, locale, setting_name);
+
+
+--
+-- Name: dois dois_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.dois
+    ADD CONSTRAINT dois_pkey PRIMARY KEY (doi_id);
+
+
+--
+-- Name: edit_decisions edit_decisions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.edit_decisions
+    ADD CONSTRAINT edit_decisions_pkey PRIMARY KEY (edit_decision_id);
+
+
+--
+-- Name: email_log email_log_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_log
+    ADD CONSTRAINT email_log_pkey PRIMARY KEY (log_id);
+
+
+--
+-- Name: email_log_users email_log_user_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_log_users
+    ADD CONSTRAINT email_log_user_id UNIQUE (email_log_id, user_id);
+
+
+--
+-- Name: email_log_users email_log_users_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_log_users
+    ADD CONSTRAINT email_log_users_pkey PRIMARY KEY (email_log_user_id);
+
+
+--
+-- Name: email_templates_default_data email_templates_default_data_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_templates_default_data
+    ADD CONSTRAINT email_templates_default_data_pkey PRIMARY KEY (email_templates_default_data_id);
+
+
+--
+-- Name: email_templates_default_data email_templates_default_data_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_templates_default_data
+    ADD CONSTRAINT email_templates_default_data_unique UNIQUE (email_key, locale);
+
+
+--
+-- Name: email_templates email_templates_email_key; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_templates
+    ADD CONSTRAINT email_templates_email_key UNIQUE (email_key, context_id);
+
+
+--
+-- Name: email_templates email_templates_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_templates
+    ADD CONSTRAINT email_templates_pkey PRIMARY KEY (email_id);
+
+
+--
+-- Name: email_templates_settings email_templates_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_templates_settings
+    ADD CONSTRAINT email_templates_settings_pkey PRIMARY KEY (email_template_setting_id);
+
+
+--
+-- Name: email_templates_settings email_templates_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_templates_settings
+    ADD CONSTRAINT email_templates_settings_unique UNIQUE (email_id, locale, setting_name);
+
+
+--
+-- Name: event_log event_log_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.event_log
+    ADD CONSTRAINT event_log_pkey PRIMARY KEY (log_id);
+
+
+--
+-- Name: event_log_settings event_log_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.event_log_settings
+    ADD CONSTRAINT event_log_settings_pkey PRIMARY KEY (event_log_setting_id);
+
+
+--
+-- Name: event_log_settings event_log_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.event_log_settings
+    ADD CONSTRAINT event_log_settings_unique UNIQUE (log_id, setting_name);
+
+
+--
+-- Name: failed_jobs failed_jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.failed_jobs
+    ADD CONSTRAINT failed_jobs_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: features features_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.features
+    ADD CONSTRAINT features_pkey PRIMARY KEY (feature_id);
+
+
+--
+-- Name: files files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.files
+    ADD CONSTRAINT files_pkey PRIMARY KEY (file_id);
+
+
+--
+-- Name: filter_groups filter_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.filter_groups
+    ADD CONSTRAINT filter_groups_pkey PRIMARY KEY (filter_group_id);
+
+
+--
+-- Name: filter_groups filter_groups_symbolic; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.filter_groups
+    ADD CONSTRAINT filter_groups_symbolic UNIQUE (symbolic);
+
+
+--
+-- Name: filter_settings filter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.filter_settings
+    ADD CONSTRAINT filter_settings_pkey PRIMARY KEY (filter_setting_id);
+
+
+--
+-- Name: filter_settings filter_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.filter_settings
+    ADD CONSTRAINT filter_settings_unique UNIQUE (filter_id, locale, setting_name);
+
+
+--
+-- Name: filters filters_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.filters
+    ADD CONSTRAINT filters_pkey PRIMARY KEY (filter_id);
+
+
+--
+-- Name: genre_settings genre_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.genre_settings
+    ADD CONSTRAINT genre_settings_pkey PRIMARY KEY (genre_setting_id);
+
+
+--
+-- Name: genre_settings genre_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.genre_settings
+    ADD CONSTRAINT genre_settings_unique UNIQUE (genre_id, locale, setting_name);
+
+
+--
+-- Name: genres genres_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.genres
+    ADD CONSTRAINT genres_pkey PRIMARY KEY (genre_id);
+
+
+--
+-- Name: identification_codes identification_codes_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.identification_codes
+    ADD CONSTRAINT identification_codes_pkey PRIMARY KEY (identification_code_id);
+
+
+--
+-- Name: institution_ip institution_ip_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.institution_ip
+    ADD CONSTRAINT institution_ip_pkey PRIMARY KEY (institution_ip_id);
+
+
+--
+-- Name: institution_settings institution_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.institution_settings
+    ADD CONSTRAINT institution_settings_pkey PRIMARY KEY (institution_setting_id);
+
+
+--
+-- Name: institution_settings institution_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.institution_settings
+    ADD CONSTRAINT institution_settings_unique UNIQUE (institution_id, locale, setting_name);
+
+
+--
+-- Name: institutions institutions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.institutions
+    ADD CONSTRAINT institutions_pkey PRIMARY KEY (institution_id);
+
+
+--
+-- Name: job_batches job_batches_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.job_batches
+    ADD CONSTRAINT job_batches_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: jobs jobs_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.jobs
+    ADD CONSTRAINT jobs_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: library_file_settings library_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.library_file_settings
+    ADD CONSTRAINT library_file_settings_pkey PRIMARY KEY (library_file_setting_id);
+
+
+--
+-- Name: library_file_settings library_file_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.library_file_settings
+    ADD CONSTRAINT library_file_settings_unique UNIQUE (file_id, locale, setting_name);
+
+
+--
+-- Name: library_files library_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.library_files
+    ADD CONSTRAINT library_files_pkey PRIMARY KEY (file_id);
+
+
+--
+-- Name: markets markets_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.markets
+    ADD CONSTRAINT markets_pkey PRIMARY KEY (market_id);
+
+
+--
+-- Name: metrics_context metrics_context_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_context
+    ADD CONSTRAINT metrics_context_pkey PRIMARY KEY (metrics_context_id);
+
+
+--
+-- Name: metrics_counter_submission_daily metrics_counter_submission_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_daily
+    ADD CONSTRAINT metrics_counter_submission_daily_pkey PRIMARY KEY (metrics_counter_submission_daily_id);
+
+
+--
+-- Name: metrics_counter_submission_institution_daily metrics_counter_submission_institution_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
+    ADD CONSTRAINT metrics_counter_submission_institution_daily_pkey PRIMARY KEY (metrics_counter_submission_institution_daily_id);
+
+
+--
+-- Name: metrics_counter_submission_institution_monthly metrics_counter_submission_institution_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
+    ADD CONSTRAINT metrics_counter_submission_institution_monthly_pkey PRIMARY KEY (metrics_counter_submission_institution_monthly_id);
+
+
+--
+-- Name: metrics_counter_submission_monthly metrics_counter_submission_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_monthly
+    ADD CONSTRAINT metrics_counter_submission_monthly_pkey PRIMARY KEY (metrics_counter_submission_monthly_id);
+
+
+--
+-- Name: metrics_series metrics_series_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_series
+    ADD CONSTRAINT metrics_series_pkey PRIMARY KEY (metrics_series_id);
+
+
+--
+-- Name: metrics_submission_geo_daily metrics_submission_geo_daily_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_daily
+    ADD CONSTRAINT metrics_submission_geo_daily_pkey PRIMARY KEY (metrics_submission_geo_daily_id);
+
+
+--
+-- Name: metrics_submission_geo_monthly metrics_submission_geo_monthly_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_monthly
+    ADD CONSTRAINT metrics_submission_geo_monthly_pkey PRIMARY KEY (metrics_submission_geo_monthly_id);
+
+
+--
+-- Name: metrics_submission metrics_submission_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission
+    ADD CONSTRAINT metrics_submission_pkey PRIMARY KEY (metrics_submission_id);
+
+
+--
+-- Name: metrics_counter_submission_daily msd_uc_load_id_context_id_submission_id_date; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_daily
+    ADD CONSTRAINT msd_uc_load_id_context_id_submission_id_date UNIQUE (load_id, context_id, submission_id, date);
+
+
+--
+-- Name: metrics_submission_geo_daily msgd_uc_load_context_submission_c_r_c_date; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_daily
+    ADD CONSTRAINT msgd_uc_load_context_submission_c_r_c_date UNIQUE (load_id, context_id, submission_id, country, region, city, date);
+
+
+--
+-- Name: metrics_submission_geo_monthly msgm_uc_context_submission_c_r_c_month; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_monthly
+    ADD CONSTRAINT msgm_uc_context_submission_c_r_c_month UNIQUE (context_id, submission_id, country, region, city, month);
+
+
+--
+-- Name: metrics_counter_submission_institution_daily msid_uc_load_id_context_id_submission_id_institution_id_date; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
+    ADD CONSTRAINT msid_uc_load_id_context_id_submission_id_institution_id_date UNIQUE (load_id, context_id, submission_id, institution_id, date);
+
+
+--
+-- Name: metrics_counter_submission_institution_monthly msim_uc_context_id_submission_id_institution_id_month; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
+    ADD CONSTRAINT msim_uc_context_id_submission_id_institution_id_month UNIQUE (context_id, submission_id, institution_id, month);
+
+
+--
+-- Name: metrics_counter_submission_monthly msm_uc_context_id_submission_id_month; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_monthly
+    ADD CONSTRAINT msm_uc_context_id_submission_id_month UNIQUE (context_id, submission_id, month);
+
+
+--
+-- Name: navigation_menu_item_assignment_settings navigation_menu_item_assignment_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
+    ADD CONSTRAINT navigation_menu_item_assignment_settings_pkey PRIMARY KEY (navigation_menu_item_assignment_setting_id);
+
+
+--
+-- Name: navigation_menu_item_assignment_settings navigation_menu_item_assignment_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
+    ADD CONSTRAINT navigation_menu_item_assignment_settings_unique UNIQUE (navigation_menu_item_assignment_id, locale, setting_name);
+
+
+--
+-- Name: navigation_menu_item_assignments navigation_menu_item_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_assignments
+    ADD CONSTRAINT navigation_menu_item_assignments_pkey PRIMARY KEY (navigation_menu_item_assignment_id);
+
+
+--
+-- Name: navigation_menu_item_settings navigation_menu_item_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_settings
+    ADD CONSTRAINT navigation_menu_item_settings_pkey PRIMARY KEY (navigation_menu_item_setting_id);
+
+
+--
+-- Name: navigation_menu_item_settings navigation_menu_item_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_settings
+    ADD CONSTRAINT navigation_menu_item_settings_unique UNIQUE (navigation_menu_item_id, locale, setting_name);
+
+
+--
+-- Name: navigation_menu_items navigation_menu_items_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_items
+    ADD CONSTRAINT navigation_menu_items_pkey PRIMARY KEY (navigation_menu_item_id);
+
+
+--
+-- Name: navigation_menus navigation_menus_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menus
+    ADD CONSTRAINT navigation_menus_pkey PRIMARY KEY (navigation_menu_id);
+
+
+--
+-- Name: new_releases new_releases_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.new_releases
+    ADD CONSTRAINT new_releases_pkey PRIMARY KEY (new_release_id);
+
+
+--
+-- Name: new_releases new_releases_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.new_releases
+    ADD CONSTRAINT new_releases_unique UNIQUE (assoc_type, assoc_id, submission_id);
+
+
+--
+-- Name: notes notes_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notes
+    ADD CONSTRAINT notes_pkey PRIMARY KEY (note_id);
+
+
+--
+-- Name: notification_settings notification_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notification_settings
+    ADD CONSTRAINT notification_settings_pkey PRIMARY KEY (notification_setting_id);
+
+
+--
+-- Name: notification_settings notification_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notification_settings
+    ADD CONSTRAINT notification_settings_unique UNIQUE (notification_id, locale, setting_name);
+
+
+--
+-- Name: notification_subscription_settings notification_subscription_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notification_subscription_settings
+    ADD CONSTRAINT notification_subscription_settings_pkey PRIMARY KEY (setting_id);
+
+
+--
+-- Name: notifications notifications_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notifications
+    ADD CONSTRAINT notifications_pkey PRIMARY KEY (notification_id);
+
+
+--
+-- Name: oai_resumption_tokens oai_resumption_tokens_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.oai_resumption_tokens
+    ADD CONSTRAINT oai_resumption_tokens_pkey PRIMARY KEY (oai_resumption_token_id);
+
+
+--
+-- Name: oai_resumption_tokens oai_resumption_tokens_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.oai_resumption_tokens
+    ADD CONSTRAINT oai_resumption_tokens_unique UNIQUE (token);
+
+
+--
+-- Name: plugin_settings plugin_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.plugin_settings
+    ADD CONSTRAINT plugin_settings_pkey PRIMARY KEY (plugin_setting_id);
+
+
+--
+-- Name: plugin_settings plugin_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.plugin_settings
+    ADD CONSTRAINT plugin_settings_unique UNIQUE (plugin_name, context_id, setting_name);
+
+
+--
+-- Name: features press_features_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.features
+    ADD CONSTRAINT press_features_unique UNIQUE (assoc_type, assoc_id, submission_id);
+
+
+--
+-- Name: presses press_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.presses
+    ADD CONSTRAINT press_path UNIQUE (path);
+
+
+--
+-- Name: press_settings press_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.press_settings
+    ADD CONSTRAINT press_settings_pkey PRIMARY KEY (press_setting_id);
+
+
+--
+-- Name: press_settings press_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.press_settings
+    ADD CONSTRAINT press_settings_unique UNIQUE (press_id, locale, setting_name);
+
+
+--
+-- Name: presses presses_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.presses
+    ADD CONSTRAINT presses_pkey PRIMARY KEY (press_id);
+
+
+--
+-- Name: publication_categories publication_categories_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_categories
+    ADD CONSTRAINT publication_categories_id UNIQUE (publication_id, category_id);
+
+
+--
+-- Name: publication_categories publication_categories_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_categories
+    ADD CONSTRAINT publication_categories_pkey PRIMARY KEY (publication_category_id);
+
+
+--
+-- Name: publication_dates publication_dates_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_dates
+    ADD CONSTRAINT publication_dates_pkey PRIMARY KEY (publication_date_id);
+
+
+--
+-- Name: publication_format_settings publication_format_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_format_settings
+    ADD CONSTRAINT publication_format_settings_pkey PRIMARY KEY (publication_format_setting_id);
+
+
+--
+-- Name: publication_format_settings publication_format_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_format_settings
+    ADD CONSTRAINT publication_format_settings_unique UNIQUE (publication_format_id, locale, setting_name);
+
+
+--
+-- Name: publication_formats publication_formats_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_formats
+    ADD CONSTRAINT publication_formats_pkey PRIMARY KEY (publication_format_id);
+
+
+--
+-- Name: publication_settings publication_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_settings
+    ADD CONSTRAINT publication_settings_pkey PRIMARY KEY (publication_setting_id);
+
+
+--
+-- Name: publication_settings publication_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_settings
+    ADD CONSTRAINT publication_settings_unique UNIQUE (publication_id, locale, setting_name);
+
+
+--
+-- Name: publications publications_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publications
+    ADD CONSTRAINT publications_pkey PRIMARY KEY (publication_id);
+
+
+--
+-- Name: queries queries_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.queries
+    ADD CONSTRAINT queries_pkey PRIMARY KEY (query_id);
+
+
+--
+-- Name: query_participants query_participants_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.query_participants
+    ADD CONSTRAINT query_participants_pkey PRIMARY KEY (query_participant_id);
+
+
+--
+-- Name: query_participants query_participants_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.query_participants
+    ADD CONSTRAINT query_participants_unique UNIQUE (query_id, user_id);
+
+
+--
+-- Name: queued_payments queued_payments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.queued_payments
+    ADD CONSTRAINT queued_payments_pkey PRIMARY KEY (queued_payment_id);
+
+
+--
+-- Name: representatives representatives_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.representatives
+    ADD CONSTRAINT representatives_pkey PRIMARY KEY (representative_id);
+
+
+--
+-- Name: review_assignments review_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_assignments
+    ADD CONSTRAINT review_assignments_pkey PRIMARY KEY (review_id);
+
+
+--
+-- Name: review_files review_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_files
+    ADD CONSTRAINT review_files_pkey PRIMARY KEY (review_file_id);
+
+
+--
+-- Name: review_files review_files_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_files
+    ADD CONSTRAINT review_files_unique UNIQUE (review_id, submission_file_id);
+
+
+--
+-- Name: review_form_element_settings review_form_element_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_element_settings
+    ADD CONSTRAINT review_form_element_settings_pkey PRIMARY KEY (review_form_element_setting_id);
+
+
+--
+-- Name: review_form_element_settings review_form_element_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_element_settings
+    ADD CONSTRAINT review_form_element_settings_unique UNIQUE (review_form_element_id, locale, setting_name);
+
+
+--
+-- Name: review_form_elements review_form_elements_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_elements
+    ADD CONSTRAINT review_form_elements_pkey PRIMARY KEY (review_form_element_id);
+
+
+--
+-- Name: review_form_responses review_form_responses_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_responses
+    ADD CONSTRAINT review_form_responses_pkey PRIMARY KEY (review_form_response_id);
+
+
+--
+-- Name: review_form_settings review_form_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_settings
+    ADD CONSTRAINT review_form_settings_pkey PRIMARY KEY (review_form_setting_id);
+
+
+--
+-- Name: review_form_settings review_form_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_settings
+    ADD CONSTRAINT review_form_settings_unique UNIQUE (review_form_id, locale, setting_name);
+
+
+--
+-- Name: review_forms review_forms_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_forms
+    ADD CONSTRAINT review_forms_pkey PRIMARY KEY (review_form_id);
+
+
+--
+-- Name: review_round_files review_round_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_round_files
+    ADD CONSTRAINT review_round_files_pkey PRIMARY KEY (review_round_file_id);
+
+
+--
+-- Name: review_round_files review_round_files_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_round_files
+    ADD CONSTRAINT review_round_files_unique UNIQUE (submission_id, review_round_id, submission_file_id);
+
+
+--
+-- Name: review_rounds review_rounds_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_rounds
+    ADD CONSTRAINT review_rounds_pkey PRIMARY KEY (review_round_id);
+
+
+--
+-- Name: review_rounds review_rounds_submission_id_stage_id_round_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_rounds
+    ADD CONSTRAINT review_rounds_submission_id_stage_id_round_pkey UNIQUE (submission_id, stage_id, round);
+
+
+--
+-- Name: sales_rights sales_rights_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.sales_rights
+    ADD CONSTRAINT sales_rights_pkey PRIMARY KEY (sales_rights_id);
+
+
+--
+-- Name: scheduled_tasks scheduled_tasks_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.scheduled_tasks
+    ADD CONSTRAINT scheduled_tasks_pkey PRIMARY KEY (scheduled_task_id);
+
+
+--
+-- Name: scheduled_tasks scheduled_tasks_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.scheduled_tasks
+    ADD CONSTRAINT scheduled_tasks_unique UNIQUE (class_name);
+
+
+--
+-- Name: subeditor_submission_group section_editors_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.subeditor_submission_group
+    ADD CONSTRAINT section_editors_unique UNIQUE (context_id, assoc_id, assoc_type, user_id, user_group_id);
+
+
+--
+-- Name: series_categories series_categories_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series_categories
+    ADD CONSTRAINT series_categories_id UNIQUE (series_id, category_id);
+
+
+--
+-- Name: series series_path; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series
+    ADD CONSTRAINT series_path UNIQUE (press_id, path);
+
+
+--
+-- Name: series series_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series
+    ADD CONSTRAINT series_pkey PRIMARY KEY (series_id);
+
+
+--
+-- Name: series_settings series_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series_settings
+    ADD CONSTRAINT series_settings_pkey PRIMARY KEY (series_setting_id);
+
+
+--
+-- Name: series_settings series_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series_settings
+    ADD CONSTRAINT series_settings_unique UNIQUE (series_id, locale, setting_name);
+
+
+--
+-- Name: sessions sessions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.sessions
+    ADD CONSTRAINT sessions_pkey UNIQUE (session_id);
+
+
+--
+-- Name: site site_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.site
+    ADD CONSTRAINT site_pkey PRIMARY KEY (site_id);
+
+
+--
+-- Name: site_settings site_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.site_settings
+    ADD CONSTRAINT site_settings_pkey PRIMARY KEY (site_setting_id);
+
+
+--
+-- Name: site_settings site_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.site_settings
+    ADD CONSTRAINT site_settings_unique UNIQUE (setting_name, locale);
+
+
+--
+-- Name: spotlight_settings spotlight_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.spotlight_settings
+    ADD CONSTRAINT spotlight_settings_pkey PRIMARY KEY (spotlight_setting_id);
+
+
+--
+-- Name: spotlight_settings spotlight_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.spotlight_settings
+    ADD CONSTRAINT spotlight_settings_unique UNIQUE (spotlight_id, locale, setting_name);
+
+
+--
+-- Name: spotlights spotlights_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.spotlights
+    ADD CONSTRAINT spotlights_pkey PRIMARY KEY (spotlight_id);
+
+
+--
+-- Name: stage_assignments stage_assignment; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.stage_assignments
+    ADD CONSTRAINT stage_assignment UNIQUE (submission_id, user_group_id, user_id);
+
+
+--
+-- Name: stage_assignments stage_assignments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.stage_assignments
+    ADD CONSTRAINT stage_assignments_pkey PRIMARY KEY (stage_assignment_id);
+
+
+--
+-- Name: static_page_settings static_page_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.static_page_settings
+    ADD CONSTRAINT static_page_settings_pkey PRIMARY KEY (static_page_setting_id);
+
+
+--
+-- Name: static_pages static_pages_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.static_pages
+    ADD CONSTRAINT static_pages_pkey PRIMARY KEY (static_page_id);
+
+
+--
+-- Name: subeditor_submission_group subeditor_submission_group_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.subeditor_submission_group
+    ADD CONSTRAINT subeditor_submission_group_pkey PRIMARY KEY (subeditor_submission_group_id);
+
+
+--
+-- Name: submission_chapter_settings submission_chapter_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapter_settings
+    ADD CONSTRAINT submission_chapter_settings_pkey PRIMARY KEY (submission_chapter_setting_id);
+
+
+--
+-- Name: submission_chapter_settings submission_chapter_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapter_settings
+    ADD CONSTRAINT submission_chapter_settings_unique UNIQUE (chapter_id, locale, setting_name);
+
+
+--
+-- Name: submission_chapters submission_chapters_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapters
+    ADD CONSTRAINT submission_chapters_pkey PRIMARY KEY (chapter_id);
+
+
+--
+-- Name: submission_comments submission_comments_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_comments
+    ADD CONSTRAINT submission_comments_pkey PRIMARY KEY (comment_id);
+
+
+--
+-- Name: submission_file_revisions submission_file_revisions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_file_revisions
+    ADD CONSTRAINT submission_file_revisions_pkey PRIMARY KEY (revision_id);
+
+
+--
+-- Name: submission_file_settings submission_file_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_file_settings
+    ADD CONSTRAINT submission_file_settings_pkey PRIMARY KEY (submission_file_setting_id);
+
+
+--
+-- Name: submission_file_settings submission_file_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_file_settings
+    ADD CONSTRAINT submission_file_settings_unique UNIQUE (submission_file_id, locale, setting_name);
+
+
+--
+-- Name: submission_files submission_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_files
+    ADD CONSTRAINT submission_files_pkey PRIMARY KEY (submission_file_id);
+
+
+--
+-- Name: submission_search_keyword_list submission_search_keyword_list_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_search_keyword_list
+    ADD CONSTRAINT submission_search_keyword_list_pkey PRIMARY KEY (keyword_id);
+
+
+--
+-- Name: submission_search_keyword_list submission_search_keyword_text; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_search_keyword_list
+    ADD CONSTRAINT submission_search_keyword_text UNIQUE (keyword_text);
+
+
+--
+-- Name: submission_search_object_keywords submission_search_object_keywords_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_search_object_keywords
+    ADD CONSTRAINT submission_search_object_keywords_pkey PRIMARY KEY (submission_search_object_keyword_id);
+
+
+--
+-- Name: submission_search_object_keywords submission_search_object_keywords_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_search_object_keywords
+    ADD CONSTRAINT submission_search_object_keywords_unique UNIQUE (object_id, pos);
+
+
+--
+-- Name: submission_search_objects submission_search_objects_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_search_objects
+    ADD CONSTRAINT submission_search_objects_pkey PRIMARY KEY (object_id);
+
+
+--
+-- Name: submission_settings submission_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_settings
+    ADD CONSTRAINT submission_settings_pkey PRIMARY KEY (submission_setting_id);
+
+
+--
+-- Name: submission_settings submission_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_settings
+    ADD CONSTRAINT submission_settings_unique UNIQUE (submission_id, locale, setting_name);
+
+
+--
+-- Name: submissions submissions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submissions
+    ADD CONSTRAINT submissions_pkey PRIMARY KEY (submission_id);
+
+
+--
+-- Name: temporary_files temporary_files_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.temporary_files
+    ADD CONSTRAINT temporary_files_pkey PRIMARY KEY (file_id);
+
+
+--
+-- Name: user_interests u_e_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_interests
+    ADD CONSTRAINT u_e_pkey UNIQUE (user_id, controlled_vocab_entry_id);
+
+
+--
+-- Name: usage_stats_institution_temporary_records usage_stats_institution_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_institution_temporary_records
+    ADD CONSTRAINT usage_stats_institution_temporary_records_pkey PRIMARY KEY (usage_stats_temp_institution_id);
+
+
+--
+-- Name: usage_stats_total_temporary_records usage_stats_total_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_total_temporary_records
+    ADD CONSTRAINT usage_stats_total_temporary_records_pkey PRIMARY KEY (usage_stats_temp_total_id);
+
+
+--
+-- Name: usage_stats_unique_item_investigations_temporary_records usage_stats_unique_item_investigations_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
+    ADD CONSTRAINT usage_stats_unique_item_investigations_temporary_records_pkey PRIMARY KEY (usage_stats_temp_unique_item_id);
+
+
+--
+-- Name: usage_stats_unique_item_requests_temporary_records usage_stats_unique_item_requests_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
+    ADD CONSTRAINT usage_stats_unique_item_requests_temporary_records_pkey PRIMARY KEY (usage_stats_temp_item_id);
+
+
+--
+-- Name: usage_stats_unique_title_investigations_temporary_records usage_stats_unique_title_investigations_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
+    ADD CONSTRAINT usage_stats_unique_title_investigations_temporary_records_pkey PRIMARY KEY (usage_stats_temp_unique_investigations_id);
+
+
+--
+-- Name: usage_stats_unique_title_requests_temporary_records usage_stats_unique_title_requests_temporary_records_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
+    ADD CONSTRAINT usage_stats_unique_title_requests_temporary_records_pkey PRIMARY KEY (usage_stats_temp_unique_requests_id);
+
+
+--
+-- Name: user_group_settings user_group_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_group_settings
+    ADD CONSTRAINT user_group_settings_pkey PRIMARY KEY (user_group_setting_id);
+
+
+--
+-- Name: user_group_settings user_group_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_group_settings
+    ADD CONSTRAINT user_group_settings_unique UNIQUE (user_group_id, locale, setting_name);
+
+
+--
+-- Name: user_group_stage user_group_stage_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_group_stage
+    ADD CONSTRAINT user_group_stage_pkey PRIMARY KEY (user_group_stage_id);
+
+
+--
+-- Name: user_group_stage user_group_stage_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_group_stage
+    ADD CONSTRAINT user_group_stage_unique UNIQUE (context_id, user_group_id, stage_id);
+
+
+--
+-- Name: user_groups user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_groups
+    ADD CONSTRAINT user_groups_pkey PRIMARY KEY (user_group_id);
+
+
+--
+-- Name: user_interests user_interests_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_interests
+    ADD CONSTRAINT user_interests_pkey PRIMARY KEY (user_interest_id);
+
+
+--
+-- Name: user_settings user_settings_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_settings
+    ADD CONSTRAINT user_settings_pkey PRIMARY KEY (user_setting_id);
+
+
+--
+-- Name: user_settings user_settings_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_settings
+    ADD CONSTRAINT user_settings_unique UNIQUE (user_id, locale, setting_name);
+
+
+--
+-- Name: user_user_groups user_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_user_groups
+    ADD CONSTRAINT user_user_groups_pkey PRIMARY KEY (user_user_group_id);
+
+
+--
+-- Name: user_user_groups user_user_groups_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_user_groups
+    ADD CONSTRAINT user_user_groups_unique UNIQUE (user_group_id, user_id);
+
+
+--
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (user_id);
+
+
+--
+-- Name: usage_stats_institution_temporary_records usi_load_id_line_number_institution_id; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_institution_temporary_records
+    ADD CONSTRAINT usi_load_id_line_number_institution_id UNIQUE (load_id, line_number, institution_id);
+
+
+--
+-- Name: versions versions_pkey; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.versions
+    ADD CONSTRAINT versions_pkey PRIMARY KEY (version_id);
+
+
+--
+-- Name: versions versions_unique; Type: CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.versions
+    ADD CONSTRAINT versions_unique UNIQUE (product_type, product, major, minor, revision, build);
+
+
+--
+-- Name: access_keys_hash; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX access_keys_hash ON public.access_keys USING btree (key_hash, user_id, context);
+
+
+--
+-- Name: access_keys_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX access_keys_user_id ON public.access_keys USING btree (user_id);
+
+
+--
+-- Name: announcement_settings_announcement_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX announcement_settings_announcement_id ON public.announcement_settings USING btree (announcement_id);
+
+
+--
+-- Name: announcement_type_settings_type_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX announcement_type_settings_type_id ON public.announcement_type_settings USING btree (type_id);
+
+
+--
+-- Name: announcement_types_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX announcement_types_context_id ON public.announcement_types USING btree (context_id);
+
+
+--
+-- Name: announcements_assoc; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX announcements_assoc ON public.announcements USING btree (assoc_type, assoc_id);
+
+
+--
+-- Name: announcements_type_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX announcements_type_id ON public.announcements USING btree (type_id);
+
+
+--
+-- Name: author_settings_author_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX author_settings_author_id ON public.author_settings USING btree (author_id);
+
+
+--
+-- Name: authors_user_group_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX authors_user_group_id ON public.authors USING btree (user_group_id);
+
+
+--
+-- Name: c_v_e_s_entry_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX c_v_e_s_entry_id ON public.controlled_vocab_entry_settings USING btree (controlled_vocab_entry_id);
+
+
+--
+-- Name: category_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX category_context_id ON public.categories USING btree (context_id);
+
+
+--
+-- Name: category_context_parent_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX category_context_parent_id ON public.categories USING btree (context_id, parent_id);
+
+
+--
+-- Name: category_parent_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX category_parent_id ON public.categories USING btree (parent_id);
+
+
+--
+-- Name: category_settings_category_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX category_settings_category_id ON public.category_settings USING btree (category_id);
+
+
+--
+-- Name: chapters_chapter_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX chapters_chapter_id ON public.submission_chapters USING btree (chapter_id);
+
+
+--
+-- Name: citation_settings_citation_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX citation_settings_citation_id ON public.citation_settings USING btree (citation_id);
+
+
+--
+-- Name: citations_publication; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX citations_publication ON public.citations USING btree (publication_id);
+
+
+--
+-- Name: completed_payments_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX completed_payments_context_id ON public.completed_payments USING btree (context_id);
+
+
+--
+-- Name: completed_payments_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX completed_payments_user_id ON public.completed_payments USING btree (user_id);
+
+
+--
+-- Name: controlled_vocab_entries_controlled_vocab_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX controlled_vocab_entries_controlled_vocab_id ON public.controlled_vocab_entries USING btree (controlled_vocab_id);
+
+
+--
+-- Name: controlled_vocab_entries_cv_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX controlled_vocab_entries_cv_id ON public.controlled_vocab_entries USING btree (controlled_vocab_id, seq);
+
+
+--
+-- Name: data_object_tombstone_oai_set_objects_tombstone_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX data_object_tombstone_oai_set_objects_tombstone_id ON public.data_object_tombstone_oai_set_objects USING btree (tombstone_id);
+
+
+--
+-- Name: data_object_tombstone_settings_tombstone_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX data_object_tombstone_settings_tombstone_id ON public.data_object_tombstone_settings USING btree (tombstone_id);
+
+
+--
+-- Name: data_object_tombstones_data_object_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX data_object_tombstones_data_object_id ON public.data_object_tombstones USING btree (data_object_id);
+
+
+--
+-- Name: doi_settings_doi_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX doi_settings_doi_id ON public.doi_settings USING btree (doi_id);
+
+
+--
+-- Name: dois_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX dois_context_id ON public.dois USING btree (context_id);
+
+
+--
+-- Name: edit_decisions_editor_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX edit_decisions_editor_id ON public.edit_decisions USING btree (editor_id);
+
+
+--
+-- Name: edit_decisions_review_round_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX edit_decisions_review_round_id ON public.edit_decisions USING btree (review_round_id);
+
+
+--
+-- Name: edit_decisions_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX edit_decisions_submission_id ON public.edit_decisions USING btree (submission_id);
+
+
+--
+-- Name: email_log_assoc; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX email_log_assoc ON public.email_log USING btree (assoc_type, assoc_id);
+
+
+--
+-- Name: email_log_users_email_log_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX email_log_users_email_log_id ON public.email_log_users USING btree (email_log_id);
+
+
+--
+-- Name: email_log_users_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX email_log_users_user_id ON public.email_log_users USING btree (user_id);
+
+
+--
+-- Name: email_templates_alternate_to; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX email_templates_alternate_to ON public.email_templates USING btree (alternate_to);
+
+
+--
+-- Name: email_templates_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX email_templates_context_id ON public.email_templates USING btree (context_id);
+
+
+--
+-- Name: email_templates_settings_email_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX email_templates_settings_email_id ON public.email_templates_settings USING btree (email_id);
+
+
+--
+-- Name: event_log_assoc; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX event_log_assoc ON public.event_log USING btree (assoc_type, assoc_id);
+
+
+--
+-- Name: event_log_settings_log_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX event_log_settings_log_id ON public.event_log_settings USING btree (log_id);
+
+
+--
+-- Name: event_log_settings_name_value; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX event_log_settings_name_value ON public.event_log_settings USING btree (setting_name, setting_value) WHERE ((setting_name)::text = ANY ((ARRAY['fileId'::character varying, 'submissionId'::character varying])::text[]));
+
+
+--
+-- Name: event_log_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX event_log_user_id ON public.event_log USING btree (user_id);
+
+
+--
+-- Name: features_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX features_submission_id ON public.features USING btree (submission_id);
+
+
+--
+-- Name: filter_settings_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX filter_settings_id ON public.filter_settings USING btree (filter_id);
+
+
+--
+-- Name: filters_filter_group_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX filters_filter_group_id ON public.filters USING btree (filter_group_id);
+
+
+--
+-- Name: format_markets_pkey; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX format_markets_pkey ON public.markets USING btree (market_id, publication_format_id);
+
+
+--
+-- Name: format_publication_dates_pkey; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX format_publication_dates_pkey ON public.publication_dates USING btree (publication_date_id, publication_format_id, role);
+
+
+--
+-- Name: format_representatives_pkey; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX format_representatives_pkey ON public.representatives USING btree (representative_id, submission_id);
+
+
+--
+-- Name: format_sales_rights_pkey; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX format_sales_rights_pkey ON public.sales_rights USING btree (sales_rights_id, publication_format_id);
+
+
+--
+-- Name: genre_settings_genre_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX genre_settings_genre_id ON public.genre_settings USING btree (genre_id);
+
+
+--
+-- Name: genres_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX genres_context_id ON public.genres USING btree (context_id);
+
+
+--
+-- Name: identification_codes_key; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX identification_codes_key ON public.identification_codes USING btree (identification_code_id, publication_format_id, code);
+
+
+--
+-- Name: identification_codes_publication_format_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX identification_codes_publication_format_id ON public.identification_codes USING btree (publication_format_id);
+
+
+--
+-- Name: institution_ip_end; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX institution_ip_end ON public.institution_ip USING btree (ip_end);
+
+
+--
+-- Name: institution_ip_institution_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX institution_ip_institution_id ON public.institution_ip USING btree (institution_id);
+
+
+--
+-- Name: institution_ip_start; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX institution_ip_start ON public.institution_ip USING btree (ip_start);
+
+
+--
+-- Name: institution_settings_institution_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX institution_settings_institution_id ON public.institution_settings USING btree (institution_id);
+
+
+--
+-- Name: institutions_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX institutions_context_id ON public.institutions USING btree (context_id);
+
+
+--
+-- Name: jobs_queue_reserved_at_index; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX jobs_queue_reserved_at_index ON public.jobs USING btree (queue, reserved_at);
+
+
+--
+-- Name: library_file_settings_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX library_file_settings_file_id ON public.library_file_settings USING btree (file_id);
+
+
+--
+-- Name: library_files_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX library_files_context_id ON public.library_files USING btree (context_id);
+
+
+--
+-- Name: library_files_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX library_files_submission_id ON public.library_files USING btree (submission_id);
+
+
+--
+-- Name: markets_publication_format_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX markets_publication_format_id ON public.markets USING btree (publication_format_id);
+
+
+--
+-- Name: metrics_context_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_context_context_id ON public.metrics_context USING btree (context_id);
+
+
+--
+-- Name: metrics_context_load_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_context_load_id ON public.metrics_context USING btree (load_id);
+
+
+--
+-- Name: metrics_counter_submission_daily_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_counter_submission_daily_context_id ON public.metrics_counter_submission_daily USING btree (context_id);
+
+
+--
+-- Name: metrics_counter_submission_daily_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_counter_submission_daily_submission_id ON public.metrics_counter_submission_daily USING btree (submission_id);
+
+
+--
+-- Name: metrics_counter_submission_monthly_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_counter_submission_monthly_context_id ON public.metrics_counter_submission_monthly USING btree (context_id);
+
+
+--
+-- Name: metrics_counter_submission_monthly_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_counter_submission_monthly_submission_id ON public.metrics_counter_submission_monthly USING btree (submission_id);
+
+
+--
+-- Name: metrics_series_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_series_context_id ON public.metrics_series USING btree (context_id);
+
+
+--
+-- Name: metrics_series_context_id_series_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_series_context_id_series_id ON public.metrics_series USING btree (context_id, series_id);
+
+
+--
+-- Name: metrics_series_load_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_series_load_id ON public.metrics_series USING btree (load_id);
+
+
+--
+-- Name: metrics_series_series_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_series_series_id ON public.metrics_series USING btree (series_id);
+
+
+--
+-- Name: metrics_submission_chapter_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_submission_chapter_id ON public.metrics_submission USING btree (chapter_id);
+
+
+--
+-- Name: metrics_submission_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_submission_context_id ON public.metrics_submission USING btree (context_id);
+
+
+--
+-- Name: metrics_submission_geo_daily_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_submission_geo_daily_context_id ON public.metrics_submission_geo_daily USING btree (context_id);
+
+
+--
+-- Name: metrics_submission_geo_daily_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_submission_geo_daily_submission_id ON public.metrics_submission_geo_daily USING btree (submission_id);
+
+
+--
+-- Name: metrics_submission_geo_monthly_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_submission_geo_monthly_context_id ON public.metrics_submission_geo_monthly USING btree (context_id);
+
+
+--
+-- Name: metrics_submission_geo_monthly_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_submission_geo_monthly_submission_id ON public.metrics_submission_geo_monthly USING btree (submission_id);
+
+
+--
+-- Name: metrics_submission_representation_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_submission_representation_id ON public.metrics_submission USING btree (representation_id);
+
+
+--
+-- Name: metrics_submission_submission_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_submission_submission_file_id ON public.metrics_submission USING btree (submission_file_id);
+
+
+--
+-- Name: metrics_submission_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX metrics_submission_submission_id ON public.metrics_submission USING btree (submission_id);
+
+
+--
+-- Name: ms_context_id_submission_id_assoc_type_file_type; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ms_context_id_submission_id_assoc_type_file_type ON public.metrics_submission USING btree (context_id, submission_id, assoc_type, file_type);
+
+
+--
+-- Name: ms_load_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ms_load_id ON public.metrics_submission USING btree (load_id);
+
+
+--
+-- Name: msd_context_id_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msd_context_id_submission_id ON public.metrics_counter_submission_daily USING btree (context_id, submission_id);
+
+
+--
+-- Name: msd_load_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msd_load_id ON public.metrics_counter_submission_daily USING btree (load_id);
+
+
+--
+-- Name: msgd_context_id_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msgd_context_id_submission_id ON public.metrics_submission_geo_daily USING btree (context_id, submission_id);
+
+
+--
+-- Name: msgd_load_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msgd_load_id ON public.metrics_submission_geo_daily USING btree (load_id);
+
+
+--
+-- Name: msgm_context_id_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msgm_context_id_submission_id ON public.metrics_submission_geo_monthly USING btree (context_id, submission_id);
+
+
+--
+-- Name: msid_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msid_context_id ON public.metrics_counter_submission_institution_daily USING btree (context_id);
+
+
+--
+-- Name: msid_context_id_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msid_context_id_submission_id ON public.metrics_counter_submission_institution_daily USING btree (context_id, submission_id);
+
+
+--
+-- Name: msid_institution_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msid_institution_id ON public.metrics_counter_submission_institution_daily USING btree (institution_id);
+
+
+--
+-- Name: msid_load_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msid_load_id ON public.metrics_counter_submission_institution_daily USING btree (load_id);
+
+
+--
+-- Name: msid_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msid_submission_id ON public.metrics_counter_submission_institution_daily USING btree (submission_id);
+
+
+--
+-- Name: msim_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msim_context_id ON public.metrics_counter_submission_institution_monthly USING btree (context_id);
+
+
+--
+-- Name: msim_context_id_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msim_context_id_submission_id ON public.metrics_counter_submission_institution_monthly USING btree (context_id, submission_id);
+
+
+--
+-- Name: msim_institution_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msim_institution_id ON public.metrics_counter_submission_institution_monthly USING btree (institution_id);
+
+
+--
+-- Name: msim_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msim_submission_id ON public.metrics_counter_submission_institution_monthly USING btree (submission_id);
+
+
+--
+-- Name: msm_context_id_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX msm_context_id_submission_id ON public.metrics_counter_submission_monthly USING btree (context_id, submission_id);
+
+
+--
+-- Name: navigation_menu_item_assignment_settings_n_m_i_a_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX navigation_menu_item_assignment_settings_n_m_i_a_id ON public.navigation_menu_item_assignment_settings USING btree (navigation_menu_item_assignment_id);
+
+
+--
+-- Name: navigation_menu_item_assignments_navigation_menu_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX navigation_menu_item_assignments_navigation_menu_id ON public.navigation_menu_item_assignments USING btree (navigation_menu_id);
+
+
+--
+-- Name: navigation_menu_item_assignments_navigation_menu_item_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX navigation_menu_item_assignments_navigation_menu_item_id ON public.navigation_menu_item_assignments USING btree (navigation_menu_item_id);
+
+
+--
+-- Name: navigation_menu_item_settings_navigation_menu_item_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX navigation_menu_item_settings_navigation_menu_item_id ON public.navigation_menu_item_settings USING btree (navigation_menu_item_id);
+
+
+--
+-- Name: new_releases_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX new_releases_submission_id ON public.new_releases USING btree (submission_id);
+
+
+--
+-- Name: notes_assoc; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX notes_assoc ON public.notes USING btree (assoc_type, assoc_id);
+
+
+--
+-- Name: notes_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX notes_user_id ON public.notes USING btree (user_id);
+
+
+--
+-- Name: notification_settings_notification_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX notification_settings_notification_id ON public.notification_settings USING btree (notification_id);
+
+
+--
+-- Name: notification_subscription_settings_context; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX notification_subscription_settings_context ON public.notification_subscription_settings USING btree (context);
+
+
+--
+-- Name: notification_subscription_settings_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX notification_subscription_settings_user_id ON public.notification_subscription_settings USING btree (user_id);
+
+
+--
+-- Name: notifications_assoc; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX notifications_assoc ON public.notifications USING btree (assoc_type, assoc_id);
+
+
+--
+-- Name: notifications_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX notifications_context_id ON public.notifications USING btree (context_id);
+
+
+--
+-- Name: notifications_context_id_level; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX notifications_context_id_level ON public.notifications USING btree (context_id, level);
+
+
+--
+-- Name: notifications_context_id_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX notifications_context_id_user_id ON public.notifications USING btree (context_id, user_id, level);
+
+
+--
+-- Name: notifications_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX notifications_user_id ON public.notifications USING btree (user_id);
+
+
+--
+-- Name: notifications_user_id_level; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX notifications_user_id_level ON public.notifications USING btree (user_id, level);
+
+
+--
+-- Name: plugin_settings_plugin_name; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX plugin_settings_plugin_name ON public.plugin_settings USING btree (plugin_name);
+
+
+--
+-- Name: press_settings_press_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX press_settings_press_id ON public.press_settings USING btree (press_id);
+
+
+--
+-- Name: publication_categories_category_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publication_categories_category_id ON public.publication_categories USING btree (category_id);
+
+
+--
+-- Name: publication_categories_publication_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publication_categories_publication_id ON public.publication_categories USING btree (publication_id);
+
+
+--
+-- Name: publication_dates_publication_format_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publication_dates_publication_format_id ON public.publication_dates USING btree (publication_format_id);
+
+
+--
+-- Name: publication_format_id_key; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publication_format_id_key ON public.publication_format_settings USING btree (publication_format_id);
+
+
+--
+-- Name: publication_format_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publication_format_submission_id ON public.publication_formats USING btree (submission_id);
+
+
+--
+-- Name: publication_formats_doi_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publication_formats_doi_id ON public.publication_formats USING btree (doi_id);
+
+
+--
+-- Name: publication_formats_publication_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publication_formats_publication_id ON public.publication_formats USING btree (publication_id);
+
+
+--
+-- Name: publication_settings_name_value; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publication_settings_name_value ON public.publication_settings USING btree (setting_name, setting_value) WHERE ((setting_name)::text = ANY ((ARRAY['indexingState'::character varying, 'medra::registeredDoi'::character varying, 'datacite::registeredDoi'::character varying, 'pub-id::publisher-id'::character varying])::text[]));
+
+
+--
+-- Name: publications_doi_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publications_doi_id ON public.publications USING btree (doi_id);
+
+
+--
+-- Name: publications_primary_contact_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publications_primary_contact_id ON public.publications USING btree (primary_contact_id);
+
+
+--
+-- Name: publications_section_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publications_section_id ON public.publications USING btree (series_id);
+
+
+--
+-- Name: publications_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX publications_submission_id ON public.publications USING btree (submission_id);
+
+
+--
+-- Name: queries_assoc_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX queries_assoc_id ON public.queries USING btree (assoc_type, assoc_id);
+
+
+--
+-- Name: query_participants_query_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX query_participants_query_id ON public.query_participants USING btree (query_id);
+
+
+--
+-- Name: query_participants_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX query_participants_user_id ON public.query_participants USING btree (user_id);
+
+
+--
+-- Name: representatives_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX representatives_submission_id ON public.representatives USING btree (submission_id);
+
+
+--
+-- Name: review_assignment_reviewer_round; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_assignment_reviewer_round ON public.review_assignments USING btree (review_round_id, reviewer_id);
+
+
+--
+-- Name: review_assignments_form_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_assignments_form_id ON public.review_assignments USING btree (review_form_id);
+
+
+--
+-- Name: review_assignments_reviewer_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_assignments_reviewer_id ON public.review_assignments USING btree (reviewer_id);
+
+
+--
+-- Name: review_assignments_reviewer_review; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_assignments_reviewer_review ON public.review_assignments USING btree (reviewer_id, review_id);
+
+
+--
+-- Name: review_assignments_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_assignments_submission_id ON public.review_assignments USING btree (submission_id);
+
+
+--
+-- Name: review_files_review_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_files_review_id ON public.review_files USING btree (review_id);
+
+
+--
+-- Name: review_files_submission_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_files_submission_file_id ON public.review_files USING btree (submission_file_id);
+
+
+--
+-- Name: review_form_element_settings_review_form_element_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_form_element_settings_review_form_element_id ON public.review_form_element_settings USING btree (review_form_element_id);
+
+
+--
+-- Name: review_form_elements_review_form_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_form_elements_review_form_id ON public.review_form_elements USING btree (review_form_id);
+
+
+--
+-- Name: review_form_responses_review_form_element_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_form_responses_review_form_element_id ON public.review_form_responses USING btree (review_form_element_id);
+
+
+--
+-- Name: review_form_responses_review_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_form_responses_review_id ON public.review_form_responses USING btree (review_id);
+
+
+--
+-- Name: review_form_responses_unique; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_form_responses_unique ON public.review_form_responses USING btree (review_form_element_id, review_id);
+
+
+--
+-- Name: review_form_settings_review_form_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_form_settings_review_form_id ON public.review_form_settings USING btree (review_form_id);
+
+
+--
+-- Name: review_round_files_review_round_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_round_files_review_round_id ON public.review_round_files USING btree (review_round_id);
+
+
+--
+-- Name: review_round_files_submission_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_round_files_submission_file_id ON public.review_round_files USING btree (submission_file_id);
+
+
+--
+-- Name: review_round_files_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_round_files_submission_id ON public.review_round_files USING btree (submission_id);
+
+
+--
+-- Name: review_rounds_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX review_rounds_submission_id ON public.review_rounds USING btree (submission_id);
+
+
+--
+-- Name: sales_rights_publication_format_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX sales_rights_publication_format_id ON public.sales_rights USING btree (publication_format_id);
+
+
+--
+-- Name: series_categories_category_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX series_categories_category_id ON public.series_categories USING btree (category_id);
+
+
+--
+-- Name: series_categories_series_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX series_categories_series_id ON public.series_categories USING btree (series_id);
+
+
+--
+-- Name: series_press_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX series_press_id ON public.series USING btree (press_id);
+
+
+--
+-- Name: series_review_form_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX series_review_form_id ON public.series USING btree (review_form_id);
+
+
+--
+-- Name: series_settings_series_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX series_settings_series_id ON public.series_settings USING btree (series_id);
+
+
+--
+-- Name: sessions_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX sessions_user_id ON public.sessions USING btree (user_id);
+
+
+--
+-- Name: spotlight_settings_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX spotlight_settings_id ON public.spotlight_settings USING btree (spotlight_id);
+
+
+--
+-- Name: spotlights_assoc; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX spotlights_assoc ON public.spotlights USING btree (assoc_type, assoc_id);
+
+
+--
+-- Name: spotlights_press_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX spotlights_press_id ON public.spotlights USING btree (press_id);
+
+
+--
+-- Name: stage_assignments_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX stage_assignments_submission_id ON public.stage_assignments USING btree (submission_id);
+
+
+--
+-- Name: stage_assignments_user_group_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX stage_assignments_user_group_id ON public.stage_assignments USING btree (user_group_id);
+
+
+--
+-- Name: stage_assignments_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX stage_assignments_user_id ON public.stage_assignments USING btree (user_id);
+
+
+--
+-- Name: static_page_settings_static_page_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX static_page_settings_static_page_id ON public.static_page_settings USING btree (static_page_id);
+
+
+--
+-- Name: subeditor_submission_group_assoc_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX subeditor_submission_group_assoc_id ON public.subeditor_submission_group USING btree (assoc_id, assoc_type);
+
+
+--
+-- Name: subeditor_submission_group_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX subeditor_submission_group_context_id ON public.subeditor_submission_group USING btree (context_id);
+
+
+--
+-- Name: subeditor_submission_group_user_group_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX subeditor_submission_group_user_group_id ON public.subeditor_submission_group USING btree (user_group_id);
+
+
+--
+-- Name: subeditor_submission_group_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX subeditor_submission_group_user_id ON public.subeditor_submission_group USING btree (user_id);
+
+
+--
+-- Name: submission_chapter_authors_author_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_chapter_authors_author_id ON public.submission_chapter_authors USING btree (author_id);
+
+
+--
+-- Name: submission_chapter_authors_chapter_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_chapter_authors_chapter_id ON public.submission_chapter_authors USING btree (chapter_id);
+
+
+--
+-- Name: submission_chapter_settings_chapter_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_chapter_settings_chapter_id ON public.submission_chapter_settings USING btree (chapter_id);
+
+
+--
+-- Name: submission_chapters_primary_contact_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_chapters_primary_contact_id ON public.submission_chapters USING btree (primary_contact_id);
+
+
+--
+-- Name: submission_chapters_publication_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_chapters_publication_id ON public.submission_chapters USING btree (publication_id);
+
+
+--
+-- Name: submission_chapters_source_chapter_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_chapters_source_chapter_id ON public.submission_chapters USING btree (source_chapter_id);
+
+
+--
+-- Name: submission_comments_author_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_comments_author_id ON public.submission_comments USING btree (author_id);
+
+
+--
+-- Name: submission_comments_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_comments_submission_id ON public.submission_comments USING btree (submission_id);
+
+
+--
+-- Name: submission_file_revisions_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_file_revisions_file_id ON public.submission_file_revisions USING btree (file_id);
+
+
+--
+-- Name: submission_file_revisions_submission_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_file_revisions_submission_file_id ON public.submission_file_revisions USING btree (submission_file_id);
+
+
+--
+-- Name: submission_file_settings_submission_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_file_settings_submission_file_id ON public.submission_file_settings USING btree (submission_file_id);
+
+
+--
+-- Name: submission_files_doi_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_files_doi_id ON public.submission_files USING btree (doi_id);
+
+
+--
+-- Name: submission_files_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_files_file_id ON public.submission_files USING btree (file_id);
+
+
+--
+-- Name: submission_files_genre_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_files_genre_id ON public.submission_files USING btree (genre_id);
+
+
+--
+-- Name: submission_files_source_submission_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_files_source_submission_file_id ON public.submission_files USING btree (source_submission_file_id);
+
+
+--
+-- Name: submission_files_stage_assoc; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_files_stage_assoc ON public.submission_files USING btree (file_stage, assoc_type, assoc_id);
+
+
+--
+-- Name: submission_files_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_files_submission_id ON public.submission_files USING btree (submission_id);
+
+
+--
+-- Name: submission_files_uploader_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_files_uploader_user_id ON public.submission_files USING btree (uploader_user_id);
+
+
+--
+-- Name: submission_search_object_keywords_keyword_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_search_object_keywords_keyword_id ON public.submission_search_object_keywords USING btree (keyword_id);
+
+
+--
+-- Name: submission_search_object_keywords_object_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_search_object_keywords_object_id ON public.submission_search_object_keywords USING btree (object_id);
+
+
+--
+-- Name: submission_search_objects_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_search_objects_submission_id ON public.submission_search_objects USING btree (submission_id);
+
+
+--
+-- Name: submission_settings_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submission_settings_submission_id ON public.submission_settings USING btree (submission_id);
+
+
+--
+-- Name: submissions_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX submissions_context_id ON public.submissions USING btree (context_id);
+
+
+--
+-- Name: temporary_files_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX temporary_files_user_id ON public.temporary_files USING btree (user_id);
+
+
+--
+-- Name: user_group_settings_user_group_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_group_settings_user_group_id ON public.user_group_settings USING btree (user_group_id);
+
+
+--
+-- Name: user_group_stage_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_group_stage_context_id ON public.user_group_stage USING btree (context_id);
+
+
+--
+-- Name: user_group_stage_stage_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_group_stage_stage_id ON public.user_group_stage USING btree (stage_id);
+
+
+--
+-- Name: user_group_stage_user_group_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_group_stage_user_group_id ON public.user_group_stage USING btree (user_group_id);
+
+
+--
+-- Name: user_groups_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_groups_context_id ON public.user_groups USING btree (context_id);
+
+
+--
+-- Name: user_groups_role_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_groups_role_id ON public.user_groups USING btree (role_id);
+
+
+--
+-- Name: user_groups_user_group_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_groups_user_group_id ON public.user_groups USING btree (user_group_id);
+
+
+--
+-- Name: user_interests_controlled_vocab_entry_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_interests_controlled_vocab_entry_id ON public.user_interests USING btree (controlled_vocab_entry_id);
+
+
+--
+-- Name: user_interests_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_interests_user_id ON public.user_interests USING btree (user_id);
+
+
+--
+-- Name: user_settings_locale_setting_name_index; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_settings_locale_setting_name_index ON public.user_settings USING btree (setting_name, locale);
+
+
+--
+-- Name: user_settings_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_settings_user_id ON public.user_settings USING btree (user_id);
+
+
+--
+-- Name: user_user_groups_user_group_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_user_groups_user_group_id ON public.user_user_groups USING btree (user_group_id);
+
+
+--
+-- Name: user_user_groups_user_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX user_user_groups_user_id ON public.user_user_groups USING btree (user_id);
+
+
+--
+-- Name: users_email; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE UNIQUE INDEX users_email ON public.users USING btree (lower((email)::text));
+
+
+--
+-- Name: users_username; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE UNIQUE INDEX users_username ON public.users USING btree (lower((username)::text));
+
+
+--
+-- Name: usi_institution_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usi_institution_id ON public.usage_stats_institution_temporary_records USING btree (institution_id);
+
+
+--
+-- Name: usii_chapter_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usii_chapter_id ON public.usage_stats_unique_item_investigations_temporary_records USING btree (chapter_id);
+
+
+--
+-- Name: usii_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usii_context_id ON public.usage_stats_unique_item_investigations_temporary_records USING btree (context_id);
+
+
+--
+-- Name: usii_representation_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usii_representation_id ON public.usage_stats_unique_item_investigations_temporary_records USING btree (representation_id);
+
+
+--
+-- Name: usii_submission_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usii_submission_file_id ON public.usage_stats_unique_item_investigations_temporary_records USING btree (submission_file_id);
+
+
+--
+-- Name: usii_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usii_submission_id ON public.usage_stats_unique_item_investigations_temporary_records USING btree (submission_id);
+
+
+--
+-- Name: usir_chapter_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usir_chapter_id ON public.usage_stats_unique_item_requests_temporary_records USING btree (chapter_id);
+
+
+--
+-- Name: usir_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usir_context_id ON public.usage_stats_unique_item_requests_temporary_records USING btree (context_id);
+
+
+--
+-- Name: usir_representation_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usir_representation_id ON public.usage_stats_unique_item_requests_temporary_records USING btree (representation_id);
+
+
+--
+-- Name: usir_submission_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usir_submission_file_id ON public.usage_stats_unique_item_requests_temporary_records USING btree (submission_file_id);
+
+
+--
+-- Name: usir_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usir_submission_id ON public.usage_stats_unique_item_requests_temporary_records USING btree (submission_id);
+
+
+--
+-- Name: ust_chapter_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ust_chapter_id ON public.usage_stats_total_temporary_records USING btree (chapter_id);
+
+
+--
+-- Name: ust_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ust_context_id ON public.usage_stats_total_temporary_records USING btree (context_id);
+
+
+--
+-- Name: ust_representation_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ust_representation_id ON public.usage_stats_total_temporary_records USING btree (representation_id);
+
+
+--
+-- Name: ust_series_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ust_series_id ON public.usage_stats_total_temporary_records USING btree (series_id);
+
+
+--
+-- Name: ust_submission_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ust_submission_file_id ON public.usage_stats_total_temporary_records USING btree (submission_file_id);
+
+
+--
+-- Name: ust_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ust_submission_id ON public.usage_stats_total_temporary_records USING btree (submission_id);
+
+
+--
+-- Name: usti_chapter_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usti_chapter_id ON public.usage_stats_unique_title_investigations_temporary_records USING btree (chapter_id);
+
+
+--
+-- Name: usti_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usti_context_id ON public.usage_stats_unique_title_investigations_temporary_records USING btree (context_id);
+
+
+--
+-- Name: usti_representation_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usti_representation_id ON public.usage_stats_unique_title_investigations_temporary_records USING btree (representation_id);
+
+
+--
+-- Name: usti_submission_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usti_submission_file_id ON public.usage_stats_unique_title_investigations_temporary_records USING btree (submission_file_id);
+
+
+--
+-- Name: usti_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX usti_submission_id ON public.usage_stats_unique_title_investigations_temporary_records USING btree (submission_id);
+
+
+--
+-- Name: ustr_chapter_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ustr_chapter_id ON public.usage_stats_unique_title_requests_temporary_records USING btree (chapter_id);
+
+
+--
+-- Name: ustr_context_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ustr_context_id ON public.usage_stats_unique_title_requests_temporary_records USING btree (context_id);
+
+
+--
+-- Name: ustr_representation_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ustr_representation_id ON public.usage_stats_unique_title_requests_temporary_records USING btree (representation_id);
+
+
+--
+-- Name: ustr_submission_file_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ustr_submission_file_id ON public.usage_stats_unique_title_requests_temporary_records USING btree (submission_file_id);
+
+
+--
+-- Name: ustr_submission_id; Type: INDEX; Schema: public; Owner: omp-ci
+--
+
+CREATE INDEX ustr_submission_id ON public.usage_stats_unique_title_requests_temporary_records USING btree (submission_id);
+
+
+--
+-- Name: access_keys access_keys_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.access_keys
+    ADD CONSTRAINT access_keys_user_id_foreign FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: announcement_settings announcement_settings_announcement_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcement_settings
+    ADD CONSTRAINT announcement_settings_announcement_id_foreign FOREIGN KEY (announcement_id) REFERENCES public.announcements(announcement_id) ON DELETE CASCADE;
+
+
+--
+-- Name: announcement_type_settings announcement_type_settings_type_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcement_type_settings
+    ADD CONSTRAINT announcement_type_settings_type_id_foreign FOREIGN KEY (type_id) REFERENCES public.announcement_types(type_id) ON DELETE CASCADE;
+
+
+--
+-- Name: announcement_types announcement_types_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcement_types
+    ADD CONSTRAINT announcement_types_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: announcements announcements_type_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.announcements
+    ADD CONSTRAINT announcements_type_id_foreign FOREIGN KEY (type_id) REFERENCES public.announcement_types(type_id) ON DELETE SET NULL;
+
+
+--
+-- Name: navigation_menu_item_assignment_settings assignment_settings_navigation_menu_item_assignment_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_assignment_settings
+    ADD CONSTRAINT assignment_settings_navigation_menu_item_assignment_id FOREIGN KEY (navigation_menu_item_assignment_id) REFERENCES public.navigation_menu_item_assignments(navigation_menu_item_assignment_id) ON DELETE CASCADE;
+
+
+--
+-- Name: author_settings author_settings_author_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.author_settings
+    ADD CONSTRAINT author_settings_author_id FOREIGN KEY (author_id) REFERENCES public.authors(author_id) ON DELETE CASCADE;
+
+
+--
+-- Name: authors authors_publication_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.authors
+    ADD CONSTRAINT authors_publication_id_foreign FOREIGN KEY (publication_id) REFERENCES public.publications(publication_id) ON DELETE CASCADE;
+
+
+--
+-- Name: authors authors_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.authors
+    ADD CONSTRAINT authors_user_group_id_foreign FOREIGN KEY (user_group_id) REFERENCES public.user_groups(user_group_id) ON DELETE CASCADE;
+
+
+--
+-- Name: controlled_vocab_entry_settings c_v_e_s_entry_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocab_entry_settings
+    ADD CONSTRAINT c_v_e_s_entry_id FOREIGN KEY (controlled_vocab_entry_id) REFERENCES public.controlled_vocab_entries(controlled_vocab_entry_id) ON DELETE CASCADE;
+
+
+--
+-- Name: categories categories_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.categories
+    ADD CONSTRAINT categories_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: categories categories_parent_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.categories
+    ADD CONSTRAINT categories_parent_id_foreign FOREIGN KEY (parent_id) REFERENCES public.categories(category_id) ON DELETE SET NULL;
+
+
+--
+-- Name: category_settings category_settings_category_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.category_settings
+    ADD CONSTRAINT category_settings_category_id_foreign FOREIGN KEY (category_id) REFERENCES public.categories(category_id) ON DELETE CASCADE;
+
+
+--
+-- Name: citation_settings citation_settings_citation_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.citation_settings
+    ADD CONSTRAINT citation_settings_citation_id FOREIGN KEY (citation_id) REFERENCES public.citations(citation_id) ON DELETE CASCADE;
+
+
+--
+-- Name: citations citations_publication; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.citations
+    ADD CONSTRAINT citations_publication FOREIGN KEY (publication_id) REFERENCES public.publications(publication_id) ON DELETE CASCADE;
+
+
+--
+-- Name: completed_payments completed_payments_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.completed_payments
+    ADD CONSTRAINT completed_payments_context_id FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: completed_payments completed_payments_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.completed_payments
+    ADD CONSTRAINT completed_payments_user_id_foreign FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE SET NULL;
+
+
+--
+-- Name: controlled_vocab_entries controlled_vocab_entries_controlled_vocab_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.controlled_vocab_entries
+    ADD CONSTRAINT controlled_vocab_entries_controlled_vocab_id_foreign FOREIGN KEY (controlled_vocab_id) REFERENCES public.controlled_vocabs(controlled_vocab_id) ON DELETE CASCADE;
+
+
+--
+-- Name: data_object_tombstone_oai_set_objects data_object_tombstone_oai_set_objects_tombstone_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.data_object_tombstone_oai_set_objects
+    ADD CONSTRAINT data_object_tombstone_oai_set_objects_tombstone_id FOREIGN KEY (tombstone_id) REFERENCES public.data_object_tombstones(tombstone_id) ON DELETE CASCADE;
+
+
+--
+-- Name: data_object_tombstone_settings data_object_tombstone_settings_tombstone_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.data_object_tombstone_settings
+    ADD CONSTRAINT data_object_tombstone_settings_tombstone_id FOREIGN KEY (tombstone_id) REFERENCES public.data_object_tombstones(tombstone_id) ON DELETE CASCADE;
+
+
+--
+-- Name: doi_settings doi_settings_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.doi_settings
+    ADD CONSTRAINT doi_settings_doi_id_foreign FOREIGN KEY (doi_id) REFERENCES public.dois(doi_id) ON DELETE CASCADE;
+
+
+--
+-- Name: dois dois_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.dois
+    ADD CONSTRAINT dois_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: edit_decisions edit_decisions_editor_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.edit_decisions
+    ADD CONSTRAINT edit_decisions_editor_id FOREIGN KEY (editor_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: edit_decisions edit_decisions_review_round_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.edit_decisions
+    ADD CONSTRAINT edit_decisions_review_round_id_foreign FOREIGN KEY (review_round_id) REFERENCES public.review_rounds(review_round_id) ON DELETE CASCADE;
+
+
+--
+-- Name: edit_decisions edit_decisions_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.edit_decisions
+    ADD CONSTRAINT edit_decisions_submission_id FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: email_log_users email_log_users_email_log_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_log_users
+    ADD CONSTRAINT email_log_users_email_log_id_foreign FOREIGN KEY (email_log_id) REFERENCES public.email_log(log_id) ON DELETE CASCADE;
+
+
+--
+-- Name: email_log_users email_log_users_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_log_users
+    ADD CONSTRAINT email_log_users_user_id_foreign FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: email_templates email_templates_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_templates
+    ADD CONSTRAINT email_templates_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: email_templates_settings email_templates_settings_email_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.email_templates_settings
+    ADD CONSTRAINT email_templates_settings_email_id FOREIGN KEY (email_id) REFERENCES public.email_templates(email_id) ON DELETE CASCADE;
+
+
+--
+-- Name: event_log_settings event_log_settings_log_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.event_log_settings
+    ADD CONSTRAINT event_log_settings_log_id FOREIGN KEY (log_id) REFERENCES public.event_log(log_id) ON DELETE CASCADE;
+
+
+--
+-- Name: event_log event_log_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.event_log
+    ADD CONSTRAINT event_log_user_id_foreign FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: features features_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.features
+    ADD CONSTRAINT features_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: filter_settings filter_settings_filter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.filter_settings
+    ADD CONSTRAINT filter_settings_filter_id_foreign FOREIGN KEY (filter_id) REFERENCES public.filters(filter_id) ON DELETE CASCADE;
+
+
+--
+-- Name: filters filters_filter_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.filters
+    ADD CONSTRAINT filters_filter_group_id_foreign FOREIGN KEY (filter_group_id) REFERENCES public.filter_groups(filter_group_id) ON DELETE CASCADE;
+
+
+--
+-- Name: genre_settings genre_settings_genre_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.genre_settings
+    ADD CONSTRAINT genre_settings_genre_id_foreign FOREIGN KEY (genre_id) REFERENCES public.genres(genre_id) ON DELETE CASCADE;
+
+
+--
+-- Name: genres genres_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.genres
+    ADD CONSTRAINT genres_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: identification_codes identification_codes_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.identification_codes
+    ADD CONSTRAINT identification_codes_publication_format_id FOREIGN KEY (publication_format_id) REFERENCES public.publication_formats(publication_format_id) ON DELETE CASCADE;
+
+
+--
+-- Name: institution_ip institution_ip_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.institution_ip
+    ADD CONSTRAINT institution_ip_institution_id_foreign FOREIGN KEY (institution_id) REFERENCES public.institutions(institution_id) ON DELETE CASCADE;
+
+
+--
+-- Name: institution_settings institution_settings_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.institution_settings
+    ADD CONSTRAINT institution_settings_institution_id_foreign FOREIGN KEY (institution_id) REFERENCES public.institutions(institution_id) ON DELETE CASCADE;
+
+
+--
+-- Name: institutions institutions_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.institutions
+    ADD CONSTRAINT institutions_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: library_file_settings library_file_settings_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.library_file_settings
+    ADD CONSTRAINT library_file_settings_file_id_foreign FOREIGN KEY (file_id) REFERENCES public.library_files(file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: library_files library_files_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.library_files
+    ADD CONSTRAINT library_files_context_id FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: library_files library_files_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.library_files
+    ADD CONSTRAINT library_files_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: markets markets_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.markets
+    ADD CONSTRAINT markets_publication_format_id FOREIGN KEY (publication_format_id) REFERENCES public.publication_formats(publication_format_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_context metrics_context_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_context
+    ADD CONSTRAINT metrics_context_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_series metrics_series_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_series
+    ADD CONSTRAINT metrics_series_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_series metrics_series_series_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_series
+    ADD CONSTRAINT metrics_series_series_id_foreign FOREIGN KEY (series_id) REFERENCES public.series(series_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_submission metrics_submission_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission
+    ADD CONSTRAINT metrics_submission_chapter_id_foreign FOREIGN KEY (chapter_id) REFERENCES public.submission_chapters(chapter_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_submission metrics_submission_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission
+    ADD CONSTRAINT metrics_submission_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_submission metrics_submission_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission
+    ADD CONSTRAINT metrics_submission_representation_id_foreign FOREIGN KEY (representation_id) REFERENCES public.publication_formats(publication_format_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_submission metrics_submission_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission
+    ADD CONSTRAINT metrics_submission_submission_file_id_foreign FOREIGN KEY (submission_file_id) REFERENCES public.submission_files(submission_file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_submission metrics_submission_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission
+    ADD CONSTRAINT metrics_submission_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_counter_submission_daily msd_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_daily
+    ADD CONSTRAINT msd_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_counter_submission_daily msd_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_daily
+    ADD CONSTRAINT msd_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_submission_geo_daily msgd_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_daily
+    ADD CONSTRAINT msgd_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_submission_geo_daily msgd_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_daily
+    ADD CONSTRAINT msgd_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_submission_geo_monthly msgm_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_monthly
+    ADD CONSTRAINT msgm_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_submission_geo_monthly msgm_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_submission_geo_monthly
+    ADD CONSTRAINT msgm_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_counter_submission_institution_daily msid_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
+    ADD CONSTRAINT msid_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_counter_submission_institution_daily msid_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
+    ADD CONSTRAINT msid_institution_id_foreign FOREIGN KEY (institution_id) REFERENCES public.institutions(institution_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_counter_submission_institution_daily msid_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_daily
+    ADD CONSTRAINT msid_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_counter_submission_institution_monthly msim_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
+    ADD CONSTRAINT msim_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_counter_submission_institution_monthly msim_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
+    ADD CONSTRAINT msim_institution_id_foreign FOREIGN KEY (institution_id) REFERENCES public.institutions(institution_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_counter_submission_institution_monthly msim_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_institution_monthly
+    ADD CONSTRAINT msim_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_counter_submission_monthly msm_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_monthly
+    ADD CONSTRAINT msm_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: metrics_counter_submission_monthly msm_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.metrics_counter_submission_monthly
+    ADD CONSTRAINT msm_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: navigation_menu_item_assignments navigation_menu_item_assignments_navigation_menu_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_assignments
+    ADD CONSTRAINT navigation_menu_item_assignments_navigation_menu_id_foreign FOREIGN KEY (navigation_menu_id) REFERENCES public.navigation_menus(navigation_menu_id) ON DELETE CASCADE;
+
+
+--
+-- Name: navigation_menu_item_assignments navigation_menu_item_assignments_navigation_menu_item_id_foreig; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_assignments
+    ADD CONSTRAINT navigation_menu_item_assignments_navigation_menu_item_id_foreig FOREIGN KEY (navigation_menu_item_id) REFERENCES public.navigation_menu_items(navigation_menu_item_id) ON DELETE CASCADE;
+
+
+--
+-- Name: navigation_menu_item_settings navigation_menu_item_settings_navigation_menu_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.navigation_menu_item_settings
+    ADD CONSTRAINT navigation_menu_item_settings_navigation_menu_id FOREIGN KEY (navigation_menu_item_id) REFERENCES public.navigation_menu_items(navigation_menu_item_id) ON DELETE CASCADE;
+
+
+--
+-- Name: new_releases new_releases_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.new_releases
+    ADD CONSTRAINT new_releases_submission_id FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: notes notes_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notes
+    ADD CONSTRAINT notes_user_id_foreign FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: notification_settings notification_settings_notification_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notification_settings
+    ADD CONSTRAINT notification_settings_notification_id_foreign FOREIGN KEY (notification_id) REFERENCES public.notifications(notification_id) ON DELETE CASCADE;
+
+
+--
+-- Name: notification_subscription_settings notification_subscription_settings_context_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notification_subscription_settings
+    ADD CONSTRAINT notification_subscription_settings_context_foreign FOREIGN KEY (context) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: notification_subscription_settings notification_subscription_settings_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notification_subscription_settings
+    ADD CONSTRAINT notification_subscription_settings_user_id_foreign FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: notifications notifications_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notifications
+    ADD CONSTRAINT notifications_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: notifications notifications_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.notifications
+    ADD CONSTRAINT notifications_user_id_foreign FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: press_settings press_settings_press_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.press_settings
+    ADD CONSTRAINT press_settings_press_id_foreign FOREIGN KEY (press_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: publication_categories publication_categories_category_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_categories
+    ADD CONSTRAINT publication_categories_category_id_foreign FOREIGN KEY (category_id) REFERENCES public.categories(category_id) ON DELETE CASCADE;
+
+
+--
+-- Name: publication_categories publication_categories_publication_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_categories
+    ADD CONSTRAINT publication_categories_publication_id_foreign FOREIGN KEY (publication_id) REFERENCES public.publications(publication_id) ON DELETE CASCADE;
+
+
+--
+-- Name: publication_dates publication_dates_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_dates
+    ADD CONSTRAINT publication_dates_publication_format_id FOREIGN KEY (publication_format_id) REFERENCES public.publication_formats(publication_format_id) ON DELETE CASCADE;
+
+
+--
+-- Name: publication_format_settings publication_format_settings_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_format_settings
+    ADD CONSTRAINT publication_format_settings_publication_format_id FOREIGN KEY (publication_format_id) REFERENCES public.publication_formats(publication_format_id) ON DELETE CASCADE;
+
+
+--
+-- Name: publication_formats publication_formats_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_formats
+    ADD CONSTRAINT publication_formats_doi_id_foreign FOREIGN KEY (doi_id) REFERENCES public.dois(doi_id) ON DELETE SET NULL;
+
+
+--
+-- Name: publication_formats publication_formats_publication_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_formats
+    ADD CONSTRAINT publication_formats_publication_id FOREIGN KEY (publication_id) REFERENCES public.publications(publication_id) ON DELETE CASCADE;
+
+
+--
+-- Name: publication_settings publication_settings_publication_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publication_settings
+    ADD CONSTRAINT publication_settings_publication_id_foreign FOREIGN KEY (publication_id) REFERENCES public.publications(publication_id) ON DELETE CASCADE;
+
+
+--
+-- Name: publications publications_author_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publications
+    ADD CONSTRAINT publications_author_id FOREIGN KEY (primary_contact_id) REFERENCES public.authors(author_id) ON DELETE SET NULL;
+
+
+--
+-- Name: publications publications_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publications
+    ADD CONSTRAINT publications_doi_id_foreign FOREIGN KEY (doi_id) REFERENCES public.dois(doi_id) ON DELETE SET NULL;
+
+
+--
+-- Name: publications publications_series_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publications
+    ADD CONSTRAINT publications_series_id FOREIGN KEY (series_id) REFERENCES public.series(series_id) ON DELETE SET NULL;
+
+
+--
+-- Name: publications publications_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.publications
+    ADD CONSTRAINT publications_submission_id FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: query_participants query_participants_query_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.query_participants
+    ADD CONSTRAINT query_participants_query_id_foreign FOREIGN KEY (query_id) REFERENCES public.queries(query_id) ON DELETE CASCADE;
+
+
+--
+-- Name: query_participants query_participants_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.query_participants
+    ADD CONSTRAINT query_participants_user_id_foreign FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: representatives representatives_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.representatives
+    ADD CONSTRAINT representatives_submission_id FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: review_assignments review_assignments_review_form_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_assignments
+    ADD CONSTRAINT review_assignments_review_form_id_foreign FOREIGN KEY (review_form_id) REFERENCES public.review_forms(review_form_id);
+
+
+--
+-- Name: review_assignments review_assignments_review_round_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_assignments
+    ADD CONSTRAINT review_assignments_review_round_id_foreign FOREIGN KEY (review_round_id) REFERENCES public.review_rounds(review_round_id);
+
+
+--
+-- Name: review_assignments review_assignments_reviewer_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_assignments
+    ADD CONSTRAINT review_assignments_reviewer_id_foreign FOREIGN KEY (reviewer_id) REFERENCES public.users(user_id);
+
+
+--
+-- Name: review_assignments review_assignments_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_assignments
+    ADD CONSTRAINT review_assignments_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id);
+
+
+--
+-- Name: review_files review_files_review_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_files
+    ADD CONSTRAINT review_files_review_id_foreign FOREIGN KEY (review_id) REFERENCES public.review_assignments(review_id) ON DELETE CASCADE;
+
+
+--
+-- Name: review_files review_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_files
+    ADD CONSTRAINT review_files_submission_file_id_foreign FOREIGN KEY (submission_file_id) REFERENCES public.submission_files(submission_file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: review_form_element_settings review_form_element_settings_review_form_element_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_element_settings
+    ADD CONSTRAINT review_form_element_settings_review_form_element_id FOREIGN KEY (review_form_element_id) REFERENCES public.review_form_elements(review_form_element_id) ON DELETE CASCADE;
+
+
+--
+-- Name: review_form_elements review_form_elements_review_form_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_elements
+    ADD CONSTRAINT review_form_elements_review_form_id FOREIGN KEY (review_form_id) REFERENCES public.review_forms(review_form_id) ON DELETE CASCADE;
+
+
+--
+-- Name: review_form_responses review_form_responses_review_form_element_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_responses
+    ADD CONSTRAINT review_form_responses_review_form_element_id_foreign FOREIGN KEY (review_form_element_id) REFERENCES public.review_form_elements(review_form_element_id) ON DELETE CASCADE;
+
+
+--
+-- Name: review_form_responses review_form_responses_review_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_responses
+    ADD CONSTRAINT review_form_responses_review_id_foreign FOREIGN KEY (review_id) REFERENCES public.review_assignments(review_id) ON DELETE CASCADE;
+
+
+--
+-- Name: review_form_settings review_form_settings_review_form_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_form_settings
+    ADD CONSTRAINT review_form_settings_review_form_id FOREIGN KEY (review_form_id) REFERENCES public.review_forms(review_form_id) ON DELETE CASCADE;
+
+
+--
+-- Name: review_round_files review_round_files_review_round_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_round_files
+    ADD CONSTRAINT review_round_files_review_round_id_foreign FOREIGN KEY (review_round_id) REFERENCES public.review_rounds(review_round_id) ON DELETE CASCADE;
+
+
+--
+-- Name: review_round_files review_round_files_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_round_files
+    ADD CONSTRAINT review_round_files_submission_file_id_foreign FOREIGN KEY (submission_file_id) REFERENCES public.submission_files(submission_file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: review_round_files review_round_files_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_round_files
+    ADD CONSTRAINT review_round_files_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: review_rounds review_rounds_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.review_rounds
+    ADD CONSTRAINT review_rounds_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id);
+
+
+--
+-- Name: sales_rights sales_rights_publication_format_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.sales_rights
+    ADD CONSTRAINT sales_rights_publication_format_id FOREIGN KEY (publication_format_id) REFERENCES public.publication_formats(publication_format_id) ON DELETE CASCADE;
+
+
+--
+-- Name: subeditor_submission_group section_editors_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.subeditor_submission_group
+    ADD CONSTRAINT section_editors_context_id FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: series_categories series_categories_category_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series_categories
+    ADD CONSTRAINT series_categories_category_id FOREIGN KEY (category_id) REFERENCES public.categories(category_id) ON DELETE CASCADE;
+
+
+--
+-- Name: series_categories series_categories_series_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series_categories
+    ADD CONSTRAINT series_categories_series_id FOREIGN KEY (series_id) REFERENCES public.series(series_id) ON DELETE CASCADE;
+
+
+--
+-- Name: series series_press_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series
+    ADD CONSTRAINT series_press_id FOREIGN KEY (press_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: series series_review_form_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series
+    ADD CONSTRAINT series_review_form_id FOREIGN KEY (review_form_id) REFERENCES public.review_forms(review_form_id) ON DELETE SET NULL;
+
+
+--
+-- Name: series_settings series_settings_series_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.series_settings
+    ADD CONSTRAINT series_settings_series_id FOREIGN KEY (series_id) REFERENCES public.series(series_id) ON DELETE CASCADE;
+
+
+--
+-- Name: sessions sessions_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.sessions
+    ADD CONSTRAINT sessions_user_id FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: spotlight_settings spotlight_settings_spotlight_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.spotlight_settings
+    ADD CONSTRAINT spotlight_settings_spotlight_id_foreign FOREIGN KEY (spotlight_id) REFERENCES public.spotlights(spotlight_id);
+
+
+--
+-- Name: spotlights spotlights_press_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.spotlights
+    ADD CONSTRAINT spotlights_press_id_foreign FOREIGN KEY (press_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: stage_assignments stage_assignments_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.stage_assignments
+    ADD CONSTRAINT stage_assignments_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: stage_assignments stage_assignments_user_group_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.stage_assignments
+    ADD CONSTRAINT stage_assignments_user_group_id FOREIGN KEY (user_group_id) REFERENCES public.user_groups(user_group_id) ON DELETE CASCADE;
+
+
+--
+-- Name: stage_assignments stage_assignments_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.stage_assignments
+    ADD CONSTRAINT stage_assignments_user_id FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: static_page_settings static_page_settings_static_page_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.static_page_settings
+    ADD CONSTRAINT static_page_settings_static_page_id FOREIGN KEY (static_page_id) REFERENCES public.static_pages(static_page_id) ON DELETE CASCADE;
+
+
+--
+-- Name: subeditor_submission_group subeditor_submission_group_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.subeditor_submission_group
+    ADD CONSTRAINT subeditor_submission_group_user_group_id_foreign FOREIGN KEY (user_group_id) REFERENCES public.user_groups(user_group_id) ON DELETE CASCADE;
+
+
+--
+-- Name: subeditor_submission_group subeditor_submission_group_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.subeditor_submission_group
+    ADD CONSTRAINT subeditor_submission_group_user_id FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_chapter_authors submission_chapter_authors_author_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapter_authors
+    ADD CONSTRAINT submission_chapter_authors_author_id_foreign FOREIGN KEY (author_id) REFERENCES public.authors(author_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_chapter_authors submission_chapter_authors_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapter_authors
+    ADD CONSTRAINT submission_chapter_authors_chapter_id_foreign FOREIGN KEY (chapter_id) REFERENCES public.submission_chapters(chapter_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_chapter_settings submission_chapter_settings_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapter_settings
+    ADD CONSTRAINT submission_chapter_settings_chapter_id_foreign FOREIGN KEY (chapter_id) REFERENCES public.submission_chapters(chapter_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_chapters submission_chapters_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapters
+    ADD CONSTRAINT submission_chapters_doi_id_foreign FOREIGN KEY (doi_id) REFERENCES public.dois(doi_id) ON DELETE SET NULL;
+
+
+--
+-- Name: submission_chapters submission_chapters_primary_contact_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapters
+    ADD CONSTRAINT submission_chapters_primary_contact_id_foreign FOREIGN KEY (primary_contact_id) REFERENCES public.authors(author_id) ON DELETE SET NULL;
+
+
+--
+-- Name: submission_chapters submission_chapters_publication_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapters
+    ADD CONSTRAINT submission_chapters_publication_id FOREIGN KEY (publication_id) REFERENCES public.publications(publication_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_chapters submission_chapters_source_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_chapters
+    ADD CONSTRAINT submission_chapters_source_chapter_id_foreign FOREIGN KEY (source_chapter_id) REFERENCES public.submission_chapters(chapter_id) ON DELETE SET NULL;
+
+
+--
+-- Name: submission_comments submission_comments_author_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_comments
+    ADD CONSTRAINT submission_comments_author_id_foreign FOREIGN KEY (author_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_comments submission_comments_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_comments
+    ADD CONSTRAINT submission_comments_submission_id FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_file_revisions submission_file_revisions_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_file_revisions
+    ADD CONSTRAINT submission_file_revisions_file_id_foreign FOREIGN KEY (file_id) REFERENCES public.files(file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_file_revisions submission_file_revisions_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_file_revisions
+    ADD CONSTRAINT submission_file_revisions_submission_file_id_foreign FOREIGN KEY (submission_file_id) REFERENCES public.submission_files(submission_file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_file_settings submission_file_settings_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_file_settings
+    ADD CONSTRAINT submission_file_settings_submission_file_id_foreign FOREIGN KEY (submission_file_id) REFERENCES public.submission_files(submission_file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_files submission_files_doi_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_files
+    ADD CONSTRAINT submission_files_doi_id_foreign FOREIGN KEY (doi_id) REFERENCES public.dois(doi_id) ON DELETE SET NULL;
+
+
+--
+-- Name: submission_files submission_files_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_files
+    ADD CONSTRAINT submission_files_file_id_foreign FOREIGN KEY (file_id) REFERENCES public.files(file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_files submission_files_genre_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_files
+    ADD CONSTRAINT submission_files_genre_id_foreign FOREIGN KEY (genre_id) REFERENCES public.genres(genre_id) ON DELETE SET NULL;
+
+
+--
+-- Name: submission_files submission_files_source_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_files
+    ADD CONSTRAINT submission_files_source_submission_file_id_foreign FOREIGN KEY (source_submission_file_id) REFERENCES public.submission_files(submission_file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_files submission_files_submission_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_files
+    ADD CONSTRAINT submission_files_submission_id FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_files submission_files_uploader_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_files
+    ADD CONSTRAINT submission_files_uploader_user_id_foreign FOREIGN KEY (uploader_user_id) REFERENCES public.users(user_id) ON DELETE SET NULL;
+
+
+--
+-- Name: submission_search_object_keywords submission_search_object_keywords_keyword_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_search_object_keywords
+    ADD CONSTRAINT submission_search_object_keywords_keyword_id FOREIGN KEY (keyword_id) REFERENCES public.submission_search_keyword_list(keyword_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_search_object_keywords submission_search_object_keywords_object_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_search_object_keywords
+    ADD CONSTRAINT submission_search_object_keywords_object_id_foreign FOREIGN KEY (object_id) REFERENCES public.submission_search_objects(object_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_search_objects submission_search_object_submission; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_search_objects
+    ADD CONSTRAINT submission_search_object_submission FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submission_settings submission_settings_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submission_settings
+    ADD CONSTRAINT submission_settings_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submissions submissions_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submissions
+    ADD CONSTRAINT submissions_context_id FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: submissions submissions_publication_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.submissions
+    ADD CONSTRAINT submissions_publication_id FOREIGN KEY (current_publication_id) REFERENCES public.publications(publication_id) ON DELETE SET NULL;
+
+
+--
+-- Name: temporary_files temporary_files_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.temporary_files
+    ADD CONSTRAINT temporary_files_user_id FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: user_group_settings user_group_settings_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_group_settings
+    ADD CONSTRAINT user_group_settings_user_group_id_foreign FOREIGN KEY (user_group_id) REFERENCES public.user_groups(user_group_id) ON DELETE CASCADE;
+
+
+--
+-- Name: user_group_stage user_group_stage_context_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_group_stage
+    ADD CONSTRAINT user_group_stage_context_id FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: user_group_stage user_group_stage_user_group_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_group_stage
+    ADD CONSTRAINT user_group_stage_user_group_id FOREIGN KEY (user_group_id) REFERENCES public.user_groups(user_group_id) ON DELETE CASCADE;
+
+
+--
+-- Name: user_interests user_interests_controlled_vocab_entry_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_interests
+    ADD CONSTRAINT user_interests_controlled_vocab_entry_id_foreign FOREIGN KEY (controlled_vocab_entry_id) REFERENCES public.controlled_vocab_entries(controlled_vocab_entry_id) ON DELETE CASCADE;
+
+
+--
+-- Name: user_interests user_interests_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_interests
+    ADD CONSTRAINT user_interests_user_id_foreign FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: user_settings user_settings_user_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_settings
+    ADD CONSTRAINT user_settings_user_id_foreign FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: user_user_groups user_user_groups_user_group_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_user_groups
+    ADD CONSTRAINT user_user_groups_user_group_id_foreign FOREIGN KEY (user_group_id) REFERENCES public.user_groups(user_group_id) ON DELETE CASCADE;
+
+
+--
+-- Name: user_user_groups user_user_groups_user_id; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.user_user_groups
+    ADD CONSTRAINT user_user_groups_user_id FOREIGN KEY (user_id) REFERENCES public.users(user_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_institution_temporary_records usi_institution_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_institution_temporary_records
+    ADD CONSTRAINT usi_institution_id_foreign FOREIGN KEY (institution_id) REFERENCES public.institutions(institution_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_item_investigations_temporary_records usii_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
+    ADD CONSTRAINT usii_chapter_id_foreign FOREIGN KEY (chapter_id) REFERENCES public.submission_chapters(chapter_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_item_investigations_temporary_records usii_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
+    ADD CONSTRAINT usii_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_item_investigations_temporary_records usii_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
+    ADD CONSTRAINT usii_representation_id_foreign FOREIGN KEY (representation_id) REFERENCES public.publication_formats(publication_format_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_item_investigations_temporary_records usii_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
+    ADD CONSTRAINT usii_submission_file_id_foreign FOREIGN KEY (submission_file_id) REFERENCES public.submission_files(submission_file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_item_investigations_temporary_records usii_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_investigations_temporary_records
+    ADD CONSTRAINT usii_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_item_requests_temporary_records usir_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
+    ADD CONSTRAINT usir_chapter_id_foreign FOREIGN KEY (chapter_id) REFERENCES public.submission_chapters(chapter_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_item_requests_temporary_records usir_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
+    ADD CONSTRAINT usir_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_item_requests_temporary_records usir_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
+    ADD CONSTRAINT usir_representation_id_foreign FOREIGN KEY (representation_id) REFERENCES public.publication_formats(publication_format_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_item_requests_temporary_records usir_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
+    ADD CONSTRAINT usir_submission_file_id_foreign FOREIGN KEY (submission_file_id) REFERENCES public.submission_files(submission_file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_item_requests_temporary_records usir_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_item_requests_temporary_records
+    ADD CONSTRAINT usir_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_total_temporary_records ust_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_total_temporary_records
+    ADD CONSTRAINT ust_chapter_id_foreign FOREIGN KEY (chapter_id) REFERENCES public.submission_chapters(chapter_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_total_temporary_records ust_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_total_temporary_records
+    ADD CONSTRAINT ust_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_total_temporary_records ust_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_total_temporary_records
+    ADD CONSTRAINT ust_representation_id_foreign FOREIGN KEY (representation_id) REFERENCES public.publication_formats(publication_format_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_total_temporary_records ust_series_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_total_temporary_records
+    ADD CONSTRAINT ust_series_id_foreign FOREIGN KEY (series_id) REFERENCES public.series(series_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_total_temporary_records ust_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_total_temporary_records
+    ADD CONSTRAINT ust_submission_file_id_foreign FOREIGN KEY (submission_file_id) REFERENCES public.submission_files(submission_file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_total_temporary_records ust_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_total_temporary_records
+    ADD CONSTRAINT ust_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_title_investigations_temporary_records usti_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
+    ADD CONSTRAINT usti_chapter_id_foreign FOREIGN KEY (chapter_id) REFERENCES public.submission_chapters(chapter_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_title_investigations_temporary_records usti_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
+    ADD CONSTRAINT usti_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_title_investigations_temporary_records usti_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
+    ADD CONSTRAINT usti_representation_id_foreign FOREIGN KEY (representation_id) REFERENCES public.publication_formats(publication_format_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_title_investigations_temporary_records usti_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
+    ADD CONSTRAINT usti_submission_file_id_foreign FOREIGN KEY (submission_file_id) REFERENCES public.submission_files(submission_file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_title_investigations_temporary_records usti_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_investigations_temporary_records
+    ADD CONSTRAINT usti_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_title_requests_temporary_records ustr_chapter_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
+    ADD CONSTRAINT ustr_chapter_id_foreign FOREIGN KEY (chapter_id) REFERENCES public.submission_chapters(chapter_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_title_requests_temporary_records ustr_context_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
+    ADD CONSTRAINT ustr_context_id_foreign FOREIGN KEY (context_id) REFERENCES public.presses(press_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_title_requests_temporary_records ustr_representation_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
+    ADD CONSTRAINT ustr_representation_id_foreign FOREIGN KEY (representation_id) REFERENCES public.publication_formats(publication_format_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_title_requests_temporary_records ustr_submission_file_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
+    ADD CONSTRAINT ustr_submission_file_id_foreign FOREIGN KEY (submission_file_id) REFERENCES public.submission_files(submission_file_id) ON DELETE CASCADE;
+
+
+--
+-- Name: usage_stats_unique_title_requests_temporary_records ustr_submission_id_foreign; Type: FK CONSTRAINT; Schema: public; Owner: omp-ci
+--
+
+ALTER TABLE ONLY public.usage_stats_unique_title_requests_temporary_records
+    ADD CONSTRAINT ustr_submission_id_foreign FOREIGN KEY (submission_id) REFERENCES public.submissions(submission_id) ON DELETE CASCADE;
+
+
+--
+-- PostgreSQL database dump complete
+--
+
