@@ -57,6 +57,7 @@ case "$BRANCH" in
 	"stable-3_3_0") ;;
 	"stable-3_2_1") ;;
 	"stable-3_2_0") ;;
+	"stable-3_4_0") ;;
 	*) echo "Unknown branch specified in second parameter."; return -1 ;;
 esac
 
