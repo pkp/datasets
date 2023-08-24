@@ -14,7 +14,7 @@ case "${DBTYPE}" in
 		;;
 
 	"PostgreSQL")
-		dropdb --if-exists ${DBNAME} && createdb --owner=${DBUSERNAME} ${DBNAME}
+		sudo dropdb --if-exists ${DBNAME} && createdb --owner=${DBUSERNAME} ${DBNAME}
 		;;
 	*) echo "Unknown database type \"${DBTYPE}\". (Did you configure your environment?)"; exit -1 ;;
 esac
