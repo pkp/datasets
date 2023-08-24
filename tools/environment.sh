@@ -8,7 +8,7 @@
 # . environment.sh app branch [dbtype]
 #   ...where "app" is: ojs, omp, ops
 #   ...where "branch" is: main, stable-3_1_2, ...
-#   ...where "dbtype" is: MySQLi, PostgreSQL (defaults to MySQLi)
+#   ...where "dbtype" is: MariaDB, MySQLi, PostgreSQL (defaults to MySQLi)
 #
 # Note that the "." in ". ci-environment.sh" is necessary in order to expose
 # the environment variables!
@@ -63,7 +63,7 @@ esac
 
 # Validate the database type, setting default to MySQL if needed
 case "$DBTYPE" in
-	"MySQL" | "" | "MySQLi")
+	"MySQL" | "" | "MySQLi" | "MariadB")
 		export DBTYPE=MySQLi
 		export DBTYPE_SYMBOLIC=mysql
 		;;

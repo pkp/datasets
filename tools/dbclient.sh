@@ -21,7 +21,7 @@ case "$DBTYPE" in
 	PostgreSQL)
 		psql "$@" --username=$DBUSERNAME --host=$DBHOST $DBNAME
 		;;
-	MySQL|MySQLi)
+	MySQL|MySQLi|MariaDB)
 		mysql "$@" --user=$DBUSERNAME --password=$DBPASSWORD --host=$DBHOST $DBNAME
 		;;
 	*)
