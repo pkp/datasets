@@ -1,0 +1,4 @@
+[2023-09-27 21:59:53] http://localhost
+[2023-09-27 21:59:53] [Notice] Task process started.
+[2023-09-27 21:59:53] [Error] cURL error 6: Could not resolve host: download.db-ip.com (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://download.db-ip.com/free/dbip-city-lite-2023-09.mmdb.gz
+[2023-09-27 21:59:53] [Notice] Task process stopped.
