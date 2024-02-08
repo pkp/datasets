@@ -1,0 +1,4 @@
+[2024-02-08 16:13:47] http://localhost
+[2024-02-08 16:13:47] [Notice] Task process started.
+[2024-02-08 16:13:47] [Error] cURL error 56: OpenSSL SSL_read: Connection reset by peer, errno 104 (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://download.db-ip.com/free/dbip-city-lite-2024-02.mmdb.gz
+[2024-02-08 16:13:47] [Notice] Task process stopped.
