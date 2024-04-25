@@ -45,7 +45,7 @@
         <title locale="en">Choosing the Future</title>
         <pages/>
         <chapterAuthor author_id="1" seq="0"/>
-        <submission_file_ref id="5"/>
+        <submission_file_ref id="6"/>
         <submission_file_ref id="1"/>
       </chapter>
       <chapter seq="2" id="2">
@@ -53,7 +53,7 @@
         <title locale="en">Axioms</title>
         <pages/>
         <chapterAuthor author_id="1" seq="0"/>
-        <submission_file_ref id="6"/>
+        <submission_file_ref id="4"/>
         <submission_file_ref id="2"/>
       </chapter>
       <chapter seq="3" id="3">
@@ -61,7 +61,7 @@
         <title locale="en">Paradigm Shift</title>
         <pages/>
         <chapterAuthor author_id="1" seq="0"/>
-        <submission_file_ref id="4"/>
+        <submission_file_ref id="5"/>
         <submission_file_ref id="3"/>
       </chapter>
     </chapters>
