@@ -146,7 +146,7 @@ sandbox = Off
 [database]
 
 driver = postgres9
-host = "127.0.0.1"
+host = localhost
 username = ojs-ci
 password = ojs-ci
 name = ojs-ci
