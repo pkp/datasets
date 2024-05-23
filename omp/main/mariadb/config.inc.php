@@ -142,7 +142,7 @@ sandbox = Off
 [database]
 
 driver = mysqli
-host = localhost
+host = "127.0.0.1"
 username = omp-ci
 password = omp-ci
 name = omp-ci
