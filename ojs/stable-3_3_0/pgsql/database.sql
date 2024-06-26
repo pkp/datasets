@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 13.13 (Ubuntu 13.13-1.pgdg20.04+1)
--- Dumped by pg_dump version 16.1 (Ubuntu 16.1-1.pgdg20.04+1)
+-- Dumped from database version 14.12 (Ubuntu 14.12-1.pgdg22.04+1)
+-- Dumped by pg_dump version 14.12 (Ubuntu 14.12-1.pgdg22.04+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -489,16 +489,6 @@ DROP TABLE public.announcement_type_settings;
 DROP TABLE public.announcement_settings;
 DROP SEQUENCE public.access_keys_access_key_id_seq;
 DROP TABLE public.access_keys;
--- *not* dropping schema, since initdb creates it
---
--- Name: public; Type: SCHEMA; Schema: -; Owner: postgres
---
-
--- *not* creating schema, since initdb creates it
-
-
-ALTER SCHEMA public OWNER TO postgres;
-
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
@@ -531,7 +521,7 @@ CREATE SEQUENCE public.access_keys_access_key_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.access_keys_access_key_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.access_keys_access_key_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: access_keys_access_key_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -595,7 +585,7 @@ CREATE SEQUENCE public.announcement_types_type_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.announcement_types_type_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.announcement_types_type_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: announcement_types_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -632,7 +622,7 @@ CREATE SEQUENCE public.announcements_announcement_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.announcements_announcement_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.announcements_announcement_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: announcements_announcement_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -668,7 +658,7 @@ CREATE SEQUENCE public.auth_sources_auth_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.auth_sources_auth_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.auth_sources_auth_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: auth_sources_auth_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -719,7 +709,7 @@ CREATE SEQUENCE public.authors_author_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.authors_author_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.authors_author_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: authors_author_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -756,7 +746,7 @@ CREATE SEQUENCE public.categories_category_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.categories_category_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.categories_category_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: categories_category_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -828,7 +818,7 @@ CREATE SEQUENCE public.citations_citation_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.citations_citation_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.citations_citation_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: citations_citation_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -868,7 +858,7 @@ CREATE SEQUENCE public.completed_payments_completed_payment_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.completed_payments_completed_payment_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.completed_payments_completed_payment_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: completed_payments_completed_payment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -902,7 +892,7 @@ CREATE SEQUENCE public.controlled_vocab_entries_controlled_vocab_entry_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.controlled_vocab_entries_controlled_vocab_entry_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.controlled_vocab_entries_controlled_vocab_entry_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -952,7 +942,7 @@ CREATE SEQUENCE public.controlled_vocabs_controlled_vocab_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.controlled_vocabs_controlled_vocab_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.controlled_vocabs_controlled_vocab_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: controlled_vocabs_controlled_vocab_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1013,7 +1003,7 @@ CREATE SEQUENCE public.data_object_tombstone_oai_set_objects_object_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.data_object_tombstone_oai_set_objects_object_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.data_object_tombstone_oai_set_objects_object_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: data_object_tombstone_oai_set_objects_object_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1072,7 +1062,7 @@ CREATE SEQUENCE public.data_object_tombstones_tombstone_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.data_object_tombstones_tombstone_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.data_object_tombstones_tombstone_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: data_object_tombstones_tombstone_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1111,7 +1101,7 @@ CREATE SEQUENCE public.edit_decisions_edit_decision_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.edit_decisions_edit_decision_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.edit_decisions_edit_decision_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: edit_decisions_edit_decision_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1154,7 +1144,7 @@ CREATE SEQUENCE public.email_log_log_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.email_log_log_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.email_log_log_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: email_log_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1254,7 +1244,7 @@ CREATE SEQUENCE public.email_templates_default_email_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.email_templates_default_email_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.email_templates_default_email_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: email_templates_default_email_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1275,7 +1265,7 @@ CREATE SEQUENCE public.email_templates_email_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.email_templates_email_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.email_templates_email_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: email_templates_email_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1328,7 +1318,7 @@ CREATE SEQUENCE public.event_log_log_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.event_log_log_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.event_log_log_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: event_log_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1383,7 +1373,7 @@ CREATE SEQUENCE public.files_file_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.files_file_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.files_file_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: files_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1420,7 +1410,7 @@ CREATE SEQUENCE public.filter_groups_filter_group_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.filter_groups_filter_group_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.filter_groups_filter_group_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: filter_groups_filter_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1474,7 +1464,7 @@ CREATE SEQUENCE public.filters_filter_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.filters_filter_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.filters_filter_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: filters_filter_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1535,7 +1525,7 @@ CREATE SEQUENCE public.genres_genre_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.genres_genre_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.genres_genre_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: genres_genre_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1571,7 +1561,7 @@ CREATE SEQUENCE public.institutional_subscription_ip_institutional_subscription_
     CACHE 1;
 
 
-ALTER SEQUENCE public.institutional_subscription_ip_institutional_subscription_ip_seq OWNER TO "ojs-ci";
+ALTER TABLE public.institutional_subscription_ip_institutional_subscription_ip_seq OWNER TO "ojs-ci";
 
 --
 -- Name: institutional_subscription_ip_institutional_subscription_ip_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1607,7 +1597,7 @@ CREATE SEQUENCE public.institutional_subscriptions_institutional_subscription_id
     CACHE 1;
 
 
-ALTER SEQUENCE public.institutional_subscriptions_institutional_subscription_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.institutional_subscriptions_institutional_subscription_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: institutional_subscriptions_institutional_subscription_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1647,7 +1637,7 @@ CREATE SEQUENCE public.issue_files_file_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.issue_files_file_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.issue_files_file_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: issue_files_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1707,7 +1697,7 @@ CREATE SEQUENCE public.issue_galleys_galley_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.issue_galleys_galley_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.issue_galleys_galley_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: issue_galleys_galley_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1772,7 +1762,7 @@ CREATE SEQUENCE public.issues_issue_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.issues_issue_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.issues_issue_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: issues_issue_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1824,7 +1814,7 @@ CREATE SEQUENCE public.jobs_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.jobs_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.jobs_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: jobs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1889,7 +1879,7 @@ CREATE SEQUENCE public.journals_journal_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.journals_journal_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.journals_journal_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: journals_journal_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -1953,7 +1943,7 @@ CREATE SEQUENCE public.library_files_file_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.library_files_file_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.library_files_file_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: library_files_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2006,7 +1996,7 @@ CREATE SEQUENCE public.metadata_descriptions_metadata_description_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.metadata_descriptions_metadata_description_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.metadata_descriptions_metadata_description_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: metadata_descriptions_metadata_description_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2069,7 +2059,7 @@ CREATE SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assign
     CACHE 1;
 
 
-ALTER SEQUENCE public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq OWNER TO "ojs-ci";
+ALTER TABLE public.navigation_menu_item_assignme_navigation_menu_item_assignme_seq OWNER TO "ojs-ci";
 
 --
 -- Name: navigation_menu_item_assignme_navigation_menu_item_assignme_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2134,7 +2124,7 @@ CREATE SEQUENCE public.navigation_menu_items_navigation_menu_item_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.navigation_menu_items_navigation_menu_item_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.navigation_menu_items_navigation_menu_item_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: navigation_menu_items_navigation_menu_item_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2169,7 +2159,7 @@ CREATE SEQUENCE public.navigation_menus_navigation_menu_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.navigation_menus_navigation_menu_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.navigation_menus_navigation_menu_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: navigation_menus_navigation_menu_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2208,7 +2198,7 @@ CREATE SEQUENCE public.notes_note_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.notes_note_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.notes_note_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: notes_note_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2244,7 +2234,7 @@ CREATE SEQUENCE public.notification_mail_list_notification_mail_list_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.notification_mail_list_notification_mail_list_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.notification_mail_list_notification_mail_list_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: notification_mail_list_notification_mail_list_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2310,7 +2300,7 @@ CREATE SEQUENCE public.notification_subscription_settings_setting_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.notification_subscription_settings_setting_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.notification_subscription_settings_setting_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: notification_subscription_settings_setting_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2350,7 +2340,7 @@ CREATE SEQUENCE public.notifications_notification_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.notifications_notification_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.notifications_notification_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: notifications_notification_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2452,7 +2442,7 @@ CREATE SEQUENCE public.publication_galleys_galley_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.publication_galleys_galley_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.publication_galleys_galley_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: publication_galleys_galley_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2509,7 +2499,7 @@ CREATE SEQUENCE public.publications_publication_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.publications_publication_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.publications_publication_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: publications_publication_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2548,7 +2538,7 @@ CREATE SEQUENCE public.queries_query_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.queries_query_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.queries_query_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: queries_query_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2596,7 +2586,7 @@ CREATE SEQUENCE public.queued_payments_queued_payment_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.queued_payments_queued_payment_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.queued_payments_queued_payment_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: queued_payments_queued_payment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2654,7 +2644,7 @@ CREATE SEQUENCE public.review_assignments_review_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.review_assignments_review_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.review_assignments_review_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: review_assignments_review_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2718,7 +2708,7 @@ CREATE SEQUENCE public.review_form_elements_review_form_element_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.review_form_elements_review_form_element_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.review_form_elements_review_form_element_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: review_form_elements_review_form_element_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2783,7 +2773,7 @@ CREATE SEQUENCE public.review_forms_review_form_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.review_forms_review_form_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.review_forms_review_form_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: review_forms_review_form_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2834,7 +2824,7 @@ CREATE SEQUENCE public.review_rounds_review_round_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.review_rounds_review_round_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.review_rounds_review_round_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: review_rounds_review_round_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -2911,7 +2901,7 @@ CREATE SEQUENCE public.sections_section_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.sections_section_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.sections_section_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: sections_section_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3025,7 +3015,7 @@ CREATE SEQUENCE public.stage_assignments_stage_assignment_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.stage_assignments_stage_assignment_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.stage_assignments_stage_assignment_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: stage_assignments_stage_assignment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3081,7 +3071,7 @@ CREATE SEQUENCE public.static_pages_static_page_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.static_pages_static_page_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.static_pages_static_page_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: static_pages_static_page_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3137,7 +3127,7 @@ CREATE SEQUENCE public.submission_comments_comment_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.submission_comments_comment_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.submission_comments_comment_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: submission_comments_comment_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3171,7 +3161,7 @@ CREATE SEQUENCE public.submission_file_revisions_revision_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.submission_file_revisions_revision_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.submission_file_revisions_revision_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3238,7 +3228,7 @@ CREATE SEQUENCE public.submission_files_submission_file_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.submission_files_submission_file_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.submission_files_submission_file_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: submission_files_submission_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3271,7 +3261,7 @@ CREATE SEQUENCE public.submission_search_keyword_list_keyword_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.submission_search_keyword_list_keyword_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.submission_search_keyword_list_keyword_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3340,7 +3330,7 @@ CREATE SEQUENCE public.submission_search_objects_object_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.submission_search_objects_object_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.submission_search_objects_object_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: submission_search_objects_object_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3393,7 +3383,7 @@ CREATE SEQUENCE public.submission_tombstones_tombstone_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.submission_tombstones_tombstone_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.submission_tombstones_tombstone_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: submission_tombstones_tombstone_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3435,7 +3425,7 @@ CREATE SEQUENCE public.submissions_submission_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.submissions_submission_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.submissions_submission_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: submissions_submission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3491,7 +3481,7 @@ CREATE SEQUENCE public.subscription_types_type_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.subscription_types_type_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.subscription_types_type_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: subscription_types_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3532,7 +3522,7 @@ CREATE SEQUENCE public.subscriptions_subscription_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.subscriptions_subscription_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.subscriptions_subscription_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: subscriptions_subscription_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3570,7 +3560,7 @@ CREATE SEQUENCE public.temporary_files_file_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.temporary_files_file_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.temporary_files_file_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: temporary_files_file_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3663,7 +3653,7 @@ CREATE SEQUENCE public.user_groups_user_group_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.user_groups_user_group_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.user_groups_user_group_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: user_groups_user_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -3756,7 +3746,7 @@ CREATE SEQUENCE public.users_user_id_seq
     CACHE 1;
 
 
-ALTER SEQUENCE public.users_user_id_seq OWNER TO "ojs-ci";
+ALTER TABLE public.users_user_id_seq OWNER TO "ojs-ci";
 
 --
 -- Name: users_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ojs-ci
@@ -4564,51 +4554,51 @@ COPY public.completed_payments (completed_payment_id, "timestamp", payment_type,
 --
 
 COPY public.controlled_vocab_entries (controlled_vocab_entry_id, controlled_vocab_id, seq) FROM stdin;
-15	2	1
-16	2	2
-29	7	1
-30	7	2
-33	12	1
-34	12	2
-35	12	3
-36	12	4
-37	17	1
-38	17	2
-39	22	1
-40	22	2
-41	22	3
-42	22	4
-43	22	5
-44	22	6
-45	22	7
-46	37	1
-47	37	2
-48	42	1
-49	42	2
-50	42	3
-51	52	1
-52	57	1
-53	57	2
-54	57	3
-55	57	4
-56	62	1
-57	62	2
-58	67	1
-59	72	1
-60	72	2
-61	72	3
-62	72	4
-63	72	5
-64	72	6
-65	72	7
-66	72	8
-67	72	9
-68	72	10
-69	82	1
-70	82	2
-71	92	1
-72	92	2
-73	92	3
+17	2	1
+18	2	2
+31	7	1
+32	7	2
+35	12	1
+36	12	2
+37	12	3
+38	12	4
+39	17	1
+40	17	2
+41	22	1
+42	22	2
+43	22	3
+44	22	4
+45	22	5
+46	22	6
+47	22	7
+48	37	1
+49	37	2
+50	42	1
+51	42	2
+52	42	3
+53	52	1
+54	57	1
+55	57	2
+56	57	3
+57	57	4
+58	62	1
+59	62	2
+60	67	1
+61	72	1
+62	72	2
+63	72	3
+64	72	4
+65	72	5
+66	72	6
+67	72	7
+68	72	8
+69	72	9
+70	72	10
+71	82	1
+72	82	2
+73	92	1
+74	92	2
+75	92	3
 \.
 
 
@@ -4617,51 +4607,51 @@ COPY public.controlled_vocab_entries (controlled_vocab_entry_id, controlled_voca
 --
 
 COPY public.controlled_vocab_entry_settings (controlled_vocab_entry_id, locale, setting_name, setting_value, setting_type) FROM stdin;
-15	en_US	submissionKeyword	Professional Development	string
-16	en_US	submissionKeyword	Social Transformation	string
-29	en_US	submissionKeyword	Professional Development	string
-30	en_US	submissionKeyword	Social Transformation	string
-33	en_US	submissionKeyword	pigs	string
-34	en_US	submissionKeyword	food security	string
-35	en_US	submissionKeyword	Professional Development	string
-36	en_US	submissionKeyword	Social Transformation	string
-37	en_US	submissionKeyword	employees	string
-38	en_US	submissionKeyword	survey	string
-39	en_US	submissionKeyword	Integrating Technology	string
-40	en_US	submissionKeyword	Computer Skills	string
-41	en_US	submissionKeyword	Survey	string
-42	en_US	submissionKeyword	Alberta	string
-43	en_US	submissionKeyword	National	string
-44	en_US	submissionKeyword	Provincial	string
-45	en_US	submissionKeyword	Professional Development	string
-46	en_US	submissionKeyword	education	string
-47	en_US	submissionKeyword	citizenship	string
-48	en_US	submissionKeyword	Common pool resource	string
-49	en_US	submissionKeyword	common property	string
-50	en_US	submissionKeyword	intellectual developments	string
-51	en_US	submissionKeyword	water	string
-52	en_US	submissionKeyword	Development	string
-53	en_US	submissionKeyword	engineering education	string
-54	en_US	submissionKeyword	service learning	string
-55	en_US	submissionKeyword	sustainability	string
-56	en_US	submissionKeyword	pigs	string
-57	en_US	submissionKeyword	food security	string
-58	en_US	submissionKeyword	water	string
-59	en_US	submissionKeyword	21st Century	string
-60	en_US	submissionKeyword	Diversity	string
-61	en_US	submissionKeyword	Multilingual	string
-62	en_US	submissionKeyword	Multiethnic	string
-63	en_US	submissionKeyword	Participatory Pedagogy	string
-64	en_US	submissionKeyword	Language	string
-65	en_US	submissionKeyword	Culture	string
-66	en_US	submissionKeyword	Gender	string
-67	en_US	submissionKeyword	Egalitarianism	string
-68	en_US	submissionKeyword	Social Transformation	string
-69	en_US	submissionKeyword	cattle	string
-70	en_US	submissionKeyword	food security	string
-71	en_US	submissionKeyword	Self-Organization	string
-72	en_US	submissionKeyword	Multi-Level Institutions	string
-73	en_US	submissionKeyword	Goverance	string
+17	en_US	submissionKeyword	Professional Development	string
+18	en_US	submissionKeyword	Social Transformation	string
+31	en_US	submissionKeyword	Professional Development	string
+32	en_US	submissionKeyword	Social Transformation	string
+35	en_US	submissionKeyword	pigs	string
+36	en_US	submissionKeyword	food security	string
+37	en_US	submissionKeyword	Professional Development	string
+38	en_US	submissionKeyword	Social Transformation	string
+39	en_US	submissionKeyword	employees	string
+40	en_US	submissionKeyword	survey	string
+41	en_US	submissionKeyword	Integrating Technology	string
+42	en_US	submissionKeyword	Computer Skills	string
+43	en_US	submissionKeyword	Survey	string
+44	en_US	submissionKeyword	Alberta	string
+45	en_US	submissionKeyword	National	string
+46	en_US	submissionKeyword	Provincial	string
+47	en_US	submissionKeyword	Professional Development	string
+48	en_US	submissionKeyword	education	string
+49	en_US	submissionKeyword	citizenship	string
+50	en_US	submissionKeyword	Common pool resource	string
+51	en_US	submissionKeyword	common property	string
+52	en_US	submissionKeyword	intellectual developments	string
+53	en_US	submissionKeyword	water	string
+54	en_US	submissionKeyword	Development	string
+55	en_US	submissionKeyword	engineering education	string
+56	en_US	submissionKeyword	service learning	string
+57	en_US	submissionKeyword	sustainability	string
+58	en_US	submissionKeyword	pigs	string
+59	en_US	submissionKeyword	food security	string
+60	en_US	submissionKeyword	water	string
+61	en_US	submissionKeyword	21st Century	string
+62	en_US	submissionKeyword	Diversity	string
+63	en_US	submissionKeyword	Multilingual	string
+64	en_US	submissionKeyword	Multiethnic	string
+65	en_US	submissionKeyword	Participatory Pedagogy	string
+66	en_US	submissionKeyword	Language	string
+67	en_US	submissionKeyword	Culture	string
+68	en_US	submissionKeyword	Gender	string
+69	en_US	submissionKeyword	Egalitarianism	string
+70	en_US	submissionKeyword	Social Transformation	string
+71	en_US	submissionKeyword	cattle	string
+72	en_US	submissionKeyword	food security	string
+73	en_US	submissionKeyword	Self-Organization	string
+74	en_US	submissionKeyword	Multi-Level Institutions	string
+75	en_US	submissionKeyword	Goverance	string
 \.
 
 
@@ -4819,36 +4809,36 @@ COPY public.data_object_tombstones (tombstone_id, data_object_id, date_deleted, 
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	0	1	0	3	8	2024-06-10 18:48:24
-2	1	1	3	1	3	1	2024-06-10 18:48:42
-3	1	0	4	0	3	7	2024-06-10 18:48:51
-4	2	0	1	0	3	8	2024-06-10 18:51:10
-5	2	2	3	1	6	11	2024-06-10 18:51:27
-6	3	0	1	0	3	8	2024-06-10 18:51:50
-7	3	3	3	1	3	1	2024-06-10 18:52:04
-8	5	0	1	0	3	8	2024-06-10 18:52:44
-9	5	4	3	1	3	1	2024-06-10 18:52:57
-10	5	0	4	0	3	7	2024-06-10 18:53:06
-11	6	0	1	0	3	8	2024-06-10 18:53:35
-12	6	5	3	1	3	1	2024-06-10 18:53:50
-13	6	0	4	0	3	7	2024-06-10 18:53:58
-14	7	0	1	0	3	8	2024-06-10 18:54:23
-15	9	0	1	0	3	8	2024-06-10 18:55:22
-16	9	7	3	1	3	1	2024-06-10 18:55:36
-17	9	0	4	0	3	7	2024-06-10 18:55:44
-18	10	0	1	0	3	8	2024-06-10 18:56:14
-19	12	0	1	0	3	8	2024-06-10 18:57:19
-20	13	0	1	0	3	8	2024-06-10 18:57:50
-21	13	10	3	1	3	2	2024-06-10 18:58:45
-22	15	0	1	0	3	8	2024-06-10 18:59:19
-23	15	11	3	1	3	1	2024-06-10 18:59:31
-24	15	0	4	0	3	7	2024-06-10 18:59:39
-25	17	0	1	0	3	8	2024-06-10 19:00:20
-26	17	12	3	1	3	1	2024-06-10 19:00:32
-27	17	0	4	0	3	7	2024-06-10 19:00:40
-28	18	0	1	0	3	9	2024-06-10 19:02:24
-29	19	0	1	0	3	8	2024-06-10 19:02:45
-30	19	13	3	1	3	1	2024-06-10 19:02:58
+1	1	0	1	0	3	8	2024-06-26 05:18:20
+2	1	1	3	1	3	1	2024-06-26 05:18:35
+3	1	0	4	0	3	7	2024-06-26 05:18:40
+4	2	0	1	0	3	8	2024-06-26 05:20:20
+5	2	2	3	1	6	11	2024-06-26 05:20:31
+6	3	0	1	0	3	8	2024-06-26 05:20:47
+7	3	3	3	1	3	1	2024-06-26 05:20:58
+8	5	0	1	0	3	8	2024-06-26 05:21:30
+9	5	4	3	1	3	1	2024-06-26 05:21:41
+10	5	0	4	0	3	7	2024-06-26 05:21:46
+11	6	0	1	0	3	8	2024-06-26 05:22:05
+12	6	5	3	1	3	1	2024-06-26 05:22:16
+13	6	0	4	0	3	7	2024-06-26 05:22:21
+14	7	0	1	0	3	8	2024-06-26 05:22:38
+15	9	0	1	0	3	8	2024-06-26 05:23:19
+16	9	7	3	1	3	1	2024-06-26 05:23:31
+17	9	0	4	0	3	7	2024-06-26 05:23:35
+18	10	0	1	0	3	8	2024-06-26 05:23:54
+19	12	0	1	0	3	8	2024-06-26 05:24:40
+20	13	0	1	0	3	8	2024-06-26 05:25:01
+21	13	10	3	1	3	2	2024-06-26 05:25:40
+22	15	0	1	0	3	8	2024-06-26 05:26:03
+23	15	11	3	1	3	1	2024-06-26 05:26:12
+24	15	0	4	0	3	7	2024-06-26 05:26:17
+25	17	0	1	0	3	8	2024-06-26 05:26:43
+26	17	12	3	1	3	1	2024-06-26 05:26:52
+27	17	0	4	0	3	7	2024-06-26 05:26:57
+28	18	0	1	0	3	9	2024-06-26 05:28:00
+29	19	0	1	0	3	8	2024-06-26 05:28:13
+30	19	13	3	1	3	1	2024-06-26 05:28:22
 \.
 
 
@@ -5079,275 +5069,271 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	17	2024-06-10 18:48:14	268435458	submission.event.general.metadataUpdated	0
-2	515	1	17	2024-06-10 18:48:15	1342177281	submission.event.fileUploaded	0
-3	1048585	1	17	2024-06-10 18:48:15	1342177288	submission.event.fileRevised	0
-4	515	1	17	2024-06-10 18:48:15	1342177296	submission.event.fileEdited	0
-5	1048585	1	17	2024-06-10 18:48:15	1342177296	submission.event.fileEdited	0
-6	1048585	1	17	2024-06-10 18:48:18	268435458	submission.event.general.metadataUpdated	0
-7	1048585	1	17	2024-06-10 18:48:19	268435457	submission.event.submissionSubmitted	0
-8	1048585	1	3	2024-06-10 18:48:24	805306371	log.editor.decision	0
-9	1048585	1	3	2024-06-10 18:48:30	1073741825	log.review.reviewerAssigned	0
-10	1048585	1	3	2024-06-10 18:48:34	1073741825	log.review.reviewerAssigned	0
-11	1048585	1	3	2024-06-10 18:48:40	1073741825	log.review.reviewerAssigned	0
-12	1048585	1	3	2024-06-10 18:48:42	805306371	log.editor.decision	0
-13	1048585	1	3	2024-06-10 18:48:48	268435459	submission.event.participantAdded	0
-14	1048585	1	3	2024-06-10 18:48:51	805306371	log.editor.decision	0
-15	1048585	1	3	2024-06-10 18:48:57	268435459	submission.event.participantAdded	0
-16	1048585	1	3	2024-06-10 18:49:01	268435459	submission.event.participantAdded	0
-17	1048585	1	3	2024-06-10 18:49:07	268435458	submission.event.general.metadataUpdated	0
-18	1048585	1	3	2024-06-10 18:49:11	268435458	submission.event.general.metadataUpdated	0
-19	1048585	1	3	2024-06-10 18:49:12	268435458	submission.event.general.metadataUpdated	0
-20	1048585	1	3	2024-06-10 18:49:15	268435458	submission.event.general.metadataUpdated	0
-21	515	2	3	2024-06-10 18:49:25	1342177281	submission.event.fileUploaded	0
-22	1048585	1	3	2024-06-10 18:49:25	1342177288	submission.event.fileRevised	0
-23	515	2	3	2024-06-10 18:49:26	1342177296	submission.event.fileEdited	0
-24	1048585	1	3	2024-06-10 18:49:26	1342177296	submission.event.fileEdited	0
-25	1048585	1	3	2024-06-10 18:49:34	268435459	submission.event.participantAdded	0
-26	1048585	1	17	2024-06-10 18:49:40	268435458	submission.event.general.metadataUpdated	0
-27	1048585	1	3	2024-06-10 18:49:44	268435458	submission.event.general.metadataUpdated	0
-28	1048585	1	3	2024-06-10 18:49:46	268435462	publication.event.published	0
-29	1048585	1	3	2024-06-10 18:49:54	268435463	publication.event.unpublished	0
-30	1048585	1	3	2024-06-10 18:49:58	268435462	publication.event.published	0
-31	1048585	1	3	2024-06-10 18:50:02	268435458	submission.event.general.metadataUpdated	0
-32	1048585	1	3	2024-06-10 18:50:03	268435464	publication.event.versionCreated	0
-33	1048585	1	3	2024-06-10 18:50:13	268435458	submission.event.general.metadataUpdated	0
-34	1048585	1	3	2024-06-10 18:50:17	268435458	submission.event.general.metadataUpdated	0
-35	1048585	1	3	2024-06-10 18:50:24	268435458	submission.event.general.metadataUpdated	0
-36	1048585	1	3	2024-06-10 18:50:25	268435462	publication.event.versionPublished	0
-37	1048585	1	3	2024-06-10 18:50:34	268435463	publication.event.versionUnpublished	0
-38	1048585	1	3	2024-06-10 18:50:40	268435459	submission.event.participantAdded	0
-39	1048585	1	3	2024-06-10 18:50:49	268435459	submission.event.participantAdded	0
-40	1048585	2	18	2024-06-10 18:51:00	268435458	submission.event.general.metadataUpdated	0
-41	515	3	18	2024-06-10 18:51:01	1342177281	submission.event.fileUploaded	0
-42	1048585	2	18	2024-06-10 18:51:01	1342177288	submission.event.fileRevised	0
-43	515	3	18	2024-06-10 18:51:01	1342177296	submission.event.fileEdited	0
-44	1048585	2	18	2024-06-10 18:51:01	1342177296	submission.event.fileEdited	0
-45	1048585	2	18	2024-06-10 18:51:04	268435458	submission.event.general.metadataUpdated	0
-46	1048585	2	18	2024-06-10 18:51:05	268435457	submission.event.submissionSubmitted	0
-47	1048585	2	3	2024-06-10 18:51:10	805306371	log.editor.decision	0
-48	515	4	3	2024-06-10 18:51:10	1342177281	submission.event.fileUploaded	0
-49	1048585	2	3	2024-06-10 18:51:10	1342177288	submission.event.fileRevised	0
-50	1048585	2	3	2024-06-10 18:51:15	268435459	submission.event.participantAdded	0
-51	1048585	2	3	2024-06-10 18:51:20	268435458	submission.event.general.metadataUpdated	0
-52	1048585	2	6	2024-06-10 18:51:27	805306372	log.editor.recommendation	0
-53	1048585	3	19	2024-06-10 18:51:40	268435458	submission.event.general.metadataUpdated	0
-54	515	5	19	2024-06-10 18:51:41	1342177281	submission.event.fileUploaded	0
-55	1048585	3	19	2024-06-10 18:51:41	1342177288	submission.event.fileRevised	0
-56	515	5	19	2024-06-10 18:51:42	1342177296	submission.event.fileEdited	0
-57	1048585	3	19	2024-06-10 18:51:42	1342177296	submission.event.fileEdited	0
-58	1048585	3	19	2024-06-10 18:51:44	268435458	submission.event.general.metadataUpdated	0
-59	1048585	3	19	2024-06-10 18:51:45	268435457	submission.event.submissionSubmitted	0
-60	1048585	3	3	2024-06-10 18:51:50	805306371	log.editor.decision	0
-61	515	6	3	2024-06-10 18:51:50	1342177281	submission.event.fileUploaded	0
-62	1048585	3	3	2024-06-10 18:51:50	1342177288	submission.event.fileRevised	0
-63	1048585	3	3	2024-06-10 18:51:56	1073741825	log.review.reviewerAssigned	0
-64	1048585	3	3	2024-06-10 18:52:02	1073741825	log.review.reviewerAssigned	0
-65	1048585	3	3	2024-06-10 18:52:04	805306371	log.editor.decision	0
-66	1048585	3	3	2024-06-10 18:52:10	268435459	submission.event.participantAdded	0
-67	1048585	4	20	2024-06-10 18:52:19	268435458	submission.event.general.metadataUpdated	0
-68	515	7	20	2024-06-10 18:52:20	1342177281	submission.event.fileUploaded	0
-69	1048585	4	20	2024-06-10 18:52:20	1342177288	submission.event.fileRevised	0
-70	515	7	20	2024-06-10 18:52:20	1342177296	submission.event.fileEdited	0
-71	1048585	4	20	2024-06-10 18:52:20	1342177296	submission.event.fileEdited	0
-72	1048585	4	20	2024-06-10 18:52:26	268435458	submission.event.general.metadataUpdated	0
-73	1048585	4	20	2024-06-10 18:52:27	268435457	submission.event.submissionSubmitted	0
-74	1048585	5	21	2024-06-10 18:52:34	268435458	submission.event.general.metadataUpdated	0
-75	515	8	21	2024-06-10 18:52:35	1342177281	submission.event.fileUploaded	0
-76	1048585	5	21	2024-06-10 18:52:35	1342177288	submission.event.fileRevised	0
-77	515	8	21	2024-06-10 18:52:35	1342177296	submission.event.fileEdited	0
-78	1048585	5	21	2024-06-10 18:52:36	1342177296	submission.event.fileEdited	0
-79	1048585	5	21	2024-06-10 18:52:37	268435458	submission.event.general.metadataUpdated	0
-80	1048585	5	21	2024-06-10 18:52:38	268435457	submission.event.submissionSubmitted	0
-81	1048585	5	3	2024-06-10 18:52:44	805306371	log.editor.decision	0
-82	1048585	5	3	2024-06-10 18:52:50	1073741825	log.review.reviewerAssigned	0
-83	1048585	5	3	2024-06-10 18:52:56	1073741825	log.review.reviewerAssigned	0
-84	1048585	5	3	2024-06-10 18:52:57	805306371	log.editor.decision	0
-85	1048585	5	3	2024-06-10 18:53:03	268435459	submission.event.participantAdded	0
-86	1048585	5	3	2024-06-10 18:53:06	805306371	log.editor.decision	0
-87	1048585	5	3	2024-06-10 18:53:11	268435459	submission.event.participantAdded	0
-88	1048585	5	3	2024-06-10 18:53:16	268435459	submission.event.participantAdded	0
-89	1048585	6	22	2024-06-10 18:53:24	268435458	submission.event.general.metadataUpdated	0
-90	515	9	22	2024-06-10 18:53:26	1342177281	submission.event.fileUploaded	0
-91	1048585	6	22	2024-06-10 18:53:26	1342177288	submission.event.fileRevised	0
-92	515	9	22	2024-06-10 18:53:26	1342177296	submission.event.fileEdited	0
-93	1048585	6	22	2024-06-10 18:53:26	1342177296	submission.event.fileEdited	0
-94	1048585	6	22	2024-06-10 18:53:29	268435458	submission.event.general.metadataUpdated	0
-95	1048585	6	22	2024-06-10 18:53:30	268435457	submission.event.submissionSubmitted	0
-96	1048585	6	3	2024-06-10 18:53:35	805306371	log.editor.decision	0
-97	515	10	3	2024-06-10 18:53:35	1342177281	submission.event.fileUploaded	0
-98	1048585	6	3	2024-06-10 18:53:35	1342177288	submission.event.fileRevised	0
-99	1048585	6	3	2024-06-10 18:53:41	1073741825	log.review.reviewerAssigned	0
-100	1048585	6	3	2024-06-10 18:53:48	1073741825	log.review.reviewerAssigned	0
-101	1048585	6	3	2024-06-10 18:53:50	805306371	log.editor.decision	0
-102	1048585	6	3	2024-06-10 18:53:55	268435459	submission.event.participantAdded	0
-103	1048585	6	3	2024-06-10 18:53:58	805306371	log.editor.decision	0
-104	1048585	6	3	2024-06-10 18:54:03	268435459	submission.event.participantAdded	0
-105	1048585	7	23	2024-06-10 18:54:12	268435458	submission.event.general.metadataUpdated	0
-106	515	11	23	2024-06-10 18:54:14	1342177281	submission.event.fileUploaded	0
-107	1048585	7	23	2024-06-10 18:54:14	1342177288	submission.event.fileRevised	0
-108	515	11	23	2024-06-10 18:54:14	1342177296	submission.event.fileEdited	0
-109	1048585	7	23	2024-06-10 18:54:14	1342177296	submission.event.fileEdited	0
-110	1048585	7	23	2024-06-10 18:54:16	268435458	submission.event.general.metadataUpdated	0
-111	1048585	7	23	2024-06-10 18:54:17	268435457	submission.event.submissionSubmitted	0
-112	1048585	7	3	2024-06-10 18:54:23	805306371	log.editor.decision	0
-113	515	12	3	2024-06-10 18:54:23	1342177281	submission.event.fileUploaded	0
-114	1048585	7	3	2024-06-10 18:54:23	1342177288	submission.event.fileRevised	0
-115	1048585	7	3	2024-06-10 18:54:29	1073741825	log.review.reviewerAssigned	0
-116	1048585	7	3	2024-06-10 18:54:33	1073741825	log.review.reviewerAssigned	0
-117	1048585	7	3	2024-06-10 18:54:39	1073741825	log.review.reviewerAssigned	0
-118	1048585	7	8	2024-06-10 18:54:44	1073741830	log.review.reviewAccepted	0
-119	1048585	7	8	2024-06-10 18:54:48	1073741848	log.review.reviewReady	0
-120	1048585	8	24	2024-06-10 18:54:56	268435458	submission.event.general.metadataUpdated	0
-121	515	13	24	2024-06-10 18:54:57	1342177281	submission.event.fileUploaded	0
-122	1048585	8	24	2024-06-10 18:54:57	1342177288	submission.event.fileRevised	0
-123	515	13	24	2024-06-10 18:54:57	1342177296	submission.event.fileEdited	0
-124	1048585	8	24	2024-06-10 18:54:57	1342177296	submission.event.fileEdited	0
-125	1048585	8	24	2024-06-10 18:55:02	268435458	submission.event.general.metadataUpdated	0
-126	1048585	8	24	2024-06-10 18:55:04	268435457	submission.event.submissionSubmitted	0
-127	1048585	9	25	2024-06-10 18:55:11	268435458	submission.event.general.metadataUpdated	0
-128	515	14	25	2024-06-10 18:55:12	1342177281	submission.event.fileUploaded	0
-129	1048585	9	25	2024-06-10 18:55:12	1342177288	submission.event.fileRevised	0
-130	515	14	25	2024-06-10 18:55:13	1342177296	submission.event.fileEdited	0
-131	1048585	9	25	2024-06-10 18:55:13	1342177296	submission.event.fileEdited	0
-132	1048585	9	25	2024-06-10 18:55:15	268435458	submission.event.general.metadataUpdated	0
-133	1048585	9	25	2024-06-10 18:55:15	268435457	submission.event.submissionSubmitted	0
-134	1048585	9	3	2024-06-10 18:55:22	805306371	log.editor.decision	0
-135	1048585	9	3	2024-06-10 18:55:28	1073741825	log.review.reviewerAssigned	0
-136	1048585	9	3	2024-06-10 18:55:34	1073741825	log.review.reviewerAssigned	0
-137	1048585	9	3	2024-06-10 18:55:36	805306371	log.editor.decision	0
-138	1048585	9	3	2024-06-10 18:55:42	268435459	submission.event.participantAdded	0
-139	1048585	9	3	2024-06-10 18:55:44	805306371	log.editor.decision	0
-140	1048585	9	3	2024-06-10 18:55:50	268435459	submission.event.participantAdded	0
-141	1048585	9	3	2024-06-10 18:55:54	268435459	submission.event.participantAdded	0
-142	1048585	10	26	2024-06-10 18:56:02	268435458	submission.event.general.metadataUpdated	0
-143	515	15	26	2024-06-10 18:56:04	1342177281	submission.event.fileUploaded	0
-144	1048585	10	26	2024-06-10 18:56:04	1342177288	submission.event.fileRevised	0
-145	515	15	26	2024-06-10 18:56:04	1342177296	submission.event.fileEdited	0
-146	1048585	10	26	2024-06-10 18:56:04	1342177296	submission.event.fileEdited	0
-147	1048585	10	26	2024-06-10 18:56:06	268435458	submission.event.general.metadataUpdated	0
-148	1048585	10	26	2024-06-10 18:56:07	268435457	submission.event.submissionSubmitted	0
-149	1048585	10	3	2024-06-10 18:56:14	805306371	log.editor.decision	0
-150	1048585	10	3	2024-06-10 18:56:20	1073741825	log.review.reviewerAssigned	0
-151	1048585	10	3	2024-06-10 18:56:26	1073741825	log.review.reviewerAssigned	0
-152	1048585	10	9	2024-06-10 18:56:30	1073741830	log.review.reviewAccepted	0
-153	1048585	10	9	2024-06-10 18:56:34	1073741848	log.review.reviewReady	0
-154	1048585	10	10	2024-06-10 18:56:39	1073741830	log.review.reviewAccepted	0
-155	1048585	10	10	2024-06-10 18:56:42	1073741848	log.review.reviewReady	0
-156	1048585	11	27	2024-06-10 18:56:51	268435458	submission.event.general.metadataUpdated	0
-157	515	16	27	2024-06-10 18:56:52	1342177281	submission.event.fileUploaded	0
-158	1048585	11	27	2024-06-10 18:56:52	1342177288	submission.event.fileRevised	0
-159	515	16	27	2024-06-10 18:56:53	1342177296	submission.event.fileEdited	0
-160	1048585	11	27	2024-06-10 18:56:53	1342177296	submission.event.fileEdited	0
-161	1048585	11	27	2024-06-10 18:56:58	268435458	submission.event.general.metadataUpdated	0
-162	1048585	11	27	2024-06-10 18:56:59	268435457	submission.event.submissionSubmitted	0
-163	1048585	12	28	2024-06-10 18:57:07	268435458	submission.event.general.metadataUpdated	0
-164	515	17	28	2024-06-10 18:57:08	1342177281	submission.event.fileUploaded	0
-165	1048585	12	28	2024-06-10 18:57:08	1342177288	submission.event.fileRevised	0
-166	515	17	28	2024-06-10 18:57:08	1342177296	submission.event.fileEdited	0
-167	1048585	12	28	2024-06-10 18:57:08	1342177296	submission.event.fileEdited	0
-168	1048585	12	28	2024-06-10 18:57:11	268435458	submission.event.general.metadataUpdated	0
-169	1048585	12	28	2024-06-10 18:57:12	268435457	submission.event.submissionSubmitted	0
-170	1048585	12	3	2024-06-10 18:57:19	805306371	log.editor.decision	0
-171	1048585	12	3	2024-06-10 18:57:25	1073741825	log.review.reviewerAssigned	0
-172	1048585	12	3	2024-06-10 18:57:29	1073741825	log.review.reviewerAssigned	0
-173	1048585	13	29	2024-06-10 18:57:37	268435458	submission.event.general.metadataUpdated	0
-174	515	18	29	2024-06-10 18:57:38	1342177281	submission.event.fileUploaded	0
-175	1048585	13	29	2024-06-10 18:57:38	1342177288	submission.event.fileRevised	0
-176	515	18	29	2024-06-10 18:57:39	1342177296	submission.event.fileEdited	0
-177	1048585	13	29	2024-06-10 18:57:39	1342177296	submission.event.fileEdited	0
-178	1048585	13	29	2024-06-10 18:57:41	268435458	submission.event.general.metadataUpdated	0
-179	1048585	13	29	2024-06-10 18:57:42	268435457	submission.event.submissionSubmitted	0
-180	1048585	13	3	2024-06-10 18:57:50	805306371	log.editor.decision	0
-181	515	19	3	2024-06-10 18:57:50	1342177281	submission.event.fileUploaded	0
-182	1048585	13	3	2024-06-10 18:57:50	1342177288	submission.event.fileRevised	0
-183	1048585	13	3	2024-06-10 18:57:56	1073741825	log.review.reviewerAssigned	0
-184	1048585	13	3	2024-06-10 18:58:00	1073741825	log.review.reviewerAssigned	0
-185	1048585	13	3	2024-06-10 18:58:06	1073741825	log.review.reviewerAssigned	0
-186	1048585	13	7	2024-06-10 18:58:11	1073741830	log.review.reviewAccepted	0
-187	1048585	13	7	2024-06-10 18:58:15	1073741848	log.review.reviewReady	0
-188	1048585	13	9	2024-06-10 18:58:20	1073741830	log.review.reviewAccepted	0
-189	1048585	13	9	2024-06-10 18:58:24	1073741848	log.review.reviewReady	0
-190	1048585	13	10	2024-06-10 18:58:30	1073741830	log.review.reviewAccepted	0
-191	1048585	13	10	2024-06-10 18:58:34	1073741848	log.review.reviewReady	0
-192	1048585	13	3	2024-06-10 18:58:45	805306371	log.editor.decision	0
-193	1048585	14	30	2024-06-10 18:58:53	268435458	submission.event.general.metadataUpdated	0
-194	515	20	30	2024-06-10 18:58:54	1342177281	submission.event.fileUploaded	0
-195	1048585	14	30	2024-06-10 18:58:54	1342177288	submission.event.fileRevised	0
-196	515	20	30	2024-06-10 18:58:55	1342177296	submission.event.fileEdited	0
-197	1048585	14	30	2024-06-10 18:58:55	1342177296	submission.event.fileEdited	0
-198	1048585	14	30	2024-06-10 18:58:57	268435458	submission.event.general.metadataUpdated	0
-199	1048585	14	30	2024-06-10 18:58:58	268435457	submission.event.submissionSubmitted	0
-200	1048585	15	31	2024-06-10 18:59:06	268435458	submission.event.general.metadataUpdated	0
-201	515	21	31	2024-06-10 18:59:07	1342177281	submission.event.fileUploaded	0
-202	1048585	15	31	2024-06-10 18:59:07	1342177288	submission.event.fileRevised	0
-203	515	21	31	2024-06-10 18:59:07	1342177296	submission.event.fileEdited	0
-204	1048585	15	31	2024-06-10 18:59:07	1342177296	submission.event.fileEdited	0
-205	1048585	15	31	2024-06-10 18:59:09	268435458	submission.event.general.metadataUpdated	0
-206	1048585	15	31	2024-06-10 18:59:10	268435457	submission.event.submissionSubmitted	0
-207	1048585	15	3	2024-06-10 18:59:19	805306371	log.editor.decision	0
-208	1048585	15	3	2024-06-10 18:59:24	1073741825	log.review.reviewerAssigned	0
-209	1048585	15	3	2024-06-10 18:59:28	1073741825	log.review.reviewerAssigned	0
-210	1048585	15	3	2024-06-10 18:59:31	805306371	log.editor.decision	0
-211	1048585	15	3	2024-06-10 18:59:36	268435459	submission.event.participantAdded	0
-212	1048585	15	3	2024-06-10 18:59:39	805306371	log.editor.decision	0
-213	1048585	15	3	2024-06-10 18:59:44	268435459	submission.event.participantAdded	0
-214	1048585	16	32	2024-06-10 18:59:53	268435458	submission.event.general.metadataUpdated	0
-215	515	22	32	2024-06-10 18:59:54	1342177281	submission.event.fileUploaded	0
-216	1048585	16	32	2024-06-10 18:59:54	1342177288	submission.event.fileRevised	0
-217	515	22	32	2024-06-10 18:59:55	1342177296	submission.event.fileEdited	0
-218	1048585	16	32	2024-06-10 18:59:55	1342177296	submission.event.fileEdited	0
-219	1048585	16	32	2024-06-10 18:59:57	268435458	submission.event.general.metadataUpdated	0
-220	1048585	16	32	2024-06-10 18:59:58	268435457	submission.event.submissionSubmitted	0
-221	1048585	17	33	2024-06-10 19:00:06	268435458	submission.event.general.metadataUpdated	0
-222	515	23	33	2024-06-10 19:00:07	1342177281	submission.event.fileUploaded	0
-223	1048585	17	33	2024-06-10 19:00:07	1342177288	submission.event.fileRevised	0
-224	515	23	33	2024-06-10 19:00:07	1342177296	submission.event.fileEdited	0
-225	1048585	17	33	2024-06-10 19:00:07	1342177296	submission.event.fileEdited	0
-226	1048585	17	33	2024-06-10 19:00:10	268435458	submission.event.general.metadataUpdated	0
-227	1048585	17	33	2024-06-10 19:00:11	268435457	submission.event.submissionSubmitted	0
-228	1048585	17	3	2024-06-10 19:00:20	805306371	log.editor.decision	0
-229	1048585	17	3	2024-06-10 19:00:26	1073741825	log.review.reviewerAssigned	0
-230	1048585	17	3	2024-06-10 19:00:30	1073741825	log.review.reviewerAssigned	0
-231	1048585	17	3	2024-06-10 19:00:32	805306371	log.editor.decision	0
-232	1048585	17	3	2024-06-10 19:00:38	268435459	submission.event.participantAdded	0
-233	1048585	17	3	2024-06-10 19:00:40	805306371	log.editor.decision	0
-234	1048585	17	3	2024-06-10 19:00:46	268435459	submission.event.participantAdded	0
-235	1048585	17	3	2024-06-10 19:00:50	268435459	submission.event.participantAdded	0
-236	515	24	3	2024-06-10 19:00:56	1342177281	submission.event.fileUploaded	0
-237	1048585	17	3	2024-06-10 19:00:56	1342177288	submission.event.fileRevised	0
-238	515	24	3	2024-06-10 19:00:57	1342177296	submission.event.fileEdited	0
-239	1048585	17	3	2024-06-10 19:00:57	1342177296	submission.event.fileEdited	0
-240	1048585	17	3	2024-06-10 19:01:07	268435458	submission.event.general.metadataUpdated	0
-241	1048585	17	3	2024-06-10 19:01:08	268435462	publication.event.scheduled	0
-242	1048585	17	3	2024-06-10 19:01:12	268435462	publication.event.published	0
-243	1048585	17	3	2024-06-10 19:01:22	268435463	publication.event.unpublished	0
-244	1048585	17	3	2024-06-10 19:01:22	268435462	publication.event.scheduled	0
-245	1048585	17	3	2024-06-10 19:01:31	268435462	publication.event.published	0
-246	1048585	17	3	2024-06-10 19:01:41	268435463	publication.event.unpublished	0
-247	1048585	17	3	2024-06-10 19:01:41	268435458	submission.event.general.metadataUpdated	0
-248	1048585	17	3	2024-06-10 19:01:56	268435458	submission.event.general.metadataUpdated	0
-249	1048585	17	3	2024-06-10 19:01:58	268435462	publication.event.published	0
-250	1048585	18	34	2024-06-10 19:02:10	268435458	submission.event.general.metadataUpdated	0
-251	515	25	34	2024-06-10 19:02:11	1342177281	submission.event.fileUploaded	0
-252	1048585	18	34	2024-06-10 19:02:11	1342177288	submission.event.fileRevised	0
-253	515	25	34	2024-06-10 19:02:12	1342177296	submission.event.fileEdited	0
-254	1048585	18	34	2024-06-10 19:02:12	1342177296	submission.event.fileEdited	0
-255	1048585	18	34	2024-06-10 19:02:14	268435458	submission.event.general.metadataUpdated	0
-256	1048585	18	34	2024-06-10 19:02:15	268435457	submission.event.submissionSubmitted	0
-257	1048585	18	3	2024-06-10 19:02:24	805306371	log.editor.decision	0
-258	1048585	19	35	2024-06-10 19:02:32	268435458	submission.event.general.metadataUpdated	0
-259	515	26	35	2024-06-10 19:02:33	1342177281	submission.event.fileUploaded	0
-260	1048585	19	35	2024-06-10 19:02:33	1342177288	submission.event.fileRevised	0
-261	515	26	35	2024-06-10 19:02:34	1342177296	submission.event.fileEdited	0
-262	1048585	19	35	2024-06-10 19:02:34	1342177296	submission.event.fileEdited	0
-263	1048585	19	35	2024-06-10 19:02:36	268435458	submission.event.general.metadataUpdated	0
-264	1048585	19	35	2024-06-10 19:02:37	268435457	submission.event.submissionSubmitted	0
-265	1048585	19	3	2024-06-10 19:02:45	805306371	log.editor.decision	0
-266	1048585	19	3	2024-06-10 19:02:51	1073741825	log.review.reviewerAssigned	0
-267	1048585	19	3	2024-06-10 19:02:55	1073741825	log.review.reviewerAssigned	0
-268	1048585	19	3	2024-06-10 19:02:58	805306371	log.editor.decision	0
-269	1048585	19	3	2024-06-10 19:03:03	268435459	submission.event.participantAdded	0
+1	1048585	1	17	2024-06-26 05:18:14	268435458	submission.event.general.metadataUpdated	0
+2	515	1	17	2024-06-26 05:18:15	1342177281	submission.event.fileUploaded	0
+3	1048585	1	17	2024-06-26 05:18:15	1342177288	submission.event.fileRevised	0
+4	515	1	17	2024-06-26 05:18:15	1342177296	submission.event.fileEdited	0
+5	1048585	1	17	2024-06-26 05:18:15	1342177296	submission.event.fileEdited	0
+6	1048585	1	17	2024-06-26 05:18:17	268435458	submission.event.general.metadataUpdated	0
+7	1048585	1	17	2024-06-26 05:18:17	268435457	submission.event.submissionSubmitted	0
+8	1048585	1	3	2024-06-26 05:18:20	805306371	log.editor.decision	0
+9	515	2	3	2024-06-26 05:18:20	1342177281	submission.event.fileUploaded	0
+10	1048585	1	3	2024-06-26 05:18:20	1342177288	submission.event.fileRevised	0
+11	1048585	1	3	2024-06-26 05:18:24	1073741825	log.review.reviewerAssigned	0
+12	1048585	1	3	2024-06-26 05:18:28	1073741825	log.review.reviewerAssigned	0
+13	1048585	1	3	2024-06-26 05:18:34	1073741825	log.review.reviewerAssigned	0
+14	1048585	1	3	2024-06-26 05:18:35	805306371	log.editor.decision	0
+15	1048585	1	3	2024-06-26 05:18:38	268435459	submission.event.participantAdded	0
+16	1048585	1	3	2024-06-26 05:18:40	805306371	log.editor.decision	0
+17	1048585	1	3	2024-06-26 05:18:44	268435459	submission.event.participantAdded	0
+18	1048585	1	3	2024-06-26 05:18:46	268435459	submission.event.participantAdded	0
+19	1048585	1	3	2024-06-26 05:18:50	268435458	submission.event.general.metadataUpdated	0
+20	1048585	1	3	2024-06-26 05:18:52	268435458	submission.event.general.metadataUpdated	0
+21	1048585	1	3	2024-06-26 05:18:53	268435458	submission.event.general.metadataUpdated	0
+22	1048585	1	3	2024-06-26 05:18:55	268435458	submission.event.general.metadataUpdated	0
+23	1048585	1	3	2024-06-26 05:18:58	268435458	submission.event.general.metadataUpdated	0
+24	515	3	3	2024-06-26 05:19:03	1342177281	submission.event.fileUploaded	0
+25	1048585	1	3	2024-06-26 05:19:03	1342177288	submission.event.fileRevised	0
+26	515	3	3	2024-06-26 05:19:03	1342177296	submission.event.fileEdited	0
+27	1048585	1	3	2024-06-26 05:19:03	1342177296	submission.event.fileEdited	0
+28	1048585	1	3	2024-06-26 05:19:09	268435459	submission.event.participantAdded	0
+29	1048585	1	17	2024-06-26 05:19:13	268435458	submission.event.general.metadataUpdated	0
+30	1048585	1	3	2024-06-26 05:19:16	268435458	submission.event.general.metadataUpdated	0
+31	1048585	1	3	2024-06-26 05:19:17	268435462	publication.event.published	0
+32	1048585	1	3	2024-06-26 05:19:23	268435463	publication.event.unpublished	0
+33	1048585	1	3	2024-06-26 05:19:25	268435462	publication.event.published	0
+34	1048585	1	3	2024-06-26 05:19:27	268435458	submission.event.general.metadataUpdated	0
+35	1048585	1	3	2024-06-26 05:19:27	268435464	publication.event.versionCreated	0
+36	1048585	1	3	2024-06-26 05:19:37	268435458	submission.event.general.metadataUpdated	0
+37	1048585	1	3	2024-06-26 05:19:41	268435458	submission.event.general.metadataUpdated	0
+38	1048585	1	3	2024-06-26 05:19:49	268435458	submission.event.general.metadataUpdated	0
+39	1048585	1	3	2024-06-26 05:19:50	268435462	publication.event.versionPublished	0
+40	1048585	1	3	2024-06-26 05:19:57	268435463	publication.event.versionUnpublished	0
+41	1048585	1	3	2024-06-26 05:20:00	268435459	submission.event.participantAdded	0
+42	1048585	1	3	2024-06-26 05:20:06	268435459	submission.event.participantAdded	0
+43	1048585	2	18	2024-06-26 05:20:14	268435458	submission.event.general.metadataUpdated	0
+44	515	4	18	2024-06-26 05:20:15	1342177281	submission.event.fileUploaded	0
+45	1048585	2	18	2024-06-26 05:20:15	1342177288	submission.event.fileRevised	0
+46	515	4	18	2024-06-26 05:20:15	1342177296	submission.event.fileEdited	0
+47	1048585	2	18	2024-06-26 05:20:15	1342177296	submission.event.fileEdited	0
+48	1048585	2	18	2024-06-26 05:20:17	268435458	submission.event.general.metadataUpdated	0
+49	1048585	2	18	2024-06-26 05:20:18	268435457	submission.event.submissionSubmitted	0
+50	1048585	2	3	2024-06-26 05:20:20	805306371	log.editor.decision	0
+51	1048585	2	3	2024-06-26 05:20:24	268435459	submission.event.participantAdded	0
+52	1048585	2	3	2024-06-26 05:20:28	268435458	submission.event.general.metadataUpdated	0
+53	1048585	2	6	2024-06-26 05:20:31	805306372	log.editor.recommendation	0
+54	1048585	3	19	2024-06-26 05:20:40	268435458	submission.event.general.metadataUpdated	0
+55	515	5	19	2024-06-26 05:20:41	1342177281	submission.event.fileUploaded	0
+56	1048585	3	19	2024-06-26 05:20:41	1342177288	submission.event.fileRevised	0
+57	515	5	19	2024-06-26 05:20:41	1342177296	submission.event.fileEdited	0
+58	1048585	3	19	2024-06-26 05:20:41	1342177296	submission.event.fileEdited	0
+59	1048585	3	19	2024-06-26 05:20:43	268435458	submission.event.general.metadataUpdated	0
+60	1048585	3	19	2024-06-26 05:20:44	268435457	submission.event.submissionSubmitted	0
+61	1048585	3	3	2024-06-26 05:20:47	805306371	log.editor.decision	0
+62	1048585	3	3	2024-06-26 05:20:51	1073741825	log.review.reviewerAssigned	0
+63	1048585	3	3	2024-06-26 05:20:57	1073741825	log.review.reviewerAssigned	0
+64	1048585	3	3	2024-06-26 05:20:58	805306371	log.editor.decision	0
+65	1048585	3	3	2024-06-26 05:21:02	268435459	submission.event.participantAdded	0
+66	1048585	4	20	2024-06-26 05:21:13	268435458	submission.event.general.metadataUpdated	0
+67	515	6	20	2024-06-26 05:21:14	1342177281	submission.event.fileUploaded	0
+68	1048585	4	20	2024-06-26 05:21:14	1342177288	submission.event.fileRevised	0
+69	515	6	20	2024-06-26 05:21:14	1342177296	submission.event.fileEdited	0
+70	1048585	4	20	2024-06-26 05:21:14	1342177296	submission.event.fileEdited	0
+71	1048585	4	20	2024-06-26 05:21:17	268435458	submission.event.general.metadataUpdated	0
+72	1048585	4	20	2024-06-26 05:21:18	268435458	submission.event.general.metadataUpdated	0
+73	1048585	4	20	2024-06-26 05:21:19	268435457	submission.event.submissionSubmitted	0
+74	1048585	5	21	2024-06-26 05:21:24	268435458	submission.event.general.metadataUpdated	0
+75	515	7	21	2024-06-26 05:21:25	1342177281	submission.event.fileUploaded	0
+76	1048585	5	21	2024-06-26 05:21:25	1342177288	submission.event.fileRevised	0
+77	515	7	21	2024-06-26 05:21:25	1342177296	submission.event.fileEdited	0
+78	1048585	5	21	2024-06-26 05:21:25	1342177296	submission.event.fileEdited	0
+79	1048585	5	21	2024-06-26 05:21:26	268435458	submission.event.general.metadataUpdated	0
+80	1048585	5	21	2024-06-26 05:21:27	268435457	submission.event.submissionSubmitted	0
+81	1048585	5	3	2024-06-26 05:21:30	805306371	log.editor.decision	0
+82	1048585	5	3	2024-06-26 05:21:34	1073741825	log.review.reviewerAssigned	0
+83	1048585	5	3	2024-06-26 05:21:40	1073741825	log.review.reviewerAssigned	0
+84	1048585	5	3	2024-06-26 05:21:41	805306371	log.editor.decision	0
+85	1048585	5	3	2024-06-26 05:21:45	268435459	submission.event.participantAdded	0
+86	1048585	5	3	2024-06-26 05:21:46	805306371	log.editor.decision	0
+87	1048585	5	3	2024-06-26 05:21:50	268435459	submission.event.participantAdded	0
+88	1048585	5	3	2024-06-26 05:21:52	268435459	submission.event.participantAdded	0
+89	1048585	6	22	2024-06-26 05:21:58	268435458	submission.event.general.metadataUpdated	0
+90	515	8	22	2024-06-26 05:21:59	1342177281	submission.event.fileUploaded	0
+91	1048585	6	22	2024-06-26 05:21:59	1342177288	submission.event.fileRevised	0
+92	515	8	22	2024-06-26 05:21:59	1342177296	submission.event.fileEdited	0
+93	1048585	6	22	2024-06-26 05:21:59	1342177296	submission.event.fileEdited	0
+94	1048585	6	22	2024-06-26 05:22:01	268435458	submission.event.general.metadataUpdated	0
+95	1048585	6	22	2024-06-26 05:22:02	268435457	submission.event.submissionSubmitted	0
+96	1048585	6	3	2024-06-26 05:22:05	805306371	log.editor.decision	0
+97	1048585	6	3	2024-06-26 05:22:09	1073741825	log.review.reviewerAssigned	0
+98	1048585	6	3	2024-06-26 05:22:15	1073741825	log.review.reviewerAssigned	0
+99	1048585	6	3	2024-06-26 05:22:16	805306371	log.editor.decision	0
+100	1048585	6	3	2024-06-26 05:22:20	268435459	submission.event.participantAdded	0
+101	1048585	6	3	2024-06-26 05:22:21	805306371	log.editor.decision	0
+102	1048585	6	3	2024-06-26 05:22:25	268435459	submission.event.participantAdded	0
+103	1048585	7	23	2024-06-26 05:22:32	268435458	submission.event.general.metadataUpdated	0
+104	515	9	23	2024-06-26 05:22:33	1342177281	submission.event.fileUploaded	0
+105	1048585	7	23	2024-06-26 05:22:33	1342177288	submission.event.fileRevised	0
+106	515	9	23	2024-06-26 05:22:33	1342177296	submission.event.fileEdited	0
+107	1048585	7	23	2024-06-26 05:22:33	1342177296	submission.event.fileEdited	0
+108	1048585	7	23	2024-06-26 05:22:34	268435458	submission.event.general.metadataUpdated	0
+109	1048585	7	23	2024-06-26 05:22:35	268435457	submission.event.submissionSubmitted	0
+110	1048585	7	3	2024-06-26 05:22:38	805306371	log.editor.decision	0
+111	1048585	7	3	2024-06-26 05:22:42	1073741825	log.review.reviewerAssigned	0
+112	1048585	7	3	2024-06-26 05:22:46	1073741825	log.review.reviewerAssigned	0
+113	1048585	7	3	2024-06-26 05:22:52	1073741825	log.review.reviewerAssigned	0
+114	1048585	7	8	2024-06-26 05:22:54	1073741830	log.review.reviewAccepted	0
+115	1048585	7	8	2024-06-26 05:22:57	1073741848	log.review.reviewReady	0
+116	1048585	8	24	2024-06-26 05:23:03	268435458	submission.event.general.metadataUpdated	0
+117	515	10	24	2024-06-26 05:23:04	1342177281	submission.event.fileUploaded	0
+118	1048585	8	24	2024-06-26 05:23:04	1342177288	submission.event.fileRevised	0
+119	515	10	24	2024-06-26 05:23:04	1342177296	submission.event.fileEdited	0
+120	1048585	8	24	2024-06-26 05:23:04	1342177296	submission.event.fileEdited	0
+121	1048585	8	24	2024-06-26 05:23:07	268435458	submission.event.general.metadataUpdated	0
+122	1048585	8	24	2024-06-26 05:23:07	268435458	submission.event.general.metadataUpdated	0
+123	1048585	8	24	2024-06-26 05:23:08	268435457	submission.event.submissionSubmitted	0
+124	1048585	9	25	2024-06-26 05:23:13	268435458	submission.event.general.metadataUpdated	0
+125	515	11	25	2024-06-26 05:23:14	1342177281	submission.event.fileUploaded	0
+126	1048585	9	25	2024-06-26 05:23:14	1342177288	submission.event.fileRevised	0
+127	515	11	25	2024-06-26 05:23:14	1342177296	submission.event.fileEdited	0
+128	1048585	9	25	2024-06-26 05:23:14	1342177296	submission.event.fileEdited	0
+129	1048585	9	25	2024-06-26 05:23:15	268435458	submission.event.general.metadataUpdated	0
+130	1048585	9	25	2024-06-26 05:23:16	268435457	submission.event.submissionSubmitted	0
+131	1048585	9	3	2024-06-26 05:23:19	805306371	log.editor.decision	0
+132	1048585	9	3	2024-06-26 05:23:24	1073741825	log.review.reviewerAssigned	0
+133	1048585	9	3	2024-06-26 05:23:29	1073741825	log.review.reviewerAssigned	0
+134	1048585	9	3	2024-06-26 05:23:31	805306371	log.editor.decision	0
+135	1048585	9	3	2024-06-26 05:23:34	268435459	submission.event.participantAdded	0
+136	1048585	9	3	2024-06-26 05:23:35	805306371	log.editor.decision	0
+137	1048585	9	3	2024-06-26 05:23:39	268435459	submission.event.participantAdded	0
+138	1048585	9	3	2024-06-26 05:23:41	268435459	submission.event.participantAdded	0
+139	1048585	10	26	2024-06-26 05:23:47	268435458	submission.event.general.metadataUpdated	0
+140	515	12	26	2024-06-26 05:23:48	1342177281	submission.event.fileUploaded	0
+141	1048585	10	26	2024-06-26 05:23:48	1342177288	submission.event.fileRevised	0
+142	515	12	26	2024-06-26 05:23:48	1342177296	submission.event.fileEdited	0
+143	1048585	10	26	2024-06-26 05:23:48	1342177296	submission.event.fileEdited	0
+144	1048585	10	26	2024-06-26 05:23:50	268435458	submission.event.general.metadataUpdated	0
+145	1048585	10	26	2024-06-26 05:23:50	268435457	submission.event.submissionSubmitted	0
+146	1048585	10	3	2024-06-26 05:23:54	805306371	log.editor.decision	0
+147	1048585	10	3	2024-06-26 05:23:58	1073741825	log.review.reviewerAssigned	0
+148	1048585	10	3	2024-06-26 05:24:04	1073741825	log.review.reviewerAssigned	0
+149	1048585	10	9	2024-06-26 05:24:07	1073741830	log.review.reviewAccepted	0
+150	1048585	10	9	2024-06-26 05:24:10	1073741848	log.review.reviewReady	0
+151	1048585	10	10	2024-06-26 05:24:12	1073741830	log.review.reviewAccepted	0
+152	1048585	10	10	2024-06-26 05:24:16	1073741848	log.review.reviewReady	0
+153	1048585	11	27	2024-06-26 05:24:21	268435458	submission.event.general.metadataUpdated	0
+154	515	13	27	2024-06-26 05:24:22	1342177281	submission.event.fileUploaded	0
+155	1048585	11	27	2024-06-26 05:24:22	1342177288	submission.event.fileRevised	0
+156	515	13	27	2024-06-26 05:24:22	1342177296	submission.event.fileEdited	0
+157	1048585	11	27	2024-06-26 05:24:22	1342177296	submission.event.fileEdited	0
+158	1048585	11	27	2024-06-26 05:24:25	268435458	submission.event.general.metadataUpdated	0
+159	1048585	11	27	2024-06-26 05:24:26	268435458	submission.event.general.metadataUpdated	0
+160	1048585	11	27	2024-06-26 05:24:27	268435457	submission.event.submissionSubmitted	0
+161	1048585	12	28	2024-06-26 05:24:32	268435458	submission.event.general.metadataUpdated	0
+162	515	14	28	2024-06-26 05:24:33	1342177281	submission.event.fileUploaded	0
+163	1048585	12	28	2024-06-26 05:24:33	1342177288	submission.event.fileRevised	0
+164	515	14	28	2024-06-26 05:24:33	1342177296	submission.event.fileEdited	0
+165	1048585	12	28	2024-06-26 05:24:33	1342177296	submission.event.fileEdited	0
+166	1048585	12	28	2024-06-26 05:24:35	268435458	submission.event.general.metadataUpdated	0
+167	1048585	12	28	2024-06-26 05:24:36	268435457	submission.event.submissionSubmitted	0
+168	1048585	12	3	2024-06-26 05:24:40	805306371	log.editor.decision	0
+169	1048585	12	3	2024-06-26 05:24:44	1073741825	log.review.reviewerAssigned	0
+170	1048585	12	3	2024-06-26 05:24:48	1073741825	log.review.reviewerAssigned	0
+171	1048585	13	29	2024-06-26 05:24:53	268435458	submission.event.general.metadataUpdated	0
+172	515	15	29	2024-06-26 05:24:54	1342177281	submission.event.fileUploaded	0
+173	1048585	13	29	2024-06-26 05:24:54	1342177288	submission.event.fileRevised	0
+174	515	15	29	2024-06-26 05:24:54	1342177296	submission.event.fileEdited	0
+175	1048585	13	29	2024-06-26 05:24:54	1342177296	submission.event.fileEdited	0
+176	1048585	13	29	2024-06-26 05:24:56	268435458	submission.event.general.metadataUpdated	0
+177	1048585	13	29	2024-06-26 05:24:57	268435457	submission.event.submissionSubmitted	0
+178	1048585	13	3	2024-06-26 05:25:01	805306371	log.editor.decision	0
+179	1048585	13	3	2024-06-26 05:25:05	1073741825	log.review.reviewerAssigned	0
+180	1048585	13	3	2024-06-26 05:25:09	1073741825	log.review.reviewerAssigned	0
+181	1048585	13	3	2024-06-26 05:25:15	1073741825	log.review.reviewerAssigned	0
+182	1048585	13	7	2024-06-26 05:25:18	1073741830	log.review.reviewAccepted	0
+183	1048585	13	7	2024-06-26 05:25:21	1073741848	log.review.reviewReady	0
+184	1048585	13	9	2024-06-26 05:25:23	1073741830	log.review.reviewAccepted	0
+185	1048585	13	9	2024-06-26 05:25:27	1073741848	log.review.reviewReady	0
+186	1048585	13	10	2024-06-26 05:25:30	1073741830	log.review.reviewAccepted	0
+187	1048585	13	10	2024-06-26 05:25:33	1073741848	log.review.reviewReady	0
+188	1048585	13	3	2024-06-26 05:25:40	805306371	log.editor.decision	0
+189	1048585	14	30	2024-06-26 05:25:45	268435458	submission.event.general.metadataUpdated	0
+190	515	16	30	2024-06-26 05:25:46	1342177281	submission.event.fileUploaded	0
+191	1048585	14	30	2024-06-26 05:25:46	1342177288	submission.event.fileRevised	0
+192	515	16	30	2024-06-26 05:25:46	1342177296	submission.event.fileEdited	0
+193	1048585	14	30	2024-06-26 05:25:46	1342177296	submission.event.fileEdited	0
+194	1048585	14	30	2024-06-26 05:25:48	268435458	submission.event.general.metadataUpdated	0
+195	1048585	14	30	2024-06-26 05:25:48	268435457	submission.event.submissionSubmitted	0
+196	1048585	15	31	2024-06-26 05:25:55	268435458	submission.event.general.metadataUpdated	0
+197	515	17	31	2024-06-26 05:25:56	1342177281	submission.event.fileUploaded	0
+198	1048585	15	31	2024-06-26 05:25:56	1342177288	submission.event.fileRevised	0
+199	515	17	31	2024-06-26 05:25:56	1342177296	submission.event.fileEdited	0
+200	1048585	15	31	2024-06-26 05:25:56	1342177296	submission.event.fileEdited	0
+201	1048585	15	31	2024-06-26 05:25:57	268435458	submission.event.general.metadataUpdated	0
+202	1048585	15	31	2024-06-26 05:25:58	268435457	submission.event.submissionSubmitted	0
+203	1048585	15	3	2024-06-26 05:26:03	805306371	log.editor.decision	0
+204	1048585	15	3	2024-06-26 05:26:07	1073741825	log.review.reviewerAssigned	0
+205	1048585	15	3	2024-06-26 05:26:11	1073741825	log.review.reviewerAssigned	0
+206	1048585	15	3	2024-06-26 05:26:12	805306371	log.editor.decision	0
+207	1048585	15	3	2024-06-26 05:26:15	268435459	submission.event.participantAdded	0
+208	1048585	15	3	2024-06-26 05:26:17	805306371	log.editor.decision	0
+209	1048585	15	3	2024-06-26 05:26:20	268435459	submission.event.participantAdded	0
+210	1048585	16	32	2024-06-26 05:26:26	268435458	submission.event.general.metadataUpdated	0
+211	515	18	32	2024-06-26 05:26:27	1342177281	submission.event.fileUploaded	0
+212	1048585	16	32	2024-06-26 05:26:27	1342177288	submission.event.fileRevised	0
+213	515	18	32	2024-06-26 05:26:27	1342177296	submission.event.fileEdited	0
+214	1048585	16	32	2024-06-26 05:26:27	1342177296	submission.event.fileEdited	0
+215	1048585	16	32	2024-06-26 05:26:29	268435458	submission.event.general.metadataUpdated	0
+216	1048585	16	32	2024-06-26 05:26:30	268435457	submission.event.submissionSubmitted	0
+217	1048585	17	33	2024-06-26 05:26:35	268435458	submission.event.general.metadataUpdated	0
+218	515	19	33	2024-06-26 05:26:36	1342177281	submission.event.fileUploaded	0
+219	1048585	17	33	2024-06-26 05:26:36	1342177288	submission.event.fileRevised	0
+220	515	19	33	2024-06-26 05:26:36	1342177296	submission.event.fileEdited	0
+221	1048585	17	33	2024-06-26 05:26:36	1342177296	submission.event.fileEdited	0
+222	1048585	17	33	2024-06-26 05:26:38	268435458	submission.event.general.metadataUpdated	0
+223	1048585	17	33	2024-06-26 05:26:38	268435457	submission.event.submissionSubmitted	0
+224	1048585	17	3	2024-06-26 05:26:43	805306371	log.editor.decision	0
+225	1048585	17	3	2024-06-26 05:26:48	1073741825	log.review.reviewerAssigned	0
+226	1048585	17	3	2024-06-26 05:26:51	1073741825	log.review.reviewerAssigned	0
+227	1048585	17	3	2024-06-26 05:26:52	805306371	log.editor.decision	0
+228	1048585	17	3	2024-06-26 05:26:56	268435459	submission.event.participantAdded	0
+229	1048585	17	3	2024-06-26 05:26:57	805306371	log.editor.decision	0
+230	1048585	17	3	2024-06-26 05:27:00	268435459	submission.event.participantAdded	0
+231	1048585	17	3	2024-06-26 05:27:03	268435459	submission.event.participantAdded	0
+232	515	20	3	2024-06-26 05:27:08	1342177281	submission.event.fileUploaded	0
+233	1048585	17	3	2024-06-26 05:27:08	1342177288	submission.event.fileRevised	0
+234	515	20	3	2024-06-26 05:27:08	1342177296	submission.event.fileEdited	0
+235	1048585	17	3	2024-06-26 05:27:08	1342177296	submission.event.fileEdited	0
+236	1048585	17	3	2024-06-26 05:27:13	268435458	submission.event.general.metadataUpdated	0
+237	1048585	17	3	2024-06-26 05:27:14	268435462	publication.event.scheduled	0
+238	1048585	17	3	2024-06-26 05:27:17	268435462	publication.event.published	0
+239	1048585	17	3	2024-06-26 05:27:23	268435463	publication.event.unpublished	0
+240	1048585	17	3	2024-06-26 05:27:23	268435462	publication.event.scheduled	0
+241	1048585	17	3	2024-06-26 05:27:28	268435462	publication.event.published	0
+242	1048585	17	3	2024-06-26 05:27:34	268435463	publication.event.unpublished	0
+243	1048585	17	3	2024-06-26 05:27:34	268435458	submission.event.general.metadataUpdated	0
+244	1048585	17	3	2024-06-26 05:27:43	268435458	submission.event.general.metadataUpdated	0
+245	1048585	17	3	2024-06-26 05:27:44	268435462	publication.event.published	0
+246	1048585	18	34	2024-06-26 05:27:53	268435458	submission.event.general.metadataUpdated	0
+247	515	21	34	2024-06-26 05:27:53	1342177281	submission.event.fileUploaded	0
+248	1048585	18	34	2024-06-26 05:27:53	1342177288	submission.event.fileRevised	0
+249	515	21	34	2024-06-26 05:27:53	1342177296	submission.event.fileEdited	0
+250	1048585	18	34	2024-06-26 05:27:53	1342177296	submission.event.fileEdited	0
+251	1048585	18	34	2024-06-26 05:27:55	268435458	submission.event.general.metadataUpdated	0
+252	1048585	18	34	2024-06-26 05:27:56	268435457	submission.event.submissionSubmitted	0
+253	1048585	18	3	2024-06-26 05:28:00	805306371	log.editor.decision	0
+254	1048585	19	35	2024-06-26 05:28:05	268435458	submission.event.general.metadataUpdated	0
+255	515	22	35	2024-06-26 05:28:06	1342177281	submission.event.fileUploaded	0
+256	1048585	19	35	2024-06-26 05:28:06	1342177288	submission.event.fileRevised	0
+257	515	22	35	2024-06-26 05:28:06	1342177296	submission.event.fileEdited	0
+258	1048585	19	35	2024-06-26 05:28:06	1342177296	submission.event.fileEdited	0
+259	1048585	19	35	2024-06-26 05:28:07	268435458	submission.event.general.metadataUpdated	0
+260	1048585	19	35	2024-06-26 05:28:08	268435457	submission.event.submissionSubmitted	0
+261	1048585	19	3	2024-06-26 05:28:13	805306371	log.editor.decision	0
+262	1048585	19	3	2024-06-26 05:28:17	1073741825	log.review.reviewerAssigned	0
+263	1048585	19	3	2024-06-26 05:28:21	1073741825	log.review.reviewerAssigned	0
+264	1048585	19	3	2024-06-26 05:28:22	805306371	log.editor.decision	0
+265	1048585	19	3	2024-06-26 05:28:25	268435459	submission.event.participantAdded	0
 \.
 
 
@@ -5387,235 +5373,221 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 8	editorName	Daniel Barnes	string
 8	submissionId	1	int
 8	decision	Send to Review	string
-9	reviewAssignmentId	1	string
-9	reviewerName	Julie Janssen	string
+9	fileStage	4	int
+9	sourceSubmissionFileId	1	int
+9	submissionFileId	2	int
+9	fileId	1	int
 9	submissionId	1	int
-9	stageId	3	int
-9	round	1	int
-10	reviewAssignmentId	2	string
-10	reviewerName	Aisla McCrae	string
+9	originalFileName	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
+9	username	dbarnes	string
+10	fileStage	4	int
+10	submissionFileId	2	int
+10	fileId	1	int
 10	submissionId	1	int
-10	stageId	3	int
-10	round	1	int
-11	reviewAssignmentId	3	string
-11	reviewerName	Adela Gallego	string
+10	username	dbarnes	string
+10	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
+11	reviewAssignmentId	1	string
+11	reviewerName	Julie Janssen	string
 11	submissionId	1	int
 11	stageId	3	int
 11	round	1	int
-12	editorName	Daniel Barnes	string
+12	reviewAssignmentId	2	string
+12	reviewerName	Aisla McCrae	string
 12	submissionId	1	int
-12	decision	Accept Submission	string
-13	name	Sarah Vogt	string
-13	username	svogt	string
-13	userGroupName	Copyeditor	string
+12	stageId	3	int
+12	round	1	int
+13	reviewAssignmentId	3	string
+13	reviewerName	Adela Gallego	string
+13	submissionId	1	int
+13	stageId	3	int
+13	round	1	int
 14	editorName	Daniel Barnes	string
 14	submissionId	1	int
-14	decision	Send To Production	string
-15	name	Stephen Hellier	string
-15	username	shellier	string
-15	userGroupName	Layout Editor	string
-16	name	Sabine Kumar	string
-16	username	skumar	string
-16	userGroupName	Proofreader	string
-21	fileStage	10	int
-21	sourceSubmissionFileId	\N	string
-21	submissionFileId	2	int
-21	fileId	2	int
-21	submissionId	1	int
-21	originalFileName	article.pdf	string
-21	username	dbarnes	string
-22	fileStage	10	int
-22	submissionFileId	2	int
-22	fileId	2	int
-22	submissionId	1	int
-22	username	dbarnes	string
-22	name	article.pdf	string
-23	fileStage	10	int
-23	sourceSubmissionFileId	\N	string
-23	submissionFileId	2	int
-23	fileId	2	int
-23	submissionId	1	int
-23	originalFileName	article.pdf	string
-23	username	dbarnes	string
+14	decision	Accept Submission	string
+15	name	Sarah Vogt	string
+15	username	svogt	string
+15	userGroupName	Copyeditor	string
+16	editorName	Daniel Barnes	string
+16	submissionId	1	int
+16	decision	Send To Production	string
+17	name	Stephen Hellier	string
+17	username	shellier	string
+17	userGroupName	Layout Editor	string
+18	name	Sabine Kumar	string
+18	username	skumar	string
+18	userGroupName	Proofreader	string
 24	fileStage	10	int
 24	sourceSubmissionFileId	\N	string
-24	submissionFileId	2	int
+24	submissionFileId	3	int
 24	fileId	2	int
 24	submissionId	1	int
-24	username	dbarnes	string
 24	originalFileName	article.pdf	string
-24	name	article.pdf	string
-25	name	Alan Mwandenga	string
-25	username	amwandenga	string
-25	userGroupName	Author	string
-38	name	Stephanie Berardo	string
-38	username	sberardo	string
-38	userGroupName	Section editor	string
-39	name	Stephanie Berardo	string
-39	username	sberardo	string
-39	userGroupName	Section editor	string
-41	fileStage	2	int
-41	sourceSubmissionFileId	\N	string
-41	submissionFileId	3	int
-41	fileId	3	int
-41	submissionId	2	int
-41	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-41	username	ccorino	string
-42	fileStage	2	int
-42	submissionFileId	3	int
-42	fileId	3	int
-42	submissionId	2	int
-42	username	ccorino	string
-42	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-43	fileStage	2	int
-43	sourceSubmissionFileId	\N	string
-43	submissionFileId	3	int
-43	fileId	3	int
-43	submissionId	2	int
-43	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-43	username	ccorino	string
+24	username	dbarnes	string
+25	fileStage	10	int
+25	submissionFileId	3	int
+25	fileId	2	int
+25	submissionId	1	int
+25	username	dbarnes	string
+25	name	article.pdf	string
+26	fileStage	10	int
+26	sourceSubmissionFileId	\N	string
+26	submissionFileId	3	int
+26	fileId	2	int
+26	submissionId	1	int
+26	originalFileName	article.pdf	string
+26	username	dbarnes	string
+27	fileStage	10	int
+27	sourceSubmissionFileId	\N	string
+27	submissionFileId	3	int
+27	fileId	2	int
+27	submissionId	1	int
+27	username	dbarnes	string
+27	originalFileName	article.pdf	string
+27	name	article.pdf	string
+28	name	Alan Mwandenga	string
+28	username	amwandenga	string
+28	userGroupName	Author	string
+41	name	Stephanie Berardo	string
+41	username	sberardo	string
+41	userGroupName	Section editor	string
+42	name	Stephanie Berardo	string
+42	username	sberardo	string
+42	userGroupName	Section editor	string
 44	fileStage	2	int
 44	sourceSubmissionFileId	\N	string
-44	submissionFileId	3	int
+44	submissionFileId	4	int
 44	fileId	3	int
 44	submissionId	2	int
-44	username	ccorino	string
 44	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-44	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-47	editorName	Daniel Barnes	string
+44	username	ccorino	string
+45	fileStage	2	int
+45	submissionFileId	4	int
+45	fileId	3	int
+45	submissionId	2	int
+45	username	ccorino	string
+45	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+46	fileStage	2	int
+46	sourceSubmissionFileId	\N	string
+46	submissionFileId	4	int
+46	fileId	3	int
+46	submissionId	2	int
+46	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+46	username	ccorino	string
+47	fileStage	2	int
+47	sourceSubmissionFileId	\N	string
+47	submissionFileId	4	int
+47	fileId	3	int
 47	submissionId	2	int
-47	decision	Send to Review	string
-48	fileStage	4	int
-48	sourceSubmissionFileId	3	int
-48	submissionFileId	4	int
-48	fileId	3	int
-48	submissionId	2	int
-48	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-48	username	dbarnes	string
-49	fileStage	4	int
-49	submissionFileId	4	int
-49	fileId	3	int
-49	submissionId	2	int
-49	username	dbarnes	string
-49	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
-50	name	Minoti Inoue	string
-50	username	minoue	string
-50	userGroupName	Section editor	string
-52	editorName	Minoti Inoue	string
-52	submissionId	2	int
-52	decision	Accept Submission	string
-54	fileStage	2	int
-54	sourceSubmissionFileId	\N	string
-54	submissionFileId	5	int
-54	fileId	4	int
-54	submissionId	3	int
-54	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-54	username	ckwantes	string
+47	username	ccorino	string
+47	originalFileName	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+47	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+50	editorName	Daniel Barnes	string
+50	submissionId	2	int
+50	decision	Send to Review	string
+51	name	Minoti Inoue	string
+51	username	minoue	string
+51	userGroupName	Section editor	string
+53	editorName	Minoti Inoue	string
+53	submissionId	2	int
+53	decision	Accept Submission	string
 55	fileStage	2	int
+55	sourceSubmissionFileId	\N	string
 55	submissionFileId	5	int
 55	fileId	4	int
 55	submissionId	3	int
+55	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 55	username	ckwantes	string
-55	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 56	fileStage	2	int
-56	sourceSubmissionFileId	\N	string
 56	submissionFileId	5	int
 56	fileId	4	int
 56	submissionId	3	int
-56	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 56	username	ckwantes	string
+56	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
 57	fileStage	2	int
 57	sourceSubmissionFileId	\N	string
 57	submissionFileId	5	int
 57	fileId	4	int
 57	submissionId	3	int
-57	username	ckwantes	string
 57	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-57	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-60	editorName	Daniel Barnes	string
-60	submissionId	3	int
-60	decision	Send to Review	string
-61	fileStage	4	int
-61	sourceSubmissionFileId	5	int
-61	submissionFileId	6	int
-61	fileId	4	int
+57	username	ckwantes	string
+58	fileStage	2	int
+58	sourceSubmissionFileId	\N	string
+58	submissionFileId	5	int
+58	fileId	4	int
+58	submissionId	3	int
+58	username	ckwantes	string
+58	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+58	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
+61	editorName	Daniel Barnes	string
 61	submissionId	3	int
-61	originalFileName	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-61	username	dbarnes	string
-62	fileStage	4	int
-62	submissionFileId	6	int
-62	fileId	4	int
+61	decision	Send to Review	string
+62	reviewAssignmentId	4	string
+62	reviewerName	Aisla McCrae	string
 62	submissionId	3	int
-62	username	dbarnes	string
-62	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-63	reviewAssignmentId	4	string
-63	reviewerName	Aisla McCrae	string
+62	stageId	3	int
+62	round	1	int
+63	reviewAssignmentId	5	string
+63	reviewerName	Adela Gallego	string
 63	submissionId	3	int
 63	stageId	3	int
 63	round	1	int
-64	reviewAssignmentId	5	string
-64	reviewerName	Adela Gallego	string
+64	editorName	Daniel Barnes	string
 64	submissionId	3	int
-64	stageId	3	int
-64	round	1	int
-65	editorName	Daniel Barnes	string
-65	submissionId	3	int
-65	decision	Accept Submission	string
-66	name	Maria Fritz	string
-66	username	mfritz	string
-66	userGroupName	Copyeditor	string
+64	decision	Accept Submission	string
+65	name	Maria Fritz	string
+65	username	mfritz	string
+65	userGroupName	Copyeditor	string
+67	fileStage	2	int
+67	sourceSubmissionFileId	\N	string
+67	submissionFileId	6	int
+67	fileId	5	int
+67	submissionId	4	int
+67	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+67	username	cmontgomerie	string
 68	fileStage	2	int
-68	sourceSubmissionFileId	\N	string
-68	submissionFileId	7	int
+68	submissionFileId	6	int
 68	fileId	5	int
 68	submissionId	4	int
-68	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 68	username	cmontgomerie	string
+68	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 69	fileStage	2	int
-69	submissionFileId	7	int
+69	sourceSubmissionFileId	\N	string
+69	submissionFileId	6	int
 69	fileId	5	int
 69	submissionId	4	int
+69	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 69	username	cmontgomerie	string
-69	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 70	fileStage	2	int
 70	sourceSubmissionFileId	\N	string
-70	submissionFileId	7	int
+70	submissionFileId	6	int
 70	fileId	5	int
 70	submissionId	4	int
-70	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 70	username	cmontgomerie	string
-71	fileStage	2	int
-71	sourceSubmissionFileId	\N	string
-71	submissionFileId	7	int
-71	fileId	5	int
-71	submissionId	4	int
-71	username	cmontgomerie	string
-187	round	1	int
-71	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-71	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+70	originalFileName	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+70	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
 75	fileStage	2	int
 75	sourceSubmissionFileId	\N	string
-75	submissionFileId	8	int
+75	submissionFileId	7	int
 75	fileId	6	int
 75	submissionId	5	int
 75	originalFileName	Genetic transformation of forest trees.pdf	string
 75	username	ddiouf	string
 76	fileStage	2	int
-76	submissionFileId	8	int
+76	submissionFileId	7	int
 76	fileId	6	int
 76	submissionId	5	int
 76	username	ddiouf	string
 76	name	Genetic transformation of forest trees.pdf	string
 77	fileStage	2	int
 77	sourceSubmissionFileId	\N	string
-77	submissionFileId	8	int
+77	submissionFileId	7	int
 77	fileId	6	int
 77	submissionId	5	int
 77	originalFileName	Genetic transformation of forest trees.pdf	string
 77	username	ddiouf	string
 78	fileStage	2	int
 78	sourceSubmissionFileId	\N	string
-78	submissionFileId	8	int
+78	submissionFileId	7	int
 78	fileId	6	int
 78	submissionId	5	int
 78	username	ddiouf	string
@@ -5651,27 +5623,27 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 88	userGroupName	Proofreader	string
 90	fileStage	2	int
 90	sourceSubmissionFileId	\N	string
-90	submissionFileId	9	int
+90	submissionFileId	8	int
 90	fileId	7	int
 90	submissionId	6	int
 90	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 90	username	dphillips	string
 91	fileStage	2	int
-91	submissionFileId	9	int
+91	submissionFileId	8	int
 91	fileId	7	int
 91	submissionId	6	int
 91	username	dphillips	string
 91	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 92	fileStage	2	int
 92	sourceSubmissionFileId	\N	string
-92	submissionFileId	9	int
+92	submissionFileId	8	int
 92	fileId	7	int
 92	submissionId	6	int
 92	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
 92	username	dphillips	string
 93	fileStage	2	int
 93	sourceSubmissionFileId	\N	string
-93	submissionFileId	9	int
+93	submissionFileId	8	int
 93	fileId	7	int
 93	submissionId	6	int
 93	username	dphillips	string
@@ -5680,674 +5652,636 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 96	editorName	Daniel Barnes	string
 96	submissionId	6	int
 96	decision	Send to Review	string
-97	fileStage	4	int
-97	sourceSubmissionFileId	9	int
-97	submissionFileId	10	int
-97	fileId	7	int
+97	reviewAssignmentId	8	string
+97	reviewerName	Julie Janssen	string
 97	submissionId	6	int
-97	originalFileName	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-97	username	dbarnes	string
-98	fileStage	4	int
-98	submissionFileId	10	int
-98	fileId	7	int
+97	stageId	3	int
+97	round	1	int
+98	reviewAssignmentId	9	string
+98	reviewerName	Adela Gallego	string
 98	submissionId	6	int
-98	username	dbarnes	string
-98	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-99	reviewAssignmentId	8	string
-99	reviewerName	Julie Janssen	string
+98	stageId	3	int
+98	round	1	int
+99	editorName	Daniel Barnes	string
 99	submissionId	6	int
-99	stageId	3	int
-99	round	1	int
-100	reviewAssignmentId	9	string
-100	reviewerName	Adela Gallego	string
-100	submissionId	6	int
-100	stageId	3	int
-100	round	1	int
+99	decision	Accept Submission	string
+100	name	Maria Fritz	string
+100	username	mfritz	string
+100	userGroupName	Copyeditor	string
 101	editorName	Daniel Barnes	string
 101	submissionId	6	int
-101	decision	Accept Submission	string
-102	name	Maria Fritz	string
-102	username	mfritz	string
-102	userGroupName	Copyeditor	string
-103	editorName	Daniel Barnes	string
-103	submissionId	6	int
-103	decision	Send To Production	string
-104	name	Graham Cox	string
-104	username	gcox	string
-104	userGroupName	Layout Editor	string
+101	decision	Send To Production	string
+102	name	Graham Cox	string
+102	username	gcox	string
+102	userGroupName	Layout Editor	string
+104	fileStage	2	int
+104	sourceSubmissionFileId	\N	string
+104	submissionFileId	9	int
+104	fileId	8	int
+104	submissionId	7	int
+104	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
+104	username	dsokoloff	string
+105	fileStage	2	int
+105	submissionFileId	9	int
+105	fileId	8	int
+105	submissionId	7	int
+105	username	dsokoloff	string
+105	name	Developing efficacy beliefs in the classroom.pdf	string
 106	fileStage	2	int
 106	sourceSubmissionFileId	\N	string
-106	submissionFileId	11	int
+106	submissionFileId	9	int
 106	fileId	8	int
 106	submissionId	7	int
 106	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
 106	username	dsokoloff	string
 107	fileStage	2	int
-107	submissionFileId	11	int
+107	sourceSubmissionFileId	\N	string
+107	submissionFileId	9	int
 107	fileId	8	int
 107	submissionId	7	int
 107	username	dsokoloff	string
+107	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
 107	name	Developing efficacy beliefs in the classroom.pdf	string
-108	fileStage	2	int
-108	sourceSubmissionFileId	\N	string
-108	submissionFileId	11	int
-108	fileId	8	int
-108	submissionId	7	int
-108	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-108	username	dsokoloff	string
-109	fileStage	2	int
-109	sourceSubmissionFileId	\N	string
-109	submissionFileId	11	int
-109	fileId	8	int
-109	submissionId	7	int
-109	username	dsokoloff	string
-109	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-109	name	Developing efficacy beliefs in the classroom.pdf	string
-112	editorName	Daniel Barnes	string
+110	editorName	Daniel Barnes	string
+110	submissionId	7	int
+110	decision	Send to Review	string
+111	reviewAssignmentId	10	string
+111	reviewerName	Paul Hudson	string
+111	submissionId	7	int
+111	stageId	3	int
+111	round	1	int
+112	reviewAssignmentId	11	string
+112	reviewerName	Aisla McCrae	string
 112	submissionId	7	int
-112	decision	Send to Review	string
-113	fileStage	4	int
-113	sourceSubmissionFileId	11	int
-113	submissionFileId	12	int
-113	fileId	8	int
+112	stageId	3	int
+112	round	1	int
+113	reviewAssignmentId	12	string
+113	reviewerName	Adela Gallego	string
 113	submissionId	7	int
-113	originalFileName	Developing efficacy beliefs in the classroom.pdf	string
-113	username	dbarnes	string
-114	fileStage	4	int
-114	submissionFileId	12	int
-114	fileId	8	int
+113	stageId	3	int
+113	round	1	int
+114	reviewAssignmentId	10	int
+114	reviewerName	Paul Hudson	string
 114	submissionId	7	int
-114	username	dbarnes	string
-114	name	Developing efficacy beliefs in the classroom.pdf	string
-115	reviewAssignmentId	10	string
+114	round	1	int
+115	reviewAssignmentId	10	int
 115	reviewerName	Paul Hudson	string
 115	submissionId	7	int
-115	stageId	3	int
 115	round	1	int
-116	reviewAssignmentId	11	string
-116	reviewerName	Aisla McCrae	string
-116	submissionId	7	int
-116	stageId	3	int
-116	round	1	int
-117	reviewAssignmentId	12	string
-117	reviewerName	Adela Gallego	string
-117	submissionId	7	int
-117	stageId	3	int
-117	round	1	int
-118	reviewAssignmentId	10	int
-118	reviewerName	Paul Hudson	string
-118	submissionId	7	int
-118	round	1	int
-119	reviewAssignmentId	10	int
-119	reviewerName	Paul Hudson	string
-119	submissionId	7	int
-119	round	1	int
-121	fileStage	2	int
-121	sourceSubmissionFileId	\N	string
-121	submissionFileId	13	int
-121	fileId	9	int
-121	submissionId	8	int
-121	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
-121	username	eostrom	string
-122	fileStage	2	int
-122	submissionFileId	13	int
-122	fileId	9	int
-122	submissionId	8	int
-122	username	eostrom	string
-122	name	Traditions and Trends in the Study of the Commons.pdf	string
-123	fileStage	2	int
-123	sourceSubmissionFileId	\N	string
-123	submissionFileId	13	int
-123	fileId	9	int
-123	submissionId	8	int
-123	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
-123	username	eostrom	string
-124	fileStage	2	int
-124	sourceSubmissionFileId	\N	string
-124	submissionFileId	13	int
-124	fileId	9	int
-124	submissionId	8	int
-124	username	eostrom	string
-124	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
-124	name	Traditions and Trends in the Study of the Commons.pdf	string
+117	fileStage	2	int
+117	sourceSubmissionFileId	\N	string
+117	submissionFileId	10	int
+117	fileId	9	int
+117	submissionId	8	int
+117	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
+117	username	eostrom	string
+118	fileStage	2	int
+118	submissionFileId	10	int
+118	fileId	9	int
+118	submissionId	8	int
+118	username	eostrom	string
+118	name	Traditions and Trends in the Study of the Commons.pdf	string
+119	fileStage	2	int
+119	sourceSubmissionFileId	\N	string
+119	submissionFileId	10	int
+119	fileId	9	int
+119	submissionId	8	int
+119	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
+119	username	eostrom	string
+120	fileStage	2	int
+120	sourceSubmissionFileId	\N	string
+120	submissionFileId	10	int
+120	fileId	9	int
+120	submissionId	8	int
+120	username	eostrom	string
+120	originalFileName	Traditions and Trends in the Study of the Commons.pdf	string
+120	name	Traditions and Trends in the Study of the Commons.pdf	string
+125	fileStage	2	int
+125	sourceSubmissionFileId	\N	string
+125	submissionFileId	11	int
+125	fileId	10	int
+125	submissionId	9	int
+125	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
+125	username	fpaglieri	string
+126	fileStage	2	int
+126	submissionFileId	11	int
+126	fileId	10	int
+126	submissionId	9	int
+126	username	fpaglieri	string
+126	name	Hansen & Pinto: Reason Reclaimed.pdf	string
+127	fileStage	2	int
+127	sourceSubmissionFileId	\N	string
+127	submissionFileId	11	int
+127	fileId	10	int
+127	submissionId	9	int
+127	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
+127	username	fpaglieri	string
 128	fileStage	2	int
 128	sourceSubmissionFileId	\N	string
-128	submissionFileId	14	int
+128	submissionFileId	11	int
 128	fileId	10	int
 128	submissionId	9	int
-128	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
 128	username	fpaglieri	string
-129	fileStage	2	int
-129	submissionFileId	14	int
-129	fileId	10	int
-129	submissionId	9	int
-129	username	fpaglieri	string
-129	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-130	fileStage	2	int
-130	sourceSubmissionFileId	\N	string
-130	submissionFileId	14	int
-130	fileId	10	int
-130	submissionId	9	int
-188	reviewAssignmentId	20	int
-130	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-130	username	fpaglieri	string
-131	fileStage	2	int
-131	sourceSubmissionFileId	\N	string
-131	submissionFileId	14	int
-131	fileId	10	int
+128	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
+128	name	Hansen & Pinto: Reason Reclaimed.pdf	string
+131	editorName	Daniel Barnes	string
 131	submissionId	9	int
-131	username	fpaglieri	string
-131	originalFileName	Hansen & Pinto: Reason Reclaimed.pdf	string
-131	name	Hansen & Pinto: Reason Reclaimed.pdf	string
+131	decision	Send to Review	string
+132	reviewAssignmentId	13	string
+132	reviewerName	Julie Janssen	string
+132	submissionId	9	int
+132	stageId	3	int
+132	round	1	int
+133	reviewAssignmentId	14	string
+133	reviewerName	Adela Gallego	string
+133	submissionId	9	int
+133	stageId	3	int
+133	round	1	int
 134	editorName	Daniel Barnes	string
 134	submissionId	9	int
-134	decision	Send to Review	string
-135	reviewAssignmentId	13	string
-135	reviewerName	Julie Janssen	string
-135	submissionId	9	int
-135	stageId	3	int
-135	round	1	int
-136	reviewAssignmentId	14	string
-136	reviewerName	Adela Gallego	string
+134	decision	Accept Submission	string
+135	name	Sarah Vogt	string
+135	username	svogt	string
+135	userGroupName	Copyeditor	string
+136	editorName	Daniel Barnes	string
 136	submissionId	9	int
-136	stageId	3	int
-136	round	1	int
-137	editorName	Daniel Barnes	string
-137	submissionId	9	int
-137	decision	Accept Submission	string
-138	name	Sarah Vogt	string
-138	username	svogt	string
-138	userGroupName	Copyeditor	string
-139	editorName	Daniel Barnes	string
-139	submissionId	9	int
-139	decision	Send To Production	string
-140	name	Stephen Hellier	string
-140	username	shellier	string
-140	userGroupName	Layout Editor	string
-141	name	Sabine Kumar	string
-141	username	skumar	string
-141	userGroupName	Proofreader	string
+136	decision	Send To Production	string
+137	name	Stephen Hellier	string
+137	username	shellier	string
+137	userGroupName	Layout Editor	string
+138	name	Sabine Kumar	string
+138	username	skumar	string
+138	userGroupName	Proofreader	string
+140	fileStage	2	int
+140	sourceSubmissionFileId	\N	string
+140	submissionFileId	12	int
+140	fileId	11	int
+140	submissionId	10	int
+140	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+140	username	jnovak	string
+141	fileStage	2	int
+141	submissionFileId	12	int
+141	fileId	11	int
+141	submissionId	10	int
+141	username	jnovak	string
+141	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+142	fileStage	2	int
+142	sourceSubmissionFileId	\N	string
+142	submissionFileId	12	int
+142	fileId	11	int
+142	submissionId	10	int
+142	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+142	username	jnovak	string
 143	fileStage	2	int
 143	sourceSubmissionFileId	\N	string
-143	submissionFileId	15	int
+143	submissionFileId	12	int
 143	fileId	11	int
 143	submissionId	10	int
-143	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
 143	username	jnovak	string
-144	fileStage	2	int
-144	submissionFileId	15	int
-144	fileId	11	int
-144	submissionId	10	int
-144	username	jnovak	string
-144	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-145	fileStage	2	int
-145	sourceSubmissionFileId	\N	string
-145	submissionFileId	15	int
-145	fileId	11	int
-145	submissionId	10	int
-145	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-145	username	jnovak	string
-146	fileStage	2	int
-146	sourceSubmissionFileId	\N	string
-146	submissionFileId	15	int
-146	fileId	11	int
+143	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+143	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+146	editorName	Daniel Barnes	string
 146	submissionId	10	int
-146	username	jnovak	string
-146	originalFileName	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-146	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-149	editorName	Daniel Barnes	string
+146	decision	Send to Review	string
+147	reviewAssignmentId	15	string
+147	reviewerName	Aisla McCrae	string
+147	submissionId	10	int
+147	stageId	3	int
+147	round	1	int
+148	reviewAssignmentId	16	string
+148	reviewerName	Adela Gallego	string
+148	submissionId	10	int
+148	stageId	3	int
+148	round	1	int
+149	reviewAssignmentId	15	int
+149	reviewerName	Aisla McCrae	string
 149	submissionId	10	int
-149	decision	Send to Review	string
-150	reviewAssignmentId	15	string
+149	round	1	int
+150	reviewAssignmentId	15	int
 150	reviewerName	Aisla McCrae	string
 150	submissionId	10	int
-150	stageId	3	int
 150	round	1	int
-151	reviewAssignmentId	16	string
+151	reviewAssignmentId	16	int
 151	reviewerName	Adela Gallego	string
 151	submissionId	10	int
-151	stageId	3	int
 151	round	1	int
-152	reviewAssignmentId	15	int
-152	reviewerName	Aisla McCrae	string
+152	reviewAssignmentId	16	int
+152	reviewerName	Adela Gallego	string
 152	submissionId	10	int
 152	round	1	int
-153	reviewAssignmentId	15	int
-153	reviewerName	Aisla McCrae	string
-153	submissionId	10	int
-153	round	1	int
-154	reviewAssignmentId	16	int
-154	reviewerName	Adela Gallego	string
-154	submissionId	10	int
-154	round	1	int
-155	reviewAssignmentId	16	int
-155	reviewerName	Adela Gallego	string
-155	submissionId	10	int
-155	round	1	int
+154	fileStage	2	int
+154	sourceSubmissionFileId	\N	string
+154	submissionFileId	13	int
+154	fileId	12	int
+154	submissionId	11	int
+154	originalFileName	Learning Sustainable Design through Service.pdf	string
+154	username	kalkhafaji	string
+155	fileStage	2	int
+155	submissionFileId	13	int
+155	fileId	12	int
+155	submissionId	11	int
+155	username	kalkhafaji	string
+155	name	Learning Sustainable Design through Service.pdf	string
+156	fileStage	2	int
+156	sourceSubmissionFileId	\N	string
+156	submissionFileId	13	int
+156	fileId	12	int
+156	submissionId	11	int
+156	originalFileName	Learning Sustainable Design through Service.pdf	string
+156	username	kalkhafaji	string
 157	fileStage	2	int
 157	sourceSubmissionFileId	\N	string
-157	submissionFileId	16	int
+157	submissionFileId	13	int
 157	fileId	12	int
 157	submissionId	11	int
-157	originalFileName	Learning Sustainable Design through Service.pdf	string
 157	username	kalkhafaji	string
-158	fileStage	2	int
-158	submissionFileId	16	int
-158	fileId	12	int
-158	submissionId	11	int
-158	username	kalkhafaji	string
-158	name	Learning Sustainable Design through Service.pdf	string
-159	fileStage	2	int
-159	sourceSubmissionFileId	\N	string
-159	submissionFileId	16	int
-159	fileId	12	int
-159	submissionId	11	int
-159	originalFileName	Learning Sustainable Design through Service.pdf	string
-159	username	kalkhafaji	string
-160	fileStage	2	int
-160	sourceSubmissionFileId	\N	string
-160	submissionFileId	16	int
-160	fileId	12	int
-160	submissionId	11	int
-160	username	kalkhafaji	string
-160	originalFileName	Learning Sustainable Design through Service.pdf	string
-160	name	Learning Sustainable Design through Service.pdf	string
+157	originalFileName	Learning Sustainable Design through Service.pdf	string
+157	name	Learning Sustainable Design through Service.pdf	string
+162	fileStage	2	int
+162	sourceSubmissionFileId	\N	string
+162	submissionFileId	14	int
+162	fileId	13	int
+162	submissionId	12	int
+162	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+162	username	lchristopher	string
+163	fileStage	2	int
+163	submissionFileId	14	int
+163	fileId	13	int
+163	submissionId	12	int
+163	username	lchristopher	string
+163	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
 164	fileStage	2	int
 164	sourceSubmissionFileId	\N	string
-164	submissionFileId	17	int
+164	submissionFileId	14	int
 164	fileId	13	int
 164	submissionId	12	int
 164	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
 164	username	lchristopher	string
 165	fileStage	2	int
-165	submissionFileId	17	int
+165	sourceSubmissionFileId	\N	string
+165	submissionFileId	14	int
 165	fileId	13	int
 165	submissionId	12	int
 165	username	lchristopher	string
+165	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
 165	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-166	fileStage	2	int
-166	sourceSubmissionFileId	\N	string
-166	submissionFileId	17	int
-166	fileId	13	int
-166	submissionId	12	int
-166	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-166	username	lchristopher	string
-167	fileStage	2	int
-167	sourceSubmissionFileId	\N	string
-167	submissionFileId	17	int
-167	fileId	13	int
-167	submissionId	12	int
-167	username	lchristopher	string
-167	originalFileName	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-167	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-170	editorName	Daniel Barnes	string
+168	editorName	Daniel Barnes	string
+168	submissionId	12	int
+168	decision	Send to Review	string
+169	reviewAssignmentId	17	string
+169	reviewerName	Julie Janssen	string
+169	submissionId	12	int
+169	stageId	3	int
+169	round	1	int
+170	reviewAssignmentId	18	string
+170	reviewerName	Paul Hudson	string
 170	submissionId	12	int
-170	decision	Send to Review	string
-171	reviewAssignmentId	17	string
-171	reviewerName	Julie Janssen	string
-171	submissionId	12	int
-171	stageId	3	int
-171	round	1	int
-172	reviewAssignmentId	18	string
-172	reviewerName	Paul Hudson	string
-172	submissionId	12	int
-172	stageId	3	int
-172	round	1	int
+170	stageId	3	int
+170	round	1	int
+172	fileStage	2	int
+172	sourceSubmissionFileId	\N	string
+172	submissionFileId	15	int
+172	fileId	14	int
+172	submissionId	13	int
+172	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+172	username	lkumiega	string
+173	fileStage	2	int
+173	submissionFileId	15	int
+173	fileId	14	int
+173	submissionId	13	int
+173	username	lkumiega	string
+173	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
 174	fileStage	2	int
 174	sourceSubmissionFileId	\N	string
-174	submissionFileId	18	int
+174	submissionFileId	15	int
 174	fileId	14	int
 174	submissionId	13	int
 174	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
 174	username	lkumiega	string
 175	fileStage	2	int
-175	submissionFileId	18	int
+175	sourceSubmissionFileId	\N	string
+175	submissionFileId	15	int
 175	fileId	14	int
 175	submissionId	13	int
 175	username	lkumiega	string
+175	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
 175	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-176	fileStage	2	int
-176	sourceSubmissionFileId	\N	string
-176	submissionFileId	18	int
-176	fileId	14	int
-176	submissionId	13	int
-176	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-176	username	lkumiega	string
-177	fileStage	2	int
-177	sourceSubmissionFileId	\N	string
-177	submissionFileId	18	int
-177	fileId	14	int
-177	submissionId	13	int
-177	username	lkumiega	string
-177	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-177	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-180	editorName	Daniel Barnes	string
+178	editorName	Daniel Barnes	string
+178	submissionId	13	int
+178	decision	Send to Review	string
+179	reviewAssignmentId	19	string
+179	reviewerName	Julie Janssen	string
+179	submissionId	13	int
+179	stageId	3	int
+179	round	1	int
+180	reviewAssignmentId	20	string
+180	reviewerName	Aisla McCrae	string
 180	submissionId	13	int
-180	decision	Send to Review	string
-181	fileStage	4	int
-181	sourceSubmissionFileId	18	int
-181	submissionFileId	19	int
-181	fileId	14	int
+180	stageId	3	int
+180	round	1	int
+181	reviewAssignmentId	21	string
+181	reviewerName	Adela Gallego	string
 181	submissionId	13	int
-181	originalFileName	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-181	username	dbarnes	string
-182	fileStage	4	int
-182	submissionFileId	19	int
-182	fileId	14	int
+181	stageId	3	int
+181	round	1	int
+182	reviewAssignmentId	19	int
+182	reviewerName	Julie Janssen	string
 182	submissionId	13	int
-182	username	dbarnes	string
-182	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-183	reviewAssignmentId	19	string
+182	round	1	int
+183	reviewAssignmentId	19	int
 183	reviewerName	Julie Janssen	string
 183	submissionId	13	int
-183	stageId	3	int
 183	round	1	int
-184	reviewAssignmentId	20	string
+184	reviewAssignmentId	20	int
 184	reviewerName	Aisla McCrae	string
 184	submissionId	13	int
-184	stageId	3	int
 184	round	1	int
-185	reviewAssignmentId	21	string
-185	reviewerName	Adela Gallego	string
+185	reviewAssignmentId	20	int
+185	reviewerName	Aisla McCrae	string
 185	submissionId	13	int
-185	stageId	3	int
 185	round	1	int
-186	reviewAssignmentId	19	int
-186	reviewerName	Julie Janssen	string
+186	reviewAssignmentId	21	int
+186	reviewerName	Adela Gallego	string
 186	submissionId	13	int
 186	round	1	int
-187	reviewAssignmentId	19	int
-187	reviewerName	Julie Janssen	string
+187	reviewAssignmentId	21	int
+187	reviewerName	Adela Gallego	string
 187	submissionId	13	int
-188	reviewerName	Aisla McCrae	string
+187	round	1	int
+188	editorName	Daniel Barnes	string
 188	submissionId	13	int
-188	round	1	int
-189	reviewAssignmentId	20	int
-189	reviewerName	Aisla McCrae	string
-189	submissionId	13	int
-189	round	1	int
-190	reviewAssignmentId	21	int
-190	reviewerName	Adela Gallego	string
-190	submissionId	13	int
-190	round	1	int
-191	reviewAssignmentId	21	int
-191	reviewerName	Adela Gallego	string
-191	submissionId	13	int
-191	round	1	int
-192	editorName	Daniel Barnes	string
-192	submissionId	13	int
-192	decision	Request Revisions	string
-194	fileStage	2	int
-194	sourceSubmissionFileId	\N	string
-194	submissionFileId	20	int
-194	fileId	15	int
-194	submissionId	14	int
-194	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-194	username	pdaniel	string
-195	fileStage	2	int
-195	submissionFileId	20	int
-195	fileId	15	int
-195	submissionId	14	int
-195	username	pdaniel	string
-195	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-196	fileStage	2	int
-196	sourceSubmissionFileId	\N	string
-196	submissionFileId	20	int
-196	fileId	15	int
-196	submissionId	14	int
-196	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-196	username	pdaniel	string
+188	decision	Request Revisions	string
+190	fileStage	2	int
+190	sourceSubmissionFileId	\N	string
+190	submissionFileId	16	int
+190	fileId	15	int
+190	submissionId	14	int
+190	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+190	username	pdaniel	string
+191	fileStage	2	int
+191	submissionFileId	16	int
+191	fileId	15	int
+191	submissionId	14	int
+191	username	pdaniel	string
+191	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+192	fileStage	2	int
+192	sourceSubmissionFileId	\N	string
+192	submissionFileId	16	int
+192	fileId	15	int
+192	submissionId	14	int
+192	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+192	username	pdaniel	string
+193	fileStage	2	int
+193	sourceSubmissionFileId	\N	string
+193	submissionFileId	16	int
+193	fileId	15	int
+193	submissionId	14	int
+193	username	pdaniel	string
+193	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+193	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
 197	fileStage	2	int
 197	sourceSubmissionFileId	\N	string
-197	submissionFileId	20	int
-197	fileId	15	int
-197	submissionId	14	int
-197	username	pdaniel	string
-197	originalFileName	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-197	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-201	fileStage	2	int
-201	sourceSubmissionFileId	\N	string
-201	submissionFileId	21	int
-201	fileId	16	int
-201	submissionId	15	int
-201	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-201	username	rbaiyewu	string
-202	fileStage	2	int
-202	submissionFileId	21	int
-202	fileId	16	int
-202	submissionId	15	int
-202	username	rbaiyewu	string
-202	name	Yam diseases and its management in Nigeria.pdf	string
-203	fileStage	2	int
-203	sourceSubmissionFileId	\N	string
-203	submissionFileId	21	int
-203	fileId	16	int
+197	submissionFileId	17	int
+197	fileId	16	int
+197	submissionId	15	int
+197	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+197	username	rbaiyewu	string
+198	fileStage	2	int
+198	submissionFileId	17	int
+198	fileId	16	int
+198	submissionId	15	int
+198	username	rbaiyewu	string
+198	name	Yam diseases and its management in Nigeria.pdf	string
+199	fileStage	2	int
+199	sourceSubmissionFileId	\N	string
+199	submissionFileId	17	int
+199	fileId	16	int
+199	submissionId	15	int
+199	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+199	username	rbaiyewu	string
+200	fileStage	2	int
+200	sourceSubmissionFileId	\N	string
+200	submissionFileId	17	int
+200	fileId	16	int
+200	submissionId	15	int
+200	username	rbaiyewu	string
+200	originalFileName	Yam diseases and its management in Nigeria.pdf	string
+200	name	Yam diseases and its management in Nigeria.pdf	string
+203	editorName	Daniel Barnes	string
 203	submissionId	15	int
-203	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-203	username	rbaiyewu	string
-204	fileStage	2	int
-204	sourceSubmissionFileId	\N	string
-204	submissionFileId	21	int
-204	fileId	16	int
+203	decision	Send to Review	string
+204	reviewAssignmentId	22	string
+204	reviewerName	Paul Hudson	string
 204	submissionId	15	int
-204	username	rbaiyewu	string
-204	originalFileName	Yam diseases and its management in Nigeria.pdf	string
-204	name	Yam diseases and its management in Nigeria.pdf	string
-207	editorName	Daniel Barnes	string
-207	submissionId	15	int
-207	decision	Send to Review	string
-208	reviewAssignmentId	22	string
-208	reviewerName	Paul Hudson	string
+204	stageId	3	int
+204	round	1	int
+205	reviewAssignmentId	23	string
+205	reviewerName	Aisla McCrae	string
+205	submissionId	15	int
+205	stageId	3	int
+205	round	1	int
+206	editorName	Daniel Barnes	string
+206	submissionId	15	int
+206	decision	Accept Submission	string
+207	name	Sarah Vogt	string
+207	username	svogt	string
+207	userGroupName	Copyeditor	string
+208	editorName	Daniel Barnes	string
 208	submissionId	15	int
-208	stageId	3	int
-208	round	1	int
-209	reviewAssignmentId	23	string
-209	reviewerName	Aisla McCrae	string
-209	submissionId	15	int
-209	stageId	3	int
-209	round	1	int
-210	editorName	Daniel Barnes	string
-210	submissionId	15	int
-210	decision	Accept Submission	string
-211	name	Sarah Vogt	string
-211	username	svogt	string
-211	userGroupName	Copyeditor	string
-212	editorName	Daniel Barnes	string
-212	submissionId	15	int
-212	decision	Send To Production	string
-213	name	Stephen Hellier	string
-213	username	shellier	string
-213	userGroupName	Layout Editor	string
-215	fileStage	2	int
-215	sourceSubmissionFileId	\N	string
-215	submissionFileId	22	int
-215	fileId	17	int
-215	submissionId	16	int
-215	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-215	username	rrossi	string
-216	fileStage	2	int
-216	submissionFileId	22	int
-216	fileId	17	int
-216	submissionId	16	int
-216	username	rrossi	string
-216	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-217	fileStage	2	int
-217	sourceSubmissionFileId	\N	string
-217	submissionFileId	22	int
-217	fileId	17	int
-217	submissionId	16	int
-217	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-217	username	rrossi	string
+208	decision	Send To Production	string
+209	name	Stephen Hellier	string
+209	username	shellier	string
+209	userGroupName	Layout Editor	string
+211	fileStage	2	int
+211	sourceSubmissionFileId	\N	string
+211	submissionFileId	18	int
+211	fileId	17	int
+211	submissionId	16	int
+211	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+211	username	rrossi	string
+212	fileStage	2	int
+212	submissionFileId	18	int
+212	fileId	17	int
+212	submissionId	16	int
+212	username	rrossi	string
+212	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+213	fileStage	2	int
+213	sourceSubmissionFileId	\N	string
+213	submissionFileId	18	int
+213	fileId	17	int
+213	submissionId	16	int
+213	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+213	username	rrossi	string
+214	fileStage	2	int
+214	sourceSubmissionFileId	\N	string
+214	submissionFileId	18	int
+214	fileId	17	int
+214	submissionId	16	int
+214	username	rrossi	string
+214	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+214	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
 218	fileStage	2	int
 218	sourceSubmissionFileId	\N	string
-218	submissionFileId	22	int
-218	fileId	17	int
-218	submissionId	16	int
-218	username	rrossi	string
-218	originalFileName	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-218	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-222	fileStage	2	int
-222	sourceSubmissionFileId	\N	string
-222	submissionFileId	23	int
-222	fileId	18	int
-222	submissionId	17	int
-222	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-222	username	vkarbasizaed	string
-223	fileStage	2	int
-223	submissionFileId	23	int
-223	fileId	18	int
-223	submissionId	17	int
-223	username	vkarbasizaed	string
-223	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-224	fileStage	2	int
-224	sourceSubmissionFileId	\N	string
-224	submissionFileId	23	int
-224	fileId	18	int
+218	submissionFileId	19	int
+218	fileId	18	int
+218	submissionId	17	int
+218	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+218	username	vkarbasizaed	string
+219	fileStage	2	int
+219	submissionFileId	19	int
+219	fileId	18	int
+219	submissionId	17	int
+219	username	vkarbasizaed	string
+219	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+220	fileStage	2	int
+220	sourceSubmissionFileId	\N	string
+220	submissionFileId	19	int
+220	fileId	18	int
+220	submissionId	17	int
+220	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+220	username	vkarbasizaed	string
+221	fileStage	2	int
+221	sourceSubmissionFileId	\N	string
+221	submissionFileId	19	int
+221	fileId	18	int
+221	submissionId	17	int
+221	username	vkarbasizaed	string
+221	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+221	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+224	editorName	Daniel Barnes	string
 224	submissionId	17	int
-224	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-224	username	vkarbasizaed	string
-225	fileStage	2	int
-225	sourceSubmissionFileId	\N	string
-225	submissionFileId	23	int
-225	fileId	18	int
+224	decision	Send to Review	string
+225	reviewAssignmentId	24	string
+225	reviewerName	Julie Janssen	string
 225	submissionId	17	int
-225	username	vkarbasizaed	string
-225	originalFileName	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-225	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-228	editorName	Daniel Barnes	string
-228	submissionId	17	int
-228	decision	Send to Review	string
-229	reviewAssignmentId	24	string
-229	reviewerName	Julie Janssen	string
+225	stageId	3	int
+225	round	1	int
+226	reviewAssignmentId	25	string
+226	reviewerName	Paul Hudson	string
+226	submissionId	17	int
+226	stageId	3	int
+226	round	1	int
+227	editorName	Daniel Barnes	string
+227	submissionId	17	int
+227	decision	Accept Submission	string
+228	name	Maria Fritz	string
+228	username	mfritz	string
+228	userGroupName	Copyeditor	string
+229	editorName	Daniel Barnes	string
 229	submissionId	17	int
-229	stageId	3	int
-229	round	1	int
-230	reviewAssignmentId	25	string
-230	reviewerName	Paul Hudson	string
-230	submissionId	17	int
-230	stageId	3	int
-230	round	1	int
-231	editorName	Daniel Barnes	string
-231	submissionId	17	int
-231	decision	Accept Submission	string
-232	name	Maria Fritz	string
-232	username	mfritz	string
-232	userGroupName	Copyeditor	string
-233	editorName	Daniel Barnes	string
+229	decision	Send To Production	string
+230	name	Graham Cox	string
+230	username	gcox	string
+230	userGroupName	Layout Editor	string
+231	name	Catherine Turner	string
+231	username	cturner	string
+231	userGroupName	Proofreader	string
+232	fileStage	10	int
+232	sourceSubmissionFileId	\N	string
+232	submissionFileId	20	int
+232	fileId	19	int
+232	submissionId	17	int
+232	originalFileName	article.pdf	string
+232	username	dbarnes	string
+233	fileStage	10	int
+233	submissionFileId	20	int
+233	fileId	19	int
 233	submissionId	17	int
-233	decision	Send To Production	string
-234	name	Graham Cox	string
-234	username	gcox	string
-234	userGroupName	Layout Editor	string
-235	name	Catherine Turner	string
-235	username	cturner	string
-235	userGroupName	Proofreader	string
-236	fileStage	10	int
-236	sourceSubmissionFileId	\N	string
-236	submissionFileId	24	int
-236	fileId	19	int
-236	submissionId	17	int
-236	originalFileName	article.pdf	string
-236	username	dbarnes	string
-237	fileStage	10	int
-237	submissionFileId	24	int
-237	fileId	19	int
-237	submissionId	17	int
-237	username	dbarnes	string
-237	name	article.pdf	string
-238	fileStage	10	int
-238	sourceSubmissionFileId	\N	string
-238	submissionFileId	24	int
-238	fileId	19	int
-238	submissionId	17	int
-238	originalFileName	article.pdf	string
-238	username	dbarnes	string
-239	fileStage	10	int
-239	sourceSubmissionFileId	\N	string
-239	submissionFileId	24	int
-239	fileId	19	int
-239	submissionId	17	int
-239	username	dbarnes	string
-239	originalFileName	article.pdf	string
-239	name	article.pdf	string
-251	fileStage	2	int
-251	sourceSubmissionFileId	\N	string
-251	submissionFileId	25	int
-251	fileId	20	int
-251	submissionId	18	int
-251	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-251	username	vwilliamson	string
-252	fileStage	2	int
-252	submissionFileId	25	int
-252	fileId	20	int
-252	submissionId	18	int
-252	username	vwilliamson	string
-252	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-253	fileStage	2	int
-253	sourceSubmissionFileId	\N	string
-253	submissionFileId	25	int
-253	fileId	20	int
+233	username	dbarnes	string
+233	name	article.pdf	string
+234	fileStage	10	int
+234	sourceSubmissionFileId	\N	string
+234	submissionFileId	20	int
+234	fileId	19	int
+234	submissionId	17	int
+234	originalFileName	article.pdf	string
+234	username	dbarnes	string
+235	fileStage	10	int
+235	sourceSubmissionFileId	\N	string
+235	submissionFileId	20	int
+235	fileId	19	int
+235	submissionId	17	int
+235	username	dbarnes	string
+235	originalFileName	article.pdf	string
+235	name	article.pdf	string
+247	fileStage	2	int
+247	sourceSubmissionFileId	\N	string
+247	submissionFileId	21	int
+247	fileId	20	int
+247	submissionId	18	int
+247	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+247	username	vwilliamson	string
+248	fileStage	2	int
+248	submissionFileId	21	int
+248	fileId	20	int
+248	submissionId	18	int
+248	username	vwilliamson	string
+248	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+249	fileStage	2	int
+249	sourceSubmissionFileId	\N	string
+249	submissionFileId	21	int
+249	fileId	20	int
+249	submissionId	18	int
+249	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+249	username	vwilliamson	string
+250	fileStage	2	int
+250	sourceSubmissionFileId	\N	string
+250	submissionFileId	21	int
+250	fileId	20	int
+250	submissionId	18	int
+250	username	vwilliamson	string
+250	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+250	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+253	editorName	Daniel Barnes	string
 253	submissionId	18	int
-253	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-253	username	vwilliamson	string
-254	fileStage	2	int
-254	sourceSubmissionFileId	\N	string
-254	submissionFileId	25	int
-254	fileId	20	int
-254	submissionId	18	int
-254	username	vwilliamson	string
-254	originalFileName	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-254	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-257	editorName	Daniel Barnes	string
-257	submissionId	18	int
-257	decision	Decline Submission	string
-259	fileStage	2	int
-259	sourceSubmissionFileId	\N	string
-259	submissionFileId	26	int
-259	fileId	21	int
-259	submissionId	19	int
-259	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-259	username	zwoods	string
-260	fileStage	2	int
-260	submissionFileId	26	int
-260	fileId	21	int
-260	submissionId	19	int
-260	username	zwoods	string
-260	name	Finocchiaro: Arguments About Arguments.pdf	string
-261	fileStage	2	int
-261	sourceSubmissionFileId	\N	string
-261	submissionFileId	26	int
-261	fileId	21	int
+253	decision	Decline Submission	string
+255	fileStage	2	int
+255	sourceSubmissionFileId	\N	string
+255	submissionFileId	22	int
+255	fileId	21	int
+255	submissionId	19	int
+255	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+255	username	zwoods	string
+256	fileStage	2	int
+256	submissionFileId	22	int
+256	fileId	21	int
+256	submissionId	19	int
+256	username	zwoods	string
+256	name	Finocchiaro: Arguments About Arguments.pdf	string
+257	fileStage	2	int
+257	sourceSubmissionFileId	\N	string
+257	submissionFileId	22	int
+257	fileId	21	int
+257	submissionId	19	int
+257	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+257	username	zwoods	string
+258	fileStage	2	int
+258	sourceSubmissionFileId	\N	string
+258	submissionFileId	22	int
+258	fileId	21	int
+258	submissionId	19	int
+258	username	zwoods	string
+258	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
+258	name	Finocchiaro: Arguments About Arguments.pdf	string
+261	editorName	Daniel Barnes	string
 261	submissionId	19	int
-261	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-261	username	zwoods	string
-262	fileStage	2	int
-262	sourceSubmissionFileId	\N	string
-262	submissionFileId	26	int
-262	fileId	21	int
+261	decision	Send to Review	string
+262	reviewAssignmentId	26	string
+262	reviewerName	Paul Hudson	string
 262	submissionId	19	int
-262	username	zwoods	string
-262	originalFileName	Finocchiaro: Arguments About Arguments.pdf	string
-262	name	Finocchiaro: Arguments About Arguments.pdf	string
-265	editorName	Daniel Barnes	string
-265	submissionId	19	int
-265	decision	Send to Review	string
-266	reviewAssignmentId	26	string
-266	reviewerName	Paul Hudson	string
-266	submissionId	19	int
-266	stageId	3	int
-266	round	1	int
-267	reviewAssignmentId	27	string
-267	reviewerName	Aisla McCrae	string
-267	submissionId	19	int
-267	stageId	3	int
-267	round	1	int
-268	editorName	Daniel Barnes	string
-268	submissionId	19	int
-268	decision	Accept Submission	string
-269	name	Sarah Vogt	string
-269	username	svogt	string
-269	userGroupName	Copyeditor	string
+262	stageId	3	int
+262	round	1	int
+263	reviewAssignmentId	27	string
+263	reviewerName	Aisla McCrae	string
+263	submissionId	19	int
+263	stageId	3	int
+263	round	1	int
+264	editorName	Daniel Barnes	string
+264	submissionId	19	int
+264	decision	Accept Submission	string
+265	name	Sarah Vogt	string
+265	username	svogt	string
+265	userGroupName	Copyeditor	string
 \.
 
 
@@ -6356,27 +6290,27 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	journals/1/articles/1/66674a6f46458.pdf	application/pdf
-2	journals/1/articles/1/66674ab55bdd9.pdf	application/pdf
-3	journals/1/articles/2/66674b158396a.pdf	application/pdf
-4	journals/1/articles/3/66674b3da1efb.pdf	application/pdf
-5	journals/1/articles/4/66674b64724b7.pdf	application/pdf
-6	journals/1/articles/5/66674b739c5c3.pdf	application/pdf
-7	journals/1/articles/6/66674ba63ec53.pdf	application/pdf
-8	journals/1/articles/7/66674bd616873.pdf	application/pdf
-9	journals/1/articles/8/66674c0184c2d.pdf	application/pdf
-10	journals/1/articles/9/66674c10ca29b.pdf	application/pdf
-11	journals/1/articles/10/66674c441b773.pdf	application/pdf
-12	journals/1/articles/11/66674c74aa666.pdf	application/pdf
-13	journals/1/articles/12/66674c843bfc9.pdf	application/pdf
-14	journals/1/articles/13/66674ca2ac64a.pdf	application/pdf
-15	journals/1/articles/14/66674ceec6152.pdf	application/pdf
-16	journals/1/articles/15/66674cfb71642.pdf	application/pdf
-17	journals/1/articles/16/66674d2ae46ca.pdf	application/pdf
-18	journals/1/articles/17/66674d377b09c.pdf	application/pdf
-19	journals/1/articles/17/66674d68c29e2.pdf	application/pdf
-20	journals/1/articles/18/66674db3d8cde.pdf	application/pdf
-21	journals/1/articles/19/66674dc9a4c0a.pdf	application/pdf
+1	journals/1/articles/1/667ba4977b5cc.pdf	application/pdf
+2	journals/1/articles/1/667ba4c72b1d7.pdf	application/pdf
+3	journals/1/articles/2/667ba50f84357.pdf	application/pdf
+4	journals/1/articles/3/667ba529ad2f6.pdf	application/pdf
+5	journals/1/articles/4/667ba54a72c57.pdf	application/pdf
+6	journals/1/articles/5/667ba5553d67e.pdf	application/pdf
+7	journals/1/articles/6/667ba577a905a.pdf	application/pdf
+8	journals/1/articles/7/667ba5991998e.pdf	application/pdf
+9	journals/1/articles/8/667ba5b8120dd.pdf	application/pdf
+10	journals/1/articles/9/667ba5c274b0a.pdf	application/pdf
+11	journals/1/articles/10/667ba5e487711.pdf	application/pdf
+12	journals/1/articles/11/667ba6069d740.pdf	application/pdf
+13	journals/1/articles/12/667ba611ac9a7.pdf	application/pdf
+14	journals/1/articles/13/667ba626ae88c.pdf	application/pdf
+15	journals/1/articles/14/667ba65a5333c.pdf	application/pdf
+16	journals/1/articles/15/667ba6645e4d7.pdf	application/pdf
+17	journals/1/articles/16/667ba68386fe0.pdf	application/pdf
+18	journals/1/articles/17/667ba68c92b62.pdf	application/pdf
+19	journals/1/articles/17/667ba6ac06bd1.pdf	application/pdf
+20	journals/1/articles/18/667ba6d9bb389.pdf	application/pdf
+21	journals/1/articles/19/667ba6e6675c7.pdf	application/pdf
 \.
 
 
@@ -6386,32 +6320,32 @@ COPY public.files (file_id, path, mimetype) FROM stdin;
 
 COPY public.filter_groups (filter_group_id, symbolic, display_name, description, input_type, output_type) FROM stdin;
 1	article=>dc11	plugins.metadata.dc11.articleAdapter.displayName	plugins.metadata.dc11.articleAdapter.description	class::classes.submission.Submission	metadata::plugins.metadata.dc11.schema.Dc11Schema(ARTICLE)
-2	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-3	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
-4	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-5	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
-6	issue=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.issue.Issue	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-7	article=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.submission.Submission	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-8	galley=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.article.ArticleGalley	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-9	issue=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.issue.Issue[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
-10	article=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.submission.Submission[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
-11	article=>doaj-xml	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/doaj/doajArticles.xsd)
-12	article=>doaj-json	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission	primitive::string
-13	article=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
-14	native-xml=>article	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
-15	issue=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.Issue[]	xml::schema(plugins/importexport/native/native.xsd)
-16	native-xml=>issue	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.Issue[]
-17	issuegalley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.IssueGalley[]	xml::schema(plugins/importexport/native/native.xsd)
-18	native-xml=>issuegalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.IssueGalley[]
-19	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.Author[]	xml::schema(plugins/importexport/native/native.xsd)
-20	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.Author[]
-21	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
-22	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
-23	article-galley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.ArticleGalley	xml::schema(plugins/importexport/native/native.xsd)
-24	native-xml=>ArticleGalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.ArticleGalley[]
-25	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
-26	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
-27	article=>pubmed-xml	plugins.importexport.pubmed.displayName	plugins.importexport.pubmed.description	class::classes.submission.Submission[]	xml::dtd
+2	article=>pubmed-xml	plugins.importexport.pubmed.displayName	plugins.importexport.pubmed.description	class::classes.submission.Submission[]	xml::dtd
+3	issue=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.issue.Issue[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
+4	article=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.submission.Submission[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
+5	article=>doaj-xml	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/doaj/doajArticles.xsd)
+6	article=>doaj-json	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission	primitive::string
+7	issue=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.issue.Issue	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+8	article=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.submission.Submission	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+9	galley=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.article.ArticleGalley	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+10	article=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
+11	native-xml=>article	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
+12	issue=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.Issue[]	xml::schema(plugins/importexport/native/native.xsd)
+13	native-xml=>issue	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.Issue[]
+14	issuegalley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.IssueGalley[]	xml::schema(plugins/importexport/native/native.xsd)
+15	native-xml=>issuegalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.IssueGalley[]
+16	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.Author[]	xml::schema(plugins/importexport/native/native.xsd)
+17	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.Author[]
+18	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
+19	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
+20	article-galley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.ArticleGalley	xml::schema(plugins/importexport/native/native.xsd)
+21	native-xml=>ArticleGalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.ArticleGalley[]
+22	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
+23	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
+24	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+25	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
+26	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+27	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
 \.
 
 
@@ -6429,32 +6363,32 @@ COPY public.filter_settings (filter_id, locale, setting_name, setting_value, set
 
 COPY public.filters (filter_id, filter_group_id, context_id, display_name, class_name, is_template, parent_filter_id, seq) FROM stdin;
 1	1	0	Extract metadata from a(n) Submission	plugins.metadata.dc11.filter.Dc11SchemaArticleAdapter	0	0	0
-2	2	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
-3	3	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
-4	4	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
-5	5	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
-6	6	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+2	2	0	ArticlePubMedXmlFilter	plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter	0	0	0
+3	3	0	Crossref XML issue export	plugins.importexport.crossref.filter.IssueCrossrefXmlFilter	0	0	0
+4	4	0	Crossref XML issue export	plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter	0	0	0
+5	5	0	DOAJ XML export	plugins.importexport.doaj.filter.DOAJXmlFilter	0	0	0
+6	6	0	DOAJ JSON export	plugins.importexport.doaj.filter.DOAJJsonFilter	0	0	0
 7	7	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
 8	8	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-9	9	0	Crossref XML issue export	plugins.importexport.crossref.filter.IssueCrossrefXmlFilter	0	0	0
-10	10	0	Crossref XML issue export	plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter	0	0	0
-11	11	0	DOAJ XML export	plugins.importexport.doaj.filter.DOAJXmlFilter	0	0	0
-12	12	0	DOAJ JSON export	plugins.importexport.doaj.filter.DOAJJsonFilter	0	0	0
-13	13	0	Native XML submission export	plugins.importexport.native.filter.ArticleNativeXmlFilter	0	0	0
-14	14	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlArticleFilter	0	0	0
-15	15	0	Native XML issue export	plugins.importexport.native.filter.IssueNativeXmlFilter	0	0	0
-16	16	0	Native XML issue import	plugins.importexport.native.filter.NativeXmlIssueFilter	0	0	0
-17	17	0	Native XML issue galley export	plugins.importexport.native.filter.IssueGalleyNativeXmlFilter	0	0	0
-18	18	0	Native XML issue galley import	plugins.importexport.native.filter.NativeXmlIssueGalleyFilter	0	0	0
-19	19	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
-20	20	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
-21	22	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlArticleFileFilter	0	0	0
-22	21	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
-23	23	0	Native XML representation export	plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter	0	0	0
-24	24	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlArticleGalleyFilter	0	0	0
-25	25	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
-26	26	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
-27	27	0	ArticlePubMedXmlFilter	plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter	0	0	0
+9	9	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+10	10	0	Native XML submission export	plugins.importexport.native.filter.ArticleNativeXmlFilter	0	0	0
+11	11	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlArticleFilter	0	0	0
+12	12	0	Native XML issue export	plugins.importexport.native.filter.IssueNativeXmlFilter	0	0	0
+13	13	0	Native XML issue import	plugins.importexport.native.filter.NativeXmlIssueFilter	0	0	0
+14	14	0	Native XML issue galley export	plugins.importexport.native.filter.IssueGalleyNativeXmlFilter	0	0	0
+15	15	0	Native XML issue galley import	plugins.importexport.native.filter.NativeXmlIssueGalleyFilter	0	0	0
+16	16	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
+17	17	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
+18	19	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlArticleFileFilter	0	0	0
+19	18	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
+20	20	0	Native XML representation export	plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter	0	0	0
+21	21	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlArticleGalleyFilter	0	0	0
+22	22	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
+23	23	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
+24	24	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
+25	25	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
+26	26	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
+27	27	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
 \.
 
 
@@ -6571,8 +6505,8 @@ COPY public.issue_settings (issue_id, locale, setting_name, setting_value, setti
 --
 
 COPY public.issues (issue_id, journal_id, volume, number, year, published, current, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name, url_path) FROM stdin;
-2	1	2	1	2015	0	0	\N	\N	2024-06-10 19:02:01	1	\N	1	1	1	0	\N	\N	
-1	1	1	2	2014	1	1	2024-06-10 18:47:53	\N	2024-06-10 19:02:02	1	\N	1	1	1	0	\N	\N	
+2	1	2	1	2015	0	0	\N	\N	2024-06-26 05:27:46	1	\N	1	1	1	0	\N	\N	
+1	1	1	2	2014	1	1	2024-06-26 05:17:56	\N	2024-06-26 05:27:46	1	\N	1	1	1	0	\N	\N	
 \.
 
 
@@ -6815,7 +6749,7 @@ COPY public.navigation_menus (navigation_menu_id, context_id, area_name, title) 
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2024-06-10 18:51:27	2024-06-10 18:51:27	Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+1	1048586	1	6	2024-06-26 05:20:32	2024-06-26 05:20:32	Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
 \.
 
 
@@ -6886,192 +6820,191 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-141	1	3	2	16777217	2024-06-10 18:53:29	\N	1048585	6
-83	1	0	2	16777243	2024-06-10 18:51:45	\N	1048585	3
-41	1	17	3	16777259	2024-06-10 18:50:03	\N	1048585	1
-394	1	7	3	16777227	2024-06-10 19:00:26	\N	517	24
-43	1	16	3	16777259	2024-06-10 18:50:03	\N	1048585	1
-143	1	5	2	16777217	2024-06-10 18:53:29	\N	1048585	6
-45	1	14	3	16777259	2024-06-10 18:50:03	\N	1048585	1
-5	0	1	1	1	2024-06-10 18:48:06	\N	0	0
-6	1	3	2	16777217	2024-06-10 18:48:18	\N	1048585	1
-47	1	12	3	16777259	2024-06-10 18:50:03	\N	1048585	1
-8	1	5	2	16777217	2024-06-10 18:48:19	\N	1048585	1
-145	1	4	2	16777217	2024-06-10 18:53:30	\N	1048585	6
-10	1	4	2	16777217	2024-06-10 18:48:19	\N	1048585	1
-49	1	5	3	16777259	2024-06-10 18:50:03	\N	1048585	1
-12	1	0	2	16777243	2024-06-10 18:48:19	\N	1048585	1
-13	1	0	2	16777245	2024-06-10 18:48:19	\N	1048585	1
-51	1	4	3	16777259	2024-06-10 18:50:03	\N	1048585	1
-147	1	0	2	16777243	2024-06-10 18:53:30	\N	1048585	6
-53	1	3	3	16777259	2024-06-10 18:50:03	\N	1048585	1
-148	1	0	2	16777245	2024-06-10 18:53:30	\N	1048585	6
-84	1	0	2	16777245	2024-06-10 18:51:45	\N	1048585	3
-15	1	0	2	16777236	2024-06-10 18:48:24	2024-06-10 18:48:26	523	1
-17	1	7	3	16777227	2024-06-10 18:48:30	\N	517	1
-150	1	0	2	16777236	2024-06-10 18:53:35	2024-06-10 18:53:38	523	5
-152	1	7	3	16777227	2024-06-10 18:53:41	\N	517	8
-135	1	21	2	16777235	2024-06-10 18:53:06	\N	1048585	5
-20	1	9	3	16777227	2024-06-10 18:48:34	\N	517	2
-23	1	10	3	16777227	2024-06-10 18:48:40	\N	517	3
-86	1	0	2	16777236	2024-06-10 18:51:50	2024-06-10 18:51:53	523	3
-276	1	3	2	16777217	2024-06-10 18:57:11	\N	1048585	12
-88	1	9	3	16777227	2024-06-10 18:51:56	\N	517	4
-58	1	3	2	16777217	2024-06-10 18:51:05	\N	1048585	2
-60	1	5	2	16777217	2024-06-10 18:51:05	\N	1048585	2
-278	1	5	2	16777217	2024-06-10 18:57:11	\N	1048585	12
-62	1	4	2	16777217	2024-06-10 18:51:05	\N	1048585	2
-155	1	10	3	16777227	2024-06-10 18:53:48	\N	517	9
-64	1	0	2	16777243	2024-06-10 18:51:05	\N	1048585	2
-65	1	0	2	16777245	2024-06-10 18:51:05	\N	1048585	2
-33	1	17	2	16777235	2024-06-10 18:48:51	\N	1048585	1
-125	1	10	3	16777227	2024-06-10 18:52:56	\N	517	7
-68	1	18	2	16777231	2024-06-10 18:51:10	\N	1048585	2
-67	1	0	2	16777236	2024-06-10 18:51:10	2024-06-10 18:51:12	523	2
-91	1	10	3	16777227	2024-06-10 18:52:02	\N	517	5
-71	1	3	3	16777249	2024-06-10 18:51:27	\N	1048586	1
-167	1	4	2	16777254	2024-06-10 18:53:58	\N	1048585	6
-73	1	4	3	16777249	2024-06-10 18:51:27	\N	1048586	1
-165	1	22	2	16777235	2024-06-10 18:53:58	\N	1048585	6
-75	1	5	3	16777249	2024-06-10 18:51:27	\N	1048586	1
-168	1	5	2	16777254	2024-06-10 18:53:58	\N	1048585	6
-111	1	3	2	16777217	2024-06-10 18:52:38	\N	1048585	5
-77	1	3	2	16777217	2024-06-10 18:51:45	\N	1048585	3
-166	1	3	2	16777254	2024-06-10 18:53:58	2024-06-10 18:54:00	1048585	6
-79	1	5	2	16777217	2024-06-10 18:51:45	\N	1048585	3
-176	1	0	2	16777243	2024-06-10 18:54:17	\N	1048585	7
-81	1	4	2	16777217	2024-06-10 18:51:45	\N	1048585	3
-170	1	3	2	16777217	2024-06-10 18:54:17	\N	1048585	7
-95	1	19	2	16777230	2024-06-10 18:52:05	\N	1048585	3
-97	1	4	2	16777251	2024-06-10 18:52:05	\N	1048585	3
-98	1	5	2	16777251	2024-06-10 18:52:05	\N	1048585	3
-172	1	5	2	16777217	2024-06-10 18:54:17	\N	1048585	7
-96	1	3	2	16777251	2024-06-10 18:52:05	2024-06-10 18:52:07	1048585	3
-113	1	5	2	16777217	2024-06-10 18:52:38	\N	1048585	5
-174	1	4	2	16777217	2024-06-10 18:54:17	\N	1048585	7
-101	1	3	2	16777217	2024-06-10 18:52:27	\N	1048585	4
-177	1	0	2	16777245	2024-06-10 18:54:17	\N	1048585	7
-103	1	5	2	16777217	2024-06-10 18:52:27	\N	1048585	4
-105	1	4	2	16777217	2024-06-10 18:52:27	\N	1048585	4
-107	1	0	2	16777243	2024-06-10 18:52:27	\N	1048585	4
-108	1	0	2	16777245	2024-06-10 18:52:27	\N	1048585	4
-115	1	4	2	16777217	2024-06-10 18:52:38	\N	1048585	5
-180	1	23	2	16777231	2024-06-10 18:54:23	\N	1048585	7
-117	1	0	2	16777243	2024-06-10 18:52:38	\N	1048585	5
-118	1	0	2	16777245	2024-06-10 18:52:38	\N	1048585	5
-179	1	0	2	16777236	2024-06-10 18:54:23	2024-06-10 18:54:25	523	6
-137	1	4	2	16777254	2024-06-10 18:53:06	\N	1048585	5
-138	1	5	2	16777254	2024-06-10 18:53:06	\N	1048585	5
-120	1	0	2	16777236	2024-06-10 18:52:44	2024-06-10 18:52:46	523	4
-122	1	8	3	16777227	2024-06-10 18:52:50	\N	517	6
-136	1	3	2	16777254	2024-06-10 18:53:06	2024-06-10 18:53:08	1048585	5
-184	1	9	3	16777227	2024-06-10 18:54:33	\N	517	11
-252	1	3	2	16777219	2024-06-10 18:56:34	\N	517	15
-254	1	4	2	16777219	2024-06-10 18:56:34	\N	517	15
-230	1	3	2	16777254	2024-06-10 18:55:45	2024-06-10 18:55:46	1048585	9
-187	1	10	3	16777227	2024-06-10 18:54:39	\N	517	12
-256	1	5	2	16777219	2024-06-10 18:56:34	\N	517	15
-285	1	0	2	16777236	2024-06-10 18:57:19	2024-06-10 18:57:21	523	9
-287	1	7	3	16777227	2024-06-10 18:57:25	\N	517	17
-191	1	3	2	16777219	2024-06-10 18:54:48	\N	517	10
-259	1	3	2	16777219	2024-06-10 18:56:42	\N	517	16
-193	1	4	2	16777219	2024-06-10 18:54:48	\N	517	10
-195	1	5	2	16777219	2024-06-10 18:54:48	\N	517	10
-261	1	4	2	16777219	2024-06-10 18:56:42	\N	517	16
-234	1	3	2	16777217	2024-06-10 18:56:07	\N	1048585	10
-263	1	5	2	16777219	2024-06-10 18:56:42	\N	517	16
-236	1	5	2	16777217	2024-06-10 18:56:07	\N	1048585	10
-198	1	3	2	16777217	2024-06-10 18:55:03	\N	1048585	8
-200	1	5	2	16777217	2024-06-10 18:55:04	\N	1048585	8
-342	1	0	2	16777243	2024-06-10 18:58:58	\N	1048585	14
-202	1	4	2	16777217	2024-06-10 18:55:04	\N	1048585	8
-343	1	0	2	16777245	2024-06-10 18:58:58	\N	1048585	14
-204	1	0	2	16777243	2024-06-10 18:55:04	\N	1048585	8
-205	1	0	2	16777245	2024-06-10 18:55:04	\N	1048585	8
-266	1	3	2	16777217	2024-06-10 18:56:59	\N	1048585	11
-268	1	5	2	16777217	2024-06-10 18:56:59	\N	1048585	11
-238	1	4	2	16777217	2024-06-10 18:56:07	\N	1048585	10
-240	1	0	2	16777243	2024-06-10 18:56:07	\N	1048585	10
-241	1	0	2	16777245	2024-06-10 18:56:07	\N	1048585	10
-208	1	3	2	16777217	2024-06-10 18:55:15	\N	1048585	9
-270	1	4	2	16777217	2024-06-10 18:56:59	\N	1048585	11
-210	1	6	2	16777217	2024-06-10 18:55:15	\N	1048585	9
-212	1	0	2	16777243	2024-06-10 18:55:15	\N	1048585	9
-213	1	0	2	16777245	2024-06-10 18:55:15	\N	1048585	9
-272	1	0	2	16777243	2024-06-10 18:56:59	\N	1048585	11
-273	1	0	2	16777245	2024-06-10 18:56:59	\N	1048585	11
-290	1	8	3	16777227	2024-06-10 18:57:29	\N	517	18
-215	1	0	2	16777236	2024-06-10 18:55:22	2024-06-10 18:55:24	523	7
-217	1	7	3	16777227	2024-06-10 18:55:28	\N	517	13
-220	1	10	3	16777227	2024-06-10 18:55:34	\N	517	14
-280	1	4	2	16777217	2024-06-10 18:57:12	\N	1048585	12
-244	1	26	2	16777231	2024-06-10 18:56:14	\N	1048585	10
-282	1	0	2	16777243	2024-06-10 18:57:12	\N	1048585	12
-283	1	0	2	16777245	2024-06-10 18:57:12	\N	1048585	12
-243	1	0	2	16777236	2024-06-10 18:56:14	2024-06-10 18:56:16	523	8
-293	1	3	2	16777217	2024-06-10 18:57:42	\N	1048585	13
-295	1	5	2	16777217	2024-06-10 18:57:42	\N	1048585	13
-229	1	25	2	16777235	2024-06-10 18:55:44	\N	1048585	9
-231	1	6	2	16777254	2024-06-10 18:55:45	\N	1048585	9
-286	1	28	2	16777231	2024-06-10 18:57:19	\N	1048585	12
-297	1	4	2	16777217	2024-06-10 18:57:42	\N	1048585	13
-299	1	0	2	16777243	2024-06-10 18:57:42	\N	1048585	13
-300	1	0	2	16777245	2024-06-10 18:57:42	\N	1048585	13
-302	1	0	2	16777236	2024-06-10 18:57:50	2024-06-10 18:57:52	523	10
-321	1	3	2	16777219	2024-06-10 18:58:24	\N	517	20
-314	1	3	2	16777219	2024-06-10 18:58:15	\N	517	19
-316	1	5	2	16777219	2024-06-10 18:58:15	\N	517	19
-318	1	4	2	16777219	2024-06-10 18:58:15	\N	517	19
-323	1	5	2	16777219	2024-06-10 18:58:24	\N	517	20
-325	1	4	2	16777219	2024-06-10 18:58:24	\N	517	20
-328	1	3	2	16777219	2024-06-10 18:58:33	\N	517	21
-330	1	5	2	16777219	2024-06-10 18:58:33	\N	517	21
-332	1	4	2	16777219	2024-06-10 18:58:33	\N	517	21
-335	1	29	3	16777232	2024-06-10 18:58:45	\N	1048585	13
-351	1	0	2	16777243	2024-06-10 18:59:10	\N	1048585	15
-336	1	3	2	16777217	2024-06-10 18:58:58	\N	1048585	14
-338	1	5	2	16777217	2024-06-10 18:58:58	\N	1048585	14
-340	1	4	2	16777217	2024-06-10 18:58:58	\N	1048585	14
-352	1	0	2	16777245	2024-06-10 18:59:10	\N	1048585	15
-345	1	3	2	16777217	2024-06-10 18:59:10	\N	1048585	15
-347	1	5	2	16777217	2024-06-10 18:59:10	\N	1048585	15
-349	1	4	2	16777217	2024-06-10 18:59:10	\N	1048585	15
-354	1	0	2	16777236	2024-06-10 18:59:19	2024-06-10 18:59:21	523	11
-356	1	8	3	16777227	2024-06-10 18:59:24	\N	517	22
-359	1	9	3	16777227	2024-06-10 18:59:28	\N	517	23
-397	1	8	3	16777227	2024-06-10 19:00:30	\N	517	25
-369	1	31	2	16777235	2024-06-10 18:59:39	\N	1048585	15
-371	1	5	2	16777254	2024-06-10 18:59:39	\N	1048585	15
-372	1	4	2	16777254	2024-06-10 18:59:39	\N	1048585	15
-370	1	3	2	16777254	2024-06-10 18:59:39	2024-06-10 18:59:41	1048585	15
-374	1	3	2	16777217	2024-06-10 18:59:58	\N	1048585	16
-440	1	35	2	16777230	2024-06-10 19:02:58	\N	1048585	19
-376	1	5	2	16777217	2024-06-10 18:59:58	\N	1048585	16
-378	1	4	2	16777217	2024-06-10 18:59:58	\N	1048585	16
-407	1	33	2	16777235	2024-06-10 19:00:40	\N	1048585	17
-380	1	0	2	16777243	2024-06-10 18:59:58	\N	1048585	16
-381	1	0	2	16777245	2024-06-10 18:59:58	\N	1048585	16
-442	1	6	2	16777251	2024-06-10 19:02:58	\N	1048585	19
-383	1	3	2	16777217	2024-06-10 19:00:11	\N	1048585	17
-385	1	5	2	16777217	2024-06-10 19:00:11	\N	1048585	17
-387	1	4	2	16777217	2024-06-10 19:00:11	\N	1048585	17
-389	1	0	2	16777243	2024-06-10 19:00:11	\N	1048585	17
-390	1	0	2	16777245	2024-06-10 19:00:11	\N	1048585	17
-441	1	3	2	16777251	2024-06-10 19:02:58	2024-06-10 19:02:59	1048585	19
-413	1	3	2	16777217	2024-06-10 19:02:15	\N	1048585	18
-415	1	5	2	16777217	2024-06-10 19:02:15	\N	1048585	18
-392	1	0	2	16777236	2024-06-10 19:00:20	2024-06-10 19:00:22	523	12
-417	1	4	2	16777217	2024-06-10 19:02:15	\N	1048585	18
-419	1	0	2	16777243	2024-06-10 19:02:15	\N	1048585	18
-420	1	0	2	16777245	2024-06-10 19:02:15	\N	1048585	18
-423	1	34	2	16777234	2024-06-10 19:02:24	\N	1048585	18
-424	1	3	2	16777217	2024-06-10 19:02:36	\N	1048585	19
-426	1	6	2	16777217	2024-06-10 19:02:36	\N	1048585	19
-428	1	0	2	16777243	2024-06-10 19:02:37	\N	1048585	19
-429	1	0	2	16777245	2024-06-10 19:02:37	\N	1048585	19
-431	1	0	2	16777236	2024-06-10 19:02:45	2024-06-10 19:02:47	523	13
-433	1	8	3	16777227	2024-06-10 19:02:51	\N	517	26
-436	1	9	3	16777227	2024-06-10 19:02:55	\N	517	27
+77	1	3	2	16777217	2024-06-26 05:20:44	\N	1048585	3
+383	1	3	2	16777217	2024-06-26 05:26:38	\N	1048585	17
+79	1	5	2	16777217	2024-06-26 05:20:44	\N	1048585	3
+229	1	25	2	16777235	2024-06-26 05:23:35	\N	1048585	9
+81	1	4	2	16777217	2024-06-26 05:20:44	\N	1048585	3
+83	1	0	2	16777243	2024-06-26 05:20:44	\N	1048585	3
+84	1	0	2	16777245	2024-06-26 05:20:44	\N	1048585	3
+230	1	3	2	16777254	2024-06-26 05:23:35	2024-06-26 05:23:37	1048585	9
+137	1	4	2	16777254	2024-06-26 05:21:46	\N	1048585	5
+6	1	3	2	16777217	2024-06-26 05:18:17	\N	1048585	1
+138	1	5	2	16777254	2024-06-26 05:21:46	\N	1048585	5
+8	1	5	2	16777217	2024-06-26 05:18:17	\N	1048585	1
+125	1	10	3	16777227	2024-06-26 05:21:40	\N	517	7
+10	1	4	2	16777217	2024-06-26 05:18:17	\N	1048585	1
+12	1	0	2	16777243	2024-06-26 05:18:17	\N	1048585	1
+13	1	0	2	16777245	2024-06-26 05:18:17	\N	1048585	1
+86	1	0	2	16777236	2024-06-26 05:20:47	2024-06-26 05:20:48	523	3
+88	1	9	3	16777227	2024-06-26 05:20:51	\N	517	4
+15	1	0	2	16777236	2024-06-26 05:18:20	2024-06-26 05:18:21	523	1
+17	1	7	3	16777227	2024-06-26 05:18:24	\N	517	1
+111	1	3	2	16777217	2024-06-26 05:21:27	\N	1048585	5
+91	1	10	3	16777227	2024-06-26 05:20:57	\N	517	5
+20	1	9	3	16777227	2024-06-26 05:18:28	\N	517	2
+113	1	5	2	16777217	2024-06-26 05:21:27	\N	1048585	5
+23	1	10	3	16777227	2024-06-26 05:18:34	\N	517	3
+95	1	19	2	16777230	2024-06-26 05:20:58	\N	1048585	3
+58	1	3	2	16777217	2024-06-26 05:20:17	\N	1048585	2
+97	1	4	2	16777251	2024-06-26 05:20:58	\N	1048585	3
+98	1	5	2	16777251	2024-06-26 05:20:58	\N	1048585	3
+96	1	3	2	16777251	2024-06-26 05:20:58	2024-06-26 05:20:59	1048585	3
+115	1	4	2	16777217	2024-06-26 05:21:27	\N	1048585	5
+60	1	5	2	16777217	2024-06-26 05:20:17	\N	1048585	2
+62	1	4	2	16777217	2024-06-26 05:20:17	\N	1048585	2
+101	1	3	2	16777217	2024-06-26 05:21:19	\N	1048585	4
+33	1	17	2	16777235	2024-06-26 05:18:40	\N	1048585	1
+103	1	5	2	16777217	2024-06-26 05:21:19	\N	1048585	4
+105	1	4	2	16777217	2024-06-26 05:21:19	\N	1048585	4
+64	1	0	2	16777243	2024-06-26 05:20:17	\N	1048585	2
+65	1	0	2	16777245	2024-06-26 05:20:17	\N	1048585	2
+107	1	0	2	16777243	2024-06-26 05:21:19	\N	1048585	4
+108	1	0	2	16777245	2024-06-26 05:21:19	\N	1048585	4
+117	1	0	2	16777243	2024-06-26 05:21:27	\N	1048585	5
+118	1	0	2	16777245	2024-06-26 05:21:27	\N	1048585	5
+41	1	17	3	16777259	2024-06-26 05:19:27	\N	1048585	1
+43	1	16	3	16777259	2024-06-26 05:19:27	\N	1048585	1
+152	1	7	3	16777227	2024-06-26 05:22:09	\N	517	8
+45	1	14	3	16777259	2024-06-26 05:19:27	\N	1048585	1
+136	1	3	2	16777254	2024-06-26 05:21:46	2024-06-26 05:21:47	1048585	5
+47	1	12	3	16777259	2024-06-26 05:19:27	\N	1048585	1
+49	1	5	3	16777259	2024-06-26 05:19:27	\N	1048585	1
+51	1	4	3	16777259	2024-06-26 05:19:27	\N	1048585	1
+53	1	3	3	16777259	2024-06-26 05:19:28	\N	1048585	1
+120	1	0	2	16777236	2024-06-26 05:21:30	2024-06-26 05:21:31	523	4
+122	1	8	3	16777227	2024-06-26 05:21:34	\N	517	6
+68	1	18	2	16777231	2024-06-26 05:20:20	\N	1048585	2
+67	1	0	2	16777236	2024-06-26 05:20:20	2024-06-26 05:20:22	523	2
+71	1	3	3	16777249	2024-06-26 05:20:32	\N	1048586	1
+73	1	4	3	16777249	2024-06-26 05:20:32	\N	1048586	1
+75	1	5	3	16777249	2024-06-26 05:20:32	\N	1048586	1
+135	1	21	2	16777235	2024-06-26 05:21:46	\N	1048585	5
+141	1	3	2	16777217	2024-06-26 05:22:02	\N	1048585	6
+143	1	5	2	16777217	2024-06-26 05:22:02	\N	1048585	6
+145	1	4	2	16777217	2024-06-26 05:22:02	\N	1048585	6
+147	1	0	2	16777243	2024-06-26 05:22:02	\N	1048585	6
+148	1	0	2	16777245	2024-06-26 05:22:02	\N	1048585	6
+150	1	0	2	16777236	2024-06-26 05:22:05	2024-06-26 05:22:06	523	5
+155	1	10	3	16777227	2024-06-26 05:22:15	\N	517	9
+176	1	0	2	16777243	2024-06-26 05:22:35	\N	1048585	7
+165	1	22	2	16777235	2024-06-26 05:22:22	\N	1048585	6
+167	1	4	2	16777254	2024-06-26 05:22:22	\N	1048585	6
+168	1	5	2	16777254	2024-06-26 05:22:22	\N	1048585	6
+166	1	3	2	16777254	2024-06-26 05:22:22	2024-06-26 05:22:23	1048585	6
+170	1	3	2	16777217	2024-06-26 05:22:35	\N	1048585	7
+172	1	5	2	16777217	2024-06-26 05:22:35	\N	1048585	7
+174	1	4	2	16777217	2024-06-26 05:22:35	\N	1048585	7
+177	1	0	2	16777245	2024-06-26 05:22:35	\N	1048585	7
+180	1	23	2	16777231	2024-06-26 05:22:38	\N	1048585	7
+179	1	0	2	16777236	2024-06-26 05:22:38	2024-06-26 05:22:39	523	6
+184	1	9	3	16777227	2024-06-26 05:22:46	\N	517	11
+351	1	0	2	16777243	2024-06-26 05:25:58	\N	1048585	15
+231	1	6	2	16777254	2024-06-26 05:23:35	\N	1048585	9
+187	1	10	3	16777227	2024-06-26 05:22:52	\N	517	12
+385	1	5	2	16777217	2024-06-26 05:26:38	\N	1048585	17
+387	1	4	2	16777217	2024-06-26 05:26:38	\N	1048585	17
+234	1	3	2	16777217	2024-06-26 05:23:50	\N	1048585	10
+191	1	3	2	16777219	2024-06-26 05:22:57	\N	517	10
+193	1	4	2	16777219	2024-06-26 05:22:57	\N	517	10
+236	1	5	2	16777217	2024-06-26 05:23:50	\N	1048585	10
+195	1	5	2	16777219	2024-06-26 05:22:57	\N	517	10
+238	1	4	2	16777217	2024-06-26 05:23:50	\N	1048585	10
+240	1	0	2	16777243	2024-06-26 05:23:50	\N	1048585	10
+241	1	0	2	16777245	2024-06-26 05:23:50	\N	1048585	10
+198	1	3	2	16777217	2024-06-26 05:23:08	\N	1048585	8
+266	1	3	2	16777217	2024-06-26 05:24:26	\N	1048585	11
+200	1	5	2	16777217	2024-06-26 05:23:08	\N	1048585	8
+202	1	4	2	16777217	2024-06-26 05:23:08	\N	1048585	8
+268	1	5	2	16777217	2024-06-26 05:24:26	\N	1048585	11
+204	1	0	2	16777243	2024-06-26 05:23:08	\N	1048585	8
+205	1	0	2	16777245	2024-06-26 05:23:08	\N	1048585	8
+244	1	26	2	16777231	2024-06-26 05:23:54	\N	1048585	10
+243	1	0	2	16777236	2024-06-26 05:23:54	2024-06-26 05:23:55	523	8
+208	1	3	2	16777217	2024-06-26 05:23:16	\N	1048585	9
+270	1	4	2	16777217	2024-06-26 05:24:26	\N	1048585	11
+210	1	6	2	16777217	2024-06-26 05:23:16	\N	1048585	9
+212	1	0	2	16777243	2024-06-26 05:23:16	\N	1048585	9
+213	1	0	2	16777245	2024-06-26 05:23:16	\N	1048585	9
+272	1	0	2	16777243	2024-06-26 05:24:27	\N	1048585	11
+273	1	0	2	16777245	2024-06-26 05:24:27	\N	1048585	11
+215	1	0	2	16777236	2024-06-26 05:23:19	2024-06-26 05:23:21	523	7
+217	1	7	3	16777227	2024-06-26 05:23:24	\N	517	13
+252	1	3	2	16777219	2024-06-26 05:24:10	\N	517	15
+220	1	10	3	16777227	2024-06-26 05:23:29	\N	517	14
+254	1	4	2	16777219	2024-06-26 05:24:10	\N	517	15
+256	1	5	2	16777219	2024-06-26 05:24:10	\N	517	15
+293	1	3	2	16777217	2024-06-26 05:24:57	\N	1048585	13
+295	1	5	2	16777217	2024-06-26 05:24:57	\N	1048585	13
+259	1	3	2	16777219	2024-06-26 05:24:15	\N	517	16
+261	1	4	2	16777219	2024-06-26 05:24:15	\N	517	16
+263	1	5	2	16777219	2024-06-26 05:24:15	\N	517	16
+297	1	4	2	16777217	2024-06-26 05:24:57	\N	1048585	13
+299	1	0	2	16777243	2024-06-26 05:24:57	\N	1048585	13
+276	1	3	2	16777217	2024-06-26 05:24:36	\N	1048585	12
+278	1	5	2	16777217	2024-06-26 05:24:36	\N	1048585	12
+280	1	4	2	16777217	2024-06-26 05:24:36	\N	1048585	12
+282	1	0	2	16777243	2024-06-26 05:24:36	\N	1048585	12
+283	1	0	2	16777245	2024-06-26 05:24:36	\N	1048585	12
+300	1	0	2	16777245	2024-06-26 05:24:57	\N	1048585	13
+286	1	28	2	16777231	2024-06-26 05:24:40	\N	1048585	12
+285	1	0	2	16777236	2024-06-26 05:24:40	2024-06-26 05:24:41	523	9
+287	1	7	3	16777227	2024-06-26 05:24:44	\N	517	17
+328	1	3	2	16777219	2024-06-26 05:25:33	\N	517	21
+290	1	8	3	16777227	2024-06-26 05:24:48	\N	517	18
+302	1	0	2	16777236	2024-06-26 05:25:01	2024-06-26 05:25:02	523	10
+321	1	3	2	16777219	2024-06-26 05:25:27	\N	517	20
+314	1	3	2	16777219	2024-06-26 05:25:21	\N	517	19
+316	1	5	2	16777219	2024-06-26 05:25:21	\N	517	19
+318	1	4	2	16777219	2024-06-26 05:25:21	\N	517	19
+330	1	5	2	16777219	2024-06-26 05:25:33	\N	517	21
+323	1	5	2	16777219	2024-06-26 05:25:27	\N	517	20
+325	1	4	2	16777219	2024-06-26 05:25:27	\N	517	20
+332	1	4	2	16777219	2024-06-26 05:25:33	\N	517	21
+336	1	3	2	16777217	2024-06-26 05:25:48	\N	1048585	14
+338	1	5	2	16777217	2024-06-26 05:25:48	\N	1048585	14
+335	1	29	3	16777232	2024-06-26 05:25:40	\N	1048585	13
+340	1	4	2	16777217	2024-06-26 05:25:48	\N	1048585	14
+342	1	0	2	16777243	2024-06-26 05:25:48	\N	1048585	14
+343	1	0	2	16777245	2024-06-26 05:25:48	\N	1048585	14
+352	1	0	2	16777245	2024-06-26 05:25:58	\N	1048585	15
+345	1	3	2	16777217	2024-06-26 05:25:58	\N	1048585	15
+347	1	5	2	16777217	2024-06-26 05:25:58	\N	1048585	15
+349	1	4	2	16777217	2024-06-26 05:25:58	\N	1048585	15
+354	1	0	2	16777236	2024-06-26 05:26:03	2024-06-26 05:26:04	523	11
+356	1	8	3	16777227	2024-06-26 05:26:07	\N	517	22
+359	1	9	3	16777227	2024-06-26 05:26:11	\N	517	23
+389	1	0	2	16777243	2024-06-26 05:26:38	\N	1048585	17
+390	1	0	2	16777245	2024-06-26 05:26:38	\N	1048585	17
+369	1	31	2	16777235	2024-06-26 05:26:17	\N	1048585	15
+371	1	5	2	16777254	2024-06-26 05:26:17	\N	1048585	15
+372	1	4	2	16777254	2024-06-26 05:26:17	\N	1048585	15
+370	1	3	2	16777254	2024-06-26 05:26:17	2024-06-26 05:26:18	1048585	15
+374	1	3	2	16777217	2024-06-26 05:26:29	\N	1048585	16
+392	1	0	2	16777236	2024-06-26 05:26:43	2024-06-26 05:26:45	523	12
+376	1	5	2	16777217	2024-06-26 05:26:29	\N	1048585	16
+394	1	7	3	16777227	2024-06-26 05:26:48	\N	517	24
+378	1	4	2	16777217	2024-06-26 05:26:29	\N	1048585	16
+380	1	0	2	16777243	2024-06-26 05:26:30	\N	1048585	16
+381	1	0	2	16777245	2024-06-26 05:26:30	\N	1048585	16
+431	1	0	2	16777236	2024-06-26 05:28:13	2024-06-26 05:28:14	523	13
+433	1	8	3	16777227	2024-06-26 05:28:17	\N	517	26
+397	1	8	3	16777227	2024-06-26 05:26:51	\N	517	25
+436	1	9	3	16777227	2024-06-26 05:28:21	\N	517	27
+407	1	33	2	16777235	2024-06-26 05:26:57	\N	1048585	17
+413	1	3	2	16777217	2024-06-26 05:27:55	\N	1048585	18
+415	1	5	2	16777217	2024-06-26 05:27:55	\N	1048585	18
+417	1	4	2	16777217	2024-06-26 05:27:55	\N	1048585	18
+419	1	0	2	16777243	2024-06-26 05:27:56	\N	1048585	18
+420	1	0	2	16777245	2024-06-26 05:27:56	\N	1048585	18
+440	1	35	2	16777230	2024-06-26 05:28:22	\N	1048585	19
+442	1	6	2	16777251	2024-06-26 05:28:22	\N	1048585	19
+423	1	34	2	16777234	2024-06-26 05:28:00	\N	1048585	18
+424	1	3	2	16777217	2024-06-26 05:28:08	\N	1048585	19
+426	1	6	2	16777217	2024-06-26 05:28:08	\N	1048585	19
+428	1	0	2	16777243	2024-06-26 05:28:08	\N	1048585	19
+429	1	0	2	16777245	2024-06-26 05:28:08	\N	1048585	19
+441	1	3	2	16777251	2024-06-26 05:28:22	2024-06-26 05:28:23	1048585	19
 \.
 
 
@@ -7090,8 +7023,8 @@ COPY public.oai_resumption_tokens (token, expire, record_offset, params) FROM st
 COPY public.plugin_settings (plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
 defaultthemeplugin	0	enabled	1	bool
 acronplugin	0	enabled	1	bool
-tinymceplugin	0	enabled	1	bool
 usageeventplugin	0	enabled	1	bool
+tinymceplugin	0	enabled	1	bool
 usagestatsplugin	0	enabled	1	bool
 usagestatsplugin	0	createLogFiles	1	bool
 usagestatsplugin	0	accessLogFileParseRegex	/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] "\\S+ (?P<url>\\S+).*?" (?P<returnCode>\\S+) \\S+ ".*?" "(?P<userAgent>.*?)"/	string
@@ -7102,27 +7035,27 @@ languagetoggleblockplugin	0	enabled	1	bool
 languagetoggleblockplugin	0	seq	4	int
 developedbyblockplugin	0	enabled	0	bool
 developedbyblockplugin	0	seq	0	int
-acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"classes.tasks.SubscriptionExpiryReminder","frequency":{"day":"1"},"args":[]}]	object
-tinymceplugin	1	enabled	1	bool
+acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"classes.tasks.SubscriptionExpiryReminder","frequency":{"day":"1"},"args":[]}]	object
 defaultthemeplugin	1	enabled	1	bool
+tinymceplugin	1	enabled	1	bool
 languagetoggleblockplugin	1	enabled	1	bool
 languagetoggleblockplugin	1	seq	4	int
-subscriptionblockplugin	1	enabled	1	bool
-subscriptionblockplugin	1	seq	2	int
-developedbyblockplugin	1	enabled	0	bool
-developedbyblockplugin	1	seq	0	int
 informationblockplugin	1	enabled	1	bool
 informationblockplugin	1	seq	7	int
+developedbyblockplugin	1	enabled	0	bool
+developedbyblockplugin	1	seq	0	int
+subscriptionblockplugin	1	enabled	1	bool
+subscriptionblockplugin	1	seq	2	int
 resolverplugin	1	enabled	1	bool
-googlescholarplugin	1	enabled	1	bool
-dublincoremetaplugin	1	enabled	1	bool
 pdfjsviewerplugin	1	enabled	1	bool
-htmlarticlegalleyplugin	1	enabled	1	bool
+googlescholarplugin	1	enabled	1	bool
 lensgalleyplugin	1	enabled	1	bool
+dublincoremetaplugin	1	enabled	1	bool
+htmlarticlegalleyplugin	1	enabled	1	bool
 webfeedplugin	1	enabled	1	bool
 webfeedplugin	1	displayPage	homepage	string
 webfeedplugin	1	displayItems	1	bool
-usageeventplugin	0	uniqueSiteId	666749973dc96	string
+usageeventplugin	0	uniqueSiteId	667ba3fe848a2	string
 defaultthemeplugin	1	typography	notoSans	string
 defaultthemeplugin	1	baseColour	#1E6292	string
 defaultthemeplugin	1	showDescriptionInJournalIndex	false	string
@@ -7151,9 +7084,9 @@ COPY public.publication_galley_settings (galley_id, locale, setting_name, settin
 --
 
 COPY public.publication_galleys (galley_id, locale, publication_id, label, submission_file_id, seq, remote_url, is_approved, url_path) FROM stdin;
-1	en_US	1	PDF	2	0		0	
-2	en_US	2	PDF Version 2	2	0		0	pdf
-3	en_US	18	PDF	24	0		0	
+1	en_US	1	PDF	3	0		0	
+2	en_US	2	PDF Version 2	3	0		0	pdf
+3	en_US	18	PDF	20	0		0	
 \.
 
 
@@ -7162,6 +7095,16 @@ COPY public.publication_galleys (galley_id, locale, publication_id, label, submi
 --
 
 COPY public.publication_settings (publication_id, locale, setting_name, setting_value) FROM stdin;
+3	fr_CA	abstract	
+3		categoryIds	[]
+3	en_US	prefix	
+3	fr_CA	prefix	
+3	en_US	subtitle	
+3	fr_CA	subtitle	
+3	en_US	title	The influence of lactation on the quantity and quality of cashmere production
+3	fr_CA	title	
+8	fr_CA	subtitle	
+2	en_US	abstract	<p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.</p>
 2		categoryIds	[]
 2	en_US	copyrightHolder	Journal of Public Knowledge
 2	fr_CA	copyrightHolder	Journal de la connaissance du public
@@ -7171,8 +7114,9 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 2	en_US	title	Signalling Theory Dividends Version 2
 2		issueId	1
 2		pages	71-98
-3	fr_CA	prefix	
-3	en_US	subtitle	
+8	en_US	title	Developing efficacy beliefs in the classroom
+18		issueId	1
+8	fr_CA	title	
 1	en_US	abstract	<p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.</p>
 1		categoryIds	[]
 1	en_US	copyrightHolder	Journal of Public Knowledge
@@ -7180,65 +7124,9 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 1		copyrightYear	2024
 1	en_US	prefix	The
 1	en_US	subtitle	A Review Of The Literature And Empirical Evidence
-3	en_US	abstract	<p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.</p>
 1	en_US	title	Signalling Theory Dividends
 1		issueId	1
 1		pages	71-98
-3	fr_CA	abstract	
-3		categoryIds	[]
-3	en_US	prefix	
-3	fr_CA	subtitle	
-3	en_US	title	The influence of lactation on the quantity and quality of cashmere production
-3	fr_CA	title	
-5		categoryIds	[]
-4	en_US	abstract	<p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p>
-4	fr_CA	abstract	
-4		categoryIds	[]
-4	en_US	prefix	
-4	fr_CA	prefix	
-4	en_US	subtitle	
-4	fr_CA	subtitle	
-4	en_US	title	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence
-4	fr_CA	title	
-5	en_US	abstract	<p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.</p>
-5	fr_CA	abstract	
-5	en_US	prefix	
-5	fr_CA	prefix	
-5	en_US	subtitle	
-5	fr_CA	subtitle	
-5	en_US	title	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice
-5	fr_CA	title	
-2	en_US	abstract	<p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.</p>
-12	en_US	subtitle	
-6		categoryIds	[]
-12	fr_CA	subtitle	
-6	en_US	abstract	<p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.</p>
-6	fr_CA	abstract	
-6	en_US	prefix	
-6	fr_CA	prefix	
-6	en_US	subtitle	
-6	fr_CA	subtitle	
-6	en_US	title	Genetic transformation of forest trees
-6	fr_CA	title	
-7	en_US	abstract	<p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.</p>
-7	fr_CA	abstract	
-7		categoryIds	[]
-7	en_US	prefix	
-7	fr_CA	prefix	
-7	en_US	subtitle	
-7	fr_CA	subtitle	
-7	en_US	title	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement
-7	fr_CA	title	
-8	en_US	abstract	<p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.</p>
-8	fr_CA	abstract	
-8		categoryIds	[]
-8	en_US	prefix	
-8	fr_CA	prefix	
-8	en_US	subtitle	
-8	fr_CA	subtitle	
-8	en_US	title	Developing efficacy beliefs in the classroom
-8	fr_CA	title	
-12	en_US	abstract	<p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.</p>
 9	en_US	abstract	<p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.</p>
 9	fr_CA	abstract	
 9		categoryIds	[]
@@ -7248,8 +7136,6 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 9	fr_CA	subtitle	
 9	en_US	title	Traditions and Trends in the Study of the Commons
 9	fr_CA	title	
-12	fr_CA	abstract	
-10	en_US	abstract	<p>None.</p>
 10	fr_CA	abstract	
 10		categoryIds	[]
 10	en_US	prefix	
@@ -7258,21 +7144,72 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 10	fr_CA	subtitle	
 10	en_US	title	Hansen & Pinto: Reason Reclaimed
 10	fr_CA	title	
-12		categoryIds	[]
+11		categoryIds	[]
+18	en_US	abstract	<p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.</p>
+3	en_US	abstract	<p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.</p>
+4	en_US	abstract	<p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p>
+4	fr_CA	abstract	
+4		categoryIds	[]
+4	en_US	prefix	
+4	fr_CA	prefix	
+4	en_US	subtitle	
+4	fr_CA	subtitle	
+4	en_US	title	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence
+4	fr_CA	title	
+8	en_US	abstract	<p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.</p>
+8	fr_CA	abstract	
+5	en_US	abstract	<p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.</p>
+5	fr_CA	abstract	
+5		categoryIds	[]
+5	en_US	prefix	
+5	fr_CA	prefix	
+5	en_US	subtitle	
+5	fr_CA	subtitle	
+5	en_US	title	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice
+5	fr_CA	title	
+8		categoryIds	[]
+6	en_US	abstract	<p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.</p>
+6	fr_CA	abstract	
+6		categoryIds	[]
+6	en_US	prefix	
+6	fr_CA	prefix	
+6	en_US	subtitle	
+6	fr_CA	subtitle	
+6	en_US	title	Genetic transformation of forest trees
+6	fr_CA	title	
+8	en_US	prefix	
+7	en_US	abstract	<p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.</p>
+7	fr_CA	abstract	
+7		categoryIds	[]
+7	en_US	prefix	
+7	fr_CA	prefix	
+7	en_US	subtitle	
+7	fr_CA	subtitle	
+7	en_US	title	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement
+7	fr_CA	title	
+8	fr_CA	prefix	
+8	en_US	subtitle	
+10	en_US	abstract	<p>None.</p>
 11	en_US	abstract	<p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.</p>
 11	fr_CA	abstract	
-11		categoryIds	[]
 11	en_US	prefix	
 11	fr_CA	prefix	
 11	en_US	subtitle	
 11	fr_CA	subtitle	
 11	en_US	title	Condensing Water Availability Models to Focus on Specific Water Management Systems
 11	fr_CA	title	
+14		categoryIds	[]
+14	en_US	prefix	
+12	en_US	abstract	<p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.</p>
+12	fr_CA	abstract	
+12		categoryIds	[]
 12	en_US	prefix	
 12	fr_CA	prefix	
+12	en_US	subtitle	
+12	fr_CA	subtitle	
 12	en_US	title	Learning Sustainable Design through Service
 12	fr_CA	title	
-16		categoryIds	[]
+14	fr_CA	prefix	
 13	en_US	abstract	<p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.</p>
 13	fr_CA	abstract	
 13		categoryIds	[]
@@ -7282,43 +7219,42 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 13	fr_CA	subtitle	
 13	en_US	title	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning
 13	fr_CA	title	
-16	en_US	prefix	
 14	en_US	abstract	<p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.</p>
 14	fr_CA	abstract	
-14		categoryIds	[]
-14	en_US	prefix	
-14	fr_CA	prefix	
 14	en_US	subtitle	
 14	fr_CA	subtitle	
 14	en_US	title	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions
 14	fr_CA	title	
-16	fr_CA	prefix	
+20	en_US	title	Finocchiaro: Arguments About Arguments
+15		categoryIds	[]
+20	fr_CA	title	
 15	en_US	abstract	<p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.</p>
 15	fr_CA	abstract	
-15		categoryIds	[]
 15	en_US	prefix	
 15	fr_CA	prefix	
 15	en_US	subtitle	
 15	fr_CA	subtitle	
 15	en_US	title	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua
 15	fr_CA	title	
+18	fr_CA	abstract	
 16	en_US	abstract	<p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.</p>
 16	fr_CA	abstract	
+16		categoryIds	[]
+16	en_US	prefix	
+16	fr_CA	prefix	
 16	en_US	subtitle	
 16	fr_CA	subtitle	
 16	en_US	title	Yam diseases and its management in Nigeria
 16	fr_CA	title	
-17		categoryIds	[]
 17	en_US	abstract	<p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.</p>
 17	fr_CA	abstract	
+17		categoryIds	[]
 17	en_US	prefix	
 17	fr_CA	prefix	
 17	en_US	subtitle	
 17	fr_CA	subtitle	
 17	en_US	title	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat
 17	fr_CA	title	
-18	fr_CA	abstract	
-18	en_US	abstract	<p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.</p>
 18		categoryIds	[]
 18	en_US	copyrightHolder	Journal of Public Knowledge
 18	fr_CA	copyrightHolder	Journal de la connaissance du public
@@ -7326,10 +7262,6 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 18	en_US	prefix	
 18	fr_CA	prefix	
 18	en_US	subtitle	
-18	fr_CA	subtitle	
-18	en_US	title	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran
-18	fr_CA	title	
-18		issueId	1
 19	en_US	abstract	<p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.</p>
 19	fr_CA	abstract	
 19		categoryIds	[]
@@ -7337,6 +7269,9 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 19	fr_CA	prefix	
 19	en_US	subtitle	
 19	fr_CA	subtitle	
+18	fr_CA	subtitle	
+18	fr_CA	title	
+18	en_US	title	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran
 19	en_US	title	Self-Organization in Multi-Level Institutions in Networked Environments
 19	fr_CA	title	
 20	en_US	abstract	<p>None.</p>
@@ -7346,8 +7281,6 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 20	fr_CA	prefix	
 20	en_US	subtitle	
 20	fr_CA	subtitle	
-20	en_US	title	Finocchiaro: Arguments About Arguments
-20	fr_CA	title	
 \.
 
 
@@ -7356,26 +7289,26 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, access_status, date_published, last_modified, locale, primary_contact_id, section_id, seq, submission_id, status, url_path, version) FROM stdin;
-1	0	2024-06-10	2024-06-10 18:49:58	\N	1	1	0	1	3	mwandenga-signalling-theory	1
-18	0	2024-06-10	2024-06-10 19:01:58	\N	23	1	0	17	3	\N	1
-2	0	2024-06-10	2024-06-10 18:50:34	\N	3	1	0	1	1	mwandenga	2
-19	0	\N	2024-06-10 19:02:14	\N	24	1	0	18	1	\N	1
-3	0	\N	2024-06-10 18:51:20	\N	5	1	0	2	1	\N	1
-4	0	\N	2024-06-10 18:51:44	\N	6	1	0	3	1	\N	1
-20	0	\N	2024-06-10 19:02:36	\N	25	2	0	19	1	\N	1
-5	0	\N	2024-06-10 18:52:26	\N	7	1	0	4	1	\N	1
-6	0	\N	2024-06-10 18:52:37	\N	9	1	0	5	1	\N	1
-7	0	\N	2024-06-10 18:53:29	\N	10	1	0	6	1	\N	1
-8	0	\N	2024-06-10 18:54:16	\N	11	1	0	7	1	\N	1
-9	0	\N	2024-06-10 18:55:02	\N	12	1	0	8	1	\N	1
-10	0	\N	2024-06-10 18:55:14	\N	14	2	0	9	1	\N	1
-11	0	\N	2024-06-10 18:56:06	\N	15	1	0	10	1	\N	1
-12	0	\N	2024-06-10 18:56:58	\N	16	1	0	11	1	\N	1
-13	0	\N	2024-06-10 18:57:11	\N	18	1	0	12	1	\N	1
-14	0	\N	2024-06-10 18:57:41	\N	19	1	0	13	1	\N	1
-15	0	\N	2024-06-10 18:58:57	\N	20	1	0	14	1	\N	1
-16	0	\N	2024-06-10 18:59:09	\N	21	1	0	15	1	\N	1
-17	0	\N	2024-06-10 18:59:57	\N	22	1	0	16	1	\N	1
+17	0	\N	2024-06-26 05:26:29	\N	22	1	0	16	1	\N	1
+1	0	2024-06-26	2024-06-26 05:19:25	\N	1	1	0	1	3	mwandenga-signalling-theory	1
+2	0	2024-06-26	2024-06-26 05:19:57	\N	3	1	0	1	1	mwandenga	2
+18	0	2024-06-26	2024-06-26 05:27:44	\N	23	1	0	17	3	\N	1
+3	0	\N	2024-06-26 05:20:28	\N	5	1	0	2	1	\N	1
+4	0	\N	2024-06-26 05:20:43	\N	6	1	0	3	1	\N	1
+19	0	\N	2024-06-26 05:27:55	\N	24	1	0	18	1	\N	1
+5	0	\N	2024-06-26 05:21:18	\N	7	1	0	4	1	\N	1
+6	0	\N	2024-06-26 05:21:26	\N	9	1	0	5	1	\N	1
+20	0	\N	2024-06-26 05:28:07	\N	25	2	0	19	1	\N	1
+7	0	\N	2024-06-26 05:22:01	\N	10	1	0	6	1	\N	1
+8	0	\N	2024-06-26 05:22:34	\N	11	1	0	7	1	\N	1
+9	0	\N	2024-06-26 05:23:07	\N	12	1	0	8	1	\N	1
+10	0	\N	2024-06-26 05:23:15	\N	14	2	0	9	1	\N	1
+11	0	\N	2024-06-26 05:23:50	\N	15	1	0	10	1	\N	1
+12	0	\N	2024-06-26 05:24:26	\N	16	1	0	11	1	\N	1
+13	0	\N	2024-06-26 05:24:35	\N	18	1	0	12	1	\N	1
+14	0	\N	2024-06-26 05:24:56	\N	19	1	0	13	1	\N	1
+15	0	\N	2024-06-26 05:25:48	\N	20	1	0	14	1	\N	1
+16	0	\N	2024-06-26 05:25:57	\N	21	1	0	15	1	\N	1
 \.
 
 
@@ -7412,33 +7345,33 @@ COPY public.queued_payments (queued_payment_id, date_created, date_modified, exp
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, unconsidered) FROM stdin;
-1	1	7	\N	\N	2024-06-10 18:48:29	2024-06-10 18:48:30	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:48:30	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-2	1	9	\N	\N	2024-06-10 18:48:34	2024-06-10 18:48:34	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:48:34	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-16	10	10	\N	3	2024-06-10 18:56:26	2024-06-10 18:56:26	2024-06-10 18:56:38	2024-06-10 18:56:42	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:56:42	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
-3	1	10	\N	\N	2024-06-10 18:48:40	2024-06-10 18:48:40	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:48:40	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-4	3	9	\N	\N	2024-06-10 18:51:56	2024-06-10 18:51:56	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:51:56	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-24	17	7	\N	\N	2024-06-10 19:00:26	2024-06-10 19:00:26	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 19:00:26	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-5	3	10	\N	\N	2024-06-10 18:52:02	2024-06-10 18:52:02	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:52:02	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-17	12	7	\N	\N	2024-06-10 18:57:25	2024-06-10 18:57:25	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:57:25	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-6	5	8	\N	\N	2024-06-10 18:52:50	2024-06-10 18:52:50	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:52:50	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-7	5	10	\N	\N	2024-06-10 18:52:55	2024-06-10 18:52:56	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:52:56	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-8	6	7	\N	\N	2024-06-10 18:53:41	2024-06-10 18:53:41	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:53:41	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-18	12	8	\N	\N	2024-06-10 18:57:29	2024-06-10 18:57:29	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:57:29	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-9	6	10	\N	\N	2024-06-10 18:53:48	2024-06-10 18:53:48	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:53:48	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-25	17	8	\N	\N	2024-06-10 19:00:30	2024-06-10 19:00:30	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 19:00:30	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-11	7	9	\N	\N	2024-06-10 18:54:33	2024-06-10 18:54:33	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:54:33	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-12	7	10	\N	\N	2024-06-10 18:54:39	2024-06-10 18:54:39	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:54:39	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-26	19	8	\N	\N	2024-06-10 19:02:51	2024-06-10 19:02:51	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 19:02:51	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-10	7	8	\N	5	2024-06-10 18:54:29	2024-06-10 18:54:29	2024-06-10 18:54:44	2024-06-10 18:54:48	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:54:48	0	0	0	\N	\N	\N	\N	6	3	2	1	4	\N	0
-13	9	7	\N	\N	2024-06-10 18:55:28	2024-06-10 18:55:28	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:55:28	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-14	9	10	\N	\N	2024-06-10 18:55:34	2024-06-10 18:55:34	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:55:34	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-27	19	9	\N	\N	2024-06-10 19:02:55	2024-06-10 19:02:55	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 19:02:55	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-19	13	7	\N	2	2024-06-10 18:57:56	2024-06-10 18:57:56	2024-06-10 18:58:11	2024-06-10 18:58:15	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:58:15	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-15	10	9	\N	2	2024-06-10 18:56:20	2024-06-10 18:56:20	2024-06-10 18:56:30	2024-06-10 18:56:34	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:56:34	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
-20	13	9	\N	2	2024-06-10 18:58:00	2024-06-10 18:58:00	2024-06-10 18:58:20	2024-06-10 18:58:24	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:58:24	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-21	13	10	\N	3	2024-06-10 18:58:06	2024-06-10 18:58:06	2024-06-10 18:58:29	2024-06-10 18:58:34	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:58:34	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-22	15	8	\N	\N	2024-06-10 18:59:24	2024-06-10 18:59:24	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:59:24	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
-23	15	9	\N	\N	2024-06-10 18:59:28	2024-06-10 18:59:28	\N	\N	\N	2024-07-08 00:00:00	2024-07-08 00:00:00	2024-06-10 18:59:28	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+1	1	7	\N	\N	2024-06-26 05:18:24	2024-06-26 05:18:24	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:18:24	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+2	1	9	\N	\N	2024-06-26 05:18:28	2024-06-26 05:18:28	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:18:28	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+16	10	10	\N	3	2024-06-26 05:24:04	2024-06-26 05:24:04	2024-06-26 05:24:12	2024-06-26 05:24:15	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:24:15	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
+3	1	10	\N	\N	2024-06-26 05:18:34	2024-06-26 05:18:34	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:18:34	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+4	3	9	\N	\N	2024-06-26 05:20:51	2024-06-26 05:20:51	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:20:51	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+24	17	7	\N	\N	2024-06-26 05:26:48	2024-06-26 05:26:48	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:26:48	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+5	3	10	\N	\N	2024-06-26 05:20:57	2024-06-26 05:20:57	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:20:57	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+17	12	7	\N	\N	2024-06-26 05:24:44	2024-06-26 05:24:44	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:24:44	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+6	5	8	\N	\N	2024-06-26 05:21:34	2024-06-26 05:21:34	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:21:34	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+7	5	10	\N	\N	2024-06-26 05:21:40	2024-06-26 05:21:40	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:21:40	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+8	6	7	\N	\N	2024-06-26 05:22:09	2024-06-26 05:22:09	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:22:09	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+18	12	8	\N	\N	2024-06-26 05:24:48	2024-06-26 05:24:48	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:24:48	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+9	6	10	\N	\N	2024-06-26 05:22:15	2024-06-26 05:22:15	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:22:15	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+25	17	8	\N	\N	2024-06-26 05:26:51	2024-06-26 05:26:51	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:26:51	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+11	7	9	\N	\N	2024-06-26 05:22:46	2024-06-26 05:22:46	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:22:46	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+12	7	10	\N	\N	2024-06-26 05:22:52	2024-06-26 05:22:52	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:22:52	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+26	19	8	\N	\N	2024-06-26 05:28:17	2024-06-26 05:28:17	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:28:17	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+10	7	8	\N	5	2024-06-26 05:22:42	2024-06-26 05:22:42	2024-06-26 05:22:54	2024-06-26 05:22:57	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:22:57	0	0	0	\N	\N	\N	\N	6	3	2	1	4	\N	0
+13	9	7	\N	\N	2024-06-26 05:23:24	2024-06-26 05:23:24	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:23:24	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+14	9	10	\N	\N	2024-06-26 05:23:29	2024-06-26 05:23:29	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:23:29	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+27	19	9	\N	\N	2024-06-26 05:28:21	2024-06-26 05:28:21	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:28:21	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+19	13	7	\N	2	2024-06-26 05:25:05	2024-06-26 05:25:05	2024-06-26 05:25:18	2024-06-26 05:25:21	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:25:21	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+15	10	9	\N	2	2024-06-26 05:23:58	2024-06-26 05:23:58	2024-06-26 05:24:07	2024-06-26 05:24:10	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:24:10	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
+20	13	9	\N	2	2024-06-26 05:25:09	2024-06-26 05:25:09	2024-06-26 05:25:23	2024-06-26 05:25:27	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:25:27	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+21	13	10	\N	3	2024-06-26 05:25:15	2024-06-26 05:25:15	2024-06-26 05:25:30	2024-06-26 05:25:33	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:25:33	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+22	15	8	\N	\N	2024-06-26 05:26:07	2024-06-26 05:26:07	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:26:07	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+23	15	9	\N	\N	2024-06-26 05:26:11	2024-06-26 05:26:11	\N	\N	\N	2024-07-24 00:00:00	2024-07-24 00:00:00	2024-06-26 05:26:11	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
 \.
 
 
@@ -7447,16 +7380,9 @@ COPY public.review_assignments (review_id, submission_id, reviewer_id, competing
 --
 
 COPY public.review_files (review_id, submission_file_id) FROM stdin;
-4	6
-5	6
-8	10
-9	10
-10	12
-11	12
-12	12
-19	19
-20	19
-21	19
+1	2
+2	2
+3	2
 \.
 
 
@@ -7505,11 +7431,7 @@ COPY public.review_forms (review_form_id, assoc_type, assoc_id, seq, is_active) 
 --
 
 COPY public.review_round_files (submission_id, review_round_id, stage_id, submission_file_id) FROM stdin;
-2	2	3	4
-3	3	3	6
-6	5	3	10
-7	6	3	12
-13	10	3	19
+1	1	3	2
 \.
 
 
@@ -7539,13 +7461,13 @@ COPY public.review_rounds (review_round_id, submission_id, stage_id, round, revi
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2024-06-10 18:44:25
-plugins.importexport.datacite.DataciteInfoSender	2024-06-10 18:44:25
-plugins.importexport.crossref.CrossrefInfoSender	2024-06-10 18:44:25
-plugins.importexport.doaj.DOAJInfoSender	2024-06-10 18:44:25
-lib.pkp.classes.task.ReviewReminder	2024-06-10 18:44:25
-lib.pkp.classes.task.StatisticsReport	2024-06-10 18:44:25
-classes.tasks.SubscriptionExpiryReminder	2024-06-10 18:44:25
+plugins.generic.usageStats.UsageStatsLoader	2024-06-26 05:15:33
+plugins.importexport.crossref.CrossrefInfoSender	2024-06-26 05:15:33
+plugins.importexport.doaj.DOAJInfoSender	2024-06-26 05:15:33
+plugins.importexport.datacite.DataciteInfoSender	2024-06-26 05:15:33
+lib.pkp.classes.task.ReviewReminder	2024-06-26 05:15:33
+lib.pkp.classes.task.StatisticsReport	2024-06-26 05:15:33
+classes.tasks.SubscriptionExpiryReminder	2024-06-26 05:15:33
 \.
 
 
@@ -7588,49 +7510,49 @@ COPY public.sections (section_id, journal_id, review_form_id, seq, editor_restri
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-9mquuaarhj5n8ner9ragdh003g	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045063	1718045063	0		localhost
-nmc6iomrinb0ml47b35mf1ves1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045343	1718045366	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1718045366;s:5:"token";s:32:"4980a0c056ea5ebc2c1b4851fe1e8147";}	localhost
-m53i0ok9vh4b1tno4ev5hffnlt	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045079	1718045093	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1718045093;s:5:"token";s:32:"7022532cbca3a82962ccd2bc12424e67";}	localhost
-t44n0t9mnfbov0t0bfacfirf99	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045454	1718045493	0	csrf|a:2:{s:9:"timestamp";i:1718045493;s:5:"token";s:32:"66356c375ed07600ad139a7f77029266";}username|s:7:"dbarnes";userId|i:3;	localhost
-cqdf42crumpnkt9vtc0aict3ui	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045093	1718045100	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1718045101;s:5:"token";s:32:"6541eba6bd7bb746d57197caed856365";}	localhost
-ikhgta7bt9bhm5dqa977ob03eu	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045101	1718045107	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1718045107;s:5:"token";s:32:"2859348d92f5e316e6e361fc5b6bb3df";}	localhost
-vq35iu67g3tssr8ts7lktlh2a6	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045065	1718045078	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1718045078;s:5:"token";s:32:"277751f1f420f9381080825564510b02";}	localhost
-j9oq0023cqdm442bhc1g7pppeq	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045494	1718045531	0	csrf|a:2:{s:9:"timestamp";i:1718045531;s:5:"token";s:32:"c3ca982f33fe663fc8264828983cc44d";}username|s:7:"dbarnes";userId|i:3;	localhost
-uvref8p9vbto0vu1ht5tpf7dne	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045109	1718045263	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1718045263;s:5:"token";s:32:"f8095c943af17807b95d2f1aa5dc6e9f";}	localhost
-9ghuc9hbc6t8k9h4dcbsrmsoun	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045278	1718045286	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1718045286;s:5:"token";s:32:"526a65490b128f712ef8bf6f6fcd08e0";}	localhost
-947jokh4cvj7mpoou3ape7cepr	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045268	1718045277	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1718045277;s:5:"token";s:32:"180b76700fe9c2ade3b5346e012dd360";}	localhost
-qk2vgcjt4krs8khif59lpcg5pm	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045366	1718045369	0	userId|i:17;username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1718045370;s:5:"token";s:32:"d48f57e4fdec5ffc5baa82783148369c";}	localhost
-9es3t9ekiv28ldqtrcnqvt10a1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045288	1718045342	0	csrf|a:2:{s:9:"timestamp";i:1718045342;s:5:"token";s:32:"89f0451fb22120a7f9c5868601d0392e";}username|s:7:"dbarnes";userId|i:3;	localhost
-foald3etk2l6sn8lptfi7fve1j	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045371	1718045380	0	username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1718045380;s:5:"token";s:32:"d6bb45b2d40a1b0e5c7b6d7e8ca5b162";}userId|i:17;	localhost
-joov7fqalutcv85nq123i8q15i	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045431	1718045436	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1718045436;s:5:"token";s:32:"3e603e869a404326c0853d84ab8f1f59";}	localhost
-7po9lh5gpuot8bb0q2fpr5nd35	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045391	1718045398	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1718045398;s:5:"token";s:32:"d58f9467ebee75da857de7f16c115d2a";}	localhost
-av0khp6014p1hn4df77igi1cu5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045380	1718045390	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1718045391;s:5:"token";s:32:"984163f080127a5e5e6749a7eb94055e";}	localhost
-lg9f4iujafrf9q6ktf8ppqelri	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045399	1718045425	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1718045425;s:5:"token";s:32:"20c835cadd2e958beddc7c39f8711693";}	localhost
-euquuj2hais3o4rhopjtdmms97	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045425	1718045430	0		localhost
-hqq3d081art0b83lq2mlapvmdl	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045436	1718045445	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1718045445;s:5:"token";s:32:"c08074bbcd06029423b3b623a63999ba";}signedInAs|i:3;	localhost
-6kjamo9jiq79ih3nc3vq0acuiv	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045445	1718045453	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1718045453;s:5:"token";s:32:"ad73251b2a5db58b57092141a9703db1";}signedInAs|i:3;	localhost
-r4qbmsopp3k62tp1i6b9so3r6l	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045646	1718045689	0	csrf|a:2:{s:9:"timestamp";i:1718045689;s:5:"token";s:32:"96783f0a5094c73a24a11a4860b77e4e";}username|s:7:"phudson";	localhost
-jk0janij58otb7e53dv0gm9q0f	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045533	1718045547	0	csrf|a:2:{s:9:"timestamp";i:1718045546;s:5:"token";s:32:"84a59321ee0ae3b13a46ac34415eef8b";}username|s:12:"cmontgomerie";userId|i:20;	localhost
-smvvrv1pquf7g9a0k5u6f6vp5e	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718046090	1718046099	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1718046099;s:5:"token";s:32:"969bde77c13e92f3388ff3319e9b95e7";}	localhost
-hfd79k8gibcl371jae24sdsjs5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718046058	1718046070	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1718046071;s:5:"token";s:32:"40eba65dd61fd693b0eb287d839376ff";}	localhost
-bqlh748ka0feb114uo00elqssg	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045821	1718045850	0	csrf|a:2:{s:9:"timestamp";i:1718045849;s:5:"token";s:32:"2479188ce9b9349ae337176d24373f86";}username|s:7:"dbarnes";userId|i:3;	localhost
-415c07dqkup8go16bvmlp3s8lh	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045805	1718045819	0	csrf|a:2:{s:9:"timestamp";i:1718045819;s:5:"token";s:32:"ce1351ad534094f5e47d32d8711e99fc";}username|s:10:"kalkhafaji";userId|i:27;	localhost
-lsvismrvakg7rpttbt9d98cr39	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045940	1718045985	0	csrf|a:2:{s:9:"timestamp";i:1718045986;s:5:"token";s:32:"5e5a1a0c51c43de6f94014555da8b3f8";}username|s:7:"dbarnes";userId|i:3;	localhost
-md7fg3bgia68j4is3bfheo598j	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045928	1718045939	0	csrf|a:2:{s:9:"timestamp";i:1718045938;s:5:"token";s:32:"4dd09dc365abae1929bfc53d29e8f438";}username|s:7:"pdaniel";userId|i:30;	localhost
-ofh3fuq6cjlv67s7eq3ckpif7h	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718046001	1718046058	0	csrf|a:2:{s:9:"timestamp";i:1718046058;s:5:"token";s:32:"5fb05683aa8f7d720187d379d6888d08";}username|s:7:"dbarnes";userId|i:3;	localhost
-30pmvb3tpq0u0vfoa3d2kc5vpo	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045757	1718045803	0	csrf|a:2:{s:9:"timestamp";i:1718045803;s:5:"token";s:32:"946b55218b9d7b261a8021336450df12";}username|s:8:"agallego";	localhost
-34km7580vr01jeds7tghgjj12v	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718046147	1718046184	0	csrf|a:2:{s:9:"timestamp";i:1718046184;s:5:"token";s:32:"03e8f7db9e169d379d969dd506fefb2f";}username|s:7:"dbarnes";userId|i:3;	localhost
-epr0smgoktbapb4hudio9bgh9g	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718046124	1718046144	0	csrf|a:2:{s:9:"timestamp";i:1718046144;s:5:"token";s:32:"f5b35fc8b3f7af8241011d435a6485ee";}username|s:7:"dbarnes";userId|i:3;	localhost
-usb7tf3r6e1pqv5vgucgcm172p	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045549	1718045597	0	csrf|a:2:{s:9:"timestamp";i:1718045597;s:5:"token";s:32:"0cea9057ba44549342c4fffd7e30c96b";}username|s:7:"dbarnes";userId|i:3;	localhost
-k2vgj5idi9pdsd6hg6eoba6lkf	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045706	1718045755	0	csrf|a:2:{s:9:"timestamp";i:1718045755;s:5:"token";s:32:"032eeaf4827d9522273ce2b28e92f60f";}username|s:7:"dbarnes";userId|i:3;	localhost
-7mchh05hrsf9qtj1rq0nk177pm	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718046099	1718046108	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1718046108;s:5:"token";s:32:"719e8b6154eab1278b8ec2947fb1f733";}	localhost
-8o59me0bksh1im5riehgf6545q	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718046071	1718046080	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1718046080;s:5:"token";s:32:"3aadebeecbdb4baf4a94c1dc4af505df";}	localhost
-d1a1l9skv5k2tphd53o044gd1h	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045599	1718045644	0	csrf|a:2:{s:9:"timestamp";i:1718045644;s:5:"token";s:32:"34d9061bc7f62b592fcb0186506b9910";}username|s:7:"dbarnes";userId|i:3;	localhost
-lg2hag4nuvd1p0nadqv02oklk5	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045988	1718045999	0	csrf|a:2:{s:9:"timestamp";i:1718045998;s:5:"token";s:32:"a7878f6569472d84dd9fc3a4425c1585";}username|s:6:"rrossi";userId|i:32;	localhost
-8js5h96qtbn1v6m5ma31kk3j9t	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045690	1718045704	0	csrf|a:2:{s:9:"timestamp";i:1718045703;s:5:"token";s:32:"0e9583d2e6dedd3189786439aa9e3005";}username|s:7:"eostrom";userId|i:24;	localhost
-s6u6p8fnm75ho6tt29vr90b3ub	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718046080	1718046089	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1718046090;s:5:"token";s:32:"2febc468dd43d8ba933d7514705dc694";}	localhost
-bo2pnfcf1ue6v6qs7in0n7qi82	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718045852	1718045925	0	csrf|a:2:{s:9:"timestamp";i:1718045925;s:5:"token";s:32:"39e55158372f4f4380e3acf1988b0083";}username|s:7:"dbarnes";userId|i:3;	localhost
-t5msd8lnpt62ls4409nhs8anq9	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/121.0.6167.139 Safari/537.36	1718046108	1718046122	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1718046123;s:5:"token";s:32:"324cd659661fbeeae29ebfefa1a38056";}	localhost
+i7umf8a8umuovid8rjs9lo1gcj	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719378931	1719378931	0		localhost
+k2r53hc6366kn3lp3fd6jn5lu5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379210	1719379235	0	csrf|a:2:{s:9:"timestamp";i:1719379235;s:5:"token";s:32:"fc7be827cf47a0a94f3b0de56b21bef1";}username|s:7:"dbarnes";userId|i:3;	localhost
+k161kai0b0nmiegl2kejqhqrbh	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379144	1719379146	0	userId|i:17;username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1719379146;s:5:"token";s:32:"2524bba7ba7a6141184982ca89a5cf4e";}	localhost
+lt5aipqjssph744ct0d4cb5klr	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379072	1719379079	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1719379079;s:5:"token";s:32:"2b6e1157976f3b1671dc4b69913454ec";}	localhost
+k0fanmgt4njfninlkaoqkfbqmc	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719378942	1719378951	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1719378951;s:5:"token";s:32:"3ddb66a95355e96da6b69e7289ad06cf";}	localhost
+jciujeg6umpf18edr12ui7m1gt	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719378951	1719378956	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1719378956;s:5:"token";s:32:"6b6aa2feaaa36d64259d0701875142d8";}	localhost
+2atlalb515nm8aksvjsarhdbnj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379236	1719379262	0	csrf|a:2:{s:9:"timestamp";i:1719379262;s:5:"token";s:32:"ba12b00cb7f7decb12c71d88f0900c93";}username|s:7:"dbarnes";userId|i:3;	localhost
+amb06pbuu4sos2fs536ha1u26k	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719378933	1719378942	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1719378942;s:5:"token";s:32:"429739cddfb19bf33ecab65522f4f42b";}	localhost
+1sj0rl2ib3al40gjdd0oovrk2r	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719378957	1719378961	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1719378961;s:5:"token";s:32:"9a6bb049a3eb0b8ab4c636186b7c80d8";}	localhost
+9d5daht96a13pkea0f3s2qj677	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379082	1719379089	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1719379088;s:5:"token";s:32:"2738f96c52563e91fd4c327a994d7bf5";}	localhost
+3d7jd9chs5n7mvkm9rbkck9clg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719378962	1719379071	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1719379071;s:5:"token";s:32:"4f1209d721a6f6694e4db85d3774c33c";}	localhost
+vnhqb1ms0raltt6l2svfr02o0t	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379090	1719379127	0	csrf|a:2:{s:9:"timestamp";i:1719379127;s:5:"token";s:32:"ab2933ae6dc1f91da197fb9e4e566ee1";}username|s:7:"dbarnes";userId|i:3;	localhost
+6ou27e23r7jkein9d4e7uvpe2q	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379154	1719379160	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1719379161;s:5:"token";s:32:"7075d7703134043500a3bf8df66d553a";}	localhost
+mmbugq8faocqahpoc4ghm8qeoj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379127	1719379143	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1719379143;s:5:"token";s:32:"745ee81839e013d4a3b60d628105a252";}	localhost
+rcn6plf4cptn875t2nl31818or	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379147	1719379154	0	username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1719379154;s:5:"token";s:32:"dcbc9496b4369152946c6e0ea66ce3a7";}userId|i:17;	localhost
+56jqf842c96dnoiu7q090eq7u2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379161	1719379165	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1719379165;s:5:"token";s:32:"4ec2a294cb35218cfa14218a6fd404fd";}	localhost
+scd6li6krjphjviu8fsbdiludd	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379190	1719379194	0		localhost
+amusreubo203g63qqkfehso5a2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379165	1719379190	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1719379190;s:5:"token";s:32:"eff2473debe1d5b90a54141a9e93758a";}	localhost
+m0p5i63agmsahg31dqq7e58o82	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379198	1719379204	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1719379204;s:5:"token";s:32:"f9e3b3f1165f640d9d6c6b1f8c32b6aa";}signedInAs|i:3;	localhost
+60iassr6m0iuifecpfs5b3aqk3	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379194	1719379198	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1719379198;s:5:"token";s:32:"8bb53d0c014f29f6153dd47a16b21069";}	localhost
+gc97fmem8u7vbvhmmvn5g0hvm4	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379204	1719379208	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1719379209;s:5:"token";s:32:"f6df9279ab395e75fb880a37cd29409a";}signedInAs|i:3;	localhost
+lg4kh3855p5rhl3h2fh3mttobo	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379389	1719379422	0	csrf|a:2:{s:9:"timestamp";i:1719379422;s:5:"token";s:32:"dda86f5313c4d69624f0bb45d277f5c1";}username|s:7:"dbarnes";userId|i:3;	localhost
+fao4ic54ighhser5id9undhg45	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379489	1719379540	0	csrf|a:2:{s:9:"timestamp";i:1719379540;s:5:"token";s:32:"ec7e3de81fb7c22a1f1dd06d8a9d3a56";}username|s:7:"dbarnes";userId|i:3;	localhost
+52of45uj5slu9qc6sevmngjm2k	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379636	1719379642	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1719379642;s:5:"token";s:32:"55f2d108f986c73cc36a45580773bdc0";}	localhost
+cqeevcdomd8lolj51b82dr7fdd	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379551	1719379581	0	csrf|a:2:{s:9:"timestamp";i:1719379581;s:5:"token";s:32:"03b7a8957ecd5913756f20a5cc2d95ab";}username|s:7:"dbarnes";userId|i:3;	localhost
+jg0skkb973he7ge5h7l1mvs7d0	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379269	1719379279	0	csrf|a:2:{s:9:"timestamp";i:1719379279;s:5:"token";s:32:"d248d0fa459c036dd2ca80befa8d53be";}username|s:12:"cmontgomerie";userId|i:20;	localhost
+e76rr1s19be4d31jrsjpcl8a2h	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379541	1719379549	0	csrf|a:2:{s:9:"timestamp";i:1719379548;s:5:"token";s:32:"2e5e9d6d0bfeb4216c09e1381fe71a6d";}username|s:7:"pdaniel";userId|i:30;	localhost
+bh63v6jjbmd3icfjvqth9hs695	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379280	1719379313	0	csrf|a:2:{s:9:"timestamp";i:1719379313;s:5:"token";s:32:"586153d8701bf92be348173b3334da35";}username|s:7:"dbarnes";userId|i:3;	localhost
+ak8fithqc5bq77g8sa105m46e8	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379582	1719379590	0	csrf|a:2:{s:9:"timestamp";i:1719379589;s:5:"token";s:32:"110de6cd275912dfc8d31f88e1681bab";}username|s:6:"rrossi";userId|i:32;	localhost
+ko6n0ei28h70ig7po0cgd5b367	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379591	1719379628	0	csrf|a:2:{s:9:"timestamp";i:1719379628;s:5:"token";s:32:"a8c98b170988a3b23a4a2fdcf9ae8c22";}username|s:7:"dbarnes";userId|i:3;	localhost
+dtvhujb96s8up3t6jos0k19ri5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379314	1719379345	0	csrf|a:2:{s:9:"timestamp";i:1719379345;s:5:"token";s:32:"802293cbda5ec040597da78323108566";}username|s:7:"dbarnes";userId|i:3;	localhost
+6ljflja6gvol9vkj6shvihbcvj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379629	1719379636	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1719379636;s:5:"token";s:32:"74d3700d23a200afe619a2782b72f9eb";}	localhost
+t125mrmrve1km9f8a0sgkufc0t	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379652	1719379658	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1719379658;s:5:"token";s:32:"4f044ab45bb610d9b2f7ac87023666a0";}	localhost
+kuh4sc1ucp4774f7ol6vofj5n7	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379642	1719379647	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1719379647;s:5:"token";s:32:"c18b428f7e0e20872b7480813c80499e";}	localhost
+192ik72bc5heedggmhv7kivp7h	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379348	1719379378	0	csrf|a:2:{s:9:"timestamp";i:1719379378;s:5:"token";s:32:"3b12524b82c5e416fac01465849417d9";}username|s:7:"phudson";	localhost
+klnadsn6urrs1doetgsb5vqo5p	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379647	1719379652	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1719379652;s:5:"token";s:32:"b45af269a37026c32ea7a4097a73027f";}	localhost
+f8lptl83tmc6b178nd7homsbgu	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379379	1719379388	0	csrf|a:2:{s:9:"timestamp";i:1719379388;s:5:"token";s:32:"6b14c174a6c9085c0f97e86d7a83ae38";}username|s:7:"eostrom";userId|i:24;	localhost
+hbpn37s9vdvei5mgt32is9s8np	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379658	1719379667	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1719379667;s:5:"token";s:32:"4c3840d0d094649fe19bbb1779bdb075";}	localhost
+5s47rbl8t7ieuuos0g3pp03rio	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379668	1719379680	0	csrf|a:2:{s:9:"timestamp";i:1719379680;s:5:"token";s:32:"f687db0c1620cbe344dc04812b6bc4c2";}username|s:7:"dbarnes";userId|i:3;	localhost
+n8lm1tspsr4c885gerafmpsb8m	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379457	1719379467	0	csrf|a:2:{s:9:"timestamp";i:1719379466;s:5:"token";s:32:"80d67480f370c3ae207bf492aa064267";}username|s:10:"kalkhafaji";userId|i:27;	localhost
+o08djq6o8ej83h48f6qt52jjjp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379468	1719379488	0	csrf|a:2:{s:9:"timestamp";i:1719379488;s:5:"token";s:32:"9b31bd39afd0cd0c40c5c3482df2dc26";}username|s:7:"dbarnes";userId|i:3;	localhost
+qelqs8kvhvicc65nkmahe0108p	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379423	1719379456	0	csrf|a:2:{s:9:"timestamp";i:1719379456;s:5:"token";s:32:"eceb907aa57c076adb1d1076f7d75527";}username|s:8:"agallego";	localhost
+qlfoheqk000i15jhueseiel9lm	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.61 Safari/537.36	1719379681	1719379706	0	csrf|a:2:{s:9:"timestamp";i:1719379706;s:5:"token";s:32:"42b6f1a8aec48619856431023ce3aa45";}username|s:7:"dbarnes";userId|i:3;	localhost
 \.
 
 
@@ -7660,99 +7582,99 @@ themePluginPath		default
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-2	1	3	3	2024-06-10 18:48:18	0	1
-4	1	5	4	2024-06-10 18:48:18	0	1
-5	1	7	12	2024-06-10 18:48:48	0	0
-6	1	11	14	2024-06-10 18:48:57	0	0
-7	1	13	16	2024-06-10 18:49:01	0	0
-1	1	14	17	2024-06-10 18:49:34	0	1
-3	1	5	5	2024-06-10 18:50:49	1	0
-8	2	14	18	2024-06-10 18:51:00	0	0
-9	2	3	3	2024-06-10 18:51:04	0	1
-10	2	5	5	2024-06-10 18:51:05	0	1
-11	2	5	4	2024-06-10 18:51:05	0	1
-12	2	5	6	2024-06-10 18:51:15	1	1
-13	3	14	19	2024-06-10 18:51:40	0	0
-14	3	3	3	2024-06-10 18:51:45	0	1
-15	3	5	5	2024-06-10 18:51:45	0	1
-16	3	5	4	2024-06-10 18:51:45	0	1
-17	3	7	11	2024-06-10 18:52:10	0	0
-18	4	14	20	2024-06-10 18:52:19	0	0
-19	4	3	3	2024-06-10 18:52:26	0	1
-20	4	5	5	2024-06-10 18:52:27	0	1
-21	4	5	4	2024-06-10 18:52:27	0	1
-22	5	14	21	2024-06-10 18:52:34	0	0
-23	5	3	3	2024-06-10 18:52:38	0	1
-24	5	5	5	2024-06-10 18:52:38	0	1
-25	5	5	4	2024-06-10 18:52:38	0	1
-26	5	7	11	2024-06-10 18:53:03	0	0
-27	5	11	13	2024-06-10 18:53:11	0	0
-28	5	13	15	2024-06-10 18:53:16	0	0
-29	6	14	22	2024-06-10 18:53:24	0	0
-30	6	3	3	2024-06-10 18:53:29	0	1
-31	6	5	5	2024-06-10 18:53:29	0	1
-32	6	5	4	2024-06-10 18:53:29	0	1
-33	6	7	11	2024-06-10 18:53:55	0	0
-34	6	11	13	2024-06-10 18:54:03	0	0
-35	7	14	23	2024-06-10 18:54:12	0	0
-36	7	3	3	2024-06-10 18:54:17	0	1
-37	7	5	5	2024-06-10 18:54:17	0	1
-38	7	5	4	2024-06-10 18:54:17	0	1
-39	8	14	24	2024-06-10 18:54:56	0	0
-40	8	3	3	2024-06-10 18:55:03	0	1
-41	8	5	5	2024-06-10 18:55:03	0	1
-42	8	5	4	2024-06-10 18:55:03	0	1
-43	9	14	25	2024-06-10 18:55:11	0	0
-44	9	3	3	2024-06-10 18:55:15	0	1
-45	9	5	6	2024-06-10 18:55:15	0	1
-46	9	7	12	2024-06-10 18:55:42	0	0
-47	9	11	14	2024-06-10 18:55:50	0	0
-48	9	13	16	2024-06-10 18:55:54	0	0
-49	10	14	26	2024-06-10 18:56:02	0	0
-50	10	3	3	2024-06-10 18:56:07	0	1
-51	10	5	5	2024-06-10 18:56:07	0	1
-52	10	5	4	2024-06-10 18:56:07	0	1
-53	11	14	27	2024-06-10 18:56:51	0	0
-54	11	3	3	2024-06-10 18:56:59	0	1
-55	11	5	5	2024-06-10 18:56:59	0	1
-56	11	5	4	2024-06-10 18:56:59	0	1
-57	12	14	28	2024-06-10 18:57:07	0	0
-58	12	3	3	2024-06-10 18:57:11	0	1
-59	12	5	5	2024-06-10 18:57:11	0	1
-60	12	5	4	2024-06-10 18:57:11	0	1
-61	13	14	29	2024-06-10 18:57:37	0	0
-62	13	3	3	2024-06-10 18:57:42	0	1
-63	13	5	5	2024-06-10 18:57:42	0	1
-64	13	5	4	2024-06-10 18:57:42	0	1
-65	14	14	30	2024-06-10 18:58:53	0	0
-66	14	3	3	2024-06-10 18:58:58	0	1
-67	14	5	5	2024-06-10 18:58:58	0	1
-68	14	5	4	2024-06-10 18:58:58	0	1
-69	15	14	31	2024-06-10 18:59:06	0	0
-70	15	3	3	2024-06-10 18:59:10	0	1
-71	15	5	5	2024-06-10 18:59:10	0	1
-72	15	5	4	2024-06-10 18:59:10	0	1
-73	15	7	12	2024-06-10 18:59:36	0	0
-74	15	11	14	2024-06-10 18:59:44	0	0
-75	16	14	32	2024-06-10 18:59:53	0	0
-76	16	3	3	2024-06-10 18:59:58	0	1
-77	16	5	5	2024-06-10 18:59:58	0	1
-78	16	5	4	2024-06-10 18:59:58	0	1
-79	17	14	33	2024-06-10 19:00:06	0	0
-80	17	3	3	2024-06-10 19:00:11	0	1
-81	17	5	5	2024-06-10 19:00:11	0	1
-82	17	5	4	2024-06-10 19:00:11	0	1
-83	17	7	11	2024-06-10 19:00:38	0	0
-84	17	11	13	2024-06-10 19:00:46	0	0
-85	17	13	15	2024-06-10 19:00:50	0	0
-86	18	14	34	2024-06-10 19:02:10	0	0
-87	18	3	3	2024-06-10 19:02:15	0	1
-88	18	5	5	2024-06-10 19:02:15	0	1
-89	18	5	4	2024-06-10 19:02:15	0	1
-90	19	14	35	2024-06-10 19:02:32	0	0
-91	19	3	3	2024-06-10 19:02:36	0	1
-92	19	5	6	2024-06-10 19:02:36	0	1
-93	19	7	12	2024-06-10 19:03:03	0	0
+2	1	3	3	2024-06-26 05:18:17	0	1
+4	1	5	4	2024-06-26 05:18:17	0	1
+5	1	7	12	2024-06-26 05:18:38	0	0
+6	1	11	14	2024-06-26 05:18:43	0	0
+7	1	13	16	2024-06-26 05:18:46	0	0
+1	1	14	17	2024-06-26 05:19:09	0	1
+3	1	5	5	2024-06-26 05:20:06	1	0
+8	2	14	18	2024-06-26 05:20:14	0	0
+9	2	3	3	2024-06-26 05:20:17	0	1
+10	2	5	5	2024-06-26 05:20:17	0	1
+11	2	5	4	2024-06-26 05:20:17	0	1
+12	2	5	6	2024-06-26 05:20:24	1	1
+13	3	14	19	2024-06-26 05:20:40	0	0
+14	3	3	3	2024-06-26 05:20:44	0	1
+15	3	5	5	2024-06-26 05:20:44	0	1
+16	3	5	4	2024-06-26 05:20:44	0	1
+17	3	7	11	2024-06-26 05:21:02	0	0
+18	4	14	20	2024-06-26 05:21:13	0	0
+19	4	3	3	2024-06-26 05:21:19	0	1
+20	4	5	5	2024-06-26 05:21:19	0	1
+21	4	5	4	2024-06-26 05:21:19	0	1
+22	5	14	21	2024-06-26 05:21:24	0	0
+23	5	3	3	2024-06-26 05:21:27	0	1
+24	5	5	5	2024-06-26 05:21:27	0	1
+25	5	5	4	2024-06-26 05:21:27	0	1
+26	5	7	11	2024-06-26 05:21:45	0	0
+27	5	11	13	2024-06-26 05:21:50	0	0
+28	5	13	15	2024-06-26 05:21:52	0	0
+29	6	14	22	2024-06-26 05:21:58	0	0
+30	6	3	3	2024-06-26 05:22:02	0	1
+31	6	5	5	2024-06-26 05:22:02	0	1
+32	6	5	4	2024-06-26 05:22:02	0	1
+33	6	7	11	2024-06-26 05:22:20	0	0
+34	6	11	13	2024-06-26 05:22:25	0	0
+35	7	14	23	2024-06-26 05:22:32	0	0
+36	7	3	3	2024-06-26 05:22:35	0	1
+37	7	5	5	2024-06-26 05:22:35	0	1
+38	7	5	4	2024-06-26 05:22:35	0	1
+39	8	14	24	2024-06-26 05:23:03	0	0
+40	8	3	3	2024-06-26 05:23:08	0	1
+41	8	5	5	2024-06-26 05:23:08	0	1
+42	8	5	4	2024-06-26 05:23:08	0	1
+43	9	14	25	2024-06-26 05:23:13	0	0
+44	9	3	3	2024-06-26 05:23:16	0	1
+45	9	5	6	2024-06-26 05:23:16	0	1
+46	9	7	12	2024-06-26 05:23:34	0	0
+47	9	11	14	2024-06-26 05:23:39	0	0
+48	9	13	16	2024-06-26 05:23:41	0	0
+49	10	14	26	2024-06-26 05:23:47	0	0
+50	10	3	3	2024-06-26 05:23:50	0	1
+51	10	5	5	2024-06-26 05:23:50	0	1
+52	10	5	4	2024-06-26 05:23:50	0	1
+53	11	14	27	2024-06-26 05:24:21	0	0
+54	11	3	3	2024-06-26 05:24:26	0	1
+55	11	5	5	2024-06-26 05:24:26	0	1
+56	11	5	4	2024-06-26 05:24:26	0	1
+57	12	14	28	2024-06-26 05:24:32	0	0
+58	12	3	3	2024-06-26 05:24:35	0	1
+59	12	5	5	2024-06-26 05:24:36	0	1
+60	12	5	4	2024-06-26 05:24:36	0	1
+61	13	14	29	2024-06-26 05:24:53	0	0
+62	13	3	3	2024-06-26 05:24:57	0	1
+63	13	5	5	2024-06-26 05:24:57	0	1
+64	13	5	4	2024-06-26 05:24:57	0	1
+65	14	14	30	2024-06-26 05:25:45	0	0
+66	14	3	3	2024-06-26 05:25:48	0	1
+67	14	5	5	2024-06-26 05:25:48	0	1
+68	14	5	4	2024-06-26 05:25:48	0	1
+69	15	14	31	2024-06-26 05:25:55	0	0
+70	15	3	3	2024-06-26 05:25:58	0	1
+71	15	5	5	2024-06-26 05:25:58	0	1
+72	15	5	4	2024-06-26 05:25:58	0	1
+73	15	7	12	2024-06-26 05:26:15	0	0
+74	15	11	14	2024-06-26 05:26:20	0	0
+75	16	14	32	2024-06-26 05:26:26	0	0
+76	16	3	3	2024-06-26 05:26:29	0	1
+77	16	5	5	2024-06-26 05:26:29	0	1
+78	16	5	4	2024-06-26 05:26:29	0	1
+79	17	14	33	2024-06-26 05:26:35	0	0
+80	17	3	3	2024-06-26 05:26:38	0	1
+81	17	5	5	2024-06-26 05:26:38	0	1
+82	17	5	4	2024-06-26 05:26:38	0	1
+83	17	7	11	2024-06-26 05:26:56	0	0
+84	17	11	13	2024-06-26 05:27:00	0	0
+85	17	13	15	2024-06-26 05:27:03	0	0
+86	18	14	34	2024-06-26 05:27:53	0	0
+87	18	3	3	2024-06-26 05:27:55	0	1
+88	18	5	5	2024-06-26 05:27:55	0	1
+89	18	5	4	2024-06-26 05:27:55	0	1
+90	19	14	35	2024-06-26 05:28:05	0	0
+91	19	3	3	2024-06-26 05:28:08	0	1
+92	19	5	6	2024-06-26 05:28:08	0	1
+93	19	7	12	2024-06-26 05:28:25	0	0
 \.
 
 
@@ -7788,12 +7710,12 @@ COPY public.subeditor_submission_group (context_id, assoc_id, assoc_type, user_i
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	7	10	8		<p>Here are my review comments</p>	2024-06-10 18:54:48	\N	1
-2	1	4096	10	15	9		<p>Here are my review comments</p>	2024-06-10 18:56:34	\N	1
-3	1	4096	10	16	10		<p>Here are my review comments</p>	2024-06-10 18:56:42	\N	1
-4	1	4096	13	19	7		<p>Here are my review comments</p>	2024-06-10 18:58:15	\N	1
-5	1	4096	13	20	9		<p>Here are my review comments</p>	2024-06-10 18:58:24	\N	1
-6	1	4096	13	21	10		<p>Here are my review comments</p>	2024-06-10 18:58:33	\N	1
+1	1	4096	7	10	8		<p>Here are my review comments</p>	2024-06-26 05:22:57	\N	1
+2	1	4096	10	15	9		<p>Here are my review comments</p>	2024-06-26 05:24:10	\N	1
+3	1	4096	10	16	10		<p>Here are my review comments</p>	2024-06-26 05:24:15	\N	1
+4	1	4096	13	19	7		<p>Here are my review comments</p>	2024-06-26 05:25:21	\N	1
+5	1	4096	13	20	9		<p>Here are my review comments</p>	2024-06-26 05:25:27	\N	1
+6	1	4096	13	21	10		<p>Here are my review comments</p>	2024-06-26 05:25:33	\N	1
 \.
 
 
@@ -7803,31 +7725,27 @@ COPY public.submission_comments (comment_id, comment_type, role_id, submission_i
 
 COPY public.submission_file_revisions (revision_id, submission_file_id, file_id) FROM stdin;
 1	1	1
-2	2	2
-3	3	3
+2	2	1
+3	3	2
 4	4	3
 5	5	4
-6	6	4
-7	7	5
-8	8	6
-9	9	7
-10	10	7
-11	11	8
-12	12	8
-13	13	9
-14	14	10
-15	15	11
-16	16	12
-17	17	13
-18	18	14
-19	19	14
-20	20	15
-21	21	16
-22	22	17
-23	23	18
-24	24	19
-25	25	20
-26	26	21
+6	6	5
+7	7	6
+8	8	7
+9	9	8
+10	10	9
+11	11	10
+12	12	11
+13	13	12
+14	14	13
+15	15	14
+16	16	15
+17	17	16
+18	18	17
+19	19	18
+20	20	19
+21	21	20
+22	22	21
 \.
 
 
@@ -7837,33 +7755,29 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 
 COPY public.submission_file_settings (submission_file_id, locale, setting_name, setting_value, setting_type) FROM stdin;
 1	en_US	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
-2	en_US	name	article.pdf	string
-2	fr_CA	name		string
-3	en_US	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
+2	en_US	name	Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence.pdf	string
+3	en_US	name	article.pdf	string
+3	fr_CA	name		string
 4	en_US	name	The influence of lactation on the quantity and quality of cashmere production.pdf	string
 5	en_US	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-6	en_US	name	The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence.pdf	string
-7	en_US	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
-8	en_US	name	Genetic transformation of forest trees.pdf	string
-9	en_US	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-10	en_US	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
-11	en_US	name	Developing efficacy beliefs in the classroom.pdf	string
-12	en_US	name	Developing efficacy beliefs in the classroom.pdf	string
-13	en_US	name	Traditions and Trends in the Study of the Commons.pdf	string
-14	en_US	name	Hansen & Pinto: Reason Reclaimed.pdf	string
-15	en_US	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
-16	en_US	name	Learning Sustainable Design through Service.pdf	string
-17	en_US	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
-18	en_US	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-19	en_US	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
-20	en_US	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
-21	en_US	name	Yam diseases and its management in Nigeria.pdf	string
-22	en_US	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
-23	en_US	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
-24	en_US	name	article.pdf	string
-24	fr_CA	name		string
-25	en_US	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
-26	en_US	name	Finocchiaro: Arguments About Arguments.pdf	string
+6	en_US	name	Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice.pdf	string
+7	en_US	name	Genetic transformation of forest trees.pdf	string
+8	en_US	name	Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement.pdf	string
+9	en_US	name	Developing efficacy beliefs in the classroom.pdf	string
+10	en_US	name	Traditions and Trends in the Study of the Commons.pdf	string
+11	en_US	name	Hansen & Pinto: Reason Reclaimed.pdf	string
+12	en_US	name	Condensing Water Availability Models to Focus on Specific Water Management Systems.pdf	string
+13	en_US	name	Learning Sustainable Design through Service.pdf	string
+14	en_US	name	Sodium butyrate improves growth performance of weaned piglets during the first period after weaning.pdf	string
+15	en_US	name	Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions.pdf	string
+16	en_US	name	Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua.pdf	string
+17	en_US	name	Yam diseases and its management in Nigeria.pdf	string
+18	en_US	name	Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat.pdf	string
+19	en_US	name	Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran.pdf	string
+20	en_US	name	article.pdf	string
+20	fr_CA	name		string
+21	en_US	name	Self-Organization in Multi-Level Institutions in Networked Environments.pdf	string
+22	en_US	name	Finocchiaro: Arguments About Arguments.pdf	string
 \.
 
 
@@ -7872,32 +7786,28 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	1	2	\N	\N	\N	2024-06-10 18:48:15	2024-06-10 18:48:15	17	\N	\N
-2	1	2	\N	1	10	\N	\N	\N	2024-06-10 18:49:25	2024-06-10 18:49:26	3	521	1
-3	2	3	\N	1	2	\N	\N	\N	2024-06-10 18:51:01	2024-06-10 18:51:01	18	\N	\N
-4	2	3	3	1	4	\N	\N	\N	2024-06-10 18:51:10	2024-06-10 18:51:10	18	\N	\N
-5	3	4	\N	1	2	\N	\N	\N	2024-06-10 18:51:41	2024-06-10 18:51:42	19	\N	\N
-6	3	4	5	1	4	\N	\N	\N	2024-06-10 18:51:50	2024-06-10 18:51:50	19	\N	\N
-7	4	5	\N	1	2	\N	\N	\N	2024-06-10 18:52:20	2024-06-10 18:52:20	20	\N	\N
-8	5	6	\N	1	2	\N	\N	\N	2024-06-10 18:52:35	2024-06-10 18:52:35	21	\N	\N
-9	6	7	\N	1	2	\N	\N	\N	2024-06-10 18:53:26	2024-06-10 18:53:26	22	\N	\N
-10	6	7	9	1	4	\N	\N	\N	2024-06-10 18:53:35	2024-06-10 18:53:35	22	\N	\N
-11	7	8	\N	1	2	\N	\N	\N	2024-06-10 18:54:14	2024-06-10 18:54:14	23	\N	\N
-12	7	8	11	1	4	\N	\N	\N	2024-06-10 18:54:23	2024-06-10 18:54:23	23	\N	\N
-13	8	9	\N	1	2	\N	\N	\N	2024-06-10 18:54:57	2024-06-10 18:54:57	24	\N	\N
-14	9	10	\N	1	2	\N	\N	\N	2024-06-10 18:55:12	2024-06-10 18:55:13	25	\N	\N
-15	10	11	\N	1	2	\N	\N	\N	2024-06-10 18:56:04	2024-06-10 18:56:04	26	\N	\N
-16	11	12	\N	1	2	\N	\N	\N	2024-06-10 18:56:52	2024-06-10 18:56:53	27	\N	\N
-17	12	13	\N	1	2	\N	\N	\N	2024-06-10 18:57:08	2024-06-10 18:57:08	28	\N	\N
-18	13	14	\N	1	2	\N	\N	\N	2024-06-10 18:57:38	2024-06-10 18:57:39	29	\N	\N
-19	13	14	18	1	4	\N	\N	\N	2024-06-10 18:57:50	2024-06-10 18:57:50	29	\N	\N
-20	14	15	\N	1	2	\N	\N	\N	2024-06-10 18:58:54	2024-06-10 18:58:55	30	\N	\N
-21	15	16	\N	1	2	\N	\N	\N	2024-06-10 18:59:07	2024-06-10 18:59:07	31	\N	\N
-22	16	17	\N	1	2	\N	\N	\N	2024-06-10 18:59:54	2024-06-10 18:59:55	32	\N	\N
-23	17	18	\N	1	2	\N	\N	\N	2024-06-10 19:00:07	2024-06-10 19:00:07	33	\N	\N
-24	17	19	\N	1	10	\N	\N	\N	2024-06-10 19:00:56	2024-06-10 19:00:57	3	521	3
-25	18	20	\N	1	2	\N	\N	\N	2024-06-10 19:02:11	2024-06-10 19:02:12	34	\N	\N
-26	19	21	\N	1	2	\N	\N	\N	2024-06-10 19:02:33	2024-06-10 19:02:34	35	\N	\N
+1	1	1	\N	1	2	\N	\N	\N	2024-06-26 05:18:15	2024-06-26 05:18:15	17	\N	\N
+2	1	1	1	1	4	\N	\N	\N	2024-06-26 05:18:20	2024-06-26 05:18:20	17	\N	\N
+3	1	2	\N	1	10	\N	\N	\N	2024-06-26 05:19:03	2024-06-26 05:19:03	3	521	1
+4	2	3	\N	1	2	\N	\N	\N	2024-06-26 05:20:15	2024-06-26 05:20:15	18	\N	\N
+5	3	4	\N	1	2	\N	\N	\N	2024-06-26 05:20:41	2024-06-26 05:20:41	19	\N	\N
+6	4	5	\N	1	2	\N	\N	\N	2024-06-26 05:21:14	2024-06-26 05:21:14	20	\N	\N
+7	5	6	\N	1	2	\N	\N	\N	2024-06-26 05:21:25	2024-06-26 05:21:25	21	\N	\N
+8	6	7	\N	1	2	\N	\N	\N	2024-06-26 05:21:59	2024-06-26 05:21:59	22	\N	\N
+9	7	8	\N	1	2	\N	\N	\N	2024-06-26 05:22:33	2024-06-26 05:22:33	23	\N	\N
+10	8	9	\N	1	2	\N	\N	\N	2024-06-26 05:23:04	2024-06-26 05:23:04	24	\N	\N
+11	9	10	\N	1	2	\N	\N	\N	2024-06-26 05:23:14	2024-06-26 05:23:14	25	\N	\N
+12	10	11	\N	1	2	\N	\N	\N	2024-06-26 05:23:48	2024-06-26 05:23:48	26	\N	\N
+13	11	12	\N	1	2	\N	\N	\N	2024-06-26 05:24:22	2024-06-26 05:24:22	27	\N	\N
+14	12	13	\N	1	2	\N	\N	\N	2024-06-26 05:24:33	2024-06-26 05:24:33	28	\N	\N
+15	13	14	\N	1	2	\N	\N	\N	2024-06-26 05:24:54	2024-06-26 05:24:54	29	\N	\N
+16	14	15	\N	1	2	\N	\N	\N	2024-06-26 05:25:46	2024-06-26 05:25:46	30	\N	\N
+17	15	16	\N	1	2	\N	\N	\N	2024-06-26 05:25:56	2024-06-26 05:25:56	31	\N	\N
+18	16	17	\N	1	2	\N	\N	\N	2024-06-26 05:26:27	2024-06-26 05:26:27	32	\N	\N
+19	17	18	\N	1	2	\N	\N	\N	2024-06-26 05:26:36	2024-06-26 05:26:36	33	\N	\N
+20	17	19	\N	1	10	\N	\N	\N	2024-06-26 05:27:08	2024-06-26 05:27:08	3	521	3
+21	18	20	\N	1	2	\N	\N	\N	2024-06-26 05:27:53	2024-06-26 05:27:53	34	\N	\N
+22	19	21	\N	1	2	\N	\N	\N	2024-06-26 05:28:06	2024-06-26 05:28:06	35	\N	\N
 \.
 
 
@@ -8026,66 +7936,6 @@ COPY public.submission_search_keyword_list (keyword_id, keyword_text) FROM stdin
 --
 
 COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM stdin;
-9	1	0
-9	2	1
-9	3	2
-9	4	3
-9	5	4
-9	6	5
-9	7	6
-10	8	0
-10	9	1
-10	10	2
-10	11	3
-10	12	4
-10	13	5
-10	14	6
-11	15	0
-11	9	1
-11	16	2
-11	10	3
-11	17	4
-11	18	5
-11	19	6
-11	20	7
-11	21	8
-11	13	9
-11	14	10
-11	22	11
-11	23	12
-11	14	13
-11	24	14
-11	25	15
-11	26	16
-11	27	17
-11	28	18
-11	29	19
-11	30	20
-11	31	21
-11	26	22
-11	32	23
-11	33	24
-11	34	25
-11	35	26
-11	36	27
-11	37	28
-11	38	29
-11	39	30
-11	40	31
-11	41	32
-11	42	33
-11	43	34
-11	44	35
-11	33	36
-11	31	37
-11	42	38
-11	45	39
-11	46	40
-11	47	41
-13	48	0
-13	49	1
-13	50	2
-13	51	3
 33	53	0
 33	54	1
 33	3	2
@@ -8180,6 +8030,66 @@ COPY public.submission_search_object_keywords (object_id, keyword_id, pos) FROM 
 35	57	74
 35	98	75
 35	89	76
+9	1	0
+9	2	1
+9	3	2
+9	4	3
+9	5	4
+9	6	5
+9	7	6
+10	8	0
+10	9	1
+10	10	2
+10	11	3
+10	12	4
+10	13	5
+10	14	6
+11	15	0
+11	9	1
+11	16	2
+11	10	3
+11	17	4
+11	18	5
+11	19	6
+11	20	7
+11	21	8
+11	13	9
+11	14	10
+11	22	11
+11	23	12
+11	14	13
+11	24	14
+11	25	15
+11	26	16
+11	27	17
+11	28	18
+11	29	19
+11	30	20
+11	31	21
+11	26	22
+11	32	23
+11	33	24
+11	34	25
+11	35	26
+11	36	27
+11	37	28
+11	38	29
+11	39	30
+11	40	31
+11	41	32
+11	42	33
+11	43	34
+11	44	35
+11	33	36
+11	31	37
+11	42	38
+11	45	39
+11	46	40
+11	47	41
+13	48	0
+13	49	1
+13	50	2
+13	51	3
 35	108	77
 35	86	78
 35	63	79
@@ -8241,25 +8151,25 @@ COPY public.submission_tombstones (tombstone_id, submission_id, date_deleted, jo
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-2	1	3	2024-06-10 18:51:27	2024-06-10 18:51:04	2024-06-10 18:51:04	3	en_US	1	0	0
-19	1	20	2024-06-10 19:03:03	2024-06-10 19:02:36	2024-06-10 19:02:36	4	en_US	1	0	0
-6	1	7	2024-06-10 18:54:03	2024-06-10 18:53:29	2024-06-10 18:53:29	5	en_US	1	0	0
-13	1	14	2024-06-10 18:58:45	2024-06-10 18:57:42	2024-06-10 18:57:42	3	en_US	1	0	0
-10	1	11	2024-06-10 18:56:42	2024-06-10 18:56:07	2024-06-10 18:56:07	3	en_US	1	0	0
-3	1	4	2024-06-10 18:52:10	2024-06-10 18:51:45	2024-06-10 18:51:45	4	en_US	1	0	0
-14	1	15	2024-06-10 18:58:58	2024-06-10 18:58:58	2024-06-10 18:58:58	1	en_US	1	0	0
-11	1	12	2024-06-10 18:56:59	2024-06-10 18:56:59	2024-06-10 18:56:59	1	en_US	1	0	0
-7	1	8	2024-06-10 18:54:48	2024-06-10 18:54:17	2024-06-10 18:54:17	3	en_US	1	0	0
-4	1	5	2024-06-10 18:52:27	2024-06-10 18:52:26	2024-06-10 18:52:26	1	en_US	1	0	0
-8	1	9	2024-06-10 18:55:04	2024-06-10 18:55:03	2024-06-10 18:55:03	1	en_US	1	0	0
-1	1	1	2024-06-10 18:50:49	2024-06-10 18:48:18	2024-06-10 18:48:18	5	en_US	3	0	0
-17	1	18	2024-06-10 19:01:58	2024-06-10 19:00:11	2024-06-10 19:00:11	5	en_US	3	0	0
-12	1	13	2024-06-10 18:57:29	2024-06-10 18:57:11	2024-06-10 18:57:11	3	en_US	1	0	0
-5	1	6	2024-06-10 18:53:16	2024-06-10 18:52:38	2024-06-10 18:52:38	5	en_US	1	0	0
-15	1	16	2024-06-10 18:59:44	2024-06-10 18:59:10	2024-06-10 18:59:10	5	en_US	1	0	0
-9	1	10	2024-06-10 18:55:54	2024-06-10 18:55:15	2024-06-10 18:55:15	5	en_US	1	0	0
-16	1	17	2024-06-10 18:59:58	2024-06-10 18:59:58	2024-06-10 18:59:58	1	en_US	1	0	0
-18	1	19	2024-06-10 19:02:24	2024-06-10 19:02:15	2024-06-10 19:02:15	1	en_US	4	0	0
+13	1	14	2024-06-26 05:25:40	2024-06-26 05:24:57	2024-06-26 05:24:57	3	en_US	1	0	0
+6	1	7	2024-06-26 05:22:25	2024-06-26 05:22:02	2024-06-26 05:22:02	5	en_US	1	0	0
+10	1	11	2024-06-26 05:24:16	2024-06-26 05:23:50	2024-06-26 05:23:50	3	en_US	1	0	0
+14	1	15	2024-06-26 05:25:48	2024-06-26 05:25:48	2024-06-26 05:25:48	1	en_US	1	0	0
+3	1	4	2024-06-26 05:21:02	2024-06-26 05:20:44	2024-06-26 05:20:44	4	en_US	1	0	0
+7	1	8	2024-06-26 05:22:57	2024-06-26 05:22:35	2024-06-26 05:22:35	3	en_US	1	0	0
+11	1	12	2024-06-26 05:24:27	2024-06-26 05:24:26	2024-06-26 05:24:26	1	en_US	1	0	0
+4	1	5	2024-06-26 05:21:19	2024-06-26 05:21:19	2024-06-26 05:21:19	1	en_US	1	0	0
+8	1	9	2024-06-26 05:23:08	2024-06-26 05:23:08	2024-06-26 05:23:08	1	en_US	1	0	0
+17	1	18	2024-06-26 05:27:44	2024-06-26 05:26:38	2024-06-26 05:26:38	5	en_US	3	0	0
+12	1	13	2024-06-26 05:24:48	2024-06-26 05:24:35	2024-06-26 05:24:35	3	en_US	1	0	0
+15	1	16	2024-06-26 05:26:20	2024-06-26 05:25:58	2024-06-26 05:25:58	5	en_US	1	0	0
+1	1	1	2024-06-26 05:20:06	2024-06-26 05:18:17	2024-06-26 05:18:17	5	en_US	3	0	0
+5	1	6	2024-06-26 05:21:52	2024-06-26 05:21:27	2024-06-26 05:21:27	5	en_US	1	0	0
+16	1	17	2024-06-26 05:26:30	2024-06-26 05:26:29	2024-06-26 05:26:29	1	en_US	1	0	0
+2	1	3	2024-06-26 05:20:31	2024-06-26 05:20:17	2024-06-26 05:20:17	3	en_US	1	0	0
+9	1	10	2024-06-26 05:23:41	2024-06-26 05:23:16	2024-06-26 05:23:16	5	en_US	1	0	0
+18	1	19	2024-06-26 05:28:00	2024-06-26 05:27:55	2024-06-26 05:27:55	1	en_US	4	0	0
+19	1	20	2024-06-26 05:28:25	2024-06-26 05:28:08	2024-06-26 05:28:08	4	en_US	1	0	0
 \.
 
 
@@ -8818,41 +8728,41 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-6	minoue	$2y$10$5S81dvOEHv7UyKCARqGU1eMMoiPRYKlC3eSTv3txpRZDcWpb7NVrO	minoue@mailinator.com				\N	JP		\N	\N	2024-06-10 18:45:42	\N	2024-06-10 18:51:21	0	0	\N	0	\N	1
-26	jnovak	$2y$10$w2bU3dINz69kZZhBioUAWuItmQWy5RQU.dKYXdomamLHu6G2M.FxK	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2024-06-10 18:56:00	\N	2024-06-10 18:56:00	0	\N	\N	0	\N	1
-19	ckwantes	$2y$10$p/CtghW1SgGcG/0NnVctlOfJOFPE4mNlj879lm8no/q.f.M4.D1W6	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-06-10 18:51:37	\N	2024-06-10 18:51:37	0	\N	\N	0	\N	1
-4	dbuskins	$2y$10$FSoNcnt5usA2Ep923pitrexWKP1zPO6/NEdyCUQIb.v7gSx6lS6Wq	dbuskins@mailinator.com				\N	US		\N	\N	2024-06-10 18:45:28	\N	2024-06-10 18:45:28	0	0	\N	0	\N	1
-5	sberardo	$2y$10$KvIQ9/mIXHAdMhAKph5Lp.GAwt/IhehKMf3CETzaVu1.zjWcIkwTO	sberardo@mailinator.com				\N	CA		\N	\N	2024-06-10 18:45:35	\N	2024-06-10 18:45:35	0	0	\N	0	\N	1
-11	mfritz	$2y$10$OQ0XoKxvJjL0XhN60yyp7Oft/rVTllv9Dw070rc95T59j7yJiU4bG	mfritz@mailinator.com				\N	BE		\N	\N	2024-06-10 18:46:35	\N	2024-06-10 18:46:35	0	0	\N	0	\N	1
-12	svogt	$2y$10$X99qSjfBRRDDlPwL8B0m4.qc/6EoR9Tdp5DkLPgriyrLtBVv7Jc/6	svogt@mailinator.com				\N	CL		\N	\N	2024-06-10 18:46:45	\N	2024-06-10 18:46:45	0	0	\N	0	\N	1
-13	gcox	$2y$10$FrF4oG1rmVzjmqbWprgI4uglEO3TBwzePyt7Py1YlsXIgmRS92glu	gcox@mailinator.com				\N	US		\N	\N	2024-06-10 18:46:56	\N	2024-06-10 18:46:56	0	0	\N	0	\N	1
-14	shellier	$2y$10$5SqZPt7/EWG3thIIHeRiXe8rzaYxmiIPuHLCvPYPAnn.6jGXsMgIW	shellier@mailinator.com				\N	ZA		\N	\N	2024-06-10 18:47:07	\N	2024-06-10 18:47:07	0	0	\N	0	\N	1
-15	cturner	$2y$10$1f0wfv5lKVeS/668IOOsAe2VF7cwp.YF0XCQiU3pXHsqBFgnLCSnm	cturner@mailinator.com				\N	GB		\N	\N	2024-06-10 18:47:19	\N	2024-06-10 18:47:19	0	0	\N	0	\N	1
-16	skumar	$2y$10$qMrsGvT0iv/OkU8sah7Kqu/78UIsL42jO5kI3x7BgB3egUal/jd8u	skumar@mailinator.com				\N	SG		\N	\N	2024-06-10 18:47:31	\N	2024-06-10 18:47:31	0	0	\N	0	\N	1
-2	rvaca	$2y$10$pD/5Gb5kHBkQ9gbNOZkZretm.t7BlU1TGiq.enp8PXaJW9Cy9M/Ju	rvaca@mailinator.com				\N	MX		\N	\N	2024-06-10 18:45:16	\N	2024-06-10 18:47:41	0	0	\N	0	\N	1
-20	cmontgomerie	$2y$10$X0s5xgfMZ6UJVAH4pMv/.e6bZ30XLqCOLFMb4f5fx4KQjEm5QyUW6	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-06-10 18:52:16	\N	2024-06-10 18:52:16	0	\N	\N	0	\N	1
-1	admin	$2y$10$fhJf0js.j2T7/OmxPYahzuprGI56pzZpU.0/I1XhKxnm8eTHlzXuS	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2024-06-10 18:44:21	\N	2024-06-10 18:47:58	0	\N	\N	0	\N	1
-21	ddiouf	$2y$10$kVjPCTrPwXVM7V1WT1OUoeHtLe.jazSUy465uU/K5SKjtSNMeFp1C	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2024-06-10 18:52:31	\N	2024-06-10 18:52:31	0	\N	\N	0	\N	1
-22	dphillips	$2y$10$HfddJnCsRwx8BgVDKvfJvOdp3fo3clwHGDA29K0NGRP8Q1duXVKHe	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-06-10 18:53:22	\N	2024-06-10 18:53:22	0	\N	\N	0	\N	1
-17	amwandenga	$2y$10$mwGhlYmxQFeMKAmy5TitFOHHYksI6YwP2BFyn5A/7ghqwPx2lGLIe	amwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2024-06-10 18:48:11	\N	2024-06-10 18:49:38	0	\N	\N	0	\N	1
-30	pdaniel	$2y$10$3mfT/gUlYxMOoi3Kh0yxUuMAYO1fvzMLCDgRcZg5gpi72YIXbQAXC	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2024-06-10 18:58:50	\N	2024-06-10 18:58:50	0	\N	\N	0	\N	1
-23	dsokoloff	$2y$10$7E0/LqUwA/jtIBcXvK7kpeJ6Tpd5P839rtZZBxH55zkrCqeWXkSrC	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2024-06-10 18:54:10	\N	2024-06-10 18:54:10	0	\N	\N	0	\N	1
-8	phudson	$2y$10$GEeHdoQj5KfjYMmh26ALh.WpDMmSdT4/nrxdKp0XXlXKZ2DbOakGm	phudson@mailinator.com				\N	CA		\N	\N	2024-06-10 18:45:58	\N	2024-06-10 18:54:41	0	0	\N	0	\N	1
-27	kalkhafaji	$2y$10$RMnlu/Q03jRrR6.OagkVgOs7AY0yvzOeRXu6dN14xV2/W0ylWOSI2	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-06-10 18:56:48	\N	2024-06-10 18:56:48	0	\N	\N	0	\N	1
-18	ccorino	$2y$10$IAK6I/P8y3WyxcdP7eU1i.rgUus8mRPtGANnQbmPqOV5FRffmJpLm	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2024-06-10 18:50:57	\N	2024-06-10 18:50:57	0	\N	\N	0	\N	1
-24	eostrom	$2y$10$CenGXuHsEsRJOjf8xNwSnelaj2MRJYU1SgXhRH65UqHa4bYpPS/WS	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-06-10 18:54:53	\N	2024-06-10 18:54:53	0	\N	\N	0	\N	1
-25	fpaglieri	$2y$10$XaKAmS4GoId443rkfsEVfOltHEFd39lkQDKZdkX7dVlipi0RFQtGe	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2024-06-10 18:55:08	\N	2024-06-10 18:55:08	0	\N	\N	0	\N	1
-28	lchristopher	$2y$10$DCRDKSVZnQ46V/PNPHyC5ekIpHLCn247QP3IlInA4SZqLAmIv9Rae	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2024-06-10 18:57:04	\N	2024-06-10 18:57:04	0	\N	\N	0	\N	1
-31	rbaiyewu	$2y$10$S6UdTMimOvgWidSx1O0j/uVMvxRYmbMqIFv5nvEPRsr6vYO8zVZFa	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2024-06-10 18:59:03	\N	2024-06-10 18:59:03	0	\N	\N	0	\N	1
-29	lkumiega	$2y$10$l2OSp.WWvJTxp1M.JLTnGet4nfNZdyaq6sJgSlUXs.PpfSdw6pUQ.	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2024-06-10 18:57:34	\N	2024-06-10 18:57:34	0	\N	\N	0	\N	1
-35	zwoods	$2y$10$vOgQLQdGd6eHINfB3dxvAeTr0ASjS62EOi9T.NMi69xLUsw1mJNEO	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-06-10 19:02:29	\N	2024-06-10 19:02:29	0	\N	\N	0	\N	1
-7	jjanssen	$2y$10$PMFmJv55EjZ4B3j2WVIP2uewfLS9nCNruCnJP7hh0xS8ulTCAveNO	jjanssen@mailinator.com				\N	NL		\N	\N	2024-06-10 18:45:50	\N	2024-06-10 18:58:08	0	0	\N	0	\N	1
-9	amccrae	$2y$10$NgvxaJAQvDNRQVImHxs2.ulzOIzGQWZ2EHuv9XayyT9dsfVNMWXkO	amccrae@mailinator.com				\N	CA		\N	\N	2024-06-10 18:46:08	\N	2024-06-10 18:58:16	0	0	\N	0	\N	1
-10	agallego	$2y$10$lC4eHOkDHn5Xb3Kucx3XsOcC7RfFF/oQ9EM/7xJ3ujToxa6pChIQS	agallego@mailinator.com				\N	US		\N	\N	2024-06-10 18:46:21	\N	2024-06-10 18:58:25	0	0	\N	0	\N	1
-3	dbarnes	$2y$10$/RhGRsNyceXCZ3yj1jcEEuy5vUZzHoPlTTTSQJwY7ZsKJ4/eBje9O	dbarnes@mailinator.com				\N	AU		\N	\N	2024-06-10 18:45:22	\N	2024-06-10 19:02:38	0	0	\N	0	\N	1
-32	rrossi	$2y$10$LD8XAxqIHzk8cuqOXfiq3OAekbmPXaO8tDGFDG62sOWlbmz0rTZIa	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2024-06-10 18:59:50	\N	2024-06-10 18:59:51	0	\N	\N	0	\N	1
-33	vkarbasizaed	$2y$10$RnOAcvq/dL2voD9SaYXgG.J40a.hZ/gDnW8Icnz3PjVcR.eZqNQ16	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2024-06-10 19:00:03	\N	2024-06-10 19:00:04	0	\N	\N	0	\N	1
-34	vwilliamson	$2y$10$UqoUmlL/eqclNDIlDReq3uUSwEoJ5G/Ig5NkESN0Wp9wMUeClz2hS	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-06-10 19:02:07	\N	2024-06-10 19:02:08	0	\N	\N	0	\N	1
+19	ckwantes	$2y$10$5D7YaRbx6uvKHXrFD069ZeR31VVxhr3WZO2L2w9IN.x.h3N7SIuXO	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-06-26 05:20:38	\N	2024-06-26 05:20:39	0	\N	\N	0	\N	1
+20	cmontgomerie	$2y$10$m0JQDrY3mLdm9fPYdHjw5ecepMo/Sdqrh00M1lOKR7NWVYjynCyw2	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-06-26 05:21:11	\N	2024-06-26 05:21:11	0	\N	\N	0	\N	1
+4	dbuskins	$2y$10$2DBQ1eAcM9erGONZg3N0kOWuqz2zwzLv7UWFzaUdwnA4vkkq037hC	dbuskins@mailinator.com				\N	US		\N	\N	2024-06-26 05:16:18	\N	2024-06-26 05:16:18	0	\N	\N	0	\N	1
+5	sberardo	$2y$10$CbfVLMdjMlj76coaauInB.N1.JwN67OK4oafJWvMNb8BMBEDu.pHS	sberardo@mailinator.com				\N	CA		\N	\N	2024-06-26 05:16:24	\N	2024-06-26 05:16:24	0	\N	\N	0	\N	1
+11	mfritz	$2y$10$OR5lt.b7qtk2BVyMXNNnc.Nw9i5NzMQ.Omv0yg05/1LlIVgZp.1M6	mfritz@mailinator.com				\N	BE		\N	\N	2024-06-26 05:17:02	\N	2024-06-26 05:17:02	0	\N	\N	0	\N	1
+12	svogt	$2y$10$U.4cxbYRj7ZZB7kRnLEn0e3simwIeHrGDOA1FNHCSKCSgzS/ufBfC	svogt@mailinator.com				\N	CL		\N	\N	2024-06-26 05:17:10	\N	2024-06-26 05:17:10	0	\N	\N	0	\N	1
+13	gcox	$2y$10$kDaxHjOJkpL6AcuL/0w5hOvcX.A1dU0XIhjucsuJdATDE2jnGzR3S	gcox@mailinator.com				\N	US		\N	\N	2024-06-26 05:17:18	\N	2024-06-26 05:17:18	0	\N	\N	0	\N	1
+14	shellier	$2y$10$kVp.3T1.qCiQn9B0cwp1XeSNhgwXMaIuy9iJPpqRKdGZjCeEX.waO	shellier@mailinator.com				\N	ZA		\N	\N	2024-06-26 05:17:26	\N	2024-06-26 05:17:26	0	\N	\N	0	\N	1
+15	cturner	$2y$10$m1M8kXun5.rz7/EzsOr7g.W0bJAKJqTGJ9B/YmFh47nqAOsRHooE6	cturner@mailinator.com				\N	GB		\N	\N	2024-06-26 05:17:35	\N	2024-06-26 05:17:35	0	\N	\N	0	\N	1
+16	skumar	$2y$10$KpO6cFgkgP/JJDInJy2F.OIzGtZFK3lNRB6KfuS4SFfDaJDp5ajDm	skumar@mailinator.com				\N	SG		\N	\N	2024-06-26 05:17:44	\N	2024-06-26 05:17:44	0	\N	\N	0	\N	1
+21	ddiouf	$2y$10$XzM3xG.fgLLu4.35ZPaObu3CEInTYflUacHrltDaryEvru2ET4pDy	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2024-06-26 05:21:22	\N	2024-06-26 05:21:22	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$J.jRvYMhCJVq5BflTMPcnevIvOBcjBamIlQF1RyLlslfoZHREFvL6	rvaca@mailinator.com				\N	MX		\N	\N	2024-06-26 05:16:08	\N	2024-06-26 05:17:50	0	\N	\N	0	\N	1
+27	kalkhafaji	$2y$10$DAZWNRxiOlu0wrk.4TuduOVv7d5tHu1FSft/5vXLnZK246NRYtgDi	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-06-26 05:24:19	\N	2024-06-26 05:24:20	0	\N	\N	0	\N	1
+1	admin	$2y$10$SPf666B0y3yrtRjKbPofaOLP.QMXsdwhIvLie2xoqSwmONUbFr8Zq	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2024-06-26 05:15:31	\N	2024-06-26 05:18:02	0	\N	\N	0	\N	1
+22	dphillips	$2y$10$TZdV53JYiLfbE4J0Y1iliueaZduSQbkx1gxLnl59cqNwSX28byPV6	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-06-26 05:21:56	\N	2024-06-26 05:21:57	0	\N	\N	0	\N	1
+23	dsokoloff	$2y$10$ij4WMokhLPMNcdMfeq60hun0x8lprmgP/9NtDe0CfDbXlWyXV8vH2	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2024-06-26 05:22:30	\N	2024-06-26 05:22:30	0	\N	\N	0	\N	1
+17	amwandenga	$2y$10$DPb5oihzM4tv2hYgVJkL7O8bLYXrw8ED9f7MbqjBkwBYQ6uzwJhw2	amwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2024-06-26 05:18:12	\N	2024-06-26 05:19:12	0	\N	\N	0	\N	1
+28	lchristopher	$2y$10$hx1zTqFsyXR9USTWEhDxuOBaCP7wftxUGibC8dJnH2.srwiM.ei0e	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2024-06-26 05:24:31	\N	2024-06-26 05:24:31	0	\N	\N	0	\N	1
+8	phudson	$2y$10$mFPWAEQK7Xrt.vJ.TRSxre3lzF.KQ4JzKlEQuUiA4BmrOWG7qH8Xm	phudson@mailinator.com				\N	CA		\N	\N	2024-06-26 05:16:42	\N	2024-06-26 05:22:52	0	\N	\N	0	\N	1
+24	eostrom	$2y$10$carvY/9TtjijZSgKkgX0nOlQBjT1zVKzAOO/Utfemx2URh8w3pYbe	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-06-26 05:23:01	\N	2024-06-26 05:23:01	0	\N	\N	0	\N	1
+25	fpaglieri	$2y$10$364evocAzyDTwISVvD7DB.CTS5PVZ4f5YWZ8IV/SCJ452bxJagple	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2024-06-26 05:23:11	\N	2024-06-26 05:23:11	0	\N	\N	0	\N	1
+18	ccorino	$2y$10$Xj7T/tD6M4BsEA9wU/clmeNQha/5TebQuJzbwXYZrq7rn01VsJWTa	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2024-06-26 05:20:12	\N	2024-06-26 05:20:12	0	\N	\N	0	\N	1
+6	minoue	$2y$10$Imf3m0IgkjjhQSRMv1lodemcVoM7dJY6SdohultapRJ0IZCZf/g/G	minoue@mailinator.com				\N	JP		\N	\N	2024-06-26 05:16:30	\N	2024-06-26 05:20:29	0	\N	\N	0	\N	1
+26	jnovak	$2y$10$ux2d5Q4oijD.A75o/JFhpuOU.4N/eyxkNY7jyAG1JPee30Vzzly/.	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2024-06-26 05:23:45	\N	2024-06-26 05:23:46	0	\N	\N	0	\N	1
+32	rrossi	$2y$10$guUsFZzI4yT5M7PAfY9A.u/4yoPghcPF34ynwqIPYWJ3tJ2wue2Tm	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2024-06-26 05:26:24	\N	2024-06-26 05:26:24	0	\N	\N	0	\N	1
+33	vkarbasizaed	$2y$10$NlDzQKa1NQYfyDZNYAby8.Ev5AJatz6PdgBCHImW9PboewMect/hG	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2024-06-26 05:26:34	\N	2024-06-26 05:26:34	0	\N	\N	0	\N	1
+29	lkumiega	$2y$10$p8/bv/jRAaSiFsYyOg5EseQC5GM6reYlrMJYuE0IbRPPoPDL5zcUy	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2024-06-26 05:24:52	\N	2024-06-26 05:24:52	0	\N	\N	0	\N	1
+34	vwilliamson	$2y$10$zkK/i/sD1EIHo31ZNBsdBeUKGJXpjqCas7fPCgvNIxaeoO3fUMwUC	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-06-26 05:27:51	\N	2024-06-26 05:27:51	0	\N	\N	0	\N	1
+7	jjanssen	$2y$10$jGs7y2c7IPLLfPtOq2Ejo.5FvC0/IBIwKvNOo.rRWtUX1.GpUtj6m	jjanssen@mailinator.com				\N	NL		\N	\N	2024-06-26 05:16:36	\N	2024-06-26 05:25:16	0	\N	\N	0	\N	1
+9	amccrae	$2y$10$zRWrewBfTxTDKgRx.V29juzgk3gECh8oeVr6Dlc2VwSmTElYRF2DO	amccrae@mailinator.com				\N	CA		\N	\N	2024-06-26 05:16:49	\N	2024-06-26 05:25:21	0	\N	\N	0	\N	1
+10	agallego	$2y$10$v0xFjg6QEwp4Oo23e5wRS.FWvyBFmmo9EYAtOTm30Ppczhd7O3kgm	agallego@mailinator.com				\N	US		\N	\N	2024-06-26 05:16:56	\N	2024-06-26 05:25:27	0	\N	\N	0	\N	1
+30	pdaniel	$2y$10$HzO8NIdTeHJirvl8lxhoI.VKdxJgJEBAQnEKJXQ8L26kd3RsQr.Bu	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2024-06-26 05:25:43	\N	2024-06-26 05:25:43	0	\N	\N	0	\N	1
+31	rbaiyewu	$2y$10$UpGMcVDYBN9CvW3oLE8Ixe1WP5PfJ/ZVVdhJiYvXOkhJiPmKAYJii	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2024-06-26 05:25:53	\N	2024-06-26 05:25:53	0	\N	\N	0	\N	1
+35	zwoods	$2y$10$XAlseOIgzd7OvDWgYh9vPOLJmMm.4rcEbHmK1Y.JvxdaXVDdUuklC	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-06-26 05:28:03	\N	2024-06-26 05:28:03	0	\N	\N	0	\N	1
+3	dbarnes	$2y$10$z3/JfZKD.V6QbctSdBOzm.6kaU0kQBF3pLFRc77qUUozOS/V0xSB6	dbarnes@mailinator.com				\N	AU		\N	\N	2024-06-26 05:16:13	\N	2024-06-26 05:28:08	0	\N	\N	0	\N	1
 \.
 
 
@@ -8861,55 +8771,55 @@ COPY public.users (user_id, username, password, email, url, phone, mailing_addre
 --
 
 COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2024-06-10 18:44:22	1	plugins.metadata	dc11		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.auth	ldap		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	1	0	0	2024-06-10 18:44:22	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	1	0	2024-06-10 18:44:22	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.blocks	information	InformationBlockPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.gateways	resolver		0	0
-1	2	0	0	2024-06-10 18:44:22	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-1	2	0	0	2024-06-10 18:44:22	1	plugins.generic	acron	AcronPlugin	1	1
-1	1	0	0	2024-06-10 18:44:22	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
-1	0	0	0	2024-06-10 18:44:22	1	plugins.generic	usageEvent		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-0	1	0	0	2024-06-10 18:44:22	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
-1	1	3	13	2024-06-10 18:44:22	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
-1	0	1	0	2024-06-10 18:44:22	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.generic	driver	DRIVERPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
-1	2	0	0	2024-06-10 18:44:22	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
-1	0	1	0	2024-06-10 18:44:22	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-1	0	0	0	2024-06-10 18:44:22	1	plugins.importexport	users		0	0
-2	0	0	0	2024-06-10 18:44:22	1	plugins.importexport	datacite		0	0
-2	1	0	0	2024-06-10 18:44:22	1	plugins.importexport	crossref		0	0
-1	1	0	0	2024-06-10 18:44:22	1	plugins.importexport	doaj		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.importexport	native		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.importexport	pubmed		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.oaiMetadataFormats	marc		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.oaiMetadataFormats	marcxml		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.oaiMetadataFormats	rfc1807		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.paymethod	paypal		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.paymethod	manual		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.reports	views		0	0
-2	0	0	0	2024-06-10 18:44:22	1	plugins.reports	reviewReport		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.reports	subscriptions		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.reports	articles		0	0
-1	0	0	0	2024-06-10 18:44:22	1	plugins.themes	default	DefaultThemePlugin	1	0
-3	3	0	17	2024-06-10 18:44:20	1	core	ojs2		0	1
-1	1	0	0	2024-06-10 18:44:22	1	plugins.reports	counterReport		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.metadata	dc11		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.auth	ldap		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.blocks	information	InformationBlockPlugin	1	0
+1	0	1	0	2024-06-26 05:15:31	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	1	0	0	2024-06-26 05:15:31	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.gateways	resolver		0	0
+1	0	1	0	2024-06-26 05:15:31	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
+1	0	0	0	2024-06-26 05:15:31	1	plugins.generic	driver	DRIVERPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
+1	0	0	0	2024-06-26 05:15:31	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	0	0	0	2024-06-26 05:15:31	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+1	2	0	0	2024-06-26 05:15:31	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	1	3	14	2024-06-26 05:15:31	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	1	0	0	2024-06-26 05:15:31	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
+0	1	0	0	2024-06-26 05:15:31	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+1	0	1	0	2024-06-26 05:15:31	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.generic	usageEvent		0	0
+1	2	0	0	2024-06-26 05:15:31	1	plugins.generic	acron	AcronPlugin	1	1
+1	2	0	0	2024-06-26 05:15:31	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.importexport	pubmed		0	0
+2	1	0	0	2024-06-26 05:15:31	1	plugins.importexport	crossref		0	0
+1	1	0	0	2024-06-26 05:15:31	1	plugins.importexport	doaj		0	0
+2	0	0	0	2024-06-26 05:15:31	1	plugins.importexport	datacite		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.importexport	native		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.importexport	users		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.oaiMetadataFormats	marcxml		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.oaiMetadataFormats	marc		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.oaiMetadataFormats	rfc1807		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.paymethod	paypal		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.paymethod	manual		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.reports	views		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.reports	articles		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.reports	subscriptions		0	0
+2	0	0	0	2024-06-26 05:15:31	1	plugins.reports	reviewReport		0	0
+1	0	0	0	2024-06-26 05:15:31	1	plugins.themes	default	DefaultThemePlugin	1	0
+3	3	0	17	2024-06-26 05:15:30	1	core	ojs2		0	1
+1	1	0	0	2024-06-26 05:15:31	1	plugins.reports	counterReport		0	0
 \.
 
 
@@ -8973,7 +8883,7 @@ SELECT pg_catalog.setval('public.completed_payments_completed_payment_id_seq', 1
 -- Name: controlled_vocab_entries_controlled_vocab_entry_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
 --
 
-SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq', 73, true);
+SELECT pg_catalog.setval('public.controlled_vocab_entries_controlled_vocab_entry_id_seq', 75, true);
 
 
 --
@@ -9029,7 +8939,7 @@ SELECT pg_catalog.setval('public.email_templates_email_id_seq', 1, false);
 -- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
 --
 
-SELECT pg_catalog.setval('public.event_log_log_id_seq', 269, true);
+SELECT pg_catalog.setval('public.event_log_log_id_seq', 265, true);
 
 
 --
@@ -9260,14 +9170,14 @@ SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
 -- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
 --
 
-SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 26, true);
+SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 22, true);
 
 
 --
 -- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ojs-ci
 --
 
-SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 26, true);
+SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 22, true);
 
 
 --
@@ -11132,14 +11042,6 @@ ALTER TABLE ONLY public.submission_file_revisions
 
 ALTER TABLE ONLY public.submission_files
     ADD CONSTRAINT submission_files_file_id_foreign FOREIGN KEY (file_id) REFERENCES public.files(file_id);
-
-
---
--- Name: SCHEMA public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE USAGE ON SCHEMA public FROM PUBLIC;
-GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 --
