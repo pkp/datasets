@@ -137,7 +137,7 @@ sitewide_privacy_statement = Off
 [database]
 
 driver = mysqli
-host = localhost
+host = "127.0.0.1"
 username = ops-ci
 password = ops-ci
 name = ops-ci
