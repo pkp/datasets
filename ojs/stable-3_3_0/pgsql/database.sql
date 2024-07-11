@@ -4809,36 +4809,36 @@ COPY public.data_object_tombstones (tombstone_id, data_object_id, date_deleted, 
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	0	1	0	3	8	2024-07-10 05:23:10
-2	1	1	3	1	3	1	2024-07-10 05:23:25
-3	1	0	4	0	3	7	2024-07-10 05:23:30
-4	2	0	1	0	3	8	2024-07-10 05:25:09
-5	2	2	3	1	6	11	2024-07-10 05:25:19
-6	3	0	1	0	3	8	2024-07-10 05:25:34
-7	3	3	3	1	3	1	2024-07-10 05:25:45
-8	5	0	1	0	3	8	2024-07-10 05:26:13
-9	5	4	3	1	3	1	2024-07-10 05:26:24
-10	5	0	4	0	3	7	2024-07-10 05:26:29
-11	6	0	1	0	3	8	2024-07-10 05:26:46
-12	6	5	3	1	3	1	2024-07-10 05:26:58
-13	6	0	4	0	3	7	2024-07-10 05:27:02
-14	7	0	1	0	3	8	2024-07-10 05:27:18
-15	9	0	1	0	3	8	2024-07-10 05:27:59
-16	9	7	3	1	3	1	2024-07-10 05:28:11
-17	9	0	4	0	3	7	2024-07-10 05:28:15
-18	10	0	1	0	3	8	2024-07-10 05:28:34
-19	12	0	1	0	3	8	2024-07-10 05:29:19
-20	13	0	1	0	3	8	2024-07-10 05:29:49
-21	13	10	3	1	3	2	2024-07-10 05:30:27
-22	15	0	1	0	3	8	2024-07-10 05:30:49
-23	15	11	3	1	3	1	2024-07-10 05:30:58
-24	15	0	4	0	3	7	2024-07-10 05:31:03
-25	17	0	1	0	3	8	2024-07-10 05:31:28
-26	17	12	3	1	3	1	2024-07-10 05:31:37
-27	17	0	4	0	3	7	2024-07-10 05:31:42
-28	18	0	1	0	3	9	2024-07-10 05:32:43
-29	19	0	1	0	3	8	2024-07-10 05:32:56
-30	19	13	3	1	3	1	2024-07-10 05:33:05
+1	1	0	1	0	3	8	2024-07-11 05:18:32
+2	1	1	3	1	3	1	2024-07-11 05:18:47
+3	1	0	4	0	3	7	2024-07-11 05:18:52
+4	2	0	1	0	3	8	2024-07-11 05:20:32
+5	2	2	3	1	6	11	2024-07-11 05:20:43
+6	3	0	1	0	3	8	2024-07-11 05:20:58
+7	3	3	3	1	3	1	2024-07-11 05:21:09
+8	5	0	1	0	3	8	2024-07-11 05:21:36
+9	5	4	3	1	3	1	2024-07-11 05:21:47
+10	5	0	4	0	3	7	2024-07-11 05:21:52
+11	6	0	1	0	3	8	2024-07-11 05:22:16
+12	6	5	3	1	3	1	2024-07-11 05:22:27
+13	6	0	4	0	3	7	2024-07-11 05:22:32
+14	7	0	1	0	3	8	2024-07-11 05:22:48
+15	9	0	1	0	3	8	2024-07-11 05:23:30
+16	9	7	3	1	3	1	2024-07-11 05:23:41
+17	9	0	4	0	3	7	2024-07-11 05:23:45
+18	10	0	1	0	3	8	2024-07-11 05:24:04
+19	12	0	1	0	3	8	2024-07-11 05:24:51
+20	13	0	1	0	3	8	2024-07-11 05:25:17
+21	13	10	3	1	3	2	2024-07-11 05:25:56
+22	15	0	1	0	3	8	2024-07-11 05:26:17
+23	15	11	3	1	3	1	2024-07-11 05:26:26
+24	15	0	4	0	3	7	2024-07-11 05:26:31
+25	17	0	1	0	3	8	2024-07-11 05:26:58
+26	17	12	3	1	3	1	2024-07-11 05:27:07
+27	17	0	4	0	3	7	2024-07-11 05:27:12
+28	18	0	1	0	3	9	2024-07-11 05:28:15
+29	19	0	1	0	3	8	2024-07-11 05:28:28
+30	19	13	3	1	3	1	2024-07-11 05:28:37
 \.
 
 
@@ -4927,8 +4927,8 @@ COPY public.email_templates_default (email_id, email_key, can_disable, can_edit,
 54	ANNOUNCEMENT	0	1	16	1048576	\N
 55	ORCID_COLLECT_AUTHOR_ID	0	1	\N	\N	\N
 56	ORCID_REQUEST_AUTHOR_AUTHORIZATION	0	1	\N	\N	\N
-57	PAYPAL_INVESTIGATE_PAYMENT	0	1	\N	\N	\N
-58	MANUAL_PAYMENT_NOTIFICATION	0	1	\N	\N	\N
+57	MANUAL_PAYMENT_NOTIFICATION	0	1	\N	\N	\N
+58	PAYPAL_INVESTIGATE_PAYMENT	0	1	\N	\N	\N
 \.
 
 
@@ -4993,8 +4993,8 @@ STATISTICS_REPORT_NOTIFICATION	en_US	Editorial activity for {$month}, {$year}	\n
 ANNOUNCEMENT	en_US	{$title}	<b>{$title}</b><br />\n<br />\n{$summary}<br />\n<br />\nVisit our website to read the <a href="{$url}">full announcement</a>.	This email is sent when a new announcement is created.
 ORCID_COLLECT_AUTHOR_ID	en_US	Submission ORCID	Dear {$authorName},<br/>\n<br/>\nYou have been listed as an author on a manuscript submission to {$contextName}.<br/>\nTo confirm your authorship, please add your ORCID id to this submission by visiting the link provided below.<br/>\n<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="ORCID iD icon" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Register or connect your ORCID iD</a><br/>\n<br/>\n<br>\n<a href="{$orcidAboutUrl}">More information about ORCID at {$contextName}</a><br/>\n<br/>\nIf you have any questions, please contact me.<br/>\n<br/>\n{$principalContactSignature}<br/>\n	This email template is used to collect the ORCID id's from authors.
 ORCID_REQUEST_AUTHOR_AUTHORIZATION	en_US	Requesting ORCID record access	Dear {$authorName},<br>\n<br>\nYou have been listed as an author on the manuscript submission "{$submissionTitle}" to {$contextName}.\n<br>\n<br>\nPlease allow us to add your ORCID id to this submission and also to add the submission to your ORCID profile on publication.<br>\nVisit the link to the official ORCID website, login with your profile and authorize the access by following the instructions.<br>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="ORCID iD icon" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Register or Connect your ORCID iD</a><br/>\n<br>\n<br>\n<a href="{$orcidAboutUrl}">More about ORCID at {$contextName}</a><br/>\n<br>\nIf you have any questions, please contact me.<br>\n<br>\n{$principalContactSignature}<br>\n	This email template is used to request ORCID record access from authors.
-PAYPAL_INVESTIGATE_PAYMENT	en_US	Unusual PayPal Activity	Open Journal Systems has encountered unusual activity relating to PayPal payment support for the journal {$contextName}. This activity may need further investigation or manual intervention.<br />\n                       <br />\nThis email was generated by Open Journal Systems' PayPal plugin.<br />\n<br />\nFull post information for the request:<br />\n{$postInfo}<br />\n<br />\nAdditional information (if supplied):<br />\n{$additionalInfo}<br />\n<br />\nServer vars:<br />\n{$serverVars}<br />\n	This email template is used to notify a journal's primary contact that suspicious activity or activity requiring manual intervention was encountered by the PayPal plugin.
 MANUAL_PAYMENT_NOTIFICATION	en_US	Manual Payment Notification	A manual payment needs to be processed for the journal {$contextName} and the user {$userFullName} (username &quot;{$userName}&quot;).<br />\n<br />\nThe item being paid for is &quot;{$itemName}&quot;.<br />\nThe cost is {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nThis email was generated by Open Journal Systems' Manual Payment plugin.	This email template is used to notify a journal manager contact that a manual payment was requested.
+PAYPAL_INVESTIGATE_PAYMENT	en_US	Unusual PayPal Activity	Open Journal Systems has encountered unusual activity relating to PayPal payment support for the journal {$contextName}. This activity may need further investigation or manual intervention.<br />\n                       <br />\nThis email was generated by Open Journal Systems' PayPal plugin.<br />\n<br />\nFull post information for the request:<br />\n{$postInfo}<br />\n<br />\nAdditional information (if supplied):<br />\n{$additionalInfo}<br />\n<br />\nServer vars:<br />\n{$serverVars}<br />\n	This email template is used to notify a journal's primary contact that suspicious activity or activity requiring manual intervention was encountered by the PayPal plugin.
 NOTIFICATION	fr_CA	Nouvel avis de {$siteTitle}	Vous avez un nouvel avis de {$siteTitle} :<br />\n<br />\n{$notificationContents}<br />\n<br />\nLien : {$url}<br />\n<br />\n{$principalContactSignature}	Ce courriel est envoyé aux utilisateurs-trices inscrits-es qui ont choisi de recevoir par courriel ce type d'avis.
 NOTIFICATION_CENTER_DEFAULT	fr_CA	Un message à propos de la revue {$contextName}	Prière de saisir votre message.	Message blanc par défaut utilisé pour concevoir d'autres messages.
 PASSWORD_RESET_CONFIRM	fr_CA	Confirmation de la réinitialisation du mot de passe	Nous avons reçu une demande concernant la réinitialisation de votre mot de passe pour le site Web {$siteTitle}.<br />\n<br />\nSi vous n'avez pas fait cette demande, veuillez ne pas tenir compte du présent message, votre mot de passe restera le même. Si vous souhaitez réinitialiser votre mot de passe, cliquer sur l'URL ci-dessous.<br />\n<br />\nRéinitialisation de mon mot de passe : {$url}<br />\n<br />\n{$principalContactSignature}	Ce courriel est envoyé à l'utilisateur-trice inscrit-e qui nous signale avoir oublié son mot de passe ou qui est incapable d'ouvrir une session. Il fournit le lien URL à cliquer pour pouvoir réinitialiser son mot de passe.
@@ -5002,6 +5002,7 @@ USER_REGISTER	fr_CA	Inscription à la revue	{$userFullName},<br />\n<br />\nVous
 USER_VALIDATE	fr_CA	Valider votre compte	{$userFullName},<br />\n<br />\nVous avez créé un compte pour la revue {$contextName}. Pour pouvoir commencer à l'utiliser il nous faut d'abord valider votre adresse de courriel. Pour ce faire, vous n'avez qu'à suivre le lien ci-dessous :<br />\n<br />\n{$activateUrl}<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel est envoyé à un,une utilisateur-trice nouvellement inscrit-e pour valider son compte de courriel.
 REVIEWER_REGISTER	fr_CA	Inscription en tant qu'évaluateur-trice pour la revue {$contextName}	Compte tenu de votre expertise, nous avons pris l'initiative d'inscrire votre nom dans la base de données des évaluateurs-trices de la revue {$contextName}. Cela ne vous engage d'aucune façon, mais nous permet simplement de solliciter vos services pour l'évaluation d'une soumission. Si vous êtes invité-e à effectuer une évaluation, vous recevrez le titre et le résumé de l'article en question, et serez toujours libre d'accepter ou de refuser une telle invitation. À tout moment, il vous est également possible de demander à ce que votre nom soit retiré de la liste des évaluateurs-trices.<br />\n<br />\nNous vous acheminons un nom d'utilisateur-trice et un mot de passe, car tous deux sont requis pour tout échange avec la revue via son site Web. Vous pouvez, par exemple, si vous le souhaitez, effectuer la mise à jour de votre profil, y compris vos domaines d'intérêt en matière d'évaluation.<br />\n<br />\nNom d'utilisateur-trice : {$username}<br />\nMot de passe : {$password}<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel est envoyé à un,une évaluateur-trice nouvellement inscrit-e, afin de lui souhaiter la bienvenue dans le système et l'informer de son nom d'utilisateur-trice et de son mot de passe.
 PUBLISH_NOTIFY	fr_CA	Parution du dernier numéro	Lecteurs-trices,<br />\n<br />\nLe plus récent numéro de la revue {$contextName} vient d'être publié à l'adresse suivante : {$contextUrl}. Nous vous invitons à consulter le sommaire, puis à visiter notre site Web pour y lire les articles qui vous intéressent.<br />\n<br />\nNous vous remercions de l'intérêt que vous portez à notre revue,<br />\n{$editorialContactSignature}	Ce courriel est envoyé à tous et toutes les lecteurs-trices inscrits-es, via le lien « Aviser les utilisateurs-trices » sur la page d'accueil du,de la rédacteur-trice. Il avise les lecteurs-trices qu'un nouveau numéro est publié et les invite à visiter la revue en cliquant sur l'URL fourni.
+COPYEDIT_REQUEST	fr_CA	Demande de révision d'une soumission	{$participantName},<br />\n<br />\nJ'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} à l'aide des étapes suivantes.<br />\n1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n2. Ouvrir le(s) fichier(s) disponible(s) sous Fichiers des ébauches finales et effectuer votre révision, tout en ajoutant des discussions sur la révision, le cas échéant.<br />\n3. Enregistrer le(s) fichier(s) révisé(s) et le(s) téléverser dans la section Version(s) révisée(s).<br />\n4. Informer le,la rédacteur-trice que tous les fichiers ont été révisés et que l'étape de production peut débuter.<br />\n<br />\nURL de la revue {$contextName} : {$contextUrl}<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$participantUsername}	Ce courriel du, de la rédacteur-trice de rubrique à un-e réviseur-e lui demande de procéder à la révision. Il fournit les renseignements sur la soumission et comment accéder à celle-ci.
 LOCKSS_EXISTING_ARCHIVE	fr_CA	Demande d'archivage pour la revue {$contextName}	Cher,Chère [Bibliothécaire universitaire],<br />\n<br />\n{$contextName} &lt;{$contextUrl}&gt; est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la position occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe - Plusieurs exemplaires assurent la sécurité) avec votre bibliothèque ainsi que celles d'autres universités.<br />\n<br />\n[Brève description de la revue]<br />\n<br />\nL'adresse URL pour le LOCKSS Publisher Manifest pour notre revue est : {$contextUrl}/gateway/lockss<br />\n<br />\nNous croyons savoir que vous participez déjà à LOCKSS. Si nous pouvons vous fournir des métadonnées supplémentaires afin d'inscrire notre revue avec votre version de LOCKSS, il nous fera plaisir de vous les fournir.<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel demande à un-e conservateur,trice d'archives LOCKSS d'envisager d'inclure cette revue dans leur archive. Il fournit l'adresse URL du LOCKSS Publisher Manifest de la revue.
 LOCKSS_NEW_ARCHIVE	fr_CA	Demande d'archivage pour la revue {$contextName}	Cher,Chère [Bibliothécaire universitaire],<br />\n<br />\n{$contextName} &lt;{$contextUrl}&gt;, est une revue pour laquelle un membre de votre faculté, [nom du membre], agit à titre de [titre de la fonction occupée]. La revue désire mettre en place un système d'archivage conforme LOCKSS (Lots of Copies Keep Stuff Safe) avec votre bibliothèque et celles d'autres universités.<br />\n<br />\n[Brève description de la revue]<br />\n<br />\nLe programme LOCKSS &lt;http://lockss.org/&gt;, une initiative de bibliothécaires et d'éditeurs internationaux, est une belle démonstration d'un dépôt d'archives assurant la préservation des documents. Voir les détails ci-dessous. Le logiciel est gratuit et fonctionne sur tout ordinateur personnel. Il est facile de le mettre en ligne et ne requiert que très peu de maintenance.<br />\n<br />\nPour nous aider dans le processus d'archivage de notre revue, nous vous invitons à devenir membre de la communauté LOCKSS, pour aider à recueillir et préserver des titres produits par votre faculté et par d'autres chercheurs à travers le monde. Pour ce faire, veuillez demander à quelqu'un de votre personnel de visiter le site Internet de LOCKSS pour voir les informations sur le fonctionnement du système. Nous attendons de vos nouvelles sur la faisabilité, pour vous, de fournir un support d'archivage pour cette revue.<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel encourage le ou la destinaire à participer à l'initiative LOCKSS et à inclure cette revue dans leur archives. Il fournit de l'information au sujet de LOCKSS et des façons de s'impliquer dans le projet.
 SUBMISSION_ACK	fr_CA	Accusé de réception de la soumission	{$authorName},<br />\n<br />\nNous vous remercions d'avoir soumis le manuscrit intitulé « {$submissionTitle} » à la revue {$contextName}. Grâce à notre système de gestion en ligne, vous pourrez suivre votre soumission tout au long du processus d'édition en accédant au site Web de la revue :<br />\n<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$authorUsername}<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous remercions d'avoir pensé à notre revue pour la publication de vos travaux.<br />\n<br />\n{$editorialContactSignature}	Ce courriel, lorsqu'activé, est envoyé automatiquement à un-e auteur-e quand il ou elle a complété le processus de soumission d'un manuscrit à la revue. Il fournit les informations sur comment suivre la soumission à travers le processus éditorial, et remercie l'auteur-e pour sa soumission.
@@ -5009,12 +5010,12 @@ SUBMISSION_ACK_NOT_USER	fr_CA	Accusé de réception de la soumission	Bonjour,<br
 EDITOR_ASSIGN	fr_CA	Assignation d'un-e rédacteur-trice	{$editorialContactName},<br />\n<br />\nLa soumission intitulée « {$submissionTitle} » pour la revue {$contextName} vous a été attribuée. Vous êtes responsable, en tant que rédacteur-trice de rubrique, de la faire cheminer à travers le processus éditorial.<br />\n<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$editorUsername}<br />\n<br />\nMerci.	Ce courriel avise un,une rédacteur-trice de rubrique que le,la rédacteur-trice lui a assigné la tâche de suivre une soumission durant le processus éditorial. Il fournit des renseignements sur la soumission, et comment accéder au site Web de la revue.
 REVIEW_CANCEL	fr_CA	Annulation de la demande d'évaluation	{$reviewerName},<br />\n<br />\nNous avons décidé d'annuler notre demande concernant l'évaluation du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName}. Nous sommes désolés des inconvénients que cela pourrait vous causer et espérons que nous pourrons de nouveau faire appel à vous pour contribuer au processus de révision par les pairs de cette revue dans le futur.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous.	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice qui a une évaluation en cours, pour l'aviser que celle-ci a été annulée.
 REVIEW_REINSTATE	fr_CA	Réintégration de la demande d'évaluation	{$reviewerName},<br />\n<br />\nNous souhaitons rétablir notre demande d'évaluation de la soumission, « {$ submissionTitle} » pour  la revue {$ contextName}. Nous espérons que vous pourrez contribuer au processus d'évaluation de cette revue.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec moi.	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice qui a une évaluation en cours, pour l'aviser que la demande préalablement annulée a été rétablie.
+REVIEW_REQUEST_ATTACHED	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} ». Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue. Les directives d'évaluation de la revue se trouvent ci-dessous et la soumission est jointe au présent courriel. Votre évaluation de la soumission, ainsi que vos recommandations, devraient nous parvenir par courriel d'ici le {$reviewDueDate}.<br />\n<br />\nVeuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n<br />\nDirectives pour l'évaluation<br />\n<br />\n{$reviewGuidelines}<br />\n	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui demander s'il ou elle accepte ou refuse la tâche d'évaluation d'une soumission. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de « Demande d'évaluation par pièce-jointe de courriel » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation . (Autrement, voir « Demande d'évaluation ».)
 REVIEW_REQUEST	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />\n<br />\nVeuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation. Le site Web se trouve à l'adresse suivante : {$contextUrl}<br />\n<br />\nLa date d'échéance de l'évaluation a été fixée au {$reviewDueDate}.<br />\n<br />\nSi vous n'avez pas de nom d'utilisateur-trice et de mot de passe pour le site Web de la revue, cliquez sur le lien ci-dessous pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou refuse la tâche d'évaluation d'une soumission. Il fournit de l'information sur la soumission, tel son titre et un résumé, la date d'échéance pour l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation. (Autrement voir « Demande d'évaluation d'un article (en pièce jointe) ».)
 REVIEW_REQUEST_SUBSEQUENT	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nCeci concerne le manuscrit « {$submissionTitle} », qui est présentement évalué par {$contextName}.<br />\n<br />\nSuivant l'évaluation de la dernière version du manuscrit, l'auteur a soumis une version révisée de son document. Nous apprécierions que vous évaluiez cette nouvelle version.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue avant le {$responseDueDate} pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations. Le site Web est {$contextUrl}<br />\n<br />\nL'évaluation est due pour le {$reviewDueDate}.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} » <br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice de rubrique à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou décline la tâche d'évaluation d'une soumission pour un cycle subséquent d'évaluation. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation (Autrement voir « Demande d'évaluation d'un article (cycle subséquent) ».)
 REVIEW_REQUEST_ONECLICK	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} » qui a été soumis à la revue {$contextName}. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous accepterez ce travail essentiel à la publication de la revue.<br />\n<br />\nVeuillez accéder au site Web de la revue avant le {$responseDueDate} pour nous laisser savoir si vous acceptez de faire l'évaluation ou non. Vous pouvez également y consulter la soumission et y enregistrer votre évaluation et votre recommandation.<br />\n<br />\nDate limite pour l'évaluation {$reviewDueDate}.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice de rubrique à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou décline la tâche d'évaluation d'une soumission. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation et que l'accès de l'évaluateur-trice en un clic a été activé.
 REVIEW_REQUEST_ONECLICK_SUBSEQUENT	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nCeci concerne le manuscrit « {$submissionTitle} », qui est présentement évalué par la revue {$contextName}.<br />\n<br />\nSuivant l'évaluation de la dernière version du manuscrit, l'auteur a soumis une version révisée de son document. Nous apprécierions que vous évaluiez cette nouvelle version.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue avant le {$responseDueDate} pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations.<br />\n<br />\nL'évaluation est due pour le {$reviewDueDate}.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} » <br />\n<br />\n{$submissionAbstract}	Ce courriel du,de la rédacteur-trice de rubrique à un,une évaluateur-trice demande que l'évaluateur-trice accepte ou décline la tâche d'évaluation d'une soumission pour un cycle subséquent d'évaluation. Il contient des informations sur la soumission tel que son titre et un résumé, la date d'échéance pour faire l'évaluation, et comment accéder à la soumission. Ce message est utilisé quand « Processus d'évaluation standard » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation et que l'accès de l'évaluateur-trice en un clic est activé.
-REVIEW_REQUEST_ATTACHED	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nNous croyons que vous feriez un-e excellent-e évaluateur-trice pour le manuscrit intitulé « {$submissionTitle} ». Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue. Les directives d'évaluation de la revue se trouvent ci-dessous et la soumission est jointe au présent courriel. Votre évaluation de la soumission, ainsi que vos recommandations, devraient nous parvenir par courriel d'ici le {$reviewDueDate}.<br />\n<br />\nVeuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n<br />\nDirectives pour l'évaluation<br />\n<br />\n{$reviewGuidelines}<br />\n	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui demander s'il ou elle accepte ou refuse la tâche d'évaluation d'une soumission. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de « Demande d'évaluation par pièce-jointe de courriel » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation . (Autrement, voir « Demande d'évaluation ».)
-REVIEW_REMIND_AUTO	fr_CA	Rappel automatique d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, votre évaluation avant le {$reviewDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai. Nous serions toutefois heureux de recevoir votre évaluation dès que possible.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de remise d'une évaluation est révolue (voir Options d'évaluation sous Paramètres > Flux des travaux > Évaluation) et que l'accès de l'évaluateur-trice en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
+MANUAL_PAYMENT_NOTIFICATION	fr_CA	Avis de paiement manuel	Un paiement manuel doit être traité pour la revue {$contextName} et l'utilisateur {$userFullName} (nom d'utilisateur &quot;{$userName}&quot;).<br />\n<br />\nL'élément facturé est &quot;{$itemName}&quot;.<br />\nLe coût est de {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nCe courriel a été généré par le plugiciel de paiement manuel du Open Journal Systems.	Ce modèle de courriel est utilisé pour aviser un directeur de revue que le paiement manuel a été demandé.
 REVIEW_REQUEST_ATTACHED_SUBSEQUENT	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\n<br />\nCeci concerne le manuscrit « {$submissionTitle} », qui est présentement évalué par la revue {$contextName}.<br />\n<br />\nSuivant l'évaluation de la dernière version du manuscrit, l'auteur-e a soumis une version révisée de son document. Nous apprécierions que vous évaluiez cette nouvelle version.<br />\n<br />\nLes directives d'évaluation de la revue se trouvent ci-dessous et la soumission est jointe au présent courriel. Votre évaluation de la soumission, ainsi que vos recommandations, devraient nous parvenir par courriel d'ici le {$reviewDueDate}.<br />\n<br />\nVeuillez nous faire savoir par courriel d'ici le {$responseDueDate} si vous acceptez ou non d'effectuer cette évaluation.<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n<br />\nDirectives pour l'évaluation<br />\n<br />\n{$reviewGuidelines}<br />\n	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui demander s'il ou elle accepte ou refuse la tâche d'évaluation d'une soumission pour un cycle subséquent d'évaluation. Il inclut la soumission en pièce jointe. Ce message est utilisé quand le processus de « Demande d'évaluation par pièce-jointe de courriel » est sélectionné dans Configuration de la revue > Paramètres > Flux des travaux > Évaluation . (Autrement voir « Demande d'évaluation (cycle subséquent)».)
 REVIEW_REQUEST_REMIND_AUTO	fr_CA	Rappel de demande d'évaluation d'un article	{$reviewerName},<br />\nCeci est un petit rappel concernant notre demande d'évaluation de « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, une réponse avant le {$responseDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai.\n<br />\nNous pensons que vous seriez un-e excellent-e évaluateur-trice pour le manuscrit. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations. Le site Web est {$contextUrl}<br />\n<br />\nL'évaluation est dû pour le {$reviewDueDate}.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de confirmation d'un,une évaluateur-trice est révolue (voir Options d'évaluation sous Paramètres &gt; Flux des travaux &gt; Évaluation) et que l'accès de l'évaluateur-trice en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
 REVIEW_REQUEST_REMIND_AUTO_ONECLICK	fr_CA	Demande d'évaluation d'un article	{$reviewerName},<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, une réponse avant le {$responseDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai.\n<br />\nNous pensons que vous seriez un-e excellent-e évaluateur-trice pour le manuscrit. Vous trouverez un résumé de la soumission ci-dessous. Nous espérons que vous envisagerez d'entreprendre cette tâche essentielle à la publication de la revue.<br />\n<br />\nVeuillez vous authentifier sur la page de la revue pour y indiquer si vous participerez à cette évaluation ou non, ou encore pour accéder à la soumission et y enregistrer votre évaluation et vos recommandations.<br />\n<br />\nL'évaluation est dû pour le {$reviewDueDate}.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nNous vous remercions de l'attention que vous porterez à notre demande.<br />\n<br />\n{$editorialContactSignature}<br />\n<br />\n« {$submissionTitle} »<br />\n<br />\n{$submissionAbstract}	Ce courriel est automatiquement envoyé lorsque la date d'échéance de confirmation d'un,une évaluateur-trice est écoulée (voir Options de révision sous Paramètres &gt; Flux des travaux &gt; Révision) et l'accès de l'évaluateur-trice en un clic est activé. Les tâches planifiées doivent être configurées et activées (voir le fichier de configuration du site).
@@ -5022,6 +5023,7 @@ REVIEW_CONFIRM	fr_CA	Acceptation d'évaluation	Rédacteurs-trices,<br />\n<br />
 REVIEW_DECLINE	fr_CA	Refus d'évaluation	Rédacteurs-trices,<br />\n<br />\nPour le moment, il m'est impossible d'évaluer la soumission intitulée « {$submissionTitle} » pour la revue {$contextName}. Je vous remercie d'avoir pensé à moi. N'hésitez pas à communiquer avec moi pour un autre projet.<br />\n<br />\n{$reviewerName}	Ce courriel est envoyé par l'évaluateur-trice au,à la rédacteur-trice de rubrique en réponse à la demande d'évaluation, pour l'aviser qu'il ou elle ne peut effectuer l'évaluation.
 REVIEW_ACK	fr_CA	Accusé de réception de l'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nNous vous remercions d'avoir évalué la soumission intitulée « {$submissionTitle} » pour la revue {$contextName}. Nous vous sommes reconnaissants de votre contribution à la qualité des travaux que nous publions.	Ce courriel est envoyé par le,la rédacteur-trice de rubrique, pour accuser réception d'une évaluation terminée et remercier l'évaluateur-trice de sa contribution.
 REVIEW_REMIND	fr_CA	Rappel d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Nous espérions recevoir votre évaluation avant le {$reviewDueDate}. Nous serions heureux de la recevoir dès que possible.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé par le,la rédacteur-trice de rubrique pour rappeler à un,une évaluateur-trice que son évaluation est due.
+REVIEW_REMIND_AUTO	fr_CA	Rappel automatique d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, votre évaluation avant le {$reviewDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai. Nous serions toutefois heureux de recevoir votre évaluation dès que possible.<br />\n<br />\nSi vous n'avez pas vos nom d'utilisateur-trice et mot de passe pour le site de la revue, vous pouvez utiliser le lien suivant pour réinitialiser votre mot de passe (lequel vous sera envoyé par courriel avec votre nom d'utilisateur-trice). {$passwordResetUrl}<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de remise d'une évaluation est révolue (voir Options d'évaluation sous Paramètres > Flux des travaux > Évaluation) et que l'accès de l'évaluateur-trice en un clic est désactivé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
 REVIEW_REMIND_ONECLICK	fr_CA	Rappel d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Nous espérions recevoir votre évaluation avant le {$reviewDueDate}. Nous serions heureux de la recevoir dès que possible.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé par le,la rédacteur-trice de rubrique à un,une évaluateur-trice pour lui rappeler que son évaluation est due.
 REVIEW_REMIND_AUTO_ONECLICK	fr_CA	Rappel automatique d'évaluation d'une soumission	{$reviewerName},<br />\n<br />\nCeci est un petit rappel concernant notre demande d'évaluation de la soumission « {$submissionTitle} » pour la revue {$contextName}. Puisque nous n'avons pas reçu, comme nous l'espérions, votre évaluation avant le {$reviewDueDate}, ce courriel a été généré et envoyé automatiquement après l'échéance du délai. Nous serions toutefois heureux de recevoir votre évaluation dès que possible.<br />\n<br />\nURL de la soumission : {$submissionReviewUrl}<br />\n<br />\nVeuillez confirmer que vous êtes en mesure d'effectuer ce travail essentiel pour la publication de notre revue. Nous espérons avoir de vos nouvelles très bientôt.<br />\n<br />\n{$editorialContactSignature}	Ce courriel est envoyé automatiquement lorsque la date d'échéance de remise d'une évaluation est révolue (voir Options d'évaluation sous Paramètres > Flux des travaux > Évaluation) et que l'accès de l'évaluateur-trice en un clic est activé. Les tâches planifiées doivent être activées et configurées (voir le fichier de configuration du site).
 EDITOR_DECISION_ACCEPT	fr_CA	Décision du rédacteur	{$authorName},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à la revue {$contextName}.<br />\n<br />\nNotre décision est d'accepter votre soumission.	Ce courriel du,de la rédacteur-trice ou du,de la rédacteur-trice de rubrique à un-e auteur-e le,la notifie de la décision finale concernant sa soumission, soit d'accepter sa soumission.
@@ -5032,8 +5034,6 @@ EDITOR_DECISION_RESUBMIT	fr_CA	Décision du rédacteur	{$authorName},<br />\n<br
 EDITOR_DECISION_DECLINE	fr_CA	Décision du rédacteur	{$authorName}:<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à la revue {$contextName}.<br />\n<br />\nNotre décision est de refuser votre soumission.	Ce courriel du,de la rédacteur-trice ou du,de la rédacteur-trice de rubrique à un-e auteur-e le,la notifie de la décision concernant sa soumission, soit de refuser la soumission.
 EDITOR_DECISION_INITIAL_DECLINE	fr_CA	Décision du rédacteur	\n\t\t\t{$authorName},<br />\n<br />\nNous avons pris une décision concernant votre soumission « {$submissionTitle} » à  la revue {$contextName}.<br />\n<br />\nNotre décision est de refuser votre soumission.	Cet courriel est envoyé à l'auteur-e si la soumission est refusée avant même l'étape d'évaluation
 EDITOR_RECOMMENDATION	fr_CA	Recommandation du rédacteur	{$editors},<br />\n<br />\nLa recommandation concernant la soumission « {$submissionTitle} » à la revue {$contextName} est de : {$recommendation}	Ce courriel envoyé par le,la rédacteur-trice ou le,la rédacteur-trice de rubrique en charge de la recommandation au,à la rédacteur-trice ou au,à la rédacteur-trice de rubrique en charge de la prise de décisions l'informe d'une recommandation finale concernant la soumission.
-COPYEDIT_REQUEST	fr_CA	Demande de révision d'une soumission	{$participantName},<br />\n<br />\nJ'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} à l'aide des étapes suivantes.<br />\n1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n2. Ouvrir le(s) fichier(s) disponible(s) sous Fichiers des ébauches finales et effectuer votre révision, tout en ajoutant des discussions sur la révision, le cas échéant.<br />\n3. Enregistrer le(s) fichier(s) révisé(s) et le(s) téléverser dans la section Version(s) révisée(s).<br />\n4. Informer le,la rédacteur-trice que tous les fichiers ont été révisés et que l'étape de production peut débuter.<br />\n<br />\nURL de la revue {$contextName} : {$contextUrl}<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$participantUsername}	Ce courriel du, de la rédacteur-trice de rubrique à un-e réviseur-e lui demande de procéder à la révision. Il fournit les renseignements sur la soumission et comment accéder à celle-ci.
-PAYPAL_INVESTIGATE_PAYMENT	fr_CA	Activité inhabituelle de PayPal	L'Open Journal Systems a remarqué une activité inhabituelle concernant la prise en charge du paiement PayPal pour la revue {$contextName}. Cette activité pourrait nécessiter une attention particulière ou une intervention manuelle.<br />\n                       <br />\nCe courriel a été généré par le plugiciel PayPal du Open Journal Systems.<br />\n<br />\nInformation complète de la demande :<br />\n{$postInfo}<br />\n<br />\nInformation supplémentaire (si fournie) :<br />\n{$additionalInfo}<br />\n<br />\nVariables serveur :<br />\n{$serverVars}<br />\n	Ce modèle de courriel est utilisé pour aviser un contact principal d'une revue qu'une activité inhabituelle ou requérant une intervention manuelle a été remarquée par le plugiciel PayPal.
 LAYOUT_REQUEST	fr_CA	Demande de mise en page des épreuves	{$participantName},<br />\n<br />\nJ'aimerais que vous prépariez les épreuves du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} à l'aide des étapes suivantes.<br />\n1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n2. Se connecter au site Web de la revue et utiliser les fichiers disponibles sous Fichiers prêts pour la production pour créer les épreuves en fonction des normes de la revue.<br />\n3. Téléverser les épreuves dans la section Épreuves.<br />\n4. Informer le,la rédacteur-trice, via une discussion sur la production, que les épreuves ont été téléversées et qu'elles sont prêtes.<br />\n<br />\nURL de la revue {$contextName} : {$contextUrl}<br />\nURL du manuscrit : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$participantUsername}<br />\n<br />\nSi vous ne pouvez pas effectuer ce travail pour le moment ou si vous avez des questions, veuillez communiquer avec moi. Je vous remercie de votre collaboration.	Ce courriel du,de la rédacteur-trice de rubrique au, à la responsable de la mise en page l'avise qu'il ou elle a été assigné-e à la réalisation de la mise en page de la soumission. Il fournit les renseignements sur la soumission et comment accéder à celle-ci.
 LAYOUT_COMPLETE	fr_CA	Mise en page des épreuves terminée	{$editorialContactName},<br />\n<br />\nLes épreuves du manuscrit intitulé « {$submissionTitle} » pour la revue {$contextName} sont maintenant prêtes pour la relecture.<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec moi.<br />\n<br />\n{$participantName}	Ce courriel du,de la responsable de la mise en page au,à la rédacteur-trice de rubrique l'avise que l'étape de mise en page est complétée.
 EMAIL_LINK	fr_CA	Article potentiellement intéressant	Je pense que l'article suivant pourrait vous intéresser : « {$submissionTitle} » par {$authorName}, publié dans le volume {$volume}, numéro {$number} de ({$year}) de la revue {$contextName}, à l'adresse suivante : {$articleUrl}.	Ce modèle de courriel fournit à un,une lecteur-trice inscrit-e l'occasion d'envoyer de l'information à quelqu'un qui peut être intéressé par un article en particulier. Il est disponible via Outils de lecture et doit être activé par le,la directeur-trice de la revue à la page Gestion des outils de lecture.
@@ -5043,7 +5043,6 @@ SUBSCRIPTION_BEFORE_EXPIRY	fr_CA	Avis d'expiration de l'abonnement	{$subscriberN
 SUBSCRIPTION_AFTER_EXPIRY	fr_CA	Abonnement expiré	{$subscriberName},<br />\n<br />\nVotre abonnement à la revue {$contextName} est expiré.<br />\n<br />\n{$subscriptionType}<br />\nDate d'expiration : {$expiryDate}<br />\n<br />\nPour renouveler votre abonnement, veuillez vous rendre sur le site Web de la revue. Vous pouvez y ouvrir une session en utilisant votre nom d'utilisateur-trice, soit « {$username} ».<br />\n<br />\nSi vous avez des questions, n'hésitez pas à communiquer avec nous.<br />\n<br />\n{$subscriptionContactSignature}	Ce courriel avise un-e abonné-e que son abonnement est expiré. Il fournit l'adresse URL de la revue, ainsi que les instructions pour y accéder.
 SUBSCRIPTION_AFTER_EXPIRY_LAST	fr_CA	Abonnement expiré - Dernier rappel	{$subscriberName},<br />\n<br />\nVotre abonnement à la revue {$contextName} est expiré. Veuillez prendre note que ceci est le dernier rappel qui vous sera envoyé.<br />\n<br />\n{$subscriptionType}<br />\nDate d'expiration : {$expiryDate}<br />\n<br />\nPour renouveller votre abonnement, aveuillez vous rendre sur le site Web de la revue. Vous pouvez y ouvrir une session avec votre nom d'utilisateur-trice, soit « {$username} ».<br />\n<br />\nSi vous avez des questions, ne hésitez pas à communiquer avec nous.<br />\n<br />\n{$subscriptionContactSignature}	Ce courriel avise un-e abonné-e que son abonnement est expiré. Il donne l'adresse URL de la revue ainsi que les instructions pour y accéder.
 SUBSCRIPTION_PURCHASE_INDL	fr_CA	Souscription à un abonnement individuel	Une souscription en ligne à un abonnement individuel pour la revue {$contextName} avec les renseignements suivants :<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nUtilisateur-trice :<br />\n{$userDetails}<br />\n<br />\nInformation d'adhésion (si fournie) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivante.<br />\n<br />\nURL d'abonnement : {$subscriptionUrl}<br/>\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement individuel a été souscrit en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit.
-MANUAL_PAYMENT_NOTIFICATION	fr_CA	Avis de paiement manuel	Un paiement manuel doit être traité pour la revue {$contextName} et l'utilisateur {$userFullName} (nom d'utilisateur &quot;{$userName}&quot;).<br />\n<br />\nL'élément facturé est &quot;{$itemName}&quot;.<br />\nLe coût est de {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nCe courriel a été généré par le plugiciel de paiement manuel du Open Journal Systems.	Ce modèle de courriel est utilisé pour aviser un directeur de revue que le paiement manuel a été demandé.
 SUBSCRIPTION_PURCHASE_INSTL	fr_CA	Souscription à un abonnement institutionnel	Souscription en ligne à un abonnement institutionnel pour la revue {$contextName} avec les renseignements suivants. Pour activer cet abonnement, veuillez utiliser l'URL d'abonnement fourni et fixer le statut de l'abonnement à « actif ».<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nÉtablissement :<br />\n{$institutionName}<br />\n{$institutionMailingAddress}<br />\n<br />\nDomaine (si fourni) :<br />\n{$domain}<br />\n<br />\nPlage d'adresses IP (si fournie) :<br />\n{$ipRanges}<br />\n<br />\nPersonne-ressource :<br />\n{$userDetails}<br />\n<br />\nRenseignements d'adhésion (si fournis) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant :<br />\n<br />\nURL de l'abonnement : {$subscriptionUrl}<br />\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement institutionnel a été souscrit en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit.
 SUBSCRIPTION_RENEW_INDL	fr_CA	Renouvellement d'abonnement individuel	Un abonnement individuel a été renouvelé en ligne pour la revue {$contextName} avec les renseignements suivants.<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nUtilisateur-trice :<br />\n{$userDetails}<br />\n<br />\nRenseignements d'adhésion (si fournis) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant.<br />\n<br />\nURL de l'abonnement : {$subscriptionUrl}<br />\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement individuel a été renouvelé en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement renouvelé.
 SUBSCRIPTION_RENEW_INSTL	fr_CA	Renouvellement d'abonnement institutionnel	Un abonnement institutionnel a été renouvelé en ligne pour la revue {$contextName} avec les renseignements suivants.<br />\n<br />\nType d'abonnement :<br />\n{$subscriptionType}<br />\n<br />\nÉtablissement :<br />\n{$institutionName}<br />\n{$institutionMailingAddress}<br />\n<br />\nDomaine (si fourni) :<br />\n{$domain}<br />\n<br />\nPlage d'adresses IP (si fournie) :<br />\n{$ipRanges}<br />\n<br />\nPersonne-ressource :<br />\n{$userDetails}<br />\n<br />\nRenseignements d'adhésion (si fournis) :<br />\n{$membership}<br />\n<br />\nPour afficher ou modifier cet abonnement, veuillez utiliser l'URL suivant.<br />\n<br />\nURL de l'abonnement : {$subscriptionUrl}<br />\n	Ce courriel informe le,la responsable des abonnements qu'un abonnement institutionnel a été renouvelé en ligne. Il fournit des renseignements sommaires sur l'abonnement et le lien pour accéder à l'abonnement renouvelé.
@@ -5053,6 +5052,7 @@ STATISTICS_REPORT_NOTIFICATION	fr_CA	Activité éditoriale pour {$month} {$year}
 ANNOUNCEMENT	fr_CA	{$title}	<b>{$title}</b><br />\n<br />\n{$summary}<br />\n<br />\nVisiter notre site Web pour consulter <a href="{$url}">l'annonce complète</a>.	Ce courriel est envoyé lorsqu'une nouvelle annonce est créée.
 ORCID_COLLECT_AUTHOR_ID	fr_CA	Soumission ORCID	{$authorName},<br/>\n<br/>\nVous avez été inscrit ou inscrite en tant qu'auteur ou auteure pour un manuscrit soumis à {$contextName}.<br/>\nPour confirmer votre statut d'auteur ou d'auteure, veuillez ajouter votre identifiant ORCID à cette soumission en cliquant sur le lien ci-dessous.<br/>\n<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="icône identifiant ORCID" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Se connecter avec votre identifiant ORCID ou s'inscrire</a><br/>\n<br/>\n<br/>\n<a href="{$orcidAboutUrl}">Plus de renseignements sur votre identifiant ORCID dans {$contextName}</a><br/>\n<br/>\nSi vous avez des questions, veuillez communiquer avec nous.<br/>\n<br/>\n{$principalContactSignature}<br/>\n	Ce modèle de courriel est utilisé pour récupérer les identifiants ORCID des auteurs-es.
 ORCID_REQUEST_AUTHOR_AUTHORIZATION	fr_CA	Demande d'accès au dossier ORCID	{$authorName},<br/>\n<br/>\nVous avez été inscrit ou inscrite en tant qu'auteur ou auteure pour le manuscrit « {$submissionTitle} » soumis à {$contextName}.\n<br/>\n<br/>\nVeuillez nous autoriser à ajouter votre identifiant ORCID à cette soumission et à ajouter également la soumission à votre dossier ORCID suite à sa publication.\n<br/>\nSuivre le lien vers le site officiel ORCID, vous connecter avec votre profil et autoriser l'accès en suivant les instructions.<br/>\n<a href="{$authorOrcidUrl}"><img id="orcid-id-logo" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" width='16' height='16' alt="icône identifiant ORCID" style="display: block; margin: 0 .5em 0 0; padding: 0; float: left;"/>Se connecter avec votre identifiant ORCID ou s'inscrire</a><br/>\n<br/>\n<br/>\n<a href="{$orcidAboutUrl}">Plus de renseignements sur votre identifiant ORCID dans {$contextName}</a><br/>\n<br/>\nSi vous avez des questions, veuillez communiquer avec nous.<br/>\n<br/>\n{$principalContactSignature}<br/>\n	Ce modèle de courriel est utilisé pour demander aux auteurs-es l'accès à leur dossier ORCID.
+PAYPAL_INVESTIGATE_PAYMENT	fr_CA	Activité inhabituelle de PayPal	L'Open Journal Systems a remarqué une activité inhabituelle concernant la prise en charge du paiement PayPal pour la revue {$contextName}. Cette activité pourrait nécessiter une attention particulière ou une intervention manuelle.<br />\n                       <br />\nCe courriel a été généré par le plugiciel PayPal du Open Journal Systems.<br />\n<br />\nInformation complète de la demande :<br />\n{$postInfo}<br />\n<br />\nInformation supplémentaire (si fournie) :<br />\n{$additionalInfo}<br />\n<br />\nVariables serveur :<br />\n{$serverVars}<br />\n	Ce modèle de courriel est utilisé pour aviser un contact principal d'une revue qu'une activité inhabituelle ou requérant une intervention manuelle a été remarquée par le plugiciel PayPal.
 \.
 
 
@@ -5069,269 +5069,269 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	17	2024-07-10 05:23:05	268435458	submission.event.general.metadataUpdated	0
-2	515	1	17	2024-07-10 05:23:06	1342177281	submission.event.fileUploaded	0
-3	1048585	1	17	2024-07-10 05:23:06	1342177288	submission.event.fileRevised	0
-4	515	1	17	2024-07-10 05:23:06	1342177296	submission.event.fileEdited	0
-5	1048585	1	17	2024-07-10 05:23:06	1342177296	submission.event.fileEdited	0
-6	1048585	1	17	2024-07-10 05:23:07	268435458	submission.event.general.metadataUpdated	0
-7	1048585	1	17	2024-07-10 05:23:08	268435457	submission.event.submissionSubmitted	0
-8	1048585	1	3	2024-07-10 05:23:10	805306371	log.editor.decision	0
-9	1048585	1	3	2024-07-10 05:23:15	1073741825	log.review.reviewerAssigned	0
-10	1048585	1	3	2024-07-10 05:23:18	1073741825	log.review.reviewerAssigned	0
-11	1048585	1	3	2024-07-10 05:23:24	1073741825	log.review.reviewerAssigned	0
-12	1048585	1	3	2024-07-10 05:23:25	805306371	log.editor.decision	0
-13	1048585	1	3	2024-07-10 05:23:29	268435459	submission.event.participantAdded	0
-14	1048585	1	3	2024-07-10 05:23:30	805306371	log.editor.decision	0
-15	1048585	1	3	2024-07-10 05:23:34	268435459	submission.event.participantAdded	0
-16	1048585	1	3	2024-07-10 05:23:36	268435459	submission.event.participantAdded	0
-17	1048585	1	3	2024-07-10 05:23:40	268435458	submission.event.general.metadataUpdated	0
-18	1048585	1	3	2024-07-10 05:23:42	268435458	submission.event.general.metadataUpdated	0
-19	1048585	1	3	2024-07-10 05:23:42	268435458	submission.event.general.metadataUpdated	0
-20	1048585	1	3	2024-07-10 05:23:45	268435458	submission.event.general.metadataUpdated	0
-21	1048585	1	3	2024-07-10 05:23:48	268435458	submission.event.general.metadataUpdated	0
-22	515	2	3	2024-07-10 05:23:52	1342177281	submission.event.fileUploaded	0
-23	1048585	1	3	2024-07-10 05:23:52	1342177288	submission.event.fileRevised	0
-24	515	2	3	2024-07-10 05:23:52	1342177296	submission.event.fileEdited	0
-25	1048585	1	3	2024-07-10 05:23:52	1342177296	submission.event.fileEdited	0
-26	1048585	1	3	2024-07-10 05:23:58	268435459	submission.event.participantAdded	0
-27	1048585	1	17	2024-07-10 05:24:03	268435458	submission.event.general.metadataUpdated	0
-28	1048585	1	3	2024-07-10 05:24:05	268435458	submission.event.general.metadataUpdated	0
-29	1048585	1	3	2024-07-10 05:24:06	268435462	publication.event.published	0
-30	1048585	1	3	2024-07-10 05:24:12	268435463	publication.event.unpublished	0
-31	1048585	1	3	2024-07-10 05:24:14	268435462	publication.event.published	0
-32	1048585	1	3	2024-07-10 05:24:16	268435458	submission.event.general.metadataUpdated	0
-33	1048585	1	3	2024-07-10 05:24:16	268435464	publication.event.versionCreated	0
-34	1048585	1	3	2024-07-10 05:24:26	268435458	submission.event.general.metadataUpdated	0
-35	1048585	1	3	2024-07-10 05:24:30	268435458	submission.event.general.metadataUpdated	0
-36	1048585	1	3	2024-07-10 05:24:38	268435458	submission.event.general.metadataUpdated	0
-37	1048585	1	3	2024-07-10 05:24:39	268435462	publication.event.versionPublished	0
-38	1048585	1	3	2024-07-10 05:24:45	268435463	publication.event.versionUnpublished	0
-39	1048585	1	3	2024-07-10 05:24:49	268435459	submission.event.participantAdded	0
-40	1048585	1	3	2024-07-10 05:24:55	268435459	submission.event.participantAdded	0
-41	1048585	2	18	2024-07-10 05:25:03	268435458	submission.event.general.metadataUpdated	0
-42	515	3	18	2024-07-10 05:25:04	1342177281	submission.event.fileUploaded	0
-43	1048585	2	18	2024-07-10 05:25:04	1342177288	submission.event.fileRevised	0
-44	515	3	18	2024-07-10 05:25:04	1342177296	submission.event.fileEdited	0
-45	1048585	2	18	2024-07-10 05:25:04	1342177296	submission.event.fileEdited	0
-46	1048585	2	18	2024-07-10 05:25:05	268435458	submission.event.general.metadataUpdated	0
-47	1048585	2	18	2024-07-10 05:25:06	268435457	submission.event.submissionSubmitted	0
-48	1048585	2	3	2024-07-10 05:25:09	805306371	log.editor.decision	0
-49	1048585	2	3	2024-07-10 05:25:12	268435459	submission.event.participantAdded	0
-50	1048585	2	3	2024-07-10 05:25:16	268435458	submission.event.general.metadataUpdated	0
-51	1048585	2	6	2024-07-10 05:25:19	805306372	log.editor.recommendation	0
-52	1048585	3	19	2024-07-10 05:25:28	268435458	submission.event.general.metadataUpdated	0
-53	515	4	19	2024-07-10 05:25:29	1342177281	submission.event.fileUploaded	0
-54	1048585	3	19	2024-07-10 05:25:29	1342177288	submission.event.fileRevised	0
-55	515	4	19	2024-07-10 05:25:29	1342177296	submission.event.fileEdited	0
-56	1048585	3	19	2024-07-10 05:25:29	1342177296	submission.event.fileEdited	0
-57	1048585	3	19	2024-07-10 05:25:31	268435458	submission.event.general.metadataUpdated	0
-58	1048585	3	19	2024-07-10 05:25:31	268435457	submission.event.submissionSubmitted	0
-59	1048585	3	3	2024-07-10 05:25:34	805306371	log.editor.decision	0
-60	1048585	3	3	2024-07-10 05:25:38	1073741825	log.review.reviewerAssigned	0
-61	1048585	3	3	2024-07-10 05:25:44	1073741825	log.review.reviewerAssigned	0
-62	1048585	3	3	2024-07-10 05:25:45	805306371	log.editor.decision	0
-63	1048585	3	3	2024-07-10 05:25:49	268435459	submission.event.participantAdded	0
-64	1048585	4	20	2024-07-10 05:25:56	268435458	submission.event.general.metadataUpdated	0
-65	515	5	20	2024-07-10 05:25:57	1342177281	submission.event.fileUploaded	0
-66	1048585	4	20	2024-07-10 05:25:57	1342177288	submission.event.fileRevised	0
-67	515	5	20	2024-07-10 05:25:57	1342177296	submission.event.fileEdited	0
-68	1048585	4	20	2024-07-10 05:25:57	1342177296	submission.event.fileEdited	0
-69	1048585	4	20	2024-07-10 05:26:00	268435458	submission.event.general.metadataUpdated	0
-70	1048585	4	20	2024-07-10 05:26:01	268435458	submission.event.general.metadataUpdated	0
-71	1048585	4	20	2024-07-10 05:26:01	268435457	submission.event.submissionSubmitted	0
-72	1048585	5	21	2024-07-10 05:26:07	268435458	submission.event.general.metadataUpdated	0
-73	515	6	21	2024-07-10 05:26:08	1342177281	submission.event.fileUploaded	0
-74	1048585	5	21	2024-07-10 05:26:08	1342177288	submission.event.fileRevised	0
-75	515	6	21	2024-07-10 05:26:08	1342177296	submission.event.fileEdited	0
-76	1048585	5	21	2024-07-10 05:26:08	1342177296	submission.event.fileEdited	0
-77	1048585	5	21	2024-07-10 05:26:09	268435458	submission.event.general.metadataUpdated	0
-78	1048585	5	21	2024-07-10 05:26:10	268435457	submission.event.submissionSubmitted	0
-79	1048585	5	3	2024-07-10 05:26:13	805306371	log.editor.decision	0
-80	1048585	5	3	2024-07-10 05:26:17	1073741825	log.review.reviewerAssigned	0
-81	1048585	5	3	2024-07-10 05:26:23	1073741825	log.review.reviewerAssigned	0
-82	1048585	5	3	2024-07-10 05:26:24	805306371	log.editor.decision	0
-83	1048585	5	3	2024-07-10 05:26:27	268435459	submission.event.participantAdded	0
-84	1048585	5	3	2024-07-10 05:26:29	805306371	log.editor.decision	0
-85	1048585	5	3	2024-07-10 05:26:32	268435459	submission.event.participantAdded	0
-86	1048585	5	3	2024-07-10 05:26:34	268435459	submission.event.participantAdded	0
-87	1048585	6	22	2024-07-10 05:26:40	268435458	submission.event.general.metadataUpdated	0
-88	515	7	22	2024-07-10 05:26:41	1342177281	submission.event.fileUploaded	0
-89	1048585	6	22	2024-07-10 05:26:41	1342177288	submission.event.fileRevised	0
-90	515	7	22	2024-07-10 05:26:41	1342177296	submission.event.fileEdited	0
-91	1048585	6	22	2024-07-10 05:26:41	1342177296	submission.event.fileEdited	0
-92	1048585	6	22	2024-07-10 05:26:43	268435458	submission.event.general.metadataUpdated	0
-93	1048585	6	22	2024-07-10 05:26:43	268435457	submission.event.submissionSubmitted	0
-94	1048585	6	3	2024-07-10 05:26:46	805306371	log.editor.decision	0
-95	1048585	6	3	2024-07-10 05:26:51	1073741825	log.review.reviewerAssigned	0
-96	1048585	6	3	2024-07-10 05:26:56	1073741825	log.review.reviewerAssigned	0
-97	1048585	6	3	2024-07-10 05:26:58	805306371	log.editor.decision	0
-98	1048585	6	3	2024-07-10 05:27:01	268435459	submission.event.participantAdded	0
-99	1048585	6	3	2024-07-10 05:27:02	805306371	log.editor.decision	0
-100	1048585	6	3	2024-07-10 05:27:05	268435459	submission.event.participantAdded	0
-101	1048585	7	23	2024-07-10 05:27:12	268435458	submission.event.general.metadataUpdated	0
-102	515	8	23	2024-07-10 05:27:13	1342177281	submission.event.fileUploaded	0
-103	1048585	7	23	2024-07-10 05:27:13	1342177288	submission.event.fileRevised	0
-104	515	8	23	2024-07-10 05:27:13	1342177296	submission.event.fileEdited	0
-105	1048585	7	23	2024-07-10 05:27:13	1342177296	submission.event.fileEdited	0
-106	1048585	7	23	2024-07-10 05:27:14	268435458	submission.event.general.metadataUpdated	0
-107	1048585	7	23	2024-07-10 05:27:15	268435457	submission.event.submissionSubmitted	0
-108	1048585	7	3	2024-07-10 05:27:18	805306371	log.editor.decision	0
-109	1048585	7	3	2024-07-10 05:27:22	1073741825	log.review.reviewerAssigned	0
-110	1048585	7	3	2024-07-10 05:27:25	1073741825	log.review.reviewerAssigned	0
-111	1048585	7	3	2024-07-10 05:27:31	1073741825	log.review.reviewerAssigned	0
-112	1048585	7	8	2024-07-10 05:27:34	1073741830	log.review.reviewAccepted	0
-113	1048585	7	8	2024-07-10 05:27:37	1073741848	log.review.reviewReady	0
-114	1048585	8	24	2024-07-10 05:27:43	268435458	submission.event.general.metadataUpdated	0
-115	515	9	24	2024-07-10 05:27:43	1342177281	submission.event.fileUploaded	0
-116	1048585	8	24	2024-07-10 05:27:43	1342177288	submission.event.fileRevised	0
-117	515	9	24	2024-07-10 05:27:44	1342177296	submission.event.fileEdited	0
-118	1048585	8	24	2024-07-10 05:27:44	1342177296	submission.event.fileEdited	0
-119	1048585	8	24	2024-07-10 05:27:46	268435458	submission.event.general.metadataUpdated	0
-120	1048585	8	24	2024-07-10 05:27:47	268435458	submission.event.general.metadataUpdated	0
-121	1048585	8	24	2024-07-10 05:27:48	268435457	submission.event.submissionSubmitted	0
-122	1048585	9	25	2024-07-10 05:27:53	268435458	submission.event.general.metadataUpdated	0
-123	515	10	25	2024-07-10 05:27:54	1342177281	submission.event.fileUploaded	0
-124	1048585	9	25	2024-07-10 05:27:54	1342177288	submission.event.fileRevised	0
-125	515	10	25	2024-07-10 05:27:54	1342177296	submission.event.fileEdited	0
-126	1048585	9	25	2024-07-10 05:27:54	1342177296	submission.event.fileEdited	0
-127	1048585	9	25	2024-07-10 05:27:55	268435458	submission.event.general.metadataUpdated	0
-128	1048585	9	25	2024-07-10 05:27:56	268435457	submission.event.submissionSubmitted	0
-129	1048585	9	3	2024-07-10 05:27:59	805306371	log.editor.decision	0
-130	1048585	9	3	2024-07-10 05:28:04	1073741825	log.review.reviewerAssigned	0
-131	1048585	9	3	2024-07-10 05:28:09	1073741825	log.review.reviewerAssigned	0
-132	1048585	9	3	2024-07-10 05:28:11	805306371	log.editor.decision	0
-133	1048585	9	3	2024-07-10 05:28:14	268435459	submission.event.participantAdded	0
-134	1048585	9	3	2024-07-10 05:28:15	805306371	log.editor.decision	0
-135	1048585	9	3	2024-07-10 05:28:19	268435459	submission.event.participantAdded	0
-136	1048585	9	3	2024-07-10 05:28:21	268435459	submission.event.participantAdded	0
-137	1048585	10	26	2024-07-10 05:28:27	268435458	submission.event.general.metadataUpdated	0
-138	515	11	26	2024-07-10 05:28:28	1342177281	submission.event.fileUploaded	0
-139	1048585	10	26	2024-07-10 05:28:28	1342177288	submission.event.fileRevised	0
-140	515	11	26	2024-07-10 05:28:28	1342177296	submission.event.fileEdited	0
-141	1048585	10	26	2024-07-10 05:28:28	1342177296	submission.event.fileEdited	0
-142	1048585	10	26	2024-07-10 05:28:30	268435458	submission.event.general.metadataUpdated	0
-143	1048585	10	26	2024-07-10 05:28:30	268435457	submission.event.submissionSubmitted	0
-144	1048585	10	3	2024-07-10 05:28:34	805306371	log.editor.decision	0
-145	1048585	10	3	2024-07-10 05:28:38	1073741825	log.review.reviewerAssigned	0
-146	1048585	10	3	2024-07-10 05:28:44	1073741825	log.review.reviewerAssigned	0
-147	1048585	10	9	2024-07-10 05:28:46	1073741830	log.review.reviewAccepted	0
-148	1048585	10	9	2024-07-10 05:28:50	1073741848	log.review.reviewReady	0
-149	1048585	10	10	2024-07-10 05:28:52	1073741830	log.review.reviewAccepted	0
-150	1048585	10	10	2024-07-10 05:28:55	1073741848	log.review.reviewReady	0
-151	1048585	11	27	2024-07-10 05:29:01	268435458	submission.event.general.metadataUpdated	0
-152	515	12	27	2024-07-10 05:29:02	1342177281	submission.event.fileUploaded	0
-153	1048585	11	27	2024-07-10 05:29:02	1342177288	submission.event.fileRevised	0
-154	515	12	27	2024-07-10 05:29:02	1342177296	submission.event.fileEdited	0
-155	1048585	11	27	2024-07-10 05:29:02	1342177296	submission.event.fileEdited	0
-156	1048585	11	27	2024-07-10 05:29:05	268435458	submission.event.general.metadataUpdated	0
-157	1048585	11	27	2024-07-10 05:29:06	268435458	submission.event.general.metadataUpdated	0
-158	1048585	11	27	2024-07-10 05:29:06	268435457	submission.event.submissionSubmitted	0
-159	1048585	12	28	2024-07-10 05:29:12	268435458	submission.event.general.metadataUpdated	0
-160	515	13	28	2024-07-10 05:29:13	1342177281	submission.event.fileUploaded	0
-161	1048585	12	28	2024-07-10 05:29:13	1342177288	submission.event.fileRevised	0
-162	515	13	28	2024-07-10 05:29:13	1342177296	submission.event.fileEdited	0
-163	1048585	12	28	2024-07-10 05:29:13	1342177296	submission.event.fileEdited	0
-164	1048585	12	28	2024-07-10 05:29:14	268435458	submission.event.general.metadataUpdated	0
-165	1048585	12	28	2024-07-10 05:29:15	268435457	submission.event.submissionSubmitted	0
-166	1048585	12	3	2024-07-10 05:29:19	805306371	log.editor.decision	0
-167	1048585	12	3	2024-07-10 05:29:23	1073741825	log.review.reviewerAssigned	0
-168	1048585	12	3	2024-07-10 05:29:27	1073741825	log.review.reviewerAssigned	0
-169	1048585	13	29	2024-07-10 05:29:42	268435458	submission.event.general.metadataUpdated	0
-170	515	14	29	2024-07-10 05:29:43	1342177281	submission.event.fileUploaded	0
-171	1048585	13	29	2024-07-10 05:29:43	1342177288	submission.event.fileRevised	0
-172	515	14	29	2024-07-10 05:29:43	1342177296	submission.event.fileEdited	0
-173	1048585	13	29	2024-07-10 05:29:43	1342177296	submission.event.fileEdited	0
-174	1048585	13	29	2024-07-10 05:29:45	268435458	submission.event.general.metadataUpdated	0
-175	1048585	13	29	2024-07-10 05:29:45	268435457	submission.event.submissionSubmitted	0
-176	1048585	13	3	2024-07-10 05:29:49	805306371	log.editor.decision	0
-177	1048585	13	3	2024-07-10 05:29:54	1073741825	log.review.reviewerAssigned	0
-178	1048585	13	3	2024-07-10 05:29:57	1073741825	log.review.reviewerAssigned	0
-179	1048585	13	3	2024-07-10 05:30:03	1073741825	log.review.reviewerAssigned	0
-180	1048585	13	7	2024-07-10 05:30:06	1073741830	log.review.reviewAccepted	0
-181	1048585	13	7	2024-07-10 05:30:09	1073741848	log.review.reviewReady	0
-182	1048585	13	9	2024-07-10 05:30:12	1073741830	log.review.reviewAccepted	0
-183	1048585	13	9	2024-07-10 05:30:15	1073741848	log.review.reviewReady	0
-184	1048585	13	10	2024-07-10 05:30:18	1073741830	log.review.reviewAccepted	0
-185	1048585	13	10	2024-07-10 05:30:21	1073741848	log.review.reviewReady	0
-186	1048585	13	3	2024-07-10 05:30:27	805306371	log.editor.decision	0
-187	1048585	14	30	2024-07-10 05:30:33	268435458	submission.event.general.metadataUpdated	0
-188	515	15	30	2024-07-10 05:30:34	1342177281	submission.event.fileUploaded	0
-189	1048585	14	30	2024-07-10 05:30:34	1342177288	submission.event.fileRevised	0
-190	515	15	30	2024-07-10 05:30:34	1342177296	submission.event.fileEdited	0
-191	1048585	14	30	2024-07-10 05:30:34	1342177296	submission.event.fileEdited	0
-192	1048585	14	30	2024-07-10 05:30:36	268435458	submission.event.general.metadataUpdated	0
-193	1048585	14	30	2024-07-10 05:30:37	268435457	submission.event.submissionSubmitted	0
-194	1048585	15	31	2024-07-10 05:30:42	268435458	submission.event.general.metadataUpdated	0
-195	515	16	31	2024-07-10 05:30:42	1342177281	submission.event.fileUploaded	0
-196	1048585	15	31	2024-07-10 05:30:42	1342177288	submission.event.fileRevised	0
-197	515	16	31	2024-07-10 05:30:43	1342177296	submission.event.fileEdited	0
-198	1048585	15	31	2024-07-10 05:30:43	1342177296	submission.event.fileEdited	0
-199	1048585	15	31	2024-07-10 05:30:44	268435458	submission.event.general.metadataUpdated	0
-200	1048585	15	31	2024-07-10 05:30:45	268435457	submission.event.submissionSubmitted	0
-201	1048585	15	3	2024-07-10 05:30:49	805306371	log.editor.decision	0
-202	1048585	15	3	2024-07-10 05:30:53	1073741825	log.review.reviewerAssigned	0
-203	1048585	15	3	2024-07-10 05:30:57	1073741825	log.review.reviewerAssigned	0
-204	1048585	15	3	2024-07-10 05:30:58	805306371	log.editor.decision	0
-205	1048585	15	3	2024-07-10 05:31:01	268435459	submission.event.participantAdded	0
-206	1048585	15	3	2024-07-10 05:31:03	805306371	log.editor.decision	0
-207	1048585	15	3	2024-07-10 05:31:06	268435459	submission.event.participantAdded	0
-208	1048585	16	32	2024-07-10 05:31:12	268435458	submission.event.general.metadataUpdated	0
-209	515	17	32	2024-07-10 05:31:13	1342177281	submission.event.fileUploaded	0
-210	1048585	16	32	2024-07-10 05:31:13	1342177288	submission.event.fileRevised	0
-211	515	17	32	2024-07-10 05:31:13	1342177296	submission.event.fileEdited	0
-212	1048585	16	32	2024-07-10 05:31:13	1342177296	submission.event.fileEdited	0
-213	1048585	16	32	2024-07-10 05:31:14	268435458	submission.event.general.metadataUpdated	0
-214	1048585	16	32	2024-07-10 05:31:15	268435457	submission.event.submissionSubmitted	0
-215	1048585	17	33	2024-07-10 05:31:20	268435458	submission.event.general.metadataUpdated	0
-216	515	18	33	2024-07-10 05:31:21	1342177281	submission.event.fileUploaded	0
-217	1048585	17	33	2024-07-10 05:31:21	1342177288	submission.event.fileRevised	0
-218	515	18	33	2024-07-10 05:31:21	1342177296	submission.event.fileEdited	0
-219	1048585	17	33	2024-07-10 05:31:21	1342177296	submission.event.fileEdited	0
-220	1048585	17	33	2024-07-10 05:31:23	268435458	submission.event.general.metadataUpdated	0
-221	1048585	17	33	2024-07-10 05:31:23	268435457	submission.event.submissionSubmitted	0
-222	1048585	17	3	2024-07-10 05:31:28	805306371	log.editor.decision	0
-223	1048585	17	3	2024-07-10 05:31:32	1073741825	log.review.reviewerAssigned	0
-224	1048585	17	3	2024-07-10 05:31:36	1073741825	log.review.reviewerAssigned	0
-225	1048585	17	3	2024-07-10 05:31:37	805306371	log.editor.decision	0
-226	1048585	17	3	2024-07-10 05:31:40	268435459	submission.event.participantAdded	0
-227	1048585	17	3	2024-07-10 05:31:42	805306371	log.editor.decision	0
-228	1048585	17	3	2024-07-10 05:31:45	268435459	submission.event.participantAdded	0
-229	1048585	17	3	2024-07-10 05:31:47	268435459	submission.event.participantAdded	0
-230	515	19	3	2024-07-10 05:31:52	1342177281	submission.event.fileUploaded	0
-231	1048585	17	3	2024-07-10 05:31:52	1342177288	submission.event.fileRevised	0
-232	515	19	3	2024-07-10 05:31:52	1342177296	submission.event.fileEdited	0
-233	1048585	17	3	2024-07-10 05:31:52	1342177296	submission.event.fileEdited	0
-234	1048585	17	3	2024-07-10 05:31:58	268435458	submission.event.general.metadataUpdated	0
-235	1048585	17	3	2024-07-10 05:31:59	268435462	publication.event.scheduled	0
-236	1048585	17	3	2024-07-10 05:32:01	268435462	publication.event.published	0
-237	1048585	17	3	2024-07-10 05:32:07	268435463	publication.event.unpublished	0
-238	1048585	17	3	2024-07-10 05:32:07	268435462	publication.event.scheduled	0
-239	1048585	17	3	2024-07-10 05:32:12	268435462	publication.event.published	0
-240	1048585	17	3	2024-07-10 05:32:17	268435463	publication.event.unpublished	0
-241	1048585	17	3	2024-07-10 05:32:17	268435458	submission.event.general.metadataUpdated	0
-242	1048585	17	3	2024-07-10 05:32:26	268435458	submission.event.general.metadataUpdated	0
-243	1048585	17	3	2024-07-10 05:32:27	268435462	publication.event.published	0
-244	1048585	18	34	2024-07-10 05:32:35	268435458	submission.event.general.metadataUpdated	0
-245	515	20	34	2024-07-10 05:32:36	1342177281	submission.event.fileUploaded	0
-246	1048585	18	34	2024-07-10 05:32:36	1342177288	submission.event.fileRevised	0
-247	515	20	34	2024-07-10 05:32:36	1342177296	submission.event.fileEdited	0
-248	1048585	18	34	2024-07-10 05:32:36	1342177296	submission.event.fileEdited	0
-249	1048585	18	34	2024-07-10 05:32:38	268435458	submission.event.general.metadataUpdated	0
-250	1048585	18	34	2024-07-10 05:32:38	268435457	submission.event.submissionSubmitted	0
-251	1048585	18	3	2024-07-10 05:32:43	805306371	log.editor.decision	0
-252	1048585	19	35	2024-07-10 05:32:48	268435458	submission.event.general.metadataUpdated	0
-253	515	21	35	2024-07-10 05:32:49	1342177281	submission.event.fileUploaded	0
-254	1048585	19	35	2024-07-10 05:32:49	1342177288	submission.event.fileRevised	0
-255	515	21	35	2024-07-10 05:32:49	1342177296	submission.event.fileEdited	0
-256	1048585	19	35	2024-07-10 05:32:49	1342177296	submission.event.fileEdited	0
-257	1048585	19	35	2024-07-10 05:32:50	268435458	submission.event.general.metadataUpdated	0
-258	1048585	19	35	2024-07-10 05:32:51	268435457	submission.event.submissionSubmitted	0
-259	1048585	19	3	2024-07-10 05:32:56	805306371	log.editor.decision	0
-260	1048585	19	3	2024-07-10 05:33:00	1073741825	log.review.reviewerAssigned	0
-261	1048585	19	3	2024-07-10 05:33:03	1073741825	log.review.reviewerAssigned	0
-262	1048585	19	3	2024-07-10 05:33:05	805306371	log.editor.decision	0
-263	1048585	19	3	2024-07-10 05:33:08	268435459	submission.event.participantAdded	0
+1	1048585	1	17	2024-07-11 05:18:26	268435458	submission.event.general.metadataUpdated	0
+2	515	1	17	2024-07-11 05:18:27	1342177281	submission.event.fileUploaded	0
+3	1048585	1	17	2024-07-11 05:18:27	1342177288	submission.event.fileRevised	0
+4	515	1	17	2024-07-11 05:18:27	1342177296	submission.event.fileEdited	0
+5	1048585	1	17	2024-07-11 05:18:27	1342177296	submission.event.fileEdited	0
+6	1048585	1	17	2024-07-11 05:18:28	268435458	submission.event.general.metadataUpdated	0
+7	1048585	1	17	2024-07-11 05:18:29	268435457	submission.event.submissionSubmitted	0
+8	1048585	1	3	2024-07-11 05:18:32	805306371	log.editor.decision	0
+9	1048585	1	3	2024-07-11 05:18:36	1073741825	log.review.reviewerAssigned	0
+10	1048585	1	3	2024-07-11 05:18:40	1073741825	log.review.reviewerAssigned	0
+11	1048585	1	3	2024-07-11 05:18:46	1073741825	log.review.reviewerAssigned	0
+12	1048585	1	3	2024-07-11 05:18:47	805306371	log.editor.decision	0
+13	1048585	1	3	2024-07-11 05:18:50	268435459	submission.event.participantAdded	0
+14	1048585	1	3	2024-07-11 05:18:52	805306371	log.editor.decision	0
+15	1048585	1	3	2024-07-11 05:18:55	268435459	submission.event.participantAdded	0
+16	1048585	1	3	2024-07-11 05:18:58	268435459	submission.event.participantAdded	0
+17	1048585	1	3	2024-07-11 05:19:02	268435458	submission.event.general.metadataUpdated	0
+18	1048585	1	3	2024-07-11 05:19:04	268435458	submission.event.general.metadataUpdated	0
+19	1048585	1	3	2024-07-11 05:19:05	268435458	submission.event.general.metadataUpdated	0
+20	1048585	1	3	2024-07-11 05:19:07	268435458	submission.event.general.metadataUpdated	0
+21	1048585	1	3	2024-07-11 05:19:11	268435458	submission.event.general.metadataUpdated	0
+22	515	2	3	2024-07-11 05:19:15	1342177281	submission.event.fileUploaded	0
+23	1048585	1	3	2024-07-11 05:19:15	1342177288	submission.event.fileRevised	0
+24	515	2	3	2024-07-11 05:19:15	1342177296	submission.event.fileEdited	0
+25	1048585	1	3	2024-07-11 05:19:15	1342177296	submission.event.fileEdited	0
+26	1048585	1	3	2024-07-11 05:19:21	268435459	submission.event.participantAdded	0
+27	1048585	1	17	2024-07-11 05:19:25	268435458	submission.event.general.metadataUpdated	0
+28	1048585	1	3	2024-07-11 05:19:28	268435458	submission.event.general.metadataUpdated	0
+29	1048585	1	3	2024-07-11 05:19:29	268435462	publication.event.published	0
+30	1048585	1	3	2024-07-11 05:19:34	268435463	publication.event.unpublished	0
+31	1048585	1	3	2024-07-11 05:19:37	268435462	publication.event.published	0
+32	1048585	1	3	2024-07-11 05:19:39	268435458	submission.event.general.metadataUpdated	0
+33	1048585	1	3	2024-07-11 05:19:39	268435464	publication.event.versionCreated	0
+34	1048585	1	3	2024-07-11 05:19:49	268435458	submission.event.general.metadataUpdated	0
+35	1048585	1	3	2024-07-11 05:19:53	268435458	submission.event.general.metadataUpdated	0
+36	1048585	1	3	2024-07-11 05:20:01	268435458	submission.event.general.metadataUpdated	0
+37	1048585	1	3	2024-07-11 05:20:02	268435462	publication.event.versionPublished	0
+38	1048585	1	3	2024-07-11 05:20:09	268435463	publication.event.versionUnpublished	0
+39	1048585	1	3	2024-07-11 05:20:13	268435459	submission.event.participantAdded	0
+40	1048585	1	3	2024-07-11 05:20:18	268435459	submission.event.participantAdded	0
+41	1048585	2	18	2024-07-11 05:20:26	268435458	submission.event.general.metadataUpdated	0
+42	515	3	18	2024-07-11 05:20:27	1342177281	submission.event.fileUploaded	0
+43	1048585	2	18	2024-07-11 05:20:27	1342177288	submission.event.fileRevised	0
+44	515	3	18	2024-07-11 05:20:27	1342177296	submission.event.fileEdited	0
+45	1048585	2	18	2024-07-11 05:20:27	1342177296	submission.event.fileEdited	0
+46	1048585	2	18	2024-07-11 05:20:29	268435458	submission.event.general.metadataUpdated	0
+47	1048585	2	18	2024-07-11 05:20:29	268435457	submission.event.submissionSubmitted	0
+48	1048585	2	3	2024-07-11 05:20:32	805306371	log.editor.decision	0
+49	1048585	2	3	2024-07-11 05:20:35	268435459	submission.event.participantAdded	0
+50	1048585	2	3	2024-07-11 05:20:40	268435458	submission.event.general.metadataUpdated	0
+51	1048585	2	6	2024-07-11 05:20:43	805306372	log.editor.recommendation	0
+52	1048585	3	19	2024-07-11 05:20:52	268435458	submission.event.general.metadataUpdated	0
+53	515	4	19	2024-07-11 05:20:52	1342177281	submission.event.fileUploaded	0
+54	1048585	3	19	2024-07-11 05:20:52	1342177288	submission.event.fileRevised	0
+55	515	4	19	2024-07-11 05:20:53	1342177296	submission.event.fileEdited	0
+56	1048585	3	19	2024-07-11 05:20:53	1342177296	submission.event.fileEdited	0
+57	1048585	3	19	2024-07-11 05:20:54	268435458	submission.event.general.metadataUpdated	0
+58	1048585	3	19	2024-07-11 05:20:55	268435457	submission.event.submissionSubmitted	0
+59	1048585	3	3	2024-07-11 05:20:58	805306371	log.editor.decision	0
+60	1048585	3	3	2024-07-11 05:21:02	1073741825	log.review.reviewerAssigned	0
+61	1048585	3	3	2024-07-11 05:21:08	1073741825	log.review.reviewerAssigned	0
+62	1048585	3	3	2024-07-11 05:21:09	805306371	log.editor.decision	0
+63	1048585	3	3	2024-07-11 05:21:12	268435459	submission.event.participantAdded	0
+64	1048585	4	20	2024-07-11 05:21:19	268435458	submission.event.general.metadataUpdated	0
+65	515	5	20	2024-07-11 05:21:19	1342177281	submission.event.fileUploaded	0
+66	1048585	4	20	2024-07-11 05:21:19	1342177288	submission.event.fileRevised	0
+67	515	5	20	2024-07-11 05:21:19	1342177296	submission.event.fileEdited	0
+68	1048585	4	20	2024-07-11 05:21:19	1342177296	submission.event.fileEdited	0
+69	1048585	4	20	2024-07-11 05:21:23	268435458	submission.event.general.metadataUpdated	0
+70	1048585	4	20	2024-07-11 05:21:23	268435458	submission.event.general.metadataUpdated	0
+71	1048585	4	20	2024-07-11 05:21:24	268435457	submission.event.submissionSubmitted	0
+72	1048585	5	21	2024-07-11 05:21:30	268435458	submission.event.general.metadataUpdated	0
+73	515	6	21	2024-07-11 05:21:31	1342177281	submission.event.fileUploaded	0
+74	1048585	5	21	2024-07-11 05:21:31	1342177288	submission.event.fileRevised	0
+75	515	6	21	2024-07-11 05:21:31	1342177296	submission.event.fileEdited	0
+76	1048585	5	21	2024-07-11 05:21:31	1342177296	submission.event.fileEdited	0
+77	1048585	5	21	2024-07-11 05:21:32	268435458	submission.event.general.metadataUpdated	0
+78	1048585	5	21	2024-07-11 05:21:33	268435457	submission.event.submissionSubmitted	0
+79	1048585	5	3	2024-07-11 05:21:36	805306371	log.editor.decision	0
+80	1048585	5	3	2024-07-11 05:21:40	1073741825	log.review.reviewerAssigned	0
+81	1048585	5	3	2024-07-11 05:21:46	1073741825	log.review.reviewerAssigned	0
+82	1048585	5	3	2024-07-11 05:21:47	805306371	log.editor.decision	0
+83	1048585	5	3	2024-07-11 05:21:50	268435459	submission.event.participantAdded	0
+84	1048585	5	3	2024-07-11 05:21:52	805306371	log.editor.decision	0
+85	1048585	5	3	2024-07-11 05:21:55	268435459	submission.event.participantAdded	0
+86	1048585	5	3	2024-07-11 05:21:57	268435459	submission.event.participantAdded	0
+87	1048585	6	22	2024-07-11 05:22:10	268435458	submission.event.general.metadataUpdated	0
+88	515	7	22	2024-07-11 05:22:10	1342177281	submission.event.fileUploaded	0
+89	1048585	6	22	2024-07-11 05:22:10	1342177288	submission.event.fileRevised	0
+90	515	7	22	2024-07-11 05:22:10	1342177296	submission.event.fileEdited	0
+91	1048585	6	22	2024-07-11 05:22:10	1342177296	submission.event.fileEdited	0
+92	1048585	6	22	2024-07-11 05:22:12	268435458	submission.event.general.metadataUpdated	0
+93	1048585	6	22	2024-07-11 05:22:13	268435457	submission.event.submissionSubmitted	0
+94	1048585	6	3	2024-07-11 05:22:16	805306371	log.editor.decision	0
+95	1048585	6	3	2024-07-11 05:22:20	1073741825	log.review.reviewerAssigned	0
+96	1048585	6	3	2024-07-11 05:22:26	1073741825	log.review.reviewerAssigned	0
+97	1048585	6	3	2024-07-11 05:22:27	805306371	log.editor.decision	0
+98	1048585	6	3	2024-07-11 05:22:30	268435459	submission.event.participantAdded	0
+99	1048585	6	3	2024-07-11 05:22:32	805306371	log.editor.decision	0
+100	1048585	6	3	2024-07-11 05:22:35	268435459	submission.event.participantAdded	0
+101	1048585	7	23	2024-07-11 05:22:42	268435458	submission.event.general.metadataUpdated	0
+102	515	8	23	2024-07-11 05:22:43	1342177281	submission.event.fileUploaded	0
+103	1048585	7	23	2024-07-11 05:22:43	1342177288	submission.event.fileRevised	0
+104	515	8	23	2024-07-11 05:22:43	1342177296	submission.event.fileEdited	0
+105	1048585	7	23	2024-07-11 05:22:43	1342177296	submission.event.fileEdited	0
+106	1048585	7	23	2024-07-11 05:22:44	268435458	submission.event.general.metadataUpdated	0
+107	1048585	7	23	2024-07-11 05:22:45	268435457	submission.event.submissionSubmitted	0
+108	1048585	7	3	2024-07-11 05:22:48	805306371	log.editor.decision	0
+109	1048585	7	3	2024-07-11 05:22:52	1073741825	log.review.reviewerAssigned	0
+110	1048585	7	3	2024-07-11 05:22:56	1073741825	log.review.reviewerAssigned	0
+111	1048585	7	3	2024-07-11 05:23:02	1073741825	log.review.reviewerAssigned	0
+112	1048585	7	8	2024-07-11 05:23:04	1073741830	log.review.reviewAccepted	0
+113	1048585	7	8	2024-07-11 05:23:07	1073741848	log.review.reviewReady	0
+114	1048585	8	24	2024-07-11 05:23:13	268435458	submission.event.general.metadataUpdated	0
+115	515	9	24	2024-07-11 05:23:14	1342177281	submission.event.fileUploaded	0
+116	1048585	8	24	2024-07-11 05:23:14	1342177288	submission.event.fileRevised	0
+117	515	9	24	2024-07-11 05:23:14	1342177296	submission.event.fileEdited	0
+118	1048585	8	24	2024-07-11 05:23:14	1342177296	submission.event.fileEdited	0
+119	1048585	8	24	2024-07-11 05:23:17	268435458	submission.event.general.metadataUpdated	0
+120	1048585	8	24	2024-07-11 05:23:18	268435458	submission.event.general.metadataUpdated	0
+121	1048585	8	24	2024-07-11 05:23:18	268435457	submission.event.submissionSubmitted	0
+122	1048585	9	25	2024-07-11 05:23:23	268435458	submission.event.general.metadataUpdated	0
+123	515	10	25	2024-07-11 05:23:24	1342177281	submission.event.fileUploaded	0
+124	1048585	9	25	2024-07-11 05:23:24	1342177288	submission.event.fileRevised	0
+125	515	10	25	2024-07-11 05:23:24	1342177296	submission.event.fileEdited	0
+126	1048585	9	25	2024-07-11 05:23:24	1342177296	submission.event.fileEdited	0
+127	1048585	9	25	2024-07-11 05:23:26	268435458	submission.event.general.metadataUpdated	0
+128	1048585	9	25	2024-07-11 05:23:26	268435457	submission.event.submissionSubmitted	0
+129	1048585	9	3	2024-07-11 05:23:30	805306371	log.editor.decision	0
+130	1048585	9	3	2024-07-11 05:23:34	1073741825	log.review.reviewerAssigned	0
+131	1048585	9	3	2024-07-11 05:23:40	1073741825	log.review.reviewerAssigned	0
+132	1048585	9	3	2024-07-11 05:23:41	805306371	log.editor.decision	0
+133	1048585	9	3	2024-07-11 05:23:44	268435459	submission.event.participantAdded	0
+134	1048585	9	3	2024-07-11 05:23:45	805306371	log.editor.decision	0
+135	1048585	9	3	2024-07-11 05:23:49	268435459	submission.event.participantAdded	0
+136	1048585	9	3	2024-07-11 05:23:51	268435459	submission.event.participantAdded	0
+137	1048585	10	26	2024-07-11 05:23:57	268435458	submission.event.general.metadataUpdated	0
+138	515	11	26	2024-07-11 05:23:58	1342177281	submission.event.fileUploaded	0
+139	1048585	10	26	2024-07-11 05:23:58	1342177288	submission.event.fileRevised	0
+140	515	11	26	2024-07-11 05:23:58	1342177296	submission.event.fileEdited	0
+141	1048585	10	26	2024-07-11 05:23:58	1342177296	submission.event.fileEdited	0
+142	1048585	10	26	2024-07-11 05:24:00	268435458	submission.event.general.metadataUpdated	0
+143	1048585	10	26	2024-07-11 05:24:00	268435457	submission.event.submissionSubmitted	0
+144	1048585	10	3	2024-07-11 05:24:04	805306371	log.editor.decision	0
+145	1048585	10	3	2024-07-11 05:24:08	1073741825	log.review.reviewerAssigned	0
+146	1048585	10	3	2024-07-11 05:24:14	1073741825	log.review.reviewerAssigned	0
+147	1048585	10	9	2024-07-11 05:24:17	1073741830	log.review.reviewAccepted	0
+148	1048585	10	9	2024-07-11 05:24:20	1073741848	log.review.reviewReady	0
+149	1048585	10	10	2024-07-11 05:24:22	1073741830	log.review.reviewAccepted	0
+150	1048585	10	10	2024-07-11 05:24:26	1073741848	log.review.reviewReady	0
+151	1048585	11	27	2024-07-11 05:24:33	268435458	submission.event.general.metadataUpdated	0
+152	515	12	27	2024-07-11 05:24:34	1342177281	submission.event.fileUploaded	0
+153	1048585	11	27	2024-07-11 05:24:34	1342177288	submission.event.fileRevised	0
+154	515	12	27	2024-07-11 05:24:34	1342177296	submission.event.fileEdited	0
+155	1048585	11	27	2024-07-11 05:24:34	1342177296	submission.event.fileEdited	0
+156	1048585	11	27	2024-07-11 05:24:37	268435458	submission.event.general.metadataUpdated	0
+157	1048585	11	27	2024-07-11 05:24:38	268435458	submission.event.general.metadataUpdated	0
+158	1048585	11	27	2024-07-11 05:24:38	268435457	submission.event.submissionSubmitted	0
+159	1048585	12	28	2024-07-11 05:24:44	268435458	submission.event.general.metadataUpdated	0
+160	515	13	28	2024-07-11 05:24:45	1342177281	submission.event.fileUploaded	0
+161	1048585	12	28	2024-07-11 05:24:45	1342177288	submission.event.fileRevised	0
+162	515	13	28	2024-07-11 05:24:45	1342177296	submission.event.fileEdited	0
+163	1048585	12	28	2024-07-11 05:24:45	1342177296	submission.event.fileEdited	0
+164	1048585	12	28	2024-07-11 05:24:46	268435458	submission.event.general.metadataUpdated	0
+165	1048585	12	28	2024-07-11 05:24:47	268435457	submission.event.submissionSubmitted	0
+166	1048585	12	3	2024-07-11 05:24:51	805306371	log.editor.decision	0
+167	1048585	12	3	2024-07-11 05:24:55	1073741825	log.review.reviewerAssigned	0
+168	1048585	12	3	2024-07-11 05:24:59	1073741825	log.review.reviewerAssigned	0
+169	1048585	13	29	2024-07-11 05:25:09	268435458	submission.event.general.metadataUpdated	0
+170	515	14	29	2024-07-11 05:25:10	1342177281	submission.event.fileUploaded	0
+171	1048585	13	29	2024-07-11 05:25:10	1342177288	submission.event.fileRevised	0
+172	515	14	29	2024-07-11 05:25:10	1342177296	submission.event.fileEdited	0
+173	1048585	13	29	2024-07-11 05:25:10	1342177296	submission.event.fileEdited	0
+174	1048585	13	29	2024-07-11 05:25:12	268435458	submission.event.general.metadataUpdated	0
+175	1048585	13	29	2024-07-11 05:25:13	268435457	submission.event.submissionSubmitted	0
+176	1048585	13	3	2024-07-11 05:25:17	805306371	log.editor.decision	0
+177	1048585	13	3	2024-07-11 05:25:21	1073741825	log.review.reviewerAssigned	0
+178	1048585	13	3	2024-07-11 05:25:25	1073741825	log.review.reviewerAssigned	0
+179	1048585	13	3	2024-07-11 05:25:31	1073741825	log.review.reviewerAssigned	0
+180	1048585	13	7	2024-07-11 05:25:33	1073741830	log.review.reviewAccepted	0
+181	1048585	13	7	2024-07-11 05:25:37	1073741848	log.review.reviewReady	0
+182	1048585	13	9	2024-07-11 05:25:39	1073741830	log.review.reviewAccepted	0
+183	1048585	13	9	2024-07-11 05:25:43	1073741848	log.review.reviewReady	0
+184	1048585	13	10	2024-07-11 05:25:46	1073741830	log.review.reviewAccepted	0
+185	1048585	13	10	2024-07-11 05:25:49	1073741848	log.review.reviewReady	0
+186	1048585	13	3	2024-07-11 05:25:56	805306371	log.editor.decision	0
+187	1048585	14	30	2024-07-11 05:26:01	268435458	submission.event.general.metadataUpdated	0
+188	515	15	30	2024-07-11 05:26:02	1342177281	submission.event.fileUploaded	0
+189	1048585	14	30	2024-07-11 05:26:02	1342177288	submission.event.fileRevised	0
+190	515	15	30	2024-07-11 05:26:02	1342177296	submission.event.fileEdited	0
+191	1048585	14	30	2024-07-11 05:26:02	1342177296	submission.event.fileEdited	0
+192	1048585	14	30	2024-07-11 05:26:04	268435458	submission.event.general.metadataUpdated	0
+193	1048585	14	30	2024-07-11 05:26:05	268435457	submission.event.submissionSubmitted	0
+194	1048585	15	31	2024-07-11 05:26:10	268435458	submission.event.general.metadataUpdated	0
+195	515	16	31	2024-07-11 05:26:10	1342177281	submission.event.fileUploaded	0
+196	1048585	15	31	2024-07-11 05:26:10	1342177288	submission.event.fileRevised	0
+197	515	16	31	2024-07-11 05:26:11	1342177296	submission.event.fileEdited	0
+198	1048585	15	31	2024-07-11 05:26:11	1342177296	submission.event.fileEdited	0
+199	1048585	15	31	2024-07-11 05:26:12	268435458	submission.event.general.metadataUpdated	0
+200	1048585	15	31	2024-07-11 05:26:12	268435457	submission.event.submissionSubmitted	0
+201	1048585	15	3	2024-07-11 05:26:17	805306371	log.editor.decision	0
+202	1048585	15	3	2024-07-11 05:26:21	1073741825	log.review.reviewerAssigned	0
+203	1048585	15	3	2024-07-11 05:26:25	1073741825	log.review.reviewerAssigned	0
+204	1048585	15	3	2024-07-11 05:26:26	805306371	log.editor.decision	0
+205	1048585	15	3	2024-07-11 05:26:29	268435459	submission.event.participantAdded	0
+206	1048585	15	3	2024-07-11 05:26:31	805306371	log.editor.decision	0
+207	1048585	15	3	2024-07-11 05:26:34	268435459	submission.event.participantAdded	0
+208	1048585	16	32	2024-07-11 05:26:40	268435458	submission.event.general.metadataUpdated	0
+209	515	17	32	2024-07-11 05:26:41	1342177281	submission.event.fileUploaded	0
+210	1048585	16	32	2024-07-11 05:26:41	1342177288	submission.event.fileRevised	0
+211	515	17	32	2024-07-11 05:26:41	1342177296	submission.event.fileEdited	0
+212	1048585	16	32	2024-07-11 05:26:41	1342177296	submission.event.fileEdited	0
+213	1048585	16	32	2024-07-11 05:26:43	268435458	submission.event.general.metadataUpdated	0
+214	1048585	16	32	2024-07-11 05:26:44	268435457	submission.event.submissionSubmitted	0
+215	1048585	17	33	2024-07-11 05:26:49	268435458	submission.event.general.metadataUpdated	0
+216	515	18	33	2024-07-11 05:26:50	1342177281	submission.event.fileUploaded	0
+217	1048585	17	33	2024-07-11 05:26:50	1342177288	submission.event.fileRevised	0
+218	515	18	33	2024-07-11 05:26:50	1342177296	submission.event.fileEdited	0
+219	1048585	17	33	2024-07-11 05:26:50	1342177296	submission.event.fileEdited	0
+220	1048585	17	33	2024-07-11 05:26:52	268435458	submission.event.general.metadataUpdated	0
+221	1048585	17	33	2024-07-11 05:26:52	268435457	submission.event.submissionSubmitted	0
+222	1048585	17	3	2024-07-11 05:26:58	805306371	log.editor.decision	0
+223	1048585	17	3	2024-07-11 05:27:02	1073741825	log.review.reviewerAssigned	0
+224	1048585	17	3	2024-07-11 05:27:05	1073741825	log.review.reviewerAssigned	0
+225	1048585	17	3	2024-07-11 05:27:07	805306371	log.editor.decision	0
+226	1048585	17	3	2024-07-11 05:27:10	268435459	submission.event.participantAdded	0
+227	1048585	17	3	2024-07-11 05:27:12	805306371	log.editor.decision	0
+228	1048585	17	3	2024-07-11 05:27:15	268435459	submission.event.participantAdded	0
+229	1048585	17	3	2024-07-11 05:27:17	268435459	submission.event.participantAdded	0
+230	515	19	3	2024-07-11 05:27:22	1342177281	submission.event.fileUploaded	0
+231	1048585	17	3	2024-07-11 05:27:22	1342177288	submission.event.fileRevised	0
+232	515	19	3	2024-07-11 05:27:22	1342177296	submission.event.fileEdited	0
+233	1048585	17	3	2024-07-11 05:27:22	1342177296	submission.event.fileEdited	0
+234	1048585	17	3	2024-07-11 05:27:28	268435458	submission.event.general.metadataUpdated	0
+235	1048585	17	3	2024-07-11 05:27:29	268435462	publication.event.scheduled	0
+236	1048585	17	3	2024-07-11 05:27:31	268435462	publication.event.published	0
+237	1048585	17	3	2024-07-11 05:27:37	268435463	publication.event.unpublished	0
+238	1048585	17	3	2024-07-11 05:27:37	268435462	publication.event.scheduled	0
+239	1048585	17	3	2024-07-11 05:27:43	268435462	publication.event.published	0
+240	1048585	17	3	2024-07-11 05:27:49	268435463	publication.event.unpublished	0
+241	1048585	17	3	2024-07-11 05:27:49	268435458	submission.event.general.metadataUpdated	0
+242	1048585	17	3	2024-07-11 05:27:58	268435458	submission.event.general.metadataUpdated	0
+243	1048585	17	3	2024-07-11 05:27:59	268435462	publication.event.published	0
+244	1048585	18	34	2024-07-11 05:28:07	268435458	submission.event.general.metadataUpdated	0
+245	515	20	34	2024-07-11 05:28:08	1342177281	submission.event.fileUploaded	0
+246	1048585	18	34	2024-07-11 05:28:08	1342177288	submission.event.fileRevised	0
+247	515	20	34	2024-07-11 05:28:08	1342177296	submission.event.fileEdited	0
+248	1048585	18	34	2024-07-11 05:28:08	1342177296	submission.event.fileEdited	0
+249	1048585	18	34	2024-07-11 05:28:10	268435458	submission.event.general.metadataUpdated	0
+250	1048585	18	34	2024-07-11 05:28:10	268435457	submission.event.submissionSubmitted	0
+251	1048585	18	3	2024-07-11 05:28:15	805306371	log.editor.decision	0
+252	1048585	19	35	2024-07-11 05:28:20	268435458	submission.event.general.metadataUpdated	0
+253	515	21	35	2024-07-11 05:28:21	1342177281	submission.event.fileUploaded	0
+254	1048585	19	35	2024-07-11 05:28:21	1342177288	submission.event.fileRevised	0
+255	515	21	35	2024-07-11 05:28:21	1342177296	submission.event.fileEdited	0
+256	1048585	19	35	2024-07-11 05:28:21	1342177296	submission.event.fileEdited	0
+257	1048585	19	35	2024-07-11 05:28:23	268435458	submission.event.general.metadataUpdated	0
+258	1048585	19	35	2024-07-11 05:28:23	268435457	submission.event.submissionSubmitted	0
+259	1048585	19	3	2024-07-11 05:28:28	805306371	log.editor.decision	0
+260	1048585	19	3	2024-07-11 05:28:32	1073741825	log.review.reviewerAssigned	0
+261	1048585	19	3	2024-07-11 05:28:36	1073741825	log.review.reviewerAssigned	0
+262	1048585	19	3	2024-07-11 05:28:37	805306371	log.editor.decision	0
+263	1048585	19	3	2024-07-11 05:28:41	268435459	submission.event.participantAdded	0
 \.
 
 
@@ -6275,27 +6275,27 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	journals/1/articles/1/668e1aba6126e.pdf	application/pdf
-2	journals/1/articles/1/668e1ae87371a.pdf	application/pdf
-3	journals/1/articles/2/668e1b300d6ed.pdf	application/pdf
-4	journals/1/articles/3/668e1b49872c2.pdf	application/pdf
-5	journals/1/articles/4/668e1b651fb0c.pdf	application/pdf
-6	journals/1/articles/5/668e1b704f140.pdf	application/pdf
-7	journals/1/articles/6/668e1b915fe10.pdf	application/pdf
-8	journals/1/articles/7/668e1bb101a37.pdf	application/pdf
-9	journals/1/articles/8/668e1bcfcdccc.pdf	application/pdf
-10	journals/1/articles/9/668e1bda80092.pdf	application/pdf
-11	journals/1/articles/10/668e1bfc7a1f2.pdf	application/pdf
-12	journals/1/articles/11/668e1c1e9011c.pdf	application/pdf
-13	journals/1/articles/12/668e1c2926d25.pdf	application/pdf
-14	journals/1/articles/13/668e1c471bf04.pdf	application/pdf
-15	journals/1/articles/14/668e1c7a968b4.pdf	application/pdf
-16	journals/1/articles/15/668e1c82ed23d.pdf	application/pdf
-17	journals/1/articles/16/668e1ca100584.pdf	application/pdf
-18	journals/1/articles/17/668e1ca96ed4f.pdf	application/pdf
-19	journals/1/articles/17/668e1cc84f5e5.pdf	application/pdf
-20	journals/1/articles/18/668e1cf4a4e89.pdf	application/pdf
-21	journals/1/articles/19/668e1d015a9f8.pdf	application/pdf
+1	journals/1/articles/1/668f6b232c86a.pdf	application/pdf
+2	journals/1/articles/1/668f6b533ccc9.pdf	application/pdf
+3	journals/1/articles/2/668f6b9b8b29c.pdf	application/pdf
+4	journals/1/articles/3/668f6bb4da412.pdf	application/pdf
+5	journals/1/articles/4/668f6bcfbf4b8.pdf	application/pdf
+6	journals/1/articles/5/668f6bdaeec5a.pdf	application/pdf
+7	journals/1/articles/6/668f6c02b43f5.pdf	application/pdf
+8	journals/1/articles/7/668f6c23548fe.pdf	application/pdf
+9	journals/1/articles/8/668f6c4251d85.pdf	application/pdf
+10	journals/1/articles/9/668f6c4cb07eb.pdf	application/pdf
+11	journals/1/articles/10/668f6c6e5b800.pdf	application/pdf
+12	journals/1/articles/11/668f6c928b5ec.pdf	application/pdf
+13	journals/1/articles/12/668f6c9d0bc02.pdf	application/pdf
+14	journals/1/articles/13/668f6cb69aa0b.pdf	application/pdf
+15	journals/1/articles/14/668f6cea8a3b0.pdf	application/pdf
+16	journals/1/articles/15/668f6cf2e2ed1.pdf	application/pdf
+17	journals/1/articles/16/668f6d11859de.pdf	application/pdf
+18	journals/1/articles/17/668f6d1a6fa16.pdf	application/pdf
+19	journals/1/articles/17/668f6d3a2fa7f.pdf	application/pdf
+20	journals/1/articles/18/668f6d689f50c.pdf	application/pdf
+21	journals/1/articles/19/668f6d759e9dc.pdf	application/pdf
 \.
 
 
@@ -6305,32 +6305,32 @@ COPY public.files (file_id, path, mimetype) FROM stdin;
 
 COPY public.filter_groups (filter_group_id, symbolic, display_name, description, input_type, output_type) FROM stdin;
 1	article=>dc11	plugins.metadata.dc11.articleAdapter.displayName	plugins.metadata.dc11.articleAdapter.description	class::classes.submission.Submission	metadata::plugins.metadata.dc11.schema.Dc11Schema(ARTICLE)
-2	article=>pubmed-xml	plugins.importexport.pubmed.displayName	plugins.importexport.pubmed.description	class::classes.submission.Submission[]	xml::dtd
-3	issue=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.issue.Issue[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
-4	article=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.submission.Submission[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
-5	article=>doaj-xml	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/doaj/doajArticles.xsd)
-6	article=>doaj-json	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission	primitive::string
-7	issue=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.issue.Issue	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-8	article=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.submission.Submission	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-9	galley=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.article.ArticleGalley	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
-10	article=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
-11	native-xml=>article	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
-12	issue=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.Issue[]	xml::schema(plugins/importexport/native/native.xsd)
-13	native-xml=>issue	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.Issue[]
-14	issuegalley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.IssueGalley[]	xml::schema(plugins/importexport/native/native.xsd)
-15	native-xml=>issuegalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.IssueGalley[]
-16	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.Author[]	xml::schema(plugins/importexport/native/native.xsd)
-17	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.Author[]
-18	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
-19	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
-20	article-galley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.ArticleGalley	xml::schema(plugins/importexport/native/native.xsd)
-21	native-xml=>ArticleGalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.ArticleGalley[]
-22	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
-23	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
-24	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-25	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
-26	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
-27	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
+2	article=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/native/native.xsd)
+3	native-xml=>article	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.submission.Submission[]
+4	issue=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.Issue[]	xml::schema(plugins/importexport/native/native.xsd)
+5	native-xml=>issue	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.Issue[]
+6	issuegalley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.issue.IssueGalley[]	xml::schema(plugins/importexport/native/native.xsd)
+7	native-xml=>issuegalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.issue.IssueGalley[]
+8	author=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.Author[]	xml::schema(plugins/importexport/native/native.xsd)
+9	native-xml=>author	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.Author[]
+10	SubmissionFile=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::lib.pkp.classes.submission.SubmissionFile	xml::schema(plugins/importexport/native/native.xsd)
+11	native-xml=>SubmissionFile	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::lib.pkp.classes.submission.SubmissionFile
+12	article-galley=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.article.ArticleGalley	xml::schema(plugins/importexport/native/native.xsd)
+13	native-xml=>ArticleGalley	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.article.ArticleGalley[]
+14	publication=>native-xml	plugins.importexport.native.displayName	plugins.importexport.native.description	class::classes.publication.Publication	xml::schema(plugins/importexport/native/native.xsd)
+15	native-xml=>Publication	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(plugins/importexport/native/native.xsd)	class::classes.publication.Publication
+16	article=>pubmed-xml	plugins.importexport.pubmed.displayName	plugins.importexport.pubmed.description	class::classes.submission.Submission[]	xml::dtd
+17	issue=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.issue.Issue	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+18	article=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.submission.Submission	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+19	galley=>datacite-xml	plugins.importexport.datacite.displayName	plugins.importexport.datacite.description	class::classes.article.ArticleGalley	xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)
+20	article=>doaj-xml	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission[]	xml::schema(plugins/importexport/doaj/doajArticles.xsd)
+21	article=>doaj-json	plugins.importexport.doaj.displayName	plugins.importexport.doaj.description	class::classes.submission.Submission	primitive::string
+22	user=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.user.User[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+23	user-xml=>user	plugins.importexport.users.displayName	plugins.importexport.users.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::classes.users.User[]
+24	usergroup=>user-xml	plugins.importexport.users.displayName	plugins.importexport.users.description	class::lib.pkp.classes.security.UserGroup[]	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)
+25	user-xml=>usergroup	plugins.importexport.native.displayName	plugins.importexport.native.description	xml::schema(lib/pkp/plugins/importexport/users/pkp-users.xsd)	class::lib.pkp.classes.security.UserGroup[]
+26	issue=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.issue.Issue[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
+27	article=>crossref-xml	plugins.importexport.crossref.displayName	plugins.importexport.crossref.description	class::classes.submission.Submission[]	xml::schema(https://www.crossref.org/schemas/crossref4.3.6.xsd)
 \.
 
 
@@ -6348,32 +6348,32 @@ COPY public.filter_settings (filter_id, locale, setting_name, setting_value, set
 
 COPY public.filters (filter_id, filter_group_id, context_id, display_name, class_name, is_template, parent_filter_id, seq) FROM stdin;
 1	1	0	Extract metadata from a(n) Submission	plugins.metadata.dc11.filter.Dc11SchemaArticleAdapter	0	0	0
-2	2	0	ArticlePubMedXmlFilter	plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter	0	0	0
-3	3	0	Crossref XML issue export	plugins.importexport.crossref.filter.IssueCrossrefXmlFilter	0	0	0
-4	4	0	Crossref XML issue export	plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter	0	0	0
-5	5	0	DOAJ XML export	plugins.importexport.doaj.filter.DOAJXmlFilter	0	0	0
-6	6	0	DOAJ JSON export	plugins.importexport.doaj.filter.DOAJJsonFilter	0	0	0
-7	7	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-8	8	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-9	9	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
-10	10	0	Native XML submission export	plugins.importexport.native.filter.ArticleNativeXmlFilter	0	0	0
-11	11	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlArticleFilter	0	0	0
-12	12	0	Native XML issue export	plugins.importexport.native.filter.IssueNativeXmlFilter	0	0	0
-13	13	0	Native XML issue import	plugins.importexport.native.filter.NativeXmlIssueFilter	0	0	0
-14	14	0	Native XML issue galley export	plugins.importexport.native.filter.IssueGalleyNativeXmlFilter	0	0	0
-15	15	0	Native XML issue galley import	plugins.importexport.native.filter.NativeXmlIssueGalleyFilter	0	0	0
-16	16	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
-17	17	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
-18	19	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlArticleFileFilter	0	0	0
-19	18	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
-20	20	0	Native XML representation export	plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter	0	0	0
-21	21	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlArticleGalleyFilter	0	0	0
-22	22	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
-23	23	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
-24	24	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
-25	25	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
-26	26	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
-27	27	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
+2	2	0	Native XML submission export	plugins.importexport.native.filter.ArticleNativeXmlFilter	0	0	0
+3	3	0	Native XML submission import	plugins.importexport.native.filter.NativeXmlArticleFilter	0	0	0
+4	4	0	Native XML issue export	plugins.importexport.native.filter.IssueNativeXmlFilter	0	0	0
+5	5	0	Native XML issue import	plugins.importexport.native.filter.NativeXmlIssueFilter	0	0	0
+6	6	0	Native XML issue galley export	plugins.importexport.native.filter.IssueGalleyNativeXmlFilter	0	0	0
+7	7	0	Native XML issue galley import	plugins.importexport.native.filter.NativeXmlIssueGalleyFilter	0	0	0
+8	8	0	Native XML author export	plugins.importexport.native.filter.AuthorNativeXmlFilter	0	0	0
+9	9	0	Native XML author import	plugins.importexport.native.filter.NativeXmlAuthorFilter	0	0	0
+10	11	0	Native XML submission file import	plugins.importexport.native.filter.NativeXmlArticleFileFilter	0	0	0
+11	10	0	Native XML submission file export	lib.pkp.plugins.importexport.native.filter.SubmissionFileNativeXmlFilter	0	0	0
+12	12	0	Native XML representation export	plugins.importexport.native.filter.ArticleGalleyNativeXmlFilter	0	0	0
+13	13	0	Native XML representation import	plugins.importexport.native.filter.NativeXmlArticleGalleyFilter	0	0	0
+14	14	0	Native XML Publication export	plugins.importexport.native.filter.PublicationNativeXmlFilter	0	0	0
+15	15	0	Native XML publication import	plugins.importexport.native.filter.NativeXmlPublicationFilter	0	0	0
+16	16	0	ArticlePubMedXmlFilter	plugins.importexport.pubmed.filter.ArticlePubMedXmlFilter	0	0	0
+17	17	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+18	18	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+19	19	0	DataCite XML export	plugins.importexport.datacite.filter.DataciteXmlFilter	0	0	0
+20	20	0	DOAJ XML export	plugins.importexport.doaj.filter.DOAJXmlFilter	0	0	0
+21	21	0	DOAJ JSON export	plugins.importexport.doaj.filter.DOAJJsonFilter	0	0	0
+22	22	0	User XML user export	lib.pkp.plugins.importexport.users.filter.PKPUserUserXmlFilter	0	0	0
+23	23	0	User XML user import	lib.pkp.plugins.importexport.users.filter.UserXmlPKPUserFilter	0	0	0
+24	24	0	Native XML user group export	lib.pkp.plugins.importexport.users.filter.UserGroupNativeXmlFilter	0	0	0
+25	25	0	Native XML user group import	lib.pkp.plugins.importexport.users.filter.NativeXmlUserGroupFilter	0	0	0
+26	26	0	Crossref XML issue export	plugins.importexport.crossref.filter.IssueCrossrefXmlFilter	0	0	0
+27	27	0	Crossref XML issue export	plugins.importexport.crossref.filter.ArticleCrossrefXmlFilter	0	0	0
 \.
 
 
@@ -6490,8 +6490,8 @@ COPY public.issue_settings (issue_id, locale, setting_name, setting_value, setti
 --
 
 COPY public.issues (issue_id, journal_id, volume, number, year, published, current, date_published, date_notified, last_modified, access_status, open_access_date, show_volume, show_number, show_year, show_title, style_file_name, original_style_file_name, url_path) FROM stdin;
-2	1	2	1	2015	0	0	\N	\N	2024-07-10 05:32:29	1	\N	1	1	1	0	\N	\N	
-1	1	1	2	2014	1	1	2024-07-10 05:22:47	\N	2024-07-10 05:32:30	1	\N	1	1	1	0	\N	\N	
+2	1	2	1	2015	0	0	\N	\N	2024-07-11 05:28:01	1	\N	1	1	1	0	\N	\N	
+1	1	1	2	2014	1	1	2024-07-11 05:18:10	\N	2024-07-11 05:28:02	1	\N	1	1	1	0	\N	\N	
 \.
 
 
@@ -6734,7 +6734,7 @@ COPY public.navigation_menus (navigation_menu_id, context_id, area_name, title) 
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2024-07-10 05:25:19	2024-07-10 05:25:19	Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
+1	1048586	1	6	2024-07-11 05:20:43	2024-07-11 05:20:43	Recommendation	<p>Daniel Barnes, David Buskins, Stephanie Berardo:<br><br>The recommendation regarding the submission to Journal of Public Knowledge, "The influence of lactation on the quantity and quality of cashmere production" is: Accept Submission</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="http://localhost/index.php/publicknowledge">Journal of Public Knowledge</a>
 \.
 
 
@@ -6805,191 +6805,191 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-41	1	17	3	16777259	2024-07-10 05:24:16	\N	1048585	1
-170	1	3	2	16777217	2024-07-10 05:27:14	\N	1048585	7
-43	1	16	3	16777259	2024-07-10 05:24:16	\N	1048585	1
-276	1	3	2	16777217	2024-07-10 05:29:15	\N	1048585	12
-45	1	14	3	16777259	2024-07-10 05:24:16	\N	1048585	1
-172	1	5	2	16777217	2024-07-10 05:27:14	\N	1048585	7
-47	1	12	3	16777259	2024-07-10 05:24:17	\N	1048585	1
-413	1	3	2	16777217	2024-07-10 05:32:38	\N	1048585	18
-49	1	5	3	16777259	2024-07-10 05:24:17	\N	1048585	1
-174	1	4	2	16777217	2024-07-10 05:27:14	\N	1048585	7
-6	1	3	2	16777217	2024-07-10 05:23:08	\N	1048585	1
-51	1	4	3	16777259	2024-07-10 05:24:17	\N	1048585	1
-8	1	5	2	16777217	2024-07-10 05:23:08	\N	1048585	1
-278	1	5	2	16777217	2024-07-10 05:29:15	\N	1048585	12
-10	1	4	2	16777217	2024-07-10 05:23:08	\N	1048585	1
-53	1	3	3	16777259	2024-07-10 05:24:17	\N	1048585	1
-12	1	0	2	16777243	2024-07-10 05:23:08	\N	1048585	1
-13	1	0	2	16777245	2024-07-10 05:23:08	\N	1048585	1
-176	1	0	2	16777243	2024-07-10 05:27:15	\N	1048585	7
-177	1	0	2	16777245	2024-07-10 05:27:15	\N	1048585	7
-137	1	4	2	16777254	2024-07-10 05:26:29	\N	1048585	5
-125	1	10	3	16777227	2024-07-10 05:26:23	\N	517	7
-15	1	0	2	16777236	2024-07-10 05:23:11	2024-07-10 05:23:12	523	1
-17	1	7	3	16777227	2024-07-10 05:23:15	\N	517	1
-180	1	23	2	16777231	2024-07-10 05:27:18	\N	1048585	7
-86	1	0	2	16777236	2024-07-10 05:25:34	2024-07-10 05:25:35	523	3
-20	1	9	3	16777227	2024-07-10 05:23:18	\N	517	2
-179	1	0	2	16777236	2024-07-10 05:27:18	2024-07-10 05:27:19	523	6
-88	1	9	3	16777227	2024-07-10 05:25:38	\N	517	4
-23	1	10	3	16777227	2024-07-10 05:23:24	\N	517	3
-58	1	3	2	16777217	2024-07-10 05:25:06	\N	1048585	2
-60	1	5	2	16777217	2024-07-10 05:25:06	\N	1048585	2
-62	1	4	2	16777217	2024-07-10 05:25:06	\N	1048585	2
-64	1	0	2	16777243	2024-07-10 05:25:06	\N	1048585	2
-65	1	0	2	16777245	2024-07-10 05:25:06	\N	1048585	2
-111	1	3	2	16777217	2024-07-10 05:26:10	\N	1048585	5
-91	1	10	3	16777227	2024-07-10 05:25:44	\N	517	5
-33	1	17	2	16777235	2024-07-10 05:23:30	\N	1048585	1
-68	1	18	2	16777231	2024-07-10 05:25:09	\N	1048585	2
-67	1	0	2	16777236	2024-07-10 05:25:09	2024-07-10 05:25:10	523	2
-71	1	3	3	16777249	2024-07-10 05:25:19	\N	1048586	1
-73	1	4	3	16777249	2024-07-10 05:25:19	\N	1048586	1
-75	1	5	3	16777249	2024-07-10 05:25:20	\N	1048586	1
-113	1	5	2	16777217	2024-07-10 05:26:10	\N	1048585	5
-77	1	3	2	16777217	2024-07-10 05:25:31	\N	1048585	3
-79	1	5	2	16777217	2024-07-10 05:25:31	\N	1048585	3
-81	1	4	2	16777217	2024-07-10 05:25:31	\N	1048585	3
-83	1	0	2	16777243	2024-07-10 05:25:31	\N	1048585	3
-84	1	0	2	16777245	2024-07-10 05:25:31	\N	1048585	3
-95	1	19	2	16777230	2024-07-10 05:25:45	\N	1048585	3
-97	1	4	2	16777251	2024-07-10 05:25:45	\N	1048585	3
-98	1	5	2	16777251	2024-07-10 05:25:45	\N	1048585	3
-96	1	3	2	16777251	2024-07-10 05:25:45	2024-07-10 05:25:47	1048585	3
-115	1	4	2	16777217	2024-07-10 05:26:10	\N	1048585	5
-101	1	3	2	16777217	2024-07-10 05:26:01	\N	1048585	4
-103	1	5	2	16777217	2024-07-10 05:26:01	\N	1048585	4
-105	1	4	2	16777217	2024-07-10 05:26:01	\N	1048585	4
-107	1	0	2	16777243	2024-07-10 05:26:01	\N	1048585	4
-108	1	0	2	16777245	2024-07-10 05:26:01	\N	1048585	4
-117	1	0	2	16777243	2024-07-10 05:26:10	\N	1048585	5
-118	1	0	2	16777245	2024-07-10 05:26:10	\N	1048585	5
-138	1	5	2	16777254	2024-07-10 05:26:29	\N	1048585	5
-147	1	0	2	16777243	2024-07-10 05:26:43	\N	1048585	6
-120	1	0	2	16777236	2024-07-10 05:26:13	2024-07-10 05:26:14	523	4
-122	1	8	3	16777227	2024-07-10 05:26:17	\N	517	6
-136	1	3	2	16777254	2024-07-10 05:26:29	2024-07-10 05:26:30	1048585	5
-148	1	0	2	16777245	2024-07-10 05:26:43	\N	1048585	6
-135	1	21	2	16777235	2024-07-10 05:26:29	\N	1048585	5
-152	1	7	3	16777227	2024-07-10 05:26:51	\N	517	8
-141	1	3	2	16777217	2024-07-10 05:26:43	\N	1048585	6
-143	1	5	2	16777217	2024-07-10 05:26:43	\N	1048585	6
-145	1	4	2	16777217	2024-07-10 05:26:43	\N	1048585	6
-150	1	0	2	16777236	2024-07-10 05:26:46	2024-07-10 05:26:48	523	5
-155	1	10	3	16777227	2024-07-10 05:26:56	\N	517	9
-167	1	4	2	16777254	2024-07-10 05:27:02	\N	1048585	6
-165	1	22	2	16777235	2024-07-10 05:27:02	\N	1048585	6
-168	1	5	2	16777254	2024-07-10 05:27:02	\N	1048585	6
-166	1	3	2	16777254	2024-07-10 05:27:02	2024-07-10 05:27:03	1048585	6
-184	1	9	3	16777227	2024-07-10 05:27:25	\N	517	11
-280	1	4	2	16777217	2024-07-10 05:29:15	\N	1048585	12
-415	1	5	2	16777217	2024-07-10 05:32:38	\N	1048585	18
-282	1	0	2	16777243	2024-07-10 05:29:15	\N	1048585	12
-230	1	3	2	16777254	2024-07-10 05:28:15	2024-07-10 05:28:17	1048585	9
-187	1	10	3	16777227	2024-07-10 05:27:31	\N	517	12
-283	1	0	2	16777245	2024-07-10 05:29:15	\N	1048585	12
-417	1	4	2	16777217	2024-07-10 05:32:38	\N	1048585	18
-191	1	3	2	16777219	2024-07-10 05:27:37	\N	517	10
-193	1	4	2	16777219	2024-07-10 05:27:37	\N	517	10
-286	1	28	2	16777231	2024-07-10 05:29:19	\N	1048585	12
-195	1	5	2	16777219	2024-07-10 05:27:37	\N	517	10
-285	1	0	2	16777236	2024-07-10 05:29:19	2024-07-10 05:29:20	523	9
-287	1	7	3	16777227	2024-07-10 05:29:23	\N	517	17
-234	1	3	2	16777217	2024-07-10 05:28:30	\N	1048585	10
-236	1	5	2	16777217	2024-07-10 05:28:30	\N	1048585	10
-198	1	3	2	16777217	2024-07-10 05:27:48	\N	1048585	8
-302	1	0	2	16777236	2024-07-10 05:29:49	2024-07-10 05:29:51	523	10
-200	1	5	2	16777217	2024-07-10 05:27:48	\N	1048585	8
-202	1	4	2	16777217	2024-07-10 05:27:48	\N	1048585	8
-290	1	8	3	16777227	2024-07-10 05:29:27	\N	517	18
-204	1	0	2	16777243	2024-07-10 05:27:48	\N	1048585	8
-205	1	0	2	16777245	2024-07-10 05:27:48	\N	1048585	8
-238	1	4	2	16777217	2024-07-10 05:28:30	\N	1048585	10
-240	1	0	2	16777243	2024-07-10 05:28:30	\N	1048585	10
-241	1	0	2	16777245	2024-07-10 05:28:30	\N	1048585	10
-208	1	3	2	16777217	2024-07-10 05:27:56	\N	1048585	9
-293	1	3	2	16777217	2024-07-10 05:29:45	\N	1048585	13
-210	1	6	2	16777217	2024-07-10 05:27:56	\N	1048585	9
-212	1	0	2	16777243	2024-07-10 05:27:56	\N	1048585	9
-213	1	0	2	16777245	2024-07-10 05:27:56	\N	1048585	9
-295	1	5	2	16777217	2024-07-10 05:29:45	\N	1048585	13
-297	1	4	2	16777217	2024-07-10 05:29:45	\N	1048585	13
-266	1	3	2	16777217	2024-07-10 05:29:06	\N	1048585	11
-215	1	0	2	16777236	2024-07-10 05:27:59	2024-07-10 05:28:01	523	7
-217	1	7	3	16777227	2024-07-10 05:28:04	\N	517	13
-299	1	0	2	16777243	2024-07-10 05:29:45	\N	1048585	13
-300	1	0	2	16777245	2024-07-10 05:29:45	\N	1048585	13
-268	1	5	2	16777217	2024-07-10 05:29:06	\N	1048585	11
-220	1	10	3	16777227	2024-07-10 05:28:09	\N	517	14
-342	1	0	2	16777243	2024-07-10 05:30:37	\N	1048585	14
-314	1	3	2	16777219	2024-07-10 05:30:09	\N	517	19
-244	1	26	2	16777231	2024-07-10 05:28:34	\N	1048585	10
-316	1	5	2	16777219	2024-07-10 05:30:09	\N	517	19
-243	1	0	2	16777236	2024-07-10 05:28:34	2024-07-10 05:28:35	523	8
-318	1	4	2	16777219	2024-07-10 05:30:09	\N	517	19
-229	1	25	2	16777235	2024-07-10 05:28:15	\N	1048585	9
-231	1	6	2	16777254	2024-07-10 05:28:15	\N	1048585	9
-270	1	4	2	16777217	2024-07-10 05:29:06	\N	1048585	11
-343	1	0	2	16777245	2024-07-10 05:30:37	\N	1048585	14
-272	1	0	2	16777243	2024-07-10 05:29:06	\N	1048585	11
-273	1	0	2	16777245	2024-07-10 05:29:06	\N	1048585	11
-252	1	3	2	16777219	2024-07-10 05:28:49	\N	517	15
-328	1	3	2	16777219	2024-07-10 05:30:21	\N	517	21
-254	1	4	2	16777219	2024-07-10 05:28:49	\N	517	15
-256	1	5	2	16777219	2024-07-10 05:28:49	\N	517	15
-321	1	3	2	16777219	2024-07-10 05:30:15	\N	517	20
-323	1	5	2	16777219	2024-07-10 05:30:15	\N	517	20
-325	1	4	2	16777219	2024-07-10 05:30:15	\N	517	20
-259	1	3	2	16777219	2024-07-10 05:28:55	\N	517	16
-261	1	4	2	16777219	2024-07-10 05:28:55	\N	517	16
-330	1	5	2	16777219	2024-07-10 05:30:21	\N	517	21
-263	1	5	2	16777219	2024-07-10 05:28:55	\N	517	16
-332	1	4	2	16777219	2024-07-10 05:30:21	\N	517	21
-335	1	29	3	16777232	2024-07-10 05:30:27	\N	1048585	13
-351	1	0	2	16777243	2024-07-10 05:30:45	\N	1048585	15
-336	1	3	2	16777217	2024-07-10 05:30:36	\N	1048585	14
-338	1	5	2	16777217	2024-07-10 05:30:36	\N	1048585	14
-340	1	4	2	16777217	2024-07-10 05:30:36	\N	1048585	14
-352	1	0	2	16777245	2024-07-10 05:30:45	\N	1048585	15
-345	1	3	2	16777217	2024-07-10 05:30:44	\N	1048585	15
-347	1	5	2	16777217	2024-07-10 05:30:45	\N	1048585	15
-349	1	4	2	16777217	2024-07-10 05:30:45	\N	1048585	15
-354	1	0	2	16777236	2024-07-10 05:30:49	2024-07-10 05:30:50	523	11
-356	1	8	3	16777227	2024-07-10 05:30:53	\N	517	22
-359	1	9	3	16777227	2024-07-10 05:30:57	\N	517	23
-419	1	0	2	16777243	2024-07-10 05:32:38	\N	1048585	18
-420	1	0	2	16777245	2024-07-10 05:32:38	\N	1048585	18
-369	1	31	2	16777235	2024-07-10 05:31:03	\N	1048585	15
-371	1	5	2	16777254	2024-07-10 05:31:03	\N	1048585	15
-372	1	4	2	16777254	2024-07-10 05:31:03	\N	1048585	15
-370	1	3	2	16777254	2024-07-10 05:31:03	2024-07-10 05:31:04	1048585	15
-423	1	34	2	16777234	2024-07-10 05:32:43	\N	1048585	18
-374	1	3	2	16777217	2024-07-10 05:31:15	\N	1048585	16
-424	1	3	2	16777217	2024-07-10 05:32:51	\N	1048585	19
-376	1	5	2	16777217	2024-07-10 05:31:15	\N	1048585	16
-378	1	4	2	16777217	2024-07-10 05:31:15	\N	1048585	16
-426	1	6	2	16777217	2024-07-10 05:32:51	\N	1048585	19
-380	1	0	2	16777243	2024-07-10 05:31:15	\N	1048585	16
-381	1	0	2	16777245	2024-07-10 05:31:15	\N	1048585	16
-428	1	0	2	16777243	2024-07-10 05:32:51	\N	1048585	19
-429	1	0	2	16777245	2024-07-10 05:32:51	\N	1048585	19
-383	1	3	2	16777217	2024-07-10 05:31:23	\N	1048585	17
-385	1	5	2	16777217	2024-07-10 05:31:23	\N	1048585	17
-387	1	4	2	16777217	2024-07-10 05:31:23	\N	1048585	17
-389	1	0	2	16777243	2024-07-10 05:31:23	\N	1048585	17
-390	1	0	2	16777245	2024-07-10 05:31:23	\N	1048585	17
-431	1	0	2	16777236	2024-07-10 05:32:56	2024-07-10 05:32:57	523	13
-433	1	8	3	16777227	2024-07-10 05:33:00	\N	517	26
-392	1	0	2	16777236	2024-07-10 05:31:28	2024-07-10 05:31:29	523	12
-394	1	7	3	16777227	2024-07-10 05:31:32	\N	517	24
-436	1	9	3	16777227	2024-07-10 05:33:03	\N	517	27
-397	1	8	3	16777227	2024-07-10 05:31:36	\N	517	25
-440	1	35	2	16777230	2024-07-10 05:33:05	\N	1048585	19
-442	1	6	2	16777251	2024-07-10 05:33:05	\N	1048585	19
-441	1	3	2	16777251	2024-07-10 05:33:05	2024-07-10 05:33:06	1048585	19
-407	1	33	2	16777235	2024-07-10 05:31:42	\N	1048585	17
+374	1	3	2	16777217	2024-07-11 05:26:43	\N	1048585	16
+71	1	3	3	16777249	2024-07-11 05:20:43	\N	1048586	1
+73	1	4	3	16777249	2024-07-11 05:20:43	\N	1048586	1
+234	1	3	2	16777217	2024-07-11 05:24:00	\N	1048585	10
+75	1	5	3	16777249	2024-07-11 05:20:43	\N	1048586	1
+107	1	0	2	16777243	2024-07-11 05:21:24	\N	1048585	4
+108	1	0	2	16777245	2024-07-11 05:21:24	\N	1048585	4
+236	1	5	2	16777217	2024-07-11 05:24:00	\N	1048585	10
+6	1	3	2	16777217	2024-07-11 05:18:29	\N	1048585	1
+8	1	5	2	16777217	2024-07-11 05:18:29	\N	1048585	1
+77	1	3	2	16777217	2024-07-11 05:20:55	\N	1048585	3
+10	1	4	2	16777217	2024-07-11 05:18:29	\N	1048585	1
+12	1	0	2	16777243	2024-07-11 05:18:29	\N	1048585	1
+13	1	0	2	16777245	2024-07-11 05:18:29	\N	1048585	1
+79	1	5	2	16777217	2024-07-11 05:20:55	\N	1048585	3
+81	1	4	2	16777217	2024-07-11 05:20:55	\N	1048585	3
+83	1	0	2	16777243	2024-07-11 05:20:55	\N	1048585	3
+84	1	0	2	16777245	2024-07-11 05:20:55	\N	1048585	3
+15	1	0	2	16777236	2024-07-11 05:18:32	2024-07-11 05:18:33	523	1
+17	1	7	3	16777227	2024-07-11 05:18:36	\N	517	1
+137	1	4	2	16777254	2024-07-11 05:21:52	\N	1048585	5
+138	1	5	2	16777254	2024-07-11 05:21:52	\N	1048585	5
+125	1	10	3	16777227	2024-07-11 05:21:46	\N	517	7
+20	1	9	3	16777227	2024-07-11 05:18:40	\N	517	2
+86	1	0	2	16777236	2024-07-11 05:20:58	2024-07-11 05:20:59	523	3
+23	1	10	3	16777227	2024-07-11 05:18:46	\N	517	3
+88	1	9	3	16777227	2024-07-11 05:21:02	\N	517	4
+58	1	3	2	16777217	2024-07-11 05:20:29	\N	1048585	2
+111	1	3	2	16777217	2024-07-11 05:21:32	\N	1048585	5
+91	1	10	3	16777227	2024-07-11 05:21:08	\N	517	5
+60	1	5	2	16777217	2024-07-11 05:20:29	\N	1048585	2
+113	1	5	2	16777217	2024-07-11 05:21:32	\N	1048585	5
+62	1	4	2	16777217	2024-07-11 05:20:29	\N	1048585	2
+33	1	17	2	16777235	2024-07-11 05:18:52	\N	1048585	1
+95	1	19	2	16777230	2024-07-11 05:21:09	\N	1048585	3
+97	1	4	2	16777251	2024-07-11 05:21:09	\N	1048585	3
+98	1	5	2	16777251	2024-07-11 05:21:09	\N	1048585	3
+64	1	0	2	16777243	2024-07-11 05:20:29	\N	1048585	2
+65	1	0	2	16777245	2024-07-11 05:20:29	\N	1048585	2
+96	1	3	2	16777251	2024-07-11 05:21:09	2024-07-11 05:21:10	1048585	3
+115	1	4	2	16777217	2024-07-11 05:21:32	\N	1048585	5
+101	1	3	2	16777217	2024-07-11 05:21:24	\N	1048585	4
+41	1	17	3	16777259	2024-07-11 05:19:39	\N	1048585	1
+43	1	16	3	16777259	2024-07-11 05:19:39	\N	1048585	1
+103	1	5	2	16777217	2024-07-11 05:21:24	\N	1048585	4
+45	1	14	3	16777259	2024-07-11 05:19:39	\N	1048585	1
+47	1	12	3	16777259	2024-07-11 05:19:40	\N	1048585	1
+105	1	4	2	16777217	2024-07-11 05:21:24	\N	1048585	4
+49	1	5	3	16777259	2024-07-11 05:19:40	\N	1048585	1
+51	1	4	3	16777259	2024-07-11 05:19:40	\N	1048585	1
+117	1	0	2	16777243	2024-07-11 05:21:33	\N	1048585	5
+53	1	3	3	16777259	2024-07-11 05:19:40	\N	1048585	1
+118	1	0	2	16777245	2024-07-11 05:21:33	\N	1048585	5
+152	1	7	3	16777227	2024-07-11 05:22:20	\N	517	8
+68	1	18	2	16777231	2024-07-11 05:20:32	\N	1048585	2
+67	1	0	2	16777236	2024-07-11 05:20:32	2024-07-11 05:20:33	523	2
+136	1	3	2	16777254	2024-07-11 05:21:52	2024-07-11 05:21:53	1048585	5
+120	1	0	2	16777236	2024-07-11 05:21:36	2024-07-11 05:21:37	523	4
+122	1	8	3	16777227	2024-07-11 05:21:40	\N	517	6
+135	1	21	2	16777235	2024-07-11 05:21:52	\N	1048585	5
+141	1	3	2	16777217	2024-07-11 05:22:13	\N	1048585	6
+143	1	5	2	16777217	2024-07-11 05:22:13	\N	1048585	6
+145	1	4	2	16777217	2024-07-11 05:22:13	\N	1048585	6
+147	1	0	2	16777243	2024-07-11 05:22:13	\N	1048585	6
+148	1	0	2	16777245	2024-07-11 05:22:13	\N	1048585	6
+150	1	0	2	16777236	2024-07-11 05:22:16	2024-07-11 05:22:17	523	5
+155	1	10	3	16777227	2024-07-11 05:22:26	\N	517	9
+176	1	0	2	16777243	2024-07-11 05:22:45	\N	1048585	7
+165	1	22	2	16777235	2024-07-11 05:22:32	\N	1048585	6
+167	1	4	2	16777254	2024-07-11 05:22:32	\N	1048585	6
+168	1	5	2	16777254	2024-07-11 05:22:32	\N	1048585	6
+166	1	3	2	16777254	2024-07-11 05:22:32	2024-07-11 05:22:33	1048585	6
+170	1	3	2	16777217	2024-07-11 05:22:45	\N	1048585	7
+172	1	5	2	16777217	2024-07-11 05:22:45	\N	1048585	7
+174	1	4	2	16777217	2024-07-11 05:22:45	\N	1048585	7
+177	1	0	2	16777245	2024-07-11 05:22:45	\N	1048585	7
+180	1	23	2	16777231	2024-07-11 05:22:48	\N	1048585	7
+179	1	0	2	16777236	2024-07-11 05:22:48	2024-07-11 05:22:49	523	6
+266	1	3	2	16777217	2024-07-11 05:24:38	\N	1048585	11
+184	1	9	3	16777227	2024-07-11 05:22:56	\N	517	11
+376	1	5	2	16777217	2024-07-11 05:26:43	\N	1048585	16
+229	1	25	2	16777235	2024-07-11 05:23:45	\N	1048585	9
+231	1	6	2	16777254	2024-07-11 05:23:45	\N	1048585	9
+187	1	10	3	16777227	2024-07-11 05:23:02	\N	517	12
+230	1	3	2	16777254	2024-07-11 05:23:45	2024-07-11 05:23:47	1048585	9
+378	1	4	2	16777217	2024-07-11 05:26:43	\N	1048585	16
+268	1	5	2	16777217	2024-07-11 05:24:38	\N	1048585	11
+238	1	4	2	16777217	2024-07-11 05:24:00	\N	1048585	10
+191	1	3	2	16777219	2024-07-11 05:23:07	\N	517	10
+240	1	0	2	16777243	2024-07-11 05:24:00	\N	1048585	10
+193	1	4	2	16777219	2024-07-11 05:23:07	\N	517	10
+241	1	0	2	16777245	2024-07-11 05:24:00	\N	1048585	10
+195	1	5	2	16777219	2024-07-11 05:23:07	\N	517	10
+270	1	4	2	16777217	2024-07-11 05:24:38	\N	1048585	11
+244	1	26	2	16777231	2024-07-11 05:24:04	\N	1048585	10
+198	1	3	2	16777217	2024-07-11 05:23:18	\N	1048585	8
+243	1	0	2	16777236	2024-07-11 05:24:04	2024-07-11 05:24:05	523	8
+200	1	5	2	16777217	2024-07-11 05:23:18	\N	1048585	8
+202	1	4	2	16777217	2024-07-11 05:23:18	\N	1048585	8
+204	1	0	2	16777243	2024-07-11 05:23:18	\N	1048585	8
+205	1	0	2	16777245	2024-07-11 05:23:18	\N	1048585	8
+272	1	0	2	16777243	2024-07-11 05:24:38	\N	1048585	11
+273	1	0	2	16777245	2024-07-11 05:24:38	\N	1048585	11
+208	1	3	2	16777217	2024-07-11 05:23:26	\N	1048585	9
+210	1	6	2	16777217	2024-07-11 05:23:26	\N	1048585	9
+212	1	0	2	16777243	2024-07-11 05:23:26	\N	1048585	9
+213	1	0	2	16777245	2024-07-11 05:23:26	\N	1048585	9
+252	1	3	2	16777219	2024-07-11 05:24:20	\N	517	15
+254	1	4	2	16777219	2024-07-11 05:24:20	\N	517	15
+215	1	0	2	16777236	2024-07-11 05:23:30	2024-07-11 05:23:31	523	7
+217	1	7	3	16777227	2024-07-11 05:23:34	\N	517	13
+256	1	5	2	16777219	2024-07-11 05:24:20	\N	517	15
+293	1	3	2	16777217	2024-07-11 05:25:13	\N	1048585	13
+220	1	10	3	16777227	2024-07-11 05:23:40	\N	517	14
+295	1	5	2	16777217	2024-07-11 05:25:13	\N	1048585	13
+259	1	3	2	16777219	2024-07-11 05:24:26	\N	517	16
+261	1	4	2	16777219	2024-07-11 05:24:26	\N	517	16
+263	1	5	2	16777219	2024-07-11 05:24:26	\N	517	16
+297	1	4	2	16777217	2024-07-11 05:25:13	\N	1048585	13
+276	1	3	2	16777217	2024-07-11 05:24:47	\N	1048585	12
+278	1	5	2	16777217	2024-07-11 05:24:47	\N	1048585	12
+280	1	4	2	16777217	2024-07-11 05:24:47	\N	1048585	12
+282	1	0	2	16777243	2024-07-11 05:24:47	\N	1048585	12
+283	1	0	2	16777245	2024-07-11 05:24:47	\N	1048585	12
+299	1	0	2	16777243	2024-07-11 05:25:13	\N	1048585	13
+300	1	0	2	16777245	2024-07-11 05:25:13	\N	1048585	13
+286	1	28	2	16777231	2024-07-11 05:24:51	\N	1048585	12
+285	1	0	2	16777236	2024-07-11 05:24:51	2024-07-11 05:24:52	523	9
+287	1	7	3	16777227	2024-07-11 05:24:55	\N	517	17
+290	1	8	3	16777227	2024-07-11 05:24:59	\N	517	18
+342	1	0	2	16777243	2024-07-11 05:26:04	\N	1048585	14
+302	1	0	2	16777236	2024-07-11 05:25:17	2024-07-11 05:25:18	523	10
+321	1	3	2	16777219	2024-07-11 05:25:43	\N	517	20
+314	1	3	2	16777219	2024-07-11 05:25:37	\N	517	19
+316	1	5	2	16777219	2024-07-11 05:25:37	\N	517	19
+318	1	4	2	16777219	2024-07-11 05:25:37	\N	517	19
+328	1	3	2	16777219	2024-07-11 05:25:49	\N	517	21
+323	1	5	2	16777219	2024-07-11 05:25:43	\N	517	20
+325	1	4	2	16777219	2024-07-11 05:25:43	\N	517	20
+335	1	29	3	16777232	2024-07-11 05:25:56	\N	1048585	13
+343	1	0	2	16777245	2024-07-11 05:26:04	\N	1048585	14
+330	1	5	2	16777219	2024-07-11 05:25:49	\N	517	21
+332	1	4	2	16777219	2024-07-11 05:25:49	\N	517	21
+351	1	0	2	16777243	2024-07-11 05:26:12	\N	1048585	15
+336	1	3	2	16777217	2024-07-11 05:26:04	\N	1048585	14
+338	1	5	2	16777217	2024-07-11 05:26:04	\N	1048585	14
+340	1	4	2	16777217	2024-07-11 05:26:04	\N	1048585	14
+352	1	0	2	16777245	2024-07-11 05:26:12	\N	1048585	15
+345	1	3	2	16777217	2024-07-11 05:26:12	\N	1048585	15
+347	1	5	2	16777217	2024-07-11 05:26:12	\N	1048585	15
+349	1	4	2	16777217	2024-07-11 05:26:12	\N	1048585	15
+354	1	0	2	16777236	2024-07-11 05:26:17	2024-07-11 05:26:18	523	11
+356	1	8	3	16777227	2024-07-11 05:26:21	\N	517	22
+359	1	9	3	16777227	2024-07-11 05:26:25	\N	517	23
+380	1	0	2	16777243	2024-07-11 05:26:43	\N	1048585	16
+381	1	0	2	16777245	2024-07-11 05:26:43	\N	1048585	16
+428	1	0	2	16777243	2024-07-11 05:28:23	\N	1048585	19
+369	1	31	2	16777235	2024-07-11 05:26:31	\N	1048585	15
+371	1	5	2	16777254	2024-07-11 05:26:31	\N	1048585	15
+372	1	4	2	16777254	2024-07-11 05:26:31	\N	1048585	15
+370	1	3	2	16777254	2024-07-11 05:26:31	2024-07-11 05:26:32	1048585	15
+383	1	3	2	16777217	2024-07-11 05:26:52	\N	1048585	17
+385	1	5	2	16777217	2024-07-11 05:26:52	\N	1048585	17
+387	1	4	2	16777217	2024-07-11 05:26:52	\N	1048585	17
+389	1	0	2	16777243	2024-07-11 05:26:52	\N	1048585	17
+390	1	0	2	16777245	2024-07-11 05:26:52	\N	1048585	17
+429	1	0	2	16777245	2024-07-11 05:28:23	\N	1048585	19
+392	1	0	2	16777236	2024-07-11 05:26:58	2024-07-11 05:26:59	523	12
+394	1	7	3	16777227	2024-07-11 05:27:02	\N	517	24
+397	1	8	3	16777227	2024-07-11 05:27:05	\N	517	25
+431	1	0	2	16777236	2024-07-11 05:28:28	2024-07-11 05:28:29	523	13
+433	1	8	3	16777227	2024-07-11 05:28:32	\N	517	26
+407	1	33	2	16777235	2024-07-11 05:27:12	\N	1048585	17
+436	1	9	3	16777227	2024-07-11 05:28:36	\N	517	27
+413	1	3	2	16777217	2024-07-11 05:28:10	\N	1048585	18
+415	1	5	2	16777217	2024-07-11 05:28:10	\N	1048585	18
+417	1	4	2	16777217	2024-07-11 05:28:10	\N	1048585	18
+419	1	0	2	16777243	2024-07-11 05:28:10	\N	1048585	18
+420	1	0	2	16777245	2024-07-11 05:28:10	\N	1048585	18
+423	1	34	2	16777234	2024-07-11 05:28:15	\N	1048585	18
+424	1	3	2	16777217	2024-07-11 05:28:23	\N	1048585	19
+426	1	6	2	16777217	2024-07-11 05:28:23	\N	1048585	19
+440	1	35	2	16777230	2024-07-11 05:28:37	\N	1048585	19
+442	1	6	2	16777251	2024-07-11 05:28:37	\N	1048585	19
+441	1	3	2	16777251	2024-07-11 05:28:37	2024-07-11 05:28:39	1048585	19
 \.
 
 
@@ -7007,40 +7007,40 @@ COPY public.oai_resumption_tokens (token, expire, record_offset, params) FROM st
 
 COPY public.plugin_settings (plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
 defaultthemeplugin	0	enabled	1	bool
-acronplugin	0	enabled	1	bool
-usageeventplugin	0	enabled	1	bool
-tinymceplugin	0	enabled	1	bool
 usagestatsplugin	0	enabled	1	bool
 usagestatsplugin	0	createLogFiles	1	bool
 usagestatsplugin	0	accessLogFileParseRegex	/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>.*?)\\] "\\S+ (?P<url>\\S+).*?" (?P<returnCode>\\S+) \\S+ ".*?" "(?P<userAgent>.*?)"/	string
 usagestatsplugin	0	optionalColumns	["city","region"]	object
 usagestatsplugin	0	chartType	bar	string
 usagestatsplugin	0	datasetMaxCount	4	string
+tinymceplugin	0	enabled	1	bool
+acronplugin	0	enabled	1	bool
+usageeventplugin	0	enabled	1	bool
 languagetoggleblockplugin	0	enabled	1	bool
 languagetoggleblockplugin	0	seq	4	int
 developedbyblockplugin	0	enabled	0	bool
 developedbyblockplugin	0	seq	0	int
-acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"classes.tasks.SubscriptionExpiryReminder","frequency":{"day":"1"},"args":[]}]	object
-defaultthemeplugin	1	enabled	1	bool
+acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.importexport.datacite.DataciteInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.doaj.DOAJInfoSender","frequency":{"hour":24},"args":[]},{"className":"plugins.importexport.crossref.CrossrefInfoSender","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]},{"className":"classes.tasks.SubscriptionExpiryReminder","frequency":{"day":"1"},"args":[]}]	object
 tinymceplugin	1	enabled	1	bool
-languagetoggleblockplugin	1	enabled	1	bool
-languagetoggleblockplugin	1	seq	4	int
+defaultthemeplugin	1	enabled	1	bool
 informationblockplugin	1	enabled	1	bool
 informationblockplugin	1	seq	7	int
-developedbyblockplugin	1	enabled	0	bool
-developedbyblockplugin	1	seq	0	int
 subscriptionblockplugin	1	enabled	1	bool
 subscriptionblockplugin	1	seq	2	int
+languagetoggleblockplugin	1	enabled	1	bool
+languagetoggleblockplugin	1	seq	4	int
+developedbyblockplugin	1	enabled	0	bool
+developedbyblockplugin	1	seq	0	int
 resolverplugin	1	enabled	1	bool
-pdfjsviewerplugin	1	enabled	1	bool
-googlescholarplugin	1	enabled	1	bool
-lensgalleyplugin	1	enabled	1	bool
 dublincoremetaplugin	1	enabled	1	bool
-htmlarticlegalleyplugin	1	enabled	1	bool
 webfeedplugin	1	enabled	1	bool
 webfeedplugin	1	displayPage	homepage	string
 webfeedplugin	1	displayItems	1	bool
-usageeventplugin	0	uniqueSiteId	668e1a201da12	string
+pdfjsviewerplugin	1	enabled	1	bool
+googlescholarplugin	1	enabled	1	bool
+htmlarticlegalleyplugin	1	enabled	1	bool
+lensgalleyplugin	1	enabled	1	bool
+usageeventplugin	0	uniqueSiteId	668f6a89b979e	string
 defaultthemeplugin	1	typography	notoSans	string
 defaultthemeplugin	1	baseColour	#1E6292	string
 defaultthemeplugin	1	showDescriptionInJournalIndex	false	string
@@ -7274,26 +7274,26 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, access_status, date_published, last_modified, locale, primary_contact_id, section_id, seq, submission_id, status, url_path, version) FROM stdin;
-17	0	\N	2024-07-10 05:31:14	\N	22	1	0	16	1	\N	1
-1	0	2024-07-10	2024-07-10 05:24:14	\N	1	1	0	1	3	mwandenga-signalling-theory	1
-2	0	2024-07-10	2024-07-10 05:24:45	\N	3	1	0	1	1	mwandenga	2
-18	0	2024-07-10	2024-07-10 05:32:27	\N	23	1	0	17	3	\N	1
-3	0	\N	2024-07-10 05:25:16	\N	5	1	0	2	1	\N	1
-4	0	\N	2024-07-10 05:25:31	\N	6	1	0	3	1	\N	1
-19	0	\N	2024-07-10 05:32:38	\N	24	1	0	18	1	\N	1
-5	0	\N	2024-07-10 05:26:00	\N	7	1	0	4	1	\N	1
-6	0	\N	2024-07-10 05:26:09	\N	9	1	0	5	1	\N	1
-20	0	\N	2024-07-10 05:32:50	\N	25	2	0	19	1	\N	1
-7	0	\N	2024-07-10 05:26:43	\N	10	1	0	6	1	\N	1
-8	0	\N	2024-07-10 05:27:14	\N	11	1	0	7	1	\N	1
-9	0	\N	2024-07-10 05:27:47	\N	12	1	0	8	1	\N	1
-10	0	\N	2024-07-10 05:27:55	\N	14	2	0	9	1	\N	1
-11	0	\N	2024-07-10 05:28:30	\N	15	1	0	10	1	\N	1
-12	0	\N	2024-07-10 05:29:06	\N	16	1	0	11	1	\N	1
-13	0	\N	2024-07-10 05:29:14	\N	18	1	0	12	1	\N	1
-14	0	\N	2024-07-10 05:29:45	\N	19	1	0	13	1	\N	1
-15	0	\N	2024-07-10 05:30:36	\N	20	1	0	14	1	\N	1
-16	0	\N	2024-07-10 05:30:44	\N	21	1	0	15	1	\N	1
+17	0	\N	2024-07-11 05:26:43	\N	22	1	0	16	1	\N	1
+1	0	2024-07-11	2024-07-11 05:19:37	\N	1	1	0	1	3	mwandenga-signalling-theory	1
+2	0	2024-07-11	2024-07-11 05:20:09	\N	3	1	0	1	1	mwandenga	2
+18	0	2024-07-11	2024-07-11 05:27:59	\N	23	1	0	17	3	\N	1
+3	0	\N	2024-07-11 05:20:39	\N	5	1	0	2	1	\N	1
+4	0	\N	2024-07-11 05:20:54	\N	6	1	0	3	1	\N	1
+19	0	\N	2024-07-11 05:28:10	\N	24	1	0	18	1	\N	1
+5	0	\N	2024-07-11 05:21:23	\N	7	1	0	4	1	\N	1
+6	0	\N	2024-07-11 05:21:32	\N	9	1	0	5	1	\N	1
+20	0	\N	2024-07-11 05:28:23	\N	25	2	0	19	1	\N	1
+7	0	\N	2024-07-11 05:22:12	\N	10	1	0	6	1	\N	1
+8	0	\N	2024-07-11 05:22:44	\N	11	1	0	7	1	\N	1
+9	0	\N	2024-07-11 05:23:18	\N	12	1	0	8	1	\N	1
+10	0	\N	2024-07-11 05:23:26	\N	14	2	0	9	1	\N	1
+11	0	\N	2024-07-11 05:24:00	\N	15	1	0	10	1	\N	1
+12	0	\N	2024-07-11 05:24:38	\N	16	1	0	11	1	\N	1
+13	0	\N	2024-07-11 05:24:46	\N	18	1	0	12	1	\N	1
+14	0	\N	2024-07-11 05:25:12	\N	19	1	0	13	1	\N	1
+15	0	\N	2024-07-11 05:26:04	\N	20	1	0	14	1	\N	1
+16	0	\N	2024-07-11 05:26:12	\N	21	1	0	15	1	\N	1
 \.
 
 
@@ -7330,33 +7330,33 @@ COPY public.queued_payments (queued_payment_id, date_created, date_modified, exp
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, unconsidered) FROM stdin;
-1	1	7	\N	\N	2024-07-10 05:23:15	2024-07-10 05:23:15	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:23:15	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-2	1	9	\N	\N	2024-07-10 05:23:18	2024-07-10 05:23:18	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:23:18	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-16	10	10	\N	3	2024-07-10 05:28:44	2024-07-10 05:28:44	2024-07-10 05:28:52	2024-07-10 05:28:55	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:28:55	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
-3	1	10	\N	\N	2024-07-10 05:23:24	2024-07-10 05:23:24	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:23:24	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-4	3	9	\N	\N	2024-07-10 05:25:38	2024-07-10 05:25:38	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:25:38	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-24	17	7	\N	\N	2024-07-10 05:31:32	2024-07-10 05:31:32	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:31:32	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-5	3	10	\N	\N	2024-07-10 05:25:44	2024-07-10 05:25:44	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:25:44	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
-17	12	7	\N	\N	2024-07-10 05:29:23	2024-07-10 05:29:23	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:29:23	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-6	5	8	\N	\N	2024-07-10 05:26:17	2024-07-10 05:26:17	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:26:17	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-7	5	10	\N	\N	2024-07-10 05:26:23	2024-07-10 05:26:23	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:26:23	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-8	6	7	\N	\N	2024-07-10 05:26:51	2024-07-10 05:26:51	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:26:51	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-18	12	8	\N	\N	2024-07-10 05:29:27	2024-07-10 05:29:27	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:29:27	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
-9	6	10	\N	\N	2024-07-10 05:26:56	2024-07-10 05:26:56	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:26:56	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
-25	17	8	\N	\N	2024-07-10 05:31:36	2024-07-10 05:31:36	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:31:36	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
-11	7	9	\N	\N	2024-07-10 05:27:25	2024-07-10 05:27:25	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:27:25	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-12	7	10	\N	\N	2024-07-10 05:27:31	2024-07-10 05:27:31	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:27:31	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-26	19	8	\N	\N	2024-07-10 05:33:00	2024-07-10 05:33:00	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:33:00	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-10	7	8	\N	5	2024-07-10 05:27:22	2024-07-10 05:27:22	2024-07-10 05:27:34	2024-07-10 05:27:37	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:27:37	0	0	0	\N	\N	\N	\N	6	3	2	1	4	\N	0
-13	9	7	\N	\N	2024-07-10 05:28:04	2024-07-10 05:28:04	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:28:04	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-14	9	10	\N	\N	2024-07-10 05:28:09	2024-07-10 05:28:09	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:28:09	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
-27	19	9	\N	\N	2024-07-10 05:33:03	2024-07-10 05:33:03	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:33:03	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
-19	13	7	\N	2	2024-07-10 05:29:54	2024-07-10 05:29:54	2024-07-10 05:30:06	2024-07-10 05:30:09	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:30:09	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-15	10	9	\N	2	2024-07-10 05:28:38	2024-07-10 05:28:38	2024-07-10 05:28:46	2024-07-10 05:28:49	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:28:49	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
-20	13	9	\N	2	2024-07-10 05:29:57	2024-07-10 05:29:57	2024-07-10 05:30:12	2024-07-10 05:30:15	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:30:15	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-21	13	10	\N	3	2024-07-10 05:30:03	2024-07-10 05:30:03	2024-07-10 05:30:18	2024-07-10 05:30:21	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:30:21	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
-22	15	8	\N	\N	2024-07-10 05:30:53	2024-07-10 05:30:53	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:30:53	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
-23	15	9	\N	\N	2024-07-10 05:30:57	2024-07-10 05:30:57	\N	\N	\N	2024-08-07 00:00:00	2024-08-07 00:00:00	2024-07-10 05:30:57	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+1	1	7	\N	\N	2024-07-11 05:18:36	2024-07-11 05:18:36	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:18:36	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+2	1	9	\N	\N	2024-07-11 05:18:40	2024-07-11 05:18:40	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:18:40	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+16	10	10	\N	3	2024-07-11 05:24:14	2024-07-11 05:24:14	2024-07-11 05:24:22	2024-07-11 05:24:26	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:24:26	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
+3	1	10	\N	\N	2024-07-11 05:18:46	2024-07-11 05:18:46	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:18:46	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+4	3	9	\N	\N	2024-07-11 05:21:02	2024-07-11 05:21:02	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:21:02	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+24	17	7	\N	\N	2024-07-11 05:27:02	2024-07-11 05:27:02	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:27:02	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+5	3	10	\N	\N	2024-07-11 05:21:08	2024-07-11 05:21:08	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:21:08	0	0	0	\N	\N	\N	\N	3	3	2	1	1	\N	0
+17	12	7	\N	\N	2024-07-11 05:24:55	2024-07-11 05:24:55	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:24:55	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+6	5	8	\N	\N	2024-07-11 05:21:40	2024-07-11 05:21:40	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:21:40	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+7	5	10	\N	\N	2024-07-11 05:21:46	2024-07-11 05:21:46	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:21:46	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+8	6	7	\N	\N	2024-07-11 05:22:20	2024-07-11 05:22:20	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:22:20	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+18	12	8	\N	\N	2024-07-11 05:24:59	2024-07-11 05:24:59	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:24:59	0	0	0	\N	\N	\N	\N	9	3	2	1	1	\N	0
+9	6	10	\N	\N	2024-07-11 05:22:26	2024-07-11 05:22:26	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:22:26	0	0	0	\N	\N	\N	\N	5	3	2	1	1	\N	0
+25	17	8	\N	\N	2024-07-11 05:27:05	2024-07-11 05:27:05	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:27:05	0	0	0	\N	\N	\N	\N	12	3	2	1	1	\N	0
+11	7	9	\N	\N	2024-07-11 05:22:56	2024-07-11 05:22:56	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:22:56	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+12	7	10	\N	\N	2024-07-11 05:23:02	2024-07-11 05:23:02	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:23:02	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+26	19	8	\N	\N	2024-07-11 05:28:32	2024-07-11 05:28:32	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:28:32	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+10	7	8	\N	5	2024-07-11 05:22:52	2024-07-11 05:22:52	2024-07-11 05:23:04	2024-07-11 05:23:07	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:23:07	0	0	0	\N	\N	\N	\N	6	3	2	1	4	\N	0
+13	9	7	\N	\N	2024-07-11 05:23:34	2024-07-11 05:23:34	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:23:34	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+14	9	10	\N	\N	2024-07-11 05:23:40	2024-07-11 05:23:40	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:23:40	0	0	0	\N	\N	\N	\N	7	3	2	1	1	\N	0
+27	19	9	\N	\N	2024-07-11 05:28:36	2024-07-11 05:28:36	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:28:36	0	0	0	\N	\N	\N	\N	13	3	2	1	1	\N	0
+19	13	7	\N	2	2024-07-11 05:25:21	2024-07-11 05:25:21	2024-07-11 05:25:33	2024-07-11 05:25:37	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:25:37	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+15	10	9	\N	2	2024-07-11 05:24:08	2024-07-11 05:24:08	2024-07-11 05:24:17	2024-07-11 05:24:20	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:24:20	0	0	0	\N	\N	\N	\N	8	3	2	1	4	\N	0
+20	13	9	\N	2	2024-07-11 05:25:25	2024-07-11 05:25:25	2024-07-11 05:25:39	2024-07-11 05:25:43	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:25:43	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+21	13	10	\N	3	2024-07-11 05:25:31	2024-07-11 05:25:31	2024-07-11 05:25:46	2024-07-11 05:25:49	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:25:49	0	0	0	\N	\N	\N	\N	10	3	2	1	4	\N	0
+22	15	8	\N	\N	2024-07-11 05:26:21	2024-07-11 05:26:21	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:26:21	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
+23	15	9	\N	\N	2024-07-11 05:26:25	2024-07-11 05:26:25	\N	\N	\N	2024-08-08 00:00:00	2024-08-08 00:00:00	2024-07-11 05:26:25	0	0	0	\N	\N	\N	\N	11	3	2	1	1	\N	0
 \.
 
 
@@ -7442,13 +7442,13 @@ COPY public.review_rounds (review_round_id, submission_id, stage_id, round, revi
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2024-07-10 05:20:22
-plugins.importexport.crossref.CrossrefInfoSender	2024-07-10 05:20:22
-plugins.importexport.doaj.DOAJInfoSender	2024-07-10 05:20:22
-plugins.importexport.datacite.DataciteInfoSender	2024-07-10 05:20:22
-lib.pkp.classes.task.ReviewReminder	2024-07-10 05:20:22
-lib.pkp.classes.task.StatisticsReport	2024-07-10 05:20:22
-classes.tasks.SubscriptionExpiryReminder	2024-07-10 05:20:22
+plugins.generic.usageStats.UsageStatsLoader	2024-07-11 05:15:44
+plugins.importexport.datacite.DataciteInfoSender	2024-07-11 05:15:44
+plugins.importexport.doaj.DOAJInfoSender	2024-07-11 05:15:44
+plugins.importexport.crossref.CrossrefInfoSender	2024-07-11 05:15:44
+lib.pkp.classes.task.ReviewReminder	2024-07-11 05:15:45
+lib.pkp.classes.task.StatisticsReport	2024-07-11 05:15:45
+classes.tasks.SubscriptionExpiryReminder	2024-07-11 05:15:45
 \.
 
 
@@ -7491,49 +7491,49 @@ COPY public.sections (section_id, journal_id, review_form_id, seq, editor_restri
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-3hkc2mdac1i1c896fi91dfu26j	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720588821	1720588821	0		localhost
-d4tj1sho8mmutsqo7rt7vp6bhb	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720588962	1720588971	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720588970;s:5:"token";s:32:"8f2bd44fe5597d86514dc685107f1992";}	localhost
-gmn82edh1t3m5bd15vio0an61i	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720588831	1720588842	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720588842;s:5:"token";s:32:"b6d0e6f76e64467bf77abb55ef0af027";}	localhost
-qisqi7sahlpsobo84mn3j7vjg6	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720588842	1720588848	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720588848;s:5:"token";s:32:"7945bae4473e51d2c55b26771cd4f5d5";}	localhost
-3bg9a9crfs664umme4frctg1p4	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589099	1720589123	0	csrf|a:2:{s:9:"timestamp";i:1720589123;s:5:"token";s:32:"7c7898c337d56aed6a36de0590c31064";}username|s:7:"dbarnes";userId|i:3;	localhost
-iliqrj57f056pdurpm9h5ths41	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720588848	1720588853	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720588853;s:5:"token";s:32:"7aeb068285ad1b97d9b0291956a47327";}	localhost
-i2uusvh746eeq9hqo8h3nvqmkt	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720588822	1720588831	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720588831;s:5:"token";s:32:"8e1a136e3e6ae87808aaaf924a3a2663";}	localhost
-arbgvr8j1oishveh99rihqsh3c	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589124	1720589149	0	csrf|a:2:{s:9:"timestamp";i:1720589149;s:5:"token";s:32:"fdcd5895fed470ba3a120eda81b6acc8";}username|s:7:"dbarnes";userId|i:3;	localhost
-po84er4m924lju2mo34hcu6ced	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720588972	1720588980	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720588980;s:5:"token";s:32:"0555ea4dbec19f7829a149c15539899c";}	localhost
-10j4ieqmju8jssabvfurq6goqp	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720588854	1720588960	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1720588960;s:5:"token";s:32:"08a1d477dab43822bc467b3710d7856c";}	localhost
-hup9m0oegpvieqqf3lb9617sqj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720588981	1720589017	0	csrf|a:2:{s:9:"timestamp";i:1720589017;s:5:"token";s:32:"fccec262bed9f3002e6786a012730a5c";}username|s:7:"dbarnes";userId|i:3;	localhost
-ba4sikjf2i2ke85r5buqo4maaj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589043	1720589049	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720589050;s:5:"token";s:32:"c3d04dcfeba95384af5577a86dbcf55f";}	localhost
-43fvpvdv622nnh5o7tu58m0hvh	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589017	1720589033	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720589032;s:5:"token";s:32:"687ed001a4789f4e02aebdf6089a7b3f";}	localhost
-i5oa435bvs47m9d0if94o8nfbr	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589036	1720589043	0	username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1720589043;s:5:"token";s:32:"60fc0de0ca8b492865f9b94c73b1fa66";}userId|i:17;	localhost
-gs1ssnokg190no0pvqnjtpcnrn	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589033	1720589035	0	userId|i:17;username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1720589035;s:5:"token";s:32:"4632dc57677297f4efb929d33fb7608d";}	localhost
-qee08h0ct1u5rq3q8hgif1pf90	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589050	1720589054	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720589054;s:5:"token";s:32:"59b3152ce63528ce89d7f11d115e50a0";}	localhost
-37j7akhap5kgut4m3njudjsqc8	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589079	1720589083	0		localhost
-rktieithu8r5eib4r2cfpfmfgi	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589055	1720589079	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720589079;s:5:"token";s:32:"4a35abe8a9ef46ddf3e4278ab67f711f";}	localhost
-fi4okqjs1lbk6al8mak0k6o6s4	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589087	1720589092	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1720589092;s:5:"token";s:32:"117b787771941412b275f41a1b22b22a";}signedInAs|i:3;	localhost
-p20kmvfaa9bjgnupkof2k4imev	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589084	1720589086	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720589086;s:5:"token";s:32:"7539bc2630b5b5f12e6ad444d25f657e";}	localhost
-cegrb5rppqtih389204k9ild85	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589092	1720589097	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1720589097;s:5:"token";s:32:"4625926f956ca83ef8ddc8b2947731b6";}signedInAs|i:3;	localhost
-pkf2loeu32epgeba9fkkj75i2r	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589337	1720589347	0	csrf|a:2:{s:9:"timestamp";i:1720589346;s:5:"token";s:32:"170bb0d35f111b2aae154c0f75230ea6";}username|s:10:"kalkhafaji";userId|i:27;	localhost
-ooisgancgaf2d004ra7lri0l6g	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589152	1720589161	0	csrf|a:2:{s:9:"timestamp";i:1720589161;s:5:"token";s:32:"8ddf2fa78eb9ee4dc1803ba0d8d4c19b";}username|s:12:"cmontgomerie";userId|i:20;	localhost
-0bnfial9q71a4qrssf59ukprir	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589564	1720589588	0	csrf|a:2:{s:9:"timestamp";i:1720589589;s:5:"token";s:32:"2c7c86b002d5e996909d1fcf52886c90";}username|s:7:"dbarnes";userId|i:3;	localhost
-bqrnpiiars190qktq97q7l1atf	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589526	1720589531	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720589531;s:5:"token";s:32:"9652e87c00853c6d6ab76998ba7247bb";}	localhost
-o6jld83qggh0ucitiibcb6vkq7	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589531	1720589536	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720589536;s:5:"token";s:32:"a7cf9c2c96d2aec72f60a356c2575b4e";}	localhost
-m79efgr94rvoks1m0r5id91gsb	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589228	1720589257	0	csrf|a:2:{s:9:"timestamp";i:1720589257;s:5:"token";s:32:"8528c4942c6705b8a1a049c6c91e1d13";}username|s:7:"phudson";	localhost
-a455e137d5a794u8mq5ve3olpc	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589476	1720589513	0	csrf|a:2:{s:9:"timestamp";i:1720589512;s:5:"token";s:32:"84ef647ad3d826e762bc8119c9c31de5";}username|s:7:"dbarnes";userId|i:3;	localhost
-oj6r2ouuhpnh9dop8tek7lsfp8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589163	1720589195	0	csrf|a:2:{s:9:"timestamp";i:1720589195;s:5:"token";s:32:"64b9041517289a8f8a1394f1906596b0";}username|s:7:"dbarnes";userId|i:3;	localhost
-cj42ac5b8q6h004unm3m5c8ami	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589269	1720589302	0	csrf|a:2:{s:9:"timestamp";i:1720589302;s:5:"token";s:32:"ef2c87e991e15a384c4b7a8b3563cc7e";}username|s:7:"dbarnes";userId|i:3;	localhost
-bt7k7ds4gnv4q8cn45dh70e2a4	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589551	1720589563	0	csrf|a:2:{s:9:"timestamp";i:1720589563;s:5:"token";s:32:"f01a724068c564c2bb035620e88987a8";}username|s:7:"dbarnes";userId|i:3;	localhost
-hohoviqc8rpa11qfi2hcpro4in	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589378	1720589428	0	csrf|a:2:{s:9:"timestamp";i:1720589427;s:5:"token";s:32:"67fa7609b9dfa036b40db45b8e920499";}username|s:7:"dbarnes";userId|i:3;	localhost
-5j8e0ra32b9qcbafpvvgg5t5lj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589438	1720589466	0	csrf|a:2:{s:9:"timestamp";i:1720589466;s:5:"token";s:32:"1247e35d331d967e989d656c00eb3495";}username|s:7:"dbarnes";userId|i:3;	localhost
-qb6a1ulqmnchfghqurpk51b35l	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589196	1720589226	0	csrf|a:2:{s:9:"timestamp";i:1720589226;s:5:"token";s:32:"1344c4b06d2ecc828767b61c6cc41822";}username|s:7:"dbarnes";userId|i:3;	localhost
-ip3jrck84dcc3o076us9rkuk5e	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589536	1720589542	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720589542;s:5:"token";s:32:"7838d1b1b24c68b7b6b99461f9222eae";}	localhost
-r01e6b1djat4866v2ubimt9e5c	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589513	1720589520	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720589520;s:5:"token";s:32:"870a36adec2686767510e6e5e72a680e";}	localhost
-a0dqbhuomrdes15asu2tucnred	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589520	1720589526	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720589526;s:5:"token";s:32:"1c2eb17b228ed3459252e71c50dad8e5";}	localhost
-mbdptq94ksgag2ja1qkh8ne93b	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589468	1720589475	0	csrf|a:2:{s:9:"timestamp";i:1720589475;s:5:"token";s:32:"4837817557aaad9f3397510e54eeb31b";}username|s:6:"rrossi";userId|i:32;	localhost
-ar757qo2qiuo36udslnh1gdlj9	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589348	1720589367	0	csrf|a:2:{s:9:"timestamp";i:1720589367;s:5:"token";s:32:"ac5fe6f13f77ebfd2523d54da51f632b";}username|s:7:"dbarnes";userId|i:3;	localhost
-t81f2111ajkp908l6v1idnrj0l	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589303	1720589336	0	csrf|a:2:{s:9:"timestamp";i:1720589336;s:5:"token";s:32:"e80d23f07104091c99342f35ce776609";}username|s:8:"agallego";	localhost
-rdvg91jr93uu2egb4a2oulkgr0	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589429	1720589437	0	csrf|a:2:{s:9:"timestamp";i:1720589436;s:5:"token";s:32:"25ba6284ab4dce69d0a79f614554901c";}username|s:7:"pdaniel";userId|i:30;	localhost
-kl625em6pc3vgnvoo3l56mvs1u	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589259	1720589268	0	csrf|a:2:{s:9:"timestamp";i:1720589268;s:5:"token";s:32:"d75c51866f8c99237420223326e096f9";}username|s:7:"eostrom";userId|i:24;	localhost
-dgcubtesruikle6qbh18ahtlr1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720589542	1720589550	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720589550;s:5:"token";s:32:"ce93a40006e7018ac2bc70e9439af0b9";}	localhost
+0egufuqj9qhito6aun37rhovs5	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720674943	1720674943	0		localhost
+o30chdtcrc2gduf9qe6d07v9bl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675102	1720675138	0	csrf|a:2:{s:9:"timestamp";i:1720675139;s:5:"token";s:32:"83666b89717143735db9eee949cbccd6";}username|s:7:"dbarnes";userId|i:3;	localhost
+e82mk1f69d5kfipgkibjpvdd0j	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675085	1720675093	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720675093;s:5:"token";s:32:"37f057712fe61645fe646b4e8a6f889a";}	localhost
+sa55haufe5b7jusb37cpc7cmbo	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720674953	1720674962	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720674962;s:5:"token";s:32:"978e780d436495e1f53356c602755e91";}	localhost
+5e40pvrvoc7a7jevd4kf8ihuvo	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675222	1720675247	0	csrf|a:2:{s:9:"timestamp";i:1720675247;s:5:"token";s:32:"fcda5f67a26c12aaeede94eb16773875";}username|s:7:"dbarnes";userId|i:3;	localhost
+utamofednv0g5il4ahdj5cr0nc	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720674962	1720674967	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720674967;s:5:"token";s:32:"4fe18fa86bfa2da030cba85e3186bc1f";}	localhost
+fti6mrn6g1n8st7pedldijv3si	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720674968	1720674972	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720674972;s:5:"token";s:32:"0d44bd28fbf05600a91a510278f7935d";}	localhost
+g9gs90hoh5laotpvbfqj05ctls	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720674944	1720674953	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720674953;s:5:"token";s:32:"afc86d2a6fdf83a8dcf26f655a971a7f";}	localhost
+e4ekr1ofb6kk9ffigh8sfj10p4	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675248	1720675273	0	csrf|a:2:{s:9:"timestamp";i:1720675273;s:5:"token";s:32:"f19eee9ad71ff26476619d5f52b00484";}username|s:7:"dbarnes";userId|i:3;	localhost
+u3in0gdgg7823drci78sfestk5	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675094	1720675100	0	userId|i:1;username|s:5:"admin";csrf|a:2:{s:9:"timestamp";i:1720675100;s:5:"token";s:32:"9944a1cd44277b4b4b5659e813d1c0b0";}	localhost
+34ifv9n3e1ried82snkdi15sdq	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720674976	1720675084	0	username|s:5:"rvaca";csrf|a:2:{s:9:"timestamp";i:1720675084;s:5:"token";s:32:"8ce86906a5b2273bd3dd4cfd5d17bd74";}	localhost
+99pab0232r3s9hosvct2kf0n70	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675165	1720675172	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720675172;s:5:"token";s:32:"67fc067749278dba15ae957e31b2f9c3";}	localhost
+38n3r9job53tut34ikjfo9ukgp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675139	1720675155	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720675155;s:5:"token";s:32:"e2e2c58f54104fd6231c2765e6d88ae0";}	localhost
+d2tviljc0skfplvrs4ffs5cepi	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675159	1720675165	0	username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1720675165;s:5:"token";s:32:"82f3c2dc61f6d05863d01a7dd28c4a80";}userId|i:17;	localhost
+uej3b8jkvme2ooj13let64ii74	17	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675156	1720675158	0	userId|i:17;username|s:10:"amwandenga";csrf|a:2:{s:9:"timestamp";i:1720675158;s:5:"token";s:32:"f541706dc22f7121273233f137f7a4c7";}	localhost
+fs1t5keoitbljrruc9cjitjb0s	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675178	1720675202	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720675202;s:5:"token";s:32:"7f5f9fbc02d73d3f6d5fd787d1933339";}	localhost
+jhk79f2vrfvnlhbe0ibfukqo6o	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675173	1720675177	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720675177;s:5:"token";s:32:"d50c4b392b6b452da8ba1df064fb44dc";}	localhost
+d06gstr8ppeqblcen6jh9khavn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675202	1720675207	0		localhost
+hteice2m0rm8oeubbrp8cgi8tl	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675208	1720675210	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720675210;s:5:"token";s:32:"28484e0a3d05b65ba5c8eb48bfa41a25";}	localhost
+3ktturf9hrgc7lpc9q77blamcc	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675211	1720675216	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1720675216;s:5:"token";s:32:"71990516dac598aed9bb5cf1987fa036";}signedInAs|i:3;	localhost
+5im62bcfd4aco97ugp9dakhcla	5	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675216	1720675221	0	userId|i:5;username|s:8:"sberardo";csrf|a:2:{s:9:"timestamp";i:1720675221;s:5:"token";s:32:"5051cf66fec2b624685c4dca6edda47b";}signedInAs|i:3;	localhost
+vcfeo3dm76lemf8jjpjlvquido	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675696	1720675721	0	csrf|a:2:{s:9:"timestamp";i:1720675721;s:5:"token";s:32:"bb6fe44441ec7e422654a2868193290c";}username|s:7:"dbarnes";userId|i:3;	localhost
+8gml9ujpm0dja9v95b7ham9cm5	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675469	1720675479	0	csrf|a:2:{s:9:"timestamp";i:1720675478;s:5:"token";s:32:"31fbe306becd51c204507b5ad96df66b";}username|s:10:"kalkhafaji";userId|i:27;	localhost
+b01rtaqeveht129cu7nf0nvgnb	20	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675274	1720675284	0	csrf|a:2:{s:9:"timestamp";i:1720675284;s:5:"token";s:32:"318f718b0673a9c49bc7d7328f21e8a8";}username|s:12:"cmontgomerie";userId|i:20;	localhost
+sm9p8vrm6qo0ahhfc2k360uea3	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675656	1720675661	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720675661;s:5:"token";s:32:"6f7c6fe37a6df48459698a2754da22bc";}	localhost
+0vuh6j7okdhmv0su4pfqglnlku	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675661	1720675667	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720675667;s:5:"token";s:32:"86b859e1d1b93d92ca2d0a7c823ca228";}	localhost
+egmiipp0octr7u0qqsmnf29tfm	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675505	1720675556	0	csrf|a:2:{s:9:"timestamp";i:1720675556;s:5:"token";s:32:"2f4c8b539641d97e367a9ee69b7f5123";}username|s:7:"dbarnes";userId|i:3;	localhost
+jv5d9kugmd3g13ih6kqv6k0mis	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675358	1720675388	0	csrf|a:2:{s:9:"timestamp";i:1720675388;s:5:"token";s:32:"c12762211fc2a69af95228b97c5fe91e";}username|s:7:"phudson";	localhost
+s7hf9516gu5cmkvem19afs11vo	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675605	1720675642	0	csrf|a:2:{s:9:"timestamp";i:1720675642;s:5:"token";s:32:"90bf7de809c713c7bd8bbfcb53837138";}username|s:7:"dbarnes";userId|i:3;	localhost
+g9ivahfq8rr5v6l6rudaaf3s9b	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675399	1720675432	0	csrf|a:2:{s:9:"timestamp";i:1720675432;s:5:"token";s:32:"bb2b3bc0aca2377e48d5911e2e1442d5";}username|s:7:"dbarnes";userId|i:3;	localhost
+qsdkbc10f11hung5fn6ho789rn	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675286	1720675318	0	csrf|a:2:{s:9:"timestamp";i:1720675318;s:5:"token";s:32:"5cdad9430fcdb839e925c869ecd8af06";}username|s:7:"dbarnes";userId|i:3;	localhost
+831q9fpltuvm88abg754lce9cq	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675566	1720675595	0	csrf|a:2:{s:9:"timestamp";i:1720675595;s:5:"token";s:32:"f7f23affc469bd6a8f0653ebfa7755ca";}username|s:7:"dbarnes";userId|i:3;	localhost
+gv5k7jv9t3106jm0kk322iubsc	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675683	1720675696	0	csrf|a:2:{s:9:"timestamp";i:1720675696;s:5:"token";s:32:"254d74a81136d01700a3a5556bd3c324";}username|s:7:"dbarnes";userId|i:3;	localhost
+hjb1t15fv1ukq1eueevklsrhqv	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675325	1720675356	0	csrf|a:2:{s:9:"timestamp";i:1720675356;s:5:"token";s:32:"af7327e570d761ac10ddb4c6cdaf220b";}username|s:7:"dbarnes";userId|i:3;	localhost
+oc5v34pi3cnn99n2rncrvfou8a	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675667	1720675673	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720675673;s:5:"token";s:32:"0f315fc7168e8f9de006843bf56f48e8";}	localhost
+4405dluo63qvpjrtv07m5fsdee	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675643	1720675650	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720675650;s:5:"token";s:32:"f7734c174d1e7fbcf40a71f9c64c9486";}	localhost
+vlqbpanfdtc5dbhr2da9g3kal7	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675673	1720675682	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720675682;s:5:"token";s:32:"d3fbda75f6cba8ee9ca5fecb4f3732d5";}	localhost
+k2182tlompfuqllkpsc3tbrcgc	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675480	1720675499	0	csrf|a:2:{s:9:"timestamp";i:1720675499;s:5:"token";s:32:"3bbb479746798baa73e0ed48bbeb14e7";}username|s:7:"dbarnes";userId|i:3;	localhost
+9q5uf8tlcp0ubv3lbs436c9mvk	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675433	1720675466	0	csrf|a:2:{s:9:"timestamp";i:1720675466;s:5:"token";s:32:"e91dd1e1b5920f1500be67574dc1d446";}username|s:8:"agallego";	localhost
+68bj6mcqfvll46f3fi2vou206a	30	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675557	1720675565	0	csrf|a:2:{s:9:"timestamp";i:1720675564;s:5:"token";s:32:"2237618d42d6a7e0db6aab7756f4f384";}username|s:7:"pdaniel";userId|i:30;	localhost
+07tnugrr6hdggui4m3v44nqcm1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675650	1720675656	0	userId|i:3;username|s:7:"dbarnes";csrf|a:2:{s:9:"timestamp";i:1720675656;s:5:"token";s:32:"fdae9f7323d4dd5d35e1ff1d282edfaa";}	localhost
+0opoabmd6ncfglcarpjhfked28	32	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675596	1720675604	0	csrf|a:2:{s:9:"timestamp";i:1720675603;s:5:"token";s:32:"139aae89deef3d62230fa9c4a0f4c35c";}username|s:6:"rrossi";userId|i:32;	localhost
+gdrh8maj49ahqup4rucoii2khp	24	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/126.0.6478.126 Safari/537.36	1720675389	1720675398	0	csrf|a:2:{s:9:"timestamp";i:1720675398;s:5:"token";s:32:"315d8cf069b5e36cd6785b0276479c8c";}username|s:7:"eostrom";userId|i:24;	localhost
 \.
 
 
@@ -7563,99 +7563,99 @@ themePluginPath		default
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-2	1	3	3	2024-07-10 05:23:08	0	1
-4	1	5	4	2024-07-10 05:23:08	0	1
-5	1	7	12	2024-07-10 05:23:29	0	0
-6	1	11	14	2024-07-10 05:23:34	0	0
-7	1	13	16	2024-07-10 05:23:36	0	0
-1	1	14	17	2024-07-10 05:23:58	0	1
-3	1	5	5	2024-07-10 05:24:54	1	0
-8	2	14	18	2024-07-10 05:25:03	0	0
-9	2	3	3	2024-07-10 05:25:06	0	1
-10	2	5	5	2024-07-10 05:25:06	0	1
-11	2	5	4	2024-07-10 05:25:06	0	1
-12	2	5	6	2024-07-10 05:25:12	1	1
-13	3	14	19	2024-07-10 05:25:28	0	0
-14	3	3	3	2024-07-10 05:25:31	0	1
-15	3	5	5	2024-07-10 05:25:31	0	1
-16	3	5	4	2024-07-10 05:25:31	0	1
-17	3	7	11	2024-07-10 05:25:48	0	0
-18	4	14	20	2024-07-10 05:25:56	0	0
-19	4	3	3	2024-07-10 05:26:01	0	1
-20	4	5	5	2024-07-10 05:26:01	0	1
-21	4	5	4	2024-07-10 05:26:01	0	1
-22	5	14	21	2024-07-10 05:26:07	0	0
-23	5	3	3	2024-07-10 05:26:10	0	1
-24	5	5	5	2024-07-10 05:26:10	0	1
-25	5	5	4	2024-07-10 05:26:10	0	1
-26	5	7	11	2024-07-10 05:26:27	0	0
-27	5	11	13	2024-07-10 05:26:32	0	0
-28	5	13	15	2024-07-10 05:26:34	0	0
-29	6	14	22	2024-07-10 05:26:40	0	0
-30	6	3	3	2024-07-10 05:26:43	0	1
-31	6	5	5	2024-07-10 05:26:43	0	1
-32	6	5	4	2024-07-10 05:26:43	0	1
-33	6	7	11	2024-07-10 05:27:01	0	0
-34	6	11	13	2024-07-10 05:27:05	0	0
-35	7	14	23	2024-07-10 05:27:12	0	0
-36	7	3	3	2024-07-10 05:27:14	0	1
-37	7	5	5	2024-07-10 05:27:14	0	1
-38	7	5	4	2024-07-10 05:27:14	0	1
-39	8	14	24	2024-07-10 05:27:43	0	0
-40	8	3	3	2024-07-10 05:27:48	0	1
-41	8	5	5	2024-07-10 05:27:48	0	1
-42	8	5	4	2024-07-10 05:27:48	0	1
-43	9	14	25	2024-07-10 05:27:53	0	0
-44	9	3	3	2024-07-10 05:27:56	0	1
-45	9	5	6	2024-07-10 05:27:56	0	1
-46	9	7	12	2024-07-10 05:28:14	0	0
-47	9	11	14	2024-07-10 05:28:19	0	0
-48	9	13	16	2024-07-10 05:28:21	0	0
-49	10	14	26	2024-07-10 05:28:27	0	0
-50	10	3	3	2024-07-10 05:28:30	0	1
-51	10	5	5	2024-07-10 05:28:30	0	1
-52	10	5	4	2024-07-10 05:28:30	0	1
-53	11	14	27	2024-07-10 05:29:01	0	0
-54	11	3	3	2024-07-10 05:29:06	0	1
-55	11	5	5	2024-07-10 05:29:06	0	1
-56	11	5	4	2024-07-10 05:29:06	0	1
-57	12	14	28	2024-07-10 05:29:12	0	0
-58	12	3	3	2024-07-10 05:29:15	0	1
-59	12	5	5	2024-07-10 05:29:15	0	1
-60	12	5	4	2024-07-10 05:29:15	0	1
-61	13	14	29	2024-07-10 05:29:42	0	0
-62	13	3	3	2024-07-10 05:29:45	0	1
-63	13	5	5	2024-07-10 05:29:45	0	1
-64	13	5	4	2024-07-10 05:29:45	0	1
-65	14	14	30	2024-07-10 05:30:33	0	0
-66	14	3	3	2024-07-10 05:30:36	0	1
-67	14	5	5	2024-07-10 05:30:36	0	1
-68	14	5	4	2024-07-10 05:30:36	0	1
-69	15	14	31	2024-07-10 05:30:42	0	0
-70	15	3	3	2024-07-10 05:30:44	0	1
-71	15	5	5	2024-07-10 05:30:44	0	1
-72	15	5	4	2024-07-10 05:30:44	0	1
-73	15	7	12	2024-07-10 05:31:01	0	0
-74	15	11	14	2024-07-10 05:31:06	0	0
-75	16	14	32	2024-07-10 05:31:12	0	0
-76	16	3	3	2024-07-10 05:31:15	0	1
-77	16	5	5	2024-07-10 05:31:15	0	1
-78	16	5	4	2024-07-10 05:31:15	0	1
-79	17	14	33	2024-07-10 05:31:20	0	0
-80	17	3	3	2024-07-10 05:31:23	0	1
-81	17	5	5	2024-07-10 05:31:23	0	1
-82	17	5	4	2024-07-10 05:31:23	0	1
-83	17	7	11	2024-07-10 05:31:40	0	0
-84	17	11	13	2024-07-10 05:31:45	0	0
-85	17	13	15	2024-07-10 05:31:47	0	0
-86	18	14	34	2024-07-10 05:32:35	0	0
-87	18	3	3	2024-07-10 05:32:38	0	1
-88	18	5	5	2024-07-10 05:32:38	0	1
-89	18	5	4	2024-07-10 05:32:38	0	1
-90	19	14	35	2024-07-10 05:32:48	0	0
-91	19	3	3	2024-07-10 05:32:51	0	1
-92	19	5	6	2024-07-10 05:32:51	0	1
-93	19	7	12	2024-07-10 05:33:08	0	0
+2	1	3	3	2024-07-11 05:18:29	0	1
+4	1	5	4	2024-07-11 05:18:29	0	1
+5	1	7	12	2024-07-11 05:18:50	0	0
+6	1	11	14	2024-07-11 05:18:55	0	0
+7	1	13	16	2024-07-11 05:18:58	0	0
+1	1	14	17	2024-07-11 05:19:21	0	1
+3	1	5	5	2024-07-11 05:20:18	1	0
+8	2	14	18	2024-07-11 05:20:26	0	0
+9	2	3	3	2024-07-11 05:20:29	0	1
+10	2	5	5	2024-07-11 05:20:29	0	1
+11	2	5	4	2024-07-11 05:20:29	0	1
+12	2	5	6	2024-07-11 05:20:35	1	1
+13	3	14	19	2024-07-11 05:20:52	0	0
+14	3	3	3	2024-07-11 05:20:55	0	1
+15	3	5	5	2024-07-11 05:20:55	0	1
+16	3	5	4	2024-07-11 05:20:55	0	1
+17	3	7	11	2024-07-11 05:21:12	0	0
+18	4	14	20	2024-07-11 05:21:19	0	0
+19	4	3	3	2024-07-11 05:21:24	0	1
+20	4	5	5	2024-07-11 05:21:24	0	1
+21	4	5	4	2024-07-11 05:21:24	0	1
+22	5	14	21	2024-07-11 05:21:30	0	0
+23	5	3	3	2024-07-11 05:21:32	0	1
+24	5	5	5	2024-07-11 05:21:32	0	1
+25	5	5	4	2024-07-11 05:21:32	0	1
+26	5	7	11	2024-07-11 05:21:50	0	0
+27	5	11	13	2024-07-11 05:21:55	0	0
+28	5	13	15	2024-07-11 05:21:57	0	0
+29	6	14	22	2024-07-11 05:22:10	0	0
+30	6	3	3	2024-07-11 05:22:13	0	1
+31	6	5	5	2024-07-11 05:22:13	0	1
+32	6	5	4	2024-07-11 05:22:13	0	1
+33	6	7	11	2024-07-11 05:22:30	0	0
+34	6	11	13	2024-07-11 05:22:35	0	0
+35	7	14	23	2024-07-11 05:22:42	0	0
+36	7	3	3	2024-07-11 05:22:45	0	1
+37	7	5	5	2024-07-11 05:22:45	0	1
+38	7	5	4	2024-07-11 05:22:45	0	1
+39	8	14	24	2024-07-11 05:23:13	0	0
+40	8	3	3	2024-07-11 05:23:18	0	1
+41	8	5	5	2024-07-11 05:23:18	0	1
+42	8	5	4	2024-07-11 05:23:18	0	1
+43	9	14	25	2024-07-11 05:23:23	0	0
+44	9	3	3	2024-07-11 05:23:26	0	1
+45	9	5	6	2024-07-11 05:23:26	0	1
+46	9	7	12	2024-07-11 05:23:44	0	0
+47	9	11	14	2024-07-11 05:23:49	0	0
+48	9	13	16	2024-07-11 05:23:51	0	0
+49	10	14	26	2024-07-11 05:23:57	0	0
+50	10	3	3	2024-07-11 05:24:00	0	1
+51	10	5	5	2024-07-11 05:24:00	0	1
+52	10	5	4	2024-07-11 05:24:00	0	1
+53	11	14	27	2024-07-11 05:24:33	0	0
+54	11	3	3	2024-07-11 05:24:38	0	1
+55	11	5	5	2024-07-11 05:24:38	0	1
+56	11	5	4	2024-07-11 05:24:38	0	1
+57	12	14	28	2024-07-11 05:24:44	0	0
+58	12	3	3	2024-07-11 05:24:47	0	1
+59	12	5	5	2024-07-11 05:24:47	0	1
+60	12	5	4	2024-07-11 05:24:47	0	1
+61	13	14	29	2024-07-11 05:25:09	0	0
+62	13	3	3	2024-07-11 05:25:13	0	1
+63	13	5	5	2024-07-11 05:25:13	0	1
+64	13	5	4	2024-07-11 05:25:13	0	1
+65	14	14	30	2024-07-11 05:26:01	0	0
+66	14	3	3	2024-07-11 05:26:04	0	1
+67	14	5	5	2024-07-11 05:26:04	0	1
+68	14	5	4	2024-07-11 05:26:04	0	1
+69	15	14	31	2024-07-11 05:26:10	0	0
+70	15	3	3	2024-07-11 05:26:12	0	1
+71	15	5	5	2024-07-11 05:26:12	0	1
+72	15	5	4	2024-07-11 05:26:12	0	1
+73	15	7	12	2024-07-11 05:26:29	0	0
+74	15	11	14	2024-07-11 05:26:34	0	0
+75	16	14	32	2024-07-11 05:26:40	0	0
+76	16	3	3	2024-07-11 05:26:43	0	1
+77	16	5	5	2024-07-11 05:26:43	0	1
+78	16	5	4	2024-07-11 05:26:43	0	1
+79	17	14	33	2024-07-11 05:26:49	0	0
+80	17	3	3	2024-07-11 05:26:52	0	1
+81	17	5	5	2024-07-11 05:26:52	0	1
+82	17	5	4	2024-07-11 05:26:52	0	1
+83	17	7	11	2024-07-11 05:27:10	0	0
+84	17	11	13	2024-07-11 05:27:15	0	0
+85	17	13	15	2024-07-11 05:27:17	0	0
+86	18	14	34	2024-07-11 05:28:07	0	0
+87	18	3	3	2024-07-11 05:28:10	0	1
+88	18	5	5	2024-07-11 05:28:10	0	1
+89	18	5	4	2024-07-11 05:28:10	0	1
+90	19	14	35	2024-07-11 05:28:20	0	0
+91	19	3	3	2024-07-11 05:28:23	0	1
+92	19	5	6	2024-07-11 05:28:23	0	1
+93	19	7	12	2024-07-11 05:28:41	0	0
 \.
 
 
@@ -7691,12 +7691,12 @@ COPY public.subeditor_submission_group (context_id, assoc_id, assoc_type, user_i
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	7	10	8		<p>Here are my review comments</p>	2024-07-10 05:27:37	\N	1
-2	1	4096	10	15	9		<p>Here are my review comments</p>	2024-07-10 05:28:49	\N	1
-3	1	4096	10	16	10		<p>Here are my review comments</p>	2024-07-10 05:28:55	\N	1
-4	1	4096	13	19	7		<p>Here are my review comments</p>	2024-07-10 05:30:09	\N	1
-5	1	4096	13	20	9		<p>Here are my review comments</p>	2024-07-10 05:30:15	\N	1
-6	1	4096	13	21	10		<p>Here are my review comments</p>	2024-07-10 05:30:21	\N	1
+1	1	4096	7	10	8		<p>Here are my review comments</p>	2024-07-11 05:23:07	\N	1
+2	1	4096	10	15	9		<p>Here are my review comments</p>	2024-07-11 05:24:19	\N	1
+3	1	4096	10	16	10		<p>Here are my review comments</p>	2024-07-11 05:24:26	\N	1
+4	1	4096	13	19	7		<p>Here are my review comments</p>	2024-07-11 05:25:37	\N	1
+5	1	4096	13	20	9		<p>Here are my review comments</p>	2024-07-11 05:25:43	\N	1
+6	1	4096	13	21	10		<p>Here are my review comments</p>	2024-07-11 05:25:49	\N	1
 \.
 
 
@@ -7765,27 +7765,27 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	1	2	\N	\N	\N	2024-07-10 05:23:06	2024-07-10 05:23:06	17	\N	\N
-2	1	2	\N	1	10	\N	\N	\N	2024-07-10 05:23:52	2024-07-10 05:23:52	3	521	1
-3	2	3	\N	1	2	\N	\N	\N	2024-07-10 05:25:04	2024-07-10 05:25:04	18	\N	\N
-4	3	4	\N	1	2	\N	\N	\N	2024-07-10 05:25:29	2024-07-10 05:25:29	19	\N	\N
-5	4	5	\N	1	2	\N	\N	\N	2024-07-10 05:25:57	2024-07-10 05:25:57	20	\N	\N
-6	5	6	\N	1	2	\N	\N	\N	2024-07-10 05:26:08	2024-07-10 05:26:08	21	\N	\N
-7	6	7	\N	1	2	\N	\N	\N	2024-07-10 05:26:41	2024-07-10 05:26:41	22	\N	\N
-8	7	8	\N	1	2	\N	\N	\N	2024-07-10 05:27:13	2024-07-10 05:27:13	23	\N	\N
-9	8	9	\N	1	2	\N	\N	\N	2024-07-10 05:27:43	2024-07-10 05:27:44	24	\N	\N
-10	9	10	\N	1	2	\N	\N	\N	2024-07-10 05:27:54	2024-07-10 05:27:54	25	\N	\N
-11	10	11	\N	1	2	\N	\N	\N	2024-07-10 05:28:28	2024-07-10 05:28:28	26	\N	\N
-12	11	12	\N	1	2	\N	\N	\N	2024-07-10 05:29:02	2024-07-10 05:29:02	27	\N	\N
-13	12	13	\N	1	2	\N	\N	\N	2024-07-10 05:29:13	2024-07-10 05:29:13	28	\N	\N
-14	13	14	\N	1	2	\N	\N	\N	2024-07-10 05:29:43	2024-07-10 05:29:43	29	\N	\N
-15	14	15	\N	1	2	\N	\N	\N	2024-07-10 05:30:34	2024-07-10 05:30:34	30	\N	\N
-16	15	16	\N	1	2	\N	\N	\N	2024-07-10 05:30:42	2024-07-10 05:30:43	31	\N	\N
-17	16	17	\N	1	2	\N	\N	\N	2024-07-10 05:31:13	2024-07-10 05:31:13	32	\N	\N
-18	17	18	\N	1	2	\N	\N	\N	2024-07-10 05:31:21	2024-07-10 05:31:21	33	\N	\N
-19	17	19	\N	1	10	\N	\N	\N	2024-07-10 05:31:52	2024-07-10 05:31:52	3	521	3
-20	18	20	\N	1	2	\N	\N	\N	2024-07-10 05:32:36	2024-07-10 05:32:36	34	\N	\N
-21	19	21	\N	1	2	\N	\N	\N	2024-07-10 05:32:49	2024-07-10 05:32:49	35	\N	\N
+1	1	1	\N	1	2	\N	\N	\N	2024-07-11 05:18:27	2024-07-11 05:18:27	17	\N	\N
+2	1	2	\N	1	10	\N	\N	\N	2024-07-11 05:19:15	2024-07-11 05:19:15	3	521	1
+3	2	3	\N	1	2	\N	\N	\N	2024-07-11 05:20:27	2024-07-11 05:20:27	18	\N	\N
+4	3	4	\N	1	2	\N	\N	\N	2024-07-11 05:20:52	2024-07-11 05:20:53	19	\N	\N
+5	4	5	\N	1	2	\N	\N	\N	2024-07-11 05:21:19	2024-07-11 05:21:19	20	\N	\N
+6	5	6	\N	1	2	\N	\N	\N	2024-07-11 05:21:30	2024-07-11 05:21:31	21	\N	\N
+7	6	7	\N	1	2	\N	\N	\N	2024-07-11 05:22:10	2024-07-11 05:22:10	22	\N	\N
+8	7	8	\N	1	2	\N	\N	\N	2024-07-11 05:22:43	2024-07-11 05:22:43	23	\N	\N
+9	8	9	\N	1	2	\N	\N	\N	2024-07-11 05:23:14	2024-07-11 05:23:14	24	\N	\N
+10	9	10	\N	1	2	\N	\N	\N	2024-07-11 05:23:24	2024-07-11 05:23:24	25	\N	\N
+11	10	11	\N	1	2	\N	\N	\N	2024-07-11 05:23:58	2024-07-11 05:23:58	26	\N	\N
+12	11	12	\N	1	2	\N	\N	\N	2024-07-11 05:24:34	2024-07-11 05:24:34	27	\N	\N
+13	12	13	\N	1	2	\N	\N	\N	2024-07-11 05:24:45	2024-07-11 05:24:45	28	\N	\N
+14	13	14	\N	1	2	\N	\N	\N	2024-07-11 05:25:10	2024-07-11 05:25:10	29	\N	\N
+15	14	15	\N	1	2	\N	\N	\N	2024-07-11 05:26:02	2024-07-11 05:26:02	30	\N	\N
+16	15	16	\N	1	2	\N	\N	\N	2024-07-11 05:26:10	2024-07-11 05:26:11	31	\N	\N
+17	16	17	\N	1	2	\N	\N	\N	2024-07-11 05:26:41	2024-07-11 05:26:41	32	\N	\N
+18	17	18	\N	1	2	\N	\N	\N	2024-07-11 05:26:50	2024-07-11 05:26:50	33	\N	\N
+19	17	19	\N	1	10	\N	\N	\N	2024-07-11 05:27:22	2024-07-11 05:27:22	3	521	3
+20	18	20	\N	1	2	\N	\N	\N	2024-07-11 05:28:08	2024-07-11 05:28:08	34	\N	\N
+21	19	21	\N	1	2	\N	\N	\N	2024-07-11 05:28:21	2024-07-11 05:28:21	35	\N	\N
 \.
 
 
@@ -8129,25 +8129,25 @@ COPY public.submission_tombstones (tombstone_id, submission_id, date_deleted, jo
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-2	1	3	2024-07-10 05:25:19	2024-07-10 05:25:06	2024-07-10 05:25:06	3	en_US	1	0	0
-19	1	20	2024-07-10 05:33:08	2024-07-10 05:32:51	2024-07-10 05:32:51	4	en_US	1	0	0
-6	1	7	2024-07-10 05:27:05	2024-07-10 05:26:43	2024-07-10 05:26:43	5	en_US	1	0	0
-13	1	14	2024-07-10 05:30:27	2024-07-10 05:29:45	2024-07-10 05:29:45	3	en_US	1	0	0
-10	1	11	2024-07-10 05:28:55	2024-07-10 05:28:30	2024-07-10 05:28:30	3	en_US	1	0	0
-3	1	4	2024-07-10 05:25:49	2024-07-10 05:25:31	2024-07-10 05:25:31	4	en_US	1	0	0
-14	1	15	2024-07-10 05:30:37	2024-07-10 05:30:36	2024-07-10 05:30:36	1	en_US	1	0	0
-7	1	8	2024-07-10 05:27:37	2024-07-10 05:27:14	2024-07-10 05:27:14	3	en_US	1	0	0
-11	1	12	2024-07-10 05:29:06	2024-07-10 05:29:06	2024-07-10 05:29:06	1	en_US	1	0	0
-4	1	5	2024-07-10 05:26:01	2024-07-10 05:26:01	2024-07-10 05:26:01	1	en_US	1	0	0
-8	1	9	2024-07-10 05:27:48	2024-07-10 05:27:48	2024-07-10 05:27:48	1	en_US	1	0	0
-1	1	1	2024-07-10 05:24:55	2024-07-10 05:23:08	2024-07-10 05:23:08	5	en_US	3	0	0
-17	1	18	2024-07-10 05:32:27	2024-07-10 05:31:23	2024-07-10 05:31:23	5	en_US	3	0	0
-12	1	13	2024-07-10 05:29:27	2024-07-10 05:29:15	2024-07-10 05:29:15	3	en_US	1	0	0
-5	1	6	2024-07-10 05:26:34	2024-07-10 05:26:10	2024-07-10 05:26:10	5	en_US	1	0	0
-15	1	16	2024-07-10 05:31:06	2024-07-10 05:30:44	2024-07-10 05:30:44	5	en_US	1	0	0
-9	1	10	2024-07-10 05:28:21	2024-07-10 05:27:56	2024-07-10 05:27:56	5	en_US	1	0	0
-16	1	17	2024-07-10 05:31:15	2024-07-10 05:31:15	2024-07-10 05:31:15	1	en_US	1	0	0
-18	1	19	2024-07-10 05:32:43	2024-07-10 05:32:38	2024-07-10 05:32:38	1	en_US	4	0	0
+2	1	3	2024-07-11 05:20:43	2024-07-11 05:20:29	2024-07-11 05:20:29	3	en_US	1	0	0
+19	1	20	2024-07-11 05:28:41	2024-07-11 05:28:23	2024-07-11 05:28:23	4	en_US	1	0	0
+6	1	7	2024-07-11 05:22:35	2024-07-11 05:22:13	2024-07-11 05:22:13	5	en_US	1	0	0
+13	1	14	2024-07-11 05:25:56	2024-07-11 05:25:13	2024-07-11 05:25:13	3	en_US	1	0	0
+10	1	11	2024-07-11 05:24:26	2024-07-11 05:24:00	2024-07-11 05:24:00	3	en_US	1	0	0
+3	1	4	2024-07-11 05:21:12	2024-07-11 05:20:55	2024-07-11 05:20:55	4	en_US	1	0	0
+14	1	15	2024-07-11 05:26:05	2024-07-11 05:26:04	2024-07-11 05:26:04	1	en_US	1	0	0
+7	1	8	2024-07-11 05:23:07	2024-07-11 05:22:45	2024-07-11 05:22:45	3	en_US	1	0	0
+11	1	12	2024-07-11 05:24:38	2024-07-11 05:24:38	2024-07-11 05:24:38	1	en_US	1	0	0
+4	1	5	2024-07-11 05:21:24	2024-07-11 05:21:24	2024-07-11 05:21:24	1	en_US	1	0	0
+8	1	9	2024-07-11 05:23:18	2024-07-11 05:23:18	2024-07-11 05:23:18	1	en_US	1	0	0
+1	1	1	2024-07-11 05:20:18	2024-07-11 05:18:29	2024-07-11 05:18:29	5	en_US	3	0	0
+17	1	18	2024-07-11 05:27:59	2024-07-11 05:26:52	2024-07-11 05:26:52	5	en_US	3	0	0
+12	1	13	2024-07-11 05:24:59	2024-07-11 05:24:47	2024-07-11 05:24:47	3	en_US	1	0	0
+5	1	6	2024-07-11 05:21:57	2024-07-11 05:21:32	2024-07-11 05:21:32	5	en_US	1	0	0
+15	1	16	2024-07-11 05:26:34	2024-07-11 05:26:12	2024-07-11 05:26:12	5	en_US	1	0	0
+9	1	10	2024-07-11 05:23:51	2024-07-11 05:23:26	2024-07-11 05:23:26	5	en_US	1	0	0
+16	1	17	2024-07-11 05:26:44	2024-07-11 05:26:43	2024-07-11 05:26:43	1	en_US	1	0	0
+18	1	19	2024-07-11 05:28:15	2024-07-11 05:28:10	2024-07-11 05:28:10	1	en_US	4	0	0
 \.
 
 
@@ -8381,7 +8381,7 @@ COPY public.user_interests (user_id, controlled_vocab_entry_id) FROM stdin;
 --
 
 COPY public.user_settings (user_id, locale, setting_name, assoc_type, assoc_id, setting_value, setting_type) FROM stdin;
-3	fr_CA	biography	0	0		string
+3	fr_CA	signature	0	0		string
 1	en_US	givenName	0	0	admin	string
 4	en_US	biography	0	0		string
 4	fr_CA	biography	0	0		string
@@ -8421,15 +8421,13 @@ COPY public.user_settings (user_id, locale, setting_name, assoc_type, assoc_id, 
 1	en_US	familyName	0	0	admin	string
 2	fr_CA	biography	0	0		string
 2	en_US	signature	0	0		string
-3	en_US	signature	0	0		string
-3	fr_CA	givenName	0	0		string
 3	en_US	familyName	0	0	Barnes	string
-3	fr_CA	preferredPublicName	0	0		string
+3	fr_CA	biography	0	0		string
 3	fr_CA	familyName	0	0		string
-3	en_US	preferredPublicName	0	0		string
-8	en_US	biography	0	0		string
 3	en_US	biography	0	0		string
-3	fr_CA	signature	0	0		string
+3	en_US	signature	0	0		string
+8	en_US	biography	0	0		string
+3	fr_CA	givenName	0	0		string
 7	en_US	biography	0	0		string
 6	en_US	biography	0	0		string
 9	fr_CA	biography	0	0		string
@@ -8445,7 +8443,6 @@ COPY public.user_settings (user_id, locale, setting_name, assoc_type, assoc_id, 
 6	en_US	preferredPublicName	0	0		string
 6	fr_CA	preferredPublicName	0	0		string
 6		orcid	0	0		string
-3	en_US	givenName	0	0	Daniel	string
 8	fr_CA	biography	0	0		string
 8	en_US	signature	0	0		string
 8	fr_CA	signature	0	0		string
@@ -8457,10 +8454,8 @@ COPY public.user_settings (user_id, locale, setting_name, assoc_type, assoc_id, 
 8	en_US	preferredPublicName	0	0		string
 8	fr_CA	preferredPublicName	0	0		string
 8		orcid	0	0		string
-3		orcid	0	0		string
 9	en_US	signature	0	0		string
 9	fr_CA	signature	0	0		string
-3	fr_CA	affiliation	0	0		string
 7	fr_CA	biography	0	0		string
 7	en_US	signature	0	0		string
 7	fr_CA	signature	0	0		string
@@ -8622,19 +8617,24 @@ COPY public.user_settings (user_id, locale, setting_name, assoc_type, assoc_id, 
 31	en_US	affiliation	0	0	University of Nairobi	string
 31	en_US	givenName	0	0	Rana	string
 31	en_US	familyName	0	0	Baiyewu	string
-34	en_US	affiliation	0	0	University of Windsor	string
+35	en_US	givenName	0	0	Zita	string
 32	en_US	affiliation	0	0	Barcelona University	string
 32	en_US	givenName	0	0	Rosanna	string
 32	en_US	familyName	0	0	Rossi	string
 33	en_US	affiliation	0	0	University of Tehran	string
 33	en_US	givenName	0	0	Vajiheh	string
 33	en_US	familyName	0	0	Karbasizaed	string
+34	en_US	affiliation	0	0	University of Windsor	string
 34	en_US	givenName	0	0	Valerie	string
-34	en_US	familyName	0	0	Williamson	string
-35	en_US	affiliation	0	0	CUNY	string
-35	en_US	givenName	0	0	Zita	string
 35	en_US	familyName	0	0	Woods	string
+3	fr_CA	affiliation	0	0		string
+34	en_US	familyName	0	0	Williamson	string
+3	en_US	givenName	0	0	Daniel	string
+3	en_US	preferredPublicName	0	0		string
+35	en_US	affiliation	0	0	CUNY	string
 3	en_US	affiliation	0	0	University of Melbourne	string
+3	fr_CA	preferredPublicName	0	0		string
+3		orcid	0	0		string
 \.
 
 
@@ -8706,41 +8706,41 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-19	ckwantes	$2y$10$IkVMT7aWWUNi/auV8n2htu0EUFKqBBO/evMy.SpW/d2yEErXgIBva	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-07-10 05:25:26	\N	2024-07-10 05:25:27	0	\N	\N	0	\N	1
-20	cmontgomerie	$2y$10$LtJ8Flkp6jWl5cQ84oSVJertaeU728htbAH9SAp8MDBIS4EuH3UJm	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-07-10 05:25:54	\N	2024-07-10 05:25:54	0	\N	\N	0	\N	1
-4	dbuskins	$2y$10$aL.qKshooOvf/QlUr8FmUuQYl5rGA0W/vwBocQCssU0bkoa84Aj3S	dbuskins@mailinator.com				\N	US		\N	\N	2024-07-10 05:21:10	\N	2024-07-10 05:21:10	0	\N	\N	0	\N	1
-5	sberardo	$2y$10$Wyo4BVV9m4lImJ/4elHME.V38QJTpD3nNsrWekSdCJDJ2K5afi6GK	sberardo@mailinator.com				\N	CA		\N	\N	2024-07-10 05:21:16	\N	2024-07-10 05:21:16	0	\N	\N	0	\N	1
-11	mfritz	$2y$10$TRWbJaXUUOTs7tg3Bv5tXOq5G3UZmkgRK1D2ixnUgxj29JqLb2N9e	mfritz@mailinator.com				\N	BE		\N	\N	2024-07-10 05:21:54	\N	2024-07-10 05:21:54	0	\N	\N	0	\N	1
-12	svogt	$2y$10$lI1P6TnEbxBvbBygfuIXYeL/RaqdbNrwZiIOyfF9y36Yj6gyIJ1lm	svogt@mailinator.com				\N	CL		\N	\N	2024-07-10 05:22:01	\N	2024-07-10 05:22:01	0	\N	\N	0	\N	1
-13	gcox	$2y$10$uXsHvye.lKiJiYtQcGtVE.RVee4VWG90gTA4u1TG0sh4eVJZJk68u	gcox@mailinator.com				\N	US		\N	\N	2024-07-10 05:22:08	\N	2024-07-10 05:22:08	0	\N	\N	0	\N	1
-14	shellier	$2y$10$Kr9OsRLYAMFVrYHlJ8lQv.Z9dljflRCh1ot3JnX.OIt3E38Wbytni	shellier@mailinator.com				\N	ZA		\N	\N	2024-07-10 05:22:16	\N	2024-07-10 05:22:16	0	\N	\N	0	\N	1
-15	cturner	$2y$10$Rv9kROnh94QNkuuNcJ4.jelCv2wubPIvTaf8i2hQeJ6pwD/3Gs9a2	cturner@mailinator.com				\N	GB		\N	\N	2024-07-10 05:22:25	\N	2024-07-10 05:22:25	0	\N	\N	0	\N	1
-16	skumar	$2y$10$dZgs14X9GZUGy9atlVLvw.l5PjfL8US7M85.ZHVGVY4P40kXFCq/O	skumar@mailinator.com				\N	SG		\N	\N	2024-07-10 05:22:34	\N	2024-07-10 05:22:34	0	\N	\N	0	\N	1
-21	ddiouf	$2y$10$q4YQXpEBP9DaqIwdBYc6weOMCySkIIgCyhVlmN7q335Lq6q0sJFsC	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2024-07-10 05:26:05	\N	2024-07-10 05:26:05	0	\N	\N	0	\N	1
-2	rvaca	$2y$10$2apgBsrYzQpMRXV6gKwVue5pUpEI1G3/0F/vmF3QcUrOr04YF0pEW	rvaca@mailinator.com				\N	MX		\N	\N	2024-07-10 05:21:00	\N	2024-07-10 05:22:39	0	\N	\N	0	\N	1
-27	kalkhafaji	$2y$10$MLPyDM2rjuaZUl8H3zI82uXNoxmXZiSRYIv5GKtUjPGyN8T2XC2TS	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-07-10 05:28:59	\N	2024-07-10 05:29:00	0	\N	\N	0	\N	1
-1	admin	$2y$10$Nt0omMsDhhY/gcMtbGw0SO8MfmKZeblILEHYJpNmsAMEVUCKOWWDK	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2024-07-10 05:20:20	\N	2024-07-10 05:22:52	0	\N	\N	0	\N	1
-22	dphillips	$2y$10$tR979z6sqWDULQW/ubbRbu.7p13He90TjMLOg2O/5ZNU3U.Rx5R3y	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-07-10 05:26:38	\N	2024-07-10 05:26:38	0	\N	\N	0	\N	1
-23	dsokoloff	$2y$10$CyKHy8HtycK3826GIFzMmO00RNhveJwtoBrlESEpAJcoMEVaB5Lpe	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2024-07-10 05:27:10	\N	2024-07-10 05:27:10	0	\N	\N	0	\N	1
-17	amwandenga	$2y$10$ib24jyieeqpqFE70NBxEAejlOa0OUFiZCwvP.1C.Db3.s6Csed8U.	amwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2024-07-10 05:23:03	\N	2024-07-10 05:24:01	0	\N	\N	0	\N	1
-28	lchristopher	$2y$10$IIzIIXeMFEROF7zKH4nf8.zjhgk.OVTx3D/4jJYDAKa.sXWoPJ33u	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2024-07-10 05:29:10	\N	2024-07-10 05:29:10	0	\N	\N	0	\N	1
-8	phudson	$2y$10$mETRbIo1yfx6dZM2F7mGdOfmde3F/M9yqBfB5Z5rOEodikrE7K.ga	phudson@mailinator.com				\N	CA		\N	\N	2024-07-10 05:21:33	\N	2024-07-10 05:27:32	0	\N	\N	0	\N	1
-24	eostrom	$2y$10$NsuQiZUTCpMUBaozZB08Yuov4I/v9OSpZM6aIVHBsCr4pa32gk3LO	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-07-10 05:27:41	\N	2024-07-10 05:27:41	0	\N	\N	0	\N	1
-25	fpaglieri	$2y$10$JXbX4doYt/vFIM5CwvukT.XQykPlFe3DjiIMeioFG/iuLiBdhB02i	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2024-07-10 05:27:51	\N	2024-07-10 05:27:52	0	\N	\N	0	\N	1
-18	ccorino	$2y$10$UKThj2oO3/0zrlOLUnkZEuIH.WfDGKUZApd6RW98vOzDGUDegiUey	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2024-07-10 05:25:01	\N	2024-07-10 05:25:01	0	\N	\N	0	\N	1
-6	minoue	$2y$10$n8KCNmTN4bvasYD.V9xrpeQtU4BHCNWWzvpQb5iulgAjH.lH3xIsi	minoue@mailinator.com				\N	JP		\N	\N	2024-07-10 05:21:21	\N	2024-07-10 05:25:17	0	\N	\N	0	\N	1
-26	jnovak	$2y$10$QVENrhG5aJnuOhhoZTpBB.aFb/s6RUFpQ3HnQHKXdEOFMcJY29i9S	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2024-07-10 05:28:25	\N	2024-07-10 05:28:25	0	\N	\N	0	\N	1
-32	rrossi	$2y$10$Nu5oF0vhF/QVHWWAQ5njTOcz5p1CB0WzwdnjTbGolGbuvG80M2wV6	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2024-07-10 05:31:10	\N	2024-07-10 05:31:10	0	\N	\N	0	\N	1
-33	vkarbasizaed	$2y$10$Y9skF2POPh2Q3.w4/llMq.z.CS9KZG/qa4IMZ4QSV5Dc646SRv/d.	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2024-07-10 05:31:19	\N	2024-07-10 05:31:19	0	\N	\N	0	\N	1
-29	lkumiega	$2y$10$CqijMMgPVbl2LTe8ZEWwleW.MDEmu5OOrztODGJlirbI2qfp4MEv.	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2024-07-10 05:29:40	\N	2024-07-10 05:29:40	0	\N	\N	0	\N	1
-34	vwilliamson	$2y$10$0B9f92dCFtfkafJF3XEOEOQNnCvXpAQL4AVktNoMXAIqyGx2F2JnK	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-07-10 05:32:34	\N	2024-07-10 05:32:34	0	\N	\N	0	\N	1
-7	jjanssen	$2y$10$dC9U04W2V2lutnESYLcYUup.Bknek1X..Z33uF2WQl9TuSa0L0zxG	jjanssen@mailinator.com				\N	NL		\N	\N	2024-07-10 05:21:27	\N	2024-07-10 05:30:04	0	\N	\N	0	\N	1
-9	amccrae	$2y$10$xlQ.rwh6mM17KDvkF86wvuNqwRcLJ.LwUqbX7sR2s5JM5wRZOjHZC	amccrae@mailinator.com				\N	CA		\N	\N	2024-07-10 05:21:40	\N	2024-07-10 05:30:09	0	\N	\N	0	\N	1
-10	agallego	$2y$10$0B4GFStWx92Ib0OIQgcVZOv8M.NQX.DcBd9LHEddjfnlGXVjFvfla	agallego@mailinator.com				\N	US		\N	\N	2024-07-10 05:21:47	\N	2024-07-10 05:30:16	0	\N	\N	0	\N	1
-30	pdaniel	$2y$10$nrLnNIaBSe93ZyngW8o8yOAqgbuRihnEUp49Fx3HnuQggL9QAagOq	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2024-07-10 05:30:31	\N	2024-07-10 05:30:32	0	\N	\N	0	\N	1
-31	rbaiyewu	$2y$10$pnIAXJBon393YBOXqy4uEu0Uu8S5lZ6AxsJhhLAigAg6jeuKz2PxG	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2024-07-10 05:30:40	\N	2024-07-10 05:30:40	0	\N	\N	0	\N	1
-35	zwoods	$2y$10$6Iln3QOx77cQYhc8peZvGOGqp35wQXBca1h7Vxto7bAt5Bpx7iQNO	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-07-10 05:32:46	\N	2024-07-10 05:32:46	0	\N	\N	0	\N	1
-3	dbarnes	$2y$10$UVAMmYKD7oujGcpNZLkoMOvTOpxotcjprD0s0gcos82yxojkc2EQa	dbarnes@mailinator.com				\N	AU		\N	\N	2024-07-10 05:21:05	\N	2024-07-10 05:32:51	0	\N	\N	0	\N	1
+19	ckwantes	$2y$10$PLzQnjl026b55oGxGtlWV.JIpabmhE/4VubzTp4PnVGbYyuQpC6F2	ckwantes@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-07-11 05:20:50	\N	2024-07-11 05:20:50	0	\N	\N	0	\N	1
+20	cmontgomerie	$2y$10$OCu64PrVTZ9i8fWvOi8EPuzYaAGO5NsmQOXyLY/Py8R4p7nOUHWem	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-07-11 05:21:17	\N	2024-07-11 05:21:17	0	\N	\N	0	\N	1
+4	dbuskins	$2y$10$Te3TR7l/FtSSQDmt5vCw7.YSPH5Bdca5Z3/AjyJythnmwanDYsf/O	dbuskins@mailinator.com				\N	US		\N	\N	2024-07-11 05:16:32	\N	2024-07-11 05:16:32	0	\N	\N	0	\N	1
+5	sberardo	$2y$10$T25C/cVIqrtthZPXWv6um.XHzJHBUiHO2SOeXUCggnW3Pg/Ozbbuq	sberardo@mailinator.com				\N	CA		\N	\N	2024-07-11 05:16:37	\N	2024-07-11 05:16:37	0	\N	\N	0	\N	1
+11	mfritz	$2y$10$F/XswgrApBf75Kqk4wNPLueUKYtpHLVZXquisrxEekbH26rxYS7Ve	mfritz@mailinator.com				\N	BE		\N	\N	2024-07-11 05:17:16	\N	2024-07-11 05:17:16	0	\N	\N	0	\N	1
+12	svogt	$2y$10$968pYXxBWQzlKARuAv5wA.7AQFNNv1JbEMhNq2q526q8zLzijFHpm	svogt@mailinator.com				\N	CL		\N	\N	2024-07-11 05:17:24	\N	2024-07-11 05:17:24	0	\N	\N	0	\N	1
+13	gcox	$2y$10$awJC0j7KovJxsFHzZCKHHeGNfApibAm1uIfQ9qogRC5j6rqhMOvYS	gcox@mailinator.com				\N	US		\N	\N	2024-07-11 05:17:31	\N	2024-07-11 05:17:31	0	\N	\N	0	\N	1
+14	shellier	$2y$10$xKr9bxZHQ8Pe.I4USgXQ9eSWU0W7nba0kQVDJsE6Dej1IZS9pH6h6	shellier@mailinator.com				\N	ZA		\N	\N	2024-07-11 05:17:40	\N	2024-07-11 05:17:40	0	\N	\N	0	\N	1
+15	cturner	$2y$10$.V0OfXxlDuqyTqi6EgKsvu.9AdQAiJGtMYV1Qa/hsJeOD4q3tBUAu	cturner@mailinator.com				\N	GB		\N	\N	2024-07-11 05:17:48	\N	2024-07-11 05:17:48	0	\N	\N	0	\N	1
+16	skumar	$2y$10$S5AIm1Cj1kNepdfYhgFH2.RQhB.o/VKac5lNbUqC9wLNkXqvLN222	skumar@mailinator.com				\N	SG		\N	\N	2024-07-11 05:17:57	\N	2024-07-11 05:17:57	0	\N	\N	0	\N	1
+21	ddiouf	$2y$10$HzA8FdqkmDmH1bU5amOfs.Jr9GwhURT/UCNkEzbgtaP.sayKT96p2	ddiouf@mailinator.com	\N	\N	\N	\N	EG		\N	\N	2024-07-11 05:21:28	\N	2024-07-11 05:21:28	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$YgBrBSZ8YNkKXr92B/bnmemMTbhTaHCKCBiWxBjIznX28wBPnl5cS	rvaca@mailinator.com				\N	MX		\N	\N	2024-07-11 05:16:22	\N	2024-07-11 05:18:03	0	\N	\N	0	\N	1
+27	kalkhafaji	$2y$10$sHyuRjCcHZ7nyh9GTqBxzOzifdMffEEYDkpia19/WQMurK6ciTwLK	kalkhafaji@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-07-11 05:24:31	\N	2024-07-11 05:24:32	0	\N	\N	0	\N	1
+1	admin	$2y$10$4.G1Vr7/eM7xDl4CJ35Ed.pD7kl911wSFGLBTTBpEINSeSv.XXDAC	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2024-07-11 05:15:42	\N	2024-07-11 05:18:14	0	\N	\N	0	\N	1
+22	dphillips	$2y$10$7nbW32668bDGOb.yaUEcMORqLGObtkq9Oei6aPSptU9zjTVJNN4/S	dphillips@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-07-11 05:22:08	\N	2024-07-11 05:22:08	0	\N	\N	0	\N	1
+23	dsokoloff	$2y$10$qQ3YbggbB6tOdkYMEYwXVetAaLbB8q/0rF8ZjnSiy8kpNvi9EjSkG	dsokoloff@mailinator.com	\N	\N	\N	\N	IE		\N	\N	2024-07-11 05:22:40	\N	2024-07-11 05:22:40	0	\N	\N	0	\N	1
+17	amwandenga	$2y$10$JtqUZuKgBaOQ28q.NEcPP.rOrDFew9qmULw7U8GqGlhs8s67uYc6m	amwandenga@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2024-07-11 05:18:24	\N	2024-07-11 05:19:24	0	\N	\N	0	\N	1
+28	lchristopher	$2y$10$flUpKX22ToojuKs9CsDsxe24FQA8C/idatl9Rzbf5zyRlSNT4Z74S	lchristopher@mailinator.com	\N	\N	\N	\N	AU		\N	\N	2024-07-11 05:24:42	\N	2024-07-11 05:24:42	0	\N	\N	0	\N	1
+8	phudson	$2y$10$8uVg5/yYlD0/yDnaMLjkKu59h6P6k1JgAfjVOIisZAU3nTCmg5SoK	phudson@mailinator.com				\N	CA		\N	\N	2024-07-11 05:16:55	\N	2024-07-11 05:23:03	0	\N	\N	0	\N	1
+24	eostrom	$2y$10$xPBj3hAQbQ7M1B2BRlcZOezEY.Dt5pmd8klCnRehmisbv.7.plZRi	eostrom@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-07-11 05:23:11	\N	2024-07-11 05:23:11	0	\N	\N	0	\N	1
+25	fpaglieri	$2y$10$8qxQ9twtEAEPdCg7sLJo8.4DBIK2DrC334x.9ietcvhYXs3VMR7oy	fpaglieri@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2024-07-11 05:23:22	\N	2024-07-11 05:23:22	0	\N	\N	0	\N	1
+18	ccorino	$2y$10$bqAX1Dr2QwNyjZMC6h4cWeYyEk9/.7bajs9vOw0yccxjOtPV3wuea	ccorino@mailinator.com	\N	\N	\N	\N	IT		\N	\N	2024-07-11 05:20:24	\N	2024-07-11 05:20:25	0	\N	\N	0	\N	1
+6	minoue	$2y$10$x5uy91mixma8f..9gkXHOOj6pPG8ilriTNjExc5kLSbVunNXuG29u	minoue@mailinator.com				\N	JP		\N	\N	2024-07-11 05:16:43	\N	2024-07-11 05:20:40	0	\N	\N	0	\N	1
+26	jnovak	$2y$10$oH4MAFTgWxqeU8bbWWiGsOsCMtYuVGt00dZcpn46lCMwotTftcbSa	jnovak@mailinator.com	\N	\N	\N	\N	DK		\N	\N	2024-07-11 05:23:55	\N	2024-07-11 05:23:55	0	\N	\N	0	\N	1
+32	rrossi	$2y$10$xaaYPJmMKJhPjD8h5Ms3IOlkhFEpT4SmQeQBU4Gm/N0l71Cl.pdwS	rrossi@mailinator.com	\N	\N	\N	\N	ES		\N	\N	2024-07-11 05:26:38	\N	2024-07-11 05:26:39	0	\N	\N	0	\N	1
+33	vkarbasizaed	$2y$10$e9kSjURavuwmmuOn8Cz1iurDi72FPJcSnlpySEnepVEj2mkVOWWly	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR		\N	\N	2024-07-11 05:26:47	\N	2024-07-11 05:26:48	0	\N	\N	0	\N	1
+29	lkumiega	$2y$10$0MbQS/q5Whej7kkjF.fPvueyDXgBYUfmi9CZL9JYZt/6Op.wDBk0S	lkumiega@mailinator.com	\N	\N	\N	\N	ZA		\N	\N	2024-07-11 05:25:07	\N	2024-07-11 05:25:08	0	\N	\N	0	\N	1
+34	vwilliamson	$2y$10$XUo4i/UXMbc5iP0/FfZQ4ut4/.UNFD2RCqEmC7ZDRwiNYTafaG2.O	vwilliamson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2024-07-11 05:28:05	\N	2024-07-11 05:28:06	0	\N	\N	0	\N	1
+7	jjanssen	$2y$10$vqogl7CeUcA8ITpdV6X00OjvjNQb.56naRWMD1IIpSlbd.0ZqS2Aa	jjanssen@mailinator.com				\N	NL		\N	\N	2024-07-11 05:16:49	\N	2024-07-11 05:25:32	0	\N	\N	0	\N	1
+9	amccrae	$2y$10$WiqwrRD10us7RJ1y8ywmTekiLnWZ1.R5OEyppPFlhrOM1ABNn7axu	amccrae@mailinator.com				\N	CA		\N	\N	2024-07-11 05:17:02	\N	2024-07-11 05:25:37	0	\N	\N	0	\N	1
+10	agallego	$2y$10$01UBom4r.cOsLp/PVJGjS.Oj6bvhfVxE1jK8aAHiYZNeeSsGs0F4q	agallego@mailinator.com				\N	US		\N	\N	2024-07-11 05:17:09	\N	2024-07-11 05:25:43	0	\N	\N	0	\N	1
+30	pdaniel	$2y$10$bF6fxYhrJ63HajiykNjk1OhKLPZaPBjFSOkKPnGf70fWMKV70hSxq	pdaniel@mailinator.com	\N	\N	\N	\N	GB		\N	\N	2024-07-11 05:25:59	\N	2024-07-11 05:26:00	0	\N	\N	0	\N	1
+31	rbaiyewu	$2y$10$kUj3y4XAiyibQg7bVlCGMOh.MeHxx3c0vkXdH/4byHh2rvwxPkxs.	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE		\N	\N	2024-07-11 05:26:08	\N	2024-07-11 05:26:08	0	\N	\N	0	\N	1
+35	zwoods	$2y$10$Yun0Ocomp643ubK86hQFNeiwgJGBmHoa0.tI0MvA8.fiE7D0z/NeC	zwoods@mailinator.com	\N	\N	\N	\N	US		\N	\N	2024-07-11 05:28:19	\N	2024-07-11 05:28:19	0	\N	\N	0	\N	1
+3	dbarnes	$2y$10$cl1QZjjOiQC70UCltPf9SewMhC4wsoqBIdNEUB8bnLaxQPtr2Wpr2	dbarnes@mailinator.com				\N	AU		\N	\N	2024-07-11 05:16:27	\N	2024-07-11 05:28:24	0	\N	\N	0	\N	1
 \.
 
 
@@ -8749,55 +8749,55 @@ COPY public.users (user_id, username, password, email, url, phone, mailing_addre
 --
 
 COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2024-07-10 05:20:20	1	plugins.metadata	dc11		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.auth	ldap		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.blocks	information	InformationBlockPlugin	1	0
-1	0	1	0	2024-07-10 05:20:20	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	1	0	0	2024-07-10 05:20:20	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.gateways	resolver		0	0
-1	0	1	0	2024-07-10 05:20:20	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
-1	0	0	0	2024-07-10 05:20:20	1	plugins.generic	driver	DRIVERPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
-1	0	0	0	2024-07-10 05:20:20	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-1	0	0	0	2024-07-10 05:20:20	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	2	0	0	2024-07-10 05:20:20	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	1	3	14	2024-07-10 05:20:20	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	1	0	0	2024-07-10 05:20:20	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
-0	1	0	0	2024-07-10 05:20:20	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-1	0	1	0	2024-07-10 05:20:20	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.generic	usageEvent		0	0
-1	2	0	0	2024-07-10 05:20:20	1	plugins.generic	acron	AcronPlugin	1	1
-1	2	0	0	2024-07-10 05:20:20	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.importexport	pubmed		0	0
-2	1	0	0	2024-07-10 05:20:20	1	plugins.importexport	crossref		0	0
-1	1	0	0	2024-07-10 05:20:20	1	plugins.importexport	doaj		0	0
-2	0	0	0	2024-07-10 05:20:20	1	plugins.importexport	datacite		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.importexport	native		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.importexport	users		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.oaiMetadataFormats	marcxml		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.oaiMetadataFormats	marc		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.oaiMetadataFormats	rfc1807		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.paymethod	paypal		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.paymethod	manual		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.reports	views		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.reports	articles		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.reports	subscriptions		0	0
-2	0	0	0	2024-07-10 05:20:20	1	plugins.reports	reviewReport		0	0
-1	0	0	0	2024-07-10 05:20:20	1	plugins.themes	default	DefaultThemePlugin	1	0
-3	3	0	17	2024-07-10 05:20:19	1	core	ojs2		0	1
-1	1	0	0	2024-07-10 05:20:20	1	plugins.reports	counterReport		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.metadata	dc11		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.auth	ldap		0	0
+1	0	1	0	2024-07-11 05:15:43	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.blocks	information	InformationBlockPlugin	1	0
+1	1	0	0	2024-07-11 05:15:43	1	plugins.blocks	subscription	SubscriptionBlockPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.gateways	resolver		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+1	1	0	0	2024-07-11 05:15:43	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.generic	usageEvent		0	0
+0	1	0	0	2024-07-11 05:15:43	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	2	0	0	2024-07-11 05:15:43	1	plugins.generic	acron	AcronPlugin	1	1
+1	0	0	0	2024-07-11 05:15:43	1	plugins.generic	recommendBySimilarity	RecommendBySimilarityPlugin	1	1
+1	0	1	0	2024-07-11 05:15:43	1	plugins.generic	lensGalley	LensGalleyPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.generic	htmlArticleGalley	HtmlArticleGalleyPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.generic	announcementFeed	AnnouncementFeedPlugin	1	0
+1	1	3	14	2024-07-11 05:15:43	1	plugins.generic	orcidProfile	OrcidProfilePlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.generic	recommendByAuthor	RecommendByAuthorPlugin	1	1
+1	0	1	0	2024-07-11 05:15:43	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	2	0	0	2024-07-11 05:15:43	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+1	2	0	0	2024-07-11 05:15:43	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.generic	driver	DRIVERPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.importexport	native		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.importexport	pubmed		0	0
+2	0	0	0	2024-07-11 05:15:43	1	plugins.importexport	datacite		0	0
+1	1	0	0	2024-07-11 05:15:43	1	plugins.importexport	doaj		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.importexport	users		0	0
+2	1	0	0	2024-07-11 05:15:43	1	plugins.importexport	crossref		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.oaiMetadataFormats	marc		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.oaiMetadataFormats	rfc1807		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.oaiMetadataFormats	marcxml		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.paymethod	manual		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.paymethod	paypal		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.pubIds	urn	URNPubIdPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.pubIds	doi	DOIPubIdPlugin	1	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.reports	articles		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.reports	views		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.reports	subscriptions		0	0
+2	0	0	0	2024-07-11 05:15:43	1	plugins.reports	reviewReport		0	0
+1	0	0	0	2024-07-11 05:15:43	1	plugins.themes	default	DefaultThemePlugin	1	0
+3	3	0	17	2024-07-11 05:15:42	1	core	ojs2		0	1
+1	1	0	0	2024-07-11 05:15:43	1	plugins.reports	counterReport		0	0
 \.
 
 
