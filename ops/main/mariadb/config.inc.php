@@ -26,7 +26,7 @@
 
 ; An application specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:UPvSK6Ed72Ma14ZODi6+m6aDTanK9fZdnaLQ83yzPAI="
+app_key = "base64:DaO3rZJJ1eWwn3XI2t0M2/gLwyfSktouvTNWuiOgcoI="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -571,6 +571,11 @@ job_runner_max_execution_time = 30
 ; When setting a fixed value in megabytes, this should be less than the
 ; memory_limit the server has configured for PHP.
 job_runner_max_memory = 80
+
+; Controls whether queued jobs should be processed by the task scheduler.
+; This setting has no effect when the job_runner and the [schedule].task_runner are enabled,
+; on this situation the jobs will be processed solely by the job runner.
+process_jobs_at_task_scheduler = Off
 
 ; Remove failed jobs from the database after the following number of days.
 ; Remove this setting to leave failed jobs in the database.
