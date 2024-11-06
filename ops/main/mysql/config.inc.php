@@ -26,7 +26,7 @@
 
 ; An application specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:0SCRcy9oUaaiHrQvQ3PZ5IoE5I1nDc3XgtbchN3WhA4="
+app_key = "base64:RHh1xpk2jYYHn0fwMlJLjez6YeG0sDxyCCE34vZQfrw="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -309,17 +309,17 @@ allowed_title_html = "b,i,u,sup,sub"
 
 ; Default method to send emails
 ; Available options: sendmail, smtp, log, phpmailer
-default = sendmail
+default = smtp
 
 ; Path to the sendmail, -bs argument is for using SMTP protocol
 sendmail_path = "/usr/sbin/sendmail -bs"
 
 ; Use SMTP for sending mail instead of mail()
-; smtp = On
+smtp = On
 
 ; SMTP server settings
-; smtp_server = mail.example.com
-; smtp_port = 25
+smtp_server = localhost
+smtp_port = 1025
 
 ; Enable SMTP authentication
 ; Supported smtp_auth: ssl, tls (see PHPMailer SMTPSecure)
