@@ -2,8 +2,8 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 14.13 (Ubuntu 14.13-1.pgdg22.04+1)
--- Dumped by pg_dump version 14.13 (Ubuntu 14.13-1.pgdg22.04+1)
+-- Dumped from database version 14.14 (Ubuntu 14.14-1.pgdg22.04+1)
+-- Dumped by pg_dump version 14.14 (Ubuntu 14.14-1.pgdg22.04+1)
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -8387,36 +8387,36 @@ COPY public.dois (doi_id, context_id, doi, status) FROM stdin;
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	\N	1	\N	3	18	2024-11-21 05:23:00
-2	1	1	3	1	3	2	2024-11-21 05:23:09
-3	2	\N	1	\N	3	18	2024-11-21 05:25:12
-4	4	\N	1	\N	3	1	2024-11-21 05:26:49
-5	4	3	2	1	3	3	2024-11-21 05:26:59
-6	4	4	3	1	3	2	2024-11-21 05:27:09
-7	4	\N	4	\N	3	7	2024-11-21 05:27:20
-8	5	\N	1	\N	3	1	2024-11-21 05:28:29
-9	5	5	2	1	3	3	2024-11-21 05:28:40
-10	5	6	3	1	3	2	2024-11-21 05:28:50
-11	5	\N	4	\N	3	7	2024-11-21 05:29:02
-12	6	\N	1	\N	3	1	2024-11-21 05:30:23
-13	6	7	2	1	6	23	2024-11-21 05:30:45
-14	7	\N	1	\N	3	18	2024-11-21 05:31:46
-15	7	8	3	1	3	2	2024-11-21 05:31:58
-16	9	\N	1	\N	3	1	2024-11-21 05:33:08
-17	11	\N	1	\N	3	1	2024-11-21 05:34:53
-18	11	10	2	1	3	3	2024-11-21 05:35:03
-19	11	11	3	1	3	2	2024-11-21 05:35:43
-20	12	\N	1	\N	3	1	2024-11-21 05:36:27
-21	13	\N	1	\N	3	1	2024-11-21 05:37:30
-22	13	13	2	1	3	3	2024-11-21 05:37:40
-23	13	14	3	1	3	2	2024-11-21 05:38:26
-24	14	\N	1	\N	3	1	2024-11-21 05:39:22
-25	14	15	2	1	3	3	2024-11-21 05:39:34
-26	14	16	3	1	3	2	2024-11-21 05:39:45
-27	14	\N	4	\N	3	7	2024-11-21 05:39:58
-28	15	\N	1	\N	3	18	2024-11-21 05:41:27
-29	16	\N	1	\N	3	18	2024-11-21 05:42:23
-30	17	\N	1	\N	3	1	2024-11-21 05:43:52
+1	1	\N	1	\N	3	18	2024-11-22 05:23:18
+2	1	1	3	1	3	2	2024-11-22 05:23:28
+3	2	\N	1	\N	3	18	2024-11-22 05:25:32
+4	4	\N	1	\N	3	1	2024-11-22 05:27:10
+5	4	3	2	1	3	3	2024-11-22 05:27:20
+6	4	4	3	1	3	2	2024-11-22 05:27:30
+7	4	\N	4	\N	3	7	2024-11-22 05:27:42
+8	5	\N	1	\N	3	1	2024-11-22 05:28:50
+9	5	5	2	1	3	3	2024-11-22 05:29:01
+10	5	6	3	1	3	2	2024-11-22 05:29:12
+11	5	\N	4	\N	3	7	2024-11-22 05:29:23
+12	6	\N	1	\N	3	1	2024-11-22 05:30:45
+13	6	7	2	1	6	23	2024-11-22 05:31:07
+14	7	\N	1	\N	3	18	2024-11-22 05:32:08
+15	7	8	3	1	3	2	2024-11-22 05:32:20
+16	9	\N	1	\N	3	1	2024-11-22 05:33:30
+17	11	\N	1	\N	3	1	2024-11-22 05:35:18
+18	11	10	2	1	3	3	2024-11-22 05:35:28
+19	11	11	3	1	3	2	2024-11-22 05:36:08
+20	12	\N	1	\N	3	1	2024-11-22 05:36:53
+21	13	\N	1	\N	3	1	2024-11-22 05:37:56
+22	13	13	2	1	3	3	2024-11-22 05:38:07
+23	13	14	3	1	3	2	2024-11-22 05:38:54
+24	14	\N	1	\N	3	1	2024-11-22 05:39:50
+25	14	15	2	1	3	3	2024-11-22 05:40:02
+26	14	16	3	1	3	2	2024-11-22 05:40:13
+27	14	\N	4	\N	3	7	2024-11-22 05:40:26
+28	15	\N	1	\N	3	18	2024-11-22 05:41:56
+29	16	\N	1	\N	3	18	2024-11-22 05:42:53
+30	17	\N	1	\N	3	1	2024-11-22 05:44:23
 \.
 
 
@@ -8425,135 +8425,135 @@ COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, st
 --
 
 COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
-1	1048585	1	\N	2024-11-21 05:22:52	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/1">The ABCs of Human Survival: A Paradigm for Global Citizenship</a><br />Arthur Clark</p><p><b>Abstract</b></p>The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-2	1048585	1	\N	2024-11-21 05:22:52	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/1</p><p>If you have been logged out, you can login again with the username aclark.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/1">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-3	1048585	1	3	2024-11-21 05:23:00	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been sent for review	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that an editor has reviewed your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-4	1048585	1	3	2024-11-21 05:23:05	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=1">The ABCs of Human Survival: A Paradigm for Global Citizenship</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=1">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-5	1048585	1	3	2024-11-21 05:23:09	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/1">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-40	1048585	6	3	2024-11-21 05:30:23	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Your submission has been sent for internal review	<p>Dear Deborah Bernnard,</p><p>I am pleased to inform you that an editor has reviewed your submission, The Information Literacy User’s Guide, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-6	1048585	2	\N	2024-11-21 05:24:55	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-7	1048585	2	\N	2024-11-21 05:24:55	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-8	1048585	2	\N	2024-11-21 05:24:55	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-9	1048585	2	\N	2024-11-21 05:24:56	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Alvin Finkel,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The West and Beyond: New Perspectives on an Imagined Region, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/2</p><p>If you have been logged out, you can login again with the username afinkel.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/2">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-10	1048585	2	\N	2024-11-21 05:24:56	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Sarah Carter" <scarter@mailinator.com>, "Peter Fortna" <pfortna@mailinator.com>, "Gerald Friesen" <gfriesen@mailinator.com>, "Lyle Dick" <ldick@mailinator.com>, "Winona Wheeler" <wwheeler@mailinator.com>, "Matt Dyce" <mdyce@mailinator.com>, "James Opp" <jopp@mailinator.com>			Submission confirmation	<p>Dear Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Alvin Finkel, provided the following details:</p><p>The West and Beyond: New Perspectives on an Imagined Region<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-11	1048585	2	3	2024-11-21 05:25:13	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Your submission has been sent for review	<p>Dear Alvin Finkel,</p><p>I am pleased to inform you that an editor has reviewed your submission, The West and Beyond: New Perspectives on an Imagined Region, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-12	1048585	2	3	2024-11-21 05:25:20	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>			Manuscript Review Request	<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2">The West and Beyond: New Perspectives on an Imagined Region</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-13	1048585	2	3	2024-11-21 05:25:24	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2">The West and Beyond: New Perspectives on an Imagined Region</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-14	1048585	3	\N	2024-11-21 05:26:05	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-15	1048585	3	\N	2024-11-21 05:26:05	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-16	1048585	3	\N	2024-11-21 05:26:05	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-17	1048585	3	\N	2024-11-21 05:26:05	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Bob Barnetson" <bbarnetson@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Bob Barnetson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Political Economy of Workplace Injury in Canada, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/3</p><p>If you have been logged out, you can login again with the username bbarnetson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/3">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-18	1048585	4	\N	2024-11-21 05:26:39	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/4">How Canadians Communicate: Contexts of Canadian Popular Culture</a><br />Bart Beaty, Toby Miller, Ira Wagman, Will Straw</p><p><b>Abstract</b></p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-19	1048585	4	\N	2024-11-21 05:26:39	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/4</p><p>If you have been logged out, you can login again with the username bbeaty.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/4">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-20	1048585	4	\N	2024-11-21 05:26:39	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>			Submission confirmation	<p>Dear Toby Miller, Ira Wagman, Will Straw,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Bart Beaty, provided the following details:</p><p>How Canadians Communicate: Contexts of Canadian Popular Culture<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-21	1048585	4	3	2024-11-21 05:26:49	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for internal review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-22	1048585	4	3	2024-11-21 05:26:54	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>			Manuscript Review Request	<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4">How Canadians Communicate: Contexts of Canadian Popular Culture</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-49	1048585	8	\N	2024-11-21 05:32:16	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-23	1048585	4	3	2024-11-21 05:26:59	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-24	1048585	4	3	2024-11-21 05:27:05	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>			Manuscript Review Request	<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4">How Canadians Communicate: Contexts of Canadian Popular Culture</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-25	1048585	4	3	2024-11-21 05:27:09	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-26	1048585	4	3	2024-11-21 05:27:20	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Next steps for publishing your submission	<p>Dear Bart Beaty,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-27	1048585	5	\N	2024-11-21 05:28:18	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-28	1048585	5	\N	2024-11-21 05:28:18	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-29	1048585	5	\N	2024-11-21 05:28:18	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-30	1048585	5	\N	2024-11-21 05:28:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Bomb Canada and Other Unkind Remarks in the American Media, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/5</p><p>If you have been logged out, you can login again with the username callan.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/5">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-31	1048585	5	3	2024-11-21 05:28:29	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for internal review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-32	1048585	5	3	2024-11-21 05:28:35	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>			Manuscript Review Request	<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5">Bomb Canada and Other Unkind Remarks in the American Media</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-33	1048585	5	3	2024-11-21 05:28:40	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-41	1048585	7	\N	2024-11-21 05:31:35	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/7">Accessible Elements: Teaching Science Online and at a Distance</a><br />Dietmar Kennepohl, Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer</p><p><b>Abstract</b></p>Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-34	1048585	5	3	2024-11-21 05:28:45	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5">Bomb Canada and Other Unkind Remarks in the American Media</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-35	1048585	5	3	2024-11-21 05:28:50	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Bomb Canada and Other Unkind Remarks in the American Media, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-36	1048585	5	3	2024-11-21 05:29:02	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Next steps for publishing your submission	<p>Dear Chantal Allan,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, Bomb Canada and Other Unkind Remarks in the American Media, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-37	1048585	6	\N	2024-11-21 05:30:13	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/6">The Information Literacy User’s Guide</a><br />Deborah Bernnard, Greg Bobish, Daryl Bullis, Jenna Hecker</p><p><b>Abstract</b></p>Good researchers have a host of tools at their disposal that make navigating today’s complex information ecosystem much more manageable. Gaining the knowledge, abilities, and self-reflection necessary to be a good researcher helps not only in academic settings, but is invaluable in any career, and throughout one’s life. The Information Literacy User’s Guide will start you on this route to success.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-38	1048585	6	\N	2024-11-21 05:30:13	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Deborah Bernnard,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Information Literacy User’s Guide, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/6</p><p>If you have been logged out, you can login again with the username dbernnard.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/6">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-39	1048585	6	\N	2024-11-21 05:30:14	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Greg Bobish" <gbobish@mailinator.com>, "Daryl Bullis" <dbullis@mailinator.com>, "Jenna Hecker" <jhecker@mailinator.com>			Submission confirmation	<p>Dear Greg Bobish, Daryl Bullis, Jenna Hecker,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Deborah Bernnard, provided the following details:</p><p>The Information Literacy User’s Guide<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-42	1048585	7	\N	2024-11-21 05:31:35	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Accessible Elements: Teaching Science Online and at a Distance, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/7</p><p>If you have been logged out, you can login again with the username dkennepohl.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/7">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-43	1048585	7	\N	2024-11-21 05:31:35	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Terry Anderson" <tanderson@mailinator.com>, "Paul Gorsky" <pgorsky@mailinator.com>, "Gale Parchoma" <gparchoma@mailinator.com>, "Stuart Palmer" <spalmer@mailinator.com>			Submission confirmation	<p>Dear Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Dietmar Kennepohl, provided the following details:</p><p>Accessible Elements: Teaching Science Online and at a Distance<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-44	1048585	7	3	2024-11-21 05:31:46	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been sent for review	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that an editor has reviewed your submission, Accessible Elements: Teaching Science Online and at a Distance, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-45	1048585	7	3	2024-11-21 05:31:53	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Manuscript Review Request	<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=7">Accessible Elements: Teaching Science Online and at a Distance</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=7">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-46	1048585	7	3	2024-11-21 05:31:58	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Accessible Elements: Teaching Science Online and at a Distance, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/7">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-47	1048585	8	\N	2024-11-21 05:32:15	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-48	1048585	8	\N	2024-11-21 05:32:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-50	1048585	8	\N	2024-11-21 05:32:16	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-51	1048585	9	\N	2024-11-21 05:32:56	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/9">Enabling Openness: The future of the information society in Latin America and the Caribbean</a><br />Fernando Perini, Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich</p><p><b>Abstract</b></p>In recent years, the Internet and other network technologies have emerged as a central issue for development in Latin America and the Caribbean. They have shown their potential to increase productivity and economic competitiveness, to create new ways to deliver education and health services, and to be driving forces for the modernization of the provision of public services.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-52	1048585	9	\N	2024-11-21 05:32:56	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Fernando Perini,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/9</p><p>If you have been logged out, you can login again with the username fperini.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/9">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-53	1048585	9	\N	2024-11-21 05:32:56	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Robin Mansell" <rmansell@mailinator.com>, "Hernan Galperin" <hgalperin@mailinator.com>, "Pablo Bello" <pbello@mailinator.com>, "Eleonora Rabinovich" <erabinovich@mailinator.com>			Submission confirmation	<p>Dear Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Fernando Perini, provided the following details:</p><p>Enabling Openness: The future of the information society in Latin America and the Caribbean<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-54	1048585	9	3	2024-11-21 05:33:08	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Your submission has been sent for internal review	<p>Dear Fernando Perini,</p><p>I am pleased to inform you that an editor has reviewed your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-55	1048585	10	\N	2024-11-21 05:34:22	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-56	1048585	10	\N	2024-11-21 05:34:22	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-57	1048585	10	\N	2024-11-21 05:34:22	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-58	1048585	10	\N	2024-11-21 05:34:22	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Jennifer Brower" <jbrower@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Jennifer Brower,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Lost Tracks: Buffalo National Park, 1909-1939, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/10</p><p>If you have been logged out, you can login again with the username jbrower.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/10">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-59	1048585	11	\N	2024-11-21 05:34:42	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-60	1048585	11	\N	2024-11-21 05:34:42	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-61	1048585	11	\N	2024-11-21 05:34:42	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-62	1048585	11	\N	2024-11-21 05:34:42	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Dreamwork, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/11</p><p>If you have been logged out, you can login again with the username jlockehart.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/11">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-63	1048585	11	3	2024-11-21 05:34:53	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for internal review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-64	1048585	11	3	2024-11-21 05:34:59	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>			Manuscript Review Request	<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-65	1048585	11	3	2024-11-21 05:35:03	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-66	1048585	11	3	2024-11-21 05:35:08	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Manuscript Review Request	<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-90	1048585	13	3	2024-11-21 05:37:41	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-67	1048585	11	3	2024-11-21 05:35:11	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-68	1048585	11	10	2024-11-21 05:35:17	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #11 Locke Hart — Dreamwork	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-19</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
-69	1048585	11	12	2024-11-21 05:35:26	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Gonzalo Favio accepted review assignment for #11 Locke Hart — Dreamwork	<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-19</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
-70	1048585	11	3	2024-11-21 05:35:43	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Dreamwork, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/11">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-71	1048585	11	3	2024-11-21 05:35:43	1073741825	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Thank you for your review	<p>Dear Adela Gallego,</p>\n<p>Thank you for completing your review of the submission, Dreamwork, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers' comments and the editor's decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor's decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>
-72	1048585	11	3	2024-11-21 05:35:43	1073741825	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Thank you for your review	<p>Dear Gonzalo Favio,</p>\n<p>Thank you for completing your review of the submission, Dreamwork, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers' comments and the editor's decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor's decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>
-102	1048585	14	3	2024-11-21 05:39:22	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for internal review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-73	1048585	12	\N	2024-11-21 05:36:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-74	1048585	12	\N	2024-11-21 05:36:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-75	1048585	12	\N	2024-11-21 05:36:16	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-76	1048585	12	\N	2024-11-21 05:36:16	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Laurent Elder,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Connecting ICTs to Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/12</p><p>If you have been logged out, you can login again with the username lelder.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/12">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-77	1048585	12	\N	2024-11-21 05:36:16	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank Tulus" <ftulus@mailinator.com>, "Raymond Hyma" <rhyma@mailinator.com>, "John Valk" <jvalk@mailinator.com>, "Khaled Fourati" <fkourati@mailinator.com>, "Jeremy de Beer" <jdebeer@mailinator.com>, "Sara Bannerman" <sbannerman@mailinator.com>			Submission confirmation	<p>Dear Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Laurent Elder, provided the following details:</p><p>Connecting ICTs to Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-78	1048585	12	3	2024-11-21 05:36:27	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Your submission has been sent for internal review	<p>Dear Laurent Elder,</p><p>I am pleased to inform you that an editor has reviewed your submission, Connecting ICTs to Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-79	1048585	12	3	2024-11-21 05:36:34	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>			Manuscript Review Request	<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-80	1048585	12	3	2024-11-21 05:36:37	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>			Manuscript Review Request	<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-81	1048585	12	3	2024-11-21 05:36:40	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>			Manuscript Review Request	<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-82	1048585	12	8	2024-11-21 05:36:46	1073741829	"Paul Hudson" <phudson@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Paul Hudson accepted review assignment for #12 Elder et al. — Connecting ICTs to Development	<p>Dear Ramiro Vaca,</p><p>Paul Hudson has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/12">#12 Elder et al. — Connecting ICTs to Development</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-19</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/12">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
-83	1048585	13	\N	2024-11-21 05:37:18	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-84	1048585	13	\N	2024-11-21 05:37:18	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-85	1048585	13	\N	2024-11-21 05:37:18	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-86	1048585	13	\N	2024-11-21 05:37:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Mobile Learning: Transforming the Delivery of Education and Training, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/13</p><p>If you have been logged out, you can login again with the username mally.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/13">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-87	1048585	13	\N	2024-11-21 05:37:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Traxler" <jtraxler@mailinator.com>, "Marguerite Koole" <mkoole@mailinator.com>, "Torstein Rekkedal" <trekkedal@mailinator.com>			Submission confirmation	<p>Dear John Traxler, Marguerite Koole, Torstein Rekkedal,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Mohamed Ally, provided the following details:</p><p>Mobile Learning: Transforming the Delivery of Education and Training<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-88	1048585	13	3	2024-11-21 05:37:30	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for internal review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-89	1048585	13	3	2024-11-21 05:37:36	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>			Manuscript Review Request	<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-91	1048585	13	3	2024-11-21 05:37:47	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Manuscript Review Request	<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-92	1048585	13	3	2024-11-21 05:37:50	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>			Manuscript Review Request	<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-93	1048585	13	3	2024-11-21 05:37:53	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-94	1048585	13	10	2024-11-21 05:37:59	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-19</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
-95	1048585	13	12	2024-11-21 05:38:08	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Gonzalo Favio accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-19</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
-96	1048585	13	3	2024-11-21 05:38:27	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Mobile Learning: Transforming the Delivery of Education and Training, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/13">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-97	1048585	13	3	2024-11-21 05:38:27	1073741825	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Thank you for your review	<p>Dear Adela Gallego,</p>\n<p>Thank you for completing your review of the submission, Mobile Learning: Transforming the Delivery of Education and Training, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers' comments and the editor's decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor's decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>
-98	1048585	13	3	2024-11-21 05:38:27	1073741825	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Thank you for your review	<p>Dear Gonzalo Favio,</p>\n<p>Thank you for completing your review of the submission, Mobile Learning: Transforming the Delivery of Education and Training, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers' comments and the editor's decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor's decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>
-99	1048585	14	\N	2024-11-21 05:39:09	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/14">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a><br />Michael Dawson, Brian Dupuis, Michael Wilson</p><p><b>Abstract</b></p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-100	1048585	14	\N	2024-11-21 05:39:09	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/14</p><p>If you have been logged out, you can login again with the username mdawson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/14">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-101	1048585	14	\N	2024-11-21 05:39:09	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>			Submission confirmation	<p>Dear Brian Dupuis, Michael Wilson,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Michael Dawson, provided the following details:</p><p>From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-103	1048585	14	3	2024-11-21 05:39:30	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>			Manuscript Review Request	<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-104	1048585	14	3	2024-11-21 05:39:34	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-105	1048585	14	3	2024-11-21 05:39:40	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>			Manuscript Review Request	<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-106	1048585	14	3	2024-11-21 05:39:45	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-107	1048585	14	3	2024-11-21 05:39:58	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Next steps for publishing your submission	<p>Dear Michael Dawson,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-108	1048585	15	\N	2024-11-21 05:41:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-109	1048585	15	\N	2024-11-21 05:41:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-110	1048585	15	\N	2024-11-21 05:41:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-111	1048585	15	\N	2024-11-21 05:41:16	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Max Foran,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/15</p><p>If you have been logged out, you can login again with the username mforan.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/15">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-112	1048585	15	3	2024-11-21 05:41:27	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Your submission has been sent for review	<p>Dear Max Foran,</p><p>I am pleased to inform you that an editor has reviewed your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-113	1048585	16	\N	2024-11-21 05:42:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-114	1048585	16	\N	2024-11-21 05:42:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-115	1048585	16	\N	2024-11-21 05:42:10	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-116	1048585	16	\N	2024-11-21 05:42:10	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Michael Power,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, A Designer's Log: Case Studies in Instructional Design, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/16</p><p>If you have been logged out, you can login again with the username mpower.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/16">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-117	1048585	16	3	2024-11-21 05:42:23	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Power,</p><p>I am pleased to inform you that an editor has reviewed your submission, A Designer's Log: Case Studies in Instructional Design, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-118	1048585	16	3	2024-11-21 05:42:30	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Manuscript Review Request	<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">A Designer's Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-119	1048585	16	3	2024-11-21 05:42:33	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>			Manuscript Review Request	<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">A Designer's Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-120	1048585	16	3	2024-11-21 05:42:36	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">A Designer's Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-121	1048585	16	10	2024-11-21 05:42:43	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #16 Power — A Designer's Log: Case Studies in Instructional Design	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/16">#16 Power — A Designer's Log: Case Studies in Instructional Design</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-19</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/16">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
-122	1048585	17	\N	2024-11-21 05:43:38	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-123	1048585	17	\N	2024-11-21 05:43:38	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-124	1048585	17	\N	2024-11-21 05:43:38	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
-125	1048585	17	\N	2024-11-21 05:43:38	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Matthew Smith,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Open Development: Networked Innovations in International Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/17</p><p>If you have been logged out, you can login again with the username msmith.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/17">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-126	1048585	17	\N	2024-11-21 05:43:38	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Yochai Benkler" <ybenkler@mailinator.com>, "Katherine Reilly" <kreilly@mailinator.com>, "Melissa Loudon" <mloudon@mailinator.com>, "Ulrike Rivett" <urivett@mailinator.com>, "Mark Graham" <mgraham@mailinator.com>, "Håvard Haarstad" <hhaarstad@mailinator.com>, "Marshall Smith" <masmith@mailinator.com>			Submission confirmation	<p>Dear Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Matthew Smith, provided the following details:</p><p>Open Development: Networked Innovations in International Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
-127	1048585	17	3	2024-11-21 05:43:52	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Your submission has been sent for internal review	<p>Dear Matthew Smith,</p><p>I am pleased to inform you that an editor has reviewed your submission, Open Development: Networked Innovations in International Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
-128	1048585	17	3	2024-11-21 05:44:00	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>			Manuscript Review Request	<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17">Open Development: Networked Innovations in International Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
-129	1048585	17	3	2024-11-21 05:44:04	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>			Manuscript Review Request	<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-19. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17">Open Development: Networked Innovations in International Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17">accept or decline</a> the review by <strong>2024-12-19</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+1	1048585	1	\N	2024-11-22 05:23:10	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/1">The ABCs of Human Survival: A Paradigm for Global Citizenship</a><br />Arthur Clark</p><p><b>Abstract</b></p>The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+2	1048585	1	\N	2024-11-22 05:23:10	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/1</p><p>If you have been logged out, you can login again with the username aclark.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/1">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+3	1048585	1	3	2024-11-22 05:23:18	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been sent for review	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that an editor has reviewed your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+4	1048585	1	3	2024-11-22 05:23:23	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=1">The ABCs of Human Survival: A Paradigm for Global Citizenship</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=1">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+5	1048585	1	3	2024-11-22 05:23:28	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Arthur Clark,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/1">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+40	1048585	6	3	2024-11-22 05:30:45	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Your submission has been sent for internal review	<p>Dear Deborah Bernnard,</p><p>I am pleased to inform you that an editor has reviewed your submission, The Information Literacy User’s Guide, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+6	1048585	2	\N	2024-11-22 05:25:14	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+7	1048585	2	\N	2024-11-22 05:25:14	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+8	1048585	2	\N	2024-11-22 05:25:15	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/2">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+9	1048585	2	\N	2024-11-22 05:25:15	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Alvin Finkel,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The West and Beyond: New Perspectives on an Imagined Region, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/2</p><p>If you have been logged out, you can login again with the username afinkel.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/2">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+10	1048585	2	\N	2024-11-22 05:25:15	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Sarah Carter" <scarter@mailinator.com>, "Peter Fortna" <pfortna@mailinator.com>, "Gerald Friesen" <gfriesen@mailinator.com>, "Lyle Dick" <ldick@mailinator.com>, "Winona Wheeler" <wwheeler@mailinator.com>, "Matt Dyce" <mdyce@mailinator.com>, "James Opp" <jopp@mailinator.com>			Submission confirmation	<p>Dear Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Alvin Finkel, provided the following details:</p><p>The West and Beyond: New Perspectives on an Imagined Region<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+11	1048585	2	3	2024-11-22 05:25:32	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>			Your submission has been sent for review	<p>Dear Alvin Finkel,</p><p>I am pleased to inform you that an editor has reviewed your submission, The West and Beyond: New Perspectives on an Imagined Region, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+12	1048585	2	3	2024-11-22 05:25:40	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>			Manuscript Review Request	<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2">The West and Beyond: New Perspectives on an Imagined Region</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+13	1048585	2	3	2024-11-22 05:25:44	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2">The West and Beyond: New Perspectives on an Imagined Region</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+14	1048585	3	\N	2024-11-22 05:26:25	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+15	1048585	3	\N	2024-11-22 05:26:25	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+16	1048585	3	\N	2024-11-22 05:26:25	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/3">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+17	1048585	3	\N	2024-11-22 05:26:25	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Bob Barnetson" <bbarnetson@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Bob Barnetson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Political Economy of Workplace Injury in Canada, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/3</p><p>If you have been logged out, you can login again with the username bbarnetson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/3">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+18	1048585	4	\N	2024-11-22 05:27:00	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/4">How Canadians Communicate: Contexts of Canadian Popular Culture</a><br />Bart Beaty, Toby Miller, Ira Wagman, Will Straw</p><p><b>Abstract</b></p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+19	1048585	4	\N	2024-11-22 05:27:00	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/4</p><p>If you have been logged out, you can login again with the username bbeaty.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/4">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+20	1048585	4	\N	2024-11-22 05:27:00	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>			Submission confirmation	<p>Dear Toby Miller, Ira Wagman, Will Straw,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Bart Beaty, provided the following details:</p><p>How Canadians Communicate: Contexts of Canadian Popular Culture<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+21	1048585	4	3	2024-11-22 05:27:10	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for internal review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+22	1048585	4	3	2024-11-22 05:27:15	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>			Manuscript Review Request	<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4">How Canadians Communicate: Contexts of Canadian Popular Culture</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+49	1048585	8	\N	2024-11-22 05:32:38	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+23	1048585	4	3	2024-11-22 05:27:20	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been sent for review	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+24	1048585	4	3	2024-11-22 05:27:26	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>			Manuscript Review Request	<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4">How Canadians Communicate: Contexts of Canadian Popular Culture</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+25	1048585	4	3	2024-11-22 05:27:30	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Bart Beaty,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+26	1048585	4	3	2024-11-22 05:27:42	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>			Next steps for publishing your submission	<p>Dear Bart Beaty,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/4">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+27	1048585	5	\N	2024-11-22 05:28:39	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+28	1048585	5	\N	2024-11-22 05:28:39	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+29	1048585	5	\N	2024-11-22 05:28:39	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/5">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+30	1048585	5	\N	2024-11-22 05:28:40	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Bomb Canada and Other Unkind Remarks in the American Media, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/5</p><p>If you have been logged out, you can login again with the username callan.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/5">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+31	1048585	5	3	2024-11-22 05:28:50	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for internal review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+32	1048585	5	3	2024-11-22 05:28:56	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>			Manuscript Review Request	<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5">Bomb Canada and Other Unkind Remarks in the American Media</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+33	1048585	5	3	2024-11-22 05:29:01	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been sent for review	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+41	1048585	7	\N	2024-11-22 05:31:57	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/7">Accessible Elements: Teaching Science Online and at a Distance</a><br />Dietmar Kennepohl, Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer</p><p><b>Abstract</b></p>Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+34	1048585	5	3	2024-11-22 05:29:07	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5">Bomb Canada and Other Unkind Remarks in the American Media</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+35	1048585	5	3	2024-11-22 05:29:12	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Chantal Allan,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Bomb Canada and Other Unkind Remarks in the American Media, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+36	1048585	5	3	2024-11-22 05:29:23	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>			Next steps for publishing your submission	<p>Dear Chantal Allan,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, Bomb Canada and Other Unkind Remarks in the American Media, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/5">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+37	1048585	6	\N	2024-11-22 05:30:35	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/6">The Information Literacy User’s Guide</a><br />Deborah Bernnard, Greg Bobish, Daryl Bullis, Jenna Hecker</p><p><b>Abstract</b></p>Good researchers have a host of tools at their disposal that make navigating today’s complex information ecosystem much more manageable. Gaining the knowledge, abilities, and self-reflection necessary to be a good researcher helps not only in academic settings, but is invaluable in any career, and throughout one’s life. The Information Literacy User’s Guide will start you on this route to success.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+38	1048585	6	\N	2024-11-22 05:30:35	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Deborah Bernnard,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Information Literacy User’s Guide, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/6</p><p>If you have been logged out, you can login again with the username dbernnard.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/6">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+39	1048585	6	\N	2024-11-22 05:30:35	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Greg Bobish" <gbobish@mailinator.com>, "Daryl Bullis" <dbullis@mailinator.com>, "Jenna Hecker" <jhecker@mailinator.com>			Submission confirmation	<p>Dear Greg Bobish, Daryl Bullis, Jenna Hecker,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Deborah Bernnard, provided the following details:</p><p>The Information Literacy User’s Guide<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+42	1048585	7	\N	2024-11-22 05:31:57	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Accessible Elements: Teaching Science Online and at a Distance, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/7</p><p>If you have been logged out, you can login again with the username dkennepohl.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/7">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+43	1048585	7	\N	2024-11-22 05:31:57	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Terry Anderson" <tanderson@mailinator.com>, "Paul Gorsky" <pgorsky@mailinator.com>, "Gale Parchoma" <gparchoma@mailinator.com>, "Stuart Palmer" <spalmer@mailinator.com>			Submission confirmation	<p>Dear Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Dietmar Kennepohl, provided the following details:</p><p>Accessible Elements: Teaching Science Online and at a Distance<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+44	1048585	7	3	2024-11-22 05:32:08	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been sent for review	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that an editor has reviewed your submission, Accessible Elements: Teaching Science Online and at a Distance, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+45	1048585	7	3	2024-11-22 05:32:15	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Manuscript Review Request	<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=7">Accessible Elements: Teaching Science Online and at a Distance</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=7">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+46	1048585	7	3	2024-11-22 05:32:20	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Accessible Elements: Teaching Science Online and at a Distance, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/7">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+47	1048585	8	\N	2024-11-22 05:32:37	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+48	1048585	8	\N	2024-11-22 05:32:38	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+50	1048585	8	\N	2024-11-22 05:32:38	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Editorial	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/8">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+51	1048585	9	\N	2024-11-22 05:33:18	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/9">Enabling Openness: The future of the information society in Latin America and the Caribbean</a><br />Fernando Perini, Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich</p><p><b>Abstract</b></p>In recent years, the Internet and other network technologies have emerged as a central issue for development in Latin America and the Caribbean. They have shown their potential to increase productivity and economic competitiveness, to create new ways to deliver education and health services, and to be driving forces for the modernization of the provision of public services.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+52	1048585	9	\N	2024-11-22 05:33:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Fernando Perini,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/9</p><p>If you have been logged out, you can login again with the username fperini.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/9">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+53	1048585	9	\N	2024-11-22 05:33:19	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Robin Mansell" <rmansell@mailinator.com>, "Hernan Galperin" <hgalperin@mailinator.com>, "Pablo Bello" <pbello@mailinator.com>, "Eleonora Rabinovich" <erabinovich@mailinator.com>			Submission confirmation	<p>Dear Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Fernando Perini, provided the following details:</p><p>Enabling Openness: The future of the information society in Latin America and the Caribbean<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+54	1048585	9	3	2024-11-22 05:33:30	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>			Your submission has been sent for internal review	<p>Dear Fernando Perini,</p><p>I am pleased to inform you that an editor has reviewed your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+55	1048585	10	\N	2024-11-22 05:34:46	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+56	1048585	10	\N	2024-11-22 05:34:46	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+57	1048585	10	\N	2024-11-22 05:34:47	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/10">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+58	1048585	10	\N	2024-11-22 05:34:47	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Jennifer Brower" <jbrower@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Jennifer Brower,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Lost Tracks: Buffalo National Park, 1909-1939, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/10</p><p>If you have been logged out, you can login again with the username jbrower.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/10">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+59	1048585	11	\N	2024-11-22 05:35:07	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+60	1048585	11	\N	2024-11-22 05:35:07	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+61	1048585	11	\N	2024-11-22 05:35:07	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Dreamwork	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+62	1048585	11	\N	2024-11-22 05:35:07	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Dreamwork, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/11</p><p>If you have been logged out, you can login again with the username jlockehart.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/11">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+63	1048585	11	3	2024-11-22 05:35:18	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for internal review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+64	1048585	11	3	2024-11-22 05:35:24	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>			Manuscript Review Request	<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+65	1048585	11	3	2024-11-22 05:35:28	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been sent for review	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+66	1048585	11	3	2024-11-22 05:35:34	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Manuscript Review Request	<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+90	1048585	13	3	2024-11-22 05:38:07	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+67	1048585	11	3	2024-11-22 05:35:36	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+68	1048585	11	10	2024-11-22 05:35:42	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #11 Locke Hart — Dreamwork	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-20</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
+69	1048585	11	12	2024-11-22 05:35:51	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Gonzalo Favio accepted review assignment for #11 Locke Hart — Dreamwork	<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-20</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/11">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
+70	1048585	11	3	2024-11-22 05:36:08	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Dreamwork, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/11">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+71	1048585	11	3	2024-11-22 05:36:08	1073741825	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Thank you for your review	<p>Dear Adela Gallego,</p>\n<p>Thank you for completing your review of the submission, Dreamwork, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers' comments and the editor's decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor's decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>
+72	1048585	11	3	2024-11-22 05:36:08	1073741825	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Thank you for your review	<p>Dear Gonzalo Favio,</p>\n<p>Thank you for completing your review of the submission, Dreamwork, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers' comments and the editor's decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor's decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>
+102	1048585	14	3	2024-11-22 05:39:50	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for internal review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+73	1048585	12	\N	2024-11-22 05:36:40	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+74	1048585	12	\N	2024-11-22 05:36:40	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+75	1048585	12	\N	2024-11-22 05:36:41	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Connecting ICTs to Development	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/12">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+76	1048585	12	\N	2024-11-22 05:36:41	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Laurent Elder,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Connecting ICTs to Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/12</p><p>If you have been logged out, you can login again with the username lelder.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/12">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+77	1048585	12	\N	2024-11-22 05:36:41	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank Tulus" <ftulus@mailinator.com>, "Raymond Hyma" <rhyma@mailinator.com>, "John Valk" <jvalk@mailinator.com>, "Khaled Fourati" <fkourati@mailinator.com>, "Jeremy de Beer" <jdebeer@mailinator.com>, "Sara Bannerman" <sbannerman@mailinator.com>			Submission confirmation	<p>Dear Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Laurent Elder, provided the following details:</p><p>Connecting ICTs to Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+78	1048585	12	3	2024-11-22 05:36:53	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>			Your submission has been sent for internal review	<p>Dear Laurent Elder,</p><p>I am pleased to inform you that an editor has reviewed your submission, Connecting ICTs to Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+79	1048585	12	3	2024-11-22 05:36:59	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>			Manuscript Review Request	<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+80	1048585	12	3	2024-11-22 05:37:03	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>			Manuscript Review Request	<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+81	1048585	12	3	2024-11-22 05:37:06	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>			Manuscript Review Request	<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+82	1048585	12	8	2024-11-22 05:37:12	1073741829	"Paul Hudson" <phudson@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Paul Hudson accepted review assignment for #12 Elder et al. — Connecting ICTs to Development	<p>Dear Ramiro Vaca,</p><p>Paul Hudson has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/12">#12 Elder et al. — Connecting ICTs to Development</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-20</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/12">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
+83	1048585	13	\N	2024-11-22 05:37:44	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+84	1048585	13	\N	2024-11-22 05:37:44	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+85	1048585	13	\N	2024-11-22 05:37:44	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+86	1048585	13	\N	2024-11-22 05:37:44	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Mobile Learning: Transforming the Delivery of Education and Training, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/13</p><p>If you have been logged out, you can login again with the username mally.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/13">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+87	1048585	13	\N	2024-11-22 05:37:44	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Traxler" <jtraxler@mailinator.com>, "Marguerite Koole" <mkoole@mailinator.com>, "Torstein Rekkedal" <trekkedal@mailinator.com>			Submission confirmation	<p>Dear John Traxler, Marguerite Koole, Torstein Rekkedal,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Mohamed Ally, provided the following details:</p><p>Mobile Learning: Transforming the Delivery of Education and Training<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+88	1048585	13	3	2024-11-22 05:37:56	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been sent for internal review	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+89	1048585	13	3	2024-11-22 05:38:02	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>			Manuscript Review Request	<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+91	1048585	13	3	2024-11-22 05:38:13	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Manuscript Review Request	<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+92	1048585	13	3	2024-11-22 05:38:16	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>			Manuscript Review Request	<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+93	1048585	13	3	2024-11-22 05:38:19	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+94	1048585	13	10	2024-11-22 05:38:25	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-20</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
+95	1048585	13	12	2024-11-22 05:38:35	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Gonzalo Favio accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training	<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-20</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/13">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
+96	1048585	13	3	2024-11-22 05:38:54	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Mobile Learning: Transforming the Delivery of Education and Training, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/13">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+97	1048585	13	3	2024-11-22 05:38:54	1073741825	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Thank you for your review	<p>Dear Adela Gallego,</p>\n<p>Thank you for completing your review of the submission, Mobile Learning: Transforming the Delivery of Education and Training, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers' comments and the editor's decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor's decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>
+98	1048585	13	3	2024-11-22 05:38:54	1073741825	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Thank you for your review	<p>Dear Gonzalo Favio,</p>\n<p>Thank you for completing your review of the submission, Mobile Learning: Transforming the Delivery of Education and Training, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers' comments and the editor's decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor's decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>
+99	1048585	14	\N	2024-11-22 05:39:36	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			You have been assigned as an editor on a submission to Public Knowledge Press	<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/14">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a><br />Michael Dawson, Brian Dupuis, Michael Wilson</p><p><b>Abstract</b></p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting "Send to Internal Review" and then assign reviewers by clicking "Add Reviewer".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+100	1048585	14	\N	2024-11-22 05:39:36	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/14</p><p>If you have been logged out, you can login again with the username mdawson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/14">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+101	1048585	14	\N	2024-11-22 05:39:36	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>			Submission confirmation	<p>Dear Brian Dupuis, Michael Wilson,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Michael Dawson, provided the following details:</p><p>From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+103	1048585	14	3	2024-11-22 05:39:57	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>			Manuscript Review Request	<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+104	1048585	14	3	2024-11-22 05:40:02	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+105	1048585	14	3	2024-11-22 05:40:09	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>			Manuscript Review Request	<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+106	1048585	14	3	2024-11-22 05:40:13	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Your submission has been accepted to Public Knowledge Press	<p>Dear Michael Dawson,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+107	1048585	14	3	2024-11-22 05:40:26	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>			Next steps for publishing your submission	<p>Dear Michael Dawson,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/14">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+108	1048585	15	\N	2024-11-22 05:41:44	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+109	1048585	15	\N	2024-11-22 05:41:44	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+110	1048585	15	\N	2024-11-22 05:41:45	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/15">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+111	1048585	15	\N	2024-11-22 05:41:45	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Max Foran,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/15</p><p>If you have been logged out, you can login again with the username mforan.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/15">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+112	1048585	15	3	2024-11-22 05:41:57	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Max Foran" <mforan@mailinator.com>			Your submission has been sent for review	<p>Dear Max Foran,</p><p>I am pleased to inform you that an editor has reviewed your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+113	1048585	16	\N	2024-11-22 05:42:40	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+114	1048585	16	\N	2024-11-22 05:42:40	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+115	1048585	16	\N	2024-11-22 05:42:40	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: A Designer's Log: Case Studies in Instructional Design	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/16">A Designer's Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+116	1048585	16	\N	2024-11-22 05:42:40	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Michael Power,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, A Designer's Log: Case Studies in Instructional Design, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/16</p><p>If you have been logged out, you can login again with the username mpower.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/16">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+117	1048585	16	3	2024-11-22 05:42:53	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Power" <mpower@mailinator.com>			Your submission has been sent for review	<p>Dear Michael Power,</p><p>I am pleased to inform you that an editor has reviewed your submission, A Designer's Log: Case Studies in Instructional Design, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+118	1048585	16	3	2024-11-22 05:43:00	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>			Manuscript Review Request	<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">A Designer's Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+119	1048585	16	3	2024-11-22 05:43:03	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>			Manuscript Review Request	<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">A Designer's Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+120	1048585	16	3	2024-11-22 05:43:06	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>			Manuscript Review Request	<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">A Designer's Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+121	1048585	16	10	2024-11-22 05:43:12	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			Review accepted: Adela Gallego accepted review assignment for #16 Power — A Designer's Log: Case Studies in Instructional Design	<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/16">#16 Power — A Designer's Log: Case Studies in Instructional Design</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2024-12-20</p><p>Login to <a href="http://localhost/index.php/publicknowledge/en/workflow/access/16">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.
+122	1048585	17	\N	2024-11-22 05:44:08	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"admin admin" <pkpadmin@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+123	1048585	17	\N	2024-11-22 05:44:08	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Ramiro Vaca" <rvaca@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+124	1048585	17	\N	2024-11-22 05:44:08	805306373	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>			A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development	<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href="http://localhost/index.php/publicknowledge/en/workflow/access/17">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href="http://localhost/index.php/publicknowledge/en">Public Knowledge Press</a>.</p>
+125	1048585	17	\N	2024-11-22 05:44:08	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Thank you for your submission to Public Knowledge Press	<p>Dear Matthew Smith,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Open Development: Networked Innovations in International Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/authorDashboard/submission/17</p><p>If you have been logged out, you can login again with the username msmith.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/authorDashboard/submission/17">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+126	1048585	17	\N	2024-11-22 05:44:08	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Yochai Benkler" <ybenkler@mailinator.com>, "Katherine Reilly" <kreilly@mailinator.com>, "Melissa Loudon" <mloudon@mailinator.com>, "Ulrike Rivett" <urivett@mailinator.com>, "Mark Graham" <mgraham@mailinator.com>, "Håvard Haarstad" <hhaarstad@mailinator.com>, "Marshall Smith" <masmith@mailinator.com>			Submission confirmation	<p>Dear Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Matthew Smith, provided the following details:</p><p>Open Development: Networked Innovations in International Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Press</a>.</p>
+127	1048585	17	3	2024-11-22 05:44:23	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>			Your submission has been sent for internal review	<p>Dear Matthew Smith,</p><p>I am pleased to inform you that an editor has reviewed your submission, Open Development: Networked Innovations in International Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>
+128	1048585	17	3	2024-11-22 05:44:31	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>			Manuscript Review Request	<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17">Open Development: Networked Innovations in International Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
+129	1048585	17	3	2024-11-22 05:44:34	1073741833	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>			Manuscript Review Request	<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission's title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2024-12-20. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17">Open Development: Networked Innovations in International Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.</p>\r\n<p>Please <a href="http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17">accept or decline</a> the review by <strong>2024-12-20</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>
 \.
 
 
@@ -8850,528 +8850,528 @@ COPY public.email_templates_settings (email_template_setting_id, email_id, local
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	19	2024-11-21 05:22:33	268435458	submission.event.general.metadataUpdated	f
-2	1048585	1	19	2024-11-21 05:22:33	268435458	submission.event.general.metadataUpdated	f
-3	515	1	19	2024-11-21 05:22:35	1342177281	submission.event.fileUploaded	f
-4	1048585	1	19	2024-11-21 05:22:35	1342177288	submission.event.fileRevised	f
-5	515	1	19	2024-11-21 05:22:36	1342177296	submission.event.fileEdited	f
-6	515	2	19	2024-11-21 05:22:36	1342177281	submission.event.fileUploaded	f
-7	1048585	1	19	2024-11-21 05:22:36	1342177288	submission.event.fileRevised	f
-8	515	2	19	2024-11-21 05:22:37	1342177296	submission.event.fileEdited	f
-9	515	3	19	2024-11-21 05:22:37	1342177281	submission.event.fileUploaded	f
-10	1048585	1	19	2024-11-21 05:22:37	1342177288	submission.event.fileRevised	f
-11	515	3	19	2024-11-21 05:22:37	1342177296	submission.event.fileEdited	f
-12	1048585	1	19	2024-11-21 05:22:52	268435457	submission.event.submissionSubmitted	f
-13	1048585	1	3	2024-11-21 05:23:00	805306371	editor.submission.decision.sendExternalReview.log	f
-14	515	4	3	2024-11-21 05:23:00	1342177281	submission.event.fileUploaded	f
-15	1048585	1	3	2024-11-21 05:23:00	1342177288	submission.event.fileRevised	f
-16	515	5	3	2024-11-21 05:23:01	1342177281	submission.event.fileUploaded	f
-17	1048585	1	3	2024-11-21 05:23:01	1342177288	submission.event.fileRevised	f
-18	515	6	3	2024-11-21 05:23:01	1342177281	submission.event.fileUploaded	f
-19	1048585	1	3	2024-11-21 05:23:01	1342177288	submission.event.fileRevised	f
-20	1048585	1	3	2024-11-21 05:23:05	1073741825	log.review.reviewerAssigned	f
-21	1048585	1	3	2024-11-21 05:23:09	805306371	editor.submission.decision.accept.log	f
-22	1048585	1	3	2024-11-21 05:23:14	268435459	submission.event.participantAdded	f
-23	1048585	2	20	2024-11-21 05:23:23	268435458	submission.event.general.metadataUpdated	f
-24	1048585	2	20	2024-11-21 05:23:23	268435458	submission.event.general.metadataUpdated	f
-25	1048585	2	20	2024-11-21 05:23:32	268435458	submission.event.general.metadataUpdated	f
-26	515	7	20	2024-11-21 05:23:32	1342177281	submission.event.fileUploaded	f
-27	1048585	2	20	2024-11-21 05:23:32	1342177288	submission.event.fileRevised	f
-28	515	7	20	2024-11-21 05:23:33	1342177296	submission.event.fileEdited	f
-29	515	8	20	2024-11-21 05:23:33	1342177281	submission.event.fileUploaded	f
-30	1048585	2	20	2024-11-21 05:23:33	1342177288	submission.event.fileRevised	f
-31	515	8	20	2024-11-21 05:23:34	1342177296	submission.event.fileEdited	f
-32	515	9	20	2024-11-21 05:23:34	1342177281	submission.event.fileUploaded	f
-33	1048585	2	20	2024-11-21 05:23:34	1342177288	submission.event.fileRevised	f
-34	515	9	20	2024-11-21 05:23:35	1342177296	submission.event.fileEdited	f
-35	515	10	20	2024-11-21 05:23:35	1342177281	submission.event.fileUploaded	f
-36	1048585	2	20	2024-11-21 05:23:35	1342177288	submission.event.fileRevised	f
-37	515	10	20	2024-11-21 05:23:35	1342177296	submission.event.fileEdited	f
-38	515	11	20	2024-11-21 05:23:36	1342177281	submission.event.fileUploaded	f
-39	1048585	2	20	2024-11-21 05:23:36	1342177288	submission.event.fileRevised	f
-40	515	11	20	2024-11-21 05:23:36	1342177296	submission.event.fileEdited	f
-41	515	11	20	2024-11-21 05:23:37	1342177282	submission.event.fileDeleted	f
-42	1048585	2	20	2024-11-21 05:24:55	268435457	submission.event.submissionSubmitted	f
-43	1048585	2	3	2024-11-21 05:25:12	805306371	editor.submission.decision.sendExternalReview.log	f
-44	515	12	3	2024-11-21 05:25:13	1342177281	submission.event.fileUploaded	f
-45	1048585	2	3	2024-11-21 05:25:13	1342177288	submission.event.fileRevised	f
-46	515	13	3	2024-11-21 05:25:13	1342177281	submission.event.fileUploaded	f
-47	1048585	2	3	2024-11-21 05:25:13	1342177288	submission.event.fileRevised	f
-48	515	14	3	2024-11-21 05:25:13	1342177281	submission.event.fileUploaded	f
-49	1048585	2	3	2024-11-21 05:25:13	1342177288	submission.event.fileRevised	f
-50	515	15	3	2024-11-21 05:25:14	1342177281	submission.event.fileUploaded	f
-51	1048585	2	3	2024-11-21 05:25:14	1342177288	submission.event.fileRevised	f
-52	1048585	2	3	2024-11-21 05:25:20	1073741825	log.review.reviewerAssigned	f
-53	1048585	2	3	2024-11-21 05:25:24	1073741825	log.review.reviewerAssigned	f
-54	1048585	3	21	2024-11-21 05:25:32	268435458	submission.event.general.metadataUpdated	f
-55	1048585	3	21	2024-11-21 05:25:32	268435458	submission.event.general.metadataUpdated	f
-56	515	16	21	2024-11-21 05:25:34	1342177281	submission.event.fileUploaded	f
-57	1048585	3	21	2024-11-21 05:25:34	1342177288	submission.event.fileRevised	f
-58	515	16	21	2024-11-21 05:25:35	1342177296	submission.event.fileEdited	f
-59	515	17	21	2024-11-21 05:25:35	1342177281	submission.event.fileUploaded	f
-60	1048585	3	21	2024-11-21 05:25:35	1342177288	submission.event.fileRevised	f
-61	515	17	21	2024-11-21 05:25:36	1342177296	submission.event.fileEdited	f
-62	515	18	21	2024-11-21 05:25:36	1342177281	submission.event.fileUploaded	f
-63	1048585	3	21	2024-11-21 05:25:36	1342177288	submission.event.fileRevised	f
-64	515	18	21	2024-11-21 05:25:37	1342177296	submission.event.fileEdited	f
-65	515	19	21	2024-11-21 05:25:37	1342177281	submission.event.fileUploaded	f
-66	1048585	3	21	2024-11-21 05:25:37	1342177288	submission.event.fileRevised	f
-67	515	19	21	2024-11-21 05:25:38	1342177296	submission.event.fileEdited	f
-68	515	20	21	2024-11-21 05:25:38	1342177281	submission.event.fileUploaded	f
-69	1048585	3	21	2024-11-21 05:25:38	1342177288	submission.event.fileRevised	f
-70	515	20	21	2024-11-21 05:25:38	1342177296	submission.event.fileEdited	f
-71	1048585	3	21	2024-11-21 05:26:05	268435457	submission.event.submissionSubmitted	f
-72	1048585	4	22	2024-11-21 05:26:12	268435458	submission.event.general.metadataUpdated	f
-73	1048585	4	22	2024-11-21 05:26:12	268435458	submission.event.general.metadataUpdated	f
-74	515	21	22	2024-11-21 05:26:14	1342177281	submission.event.fileUploaded	f
-75	1048585	4	22	2024-11-21 05:26:14	1342177288	submission.event.fileRevised	f
-76	515	21	22	2024-11-21 05:26:15	1342177296	submission.event.fileEdited	f
-77	515	22	22	2024-11-21 05:26:15	1342177281	submission.event.fileUploaded	f
-78	1048585	4	22	2024-11-21 05:26:15	1342177288	submission.event.fileRevised	f
-79	515	22	22	2024-11-21 05:26:15	1342177296	submission.event.fileEdited	f
-80	515	23	22	2024-11-21 05:26:16	1342177281	submission.event.fileUploaded	f
-81	1048585	4	22	2024-11-21 05:26:16	1342177288	submission.event.fileRevised	f
-82	515	23	22	2024-11-21 05:26:16	1342177296	submission.event.fileEdited	f
-83	515	24	22	2024-11-21 05:26:17	1342177281	submission.event.fileUploaded	f
-84	1048585	4	22	2024-11-21 05:26:17	1342177288	submission.event.fileRevised	f
-85	515	24	22	2024-11-21 05:26:17	1342177296	submission.event.fileEdited	f
-86	1048585	4	22	2024-11-21 05:26:39	268435457	submission.event.submissionSubmitted	f
-87	1048585	4	3	2024-11-21 05:26:49	805306371	editor.submission.decision.sendInternalReview.log	f
-88	515	25	3	2024-11-21 05:26:49	1342177281	submission.event.fileUploaded	f
-89	1048585	4	3	2024-11-21 05:26:49	1342177288	submission.event.fileRevised	f
-90	515	26	3	2024-11-21 05:26:49	1342177281	submission.event.fileUploaded	f
-91	1048585	4	3	2024-11-21 05:26:49	1342177288	submission.event.fileRevised	f
-92	515	27	3	2024-11-21 05:26:49	1342177281	submission.event.fileUploaded	f
-93	1048585	4	3	2024-11-21 05:26:49	1342177288	submission.event.fileRevised	f
-94	515	28	3	2024-11-21 05:26:49	1342177281	submission.event.fileUploaded	f
-95	1048585	4	3	2024-11-21 05:26:49	1342177288	submission.event.fileRevised	f
-96	1048585	4	3	2024-11-21 05:26:54	1073741825	log.review.reviewerAssigned	f
-97	1048585	4	3	2024-11-21 05:26:59	805306371	editor.submission.decision.sendExternalReview.log	f
-98	1048585	4	3	2024-11-21 05:27:05	1073741825	log.review.reviewerAssigned	f
-99	1048585	4	3	2024-11-21 05:27:09	805306371	editor.submission.decision.accept.log	f
-100	1048585	4	3	2024-11-21 05:27:15	268435459	submission.event.participantAdded	f
-101	1048585	4	3	2024-11-21 05:27:20	805306371	editor.submission.decision.sendToProduction.log	f
-102	1048585	4	3	2024-11-21 05:27:26	268435459	submission.event.participantAdded	f
-103	1048585	4	3	2024-11-21 05:27:32	268435474	submission.event.publicationFormatCreated	\N
-104	1048585	5	23	2024-11-21 05:27:38	268435458	submission.event.general.metadataUpdated	f
-105	1048585	5	23	2024-11-21 05:27:39	268435458	submission.event.general.metadataUpdated	f
-106	515	29	23	2024-11-21 05:27:41	1342177281	submission.event.fileUploaded	f
-107	1048585	5	23	2024-11-21 05:27:41	1342177288	submission.event.fileRevised	f
-108	515	29	23	2024-11-21 05:27:41	1342177296	submission.event.fileEdited	f
-109	515	30	23	2024-11-21 05:27:42	1342177281	submission.event.fileUploaded	f
-110	1048585	5	23	2024-11-21 05:27:42	1342177288	submission.event.fileRevised	f
-111	515	30	23	2024-11-21 05:27:42	1342177296	submission.event.fileEdited	f
-112	515	31	23	2024-11-21 05:27:43	1342177281	submission.event.fileUploaded	f
-113	1048585	5	23	2024-11-21 05:27:43	1342177288	submission.event.fileRevised	f
-114	515	31	23	2024-11-21 05:27:43	1342177296	submission.event.fileEdited	f
-115	515	32	23	2024-11-21 05:27:44	1342177281	submission.event.fileUploaded	f
-116	1048585	5	23	2024-11-21 05:27:44	1342177288	submission.event.fileRevised	f
-117	515	32	23	2024-11-21 05:27:44	1342177296	submission.event.fileEdited	f
-118	515	33	23	2024-11-21 05:27:44	1342177281	submission.event.fileUploaded	f
-119	1048585	5	23	2024-11-21 05:27:44	1342177288	submission.event.fileRevised	f
-120	515	33	23	2024-11-21 05:27:45	1342177296	submission.event.fileEdited	f
-121	515	34	23	2024-11-21 05:27:45	1342177281	submission.event.fileUploaded	f
-122	1048585	5	23	2024-11-21 05:27:45	1342177288	submission.event.fileRevised	f
-123	515	34	23	2024-11-21 05:27:46	1342177296	submission.event.fileEdited	f
-124	1048585	5	23	2024-11-21 05:28:18	268435457	submission.event.submissionSubmitted	f
-125	1048585	5	3	2024-11-21 05:28:29	805306371	editor.submission.decision.sendInternalReview.log	f
-126	515	35	3	2024-11-21 05:28:29	1342177281	submission.event.fileUploaded	f
-127	1048585	5	3	2024-11-21 05:28:29	1342177288	submission.event.fileRevised	f
-128	515	36	3	2024-11-21 05:28:29	1342177281	submission.event.fileUploaded	f
-129	1048585	5	3	2024-11-21 05:28:29	1342177288	submission.event.fileRevised	f
-130	515	37	3	2024-11-21 05:28:29	1342177281	submission.event.fileUploaded	f
-131	1048585	5	3	2024-11-21 05:28:29	1342177288	submission.event.fileRevised	f
-132	515	38	3	2024-11-21 05:28:30	1342177281	submission.event.fileUploaded	f
-133	1048585	5	3	2024-11-21 05:28:30	1342177288	submission.event.fileRevised	f
-134	515	39	3	2024-11-21 05:28:30	1342177281	submission.event.fileUploaded	f
-135	1048585	5	3	2024-11-21 05:28:30	1342177288	submission.event.fileRevised	f
-136	515	40	3	2024-11-21 05:28:30	1342177281	submission.event.fileUploaded	f
-137	1048585	5	3	2024-11-21 05:28:30	1342177288	submission.event.fileRevised	f
-138	1048585	5	3	2024-11-21 05:28:35	1073741825	log.review.reviewerAssigned	f
-139	1048585	5	3	2024-11-21 05:28:40	805306371	editor.submission.decision.sendExternalReview.log	f
-140	1048585	5	3	2024-11-21 05:28:45	1073741825	log.review.reviewerAssigned	f
-141	1048585	5	3	2024-11-21 05:28:50	805306371	editor.submission.decision.accept.log	f
-142	1048585	5	3	2024-11-21 05:28:57	268435459	submission.event.participantAdded	f
-143	1048585	5	3	2024-11-21 05:29:02	805306371	editor.submission.decision.sendToProduction.log	f
-144	1048585	5	3	2024-11-21 05:29:09	268435459	submission.event.participantAdded	f
-145	1048585	5	3	2024-11-21 05:29:13	268435459	submission.event.participantAdded	f
-146	1048585	5	3	2024-11-21 05:29:17	268435474	submission.event.publicationFormatCreated	\N
-147	515	41	3	2024-11-21 05:29:19	1342177281	submission.event.fileUploaded	f
-148	1048585	5	3	2024-11-21 05:29:19	1342177288	submission.event.fileRevised	f
-149	1048585	5	3	2024-11-21 05:29:21	268435464	submission.event.publicationFormatPublished	f
-150	1048585	5	3	2024-11-21 05:29:23	268435476	submission.event.publicationFormatMadeAvailable	f
-151	515	41	3	2024-11-21 05:29:24	1342177296	submission.event.fileEdited	f
-152	515	41	3	2024-11-21 05:29:24	1342177287	submission.event.signoffSignoff	f
-153	515	41	3	2024-11-21 05:29:26	1342177296	submission.event.fileEdited	f
-154	1048585	5	3	2024-11-21 05:29:28	268435462	publication.event.published	f
-155	1048585	5	3	2024-11-21 05:29:33	268435463	publication.event.unpublished	f
-156	1048585	5	3	2024-11-21 05:29:40	268435462	publication.event.published	f
-157	1048585	6	24	2024-11-21 05:29:46	268435458	submission.event.general.metadataUpdated	f
-158	1048585	6	24	2024-11-21 05:29:47	268435458	submission.event.general.metadataUpdated	f
-159	515	42	24	2024-11-21 05:29:49	1342177281	submission.event.fileUploaded	f
-160	1048585	6	24	2024-11-21 05:29:49	1342177288	submission.event.fileRevised	f
-161	515	42	24	2024-11-21 05:29:49	1342177296	submission.event.fileEdited	f
-162	515	43	24	2024-11-21 05:29:50	1342177281	submission.event.fileUploaded	f
-163	1048585	6	24	2024-11-21 05:29:50	1342177288	submission.event.fileRevised	f
-164	515	43	24	2024-11-21 05:29:50	1342177296	submission.event.fileEdited	f
-165	515	44	24	2024-11-21 05:29:51	1342177281	submission.event.fileUploaded	f
-166	1048585	6	24	2024-11-21 05:29:51	1342177288	submission.event.fileRevised	f
-167	515	44	24	2024-11-21 05:29:51	1342177296	submission.event.fileEdited	f
-168	515	45	24	2024-11-21 05:29:52	1342177281	submission.event.fileUploaded	f
-169	1048585	6	24	2024-11-21 05:29:52	1342177288	submission.event.fileRevised	f
-170	515	45	24	2024-11-21 05:29:52	1342177296	submission.event.fileEdited	f
-171	1048585	6	24	2024-11-21 05:30:13	268435457	submission.event.submissionSubmitted	f
-172	1048585	6	3	2024-11-21 05:30:23	805306371	editor.submission.decision.sendInternalReview.log	f
-173	515	46	3	2024-11-21 05:30:24	1342177281	submission.event.fileUploaded	f
-174	1048585	6	3	2024-11-21 05:30:24	1342177288	submission.event.fileRevised	f
-175	515	47	3	2024-11-21 05:30:24	1342177281	submission.event.fileUploaded	f
-176	1048585	6	3	2024-11-21 05:30:24	1342177288	submission.event.fileRevised	f
-177	515	48	3	2024-11-21 05:30:24	1342177281	submission.event.fileUploaded	f
-178	1048585	6	3	2024-11-21 05:30:24	1342177288	submission.event.fileRevised	f
-179	515	49	3	2024-11-21 05:30:24	1342177281	submission.event.fileUploaded	f
-180	1048585	6	3	2024-11-21 05:30:24	1342177288	submission.event.fileRevised	f
-181	1048585	6	3	2024-11-21 05:30:30	268435459	submission.event.participantAdded	f
-182	1048585	6	3	2024-11-21 05:30:34	268435459	submission.event.participantAdded	f
-183	1048585	6	6	2024-11-21 05:30:45	805306372	editor.submission.recommend.accept.log	f
-184	1048585	7	25	2024-11-21 05:31:01	268435458	submission.event.general.metadataUpdated	f
-185	1048585	7	25	2024-11-21 05:31:01	268435458	submission.event.general.metadataUpdated	f
-186	515	50	25	2024-11-21 05:31:03	1342177281	submission.event.fileUploaded	f
-187	1048585	7	25	2024-11-21 05:31:03	1342177288	submission.event.fileRevised	f
-188	515	50	25	2024-11-21 05:31:03	1342177296	submission.event.fileEdited	f
-189	515	51	25	2024-11-21 05:31:04	1342177281	submission.event.fileUploaded	f
-190	1048585	7	25	2024-11-21 05:31:04	1342177288	submission.event.fileRevised	f
-191	515	51	25	2024-11-21 05:31:04	1342177296	submission.event.fileEdited	f
-192	515	52	25	2024-11-21 05:31:05	1342177281	submission.event.fileUploaded	f
-193	1048585	7	25	2024-11-21 05:31:05	1342177288	submission.event.fileRevised	f
-194	515	52	25	2024-11-21 05:31:05	1342177296	submission.event.fileEdited	f
-195	515	53	25	2024-11-21 05:31:06	1342177281	submission.event.fileUploaded	f
-196	1048585	7	25	2024-11-21 05:31:06	1342177288	submission.event.fileRevised	f
-197	515	53	25	2024-11-21 05:31:06	1342177296	submission.event.fileEdited	f
-198	515	54	25	2024-11-21 05:31:07	1342177281	submission.event.fileUploaded	f
-199	1048585	7	25	2024-11-21 05:31:07	1342177288	submission.event.fileRevised	f
-200	515	54	25	2024-11-21 05:31:07	1342177296	submission.event.fileEdited	f
-201	1048585	7	25	2024-11-21 05:31:35	268435457	submission.event.submissionSubmitted	f
-202	1048585	7	3	2024-11-21 05:31:46	805306371	editor.submission.decision.sendExternalReview.log	f
-203	515	55	3	2024-11-21 05:31:47	1342177281	submission.event.fileUploaded	f
-204	1048585	7	3	2024-11-21 05:31:47	1342177288	submission.event.fileRevised	f
-205	515	56	3	2024-11-21 05:31:47	1342177281	submission.event.fileUploaded	f
-206	1048585	7	3	2024-11-21 05:31:47	1342177288	submission.event.fileRevised	f
-207	515	57	3	2024-11-21 05:31:47	1342177281	submission.event.fileUploaded	f
-208	1048585	7	3	2024-11-21 05:31:47	1342177288	submission.event.fileRevised	f
-209	515	58	3	2024-11-21 05:31:47	1342177281	submission.event.fileUploaded	f
-210	1048585	7	3	2024-11-21 05:31:47	1342177288	submission.event.fileRevised	f
-211	515	59	3	2024-11-21 05:31:47	1342177281	submission.event.fileUploaded	f
-212	1048585	7	3	2024-11-21 05:31:47	1342177288	submission.event.fileRevised	f
-213	1048585	7	3	2024-11-21 05:31:53	1073741825	log.review.reviewerAssigned	f
-214	1048585	7	3	2024-11-21 05:31:58	805306371	editor.submission.decision.accept.log	f
-215	1048585	7	3	2024-11-21 05:32:04	268435459	submission.event.participantAdded	f
-216	1048585	8	3	2024-11-21 05:32:12	268435458	submission.event.general.metadataUpdated	f
-217	515	60	3	2024-11-21 05:32:14	1342177281	submission.event.fileUploaded	f
-218	1048585	8	3	2024-11-21 05:32:14	1342177288	submission.event.fileRevised	f
-219	515	60	3	2024-11-21 05:32:15	1342177296	submission.event.fileEdited	f
-220	1048585	8	3	2024-11-21 05:32:15	268435457	submission.event.submissionSubmitted	f
-221	1048585	9	26	2024-11-21 05:32:22	268435458	submission.event.general.metadataUpdated	f
-222	1048585	9	26	2024-11-21 05:32:22	268435458	submission.event.general.metadataUpdated	f
-223	515	61	26	2024-11-21 05:32:24	1342177281	submission.event.fileUploaded	f
-224	1048585	9	26	2024-11-21 05:32:24	1342177288	submission.event.fileRevised	f
-225	515	61	26	2024-11-21 05:32:24	1342177296	submission.event.fileEdited	f
-226	515	62	26	2024-11-21 05:32:25	1342177281	submission.event.fileUploaded	f
-227	1048585	9	26	2024-11-21 05:32:25	1342177288	submission.event.fileRevised	f
-228	515	62	26	2024-11-21 05:32:25	1342177296	submission.event.fileEdited	f
-229	515	63	26	2024-11-21 05:32:26	1342177281	submission.event.fileUploaded	f
-230	1048585	9	26	2024-11-21 05:32:26	1342177288	submission.event.fileRevised	f
-231	515	63	26	2024-11-21 05:32:26	1342177296	submission.event.fileEdited	f
-232	515	64	26	2024-11-21 05:32:27	1342177281	submission.event.fileUploaded	f
-233	1048585	9	26	2024-11-21 05:32:27	1342177288	submission.event.fileRevised	f
-234	515	64	26	2024-11-21 05:32:27	1342177296	submission.event.fileEdited	f
-235	515	65	26	2024-11-21 05:32:28	1342177281	submission.event.fileUploaded	f
-236	1048585	9	26	2024-11-21 05:32:28	1342177288	submission.event.fileRevised	f
-237	515	65	26	2024-11-21 05:32:28	1342177296	submission.event.fileEdited	f
-238	1048585	9	26	2024-11-21 05:32:56	268435457	submission.event.submissionSubmitted	f
-239	1048585	9	3	2024-11-21 05:33:08	805306371	editor.submission.decision.sendInternalReview.log	f
-240	515	66	3	2024-11-21 05:33:08	1342177281	submission.event.fileUploaded	f
-241	1048585	9	3	2024-11-21 05:33:08	1342177288	submission.event.fileRevised	f
-242	515	67	3	2024-11-21 05:33:09	1342177281	submission.event.fileUploaded	f
-243	1048585	9	3	2024-11-21 05:33:09	1342177288	submission.event.fileRevised	f
-244	515	68	3	2024-11-21 05:33:09	1342177281	submission.event.fileUploaded	f
-245	1048585	9	3	2024-11-21 05:33:09	1342177288	submission.event.fileRevised	f
-246	515	69	3	2024-11-21 05:33:09	1342177281	submission.event.fileUploaded	f
-247	1048585	9	3	2024-11-21 05:33:09	1342177288	submission.event.fileRevised	f
-248	515	70	3	2024-11-21 05:33:09	1342177281	submission.event.fileUploaded	f
-249	1048585	9	3	2024-11-21 05:33:09	1342177288	submission.event.fileRevised	f
-250	1048585	10	27	2024-11-21 05:33:19	268435458	submission.event.general.metadataUpdated	f
-251	1048585	10	27	2024-11-21 05:33:19	268435458	submission.event.general.metadataUpdated	f
-252	515	71	27	2024-11-21 05:33:22	1342177281	submission.event.fileUploaded	f
-253	1048585	10	27	2024-11-21 05:33:22	1342177288	submission.event.fileRevised	f
-254	515	71	27	2024-11-21 05:33:22	1342177296	submission.event.fileEdited	f
-255	515	72	27	2024-11-21 05:33:22	1342177281	submission.event.fileUploaded	f
-256	1048585	10	27	2024-11-21 05:33:22	1342177288	submission.event.fileRevised	f
-257	515	72	27	2024-11-21 05:33:23	1342177296	submission.event.fileEdited	f
-258	515	73	27	2024-11-21 05:33:23	1342177281	submission.event.fileUploaded	f
-259	1048585	10	27	2024-11-21 05:33:23	1342177288	submission.event.fileRevised	f
-260	515	73	27	2024-11-21 05:33:24	1342177296	submission.event.fileEdited	f
-261	515	74	27	2024-11-21 05:33:24	1342177281	submission.event.fileUploaded	f
-262	1048585	10	27	2024-11-21 05:33:24	1342177288	submission.event.fileRevised	f
-263	515	74	27	2024-11-21 05:33:25	1342177296	submission.event.fileEdited	f
-264	515	75	27	2024-11-21 05:33:25	1342177281	submission.event.fileUploaded	f
-265	1048585	10	27	2024-11-21 05:33:25	1342177288	submission.event.fileRevised	f
-266	515	75	27	2024-11-21 05:33:25	1342177296	submission.event.fileEdited	f
-267	515	76	27	2024-11-21 05:33:26	1342177281	submission.event.fileUploaded	f
-268	1048585	10	27	2024-11-21 05:33:26	1342177288	submission.event.fileRevised	f
-269	515	76	27	2024-11-21 05:33:26	1342177296	submission.event.fileEdited	f
-270	515	77	27	2024-11-21 05:33:27	1342177281	submission.event.fileUploaded	f
-271	1048585	10	27	2024-11-21 05:33:27	1342177288	submission.event.fileRevised	f
-272	515	77	27	2024-11-21 05:33:27	1342177296	submission.event.fileEdited	f
-273	515	78	27	2024-11-21 05:33:28	1342177281	submission.event.fileUploaded	f
-274	1048585	10	27	2024-11-21 05:33:28	1342177288	submission.event.fileRevised	f
-275	515	78	27	2024-11-21 05:33:28	1342177296	submission.event.fileEdited	f
-276	515	79	27	2024-11-21 05:33:29	1342177281	submission.event.fileUploaded	f
-277	1048585	10	27	2024-11-21 05:33:29	1342177288	submission.event.fileRevised	f
-278	515	79	27	2024-11-21 05:33:29	1342177296	submission.event.fileEdited	f
-279	1048585	10	27	2024-11-21 05:34:22	268435457	submission.event.submissionSubmitted	f
-280	1048585	11	28	2024-11-21 05:34:29	268435458	submission.event.general.metadataUpdated	f
-281	1048585	11	28	2024-11-21 05:34:29	268435458	submission.event.general.metadataUpdated	f
-282	515	80	28	2024-11-21 05:34:31	1342177281	submission.event.fileUploaded	f
-283	1048585	11	28	2024-11-21 05:34:31	1342177288	submission.event.fileRevised	f
-284	515	80	28	2024-11-21 05:34:32	1342177296	submission.event.fileEdited	f
-285	515	81	28	2024-11-21 05:34:32	1342177281	submission.event.fileUploaded	f
-286	1048585	11	28	2024-11-21 05:34:32	1342177288	submission.event.fileRevised	f
-287	515	81	28	2024-11-21 05:34:33	1342177296	submission.event.fileEdited	f
-288	1048585	11	28	2024-11-21 05:34:42	268435457	submission.event.submissionSubmitted	f
-289	1048585	11	3	2024-11-21 05:34:53	805306371	editor.submission.decision.sendInternalReview.log	f
-290	515	82	3	2024-11-21 05:34:53	1342177281	submission.event.fileUploaded	f
-291	1048585	11	3	2024-11-21 05:34:53	1342177288	submission.event.fileRevised	f
-292	515	83	3	2024-11-21 05:34:53	1342177281	submission.event.fileUploaded	f
-293	1048585	11	3	2024-11-21 05:34:53	1342177288	submission.event.fileRevised	f
-294	1048585	11	3	2024-11-21 05:34:58	1073741825	log.review.reviewerAssigned	f
-295	1048585	11	3	2024-11-21 05:35:03	805306371	editor.submission.decision.sendExternalReview.log	f
-296	1048585	11	3	2024-11-21 05:35:08	1073741825	log.review.reviewerAssigned	f
-297	1048585	11	3	2024-11-21 05:35:11	1073741825	log.review.reviewerAssigned	f
-298	1048585	11	10	2024-11-21 05:35:17	1073741830	log.review.reviewAccepted	\N
-299	1048585	11	10	2024-11-21 05:35:21	1073741848	log.review.reviewReady	f
-300	1048585	11	12	2024-11-21 05:35:26	1073741830	log.review.reviewAccepted	\N
-301	1048585	11	12	2024-11-21 05:35:30	1073741848	log.review.reviewReady	f
-302	1048585	11	3	2024-11-21 05:35:43	805306371	editor.submission.decision.accept.log	f
-303	1048585	11	3	2024-11-21 05:35:43	805306375	submission.event.decisionReviewerEmailSent	f
-304	1048585	12	29	2024-11-21 05:35:53	268435458	submission.event.general.metadataUpdated	f
-305	1048585	12	29	2024-11-21 05:35:54	268435458	submission.event.general.metadataUpdated	f
-306	515	84	29	2024-11-21 05:35:56	1342177281	submission.event.fileUploaded	f
-307	1048585	12	29	2024-11-21 05:35:56	1342177288	submission.event.fileRevised	f
-308	515	84	29	2024-11-21 05:35:56	1342177296	submission.event.fileEdited	f
-309	515	85	29	2024-11-21 05:35:57	1342177281	submission.event.fileUploaded	f
-310	1048585	12	29	2024-11-21 05:35:57	1342177288	submission.event.fileRevised	f
-311	515	85	29	2024-11-21 05:35:57	1342177296	submission.event.fileEdited	f
-312	515	86	29	2024-11-21 05:35:57	1342177281	submission.event.fileUploaded	f
-313	1048585	12	29	2024-11-21 05:35:57	1342177288	submission.event.fileRevised	f
-314	515	86	29	2024-11-21 05:35:58	1342177296	submission.event.fileEdited	f
-315	1048585	12	29	2024-11-21 05:36:15	268435457	submission.event.submissionSubmitted	f
-316	1048585	12	3	2024-11-21 05:36:27	805306371	editor.submission.decision.sendInternalReview.log	f
-317	515	87	3	2024-11-21 05:36:28	1342177281	submission.event.fileUploaded	f
-318	1048585	12	3	2024-11-21 05:36:28	1342177288	submission.event.fileRevised	f
-319	515	88	3	2024-11-21 05:36:28	1342177281	submission.event.fileUploaded	f
-320	1048585	12	3	2024-11-21 05:36:28	1342177288	submission.event.fileRevised	f
-321	515	89	3	2024-11-21 05:36:28	1342177281	submission.event.fileUploaded	f
-322	1048585	12	3	2024-11-21 05:36:28	1342177288	submission.event.fileRevised	f
-323	1048585	12	3	2024-11-21 05:36:34	1073741825	log.review.reviewerAssigned	f
-324	1048585	12	3	2024-11-21 05:36:37	1073741825	log.review.reviewerAssigned	f
-325	1048585	12	3	2024-11-21 05:36:40	1073741825	log.review.reviewerAssigned	f
-326	1048585	12	8	2024-11-21 05:36:47	1073741830	log.review.reviewAccepted	\N
-327	1048585	12	8	2024-11-21 05:36:50	1073741848	log.review.reviewReady	f
-328	1048585	13	30	2024-11-21 05:36:57	268435458	submission.event.general.metadataUpdated	f
-329	1048585	13	30	2024-11-21 05:36:58	268435458	submission.event.general.metadataUpdated	f
-330	515	90	30	2024-11-21 05:37:00	1342177281	submission.event.fileUploaded	f
-331	1048585	13	30	2024-11-21 05:37:00	1342177288	submission.event.fileRevised	f
-332	515	90	30	2024-11-21 05:37:00	1342177296	submission.event.fileEdited	f
-333	515	91	30	2024-11-21 05:37:01	1342177281	submission.event.fileUploaded	f
-334	1048585	13	30	2024-11-21 05:37:01	1342177288	submission.event.fileRevised	f
-335	515	91	30	2024-11-21 05:37:01	1342177296	submission.event.fileEdited	f
-336	515	92	30	2024-11-21 05:37:02	1342177281	submission.event.fileUploaded	f
-337	1048585	13	30	2024-11-21 05:37:02	1342177288	submission.event.fileRevised	f
-338	515	92	30	2024-11-21 05:37:02	1342177296	submission.event.fileEdited	f
-339	1048585	13	30	2024-11-21 05:37:18	268435457	submission.event.submissionSubmitted	f
-340	1048585	13	3	2024-11-21 05:37:30	805306371	editor.submission.decision.sendInternalReview.log	f
-341	515	93	3	2024-11-21 05:37:30	1342177281	submission.event.fileUploaded	f
-342	1048585	13	3	2024-11-21 05:37:30	1342177288	submission.event.fileRevised	f
-343	515	94	3	2024-11-21 05:37:30	1342177281	submission.event.fileUploaded	f
-344	1048585	13	3	2024-11-21 05:37:30	1342177288	submission.event.fileRevised	f
-345	515	95	3	2024-11-21 05:37:31	1342177281	submission.event.fileUploaded	f
-346	1048585	13	3	2024-11-21 05:37:31	1342177288	submission.event.fileRevised	f
-347	1048585	13	3	2024-11-21 05:37:36	1073741825	log.review.reviewerAssigned	f
-348	1048585	13	3	2024-11-21 05:37:40	805306371	editor.submission.decision.sendExternalReview.log	f
-349	1048585	13	3	2024-11-21 05:37:47	1073741825	log.review.reviewerAssigned	f
-350	1048585	13	3	2024-11-21 05:37:50	1073741825	log.review.reviewerAssigned	f
-351	1048585	13	3	2024-11-21 05:37:53	1073741825	log.review.reviewerAssigned	f
-352	1048585	13	10	2024-11-21 05:37:59	1073741830	log.review.reviewAccepted	\N
-353	1048585	13	10	2024-11-21 05:38:03	1073741848	log.review.reviewReady	f
-354	1048585	13	12	2024-11-21 05:38:08	1073741830	log.review.reviewAccepted	\N
-355	1048585	13	12	2024-11-21 05:38:12	1073741848	log.review.reviewReady	f
-356	1048585	13	3	2024-11-21 05:38:26	805306371	editor.submission.decision.accept.log	f
-357	1048585	13	3	2024-11-21 05:38:27	805306375	submission.event.decisionReviewerEmailSent	f
-358	1048585	14	31	2024-11-21 05:38:37	268435458	submission.event.general.metadataUpdated	f
-359	1048585	14	31	2024-11-21 05:38:38	268435458	submission.event.general.metadataUpdated	f
-360	515	96	31	2024-11-21 05:38:40	1342177281	submission.event.fileUploaded	f
-361	1048585	14	31	2024-11-21 05:38:40	1342177288	submission.event.fileRevised	f
-362	515	96	31	2024-11-21 05:38:40	1342177296	submission.event.fileEdited	f
-363	515	97	31	2024-11-21 05:38:41	1342177281	submission.event.fileUploaded	f
-364	1048585	14	31	2024-11-21 05:38:41	1342177288	submission.event.fileRevised	f
-365	515	97	31	2024-11-21 05:38:41	1342177296	submission.event.fileEdited	f
-366	515	98	31	2024-11-21 05:38:42	1342177281	submission.event.fileUploaded	f
-367	1048585	14	31	2024-11-21 05:38:42	1342177288	submission.event.fileRevised	f
-368	515	98	31	2024-11-21 05:38:42	1342177296	submission.event.fileEdited	f
-369	515	99	31	2024-11-21 05:38:43	1342177281	submission.event.fileUploaded	f
-370	1048585	14	31	2024-11-21 05:38:43	1342177288	submission.event.fileRevised	f
-371	515	99	31	2024-11-21 05:38:43	1342177296	submission.event.fileEdited	f
-372	515	100	31	2024-11-21 05:38:44	1342177281	submission.event.fileUploaded	f
-373	1048585	14	31	2024-11-21 05:38:44	1342177288	submission.event.fileRevised	f
-374	515	100	31	2024-11-21 05:38:45	1342177296	submission.event.fileEdited	f
-375	515	101	31	2024-11-21 05:38:45	1342177281	submission.event.fileUploaded	f
-376	1048585	14	31	2024-11-21 05:38:45	1342177288	submission.event.fileRevised	f
-377	515	101	31	2024-11-21 05:38:46	1342177296	submission.event.fileEdited	f
-378	1048585	14	31	2024-11-21 05:39:09	268435457	submission.event.submissionSubmitted	f
-379	1048585	14	3	2024-11-21 05:39:22	805306371	editor.submission.decision.sendInternalReview.log	f
-380	515	102	3	2024-11-21 05:39:23	1342177281	submission.event.fileUploaded	f
-381	1048585	14	3	2024-11-21 05:39:23	1342177288	submission.event.fileRevised	f
-382	515	103	3	2024-11-21 05:39:23	1342177281	submission.event.fileUploaded	f
-383	1048585	14	3	2024-11-21 05:39:23	1342177288	submission.event.fileRevised	f
-384	515	104	3	2024-11-21 05:39:23	1342177281	submission.event.fileUploaded	f
-385	1048585	14	3	2024-11-21 05:39:23	1342177288	submission.event.fileRevised	f
-386	515	105	3	2024-11-21 05:39:23	1342177281	submission.event.fileUploaded	f
-387	1048585	14	3	2024-11-21 05:39:23	1342177288	submission.event.fileRevised	f
-388	515	106	3	2024-11-21 05:39:23	1342177281	submission.event.fileUploaded	f
-389	1048585	14	3	2024-11-21 05:39:23	1342177288	submission.event.fileRevised	f
-390	515	107	3	2024-11-21 05:39:23	1342177281	submission.event.fileUploaded	f
-391	1048585	14	3	2024-11-21 05:39:23	1342177288	submission.event.fileRevised	f
-392	1048585	14	3	2024-11-21 05:39:29	1073741825	log.review.reviewerAssigned	f
-393	1048585	14	3	2024-11-21 05:39:34	805306371	editor.submission.decision.sendExternalReview.log	f
-394	1048585	14	3	2024-11-21 05:39:40	1073741825	log.review.reviewerAssigned	f
-395	1048585	14	3	2024-11-21 05:39:45	805306371	editor.submission.decision.accept.log	f
-396	1048585	14	3	2024-11-21 05:39:53	268435459	submission.event.participantAdded	f
-397	1048585	14	3	2024-11-21 05:39:58	805306371	editor.submission.decision.sendToProduction.log	f
-398	1048585	14	3	2024-11-21 05:40:05	268435459	submission.event.participantAdded	f
-399	1048585	14	3	2024-11-21 05:40:10	268435459	submission.event.participantAdded	f
-400	1048585	14	3	2024-11-21 05:40:14	268435474	submission.event.publicationFormatCreated	\N
-401	515	108	3	2024-11-21 05:40:19	1342177281	submission.event.fileUploaded	f
-402	1048585	14	3	2024-11-21 05:40:19	1342177288	submission.event.fileRevised	f
-403	515	109	3	2024-11-21 05:40:19	1342177281	submission.event.fileUploaded	f
-404	1048585	14	3	2024-11-21 05:40:19	1342177288	submission.event.fileRevised	f
-405	515	110	3	2024-11-21 05:40:19	1342177281	submission.event.fileUploaded	f
-406	1048585	14	3	2024-11-21 05:40:19	1342177288	submission.event.fileRevised	f
-407	515	111	3	2024-11-21 05:40:19	1342177281	submission.event.fileUploaded	f
-408	1048585	14	3	2024-11-21 05:40:19	1342177288	submission.event.fileRevised	f
-409	515	112	3	2024-11-21 05:40:19	1342177281	submission.event.fileUploaded	f
-410	1048585	14	3	2024-11-21 05:40:19	1342177288	submission.event.fileRevised	f
-411	515	113	3	2024-11-21 05:40:19	1342177281	submission.event.fileUploaded	f
-412	1048585	14	3	2024-11-21 05:40:19	1342177288	submission.event.fileRevised	f
-413	1048585	14	3	2024-11-21 05:40:21	268435464	submission.event.publicationFormatPublished	f
-414	1048585	14	3	2024-11-21 05:40:22	268435476	submission.event.publicationFormatMadeAvailable	f
-415	515	113	3	2024-11-21 05:40:24	1342177296	submission.event.fileEdited	f
-416	515	113	3	2024-11-21 05:40:24	1342177287	submission.event.signoffSignoff	f
-417	515	113	3	2024-11-21 05:40:26	1342177296	submission.event.fileEdited	f
-418	515	112	3	2024-11-21 05:40:28	1342177296	submission.event.fileEdited	f
-419	515	112	3	2024-11-21 05:40:28	1342177287	submission.event.signoffSignoff	f
-420	515	112	3	2024-11-21 05:40:30	1342177296	submission.event.fileEdited	f
-421	515	111	3	2024-11-21 05:40:32	1342177296	submission.event.fileEdited	f
-422	515	111	3	2024-11-21 05:40:32	1342177287	submission.event.signoffSignoff	f
-423	515	111	3	2024-11-21 05:40:34	1342177296	submission.event.fileEdited	f
-424	515	110	3	2024-11-21 05:40:36	1342177296	submission.event.fileEdited	f
-425	515	110	3	2024-11-21 05:40:36	1342177287	submission.event.signoffSignoff	f
-426	515	110	3	2024-11-21 05:40:38	1342177296	submission.event.fileEdited	f
-427	515	109	3	2024-11-21 05:40:40	1342177296	submission.event.fileEdited	f
-428	515	109	3	2024-11-21 05:40:40	1342177287	submission.event.signoffSignoff	f
-429	515	109	3	2024-11-21 05:40:43	1342177296	submission.event.fileEdited	f
-430	515	108	3	2024-11-21 05:40:45	1342177296	submission.event.fileEdited	f
-431	515	108	3	2024-11-21 05:40:45	1342177287	submission.event.signoffSignoff	f
-432	515	108	3	2024-11-21 05:40:47	1342177296	submission.event.fileEdited	f
-433	1048585	14	3	2024-11-21 05:40:49	268435462	publication.event.published	f
-434	1048585	15	32	2024-11-21 05:40:56	268435458	submission.event.general.metadataUpdated	f
-435	1048585	15	32	2024-11-21 05:40:56	268435458	submission.event.general.metadataUpdated	f
-436	515	114	32	2024-11-21 05:40:58	1342177281	submission.event.fileUploaded	f
-437	1048585	15	32	2024-11-21 05:40:58	1342177288	submission.event.fileRevised	f
-438	515	114	32	2024-11-21 05:40:59	1342177296	submission.event.fileEdited	f
-439	515	115	32	2024-11-21 05:40:59	1342177281	submission.event.fileUploaded	f
-440	1048585	15	32	2024-11-21 05:40:59	1342177288	submission.event.fileRevised	f
-441	515	115	32	2024-11-21 05:40:59	1342177296	submission.event.fileEdited	f
-442	515	116	32	2024-11-21 05:41:00	1342177281	submission.event.fileUploaded	f
-443	1048585	15	32	2024-11-21 05:41:00	1342177288	submission.event.fileRevised	f
-444	515	116	32	2024-11-21 05:41:00	1342177296	submission.event.fileEdited	f
-445	1048585	15	32	2024-11-21 05:41:15	268435457	submission.event.submissionSubmitted	f
-446	1048585	15	3	2024-11-21 05:41:27	805306371	editor.submission.decision.sendExternalReview.log	f
-447	515	117	3	2024-11-21 05:41:27	1342177281	submission.event.fileUploaded	f
-448	1048585	15	3	2024-11-21 05:41:27	1342177288	submission.event.fileRevised	f
-449	515	118	3	2024-11-21 05:41:28	1342177281	submission.event.fileUploaded	f
-450	1048585	15	3	2024-11-21 05:41:28	1342177288	submission.event.fileRevised	f
-451	515	119	3	2024-11-21 05:41:28	1342177281	submission.event.fileUploaded	f
-452	1048585	15	3	2024-11-21 05:41:28	1342177288	submission.event.fileRevised	f
-453	1048585	16	33	2024-11-21 05:41:38	268435458	submission.event.general.metadataUpdated	f
-454	1048585	16	33	2024-11-21 05:41:38	268435458	submission.event.general.metadataUpdated	f
-455	515	120	33	2024-11-21 05:41:40	1342177281	submission.event.fileUploaded	f
-456	1048585	16	33	2024-11-21 05:41:40	1342177288	submission.event.fileRevised	f
-457	515	120	33	2024-11-21 05:41:40	1342177296	submission.event.fileEdited	f
-458	515	121	33	2024-11-21 05:41:41	1342177281	submission.event.fileUploaded	f
-459	1048585	16	33	2024-11-21 05:41:41	1342177288	submission.event.fileRevised	f
-460	515	121	33	2024-11-21 05:41:41	1342177296	submission.event.fileEdited	f
-461	515	122	33	2024-11-21 05:41:42	1342177281	submission.event.fileUploaded	f
-462	1048585	16	33	2024-11-21 05:41:42	1342177288	submission.event.fileRevised	f
-463	515	122	33	2024-11-21 05:41:42	1342177296	submission.event.fileEdited	f
-464	515	123	33	2024-11-21 05:41:43	1342177281	submission.event.fileUploaded	f
-465	1048585	16	33	2024-11-21 05:41:43	1342177288	submission.event.fileRevised	f
-466	515	123	33	2024-11-21 05:41:43	1342177296	submission.event.fileEdited	f
-467	515	124	33	2024-11-21 05:41:44	1342177281	submission.event.fileUploaded	f
-468	1048585	16	33	2024-11-21 05:41:44	1342177288	submission.event.fileRevised	f
-469	515	124	33	2024-11-21 05:41:44	1342177296	submission.event.fileEdited	f
-470	1048585	16	33	2024-11-21 05:42:10	268435457	submission.event.submissionSubmitted	f
-471	1048585	16	3	2024-11-21 05:42:23	805306371	editor.submission.decision.sendExternalReview.log	f
-472	515	125	3	2024-11-21 05:42:23	1342177281	submission.event.fileUploaded	f
-473	1048585	16	3	2024-11-21 05:42:23	1342177288	submission.event.fileRevised	f
-474	515	126	3	2024-11-21 05:42:23	1342177281	submission.event.fileUploaded	f
-475	1048585	16	3	2024-11-21 05:42:23	1342177288	submission.event.fileRevised	f
-476	515	127	3	2024-11-21 05:42:23	1342177281	submission.event.fileUploaded	f
-477	1048585	16	3	2024-11-21 05:42:23	1342177288	submission.event.fileRevised	f
-478	515	128	3	2024-11-21 05:42:23	1342177281	submission.event.fileUploaded	f
-479	1048585	16	3	2024-11-21 05:42:23	1342177288	submission.event.fileRevised	f
-480	515	129	3	2024-11-21 05:42:24	1342177281	submission.event.fileUploaded	f
-481	1048585	16	3	2024-11-21 05:42:24	1342177288	submission.event.fileRevised	f
-482	1048585	16	3	2024-11-21 05:42:30	1073741825	log.review.reviewerAssigned	f
-483	1048585	16	3	2024-11-21 05:42:33	1073741825	log.review.reviewerAssigned	f
-484	1048585	16	3	2024-11-21 05:42:36	1073741825	log.review.reviewerAssigned	f
-485	1048585	16	10	2024-11-21 05:42:43	1073741830	log.review.reviewAccepted	\N
-486	1048585	16	10	2024-11-21 05:42:47	1073741848	log.review.reviewReady	f
-487	1048585	17	34	2024-11-21 05:42:54	268435458	submission.event.general.metadataUpdated	f
-488	1048585	17	34	2024-11-21 05:42:54	268435458	submission.event.general.metadataUpdated	f
-489	515	130	34	2024-11-21 05:42:56	1342177281	submission.event.fileUploaded	f
-490	1048585	17	34	2024-11-21 05:42:57	1342177288	submission.event.fileRevised	f
-491	515	130	34	2024-11-21 05:42:57	1342177296	submission.event.fileEdited	f
-492	515	131	34	2024-11-21 05:42:57	1342177281	submission.event.fileUploaded	f
-493	1048585	17	34	2024-11-21 05:42:57	1342177288	submission.event.fileRevised	f
-494	515	131	34	2024-11-21 05:42:58	1342177296	submission.event.fileEdited	f
-495	515	132	34	2024-11-21 05:42:58	1342177281	submission.event.fileUploaded	f
-496	1048585	17	34	2024-11-21 05:42:58	1342177288	submission.event.fileRevised	f
-497	515	132	34	2024-11-21 05:42:59	1342177296	submission.event.fileEdited	f
-498	515	133	34	2024-11-21 05:42:59	1342177281	submission.event.fileUploaded	f
-499	1048585	17	34	2024-11-21 05:42:59	1342177288	submission.event.fileRevised	f
-500	515	133	34	2024-11-21 05:43:00	1342177296	submission.event.fileEdited	f
-501	515	134	34	2024-11-21 05:43:00	1342177281	submission.event.fileUploaded	f
-502	1048585	17	34	2024-11-21 05:43:00	1342177288	submission.event.fileRevised	f
-503	515	134	34	2024-11-21 05:43:01	1342177296	submission.event.fileEdited	f
-504	515	135	34	2024-11-21 05:43:01	1342177281	submission.event.fileUploaded	f
-505	1048585	17	34	2024-11-21 05:43:01	1342177288	submission.event.fileRevised	f
-506	515	135	34	2024-11-21 05:43:01	1342177296	submission.event.fileEdited	f
-507	1048585	17	34	2024-11-21 05:43:37	268435457	submission.event.submissionSubmitted	f
-508	1048585	17	3	2024-11-21 05:43:52	805306371	editor.submission.decision.sendInternalReview.log	f
-509	515	136	3	2024-11-21 05:43:53	1342177281	submission.event.fileUploaded	f
-510	1048585	17	3	2024-11-21 05:43:53	1342177288	submission.event.fileRevised	f
-511	515	137	3	2024-11-21 05:43:53	1342177281	submission.event.fileUploaded	f
-512	1048585	17	3	2024-11-21 05:43:53	1342177288	submission.event.fileRevised	f
-513	515	138	3	2024-11-21 05:43:53	1342177281	submission.event.fileUploaded	f
-514	1048585	17	3	2024-11-21 05:43:53	1342177288	submission.event.fileRevised	f
-515	515	139	3	2024-11-21 05:43:53	1342177281	submission.event.fileUploaded	f
-516	1048585	17	3	2024-11-21 05:43:53	1342177288	submission.event.fileRevised	f
-517	515	140	3	2024-11-21 05:43:53	1342177281	submission.event.fileUploaded	f
-518	1048585	17	3	2024-11-21 05:43:53	1342177288	submission.event.fileRevised	f
-519	515	141	3	2024-11-21 05:43:54	1342177281	submission.event.fileUploaded	f
-520	1048585	17	3	2024-11-21 05:43:54	1342177288	submission.event.fileRevised	f
-521	1048585	17	3	2024-11-21 05:44:00	1073741825	log.review.reviewerAssigned	f
-522	1048585	17	3	2024-11-21 05:44:04	1073741825	log.review.reviewerAssigned	f
+1	1048585	1	19	2024-11-22 05:22:50	268435458	submission.event.general.metadataUpdated	f
+2	1048585	1	19	2024-11-22 05:22:51	268435458	submission.event.general.metadataUpdated	f
+3	515	1	19	2024-11-22 05:22:53	1342177281	submission.event.fileUploaded	f
+4	1048585	1	19	2024-11-22 05:22:53	1342177288	submission.event.fileRevised	f
+5	515	1	19	2024-11-22 05:22:53	1342177296	submission.event.fileEdited	f
+6	515	2	19	2024-11-22 05:22:54	1342177281	submission.event.fileUploaded	f
+7	1048585	1	19	2024-11-22 05:22:54	1342177288	submission.event.fileRevised	f
+8	515	2	19	2024-11-22 05:22:54	1342177296	submission.event.fileEdited	f
+9	515	3	19	2024-11-22 05:22:55	1342177281	submission.event.fileUploaded	f
+10	1048585	1	19	2024-11-22 05:22:55	1342177288	submission.event.fileRevised	f
+11	515	3	19	2024-11-22 05:22:55	1342177296	submission.event.fileEdited	f
+12	1048585	1	19	2024-11-22 05:23:10	268435457	submission.event.submissionSubmitted	f
+13	1048585	1	3	2024-11-22 05:23:18	805306371	editor.submission.decision.sendExternalReview.log	f
+14	515	4	3	2024-11-22 05:23:18	1342177281	submission.event.fileUploaded	f
+15	1048585	1	3	2024-11-22 05:23:18	1342177288	submission.event.fileRevised	f
+16	515	5	3	2024-11-22 05:23:19	1342177281	submission.event.fileUploaded	f
+17	1048585	1	3	2024-11-22 05:23:19	1342177288	submission.event.fileRevised	f
+18	515	6	3	2024-11-22 05:23:19	1342177281	submission.event.fileUploaded	f
+19	1048585	1	3	2024-11-22 05:23:19	1342177288	submission.event.fileRevised	f
+20	1048585	1	3	2024-11-22 05:23:23	1073741825	log.review.reviewerAssigned	f
+21	1048585	1	3	2024-11-22 05:23:28	805306371	editor.submission.decision.accept.log	f
+22	1048585	1	3	2024-11-22 05:23:33	268435459	submission.event.participantAdded	f
+23	1048585	2	20	2024-11-22 05:23:41	268435458	submission.event.general.metadataUpdated	f
+24	1048585	2	20	2024-11-22 05:23:41	268435458	submission.event.general.metadataUpdated	f
+25	1048585	2	20	2024-11-22 05:23:50	268435458	submission.event.general.metadataUpdated	f
+26	515	7	20	2024-11-22 05:23:51	1342177281	submission.event.fileUploaded	f
+27	1048585	2	20	2024-11-22 05:23:51	1342177288	submission.event.fileRevised	f
+28	515	7	20	2024-11-22 05:23:51	1342177296	submission.event.fileEdited	f
+29	515	8	20	2024-11-22 05:23:51	1342177281	submission.event.fileUploaded	f
+30	1048585	2	20	2024-11-22 05:23:51	1342177288	submission.event.fileRevised	f
+31	515	8	20	2024-11-22 05:23:52	1342177296	submission.event.fileEdited	f
+32	515	9	20	2024-11-22 05:23:52	1342177281	submission.event.fileUploaded	f
+33	1048585	2	20	2024-11-22 05:23:52	1342177288	submission.event.fileRevised	f
+34	515	9	20	2024-11-22 05:23:53	1342177296	submission.event.fileEdited	f
+35	515	10	20	2024-11-22 05:23:53	1342177281	submission.event.fileUploaded	f
+36	1048585	2	20	2024-11-22 05:23:53	1342177288	submission.event.fileRevised	f
+37	515	10	20	2024-11-22 05:23:54	1342177296	submission.event.fileEdited	f
+38	515	11	20	2024-11-22 05:23:54	1342177281	submission.event.fileUploaded	f
+39	1048585	2	20	2024-11-22 05:23:54	1342177288	submission.event.fileRevised	f
+40	515	11	20	2024-11-22 05:23:55	1342177296	submission.event.fileEdited	f
+41	515	11	20	2024-11-22 05:23:56	1342177282	submission.event.fileDeleted	f
+42	1048585	2	20	2024-11-22 05:25:14	268435457	submission.event.submissionSubmitted	f
+43	1048585	2	3	2024-11-22 05:25:32	805306371	editor.submission.decision.sendExternalReview.log	f
+44	515	12	3	2024-11-22 05:25:32	1342177281	submission.event.fileUploaded	f
+45	1048585	2	3	2024-11-22 05:25:32	1342177288	submission.event.fileRevised	f
+46	515	13	3	2024-11-22 05:25:32	1342177281	submission.event.fileUploaded	f
+47	1048585	2	3	2024-11-22 05:25:33	1342177288	submission.event.fileRevised	f
+48	515	14	3	2024-11-22 05:25:33	1342177281	submission.event.fileUploaded	f
+49	1048585	2	3	2024-11-22 05:25:33	1342177288	submission.event.fileRevised	f
+50	515	15	3	2024-11-22 05:25:33	1342177281	submission.event.fileUploaded	f
+51	1048585	2	3	2024-11-22 05:25:33	1342177288	submission.event.fileRevised	f
+52	1048585	2	3	2024-11-22 05:25:40	1073741825	log.review.reviewerAssigned	f
+53	1048585	2	3	2024-11-22 05:25:44	1073741825	log.review.reviewerAssigned	f
+54	1048585	3	21	2024-11-22 05:25:52	268435458	submission.event.general.metadataUpdated	f
+55	1048585	3	21	2024-11-22 05:25:53	268435458	submission.event.general.metadataUpdated	f
+56	515	16	21	2024-11-22 05:25:55	1342177281	submission.event.fileUploaded	f
+57	1048585	3	21	2024-11-22 05:25:55	1342177288	submission.event.fileRevised	f
+58	515	16	21	2024-11-22 05:25:55	1342177296	submission.event.fileEdited	f
+59	515	17	21	2024-11-22 05:25:56	1342177281	submission.event.fileUploaded	f
+60	1048585	3	21	2024-11-22 05:25:56	1342177288	submission.event.fileRevised	f
+61	515	17	21	2024-11-22 05:25:56	1342177296	submission.event.fileEdited	f
+62	515	18	21	2024-11-22 05:25:57	1342177281	submission.event.fileUploaded	f
+63	1048585	3	21	2024-11-22 05:25:57	1342177288	submission.event.fileRevised	f
+64	515	18	21	2024-11-22 05:25:57	1342177296	submission.event.fileEdited	f
+65	515	19	21	2024-11-22 05:25:57	1342177281	submission.event.fileUploaded	f
+66	1048585	3	21	2024-11-22 05:25:57	1342177288	submission.event.fileRevised	f
+67	515	19	21	2024-11-22 05:25:58	1342177296	submission.event.fileEdited	f
+68	515	20	21	2024-11-22 05:25:58	1342177281	submission.event.fileUploaded	f
+69	1048585	3	21	2024-11-22 05:25:58	1342177288	submission.event.fileRevised	f
+70	515	20	21	2024-11-22 05:25:59	1342177296	submission.event.fileEdited	f
+71	1048585	3	21	2024-11-22 05:26:25	268435457	submission.event.submissionSubmitted	f
+72	1048585	4	22	2024-11-22 05:26:32	268435458	submission.event.general.metadataUpdated	f
+73	1048585	4	22	2024-11-22 05:26:33	268435458	submission.event.general.metadataUpdated	f
+74	515	21	22	2024-11-22 05:26:35	1342177281	submission.event.fileUploaded	f
+75	1048585	4	22	2024-11-22 05:26:35	1342177288	submission.event.fileRevised	f
+76	515	21	22	2024-11-22 05:26:35	1342177296	submission.event.fileEdited	f
+77	515	22	22	2024-11-22 05:26:36	1342177281	submission.event.fileUploaded	f
+78	1048585	4	22	2024-11-22 05:26:36	1342177288	submission.event.fileRevised	f
+79	515	22	22	2024-11-22 05:26:36	1342177296	submission.event.fileEdited	f
+80	515	23	22	2024-11-22 05:26:37	1342177281	submission.event.fileUploaded	f
+81	1048585	4	22	2024-11-22 05:26:37	1342177288	submission.event.fileRevised	f
+82	515	23	22	2024-11-22 05:26:37	1342177296	submission.event.fileEdited	f
+83	515	24	22	2024-11-22 05:26:38	1342177281	submission.event.fileUploaded	f
+84	1048585	4	22	2024-11-22 05:26:38	1342177288	submission.event.fileRevised	f
+85	515	24	22	2024-11-22 05:26:38	1342177296	submission.event.fileEdited	f
+86	1048585	4	22	2024-11-22 05:27:00	268435457	submission.event.submissionSubmitted	f
+87	1048585	4	3	2024-11-22 05:27:10	805306371	editor.submission.decision.sendInternalReview.log	f
+88	515	25	3	2024-11-22 05:27:10	1342177281	submission.event.fileUploaded	f
+89	1048585	4	3	2024-11-22 05:27:10	1342177288	submission.event.fileRevised	f
+90	515	26	3	2024-11-22 05:27:10	1342177281	submission.event.fileUploaded	f
+91	1048585	4	3	2024-11-22 05:27:10	1342177288	submission.event.fileRevised	f
+92	515	27	3	2024-11-22 05:27:10	1342177281	submission.event.fileUploaded	f
+93	1048585	4	3	2024-11-22 05:27:10	1342177288	submission.event.fileRevised	f
+94	515	28	3	2024-11-22 05:27:11	1342177281	submission.event.fileUploaded	f
+95	1048585	4	3	2024-11-22 05:27:11	1342177288	submission.event.fileRevised	f
+96	1048585	4	3	2024-11-22 05:27:15	1073741825	log.review.reviewerAssigned	f
+97	1048585	4	3	2024-11-22 05:27:20	805306371	editor.submission.decision.sendExternalReview.log	f
+98	1048585	4	3	2024-11-22 05:27:25	1073741825	log.review.reviewerAssigned	f
+99	1048585	4	3	2024-11-22 05:27:30	805306371	editor.submission.decision.accept.log	f
+100	1048585	4	3	2024-11-22 05:27:36	268435459	submission.event.participantAdded	f
+101	1048585	4	3	2024-11-22 05:27:42	805306371	editor.submission.decision.sendToProduction.log	f
+102	1048585	4	3	2024-11-22 05:27:48	268435459	submission.event.participantAdded	f
+103	1048585	4	3	2024-11-22 05:27:53	268435474	submission.event.publicationFormatCreated	\N
+104	1048585	5	23	2024-11-22 05:27:59	268435458	submission.event.general.metadataUpdated	f
+105	1048585	5	23	2024-11-22 05:28:00	268435458	submission.event.general.metadataUpdated	f
+106	515	29	23	2024-11-22 05:28:02	1342177281	submission.event.fileUploaded	f
+107	1048585	5	23	2024-11-22 05:28:02	1342177288	submission.event.fileRevised	f
+108	515	29	23	2024-11-22 05:28:02	1342177296	submission.event.fileEdited	f
+109	515	30	23	2024-11-22 05:28:03	1342177281	submission.event.fileUploaded	f
+110	1048585	5	23	2024-11-22 05:28:03	1342177288	submission.event.fileRevised	f
+111	515	30	23	2024-11-22 05:28:03	1342177296	submission.event.fileEdited	f
+112	515	31	23	2024-11-22 05:28:04	1342177281	submission.event.fileUploaded	f
+113	1048585	5	23	2024-11-22 05:28:04	1342177288	submission.event.fileRevised	f
+114	515	31	23	2024-11-22 05:28:04	1342177296	submission.event.fileEdited	f
+115	515	32	23	2024-11-22 05:28:05	1342177281	submission.event.fileUploaded	f
+116	1048585	5	23	2024-11-22 05:28:05	1342177288	submission.event.fileRevised	f
+117	515	32	23	2024-11-22 05:28:05	1342177296	submission.event.fileEdited	f
+118	515	33	23	2024-11-22 05:28:06	1342177281	submission.event.fileUploaded	f
+119	1048585	5	23	2024-11-22 05:28:06	1342177288	submission.event.fileRevised	f
+120	515	33	23	2024-11-22 05:28:06	1342177296	submission.event.fileEdited	f
+121	515	34	23	2024-11-22 05:28:07	1342177281	submission.event.fileUploaded	f
+122	1048585	5	23	2024-11-22 05:28:07	1342177288	submission.event.fileRevised	f
+123	515	34	23	2024-11-22 05:28:07	1342177296	submission.event.fileEdited	f
+124	1048585	5	23	2024-11-22 05:28:39	268435457	submission.event.submissionSubmitted	f
+125	1048585	5	3	2024-11-22 05:28:50	805306371	editor.submission.decision.sendInternalReview.log	f
+126	515	35	3	2024-11-22 05:28:50	1342177281	submission.event.fileUploaded	f
+127	1048585	5	3	2024-11-22 05:28:50	1342177288	submission.event.fileRevised	f
+128	515	36	3	2024-11-22 05:28:51	1342177281	submission.event.fileUploaded	f
+129	1048585	5	3	2024-11-22 05:28:51	1342177288	submission.event.fileRevised	f
+130	515	37	3	2024-11-22 05:28:51	1342177281	submission.event.fileUploaded	f
+131	1048585	5	3	2024-11-22 05:28:51	1342177288	submission.event.fileRevised	f
+132	515	38	3	2024-11-22 05:28:51	1342177281	submission.event.fileUploaded	f
+133	1048585	5	3	2024-11-22 05:28:51	1342177288	submission.event.fileRevised	f
+134	515	39	3	2024-11-22 05:28:51	1342177281	submission.event.fileUploaded	f
+135	1048585	5	3	2024-11-22 05:28:51	1342177288	submission.event.fileRevised	f
+136	515	40	3	2024-11-22 05:28:51	1342177281	submission.event.fileUploaded	f
+137	1048585	5	3	2024-11-22 05:28:51	1342177288	submission.event.fileRevised	f
+138	1048585	5	3	2024-11-22 05:28:56	1073741825	log.review.reviewerAssigned	f
+139	1048585	5	3	2024-11-22 05:29:01	805306371	editor.submission.decision.sendExternalReview.log	f
+140	1048585	5	3	2024-11-22 05:29:07	1073741825	log.review.reviewerAssigned	f
+141	1048585	5	3	2024-11-22 05:29:12	805306371	editor.submission.decision.accept.log	f
+142	1048585	5	3	2024-11-22 05:29:18	268435459	submission.event.participantAdded	f
+143	1048585	5	3	2024-11-22 05:29:23	805306371	editor.submission.decision.sendToProduction.log	f
+144	1048585	5	3	2024-11-22 05:29:30	268435459	submission.event.participantAdded	f
+145	1048585	5	3	2024-11-22 05:29:34	268435459	submission.event.participantAdded	f
+146	1048585	5	3	2024-11-22 05:29:38	268435474	submission.event.publicationFormatCreated	\N
+147	515	41	3	2024-11-22 05:29:41	1342177281	submission.event.fileUploaded	f
+148	1048585	5	3	2024-11-22 05:29:41	1342177288	submission.event.fileRevised	f
+149	1048585	5	3	2024-11-22 05:29:42	268435464	submission.event.publicationFormatPublished	f
+150	1048585	5	3	2024-11-22 05:29:44	268435476	submission.event.publicationFormatMadeAvailable	f
+151	515	41	3	2024-11-22 05:29:46	1342177296	submission.event.fileEdited	f
+152	515	41	3	2024-11-22 05:29:46	1342177287	submission.event.signoffSignoff	f
+153	515	41	3	2024-11-22 05:29:48	1342177296	submission.event.fileEdited	f
+154	1048585	5	3	2024-11-22 05:29:50	268435462	publication.event.published	f
+155	1048585	5	3	2024-11-22 05:29:55	268435463	publication.event.unpublished	f
+156	1048585	5	3	2024-11-22 05:30:02	268435462	publication.event.published	f
+157	1048585	6	24	2024-11-22 05:30:08	268435458	submission.event.general.metadataUpdated	f
+158	1048585	6	24	2024-11-22 05:30:08	268435458	submission.event.general.metadataUpdated	f
+159	515	42	24	2024-11-22 05:30:11	1342177281	submission.event.fileUploaded	f
+160	1048585	6	24	2024-11-22 05:30:11	1342177288	submission.event.fileRevised	f
+161	515	42	24	2024-11-22 05:30:11	1342177296	submission.event.fileEdited	f
+162	515	43	24	2024-11-22 05:30:12	1342177281	submission.event.fileUploaded	f
+163	1048585	6	24	2024-11-22 05:30:12	1342177288	submission.event.fileRevised	f
+164	515	43	24	2024-11-22 05:30:12	1342177296	submission.event.fileEdited	f
+165	515	44	24	2024-11-22 05:30:12	1342177281	submission.event.fileUploaded	f
+166	1048585	6	24	2024-11-22 05:30:12	1342177288	submission.event.fileRevised	f
+167	515	44	24	2024-11-22 05:30:13	1342177296	submission.event.fileEdited	f
+168	515	45	24	2024-11-22 05:30:13	1342177281	submission.event.fileUploaded	f
+169	1048585	6	24	2024-11-22 05:30:13	1342177288	submission.event.fileRevised	f
+170	515	45	24	2024-11-22 05:30:14	1342177296	submission.event.fileEdited	f
+171	1048585	6	24	2024-11-22 05:30:35	268435457	submission.event.submissionSubmitted	f
+172	1048585	6	3	2024-11-22 05:30:45	805306371	editor.submission.decision.sendInternalReview.log	f
+173	515	46	3	2024-11-22 05:30:45	1342177281	submission.event.fileUploaded	f
+174	1048585	6	3	2024-11-22 05:30:45	1342177288	submission.event.fileRevised	f
+175	515	47	3	2024-11-22 05:30:46	1342177281	submission.event.fileUploaded	f
+176	1048585	6	3	2024-11-22 05:30:46	1342177288	submission.event.fileRevised	f
+177	515	48	3	2024-11-22 05:30:46	1342177281	submission.event.fileUploaded	f
+178	1048585	6	3	2024-11-22 05:30:46	1342177288	submission.event.fileRevised	f
+179	515	49	3	2024-11-22 05:30:46	1342177281	submission.event.fileUploaded	f
+180	1048585	6	3	2024-11-22 05:30:46	1342177288	submission.event.fileRevised	f
+181	1048585	6	3	2024-11-22 05:30:51	268435459	submission.event.participantAdded	f
+182	1048585	6	3	2024-11-22 05:30:55	268435459	submission.event.participantAdded	f
+183	1048585	6	6	2024-11-22 05:31:07	805306372	editor.submission.recommend.accept.log	f
+184	1048585	7	25	2024-11-22 05:31:22	268435458	submission.event.general.metadataUpdated	f
+185	1048585	7	25	2024-11-22 05:31:23	268435458	submission.event.general.metadataUpdated	f
+186	515	50	25	2024-11-22 05:31:25	1342177281	submission.event.fileUploaded	f
+187	1048585	7	25	2024-11-22 05:31:25	1342177288	submission.event.fileRevised	f
+188	515	50	25	2024-11-22 05:31:25	1342177296	submission.event.fileEdited	f
+189	515	51	25	2024-11-22 05:31:26	1342177281	submission.event.fileUploaded	f
+190	1048585	7	25	2024-11-22 05:31:26	1342177288	submission.event.fileRevised	f
+191	515	51	25	2024-11-22 05:31:26	1342177296	submission.event.fileEdited	f
+192	515	52	25	2024-11-22 05:31:27	1342177281	submission.event.fileUploaded	f
+193	1048585	7	25	2024-11-22 05:31:27	1342177288	submission.event.fileRevised	f
+194	515	52	25	2024-11-22 05:31:27	1342177296	submission.event.fileEdited	f
+195	515	53	25	2024-11-22 05:31:28	1342177281	submission.event.fileUploaded	f
+196	1048585	7	25	2024-11-22 05:31:28	1342177288	submission.event.fileRevised	f
+197	515	53	25	2024-11-22 05:31:28	1342177296	submission.event.fileEdited	f
+198	515	54	25	2024-11-22 05:31:29	1342177281	submission.event.fileUploaded	f
+199	1048585	7	25	2024-11-22 05:31:29	1342177288	submission.event.fileRevised	f
+200	515	54	25	2024-11-22 05:31:29	1342177296	submission.event.fileEdited	f
+201	1048585	7	25	2024-11-22 05:31:57	268435457	submission.event.submissionSubmitted	f
+202	1048585	7	3	2024-11-22 05:32:08	805306371	editor.submission.decision.sendExternalReview.log	f
+203	515	55	3	2024-11-22 05:32:09	1342177281	submission.event.fileUploaded	f
+204	1048585	7	3	2024-11-22 05:32:09	1342177288	submission.event.fileRevised	f
+205	515	56	3	2024-11-22 05:32:09	1342177281	submission.event.fileUploaded	f
+206	1048585	7	3	2024-11-22 05:32:09	1342177288	submission.event.fileRevised	f
+207	515	57	3	2024-11-22 05:32:09	1342177281	submission.event.fileUploaded	f
+208	1048585	7	3	2024-11-22 05:32:09	1342177288	submission.event.fileRevised	f
+209	515	58	3	2024-11-22 05:32:09	1342177281	submission.event.fileUploaded	f
+210	1048585	7	3	2024-11-22 05:32:09	1342177288	submission.event.fileRevised	f
+211	515	59	3	2024-11-22 05:32:09	1342177281	submission.event.fileUploaded	f
+212	1048585	7	3	2024-11-22 05:32:09	1342177288	submission.event.fileRevised	f
+213	1048585	7	3	2024-11-22 05:32:15	1073741825	log.review.reviewerAssigned	f
+214	1048585	7	3	2024-11-22 05:32:20	805306371	editor.submission.decision.accept.log	f
+215	1048585	7	3	2024-11-22 05:32:26	268435459	submission.event.participantAdded	f
+216	1048585	8	3	2024-11-22 05:32:34	268435458	submission.event.general.metadataUpdated	f
+217	515	60	3	2024-11-22 05:32:36	1342177281	submission.event.fileUploaded	f
+218	1048585	8	3	2024-11-22 05:32:36	1342177288	submission.event.fileRevised	f
+219	515	60	3	2024-11-22 05:32:37	1342177296	submission.event.fileEdited	f
+220	1048585	8	3	2024-11-22 05:32:37	268435457	submission.event.submissionSubmitted	f
+221	1048585	9	26	2024-11-22 05:32:44	268435458	submission.event.general.metadataUpdated	f
+222	1048585	9	26	2024-11-22 05:32:44	268435458	submission.event.general.metadataUpdated	f
+223	515	61	26	2024-11-22 05:32:46	1342177281	submission.event.fileUploaded	f
+224	1048585	9	26	2024-11-22 05:32:46	1342177288	submission.event.fileRevised	f
+225	515	61	26	2024-11-22 05:32:47	1342177296	submission.event.fileEdited	f
+226	515	62	26	2024-11-22 05:32:47	1342177281	submission.event.fileUploaded	f
+227	1048585	9	26	2024-11-22 05:32:47	1342177288	submission.event.fileRevised	f
+228	515	62	26	2024-11-22 05:32:48	1342177296	submission.event.fileEdited	f
+229	515	63	26	2024-11-22 05:32:48	1342177281	submission.event.fileUploaded	f
+230	1048585	9	26	2024-11-22 05:32:48	1342177288	submission.event.fileRevised	f
+231	515	63	26	2024-11-22 05:32:48	1342177296	submission.event.fileEdited	f
+232	515	64	26	2024-11-22 05:32:49	1342177281	submission.event.fileUploaded	f
+233	1048585	9	26	2024-11-22 05:32:49	1342177288	submission.event.fileRevised	f
+234	515	64	26	2024-11-22 05:32:49	1342177296	submission.event.fileEdited	f
+235	515	65	26	2024-11-22 05:32:50	1342177281	submission.event.fileUploaded	f
+236	1048585	9	26	2024-11-22 05:32:50	1342177288	submission.event.fileRevised	f
+237	515	65	26	2024-11-22 05:32:50	1342177296	submission.event.fileEdited	f
+238	1048585	9	26	2024-11-22 05:33:18	268435457	submission.event.submissionSubmitted	f
+239	1048585	9	3	2024-11-22 05:33:30	805306371	editor.submission.decision.sendInternalReview.log	f
+240	515	66	3	2024-11-22 05:33:31	1342177281	submission.event.fileUploaded	f
+241	1048585	9	3	2024-11-22 05:33:31	1342177288	submission.event.fileRevised	f
+242	515	67	3	2024-11-22 05:33:31	1342177281	submission.event.fileUploaded	f
+243	1048585	9	3	2024-11-22 05:33:31	1342177288	submission.event.fileRevised	f
+244	515	68	3	2024-11-22 05:33:31	1342177281	submission.event.fileUploaded	f
+245	1048585	9	3	2024-11-22 05:33:31	1342177288	submission.event.fileRevised	f
+246	515	69	3	2024-11-22 05:33:31	1342177281	submission.event.fileUploaded	f
+247	1048585	9	3	2024-11-22 05:33:31	1342177288	submission.event.fileRevised	f
+248	515	70	3	2024-11-22 05:33:31	1342177281	submission.event.fileUploaded	f
+249	1048585	9	3	2024-11-22 05:33:31	1342177288	submission.event.fileRevised	f
+250	1048585	10	27	2024-11-22 05:33:41	268435458	submission.event.general.metadataUpdated	f
+251	1048585	10	27	2024-11-22 05:33:41	268435458	submission.event.general.metadataUpdated	f
+252	515	71	27	2024-11-22 05:33:44	1342177281	submission.event.fileUploaded	f
+253	1048585	10	27	2024-11-22 05:33:44	1342177288	submission.event.fileRevised	f
+254	515	71	27	2024-11-22 05:33:44	1342177296	submission.event.fileEdited	f
+255	515	72	27	2024-11-22 05:33:45	1342177281	submission.event.fileUploaded	f
+256	1048585	10	27	2024-11-22 05:33:45	1342177288	submission.event.fileRevised	f
+257	515	72	27	2024-11-22 05:33:45	1342177296	submission.event.fileEdited	f
+258	515	73	27	2024-11-22 05:33:46	1342177281	submission.event.fileUploaded	f
+259	1048585	10	27	2024-11-22 05:33:46	1342177288	submission.event.fileRevised	f
+260	515	73	27	2024-11-22 05:33:46	1342177296	submission.event.fileEdited	f
+261	515	74	27	2024-11-22 05:33:47	1342177281	submission.event.fileUploaded	f
+262	1048585	10	27	2024-11-22 05:33:47	1342177288	submission.event.fileRevised	f
+263	515	74	27	2024-11-22 05:33:47	1342177296	submission.event.fileEdited	f
+264	515	75	27	2024-11-22 05:33:48	1342177281	submission.event.fileUploaded	f
+265	1048585	10	27	2024-11-22 05:33:48	1342177288	submission.event.fileRevised	f
+266	515	75	27	2024-11-22 05:33:48	1342177296	submission.event.fileEdited	f
+267	515	76	27	2024-11-22 05:33:48	1342177281	submission.event.fileUploaded	f
+268	1048585	10	27	2024-11-22 05:33:48	1342177288	submission.event.fileRevised	f
+269	515	76	27	2024-11-22 05:33:49	1342177296	submission.event.fileEdited	f
+270	515	77	27	2024-11-22 05:33:49	1342177281	submission.event.fileUploaded	f
+271	1048585	10	27	2024-11-22 05:33:49	1342177288	submission.event.fileRevised	f
+272	515	77	27	2024-11-22 05:33:50	1342177296	submission.event.fileEdited	f
+273	515	78	27	2024-11-22 05:33:50	1342177281	submission.event.fileUploaded	f
+274	1048585	10	27	2024-11-22 05:33:50	1342177288	submission.event.fileRevised	f
+275	515	78	27	2024-11-22 05:33:51	1342177296	submission.event.fileEdited	f
+276	515	79	27	2024-11-22 05:33:51	1342177281	submission.event.fileUploaded	f
+277	1048585	10	27	2024-11-22 05:33:51	1342177288	submission.event.fileRevised	f
+278	515	79	27	2024-11-22 05:33:52	1342177296	submission.event.fileEdited	f
+279	1048585	10	27	2024-11-22 05:34:46	268435457	submission.event.submissionSubmitted	f
+280	1048585	11	28	2024-11-22 05:34:54	268435458	submission.event.general.metadataUpdated	f
+281	1048585	11	28	2024-11-22 05:34:54	268435458	submission.event.general.metadataUpdated	f
+282	515	80	28	2024-11-22 05:34:56	1342177281	submission.event.fileUploaded	f
+283	1048585	11	28	2024-11-22 05:34:56	1342177288	submission.event.fileRevised	f
+284	515	80	28	2024-11-22 05:34:57	1342177296	submission.event.fileEdited	f
+285	515	81	28	2024-11-22 05:34:57	1342177281	submission.event.fileUploaded	f
+286	1048585	11	28	2024-11-22 05:34:57	1342177288	submission.event.fileRevised	f
+287	515	81	28	2024-11-22 05:34:57	1342177296	submission.event.fileEdited	f
+288	1048585	11	28	2024-11-22 05:35:07	268435457	submission.event.submissionSubmitted	f
+289	1048585	11	3	2024-11-22 05:35:18	805306371	editor.submission.decision.sendInternalReview.log	f
+290	515	82	3	2024-11-22 05:35:18	1342177281	submission.event.fileUploaded	f
+291	1048585	11	3	2024-11-22 05:35:18	1342177288	submission.event.fileRevised	f
+292	515	83	3	2024-11-22 05:35:18	1342177281	submission.event.fileUploaded	f
+293	1048585	11	3	2024-11-22 05:35:18	1342177288	submission.event.fileRevised	f
+294	1048585	11	3	2024-11-22 05:35:24	1073741825	log.review.reviewerAssigned	f
+295	1048585	11	3	2024-11-22 05:35:28	805306371	editor.submission.decision.sendExternalReview.log	f
+296	1048585	11	3	2024-11-22 05:35:33	1073741825	log.review.reviewerAssigned	f
+297	1048585	11	3	2024-11-22 05:35:36	1073741825	log.review.reviewerAssigned	f
+298	1048585	11	10	2024-11-22 05:35:42	1073741830	log.review.reviewAccepted	\N
+299	1048585	11	10	2024-11-22 05:35:46	1073741848	log.review.reviewReady	f
+300	1048585	11	12	2024-11-22 05:35:51	1073741830	log.review.reviewAccepted	\N
+301	1048585	11	12	2024-11-22 05:35:55	1073741848	log.review.reviewReady	f
+302	1048585	11	3	2024-11-22 05:36:08	805306371	editor.submission.decision.accept.log	f
+303	1048585	11	3	2024-11-22 05:36:08	805306375	submission.event.decisionReviewerEmailSent	f
+304	1048585	12	29	2024-11-22 05:36:18	268435458	submission.event.general.metadataUpdated	f
+305	1048585	12	29	2024-11-22 05:36:18	268435458	submission.event.general.metadataUpdated	f
+306	515	84	29	2024-11-22 05:36:21	1342177281	submission.event.fileUploaded	f
+307	1048585	12	29	2024-11-22 05:36:21	1342177288	submission.event.fileRevised	f
+308	515	84	29	2024-11-22 05:36:21	1342177296	submission.event.fileEdited	f
+309	515	85	29	2024-11-22 05:36:22	1342177281	submission.event.fileUploaded	f
+310	1048585	12	29	2024-11-22 05:36:22	1342177288	submission.event.fileRevised	f
+311	515	85	29	2024-11-22 05:36:22	1342177296	submission.event.fileEdited	f
+312	515	86	29	2024-11-22 05:36:22	1342177281	submission.event.fileUploaded	f
+313	1048585	12	29	2024-11-22 05:36:22	1342177288	submission.event.fileRevised	f
+314	515	86	29	2024-11-22 05:36:23	1342177296	submission.event.fileEdited	f
+315	1048585	12	29	2024-11-22 05:36:40	268435457	submission.event.submissionSubmitted	f
+316	1048585	12	3	2024-11-22 05:36:53	805306371	editor.submission.decision.sendInternalReview.log	f
+317	515	87	3	2024-11-22 05:36:53	1342177281	submission.event.fileUploaded	f
+318	1048585	12	3	2024-11-22 05:36:53	1342177288	submission.event.fileRevised	f
+319	515	88	3	2024-11-22 05:36:53	1342177281	submission.event.fileUploaded	f
+320	1048585	12	3	2024-11-22 05:36:53	1342177288	submission.event.fileRevised	f
+321	515	89	3	2024-11-22 05:36:53	1342177281	submission.event.fileUploaded	f
+322	1048585	12	3	2024-11-22 05:36:54	1342177288	submission.event.fileRevised	f
+323	1048585	12	3	2024-11-22 05:36:59	1073741825	log.review.reviewerAssigned	f
+324	1048585	12	3	2024-11-22 05:37:03	1073741825	log.review.reviewerAssigned	f
+325	1048585	12	3	2024-11-22 05:37:06	1073741825	log.review.reviewerAssigned	f
+326	1048585	12	8	2024-11-22 05:37:12	1073741830	log.review.reviewAccepted	\N
+327	1048585	12	8	2024-11-22 05:37:16	1073741848	log.review.reviewReady	f
+328	1048585	13	30	2024-11-22 05:37:23	268435458	submission.event.general.metadataUpdated	f
+329	1048585	13	30	2024-11-22 05:37:23	268435458	submission.event.general.metadataUpdated	f
+330	515	90	30	2024-11-22 05:37:26	1342177281	submission.event.fileUploaded	f
+331	1048585	13	30	2024-11-22 05:37:26	1342177288	submission.event.fileRevised	f
+332	515	90	30	2024-11-22 05:37:26	1342177296	submission.event.fileEdited	f
+333	515	91	30	2024-11-22 05:37:27	1342177281	submission.event.fileUploaded	f
+334	1048585	13	30	2024-11-22 05:37:27	1342177288	submission.event.fileRevised	f
+335	515	91	30	2024-11-22 05:37:27	1342177296	submission.event.fileEdited	f
+336	515	92	30	2024-11-22 05:37:27	1342177281	submission.event.fileUploaded	f
+337	1048585	13	30	2024-11-22 05:37:27	1342177288	submission.event.fileRevised	f
+338	515	92	30	2024-11-22 05:37:28	1342177296	submission.event.fileEdited	f
+339	1048585	13	30	2024-11-22 05:37:44	268435457	submission.event.submissionSubmitted	f
+340	1048585	13	3	2024-11-22 05:37:56	805306371	editor.submission.decision.sendInternalReview.log	f
+341	515	93	3	2024-11-22 05:37:56	1342177281	submission.event.fileUploaded	f
+342	1048585	13	3	2024-11-22 05:37:56	1342177288	submission.event.fileRevised	f
+343	515	94	3	2024-11-22 05:37:56	1342177281	submission.event.fileUploaded	f
+344	1048585	13	3	2024-11-22 05:37:56	1342177288	submission.event.fileRevised	f
+345	515	95	3	2024-11-22 05:37:56	1342177281	submission.event.fileUploaded	f
+346	1048585	13	3	2024-11-22 05:37:56	1342177288	submission.event.fileRevised	f
+347	1048585	13	3	2024-11-22 05:38:02	1073741825	log.review.reviewerAssigned	f
+348	1048585	13	3	2024-11-22 05:38:07	805306371	editor.submission.decision.sendExternalReview.log	f
+349	1048585	13	3	2024-11-22 05:38:13	1073741825	log.review.reviewerAssigned	f
+350	1048585	13	3	2024-11-22 05:38:16	1073741825	log.review.reviewerAssigned	f
+351	1048585	13	3	2024-11-22 05:38:19	1073741825	log.review.reviewerAssigned	f
+352	1048585	13	10	2024-11-22 05:38:25	1073741830	log.review.reviewAccepted	\N
+353	1048585	13	10	2024-11-22 05:38:29	1073741848	log.review.reviewReady	f
+354	1048585	13	12	2024-11-22 05:38:35	1073741830	log.review.reviewAccepted	\N
+355	1048585	13	12	2024-11-22 05:38:39	1073741848	log.review.reviewReady	f
+356	1048585	13	3	2024-11-22 05:38:54	805306371	editor.submission.decision.accept.log	f
+357	1048585	13	3	2024-11-22 05:38:54	805306375	submission.event.decisionReviewerEmailSent	f
+358	1048585	14	31	2024-11-22 05:39:05	268435458	submission.event.general.metadataUpdated	f
+359	1048585	14	31	2024-11-22 05:39:05	268435458	submission.event.general.metadataUpdated	f
+360	515	96	31	2024-11-22 05:39:07	1342177281	submission.event.fileUploaded	f
+361	1048585	14	31	2024-11-22 05:39:07	1342177288	submission.event.fileRevised	f
+362	515	96	31	2024-11-22 05:39:07	1342177296	submission.event.fileEdited	f
+363	515	97	31	2024-11-22 05:39:08	1342177281	submission.event.fileUploaded	f
+364	1048585	14	31	2024-11-22 05:39:08	1342177288	submission.event.fileRevised	f
+365	515	97	31	2024-11-22 05:39:08	1342177296	submission.event.fileEdited	f
+366	515	98	31	2024-11-22 05:39:09	1342177281	submission.event.fileUploaded	f
+367	1048585	14	31	2024-11-22 05:39:09	1342177288	submission.event.fileRevised	f
+368	515	98	31	2024-11-22 05:39:09	1342177296	submission.event.fileEdited	f
+369	515	99	31	2024-11-22 05:39:10	1342177281	submission.event.fileUploaded	f
+370	1048585	14	31	2024-11-22 05:39:10	1342177288	submission.event.fileRevised	f
+371	515	99	31	2024-11-22 05:39:10	1342177296	submission.event.fileEdited	f
+372	515	100	31	2024-11-22 05:39:11	1342177281	submission.event.fileUploaded	f
+373	1048585	14	31	2024-11-22 05:39:11	1342177288	submission.event.fileRevised	f
+374	515	100	31	2024-11-22 05:39:12	1342177296	submission.event.fileEdited	f
+375	515	101	31	2024-11-22 05:39:12	1342177281	submission.event.fileUploaded	f
+376	1048585	14	31	2024-11-22 05:39:12	1342177288	submission.event.fileRevised	f
+377	515	101	31	2024-11-22 05:39:13	1342177296	submission.event.fileEdited	f
+378	1048585	14	31	2024-11-22 05:39:36	268435457	submission.event.submissionSubmitted	f
+379	1048585	14	3	2024-11-22 05:39:50	805306371	editor.submission.decision.sendInternalReview.log	f
+380	515	102	3	2024-11-22 05:39:50	1342177281	submission.event.fileUploaded	f
+381	1048585	14	3	2024-11-22 05:39:50	1342177288	submission.event.fileRevised	f
+382	515	103	3	2024-11-22 05:39:50	1342177281	submission.event.fileUploaded	f
+383	1048585	14	3	2024-11-22 05:39:50	1342177288	submission.event.fileRevised	f
+384	515	104	3	2024-11-22 05:39:50	1342177281	submission.event.fileUploaded	f
+385	1048585	14	3	2024-11-22 05:39:50	1342177288	submission.event.fileRevised	f
+386	515	105	3	2024-11-22 05:39:51	1342177281	submission.event.fileUploaded	f
+387	1048585	14	3	2024-11-22 05:39:51	1342177288	submission.event.fileRevised	f
+388	515	106	3	2024-11-22 05:39:51	1342177281	submission.event.fileUploaded	f
+389	1048585	14	3	2024-11-22 05:39:51	1342177288	submission.event.fileRevised	f
+390	515	107	3	2024-11-22 05:39:51	1342177281	submission.event.fileUploaded	f
+391	1048585	14	3	2024-11-22 05:39:51	1342177288	submission.event.fileRevised	f
+392	1048585	14	3	2024-11-22 05:39:57	1073741825	log.review.reviewerAssigned	f
+393	1048585	14	3	2024-11-22 05:40:02	805306371	editor.submission.decision.sendExternalReview.log	f
+394	1048585	14	3	2024-11-22 05:40:08	1073741825	log.review.reviewerAssigned	f
+395	1048585	14	3	2024-11-22 05:40:13	805306371	editor.submission.decision.accept.log	f
+396	1048585	14	3	2024-11-22 05:40:21	268435459	submission.event.participantAdded	f
+397	1048585	14	3	2024-11-22 05:40:26	805306371	editor.submission.decision.sendToProduction.log	f
+398	1048585	14	3	2024-11-22 05:40:34	268435459	submission.event.participantAdded	f
+399	1048585	14	3	2024-11-22 05:40:38	268435459	submission.event.participantAdded	f
+400	1048585	14	3	2024-11-22 05:40:42	268435474	submission.event.publicationFormatCreated	\N
+401	515	108	3	2024-11-22 05:40:48	1342177281	submission.event.fileUploaded	f
+402	1048585	14	3	2024-11-22 05:40:48	1342177288	submission.event.fileRevised	f
+403	515	109	3	2024-11-22 05:40:48	1342177281	submission.event.fileUploaded	f
+404	1048585	14	3	2024-11-22 05:40:48	1342177288	submission.event.fileRevised	f
+405	515	110	3	2024-11-22 05:40:48	1342177281	submission.event.fileUploaded	f
+406	1048585	14	3	2024-11-22 05:40:48	1342177288	submission.event.fileRevised	f
+407	515	111	3	2024-11-22 05:40:48	1342177281	submission.event.fileUploaded	f
+408	1048585	14	3	2024-11-22 05:40:48	1342177288	submission.event.fileRevised	f
+409	515	112	3	2024-11-22 05:40:48	1342177281	submission.event.fileUploaded	f
+410	1048585	14	3	2024-11-22 05:40:48	1342177288	submission.event.fileRevised	f
+411	515	113	3	2024-11-22 05:40:48	1342177281	submission.event.fileUploaded	f
+412	1048585	14	3	2024-11-22 05:40:48	1342177288	submission.event.fileRevised	f
+413	1048585	14	3	2024-11-22 05:40:49	268435464	submission.event.publicationFormatPublished	f
+414	1048585	14	3	2024-11-22 05:40:51	268435476	submission.event.publicationFormatMadeAvailable	f
+415	515	113	3	2024-11-22 05:40:53	1342177296	submission.event.fileEdited	f
+416	515	113	3	2024-11-22 05:40:53	1342177287	submission.event.signoffSignoff	f
+417	515	113	3	2024-11-22 05:40:55	1342177296	submission.event.fileEdited	f
+418	515	112	3	2024-11-22 05:40:57	1342177296	submission.event.fileEdited	f
+419	515	112	3	2024-11-22 05:40:57	1342177287	submission.event.signoffSignoff	f
+420	515	112	3	2024-11-22 05:40:59	1342177296	submission.event.fileEdited	f
+421	515	111	3	2024-11-22 05:41:01	1342177296	submission.event.fileEdited	f
+422	515	111	3	2024-11-22 05:41:01	1342177287	submission.event.signoffSignoff	f
+423	515	111	3	2024-11-22 05:41:03	1342177296	submission.event.fileEdited	f
+424	515	110	3	2024-11-22 05:41:05	1342177296	submission.event.fileEdited	f
+425	515	110	3	2024-11-22 05:41:05	1342177287	submission.event.signoffSignoff	f
+426	515	110	3	2024-11-22 05:41:07	1342177296	submission.event.fileEdited	f
+427	515	109	3	2024-11-22 05:41:09	1342177296	submission.event.fileEdited	f
+428	515	109	3	2024-11-22 05:41:09	1342177287	submission.event.signoffSignoff	f
+429	515	109	3	2024-11-22 05:41:12	1342177296	submission.event.fileEdited	f
+430	515	108	3	2024-11-22 05:41:14	1342177296	submission.event.fileEdited	f
+431	515	108	3	2024-11-22 05:41:14	1342177287	submission.event.signoffSignoff	f
+432	515	108	3	2024-11-22 05:41:16	1342177296	submission.event.fileEdited	f
+433	1048585	14	3	2024-11-22 05:41:18	268435462	publication.event.published	f
+434	1048585	15	32	2024-11-22 05:41:25	268435458	submission.event.general.metadataUpdated	f
+435	1048585	15	32	2024-11-22 05:41:25	268435458	submission.event.general.metadataUpdated	f
+436	515	114	32	2024-11-22 05:41:27	1342177281	submission.event.fileUploaded	f
+437	1048585	15	32	2024-11-22 05:41:27	1342177288	submission.event.fileRevised	f
+438	515	114	32	2024-11-22 05:41:28	1342177296	submission.event.fileEdited	f
+439	515	115	32	2024-11-22 05:41:28	1342177281	submission.event.fileUploaded	f
+440	1048585	15	32	2024-11-22 05:41:28	1342177288	submission.event.fileRevised	f
+441	515	115	32	2024-11-22 05:41:28	1342177296	submission.event.fileEdited	f
+442	515	116	32	2024-11-22 05:41:29	1342177281	submission.event.fileUploaded	f
+443	1048585	15	32	2024-11-22 05:41:29	1342177288	submission.event.fileRevised	f
+444	515	116	32	2024-11-22 05:41:29	1342177296	submission.event.fileEdited	f
+445	1048585	15	32	2024-11-22 05:41:44	268435457	submission.event.submissionSubmitted	f
+446	1048585	15	3	2024-11-22 05:41:56	805306371	editor.submission.decision.sendExternalReview.log	f
+447	515	117	3	2024-11-22 05:41:57	1342177281	submission.event.fileUploaded	f
+448	1048585	15	3	2024-11-22 05:41:57	1342177288	submission.event.fileRevised	f
+449	515	118	3	2024-11-22 05:41:57	1342177281	submission.event.fileUploaded	f
+450	1048585	15	3	2024-11-22 05:41:57	1342177288	submission.event.fileRevised	f
+451	515	119	3	2024-11-22 05:41:57	1342177281	submission.event.fileUploaded	f
+452	1048585	15	3	2024-11-22 05:41:57	1342177288	submission.event.fileRevised	f
+453	1048585	16	33	2024-11-22 05:42:07	268435458	submission.event.general.metadataUpdated	f
+454	1048585	16	33	2024-11-22 05:42:07	268435458	submission.event.general.metadataUpdated	f
+455	515	120	33	2024-11-22 05:42:10	1342177281	submission.event.fileUploaded	f
+456	1048585	16	33	2024-11-22 05:42:10	1342177288	submission.event.fileRevised	f
+457	515	120	33	2024-11-22 05:42:10	1342177296	submission.event.fileEdited	f
+458	515	121	33	2024-11-22 05:42:11	1342177281	submission.event.fileUploaded	f
+459	1048585	16	33	2024-11-22 05:42:11	1342177288	submission.event.fileRevised	f
+460	515	121	33	2024-11-22 05:42:11	1342177296	submission.event.fileEdited	f
+461	515	122	33	2024-11-22 05:42:11	1342177281	submission.event.fileUploaded	f
+462	1048585	16	33	2024-11-22 05:42:11	1342177288	submission.event.fileRevised	f
+463	515	122	33	2024-11-22 05:42:12	1342177296	submission.event.fileEdited	f
+464	515	123	33	2024-11-22 05:42:12	1342177281	submission.event.fileUploaded	f
+465	1048585	16	33	2024-11-22 05:42:12	1342177288	submission.event.fileRevised	f
+466	515	123	33	2024-11-22 05:42:13	1342177296	submission.event.fileEdited	f
+467	515	124	33	2024-11-22 05:42:13	1342177281	submission.event.fileUploaded	f
+468	1048585	16	33	2024-11-22 05:42:13	1342177288	submission.event.fileRevised	f
+469	515	124	33	2024-11-22 05:42:14	1342177296	submission.event.fileEdited	f
+470	1048585	16	33	2024-11-22 05:42:40	268435457	submission.event.submissionSubmitted	f
+471	1048585	16	3	2024-11-22 05:42:53	805306371	editor.submission.decision.sendExternalReview.log	f
+472	515	125	3	2024-11-22 05:42:53	1342177281	submission.event.fileUploaded	f
+473	1048585	16	3	2024-11-22 05:42:53	1342177288	submission.event.fileRevised	f
+474	515	126	3	2024-11-22 05:42:53	1342177281	submission.event.fileUploaded	f
+475	1048585	16	3	2024-11-22 05:42:53	1342177288	submission.event.fileRevised	f
+476	515	127	3	2024-11-22 05:42:53	1342177281	submission.event.fileUploaded	f
+477	1048585	16	3	2024-11-22 05:42:53	1342177288	submission.event.fileRevised	f
+478	515	128	3	2024-11-22 05:42:53	1342177281	submission.event.fileUploaded	f
+479	1048585	16	3	2024-11-22 05:42:53	1342177288	submission.event.fileRevised	f
+480	515	129	3	2024-11-22 05:42:54	1342177281	submission.event.fileUploaded	f
+481	1048585	16	3	2024-11-22 05:42:54	1342177288	submission.event.fileRevised	f
+482	1048585	16	3	2024-11-22 05:43:00	1073741825	log.review.reviewerAssigned	f
+483	1048585	16	3	2024-11-22 05:43:03	1073741825	log.review.reviewerAssigned	f
+484	1048585	16	3	2024-11-22 05:43:06	1073741825	log.review.reviewerAssigned	f
+485	1048585	16	10	2024-11-22 05:43:12	1073741830	log.review.reviewAccepted	\N
+486	1048585	16	10	2024-11-22 05:43:17	1073741848	log.review.reviewReady	f
+487	1048585	17	34	2024-11-22 05:43:24	268435458	submission.event.general.metadataUpdated	f
+488	1048585	17	34	2024-11-22 05:43:24	268435458	submission.event.general.metadataUpdated	f
+489	515	130	34	2024-11-22 05:43:26	1342177281	submission.event.fileUploaded	f
+490	1048585	17	34	2024-11-22 05:43:26	1342177288	submission.event.fileRevised	f
+491	515	130	34	2024-11-22 05:43:27	1342177296	submission.event.fileEdited	f
+492	515	131	34	2024-11-22 05:43:27	1342177281	submission.event.fileUploaded	f
+493	1048585	17	34	2024-11-22 05:43:27	1342177288	submission.event.fileRevised	f
+494	515	131	34	2024-11-22 05:43:28	1342177296	submission.event.fileEdited	f
+495	515	132	34	2024-11-22 05:43:28	1342177281	submission.event.fileUploaded	f
+496	1048585	17	34	2024-11-22 05:43:28	1342177288	submission.event.fileRevised	f
+497	515	132	34	2024-11-22 05:43:28	1342177296	submission.event.fileEdited	f
+498	515	133	34	2024-11-22 05:43:29	1342177281	submission.event.fileUploaded	f
+499	1048585	17	34	2024-11-22 05:43:29	1342177288	submission.event.fileRevised	f
+500	515	133	34	2024-11-22 05:43:29	1342177296	submission.event.fileEdited	f
+501	515	134	34	2024-11-22 05:43:30	1342177281	submission.event.fileUploaded	f
+502	1048585	17	34	2024-11-22 05:43:30	1342177288	submission.event.fileRevised	f
+503	515	134	34	2024-11-22 05:43:30	1342177296	submission.event.fileEdited	f
+504	515	135	34	2024-11-22 05:43:31	1342177281	submission.event.fileUploaded	f
+505	1048585	17	34	2024-11-22 05:43:31	1342177288	submission.event.fileRevised	f
+506	515	135	34	2024-11-22 05:43:31	1342177296	submission.event.fileEdited	f
+507	1048585	17	34	2024-11-22 05:44:08	268435457	submission.event.submissionSubmitted	f
+508	1048585	17	3	2024-11-22 05:44:23	805306371	editor.submission.decision.sendInternalReview.log	f
+509	515	136	3	2024-11-22 05:44:23	1342177281	submission.event.fileUploaded	f
+510	1048585	17	3	2024-11-22 05:44:23	1342177288	submission.event.fileRevised	f
+511	515	137	3	2024-11-22 05:44:24	1342177281	submission.event.fileUploaded	f
+512	1048585	17	3	2024-11-22 05:44:24	1342177288	submission.event.fileRevised	f
+513	515	138	3	2024-11-22 05:44:24	1342177281	submission.event.fileUploaded	f
+514	1048585	17	3	2024-11-22 05:44:24	1342177288	submission.event.fileRevised	f
+515	515	139	3	2024-11-22 05:44:24	1342177281	submission.event.fileUploaded	f
+516	1048585	17	3	2024-11-22 05:44:24	1342177288	submission.event.fileRevised	f
+517	515	140	3	2024-11-22 05:44:24	1342177281	submission.event.fileUploaded	f
+518	1048585	17	3	2024-11-22 05:44:24	1342177288	submission.event.fileRevised	f
+519	515	141	3	2024-11-22 05:44:24	1342177281	submission.event.fileUploaded	f
+520	1048585	17	3	2024-11-22 05:44:24	1342177288	submission.event.fileRevised	f
+521	1048585	17	3	2024-11-22 05:44:31	1073741825	log.review.reviewerAssigned	f
+522	1048585	17	3	2024-11-22 05:44:34	1073741825	log.review.reviewerAssigned	f
 \.
 
 
@@ -9608,31 +9608,31 @@ COPY public.event_log_settings (event_log_setting_id, log_id, locale, setting_na
 226	47		submissionFileId	13
 227	47		submissionId	2
 228	47		username	dbarnes
-229	48		fileId	5
-230	48	en	filename	chapter2.pdf
+229	48		fileId	4
+230	48	en	filename	chapter1.pdf
 231	48		fileStage	4
-232	48		sourceSubmissionFileId	8
+232	48		sourceSubmissionFileId	7
 233	48		submissionFileId	14
 234	48		submissionId	2
 235	48		username	dbarnes
-236	49		fileId	5
-237	49	en	filename	chapter2.pdf
+236	49		fileId	4
+237	49	en	filename	chapter1.pdf
 238	49		fileStage	4
-239	49		sourceSubmissionFileId	8
+239	49		sourceSubmissionFileId	7
 240	49		submissionFileId	14
 241	49		submissionId	2
 242	49		username	dbarnes
-243	50		fileId	4
-244	50	en	filename	chapter1.pdf
+243	50		fileId	5
+244	50	en	filename	chapter2.pdf
 245	50		fileStage	4
-246	50		sourceSubmissionFileId	7
+246	50		sourceSubmissionFileId	8
 247	50		submissionFileId	15
 248	50		submissionId	2
 249	50		username	dbarnes
-250	51		fileId	4
-251	51	en	filename	chapter1.pdf
+250	51		fileId	5
+251	51	en	filename	chapter2.pdf
 252	51		fileStage	4
-253	51		sourceSubmissionFileId	7
+253	51		sourceSubmissionFileId	8
 254	51		submissionFileId	15
 255	51		submissionId	2
 256	51		username	dbarnes
@@ -10002,31 +10002,31 @@ COPY public.event_log_settings (event_log_setting_id, log_id, locale, setting_na
 620	127		submissionFileId	35
 621	127		submissionId	5
 622	127		username	dbarnes
-623	128		fileId	21
-624	128	en	filename	chapter3.pdf
+623	128		fileId	22
+624	128	en	filename	chapter4.pdf
 625	128		fileStage	19
-626	128		sourceSubmissionFileId	32
+626	128		sourceSubmissionFileId	33
 627	128		submissionFileId	36
 628	128		submissionId	5
 629	128		username	dbarnes
-630	129		fileId	21
-631	129	en	filename	chapter3.pdf
+630	129		fileId	22
+631	129	en	filename	chapter4.pdf
 632	129		fileStage	19
-633	129		sourceSubmissionFileId	32
+633	129		sourceSubmissionFileId	33
 634	129		submissionFileId	36
 635	129		submissionId	5
 636	129		username	dbarnes
-637	130		fileId	22
-638	130	en	filename	chapter4.pdf
+637	130		fileId	21
+638	130	en	filename	chapter3.pdf
 639	130		fileStage	19
-640	130		sourceSubmissionFileId	33
+640	130		sourceSubmissionFileId	32
 641	130		submissionFileId	37
 642	130		submissionId	5
 643	130		username	dbarnes
-644	131		fileId	22
-645	131	en	filename	chapter4.pdf
+644	131		fileId	21
+645	131	en	filename	chapter3.pdf
 646	131		fileStage	19
-647	131		sourceSubmissionFileId	33
+647	131		sourceSubmissionFileId	32
 648	131		submissionFileId	37
 649	131		submissionId	5
 650	131		username	dbarnes
@@ -11051,31 +11051,31 @@ COPY public.event_log_settings (event_log_setting_id, log_id, locale, setting_na
 1669	342		submissionFileId	93
 1670	342		submissionId	13
 1671	342		username	dbarnes
-1672	343		fileId	54
-1673	343	en	filename	chapter2.pdf
+1672	343		fileId	53
+1673	343	en	filename	chapter1.pdf
 1674	343		fileStage	19
-1675	343		sourceSubmissionFileId	91
+1675	343		sourceSubmissionFileId	90
 1676	343		submissionFileId	94
 1677	343		submissionId	13
 1678	343		username	dbarnes
-1679	344		fileId	54
-1680	344	en	filename	chapter2.pdf
+1679	344		fileId	53
+1680	344	en	filename	chapter1.pdf
 1681	344		fileStage	19
-1682	344		sourceSubmissionFileId	91
+1682	344		sourceSubmissionFileId	90
 1683	344		submissionFileId	94
 1684	344		submissionId	13
 1685	344		username	dbarnes
-1686	345		fileId	53
-1687	345	en	filename	chapter1.pdf
+1686	345		fileId	54
+1687	345	en	filename	chapter2.pdf
 1688	345		fileStage	19
-1689	345		sourceSubmissionFileId	90
+1689	345		sourceSubmissionFileId	91
 1690	345		submissionFileId	95
 1691	345		submissionId	13
 1692	345		username	dbarnes
-1693	346		fileId	53
-1694	346	en	filename	chapter1.pdf
+1693	346		fileId	54
+1694	346	en	filename	chapter2.pdf
 1695	346		fileStage	19
-1696	346		sourceSubmissionFileId	90
+1696	346		sourceSubmissionFileId	91
 1697	346		submissionFileId	95
 1698	346		submissionId	13
 1699	346		username	dbarnes
@@ -11731,31 +11731,31 @@ COPY public.event_log_settings (event_log_setting_id, log_id, locale, setting_na
 2349	475		submissionFileId	126
 2350	475		submissionId	16
 2351	475		username	dbarnes
-2352	476		fileId	67
-2353	476	en	filename	cases.pdf
+2352	476		fileId	66
+2353	476	en	filename	preface.pdf
 2354	476		fileStage	4
-2355	476		sourceSubmissionFileId	122
+2355	476		sourceSubmissionFileId	121
 2356	476		submissionFileId	127
 2357	476		submissionId	16
 2358	476		username	dbarnes
-2359	477		fileId	67
-2360	477	en	filename	cases.pdf
+2359	477		fileId	66
+2360	477	en	filename	preface.pdf
 2361	477		fileStage	4
-2362	477		sourceSubmissionFileId	122
+2362	477		sourceSubmissionFileId	121
 2363	477		submissionFileId	127
 2364	477		submissionId	16
 2365	477		username	dbarnes
-2366	478		fileId	66
-2367	478	en	filename	preface.pdf
+2366	478		fileId	67
+2367	478	en	filename	cases.pdf
 2368	478		fileStage	4
-2369	478		sourceSubmissionFileId	121
+2369	478		sourceSubmissionFileId	122
 2370	478		submissionFileId	128
 2371	478		submissionId	16
 2372	478		username	dbarnes
-2373	479		fileId	66
-2374	479	en	filename	preface.pdf
+2373	479		fileId	67
+2374	479	en	filename	cases.pdf
 2375	479		fileStage	4
-2376	479		sourceSubmissionFileId	121
+2376	479		sourceSubmissionFileId	122
 2377	479		submissionFileId	128
 2378	479		submissionId	16
 2379	479		username	dbarnes
@@ -12017,80 +12017,80 @@ COPY public.features (feature_id, submission_id, assoc_type, assoc_id, seq) FROM
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	presses/1/monographs/1/673ec39bd53e7.pdf	application/pdf
-2	presses/1/monographs/1/673ec39cbd905.pdf	application/pdf
-3	presses/1/monographs/1/673ec39da71dd.pdf	application/pdf
-4	presses/1/monographs/2/673ec3d4ddeed.pdf	application/pdf
-5	presses/1/monographs/2/673ec3d5c9773.pdf	application/pdf
-6	presses/1/monographs/2/673ec3d6bb6fd.pdf	application/pdf
-7	presses/1/monographs/2/673ec3d7b8257.pdf	application/pdf
-9	presses/1/monographs/3/673ec44eee475.pdf	application/pdf
-10	presses/1/monographs/3/673ec44fd470d.pdf	application/pdf
-11	presses/1/monographs/3/673ec450bc594.pdf	application/pdf
-12	presses/1/monographs/3/673ec451a975e.pdf	application/pdf
-13	presses/1/monographs/3/673ec452aaa40.pdf	application/pdf
-14	presses/1/monographs/4/673ec476b36df.pdf	application/pdf
-15	presses/1/monographs/4/673ec477a81db.pdf	application/pdf
-16	presses/1/monographs/4/673ec4788d8bd.pdf	application/pdf
-17	presses/1/monographs/4/673ec4797e0ac.pdf	application/pdf
-18	presses/1/monographs/5/673ec4cd405f1.pdf	application/pdf
-19	presses/1/monographs/5/673ec4ce2c148.pdf	application/pdf
-20	presses/1/monographs/5/673ec4cf15ac0.pdf	application/pdf
-21	presses/1/monographs/5/673ec4cff29d0.pdf	application/pdf
-22	presses/1/monographs/5/673ec4d0e444c.pdf	application/pdf
-23	presses/1/monographs/5/673ec4d1dc094.pdf	application/pdf
-24	presses/1/monographs/6/673ec54d425d7.pdf	application/pdf
-25	presses/1/monographs/6/673ec54e2c489.pdf	application/pdf
-26	presses/1/monographs/6/673ec54f1b96a.pdf	application/pdf
-27	presses/1/monographs/6/673ec5500de82.pdf	application/pdf
-28	presses/1/monographs/7/673ec59794a21.pdf	application/pdf
-29	presses/1/monographs/7/673ec59884c2c.pdf	application/pdf
-30	presses/1/monographs/7/673ec5996971b.pdf	application/pdf
-31	presses/1/monographs/7/673ec59a59cd9.pdf	application/pdf
-32	presses/1/monographs/7/673ec59b49411.pdf	application/pdf
-33	presses/1/monographs/8/673ec5ded2610.pdf	application/pdf
-34	presses/1/monographs/9/673ec5e8b8a91.pdf	application/pdf
-35	presses/1/monographs/9/673ec5e9a19b1.pdf	application/pdf
-36	presses/1/monographs/9/673ec5ea93497.pdf	application/pdf
-37	presses/1/monographs/9/673ec5eb80e1f.pdf	application/pdf
-38	presses/1/monographs/9/673ec5ec708e4.pdf	application/pdf
-39	presses/1/monographs/10/673ec6220260f.pdf	application/pdf
-40	presses/1/monographs/10/673ec622de6b8.pdf	application/pdf
-41	presses/1/monographs/10/673ec623d01dc.pdf	application/pdf
-42	presses/1/monographs/10/673ec624be486.pdf	application/pdf
-43	presses/1/monographs/10/673ec625b1e91.pdf	application/pdf
-44	presses/1/monographs/10/673ec626a3a0d.pdf	application/pdf
-45	presses/1/monographs/10/673ec627a585f.pdf	application/pdf
-46	presses/1/monographs/10/673ec628abe57.pdf	application/pdf
-47	presses/1/monographs/10/673ec629a4259.pdf	application/pdf
-48	presses/1/monographs/11/673ec667ca154.pdf	application/pdf
-49	presses/1/monographs/11/673ec668b61e9.pdf	application/pdf
-50	presses/1/monographs/12/673ec6bc2495d.pdf	application/pdf
-51	presses/1/monographs/12/673ec6bd08492.pdf	application/pdf
-52	presses/1/monographs/12/673ec6bde3ef0.pdf	application/pdf
-53	presses/1/monographs/13/673ec6fc3e59b.pdf	application/pdf
-54	presses/1/monographs/13/673ec6fd26c7e.pdf	application/pdf
-55	presses/1/monographs/13/673ec6fe11bb3.pdf	application/pdf
-56	presses/1/monographs/14/673ec7606e5bd.pdf	application/pdf
-57	presses/1/monographs/14/673ec7615b3d7.pdf	application/pdf
-58	presses/1/monographs/14/673ec76245de7.pdf	application/pdf
-59	presses/1/monographs/14/673ec763367eb.pdf	application/pdf
-60	presses/1/monographs/14/673ec76435080.pdf	application/pdf
-61	presses/1/monographs/14/673ec7654db5f.pdf	application/pdf
-62	presses/1/monographs/15/673ec7eab9a7c.pdf	application/pdf
-63	presses/1/monographs/15/673ec7eba9f6e.pdf	application/pdf
-64	presses/1/monographs/15/673ec7ec8fd8f.pdf	application/pdf
-65	presses/1/monographs/16/673ec814a6f4e.pdf	application/pdf
-66	presses/1/monographs/16/673ec81597dc4.pdf	application/pdf
-67	presses/1/monographs/16/673ec816780a3.pdf	application/pdf
-68	presses/1/monographs/16/673ec817662b8.pdf	application/pdf
-69	presses/1/monographs/16/673ec81857743.pdf	application/pdf
-70	presses/1/monographs/17/673ec860ef98a.pdf	application/pdf
-71	presses/1/monographs/17/673ec861e03cb.pdf	application/pdf
-72	presses/1/monographs/17/673ec862c89c8.pdf	application/pdf
-73	presses/1/monographs/17/673ec863b908a.pdf	application/pdf
-74	presses/1/monographs/17/673ec864b8e25.pdf	application/pdf
-75	presses/1/monographs/17/673ec865a87c5.pdf	application/pdf
+1	presses/1/monographs/1/6740152d8974d.pdf	application/pdf
+2	presses/1/monographs/1/6740152e70aea.pdf	application/pdf
+3	presses/1/monographs/1/6740152f6034e.pdf	application/pdf
+4	presses/1/monographs/2/674015670172d.pdf	application/pdf
+5	presses/1/monographs/2/67401567e01e1.pdf	application/pdf
+6	presses/1/monographs/2/67401568cc868.pdf	application/pdf
+7	presses/1/monographs/2/67401569c5313.pdf	application/pdf
+9	presses/1/monographs/3/674015e333f15.pdf	application/pdf
+10	presses/1/monographs/3/674015e41af2a.pdf	application/pdf
+11	presses/1/monographs/3/674015e507d66.pdf	application/pdf
+12	presses/1/monographs/3/674015e5ee634.pdf	application/pdf
+13	presses/1/monographs/3/674015e6e4390.pdf	application/pdf
+14	presses/1/monographs/4/6740160b44656.pdf	application/pdf
+15	presses/1/monographs/4/6740160c31d55.pdf	application/pdf
+16	presses/1/monographs/4/6740160d1d59e.pdf	application/pdf
+17	presses/1/monographs/4/6740160e0a8af.pdf	application/pdf
+18	presses/1/monographs/5/6740166288f0e.pdf	application/pdf
+19	presses/1/monographs/5/674016637513d.pdf	application/pdf
+20	presses/1/monographs/5/674016645f690.pdf	application/pdf
+21	presses/1/monographs/5/674016654e665.pdf	application/pdf
+22	presses/1/monographs/5/674016663e23d.pdf	application/pdf
+23	presses/1/monographs/5/674016673046e.pdf	application/pdf
+24	presses/1/monographs/6/674016e320e00.pdf	application/pdf
+25	presses/1/monographs/6/674016e406ece.pdf	application/pdf
+26	presses/1/monographs/6/674016e4e4edc.pdf	application/pdf
+27	presses/1/monographs/6/674016e5db5a2.pdf	application/pdf
+28	presses/1/monographs/7/6740172d4d658.pdf	application/pdf
+29	presses/1/monographs/7/6740172e33800.pdf	application/pdf
+30	presses/1/monographs/7/6740172f1fa00.pdf	application/pdf
+31	presses/1/monographs/7/674017301432e.pdf	application/pdf
+32	presses/1/monographs/7/6740173104ecf.pdf	application/pdf
+33	presses/1/monographs/8/67401774d8c2a.pdf	application/pdf
+34	presses/1/monographs/9/6740177ecfe39.pdf	application/pdf
+35	presses/1/monographs/9/6740177fc0bba.pdf	application/pdf
+36	presses/1/monographs/9/67401780af295.pdf	application/pdf
+37	presses/1/monographs/9/67401781a70bb.pdf	application/pdf
+38	presses/1/monographs/9/674017829157f.pdf	application/pdf
+39	presses/1/monographs/10/674017b84c3b6.pdf	application/pdf
+40	presses/1/monographs/10/674017b935961.pdf	application/pdf
+41	presses/1/monographs/10/674017ba1f7df.pdf	application/pdf
+42	presses/1/monographs/10/674017bb164a5.pdf	application/pdf
+43	presses/1/monographs/10/674017bc075f1.pdf	application/pdf
+44	presses/1/monographs/10/674017bced47f.pdf	application/pdf
+45	presses/1/monographs/10/674017bde350c.pdf	application/pdf
+46	presses/1/monographs/10/674017beece21.pdf	application/pdf
+47	presses/1/monographs/10/674017bfed3c8.pdf	application/pdf
+48	presses/1/monographs/11/67401800c6e21.pdf	application/pdf
+49	presses/1/monographs/11/67401801b4141.pdf	application/pdf
+50	presses/1/monographs/12/674018551d5c2.pdf	application/pdf
+51	presses/1/monographs/12/674018560db1b.pdf	application/pdf
+52	presses/1/monographs/12/67401856ebcdb.pdf	application/pdf
+53	presses/1/monographs/13/6740189611a9c.pdf	application/pdf
+54	presses/1/monographs/13/67401896f154b.pdf	application/pdf
+55	presses/1/monographs/13/67401897dc13e.pdf	application/pdf
+56	presses/1/monographs/14/674018fbb93ad.pdf	application/pdf
+57	presses/1/monographs/14/674018fca8dc2.pdf	application/pdf
+58	presses/1/monographs/14/674018fd96d09.pdf	application/pdf
+59	presses/1/monographs/14/674018fe88807.pdf	application/pdf
+60	presses/1/monographs/14/674018ff7e6ae.pdf	application/pdf
+61	presses/1/monographs/14/67401900aaf18.pdf	application/pdf
+62	presses/1/monographs/15/67401987d329a.pdf	application/pdf
+63	presses/1/monographs/15/67401988bbefc.pdf	application/pdf
+64	presses/1/monographs/15/67401989a38e2.pdf	application/pdf
+65	presses/1/monographs/16/674019b21e59e.pdf	application/pdf
+66	presses/1/monographs/16/674019b30c7c1.pdf	application/pdf
+67	presses/1/monographs/16/674019b3e69e7.pdf	application/pdf
+68	presses/1/monographs/16/674019b4d7ee1.pdf	application/pdf
+69	presses/1/monographs/16/674019b5d0118.pdf	application/pdf
+70	presses/1/monographs/17/674019fedf727.pdf	application/pdf
+71	presses/1/monographs/17/674019ffccba1.pdf	application/pdf
+72	presses/1/monographs/17/67401a00b3018.pdf	application/pdf
+73	presses/1/monographs/17/67401a01a3cfc.pdf	application/pdf
+74	presses/1/monographs/17/67401a0291d75.pdf	application/pdf
+75	presses/1/monographs/17/67401a0382369.pdf	application/pdf
 \.
 
 
@@ -12511,7 +12511,7 @@ COPY public.new_releases (new_release_id, submission_id, assoc_type, assoc_id) F
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2024-11-21 05:30:45	2024-11-21 05:30:45	Editor Recommendation	<p>Dear Daniel Barnes, David Buskins,</p><p>After considering the reviewers' feedback, I would like to make the following recommendation regarding the submission The Information Literacy User’s Guide.</p><p>My recommendation is: Accept Submission.</p><p>Please visit the submission's <a href="http://localhost/index.php/publicknowledge/en/workflow/access/6">editorial workflow</a> to act on this recommendation.</p><p>Please feel free to contact me with any questions.</p><p>Kind regards,</p><p>Minoti Inoue</p>
+1	1048586	1	6	2024-11-22 05:31:07	2024-11-22 05:31:07	Editor Recommendation	<p>Dear Daniel Barnes, David Buskins,</p><p>After considering the reviewers' feedback, I would like to make the following recommendation regarding the submission The Information Literacy User’s Guide.</p><p>My recommendation is: Accept Submission.</p><p>Please visit the submission's <a href="http://localhost/index.php/publicknowledge/en/workflow/access/6">editorial workflow</a> to act on this recommendation.</p><p>Please feel free to contact me with any questions.</p><p>Kind regards,</p><p>Minoti Inoue</p>
 \.
 
 
@@ -12552,142 +12552,142 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-75	1	11	3	16777227	2024-11-21 05:27:05	\N	517	5
-194	1	\N	3	16777222	2024-11-21 05:34:42	\N	1048585	11
-108	1	12	3	16777227	2024-11-21 05:28:45	\N	517	7
-80	1	22	2	16777235	2024-11-21 05:27:21	\N	1048585	4
-81	1	3	2	16777254	2024-11-21 05:27:21	2024-11-21 05:27:24	1048585	4
-195	1	\N	3	16777223	2024-11-21 05:34:42	\N	1048585	11
-146	1	3	2	16777251	2024-11-21 05:31:58	\N	1048585	7
-196	1	\N	3	16777224	2024-11-21 05:34:42	\N	1048585	11
-182	1	\N	3	16777220	2024-11-21 05:34:22	\N	1048585	10
-183	1	\N	3	16777222	2024-11-21 05:34:22	\N	1048585	10
-129	1	3	3	16777249	2024-11-21 05:30:45	\N	1048586	1
-184	1	\N	3	16777223	2024-11-21 05:34:22	\N	1048585	10
-112	1	23	2	16777235	2024-11-21 05:29:02	\N	1048585	5
-185	1	\N	3	16777224	2024-11-21 05:34:22	\N	1048585	10
-53	1	\N	3	16777220	2024-11-21 05:26:05	\N	1048585	3
-186	1	1	3	16777247	2024-11-21 05:34:22	\N	1048585	10
-54	1	\N	3	16777222	2024-11-21 05:26:05	\N	1048585	3
-187	1	2	3	16777247	2024-11-21 05:34:22	\N	1048585	10
-55	1	\N	3	16777223	2024-11-21 05:26:05	\N	1048585	3
-130	1	4	3	16777249	2024-11-21 05:30:45	\N	1048586	1
-16	1	4	2	16777217	2024-11-21 05:22:52	\N	1048585	1
-56	1	\N	3	16777224	2024-11-21 05:26:05	\N	1048585	3
-17	1	\N	2	16777236	2024-11-21 05:23:00	\N	523	1
-18	1	12	3	16777227	2024-11-21 05:23:05	\N	517	1
-188	1	3	3	16777247	2024-11-21 05:34:22	\N	1048585	10
-57	1	1	3	16777247	2024-11-21 05:26:05	\N	1048585	3
-20	1	19	2	16777230	2024-11-21 05:23:09	\N	1048585	1
-21	1	4	2	16777251	2024-11-21 05:23:10	\N	1048585	1
-58	1	2	3	16777247	2024-11-21 05:26:05	\N	1048585	3
-197	1	1	3	16777247	2024-11-21 05:34:42	\N	1048585	11
-59	1	3	3	16777247	2024-11-21 05:26:05	\N	1048585	3
-193	1	\N	3	16777220	2024-11-21 05:34:42	\N	1048585	11
-198	1	2	3	16777247	2024-11-21 05:34:42	\N	1048585	11
-115	1	\N	2	16777246	2024-11-21 05:29:28	2024-11-21 05:29:39	1048585	5
-199	1	3	3	16777247	2024-11-21 05:34:42	\N	1048585	11
-95	1	\N	3	16777220	2024-11-21 05:28:18	\N	1048585	5
-96	1	\N	3	16777222	2024-11-21 05:28:18	\N	1048585	5
-97	1	\N	3	16777223	2024-11-21 05:28:18	\N	1048585	5
-98	1	\N	3	16777224	2024-11-21 05:28:18	\N	1048585	5
-99	1	1	3	16777247	2024-11-21 05:28:18	\N	1048585	5
-100	1	2	3	16777247	2024-11-21 05:28:18	\N	1048585	5
-101	1	3	3	16777247	2024-11-21 05:28:18	\N	1048585	5
-31	1	\N	3	16777220	2024-11-21 05:24:55	\N	1048585	2
-32	1	\N	3	16777222	2024-11-21 05:24:55	\N	1048585	2
-33	1	\N	3	16777223	2024-11-21 05:24:55	\N	1048585	2
-34	1	\N	3	16777224	2024-11-21 05:24:55	\N	1048585	2
-35	1	1	3	16777247	2024-11-21 05:24:55	\N	1048585	2
-36	1	2	3	16777247	2024-11-21 05:24:55	\N	1048585	2
-37	1	3	3	16777247	2024-11-21 05:24:55	\N	1048585	2
-38	1	\N	2	16777236	2024-11-21 05:25:12	\N	523	2
-39	1	11	3	16777227	2024-11-21 05:25:20	\N	517	2
-102	1	\N	2	16777236	2024-11-21 05:28:29	\N	523	5
-200	1	\N	2	16777236	2024-11-21 05:34:53	\N	523	10
-41	1	12	3	16777227	2024-11-21 05:25:24	\N	517	3
-104	1	8	3	16777227	2024-11-21 05:28:35	\N	517	6
-202	1	9	3	16777227	2024-11-21 05:34:58	\N	517	9
-106	1	\N	2	16777236	2024-11-21 05:28:40	\N	523	6
-204	1	\N	2	16777236	2024-11-21 05:35:03	\N	523	11
-210	1	28	2	16777230	2024-11-21 05:35:43	\N	1048585	11
-148	1	1	3	16777247	2024-11-21 05:32:15	\N	1048585	8
-68	1	3	2	16777217	2024-11-21 05:26:39	\N	1048585	4
-69	1	\N	2	16777236	2024-11-21 05:26:49	\N	523	3
-149	1	2	3	16777247	2024-11-21 05:32:16	\N	1048585	8
-71	1	9	3	16777227	2024-11-21 05:26:54	\N	517	4
-124	1	4	2	16777217	2024-11-21 05:30:13	\N	1048585	6
-73	1	\N	2	16777236	2024-11-21 05:26:59	\N	523	4
-125	1	\N	2	16777236	2024-11-21 05:30:23	\N	523	7
-126	1	24	2	16777229	2024-11-21 05:30:24	\N	1048585	6
-217	1	\N	3	16777220	2024-11-21 05:36:15	\N	1048585	12
-150	1	3	3	16777247	2024-11-21 05:32:16	\N	1048585	8
-218	1	\N	3	16777222	2024-11-21 05:36:15	\N	1048585	12
-219	1	\N	3	16777223	2024-11-21 05:36:15	\N	1048585	12
-220	1	\N	3	16777224	2024-11-21 05:36:15	\N	1048585	12
-221	1	1	3	16777247	2024-11-21 05:36:15	\N	1048585	12
-222	1	2	3	16777247	2024-11-21 05:36:15	\N	1048585	12
-161	1	4	2	16777217	2024-11-21 05:32:56	\N	1048585	9
-141	1	3	2	16777217	2024-11-21 05:31:35	\N	1048585	7
-142	1	\N	2	16777236	2024-11-21 05:31:46	\N	523	8
-143	1	10	3	16777227	2024-11-21 05:31:53	\N	517	8
-145	1	25	2	16777230	2024-11-21 05:31:58	\N	1048585	7
-162	1	\N	2	16777236	2024-11-21 05:33:08	\N	523	9
-163	1	26	2	16777229	2024-11-21 05:33:08	\N	1048585	9
-223	1	3	3	16777247	2024-11-21 05:36:15	\N	1048585	12
-224	1	\N	2	16777236	2024-11-21 05:36:27	\N	523	12
-225	1	29	2	16777229	2024-11-21 05:36:28	\N	1048585	12
-226	1	7	3	16777227	2024-11-21 05:36:34	\N	517	12
-308	1	\N	3	16777220	2024-11-21 05:42:10	\N	1048585	16
-309	1	\N	3	16777222	2024-11-21 05:42:10	\N	1048585	16
-310	1	\N	3	16777223	2024-11-21 05:42:10	\N	1048585	16
-311	1	\N	3	16777224	2024-11-21 05:42:10	\N	1048585	16
-230	1	9	3	16777227	2024-11-21 05:36:40	\N	517	14
-312	1	1	3	16777247	2024-11-21 05:42:10	\N	1048585	16
-313	1	2	3	16777247	2024-11-21 05:42:10	\N	1048585	16
-314	1	3	3	16777247	2024-11-21 05:42:10	\N	1048585	16
-315	1	\N	2	16777236	2024-11-21 05:42:23	\N	523	18
-279	1	31	2	16777235	2024-11-21 05:39:58	\N	1048585	14
-334	1	\N	3	16777220	2024-11-21 05:43:38	\N	1048585	17
-318	1	11	3	16777227	2024-11-21 05:42:33	\N	517	22
-280	1	3	2	16777254	2024-11-21 05:39:58	2024-11-21 05:40:02	1048585	14
-238	1	\N	3	16777220	2024-11-21 05:37:18	\N	1048585	13
-239	1	\N	3	16777222	2024-11-21 05:37:18	\N	1048585	13
-240	1	\N	3	16777223	2024-11-21 05:37:18	\N	1048585	13
-241	1	\N	3	16777224	2024-11-21 05:37:18	\N	1048585	13
-242	1	1	3	16777247	2024-11-21 05:37:18	\N	1048585	13
-243	1	2	3	16777247	2024-11-21 05:37:18	\N	1048585	13
-244	1	3	3	16777247	2024-11-21 05:37:18	\N	1048585	13
-335	1	\N	3	16777222	2024-11-21 05:43:38	\N	1048585	17
-245	1	\N	2	16777236	2024-11-21 05:37:30	\N	523	13
-320	1	12	3	16777227	2024-11-21 05:42:36	\N	517	23
-247	1	8	3	16777227	2024-11-21 05:37:36	\N	517	15
-336	1	\N	3	16777223	2024-11-21 05:43:38	\N	1048585	17
-249	1	\N	2	16777236	2024-11-21 05:37:40	\N	523	14
-337	1	\N	3	16777224	2024-11-21 05:43:38	\N	1048585	17
-338	1	1	3	16777247	2024-11-21 05:43:38	\N	1048585	17
-253	1	11	3	16777227	2024-11-21 05:37:50	\N	517	17
-339	1	2	3	16777247	2024-11-21 05:43:38	\N	1048585	17
-340	1	3	3	16777247	2024-11-21 05:43:38	\N	1048585	17
-283	1	\N	2	16777246	2024-11-21 05:40:49	\N	1048585	14
-257	1	30	2	16777230	2024-11-21 05:38:27	\N	1048585	13
-341	1	\N	2	16777236	2024-11-21 05:43:52	\N	523	19
-342	1	34	2	16777229	2024-11-21 05:43:53	\N	1048585	17
-343	1	7	3	16777227	2024-11-21 05:44:00	\N	517	24
-345	1	8	3	16777227	2024-11-21 05:44:04	\N	517	25
-267	1	3	2	16777217	2024-11-21 05:39:09	\N	1048585	14
-268	1	\N	2	16777236	2024-11-21 05:39:22	\N	523	15
-270	1	7	3	16777227	2024-11-21 05:39:29	\N	517	19
-272	1	\N	2	16777236	2024-11-21 05:39:34	\N	523	16
-274	1	11	3	16777227	2024-11-21 05:39:40	\N	517	20
-290	1	\N	3	16777220	2024-11-21 05:41:15	\N	1048585	15
-291	1	\N	3	16777222	2024-11-21 05:41:15	\N	1048585	15
-292	1	\N	3	16777223	2024-11-21 05:41:15	\N	1048585	15
-293	1	\N	3	16777224	2024-11-21 05:41:15	\N	1048585	15
-294	1	1	3	16777247	2024-11-21 05:41:15	\N	1048585	15
-295	1	2	3	16777247	2024-11-21 05:41:15	\N	1048585	15
-296	1	3	3	16777247	2024-11-21 05:41:15	\N	1048585	15
-297	1	\N	2	16777236	2024-11-21 05:41:27	\N	523	17
+129	1	3	3	16777249	2024-11-22 05:31:07	\N	1048586	1
+130	1	4	3	16777249	2024-11-22 05:31:07	\N	1048586	1
+249	1	\N	2	16777236	2024-11-22 05:38:07	\N	523	14
+115	1	\N	2	16777246	2024-11-22 05:29:50	2024-11-22 05:30:01	1048585	5
+148	1	1	3	16777247	2024-11-22 05:32:37	\N	1048585	8
+149	1	2	3	16777247	2024-11-22 05:32:38	\N	1048585	8
+150	1	3	3	16777247	2024-11-22 05:32:38	\N	1048585	8
+53	1	\N	3	16777220	2024-11-22 05:26:25	\N	1048585	3
+54	1	\N	3	16777222	2024-11-22 05:26:25	\N	1048585	3
+55	1	\N	3	16777223	2024-11-22 05:26:25	\N	1048585	3
+56	1	\N	3	16777224	2024-11-22 05:26:25	\N	1048585	3
+57	1	1	3	16777247	2024-11-22 05:26:25	\N	1048585	3
+58	1	2	3	16777247	2024-11-22 05:26:25	\N	1048585	3
+59	1	3	3	16777247	2024-11-22 05:26:25	\N	1048585	3
+161	1	4	2	16777217	2024-11-22 05:33:18	\N	1048585	9
+16	1	4	2	16777217	2024-11-22 05:23:10	\N	1048585	1
+17	1	\N	2	16777236	2024-11-22 05:23:18	\N	523	1
+18	1	12	3	16777227	2024-11-22 05:23:23	\N	517	1
+141	1	3	2	16777217	2024-11-22 05:31:57	\N	1048585	7
+162	1	\N	2	16777236	2024-11-22 05:33:30	\N	523	9
+20	1	19	2	16777230	2024-11-22 05:23:28	\N	1048585	1
+21	1	4	2	16777251	2024-11-22 05:23:28	\N	1048585	1
+142	1	\N	2	16777236	2024-11-22 05:32:08	\N	523	8
+143	1	10	3	16777227	2024-11-22 05:32:15	\N	517	8
+145	1	25	2	16777230	2024-11-22 05:32:20	\N	1048585	7
+146	1	3	2	16777251	2024-11-22 05:32:20	\N	1048585	7
+68	1	3	2	16777217	2024-11-22 05:27:00	\N	1048585	4
+69	1	\N	2	16777236	2024-11-22 05:27:10	\N	523	3
+163	1	26	2	16777229	2024-11-22 05:33:30	\N	1048585	9
+71	1	9	3	16777227	2024-11-22 05:27:15	\N	517	4
+73	1	\N	2	16777236	2024-11-22 05:27:20	\N	523	4
+75	1	11	3	16777227	2024-11-22 05:27:25	\N	517	5
+31	1	\N	3	16777220	2024-11-22 05:25:14	\N	1048585	2
+32	1	\N	3	16777222	2024-11-22 05:25:14	\N	1048585	2
+33	1	\N	3	16777223	2024-11-22 05:25:14	\N	1048585	2
+34	1	\N	3	16777224	2024-11-22 05:25:14	\N	1048585	2
+35	1	1	3	16777247	2024-11-22 05:25:14	\N	1048585	2
+36	1	2	3	16777247	2024-11-22 05:25:14	\N	1048585	2
+37	1	3	3	16777247	2024-11-22 05:25:14	\N	1048585	2
+38	1	\N	2	16777236	2024-11-22 05:25:32	\N	523	2
+39	1	11	3	16777227	2024-11-22 05:25:40	\N	517	2
+41	1	12	3	16777227	2024-11-22 05:25:44	\N	517	3
+80	1	22	2	16777235	2024-11-22 05:27:42	\N	1048585	4
+81	1	3	2	16777254	2024-11-22 05:27:42	2024-11-22 05:27:45	1048585	4
+95	1	\N	3	16777220	2024-11-22 05:28:39	\N	1048585	5
+96	1	\N	3	16777222	2024-11-22 05:28:39	\N	1048585	5
+97	1	\N	3	16777223	2024-11-22 05:28:39	\N	1048585	5
+98	1	\N	3	16777224	2024-11-22 05:28:39	\N	1048585	5
+99	1	1	3	16777247	2024-11-22 05:28:39	\N	1048585	5
+100	1	2	3	16777247	2024-11-22 05:28:39	\N	1048585	5
+101	1	3	3	16777247	2024-11-22 05:28:39	\N	1048585	5
+102	1	\N	2	16777236	2024-11-22 05:28:50	\N	523	5
+104	1	8	3	16777227	2024-11-22 05:28:56	\N	517	6
+106	1	\N	2	16777236	2024-11-22 05:29:01	\N	523	6
+108	1	12	3	16777227	2024-11-22 05:29:07	\N	517	7
+182	1	\N	3	16777220	2024-11-22 05:34:46	\N	1048585	10
+112	1	23	2	16777235	2024-11-22 05:29:23	\N	1048585	5
+183	1	\N	3	16777222	2024-11-22 05:34:46	\N	1048585	10
+184	1	\N	3	16777223	2024-11-22 05:34:46	\N	1048585	10
+200	1	\N	2	16777236	2024-11-22 05:35:18	\N	523	10
+185	1	\N	3	16777224	2024-11-22 05:34:46	\N	1048585	10
+124	1	4	2	16777217	2024-11-22 05:30:35	\N	1048585	6
+186	1	1	3	16777247	2024-11-22 05:34:46	\N	1048585	10
+125	1	\N	2	16777236	2024-11-22 05:30:45	\N	523	7
+126	1	24	2	16777229	2024-11-22 05:30:45	\N	1048585	6
+187	1	2	3	16777247	2024-11-22 05:34:46	\N	1048585	10
+188	1	3	3	16777247	2024-11-22 05:34:47	\N	1048585	10
+193	1	\N	3	16777220	2024-11-22 05:35:07	\N	1048585	11
+194	1	\N	3	16777222	2024-11-22 05:35:07	\N	1048585	11
+195	1	\N	3	16777223	2024-11-22 05:35:07	\N	1048585	11
+196	1	\N	3	16777224	2024-11-22 05:35:07	\N	1048585	11
+197	1	1	3	16777247	2024-11-22 05:35:07	\N	1048585	11
+198	1	2	3	16777247	2024-11-22 05:35:07	\N	1048585	11
+199	1	3	3	16777247	2024-11-22 05:35:07	\N	1048585	11
+202	1	9	3	16777227	2024-11-22 05:35:24	\N	517	9
+204	1	\N	2	16777236	2024-11-22 05:35:28	\N	523	11
+210	1	28	2	16777230	2024-11-22 05:36:08	\N	1048585	11
+217	1	\N	3	16777220	2024-11-22 05:36:40	\N	1048585	12
+218	1	\N	3	16777222	2024-11-22 05:36:40	\N	1048585	12
+219	1	\N	3	16777223	2024-11-22 05:36:40	\N	1048585	12
+220	1	\N	3	16777224	2024-11-22 05:36:40	\N	1048585	12
+221	1	1	3	16777247	2024-11-22 05:36:40	\N	1048585	12
+222	1	2	3	16777247	2024-11-22 05:36:40	\N	1048585	12
+223	1	3	3	16777247	2024-11-22 05:36:40	\N	1048585	12
+224	1	\N	2	16777236	2024-11-22 05:36:53	\N	523	12
+225	1	29	2	16777229	2024-11-22 05:36:53	\N	1048585	12
+226	1	7	3	16777227	2024-11-22 05:36:59	\N	517	12
+253	1	11	3	16777227	2024-11-22 05:38:16	\N	517	17
+230	1	9	3	16777227	2024-11-22 05:37:06	\N	517	14
+257	1	30	2	16777230	2024-11-22 05:38:54	\N	1048585	13
+290	1	\N	3	16777220	2024-11-22 05:41:44	\N	1048585	15
+291	1	\N	3	16777222	2024-11-22 05:41:44	\N	1048585	15
+292	1	\N	3	16777223	2024-11-22 05:41:44	\N	1048585	15
+293	1	\N	3	16777224	2024-11-22 05:41:44	\N	1048585	15
+238	1	\N	3	16777220	2024-11-22 05:37:44	\N	1048585	13
+239	1	\N	3	16777222	2024-11-22 05:37:44	\N	1048585	13
+240	1	\N	3	16777223	2024-11-22 05:37:44	\N	1048585	13
+241	1	\N	3	16777224	2024-11-22 05:37:44	\N	1048585	13
+242	1	1	3	16777247	2024-11-22 05:37:44	\N	1048585	13
+243	1	2	3	16777247	2024-11-22 05:37:44	\N	1048585	13
+244	1	3	3	16777247	2024-11-22 05:37:44	\N	1048585	13
+245	1	\N	2	16777236	2024-11-22 05:37:56	\N	523	13
+247	1	8	3	16777227	2024-11-22 05:38:02	\N	517	15
+294	1	1	3	16777247	2024-11-22 05:41:44	\N	1048585	15
+295	1	2	3	16777247	2024-11-22 05:41:44	\N	1048585	15
+296	1	3	3	16777247	2024-11-22 05:41:44	\N	1048585	15
+267	1	3	2	16777217	2024-11-22 05:39:36	\N	1048585	14
+297	1	\N	2	16777236	2024-11-22 05:41:56	\N	523	17
+268	1	\N	2	16777236	2024-11-22 05:39:50	\N	523	15
+270	1	7	3	16777227	2024-11-22 05:39:57	\N	517	19
+272	1	\N	2	16777236	2024-11-22 05:40:02	\N	523	16
+274	1	11	3	16777227	2024-11-22 05:40:08	\N	517	20
+279	1	31	2	16777235	2024-11-22 05:40:26	\N	1048585	14
+280	1	3	2	16777254	2024-11-22 05:40:26	2024-11-22 05:40:31	1048585	14
+341	1	\N	2	16777236	2024-11-22 05:44:23	\N	523	19
+283	1	\N	2	16777246	2024-11-22 05:41:18	\N	1048585	14
+342	1	34	2	16777229	2024-11-22 05:44:23	\N	1048585	17
+343	1	7	3	16777227	2024-11-22 05:44:31	\N	517	24
+308	1	\N	3	16777220	2024-11-22 05:42:40	\N	1048585	16
+309	1	\N	3	16777222	2024-11-22 05:42:40	\N	1048585	16
+310	1	\N	3	16777223	2024-11-22 05:42:40	\N	1048585	16
+311	1	\N	3	16777224	2024-11-22 05:42:40	\N	1048585	16
+312	1	1	3	16777247	2024-11-22 05:42:40	\N	1048585	16
+313	1	2	3	16777247	2024-11-22 05:42:40	\N	1048585	16
+314	1	3	3	16777247	2024-11-22 05:42:40	\N	1048585	16
+315	1	\N	2	16777236	2024-11-22 05:42:53	\N	523	18
+345	1	8	3	16777227	2024-11-22 05:44:34	\N	517	25
+318	1	11	3	16777227	2024-11-22 05:43:03	\N	517	22
+320	1	12	3	16777227	2024-11-22 05:43:06	\N	517	23
+334	1	\N	3	16777220	2024-11-22 05:44:08	\N	1048585	17
+335	1	\N	3	16777222	2024-11-22 05:44:08	\N	1048585	17
+336	1	\N	3	16777223	2024-11-22 05:44:08	\N	1048585	17
+337	1	\N	3	16777224	2024-11-22 05:44:08	\N	1048585	17
+338	1	1	3	16777247	2024-11-22 05:44:08	\N	1048585	17
+339	1	2	3	16777247	2024-11-22 05:44:08	\N	1048585	17
+340	1	3	3	16777247	2024-11-22 05:44:08	\N	1048585	17
 \.
 
 
@@ -12752,25 +12752,25 @@ COPY public.plugin_settings (plugin_setting_id, plugin_name, context_id, setting
 --
 
 COPY public.press_settings (press_setting_id, press_id, locale, setting_name, setting_value) FROM stdin;
-8	1	fr_CA	beginSubmissionHelp	<p>Merci de votre soumission à la revue Public Knowledge Press. Il vous sera demandé de téléverser des fichiers, identifier des co-auteur.trice.s et fournir des informations comme le titre et le résumé.<p><p>Si vous ne l'avez pas encore fait, merci de consulter nos <a href="http://localhost/index.php/publicknowledge/about/submissions" target="_blank">Recommandations pour la soumission</a>. Lorsque vous remplissez les formulaires, merci de fournir autant de détails que possible pour aider nos éditeur.trice.s à évaluer votre travail. </p><p>Une fois que vous avez commencé, vous pouvez enregistrer votre soumission et y revenir plus tard. Vous pourrez alors réviser et modifier toutes les informations voulues avant de soumettre le tout.</p>
-11	1	en	contributorsHelp	<p>Add details for all of the contributors to this submission. Contributors added here will be sent an email confirmation of the submission, as well as a copy of all editorial decisions recorded against this submission.</p><p>If a contributor can not be contacted by email, because they must remain anonymous or do not have an email account, please do not enter a fake email address. You can add information about this contributor in a message to the editor at a later step in the submission process.</p>
+20	1		enableDois	1
 26	1	fr_CA	forTheEditorsHelp	<p>S'il vous plaît, fournissez les détails suivants afin d'aider l'équipe éditoriale à gérer votre soumission.</p><p>Dans vos métadonnées, assurez vous de fournir des informations que vous pensez pouvoir être utile à la personne qui gérera votre soumission. Cette information peut être changée avant publication.</p>
 27	1		itemsPerPage	25
+28	1		keywords	request
 5	1	en	authorInformation	Interested in submitting to this press? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About the Press</a> page for the press' section policies and <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> with the press prior to submitting, or if already registered can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the 5 step process.
 6	1	fr_CA	authorInformation	Vous souhaitez soumettre une contribution à cette presse ? Nous vous recommandons de lire la page\n <a href="http://localhost/index.php/publicknowledge/about">À propos de cette presse</a> pour connaitre ses règlements et la page\n <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Lignes directrices à l'intention des auteurs-es</a>. Les auteurs-es doivent <a href="http://localhost/index.php/publicknowledge/user/register">s'inscrire</a> auprès de la presse avant d'envoyer une soumission. Si vous êtes déjà inscrit-e, il suffit simplement <a href="http://localhost/index.php/index/login">d'ouvrir une session</a> pour débuter la procédure en 5 étapes.
 7	1	en	beginSubmissionHelp	<p>Thank you for submitting to the Public Knowledge Press. You will be asked to upload files, identify co-authors, and provide information such as the title and abstract.<p><p>Please read our <a href="http://localhost/index.php/publicknowledge/about/submissions" target="_blank">Submission Guidelines</a> if you have not done so already. When filling out the forms, provide as many details as possible in order to help our editors evaluate your work.</p><p>Once you begin, you can save your submission and come back to it later. You will be able to review and correct any information before you submit.</p>
+8	1	fr_CA	beginSubmissionHelp	<p>Merci de votre soumission à la revue Public Knowledge Press. Il vous sera demandé de téléverser des fichiers, identifier des co-auteur.trice.s et fournir des informations comme le titre et le résumé.<p><p>Si vous ne l'avez pas encore fait, merci de consulter nos <a href="http://localhost/index.php/publicknowledge/about/submissions" target="_blank">Recommandations pour la soumission</a>. Lorsque vous remplissez les formulaires, merci de fournir autant de détails que possible pour aider nos éditeur.trice.s à évaluer votre travail. </p><p>Une fois que vous avez commencé, vous pouvez enregistrer votre soumission et y revenir plus tard. Vous pourrez alors réviser et modifier toutes les informations voulues avant de soumettre le tout.</p>
 9	1		contactEmail	rvaca@mailinator.com
+12	1	fr_CA	contributorsHelp	<p>Ajouter des informations relatives à tous les contributeurs.trices à cette soumission. Les contributeurs.trices ajouté.e.s ici se verront envoyer un courriel de confirmation de la soumission ainsi qu'une copie de toutes les décisions éditoriales enregistrées pour cette soumission.</p><p>Si un.e contributeur.trice ne peut être contacté.e par courriel parce qu'il ou elle doit demeurer anonyme ou n'a pas de compte de messagerie, veuillez ne pas entrer de courriel fictif. Vous pouvez ajouter des informations sur ce ou cette contributeur.trice à une étape ultérieure du processus de soumission.</p>
 13	1		country	IS
 14	1		defaultReviewMode	2
 17	1	en	detailsHelp	<p>Please provide the following details to help us manage your submission in our system.</p>
-20	1		enableDois	1
 21	1		doiSuffixType	default
 22	1		registrationAgency	
-28	1		keywords	request
 72	1		doiCreationTime	copyEditCreationTime
 4	1	fr_CA	authorGuidelines	##default.contextSettings.authorGuidelines##
 10	1		contactName	Ramiro Vaca
-12	1	fr_CA	contributorsHelp	<p>Ajouter des informations relatives à tous les contributeurs.trices à cette soumission. Les contributeurs.trices ajouté.e.s ici se verront envoyer un courriel de confirmation de la soumission ainsi qu'une copie de toutes les décisions éditoriales enregistrées pour cette soumission.</p><p>Si un.e contributeur.trice ne peut être contacté.e par courriel parce qu'il ou elle doit demeurer anonyme ou n'a pas de compte de messagerie, veuillez ne pas entrer de courriel fictif. Vous pouvez ajouter des informations sur ce ou cette contributeur.trice à une étape ultérieure du processus de soumission.</p>
+11	1	en	contributorsHelp	<p>Add details for all of the contributors to this submission. Contributors added here will be sent an email confirmation of the submission, as well as a copy of all editorial decisions recorded against this submission.</p><p>If a contributor can not be contacted by email, because they must remain anonymous or do not have an email account, please do not enter a fake email address. You can add information about this contributor in a message to the editor at a later step in the submission process.</p>
 15	1	en	description	<p>Public Knowledge Press is a publisher dedicated to the subject of public access to science.</p>
 16	1	fr_CA	description	<p>Le Press de Public Knowledge est une presse sur le thème de l'accès du public à la science.</p>
 18	1	fr_CA	detailsHelp	<p>Veuillez fournir les informations suivantes afin de nous aider à gérer votre soumission dans notre système.</p>
@@ -12779,46 +12779,46 @@ COPY public.press_settings (press_setting_id, press_id, locale, setting_name, se
 24	1		editorialStatsEmail	1
 25	1	en	forTheEditorsHelp	<p>Please provide the following details in order to help our editorial team manage your submission.</p><p>When entering metadata, provide entries that you think would be most helpful to the person managing your submission. This information can be changed before publication.</p>
 73	1		paymentPluginName	ManualPayment
-65	1	fr_CA	uploadFilesHelp	<p> Fournir tous les fichiers dont notre équipe éditoriale pourrait avoir besoin pour évaluer votre soumission. En plus du fichier principal, vous pouvez soumettre des ensembles de données, une déclaration relative au conflit d'intérêt ou tout autre fichier potentiellement utile pour nos éditeur.trice.s.</p>
-71	1		enabledDoiTypes	["publication"]
-31	1	en	name	Public Knowledge Press
-32	1	fr_CA	name	Press de la connaissance du public
-33	1		notifyAllAuthors	1
-39	1	fr_CA	openAccessPolicy	Cette presse offre un accès libre immédiat à son contenu en partant du principe que la recherche doit être accessible au grand public, car cela favorise un meilleur échange des connaissances à l'échelle mondiale.
+35	1		numWeeksPerResponse	4
+36	1		numWeeksPerReview	4
+37	1		numReviewersPerSubmission	0
 40	1		orcidCity	
 41	1		orcidClientId	
 42	1		orcidClientSecret	
-47	1	fr_CA	privacyStatement	<p>Les noms et adresses courriel saisis sur ce site de presse seront utilisés exclusivement pour les fins convenues de cette presse. Ils ne seront pas utilisés pour d'autres fins ou transmis à une tierce partie.</p>
 48	1	en	readerInformation	We encourage readers to sign up for the publishing notification service for this press. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the homepage for the press. This registration will result in the reader receiving the Table of Contents by email for each new monograph of the press. This list also allows the press to claim a certain level of support or readership. See the press <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a> which assures readers that their name and email address will not be used for other purposes.
 50	1	en	reviewHelp	<p>Review the information you have entered before you complete your submission. You can change any of the details displayed here by clicking the edit button at the top of each section.</p><p>Once you complete your submission, a member of our editorial team will be assigned to review it. Please ensure the details you have entered here are as accurate as possible.</p>
 51	1	fr_CA	reviewHelp	<p>Révisez l'information que vous avez fourni avant de finaliser votre soumission. Vous pouvez modifier chaque détails affichés en cliquant sur le bouton d'édition en haut de chaque section.</p><p>Une fois votre soumission transmise, un membre de l'équipe éditoriale lui sera assigné afin de l'évaluer. S'il vous plaît, assurez vous que les détails fournis sont le plus exactes possibles.</p>
 52	1		submissionAcknowledgement	allAuthors
-54	1	fr_CA	submissionChecklist	##default.contextSettings.checklist##
 53	1	en	submissionChecklist	<p>All submissions must meet the following requirements.</p><ul><li>This submission meets the requirements outlined in the <a href="http://localhost/index.php/publicknowledge/about/submissions">Author Guidelines</a>.</li><li>This submission has not been previously published, nor is it before another press for consideration.</li><li>All references have been checked for accuracy and completeness.</li><li>All tables and figures have been numbered and labeled.</li><li>Permission has been obtained to publish all photos, datasets and other material provided with this submission.</li></ul>
+54	1	fr_CA	submissionChecklist	##default.contextSettings.checklist##
 55	1		submitWithCategories	0
 56	1		supportedAddedSubmissionLocales	["en","fr_CA"]
 57	1		supportedDefaultSubmissionLocale	en
+63	1		type	enable
+64	1	en	uploadFilesHelp	<p>Provide any files our editorial team may need to evaluate your submission. In addition to the main work, you may wish to submit data sets, conflict of interest statements, or other supplementary files if these will be helpful for our editors.</p>
+65	1	fr_CA	uploadFilesHelp	<p> Fournir tous les fichiers dont notre équipe éditoriale pourrait avoir besoin pour évaluer votre soumission. En plus du fichier principal, vous pouvez soumettre des ensembles de données, une déclaration relative au conflit d'intérêt ou tout autre fichier potentiellement utile pour nos éditeur.trice.s.</p>
 66	1		enableGeoUsageStats	disabled
 67	1		enableInstitutionUsageStats	0
 68	1		isSushiApiPublic	1
-34	1		numPageLinks	10
-35	1		numWeeksPerResponse	4
-36	1		numWeeksPerReview	4
+69	1		coverThumbnailsMaxWidth	106
+38	1	en	openAccessPolicy	This press provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.
+39	1	fr_CA	openAccessPolicy	Cette presse offre un accès libre immédiat à son contenu en partant du principe que la recherche doit être accessible au grand public, car cela favorise un meilleur échange des connaissances à l'échelle mondiale.
 43	1		orcidEnabled	0
 44	1		orcidLogLevel	ERROR
-69	1		coverThumbnailsMaxWidth	106
+58	1		supportedFormLocales	["en","fr_CA"]
 70	1		coverThumbnailsMaxHeight	100
-37	1		numReviewersPerSubmission	0
-38	1	en	openAccessPolicy	This press provides immediate open access to its content on the principle that making research freely available to the public supports a greater global exchange of knowledge.
+71	1		enabledDoiTypes	["publication"]
+31	1	en	name	Public Knowledge Press
+32	1	fr_CA	name	Press de la connaissance du public
 45	1		orcidSendMailToAuthorsOnPublication	0
 46	1	en	privacyStatement	<p>The names and email addresses entered in this press site will be used exclusively for the stated purposes of this press and will not be made available for any other purpose or to any other party.</p>
-58	1		supportedFormLocales	["en","fr_CA"]
+47	1	fr_CA	privacyStatement	<p>Les noms et adresses courriel saisis sur ce site de presse seront utilisés exclusivement pour les fins convenues de cette presse. Ils ne seront pas utilisés pour d'autres fins ou transmis à une tierce partie.</p>
 59	1		supportedLocales	["en","fr_CA"]
 60	1		supportedSubmissionLocales	["en","fr_CA"]
 61	1		supportedSubmissionMetadataLocales	["en","fr_CA"]
 62	1		themePluginPath	default
-63	1		type	enable
-64	1	en	uploadFilesHelp	<p>Provide any files our editorial team may need to evaluate your submission. In addition to the main work, you may wish to submit data sets, conflict of interest statements, or other supplementary files if these will be helpful for our editors.</p>
+33	1		notifyAllAuthors	1
+34	1		numPageLinks	10
 1	1	en	acronym	JPK
 3	1	en	authorGuidelines	<p>Authors are invited to make a submission to this press. Those submissions considered to be a good fit will be sent for peer review before determining whether they will be accepted or rejected.</p><p>Before making a submission, authors are responsible for obtaining permission to publish any material included with the submission, such as photos, documents and datasets. All authors identified on the submission must consent to be identified as an author. Where appropriate, research should be approved by an appropriate ethics committee in accordance with the legal requirements of the study's country.</p><p>An editor may desk reject a submission if it does not meet minimum standards of quality. Before submitting, please ensure that the scope and outline of the book are structured and articulated properly. The title should be concise and the abstract should be able to stand on its own. This will increase the likelihood of reviewers agreeing to review the book. When you're satisfied that your submission meets this standard, please follow the checklist below to prepare your submission.</p>
 75	1	en	customHeaders	<meta name="pkp" content="Test metatag.">
@@ -12953,23 +12953,23 @@ COPY public.publication_settings (publication_setting_id, publication_id, locale
 --
 
 COPY public.publications (publication_id, date_published, last_modified, primary_contact_id, publication_date_type, publication_type, seq, series_id, series_position, submission_id, status, url_path, version, doi_id) FROM stdin;
-1	\N	2024-11-21 05:22:33	1	pub	publication	0	1	\N	1	1	\N	1	\N
-2	\N	2024-11-21 05:23:32	2	pub	publication	0	\N	\N	2	1	\N	1	\N
-3	\N	2024-11-21 05:25:32	11	pub	publication	0	\N	\N	3	1	\N	1	\N
-4	\N	2024-11-21 05:26:12	12	pub	publication	0	3	\N	4	1	\N	1	\N
-5	2024-11-21	2024-11-21 05:29:40	16	pub	publication	0	\N	\N	5	3	\N	1	\N
-6	\N	2024-11-21 05:29:47	17	pub	publication	0	1	\N	6	1	\N	1	\N
-7	\N	2024-11-21 05:31:01	21	pub	publication	0	4	\N	7	1	\N	1	\N
-8	\N	2024-11-21 05:32:12	\N	pub	publication	0	\N	\N	8	1	\N	1	\N
-9	\N	2024-11-21 05:32:22	26	pub	publication	0	1	\N	9	1	\N	1	\N
-10	\N	2024-11-21 05:33:19	31	pub	publication	0	\N	\N	10	1	\N	1	\N
-11	\N	2024-11-21 05:34:29	32	pub	publication	0	\N	\N	11	1	\N	1	\N
-12	\N	2024-11-21 05:35:53	33	pub	publication	0	\N	\N	12	1	\N	1	\N
-13	\N	2024-11-21 05:36:58	41	pub	publication	0	\N	\N	13	1	\N	1	\N
-14	2024-11-21	2024-11-21 05:40:49	45	pub	publication	0	5	\N	14	3	\N	1	\N
-15	\N	2024-11-21 05:40:56	48	pub	publication	0	\N	\N	15	1	\N	1	\N
-16	\N	2024-11-21 05:41:38	49	pub	publication	0	\N	\N	16	1	\N	1	\N
-17	\N	2024-11-21 05:42:54	50	pub	publication	0	\N	\N	17	1	\N	1	\N
+1	\N	2024-11-22 05:22:51	1	pub	publication	0	1	\N	1	1	\N	1	\N
+2	\N	2024-11-22 05:23:50	2	pub	publication	0	\N	\N	2	1	\N	1	\N
+3	\N	2024-11-22 05:25:52	11	pub	publication	0	\N	\N	3	1	\N	1	\N
+4	\N	2024-11-22 05:26:33	12	pub	publication	0	3	\N	4	1	\N	1	\N
+5	2024-11-22	2024-11-22 05:30:02	16	pub	publication	0	\N	\N	5	3	\N	1	\N
+6	\N	2024-11-22 05:30:08	17	pub	publication	0	1	\N	6	1	\N	1	\N
+7	\N	2024-11-22 05:31:23	21	pub	publication	0	4	\N	7	1	\N	1	\N
+8	\N	2024-11-22 05:32:34	\N	pub	publication	0	\N	\N	8	1	\N	1	\N
+9	\N	2024-11-22 05:32:44	26	pub	publication	0	1	\N	9	1	\N	1	\N
+10	\N	2024-11-22 05:33:41	31	pub	publication	0	\N	\N	10	1	\N	1	\N
+11	\N	2024-11-22 05:34:54	32	pub	publication	0	\N	\N	11	1	\N	1	\N
+12	\N	2024-11-22 05:36:18	33	pub	publication	0	\N	\N	12	1	\N	1	\N
+13	\N	2024-11-22 05:37:23	41	pub	publication	0	\N	\N	13	1	\N	1	\N
+14	2024-11-22	2024-11-22 05:41:18	45	pub	publication	0	5	\N	14	3	\N	1	\N
+15	\N	2024-11-22 05:41:25	48	pub	publication	0	\N	\N	15	1	\N	1	\N
+16	\N	2024-11-22 05:42:07	49	pub	publication	0	\N	\N	16	1	\N	1	\N
+17	\N	2024-11-22 05:43:24	50	pub	publication	0	\N	\N	17	1	\N	1	\N
 \.
 
 
@@ -12978,7 +12978,7 @@ COPY public.publications (publication_id, date_published, last_modified, primary
 --
 
 COPY public.queries (query_id, assoc_type, assoc_id, stage_id, seq, date_posted, date_modified, closed) FROM stdin;
-1	1048585	6	2	1	2024-11-21 05:30:45	2024-11-21 05:30:45	0
+1	1048585	6	2	1	2024-11-22 05:31:07	2024-11-22 05:31:07	0
 \.
 
 
@@ -13013,31 +13013,31 @@ COPY public.representatives (representative_id, submission_id, role, representat
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, date_cancelled, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, considered, request_resent) FROM stdin;
-1	1	12	\N	\N	2024-11-21 05:23:05	2024-11-21 05:23:05	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:23:05	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	\N	0
-2	2	11	\N	\N	2024-11-21 05:25:20	2024-11-21 05:25:20	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:25:20	0	0	0	\N	\N	\N	\N	2	3	1	1	1	\N	\N	0
-15	13	8	\N	\N	2024-11-21 05:37:36	2024-11-21 05:37:36	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:37:36	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	\N	0
-3	2	12	\N	\N	2024-11-21 05:25:24	2024-11-21 05:25:24	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:25:24	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	\N	0
-4	4	9	\N	\N	2024-11-21 05:26:54	2024-11-21 05:26:54	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:26:54	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	\N	0
-21	16	10	\N	0	2024-11-21 05:42:30	2024-11-21 05:42:30	2024-11-21 05:42:43	2024-11-21 05:42:47	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:42:47	0	0	0	\N	\N	\N	\N	18	3	2	1	4	\N	\N	0
-5	4	11	\N	\N	2024-11-21 05:27:04	2024-11-21 05:27:05	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:27:05	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	\N	0
-6	5	8	\N	\N	2024-11-21 05:28:35	2024-11-21 05:28:35	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:28:35	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	\N	0
-7	5	12	\N	\N	2024-11-21 05:28:45	2024-11-21 05:28:45	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:28:45	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	\N	0
-8	7	10	\N	\N	2024-11-21 05:31:53	2024-11-21 05:31:53	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:31:53	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	\N	0
-17	13	11	\N	\N	2024-11-21 05:37:50	2024-11-21 05:37:50	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:37:50	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	\N	0
-9	11	9	\N	\N	2024-11-21 05:34:58	2024-11-21 05:34:59	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:34:59	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	\N	0
-24	17	7	\N	\N	2024-11-21 05:44:00	2024-11-21 05:44:00	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:44:00	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	\N	0
-25	17	8	\N	\N	2024-11-21 05:44:04	2024-11-21 05:44:04	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:44:04	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	\N	0
-16	13	10	\N	0	2024-11-21 05:37:47	2024-11-21 05:37:47	2024-11-21 05:37:59	2024-11-21 05:38:03	2024-11-21 05:38:27	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:38:27	0	0	0	\N	\N	\N	\N	14	3	2	1	4	\N	\N	0
-10	11	10	\N	0	2024-11-21 05:35:08	2024-11-21 05:35:08	2024-11-21 05:35:17	2024-11-21 05:35:21	2024-11-21 05:35:43	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:35:43	0	0	0	\N	\N	\N	\N	11	3	2	1	4	\N	\N	0
-11	11	12	\N	0	2024-11-21 05:35:11	2024-11-21 05:35:11	2024-11-21 05:35:26	2024-11-21 05:35:30	2024-11-21 05:35:43	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:35:43	0	0	0	\N	\N	\N	\N	11	3	2	1	4	\N	\N	0
-18	13	12	\N	0	2024-11-21 05:37:53	2024-11-21 05:37:53	2024-11-21 05:38:08	2024-11-21 05:38:12	2024-11-21 05:38:27	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:38:27	0	0	0	\N	\N	\N	\N	14	3	2	1	4	\N	\N	0
-12	12	7	\N	\N	2024-11-21 05:36:34	2024-11-21 05:36:34	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:36:34	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	\N	0
-19	14	7	\N	\N	2024-11-21 05:39:29	2024-11-21 05:39:30	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:39:30	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	\N	0
-14	12	9	\N	\N	2024-11-21 05:36:40	2024-11-21 05:36:40	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:36:40	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	\N	0
-20	14	11	\N	\N	2024-11-21 05:39:40	2024-11-21 05:39:40	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:39:40	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	\N	0
-13	12	8	\N	0	2024-11-21 05:36:37	2024-11-21 05:36:37	2024-11-21 05:36:47	2024-11-21 05:36:50	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:36:50	0	0	0	\N	\N	\N	\N	12	2	2	1	4	\N	\N	0
-22	16	11	\N	\N	2024-11-21 05:42:33	2024-11-21 05:42:33	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:42:33	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	\N	0
-23	16	12	\N	\N	2024-11-21 05:42:36	2024-11-21 05:42:36	\N	\N	\N	2024-12-19 00:00:00	2024-12-19 00:00:00	2024-11-21 05:42:36	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	\N	0
+1	1	12	\N	\N	2024-11-22 05:23:23	2024-11-22 05:23:23	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:23:23	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	\N	0
+2	2	11	\N	\N	2024-11-22 05:25:39	2024-11-22 05:25:40	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:25:40	0	0	0	\N	\N	\N	\N	2	3	1	1	1	\N	\N	0
+15	13	8	\N	\N	2024-11-22 05:38:02	2024-11-22 05:38:02	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:38:02	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	\N	0
+3	2	12	\N	\N	2024-11-22 05:25:44	2024-11-22 05:25:44	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:25:44	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	\N	0
+4	4	9	\N	\N	2024-11-22 05:27:15	2024-11-22 05:27:16	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:27:16	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	\N	0
+21	16	10	\N	0	2024-11-22 05:43:00	2024-11-22 05:43:00	2024-11-22 05:43:12	2024-11-22 05:43:17	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:43:17	0	0	0	\N	\N	\N	\N	18	3	2	1	4	\N	\N	0
+5	4	11	\N	\N	2024-11-22 05:27:25	2024-11-22 05:27:26	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:27:26	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	\N	0
+6	5	8	\N	\N	2024-11-22 05:28:56	2024-11-22 05:28:56	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:28:56	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	\N	0
+7	5	12	\N	\N	2024-11-22 05:29:07	2024-11-22 05:29:07	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:29:07	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	\N	0
+8	7	10	\N	\N	2024-11-22 05:32:15	2024-11-22 05:32:15	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:32:15	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	\N	0
+17	13	11	\N	\N	2024-11-22 05:38:16	2024-11-22 05:38:16	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:38:16	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	\N	0
+9	11	9	\N	\N	2024-11-22 05:35:24	2024-11-22 05:35:24	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:35:24	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	\N	0
+24	17	7	\N	\N	2024-11-22 05:44:31	2024-11-22 05:44:31	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:44:31	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	\N	0
+25	17	8	\N	\N	2024-11-22 05:44:34	2024-11-22 05:44:34	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:44:34	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	\N	0
+16	13	10	\N	0	2024-11-22 05:38:13	2024-11-22 05:38:13	2024-11-22 05:38:25	2024-11-22 05:38:29	2024-11-22 05:38:54	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:38:54	0	0	0	\N	\N	\N	\N	14	3	2	1	4	\N	\N	0
+10	11	10	\N	0	2024-11-22 05:35:33	2024-11-22 05:35:34	2024-11-22 05:35:42	2024-11-22 05:35:46	2024-11-22 05:36:08	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:36:08	0	0	0	\N	\N	\N	\N	11	3	2	1	4	\N	\N	0
+11	11	12	\N	0	2024-11-22 05:35:36	2024-11-22 05:35:36	2024-11-22 05:35:51	2024-11-22 05:35:55	2024-11-22 05:36:08	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:36:08	0	0	0	\N	\N	\N	\N	11	3	2	1	4	\N	\N	0
+18	13	12	\N	0	2024-11-22 05:38:19	2024-11-22 05:38:19	2024-11-22 05:38:35	2024-11-22 05:38:39	2024-11-22 05:38:54	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:38:54	0	0	0	\N	\N	\N	\N	14	3	2	1	4	\N	\N	0
+12	12	7	\N	\N	2024-11-22 05:36:59	2024-11-22 05:36:59	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:36:59	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	\N	0
+19	14	7	\N	\N	2024-11-22 05:39:57	2024-11-22 05:39:57	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:39:57	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	\N	0
+14	12	9	\N	\N	2024-11-22 05:37:06	2024-11-22 05:37:06	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:37:06	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	\N	0
+20	14	11	\N	\N	2024-11-22 05:40:08	2024-11-22 05:40:09	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:40:09	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	\N	0
+13	12	8	\N	0	2024-11-22 05:37:03	2024-11-22 05:37:03	2024-11-22 05:37:12	2024-11-22 05:37:16	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:37:16	0	0	0	\N	\N	\N	\N	12	2	2	1	4	\N	\N	0
+22	16	11	\N	\N	2024-11-22 05:43:03	2024-11-22 05:43:03	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:43:03	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	\N	0
+23	16	12	\N	\N	2024-11-22 05:43:06	2024-11-22 05:43:06	\N	\N	\N	2024-12-20 00:00:00	2024-12-20 00:00:00	2024-11-22 05:43:06	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	\N	0
 \.
 
 
@@ -13049,24 +13049,24 @@ COPY public.review_files (review_file_id, review_id, submission_file_id) FROM st
 1	1	5
 2	1	6
 3	1	4
-4	2	15
-5	2	12
-6	2	13
-7	2	14
-8	3	15
-9	3	12
-10	3	13
-11	3	14
+4	2	14
+5	2	15
+6	2	12
+7	2	13
+8	3	14
+9	3	15
+10	3	12
+11	3	13
 12	4	25
 13	4	26
 14	4	27
 15	4	28
-16	6	38
-17	6	39
-18	6	40
-19	6	35
-20	6	36
-21	6	37
+16	6	36
+17	6	37
+18	6	38
+19	6	39
+20	6	40
+21	6	35
 22	8	55
 23	8	56
 24	8	57
@@ -13074,17 +13074,17 @@ COPY public.review_files (review_file_id, review_id, submission_file_id) FROM st
 26	8	59
 27	9	82
 28	9	83
-29	12	89
-30	12	87
-31	12	88
-32	13	89
-33	13	87
-34	13	88
+29	12	87
+30	12	88
+31	12	89
+32	13	87
+33	13	88
+34	13	89
 35	14	89
 36	14	87
 37	14	88
-38	15	95
-39	15	94
+38	15	94
+39	15	95
 40	15	93
 41	19	107
 42	19	106
@@ -13093,18 +13093,18 @@ COPY public.review_files (review_file_id, review_id, submission_file_id) FROM st
 45	19	103
 46	19	102
 47	21	129
-48	21	128
-49	21	127
+48	21	127
+49	21	128
 50	21	126
 51	21	125
 52	22	129
-53	22	128
-54	22	127
+53	22	127
+54	22	128
 55	22	126
 56	22	125
 57	23	129
-58	23	128
-59	23	127
+58	23	127
+59	23	128
 60	23	126
 61	23	125
 62	24	141
@@ -13234,25 +13234,25 @@ COPY public.review_round_files (review_round_file_id, submission_id, review_roun
 --
 
 COPY public.review_rounds (review_round_id, submission_id, stage_id, round, review_revision, status) FROM stdin;
-17	15	3	1	\N	6
 1	1	3	1	\N	4
+16	14	3	1	\N	4
+17	15	3	1	\N	6
 2	2	3	1	\N	7
 3	4	2	1	\N	4
-18	16	3	1	\N	8
 4	4	3	1	\N	4
 5	5	2	1	\N	4
+18	16	3	1	\N	8
 6	5	3	1	\N	4
 7	6	2	1	\N	14
-19	17	2	1	\N	7
 8	7	3	1	\N	4
 9	9	2	1	\N	6
+19	17	2	1	\N	7
 10	11	2	1	\N	4
 11	11	3	1	\N	4
 12	12	2	1	\N	8
 13	13	2	1	\N	4
 14	13	3	1	\N	4
 15	14	2	1	\N	4
-16	14	3	1	\N	4
 \.
 
 
@@ -13353,63 +13353,65 @@ COPY public.series_settings (series_setting_id, series_id, locale, setting_name,
 --
 
 COPY public.sessions (id, user_id, ip_address, user_agent, last_activity, payload) FROM stdin;
-uKUzwEap8SA4IM2aHxUtjZxQC10vcC7YIKlzp2yX	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166317	YToyOntzOjY6Il90b2tlbiI7czo0MDoieGQxYnNCT2dkNFlyVjFPNU1wUzNVQVVYNnZ3YndZY2lRVUNpZndUeCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-kjfCnBF68mYEXci05G1PQBVdQF2ayjWgccTY3JwZ	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166317	YToyOntzOjY6Il90b2tlbiI7czo0MDoiUWpIek5XN252R0txYlRQM3JsZVNYMW5ha05rYm5RcVZWd2Q0eWtYOCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-q43B6Y5MLEDOOQu9zsfx0js7VjXTBvFUnOfjy4gk	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166528	YTo3OntzOjY6Il90b2tlbiI7czo0MDoicWpucnhKQ1B0akNlRkV2eGZ2eUdXWXhUWE94MExoa0FIdm9kTG9tSiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFk5Q1oyQkhwZ2dPS2pNOEQxa25hN08zUFY1UW5qTWRLdGtkNWVQTlpabms0cWdtQ1o5THZlIjt9
-z3YOS9j8mthUPhl0TJoXCVP7WDpP07ud0hOo4ovt	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166702	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZUloQUcxOE1odnhGT1hFVWRQUHlFQ1Vqa3h0SEp2VDFWUHd0a29PbyI7czo4OiJ1c2VybmFtZSI7czo3OiJhZmlua2VsIjtzOjU6ImVtYWlsIjtzOjIyOiJhZmlua2VsQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-eH7TndbwiZxleU8z3zesRIZnVK4u8GADoebKPosq	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166339	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiWWdLMGc4VXAxdVpReWpUS3VaNzRhOHJxa3Y4TWVYdWJnZGhscTZQWSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJEhiNzBMQUFoU21WbnBVMGlnMVhaZE9nckguVHBzOTdJOUE1VDFvcllDekhxWmVhMXIwZkpxIjt9
-InQGD9QGGVakIieKlgBLl0Qos1kgv9o5dfqP37Gf	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166547	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiVzNWaWo5RE1PaFF2akVjeEdMbm5hWlJLUVpadTFIQ0NHOWRTd3BmYyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHNiZTJkd3c5TzV3MUZHSk80TlhWeC4vR3BqVWVpNDdOVDY0QnFocFJtenpOc2IzamZSMWdTIjt9
-9nLRglx9d472liFgLfztiASakKVeAz6XEgwihLcz	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166354	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiVUNhbVNKa29uZkZYdTBRR05ISE1IQkNzbEJaN2xialJnM2t3Y0JxeSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFl6ZUx1RnpGbFZaL3B2RWJqOFlMV2VOU3BVTTNlZ3F4RFkxUVJVTWRWL3h6UHJyaDVTV0wuIjt9
-bfnf1pEQPbuWR4B7c9UKrsbrUBLWM1aTqizcjIx6	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166361	YTo3OntzOjY6Il90b2tlbiI7czo0MDoibVBYa3dqaGdKSjQybWRNTmpzajFHQmFJVGZZZmhPYTdxeW1WVjF0VSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJEhhZVFTaVR6YVQwNk5idExvaXZvVE9xcHRrVWNUTTZHREppaTV1cXROVE1BRmFGZDdzQlVTIjt9
-gdHwTsp83As0sID9odefr2GQgITuBuzf7pu57w3c	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166369	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiQzc3Mkdub1VrNWZEbXFsSmJSd3V5S050UGRIbm82N1g4Y0VCU3ZHWCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJE9SWmRYdnpuSmhRYmJrZG54VTh5aGVOSk5aOHhLbERydzhiZnk1Lm5yUlc3bmV3dlptNHo2Ijt9
-M9kRyPte5aykS44GBnGr7SjE47hoK1DduOKVHW0X	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166376	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiUHZrTDF2WFFOV1h0Z2VnQndOTnF1U0Vhc254QWVxSDNYWmtPWkdReSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHZNR3ViRGpZRy5XdnhHcUVyS0cwNE8uczdGNzN0dVJ0bWJoMEZBUThBcXgvay84NmRIRVdPIjt9
-r8tBB8MgJwAqqU8EGGUuFor0vT3ueS7bGVnPiCb5	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166503	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiQVhGVDN4T3R5dDZlcVFyS0xxSlFqbU5vUEpIaXh6OWp4bTZmaThoZyI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-R8mjueKegsNMZ4HtYd07CQIyCY6W3mOgMKjHa56l	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166507	YToyOntzOjY6Il90b2tlbiI7czo0MDoibkwxQk9RQ0JZZGlhV0hGOHNuMnh6NExuOUpoaWhYUDlWRGtZY1RscyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-1TC8RxTDa56tx0Cvtt5kEBR1jZK8ty2cebwk2zht	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166508	YTozOntzOjY6Il90b2tlbiI7czo0MDoib0hZaUtDcVZGUkEwNFFiMWRzQTFNQUo0MkpLY2hZZFNJakU3T0lrNSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
-H2swYqYGtB1XRRKwhBUMXiFylPqXcqRIQdJtXEMr	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166766	YTo4OntzOjY6Il90b2tlbiI7czo0MDoiMDNHYmF6RE9KWVNLVzJLa0dHZ1hMZ1prWjFhUm5NcktuOFNSbHN2UiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czoxMDoiYmJhcm5ldHNvbiI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MjE7czo2OiJ1c2VySWQiO2k6MjE7czo1OiJlbWFpbCI7czoyNToiYmJhcm5ldHNvbkBtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR3QlpZRlk0RElxT0xKcnNDbExzY051Q3RYRjdSR1ZwQjdKSmpUdmxPVUxqci5jZXFPTDZKUyI7fQ==
-H7NDWXRHyi8q1WdRQT11G0EBtc6q2viuP25ESTH3	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167312	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUU5FNjJPOWxRQW00eVJBbzNaT3o4ZlNvSHJ6MU5QeWhkWWptdlNhTyI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-uiDuVWOi5f4E5fbmijjNoi3wbuyDKHDnIeFSeInT	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166899	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiODJFbE11R25IN0RXZm9TWEpES3BvZUR1MGpxREpsajVnOUJKSWxsRCI7czo4OiJ1c2VybmFtZSI7czo2OiJjYWxsYW4iO3M6NToiZW1haWwiO3M6MjE6ImNhbGxhbkBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-f8NnBCaCb03UkVoHjQANXzgdIduqLKJcTiLAOUtR	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166573	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNzRSeWZqWElqV1FIbVZDNzlzbEdQclRnYnl0N1Z2OEEyaFBNWnNueCI7czo4OiJ1c2VybmFtZSI7czo2OiJhY2xhcmsiO3M6NToiZW1haWwiO3M6MjE6ImFjbGFya0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-whN8OZK0uPCDSVjhZQAhRCPNTqVWhThoV40LwOIU	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166800	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVEd1WXY3YnZrWjZwOG5RaGdaNzFhSkJnamNaU2s1OXR4Ujh6a255SyI7czo4OiJ1c2VybmFtZSI7czo2OiJiYmVhdHkiO3M6NToiZW1haWwiO3M6MjE6ImJiZWF0eUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-25VYiMCVwRGAjiSvgAOxiZB1JSzYNI5WfqR5A9pQ	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166595	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiZW1vVFZuY2ZXcWpzT3paSzRoSVBjVDRIbm1kNjJINW15YlJ1TjNPYyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRiWE85ZS9PcWFVaDBDTHNrR2FkV0hPVDhka2M4UG9mWm9CdU9iTnFzNy5nbFM1alVmTzRYQyI7fQ==
-XynewjlQ7TTNpf7DvqViUenBlCQSIBpd5eUapmIH	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166726	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiMmVRSkdyOEZxV2thNlZSRmhnRW5hZk1Wd2JNRXRNQnJ6TDFKaW9oOSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRJOGkyS3VQeGlzNjV5Q1h2M2p6Nnl1cHNTQnJDekM2ZDRJTE9STXVyMFNJSmZhZXlrVlp5NiI7fQ==
-OQikbirplediJ2INLp39EliyHl0Yp5QyKuWzbuuo	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166852	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiM09mZmZaNDFoRTNWZG96M2RyS0dnZDVlRHdrajBvMDJRa2ZyVGxkciI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQwL2tRck5qdlZQV2suYnJOaGxKcWd1VjFoekc3Y1MuRXphQkZ5Ums2OGNSZWF2UEkwWnZBSyI7fQ==
-m5BGumo0AU9XsTI6DjgsGfMDzRk0T0dODZ6pVS4f	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166968	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiMVlZQmpERWJyUnk0czgzQXNjaXIybWNXZTVKcXdVZ3dmMExMMVJoRiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR1STIxVkVMWDJEVEt2TDJFcXpmZjkuT0tXOEJ1UWRMcDk5MTlBUEJYd2ZLNW8uL0ozTy5jdSI7fQ==
-a5LM4zwRMGSs8DrSNmcOlBubSDchQt9uYgKqSxvO	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166974	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUXQyaWVPS3JCTmRCS1BHUUdTb0xYT01oUktoM0dLUUdZVzhVTVQ2VSI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-ztClliXOmpUU4SAqLaDUyVzjUoPkz5ZLqCzKnSmn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166975	YToyOntzOjY6Il90b2tlbiI7czo0MDoic3duZW9WdllqdERQQVZ2cXdqYTZXRk9SZVFGdGYxOFVLRU5DZG4xZiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-lhIu3C3mu7TWfNjaPAhWvxkD5j4WWcasv9v12vhY	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732166980	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiaXdhdkJGYThRbE4yR2lpN2hvMzZ5SnZobXhaM2hPdFFGSmR0TzEzMCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ5cy9TcUJ3TTlsS0RUWTNYU1dpTWRlaWthRkZUaVBtZUhpZG9aL1FuUTc2NjZFVU1aWFZoSyI7fQ==
-CsKygJMj4ezYOMeVST8VwFtxstbtV8n0KE22nHdk	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167483	YToyOntzOjY6Il90b2tlbiI7czo0MDoiODhMRUVFR0hSMDVWZ0lMRFV0ZkVmYUxkQVNBSHNjcnVRV2pjY05SayI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-zaTAKgsFtQ041QRtFsYAmxES0pJeF3il5SfnA012	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167193	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiR2hNRzBuMVNvdDkwU2ZnTmlPaFh5a09jU3pMTzRRVVRIUDdUZ2ZXNyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR5cFZpSzExOS9kNG13OXZ3VGtnb091Qm51TEVXODFOdmR4eVlWSWVhenNWOUs3bzNzU0tXVyI7fQ==
-jBRyszmIEaFGDFzyAXVbTkwaRTv05WaCajsba5eh	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167014	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVnVMTEpkOFFIejFMdEhyN29nNXJxUTlZV2U1U1RQOXR1UTBMU1dNMiI7czo4OiJ1c2VybmFtZSI7czo5OiJkYmVybm5hcmQiO3M6NToiZW1haWwiO3M6MjQ6ImRiZXJubmFyZEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-7XNKaYda9o4aHYcGTq249pQCG29vwhSvQhlQvCQQ	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167321	YTo1OntzOjY6Il90b2tlbiI7czo0MDoic1BhWHpPeWRCVnNUYjh0ME9UeGQ3d1ZiS01nZjVtdzY1UW9LdFdtOCI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-StNulySjSQcEhUOArbjWqAE6pn2WCPuQrTJShTOH	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167035	YTo1OntzOjY6Il90b2tlbiI7czo0MDoid3RxTXVEUURQbWRNOGNidld3dnYycEM0eVZrcGFaUklkNlJvSWpvdCI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-MKqU88f8gvHTJeQGQuvn17oInRzjiHLMtRAoJWNG	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167096	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVGI5NzRoeGlwVlFPc0VITUdwYmRsQnBKNnA2MWdVTWo3cUh5NlRmQiI7czo4OiJ1c2VybmFtZSI7czoxMDoiZGtlbm5lcG9obCI7czo1OiJlbWFpbCI7czoyNToiZGtlbm5lcG9obEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-RPfMKnU7P5xGGWe5POal71Qu0gvDC4C9nLnRNM9N	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167048	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaFpXaWYzem1BdXRUM1RYSjVNN0FzSnZUSGlJMHRJRTQ5QWVCbmZyOSI7czo4OiJ1c2VybmFtZSI7czo2OiJtaW5vdWUiO3M6NToiZW1haWwiO3M6MjE6Im1pbm91ZUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-E06IDOHS9mvKLKf0MPNV2xwhjSCnM8fGy8ThvWo8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167054	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiSzd4WEpGaGZsNERHeHpUQmtlSkJYdmZYVzI2dTl2VVhNckpINXFlUyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ5WTBFYnF5bmJNQS5ocU4yR0FMQUt1dXRqbVZSWExVdll1ZHNydXEyNks4anowL3phSlViZSI7fQ==
-BkpN1uiZh2CHdE5GmGtRSSbolrmYOJ1z0LHMLd1L	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167125	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiOUhOeUpJVkllbGtiRnQ5OGtKUGxwYkFkTDgyT2RKUkdOWXBPemE2QiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQweGZ0enBzeXJTdVZFZEN4c2hPcmhPTXpEcGE4TTROVndBOWZucFY1by5CNXQ2RXZvTHBnaSI7fQ==
-Pt1CyT9gtl9UAXtZL2TSMeDSYws7QqIMvWYugaXk	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167263	YTo4OntzOjY6Il90b2tlbiI7czo0MDoiV1NtZE55cE4wb1cyS0Z3VDY5VGxlQUs2SFpPTUhTUnRONEtaUm1jSiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czo3OiJqYnJvd2VyIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7aToyNztzOjY6InVzZXJJZCI7aToyNztzOjU6ImVtYWlsIjtzOjIyOiJqYnJvd2VyQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJDJUa0M2d0pqWkJoSVUvY0NLZG05RmVIUW83RmRBSm41eFJXcUNrYlcxTzVWM0RMZjlJcHI2Ijt9
-S37jdKLzZhAxUeBfqEBL0UtMWYJ2Ps01PqOlFQSJ	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167136	YTo4OntzOjY6Il90b2tlbiI7czo0MDoiWmJ5THhyQ0Z3NXpqakRmQ2RlZTdRWmhNVFJtYjBFTDQwc0RmT3loVyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRVZUZIVnUwRVR1OHdkOE0wUnZvWmdlOXU1c0Q1MWFvbkJJWk8zWnFLZzBoejJjUS9YdXdKLiI7czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
-lTIcmjREA1mJtvqMBecpbr8ktOIEX42AvQuCIPtQ	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167283	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaTdCVkRnZFBqNnp6VG1sWHdsRlYzb2Nhbno1ZHNlY3ZQWkZKWHMzeCI7czo4OiJ1c2VybmFtZSI7czoxMDoiamxvY2tlaGFydCI7czo1OiJlbWFpbCI7czoyNToiamxvY2tlaGFydEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-Hq0RhbZf8rZMTcMqj1mGToUBcVkK0w625Hg7jA7W	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167177	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZzRQazJFTHZORFdxdFJlQTZQZmNIalVMMVZUd2hJSGhxVFpid3cwcyI7czo4OiJ1c2VybmFtZSI7czo3OiJmcGVyaW5pIjtzOjU6ImVtYWlsIjtzOjIyOiJmcGVyaW5pQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-K8oFzZ0v7Q10j6o5TroP5Nw8rKPTcowh9nl26WQn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167550	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUnVzeEgyaGcybnJmZ0x0eHdpOEt2ZEQwN3FnRW0xZDN1blZrNUt3bCI7czo4OiJ1c2VybmFtZSI7czo3OiJtZGF3c29uIjtzOjU6ImVtYWlsIjtzOjIyOiJtZGF3c29uQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-nBIUHeRcPKTjgrhO5oLzCwwWTICkUm4VLKpeaiNr	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167377	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSE05WTRwTzJjRUF0MnJTc3pJY25aOVhLZzR6bVlsUGJyMVhGWXBKRCI7czo4OiJ1c2VybmFtZSI7czo2OiJsZWxkZXIiO3M6NToiZW1haWwiO3M6MjE6ImxlbGRlckBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-70etK6UXkqmhfB5YotxbG5EC1k8kBh1Vh0EE6Vn1	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167330	YTo1OntzOjY6Il90b2tlbiI7czo0MDoia2NNSTJqWnl4Y3U5bVBjREZJYTVNaFVpYzBoVVRDYTF6VXBuN054YSI7czo4OiJ1c2VybmFtZSI7czo2OiJnZmF2aW8iO3M6NToiZW1haWwiO3M6MjE6ImdmYXZpb0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-CwQQ7EOI40RCRxH12usjUg10l5fKLav2ivf1Fpyx	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167439	YTo1OntzOjY6Il90b2tlbiI7czo0MDoib0lZVUFkdlJPSG5wc21HTFl5YWlKWmFKdmFTREtEWXJoaUJUWTJZaSI7czo4OiJ1c2VybmFtZSI7czo1OiJtYWxseSI7czo1OiJlbWFpbCI7czoyMDoibWFsbHlAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-FPTB828bK5OymqPCOlsSyvLnk0YxC4ORHCDKRVwv	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167402	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaGZUUm9HNXNQRjdrdFVrREVuREJoQkNmUW9ETHJ4Q1BZNVBtb2NVbiI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-KXO0ynRGEkdcQ8beC1W7o7ERotV5yQb6Mlg6yIbV	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167347	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiOFZnNElpczJEaGJ2a0MxUE1ydTgyRmJjakRmT3I5TFFyMjJITENHcSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRsUVJPZjBVdHY5UXViLzduZHNuTlIucy4vTEtBZUVxY1Q4YmJlaFRJYTg4WExrZ2xQRjFJeSI7fQ==
-qflWbcMNa7UgnA9Fla8ZOJrlC9E2ktW3BJMhKiPf	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167411	YTo1OntzOjY6Il90b2tlbiI7czo0MDoicFJzRnZkemFoZTdHeU41YzlVdXg3RXZZcExxSkxxMFZENWI4cXNlRSI7czo4OiJ1c2VybmFtZSI7czo3OiJwaHVkc29uIjtzOjU6ImVtYWlsIjtzOjIyOiJwaHVkc29uQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-8ByOgKJe9jhC3JgUZM0oVFQ9Eo1FrF5eL1SFbiVp	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167474	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiT1I4SDVrWWlpQlRQTjZkZGdVTVR5VDcyU3RaT3dLV0pIcGVIRjg1diI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-yqlhnygP3YXpsLzvnbqkZEmmMfNMrmdIa1P6JL93	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167483	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNnJJbG1OUW5DWkkyOE8xVDBjQXBIck9wV0xOaFl5dTZOSGx3UGpFSiI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-Q1G0WQ0qXH9VQOoADhT7itpHWhFu23swpgcMNZ1x	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167493	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiekJOWWxuN21UY1dSS09aUnpCbWxBZDg4bmhvb2Y4MndnRXRKT0xpZyI7czo4OiJ1c2VybmFtZSI7czo2OiJnZmF2aW8iO3M6NToiZW1haWwiO3M6MjE6ImdmYXZpb0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-mClDvY3TOBVNpv5HFklTapN37kYwRHS5u9yThEPr	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167511	YTo3OntzOjY6Il90b2tlbiI7czo0MDoielVvZEJtVUJMU1JWbWVjMDVnOEN1U1hiUlNrd1IyNmJta1dIN3BxayI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRMQk1vem9YWmRSblhzQXpEd3p3SkEuYk9BcHlQdWxIdE5ERDBFUVp1bk1YYlJ6UE03WjZLaSI7fQ==
-jtKsfnwQ9xZ5dSWpAuzb2NPXmtTc6TP5fA4GWA2F	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167649	YTo3OntzOjY6Il90b2tlbiI7czo0MDoibjBaRXdNaVZFeFUwUFNyUnd2UkpIcWFyRlRqM0JtZkxEMVBxM25DSSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRpYW9NYWppVGNyZjk3ajQ5c1VJZWguOEguaVdCc1E3Umx0OVQvTGw4TmlnT3BUZDlVaS5BQyI7fQ==
-mY9Ye1mwVp7BmIN8yTblK9tDHU8t26qAeewIDIUW	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167676	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiRlMzcU1EdzB4Y1JjU0xocDE2dnJZT2dua1lYT2ZLSnNnbURDaGEzYSI7czo4OiJ1c2VybmFtZSI7czo2OiJtZm9yYW4iO3M6NToiZW1haWwiO3M6MjE6Im1mb3JhbkBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-vjPlV3q9Pun2bt4vOB3NfgcYBXqcYW6Flduxb4iB	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167692	YTo3OntzOjY6Il90b2tlbiI7czo0MDoieFlDOURIMlJ4elU4MlV6THU1eEpqV2RCUGFYQkxDYnNnd3p2YnhuTiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRGWTlhSWFHZEczSzk3QWgwY25udmNPckg4WHg1YksyZ2V0RUczeloxWk5Ib3lsWVJXb1p4aSI7fQ==
-uWLN7Auc8l1cYNQQQFVUTySzF4JMnTWRrL80RYyg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167819	YTo1OntzOjY6Il90b2tlbiI7czo0MDoicXpCaFV0ZUdnU2NYVUM0VFRqNDkwQmdrVElYRlZScGRMYm5DUFJIZSI7czo4OiJ1c2VybmFtZSI7czo2OiJtc21pdGgiO3M6NToiZW1haWwiO3M6MjE6Im1zbWl0aEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-cUwtWQAqJPvXpX4tWAgNIMQbMvG9jHUr0JLqto7z	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167846	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiclZrMEVHZ0lMY2k0S1dkc29UV2d0bmJ0Y3AxUGpNdFFUazlRUzJ5eCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQyaHpSLlVvc3N3dVVhdmJvdVRLSDQuRndxZzR5VTRiQUFwUmEuMW53ZXFadTE3SC90aHRLZSI7fQ==
-tmssxT6OMvGSTqtoGAcZcTjibOtXzfipSzDTNGw9	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167731	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSXdXMHBUSGQ2VGZURlhLRUNVNmQ0bjhIbENGZ085cVZnR3VBdm9LOCI7czo4OiJ1c2VybmFtZSI7czo2OiJtcG93ZXIiO3M6NToiZW1haWwiO3M6MjE6Im1wb3dlckBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-v1KHQlpreW4lcVWdmGeihYjwGSdXQQilBHx0gn4T	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167757	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUjdPQlNRM1FhV3hhOGZGR3RQQkFyTmU0T0ZKUEc0aWlreW5UcTFUZiI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-DWl74XMRql3z7KjQMBNUBGAt52dhVN6HrbDdFCzq	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732167767	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiQzRNbWxJdmJCRXFlRllIeHVOUVhDUDluNkpxYlZoZVlkS0o4NDNKeCI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+stGbY2nUF3qSyZxvQTyska1R0mBUrXISpoqt4rJz	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252733	YToyOntzOjY6Il90b2tlbiI7czo0MDoiQUV4eTRLUUNVZ1pmNHM4ZGdmMzhubUZTZmgwaFlWdU5sU2RIVmxBaiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+YwBvWyr7FLGCmzhSb19ZBQJbvU8iceg0Xgs9iUH2	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252733	YToyOntzOjY6Il90b2tlbiI7czo0MDoiYXJCVlRKMFFkc3JpcmRjQzJsSkkwV2Y4em5JWWs4bTlyNlVqWFNZRSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+6SsS4aCC54CQBUMnyeVCZ4EJnZIQaBrnF6JMlAJn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253396	YToyOntzOjY6Il90b2tlbiI7czo0MDoiZlZpOGFtVTRITGlCOUs1emZsekxEZURWckE2M2g4YzJSOHVrUEd0WiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+nFtdX4N6iouriyN5r4F5WJXekIT8Uu4remfYqSJa	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252757	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiYk9tbm1CYk1USkw2RlJMV283NDRrcXAyVzVSOWpyVGM4S3BQWlVpZyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJDlDZWhCQm95LmwxTFVIbVNuMFgvUi5OamcwV2hSZlVuN0JNcmZ2aC9lUFgxdTR5Zm1Bc1RhIjt9
+e5cmFBBoIPvx37jVMLra15izr1OmYiH1q2EYq1t9	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252780	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiandaaENoNnpjVElad0VzaGlIMEVlNGZyNmJjdFE1QVdoU2xTd3VDWiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJEw0aUMzWmZGMDU2enVvUERPVmRaamVVMWpUVk1IdGUvaFJlWlJlZzVCdWVpaDlCVDBSb1dTIjt9
+QSZJhtvQTDXeBIarOcC9vPfGGVnYUNxWmAC1VXSW	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252772	YTo3OntzOjY6Il90b2tlbiI7czo0MDoidlA3WklvMDBiRmlVNTZpSE8wOUFPUE42bHBVZDhwazRnTTRSRXZaUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFVLdmVod1NJbFJJc3IwOW1mcDhreXVScGg0OGthWlZlcXlyZmJldUNhYWp1LkR0Q1RRZnhXIjt9
+Zv7Tu2wxuG2OX8edcdC5Y4hx0G4xuVhQfNyBjF49	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252920	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiRE5OS0pxSDRGVEhVUzZGVDlORlNLa2tXVFV2RDRRWW9DSkprZWszRSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+qANZnmBjMDXn2eBYrTwqWMn8vZw694XwIc0oftAl	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252924	YToyOntzOjY6Il90b2tlbiI7czo0MDoidXJRczJOWXBBNUVTUmduTmxoZlJidjFZUmRoTkhjSUpPSlRneUJvTSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+ChQRvFpccaXC5ArctLowUR09VZpBQffW6FwA1TSH	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252925	YTozOntzOjY6Il90b2tlbiI7czo0MDoiNDQ0aTczYXFKU3c0SXF6ZVI3Z29wZWxwYjdic0VSWGlQUUtRSHZWciI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
+AyWzzHCLmYfDwmk2urBOFNk6HIR1nSK0WeRwXecW	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252787	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiTHJ2YU5VdjZQMWlSeTNuSWpZYVdaaktFRTlQRkhQeXNEREpSNlJHUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJGE4TWpBYS5jakRPMDI1Mm5oSHR0TnU0OWxmakdWL0RvN0YyU0g3MzJMaUhIMTRnQW9pZUl5Ijt9
+nuBcsOa0Esuo64wYmhFvDuAnupFUKKnDkM2aFPPV	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252793	YTo3OntzOjY6Il90b2tlbiI7czo0MDoieGhzWWdjTlJwQ0V6anVzWE4xcUVUT1gxRXZ5SWtpV3Y5ZEZyUnNjbyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJGkzLmxyRjR3ak0zQVVkMGlIcmRnM3U5cDV1c1ZaSzdiZGZ1NVROUHB3UTlYdzZDTFBMc091Ijt9
+1EkIWVannhxIeUAX7QGF39ZPdiYQ1twUOSQ1UYjk	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252946	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiQWwwNThRTWNTMWxxREJZS09jZEIxMXpkRHBJWWM4VnZaVWVqck9wUSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHR4Ni80MzZVZUczZS9GYjd2Tllack9PeUZQclQ2dnc3SmZLWkI0cWN3b3J3YmNSd1A0NWhLIjt9
+d91j5zjC9KIow7Iu9nenGDsSkQbB4RZIxEaPkoPX	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252964	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiWlNOdkVDbVg4ekJha2Q0UUhQQjlkSnhpSkJvMEJDYzlxUmtsQVlvRiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFYzLlovbzJ5Z1FmV2tjY09IQlQ2VXUyck1wUGJHOW1XU0JOaVpOZS54c2EyQjFmMzV4N1I2Ijt9
+chfzdKXPGb779z5wcHIM1qbnQb0vE40uvi0ouvfg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253910	YToyOntzOjY6Il90b2tlbiI7czo0MDoidnV6ZDBqUndVT1h5RXhlVzd0WUJmMnNKVUNLNm9IM2I2R05jc2RjUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+LYgc6nAymKi35beluIhquLgPV6AmGVYULKVihe1Q	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253121	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiTlJISXBvSUFieHVQNVdEWU9jcFJnQ2UwQldVUUZvb3dOV2tWVjBEYyI7czo4OiJ1c2VybmFtZSI7czo3OiJhZmlua2VsIjtzOjU6ImVtYWlsIjtzOjIyOiJhZmlua2VsQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+EagDAVKjLpPZLRjwpVCJjdeeVqCcCgLZrzmwuQV8	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732252991	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNmxTa2xDczNlRGh6RXFjQmFNUU5ReWRYMEhYNk0xMnBJQWxkREw4OSI7czo4OiJ1c2VybmFtZSI7czo2OiJhY2xhcmsiO3M6NToiZW1haWwiO3M6MjE6ImFjbGFya0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+d6ppu1o1MoGXJJuLxUOZMXmqj4QSRTCqezHdq2xe	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253013	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiV1AwQndiT1N3R0FrdzZZb041WlV4TnVEeUlnMVhtY21TZ0ZKbnlJYyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRJUkxPdnhCYTY4b29tU3pYTnVlZ2llbnl4cVVDd3ZMaHhRc2VINEhrdE8ubURtUUs3SzBULiI7fQ==
+NRBxPk7pPfc5lkYjimaD7Ec1e300TIxgDrL4cdgn	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253146	YTo3OntzOjY6Il90b2tlbiI7czo0MDoidmJreHJlS1VUUXo5Tk05ZmV3S25QZkJUQkJuMmZDUXc3OERoYWdOWiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRCMG5hb1dLT1VyUUdlVy9rZGpoNWV1d0tONnRSa3NyS1Y2UlJwNjdsMWZJTGdkY0NBV2NwbSI7fQ==
+yknpQlJpV78hMd7akKNjkGgjv1thNGhtKcymq6k5	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253273	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiSm9KQUdOREE4dVVqVFVjMmlja1NzTlI0OXpWYmlIR1BTU0VHUERkQSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRVY084d3NSR0dWWUJickZyejdjVEtPRDRlYWtzTjd3OTdBZ2hBbHRTcTk1clpzUVlhV2k1ZSI7fQ==
+Gcm6PYuSluvyGF18AMGLJhqlDLVIZ0T2DT9mGviy	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253390	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiMk5ldElicHp3UmU5NDhXd1VsWm1kMGdiNm5WT2RsUzRyR1lRdEc4bCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR3VE00Q3p0MldPLndxMk5XL2pMcUwuSzNFc0EzTHpreHBCSVY4QnBWc0lMaVA4SGw5OW5XUyI7fQ==
+7B1YWMkYAjCyAuraS9kf2IJpRZzqv5ExB6ASIpN9	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253396	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUmJjTHd0aWxLejEzeWxqRlMwVWU3ZlA0Q3V0dkR3cG85eVUzNU93ciI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+K6KrefMEacFNw9UC6WPgf9YQ2W6zUnJ5W4piZjwi	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253402	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiVm9aNmlNOUtLaXhVWmJUOWhVbWRDc3ZYNTdKeHFNZDJEYnBDelRySSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRqLlpVMmUyZjhIUWQ0SmdsbmQ5SjlPOE5qUEJ3NlBXTXIyS0l6SjRKVVN5MzFiaExrcDRoUyI7fQ==
+PIks3QcM4muY6l1d67vJ9GoGeMFkmomVX9rAuwlO	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253186	YTo4OntzOjY6Il90b2tlbiI7czo0MDoiZkVHTWg3d3JaTGZwcDBaVkNLWjExR05PNVBLYUhuR0podFhiQWg0bSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czoxMDoiYmJhcm5ldHNvbiI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MjE7czo2OiJ1c2VySWQiO2k6MjE7czo1OiJlbWFpbCI7czoyNToiYmJhcm5ldHNvbkBtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRJQmRaODJyaGcvZEE1b3F1c0tzaXZ1LkRUbWJzRFF3c1ZZV1VVMnp2LnhETko4QU1tMVA5dSI7fQ==
+nLRVdXowYLi56yuh6aVGSJFdCYXg7Liaiz3jHX6r	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253320	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNHEzcUh6T0pPcWRVcjd3ZHA1QkJCcjBVeFMzYjNoOEJwdktoakk5TCI7czo4OiJ1c2VybmFtZSI7czo2OiJjYWxsYW4iO3M6NToiZW1haWwiO3M6MjE6ImNhbGxhbkBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+3dntRc6oz11ZTWk0KToKduKVrHrCOGWeyjruZp7e	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253221	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSHl1YkFJSENBUEZHZUdjWU53MVQzWHJaYjdDQWJWNlpUcm1jYU4xUSI7czo4OiJ1c2VybmFtZSI7czo2OiJiYmVhdHkiO3M6NToiZW1haWwiO3M6MjE6ImJiZWF0eUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+FhTkBgoLwr6H1qp5DgwJccggrHLdLugjug2ouv61	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732254197	YToyOntzOjY6Il90b2tlbiI7czo0MDoic3ZCUTltZ2hYNElLdnp2b1VHVHpJZzNYQVptbnFGQnhDeEowemZOQiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+ojoVWielZyUYYkpAoyTy6zCZkHB2ClEyYxx2PL0E	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253756	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZXpvbnpGamVSc3d1aUNNUVZIRWhBYUhJbTk3M1FjN2Z3blRWWmhMSiI7czo4OiJ1c2VybmFtZSI7czo2OiJnZmF2aW8iO3M6NToiZW1haWwiO3M6MjE6ImdmYXZpb0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+oiNOTO0ljCNPEJZPLwaXMauTvlsnVHAlPCAGU3Ya	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732254187	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiM2xPUERCeWZZekxTVHE1eE16S2ZUYmlDVzFkdVRZazNOQ2p3QWMxeCI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+Y10mbDzXXEgEE7hWK0gayxIrdZDCg0mWZqMOAouf	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253737	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOFpQbENJVTlxcnV2dmVNZ01MWERMNjU5eEUzaEx2ZlVKdjZqVkowaiI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+Z8YmPO9RD7aiqqYgM08C87Kw4qCLvv9v6ZJDlVf3	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253470	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSEQxZXA4bmxXb2VhOXVUaURPYkNqall5U0VQakRrdUx6cTFRaXlaVyI7czo4OiJ1c2VybmFtZSI7czo2OiJtaW5vdWUiO3M6NToiZW1haWwiO3M6MjE6Im1pbm91ZUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+H34hDhkxavMIaeOk5FCKR2xi3sjU1ApRSkqB9M9d	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253547	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiMEhIQlo3WE00WkJZcHRSWEFrMUxCNlNrOVpvdEZmSEs0TzBwdGZMVCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRtRTNDT2tWN0ZwREtMZ2U5UldCL1hPLlVkZ0VLZUJaNUlWUVJ6T0FwWXhUcTVGejZtNGpiNiI7fQ==
+hUXTX9h5EzEXeLXjDTcjCyOyZdm3TEKeQEBXLLD6	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253708	YTo1OntzOjY6Il90b2tlbiI7czo0MDoidUJHYVdpRDlOUmdVcVkzQVRNTkFnZlU3ZkpZR2VmYmo3eEdRejJHbCI7czo4OiJ1c2VybmFtZSI7czoxMDoiamxvY2tlaGFydCI7czo1OiJlbWFpbCI7czoyNToiamxvY2tlaGFydEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+n5nS6QUxyrtcYHdRmoQVYwkYwa3DKNM8FXGzZZBd	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253746	YTo1OntzOjY6Il90b2tlbiI7czo0MDoidzJwVzFjcTJVdU9HSHpyOUJ2NFJYZFJRWld1YkdiUjNPRlpsYUhJMyI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+yRtPpc4GXXN2NTbqbN5N6eDfr1JGbmxccbmZLXj6	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253476	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiTzFmR0hXcUE0RmJ5YWJTSGlCQnpQaEVMR004MnJINUd5Qks1NW8wRCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRHVVovbXB6M0duMi8zZmUvQzhod2ouLjI3WXpUMmRSM291UEo2VmZscm5xRmNQSWgwTDhPQyI7fQ==
+Qdv8owvsEnBKnx0cK2pe1fhf8bhICE745dXX63Ox	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253599	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOFd0aHR5OFNaODJEUUdyZ3lrYk96SHFpZEg5eTAwS2VnbTA1ek9nOCI7czo4OiJ1c2VybmFtZSI7czo3OiJmcGVyaW5pIjtzOjU6ImVtYWlsIjtzOjIyOiJmcGVyaW5pQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+LTb591oslHyd8RJuuyGvXzeYsyL0pKeASHMHL6a2	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253910	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiY0tXMHlMV2FzeHFWbjhLeHVPS3cyNldwVjBZM3VaRXdOem1WcjhGayI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+s2AZB9EeUfqHNOAkBZTv6hcBi6S0htaGEKGOvUCD	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253558	YTo4OntzOjY6Il90b2tlbiI7czo0MDoiMGdLZkJjWHRwMmZIQkFSa3FHVEJpYnc0ckNqbDZHYXRzMUNtcnJ6RyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRsaklpVnNnOVg4aXBRc2ZjU0RrZUEuREF2RlZ6UkJHUm1nejJ0R0E2dXAybTFEN3FhN1BkVyI7czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
+Pvh073Imzs8jp8tQZpKI6KtVn65r7PC1L9HFpYKB	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253900	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiYmNTS1VybFdOaXFzMVhvWnBkWVN0SEpZaWZBTXdNbmRFbURmVUlWNCI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+0BucfafNRC4PS7fiGkqV0U3nGCWarMRBumB49pC1	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253920	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiN01SYkk5TlNFRmRzUjA5dlo2R0FsNDFSbHRKZ01NNHVlOTFidkNrMyI7czo4OiJ1c2VybmFtZSI7czo2OiJnZmF2aW8iO3M6NToiZW1haWwiO3M6MjE6ImdmYXZpb0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+DroajcAerDtic8zzwqsoQD4jVBDLKcplozzLnlmo	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253436	YTo1OntzOjY6Il90b2tlbiI7czo0MDoid0xrU0tZZTV4SFdrT0NkWm5oTmROWmNzVkR5VlRNYjJ0Zzg2c3ZvRyI7czo4OiJ1c2VybmFtZSI7czo5OiJkYmVybm5hcmQiO3M6NToiZW1haWwiO3M6MjQ6ImRiZXJubmFyZEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+NMy4X492lrzN9jxZufhtKIQSeDs8cslqkmpBJqmx	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253772	YTo3OntzOjY6Il90b2tlbiI7czo0MDoicGRuSFBkcW9MSEtvUzNVaXRybGJyRTVIajdYTEZkdHo5UVhiRUx5RCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRyL05ZRVRoZE9YOFUyOURpaTZoYVVlc05zYjJuRzFVTlNOMG9mZUpCYmhRdkd5WmFZbU5rdSI7fQ==
+kBLKQOVUmc2i1riDgljFMiVs8AXDQCbmiYHvxVK6	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253518	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiemRnWlI0TVhBdFlEdTRYaEFvaVF4Z3JiaU94bXhmZ1h1QWswdEVvVCI7czo4OiJ1c2VybmFtZSI7czoxMDoiZGtlbm5lcG9obCI7czo1OiJlbWFpbCI7czoyNToiZGtlbm5lcG9obEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+ci4klHmzQjllEIQM8wn7q8b1WWLwI4mwLP41rAc1	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253469	YToyOntzOjY6Il90b2tlbiI7czo0MDoiVmZYTnc0azdtQVk3QWF4TzYySmF2NFJ2Sk5qVHpMRWZGdjNqa0Z0MyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+22RnvIEaaIdl97x4A3ZJS7BKScxOowVhTvjXTIrZ	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253837	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiRGt2a3Y0YVRFNXBDTEtUc3RoUnRyanZjRkZZdWgyNnE1VkZhVWhJbSI7czo4OiJ1c2VybmFtZSI7czo3OiJwaHVkc29uIjtzOjU6ImVtYWlsIjtzOjIyOiJwaHVkc29uQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+biPgv7oL8qAA4WO32XKIg6sMOpukgbUsG9HkgxAV	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253615	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiQ2wzbXpHa1NUMzJxWmZUUU04SU5DUTJZQzhveW5tQml6dkFVODBhZCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRTZTE5YlZaTXYxMXJCaFMwN1RRTmJ1Ti40UEl3V2J5Z1laM01JSWk1d3dBVkNFNjdYTElUZSI7fQ==
+hKDR9Trkue1xKgBsOMWrHOmDm7nHUT7iXuUYjLrn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253802	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiRm1pSDQwT1lZT3lZa0ZsaVAwV2NicHc3UXdtYnZrTm9zejNoWU0yZyI7czo4OiJ1c2VybmFtZSI7czo2OiJsZWxkZXIiO3M6NToiZW1haWwiO3M6MjE6ImxlbGRlckBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+5qNgA7FaQi136mH1QIWD9993w6xDZNcKq8jYRSJm	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253827	YTo1OntzOjY6Il90b2tlbiI7czo0MDoibGlOSEVRcnlzbjRrNFZHZHY0MmMwTlBoaTFRWUxtRllWUU9iazNnNCI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+k8JXPieHLpWyEnaHTC8YqoqqxPy2ojs8xuDCQSCY	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253865	YTo1OntzOjY6Il90b2tlbiI7czo0MDoib3BZR1pNcEp0UEgyRHE0RUZ4ZG0yRFRETmxoY1o2WkF0VUxBanI4diI7czo4OiJ1c2VybmFtZSI7czo1OiJtYWxseSI7czo1OiJlbWFpbCI7czoyMDoibWFsbHlAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+03u26mmWakrYSpaw7j75uISZHSvX0IvgXztyzInf	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253457	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiTGxxR2hhWHNYSkZ0eTBsN0ZSM0pXVDUwQ3dIZjRoTVVXZ05zVlNSYiI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+J1YKJcFmEvFqHajDoLptPExBcuqNzNtdonllWOwD	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253939	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNjFMSVBTcTh3dDZhRjQzVkpnR0pxRGZsVlFoWDVnYlB6M3NiR1lwNCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR2UVVjOWVodDNMOS9jRy5HYlJNVVUuUWNTOExDMFVSY3JqSHBKcXdOV0RIMEsyNWQyc0tQeSI7fQ==
+TBQnb6fhFV6YRMN71PLrxMR0VvY9l5Bd3cDyQ0KG	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253687	YTo4OntzOjY6Il90b2tlbiI7czo0MDoiMW0yYkhzZDdwdVg2QXc2OE1YMWFlME45M1lZVlFLdWRiTmRyRGNmTSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czo3OiJqYnJvd2VyIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7aToyNztzOjY6InVzZXJJZCI7aToyNztzOjU6ImVtYWlsIjtzOjIyOiJqYnJvd2VyQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJC94ek9IMDQySUpXa1VrZVRqY2tjdWVVSWxITTVrOXdSV3N5NEhHMjNyM3UxYVNtL1dGM3JHIjt9
+2Ep1ZkussdtfQqAQcDjIlNqXqINgDt4W7lW81xtC	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732254121	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiVzFiZEo1NXlldU4xalBJZHdDdHJaS2JuV0k4YkUzU0FnaUk5QllwdCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRJdWZwOVZ2cjdLZjhiM3M2NjcwdHJPL0RQUWhqenR3TTRWMFBOR1pnOE5uVkd1Z2dCVjczUyI7fQ==
+HQSOpx6OrTsi8QEcQ1AsXUGUKTwf4txe6ajSwlk4	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732253977	YTo1OntzOjY6Il90b2tlbiI7czo0MDoidUtBSnQxeVpROGVwalJrQUEwSWZGZjhtWEg3eEdvTU5aOUtFalkwdCI7czo4OiJ1c2VybmFtZSI7czo3OiJtZGF3c29uIjtzOjU6ImVtYWlsIjtzOjIyOiJtZGF3c29uQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+nPrl5nYewjNVIijxQHI0DG9uc8jSs2fqm7iMSffd	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732254276	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiQTBSaWxQbFh3UnA1bUwweFhmWUZDNEVnelJwbFZ1QXEyTFIxY3ZPSiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRLN3IxMk9OLmhDQnRWYUZaWHN6VzAuaUZYcUUuR1dLaEM4MXJMeC4xNWZsekN1eDFTcndrcSI7fQ==
+I2ykrLTmrPAgZvx3eI9oYXFzk8fyUJbQTXr6FCG6	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732254197	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZ1NiRGlLeGxkQXdaTHZOd1pmMG1Qa21INmpaNDBDVENCODlpRGU2TCI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+fE645Dcl7Irgi0SHz0pn8kBwff1innLCaReAseWT	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732254161	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSzR6V0lYaWZXZ2tlYkJlckZPSnNKTEtBcWNhUlFMT2tLbEtQMTBRSCI7czo4OiJ1c2VybmFtZSI7czo2OiJtcG93ZXIiO3M6NToiZW1haWwiO3M6MjE6Im1wb3dlckBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+RLo7ttErXwUuicIFog4CGiGiwiV3YOfPgO1IgXAc	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732254249	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZ0VIZ2VDakVidWhrUVdBUGxKbjdMRUZWNHlaalNQTWJkbm8xOUEyMSI7czo4OiJ1c2VybmFtZSI7czo2OiJtc21pdGgiO3M6NToiZW1haWwiO3M6MjE6Im1zbWl0aEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+ZNIq7NEVaGzPyFmc4SJ5qbCPBOzBLvbHrtChb4qp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732254078	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNVZGWW14bjB6amRidEVoNWRCaGNJYlFtR053QkNLdzZaNFJhbUxnQiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRzUlBRT2djLjRiWWx6UGQ3Wjh4LnBPNlpsZ0xsdzh3WEJHbUdKWG9OWHA2RzJJRzd6SFY4MiI7fQ==
+t8G9CDPRq7HN1aiaOpjWJT4AHAnaR7cKUH5oFKlu	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1732254105	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiY29YbjBmeVg4SzRrSVY4MXVOaFNWem1ZbWY3T1lsUWNubVh6bkJLZiI7czo4OiJ1c2VybmFtZSI7czo2OiJtZm9yYW4iO3M6NToiZW1haWwiO3M6MjE6Im1mb3JhbkBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
 \.
 
 
@@ -13441,7 +13443,7 @@ COPY public.site_settings (site_setting_id, setting_name, locale, setting_value)
 12	orcidClientSecret		
 13	orcidEnabled		0
 14	themePluginPath		default
-15	uniqueSiteId		933FFFEA-014D-4FF9-A0F7-934B2A66B3DF
+15	uniqueSiteId		6A7CA6A5-C8D6-4F84-9A77-0F8D0951EFD9
 \.
 
 
@@ -13450,41 +13452,41 @@ COPY public.site_settings (site_setting_id, setting_name, locale, setting_value)
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-2	1	5	4	2024-11-21 05:22:52	0	1
-1	1	13	19	2024-11-21 05:22:33	0	0
-3	1	6	14	2024-11-21 05:23:14	0	0
-4	2	13	20	2024-11-21 05:23:23	0	0
-5	3	13	21	2024-11-21 05:25:32	0	0
-7	4	3	3	2024-11-21 05:26:39	0	1
-6	4	13	22	2024-11-21 05:26:12	0	0
-8	4	6	13	2024-11-21 05:27:15	0	0
-9	4	10	15	2024-11-21 05:27:26	0	0
-10	5	13	23	2024-11-21 05:27:38	0	0
-11	5	6	14	2024-11-21 05:28:57	0	0
-12	5	10	16	2024-11-21 05:29:09	0	0
-13	5	12	17	2024-11-21 05:29:13	0	0
-15	6	5	4	2024-11-21 05:30:13	0	1
-14	6	13	24	2024-11-21 05:29:46	0	0
-16	6	3	3	2024-11-21 05:30:30	0	1
-17	6	5	6	2024-11-21 05:30:34	1	1
-19	7	3	3	2024-11-21 05:31:35	0	1
-18	7	13	25	2024-11-21 05:31:01	0	0
-20	7	6	13	2024-11-21 05:32:04	0	0
-21	8	3	3	2024-11-21 05:32:12	0	1
-23	9	5	4	2024-11-21 05:32:56	0	1
-22	9	13	26	2024-11-21 05:32:22	0	0
-24	10	13	27	2024-11-21 05:33:19	0	0
-25	11	13	28	2024-11-21 05:34:29	0	0
-26	12	13	29	2024-11-21 05:35:53	0	0
-27	13	13	30	2024-11-21 05:36:57	0	0
-29	14	3	3	2024-11-21 05:39:09	0	1
-28	14	13	31	2024-11-21 05:38:37	0	0
-30	14	6	13	2024-11-21 05:39:53	0	0
-31	14	10	15	2024-11-21 05:40:05	0	0
-32	14	12	18	2024-11-21 05:40:10	0	0
-33	15	13	32	2024-11-21 05:40:56	0	0
-34	16	13	33	2024-11-21 05:41:38	0	0
-35	17	13	34	2024-11-21 05:42:54	0	0
+2	1	5	4	2024-11-22 05:23:10	0	1
+1	1	13	19	2024-11-22 05:22:50	0	0
+3	1	6	14	2024-11-22 05:23:33	0	0
+4	2	13	20	2024-11-22 05:23:41	0	0
+5	3	13	21	2024-11-22 05:25:52	0	0
+7	4	3	3	2024-11-22 05:27:00	0	1
+6	4	13	22	2024-11-22 05:26:32	0	0
+8	4	6	13	2024-11-22 05:27:36	0	0
+9	4	10	15	2024-11-22 05:27:48	0	0
+10	5	13	23	2024-11-22 05:27:59	0	0
+11	5	6	14	2024-11-22 05:29:18	0	0
+12	5	10	16	2024-11-22 05:29:30	0	0
+13	5	12	17	2024-11-22 05:29:34	0	0
+15	6	5	4	2024-11-22 05:30:35	0	1
+14	6	13	24	2024-11-22 05:30:08	0	0
+16	6	3	3	2024-11-22 05:30:51	0	1
+17	6	5	6	2024-11-22 05:30:55	1	1
+19	7	3	3	2024-11-22 05:31:57	0	1
+18	7	13	25	2024-11-22 05:31:22	0	0
+20	7	6	13	2024-11-22 05:32:26	0	0
+21	8	3	3	2024-11-22 05:32:34	0	1
+23	9	5	4	2024-11-22 05:33:18	0	1
+22	9	13	26	2024-11-22 05:32:44	0	0
+24	10	13	27	2024-11-22 05:33:41	0	0
+25	11	13	28	2024-11-22 05:34:54	0	0
+26	12	13	29	2024-11-22 05:36:18	0	0
+27	13	13	30	2024-11-22 05:37:23	0	0
+29	14	3	3	2024-11-22 05:39:36	0	1
+28	14	13	31	2024-11-22 05:39:05	0	0
+30	14	6	13	2024-11-22 05:40:21	0	0
+31	14	10	15	2024-11-22 05:40:33	0	0
+32	14	12	18	2024-11-22 05:40:38	0	0
+33	15	13	32	2024-11-22 05:41:25	0	0
+34	16	13	33	2024-11-22 05:42:07	0	0
+35	17	13	34	2024-11-22 05:43:24	0	0
 \.
 
 
@@ -14249,12 +14251,12 @@ COPY public.submission_chapter_settings (submission_chapter_setting_id, chapter_
 638	64		pages		string
 639	64		isPageEnabled	0	bool
 640	64		licenseUrl	\N	string
-641	65	en	title	Bibliography	string
 642	65	fr_CA	title		string
 643	65	en	subtitle		string
 644	65	fr_CA	subtitle		string
 645	65	en	abstract		string
 646	65	fr_CA	abstract		string
+641	65	en	title	Bibliography	string
 647	65		datePublished	\N	string
 648	65		pages		string
 649	65		isPageEnabled	0	bool
@@ -14327,77 +14329,77 @@ COPY public.submission_chapter_settings (submission_chapter_setting_id, chapter_
 --
 
 COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id, seq, source_chapter_id, doi_id) FROM stdin;
-12	\N	3	5	12	\N
-68	\N	17	3	68	\N
-1	\N	1	1	1	\N
-2	\N	1	2	2	\N
-69	\N	17	4	69	\N
-3	\N	1	3	3	\N
-23	\N	6	1	23	\N
-24	\N	6	2	24	\N
-25	\N	6	3	25	\N
-26	\N	6	4	26	\N
-13	\N	4	1	13	\N
-14	\N	4	2	14	\N
-15	\N	4	3	15	\N
-4	\N	2	1	4	\N
-5	\N	2	2	5	\N
-6	\N	2	3	6	\N
-16	\N	4	4	16	\N
-7	\N	2	4	7	\N
-70	\N	17	5	70	\N
-48	\N	12	1	48	\N
-49	\N	12	2	49	\N
-50	\N	12	3	50	\N
-8	\N	3	1	8	\N
-9	\N	3	2	9	\N
-10	\N	3	3	10	\N
-11	\N	3	4	11	\N
-71	\N	17	6	71	\N
-27	\N	7	1	27	\N
-28	\N	7	2	28	\N
-29	\N	7	3	29	\N
-30	\N	7	4	30	\N
-17	\N	5	1	17	\N
-18	\N	5	2	18	\N
-19	\N	5	3	19	\N
-20	\N	5	4	20	\N
-21	\N	5	5	21	\N
-22	\N	5	6	22	\N
-31	\N	7	5	31	\N
-51	\N	13	1	51	\N
-52	\N	13	2	52	\N
-53	\N	13	3	53	\N
-61	\N	16	1	61	\N
-32	\N	9	1	32	\N
-33	\N	9	2	33	\N
-34	\N	9	3	34	\N
-35	\N	9	4	35	\N
-36	\N	9	5	36	\N
-62	\N	16	2	62	\N
-63	\N	16	3	63	\N
-64	\N	16	4	64	\N
-54	\N	14	1	54	\N
-55	\N	14	2	55	\N
-56	\N	14	3	56	\N
-65	\N	16	5	65	\N
-57	\N	14	4	57	\N
 37	\N	10	1	37	\N
 38	\N	10	2	38	\N
+1	\N	1	1	1	\N
+2	\N	1	2	2	\N
 39	\N	10	3	39	\N
+3	\N	1	3	3	\N
 40	\N	10	4	40	\N
 41	\N	10	5	41	\N
 42	\N	10	6	42	\N
 43	\N	10	7	43	\N
 44	\N	10	8	44	\N
 45	\N	10	9	45	\N
+4	\N	2	1	4	\N
+5	\N	2	2	5	\N
+6	\N	2	3	6	\N
+7	\N	2	4	7	\N
+32	\N	9	1	32	\N
+33	\N	9	2	33	\N
+17	\N	5	1	17	\N
+18	\N	5	2	18	\N
+19	\N	5	3	19	\N
+20	\N	5	4	20	\N
+21	\N	5	5	21	\N
+34	\N	9	3	34	\N
+22	\N	5	6	22	\N
+35	\N	9	4	35	\N
+8	\N	3	1	8	\N
+9	\N	3	2	9	\N
+10	\N	3	3	10	\N
+11	\N	3	4	11	\N
+36	\N	9	5	36	\N
+12	\N	3	5	12	\N
 46	\N	11	1	46	\N
-47	\N	11	2	47	\N
 58	\N	15	1	58	\N
 59	\N	15	2	59	\N
+47	\N	11	2	47	\N
 60	\N	15	3	60	\N
+13	\N	4	1	13	\N
+14	\N	4	2	14	\N
+15	\N	4	3	15	\N
+23	\N	6	1	23	\N
+16	\N	4	4	16	\N
+24	\N	6	2	24	\N
+25	\N	6	3	25	\N
+26	\N	6	4	26	\N
+48	\N	12	1	48	\N
+49	\N	12	2	49	\N
+50	\N	12	3	50	\N
+27	\N	7	1	27	\N
+28	\N	7	2	28	\N
+29	\N	7	3	29	\N
+30	\N	7	4	30	\N
+31	\N	7	5	31	\N
 66	\N	17	1	66	\N
 67	\N	17	2	67	\N
+68	\N	17	3	68	\N
+69	\N	17	4	69	\N
+70	\N	17	5	70	\N
+51	\N	13	1	51	\N
+52	\N	13	2	52	\N
+53	\N	13	3	53	\N
+71	\N	17	6	71	\N
+61	\N	16	1	61	\N
+62	\N	16	2	62	\N
+63	\N	16	3	63	\N
+64	\N	16	4	64	\N
+65	\N	16	5	65	\N
+54	\N	14	1	54	\N
+55	\N	14	2	55	\N
+56	\N	14	3	56	\N
+57	\N	14	4	57	\N
 \.
 
 
@@ -14406,12 +14408,12 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2024-11-21 05:35:21	\N	1
-2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2024-11-21 05:35:30	\N	1
-3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2024-11-21 05:36:50	\N	1
-4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2024-11-21 05:38:03	\N	1
-5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2024-11-21 05:38:12	\N	1
-6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2024-11-21 05:42:47	\N	1
+1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2024-11-22 05:35:46	\N	1
+2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2024-11-22 05:35:55	\N	1
+3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2024-11-22 05:37:16	\N	1
+4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2024-11-22 05:38:29	\N	1
+5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2024-11-22 05:38:39	\N	1
+6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2024-11-22 05:43:16	\N	1
 \.
 
 
@@ -14432,8 +14434,8 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 10	10	7
 12	12	7
 13	13	6
-14	14	5
-15	15	4
+14	14	4
+15	15	5
 16	16	9
 17	17	10
 18	18	11
@@ -14454,8 +14456,8 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 33	33	22
 34	34	23
 35	35	23
-36	36	21
-37	37	22
+36	36	22
+37	37	21
 38	38	20
 39	39	19
 40	40	18
@@ -14512,8 +14514,8 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 91	91	54
 92	92	55
 93	93	55
-94	94	54
-95	95	53
+94	94	53
+95	95	54
 96	96	56
 97	97	57
 98	98	58
@@ -14545,8 +14547,8 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 124	124	69
 125	125	69
 126	126	68
-127	127	67
-128	128	66
+127	127	66
+128	128	67
 129	129	65
 130	130	70
 131	131	71
@@ -14593,10 +14595,10 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 23	12		chapterId	7
 24	13	en	name	chapter3.pdf
 25	13		chapterId	6
-26	14	en	name	chapter2.pdf
-27	14		chapterId	5
-28	15	en	name	chapter1.pdf
-29	15		chapterId	4
+26	14	en	name	chapter1.pdf
+27	14		chapterId	4
+28	15	en	name	chapter2.pdf
+29	15		chapterId	5
 30	16	en	name	chapter1.pdf
 31	17	en	name	chapter2.pdf
 32	18	en	name	chapter3.pdf
@@ -14637,10 +14639,10 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 67	34		chapterId	22
 68	35	en	name	epilogue.pdf
 69	35		chapterId	22
-70	36	en	name	chapter3.pdf
-71	36		chapterId	20
-72	37	en	name	chapter4.pdf
-73	37		chapterId	21
+70	36	en	name	chapter4.pdf
+71	36		chapterId	21
+72	37	en	name	chapter3.pdf
+73	37		chapterId	20
 74	38	en	name	chapter2.pdf
 75	38		chapterId	19
 76	39	en	name	chapter1.pdf
@@ -14751,10 +14753,10 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 182	92		chapterId	53
 183	93	en	name	chapter3.pdf
 184	93		chapterId	53
-185	94	en	name	chapter2.pdf
-186	94		chapterId	52
-187	95	en	name	chapter1.pdf
-188	95		chapterId	51
+185	94	en	name	chapter1.pdf
+186	94		chapterId	51
+187	95	en	name	chapter2.pdf
+188	95		chapterId	52
 189	96	en	name	chapter1.pdf
 190	97	en	name	chapter2.pdf
 191	98	en	name	chapter3.pdf
@@ -14811,10 +14813,10 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 243	125		chapterId	65
 244	126	en	name	conclusion.pdf
 245	126		chapterId	64
-246	127	en	name	cases.pdf
-247	127		chapterId	63
-248	128	en	name	preface.pdf
-249	128		chapterId	62
+246	127	en	name	preface.pdf
+247	127		chapterId	62
+248	128	en	name	cases.pdf
+249	128		chapterId	63
 250	129	en	name	foreward.pdf
 251	129		chapterId	61
 252	130	en	name	preface.pdf
@@ -14849,146 +14851,146 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id, doi_id) FROM stdin;
-1	1	1	\N	3	2	\N	\N	\N	2024-11-21 05:22:35	2024-11-21 05:22:36	19	\N	\N	\N
-2	1	2	\N	3	2	\N	\N	\N	2024-11-21 05:22:36	2024-11-21 05:22:36	19	\N	\N	\N
-3	1	3	\N	3	2	\N	\N	\N	2024-11-21 05:22:37	2024-11-21 05:22:37	19	\N	\N	\N
-4	1	3	3	3	4	\N	\N	\N	2024-11-21 05:23:00	2024-11-21 05:23:00	19	523	1	\N
-5	1	2	2	3	4	\N	\N	\N	2024-11-21 05:23:01	2024-11-21 05:23:01	19	523	1	\N
-6	1	1	1	3	4	\N	\N	\N	2024-11-21 05:23:01	2024-11-21 05:23:01	19	523	1	\N
-7	2	4	\N	3	2	\N	\N	\N	2024-11-21 05:23:32	2024-11-21 05:23:33	20	\N	\N	\N
-8	2	5	\N	3	2	\N	\N	\N	2024-11-21 05:23:33	2024-11-21 05:23:34	20	\N	\N	\N
-9	2	6	\N	3	2	\N	\N	\N	2024-11-21 05:23:34	2024-11-21 05:23:35	20	\N	\N	\N
-10	2	7	\N	3	2	\N	\N	\N	2024-11-21 05:23:35	2024-11-21 05:23:35	20	\N	\N	\N
-12	2	7	10	3	4	\N	\N	\N	2024-11-21 05:25:13	2024-11-21 05:25:13	20	523	2	\N
-13	2	6	9	3	4	\N	\N	\N	2024-11-21 05:25:13	2024-11-21 05:25:13	20	523	2	\N
-14	2	5	8	3	4	\N	\N	\N	2024-11-21 05:25:13	2024-11-21 05:25:13	20	523	2	\N
-15	2	4	7	3	4	\N	\N	\N	2024-11-21 05:25:14	2024-11-21 05:25:14	20	523	2	\N
-16	3	9	\N	3	2	\N	\N	\N	2024-11-21 05:25:34	2024-11-21 05:25:35	21	\N	\N	\N
-17	3	10	\N	3	2	\N	\N	\N	2024-11-21 05:25:35	2024-11-21 05:25:36	21	\N	\N	\N
-18	3	11	\N	3	2	\N	\N	\N	2024-11-21 05:25:36	2024-11-21 05:25:37	21	\N	\N	\N
-19	3	12	\N	3	2	\N	\N	\N	2024-11-21 05:25:37	2024-11-21 05:25:37	21	\N	\N	\N
-20	3	13	\N	3	2	\N	\N	\N	2024-11-21 05:25:38	2024-11-21 05:25:38	21	\N	\N	\N
-21	4	14	\N	3	2	\N	\N	\N	2024-11-21 05:26:14	2024-11-21 05:26:15	22	\N	\N	\N
-22	4	15	\N	3	2	\N	\N	\N	2024-11-21 05:26:15	2024-11-21 05:26:15	22	\N	\N	\N
-23	4	16	\N	3	2	\N	\N	\N	2024-11-21 05:26:16	2024-11-21 05:26:16	22	\N	\N	\N
-24	4	17	\N	3	2	\N	\N	\N	2024-11-21 05:26:17	2024-11-21 05:26:17	22	\N	\N	\N
-25	4	17	24	3	19	\N	\N	\N	2024-11-21 05:26:49	2024-11-21 05:26:49	22	523	3	\N
-26	4	16	23	3	19	\N	\N	\N	2024-11-21 05:26:49	2024-11-21 05:26:49	22	523	3	\N
-27	4	15	22	3	19	\N	\N	\N	2024-11-21 05:26:49	2024-11-21 05:26:49	22	523	3	\N
-28	4	14	21	3	19	\N	\N	\N	2024-11-21 05:26:49	2024-11-21 05:26:49	22	523	3	\N
-29	5	18	\N	3	2	\N	\N	\N	2024-11-21 05:27:41	2024-11-21 05:27:41	23	\N	\N	\N
-30	5	19	\N	3	2	\N	\N	\N	2024-11-21 05:27:42	2024-11-21 05:27:42	23	\N	\N	\N
-31	5	20	\N	3	2	\N	\N	\N	2024-11-21 05:27:43	2024-11-21 05:27:43	23	\N	\N	\N
-32	5	21	\N	3	2	\N	\N	\N	2024-11-21 05:27:44	2024-11-21 05:27:44	23	\N	\N	\N
-33	5	22	\N	3	2	\N	\N	\N	2024-11-21 05:27:44	2024-11-21 05:27:45	23	\N	\N	\N
-34	5	23	\N	3	2	\N	\N	\N	2024-11-21 05:27:45	2024-11-21 05:27:46	23	\N	\N	\N
-35	5	23	34	3	19	\N	\N	\N	2024-11-21 05:28:29	2024-11-21 05:28:29	23	523	5	\N
-36	5	21	32	3	19	\N	\N	\N	2024-11-21 05:28:29	2024-11-21 05:28:29	23	523	5	\N
-37	5	22	33	3	19	\N	\N	\N	2024-11-21 05:28:29	2024-11-21 05:28:29	23	523	5	\N
-38	5	20	31	3	19	\N	\N	\N	2024-11-21 05:28:30	2024-11-21 05:28:30	23	523	5	\N
-39	5	19	30	3	19	\N	\N	\N	2024-11-21 05:28:30	2024-11-21 05:28:30	23	523	5	\N
-40	5	18	29	3	19	\N	\N	\N	2024-11-21 05:28:30	2024-11-21 05:28:30	23	523	5	\N
-44	6	26	\N	3	2	\N	\N	\N	2024-11-21 05:29:51	2024-11-21 05:29:51	24	\N	\N	\N
-41	5	23	34	3	10	0	openAccess	1	2024-11-21 05:29:19	2024-11-21 05:29:26	23	521	2	\N
-42	6	24	\N	3	2	\N	\N	\N	2024-11-21 05:29:49	2024-11-21 05:29:49	24	\N	\N	\N
-43	6	25	\N	3	2	\N	\N	\N	2024-11-21 05:29:50	2024-11-21 05:29:50	24	\N	\N	\N
-45	6	27	\N	3	2	\N	\N	\N	2024-11-21 05:29:52	2024-11-21 05:29:52	24	\N	\N	\N
-46	6	27	45	3	19	\N	\N	\N	2024-11-21 05:30:24	2024-11-21 05:30:24	24	523	7	\N
-47	6	26	44	3	19	\N	\N	\N	2024-11-21 05:30:24	2024-11-21 05:30:24	24	523	7	\N
-48	6	25	43	3	19	\N	\N	\N	2024-11-21 05:30:24	2024-11-21 05:30:24	24	523	7	\N
-49	6	24	42	3	19	\N	\N	\N	2024-11-21 05:30:24	2024-11-21 05:30:24	24	523	7	\N
-50	7	28	\N	3	2	\N	\N	\N	2024-11-21 05:31:03	2024-11-21 05:31:03	25	\N	\N	\N
-51	7	29	\N	3	2	\N	\N	\N	2024-11-21 05:31:04	2024-11-21 05:31:04	25	\N	\N	\N
-52	7	30	\N	3	2	\N	\N	\N	2024-11-21 05:31:05	2024-11-21 05:31:05	25	\N	\N	\N
-53	7	31	\N	3	2	\N	\N	\N	2024-11-21 05:31:06	2024-11-21 05:31:06	25	\N	\N	\N
-54	7	32	\N	3	2	\N	\N	\N	2024-11-21 05:31:07	2024-11-21 05:31:07	25	\N	\N	\N
-55	7	32	54	3	4	\N	\N	\N	2024-11-21 05:31:47	2024-11-21 05:31:47	25	523	8	\N
-56	7	31	53	3	4	\N	\N	\N	2024-11-21 05:31:47	2024-11-21 05:31:47	25	523	8	\N
-57	7	30	52	3	4	\N	\N	\N	2024-11-21 05:31:47	2024-11-21 05:31:47	25	523	8	\N
-58	7	29	51	3	4	\N	\N	\N	2024-11-21 05:31:47	2024-11-21 05:31:47	25	523	8	\N
-59	7	28	50	3	4	\N	\N	\N	2024-11-21 05:31:47	2024-11-21 05:31:47	25	523	8	\N
-60	8	33	\N	3	2	\N	\N	\N	2024-11-21 05:32:14	2024-11-21 05:32:15	3	\N	\N	\N
-61	9	34	\N	3	2	\N	\N	\N	2024-11-21 05:32:24	2024-11-21 05:32:24	26	\N	\N	\N
-62	9	35	\N	3	2	\N	\N	\N	2024-11-21 05:32:25	2024-11-21 05:32:25	26	\N	\N	\N
-63	9	36	\N	3	2	\N	\N	\N	2024-11-21 05:32:26	2024-11-21 05:32:26	26	\N	\N	\N
-64	9	37	\N	3	2	\N	\N	\N	2024-11-21 05:32:27	2024-11-21 05:32:27	26	\N	\N	\N
-65	9	38	\N	3	2	\N	\N	\N	2024-11-21 05:32:28	2024-11-21 05:32:28	26	\N	\N	\N
-66	9	38	65	3	19	\N	\N	\N	2024-11-21 05:33:08	2024-11-21 05:33:08	26	523	9	\N
-67	9	37	64	3	19	\N	\N	\N	2024-11-21 05:33:08	2024-11-21 05:33:08	26	523	9	\N
-68	9	36	63	3	19	\N	\N	\N	2024-11-21 05:33:09	2024-11-21 05:33:09	26	523	9	\N
-69	9	35	62	3	19	\N	\N	\N	2024-11-21 05:33:09	2024-11-21 05:33:09	26	523	9	\N
-70	9	34	61	3	19	\N	\N	\N	2024-11-21 05:33:09	2024-11-21 05:33:09	26	523	9	\N
-71	10	39	\N	3	2	\N	\N	\N	2024-11-21 05:33:22	2024-11-21 05:33:22	27	\N	\N	\N
-72	10	40	\N	3	2	\N	\N	\N	2024-11-21 05:33:22	2024-11-21 05:33:23	27	\N	\N	\N
-73	10	41	\N	3	2	\N	\N	\N	2024-11-21 05:33:23	2024-11-21 05:33:24	27	\N	\N	\N
-117	15	64	116	3	4	\N	\N	\N	2024-11-21 05:41:27	2024-11-21 05:41:27	32	523	17	\N
-74	10	42	\N	3	2	\N	\N	\N	2024-11-21 05:33:24	2024-11-21 05:33:25	27	\N	\N	\N
-118	15	63	115	3	4	\N	\N	\N	2024-11-21 05:41:28	2024-11-21 05:41:28	32	523	17	\N
-75	10	43	\N	3	2	\N	\N	\N	2024-11-21 05:33:25	2024-11-21 05:33:25	27	\N	\N	\N
-119	15	62	114	3	4	\N	\N	\N	2024-11-21 05:41:28	2024-11-21 05:41:28	32	523	17	\N
-76	10	44	\N	3	2	\N	\N	\N	2024-11-21 05:33:26	2024-11-21 05:33:26	27	\N	\N	\N
-120	16	65	\N	3	2	\N	\N	\N	2024-11-21 05:41:40	2024-11-21 05:41:40	33	\N	\N	\N
-77	10	45	\N	3	2	\N	\N	\N	2024-11-21 05:33:27	2024-11-21 05:33:27	27	\N	\N	\N
-121	16	66	\N	3	2	\N	\N	\N	2024-11-21 05:41:41	2024-11-21 05:41:41	33	\N	\N	\N
-78	10	46	\N	3	2	\N	\N	\N	2024-11-21 05:33:28	2024-11-21 05:33:28	27	\N	\N	\N
-122	16	67	\N	3	2	\N	\N	\N	2024-11-21 05:41:42	2024-11-21 05:41:42	33	\N	\N	\N
-79	10	47	\N	3	2	\N	\N	\N	2024-11-21 05:33:29	2024-11-21 05:33:29	27	\N	\N	\N
-123	16	68	\N	3	2	\N	\N	\N	2024-11-21 05:41:43	2024-11-21 05:41:43	33	\N	\N	\N
-80	11	48	\N	3	2	\N	\N	\N	2024-11-21 05:34:31	2024-11-21 05:34:32	28	\N	\N	\N
-124	16	69	\N	3	2	\N	\N	\N	2024-11-21 05:41:44	2024-11-21 05:41:44	33	\N	\N	\N
-81	11	49	\N	3	2	\N	\N	\N	2024-11-21 05:34:32	2024-11-21 05:34:33	28	\N	\N	\N
-82	11	49	81	3	19	\N	\N	\N	2024-11-21 05:34:53	2024-11-21 05:34:53	28	523	10	\N
-83	11	48	80	3	19	\N	\N	\N	2024-11-21 05:34:53	2024-11-21 05:34:53	28	523	10	\N
-125	16	69	124	3	4	\N	\N	\N	2024-11-21 05:42:23	2024-11-21 05:42:23	33	523	18	\N
-84	12	50	\N	3	2	\N	\N	\N	2024-11-21 05:35:56	2024-11-21 05:35:56	29	\N	\N	\N
-126	16	68	123	3	4	\N	\N	\N	2024-11-21 05:42:23	2024-11-21 05:42:23	33	523	18	\N
-85	12	51	\N	3	2	\N	\N	\N	2024-11-21 05:35:57	2024-11-21 05:35:57	29	\N	\N	\N
-127	16	67	122	3	4	\N	\N	\N	2024-11-21 05:42:23	2024-11-21 05:42:23	33	523	18	\N
-86	12	52	\N	3	2	\N	\N	\N	2024-11-21 05:35:57	2024-11-21 05:35:58	29	\N	\N	\N
-87	12	51	85	3	19	\N	\N	\N	2024-11-21 05:36:28	2024-11-21 05:36:28	29	523	12	\N
-88	12	52	86	3	19	\N	\N	\N	2024-11-21 05:36:28	2024-11-21 05:36:28	29	523	12	\N
-89	12	50	84	3	19	\N	\N	\N	2024-11-21 05:36:28	2024-11-21 05:36:28	29	523	12	\N
-128	16	66	121	3	4	\N	\N	\N	2024-11-21 05:42:23	2024-11-21 05:42:23	33	523	18	\N
-90	13	53	\N	3	2	\N	\N	\N	2024-11-21 05:37:00	2024-11-21 05:37:00	30	\N	\N	\N
-129	16	65	120	3	4	\N	\N	\N	2024-11-21 05:42:24	2024-11-21 05:42:24	33	523	18	\N
-91	13	54	\N	3	2	\N	\N	\N	2024-11-21 05:37:01	2024-11-21 05:37:01	30	\N	\N	\N
-130	17	70	\N	3	2	\N	\N	\N	2024-11-21 05:42:56	2024-11-21 05:42:57	34	\N	\N	\N
-92	13	55	\N	3	2	\N	\N	\N	2024-11-21 05:37:02	2024-11-21 05:37:02	30	\N	\N	\N
-93	13	55	92	3	19	\N	\N	\N	2024-11-21 05:37:30	2024-11-21 05:37:30	30	523	13	\N
-94	13	54	91	3	19	\N	\N	\N	2024-11-21 05:37:30	2024-11-21 05:37:30	30	523	13	\N
-95	13	53	90	3	19	\N	\N	\N	2024-11-21 05:37:31	2024-11-21 05:37:31	30	523	13	\N
-131	17	71	\N	3	2	\N	\N	\N	2024-11-21 05:42:57	2024-11-21 05:42:58	34	\N	\N	\N
-96	14	56	\N	3	2	\N	\N	\N	2024-11-21 05:38:40	2024-11-21 05:38:40	31	\N	\N	\N
-132	17	72	\N	3	2	\N	\N	\N	2024-11-21 05:42:58	2024-11-21 05:42:59	34	\N	\N	\N
-97	14	57	\N	3	2	\N	\N	\N	2024-11-21 05:38:41	2024-11-21 05:38:41	31	\N	\N	\N
-133	17	73	\N	3	2	\N	\N	\N	2024-11-21 05:42:59	2024-11-21 05:43:00	34	\N	\N	\N
-98	14	58	\N	3	2	\N	\N	\N	2024-11-21 05:38:42	2024-11-21 05:38:42	31	\N	\N	\N
-134	17	74	\N	3	2	\N	\N	\N	2024-11-21 05:43:00	2024-11-21 05:43:00	34	\N	\N	\N
-99	14	59	\N	3	2	\N	\N	\N	2024-11-21 05:38:43	2024-11-21 05:38:43	31	\N	\N	\N
-135	17	75	\N	3	2	\N	\N	\N	2024-11-21 05:43:01	2024-11-21 05:43:01	34	\N	\N	\N
-100	14	60	\N	13	2	\N	\N	\N	2024-11-21 05:38:44	2024-11-21 05:38:45	31	\N	\N	\N
-136	17	75	135	3	19	\N	\N	\N	2024-11-21 05:43:53	2024-11-21 05:43:53	34	523	19	\N
-101	14	61	\N	9	2	\N	\N	\N	2024-11-21 05:38:45	2024-11-21 05:38:46	31	\N	\N	\N
-102	14	61	101	9	19	\N	\N	\N	2024-11-21 05:39:23	2024-11-21 05:39:23	31	523	15	\N
-103	14	60	100	13	19	\N	\N	\N	2024-11-21 05:39:23	2024-11-21 05:39:23	31	523	15	\N
-104	14	59	99	3	19	\N	\N	\N	2024-11-21 05:39:23	2024-11-21 05:39:23	31	523	15	\N
-105	14	58	98	3	19	\N	\N	\N	2024-11-21 05:39:23	2024-11-21 05:39:23	31	523	15	\N
-106	14	57	97	3	19	\N	\N	\N	2024-11-21 05:39:23	2024-11-21 05:39:23	31	523	15	\N
-107	14	56	96	3	19	\N	\N	\N	2024-11-21 05:39:23	2024-11-21 05:39:23	31	523	15	\N
-110	14	59	99	3	10	0	openAccess	1	2024-11-21 05:40:19	2024-11-21 05:40:38	31	521	3	\N
-113	14	56	96	3	10	0	openAccess	1	2024-11-21 05:40:19	2024-11-21 05:40:26	31	521	3	\N
-137	17	74	134	3	19	\N	\N	\N	2024-11-21 05:43:53	2024-11-21 05:43:53	34	523	19	\N
-112	14	57	97	3	10	0	openAccess	1	2024-11-21 05:40:19	2024-11-21 05:40:30	31	521	3	\N
-109	14	60	100	13	10	0	openAccess	1	2024-11-21 05:40:19	2024-11-21 05:40:43	31	521	3	\N
-111	14	58	98	3	10	0	openAccess	1	2024-11-21 05:40:19	2024-11-21 05:40:34	31	521	3	\N
-138	17	73	133	3	19	\N	\N	\N	2024-11-21 05:43:53	2024-11-21 05:43:53	34	523	19	\N
-139	17	72	132	3	19	\N	\N	\N	2024-11-21 05:43:53	2024-11-21 05:43:53	34	523	19	\N
-108	14	61	101	9	10	0	openAccess	1	2024-11-21 05:40:19	2024-11-21 05:40:47	31	521	3	\N
-140	17	71	131	3	19	\N	\N	\N	2024-11-21 05:43:53	2024-11-21 05:43:53	34	523	19	\N
-114	15	62	\N	3	2	\N	\N	\N	2024-11-21 05:40:58	2024-11-21 05:40:59	32	\N	\N	\N
-141	17	70	130	3	19	\N	\N	\N	2024-11-21 05:43:54	2024-11-21 05:43:54	34	523	19	\N
-115	15	63	\N	3	2	\N	\N	\N	2024-11-21 05:40:59	2024-11-21 05:40:59	32	\N	\N	\N
-116	15	64	\N	3	2	\N	\N	\N	2024-11-21 05:41:00	2024-11-21 05:41:00	32	\N	\N	\N
+1	1	1	\N	3	2	\N	\N	\N	2024-11-22 05:22:53	2024-11-22 05:22:53	19	\N	\N	\N
+2	1	2	\N	3	2	\N	\N	\N	2024-11-22 05:22:54	2024-11-22 05:22:54	19	\N	\N	\N
+3	1	3	\N	3	2	\N	\N	\N	2024-11-22 05:22:55	2024-11-22 05:22:55	19	\N	\N	\N
+4	1	3	3	3	4	\N	\N	\N	2024-11-22 05:23:18	2024-11-22 05:23:18	19	523	1	\N
+5	1	2	2	3	4	\N	\N	\N	2024-11-22 05:23:19	2024-11-22 05:23:19	19	523	1	\N
+6	1	1	1	3	4	\N	\N	\N	2024-11-22 05:23:19	2024-11-22 05:23:19	19	523	1	\N
+7	2	4	\N	3	2	\N	\N	\N	2024-11-22 05:23:51	2024-11-22 05:23:51	20	\N	\N	\N
+8	2	5	\N	3	2	\N	\N	\N	2024-11-22 05:23:51	2024-11-22 05:23:52	20	\N	\N	\N
+9	2	6	\N	3	2	\N	\N	\N	2024-11-22 05:23:52	2024-11-22 05:23:53	20	\N	\N	\N
+10	2	7	\N	3	2	\N	\N	\N	2024-11-22 05:23:53	2024-11-22 05:23:54	20	\N	\N	\N
+12	2	7	10	3	4	\N	\N	\N	2024-11-22 05:25:32	2024-11-22 05:25:32	20	523	2	\N
+13	2	6	9	3	4	\N	\N	\N	2024-11-22 05:25:32	2024-11-22 05:25:32	20	523	2	\N
+14	2	4	7	3	4	\N	\N	\N	2024-11-22 05:25:33	2024-11-22 05:25:33	20	523	2	\N
+15	2	5	8	3	4	\N	\N	\N	2024-11-22 05:25:33	2024-11-22 05:25:33	20	523	2	\N
+16	3	9	\N	3	2	\N	\N	\N	2024-11-22 05:25:55	2024-11-22 05:25:55	21	\N	\N	\N
+17	3	10	\N	3	2	\N	\N	\N	2024-11-22 05:25:56	2024-11-22 05:25:56	21	\N	\N	\N
+18	3	11	\N	3	2	\N	\N	\N	2024-11-22 05:25:57	2024-11-22 05:25:57	21	\N	\N	\N
+19	3	12	\N	3	2	\N	\N	\N	2024-11-22 05:25:57	2024-11-22 05:25:58	21	\N	\N	\N
+20	3	13	\N	3	2	\N	\N	\N	2024-11-22 05:25:58	2024-11-22 05:25:59	21	\N	\N	\N
+21	4	14	\N	3	2	\N	\N	\N	2024-11-22 05:26:35	2024-11-22 05:26:35	22	\N	\N	\N
+22	4	15	\N	3	2	\N	\N	\N	2024-11-22 05:26:36	2024-11-22 05:26:36	22	\N	\N	\N
+23	4	16	\N	3	2	\N	\N	\N	2024-11-22 05:26:37	2024-11-22 05:26:37	22	\N	\N	\N
+24	4	17	\N	3	2	\N	\N	\N	2024-11-22 05:26:38	2024-11-22 05:26:38	22	\N	\N	\N
+25	4	17	24	3	19	\N	\N	\N	2024-11-22 05:27:10	2024-11-22 05:27:10	22	523	3	\N
+26	4	16	23	3	19	\N	\N	\N	2024-11-22 05:27:10	2024-11-22 05:27:10	22	523	3	\N
+27	4	15	22	3	19	\N	\N	\N	2024-11-22 05:27:10	2024-11-22 05:27:10	22	523	3	\N
+28	4	14	21	3	19	\N	\N	\N	2024-11-22 05:27:10	2024-11-22 05:27:10	22	523	3	\N
+29	5	18	\N	3	2	\N	\N	\N	2024-11-22 05:28:02	2024-11-22 05:28:02	23	\N	\N	\N
+30	5	19	\N	3	2	\N	\N	\N	2024-11-22 05:28:03	2024-11-22 05:28:03	23	\N	\N	\N
+31	5	20	\N	3	2	\N	\N	\N	2024-11-22 05:28:04	2024-11-22 05:28:04	23	\N	\N	\N
+32	5	21	\N	3	2	\N	\N	\N	2024-11-22 05:28:05	2024-11-22 05:28:05	23	\N	\N	\N
+33	5	22	\N	3	2	\N	\N	\N	2024-11-22 05:28:06	2024-11-22 05:28:06	23	\N	\N	\N
+34	5	23	\N	3	2	\N	\N	\N	2024-11-22 05:28:07	2024-11-22 05:28:07	23	\N	\N	\N
+35	5	23	34	3	19	\N	\N	\N	2024-11-22 05:28:50	2024-11-22 05:28:50	23	523	5	\N
+36	5	22	33	3	19	\N	\N	\N	2024-11-22 05:28:51	2024-11-22 05:28:51	23	523	5	\N
+37	5	21	32	3	19	\N	\N	\N	2024-11-22 05:28:51	2024-11-22 05:28:51	23	523	5	\N
+38	5	20	31	3	19	\N	\N	\N	2024-11-22 05:28:51	2024-11-22 05:28:51	23	523	5	\N
+39	5	19	30	3	19	\N	\N	\N	2024-11-22 05:28:51	2024-11-22 05:28:51	23	523	5	\N
+40	5	18	29	3	19	\N	\N	\N	2024-11-22 05:28:51	2024-11-22 05:28:51	23	523	5	\N
+44	6	26	\N	3	2	\N	\N	\N	2024-11-22 05:30:12	2024-11-22 05:30:13	24	\N	\N	\N
+41	5	23	34	3	10	0	openAccess	1	2024-11-22 05:29:41	2024-11-22 05:29:48	23	521	2	\N
+42	6	24	\N	3	2	\N	\N	\N	2024-11-22 05:30:11	2024-11-22 05:30:11	24	\N	\N	\N
+43	6	25	\N	3	2	\N	\N	\N	2024-11-22 05:30:12	2024-11-22 05:30:12	24	\N	\N	\N
+45	6	27	\N	3	2	\N	\N	\N	2024-11-22 05:30:13	2024-11-22 05:30:14	24	\N	\N	\N
+46	6	27	45	3	19	\N	\N	\N	2024-11-22 05:30:45	2024-11-22 05:30:45	24	523	7	\N
+47	6	26	44	3	19	\N	\N	\N	2024-11-22 05:30:46	2024-11-22 05:30:46	24	523	7	\N
+48	6	25	43	3	19	\N	\N	\N	2024-11-22 05:30:46	2024-11-22 05:30:46	24	523	7	\N
+49	6	24	42	3	19	\N	\N	\N	2024-11-22 05:30:46	2024-11-22 05:30:46	24	523	7	\N
+50	7	28	\N	3	2	\N	\N	\N	2024-11-22 05:31:25	2024-11-22 05:31:25	25	\N	\N	\N
+51	7	29	\N	3	2	\N	\N	\N	2024-11-22 05:31:26	2024-11-22 05:31:26	25	\N	\N	\N
+52	7	30	\N	3	2	\N	\N	\N	2024-11-22 05:31:27	2024-11-22 05:31:27	25	\N	\N	\N
+53	7	31	\N	3	2	\N	\N	\N	2024-11-22 05:31:28	2024-11-22 05:31:28	25	\N	\N	\N
+54	7	32	\N	3	2	\N	\N	\N	2024-11-22 05:31:29	2024-11-22 05:31:29	25	\N	\N	\N
+55	7	32	54	3	4	\N	\N	\N	2024-11-22 05:32:09	2024-11-22 05:32:09	25	523	8	\N
+56	7	31	53	3	4	\N	\N	\N	2024-11-22 05:32:09	2024-11-22 05:32:09	25	523	8	\N
+57	7	30	52	3	4	\N	\N	\N	2024-11-22 05:32:09	2024-11-22 05:32:09	25	523	8	\N
+58	7	29	51	3	4	\N	\N	\N	2024-11-22 05:32:09	2024-11-22 05:32:09	25	523	8	\N
+59	7	28	50	3	4	\N	\N	\N	2024-11-22 05:32:09	2024-11-22 05:32:09	25	523	8	\N
+60	8	33	\N	3	2	\N	\N	\N	2024-11-22 05:32:36	2024-11-22 05:32:37	3	\N	\N	\N
+61	9	34	\N	3	2	\N	\N	\N	2024-11-22 05:32:46	2024-11-22 05:32:47	26	\N	\N	\N
+62	9	35	\N	3	2	\N	\N	\N	2024-11-22 05:32:47	2024-11-22 05:32:48	26	\N	\N	\N
+63	9	36	\N	3	2	\N	\N	\N	2024-11-22 05:32:48	2024-11-22 05:32:48	26	\N	\N	\N
+64	9	37	\N	3	2	\N	\N	\N	2024-11-22 05:32:49	2024-11-22 05:32:49	26	\N	\N	\N
+65	9	38	\N	3	2	\N	\N	\N	2024-11-22 05:32:50	2024-11-22 05:32:50	26	\N	\N	\N
+66	9	38	65	3	19	\N	\N	\N	2024-11-22 05:33:31	2024-11-22 05:33:31	26	523	9	\N
+67	9	37	64	3	19	\N	\N	\N	2024-11-22 05:33:31	2024-11-22 05:33:31	26	523	9	\N
+68	9	36	63	3	19	\N	\N	\N	2024-11-22 05:33:31	2024-11-22 05:33:31	26	523	9	\N
+69	9	35	62	3	19	\N	\N	\N	2024-11-22 05:33:31	2024-11-22 05:33:31	26	523	9	\N
+70	9	34	61	3	19	\N	\N	\N	2024-11-22 05:33:31	2024-11-22 05:33:31	26	523	9	\N
+71	10	39	\N	3	2	\N	\N	\N	2024-11-22 05:33:44	2024-11-22 05:33:44	27	\N	\N	\N
+72	10	40	\N	3	2	\N	\N	\N	2024-11-22 05:33:45	2024-11-22 05:33:45	27	\N	\N	\N
+73	10	41	\N	3	2	\N	\N	\N	2024-11-22 05:33:46	2024-11-22 05:33:46	27	\N	\N	\N
+136	17	75	135	3	19	\N	\N	\N	2024-11-22 05:44:23	2024-11-22 05:44:23	34	523	19	\N
+74	10	42	\N	3	2	\N	\N	\N	2024-11-22 05:33:47	2024-11-22 05:33:47	27	\N	\N	\N
+137	17	74	134	3	19	\N	\N	\N	2024-11-22 05:44:24	2024-11-22 05:44:24	34	523	19	\N
+75	10	43	\N	3	2	\N	\N	\N	2024-11-22 05:33:48	2024-11-22 05:33:48	27	\N	\N	\N
+138	17	73	133	3	19	\N	\N	\N	2024-11-22 05:44:24	2024-11-22 05:44:24	34	523	19	\N
+76	10	44	\N	3	2	\N	\N	\N	2024-11-22 05:33:48	2024-11-22 05:33:49	27	\N	\N	\N
+139	17	72	132	3	19	\N	\N	\N	2024-11-22 05:44:24	2024-11-22 05:44:24	34	523	19	\N
+77	10	45	\N	3	2	\N	\N	\N	2024-11-22 05:33:49	2024-11-22 05:33:50	27	\N	\N	\N
+140	17	71	131	3	19	\N	\N	\N	2024-11-22 05:44:24	2024-11-22 05:44:24	34	523	19	\N
+78	10	46	\N	3	2	\N	\N	\N	2024-11-22 05:33:50	2024-11-22 05:33:51	27	\N	\N	\N
+141	17	70	130	3	19	\N	\N	\N	2024-11-22 05:44:24	2024-11-22 05:44:24	34	523	19	\N
+79	10	47	\N	3	2	\N	\N	\N	2024-11-22 05:33:51	2024-11-22 05:33:52	27	\N	\N	\N
+80	11	48	\N	3	2	\N	\N	\N	2024-11-22 05:34:56	2024-11-22 05:34:57	28	\N	\N	\N
+81	11	49	\N	3	2	\N	\N	\N	2024-11-22 05:34:57	2024-11-22 05:34:57	28	\N	\N	\N
+82	11	49	81	3	19	\N	\N	\N	2024-11-22 05:35:18	2024-11-22 05:35:18	28	523	10	\N
+83	11	48	80	3	19	\N	\N	\N	2024-11-22 05:35:18	2024-11-22 05:35:18	28	523	10	\N
+84	12	50	\N	3	2	\N	\N	\N	2024-11-22 05:36:21	2024-11-22 05:36:21	29	\N	\N	\N
+85	12	51	\N	3	2	\N	\N	\N	2024-11-22 05:36:22	2024-11-22 05:36:22	29	\N	\N	\N
+86	12	52	\N	3	2	\N	\N	\N	2024-11-22 05:36:22	2024-11-22 05:36:23	29	\N	\N	\N
+87	12	51	85	3	19	\N	\N	\N	2024-11-22 05:36:53	2024-11-22 05:36:53	29	523	12	\N
+88	12	52	86	3	19	\N	\N	\N	2024-11-22 05:36:53	2024-11-22 05:36:53	29	523	12	\N
+89	12	50	84	3	19	\N	\N	\N	2024-11-22 05:36:53	2024-11-22 05:36:53	29	523	12	\N
+90	13	53	\N	3	2	\N	\N	\N	2024-11-22 05:37:26	2024-11-22 05:37:26	30	\N	\N	\N
+91	13	54	\N	3	2	\N	\N	\N	2024-11-22 05:37:26	2024-11-22 05:37:27	30	\N	\N	\N
+92	13	55	\N	3	2	\N	\N	\N	2024-11-22 05:37:27	2024-11-22 05:37:28	30	\N	\N	\N
+93	13	55	92	3	19	\N	\N	\N	2024-11-22 05:37:56	2024-11-22 05:37:56	30	523	13	\N
+94	13	53	90	3	19	\N	\N	\N	2024-11-22 05:37:56	2024-11-22 05:37:56	30	523	13	\N
+95	13	54	91	3	19	\N	\N	\N	2024-11-22 05:37:56	2024-11-22 05:37:56	30	523	13	\N
+96	14	56	\N	3	2	\N	\N	\N	2024-11-22 05:39:07	2024-11-22 05:39:07	31	\N	\N	\N
+97	14	57	\N	3	2	\N	\N	\N	2024-11-22 05:39:08	2024-11-22 05:39:08	31	\N	\N	\N
+98	14	58	\N	3	2	\N	\N	\N	2024-11-22 05:39:09	2024-11-22 05:39:09	31	\N	\N	\N
+99	14	59	\N	3	2	\N	\N	\N	2024-11-22 05:39:10	2024-11-22 05:39:10	31	\N	\N	\N
+100	14	60	\N	13	2	\N	\N	\N	2024-11-22 05:39:11	2024-11-22 05:39:12	31	\N	\N	\N
+101	14	61	\N	9	2	\N	\N	\N	2024-11-22 05:39:12	2024-11-22 05:39:13	31	\N	\N	\N
+102	14	61	101	9	19	\N	\N	\N	2024-11-22 05:39:50	2024-11-22 05:39:50	31	523	15	\N
+103	14	60	100	13	19	\N	\N	\N	2024-11-22 05:39:50	2024-11-22 05:39:50	31	523	15	\N
+104	14	59	99	3	19	\N	\N	\N	2024-11-22 05:39:50	2024-11-22 05:39:50	31	523	15	\N
+105	14	58	98	3	19	\N	\N	\N	2024-11-22 05:39:51	2024-11-22 05:39:51	31	523	15	\N
+106	14	57	97	3	19	\N	\N	\N	2024-11-22 05:39:51	2024-11-22 05:39:51	31	523	15	\N
+107	14	56	96	3	19	\N	\N	\N	2024-11-22 05:39:51	2024-11-22 05:39:51	31	523	15	\N
+110	14	59	99	3	10	0	openAccess	1	2024-11-22 05:40:48	2024-11-22 05:41:07	31	521	3	\N
+113	14	56	96	3	10	0	openAccess	1	2024-11-22 05:40:48	2024-11-22 05:40:55	31	521	3	\N
+126	16	68	123	3	4	\N	\N	\N	2024-11-22 05:42:53	2024-11-22 05:42:53	33	523	18	\N
+112	14	57	97	3	10	0	openAccess	1	2024-11-22 05:40:48	2024-11-22 05:40:59	31	521	3	\N
+109	14	60	100	13	10	0	openAccess	1	2024-11-22 05:40:48	2024-11-22 05:41:12	31	521	3	\N
+111	14	58	98	3	10	0	openAccess	1	2024-11-22 05:40:48	2024-11-22 05:41:03	31	521	3	\N
+127	16	66	121	3	4	\N	\N	\N	2024-11-22 05:42:53	2024-11-22 05:42:53	33	523	18	\N
+128	16	67	122	3	4	\N	\N	\N	2024-11-22 05:42:53	2024-11-22 05:42:53	33	523	18	\N
+108	14	61	101	9	10	0	openAccess	1	2024-11-22 05:40:48	2024-11-22 05:41:16	31	521	3	\N
+114	15	62	\N	3	2	\N	\N	\N	2024-11-22 05:41:27	2024-11-22 05:41:28	32	\N	\N	\N
+115	15	63	\N	3	2	\N	\N	\N	2024-11-22 05:41:28	2024-11-22 05:41:28	32	\N	\N	\N
+116	15	64	\N	3	2	\N	\N	\N	2024-11-22 05:41:29	2024-11-22 05:41:29	32	\N	\N	\N
+117	15	64	116	3	4	\N	\N	\N	2024-11-22 05:41:57	2024-11-22 05:41:57	32	523	17	\N
+118	15	63	115	3	4	\N	\N	\N	2024-11-22 05:41:57	2024-11-22 05:41:57	32	523	17	\N
+119	15	62	114	3	4	\N	\N	\N	2024-11-22 05:41:57	2024-11-22 05:41:57	32	523	17	\N
+120	16	65	\N	3	2	\N	\N	\N	2024-11-22 05:42:10	2024-11-22 05:42:10	33	\N	\N	\N
+121	16	66	\N	3	2	\N	\N	\N	2024-11-22 05:42:11	2024-11-22 05:42:11	33	\N	\N	\N
+122	16	67	\N	3	2	\N	\N	\N	2024-11-22 05:42:11	2024-11-22 05:42:12	33	\N	\N	\N
+123	16	68	\N	3	2	\N	\N	\N	2024-11-22 05:42:12	2024-11-22 05:42:13	33	\N	\N	\N
+124	16	69	\N	3	2	\N	\N	\N	2024-11-22 05:42:13	2024-11-22 05:42:14	33	\N	\N	\N
+125	16	69	124	3	4	\N	\N	\N	2024-11-22 05:42:53	2024-11-22 05:42:53	33	523	18	\N
+129	16	65	120	3	4	\N	\N	\N	2024-11-22 05:42:54	2024-11-22 05:42:54	33	523	18	\N
+130	17	70	\N	3	2	\N	\N	\N	2024-11-22 05:43:26	2024-11-22 05:43:27	34	\N	\N	\N
+131	17	71	\N	3	2	\N	\N	\N	2024-11-22 05:43:27	2024-11-22 05:43:28	34	\N	\N	\N
+132	17	72	\N	3	2	\N	\N	\N	2024-11-22 05:43:28	2024-11-22 05:43:28	34	\N	\N	\N
+133	17	73	\N	3	2	\N	\N	\N	2024-11-22 05:43:29	2024-11-22 05:43:29	34	\N	\N	\N
+134	17	74	\N	3	2	\N	\N	\N	2024-11-22 05:43:30	2024-11-22 05:43:30	34	\N	\N	\N
+135	17	75	\N	3	2	\N	\N	\N	2024-11-22 05:43:31	2024-11-22 05:43:31	34	\N	\N	\N
 \.
 
 
@@ -15304,23 +15306,23 @@ COPY public.submission_settings (submission_setting_id, submission_id, locale, s
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-14	1	14	2024-11-21 05:40:49	2024-11-21 05:39:09	2024-11-21 05:39:09	5	en	3		0
-4	1	4	2024-11-21 05:27:32	2024-11-21 05:26:39	2024-11-21 05:26:39	5	en	1		0
-10	1	10	2024-11-21 05:34:22	2024-11-21 05:34:22	2024-11-21 05:34:22	1	en	1		0
-17	1	17	2024-11-21 05:44:04	2024-11-21 05:43:37	2024-11-21 05:43:37	2	en	1		0
-6	1	6	2024-11-21 05:30:45	2024-11-21 05:30:13	2024-11-21 05:30:13	2	en	1		0
-1	1	1	2024-11-21 05:23:14	2024-11-21 05:22:52	2024-11-21 05:22:52	4	en	1		0
-15	1	15	2024-11-21 05:41:28	2024-11-21 05:41:15	2024-11-21 05:41:15	3	en	1		0
-13	1	13	2024-11-21 05:38:27	2024-11-21 05:37:18	2024-11-21 05:37:18	4	en	1		0
-7	1	7	2024-11-21 05:32:04	2024-11-21 05:31:35	2024-11-21 05:31:35	4	en	1		0
-2	1	2	2024-11-21 05:25:24	2024-11-21 05:24:55	2024-11-21 05:24:55	3	en	1		1
-11	1	11	2024-11-21 05:35:43	2024-11-21 05:34:42	2024-11-21 05:34:42	4	en	1		0
-8	1	8	2024-11-21 05:32:15	2024-11-21 05:32:15	2024-11-21 05:32:15	1	en	1		0
-3	1	3	2024-11-21 05:26:05	2024-11-21 05:26:05	2024-11-21 05:26:05	1	en	1		0
-5	1	5	2024-11-21 05:29:40	2024-11-21 05:28:18	2024-11-21 05:28:18	5	en	3		0
-16	1	16	2024-11-21 05:42:47	2024-11-21 05:42:10	2024-11-21 05:42:10	3	en	1		0
-12	1	12	2024-11-21 05:36:50	2024-11-21 05:36:15	2024-11-21 05:36:15	2	en	1		0
-9	1	9	2024-11-21 05:33:09	2024-11-21 05:32:56	2024-11-21 05:32:56	2	en	1		0
+16	1	16	2024-11-22 05:43:17	2024-11-22 05:42:40	2024-11-22 05:42:40	3	en	1		0
+12	1	12	2024-11-22 05:37:16	2024-11-22 05:36:40	2024-11-22 05:36:40	2	en	1		0
+9	1	9	2024-11-22 05:33:31	2024-11-22 05:33:18	2024-11-22 05:33:18	2	en	1		0
+4	1	4	2024-11-22 05:27:53	2024-11-22 05:27:00	2024-11-22 05:27:00	5	en	1		0
+1	1	1	2024-11-22 05:23:33	2024-11-22 05:23:10	2024-11-22 05:23:10	4	en	1		0
+6	1	6	2024-11-22 05:31:07	2024-11-22 05:30:35	2024-11-22 05:30:35	2	en	1		0
+14	1	14	2024-11-22 05:41:18	2024-11-22 05:39:36	2024-11-22 05:39:36	5	en	3		0
+10	1	10	2024-11-22 05:34:46	2024-11-22 05:34:46	2024-11-22 05:34:46	1	en	1		0
+2	1	2	2024-11-22 05:25:44	2024-11-22 05:25:14	2024-11-22 05:25:14	3	en	1		1
+17	1	17	2024-11-22 05:44:34	2024-11-22 05:44:08	2024-11-22 05:44:08	2	en	1		0
+13	1	13	2024-11-22 05:38:54	2024-11-22 05:37:44	2024-11-22 05:37:44	4	en	1		0
+7	1	7	2024-11-22 05:32:26	2024-11-22 05:31:57	2024-11-22 05:31:57	4	en	1		0
+3	1	3	2024-11-22 05:26:25	2024-11-22 05:26:25	2024-11-22 05:26:25	1	en	1		0
+15	1	15	2024-11-22 05:41:57	2024-11-22 05:41:44	2024-11-22 05:41:44	3	en	1		0
+8	1	8	2024-11-22 05:32:37	2024-11-22 05:32:37	2024-11-22 05:32:37	1	en	1		0
+11	1	11	2024-11-22 05:36:08	2024-11-22 05:35:07	2024-11-22 05:35:07	4	en	1		0
+5	1	5	2024-11-22 05:30:02	2024-11-22 05:28:39	2024-11-22 05:28:39	5	en	3		0
 \.
 
 
@@ -15420,7 +15422,7 @@ COPY public.user_group_settings (user_group_setting_id, user_group_id, locale, s
 63	12		nameLocaleKey	default.groups.name.proofreader
 64	12		abbrevLocaleKey	default.groups.abbrev.proofreader
 71	13	en	abbrev	AU
-78	14	en	name	Volume editor
+75	14		nameLocaleKey	default.groups.name.volumeEditor
 76	14		abbrevLocaleKey	default.groups.abbrev.volumeEditor
 85	15	fr_CA	abbrev	AC
 83	15	en	abbrev	CA
@@ -15439,8 +15441,8 @@ COPY public.user_group_settings (user_group_setting_id, user_group_id, locale, s
 61	11	fr_CA	abbrev	CVM
 73	13	fr_CA	abbrev	AU
 72	13	en	name	Author
+78	14	en	name	Volume editor
 80	14	fr_CA	name	Rédacteur/Rédactrice en chef du volume
-75	14		nameLocaleKey	default.groups.name.volumeEditor
 17	4	en	abbrev	ProdE
 23	5	en	abbrev	AcqE
 31	6	fr_CA	abbrev	RÉV
@@ -15553,7 +15555,6 @@ COPY public.user_group_stage (user_group_stage_id, context_id, user_group_id, st
 
 COPY public.user_groups (user_group_id, context_id, role_id, is_default, show_title, permit_self_registration, permit_metadata_edit, permit_settings, masthead) FROM stdin;
 1	\N	1	1	1	0	0	1	0
-14	1	65536	1	1	1	0	0	0
 2	1	16	1	1	0	1	1	0
 3	1	16	1	1	0	1	1	1
 4	1	16	1	1	0	1	1	0
@@ -15571,6 +15572,7 @@ COPY public.user_groups (user_group_id, context_id, role_id, is_default, show_ti
 17	1	4096	1	1	0	0	0	0
 18	1	4096	1	1	1	0	0	1
 19	1	1048576	1	1	1	0	0	0
+14	1	65536	1	1	1	0	0	0
 \.
 
 
@@ -15849,57 +15851,57 @@ COPY public.user_settings (user_setting_id, user_id, locale, setting_name, setti
 --
 
 COPY public.user_user_groups (user_user_group_id, user_group_id, user_id, date_start, date_end, masthead) FROM stdin;
-1	1	1	2024-11-21 05:18:37	\N	\N
-2	2	1	2024-11-21 05:18:56	\N	\N
-3	2	2	2024-11-21 05:19:47	\N	\N
-4	3	3	2024-11-21 05:19:52	\N	1
-5	5	4	2024-11-21 05:19:58	\N	1
-6	5	5	2024-11-21 05:20:04	\N	1
-7	5	6	2024-11-21 05:20:10	\N	1
-8	17	7	2024-11-21 05:20:16	\N	\N
-9	17	8	2024-11-21 05:20:22	\N	\N
-10	17	9	2024-11-21 05:20:29	\N	\N
-11	18	10	2024-11-21 05:20:36	\N	1
-12	18	11	2024-11-21 05:20:43	\N	1
-13	18	12	2024-11-21 05:20:51	\N	1
-14	6	13	2024-11-21 05:20:58	\N	\N
-15	6	14	2024-11-21 05:21:06	\N	\N
-16	10	15	2024-11-21 05:21:14	\N	\N
-17	10	16	2024-11-21 05:21:23	\N	\N
-18	12	17	2024-11-21 05:21:32	\N	\N
-19	12	18	2024-11-21 05:21:41	\N	\N
-20	19	19	2024-11-21 05:22:30	\N	\N
-21	13	19	2024-11-21 05:22:33	\N	\N
-22	19	20	2024-11-21 05:23:19	\N	\N
-23	13	20	2024-11-21 05:23:23	\N	\N
-24	19	21	2024-11-21 05:25:30	\N	\N
-25	13	21	2024-11-21 05:25:32	\N	\N
-26	19	22	2024-11-21 05:26:09	\N	\N
-27	13	22	2024-11-21 05:26:12	\N	\N
-28	19	23	2024-11-21 05:27:36	\N	\N
-29	13	23	2024-11-21 05:27:38	\N	\N
-30	19	24	2024-11-21 05:29:44	\N	\N
-31	13	24	2024-11-21 05:29:46	\N	\N
-32	19	25	2024-11-21 05:30:58	\N	\N
-33	13	25	2024-11-21 05:31:01	\N	\N
-34	19	26	2024-11-21 05:32:20	\N	\N
-35	13	26	2024-11-21 05:32:22	\N	\N
-36	19	27	2024-11-21 05:33:17	\N	\N
-37	13	27	2024-11-21 05:33:19	\N	\N
-38	19	28	2024-11-21 05:34:27	\N	\N
-39	13	28	2024-11-21 05:34:29	\N	\N
-40	19	29	2024-11-21 05:35:51	\N	\N
-41	13	29	2024-11-21 05:35:53	\N	\N
-42	19	30	2024-11-21 05:36:55	\N	\N
-43	13	30	2024-11-21 05:36:57	\N	\N
-44	19	31	2024-11-21 05:38:35	\N	\N
-45	13	31	2024-11-21 05:38:37	\N	\N
-46	19	32	2024-11-21 05:40:54	\N	\N
-47	13	32	2024-11-21 05:40:56	\N	\N
-48	19	33	2024-11-21 05:41:35	\N	\N
-49	13	33	2024-11-21 05:41:38	\N	\N
-50	19	34	2024-11-21 05:42:52	\N	\N
-51	13	34	2024-11-21 05:42:54	\N	\N
+1	1	1	2024-11-22 05:18:52	\N	\N
+2	2	1	2024-11-22 05:19:13	\N	\N
+3	2	2	2024-11-22 05:20:05	\N	\N
+4	3	3	2024-11-22 05:20:10	\N	1
+5	5	4	2024-11-22 05:20:16	\N	1
+6	5	5	2024-11-22 05:20:22	\N	1
+7	5	6	2024-11-22 05:20:27	\N	1
+8	17	7	2024-11-22 05:20:34	\N	\N
+9	17	8	2024-11-22 05:20:40	\N	\N
+10	17	9	2024-11-22 05:20:47	\N	\N
+11	18	10	2024-11-22 05:20:54	\N	1
+12	18	11	2024-11-22 05:21:01	\N	1
+13	18	12	2024-11-22 05:21:08	\N	1
+14	6	13	2024-11-22 05:21:16	\N	\N
+15	6	14	2024-11-22 05:21:24	\N	\N
+16	10	15	2024-11-22 05:21:32	\N	\N
+17	10	16	2024-11-22 05:21:40	\N	\N
+18	12	17	2024-11-22 05:21:49	\N	\N
+19	12	18	2024-11-22 05:21:58	\N	\N
+20	19	19	2024-11-22 05:22:48	\N	\N
+21	13	19	2024-11-22 05:22:50	\N	\N
+22	19	20	2024-11-22 05:23:37	\N	\N
+23	13	20	2024-11-22 05:23:41	\N	\N
+24	19	21	2024-11-22 05:25:50	\N	\N
+25	13	21	2024-11-22 05:25:52	\N	\N
+26	19	22	2024-11-22 05:26:30	\N	\N
+27	13	22	2024-11-22 05:26:32	\N	\N
+28	19	23	2024-11-22 05:27:57	\N	\N
+29	13	23	2024-11-22 05:27:59	\N	\N
+30	19	24	2024-11-22 05:30:06	\N	\N
+31	13	24	2024-11-22 05:30:08	\N	\N
+32	19	25	2024-11-22 05:31:20	\N	\N
+33	13	25	2024-11-22 05:31:22	\N	\N
+34	19	26	2024-11-22 05:32:42	\N	\N
+35	13	26	2024-11-22 05:32:44	\N	\N
+36	19	27	2024-11-22 05:33:39	\N	\N
+37	13	27	2024-11-22 05:33:41	\N	\N
+38	19	28	2024-11-22 05:34:51	\N	\N
+39	13	28	2024-11-22 05:34:54	\N	\N
+40	19	29	2024-11-22 05:36:16	\N	\N
+41	13	29	2024-11-22 05:36:18	\N	\N
+42	19	30	2024-11-22 05:37:21	\N	\N
+43	13	30	2024-11-22 05:37:23	\N	\N
+44	19	31	2024-11-22 05:39:02	\N	\N
+45	13	31	2024-11-22 05:39:05	\N	\N
+46	19	32	2024-11-22 05:41:23	\N	\N
+47	13	32	2024-11-22 05:41:25	\N	\N
+48	19	33	2024-11-22 05:42:05	\N	\N
+49	13	33	2024-11-22 05:42:07	\N	\N
+50	19	34	2024-11-22 05:43:22	\N	\N
+51	13	34	2024-11-22 05:43:24	\N	\N
 \.
 
 
@@ -15908,40 +15910,40 @@ COPY public.user_user_groups (user_user_group_id, user_group_id, user_id, date_s
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help, remember_token) FROM stdin;
-20	afinkel	$2y$10$i5p9tbRyeGv7z3x6hLNGZuMffS73Raq4MhcPXnKvV0wshprrlsiTa	afinkel@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:23:19	\N	2024-11-21 05:23:19	\N	\N	\N	0	\N	1	\N
-8	phudson	$2y$10$dSnNkxYUrXSyuMjxTn4s4eN2jWwnZvdCv5l1X2Jb3wzPcUX7Iezfa	phudson@mailinator.com				\N	CA	[]	\N	\N	2024-11-21 05:20:22	\N	2024-11-21 05:36:42	0	\N	\N	0	\N	1	\N
-6	minoue	$2y$10$x5266Glx5ejYCK3L1dlbfObd11fHJ791ELYp/3wE4MlWHyR2w.1Si	minoue@mailinator.com				\N	JP	[]	\N	\N	2024-11-21 05:20:09	\N	2024-11-21 05:30:36	0	\N	\N	0	\N	1	\N
-28	jlockehart	$2y$10$bFTNxPcRSplr/QDr6XfMU.0x5PXnDO3VU1LqYW6nv89tJO4zsKH1m	jlockehart@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:34:27	\N	2024-11-21 05:34:27	\N	\N	\N	0	\N	1	\N
-21	bbarnetson	$2y$10$wBZYFY4DIqOLJrsClLscNuCtXF7RGVpB7JJjTvlOULjr.ceqOL6JS	bbarnetson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:25:30	\N	2024-11-21 05:25:30	\N	\N	\N	0	\N	1	\N
-22	bbeaty	$2y$10$c/oyfmPgNDcDI6YL86NmOuLKZUJHQHid/SZiyLHDwgHm1n/AmaPea	bbeaty@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:26:09	\N	2024-11-21 05:26:10	\N	\N	\N	0	\N	1	\N
-4	dbuskins	$2y$10$IExwybD8MWYOHTu6cxn7ROdQfx8qs5QaOC3B.J.onnTAMWIdunXWS	dbuskins@mailinator.com				\N	US	[]	\N	\N	2024-11-21 05:19:58	\N	\N	0	\N	\N	0	\N	1	\N
-5	sberardo	$2y$10$5y.7OtpAluxyBABYvFyfD.hKOfy6tfOb2hvnOR49ar5ETD5m/yaAe	sberardo@mailinator.com				\N	CA	[]	\N	\N	2024-11-21 05:20:03	\N	\N	0	\N	\N	0	\N	1	\N
-7	jjanssen	$2y$10$x.7toxmXiNBoZOQnZmJBfu/GS3ZsnkQnMQ2OZUel5F3KwhNmgogru	jjanssen@mailinator.com				\N	NL	[]	\N	\N	2024-11-21 05:20:16	\N	\N	0	\N	\N	0	\N	1	\N
-9	amccrae	$2y$10$Or3s7jWNuHVCBc1QyTPj0eZpi82JAW7ae75T9qH3glkKtJ9F4NLFu	amccrae@mailinator.com				\N	CA	[]	\N	\N	2024-11-21 05:20:29	\N	\N	0	\N	\N	0	\N	1	\N
-11	alzacharia	$2y$10$zvA3Gc1W5.z62tirgf90z.WFDMYxXpjdRbr80cx5KQnkMNmrImQv6	alzacharia@mailinator.com				\N	GH	[]	\N	\N	2024-11-21 05:20:43	\N	\N	0	\N	\N	0	\N	1	\N
-13	mfritz	$2y$10$G6feIKKLx2OrfofiWQ0xtuN8oyuADCPjP.BHkz6Okv3hGZR5/1QIi	mfritz@mailinator.com				\N	BE	[]	\N	\N	2024-11-21 05:20:58	\N	\N	0	\N	\N	0	\N	1	\N
-14	svogt	$2y$10$hbcOhHqFDJ5GfCrAd2ezAu.3OJxHf6Spl3jAZNNaZpFMXatnuyD/K	svogt@mailinator.com				\N	CL	[]	\N	\N	2024-11-21 05:21:06	\N	\N	0	\N	\N	0	\N	1	\N
-15	gcox	$2y$10$zrSMd2RAz/ncnMaJ3MUr3uvreH4rHbqy17fudgqbaOFFUj4hY/0o6	gcox@mailinator.com				\N	US	[]	\N	\N	2024-11-21 05:21:14	\N	\N	0	\N	\N	0	\N	1	\N
-16	shellier	$2y$10$ZA9Vk0U7Sia2qRJDToAS6OB47GwG3.lRbAHZ/WBskv0y/39bYqcqS	shellier@mailinator.com				\N	ZA	[]	\N	\N	2024-11-21 05:21:22	\N	\N	0	\N	\N	0	\N	1	\N
-17	cturner	$2y$10$c4xadcShIcApsTaMoVj2uecjUUK2wC6jLT8X5NoSHP8ry0k46THqO	cturner@mailinator.com				\N	GB	[]	\N	\N	2024-11-21 05:21:31	\N	\N	0	\N	\N	0	\N	1	\N
-18	skumar	$2y$10$Vo.cbpJdJFwc//YYUzwIyeb3uZpCmeB6MPNbGIT0NvnDqWz2fZtwy	skumar@mailinator.com				\N	SG	[]	\N	\N	2024-11-21 05:21:40	\N	\N	0	\N	\N	0	\N	1	\N
-10	agallego	$2y$10$2eFNWDSa1d91NLFYXCTsQu8OTojxb.crowKm.RHFf9pjw.me1HxUu	agallego@mailinator.com				\N	US	[]	\N	\N	2024-11-21 05:20:36	\N	2024-11-21 05:42:38	0	\N	\N	0	\N	1	\N
-25	dkennepohl	$2y$10$a9vSwrn4sc1ZNpfhMx3ls.4dSRtHu8/Pyd6sh/PvlUD9Qaosz0GoW	dkennepohl@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:30:58	\N	2024-11-21 05:30:59	\N	\N	\N	0	\N	1	\N
-23	callan	$2y$10$0tQtZG37WRoNYTBXQS2oA.8Kd3I8kYs7LGc5ZwPK4KFPYUtOA3a3q	callan@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:27:36	\N	2024-11-21 05:27:36	\N	\N	\N	0	\N	1	\N
-30	mally	$2y$10$wVAvrB7oabHmbDCc9BMUwOSVE1K5XtL843YF9eNHgysuCKzBeVbE2	mally@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:36:55	\N	2024-11-21 05:36:55	\N	\N	\N	0	\N	1	\N
-2	rvaca	$2y$10$yA6n6nDOr6ilVbNX0C01POcBKdQdHOzXvhtRFWXXbI8HAj645eFri	rvaca@mailinator.com				\N	MX	[]	\N	\N	2024-11-21 05:19:46	\N	2024-11-21 05:21:47	0	\N	\N	0	\N	1	\N
-1	admin	$2y$10$sbe2dww9O5w1FGJO4NXVx./GpjUei47NT64BqhpRmzzNsb3jfR1gS	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	[]	\N	\N	2024-11-21 05:18:37	\N	2024-11-21 05:22:10	\N	\N	\N	0	\N	1	\N
-19	aclark	$2y$10$i.3N0uMJa6OWkXmi.suJW.f0da8BzbYhJ2ShUWMy1FCmztfXiDCh.	aclark@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:22:30	\N	2024-11-21 05:22:30	\N	\N	\N	0	\N	1	\N
-32	mforan	$2y$10$lpEXcnVbdbiVu3zm1IaSD.yUYrgdp2szC6lLxOx37vymsTcjel7wi	mforan@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:40:53	\N	2024-11-21 05:40:54	\N	\N	\N	0	\N	1	\N
-26	fperini	$2y$10$kO3LzMuo5pTnlrq1LuLYMuKhtoQCBP6Gjq0c7FIECRi49mwdeagC2	fperini@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:32:19	\N	2024-11-21 05:32:20	\N	\N	\N	0	\N	1	\N
-34	msmith	$2y$10$MJ3Ek9EgqCY.kHqRASziTOyuokwtXcZjhrDEc4ynhzvu6Yt57FgEC	msmith@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:42:52	\N	2024-11-21 05:42:52	\N	\N	\N	0	\N	1	\N
-24	dbernnard	$2y$10$0IVBuj.A43.4osnw6cNVSeouj0a5.LQMy4eDj92j8CPHiSQAHT/tu	dbernnard@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2024-11-21 05:29:44	\N	2024-11-21 05:29:44	\N	\N	\N	0	\N	1	\N
-3	dbarnes	$2y$10$2hzR.UosswuUavbouTKH4.Fwqg4yU4bAApRa.1nweqZu17H/thtKe	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2024-11-21 05:19:52	\N	2024-11-21 05:43:39	0	\N	\N	0	\N	1	\N
-27	jbrower	$2y$10$2TkC6wJjZBhIU/cCKdm9FeHQo7FdAJn5xRWqCkbW1O5V3DLf9Ipr6	jbrower@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:33:17	\N	2024-11-21 05:33:17	\N	\N	\N	0	\N	1	\N
-29	lelder	$2y$10$VlADSAknV4xAxpjSZQEhVuOK3aqpjTQsXblIAxUJnn/aeT68OBctm	lelder@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:35:51	\N	2024-11-21 05:35:51	\N	\N	\N	0	\N	1	\N
-12	gfavio	$2y$10$D0stmbmzTHL1fDL5jT46cOEEcfbGifY2h6IS85S/AJtzE.aOvgCIG	gfavio@mailinator.com				\N	ES	[]	\N	\N	2024-11-21 05:20:50	\N	2024-11-21 05:38:04	0	\N	\N	0	\N	1	\N
-33	mpower	$2y$10$ML5H6BZJZEj4UTE3yEJvd.sThiIaMuJUb1i/xYnE2MWydj7rqiz6y	mpower@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:41:35	\N	2024-11-21 05:41:36	\N	\N	\N	0	\N	1	\N
-31	mdawson	$2y$10$fn0BYed2tOBXLDcq.PJA7upVirWcTBRVJ5oAS2ARXkVYiNjRoVa8.	mdawson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-21 05:38:35	\N	2024-11-21 05:38:35	\N	\N	\N	0	\N	1	\N
+20	afinkel	$2y$10$I7Zv8DVg9hhAH4O8svDNS.ag6FWRkHHi63pZLbosKPvo7sr6CD8hK	afinkel@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:23:37	\N	2024-11-22 05:23:38	\N	\N	\N	0	\N	1	\N
+8	phudson	$2y$10$4ZTMjcM7gd.aAGD235QKsu0Q3HED63ds4Bt3WhnskamVqj1fz9CCu	phudson@mailinator.com				\N	CA	[]	\N	\N	2024-11-22 05:20:40	\N	2024-11-22 05:37:08	0	\N	\N	0	\N	1	\N
+6	minoue	$2y$10$Ntn.8X7bDtuxpIBjAXbFNuOtmgY2kwxo5lLYOipd7l0.4KgxK35jS	minoue@mailinator.com				\N	JP	[]	\N	\N	2024-11-22 05:20:27	\N	2024-11-22 05:30:57	0	\N	\N	0	\N	1	\N
+28	jlockehart	$2y$10$w3.gtx9xJjxarnBQC1/d4eNtPvCmjtn1ZIcTfV.uP6/RWFlL67Tk6	jlockehart@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:34:51	\N	2024-11-22 05:34:52	\N	\N	\N	0	\N	1	\N
+21	bbarnetson	$2y$10$IBdZ82rhg/dA5oqusKsivu.DTmbsDQwsVYWUU2zv.xDNJ8AMm1P9u	bbarnetson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:25:50	\N	2024-11-22 05:25:50	\N	\N	\N	0	\N	1	\N
+22	bbeaty	$2y$10$znJAUehH88XdofqkHevdjuezDPCp7AnARIX40cUfQDfIyuf8axHCS	bbeaty@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:26:30	\N	2024-11-22 05:26:30	\N	\N	\N	0	\N	1	\N
+4	dbuskins	$2y$10$dA2OOv9zJAAXtYaxGUnOcuMWsMO5VvDclSZf1BBcUHLguU08KnyzO	dbuskins@mailinator.com				\N	US	[]	\N	\N	2024-11-22 05:20:15	\N	\N	0	\N	\N	0	\N	1	\N
+5	sberardo	$2y$10$vyW8bKF6SRT9XUMHs5nAUuih3Sj5r1nMO8MPkJ3xdHDzRI2MlUEcm	sberardo@mailinator.com				\N	CA	[]	\N	\N	2024-11-22 05:20:21	\N	\N	0	\N	\N	0	\N	1	\N
+7	jjanssen	$2y$10$mq4X.Aabh6epgSKGEGK8A.D53E0NypTjLLUu5L4djg87bxcBztnrq	jjanssen@mailinator.com				\N	NL	[]	\N	\N	2024-11-22 05:20:33	\N	\N	0	\N	\N	0	\N	1	\N
+9	amccrae	$2y$10$z4FpvdN.LNiYvk1Nrk7M2O/jFpnbCWUe3Ux8lGiM6yLQj4A/sY/NO	amccrae@mailinator.com				\N	CA	[]	\N	\N	2024-11-22 05:20:46	\N	\N	0	\N	\N	0	\N	1	\N
+11	alzacharia	$2y$10$DeFRzkyUbKPXPv6ODvvzjOWCmqmaewmtcjUg6J0n8Vmh1TlKJ6lDy	alzacharia@mailinator.com				\N	GH	[]	\N	\N	2024-11-22 05:21:00	\N	\N	0	\N	\N	0	\N	1	\N
+13	mfritz	$2y$10$dKFHFvuvLAnAMOrybJnFn.OOezaRaSd9O9A4ORlZwppv9sAKbM9mm	mfritz@mailinator.com				\N	BE	[]	\N	\N	2024-11-22 05:21:15	\N	\N	0	\N	\N	0	\N	1	\N
+14	svogt	$2y$10$z4rx9EE/5EMWIv0SDb93VOT8MSXEkixAoTwsXbXRtrmTXtPdDQfwS	svogt@mailinator.com				\N	CL	[]	\N	\N	2024-11-22 05:21:23	\N	\N	0	\N	\N	0	\N	1	\N
+15	gcox	$2y$10$zGZYY3y0apXC4MJX.Izz8ukN2JWI.bsQZdf868ogd1.aCmMksGq.G	gcox@mailinator.com				\N	US	[]	\N	\N	2024-11-22 05:21:31	\N	\N	0	\N	\N	0	\N	1	\N
+16	shellier	$2y$10$CAH2VUWDZD0EQzbeFqWVquFsnjgro7YOkOgNE07YVE/sP0cly4.q.	shellier@mailinator.com				\N	ZA	[]	\N	\N	2024-11-22 05:21:40	\N	\N	0	\N	\N	0	\N	1	\N
+17	cturner	$2y$10$I.bImoVByPgusFjoN3toC.cAeDdyn2Q0IM14UbIo9dXfuilSF6KAi	cturner@mailinator.com				\N	GB	[]	\N	\N	2024-11-22 05:21:48	\N	\N	0	\N	\N	0	\N	1	\N
+18	skumar	$2y$10$1KNP3Uehp9ot00oiy8I4Ye9GlqwFlHM9NQHOH5EDdSK6Pp3xUZrJ.	skumar@mailinator.com				\N	SG	[]	\N	\N	2024-11-22 05:21:57	\N	\N	0	\N	\N	0	\N	1	\N
+10	agallego	$2y$10$CGZH1LHFSQXV9hmTvhKBxOBlQS3l4qE1NhGfddaUFRtnbIOMR/IRi	agallego@mailinator.com				\N	US	[]	\N	\N	2024-11-22 05:20:53	\N	2024-11-22 05:43:08	0	\N	\N	0	\N	1	\N
+25	dkennepohl	$2y$10$Xnom18kp5iN5.f8Ys4m1R.6t1au0/jQk9v0FPVhajTdJrf.T/gY9O	dkennepohl@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:31:20	\N	2024-11-22 05:31:20	\N	\N	\N	0	\N	1	\N
+23	callan	$2y$10$4WmZMCSBr5VMOwxLYZG6wu9y82JBe1d2npE8wGNU0ig5sjVKPtd2i	callan@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:27:57	\N	2024-11-22 05:27:57	\N	\N	\N	0	\N	1	\N
+30	mally	$2y$10$2TJQRNAKVTU5j.6wjYUfT.HrgYzSOP98rViUGmC/Lu0TPQ.pxwrk6	mally@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:37:21	\N	2024-11-22 05:37:21	\N	\N	\N	0	\N	1	\N
+2	rvaca	$2y$10$LedOmWNCZGtfGaH70BWIrusrhZoIn75gPciwmMxq3BCOtdxXx8Ssi	rvaca@mailinator.com				\N	MX	[]	\N	\N	2024-11-22 05:20:04	\N	2024-11-22 05:22:04	0	\N	\N	0	\N	1	\N
+1	admin	$2y$10$V3.Z/o2ygQfWkccOHBT6Uu2rMpPbG9mWSBNiZNe.xsa2B1f35x7R6	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	[]	\N	\N	2024-11-22 05:18:52	\N	2024-11-22 05:22:28	\N	\N	\N	0	\N	1	\N
+19	aclark	$2y$10$sMbLGDakUEoYdpxxuJ34ru9bmiOCdZKm1VnMh8s2iDARv0KxVzboe	aclark@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:22:48	\N	2024-11-22 05:22:48	\N	\N	\N	0	\N	1	\N
+32	mforan	$2y$10$V2rYrRkpHh1Ut4f24bzahukHSMzH7MgKRDK1daOSNCufedVU0DRGi	mforan@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:41:22	\N	2024-11-22 05:41:23	\N	\N	\N	0	\N	1	\N
+26	fperini	$2y$10$cfDAcqa1E24YUm9X.d7KdOTvy/T0iVrIxlwcnCTEUwG7BTbRYGwk6	fperini@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:32:42	\N	2024-11-22 05:32:42	\N	\N	\N	0	\N	1	\N
+34	msmith	$2y$10$nNcjhHgdJSbdyvNsLLNn6.xBpwWIKV6m5NaKQCxDT9G8h/re1KwLa	msmith@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:43:22	\N	2024-11-22 05:43:22	\N	\N	\N	0	\N	1	\N
+24	dbernnard	$2y$10$oS9FhpAVJlQ4waKVcgZVWeCxbdRc3.m9g8BqPCl85pjta5JDSk0SS	dbernnard@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2024-11-22 05:30:06	\N	2024-11-22 05:30:06	\N	\N	\N	0	\N	1	\N
+3	dbarnes	$2y$10$K7r12ON.hCBtVaFZXszW0.iFXqE.GWKhC81rLx.15flzCux1Srwkq	dbarnes@mailinator.com				\N	AU	[]	\N	\N	2024-11-22 05:20:10	\N	2024-11-22 05:44:10	0	\N	\N	0	\N	1	\N
+27	jbrower	$2y$10$/xzOH042IJWkUkeTjckcueUIlHM5k9wRWsy4HG23r3u1aSm/WF3rG	jbrower@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:33:39	\N	2024-11-22 05:33:39	\N	\N	\N	0	\N	1	\N
+29	lelder	$2y$10$ouNwWlL1SRMvfcIfNQfQLeEU6FL95IA3UVnZxI0D0MWsVf4Wht2bC	lelder@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:36:16	\N	2024-11-22 05:36:16	\N	\N	\N	0	\N	1	\N
+12	gfavio	$2y$10$kqRjy4j14utsZgF559xzVuRW3Z4pYqy2TBTSnor2qqgtjyX7U6MlS	gfavio@mailinator.com				\N	ES	[]	\N	\N	2024-11-22 05:21:08	\N	2024-11-22 05:38:31	0	\N	\N	0	\N	1	\N
+33	mpower	$2y$10$K5SelWlHwIB8/4xKhd1VqOd9mdGUzXN2t122SYyJc08FDkCe7RE86	mpower@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:42:05	\N	2024-11-22 05:42:05	\N	\N	\N	0	\N	1	\N
+31	mdawson	$2y$10$CEI9Dyh6cqhWYkF.iFqOPuB/IzF9gOhCrnB7Hs2HAH9Xv2q/5zCf6	mdawson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2024-11-22 05:39:02	\N	2024-11-22 05:39:03	\N	\N	\N	0	\N	1	\N
 \.
 
 
@@ -15950,35 +15952,35 @@ COPY public.users (user_id, username, password, email, url, phone, mailing_addre
 --
 
 COPY public.versions (version_id, major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	1	0	0	0	2024-11-21 05:18:37	1	plugins.metadata	dc11		0	0
-2	1	0	0	0	2024-11-21 05:18:37	1	plugins.pubIds	urn	\\APP\\plugins\\pubIds\\urn\\URNPubIdPlugin	0	0
-3	1	0	0	0	2024-11-21 05:18:37	1	plugins.blocks	information	InformationBlockPlugin	1	0
-4	1	0	0	0	2024-11-21 05:18:37	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-5	1	0	0	0	2024-11-21 05:18:37	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-6	1	0	0	0	2024-11-21 05:18:37	1	plugins.blocks	browse	\\APP\\plugins\\blocks\\browse\\BrowseBlockPlugin	1	0
-7	1	0	0	0	2024-11-21 05:18:37	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-8	1	0	0	0	2024-11-21 05:18:37	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-9	1	0	0	0	2024-11-21 05:18:37	1	plugins.generic	usageEvent		0	1
-10	0	1	0	0	2024-11-21 05:18:37	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
-11	1	2	0	0	2024-11-21 05:18:37	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-12	1	0	0	0	2024-11-21 05:18:37	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-13	1	2	0	0	2024-11-21 05:18:37	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-14	1	0	0	0	2024-11-21 05:18:37	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
-15	1	0	0	0	2024-11-21 05:18:37	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-16	1	0	0	0	2024-11-21 05:18:37	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-17	1	0	0	0	2024-11-21 05:18:37	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-18	1	0	0	0	2024-11-21 05:18:37	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-19	1	0	0	0	2024-11-21 05:18:37	1	plugins.themes	default	DefaultThemePlugin	1	0
-20	1	0	0	0	2024-11-21 05:18:37	1	plugins.importexport	csv		0	0
-21	1	0	0	0	2024-11-21 05:18:37	1	plugins.importexport	onix30		0	0
-22	1	0	0	0	2024-11-21 05:18:37	1	plugins.importexport	users		0	0
-23	1	0	0	0	2024-11-21 05:18:37	1	plugins.importexport	native		0	0
-24	1	0	0	0	2024-11-21 05:18:37	1	plugins.oaiMetadataFormats	dc		0	0
-25	1	0	0	0	2024-11-21 05:18:37	1	plugins.paymethod	paypal		0	0
-26	1	0	0	0	2024-11-21 05:18:37	1	plugins.paymethod	manual		0	0
-27	1	0	0	0	2024-11-21 05:18:37	1	plugins.reports	monographReport		0	0
-28	2	0	1	0	2024-11-21 05:18:37	1	plugins.reports	reviewReport		0	0
-29	3	5	0	0	2024-11-21 05:18:35	1	core	omp		0	1
+1	1	0	0	0	2024-11-22 05:18:52	1	plugins.metadata	dc11		0	0
+2	1	0	0	0	2024-11-22 05:18:52	1	plugins.pubIds	urn	\\APP\\plugins\\pubIds\\urn\\URNPubIdPlugin	0	0
+3	1	0	0	0	2024-11-22 05:18:52	1	plugins.blocks	information	InformationBlockPlugin	1	0
+4	1	0	0	0	2024-11-22 05:18:52	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+5	1	0	0	0	2024-11-22 05:18:52	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+6	1	0	0	0	2024-11-22 05:18:52	1	plugins.blocks	browse	\\APP\\plugins\\blocks\\browse\\BrowseBlockPlugin	1	0
+7	1	0	0	0	2024-11-22 05:18:52	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+8	1	0	0	0	2024-11-22 05:18:52	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+9	1	0	0	0	2024-11-22 05:18:52	1	plugins.generic	usageEvent		0	1
+10	0	1	0	0	2024-11-22 05:18:52	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+11	1	2	0	0	2024-11-22 05:18:52	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+12	1	0	0	0	2024-11-22 05:18:52	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+13	1	2	0	0	2024-11-22 05:18:52	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+14	1	0	0	0	2024-11-22 05:18:52	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
+15	1	0	0	0	2024-11-22 05:18:52	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+16	1	0	0	0	2024-11-22 05:18:52	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+17	1	0	0	0	2024-11-22 05:18:52	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+18	1	0	0	0	2024-11-22 05:18:52	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+19	1	0	0	0	2024-11-22 05:18:52	1	plugins.themes	default	DefaultThemePlugin	1	0
+20	1	0	0	0	2024-11-22 05:18:52	1	plugins.importexport	csv		0	0
+21	1	0	0	0	2024-11-22 05:18:52	1	plugins.importexport	onix30		0	0
+22	1	0	0	0	2024-11-22 05:18:52	1	plugins.importexport	users		0	0
+23	1	0	0	0	2024-11-22 05:18:52	1	plugins.importexport	native		0	0
+24	1	0	0	0	2024-11-22 05:18:52	1	plugins.oaiMetadataFormats	dc		0	0
+25	1	0	0	0	2024-11-22 05:18:52	1	plugins.paymethod	paypal		0	0
+26	1	0	0	0	2024-11-22 05:18:52	1	plugins.paymethod	manual		0	0
+27	1	0	0	0	2024-11-22 05:18:52	1	plugins.reports	monographReport		0	0
+28	2	0	1	0	2024-11-22 05:18:52	1	plugins.reports	reviewReport		0	0
+29	3	5	0	0	2024-11-22 05:18:51	1	core	omp		0	1
 \.
 
 
