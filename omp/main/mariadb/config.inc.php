@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:7tkfeHsoS8JGbp1KqvgmWodpLHGudDkUxrORNUM7vfU="
+app_key = "base64:qAmtTwrkR1KX3A3zYbV8qpMDy+36c3zL9joj8yoF6ug="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -161,16 +161,12 @@ debug = Off
 
 [cache]
 
-; The type of data caching to use. Options are:
-; - memcache: Use the memcache server configured below
-; - file: Use file-based caching; configured below
-; - none: Use no caching. This may be extremely slow.
-; This setting affects locale data, press settings, and plugin settings.
-cache = file
+; Default driver for Laravel-based caching. Currently supports opcache and file drivers.
+; By default, the opcache is used.
+; default = opcache
 
-; Enable memcache support
-memcache_hostname = localhost
-memcache_port = 11211
+; Path to store cache contents for file or opcode based caches.
+; path = cache/opcache
 
 ; For site visitors who are not logged in, many pages are often entirely
 ; static (e.g. About, the home page, etc). If the option below is enabled,
