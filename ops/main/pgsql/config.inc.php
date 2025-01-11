@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:tre0oOEuItnJQJSPPnZBy9x23CEjkzqJcfJUPLJsjck="
+app_key = "base64:Qz/VxnP2w3hfS7XzUOncDLflbwxqvduK0N1dhqrBuq0="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -444,6 +444,27 @@ captcha_on_login = on
 ; Validate the hostname in the ReCaptcha response
 recaptcha_enforce_hostname = Off
 
+; ALTCHA is a free and open-source alternative to Google's ReCaptcha
+; The options below will manage all the required configurations used to
+; work with ALTCHA instead of ReCaptcha on system
+
+; Whether or not to enable ALTCHA
+altcha = off
+
+; Private key for ALTCHA
+altcha_hmackey = 'Example key'
+
+; Whether or not to use ALTCHA on user registration
+altcha_on_register = on
+
+; Whether or not to use ALTCHA on user login
+altcha_on_login = on
+
+; Whether or not to use ALTCHA on user lost password
+altcha_on_lost_password = on
+
+; The quantity of encryption cycles performed by the ALTCHA system
+altcha_encrypt_number = 10000
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; External Commands ;
