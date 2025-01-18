@@ -7173,9 +7173,9 @@ COPY public.dois (doi_id, context_id, doi, status) FROM stdin;
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	4	\N	5	\N	3	8	2025-01-17 05:20:36
-2	4	\N	5	\N	3	16	2025-01-17 05:20:41
-3	4	\N	5	\N	3	8	2025-01-17 05:20:46
+1	4	\N	5	\N	3	8	2025-01-18 05:20:12
+2	4	\N	5	\N	3	16	2025-01-18 05:20:17
+3	4	\N	5	\N	3	8	2025-01-18 05:20:22
 \.
 
 
@@ -7184,70 +7184,70 @@ COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, st
 --
 
 COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
-1	1048585	1	\N	2025-01-17 05:18:19	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=1">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=1">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-2	1048585	1	\N	2025-01-17 05:18:19	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=1">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=1">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-3	1048585	1	\N	2025-01-17 05:18:19	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Carlo Corino" <ccorino@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Carlo Corino,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The influence of lactation on the quantity and quality of cashmere production, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=1</p><p>If you have been logged out, you can login again with the username ccorino.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=1">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-4	1048585	2	\N	2025-01-17 05:19:18	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-10	1048585	3	\N	2025-01-17 05:19:46	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Craig Montgomerie" <cmontgomerie@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Craig Montgomerie,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=3</p><p>If you have been logged out, you can login again with the username cmontgomerie.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=3">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-5	1048585	2	\N	2025-01-17 05:19:18	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-6	1048585	2	\N	2025-01-17 05:19:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Catherine Kwantes" <ckwantes@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Catherine Kwantes,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=2</p><p>If you have been logged out, you can login again with the username ckwantes.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=2">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-7	1048585	2	\N	2025-01-17 05:19:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Urho Kekkonen" <notanemailukk@mailinator.com>			Submission Acknowledgement	<p>Dear Urho Kekkonen,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Catherine Kwantes, provided the following details:</p><p>The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-8	1048585	3	\N	2025-01-17 05:19:46	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-9	1048585	3	\N	2025-01-17 05:19:46	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-11	1048585	3	\N	2025-01-17 05:19:46	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Mark Irvine" <mirvine@mailinator.com>			Submission Acknowledgement	<p>Dear Mark Irvine,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Craig Montgomerie, provided the following details:</p><p>Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-12	1048585	4	\N	2025-01-17 05:20:30	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=4">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=4">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-13	1048585	4	\N	2025-01-17 05:20:30	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=4">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=4">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-14	1048585	4	\N	2025-01-17 05:20:30	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Diaga Diouf,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Genetic transformation of forest trees, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4</p><p>If you have been logged out, you can login again with the username ddiouf.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-15	1048585	4	3	2025-01-17 05:20:36	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-16	1048585	4	3	2025-01-17 05:20:41	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			We have reversed the decision to decline your submission	<p>Dear Diaga Diouf,</p>\n<p>The decision to decline your submission, Genetic transformation of forest trees, has been reversed. \nA moderator will look further at your submission before deciding whether to decline \nor post the submission.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>
-17	1048585	4	3	2025-01-17 05:20:46	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
-18	1048585	5	\N	2025-01-17 05:21:08	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5">Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-44	1048585	13	\N	2025-01-17 05:24:30	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-19	1048585	5	\N	2025-01-17 05:21:08	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5">Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-20	1048585	5	\N	2025-01-17 05:21:08	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Dana Phillips,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5</p><p>If you have been logged out, you can login again with the username dphillips.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-21	1048585	6	\N	2025-01-17 05:21:41	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-22	1048585	6	\N	2025-01-17 05:21:41	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-45	1048585	13	\N	2025-01-17 05:24:30	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-23	1048585	6	\N	2025-01-17 05:21:41	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Domatilia Sokoloff" <dsokoloff@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Domatilia Sokoloff,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=6</p><p>If you have been logged out, you can login again with the username dsokoloff.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=6">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-24	1048585	7	\N	2025-01-17 05:22:05	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=7">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=7">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-25	1048585	7	\N	2025-01-17 05:22:05	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=7">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=7">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-26	1048585	7	\N	2025-01-17 05:22:05	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Elinor Ostrom" <eostrom@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Elinor Ostrom,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=7</p><p>If you have been logged out, you can login again with the username eostrom.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=7">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-27	1048585	7	\N	2025-01-17 05:22:05	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank van Laerhoven" <fvanlaerhoven@mailinator.com>			Submission Acknowledgement	<p>Dear Frank van Laerhoven,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Elinor Ostrom, provided the following details:</p><p>Developing efficacy beliefs in the classroom<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-28	1048585	8	\N	2025-01-17 05:22:29	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-29	1048585	8	\N	2025-01-17 05:22:29	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-30	1048585	8	\N	2025-01-17 05:22:29	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Fabio Paglieri,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hansen & Pinto: Reason Reclaimed, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=8</p><p>If you have been logged out, you can login again with the username fpaglieri.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=8">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-31	1048585	9	\N	2025-01-17 05:22:53	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=9">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=9">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-32	1048585	9	\N	2025-01-17 05:22:53	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=9">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=9">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-33	1048585	9	\N	2025-01-17 05:22:53	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Mwandenga" <jmwandenga@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear John Mwandenga,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=9</p><p>If you have been logged out, you can login again with the username jmwandenga.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=9">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-63	1048585	19	\N	2025-01-17 05:26:54	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=19">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=19">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-34	1048585	10	\N	2025-01-17 05:23:17	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-35	1048585	10	\N	2025-01-17 05:23:17	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-36	1048585	10	\N	2025-01-17 05:23:17	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Novak" <jnovak@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear John Novak,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Condensing Water Availability Models to Focus on Specific Water Management Systems, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=10</p><p>If you have been logged out, you can login again with the username jnovak.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=10">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-37	1048585	11	\N	2025-01-17 05:23:42	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-43	1048585	12	\N	2025-01-17 05:24:06	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Leo Christopher" <lchristopher@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Leo Christopher,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Sodium butyrate improves growth performance of weaned piglets during the first period after weaning, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=12</p><p>If you have been logged out, you can login again with the username lchristopher.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=12">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-38	1048585	11	\N	2025-01-17 05:23:42	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-39	1048585	11	\N	2025-01-17 05:23:42	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Karim Al-Khafaji" <kalkhafaji@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Karim Al-Khafaji,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Learning Sustainable Design through Service, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=11</p><p>If you have been logged out, you can login again with the username kalkhafaji.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=11">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-40	1048585	11	\N	2025-01-17 05:23:42	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Margaret Morse" <mmorse@mailinator.com>			Submission Acknowledgement	<p>Dear Margaret Morse,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Karim Al-Khafaji, provided the following details:</p><p>Learning Sustainable Design through Service<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-41	1048585	12	\N	2025-01-17 05:24:06	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-42	1048585	12	\N	2025-01-17 05:24:06	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-46	1048585	13	\N	2025-01-17 05:24:30	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Lise Kumiega" <lkumiega@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Lise Kumiega,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=13</p><p>If you have been logged out, you can login again with the username lkumiega.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=13">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-47	1048585	14	\N	2025-01-17 05:24:54	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=14">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=14">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-48	1048585	14	\N	2025-01-17 05:24:54	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=14">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=14">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-49	1048585	14	\N	2025-01-17 05:24:54	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Patricia Daniel" <pdaniel@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Patricia Daniel,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14</p><p>If you have been logged out, you can login again with the username pdaniel.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-50	1048585	15	\N	2025-01-17 05:25:18	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-51	1048585	15	\N	2025-01-17 05:25:18	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-52	1048585	15	\N	2025-01-17 05:25:18	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Rana Baiyewu,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Yam diseases and its management in Nigeria, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=15</p><p>If you have been logged out, you can login again with the username rbaiyewu.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=15">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-53	1048585	16	\N	2025-01-17 05:25:42	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-54	1048585	16	\N	2025-01-17 05:25:42	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-55	1048585	16	\N	2025-01-17 05:25:42	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rosanna Rossi" <rrossi@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Rosanna Rossi,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=16</p><p>If you have been logged out, you can login again with the username rrossi.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=16">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-56	1048585	17	\N	2025-01-17 05:26:06	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-57	1048585	17	\N	2025-01-17 05:26:06	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-58	1048585	17	\N	2025-01-17 05:26:06	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Vajiheh Karbasizaed,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=17</p><p>If you have been logged out, you can login again with the username vkarbasizaed.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=17">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-59	1048585	18	\N	2025-01-17 05:26:30	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=18">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=18">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-60	1048585	18	\N	2025-01-17 05:26:30	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=18">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=18">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-61	1048585	18	\N	2025-01-17 05:26:30	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Valerie Williamson" <vwilliamson@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Valerie Williamson,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Self-Organization in Multi-Level Institutions in Networked Environments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=18</p><p>If you have been logged out, you can login again with the username vwilliamson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=18">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-62	1048585	19	\N	2025-01-17 05:26:54	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=19">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=19">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
-64	1048585	19	\N	2025-01-17 05:26:54	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Zita Woods" <zwoods@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Zita Woods,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Finocchiaro: Arguments About Arguments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=19</p><p>If you have been logged out, you can login again with the username zwoods.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=19">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+1	1048585	1	\N	2025-01-18 05:17:56	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=1">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=1">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+2	1048585	1	\N	2025-01-18 05:17:56	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=1">The influence of lactation on the quantity and quality of cashmere production</a><br />Carlo Corino</p><p><b>Abstract</b></p>The effects of pressed beet pulp silage (PBPS) replacing barley for 10% and 20% (DM basis) were studied on heavy pigs fed dairy whey-diluted diets. 60 Hypor pigs (average initial weight of 28 kg), 30 barrows and 30 gilts, were homogeneously allocated to three exper- imental groups: T1 (control) in which pigs were fed a traditional sweet whey- diluted diet (the ratio between whey and dry matter was 4.5/1); T2 in which PBPS replaced barley for 10% (DM basis) during a first period (from the beginning to the 133rd day of trial) and thereafter for 20% (DM basis); T3 in which PBPS replaced barley for 20% (DM basis) throughout the experimental period. In diets T2 and T3 feed was dairy whey-diluted as in group T1. No significant (P&gt;0.05) differences were observed concerning growth parameters (ADG and FCR). Pigs on diets contain- ing PBPS showed significantly higher (P&lt;0.05) percentages of lean cuts and lower percentages of fat cuts. On the whole, ham weight losses during seasoning were moderate but significantly (P&lt;0.05) more marked for PBPS-fed pigs as a prob- able consequence of their lower adiposity degree. Fatty acid composition of ham fat was unaffected by diets. With regard to m. Semimembranosus colour, pigs receiving PBPS showed lower (P&lt;0.05) "L", "a" and "Chroma" values. From an economical point of view it can be concluded that the use of PBPS (partially replacing barley) and dairy whey in heavy pig production could be of particular interest in areas where both these by products are readily available.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=1">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+3	1048585	1	\N	2025-01-18 05:17:56	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Carlo Corino" <ccorino@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Carlo Corino,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The influence of lactation on the quantity and quality of cashmere production, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=1</p><p>If you have been logged out, you can login again with the username ccorino.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=1">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+4	1048585	2	\N	2025-01-18 05:18:54	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+10	1048585	3	\N	2025-01-18 05:19:22	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Craig Montgomerie" <cmontgomerie@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Craig Montgomerie,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=3</p><p>If you have been logged out, you can login again with the username cmontgomerie.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=3">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+5	1048585	2	\N	2025-01-18 05:18:54	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2">The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence</a><br />Catherine Kwantes, Urho Kekkonen</p><p><b>Abstract</b></p><p>Archival data from an attitude survey of employees in a single multinational organization were used to examine the degree to which national culture affects the nature of job satisfaction. Responses from nine countries were compiled to create a benchmark against which nations could be individually compared. Factor analysis revealed four factors: Organizational Communication, Organizational Efficiency/Effectiveness, Organizational Support, and Personal Benefit. Comparisons of factor structures indicated that Organizational Communication exhibited the most construct equivalence, and Personal Benefit the least. The most satisfied employees were those from China, and the least satisfied from Brazil, consistent with previous findings that individuals in collectivistic nations report higher satisfaction. The research findings suggest that national cultural context exerts an effect on the nature of job satisfaction.</p><p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+6	1048585	2	\N	2025-01-18 05:18:54	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Catherine Kwantes" <ckwantes@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Catherine Kwantes,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=2</p><p>If you have been logged out, you can login again with the username ckwantes.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=2">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+7	1048585	2	\N	2025-01-18 05:18:54	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Urho Kekkonen" <notanemailukk@mailinator.com>			Submission Acknowledgement	<p>Dear Urho Kekkonen,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Catherine Kwantes, provided the following details:</p><p>The Facets Of Job Satisfaction: A Nine-Nation Comparative Study Of Construct Equivalence<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+8	1048585	3	\N	2025-01-18 05:19:22	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+9	1048585	3	\N	2025-01-18 05:19:22	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3">Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice</a><br />Craig Montgomerie, Mark Irvine</p><p><b>Abstract</b></p>The integration of technology into the classroom is a major issue in education today. Many national and provincial initiatives specify the technology skills that students must demonstrate at each grade level. The Government of the Province of Alberta in Canada, has mandated the implementation of a new curriculum which began in September of 2000, called Information and Communication Technology. This curriculum is infused within core courses and specifies what students are “expected to know, be able to do, and be like with respect to technology” (Alberta Learning, 2000). Since teachers are required to implement this new curriculum, school jurisdictions are turning to professional development strategies and hiring standards to upgrade teachers’ computer skills to meet this goal. This paper summarizes the results of a telephone survey administered to all public school jurisdictions in the Province of Alberta with a 100% response rate. We examined the computer skills that school jurisdictions require of newly hired teachers, and the support strategies employed for currently employed teachers.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+11	1048585	3	\N	2025-01-18 05:19:22	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Mark Irvine" <mirvine@mailinator.com>			Submission Acknowledgement	<p>Dear Mark Irvine,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Craig Montgomerie, provided the following details:</p><p>Computer Skill Requirements for New and Existing Teachers: Implications for Policy and Practice<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+12	1048585	4	\N	2025-01-18 05:20:06	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=4">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=4">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+13	1048585	4	\N	2025-01-18 05:20:06	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=4">Genetic transformation of forest trees</a><br />Diaga Diouf</p><p><b>Abstract</b></p>In this review, the recent progress on genetic transformation of forest trees were discussed. Its described also, different applications of genetic engineering for improving forest trees or understanding the mechanisms governing genes expression in woody plants.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=4">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+14	1048585	4	\N	2025-01-18 05:20:06	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Diaga Diouf,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Genetic transformation of forest trees, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4</p><p>If you have been logged out, you can login again with the username ddiouf.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+15	1048585	4	3	2025-01-18 05:20:12	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+16	1048585	4	3	2025-01-18 05:20:17	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			We have reversed the decision to decline your submission	<p>Dear Diaga Diouf,</p>\n<p>The decision to decline your submission, Genetic transformation of forest trees, has been reversed. \nA moderator will look further at your submission before deciding whether to decline \nor post the submission.</p>\n<p>Occasionally, a decision to decline a submission will be recorded accidentally in \nour system and must be reverted. I apologize for any confusion this may have caused.</p>\n<p>We will contact you if we need any further assistance.</p>\n<p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4">submission dashboard</a>.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>
+17	1048585	4	3	2025-01-18 05:20:22	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Diaga Diouf" <ddiouf@mailinator.com>			Your submission has been declined	<p>Dear Diaga Diouf,</p><p>I’m sorry to inform you that, after reviewing your submission, Genetic transformation of forest trees, the editor has found that it does not meet our requirements for publication in Public Knowledge Preprint Server.</p><p>I wish you success if you consider submitting your work elsewhere.</p><p>Kind regards,</p><p>Daniel Barnes</p>
+18	1048585	5	\N	2025-01-18 05:20:43	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5">Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+44	1048585	13	\N	2025-01-18 05:24:05	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+19	1048585	5	\N	2025-01-18 05:20:43	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5">Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement</a><br />Dana Phillips</p><p><b>Abstract</b></p>Robert Fogelin claims that interlocutors must share a framework of background beliefs and commitments in order to fruitfully pursue argument. I refute Fogelin’s claim by investigating more thoroughly the shared background required for productive argument. I find that this background consists not in any common beliefs regarding the topic at hand, but rather in certain shared pro-cedural commitments and competencies. I suggest that Fogelin and his supporters mistakenly view shared beliefs as part of the required background for productive argument because these procedural com-mitments become more difficult to uphold when people’s beliefs diverge widely regarding the topic at hand.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+20	1048585	5	\N	2025-01-18 05:20:43	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Dana Phillips" <dphillips@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Dana Phillips,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Investigating the Shared Background Required for Argument: A Critique of Fogelin's Thesis on Deep Disagreement, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5</p><p>If you have been logged out, you can login again with the username dphillips.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+21	1048585	6	\N	2025-01-18 05:21:15	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+22	1048585	6	\N	2025-01-18 05:21:15	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6">Developing efficacy beliefs in the classroom</a><br />Domatilia Sokoloff</p><p><b>Abstract</b></p>A major goal of education is to equip children with the knowledge, skills and self-belief to be confident and informed citizens - citizens who continue to see themselves as learners beyond graduation. This paper looks at the key role of nurturing efficacy beliefs in order to learn and participate in school and society. Research findings conducted within a social studies context are presented, showing how strategy instruction can enhance self-efficacy for learning. As part of this research, Creative Problem Solving (CPS) was taught to children as a means to motivate and support learning. It is shown that the use of CPS can have positive effects on self-efficacy for learning, and be a valuable framework to involve children in decision-making that leads to social action. Implications for enhancing self-efficacy and motivation to learn in the classroom are discussed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+45	1048585	13	\N	2025-01-18 05:24:05	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13">Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions</a><br />Lise Kumiega</p><p><b>Abstract</b></p>The Edwards Aquifer serves as the primary water supply in South-Central Texas and is the source for several major springs. In developing a plan to protect endangered species immediately downstream of San Marcos Springs, questions have been raised regarding the established concept of a hydrologic divide between the San Antonio and Barton Springs segments of the Edwards Aquifer during drought conditions. To address these questions, a water-level data collection program and a hydrogeologic study was conducted. An analysis of groundwater-level data indicate that a groundwater divide exists in the vicinity of the surface drainage divide between Onion Creek and Blanco River during wet and normal hydrologic conditions. However, analysis of data collected during the 2009 drought suggests that the groundwater divide dissipated and no longer hydrologically separated the two segments. As a result, there is potential for groundwater to flow past San Marcos Springs toward Barton Springs during major droughts. The implications for this have bearings on the management and availability of groundwater in the Edwards Aquifer. Assessments of simulations from a numerical model suggest 5 cfs could be flowing past San Marcos toward Barton springs under drought conditions. The groundwater divide appears to be influenced by recharge along Onion Creek and Blanco River and appears to be vulnerable to extended periods of little or no recharge and extensive pumping in the vicinity of Kyle and Buda. The 2009 data set shows a very low gradient in the potentiometric surface between San Marcos Springs and Kyle with very little variation in levels between drought and non-drought periods. From Kyle toward Barton Springs, the potentiometric surface slopes significantly to the north and has dramatic changes in levels between drought and non-drought periods. The source and nature of the discontinuity of the change in potentiometric gradients and dynamic water level response at Kyle is unknown. Structural influences or hydraulic properties inherent in the aquifer could be the cause of this discontinuity and may also influence the degree of hydrologic connection between San Marcos and Barton Springs. Rapid population growth and increased water demands in the Kyle and Buda areas necessitates a continual groundwater level monitoring program between San Marcos Springs and Buda to provide data for future hydrogeologic and trend analyses.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+23	1048585	6	\N	2025-01-18 05:21:15	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Domatilia Sokoloff" <dsokoloff@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Domatilia Sokoloff,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=6</p><p>If you have been logged out, you can login again with the username dsokoloff.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=6">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+24	1048585	7	\N	2025-01-18 05:21:39	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=7">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=7">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+25	1048585	7	\N	2025-01-18 05:21:39	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=7">Developing efficacy beliefs in the classroom</a><br />Elinor Ostrom, Frank van Laerhoven</p><p><b>Abstract</b></p>The study of the commons has expe- rienced substantial growth and development over the past decades.1 Distinguished scholars in many disciplines had long studied how specific resources were managed or mismanaged at particular times and places (Coward 1980; De los Reyes 1980; MacKenzie 1979; Wittfogel 1957), but researchers who studied specific commons before the mid-1980s were, however, less likely than their contemporary colleagues to be well informed about the work of scholars in other disciplines, about other sec- tors in their own region of interest, or in other regions of the world.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=7">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+26	1048585	7	\N	2025-01-18 05:21:39	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Elinor Ostrom" <eostrom@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Elinor Ostrom,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Developing efficacy beliefs in the classroom, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=7</p><p>If you have been logged out, you can login again with the username eostrom.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=7">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+27	1048585	7	\N	2025-01-18 05:21:39	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank van Laerhoven" <fvanlaerhoven@mailinator.com>			Submission Acknowledgement	<p>Dear Frank van Laerhoven,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Elinor Ostrom, provided the following details:</p><p>Developing efficacy beliefs in the classroom<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+28	1048585	8	\N	2025-01-18 05:22:02	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+29	1048585	8	\N	2025-01-18 05:22:02	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8">Hansen & Pinto: Reason Reclaimed</a><br />Fabio Paglieri</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+30	1048585	8	\N	2025-01-18 05:22:03	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Fabio Paglieri" <fpaglieri@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Fabio Paglieri,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hansen & Pinto: Reason Reclaimed, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=8</p><p>If you have been logged out, you can login again with the username fpaglieri.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=8">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+31	1048585	9	\N	2025-01-18 05:22:26	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=9">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=9">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+32	1048585	9	\N	2025-01-18 05:22:26	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=9">Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence</a><br />John Mwandenga</p><p><b>Abstract</b></p>The signaling theory suggests that dividends signal future prospects of a firm. However, recent empirical evidence from the US and the Uk does not offer a conclusive evidence on this issue. There are conflicting policy implications among financial economists so much that there is no practical dividend policy guidance to management, existing and potential investors in shareholding. Since corporate investment, financing and distribution decisions are a continuous function of management, the dividend decisions seem to rely on intuitive evaluation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=9">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+33	1048585	9	\N	2025-01-18 05:22:26	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Mwandenga" <jmwandenga@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear John Mwandenga,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Signalling Theory Dividends: A Review Of The Literature And Empirical Evidence, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=9</p><p>If you have been logged out, you can login again with the username jmwandenga.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=9">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+63	1048585	19	\N	2025-01-18 05:26:28	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=19">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=19">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+34	1048585	10	\N	2025-01-18 05:22:53	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+35	1048585	10	\N	2025-01-18 05:22:53	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10">Condensing Water Availability Models to Focus on Specific Water Management Systems</a><br />John Novak</p><p><b>Abstract</b></p>The Texas Water Availability Modeling System is routinely applied in administration of the water rights permit system, regional and statewide planning, and an expanding variety of other endeavors. Modeling water management in the 23 river basins of the state reflects about 8,000 water right permits and 3,400 reservoirs. Datasets are necessarily large and complex to provide the decision-support capabilities for which the modeling system was developed. New modeling features are being added, and the different types of applications are growing. Certain applications are enhanced by simplifying the simulation input datasets to focus on particular water management systems. A methodology is presented for developing a condensed dataset for a selected reservoir system that reflects the impacts of all the water rights and accompanying reservoirs removed from the original complete dataset. A set of streamflows is developed that represents flows available to the selected system considering the effects of all the other water rights in the river basin contained in the original complete model input dataset that are not included in the condensed dataset. The methodology is applied to develop a condensed model of the Brazos River Authority reservoir system based on modifying the Texas Water Availability Modeling System dataset for the Brazos River Basin.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+36	1048585	10	\N	2025-01-18 05:22:53	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"John Novak" <jnovak@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear John Novak,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Condensing Water Availability Models to Focus on Specific Water Management Systems, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=10</p><p>If you have been logged out, you can login again with the username jnovak.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=10">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+37	1048585	11	\N	2025-01-18 05:23:17	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+43	1048585	12	\N	2025-01-18 05:23:41	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Leo Christopher" <lchristopher@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Leo Christopher,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Sodium butyrate improves growth performance of weaned piglets during the first period after weaning, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=12</p><p>If you have been logged out, you can login again with the username lchristopher.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=12">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+38	1048585	11	\N	2025-01-18 05:23:17	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11">Learning Sustainable Design through Service</a><br />Karim Al-Khafaji, Margaret Morse</p><p><b>Abstract</b></p>Environmental sustainability and sustainable development principles are vital topics that engineering education has largely failed to address. Service-learning, which integrates social service into an academic setting, is an emerging tool that can be leveraged to teach sustainable design to future engineers. We present a model of using service-learning to teach sustainable design based on the experiences of the Stanford chapter of Engineers for a Sustainable World. The model involves the identification of projects and partner organizations, a student led, project-based design course, and internships coordinated with partner organizations. The model has been very successful, although limitations and challenges exist. These are discussed along with future directions for expanding the model.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+39	1048585	11	\N	2025-01-18 05:23:17	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Karim Al-Khafaji" <kalkhafaji@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Karim Al-Khafaji,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Learning Sustainable Design through Service, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=11</p><p>If you have been logged out, you can login again with the username kalkhafaji.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=11">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+40	1048585	11	\N	2025-01-18 05:23:17	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Margaret Morse" <mmorse@mailinator.com>			Submission Acknowledgement	<p>Dear Margaret Morse,</p><p>You have been named as a co-author on a preprint submitted to Public Knowledge Preprint Server. The submitter, Karim Al-Khafaji, provided the following details:</p><p>Learning Sustainable Design through Service<br></p><p>If any of these details are incorrect, or you do not wish to be named on this preprint, please contact me.</p><p>Thank you for considering this server as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+41	1048585	12	\N	2025-01-18 05:23:41	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+42	1048585	12	\N	2025-01-18 05:23:41	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12">Sodium butyrate improves growth performance of weaned piglets during the first period after weaning</a><br />Leo Christopher</p><p><b>Abstract</b></p>The aim of this study was to assess the influence of long-term fat supplementation on the fatty acid profile of heavy pig adipose tissue. Fifty-four Large White barrows, averaging 25 kg LW, were randomized (matched weights) to one of three isoenergetic diets supplemented with either tallow (TA), maize oil (MO), or rapeseed oil (RO). The fats were supplement- ed at 3% as fed from 25 to 110 kg LW, and at 2.5 % from 110 kg to slaughtering. Following slaughter at about 160 kg LW, backfat samples were collected from ten animals per treatment and analyzed. Fatty acid composition of backfat close- ly reflected the fatty acid composition of the supplemented fats. The backfat of pigs fed TA had the highest saturated fatty acid content (SFA) (P&lt;0.01); those fed MO had the highest content in polyunsaturated fatty acid (PUFA) and the lowest in monounsaturated fatty acid (MUFA) content; those fed RO had the highest content of linolenic acid (C18:3) and cis 11- ecosenoic acid (C20:1). Only MO treatment had an effect on linoleic acid levels and the iodine value (IV) of backfat, result- ing in levels higher than those (IV = 70; C18:2 = 15%) accepted by the Parma Consortium for dry-cured ham. The IV and unsaturation index in both layers of subcutaneous backfat tissue differed significantly between treatments. These results show that long-term dietary supplementation with different fats changes the fatty acid profile of heavy pig adipose tissue. Supplementation with rapeseed oil increases the proportion of “healthy” fatty acids in pig fat, thereby improving the nutritional quality, however the effects on the technological quality of the fat must be carefully assessed.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+46	1048585	13	\N	2025-01-18 05:24:05	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Lise Kumiega" <lkumiega@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Lise Kumiega,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Hydrologic Connectivity in the Edwards Aquifer between San Marcos Springs and Barton Springs during 2009 Drought Conditions, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=13</p><p>If you have been logged out, you can login again with the username lkumiega.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=13">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+47	1048585	14	\N	2025-01-18 05:24:29	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=14">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=14">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+48	1048585	14	\N	2025-01-18 05:24:29	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=14">Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua</a><br />Patricia Daniel</p><p><b>Abstract</b></p>One of the challenges still to be met in the 21st century is that of genuinely embracing diversity. How can education help to overcome the barriers that continue to exist between people on the basis of language, culture and gender? This case study takes the Atlantic Coast of Nicaragua as an example of a multilingual/multiethnic region and examines how the community university URACCAN is contributing to the development of interculturality. It describes participatory research that was carried out with university staff and students with the intention of defining an intercultural curriculum and appropriate strategies for delivering such. One model used as a basis for discussions was the Model for Community Understanding from the Wales Curriculum Council, which emphasises the belonging of the individual to different communities or cultures at the same time. Factors supporting the development of an intercultural curriculum include the university’s close involvement with the ethnic communities it serves. However, ethno-linguistic power relations within the region and the country as a whole, still militate against egalitarianism within the university. The research highlights the importance of participatory pedagogy as the basis for promoting interculturality and achieving lasting social transformation.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=14">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+49	1048585	14	\N	2025-01-18 05:24:29	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Patricia Daniel" <pdaniel@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Patricia Daniel,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Towards Designing an Intercultural Curriculum: A Case Study from the Atlantic Coast of Nicaragua, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14</p><p>If you have been logged out, you can login again with the username pdaniel.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+50	1048585	15	\N	2025-01-18 05:24:53	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+51	1048585	15	\N	2025-01-18 05:24:53	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15">Yam diseases and its management in Nigeria</a><br />Rana Baiyewu</p><p><b>Abstract</b></p>This review presents different diseases associated with yam and the management strategies employed in combating its menace in Nigeria. The field and storage diseases are presented, anthracnose is regarded as the most widely spread of all the field diseases, while yam mosaic virus disease is considered to cause the most severe losses in yams. Dry rot is considered as the most devastating of all the storage diseases of yam. Dry rot of yams alone causes a marked reduction in the quantity, marketable value and edible portions of tubers and those reductions are more severe in stored yams. The management strategies adopted and advocated for combating the field diseases includes the use of crop rotation, fallowing, planting of healthy material, the destruction of infected crop cultivars and the use of resistant cultivars. With regards to the storage diseases, the use of Tecto (Thiabendazole), locally made dry gins or wood ash before storage has been found to protect yam tubers against fungal infection in storage. Finally, processing of yam tubers into chips or cubes increases its shelf live for a period of between 6 months and one year.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+52	1048585	15	\N	2025-01-18 05:24:53	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rana Baiyewu" <rbaiyewu@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Rana Baiyewu,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Yam diseases and its management in Nigeria, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=15</p><p>If you have been logged out, you can login again with the username rbaiyewu.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=15">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+53	1048585	16	\N	2025-01-18 05:25:16	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+54	1048585	16	\N	2025-01-18 05:25:16	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16">Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat</a><br />Rosanna Rossi</p><p><b>Abstract</b></p>Aim of this research is to provide a general situation of cattle slaughtered in Cameroon, as a representative example for the Central African Sub-region. The quality and safety of beef from the abattoir of Yaoundé, the largest in Cameroon, were considered. From January 2009 to March 2012, the pre-slaughter conditions and characteristics of 1953 cattle carcasses were recorded, as well as the pH of m. longissimus thoracis 24 h after slaughter. From these carcasses, 60 were selected to represent the bulls slaughtered. The quality parameters and composition of m. longissimus thoracis were carried out. The origin of most of the cattle was the Guinea High Savannah (74.6%), and transhumance was the common production system (75.5%). Gudali (45.6%), White Fulani (33.3%) and Red Mbororo (20.3%) breeds were predominant. Carcass weight was affected by rearing system and cattle category, and it markedly varied during year. Considering meat quality, the fat content was low (1.2%) and similar between breeds, moreover Gudali showed the toughest meat. Of the cows slaughtered, 27% were pregnant and the most common abnormal conditions encountered were ectoparasites, fatigue, lameness, fungal-like skin lesions, enlarged lymph nodes, respiratory distress, nodular lesions. More than 20% of the carcasses had some organs condemned, mainly for liver flukes (5.17%), and 1.0% of them were completely condemned due to tuberculosis, that also affected 3.28% of lungs. These data could aid authorities draw up programmes with the aim to strengthen cattle production, improve beef supply, control and prevent the observed diseases, and promote the regional trade.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+55	1048585	16	\N	2025-01-18 05:25:16	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Rosanna Rossi" <rrossi@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Rosanna Rossi,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Influence of long-term nutrition with different dietary fats on fatty acid composition of heavy pigs backfat, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=16</p><p>If you have been logged out, you can login again with the username rrossi.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=16">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+56	1048585	17	\N	2025-01-18 05:25:40	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+57	1048585	17	\N	2025-01-18 05:25:40	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17">Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran</a><br />Vajiheh Karbasizaed</p><p><b>Abstract</b></p>The antimicrobial, heavy metal resistance patterns and plasmid profiles of Coliforms (Enterobacteriacea) isolated from nosocomial infections and healthy human faeces were compared. Fifteen of the 25 isolates from nosocomial infections were identified as Escherichia coli, and remaining as Kelebsiella pneumoniae. Seventy two percent of the strains isolated from nosocomial infections possess multiple resistance to antibiotics compared to 45% of strains from healthy human faeces. The difference between minimal inhibitory concentration (MIC) values of strains from clinical cases and from faeces for four heavy metals (Hg, Cu, Pb, Cd) was not significant. However most strains isolated from hospital were more tolerant to heavy metal than those from healthy persons. There was no consistent relationship between plasmid profile group and antimicrobial resistance pattern, although a conjugative plasmid (&gt;56.4 kb) encoding resistance to heavy metals and antibiotics was recovered from eight of the strains isolated from nosocomial infections. The results indicate multidrug-resistance coliforms as a potential cause of nosocomial infection in this region.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+58	1048585	17	\N	2025-01-18 05:25:40	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Vajiheh Karbasizaed" <vkarbasizaed@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Vajiheh Karbasizaed,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=17</p><p>If you have been logged out, you can login again with the username vkarbasizaed.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=17">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+59	1048585	18	\N	2025-01-18 05:26:04	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=18">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=18">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+60	1048585	18	\N	2025-01-18 05:26:04	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"Stephanie Berardo" <sberardo@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear Stephanie Berardo,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=18">Self-Organization in Multi-Level Institutions in Networked Environments</a><br />Valerie Williamson</p><p><b>Abstract</b></p>We compare a setting where actors individually decide whom to sanction with a setting where sanctions are only implemented when actors collectively agree that a certain actor should be sanctioned. Collective sanctioning decisions are problematic due to the difficulty of reaching consensus. However, when a decision is made collectively, perverse sanctioning (e.g. punishing high contributors) by individual actors is ruled out. Therefore, collective sanctioning decisions are likely to be in the interest of the whole group.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=18">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+61	1048585	18	\N	2025-01-18 05:26:04	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Valerie Williamson" <vwilliamson@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Valerie Williamson,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Self-Organization in Multi-Level Institutions in Networked Environments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=18</p><p>If you have been logged out, you can login again with the username vwilliamson.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=18">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+62	1048585	19	\N	2025-01-18 05:26:28	805306370	"Ramiro Vaca" <rvaca@mailinator.com>	"David Buskins" <dbuskins@mailinator.com>			You have been assigned as a moderator on a submission to Public Knowledge Preprint Server	<p>Dear David Buskins,</p><p>The following preprint has been assigned to you to see through the screening process in your role as Moderator.</p><p><a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=19">Finocchiaro: Arguments About Arguments</a><br />Zita Woods</p><p><b>Abstract</b></p>None.<p>Please login to <a href="http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=19">view the preprint</a>. Use the Discussions section to contact the author if you have any questions. Please post the preprint once you are satisfied that it meets all requirements.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
+64	1048585	19	\N	2025-01-18 05:26:28	536870914	"Ramiro Vaca" <rvaca@mailinator.com>	"Zita Woods" <zwoods@mailinator.com>			Thank you for your submission to Public Knowledge Preprint Server	<p>Dear Zita Woods,</p><p>Thank you for your submission to Public Knowledge Preprint Server. We have received your preprint, Finocchiaro: Arguments About Arguments, and a moderator  will see it soon. Once the moderator has reviewed your submission, they will post your preprint or contact you.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=19</p><p>If you have been logged out, you can login again with the username zwoods.</p><p>If you have any questions, please contact me from your <a href="http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=19">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Preprint Server as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
 \.
 
 
@@ -7401,150 +7401,150 @@ COPY public.email_templates_settings (email_template_setting_id, email_id, local
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	7	2025-01-17 05:18:06	268435458	submission.event.general.metadataUpdated	f
-2	1048585	1	7	2025-01-17 05:18:06	268435458	submission.event.general.metadataUpdated	f
-3	515	1	7	2025-01-17 05:18:16	1342177281	submission.event.fileUploaded	f
-4	1048585	1	7	2025-01-17 05:18:16	1342177288	submission.event.fileRevised	f
-5	515	1	7	2025-01-17 05:18:19	1342177296	submission.event.fileEdited	f
-6	1048585	1	7	2025-01-17 05:18:19	268435457	submission.event.submissionSubmitted	f
-7	1048585	2	8	2025-01-17 05:18:27	268435458	submission.event.general.metadataUpdated	f
-8	1048585	2	8	2025-01-17 05:18:28	268435458	submission.event.general.metadataUpdated	f
-9	1048585	2	8	2025-01-17 05:18:44	268435458	submission.event.general.metadataUpdated	f
-10	515	2	8	2025-01-17 05:18:51	1342177281	submission.event.fileUploaded	f
-11	1048585	2	8	2025-01-17 05:18:51	1342177288	submission.event.fileRevised	f
-12	515	2	8	2025-01-17 05:18:53	1342177296	submission.event.fileEdited	f
-13	1048585	2	8	2025-01-17 05:19:18	268435457	submission.event.submissionSubmitted	f
-14	1048585	2	3	2025-01-17 05:19:26	268435462	publication.event.published	f
-15	1048585	3	9	2025-01-17 05:19:32	268435458	submission.event.general.metadataUpdated	f
-16	1048585	3	9	2025-01-17 05:19:32	268435458	submission.event.general.metadataUpdated	f
-17	515	3	9	2025-01-17 05:19:42	1342177281	submission.event.fileUploaded	f
-18	1048585	3	9	2025-01-17 05:19:42	1342177288	submission.event.fileRevised	f
-19	515	3	9	2025-01-17 05:19:44	1342177296	submission.event.fileEdited	f
-20	1048585	3	9	2025-01-17 05:19:46	268435457	submission.event.submissionSubmitted	f
-21	1048585	3	3	2025-01-17 05:19:50	268435462	publication.event.published	f
-22	1048585	3	3	2025-01-17 05:19:55	268435463	publication.event.unpublished	f
-23	1048585	3	3	2025-01-17 05:19:57	268435458	submission.event.general.metadataUpdated	f
-24	1048585	3	3	2025-01-17 05:20:00	268435462	publication.event.published	f
-25	1048585	3	3	2025-01-17 05:20:02	268435458	submission.event.general.metadataUpdated	f
-26	1048585	3	3	2025-01-17 05:20:02	268435464	publication.event.versionCreated	f
-27	1048585	3	3	2025-01-17 05:20:08	268435458	submission.event.general.metadataUpdated	f
-28	1048585	3	3	2025-01-17 05:20:11	268435462	publication.event.versionPublished	f
-29	1048585	4	10	2025-01-17 05:20:17	268435458	submission.event.general.metadataUpdated	f
-30	1048585	4	10	2025-01-17 05:20:18	268435458	submission.event.general.metadataUpdated	f
-31	515	4	10	2025-01-17 05:20:27	1342177281	submission.event.fileUploaded	f
-32	1048585	4	10	2025-01-17 05:20:27	1342177288	submission.event.fileRevised	f
-33	515	4	10	2025-01-17 05:20:30	1342177296	submission.event.fileEdited	f
-34	1048585	4	10	2025-01-17 05:20:30	268435457	submission.event.submissionSubmitted	f
-35	1048585	4	3	2025-01-17 05:20:36	805306371	editor.submission.decision.decline.log	f
-36	1048585	4	3	2025-01-17 05:20:41	805306371	editor.submission.decision.revertDecline.log	f
-37	1048585	4	3	2025-01-17 05:20:46	805306371	editor.submission.decision.decline.log	f
-38	1048585	5	11	2025-01-17 05:20:55	268435458	submission.event.general.metadataUpdated	f
-39	1048585	5	11	2025-01-17 05:20:55	268435458	submission.event.general.metadataUpdated	f
-40	515	5	11	2025-01-17 05:21:05	1342177281	submission.event.fileUploaded	f
-41	1048585	5	11	2025-01-17 05:21:05	1342177288	submission.event.fileRevised	f
-42	515	5	11	2025-01-17 05:21:07	1342177296	submission.event.fileEdited	f
-43	1048585	5	11	2025-01-17 05:21:08	268435457	submission.event.submissionSubmitted	f
-44	1048585	5	3	2025-01-17 05:21:13	268435462	publication.event.published	f
-45	1048585	5	3	2025-01-17 05:21:16	268435463	publication.event.unpublished	f
-46	1048585	5	3	2025-01-17 05:21:21	268435462	publication.event.published	f
-47	1048585	6	12	2025-01-17 05:21:28	268435458	submission.event.general.metadataUpdated	f
-48	1048585	6	12	2025-01-17 05:21:28	268435458	submission.event.general.metadataUpdated	f
-49	515	6	12	2025-01-17 05:21:38	1342177281	submission.event.fileUploaded	f
-50	1048585	6	12	2025-01-17 05:21:38	1342177288	submission.event.fileRevised	f
-51	515	6	12	2025-01-17 05:21:40	1342177296	submission.event.fileEdited	f
-52	1048585	6	12	2025-01-17 05:21:41	268435457	submission.event.submissionSubmitted	f
-53	1048585	6	3	2025-01-17 05:21:45	268435462	publication.event.published	f
-54	1048585	7	13	2025-01-17 05:21:52	268435458	submission.event.general.metadataUpdated	f
-55	1048585	7	13	2025-01-17 05:21:52	268435458	submission.event.general.metadataUpdated	f
-56	515	7	13	2025-01-17 05:22:02	1342177281	submission.event.fileUploaded	f
-57	1048585	7	13	2025-01-17 05:22:02	1342177288	submission.event.fileRevised	f
-58	515	7	13	2025-01-17 05:22:04	1342177296	submission.event.fileEdited	f
-59	1048585	7	13	2025-01-17 05:22:05	268435457	submission.event.submissionSubmitted	f
-60	1048585	7	3	2025-01-17 05:22:10	268435462	publication.event.published	f
-61	1048585	8	14	2025-01-17 05:22:16	268435458	submission.event.general.metadataUpdated	f
-62	1048585	8	14	2025-01-17 05:22:16	268435458	submission.event.general.metadataUpdated	f
-63	515	8	14	2025-01-17 05:22:26	1342177281	submission.event.fileUploaded	f
-64	1048585	8	14	2025-01-17 05:22:26	1342177288	submission.event.fileRevised	f
-65	515	8	14	2025-01-17 05:22:28	1342177296	submission.event.fileEdited	f
-66	1048585	8	14	2025-01-17 05:22:29	268435457	submission.event.submissionSubmitted	f
-67	1048585	8	3	2025-01-17 05:22:34	268435462	publication.event.published	f
-68	1048585	9	15	2025-01-17 05:22:40	268435458	submission.event.general.metadataUpdated	f
-69	1048585	9	15	2025-01-17 05:22:40	268435458	submission.event.general.metadataUpdated	f
-70	515	9	15	2025-01-17 05:22:50	1342177281	submission.event.fileUploaded	f
-71	1048585	9	15	2025-01-17 05:22:50	1342177288	submission.event.fileRevised	f
-72	515	9	15	2025-01-17 05:22:52	1342177296	submission.event.fileEdited	f
-73	1048585	9	15	2025-01-17 05:22:53	268435457	submission.event.submissionSubmitted	f
-74	1048585	9	3	2025-01-17 05:22:58	268435462	publication.event.published	f
-75	1048585	10	16	2025-01-17 05:23:04	268435458	submission.event.general.metadataUpdated	f
-76	1048585	10	16	2025-01-17 05:23:04	268435458	submission.event.general.metadataUpdated	f
-77	515	10	16	2025-01-17 05:23:14	1342177281	submission.event.fileUploaded	f
-78	1048585	10	16	2025-01-17 05:23:14	1342177288	submission.event.fileRevised	f
-79	515	10	16	2025-01-17 05:23:16	1342177296	submission.event.fileEdited	f
-80	1048585	10	16	2025-01-17 05:23:17	268435457	submission.event.submissionSubmitted	f
-81	1048585	10	3	2025-01-17 05:23:22	268435462	publication.event.published	f
-82	1048585	11	17	2025-01-17 05:23:28	268435458	submission.event.general.metadataUpdated	f
-83	1048585	11	17	2025-01-17 05:23:28	268435458	submission.event.general.metadataUpdated	f
-84	515	11	17	2025-01-17 05:23:38	1342177281	submission.event.fileUploaded	f
-85	1048585	11	17	2025-01-17 05:23:38	1342177288	submission.event.fileRevised	f
-86	515	11	17	2025-01-17 05:23:40	1342177296	submission.event.fileEdited	f
-87	1048585	11	17	2025-01-17 05:23:42	268435457	submission.event.submissionSubmitted	f
-88	1048585	11	3	2025-01-17 05:23:46	268435462	publication.event.published	f
-89	1048585	12	18	2025-01-17 05:23:53	268435458	submission.event.general.metadataUpdated	f
-90	1048585	12	18	2025-01-17 05:23:53	268435458	submission.event.general.metadataUpdated	f
-91	515	12	18	2025-01-17 05:24:03	1342177281	submission.event.fileUploaded	f
-92	1048585	12	18	2025-01-17 05:24:03	1342177288	submission.event.fileRevised	f
-93	515	12	18	2025-01-17 05:24:05	1342177296	submission.event.fileEdited	f
-94	1048585	12	18	2025-01-17 05:24:06	268435457	submission.event.submissionSubmitted	f
-95	1048585	12	3	2025-01-17 05:24:10	268435462	publication.event.published	f
-96	1048585	13	19	2025-01-17 05:24:17	268435458	submission.event.general.metadataUpdated	f
-97	1048585	13	19	2025-01-17 05:24:17	268435458	submission.event.general.metadataUpdated	f
-98	515	13	19	2025-01-17 05:24:27	1342177281	submission.event.fileUploaded	f
-99	1048585	13	19	2025-01-17 05:24:27	1342177288	submission.event.fileRevised	f
-100	515	13	19	2025-01-17 05:24:29	1342177296	submission.event.fileEdited	f
-101	1048585	13	19	2025-01-17 05:24:30	268435457	submission.event.submissionSubmitted	f
-102	1048585	13	3	2025-01-17 05:24:34	268435462	publication.event.published	f
-103	1048585	14	20	2025-01-17 05:24:41	268435458	submission.event.general.metadataUpdated	f
-104	1048585	14	20	2025-01-17 05:24:41	268435458	submission.event.general.metadataUpdated	f
-105	515	14	20	2025-01-17 05:24:51	1342177281	submission.event.fileUploaded	f
-106	1048585	14	20	2025-01-17 05:24:51	1342177288	submission.event.fileRevised	f
-107	515	14	20	2025-01-17 05:24:53	1342177296	submission.event.fileEdited	f
-108	1048585	14	20	2025-01-17 05:24:54	268435457	submission.event.submissionSubmitted	f
-109	1048585	14	3	2025-01-17 05:24:58	268435462	publication.event.published	f
-110	1048585	15	21	2025-01-17 05:25:05	268435458	submission.event.general.metadataUpdated	f
-111	1048585	15	21	2025-01-17 05:25:05	268435458	submission.event.general.metadataUpdated	f
-112	515	15	21	2025-01-17 05:25:15	1342177281	submission.event.fileUploaded	f
-113	1048585	15	21	2025-01-17 05:25:15	1342177288	submission.event.fileRevised	f
-114	515	15	21	2025-01-17 05:25:17	1342177296	submission.event.fileEdited	f
-115	1048585	15	21	2025-01-17 05:25:18	268435457	submission.event.submissionSubmitted	f
-116	1048585	15	3	2025-01-17 05:25:22	268435462	publication.event.published	f
-117	1048585	16	22	2025-01-17 05:25:29	268435458	submission.event.general.metadataUpdated	f
-118	1048585	16	22	2025-01-17 05:25:29	268435458	submission.event.general.metadataUpdated	f
-119	515	16	22	2025-01-17 05:25:39	1342177281	submission.event.fileUploaded	f
-120	1048585	16	22	2025-01-17 05:25:39	1342177288	submission.event.fileRevised	f
-121	515	16	22	2025-01-17 05:25:41	1342177296	submission.event.fileEdited	f
-122	1048585	16	22	2025-01-17 05:25:42	268435457	submission.event.submissionSubmitted	f
-123	1048585	16	3	2025-01-17 05:25:46	268435462	publication.event.published	f
-124	1048585	17	23	2025-01-17 05:25:53	268435458	submission.event.general.metadataUpdated	f
-125	1048585	17	23	2025-01-17 05:25:53	268435458	submission.event.general.metadataUpdated	f
-126	515	17	23	2025-01-17 05:26:03	1342177281	submission.event.fileUploaded	f
-127	1048585	17	23	2025-01-17 05:26:03	1342177288	submission.event.fileRevised	f
-128	515	17	23	2025-01-17 05:26:05	1342177296	submission.event.fileEdited	f
-129	1048585	17	23	2025-01-17 05:26:06	268435457	submission.event.submissionSubmitted	f
-130	1048585	17	3	2025-01-17 05:26:10	268435462	publication.event.published	f
-131	1048585	18	24	2025-01-17 05:26:17	268435458	submission.event.general.metadataUpdated	f
-132	1048585	18	24	2025-01-17 05:26:17	268435458	submission.event.general.metadataUpdated	f
-133	515	18	24	2025-01-17 05:26:27	1342177281	submission.event.fileUploaded	f
-134	1048585	18	24	2025-01-17 05:26:27	1342177288	submission.event.fileRevised	f
-135	515	18	24	2025-01-17 05:26:29	1342177296	submission.event.fileEdited	f
-136	1048585	18	24	2025-01-17 05:26:30	268435457	submission.event.submissionSubmitted	f
-137	1048585	18	3	2025-01-17 05:26:34	268435462	publication.event.published	f
-138	1048585	19	25	2025-01-17 05:26:41	268435458	submission.event.general.metadataUpdated	f
-139	1048585	19	25	2025-01-17 05:26:41	268435458	submission.event.general.metadataUpdated	f
-140	515	19	25	2025-01-17 05:26:51	1342177281	submission.event.fileUploaded	f
-141	1048585	19	25	2025-01-17 05:26:51	1342177288	submission.event.fileRevised	f
-142	515	19	25	2025-01-17 05:26:53	1342177296	submission.event.fileEdited	f
-143	1048585	19	25	2025-01-17 05:26:54	268435457	submission.event.submissionSubmitted	f
-144	1048585	19	3	2025-01-17 05:26:58	268435462	publication.event.published	f
+1	1048585	1	7	2025-01-18 05:17:43	268435458	submission.event.general.metadataUpdated	f
+2	1048585	1	7	2025-01-18 05:17:43	268435458	submission.event.general.metadataUpdated	f
+3	515	1	7	2025-01-18 05:17:53	1342177281	submission.event.fileUploaded	f
+4	1048585	1	7	2025-01-18 05:17:53	1342177288	submission.event.fileRevised	f
+5	515	1	7	2025-01-18 05:17:56	1342177296	submission.event.fileEdited	f
+6	1048585	1	7	2025-01-18 05:17:56	268435457	submission.event.submissionSubmitted	f
+7	1048585	2	8	2025-01-18 05:18:04	268435458	submission.event.general.metadataUpdated	f
+8	1048585	2	8	2025-01-18 05:18:05	268435458	submission.event.general.metadataUpdated	f
+9	1048585	2	8	2025-01-18 05:18:20	268435458	submission.event.general.metadataUpdated	f
+10	515	2	8	2025-01-18 05:18:28	1342177281	submission.event.fileUploaded	f
+11	1048585	2	8	2025-01-18 05:18:28	1342177288	submission.event.fileRevised	f
+12	515	2	8	2025-01-18 05:18:30	1342177296	submission.event.fileEdited	f
+13	1048585	2	8	2025-01-18 05:18:54	268435457	submission.event.submissionSubmitted	f
+14	1048585	2	3	2025-01-18 05:19:02	268435462	publication.event.published	f
+15	1048585	3	9	2025-01-18 05:19:08	268435458	submission.event.general.metadataUpdated	f
+16	1048585	3	9	2025-01-18 05:19:09	268435458	submission.event.general.metadataUpdated	f
+17	515	3	9	2025-01-18 05:19:18	1342177281	submission.event.fileUploaded	f
+18	1048585	3	9	2025-01-18 05:19:18	1342177288	submission.event.fileRevised	f
+19	515	3	9	2025-01-18 05:19:21	1342177296	submission.event.fileEdited	f
+20	1048585	3	9	2025-01-18 05:19:22	268435457	submission.event.submissionSubmitted	f
+21	1048585	3	3	2025-01-18 05:19:26	268435462	publication.event.published	f
+22	1048585	3	3	2025-01-18 05:19:31	268435463	publication.event.unpublished	f
+23	1048585	3	3	2025-01-18 05:19:33	268435458	submission.event.general.metadataUpdated	f
+24	1048585	3	3	2025-01-18 05:19:36	268435462	publication.event.published	f
+25	1048585	3	3	2025-01-18 05:19:38	268435458	submission.event.general.metadataUpdated	f
+26	1048585	3	3	2025-01-18 05:19:38	268435464	publication.event.versionCreated	f
+27	1048585	3	3	2025-01-18 05:19:44	268435458	submission.event.general.metadataUpdated	f
+28	1048585	3	3	2025-01-18 05:19:47	268435462	publication.event.versionPublished	f
+29	1048585	4	10	2025-01-18 05:19:53	268435458	submission.event.general.metadataUpdated	f
+30	1048585	4	10	2025-01-18 05:19:53	268435458	submission.event.general.metadataUpdated	f
+31	515	4	10	2025-01-18 05:20:03	1342177281	submission.event.fileUploaded	f
+32	1048585	4	10	2025-01-18 05:20:03	1342177288	submission.event.fileRevised	f
+33	515	4	10	2025-01-18 05:20:05	1342177296	submission.event.fileEdited	f
+34	1048585	4	10	2025-01-18 05:20:06	268435457	submission.event.submissionSubmitted	f
+35	1048585	4	3	2025-01-18 05:20:12	805306371	editor.submission.decision.decline.log	f
+36	1048585	4	3	2025-01-18 05:20:17	805306371	editor.submission.decision.revertDecline.log	f
+37	1048585	4	3	2025-01-18 05:20:22	805306371	editor.submission.decision.decline.log	f
+38	1048585	5	11	2025-01-18 05:20:30	268435458	submission.event.general.metadataUpdated	f
+39	1048585	5	11	2025-01-18 05:20:30	268435458	submission.event.general.metadataUpdated	f
+40	515	5	11	2025-01-18 05:20:40	1342177281	submission.event.fileUploaded	f
+41	1048585	5	11	2025-01-18 05:20:40	1342177288	submission.event.fileRevised	f
+42	515	5	11	2025-01-18 05:20:42	1342177296	submission.event.fileEdited	f
+43	1048585	5	11	2025-01-18 05:20:43	268435457	submission.event.submissionSubmitted	f
+44	1048585	5	3	2025-01-18 05:20:47	268435462	publication.event.published	f
+45	1048585	5	3	2025-01-18 05:20:51	268435463	publication.event.unpublished	f
+46	1048585	5	3	2025-01-18 05:20:56	268435462	publication.event.published	f
+47	1048585	6	12	2025-01-18 05:21:02	268435458	submission.event.general.metadataUpdated	f
+48	1048585	6	12	2025-01-18 05:21:02	268435458	submission.event.general.metadataUpdated	f
+49	515	6	12	2025-01-18 05:21:12	1342177281	submission.event.fileUploaded	f
+50	1048585	6	12	2025-01-18 05:21:12	1342177288	submission.event.fileRevised	f
+51	515	6	12	2025-01-18 05:21:14	1342177296	submission.event.fileEdited	f
+52	1048585	6	12	2025-01-18 05:21:15	268435457	submission.event.submissionSubmitted	f
+53	1048585	6	3	2025-01-18 05:21:19	268435462	publication.event.published	f
+54	1048585	7	13	2025-01-18 05:21:25	268435458	submission.event.general.metadataUpdated	f
+55	1048585	7	13	2025-01-18 05:21:26	268435458	submission.event.general.metadataUpdated	f
+56	515	7	13	2025-01-18 05:21:35	1342177281	submission.event.fileUploaded	f
+57	1048585	7	13	2025-01-18 05:21:35	1342177288	submission.event.fileRevised	f
+58	515	7	13	2025-01-18 05:21:38	1342177296	submission.event.fileEdited	f
+59	1048585	7	13	2025-01-18 05:21:39	268435457	submission.event.submissionSubmitted	f
+60	1048585	7	3	2025-01-18 05:21:43	268435462	publication.event.published	f
+61	1048585	8	14	2025-01-18 05:21:49	268435458	submission.event.general.metadataUpdated	f
+62	1048585	8	14	2025-01-18 05:21:50	268435458	submission.event.general.metadataUpdated	f
+63	515	8	14	2025-01-18 05:21:59	1342177281	submission.event.fileUploaded	f
+64	1048585	8	14	2025-01-18 05:21:59	1342177288	submission.event.fileRevised	f
+65	515	8	14	2025-01-18 05:22:02	1342177296	submission.event.fileEdited	f
+66	1048585	8	14	2025-01-18 05:22:02	268435457	submission.event.submissionSubmitted	f
+67	1048585	8	3	2025-01-18 05:22:07	268435462	publication.event.published	f
+68	1048585	9	15	2025-01-18 05:22:13	268435458	submission.event.general.metadataUpdated	f
+69	1048585	9	15	2025-01-18 05:22:13	268435458	submission.event.general.metadataUpdated	f
+70	515	9	15	2025-01-18 05:22:23	1342177281	submission.event.fileUploaded	f
+71	1048585	9	15	2025-01-18 05:22:23	1342177288	submission.event.fileRevised	f
+72	515	9	15	2025-01-18 05:22:25	1342177296	submission.event.fileEdited	f
+73	1048585	9	15	2025-01-18 05:22:26	268435457	submission.event.submissionSubmitted	f
+74	1048585	9	3	2025-01-18 05:22:30	268435462	publication.event.published	f
+75	1048585	10	16	2025-01-18 05:22:39	268435458	submission.event.general.metadataUpdated	f
+76	1048585	10	16	2025-01-18 05:22:40	268435458	submission.event.general.metadataUpdated	f
+77	515	10	16	2025-01-18 05:22:50	1342177281	submission.event.fileUploaded	f
+78	1048585	10	16	2025-01-18 05:22:50	1342177288	submission.event.fileRevised	f
+79	515	10	16	2025-01-18 05:22:52	1342177296	submission.event.fileEdited	f
+80	1048585	10	16	2025-01-18 05:22:53	268435457	submission.event.submissionSubmitted	f
+81	1048585	10	3	2025-01-18 05:22:57	268435462	publication.event.published	f
+82	1048585	11	17	2025-01-18 05:23:03	268435458	submission.event.general.metadataUpdated	f
+83	1048585	11	17	2025-01-18 05:23:03	268435458	submission.event.general.metadataUpdated	f
+84	515	11	17	2025-01-18 05:23:13	1342177281	submission.event.fileUploaded	f
+85	1048585	11	17	2025-01-18 05:23:13	1342177288	submission.event.fileRevised	f
+86	515	11	17	2025-01-18 05:23:15	1342177296	submission.event.fileEdited	f
+87	1048585	11	17	2025-01-18 05:23:17	268435457	submission.event.submissionSubmitted	f
+88	1048585	11	3	2025-01-18 05:23:22	268435462	publication.event.published	f
+89	1048585	12	18	2025-01-18 05:23:28	268435458	submission.event.general.metadataUpdated	f
+90	1048585	12	18	2025-01-18 05:23:28	268435458	submission.event.general.metadataUpdated	f
+91	515	12	18	2025-01-18 05:23:38	1342177281	submission.event.fileUploaded	f
+92	1048585	12	18	2025-01-18 05:23:38	1342177288	submission.event.fileRevised	f
+93	515	12	18	2025-01-18 05:23:40	1342177296	submission.event.fileEdited	f
+94	1048585	12	18	2025-01-18 05:23:41	268435457	submission.event.submissionSubmitted	f
+95	1048585	12	3	2025-01-18 05:23:45	268435462	publication.event.published	f
+96	1048585	13	19	2025-01-18 05:23:52	268435458	submission.event.general.metadataUpdated	f
+97	1048585	13	19	2025-01-18 05:23:52	268435458	submission.event.general.metadataUpdated	f
+98	515	13	19	2025-01-18 05:24:02	1342177281	submission.event.fileUploaded	f
+99	1048585	13	19	2025-01-18 05:24:02	1342177288	submission.event.fileRevised	f
+100	515	13	19	2025-01-18 05:24:04	1342177296	submission.event.fileEdited	f
+101	1048585	13	19	2025-01-18 05:24:05	268435457	submission.event.submissionSubmitted	f
+102	1048585	13	3	2025-01-18 05:24:09	268435462	publication.event.published	f
+103	1048585	14	20	2025-01-18 05:24:16	268435458	submission.event.general.metadataUpdated	f
+104	1048585	14	20	2025-01-18 05:24:16	268435458	submission.event.general.metadataUpdated	f
+105	515	14	20	2025-01-18 05:24:26	1342177281	submission.event.fileUploaded	f
+106	1048585	14	20	2025-01-18 05:24:26	1342177288	submission.event.fileRevised	f
+107	515	14	20	2025-01-18 05:24:28	1342177296	submission.event.fileEdited	f
+108	1048585	14	20	2025-01-18 05:24:29	268435457	submission.event.submissionSubmitted	f
+109	1048585	14	3	2025-01-18 05:24:33	268435462	publication.event.published	f
+110	1048585	15	21	2025-01-18 05:24:40	268435458	submission.event.general.metadataUpdated	f
+111	1048585	15	21	2025-01-18 05:24:40	268435458	submission.event.general.metadataUpdated	f
+112	515	15	21	2025-01-18 05:24:50	1342177281	submission.event.fileUploaded	f
+113	1048585	15	21	2025-01-18 05:24:50	1342177288	submission.event.fileRevised	f
+114	515	15	21	2025-01-18 05:24:52	1342177296	submission.event.fileEdited	f
+115	1048585	15	21	2025-01-18 05:24:53	268435457	submission.event.submissionSubmitted	f
+116	1048585	15	3	2025-01-18 05:24:57	268435462	publication.event.published	f
+117	1048585	16	22	2025-01-18 05:25:03	268435458	submission.event.general.metadataUpdated	f
+118	1048585	16	22	2025-01-18 05:25:04	268435458	submission.event.general.metadataUpdated	f
+119	515	16	22	2025-01-18 05:25:13	1342177281	submission.event.fileUploaded	f
+120	1048585	16	22	2025-01-18 05:25:13	1342177288	submission.event.fileRevised	f
+121	515	16	22	2025-01-18 05:25:16	1342177296	submission.event.fileEdited	f
+122	1048585	16	22	2025-01-18 05:25:16	268435457	submission.event.submissionSubmitted	f
+123	1048585	16	3	2025-01-18 05:25:21	268435462	publication.event.published	f
+124	1048585	17	23	2025-01-18 05:25:27	268435458	submission.event.general.metadataUpdated	f
+125	1048585	17	23	2025-01-18 05:25:27	268435458	submission.event.general.metadataUpdated	f
+126	515	17	23	2025-01-18 05:25:37	1342177281	submission.event.fileUploaded	f
+127	1048585	17	23	2025-01-18 05:25:37	1342177288	submission.event.fileRevised	f
+128	515	17	23	2025-01-18 05:25:39	1342177296	submission.event.fileEdited	f
+129	1048585	17	23	2025-01-18 05:25:40	268435457	submission.event.submissionSubmitted	f
+130	1048585	17	3	2025-01-18 05:25:45	268435462	publication.event.published	f
+131	1048585	18	24	2025-01-18 05:25:51	268435458	submission.event.general.metadataUpdated	f
+132	1048585	18	24	2025-01-18 05:25:51	268435458	submission.event.general.metadataUpdated	f
+133	515	18	24	2025-01-18 05:26:01	1342177281	submission.event.fileUploaded	f
+134	1048585	18	24	2025-01-18 05:26:01	1342177288	submission.event.fileRevised	f
+135	515	18	24	2025-01-18 05:26:03	1342177296	submission.event.fileEdited	f
+136	1048585	18	24	2025-01-18 05:26:04	268435457	submission.event.submissionSubmitted	f
+137	1048585	18	3	2025-01-18 05:26:08	268435462	publication.event.published	f
+138	1048585	19	25	2025-01-18 05:26:15	268435458	submission.event.general.metadataUpdated	f
+139	1048585	19	25	2025-01-18 05:26:15	268435458	submission.event.general.metadataUpdated	f
+140	515	19	25	2025-01-18 05:26:25	1342177281	submission.event.fileUploaded	f
+141	1048585	19	25	2025-01-18 05:26:25	1342177288	submission.event.fileRevised	f
+142	515	19	25	2025-01-18 05:26:27	1342177296	submission.event.fileEdited	f
+143	1048585	19	25	2025-01-18 05:26:28	268435457	submission.event.submissionSubmitted	f
+144	1048585	19	3	2025-01-18 05:26:32	268435462	publication.event.published	f
 \.
 
 
@@ -7906,41 +7906,41 @@ COPY public.event_log_settings (event_log_setting_id, log_id, locale, setting_na
 --
 
 COPY public.failed_jobs (id, connection, queue, payload, exception, failed_at) FROM stdin;
-1	database	queue	{"uuid":"722aa5b0-bab4-4cd5-8c89-b8f4aecd0510","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:1;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:18:29
-2	database	queue	{"uuid":"a1fd771d-3553-4016-9f22-f3c323598c1f","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:2;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:19:04
-3	database	queue	{"uuid":"3591b3c7-5243-4363-853e-f2a0b17dd98d","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:2;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:19:40
-4	database	queue	{"uuid":"d8f816af-caa3-41c0-a3ed-fa077181b490","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:3;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:19:55
-5	database	queue	{"uuid":"8c81217b-15ed-4cc2-b491-733132b6c957","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:3;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:20:13
-6	database	queue	{"uuid":"2d9a56b6-2e39-4b37-9598-0a88e3e37c4c","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:3;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:20:25
-7	database	queue	{"uuid":"25485485-4c6c-4b60-979b-0e75cdf3b2fd","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:4;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:20:40
-8	database	queue	{"uuid":"4da3e7a3-e292-4255-93b4-7fe3a9157824","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:5;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:21:17
-9	database	queue	{"uuid":"87214332-3b37-4bc7-a0f4-cb379c984d7f","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:5;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:21:35
-10	database	queue	{"uuid":"7d1f6a7a-07ee-4762-962e-47a89185c8dd","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:6;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:21:50
-11	database	queue	{"uuid":"2f3db07d-ff7e-48f1-ba5d-f929c51b1ca1","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:6;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:22:00
-12	database	queue	{"uuid":"1e96256e-b820-44af-b2f9-172c31f4e4ae","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:7;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:22:14
-13	database	queue	{"uuid":"6429baf8-6f44-49f9-966b-32d12d32adab","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:7;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:22:24
-14	database	queue	{"uuid":"9e77b218-fd73-4058-822f-4d374b720b2b","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:8;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:22:38
-15	database	queue	{"uuid":"3d9a0042-7f6c-4d11-8309-bbbb6819bcd7","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:8;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:22:48
-16	database	queue	{"uuid":"65ab68bd-64d2-4349-8b6b-9b4870d0fdbf","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:9;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:23:02
-17	database	queue	{"uuid":"6b7d97e6-d15e-4060-a43a-d26ec3cf090c","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:9;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:23:12
-18	database	queue	{"uuid":"8f4d5b6d-5977-4aa6-babf-54af1162b55e","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:10;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:23:26
-19	database	queue	{"uuid":"0a685912-4981-4c07-a665-7150d2864c70","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:10;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:23:36
-20	database	queue	{"uuid":"841eb128-2831-4344-bc38-c967110068b6","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:11;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:23:50
-21	database	queue	{"uuid":"12d5f52b-b981-40eb-b501-35841edf5a9c","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:11;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:24:00
-22	database	queue	{"uuid":"8cf87e56-c775-49d9-bc64-f033f7a9816f","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:12;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:24:15
-23	database	queue	{"uuid":"dacbe526-38d1-4286-9622-10c946c78d8b","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:12;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:24:25
-24	database	queue	{"uuid":"245e59f7-6913-4bde-b18a-fe4734460ba1","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:13;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:24:39
-25	database	queue	{"uuid":"5abbfa76-f9db-4d1c-8b13-3434ae181f08","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:13;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:24:49
-26	database	queue	{"uuid":"41b16ca6-7e6a-4f6a-b4ff-128f7a6e10f2","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:14;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:25:03
-27	database	queue	{"uuid":"b44dbb75-ec4d-4e20-93f6-8ad2b6b0a05e","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:14;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:25:13
-28	database	queue	{"uuid":"f3100432-f7ad-4467-8edb-a45be333e224","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:15;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:25:27
-29	database	queue	{"uuid":"8649a603-5967-4089-a695-ebde8066c10a","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:15;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:25:37
-30	database	queue	{"uuid":"feb237fa-c450-4517-b091-00be3e918f8a","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:16;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:25:51
-31	database	queue	{"uuid":"5bb92790-363d-499a-8874-516dd9b2563a","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:16;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:26:01
-32	database	queue	{"uuid":"4faf87e3-e13c-4a8a-965d-27b366d39e56","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:17;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:26:15
-33	database	queue	{"uuid":"c43f0c50-c25c-41eb-ad94-047e412a7071","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:17;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:26:25
-34	database	queue	{"uuid":"d6f0c86d-754b-4032-9297-d001fdffe07a","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:18;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:26:39
-35	database	queue	{"uuid":"34e0fd93-2553-43d8-b216-d9b36550470a","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:18;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-17 05:26:48
+1	database	queue	{"uuid":"79851c7a-0a49-45bd-a25a-c2be5d247c1f","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:1;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:18:06
+2	database	queue	{"uuid":"e3a7b64d-ef34-4813-82d3-1ab98722bd7c","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:2;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:18:46
+3	database	queue	{"uuid":"d0864768-9ce2-49e6-b5ef-94164b797eed","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:2;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:19:16
+4	database	queue	{"uuid":"590a284d-5715-4600-980b-cd33fec47b76","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:3;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:19:31
+5	database	queue	{"uuid":"75c2061e-1c39-4cc1-a87d-8d252bc3e985","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:3;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:19:49
+6	database	queue	{"uuid":"d3ae5607-b1d3-46e7-b7f0-21f893beb65a","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:3;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:20:01
+7	database	queue	{"uuid":"86abbce0-5da1-415a-9e9f-e2d033d4fc1f","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:4;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:20:16
+8	database	queue	{"uuid":"e40c0f56-eecb-49f4-914a-5da5939e7199","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:5;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:20:52
+9	database	queue	{"uuid":"597cfb14-7154-4270-8edc-0ccdd1ad0051","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:5;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:21:10
+10	database	queue	{"uuid":"11c0dd19-c72f-4015-8dcb-b2da93698c78","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:6;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:21:24
+11	database	queue	{"uuid":"027ee0ed-78ef-4278-9dfc-0bddf83e4980","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:6;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:21:33
+12	database	queue	{"uuid":"1921b34b-2639-4372-bd71-694c2dbc3f3b","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:7;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:21:48
+13	database	queue	{"uuid":"2e7ac688-8df1-490b-9599-8e65fbe57c69","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:7;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:21:57
+14	database	queue	{"uuid":"29e5e73a-54f8-4424-a8fd-430f9eb1d415","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:8;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:22:13
+15	database	queue	{"uuid":"a9831f5a-e9ac-48d2-bc35-33d6deda2367","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:8;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:22:21
+16	database	queue	{"uuid":"95582ae1-a350-489f-b97d-583b934095e3","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:9;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:22:35
+17	database	queue	{"uuid":"cf3181e1-51fc-4902-8b3b-57b41b67ff27","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:9;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:22:40
+18	database	queue	{"uuid":"079f19f1-00e7-47d2-ab44-c83a38977e06","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:10;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:23:03
+19	database	queue	{"uuid":"2bde7e40-44b5-433c-b7d5-754cb67c3f90","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:10;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:23:11
+20	database	queue	{"uuid":"37cf9b8f-e44f-486c-8619-e2394ed1290f","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:11;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:23:26
+21	database	queue	{"uuid":"3636ee3d-56ab-4fa2-91b9-b478b5880b3a","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:11;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:23:36
+22	database	queue	{"uuid":"b43aade6-a66e-4ae1-af69-45bdcf85ad50","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:12;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:23:50
+23	database	queue	{"uuid":"04d37df7-34ed-4fe3-b613-c2c9c4913fe2","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:12;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:24:00
+24	database	queue	{"uuid":"93e650a6-303b-421c-a89d-eb815d02f221","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:13;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:24:14
+25	database	queue	{"uuid":"c3abf5c8-1901-429a-93aa-40b0cd06dac7","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:13;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:24:23
+26	database	queue	{"uuid":"d883d3b5-53e6-4e90-82c5-ce7ae042d4b3","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:14;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:24:38
+27	database	queue	{"uuid":"39b196ee-ac93-4562-81a2-ff2f43277bea","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:14;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:24:47
+28	database	queue	{"uuid":"533ec5cf-d410-4cc9-a793-a658ee099421","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:15;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:25:02
+29	database	queue	{"uuid":"4a4f3752-9f9b-4c3b-aef7-fd7fc0299396","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:15;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:25:11
+30	database	queue	{"uuid":"05024dae-4788-4943-bc29-0c032a05917a","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:16;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:25:26
+31	database	queue	{"uuid":"070903c6-d6c0-4bf0-a161-4b214dff12fa","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:16;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:25:35
+32	database	queue	{"uuid":"f86981f2-e73b-49e0-bc1f-b23129d6f624","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:17;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:25:49
+33	database	queue	{"uuid":"13fa023d-c0e0-4189-bd7d-1077051765f1","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:17;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:25:59
+34	database	queue	{"uuid":"ae14c265-9412-4c8e-b50d-6659cac91644","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:18;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/metadata\\/MetadataChangedJob.php","line":57,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:26:13
+35	database	queue	{"uuid":"984698c3-b3fe-408f-be68-0a937e69696e","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:18;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	{"message":"PKP\\\\orcid\\\\OrcidManager::getApiType(): Return value must be of type string, null returned","code":0,"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":363,"trace":[{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/OrcidManager.php","line":211,"function":"getApiType","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/orcid\\/actions\\/PKPSendSubmissionToOrcid.php","line":40,"function":"isMemberApiEnabled","class":"PKP\\\\orcid\\\\OrcidManager","type":"::"},{"file":"\\/home\\/runner\\/ops\\/classes\\/search\\/PreprintSearchIndex.php","line":82,"function":"execute","class":"PKP\\\\orcid\\\\actions\\\\PKPSendSubmissionToOrcid","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/jobs\\/submissions\\/UpdateSubmissionSearchJob.php","line":66,"function":"submissionMetadataChanged","class":"APP\\\\search\\\\PreprintSearchIndex","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":36,"function":"handle","class":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Util.php","line":43,"function":"Illuminate\\\\Container\\\\{closure}","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":95,"function":"unwrapIfClosure","class":"Illuminate\\\\Container\\\\Util","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/BoundMethod.php","line":35,"function":"callBoundMethod","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Container\\/Container.php","line":694,"function":"call","class":"Illuminate\\\\Container\\\\BoundMethod","type":"::"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":126,"function":"call","class":"Illuminate\\\\Container\\\\Container","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Bus\\\\{closure}","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Bus\\/Dispatcher.php","line":130,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":124,"function":"dispatchNow","class":"Illuminate\\\\Bus\\\\Dispatcher","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":144,"function":"Illuminate\\\\Queue\\\\{closure}","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Pipeline\\/Pipeline.php","line":119,"function":"Illuminate\\\\Pipeline\\\\{closure}","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":123,"function":"then","class":"Illuminate\\\\Pipeline\\\\Pipeline","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/CallQueuedHandler.php","line":71,"function":"dispatchThroughMiddleware","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Jobs\\/Job.php","line":102,"function":"call","class":"Illuminate\\\\Queue\\\\CallQueuedHandler","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":441,"function":"fire","class":"Illuminate\\\\Queue\\\\Jobs\\\\Job","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":391,"function":"process","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/lib\\/vendor\\/laravel\\/framework\\/src\\/Illuminate\\/Queue\\/Worker.php","line":335,"function":"runJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":101,"function":"runNextJob","class":"Illuminate\\\\Queue\\\\Worker","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/queue\\/JobRunner.php","line":220,"function":"runJobInQueue","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"},{"file":"\\/home\\/runner\\/ops\\/lib\\/pkp\\/classes\\/core\\/PKPQueueProvider.php","line":139,"function":"processJobs","class":"PKP\\\\queue\\\\JobRunner","type":"->"},{"function":"PKP\\\\core\\\\{closure}","class":"PKP\\\\core\\\\PKPQueueProvider","type":"->"}]}	2025-01-18 05:26:22
 \.
 
 
@@ -7949,25 +7949,25 @@ COPY public.failed_jobs (id, connection, queue, payload, exception, failed_at) F
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	contexts/1/submissions/1/6789e818b9d67.pdf	application/pdf
-2	contexts/1/submissions/2/6789e83b908b1.pdf	application/pdf
-3	contexts/1/submissions/3/6789e86ea01e1.pdf	application/pdf
-4	contexts/1/submissions/4/6789e89bbfde2.pdf	application/pdf
-5	contexts/1/submissions/5/6789e8c176e7f.pdf	application/pdf
-6	contexts/1/submissions/6/6789e8e22d642.pdf	application/pdf
-7	contexts/1/submissions/7/6789e8fa473a4.pdf	application/pdf
-8	contexts/1/submissions/8/6789e91285a98.pdf	application/pdf
-9	contexts/1/submissions/9/6789e92a81e36.pdf	application/pdf
-10	contexts/1/submissions/10/6789e9426f541.pdf	application/pdf
-11	contexts/1/submissions/11/6789e95a8bb43.pdf	application/pdf
-12	contexts/1/submissions/12/6789e9731e9f0.pdf	application/pdf
-13	contexts/1/submissions/13/6789e98b47456.pdf	application/pdf
-14	contexts/1/submissions/14/6789e9a35cc67.pdf	application/pdf
-15	contexts/1/submissions/15/6789e9bb66859.pdf	application/pdf
-16	contexts/1/submissions/16/6789e9d34354a.pdf	application/pdf
-17	contexts/1/submissions/17/6789e9eb3bb54.pdf	application/pdf
-18	contexts/1/submissions/18/6789ea033864d.pdf	application/pdf
-19	contexts/1/submissions/19/6789ea1b26143.pdf	application/pdf
+1	contexts/1/submissions/1/678b3981bdc40.pdf	application/pdf
+2	contexts/1/submissions/2/678b39a43e2f2.pdf	application/pdf
+3	contexts/1/submissions/3/678b39d6d0ebe.pdf	application/pdf
+4	contexts/1/submissions/4/678b3a0382704.pdf	application/pdf
+5	contexts/1/submissions/5/678b3a2854265.pdf	application/pdf
+6	contexts/1/submissions/6/678b3a4839ccf.pdf	application/pdf
+7	contexts/1/submissions/7/678b3a5fc281f.pdf	application/pdf
+8	contexts/1/submissions/8/678b3a77d806b.pdf	application/pdf
+9	contexts/1/submissions/9/678b3a8f5a31b.pdf	application/pdf
+10	contexts/1/submissions/10/678b3aaa0092d.pdf	application/pdf
+11	contexts/1/submissions/11/678b3ac17d53f.pdf	application/pdf
+12	contexts/1/submissions/12/678b3ada85ed1.pdf	application/pdf
+13	contexts/1/submissions/13/678b3af25713a.pdf	application/pdf
+14	contexts/1/submissions/14/678b3b0a1b721.pdf	application/pdf
+15	contexts/1/submissions/15/678b3b2201b80.pdf	application/pdf
+16	contexts/1/submissions/16/678b3b39bf5b8.pdf	application/pdf
+17	contexts/1/submissions/17/678b3b519daf8.pdf	application/pdf
+18	contexts/1/submissions/18/678b3b695d517.pdf	application/pdf
+19	contexts/1/submissions/19/678b3b81022a9.pdf	application/pdf
 \.
 
 
@@ -8116,11 +8116,11 @@ COPY public.institutions (institution_id, context_id, ror, deleted_at) FROM stdi
 --
 
 COPY public.invitations (invitation_id, key_hash, type, user_id, inviter_id, expiry_date, payload, status, email, context_id, created_at, updated_at) FROM stdin;
-4	$2y$10$ZCVERfv3Rrq5n/L/ocL0We96.gxRsvKYHOVCU0LHZMxk8hwPFzqB.	userRoleAssignment	\N	1	2025-01-20 05:16:10	{"userOrcid":null,"givenName":{"en":"Daniel","fr_CA":"Daniel"},"familyName":{"en":"Barnes","fr_CA":"Barnes"},"affiliation":{"en":"University of Melbourne","fr_CA":"Australia"},"userCountry":"AU","username":"dbarnes","password":"$2y$10$uJAMc6sQ7ZHED3LintWJIOxERJJLgca4kepFE1n5WU2IAXVZqrkTO","emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":2,"dateStart":"2025-01-17","dateEnd":null,"masthead":true}],"passwordHashed":true,"sendEmailAddress":"dbarnes@mailinator.com","inviteStagePayload":{"userOrcid":null,"givenName":null,"familyName":null,"affiliation":null,"userCountry":null,"username":null,"password":null,"emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":2,"dateStart":"2025-01-17","dateEnd":null,"masthead":true}],"passwordHashed":null,"sendEmailAddress":"dbarnes@mailinator.com","inviteStagePayload":null,"shouldUseInviteData":null},"shouldUseInviteData":null}	ACCEPTED	dbarnes@mailinator.com	1	2025-01-17 05:16:10	2025-01-17 05:16:19
-2	$2y$10$bMLfhHmtTRXa4hhj7CHMUuQnUBMs3AalsIxEDg/EGEnQMuMss/Nka	userRoleAssignment	\N	1	2025-01-20 05:15:49	{"userOrcid":null,"givenName":{"en":"Ramiro","fr_CA":"Ramiro"},"familyName":{"en":"Vaca","fr_CA":"Vaca"},"affiliation":{"en":"Universidad Nacional Aut\\u00f3noma de M\\u00e9xico","fr_CA":"Mexico"},"userCountry":"MX","username":"rvaca","password":"$2y$10$StCsvtJat7dzqa0jzeUmwe5w\\/R1Yr9EqXNVO.rzXR0Y\\/J19.hYt0G","emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":2,"dateStart":"2025-01-17","dateEnd":null,"masthead":true}],"passwordHashed":true,"sendEmailAddress":"rvaca@mailinator.com","inviteStagePayload":{"userOrcid":null,"givenName":null,"familyName":null,"affiliation":null,"userCountry":null,"username":null,"password":null,"emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":2,"dateStart":"2025-01-17","dateEnd":null,"masthead":true}],"passwordHashed":null,"sendEmailAddress":"rvaca@mailinator.com","inviteStagePayload":null,"shouldUseInviteData":null},"shouldUseInviteData":null}	ACCEPTED	rvaca@mailinator.com	1	2025-01-17 05:15:49	2025-01-17 05:15:58
-6	$2y$10$Ns4IHhB2vFahsVPm.mgJw.l3eIyiDJ8EdUxt4rVTy5nitVXf.DlAK	userRoleAssignment	\N	1	2025-01-20 05:16:31	{"userOrcid":null,"givenName":{"en":"David","fr_CA":"David"},"familyName":{"en":"Buskins","fr_CA":"Buskins"},"affiliation":{"en":"University of Chicago","fr_CA":"United States"},"userCountry":"US","username":"dbuskins","password":"$2y$10$0midx6rgadXuvfKjRkrK.eMB7H8dGfoGy\\/HGOnM2r53bCDWZr1Jaq","emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-17","dateEnd":null,"masthead":true}],"passwordHashed":true,"sendEmailAddress":"dbuskins@mailinator.com","inviteStagePayload":{"userOrcid":null,"givenName":null,"familyName":null,"affiliation":null,"userCountry":null,"username":null,"password":null,"emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-17","dateEnd":null,"masthead":true}],"passwordHashed":null,"sendEmailAddress":"dbuskins@mailinator.com","inviteStagePayload":null,"shouldUseInviteData":null},"shouldUseInviteData":null}	ACCEPTED	dbuskins@mailinator.com	1	2025-01-17 05:16:31	2025-01-17 05:16:41
-8	$2y$10$EuK9YQdeZ5zaISBiksrzw.XSqQO75DXdgH3p1OmcDk7PDlVVcBdYC	userRoleAssignment	\N	1	2025-01-20 05:16:53	{"userOrcid":null,"givenName":{"en":"Stephanie","fr_CA":"Stephanie"},"familyName":{"en":"Berardo","fr_CA":"Berardo"},"affiliation":{"en":"University of Toronto","fr_CA":"Canada"},"userCountry":"CA","username":"sberardo","password":"$2y$10$tvALcUOS9JMz.Z9w3aQE6O.88iG3iPy3\\/p.k8nwlNm\\/Rum8VaavSC","emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-17","dateEnd":null,"masthead":true}],"passwordHashed":true,"sendEmailAddress":"sberardo@mailinator.com","inviteStagePayload":{"userOrcid":null,"givenName":null,"familyName":null,"affiliation":null,"userCountry":null,"username":null,"password":null,"emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-17","dateEnd":null,"masthead":true}],"passwordHashed":null,"sendEmailAddress":"sberardo@mailinator.com","inviteStagePayload":null,"shouldUseInviteData":null},"shouldUseInviteData":null}	ACCEPTED	sberardo@mailinator.com	1	2025-01-17 05:16:53	2025-01-17 05:17:04
-10	$2y$10$3xYnh8OPjtWEAnikZdTACu8veoXsE83GHJW/PRV87m.VjWUWrtYJy	userRoleAssignment	\N	1	2025-01-20 05:17:17	{"userOrcid":null,"givenName":{"en":"Minoti","fr_CA":"Minoti"},"familyName":{"en":"Inoue","fr_CA":"Inoue"},"affiliation":{"en":"Kyoto University","fr_CA":"Japan"},"userCountry":"JP","username":"minoue","password":"$2y$10$KWMymlSIPoK6h.08Nc2wZubS.s6SBQTuejGiQPPOoQd8y.84LjB82","emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-17","dateEnd":null,"masthead":true}],"passwordHashed":true,"sendEmailAddress":"minoue@mailinator.com","inviteStagePayload":{"userOrcid":null,"givenName":null,"familyName":null,"affiliation":null,"userCountry":null,"username":null,"password":null,"emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-17","dateEnd":null,"masthead":true}],"passwordHashed":null,"sendEmailAddress":"minoue@mailinator.com","inviteStagePayload":null,"shouldUseInviteData":null},"shouldUseInviteData":null}	ACCEPTED	minoue@mailinator.com	1	2025-01-17 05:17:17	2025-01-17 05:17:28
+4	$2y$10$Bpx5MoeFBoq5i2J.2aC7U.OWoksA6Jc3dac4bqgMmIl.mIXrg/6sm	userRoleAssignment	\N	1	2025-01-21 05:15:50	{"userOrcid":null,"givenName":{"en":"Daniel","fr_CA":"Daniel"},"familyName":{"en":"Barnes","fr_CA":"Barnes"},"affiliation":{"en":"University of Melbourne","fr_CA":"Australia"},"userCountry":"AU","username":"dbarnes","password":"$2y$10$3UHC0lefMuz3yXK4kHvUoe700JhBp.lvyTsq3kzopFhhBsHMYveZe","emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":2,"dateStart":"2025-01-18","dateEnd":null,"masthead":true}],"passwordHashed":true,"sendEmailAddress":"dbarnes@mailinator.com","inviteStagePayload":{"userOrcid":null,"givenName":null,"familyName":null,"affiliation":null,"userCountry":null,"username":null,"password":null,"emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":2,"dateStart":"2025-01-18","dateEnd":null,"masthead":true}],"passwordHashed":null,"sendEmailAddress":"dbarnes@mailinator.com","inviteStagePayload":null,"shouldUseInviteData":null},"shouldUseInviteData":null}	ACCEPTED	dbarnes@mailinator.com	1	2025-01-18 05:15:49	2025-01-18 05:15:59
+2	$2y$10$iellowW65GrQg29peXCu0unMODp/xKxdeRyUNLYB.C/uwPq35D/Ta	userRoleAssignment	\N	1	2025-01-21 05:15:29	{"userOrcid":null,"givenName":{"en":"Ramiro","fr_CA":"Ramiro"},"familyName":{"en":"Vaca","fr_CA":"Vaca"},"affiliation":{"en":"Universidad Nacional Aut\\u00f3noma de M\\u00e9xico","fr_CA":"Mexico"},"userCountry":"MX","username":"rvaca","password":"$2y$10$VcvyLU2qkxOQFY4Cx9VlIOIP9nn2e85XZwCQYW7myZFwSXLj.Ne3O","emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":2,"dateStart":"2025-01-18","dateEnd":null,"masthead":true}],"passwordHashed":true,"sendEmailAddress":"rvaca@mailinator.com","inviteStagePayload":{"userOrcid":null,"givenName":null,"familyName":null,"affiliation":null,"userCountry":null,"username":null,"password":null,"emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":2,"dateStart":"2025-01-18","dateEnd":null,"masthead":true}],"passwordHashed":null,"sendEmailAddress":"rvaca@mailinator.com","inviteStagePayload":null,"shouldUseInviteData":null},"shouldUseInviteData":null}	ACCEPTED	rvaca@mailinator.com	1	2025-01-18 05:15:29	2025-01-18 05:15:39
+6	$2y$10$UCFk/tkFHQ5WQG0JvJ3MEefe25zCjSWtmVp1ooGJCB6W1jOQ4pf3a	userRoleAssignment	\N	1	2025-01-21 05:16:10	{"userOrcid":null,"givenName":{"en":"David","fr_CA":"David"},"familyName":{"en":"Buskins","fr_CA":"Buskins"},"affiliation":{"en":"University of Chicago","fr_CA":"United States"},"userCountry":"US","username":"dbuskins","password":"$2y$10$XqBqjsV9OzqT56D0As7JyeJ4s\\/1kxWCdQkh8pwqi9UODt\\/Wwgv\\/r6","emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-18","dateEnd":null,"masthead":true}],"passwordHashed":true,"sendEmailAddress":"dbuskins@mailinator.com","inviteStagePayload":{"userOrcid":null,"givenName":null,"familyName":null,"affiliation":null,"userCountry":null,"username":null,"password":null,"emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-18","dateEnd":null,"masthead":true}],"passwordHashed":null,"sendEmailAddress":"dbuskins@mailinator.com","inviteStagePayload":null,"shouldUseInviteData":null},"shouldUseInviteData":null}	ACCEPTED	dbuskins@mailinator.com	1	2025-01-18 05:16:10	2025-01-18 05:16:20
+8	$2y$10$fjrW/mcan7UzoJT2rY2YguWrF2n5wIyyM.9xxBcxyCxmI8tyugQmm	userRoleAssignment	\N	1	2025-01-21 05:16:32	{"userOrcid":null,"givenName":{"en":"Stephanie","fr_CA":"Stephanie"},"familyName":{"en":"Berardo","fr_CA":"Berardo"},"affiliation":{"en":"University of Toronto","fr_CA":"Canada"},"userCountry":"CA","username":"sberardo","password":"$2y$10$DWBdNqc8f1QPVPUGdYkctOQstfqbwUxk\\/bE7srvKxRq9WhSLnWf9y","emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-18","dateEnd":null,"masthead":true}],"passwordHashed":true,"sendEmailAddress":"sberardo@mailinator.com","inviteStagePayload":{"userOrcid":null,"givenName":null,"familyName":null,"affiliation":null,"userCountry":null,"username":null,"password":null,"emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-18","dateEnd":null,"masthead":true}],"passwordHashed":null,"sendEmailAddress":"sberardo@mailinator.com","inviteStagePayload":null,"shouldUseInviteData":null},"shouldUseInviteData":null}	ACCEPTED	sberardo@mailinator.com	1	2025-01-18 05:16:32	2025-01-18 05:16:42
+10	$2y$10$7NyriqedGM3np120gJPLZuLAkK1Rf1SnpsdO6DDHrGkqCETn0KBxC	userRoleAssignment	\N	1	2025-01-21 05:16:55	{"userOrcid":null,"givenName":{"en":"Minoti","fr_CA":"Minoti"},"familyName":{"en":"Inoue","fr_CA":"Inoue"},"affiliation":{"en":"Kyoto University","fr_CA":"Japan"},"userCountry":"JP","username":"minoue","password":"$2y$10$C\\/FMNyO\\/aD8.z43.qwE6euqyQBvG78zEflwoHCTKI94iB.tfYg.\\/m","emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-18","dateEnd":null,"masthead":true}],"passwordHashed":true,"sendEmailAddress":"minoue@mailinator.com","inviteStagePayload":{"userOrcid":null,"givenName":null,"familyName":null,"affiliation":null,"userCountry":null,"username":null,"password":null,"emailSubject":null,"emailBody":null,"userGroupsToAdd":[{"userGroupId":3,"dateStart":"2025-01-18","dateEnd":null,"masthead":true}],"passwordHashed":null,"sendEmailAddress":"minoue@mailinator.com","inviteStagePayload":null,"shouldUseInviteData":null},"shouldUseInviteData":null}	ACCEPTED	minoue@mailinator.com	1	2025-01-18 05:16:55	2025-01-18 05:17:06
 \.
 
 
@@ -8137,8 +8137,8 @@ COPY public.job_batches (id, name, total_jobs, pending_jobs, failed_jobs, failed
 --
 
 COPY public.jobs (id, queue, payload, attempts, reserved_at, available_at, created_at) FROM stdin;
-114	queue	{"uuid":"9d0ed38f-1da2-4cb4-b54a-ed16582fc4e2","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:19;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	2	\N	1737091623	1737091618
-116	queue	{"uuid":"b55b545d-678b-4148-975d-90f9926f0cf9","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:19;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	1	\N	1737091623	1737091618
+115	queue	{"uuid":"b08f3503-8e42-4256-a69b-69c6a767767a","displayName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":180,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob","command":"O:46:\\"PKP\\\\jobs\\\\submissions\\\\UpdateSubmissionSearchJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:19;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	1	\N	1737177997	1737177992
+116	queue	{"uuid":"dd6547ac-5eb3-44d2-ba84-e79b4a947993","displayName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","job":"Illuminate\\\\Queue\\\\CallQueuedHandler@call","maxTries":3,"maxExceptions":3,"failOnTimeout":true,"backoff":"5","timeout":60,"retryUntil":null,"data":{"commandName":"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob","command":"O:36:\\"PKP\\\\jobs\\\\metadata\\\\MetadataChangedJob\\":3:{s:15:\\"\\u0000*\\u0000submissionId\\";i:19;s:10:\\"connection\\";s:8:\\"database\\";s:5:\\"queue\\";s:5:\\"queue\\";}"}}	2	\N	1737177997	1737177992
 \.
 
 
@@ -8381,124 +8381,124 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-75	1	\N	2	16777245	2025-01-17 05:23:42	\N	1048585	11
-76	1	\N	3	16777222	2025-01-17 05:24:06	\N	1048585	12
-77	1	\N	3	16777223	2025-01-17 05:24:06	\N	1048585	12
-78	1	4	2	16777217	2025-01-17 05:24:06	\N	1048585	12
-5	1	\N	3	16777222	2025-01-17 05:18:19	\N	1048585	1
-6	1	\N	3	16777223	2025-01-17 05:18:19	\N	1048585	1
-7	1	4	2	16777217	2025-01-17 05:18:19	\N	1048585	1
-8	1	5	2	16777217	2025-01-17 05:18:19	\N	1048585	1
-9	1	\N	2	16777243	2025-01-17 05:18:20	\N	1048585	1
-10	1	\N	2	16777245	2025-01-17 05:18:20	\N	1048585	1
-11	1	\N	3	16777222	2025-01-17 05:19:18	\N	1048585	2
-12	1	\N	3	16777223	2025-01-17 05:19:18	\N	1048585	2
-13	1	4	2	16777217	2025-01-17 05:19:18	\N	1048585	2
-14	1	5	2	16777217	2025-01-17 05:19:18	\N	1048585	2
-15	1	\N	2	16777243	2025-01-17 05:19:18	\N	1048585	2
-16	1	\N	2	16777245	2025-01-17 05:19:18	\N	1048585	2
-17	1	\N	3	16777222	2025-01-17 05:19:46	\N	1048585	3
-18	1	\N	3	16777223	2025-01-17 05:19:46	\N	1048585	3
-19	1	4	2	16777217	2025-01-17 05:19:46	\N	1048585	3
-20	1	5	2	16777217	2025-01-17 05:19:46	\N	1048585	3
-21	1	\N	2	16777243	2025-01-17 05:19:46	\N	1048585	3
-22	1	\N	2	16777245	2025-01-17 05:19:46	\N	1048585	3
-23	1	4	3	16777259	2025-01-17 05:20:02	\N	1048585	3
-24	1	5	3	16777259	2025-01-17 05:20:02	\N	1048585	3
-25	1	9	3	16777259	2025-01-17 05:20:02	\N	1048585	3
-26	1	\N	3	16777222	2025-01-17 05:20:30	\N	1048585	4
-27	1	\N	3	16777223	2025-01-17 05:20:30	\N	1048585	4
-28	1	4	2	16777217	2025-01-17 05:20:30	\N	1048585	4
-29	1	5	2	16777217	2025-01-17 05:20:30	\N	1048585	4
-30	1	\N	2	16777243	2025-01-17 05:20:31	\N	1048585	4
-31	1	\N	2	16777245	2025-01-17 05:20:31	\N	1048585	4
-33	1	10	2	16777234	2025-01-17 05:20:46	\N	1048585	4
-34	1	\N	3	16777222	2025-01-17 05:21:08	\N	1048585	5
-35	1	\N	3	16777223	2025-01-17 05:21:08	\N	1048585	5
-36	1	4	2	16777217	2025-01-17 05:21:08	\N	1048585	5
-37	1	5	2	16777217	2025-01-17 05:21:08	\N	1048585	5
-38	1	\N	2	16777243	2025-01-17 05:21:08	\N	1048585	5
-39	1	\N	2	16777245	2025-01-17 05:21:08	\N	1048585	5
-40	1	\N	3	16777222	2025-01-17 05:21:41	\N	1048585	6
-41	1	\N	3	16777223	2025-01-17 05:21:41	\N	1048585	6
-42	1	4	2	16777217	2025-01-17 05:21:41	\N	1048585	6
-43	1	5	2	16777217	2025-01-17 05:21:41	\N	1048585	6
-44	1	\N	2	16777243	2025-01-17 05:21:41	\N	1048585	6
-45	1	\N	2	16777245	2025-01-17 05:21:41	\N	1048585	6
-46	1	\N	3	16777222	2025-01-17 05:22:05	\N	1048585	7
-47	1	\N	3	16777223	2025-01-17 05:22:05	\N	1048585	7
-48	1	4	2	16777217	2025-01-17 05:22:05	\N	1048585	7
-49	1	5	2	16777217	2025-01-17 05:22:05	\N	1048585	7
-50	1	\N	2	16777243	2025-01-17 05:22:05	\N	1048585	7
-51	1	\N	2	16777245	2025-01-17 05:22:05	\N	1048585	7
-52	1	\N	3	16777222	2025-01-17 05:22:29	\N	1048585	8
-53	1	\N	3	16777223	2025-01-17 05:22:29	\N	1048585	8
-54	1	4	2	16777217	2025-01-17 05:22:29	\N	1048585	8
-55	1	5	2	16777217	2025-01-17 05:22:29	\N	1048585	8
-56	1	\N	2	16777243	2025-01-17 05:22:29	\N	1048585	8
-57	1	\N	2	16777245	2025-01-17 05:22:29	\N	1048585	8
-58	1	\N	3	16777222	2025-01-17 05:22:53	\N	1048585	9
-59	1	\N	3	16777223	2025-01-17 05:22:53	\N	1048585	9
-60	1	4	2	16777217	2025-01-17 05:22:53	\N	1048585	9
-61	1	5	2	16777217	2025-01-17 05:22:53	\N	1048585	9
-62	1	\N	2	16777243	2025-01-17 05:22:53	\N	1048585	9
-63	1	\N	2	16777245	2025-01-17 05:22:53	\N	1048585	9
-64	1	\N	3	16777222	2025-01-17 05:23:17	\N	1048585	10
-65	1	\N	3	16777223	2025-01-17 05:23:17	\N	1048585	10
-66	1	4	2	16777217	2025-01-17 05:23:17	\N	1048585	10
-67	1	5	2	16777217	2025-01-17 05:23:17	\N	1048585	10
-68	1	\N	2	16777243	2025-01-17 05:23:17	\N	1048585	10
-69	1	\N	2	16777245	2025-01-17 05:23:17	\N	1048585	10
-70	1	\N	3	16777222	2025-01-17 05:23:41	\N	1048585	11
-71	1	\N	3	16777223	2025-01-17 05:23:41	\N	1048585	11
-72	1	4	2	16777217	2025-01-17 05:23:41	\N	1048585	11
-73	1	5	2	16777217	2025-01-17 05:23:41	\N	1048585	11
-74	1	\N	2	16777243	2025-01-17 05:23:42	\N	1048585	11
-79	1	5	2	16777217	2025-01-17 05:24:06	\N	1048585	12
-80	1	\N	2	16777243	2025-01-17 05:24:06	\N	1048585	12
-81	1	\N	2	16777245	2025-01-17 05:24:06	\N	1048585	12
-82	1	\N	3	16777222	2025-01-17 05:24:30	\N	1048585	13
-83	1	\N	3	16777223	2025-01-17 05:24:30	\N	1048585	13
-84	1	4	2	16777217	2025-01-17 05:24:30	\N	1048585	13
-85	1	5	2	16777217	2025-01-17 05:24:30	\N	1048585	13
-86	1	\N	2	16777243	2025-01-17 05:24:30	\N	1048585	13
-87	1	\N	2	16777245	2025-01-17 05:24:30	\N	1048585	13
-88	1	\N	3	16777222	2025-01-17 05:24:54	\N	1048585	14
-89	1	\N	3	16777223	2025-01-17 05:24:54	\N	1048585	14
-90	1	4	2	16777217	2025-01-17 05:24:54	\N	1048585	14
-91	1	5	2	16777217	2025-01-17 05:24:54	\N	1048585	14
-92	1	\N	2	16777243	2025-01-17 05:24:54	\N	1048585	14
-93	1	\N	2	16777245	2025-01-17 05:24:54	\N	1048585	14
-94	1	\N	3	16777222	2025-01-17 05:25:18	\N	1048585	15
-95	1	\N	3	16777223	2025-01-17 05:25:18	\N	1048585	15
-96	1	4	2	16777217	2025-01-17 05:25:18	\N	1048585	15
-97	1	5	2	16777217	2025-01-17 05:25:18	\N	1048585	15
-98	1	\N	2	16777243	2025-01-17 05:25:18	\N	1048585	15
-99	1	\N	2	16777245	2025-01-17 05:25:18	\N	1048585	15
-100	1	\N	3	16777222	2025-01-17 05:25:42	\N	1048585	16
-101	1	\N	3	16777223	2025-01-17 05:25:42	\N	1048585	16
-102	1	4	2	16777217	2025-01-17 05:25:42	\N	1048585	16
-103	1	5	2	16777217	2025-01-17 05:25:42	\N	1048585	16
-104	1	\N	2	16777243	2025-01-17 05:25:42	\N	1048585	16
-105	1	\N	2	16777245	2025-01-17 05:25:42	\N	1048585	16
-106	1	\N	3	16777222	2025-01-17 05:26:06	\N	1048585	17
-107	1	\N	3	16777223	2025-01-17 05:26:06	\N	1048585	17
-108	1	4	2	16777217	2025-01-17 05:26:06	\N	1048585	17
-109	1	5	2	16777217	2025-01-17 05:26:06	\N	1048585	17
-110	1	\N	2	16777243	2025-01-17 05:26:06	\N	1048585	17
-111	1	\N	2	16777245	2025-01-17 05:26:06	\N	1048585	17
-112	1	\N	3	16777222	2025-01-17 05:26:30	\N	1048585	18
-113	1	\N	3	16777223	2025-01-17 05:26:30	\N	1048585	18
-114	1	4	2	16777217	2025-01-17 05:26:30	\N	1048585	18
-115	1	5	2	16777217	2025-01-17 05:26:30	\N	1048585	18
-116	1	\N	2	16777243	2025-01-17 05:26:30	\N	1048585	18
-117	1	\N	2	16777245	2025-01-17 05:26:30	\N	1048585	18
-118	1	\N	3	16777222	2025-01-17 05:26:54	\N	1048585	19
-119	1	\N	3	16777223	2025-01-17 05:26:54	\N	1048585	19
-120	1	4	2	16777217	2025-01-17 05:26:54	\N	1048585	19
-121	1	5	2	16777217	2025-01-17 05:26:54	\N	1048585	19
-122	1	\N	2	16777243	2025-01-17 05:26:54	\N	1048585	19
-123	1	\N	2	16777245	2025-01-17 05:26:54	\N	1048585	19
+75	1	\N	2	16777245	2025-01-18 05:23:17	\N	1048585	11
+76	1	\N	3	16777222	2025-01-18 05:23:41	\N	1048585	12
+77	1	\N	3	16777223	2025-01-18 05:23:41	\N	1048585	12
+78	1	4	2	16777217	2025-01-18 05:23:41	\N	1048585	12
+5	1	\N	3	16777222	2025-01-18 05:17:56	\N	1048585	1
+6	1	\N	3	16777223	2025-01-18 05:17:56	\N	1048585	1
+7	1	4	2	16777217	2025-01-18 05:17:56	\N	1048585	1
+8	1	5	2	16777217	2025-01-18 05:17:56	\N	1048585	1
+9	1	\N	2	16777243	2025-01-18 05:17:56	\N	1048585	1
+10	1	\N	2	16777245	2025-01-18 05:17:56	\N	1048585	1
+11	1	\N	3	16777222	2025-01-18 05:18:54	\N	1048585	2
+12	1	\N	3	16777223	2025-01-18 05:18:54	\N	1048585	2
+13	1	4	2	16777217	2025-01-18 05:18:54	\N	1048585	2
+14	1	5	2	16777217	2025-01-18 05:18:54	\N	1048585	2
+15	1	\N	2	16777243	2025-01-18 05:18:54	\N	1048585	2
+16	1	\N	2	16777245	2025-01-18 05:18:54	\N	1048585	2
+17	1	\N	3	16777222	2025-01-18 05:19:22	\N	1048585	3
+18	1	\N	3	16777223	2025-01-18 05:19:22	\N	1048585	3
+19	1	4	2	16777217	2025-01-18 05:19:22	\N	1048585	3
+20	1	5	2	16777217	2025-01-18 05:19:22	\N	1048585	3
+21	1	\N	2	16777243	2025-01-18 05:19:22	\N	1048585	3
+22	1	\N	2	16777245	2025-01-18 05:19:22	\N	1048585	3
+23	1	4	3	16777259	2025-01-18 05:19:38	\N	1048585	3
+24	1	5	3	16777259	2025-01-18 05:19:38	\N	1048585	3
+25	1	9	3	16777259	2025-01-18 05:19:38	\N	1048585	3
+26	1	\N	3	16777222	2025-01-18 05:20:06	\N	1048585	4
+27	1	\N	3	16777223	2025-01-18 05:20:06	\N	1048585	4
+28	1	4	2	16777217	2025-01-18 05:20:06	\N	1048585	4
+29	1	5	2	16777217	2025-01-18 05:20:06	\N	1048585	4
+30	1	\N	2	16777243	2025-01-18 05:20:06	\N	1048585	4
+31	1	\N	2	16777245	2025-01-18 05:20:06	\N	1048585	4
+33	1	10	2	16777234	2025-01-18 05:20:22	\N	1048585	4
+34	1	\N	3	16777222	2025-01-18 05:20:43	\N	1048585	5
+35	1	\N	3	16777223	2025-01-18 05:20:43	\N	1048585	5
+36	1	4	2	16777217	2025-01-18 05:20:43	\N	1048585	5
+37	1	5	2	16777217	2025-01-18 05:20:43	\N	1048585	5
+38	1	\N	2	16777243	2025-01-18 05:20:43	\N	1048585	5
+39	1	\N	2	16777245	2025-01-18 05:20:43	\N	1048585	5
+40	1	\N	3	16777222	2025-01-18 05:21:15	\N	1048585	6
+41	1	\N	3	16777223	2025-01-18 05:21:15	\N	1048585	6
+42	1	4	2	16777217	2025-01-18 05:21:15	\N	1048585	6
+43	1	5	2	16777217	2025-01-18 05:21:15	\N	1048585	6
+44	1	\N	2	16777243	2025-01-18 05:21:15	\N	1048585	6
+45	1	\N	2	16777245	2025-01-18 05:21:15	\N	1048585	6
+46	1	\N	3	16777222	2025-01-18 05:21:39	\N	1048585	7
+47	1	\N	3	16777223	2025-01-18 05:21:39	\N	1048585	7
+48	1	4	2	16777217	2025-01-18 05:21:39	\N	1048585	7
+49	1	5	2	16777217	2025-01-18 05:21:39	\N	1048585	7
+50	1	\N	2	16777243	2025-01-18 05:21:39	\N	1048585	7
+51	1	\N	2	16777245	2025-01-18 05:21:39	\N	1048585	7
+52	1	\N	3	16777222	2025-01-18 05:22:02	\N	1048585	8
+53	1	\N	3	16777223	2025-01-18 05:22:02	\N	1048585	8
+54	1	4	2	16777217	2025-01-18 05:22:02	\N	1048585	8
+55	1	5	2	16777217	2025-01-18 05:22:02	\N	1048585	8
+56	1	\N	2	16777243	2025-01-18 05:22:03	\N	1048585	8
+57	1	\N	2	16777245	2025-01-18 05:22:03	\N	1048585	8
+58	1	\N	3	16777222	2025-01-18 05:22:26	\N	1048585	9
+59	1	\N	3	16777223	2025-01-18 05:22:26	\N	1048585	9
+60	1	4	2	16777217	2025-01-18 05:22:26	\N	1048585	9
+61	1	5	2	16777217	2025-01-18 05:22:26	\N	1048585	9
+62	1	\N	2	16777243	2025-01-18 05:22:26	\N	1048585	9
+63	1	\N	2	16777245	2025-01-18 05:22:26	\N	1048585	9
+64	1	\N	3	16777222	2025-01-18 05:22:52	\N	1048585	10
+65	1	\N	3	16777223	2025-01-18 05:22:52	\N	1048585	10
+66	1	4	2	16777217	2025-01-18 05:22:52	\N	1048585	10
+67	1	5	2	16777217	2025-01-18 05:22:52	\N	1048585	10
+68	1	\N	2	16777243	2025-01-18 05:22:53	\N	1048585	10
+69	1	\N	2	16777245	2025-01-18 05:22:53	\N	1048585	10
+70	1	\N	3	16777222	2025-01-18 05:23:16	\N	1048585	11
+71	1	\N	3	16777223	2025-01-18 05:23:16	\N	1048585	11
+72	1	4	2	16777217	2025-01-18 05:23:16	\N	1048585	11
+73	1	5	2	16777217	2025-01-18 05:23:16	\N	1048585	11
+74	1	\N	2	16777243	2025-01-18 05:23:17	\N	1048585	11
+79	1	5	2	16777217	2025-01-18 05:23:41	\N	1048585	12
+80	1	\N	2	16777243	2025-01-18 05:23:41	\N	1048585	12
+81	1	\N	2	16777245	2025-01-18 05:23:41	\N	1048585	12
+82	1	\N	3	16777222	2025-01-18 05:24:05	\N	1048585	13
+83	1	\N	3	16777223	2025-01-18 05:24:05	\N	1048585	13
+84	1	4	2	16777217	2025-01-18 05:24:05	\N	1048585	13
+85	1	5	2	16777217	2025-01-18 05:24:05	\N	1048585	13
+86	1	\N	2	16777243	2025-01-18 05:24:05	\N	1048585	13
+87	1	\N	2	16777245	2025-01-18 05:24:05	\N	1048585	13
+88	1	\N	3	16777222	2025-01-18 05:24:29	\N	1048585	14
+89	1	\N	3	16777223	2025-01-18 05:24:29	\N	1048585	14
+90	1	4	2	16777217	2025-01-18 05:24:29	\N	1048585	14
+91	1	5	2	16777217	2025-01-18 05:24:29	\N	1048585	14
+92	1	\N	2	16777243	2025-01-18 05:24:29	\N	1048585	14
+93	1	\N	2	16777245	2025-01-18 05:24:29	\N	1048585	14
+94	1	\N	3	16777222	2025-01-18 05:24:52	\N	1048585	15
+95	1	\N	3	16777223	2025-01-18 05:24:52	\N	1048585	15
+96	1	4	2	16777217	2025-01-18 05:24:52	\N	1048585	15
+97	1	5	2	16777217	2025-01-18 05:24:52	\N	1048585	15
+98	1	\N	2	16777243	2025-01-18 05:24:53	\N	1048585	15
+99	1	\N	2	16777245	2025-01-18 05:24:53	\N	1048585	15
+100	1	\N	3	16777222	2025-01-18 05:25:16	\N	1048585	16
+101	1	\N	3	16777223	2025-01-18 05:25:16	\N	1048585	16
+102	1	4	2	16777217	2025-01-18 05:25:16	\N	1048585	16
+103	1	5	2	16777217	2025-01-18 05:25:16	\N	1048585	16
+104	1	\N	2	16777243	2025-01-18 05:25:16	\N	1048585	16
+105	1	\N	2	16777245	2025-01-18 05:25:17	\N	1048585	16
+106	1	\N	3	16777222	2025-01-18 05:25:40	\N	1048585	17
+107	1	\N	3	16777223	2025-01-18 05:25:40	\N	1048585	17
+108	1	4	2	16777217	2025-01-18 05:25:40	\N	1048585	17
+109	1	5	2	16777217	2025-01-18 05:25:40	\N	1048585	17
+110	1	\N	2	16777243	2025-01-18 05:25:40	\N	1048585	17
+111	1	\N	2	16777245	2025-01-18 05:25:40	\N	1048585	17
+112	1	\N	3	16777222	2025-01-18 05:26:04	\N	1048585	18
+113	1	\N	3	16777223	2025-01-18 05:26:04	\N	1048585	18
+114	1	4	2	16777217	2025-01-18 05:26:04	\N	1048585	18
+115	1	5	2	16777217	2025-01-18 05:26:04	\N	1048585	18
+116	1	\N	2	16777243	2025-01-18 05:26:04	\N	1048585	18
+117	1	\N	2	16777245	2025-01-18 05:26:04	\N	1048585	18
+118	1	\N	3	16777222	2025-01-18 05:26:27	\N	1048585	19
+119	1	\N	3	16777223	2025-01-18 05:26:27	\N	1048585	19
+120	1	4	2	16777217	2025-01-18 05:26:27	\N	1048585	19
+121	1	5	2	16777217	2025-01-18 05:26:27	\N	1048585	19
+122	1	\N	2	16777243	2025-01-18 05:26:28	\N	1048585	19
+123	1	\N	2	16777245	2025-01-18 05:26:28	\N	1048585	19
 \.
 
 
@@ -8694,26 +8694,26 @@ COPY public.publication_settings (publication_setting_id, publication_id, locale
 --
 
 COPY public.publications (publication_id, access_status, date_published, last_modified, primary_contact_id, section_id, submission_id, status, url_path, version, doi_id) FROM stdin;
-17	0	2025-01-17	2025-01-17 05:25:46	23	1	16	3	\N	1	\N
-1	0	\N	2025-01-17 05:18:06	1	1	1	1	\N	1	\N
-2	0	2025-01-17	2025-01-17 05:19:26	2	1	2	3	\N	1	\N
-18	0	2025-01-17	2025-01-17 05:26:10	24	1	17	3	\N	1	\N
-19	0	2025-01-17	2025-01-17 05:26:34	25	1	18	3	\N	1	\N
-3	0	2025-01-17	2025-01-17 05:20:00	5	1	3	3	\N	1	\N
-4	0	2025-01-17	2025-01-17 05:20:11	7	1	3	3	\N	2	\N
-5	0	\N	2025-01-17 05:20:18	9	1	4	1	\N	1	\N
-20	0	2025-01-17	2025-01-17 05:26:58	26	1	19	3	\N	1	\N
-6	0	2025-01-17	2025-01-17 05:21:21	10	1	5	3	\N	1	\N
-7	0	2025-01-17	2025-01-17 05:21:45	11	1	6	3	\N	1	\N
-8	0	2025-01-17	2025-01-17 05:22:10	12	1	7	3	\N	1	\N
-9	0	2025-01-17	2025-01-17 05:22:34	14	1	8	3	\N	1	\N
-10	0	2025-01-17	2025-01-17 05:22:58	15	1	9	3	\N	1	\N
-11	0	2025-01-17	2025-01-17 05:23:22	16	1	10	3	\N	1	\N
-12	0	2025-01-17	2025-01-17 05:23:46	17	1	11	3	\N	1	\N
-13	0	2025-01-17	2025-01-17 05:24:10	19	1	12	3	\N	1	\N
-14	0	2025-01-17	2025-01-17 05:24:34	20	1	13	3	\N	1	\N
-15	0	2025-01-17	2025-01-17 05:24:58	21	1	14	3	\N	1	\N
-16	0	2025-01-17	2025-01-17 05:25:22	22	1	15	3	\N	1	\N
+17	0	2025-01-18	2025-01-18 05:25:21	23	1	16	3	\N	1	\N
+1	0	\N	2025-01-18 05:17:43	1	1	1	1	\N	1	\N
+2	0	2025-01-18	2025-01-18 05:19:02	2	1	2	3	\N	1	\N
+18	0	2025-01-18	2025-01-18 05:25:44	24	1	17	3	\N	1	\N
+19	0	2025-01-18	2025-01-18 05:26:08	25	1	18	3	\N	1	\N
+3	0	2025-01-18	2025-01-18 05:19:36	5	1	3	3	\N	1	\N
+4	0	2025-01-18	2025-01-18 05:19:47	7	1	3	3	\N	2	\N
+5	0	\N	2025-01-18 05:19:53	9	1	4	1	\N	1	\N
+20	0	2025-01-18	2025-01-18 05:26:32	26	1	19	3	\N	1	\N
+6	0	2025-01-18	2025-01-18 05:20:56	10	1	5	3	\N	1	\N
+7	0	2025-01-18	2025-01-18 05:21:19	11	1	6	3	\N	1	\N
+8	0	2025-01-18	2025-01-18 05:21:43	12	1	7	3	\N	1	\N
+9	0	2025-01-18	2025-01-18 05:22:07	14	1	8	3	\N	1	\N
+10	0	2025-01-18	2025-01-18 05:22:30	15	1	9	3	\N	1	\N
+11	0	2025-01-18	2025-01-18 05:22:57	16	1	10	3	\N	1	\N
+12	0	2025-01-18	2025-01-18 05:23:21	17	1	11	3	\N	1	\N
+13	0	2025-01-18	2025-01-18 05:23:45	19	1	12	3	\N	1	\N
+14	0	2025-01-18	2025-01-18 05:24:09	20	1	13	3	\N	1	\N
+15	0	2025-01-18	2025-01-18 05:24:33	21	1	14	3	\N	1	\N
+16	0	2025-01-18	2025-01-18 05:24:57	22	1	15	3	\N	1	\N
 \.
 
 
@@ -8838,45 +8838,44 @@ COPY public.sections (section_id, server_id, review_form_id, seq, editor_restric
 --
 
 COPY public.server_settings (server_setting_id, server_id, locale, setting_name, setting_value) FROM stdin;
-5	1	en	authorInformation	Interested in submitting to this server? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About</a> page for the policies, as well as the <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> prior to submitting or, if already registered, can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the process.
-9	1		contactEmail	rvaca@mailinator.com
+10	1		contactName	Ramiro Vaca
+11	1	en	contributorsHelp	<p>Add details for all of the contributors to this submission. Contributors added here will be sent an email confirmation of the submission.</p><p> If a contributor can not be contacted by email, because they must remain anonymous or do not have an email account, please do not enter a fake email address. You can add information about this contributor in a message to the moderators at a later step in the submission process.</p>
 13	1		country	IS
 14	1		defaultReviewMode	2
 15	1	en	description	<p>The Public Knowledge Preprint Server is a preprint service on the subject of public access to science.</p>
 19	1		copySubmissionAckPrimaryContact	0
-27	1	en	forTheEditorsHelp	<p>Please provide the following details in order to help readers discover your preprint.</p><p>When entering metadata such as keywords, provide entries that you think would be most helpful to readers looking for research like yours.</p>
+28	1	fr_CA	forTheEditorsHelp	<p>S'il vous plaît, fournissez les détails suivants afin d'aider l'équipe éditoriale à gérer votre soumission.</p><p>Dans vos métadonnées, assurez vous de fournir des informations que vous pensez pouvoir être utile à la personne qui gérera votre soumission. Cette information peut être changée avant publication.</p>
 29	1		itemsPerPage	25
-30	1		keywords	request
+32	1	fr_CA	librarianInformation	##default.contextSettings.forLibrarians##
 33	1	en	name	Public Knowledge Preprint Server
 34	1	fr_CA	name	Serveur de prépublication de la connaissance du public
 35	1		notifyAllAuthors	1
-36	1		numPageLinks	10
+6	1	fr_CA	authorInformation	##default.contextSettings.forAuthors##
 7	1	en	beginSubmissionHelp	<p>Thank you for posting your preprint at Public Knowledge Preprint Server. You will be asked to upload files, identify co-authors, and provide information such as the title and abstract.<p><p>Please read our <a href="http://localhost/index.php/publicknowledge/about/submissions" target="_blank">Submission Guidelines</a> if you have not done so already. When filling out the forms, provide as many details as possible in order to help our readers find your work.</p><p>Once you begin, you can save your submission and come back to it later. You will be able to review and correct any information before you submit.</p>
-10	1		contactName	Ramiro Vaca
-11	1	en	contributorsHelp	<p>Add details for all of the contributors to this submission. Contributors added here will be sent an email confirmation of the submission.</p><p> If a contributor can not be contacted by email, because they must remain anonymous or do not have an email account, please do not enter a fake email address. You can add information about this contributor in a message to the moderators at a later step in the submission process.</p>
+9	1		contactEmail	rvaca@mailinator.com
 12	1	fr_CA	contributorsHelp	<p>Ajouter des informations relatives à tous les contributeurs.trices à cette soumission. Les contributeurs.trices ajouté.e.s ici se verront envoyer un courriel de confirmation de la soumission ainsi qu'une copie de toutes les décisions éditoriales enregistrées pour cette soumission.</p><p>Si un.e contributeur.trice ne peut être contacté.e par courriel parce qu'il ou elle doit demeurer anonyme ou n'a pas de compte de messagerie, veuillez ne pas entrer de courriel fictif. Vous pouvez ajouter des informations sur ce ou cette contributeur.trice à une étape ultérieure du processus de soumission.</p>
 16	1	fr_CA	description	<p>Le Serveur de prépublication de la connaissance du public est une service trimestrielle évaluée par les pairs sur le thème de l'accès du public à la science.</p>
 20	1		copySubmissionAckAddress	
 21	1		emailSignature	<br><br>—<br><p>This is an automated message from <a href="http://localhost/index.php/publicknowledge">Public Knowledge Preprint Server</a>.</p>
 22	1		enableDois	1
+30	1		keywords	request
 31	1	en	librarianInformation	We encourage research librarians to list this server among their library's holdings. As well, it may be worth noting that this server's open source system is suitable for libraries to host for their faculty members to use (see <a href="https://pkp.sfu.ca">Public Knowledge Project</a>).
-32	1	fr_CA	librarianInformation	##default.contextSettings.forLibrarians##
+36	1		numPageLinks	10
 37	1		numWeeksPerResponse	4
-38	1		numWeeksPerReview	4
 17	1	en	detailsHelp	<p>Please provide the following details to help us manage your submission in our system.</p>
 18	1	fr_CA	detailsHelp	<p>Veuillez fournir les informations suivantes afin de nous aider à gérer votre soumission dans notre système.</p>
 23	1		doiSuffixType	default
 24	1		registrationAgency	
+38	1		numWeeksPerReview	4
 1	1	en	acronym	JPKPKP
 4	1	fr_CA	authorGuidelines	##default.contextSettings.authorGuidelines##
 25	1		disableSubmissions	0
 26	1		editorialStatsEmail	1
-28	1	fr_CA	forTheEditorsHelp	<p>S'il vous plaît, fournissez les détails suivants afin d'aider l'équipe éditoriale à gérer votre soumission.</p><p>Dans vos métadonnées, assurez vous de fournir des informations que vous pensez pouvoir être utile à la personne qui gérera votre soumission. Cette information peut être changée avant publication.</p>
-6	1	fr_CA	authorInformation	##default.contextSettings.forAuthors##
-50	1	en	readerInformation	We encourage readers to sign up for the posting notification service for this server. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the home page. This list also allows the server to claim a certain level of support or readership. See the <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.
+27	1	en	forTheEditorsHelp	<p>Please provide the following details in order to help readers discover your preprint.</p><p>When entering metadata such as keywords, provide entries that you think would be most helpful to readers looking for research like yours.</p>
+5	1	en	authorInformation	Interested in submitting to this server? We recommend that you review the <a href="http://localhost/index.php/publicknowledge/about">About</a> page for the policies, as well as the <a href="http://localhost/index.php/publicknowledge/about/submissions#authorGuidelines">Author Guidelines</a>. Authors need to <a href="http://localhost/index.php/publicknowledge/user/register">register</a> prior to submitting or, if already registered, can simply <a href="http://localhost/index.php/index/login">log in</a> and begin the process.
 53	1	fr_CA	reviewHelp	<p>Révisez l'information que vous avez fourni avant de finaliser votre soumission. Vous pouvez modifier chaque détails affichés en cliquant sur le bouton d'édition en haut de chaque section.</p><p>Une fois votre soumission transmise, un membre de l'équipe éditoriale lui sera assigné afin de l'évaluer. S'il vous plaît, assurez vous que les détails fournis sont le plus exactes possibles.</p>
-57	1		submitWithCategories	0
-65	1	en	uploadFilesHelp	<p>Upload the preprint you would like to share. In addition to the main work, you may wish to upload data sets or other supplementary files that will help researchers understand and evaluate your work.</p>
+54	1		submissionAcknowledgement	allAuthors
+66	1	fr_CA	uploadFilesHelp	<p> Fournir tous les fichiers dont notre équipe éditoriale pourrait avoir besoin pour évaluer votre soumission. En plus du fichier principal, vous pouvez soumettre des ensembles de données, une déclaration relative au conflit d'intérêt ou tout autre fichier potentiellement utile pour nos éditeur.trice.s.</p>
 67	1		enableGeoUsageStats	disabled
 3	1	en	authorGuidelines	<p>Researchers are invited to submit a preprint to be posted on this server. All preprints will be moderated to determine whether they meet the aims and scope of this server. Those considered to be a good fit will be posted and the author will be notified.</p><p>Before submitting a preprint, authors are responsible for obtaining permission to share any material included with the preprint, such as photos, documents and datasets. All authors identified on the preprint must consent to be identified as an author. Where appropriate, research should be approved by an appropriate ethics committee in accordance with the legal requirements of the study's country.</p><p> When you're satisfied that your preprint meets this standard, please follow the checklist below to prepare your submission.</p>
 39	1		numReviewersPerSubmission	0
@@ -8884,16 +8883,16 @@ COPY public.server_settings (server_setting_id, server_id, locale, setting_name,
 41	1	fr_CA	openAccessPolicy	##default.contextSettings.openAccessPolicy##
 42	1		orcidCity	
 43	1		orcidClientId	
+49	1	fr_CA	privacyStatement	##default.contextSettings.privacyStatement##
+50	1	en	readerInformation	We encourage readers to sign up for the posting notification service for this server. Use the <a href="http://localhost/index.php/publicknowledge/user/register">Register</a> link at the top of the home page. This list also allows the server to claim a certain level of support or readership. See the <a href="http://localhost/index.php/publicknowledge/about/submissions#privacyStatement">Privacy Statement</a>, which assures readers that their name and email address will not be used for other purposes.
 51	1	fr_CA	readerInformation	##default.contextSettings.forReaders##
 52	1	en	reviewHelp	<p>Review the information you have entered before you complete your submission. You can change any of the details displayed here by clicking the edit button at the top of each section.</p>
-54	1		submissionAcknowledgement	allAuthors
-56	1	fr_CA	submissionChecklist	##default.contextSettings.checklist##
 55	1	en	submissionChecklist	<p>All submissions must meet the following requirements.</p><ul><li>This submission meets the requirements outlined in the <a href="http://localhost/index.php/publicknowledge/about/submissions">Author Guidelines</a>.</li><li>This submission has not been previously posted.</li><li>All references have been checked for accuracy and completeness.</li><li>All tables and figures have been numbered and labeled.</li><li>Permission has been obtained to post all photos, datasets and other material provided with this preprint.</li></ul>
+56	1	fr_CA	submissionChecklist	##default.contextSettings.checklist##
+57	1		submitWithCategories	0
 58	1		supportedAddedSubmissionLocales	["en","fr_CA"]
 59	1		supportedDefaultSubmissionLocale	en
 60	1		supportedFormLocales	["en","fr_CA"]
-61	1		supportedLocales	["en","fr_CA"]
-62	1		supportedSubmissionLocales	["en","fr_CA"]
 68	1		enableInstitutionUsageStats	0
 69	1		isSushiApiPublic	1
 72	1		enableAuthorScreening	0
@@ -8905,11 +8904,12 @@ COPY public.server_settings (server_setting_id, server_id, locale, setting_name,
 45	1		orcidEnabled	0
 46	1		orcidLogLevel	ERROR
 47	1		orcidSendMailToAuthorsOnPublication	0
-49	1	fr_CA	privacyStatement	##default.contextSettings.privacyStatement##
+48	1	en	privacyStatement	<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>
+61	1		supportedLocales	["en","fr_CA"]
+62	1		supportedSubmissionLocales	["en","fr_CA"]
 63	1		supportedSubmissionMetadataLocales	["en","fr_CA"]
 64	1		themePluginPath	default
-66	1	fr_CA	uploadFilesHelp	<p> Fournir tous les fichiers dont notre équipe éditoriale pourrait avoir besoin pour évaluer votre soumission. En plus du fichier principal, vous pouvez soumettre des ensembles de données, une déclaration relative au conflit d'intérêt ou tout autre fichier potentiellement utile pour nos éditeur.trice.s.</p>
-48	1	en	privacyStatement	<p>The names and email addresses entered in this server site will be used exclusively for the stated purposes of this server and will not be made available for any other purpose or to any other party.</p>
+65	1	en	uploadFilesHelp	<p>Upload the preprint you would like to share. In addition to the main work, you may wish to upload data sets or other supplementary files that will help researchers understand and evaluate your work.</p>
 8	1	fr_CA	beginSubmissionHelp	<p>Merci de votre soumission à la revue Public Knowledge Preprint Server. Il vous sera demandé de téléverser des fichiers, identifier des co-auteur.trice.s et fournir des informations comme le titre et le résumé.<p><p>Si vous ne l'avez pas encore fait, merci de consulter nos <a href="http://localhost/index.php/publicknowledge/about/submissions" target="_blank">Recommandations pour la soumission</a>. Lorsque vous remplissez les formulaires, merci de fournir autant de détails que possible pour aider nos éditeur.trice.s à évaluer votre travail. </p><p>Une fois que vous avez commencé, vous pouvez enregistrer votre soumission et y revenir plus tard. Vous pourrez alors réviser et modifier toutes les informations voulues avant de soumettre le tout.</p>
 77	1	en	customHeaders	<meta name="pkp" content="Test metatag.">
 80	1		mailingAddress	123 456th Street\nBurnaby, British Columbia\nCanada
@@ -8934,66 +8934,66 @@ COPY public.servers (server_id, path, seq, primary_locale, enabled) FROM stdin;
 --
 
 COPY public.sessions (id, user_id, ip_address, user_agent, last_activity, payload) FROM stdin;
-MXRAbWXyxBQMAA6kvF9bRSBqePZvpr94yS9KQ5yn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737090882	YToyOntzOjY6Il90b2tlbiI7czo0MDoiZWxEQ3VoVmdOOU5Da1ZKWUx3SXZBQXBIeTQ1bWhpenIzR3pkM05mZCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-txupukUGcqqUwG2EPKnlqcRruw4BFKS00Us6eGCO	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737090882	YToyOntzOjY6Il90b2tlbiI7czo0MDoiUjFOQWowUGpYdFVqd2dLUDBvMVNqR1ZoeFAyckJDOWRUSEhlYW5KTyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-5B7Ci9N9DlAcbug6r0Ae9qQrNzAVq17YHJkI8r4p	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737090993	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSXZrUW1yVThGWEVKc0tubkduOUhyT3ZseDNtQU1kREEzQVVIZ2VGQSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-Bk3UaJbPCsErInvY792gBjEP1ckOq2ddONNiOPGr	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091002	YTozOntzOjY6Il90b2tlbiI7czo0MDoiVjd4RFNlcUNjSXFxNUFsbVlvMGg1MU95THhjdGViN3ljMXFqZTI3OCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
-EJSzhyyZ7Ex5c2VEFO9jS2KLKAoId8np7ENe0suL	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737090902	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiZXFhWWtOejJUZWdGbUMxbVRRQXZZRkt0eGlUelkwR3pTZEhGR1pmMCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJGdGcC9HTUpPWktSdVowUEZzazNyUC4wWG5jZUVDMVRPeWNkR2M1c0tUc0FzSGxmUjRsL2MyIjt9
-SkvdkMVRa4ae9fVQj7ZBdD2GabhkRo0slbbaGAny	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737090919	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiQkhubnNMWTAyeHM0UmZQc254S0w1WncwSGpPTGRNYVBlUm9rMlk2QSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHlrTS5MMjhCL2pobmxQdmJITXJFbE8wUlRlT1h4RlA4MWl5VzhpbWluUnRTNFVKSXRjbm1HIjt9
-ylvkiZacoQqhsbzTldLehkKEDkty7W8XVRN7jSpz	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091016	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOTdNYzlFc3ZRY0FadkliWXVjVjV0dWw4NTRQbEFoeGdraXAxQklBdSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-7vbR1R7wBMZ6xu0ePIsRfvxTR2C57g8HSDdFxu4Y	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091025	YTozOntzOjY6Il90b2tlbiI7czo0MDoiME1iMmpqYmcyVVB5OFdER3M1bmtwN2I5cXlGb3hCeWhNcG01b3BNcSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
-wxu3BYGrcjVpmMCPyfUBCPxkvebGY4RJoAmW7J4G	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737090926	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiRGxvVlpNMlVEWmFaMnRuSWxsd0hsM0tNa1NBaER4QjJERW5DYjJoQiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHRUSHpIS0hkS2F6endzdVhTemRVUGVQMlVsS3piOER5WncuR29oU2J3R0FCOG91bXBEVmhxIjt9
-Kb9VhkO2J3EIC7I0XdTSQEITKQ3wpXKijQx77OFI	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737090932	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiVmZKUHN4ZlZDN010bzVIaUxyNmw0eVNzNXRmWjVNeFZoZFV5TkVoSSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFBBQVVZaWxMVjRwbW1KOWQ5bXVBNWVWVFdZV3JKdkcuNVVsUFRTazlPbFlWOVRGam9iTXpHIjt9
-esxGs9uqQvcTE1tup4ajXdHGrEQtW0ESIUbp3oKa	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737090952	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUXNNclYxTmowY3M4SUh1UlhyOEhURGtxMTFEMVJGalNTOVpuNXlxTSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-ROnzi0t4Bx0CIwq7gYfJTSb4EkwXNN2i2WEwCDcV	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737090959	YTozOntzOjY6Il90b2tlbiI7czo0MDoiTXBKRDZSYXBFZUMxQWNwUThCazRuOVNzUkRuakptQlpEZWZnZGVRZSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
-LltY0OdQAWVpcznnx5wCewUkZcvN001yUijP5oWX	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737090980	YTozOntzOjY6Il90b2tlbiI7czo0MDoiZnpzQ1Y3TEc1TWFrSWZySTVGYXNzNmlXZ1RranVPVGxYeXdxb2JBOCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
-yCn42yBiWOPUsK9Qa6aJJZ4qLI8C4DbzZf9pGaCe	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737090972	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZEozMk90VU9oN21QMzY2ejI3Ykh6R29ENGxZaHlQTHdKZjJ1TmxsWSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-oL6cbuqKZ5XS8m6ln6CS19JIvsoFfIXt1f5zRSEk	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091059	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiOWFTZkI4eDFFazNocGNpemE0NmxxUnRmZzhTRWM3cHQxVlZaaG9ueSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJG03R2IuRnVWZ0puSWdUc21UV0Nvc3VOc2luYmM4UWpNQjBtNGpMM2RjbHRYQUlNWXFLLjdHIjt9
-FwDkVdHKaQmeDb30yue5LwbYXlJvak7K0XKMjEU9	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091269	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUDBOUjViUkVXdFRmd2NYZXFhUHhLMG9nR0ZZaTJoWGF2dTZUZU1HaiI7czo4OiJ1c2VybmFtZSI7czo5OiJkcGhpbGxpcHMiO3M6NToiZW1haWwiO3M6MjQ6ImRwaGlsbGlwc0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-njW6BxEYnRde9FiS0pc7BtCsdLco8ZhcSRdYY3YE	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091039	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNzNvRHF6ZlhBUzJLaUpqMVhKamhJZER1UjZUUzlXSkNtZW02WkF1ZiI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-BIKQ63f172LIQmsTrtGEodnjMUj8O4yYkij9VgYL	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091050	YTozOntzOjY6Il90b2tlbiI7czo0MDoialQ1UDVnV21FMXdDODcwa1ViWVU2dU5VbWhKRWlnaWs1MXg4MERoWSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
-mzptCOdwhCYGq9NpJ3g9rvJUD37MDEvkdHsXv3wA	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091166	YTo3OntzOjY6Il90b2tlbiI7czo0MDoidWJSMWN4YTVLOGN5b1lYZEIxN3k1SHppaGh6aWk4ZDNnUndZeldGYiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRURzRIa2pmR3VFTi9yYWo3dmJjTHF1ZzR0RnpldllFeUZpLlZlWGVEMXhwMVpvVW9wZWlHdSI7fQ==
-98cnsYQ49kV7LunTGYESZECEclbXe3ChcmHoIQQt	8	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091162	YTo4OntzOjY6Il90b2tlbiI7czo0MDoiTnludnN1R2lYTDY1cHJNcDFMRHFnTE10MVlKQ1FLV0tHN3QyTU9oNSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czo4OiJja3dhbnRlcyI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6ODtzOjY6InVzZXJJZCI7aTo4O3M6NToiZW1haWwiO3M6MjM6ImNrd2FudGVzQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJDdKQVhsOFRUOTVaRTZTL2RXNnRvYmUvSWRVT1QuMWRQQm12dE9iem9QL01oQjQyWG5JRDZTIjt9
-sWcQZdHQDZlKk4DAbnc8YsLOVkWyjxzmS6XGxB1O	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091049	YTozOntzOjY6Il90b2tlbiI7czo0MDoiaVZySjBPNm84aE9mTFF0c0tmaURHQ1pJWjVOREdndEFCT1VDdXoxZiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
-AbwiIYsOHaSZ8hI7HGw0bJHo14qe5a7In8aykNjb	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091080	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiOENKdFZlYnd2YzgyajlTNUpKcXF3dUJiYUF2eEJ2M1E2eW5lNEdhTyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFVWb3RwRDRyU3VzbEJFMXlpdVRxeE9qSWlDM3VBY1hxcEtLRjF0Mm5rWVhUdkp6VzA2VTBTIjt9
-DuvfMS8twl2MArvOn5d23lE8eOG4WINKlIUJvRNh	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091186	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUFd1c25FajJFUXdNVUNDVXZQdE8yb0Q5R1RYY0ZDazlMRUcwYzZVMyI7czo4OiJ1c2VybmFtZSI7czoxMjoiY21vbnRnb21lcmllIjtzOjU6ImVtYWlsIjtzOjI3OiJjbW9udGdvbWVyaWVAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-rcRwqVzkVQtQXs3IafA4OkKhHeoeG1F6ZmwWK0Oy	7	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091100	YTo4OntzOjY6Il90b2tlbiI7czo0MDoiOTdvRXVmbk9QVFZoQ3g1SmU4UXg4emQyT25MZnFiSGFYRzJnYXJqYiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czo3OiJjY29yaW5vIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7aTo3O3M6NjoidXNlcklkIjtpOjc7czo1OiJlbWFpbCI7czoyMjoiY2Nvcmlub0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQyamRrTkJneXJFbUNDWktwL21JNVJlR3E1N2ZIRHZ6L2JvTHJCTmkyS3hQbnFWMUZoOU5zLiI7fQ==
-eqpMZDBuoVtYl39OTlPHlsEau7Qa1y8ZJAc9x7dn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091191	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSldpTEFFUjhRMWFrNGdjTlF4N2JrYXhweEdOdHdvMEdyVlF2eWRCYiI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-4Nx8H3MpGqN3Iv6hOfHktVvldiSG8lHY3xpOahMj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091211	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiZGNXa2lkVGEwVEtqWDBlWExLWjBhd3E0Zm81THJFTkxDdmpMdm93aiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ3ODlxeHQuSmlLU3pJbEdNbDQ4SDl1Z1lLaXVKSWVMNnlnNWRZcm8yTDR3MDBINGRMNFpjbSI7fQ==
-d3vEh3gQ7RAM9WdsBsJXBXo9Cw6HI3h9NyK4eHCR	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091301	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUXVIRm9MNzlITDQwM1ZtOTFsdzVwbWU4YzRQeHplTUxXSmN5NHFyZSI7czo4OiJ1c2VybmFtZSI7czo5OiJkc29rb2xvZmYiO3M6NToiZW1haWwiO3M6MjQ6ImRzb2tvbG9mZkBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-4nI4hWsIVubJRjimrKs6XTMMqPevPxPFlYLuY4TS	10	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091231	YTo4OntzOjY6Il90b2tlbiI7czo0MDoiNzFNN0h2cDQ3ZUFtN1hiem9Cbm5UQTNFeDh4MlVEOUJ4UHpZNXpRaiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czo2OiJkZGlvdWYiO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtpOjEwO3M6NjoidXNlcklkIjtpOjEwO3M6NToiZW1haWwiO3M6MjE6ImRkaW91ZkBtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRKYUp6N0NLeDdLcjFxS1BKa2VJdll1NWpQcTRxbExKQ2FHZXROZTlhb0pwU3pjcEFvMWU2TyI7fQ==
-Qh7wdsc7j8OPLLyctATLAD19uzgSMaISKBJ7QADO	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091306	YTo3OntzOjY6Il90b2tlbiI7czo0MDoia3dHSmo4ZE9RazB6eGhhR1NyRkc5S08wRHN0QkJ4b0N1ZkRseDRrbiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRrb1pwa0dNU0w0WkdhcWJ6WC56Tm1PSUE4aUozMnFaYWtTcjVCMHZSL0w2a2VxRUN0STBKcSI7fQ==
-KVKzs2EhWMTKdQrtQduFQvqq6nSQ0mvmA59JtFh9	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091249	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiV0t0NEpUaHhEa01aMEQ0NlpicDV4SURyNlRVRFR0WktHUmtDd0VnWSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRZU0NET3lTQ3kuMUZuVWVoRkxzOFEucUJValBZV1dWWlZpeGlUOGFkY21XdzhCY1pOZTdWYSI7fQ==
-bbOrNXeNk0QrAJ4hjhmknBwuxdwKNDq9Pz27bGjp	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091326	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNmNHNWplT05ac0paYWxaUHFXYjZRRXJqaGVFZGJOMkl1NHBwMFdjTCI7czo4OiJ1c2VybmFtZSI7czo3OiJlb3N0cm9tIjtzOjU6ImVtYWlsIjtzOjIyOiJlb3N0cm9tQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-jBsr2bnO7pPsbHoZKKG8GMGs9YImx6eOhZKxRtOj	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091273	YTo3OntzOjY6Il90b2tlbiI7czo0MDoid25JOHpjWVpiYWZwYXBYbm5rZVdyZ1ByQ1g5ZFlBRHBmTlBZb0FUSyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRxUDVjZ3VOQWphM21uenNSLmZoMVlPSWtXS2VuRllGUU5yUDJmdmliUHNqMlhNYThXb0pEZSI7fQ==
-uE6sByVQDbPAWB8ItsyB54EwSqDuMSAmH8Z8ZVTx	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091278	YToyOntzOjY6Il90b2tlbiI7czo0MDoiV3plYmpKTkdBRWhqamMxcEFZdXo4ZTEzdk1WUzdwSThkMDJBd1FsZCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-4lUqZzmpsQmgwzhoFIR8QMB6McGx1dHDpNJ9kXQ8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091330	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiSGlrdmJyc2F6OU8wcDRRVHJJRFV1N2pEdW9mbTJGMVc4TnFZeEZGbCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQzTll6MEZWTWN4NVJWcmZSSkFoQzFlSjJzb2xzUlhMSXpTQU1RaGQyLnBXak5rN3BLN1ZMUyI7fQ==
-zB63qmpGyjtO2VJP0XM9j8ErRU0n2h8HxDg5ueke	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091282	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiVlEwNmdUcG44akV1bml6V21oZEJYYThPNmNickR2MDhjOWlpRHN1OCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQyZU8wNWROOU5XblJDdzlGbWtKakN1bTgzQmI3MVFSblJTazZZb2tFVlJhNGxqWXp1QjA3eSI7fQ==
-FOTxS7S5Dn3EPg1LFE1UmqGhzVEcrBqMBACsC4uS	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091278	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiS2lVQ1RhalRNUmZDM0FlUVhqZ2FvdXJGbU5RS2dObEF0NVlEZWxaMyI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-2xJngENQMjzNmqm5hTWnqnwlkUT9JV0gGQF5hhmb	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091350	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiU2NLbVJDTFdtQ3E1MlQzNk91RlF1aUthcHo4Zjc0SlpHek1nbTV2ViI7czo4OiJ1c2VybmFtZSI7czo5OiJmcGFnbGllcmkiO3M6NToiZW1haWwiO3M6MjQ6ImZwYWdsaWVyaUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-QDyHqzaMUZgaF9fDNAc789noN9PF3i5T6zQSYTL9	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091374	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiY210TXdXQTdxQTMzYTgwczVoTUdzNWtwMDA2ajlYZlZHb1R6TktpZyI7czo4OiJ1c2VybmFtZSI7czoxMDoiam13YW5kZW5nYSI7czo1OiJlbWFpbCI7czoyNToiam13YW5kZW5nYUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-Iqo8nK7ZjLF7TFXPb3JWlM9TnHz29F2z3IBMjEWN	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091354	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiZld3VWpsS1ZnYU50YmZqaTVVbnpsb3FWbWFkR29TQTJ1MkxJcUsyOSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRRSUpWQ0llQ2l3d0l2bWsvdExuWXV1QXlSOXlETy9YQnpOQ1gzVGp2WFBYWG1ubHlZc2ExTyI7fQ==
-CxA75UNpHaY6jyUY5sQmiXSImMyRwaEhL9eB8vHg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091422	YTo1OntzOjY6Il90b2tlbiI7czo0MDoienY0RjQwWGxTdzd4UHV3R0hxSHZwUm95SFBKMGw4VUVkaHpXeVA3bCI7czo4OiJ1c2VybmFtZSI7czoxMDoia2Fsa2hhZmFqaSI7czo1OiJlbWFpbCI7czoyNToia2Fsa2hhZmFqaUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-EZYMm7f7HQ4trd48I3c01qpMc87W9p5yl4FK2ejW	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091542	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiMXpmU0tVeXpmTFJBTkt1SzR2eGFpTGJOTDIwVThnczhQSTU4aG05MiI7czo4OiJ1c2VybmFtZSI7czo2OiJycm9zc2kiO3M6NToiZW1haWwiO3M6MjE6InJyb3NzaUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-0rEIB80j0BLn8WsregGy6Lro1fs1NhqvcXsqmTvd	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091470	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZlBLV2JxNXltZGtUY1dQMWc4dWxNUXRWMXQybmxUN3BXSFZmMlFPYyI7czo4OiJ1c2VybmFtZSI7czo4OiJsa3VtaWVnYSI7czo1OiJlbWFpbCI7czoyMzoibGt1bWllZ2FAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-BEyBMANaElMgFjYBYDVEuMxmsiv41vECM318mBV8	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091446	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWW5lOFp1aFFNeWxVa3A3NGV4M1lBY1Q1QzdhbHZDaWgybFN3NXJEdSI7czo4OiJ1c2VybmFtZSI7czoxMjoibGNocmlzdG9waGVyIjtzOjU6ImVtYWlsIjtzOjI3OiJsY2hyaXN0b3BoZXJAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-pBZpFi5gXKk8tYEhBlybD9kFoPouArBahvdwe3iJ	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091566	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiY1l1dEJmbW9HYk9SUWZ1Mm9wN0ZuZjlOTTBJUFJsOXpiQlRDYUpwNiI7czo4OiJ1c2VybmFtZSI7czoxMjoidmthcmJhc2l6YWVkIjtzOjU6ImVtYWlsIjtzOjI3OiJ2a2FyYmFzaXphZWRAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-hbag8HgEwGLyVw1WHj1HchimZWzgRXqYQpgO9jgr	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091518	YTo1OntzOjY6Il90b2tlbiI7czo0MDoidTVsdnJzUEpPSk5GY1hoeGdwMWJZbFRQZ2N1TUVBWG4ydkMyY052TyI7czo4OiJ1c2VybmFtZSI7czo4OiJyYmFpeWV3dSI7czo1OiJlbWFpbCI7czoyMzoicmJhaXlld3VAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
-IU1D2SSD8HzOLtcFQve4iEMOPXGQf6b21vPqWDfC	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091494	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWnRhZE9wSlkzWkdpRU8wYlZzWkVqbkNiWXJVMk5RTVQwNFNNT0dycCI7czo4OiJ1c2VybmFtZSI7czo3OiJwZGFuaWVsIjtzOjU6ImVtYWlsIjtzOjIyOiJwZGFuaWVsQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-xrMIKYYZij5KReFjeVeFehnbbvqcL6siFNehIMD8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091378	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiM1hWSWQwV0t4NTRFSmN5VVVHSzhEUE1DRDdpWWdFd2d1ZU0zcDJJQSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRkRVNaemNhNHBwaFVmaG9QcXZWeklPLnFBY3RJWFRDeTJmRXVRREVFaEtIOHAvR0x0dHhXRyI7fQ==
-9IycB0QbdSYNaFL3tXnRxDlFxDsyNOOFtVIJHxBH	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091590	YTo1OntzOjY6Il90b2tlbiI7czo0MDoicXM2dDVJQ2lzRHJVcnFkbTVBTVpXbUVUYVhKQ1RzQ1JWNzkwQXVHcyI7czo4OiJ1c2VybmFtZSI7czoxMToidndpbGxpYW1zb24iO3M6NToiZW1haWwiO3M6MjY6InZ3aWxsaWFtc29uQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
-0NIhQDwMaEvW2tKErN6BSbD7d0iy4htvWIXZDsH4	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091618	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiMjNTZm1hY0kwQXFVOFdMRVN0SDRtSFRsYjBndEdNRFRiVnNiR2xXWiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRad3doaVhvNkY2MnZXV2JtYmJrNGQuaVc1bkFTQ0tjTlpncU5CTEhRWXRMRW96djR6NGxXQyI7fQ==
-xqoQk0tDrjfzZYq5Fj0eF7TrHHBHe9xN6GGGMEeb	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091426	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiem13akJtWVRuQVRKYmo1Vkk1RFJ3T2VGUkZVd2sxNzN5WE1ZYzdaZCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRHUTZKS0U1NHEvYmFNaS5wUWhEYWJ1N3dhTzlISlBHZ1dDNmpJQWw4R25MMjlieWpnMFh1RyI7fQ==
-e8SwCsBEIOSRt7TDxuhKgLRZVoNKYSXz9CGhNmUz	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091547	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiMk96bzRkZmNNNWJHNnBWOTd0aDNQbG15YUxrY0pHQVZQbG1obThJdyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRWblc5MHpqU29xTU5aSUgvQzhMM3d1SnNzQXY0TXBTWjlnemhvR3owTFplVTcxU0UxTVF2RyI7fQ==
-kclwuclWOB6ILS7PnZiyYIizclHPQgnkjede3sGC	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091402	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiRnhFOEk0VDQ1NktuMDFXR0Fqa2liY1kzWDFyZDZpRDhRTnRzczk0ciI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRSVmNNS3Z0L01BT2JMT0R0dUZmT3Z1V1ZLeVRibk9QbmVRcWRaV2Ryc25GNmdLR0JmMUdMRyI7fQ==
-CTakrURjdSGohmOjTNtj7k8Ws68wFyzQYANy0O5c	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091398	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZFRTOENTZFRCM1ZHRjhCQ2xQZWVaaEFwSW4yZW5Fbm92R0x1dVhYbiI7czo4OiJ1c2VybmFtZSI7czo2OiJqbm92YWsiO3M6NToiZW1haWwiO3M6MjE6Impub3Zha0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-EDZwZv3Qi1SY6btSt473cI0MnxYrz29cxlBcNVVc	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091570	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiak52bDVIeUlDOUE2eTdkemlUbnZhdGczOW1LazhLbHVWclV2NUE0UiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRJcHlESTk3TktHTVpYUFdqSHlRN3F1NjQvVC90dWZsWVhHdkxuNFF2dDRmalBja1FuUUFMZSI7fQ==
-aBikEJp868uZaijCMrTRvOvOfZyvm6ST5SPY9HQt	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091451	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiT05lQlJDdExMVjRRMjJua2ZlYkc0RlAzcGRXUTkwRTNoQ09naWdLbSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQzSXc1dkJxbHM3U2YyTFcwblJqbmgueVlOSy9zT3RQeEh3eS5zWUJRWDlwYWQ1OHBneGh0SyI7fQ==
-0hGUOWtRfAXmyfPjLZfmHqTZCVi8YE3JwJwmQbiZ	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091595	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNndJaU1WYUxaajNSQVhOVzA1aWcxUUdGM3B2ZXFhWXZTVE9mQjByaCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRvdXVrWlBVcnhnSFM2N1pzWFVGMERPamRXaUJJTWV0MC9oZkpOUUlPVWVHdU1OTVJnajkycSI7fQ==
-yAnZC8bBlGvE5dy0URoQoDDc0vnrfvowem8j2XHy	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091614	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZEVvVnNCSWhMa2lCaWd4U3MwaU12emFVQVkxSU0xREdud1NHYjc0YiI7czo4OiJ1c2VybmFtZSI7czo2OiJ6d29vZHMiO3M6NToiZW1haWwiO3M6MjE6Inp3b29kc0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
-VNv0G0OSKdxmUzNhlQ5e70bylA1oatM5VWVTUNXx	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091475	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiZFVLcFZDaHIxenlZSkh1bG44NHdYRG93dUx6Q3JPWmVCNmVwU29ibiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRqWERoWnJCR1JUOWFVNXRaWm5qWDVPa2lVRW04M1JwMzdqTUFQWFNQWktjTEs3NklqQ3ZMYSI7fQ==
-YJh5ZL0zaDcTCSQcUs6AvX6TQtV5pb1yjIX2728a	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091499	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiU0pVaFJ3STB0WW14eWtOazBKcGlGRGFQU2MyU2pUd2tXbW1sNnZHRyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRwaGVtVWZUeWlpT0puZ1FuNUV3cHRlVjlGNG13LkZ3MXZnZ2JSSmJISEh6aE9uQ1VBQW1IMiI7fQ==
-9cCiFHfK6I35srI8GmGAioKf6Ko2NDDHjZX09qZC	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737091523	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiTjNNVkc3ektOZ2hEa2luMlNLVWtXSjBETzJQcVlxdnRPbDIxMG13ZCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ1WmlnVmFaNnRxb3BRVmhuemdEcFguckFYYm9FT3pCcnZ0d2Z4Z2VjS3F2bFR5Y0FxNzhtYSI7fQ==
+5N16vkEleHpkzyxIOGIlOtzGR1RWLuG5M58oliKp	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177265	YToyOntzOjY6Il90b2tlbiI7czo0MDoiQXRHU1RETlJpZ1JtcE1hbmZVanZlUlQzeHZsVm9VSEc5SW5SR0ZPMSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+M2y85YZkzz2bBo7uUvw8KgyMveEIO9pX3pnqj3Le	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177265	YToyOntzOjY6Il90b2tlbiI7czo0MDoiRmRqcXVuNERnVFdCcHZyd0c3bW9XbVlCV3o4TTRXd05abEtXR2NyRyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+R0IwnHmDC8j8BcCHLiGd7JtQscNqfYVptrZnRH0H	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177380	YTozOntzOjY6Il90b2tlbiI7czo0MDoiRU1ka2ZmMWh3cmhVYllWM3JWT3FEYlNqY3VYcXJDSTBXdXo3aThmZCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
+1ed5Kbzp8DzlfaP4rYRUols9LXtSlfFDbUmMj40Y	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177284	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNUJTQWh4TG5vTGtKQXNCQmJzWUVTaHFYamRQanB6OE9oeFVTMnUwSSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFZlQVNrNFh2N2tXVFZwaWpvQzRtSi5SZnBodjRSYkVSUGNUR20wZjlvR2NWci9zZXZxMDRPIjt9
+NJ9gTgVol9xFshzkuFbStEoEuv71sfrQNluYTRhR	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177394	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSmZpTTRQcVBEbFlpenhCS1N0M3g3MTNvMVN1bUZ6VlRZakJFVWhPSCI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+L63jRkdS60ky10RcMPh9ZmMdrevDJZyNtb2Xn4Gr	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177403	YTozOntzOjY6Il90b2tlbiI7czo0MDoidGtXS3JLM2pCS1NBZ2wyTXNMVUVFRGlwQzl3N2xlVEVmWU1uc2h2dCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
+G0XxFAesuLhACGVF7Xvwqhu41HbKveU2jDOgHQ4C	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177300	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiYkx6QmlJN2pFSnhCQm12djNxZmRENVhjVXJQNXduOGc2Rk8yUXRGSyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHFGVEhnMWRXZ2o5VTY5NGdXQXMxVHVoUWd5REVoMlhNRVJrcGRKakw4Lzg0OVVoUDJZRThDIjt9
+tnVg2CokJzlqeGJg1YZw0iMGnJ2784o6Xy6o2SbK	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177307	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiakVwZ3RKd3Z2aVhLOE9lQVJES0plSmt2U3ZlVW9ia3pNdElHOGUzUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJGo4aDMwVVhCWWx0OENMeHZXLlJLby43VTQxT3JUOGtuYUcuaUNyWGg3NjdaTUxjOGdobm8yIjt9
+IOb4acLfF92NJ0nDyheofL5WwEmIrLJZusI2Xl72	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177313	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiYzJDb0pFdkxoOVh5SEx5MndKVUdlUnR4NGxBa0NpS0htb0lwQ2gybSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJGdLUVI0dVhTMGtudjlHSlBRbnNQNmVDRTllaEVvVGM0RWcwa0JCb2Z6TzVtT2thVmdKSkxxIjt9
+ihoqbiCmLqBbqYohjtjIbrY2RmNuqLATVSYsYBip	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177332	YTo1OntzOjY6Il90b2tlbiI7czo0MDoid0xUTmozeTFaS2I3Y1I3aHBNZ0ZORGQ4SFdsRjEwMFljdE9EUTFBdiI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+zQQjX4wCWx3JSjkwszlWUr6utxWT8uoLwyXcrsFj	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177339	YTozOntzOjY6Il90b2tlbiI7czo0MDoiTTdCS0RNalZDaU5uTDNqOXZweFllUnp5NlpqYjZKQ2hYUHJhOG11MSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
+AETBLtY9LJNOdPUUdBLysxqHhkntvwTcbYdFmDri	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177352	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVDNvTHV2bFQ1Q25FSUxqZ2dWMHMxaHFpeEpLRUNjd2drMkd6bkw1YyI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+tlSfSQ449tlEUgr5GuVnmADet4GjxFygDlKTX6hN	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177359	YTozOntzOjY6Il90b2tlbiI7czo0MDoiWFROT3E3VUJIbW5XN2JUdXFJYXMzMmZMYWxMa2U1d2hia2lJOXF2VyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
+tbHUkU6sp6v55hdo7GY6yHYqLNfeIFc89BhU7D9Q	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177372	YTo1OntzOjY6Il90b2tlbiI7czo0MDoicU45RjA4eUh5eXI2c3J5c3JwRDVUTzU4SjJjcGxtZWJLdGdaeWpuUCI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+DBbdySK12BNMugdmIAWmmQ4FjZACPSbLfYghCGX1	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177746	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZVFQcXhnOHEzNGpUUVhQbGtHTHA5Q1kxaEllM3VSWlNVQmVnQkMybSI7czo4OiJ1c2VybmFtZSI7czoxMDoiam13YW5kZW5nYSI7czo1OiJlbWFpbCI7czoyNToiam13YW5kZW5nYUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+L90e543Alxojn6pGytjmsKxZbnrNN2ZkLXrkJoro	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177562	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaHpwblBCYWNMYnBLZEtxdGFmRVlpSzZYdzl1RTlDZkVURWdJSTM1ViI7czo4OiJ1c2VybmFtZSI7czoxMjoiY21vbnRnb21lcmllIjtzOjU6ImVtYWlsIjtzOjI3OiJjbW9udGdvbWVyaWVAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+M78fNwOIr49ZVVHS8KllIolD6Gxu1Ac4zvz9odgi	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177567	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiY21YVTJRdVRNNjNQbEoweDVTSHZHNXBiWTRzcmtXZ1JlUzdOTnRSbCI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+x5oUjkTilqbyeNS4URZF8Iim8t2B4kOwYldgR9Dw	7	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177477	YTo4OntzOjY6Il90b2tlbiI7czo0MDoid3I0RXRUOVMzQTgxMXhCM1ZNeTlrZHlrdjNBRGtUcnNud3B2NUZ1YiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czo3OiJjY29yaW5vIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7aTo3O3M6NjoidXNlcklkIjtpOjc7czo1OiJlbWFpbCI7czoyMjoiY2Nvcmlub0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRzWXNCcFNER3FiLmJVWVlGQndtLjRPNDV3NDM5aHdvTmVNVzI4amovTHBBak1IcW16Z2xmbSI7fQ==
+KWp4UwprtEjVxiSwCvAdyqWKak8lwvP21HJsS2FM	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177624	YTo3OntzOjY6Il90b2tlbiI7czo0MDoic09RUENqekJmRFpTZzlBMXk3VVV5V2p0OGR0M1psNDZ0dzZzR1pRciI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR5L29lbEdTOS5lS3JIekZBNzRmSDF1ekVwdHBhUjVBdWE5Qm0uZVRHbE9tSTdTVTM3c3ZIMiI7fQ==
+FhsPxu4uyjHHkCVJG9ABVX8wMncg9gs96QXu6HBt	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177457	YTo3OntzOjY6Il90b2tlbiI7czo0MDoicDBWRXQ4cDV4bzgxazEwUUlPTWpIWjFMNHVkb3F3NUZ5djlUUjYyVSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFdTalRCU1E2RUZ1WDlENEF6UGcxTnV1TlVzZy9pRElUbzN0VjNZeUhzajZmb214MFcua3YuIjt9
+jtJoaWgPvXFUrvfdTCysSiy4EAwhKpR5UzYE3Wx8	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177643	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOFJ1dXJjOWFpSGpiMDRPRzFSOTltUjZNSDBjNHpHQ1M0cENZYjN2YiI7czo4OiJ1c2VybmFtZSI7czo5OiJkcGhpbGxpcHMiO3M6NToiZW1haWwiO3M6MjQ6ImRwaGlsbGlwc0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+1fhaDhSxbBPW1hK6vBldUxXlIGwLSgS4BizZ8XgL	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177652	YToyOntzOjY6Il90b2tlbiI7czo0MDoiaGpaR011MEFueDg3ZGNRa2syQ2YwMW1ieEdWblhiWW4wckw3S0dlViI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+EcCn1lmldxiVHwU4xm82pYejSpr1DlxiVj9qP2Xc	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177675	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiemJ5eFRKUU85dDdsSVZQendxcGlwUmQ3dHgxRGo3a0Vqa2xMc3psQiI7czo4OiJ1c2VybmFtZSI7czo5OiJkc29rb2xvZmYiO3M6NToiZW1haWwiO3M6MjQ6ImRzb2tvbG9mZkBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+hCIGggPxlVhHF1Veo1NTknlfJpjSC6yehKBXwuCu	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177703	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiOHFVQmJkTWZNOVNINjhOWmtma3E2d1lPRHpWUHV2bXVKY3JqdWFyYSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ5YlZnUzdsUHA2TkxoZlRIQklQSU1lREZBaDRRZmhmSGFhUHV2R1pFblgzUXZQOGNKczNueSI7fQ==
+fPRVLIhSGz8RvSaub82rG3mEaYVIMGV1H0pMftfQ	8	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177538	YTo4OntzOjY6Il90b2tlbiI7czo0MDoibFNIRHlXaWM3U0g5dm5FYU53N1duTTNZQ3lTYlVNNmhCYjNlNGZEUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czo4OiJja3dhbnRlcyI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6ODtzOjY6InVzZXJJZCI7aTo4O3M6NToiZW1haWwiO3M6MjM6ImNrd2FudGVzQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJGhyUGxQSkVIMGdnTW1SdEp5VGlYdGVPbXV0VTJ0NW1MWWlMNTZPRnRXRm82VS8vMGNpbS9HIjt9
+lJrN24FrFpPTLGC9XbMyI5MnlDRKSIsAnHGFZPUE	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177723	YTo1OntzOjY6Il90b2tlbiI7czo0MDoicHNKVnozYzRtNTNqTjNrYUVkVTNna1l3Vm54Y09PZ05GT3UyaGVZRyI7czo4OiJ1c2VybmFtZSI7czo5OiJmcGFnbGllcmkiO3M6NToiZW1haWwiO3M6MjQ6ImZwYWdsaWVyaUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+gSsQmFKuPvl4vkWEFXv9pFUwlqjNeDszXPTsD6PA	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177417	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiY2JUWllSMHN5OUttVEhxQkFRczZlUDY5ZHZuZzJ3TzFrRHFwRFQ4TCI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+fqdHNJ2RFJLchkO8r8SgTLrrvuUz7XCnJigl9Ttv	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177436	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiaWE5Y3dSejBBT01SUUdpMENCcURFOUVNRzB3SnRoTHU1Q0ZqanVxNCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHhRVGN2djZMbEpDcFJYZjMwUEo1RGVvYjMzVGl2cy5qMWNLZVpOa3VlbEhjODZja0VxUGhHIjt9
+prXfHqVridAgnoPJJb4ZnfnuJ9VAVrYJHvYYiH7K	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177427	YTozOntzOjY6Il90b2tlbiI7czo0MDoidHFPOTJ0YVNWdXFNcG5DTkhiRXh3Vjg5OE41ZUVqdUptRkNhVzl5YiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
+ra2luNDtkJEwpARjcwYOqc7udNpTBzHrTwld5l8F	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177542	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiYjFkUDRMSHp0ZGhQcTFva2pIaTNkVHFLVlNCdVlWa1VSUHRiVk53MyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRDOWxqYVpKWUFGTk5lL0txdm53WXRlak1oeURYQ3BXYTdnVGR2QjhVelIwcjVGYXdKcmxoaSI7fQ==
+KDdzhTBVKRlEXbYlMA5bDiIc0zO5YbvOMcX5pf4G	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177647	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiT3c5RXBzb0ZaVTJBbkJ2dDA3djhFNDFGV3JiQUN1dmV4ZXdrUm1KdCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRsZzBSMXVIOEUzQ3dBYkxLaGd2ajR1cU05c2pvSElBRVFQeWZkT05TejcxNERoa0tUUFJEaSI7fQ==
+cbiUPe1W0EmSlRTg2aFlCKG0j8jS7yZxUf6IUoXn	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177427	YTozOntzOjY6Il90b2tlbiI7czo0MDoibGpSVk91S0JrQ0FKbUdsVGZIeGJYM1NaQkp6SmZ2YXNXck5INEZmSCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ==
+ggfSfbvPe6fWG2vsiL1CfixaWQjs5ghSA8mMqdMN	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177652	YTo1OntzOjY6Il90b2tlbiI7czo0MDoieGphWkh0aEFBc3I5RlVvWjBlUVdCeFpwS3VSSWVVUzVPdGY2OUg2SCI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+Tfb2QGrezjKcE6W6pkQgNDAFrSwkqbjEVD6YqRxA	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177656	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiQWM1QTRUMnVqNHRvQ0JnWFVFWEk4QWJqYXg5RTlpdXBPY0ZRRk5YOCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRSSnN3WGRIdS4yY0RtNGtZTEMwbUxPZ0ZhZFZIT3g5ZW5icmpkMXpDdmlScnEyT01VUUM3YSI7fQ==
+eHkoaXZ1PAUVw7LbBQHhG0hSUbW7TT4GpG45xLMp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177587	YTo3OntzOjY6Il90b2tlbiI7czo0MDoidml2VG9qTDlDZkloWjg0YVUwRVBsRkhLck9yVkhhRkFNb09KQ3FmdiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRkODVMbTNzQkRRR09oazhlbzRsVWplWTk3QmJGUklUZ080Q2VNWkFhbzQ3a2hKSUxuOTkvYSI7fQ==
+mZSb9kB08dOqHsoWPclFM4eVGUtEZGaFIgAwVnCh	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177679	YTo3OntzOjY6Il90b2tlbiI7czo0MDoidGFpVDlnS3p2WjVSRzRoNVFyQ1NlVVlKNVpqWUFib0YxVXAwbkRKOCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRvTzFCeUdqM2VydkFVUnljSkZEUUd1RDMuMm5hQmNFU2RUc2tUUS9iRDk4T1diWWw1ZEdwSyI7fQ==
+ghmaQJU5MBJeCUZ65Mm5hBCXtOeI8Uwpbr4cS4lg	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177699	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiMnFtYnBMemYzOGlCMHRxM2s4NmFRdjZMcjRBejFSRmJVZXhNektRQyI7czo4OiJ1c2VybmFtZSI7czo3OiJlb3N0cm9tIjtzOjU6ImVtYWlsIjtzOjIyOiJlb3N0cm9tQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+LLWPPcYBTYNYoOaK1MdjW1SuPcjv1i4ujND8ofdU	10	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177606	YTo4OntzOjY6Il90b2tlbiI7czo0MDoiUng2eXBIVVk4Qk4xd01HMDFPaXY1ek9sTXZaSVFadERSUm5IbHRLMCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czo2OiJkZGlvdWYiO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtpOjEwO3M6NjoidXNlcklkIjtpOjEwO3M6NToiZW1haWwiO3M6MjE6ImRkaW91ZkBtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ3QlpLVld0UkhvVVlkUFFPOTVjQ1ZleHJiZnhON3M5bjZBemQwbXZpa3Q1YXc1N3pLcVlTZSI7fQ==
+CMsDi9pHq19EyKV5Qn6pPOJFwf1jjBcp3B7iJ7Av	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177869	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWVpldm1Wd1ptYUlmU1ZMTURkQ3JNeThEVFV4dzRnWVpGVVMwNUZFNSI7czo4OiJ1c2VybmFtZSI7czo3OiJwZGFuaWVsIjtzOjU6ImVtYWlsIjtzOjIyOiJwZGFuaWVsQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+7jNIYM131nSieor8t3T9FljZAGLqEBEaBm8XeFu6	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177727	YTo3OntzOjY6Il90b2tlbiI7czo0MDoib3h4NVVJRERSVGpMWEwwc21admsydFI0anRLT3dFeGFUaGJzckdKUyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRZek10WTczUFNuL25hQ1guMHI2OW11V1hnWHBRbEtrbkYueGZwZi95TXNldnozblRoeDhNZSI7fQ==
+NNWlG4uOG2Jbtv6SHjxpdEdqfkrvr6t4F87Sp32M	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177752	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiWHBNcmwwRUpyblhsVlc2Y2VZOHF1VndsbzFCNHVCZjlKQjRJeEVMMSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRUM3RNR3ltQWN0ZjNMbmZxby5icWRPY3NlMWF2bWtENm5UZWVVdC8xSmhOUjI4ekxhUUZJeSI7fQ==
+c5YrxHp6zAlK6luERFXanHz8mMVZC29DDMIX8iCK	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177773	YTo1OntzOjY6Il90b2tlbiI7czo0MDoidDRub1hKbzZiNjRXNWFGdk1Wd1lDVFI5N1VLVXhwcm1Na2NVWThhMyI7czo4OiJ1c2VybmFtZSI7czo2OiJqbm92YWsiO3M6NToiZW1haWwiO3M6MjE6Impub3Zha0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+xLkwkJhvwxsnOJtgZvDuR4YUKNpxrveXlW5O9f0s	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177777	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiTGRTSFp0TDAwN1ZEcWhSUDVoYTN1VUY0azdEM25jRWJwYk9pdWRRdiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRUd2oxajVJYXFJdlFIa3pBUHpyN24uVmlyUFZjZGZzRVhyRUM4L1dFNWFBR2w2d3hoR01yaSI7fQ==
+bzkfod5jUjuvUqRXmNh8NzB9mFnV7abKdHFS9teN	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177797	YTo1OntzOjY6Il90b2tlbiI7czo0MDoia1k1R1pmRUp5UHNQb1lWNXN0anFCN2hsVXlib2tWOWN4UDN2NVVoSSI7czo4OiJ1c2VybmFtZSI7czoxMDoia2Fsa2hhZmFqaSI7czo1OiJlbWFpbCI7czoyNToia2Fsa2hhZmFqaUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+hCUMdjvN4JwoNyk8hWSlosrJ5CsrUx35n2RBLtCb	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177802	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiM0NUY1BUN0pHNFhFYTBNOVp4QjBoZ2IydXA2WlhXWjIzRmxOa2IzbCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRld0RKQlIxRkM2bDRnTkVvRVFDNzBldjNBWnIuR2pLcTBJZE5tY0QydmtPVVJWZVQuRGFnSyI7fQ==
+FLGOV5XRIUDuhbe0J573rifihBmAvRe0sGydRbeN	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177826	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiUTlEWlEyZVRuNHNiR1dHbDZ4Rm9tSzRwZG01MTN5REJpd0FBbXhYeiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQwLjNDZGc5ckUwaE96QUc0MTBOWlkuZ20yRWFJTGIzbFhPTGhLTFl4MURUdm9xc245WXJkRyI7fQ==
+nxq358AlSznNygghL8InSCBROWDD0YsCMBsafjVI	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177822	YTo1OntzOjY6Il90b2tlbiI7czo0MDoicEVibXVOeGtOR2JJaGJaNkhzMzFBc0Z1bGNMUjZzWVR0Q1g2c2UwdyI7czo4OiJ1c2VybmFtZSI7czoxMjoibGNocmlzdG9waGVyIjtzOjU6ImVtYWlsIjtzOjI3OiJsY2hyaXN0b3BoZXJAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+fHU2TQggxpun3t8pSlL4OwxgWO8VZc3UTxwrAQWY	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177845	YTo1OntzOjY6Il90b2tlbiI7czo0MDoib0h2ZW92OU5MYXNZMmYxeU1OZWo4R3FLbFNFbndaQmtIajk3ZnJMbCI7czo4OiJ1c2VybmFtZSI7czo4OiJsa3VtaWVnYSI7czo1OiJlbWFpbCI7czoyMzoibGt1bWllZ2FAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+ACBB5dZG2vPB7KDAA9MiHAwfhtPPFBadLs6Kc7lI	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177849	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiak1tM3hwZTkzZDk4WW0wbUQyZkRLbXBvbmRTcGhXZnNjUHBIR1VTSSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRLMDN5Z0VlLmlJZWpMTHZxTE5YTnlleUpnMlNENXFndkQyVXhwODNzTUZ6cDk1dVpQTG1TYSI7fQ==
+JXKE5GNFL8AG2Moyu31lcaNoRj8oztFX3fNmsmbz	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177988	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiemdqTTY0cG5kclk2Nzc3a210ZmhYWFZFTlk1Rnl1TjlicWJyMnBMbSI7czo4OiJ1c2VybmFtZSI7czo2OiJ6d29vZHMiO3M6NToiZW1haWwiO3M6MjE6Inp3b29kc0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+aGPvHhmnxYziRp6HgFxmKXe5xLwh6zJZO4mUkpjG	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177992	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNUpGUHIydUw3bW5UVHJtUzBkNmRJSXI3ZXhYT0Z6TEV2dXlwdFhXciI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRSV25ydXdxaXRIcUFadWVqRW1OaTN1c2xKSXpwdzZhY1VrSnRZVFc1d1d3SU1XeEJNVGMwbSI7fQ==
+lgdyEBc5k5ht2ydOjxQZRhLPyEX5tbfRxBCUNwEA	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177873	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiV2dIMVNFWTVyRUxESnJiZHBpRXE3NlI2R1owVVg5aHluc09wM3VSUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRwdmdoR0dwTmJSQTZ3Y3RHZmhPdEplNEZyVjlFQ0g3ckdnRDVlazFESGFqTi5KZUFUL3U0SyI7fQ==
+fG8z3QULJJ8b3b9LGD9gh0RxZ83thtE7FXw402f8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177897	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiQkFNVWtuWEdTTGhIOExJREFGTmZFZFlkcTRWbWVyQXN5QkV4UERPZSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRjWmZJbnpKR2cuL3Q1R1NqVU40SXVPWTcxekpoQS5MbkluemUxRzM0ZHFJWGFURmZZRWdMQyI7fQ==
+Bvxv7yElCAbbh0fpaAUtDfgrGoOvf0aj92yHXmdr	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177893	YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNEt0dkl5ZUg0MFRMRk1JZnlEaWpOMmtxVkdIRDh5cEN4ZUI0MEw5MCI7czo4OiJ1c2VybmFtZSI7czo4OiJyYmFpeWV3dSI7czo1OiJlbWFpbCI7czoyMzoicmJhaXlld3VAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+6M7LQPcQOg6mT1AFq0he5UtEBBBf6H1a5DcLt3G6	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177917	YTo1OntzOjY6Il90b2tlbiI7czo0MDoicHI0czBiMFZaeXkwYzd0bEFydlhsTk92VkJJdVBEeTFFVURpampVayI7czo4OiJ1c2VybmFtZSI7czo2OiJycm9zc2kiO3M6NToiZW1haWwiO3M6MjE6InJyb3NzaUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==
+VzOEwFt2Rb5nfxlEcyCvK539zPd3AvEjW1vmmjaG	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177921	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiZTFKNk1neHRZTkp2cnhnaUFGZWtDa0FRVU5YTTR2R2t0TEp2MVMzRSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRmdnVwZnBzV0pxaEx5VXFCMU94YVIuaHJCcExyMm1wcTRucUtWbzZCZXdMWkFsOEJPV0lrbSI7fQ==
+YKYYuKPWo18KXI66M1tqbLr0iY9xdT7kg7ZszGJB	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177941	YTo1OntzOjY6Il90b2tlbiI7czo0MDoibTZaYk5PbmNZQVBWR1ZBbUlXWDYwaVVqdVFSY0dIWmRTRnZ6REU2SCI7czo4OiJ1c2VybmFtZSI7czoxMjoidmthcmJhc2l6YWVkIjtzOjU6ImVtYWlsIjtzOjI3OiJ2a2FyYmFzaXphZWRAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=
+QD68HLzBufuTshvUya6mMM9VvsjnjWCXn1Vtp2GT	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177945	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNHA3UnpXSXdCTVlCZm1uUUhOMnZOWFY2SVhFT2lHb3hZQWJ4NU9YMyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRJYXN0Yi84dWcxNENzakhUcmRNLmx1QmlWdVBERkR3bWZsMmcyR3A2U3BTNkZyRWFTelYwTyI7fQ==
+A2JKOohrSVgWfvjKt9E5XDF2aLNmk5zCAHdya183	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177964	YTo1OntzOjY6Il90b2tlbiI7czo0MDoibGpCWHdUV0JCRVBGcnlSQTNGWlVEdGt4c21wcjVRZ2RRU3VUREtIYiI7czo4OiJ1c2VybmFtZSI7czoxMToidndpbGxpYW1zb24iO3M6NToiZW1haWwiO3M6MjY6InZ3aWxsaWFtc29uQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19
+8KHniG71SGtidHUGqUi1wGyWBb6E7DfmWhAa5pGN	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/131.0.0.0 Safari/537.36	1737177968	YTo3OntzOjY6Il90b2tlbiI7czo0MDoiWG81QVhhYlNIZEY1U2cxcmV4dXFmbktXekgwREpiUjBjeU1OZ1hocCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ0VVNUb2duQVdDQkdyaWV0ODdPak91Lk5STUZGUFNRb2g4a2kweTMxcmRyZUZLWGRUbU81QyI7fQ==
 \.
 
 
@@ -9025,7 +9025,7 @@ COPY public.site_settings (site_setting_id, setting_name, locale, setting_value)
 12	orcidClientSecret		
 13	orcidEnabled		0
 14	themePluginPath		default
-15	uniqueSiteId		B6602763-D34A-4667-B594-886D8F0A78BA
+15	uniqueSiteId		A7779D5B-6F99-4CC2-A77F-5ACA86D816F6
 \.
 
 
@@ -9034,63 +9034,63 @@ COPY public.site_settings (site_setting_id, setting_name, locale, setting_value)
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-2	1	3	4	2025-01-17 05:18:19	0	1
-3	1	3	5	2025-01-17 05:18:19	0	1
-1	1	4	7	2025-01-17 05:18:06	0	1
-5	2	3	4	2025-01-17 05:19:18	0	1
-6	2	3	5	2025-01-17 05:19:18	0	1
-4	2	4	8	2025-01-17 05:18:27	0	1
-8	3	3	4	2025-01-17 05:19:46	0	1
-9	3	3	5	2025-01-17 05:19:46	0	1
-7	3	4	9	2025-01-17 05:19:32	0	1
-11	4	3	4	2025-01-17 05:20:30	0	1
-12	4	3	5	2025-01-17 05:20:30	0	1
-10	4	4	10	2025-01-17 05:20:17	0	1
-14	5	3	4	2025-01-17 05:21:08	0	1
-15	5	3	5	2025-01-17 05:21:08	0	1
-13	5	4	11	2025-01-17 05:20:55	0	1
-17	6	3	4	2025-01-17 05:21:41	0	1
-18	6	3	5	2025-01-17 05:21:41	0	1
-16	6	4	12	2025-01-17 05:21:28	0	1
-20	7	3	4	2025-01-17 05:22:05	0	1
-21	7	3	5	2025-01-17 05:22:05	0	1
-19	7	4	13	2025-01-17 05:21:52	0	1
-23	8	3	4	2025-01-17 05:22:29	0	1
-24	8	3	5	2025-01-17 05:22:29	0	1
-22	8	4	14	2025-01-17 05:22:16	0	1
-26	9	3	4	2025-01-17 05:22:53	0	1
-27	9	3	5	2025-01-17 05:22:53	0	1
-25	9	4	15	2025-01-17 05:22:40	0	1
-29	10	3	4	2025-01-17 05:23:17	0	1
-30	10	3	5	2025-01-17 05:23:17	0	1
-28	10	4	16	2025-01-17 05:23:04	0	1
-32	11	3	4	2025-01-17 05:23:41	0	1
-33	11	3	5	2025-01-17 05:23:41	0	1
-31	11	4	17	2025-01-17 05:23:28	0	1
-35	12	3	4	2025-01-17 05:24:06	0	1
-36	12	3	5	2025-01-17 05:24:06	0	1
-34	12	4	18	2025-01-17 05:23:53	0	1
-38	13	3	4	2025-01-17 05:24:30	0	1
-39	13	3	5	2025-01-17 05:24:30	0	1
-37	13	4	19	2025-01-17 05:24:17	0	1
-41	14	3	4	2025-01-17 05:24:54	0	1
-42	14	3	5	2025-01-17 05:24:54	0	1
-40	14	4	20	2025-01-17 05:24:41	0	1
-44	15	3	4	2025-01-17 05:25:18	0	1
-45	15	3	5	2025-01-17 05:25:18	0	1
-43	15	4	21	2025-01-17 05:25:05	0	1
-47	16	3	4	2025-01-17 05:25:42	0	1
-48	16	3	5	2025-01-17 05:25:42	0	1
-46	16	4	22	2025-01-17 05:25:29	0	1
-50	17	3	4	2025-01-17 05:26:06	0	1
-51	17	3	5	2025-01-17 05:26:06	0	1
-49	17	4	23	2025-01-17 05:25:53	0	1
-53	18	3	4	2025-01-17 05:26:30	0	1
-54	18	3	5	2025-01-17 05:26:30	0	1
-52	18	4	24	2025-01-17 05:26:17	0	1
-56	19	3	4	2025-01-17 05:26:54	0	1
-57	19	3	5	2025-01-17 05:26:54	0	1
-55	19	4	25	2025-01-17 05:26:41	0	1
+2	1	3	4	2025-01-18 05:17:56	0	1
+3	1	3	5	2025-01-18 05:17:56	0	1
+1	1	4	7	2025-01-18 05:17:43	0	1
+5	2	3	4	2025-01-18 05:18:54	0	1
+6	2	3	5	2025-01-18 05:18:54	0	1
+4	2	4	8	2025-01-18 05:18:04	0	1
+8	3	3	4	2025-01-18 05:19:22	0	1
+9	3	3	5	2025-01-18 05:19:22	0	1
+7	3	4	9	2025-01-18 05:19:08	0	1
+11	4	3	4	2025-01-18 05:20:06	0	1
+12	4	3	5	2025-01-18 05:20:06	0	1
+10	4	4	10	2025-01-18 05:19:53	0	1
+14	5	3	4	2025-01-18 05:20:43	0	1
+15	5	3	5	2025-01-18 05:20:43	0	1
+13	5	4	11	2025-01-18 05:20:30	0	1
+17	6	3	4	2025-01-18 05:21:15	0	1
+18	6	3	5	2025-01-18 05:21:15	0	1
+16	6	4	12	2025-01-18 05:21:02	0	1
+20	7	3	4	2025-01-18 05:21:39	0	1
+21	7	3	5	2025-01-18 05:21:39	0	1
+19	7	4	13	2025-01-18 05:21:25	0	1
+23	8	3	4	2025-01-18 05:22:02	0	1
+24	8	3	5	2025-01-18 05:22:02	0	1
+22	8	4	14	2025-01-18 05:21:49	0	1
+26	9	3	4	2025-01-18 05:22:26	0	1
+27	9	3	5	2025-01-18 05:22:26	0	1
+25	9	4	15	2025-01-18 05:22:13	0	1
+29	10	3	4	2025-01-18 05:22:52	0	1
+30	10	3	5	2025-01-18 05:22:52	0	1
+28	10	4	16	2025-01-18 05:22:39	0	1
+32	11	3	4	2025-01-18 05:23:16	0	1
+33	11	3	5	2025-01-18 05:23:16	0	1
+31	11	4	17	2025-01-18 05:23:03	0	1
+35	12	3	4	2025-01-18 05:23:41	0	1
+36	12	3	5	2025-01-18 05:23:41	0	1
+34	12	4	18	2025-01-18 05:23:28	0	1
+38	13	3	4	2025-01-18 05:24:05	0	1
+39	13	3	5	2025-01-18 05:24:05	0	1
+37	13	4	19	2025-01-18 05:23:52	0	1
+41	14	3	4	2025-01-18 05:24:29	0	1
+42	14	3	5	2025-01-18 05:24:29	0	1
+40	14	4	20	2025-01-18 05:24:16	0	1
+44	15	3	4	2025-01-18 05:24:52	0	1
+45	15	3	5	2025-01-18 05:24:52	0	1
+43	15	4	21	2025-01-18 05:24:40	0	1
+47	16	3	4	2025-01-18 05:25:16	0	1
+48	16	3	5	2025-01-18 05:25:16	0	1
+46	16	4	22	2025-01-18 05:25:03	0	1
+50	17	3	4	2025-01-18 05:25:40	0	1
+51	17	3	5	2025-01-18 05:25:40	0	1
+49	17	4	23	2025-01-18 05:25:27	0	1
+53	18	3	4	2025-01-18 05:26:04	0	1
+54	18	3	5	2025-01-18 05:26:04	0	1
+52	18	4	24	2025-01-18 05:25:51	0	1
+56	19	3	4	2025-01-18 05:26:27	0	1
+57	19	3	5	2025-01-18 05:26:27	0	1
+55	19	4	25	2025-01-18 05:26:15	0	1
 \.
 
 
@@ -9190,25 +9190,25 @@ COPY public.submission_file_settings (submission_file_setting_id, submission_fil
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	1	10	\N	\N	\N	2025-01-17 05:18:16	2025-01-17 05:18:19	7	521	1
-2	2	2	\N	1	10	\N	\N	\N	2025-01-17 05:18:51	2025-01-17 05:18:53	8	521	2
-3	3	3	\N	1	10	\N	\N	\N	2025-01-17 05:19:42	2025-01-17 05:19:44	9	521	3
-4	4	4	\N	1	10	\N	\N	\N	2025-01-17 05:20:27	2025-01-17 05:20:30	10	521	5
-5	5	5	\N	1	10	\N	\N	\N	2025-01-17 05:21:05	2025-01-17 05:21:07	11	521	6
-6	6	6	\N	1	10	\N	\N	\N	2025-01-17 05:21:38	2025-01-17 05:21:40	12	521	7
-7	7	7	\N	1	10	\N	\N	\N	2025-01-17 05:22:02	2025-01-17 05:22:04	13	521	8
-8	8	8	\N	1	10	\N	\N	\N	2025-01-17 05:22:26	2025-01-17 05:22:28	14	521	9
-9	9	9	\N	1	10	\N	\N	\N	2025-01-17 05:22:50	2025-01-17 05:22:52	15	521	10
-10	10	10	\N	1	10	\N	\N	\N	2025-01-17 05:23:14	2025-01-17 05:23:16	16	521	11
-11	11	11	\N	1	10	\N	\N	\N	2025-01-17 05:23:38	2025-01-17 05:23:40	17	521	12
-12	12	12	\N	1	10	\N	\N	\N	2025-01-17 05:24:03	2025-01-17 05:24:05	18	521	13
-13	13	13	\N	1	10	\N	\N	\N	2025-01-17 05:24:27	2025-01-17 05:24:29	19	521	14
-14	14	14	\N	1	10	\N	\N	\N	2025-01-17 05:24:51	2025-01-17 05:24:53	20	521	15
-15	15	15	\N	1	10	\N	\N	\N	2025-01-17 05:25:15	2025-01-17 05:25:17	21	521	16
-16	16	16	\N	1	10	\N	\N	\N	2025-01-17 05:25:39	2025-01-17 05:25:41	22	521	17
-17	17	17	\N	1	10	\N	\N	\N	2025-01-17 05:26:03	2025-01-17 05:26:05	23	521	18
-18	18	18	\N	1	10	\N	\N	\N	2025-01-17 05:26:27	2025-01-17 05:26:29	24	521	19
-19	19	19	\N	1	10	\N	\N	\N	2025-01-17 05:26:51	2025-01-17 05:26:53	25	521	20
+1	1	1	\N	1	10	\N	\N	\N	2025-01-18 05:17:53	2025-01-18 05:17:56	7	521	1
+2	2	2	\N	1	10	\N	\N	\N	2025-01-18 05:18:28	2025-01-18 05:18:30	8	521	2
+3	3	3	\N	1	10	\N	\N	\N	2025-01-18 05:19:18	2025-01-18 05:19:21	9	521	3
+4	4	4	\N	1	10	\N	\N	\N	2025-01-18 05:20:03	2025-01-18 05:20:05	10	521	5
+5	5	5	\N	1	10	\N	\N	\N	2025-01-18 05:20:40	2025-01-18 05:20:42	11	521	6
+6	6	6	\N	1	10	\N	\N	\N	2025-01-18 05:21:12	2025-01-18 05:21:14	12	521	7
+7	7	7	\N	1	10	\N	\N	\N	2025-01-18 05:21:35	2025-01-18 05:21:38	13	521	8
+8	8	8	\N	1	10	\N	\N	\N	2025-01-18 05:21:59	2025-01-18 05:22:02	14	521	9
+9	9	9	\N	1	10	\N	\N	\N	2025-01-18 05:22:23	2025-01-18 05:22:25	15	521	10
+10	10	10	\N	1	10	\N	\N	\N	2025-01-18 05:22:50	2025-01-18 05:22:52	16	521	11
+11	11	11	\N	1	10	\N	\N	\N	2025-01-18 05:23:13	2025-01-18 05:23:15	17	521	12
+12	12	12	\N	1	10	\N	\N	\N	2025-01-18 05:23:38	2025-01-18 05:23:40	18	521	13
+13	13	13	\N	1	10	\N	\N	\N	2025-01-18 05:24:02	2025-01-18 05:24:04	19	521	14
+14	14	14	\N	1	10	\N	\N	\N	2025-01-18 05:24:26	2025-01-18 05:24:28	20	521	15
+15	15	15	\N	1	10	\N	\N	\N	2025-01-18 05:24:50	2025-01-18 05:24:52	21	521	16
+16	16	16	\N	1	10	\N	\N	\N	2025-01-18 05:25:13	2025-01-18 05:25:16	22	521	17
+17	17	17	\N	1	10	\N	\N	\N	2025-01-18 05:25:37	2025-01-18 05:25:39	23	521	18
+18	18	18	\N	1	10	\N	\N	\N	2025-01-18 05:26:01	2025-01-18 05:26:03	24	521	19
+19	19	19	\N	1	10	\N	\N	\N	2025-01-18 05:26:25	2025-01-18 05:26:27	25	521	20
 \.
 
 
@@ -9379,840 +9379,842 @@ COPY public.submission_search_keyword_list (keyword_id, keyword_text) FROM stdin
 160	effect
 161	urho
 162	kekkonen
-163	montgomerie
-164	craig
-165	alberta
-166	policy
-167	requirements
-168	skill
-169	computer
-170	teachers
-171	practice
-172	existing
-173	implications
-174	grade
-175	education
-176	response
-177	infused
-178	canada
-179	summarizes
-180	specifies
-181	provincial
-182	rate
-183	issue
-184	school
-185	required
-186	turning
-187	mandated
-188	government
-189	jurisdictions
-190	began
-191	province
-192	employed
-193	integration
-194	skills
-195	core
-196	implement
-197	initiatives
-198	professional
-199	information
-200	demonstrate
-201	telephone
-202	administered
-203	students
-204	curriculum
-205	newly
-206	hiring
-207	development
-208	hired
-209	level
-210	called
-211	expected
-212	results
-213	goal
-214	implementation
-215	learning
-216	standards
-217	courses
-218	public
-219	upgrade
-220	require
-221	today
-222	technology
-223	classroom
-224	strategies
-225	paper
-226	major
-227	september
-228	respect
-229	meet
-230	examined
-231	integrating
-232	mark
-233	irvine
-234	victoria
-235	alexandria
-236	diaga
-237	diouf
-238	genetic
-239	forest
-240	transformation
-241	trees
-242	recent
-243	review
-244	expression
-245	plants
-246	woody
-247	improving
-248	engineering
-249	genes
-250	mechanisms
-251	understanding
-252	governing
-253	progress
-254	applications
-255	discussed
-256	toronto
-257	dana
-258	phillips
-259	thesis
-260	disagreement
-261	shared
-262	fogelin
-263	background
-264	argument
-265	critique
-266	deep
-267	investigating
-268	widely
-269	supporters
-270	beliefs
-271	find
-272	pro
-273	topic
-274	common
-275	mitments
-276	share
-277	procedural
-278	claims
-279	cedural
-280	interlocutors
-281	order
-282	framework
-283	productive
-284	consists
-285	people
-286	competencies
-287	part
-288	hand
-289	fruitfully
-290	mistakenly
-291	pursue
-292	diverge
-293	uphold
-294	refute
-295	claim
-296	robert
-297	difficult
-298	commitments
-299	domatilia
-300	sokoloff
-301	cork
-302	college
-303	developing
-304	efficacy
-305	knowledge
-306	enhance
-307	cps
-308	taught
-309	involve
-310	learn
-311	creative
-312	graduation
-313	conducted
-314	making
-315	participate
-316	motivate
-317	key
-318	shown
-319	valuable
-320	means
-321	informed
-322	decision
-323	studies
-324	learners
-325	action
-326	motivation
-327	role
-328	confident
-329	positive
-330	instruction
-331	showing
-332	social
-333	strategy
-334	presented
-335	children
-336	enhancing
-337	problem
-338	equip
-339	society
-340	belief
-341	solving
-342	continue
-343	leads
-344	nurturing
-345	citizens
-346	citizenship
-347	ostrom
-348	indiana
-349	elinor
-350	substantial
-351	managed
-352	reyes
-353	decades
-354	distinguished
-355	coward
-356	mid
-357	regions
-358	mackenzie
-359	resources
-360	scholars
-361	colleagues
-362	contemporary
-363	disciplines
-364	sec
-365	region
-366	work
-367	los
-368	times
-369	wittfogel
-370	1980s
-371	long
-372	commons
-373	places
-374	tors
-375	world
-376	expe
-377	researchers
-378	rienced
-379	specific
-380	mismanaged
-381	past
-382	developments
-383	property
-384	pool
-385	intellectual
-386	resource
-387	van
-388	frank
-389	laerhoven
-390	fabio
-391	rome
-392	paglieri
-393	pinto
-394	reason
-395	hansen
-396	reclaimed
-397	town
-398	cape
-399	mwandenga
-400	john
-401	dividends
-402	signalling
-403	literature
-404	empirical
-405	theory
-406	evidence
-407	dividend
-408	shareholding
-409	signaling
-410	firm
-411	economists
-412	future
-413	offer
-414	practical
-415	investors
-416	evaluation
-417	rely
-418	decisions
-419	financial
-420	potential
-421	financing
-422	continuous
-423	signal
-424	intuitive
-425	suggests
-426	conflicting
-427	prospects
-428	investment
-429	distribution
-430	management
-431	conclusive
-432	corporate
-433	function
-434	guidance
-435	novak
-436	aalborg
-437	condensing
-438	water
-439	models
-440	focus
-441	availability
-442	systems
-443	simplifying
-444	reservoirs
-445	complex
-446	expanding
-447	planning
-448	river
-449	added
-450	large
-451	applied
-452	flows
-453	routinely
-454	modifying
-455	removed
-456	basins
-457	capabilities
-458	input
-459	reservoir
-460	texas
-461	authority
-462	simulation
-463	enhanced
-464	necessarily
-465	impacts
-466	streamflows
-467	contained
-468	original
-469	datasets
-470	statewide
-471	represents
-472	types
-473	state
-474	model
-475	complete
-476	selected
-477	included
-478	developed
-479	dataset
-480	accompanying
-481	permits
-482	growing
-483	provide
-484	condensed
-485	basin
-486	based
-487	modeling
-488	permit
-489	regional
-490	brazos
-491	administration
-492	variety
-493	develop
-494	set
-495	methodology
-496	rights
-497	reflects
-498	endeavors
-499	features
-500	system
-501	karim
-502	khafaji
-503	stanford
-504	sustainable
-505	design
-506	service
-507	failed
-508	experiences
-509	environmental
-510	projects
-511	present
-512	chapter
-513	address
-514	successful
-515	topics
-516	setting
-517	sustainability
-518	largely
-519	engineers
-520	project
-521	academic
-522	principles
-523	leveraged
-524	coordinated
-525	identification
-526	vital
-527	tool
-528	limitations
-529	involves
-530	challenges
-531	led
-532	exist
-533	emerging
-534	organizations
-535	teach
-536	directions
-537	integrates
-538	student
-539	partner
-540	internships
-541	morse
-542	margaret
-543	australian
-544	christopher
-545	leo
-546	weaning
-547	butyrate
-548	piglets
-549	improves
-550	weaned
-551	performance
-552	sodium
-553	increases
-554	supplement
-555	reflected
-556	levels
-557	treatment
-558	assess
-559	pufa
-560	healthy
-561	matched
-562	close
-563	lowest
-564	adipose
-565	monounsaturated
-566	rapeseed
-567	mufa
-568	isoenergetic
-569	cis
-570	nutritional
-571	averaging
-572	differed
-573	saturated
-574	linolenic
-575	result
-576	polyunsaturated
-577	iodine
-578	supplemented
-579	treatments
-580	acids
-581	weights
-582	animals
-583	technological
-584	c18
-585	maize
-586	sfa
-587	slaughter
-588	assessed
-589	c20
-590	linoleic
-591	index
-592	subcutaneous
-593	analyzed
-594	samples
-595	aim
-596	profile
-597	content
-598	white
-599	fifty
-600	backfat
-601	oil
-602	supplementation
-603	randomized
-604	cured
-605	ecosenoic
-606	consortium
-607	show
-608	dietary
-609	carefully
-610	tissue
-611	unsaturation
-612	fats
-613	parma
-614	proportion
-615	slaughtering
-616	accepted
-617	collected
-618	term
-619	ten
-620	highest
-621	layers
-622	tallow
-623	food
-624	security
-625	lise
-626	kumiega
-627	hydrologic
-628	san
-629	marcos
-630	barton
-631	edwards
-632	aquifer
-633	drought
-634	connectivity
-635	springs
-636	conditions
-637	antonio
-638	gradient
-639	dynamic
-640	normal
-641	change
-642	potentiometric
-643	flowing
-644	dramatic
-645	longer
-646	extensive
-647	flow
-648	north
-649	bearings
-650	endangered
-651	cfs
-652	unknown
-653	onion
-654	inherent
-655	species
-656	buda
-657	downstream
-658	continual
-659	population
-660	properties
-661	assessments
-662	structural
-663	analyses
-664	creek
-665	dissipated
-666	divide
-667	appears
-668	necessitates
-669	rapid
-670	drainage
-671	south
-672	kyle
-673	supply
-674	surface
-675	questions
-676	increased
-677	hydraulic
-678	demands
-679	serves
-680	hydrogeologic
-681	established
-682	wet
-683	concept
-684	separated
-685	plan
-686	variation
-687	vicinity
-688	connection
-689	recharge
-690	program
-691	gradients
-692	hydrologically
-693	influences
-694	collection
-695	blanco
-696	trend
-697	droughts
-698	raised
-699	groundwater
-700	source
-701	extended
-702	periods
-703	shows
-704	exists
-705	monitoring
-706	slopes
-707	pumping
-708	immediately
-709	protect
-710	primary
-711	central
-712	discontinuity
-713	simulations
-714	influenced
-715	numerical
-716	segments
-717	low
-718	vulnerable
-719	wolverhampton
-720	patricia
-721	daniel
-722	intercultural
-723	case
-724	atlantic
-725	coast
-726	nicaragua
-727	designing
-728	barriers
-729	militate
-730	ethnic
-731	relations
-732	overcome
-733	discussions
-734	delivering
-735	individual
-736	uraccan
-737	participatory
-738	language
-739	multiethnic
-740	carried
-741	wales
-742	belonging
-743	promoting
-744	interculturality
-745	emphasises
-746	highlights
-747	describes
-748	genuinely
-749	egalitarianism
-750	met
-751	include
-752	achieving
-753	country
-754	pedagogy
-755	council
-756	time
-757	ethno
-758	takes
-759	diversity
-760	examines
-761	community
-762	supporting
-763	century
-764	21st
-765	embracing
-766	gender
-767	power
-768	intention
-769	staff
-770	importance
-771	involvement
-772	cultures
-773	linguistic
-774	lasting
-775	multilingual
-776	communities
-777	defining
-778	contributing
-779	nairobi
-780	rana
-781	baiyewu
-782	nigeria
-783	yam
-784	diseases
-785	presents
-786	rotation
-787	tubers
-788	destruction
-789	ash
-790	disease
-791	severe
-792	fallowing
-793	fungal
-794	processing
-795	found
-796	wood
-797	tecto
-798	edible
-799	cubes
-800	thiabendazole
-801	regarded
-802	combating
-803	devastating
-804	advocated
-805	material
-806	finally
-807	anthracnose
-808	menace
-809	made
-810	infected
-811	portions
-812	yams
-813	field
-814	crop
-815	months
-816	adopted
-817	resistant
-818	rot
-819	considered
-820	includes
-821	marketable
-822	chips
-823	reductions
-824	year
-825	mosaic
-826	spread
-827	storage
-828	infection
-829	cultivars
-830	reduction
-831	shelf
-832	locally
-833	virus
-834	planting
-835	stored
-836	live
-837	gins
-838	barcelona
-839	rossi
-840	rosanna
-841	nutrition
-842	lungs
-843	thoracis
-844	represent
-845	organs
-846	beef
-847	savannah
-848	longissimus
-849	pre
-850	trade
-851	encountered
-852	tuberculosis
-853	cows
-854	ectoparasites
-855	fulani
-856	category
-857	completely
-858	nodes
-859	authorities
-860	lesions
-861	african
-862	toughest
-863	abattoir
-864	draw
-865	enlarged
-866	lameness
-867	aid
-868	characteristics
-869	breeds
-870	cameroon
-871	origin
-872	predominant
-873	carcasses
-874	carcass
-875	lymph
-876	varied
-877	similar
-878	programmes
-879	transhumance
-880	bulls
-881	promote
-882	january
-883	recorded
-884	abnormal
-885	respiratory
-886	safety
-887	improve
-888	prevent
-889	march
-890	gudali
-891	rearing
-892	affected
-893	representative
-894	high
-895	due
-896	fatigue
-897	markedly
-898	yaoundé
-899	distress
-900	situation
-901	meat
-902	slaughtered
-903	mbororo
-904	liver
-905	skin
-906	guinea
-907	cattle
-908	flukes
-909	condemned
-910	largest
-911	red
-912	general
-913	strengthen
-914	nodular
-915	pregnant
-916	karbasizaed
-917	vajiheh
-918	tehran
-919	metal
-920	hospital
-921	plasmid
-922	coliforms
-923	isolated
-924	iran
-925	isfahan
-926	infections
-927	antimicrobial
-928	nosocomial
-929	resistance
-930	kelebsiella
-931	clinical
-932	percent
-933	difference
-934	possess
-935	conjugative
-936	pneumoniae
-937	mic
-938	isolates
-939	faeces
-940	identified
-941	inhibitory
-942	tolerant
-943	seventy
-944	coli
-945	strains
-946	escherichia
-947	encoding
-948	minimal
-949	relationship
-950	human
-951	fifteen
-952	multiple
-953	multidrug
-954	recovered
-955	profiles
-956	pattern
-957	persons
-958	antibiotics
-959	concentration
-960	enterobacteriacea
-961	patterns
-962	metals
-963	remaining
-964	cases
-965	valerie
-966	williamson
-967	networked
-968	environments
-969	multi
-970	institutions
-971	implemented
-972	ruled
-973	decide
-974	perverse
-975	sanction
-976	reaching
-977	actors
-978	consensus
-979	agree
-980	sanctions
-981	actor
-982	punishing
-983	difficulty
-984	contributors
-985	problematic
-986	collectively
-987	sanctioning
-988	collective
-989	sanctioned
-990	compare
-991	goverance
-992	cuny
-993	woods
-994	zita
-995	arguments
-996	finocchiaro
+163	author
+164	fake
+165	montgomerie
+166	craig
+167	alberta
+168	policy
+169	requirements
+170	skill
+171	computer
+172	teachers
+173	practice
+174	existing
+175	implications
+176	grade
+177	education
+178	response
+179	infused
+180	canada
+181	summarizes
+182	specifies
+183	provincial
+184	rate
+185	issue
+186	school
+187	required
+188	turning
+189	mandated
+190	government
+191	jurisdictions
+192	began
+193	province
+194	employed
+195	integration
+196	skills
+197	core
+198	implement
+199	initiatives
+200	professional
+201	information
+202	demonstrate
+203	telephone
+204	administered
+205	students
+206	curriculum
+207	newly
+208	hiring
+209	development
+210	hired
+211	level
+212	called
+213	expected
+214	results
+215	goal
+216	implementation
+217	learning
+218	standards
+219	courses
+220	public
+221	upgrade
+222	require
+223	today
+224	technology
+225	classroom
+226	strategies
+227	paper
+228	major
+229	september
+230	respect
+231	meet
+232	examined
+233	integrating
+234	mark
+235	irvine
+236	victoria
+237	alexandria
+238	diaga
+239	diouf
+240	genetic
+241	forest
+242	transformation
+243	trees
+244	recent
+245	review
+246	expression
+247	plants
+248	woody
+249	improving
+250	engineering
+251	genes
+252	mechanisms
+253	understanding
+254	governing
+255	progress
+256	applications
+257	discussed
+258	toronto
+259	dana
+260	phillips
+261	thesis
+262	disagreement
+263	shared
+264	fogelin
+265	background
+266	argument
+267	critique
+268	deep
+269	investigating
+270	widely
+271	supporters
+272	beliefs
+273	find
+274	pro
+275	topic
+276	common
+277	mitments
+278	share
+279	procedural
+280	claims
+281	cedural
+282	interlocutors
+283	order
+284	framework
+285	productive
+286	consists
+287	people
+288	competencies
+289	part
+290	hand
+291	fruitfully
+292	mistakenly
+293	pursue
+294	diverge
+295	uphold
+296	refute
+297	claim
+298	robert
+299	difficult
+300	commitments
+301	domatilia
+302	sokoloff
+303	cork
+304	college
+305	developing
+306	efficacy
+307	knowledge
+308	enhance
+309	cps
+310	taught
+311	involve
+312	learn
+313	creative
+314	graduation
+315	conducted
+316	making
+317	participate
+318	motivate
+319	key
+320	shown
+321	valuable
+322	means
+323	informed
+324	decision
+325	studies
+326	learners
+327	action
+328	motivation
+329	role
+330	confident
+331	positive
+332	instruction
+333	showing
+334	social
+335	strategy
+336	presented
+337	children
+338	enhancing
+339	problem
+340	equip
+341	society
+342	belief
+343	solving
+344	continue
+345	leads
+346	nurturing
+347	citizens
+348	citizenship
+349	ostrom
+350	indiana
+351	elinor
+352	substantial
+353	managed
+354	reyes
+355	decades
+356	distinguished
+357	coward
+358	mid
+359	regions
+360	mackenzie
+361	resources
+362	scholars
+363	colleagues
+364	contemporary
+365	disciplines
+366	sec
+367	region
+368	work
+369	los
+370	times
+371	wittfogel
+372	1980s
+373	long
+374	commons
+375	places
+376	tors
+377	world
+378	expe
+379	researchers
+380	rienced
+381	specific
+382	mismanaged
+383	past
+384	developments
+385	property
+386	pool
+387	intellectual
+388	resource
+389	van
+390	frank
+391	laerhoven
+392	fabio
+393	rome
+394	paglieri
+395	pinto
+396	reason
+397	hansen
+398	reclaimed
+399	town
+400	cape
+401	mwandenga
+402	john
+403	dividends
+404	signalling
+405	literature
+406	empirical
+407	theory
+408	evidence
+409	dividend
+410	shareholding
+411	signaling
+412	firm
+413	economists
+414	future
+415	offer
+416	practical
+417	investors
+418	evaluation
+419	rely
+420	decisions
+421	financial
+422	potential
+423	financing
+424	continuous
+425	signal
+426	intuitive
+427	suggests
+428	conflicting
+429	prospects
+430	investment
+431	distribution
+432	management
+433	conclusive
+434	corporate
+435	function
+436	guidance
+437	novak
+438	aalborg
+439	condensing
+440	water
+441	models
+442	focus
+443	availability
+444	systems
+445	simplifying
+446	reservoirs
+447	complex
+448	expanding
+449	planning
+450	river
+451	added
+452	large
+453	applied
+454	flows
+455	routinely
+456	modifying
+457	removed
+458	basins
+459	capabilities
+460	input
+461	reservoir
+462	texas
+463	authority
+464	simulation
+465	enhanced
+466	necessarily
+467	impacts
+468	streamflows
+469	contained
+470	original
+471	datasets
+472	statewide
+473	represents
+474	types
+475	state
+476	model
+477	complete
+478	selected
+479	included
+480	developed
+481	dataset
+482	accompanying
+483	permits
+484	growing
+485	provide
+486	condensed
+487	basin
+488	based
+489	modeling
+490	permit
+491	regional
+492	brazos
+493	administration
+494	variety
+495	develop
+496	set
+497	methodology
+498	rights
+499	reflects
+500	endeavors
+501	features
+502	system
+503	karim
+504	khafaji
+505	stanford
+506	sustainable
+507	design
+508	service
+509	failed
+510	experiences
+511	environmental
+512	projects
+513	present
+514	chapter
+515	address
+516	successful
+517	topics
+518	setting
+519	sustainability
+520	largely
+521	engineers
+522	project
+523	academic
+524	principles
+525	leveraged
+526	coordinated
+527	identification
+528	vital
+529	tool
+530	limitations
+531	involves
+532	challenges
+533	led
+534	exist
+535	emerging
+536	organizations
+537	teach
+538	directions
+539	integrates
+540	student
+541	partner
+542	internships
+543	morse
+544	margaret
+545	australian
+546	christopher
+547	leo
+548	weaning
+549	butyrate
+550	piglets
+551	improves
+552	weaned
+553	performance
+554	sodium
+555	increases
+556	supplement
+557	reflected
+558	levels
+559	treatment
+560	assess
+561	pufa
+562	healthy
+563	matched
+564	close
+565	lowest
+566	adipose
+567	monounsaturated
+568	rapeseed
+569	mufa
+570	isoenergetic
+571	cis
+572	nutritional
+573	averaging
+574	differed
+575	saturated
+576	linolenic
+577	result
+578	polyunsaturated
+579	iodine
+580	supplemented
+581	treatments
+582	acids
+583	weights
+584	animals
+585	technological
+586	c18
+587	maize
+588	sfa
+589	slaughter
+590	assessed
+591	c20
+592	linoleic
+593	index
+594	subcutaneous
+595	analyzed
+596	samples
+597	aim
+598	profile
+599	content
+600	white
+601	fifty
+602	backfat
+603	oil
+604	supplementation
+605	randomized
+606	cured
+607	ecosenoic
+608	consortium
+609	show
+610	dietary
+611	carefully
+612	tissue
+613	unsaturation
+614	fats
+615	parma
+616	proportion
+617	slaughtering
+618	accepted
+619	collected
+620	term
+621	ten
+622	highest
+623	layers
+624	tallow
+625	food
+626	security
+627	lise
+628	kumiega
+629	hydrologic
+630	san
+631	marcos
+632	barton
+633	edwards
+634	aquifer
+635	drought
+636	connectivity
+637	springs
+638	conditions
+639	antonio
+640	gradient
+641	dynamic
+642	normal
+643	change
+644	potentiometric
+645	flowing
+646	dramatic
+647	longer
+648	extensive
+649	flow
+650	north
+651	bearings
+652	endangered
+653	cfs
+654	unknown
+655	onion
+656	inherent
+657	species
+658	buda
+659	downstream
+660	continual
+661	population
+662	properties
+663	assessments
+664	structural
+665	analyses
+666	creek
+667	dissipated
+668	divide
+669	appears
+670	necessitates
+671	rapid
+672	drainage
+673	south
+674	kyle
+675	supply
+676	surface
+677	questions
+678	increased
+679	hydraulic
+680	demands
+681	serves
+682	hydrogeologic
+683	established
+684	wet
+685	concept
+686	separated
+687	plan
+688	variation
+689	vicinity
+690	connection
+691	recharge
+692	program
+693	gradients
+694	hydrologically
+695	influences
+696	collection
+697	blanco
+698	trend
+699	droughts
+700	raised
+701	groundwater
+702	source
+703	extended
+704	periods
+705	shows
+706	exists
+707	monitoring
+708	slopes
+709	pumping
+710	immediately
+711	protect
+712	primary
+713	central
+714	discontinuity
+715	simulations
+716	influenced
+717	numerical
+718	segments
+719	low
+720	vulnerable
+721	wolverhampton
+722	patricia
+723	daniel
+724	intercultural
+725	case
+726	atlantic
+727	coast
+728	nicaragua
+729	designing
+730	barriers
+731	militate
+732	ethnic
+733	relations
+734	overcome
+735	discussions
+736	delivering
+737	individual
+738	uraccan
+739	participatory
+740	language
+741	multiethnic
+742	carried
+743	wales
+744	belonging
+745	promoting
+746	interculturality
+747	emphasises
+748	highlights
+749	describes
+750	genuinely
+751	egalitarianism
+752	met
+753	include
+754	achieving
+755	country
+756	pedagogy
+757	council
+758	time
+759	ethno
+760	takes
+761	diversity
+762	examines
+763	community
+764	supporting
+765	century
+766	21st
+767	embracing
+768	gender
+769	power
+770	intention
+771	staff
+772	importance
+773	involvement
+774	cultures
+775	linguistic
+776	lasting
+777	multilingual
+778	communities
+779	defining
+780	contributing
+781	nairobi
+782	rana
+783	baiyewu
+784	nigeria
+785	yam
+786	diseases
+787	presents
+788	rotation
+789	tubers
+790	destruction
+791	ash
+792	disease
+793	severe
+794	fallowing
+795	fungal
+796	processing
+797	found
+798	wood
+799	tecto
+800	edible
+801	cubes
+802	thiabendazole
+803	regarded
+804	combating
+805	devastating
+806	advocated
+807	material
+808	finally
+809	anthracnose
+810	menace
+811	made
+812	infected
+813	portions
+814	yams
+815	field
+816	crop
+817	months
+818	adopted
+819	resistant
+820	rot
+821	considered
+822	includes
+823	marketable
+824	chips
+825	reductions
+826	year
+827	mosaic
+828	spread
+829	storage
+830	infection
+831	cultivars
+832	reduction
+833	shelf
+834	locally
+835	virus
+836	planting
+837	stored
+838	live
+839	gins
+840	barcelona
+841	rossi
+842	rosanna
+843	nutrition
+844	lungs
+845	thoracis
+846	represent
+847	organs
+848	beef
+849	savannah
+850	longissimus
+851	pre
+852	trade
+853	encountered
+854	tuberculosis
+855	cows
+856	ectoparasites
+857	fulani
+858	category
+859	completely
+860	nodes
+861	authorities
+862	lesions
+863	african
+864	toughest
+865	abattoir
+866	draw
+867	enlarged
+868	lameness
+869	aid
+870	characteristics
+871	breeds
+872	cameroon
+873	origin
+874	predominant
+875	carcasses
+876	carcass
+877	lymph
+878	varied
+879	similar
+880	programmes
+881	transhumance
+882	bulls
+883	promote
+884	january
+885	recorded
+886	abnormal
+887	respiratory
+888	safety
+889	improve
+890	prevent
+891	march
+892	gudali
+893	rearing
+894	affected
+895	representative
+896	high
+897	due
+898	fatigue
+899	markedly
+900	yaoundé
+901	distress
+902	situation
+903	meat
+904	slaughtered
+905	mbororo
+906	liver
+907	skin
+908	guinea
+909	cattle
+910	flukes
+911	condemned
+912	largest
+913	red
+914	general
+915	strengthen
+916	nodular
+917	pregnant
+918	karbasizaed
+919	vajiheh
+920	tehran
+921	metal
+922	hospital
+923	plasmid
+924	coliforms
+925	isolated
+926	iran
+927	isfahan
+928	infections
+929	antimicrobial
+930	nosocomial
+931	resistance
+932	kelebsiella
+933	clinical
+934	percent
+935	difference
+936	possess
+937	conjugative
+938	pneumoniae
+939	mic
+940	isolates
+941	faeces
+942	identified
+943	inhibitory
+944	tolerant
+945	seventy
+946	coli
+947	strains
+948	escherichia
+949	encoding
+950	minimal
+951	relationship
+952	human
+953	fifteen
+954	multiple
+955	multidrug
+956	recovered
+957	profiles
+958	pattern
+959	persons
+960	antibiotics
+961	concentration
+962	enterobacteriacea
+963	patterns
+964	metals
+965	remaining
+966	cases
+967	valerie
+968	williamson
+969	networked
+970	environments
+971	multi
+972	institutions
+973	implemented
+974	ruled
+975	decide
+976	perverse
+977	sanction
+978	reaching
+979	actors
+980	consensus
+981	agree
+982	sanctions
+983	actor
+984	punishing
+985	difficulty
+986	contributors
+987	problematic
+988	collectively
+989	sanctioning
+990	collective
+991	sanctioned
+992	compare
+993	goverance
+994	cuny
+995	woods
+996	zita
+997	arguments
+998	finocchiaro
 \.
 
 
@@ -10221,292 +10223,265 @@ COPY public.submission_search_keyword_list (keyword_id, keyword_text) FROM stdin
 --
 
 COPY public.submission_search_object_keywords (submission_search_object_keyword_id, object_id, keyword_id, pos) FROM stdin;
-2575	57	257	0
-2576	57	258	1
-2577	57	2	2
-2578	57	256	3
-2579	58	267	0
-2580	58	261	1
-2581	58	263	2
-2582	58	185	3
-2583	58	264	4
-2584	58	265	5
-2585	58	262	6
-2586	58	259	7
-2587	58	266	8
-2588	58	260	9
-2589	59	296	0
-2590	59	262	1
-2591	59	278	2
-2592	59	280	3
-2593	59	276	4
-2594	59	282	5
-2595	59	263	6
-2596	59	270	7
-2597	59	298	8
-2598	59	281	9
-2599	59	289	10
-2600	59	291	11
-2601	59	264	12
-2602	59	294	13
-2603	59	262	14
-2604	59	295	15
-2605	59	267	16
-2606	59	261	17
-2607	59	263	18
-2608	59	185	19
-2609	59	283	20
-2610	59	264	21
-2611	59	271	22
-2612	59	263	23
-2613	59	284	24
-2614	59	274	25
-2615	59	270	26
-2616	59	273	27
-2617	59	288	28
-2618	59	261	29
-2619	59	272	30
-2620	59	279	31
-2621	59	298	32
-2622	59	286	33
-2623	59	156	34
-2624	59	262	35
-2625	59	269	36
-2626	59	290	37
-2627	59	56	38
-2628	59	261	39
-2629	59	270	40
-2630	59	287	41
-2631	59	185	42
-2632	59	263	43
-2633	59	283	44
-2634	59	264	45
-2635	59	277	46
-2636	59	275	47
-2637	59	297	48
-2638	59	293	49
-2639	59	285	50
-2640	59	270	51
-2641	59	292	52
-2642	59	268	53
-2643	59	273	54
-2644	59	288	55
-4539	97	400	0
-4540	97	435	1
-4541	97	436	2
-4542	97	2	3
-4543	98	437	0
-4544	98	438	1
-4545	98	441	2
-4546	98	439	3
-3840	89	400	0
-3841	89	399	1
-3842	89	2	2
-3843	89	398	3
-3844	89	397	4
-3845	90	402	0
-3846	90	405	1
-3847	90	401	2
-3848	90	243	3
-3849	90	403	4
-3850	90	404	5
-3851	90	406	6
-3852	91	409	0
-3853	91	405	1
-3854	91	425	2
-3855	91	401	3
-3856	91	423	4
-3857	91	412	5
-3858	91	427	6
-3859	91	410	7
-3860	91	242	8
-3861	91	404	9
-3862	91	406	10
-3863	91	413	11
-3864	91	431	12
-3865	91	406	13
-3866	91	183	14
-3867	91	426	15
-3868	91	166	16
-3869	91	173	17
-3870	91	419	18
-3871	91	411	19
-3872	91	414	20
-3873	91	407	21
-3874	91	166	22
-3875	91	434	23
-3876	91	430	24
-3877	91	172	25
-3878	91	420	26
-3879	91	415	27
-3880	91	408	28
-3881	91	432	29
-3882	91	428	30
-3883	91	421	31
-3884	91	429	32
-3885	91	418	33
-3886	91	422	34
-3887	91	433	35
-3888	91	430	36
-3889	91	407	37
-3890	91	418	38
-3891	91	417	39
-3892	91	424	40
-3893	91	416	41
-4547	98	440	4
-4548	98	379	5
-4549	98	438	6
-4550	98	430	7
-868	9	101	0
-869	9	102	1
-870	9	2	2
-871	9	100	3
-872	9	161	4
-873	9	162	5
-874	10	109	0
-875	10	108	1
-876	10	105	2
-877	10	106	3
-878	10	107	4
-879	10	110	5
-880	10	104	6
-881	10	103	7
-882	11	111	0
-883	11	112	1
-884	11	113	2
-885	11	114	3
-886	11	115	4
-887	11	116	5
-888	11	117	6
-889	11	118	7
-890	11	119	8
-891	11	84	9
-892	11	120	10
-893	11	121	11
-894	11	122	12
-895	11	123	13
-896	11	108	14
-897	11	105	15
-898	11	124	16
-899	11	125	17
-900	11	126	18
-901	11	127	19
-902	11	128	20
-903	11	129	21
-904	11	130	22
-905	11	131	23
-906	11	132	24
-907	11	133	25
-908	11	134	26
-909	11	135	27
-910	11	136	28
-911	11	137	29
-912	11	136	30
-913	11	138	31
-914	11	139	32
-915	11	136	33
-916	11	140	34
-917	11	141	35
-918	11	142	36
-919	11	143	37
-920	11	132	38
-921	11	144	39
-922	11	136	40
-923	11	137	41
-924	11	145	42
-925	11	104	43
-926	11	103	44
-927	11	141	45
-928	11	142	46
-929	11	146	47
-930	11	115	48
-931	11	147	49
-932	11	146	50
-933	11	148	51
-934	11	149	52
-935	11	150	53
-936	11	151	54
-937	11	152	55
-938	11	153	56
-939	11	129	57
-940	11	154	58
-941	11	77	59
-942	11	105	60
-943	11	155	61
-944	11	151	62
-945	11	156	63
-946	11	120	64
-947	11	157	65
-948	11	158	66
-949	11	159	67
-950	11	160	68
-951	11	123	69
-952	11	108	70
-953	11	105	71
-954	13	115	0
-955	13	114	1
-2126	33	236	0
-2127	33	237	1
-2128	33	235	2
-2129	33	2	3
-2130	34	238	0
-2131	34	240	1
-2132	34	239	2
-2133	34	241	3
-2134	35	243	0
-2135	35	242	1
-2136	35	253	2
-2137	35	238	3
-2138	35	240	4
-2139	35	239	5
-2140	35	241	6
-2141	35	255	7
-2142	35	254	8
-2143	35	238	9
-2144	35	248	10
-2145	35	247	11
-2146	35	239	12
-2147	35	241	13
-2148	35	251	14
-2149	35	250	15
-2150	35	252	16
-2151	35	249	17
-2152	35	244	18
-2153	35	246	19
-2154	35	245	20
-4551	98	442	8
-4552	99	460	0
-4553	99	438	1
-4554	99	441	2
-4555	99	487	3
-4556	99	500	4
-4557	99	453	5
-4558	99	451	6
-4559	99	491	7
-4560	99	438	8
-4561	99	496	9
-4562	99	488	10
-4563	99	500	11
-4564	99	489	12
-4565	99	470	13
-4566	99	447	14
-4567	99	446	15
-4568	99	492	16
-4569	99	498	17
-4570	99	487	18
-4571	99	438	19
-4572	99	430	20
-4573	99	448	21
-4574	99	456	22
-4575	99	473	23
-4576	99	497	24
-4577	99	438	25
-4578	99	481	26
-4579	99	444	27
-4580	99	469	28
-4581	99	464	29
-4582	99	450	30
-4583	99	445	31
+870	9	101	0
+871	9	102	1
+872	9	2	2
+873	9	100	3
+874	9	161	4
+875	9	162	5
+876	10	109	0
+877	10	108	1
+878	10	105	2
+879	10	106	3
+880	10	107	4
+881	10	110	5
+882	10	104	6
+883	10	103	7
+884	11	111	0
+885	11	112	1
+886	11	113	2
+887	11	114	3
+888	11	115	4
+889	11	116	5
+890	11	117	6
+891	11	118	7
+892	11	119	8
+893	11	84	9
+894	11	120	10
+895	11	121	11
+896	11	122	12
+897	11	123	13
+898	11	108	14
+899	11	105	15
+900	11	124	16
+901	11	125	17
+902	11	126	18
+903	11	127	19
+904	11	128	20
+905	11	129	21
+906	11	130	22
+907	11	131	23
+908	11	132	24
+909	11	133	25
+910	11	134	26
+911	11	135	27
+912	11	136	28
+913	11	137	29
+914	11	136	30
+915	11	138	31
+916	11	139	32
+917	11	136	33
+918	11	140	34
+919	11	141	35
+920	11	142	36
+921	11	143	37
+922	11	132	38
+923	11	144	39
+924	11	136	40
+925	11	137	41
+926	11	145	42
+927	11	104	43
+928	11	103	44
+929	11	141	45
+930	11	142	46
+931	11	146	47
+932	11	115	48
+933	11	147	49
+934	11	146	50
+935	11	148	51
+936	11	149	52
+937	11	150	53
+938	11	151	54
+939	11	152	55
+940	11	153	56
+941	11	129	57
+942	11	154	58
+943	11	77	59
+944	11	105	60
+945	11	155	61
+946	11	151	62
+947	11	156	63
+948	11	120	64
+949	11	157	65
+950	11	158	66
+951	11	159	67
+952	11	160	68
+953	11	123	69
+954	11	108	70
+955	11	105	71
+956	13	115	0
+957	13	114	1
+2128	33	238	0
+2129	33	239	1
+2130	33	237	2
+2131	33	2	3
+2132	34	240	0
+2133	34	242	1
+2134	34	241	2
+2135	34	243	3
+2136	35	245	0
+2137	35	244	1
+2138	35	255	2
+2139	35	240	3
+2140	35	242	4
+2141	35	241	5
+2142	35	243	6
+2143	35	257	7
+2144	35	256	8
+2145	35	240	9
+2146	35	250	10
+2147	35	249	11
+2148	35	241	12
+2149	35	243	13
+2150	35	253	14
+2151	35	252	15
+2152	35	254	16
+2153	35	251	17
+2154	35	246	18
+2155	35	248	19
+2156	35	247	20
+3564	81	392	0
+3565	81	394	1
+3566	81	2	2
+3567	81	393	3
+3568	82	397	0
+3569	82	395	1
+3570	82	396	2
+3571	82	398	3
+10673	161	967	0
+10674	161	968	1
+10675	161	2	2
+10676	161	100	3
+10677	162	118	0
+10678	162	971	1
+10679	162	211	2
+10680	162	972	3
+10681	162	969	4
+10682	162	970	5
+10683	163	992	0
+10684	163	518	1
+10685	163	979	2
+10686	163	130	3
+10687	163	975	4
+10688	163	977	5
+10689	163	518	6
+10690	163	982	7
+10691	163	973	8
+10692	163	979	9
+10693	163	988	10
+10694	163	981	11
+10695	163	983	12
+10696	163	991	13
+10697	163	990	14
+10698	163	989	15
+10699	163	420	16
+10700	163	987	17
+10701	163	897	18
+10702	163	985	19
+10703	163	978	20
+10704	163	980	21
+10705	163	324	22
+10706	163	811	23
+10707	163	988	24
+10708	163	976	25
+10709	163	989	26
+10710	163	984	27
+10711	163	896	28
+10712	163	986	29
+10713	163	737	30
+10714	163	979	31
+10715	163	974	32
+10716	163	990	33
+10717	163	989	34
+10718	163	420	35
+10719	163	51	36
+10720	163	93	37
+10721	165	118	0
+10722	165	971	1
+10723	165	211	2
+10724	165	972	3
+10725	165	993	4
+3067	65	301	0
+3068	65	302	1
+3069	65	2	2
+3070	65	304	3
+3071	65	303	4
+3072	66	305	0
+3073	66	306	1
+3074	66	272	2
+3075	66	225	3
+3076	67	228	0
+3077	67	215	1
+3078	67	177	2
+3079	67	340	3
+3080	67	337	4
+3081	67	307	5
+3082	67	196	6
+3083	67	342	7
+3084	67	330	8
+3085	67	323	9
+3086	67	347	10
+3087	67	347	11
+3088	67	344	12
+3089	67	326	13
+3090	67	314	14
+3091	67	227	15
+3092	67	319	16
+3093	67	329	17
+3094	67	346	18
+3095	67	306	19
+3096	67	272	20
+3097	67	283	21
+3098	67	312	22
+3099	67	317	23
+3100	67	186	24
+3101	67	341	25
+3102	67	155	26
+3103	67	151	27
+3104	67	315	28
+3105	67	334	29
+3106	67	325	30
+3107	67	158	31
+3108	67	336	32
+3109	67	333	33
+3110	67	335	34
+3111	67	332	35
+3112	67	308	36
+3113	67	306	37
+3114	67	217	38
+3115	67	289	39
+3116	67	155	40
+3117	67	313	41
+3118	67	339	42
+3119	67	343	43
+3120	67	309	44
+3121	67	310	45
+3122	67	337	46
+3123	67	322	47
+3124	67	318	48
+3125	67	140	49
+3126	67	217	50
+3127	67	320	51
+3128	67	309	52
+3129	67	331	53
+3130	67	22	54
+3131	67	306	55
+3132	67	217	56
+3133	67	321	57
+3134	67	284	58
+3135	67	311	59
+3136	67	337	60
+5091	105	543	5
+5092	105	505	6
+5093	105	2	7
+5094	106	217	0
+5095	106	506	1
+5096	106	507	2
+5097	106	508	3
+5098	107	511	0
+5099	107	519	1
+5100	107	506	2
+5101	107	209	3
 287	1	4	0
 288	1	3	1
 289	1	2	2
@@ -10629,6 +10604,8 @@ COPY public.submission_search_object_keywords (submission_search_object_keyword_
 406	3	74	109
 407	3	54	110
 408	3	11	111
+5102	107	524	4
+5103	107	528	5
 409	3	85	112
 410	3	97	113
 411	3	99	114
@@ -10650,1375 +10627,1400 @@ COPY public.submission_search_object_keywords (submission_search_object_keyword_
 427	3	37	130
 428	3	73	131
 429	3	38	132
-4584	99	483	32
-4585	99	322	33
-4586	99	140	34
-4587	99	457	35
-4588	99	487	36
-4589	99	500	37
-4590	99	478	38
-4591	99	487	39
-4592	99	499	40
-4593	99	449	41
-4594	99	472	42
-4595	99	254	43
-4596	99	482	44
-4597	99	254	45
-4598	99	463	46
-4599	99	443	47
-4600	99	462	48
-4601	99	458	49
-4602	99	469	50
-4603	99	440	51
-4604	99	438	52
-4605	99	430	53
-4606	99	442	54
-4607	99	495	55
-4608	99	334	56
-4609	99	303	57
-4610	99	484	58
-4611	99	479	59
-4612	99	476	60
-4613	99	459	61
-4614	99	500	62
-4615	99	497	63
-4616	99	465	64
-4617	99	438	65
-4618	99	496	66
-4619	99	480	67
-4620	99	444	68
-4621	99	455	69
-4622	99	468	70
-4623	99	475	71
-4624	99	479	72
-4625	99	494	73
-4626	99	466	74
-4627	99	478	75
-4628	99	471	76
-4629	99	452	77
-4630	99	476	78
-4631	99	500	79
-4632	99	22	80
-4633	99	438	81
-4634	99	496	82
-4635	99	448	83
-4636	99	485	84
-4637	99	467	85
-4638	99	468	86
-4639	99	475	87
-4640	99	474	88
-4641	99	458	89
-4642	99	479	90
-4643	99	477	91
-4644	99	484	92
-4645	99	479	93
-4646	99	495	94
-4647	99	451	95
-4648	99	493	96
-4649	99	484	97
-4650	99	474	98
-4651	99	490	99
-4652	99	448	100
-4653	99	461	101
-4654	99	459	102
-4655	99	500	103
-4656	99	486	104
-4657	99	454	105
-4658	99	460	106
-4659	99	438	107
-4660	99	441	108
-4661	99	487	109
-8763	137	780	0
-8764	137	781	1
-8765	137	2	2
-8766	137	779	3
-8767	138	783	0
-8768	138	784	1
-8769	138	430	2
-8770	138	782	3
-8771	139	243	0
-8772	139	785	1
-8773	139	784	2
-8774	139	783	3
-8775	139	430	4
-8776	139	224	5
-8777	139	192	6
-8778	139	802	7
-8779	139	808	8
-8780	139	782	9
-8781	139	813	10
-8782	139	827	11
-8783	139	784	12
-8784	139	334	13
-8785	139	807	14
-8786	139	801	15
-8787	139	268	16
-8788	139	826	17
-8789	139	813	18
-8790	139	784	19
-8791	139	783	20
-8792	139	825	21
-8793	139	833	22
-8794	139	790	23
-8795	139	819	24
-8796	139	791	25
-8797	139	63	26
-8798	139	812	27
-8799	139	14	28
-3562	81	390	0
-3563	81	392	1
-3564	81	2	2
-3565	81	391	3
-3566	82	395	0
-3567	82	393	1
-3568	82	394	2
-3569	82	396	3
-4662	99	500	110
-4663	99	479	111
-4664	99	490	112
-4665	99	448	113
-4666	99	485	114
-4667	101	438	0
-8800	139	818	29
-8801	139	819	30
-8802	139	803	31
-8803	139	827	32
-8804	139	784	33
-8805	139	783	34
-8806	139	14	35
-8807	139	818	36
-8808	139	812	37
-8809	139	80	38
-3065	65	299	0
-3066	65	300	1
-3067	65	2	2
-3068	65	302	3
-3069	65	301	4
-3070	66	303	0
-3071	66	304	1
-3072	66	270	2
-3073	66	223	3
-3074	67	226	0
-3075	67	213	1
-3076	67	175	2
-3077	67	338	3
-3078	67	335	4
-3079	67	305	5
-3080	67	194	6
-3081	67	340	7
-3082	67	328	8
-3083	67	321	9
-3084	67	345	10
-3085	67	345	11
-3086	67	342	12
-3087	67	324	13
-3088	67	312	14
-3089	67	225	15
-3090	67	317	16
-3091	67	327	17
-3092	67	344	18
-3093	67	304	19
-3094	67	270	20
-3095	67	281	21
-3096	67	310	22
-3097	67	315	23
-3098	67	184	24
-3099	67	339	25
-3100	67	155	26
-3101	67	151	27
-3102	67	313	28
-3103	67	332	29
-3104	67	323	30
-3105	67	158	31
-3106	67	334	32
-3107	67	331	33
-3108	67	333	34
-3109	67	330	35
-3110	67	306	36
-3111	67	304	37
-3112	67	215	38
-3113	67	287	39
-3114	67	155	40
-3115	67	311	41
-3116	67	337	42
-3117	67	341	43
-3118	67	307	44
-3119	67	308	45
-3120	67	335	46
-3121	67	320	47
-3122	67	316	48
-3123	67	140	49
-3124	67	215	50
-3125	67	318	51
-3126	67	307	52
-3127	67	329	53
-3128	67	22	54
-3129	67	304	55
-3130	67	215	56
-3131	67	319	57
-3132	67	282	58
-3133	67	309	59
-3134	67	335	60
-3135	67	322	61
-3136	67	314	62
-3137	67	343	63
-3138	67	332	64
-3139	67	325	65
-3140	67	173	66
-3141	67	336	67
-3142	67	304	68
-3143	67	326	69
-3144	67	310	70
-3145	67	223	71
-3146	67	255	72
-3147	69	175	0
-3148	69	346	1
-8810	139	830	39
-8811	139	9	40
-8812	139	821	41
-8813	139	798	42
-8814	139	811	43
-8815	139	787	44
-8816	139	823	45
-8817	139	791	46
-8818	139	835	47
-8819	139	812	48
-8820	139	430	49
-8821	139	224	50
-8822	139	816	51
-8823	139	804	52
-8824	139	802	53
-8825	139	813	54
-8826	139	784	55
-8827	139	820	56
-8828	139	814	57
-8829	139	786	58
-8830	139	792	59
-8831	139	834	60
-8832	139	560	61
-8833	139	805	62
-8834	139	788	63
-8835	139	810	64
-8836	139	814	65
-8837	139	829	66
-8838	139	817	67
-8839	139	829	68
-8840	139	827	69
-8841	139	784	70
-8842	139	797	71
-8843	139	800	72
-8844	139	832	73
-8845	139	809	74
-8846	139	14	75
-8847	139	837	76
-8848	139	796	77
-8849	139	789	78
-8850	139	827	79
-8851	139	795	80
-8852	139	709	81
-8853	139	783	82
-8854	139	787	83
-8855	139	793	84
-8856	139	828	85
-8857	139	827	86
-8858	139	806	87
-8859	139	794	88
-8860	139	783	89
-8861	139	787	90
-8862	139	822	91
-8863	139	799	92
-8864	139	553	93
-8865	139	831	94
-8866	139	836	95
-8867	139	29	96
-8868	139	815	97
-8869	139	824	98
-5084	105	501	0
-5085	105	502	1
-5086	105	503	2
-5087	105	2	3
-5088	105	542	4
-5089	105	541	5
-5090	105	503	6
-5091	105	2	7
-5092	106	215	0
-5093	106	504	1
-5094	106	505	2
-5095	106	506	3
-5096	107	509	0
-5097	107	517	1
-5098	107	504	2
-5099	107	207	3
-5100	107	522	4
-5101	107	526	5
-5102	107	515	6
-5103	107	248	7
-5104	107	175	8
-5105	107	518	9
-5106	107	507	10
-5107	107	513	11
-5108	107	506	12
-5109	107	215	13
-5110	107	537	14
-5111	107	332	15
-5112	107	506	16
-5113	107	521	17
-5114	107	516	18
-5115	107	533	19
-5116	107	527	20
-5117	107	523	21
-5118	107	535	22
-5119	107	504	23
-5120	107	505	24
-5121	107	412	25
-5122	107	519	26
-5123	107	511	27
-5124	107	474	28
-5125	107	506	29
-5126	107	215	30
-5127	107	535	31
-5128	107	504	32
-5129	107	505	33
-1956	25	164	0
-1957	25	163	1
-1958	25	2	2
-1959	25	165	3
-1960	25	232	4
-1961	25	233	5
-1962	25	2	6
-1963	25	234	7
-1964	26	169	0
-1965	26	168	1
-1966	26	167	2
-1967	26	172	3
-1968	26	170	4
-1969	26	173	5
-1970	26	166	6
-1971	26	171	7
-1972	27	193	0
-1973	27	222	1
-1974	27	223	2
-1975	27	226	3
-1976	27	183	4
-1977	27	175	5
-1978	27	221	6
-1979	27	120	7
-1980	27	181	8
-1981	27	197	9
-1982	27	222	10
-1983	27	194	11
-1984	27	203	12
-1985	27	200	13
-1986	27	174	14
-1987	27	209	15
-1988	27	188	16
-1989	27	191	17
-1990	27	165	18
-1991	27	178	19
-1992	27	187	20
-1993	27	214	21
-1994	27	204	22
-1995	27	190	23
-1996	27	227	24
-1997	27	210	25
-1998	27	199	26
-1999	27	137	27
-2000	27	222	28
-2001	27	204	29
-2002	27	177	30
-2003	27	195	31
-2004	27	217	32
-2005	27	180	33
-2006	27	203	34
-2007	27	211	35
-2008	27	228	36
-2009	27	222	37
-2010	27	165	38
-2011	27	215	39
-2012	27	170	40
-2013	27	185	41
-2014	27	196	42
-2015	27	204	43
-2016	27	184	44
-2017	27	189	45
-2018	27	186	46
-2019	27	198	47
-2020	27	207	48
-2021	27	224	49
-2022	27	206	50
-2023	27	216	51
-2024	27	219	52
-2025	27	170	53
-2026	27	169	54
-2027	27	194	55
-2028	27	229	56
-2029	27	213	57
-2030	27	225	58
-2031	27	179	59
-2032	27	212	60
-2033	27	201	61
-2034	27	114	62
-2035	27	202	63
-2036	27	218	64
-2037	27	184	65
-2038	27	189	66
-2039	27	191	67
-2040	27	165	68
-2041	27	176	69
-2042	27	182	70
-2043	27	230	71
-2044	27	169	72
-2045	27	194	73
-2046	27	184	74
-2047	27	189	75
-2048	27	220	76
-2049	27	205	77
-2050	27	208	78
-2051	27	170	79
-2052	27	140	80
-2053	27	224	81
-2054	27	192	82
-2055	27	192	83
-2056	27	170	84
-2057	29	231	0
-2058	29	222	1
-2059	29	169	2
-2060	29	194	3
-2061	29	114	4
-2062	29	165	5
-2063	29	120	6
-2064	29	181	7
-2065	29	198	8
-2066	29	207	9
-2067	29	115	10
-10299	153	917	0
-10300	153	916	1
-10301	153	2	2
-10302	153	918	3
-10303	154	927	0
-10304	154	50	1
-10305	154	919	2
-10306	154	929	3
-10307	154	921	4
-10308	154	596	5
-10309	154	922	6
-10310	154	923	7
-10311	154	928	8
-10312	154	926	9
-10313	154	920	10
-10314	154	925	11
-10315	154	924	12
-10316	155	927	0
-10317	155	50	1
-10318	155	919	2
-10319	155	929	3
-10320	155	961	4
-10321	155	921	5
-10322	155	955	6
-10323	155	922	7
-10324	155	960	8
-10325	155	923	9
-10326	155	928	10
-10327	155	926	11
-10328	155	560	12
-10329	155	950	13
-10330	155	939	14
-10331	155	131	15
-10332	155	951	16
-10333	155	938	17
-10334	155	928	18
-10335	155	926	19
-10336	155	940	20
-10337	155	946	21
-10338	155	944	22
-10339	155	963	23
-10340	155	930	24
-10341	155	936	25
-10342	155	943	26
-10343	155	932	27
-10344	155	945	28
-10345	155	923	29
-10346	155	928	30
-10347	155	926	31
-10348	155	934	32
-10349	155	952	33
-10350	155	929	34
-10351	155	958	35
-10352	155	131	36
-10353	155	945	37
-10354	155	560	38
-10355	155	950	39
-10356	155	939	40
-10357	155	933	41
-10358	155	948	42
-3459	73	349	0
-3460	73	347	1
-3461	73	348	2
-3462	73	2	3
-3463	73	388	4
-3464	73	387	5
-3465	73	389	6
-3466	73	348	7
-3467	73	2	8
-3468	74	303	0
-3469	74	304	1
-3470	74	270	2
-3471	74	223	3
-3472	75	110	0
-3473	75	372	1
-3474	75	376	2
-3475	75	378	3
-3476	75	350	4
-3477	75	83	5
-3478	75	207	6
-3479	75	381	7
-3480	75	353	8
-3481	75	354	9
-3482	75	360	10
-3483	75	363	11
-3484	75	371	12
-3485	75	55	13
-3486	75	379	14
-3487	75	359	15
-3488	75	351	16
-3489	75	380	17
-3490	75	368	18
-3491	75	373	19
-3492	75	355	20
-3493	75	367	21
-3494	75	352	22
-3495	75	358	23
-3496	75	369	24
-3497	75	377	25
-3498	75	55	26
-3499	75	379	27
-3500	75	372	28
-3501	75	356	29
-3502	75	370	30
-3503	75	362	31
-3504	75	361	32
-3505	75	321	33
-3506	75	366	34
-3507	75	360	35
-3508	75	363	36
-3509	75	364	37
-3510	75	374	38
-3511	75	365	39
-3512	75	51	40
-3513	75	357	41
-3514	75	375	42
-3515	77	274	0
-3516	77	384	1
-3517	77	386	2
-3518	77	274	3
-3519	77	383	4
-3520	77	385	5
-3521	77	382	6
-5130	107	486	34
-5131	107	508	35
-5132	107	503	36
-5133	107	512	37
-5134	107	519	38
-5135	107	504	39
-5136	107	375	40
-5137	107	474	41
-5138	107	529	42
-5139	107	525	43
-5140	107	510	44
-5141	107	539	45
-5142	107	534	46
-5143	107	538	47
-5144	107	531	48
-5145	107	520	49
-5146	107	486	50
-5147	107	505	51
-5148	107	540	52
-5149	107	524	53
-5150	107	539	54
-5151	107	534	55
-5152	107	474	56
-5153	107	514	57
-5154	107	528	58
-5155	107	530	59
-5156	107	532	60
-5157	107	255	61
-5158	107	412	62
-5159	107	536	63
-5160	107	446	64
-5161	107	474	65
-5162	109	207	0
-5163	109	248	1
-5164	109	175	2
-5165	109	506	3
-5166	109	215	4
-5167	109	517	5
-10359	155	941	43
-10360	155	959	44
-10361	155	937	45
-10362	155	18	46
-10363	155	945	47
-10364	155	931	48
-10365	155	964	49
-10366	155	939	50
-10367	155	50	51
-10368	155	962	52
-10369	155	39	53
-10370	155	945	54
-10371	155	923	55
-10372	155	920	56
-10373	155	942	57
-10374	155	50	58
-10375	155	919	59
-10376	155	560	60
-10377	155	957	61
-10378	155	149	62
-10379	155	949	63
-10380	155	921	64
-10381	155	596	65
-10382	155	93	66
-10383	155	927	67
-10384	155	929	68
-10385	155	956	69
-10386	155	935	70
-10387	155	921	71
-10388	155	947	72
-10389	155	929	73
-10390	155	50	74
-10391	155	962	75
-10392	155	958	76
-10393	155	954	77
-10394	155	945	78
-10395	155	923	79
-10396	155	928	80
-10397	155	926	81
-10398	155	212	82
-10399	155	953	83
-10400	155	929	84
-10401	155	922	85
-10402	155	420	86
-10403	155	928	87
-10404	155	828	88
-10405	155	365	89
-10671	161	965	0
-10672	161	966	1
-10673	161	2	2
-10674	161	100	3
-10675	162	118	0
-10676	162	969	1
-10677	162	209	2
-10678	162	970	3
-10679	162	967	4
-10680	162	968	5
-10681	163	990	0
-10682	163	516	1
-10683	163	977	2
-10684	163	130	3
-10685	163	973	4
-10686	163	975	5
-10687	163	516	6
-10688	163	980	7
-10689	163	971	8
-10690	163	977	9
-10691	163	986	10
-10692	163	979	11
-10693	163	981	12
-10694	163	989	13
-10695	163	988	14
-10696	163	987	15
-10697	163	418	16
-10698	163	985	17
-10699	163	895	18
-10700	163	983	19
-10701	163	976	20
-10702	163	978	21
-10703	163	322	22
-10704	163	809	23
-10705	163	986	24
-10706	163	974	25
-10707	163	987	26
-10708	163	982	27
-10709	163	894	28
-10710	163	984	29
-10711	163	735	30
-10712	163	977	31
-10713	163	972	32
-10714	163	988	33
-10715	163	987	34
-10716	163	418	35
-10717	163	51	36
-10718	163	93	37
-10719	165	118	0
-10720	165	969	1
-10721	165	209	2
-10722	165	970	3
-10723	165	991	4
-7286	121	625	0
-7287	121	626	1
-7288	121	2	2
-7289	121	398	3
-7290	121	397	4
-7291	122	627	0
-7292	122	634	1
-7293	122	631	2
-7294	122	632	3
-7295	122	628	4
-7296	122	629	5
-7297	122	635	6
-7298	122	630	7
-7299	122	635	8
-7300	122	633	9
-7301	122	636	10
-7302	123	631	0
-7303	123	632	1
-7304	123	679	2
-7305	123	710	3
-7306	123	438	4
-7307	123	673	5
-7308	123	671	6
-7309	123	711	7
-7310	123	460	8
-7311	123	700	9
-7312	123	226	10
-7313	123	635	11
-7314	123	303	12
-7315	123	685	13
-7316	123	709	14
-7317	123	650	15
-7318	123	655	16
-7319	123	708	17
-7320	123	657	18
-7321	123	628	19
-7322	123	629	20
-7323	123	635	21
-7324	123	675	22
-7325	123	698	23
-7326	123	681	24
-7327	123	683	25
-7328	123	627	26
-7329	123	666	27
-7330	123	628	28
-7331	123	637	29
-7332	123	630	30
-7333	123	635	31
-7334	123	716	32
-7335	123	631	33
-7336	123	632	34
-7337	123	633	35
-7338	123	636	36
-7339	123	513	37
-7340	123	675	38
-7341	123	438	39
-7342	123	209	40
-7343	123	112	41
-7344	123	694	42
-7345	123	690	43
-7346	123	680	44
-7347	123	110	45
-7348	123	313	46
-7349	123	133	47
-7350	123	699	48
-7351	123	209	49
-7352	123	112	50
-7353	123	699	51
-7354	123	666	52
-7355	123	704	53
-7356	123	687	54
-7357	123	674	55
-7358	123	670	56
-7359	123	666	57
-7360	123	653	58
-7361	123	664	59
-7362	123	695	60
-7363	123	448	61
-7364	123	682	62
-7365	123	640	63
-7366	123	627	64
-7367	123	636	65
-7368	123	133	66
-7369	123	112	67
-7370	123	617	68
-7371	123	633	69
-7372	123	425	70
-7373	123	699	71
-7374	123	666	72
-7375	123	665	73
-7376	123	645	74
-7377	123	692	75
-7378	123	684	76
-7379	123	716	77
-7380	123	575	78
-7381	123	420	79
-7382	123	699	80
-7383	123	647	81
-7384	123	381	82
-7385	123	628	83
-7386	123	629	84
-7387	123	635	85
-7388	123	630	86
-7389	123	635	87
-7390	123	226	88
-7391	123	697	89
-7392	123	173	90
-7393	123	649	91
-7394	123	430	92
-7395	123	441	93
-7396	123	699	94
-7397	123	631	95
-7398	123	632	96
-7399	123	661	97
-7400	123	713	98
-7401	123	715	99
-7402	123	474	100
-7403	123	156	101
-7404	123	651	102
-7405	123	643	103
-7406	123	381	104
-7407	123	628	105
-7408	123	629	106
-7409	123	630	107
-7410	123	635	108
-7411	123	633	109
-7412	123	636	110
-7413	123	699	111
-7414	123	666	112
-7415	123	667	113
-7416	123	714	114
-7417	123	689	115
-7418	123	653	116
-7419	123	664	117
-7420	123	695	118
-7421	123	448	119
-7422	123	667	120
-7423	123	718	121
-7424	123	701	122
-7425	123	702	123
-7426	123	689	124
-7427	123	646	125
-7428	123	707	126
-7429	123	687	127
-7430	123	672	128
-7431	123	656	129
-7432	123	112	130
-7433	123	494	131
-7434	123	703	132
-7435	123	717	133
-7436	123	638	134
-7437	123	642	135
-7438	123	674	136
-7439	123	628	137
-7440	123	629	138
-7441	123	635	139
-7442	123	672	140
-7443	123	686	141
-7444	123	556	142
-7445	123	633	143
-7446	123	633	144
-7447	123	702	145
-7448	123	672	146
-7449	123	630	147
-7450	123	635	148
-7451	123	642	149
-7452	123	674	150
-7453	123	706	151
-7454	123	40	152
-7455	123	648	153
-7456	123	644	154
-7457	123	556	155
-7458	123	633	156
-7459	123	633	157
-7460	123	702	158
-7461	123	700	159
-7462	123	123	160
-7463	123	712	161
-7464	123	641	162
-7465	123	642	163
-7466	123	691	164
-7467	123	639	165
-7468	123	438	166
-7469	123	209	167
-7470	123	176	168
-7471	123	672	169
-7472	123	652	170
-7473	123	662	171
-7474	123	693	172
-7475	123	677	173
-7476	123	660	174
-7477	123	654	175
-7478	123	632	176
-7479	123	712	177
-7480	123	8	178
-7481	123	84	179
-7482	123	627	180
-7483	123	688	181
-7484	123	628	182
-7485	123	629	183
-7486	123	630	184
-7487	123	635	185
-7488	123	669	186
-7489	123	659	187
-7490	123	83	188
-7491	123	676	189
-7492	123	438	190
-7493	123	678	191
-7494	123	672	192
-7495	123	656	193
-7496	123	37	194
-7497	123	668	195
-7498	123	658	196
-7499	123	699	197
-7500	123	209	198
-7501	123	705	199
-7502	123	690	200
-7503	123	628	201
-7504	123	629	202
-7505	123	635	203
-7506	123	656	204
-7507	123	483	205
-7508	123	112	206
-7509	123	412	207
-7510	123	680	208
-7511	123	696	209
-7512	123	663	210
-7513	125	438	0
-10740	169	994	0
-10741	169	993	1
-10742	169	992	2
-10743	170	996	0
-10744	170	995	1
-10745	170	995	2
-10746	173	175	0
-10747	173	346	1
-5983	113	545	0
-5984	113	544	1
-5985	113	543	2
-5986	113	120	3
-5987	113	2	4
-5988	114	552	0
-5989	114	547	1
-5990	114	549	2
-5991	114	83	3
-5992	114	551	4
-5993	114	550	5
-5994	114	548	6
-5995	114	29	7
-5996	114	546	8
-5997	115	595	0
-5998	115	110	1
-5999	115	558	2
-6000	115	8	3
-6001	115	371	4
-6002	115	618	5
-6003	115	46	6
-6004	115	602	7
-6005	115	30	8
-6006	115	12	9
-6007	115	596	10
-6008	115	50	11
-6009	115	19	12
-6010	115	564	13
-6011	115	610	14
-6012	115	599	15
-6013	115	450	16
-6014	115	598	17
-6015	115	89	18
-6016	115	571	19
-6017	115	603	20
-6018	115	561	21
-6019	115	581	22
-6020	115	568	23
-6021	115	88	24
-6022	115	578	25
-6023	115	622	26
-6024	115	585	27
-6025	115	601	28
-6026	115	566	29
-6027	115	601	30
-6028	115	612	31
-6029	115	554	32
-6030	115	95	33
-6031	115	615	34
-6032	115	587	35
-6033	115	600	36
-6034	115	594	37
-6035	115	617	38
-6036	115	619	39
-6037	115	582	40
-6038	115	557	41
-6039	115	593	42
-6040	115	30	43
-6041	115	12	44
-6042	115	26	45
-6043	115	600	46
-6044	115	562	47
-6045	115	555	48
-6046	115	30	49
-6047	115	12	50
-6048	115	26	51
-6049	115	578	52
-6050	115	612	53
-6051	115	600	54
-6052	115	74	55
-6053	115	95	56
-6054	115	620	57
-6055	115	573	58
-6056	115	30	59
-6057	115	12	60
-6058	115	597	61
-6059	115	586	62
-6060	115	95	63
-6061	115	620	64
-6062	115	597	65
-6063	115	576	66
-6064	115	30	67
-6065	115	12	68
-6066	115	559	69
-6067	115	563	70
-6068	115	565	71
-6069	115	30	72
-6070	115	12	73
-6071	115	567	74
-6072	115	597	75
-6073	115	95	76
-6074	115	620	77
-6075	115	597	78
-6076	115	574	79
-6077	115	12	80
-6078	115	584	81
-6079	115	569	82
-6080	115	605	83
-6081	115	12	84
-6082	115	589	85
-6083	115	557	86
-6084	115	160	87
-6085	115	590	88
-6086	115	12	89
-6087	115	556	90
-6088	115	577	91
-6089	115	600	92
-6090	115	575	93
-6091	115	23	94
-6092	115	556	95
-6093	115	77	96
-6094	115	584	97
-6095	115	616	98
-6096	115	613	99
-6097	115	606	100
-6098	115	14	101
-6099	115	604	102
-6100	115	82	103
-6101	115	611	104
-6102	115	591	105
-6103	115	621	106
-6104	115	592	107
-6105	115	600	108
-6106	115	610	109
-6107	115	572	110
-6108	115	40	111
-6109	115	579	112
-6110	115	212	113
-6111	115	607	114
-6112	115	371	115
-6113	115	618	116
-6114	115	608	117
-6115	115	602	118
-6116	115	612	119
-6117	115	30	120
-6118	115	12	121
-6119	115	596	122
-6120	115	50	123
-6121	115	19	124
-6122	115	564	125
-6123	115	610	126
-6124	115	602	127
-6125	115	566	128
-6126	115	601	129
-6127	115	553	130
-6128	115	614	131
-6129	115	560	132
-6130	115	30	133
-6131	115	580	134
-6132	115	19	135
-6133	115	46	136
-6134	115	247	137
-6135	115	570	138
-6136	115	7	139
-6137	115	22	140
-6138	115	583	141
-6139	115	7	142
-6140	115	46	143
-6141	115	609	144
-6142	115	588	145
-6143	117	74	0
-6144	117	623	1
-6145	117	624	2
-9615	145	840	0
-9616	145	839	1
-9617	145	838	2
-9618	145	2	3
-9619	146	8	0
-9620	146	371	1
-9621	146	618	2
-9622	146	841	3
-9623	146	608	4
-9624	146	612	5
-9625	146	30	6
-9626	146	12	7
-9627	146	26	8
-9628	146	50	9
-9629	146	74	10
-9630	146	600	11
-9631	147	595	0
-9632	147	155	1
-9633	147	483	2
-9634	147	912	3
-9635	147	900	4
-9636	147	907	5
-9637	147	902	6
-9638	147	870	7
-9639	147	893	8
-9640	147	711	9
-9641	147	861	10
-9642	147	365	11
-9643	147	7	12
-9644	147	886	13
-9645	147	846	14
-9646	147	863	15
-9647	147	898	16
-9648	147	910	17
-9649	147	870	18
-9650	147	819	19
-9651	147	882	20
-9652	147	889	21
-9653	147	849	22
-9654	147	587	23
-9655	147	636	24
-9656	147	868	25
-9657	147	907	26
-9658	147	873	27
-9659	147	883	28
-9660	147	848	29
-9661	147	843	30
-9662	147	587	31
-9663	147	873	32
-9664	147	476	33
-9665	147	844	34
-9666	147	880	35
-9667	147	902	36
-9668	147	7	37
-9669	147	91	38
-9670	147	26	39
-9671	147	848	40
-9672	147	843	41
-9673	147	740	42
-9674	147	871	43
-9675	147	907	44
-9676	147	906	45
-9677	147	894	46
-9678	147	847	47
-9679	147	879	48
-9680	147	274	49
-9681	147	5	50
-9682	147	500	51
-9683	147	890	52
-9684	147	598	53
-9685	147	855	54
-9686	147	911	55
-9687	147	903	56
-9688	147	869	57
-9689	147	872	58
-9690	147	874	59
-9691	147	45	60
-9692	147	892	61
-9693	147	891	62
-9694	147	500	63
-9695	147	907	64
-9696	147	856	65
-9697	147	897	66
-9698	147	876	67
-9699	147	824	68
-9700	147	901	69
-9701	147	7	70
-9702	147	46	71
-9703	147	597	72
-9704	147	717	73
-9705	147	877	74
-9706	147	869	75
-9707	147	890	76
-9708	147	85	77
-9709	147	862	78
-9710	147	901	79
-9711	147	853	80
-9712	147	902	81
-9713	147	915	82
-9714	147	274	83
-9715	147	884	84
-9716	147	636	85
-9717	147	851	86
-9718	147	854	87
-9719	147	896	88
-9720	147	866	89
-9721	147	793	90
-9722	147	905	91
-9723	147	860	92
-9724	147	865	93
-9725	147	875	94
-9726	147	858	95
-9727	147	885	96
-9728	147	899	97
-9729	147	914	98
-9730	147	860	99
-9731	147	873	100
-9732	147	845	101
-9733	147	909	102
-9734	147	904	103
-9735	147	908	104
-9736	147	857	105
-9737	147	909	106
-9738	147	895	107
-9739	147	852	108
-9740	147	892	109
-9741	147	842	110
-9742	147	112	111
-9743	147	867	112
-9744	147	859	113
-9745	147	864	114
-9746	147	878	115
-9747	147	595	116
-9748	147	913	117
-9749	147	907	118
-9750	147	5	119
-9751	147	887	120
-9752	147	846	121
-9753	147	673	122
-9754	147	52	123
-9755	147	888	124
-9756	147	94	125
-9757	147	784	126
-9758	147	881	127
-9759	147	489	128
-9760	147	850	129
-9761	149	907	0
-9762	149	623	1
-9763	149	624	2
-8109	129	720	0
-8110	129	721	1
-8111	129	2	2
-8112	129	719	3
-8113	130	727	0
-8114	130	722	1
-8115	130	204	2
-8116	130	723	3
-8117	130	110	4
-8118	130	724	5
-8119	130	725	6
-8120	130	726	7
-8121	131	530	0
-8122	131	750	1
-8123	131	764	2
-8124	131	763	3
-8125	131	748	4
-8126	131	765	5
-8127	131	759	6
-8128	131	175	7
-8129	131	732	8
-8130	131	728	9
-8131	131	342	10
-8132	131	532	11
-8133	131	285	12
-8134	131	33	13
-8135	131	738	14
-8136	131	121	15
-8137	131	766	16
-8138	131	723	17
-8139	131	110	18
-8140	131	758	19
-8141	131	724	20
-8142	131	725	21
-8143	131	726	22
-8144	131	775	23
-8145	131	739	24
-8146	131	365	25
-8147	131	760	26
-8148	131	761	27
-8149	131	2	28
-8150	131	736	29
-8151	131	778	30
-8152	131	207	31
-8153	131	744	32
-8154	131	747	33
-8155	131	737	34
-8156	131	155	35
-8157	131	740	36
-8158	131	2	37
-8159	131	769	38
-8160	131	203	39
-8161	131	768	40
-8162	131	777	41
-8163	131	722	42
-8164	131	204	43
-8165	131	224	44
-8166	131	734	45
-8167	131	474	46
-8168	131	33	47
-8169	131	733	48
-8170	131	474	49
-8171	131	761	50
-8172	131	251	51
-8173	131	741	52
-8174	131	204	53
-8175	131	755	54
-8176	131	745	55
-8177	131	742	56
-8178	131	735	57
-8179	131	776	58
-8180	131	772	59
-8181	131	756	60
-8182	131	135	61
-8183	131	762	62
-8184	131	207	63
-8185	131	722	64
-8186	131	204	65
-8187	131	751	66
-8188	131	2	67
-8189	131	562	68
-8190	131	771	69
-8191	131	730	70
-8192	131	776	71
-8193	131	679	72
-8194	131	757	73
-8195	131	773	74
-8196	131	767	75
-8197	131	731	76
-8198	131	365	77
-8199	131	753	78
-8200	131	729	79
-8201	131	749	80
-8202	131	2	81
-8203	131	155	82
-8204	131	746	83
-8205	131	770	84
-8206	131	737	85
-8207	131	754	86
-8208	131	33	87
-8209	131	743	88
-8210	131	744	89
-8211	131	752	90
-8212	131	774	91
-8213	131	332	92
-8214	131	240	93
-8215	133	764	0
-8216	133	763	1
-8217	133	759	2
-8218	133	775	3
-8219	133	739	4
-8220	133	737	5
-8221	133	754	6
-8222	133	738	7
-8223	133	121	8
-8224	133	766	9
-8225	133	749	10
-8226	133	332	11
-8227	133	240	12
+2577	57	259	0
+2578	57	260	1
+2579	57	2	2
+2580	57	258	3
+2581	58	269	0
+2582	58	263	1
+2583	58	265	2
+2584	58	187	3
+2585	58	266	4
+2586	58	267	5
+2587	58	264	6
+2588	58	261	7
+2589	58	268	8
+2590	58	262	9
+2591	59	298	0
+2592	59	264	1
+2593	59	280	2
+2594	59	282	3
+2595	59	278	4
+2596	59	284	5
+2597	59	265	6
+2598	59	272	7
+2599	59	300	8
+2600	59	283	9
+2601	59	291	10
+2602	59	293	11
+2603	59	266	12
+2604	59	296	13
+2605	59	264	14
+2606	59	297	15
+2607	59	269	16
+2608	59	263	17
+2609	59	265	18
+2610	59	187	19
+2611	59	285	20
+2612	59	266	21
+2613	59	273	22
+2614	59	265	23
+2615	59	286	24
+2616	59	276	25
+2617	59	272	26
+2618	59	275	27
+2619	59	290	28
+2620	59	263	29
+2621	59	274	30
+2622	59	281	31
+2623	59	300	32
+2624	59	288	33
+2625	59	156	34
+2626	59	264	35
+2627	59	271	36
+2628	59	292	37
+2629	59	56	38
+2630	59	263	39
+2631	59	272	40
+2632	59	289	41
+2633	59	187	42
+2634	59	265	43
+2635	59	285	44
+3137	67	324	61
+3138	67	316	62
+3139	67	345	63
+3140	67	334	64
+3141	67	327	65
+3142	67	175	66
+3143	67	338	67
+3144	67	306	68
+3145	67	328	69
+3146	67	312	70
+3147	67	225	71
+3148	67	257	72
+3149	69	177	0
+3150	69	348	1
+5104	107	517	6
+5105	107	250	7
+5106	107	177	8
+5107	107	520	9
+5108	107	509	10
+5109	107	515	11
+5110	107	508	12
+5111	107	217	13
+5112	107	539	14
+5113	107	334	15
+5114	107	508	16
+5115	107	523	17
+5116	107	518	18
+5117	107	535	19
+5118	107	529	20
+5119	107	525	21
+5120	107	537	22
+5121	107	506	23
+5122	107	507	24
+5123	107	414	25
+5124	107	521	26
+5125	107	513	27
+5126	107	476	28
+5127	107	508	29
+5128	107	217	30
+5129	107	537	31
+5130	107	506	32
+5131	107	507	33
+2636	59	266	45
+2637	59	279	46
+2638	59	277	47
+2639	59	299	48
+2640	59	295	49
+2641	59	287	50
+2642	59	272	51
+2643	59	294	52
+2644	59	270	53
+2645	59	275	54
+2646	59	290	55
+5132	107	488	34
+5133	107	510	35
+5134	107	505	36
+5135	107	514	37
+5136	107	521	38
+5137	107	506	39
+5138	107	377	40
+5139	107	476	41
+5140	107	531	42
+5141	107	527	43
+5142	107	512	44
+5143	107	541	45
+5144	107	536	46
+5145	107	540	47
+5146	107	533	48
+5147	107	522	49
+5148	107	488	50
+5149	107	507	51
+5150	107	542	52
+5151	107	526	53
+5152	107	541	54
+5153	107	536	55
+5154	107	476	56
+5155	107	516	57
+5156	107	530	58
+5157	107	532	59
+5158	107	534	60
+5159	107	257	61
+5160	107	414	62
+5161	107	538	63
+5162	107	448	64
+5163	107	476	65
+5164	109	209	0
+5165	109	250	1
+5166	109	177	2
+5167	109	508	3
+5168	109	217	4
+5169	109	519	5
+10740	169	996	0
+10741	169	995	1
+10742	169	994	2
+10745	170	998	0
+10746	170	997	1
+10747	170	997	2
+10748	173	177	0
+10749	173	348	1
+3842	89	402	0
+3843	89	401	1
+3844	89	2	2
+3845	89	400	3
+3846	89	399	4
+3847	90	404	0
+3848	90	407	1
+3849	90	403	2
+3850	90	245	3
+3851	90	405	4
+3852	90	406	5
+3853	90	408	6
+3854	91	411	0
+3855	91	407	1
+3856	91	427	2
+3857	91	403	3
+3858	91	425	4
+3859	91	414	5
+3860	91	429	6
+3861	91	412	7
+3862	91	244	8
+3863	91	406	9
+3864	91	408	10
+3865	91	415	11
+3866	91	433	12
+3867	91	408	13
+3868	91	185	14
+3869	91	428	15
+3870	91	168	16
+3871	91	175	17
+3872	91	421	18
+3873	91	413	19
+3874	91	416	20
+3875	91	409	21
+3876	91	168	22
+3877	91	436	23
+3878	91	432	24
+3879	91	174	25
+3880	91	422	26
+3881	91	417	27
+3882	91	410	28
+3883	91	434	29
+3884	91	430	30
+3885	91	423	31
+3886	91	431	32
+3887	91	420	33
+3888	91	424	34
+3889	91	435	35
+3890	91	432	36
+3891	91	409	37
+3892	91	420	38
+3893	91	419	39
+3894	91	426	40
+3895	91	418	41
+7288	121	627	0
+7289	121	628	1
+7290	121	2	2
+7291	121	400	3
+7292	121	399	4
+7293	122	629	0
+7294	122	636	1
+7295	122	633	2
+7296	122	634	3
+7297	122	630	4
+7298	122	631	5
+7299	122	637	6
+7300	122	632	7
+7301	122	637	8
+7302	122	635	9
+7303	122	638	10
+7304	123	633	0
+7305	123	634	1
+7306	123	681	2
+7307	123	712	3
+7308	123	440	4
+7309	123	675	5
+7310	123	673	6
+7311	123	713	7
+7312	123	462	8
+7313	123	702	9
+7314	123	228	10
+7315	123	637	11
+7316	123	305	12
+1958	25	166	0
+1959	25	165	1
+1960	25	2	2
+1961	25	167	3
+1962	25	234	4
+1963	25	235	5
+1964	25	2	6
+1965	25	236	7
+1966	26	171	0
+1967	26	170	1
+1968	26	169	2
+1969	26	174	3
+1970	26	172	4
+1971	26	175	5
+1972	26	168	6
+1973	26	173	7
+1974	27	195	0
+1975	27	224	1
+1976	27	225	2
+1977	27	228	3
+1978	27	185	4
+1979	27	177	5
+1980	27	223	6
+1981	27	120	7
+1982	27	183	8
+1983	27	199	9
+1984	27	224	10
+1985	27	196	11
+1986	27	205	12
+1987	27	202	13
+1988	27	176	14
+1989	27	211	15
+1990	27	190	16
+1991	27	193	17
+1992	27	167	18
+1993	27	180	19
+1994	27	189	20
+1995	27	216	21
+1996	27	206	22
+1997	27	192	23
+1998	27	229	24
+1999	27	212	25
+2000	27	201	26
+2001	27	137	27
+2002	27	224	28
+2003	27	206	29
+2004	27	179	30
+2005	27	197	31
+2006	27	219	32
+2007	27	182	33
+2008	27	205	34
+2009	27	213	35
+2010	27	230	36
+2011	27	224	37
+2012	27	167	38
+2013	27	217	39
+2014	27	172	40
+2015	27	187	41
+2016	27	198	42
+2017	27	206	43
+2018	27	186	44
+2019	27	191	45
+2020	27	188	46
+2021	27	200	47
+2022	27	209	48
+2023	27	226	49
+2024	27	208	50
+2025	27	218	51
+2026	27	221	52
+2027	27	172	53
+2028	27	171	54
+2029	27	196	55
+2030	27	231	56
+2031	27	215	57
+2032	27	227	58
+2033	27	181	59
+2034	27	214	60
+2035	27	203	61
+2036	27	114	62
+2037	27	204	63
+2038	27	220	64
+2039	27	186	65
+2040	27	191	66
+2041	27	193	67
+2042	27	167	68
+2043	27	178	69
+2044	27	184	70
+2045	27	232	71
+2046	27	171	72
+2047	27	196	73
+2048	27	186	74
+2049	27	191	75
+2050	27	222	76
+2051	27	207	77
+2052	27	210	78
+2053	27	172	79
+2054	27	140	80
+2055	27	226	81
+2056	27	194	82
+2057	27	194	83
+2058	27	172	84
+2059	29	233	0
+2060	29	224	1
+2061	29	171	2
+2062	29	196	3
+2063	29	114	4
+2064	29	167	5
+2065	29	120	6
+2066	29	183	7
+2067	29	200	8
+2068	29	209	9
+2069	29	115	10
+7317	123	687	13
+7318	123	711	14
+7319	123	652	15
+7320	123	657	16
+7321	123	710	17
+7322	123	659	18
+7323	123	630	19
+7324	123	631	20
+7325	123	637	21
+7326	123	677	22
+7327	123	700	23
+7328	123	683	24
+7329	123	685	25
+7330	123	629	26
+7331	123	668	27
+7332	123	630	28
+7333	123	639	29
+7334	123	632	30
+7335	123	637	31
+7336	123	718	32
+7337	123	633	33
+7338	123	634	34
+7339	123	635	35
+7340	123	638	36
+7341	123	515	37
+7342	123	677	38
+7343	123	440	39
+7344	123	211	40
+7345	123	112	41
+7346	123	696	42
+7347	123	692	43
+7348	123	682	44
+7349	123	110	45
+7350	123	315	46
+7351	123	133	47
+7352	123	701	48
+7353	123	211	49
+7354	123	112	50
+7355	123	701	51
+7356	123	668	52
+7357	123	706	53
+7358	123	689	54
+7359	123	676	55
+7360	123	672	56
+7361	123	668	57
+7362	123	655	58
+7363	123	666	59
+7364	123	697	60
+7365	123	450	61
+7366	123	684	62
+7367	123	642	63
+7368	123	629	64
+7369	123	638	65
+7370	123	133	66
+7371	123	112	67
+7372	123	619	68
+7373	123	635	69
+7374	123	427	70
+7375	123	701	71
+7376	123	668	72
+7377	123	667	73
+7378	123	647	74
+7379	123	694	75
+7380	123	686	76
+7381	123	718	77
+7382	123	577	78
+7383	123	422	79
+7384	123	701	80
+7385	123	649	81
+7386	123	383	82
+7387	123	630	83
+7388	123	631	84
+7389	123	637	85
+7390	123	632	86
+7391	123	637	87
+7392	123	228	88
+7393	123	699	89
+7394	123	175	90
+7395	123	651	91
+7396	123	432	92
+7397	123	443	93
+7398	123	701	94
+7399	123	633	95
+7400	123	634	96
+7401	123	663	97
+7402	123	715	98
+7403	123	717	99
+7404	123	476	100
+7405	123	156	101
+7406	123	653	102
+7407	123	645	103
+7408	123	383	104
+7409	123	630	105
+7410	123	631	106
+7411	123	632	107
+7412	123	637	108
+7413	123	635	109
+7414	123	638	110
+7415	123	701	111
+7416	123	668	112
+7417	123	669	113
+7418	123	716	114
+7419	123	691	115
+7420	123	655	116
+7421	123	666	117
+7422	123	697	118
+7423	123	450	119
+7424	123	669	120
+7425	123	720	121
+7426	123	703	122
+7427	123	704	123
+7428	123	691	124
+7429	123	648	125
+7430	123	709	126
+7431	123	689	127
+7432	123	674	128
+7433	123	658	129
+7434	123	112	130
+7435	123	496	131
+7436	123	705	132
+7437	123	719	133
+7438	123	640	134
+7439	123	644	135
+7440	123	676	136
+7441	123	630	137
+7442	123	631	138
+7443	123	637	139
+7444	123	674	140
+7445	123	688	141
+7446	123	558	142
+7447	123	635	143
+7448	123	635	144
+7449	123	704	145
+7450	123	674	146
+3461	73	351	0
+3462	73	349	1
+3463	73	350	2
+3464	73	2	3
+3465	73	390	4
+3466	73	389	5
+3467	73	391	6
+3468	73	350	7
+3469	73	2	8
+3470	74	305	0
+3471	74	306	1
+3472	74	272	2
+3473	74	225	3
+3474	75	110	0
+3475	75	374	1
+3476	75	378	2
+3477	75	380	3
+3478	75	352	4
+3479	75	83	5
+3480	75	209	6
+3481	75	383	7
+3482	75	355	8
+3483	75	356	9
+3484	75	362	10
+3485	75	365	11
+3486	75	373	12
+3487	75	55	13
+3488	75	381	14
+3489	75	361	15
+3490	75	353	16
+3491	75	382	17
+3492	75	370	18
+3493	75	375	19
+3494	75	357	20
+3495	75	369	21
+3496	75	354	22
+3497	75	360	23
+3498	75	371	24
+3499	75	379	25
+3500	75	55	26
+3501	75	381	27
+3502	75	374	28
+3503	75	358	29
+3504	75	372	30
+3505	75	364	31
+3506	75	363	32
+3507	75	323	33
+3508	75	368	34
+3509	75	362	35
+3510	75	365	36
+3511	75	366	37
+3512	75	376	38
+3513	75	367	39
+3514	75	51	40
+3515	75	359	41
+3516	75	377	42
+3517	77	276	0
+3518	77	386	1
+3519	77	388	2
+3520	77	276	3
+3521	77	385	4
+3522	77	387	5
+3523	77	384	6
+7451	123	632	147
+7452	123	637	148
+7453	123	644	149
+7454	123	676	150
+7455	123	708	151
+7456	123	40	152
+7457	123	650	153
+7458	123	646	154
+7459	123	558	155
+7460	123	635	156
+7461	123	635	157
+7462	123	704	158
+7463	123	702	159
+7464	123	123	160
+7465	123	714	161
+7466	123	643	162
+7467	123	644	163
+7468	123	693	164
+7469	123	641	165
+7470	123	440	166
+7471	123	211	167
+7472	123	178	168
+7473	123	674	169
+7474	123	654	170
+7475	123	664	171
+7476	123	695	172
+7477	123	679	173
+7478	123	662	174
+7479	123	656	175
+7480	123	634	176
+7481	123	714	177
+7482	123	8	178
+7483	123	84	179
+7484	123	629	180
+7485	123	690	181
+7486	123	630	182
+7487	123	631	183
+7488	123	632	184
+7489	123	637	185
+7490	123	671	186
+7491	123	661	187
+7492	123	83	188
+7493	123	678	189
+7494	123	440	190
+7495	123	680	191
+7496	123	674	192
+7497	123	658	193
+7498	123	37	194
+7499	123	670	195
+7500	123	660	196
+7501	123	701	197
+7502	123	211	198
+7503	123	707	199
+7504	123	692	200
+7505	123	630	201
+7506	123	631	202
+7507	123	637	203
+7508	123	658	204
+7509	123	485	205
+7510	123	112	206
+7511	123	414	207
+7512	123	682	208
+7513	123	698	209
+7514	123	665	210
+7515	125	440	0
+8765	137	782	0
+8766	137	783	1
+8767	137	2	2
+8768	137	781	3
+8769	138	785	0
+8770	138	786	1
+8771	138	432	2
+8772	138	784	3
+8773	139	245	0
+8774	139	787	1
+8775	139	786	2
+8776	139	785	3
+8777	139	432	4
+8778	139	226	5
+8779	139	194	6
+8780	139	804	7
+8781	139	810	8
+8782	139	784	9
+8783	139	815	10
+8784	139	829	11
+8785	139	786	12
+8786	139	336	13
+8787	139	809	14
+8788	139	803	15
+8789	139	270	16
+8790	139	828	17
+8791	139	815	18
+8792	139	786	19
+8793	139	785	20
+8794	139	827	21
+8795	139	835	22
+8796	139	792	23
+8797	139	821	24
+8798	139	793	25
+8799	139	63	26
+8800	139	814	27
+8801	139	14	28
+8802	139	820	29
+8803	139	821	30
+8804	139	805	31
+8805	139	829	32
+8806	139	786	33
+8807	139	785	34
+8808	139	14	35
+8809	139	820	36
+8810	139	814	37
+8811	139	80	38
+8812	139	832	39
+8813	139	9	40
+8814	139	823	41
+8815	139	800	42
+8816	139	813	43
+8817	139	789	44
+8818	139	825	45
+8819	139	793	46
+8820	139	837	47
+8821	139	814	48
+8822	139	432	49
+8823	139	226	50
+8824	139	818	51
+8825	139	806	52
+8826	139	804	53
+8827	139	815	54
+8828	139	786	55
+8829	139	822	56
+8830	139	816	57
+8831	139	788	58
+8832	139	794	59
+8833	139	836	60
+8834	139	562	61
+8835	139	807	62
+5086	105	503	0
+5087	105	504	1
+5088	105	505	2
+5089	105	2	3
+5090	105	544	4
+4541	97	402	0
+4542	97	437	1
+4543	97	438	2
+4544	97	2	3
+4545	98	439	0
+4546	98	440	1
+4547	98	443	2
+4548	98	441	3
+4549	98	442	4
+4550	98	381	5
+4551	98	440	6
+4552	98	432	7
+4553	98	444	8
+4554	99	462	0
+4555	99	440	1
+4556	99	443	2
+4557	99	489	3
+4558	99	502	4
+4559	99	455	5
+4560	99	453	6
+4561	99	493	7
+4562	99	440	8
+4563	99	498	9
+4564	99	490	10
+4565	99	502	11
+4566	99	491	12
+4567	99	472	13
+4568	99	449	14
+4569	99	448	15
+4570	99	494	16
+4571	99	500	17
+4572	99	489	18
+4573	99	440	19
+4574	99	432	20
+4575	99	450	21
+4576	99	458	22
+4577	99	475	23
+4578	99	499	24
+4579	99	440	25
+4580	99	483	26
+4581	99	446	27
+4582	99	471	28
+4583	99	466	29
+4584	99	452	30
+4585	99	447	31
+4586	99	485	32
+4587	99	324	33
+4588	99	140	34
+4589	99	459	35
+4590	99	489	36
+4591	99	502	37
+4592	99	480	38
+4593	99	489	39
+4594	99	501	40
+4595	99	451	41
+4596	99	474	42
+4597	99	256	43
+4598	99	484	44
+4599	99	256	45
+4600	99	465	46
+4601	99	445	47
+4602	99	464	48
+4603	99	460	49
+4604	99	471	50
+4605	99	442	51
+4606	99	440	52
+4607	99	432	53
+4608	99	444	54
+4609	99	497	55
+4610	99	336	56
+4611	99	305	57
+4612	99	486	58
+4613	99	481	59
+4614	99	478	60
+4615	99	461	61
+4616	99	502	62
+4617	99	499	63
+4618	99	467	64
+4619	99	440	65
+4620	99	498	66
+4621	99	482	67
+4622	99	446	68
+4623	99	457	69
+4624	99	470	70
+4625	99	477	71
+4626	99	481	72
+4627	99	496	73
+4628	99	468	74
+4629	99	480	75
+4630	99	473	76
+4631	99	454	77
+4632	99	478	78
+4633	99	502	79
+4634	99	22	80
+4635	99	440	81
+4636	99	498	82
+4637	99	450	83
+4638	99	487	84
+4639	99	469	85
+4640	99	470	86
+4641	99	477	87
+4642	99	476	88
+4643	99	460	89
+4644	99	481	90
+4645	99	479	91
+4646	99	486	92
+4647	99	481	93
+4648	99	497	94
+4649	99	453	95
+4650	99	495	96
+4651	99	486	97
+4652	99	476	98
+4653	99	492	99
+4654	99	450	100
+4655	99	463	101
+4656	99	461	102
+4657	99	502	103
+4658	99	488	104
+4659	99	456	105
+4660	99	462	106
+4661	99	440	107
+4662	99	443	108
+4663	99	489	109
+4664	99	502	110
+4665	99	481	111
+4666	99	492	112
+4667	99	450	113
+4668	99	487	114
+4669	101	440	0
+9721	147	898	88
+9722	147	868	89
+9723	147	795	90
+9724	147	907	91
+9725	147	862	92
+9726	147	867	93
+9727	147	877	94
+9728	147	860	95
+9729	147	887	96
+9730	147	901	97
+9731	147	916	98
+9732	147	862	99
+9733	147	875	100
+9734	147	847	101
+9735	147	911	102
+9736	147	906	103
+9737	147	910	104
+9738	147	859	105
+9739	147	911	106
+9740	147	897	107
+9741	147	854	108
+9742	147	894	109
+9743	147	844	110
+9744	147	112	111
+9745	147	869	112
+9746	147	861	113
+9747	147	866	114
+9748	147	880	115
+9749	147	597	116
+9750	147	915	117
+9751	147	909	118
+9752	147	5	119
+9753	147	889	120
+9754	147	848	121
+9755	147	675	122
+9756	147	52	123
+9757	147	890	124
+9758	147	94	125
+9759	147	786	126
+9760	147	883	127
+9761	147	491	128
+9762	147	852	129
+9763	149	909	0
+9764	149	625	1
+9765	149	626	2
+8836	139	790	63
+8837	139	812	64
+8838	139	816	65
+8839	139	831	66
+8840	139	819	67
+8841	139	831	68
+8842	139	829	69
+8843	139	786	70
+8844	139	799	71
+8845	139	802	72
+8846	139	834	73
+8847	139	811	74
+8848	139	14	75
+8849	139	839	76
+8850	139	798	77
+8851	139	791	78
+8852	139	829	79
+8853	139	797	80
+8854	139	711	81
+8855	139	785	82
+8856	139	789	83
+8857	139	795	84
+8858	139	830	85
+8859	139	829	86
+8860	139	808	87
+8861	139	796	88
+8862	139	785	89
+8863	139	789	90
+8864	139	824	91
+8865	139	801	92
+8866	139	555	93
+8867	139	833	94
+8868	139	838	95
+8869	139	29	96
+9617	145	842	0
+9618	145	841	1
+9619	145	840	2
+9620	145	2	3
+9621	146	8	0
+9622	146	373	1
+9623	146	620	2
+9624	146	843	3
+9625	146	610	4
+9626	146	614	5
+9627	146	30	6
+9628	146	12	7
+9629	146	26	8
+9630	146	50	9
+9631	146	74	10
+9632	146	602	11
+9633	147	597	0
+9634	147	155	1
+9635	147	485	2
+9636	147	914	3
+9637	147	902	4
+9638	147	909	5
+9639	147	904	6
+9640	147	872	7
+9641	147	895	8
+9642	147	713	9
+9643	147	863	10
+9644	147	367	11
+9645	147	7	12
+9646	147	888	13
+9647	147	848	14
+9648	147	865	15
+9649	147	900	16
+9650	147	912	17
+9651	147	872	18
+9652	147	821	19
+9653	147	884	20
+9654	147	891	21
+9655	147	851	22
+9656	147	589	23
+9657	147	638	24
+9658	147	870	25
+9659	147	909	26
+9660	147	875	27
+9661	147	885	28
+9662	147	850	29
+9663	147	845	30
+9664	147	589	31
+9665	147	875	32
+9666	147	478	33
+9667	147	846	34
+9668	147	882	35
+9669	147	904	36
+9670	147	7	37
+9671	147	91	38
+9672	147	26	39
+9673	147	850	40
+9674	147	845	41
+9675	147	742	42
+9676	147	873	43
+9677	147	909	44
+9678	147	908	45
+9679	147	896	46
+9680	147	849	47
+9681	147	881	48
+9682	147	276	49
+9683	147	5	50
+9684	147	502	51
+9685	147	892	52
+9686	147	600	53
+9687	147	857	54
+9688	147	913	55
+9689	147	905	56
+9690	147	871	57
+9691	147	874	58
+9692	147	876	59
+9693	147	45	60
+9694	147	894	61
+9695	147	893	62
+9696	147	502	63
+9697	147	909	64
+9698	147	858	65
+9699	147	899	66
+9700	147	878	67
+9701	147	826	68
+9702	147	903	69
+9703	147	7	70
+9704	147	46	71
+9705	147	599	72
+8870	139	817	97
+8871	139	826	98
+9706	147	719	73
+9707	147	879	74
+9708	147	871	75
+9709	147	892	76
+9710	147	85	77
+9711	147	864	78
+9712	147	903	79
+9713	147	855	80
+9714	147	904	81
+9715	147	917	82
+9716	147	276	83
+9717	147	886	84
+9718	147	638	85
+9719	147	853	86
+9720	147	856	87
+5985	113	547	0
+5986	113	546	1
+5987	113	545	2
+5988	113	120	3
+5989	113	2	4
+5990	114	554	0
+5991	114	549	1
+5992	114	551	2
+5993	114	83	3
+5994	114	553	4
+5995	114	552	5
+5996	114	550	6
+5997	114	29	7
+5998	114	548	8
+5999	115	597	0
+6000	115	110	1
+6001	115	560	2
+6002	115	8	3
+6003	115	373	4
+6004	115	620	5
+6005	115	46	6
+6006	115	604	7
+6007	115	30	8
+6008	115	12	9
+6009	115	598	10
+6010	115	50	11
+6011	115	19	12
+6012	115	566	13
+6013	115	612	14
+6014	115	601	15
+6015	115	452	16
+6016	115	600	17
+6017	115	89	18
+6018	115	573	19
+6019	115	605	20
+6020	115	563	21
+6021	115	583	22
+6022	115	570	23
+6023	115	88	24
+6024	115	580	25
+6025	115	624	26
+6026	115	587	27
+6027	115	603	28
+6028	115	568	29
+6029	115	603	30
+6030	115	614	31
+6031	115	556	32
+6032	115	95	33
+6033	115	617	34
+6034	115	589	35
+6035	115	602	36
+6036	115	596	37
+6037	115	619	38
+6038	115	621	39
+6039	115	584	40
+6040	115	559	41
+6041	115	595	42
+6042	115	30	43
+6043	115	12	44
+6044	115	26	45
+6045	115	602	46
+6046	115	564	47
+6047	115	557	48
+6048	115	30	49
+6049	115	12	50
+6050	115	26	51
+6051	115	580	52
+6052	115	614	53
+6053	115	602	54
+6054	115	74	55
+6055	115	95	56
+6056	115	622	57
+6057	115	575	58
+6058	115	30	59
+6059	115	12	60
+6060	115	599	61
+6061	115	588	62
+6062	115	95	63
+6063	115	622	64
+6064	115	599	65
+6065	115	578	66
+6066	115	30	67
+6067	115	12	68
+6068	115	561	69
+6069	115	565	70
+6070	115	567	71
+6071	115	30	72
+6072	115	12	73
+6073	115	569	74
+6074	115	599	75
+6075	115	95	76
+6076	115	622	77
+6077	115	599	78
+6078	115	576	79
+6079	115	12	80
+6080	115	586	81
+6081	115	571	82
+6082	115	607	83
+6083	115	12	84
+6084	115	591	85
+6085	115	559	86
+6086	115	160	87
+6087	115	592	88
+6088	115	12	89
+6089	115	558	90
+6090	115	579	91
+6091	115	602	92
+6092	115	577	93
+6093	115	23	94
+6094	115	558	95
+6095	115	77	96
+6096	115	586	97
+6097	115	618	98
+6098	115	615	99
+6099	115	608	100
+6100	115	14	101
+6101	115	606	102
+6102	115	82	103
+6103	115	613	104
+6104	115	593	105
+6105	115	623	106
+6106	115	594	107
+6107	115	602	108
+6108	115	612	109
+6109	115	574	110
+6110	115	40	111
+6111	115	581	112
+6112	115	214	113
+6113	115	609	114
+6114	115	373	115
+6115	115	620	116
+6116	115	610	117
+6117	115	604	118
+6118	115	614	119
+6119	115	30	120
+6120	115	12	121
+6121	115	598	122
+6122	115	50	123
+6123	115	19	124
+6124	115	566	125
+6125	115	612	126
+6126	115	604	127
+6127	115	568	128
+6128	115	603	129
+6129	115	555	130
+6130	115	616	131
+6131	115	562	132
+6132	115	30	133
+6133	115	582	134
+6134	115	19	135
+6135	115	46	136
+6136	115	249	137
+6137	115	572	138
+6138	115	7	139
+6139	115	22	140
+6140	115	585	141
+6141	115	7	142
+6142	115	46	143
+6143	115	611	144
+6144	115	590	145
+6145	117	74	0
+6146	117	625	1
+6147	117	626	2
+8111	129	722	0
+8112	129	723	1
+8113	129	2	2
+8114	129	721	3
+8115	130	729	0
+8116	130	724	1
+8117	130	206	2
+8118	130	725	3
+8119	130	110	4
+8120	130	726	5
+8121	130	727	6
+8122	130	728	7
+8123	131	532	0
+8124	131	752	1
+8125	131	766	2
+8126	131	765	3
+8127	131	750	4
+8128	131	767	5
+8129	131	761	6
+8130	131	177	7
+8131	131	734	8
+8132	131	730	9
+8133	131	344	10
+8134	131	534	11
+8135	131	287	12
+8136	131	33	13
+8137	131	740	14
+8138	131	121	15
+8139	131	768	16
+8140	131	725	17
+8141	131	110	18
+8142	131	760	19
+8143	131	726	20
+8144	131	727	21
+8145	131	728	22
+8146	131	777	23
+8147	131	741	24
+8148	131	367	25
+8149	131	762	26
+8150	131	763	27
+8151	131	2	28
+8152	131	738	29
+8153	131	780	30
+8154	131	209	31
+8155	131	746	32
+8156	131	749	33
+8157	131	739	34
+8158	131	155	35
+8159	131	742	36
+8160	131	2	37
+8161	131	771	38
+8162	131	205	39
+8163	131	770	40
+8164	131	779	41
+8165	131	724	42
+8166	131	206	43
+8167	131	226	44
+8168	131	736	45
+8169	131	476	46
+8170	131	33	47
+8171	131	735	48
+8172	131	476	49
+8173	131	763	50
+8174	131	253	51
+8175	131	743	52
+8176	131	206	53
+8177	131	757	54
+8178	131	747	55
+8179	131	744	56
+8180	131	737	57
+8181	131	778	58
+8182	131	774	59
+8183	131	758	60
+8184	131	135	61
+8185	131	764	62
+8186	131	209	63
+8187	131	724	64
+8188	131	206	65
+8189	131	753	66
+8190	131	2	67
+8191	131	564	68
+8192	131	773	69
+8193	131	732	70
+8194	131	778	71
+8195	131	681	72
+8196	131	759	73
+8197	131	775	74
+8198	131	769	75
+8199	131	733	76
+8200	131	367	77
+8201	131	755	78
+8202	131	731	79
+8203	131	751	80
+8204	131	2	81
+8205	131	155	82
+8206	131	748	83
+8207	131	772	84
+8208	131	739	85
+8209	131	756	86
+8210	131	33	87
+8211	131	745	88
+8212	131	746	89
+8213	131	754	90
+8214	131	776	91
+8215	131	334	92
+8216	131	242	93
+8217	133	766	0
+8218	133	765	1
+8219	133	761	2
+8220	133	777	3
+8221	133	741	4
+8222	133	739	5
+8223	133	756	6
+8224	133	740	7
+8225	133	121	8
+8226	133	768	9
+8227	133	751	10
+8228	133	334	11
+8229	133	242	12
+10301	153	919	0
+10302	153	918	1
+10303	153	2	2
+10304	153	920	3
+10305	154	929	0
+10306	154	50	1
+10307	154	921	2
+10308	154	931	3
+10309	154	923	4
+10310	154	598	5
+10311	154	924	6
+10312	154	925	7
+10313	154	930	8
+10314	154	928	9
+10315	154	922	10
+10316	154	927	11
+10317	154	926	12
+10318	155	929	0
+10319	155	50	1
+10320	155	921	2
+10321	155	931	3
+10322	155	963	4
+10323	155	923	5
+10324	155	957	6
+10325	155	924	7
+10326	155	962	8
+10327	155	925	9
+10328	155	930	10
+10329	155	928	11
+10330	155	562	12
+10331	155	952	13
+10332	155	941	14
+10333	155	131	15
+10334	155	953	16
+10335	155	940	17
+10336	155	930	18
+10337	155	928	19
+10338	155	942	20
+10339	155	948	21
+10340	155	946	22
+10341	155	965	23
+10342	155	932	24
+10343	155	938	25
+10344	155	945	26
+10345	155	934	27
+10346	155	947	28
+10347	155	925	29
+10348	155	930	30
+10349	155	928	31
+10350	155	936	32
+10351	155	954	33
+10352	155	931	34
+10353	155	960	35
+10354	155	131	36
+10355	155	947	37
+10356	155	562	38
+10357	155	952	39
+10358	155	941	40
+10359	155	935	41
+10360	155	950	42
+10361	155	943	43
+10362	155	961	44
+10363	155	939	45
+10364	155	18	46
+10365	155	947	47
+10366	155	933	48
+10367	155	966	49
+10368	155	941	50
+10369	155	50	51
+10370	155	964	52
+10371	155	39	53
+10372	155	947	54
+10373	155	925	55
+10374	155	922	56
+10375	155	944	57
+10376	155	50	58
+10377	155	921	59
+10378	155	562	60
+10379	155	959	61
+10380	155	149	62
+10381	155	951	63
+10382	155	923	64
+10383	155	598	65
+10384	155	93	66
+10385	155	929	67
+10386	155	931	68
+10387	155	958	69
+10388	155	937	70
+10389	155	923	71
+10390	155	949	72
+10391	155	931	73
+10392	155	50	74
+10393	155	964	75
+10394	155	960	76
+10395	155	956	77
+10396	155	947	78
+10397	155	925	79
+10398	155	930	80
+10399	155	928	81
+10400	155	214	82
+10401	155	955	83
+10402	155	931	84
+10403	155	924	85
+10404	155	422	86
+10405	155	930	87
+10406	155	830	88
+10407	155	367	89
 \.
 
 
@@ -12195,25 +12197,25 @@ COPY public.submission_settings (submission_setting_id, submission_id, locale, s
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-6	1	7	2025-01-17 05:21:45	2025-01-17 05:21:41	2025-01-17 05:21:41	5	en	3		0
-1	1	1	2025-01-17 05:18:19	2025-01-17 05:18:19	2025-01-17 05:18:19	5	en	1		0
-13	1	14	2025-01-17 05:24:34	2025-01-17 05:24:30	2025-01-17 05:24:30	5	en	3		0
-19	1	20	2025-01-17 05:26:58	2025-01-17 05:26:54	2025-01-17 05:26:54	5	en	3		0
-7	1	8	2025-01-17 05:22:10	2025-01-17 05:22:05	2025-01-17 05:22:05	5	en	3		0
-2	1	2	2025-01-17 05:19:26	2025-01-17 05:19:18	2025-01-17 05:19:18	5	en	3		0
-14	1	15	2025-01-17 05:24:58	2025-01-17 05:24:54	2025-01-17 05:24:54	5	en	3		0
-8	1	9	2025-01-17 05:22:34	2025-01-17 05:22:29	2025-01-17 05:22:29	5	en	3		0
-15	1	16	2025-01-17 05:25:22	2025-01-17 05:25:18	2025-01-17 05:25:18	5	en	3		0
-9	1	10	2025-01-17 05:22:58	2025-01-17 05:22:53	2025-01-17 05:22:53	5	en	3		0
-3	1	4	2025-01-17 05:20:11	2025-01-17 05:19:46	2025-01-17 05:19:46	5	en	3		0
-10	1	11	2025-01-17 05:23:22	2025-01-17 05:23:17	2025-01-17 05:23:17	5	en	3		0
-16	1	17	2025-01-17 05:25:46	2025-01-17 05:25:42	2025-01-17 05:25:42	5	en	3		0
-4	1	5	2025-01-17 05:20:30	2025-01-17 05:20:30	2025-01-17 05:20:30	5	en	4		0
-11	1	12	2025-01-17 05:23:46	2025-01-17 05:23:41	2025-01-17 05:23:41	5	en	3		0
-17	1	18	2025-01-17 05:26:10	2025-01-17 05:26:06	2025-01-17 05:26:06	5	en	3		0
-5	1	6	2025-01-17 05:21:21	2025-01-17 05:21:08	2025-01-17 05:21:08	5	en	3		0
-12	1	13	2025-01-17 05:24:10	2025-01-17 05:24:06	2025-01-17 05:24:06	5	en	3		0
-18	1	19	2025-01-17 05:26:34	2025-01-17 05:26:30	2025-01-17 05:26:30	5	en	3		0
+6	1	7	2025-01-18 05:21:19	2025-01-18 05:21:15	2025-01-18 05:21:15	5	en	3		0
+1	1	1	2025-01-18 05:17:56	2025-01-18 05:17:56	2025-01-18 05:17:56	5	en	1		0
+13	1	14	2025-01-18 05:24:09	2025-01-18 05:24:05	2025-01-18 05:24:05	5	en	3		0
+19	1	20	2025-01-18 05:26:32	2025-01-18 05:26:27	2025-01-18 05:26:27	5	en	3		0
+7	1	8	2025-01-18 05:21:43	2025-01-18 05:21:39	2025-01-18 05:21:39	5	en	3		0
+2	1	2	2025-01-18 05:19:02	2025-01-18 05:18:54	2025-01-18 05:18:54	5	en	3		0
+14	1	15	2025-01-18 05:24:33	2025-01-18 05:24:29	2025-01-18 05:24:29	5	en	3		0
+8	1	9	2025-01-18 05:22:07	2025-01-18 05:22:02	2025-01-18 05:22:02	5	en	3		0
+15	1	16	2025-01-18 05:24:57	2025-01-18 05:24:52	2025-01-18 05:24:52	5	en	3		0
+9	1	10	2025-01-18 05:22:30	2025-01-18 05:22:26	2025-01-18 05:22:26	5	en	3		0
+3	1	4	2025-01-18 05:19:47	2025-01-18 05:19:22	2025-01-18 05:19:22	5	en	3		0
+10	1	11	2025-01-18 05:22:57	2025-01-18 05:22:52	2025-01-18 05:22:52	5	en	3		0
+16	1	17	2025-01-18 05:25:21	2025-01-18 05:25:16	2025-01-18 05:25:16	5	en	3		0
+4	1	5	2025-01-18 05:20:06	2025-01-18 05:20:06	2025-01-18 05:20:06	5	en	4		0
+11	1	12	2025-01-18 05:23:22	2025-01-18 05:23:16	2025-01-18 05:23:16	5	en	3		0
+17	1	18	2025-01-18 05:25:45	2025-01-18 05:25:40	2025-01-18 05:25:40	5	en	3		0
+5	1	6	2025-01-18 05:20:56	2025-01-18 05:20:43	2025-01-18 05:20:43	5	en	3		0
+12	1	13	2025-01-18 05:23:45	2025-01-18 05:23:41	2025-01-18 05:23:41	5	en	3		0
+18	1	19	2025-01-18 05:26:08	2025-01-18 05:26:04	2025-01-18 05:26:04	5	en	3		0
 \.
 
 
@@ -12433,51 +12435,51 @@ COPY public.user_settings (user_setting_id, user_id, locale, setting_name, setti
 --
 
 COPY public.user_user_groups (user_user_group_id, user_group_id, user_id, date_start, date_end, masthead) FROM stdin;
-1	1	1	2025-01-17 05:14:42	\N	\N
+1	1	1	2025-01-18 05:14:25	\N	\N
 2	2	1	\N	\N	\N
-3	2	2	2025-01-17 00:00:00	\N	1
-4	2	3	2025-01-17 00:00:00	\N	1
-5	3	4	2025-01-17 00:00:00	\N	1
-6	3	5	2025-01-17 00:00:00	\N	1
-7	3	6	2025-01-17 00:00:00	\N	1
-8	5	7	2025-01-17 05:18:04	\N	\N
-9	4	7	2025-01-17 05:18:06	\N	\N
-10	5	8	2025-01-17 05:18:23	\N	\N
-11	4	8	2025-01-17 05:18:27	\N	\N
-12	5	9	2025-01-17 05:19:30	\N	\N
-13	4	9	2025-01-17 05:19:32	\N	\N
-14	5	10	2025-01-17 05:20:15	\N	\N
-15	4	10	2025-01-17 05:20:17	\N	\N
-16	5	11	2025-01-17 05:20:53	\N	\N
-17	4	11	2025-01-17 05:20:55	\N	\N
-18	5	12	2025-01-17 05:21:25	\N	\N
-19	4	12	2025-01-17 05:21:28	\N	\N
-20	5	13	2025-01-17 05:21:49	\N	\N
-21	4	13	2025-01-17 05:21:52	\N	\N
-22	5	14	2025-01-17 05:22:14	\N	\N
-23	4	14	2025-01-17 05:22:16	\N	\N
-24	5	15	2025-01-17 05:22:38	\N	\N
-25	4	15	2025-01-17 05:22:40	\N	\N
-26	5	16	2025-01-17 05:23:02	\N	\N
-27	4	16	2025-01-17 05:23:04	\N	\N
-28	5	17	2025-01-17 05:23:26	\N	\N
-29	4	17	2025-01-17 05:23:28	\N	\N
-30	5	18	2025-01-17 05:23:50	\N	\N
-31	4	18	2025-01-17 05:23:52	\N	\N
-32	5	19	2025-01-17 05:24:14	\N	\N
-33	4	19	2025-01-17 05:24:17	\N	\N
-34	5	20	2025-01-17 05:24:38	\N	\N
-35	4	20	2025-01-17 05:24:41	\N	\N
-36	5	21	2025-01-17 05:25:03	\N	\N
-37	4	21	2025-01-17 05:25:05	\N	\N
-38	5	22	2025-01-17 05:25:26	\N	\N
-39	4	22	2025-01-17 05:25:29	\N	\N
-40	5	23	2025-01-17 05:25:50	\N	\N
-41	4	23	2025-01-17 05:25:53	\N	\N
-42	5	24	2025-01-17 05:26:14	\N	\N
-43	4	24	2025-01-17 05:26:17	\N	\N
-44	5	25	2025-01-17 05:26:38	\N	\N
-45	4	25	2025-01-17 05:26:41	\N	\N
+3	2	2	2025-01-18 00:00:00	\N	1
+4	2	3	2025-01-18 00:00:00	\N	1
+5	3	4	2025-01-18 00:00:00	\N	1
+6	3	5	2025-01-18 00:00:00	\N	1
+7	3	6	2025-01-18 00:00:00	\N	1
+8	5	7	2025-01-18 05:17:41	\N	\N
+9	4	7	2025-01-18 05:17:43	\N	\N
+10	5	8	2025-01-18 05:18:00	\N	\N
+11	4	8	2025-01-18 05:18:04	\N	\N
+12	5	9	2025-01-18 05:19:06	\N	\N
+13	4	9	2025-01-18 05:19:08	\N	\N
+14	5	10	2025-01-18 05:19:51	\N	\N
+15	4	10	2025-01-18 05:19:53	\N	\N
+16	5	11	2025-01-18 05:20:28	\N	\N
+17	4	11	2025-01-18 05:20:30	\N	\N
+18	5	12	2025-01-18 05:21:00	\N	\N
+19	4	12	2025-01-18 05:21:02	\N	\N
+20	5	13	2025-01-18 05:21:23	\N	\N
+21	4	13	2025-01-18 05:21:25	\N	\N
+22	5	14	2025-01-18 05:21:47	\N	\N
+23	4	14	2025-01-18 05:21:49	\N	\N
+24	5	15	2025-01-18 05:22:11	\N	\N
+25	4	15	2025-01-18 05:22:13	\N	\N
+26	5	16	2025-01-18 05:22:37	\N	\N
+27	4	16	2025-01-18 05:22:39	\N	\N
+28	5	17	2025-01-18 05:23:01	\N	\N
+29	4	17	2025-01-18 05:23:03	\N	\N
+30	5	18	2025-01-18 05:23:26	\N	\N
+31	4	18	2025-01-18 05:23:28	\N	\N
+32	5	19	2025-01-18 05:23:50	\N	\N
+33	4	19	2025-01-18 05:23:52	\N	\N
+34	5	20	2025-01-18 05:24:13	\N	\N
+35	4	20	2025-01-18 05:24:16	\N	\N
+36	5	21	2025-01-18 05:24:37	\N	\N
+37	4	21	2025-01-18 05:24:39	\N	\N
+38	5	22	2025-01-18 05:25:01	\N	\N
+39	4	22	2025-01-18 05:25:03	\N	\N
+40	5	23	2025-01-18 05:25:25	\N	\N
+41	4	23	2025-01-18 05:25:27	\N	\N
+42	5	24	2025-01-18 05:25:49	\N	\N
+43	4	24	2025-01-18 05:25:51	\N	\N
+44	5	25	2025-01-18 05:26:12	\N	\N
+45	4	25	2025-01-18 05:26:14	\N	\N
 \.
 
 
@@ -12486,31 +12488,31 @@ COPY public.user_user_groups (user_user_group_id, user_group_id, user_id, date_s
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help, remember_token) FROM stdin;
-10	ddiouf	$2y$10$JaJz7CKx7Kr1qKPJkeIvYu5jPq4qlLJCaGetNe9aoJpSzcpAo1e6O	ddiouf@mailinator.com	\N	\N	\N	\N	EG	[]	\N	\N	2025-01-17 05:20:15	\N	2025-01-17 05:20:15	\N	\N	\N	0	\N	1	\N
-16	jnovak	$2y$10$yZPZK.w0OEEkRJ3/LJcMbu9c23TzMQcG8JKe6clwQRcjQkpLIn4cq	jnovak@mailinator.com	\N	\N	\N	\N	DK	[]	\N	\N	2025-01-17 05:23:02	\N	2025-01-17 05:23:02	\N	\N	\N	0	\N	1	\N
-11	dphillips	$2y$10$pSFbCRwCtA.nSYVA6rHzfeJpw.0t5fjBLgKgJT8Fl53ZfAjecMN6O	dphillips@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2025-01-17 05:20:53	\N	2025-01-17 05:20:53	\N	\N	\N	0	\N	1	\N
-22	rrossi	$2y$10$zT0IKCItZlj6stT8s/puhOnFwEJqobw01eSasQYFNMzi0ZQHLY9BC	rrossi@mailinator.com	\N	\N	\N	\N	ES	[]	\N	\N	2025-01-17 05:25:26	\N	2025-01-17 05:25:27	\N	\N	\N	0	\N	1	\N
-17	kalkhafaji	$2y$10$cswmtTUVEl3g5hq6BqrBKOb0LK7cTZ2z9LdwFfxUeNDm51DI4PPli	kalkhafaji@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2025-01-17 05:23:26	\N	2025-01-17 05:23:26	\N	\N	\N	0	\N	1	\N
-2	rvaca	$2y$10$StCsvtJat7dzqa0jzeUmwe5w/R1Yr9EqXNVO.rzXR0Y/J19.hYt0G	rvaca@mailinator.com	\N	\N	\N	\N	MX	[]	\N	\N	2025-01-17 05:15:58	\N	\N	\N	\N	\N	0	\N	1	\N
-4	dbuskins	$2y$10$0midx6rgadXuvfKjRkrK.eMB7H8dGfoGy/HGOnM2r53bCDWZr1Jaq	dbuskins@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2025-01-17 05:16:41	\N	\N	\N	\N	\N	0	\N	1	\N
-12	dsokoloff	$2y$10$xnjYgR1BRct95xCCNKJOTeWFipCDuiIskJkFVQsbUKDZzizaNDPD.	dsokoloff@mailinator.com	\N	\N	\N	\N	IE	[]	\N	\N	2025-01-17 05:21:25	\N	2025-01-17 05:21:25	\N	\N	\N	0	\N	1	\N
-18	lchristopher	$2y$10$tBAh4qzE6OM8tKNFm.2yeO.u22A9r./2q3/uh6OjrI8k58fIBqLUO	lchristopher@mailinator.com	\N	\N	\N	\N	AU	[]	\N	\N	2025-01-17 05:23:50	\N	2025-01-17 05:23:50	\N	\N	\N	0	\N	1	\N
-5	sberardo	$2y$10$tvALcUOS9JMz.Z9w3aQE6O.88iG3iPy3/p.k8nwlNm/Rum8VaavSC	sberardo@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2025-01-17 05:17:04	\N	\N	\N	\N	\N	0	\N	1	\N
-6	minoue	$2y$10$KWMymlSIPoK6h.08Nc2wZubS.s6SBQTuejGiQPPOoQd8y.84LjB82	minoue@mailinator.com	\N	\N	\N	\N	JP	[]	\N	\N	2025-01-17 05:17:28	\N	\N	\N	\N	\N	0	\N	1	\N
-23	vkarbasizaed	$2y$10$tQis9wgPf4Ig9k0KYxT4buCBLkR.J7eV5hEXll/RNvpwtPj4p/dr6	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR	[]	\N	\N	2025-01-17 05:25:50	\N	2025-01-17 05:25:51	\N	\N	\N	0	\N	1	\N
-13	eostrom	$2y$10$S1DX9PocGvN/5Ikg6cULGueWSGKeqV1uxKw061.PTZ6afP8kKSQtu	eostrom@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2025-01-17 05:21:49	\N	2025-01-17 05:21:50	\N	\N	\N	0	\N	1	\N
-1	admin	$2y$10$UVotpD4rSuslBE1yiuTqxOjIiC3uAcXqpKKF1t2nkYXTvJzW06U0S	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	[]	\N	\N	2025-01-17 05:14:42	\N	2025-01-17 05:17:39	\N	\N	\N	0	\N	1	\N
-7	ccorino	$2y$10$2jdkNBgyrEmCCZKp/mI5ReGq57fHDvz/boLrBNi2KxPnqV1Fh9Ns.	ccorino@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2025-01-17 05:18:04	\N	2025-01-17 05:18:04	\N	\N	\N	0	\N	1	\N
-8	ckwantes	$2y$10$7JAXl8TT95ZE6S/dW6tobe/IdUOT.1dPBmvtObzoP/MhB42XnID6S	ckwantes@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2025-01-17 05:18:23	\N	2025-01-17 05:18:24	\N	\N	\N	0	\N	1	\N
-19	lkumiega	$2y$10$OGfg0aRERh8gUsXniZJSB.m6HyTA2FcFt7XiFcb06V0QUQx2j2w3y	lkumiega@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2025-01-17 05:24:14	\N	2025-01-17 05:24:15	\N	\N	\N	0	\N	1	\N
-14	fpaglieri	$2y$10$sjj.sxtKAx3h5Yboh6EJle/JtRVCgDa2bXx73np.dAf.L5.GmdRyy	fpaglieri@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2025-01-17 05:22:14	\N	2025-01-17 05:22:14	\N	\N	\N	0	\N	1	\N
-9	cmontgomerie	$2y$10$2XgzqQWOn4wm7NkOPKWin.XxTd7M7Ljm6pPKGKfez3ly4jJdd8pdW	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2025-01-17 05:19:30	\N	2025-01-17 05:19:30	\N	\N	\N	0	\N	1	\N
-20	pdaniel	$2y$10$Y9RZdhzs7DHM/LBgOLFdCu88tXw05qdUCQ05aLPuQh4OigMhFYLji	pdaniel@mailinator.com	\N	\N	\N	\N	GB	[]	\N	\N	2025-01-17 05:24:38	\N	2025-01-17 05:24:39	\N	\N	\N	0	\N	1	\N
-15	jmwandenga	$2y$10$xGcjCqFavBDWABsp991UhevQ512qCCDD4BPBINgRWNQSnhgLWLm4y	jmwandenga@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2025-01-17 05:22:38	\N	2025-01-17 05:22:38	\N	\N	\N	0	\N	1	\N
-24	vwilliamson	$2y$10$/SEbYIYeV77UxhjP8m1Es.G50uUYejJ3ij0wJDnf0/OTuiKfjJyRi	vwilliamson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2025-01-17 05:26:14	\N	2025-01-17 05:26:15	\N	\N	\N	0	\N	1	\N
-21	rbaiyewu	$2y$10$A.RsPg8vBc/z6UO5xNahhe6/IPv/C6Q2xWDoFe2r1a65lrfXgzTTu	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE	[]	\N	\N	2025-01-17 05:25:03	\N	2025-01-17 05:25:03	\N	\N	\N	0	\N	1	\N
-25	zwoods	$2y$10$gvw5DcW6xBAQZVIAVcouvea0pSO91f7V5SPir30nNzQtQlA4ds0sm	zwoods@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2025-01-17 05:26:38	\N	2025-01-17 05:26:39	\N	\N	\N	0	\N	1	\N
-3	dbarnes	$2y$10$ZwwhiXo6F62vWWbmbbk4d.iW5nASCKcNZgqNBLHQYtLEozv4z4lWC	dbarnes@mailinator.com	\N	\N	\N	\N	AU	[]	\N	\N	2025-01-17 05:16:19	\N	2025-01-17 05:26:55	\N	\N	\N	0	\N	1	\N
+10	ddiouf	$2y$10$7BZKVWtRHoUYdPQO95cCVexrbfxN7s9n6Azd0mvikt5aw57zKqYSe	ddiouf@mailinator.com	\N	\N	\N	\N	EG	[]	\N	\N	2025-01-18 05:19:51	\N	2025-01-18 05:19:51	\N	\N	\N	0	\N	1	\N
+16	jnovak	$2y$10$wQ/mpduEvLHBPbceTDAkh.6Jw9EB01CbORhuNj7S5BGN92xVTqZu.	jnovak@mailinator.com	\N	\N	\N	\N	DK	[]	\N	\N	2025-01-18 05:22:37	\N	2025-01-18 05:22:37	\N	\N	\N	0	\N	1	\N
+11	dphillips	$2y$10$72wPW6ORXez.Yjsdhzor9OZfWi7FbyFwKkAycL/hToOKuKHewQHr.	dphillips@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2025-01-18 05:20:28	\N	2025-01-18 05:20:28	\N	\N	\N	0	\N	1	\N
+22	rrossi	$2y$10$Tzc2adgjSOyHWlyxoF1QY.TY6mUDVVdYx9xOVwyCm3WW7pSU5g2iy	rrossi@mailinator.com	\N	\N	\N	\N	ES	[]	\N	\N	2025-01-18 05:25:01	\N	2025-01-18 05:25:01	\N	\N	\N	0	\N	1	\N
+17	kalkhafaji	$2y$10$ewmqNWCoOJt7Je5AN/J3O.W1AESn2gR94MIbETzq104bUN9ul6O8y	kalkhafaji@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2025-01-18 05:23:01	\N	2025-01-18 05:23:01	\N	\N	\N	0	\N	1	\N
+2	rvaca	$2y$10$VcvyLU2qkxOQFY4Cx9VlIOIP9nn2e85XZwCQYW7myZFwSXLj.Ne3O	rvaca@mailinator.com	\N	\N	\N	\N	MX	[]	\N	\N	2025-01-18 05:15:38	\N	\N	\N	\N	\N	0	\N	1	\N
+4	dbuskins	$2y$10$XqBqjsV9OzqT56D0As7JyeJ4s/1kxWCdQkh8pwqi9UODt/Wwgv/r6	dbuskins@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2025-01-18 05:16:20	\N	\N	\N	\N	\N	0	\N	1	\N
+12	dsokoloff	$2y$10$tR65NyVfcUctPYkMKa49W.vqmmFOlR/7OPcJMNHzQRChE899x3wUu	dsokoloff@mailinator.com	\N	\N	\N	\N	IE	[]	\N	\N	2025-01-18 05:20:59	\N	2025-01-18 05:21:00	\N	\N	\N	0	\N	1	\N
+18	lchristopher	$2y$10$nVF5hELnNseWT78aTfzptulbLCIucZHktcAYDemoxpnOTizZjgFLG	lchristopher@mailinator.com	\N	\N	\N	\N	AU	[]	\N	\N	2025-01-18 05:23:26	\N	2025-01-18 05:23:26	\N	\N	\N	0	\N	1	\N
+5	sberardo	$2y$10$DWBdNqc8f1QPVPUGdYkctOQstfqbwUxk/bE7srvKxRq9WhSLnWf9y	sberardo@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2025-01-18 05:16:42	\N	\N	\N	\N	\N	0	\N	1	\N
+6	minoue	$2y$10$C/FMNyO/aD8.z43.qwE6euqyQBvG78zEflwoHCTKI94iB.tfYg./m	minoue@mailinator.com	\N	\N	\N	\N	JP	[]	\N	\N	2025-01-18 05:17:06	\N	\N	\N	\N	\N	0	\N	1	\N
+23	vkarbasizaed	$2y$10$AsLi7y8hdzMDsPx9pmpqv.qlEBoyjnRQbEr/9d.alkYHAqm9cH/BO	vkarbasizaed@mailinator.com	\N	\N	\N	\N	IR	[]	\N	\N	2025-01-18 05:25:25	\N	2025-01-18 05:25:25	\N	\N	\N	0	\N	1	\N
+13	eostrom	$2y$10$51jBI6C/ZESMSyr7zFmdquHkhQ5Vp/NlE83ce0oe2g9BDwwdrmW3.	eostrom@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2025-01-18 05:21:23	\N	2025-01-18 05:21:23	\N	\N	\N	0	\N	1	\N
+1	admin	$2y$10$WSjTBSQ6EFuX9D4AzPg1NuuNUsg/iDITo3tV3YyHsj6fomx0W.kv.	pkpadmin@mailinator.com	\N	\N	\N	\N	\N	[]	\N	\N	2025-01-18 05:14:25	\N	2025-01-18 05:17:16	\N	\N	\N	0	\N	1	\N
+7	ccorino	$2y$10$sYsBpSDGqb.bUYYFBwm.4O45w439hwoNeMW28jj/LpAjMHqmzglfm	ccorino@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2025-01-18 05:17:41	\N	2025-01-18 05:17:41	\N	\N	\N	0	\N	1	\N
+8	ckwantes	$2y$10$hrPlPJEH0ggMmRtJyTiXteOmutU2t5mLYiL56OFtWFo6U//0cim/G	ckwantes@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2025-01-18 05:18:00	\N	2025-01-18 05:18:00	\N	\N	\N	0	\N	1	\N
+19	lkumiega	$2y$10$CRTwHe8SMtIlg1zHyqOPFONGlVSAOWY1QI32AnR0I41xSMtfuYayK	lkumiega@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2025-01-18 05:23:49	\N	2025-01-18 05:23:50	\N	\N	\N	0	\N	1	\N
+14	fpaglieri	$2y$10$bjMw8pdXv/8iGzPv2bzcg.Pqs0JmkUV86gdIp9ZP1mgB8WB3v/x6.	fpaglieri@mailinator.com	\N	\N	\N	\N	IT	[]	\N	\N	2025-01-18 05:21:47	\N	2025-01-18 05:21:47	\N	\N	\N	0	\N	1	\N
+9	cmontgomerie	$2y$10$4YgZpCfsHIfJKhA3VyKhpOPkL.Lv1nxc/Z59Ex6hoO1xetH68Djsy	cmontgomerie@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2025-01-18 05:19:06	\N	2025-01-18 05:19:06	\N	\N	\N	0	\N	1	\N
+20	pdaniel	$2y$10$D5NKvmrev3UC15ZH1LRPleHcV27GTAueV9eNmj.8DvgrOnaxZGuyC	pdaniel@mailinator.com	\N	\N	\N	\N	GB	[]	\N	\N	2025-01-18 05:24:13	\N	2025-01-18 05:24:13	\N	\N	\N	0	\N	1	\N
+15	jmwandenga	$2y$10$0G2WvGPo92b7a9.gefkmtebTKJHAcGLo2YE0nfQ70PJqQ4B4aqC1O	jmwandenga@mailinator.com	\N	\N	\N	\N	ZA	[]	\N	\N	2025-01-18 05:22:11	\N	2025-01-18 05:22:11	\N	\N	\N	0	\N	1	\N
+24	vwilliamson	$2y$10$XkAqslAWYCTchAg1vYnw5./2RHR04.hmW7srJvChsvm135UNI6DK2	vwilliamson@mailinator.com	\N	\N	\N	\N	CA	[]	\N	\N	2025-01-18 05:25:49	\N	2025-01-18 05:25:49	\N	\N	\N	0	\N	1	\N
+21	rbaiyewu	$2y$10$J1pZCh9Zi5zOGcYGR.6HJOnU7iCoseYyjjCXM6etUefyKVPF0dspO	rbaiyewu@mailinator.com	\N	\N	\N	\N	KE	[]	\N	\N	2025-01-18 05:24:37	\N	2025-01-18 05:24:37	\N	\N	\N	0	\N	1	\N
+25	zwoods	$2y$10$2UVJQBATiEr4DztEBN7qke3gYPdC1/Vk82p3.R7j3v03ePIEVYFH6	zwoods@mailinator.com	\N	\N	\N	\N	US	[]	\N	\N	2025-01-18 05:26:12	\N	2025-01-18 05:26:12	\N	\N	\N	0	\N	1	\N
+3	dbarnes	$2y$10$RWnruwqitHqAZuejEmNi3uslJIzpw6acUkJtYTW5wWwIMWxBMTc0m	dbarnes@mailinator.com	\N	\N	\N	\N	AU	[]	\N	\N	2025-01-18 05:15:59	\N	2025-01-18 05:26:28	\N	\N	\N	0	\N	1	\N
 \.
 
 
@@ -12519,23 +12521,23 @@ COPY public.users (user_id, username, password, email, url, phone, mailing_addre
 --
 
 COPY public.versions (version_id, major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	1	0	0	0	2025-01-17 05:14:42	1	plugins.metadata	dc11		0	0
-2	1	0	0	0	2025-01-17 05:14:42	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-3	1	0	1	0	2025-01-17 05:14:42	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-4	1	0	0	0	2025-01-17 05:14:42	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-5	0	1	0	0	2025-01-17 05:14:42	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
-6	1	0	1	0	2025-01-17 05:14:42	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-7	1	0	0	0	2025-01-17 05:14:42	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-8	1	2	0	0	2025-01-17 05:14:42	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-9	1	1	0	0	2025-01-17 05:14:42	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-10	1	0	0	0	2025-01-17 05:14:42	1	plugins.generic	usageEvent		0	0
-11	1	0	0	0	2025-01-17 05:14:42	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-12	2	2	0	0	2025-01-17 05:14:42	1	plugins.generic	crossref		0	0
-13	1	0	0	0	2025-01-17 05:14:42	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-14	1	0	0	0	2025-01-17 05:14:42	1	plugins.importexport	native		0	0
-15	1	0	0	0	2025-01-17 05:14:42	1	plugins.oaiMetadataFormats	dc		0	0
-16	1	0	0	0	2025-01-17 05:14:42	1	plugins.themes	default	DefaultThemePlugin	1	0
-17	3	5	0	0	2025-01-17 05:14:40	1	core	ops		0	1
+1	1	0	0	0	2025-01-18 05:14:25	1	plugins.metadata	dc11		0	0
+2	1	0	0	0	2025-01-18 05:14:25	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+3	1	0	1	0	2025-01-18 05:14:25	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+4	1	0	0	0	2025-01-18 05:14:25	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+5	0	1	0	0	2025-01-18 05:14:25	1	plugins.generic	citationStyleLanguage	CitationStyleLanguagePlugin	1	0
+6	1	0	1	0	2025-01-18 05:14:25	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+7	1	0	0	0	2025-01-18 05:14:25	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+8	1	2	0	0	2025-01-18 05:14:25	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+9	1	1	0	0	2025-01-18 05:14:25	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+10	1	0	0	0	2025-01-18 05:14:25	1	plugins.generic	usageEvent		0	0
+11	1	0	0	0	2025-01-18 05:14:25	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+12	2	2	0	0	2025-01-18 05:14:25	1	plugins.generic	crossref		0	0
+13	1	0	0	0	2025-01-18 05:14:25	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+14	1	0	0	0	2025-01-18 05:14:25	1	plugins.importexport	native		0	0
+15	1	0	0	0	2025-01-18 05:14:25	1	plugins.oaiMetadataFormats	dc		0	0
+16	1	0	0	0	2025-01-18 05:14:25	1	plugins.themes	default	DefaultThemePlugin	1	0
+17	3	5	0	0	2025-01-18 05:14:24	1	core	ops		0	1
 \.
 
 
@@ -13166,14 +13168,14 @@ SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 19, t
 -- Name: submission_search_keyword_list_keyword_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
 --
 
-SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq', 996, true);
+SELECT pg_catalog.setval('public.submission_search_keyword_list_keyword_id_seq', 998, true);
 
 
 --
 -- Name: submission_search_object_keyw_submission_search_object_keyw_seq; Type: SEQUENCE SET; Schema: public; Owner: ops-ci
 --
 
-SELECT pg_catalog.setval('public.submission_search_object_keyw_submission_search_object_keyw_seq', 10747, true);
+SELECT pg_catalog.setval('public.submission_search_object_keyw_submission_search_object_keyw_seq', 10749, true);
 
 
 --
