@@ -1,9 +1,9 @@
 /*M!999999\- enable the sandbox mode */ 
--- MariaDB dump 10.19  Distrib 10.11.10-MariaDB, for debian-linux-gnu (x86_64)
+-- MariaDB dump 10.19  Distrib 10.11.11-MariaDB, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: omp-ci
 -- ------------------------------------------------------
--- Server version	10.11.10-MariaDB-ubu2404
+-- Server version	10.11.11-MariaDB-ubu2404
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -22,7 +22,7 @@
 
 DROP TABLE IF EXISTS `announcement_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_settings` (
   `announcement_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `announcement_id` bigint(20) NOT NULL,
@@ -51,7 +51,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_type_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_type_settings` (
   `announcement_type_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `type_id` bigint(20) NOT NULL,
@@ -81,7 +81,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcement_types`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcement_types` (
   `type_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) DEFAULT NULL,
@@ -106,7 +106,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `announcements`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `announcements` (
   `announcement_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `assoc_type` smallint(6) DEFAULT NULL,
@@ -136,7 +136,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `author_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `author_settings` (
   `author_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `author_id` bigint(20) NOT NULL,
@@ -419,7 +419,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `authors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `authors` (
   `author_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `email` varchar(90) NOT NULL,
@@ -507,7 +507,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `categories` (
   `category_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
@@ -547,7 +547,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `category_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `category_settings` (
   `category_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `category_id` bigint(20) NOT NULL,
@@ -607,7 +607,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `citation_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `citation_settings` (
   `citation_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `citation_id` bigint(20) NOT NULL,
@@ -637,7 +637,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `citations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `citations` (
   `citation_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `publication_id` bigint(20) NOT NULL,
@@ -665,7 +665,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `completed_payments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `completed_payments` (
   `completed_payment_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `timestamp` datetime NOT NULL,
@@ -699,7 +699,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocab_entries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocab_entries` (
   `controlled_vocab_entry_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `controlled_vocab_id` bigint(20) NOT NULL,
@@ -749,7 +749,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocab_entry_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocab_entry_settings` (
   `controlled_vocab_entry_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `controlled_vocab_entry_id` bigint(20) NOT NULL,
@@ -801,7 +801,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `controlled_vocabs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `controlled_vocabs` (
   `controlled_vocab_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(64) NOT NULL,
@@ -897,7 +897,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstone_oai_set_objects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstone_oai_set_objects` (
   `object_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `tombstone_id` bigint(20) NOT NULL,
@@ -924,7 +924,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstone_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstone_settings` (
   `tombstone_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `tombstone_id` bigint(20) NOT NULL,
@@ -954,7 +954,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `data_object_tombstones`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `data_object_tombstones` (
   `tombstone_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `data_object_id` bigint(20) NOT NULL,
@@ -982,7 +982,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `doi_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `doi_settings` (
   `doi_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `doi_id` bigint(20) NOT NULL,
@@ -1011,7 +1011,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `dois`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `dois` (
   `doi_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
@@ -1038,7 +1038,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `edit_decisions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `edit_decisions` (
   `edit_decision_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
@@ -1065,36 +1065,36 @@ CREATE TABLE `edit_decisions` (
 LOCK TABLES `edit_decisions` WRITE;
 /*!40000 ALTER TABLE `edit_decisions` DISABLE KEYS */;
 INSERT INTO `edit_decisions` VALUES
-(1,1,NULL,1,NULL,3,18,'2025-02-04 05:43:13'),
-(2,1,1,3,1,3,2,'2025-02-04 05:43:22'),
-(3,2,NULL,1,NULL,3,18,'2025-02-04 05:45:25'),
-(4,4,NULL,1,NULL,3,1,'2025-02-04 05:46:59'),
-(5,4,3,2,1,3,3,'2025-02-04 05:47:08'),
-(6,4,4,3,1,3,2,'2025-02-04 05:47:18'),
-(7,4,NULL,4,NULL,3,7,'2025-02-04 05:47:28'),
-(8,5,NULL,1,NULL,3,1,'2025-02-04 05:48:35'),
-(9,5,5,2,1,3,3,'2025-02-04 05:48:45'),
-(10,5,6,3,1,3,2,'2025-02-04 05:48:54'),
-(11,5,NULL,4,NULL,3,7,'2025-02-04 05:49:05'),
-(12,6,NULL,1,NULL,3,1,'2025-02-04 05:50:22'),
-(13,6,7,2,1,6,23,'2025-02-04 05:50:41'),
-(14,7,NULL,1,NULL,3,18,'2025-02-04 05:51:38'),
-(15,7,8,3,1,3,2,'2025-02-04 05:51:49'),
-(16,9,NULL,1,NULL,3,1,'2025-02-04 05:52:55'),
-(17,11,NULL,1,NULL,3,1,'2025-02-04 05:54:37'),
-(18,11,10,2,1,3,3,'2025-02-04 05:54:46'),
-(19,11,11,3,1,3,2,'2025-02-04 05:55:21'),
-(20,12,NULL,1,NULL,3,1,'2025-02-04 05:56:02'),
-(21,13,NULL,1,NULL,3,1,'2025-02-04 05:57:01'),
-(22,13,13,2,1,3,3,'2025-02-04 05:57:11'),
-(23,13,14,3,1,3,2,'2025-02-04 05:57:51'),
-(24,14,NULL,1,NULL,3,1,'2025-02-04 05:58:43'),
-(25,14,15,2,1,3,3,'2025-02-04 05:58:54'),
-(26,14,16,3,1,3,2,'2025-02-04 05:59:04'),
-(27,14,NULL,4,NULL,3,7,'2025-02-04 05:59:16'),
-(28,15,NULL,1,NULL,3,18,'2025-02-04 06:00:39'),
-(29,16,NULL,1,NULL,3,18,'2025-02-04 06:01:31'),
-(30,17,NULL,1,NULL,3,1,'2025-02-04 06:02:54');
+(1,1,NULL,1,NULL,3,18,'2025-02-06 05:27:00'),
+(2,1,1,3,1,3,2,'2025-02-06 05:27:08'),
+(3,2,NULL,1,NULL,3,18,'2025-02-06 05:29:13'),
+(4,4,NULL,1,NULL,3,1,'2025-02-06 05:30:48'),
+(5,4,3,2,1,3,3,'2025-02-06 05:30:58'),
+(6,4,4,3,1,3,2,'2025-02-06 05:31:08'),
+(7,4,NULL,4,NULL,3,7,'2025-02-06 05:31:18'),
+(8,5,NULL,1,NULL,3,1,'2025-02-06 05:32:26'),
+(9,5,5,2,1,3,3,'2025-02-06 05:32:37'),
+(10,5,6,3,1,3,2,'2025-02-06 05:32:47'),
+(11,5,NULL,4,NULL,3,7,'2025-02-06 05:32:58'),
+(12,6,NULL,1,NULL,3,1,'2025-02-06 05:34:16'),
+(13,6,7,2,1,6,23,'2025-02-06 05:34:36'),
+(14,7,NULL,1,NULL,3,18,'2025-02-06 05:35:35'),
+(15,7,8,3,1,3,2,'2025-02-06 05:35:46'),
+(16,9,NULL,1,NULL,3,1,'2025-02-06 05:36:53'),
+(17,11,NULL,1,NULL,3,1,'2025-02-06 05:38:38'),
+(18,11,10,2,1,3,3,'2025-02-06 05:38:47'),
+(19,11,11,3,1,3,2,'2025-02-06 05:39:24'),
+(20,12,NULL,1,NULL,3,1,'2025-02-06 05:40:06'),
+(21,13,NULL,1,NULL,3,1,'2025-02-06 05:41:04'),
+(22,13,13,2,1,3,3,'2025-02-06 05:41:14'),
+(23,13,14,3,1,3,2,'2025-02-06 05:41:55'),
+(24,14,NULL,1,NULL,3,1,'2025-02-06 05:42:48'),
+(25,14,15,2,1,3,3,'2025-02-06 05:42:59'),
+(26,14,16,3,1,3,2,'2025-02-06 05:43:10'),
+(27,14,NULL,4,NULL,3,7,'2025-02-06 05:43:22'),
+(28,15,NULL,1,NULL,3,18,'2025-02-06 05:44:48'),
+(29,16,NULL,1,NULL,3,18,'2025-02-06 05:45:41'),
+(30,17,NULL,1,NULL,3,1,'2025-02-06 05:47:05');
 /*!40000 ALTER TABLE `edit_decisions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1104,7 +1104,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_log` (
   `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `assoc_type` bigint(20) NOT NULL,
@@ -1132,135 +1132,135 @@ CREATE TABLE `email_log` (
 LOCK TABLES `email_log` WRITE;
 /*!40000 ALTER TABLE `email_log` DISABLE KEYS */;
 INSERT INTO `email_log` VALUES
-(1,1048585,1,NULL,'2025-02-04 05:43:06',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=1\">The ABCs of Human Survival: A Paradigm for Global Citizenship</a><br />Arthur Clark</p><p><b>Abstract</b></p>The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(2,1048585,1,NULL,'2025-02-04 05:43:06',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Arthur Clark\" <aclark@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Arthur Clark,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=1</p><p>If you have been logged out, you can login again with the username aclark.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=1\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(3,1048585,1,3,'2025-02-04 05:43:13',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Arthur Clark\" <aclark@mailinator.com>','','','Your submission has been sent for review','<p>Dear Arthur Clark,</p><p>I am pleased to inform you that an editor has reviewed your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(4,1048585,1,3,'2025-02-04 05:43:18',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=1\">The ABCs of Human Survival: A Paradigm for Global Citizenship</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=1\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(5,1048585,1,3,'2025-02-04 05:43:22',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Arthur Clark\" <aclark@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Arthur Clark,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=1\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
-(6,1048585,2,NULL,'2025-02-04 05:45:09',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2\">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(7,1048585,2,NULL,'2025-02-04 05:45:09',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2\">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(8,1048585,2,NULL,'2025-02-04 05:45:09',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2\">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(9,1048585,2,NULL,'2025-02-04 05:45:09',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Alvin Finkel\" <afinkel@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Alvin Finkel,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The West and Beyond: New Perspectives on an Imagined Region, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=2</p><p>If you have been logged out, you can login again with the username afinkel.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=2\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(10,1048585,2,NULL,'2025-02-04 05:45:09',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Sarah Carter\" <scarter@mailinator.com>, \"Peter Fortna\" <pfortna@mailinator.com>, \"Gerald Friesen\" <gfriesen@mailinator.com>, \"Lyle Dick\" <ldick@mailinator.com>, \"Winona Wheeler\" <wwheeler@mailinator.com>, \"Matt Dyce\" <mdyce@mailinator.com>, \"James Opp\" <jopp@mailinator.com>','','','Submission confirmation','<p>Dear Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Alvin Finkel, provided the following details:</p><p>The West and Beyond: New Perspectives on an Imagined Region<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(11,1048585,2,3,'2025-02-04 05:45:25',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Alvin Finkel\" <afinkel@mailinator.com>','','','Your submission has been sent for review','<p>Dear Alvin Finkel,</p><p>I am pleased to inform you that an editor has reviewed your submission, The West and Beyond: New Perspectives on an Imagined Region, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(12,1048585,2,3,'2025-02-04 05:45:32',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Al Zacharia\" <alzacharia@mailinator.com>','','','Manuscript Review Request','<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2\">The West and Beyond: New Perspectives on an Imagined Region</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(13,1048585,2,3,'2025-02-04 05:45:35',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2\">The West and Beyond: New Perspectives on an Imagined Region</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(14,1048585,3,NULL,'2025-02-04 05:46:16',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3\">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(15,1048585,3,NULL,'2025-02-04 05:46:16',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3\">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(16,1048585,3,NULL,'2025-02-04 05:46:16',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3\">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(17,1048585,3,NULL,'2025-02-04 05:46:16',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Bob Barnetson\" <bbarnetson@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Bob Barnetson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Political Economy of Workplace Injury in Canada, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=3</p><p>If you have been logged out, you can login again with the username bbarnetson.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=3\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(18,1048585,4,NULL,'2025-02-04 05:46:50',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=4\">How Canadians Communicate: Contexts of Canadian Popular Culture</a><br />Bart Beaty, Toby Miller, Ira Wagman, Will Straw</p><p><b>Abstract</b></p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(19,1048585,4,NULL,'2025-02-04 05:46:50',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Bart Beaty\" <bbeaty@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Bart Beaty,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4</p><p>If you have been logged out, you can login again with the username bbeaty.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(20,1048585,4,NULL,'2025-02-04 05:46:51',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Toby Miller\" <tmiller@mailinator.com>, \"Ira Wagman\" <awagman@mailinator.com>, \"Will Straw\" <wstraw@mailinator.com>','','','Submission confirmation','<p>Dear Toby Miller, Ira Wagman, Will Straw,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Bart Beaty, provided the following details:</p><p>How Canadians Communicate: Contexts of Canadian Popular Culture<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(21,1048585,4,3,'2025-02-04 05:46:59',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Bart Beaty\" <bbeaty@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(22,1048585,4,3,'2025-02-04 05:47:04',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Aisla McCrae\" <amccrae@mailinator.com>','','','Manuscript Review Request','<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4\">How Canadians Communicate: Contexts of Canadian Popular Culture</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(23,1048585,4,3,'2025-02-04 05:47:09',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Bart Beaty\" <bbeaty@mailinator.com>','','','Your submission has been sent for review','<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(24,1048585,4,3,'2025-02-04 05:47:14',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Al Zacharia\" <alzacharia@mailinator.com>','','','Manuscript Review Request','<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4\">How Canadians Communicate: Contexts of Canadian Popular Culture</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(25,1048585,4,3,'2025-02-04 05:47:18',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Bart Beaty\" <bbeaty@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Bart Beaty,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
-(26,1048585,4,3,'2025-02-04 05:47:29',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Bart Beaty\" <bbeaty@mailinator.com>','','','Next steps for publishing your submission','<p>Dear Bart Beaty,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
-(27,1048585,5,NULL,'2025-02-04 05:48:26',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5\">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(28,1048585,5,NULL,'2025-02-04 05:48:26',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5\">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(29,1048585,5,NULL,'2025-02-04 05:48:26',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5\">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(30,1048585,5,NULL,'2025-02-04 05:48:26',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Chantal Allan\" <callan@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Chantal Allan,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Bomb Canada and Other Unkind Remarks in the American Media, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5</p><p>If you have been logged out, you can login again with the username callan.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(31,1048585,5,3,'2025-02-04 05:48:35',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Chantal Allan\" <callan@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(32,1048585,5,3,'2025-02-04 05:48:41',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Paul Hudson\" <phudson@mailinator.com>','','','Manuscript Review Request','<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5\">Bomb Canada and Other Unkind Remarks in the American Media</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(33,1048585,5,3,'2025-02-04 05:48:45',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Chantal Allan\" <callan@mailinator.com>','','','Your submission has been sent for review','<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(34,1048585,5,3,'2025-02-04 05:48:50',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5\">Bomb Canada and Other Unkind Remarks in the American Media</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(35,1048585,5,3,'2025-02-04 05:48:55',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Chantal Allan\" <callan@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Chantal Allan,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Bomb Canada and Other Unkind Remarks in the American Media, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
-(36,1048585,5,3,'2025-02-04 05:49:05',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Chantal Allan\" <callan@mailinator.com>','','','Next steps for publishing your submission','<p>Dear Chantal Allan,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, Bomb Canada and Other Unkind Remarks in the American Media, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
-(37,1048585,6,NULL,'2025-02-04 05:50:13',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6\">The Information Literacy User’s Guide</a><br />Deborah Bernnard, Greg Bobish, Daryl Bullis, Jenna Hecker</p><p><b>Abstract</b></p>Good researchers have a host of tools at their disposal that make navigating today’s complex information ecosystem much more manageable. Gaining the knowledge, abilities, and self-reflection necessary to be a good researcher helps not only in academic settings, but is invaluable in any career, and throughout one’s life. The Information Literacy User’s Guide will start you on this route to success.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(38,1048585,6,NULL,'2025-02-04 05:50:13',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Deborah Bernnard\" <dbernnard@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Deborah Bernnard,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Information Literacy User’s Guide, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=6</p><p>If you have been logged out, you can login again with the username dbernnard.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=6\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(39,1048585,6,NULL,'2025-02-04 05:50:13',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Greg Bobish\" <gbobish@mailinator.com>, \"Daryl Bullis\" <dbullis@mailinator.com>, \"Jenna Hecker\" <jhecker@mailinator.com>','','','Submission confirmation','<p>Dear Greg Bobish, Daryl Bullis, Jenna Hecker,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Deborah Bernnard, provided the following details:</p><p>The Information Literacy User’s Guide<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(40,1048585,6,3,'2025-02-04 05:50:22',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Deborah Bernnard\" <dbernnard@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Deborah Bernnard,</p><p>I am pleased to inform you that an editor has reviewed your submission, The Information Literacy User’s Guide, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(41,1048585,7,NULL,'2025-02-04 05:51:29',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=7\">Accessible Elements: Teaching Science Online and at a Distance</a><br />Dietmar Kennepohl, Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer</p><p><b>Abstract</b></p>Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(42,1048585,7,NULL,'2025-02-04 05:51:30',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Dietmar Kennepohl\" <dkennepohl@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Dietmar Kennepohl,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Accessible Elements: Teaching Science Online and at a Distance, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=7</p><p>If you have been logged out, you can login again with the username dkennepohl.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=7\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(43,1048585,7,NULL,'2025-02-04 05:51:30',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Terry Anderson\" <tanderson@mailinator.com>, \"Paul Gorsky\" <pgorsky@mailinator.com>, \"Gale Parchoma\" <gparchoma@mailinator.com>, \"Stuart Palmer\" <spalmer@mailinator.com>','','','Submission confirmation','<p>Dear Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Dietmar Kennepohl, provided the following details:</p><p>Accessible Elements: Teaching Science Online and at a Distance<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(44,1048585,7,3,'2025-02-04 05:51:39',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Dietmar Kennepohl\" <dkennepohl@mailinator.com>','','','Your submission has been sent for review','<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that an editor has reviewed your submission, Accessible Elements: Teaching Science Online and at a Distance, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(45,1048585,7,3,'2025-02-04 05:51:44',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Manuscript Review Request','<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=7\">Accessible Elements: Teaching Science Online and at a Distance</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=7\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(46,1048585,7,3,'2025-02-04 05:51:49',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Dietmar Kennepohl\" <dkennepohl@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Accessible Elements: Teaching Science Online and at a Distance, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=7\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
-(47,1048585,8,NULL,'2025-02-04 05:52:05',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8\">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(48,1048585,8,NULL,'2025-02-04 05:52:05',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Editorial','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8\">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(49,1048585,8,NULL,'2025-02-04 05:52:05',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Editorial','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8\">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(50,1048585,8,NULL,'2025-02-04 05:52:05',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Editorial','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8\">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(51,1048585,9,NULL,'2025-02-04 05:52:46',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=9\">Enabling Openness: The future of the information society in Latin America and the Caribbean</a><br />Fernando Perini, Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich</p><p><b>Abstract</b></p>In recent years, the Internet and other network technologies have emerged as a central issue for development in Latin America and the Caribbean. They have shown their potential to increase productivity and economic competitiveness, to create new ways to deliver education and health services, and to be driving forces for the modernization of the provision of public services.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(52,1048585,9,NULL,'2025-02-04 05:52:46',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Fernando Perini\" <fperini@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Fernando Perini,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=9</p><p>If you have been logged out, you can login again with the username fperini.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=9\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(53,1048585,9,NULL,'2025-02-04 05:52:46',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Robin Mansell\" <rmansell@mailinator.com>, \"Hernan Galperin\" <hgalperin@mailinator.com>, \"Pablo Bello\" <pbello@mailinator.com>, \"Eleonora Rabinovich\" <erabinovich@mailinator.com>','','','Submission confirmation','<p>Dear Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Fernando Perini, provided the following details:</p><p>Enabling Openness: The future of the information society in Latin America and the Caribbean<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(54,1048585,9,3,'2025-02-04 05:52:55',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Fernando Perini\" <fperini@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Fernando Perini,</p><p>I am pleased to inform you that an editor has reviewed your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(55,1048585,10,NULL,'2025-02-04 05:54:08',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10\">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(56,1048585,10,NULL,'2025-02-04 05:54:08',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10\">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(57,1048585,10,NULL,'2025-02-04 05:54:08',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10\">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(58,1048585,10,NULL,'2025-02-04 05:54:08',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Jennifer Brower\" <jbrower@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Jennifer Brower,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Lost Tracks: Buffalo National Park, 1909-1939, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=10</p><p>If you have been logged out, you can login again with the username jbrower.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=10\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(59,1048585,11,NULL,'2025-02-04 05:54:29',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Dreamwork','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(60,1048585,11,NULL,'2025-02-04 05:54:29',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Dreamwork','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(61,1048585,11,NULL,'2025-02-04 05:54:29',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Dreamwork','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(62,1048585,11,NULL,'2025-02-04 05:54:29',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Jonathan Locke Hart\" <jlockehart@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Jonathan Locke Hart,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Dreamwork, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=11</p><p>If you have been logged out, you can login again with the username jlockehart.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=11\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(63,1048585,11,3,'2025-02-04 05:54:37',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Jonathan Locke Hart\" <jlockehart@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(64,1048585,11,3,'2025-02-04 05:54:42',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Aisla McCrae\" <amccrae@mailinator.com>','','','Manuscript Review Request','<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(65,1048585,11,3,'2025-02-04 05:54:46',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Jonathan Locke Hart\" <jlockehart@mailinator.com>','','','Your submission has been sent for review','<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(66,1048585,11,3,'2025-02-04 05:54:51',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Manuscript Review Request','<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(67,1048585,11,3,'2025-02-04 05:54:53',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(68,1048585,11,10,'2025-02-04 05:54:59',1073741829,'\"Adela Gallego\" <agallego@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Adela Gallego accepted review assignment for #11 Locke Hart — Dreamwork','<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-04</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
-(69,1048585,11,12,'2025-02-04 05:55:08',1073741829,'\"Gonzalo Favio\" <gfavio@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Gonzalo Favio accepted review assignment for #11 Locke Hart — Dreamwork','<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-04</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
-(70,1048585,11,3,'2025-02-04 05:55:21',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Jonathan Locke Hart\" <jlockehart@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Dreamwork, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=11\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
-(71,1048585,11,3,'2025-02-04 05:55:22',1073741825,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Thank you for your review','<p>Dear Adela Gallego,</p>\n<p>Thank you for completing your review of the submission, Dreamwork, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers\' comments and the editor\'s decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor\'s decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers\' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>'),
-(72,1048585,11,3,'2025-02-04 05:55:22',1073741825,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Thank you for your review','<p>Dear Gonzalo Favio,</p>\n<p>Thank you for completing your review of the submission, Dreamwork, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers\' comments and the editor\'s decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor\'s decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers\' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>'),
-(73,1048585,12,NULL,'2025-02-04 05:55:53',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Connecting ICTs to Development','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12\">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(74,1048585,12,NULL,'2025-02-04 05:55:53',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Connecting ICTs to Development','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12\">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(75,1048585,12,NULL,'2025-02-04 05:55:53',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Connecting ICTs to Development','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12\">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(76,1048585,12,NULL,'2025-02-04 05:55:54',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Laurent Elder\" <lelder@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Laurent Elder,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Connecting ICTs to Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=12</p><p>If you have been logged out, you can login again with the username lelder.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=12\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(77,1048585,12,NULL,'2025-02-04 05:55:54',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Frank Tulus\" <ftulus@mailinator.com>, \"Raymond Hyma\" <rhyma@mailinator.com>, \"John Valk\" <jvalk@mailinator.com>, \"Khaled Fourati\" <fkourati@mailinator.com>, \"Jeremy de Beer\" <jdebeer@mailinator.com>, \"Sara Bannerman\" <sbannerman@mailinator.com>','','','Submission confirmation','<p>Dear Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Laurent Elder, provided the following details:</p><p>Connecting ICTs to Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(78,1048585,12,3,'2025-02-04 05:56:02',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Laurent Elder\" <lelder@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Laurent Elder,</p><p>I am pleased to inform you that an editor has reviewed your submission, Connecting ICTs to Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(79,1048585,12,3,'2025-02-04 05:56:08',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Julie Janssen\" <jjanssen@mailinator.com>','','','Manuscript Review Request','<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(80,1048585,12,3,'2025-02-04 05:56:11',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Paul Hudson\" <phudson@mailinator.com>','','','Manuscript Review Request','<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(81,1048585,12,3,'2025-02-04 05:56:14',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Aisla McCrae\" <amccrae@mailinator.com>','','','Manuscript Review Request','<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(82,1048585,12,8,'2025-02-04 05:56:20',1073741829,'\"Paul Hudson\" <phudson@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Paul Hudson accepted review assignment for #12 Elder et al. — Connecting ICTs to Development','<p>Dear Ramiro Vaca,</p><p>Paul Hudson has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12\">#12 Elder et al. — Connecting ICTs to Development</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-04</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
-(83,1048585,13,NULL,'2025-02-04 05:56:52',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(84,1048585,13,NULL,'2025-02-04 05:56:52',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(85,1048585,13,NULL,'2025-02-04 05:56:52',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(86,1048585,13,NULL,'2025-02-04 05:56:52',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Mohamed Ally\" <mally@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Mohamed Ally,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Mobile Learning: Transforming the Delivery of Education and Training, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=13</p><p>If you have been logged out, you can login again with the username mally.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=13\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(87,1048585,13,NULL,'2025-02-04 05:56:52',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"John Traxler\" <jtraxler@mailinator.com>, \"Marguerite Koole\" <mkoole@mailinator.com>, \"Torstein Rekkedal\" <trekkedal@mailinator.com>','','','Submission confirmation','<p>Dear John Traxler, Marguerite Koole, Torstein Rekkedal,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Mohamed Ally, provided the following details:</p><p>Mobile Learning: Transforming the Delivery of Education and Training<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(88,1048585,13,3,'2025-02-04 05:57:01',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Mohamed Ally\" <mally@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(89,1048585,13,3,'2025-02-04 05:57:06',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Paul Hudson\" <phudson@mailinator.com>','','','Manuscript Review Request','<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(90,1048585,13,3,'2025-02-04 05:57:11',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Mohamed Ally\" <mally@mailinator.com>','','','Your submission has been sent for review','<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(91,1048585,13,3,'2025-02-04 05:57:16',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Manuscript Review Request','<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(92,1048585,13,3,'2025-02-04 05:57:19',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Al Zacharia\" <alzacharia@mailinator.com>','','','Manuscript Review Request','<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(93,1048585,13,3,'2025-02-04 05:57:22',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(94,1048585,13,10,'2025-02-04 05:57:27',1073741829,'\"Adela Gallego\" <agallego@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Adela Gallego accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training','<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-04</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
-(95,1048585,13,12,'2025-02-04 05:57:36',1073741829,'\"Gonzalo Favio\" <gfavio@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Gonzalo Favio accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training','<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-04</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
-(96,1048585,13,3,'2025-02-04 05:57:51',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Mohamed Ally\" <mally@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Mobile Learning: Transforming the Delivery of Education and Training, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=13\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
-(97,1048585,13,3,'2025-02-04 05:57:51',1073741825,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Thank you for your review','<p>Dear Adela Gallego,</p>\n<p>Thank you for completing your review of the submission, Mobile Learning: Transforming the Delivery of Education and Training, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers\' comments and the editor\'s decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor\'s decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers\' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>'),
-(98,1048585,13,3,'2025-02-04 05:57:51',1073741825,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Thank you for your review','<p>Dear Gonzalo Favio,</p>\n<p>Thank you for completing your review of the submission, Mobile Learning: Transforming the Delivery of Education and Training, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers\' comments and the editor\'s decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor\'s decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers\' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>'),
-(99,1048585,14,NULL,'2025-02-04 05:58:33',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=14\">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a><br />Michael Dawson, Brian Dupuis, Michael Wilson</p><p><b>Abstract</b></p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(100,1048585,14,NULL,'2025-02-04 05:58:33',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Michael Dawson\" <mdawson@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Michael Dawson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14</p><p>If you have been logged out, you can login again with the username mdawson.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(101,1048585,14,NULL,'2025-02-04 05:58:33',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Brian Dupuis\" <bdupuis@mailinator.com>, \"Michael Wilson\" <mwilson@mailinator.com>','','','Submission confirmation','<p>Dear Brian Dupuis, Michael Wilson,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Michael Dawson, provided the following details:</p><p>From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(102,1048585,14,3,'2025-02-04 05:58:43',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Michael Dawson\" <mdawson@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(103,1048585,14,3,'2025-02-04 05:58:49',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Julie Janssen\" <jjanssen@mailinator.com>','','','Manuscript Review Request','<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14\">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(104,1048585,14,3,'2025-02-04 05:58:54',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Michael Dawson\" <mdawson@mailinator.com>','','','Your submission has been sent for review','<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(105,1048585,14,3,'2025-02-04 05:59:00',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Al Zacharia\" <alzacharia@mailinator.com>','','','Manuscript Review Request','<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14\">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(106,1048585,14,3,'2025-02-04 05:59:04',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Michael Dawson\" <mdawson@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Michael Dawson,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
-(107,1048585,14,3,'2025-02-04 05:59:16',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Michael Dawson\" <mdawson@mailinator.com>','','','Next steps for publishing your submission','<p>Dear Michael Dawson,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
-(108,1048585,15,NULL,'2025-02-04 06:00:31',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15\">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(109,1048585,15,NULL,'2025-02-04 06:00:31',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15\">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(110,1048585,15,NULL,'2025-02-04 06:00:31',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15\">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(111,1048585,15,NULL,'2025-02-04 06:00:31',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Max Foran\" <mforan@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Max Foran,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=15</p><p>If you have been logged out, you can login again with the username mforan.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=15\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(112,1048585,15,3,'2025-02-04 06:00:40',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Max Foran\" <mforan@mailinator.com>','','','Your submission has been sent for review','<p>Dear Max Foran,</p><p>I am pleased to inform you that an editor has reviewed your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(113,1048585,16,NULL,'2025-02-04 06:01:21',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: A Designer\'s Log: Case Studies in Instructional Design','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(114,1048585,16,NULL,'2025-02-04 06:01:21',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: A Designer\'s Log: Case Studies in Instructional Design','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(115,1048585,16,NULL,'2025-02-04 06:01:21',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: A Designer\'s Log: Case Studies in Instructional Design','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(116,1048585,16,NULL,'2025-02-04 06:01:21',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Michael Power\" <mpower@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Michael Power,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, A Designer\'s Log: Case Studies in Instructional Design, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=16</p><p>If you have been logged out, you can login again with the username mpower.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=16\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(117,1048585,16,3,'2025-02-04 06:01:31',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Michael Power\" <mpower@mailinator.com>','','','Your submission has been sent for review','<p>Dear Michael Power,</p><p>I am pleased to inform you that an editor has reviewed your submission, A Designer\'s Log: Case Studies in Instructional Design, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(118,1048585,16,3,'2025-02-04 06:01:37',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Manuscript Review Request','<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(119,1048585,16,3,'2025-02-04 06:01:40',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Al Zacharia\" <alzacharia@mailinator.com>','','','Manuscript Review Request','<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(120,1048585,16,3,'2025-02-04 06:01:43',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(121,1048585,16,10,'2025-02-04 06:01:49',1073741829,'\"Adela Gallego\" <agallego@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Adela Gallego accepted review assignment for #16 Power — A Designer\'s Log: Case Studies in Instructional Design','<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16\">#16 Power — A Designer\'s Log: Case Studies in Instructional Design</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-04</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
-(122,1048585,17,NULL,'2025-02-04 06:02:43',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17\">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(123,1048585,17,NULL,'2025-02-04 06:02:43',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17\">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(124,1048585,17,NULL,'2025-02-04 06:02:43',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17\">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
-(125,1048585,17,NULL,'2025-02-04 06:02:43',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Matthew Smith\" <msmith@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Matthew Smith,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Open Development: Networked Innovations in International Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=17</p><p>If you have been logged out, you can login again with the username msmith.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=17\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(126,1048585,17,NULL,'2025-02-04 06:02:43',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Yochai Benkler\" <ybenkler@mailinator.com>, \"Katherine Reilly\" <kreilly@mailinator.com>, \"Melissa Loudon\" <mloudon@mailinator.com>, \"Ulrike Rivett\" <urivett@mailinator.com>, \"Mark Graham\" <mgraham@mailinator.com>, \"Håvard Haarstad\" <hhaarstad@mailinator.com>, \"Marshall Smith\" <masmith@mailinator.com>','','','Submission confirmation','<p>Dear Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Matthew Smith, provided the following details:</p><p>Open Development: Networked Innovations in International Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
-(127,1048585,17,3,'2025-02-04 06:02:54',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Matthew Smith\" <msmith@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Matthew Smith,</p><p>I am pleased to inform you that an editor has reviewed your submission, Open Development: Networked Innovations in International Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
-(128,1048585,17,3,'2025-02-04 06:03:01',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Julie Janssen\" <jjanssen@mailinator.com>','','','Manuscript Review Request','<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17\">Open Development: Networked Innovations in International Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
-(129,1048585,17,3,'2025-02-04 06:03:04',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Paul Hudson\" <phudson@mailinator.com>','','','Manuscript Review Request','<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-04. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17\">Open Development: Networked Innovations in International Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17\">accept or decline</a> the review by <strong>2025-03-04</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>');
+(1,1048585,1,NULL,'2025-02-06 05:26:52',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=1\">The ABCs of Human Survival: A Paradigm for Global Citizenship</a><br />Arthur Clark</p><p><b>Abstract</b></p>The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(2,1048585,1,NULL,'2025-02-06 05:26:52',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Arthur Clark\" <aclark@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Arthur Clark,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=1</p><p>If you have been logged out, you can login again with the username aclark.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=1\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(3,1048585,1,3,'2025-02-06 05:27:00',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Arthur Clark\" <aclark@mailinator.com>','','','Your submission has been sent for review','<p>Dear Arthur Clark,</p><p>I am pleased to inform you that an editor has reviewed your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(4,1048585,1,3,'2025-02-06 05:27:04',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=1\">The ABCs of Human Survival: A Paradigm for Global Citizenship</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The ABCs of Human Survival examines the effect of militant nationalism and the lawlessness of powerful states on the well-being of individuals and local communities―and the essential role of global citizenship within that dynamic. Based on the analysis of world events, Dr. Arthur Clark presents militant nationalism as a pathological pattern of thinking that threatens our security, while emphasizing effective democracy and international law as indispensable frameworks for human protection.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=1\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(5,1048585,1,3,'2025-02-06 05:27:08',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Arthur Clark\" <aclark@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Arthur Clark,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, The ABCs of Human Survival: A Paradigm for Global Citizenship, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=1\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
+(6,1048585,2,NULL,'2025-02-06 05:28:58',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2\">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(7,1048585,2,NULL,'2025-02-06 05:28:58',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2\">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(8,1048585,2,NULL,'2025-02-06 05:28:58',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: The West and Beyond: New Perspectives on an Imagined Region','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=2\">The West and Beyond: New Perspectives on an Imagined Region</a><br />Alvin Finkel, Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp</p><p><b>Abstract</b></p><p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p><p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(9,1048585,2,NULL,'2025-02-06 05:28:58',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Alvin Finkel\" <afinkel@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Alvin Finkel,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The West and Beyond: New Perspectives on an Imagined Region, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=2</p><p>If you have been logged out, you can login again with the username afinkel.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=2\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(10,1048585,2,NULL,'2025-02-06 05:28:58',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Sarah Carter\" <scarter@mailinator.com>, \"Peter Fortna\" <pfortna@mailinator.com>, \"Gerald Friesen\" <gfriesen@mailinator.com>, \"Lyle Dick\" <ldick@mailinator.com>, \"Winona Wheeler\" <wwheeler@mailinator.com>, \"Matt Dyce\" <mdyce@mailinator.com>, \"James Opp\" <jopp@mailinator.com>','','','Submission confirmation','<p>Dear Sarah Carter, Peter Fortna, Gerald Friesen, Lyle Dick, Winona Wheeler, Matt Dyce, James Opp,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Alvin Finkel, provided the following details:</p><p>The West and Beyond: New Perspectives on an Imagined Region<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(11,1048585,2,3,'2025-02-06 05:29:13',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Alvin Finkel\" <afinkel@mailinator.com>','','','Your submission has been sent for review','<p>Dear Alvin Finkel,</p><p>I am pleased to inform you that an editor has reviewed your submission, The West and Beyond: New Perspectives on an Imagined Region, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(12,1048585,2,3,'2025-02-06 05:29:20',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Al Zacharia\" <alzacharia@mailinator.com>','','','Manuscript Review Request','<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2\">The West and Beyond: New Perspectives on an Imagined Region</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(13,1048585,2,3,'2025-02-06 05:29:24',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2\">The West and Beyond: New Perspectives on an Imagined Region</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The West and Beyond explores the state of Western Canadian history, showcasing the research interests of a new generation of scholars while charting new directions for the future and stimulating further interrogation of our past. This dynamic collection encourages dialogue among generations of historians of the West, and among practitioners of diverse approaches to the past. It also reflects a broad range of disciplinary and professional boundaries, offering new ways to understand the West.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=2\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(14,1048585,3,NULL,'2025-02-06 05:30:05',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3\">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(15,1048585,3,NULL,'2025-02-06 05:30:05',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3\">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(16,1048585,3,NULL,'2025-02-06 05:30:05',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: The Political Economy of Workplace Injury in Canada','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=3\">The Political Economy of Workplace Injury in Canada</a><br />Bob Barnetson</p><p><b>Abstract</b></p>Workplace injuries are common, avoidable, and unacceptable. The Political Economy of Workplace Injury in Canada reveals how employers and governments engage in ineffective injury prevention efforts, intervening only when necessary to maintain the standard legitimacy. Dr. Bob Barnetson sheds light on this faulty system, highlighting the way in which employers create dangerous work environments yet pour billions of dollars into compensation and treatment. Examining this dynamic clarifies the way in which production costs are passed on to workers in the form of workplace injuries.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(17,1048585,3,NULL,'2025-02-06 05:30:05',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Bob Barnetson\" <bbarnetson@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Bob Barnetson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Political Economy of Workplace Injury in Canada, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=3</p><p>If you have been logged out, you can login again with the username bbarnetson.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=3\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(18,1048585,4,NULL,'2025-02-06 05:30:40',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=4\">How Canadians Communicate: Contexts of Canadian Popular Culture</a><br />Bart Beaty, Toby Miller, Ira Wagman, Will Straw</p><p><b>Abstract</b></p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(19,1048585,4,NULL,'2025-02-06 05:30:40',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Bart Beaty\" <bbeaty@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Bart Beaty,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4</p><p>If you have been logged out, you can login again with the username bbeaty.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(20,1048585,4,NULL,'2025-02-06 05:30:40',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Toby Miller\" <tmiller@mailinator.com>, \"Ira Wagman\" <awagman@mailinator.com>, \"Will Straw\" <wstraw@mailinator.com>','','','Submission confirmation','<p>Dear Toby Miller, Ira Wagman, Will Straw,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Bart Beaty, provided the following details:</p><p>How Canadians Communicate: Contexts of Canadian Popular Culture<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(21,1048585,4,3,'2025-02-06 05:30:49',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Bart Beaty\" <bbeaty@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(22,1048585,4,3,'2025-02-06 05:30:54',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Aisla McCrae\" <amccrae@mailinator.com>','','','Manuscript Review Request','<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4\">How Canadians Communicate: Contexts of Canadian Popular Culture</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(23,1048585,4,3,'2025-02-06 05:30:58',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Bart Beaty\" <bbeaty@mailinator.com>','','','Your submission has been sent for review','<p>Dear Bart Beaty,</p><p>I am pleased to inform you that an editor has reviewed your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(24,1048585,4,3,'2025-02-06 05:31:03',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Al Zacharia\" <alzacharia@mailinator.com>','','','Manuscript Review Request','<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4\">How Canadians Communicate: Contexts of Canadian Popular Culture</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>What does Canadian popular culture say about the construction and negotiation of Canadian national identity? This third volume of How Canadians Communicate describes the negotiation of popular culture across terrains where national identity is built by producers and audiences, government and industry, history and geography, ethnicities and citizenships.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=4\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(25,1048585,4,3,'2025-02-06 05:31:08',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Bart Beaty\" <bbeaty@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Bart Beaty,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
+(26,1048585,4,3,'2025-02-06 05:31:19',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Bart Beaty\" <bbeaty@mailinator.com>','','','Next steps for publishing your submission','<p>Dear Bart Beaty,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, How Canadians Communicate: Contexts of Canadian Popular Culture, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=4\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
+(27,1048585,5,NULL,'2025-02-06 05:32:17',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5\">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(28,1048585,5,NULL,'2025-02-06 05:32:17',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5\">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(29,1048585,5,NULL,'2025-02-06 05:32:17',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Bomb Canada and Other Unkind Remarks in the American Media','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=5\">Bomb Canada and Other Unkind Remarks in the American Media</a><br />Chantal Allan</p><p><b>Abstract</b></p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(30,1048585,5,NULL,'2025-02-06 05:32:17',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Chantal Allan\" <callan@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Chantal Allan,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Bomb Canada and Other Unkind Remarks in the American Media, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5</p><p>If you have been logged out, you can login again with the username callan.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(31,1048585,5,3,'2025-02-06 05:32:26',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Chantal Allan\" <callan@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(32,1048585,5,3,'2025-02-06 05:32:32',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Paul Hudson\" <phudson@mailinator.com>','','','Manuscript Review Request','<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5\">Bomb Canada and Other Unkind Remarks in the American Media</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(33,1048585,5,3,'2025-02-06 05:32:37',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Chantal Allan\" <callan@mailinator.com>','','','Your submission has been sent for review','<p>Dear Chantal Allan,</p><p>I am pleased to inform you that an editor has reviewed your submission, Bomb Canada and Other Unkind Remarks in the American Media, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(34,1048585,5,3,'2025-02-06 05:32:42',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5\">Bomb Canada and Other Unkind Remarks in the American Media</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Canada and the United States. Two nations, one border, same continent. Anti-American sentiment in Canada is well documented, but what have Americans had to say about their northern neighbour? Allan examines how the American media has portrayed Canada, from Confederation to Obama’s election. By examining major events that have tested bilateral relations, Bomb Canada tracks the history of anti-Canadianism in the U.S. Informative, thought provoking and at times hilarious, this book reveals another layer of the complex relationship between Canada and the United States.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=5\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(35,1048585,5,3,'2025-02-06 05:32:47',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Chantal Allan\" <callan@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Chantal Allan,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Bomb Canada and Other Unkind Remarks in the American Media, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
+(36,1048585,5,3,'2025-02-06 05:32:58',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Chantal Allan\" <callan@mailinator.com>','','','Next steps for publishing your submission','<p>Dear Chantal Allan,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, Bomb Canada and Other Unkind Remarks in the American Media, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=5\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
+(37,1048585,6,NULL,'2025-02-06 05:34:07',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6\">The Information Literacy User’s Guide</a><br />Deborah Bernnard, Greg Bobish, Daryl Bullis, Jenna Hecker</p><p><b>Abstract</b></p>Good researchers have a host of tools at their disposal that make navigating today’s complex information ecosystem much more manageable. Gaining the knowledge, abilities, and self-reflection necessary to be a good researcher helps not only in academic settings, but is invaluable in any career, and throughout one’s life. The Information Literacy User’s Guide will start you on this route to success.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(38,1048585,6,NULL,'2025-02-06 05:34:07',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Deborah Bernnard\" <dbernnard@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Deborah Bernnard,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, The Information Literacy User’s Guide, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=6</p><p>If you have been logged out, you can login again with the username dbernnard.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=6\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(39,1048585,6,NULL,'2025-02-06 05:34:07',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Greg Bobish\" <gbobish@mailinator.com>, \"Daryl Bullis\" <dbullis@mailinator.com>, \"Jenna Hecker\" <jhecker@mailinator.com>','','','Submission confirmation','<p>Dear Greg Bobish, Daryl Bullis, Jenna Hecker,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Deborah Bernnard, provided the following details:</p><p>The Information Literacy User’s Guide<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(40,1048585,6,3,'2025-02-06 05:34:16',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Deborah Bernnard\" <dbernnard@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Deborah Bernnard,</p><p>I am pleased to inform you that an editor has reviewed your submission, The Information Literacy User’s Guide, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(41,1048585,7,NULL,'2025-02-06 05:35:26',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=7\">Accessible Elements: Teaching Science Online and at a Distance</a><br />Dietmar Kennepohl, Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer</p><p><b>Abstract</b></p>Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(42,1048585,7,NULL,'2025-02-06 05:35:26',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Dietmar Kennepohl\" <dkennepohl@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Dietmar Kennepohl,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Accessible Elements: Teaching Science Online and at a Distance, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=7</p><p>If you have been logged out, you can login again with the username dkennepohl.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=7\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(43,1048585,7,NULL,'2025-02-06 05:35:26',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Terry Anderson\" <tanderson@mailinator.com>, \"Paul Gorsky\" <pgorsky@mailinator.com>, \"Gale Parchoma\" <gparchoma@mailinator.com>, \"Stuart Palmer\" <spalmer@mailinator.com>','','','Submission confirmation','<p>Dear Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Dietmar Kennepohl, provided the following details:</p><p>Accessible Elements: Teaching Science Online and at a Distance<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(44,1048585,7,3,'2025-02-06 05:35:35',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Dietmar Kennepohl\" <dkennepohl@mailinator.com>','','','Your submission has been sent for review','<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that an editor has reviewed your submission, Accessible Elements: Teaching Science Online and at a Distance, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(45,1048585,7,3,'2025-02-06 05:35:41',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Manuscript Review Request','<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=7\">Accessible Elements: Teaching Science Online and at a Distance</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Accessible Elements informs science educators about current practices in online and distance education: distance-delivered methods for laboratory coursework, the requisite administrative and institutional aspects of online and distance teaching, and the relevant educational theory.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=7\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(46,1048585,7,3,'2025-02-06 05:35:46',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Dietmar Kennepohl\" <dkennepohl@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Dietmar Kennepohl,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Accessible Elements: Teaching Science Online and at a Distance, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=7\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
+(47,1048585,8,NULL,'2025-02-06 05:36:02',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8\">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(48,1048585,8,NULL,'2025-02-06 05:36:02',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Editorial','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8\">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(49,1048585,8,NULL,'2025-02-06 05:36:02',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Editorial','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8\">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(50,1048585,8,NULL,'2025-02-06 05:36:02',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Editorial','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=8\">Editorial</a><br /></p><p><b>Abstract</b></p>A Note From The Publisher<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(51,1048585,9,NULL,'2025-02-06 05:36:43',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"David Buskins\" <dbuskins@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear David Buskins,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=9\">Enabling Openness: The future of the information society in Latin America and the Caribbean</a><br />Fernando Perini, Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich</p><p><b>Abstract</b></p>In recent years, the Internet and other network technologies have emerged as a central issue for development in Latin America and the Caribbean. They have shown their potential to increase productivity and economic competitiveness, to create new ways to deliver education and health services, and to be driving forces for the modernization of the provision of public services.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(52,1048585,9,NULL,'2025-02-06 05:36:43',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Fernando Perini\" <fperini@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Fernando Perini,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=9</p><p>If you have been logged out, you can login again with the username fperini.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=9\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(53,1048585,9,NULL,'2025-02-06 05:36:43',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Robin Mansell\" <rmansell@mailinator.com>, \"Hernan Galperin\" <hgalperin@mailinator.com>, \"Pablo Bello\" <pbello@mailinator.com>, \"Eleonora Rabinovich\" <erabinovich@mailinator.com>','','','Submission confirmation','<p>Dear Robin Mansell, Hernan Galperin, Pablo Bello, Eleonora Rabinovich,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Fernando Perini, provided the following details:</p><p>Enabling Openness: The future of the information society in Latin America and the Caribbean<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(54,1048585,9,3,'2025-02-06 05:36:53',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Fernando Perini\" <fperini@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Fernando Perini,</p><p>I am pleased to inform you that an editor has reviewed your submission, Enabling Openness: The future of the information society in Latin America and the Caribbean, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(55,1048585,10,NULL,'2025-02-06 05:38:09',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10\">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(56,1048585,10,NULL,'2025-02-06 05:38:09',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10\">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(57,1048585,10,NULL,'2025-02-06 05:38:09',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Lost Tracks: Buffalo National Park, 1909-1939','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=10\">Lost Tracks: Buffalo National Park, 1909-1939</a><br />Jennifer Brower</p><p><b>Abstract</b></p>While contemporaries and historians alike hailed the establishment of Buffalo National Park in Wainwright, Alberta as a wildlife saving effort, the political climate of the early 20th century worked against it. The Canadian Parks Branch was never sufficiently funded to operate BNP effectively or to remedy the crises the animals faced as a result. Cross-breeding experiments with bison and domestic cattle proved unfruitful. Attempts at commercializing the herd had no success. Ultimately, the Department of National Defence repurposed the park for military training and the bison disappeared once more.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(58,1048585,10,NULL,'2025-02-06 05:38:09',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Jennifer Brower\" <jbrower@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Jennifer Brower,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Lost Tracks: Buffalo National Park, 1909-1939, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=10</p><p>If you have been logged out, you can login again with the username jbrower.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=10\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(59,1048585,11,NULL,'2025-02-06 05:38:30',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Dreamwork','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(60,1048585,11,NULL,'2025-02-06 05:38:30',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Dreamwork','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(61,1048585,11,NULL,'2025-02-06 05:38:30',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Dreamwork','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">Dreamwork</a><br />Jonathan Locke Hart</p><p><b>Abstract</b></p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(62,1048585,11,NULL,'2025-02-06 05:38:30',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Jonathan Locke Hart\" <jlockehart@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Jonathan Locke Hart,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Dreamwork, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=11</p><p>If you have been logged out, you can login again with the username jlockehart.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=11\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(63,1048585,11,3,'2025-02-06 05:38:38',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Jonathan Locke Hart\" <jlockehart@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(64,1048585,11,3,'2025-02-06 05:38:43',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Aisla McCrae\" <amccrae@mailinator.com>','','','Manuscript Review Request','<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(65,1048585,11,3,'2025-02-06 05:38:47',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Jonathan Locke Hart\" <jlockehart@mailinator.com>','','','Your submission has been sent for review','<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that an editor has reviewed your submission, Dreamwork, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(66,1048585,11,3,'2025-02-06 05:38:52',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Manuscript Review Request','<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(67,1048585,11,3,'2025-02-06 05:38:55',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">Dreamwork</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Dreamwork is a poetic exploration of the then and there, here and now, of landscapes and inscapes over time. It is part of a poetry series on dream and its relation to actuality. The poems explore past, present, and future in different places from Canada through New Jersey, New York and New England to England and Europe, part of the speaker’s journey. A typology of home and displacement, of natural beauty and industrial scars unfolds in the movement of the book.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=11\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(68,1048585,11,10,'2025-02-06 05:39:00',1073741829,'\"Adela Gallego\" <agallego@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Adela Gallego accepted review assignment for #11 Locke Hart — Dreamwork','<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-06</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
+(69,1048585,11,12,'2025-02-06 05:39:09',1073741829,'\"Gonzalo Favio\" <gfavio@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Gonzalo Favio accepted review assignment for #11 Locke Hart — Dreamwork','<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">#11 Locke Hart — Dreamwork</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-06</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=11\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
+(70,1048585,11,3,'2025-02-06 05:39:24',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Jonathan Locke Hart\" <jlockehart@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Jonathan Locke Hart,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Dreamwork, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=11\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
+(71,1048585,11,3,'2025-02-06 05:39:24',1073741825,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Thank you for your review','<p>Dear Adela Gallego,</p>\n<p>Thank you for completing your review of the submission, Dreamwork, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers\' comments and the editor\'s decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor\'s decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers\' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>'),
+(72,1048585,11,3,'2025-02-06 05:39:24',1073741825,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Thank you for your review','<p>Dear Gonzalo Favio,</p>\n<p>Thank you for completing your review of the submission, Dreamwork, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers\' comments and the editor\'s decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor\'s decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers\' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>'),
+(73,1048585,12,NULL,'2025-02-06 05:39:57',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Connecting ICTs to Development','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12\">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(74,1048585,12,NULL,'2025-02-06 05:39:57',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Connecting ICTs to Development','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12\">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(75,1048585,12,NULL,'2025-02-06 05:39:57',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Connecting ICTs to Development','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12\">Connecting ICTs to Development</a><br />Laurent Elder, Heloise Emdon, Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman</p><p><b>Abstract</b></p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(76,1048585,12,NULL,'2025-02-06 05:39:57',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Laurent Elder\" <lelder@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Laurent Elder,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Connecting ICTs to Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=12</p><p>If you have been logged out, you can login again with the username lelder.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=12\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(77,1048585,12,NULL,'2025-02-06 05:39:57',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Frank Tulus\" <ftulus@mailinator.com>, \"Raymond Hyma\" <rhyma@mailinator.com>, \"John Valk\" <jvalk@mailinator.com>, \"Khaled Fourati\" <fkourati@mailinator.com>, \"Jeremy de Beer\" <jdebeer@mailinator.com>, \"Sara Bannerman\" <sbannerman@mailinator.com>','','','Submission confirmation','<p>Dear Frank Tulus, Raymond Hyma, John Valk, Khaled Fourati, Jeremy de Beer, Sara Bannerman,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Laurent Elder, provided the following details:</p><p>Connecting ICTs to Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(78,1048585,12,3,'2025-02-06 05:40:06',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Laurent Elder\" <lelder@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Laurent Elder,</p><p>I am pleased to inform you that an editor has reviewed your submission, Connecting ICTs to Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(79,1048585,12,3,'2025-02-06 05:40:12',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Julie Janssen\" <jjanssen@mailinator.com>','','','Manuscript Review Request','<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(80,1048585,12,3,'2025-02-06 05:40:15',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Paul Hudson\" <phudson@mailinator.com>','','','Manuscript Review Request','<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(81,1048585,12,3,'2025-02-06 05:40:18',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Aisla McCrae\" <amccrae@mailinator.com>','','','Manuscript Review Request','<p>Dear Aisla McCrae,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">Connecting ICTs to Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Over the past two decades, projects supported by the International Development Research Centre (IDRC) have critically examined how information and communications technologies (ICTs) can be used to improve learning, empower the disenfranchised, generate income opportunities for the poor, and facilitate access to healthcare in Africa, Asia, Latin America and the Caribbean. Considering that most development institutions and governments are currently attempting to integrate ICTs into their practices, it is an opportune time to reflect on the research findings that have emerged from IDRC’s work and research in this area.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=12\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(82,1048585,12,8,'2025-02-06 05:40:23',1073741829,'\"Paul Hudson\" <phudson@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Paul Hudson accepted review assignment for #12 Elder et al. — Connecting ICTs to Development','<p>Dear Ramiro Vaca,</p><p>Paul Hudson has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12\">#12 Elder et al. — Connecting ICTs to Development</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-06</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=12\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
+(83,1048585,13,NULL,'2025-02-06 05:40:55',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(84,1048585,13,NULL,'2025-02-06 05:40:55',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(85,1048585,13,NULL,'2025-02-06 05:40:55',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Mobile Learning: Transforming the Delivery of Education and Training','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a><br />Mohamed Ally, John Traxler, Marguerite Koole, Torstein Rekkedal</p><p><b>Abstract</b></p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(86,1048585,13,NULL,'2025-02-06 05:40:55',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Mohamed Ally\" <mally@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Mohamed Ally,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Mobile Learning: Transforming the Delivery of Education and Training, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=13</p><p>If you have been logged out, you can login again with the username mally.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=13\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(87,1048585,13,NULL,'2025-02-06 05:40:56',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"John Traxler\" <jtraxler@mailinator.com>, \"Marguerite Koole\" <mkoole@mailinator.com>, \"Torstein Rekkedal\" <trekkedal@mailinator.com>','','','Submission confirmation','<p>Dear John Traxler, Marguerite Koole, Torstein Rekkedal,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Mohamed Ally, provided the following details:</p><p>Mobile Learning: Transforming the Delivery of Education and Training<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(88,1048585,13,3,'2025-02-06 05:41:04',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Mohamed Ally\" <mally@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(89,1048585,13,3,'2025-02-06 05:41:10',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Paul Hudson\" <phudson@mailinator.com>','','','Manuscript Review Request','<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(90,1048585,13,3,'2025-02-06 05:41:14',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Mohamed Ally\" <mally@mailinator.com>','','','Your submission has been sent for review','<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that an editor has reviewed your submission, Mobile Learning: Transforming the Delivery of Education and Training, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(91,1048585,13,3,'2025-02-06 05:41:20',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Manuscript Review Request','<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(92,1048585,13,3,'2025-02-06 05:41:22',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Al Zacharia\" <alzacharia@mailinator.com>','','','Manuscript Review Request','<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(93,1048585,13,3,'2025-02-06 05:41:25',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">Mobile Learning: Transforming the Delivery of Education and Training</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>This collection is for anyone interested in the use of mobile technology for various distance learning applications. Readers will discover how to design learning materials for delivery on mobile technology and become familiar with the best practices of other educators, trainers, and researchers in the field, as well as the most recent initiatives in mobile learning research. Businesses and governments can learn how to deliver timely information to staff using mobile devices. Professors can use this book as a textbook for courses on distance education, mobile learning, and educational technology.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=13\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(94,1048585,13,10,'2025-02-06 05:41:31',1073741829,'\"Adela Gallego\" <agallego@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Adela Gallego accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training','<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-06</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
+(95,1048585,13,12,'2025-02-06 05:41:40',1073741829,'\"Gonzalo Favio\" <gfavio@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Gonzalo Favio accepted review assignment for #13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training','<p>Dear Ramiro Vaca,</p><p>Gonzalo Favio has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">#13 Ally et al. — Mobile Learning: Transforming the Delivery of Education and Training</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-06</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=13\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
+(96,1048585,13,3,'2025-02-06 05:41:55',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Mohamed Ally\" <mally@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Mohamed Ally,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, Mobile Learning: Transforming the Delivery of Education and Training, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=13\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
+(97,1048585,13,3,'2025-02-06 05:41:55',1073741825,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Thank you for your review','<p>Dear Adela Gallego,</p>\n<p>Thank you for completing your review of the submission, Mobile Learning: Transforming the Delivery of Education and Training, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers\' comments and the editor\'s decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor\'s decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers\' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>'),
+(98,1048585,13,3,'2025-02-06 05:41:55',1073741825,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Thank you for your review','<p>Dear Gonzalo Favio,</p>\n<p>Thank you for completing your review of the submission, Mobile Learning: Transforming the Delivery of Education and Training, for Public Knowledge Press. We appreciate your time and expertise in contributing to the quality of the work that we publish. We have shared your comments with the authors, along with our other reviewers\' comments and the editor\'s decision.</p>\n<p>Based on the feedback we received, we have notified the authors of the following:</p>\n<p>We have chosen to accept this submission without revisions.</p>\n<p>Your recommendation was considered alongside the recommendations of other reviewers before coming to a decision. Occasionally the editor\'s decision may differ from the recommendation made by one or more reviewers. The editor considers many factors, and does not take these decisions lightly. We are grateful for our reviewers\' expertise and suggestions.</p>\n<p>It has been a pleasure to work with you as a reviewer for Public Knowledge Press, and we hope to have the opportunity to work with you again in the future.</p>\n<p>Kind regards,</p>\n<p><p>Daniel Barnes</p></p>'),
+(99,1048585,14,NULL,'2025-02-06 05:42:38',805306370,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','You have been assigned as an editor on a submission to Public Knowledge Press','<p>Dear Daniel Barnes,</p><p>The following submission has been assigned to you to see through the editorial process.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=14\">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a><br />Michael Dawson, Brian Dupuis, Michael Wilson</p><p><b>Abstract</b></p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.<p>If you find the submission to be relevant for Public Knowledge Press, please forward the submission to the review stage by selecting \"Send to Internal Review\" and then assign reviewers by clicking \"Add Reviewer\".</p><p>If the submission is not appropriate for this press, please decline the submission.</p><p>Thank you in advance.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(100,1048585,14,NULL,'2025-02-06 05:42:38',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Michael Dawson\" <mdawson@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Michael Dawson,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14</p><p>If you have been logged out, you can login again with the username mdawson.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(101,1048585,14,NULL,'2025-02-06 05:42:38',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Brian Dupuis\" <bdupuis@mailinator.com>, \"Michael Wilson\" <mwilson@mailinator.com>','','','Submission confirmation','<p>Dear Brian Dupuis, Michael Wilson,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Michael Dawson, provided the following details:</p><p>From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(102,1048585,14,3,'2025-02-06 05:42:48',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Michael Dawson\" <mdawson@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(103,1048585,14,3,'2025-02-06 05:42:55',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Julie Janssen\" <jjanssen@mailinator.com>','','','Manuscript Review Request','<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14\">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(104,1048585,14,3,'2025-02-06 05:42:59',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Michael Dawson\" <mdawson@mailinator.com>','','','Your submission has been sent for review','<p>Dear Michael Dawson,</p><p>I am pleased to inform you that an editor has reviewed your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(105,1048585,14,3,'2025-02-06 05:43:05',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Al Zacharia\" <alzacharia@mailinator.com>','','','Manuscript Review Request','<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14\">From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>From Bricks to Brains introduces embodied cognitive science, and illustrates its foundational ideas through the construction and observation of LEGO Mindstorms robots. Discussing the characteristics that distinguish embodied cognitive science from classical cognitive science, From Bricks to Brains places a renewed emphasis on sensing and acting, the importance of embodiment, the exploration of distributed notions of control, and the development of theories by synthesizing simple systems and exploring their behaviour. Numerous examples are used to illustrate a key theme: the importance of an agent’s environment. Even simple agents, such as LEGO robots, are capable of exhibiting complex behaviour when they can sense and affect the world around them.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=14\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(106,1048585,14,3,'2025-02-06 05:43:10',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Michael Dawson\" <mdawson@mailinator.com>','','','Your submission has been accepted to Public Knowledge Press','<p>Dear Michael Dawson,</p><p>I am pleased to inform you that we have decided to accept your submission without further revision. After careful review, we found your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, to meet or exceed our expectations. We are excited to publish your piece in Public Knowledge Press and we thank you for choosing our press as a venue for your work.</p><p>Your submission will soon be published on the press site for Public Knowledge Press and you are welcome to include it in your list of publications. We recognize the hard work that goes into every successful submission and we want to congratulate you on reaching this stage.</p><p>Your submission will now undergo copy editing and formatting to prepare it for publication.</p><p>You will shortly receive further instructions.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
+(107,1048585,14,3,'2025-02-06 05:43:22',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Michael Dawson\" <mdawson@mailinator.com>','','','Next steps for publishing your submission','<p>Dear Michael Dawson,</p><p>I am writing from Public Knowledge Press to let you know that the editing of your submission, From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots, is complete. Your submission will now advance to the production stage, where the final galleys will be prepared for publication. We will contact you if we need any further assistance.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=14\">submission dashboard</a>.</p><p>Kind regards,</p><p>Daniel Barnes</p>'),
+(108,1048585,15,NULL,'2025-02-06 05:44:39',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15\">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(109,1048585,15,NULL,'2025-02-06 05:44:39',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15\">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(110,1048585,15,NULL,'2025-02-06 05:44:39',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Expansive Discourses: Urban Sprawl in Calgary, 1945-1978','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=15\">Expansive Discourses: Urban Sprawl in Calgary, 1945-1978</a><br />Max Foran</p><p><b>Abstract</b></p>A groundbreaking study of urban sprawl in Calgary after the Second World War. The interactions of land developers and the local government influenced how the pattern grew: developers met market demands and optimized profits by building houses as efficiently as possible, while the City had to consider wider planning constraints and infrastructure costs. Foran examines the complexity of their interactions from a historical perspective, why each party acted as it did, and where each can be criticized.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(111,1048585,15,NULL,'2025-02-06 05:44:40',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Max Foran\" <mforan@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Max Foran,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=15</p><p>If you have been logged out, you can login again with the username mforan.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=15\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(112,1048585,15,3,'2025-02-06 05:44:48',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Max Foran\" <mforan@mailinator.com>','','','Your submission has been sent for review','<p>Dear Max Foran,</p><p>I am pleased to inform you that an editor has reviewed your submission, Expansive Discourses: Urban Sprawl in Calgary, 1945-1978, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(113,1048585,16,NULL,'2025-02-06 05:45:31',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: A Designer\'s Log: Case Studies in Instructional Design','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(114,1048585,16,NULL,'2025-02-06 05:45:31',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: A Designer\'s Log: Case Studies in Instructional Design','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(115,1048585,16,NULL,'2025-02-06 05:45:31',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: A Designer\'s Log: Case Studies in Instructional Design','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a><br />Michael Power</p><p><b>Abstract</b></p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(116,1048585,16,NULL,'2025-02-06 05:45:31',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Michael Power\" <mpower@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Michael Power,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, A Designer\'s Log: Case Studies in Instructional Design, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=16</p><p>If you have been logged out, you can login again with the username mpower.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=16\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(117,1048585,16,3,'2025-02-06 05:45:41',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Michael Power\" <mpower@mailinator.com>','','','Your submission has been sent for review','<p>Dear Michael Power,</p><p>I am pleased to inform you that an editor has reviewed your submission, A Designer\'s Log: Case Studies in Instructional Design, and has decided to send it for peer review. An editor will identify qualified reviewers who will provide feedback on your submission.</p><p>This journal conducts double-anonymous peer review. The reviewers will not see any identifying information about you or your co-authors. Similarly, you will not know who reviewed your submission, and you will not hear from the reviewers directly. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission to peer review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(118,1048585,16,3,'2025-02-06 05:45:47',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Adela Gallego\" <agallego@mailinator.com>','','','Manuscript Review Request','<p>Dear Adela Gallego,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(119,1048585,16,3,'2025-02-06 05:45:50',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Al Zacharia\" <alzacharia@mailinator.com>','','','Manuscript Review Request','<p>Dear Al Zacharia,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(120,1048585,16,3,'2025-02-06 05:45:53',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Gonzalo Favio\" <gfavio@mailinator.com>','','','Manuscript Review Request','<p>Dear Gonzalo Favio,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">A Designer\'s Log: Case Studies in Instructional Design</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>Books and articles on instructional design in online learning abound but rarely do we get such a comprehensive picture of what instructional designers do, how they do it, and the problems they solve as their university changes. Power documents the emergence of an adapted instructional design model for transforming courses from single-mode to dual-mode instruction, making this designer’s log a unique contribution to the fi eld of online learning.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=16\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(121,1048585,16,10,'2025-02-06 05:45:59',1073741829,'\"Adela Gallego\" <agallego@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','Review accepted: Adela Gallego accepted review assignment for #16 Power — A Designer\'s Log: Case Studies in Instructional Design','<p>Dear Ramiro Vaca,</p><p>Adela Gallego has accepted the following review:</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16\">#16 Power — A Designer\'s Log: Case Studies in Instructional Design</a><br /><b>Type:</b> Anonymous Reviewer/Anonymous Author</p><p><b>Review Due:</b> 2025-03-06</p><p>Login to <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=16\">view all reviewer assignments</a> for this submission.</p><br><br>—<br>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.'),
+(122,1048585,17,NULL,'2025-02-06 05:46:54',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"admin admin\" <pkpadmin@mailinator.com>','','','A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development','<p>Dear admin admin,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17\">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(123,1048585,17,NULL,'2025-02-06 05:46:54',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Ramiro Vaca\" <rvaca@mailinator.com>','','','A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development','<p>Dear Ramiro Vaca,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17\">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(124,1048585,17,NULL,'2025-02-06 05:46:54',805306373,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Daniel Barnes\" <dbarnes@mailinator.com>','','','A new submission needs an editor to be assigned: Open Development: Networked Innovations in International Development','<p>Dear Daniel Barnes,</p><p>The following submission has been submitted and there is no editor assigned.</p><p><a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=17\">Open Development: Networked Innovations in International Development</a><br />Matthew Smith, Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith</p><p><b>Abstract</b></p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.<p>Please assign an editor who will be responsible for the submission by clicking the title above and assigning an editor under the Participants section.</p><hr><p>This is an automated email from <a href=\"http://localhost/index.php/publicknowledge/en\">Public Knowledge Press</a>.</p>'),
+(125,1048585,17,NULL,'2025-02-06 05:46:54',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Matthew Smith\" <msmith@mailinator.com>','','','Thank you for your submission to Public Knowledge Press','<p>Dear Matthew Smith,</p><p>Thank you for your submission to Public Knowledge Press. We have received your submission, Open Development: Networked Innovations in International Development, and a member of our editorial team will see it soon. You will be sent an email when an initial decision is made, and we may contact you for further information.</p><p>You can view your submission and track its progress through the editorial process at the following location:</p><p>Submission URL: http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=17</p><p>If you have been logged out, you can login again with the username msmith.</p><p>If you have any questions, please contact me from your <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/mySubmissions?workflowSubmissionId=17\">submission dashboard</a>.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(126,1048585,17,NULL,'2025-02-06 05:46:54',536870914,'\"Ramiro Vaca\" <rvaca@mailinator.com>','\"Yochai Benkler\" <ybenkler@mailinator.com>, \"Katherine Reilly\" <kreilly@mailinator.com>, \"Melissa Loudon\" <mloudon@mailinator.com>, \"Ulrike Rivett\" <urivett@mailinator.com>, \"Mark Graham\" <mgraham@mailinator.com>, \"Håvard Haarstad\" <hhaarstad@mailinator.com>, \"Marshall Smith\" <masmith@mailinator.com>','','','Submission confirmation','<p>Dear Yochai Benkler, Katherine Reilly, Melissa Loudon, Ulrike Rivett, Mark Graham, Håvard Haarstad, Marshall Smith,</p><p>You have been named as a co-author on a submission to Public Knowledge Press. The submitter, Matthew Smith, provided the following details:</p><p>Open Development: Networked Innovations in International Development<br></p><p>If any of these details are incorrect, or you do not wish to be named on this submission, please contact me.</p><p>Thank you for considering Public Knowledge Press as a venue for your work.</p><p>Kind regards,</p><br><br>—<br><p>This is an automated message from <a href=\"http://localhost/index.php/publicknowledge\">Public Knowledge Press</a>.</p>'),
+(127,1048585,17,3,'2025-02-06 05:47:05',805306369,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Matthew Smith\" <msmith@mailinator.com>','','','Your submission has been sent for internal review','<p>Dear Matthew Smith,</p><p>I am pleased to inform you that an editor has reviewed your submission, Open Development: Networked Innovations in International Development, and has decided to send it for internal review. You will hear from us with feedback from the reviewers and information about the next steps.</p><p>Please note that sending the submission for internal review does not guarantee that it will be published. We will consider the reviewers\' recommendations before deciding to accept the submission for publication. You may be asked to make revisions and respond to the reviewers\' comments before a final decision is made.</p><p>If you have any questions, please contact me from your submission dashboard.</p><p><p>Daniel Barnes</p></p>'),
+(128,1048585,17,3,'2025-02-06 05:47:12',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Julie Janssen\" <jjanssen@mailinator.com>','','','Manuscript Review Request','<p>Dear Julie Janssen,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17\">Open Development: Networked Innovations in International Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>'),
+(129,1048585,17,3,'2025-02-06 05:47:15',1073741833,'\"Daniel Barnes\" <dbarnes@mailinator.com>','\"Paul Hudson\" <phudson@mailinator.com>','','','Manuscript Review Request','<p>Dear Paul Hudson,</p>\r\n<p>I believe that you would serve as an excellent reviewer for a submission to Public Knowledge Press. The submission\'s title and abstract are below, and I hope that you will consider undertaking this important task for us.</p>\r\n<p>If you are able to review this submission, your review is due by 2025-03-06. You can view the submission, upload review files, and submit your review by logging into the press and following the steps at the link below.</p>\r\n<p><a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17\">Open Development: Networked Innovations in International Development</a></p>\r\n<p><strong>Abstract</strong></p>\r\n<p>The emergence of open networked models made possible by digital technology has the potential to transform international development. Open network structures allow people to come together to share information, organize, and collaborate. Open development harnesses this power to create new organizational forms and improve people’s lives; it is not only an agenda for research and practice but also a statement about how to approach international development. In this volume, experts explore a variety of applications of openness, addressing challenges as well as opportunities.</p>\r\n<p>Please <a href=\"http://localhost/index.php/publicknowledge/en/reviewer/submission?submissionId=17\">accept or decline</a> the review by <strong>2025-03-06</strong>.</p>\r\n<p>You may contact me with any questions about the submission or the review process.</p>\r\n<p>Thank you for considering this request. Your help is much appreciated.</p>\r\n<p>Kind regards,</p>\r\n<p>Daniel Barnes</p>');
 /*!40000 ALTER TABLE `email_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1270,7 +1270,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_log_users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_log_users` (
   `email_log_user_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `email_log_id` bigint(20) NOT NULL,
@@ -1420,7 +1420,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates` (
   `email_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `email_key` varchar(255) NOT NULL COMMENT 'Unique identifier for this email.',
@@ -1458,7 +1458,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_default_data`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_default_data` (
   `email_templates_default_data_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `email_key` varchar(255) NOT NULL COMMENT 'Unique identifier for this email.',
@@ -1615,7 +1615,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `email_templates_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `email_templates_settings` (
   `email_template_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `email_id` bigint(20) NOT NULL,
@@ -1644,7 +1644,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `event_log`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_log` (
   `log_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `assoc_type` bigint(20) NOT NULL,
@@ -1668,528 +1668,528 @@ CREATE TABLE `event_log` (
 LOCK TABLES `event_log` WRITE;
 /*!40000 ALTER TABLE `event_log` DISABLE KEYS */;
 INSERT INTO `event_log` VALUES
-(1,1048585,1,19,'2025-02-04 05:42:46',268435458,'submission.event.general.metadataUpdated',0),
-(2,1048585,1,19,'2025-02-04 05:42:46',268435458,'submission.event.general.metadataUpdated',0),
-(3,515,1,19,'2025-02-04 05:42:49',1342177281,'submission.event.fileUploaded',0),
-(4,1048585,1,19,'2025-02-04 05:42:49',1342177288,'submission.event.fileRevised',0),
-(5,515,1,19,'2025-02-04 05:42:49',1342177296,'submission.event.fileEdited',0),
-(6,515,2,19,'2025-02-04 05:42:50',1342177281,'submission.event.fileUploaded',0),
-(7,1048585,1,19,'2025-02-04 05:42:50',1342177288,'submission.event.fileRevised',0),
-(8,515,2,19,'2025-02-04 05:42:50',1342177296,'submission.event.fileEdited',0),
-(9,515,3,19,'2025-02-04 05:42:51',1342177281,'submission.event.fileUploaded',0),
-(10,1048585,1,19,'2025-02-04 05:42:51',1342177288,'submission.event.fileRevised',0),
-(11,515,3,19,'2025-02-04 05:42:51',1342177296,'submission.event.fileEdited',0),
-(12,1048585,1,19,'2025-02-04 05:43:06',268435457,'submission.event.submissionSubmitted',0),
-(13,1048585,1,3,'2025-02-04 05:43:13',805306371,'editor.submission.decision.sendExternalReview.log',0),
-(14,515,4,3,'2025-02-04 05:43:13',1342177281,'submission.event.fileUploaded',0),
-(15,1048585,1,3,'2025-02-04 05:43:13',1342177288,'submission.event.fileRevised',0),
-(16,515,5,3,'2025-02-04 05:43:14',1342177281,'submission.event.fileUploaded',0),
-(17,1048585,1,3,'2025-02-04 05:43:14',1342177288,'submission.event.fileRevised',0),
-(18,515,6,3,'2025-02-04 05:43:14',1342177281,'submission.event.fileUploaded',0),
-(19,1048585,1,3,'2025-02-04 05:43:14',1342177288,'submission.event.fileRevised',0),
-(20,1048585,1,3,'2025-02-04 05:43:18',1073741825,'log.review.reviewerAssigned',0),
-(21,1048585,1,3,'2025-02-04 05:43:22',805306371,'editor.submission.decision.accept.log',0),
-(22,1048585,1,3,'2025-02-04 05:43:27',268435459,'submission.event.participantAdded',0),
-(23,1048585,2,20,'2025-02-04 05:43:35',268435458,'submission.event.general.metadataUpdated',0),
-(24,1048585,2,20,'2025-02-04 05:43:36',268435458,'submission.event.general.metadataUpdated',0),
-(25,515,7,20,'2025-02-04 05:43:45',1342177281,'submission.event.fileUploaded',0),
-(26,1048585,2,20,'2025-02-04 05:43:45',1342177288,'submission.event.fileRevised',0),
-(27,1048585,2,20,'2025-02-04 05:43:45',268435458,'submission.event.general.metadataUpdated',0),
-(28,515,7,20,'2025-02-04 05:43:45',1342177296,'submission.event.fileEdited',0),
-(29,515,8,20,'2025-02-04 05:43:46',1342177281,'submission.event.fileUploaded',0),
-(30,1048585,2,20,'2025-02-04 05:43:46',1342177288,'submission.event.fileRevised',0),
-(31,515,8,20,'2025-02-04 05:43:46',1342177296,'submission.event.fileEdited',0),
-(32,515,9,20,'2025-02-04 05:43:47',1342177281,'submission.event.fileUploaded',0),
-(33,1048585,2,20,'2025-02-04 05:43:47',1342177288,'submission.event.fileRevised',0),
-(34,515,9,20,'2025-02-04 05:43:47',1342177296,'submission.event.fileEdited',0),
-(35,515,10,20,'2025-02-04 05:43:48',1342177281,'submission.event.fileUploaded',0),
-(36,1048585,2,20,'2025-02-04 05:43:48',1342177288,'submission.event.fileRevised',0),
-(37,515,10,20,'2025-02-04 05:43:48',1342177296,'submission.event.fileEdited',0),
-(38,515,11,20,'2025-02-04 05:43:49',1342177281,'submission.event.fileUploaded',0),
-(39,1048585,2,20,'2025-02-04 05:43:49',1342177288,'submission.event.fileRevised',0),
-(40,515,11,20,'2025-02-04 05:43:49',1342177296,'submission.event.fileEdited',0),
-(41,515,11,20,'2025-02-04 05:43:50',1342177282,'submission.event.fileDeleted',0),
-(42,1048585,2,20,'2025-02-04 05:45:09',268435457,'submission.event.submissionSubmitted',0),
-(43,1048585,2,3,'2025-02-04 05:45:25',805306371,'editor.submission.decision.sendExternalReview.log',0),
-(44,515,12,3,'2025-02-04 05:45:25',1342177281,'submission.event.fileUploaded',0),
-(45,1048585,2,3,'2025-02-04 05:45:25',1342177288,'submission.event.fileRevised',0),
-(46,515,13,3,'2025-02-04 05:45:25',1342177281,'submission.event.fileUploaded',0),
-(47,1048585,2,3,'2025-02-04 05:45:25',1342177288,'submission.event.fileRevised',0),
-(48,515,14,3,'2025-02-04 05:45:25',1342177281,'submission.event.fileUploaded',0),
-(49,1048585,2,3,'2025-02-04 05:45:25',1342177288,'submission.event.fileRevised',0),
-(50,515,15,3,'2025-02-04 05:45:25',1342177281,'submission.event.fileUploaded',0),
-(51,1048585,2,3,'2025-02-04 05:45:25',1342177288,'submission.event.fileRevised',0),
-(52,1048585,2,3,'2025-02-04 05:45:32',1073741825,'log.review.reviewerAssigned',0),
-(53,1048585,2,3,'2025-02-04 05:45:35',1073741825,'log.review.reviewerAssigned',0),
-(54,1048585,3,21,'2025-02-04 05:45:43',268435458,'submission.event.general.metadataUpdated',0),
-(55,1048585,3,21,'2025-02-04 05:45:43',268435458,'submission.event.general.metadataUpdated',0),
-(56,515,16,21,'2025-02-04 05:45:46',1342177281,'submission.event.fileUploaded',0),
-(57,1048585,3,21,'2025-02-04 05:45:46',1342177288,'submission.event.fileRevised',0),
-(58,515,16,21,'2025-02-04 05:45:46',1342177296,'submission.event.fileEdited',0),
-(59,515,17,21,'2025-02-04 05:45:46',1342177281,'submission.event.fileUploaded',0),
-(60,1048585,3,21,'2025-02-04 05:45:46',1342177288,'submission.event.fileRevised',0),
-(61,515,17,21,'2025-02-04 05:45:47',1342177296,'submission.event.fileEdited',0),
-(62,515,18,21,'2025-02-04 05:45:47',1342177281,'submission.event.fileUploaded',0),
-(63,1048585,3,21,'2025-02-04 05:45:47',1342177288,'submission.event.fileRevised',0),
-(64,515,18,21,'2025-02-04 05:45:47',1342177296,'submission.event.fileEdited',0),
-(65,515,19,21,'2025-02-04 05:45:48',1342177281,'submission.event.fileUploaded',0),
-(66,1048585,3,21,'2025-02-04 05:45:48',1342177288,'submission.event.fileRevised',0),
-(67,515,19,21,'2025-02-04 05:45:48',1342177296,'submission.event.fileEdited',0),
-(68,515,20,21,'2025-02-04 05:45:49',1342177281,'submission.event.fileUploaded',0),
-(69,1048585,3,21,'2025-02-04 05:45:49',1342177288,'submission.event.fileRevised',0),
-(70,515,20,21,'2025-02-04 05:45:49',1342177296,'submission.event.fileEdited',0),
-(71,1048585,3,21,'2025-02-04 05:46:16',268435457,'submission.event.submissionSubmitted',0),
-(72,1048585,4,22,'2025-02-04 05:46:23',268435458,'submission.event.general.metadataUpdated',0),
-(73,1048585,4,22,'2025-02-04 05:46:23',268435458,'submission.event.general.metadataUpdated',0),
-(74,515,21,22,'2025-02-04 05:46:25',1342177281,'submission.event.fileUploaded',0),
-(75,1048585,4,22,'2025-02-04 05:46:25',1342177288,'submission.event.fileRevised',0),
-(76,515,21,22,'2025-02-04 05:46:25',1342177296,'submission.event.fileEdited',0),
-(77,515,22,22,'2025-02-04 05:46:26',1342177281,'submission.event.fileUploaded',0),
-(78,1048585,4,22,'2025-02-04 05:46:26',1342177288,'submission.event.fileRevised',0),
-(79,515,22,22,'2025-02-04 05:46:26',1342177296,'submission.event.fileEdited',0),
-(80,515,23,22,'2025-02-04 05:46:27',1342177281,'submission.event.fileUploaded',0),
-(81,1048585,4,22,'2025-02-04 05:46:27',1342177288,'submission.event.fileRevised',0),
-(82,515,23,22,'2025-02-04 05:46:27',1342177296,'submission.event.fileEdited',0),
-(83,515,24,22,'2025-02-04 05:46:28',1342177281,'submission.event.fileUploaded',0),
-(84,1048585,4,22,'2025-02-04 05:46:28',1342177288,'submission.event.fileRevised',0),
-(85,515,24,22,'2025-02-04 05:46:28',1342177296,'submission.event.fileEdited',0),
-(86,1048585,4,22,'2025-02-04 05:46:50',268435457,'submission.event.submissionSubmitted',0),
-(87,1048585,4,3,'2025-02-04 05:46:59',805306371,'editor.submission.decision.sendInternalReview.log',0),
-(88,515,25,3,'2025-02-04 05:46:59',1342177281,'submission.event.fileUploaded',0),
-(89,1048585,4,3,'2025-02-04 05:46:59',1342177288,'submission.event.fileRevised',0),
-(90,515,26,3,'2025-02-04 05:46:59',1342177281,'submission.event.fileUploaded',0),
-(91,1048585,4,3,'2025-02-04 05:46:59',1342177288,'submission.event.fileRevised',0),
-(92,515,27,3,'2025-02-04 05:46:59',1342177281,'submission.event.fileUploaded',0),
-(93,1048585,4,3,'2025-02-04 05:46:59',1342177288,'submission.event.fileRevised',0),
-(94,515,28,3,'2025-02-04 05:46:59',1342177281,'submission.event.fileUploaded',0),
-(95,1048585,4,3,'2025-02-04 05:46:59',1342177288,'submission.event.fileRevised',0),
-(96,1048585,4,3,'2025-02-04 05:47:04',1073741825,'log.review.reviewerAssigned',0),
-(97,1048585,4,3,'2025-02-04 05:47:08',805306371,'editor.submission.decision.sendExternalReview.log',0),
-(98,1048585,4,3,'2025-02-04 05:47:13',1073741825,'log.review.reviewerAssigned',0),
-(99,1048585,4,3,'2025-02-04 05:47:18',805306371,'editor.submission.decision.accept.log',0),
-(100,1048585,4,3,'2025-02-04 05:47:24',268435459,'submission.event.participantAdded',0),
-(101,1048585,4,3,'2025-02-04 05:47:28',805306371,'editor.submission.decision.sendToProduction.log',0),
-(102,1048585,4,3,'2025-02-04 05:47:35',268435459,'submission.event.participantAdded',0),
-(103,1048585,4,3,'2025-02-04 05:47:40',268435474,'submission.event.publicationFormatCreated',NULL),
-(104,1048585,5,23,'2025-02-04 05:47:46',268435458,'submission.event.general.metadataUpdated',0),
-(105,1048585,5,23,'2025-02-04 05:47:46',268435458,'submission.event.general.metadataUpdated',0),
-(106,515,29,23,'2025-02-04 05:47:49',1342177281,'submission.event.fileUploaded',0),
-(107,1048585,5,23,'2025-02-04 05:47:49',1342177288,'submission.event.fileRevised',0),
-(108,515,29,23,'2025-02-04 05:47:49',1342177296,'submission.event.fileEdited',0),
-(109,515,30,23,'2025-02-04 05:47:49',1342177281,'submission.event.fileUploaded',0),
-(110,1048585,5,23,'2025-02-04 05:47:49',1342177288,'submission.event.fileRevised',0),
-(111,515,30,23,'2025-02-04 05:47:50',1342177296,'submission.event.fileEdited',0),
-(112,515,31,23,'2025-02-04 05:47:50',1342177281,'submission.event.fileUploaded',0),
-(113,1048585,5,23,'2025-02-04 05:47:50',1342177288,'submission.event.fileRevised',0),
-(114,515,31,23,'2025-02-04 05:47:50',1342177296,'submission.event.fileEdited',0),
-(115,515,32,23,'2025-02-04 05:47:51',1342177281,'submission.event.fileUploaded',0),
-(116,1048585,5,23,'2025-02-04 05:47:51',1342177288,'submission.event.fileRevised',0),
-(117,515,32,23,'2025-02-04 05:47:51',1342177296,'submission.event.fileEdited',0),
-(118,515,33,23,'2025-02-04 05:47:52',1342177281,'submission.event.fileUploaded',0),
-(119,1048585,5,23,'2025-02-04 05:47:52',1342177288,'submission.event.fileRevised',0),
-(120,515,33,23,'2025-02-04 05:47:52',1342177296,'submission.event.fileEdited',0),
-(121,515,34,23,'2025-02-04 05:47:53',1342177281,'submission.event.fileUploaded',0),
-(122,1048585,5,23,'2025-02-04 05:47:53',1342177288,'submission.event.fileRevised',0),
-(123,515,34,23,'2025-02-04 05:47:53',1342177296,'submission.event.fileEdited',0),
-(124,1048585,5,23,'2025-02-04 05:48:26',268435457,'submission.event.submissionSubmitted',0),
-(125,1048585,5,3,'2025-02-04 05:48:35',805306371,'editor.submission.decision.sendInternalReview.log',0),
-(126,515,35,3,'2025-02-04 05:48:35',1342177281,'submission.event.fileUploaded',0),
-(127,1048585,5,3,'2025-02-04 05:48:35',1342177288,'submission.event.fileRevised',0),
-(128,515,36,3,'2025-02-04 05:48:35',1342177281,'submission.event.fileUploaded',0),
-(129,1048585,5,3,'2025-02-04 05:48:35',1342177288,'submission.event.fileRevised',0),
-(130,515,37,3,'2025-02-04 05:48:36',1342177281,'submission.event.fileUploaded',0),
-(131,1048585,5,3,'2025-02-04 05:48:36',1342177288,'submission.event.fileRevised',0),
-(132,515,38,3,'2025-02-04 05:48:36',1342177281,'submission.event.fileUploaded',0),
-(133,1048585,5,3,'2025-02-04 05:48:36',1342177288,'submission.event.fileRevised',0),
-(134,515,39,3,'2025-02-04 05:48:36',1342177281,'submission.event.fileUploaded',0),
-(135,1048585,5,3,'2025-02-04 05:48:36',1342177288,'submission.event.fileRevised',0),
-(136,515,40,3,'2025-02-04 05:48:36',1342177281,'submission.event.fileUploaded',0),
-(137,1048585,5,3,'2025-02-04 05:48:36',1342177288,'submission.event.fileRevised',0),
-(138,1048585,5,3,'2025-02-04 05:48:41',1073741825,'log.review.reviewerAssigned',0),
-(139,1048585,5,3,'2025-02-04 05:48:45',805306371,'editor.submission.decision.sendExternalReview.log',0),
-(140,1048585,5,3,'2025-02-04 05:48:50',1073741825,'log.review.reviewerAssigned',0),
-(141,1048585,5,3,'2025-02-04 05:48:54',805306371,'editor.submission.decision.accept.log',0),
-(142,1048585,5,3,'2025-02-04 05:49:00',268435459,'submission.event.participantAdded',0),
-(143,1048585,5,3,'2025-02-04 05:49:05',805306371,'editor.submission.decision.sendToProduction.log',0),
-(144,1048585,5,3,'2025-02-04 05:49:12',268435459,'submission.event.participantAdded',0),
-(145,1048585,5,3,'2025-02-04 05:49:16',268435459,'submission.event.participantAdded',0),
-(146,1048585,5,3,'2025-02-04 05:49:20',268435474,'submission.event.publicationFormatCreated',NULL),
-(147,515,41,3,'2025-02-04 05:49:22',1342177281,'submission.event.fileUploaded',0),
-(148,1048585,5,3,'2025-02-04 05:49:22',1342177288,'submission.event.fileRevised',0),
-(149,1048585,5,3,'2025-02-04 05:49:24',268435464,'submission.event.publicationFormatPublished',0),
-(150,1048585,5,3,'2025-02-04 05:49:25',268435476,'submission.event.publicationFormatMadeAvailable',0),
-(151,515,41,3,'2025-02-04 05:49:26',1342177296,'submission.event.fileEdited',0),
-(152,515,41,3,'2025-02-04 05:49:26',1342177287,'submission.event.signoffSignoff',0),
-(153,515,41,3,'2025-02-04 05:49:29',1342177296,'submission.event.fileEdited',0),
-(154,1048585,5,3,'2025-02-04 05:49:31',268435462,'publication.event.published',0),
-(155,1048585,5,3,'2025-02-04 05:49:34',268435463,'publication.event.unpublished',0),
-(156,1048585,5,3,'2025-02-04 05:49:40',268435462,'publication.event.published',0),
-(157,1048585,6,24,'2025-02-04 05:49:46',268435458,'submission.event.general.metadataUpdated',0),
-(158,1048585,6,24,'2025-02-04 05:49:47',268435458,'submission.event.general.metadataUpdated',0),
-(159,515,42,24,'2025-02-04 05:49:49',1342177281,'submission.event.fileUploaded',0),
-(160,1048585,6,24,'2025-02-04 05:49:49',1342177288,'submission.event.fileRevised',0),
-(161,515,42,24,'2025-02-04 05:49:49',1342177296,'submission.event.fileEdited',0),
-(162,515,43,24,'2025-02-04 05:49:50',1342177281,'submission.event.fileUploaded',0),
-(163,1048585,6,24,'2025-02-04 05:49:50',1342177288,'submission.event.fileRevised',0),
-(164,515,43,24,'2025-02-04 05:49:50',1342177296,'submission.event.fileEdited',0),
-(165,515,44,24,'2025-02-04 05:49:51',1342177281,'submission.event.fileUploaded',0),
-(166,1048585,6,24,'2025-02-04 05:49:51',1342177288,'submission.event.fileRevised',0),
-(167,515,44,24,'2025-02-04 05:49:51',1342177296,'submission.event.fileEdited',0),
-(168,515,45,24,'2025-02-04 05:49:52',1342177281,'submission.event.fileUploaded',0),
-(169,1048585,6,24,'2025-02-04 05:49:52',1342177288,'submission.event.fileRevised',0),
-(170,515,45,24,'2025-02-04 05:49:52',1342177296,'submission.event.fileEdited',0),
-(171,1048585,6,24,'2025-02-04 05:50:13',268435457,'submission.event.submissionSubmitted',0),
-(172,1048585,6,3,'2025-02-04 05:50:22',805306371,'editor.submission.decision.sendInternalReview.log',0),
-(173,515,46,3,'2025-02-04 05:50:22',1342177281,'submission.event.fileUploaded',0),
-(174,1048585,6,3,'2025-02-04 05:50:22',1342177288,'submission.event.fileRevised',0),
-(175,515,47,3,'2025-02-04 05:50:22',1342177281,'submission.event.fileUploaded',0),
-(176,1048585,6,3,'2025-02-04 05:50:22',1342177288,'submission.event.fileRevised',0),
-(177,515,48,3,'2025-02-04 05:50:22',1342177281,'submission.event.fileUploaded',0),
-(178,1048585,6,3,'2025-02-04 05:50:22',1342177288,'submission.event.fileRevised',0),
-(179,515,49,3,'2025-02-04 05:50:22',1342177281,'submission.event.fileUploaded',0),
-(180,1048585,6,3,'2025-02-04 05:50:22',1342177288,'submission.event.fileRevised',0),
-(181,1048585,6,3,'2025-02-04 05:50:28',268435459,'submission.event.participantAdded',0),
-(182,1048585,6,3,'2025-02-04 05:50:31',268435459,'submission.event.participantAdded',0),
-(183,1048585,6,6,'2025-02-04 05:50:41',805306372,'editor.submission.recommend.accept.log',0),
-(184,1048585,7,25,'2025-02-04 05:50:54',268435458,'submission.event.general.metadataUpdated',0),
-(185,1048585,7,25,'2025-02-04 05:50:55',268435458,'submission.event.general.metadataUpdated',0),
-(186,515,50,25,'2025-02-04 05:50:57',1342177281,'submission.event.fileUploaded',0),
-(187,1048585,7,25,'2025-02-04 05:50:57',1342177288,'submission.event.fileRevised',0),
-(188,515,50,25,'2025-02-04 05:50:57',1342177296,'submission.event.fileEdited',0),
-(189,515,51,25,'2025-02-04 05:50:58',1342177281,'submission.event.fileUploaded',0),
-(190,1048585,7,25,'2025-02-04 05:50:58',1342177288,'submission.event.fileRevised',0),
-(191,515,51,25,'2025-02-04 05:50:58',1342177296,'submission.event.fileEdited',0),
-(192,515,52,25,'2025-02-04 05:50:59',1342177281,'submission.event.fileUploaded',0),
-(193,1048585,7,25,'2025-02-04 05:50:59',1342177288,'submission.event.fileRevised',0),
-(194,515,52,25,'2025-02-04 05:50:59',1342177296,'submission.event.fileEdited',0),
-(195,515,53,25,'2025-02-04 05:50:59',1342177281,'submission.event.fileUploaded',0),
-(196,1048585,7,25,'2025-02-04 05:50:59',1342177288,'submission.event.fileRevised',0),
-(197,515,53,25,'2025-02-04 05:51:00',1342177296,'submission.event.fileEdited',0),
-(198,515,54,25,'2025-02-04 05:51:00',1342177281,'submission.event.fileUploaded',0),
-(199,1048585,7,25,'2025-02-04 05:51:00',1342177288,'submission.event.fileRevised',0),
-(200,515,54,25,'2025-02-04 05:51:01',1342177296,'submission.event.fileEdited',0),
-(201,1048585,7,25,'2025-02-04 05:51:29',268435457,'submission.event.submissionSubmitted',0),
-(202,1048585,7,3,'2025-02-04 05:51:38',805306371,'editor.submission.decision.sendExternalReview.log',0),
-(203,515,55,3,'2025-02-04 05:51:39',1342177281,'submission.event.fileUploaded',0),
-(204,1048585,7,3,'2025-02-04 05:51:39',1342177288,'submission.event.fileRevised',0),
-(205,515,56,3,'2025-02-04 05:51:39',1342177281,'submission.event.fileUploaded',0),
-(206,1048585,7,3,'2025-02-04 05:51:39',1342177288,'submission.event.fileRevised',0),
-(207,515,57,3,'2025-02-04 05:51:39',1342177281,'submission.event.fileUploaded',0),
-(208,1048585,7,3,'2025-02-04 05:51:39',1342177288,'submission.event.fileRevised',0),
-(209,515,58,3,'2025-02-04 05:51:39',1342177281,'submission.event.fileUploaded',0),
-(210,1048585,7,3,'2025-02-04 05:51:39',1342177288,'submission.event.fileRevised',0),
-(211,515,59,3,'2025-02-04 05:51:39',1342177281,'submission.event.fileUploaded',0),
-(212,1048585,7,3,'2025-02-04 05:51:39',1342177288,'submission.event.fileRevised',0),
-(213,1048585,7,3,'2025-02-04 05:51:44',1073741825,'log.review.reviewerAssigned',0),
-(214,1048585,7,3,'2025-02-04 05:51:49',805306371,'editor.submission.decision.accept.log',0),
-(215,1048585,7,3,'2025-02-04 05:51:55',268435459,'submission.event.participantAdded',0),
-(216,1048585,8,3,'2025-02-04 05:52:02',268435458,'submission.event.general.metadataUpdated',0),
-(217,515,60,3,'2025-02-04 05:52:04',1342177281,'submission.event.fileUploaded',0),
-(218,1048585,8,3,'2025-02-04 05:52:04',1342177288,'submission.event.fileRevised',0),
-(219,515,60,3,'2025-02-04 05:52:04',1342177296,'submission.event.fileEdited',0),
-(220,1048585,8,3,'2025-02-04 05:52:05',268435457,'submission.event.submissionSubmitted',0),
-(221,1048585,9,26,'2025-02-04 05:52:11',268435458,'submission.event.general.metadataUpdated',0),
-(222,1048585,9,26,'2025-02-04 05:52:12',268435458,'submission.event.general.metadataUpdated',0),
-(223,515,61,26,'2025-02-04 05:52:14',1342177281,'submission.event.fileUploaded',0),
-(224,1048585,9,26,'2025-02-04 05:52:14',1342177288,'submission.event.fileRevised',0),
-(225,515,61,26,'2025-02-04 05:52:14',1342177296,'submission.event.fileEdited',0),
-(226,515,62,26,'2025-02-04 05:52:15',1342177281,'submission.event.fileUploaded',0),
-(227,1048585,9,26,'2025-02-04 05:52:15',1342177288,'submission.event.fileRevised',0),
-(228,515,62,26,'2025-02-04 05:52:15',1342177296,'submission.event.fileEdited',0),
-(229,515,63,26,'2025-02-04 05:52:15',1342177281,'submission.event.fileUploaded',0),
-(230,1048585,9,26,'2025-02-04 05:52:15',1342177288,'submission.event.fileRevised',0),
-(231,515,63,26,'2025-02-04 05:52:16',1342177296,'submission.event.fileEdited',0),
-(232,515,64,26,'2025-02-04 05:52:16',1342177281,'submission.event.fileUploaded',0),
-(233,1048585,9,26,'2025-02-04 05:52:16',1342177288,'submission.event.fileRevised',0),
-(234,515,64,26,'2025-02-04 05:52:17',1342177296,'submission.event.fileEdited',0),
-(235,515,65,26,'2025-02-04 05:52:17',1342177281,'submission.event.fileUploaded',0),
-(236,1048585,9,26,'2025-02-04 05:52:17',1342177288,'submission.event.fileRevised',0),
-(237,515,65,26,'2025-02-04 05:52:18',1342177296,'submission.event.fileEdited',0),
-(238,1048585,9,26,'2025-02-04 05:52:46',268435457,'submission.event.submissionSubmitted',0),
-(239,1048585,9,3,'2025-02-04 05:52:55',805306371,'editor.submission.decision.sendInternalReview.log',0),
-(240,515,66,3,'2025-02-04 05:52:55',1342177281,'submission.event.fileUploaded',0),
-(241,1048585,9,3,'2025-02-04 05:52:55',1342177288,'submission.event.fileRevised',0),
-(242,515,67,3,'2025-02-04 05:52:55',1342177281,'submission.event.fileUploaded',0),
-(243,1048585,9,3,'2025-02-04 05:52:55',1342177288,'submission.event.fileRevised',0),
-(244,515,68,3,'2025-02-04 05:52:55',1342177281,'submission.event.fileUploaded',0),
-(245,1048585,9,3,'2025-02-04 05:52:56',1342177288,'submission.event.fileRevised',0),
-(246,515,69,3,'2025-02-04 05:52:56',1342177281,'submission.event.fileUploaded',0),
-(247,1048585,9,3,'2025-02-04 05:52:56',1342177288,'submission.event.fileRevised',0),
-(248,515,70,3,'2025-02-04 05:52:56',1342177281,'submission.event.fileUploaded',0),
-(249,1048585,9,3,'2025-02-04 05:52:56',1342177288,'submission.event.fileRevised',0),
-(250,1048585,10,27,'2025-02-04 05:53:05',268435458,'submission.event.general.metadataUpdated',0),
-(251,1048585,10,27,'2025-02-04 05:53:05',268435458,'submission.event.general.metadataUpdated',0),
-(252,515,71,27,'2025-02-04 05:53:07',1342177281,'submission.event.fileUploaded',0),
-(253,1048585,10,27,'2025-02-04 05:53:07',1342177288,'submission.event.fileRevised',0),
-(254,515,71,27,'2025-02-04 05:53:08',1342177296,'submission.event.fileEdited',0),
-(255,515,72,27,'2025-02-04 05:53:08',1342177281,'submission.event.fileUploaded',0),
-(256,1048585,10,27,'2025-02-04 05:53:08',1342177288,'submission.event.fileRevised',0),
-(257,515,72,27,'2025-02-04 05:53:09',1342177296,'submission.event.fileEdited',0),
-(258,515,73,27,'2025-02-04 05:53:09',1342177281,'submission.event.fileUploaded',0),
-(259,1048585,10,27,'2025-02-04 05:53:09',1342177288,'submission.event.fileRevised',0),
-(260,515,73,27,'2025-02-04 05:53:09',1342177296,'submission.event.fileEdited',0),
-(261,515,74,27,'2025-02-04 05:53:10',1342177281,'submission.event.fileUploaded',0),
-(262,1048585,10,27,'2025-02-04 05:53:10',1342177288,'submission.event.fileRevised',0),
-(263,515,74,27,'2025-02-04 05:53:10',1342177296,'submission.event.fileEdited',0),
-(264,515,75,27,'2025-02-04 05:53:11',1342177281,'submission.event.fileUploaded',0),
-(265,1048585,10,27,'2025-02-04 05:53:11',1342177288,'submission.event.fileRevised',0),
-(266,515,75,27,'2025-02-04 05:53:11',1342177296,'submission.event.fileEdited',0),
-(267,515,76,27,'2025-02-04 05:53:12',1342177281,'submission.event.fileUploaded',0),
-(268,1048585,10,27,'2025-02-04 05:53:12',1342177288,'submission.event.fileRevised',0),
-(269,515,76,27,'2025-02-04 05:53:12',1342177296,'submission.event.fileEdited',0),
-(270,515,77,27,'2025-02-04 05:53:13',1342177281,'submission.event.fileUploaded',0),
-(271,1048585,10,27,'2025-02-04 05:53:13',1342177288,'submission.event.fileRevised',0),
-(272,515,77,27,'2025-02-04 05:53:13',1342177296,'submission.event.fileEdited',0),
-(273,515,78,27,'2025-02-04 05:53:14',1342177281,'submission.event.fileUploaded',0),
-(274,1048585,10,27,'2025-02-04 05:53:14',1342177288,'submission.event.fileRevised',0),
-(275,515,78,27,'2025-02-04 05:53:14',1342177296,'submission.event.fileEdited',0),
-(276,515,79,27,'2025-02-04 05:53:15',1342177281,'submission.event.fileUploaded',0),
-(277,1048585,10,27,'2025-02-04 05:53:15',1342177288,'submission.event.fileRevised',0),
-(278,515,79,27,'2025-02-04 05:53:15',1342177296,'submission.event.fileEdited',0),
-(279,1048585,10,27,'2025-02-04 05:54:08',268435457,'submission.event.submissionSubmitted',0),
-(280,1048585,11,28,'2025-02-04 05:54:15',268435458,'submission.event.general.metadataUpdated',0),
-(281,1048585,11,28,'2025-02-04 05:54:16',268435458,'submission.event.general.metadataUpdated',0),
-(282,515,80,28,'2025-02-04 05:54:18',1342177281,'submission.event.fileUploaded',0),
-(283,1048585,11,28,'2025-02-04 05:54:18',1342177288,'submission.event.fileRevised',0),
-(284,515,80,28,'2025-02-04 05:54:18',1342177296,'submission.event.fileEdited',0),
-(285,515,81,28,'2025-02-04 05:54:19',1342177281,'submission.event.fileUploaded',0),
-(286,1048585,11,28,'2025-02-04 05:54:19',1342177288,'submission.event.fileRevised',0),
-(287,515,81,28,'2025-02-04 05:54:19',1342177296,'submission.event.fileEdited',0),
-(288,1048585,11,28,'2025-02-04 05:54:29',268435457,'submission.event.submissionSubmitted',0),
-(289,1048585,11,3,'2025-02-04 05:54:37',805306371,'editor.submission.decision.sendInternalReview.log',0),
-(290,515,82,3,'2025-02-04 05:54:37',1342177281,'submission.event.fileUploaded',0),
-(291,1048585,11,3,'2025-02-04 05:54:37',1342177288,'submission.event.fileRevised',0),
-(292,515,83,3,'2025-02-04 05:54:37',1342177281,'submission.event.fileUploaded',0),
-(293,1048585,11,3,'2025-02-04 05:54:37',1342177288,'submission.event.fileRevised',0),
-(294,1048585,11,3,'2025-02-04 05:54:42',1073741825,'log.review.reviewerAssigned',0),
-(295,1048585,11,3,'2025-02-04 05:54:46',805306371,'editor.submission.decision.sendExternalReview.log',0),
-(296,1048585,11,3,'2025-02-04 05:54:51',1073741825,'log.review.reviewerAssigned',0),
-(297,1048585,11,3,'2025-02-04 05:54:53',1073741825,'log.review.reviewerAssigned',0),
-(298,1048585,11,10,'2025-02-04 05:54:59',1073741830,'log.review.reviewAccepted',NULL),
-(299,1048585,11,10,'2025-02-04 05:55:03',1073741848,'log.review.reviewReady',0),
-(300,1048585,11,12,'2025-02-04 05:55:08',1073741830,'log.review.reviewAccepted',NULL),
-(301,1048585,11,12,'2025-02-04 05:55:12',1073741848,'log.review.reviewReady',0),
-(302,1048585,11,3,'2025-02-04 05:55:21',805306371,'editor.submission.decision.accept.log',0),
-(303,1048585,11,3,'2025-02-04 05:55:22',805306375,'submission.event.decisionReviewerEmailSent',0),
-(304,1048585,12,29,'2025-02-04 05:55:31',268435458,'submission.event.general.metadataUpdated',0),
-(305,1048585,12,29,'2025-02-04 05:55:31',268435458,'submission.event.general.metadataUpdated',0),
-(306,515,84,29,'2025-02-04 05:55:33',1342177281,'submission.event.fileUploaded',0),
-(307,1048585,12,29,'2025-02-04 05:55:34',1342177288,'submission.event.fileRevised',0),
-(308,515,84,29,'2025-02-04 05:55:34',1342177296,'submission.event.fileEdited',0),
-(309,515,85,29,'2025-02-04 05:55:34',1342177281,'submission.event.fileUploaded',0),
-(310,1048585,12,29,'2025-02-04 05:55:34',1342177288,'submission.event.fileRevised',0),
-(311,515,85,29,'2025-02-04 05:55:35',1342177296,'submission.event.fileEdited',0),
-(312,515,86,29,'2025-02-04 05:55:35',1342177281,'submission.event.fileUploaded',0),
-(313,1048585,12,29,'2025-02-04 05:55:35',1342177288,'submission.event.fileRevised',0),
-(314,515,86,29,'2025-02-04 05:55:35',1342177296,'submission.event.fileEdited',0),
-(315,1048585,12,29,'2025-02-04 05:55:53',268435457,'submission.event.submissionSubmitted',0),
-(316,1048585,12,3,'2025-02-04 05:56:02',805306371,'editor.submission.decision.sendInternalReview.log',0),
-(317,515,87,3,'2025-02-04 05:56:03',1342177281,'submission.event.fileUploaded',0),
-(318,1048585,12,3,'2025-02-04 05:56:03',1342177288,'submission.event.fileRevised',0),
-(319,515,88,3,'2025-02-04 05:56:03',1342177281,'submission.event.fileUploaded',0),
-(320,1048585,12,3,'2025-02-04 05:56:03',1342177288,'submission.event.fileRevised',0),
-(321,515,89,3,'2025-02-04 05:56:03',1342177281,'submission.event.fileUploaded',0),
-(322,1048585,12,3,'2025-02-04 05:56:03',1342177288,'submission.event.fileRevised',0),
-(323,1048585,12,3,'2025-02-04 05:56:08',1073741825,'log.review.reviewerAssigned',0),
-(324,1048585,12,3,'2025-02-04 05:56:11',1073741825,'log.review.reviewerAssigned',0),
-(325,1048585,12,3,'2025-02-04 05:56:14',1073741825,'log.review.reviewerAssigned',0),
-(326,1048585,12,8,'2025-02-04 05:56:20',1073741830,'log.review.reviewAccepted',NULL),
-(327,1048585,12,8,'2025-02-04 05:56:24',1073741848,'log.review.reviewReady',0),
-(328,1048585,13,30,'2025-02-04 05:56:31',268435458,'submission.event.general.metadataUpdated',0),
-(329,1048585,13,30,'2025-02-04 05:56:31',268435458,'submission.event.general.metadataUpdated',0),
-(330,515,90,30,'2025-02-04 05:56:33',1342177281,'submission.event.fileUploaded',0),
-(331,1048585,13,30,'2025-02-04 05:56:33',1342177288,'submission.event.fileRevised',0),
-(332,515,90,30,'2025-02-04 05:56:33',1342177296,'submission.event.fileEdited',0),
-(333,515,91,30,'2025-02-04 05:56:34',1342177281,'submission.event.fileUploaded',0),
-(334,1048585,13,30,'2025-02-04 05:56:34',1342177288,'submission.event.fileRevised',0),
-(335,515,91,30,'2025-02-04 05:56:34',1342177296,'submission.event.fileEdited',0),
-(336,515,92,30,'2025-02-04 05:56:35',1342177281,'submission.event.fileUploaded',0),
-(337,1048585,13,30,'2025-02-04 05:56:35',1342177288,'submission.event.fileRevised',0),
-(338,515,92,30,'2025-02-04 05:56:35',1342177296,'submission.event.fileEdited',0),
-(339,1048585,13,30,'2025-02-04 05:56:52',268435457,'submission.event.submissionSubmitted',0),
-(340,1048585,13,3,'2025-02-04 05:57:01',805306371,'editor.submission.decision.sendInternalReview.log',0),
-(341,515,93,3,'2025-02-04 05:57:01',1342177281,'submission.event.fileUploaded',0),
-(342,1048585,13,3,'2025-02-04 05:57:01',1342177288,'submission.event.fileRevised',0),
-(343,515,94,3,'2025-02-04 05:57:01',1342177281,'submission.event.fileUploaded',0),
-(344,1048585,13,3,'2025-02-04 05:57:01',1342177288,'submission.event.fileRevised',0),
-(345,515,95,3,'2025-02-04 05:57:01',1342177281,'submission.event.fileUploaded',0),
-(346,1048585,13,3,'2025-02-04 05:57:01',1342177288,'submission.event.fileRevised',0),
-(347,1048585,13,3,'2025-02-04 05:57:06',1073741825,'log.review.reviewerAssigned',0),
-(348,1048585,13,3,'2025-02-04 05:57:11',805306371,'editor.submission.decision.sendExternalReview.log',0),
-(349,1048585,13,3,'2025-02-04 05:57:16',1073741825,'log.review.reviewerAssigned',0),
-(350,1048585,13,3,'2025-02-04 05:57:19',1073741825,'log.review.reviewerAssigned',0),
-(351,1048585,13,3,'2025-02-04 05:57:21',1073741825,'log.review.reviewerAssigned',0),
-(352,1048585,13,10,'2025-02-04 05:57:27',1073741830,'log.review.reviewAccepted',NULL),
-(353,1048585,13,10,'2025-02-04 05:57:31',1073741848,'log.review.reviewReady',0),
-(354,1048585,13,12,'2025-02-04 05:57:36',1073741830,'log.review.reviewAccepted',NULL),
-(355,1048585,13,12,'2025-02-04 05:57:40',1073741848,'log.review.reviewReady',0),
-(356,1048585,13,3,'2025-02-04 05:57:51',805306371,'editor.submission.decision.accept.log',0),
-(357,1048585,13,3,'2025-02-04 05:57:51',805306375,'submission.event.decisionReviewerEmailSent',0),
-(358,1048585,14,31,'2025-02-04 05:58:01',268435458,'submission.event.general.metadataUpdated',0),
-(359,1048585,14,31,'2025-02-04 05:58:02',268435458,'submission.event.general.metadataUpdated',0),
-(360,515,96,31,'2025-02-04 05:58:04',1342177281,'submission.event.fileUploaded',0),
-(361,1048585,14,31,'2025-02-04 05:58:04',1342177288,'submission.event.fileRevised',0),
-(362,515,96,31,'2025-02-04 05:58:04',1342177296,'submission.event.fileEdited',0),
-(363,515,97,31,'2025-02-04 05:58:05',1342177281,'submission.event.fileUploaded',0),
-(364,1048585,14,31,'2025-02-04 05:58:05',1342177288,'submission.event.fileRevised',0),
-(365,515,97,31,'2025-02-04 05:58:05',1342177296,'submission.event.fileEdited',0),
-(366,515,98,31,'2025-02-04 05:58:06',1342177281,'submission.event.fileUploaded',0),
-(367,1048585,14,31,'2025-02-04 05:58:06',1342177288,'submission.event.fileRevised',0),
-(368,515,98,31,'2025-02-04 05:58:06',1342177296,'submission.event.fileEdited',0),
-(369,515,99,31,'2025-02-04 05:58:07',1342177281,'submission.event.fileUploaded',0),
-(370,1048585,14,31,'2025-02-04 05:58:07',1342177288,'submission.event.fileRevised',0),
-(371,515,99,31,'2025-02-04 05:58:07',1342177296,'submission.event.fileEdited',0),
-(372,515,100,31,'2025-02-04 05:58:07',1342177281,'submission.event.fileUploaded',0),
-(373,1048585,14,31,'2025-02-04 05:58:07',1342177288,'submission.event.fileRevised',0),
-(374,515,100,31,'2025-02-04 05:58:08',1342177296,'submission.event.fileEdited',0),
-(375,515,101,31,'2025-02-04 05:58:09',1342177281,'submission.event.fileUploaded',0),
-(376,1048585,14,31,'2025-02-04 05:58:09',1342177288,'submission.event.fileRevised',0),
-(377,515,101,31,'2025-02-04 05:58:09',1342177296,'submission.event.fileEdited',0),
-(378,1048585,14,31,'2025-02-04 05:58:33',268435457,'submission.event.submissionSubmitted',0),
-(379,1048585,14,3,'2025-02-04 05:58:43',805306371,'editor.submission.decision.sendInternalReview.log',0),
-(380,515,102,3,'2025-02-04 05:58:43',1342177281,'submission.event.fileUploaded',0),
-(381,1048585,14,3,'2025-02-04 05:58:43',1342177288,'submission.event.fileRevised',0),
-(382,515,103,3,'2025-02-04 05:58:43',1342177281,'submission.event.fileUploaded',0),
-(383,1048585,14,3,'2025-02-04 05:58:43',1342177288,'submission.event.fileRevised',0),
-(384,515,104,3,'2025-02-04 05:58:43',1342177281,'submission.event.fileUploaded',0),
-(385,1048585,14,3,'2025-02-04 05:58:43',1342177288,'submission.event.fileRevised',0),
-(386,515,105,3,'2025-02-04 05:58:43',1342177281,'submission.event.fileUploaded',0),
-(387,1048585,14,3,'2025-02-04 05:58:43',1342177288,'submission.event.fileRevised',0),
-(388,515,106,3,'2025-02-04 05:58:43',1342177281,'submission.event.fileUploaded',0),
-(389,1048585,14,3,'2025-02-04 05:58:43',1342177288,'submission.event.fileRevised',0),
-(390,515,107,3,'2025-02-04 05:58:44',1342177281,'submission.event.fileUploaded',0),
-(391,1048585,14,3,'2025-02-04 05:58:44',1342177288,'submission.event.fileRevised',0),
-(392,1048585,14,3,'2025-02-04 05:58:49',1073741825,'log.review.reviewerAssigned',0),
-(393,1048585,14,3,'2025-02-04 05:58:54',805306371,'editor.submission.decision.sendExternalReview.log',0),
-(394,1048585,14,3,'2025-02-04 05:58:59',1073741825,'log.review.reviewerAssigned',0),
-(395,1048585,14,3,'2025-02-04 05:59:04',805306371,'editor.submission.decision.accept.log',0),
-(396,1048585,14,3,'2025-02-04 05:59:11',268435459,'submission.event.participantAdded',0),
-(397,1048585,14,3,'2025-02-04 05:59:16',805306371,'editor.submission.decision.sendToProduction.log',0),
-(398,1048585,14,3,'2025-02-04 05:59:23',268435459,'submission.event.participantAdded',0),
-(399,1048585,14,3,'2025-02-04 05:59:27',268435459,'submission.event.participantAdded',0),
-(400,1048585,14,3,'2025-02-04 05:59:31',268435474,'submission.event.publicationFormatCreated',NULL),
-(401,515,108,3,'2025-02-04 05:59:36',1342177281,'submission.event.fileUploaded',0),
-(402,1048585,14,3,'2025-02-04 05:59:36',1342177288,'submission.event.fileRevised',0),
-(403,515,109,3,'2025-02-04 05:59:36',1342177281,'submission.event.fileUploaded',0),
-(404,1048585,14,3,'2025-02-04 05:59:36',1342177288,'submission.event.fileRevised',0),
-(405,515,110,3,'2025-02-04 05:59:36',1342177281,'submission.event.fileUploaded',0),
-(406,1048585,14,3,'2025-02-04 05:59:36',1342177288,'submission.event.fileRevised',0),
-(407,515,111,3,'2025-02-04 05:59:36',1342177281,'submission.event.fileUploaded',0),
-(408,1048585,14,3,'2025-02-04 05:59:36',1342177288,'submission.event.fileRevised',0),
-(409,515,112,3,'2025-02-04 05:59:36',1342177281,'submission.event.fileUploaded',0),
-(410,1048585,14,3,'2025-02-04 05:59:36',1342177288,'submission.event.fileRevised',0),
-(411,515,113,3,'2025-02-04 05:59:36',1342177281,'submission.event.fileUploaded',0),
-(412,1048585,14,3,'2025-02-04 05:59:36',1342177288,'submission.event.fileRevised',0),
-(413,1048585,14,3,'2025-02-04 05:59:38',268435464,'submission.event.publicationFormatPublished',0),
-(414,1048585,14,3,'2025-02-04 05:59:39',268435476,'submission.event.publicationFormatMadeAvailable',0),
-(415,515,113,3,'2025-02-04 05:59:41',1342177296,'submission.event.fileEdited',0),
-(416,515,113,3,'2025-02-04 05:59:41',1342177287,'submission.event.signoffSignoff',0),
-(417,515,113,3,'2025-02-04 05:59:43',1342177296,'submission.event.fileEdited',0),
-(418,515,112,3,'2025-02-04 05:59:45',1342177296,'submission.event.fileEdited',0),
-(419,515,112,3,'2025-02-04 05:59:45',1342177287,'submission.event.signoffSignoff',0),
-(420,515,112,3,'2025-02-04 05:59:47',1342177296,'submission.event.fileEdited',0),
-(421,515,111,3,'2025-02-04 05:59:49',1342177296,'submission.event.fileEdited',0),
-(422,515,111,3,'2025-02-04 05:59:49',1342177287,'submission.event.signoffSignoff',0),
-(423,515,111,3,'2025-02-04 05:59:51',1342177296,'submission.event.fileEdited',0),
-(424,515,109,3,'2025-02-04 05:59:53',1342177296,'submission.event.fileEdited',0),
-(425,515,109,3,'2025-02-04 05:59:53',1342177287,'submission.event.signoffSignoff',0),
-(426,515,109,3,'2025-02-04 05:59:55',1342177296,'submission.event.fileEdited',0),
-(427,515,110,3,'2025-02-04 05:59:57',1342177296,'submission.event.fileEdited',0),
-(428,515,110,3,'2025-02-04 05:59:57',1342177287,'submission.event.signoffSignoff',0),
-(429,515,110,3,'2025-02-04 05:59:59',1342177296,'submission.event.fileEdited',0),
-(430,515,108,3,'2025-02-04 06:00:01',1342177296,'submission.event.fileEdited',0),
-(431,515,108,3,'2025-02-04 06:00:01',1342177287,'submission.event.signoffSignoff',0),
-(432,515,108,3,'2025-02-04 06:00:03',1342177296,'submission.event.fileEdited',0),
-(433,1048585,14,3,'2025-02-04 06:00:05',268435462,'publication.event.published',0),
-(434,1048585,15,32,'2025-02-04 06:00:11',268435458,'submission.event.general.metadataUpdated',0),
-(435,1048585,15,32,'2025-02-04 06:00:12',268435458,'submission.event.general.metadataUpdated',0),
-(436,515,114,32,'2025-02-04 06:00:14',1342177281,'submission.event.fileUploaded',0),
-(437,1048585,15,32,'2025-02-04 06:00:14',1342177288,'submission.event.fileRevised',0),
-(438,515,114,32,'2025-02-04 06:00:14',1342177296,'submission.event.fileEdited',0),
-(439,515,115,32,'2025-02-04 06:00:15',1342177281,'submission.event.fileUploaded',0),
-(440,1048585,15,32,'2025-02-04 06:00:15',1342177288,'submission.event.fileRevised',0),
-(441,515,115,32,'2025-02-04 06:00:15',1342177296,'submission.event.fileEdited',0),
-(442,515,116,32,'2025-02-04 06:00:16',1342177281,'submission.event.fileUploaded',0),
-(443,1048585,15,32,'2025-02-04 06:00:16',1342177288,'submission.event.fileRevised',0),
-(444,515,116,32,'2025-02-04 06:00:16',1342177296,'submission.event.fileEdited',0),
-(445,1048585,15,32,'2025-02-04 06:00:31',268435457,'submission.event.submissionSubmitted',0),
-(446,1048585,15,3,'2025-02-04 06:00:40',805306371,'editor.submission.decision.sendExternalReview.log',0),
-(447,515,117,3,'2025-02-04 06:00:40',1342177281,'submission.event.fileUploaded',0),
-(448,1048585,15,3,'2025-02-04 06:00:40',1342177288,'submission.event.fileRevised',0),
-(449,515,118,3,'2025-02-04 06:00:40',1342177281,'submission.event.fileUploaded',0),
-(450,1048585,15,3,'2025-02-04 06:00:40',1342177288,'submission.event.fileRevised',0),
-(451,515,119,3,'2025-02-04 06:00:40',1342177281,'submission.event.fileUploaded',0),
-(452,1048585,15,3,'2025-02-04 06:00:40',1342177288,'submission.event.fileRevised',0),
-(453,1048585,16,33,'2025-02-04 06:00:49',268435458,'submission.event.general.metadataUpdated',0),
-(454,1048585,16,33,'2025-02-04 06:00:50',268435458,'submission.event.general.metadataUpdated',0),
-(455,515,120,33,'2025-02-04 06:00:52',1342177281,'submission.event.fileUploaded',0),
-(456,1048585,16,33,'2025-02-04 06:00:52',1342177288,'submission.event.fileRevised',0),
-(457,515,120,33,'2025-02-04 06:00:52',1342177296,'submission.event.fileEdited',0),
-(458,515,121,33,'2025-02-04 06:00:53',1342177281,'submission.event.fileUploaded',0),
-(459,1048585,16,33,'2025-02-04 06:00:53',1342177288,'submission.event.fileRevised',0),
-(460,515,121,33,'2025-02-04 06:00:53',1342177296,'submission.event.fileEdited',0),
-(461,515,122,33,'2025-02-04 06:00:54',1342177281,'submission.event.fileUploaded',0),
-(462,1048585,16,33,'2025-02-04 06:00:54',1342177288,'submission.event.fileRevised',0),
-(463,515,122,33,'2025-02-04 06:00:54',1342177296,'submission.event.fileEdited',0),
-(464,515,123,33,'2025-02-04 06:00:55',1342177281,'submission.event.fileUploaded',0),
-(465,1048585,16,33,'2025-02-04 06:00:55',1342177288,'submission.event.fileRevised',0),
-(466,515,123,33,'2025-02-04 06:00:55',1342177296,'submission.event.fileEdited',0),
-(467,515,124,33,'2025-02-04 06:00:55',1342177281,'submission.event.fileUploaded',0),
-(468,1048585,16,33,'2025-02-04 06:00:55',1342177288,'submission.event.fileRevised',0),
-(469,515,124,33,'2025-02-04 06:00:56',1342177296,'submission.event.fileEdited',0),
-(470,1048585,16,33,'2025-02-04 06:01:21',268435457,'submission.event.submissionSubmitted',0),
-(471,1048585,16,3,'2025-02-04 06:01:31',805306371,'editor.submission.decision.sendExternalReview.log',0),
-(472,515,125,3,'2025-02-04 06:01:31',1342177281,'submission.event.fileUploaded',0),
-(473,1048585,16,3,'2025-02-04 06:01:31',1342177288,'submission.event.fileRevised',0),
-(474,515,126,3,'2025-02-04 06:01:31',1342177281,'submission.event.fileUploaded',0),
-(475,1048585,16,3,'2025-02-04 06:01:31',1342177288,'submission.event.fileRevised',0),
-(476,515,127,3,'2025-02-04 06:01:31',1342177281,'submission.event.fileUploaded',0),
-(477,1048585,16,3,'2025-02-04 06:01:31',1342177288,'submission.event.fileRevised',0),
-(478,515,128,3,'2025-02-04 06:01:32',1342177281,'submission.event.fileUploaded',0),
-(479,1048585,16,3,'2025-02-04 06:01:32',1342177288,'submission.event.fileRevised',0),
-(480,515,129,3,'2025-02-04 06:01:32',1342177281,'submission.event.fileUploaded',0),
-(481,1048585,16,3,'2025-02-04 06:01:32',1342177288,'submission.event.fileRevised',0),
-(482,1048585,16,3,'2025-02-04 06:01:37',1073741825,'log.review.reviewerAssigned',0),
-(483,1048585,16,3,'2025-02-04 06:01:40',1073741825,'log.review.reviewerAssigned',0),
-(484,1048585,16,3,'2025-02-04 06:01:43',1073741825,'log.review.reviewerAssigned',0),
-(485,1048585,16,10,'2025-02-04 06:01:49',1073741830,'log.review.reviewAccepted',NULL),
-(486,1048585,16,10,'2025-02-04 06:01:53',1073741848,'log.review.reviewReady',0),
-(487,1048585,17,34,'2025-02-04 06:02:00',268435458,'submission.event.general.metadataUpdated',0),
-(488,1048585,17,34,'2025-02-04 06:02:00',268435458,'submission.event.general.metadataUpdated',0),
-(489,515,130,34,'2025-02-04 06:02:02',1342177281,'submission.event.fileUploaded',0),
-(490,1048585,17,34,'2025-02-04 06:02:02',1342177288,'submission.event.fileRevised',0),
-(491,515,130,34,'2025-02-04 06:02:02',1342177296,'submission.event.fileEdited',0),
-(492,515,131,34,'2025-02-04 06:02:03',1342177281,'submission.event.fileUploaded',0),
-(493,1048585,17,34,'2025-02-04 06:02:03',1342177288,'submission.event.fileRevised',0),
-(494,515,131,34,'2025-02-04 06:02:03',1342177296,'submission.event.fileEdited',0),
-(495,515,132,34,'2025-02-04 06:02:04',1342177281,'submission.event.fileUploaded',0),
-(496,1048585,17,34,'2025-02-04 06:02:04',1342177288,'submission.event.fileRevised',0),
-(497,515,132,34,'2025-02-04 06:02:04',1342177296,'submission.event.fileEdited',0),
-(498,515,133,34,'2025-02-04 06:02:05',1342177281,'submission.event.fileUploaded',0),
-(499,1048585,17,34,'2025-02-04 06:02:05',1342177288,'submission.event.fileRevised',0),
-(500,515,133,34,'2025-02-04 06:02:05',1342177296,'submission.event.fileEdited',0),
-(501,515,134,34,'2025-02-04 06:02:06',1342177281,'submission.event.fileUploaded',0),
-(502,1048585,17,34,'2025-02-04 06:02:06',1342177288,'submission.event.fileRevised',0),
-(503,515,134,34,'2025-02-04 06:02:06',1342177296,'submission.event.fileEdited',0),
-(504,515,135,34,'2025-02-04 06:02:07',1342177281,'submission.event.fileUploaded',0),
-(505,1048585,17,34,'2025-02-04 06:02:07',1342177288,'submission.event.fileRevised',0),
-(506,515,135,34,'2025-02-04 06:02:07',1342177296,'submission.event.fileEdited',0),
-(507,1048585,17,34,'2025-02-04 06:02:43',268435457,'submission.event.submissionSubmitted',0),
-(508,1048585,17,3,'2025-02-04 06:02:54',805306371,'editor.submission.decision.sendInternalReview.log',0),
-(509,515,136,3,'2025-02-04 06:02:55',1342177281,'submission.event.fileUploaded',0),
-(510,1048585,17,3,'2025-02-04 06:02:55',1342177288,'submission.event.fileRevised',0),
-(511,515,137,3,'2025-02-04 06:02:55',1342177281,'submission.event.fileUploaded',0),
-(512,1048585,17,3,'2025-02-04 06:02:55',1342177288,'submission.event.fileRevised',0),
-(513,515,138,3,'2025-02-04 06:02:55',1342177281,'submission.event.fileUploaded',0),
-(514,1048585,17,3,'2025-02-04 06:02:55',1342177288,'submission.event.fileRevised',0),
-(515,515,139,3,'2025-02-04 06:02:55',1342177281,'submission.event.fileUploaded',0),
-(516,1048585,17,3,'2025-02-04 06:02:55',1342177288,'submission.event.fileRevised',0),
-(517,515,140,3,'2025-02-04 06:02:55',1342177281,'submission.event.fileUploaded',0),
-(518,1048585,17,3,'2025-02-04 06:02:55',1342177288,'submission.event.fileRevised',0),
-(519,515,141,3,'2025-02-04 06:02:55',1342177281,'submission.event.fileUploaded',0),
-(520,1048585,17,3,'2025-02-04 06:02:55',1342177288,'submission.event.fileRevised',0),
-(521,1048585,17,3,'2025-02-04 06:03:01',1073741825,'log.review.reviewerAssigned',0),
-(522,1048585,17,3,'2025-02-04 06:03:04',1073741825,'log.review.reviewerAssigned',0);
+(1,1048585,1,19,'2025-02-06 05:26:32',268435458,'submission.event.general.metadataUpdated',0),
+(2,1048585,1,19,'2025-02-06 05:26:32',268435458,'submission.event.general.metadataUpdated',0),
+(3,515,1,19,'2025-02-06 05:26:35',1342177281,'submission.event.fileUploaded',0),
+(4,1048585,1,19,'2025-02-06 05:26:35',1342177288,'submission.event.fileRevised',0),
+(5,515,1,19,'2025-02-06 05:26:35',1342177296,'submission.event.fileEdited',0),
+(6,515,2,19,'2025-02-06 05:26:36',1342177281,'submission.event.fileUploaded',0),
+(7,1048585,1,19,'2025-02-06 05:26:36',1342177288,'submission.event.fileRevised',0),
+(8,515,2,19,'2025-02-06 05:26:36',1342177296,'submission.event.fileEdited',0),
+(9,515,3,19,'2025-02-06 05:26:37',1342177281,'submission.event.fileUploaded',0),
+(10,1048585,1,19,'2025-02-06 05:26:37',1342177288,'submission.event.fileRevised',0),
+(11,515,3,19,'2025-02-06 05:26:37',1342177296,'submission.event.fileEdited',0),
+(12,1048585,1,19,'2025-02-06 05:26:52',268435457,'submission.event.submissionSubmitted',0),
+(13,1048585,1,3,'2025-02-06 05:27:00',805306371,'editor.submission.decision.sendExternalReview.log',0),
+(14,515,4,3,'2025-02-06 05:27:00',1342177281,'submission.event.fileUploaded',0),
+(15,1048585,1,3,'2025-02-06 05:27:00',1342177288,'submission.event.fileRevised',0),
+(16,515,5,3,'2025-02-06 05:27:00',1342177281,'submission.event.fileUploaded',0),
+(17,1048585,1,3,'2025-02-06 05:27:00',1342177288,'submission.event.fileRevised',0),
+(18,515,6,3,'2025-02-06 05:27:00',1342177281,'submission.event.fileUploaded',0),
+(19,1048585,1,3,'2025-02-06 05:27:00',1342177288,'submission.event.fileRevised',0),
+(20,1048585,1,3,'2025-02-06 05:27:04',1073741825,'log.review.reviewerAssigned',0),
+(21,1048585,1,3,'2025-02-06 05:27:08',805306371,'editor.submission.decision.accept.log',0),
+(22,1048585,1,3,'2025-02-06 05:27:13',268435459,'submission.event.participantAdded',0),
+(23,1048585,2,20,'2025-02-06 05:27:22',268435458,'submission.event.general.metadataUpdated',0),
+(24,1048585,2,20,'2025-02-06 05:27:22',268435458,'submission.event.general.metadataUpdated',0),
+(25,515,7,20,'2025-02-06 05:27:31',1342177281,'submission.event.fileUploaded',0),
+(26,1048585,2,20,'2025-02-06 05:27:31',1342177288,'submission.event.fileRevised',0),
+(27,1048585,2,20,'2025-02-06 05:27:31',268435458,'submission.event.general.metadataUpdated',0),
+(28,515,7,20,'2025-02-06 05:27:31',1342177296,'submission.event.fileEdited',0),
+(29,515,8,20,'2025-02-06 05:27:32',1342177281,'submission.event.fileUploaded',0),
+(30,1048585,2,20,'2025-02-06 05:27:32',1342177288,'submission.event.fileRevised',0),
+(31,515,8,20,'2025-02-06 05:27:32',1342177296,'submission.event.fileEdited',0),
+(32,515,9,20,'2025-02-06 05:27:33',1342177281,'submission.event.fileUploaded',0),
+(33,1048585,2,20,'2025-02-06 05:27:33',1342177288,'submission.event.fileRevised',0),
+(34,515,9,20,'2025-02-06 05:27:33',1342177296,'submission.event.fileEdited',0),
+(35,515,10,20,'2025-02-06 05:27:34',1342177281,'submission.event.fileUploaded',0),
+(36,1048585,2,20,'2025-02-06 05:27:34',1342177288,'submission.event.fileRevised',0),
+(37,515,10,20,'2025-02-06 05:27:34',1342177296,'submission.event.fileEdited',0),
+(38,515,11,20,'2025-02-06 05:27:35',1342177281,'submission.event.fileUploaded',0),
+(39,1048585,2,20,'2025-02-06 05:27:35',1342177288,'submission.event.fileRevised',0),
+(40,515,11,20,'2025-02-06 05:27:35',1342177296,'submission.event.fileEdited',0),
+(41,515,11,20,'2025-02-06 05:27:36',1342177282,'submission.event.fileDeleted',0),
+(42,1048585,2,20,'2025-02-06 05:28:58',268435457,'submission.event.submissionSubmitted',0),
+(43,1048585,2,3,'2025-02-06 05:29:13',805306371,'editor.submission.decision.sendExternalReview.log',0),
+(44,515,12,3,'2025-02-06 05:29:14',1342177281,'submission.event.fileUploaded',0),
+(45,1048585,2,3,'2025-02-06 05:29:14',1342177288,'submission.event.fileRevised',0),
+(46,515,13,3,'2025-02-06 05:29:14',1342177281,'submission.event.fileUploaded',0),
+(47,1048585,2,3,'2025-02-06 05:29:14',1342177288,'submission.event.fileRevised',0),
+(48,515,14,3,'2025-02-06 05:29:14',1342177281,'submission.event.fileUploaded',0),
+(49,1048585,2,3,'2025-02-06 05:29:14',1342177288,'submission.event.fileRevised',0),
+(50,515,15,3,'2025-02-06 05:29:14',1342177281,'submission.event.fileUploaded',0),
+(51,1048585,2,3,'2025-02-06 05:29:14',1342177288,'submission.event.fileRevised',0),
+(52,1048585,2,3,'2025-02-06 05:29:20',1073741825,'log.review.reviewerAssigned',0),
+(53,1048585,2,3,'2025-02-06 05:29:24',1073741825,'log.review.reviewerAssigned',0),
+(54,1048585,3,21,'2025-02-06 05:29:32',268435458,'submission.event.general.metadataUpdated',0),
+(55,1048585,3,21,'2025-02-06 05:29:32',268435458,'submission.event.general.metadataUpdated',0),
+(56,515,16,21,'2025-02-06 05:29:34',1342177281,'submission.event.fileUploaded',0),
+(57,1048585,3,21,'2025-02-06 05:29:34',1342177288,'submission.event.fileRevised',0),
+(58,515,16,21,'2025-02-06 05:29:35',1342177296,'submission.event.fileEdited',0),
+(59,515,17,21,'2025-02-06 05:29:35',1342177281,'submission.event.fileUploaded',0),
+(60,1048585,3,21,'2025-02-06 05:29:35',1342177288,'submission.event.fileRevised',0),
+(61,515,17,21,'2025-02-06 05:29:35',1342177296,'submission.event.fileEdited',0),
+(62,515,18,21,'2025-02-06 05:29:36',1342177281,'submission.event.fileUploaded',0),
+(63,1048585,3,21,'2025-02-06 05:29:36',1342177288,'submission.event.fileRevised',0),
+(64,515,18,21,'2025-02-06 05:29:36',1342177296,'submission.event.fileEdited',0),
+(65,515,19,21,'2025-02-06 05:29:37',1342177281,'submission.event.fileUploaded',0),
+(66,1048585,3,21,'2025-02-06 05:29:37',1342177288,'submission.event.fileRevised',0),
+(67,515,19,21,'2025-02-06 05:29:37',1342177296,'submission.event.fileEdited',0),
+(68,515,20,21,'2025-02-06 05:29:38',1342177281,'submission.event.fileUploaded',0),
+(69,1048585,3,21,'2025-02-06 05:29:38',1342177288,'submission.event.fileRevised',0),
+(70,515,20,21,'2025-02-06 05:29:38',1342177296,'submission.event.fileEdited',0),
+(71,1048585,3,21,'2025-02-06 05:30:05',268435457,'submission.event.submissionSubmitted',0),
+(72,1048585,4,22,'2025-02-06 05:30:12',268435458,'submission.event.general.metadataUpdated',0),
+(73,1048585,4,22,'2025-02-06 05:30:12',268435458,'submission.event.general.metadataUpdated',0),
+(74,515,21,22,'2025-02-06 05:30:14',1342177281,'submission.event.fileUploaded',0),
+(75,1048585,4,22,'2025-02-06 05:30:14',1342177288,'submission.event.fileRevised',0),
+(76,515,21,22,'2025-02-06 05:30:15',1342177296,'submission.event.fileEdited',0),
+(77,515,22,22,'2025-02-06 05:30:15',1342177281,'submission.event.fileUploaded',0),
+(78,1048585,4,22,'2025-02-06 05:30:15',1342177288,'submission.event.fileRevised',0),
+(79,515,22,22,'2025-02-06 05:30:16',1342177296,'submission.event.fileEdited',0),
+(80,515,23,22,'2025-02-06 05:30:16',1342177281,'submission.event.fileUploaded',0),
+(81,1048585,4,22,'2025-02-06 05:30:16',1342177288,'submission.event.fileRevised',0),
+(82,515,23,22,'2025-02-06 05:30:16',1342177296,'submission.event.fileEdited',0),
+(83,515,24,22,'2025-02-06 05:30:17',1342177281,'submission.event.fileUploaded',0),
+(84,1048585,4,22,'2025-02-06 05:30:17',1342177288,'submission.event.fileRevised',0),
+(85,515,24,22,'2025-02-06 05:30:17',1342177296,'submission.event.fileEdited',0),
+(86,1048585,4,22,'2025-02-06 05:30:40',268435457,'submission.event.submissionSubmitted',0),
+(87,1048585,4,3,'2025-02-06 05:30:48',805306371,'editor.submission.decision.sendInternalReview.log',0),
+(88,515,25,3,'2025-02-06 05:30:49',1342177281,'submission.event.fileUploaded',0),
+(89,1048585,4,3,'2025-02-06 05:30:49',1342177288,'submission.event.fileRevised',0),
+(90,515,26,3,'2025-02-06 05:30:49',1342177281,'submission.event.fileUploaded',0),
+(91,1048585,4,3,'2025-02-06 05:30:49',1342177288,'submission.event.fileRevised',0),
+(92,515,27,3,'2025-02-06 05:30:49',1342177281,'submission.event.fileUploaded',0),
+(93,1048585,4,3,'2025-02-06 05:30:49',1342177288,'submission.event.fileRevised',0),
+(94,515,28,3,'2025-02-06 05:30:49',1342177281,'submission.event.fileUploaded',0),
+(95,1048585,4,3,'2025-02-06 05:30:49',1342177288,'submission.event.fileRevised',0),
+(96,1048585,4,3,'2025-02-06 05:30:54',1073741825,'log.review.reviewerAssigned',0),
+(97,1048585,4,3,'2025-02-06 05:30:58',805306371,'editor.submission.decision.sendExternalReview.log',0),
+(98,1048585,4,3,'2025-02-06 05:31:03',1073741825,'log.review.reviewerAssigned',0),
+(99,1048585,4,3,'2025-02-06 05:31:08',805306371,'editor.submission.decision.accept.log',0),
+(100,1048585,4,3,'2025-02-06 05:31:14',268435459,'submission.event.participantAdded',0),
+(101,1048585,4,3,'2025-02-06 05:31:18',805306371,'editor.submission.decision.sendToProduction.log',0),
+(102,1048585,4,3,'2025-02-06 05:31:24',268435459,'submission.event.participantAdded',0),
+(103,1048585,4,3,'2025-02-06 05:31:30',268435474,'submission.event.publicationFormatCreated',NULL),
+(104,1048585,5,23,'2025-02-06 05:31:36',268435458,'submission.event.general.metadataUpdated',0),
+(105,1048585,5,23,'2025-02-06 05:31:36',268435458,'submission.event.general.metadataUpdated',0),
+(106,515,29,23,'2025-02-06 05:31:39',1342177281,'submission.event.fileUploaded',0),
+(107,1048585,5,23,'2025-02-06 05:31:39',1342177288,'submission.event.fileRevised',0),
+(108,515,29,23,'2025-02-06 05:31:39',1342177296,'submission.event.fileEdited',0),
+(109,515,30,23,'2025-02-06 05:31:39',1342177281,'submission.event.fileUploaded',0),
+(110,1048585,5,23,'2025-02-06 05:31:39',1342177288,'submission.event.fileRevised',0),
+(111,515,30,23,'2025-02-06 05:31:40',1342177296,'submission.event.fileEdited',0),
+(112,515,31,23,'2025-02-06 05:31:40',1342177281,'submission.event.fileUploaded',0),
+(113,1048585,5,23,'2025-02-06 05:31:40',1342177288,'submission.event.fileRevised',0),
+(114,515,31,23,'2025-02-06 05:31:41',1342177296,'submission.event.fileEdited',0),
+(115,515,32,23,'2025-02-06 05:31:41',1342177281,'submission.event.fileUploaded',0),
+(116,1048585,5,23,'2025-02-06 05:31:41',1342177288,'submission.event.fileRevised',0),
+(117,515,32,23,'2025-02-06 05:31:41',1342177296,'submission.event.fileEdited',0),
+(118,515,33,23,'2025-02-06 05:31:42',1342177281,'submission.event.fileUploaded',0),
+(119,1048585,5,23,'2025-02-06 05:31:42',1342177288,'submission.event.fileRevised',0),
+(120,515,33,23,'2025-02-06 05:31:42',1342177296,'submission.event.fileEdited',0),
+(121,515,34,23,'2025-02-06 05:31:43',1342177281,'submission.event.fileUploaded',0),
+(122,1048585,5,23,'2025-02-06 05:31:43',1342177288,'submission.event.fileRevised',0),
+(123,515,34,23,'2025-02-06 05:31:43',1342177296,'submission.event.fileEdited',0),
+(124,1048585,5,23,'2025-02-06 05:32:17',268435457,'submission.event.submissionSubmitted',0),
+(125,1048585,5,3,'2025-02-06 05:32:26',805306371,'editor.submission.decision.sendInternalReview.log',0),
+(126,515,35,3,'2025-02-06 05:32:26',1342177281,'submission.event.fileUploaded',0),
+(127,1048585,5,3,'2025-02-06 05:32:26',1342177288,'submission.event.fileRevised',0),
+(128,515,36,3,'2025-02-06 05:32:26',1342177281,'submission.event.fileUploaded',0),
+(129,1048585,5,3,'2025-02-06 05:32:26',1342177288,'submission.event.fileRevised',0),
+(130,515,37,3,'2025-02-06 05:32:26',1342177281,'submission.event.fileUploaded',0),
+(131,1048585,5,3,'2025-02-06 05:32:26',1342177288,'submission.event.fileRevised',0),
+(132,515,38,3,'2025-02-06 05:32:27',1342177281,'submission.event.fileUploaded',0),
+(133,1048585,5,3,'2025-02-06 05:32:27',1342177288,'submission.event.fileRevised',0),
+(134,515,39,3,'2025-02-06 05:32:27',1342177281,'submission.event.fileUploaded',0),
+(135,1048585,5,3,'2025-02-06 05:32:27',1342177288,'submission.event.fileRevised',0),
+(136,515,40,3,'2025-02-06 05:32:27',1342177281,'submission.event.fileUploaded',0),
+(137,1048585,5,3,'2025-02-06 05:32:27',1342177288,'submission.event.fileRevised',0),
+(138,1048585,5,3,'2025-02-06 05:32:32',1073741825,'log.review.reviewerAssigned',0),
+(139,1048585,5,3,'2025-02-06 05:32:37',805306371,'editor.submission.decision.sendExternalReview.log',0),
+(140,1048585,5,3,'2025-02-06 05:32:42',1073741825,'log.review.reviewerAssigned',0),
+(141,1048585,5,3,'2025-02-06 05:32:47',805306371,'editor.submission.decision.accept.log',0),
+(142,1048585,5,3,'2025-02-06 05:32:53',268435459,'submission.event.participantAdded',0),
+(143,1048585,5,3,'2025-02-06 05:32:58',805306371,'editor.submission.decision.sendToProduction.log',0),
+(144,1048585,5,3,'2025-02-06 05:33:04',268435459,'submission.event.participantAdded',0),
+(145,1048585,5,3,'2025-02-06 05:33:08',268435459,'submission.event.participantAdded',0),
+(146,1048585,5,3,'2025-02-06 05:33:12',268435474,'submission.event.publicationFormatCreated',NULL),
+(147,515,41,3,'2025-02-06 05:33:15',1342177281,'submission.event.fileUploaded',0),
+(148,1048585,5,3,'2025-02-06 05:33:15',1342177288,'submission.event.fileRevised',0),
+(149,1048585,5,3,'2025-02-06 05:33:16',268435464,'submission.event.publicationFormatPublished',0),
+(150,1048585,5,3,'2025-02-06 05:33:18',268435476,'submission.event.publicationFormatMadeAvailable',0),
+(151,515,41,3,'2025-02-06 05:33:20',1342177296,'submission.event.fileEdited',0),
+(152,515,41,3,'2025-02-06 05:33:20',1342177287,'submission.event.signoffSignoff',0),
+(153,515,41,3,'2025-02-06 05:33:22',1342177296,'submission.event.fileEdited',0),
+(154,1048585,5,3,'2025-02-06 05:33:24',268435462,'publication.event.published',0),
+(155,1048585,5,3,'2025-02-06 05:33:28',268435463,'publication.event.unpublished',0),
+(156,1048585,5,3,'2025-02-06 05:33:34',268435462,'publication.event.published',0),
+(157,1048585,6,24,'2025-02-06 05:33:40',268435458,'submission.event.general.metadataUpdated',0),
+(158,1048585,6,24,'2025-02-06 05:33:40',268435458,'submission.event.general.metadataUpdated',0),
+(159,515,42,24,'2025-02-06 05:33:42',1342177281,'submission.event.fileUploaded',0),
+(160,1048585,6,24,'2025-02-06 05:33:42',1342177288,'submission.event.fileRevised',0),
+(161,515,42,24,'2025-02-06 05:33:43',1342177296,'submission.event.fileEdited',0),
+(162,515,43,24,'2025-02-06 05:33:43',1342177281,'submission.event.fileUploaded',0),
+(163,1048585,6,24,'2025-02-06 05:33:43',1342177288,'submission.event.fileRevised',0),
+(164,515,43,24,'2025-02-06 05:33:43',1342177296,'submission.event.fileEdited',0),
+(165,515,44,24,'2025-02-06 05:33:44',1342177281,'submission.event.fileUploaded',0),
+(166,1048585,6,24,'2025-02-06 05:33:44',1342177288,'submission.event.fileRevised',0),
+(167,515,44,24,'2025-02-06 05:33:44',1342177296,'submission.event.fileEdited',0),
+(168,515,45,24,'2025-02-06 05:33:45',1342177281,'submission.event.fileUploaded',0),
+(169,1048585,6,24,'2025-02-06 05:33:45',1342177288,'submission.event.fileRevised',0),
+(170,515,45,24,'2025-02-06 05:33:45',1342177296,'submission.event.fileEdited',0),
+(171,1048585,6,24,'2025-02-06 05:34:07',268435457,'submission.event.submissionSubmitted',0),
+(172,1048585,6,3,'2025-02-06 05:34:16',805306371,'editor.submission.decision.sendInternalReview.log',0),
+(173,515,46,3,'2025-02-06 05:34:16',1342177281,'submission.event.fileUploaded',0),
+(174,1048585,6,3,'2025-02-06 05:34:16',1342177288,'submission.event.fileRevised',0),
+(175,515,47,3,'2025-02-06 05:34:16',1342177281,'submission.event.fileUploaded',0),
+(176,1048585,6,3,'2025-02-06 05:34:16',1342177288,'submission.event.fileRevised',0),
+(177,515,48,3,'2025-02-06 05:34:16',1342177281,'submission.event.fileUploaded',0),
+(178,1048585,6,3,'2025-02-06 05:34:16',1342177288,'submission.event.fileRevised',0),
+(179,515,49,3,'2025-02-06 05:34:17',1342177281,'submission.event.fileUploaded',0),
+(180,1048585,6,3,'2025-02-06 05:34:17',1342177288,'submission.event.fileRevised',0),
+(181,1048585,6,3,'2025-02-06 05:34:22',268435459,'submission.event.participantAdded',0),
+(182,1048585,6,3,'2025-02-06 05:34:26',268435459,'submission.event.participantAdded',0),
+(183,1048585,6,6,'2025-02-06 05:34:36',805306372,'editor.submission.recommend.accept.log',0),
+(184,1048585,7,25,'2025-02-06 05:34:50',268435458,'submission.event.general.metadataUpdated',0),
+(185,1048585,7,25,'2025-02-06 05:34:50',268435458,'submission.event.general.metadataUpdated',0),
+(186,515,50,25,'2025-02-06 05:34:53',1342177281,'submission.event.fileUploaded',0),
+(187,1048585,7,25,'2025-02-06 05:34:53',1342177288,'submission.event.fileRevised',0),
+(188,515,50,25,'2025-02-06 05:34:53',1342177296,'submission.event.fileEdited',0),
+(189,515,51,25,'2025-02-06 05:34:54',1342177281,'submission.event.fileUploaded',0),
+(190,1048585,7,25,'2025-02-06 05:34:54',1342177288,'submission.event.fileRevised',0),
+(191,515,51,25,'2025-02-06 05:34:54',1342177296,'submission.event.fileEdited',0),
+(192,515,52,25,'2025-02-06 05:34:54',1342177281,'submission.event.fileUploaded',0),
+(193,1048585,7,25,'2025-02-06 05:34:54',1342177288,'submission.event.fileRevised',0),
+(194,515,52,25,'2025-02-06 05:34:55',1342177296,'submission.event.fileEdited',0),
+(195,515,53,25,'2025-02-06 05:34:55',1342177281,'submission.event.fileUploaded',0),
+(196,1048585,7,25,'2025-02-06 05:34:55',1342177288,'submission.event.fileRevised',0),
+(197,515,53,25,'2025-02-06 05:34:56',1342177296,'submission.event.fileEdited',0),
+(198,515,54,25,'2025-02-06 05:34:56',1342177281,'submission.event.fileUploaded',0),
+(199,1048585,7,25,'2025-02-06 05:34:56',1342177288,'submission.event.fileRevised',0),
+(200,515,54,25,'2025-02-06 05:34:57',1342177296,'submission.event.fileEdited',0),
+(201,1048585,7,25,'2025-02-06 05:35:26',268435457,'submission.event.submissionSubmitted',0),
+(202,1048585,7,3,'2025-02-06 05:35:35',805306371,'editor.submission.decision.sendExternalReview.log',0),
+(203,515,55,3,'2025-02-06 05:35:36',1342177281,'submission.event.fileUploaded',0),
+(204,1048585,7,3,'2025-02-06 05:35:36',1342177288,'submission.event.fileRevised',0),
+(205,515,56,3,'2025-02-06 05:35:36',1342177281,'submission.event.fileUploaded',0),
+(206,1048585,7,3,'2025-02-06 05:35:36',1342177288,'submission.event.fileRevised',0),
+(207,515,57,3,'2025-02-06 05:35:36',1342177281,'submission.event.fileUploaded',0),
+(208,1048585,7,3,'2025-02-06 05:35:36',1342177288,'submission.event.fileRevised',0),
+(209,515,58,3,'2025-02-06 05:35:36',1342177281,'submission.event.fileUploaded',0),
+(210,1048585,7,3,'2025-02-06 05:35:36',1342177288,'submission.event.fileRevised',0),
+(211,515,59,3,'2025-02-06 05:35:36',1342177281,'submission.event.fileUploaded',0),
+(212,1048585,7,3,'2025-02-06 05:35:36',1342177288,'submission.event.fileRevised',0),
+(213,1048585,7,3,'2025-02-06 05:35:41',1073741825,'log.review.reviewerAssigned',0),
+(214,1048585,7,3,'2025-02-06 05:35:46',805306371,'editor.submission.decision.accept.log',0),
+(215,1048585,7,3,'2025-02-06 05:35:52',268435459,'submission.event.participantAdded',0),
+(216,1048585,8,3,'2025-02-06 05:35:59',268435458,'submission.event.general.metadataUpdated',0),
+(217,515,60,3,'2025-02-06 05:36:01',1342177281,'submission.event.fileUploaded',0),
+(218,1048585,8,3,'2025-02-06 05:36:01',1342177288,'submission.event.fileRevised',0),
+(219,515,60,3,'2025-02-06 05:36:01',1342177296,'submission.event.fileEdited',0),
+(220,1048585,8,3,'2025-02-06 05:36:02',268435457,'submission.event.submissionSubmitted',0),
+(221,1048585,9,26,'2025-02-06 05:36:08',268435458,'submission.event.general.metadataUpdated',0),
+(222,1048585,9,26,'2025-02-06 05:36:08',268435458,'submission.event.general.metadataUpdated',0),
+(223,515,61,26,'2025-02-06 05:36:11',1342177281,'submission.event.fileUploaded',0),
+(224,1048585,9,26,'2025-02-06 05:36:11',1342177288,'submission.event.fileRevised',0),
+(225,515,61,26,'2025-02-06 05:36:11',1342177296,'submission.event.fileEdited',0),
+(226,515,62,26,'2025-02-06 05:36:11',1342177281,'submission.event.fileUploaded',0),
+(227,1048585,9,26,'2025-02-06 05:36:11',1342177288,'submission.event.fileRevised',0),
+(228,515,62,26,'2025-02-06 05:36:12',1342177296,'submission.event.fileEdited',0),
+(229,515,63,26,'2025-02-06 05:36:12',1342177281,'submission.event.fileUploaded',0),
+(230,1048585,9,26,'2025-02-06 05:36:12',1342177288,'submission.event.fileRevised',0),
+(231,515,63,26,'2025-02-06 05:36:13',1342177296,'submission.event.fileEdited',0),
+(232,515,64,26,'2025-02-06 05:36:13',1342177281,'submission.event.fileUploaded',0),
+(233,1048585,9,26,'2025-02-06 05:36:13',1342177288,'submission.event.fileRevised',0),
+(234,515,64,26,'2025-02-06 05:36:13',1342177296,'submission.event.fileEdited',0),
+(235,515,65,26,'2025-02-06 05:36:14',1342177281,'submission.event.fileUploaded',0),
+(236,1048585,9,26,'2025-02-06 05:36:14',1342177288,'submission.event.fileRevised',0),
+(237,515,65,26,'2025-02-06 05:36:14',1342177296,'submission.event.fileEdited',0),
+(238,1048585,9,26,'2025-02-06 05:36:43',268435457,'submission.event.submissionSubmitted',0),
+(239,1048585,9,3,'2025-02-06 05:36:53',805306371,'editor.submission.decision.sendInternalReview.log',0),
+(240,515,66,3,'2025-02-06 05:36:53',1342177281,'submission.event.fileUploaded',0),
+(241,1048585,9,3,'2025-02-06 05:36:53',1342177288,'submission.event.fileRevised',0),
+(242,515,67,3,'2025-02-06 05:36:53',1342177281,'submission.event.fileUploaded',0),
+(243,1048585,9,3,'2025-02-06 05:36:53',1342177288,'submission.event.fileRevised',0),
+(244,515,68,3,'2025-02-06 05:36:54',1342177281,'submission.event.fileUploaded',0),
+(245,1048585,9,3,'2025-02-06 05:36:54',1342177288,'submission.event.fileRevised',0),
+(246,515,69,3,'2025-02-06 05:36:54',1342177281,'submission.event.fileUploaded',0),
+(247,1048585,9,3,'2025-02-06 05:36:54',1342177288,'submission.event.fileRevised',0),
+(248,515,70,3,'2025-02-06 05:36:54',1342177281,'submission.event.fileUploaded',0),
+(249,1048585,9,3,'2025-02-06 05:36:54',1342177288,'submission.event.fileRevised',0),
+(250,1048585,10,27,'2025-02-06 05:37:03',268435458,'submission.event.general.metadataUpdated',0),
+(251,1048585,10,27,'2025-02-06 05:37:04',268435458,'submission.event.general.metadataUpdated',0),
+(252,515,71,27,'2025-02-06 05:37:06',1342177281,'submission.event.fileUploaded',0),
+(253,1048585,10,27,'2025-02-06 05:37:06',1342177288,'submission.event.fileRevised',0),
+(254,515,71,27,'2025-02-06 05:37:06',1342177296,'submission.event.fileEdited',0),
+(255,515,72,27,'2025-02-06 05:37:07',1342177281,'submission.event.fileUploaded',0),
+(256,1048585,10,27,'2025-02-06 05:37:07',1342177288,'submission.event.fileRevised',0),
+(257,515,72,27,'2025-02-06 05:37:07',1342177296,'submission.event.fileEdited',0),
+(258,515,73,27,'2025-02-06 05:37:08',1342177281,'submission.event.fileUploaded',0),
+(259,1048585,10,27,'2025-02-06 05:37:08',1342177288,'submission.event.fileRevised',0),
+(260,515,73,27,'2025-02-06 05:37:08',1342177296,'submission.event.fileEdited',0),
+(261,515,74,27,'2025-02-06 05:37:09',1342177281,'submission.event.fileUploaded',0),
+(262,1048585,10,27,'2025-02-06 05:37:09',1342177288,'submission.event.fileRevised',0),
+(263,515,74,27,'2025-02-06 05:37:09',1342177296,'submission.event.fileEdited',0),
+(264,515,75,27,'2025-02-06 05:37:10',1342177281,'submission.event.fileUploaded',0),
+(265,1048585,10,27,'2025-02-06 05:37:10',1342177288,'submission.event.fileRevised',0),
+(266,515,75,27,'2025-02-06 05:37:10',1342177296,'submission.event.fileEdited',0),
+(267,515,76,27,'2025-02-06 05:37:11',1342177281,'submission.event.fileUploaded',0),
+(268,1048585,10,27,'2025-02-06 05:37:11',1342177288,'submission.event.fileRevised',0),
+(269,515,76,27,'2025-02-06 05:37:11',1342177296,'submission.event.fileEdited',0),
+(270,515,77,27,'2025-02-06 05:37:12',1342177281,'submission.event.fileUploaded',0),
+(271,1048585,10,27,'2025-02-06 05:37:12',1342177288,'submission.event.fileRevised',0),
+(272,515,77,27,'2025-02-06 05:37:12',1342177296,'submission.event.fileEdited',0),
+(273,515,78,27,'2025-02-06 05:37:13',1342177281,'submission.event.fileUploaded',0),
+(274,1048585,10,27,'2025-02-06 05:37:13',1342177288,'submission.event.fileRevised',0),
+(275,515,78,27,'2025-02-06 05:37:13',1342177296,'submission.event.fileEdited',0),
+(276,515,79,27,'2025-02-06 05:37:14',1342177281,'submission.event.fileUploaded',0),
+(277,1048585,10,27,'2025-02-06 05:37:14',1342177288,'submission.event.fileRevised',0),
+(278,515,79,27,'2025-02-06 05:37:14',1342177296,'submission.event.fileEdited',0),
+(279,1048585,10,27,'2025-02-06 05:38:09',268435457,'submission.event.submissionSubmitted',0),
+(280,1048585,11,28,'2025-02-06 05:38:16',268435458,'submission.event.general.metadataUpdated',0),
+(281,1048585,11,28,'2025-02-06 05:38:16',268435458,'submission.event.general.metadataUpdated',0),
+(282,515,80,28,'2025-02-06 05:38:19',1342177281,'submission.event.fileUploaded',0),
+(283,1048585,11,28,'2025-02-06 05:38:19',1342177288,'submission.event.fileRevised',0),
+(284,515,80,28,'2025-02-06 05:38:19',1342177296,'submission.event.fileEdited',0),
+(285,515,81,28,'2025-02-06 05:38:20',1342177281,'submission.event.fileUploaded',0),
+(286,1048585,11,28,'2025-02-06 05:38:20',1342177288,'submission.event.fileRevised',0),
+(287,515,81,28,'2025-02-06 05:38:20',1342177296,'submission.event.fileEdited',0),
+(288,1048585,11,28,'2025-02-06 05:38:30',268435457,'submission.event.submissionSubmitted',0),
+(289,1048585,11,3,'2025-02-06 05:38:38',805306371,'editor.submission.decision.sendInternalReview.log',0),
+(290,515,82,3,'2025-02-06 05:38:38',1342177281,'submission.event.fileUploaded',0),
+(291,1048585,11,3,'2025-02-06 05:38:38',1342177288,'submission.event.fileRevised',0),
+(292,515,83,3,'2025-02-06 05:38:38',1342177281,'submission.event.fileUploaded',0),
+(293,1048585,11,3,'2025-02-06 05:38:38',1342177288,'submission.event.fileRevised',0),
+(294,1048585,11,3,'2025-02-06 05:38:43',1073741825,'log.review.reviewerAssigned',0),
+(295,1048585,11,3,'2025-02-06 05:38:47',805306371,'editor.submission.decision.sendExternalReview.log',0),
+(296,1048585,11,3,'2025-02-06 05:38:52',1073741825,'log.review.reviewerAssigned',0),
+(297,1048585,11,3,'2025-02-06 05:38:55',1073741825,'log.review.reviewerAssigned',0),
+(298,1048585,11,10,'2025-02-06 05:39:00',1073741830,'log.review.reviewAccepted',NULL),
+(299,1048585,11,10,'2025-02-06 05:39:04',1073741848,'log.review.reviewReady',0),
+(300,1048585,11,12,'2025-02-06 05:39:09',1073741830,'log.review.reviewAccepted',NULL),
+(301,1048585,11,12,'2025-02-06 05:39:14',1073741848,'log.review.reviewReady',0),
+(302,1048585,11,3,'2025-02-06 05:39:24',805306371,'editor.submission.decision.accept.log',0),
+(303,1048585,11,3,'2025-02-06 05:39:24',805306375,'submission.event.decisionReviewerEmailSent',0),
+(304,1048585,12,29,'2025-02-06 05:39:34',268435458,'submission.event.general.metadataUpdated',0),
+(305,1048585,12,29,'2025-02-06 05:39:34',268435458,'submission.event.general.metadataUpdated',0),
+(306,515,84,29,'2025-02-06 05:39:37',1342177281,'submission.event.fileUploaded',0),
+(307,1048585,12,29,'2025-02-06 05:39:37',1342177288,'submission.event.fileRevised',0),
+(308,515,84,29,'2025-02-06 05:39:37',1342177296,'submission.event.fileEdited',0),
+(309,515,85,29,'2025-02-06 05:39:37',1342177281,'submission.event.fileUploaded',0),
+(310,1048585,12,29,'2025-02-06 05:39:37',1342177288,'submission.event.fileRevised',0),
+(311,515,85,29,'2025-02-06 05:39:38',1342177296,'submission.event.fileEdited',0),
+(312,515,86,29,'2025-02-06 05:39:38',1342177281,'submission.event.fileUploaded',0),
+(313,1048585,12,29,'2025-02-06 05:39:38',1342177288,'submission.event.fileRevised',0),
+(314,515,86,29,'2025-02-06 05:39:39',1342177296,'submission.event.fileEdited',0),
+(315,1048585,12,29,'2025-02-06 05:39:57',268435457,'submission.event.submissionSubmitted',0),
+(316,1048585,12,3,'2025-02-06 05:40:06',805306371,'editor.submission.decision.sendInternalReview.log',0),
+(317,515,87,3,'2025-02-06 05:40:06',1342177281,'submission.event.fileUploaded',0),
+(318,1048585,12,3,'2025-02-06 05:40:06',1342177288,'submission.event.fileRevised',0),
+(319,515,88,3,'2025-02-06 05:40:06',1342177281,'submission.event.fileUploaded',0),
+(320,1048585,12,3,'2025-02-06 05:40:06',1342177288,'submission.event.fileRevised',0),
+(321,515,89,3,'2025-02-06 05:40:06',1342177281,'submission.event.fileUploaded',0),
+(322,1048585,12,3,'2025-02-06 05:40:06',1342177288,'submission.event.fileRevised',0),
+(323,1048585,12,3,'2025-02-06 05:40:12',1073741825,'log.review.reviewerAssigned',0),
+(324,1048585,12,3,'2025-02-06 05:40:15',1073741825,'log.review.reviewerAssigned',0),
+(325,1048585,12,3,'2025-02-06 05:40:18',1073741825,'log.review.reviewerAssigned',0),
+(326,1048585,12,8,'2025-02-06 05:40:23',1073741830,'log.review.reviewAccepted',NULL),
+(327,1048585,12,8,'2025-02-06 05:40:27',1073741848,'log.review.reviewReady',0),
+(328,1048585,13,30,'2025-02-06 05:40:34',268435458,'submission.event.general.metadataUpdated',0),
+(329,1048585,13,30,'2025-02-06 05:40:34',268435458,'submission.event.general.metadataUpdated',0),
+(330,515,90,30,'2025-02-06 05:40:37',1342177281,'submission.event.fileUploaded',0),
+(331,1048585,13,30,'2025-02-06 05:40:37',1342177288,'submission.event.fileRevised',0),
+(332,515,90,30,'2025-02-06 05:40:37',1342177296,'submission.event.fileEdited',0),
+(333,515,91,30,'2025-02-06 05:40:38',1342177281,'submission.event.fileUploaded',0),
+(334,1048585,13,30,'2025-02-06 05:40:38',1342177288,'submission.event.fileRevised',0),
+(335,515,91,30,'2025-02-06 05:40:38',1342177296,'submission.event.fileEdited',0),
+(336,515,92,30,'2025-02-06 05:40:39',1342177281,'submission.event.fileUploaded',0),
+(337,1048585,13,30,'2025-02-06 05:40:39',1342177288,'submission.event.fileRevised',0),
+(338,515,92,30,'2025-02-06 05:40:39',1342177296,'submission.event.fileEdited',0),
+(339,1048585,13,30,'2025-02-06 05:40:55',268435457,'submission.event.submissionSubmitted',0),
+(340,1048585,13,3,'2025-02-06 05:41:04',805306371,'editor.submission.decision.sendInternalReview.log',0),
+(341,515,93,3,'2025-02-06 05:41:04',1342177281,'submission.event.fileUploaded',0),
+(342,1048585,13,3,'2025-02-06 05:41:05',1342177288,'submission.event.fileRevised',0),
+(343,515,94,3,'2025-02-06 05:41:05',1342177281,'submission.event.fileUploaded',0),
+(344,1048585,13,3,'2025-02-06 05:41:05',1342177288,'submission.event.fileRevised',0),
+(345,515,95,3,'2025-02-06 05:41:05',1342177281,'submission.event.fileUploaded',0),
+(346,1048585,13,3,'2025-02-06 05:41:05',1342177288,'submission.event.fileRevised',0),
+(347,1048585,13,3,'2025-02-06 05:41:10',1073741825,'log.review.reviewerAssigned',0),
+(348,1048585,13,3,'2025-02-06 05:41:14',805306371,'editor.submission.decision.sendExternalReview.log',0),
+(349,1048585,13,3,'2025-02-06 05:41:20',1073741825,'log.review.reviewerAssigned',0),
+(350,1048585,13,3,'2025-02-06 05:41:22',1073741825,'log.review.reviewerAssigned',0),
+(351,1048585,13,3,'2025-02-06 05:41:25',1073741825,'log.review.reviewerAssigned',0),
+(352,1048585,13,10,'2025-02-06 05:41:31',1073741830,'log.review.reviewAccepted',NULL),
+(353,1048585,13,10,'2025-02-06 05:41:35',1073741848,'log.review.reviewReady',0),
+(354,1048585,13,12,'2025-02-06 05:41:40',1073741830,'log.review.reviewAccepted',NULL),
+(355,1048585,13,12,'2025-02-06 05:41:44',1073741848,'log.review.reviewReady',0),
+(356,1048585,13,3,'2025-02-06 05:41:55',805306371,'editor.submission.decision.accept.log',0),
+(357,1048585,13,3,'2025-02-06 05:41:56',805306375,'submission.event.decisionReviewerEmailSent',0),
+(358,1048585,14,31,'2025-02-06 05:42:06',268435458,'submission.event.general.metadataUpdated',0),
+(359,1048585,14,31,'2025-02-06 05:42:06',268435458,'submission.event.general.metadataUpdated',0),
+(360,515,96,31,'2025-02-06 05:42:08',1342177281,'submission.event.fileUploaded',0),
+(361,1048585,14,31,'2025-02-06 05:42:08',1342177288,'submission.event.fileRevised',0),
+(362,515,96,31,'2025-02-06 05:42:08',1342177296,'submission.event.fileEdited',0),
+(363,515,97,31,'2025-02-06 05:42:09',1342177281,'submission.event.fileUploaded',0),
+(364,1048585,14,31,'2025-02-06 05:42:09',1342177288,'submission.event.fileRevised',0),
+(365,515,97,31,'2025-02-06 05:42:09',1342177296,'submission.event.fileEdited',0),
+(366,515,98,31,'2025-02-06 05:42:10',1342177281,'submission.event.fileUploaded',0),
+(367,1048585,14,31,'2025-02-06 05:42:10',1342177288,'submission.event.fileRevised',0),
+(368,515,98,31,'2025-02-06 05:42:10',1342177296,'submission.event.fileEdited',0),
+(369,515,99,31,'2025-02-06 05:42:11',1342177281,'submission.event.fileUploaded',0),
+(370,1048585,14,31,'2025-02-06 05:42:11',1342177288,'submission.event.fileRevised',0),
+(371,515,99,31,'2025-02-06 05:42:11',1342177296,'submission.event.fileEdited',0),
+(372,515,100,31,'2025-02-06 05:42:12',1342177281,'submission.event.fileUploaded',0),
+(373,1048585,14,31,'2025-02-06 05:42:12',1342177288,'submission.event.fileRevised',0),
+(374,515,100,31,'2025-02-06 05:42:13',1342177296,'submission.event.fileEdited',0),
+(375,515,101,31,'2025-02-06 05:42:13',1342177281,'submission.event.fileUploaded',0),
+(376,1048585,14,31,'2025-02-06 05:42:13',1342177288,'submission.event.fileRevised',0),
+(377,515,101,31,'2025-02-06 05:42:14',1342177296,'submission.event.fileEdited',0),
+(378,1048585,14,31,'2025-02-06 05:42:38',268435457,'submission.event.submissionSubmitted',0),
+(379,1048585,14,3,'2025-02-06 05:42:48',805306371,'editor.submission.decision.sendInternalReview.log',0),
+(380,515,102,3,'2025-02-06 05:42:48',1342177281,'submission.event.fileUploaded',0),
+(381,1048585,14,3,'2025-02-06 05:42:48',1342177288,'submission.event.fileRevised',0),
+(382,515,103,3,'2025-02-06 05:42:48',1342177281,'submission.event.fileUploaded',0),
+(383,1048585,14,3,'2025-02-06 05:42:48',1342177288,'submission.event.fileRevised',0),
+(384,515,104,3,'2025-02-06 05:42:48',1342177281,'submission.event.fileUploaded',0),
+(385,1048585,14,3,'2025-02-06 05:42:48',1342177288,'submission.event.fileRevised',0),
+(386,515,105,3,'2025-02-06 05:42:49',1342177281,'submission.event.fileUploaded',0),
+(387,1048585,14,3,'2025-02-06 05:42:49',1342177288,'submission.event.fileRevised',0),
+(388,515,106,3,'2025-02-06 05:42:49',1342177281,'submission.event.fileUploaded',0),
+(389,1048585,14,3,'2025-02-06 05:42:49',1342177288,'submission.event.fileRevised',0),
+(390,515,107,3,'2025-02-06 05:42:49',1342177281,'submission.event.fileUploaded',0),
+(391,1048585,14,3,'2025-02-06 05:42:49',1342177288,'submission.event.fileRevised',0),
+(392,1048585,14,3,'2025-02-06 05:42:55',1073741825,'log.review.reviewerAssigned',0),
+(393,1048585,14,3,'2025-02-06 05:42:59',805306371,'editor.submission.decision.sendExternalReview.log',0),
+(394,1048585,14,3,'2025-02-06 05:43:05',1073741825,'log.review.reviewerAssigned',0),
+(395,1048585,14,3,'2025-02-06 05:43:10',805306371,'editor.submission.decision.accept.log',0),
+(396,1048585,14,3,'2025-02-06 05:43:17',268435459,'submission.event.participantAdded',0),
+(397,1048585,14,3,'2025-02-06 05:43:22',805306371,'editor.submission.decision.sendToProduction.log',0),
+(398,1048585,14,3,'2025-02-06 05:43:29',268435459,'submission.event.participantAdded',0),
+(399,1048585,14,3,'2025-02-06 05:43:34',268435459,'submission.event.participantAdded',0),
+(400,1048585,14,3,'2025-02-06 05:43:38',268435474,'submission.event.publicationFormatCreated',NULL),
+(401,515,108,3,'2025-02-06 05:43:43',1342177281,'submission.event.fileUploaded',0),
+(402,1048585,14,3,'2025-02-06 05:43:43',1342177288,'submission.event.fileRevised',0),
+(403,515,109,3,'2025-02-06 05:43:43',1342177281,'submission.event.fileUploaded',0),
+(404,1048585,14,3,'2025-02-06 05:43:43',1342177288,'submission.event.fileRevised',0),
+(405,515,110,3,'2025-02-06 05:43:43',1342177281,'submission.event.fileUploaded',0),
+(406,1048585,14,3,'2025-02-06 05:43:43',1342177288,'submission.event.fileRevised',0),
+(407,515,111,3,'2025-02-06 05:43:43',1342177281,'submission.event.fileUploaded',0),
+(408,1048585,14,3,'2025-02-06 05:43:43',1342177288,'submission.event.fileRevised',0),
+(409,515,112,3,'2025-02-06 05:43:43',1342177281,'submission.event.fileUploaded',0),
+(410,1048585,14,3,'2025-02-06 05:43:44',1342177288,'submission.event.fileRevised',0),
+(411,515,113,3,'2025-02-06 05:43:44',1342177281,'submission.event.fileUploaded',0),
+(412,1048585,14,3,'2025-02-06 05:43:44',1342177288,'submission.event.fileRevised',0),
+(413,1048585,14,3,'2025-02-06 05:43:45',268435464,'submission.event.publicationFormatPublished',0),
+(414,1048585,14,3,'2025-02-06 05:43:47',268435476,'submission.event.publicationFormatMadeAvailable',0),
+(415,515,113,3,'2025-02-06 05:43:48',1342177296,'submission.event.fileEdited',0),
+(416,515,113,3,'2025-02-06 05:43:48',1342177287,'submission.event.signoffSignoff',0),
+(417,515,113,3,'2025-02-06 05:43:51',1342177296,'submission.event.fileEdited',0),
+(418,515,112,3,'2025-02-06 05:43:53',1342177296,'submission.event.fileEdited',0),
+(419,515,112,3,'2025-02-06 05:43:53',1342177287,'submission.event.signoffSignoff',0),
+(420,515,112,3,'2025-02-06 05:43:55',1342177296,'submission.event.fileEdited',0),
+(421,515,111,3,'2025-02-06 05:43:56',1342177296,'submission.event.fileEdited',0),
+(422,515,111,3,'2025-02-06 05:43:56',1342177287,'submission.event.signoffSignoff',0),
+(423,515,111,3,'2025-02-06 05:43:59',1342177296,'submission.event.fileEdited',0),
+(424,515,110,3,'2025-02-06 05:44:00',1342177296,'submission.event.fileEdited',0),
+(425,515,110,3,'2025-02-06 05:44:00',1342177287,'submission.event.signoffSignoff',0),
+(426,515,110,3,'2025-02-06 05:44:03',1342177296,'submission.event.fileEdited',0),
+(427,515,109,3,'2025-02-06 05:44:05',1342177296,'submission.event.fileEdited',0),
+(428,515,109,3,'2025-02-06 05:44:05',1342177287,'submission.event.signoffSignoff',0),
+(429,515,109,3,'2025-02-06 05:44:07',1342177296,'submission.event.fileEdited',0),
+(430,515,108,3,'2025-02-06 05:44:09',1342177296,'submission.event.fileEdited',0),
+(431,515,108,3,'2025-02-06 05:44:09',1342177287,'submission.event.signoffSignoff',0),
+(432,515,108,3,'2025-02-06 05:44:11',1342177296,'submission.event.fileEdited',0),
+(433,1048585,14,3,'2025-02-06 05:44:13',268435462,'publication.event.published',0),
+(434,1048585,15,32,'2025-02-06 05:44:20',268435458,'submission.event.general.metadataUpdated',0),
+(435,1048585,15,32,'2025-02-06 05:44:20',268435458,'submission.event.general.metadataUpdated',0),
+(436,515,114,32,'2025-02-06 05:44:22',1342177281,'submission.event.fileUploaded',0),
+(437,1048585,15,32,'2025-02-06 05:44:22',1342177288,'submission.event.fileRevised',0),
+(438,515,114,32,'2025-02-06 05:44:22',1342177296,'submission.event.fileEdited',0),
+(439,515,115,32,'2025-02-06 05:44:23',1342177281,'submission.event.fileUploaded',0),
+(440,1048585,15,32,'2025-02-06 05:44:23',1342177288,'submission.event.fileRevised',0),
+(441,515,115,32,'2025-02-06 05:44:23',1342177296,'submission.event.fileEdited',0),
+(442,515,116,32,'2025-02-06 05:44:24',1342177281,'submission.event.fileUploaded',0),
+(443,1048585,15,32,'2025-02-06 05:44:24',1342177288,'submission.event.fileRevised',0),
+(444,515,116,32,'2025-02-06 05:44:24',1342177296,'submission.event.fileEdited',0),
+(445,1048585,15,32,'2025-02-06 05:44:39',268435457,'submission.event.submissionSubmitted',0),
+(446,1048585,15,3,'2025-02-06 05:44:48',805306371,'editor.submission.decision.sendExternalReview.log',0),
+(447,515,117,3,'2025-02-06 05:44:49',1342177281,'submission.event.fileUploaded',0),
+(448,1048585,15,3,'2025-02-06 05:44:49',1342177288,'submission.event.fileRevised',0),
+(449,515,118,3,'2025-02-06 05:44:49',1342177281,'submission.event.fileUploaded',0),
+(450,1048585,15,3,'2025-02-06 05:44:49',1342177288,'submission.event.fileRevised',0),
+(451,515,119,3,'2025-02-06 05:44:49',1342177281,'submission.event.fileUploaded',0),
+(452,1048585,15,3,'2025-02-06 05:44:49',1342177288,'submission.event.fileRevised',0),
+(453,1048585,16,33,'2025-02-06 05:44:58',268435458,'submission.event.general.metadataUpdated',0),
+(454,1048585,16,33,'2025-02-06 05:44:59',268435458,'submission.event.general.metadataUpdated',0),
+(455,515,120,33,'2025-02-06 05:45:01',1342177281,'submission.event.fileUploaded',0),
+(456,1048585,16,33,'2025-02-06 05:45:01',1342177288,'submission.event.fileRevised',0),
+(457,515,120,33,'2025-02-06 05:45:01',1342177296,'submission.event.fileEdited',0),
+(458,515,121,33,'2025-02-06 05:45:02',1342177281,'submission.event.fileUploaded',0),
+(459,1048585,16,33,'2025-02-06 05:45:02',1342177288,'submission.event.fileRevised',0),
+(460,515,121,33,'2025-02-06 05:45:02',1342177296,'submission.event.fileEdited',0),
+(461,515,122,33,'2025-02-06 05:45:03',1342177281,'submission.event.fileUploaded',0),
+(462,1048585,16,33,'2025-02-06 05:45:03',1342177288,'submission.event.fileRevised',0),
+(463,515,122,33,'2025-02-06 05:45:03',1342177296,'submission.event.fileEdited',0),
+(464,515,123,33,'2025-02-06 05:45:04',1342177281,'submission.event.fileUploaded',0),
+(465,1048585,16,33,'2025-02-06 05:45:04',1342177288,'submission.event.fileRevised',0),
+(466,515,123,33,'2025-02-06 05:45:04',1342177296,'submission.event.fileEdited',0),
+(467,515,124,33,'2025-02-06 05:45:04',1342177281,'submission.event.fileUploaded',0),
+(468,1048585,16,33,'2025-02-06 05:45:04',1342177288,'submission.event.fileRevised',0),
+(469,515,124,33,'2025-02-06 05:45:05',1342177296,'submission.event.fileEdited',0),
+(470,1048585,16,33,'2025-02-06 05:45:31',268435457,'submission.event.submissionSubmitted',0),
+(471,1048585,16,3,'2025-02-06 05:45:41',805306371,'editor.submission.decision.sendExternalReview.log',0),
+(472,515,125,3,'2025-02-06 05:45:41',1342177281,'submission.event.fileUploaded',0),
+(473,1048585,16,3,'2025-02-06 05:45:41',1342177288,'submission.event.fileRevised',0),
+(474,515,126,3,'2025-02-06 05:45:41',1342177281,'submission.event.fileUploaded',0),
+(475,1048585,16,3,'2025-02-06 05:45:41',1342177288,'submission.event.fileRevised',0),
+(476,515,127,3,'2025-02-06 05:45:41',1342177281,'submission.event.fileUploaded',0),
+(477,1048585,16,3,'2025-02-06 05:45:41',1342177288,'submission.event.fileRevised',0),
+(478,515,128,3,'2025-02-06 05:45:41',1342177281,'submission.event.fileUploaded',0),
+(479,1048585,16,3,'2025-02-06 05:45:41',1342177288,'submission.event.fileRevised',0),
+(480,515,129,3,'2025-02-06 05:45:41',1342177281,'submission.event.fileUploaded',0),
+(481,1048585,16,3,'2025-02-06 05:45:41',1342177288,'submission.event.fileRevised',0),
+(482,1048585,16,3,'2025-02-06 05:45:47',1073741825,'log.review.reviewerAssigned',0),
+(483,1048585,16,3,'2025-02-06 05:45:50',1073741825,'log.review.reviewerAssigned',0),
+(484,1048585,16,3,'2025-02-06 05:45:53',1073741825,'log.review.reviewerAssigned',0),
+(485,1048585,16,10,'2025-02-06 05:45:59',1073741830,'log.review.reviewAccepted',NULL),
+(486,1048585,16,10,'2025-02-06 05:46:03',1073741848,'log.review.reviewReady',0),
+(487,1048585,17,34,'2025-02-06 05:46:10',268435458,'submission.event.general.metadataUpdated',0),
+(488,1048585,17,34,'2025-02-06 05:46:10',268435458,'submission.event.general.metadataUpdated',0),
+(489,515,130,34,'2025-02-06 05:46:13',1342177281,'submission.event.fileUploaded',0),
+(490,1048585,17,34,'2025-02-06 05:46:13',1342177288,'submission.event.fileRevised',0),
+(491,515,130,34,'2025-02-06 05:46:13',1342177296,'submission.event.fileEdited',0),
+(492,515,131,34,'2025-02-06 05:46:13',1342177281,'submission.event.fileUploaded',0),
+(493,1048585,17,34,'2025-02-06 05:46:13',1342177288,'submission.event.fileRevised',0),
+(494,515,131,34,'2025-02-06 05:46:14',1342177296,'submission.event.fileEdited',0),
+(495,515,132,34,'2025-02-06 05:46:14',1342177281,'submission.event.fileUploaded',0),
+(496,1048585,17,34,'2025-02-06 05:46:14',1342177288,'submission.event.fileRevised',0),
+(497,515,132,34,'2025-02-06 05:46:14',1342177296,'submission.event.fileEdited',0),
+(498,515,133,34,'2025-02-06 05:46:15',1342177281,'submission.event.fileUploaded',0),
+(499,1048585,17,34,'2025-02-06 05:46:15',1342177288,'submission.event.fileRevised',0),
+(500,515,133,34,'2025-02-06 05:46:15',1342177296,'submission.event.fileEdited',0),
+(501,515,134,34,'2025-02-06 05:46:16',1342177281,'submission.event.fileUploaded',0),
+(502,1048585,17,34,'2025-02-06 05:46:16',1342177288,'submission.event.fileRevised',0),
+(503,515,134,34,'2025-02-06 05:46:16',1342177296,'submission.event.fileEdited',0),
+(504,515,135,34,'2025-02-06 05:46:17',1342177281,'submission.event.fileUploaded',0),
+(505,1048585,17,34,'2025-02-06 05:46:17',1342177288,'submission.event.fileRevised',0),
+(506,515,135,34,'2025-02-06 05:46:17',1342177296,'submission.event.fileEdited',0),
+(507,1048585,17,34,'2025-02-06 05:46:54',268435457,'submission.event.submissionSubmitted',0),
+(508,1048585,17,3,'2025-02-06 05:47:05',805306371,'editor.submission.decision.sendInternalReview.log',0),
+(509,515,136,3,'2025-02-06 05:47:05',1342177281,'submission.event.fileUploaded',0),
+(510,1048585,17,3,'2025-02-06 05:47:05',1342177288,'submission.event.fileRevised',0),
+(511,515,137,3,'2025-02-06 05:47:05',1342177281,'submission.event.fileUploaded',0),
+(512,1048585,17,3,'2025-02-06 05:47:05',1342177288,'submission.event.fileRevised',0),
+(513,515,138,3,'2025-02-06 05:47:05',1342177281,'submission.event.fileUploaded',0),
+(514,1048585,17,3,'2025-02-06 05:47:05',1342177288,'submission.event.fileRevised',0),
+(515,515,139,3,'2025-02-06 05:47:05',1342177281,'submission.event.fileUploaded',0),
+(516,1048585,17,3,'2025-02-06 05:47:05',1342177288,'submission.event.fileRevised',0),
+(517,515,140,3,'2025-02-06 05:47:05',1342177281,'submission.event.fileUploaded',0),
+(518,1048585,17,3,'2025-02-06 05:47:05',1342177288,'submission.event.fileRevised',0),
+(519,515,141,3,'2025-02-06 05:47:05',1342177281,'submission.event.fileUploaded',0),
+(520,1048585,17,3,'2025-02-06 05:47:05',1342177288,'submission.event.fileRevised',0),
+(521,1048585,17,3,'2025-02-06 05:47:12',1073741825,'log.review.reviewerAssigned',0),
+(522,1048585,17,3,'2025-02-06 05:47:15',1073741825,'log.review.reviewerAssigned',0);
 /*!40000 ALTER TABLE `event_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2199,7 +2199,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `event_log_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `event_log_settings` (
   `event_log_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `log_id` bigint(20) NOT NULL,
@@ -3224,45 +3224,45 @@ INSERT INTO `event_log_settings` VALUES
 (1001,204,'','submissionFileId','55'),
 (1002,204,'','submissionId','7'),
 (1003,204,'','username','dbarnes'),
-(1004,205,'','fileId','30'),
-(1005,205,'en','filename','chapter2.pdf'),
+(1004,205,'','fileId','31'),
+(1005,205,'en','filename','chapter3.pdf'),
 (1006,205,'','fileStage','4'),
-(1007,205,'','sourceSubmissionFileId','52'),
+(1007,205,'','sourceSubmissionFileId','53'),
 (1008,205,'','submissionFileId','56'),
 (1009,205,'','submissionId','7'),
 (1010,205,'','username','dbarnes'),
-(1011,206,'','fileId','30'),
-(1012,206,'en','filename','chapter2.pdf'),
+(1011,206,'','fileId','31'),
+(1012,206,'en','filename','chapter3.pdf'),
 (1013,206,'','fileStage','4'),
-(1014,206,'','sourceSubmissionFileId','52'),
+(1014,206,'','sourceSubmissionFileId','53'),
 (1015,206,'','submissionFileId','56'),
 (1016,206,'','submissionId','7'),
 (1017,206,'','username','dbarnes'),
-(1018,207,'','fileId','31'),
-(1019,207,'en','filename','chapter3.pdf'),
+(1018,207,'','fileId','29'),
+(1019,207,'en','filename','chapter1.pdf'),
 (1020,207,'','fileStage','4'),
-(1021,207,'','sourceSubmissionFileId','53'),
+(1021,207,'','sourceSubmissionFileId','51'),
 (1022,207,'','submissionFileId','57'),
 (1023,207,'','submissionId','7'),
 (1024,207,'','username','dbarnes'),
-(1025,208,'','fileId','31'),
-(1026,208,'en','filename','chapter3.pdf'),
+(1025,208,'','fileId','29'),
+(1026,208,'en','filename','chapter1.pdf'),
 (1027,208,'','fileStage','4'),
-(1028,208,'','sourceSubmissionFileId','53'),
+(1028,208,'','sourceSubmissionFileId','51'),
 (1029,208,'','submissionFileId','57'),
 (1030,208,'','submissionId','7'),
 (1031,208,'','username','dbarnes'),
-(1032,209,'','fileId','29'),
-(1033,209,'en','filename','chapter1.pdf'),
+(1032,209,'','fileId','30'),
+(1033,209,'en','filename','chapter2.pdf'),
 (1034,209,'','fileStage','4'),
-(1035,209,'','sourceSubmissionFileId','51'),
+(1035,209,'','sourceSubmissionFileId','52'),
 (1036,209,'','submissionFileId','58'),
 (1037,209,'','submissionId','7'),
 (1038,209,'','username','dbarnes'),
-(1039,210,'','fileId','29'),
-(1040,210,'en','filename','chapter1.pdf'),
+(1039,210,'','fileId','30'),
+(1040,210,'en','filename','chapter2.pdf'),
 (1041,210,'','fileStage','4'),
-(1042,210,'','sourceSubmissionFileId','51'),
+(1042,210,'','sourceSubmissionFileId','52'),
 (1043,210,'','submissionFileId','58'),
 (1044,210,'','submissionId','7'),
 (1045,210,'','username','dbarnes'),
@@ -3426,45 +3426,45 @@ INSERT INTO `event_log_settings` VALUES
 (1203,243,'','submissionFileId','67'),
 (1204,243,'','submissionId','9'),
 (1205,243,'','username','dbarnes'),
-(1206,244,'','fileId','35'),
-(1207,244,'en','filename','chapter2.pdf'),
+(1206,244,'','fileId','36'),
+(1207,244,'en','filename','chapter3.pdf'),
 (1208,244,'','fileStage','19'),
-(1209,244,'','sourceSubmissionFileId','62'),
+(1209,244,'','sourceSubmissionFileId','63'),
 (1210,244,'','submissionFileId','68'),
 (1211,244,'','submissionId','9'),
 (1212,244,'','username','dbarnes'),
-(1213,245,'','fileId','35'),
-(1214,245,'en','filename','chapter2.pdf'),
+(1213,245,'','fileId','36'),
+(1214,245,'en','filename','chapter3.pdf'),
 (1215,245,'','fileStage','19'),
-(1216,245,'','sourceSubmissionFileId','62'),
+(1216,245,'','sourceSubmissionFileId','63'),
 (1217,245,'','submissionFileId','68'),
 (1218,245,'','submissionId','9'),
 (1219,245,'','username','dbarnes'),
-(1220,246,'','fileId','36'),
-(1221,246,'en','filename','chapter3.pdf'),
+(1220,246,'','fileId','34'),
+(1221,246,'en','filename','chapter1.pdf'),
 (1222,246,'','fileStage','19'),
-(1223,246,'','sourceSubmissionFileId','63'),
+(1223,246,'','sourceSubmissionFileId','61'),
 (1224,246,'','submissionFileId','69'),
 (1225,246,'','submissionId','9'),
 (1226,246,'','username','dbarnes'),
-(1227,247,'','fileId','36'),
-(1228,247,'en','filename','chapter3.pdf'),
+(1227,247,'','fileId','34'),
+(1228,247,'en','filename','chapter1.pdf'),
 (1229,247,'','fileStage','19'),
-(1230,247,'','sourceSubmissionFileId','63'),
+(1230,247,'','sourceSubmissionFileId','61'),
 (1231,247,'','submissionFileId','69'),
 (1232,247,'','submissionId','9'),
 (1233,247,'','username','dbarnes'),
-(1234,248,'','fileId','34'),
-(1235,248,'en','filename','chapter1.pdf'),
+(1234,248,'','fileId','35'),
+(1235,248,'en','filename','chapter2.pdf'),
 (1236,248,'','fileStage','19'),
-(1237,248,'','sourceSubmissionFileId','61'),
+(1237,248,'','sourceSubmissionFileId','62'),
 (1238,248,'','submissionFileId','70'),
 (1239,248,'','submissionId','9'),
 (1240,248,'','username','dbarnes'),
-(1241,249,'','fileId','34'),
-(1242,249,'en','filename','chapter1.pdf'),
+(1241,249,'','fileId','35'),
+(1242,249,'en','filename','chapter2.pdf'),
 (1243,249,'','fileStage','19'),
-(1244,249,'','sourceSubmissionFileId','61'),
+(1244,249,'','sourceSubmissionFileId','62'),
 (1245,249,'','submissionFileId','70'),
 (1246,249,'','submissionId','9'),
 (1247,249,'','username','dbarnes'),
@@ -3796,31 +3796,31 @@ INSERT INTO `event_log_settings` VALUES
 (1573,318,'','submissionFileId','87'),
 (1574,318,'','submissionId','12'),
 (1575,318,'','username','dbarnes'),
-(1576,319,'','fileId','51'),
-(1577,319,'en','filename','chapter2.pdf'),
+(1576,319,'','fileId','50'),
+(1577,319,'en','filename','chapter1.pdf'),
 (1578,319,'','fileStage','19'),
-(1579,319,'','sourceSubmissionFileId','85'),
+(1579,319,'','sourceSubmissionFileId','84'),
 (1580,319,'','submissionFileId','88'),
 (1581,319,'','submissionId','12'),
 (1582,319,'','username','dbarnes'),
-(1583,320,'','fileId','51'),
-(1584,320,'en','filename','chapter2.pdf'),
+(1583,320,'','fileId','50'),
+(1584,320,'en','filename','chapter1.pdf'),
 (1585,320,'','fileStage','19'),
-(1586,320,'','sourceSubmissionFileId','85'),
+(1586,320,'','sourceSubmissionFileId','84'),
 (1587,320,'','submissionFileId','88'),
 (1588,320,'','submissionId','12'),
 (1589,320,'','username','dbarnes'),
-(1590,321,'','fileId','50'),
-(1591,321,'en','filename','chapter1.pdf'),
+(1590,321,'','fileId','51'),
+(1591,321,'en','filename','chapter2.pdf'),
 (1592,321,'','fileStage','19'),
-(1593,321,'','sourceSubmissionFileId','84'),
+(1593,321,'','sourceSubmissionFileId','85'),
 (1594,321,'','submissionFileId','89'),
 (1595,321,'','submissionId','12'),
 (1596,321,'','username','dbarnes'),
-(1597,322,'','fileId','50'),
-(1598,322,'en','filename','chapter1.pdf'),
+(1597,322,'','fileId','51'),
+(1598,322,'en','filename','chapter2.pdf'),
 (1599,322,'','fileStage','19'),
-(1600,322,'','sourceSubmissionFileId','84'),
+(1600,322,'','sourceSubmissionFileId','85'),
 (1601,322,'','submissionFileId','89'),
 (1602,322,'','submissionId','12'),
 (1603,322,'','username','dbarnes'),
@@ -4100,31 +4100,31 @@ INSERT INTO `event_log_settings` VALUES
 (1877,381,'','submissionFileId','102'),
 (1878,381,'','submissionId','14'),
 (1879,381,'','username','dbarnes'),
-(1880,382,'','fileId','59'),
-(1881,382,'en','filename','chapter4.pdf'),
+(1880,382,'','fileId','60'),
+(1881,382,'en','filename','Segmentation of Vascular Ultrasound Imag.pdf'),
 (1882,382,'','fileStage','19'),
-(1883,382,'','sourceSubmissionFileId','99'),
+(1883,382,'','sourceSubmissionFileId','100'),
 (1884,382,'','submissionFileId','103'),
 (1885,382,'','submissionId','14'),
 (1886,382,'','username','dbarnes'),
-(1887,383,'','fileId','59'),
-(1888,383,'en','filename','chapter4.pdf'),
+(1887,383,'','fileId','60'),
+(1888,383,'en','filename','Segmentation of Vascular Ultrasound Imag.pdf'),
 (1889,383,'','fileStage','19'),
-(1890,383,'','sourceSubmissionFileId','99'),
+(1890,383,'','sourceSubmissionFileId','100'),
 (1891,383,'','submissionFileId','103'),
 (1892,383,'','submissionId','14'),
 (1893,383,'','username','dbarnes'),
-(1894,384,'','fileId','60'),
-(1895,384,'en','filename','Segmentation of Vascular Ultrasound Imag.pdf'),
+(1894,384,'','fileId','59'),
+(1895,384,'en','filename','chapter4.pdf'),
 (1896,384,'','fileStage','19'),
-(1897,384,'','sourceSubmissionFileId','100'),
+(1897,384,'','sourceSubmissionFileId','99'),
 (1898,384,'','submissionFileId','104'),
 (1899,384,'','submissionId','14'),
 (1900,384,'','username','dbarnes'),
-(1901,385,'','fileId','60'),
-(1902,385,'en','filename','Segmentation of Vascular Ultrasound Imag.pdf'),
+(1901,385,'','fileId','59'),
+(1902,385,'en','filename','chapter4.pdf'),
 (1903,385,'','fileStage','19'),
-(1904,385,'','sourceSubmissionFileId','100'),
+(1904,385,'','sourceSubmissionFileId','99'),
 (1905,385,'','submissionFileId','104'),
 (1906,385,'','submissionId','14'),
 (1907,385,'','username','dbarnes'),
@@ -4209,31 +4209,31 @@ INSERT INTO `event_log_settings` VALUES
 (1986,402,'','submissionFileId','108'),
 (1987,402,'','submissionId','14'),
 (1988,402,'','username','dbarnes'),
-(1989,403,'','fileId','59'),
-(1990,403,'en','filename','chapter4.pdf'),
+(1989,403,'','fileId','60'),
+(1990,403,'en','filename','Segmentation of Vascular Ultrasound Imag.pdf'),
 (1991,403,'','fileStage','10'),
-(1992,403,'','sourceSubmissionFileId','99'),
+(1992,403,'','sourceSubmissionFileId','100'),
 (1993,403,'','submissionFileId','109'),
 (1994,403,'','submissionId','14'),
 (1995,403,'','username','dbarnes'),
-(1996,404,'','fileId','59'),
-(1997,404,'en','filename','chapter4.pdf'),
+(1996,404,'','fileId','60'),
+(1997,404,'en','filename','Segmentation of Vascular Ultrasound Imag.pdf'),
 (1998,404,'','fileStage','10'),
-(1999,404,'','sourceSubmissionFileId','99'),
+(1999,404,'','sourceSubmissionFileId','100'),
 (2000,404,'','submissionFileId','109'),
 (2001,404,'','submissionId','14'),
 (2002,404,'','username','dbarnes'),
-(2003,405,'','fileId','60'),
-(2004,405,'en','filename','Segmentation of Vascular Ultrasound Imag.pdf'),
+(2003,405,'','fileId','59'),
+(2004,405,'en','filename','chapter4.pdf'),
 (2005,405,'','fileStage','10'),
-(2006,405,'','sourceSubmissionFileId','100'),
+(2006,405,'','sourceSubmissionFileId','99'),
 (2007,405,'','submissionFileId','110'),
 (2008,405,'','submissionId','14'),
 (2009,405,'','username','dbarnes'),
-(2010,406,'','fileId','60'),
-(2011,406,'en','filename','Segmentation of Vascular Ultrasound Imag.pdf'),
+(2010,406,'','fileId','59'),
+(2011,406,'en','filename','chapter4.pdf'),
 (2012,406,'','fileStage','10'),
-(2013,406,'','sourceSubmissionFileId','100'),
+(2013,406,'','sourceSubmissionFileId','99'),
 (2014,406,'','submissionFileId','110'),
 (2015,406,'','submissionId','14'),
 (2016,406,'','username','dbarnes'),
@@ -4338,7 +4338,7 @@ INSERT INTO `event_log_settings` VALUES
 (2115,424,'en','filename','chapter4.pdf'),
 (2116,424,'','fileStage','10'),
 (2117,424,'','sourceSubmissionFileId','99'),
-(2118,424,'','submissionFileId','109'),
+(2118,424,'','submissionFileId','110'),
 (2119,424,'','submissionId','14'),
 (2120,424,'','username','dbarnes'),
 (2121,425,'en','filename','chapter4.pdf'),
@@ -4348,14 +4348,14 @@ INSERT INTO `event_log_settings` VALUES
 (2125,426,'en','filename','chapter4.pdf'),
 (2126,426,'','fileStage','10'),
 (2127,426,'','sourceSubmissionFileId','99'),
-(2128,426,'','submissionFileId','109'),
+(2128,426,'','submissionFileId','110'),
 (2129,426,'','submissionId','14'),
 (2130,426,'','username','dbarnes'),
 (2131,427,'','fileId','60'),
 (2132,427,'en','filename','Segmentation of Vascular Ultrasound Imag.pdf'),
 (2133,427,'','fileStage','10'),
 (2134,427,'','sourceSubmissionFileId','100'),
-(2135,427,'','submissionFileId','110'),
+(2135,427,'','submissionFileId','109'),
 (2136,427,'','submissionId','14'),
 (2137,427,'','username','dbarnes'),
 (2138,428,'en','filename','Segmentation of Vascular Ultrasound Imag.pdf'),
@@ -4365,7 +4365,7 @@ INSERT INTO `event_log_settings` VALUES
 (2142,429,'en','filename','Segmentation of Vascular Ultrasound Imag.pdf'),
 (2143,429,'','fileStage','10'),
 (2144,429,'','sourceSubmissionFileId','100'),
-(2145,429,'','submissionFileId','110'),
+(2145,429,'','submissionFileId','109'),
 (2146,429,'','submissionId','14'),
 (2147,429,'','username','dbarnes'),
 (2148,430,'','fileId','61'),
@@ -4828,31 +4828,31 @@ INSERT INTO `event_log_settings` VALUES
 (2605,516,'','submissionFileId','139'),
 (2606,516,'','submissionId','17'),
 (2607,516,'','username','dbarnes'),
-(2608,517,'','fileId','71'),
-(2609,517,'en','filename','introduction.pdf'),
+(2608,517,'','fileId','70'),
+(2609,517,'en','filename','preface.pdf'),
 (2610,517,'','fileStage','19'),
-(2611,517,'','sourceSubmissionFileId','131'),
+(2611,517,'','sourceSubmissionFileId','130'),
 (2612,517,'','submissionFileId','140'),
 (2613,517,'','submissionId','17'),
 (2614,517,'','username','dbarnes'),
-(2615,518,'','fileId','71'),
-(2616,518,'en','filename','introduction.pdf'),
+(2615,518,'','fileId','70'),
+(2616,518,'en','filename','preface.pdf'),
 (2617,518,'','fileStage','19'),
-(2618,518,'','sourceSubmissionFileId','131'),
+(2618,518,'','sourceSubmissionFileId','130'),
 (2619,518,'','submissionFileId','140'),
 (2620,518,'','submissionId','17'),
 (2621,518,'','username','dbarnes'),
-(2622,519,'','fileId','70'),
-(2623,519,'en','filename','preface.pdf'),
+(2622,519,'','fileId','71'),
+(2623,519,'en','filename','introduction.pdf'),
 (2624,519,'','fileStage','19'),
-(2625,519,'','sourceSubmissionFileId','130'),
+(2625,519,'','sourceSubmissionFileId','131'),
 (2626,519,'','submissionFileId','141'),
 (2627,519,'','submissionId','17'),
 (2628,519,'','username','dbarnes'),
-(2629,520,'','fileId','70'),
-(2630,520,'en','filename','preface.pdf'),
+(2629,520,'','fileId','71'),
+(2630,520,'en','filename','introduction.pdf'),
 (2631,520,'','fileStage','19'),
-(2632,520,'','sourceSubmissionFileId','130'),
+(2632,520,'','sourceSubmissionFileId','131'),
 (2633,520,'','submissionFileId','141'),
 (2634,520,'','submissionId','17'),
 (2635,520,'','username','dbarnes'),
@@ -4873,7 +4873,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `failed_jobs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `failed_jobs` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `connection` text NOT NULL,
@@ -4900,7 +4900,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `features`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `features` (
   `feature_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
@@ -4929,7 +4929,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `files` (
   `file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `path` varchar(255) NOT NULL,
@@ -4945,80 +4945,80 @@ CREATE TABLE `files` (
 LOCK TABLES `files` WRITE;
 /*!40000 ALTER TABLE `files` DISABLE KEYS */;
 INSERT INTO `files` VALUES
-(1,'presses/1/monographs/1/67a1a8d94d668.pdf','application/pdf'),
-(2,'presses/1/monographs/1/67a1a8da2e478.pdf','application/pdf'),
-(3,'presses/1/monographs/1/67a1a8db0fe7b.pdf','application/pdf'),
-(4,'presses/1/monographs/2/67a1a91110e63.pdf','application/pdf'),
-(5,'presses/1/monographs/2/67a1a91218e9e.pdf','application/pdf'),
-(6,'presses/1/monographs/2/67a1a91302bc8.pdf','application/pdf'),
-(7,'presses/1/monographs/2/67a1a913f3197.pdf','application/pdf'),
-(9,'presses/1/monographs/3/67a1a98a03e72.pdf','application/pdf'),
-(10,'presses/1/monographs/3/67a1a98ad831b.pdf','application/pdf'),
-(11,'presses/1/monographs/3/67a1a98bb9176.pdf','application/pdf'),
-(12,'presses/1/monographs/3/67a1a98ca2edf.pdf','application/pdf'),
-(13,'presses/1/monographs/3/67a1a98d90352.pdf','application/pdf'),
-(14,'presses/1/monographs/4/67a1a9b1b5c92.pdf','application/pdf'),
-(15,'presses/1/monographs/4/67a1a9b293da8.pdf','application/pdf'),
-(16,'presses/1/monographs/4/67a1a9b3753cc.pdf','application/pdf'),
-(17,'presses/1/monographs/4/67a1a9b467a92.pdf','application/pdf'),
-(18,'presses/1/monographs/5/67a1aa04f3eb4.pdf','application/pdf'),
-(19,'presses/1/monographs/5/67a1aa05d5172.pdf','application/pdf'),
-(20,'presses/1/monographs/5/67a1aa06b6b80.pdf','application/pdf'),
-(21,'presses/1/monographs/5/67a1aa07aaea5.pdf','application/pdf'),
-(22,'presses/1/monographs/5/67a1aa088c0a8.pdf','application/pdf'),
-(23,'presses/1/monographs/5/67a1aa0978fd0.pdf','application/pdf'),
-(24,'presses/1/monographs/6/67a1aa7d76acb.pdf','application/pdf'),
-(25,'presses/1/monographs/6/67a1aa7e5f5e3.pdf','application/pdf'),
-(26,'presses/1/monographs/6/67a1aa7f451b6.pdf','application/pdf'),
-(27,'presses/1/monographs/6/67a1aa802ccc0.pdf','application/pdf'),
-(28,'presses/1/monographs/7/67a1aac13b719.pdf','application/pdf'),
-(29,'presses/1/monographs/7/67a1aac21d6bd.pdf','application/pdf'),
-(30,'presses/1/monographs/7/67a1aac3002f4.pdf','application/pdf'),
-(31,'presses/1/monographs/7/67a1aac3d777d.pdf','application/pdf'),
-(32,'presses/1/monographs/7/67a1aac4bf6ff.pdf','application/pdf'),
-(33,'presses/1/monographs/8/67a1ab047cf94.pdf','application/pdf'),
-(34,'presses/1/monographs/9/67a1ab0e1ce7f.pdf','application/pdf'),
-(35,'presses/1/monographs/9/67a1ab0ef3802.pdf','application/pdf'),
-(36,'presses/1/monographs/9/67a1ab0fd3d8d.pdf','application/pdf'),
-(37,'presses/1/monographs/9/67a1ab10d122f.pdf','application/pdf'),
-(38,'presses/1/monographs/9/67a1ab11bc9d9.pdf','application/pdf'),
-(39,'presses/1/monographs/10/67a1ab43eeb90.pdf','application/pdf'),
-(40,'presses/1/monographs/10/67a1ab44cde4d.pdf','application/pdf'),
-(41,'presses/1/monographs/10/67a1ab45b4674.pdf','application/pdf'),
-(42,'presses/1/monographs/10/67a1ab469eb32.pdf','application/pdf'),
-(43,'presses/1/monographs/10/67a1ab47827e3.pdf','application/pdf'),
-(44,'presses/1/monographs/10/67a1ab486b90b.pdf','application/pdf'),
-(45,'presses/1/monographs/10/67a1ab495bffb.pdf','application/pdf'),
-(46,'presses/1/monographs/10/67a1ab4a5b071.pdf','application/pdf'),
-(47,'presses/1/monographs/10/67a1ab4b67835.pdf','application/pdf'),
-(48,'presses/1/monographs/11/67a1ab8a4adee.pdf','application/pdf'),
-(49,'presses/1/monographs/11/67a1ab8b2f504.pdf','application/pdf'),
-(50,'presses/1/monographs/12/67a1abd5efb45.pdf','application/pdf'),
-(51,'presses/1/monographs/12/67a1abd6d75c0.pdf','application/pdf'),
-(52,'presses/1/monographs/12/67a1abd7b685b.pdf','application/pdf'),
-(53,'presses/1/monographs/13/67a1ac11a12b2.pdf','application/pdf'),
-(54,'presses/1/monographs/13/67a1ac1288c09.pdf','application/pdf'),
-(55,'presses/1/monographs/13/67a1ac136d2b1.pdf','application/pdf'),
-(56,'presses/1/monographs/14/67a1ac6c5a768.pdf','application/pdf'),
-(57,'presses/1/monographs/14/67a1ac6d3861d.pdf','application/pdf'),
-(58,'presses/1/monographs/14/67a1ac6e1bce0.pdf','application/pdf'),
-(59,'presses/1/monographs/14/67a1ac6f00898.pdf','application/pdf'),
-(60,'presses/1/monographs/14/67a1ac6fda740.pdf','application/pdf'),
-(61,'presses/1/monographs/14/67a1ac710cf1f.pdf','application/pdf'),
-(62,'presses/1/monographs/15/67a1acee437cf.pdf','application/pdf'),
-(63,'presses/1/monographs/15/67a1acef2876e.pdf','application/pdf'),
-(64,'presses/1/monographs/15/67a1acf0137d0.pdf','application/pdf'),
-(65,'presses/1/monographs/16/67a1ad1458d79.pdf','application/pdf'),
-(66,'presses/1/monographs/16/67a1ad1534ba6.pdf','application/pdf'),
-(67,'presses/1/monographs/16/67a1ad16196b2.pdf','application/pdf'),
-(68,'presses/1/monographs/16/67a1ad17022a6.pdf','application/pdf'),
-(69,'presses/1/monographs/16/67a1ad17de515.pdf','application/pdf'),
-(70,'presses/1/monographs/17/67a1ad5a9c22f.pdf','application/pdf'),
-(71,'presses/1/monographs/17/67a1ad5b7b3a8.pdf','application/pdf'),
-(72,'presses/1/monographs/17/67a1ad5c59d6a.pdf','application/pdf'),
-(73,'presses/1/monographs/17/67a1ad5d4c816.pdf','application/pdf'),
-(74,'presses/1/monographs/17/67a1ad5e33bc9.pdf','application/pdf'),
-(75,'presses/1/monographs/17/67a1ad5f19806.pdf','application/pdf');
+(1,'presses/1/monographs/1/67a4480b4d801.pdf','application/pdf'),
+(2,'presses/1/monographs/1/67a4480c30718.pdf','application/pdf'),
+(3,'presses/1/monographs/1/67a4480d0fcc4.pdf','application/pdf'),
+(4,'presses/1/monographs/2/67a4484395ea6.pdf','application/pdf'),
+(5,'presses/1/monographs/2/67a44844a7df7.pdf','application/pdf'),
+(6,'presses/1/monographs/2/67a448459a907.pdf','application/pdf'),
+(7,'presses/1/monographs/2/67a4484688502.pdf','application/pdf'),
+(9,'presses/1/monographs/3/67a448bebf03a.pdf','application/pdf'),
+(10,'presses/1/monographs/3/67a448bfa6a9b.pdf','application/pdf'),
+(11,'presses/1/monographs/3/67a448c085759.pdf','application/pdf'),
+(12,'presses/1/monographs/3/67a448c16a067.pdf','application/pdf'),
+(13,'presses/1/monographs/3/67a448c25cc11.pdf','application/pdf'),
+(14,'presses/1/monographs/4/67a448e6e5105.pdf','application/pdf'),
+(15,'presses/1/monographs/4/67a448e7c8258.pdf','application/pdf'),
+(16,'presses/1/monographs/4/67a448e8ac814.pdf','application/pdf'),
+(17,'presses/1/monographs/4/67a448e9994a8.pdf','application/pdf'),
+(18,'presses/1/monographs/5/67a4493af37dc.pdf','application/pdf'),
+(19,'presses/1/monographs/5/67a4493bd53c7.pdf','application/pdf'),
+(20,'presses/1/monographs/5/67a4493cbfd32.pdf','application/pdf'),
+(21,'presses/1/monographs/5/67a4493da940b.pdf','application/pdf'),
+(22,'presses/1/monographs/5/67a4493e9643a.pdf','application/pdf'),
+(23,'presses/1/monographs/5/67a4493f8e34b.pdf','application/pdf'),
+(24,'presses/1/monographs/6/67a449b6c3100.pdf','application/pdf'),
+(25,'presses/1/monographs/6/67a449b7abacc.pdf','application/pdf'),
+(26,'presses/1/monographs/6/67a449b899955.pdf','application/pdf'),
+(27,'presses/1/monographs/6/67a449b98a46f.pdf','application/pdf'),
+(28,'presses/1/monographs/7/67a449fd280f9.pdf','application/pdf'),
+(29,'presses/1/monographs/7/67a449fe095cf.pdf','application/pdf'),
+(30,'presses/1/monographs/7/67a449fee5bcd.pdf','application/pdf'),
+(31,'presses/1/monographs/7/67a449ffd17b8.pdf','application/pdf'),
+(32,'presses/1/monographs/7/67a44a00c2ae4.pdf','application/pdf'),
+(33,'presses/1/monographs/8/67a44a414d7b6.pdf','application/pdf'),
+(34,'presses/1/monographs/9/67a44a4b09f37.pdf','application/pdf'),
+(35,'presses/1/monographs/9/67a44a4be0326.pdf','application/pdf'),
+(36,'presses/1/monographs/9/67a44a4cc9ef1.pdf','application/pdf'),
+(37,'presses/1/monographs/9/67a44a4db7209.pdf','application/pdf'),
+(38,'presses/1/monographs/9/67a44a4ea67d5.pdf','application/pdf'),
+(39,'presses/1/monographs/10/67a44a8274c00.pdf','application/pdf'),
+(40,'presses/1/monographs/10/67a44a83583b3.pdf','application/pdf'),
+(41,'presses/1/monographs/10/67a44a843f498.pdf','application/pdf'),
+(42,'presses/1/monographs/10/67a44a852b310.pdf','application/pdf'),
+(43,'presses/1/monographs/10/67a44a86203c9.pdf','application/pdf'),
+(44,'presses/1/monographs/10/67a44a8718714.pdf','application/pdf'),
+(45,'presses/1/monographs/10/67a44a881e6e8.pdf','application/pdf'),
+(46,'presses/1/monographs/10/67a44a891e168.pdf','application/pdf'),
+(47,'presses/1/monographs/10/67a44a8a1f669.pdf','application/pdf'),
+(48,'presses/1/monographs/11/67a44acb4780a.pdf','application/pdf'),
+(49,'presses/1/monographs/11/67a44acc29a02.pdf','application/pdf'),
+(50,'presses/1/monographs/12/67a44b18f3996.pdf','application/pdf'),
+(51,'presses/1/monographs/12/67a44b19dd980.pdf','application/pdf'),
+(52,'presses/1/monographs/12/67a44b1ac17e2.pdf','application/pdf'),
+(53,'presses/1/monographs/13/67a44b553142a.pdf','application/pdf'),
+(54,'presses/1/monographs/13/67a44b5619d44.pdf','application/pdf'),
+(55,'presses/1/monographs/13/67a44b5703b43.pdf','application/pdf'),
+(56,'presses/1/monographs/14/67a44bb0b7b71.pdf','application/pdf'),
+(57,'presses/1/monographs/14/67a44bb19a849.pdf','application/pdf'),
+(58,'presses/1/monographs/14/67a44bb27f6f5.pdf','application/pdf'),
+(59,'presses/1/monographs/14/67a44bb368ec6.pdf','application/pdf'),
+(60,'presses/1/monographs/14/67a44bb44e242.pdf','application/pdf'),
+(61,'presses/1/monographs/14/67a44bb57a4cc.pdf','application/pdf'),
+(62,'presses/1/monographs/15/67a44c36969e8.pdf','application/pdf'),
+(63,'presses/1/monographs/15/67a44c3777ac8.pdf','application/pdf'),
+(64,'presses/1/monographs/15/67a44c385afa9.pdf','application/pdf'),
+(65,'presses/1/monographs/16/67a44c5d6890e.pdf','application/pdf'),
+(66,'presses/1/monographs/16/67a44c5e4743c.pdf','application/pdf'),
+(67,'presses/1/monographs/16/67a44c5f29367.pdf','application/pdf'),
+(68,'presses/1/monographs/16/67a44c600b80d.pdf','application/pdf'),
+(69,'presses/1/monographs/16/67a44c60e9483.pdf','application/pdf'),
+(70,'presses/1/monographs/17/67a44ca502b1f.pdf','application/pdf'),
+(71,'presses/1/monographs/17/67a44ca5d9825.pdf','application/pdf'),
+(72,'presses/1/monographs/17/67a44ca6b67f9.pdf','application/pdf'),
+(73,'presses/1/monographs/17/67a44ca79c9cf.pdf','application/pdf'),
+(74,'presses/1/monographs/17/67a44ca889a9b.pdf','application/pdf'),
+(75,'presses/1/monographs/17/67a44ca976263.pdf','application/pdf');
 /*!40000 ALTER TABLE `files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5028,7 +5028,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filter_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filter_groups` (
   `filter_group_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `symbolic` varchar(255) DEFAULT NULL,
@@ -5076,7 +5076,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filter_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filter_settings` (
   `filter_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `filter_id` bigint(20) NOT NULL,
@@ -5106,7 +5106,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `filters`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `filters` (
   `filter_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `filter_group_id` bigint(20) NOT NULL,
@@ -5161,7 +5161,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `genre_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `genre_settings` (
   `genre_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `genre_id` bigint(20) NOT NULL,
@@ -5222,7 +5222,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `genres`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `genres` (
   `genre_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
@@ -5270,7 +5270,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `highlight_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `highlight_settings` (
   `highlight_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `highlight_id` bigint(20) NOT NULL,
@@ -5299,7 +5299,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `highlights`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `highlights` (
   `highlight_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) DEFAULT NULL,
@@ -5326,7 +5326,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `identification_codes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `identification_codes` (
   `identification_code_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `publication_format_id` bigint(20) NOT NULL,
@@ -5357,7 +5357,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `institution_ip`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `institution_ip` (
   `institution_ip_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `institution_id` bigint(20) NOT NULL,
@@ -5387,7 +5387,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `institution_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `institution_settings` (
   `institution_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `institution_id` bigint(20) NOT NULL,
@@ -5416,7 +5416,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `institutions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `institutions` (
   `institution_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
@@ -5443,7 +5443,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `invitations`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `invitations` (
   `invitation_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `key_hash` varchar(255) DEFAULT NULL,
@@ -5476,23 +5476,23 @@ CREATE TABLE `invitations` (
 LOCK TABLES `invitations` WRITE;
 /*!40000 ALTER TABLE `invitations` DISABLE KEYS */;
 INSERT INTO `invitations` VALUES
-(2,'$2y$10$1Xpaoxlo4P/ZoLMnMZ8QHOew4Ng7yJGb8mWb9S1LvdV0qzoj91wZW','userRoleAssignment',NULL,1,'2025-02-07 05:33:26','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Ramiro\",\"fr_CA\":\"Ramiro\"},\"familyName\":{\"en\":\"Vaca\",\"fr_CA\":\"Vaca\"},\"affiliation\":{\"en\":\"Universidad Nacional Aut\\u00f3noma de M\\u00e9xico\",\"fr_CA\":\"Mexico\"},\"userCountry\":\"MX\",\"username\":\"rvaca\",\"password\":\"$2y$10$JqkOLWT0BBmfBxTOm7yiSutHvn0XpjD7LiSxjNwYmOZbvYVAS6eZ2\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":2,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"rvaca@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":2,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"rvaca@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','rvaca@mailinator.com',1,'2025-02-04 05:33:26','2025-02-04 05:33:36'),
-(4,'$2y$10$7sTao7LAd1a.fuQsIU4OzegkWjbniPFWC72PclRvQlpI8G3Tspl2e','userRoleAssignment',NULL,1,'2025-02-07 05:33:48','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Daniel\",\"fr_CA\":\"Daniel\"},\"familyName\":{\"en\":\"Barnes\",\"fr_CA\":\"Barnes\"},\"affiliation\":{\"en\":\"University of Melbourne\",\"fr_CA\":\"Australia\"},\"userCountry\":\"AU\",\"username\":\"dbarnes\",\"password\":\"$2y$10$ryL1psZUQO31cRQuSmJy7esYR85hBkxWpBzKCd65PAgQEQvMvQgi2\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":3,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"dbarnes@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":3,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"dbarnes@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','dbarnes@mailinator.com',1,'2025-02-04 05:33:47','2025-02-04 05:33:57'),
-(6,'$2y$10$BXPHGkGSayRB6S086jUfWukvfuroTkzNUZG5/JNTwPsMmXVcbOhJm','userRoleAssignment',NULL,1,'2025-02-07 05:34:09','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"David\",\"fr_CA\":\"David\"},\"familyName\":{\"en\":\"Buskins\",\"fr_CA\":\"Buskins\"},\"affiliation\":{\"en\":\"University of Chicago\",\"fr_CA\":\"United States\"},\"userCountry\":\"US\",\"username\":\"dbuskins\",\"password\":\"$2y$10$r7X5WGvZH.YthodY.AHO1.hukXl0qxKON3kQmJ4Mcml8\\/r71fvARS\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"dbuskins@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"dbuskins@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','dbuskins@mailinator.com',1,'2025-02-04 05:34:09','2025-02-04 05:34:19'),
-(8,'$2y$10$lcrWSP6k9osHiJam.MaKNeh571aRtRt/UThCV3VTdiXmYh//4Kxby','userRoleAssignment',NULL,1,'2025-02-07 05:34:31','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Stephanie\",\"fr_CA\":\"Stephanie\"},\"familyName\":{\"en\":\"Berardo\",\"fr_CA\":\"Berardo\"},\"affiliation\":{\"en\":\"University of Toronto\",\"fr_CA\":\"Canada\"},\"userCountry\":\"CA\",\"username\":\"sberardo\",\"password\":\"$2y$10$1tQYmV7vlX43M6sEj6mfhOBnCC5r5xdkZs6EgKd9.gsyg61gUbYQ2\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"sberardo@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"sberardo@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','sberardo@mailinator.com',1,'2025-02-04 05:34:31','2025-02-04 05:34:42'),
-(10,'$2y$10$o1i4UPF7UWpha4VgYW46ge0AtvrbzwCWg2yG5IVAUSckyOirG3OB.','userRoleAssignment',NULL,1,'2025-02-07 05:34:56','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Minoti\",\"fr_CA\":\"Minoti\"},\"familyName\":{\"en\":\"Inoue\",\"fr_CA\":\"Inoue\"},\"affiliation\":{\"en\":\"Kyoto University\",\"fr_CA\":\"Japan\"},\"userCountry\":\"JP\",\"username\":\"minoue\",\"password\":\"$2y$10$3Qta8lPx0iPQNXIb6Uj9J.989o.YznMhOkGqy42U8it3s1x2XiWnK\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"minoue@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"minoue@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','minoue@mailinator.com',1,'2025-02-04 05:34:55','2025-02-04 05:35:07'),
-(12,'$2y$10$jY6fqw6bSl/25iQGCPfWl.59.IuylWT/Yab/2t6NAUyuGQ05fCSNW','userRoleAssignment',NULL,1,'2025-02-07 05:35:21','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Julie\",\"fr_CA\":\"Julie\"},\"familyName\":{\"en\":\"Janssen\",\"fr_CA\":\"Janssen\"},\"affiliation\":{\"en\":\"Utrecht University\",\"fr_CA\":\"Netherlands\"},\"userCountry\":\"NL\",\"username\":\"jjanssen\",\"password\":\"$2y$10$wUXxckIDVpVi9etLYhejgeQxz9kU9zhldlqdOVuKLgz8kiPr7HgUW\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"jjanssen@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"jjanssen@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','jjanssen@mailinator.com',1,'2025-02-04 05:35:20','2025-02-04 05:35:32'),
-(14,'$2y$10$douViH0HmIB8XjxELF4jDeirULkBeDdnFo/pP3gEcV.q9joEuc9.2','userRoleAssignment',NULL,1,'2025-02-07 05:35:46','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Paul\",\"fr_CA\":\"Paul\"},\"familyName\":{\"en\":\"Hudson\",\"fr_CA\":\"Hudson\"},\"affiliation\":{\"en\":\"McGill University\",\"fr_CA\":\"Canada\"},\"userCountry\":\"CA\",\"username\":\"phudson\",\"password\":\"$2y$10$OsQFGC2dmZfOneMNU.njXep13no9g36CzFFjAr1i2quYRNcK97JhW\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"phudson@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"phudson@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','phudson@mailinator.com',1,'2025-02-04 05:35:46','2025-02-04 05:35:58'),
-(16,'$2y$10$gKcUFbKyJHPkdZ8tHMhn6O0CO6yqa9WxVG7hiidUnc8Z/imoD1JXS','userRoleAssignment',NULL,1,'2025-02-07 05:36:13','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Aisla\",\"fr_CA\":\"Aisla\"},\"familyName\":{\"en\":\"McCrae\",\"fr_CA\":\"McCrae\"},\"affiliation\":{\"en\":\"University of Manitoba\",\"fr_CA\":\"Canada\"},\"userCountry\":\"CA\",\"username\":\"amccrae\",\"password\":\"$2y$10$nm0BwCGNWZvmtFvjE4IJIOGqI\\/SXFueucN4dQZdx9UUyWST7\\/UaTS\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"amccrae@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"amccrae@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','amccrae@mailinator.com',1,'2025-02-04 05:36:12','2025-02-04 05:36:26'),
-(18,'$2y$10$sNd4NdyFheFlv0El2vNJMOQSxLkBTbyuJybs2qkDej7ZiZfPG/9q.','userRoleAssignment',NULL,1,'2025-02-07 05:36:42','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Adela\",\"fr_CA\":\"Adela\"},\"familyName\":{\"en\":\"Gallego\",\"fr_CA\":\"Gallego\"},\"affiliation\":{\"en\":\"State University of New York\",\"fr_CA\":\"United States\"},\"userCountry\":\"US\",\"username\":\"agallego\",\"password\":\"$2y$10$jm5stKm7na6FzTdTIqLvhuUz3u\\/4QxTooBGeKBAUy.ExRZlYCozVa\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"agallego@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"agallego@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','agallego@mailinator.com',1,'2025-02-04 05:36:41','2025-02-04 05:36:56'),
-(20,'$2y$10$7gWv3Lo1J0K/D4T1iOoydObW38TnFuz5R0BLN.L.8OSqAw2u9XcbO','userRoleAssignment',NULL,1,'2025-02-07 05:37:12','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Al\",\"fr_CA\":\"Al\"},\"familyName\":{\"en\":\"Zacharia\",\"fr_CA\":\"Zacharia\"},\"affiliation\":{\"en\":\"KNUST\",\"fr_CA\":\"Ghana\"},\"userCountry\":\"GH\",\"username\":\"alzacharia\",\"password\":\"$2y$10$JnhCoIjmbpdOi3NiW2ipY.eAIUuB6u8ht6oYbaZ5hGeMo1AK7o1he\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"alzacharia@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"alzacharia@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','alzacharia@mailinator.com',1,'2025-02-04 05:37:12','2025-02-04 05:37:27'),
-(22,'$2y$10$iZT.fuIYcSXuSp0/64vaJebZN3/rJfQpfgCngwZfRZJ3Uh1r9/pQu','userRoleAssignment',NULL,1,'2025-02-07 05:37:43','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Gonzalo\",\"fr_CA\":\"Gonzalo\"},\"familyName\":{\"en\":\"Favio\",\"fr_CA\":\"Favio\"},\"affiliation\":{\"en\":\"Madrid\",\"fr_CA\":\"Spain\"},\"userCountry\":\"ES\",\"username\":\"gfavio\",\"password\":\"$2y$10$AER.vDTd9wD1JX7lv7U4Ne2Bi7DHQqJ0KwwP3v0Y8W7kJsPuIpcH6\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"gfavio@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"gfavio@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','gfavio@mailinator.com',1,'2025-02-04 05:37:43','2025-02-04 05:37:59'),
-(24,'$2y$10$Bd8D65upE/10tBE4EqPMl.QsTG6msGJP9i7nO/ViXdr04j8eLUMjm','userRoleAssignment',NULL,1,'2025-02-07 05:38:17','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Maria\",\"fr_CA\":\"Maria\"},\"familyName\":{\"en\":\"Fritz\",\"fr_CA\":\"Fritz\"},\"affiliation\":{\"en\":\"Ghent University\",\"fr_CA\":\"Belgium\"},\"userCountry\":\"BE\",\"username\":\"mfritz\",\"password\":\"$2y$10$0XDw02fsxniugPvqZrClduQU.RBtwQv.8qrLQJS.wNd1jSxX3\\/TU.\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":6,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"mfritz@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":6,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"mfritz@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','mfritz@mailinator.com',1,'2025-02-04 05:38:16','2025-02-04 05:38:33'),
-(26,'$2y$10$J14MeXmPX/ycTBj14qo5yuz1jYcTfD8WzEwF1/mKESBwRW7Aqdwku','userRoleAssignment',NULL,1,'2025-02-07 05:38:52','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Sarah\",\"fr_CA\":\"Sarah\"},\"familyName\":{\"en\":\"Vogt\",\"fr_CA\":\"Vogt\"},\"affiliation\":{\"en\":\"Universidad de Chile\",\"fr_CA\":\"Chile\"},\"userCountry\":\"CL\",\"username\":\"svogt\",\"password\":\"$2y$10$fIZ0x6rrAp1NUeOHLsSESOcUQAVoWTpSZ5fOyi1PCqkHeE8h2QOmS\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":6,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"svogt@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":6,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"svogt@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','svogt@mailinator.com',1,'2025-02-04 05:38:51','2025-02-04 05:39:10'),
-(28,'$2y$10$AY7hMW517WFyWbFTcSONme0GuyQd3.SC6UwIbfXuSkIKfHXb2ENoS','userRoleAssignment',NULL,1,'2025-02-07 05:39:30','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Graham\",\"fr_CA\":\"Graham\"},\"familyName\":{\"en\":\"Cox\",\"fr_CA\":\"Cox\"},\"affiliation\":{\"en\":\"Duke University\",\"fr_CA\":\"United States\"},\"userCountry\":\"US\",\"username\":\"gcox\",\"password\":\"$2y$10$IZZBY8uMMXJlsP93oTNApuA79T9\\/fjVI4GRLc\\/qT6c1QeXS7A1BKu\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":10,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"gcox@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":10,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"gcox@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','gcox@mailinator.com',1,'2025-02-04 05:39:29','2025-02-04 05:39:49'),
-(30,'$2y$10$o7o5658dDG1wHdPLLW0EX.cQo.XewPDtub1hGc1mLIwaARimxAiLO','userRoleAssignment',NULL,1,'2025-02-07 05:40:09','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Stephen\",\"fr_CA\":\"Stephen\"},\"familyName\":{\"en\":\"Hellier\",\"fr_CA\":\"Hellier\"},\"affiliation\":{\"en\":\"University of Cape Town\",\"fr_CA\":\"South Africa\"},\"userCountry\":\"ZA\",\"username\":\"shellier\",\"password\":\"$2y$10$hVu74W\\/0y\\/oS2\\/uGmSSRC.F9J40d\\/D5s8XA9lW5C0v1FRcD7uzu.S\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":10,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"shellier@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":10,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"shellier@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','shellier@mailinator.com',1,'2025-02-04 05:40:09','2025-02-04 05:40:29'),
-(32,'$2y$10$RuqxEEWiowu/XOhIwX/a0etBEzeEdik/oidpNSO5AS7g2czodP0a2','userRoleAssignment',NULL,1,'2025-02-07 05:40:50','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Catherine\",\"fr_CA\":\"Catherine\"},\"familyName\":{\"en\":\"Turner\",\"fr_CA\":\"Turner\"},\"affiliation\":{\"en\":\"Imperial College London\",\"fr_CA\":\"United Kingdom\"},\"userCountry\":\"GB\",\"username\":\"cturner\",\"password\":\"$2y$10$hqnGZoVFa1RTZr0xiwB88ukNA1RwLcOLRiyun6uLLvS7bPdVeBZIm\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":12,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"cturner@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":12,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"cturner@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','cturner@mailinator.com',1,'2025-02-04 05:40:50','2025-02-04 05:41:12'),
-(34,'$2y$10$iNDh93W//izRGMX2oTYxuONREULQdzyaKKfc1EjIeQZZrGn7.YlOO','userRoleAssignment',NULL,1,'2025-02-07 05:41:35','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Sabine\",\"fr_CA\":\"Sabine\"},\"familyName\":{\"en\":\"Kumar\",\"fr_CA\":\"Kumar\"},\"affiliation\":{\"en\":\"National University of Singapore\",\"fr_CA\":\"Singapore\"},\"userCountry\":\"SG\",\"username\":\"skumar\",\"password\":\"$2y$10$KlNDYv2Wm.QBIGpUHgPPS.Lh4f8am5sRWgBMXf4r\\/WD86fd1hZTIa\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":12,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"skumar@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":12,\"dateStart\":\"2025-02-04\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"skumar@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','skumar@mailinator.com',1,'2025-02-04 05:41:34','2025-02-04 05:41:57');
+(2,'$2y$10$k6hdODlj4foMgcSDJrZgGO4e1DZzY1/vzuCA.DaOMtq6G1Tqvsjtq','userRoleAssignment',NULL,1,'2025-02-09 05:17:07','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Ramiro\",\"fr_CA\":\"Ramiro\"},\"familyName\":{\"en\":\"Vaca\",\"fr_CA\":\"Vaca\"},\"affiliation\":{\"en\":\"Universidad Nacional Aut\\u00f3noma de M\\u00e9xico\",\"fr_CA\":\"Mexico\"},\"userCountry\":\"MX\",\"username\":\"rvaca\",\"password\":\"$2y$10$WOi8hmftu.orfKYQYtl8HuXjGbpHOrmZIzlCR06PR9GiRT4Rg.BT6\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":2,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"rvaca@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":2,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"rvaca@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','rvaca@mailinator.com',1,'2025-02-06 05:17:07','2025-02-06 05:17:17'),
+(4,'$2y$10$v1TCbgan2inqMb5g1mnayuXdsIJkrzth6auL7TMmPHMiG0Z2raz9e','userRoleAssignment',NULL,1,'2025-02-09 05:17:28','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Daniel\",\"fr_CA\":\"Daniel\"},\"familyName\":{\"en\":\"Barnes\",\"fr_CA\":\"Barnes\"},\"affiliation\":{\"en\":\"University of Melbourne\",\"fr_CA\":\"Australia\"},\"userCountry\":\"AU\",\"username\":\"dbarnes\",\"password\":\"$2y$10$FZBYhw2elTSC.GAfjWVFm.CrxgoZ3Doj9CYbz.iT\\/R771pX1hje1y\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":3,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"dbarnes@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":3,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"dbarnes@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','dbarnes@mailinator.com',1,'2025-02-06 05:17:28','2025-02-06 05:17:38'),
+(6,'$2y$10$W3S15skCWf2CZfpJPWcLq.vL13rnVUOPquZEFBHDIFJRCH2k5Ziaa','userRoleAssignment',NULL,1,'2025-02-09 05:17:49','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"David\",\"fr_CA\":\"David\"},\"familyName\":{\"en\":\"Buskins\",\"fr_CA\":\"Buskins\"},\"affiliation\":{\"en\":\"University of Chicago\",\"fr_CA\":\"United States\"},\"userCountry\":\"US\",\"username\":\"dbuskins\",\"password\":\"$2y$10$XuFgEjdErqtslyL9.8S1quMILrGq8a0hh4Xdz7WmOZ0EhJAnANmne\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"dbuskins@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"dbuskins@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','dbuskins@mailinator.com',1,'2025-02-06 05:17:49','2025-02-06 05:18:00'),
+(8,'$2y$10$N4T9YNUGIhOmxOnBuqIH7OumoaEgPpVFMe4aq6zctVNLA6WowBk5O','userRoleAssignment',NULL,1,'2025-02-09 05:18:12','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Stephanie\",\"fr_CA\":\"Stephanie\"},\"familyName\":{\"en\":\"Berardo\",\"fr_CA\":\"Berardo\"},\"affiliation\":{\"en\":\"University of Toronto\",\"fr_CA\":\"Canada\"},\"userCountry\":\"CA\",\"username\":\"sberardo\",\"password\":\"$2y$10$mclUag7ytd3EKWMJihsOU.gtspIIHRPFTXHMZEi81iU0PCgK2sV4.\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"sberardo@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"sberardo@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','sberardo@mailinator.com',1,'2025-02-06 05:18:12','2025-02-06 05:18:23'),
+(10,'$2y$10$yIay5VrmScV9aWn78Y0JW.fdDOLUpKj7JQG.pOAy.CFXTVsU5ivMi','userRoleAssignment',NULL,1,'2025-02-09 05:18:36','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Minoti\",\"fr_CA\":\"Minoti\"},\"familyName\":{\"en\":\"Inoue\",\"fr_CA\":\"Inoue\"},\"affiliation\":{\"en\":\"Kyoto University\",\"fr_CA\":\"Japan\"},\"userCountry\":\"JP\",\"username\":\"minoue\",\"password\":\"$2y$10$jsaWW.udBkw5fo8ekYOuBOLp3t4MVDMvZEYo6VY5OeEwgLHcZzTVu\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"minoue@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":5,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"minoue@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','minoue@mailinator.com',1,'2025-02-06 05:18:35','2025-02-06 05:18:47'),
+(12,'$2y$10$TXgHZZh8rq5NE/5cAgakneDIPwRRAqQanRcBEmqhwGGbAyvTLJbyW','userRoleAssignment',NULL,1,'2025-02-09 05:19:01','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Julie\",\"fr_CA\":\"Julie\"},\"familyName\":{\"en\":\"Janssen\",\"fr_CA\":\"Janssen\"},\"affiliation\":{\"en\":\"Utrecht University\",\"fr_CA\":\"Netherlands\"},\"userCountry\":\"NL\",\"username\":\"jjanssen\",\"password\":\"$2y$10$pczStwgZvEFNuETkSNxdke4j4pz.co6s6WaZg2l.rn\\/Zaoab2pdI2\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"jjanssen@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"jjanssen@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','jjanssen@mailinator.com',1,'2025-02-06 05:19:00','2025-02-06 05:19:13'),
+(14,'$2y$10$eMsoxXSjz9EaoUCYNFR1uOtfNAZdp8Oxn74XDezuUd2pEX4KzQhIq','userRoleAssignment',NULL,1,'2025-02-09 05:19:27','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Paul\",\"fr_CA\":\"Paul\"},\"familyName\":{\"en\":\"Hudson\",\"fr_CA\":\"Hudson\"},\"affiliation\":{\"en\":\"McGill University\",\"fr_CA\":\"Canada\"},\"userCountry\":\"CA\",\"username\":\"phudson\",\"password\":\"$2y$10$HXdd8xpwCND4L8wfF2CV2O7XJdwig1iM3FNu0aGbkHiNPhDN..RFK\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"phudson@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"phudson@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','phudson@mailinator.com',1,'2025-02-06 05:19:27','2025-02-06 05:19:40'),
+(16,'$2y$10$kJRw5aHsQ4luggZJgeb5QedJNZfPqnWjeSpHiEZ.QSkzvkojpVbDS','userRoleAssignment',NULL,1,'2025-02-09 05:19:55','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Aisla\",\"fr_CA\":\"Aisla\"},\"familyName\":{\"en\":\"McCrae\",\"fr_CA\":\"McCrae\"},\"affiliation\":{\"en\":\"University of Manitoba\",\"fr_CA\":\"Canada\"},\"userCountry\":\"CA\",\"username\":\"amccrae\",\"password\":\"$2y$10$RCNQFV4Y2LKgRRivXormqe.FKlM0blzP\\/KkSl6lu080zeiZLk9gPC\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"amccrae@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":17,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"amccrae@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','amccrae@mailinator.com',1,'2025-02-06 05:19:54','2025-02-06 05:20:09'),
+(18,'$2y$10$IRHNC7Y3xM2OSLYcbsh6SeHphI3SdDEiFEcfWViM0NKKmbgCwxL/u','userRoleAssignment',NULL,1,'2025-02-09 05:20:24','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Adela\",\"fr_CA\":\"Adela\"},\"familyName\":{\"en\":\"Gallego\",\"fr_CA\":\"Gallego\"},\"affiliation\":{\"en\":\"State University of New York\",\"fr_CA\":\"United States\"},\"userCountry\":\"US\",\"username\":\"agallego\",\"password\":\"$2y$10$Y7WeTeSoXsDHI78jsknKJuUYeUf0V9skqgbAHqd8niYznweH4rwKW\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"agallego@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"agallego@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','agallego@mailinator.com',1,'2025-02-06 05:20:23','2025-02-06 05:20:39'),
+(20,'$2y$10$xxUZszT73t7zDaMenjB4uOpJpzU/T3muMvcK8vtb2RAIaTSjcO0E2','userRoleAssignment',NULL,1,'2025-02-09 05:20:54','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Al\",\"fr_CA\":\"Al\"},\"familyName\":{\"en\":\"Zacharia\",\"fr_CA\":\"Zacharia\"},\"affiliation\":{\"en\":\"KNUST\",\"fr_CA\":\"Ghana\"},\"userCountry\":\"GH\",\"username\":\"alzacharia\",\"password\":\"$2y$10$LvUsau2NJwZIHMorcv.0juEkIjQSbIRLL6BHBi9hbaovL7Rw3SNB6\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"alzacharia@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"alzacharia@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','alzacharia@mailinator.com',1,'2025-02-06 05:20:54','2025-02-06 05:21:09'),
+(22,'$2y$10$8hinZK3X9XYuvPdPoMe41OI9uCYLmt12fa4U8n1Jmnb04DWm/QZUO','userRoleAssignment',NULL,1,'2025-02-09 05:21:26','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Gonzalo\",\"fr_CA\":\"Gonzalo\"},\"familyName\":{\"en\":\"Favio\",\"fr_CA\":\"Favio\"},\"affiliation\":{\"en\":\"Madrid\",\"fr_CA\":\"Spain\"},\"userCountry\":\"ES\",\"username\":\"gfavio\",\"password\":\"$2y$10$70Rq19Jr5lG8VozDW5zvUekMvy\\/nT1WNkeuRtt6lDUq\\/OuLDkOTeC\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"gfavio@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":18,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"gfavio@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','gfavio@mailinator.com',1,'2025-02-06 05:21:25','2025-02-06 05:21:42'),
+(24,'$2y$10$TIRjq8z5292xzWsvHVQSbOxTlLHSb2wIvQH1Fzjjzt9VL5X75Xlsq','userRoleAssignment',NULL,1,'2025-02-09 05:22:00','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Maria\",\"fr_CA\":\"Maria\"},\"familyName\":{\"en\":\"Fritz\",\"fr_CA\":\"Fritz\"},\"affiliation\":{\"en\":\"Ghent University\",\"fr_CA\":\"Belgium\"},\"userCountry\":\"BE\",\"username\":\"mfritz\",\"password\":\"$2y$10$nNBqWfU\\/75\\/9wjCh3DQPPuovvdX9PjMiHOe4VFs53GNyAu6CdmwWm\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":6,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"mfritz@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":6,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"mfritz@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','mfritz@mailinator.com',1,'2025-02-06 05:21:59','2025-02-06 05:22:17'),
+(26,'$2y$10$YX6CHfkywQAZIkOh.p.vCejU5sV3.CjSA5DxCKmNBhHO02RfKn7rq','userRoleAssignment',NULL,1,'2025-02-09 05:22:35','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Sarah\",\"fr_CA\":\"Sarah\"},\"familyName\":{\"en\":\"Vogt\",\"fr_CA\":\"Vogt\"},\"affiliation\":{\"en\":\"Universidad de Chile\",\"fr_CA\":\"Chile\"},\"userCountry\":\"CL\",\"username\":\"svogt\",\"password\":\"$2y$10$Y.O9P1OtAv8kweKhRF8\\/D.fGsf86QSHKhoPlEbYwqPlUSsiAxSFzm\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":6,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"svogt@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":6,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"svogt@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','svogt@mailinator.com',1,'2025-02-06 05:22:35','2025-02-06 05:22:53'),
+(28,'$2y$10$ce3LbDnOwvoL8u46lpK5CekdJUPBoMsl7VM7aSVoh3DSYdpBsoxsK','userRoleAssignment',NULL,1,'2025-02-09 05:23:12','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Graham\",\"fr_CA\":\"Graham\"},\"familyName\":{\"en\":\"Cox\",\"fr_CA\":\"Cox\"},\"affiliation\":{\"en\":\"Duke University\",\"fr_CA\":\"United States\"},\"userCountry\":\"US\",\"username\":\"gcox\",\"password\":\"$2y$10$wSJOllE77LUxxUdmP9PtK.TBFL7Os3buqOBJUtTuxT6p2KxaYM4TC\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":10,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"gcox@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":10,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"gcox@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','gcox@mailinator.com',1,'2025-02-06 05:23:11','2025-02-06 05:23:32'),
+(30,'$2y$10$BMc8g27lGYvc/ce9WE/lgOsXP9UNjmRomFhH8EiyFbNXtPFs0QB7e','userRoleAssignment',NULL,1,'2025-02-09 05:23:53','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Stephen\",\"fr_CA\":\"Stephen\"},\"familyName\":{\"en\":\"Hellier\",\"fr_CA\":\"Hellier\"},\"affiliation\":{\"en\":\"University of Cape Town\",\"fr_CA\":\"South Africa\"},\"userCountry\":\"ZA\",\"username\":\"shellier\",\"password\":\"$2y$10$bbqd5jzu6gW1vpJiZ8VVreBTauJmepCmFrcBeh6kxfD9Z2\\/Zdy1zO\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":10,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"shellier@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":10,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"shellier@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','shellier@mailinator.com',1,'2025-02-06 05:23:52','2025-02-06 05:24:14'),
+(32,'$2y$10$oMuz4vXChxQebqzAKz2f2O/AGU31NjMhZt/NH.TsvjZIV7dVc8XqS','userRoleAssignment',NULL,1,'2025-02-09 05:24:36','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Catherine\",\"fr_CA\":\"Catherine\"},\"familyName\":{\"en\":\"Turner\",\"fr_CA\":\"Turner\"},\"affiliation\":{\"en\":\"Imperial College London\",\"fr_CA\":\"United Kingdom\"},\"userCountry\":\"GB\",\"username\":\"cturner\",\"password\":\"$2y$10$g4nUeRVuKCReSoaRes.TZuYTX0ZisNAT3\\/6QvWq1iHKv4p4nL0dUO\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":12,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"cturner@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":12,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"cturner@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','cturner@mailinator.com',1,'2025-02-06 05:24:35','2025-02-06 05:24:59'),
+(34,'$2y$10$b2K7Z1MXDV4cPr3ZaPrWR.L5ceW0CX.ZDCoo7d.vVfv5TivY0YEiq','userRoleAssignment',NULL,1,'2025-02-09 05:25:21','{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":{\"en\":\"Sabine\",\"fr_CA\":\"Sabine\"},\"familyName\":{\"en\":\"Kumar\",\"fr_CA\":\"Kumar\"},\"affiliation\":{\"en\":\"National University of Singapore\",\"fr_CA\":\"Singapore\"},\"userCountry\":\"SG\",\"username\":\"skumar\",\"password\":\"$2y$10$dIA7hIAqOWIaeift1KeX4.ssBZB3qyZQx8qFWhWdXADx5v03EQGkm\",\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":12,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":true,\"sendEmailAddress\":\"skumar@mailinator.com\",\"inviteStagePayload\":{\"orcid\":null,\"orcidAccessDenied\":null,\"orcidAccessExpiresOn\":null,\"orcidAccessScope\":null,\"orcidAccessToken\":null,\"orcidIsVerified\":null,\"orcidRefreshToken\":null,\"givenName\":null,\"familyName\":null,\"affiliation\":null,\"userCountry\":null,\"username\":null,\"password\":null,\"emailSubject\":null,\"emailBody\":null,\"userGroupsToAdd\":[{\"userGroupId\":12,\"dateStart\":\"2025-02-06\",\"dateEnd\":null,\"masthead\":true}],\"passwordHashed\":null,\"sendEmailAddress\":\"skumar@mailinator.com\",\"inviteStagePayload\":null,\"shouldUseInviteData\":null},\"shouldUseInviteData\":null}','ACCEPTED','skumar@mailinator.com',1,'2025-02-06 05:25:20','2025-02-06 05:25:44');
 /*!40000 ALTER TABLE `invitations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -5502,7 +5502,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `job_batches`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `job_batches` (
   `id` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -5533,7 +5533,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `jobs`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `jobs` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `queue` varchar(255) NOT NULL,
@@ -5562,7 +5562,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `library_file_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `library_file_settings` (
   `library_file_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `file_id` bigint(20) NOT NULL,
@@ -5592,7 +5592,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `library_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `library_files` (
   `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
@@ -5628,7 +5628,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `markets`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `markets` (
   `market_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `publication_format_id` bigint(20) NOT NULL,
@@ -5669,7 +5669,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_context`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_context` (
   `metrics_context_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(50) NOT NULL,
@@ -5698,7 +5698,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_counter_submission_daily`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_counter_submission_daily` (
   `metrics_counter_submission_daily_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(50) NOT NULL,
@@ -5741,7 +5741,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_counter_submission_institution_daily`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_counter_submission_institution_daily` (
   `metrics_counter_submission_institution_daily_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(50) NOT NULL,
@@ -5787,7 +5787,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_counter_submission_institution_monthly`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_counter_submission_institution_monthly` (
   `metrics_counter_submission_institution_monthly_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
@@ -5831,7 +5831,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_counter_submission_monthly`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_counter_submission_monthly` (
   `metrics_counter_submission_monthly_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
@@ -5872,7 +5872,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_series`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_series` (
   `metrics_series_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(50) NOT NULL,
@@ -5905,7 +5905,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_submission`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_submission` (
   `metrics_submission_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(50) NOT NULL,
@@ -5949,7 +5949,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_submission_geo_daily`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_submission_geo_daily` (
   `metrics_submission_geo_daily_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(50) NOT NULL,
@@ -5987,7 +5987,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `metrics_submission_geo_monthly`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `metrics_submission_geo_monthly` (
   `metrics_submission_geo_monthly_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
@@ -6023,7 +6023,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_assignment_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_assignment_settings` (
   `navigation_menu_item_assignment_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `navigation_menu_item_assignment_id` bigint(20) NOT NULL,
@@ -6053,7 +6053,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_assignments` (
   `navigation_menu_item_assignment_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `navigation_menu_id` bigint(20) NOT NULL,
@@ -6108,7 +6108,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_item_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_item_settings` (
   `navigation_menu_item_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `navigation_menu_item_id` bigint(20) NOT NULL,
@@ -6162,7 +6162,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menu_items`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menu_items` (
   `navigation_menu_item_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) DEFAULT NULL,
@@ -6213,7 +6213,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `navigation_menus`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `navigation_menus` (
   `navigation_menu_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) DEFAULT NULL,
@@ -6244,7 +6244,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `new_releases`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `new_releases` (
   `new_release_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
@@ -6272,7 +6272,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notes` (
   `note_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `assoc_type` bigint(20) NOT NULL,
@@ -6296,7 +6296,7 @@ CREATE TABLE `notes` (
 LOCK TABLES `notes` WRITE;
 /*!40000 ALTER TABLE `notes` DISABLE KEYS */;
 INSERT INTO `notes` VALUES
-(1,1048586,1,6,'2025-02-04 05:50:41','2025-02-04 05:50:41','Editor Recommendation','<p>Dear David Buskins, Daniel Barnes,</p><p>After considering the reviewers\' feedback, I would like to make the following recommendation regarding the submission The Information Literacy User’s Guide.</p><p>My recommendation is: Accept Submission.</p><p>Please visit the submission\'s <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6\">editorial workflow</a> to act on this recommendation.</p><p>Please feel free to contact me with any questions.</p><p>Kind regards,</p><p>Minoti Inoue</p>');
+(1,1048586,1,6,'2025-02-06 05:34:36','2025-02-06 05:34:36','Editor Recommendation','<p>Dear David Buskins, Daniel Barnes,</p><p>After considering the reviewers\' feedback, I would like to make the following recommendation regarding the submission The Information Literacy User’s Guide.</p><p>My recommendation is: Accept Submission.</p><p>Please visit the submission\'s <a href=\"http://localhost/index.php/publicknowledge/en/dashboard/editorial?workflowSubmissionId=6\">editorial workflow</a> to act on this recommendation.</p><p>Please feel free to contact me with any questions.</p><p>Kind regards,</p><p>Minoti Inoue</p>');
 /*!40000 ALTER TABLE `notes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6306,7 +6306,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_settings` (
   `notification_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `notification_id` bigint(20) NOT NULL,
@@ -6336,7 +6336,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notification_subscription_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notification_subscription_settings` (
   `setting_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `setting_name` varchar(64) NOT NULL,
@@ -6384,7 +6384,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `notifications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `notifications` (
   `notification_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) DEFAULT NULL,
@@ -6414,172 +6414,172 @@ CREATE TABLE `notifications` (
 LOCK TABLES `notifications` WRITE;
 /*!40000 ALTER TABLE `notifications` DISABLE KEYS */;
 INSERT INTO `notifications` VALUES
-(16,1,4,2,16777217,'2025-02-04 05:43:06',NULL,1048585,1),
-(17,1,NULL,2,16777243,'2025-02-04 05:43:06',NULL,1048585,1),
-(18,1,NULL,2,16777245,'2025-02-04 05:43:06',NULL,1048585,1),
-(19,1,NULL,2,16777236,'2025-02-04 05:43:13',NULL,523,1),
-(20,1,12,3,16777227,'2025-02-04 05:43:18',NULL,517,1),
-(22,1,19,2,16777230,'2025-02-04 05:43:22',NULL,1048585,1),
-(23,1,4,2,16777251,'2025-02-04 05:43:22',NULL,1048585,1),
-(33,1,NULL,3,16777220,'2025-02-04 05:45:09',NULL,1048585,2),
-(34,1,NULL,3,16777222,'2025-02-04 05:45:09',NULL,1048585,2),
-(35,1,NULL,3,16777223,'2025-02-04 05:45:09',NULL,1048585,2),
-(36,1,NULL,3,16777224,'2025-02-04 05:45:09',NULL,1048585,2),
-(37,1,1,3,16777247,'2025-02-04 05:45:09',NULL,1048585,2),
-(38,1,2,3,16777247,'2025-02-04 05:45:09',NULL,1048585,2),
-(39,1,3,3,16777247,'2025-02-04 05:45:09',NULL,1048585,2),
-(40,1,NULL,2,16777243,'2025-02-04 05:45:09',NULL,1048585,2),
-(41,1,NULL,2,16777245,'2025-02-04 05:45:09',NULL,1048585,2),
-(42,1,NULL,2,16777236,'2025-02-04 05:45:25',NULL,523,2),
-(43,1,11,3,16777227,'2025-02-04 05:45:32',NULL,517,2),
-(45,1,12,3,16777227,'2025-02-04 05:45:35',NULL,517,3),
-(57,1,NULL,3,16777220,'2025-02-04 05:46:16',NULL,1048585,3),
-(58,1,NULL,3,16777222,'2025-02-04 05:46:16',NULL,1048585,3),
-(59,1,NULL,3,16777223,'2025-02-04 05:46:16',NULL,1048585,3),
-(60,1,NULL,3,16777224,'2025-02-04 05:46:16',NULL,1048585,3),
-(61,1,1,3,16777247,'2025-02-04 05:46:16',NULL,1048585,3),
-(62,1,2,3,16777247,'2025-02-04 05:46:16',NULL,1048585,3),
-(63,1,3,3,16777247,'2025-02-04 05:46:16',NULL,1048585,3),
-(64,1,NULL,2,16777243,'2025-02-04 05:46:16',NULL,1048585,3),
-(65,1,NULL,2,16777245,'2025-02-04 05:46:16',NULL,1048585,3),
-(74,1,3,2,16777217,'2025-02-04 05:46:50',NULL,1048585,4),
-(75,1,NULL,2,16777243,'2025-02-04 05:46:51',NULL,1048585,4),
-(76,1,NULL,2,16777245,'2025-02-04 05:46:51','2025-02-04 05:47:31',1048585,4),
-(77,1,NULL,2,16777236,'2025-02-04 05:46:59',NULL,523,3),
-(79,1,9,3,16777227,'2025-02-04 05:47:04',NULL,517,4),
-(81,1,NULL,2,16777236,'2025-02-04 05:47:08',NULL,523,4),
-(83,1,11,3,16777227,'2025-02-04 05:47:13',NULL,517,5),
-(88,1,22,2,16777235,'2025-02-04 05:47:29',NULL,1048585,4),
-(89,1,3,2,16777254,'2025-02-04 05:47:29',NULL,1048585,4),
-(103,1,NULL,3,16777220,'2025-02-04 05:48:26',NULL,1048585,5),
-(104,1,NULL,3,16777222,'2025-02-04 05:48:26',NULL,1048585,5),
-(105,1,NULL,3,16777223,'2025-02-04 05:48:26',NULL,1048585,5),
-(106,1,NULL,3,16777224,'2025-02-04 05:48:26',NULL,1048585,5),
-(107,1,1,3,16777247,'2025-02-04 05:48:26',NULL,1048585,5),
-(108,1,2,3,16777247,'2025-02-04 05:48:26',NULL,1048585,5),
-(109,1,3,3,16777247,'2025-02-04 05:48:26',NULL,1048585,5),
-(112,1,NULL,2,16777236,'2025-02-04 05:48:35',NULL,523,5),
-(114,1,8,3,16777227,'2025-02-04 05:48:41',NULL,517,6),
-(116,1,NULL,2,16777236,'2025-02-04 05:48:45',NULL,523,6),
-(118,1,12,3,16777227,'2025-02-04 05:48:50',NULL,517,7),
-(122,1,23,2,16777235,'2025-02-04 05:49:05',NULL,1048585,5),
-(125,1,NULL,2,16777246,'2025-02-04 05:49:31','2025-02-04 05:49:39',1048585,5),
-(134,1,4,2,16777217,'2025-02-04 05:50:13',NULL,1048585,6),
-(135,1,NULL,2,16777243,'2025-02-04 05:50:14',NULL,1048585,6),
-(136,1,NULL,2,16777245,'2025-02-04 05:50:14',NULL,1048585,6),
-(137,1,NULL,2,16777236,'2025-02-04 05:50:22',NULL,523,7),
-(138,1,24,2,16777229,'2025-02-04 05:50:22',NULL,1048585,6),
-(141,1,4,3,16777249,'2025-02-04 05:50:41',NULL,1048586,1),
-(142,1,3,3,16777249,'2025-02-04 05:50:41',NULL,1048586,1),
-(153,1,3,2,16777217,'2025-02-04 05:51:29',NULL,1048585,7),
-(154,1,NULL,2,16777243,'2025-02-04 05:51:30',NULL,1048585,7),
-(155,1,NULL,2,16777245,'2025-02-04 05:51:30',NULL,1048585,7),
-(156,1,NULL,2,16777236,'2025-02-04 05:51:38',NULL,523,8),
-(157,1,10,3,16777227,'2025-02-04 05:51:44',NULL,517,8),
-(159,1,25,2,16777230,'2025-02-04 05:51:49',NULL,1048585,7),
-(160,1,3,2,16777251,'2025-02-04 05:51:49','2025-02-04 05:51:52',1048585,7),
-(162,1,1,3,16777247,'2025-02-04 05:52:05',NULL,1048585,8),
-(163,1,2,3,16777247,'2025-02-04 05:52:05',NULL,1048585,8),
-(164,1,3,3,16777247,'2025-02-04 05:52:05',NULL,1048585,8),
-(165,1,NULL,2,16777243,'2025-02-04 05:52:05',NULL,1048585,8),
-(166,1,NULL,2,16777245,'2025-02-04 05:52:05',NULL,1048585,8),
-(177,1,4,2,16777217,'2025-02-04 05:52:45',NULL,1048585,9),
-(178,1,NULL,2,16777243,'2025-02-04 05:52:46',NULL,1048585,9),
-(179,1,NULL,2,16777245,'2025-02-04 05:52:46',NULL,1048585,9),
-(180,1,NULL,2,16777236,'2025-02-04 05:52:55',NULL,523,9),
-(181,1,26,2,16777229,'2025-02-04 05:52:55',NULL,1048585,9),
-(200,1,NULL,3,16777220,'2025-02-04 05:54:08',NULL,1048585,10),
-(201,1,NULL,3,16777222,'2025-02-04 05:54:08',NULL,1048585,10),
-(202,1,NULL,3,16777223,'2025-02-04 05:54:08',NULL,1048585,10),
-(203,1,NULL,3,16777224,'2025-02-04 05:54:08',NULL,1048585,10),
-(204,1,1,3,16777247,'2025-02-04 05:54:08',NULL,1048585,10),
-(205,1,2,3,16777247,'2025-02-04 05:54:08',NULL,1048585,10),
-(206,1,3,3,16777247,'2025-02-04 05:54:08',NULL,1048585,10),
-(207,1,NULL,2,16777243,'2025-02-04 05:54:08',NULL,1048585,10),
-(208,1,NULL,2,16777245,'2025-02-04 05:54:08',NULL,1048585,10),
-(213,1,NULL,3,16777220,'2025-02-04 05:54:28',NULL,1048585,11),
-(214,1,NULL,3,16777222,'2025-02-04 05:54:28',NULL,1048585,11),
-(215,1,NULL,3,16777223,'2025-02-04 05:54:28',NULL,1048585,11),
-(216,1,NULL,3,16777224,'2025-02-04 05:54:29',NULL,1048585,11),
-(217,1,1,3,16777247,'2025-02-04 05:54:29',NULL,1048585,11),
-(218,1,2,3,16777247,'2025-02-04 05:54:29',NULL,1048585,11),
-(219,1,3,3,16777247,'2025-02-04 05:54:29',NULL,1048585,11),
-(220,1,NULL,2,16777243,'2025-02-04 05:54:29',NULL,1048585,11),
-(221,1,NULL,2,16777245,'2025-02-04 05:54:29',NULL,1048585,11),
-(222,1,NULL,2,16777236,'2025-02-04 05:54:37',NULL,523,10),
-(224,1,9,3,16777227,'2025-02-04 05:54:42',NULL,517,9),
-(226,1,NULL,2,16777236,'2025-02-04 05:54:46',NULL,523,11),
-(232,1,28,2,16777230,'2025-02-04 05:55:22',NULL,1048585,11),
-(239,1,NULL,3,16777220,'2025-02-04 05:55:53',NULL,1048585,12),
-(240,1,NULL,3,16777222,'2025-02-04 05:55:53',NULL,1048585,12),
-(241,1,NULL,3,16777223,'2025-02-04 05:55:53',NULL,1048585,12),
-(242,1,NULL,3,16777224,'2025-02-04 05:55:53',NULL,1048585,12),
-(243,1,1,3,16777247,'2025-02-04 05:55:53',NULL,1048585,12),
-(244,1,2,3,16777247,'2025-02-04 05:55:53',NULL,1048585,12),
-(245,1,3,3,16777247,'2025-02-04 05:55:53',NULL,1048585,12),
-(246,1,NULL,2,16777243,'2025-02-04 05:55:54',NULL,1048585,12),
-(247,1,NULL,2,16777245,'2025-02-04 05:55:54',NULL,1048585,12),
-(248,1,NULL,2,16777236,'2025-02-04 05:56:02',NULL,523,12),
-(249,1,29,2,16777229,'2025-02-04 05:56:02',NULL,1048585,12),
-(250,1,7,3,16777227,'2025-02-04 05:56:08',NULL,517,12),
-(254,1,9,3,16777227,'2025-02-04 05:56:14',NULL,517,14),
-(262,1,NULL,3,16777220,'2025-02-04 05:56:52',NULL,1048585,13),
-(263,1,NULL,3,16777222,'2025-02-04 05:56:52',NULL,1048585,13),
-(264,1,NULL,3,16777223,'2025-02-04 05:56:52',NULL,1048585,13),
-(265,1,NULL,3,16777224,'2025-02-04 05:56:52',NULL,1048585,13),
-(266,1,1,3,16777247,'2025-02-04 05:56:52',NULL,1048585,13),
-(267,1,2,3,16777247,'2025-02-04 05:56:52',NULL,1048585,13),
-(268,1,3,3,16777247,'2025-02-04 05:56:52',NULL,1048585,13),
-(269,1,NULL,2,16777243,'2025-02-04 05:56:52',NULL,1048585,13),
-(270,1,NULL,2,16777245,'2025-02-04 05:56:52',NULL,1048585,13),
-(271,1,NULL,2,16777236,'2025-02-04 05:57:01',NULL,523,13),
-(273,1,8,3,16777227,'2025-02-04 05:57:06',NULL,517,15),
-(275,1,NULL,2,16777236,'2025-02-04 05:57:11',NULL,523,14),
-(279,1,11,3,16777227,'2025-02-04 05:57:19',NULL,517,17),
-(283,1,30,2,16777230,'2025-02-04 05:57:51',NULL,1048585,13),
-(293,1,3,2,16777217,'2025-02-04 05:58:33',NULL,1048585,14),
-(296,1,NULL,2,16777236,'2025-02-04 05:58:43',NULL,523,15),
-(298,1,7,3,16777227,'2025-02-04 05:58:49',NULL,517,19),
-(300,1,NULL,2,16777236,'2025-02-04 05:58:54',NULL,523,16),
-(302,1,11,3,16777227,'2025-02-04 05:58:59',NULL,517,20),
-(307,1,31,2,16777235,'2025-02-04 05:59:16',NULL,1048585,14),
-(308,1,3,2,16777254,'2025-02-04 05:59:16',NULL,1048585,14),
-(311,1,NULL,2,16777246,'2025-02-04 06:00:05',NULL,1048585,14),
-(318,1,NULL,3,16777220,'2025-02-04 06:00:31',NULL,1048585,15),
-(319,1,NULL,3,16777222,'2025-02-04 06:00:31',NULL,1048585,15),
-(320,1,NULL,3,16777223,'2025-02-04 06:00:31',NULL,1048585,15),
-(321,1,NULL,3,16777224,'2025-02-04 06:00:31',NULL,1048585,15),
-(322,1,1,3,16777247,'2025-02-04 06:00:31',NULL,1048585,15),
-(323,1,2,3,16777247,'2025-02-04 06:00:31',NULL,1048585,15),
-(324,1,3,3,16777247,'2025-02-04 06:00:31',NULL,1048585,15),
-(325,1,NULL,2,16777243,'2025-02-04 06:00:31',NULL,1048585,15),
-(326,1,NULL,2,16777245,'2025-02-04 06:00:31',NULL,1048585,15),
-(327,1,NULL,2,16777236,'2025-02-04 06:00:40',NULL,523,17),
-(338,1,NULL,3,16777220,'2025-02-04 06:01:21',NULL,1048585,16),
-(339,1,NULL,3,16777222,'2025-02-04 06:01:21',NULL,1048585,16),
-(340,1,NULL,3,16777223,'2025-02-04 06:01:21',NULL,1048585,16),
-(341,1,NULL,3,16777224,'2025-02-04 06:01:21',NULL,1048585,16),
-(342,1,1,3,16777247,'2025-02-04 06:01:21',NULL,1048585,16),
-(343,1,2,3,16777247,'2025-02-04 06:01:21',NULL,1048585,16),
-(344,1,3,3,16777247,'2025-02-04 06:01:21',NULL,1048585,16),
-(345,1,NULL,2,16777243,'2025-02-04 06:01:21',NULL,1048585,16),
-(346,1,NULL,2,16777245,'2025-02-04 06:01:21',NULL,1048585,16),
-(347,1,NULL,2,16777236,'2025-02-04 06:01:31',NULL,523,18),
-(350,1,11,3,16777227,'2025-02-04 06:01:40',NULL,517,22),
-(352,1,12,3,16777227,'2025-02-04 06:01:43',NULL,517,23),
-(366,1,NULL,3,16777220,'2025-02-04 06:02:43',NULL,1048585,17),
-(367,1,NULL,3,16777222,'2025-02-04 06:02:43',NULL,1048585,17),
-(368,1,NULL,3,16777223,'2025-02-04 06:02:43',NULL,1048585,17),
-(369,1,NULL,3,16777224,'2025-02-04 06:02:43',NULL,1048585,17),
-(370,1,1,3,16777247,'2025-02-04 06:02:43',NULL,1048585,17),
-(371,1,2,3,16777247,'2025-02-04 06:02:43',NULL,1048585,17),
-(372,1,3,3,16777247,'2025-02-04 06:02:43',NULL,1048585,17),
-(373,1,NULL,2,16777243,'2025-02-04 06:02:43',NULL,1048585,17),
-(374,1,NULL,2,16777245,'2025-02-04 06:02:43',NULL,1048585,17),
-(375,1,NULL,2,16777236,'2025-02-04 06:02:54',NULL,523,19),
-(376,1,34,2,16777229,'2025-02-04 06:02:55',NULL,1048585,17),
-(377,1,7,3,16777227,'2025-02-04 06:03:01',NULL,517,24),
-(379,1,8,3,16777227,'2025-02-04 06:03:04',NULL,517,25);
+(16,1,4,2,16777217,'2025-02-06 05:26:52',NULL,1048585,1),
+(17,1,NULL,2,16777243,'2025-02-06 05:26:52',NULL,1048585,1),
+(18,1,NULL,2,16777245,'2025-02-06 05:26:52',NULL,1048585,1),
+(19,1,NULL,2,16777236,'2025-02-06 05:27:00',NULL,523,1),
+(20,1,12,3,16777227,'2025-02-06 05:27:04',NULL,517,1),
+(22,1,19,2,16777230,'2025-02-06 05:27:08',NULL,1048585,1),
+(23,1,4,2,16777251,'2025-02-06 05:27:08',NULL,1048585,1),
+(33,1,NULL,3,16777220,'2025-02-06 05:28:57',NULL,1048585,2),
+(34,1,NULL,3,16777222,'2025-02-06 05:28:57',NULL,1048585,2),
+(35,1,NULL,3,16777223,'2025-02-06 05:28:57',NULL,1048585,2),
+(36,1,NULL,3,16777224,'2025-02-06 05:28:57',NULL,1048585,2),
+(37,1,1,3,16777247,'2025-02-06 05:28:57',NULL,1048585,2),
+(38,1,2,3,16777247,'2025-02-06 05:28:58',NULL,1048585,2),
+(39,1,3,3,16777247,'2025-02-06 05:28:58',NULL,1048585,2),
+(40,1,NULL,2,16777243,'2025-02-06 05:28:58',NULL,1048585,2),
+(41,1,NULL,2,16777245,'2025-02-06 05:28:58',NULL,1048585,2),
+(42,1,NULL,2,16777236,'2025-02-06 05:29:13',NULL,523,2),
+(43,1,11,3,16777227,'2025-02-06 05:29:20',NULL,517,2),
+(45,1,12,3,16777227,'2025-02-06 05:29:24',NULL,517,3),
+(57,1,NULL,3,16777220,'2025-02-06 05:30:05',NULL,1048585,3),
+(58,1,NULL,3,16777222,'2025-02-06 05:30:05',NULL,1048585,3),
+(59,1,NULL,3,16777223,'2025-02-06 05:30:05',NULL,1048585,3),
+(60,1,NULL,3,16777224,'2025-02-06 05:30:05',NULL,1048585,3),
+(61,1,1,3,16777247,'2025-02-06 05:30:05',NULL,1048585,3),
+(62,1,2,3,16777247,'2025-02-06 05:30:05',NULL,1048585,3),
+(63,1,3,3,16777247,'2025-02-06 05:30:05',NULL,1048585,3),
+(64,1,NULL,2,16777243,'2025-02-06 05:30:05',NULL,1048585,3),
+(65,1,NULL,2,16777245,'2025-02-06 05:30:05',NULL,1048585,3),
+(74,1,3,2,16777217,'2025-02-06 05:30:40',NULL,1048585,4),
+(75,1,NULL,2,16777243,'2025-02-06 05:30:40',NULL,1048585,4),
+(76,1,NULL,2,16777245,'2025-02-06 05:30:40','2025-02-06 05:31:21',1048585,4),
+(77,1,NULL,2,16777236,'2025-02-06 05:30:48',NULL,523,3),
+(79,1,9,3,16777227,'2025-02-06 05:30:54',NULL,517,4),
+(81,1,NULL,2,16777236,'2025-02-06 05:30:58',NULL,523,4),
+(83,1,11,3,16777227,'2025-02-06 05:31:03',NULL,517,5),
+(88,1,22,2,16777235,'2025-02-06 05:31:19',NULL,1048585,4),
+(89,1,3,2,16777254,'2025-02-06 05:31:19',NULL,1048585,4),
+(103,1,NULL,3,16777220,'2025-02-06 05:32:16',NULL,1048585,5),
+(104,1,NULL,3,16777222,'2025-02-06 05:32:16',NULL,1048585,5),
+(105,1,NULL,3,16777223,'2025-02-06 05:32:16',NULL,1048585,5),
+(106,1,NULL,3,16777224,'2025-02-06 05:32:16',NULL,1048585,5),
+(107,1,1,3,16777247,'2025-02-06 05:32:16',NULL,1048585,5),
+(108,1,2,3,16777247,'2025-02-06 05:32:17',NULL,1048585,5),
+(109,1,3,3,16777247,'2025-02-06 05:32:17',NULL,1048585,5),
+(112,1,NULL,2,16777236,'2025-02-06 05:32:26',NULL,523,5),
+(114,1,8,3,16777227,'2025-02-06 05:32:32',NULL,517,6),
+(116,1,NULL,2,16777236,'2025-02-06 05:32:37',NULL,523,6),
+(118,1,12,3,16777227,'2025-02-06 05:32:42',NULL,517,7),
+(122,1,23,2,16777235,'2025-02-06 05:32:58',NULL,1048585,5),
+(125,1,NULL,2,16777246,'2025-02-06 05:33:24','2025-02-06 05:33:33',1048585,5),
+(134,1,4,2,16777217,'2025-02-06 05:34:07',NULL,1048585,6),
+(135,1,NULL,2,16777243,'2025-02-06 05:34:07',NULL,1048585,6),
+(136,1,NULL,2,16777245,'2025-02-06 05:34:07',NULL,1048585,6),
+(137,1,NULL,2,16777236,'2025-02-06 05:34:16',NULL,523,7),
+(138,1,24,2,16777229,'2025-02-06 05:34:16',NULL,1048585,6),
+(141,1,4,3,16777249,'2025-02-06 05:34:36',NULL,1048586,1),
+(142,1,3,3,16777249,'2025-02-06 05:34:36',NULL,1048586,1),
+(153,1,3,2,16777217,'2025-02-06 05:35:26',NULL,1048585,7),
+(154,1,NULL,2,16777243,'2025-02-06 05:35:26',NULL,1048585,7),
+(155,1,NULL,2,16777245,'2025-02-06 05:35:26',NULL,1048585,7),
+(156,1,NULL,2,16777236,'2025-02-06 05:35:35',NULL,523,8),
+(157,1,10,3,16777227,'2025-02-06 05:35:41',NULL,517,8),
+(159,1,25,2,16777230,'2025-02-06 05:35:46',NULL,1048585,7),
+(160,1,3,2,16777251,'2025-02-06 05:35:46','2025-02-06 05:35:49',1048585,7),
+(162,1,1,3,16777247,'2025-02-06 05:36:02',NULL,1048585,8),
+(163,1,2,3,16777247,'2025-02-06 05:36:02',NULL,1048585,8),
+(164,1,3,3,16777247,'2025-02-06 05:36:02',NULL,1048585,8),
+(165,1,NULL,2,16777243,'2025-02-06 05:36:02',NULL,1048585,8),
+(166,1,NULL,2,16777245,'2025-02-06 05:36:02',NULL,1048585,8),
+(177,1,4,2,16777217,'2025-02-06 05:36:43',NULL,1048585,9),
+(178,1,NULL,2,16777243,'2025-02-06 05:36:43',NULL,1048585,9),
+(179,1,NULL,2,16777245,'2025-02-06 05:36:43',NULL,1048585,9),
+(180,1,NULL,2,16777236,'2025-02-06 05:36:53',NULL,523,9),
+(181,1,26,2,16777229,'2025-02-06 05:36:53',NULL,1048585,9),
+(200,1,NULL,3,16777220,'2025-02-06 05:38:09',NULL,1048585,10),
+(201,1,NULL,3,16777222,'2025-02-06 05:38:09',NULL,1048585,10),
+(202,1,NULL,3,16777223,'2025-02-06 05:38:09',NULL,1048585,10),
+(203,1,NULL,3,16777224,'2025-02-06 05:38:09',NULL,1048585,10),
+(204,1,1,3,16777247,'2025-02-06 05:38:09',NULL,1048585,10),
+(205,1,2,3,16777247,'2025-02-06 05:38:09',NULL,1048585,10),
+(206,1,3,3,16777247,'2025-02-06 05:38:09',NULL,1048585,10),
+(207,1,NULL,2,16777243,'2025-02-06 05:38:09',NULL,1048585,10),
+(208,1,NULL,2,16777245,'2025-02-06 05:38:09',NULL,1048585,10),
+(213,1,NULL,3,16777220,'2025-02-06 05:38:30',NULL,1048585,11),
+(214,1,NULL,3,16777222,'2025-02-06 05:38:30',NULL,1048585,11),
+(215,1,NULL,3,16777223,'2025-02-06 05:38:30',NULL,1048585,11),
+(216,1,NULL,3,16777224,'2025-02-06 05:38:30',NULL,1048585,11),
+(217,1,1,3,16777247,'2025-02-06 05:38:30',NULL,1048585,11),
+(218,1,2,3,16777247,'2025-02-06 05:38:30',NULL,1048585,11),
+(219,1,3,3,16777247,'2025-02-06 05:38:30',NULL,1048585,11),
+(220,1,NULL,2,16777243,'2025-02-06 05:38:30',NULL,1048585,11),
+(221,1,NULL,2,16777245,'2025-02-06 05:38:30',NULL,1048585,11),
+(222,1,NULL,2,16777236,'2025-02-06 05:38:38',NULL,523,10),
+(224,1,9,3,16777227,'2025-02-06 05:38:43',NULL,517,9),
+(226,1,NULL,2,16777236,'2025-02-06 05:38:47',NULL,523,11),
+(232,1,28,2,16777230,'2025-02-06 05:39:24',NULL,1048585,11),
+(239,1,NULL,3,16777220,'2025-02-06 05:39:56',NULL,1048585,12),
+(240,1,NULL,3,16777222,'2025-02-06 05:39:56',NULL,1048585,12),
+(241,1,NULL,3,16777223,'2025-02-06 05:39:56',NULL,1048585,12),
+(242,1,NULL,3,16777224,'2025-02-06 05:39:56',NULL,1048585,12),
+(243,1,1,3,16777247,'2025-02-06 05:39:56',NULL,1048585,12),
+(244,1,2,3,16777247,'2025-02-06 05:39:57',NULL,1048585,12),
+(245,1,3,3,16777247,'2025-02-06 05:39:57',NULL,1048585,12),
+(246,1,NULL,2,16777243,'2025-02-06 05:39:57',NULL,1048585,12),
+(247,1,NULL,2,16777245,'2025-02-06 05:39:57',NULL,1048585,12),
+(248,1,NULL,2,16777236,'2025-02-06 05:40:06',NULL,523,12),
+(249,1,29,2,16777229,'2025-02-06 05:40:06',NULL,1048585,12),
+(250,1,7,3,16777227,'2025-02-06 05:40:12',NULL,517,12),
+(254,1,9,3,16777227,'2025-02-06 05:40:18',NULL,517,14),
+(262,1,NULL,3,16777220,'2025-02-06 05:40:55',NULL,1048585,13),
+(263,1,NULL,3,16777222,'2025-02-06 05:40:55',NULL,1048585,13),
+(264,1,NULL,3,16777223,'2025-02-06 05:40:55',NULL,1048585,13),
+(265,1,NULL,3,16777224,'2025-02-06 05:40:55',NULL,1048585,13),
+(266,1,1,3,16777247,'2025-02-06 05:40:55',NULL,1048585,13),
+(267,1,2,3,16777247,'2025-02-06 05:40:55',NULL,1048585,13),
+(268,1,3,3,16777247,'2025-02-06 05:40:55',NULL,1048585,13),
+(269,1,NULL,2,16777243,'2025-02-06 05:40:56',NULL,1048585,13),
+(270,1,NULL,2,16777245,'2025-02-06 05:40:56',NULL,1048585,13),
+(271,1,NULL,2,16777236,'2025-02-06 05:41:04',NULL,523,13),
+(273,1,8,3,16777227,'2025-02-06 05:41:10',NULL,517,15),
+(275,1,NULL,2,16777236,'2025-02-06 05:41:14',NULL,523,14),
+(279,1,11,3,16777227,'2025-02-06 05:41:22',NULL,517,17),
+(283,1,30,2,16777230,'2025-02-06 05:41:56',NULL,1048585,13),
+(293,1,3,2,16777217,'2025-02-06 05:42:37',NULL,1048585,14),
+(296,1,NULL,2,16777236,'2025-02-06 05:42:48',NULL,523,15),
+(298,1,7,3,16777227,'2025-02-06 05:42:55',NULL,517,19),
+(300,1,NULL,2,16777236,'2025-02-06 05:42:59',NULL,523,16),
+(302,1,11,3,16777227,'2025-02-06 05:43:05',NULL,517,20),
+(307,1,31,2,16777235,'2025-02-06 05:43:22',NULL,1048585,14),
+(308,1,3,2,16777254,'2025-02-06 05:43:22',NULL,1048585,14),
+(311,1,NULL,2,16777246,'2025-02-06 05:44:13',NULL,1048585,14),
+(318,1,NULL,3,16777220,'2025-02-06 05:44:39',NULL,1048585,15),
+(319,1,NULL,3,16777222,'2025-02-06 05:44:39',NULL,1048585,15),
+(320,1,NULL,3,16777223,'2025-02-06 05:44:39',NULL,1048585,15),
+(321,1,NULL,3,16777224,'2025-02-06 05:44:39',NULL,1048585,15),
+(322,1,1,3,16777247,'2025-02-06 05:44:39',NULL,1048585,15),
+(323,1,2,3,16777247,'2025-02-06 05:44:39',NULL,1048585,15),
+(324,1,3,3,16777247,'2025-02-06 05:44:39',NULL,1048585,15),
+(325,1,NULL,2,16777243,'2025-02-06 05:44:40',NULL,1048585,15),
+(326,1,NULL,2,16777245,'2025-02-06 05:44:40',NULL,1048585,15),
+(327,1,NULL,2,16777236,'2025-02-06 05:44:48',NULL,523,17),
+(338,1,NULL,3,16777220,'2025-02-06 05:45:31',NULL,1048585,16),
+(339,1,NULL,3,16777222,'2025-02-06 05:45:31',NULL,1048585,16),
+(340,1,NULL,3,16777223,'2025-02-06 05:45:31',NULL,1048585,16),
+(341,1,NULL,3,16777224,'2025-02-06 05:45:31',NULL,1048585,16),
+(342,1,1,3,16777247,'2025-02-06 05:45:31',NULL,1048585,16),
+(343,1,2,3,16777247,'2025-02-06 05:45:31',NULL,1048585,16),
+(344,1,3,3,16777247,'2025-02-06 05:45:31',NULL,1048585,16),
+(345,1,NULL,2,16777243,'2025-02-06 05:45:31',NULL,1048585,16),
+(346,1,NULL,2,16777245,'2025-02-06 05:45:31',NULL,1048585,16),
+(347,1,NULL,2,16777236,'2025-02-06 05:45:41',NULL,523,18),
+(350,1,11,3,16777227,'2025-02-06 05:45:50',NULL,517,22),
+(352,1,12,3,16777227,'2025-02-06 05:45:53',NULL,517,23),
+(366,1,NULL,3,16777220,'2025-02-06 05:46:54',NULL,1048585,17),
+(367,1,NULL,3,16777222,'2025-02-06 05:46:54',NULL,1048585,17),
+(368,1,NULL,3,16777223,'2025-02-06 05:46:54',NULL,1048585,17),
+(369,1,NULL,3,16777224,'2025-02-06 05:46:54',NULL,1048585,17),
+(370,1,1,3,16777247,'2025-02-06 05:46:54',NULL,1048585,17),
+(371,1,2,3,16777247,'2025-02-06 05:46:54',NULL,1048585,17),
+(372,1,3,3,16777247,'2025-02-06 05:46:54',NULL,1048585,17),
+(373,1,NULL,2,16777243,'2025-02-06 05:46:54',NULL,1048585,17),
+(374,1,NULL,2,16777245,'2025-02-06 05:46:54',NULL,1048585,17),
+(375,1,NULL,2,16777236,'2025-02-06 05:47:05',NULL,523,19),
+(376,1,34,2,16777229,'2025-02-06 05:47:05',NULL,1048585,17),
+(377,1,7,3,16777227,'2025-02-06 05:47:12',NULL,517,24),
+(379,1,8,3,16777227,'2025-02-06 05:47:15',NULL,517,25);
 /*!40000 ALTER TABLE `notifications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -6589,7 +6589,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `oai_resumption_tokens`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `oai_resumption_tokens` (
   `oai_resumption_token_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `token` varchar(32) NOT NULL,
@@ -6616,7 +6616,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `plugin_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `plugin_settings` (
   `plugin_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `plugin_name` varchar(80) NOT NULL,
@@ -6688,7 +6688,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `press_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `press_settings` (
   `press_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `press_id` bigint(20) NOT NULL,
@@ -6796,7 +6796,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `presses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `presses` (
   `press_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `path` varchar(32) NOT NULL,
@@ -6825,7 +6825,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_categories` (
   `publication_category_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `publication_id` bigint(20) NOT NULL,
@@ -6854,7 +6854,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_dates`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_dates` (
   `publication_date_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `publication_format_id` bigint(20) NOT NULL,
@@ -6883,7 +6883,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_format_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_format_settings` (
   `publication_format_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `publication_format_id` bigint(20) NOT NULL,
@@ -6920,7 +6920,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_formats`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_formats` (
   `publication_format_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `publication_id` bigint(20) NOT NULL,
@@ -6977,7 +6977,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publication_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publication_settings` (
   `publication_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `publication_id` bigint(20) NOT NULL,
@@ -7047,7 +7047,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `publications`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publications` (
   `publication_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `date_published` date DEFAULT NULL,
@@ -7082,23 +7082,23 @@ CREATE TABLE `publications` (
 LOCK TABLES `publications` WRITE;
 /*!40000 ALTER TABLE `publications` DISABLE KEYS */;
 INSERT INTO `publications` VALUES
-(1,NULL,'2025-02-04 05:42:46',1,'pub','publication',0,1,NULL,1,1,NULL,1,NULL),
-(2,NULL,'2025-02-04 05:43:45',2,'pub','publication',0,NULL,NULL,2,1,NULL,1,NULL),
-(3,NULL,'2025-02-04 05:45:43',11,'pub','publication',0,NULL,NULL,3,1,NULL,1,NULL),
-(4,NULL,'2025-02-04 05:46:23',12,'pub','publication',0,3,NULL,4,1,NULL,1,NULL),
-(5,'2025-02-04','2025-02-04 05:49:40',16,'pub','publication',0,NULL,NULL,5,3,NULL,1,NULL),
-(6,NULL,'2025-02-04 05:49:47',17,'pub','publication',0,1,NULL,6,1,NULL,1,NULL),
-(7,NULL,'2025-02-04 05:50:54',21,'pub','publication',0,4,NULL,7,1,NULL,1,NULL),
-(8,NULL,'2025-02-04 05:52:02',NULL,'pub','publication',0,NULL,NULL,8,1,NULL,1,NULL),
-(9,NULL,'2025-02-04 05:52:11',26,'pub','publication',0,1,NULL,9,1,NULL,1,NULL),
-(10,NULL,'2025-02-04 05:53:05',31,'pub','publication',0,NULL,NULL,10,1,NULL,1,NULL),
-(11,NULL,'2025-02-04 05:54:16',32,'pub','publication',0,NULL,NULL,11,1,NULL,1,NULL),
-(12,NULL,'2025-02-04 05:55:31',33,'pub','publication',0,NULL,NULL,12,1,NULL,1,NULL),
-(13,NULL,'2025-02-04 05:56:31',41,'pub','publication',0,NULL,NULL,13,1,NULL,1,NULL),
-(14,'2025-02-04','2025-02-04 06:00:05',45,'pub','publication',0,5,NULL,14,3,NULL,1,NULL),
-(15,NULL,'2025-02-04 06:00:12',48,'pub','publication',0,NULL,NULL,15,1,NULL,1,NULL),
-(16,NULL,'2025-02-04 06:00:50',49,'pub','publication',0,NULL,NULL,16,1,NULL,1,NULL),
-(17,NULL,'2025-02-04 06:02:00',50,'pub','publication',0,NULL,NULL,17,1,NULL,1,NULL);
+(1,NULL,'2025-02-06 05:26:32',1,'pub','publication',0,1,NULL,1,1,NULL,1,NULL),
+(2,NULL,'2025-02-06 05:27:31',2,'pub','publication',0,NULL,NULL,2,1,NULL,1,NULL),
+(3,NULL,'2025-02-06 05:29:32',11,'pub','publication',0,NULL,NULL,3,1,NULL,1,NULL),
+(4,NULL,'2025-02-06 05:30:12',12,'pub','publication',0,3,NULL,4,1,NULL,1,NULL),
+(5,'2025-02-06','2025-02-06 05:33:34',16,'pub','publication',0,NULL,NULL,5,3,NULL,1,NULL),
+(6,NULL,'2025-02-06 05:33:40',17,'pub','publication',0,1,NULL,6,1,NULL,1,NULL),
+(7,NULL,'2025-02-06 05:34:50',21,'pub','publication',0,4,NULL,7,1,NULL,1,NULL),
+(8,NULL,'2025-02-06 05:35:59',NULL,'pub','publication',0,NULL,NULL,8,1,NULL,1,NULL),
+(9,NULL,'2025-02-06 05:36:08',26,'pub','publication',0,1,NULL,9,1,NULL,1,NULL),
+(10,NULL,'2025-02-06 05:37:04',31,'pub','publication',0,NULL,NULL,10,1,NULL,1,NULL),
+(11,NULL,'2025-02-06 05:38:16',32,'pub','publication',0,NULL,NULL,11,1,NULL,1,NULL),
+(12,NULL,'2025-02-06 05:39:34',33,'pub','publication',0,NULL,NULL,12,1,NULL,1,NULL),
+(13,NULL,'2025-02-06 05:40:34',41,'pub','publication',0,NULL,NULL,13,1,NULL,1,NULL),
+(14,'2025-02-06','2025-02-06 05:44:13',45,'pub','publication',0,5,NULL,14,3,NULL,1,NULL),
+(15,NULL,'2025-02-06 05:44:20',48,'pub','publication',0,NULL,NULL,15,1,NULL,1,NULL),
+(16,NULL,'2025-02-06 05:44:59',49,'pub','publication',0,NULL,NULL,16,1,NULL,1,NULL),
+(17,NULL,'2025-02-06 05:46:10',50,'pub','publication',0,NULL,NULL,17,1,NULL,1,NULL);
 /*!40000 ALTER TABLE `publications` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7108,7 +7108,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `queries`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `queries` (
   `query_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `assoc_type` bigint(20) NOT NULL,
@@ -7130,7 +7130,7 @@ CREATE TABLE `queries` (
 LOCK TABLES `queries` WRITE;
 /*!40000 ALTER TABLE `queries` DISABLE KEYS */;
 INSERT INTO `queries` VALUES
-(1,1048585,6,2,1,'2025-02-04 05:50:41','2025-02-04 05:50:41',0);
+(1,1048585,6,2,1,'2025-02-06 05:34:36','2025-02-06 05:34:36',0);
 /*!40000 ALTER TABLE `queries` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7140,7 +7140,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `query_participants`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `query_participants` (
   `query_participant_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `query_id` bigint(20) NOT NULL,
@@ -7172,7 +7172,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `queued_payments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `queued_payments` (
   `queued_payment_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `date_created` datetime NOT NULL,
@@ -7198,7 +7198,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `representatives`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `representatives` (
   `representative_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
@@ -7232,7 +7232,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_assignments` (
   `review_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
@@ -7282,31 +7282,31 @@ CREATE TABLE `review_assignments` (
 LOCK TABLES `review_assignments` WRITE;
 /*!40000 ALTER TABLE `review_assignments` DISABLE KEYS */;
 INSERT INTO `review_assignments` VALUES
-(1,1,12,NULL,NULL,'2025-02-04 05:43:18','2025-02-04 05:43:18',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:43:18',0,0,0,NULL,NULL,NULL,NULL,1,3,2,1,1,NULL,NULL,0),
-(2,2,11,NULL,NULL,'2025-02-04 05:45:32','2025-02-04 05:45:32',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:45:32',0,0,0,NULL,NULL,NULL,NULL,2,3,1,1,1,NULL,NULL,0),
-(3,2,12,NULL,NULL,'2025-02-04 05:45:35','2025-02-04 05:45:35',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:45:35',0,0,0,NULL,NULL,NULL,NULL,2,3,2,1,1,NULL,NULL,0),
-(4,4,9,NULL,NULL,'2025-02-04 05:47:04','2025-02-04 05:47:04',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:47:04',0,0,0,NULL,NULL,NULL,NULL,3,2,2,1,1,NULL,NULL,0),
-(5,4,11,NULL,NULL,'2025-02-04 05:47:13','2025-02-04 05:47:14',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:47:14',0,0,0,NULL,NULL,NULL,NULL,4,3,2,1,1,NULL,NULL,0),
-(6,5,8,NULL,NULL,'2025-02-04 05:48:41','2025-02-04 05:48:41',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:48:41',0,0,0,NULL,NULL,NULL,NULL,5,2,2,1,1,NULL,NULL,0),
-(7,5,12,NULL,NULL,'2025-02-04 05:48:50','2025-02-04 05:48:50',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:48:50',0,0,0,NULL,NULL,NULL,NULL,6,3,2,1,1,NULL,NULL,0),
-(8,7,10,NULL,NULL,'2025-02-04 05:51:44','2025-02-04 05:51:44',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:51:44',0,0,0,NULL,NULL,NULL,NULL,8,3,2,1,1,NULL,NULL,0),
-(9,11,9,NULL,NULL,'2025-02-04 05:54:42','2025-02-04 05:54:42',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:54:42',0,0,0,NULL,NULL,NULL,NULL,10,2,2,1,1,NULL,NULL,0),
-(10,11,10,NULL,0,'2025-02-04 05:54:51','2025-02-04 05:54:51','2025-02-04 05:54:59','2025-02-04 05:55:03','2025-02-04 05:55:22','2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:55:22',0,0,0,NULL,NULL,NULL,NULL,11,3,2,1,4,NULL,NULL,0),
-(11,11,12,NULL,0,'2025-02-04 05:54:53','2025-02-04 05:54:53','2025-02-04 05:55:08','2025-02-04 05:55:12','2025-02-04 05:55:22','2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:55:22',0,0,0,NULL,NULL,NULL,NULL,11,3,2,1,4,NULL,NULL,0),
-(12,12,7,NULL,NULL,'2025-02-04 05:56:08','2025-02-04 05:56:08',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:56:08',0,0,0,NULL,NULL,NULL,NULL,12,2,2,1,1,NULL,NULL,0),
-(13,12,8,NULL,0,'2025-02-04 05:56:11','2025-02-04 05:56:11','2025-02-04 05:56:20','2025-02-04 05:56:24',NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:56:24',0,0,0,NULL,NULL,NULL,NULL,12,2,2,1,4,NULL,NULL,0),
-(14,12,9,NULL,NULL,'2025-02-04 05:56:14','2025-02-04 05:56:14',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:56:14',0,0,0,NULL,NULL,NULL,NULL,12,2,2,1,1,NULL,NULL,0),
-(15,13,8,NULL,NULL,'2025-02-04 05:57:06','2025-02-04 05:57:06',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:57:06',0,0,0,NULL,NULL,NULL,NULL,13,2,2,1,1,NULL,NULL,0),
-(16,13,10,NULL,0,'2025-02-04 05:57:16','2025-02-04 05:57:16','2025-02-04 05:57:27','2025-02-04 05:57:31','2025-02-04 05:57:51','2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:57:51',0,0,0,NULL,NULL,NULL,NULL,14,3,2,1,4,NULL,NULL,0),
-(17,13,11,NULL,NULL,'2025-02-04 05:57:19','2025-02-04 05:57:19',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:57:19',0,0,0,NULL,NULL,NULL,NULL,14,3,2,1,1,NULL,NULL,0),
-(18,13,12,NULL,0,'2025-02-04 05:57:21','2025-02-04 05:57:22','2025-02-04 05:57:36','2025-02-04 05:57:40','2025-02-04 05:57:51','2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:57:51',0,0,0,NULL,NULL,NULL,NULL,14,3,2,1,4,NULL,NULL,0),
-(19,14,7,NULL,NULL,'2025-02-04 05:58:49','2025-02-04 05:58:49',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:58:49',0,0,0,NULL,NULL,NULL,NULL,15,2,2,1,1,NULL,NULL,0),
-(20,14,11,NULL,NULL,'2025-02-04 05:58:59','2025-02-04 05:59:00',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 05:59:00',0,0,0,NULL,NULL,NULL,NULL,16,3,2,1,1,NULL,NULL,0),
-(21,16,10,NULL,0,'2025-02-04 06:01:37','2025-02-04 06:01:37','2025-02-04 06:01:49','2025-02-04 06:01:53',NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 06:01:53',0,0,0,NULL,NULL,NULL,NULL,18,3,2,1,4,NULL,NULL,0),
-(22,16,11,NULL,NULL,'2025-02-04 06:01:40','2025-02-04 06:01:40',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 06:01:40',0,0,0,NULL,NULL,NULL,NULL,18,3,2,1,1,NULL,NULL,0),
-(23,16,12,NULL,NULL,'2025-02-04 06:01:43','2025-02-04 06:01:43',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 06:01:43',0,0,0,NULL,NULL,NULL,NULL,18,3,2,1,1,NULL,NULL,0),
-(24,17,7,NULL,NULL,'2025-02-04 06:03:01','2025-02-04 06:03:01',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 06:03:01',0,0,0,NULL,NULL,NULL,NULL,19,2,2,1,1,NULL,NULL,0),
-(25,17,8,NULL,NULL,'2025-02-04 06:03:04','2025-02-04 06:03:04',NULL,NULL,NULL,'2025-03-04 00:00:00','2025-03-04 00:00:00','2025-02-04 06:03:04',0,0,0,NULL,NULL,NULL,NULL,19,2,2,1,1,NULL,NULL,0);
+(1,1,12,NULL,NULL,'2025-02-06 05:27:04','2025-02-06 05:27:04',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:27:04',0,0,0,NULL,NULL,NULL,NULL,1,3,2,1,1,NULL,NULL,0),
+(2,2,11,NULL,NULL,'2025-02-06 05:29:20','2025-02-06 05:29:21',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:29:21',0,0,0,NULL,NULL,NULL,NULL,2,3,1,1,1,NULL,NULL,0),
+(3,2,12,NULL,NULL,'2025-02-06 05:29:24','2025-02-06 05:29:24',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:29:24',0,0,0,NULL,NULL,NULL,NULL,2,3,2,1,1,NULL,NULL,0),
+(4,4,9,NULL,NULL,'2025-02-06 05:30:54','2025-02-06 05:30:54',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:30:54',0,0,0,NULL,NULL,NULL,NULL,3,2,2,1,1,NULL,NULL,0),
+(5,4,11,NULL,NULL,'2025-02-06 05:31:03','2025-02-06 05:31:03',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:31:03',0,0,0,NULL,NULL,NULL,NULL,4,3,2,1,1,NULL,NULL,0),
+(6,5,8,NULL,NULL,'2025-02-06 05:32:32','2025-02-06 05:32:32',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:32:32',0,0,0,NULL,NULL,NULL,NULL,5,2,2,1,1,NULL,NULL,0),
+(7,5,12,NULL,NULL,'2025-02-06 05:32:42','2025-02-06 05:32:42',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:32:42',0,0,0,NULL,NULL,NULL,NULL,6,3,2,1,1,NULL,NULL,0),
+(8,7,10,NULL,NULL,'2025-02-06 05:35:41','2025-02-06 05:35:41',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:35:41',0,0,0,NULL,NULL,NULL,NULL,8,3,2,1,1,NULL,NULL,0),
+(9,11,9,NULL,NULL,'2025-02-06 05:38:43','2025-02-06 05:38:43',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:38:43',0,0,0,NULL,NULL,NULL,NULL,10,2,2,1,1,NULL,NULL,0),
+(10,11,10,NULL,0,'2025-02-06 05:38:52','2025-02-06 05:38:52','2025-02-06 05:39:00','2025-02-06 05:39:04','2025-02-06 05:39:24','2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:39:24',0,0,0,NULL,NULL,NULL,NULL,11,3,2,1,4,NULL,NULL,0),
+(11,11,12,NULL,0,'2025-02-06 05:38:55','2025-02-06 05:38:55','2025-02-06 05:39:09','2025-02-06 05:39:14','2025-02-06 05:39:24','2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:39:24',0,0,0,NULL,NULL,NULL,NULL,11,3,2,1,4,NULL,NULL,0),
+(12,12,7,NULL,NULL,'2025-02-06 05:40:12','2025-02-06 05:40:12',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:40:12',0,0,0,NULL,NULL,NULL,NULL,12,2,2,1,1,NULL,NULL,0),
+(13,12,8,NULL,0,'2025-02-06 05:40:15','2025-02-06 05:40:15','2025-02-06 05:40:23','2025-02-06 05:40:27',NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:40:27',0,0,0,NULL,NULL,NULL,NULL,12,2,2,1,4,NULL,NULL,0),
+(14,12,9,NULL,NULL,'2025-02-06 05:40:18','2025-02-06 05:40:18',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:40:18',0,0,0,NULL,NULL,NULL,NULL,12,2,2,1,1,NULL,NULL,0),
+(15,13,8,NULL,NULL,'2025-02-06 05:41:10','2025-02-06 05:41:10',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:41:10',0,0,0,NULL,NULL,NULL,NULL,13,2,2,1,1,NULL,NULL,0),
+(16,13,10,NULL,0,'2025-02-06 05:41:20','2025-02-06 05:41:20','2025-02-06 05:41:31','2025-02-06 05:41:35','2025-02-06 05:41:55','2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:41:55',0,0,0,NULL,NULL,NULL,NULL,14,3,2,1,4,NULL,NULL,0),
+(17,13,11,NULL,NULL,'2025-02-06 05:41:22','2025-02-06 05:41:23',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:41:23',0,0,0,NULL,NULL,NULL,NULL,14,3,2,1,1,NULL,NULL,0),
+(18,13,12,NULL,0,'2025-02-06 05:41:25','2025-02-06 05:41:25','2025-02-06 05:41:40','2025-02-06 05:41:44','2025-02-06 05:41:55','2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:41:55',0,0,0,NULL,NULL,NULL,NULL,14,3,2,1,4,NULL,NULL,0),
+(19,14,7,NULL,NULL,'2025-02-06 05:42:55','2025-02-06 05:42:55',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:42:55',0,0,0,NULL,NULL,NULL,NULL,15,2,2,1,1,NULL,NULL,0),
+(20,14,11,NULL,NULL,'2025-02-06 05:43:05','2025-02-06 05:43:05',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:43:05',0,0,0,NULL,NULL,NULL,NULL,16,3,2,1,1,NULL,NULL,0),
+(21,16,10,NULL,0,'2025-02-06 05:45:47','2025-02-06 05:45:47','2025-02-06 05:45:59','2025-02-06 05:46:03',NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:46:03',0,0,0,NULL,NULL,NULL,NULL,18,3,2,1,4,NULL,NULL,0),
+(22,16,11,NULL,NULL,'2025-02-06 05:45:50','2025-02-06 05:45:50',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:45:50',0,0,0,NULL,NULL,NULL,NULL,18,3,2,1,1,NULL,NULL,0),
+(23,16,12,NULL,NULL,'2025-02-06 05:45:52','2025-02-06 05:45:53',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:45:53',0,0,0,NULL,NULL,NULL,NULL,18,3,2,1,1,NULL,NULL,0),
+(24,17,7,NULL,NULL,'2025-02-06 05:47:12','2025-02-06 05:47:12',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:47:12',0,0,0,NULL,NULL,NULL,NULL,19,2,2,1,1,NULL,NULL,0),
+(25,17,8,NULL,NULL,'2025-02-06 05:47:15','2025-02-06 05:47:15',NULL,NULL,NULL,'2025-03-06 00:00:00','2025-03-06 00:00:00','2025-02-06 05:47:15',0,0,0,NULL,NULL,NULL,NULL,19,2,2,1,1,NULL,NULL,0);
 /*!40000 ALTER TABLE `review_assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7316,7 +7316,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_files` (
   `review_file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `review_id` bigint(20) NOT NULL,
@@ -7337,79 +7337,79 @@ CREATE TABLE `review_files` (
 LOCK TABLES `review_files` WRITE;
 /*!40000 ALTER TABLE `review_files` DISABLE KEYS */;
 INSERT INTO `review_files` VALUES
-(3,1,4),
+(1,1,4),
 (2,1,5),
-(1,1,6),
-(6,2,12),
-(4,2,13),
-(5,2,14),
-(7,2,15),
-(11,3,12),
-(9,3,13),
-(10,3,14),
-(8,3,15),
-(14,4,25),
-(12,4,26),
-(13,4,27),
-(15,4,28),
-(20,6,35),
-(21,6,36),
-(16,6,37),
-(17,6,38),
-(18,6,39),
-(19,6,40),
-(22,8,55),
-(24,8,56),
-(26,8,57),
-(23,8,58),
-(25,8,59),
-(27,9,82),
-(28,9,83),
+(3,1,6),
+(5,2,12),
+(7,2,13),
+(4,2,14),
+(6,2,15),
+(10,3,12),
+(8,3,13),
+(9,3,14),
+(11,3,15),
+(13,4,25),
+(15,4,26),
+(12,4,27),
+(14,4,28),
+(19,6,35),
+(20,6,36),
+(21,6,37),
+(16,6,38),
+(17,6,39),
+(18,6,40),
+(26,8,55),
+(23,8,56),
+(25,8,57),
+(22,8,58),
+(24,8,59),
+(28,9,82),
+(27,9,83),
 (31,12,87),
 (29,12,88),
 (30,12,89),
-(34,13,87),
-(32,13,88),
-(33,13,89),
+(33,13,87),
+(34,13,88),
+(32,13,89),
 (37,14,87),
 (35,14,88),
 (36,14,89),
 (40,15,93),
-(38,15,94),
-(39,15,95),
+(39,15,94),
+(38,15,95),
 (45,19,102),
-(42,19,103),
+(46,19,103),
 (44,19,104),
-(46,19,105),
-(43,19,106),
-(41,19,107),
-(51,21,125),
-(49,21,126),
-(50,21,127),
-(48,21,128),
+(43,19,105),
+(41,19,106),
+(42,19,107),
+(49,21,125),
+(51,21,126),
+(48,21,127),
+(50,21,128),
 (47,21,129),
-(54,22,125),
-(55,22,126),
-(56,22,127),
+(56,22,125),
+(53,22,126),
+(55,22,127),
 (52,22,128),
-(53,22,129),
-(61,23,125),
-(59,23,126),
-(60,23,127),
-(58,23,128),
+(54,22,129),
+(59,23,125),
+(61,23,126),
+(58,23,127),
+(60,23,128),
 (57,23,129),
-(62,24,136),
-(65,24,137),
-(67,24,138),
-(64,24,139),
-(66,24,140),
-(63,24,141),
-(71,25,136),
-(68,25,137),
-(70,25,138),
-(73,25,139),
-(69,25,140),
-(72,25,141);
+(67,24,136),
+(64,24,137),
+(66,24,138),
+(63,24,139),
+(65,24,140),
+(62,24,141),
+(70,25,136),
+(73,25,137),
+(69,25,138),
+(72,25,139),
+(68,25,140),
+(71,25,141);
 /*!40000 ALTER TABLE `review_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -7419,7 +7419,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_element_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_element_settings` (
   `review_form_element_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `review_form_element_id` bigint(20) NOT NULL,
@@ -7449,7 +7449,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_elements`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_elements` (
   `review_form_element_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `review_form_id` bigint(20) NOT NULL,
@@ -7478,7 +7478,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_responses`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_responses` (
   `review_form_response_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `review_form_element_id` bigint(20) NOT NULL,
@@ -7509,7 +7509,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_form_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_form_settings` (
   `review_form_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `review_form_id` bigint(20) NOT NULL,
@@ -7539,7 +7539,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_forms`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_forms` (
   `review_form_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `assoc_type` bigint(20) NOT NULL,
@@ -7565,7 +7565,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_round_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_round_files` (
   `review_round_file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
@@ -7658,7 +7658,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `review_rounds`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `review_rounds` (
   `review_round_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
@@ -7708,7 +7708,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sales_rights`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sales_rights` (
   `sales_rights_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `publication_format_id` bigint(20) NOT NULL,
@@ -7740,7 +7740,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `series`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `series` (
   `series_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `press_id` bigint(20) NOT NULL,
@@ -7781,7 +7781,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `series_categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `series_categories` (
   `series_id` bigint(20) NOT NULL,
   `category_id` bigint(20) NOT NULL,
@@ -7808,7 +7808,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `series_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `series_settings` (
   `series_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `series_id` bigint(20) NOT NULL,
@@ -7893,7 +7893,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `sessions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `sessions` (
   `id` varchar(255) NOT NULL,
   `user_id` bigint(20) DEFAULT NULL,
@@ -7915,97 +7915,95 @@ CREATE TABLE `sessions` (
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
 INSERT INTO `sessions` VALUES
-('0QBiTKGEPcnpdVaYTEdYei9saPdxh7uZPUWzgsAe',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648244,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoidFQwMjNBM1ZBd2I1WHZ6RVcweVVTUzVlMVFRaTU3dlM0emt1TmJ5TyI7czo4OiJ1c2VybmFtZSI7czo2OiJtaW5vdWUiO3M6NToiZW1haWwiO3M6MjE6Im1pbm91ZUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('0UxAtMxT2LTItDPxGGFoPlEXobIviBbxogEFzwE0',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647448,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQ0VuQzZBNml0TVFoZjZKMXdMazljYzg3YTJLNUV1Mnl2QVNLblBHRSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('19OH5NbuhRqnNZ51nlWpErmSfzJTAO4Jd6iUELob',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648651,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiTlZaYU9Ua0UwNlRhMnFBOEUwMTl2WGhScjc1MEtJMDhGeDFxSXlBbSI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('2XeZja4PcpMEj79ZritfmXtb2tUfDhz1CL8Rg3Xt',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647417,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVVdETkhPNUdodmRaVTlIamdhQ25JNUFYYUZhbnQ1YXdwVDZRczZIUCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('3V6PQMYOD4vrkZloL9UGEQ0dPT7srjL3Zx17UCri',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648316,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiTkZhVVdPcUVjRW9pME0wMmVKVjlvaTZqZ3cwUlR6Q1VKOEpIYm55NiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ3OTlNdVdqWU1zcUF5Q2N1dlJrYnV1LnU4bmpoZEN2QXl3endWVmphR0xIbGQzZHhlVy5BSyI7fQ=='),
-('4kX8D50ap7DzCRJ1MoPCvTEmp4DB62ysSwG54Cdv',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647359,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiTlBBVzNQSmZCV01sTzNYdmlsTFg0OExlcFp4VFlUMXIzaDBDUk5GViI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('4TEd7vSPdaiXcaqsLSWtNQp7ojQA7nGuWxUZGztT',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647515,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNVYzMEt6UGxBVndpQnhhQ3ZzUzdGeFhsVXlsQUtVdDd3U3liRnFRNyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('6bdK2rxXD0AyygoDIUUPLZzSEKDONj3CGf0bjiod',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647591,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNmlNQ29teEwwRkFpcU5NdHZvT25GTmV3ckpadXNCZXJjMTJNYUREbCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('77sLVWu0fWcSMrVkO4KC6iDE7blPo0RZMiOJrBH8',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648176,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiN3V1M0I2azRnQXBsYm1HNVQxUURleXgyc2cxekRnQXF6ODc5S3VQSCI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
-('7ExIjU2nlkyVgK21vQVpy1Z588tHjVTSrXNHb66u',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648325,'YTo4OntzOjY6Il90b2tlbiI7czo0MDoieW9nSER6YVNCYm1taWdFeTJNSEFrbkpBMzlPTEptYmVtNVFmUVplRSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR5QmJLWG5WYnpaVlFrMEtJU2VHcjJlZzBYd3BWaHVXeHBsVURPd1NhMmw3ZktOZ09lb3JQLiI7czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('8Lj7cVeMHrpwxrJsDGjcjnIsHwZ4yYPmXE9HlLeV',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647238,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVnZXN2NuTGZ3Q2VUZjdsVUFDa0NObm9MNFlyRjB0VlFubWlUZzR2WSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('95fQe3cNuItIDiymaCbxlRRPs6pb9FYTBBIQkQmX',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647435,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoib3ladUdhZ3o3ek9iQmVab29HUDc2WG5aM3pWbklpUHVONXZ3NHhBaSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('9cvLDhdI5caxF6pQ1Z5E3GvLUR4heh8WEUqda8OW',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647573,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWEYxejdvanBqc1ZJWVhwc09ORWNLUmlpTmhETkxKMUVoMUEyaUpBVyI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('9oiLjrJtrNgc4aADoUvJ0gCxZXsKlZwqsTgQVEOu',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648554,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiS3l4Q1lIaVRqSHB1UVpjdWtkYlI4M0J6cFZyMEVHRnNBWDNDS1hIWSI7czo4OiJ1c2VybmFtZSI7czo2OiJsZWxkZXIiO3M6NToiZW1haWwiO3M6MjE6ImxlbGRlckBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('a0Zgo8HVrYmi7C0BSjvS47ifc4ahGMdGIhsp6ZRM',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647189,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiRTU1STE0UHk5WFc5OUE3andHNWpPMEtSbHBoMGUwbkYzcXZoMUVhcyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJG9JY0VvenJYRkFqSkszTnJ1dkdIYXVTMmk3VzFrREUxL3kyVVdac21Tbm9CTE9PZ2thV2NhIjt9'),
-('aMVHpQg5wdzi9fiac7BUyzfvS9D4Rlb9wJa4l3iZ',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648613,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiREVKRnFFamlvTkJEOHR2amdaejV4TlpvQkxFNnpDQnZYUVlUWE5mbyI7czo4OiJ1c2VybmFtZSI7czo1OiJtYWxseSI7czo1OiJlbWFpbCI7czoyMDoibWFsbHlAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('AudSGaR2mT1Nt7PORGgp4zpvJruLuR7UcXlGXDOx',21,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647977,'YTo4OntzOjY6Il90b2tlbiI7czo0MDoiN1RNOGFXVzM1VkZnZzFsbzhSR2FNb09jWnMwSHB4NEt4bDhrTzdSUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czoxMDoiYmJhcm5ldHNvbiI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MjE7czo2OiJ1c2VySWQiO2k6MjE7czo1OiJlbWFpbCI7czoyNToiYmJhcm5ldHNvbkBtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRvazd1UjZmNm5wQXZuZGlsQXBUQUkuR0tEclNYaUs4LmVELk5EM2hrUFJqRlY4R09GSG8vMiI7fQ=='),
-('AUV8pHsk2WyZnyMX0iPplys1ddtC2mNj5HAjMLUQ',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648181,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiRjNzNUxFblJxSXEyVTJUd2NwOXlERUVQSnYyWGVnSVFuM3ozUElmbSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRBZGhHL1Y4OXp4enM0dDllc0d0UzIuWU4vc01KUnozODh4L3gzVnkxZVFmSzAyU0lHckc3aSI7fQ=='),
-('aysNgwWAwR2lM4gRb9IFqbKaN5Qqj3EnLhz8GzB9',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648843,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiaFhvTDdBVWdJNjcyOFU1UXBhdjlHU3YySzdNSGdyeUxmT1RzVVkyViI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ4SmxXeG15aXNxL0JjclEyVVA4ejBlajREdW1wOXo4Z0FuVy9td21oRWJiUXZhSm8wLld1LiI7fQ=='),
-('B67KlEfGTO3jGw1zD8YpSyrl3JFyJSwHEcI8c8na',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648964,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZFJuVmJTams2NzIwcGRYU3N3dGxGSFhsMGZHcXZpaGwwWUdtRjlmWiI7czo4OiJ1c2VybmFtZSI7czo2OiJtc21pdGgiO3M6NToiZW1haWwiO3M6MjE6Im1zbWl0aEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('bCvFZr8S0azClTk7U68MnCKZzEqL87y55lQbd7Nk',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647499,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiemtxMlp1akg3T090U3k3QnA2V2piVzM4NnZrUnZaRU81N0VFdEIySyI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('Bfvf1nmNwzSi8tUQEs1sv29Iowt5SCQ5RhUFur09',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647217,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSlNkblp1SVVQVjI3S1VjU1B3aWJ5enNlVHgxQnZYR1dUdG05NjJlbCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('BlyQCwhE6pKKhr6bwpNaqdK0Rzi3EF6aYhBZj8rn',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648107,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoibGkyZGJ6ZkZzcEJhazl4VW1FQk91aUJvWUV2OWd4cllKdXNuTmhPZSI7czo4OiJ1c2VybmFtZSI7czo2OiJjYWxsYW4iO3M6NToiZW1haWwiO3M6MjE6ImNhbGxhbkBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('c00zY8JqxjDberUFH8Ji7QkOdGLh9SdiTOhJIgHq',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647130,'YToyOntzOjY6Il90b2tlbiI7czo0MDoiRlhvQVFSN0gwOEcxS3VyaUpwRkRQeERWUlNUNFExZkhlcDNUNGRyUyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('C03jIuPbkPHG51qWX9wbIH2knhbUPQg6XgOrQPqj',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647252,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaVRRMFdrcmtSVU5GZ2pXRVc0WVBZMVBld2pxeXkzYktvczRGdVFBSCI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('cb86VvsvqBIySRNxBVT9O4mi0o7KH2Q4jYg91ImP',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647742,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoieGR6Y2FQb3NMdUtXVFFKQ1N1b2Jhb3l2ZG9iUVdBUWwyRThxbUROdCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJGJXb1kwVExsbnBpY2IucXVjTEpETk9RYno3MlhFL3VNTXhJMXV2MnF4OG1adEI5SnZaeGFLIjt9'),
-('cNxxYV1euQIJMrja1DaCfoLkyX03YE1HxDXRJmPV',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647209,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWmJ1M2d1VmZuWVlra0pDNTI4d1JHdUwxcTVEQXhWUlVQV1Q5VDQxMyI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('cUPIEHwnGAQmYWZLKJdMAZjYz4Y53elhK1pxvaRp',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648290,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUDV1WVVuWWI0WldUelREZ3FXOXZJS3c1elpTNnEwbjVKa3RuRU94QSI7czo4OiJ1c2VybmFtZSI7czoxMDoiZGtlbm5lcG9obCI7czo1OiJlbWFpbCI7czoyNToiZGtlbm5lcG9obEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('dEO9Rg6c4gsqMpbAPWCIf4kkwKfZhBtUb6JBMHNS',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647808,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNUtPY3ZTZFdRc3BZV3dBcWFTQlN3RGt2MGNHdnZHVnpJbGo0dXVnZSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRLR2kzLm1SQWFjS0FJLnpDakNkNnllZXFBLkJFZkZWSjRBdGFRM1o1QnlqVnNsMm1hSjcyUyI7fQ=='),
-('dhbUKgW2DVyzGShBxSSUDWvKlrDMr2FngHuxXmJF',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648675,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiWUVTT0lnYVVkdEJJSjRuRFF5d1dsd3Z0VWQyNGZTbngxOHh6R09RcCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRzSVh4ckRBWWJVWXVkMjVWZHI2SmRlelk3NkMxc2xoWllCU1ZXYTBKV2VUVk9JZUdxLmsxZSI7fQ=='),
-('dn33M6XUCoSG4z7xo9eswRTyLj64KulLuNMDohN4',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647348,'YToyOntzOjY6Il90b2tlbiI7czo0MDoiRVUyZGVsUWZISlJXMXZYTmZXZmhSdUFPdVZtanp1NEtKU3NUenJDdSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('dqGrTxGorc49jAn2U3Wf6snwY3TvMJEk5a6LJjV5',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648882,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaTNLSlZDRUc0anpKWEVpMUZjTE9vY2FvanhuMWoyS2dWN1ZqOHRQciI7czo4OiJ1c2VybmFtZSI7czo2OiJtcG93ZXIiO3M6NToiZW1haWwiO3M6MjE6Im1wb3dlckBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('EEtnKQeSCmAY2Z9186so4Rf8nifFv3SWO9uywXko',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647323,'YToyOntzOjY6Il90b2tlbiI7czo0MDoia0ZtWUZHcGtlejQxOHNZbGtrcjdiRzBkQld3dFBoVzZ4THJlZDlTWSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('EqO2nTHGSLfE2q0Hg68WKKgGIDq3PAdNEOi0QZlW',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648171,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiVzNvWGcwSjhiTU1YMnhBWTVmUllQVnRrdlJOOXRkY2VldjVvb0ZESCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRXZkFHWElocG80QjAweE9BQ0lBcDBPeUhtNTIzSjNoT1N2cU0yRGo5dlV0WHVsRmhqTWg3QyI7fQ=='),
-('FDLGOTfY49HK6CjwreitdmzZzrwuDhsGH1nmrbYB',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647283,'YTozOntzOjY6Il90b2tlbiI7czo0MDoicThrRVlOU09rWTZIMnVRNERnV285MzlUaUF2OTd2dklNMzNyNDFsdyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('FE9x74d9nI7xPZvfMAQ7l3iDy7I0CExN48EKyJlh',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647260,'YTozOntzOjY6Il90b2tlbiI7czo0MDoicnVVcHRidmZycHVyMlZaQmZjNnpLUDdnQ3RXS1dDbmhCRU5qZXlDcCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('Fje6Qjwd4ks8Zj5Aeq4HOFILEkVjyT25TioTjGhT',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647552,'YTozOntzOjY6Il90b2tlbiI7czo0MDoicGx2N2MydjFRWGZqNFdweXNzV0NLT1Nmb09nT3pBcEQweWdyQWtubyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('G4fPD4dqe8Z81BKuIaFX06KE5pJM0vzEebOU5B3z',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647183,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiUlNxNDJYRWdkZlZjbE9vaHU0dWcwM2hPczBzWHUzRGZXdndQa05KSSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFpmZjA1ZzlGTGUwdWpaVkJ5SU5ZZWViRGJYRC85ZGJ6aVRZZEE5RmFsNFEwbUJYVXljWHpXIjt9'),
-('H86WPeM5djpbBQBT4Ok0E5pj5yojDc73CN1rVpCQ',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647308,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiekxXb1dsSlBKSDlTQ0VCeG5qSERiR0lVSEMyZjZ4TmZpZmEwcWx4ZiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('HJWmmRYloGW71D1aFUOQJwXCAsRWh5OC6VVf3w6g',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647333,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZjUzTHdXS1Z6dkFLNXhVU1VOMEFkOGxEbk5FVVRxMnhldHJ0ZGc2MSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('HXeTItJi1HcqlOKmmrSRIoJzhc5mEU7r2dLhFq2R',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647466,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiejlZajhEdXBKUHlyZjZXZ0dqMWhZNFRpUFV4OG5POU1PQ3FJSXQ5NyI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('irIHh8auLhPWFrL90CTDWQoSXi4K6mrIaHbAI2ht',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648575,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoid3lSY2xTV3JiTjVPR3dzdVV3WVZUQmNVdVFBR0ZLMGdBZ3BscHZCQSI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
-('J4rzGTshccXwqxkQyRymgnFIqUKOwMAGpXtHUuRs',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648060,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiTGo5azc4WXZrSE9oczJQTDI4U3VRWnc1VUtiTGRCRldPUmNjZjExSCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ3MnpsbFJIV1VkQlhzd2NCOGZiOURleDZ4dEthemh0aVBsNjdTNUd1a1ppeTJxUDNra3FycSI7fQ=='),
-('jMUyKPThvpnzVee1VGnWODjB6YczOm3bspPNBelt',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647349,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZFBFV0ViUXZjRkxScG81aGhFMWp4WUtpWFBudThCWWpMS2Q5amJoSiI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('Jt6fHTt1WXMXT5o0RQgcf1QfDZ2nmFo3vwWRI7mP',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647387,'YTozOntzOjY6Il90b2tlbiI7czo0MDoibXVFNDB0alZmSlhLU1BiYW5pQllnRlQ5dW5hOUdpZ2pyNkJIb1VOSyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('KIfby0JwN2OiGmiAvR9KvjnDKLDXn3dF3V1J9x1n',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648714,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiQzZFT25KbnRGcHVldXNpU1U5anZEN3VndlV1aWxwc1dhT0JEV2V0MCI7czo4OiJ1c2VybmFtZSI7czo3OiJtZGF3c29uIjtzOjU6ImVtYWlsIjtzOjIyOiJtZGF3c29uQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
-('KTa3CrBCMznMxDdEa4dwF5CWFLO0GkJ4PUt1g8Az',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647653,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoibEVQT2tqTlNmeFYwZ1I3N3ZQTXZyVDVFSVZTWGlIZ2NVYTV5YmZPVSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('KuvVyD6BsnOIYR656fc3VK4Ge04MNiz0ordNrxey',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648176,'YToyOntzOjY6Il90b2tlbiI7czo0MDoiU2xuMGY0UUdOV0dSdmpxTHhTMDl6Nll1VXVwSVRYalAyZlhXSzRJVyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('L1vDwLGWxtm6oft2TkExEksThurfcEVg6m7x0HYC',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648832,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiR2VlakxzOGJJU0h0MXdrdFYwV0kxS1VlUjdBYkxkS2ZXa2E3OTZaeSI7czo4OiJ1c2VybmFtZSI7czo2OiJtZm9yYW4iO3M6NToiZW1haWwiO3M6MjE6Im1mb3JhbkBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('L2jEphf1WUD3zh1cnAImBvF655hWj3vdJ8VgmGcg',27,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648449,'YTo4OntzOjY6Il90b2tlbiI7czo0MDoieXFIdDBkTTB3VXBIU0xSc2o0cUpoVE1uVFM5N1JUWmhIdXpIaEVHNCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czo3OiJqYnJvd2VyIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7aToyNztzOjY6InVzZXJJZCI7aToyNztzOjU6ImVtYWlsIjtzOjIyOiJqYnJvd2VyQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJDZDSTBXcXBRaC5reTkydXJTODV1ay5oSjZtR28vaVJFZHFTSjJaNDRFSWVmSXBGNkNGM0IyIjt9'),
-('L3Kbzft6F0hCc2snzTbMTetIO6RXIzmYgBxWTRlc',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648469,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiQnZSNm1LaEExdlJlM2pOeWx0eVJ5U09WTGM5YVB2SWh3WWFuRkpGUSI7czo4OiJ1c2VybmFtZSI7czoxMDoiamxvY2tlaGFydCI7czo1OiJlbWFpbCI7czoyNToiamxvY2tlaGFydEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('lh2g17LFVBwnEzq6FzAdyetsUmDlBl0dz1ldWp52',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647176,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiRERNbmVTMk0zVVFmZURQYVloeDMzYUhtbkdlRTRJcHR3VXN2ek9SZSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHlyLjRpSnFUWkYyRDhEQzFzS3pYcnVyV3hTbnhGYkF4Nm96bUJiYlNiWVIyZWR1M0YvS3JxIjt9'),
-('lsMuMqtEquNrsY1GBBrCeriEZB74Vn0NcjE1Tb0R',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648379,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNUJBSW1Qd1R0MGpBVWx3UWI1YXVCRlJGclJaTUdFVUkxZml2UzJTSyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRBVFR6bWVrR1A5by5CYkNJdWFwL24uZ1diY082T2Nncm9rSHJDNTlJQjVUbENyVFB1SC5PVyI7fQ=='),
-('LuKLsG9ZPaqC4D4RapWbOPU5b6duLWCdEelcpF4V',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648584,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOTFDV2xOcjZZN3RZNUVMem5mcFE2RFR4bFZKbmZoMzA0WklaWXF5VCI7czo4OiJ1c2VybmFtZSI7czo3OiJwaHVkc29uIjtzOjU6ImVtYWlsIjtzOjIyOiJwaHVkc29uQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
-('LZkWRTQlcr0BXWTZyDhUif2h5DOhcXHo7O6SNlx1',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647760,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiZHl1MmtIajZwM01vMGd0anBDa0R3UEpCellyd2gzY1oxb3piUUJhTyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJEhtelhNYk45OGRQdGRvQUFxZ1Nkei53QjE0RkdVdjdWU2hCYWVVOFVvclBSS0FEOHdtODN5Ijt9'),
-('miv9E8FuAWgkKJyZD8FmoLItX9J3i1CbILXN8cX9',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647698,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiMnBvdWlEamUyY0pBWTd6MUZ6UUpNM0l2bTZFUzhXT2p0OW9nMmtBRiI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('Ml5ihhbl0FasQz2cMnKuqAXwiaHuX87aqNdMPWYS',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648011,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWjdXUUp6dnlWNzJxelp3aDlkNXJXYkRXVHFpendXOThnZXNXMXJKdiI7czo4OiJ1c2VybmFtZSI7czo2OiJiYmVhdHkiO3M6NToiZW1haWwiO3M6MjE6ImJiZWF0eUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('mpinc48a7EnopVOqkWCihmTK2UIl8vfilbfVZ57P',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647169,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiMWJvOE9qeVNPT1VscWE3QUV5Y3BKekFFcHMyMnZJUUl4NmRsZ0oyaiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHZ2TlJTU1hJV0dTeW9SMmZzR01tRXVnTVhWQWpkSEhEeHdTcXUyZ29tN0xweGRCT2JKRXVHIjt9'),
-('MrBAj72rug1RSiI3JxcbU11Gl3xlOauHU6CGNsY3',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647375,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiaWhRYUxUc0FmZkZkRUtvcEFpb2JuNFFpSnU4WklSbTFpanJQNXp1YSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('NZwVSW6fzXPNoS8xeblXNp8A29chI1mEi6gf4eO1',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647613,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZ21HRmR5ZjU4cU9JWXdhMk9XZFNRTUttYnYxcjVqZUowaGtYSkRFeSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('O2l7ECgMWiinEzdhKQs0yIAD2pK8evRRJDQZ0jjm',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647719,'YTozOntzOjY6Il90b2tlbiI7czo0MDoia3dZUm54ZVB2b0doVUZmamJXWjJqa0JnZjN1T3NtM3UzdUhoM0w1byI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('O4m43rhQhuHDM0dszzyaFhckyqB9yWF2HRftG2gr',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648512,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiMmdVMnJOQ2tmSnA5czA2VlVlZnBoNEl1ZnA2NEtyTkp1RVBqUWp5eCI7czo4OiJ1c2VybmFtZSI7czo2OiJnZmF2aW8iO3M6NToiZW1haWwiO3M6MjE6ImdmYXZpb0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('oZzxNXaH7cwyALuBUxNh2jZ0CoW7zveOeUOULXOY',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647787,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiTE9DaExPM0UzWmZNZUJER29WYmtzWXAwbjlrNXhyOW12QURrZ2podyI7czo4OiJ1c2VybmFtZSI7czo2OiJhY2xhcmsiO3M6NToiZW1haWwiO3M6MjE6ImFjbGFya0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('P9UZ0aSkPBTDPMRXOaiBiCXXTIPbNClSkljM7Sky',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648661,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoic0hXYVhQU2dSdVQwQ2lEVUlQV0NSMTg3c0hZQzFYQkxhakVXcTVodSI7czo4OiJ1c2VybmFtZSI7czo2OiJnZmF2aW8iO3M6NToiZW1haWwiO3M6MjE6ImdmYXZpb0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('PE6HsFfCdmmWLjQ75bsMsON9Ep4eRaWvWtMV9MLM',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647535,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiMjFiREFOY2Y4SXFVdTB5eDJLcFpaZ1hNUTBEdzFlNnA1UG1wQ1dQYyI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('Q7jsWaHzOa90jijk6NcqyYOgbGRUkySG7m3AtEMU',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647274,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiempyU1lwdXUwekRwMDhTbmlPSzZRekZtakNNZ1JzQVFDTEZyMzlFeiI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('qfdELMvoUj6WbNEUOC64p31VXMGFFjH6IW3c1mcl',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648233,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoicFpoNjNuRUVYWmx2SVFhVll0QVZibXBEbVR2dE0xM3g2SXNYOEVPTyI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
-('qjBNNn1Pp1syreh2pBo9qCPTMVFsvi3dufYKD1mb',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648985,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoibGZkcnNiaEY2MmZaaTZTQ2lRalBjdlBibkRZZGJ1VHZ1R1BzWlRJRCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRBVllvMWVhV1hyalljYzVVcXFXMHpPRmRTTVFGTUNBTlFDTGFhV0N4UnByVmUzeG1KR09SeSI7fQ=='),
-('qK0AjGgLATWt3TFOdJyq1oW3stTuE22fKNoZqelg',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648214,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZU5tMFhWb0FNT1Rqc25GMjdiZE51VDVic1pOd09EalFSTklLZTJIcCI7czo4OiJ1c2VybmFtZSI7czo5OiJkYmVybm5hcmQiO3M6NToiZW1haWwiO3M6MjQ6ImRiZXJubmFyZEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('r2ZrwRIc7J6OiVFdQUYjAFg5K8PimGjiI1uAlVZQ',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648913,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiYWdvaXhXOUJNSGE3Nm5OYmVEWUtnNUJoQ1RpRHBraW1lVFJNMVd1eSI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('rDSkoBaq8a6oJYX622ytqfDz5mUK5UpTkmbc8C38',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648904,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVU9JeWl4QWJJd2dEbTRHYzFrWFk3S1VHMnU5aHFDTEZMUDNybUk1NCI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
-('rN98pjca3JAEof5Fux8If3mlIdqa1WFcgeH3NHDn',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647631,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZkhlWnlmYmVRWXJtaTFKanVRSXRrbk9GSUU1NGxvMDVvWG5kQWZZSSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('SkZgv3uc4KVKve6UtpaJa1JbHkuoZWFlmrmEy7wy',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648642,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoieFVtdmlGbThRYVQ0VUtvbW5LSENEVm5nZFlOU3JPNzROaHFzSGc5QyI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
-('Sux21IvQCwwNLpR3r89LQ5Qoye1C6ZAGyXziPNVu',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648366,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiT2l6WFdmbkdnSVYza0d5cDFxV0lvNjA0VnU2ZVRScEVTUlBvY0Q3RSI7czo4OiJ1c2VybmFtZSI7czo3OiJmcGVyaW5pIjtzOjU6ImVtYWlsIjtzOjIyOiJmcGVyaW5pQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
-('tfWrE46XmFalkFzYj9FjDmIgxiMzT3fl60Iso2Lm',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647323,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZGI1aGtXNXVCU2NvQTR0VUVpN3dkakl3OTNUOGllYVB6SWZUM2piZCI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('tit1jLFSp08zAmhzaKVi3o4uELYNOfr2sOgMmzEI',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648584,'YToyOntzOjY6Il90b2tlbiI7czo0MDoiSWNMMkdCWHJJVG1jWERBV3JWYWZ2T1NnQWVpNW00SGJHbUlUaVMycyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('ULX6yu6bDePH4mIDDOkiT6zj5DHWkTDgPMbfgQW9',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648248,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoicGNnZFFibzJDS3dqaXduWDc5dGdUU3R0SklkSmY1aUd4OWt3b25GTSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCROQTR2QUdlSnZKaHFhbmZIMk5OQ00uNVBLZkpscVovZ1FHVTZVdEVVYm95b3pnTnJiYlFVbSI7fQ=='),
-('umEaOyNC2pC3qV6mqApWE0XiD3dRjshhgfQGJhRu',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647299,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiYzlDWUNtNks3UENaRk1YbUhXckpVd3FHclZHV2NNbHVaTHFYRUJKayI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('utaWTLN0Zbke4vsRosHyiPZSEDLTndoerEVyJwhh',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648805,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiZ1BrbzJXcGIxOU9CVVJ4czhMUTNsUUJRVW5mUU4wSGdBeWs1TmNHMiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRNTVpuandEUTNvaWcwcFJKNm42VHh1eUhpR0JtOVJJWm9heDNSaGN3MVByeGxPZkpmQXFkNiI7fQ=='),
-('UVB7lfO8K0Xmxgv8hNAVxXrReAuWYAzH2P6fjTUe',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647480,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSkZxTVRtY3VGajRMallXRDZjWFQyYmhCZW5Cam1zdFZDUFdUaWRCMiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('VRYoRk21WnrhzUTD3Ku2mwSDj8Bi3cM9AMjSsmgC',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647404,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoicmdta1N1Y2NzcHU2S202ZkdHZnpZUHhTd1RFSWlXbTRlTTFJQ2FIVCI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('wiF7N8bxKe8rgzIF5gGtxQ1OKaemYHUVB4xfV32I',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647674,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiOHR5bk5VT3FtY2RkU0l4eDRyUXl6WmUzend6UGYxdkw0YUtVcVNKaiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('WlXgCRDmUt5Ogc96TQMwmjW20A4rXjsKYtavWQko',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647936,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiVk0zTWM1Zm5HTk1oMGg4bnNVSGRDckNYNGdtZGNDOEh4cEN6YXJvMSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRBQ0llSDhEOThLR3pSMldFbkcuNUl1dVFkT25nMmxIUVM5UWVPOFl1TzBBU1A5QTdzTUhNQyI7fQ=='),
-('WzYLpnOCdLqZ1pcENHkPW8r6nNlr2X7hAVHJL0jY',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647720,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiM1RrZDhpMVdKczQ3dnY5QmxOa3ExSnFvSGpGaW00bTB6U2VwSW9UdyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
-('xGse3CfGho7GyKlQ9CegXVDweYxmHwC0knbI3xZ3',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648525,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiS1B1QjhrdWE5SUFoOVMyR1hUT05QRmdLQmoyYkpOazkxUGowUW9nVyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRoRkpRcGNxOWhxTTBzNU5XaWV6RG1Pb1VTMXIzc0FPalI2N1lKRTR3U3B1YzNLMFlXQjZkYSI7fQ=='),
-('XJHj4RiH6kMe3hf9Jvq3ZfsxDZQf4rHwhzC5zmzl',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647230,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiRG1DbktoUU5CRVRudFNGRlhVNGF1YVlsb0ZXelBBaUlzZkV1VTM3QiI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('XUJE5Pp2VPJS8koUfngbhDe9f2G1316tur5hhLa5',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647130,'YToyOntzOjY6Il90b2tlbiI7czo0MDoiTTZnU3cxeGhJemJoaUR0anRoOUduQllxR3ZPRkRwSk8yOTVibVlnbSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
-('YsWjW4JQl6J07xKAu1n9LeDrIK0zJ5oE4c6ileW0',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648503,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiYk91Nkg4em5rR3ZLYXd1b3BadVFWNlJxM1E1VE5TNFJIa0g2cTBEdCI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
-('YzgHcBPu1hp1MoLxrsk1J9HMV7o2XBPZHz4qI7Mc',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647915,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoianhSZFE1WFM5UXJRV1FDd3NJTUI3eVFramZyR0hwQXREOUM0akY1biI7czo4OiJ1c2VybmFtZSI7czo3OiJhZmlua2VsIjtzOjU6ImVtYWlsIjtzOjIyOiJhZmlua2VsQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
-('z0w0N9yqzpMfZpPkkTcb7I7vwkjXfc1ODRA6BF8N',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738648494,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWlo4aXZ5Sk5qV05KTVMwQ1h5dnB5dDJnMDV4cmp1VUdpenliM083NCI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
-('zLoUjS6UIBGXjx0RcBkFlen923Q3EvbhCan5YDvh',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738647154,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoielVSenFrS0tWdUFTeW9uQ0t6ellSS2F6Ukk2cUF2cGFZM2w2bkZxUCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHhwQUc4Lnl5WkU3WWZjNGRNMURiTE9HNTZMU3p4VWNsYkNiZWxuTmpTMWJTRTgyV2dwQ3pXIjt9');
+('0LB0atwhT7ViQ1AlId7z1gVparrAJw9seRFTKRhs',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820354,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVHdFWVdjR21jZGhGdUdOZDFQclU1b3VwSjJnbTdKSGV1Mm8xZ29mayI7czo4OiJ1c2VybmFtZSI7czo2OiJnZmF2aW8iO3M6NToiZW1haWwiO3M6MjE6ImdmYXZpb0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('3xyu8CfAaTTuObZt7s5nEgoT8WgMoMbsgGeBAenU',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820336,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUE9LUVVYblVEdUNTalFUcWRWazY0TEExcUppSlVDUjJRSmZObkQ1NyI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
+('4QDTG50f1fISoazxrh8EOw7nQocaK0YMYTjLmyR0',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820836,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiWXBkeXFjcXg4MlJVNVhrV2FuQnF5dFBMSlZQUktCb2tDbldnM1hVdyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR4SzdqQUpyWnNTNEYzTDIwbC9yVHFPaENmY3dzZXptRVpJRWRkbXRtNDY4RVF6cVVJVEtFSyI7fQ=='),
+('5UpiIJk8bS0rmduF0wL0z7yzh20LlfwIDqgECFUf',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820398,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNms3dzk4bm5hd0VpNmk0bU1Dd3BoeG9FcHhYR0dHMUFQVXZlMWRDbSI7czo4OiJ1c2VybmFtZSI7czo2OiJsZWxkZXIiO3M6NToiZW1haWwiO3M6MjE6ImxlbGRlckBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('62zCzF6LYsN1zVeEd8bz4mVoysMrETxv8rtwc2sf',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820217,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiZ0RYRmRNMk9USEdPQmpTdGhBRmRXSEpzNklHbFN3dzhUVUpxek02RCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ0dmRiRHFoNGxwbDBEdDl4ZmVJa0cuVWlrSkJ6TUFKdTkwbG9ieUN5RXpUMklJamN1Vm1wLiI7fQ=='),
+('6Pn0pifgwyhD5DCIRPvqlfKMByGdYDCSRQDFXYP2',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819586,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiVnR1MGRWR1loZk9NS05qWkZwY2lORlNlWnpqZ05uazI4V0pmeW9UUCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHU4OWxhN2lmMHZjTVdNQXdHaEc4S3UueHNqWUlDb0d4Rkk3Z1lHd0lmcW1tenJUVGZNaUVlIjt9'),
+('7iUnMzAL2pn7bKIE4H5FYW1NCH9xvSXSpbzEIF2U',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819890,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoieXRnRENOMVpWSHIzbGVOdXRNc3JZaFdkeEhZVVk3WWk1TDFjcmZJVSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRZbWRPSXV4WnZBenROczRJNFhDLmJ1eHlyaXRQd1pTZEc4cDFLMnNnanNHcXdzdkg3ZVdPUyI7fQ=='),
+('7Ou2N70xIRp2MJixNonVRuCSsLAFYrPgAzmjYFTC',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819744,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiQjdGUHNMVzJiNDZUb0l1MDUxZzJNRVVBVlV6NlFSWUJaYmlLT3FvdCI7czo4OiJ1c2VybmFtZSI7czo3OiJhZmlua2VsIjtzOjU6ImVtYWlsIjtzOjIyOiJhZmlua2VsQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
+('8XVdc5fxd3EaqZ0LCac33kw7qfHLOxVoTOnBPVpf',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820692,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiME15QTRqZUlzUVZrbGVudVZ3S2o5YTMzZnRtSzNXMWRyVHJXWlRWeCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRPWE4uaDFSc3UubjFBUWlpZW13SWguQkJtN3dNTVhnUFF5OGVlUTNtcFZ4ekZJazFtMC5URyI7fQ=='),
+('9gUCNK6JMSvoPtOTpGW0WGPZtvb0kGSnggPzC1lj',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820419,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoielVvVXo5RktONTFiUk1IQjFZZ29JMm9zSEt1U1JSaGdaZzNPaUhoRiI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
+('a6bJ9Ofl1V77jzKq1flvSMJtlQhQV2TKzL5yPh5S',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819080,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiV09PNWhxcmFwaVhJa0trdExldTBEZ212ZnFmQ2JBdk0yMHJETE5RVCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('a7eYmc9wt8IftS2ZHDScTouh6yaPncHEtpicPOHM',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820486,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiRk4zbHBDcTVrbFRmenZadW1TTVgwZElKTHYwb1JuTXJDUDhMOG9jWiI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
+('ADCtqV008LH0aufJ1Jkp2KrS6uCSN23hFx8hjyL8',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819524,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiT0l0YXpVMjlGcXBhNDVSZlBlcENFRVJlcWxxNHJUWm5tR3VNTlp5QiI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('AH1PPuVOQSkjZwM5cddNtaClwOPGTcUUrIMqj8NS',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820067,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoid1hkalQ0aXZhOGhFVGtXRGlGancwWlIwdDhoUGlOdjhkdFZUQWlRSyI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
+('bNcDuAwvNAbHbbxsmzC5aWmLXBFU5EWdoGPnMbDO',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819501,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiN0c5enZrVXZpNDJSalJoZ1BHVFZINU5SeWRqUFhVTVM4WFJVWjY2SCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('BRDxFF8MFvj7txWYikqc6tnbwm8ZTRIJAO8XjWbJ',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819375,'YTozOntzOjY6Il90b2tlbiI7czo0MDoibG04Z2g2ZXdEN1loc1RHSUZVb0t1UFhBV1NoYU84T0tsT1JrdVVqYSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('bszvMwwzCP7v2uFbCUtWGH6t4jGUnzDDlyInZ5XR',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738818997,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiY1Rib0J0Vk1FaVkyMTlMQlMwU081VXo0UXVBWDRzWmhYUmlBcG0xSyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJC5kSlpLWENZNC9sQnk3SGV6aTBRb3VEMWVudzNtV3FoQnl0NVZQbkZ3cFVsTEdvOUhQbWpTIjt9'),
+('bu4IIDjHxeJSYEhNGX6TLB7pIskBQkYXrxVl0XEn',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819198,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoieHYxWVhQbnVvcmdnVjVHZXc3T3Mzb0ZCSDZ0bDhXTzQ1MVdwN2FUTSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('clE2b3z2UttaxECMLTNTZKwQP8dp1OFipwj0Zm9B',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819119,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNzI5azZINWFPWUVaUDdtcFExVnp4VVBGcmxIcFF4dWNXZzB1YkZqQiI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('CqotlIiicDf0kHqTRpMQ9jbfvzTFqzHX6nfFmCd0',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819359,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoieUw1Y3NrcFEySzdDZENWTUl4cU4yNTVwbkpmWExGeWhWMDg2UUI4eSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('cUaISqBCwoqSiQzNczQTxuCrICBmQOeAjnHtrDsT',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819072,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiclF6TTJYdGZPeWR2MXhCbm5OVXdCNVRFd25DRzA0eEpJRnVGQ3k2cCI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('cWZPShG8fxx3L79yIAq5WouVWJ1twdXMWHqWjndf',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819181,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiM0dyYzFXZW1CZjQ0dGlwRHBhbm4zeENJR0hJZWxJdUxmcUtFcE5QMSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('E52rY2adxK8NSfgQs166WI3hCm2LZyv6KMWsJY5h',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819289,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNW9lTUduRThDUzJDZ1NpQzlYaU1zTlIxWFVlV0ZOS0xmSG1UZ1J5SyI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('ejayzeLc7ND0So3csx4jzTbcuXkL1neZsi2zi514',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819051,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNU82VGVBUTR4eTRJamhwTkFIVGt3Mm9DNkFxUG9HZnZzU2wyRVZFSSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('EJH01huMM8q4TwsM7FRE2yXmSh71WB4vTEhq3fji',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820428,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUnZWSG02aWNacGs5VXdVTUtVanVpTG9yVmNOM0hsQ3ZEUXhvQXU4SCI7czo4OiJ1c2VybmFtZSI7czo3OiJwaHVkc29uIjtzOjU6ImVtYWlsIjtzOjIyOiJwaHVkc29uQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
+('ETPRBO5QEs8KaRRJrXSSKb3hJQPn5dxEQppBgHl5',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819303,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiZUJsWmdKbG54ZU9yY3Z0WkN3YkpyVkEzajIyaHZNaGNsckk5QXp0bCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('eXq6Xem7HxzWJUc8TRfjXjHvLKgkducDCGnEnH1a',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820153,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiaDJBWFh2SUxtczA1d25GOENNMTlkSFlpN1ZuRkxLVUZGbFBFUk0wMiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRMTFZUTDY1LzVsemh0Vm5xYTJvRTNPajlubjJ5d0ZOT2Y0THpKR1VSZmtkeUp1UTZKdHp0QyI7fQ=='),
+('faT8eWxOi41L6XcI4cdp2cPqBklbUPl9FfT13M2l',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819104,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNDl5S2RPZnFLZ3dsSjZFN0hUTThKQTdubTZ2OFdCRHE0Q1BpM3dVQiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('fd44I4m1JWWJ8MBMzRxqn6W6rtFsY8VGGxebmXwA',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819011,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoielNBSUZWaExMdW1aTzd4d2ZrcWJIYW1TdmVLamZ4RWlueDZVOVZMUyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJGxERVhzLy9EZ0c4ek9CMkdwVkk2RHVUa25WOHROdWJxL3ZaYjNNc0V4bUVMSXFEQjVrMTVhIjt9'),
+('FdpuWb3cR2I3aszGEFXIQW59gsfAOnRdKvEPuJYl',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820815,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoicEFCVmRVQjRtVUJlVkxwZ3F3dFhsa3l4RU5DRVoxdXpVRWNLUWIwZCI7czo4OiJ1c2VybmFtZSI7czo2OiJtc21pdGgiO3M6NToiZW1haWwiO3M6MjE6Im1zbWl0aEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('gGbdXoydpo43ilowmHtZMyzayoyeVjYtl5N4MMEg',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819227,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiczJsQ3JjSDRGaWo5MjRjbGpzdHdYUTNNR0hpdEZDYjYzREdQVzN6NyI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('hkMKGCgnYzvrXks3m1ZtmSCOn4nlUftZGycDlrsI',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738818952,'YToyOntzOjY6Il90b2tlbiI7czo0MDoiMmNDMkMxbTJPeEJTUzA1MnVkd3NlcEhrNGJadnhaVjlNS1E0M01lMCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('Hq9aP9TQHhUFCwrgr9fRQhYDp2gaJhzxw14EwD9C',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820428,'YToyOntzOjY6Il90b2tlbiI7czo0MDoidXZIemJTN0NQUjR1ak5XSEVNaFJVU0JkVnJ2S051T2txR21LYThSbiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('hU7h6kppvPTPECQHuGsuvE2ZYAENldmKdCt4EmQ8',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820495,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiSFFOTHJaVklYeVRRQzhTVFFTall1T3A4Ym1YN2d6d2J1TTNKQVMxbyI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('iT5HJmi8JubCGawycgBwChnrEuxzPMSOeApeJFDc',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819634,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoieDN1NVJ0TnFVNVJPMUpoSXk1aUY2UTRNTlFydFNncU56d1BUUmdRQiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR2dTJSQ21waTRndVR4WDBYNnphNGN1OENoa3ljeXAySHgxUUVlbjdaMWJ2R0dmdXROWnZHQyI7fQ=='),
+('j7DC7bpxxotSkxNr73imXUA8ABi0GVNOjb43YYtq',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820048,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoieFdTcFFpZ3BsWHdhM00wYzk3NlQyeXRmSWtKTnBDNHRuelVkOVQ0TCI7czo4OiJ1c2VybmFtZSI7czo5OiJkYmVybm5hcmQiO3M6NToiZW1haWwiO3M6MjQ6ImRiZXJubmFyZEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('jE8wNeKG0iwWmTwQLh7EZebAcfmSQDeNz3064Qak',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820014,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiNnpReTdOQXo0dlZNbzRETTFaRjlVemd4UkRnV1hXQUw0Uk5wOHQ1ciI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRoaEI0M1ltZUZRbGU4azRyN09rSzJ1Q1FydFZsSGJ3Q0d2UW9PcExQTjRLS2lKVUZDclhHMiI7fQ=='),
+('JHgHRcnu1ueR7I8VIiTedsTeLCLgNfGHQLTkbBV6',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819568,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoibzk3aDhBWld0MFFqWUdKQmFmdnFlTldUMzgxaXJyRDZvU0JiNnJLMiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJHU0Z1dKS3cwZ0FlWXM0OU5uZ044SGVSZ0I1dDJLU3BVdTR5LkFxOU5vS1oyYnpyNFZ3UFNpIjt9'),
+('JI8pvADxBfRoYeT9KNlkt5PHXX2tx9jci5IaH7N1',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820127,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiNmtUVW9CUmtjUElyQ3o5eDNKYzhOZWh3aEt6S2p6RnhqMjdYTjAybiI7czo4OiJ1c2VybmFtZSI7czoxMDoiZGtlbm5lcG9obCI7czo1OiJlbWFpbCI7czoyNToiZGtlbm5lcG9obEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('JJHZq4R84mRs5SLrRdJR1djBAcWaffotUAuOGEH8',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819841,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWGZYSHA1SkRMVEdma0ZUNjhLRUZXMWllUTF5ckpnMWxZUksxVWpSSiI7czo4OiJ1c2VybmFtZSI7czo2OiJiYmVhdHkiO3M6NToiZW1haWwiO3M6MjE6ImJiZWF0eUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('JxxtbTXLy8ETKcTiyRiY7wHloYKkNhEIYNjOP0oy',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820505,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiRzZUTmhaUDB2ZjlFS01TN2xFdHRpc3NUVGFxNHNiZTBXQjNZSXZoMCI7czo4OiJ1c2VybmFtZSI7czo2OiJnZmF2aW8iO3M6NToiZW1haWwiO3M6MjE6ImdmYXZpb0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('K5HJcOWS5HCsTXIiVi1dQAtPe47U3IgVi2A7D0xV',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819765,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiaEdVVkhsdWwycHVSSWhSNnNkTEViV1RxS01EY3pyNHVPblBsZGQ5ViI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ2NDhLaTExMmlqMDNjR2ZwUTM0aU91WlBmLnE3NDNnRzdzUVAyUkM1YkFOT1BjWXZmNnA0RyI7fQ=='),
+('K5lNjkVpLGMPOCntWrr7YXcP5bqjtXWDBpC98tjh',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820004,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiVHViOFNiYWVRWkJVcXBSVXVDWkpEeUQ4cmZJUzZ1a0VWY0szSEpEVSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQvVExxa1VyR3JwR0tQM0tYeUhhMHJPeW9FUTBoSm9lOTVOY1dTbnpCc3p5cTdFek5yUGdsdSI7fQ=='),
+('lo90bWAtNS2je8C5No3ws6BY5ad7H8ge5pDZXP1K',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820009,'YToyOntzOjY6Il90b2tlbiI7czo0MDoiakRVVlE3dG9iWHdRbmdsMnpib3dOSDBhMHNqUWNKV01oaEhCWlYxZyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('Mcde5vPnGGswmVQR9MF8sdUVdZYFxhItNgDxe93Y',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819030,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiRHd3b0l0eHRRdTE1cGxqWTBLNXNYaVE1bWtxUjVnRjBaTFlndFRITSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('mfBUt4LrEZecmOijJR6AgGKVOeTWJfxL2IoSgP7q',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820754,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUVB5em44Nm9DYmloRW1zaVZaN1NtNzlrRG9kRFZxSTNQYjhNUHphUyI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
+('MoBGwuRcrwNtpU4qXNI70Hxje8glChlUDdqOrw9q',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820162,'YTo4OntzOjY6Il90b2tlbiI7czo0MDoiVUVoOTE3MmNUNU42TmJhSTBlYWNIN3NseDE0R2ZhU0RPcTNoenNTSCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRNZGdwUG9SY3ZPOURYSncwSkNwdXUuWS5lc2YwU3Y0V1htT1NOeG9XSHpxSktzVVNsNHEzYSI7czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('MptTYsQ5Kawe8HDxnlYqK5Vh43j22pw7Mv13R6f4',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819240,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUDBCaGQyUmliMDlENkEzNUpnTXdweUFHRzhBb255YUMwSHlhT0FOWCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('mrbxJ1Jca7JIsVkIsyTXkxzJ2AYWtlhDasO7g6CM',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820009,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiWHpNU2FLTUtMTDlQaWxSelpScHk1VUx1VVFsWjNMaFR0aVVYcmRHdSI7czo4OiJ1c2VybmFtZSI7czo3OiJkYmFybmVzIjtzOjU6ImVtYWlsIjtzOjIyOiJkYmFybmVzQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
+('mZSLzg1kF4TleA6fhFGaHonezYV5NP1VqUM4Ekga',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819271,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiNnFpVnNLaFQwN21YZFlWSFVZQ2lCNVdjTlBDTkdSRU0xWGNzRzc2NSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('NbTMe8NbwPFzd2O7EscbmfaNPr2tTpHDLv1ubHnc',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819414,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiaE0ya0NUQXFWOHczUlZnVjZ3UmR6YTdPR0NPR1dDcWdDOXFFQUZQTSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('NeEdv9eGgo61Df5miFtGZ0DZU6ENEv4e28Txmeul',27,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820290,'YTo4OntzOjY6Il90b2tlbiI7czo0MDoibDVoRmFyWFpjYXJ5cjZ1czlUUjFqUjM3MmRhamM0MlNOWWIxQjlCNiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czo3OiJqYnJvd2VyIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7aToyNztzOjY6InVzZXJJZCI7aToyNztzOjU6ImVtYWlsIjtzOjIyOiJqYnJvd2VyQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJDZaQk5PcmRCazB1RUp0eE5BUHJrcWU0WXo4UEJGWTNyOW5ndkJFSGlic3dZSkhEQVJYS2RxIjt9'),
+('NHANF31eCI6HZoND4OLLNNY5Xd3uiz2S9URQvEa0',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738818990,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoib1pOV2pLY01GdXlYT0xFNkNTTzE4cEt6V1pGUDk4OHkySlRMR2llUCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJE1tVy9IbnNiaVZ5bm5hZTNWY1g3UE9ld0g5ZHVXQlRxNE5HRW44dS5QemVBd1JteExmVzVhIjt9'),
+('nMtoTMmlhs1fxI7DqnPklO6GKwANUtnnuKhgZeNP',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820680,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoicUFhMGlPMGlUZE1UZkRtYk1HSmZDUXpXSENpc1lTb2RldEN1SWNxZSI7czo4OiJ1c2VybmFtZSI7czo2OiJtZm9yYW4iO3M6NToiZW1haWwiO3M6MjE6Im1mb3JhbkBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('O6Oc3eTT7VHcdzIBQJ3sHigNN8CVtLe6F9Mjy7NB',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738818975,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiYUF6ZjdTaGZnQWs4cHU4elJJOFJjSHJmb1RSQmFVOWN2eFNqQUx1WCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJFFsR2tvRkgyVExvOGdCWEhFZndVWE8wTWhLTllQQklGdHROTlpJczFucDJua2w5MU9oTEtxIjt9'),
+('oAjmvGZFnvwhZmEarTuNH5f8YQVUA9s6YjxYVkdd',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820558,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiM2dpenNSTXF0ZUd5cURoZUFBcUhwaDJncFZ4cHZ4WmNBTEJhUVgyRSI7czo4OiJ1c2VybmFtZSI7czo3OiJtZGF3c29uIjtzOjU6ImVtYWlsIjtzOjIyOiJtZGF3c29uQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
+('oHmnZbqH0bZtk1MNWtaVK6kJxUFmZSeQtiMGXdEV',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819546,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiV2JjN3VrTXpkZUkwV0N3dDZINmFObUhvQ25QYWdGbFB1VEh2dHlraiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('OQLr316ZEUn6lfV2TYhNCz7VDnKObEisWeU8XiUl',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819338,'YTozOntzOjY6Il90b2tlbiI7czo0MDoid3hrcVc3eHpNaE4xbWcwOGtWd2UxMUs5ODh1Y3VFUjUxRHNWOEhZMCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('Os5sYGrnOBhdMUnCc8MN5VJ2QtdAMpnx2rZSKrty',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820368,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiWHp6dEJQODdsc3EwWU54dnBsRjZtZHp0b2h3Y2ZIbFpmb2JzVDRFWCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQvbi5TSGNCbDlkUFc4MDN1NEdOem9lbk1iL2gwNWRVTExDdzZhTjVCelhjeTNQZDAwdGpOQyI7fQ=='),
+('OwupqaVe6s1biwK17FFaKNa2pRJB8Jg3YvUPnnWG',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820311,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiN3owY3JwQ09qZm5xNVhRMU5FejhzZ2NsYmEyaVpVNWFycWY3aVQ1bSI7czo4OiJ1c2VybmFtZSI7czoxMDoiamxvY2tlaGFydCI7czo1OiJlbWFpbCI7czoyNToiamxvY2tlaGFydEBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('p6MLSV24bSJ8hvPIsyd8lJXab7HN9ljX7yvkLNsa',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819323,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiM1l2R0tsYTNicEg1MDI2ZXh0eDR1NExoN2FLd3hValNYV0paY3c4VCI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('p7WsKRdjJJmPMIV6o8d7EsYhOPgay158jELwGmZ9',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819547,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiN2NoaXgzblI2Z21rRmxRSE5XUGxPS0Y3TGlpN0R1Ym9GcW90SUdqSiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('PfH4gTW8P2U2yAVAZDMk3OtZpcHd1jHmKMcVbT3K',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819144,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiUDY2Y1NZS0JGd3g1dlN6T2tSOVFNclBZTlRJSEsycnBmSlRPYlJ6MCI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('psyvZEyuBm25Xc3BVhyX7bPaCKU9tW55Cf68wYRr',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819257,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoidHl2M1lSNHNOMVZnWDViWHRDS0tZczhhblo5RHhTd1JweDFFTUQ5SyI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('pzkwcrZM8UsEco9UD5T6Ycw0OPWZLKpBDCYSsiuv',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820519,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiS004S2NHQ0FGdEM1TnFJbFlXdkY2SDE5TFhXSnNyZ0dCQ25rRVNBRSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRzR25HdWd5TkVQamdnTC54bFBCQU1laWMyUmc4R1pud2o1alUwVS9kQldYcmxzbTlJbVozMiI7fQ=='),
+('Q3xssS5tSV6M4GMt5t6TSFFDNR1Q1gJU4fsjCaas',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820084,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiQVc0QXFBZURweXZ1ZDhNNnZ4cGMzZUNQRUx0Q3cxZzRpSUxnNTRwdiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRnQk1SYlAxVVF0eEN4OE5pU24ycmVlZW0vVUtxOU0vWldNbksuQWFTeGRwTEFwY09vQk9KLiI7fQ=='),
+('SlmTKb3vyHVHfawjprV9dCR4iXse45X8Mvs1ym04',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819154,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRjd3aHlWNG00aEd3SXEwb21qd1Qxc2Z4TjZnWlNOR2FwSTBZTEJ4WCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('SNKOljt26hTD1Ssaa4ZMm0SYd6L8ds4aTzXh5Vd3',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820080,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOUhoMTJjWlFtN29EaG1nZDQwa0l4NHBMOGxnSVlERlFESzV0Wm9SMSI7czo4OiJ1c2VybmFtZSI7czo2OiJtaW5vdWUiO3M6NToiZW1haWwiO3M6MjE6Im1pbm91ZUBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('TqRFegiV8I1M5jH48NZUOoDLcfs0nGDaWjrhmhBs',3,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820654,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoiU3JPRnhtdWY2eTVHOXI4bmg2RE54NFdKVVlhamZZODBiZkFSb2hiQSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MztzOjY6InVzZXJJZCI7aTozO3M6ODoidXNlcm5hbWUiO3M6NzoiZGJhcm5lcyI7czo1OiJlbWFpbCI7czoyMjoiZGJhcm5lc0BtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRDQlo1dXkzbVRlVHpyMG5ialBnVUJPZU0uTFE0L2plOFZWS0Y1MHdmTFlWRmtFY0hUTXozTyI7fQ=='),
+('uuAJXQLd2dwSPWRMZPm8oDCHas70PA2THAnZXzE7',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819613,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiamJMWFJCU3RjQXN2S296Q3d6dVowMmdmY3MxR1UxeUJKWEpKd2xYaiI7czo4OiJ1c2VybmFtZSI7czo2OiJhY2xhcmsiO3M6NToiZW1haWwiO3M6MjE6ImFjbGFya0BtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('UUdHVCu42MgdeRnPIySLOhsLBJ5Oqu6j9XqfRVDA',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820456,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOVhydHlzQ0xidnp2RWF3bjd6bmxqQnIxSktFYUlrc3VDY2NvY0NiNSI7czo4OiJ1c2VybmFtZSI7czo1OiJtYWxseSI7czo1OiJlbWFpbCI7czoyMDoibWFsbHlAbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('vl9KisMfVHuxW2G0e0Kp2mKNMo0GgoMkEG55qobX',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819436,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiMzViT2lrOTNrRDNjRDBPcVBqemNVNDFiOGtXc0ZIRWhaSjJ4Umd1TyI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('VXcGQ15F0sACNhRMmTHZo2XWee0gneNDwbzPGXK0',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820204,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZE9qMG9xd0FBSUVFN1RHSlRiazcwTHUzWnNjTkJqa2J4MEZJamNHOCI7czo4OiJ1c2VybmFtZSI7czo3OiJmcGVyaW5pIjtzOjU6ImVtYWlsIjtzOjIyOiJmcGVyaW5pQG1haWxpbmF0b3IuY29tIjtzOjUwOiJsb2dpbl93ZWJfYzFhMjZiYzAwMjQ5ZGM2MjFmMDNjNDE3NzhkNTVmZTMzMWU3ZTkxMiI7TjtzOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19'),
+('VYyqN4Jaq5YlO9Ul1BQqxhNYZk3qeYKWavtbHaPk',21,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819806,'YTo4OntzOjY6Il90b2tlbiI7czo0MDoidmR2bHJoQUthcllkOUtNZ1lJTkJZekRHRWduQ2NPSlhaY2RIWWZhcyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7czo4OiJ1c2VybmFtZSI7czoxMDoiYmJhcm5ldHNvbiI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MjE7czo2OiJ1c2VySWQiO2k6MjE7czo1OiJlbWFpbCI7czoyNToiYmJhcm5ldHNvbkBtYWlsaW5hdG9yLmNvbSI7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCR4ZHlLS1JyWjBoQ0c1Y2lTRUJPdVllSU1Bd1pLdjJ5RVpSL2laR24vdlhyd1hIaWdJSjNLRyI7fQ=='),
+('WB49NcjXnZ864v3WW2Lu6rjNQxuxtaZossrAkD3M',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819170,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiRHNHUTZLR0hjYW9TSWRxZFY4aDJUS1VEcjk1dTdCeEdwdUpPeUpodSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('WITsFWJvzeXevD7SxZTUj7Xgw5iFr2YmhP16wGfT',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738818952,'YToyOntzOjY6Il90b2tlbiI7czo0MDoiNnNnODJVR2l1YnN2bE1NSGhyOGR6djVaUFJ1b0VaV0cwbmJKQXRLYyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('XCqWhj0o3piAkrUkDub8cxgSr9vKpITVbSPOixhm',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819396,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiYnJZMmhrZEZDRDRVcExjYldLaktwV29xN3M3akxRaURjQlNDZGVLdSI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('xEX5xoiWZ24465d4xbS5p1PWnteQ2S3POn9ttXXR',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820763,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoibFNCS2lOR2tSOVZkYmF1SzRMMWN5blRDVFQ5ZlVPQmM3d3UzZmlONSI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('XHnplJouius6UZglWR2V9ytQseKgSS67A4Xc9sUS',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819037,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiMVlqcndSWGViMkN4WmF5bDFWQk5IekJ5MnduVEF4UkpibXdqY0FCZSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('xLA8VwrBTexYdLbreWfovf345SH9waOIhheYXgmT',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819210,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiUGdhb1FDM0hTUTAyOFBSZkNjWVpUak5KQXdwdmlKaFFNdG9Zc29zdiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('xOYOKiSmgOWOP2K5ANKHcA4mXxXavcUwofHEjp5P',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819938,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiVGVFeHB5c0hsZ3JTUk5DcEx5V1B1RXZlUjFncjg5QXdVNU9pbUV2ViI7czo4OiJ1c2VybmFtZSI7czo2OiJjYWxsYW4iO3M6NToiZW1haWwiO3M6MjE6ImNhbGxhbkBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('xRL4e0wU55xvQFWdlaI8drBB7YKQTjrnaxBeJPxB',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819457,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVTlKT3hPMnFsQ09uY0VxNlFmeWV1WFRuakpkS3FxNHZQVEE0Wk1oRiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('xrwJ4axiV4R6t15VgE3rCTAmEETY19jBFypD3sc4',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819480,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoieWY5UGV0RVBNNHZ2amtrd0ZZQThRV05aRVhtNkVBM0U5ZDhUd0pkbiI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('xwMVpT0IdbJTPSEMTzqqWcdPQ8yToqxJQwIEQgPu',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820732,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoic2xJRFJWMVBVMVdlUFdNaGd0bHN6VG5SUzVIWWMxY3U0TUh3NFlDeSI7czo4OiJ1c2VybmFtZSI7czo2OiJtcG93ZXIiO3M6NToiZW1haWwiO3M6MjE6Im1wb3dlckBtYWlsaW5hdG9yLmNvbSI7czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO047czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ=='),
+('Y99KvJr2RelX7KMOyrtsIoKWCOQK1bFUxAIWnyY8',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819058,'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSGtZYTNBVDJMM0lHN05lWTZkUnpVUGZLaTdjN0JpT08zaVpSMnQ4ayI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('YD2khn63mh57Zi8RuJwAsynas6dfkEcilyVh9jKe',1,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819005,'YTo3OntzOjY6Il90b2tlbiI7czo0MDoibURpY2R2NU53TTB3dWRmeERRaVRaMmQ4VXBmOFZiS09zOTZpVXBiUiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViX2MxYTI2YmMwMDI0OWRjNjIxZjAzYzQxNzc4ZDU1ZmUzMzFlN2U5MTIiO2k6MTtzOjY6InVzZXJJZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NToiYWRtaW4iO3M6NToiZW1haWwiO3M6MjM6InBrcGFkbWluQG1haWxpbmF0b3IuY29tIjtzOjE3OiJwYXNzd29yZF9oYXNoX3dlYiI7czo2MDoiJDJ5JDEwJDQvc25hRXFwSTAyTmxRWVpIMS5LVWVvdFUyc0xjdHJlS3ozR2NPVURBZVMzY05kdVZlSzZPIjt9'),
+('YjxgnASPml5by59gfr2PoEh7t4075bSY1N17JGzS',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819128,'YTozOntzOjY6Il90b2tlbiI7czo0MDoienR0SDV0ZFpuNDU1QmhBV1NMc053SXdmOWNNTlZpaEJRbGxMZjY1MSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czoxMzoiY3VycmVudExvY2FsZSI7czoyOiJlbiI7fQ=='),
+('yvYWIJy6VwkiVPUfLAdxeXpFYhia5VwOgKiUnTwq',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738820345,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiOW9zS2V0aUJhb3k0S0p5b2ZHZWtsSDJOYlFScXJtNnRpWXFiV09RVSI7czo4OiJ1c2VybmFtZSI7czo4OiJhZ2FsbGVnbyI7czo1OiJlbWFpbCI7czoyMzoiYWdhbGxlZ29AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0='),
+('z94ImdoUHVai7MrjXtHiGkNbEs5Yd7p5fS69rlJG',NULL,'127.0.0.1','Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/132.0.0.0 Safari/537.36',1738819095,'YTo1OntzOjY6Il90b2tlbiI7czo0MDoiZ0c3SU1rWWJ0eEZJaUJ5elFBN254QkUzU1FUQzBtcUhtcVFlQ3MxdCI7czo4OiJ1c2VybmFtZSI7czo1OiJhZG1pbiI7czo1OiJlbWFpbCI7czoyMzoicGtwYWRtaW5AbWFpbGluYXRvci5jb20iO3M6NTA6ImxvZ2luX3dlYl9jMWEyNmJjMDAyNDlkYzYyMWYwM2M0MTc3OGQ1NWZlMzMxZTdlOTEyIjtOO3M6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=');
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8015,7 +8013,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `site`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `site` (
   `site_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `redirect_context_id` bigint(20) DEFAULT NULL COMMENT 'If not null, redirect to the specified journal/conference/... site.',
@@ -8047,7 +8045,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `site_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `site_settings` (
   `site_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `setting_name` varchar(255) NOT NULL,
@@ -8079,7 +8077,7 @@ INSERT INTO `site_settings` VALUES
 (12,'orcidClientSecret','',''),
 (13,'orcidEnabled','','0'),
 (14,'themePluginPath','','default'),
-(15,'uniqueSiteId','','510AAD70-10E8-45C8-89C7-DF31E7400645');
+(15,'uniqueSiteId','','8138A97B-A1AF-4097-9414-46A189D1B0B3');
 /*!40000 ALTER TABLE `site_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8089,7 +8087,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `stage_assignments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `stage_assignments` (
   `stage_assignment_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
@@ -8116,41 +8114,41 @@ CREATE TABLE `stage_assignments` (
 LOCK TABLES `stage_assignments` WRITE;
 /*!40000 ALTER TABLE `stage_assignments` DISABLE KEYS */;
 INSERT INTO `stage_assignments` VALUES
-(1,1,13,19,'2025-02-04 05:42:46',0,0),
-(2,1,5,4,'2025-02-04 05:43:06',0,1),
-(3,1,6,14,'2025-02-04 05:43:27',0,0),
-(4,2,13,20,'2025-02-04 05:43:35',0,0),
-(5,3,13,21,'2025-02-04 05:45:43',0,0),
-(6,4,13,22,'2025-02-04 05:46:23',0,0),
-(7,4,3,3,'2025-02-04 05:46:50',0,1),
-(8,4,6,13,'2025-02-04 05:47:24',0,0),
-(9,4,10,15,'2025-02-04 05:47:35',0,0),
-(10,5,13,23,'2025-02-04 05:47:46',0,0),
-(11,5,6,14,'2025-02-04 05:49:00',0,0),
-(12,5,10,16,'2025-02-04 05:49:12',0,0),
-(13,5,12,17,'2025-02-04 05:49:16',0,0),
-(14,6,13,24,'2025-02-04 05:49:46',0,0),
-(15,6,5,4,'2025-02-04 05:50:13',0,1),
-(16,6,3,3,'2025-02-04 05:50:28',0,1),
-(17,6,5,6,'2025-02-04 05:50:31',1,1),
-(18,7,13,25,'2025-02-04 05:50:54',0,0),
-(19,7,3,3,'2025-02-04 05:51:29',0,1),
-(20,7,6,13,'2025-02-04 05:51:55',0,0),
-(21,8,3,3,'2025-02-04 05:52:02',0,1),
-(22,9,13,26,'2025-02-04 05:52:11',0,0),
-(23,9,5,4,'2025-02-04 05:52:45',0,1),
-(24,10,13,27,'2025-02-04 05:53:05',0,0),
-(25,11,13,28,'2025-02-04 05:54:15',0,0),
-(26,12,13,29,'2025-02-04 05:55:31',0,0),
-(27,13,13,30,'2025-02-04 05:56:31',0,0),
-(28,14,13,31,'2025-02-04 05:58:01',0,0),
-(29,14,3,3,'2025-02-04 05:58:33',0,1),
-(30,14,6,13,'2025-02-04 05:59:11',0,0),
-(31,14,10,15,'2025-02-04 05:59:23',0,0),
-(32,14,12,18,'2025-02-04 05:59:27',0,0),
-(33,15,13,32,'2025-02-04 06:00:11',0,0),
-(34,16,13,33,'2025-02-04 06:00:49',0,0),
-(35,17,13,34,'2025-02-04 06:02:00',0,0);
+(1,1,13,19,'2025-02-06 05:26:32',0,0),
+(2,1,5,4,'2025-02-06 05:26:52',0,1),
+(3,1,6,14,'2025-02-06 05:27:13',0,0),
+(4,2,13,20,'2025-02-06 05:27:22',0,0),
+(5,3,13,21,'2025-02-06 05:29:32',0,0),
+(6,4,13,22,'2025-02-06 05:30:12',0,0),
+(7,4,3,3,'2025-02-06 05:30:40',0,1),
+(8,4,6,13,'2025-02-06 05:31:14',0,0),
+(9,4,10,15,'2025-02-06 05:31:24',0,0),
+(10,5,13,23,'2025-02-06 05:31:36',0,0),
+(11,5,6,14,'2025-02-06 05:32:53',0,0),
+(12,5,10,16,'2025-02-06 05:33:04',0,0),
+(13,5,12,17,'2025-02-06 05:33:08',0,0),
+(14,6,13,24,'2025-02-06 05:33:40',0,0),
+(15,6,5,4,'2025-02-06 05:34:07',0,1),
+(16,6,3,3,'2025-02-06 05:34:22',0,1),
+(17,6,5,6,'2025-02-06 05:34:26',1,1),
+(18,7,13,25,'2025-02-06 05:34:50',0,0),
+(19,7,3,3,'2025-02-06 05:35:26',0,1),
+(20,7,6,13,'2025-02-06 05:35:52',0,0),
+(21,8,3,3,'2025-02-06 05:35:59',0,1),
+(22,9,13,26,'2025-02-06 05:36:08',0,0),
+(23,9,5,4,'2025-02-06 05:36:43',0,1),
+(24,10,13,27,'2025-02-06 05:37:03',0,0),
+(25,11,13,28,'2025-02-06 05:38:16',0,0),
+(26,12,13,29,'2025-02-06 05:39:34',0,0),
+(27,13,13,30,'2025-02-06 05:40:34',0,0),
+(28,14,13,31,'2025-02-06 05:42:06',0,0),
+(29,14,3,3,'2025-02-06 05:42:37',0,1),
+(30,14,6,13,'2025-02-06 05:43:17',0,0),
+(31,14,10,15,'2025-02-06 05:43:29',0,0),
+(32,14,12,18,'2025-02-06 05:43:34',0,0),
+(33,15,13,32,'2025-02-06 05:44:20',0,0),
+(34,16,13,33,'2025-02-06 05:44:58',0,0),
+(35,17,13,34,'2025-02-06 05:46:10',0,0);
 /*!40000 ALTER TABLE `stage_assignments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -8160,7 +8158,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `static_page_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `static_page_settings` (
   `static_page_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `static_page_id` bigint(20) NOT NULL,
@@ -8190,7 +8188,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `static_pages`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `static_pages` (
   `static_page_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `path` varchar(255) NOT NULL,
@@ -8216,7 +8214,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `subeditor_submission_group`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `subeditor_submission_group` (
   `subeditor_submission_group_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
@@ -8257,7 +8255,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_chapter_authors`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_chapter_authors` (
   `author_id` bigint(20) NOT NULL,
   `chapter_id` bigint(20) NOT NULL,
@@ -8366,7 +8364,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_chapter_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_chapter_settings` (
   `submission_chapter_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `chapter_id` bigint(20) NOT NULL,
@@ -9107,7 +9105,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_chapters`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_chapters` (
   `chapter_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `primary_contact_id` bigint(20) DEFAULT NULL,
@@ -9215,7 +9213,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_comments`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_comments` (
   `comment_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `comment_type` bigint(20) DEFAULT NULL,
@@ -9243,12 +9241,12 @@ CREATE TABLE `submission_comments` (
 LOCK TABLES `submission_comments` WRITE;
 /*!40000 ALTER TABLE `submission_comments` DISABLE KEYS */;
 INSERT INTO `submission_comments` VALUES
-(1,1,4096,11,10,10,'','<p>I recommend that the author revise this submission.</p>','2025-02-04 05:55:03',NULL,1),
-(2,1,4096,11,11,12,'','<p>I recommend that the author resubmit this submission.</p>','2025-02-04 05:55:12',NULL,1),
-(3,1,4096,12,13,8,'','<p>I recommend declining this submission.</p>','2025-02-04 05:56:24',NULL,1),
-(4,1,4096,13,16,10,'','<p>I recommend requiring revisions.</p>','2025-02-04 05:57:31',NULL,1),
-(5,1,4096,13,18,12,'','<p>I recommend resubmitting.</p>','2025-02-04 05:57:40',NULL,1),
-(6,1,4096,16,21,10,'','<p>I recommend that the author revise this submission.</p>','2025-02-04 06:01:53',NULL,1);
+(1,1,4096,11,10,10,'','<p>I recommend that the author revise this submission.</p>','2025-02-06 05:39:04',NULL,1),
+(2,1,4096,11,11,12,'','<p>I recommend that the author resubmit this submission.</p>','2025-02-06 05:39:14',NULL,1),
+(3,1,4096,12,13,8,'','<p>I recommend declining this submission.</p>','2025-02-06 05:40:27',NULL,1),
+(4,1,4096,13,16,10,'','<p>I recommend requiring revisions.</p>','2025-02-06 05:41:35',NULL,1),
+(5,1,4096,13,18,12,'','<p>I recommend resubmitting.</p>','2025-02-06 05:41:44',NULL,1),
+(6,1,4096,16,21,10,'','<p>I recommend that the author revise this submission.</p>','2025-02-06 05:46:03',NULL,1);
 /*!40000 ALTER TABLE `submission_comments` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9258,7 +9256,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_file_revisions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_file_revisions` (
   `revision_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `submission_file_id` bigint(20) unsigned NOT NULL,
@@ -9332,9 +9330,9 @@ INSERT INTO `submission_file_revisions` VALUES
 (53,53,31),
 (54,54,32),
 (55,55,32),
-(56,56,30),
-(57,57,31),
-(58,58,29),
+(56,56,31),
+(57,57,29),
+(58,58,30),
 (59,59,28),
 (60,60,33),
 (61,61,34),
@@ -9344,9 +9342,9 @@ INSERT INTO `submission_file_revisions` VALUES
 (65,65,38),
 (66,66,38),
 (67,67,37),
-(68,68,35),
-(69,69,36),
-(70,70,34),
+(68,68,36),
+(69,69,34),
+(70,70,35),
 (71,71,39),
 (72,72,40),
 (73,73,41),
@@ -9364,8 +9362,8 @@ INSERT INTO `submission_file_revisions` VALUES
 (85,85,51),
 (86,86,52),
 (87,87,52),
-(88,88,51),
-(89,89,50),
+(88,88,50),
+(89,89,51),
 (90,90,53),
 (91,91,54),
 (92,92,55),
@@ -9379,14 +9377,14 @@ INSERT INTO `submission_file_revisions` VALUES
 (100,100,60),
 (101,101,61),
 (102,102,61),
-(103,103,59),
-(104,104,60),
+(103,103,60),
+(104,104,59),
 (105,105,58),
 (106,106,57),
 (107,107,56),
 (108,108,61),
-(109,109,59),
-(110,110,60),
+(109,109,60),
+(110,110,59),
 (111,111,58),
 (112,112,57),
 (113,113,56),
@@ -9416,8 +9414,8 @@ INSERT INTO `submission_file_revisions` VALUES
 (137,137,74),
 (138,138,73),
 (139,139,72),
-(140,140,71),
-(141,141,70);
+(140,140,70),
+(141,141,71);
 /*!40000 ALTER TABLE `submission_file_revisions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9427,7 +9425,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_file_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_file_settings` (
   `submission_file_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `submission_file_id` bigint(20) unsigned NOT NULL,
@@ -9556,12 +9554,12 @@ INSERT INTO `submission_file_settings` VALUES
 (107,54,'','chapterId','31'),
 (108,55,'en','name','chapter4.pdf'),
 (109,55,'','chapterId','31'),
-(110,56,'en','name','chapter2.pdf'),
-(111,56,'','chapterId','29'),
-(112,57,'en','name','chapter3.pdf'),
-(113,57,'','chapterId','30'),
-(114,58,'en','name','chapter1.pdf'),
-(115,58,'','chapterId','28'),
+(110,56,'en','name','chapter3.pdf'),
+(111,56,'','chapterId','30'),
+(112,57,'en','name','chapter1.pdf'),
+(113,57,'','chapterId','28'),
+(114,58,'en','name','chapter2.pdf'),
+(115,58,'','chapterId','29'),
 (116,59,'en','name','intro.pdf'),
 (117,59,'','chapterId','27'),
 (118,60,'en','name','note.pdf'),
@@ -9579,12 +9577,12 @@ INSERT INTO `submission_file_settings` VALUES
 (130,66,'','chapterId','36'),
 (131,67,'en','name','chapter4.pdf'),
 (132,67,'','chapterId','35'),
-(133,68,'en','name','chapter2.pdf'),
-(134,68,'','chapterId','33'),
-(135,69,'en','name','chapter3.pdf'),
-(136,69,'','chapterId','34'),
-(137,70,'en','name','chapter1.pdf'),
-(138,70,'','chapterId','32'),
+(133,68,'en','name','chapter3.pdf'),
+(134,68,'','chapterId','34'),
+(135,69,'en','name','chapter1.pdf'),
+(136,69,'','chapterId','32'),
+(137,70,'en','name','chapter2.pdf'),
+(138,70,'','chapterId','33'),
 (139,71,'en','name','intro.pdf'),
 (140,72,'en','name','chapter1.pdf'),
 (141,73,'en','name','chapter2.pdf'),
@@ -9619,10 +9617,10 @@ INSERT INTO `submission_file_settings` VALUES
 (170,86,'','chapterId','50'),
 (171,87,'en','name','chapter3.pdf'),
 (172,87,'','chapterId','50'),
-(173,88,'en','name','chapter2.pdf'),
-(174,88,'','chapterId','49'),
-(175,89,'en','name','chapter1.pdf'),
-(176,89,'','chapterId','48'),
+(173,88,'en','name','chapter1.pdf'),
+(174,88,'','chapterId','48'),
+(175,89,'en','name','chapter2.pdf'),
+(176,89,'','chapterId','49'),
 (177,90,'en','name','chapter1.pdf'),
 (178,91,'en','name','chapter2.pdf'),
 (179,92,'en','name','chapter3.pdf'),
@@ -9646,9 +9644,9 @@ INSERT INTO `submission_file_settings` VALUES
 (198,98,'','chapterId','56'),
 (199,99,'','chapterId','57'),
 (200,102,'en','name','The Canadian Nutrient File: Nutrient Val.pdf'),
-(201,103,'en','name','chapter4.pdf'),
-(202,103,'','chapterId','57'),
-(203,104,'en','name','Segmentation of Vascular Ultrasound Imag.pdf'),
+(201,103,'en','name','Segmentation of Vascular Ultrasound Imag.pdf'),
+(202,104,'en','name','chapter4.pdf'),
+(203,104,'','chapterId','57'),
 (204,105,'en','name','chapter3.pdf'),
 (205,105,'','chapterId','56'),
 (206,106,'en','name','chapter2.pdf'),
@@ -9656,9 +9654,9 @@ INSERT INTO `submission_file_settings` VALUES
 (208,107,'en','name','chapter1.pdf'),
 (209,107,'','chapterId','54'),
 (210,108,'en','name','The Canadian Nutrient File: Nutrient Val.pdf'),
-(211,109,'en','name','chapter4.pdf'),
-(212,109,'','chapterId','57'),
-(213,110,'en','name','Segmentation of Vascular Ultrasound Imag.pdf'),
+(211,109,'en','name','Segmentation of Vascular Ultrasound Imag.pdf'),
+(212,110,'en','name','chapter4.pdf'),
+(213,110,'','chapterId','57'),
 (214,111,'en','name','chapter3.pdf'),
 (215,111,'','chapterId','56'),
 (216,112,'en','name','chapter2.pdf'),
@@ -9717,10 +9715,10 @@ INSERT INTO `submission_file_settings` VALUES
 (269,138,'','chapterId','69'),
 (270,139,'en','name','chapter1.pdf'),
 (271,139,'','chapterId','68'),
-(272,140,'en','name','introduction.pdf'),
-(273,140,'','chapterId','67'),
-(274,141,'en','name','preface.pdf'),
-(275,141,'','chapterId','66');
+(272,140,'en','name','preface.pdf'),
+(273,140,'','chapterId','66'),
+(274,141,'en','name','introduction.pdf'),
+(275,141,'','chapterId','67');
 /*!40000 ALTER TABLE `submission_file_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9730,7 +9728,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_files` (
   `submission_file_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
@@ -9771,146 +9769,146 @@ CREATE TABLE `submission_files` (
 LOCK TABLES `submission_files` WRITE;
 /*!40000 ALTER TABLE `submission_files` DISABLE KEYS */;
 INSERT INTO `submission_files` VALUES
-(1,1,1,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:42:49','2025-02-04 05:42:49',19,NULL,NULL,NULL),
-(2,1,2,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:42:50','2025-02-04 05:42:50',19,NULL,NULL,NULL),
-(3,1,3,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:42:51','2025-02-04 05:42:51',19,NULL,NULL,NULL),
-(4,1,3,3,3,4,NULL,NULL,NULL,'2025-02-04 05:43:13','2025-02-04 05:43:13',19,523,1,NULL),
-(5,1,2,2,3,4,NULL,NULL,NULL,'2025-02-04 05:43:13','2025-02-04 05:43:13',19,523,1,NULL),
-(6,1,1,1,3,4,NULL,NULL,NULL,'2025-02-04 05:43:14','2025-02-04 05:43:14',19,523,1,NULL),
-(7,2,4,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:43:45','2025-02-04 05:43:45',20,NULL,NULL,NULL),
-(8,2,5,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:43:46','2025-02-04 05:43:46',20,NULL,NULL,NULL),
-(9,2,6,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:43:47','2025-02-04 05:43:47',20,NULL,NULL,NULL),
-(10,2,7,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:43:48','2025-02-04 05:43:48',20,NULL,NULL,NULL),
-(12,2,7,10,3,4,NULL,NULL,NULL,'2025-02-04 05:45:25','2025-02-04 05:45:25',20,523,2,NULL),
-(13,2,6,9,3,4,NULL,NULL,NULL,'2025-02-04 05:45:25','2025-02-04 05:45:25',20,523,2,NULL),
-(14,2,5,8,3,4,NULL,NULL,NULL,'2025-02-04 05:45:25','2025-02-04 05:45:25',20,523,2,NULL),
-(15,2,4,7,3,4,NULL,NULL,NULL,'2025-02-04 05:45:25','2025-02-04 05:45:25',20,523,2,NULL),
-(16,3,9,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:45:46','2025-02-04 05:45:46',21,NULL,NULL,NULL),
-(17,3,10,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:45:46','2025-02-04 05:45:47',21,NULL,NULL,NULL),
-(18,3,11,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:45:47','2025-02-04 05:45:47',21,NULL,NULL,NULL),
-(19,3,12,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:45:48','2025-02-04 05:45:48',21,NULL,NULL,NULL),
-(20,3,13,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:45:49','2025-02-04 05:45:49',21,NULL,NULL,NULL),
-(21,4,14,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:46:25','2025-02-04 05:46:25',22,NULL,NULL,NULL),
-(22,4,15,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:46:26','2025-02-04 05:46:26',22,NULL,NULL,NULL),
-(23,4,16,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:46:27','2025-02-04 05:46:27',22,NULL,NULL,NULL),
-(24,4,17,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:46:28','2025-02-04 05:46:28',22,NULL,NULL,NULL),
-(25,4,17,24,3,19,NULL,NULL,NULL,'2025-02-04 05:46:59','2025-02-04 05:46:59',22,523,3,NULL),
-(26,4,16,23,3,19,NULL,NULL,NULL,'2025-02-04 05:46:59','2025-02-04 05:46:59',22,523,3,NULL),
-(27,4,15,22,3,19,NULL,NULL,NULL,'2025-02-04 05:46:59','2025-02-04 05:46:59',22,523,3,NULL),
-(28,4,14,21,3,19,NULL,NULL,NULL,'2025-02-04 05:46:59','2025-02-04 05:46:59',22,523,3,NULL),
-(29,5,18,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:47:49','2025-02-04 05:47:49',23,NULL,NULL,NULL),
-(30,5,19,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:47:49','2025-02-04 05:47:50',23,NULL,NULL,NULL),
-(31,5,20,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:47:50','2025-02-04 05:47:50',23,NULL,NULL,NULL),
-(32,5,21,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:47:51','2025-02-04 05:47:51',23,NULL,NULL,NULL),
-(33,5,22,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:47:52','2025-02-04 05:47:52',23,NULL,NULL,NULL),
-(34,5,23,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:47:53','2025-02-04 05:47:53',23,NULL,NULL,NULL),
-(35,5,23,34,3,19,NULL,NULL,NULL,'2025-02-04 05:48:35','2025-02-04 05:48:35',23,523,5,NULL),
-(36,5,22,33,3,19,NULL,NULL,NULL,'2025-02-04 05:48:35','2025-02-04 05:48:35',23,523,5,NULL),
-(37,5,21,32,3,19,NULL,NULL,NULL,'2025-02-04 05:48:36','2025-02-04 05:48:36',23,523,5,NULL),
-(38,5,20,31,3,19,NULL,NULL,NULL,'2025-02-04 05:48:36','2025-02-04 05:48:36',23,523,5,NULL),
-(39,5,18,29,3,19,NULL,NULL,NULL,'2025-02-04 05:48:36','2025-02-04 05:48:36',23,523,5,NULL),
-(40,5,19,30,3,19,NULL,NULL,NULL,'2025-02-04 05:48:36','2025-02-04 05:48:36',23,523,5,NULL),
-(41,5,23,34,3,10,'0','openAccess',1,'2025-02-04 05:49:22','2025-02-04 05:49:29',23,521,2,NULL),
-(42,6,24,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:49:49','2025-02-04 05:49:49',24,NULL,NULL,NULL),
-(43,6,25,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:49:50','2025-02-04 05:49:50',24,NULL,NULL,NULL),
-(44,6,26,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:49:51','2025-02-04 05:49:51',24,NULL,NULL,NULL),
-(45,6,27,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:49:52','2025-02-04 05:49:52',24,NULL,NULL,NULL),
-(46,6,27,45,3,19,NULL,NULL,NULL,'2025-02-04 05:50:22','2025-02-04 05:50:22',24,523,7,NULL),
-(47,6,26,44,3,19,NULL,NULL,NULL,'2025-02-04 05:50:22','2025-02-04 05:50:22',24,523,7,NULL),
-(48,6,25,43,3,19,NULL,NULL,NULL,'2025-02-04 05:50:22','2025-02-04 05:50:22',24,523,7,NULL),
-(49,6,24,42,3,19,NULL,NULL,NULL,'2025-02-04 05:50:22','2025-02-04 05:50:22',24,523,7,NULL),
-(50,7,28,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:50:57','2025-02-04 05:50:57',25,NULL,NULL,NULL),
-(51,7,29,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:50:58','2025-02-04 05:50:58',25,NULL,NULL,NULL),
-(52,7,30,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:50:59','2025-02-04 05:50:59',25,NULL,NULL,NULL),
-(53,7,31,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:50:59','2025-02-04 05:51:00',25,NULL,NULL,NULL),
-(54,7,32,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:51:00','2025-02-04 05:51:01',25,NULL,NULL,NULL),
-(55,7,32,54,3,4,NULL,NULL,NULL,'2025-02-04 05:51:39','2025-02-04 05:51:39',25,523,8,NULL),
-(56,7,30,52,3,4,NULL,NULL,NULL,'2025-02-04 05:51:39','2025-02-04 05:51:39',25,523,8,NULL),
-(57,7,31,53,3,4,NULL,NULL,NULL,'2025-02-04 05:51:39','2025-02-04 05:51:39',25,523,8,NULL),
-(58,7,29,51,3,4,NULL,NULL,NULL,'2025-02-04 05:51:39','2025-02-04 05:51:39',25,523,8,NULL),
-(59,7,28,50,3,4,NULL,NULL,NULL,'2025-02-04 05:51:39','2025-02-04 05:51:39',25,523,8,NULL),
-(60,8,33,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:52:04','2025-02-04 05:52:04',3,NULL,NULL,NULL),
-(61,9,34,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:52:14','2025-02-04 05:52:14',26,NULL,NULL,NULL),
-(62,9,35,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:52:15','2025-02-04 05:52:15',26,NULL,NULL,NULL),
-(63,9,36,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:52:15','2025-02-04 05:52:16',26,NULL,NULL,NULL),
-(64,9,37,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:52:16','2025-02-04 05:52:17',26,NULL,NULL,NULL),
-(65,9,38,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:52:17','2025-02-04 05:52:18',26,NULL,NULL,NULL),
-(66,9,38,65,3,19,NULL,NULL,NULL,'2025-02-04 05:52:55','2025-02-04 05:52:55',26,523,9,NULL),
-(67,9,37,64,3,19,NULL,NULL,NULL,'2025-02-04 05:52:55','2025-02-04 05:52:55',26,523,9,NULL),
-(68,9,35,62,3,19,NULL,NULL,NULL,'2025-02-04 05:52:55','2025-02-04 05:52:55',26,523,9,NULL),
-(69,9,36,63,3,19,NULL,NULL,NULL,'2025-02-04 05:52:56','2025-02-04 05:52:56',26,523,9,NULL),
-(70,9,34,61,3,19,NULL,NULL,NULL,'2025-02-04 05:52:56','2025-02-04 05:52:56',26,523,9,NULL),
-(71,10,39,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:53:07','2025-02-04 05:53:08',27,NULL,NULL,NULL),
-(72,10,40,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:53:08','2025-02-04 05:53:09',27,NULL,NULL,NULL),
-(73,10,41,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:53:09','2025-02-04 05:53:09',27,NULL,NULL,NULL),
-(74,10,42,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:53:10','2025-02-04 05:53:10',27,NULL,NULL,NULL),
-(75,10,43,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:53:11','2025-02-04 05:53:11',27,NULL,NULL,NULL),
-(76,10,44,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:53:12','2025-02-04 05:53:12',27,NULL,NULL,NULL),
-(77,10,45,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:53:13','2025-02-04 05:53:13',27,NULL,NULL,NULL),
-(78,10,46,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:53:14','2025-02-04 05:53:14',27,NULL,NULL,NULL),
-(79,10,47,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:53:15','2025-02-04 05:53:15',27,NULL,NULL,NULL),
-(80,11,48,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:54:18','2025-02-04 05:54:18',28,NULL,NULL,NULL),
-(81,11,49,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:54:19','2025-02-04 05:54:19',28,NULL,NULL,NULL),
-(82,11,49,81,3,19,NULL,NULL,NULL,'2025-02-04 05:54:37','2025-02-04 05:54:37',28,523,10,NULL),
-(83,11,48,80,3,19,NULL,NULL,NULL,'2025-02-04 05:54:37','2025-02-04 05:54:37',28,523,10,NULL),
-(84,12,50,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:55:33','2025-02-04 05:55:34',29,NULL,NULL,NULL),
-(85,12,51,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:55:34','2025-02-04 05:55:35',29,NULL,NULL,NULL),
-(86,12,52,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:55:35','2025-02-04 05:55:35',29,NULL,NULL,NULL),
-(87,12,52,86,3,19,NULL,NULL,NULL,'2025-02-04 05:56:02','2025-02-04 05:56:02',29,523,12,NULL),
-(88,12,51,85,3,19,NULL,NULL,NULL,'2025-02-04 05:56:03','2025-02-04 05:56:03',29,523,12,NULL),
-(89,12,50,84,3,19,NULL,NULL,NULL,'2025-02-04 05:56:03','2025-02-04 05:56:03',29,523,12,NULL),
-(90,13,53,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:56:33','2025-02-04 05:56:33',30,NULL,NULL,NULL),
-(91,13,54,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:56:34','2025-02-04 05:56:34',30,NULL,NULL,NULL),
-(92,13,55,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:56:35','2025-02-04 05:56:35',30,NULL,NULL,NULL),
-(93,13,55,92,3,19,NULL,NULL,NULL,'2025-02-04 05:57:01','2025-02-04 05:57:01',30,523,13,NULL),
-(94,13,54,91,3,19,NULL,NULL,NULL,'2025-02-04 05:57:01','2025-02-04 05:57:01',30,523,13,NULL),
-(95,13,53,90,3,19,NULL,NULL,NULL,'2025-02-04 05:57:01','2025-02-04 05:57:01',30,523,13,NULL),
-(96,14,56,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:58:04','2025-02-04 05:58:04',31,NULL,NULL,NULL),
-(97,14,57,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:58:05','2025-02-04 05:58:05',31,NULL,NULL,NULL),
-(98,14,58,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:58:06','2025-02-04 05:58:06',31,NULL,NULL,NULL),
-(99,14,59,NULL,3,2,NULL,NULL,NULL,'2025-02-04 05:58:07','2025-02-04 05:58:07',31,NULL,NULL,NULL),
-(100,14,60,NULL,13,2,NULL,NULL,NULL,'2025-02-04 05:58:07','2025-02-04 05:58:08',31,NULL,NULL,NULL),
-(101,14,61,NULL,9,2,NULL,NULL,NULL,'2025-02-04 05:58:09','2025-02-04 05:58:09',31,NULL,NULL,NULL),
-(102,14,61,101,9,19,NULL,NULL,NULL,'2025-02-04 05:58:43','2025-02-04 05:58:43',31,523,15,NULL),
-(103,14,59,99,3,19,NULL,NULL,NULL,'2025-02-04 05:58:43','2025-02-04 05:58:43',31,523,15,NULL),
-(104,14,60,100,13,19,NULL,NULL,NULL,'2025-02-04 05:58:43','2025-02-04 05:58:43',31,523,15,NULL),
-(105,14,58,98,3,19,NULL,NULL,NULL,'2025-02-04 05:58:43','2025-02-04 05:58:43',31,523,15,NULL),
-(106,14,57,97,3,19,NULL,NULL,NULL,'2025-02-04 05:58:43','2025-02-04 05:58:43',31,523,15,NULL),
-(107,14,56,96,3,19,NULL,NULL,NULL,'2025-02-04 05:58:44','2025-02-04 05:58:44',31,523,15,NULL),
-(108,14,61,101,9,10,'0','openAccess',1,'2025-02-04 05:59:36','2025-02-04 06:00:03',31,521,3,NULL),
-(109,14,59,99,3,10,'0','openAccess',1,'2025-02-04 05:59:36','2025-02-04 05:59:55',31,521,3,NULL),
-(110,14,60,100,13,10,'0','openAccess',1,'2025-02-04 05:59:36','2025-02-04 05:59:59',31,521,3,NULL),
-(111,14,58,98,3,10,'0','openAccess',1,'2025-02-04 05:59:36','2025-02-04 05:59:51',31,521,3,NULL),
-(112,14,57,97,3,10,'0','openAccess',1,'2025-02-04 05:59:36','2025-02-04 05:59:47',31,521,3,NULL),
-(113,14,56,96,3,10,'0','openAccess',1,'2025-02-04 05:59:36','2025-02-04 05:59:43',31,521,3,NULL),
-(114,15,62,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:00:14','2025-02-04 06:00:14',32,NULL,NULL,NULL),
-(115,15,63,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:00:15','2025-02-04 06:00:15',32,NULL,NULL,NULL),
-(116,15,64,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:00:16','2025-02-04 06:00:16',32,NULL,NULL,NULL),
-(117,15,64,116,3,4,NULL,NULL,NULL,'2025-02-04 06:00:40','2025-02-04 06:00:40',32,523,17,NULL),
-(118,15,63,115,3,4,NULL,NULL,NULL,'2025-02-04 06:00:40','2025-02-04 06:00:40',32,523,17,NULL),
-(119,15,62,114,3,4,NULL,NULL,NULL,'2025-02-04 06:00:40','2025-02-04 06:00:40',32,523,17,NULL),
-(120,16,65,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:00:52','2025-02-04 06:00:52',33,NULL,NULL,NULL),
-(121,16,66,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:00:53','2025-02-04 06:00:53',33,NULL,NULL,NULL),
-(122,16,67,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:00:54','2025-02-04 06:00:54',33,NULL,NULL,NULL),
-(123,16,68,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:00:55','2025-02-04 06:00:55',33,NULL,NULL,NULL),
-(124,16,69,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:00:55','2025-02-04 06:00:56',33,NULL,NULL,NULL),
-(125,16,68,123,3,4,NULL,NULL,NULL,'2025-02-04 06:01:31','2025-02-04 06:01:31',33,523,18,NULL),
-(126,16,69,124,3,4,NULL,NULL,NULL,'2025-02-04 06:01:31','2025-02-04 06:01:31',33,523,18,NULL),
-(127,16,67,122,3,4,NULL,NULL,NULL,'2025-02-04 06:01:31','2025-02-04 06:01:31',33,523,18,NULL),
-(128,16,66,121,3,4,NULL,NULL,NULL,'2025-02-04 06:01:32','2025-02-04 06:01:32',33,523,18,NULL),
-(129,16,65,120,3,4,NULL,NULL,NULL,'2025-02-04 06:01:32','2025-02-04 06:01:32',33,523,18,NULL),
-(130,17,70,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:02:02','2025-02-04 06:02:02',34,NULL,NULL,NULL),
-(131,17,71,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:02:03','2025-02-04 06:02:03',34,NULL,NULL,NULL),
-(132,17,72,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:02:04','2025-02-04 06:02:04',34,NULL,NULL,NULL),
-(133,17,73,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:02:05','2025-02-04 06:02:05',34,NULL,NULL,NULL),
-(134,17,74,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:02:06','2025-02-04 06:02:06',34,NULL,NULL,NULL),
-(135,17,75,NULL,3,2,NULL,NULL,NULL,'2025-02-04 06:02:07','2025-02-04 06:02:07',34,NULL,NULL,NULL),
-(136,17,75,135,3,19,NULL,NULL,NULL,'2025-02-04 06:02:55','2025-02-04 06:02:55',34,523,19,NULL),
-(137,17,74,134,3,19,NULL,NULL,NULL,'2025-02-04 06:02:55','2025-02-04 06:02:55',34,523,19,NULL),
-(138,17,73,133,3,19,NULL,NULL,NULL,'2025-02-04 06:02:55','2025-02-04 06:02:55',34,523,19,NULL),
-(139,17,72,132,3,19,NULL,NULL,NULL,'2025-02-04 06:02:55','2025-02-04 06:02:55',34,523,19,NULL),
-(140,17,71,131,3,19,NULL,NULL,NULL,'2025-02-04 06:02:55','2025-02-04 06:02:55',34,523,19,NULL),
-(141,17,70,130,3,19,NULL,NULL,NULL,'2025-02-04 06:02:55','2025-02-04 06:02:55',34,523,19,NULL);
+(1,1,1,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:26:35','2025-02-06 05:26:35',19,NULL,NULL,NULL),
+(2,1,2,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:26:36','2025-02-06 05:26:36',19,NULL,NULL,NULL),
+(3,1,3,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:26:37','2025-02-06 05:26:37',19,NULL,NULL,NULL),
+(4,1,3,3,3,4,NULL,NULL,NULL,'2025-02-06 05:27:00','2025-02-06 05:27:00',19,523,1,NULL),
+(5,1,2,2,3,4,NULL,NULL,NULL,'2025-02-06 05:27:00','2025-02-06 05:27:00',19,523,1,NULL),
+(6,1,1,1,3,4,NULL,NULL,NULL,'2025-02-06 05:27:00','2025-02-06 05:27:00',19,523,1,NULL),
+(7,2,4,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:27:31','2025-02-06 05:27:31',20,NULL,NULL,NULL),
+(8,2,5,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:27:32','2025-02-06 05:27:32',20,NULL,NULL,NULL),
+(9,2,6,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:27:33','2025-02-06 05:27:33',20,NULL,NULL,NULL),
+(10,2,7,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:27:34','2025-02-06 05:27:34',20,NULL,NULL,NULL),
+(12,2,7,10,3,4,NULL,NULL,NULL,'2025-02-06 05:29:14','2025-02-06 05:29:14',20,523,2,NULL),
+(13,2,6,9,3,4,NULL,NULL,NULL,'2025-02-06 05:29:14','2025-02-06 05:29:14',20,523,2,NULL),
+(14,2,5,8,3,4,NULL,NULL,NULL,'2025-02-06 05:29:14','2025-02-06 05:29:14',20,523,2,NULL),
+(15,2,4,7,3,4,NULL,NULL,NULL,'2025-02-06 05:29:14','2025-02-06 05:29:14',20,523,2,NULL),
+(16,3,9,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:29:34','2025-02-06 05:29:35',21,NULL,NULL,NULL),
+(17,3,10,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:29:35','2025-02-06 05:29:35',21,NULL,NULL,NULL),
+(18,3,11,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:29:36','2025-02-06 05:29:36',21,NULL,NULL,NULL),
+(19,3,12,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:29:37','2025-02-06 05:29:37',21,NULL,NULL,NULL),
+(20,3,13,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:29:38','2025-02-06 05:29:38',21,NULL,NULL,NULL),
+(21,4,14,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:30:14','2025-02-06 05:30:15',22,NULL,NULL,NULL),
+(22,4,15,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:30:15','2025-02-06 05:30:16',22,NULL,NULL,NULL),
+(23,4,16,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:30:16','2025-02-06 05:30:16',22,NULL,NULL,NULL),
+(24,4,17,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:30:17','2025-02-06 05:30:17',22,NULL,NULL,NULL),
+(25,4,17,24,3,19,NULL,NULL,NULL,'2025-02-06 05:30:49','2025-02-06 05:30:49',22,523,3,NULL),
+(26,4,16,23,3,19,NULL,NULL,NULL,'2025-02-06 05:30:49','2025-02-06 05:30:49',22,523,3,NULL),
+(27,4,15,22,3,19,NULL,NULL,NULL,'2025-02-06 05:30:49','2025-02-06 05:30:49',22,523,3,NULL),
+(28,4,14,21,3,19,NULL,NULL,NULL,'2025-02-06 05:30:49','2025-02-06 05:30:49',22,523,3,NULL),
+(29,5,18,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:31:39','2025-02-06 05:31:39',23,NULL,NULL,NULL),
+(30,5,19,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:31:39','2025-02-06 05:31:40',23,NULL,NULL,NULL),
+(31,5,20,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:31:40','2025-02-06 05:31:41',23,NULL,NULL,NULL),
+(32,5,21,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:31:41','2025-02-06 05:31:41',23,NULL,NULL,NULL),
+(33,5,22,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:31:42','2025-02-06 05:31:42',23,NULL,NULL,NULL),
+(34,5,23,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:31:43','2025-02-06 05:31:43',23,NULL,NULL,NULL),
+(35,5,23,34,3,19,NULL,NULL,NULL,'2025-02-06 05:32:26','2025-02-06 05:32:26',23,523,5,NULL),
+(36,5,22,33,3,19,NULL,NULL,NULL,'2025-02-06 05:32:26','2025-02-06 05:32:26',23,523,5,NULL),
+(37,5,21,32,3,19,NULL,NULL,NULL,'2025-02-06 05:32:26','2025-02-06 05:32:26',23,523,5,NULL),
+(38,5,20,31,3,19,NULL,NULL,NULL,'2025-02-06 05:32:27','2025-02-06 05:32:27',23,523,5,NULL),
+(39,5,18,29,3,19,NULL,NULL,NULL,'2025-02-06 05:32:27','2025-02-06 05:32:27',23,523,5,NULL),
+(40,5,19,30,3,19,NULL,NULL,NULL,'2025-02-06 05:32:27','2025-02-06 05:32:27',23,523,5,NULL),
+(41,5,23,34,3,10,'0','openAccess',1,'2025-02-06 05:33:15','2025-02-06 05:33:22',23,521,2,NULL),
+(42,6,24,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:33:42','2025-02-06 05:33:43',24,NULL,NULL,NULL),
+(43,6,25,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:33:43','2025-02-06 05:33:43',24,NULL,NULL,NULL),
+(44,6,26,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:33:44','2025-02-06 05:33:44',24,NULL,NULL,NULL),
+(45,6,27,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:33:45','2025-02-06 05:33:45',24,NULL,NULL,NULL),
+(46,6,27,45,3,19,NULL,NULL,NULL,'2025-02-06 05:34:16','2025-02-06 05:34:16',24,523,7,NULL),
+(47,6,26,44,3,19,NULL,NULL,NULL,'2025-02-06 05:34:16','2025-02-06 05:34:16',24,523,7,NULL),
+(48,6,25,43,3,19,NULL,NULL,NULL,'2025-02-06 05:34:16','2025-02-06 05:34:16',24,523,7,NULL),
+(49,6,24,42,3,19,NULL,NULL,NULL,'2025-02-06 05:34:16','2025-02-06 05:34:16',24,523,7,NULL),
+(50,7,28,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:34:53','2025-02-06 05:34:53',25,NULL,NULL,NULL),
+(51,7,29,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:34:54','2025-02-06 05:34:54',25,NULL,NULL,NULL),
+(52,7,30,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:34:54','2025-02-06 05:34:55',25,NULL,NULL,NULL),
+(53,7,31,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:34:55','2025-02-06 05:34:56',25,NULL,NULL,NULL),
+(54,7,32,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:34:56','2025-02-06 05:34:57',25,NULL,NULL,NULL),
+(55,7,32,54,3,4,NULL,NULL,NULL,'2025-02-06 05:35:36','2025-02-06 05:35:36',25,523,8,NULL),
+(56,7,31,53,3,4,NULL,NULL,NULL,'2025-02-06 05:35:36','2025-02-06 05:35:36',25,523,8,NULL),
+(57,7,29,51,3,4,NULL,NULL,NULL,'2025-02-06 05:35:36','2025-02-06 05:35:36',25,523,8,NULL),
+(58,7,30,52,3,4,NULL,NULL,NULL,'2025-02-06 05:35:36','2025-02-06 05:35:36',25,523,8,NULL),
+(59,7,28,50,3,4,NULL,NULL,NULL,'2025-02-06 05:35:36','2025-02-06 05:35:36',25,523,8,NULL),
+(60,8,33,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:36:01','2025-02-06 05:36:01',3,NULL,NULL,NULL),
+(61,9,34,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:36:11','2025-02-06 05:36:11',26,NULL,NULL,NULL),
+(62,9,35,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:36:11','2025-02-06 05:36:12',26,NULL,NULL,NULL),
+(63,9,36,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:36:12','2025-02-06 05:36:13',26,NULL,NULL,NULL),
+(64,9,37,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:36:13','2025-02-06 05:36:13',26,NULL,NULL,NULL),
+(65,9,38,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:36:14','2025-02-06 05:36:14',26,NULL,NULL,NULL),
+(66,9,38,65,3,19,NULL,NULL,NULL,'2025-02-06 05:36:53','2025-02-06 05:36:53',26,523,9,NULL),
+(67,9,37,64,3,19,NULL,NULL,NULL,'2025-02-06 05:36:53','2025-02-06 05:36:53',26,523,9,NULL),
+(68,9,36,63,3,19,NULL,NULL,NULL,'2025-02-06 05:36:54','2025-02-06 05:36:54',26,523,9,NULL),
+(69,9,34,61,3,19,NULL,NULL,NULL,'2025-02-06 05:36:54','2025-02-06 05:36:54',26,523,9,NULL),
+(70,9,35,62,3,19,NULL,NULL,NULL,'2025-02-06 05:36:54','2025-02-06 05:36:54',26,523,9,NULL),
+(71,10,39,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:37:06','2025-02-06 05:37:06',27,NULL,NULL,NULL),
+(72,10,40,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:37:07','2025-02-06 05:37:07',27,NULL,NULL,NULL),
+(73,10,41,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:37:08','2025-02-06 05:37:08',27,NULL,NULL,NULL),
+(74,10,42,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:37:09','2025-02-06 05:37:09',27,NULL,NULL,NULL),
+(75,10,43,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:37:10','2025-02-06 05:37:10',27,NULL,NULL,NULL),
+(76,10,44,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:37:11','2025-02-06 05:37:11',27,NULL,NULL,NULL),
+(77,10,45,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:37:12','2025-02-06 05:37:12',27,NULL,NULL,NULL),
+(78,10,46,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:37:13','2025-02-06 05:37:13',27,NULL,NULL,NULL),
+(79,10,47,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:37:14','2025-02-06 05:37:14',27,NULL,NULL,NULL),
+(80,11,48,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:38:19','2025-02-06 05:38:19',28,NULL,NULL,NULL),
+(81,11,49,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:38:20','2025-02-06 05:38:20',28,NULL,NULL,NULL),
+(82,11,49,81,3,19,NULL,NULL,NULL,'2025-02-06 05:38:38','2025-02-06 05:38:38',28,523,10,NULL),
+(83,11,48,80,3,19,NULL,NULL,NULL,'2025-02-06 05:38:38','2025-02-06 05:38:38',28,523,10,NULL),
+(84,12,50,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:39:37','2025-02-06 05:39:37',29,NULL,NULL,NULL),
+(85,12,51,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:39:37','2025-02-06 05:39:38',29,NULL,NULL,NULL),
+(86,12,52,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:39:38','2025-02-06 05:39:39',29,NULL,NULL,NULL),
+(87,12,52,86,3,19,NULL,NULL,NULL,'2025-02-06 05:40:06','2025-02-06 05:40:06',29,523,12,NULL),
+(88,12,50,84,3,19,NULL,NULL,NULL,'2025-02-06 05:40:06','2025-02-06 05:40:06',29,523,12,NULL),
+(89,12,51,85,3,19,NULL,NULL,NULL,'2025-02-06 05:40:06','2025-02-06 05:40:06',29,523,12,NULL),
+(90,13,53,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:40:37','2025-02-06 05:40:37',30,NULL,NULL,NULL),
+(91,13,54,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:40:38','2025-02-06 05:40:38',30,NULL,NULL,NULL),
+(92,13,55,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:40:39','2025-02-06 05:40:39',30,NULL,NULL,NULL),
+(93,13,55,92,3,19,NULL,NULL,NULL,'2025-02-06 05:41:04','2025-02-06 05:41:04',30,523,13,NULL),
+(94,13,54,91,3,19,NULL,NULL,NULL,'2025-02-06 05:41:05','2025-02-06 05:41:05',30,523,13,NULL),
+(95,13,53,90,3,19,NULL,NULL,NULL,'2025-02-06 05:41:05','2025-02-06 05:41:05',30,523,13,NULL),
+(96,14,56,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:42:08','2025-02-06 05:42:08',31,NULL,NULL,NULL),
+(97,14,57,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:42:09','2025-02-06 05:42:09',31,NULL,NULL,NULL),
+(98,14,58,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:42:10','2025-02-06 05:42:10',31,NULL,NULL,NULL),
+(99,14,59,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:42:11','2025-02-06 05:42:11',31,NULL,NULL,NULL),
+(100,14,60,NULL,13,2,NULL,NULL,NULL,'2025-02-06 05:42:12','2025-02-06 05:42:13',31,NULL,NULL,NULL),
+(101,14,61,NULL,9,2,NULL,NULL,NULL,'2025-02-06 05:42:13','2025-02-06 05:42:14',31,NULL,NULL,NULL),
+(102,14,61,101,9,19,NULL,NULL,NULL,'2025-02-06 05:42:48','2025-02-06 05:42:48',31,523,15,NULL),
+(103,14,60,100,13,19,NULL,NULL,NULL,'2025-02-06 05:42:48','2025-02-06 05:42:48',31,523,15,NULL),
+(104,14,59,99,3,19,NULL,NULL,NULL,'2025-02-06 05:42:48','2025-02-06 05:42:48',31,523,15,NULL),
+(105,14,58,98,3,19,NULL,NULL,NULL,'2025-02-06 05:42:49','2025-02-06 05:42:49',31,523,15,NULL),
+(106,14,57,97,3,19,NULL,NULL,NULL,'2025-02-06 05:42:49','2025-02-06 05:42:49',31,523,15,NULL),
+(107,14,56,96,3,19,NULL,NULL,NULL,'2025-02-06 05:42:49','2025-02-06 05:42:49',31,523,15,NULL),
+(108,14,61,101,9,10,'0','openAccess',1,'2025-02-06 05:43:43','2025-02-06 05:44:11',31,521,3,NULL),
+(109,14,60,100,13,10,'0','openAccess',1,'2025-02-06 05:43:43','2025-02-06 05:44:07',31,521,3,NULL),
+(110,14,59,99,3,10,'0','openAccess',1,'2025-02-06 05:43:43','2025-02-06 05:44:03',31,521,3,NULL),
+(111,14,58,98,3,10,'0','openAccess',1,'2025-02-06 05:43:43','2025-02-06 05:43:59',31,521,3,NULL),
+(112,14,57,97,3,10,'0','openAccess',1,'2025-02-06 05:43:43','2025-02-06 05:43:55',31,521,3,NULL),
+(113,14,56,96,3,10,'0','openAccess',1,'2025-02-06 05:43:44','2025-02-06 05:43:51',31,521,3,NULL),
+(114,15,62,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:44:22','2025-02-06 05:44:22',32,NULL,NULL,NULL),
+(115,15,63,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:44:23','2025-02-06 05:44:23',32,NULL,NULL,NULL),
+(116,15,64,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:44:24','2025-02-06 05:44:24',32,NULL,NULL,NULL),
+(117,15,64,116,3,4,NULL,NULL,NULL,'2025-02-06 05:44:49','2025-02-06 05:44:49',32,523,17,NULL),
+(118,15,63,115,3,4,NULL,NULL,NULL,'2025-02-06 05:44:49','2025-02-06 05:44:49',32,523,17,NULL),
+(119,15,62,114,3,4,NULL,NULL,NULL,'2025-02-06 05:44:49','2025-02-06 05:44:49',32,523,17,NULL),
+(120,16,65,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:45:01','2025-02-06 05:45:01',33,NULL,NULL,NULL),
+(121,16,66,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:45:02','2025-02-06 05:45:02',33,NULL,NULL,NULL),
+(122,16,67,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:45:03','2025-02-06 05:45:03',33,NULL,NULL,NULL),
+(123,16,68,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:45:04','2025-02-06 05:45:04',33,NULL,NULL,NULL),
+(124,16,69,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:45:04','2025-02-06 05:45:05',33,NULL,NULL,NULL),
+(125,16,68,123,3,4,NULL,NULL,NULL,'2025-02-06 05:45:41','2025-02-06 05:45:41',33,523,18,NULL),
+(126,16,69,124,3,4,NULL,NULL,NULL,'2025-02-06 05:45:41','2025-02-06 05:45:41',33,523,18,NULL),
+(127,16,67,122,3,4,NULL,NULL,NULL,'2025-02-06 05:45:41','2025-02-06 05:45:41',33,523,18,NULL),
+(128,16,66,121,3,4,NULL,NULL,NULL,'2025-02-06 05:45:41','2025-02-06 05:45:41',33,523,18,NULL),
+(129,16,65,120,3,4,NULL,NULL,NULL,'2025-02-06 05:45:41','2025-02-06 05:45:41',33,523,18,NULL),
+(130,17,70,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:46:13','2025-02-06 05:46:13',34,NULL,NULL,NULL),
+(131,17,71,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:46:13','2025-02-06 05:46:14',34,NULL,NULL,NULL),
+(132,17,72,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:46:14','2025-02-06 05:46:14',34,NULL,NULL,NULL),
+(133,17,73,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:46:15','2025-02-06 05:46:15',34,NULL,NULL,NULL),
+(134,17,74,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:46:16','2025-02-06 05:46:16',34,NULL,NULL,NULL),
+(135,17,75,NULL,3,2,NULL,NULL,NULL,'2025-02-06 05:46:17','2025-02-06 05:46:17',34,NULL,NULL,NULL),
+(136,17,75,135,3,19,NULL,NULL,NULL,'2025-02-06 05:47:05','2025-02-06 05:47:05',34,523,19,NULL),
+(137,17,74,134,3,19,NULL,NULL,NULL,'2025-02-06 05:47:05','2025-02-06 05:47:05',34,523,19,NULL),
+(138,17,73,133,3,19,NULL,NULL,NULL,'2025-02-06 05:47:05','2025-02-06 05:47:05',34,523,19,NULL),
+(139,17,72,132,3,19,NULL,NULL,NULL,'2025-02-06 05:47:05','2025-02-06 05:47:05',34,523,19,NULL),
+(140,17,70,130,3,19,NULL,NULL,NULL,'2025-02-06 05:47:05','2025-02-06 05:47:05',34,523,19,NULL),
+(141,17,71,131,3,19,NULL,NULL,NULL,'2025-02-06 05:47:05','2025-02-06 05:47:05',34,523,19,NULL);
 /*!40000 ALTER TABLE `submission_files` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -9920,7 +9918,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_keyword_list`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_keyword_list` (
   `keyword_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `keyword_text` varchar(60) NOT NULL,
@@ -10055,7 +10053,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_object_keywords`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_object_keywords` (
   `submission_search_object_keyword_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `object_id` bigint(20) NOT NULL,
@@ -10235,7 +10233,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_search_objects`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_search_objects` (
   `object_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
@@ -10279,7 +10277,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submission_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submission_settings` (
   `submission_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `submission_id` bigint(20) NOT NULL,
@@ -10308,7 +10306,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `submissions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `submissions` (
   `submission_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
@@ -10336,23 +10334,23 @@ CREATE TABLE `submissions` (
 LOCK TABLES `submissions` WRITE;
 /*!40000 ALTER TABLE `submissions` DISABLE KEYS */;
 INSERT INTO `submissions` VALUES
-(1,1,1,'2025-02-04 05:43:27','2025-02-04 05:43:06','2025-02-04 05:43:06',4,'en',1,'',0),
-(2,1,2,'2025-02-04 05:45:35','2025-02-04 05:45:09','2025-02-04 05:45:09',3,'en',1,'',1),
-(3,1,3,'2025-02-04 05:46:16','2025-02-04 05:46:16','2025-02-04 05:46:16',1,'en',1,'',0),
-(4,1,4,'2025-02-04 05:47:40','2025-02-04 05:46:50','2025-02-04 05:46:50',5,'en',1,'',0),
-(5,1,5,'2025-02-04 05:49:40','2025-02-04 05:48:26','2025-02-04 05:48:26',5,'en',3,'',0),
-(6,1,6,'2025-02-04 05:50:41','2025-02-04 05:50:13','2025-02-04 05:50:13',2,'en',1,'',0),
-(7,1,7,'2025-02-04 05:51:55','2025-02-04 05:51:29','2025-02-04 05:51:29',4,'en',1,'',0),
-(8,1,8,'2025-02-04 05:52:05','2025-02-04 05:52:05','2025-02-04 05:52:05',1,'en',1,'',0),
-(9,1,9,'2025-02-04 05:52:56','2025-02-04 05:52:45','2025-02-04 05:52:45',2,'en',1,'',0),
-(10,1,10,'2025-02-04 05:54:08','2025-02-04 05:54:08','2025-02-04 05:54:08',1,'en',1,'',0),
-(11,1,11,'2025-02-04 05:55:22','2025-02-04 05:54:28','2025-02-04 05:54:28',4,'en',1,'',0),
-(12,1,12,'2025-02-04 05:56:24','2025-02-04 05:55:53','2025-02-04 05:55:53',2,'en',1,'',0),
-(13,1,13,'2025-02-04 05:57:51','2025-02-04 05:56:52','2025-02-04 05:56:52',4,'en',1,'',0),
-(14,1,14,'2025-02-04 06:00:05','2025-02-04 05:58:33','2025-02-04 05:58:33',5,'en',3,'',0),
-(15,1,15,'2025-02-04 06:00:40','2025-02-04 06:00:31','2025-02-04 06:00:31',3,'en',1,'',0),
-(16,1,16,'2025-02-04 06:01:53','2025-02-04 06:01:21','2025-02-04 06:01:21',3,'en',1,'',0),
-(17,1,17,'2025-02-04 06:03:04','2025-02-04 06:02:43','2025-02-04 06:02:43',2,'en',1,'',0);
+(1,1,1,'2025-02-06 05:27:13','2025-02-06 05:26:52','2025-02-06 05:26:52',4,'en',1,'',0),
+(2,1,2,'2025-02-06 05:29:24','2025-02-06 05:28:57','2025-02-06 05:28:57',3,'en',1,'',1),
+(3,1,3,'2025-02-06 05:30:05','2025-02-06 05:30:05','2025-02-06 05:30:05',1,'en',1,'',0),
+(4,1,4,'2025-02-06 05:31:30','2025-02-06 05:30:40','2025-02-06 05:30:40',5,'en',1,'',0),
+(5,1,5,'2025-02-06 05:33:34','2025-02-06 05:32:16','2025-02-06 05:32:16',5,'en',3,'',0),
+(6,1,6,'2025-02-06 05:34:36','2025-02-06 05:34:07','2025-02-06 05:34:07',2,'en',1,'',0),
+(7,1,7,'2025-02-06 05:35:52','2025-02-06 05:35:26','2025-02-06 05:35:26',4,'en',1,'',0),
+(8,1,8,'2025-02-06 05:36:02','2025-02-06 05:36:02','2025-02-06 05:36:02',1,'en',1,'',0),
+(9,1,9,'2025-02-06 05:36:54','2025-02-06 05:36:43','2025-02-06 05:36:43',2,'en',1,'',0),
+(10,1,10,'2025-02-06 05:38:09','2025-02-06 05:38:09','2025-02-06 05:38:09',1,'en',1,'',0),
+(11,1,11,'2025-02-06 05:39:24','2025-02-06 05:38:30','2025-02-06 05:38:30',4,'en',1,'',0),
+(12,1,12,'2025-02-06 05:40:27','2025-02-06 05:39:56','2025-02-06 05:39:56',2,'en',1,'',0),
+(13,1,13,'2025-02-06 05:41:56','2025-02-06 05:40:55','2025-02-06 05:40:55',4,'en',1,'',0),
+(14,1,14,'2025-02-06 05:44:13','2025-02-06 05:42:37','2025-02-06 05:42:37',5,'en',3,'',0),
+(15,1,15,'2025-02-06 05:44:49','2025-02-06 05:44:39','2025-02-06 05:44:39',3,'en',1,'',0),
+(16,1,16,'2025-02-06 05:46:03','2025-02-06 05:45:30','2025-02-06 05:45:30',3,'en',1,'',0),
+(17,1,17,'2025-02-06 05:47:15','2025-02-06 05:46:54','2025-02-06 05:46:54',2,'en',1,'',0);
 /*!40000 ALTER TABLE `submissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -10362,7 +10360,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `temporary_files`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `temporary_files` (
   `file_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) NOT NULL,
@@ -10392,7 +10390,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_institution_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_institution_temporary_records` (
   `usage_stats_temp_institution_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `load_id` varchar(50) NOT NULL,
@@ -10420,7 +10418,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_total_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_total_temporary_records` (
   `usage_stats_temp_total_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL,
@@ -10472,7 +10470,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_unique_item_investigations_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_unique_item_investigations_temporary_records` (
   `usage_stats_temp_unique_item_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL,
@@ -10520,7 +10518,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_unique_item_requests_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_unique_item_requests_temporary_records` (
   `usage_stats_temp_item_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL,
@@ -10568,7 +10566,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_unique_title_investigations_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_unique_title_investigations_temporary_records` (
   `usage_stats_temp_unique_investigations_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL,
@@ -10616,7 +10614,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `usage_stats_unique_title_requests_temporary_records`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usage_stats_unique_title_requests_temporary_records` (
   `usage_stats_temp_unique_requests_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `date` datetime NOT NULL,
@@ -10664,7 +10662,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_group_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_group_settings` (
   `user_group_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_group_id` bigint(20) NOT NULL,
@@ -10809,7 +10807,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_group_stage`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_group_stage` (
   `user_group_stage_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) NOT NULL,
@@ -10881,7 +10879,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_groups` (
   `user_group_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `context_id` bigint(20) DEFAULT NULL,
@@ -10936,7 +10934,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_interests`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_interests` (
   `user_interest_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) NOT NULL,
@@ -10965,7 +10963,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_settings`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_settings` (
   `user_setting_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) NOT NULL,
@@ -11148,7 +11146,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `user_user_groups`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `user_user_groups` (
   `user_user_group_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_group_id` bigint(20) NOT NULL,
@@ -11171,57 +11169,57 @@ CREATE TABLE `user_user_groups` (
 LOCK TABLES `user_user_groups` WRITE;
 /*!40000 ALTER TABLE `user_user_groups` DISABLE KEYS */;
 INSERT INTO `user_user_groups` VALUES
-(1,1,1,'2025-02-04 05:32:09',NULL,NULL),
+(1,1,1,'2025-02-06 05:15:52',NULL,NULL),
 (2,2,1,NULL,NULL,NULL),
-(3,2,2,'2025-02-04 00:00:00',NULL,1),
-(4,3,3,'2025-02-04 00:00:00',NULL,1),
-(5,5,4,'2025-02-04 00:00:00',NULL,1),
-(6,5,5,'2025-02-04 00:00:00',NULL,1),
-(7,5,6,'2025-02-04 00:00:00',NULL,1),
-(8,17,7,'2025-02-04 00:00:00',NULL,1),
-(9,17,8,'2025-02-04 00:00:00',NULL,1),
-(10,17,9,'2025-02-04 00:00:00',NULL,1),
-(11,18,10,'2025-02-04 00:00:00',NULL,1),
-(12,18,11,'2025-02-04 00:00:00',NULL,1),
-(13,18,12,'2025-02-04 00:00:00',NULL,1),
-(14,6,13,'2025-02-04 00:00:00',NULL,1),
-(15,6,14,'2025-02-04 00:00:00',NULL,1),
-(16,10,15,'2025-02-04 00:00:00',NULL,1),
-(17,10,16,'2025-02-04 00:00:00',NULL,1),
-(18,12,17,'2025-02-04 00:00:00',NULL,1),
-(19,12,18,'2025-02-04 00:00:00',NULL,1),
-(20,19,19,'2025-02-04 05:42:44',NULL,NULL),
-(21,13,19,'2025-02-04 05:42:46',NULL,NULL),
-(22,19,20,'2025-02-04 05:43:32',NULL,NULL),
-(23,13,20,'2025-02-04 05:43:35',NULL,NULL),
-(24,19,21,'2025-02-04 05:45:41',NULL,NULL),
-(25,13,21,'2025-02-04 05:45:43',NULL,NULL),
-(26,19,22,'2025-02-04 05:46:20',NULL,NULL),
-(27,13,22,'2025-02-04 05:46:23',NULL,NULL),
-(28,19,23,'2025-02-04 05:47:44',NULL,NULL),
-(29,13,23,'2025-02-04 05:47:46',NULL,NULL),
-(30,19,24,'2025-02-04 05:49:44',NULL,NULL),
-(31,13,24,'2025-02-04 05:49:46',NULL,NULL),
-(32,19,25,'2025-02-04 05:50:52',NULL,NULL),
-(33,13,25,'2025-02-04 05:50:54',NULL,NULL),
-(34,19,26,'2025-02-04 05:52:09',NULL,NULL),
-(35,13,26,'2025-02-04 05:52:11',NULL,NULL),
-(36,19,27,'2025-02-04 05:53:03',NULL,NULL),
-(37,13,27,'2025-02-04 05:53:05',NULL,NULL),
-(38,19,28,'2025-02-04 05:54:13',NULL,NULL),
-(39,13,28,'2025-02-04 05:54:15',NULL,NULL),
-(40,19,29,'2025-02-04 05:55:29',NULL,NULL),
-(41,13,29,'2025-02-04 05:55:31',NULL,NULL),
-(42,19,30,'2025-02-04 05:56:28',NULL,NULL),
-(43,13,30,'2025-02-04 05:56:31',NULL,NULL),
-(44,19,31,'2025-02-04 05:57:59',NULL,NULL),
-(45,13,31,'2025-02-04 05:58:01',NULL,NULL),
-(46,19,32,'2025-02-04 06:00:09',NULL,NULL),
-(47,13,32,'2025-02-04 06:00:11',NULL,NULL),
-(48,19,33,'2025-02-04 06:00:47',NULL,NULL),
-(49,13,33,'2025-02-04 06:00:49',NULL,NULL),
-(50,19,34,'2025-02-04 06:01:57',NULL,NULL),
-(51,13,34,'2025-02-04 06:02:00',NULL,NULL);
+(3,2,2,'2025-02-06 00:00:00',NULL,1),
+(4,3,3,'2025-02-06 00:00:00',NULL,1),
+(5,5,4,'2025-02-06 00:00:00',NULL,1),
+(6,5,5,'2025-02-06 00:00:00',NULL,1),
+(7,5,6,'2025-02-06 00:00:00',NULL,1),
+(8,17,7,'2025-02-06 00:00:00',NULL,1),
+(9,17,8,'2025-02-06 00:00:00',NULL,1),
+(10,17,9,'2025-02-06 00:00:00',NULL,1),
+(11,18,10,'2025-02-06 00:00:00',NULL,1),
+(12,18,11,'2025-02-06 00:00:00',NULL,1),
+(13,18,12,'2025-02-06 00:00:00',NULL,1),
+(14,6,13,'2025-02-06 00:00:00',NULL,1),
+(15,6,14,'2025-02-06 00:00:00',NULL,1),
+(16,10,15,'2025-02-06 00:00:00',NULL,1),
+(17,10,16,'2025-02-06 00:00:00',NULL,1),
+(18,12,17,'2025-02-06 00:00:00',NULL,1),
+(19,12,18,'2025-02-06 00:00:00',NULL,1),
+(20,19,19,'2025-02-06 05:26:30',NULL,NULL),
+(21,13,19,'2025-02-06 05:26:32',NULL,NULL),
+(22,19,20,'2025-02-06 05:27:18',NULL,NULL),
+(23,13,20,'2025-02-06 05:27:22',NULL,NULL),
+(24,19,21,'2025-02-06 05:29:29',NULL,NULL),
+(25,13,21,'2025-02-06 05:29:32',NULL,NULL),
+(26,19,22,'2025-02-06 05:30:10',NULL,NULL),
+(27,13,22,'2025-02-06 05:30:12',NULL,NULL),
+(28,19,23,'2025-02-06 05:31:34',NULL,NULL),
+(29,13,23,'2025-02-06 05:31:36',NULL,NULL),
+(30,19,24,'2025-02-06 05:33:37',NULL,NULL),
+(31,13,24,'2025-02-06 05:33:40',NULL,NULL),
+(32,19,25,'2025-02-06 05:34:48',NULL,NULL),
+(33,13,25,'2025-02-06 05:34:50',NULL,NULL),
+(34,19,26,'2025-02-06 05:36:06',NULL,NULL),
+(35,13,26,'2025-02-06 05:36:08',NULL,NULL),
+(36,19,27,'2025-02-06 05:37:01',NULL,NULL),
+(37,13,27,'2025-02-06 05:37:03',NULL,NULL),
+(38,19,28,'2025-02-06 05:38:14',NULL,NULL),
+(39,13,28,'2025-02-06 05:38:16',NULL,NULL),
+(40,19,29,'2025-02-06 05:39:32',NULL,NULL),
+(41,13,29,'2025-02-06 05:39:34',NULL,NULL),
+(42,19,30,'2025-02-06 05:40:32',NULL,NULL),
+(43,13,30,'2025-02-06 05:40:34',NULL,NULL),
+(44,19,31,'2025-02-06 05:42:03',NULL,NULL),
+(45,13,31,'2025-02-06 05:42:06',NULL,NULL),
+(46,19,32,'2025-02-06 05:44:17',NULL,NULL),
+(47,13,32,'2025-02-06 05:44:20',NULL,NULL),
+(48,19,33,'2025-02-06 05:44:56',NULL,NULL),
+(49,13,33,'2025-02-06 05:44:58',NULL,NULL),
+(50,19,34,'2025-02-06 05:46:08',NULL,NULL),
+(51,13,34,'2025-02-06 05:46:10',NULL,NULL);
 /*!40000 ALTER TABLE `user_user_groups` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -11231,7 +11229,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `users`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `user_id` bigint(20) NOT NULL AUTO_INCREMENT,
   `username` varchar(32) NOT NULL,
@@ -11268,40 +11266,40 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` VALUES
-(1,'admin','$2y$10$HmzXMbN98dPtdoAAqgSdz.wB14FGUv7VShBaeU8UorPRKAD8wm83y','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'[]',NULL,NULL,'2025-02-04 05:32:09',NULL,'2025-02-04 05:42:24',NULL,NULL,NULL,0,NULL,1,NULL),
-(2,'rvaca','$2y$10$JqkOLWT0BBmfBxTOm7yiSutHvn0XpjD7LiSxjNwYmOZbvYVAS6eZ2','rvaca@mailinator.com',NULL,NULL,NULL,NULL,'MX','[]',NULL,NULL,'2025-02-04 05:33:36',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(3,'dbarnes','$2y$10$AVYo1eaWXrjYcc5UqqW0zOFdSMQFMCANQCLaaWCxRprVe3xmJGORy','dbarnes@mailinator.com',NULL,NULL,NULL,NULL,'AU','[]',NULL,NULL,'2025-02-04 05:33:57',NULL,'2025-02-04 06:02:45',NULL,NULL,NULL,0,NULL,1,NULL),
-(4,'dbuskins','$2y$10$r7X5WGvZH.YthodY.AHO1.hukXl0qxKON3kQmJ4Mcml8/r71fvARS','dbuskins@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2025-02-04 05:34:19',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(5,'sberardo','$2y$10$1tQYmV7vlX43M6sEj6mfhOBnCC5r5xdkZs6EgKd9.gsyg61gUbYQ2','sberardo@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:34:42',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(6,'minoue','$2y$10$jgCvTiL0A7LdXKBvOegq9u0/zxp7t60rYFtj.kI7.edejzPhpbkjW','minoue@mailinator.com',NULL,NULL,NULL,NULL,'JP','[]',NULL,NULL,'2025-02-04 05:35:07',NULL,'2025-02-04 05:50:33',NULL,NULL,NULL,0,NULL,1,NULL),
-(7,'jjanssen','$2y$10$wUXxckIDVpVi9etLYhejgeQxz9kU9zhldlqdOVuKLgz8kiPr7HgUW','jjanssen@mailinator.com',NULL,NULL,NULL,NULL,'NL','[]',NULL,NULL,'2025-02-04 05:35:32',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(8,'phudson','$2y$10$pv7hs2MtEMtsVrflFCeBoO2vHaGETKHtiFbLz0PC0eRk78jiAwRzC','phudson@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:35:58',NULL,'2025-02-04 05:56:16',NULL,NULL,NULL,0,NULL,1,NULL),
-(9,'amccrae','$2y$10$nm0BwCGNWZvmtFvjE4IJIOGqI/SXFueucN4dQZdx9UUyWST7/UaTS','amccrae@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:36:26',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(10,'agallego','$2y$10$WYyDwXNWcNHvIMU15AZn6e1LiqjU2hr.Cx4Ih5HDUIO7M088NnRh.','agallego@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2025-02-04 05:36:56',NULL,'2025-02-04 06:01:44',NULL,NULL,NULL,0,NULL,1,NULL),
-(11,'alzacharia','$2y$10$JnhCoIjmbpdOi3NiW2ipY.eAIUuB6u8ht6oYbaZ5hGeMo1AK7o1he','alzacharia@mailinator.com',NULL,NULL,NULL,NULL,'GH','[]',NULL,NULL,'2025-02-04 05:37:27',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(12,'gfavio','$2y$10$DCjpI7DfRoepl59miuZmxe2cAu2dwLQYVkGWuGYUPHbbw1ZrIKj1q','gfavio@mailinator.com',NULL,NULL,NULL,NULL,'ES','[]',NULL,NULL,'2025-02-04 05:37:59',NULL,'2025-02-04 05:57:32',NULL,NULL,NULL,0,NULL,1,NULL),
-(13,'mfritz','$2y$10$0XDw02fsxniugPvqZrClduQU.RBtwQv.8qrLQJS.wNd1jSxX3/TU.','mfritz@mailinator.com',NULL,NULL,NULL,NULL,'BE','[]',NULL,NULL,'2025-02-04 05:38:33',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(14,'svogt','$2y$10$fIZ0x6rrAp1NUeOHLsSESOcUQAVoWTpSZ5fOyi1PCqkHeE8h2QOmS','svogt@mailinator.com',NULL,NULL,NULL,NULL,'CL','[]',NULL,NULL,'2025-02-04 05:39:10',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(15,'gcox','$2y$10$IZZBY8uMMXJlsP93oTNApuA79T9/fjVI4GRLc/qT6c1QeXS7A1BKu','gcox@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2025-02-04 05:39:49',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(16,'shellier','$2y$10$hVu74W/0y/oS2/uGmSSRC.F9J40d/D5s8XA9lW5C0v1FRcD7uzu.S','shellier@mailinator.com',NULL,NULL,NULL,NULL,'ZA','[]',NULL,NULL,'2025-02-04 05:40:29',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(17,'cturner','$2y$10$hqnGZoVFa1RTZr0xiwB88ukNA1RwLcOLRiyun6uLLvS7bPdVeBZIm','cturner@mailinator.com',NULL,NULL,NULL,NULL,'GB','[]',NULL,NULL,'2025-02-04 05:41:12',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(18,'skumar','$2y$10$KlNDYv2Wm.QBIGpUHgPPS.Lh4f8am5sRWgBMXf4r/WD86fd1hZTIa','skumar@mailinator.com',NULL,NULL,NULL,NULL,'SG','[]',NULL,NULL,'2025-02-04 05:41:57',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
-(19,'aclark','$2y$10$tsI9ghDuvMpxy4kpnetOze3y3YRj2ci2zX1hWeJwZm1PNxLQczuEe','aclark@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:42:44',NULL,'2025-02-04 05:42:44',NULL,NULL,NULL,0,NULL,1,NULL),
-(20,'afinkel','$2y$10$WaD4Hy8mmy1XrRasE8JXVO86A20NG7UOnyq/./qZHxRx1qyFdZVku','afinkel@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:43:31',NULL,'2025-02-04 05:43:32',NULL,NULL,NULL,0,NULL,1,NULL),
-(21,'bbarnetson','$2y$10$ok7uR6f6npAvndilApTAI.GKDrSXiK8.eD.ND3hkPRjFV8GOFHo/2','bbarnetson@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:45:41',NULL,'2025-02-04 05:45:41',NULL,NULL,NULL,0,NULL,1,NULL),
-(22,'bbeaty','$2y$10$5cMKWpSTFkgZmTdrUnVaBuV0JApV0Q2.Mm56GuwRARrfn7nj9AGD6','bbeaty@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:46:20',NULL,'2025-02-04 05:46:21',NULL,NULL,NULL,0,NULL,1,NULL),
-(23,'callan','$2y$10$VYL2YQAeDH3q/k0BtTOcl.wK6orzWgB4fxAYRhXPehzbNpw3xV5.C','callan@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:47:44',NULL,'2025-02-04 05:47:44',NULL,NULL,NULL,0,NULL,1,NULL),
-(24,'dbernnard','$2y$10$lOuD//cHaKo//4dBB3fZLuQpcgPTQZP0Hh5wojJEK1yOSkBAB8Zji','dbernnard@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2025-02-04 05:49:44',NULL,'2025-02-04 05:49:44',NULL,NULL,NULL,0,NULL,1,NULL),
-(25,'dkennepohl','$2y$10$1jPg4y5eQcLwsvjob/UVKOpOOjYYrl7hW.DeU8pGI3UyTqk6GHWIG','dkennepohl@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:50:52',NULL,'2025-02-04 05:50:52',NULL,NULL,NULL,0,NULL,1,NULL),
-(26,'fperini','$2y$10$.Vdfs7JmnWm071ntup./HuMWpNu0EVf4GPc7jgOY03r01mL3IKb5m','fperini@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:52:09',NULL,'2025-02-04 05:52:09',NULL,NULL,NULL,0,NULL,1,NULL),
-(27,'jbrower','$2y$10$6CI0WqpQh.ky92urS85uk.hJ6mGo/iREdqSJ2Z44EIefIpF6CF3B2','jbrower@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:53:03',NULL,'2025-02-04 05:53:03',NULL,NULL,NULL,0,NULL,1,NULL),
-(28,'jlockehart','$2y$10$Ty5ca9psPMTCc/Nha42RWe2XvrKnfbGMqGfPOB.ya1S8r43Srz2P.','jlockehart@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:54:13',NULL,'2025-02-04 05:54:13',NULL,NULL,NULL,0,NULL,1,NULL),
-(29,'lelder','$2y$10$eGNwooH80obBvko4Y18b7OB2XSd7R8z7Cx9HEzYjNXMSnYxqyXfm2','lelder@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:55:29',NULL,'2025-02-04 05:55:29',NULL,NULL,NULL,0,NULL,1,NULL),
-(30,'mally','$2y$10$8yD3CLwayVlRbMRCMxCELurtFNpa0queWvVYoRvIgKNmhBvE5Yx96','mally@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:56:28',NULL,'2025-02-04 05:56:29',NULL,NULL,NULL,0,NULL,1,NULL),
-(31,'mdawson','$2y$10$EqcyxvVvctlxiLPXy2B7T.qkLToQGsmt9RGXLlaIY177ZPFYIcx.C','mdawson@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 05:57:59',NULL,'2025-02-04 05:57:59',NULL,NULL,NULL,0,NULL,1,NULL),
-(32,'mforan','$2y$10$CLmLefzVKqBfjwRmAsoIdOCuPHbzMWq6oCxpNVHAUgb/4cLQccskO','mforan@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 06:00:09',NULL,'2025-02-04 06:00:09',NULL,NULL,NULL,0,NULL,1,NULL),
-(33,'mpower','$2y$10$lu2xNaWtAh5KktWUi7pCOejExy7rpUI7ax3eLwYh8syfxPYXXMyVe','mpower@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 06:00:47',NULL,'2025-02-04 06:00:47',NULL,NULL,NULL,0,NULL,1,NULL),
-(34,'msmith','$2y$10$IXQASqvTsdc/zkrRW9nNF.j9nSMWp7NU/ypgsr602gDaa9iLm7EC2','msmith@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-04 06:01:57',NULL,'2025-02-04 06:01:58',NULL,NULL,NULL,0,NULL,1,NULL);
+(1,'admin','$2y$10$u89la7if0vcMWMAwGhG8Ku.xsjYICoGxFI7gYGwIfqmmzrTTfMiEe','pkpadmin@mailinator.com',NULL,NULL,NULL,NULL,NULL,'[]',NULL,NULL,'2025-02-06 05:15:52',NULL,'2025-02-06 05:26:10',NULL,NULL,NULL,0,NULL,1,NULL),
+(2,'rvaca','$2y$10$WOi8hmftu.orfKYQYtl8HuXjGbpHOrmZIzlCR06PR9GiRT4Rg.BT6','rvaca@mailinator.com',NULL,NULL,NULL,NULL,'MX','[]',NULL,NULL,'2025-02-06 05:17:17',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(3,'dbarnes','$2y$10$xK7jAJrZsS4F3L20l/rTqOhCfcwsezmEZIEddmtm468EQzqUITKEK','dbarnes@mailinator.com',NULL,NULL,NULL,NULL,'AU','[]',NULL,NULL,'2025-02-06 05:17:38',NULL,'2025-02-06 05:46:56',NULL,NULL,NULL,0,NULL,1,NULL),
+(4,'dbuskins','$2y$10$XuFgEjdErqtslyL9.8S1quMILrGq8a0hh4Xdz7WmOZ0EhJAnANmne','dbuskins@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2025-02-06 05:18:00',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(5,'sberardo','$2y$10$mclUag7ytd3EKWMJihsOU.gtspIIHRPFTXHMZEi81iU0PCgK2sV4.','sberardo@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:18:23',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(6,'minoue','$2y$10$P/n.pvrqTiuEj6k.T0dkiONn3JLwM2IFflU4f.Xs4C4Qo8Nfv6BZi','minoue@mailinator.com',NULL,NULL,NULL,NULL,'JP','[]',NULL,NULL,'2025-02-06 05:18:47',NULL,'2025-02-06 05:34:28',NULL,NULL,NULL,0,NULL,1,NULL),
+(7,'jjanssen','$2y$10$pczStwgZvEFNuETkSNxdke4j4pz.co6s6WaZg2l.rn/Zaoab2pdI2','jjanssen@mailinator.com',NULL,NULL,NULL,NULL,'NL','[]',NULL,NULL,'2025-02-06 05:19:13',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(8,'phudson','$2y$10$wuyDmG.MYolaSVUS2fskd.fsfMvewArNb/MiaXYBH/GqX7BcxG.M.','phudson@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:19:40',NULL,'2025-02-06 05:40:19',NULL,NULL,NULL,0,NULL,1,NULL),
+(9,'amccrae','$2y$10$RCNQFV4Y2LKgRRivXormqe.FKlM0blzP/KkSl6lu080zeiZLk9gPC','amccrae@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:20:09',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(10,'agallego','$2y$10$YPymp0mB/TRZw9pKjHaFseD.HezO.297fUOIIOUl1SlOwYpZb75wW','agallego@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2025-02-06 05:20:39',NULL,'2025-02-06 05:45:54',NULL,NULL,NULL,0,NULL,1,NULL),
+(11,'alzacharia','$2y$10$LvUsau2NJwZIHMorcv.0juEkIjQSbIRLL6BHBi9hbaovL7Rw3SNB6','alzacharia@mailinator.com',NULL,NULL,NULL,NULL,'GH','[]',NULL,NULL,'2025-02-06 05:21:09',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(12,'gfavio','$2y$10$Ia4.w2AqiBBeyAXsQIjoYOXUsYVHPQxbhe22Rg7tgvu7VR7j89C7a','gfavio@mailinator.com',NULL,NULL,NULL,NULL,'ES','[]',NULL,NULL,'2025-02-06 05:21:42',NULL,'2025-02-06 05:41:36',NULL,NULL,NULL,0,NULL,1,NULL),
+(13,'mfritz','$2y$10$nNBqWfU/75/9wjCh3DQPPuovvdX9PjMiHOe4VFs53GNyAu6CdmwWm','mfritz@mailinator.com',NULL,NULL,NULL,NULL,'BE','[]',NULL,NULL,'2025-02-06 05:22:17',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(14,'svogt','$2y$10$Y.O9P1OtAv8kweKhRF8/D.fGsf86QSHKhoPlEbYwqPlUSsiAxSFzm','svogt@mailinator.com',NULL,NULL,NULL,NULL,'CL','[]',NULL,NULL,'2025-02-06 05:22:53',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(15,'gcox','$2y$10$wSJOllE77LUxxUdmP9PtK.TBFL7Os3buqOBJUtTuxT6p2KxaYM4TC','gcox@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2025-02-06 05:23:32',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(16,'shellier','$2y$10$bbqd5jzu6gW1vpJiZ8VVreBTauJmepCmFrcBeh6kxfD9Z2/Zdy1zO','shellier@mailinator.com',NULL,NULL,NULL,NULL,'ZA','[]',NULL,NULL,'2025-02-06 05:24:14',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(17,'cturner','$2y$10$g4nUeRVuKCReSoaRes.TZuYTX0ZisNAT3/6QvWq1iHKv4p4nL0dUO','cturner@mailinator.com',NULL,NULL,NULL,NULL,'GB','[]',NULL,NULL,'2025-02-06 05:24:59',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(18,'skumar','$2y$10$dIA7hIAqOWIaeift1KeX4.ssBZB3qyZQx8qFWhWdXADx5v03EQGkm','skumar@mailinator.com',NULL,NULL,NULL,NULL,'SG','[]',NULL,NULL,'2025-02-06 05:25:44',NULL,NULL,NULL,NULL,NULL,0,NULL,1,NULL),
+(19,'aclark','$2y$10$7BTX8mR3DhAR7ilfJlgN4.OYx7S6V28aEw2ltT5C9wrui5ITQGkti','aclark@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:26:30',NULL,'2025-02-06 05:26:30',NULL,NULL,NULL,0,NULL,1,NULL),
+(20,'afinkel','$2y$10$3bfekN9YO0rSeBY3BUJIq.v7Hd16h4RDJmjtTyCbIqEcQuuxN836W','afinkel@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:27:18',NULL,'2025-02-06 05:27:18',NULL,NULL,NULL,0,NULL,1,NULL),
+(21,'bbarnetson','$2y$10$xdyKKRrZ0hCG5ciSEBOuYeIMAwZKv2yEZR/iZGn/vXrwXHigIJ3KG','bbarnetson@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:29:29',NULL,'2025-02-06 05:29:30',NULL,NULL,NULL,0,NULL,1,NULL),
+(22,'bbeaty','$2y$10$eU4fi5Zm2Ik2KsSTvgaBqeH7HPTGGSTAo4/65ZqZY1.kHaCfYZale','bbeaty@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:30:10',NULL,'2025-02-06 05:30:10',NULL,NULL,NULL,0,NULL,1,NULL),
+(23,'callan','$2y$10$9Rp4/FG9SNhlHKuRZ3Eb4.GPD61HcR1pAZeNtHiMUkzT5DXCgYiXa','callan@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:31:34',NULL,'2025-02-06 05:31:34',NULL,NULL,NULL,0,NULL,1,NULL),
+(24,'dbernnard','$2y$10$EJj2XQJLTb73m/coyS8taeTbzPVrWwKIUSJcON3LCof.gxmSk16fm','dbernnard@mailinator.com',NULL,NULL,NULL,NULL,'US','[]',NULL,NULL,'2025-02-06 05:33:37',NULL,'2025-02-06 05:33:38',NULL,NULL,NULL,0,NULL,1,NULL),
+(25,'dkennepohl','$2y$10$c3DhRgBWKBE3BdSTTaMJXOEDtSxG4KvSBOvzAgjOUfuE4e277tvi2','dkennepohl@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:34:48',NULL,'2025-02-06 05:34:48',NULL,NULL,NULL,0,NULL,1,NULL),
+(26,'fperini','$2y$10$saAVKPFrpgEDRFmavuvhGueull4oxEc7k08gDM9gVt2xWmjomcRje','fperini@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:36:06',NULL,'2025-02-06 05:36:06',NULL,NULL,NULL,0,NULL,1,NULL),
+(27,'jbrower','$2y$10$6ZBNOrdBk0uEJtxNAPrkqe4Yz8PBFY3r9ngvBEHibswYJHDARXKdq','jbrower@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:37:01',NULL,'2025-02-06 05:37:01',NULL,NULL,NULL,0,NULL,1,NULL),
+(28,'jlockehart','$2y$10$IFMKiWmiq8ehTr7aBlcygOkQUyEZTFEQJhu/OfRMG1j3Qd7fHxHdm','jlockehart@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:38:14',NULL,'2025-02-06 05:38:14',NULL,NULL,NULL,0,NULL,1,NULL),
+(29,'lelder','$2y$10$G9kOCeGksacIrUbsqfDpFObfec7wyP2JF4dFgBe0q2LnlgabC3Tum','lelder@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:39:32',NULL,'2025-02-06 05:39:32',NULL,NULL,NULL,0,NULL,1,NULL),
+(30,'mally','$2y$10$eW3BvRe57Z0tvPF/ywEFqu/Lri84tOL1RhZMGKg./H7wMtEeTGhte','mally@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:40:32',NULL,'2025-02-06 05:40:32',NULL,NULL,NULL,0,NULL,1,NULL),
+(31,'mdawson','$2y$10$7/7lBSNIz.zjcP5g5SUEX.vbqlpDOcK76eH/FX5N9wwQY80WO8.uq','mdawson@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:42:03',NULL,'2025-02-06 05:42:04',NULL,NULL,NULL,0,NULL,1,NULL),
+(32,'mforan','$2y$10$21V2jC4lZrmD2bvnKAyJj.gkP2JwJqMAyivbJUk6woWFoeft7pXWS','mforan@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:44:17',NULL,'2025-02-06 05:44:18',NULL,NULL,NULL,0,NULL,1,NULL),
+(33,'mpower','$2y$10$b.GjHKvsrv7SDy1cRYMEYu9bqDVZHHUx8RFS14RlGzZVJJo0GUKxe','mpower@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:44:56',NULL,'2025-02-06 05:44:56',NULL,NULL,NULL,0,NULL,1,NULL),
+(34,'msmith','$2y$10$o9HeF2EtcPsrA2AfHCplbeAkxxoKIi4Um5Waxh4f14iTszCmoH7Ui','msmith@mailinator.com',NULL,NULL,NULL,NULL,'CA','[]',NULL,NULL,'2025-02-06 05:46:08',NULL,'2025-02-06 05:46:08',NULL,NULL,NULL,0,NULL,1,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -11311,7 +11309,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `versions`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
+/*!40101 SET character_set_client = utf8mb4 */;
 CREATE TABLE `versions` (
   `version_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `major` int(11) NOT NULL DEFAULT 0 COMMENT 'Major component of version number, e.g. the 2 in OJS 2.3.8-0',
@@ -11337,35 +11335,35 @@ CREATE TABLE `versions` (
 LOCK TABLES `versions` WRITE;
 /*!40000 ALTER TABLE `versions` DISABLE KEYS */;
 INSERT INTO `versions` VALUES
-(1,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.metadata','dc11','',0,0),
-(2,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.pubIds','urn','\\APP\\plugins\\pubIds\\urn\\URNPubIdPlugin',0,0),
-(3,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.blocks','makeSubmission','MakeSubmissionBlockPlugin',1,0),
-(4,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),
-(5,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.blocks','browse','\\APP\\plugins\\blocks\\browse\\BrowseBlockPlugin',1,0),
-(6,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),
-(7,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.blocks','information','InformationBlockPlugin',1,0),
-(8,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.generic','usageEvent','',0,1),
-(9,1,2,0,0,'2025-02-04 05:32:09',1,'plugins.generic','staticPages','StaticPagesPlugin',1,0),
-(10,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.generic','webFeed','WebFeedPlugin',1,0),
-(11,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),
-(12,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.generic','dublinCoreMeta','DublinCoreMetaPlugin',1,0),
-(13,0,1,0,0,'2025-02-04 05:32:09',1,'plugins.generic','citationStyleLanguage','CitationStyleLanguagePlugin',1,0),
-(14,1,2,0,0,'2025-02-04 05:32:09',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),
-(15,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),
-(16,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),
-(17,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),
-(18,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.generic','htmlMonographFile','HtmlMonographFilePlugin',1,0),
-(19,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.themes','default','DefaultThemePlugin',1,0),
-(20,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.importexport','csv','',0,0),
-(21,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.importexport','users','',0,0),
-(22,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.importexport','onix30','',0,0),
-(23,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.importexport','native','',0,0),
-(24,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.oaiMetadataFormats','dc','',0,0),
-(25,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.paymethod','manual','',0,0),
-(26,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.paymethod','paypal','',0,0),
-(27,1,0,0,0,'2025-02-04 05:32:09',1,'plugins.reports','monographReport','',0,0),
-(28,2,0,1,0,'2025-02-04 05:32:09',1,'plugins.reports','reviewReport','',0,0),
-(29,3,5,0,0,'2025-02-04 05:32:05',1,'core','omp','',0,1);
+(1,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.metadata','dc11','',0,0),
+(2,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.pubIds','urn','\\APP\\plugins\\pubIds\\urn\\URNPubIdPlugin',0,0),
+(3,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.blocks','makeSubmission','MakeSubmissionBlockPlugin',1,0),
+(4,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.blocks','developedBy','DevelopedByBlockPlugin',1,0),
+(5,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.blocks','browse','\\APP\\plugins\\blocks\\browse\\BrowseBlockPlugin',1,0),
+(6,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.blocks','languageToggle','LanguageToggleBlockPlugin',1,0),
+(7,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.blocks','information','InformationBlockPlugin',1,0),
+(8,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.generic','usageEvent','',0,1),
+(9,1,2,0,0,'2025-02-06 05:15:52',1,'plugins.generic','staticPages','StaticPagesPlugin',1,0),
+(10,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.generic','webFeed','WebFeedPlugin',1,0),
+(11,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.generic','googleScholar','GoogleScholarPlugin',1,0),
+(12,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.generic','dublinCoreMeta','DublinCoreMetaPlugin',1,0),
+(13,0,1,0,0,'2025-02-06 05:15:52',1,'plugins.generic','citationStyleLanguage','CitationStyleLanguagePlugin',1,0),
+(14,1,2,0,0,'2025-02-06 05:15:52',1,'plugins.generic','customBlockManager','CustomBlockManagerPlugin',1,0),
+(15,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.generic','pdfJsViewer','PdfJsViewerPlugin',1,0),
+(16,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.generic','tinymce','TinyMCEPlugin',1,0),
+(17,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.generic','googleAnalytics','GoogleAnalyticsPlugin',1,0),
+(18,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.generic','htmlMonographFile','HtmlMonographFilePlugin',1,0),
+(19,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.themes','default','DefaultThemePlugin',1,0),
+(20,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.importexport','csv','',0,0),
+(21,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.importexport','users','',0,0),
+(22,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.importexport','onix30','',0,0),
+(23,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.importexport','native','',0,0),
+(24,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.oaiMetadataFormats','dc','',0,0),
+(25,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.paymethod','manual','',0,0),
+(26,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.paymethod','paypal','',0,0),
+(27,1,0,0,0,'2025-02-06 05:15:52',1,'plugins.reports','monographReport','',0,0),
+(28,2,0,1,0,'2025-02-06 05:15:52',1,'plugins.reports','reviewReport','',0,0),
+(29,3,5,0,0,'2025-02-06 05:15:49',1,'core','omp','',0,1);
 /*!40000 ALTER TABLE `versions` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -11378,4 +11376,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-02-04  6:03:06
+-- Dump completed on 2025-02-06  5:47:17
