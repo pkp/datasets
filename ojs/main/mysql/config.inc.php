@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:Ph0kQ1oIzbeTYCoxFMf4A7VTA2z7i7RyOQgLG5+NLfE="
+app_key = "base64:1gZSdqiJlBv9IuLxgXCX7MubV5KnAAZQ+vZohNyFg58="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -162,8 +162,8 @@ debug = Off
 [cache]
 
 ; Default driver for Laravel-based caching. Currently supports opcache and file drivers.
-; By default, the opcache is used.
-; default = opcache
+; By default, the file is used.
+; default = file
 
 ; Path to store cache contents for file or opcode based caches.
 ; path = cache/opcache
