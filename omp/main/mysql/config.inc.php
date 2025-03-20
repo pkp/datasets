@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:ce4CT9tTheJQtuQoqF8LEMdJnE09STqFCHdvKi36myY="
+app_key = "base64:wZXJXMM/lMm18w9aqD82mUKYl5EB5dGNJ+S8URjoamo="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -630,5 +630,3 @@ expiration_days = 3
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
 [features]
-
-enable_new_submission_listing = On
