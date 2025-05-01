@@ -1,0 +1,10 @@
+[2025-05-01 05:15:43] http://localhost
+[2025-05-01 05:15:43] [Notice] Task process started.
+[2025-05-01 05:15:43] [Error] Client error: `GET https://download.db-ip.com/free/dbip-city-lite-2025-05.mmdb.gz` resulted in a `404 Not Found` response:
+<html>
+<head><title>404 Not Found</title></head>
+<body>
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx/1. (truncated...)
+
+[2025-05-01 05:15:43] [Notice] Task process stopped.
