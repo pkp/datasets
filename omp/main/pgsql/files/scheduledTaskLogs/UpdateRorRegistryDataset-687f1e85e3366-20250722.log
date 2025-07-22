@@ -1,0 +1,11 @@
+[2025-07-22 05:15:49] http://localhost
+[2025-07-22 05:15:49] [Notice] Task process started.
+[2025-07-22 05:15:50] [Error] Server error: `GET https://zenodo.org/api/communities/ror-data/records?q=&sort=newest` resulted in a `503 Service Temporarily Unavailable` response:
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" (truncated...)
+
+[2025-07-22 05:15:50] [Notice] Task process stopped.
