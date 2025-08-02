@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:k7NcC9LIhPcwabATE+qZ1Om9xlTuvb8CbyRRgYzH1Mg="
+app_key = "base64:MMnE7aH/j6fodrwzk9qopdW0Ct7Mb9L6hypioBUzS+o="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -361,6 +361,18 @@ validation_timeout = 14
 ;;;;;;;;;;;;;;;;;;;
 
 [search]
+
+; The search driver to use. Options: database, opensearch
+driver = database
+
+; For indexing engines supporting it, provide a name for the submission index.
+search_index_name = "submissions"
+
+; When using the OpenSearch driver, the following must be specified...
+;opensearch_hosts = "[\"https://localhost:9200\"]"
+;opensearch_username = "admin"
+;opensearch_password = "password"
+;opensearch_ssl_verification = On
 
 ; Minimum indexed word length
 min_word_length = 3
