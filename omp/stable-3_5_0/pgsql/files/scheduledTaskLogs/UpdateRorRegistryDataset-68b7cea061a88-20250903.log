@@ -1,0 +1,10 @@
+[2025-09-03 05:14:08] http://localhost
+[2025-09-03 05:14:08] [Notice] Task process started.
+[2025-09-03 05:14:08] [Error] Server error: `GET https://zenodo.org/api/communities/ror-data/records?q=&sort=newest` resulted in a `502 Bad Gateway` response:
+<html>
+<head><title>502 Bad Gateway</title></head>
+<body>
+<center><h1>502 Bad Gateway</h1></center>
+<hr><center>ngin (truncated...)
+
+[2025-09-03 05:14:08] [Notice] Task process stopped.
