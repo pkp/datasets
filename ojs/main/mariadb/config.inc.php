@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:5c3rq/xB7YX9LL6RXtkTPve3dxLlTQvvbiN1xFlT0e4="
+app_key = "base64:87+Y/Y1LTR4JhD+C6royzWcPceqqwXZTv31TcoR2Wbw="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -38,6 +38,10 @@ base_url = "http://localhost"
 ; Enable strict mode. This will more aggressively cause errors/warnings when
 ; deprecated behaviour exists in the codebase.
 strict = Off
+
+; Sentry error logging support (see https://sentry.io)
+; To enable Sentry support, configure the Sentry DSN here.
+; sentry_dsn = ""
 
 ; Session cookie name
 session_cookie_name = OJSSID
