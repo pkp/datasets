@@ -1,0 +1,7 @@
+[2025-11-10 05:16:06] http://localhost
+[2025-11-10 05:16:06] [Notice] Task process started.
+[2025-11-10 05:16:07] [Error] Server error: `GET https://zenodo.org/api/communities/ror-data/records?q=&sort=newest` resulted in a `503 Service Unavailable` response:
+<!DOCTYPE html>
+<!-- This "application-unavailable" page is written as single, lightweight HTML document to avoid any de (truncated...)
+
+[2025-11-10 05:16:07] [Notice] Task process stopped.
