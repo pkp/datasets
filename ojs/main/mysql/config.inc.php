@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:lnirQKu+iP1nSjbz6muE1y6/hb3pqSoKTx9TK/BFLyI="
+app_key = "base64:n4vL+xp+Pqa6p4kR1XwI9tXtql94OGOKwMBgnK+YR+Y="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -607,7 +607,7 @@ delete_failed_jobs_after = 180
 ; Sample for the *nix crontab:
 ; * * * * * php lib/pkp/tools/scheduler.php run >> /dev/null 2>&1
 ;
-; See: <link-to-documentation>
+; See: https://docs.pkp.sfu.ca/admin-guide/en/deploy-scheduled-tasks
 task_runner = On
 
 ; How often the built-in scheduled task runner should run at the
