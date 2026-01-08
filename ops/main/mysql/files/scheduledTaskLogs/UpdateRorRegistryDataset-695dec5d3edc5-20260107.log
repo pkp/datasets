@@ -1,9 +1,0 @@
-[2026-01-07 05:17:17] http://localhost
-[2026-01-07 05:17:17] [Notice] Task process started.
-[2026-01-07 05:17:47] [Error] Server error: `GET https://zenodo.org/api/communities/ror-data/records?q=&sort=newest` resulted in a `504 Gateway Time-out` response:
-<html><body><h1>504 Gateway Time-out</h1>
-The server didn't respond in time.
-</body></html>
-
-
-[2026-01-07 05:17:47] [Notice] Task process stopped.
