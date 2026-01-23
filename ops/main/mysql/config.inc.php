@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:mBZv91Y5h5/tWMsHDPjWrJB46CmItPlSLSjLMZy8fpI="
+app_key = "base64:HPqc0VHyK5WBgcSLaBUfZOn6htmEA5TW4jcT7x1H/B8="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -434,6 +434,9 @@ items_per_page = 25
 
 ; Number of page links to display; can be overridden on a per-server basis
 page_links = 10
+
+; Maximum nesting depth for navigation menu items (default: 2)
+navigation_menu_max_depth = 2
 
 
 ;;;;;;;;;;;;;;;;;;;;
