@@ -1,0 +1,7 @@
+[2026-01-28 05:35:42] http://localhost
+[2026-01-28 05:35:42] [Notice] Task process started.
+[2026-01-28 05:36:00] [Error] Server error: `GET https://zenodo.org/api/records/18260365/files/v2.1-2026-01-15-ror-data.zip/content` resulted in a `503 Service Unavailable` response:
+<!DOCTYPE html>
+<!-- This "application-unavailable" page is written as single, lightweight HTML document to avoid any de (truncated...)
+
+[2026-01-28 05:36:00] [Notice] Task process stopped.
