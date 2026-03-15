@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:gQW2WxcEC2AY0Jzgbnw7aevg40l8598rNcjYRPdhW+s="
+app_key = "base64:bVHrUf8x89WCNEN+2o4WlEtF2bTEl8DTB9Vy9P9DLm0="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -296,6 +296,12 @@ allowed_title_html = "b,i,u,sup,sub"
 
 ;N.b.: The implicit_auth parameter has been removed in favor of plugin implementations such as shibboleth
 
+; This setting allows control over how new plugins can be installed. Supported options:
+;  on: Plugins can be installed by upload and through the Plugin Gallery. (This is the default.)
+;  gallery_only: Plugins can only be installed through the Plugin Gallery.
+;  upgrade_only: Plugins can be upgraded only through the Plugin Gallery; no new plugins can be installed
+;  off: Plugins cannot be installed.
+allow_plugin_install = on
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
