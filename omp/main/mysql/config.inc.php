@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:9ZJ4rcsWUhnZLu78yOZnVNSt5iaVCQ06T9LsJLn0rxE="
+app_key = "base64:tVen/MJUvniMx5jZ5Y8jFSZ9xZKq2dVWiA1/lkNh/1o="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -154,6 +154,23 @@ name = omp-ci
 
 ; Database collation
 ; collation = utf8_general_ci
+
+; SSL/TLS Database Connection
+; NOTE: The web installer does not provide options to configure SSL/TLS.
+; If your database server requires encrypted connections, uncomment and
+; configure the settings below BEFORE running the web installer.
+
+; Enable SSL/TLS for the database connection
+; secure = Off
+
+; Path to the CA certificate file for SSL/TLS verification
+; For MySQL/MariaDB: path to the CA certificate (PEM format)
+; For PostgreSQL: path to the root certificate
+; capath = /path/to/ca-cert.pem
+
+; Verify the server's SSL/TLS certificate (default to On when secure is enabled)
+; Set to Off to connect with encryption but skip certificate verification (not recommended for production)
+; verify = On
 
 ; Enable database debug output (very verbose!)
 debug = Off
