@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:1YjXkfgbiRqlh1NMlJLSVQU8ui1wCIwWH7RgNMwj5BY="
+app_key = "base64:KxGwWG6Ab08qXsFCxE75M2DiWAqp3xy+w6E/VUQFMx8="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -154,6 +154,23 @@ name = ojs-ci
 
 ; Database collation
 ; collation = utf8_general_ci
+
+; SSL/TLS Database Connection
+; NOTE: The web installer does not provide options to configure SSL/TLS.
+; If your database server requires encrypted connections, uncomment and
+; configure the settings below BEFORE running the web installer.
+
+; Enable SSL/TLS for the database connection
+; secure = Off
+
+; Path to the CA certificate file for SSL/TLS verification
+; For MySQL/MariaDB: path to the CA certificate (PEM format)
+; For PostgreSQL: path to the root certificate
+; capath = /path/to/ca-cert.pem
+
+; Verify the server's SSL/TLS certificate (default to On when secure is enabled)
+; Set to Off to connect with encryption but skip certificate verification (not recommended for production)
+; verify = On
 
 ; Enable database debug output (very verbose!)
 debug = Off
@@ -302,6 +319,11 @@ allowed_title_html = "b,i,u,sup,sub"
 ;  upgrade_only: Plugins can be upgraded only through the Plugin Gallery; no new plugins can be installed
 ;  off: Plugins cannot be installed.
 allow_plugin_install = on
+
+; The URLs to use to fetch the plugin gallery plugin list
+; BEWARE: You should not extend the gallery with custom plugin gallery listing that collide with the official ones!
+;plugin_gallery_urls = '["https://pkp.sfu.ca/ojs/xml/plugins.xml"]'
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
