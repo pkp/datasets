@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:NLInuLhqa9ToaqU1/uUKJSSHgElYE2uJ7iCKBf8j/lc="
+app_key = "base64:nJtcKxNytsoVtHXm0TGV22+ZXbhMU3vw0pLi5gmXEf8="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -319,6 +319,11 @@ allowed_title_html = "b,i,u,sup,sub"
 ;  upgrade_only: Plugins can be upgraded only through the Plugin Gallery; no new plugins can be installed
 ;  off: Plugins cannot be installed.
 allow_plugin_install = on
+
+; The URLs to use to fetch the plugin gallery plugin list
+; BEWARE: You should not extend the gallery with custom plugin gallery listing that collide with the official ones!
+;plugin_gallery_urls = '["https://pkp.sfu.ca/ojs/xml/plugins.xml"]'
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
