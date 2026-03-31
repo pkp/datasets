@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:kI1T+E9zfv5oeZyLoHr2YHH2WCcRMpqRbROK3Oat/Cg="
+app_key = "base64:Tnx/6MTd06gOLX+apIdppJTUOqNRwPrq2OsrQ4Cq8/M="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -288,6 +288,10 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 allowed_title_html = "b,i,u,sup,sub"
 
 ;N.b.: The implicit_auth parameter has been removed in favor of plugin implementations such as shibboleth
+
+; The URL to use to fetch the plugin gallery plugin list
+; BEWARE: You should not extend the gallery with custom plugin gallery listing that collide with the official ones!
+;plugin_gallery_urls = '["https://pkp.sfu.ca/ojs/xml/plugins.xml"]'
 
 
 ;;;;;;;;;;;;;;;;;;
