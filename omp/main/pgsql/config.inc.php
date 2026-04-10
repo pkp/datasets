@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:lvkMzwM8CiQcHsLGs6bDdNdjp08GEqZocj8TAvT69do="
+app_key = "base64:FUPbyKXgn5W+gv6aS7FnPDBR+0LwBJQg1RSJrIPk1qo="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -324,6 +324,10 @@ allow_plugin_install = on
 ; BEWARE: You should not extend the gallery with custom plugin gallery listing that collide with the official ones!
 ;plugin_gallery_urls = '["https://pkp.sfu.ca/ojs/xml/plugins.xml"]'
 
+; When set to a value greater than 0, admins must re-authenticate to access the administration area.
+; The authentication remains valid for the specified number of minutes before re-authentication is required again.
+; Set to 0 to disable re-authentication.
+;password_timeout = 0
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
@@ -622,6 +626,10 @@ job_runner_max_execution_time = 30
 ; When setting a fixed value in megabytes, this should be less than the
 ; memory_limit the server has configured for PHP.
 job_runner_max_memory = 80
+
+; Prevent multiple web requests from running JobRunner simultaneously.
+; Recommended On for shared/weak hosting. Dedicated servers can disable for throughput.
+job_runner_cross_request_lock = On
 
 ; Controls whether queued jobs should be processed by the task scheduler.
 ; This setting has no effect when the job_runner and the [schedule].task_runner are enabled,
