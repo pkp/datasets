@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:R9J9U2ECJhye0Go+X7nJpORegzlX5HR/7cB1kj2Wy5s="
+app_key = "base64:uyWtXVI1DISQKm15FUSL5ZjyFEXPadveIifdZd0LmAw="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -605,7 +605,7 @@ log_web_service_info = Off
 ;   - syslog: System log
 ;   - errorlog: PHP error log
 ;   - null: Discard all logs
-log_channel = daily
+log_channel = errorlog
 
 ; Minimum log level to record. Available levels (in order of severity):
 ;   - debug: Detailed debug information
