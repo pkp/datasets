@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:EfmnWRsvcs86SoJJ0AuxNjdlFrSpe9biGWnz49SMNPg="
+app_key = "base64:zGwkKVtwFsY3O5mtQsXXLueLNlGjVZEb59C9y8Ve0k0="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -421,6 +421,7 @@ search_index_name = "submissions"
 ;opensearch_username = "admin"
 ;opensearch_password = "password"
 ;opensearch_ssl_verification = On
+;opensearch_debug = Off
 
 ; Minimum indexed word length
 min_word_length = 3
@@ -624,6 +625,11 @@ log_stacks = daily
 ; included). Has no effect on the errorlog or stack channels. See available formatters
 ; at https://github.com/Seldaek/monolog/blob/main/doc/02-handlers-formatters-processors.md#formatters
 ; log_formatter = Monolog\Formatter\JsonFormatter
+
+; Enable application-level security audit logging (authentication events, privilege
+; and configuration changes, plugin lifecycle, etc.). Disabled by default, set to On
+; to record all audit-log output.
+; log_audit = Off
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;
