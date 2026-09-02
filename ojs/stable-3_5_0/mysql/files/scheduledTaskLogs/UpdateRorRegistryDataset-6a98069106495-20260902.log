@@ -1,0 +1,4 @@
+[2026-09-02 11:20:49] http://localhost
+[2026-09-02 11:20:49] [Notice] Task process started.
+[2026-09-02 11:21:29] [Error] cURL error 28: Operation timed out after 30002 milliseconds with 0 bytes received (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://zenodo.org/api/records/22099990
+[2026-09-02 11:21:29] [Notice] Task process stopped.
