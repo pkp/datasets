@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:SdU+ehXup11zJcMKRRaU0PcYLhuZXREigPesAPbqTFo="
+app_key = "base64:FSCwcFLAZuHJ1lT+gva46v7w7o+hPEr2BpyBaNEFi3c="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -337,6 +337,19 @@ allow_plugin_install = on
 ; The authentication remains valid for the specified number of minutes before re-authentication is required again.
 ; Set to 0 to disable re-authentication.
 ;password_timeout = 0
+
+; When set to On, pass article galley HTML through a filter to remove potentially malicious content.
+filter_galley_html = Off
+
+; When the filter_galley_html option is turned On, only allowed "safe" elements will be permitted.
+; Use the following setting to allow additional elements and attributes.
+; Use e.g. "img[id|style],math" to allow "id" and "style" attributes to the "img"
+; tag, and also to permit the "math" tag. Unspecified attributes will be stripped.
+; allowed_galley_html = "img[id|style],math"
+
+; When the filter_galley_html option is turned On, only specified allowed media hosts are allowed.
+; allowed_hosts = '["doi.org", "wikipedia.org"]'
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
