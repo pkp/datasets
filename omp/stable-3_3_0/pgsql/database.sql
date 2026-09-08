@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict U8MgGvX1digJZUZGOelpofYQ9X4YnlFhnwDw3uUEJjDLy7SEj0k24F4kK10TCcm
+\restrict e2wfEM0uszYHB3ab3DGxdyREVptZ0RPIZJGoUC0ctbCpXmF72Ga84fU9sdBoa3b
 
 -- Dumped from database version 16.15 (Ubuntu 16.15-1.pgdg24.04+2)
 -- Dumped by pg_dump version 16.15 (Ubuntu 16.15-1.pgdg24.04+2)
@@ -5167,36 +5167,36 @@ COPY public.data_object_tombstones (tombstone_id, data_object_id, date_deleted, 
 --
 
 COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, stage_id, round, editor_id, decision, date_decided) FROM stdin;
-1	1	0	1	0	3	3	2026-09-04 09:31:29
-2	1	1	3	1	3	2	2026-09-04 09:31:36
-3	2	0	1	0	3	3	2026-09-04 09:32:40
-4	4	0	1	0	3	1	2026-09-04 09:34:08
-5	4	3	2	1	3	3	2026-09-04 09:34:16
-6	4	4	3	1	3	2	2026-09-04 09:34:23
-7	4	0	4	0	3	7	2026-09-04 09:34:31
-8	5	0	1	0	3	1	2026-09-04 09:35:14
-9	5	5	2	1	3	3	2026-09-04 09:35:20
-10	5	6	3	1	3	2	2026-09-04 09:35:28
-11	5	0	4	0	3	7	2026-09-04 09:35:34
-12	6	0	1	0	3	1	2026-09-04 09:36:43
-13	6	7	2	1	6	15	2026-09-04 09:36:56
-14	7	0	1	0	3	3	2026-09-04 09:38:03
-15	7	8	3	1	3	2	2026-09-04 09:38:12
-16	9	0	1	0	3	1	2026-09-04 09:39:25
-17	11	0	1	0	3	1	2026-09-04 09:40:32
-18	11	10	2	1	3	3	2026-09-04 09:40:38
-19	11	11	3	1	3	2	2026-09-04 09:41:10
-20	12	0	1	0	3	1	2026-09-04 09:42:07
-21	13	0	1	0	3	1	2026-09-04 09:43:14
-22	13	13	2	1	3	3	2026-09-04 09:43:21
-23	13	14	3	1	3	2	2026-09-04 09:44:04
-24	14	0	1	0	3	1	2026-09-04 09:44:54
-25	14	15	2	1	3	3	2026-09-04 09:45:02
-26	14	16	3	1	3	2	2026-09-04 09:45:10
-27	14	0	4	0	3	7	2026-09-04 09:45:18
-28	15	0	1	0	3	3	2026-09-04 09:46:32
-29	16	0	1	0	3	3	2026-09-04 09:47:07
-30	17	0	1	0	3	1	2026-09-04 09:48:50
+1	1	0	1	0	3	3	2026-09-08 09:33:31
+2	1	1	3	1	3	2	2026-09-08 09:33:37
+3	2	0	1	0	3	3	2026-09-08 09:34:40
+4	4	0	1	0	3	1	2026-09-08 09:36:04
+5	4	3	2	1	3	3	2026-09-08 09:36:11
+6	4	4	3	1	3	2	2026-09-08 09:36:19
+7	4	0	4	0	3	7	2026-09-08 09:36:26
+8	5	0	1	0	3	1	2026-09-08 09:37:07
+9	5	5	2	1	3	3	2026-09-08 09:37:13
+10	5	6	3	1	3	2	2026-09-08 09:37:20
+11	5	0	4	0	3	7	2026-09-08 09:37:26
+12	6	0	1	0	3	1	2026-09-08 09:38:32
+13	6	7	2	1	6	15	2026-09-08 09:38:44
+14	7	0	1	0	3	3	2026-09-08 09:39:48
+15	7	8	3	1	3	2	2026-09-08 09:39:56
+16	9	0	1	0	3	1	2026-09-08 09:41:06
+17	11	0	1	0	3	1	2026-09-08 09:42:10
+18	11	10	2	1	3	3	2026-09-08 09:42:16
+19	11	11	3	1	3	2	2026-09-08 09:42:46
+20	12	0	1	0	3	1	2026-09-08 09:43:39
+21	13	0	1	0	3	1	2026-09-08 09:44:43
+22	13	13	2	1	3	3	2026-09-08 09:44:50
+23	13	14	3	1	3	2	2026-09-08 09:45:30
+24	14	0	1	0	3	1	2026-09-08 09:46:19
+25	14	15	2	1	3	3	2026-09-08 09:46:27
+26	14	16	3	1	3	2	2026-09-08 09:46:34
+27	14	0	4	0	3	7	2026-09-08 09:46:41
+28	15	0	1	0	3	3	2026-09-08 09:47:54
+29	16	0	1	0	3	3	2026-09-08 09:48:29
+30	17	0	1	0	3	1	2026-09-08 09:50:09
 \.
 
 
@@ -5205,79 +5205,79 @@ COPY public.edit_decisions (edit_decision_id, submission_id, review_round_id, st
 --
 
 COPY public.email_log (log_id, assoc_type, assoc_id, sender_id, date_sent, event_type, from_address, recipients, cc_recipients, bcc_recipients, subject, body) FROM stdin;
-1	1048585	1	19	2026-09-04 09:31:25	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Arthur Clark:<br />\n<br />\nThank you for submitting the manuscript, &quot;The ABCs of Human Survival: A Paradigm for Global Citizenship&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/1' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/1</a><br />\nUsername: aclark<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-2	1048585	1	3	2026-09-04 09:31:34	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-3	1048585	1	3	2026-09-04 09:31:36	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Arthur Clark:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "The ABCs of Human Survival: A Paradigm for Global Citizenship".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">http://localhost/index.php/publicknowledge/authorDashboard/submission/1</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-4	1048585	2	20	2026-09-04 09:32:34	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Alvin Finkel:<br />\n<br />\nThank you for submitting the manuscript, &quot;The West and Beyond: New Perspectives on an Imagined Region&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/2' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/2</a><br />\nUsername: afinkel<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-5	1048585	2	20	2026-09-04 09:32:34	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Sarah Carter" <scarter@mailinator.com>, "Peter Fortna" <pfortna@mailinator.com>, "Gerald Friesen" <gfriesen@mailinator.com>, "Lyle Dick" <ldick@mailinator.com>, "Winona Wheeler" <wwheeler@mailinator.com>, "Matt Dyce" <mdyce@mailinator.com>, "James Opp" <jopp@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nAlvin Finkel has submitted the manuscript, &quot;The West and Beyond: New Perspectives on an Imagined Region&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-6	1048585	2	3	2026-09-04 09:32:46	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Al Zacharia,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=2' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=2</a><br><br>Username: alzacharia<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-7	1048585	2	3	2026-09-04 09:32:51	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=2' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=2</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-8	1048585	3	21	2026-09-04 09:33:19	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Bob Barnetson" <bbarnetson@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Bob Barnetson:<br />\n<br />\nThank you for submitting the manuscript, &quot;The Political Economy of Workplace Injury in Canada&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/3' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/3</a><br />\nUsername: bbarnetson<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-9	1048585	4	22	2026-09-04 09:34:02	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Bart Beaty:<br />\n<br />\nThank you for submitting the manuscript, &quot;How Canadians Communicate: Contexts of Canadian Popular Culture&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/4' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/4</a><br />\nUsername: bbeaty<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-10	1048585	4	22	2026-09-04 09:34:02	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nBart Beaty has submitted the manuscript, &quot;How Canadians Communicate: Contexts of Canadian Popular Culture&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-11	1048585	4	3	2026-09-04 09:34:14	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Aisla McCrae,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=4' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=4</a><br><br>Username: amccrae<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-12	1048585	4	3	2026-09-04 09:34:16	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>, "Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Bart Beaty; Toby Miller, Ira Wagman, Will Straw:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "How Canadians Communicate: Contexts of Canadian Popular Culture".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">http://localhost/index.php/publicknowledge/authorDashboard/submission/4</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-13	1048585	4	3	2026-09-04 09:34:21	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Al Zacharia,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=4' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=4</a><br><br>Username: alzacharia<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-14	1048585	4	3	2026-09-04 09:34:23	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>, "Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Bart Beaty; Toby Miller, Ira Wagman, Will Straw:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "How Canadians Communicate: Contexts of Canadian Popular Culture".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">http://localhost/index.php/publicknowledge/authorDashboard/submission/4</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-23	1048585	6	24	2026-09-04 09:36:37	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Greg Bobish" <gbobish@mailinator.com>, "Daryl Bullis" <dbullis@mailinator.com>, "Jenna Hecker" <jhecker@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nDeborah Bernnard has submitted the manuscript, &quot;The Information Literacy User’s Guide&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-15	1048585	4	3	2026-09-04 09:34:31	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>, "Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Bart Beaty; Toby Miller, Ira Wagman, Will Straw:<br><br>The editing of your manuscript, "How Canadians Communicate: Contexts of Canadian Popular Culture," is complete. We are now sending it to production.<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">http://localhost/index.php/publicknowledge/authorDashboard/submission/4</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-16	1048585	5	23	2026-09-04 09:35:08	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Chantal Allan" <callan@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Chantal Allan:<br />\n<br />\nThank you for submitting the manuscript, &quot;Bomb Canada and Other Unkind Remarks in the American Media&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/5' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a><br />\nUsername: callan<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-17	1048585	5	3	2026-09-04 09:35:19	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Paul Hudson,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5</a><br><br>Username: phudson<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-18	1048585	5	3	2026-09-04 09:35:20	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Chantal Allan:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Bomb Canada and Other Unkind Remarks in the American Media".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-19	1048585	5	3	2026-09-04 09:35:26	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-20	1048585	5	3	2026-09-04 09:35:28	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Chantal Allan:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Bomb Canada and Other Unkind Remarks in the American Media".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-21	1048585	5	3	2026-09-04 09:35:35	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Chantal Allan:<br><br>The editing of your manuscript, "Bomb Canada and Other Unkind Remarks in the American Media," is complete. We are now sending it to production.<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-22	1048585	6	24	2026-09-04 09:36:37	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>	\N	dbuskins@mailinator.com	[JPK] Submission Acknowledgement	Deborah Bernnard:<br />\n<br />\nThank you for submitting the manuscript, &quot;The Information Literacy User’s Guide&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/6' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/6</a><br />\nUsername: dbernnard<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-24	1048585	6	6	2026-09-04 09:36:56	805306372	"Minoti Inoue" <minoue@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>	\N	\N	[JPK] Editor Recommendation	<p>Daniel Barnes, David Buskins:<br><br>The recommendation regarding the submission to Public Knowledge Press, "The Information Literacy User’s Guide" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-25	1048585	7	25	2026-09-04 09:37:56	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Dietmar Kennepohl:<br />\n<br />\nThank you for submitting the manuscript, &quot;Accessible Elements: Teaching Science Online and at a Distance&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/7' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/7</a><br />\nUsername: dkennepohl<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-26	1048585	7	25	2026-09-04 09:37:56	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Terry Anderson" <tanderson@mailinator.com>, "Paul Gorsky" <pgorsky@mailinator.com>, "Gale Parchoma" <gparchoma@mailinator.com>, "Stuart Palmer" <spalmer@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nDietmar Kennepohl has submitted the manuscript, &quot;Accessible Elements: Teaching Science Online and at a Distance&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-27	1048585	7	3	2026-09-04 09:38:09	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Adela Gallego,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7</a><br><br>Username: agallego<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-28	1048585	7	3	2026-09-04 09:38:12	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>, "Terry Anderson" <tanderson@mailinator.com>, "Paul Gorsky" <pgorsky@mailinator.com>, "Gale Parchoma" <gparchoma@mailinator.com>, "Stuart Palmer" <spalmer@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Dietmar Kennepohl; Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Accessible Elements: Teaching Science Online and at a Distance".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">http://localhost/index.php/publicknowledge/authorDashboard/submission/7</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-29	1048585	8	3	2026-09-04 09:38:27	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Daniel Barnes:<br />\n<br />\nThank you for submitting the manuscript, &quot;Editorial&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/8' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/8</a><br />\nUsername: dbarnes<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-30	1048585	9	26	2026-09-04 09:39:19	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>	\N	dbuskins@mailinator.com	[JPK] Submission Acknowledgement	Fernando Perini:<br />\n<br />\nThank you for submitting the manuscript, &quot;Enabling Openness: The future of the information society in Latin America and the Caribbean&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/9' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/9</a><br />\nUsername: fperini<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-31	1048585	9	26	2026-09-04 09:39:19	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Robin Mansell" <rmansell@mailinator.com>, "Hernan Galperin" <hgalperin@mailinator.com>, "Pablo Bello" <pbello@mailinator.com>, "Eleonora Rabinovich" <erabinovich@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nFernando Perini has submitted the manuscript, &quot;Enabling Openness: The future of the information society in Latin America and the Caribbean&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-32	1048585	10	27	2026-09-04 09:40:10	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Jennifer Brower" <jbrower@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Jennifer Brower:<br />\n<br />\nThank you for submitting the manuscript, &quot;Lost Tracks: Buffalo National Park, 1909-1939&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/10' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/10</a><br />\nUsername: jbrower<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-33	1048585	11	28	2026-09-04 09:40:26	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Jonathan Locke Hart:<br />\n<br />\nThank you for submitting the manuscript, &quot;Dreamwork&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/11' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/11</a><br />\nUsername: jlockehart<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-34	1048585	11	3	2026-09-04 09:40:37	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Aisla McCrae,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11</a><br><br>Username: amccrae<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-35	1048585	11	3	2026-09-04 09:40:38	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Jonathan Locke Hart:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Dreamwork".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">http://localhost/index.php/publicknowledge/authorDashboard/submission/11</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-36	1048585	11	3	2026-09-04 09:40:43	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Adela Gallego,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11</a><br><br>Username: agallego<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-37	1048585	11	3	2026-09-04 09:40:47	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-38	1048585	11	10	2026-09-04 09:40:51	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Dreamwork,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-02, if not before.<br />\n<br />\nAdela Gallego<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-39	1048585	11	12	2026-09-04 09:40:58	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Dreamwork,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-02, if not before.<br />\n<br />\nGonzalo Favio<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-40	1048585	11	3	2026-09-04 09:41:10	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Jonathan Locke Hart:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Dreamwork".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">http://localhost/index.php/publicknowledge/authorDashboard/submission/11</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-41	1048585	12	29	2026-09-04 09:42:00	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Laurent Elder:<br />\n<br />\nThank you for submitting the manuscript, &quot;Connecting ICTs to Development&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/12' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/12</a><br />\nUsername: lelder<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-42	1048585	12	29	2026-09-04 09:42:00	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank Tulus" <ftulus@mailinator.com>, "Raymond Hyma" <rhyma@mailinator.com>, "John Valk" <jvalk@mailinator.com>, "Khaled Fourati" <fkourati@mailinator.com>, "Jeremy de Beer" <jdebeer@mailinator.com>, "Sara Bannerman" <sbannerman@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nLaurent Elder has submitted the manuscript, &quot;Connecting ICTs to Development&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-43	1048585	12	3	2026-09-04 09:42:13	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Julie Janssen,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12</a><br><br>Username: jjanssen<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-44	1048585	12	3	2026-09-04 09:42:18	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Paul Hudson,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12</a><br><br>Username: phudson<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-45	1048585	12	3	2026-09-04 09:42:22	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Aisla McCrae,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12</a><br><br>Username: amccrae<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-46	1048585	12	8	2026-09-04 09:42:27	1073741829	"Paul Hudson" <phudson@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Connecting ICTs to Development,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-02, if not before.<br />\n<br />\nPaul Hudson<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-47	1048585	13	30	2026-09-04 09:43:06	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Mohamed Ally:<br />\n<br />\nThank you for submitting the manuscript, &quot;Mobile Learning: Transforming the Delivery of Education and Training&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/13' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/13</a><br />\nUsername: mally<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-48	1048585	13	30	2026-09-04 09:43:06	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"John Traxler" <jtraxler@mailinator.com>, "Marguerite Koole" <mkoole@mailinator.com>, "Torstein Rekkedal" <trekkedal@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nMohamed Ally has submitted the manuscript, &quot;Mobile Learning: Transforming the Delivery of Education and Training&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-49	1048585	13	3	2026-09-04 09:43:20	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Paul Hudson,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Username: phudson<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-50	1048585	13	3	2026-09-04 09:43:21	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>, "John Traxler" <jtraxler@mailinator.com>, "Marguerite Koole" <mkoole@mailinator.com>, "Torstein Rekkedal" <trekkedal@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Mohamed Ally; John Traxler, Marguerite Koole, Torstein Rekkedal:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Mobile Learning: Transforming the Delivery of Education and Training".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">http://localhost/index.php/publicknowledge/authorDashboard/submission/13</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-51	1048585	13	3	2026-09-04 09:43:27	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Adela Gallego,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Username: agallego<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-52	1048585	13	3	2026-09-04 09:43:31	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Al Zacharia,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Username: alzacharia<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-53	1048585	13	3	2026-09-04 09:43:36	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-54	1048585	13	10	2026-09-04 09:43:41	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Mobile Learning: Transforming the Delivery of Education and Training,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-02, if not before.<br />\n<br />\nAdela Gallego<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-55	1048585	13	12	2026-09-04 09:43:50	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Mobile Learning: Transforming the Delivery of Education and Training,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-02, if not before.<br />\n<br />\nGonzalo Favio<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-56	1048585	13	3	2026-09-04 09:44:04	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>, "John Traxler" <jtraxler@mailinator.com>, "Marguerite Koole" <mkoole@mailinator.com>, "Torstein Rekkedal" <trekkedal@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Mohamed Ally; John Traxler, Marguerite Koole, Torstein Rekkedal:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Mobile Learning: Transforming the Delivery of Education and Training".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">http://localhost/index.php/publicknowledge/authorDashboard/submission/13</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-57	1048585	14	31	2026-09-04 09:44:46	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Michael Dawson:<br />\n<br />\nThank you for submitting the manuscript, &quot;From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/14' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/14</a><br />\nUsername: mdawson<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-58	1048585	14	31	2026-09-04 09:44:47	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nMichael Dawson has submitted the manuscript, &quot;From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-59	1048585	14	3	2026-09-04 09:45:00	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Julie Janssen,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=14' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=14</a><br><br>Username: jjanssen<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-60	1048585	14	3	2026-09-04 09:45:02	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>, "Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Michael Dawson; Brian Dupuis, Michael Wilson:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">http://localhost/index.php/publicknowledge/authorDashboard/submission/14</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-61	1048585	14	3	2026-09-04 09:45:08	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Al Zacharia,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=14' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=14</a><br><br>Username: alzacharia<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-62	1048585	14	3	2026-09-04 09:45:10	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>, "Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Michael Dawson; Brian Dupuis, Michael Wilson:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">http://localhost/index.php/publicknowledge/authorDashboard/submission/14</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-63	1048585	14	3	2026-09-04 09:45:18	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>, "Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Michael Dawson; Brian Dupuis, Michael Wilson:<br><br>The editing of your manuscript, "From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots," is complete. We are now sending it to production.<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">http://localhost/index.php/publicknowledge/authorDashboard/submission/14</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-64	1048585	15	32	2026-09-04 09:46:25	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Max Foran" <mforan@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Max Foran:<br />\n<br />\nThank you for submitting the manuscript, &quot;Expansive Discourses: Urban Sprawl in Calgary, 1945-1978&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/15' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/15</a><br />\nUsername: mforan<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-65	1048585	16	33	2026-09-04 09:47:00	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Power" <mpower@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Michael Power:<br />\n<br />\nThank you for submitting the manuscript, &quot;A Designer's Log: Case Studies in Instructional Design&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/16' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/16</a><br />\nUsername: mpower<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-66	1048585	16	3	2026-09-04 09:47:13	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Adela Gallego,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16</a><br><br>Username: agallego<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-67	1048585	16	3	2026-09-04 09:47:17	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Al Zacharia,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16</a><br><br>Username: alzacharia<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-68	1048585	16	3	2026-09-04 09:47:21	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-69	1048585	16	10	2026-09-04 09:47:26	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;A Designer's Log: Case Studies in Instructional Design,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-02, if not before.<br />\n<br />\nAdela Gallego<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-70	1048585	17	34	2026-09-04 09:48:40	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Matthew Smith:<br />\n<br />\nThank you for submitting the manuscript, &quot;Open Development: Networked Innovations in International Development&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/17' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/17</a><br />\nUsername: msmith<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-71	1048585	17	34	2026-09-04 09:48:40	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Yochai Benkler" <ybenkler@mailinator.com>, "Katherine Reilly" <kreilly@mailinator.com>, "Melissa Loudon" <mloudon@mailinator.com>, "Ulrike Rivett" <urivett@mailinator.com>, "Mark Graham" <mgraham@mailinator.com>, "Håvard Haarstad" <hhaarstad@mailinator.com>, "Marshall Smith" <masmith@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nMatthew Smith has submitted the manuscript, &quot;Open Development: Networked Innovations in International Development&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-72	1048585	17	3	2026-09-04 09:48:56	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Julie Janssen,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17</a><br><br>Username: jjanssen<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
-73	1048585	17	3	2026-09-04 09:49:02	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Paul Hudson,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-02 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-02.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17</a><br><br>Username: phudson<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+1	1048585	1	19	2026-09-08 09:33:26	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Arthur Clark:<br />\n<br />\nThank you for submitting the manuscript, &quot;The ABCs of Human Survival: A Paradigm for Global Citizenship&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/1' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/1</a><br />\nUsername: aclark<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+2	1048585	1	3	2026-09-08 09:33:36	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=1</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+3	1048585	1	3	2026-09-08 09:33:37	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Arthur Clark" <aclark@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Arthur Clark:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "The ABCs of Human Survival: A Paradigm for Global Citizenship".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/1">http://localhost/index.php/publicknowledge/authorDashboard/submission/1</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+4	1048585	2	20	2026-09-08 09:34:34	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Alvin Finkel" <afinkel@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Alvin Finkel:<br />\n<br />\nThank you for submitting the manuscript, &quot;The West and Beyond: New Perspectives on an Imagined Region&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/2' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/2</a><br />\nUsername: afinkel<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+5	1048585	2	20	2026-09-08 09:34:34	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Sarah Carter" <scarter@mailinator.com>, "Peter Fortna" <pfortna@mailinator.com>, "Gerald Friesen" <gfriesen@mailinator.com>, "Lyle Dick" <ldick@mailinator.com>, "Winona Wheeler" <wwheeler@mailinator.com>, "Matt Dyce" <mdyce@mailinator.com>, "James Opp" <jopp@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nAlvin Finkel has submitted the manuscript, &quot;The West and Beyond: New Perspectives on an Imagined Region&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+6	1048585	2	3	2026-09-08 09:34:46	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Al Zacharia,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=2' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=2</a><br><br>Username: alzacharia<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+7	1048585	2	3	2026-09-08 09:34:50	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=2' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=2</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+8	1048585	3	21	2026-09-08 09:35:18	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Bob Barnetson" <bbarnetson@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Bob Barnetson:<br />\n<br />\nThank you for submitting the manuscript, &quot;The Political Economy of Workplace Injury in Canada&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/3' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/3</a><br />\nUsername: bbarnetson<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+9	1048585	4	22	2026-09-08 09:35:58	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Bart Beaty:<br />\n<br />\nThank you for submitting the manuscript, &quot;How Canadians Communicate: Contexts of Canadian Popular Culture&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/4' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/4</a><br />\nUsername: bbeaty<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+10	1048585	4	22	2026-09-08 09:35:58	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nBart Beaty has submitted the manuscript, &quot;How Canadians Communicate: Contexts of Canadian Popular Culture&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+11	1048585	4	3	2026-09-08 09:36:10	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Aisla McCrae,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=4' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=4</a><br><br>Username: amccrae<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+12	1048585	4	3	2026-09-08 09:36:12	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>, "Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Bart Beaty; Toby Miller, Ira Wagman, Will Straw:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "How Canadians Communicate: Contexts of Canadian Popular Culture".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">http://localhost/index.php/publicknowledge/authorDashboard/submission/4</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+13	1048585	4	3	2026-09-08 09:36:17	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Al Zacharia,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=4' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=4</a><br><br>Username: alzacharia<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+14	1048585	4	3	2026-09-08 09:36:19	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>, "Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Bart Beaty; Toby Miller, Ira Wagman, Will Straw:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "How Canadians Communicate: Contexts of Canadian Popular Culture".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">http://localhost/index.php/publicknowledge/authorDashboard/submission/4</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+23	1048585	6	24	2026-09-08 09:38:26	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Greg Bobish" <gbobish@mailinator.com>, "Daryl Bullis" <dbullis@mailinator.com>, "Jenna Hecker" <jhecker@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nDeborah Bernnard has submitted the manuscript, &quot;The Information Literacy User’s Guide&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+15	1048585	4	3	2026-09-08 09:36:26	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Bart Beaty" <bbeaty@mailinator.com>, "Toby Miller" <tmiller@mailinator.com>, "Ira Wagman" <awagman@mailinator.com>, "Will Straw" <wstraw@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Bart Beaty; Toby Miller, Ira Wagman, Will Straw:<br><br>The editing of your manuscript, "How Canadians Communicate: Contexts of Canadian Popular Culture," is complete. We are now sending it to production.<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/4">http://localhost/index.php/publicknowledge/authorDashboard/submission/4</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+16	1048585	5	23	2026-09-08 09:37:02	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Chantal Allan" <callan@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Chantal Allan:<br />\n<br />\nThank you for submitting the manuscript, &quot;Bomb Canada and Other Unkind Remarks in the American Media&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/5' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a><br />\nUsername: callan<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+17	1048585	5	3	2026-09-08 09:37:12	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Paul Hudson,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5</a><br><br>Username: phudson<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+18	1048585	5	3	2026-09-08 09:37:13	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Chantal Allan:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Bomb Canada and Other Unkind Remarks in the American Media".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+19	1048585	5	3	2026-09-08 09:37:19	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=5</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+20	1048585	5	3	2026-09-08 09:37:20	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Chantal Allan:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Bomb Canada and Other Unkind Remarks in the American Media".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+21	1048585	5	3	2026-09-08 09:37:27	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Chantal Allan" <callan@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Chantal Allan:<br><br>The editing of your manuscript, "Bomb Canada and Other Unkind Remarks in the American Media," is complete. We are now sending it to production.<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/5">http://localhost/index.php/publicknowledge/authorDashboard/submission/5</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+22	1048585	6	24	2026-09-08 09:38:26	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Deborah Bernnard" <dbernnard@mailinator.com>	\N	dbuskins@mailinator.com	[JPK] Submission Acknowledgement	Deborah Bernnard:<br />\n<br />\nThank you for submitting the manuscript, &quot;The Information Literacy User’s Guide&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/6' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/6</a><br />\nUsername: dbernnard<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+24	1048585	6	6	2026-09-08 09:38:44	805306372	"Minoti Inoue" <minoue@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>, "David Buskins" <dbuskins@mailinator.com>	\N	\N	[JPK] Editor Recommendation	<p>Daniel Barnes, David Buskins:<br><br>The recommendation regarding the submission to Public Knowledge Press, "The Information Literacy User’s Guide" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+25	1048585	7	25	2026-09-08 09:39:41	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Dietmar Kennepohl:<br />\n<br />\nThank you for submitting the manuscript, &quot;Accessible Elements: Teaching Science Online and at a Distance&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/7' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/7</a><br />\nUsername: dkennepohl<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+26	1048585	7	25	2026-09-08 09:39:41	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Terry Anderson" <tanderson@mailinator.com>, "Paul Gorsky" <pgorsky@mailinator.com>, "Gale Parchoma" <gparchoma@mailinator.com>, "Stuart Palmer" <spalmer@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nDietmar Kennepohl has submitted the manuscript, &quot;Accessible Elements: Teaching Science Online and at a Distance&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+27	1048585	7	3	2026-09-08 09:39:54	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Adela Gallego,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=7</a><br><br>Username: agallego<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+28	1048585	7	3	2026-09-08 09:39:56	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Dietmar Kennepohl" <dkennepohl@mailinator.com>, "Terry Anderson" <tanderson@mailinator.com>, "Paul Gorsky" <pgorsky@mailinator.com>, "Gale Parchoma" <gparchoma@mailinator.com>, "Stuart Palmer" <spalmer@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Dietmar Kennepohl; Terry Anderson, Paul Gorsky, Gale Parchoma, Stuart Palmer:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Accessible Elements: Teaching Science Online and at a Distance".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/7">http://localhost/index.php/publicknowledge/authorDashboard/submission/7</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+29	1048585	8	3	2026-09-08 09:40:10	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Daniel Barnes:<br />\n<br />\nThank you for submitting the manuscript, &quot;Editorial&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/8' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/8</a><br />\nUsername: dbarnes<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+30	1048585	9	26	2026-09-08 09:40:59	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Fernando Perini" <fperini@mailinator.com>	\N	dbuskins@mailinator.com	[JPK] Submission Acknowledgement	Fernando Perini:<br />\n<br />\nThank you for submitting the manuscript, &quot;Enabling Openness: The future of the information society in Latin America and the Caribbean&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/9' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/9</a><br />\nUsername: fperini<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+31	1048585	9	26	2026-09-08 09:40:59	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Robin Mansell" <rmansell@mailinator.com>, "Hernan Galperin" <hgalperin@mailinator.com>, "Pablo Bello" <pbello@mailinator.com>, "Eleonora Rabinovich" <erabinovich@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nFernando Perini has submitted the manuscript, &quot;Enabling Openness: The future of the information society in Latin America and the Caribbean&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+32	1048585	10	27	2026-09-08 09:41:49	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Jennifer Brower" <jbrower@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Jennifer Brower:<br />\n<br />\nThank you for submitting the manuscript, &quot;Lost Tracks: Buffalo National Park, 1909-1939&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/10' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/10</a><br />\nUsername: jbrower<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+33	1048585	11	28	2026-09-08 09:42:05	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Jonathan Locke Hart:<br />\n<br />\nThank you for submitting the manuscript, &quot;Dreamwork&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/11' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/11</a><br />\nUsername: jlockehart<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+34	1048585	11	3	2026-09-08 09:42:15	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Aisla McCrae,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11</a><br><br>Username: amccrae<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+35	1048585	11	3	2026-09-08 09:42:16	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Jonathan Locke Hart:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Dreamwork".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">http://localhost/index.php/publicknowledge/authorDashboard/submission/11</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+36	1048585	11	3	2026-09-08 09:42:21	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Adela Gallego,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11</a><br><br>Username: agallego<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+37	1048585	11	3	2026-09-08 09:42:24	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=11</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+38	1048585	11	10	2026-09-08 09:42:28	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Dreamwork,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-06, if not before.<br />\n<br />\nAdela Gallego<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+39	1048585	11	12	2026-09-08 09:42:35	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Dreamwork,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-06, if not before.<br />\n<br />\nGonzalo Favio<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+40	1048585	11	3	2026-09-08 09:42:46	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Jonathan Locke Hart" <jlockehart@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Jonathan Locke Hart:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Dreamwork".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/11">http://localhost/index.php/publicknowledge/authorDashboard/submission/11</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+41	1048585	12	29	2026-09-08 09:43:33	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Laurent Elder" <lelder@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Laurent Elder:<br />\n<br />\nThank you for submitting the manuscript, &quot;Connecting ICTs to Development&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/12' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/12</a><br />\nUsername: lelder<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+42	1048585	12	29	2026-09-08 09:43:33	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Frank Tulus" <ftulus@mailinator.com>, "Raymond Hyma" <rhyma@mailinator.com>, "John Valk" <jvalk@mailinator.com>, "Khaled Fourati" <fkourati@mailinator.com>, "Jeremy de Beer" <jdebeer@mailinator.com>, "Sara Bannerman" <sbannerman@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nLaurent Elder has submitted the manuscript, &quot;Connecting ICTs to Development&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+43	1048585	12	3	2026-09-08 09:43:45	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Julie Janssen,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12</a><br><br>Username: jjanssen<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+44	1048585	12	3	2026-09-08 09:43:50	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Paul Hudson,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12</a><br><br>Username: phudson<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+45	1048585	12	3	2026-09-08 09:43:54	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Aisla McCrae" <amccrae@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Aisla McCrae,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=12</a><br><br>Username: amccrae<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+46	1048585	12	8	2026-09-08 09:43:59	1073741829	"Paul Hudson" <phudson@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Connecting ICTs to Development,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-06, if not before.<br />\n<br />\nPaul Hudson<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+47	1048585	13	30	2026-09-08 09:44:36	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Mohamed Ally:<br />\n<br />\nThank you for submitting the manuscript, &quot;Mobile Learning: Transforming the Delivery of Education and Training&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/13' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/13</a><br />\nUsername: mally<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+48	1048585	13	30	2026-09-08 09:44:36	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"John Traxler" <jtraxler@mailinator.com>, "Marguerite Koole" <mkoole@mailinator.com>, "Torstein Rekkedal" <trekkedal@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nMohamed Ally has submitted the manuscript, &quot;Mobile Learning: Transforming the Delivery of Education and Training&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+49	1048585	13	3	2026-09-08 09:44:48	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Paul Hudson,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Username: phudson<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+50	1048585	13	3	2026-09-08 09:44:50	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>, "John Traxler" <jtraxler@mailinator.com>, "Marguerite Koole" <mkoole@mailinator.com>, "Torstein Rekkedal" <trekkedal@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Mohamed Ally; John Traxler, Marguerite Koole, Torstein Rekkedal:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Mobile Learning: Transforming the Delivery of Education and Training".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">http://localhost/index.php/publicknowledge/authorDashboard/submission/13</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+51	1048585	13	3	2026-09-08 09:44:55	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Adela Gallego,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Username: agallego<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+52	1048585	13	3	2026-09-08 09:44:59	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Al Zacharia,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Username: alzacharia<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+53	1048585	13	3	2026-09-08 09:45:04	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=13</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+54	1048585	13	10	2026-09-08 09:45:08	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Mobile Learning: Transforming the Delivery of Education and Training,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-06, if not before.<br />\n<br />\nAdela Gallego<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+55	1048585	13	12	2026-09-08 09:45:17	1073741829	"Gonzalo Favio" <gfavio@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;Mobile Learning: Transforming the Delivery of Education and Training,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-06, if not before.<br />\n<br />\nGonzalo Favio<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+56	1048585	13	3	2026-09-08 09:45:30	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Mohamed Ally" <mally@mailinator.com>, "John Traxler" <jtraxler@mailinator.com>, "Marguerite Koole" <mkoole@mailinator.com>, "Torstein Rekkedal" <trekkedal@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Mohamed Ally; John Traxler, Marguerite Koole, Torstein Rekkedal:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "Mobile Learning: Transforming the Delivery of Education and Training".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/13">http://localhost/index.php/publicknowledge/authorDashboard/submission/13</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+57	1048585	14	31	2026-09-08 09:46:12	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Michael Dawson:<br />\n<br />\nThank you for submitting the manuscript, &quot;From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/14' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/14</a><br />\nUsername: mdawson<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+58	1048585	14	31	2026-09-08 09:46:12	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nMichael Dawson has submitted the manuscript, &quot;From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+59	1048585	14	3	2026-09-08 09:46:25	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Julie Janssen,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=14' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=14</a><br><br>Username: jjanssen<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+60	1048585	14	3	2026-09-08 09:46:27	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>, "Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Michael Dawson; Brian Dupuis, Michael Wilson:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">http://localhost/index.php/publicknowledge/authorDashboard/submission/14</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+61	1048585	14	3	2026-09-08 09:46:32	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Al Zacharia,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=14' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=14</a><br><br>Username: alzacharia<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+62	1048585	14	3	2026-09-08 09:46:34	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>, "Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Michael Dawson; Brian Dupuis, Michael Wilson:<br><br>We have reached a decision regarding your submission to Public Knowledge Press, "From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots".<br><br>Our decision is to:<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">http://localhost/index.php/publicknowledge/authorDashboard/submission/14</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+63	1048585	14	3	2026-09-08 09:46:41	805306369	"Daniel Barnes" <dbarnes@mailinator.com>	"Michael Dawson" <mdawson@mailinator.com>, "Brian Dupuis" <bdupuis@mailinator.com>, "Michael Wilson" <mwilson@mailinator.com>	\N	\N	[JPK] Editor Decision	<p>Michael Dawson; Brian Dupuis, Michael Wilson:<br><br>The editing of your manuscript, "From Bricks to Brains: The Embodied Cognitive Science of LEGO Robots," is complete. We are now sending it to production.<br><br>Manuscript URL: <a class="submissionUrl-style-class" href="http://localhost/index.php/publicknowledge/authorDashboard/submission/14">http://localhost/index.php/publicknowledge/authorDashboard/submission/14</a></p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+64	1048585	15	32	2026-09-08 09:47:47	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Max Foran" <mforan@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Max Foran:<br />\n<br />\nThank you for submitting the manuscript, &quot;Expansive Discourses: Urban Sprawl in Calgary, 1945-1978&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/15' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/15</a><br />\nUsername: mforan<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+65	1048585	16	33	2026-09-08 09:48:22	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Michael Power" <mpower@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Michael Power:<br />\n<br />\nThank you for submitting the manuscript, &quot;A Designer's Log: Case Studies in Instructional Design&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/16' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/16</a><br />\nUsername: mpower<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+66	1048585	16	3	2026-09-08 09:48:34	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Adela Gallego" <agallego@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Adela Gallego,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16</a><br><br>Username: agallego<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+67	1048585	16	3	2026-09-08 09:48:38	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Al Zacharia" <alzacharia@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Al Zacharia,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16</a><br><br>Username: alzacharia<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+68	1048585	16	3	2026-09-08 09:48:42	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Gonzalo Favio" <gfavio@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Gonzalo Favio,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=16</a><br><br>Username: gfavio<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+69	1048585	16	10	2026-09-08 09:48:47	1073741829	"Adela Gallego" <agallego@mailinator.com>	"Daniel Barnes" <dbarnes@mailinator.com>	\N	\N	[JPK] Able to Review	Editor(s):<br />\n<br />\nI am able and willing to review the submission, &quot;A Designer's Log: Case Studies in Instructional Design,&quot; for Public Knowledge Press. Thank you for thinking of me, and I plan to have the review completed by its due date, 2026-10-06, if not before.<br />\n<br />\nAdela Gallego<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+70	1048585	17	34	2026-09-08 09:49:59	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Matthew Smith" <msmith@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Matthew Smith:<br />\n<br />\nThank you for submitting the manuscript, &quot;Open Development: Networked Innovations in International Development&quot; to Public Knowledge Press. With the online press management system that we are using, you will be able to track its progress through the editorial process by logging in to the press web site:<br />\n<br />\nManuscript URL: <a href='http://localhost/index.php/publicknowledge/authorDashboard/submission/17' class='submissionUrl-style-class'>http://localhost/index.php/publicknowledge/authorDashboard/submission/17</a><br />\nUsername: msmith<br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+71	1048585	17	34	2026-09-08 09:49:59	\N	"Ramiro Vaca" <rvaca@mailinator.com>	"Yochai Benkler" <ybenkler@mailinator.com>, "Katherine Reilly" <kreilly@mailinator.com>, "Melissa Loudon" <mloudon@mailinator.com>, "Ulrike Rivett" <urivett@mailinator.com>, "Mark Graham" <mgraham@mailinator.com>, "Håvard Haarstad" <hhaarstad@mailinator.com>, "Marshall Smith" <masmith@mailinator.com>	\N	\N	[JPK] Submission Acknowledgement	Hello,<br />\n<br />\nMatthew Smith has submitted the manuscript, &quot;Open Development: Networked Innovations in International Development&quot; to Public Knowledge Press. <br />\n<br />\nIf you have any questions, please contact me. Thank you for considering this press as a venue for your work.<br />\n<br />\nRamiro Vaca<br/>Public Knowledge Press<br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+72	1048585	17	3	2026-09-08 09:50:15	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Julie Janssen" <jjanssen@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Julie Janssen,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17</a><br><br>Username: jjanssen<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+73	1048585	17	3	2026-09-08 09:50:20	\N	"Daniel Barnes" <dbarnes@mailinator.com>	"Paul Hudson" <phudson@mailinator.com>	\N	\N	[JPK] Manuscript Review Request	<p>Dear Paul Hudson,<br><br>You have been selected as a potential reviewer of the following submission. Below is an overview of the submission, as well as the timeline for this review. We hope that you are able to participate.<br><br>Please log into the press web site by 2026-10-06 to indicate whether you will undertake the review or not, as well as to access the submission and to record your review and recommendation.<br><br>The review itself is due 2026-10-06.<br><br>Submission URL: <a href='http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17' class='submissionReviewUrl-style-class'>http://localhost/index.php/publicknowledge/reviewer/submission?submissionId=17</a><br><br>Username: phudson<br><br>Thank you for considering this request.<br><br><br>Sincerely,<br>Daniel Barnes<br>University of Melbourne<br>dbarnes@mailinator.com</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
 \.
 
 
@@ -5407,8 +5407,8 @@ COPY public.email_templates_default (email_id, email_key, can_disable, can_edit,
 38	EMAIL_LINK	0	1	1048576	\N	\N
 39	STATISTICS_REPORT_NOTIFICATION	1	1	16	17	\N
 40	ANNOUNCEMENT	0	1	16	1048576	\N
-41	PAYPAL_INVESTIGATE_PAYMENT	0	1	\N	\N	\N
-42	MANUAL_PAYMENT_NOTIFICATION	0	1	\N	\N	\N
+41	MANUAL_PAYMENT_NOTIFICATION	0	1	\N	\N	\N
+42	PAYPAL_INVESTIGATE_PAYMENT	0	1	\N	\N	\N
 \.
 
 
@@ -5458,8 +5458,8 @@ INDEX_COMPLETE	en_US	Index Galleys Complete	{$editorialContactName}:<br />\n<br 
 EMAIL_LINK	en_US	Manuscript of Possible Interest	Thought you might be interested in seeing &quot;{$submissionTitle}&quot; by {$authorName} published in Vol {$volume}, No {$number} ({$year}) of {$contextName} at &quot;{$monographUrl}&quot;.	This email template provides a registered reader with the opportunity to send information about a monograph to somebody who may be interested. It is available via the Reading Tools and must be enabled by the Press Manager in the Reading Tools Administration page.
 STATISTICS_REPORT_NOTIFICATION	en_US	Editorial activity for {$month}, {$year}	\n{$name}, <br />\n<br />\nYour press health report for {$month}, {$year} is now available. Your key stats for this month are below.<br />\n<ul>\n\t<li>New submissions this month: {$newSubmissions}</li>\n\t<li>Declined submissions this month: {$declinedSubmissions}</li>\n\t<li>Accepted submissions this month: {$acceptedSubmissions}</li>\n\t<li>Total submissions in the system: {$totalSubmissions}</li>\n</ul>\nLogin to the the press to view more detailed <a href="{$editorialStatsLink}">editorial trends</a> and <a href="{$publicationStatsLink}">published article stats</a>. A full copy of this month's editorial trends is attached.<br />\n<br />\nSincerely,<br />\n{$principalContactSignature}	This email is automatically sent monthly to editors and journal managers to provide them a system health overview.
 ANNOUNCEMENT	en_US	{$title}	<b>{$title}</b><br />\n<br />\n{$summary}<br />\n<br />\nVisit our website to read the <a href="{$url}">full announcement</a>.	This email is sent when a new announcement is created.
-PAYPAL_INVESTIGATE_PAYMENT	en_US	Unusual PayPal Activity	Open Monograph Press has encountered unusual activity relating to PayPal payment support for the press {$contextName}. This activity may need further investigation or manual intervention.<br />\n                       <br />\nThis email was generated by the Open Monograph Press PayPal plugin.<br />\n<br />\nFull post information for the request:<br />\n{$postInfo}<br />\n<br />\nAdditional information (if supplied):<br />\n{$additionalInfo}<br />\n<br />\nServer vars:<br />\n{$serverVars}<br />\n	This email template is used to notify the press' primary contact that suspicious activity or activity requiring manual intervention was encountered by the PayPal plugin.
 MANUAL_PAYMENT_NOTIFICATION	en_US	Manual Payment Notification	A manual payment needs to be processed for the press {$contextName} and the user {$userFullName} (username &quot;{$userName}&quot;).<br />\n<br />\nThe item being paid for is &quot;{$itemName}&quot;.<br />\nThe cost is {$itemCost} ({$itemCurrencyCode}).<br />\n<br />\nThis email was generated by the Open Monograph Press Manual Payment plugin.	This email template is used to notify a press manager contact that a manual payment was requested.
+PAYPAL_INVESTIGATE_PAYMENT	en_US	Unusual PayPal Activity	Open Monograph Press has encountered unusual activity relating to PayPal payment support for the press {$contextName}. This activity may need further investigation or manual intervention.<br />\n                       <br />\nThis email was generated by the Open Monograph Press PayPal plugin.<br />\n<br />\nFull post information for the request:<br />\n{$postInfo}<br />\n<br />\nAdditional information (if supplied):<br />\n{$additionalInfo}<br />\n<br />\nServer vars:<br />\n{$serverVars}<br />\n	This email template is used to notify the press' primary contact that suspicious activity or activity requiring manual intervention was encountered by the PayPal plugin.
 NOTIFICATION	fr_CA	Nouvelle notification de {$siteTitle}	Vous avez reçu une nouvelle notification de {$siteTitle}:<br />\n<br />\n{$notificationContents}<br />\n<br />\nLien: {$url}<br />\n<br />\n{$principalContactSignature}	Ce courriel est envoyé aux utilisateurs qui ont demandé qu'on leur envoie ce type de notification par courriel.
 PASSWORD_RESET_CONFIRM	fr_CA	Confirmation de réinitialisation du mot de passe	Nous avons reçu une requête de réinitialisation de votre mot de passe pour le site Web {$siteTitle}.<br />\n<br />\nSi vous n'avez pas fait cette requête, veuillez ignorer ce courriel et votre mot de passe demeurera le même. Si vous souhaitez modifier votre mot de passe, cliquez sur l'adresse URL ci-dessous.<br />\n<br />\nModifier mon mot de passe: {$url}<br />\n<br />\n{$principalContactSignature}	Ce courriel est envoyé à un utilisateur lorsqu'il a indiqué avoir oublié son mot de passe ou être incapable d'ouvrir une session. On lui fournit une adresse URL sur laquelle il peut cliquer pour modifier son mot de passe.
 USER_REGISTER	fr_CA	Inscription à la presse	{$userFullName}<br />\n<br />\nVous êtes désormais inscrit à la presse {$contextName}. Ce courriel contient votre nom d'utilisateur et votre mot de passe, dont vous aurez besoin pour tous vos travaux au sein de la presse. Vous pouvez demander que l'on retire votre nom de la liste des utilisateurs en tout temps. Il suffit de me contacter.<br />\n<br />\n<br />\nNom d'utilisateur: {$username}<br />\nMot de passe: {$password}<br />\n<br />\nMerci,<br />\n{$principalContactSignature}	Ce courriel est envoyé à un nouvel utilisateur afin de lui souhaiter la bienvenue dans le système et lui fournir son nom d'utilisateur et son mot de passe pour ses dossiers.
@@ -5508,473 +5508,475 @@ COPY public.email_templates_settings (email_id, locale, setting_name, setting_va
 --
 
 COPY public.event_log (log_id, assoc_type, assoc_id, user_id, date_logged, event_type, message, is_translated) FROM stdin;
-1	1048585	1	19	2026-09-04 09:31:11	268435458	submission.event.general.metadataUpdated	0
-2	1048585	1	19	2026-09-04 09:31:11	268435458	submission.event.general.metadataUpdated	0
-3	515	1	19	2026-09-04 09:31:12	1342177281	submission.event.fileUploaded	0
-4	1048585	1	19	2026-09-04 09:31:12	1342177288	submission.event.fileRevised	0
-5	515	1	19	2026-09-04 09:31:12	1342177296	submission.event.fileEdited	0
-6	1048585	1	19	2026-09-04 09:31:12	1342177296	submission.event.fileEdited	0
-7	1048585	1	19	2026-09-04 09:31:24	268435458	submission.event.general.metadataUpdated	0
-8	1048585	1	19	2026-09-04 09:31:25	268435457	submission.event.submissionSubmitted	0
-9	1048585	1	3	2026-09-04 09:31:29	805306371	log.editor.decision	0
-10	1048585	1	3	2026-09-04 09:31:34	1073741825	log.review.reviewerAssigned	0
-11	1048585	1	3	2026-09-04 09:31:36	805306371	log.editor.decision	0
-12	1048585	1	3	2026-09-04 09:31:40	268435459	submission.event.participantAdded	0
-13	1048585	2	20	2026-09-04 09:31:46	268435458	submission.event.general.metadataUpdated	0
-14	1048585	2	20	2026-09-04 09:31:46	268435458	submission.event.general.metadataUpdated	0
-15	515	2	20	2026-09-04 09:31:47	1342177281	submission.event.fileUploaded	0
-16	1048585	2	20	2026-09-04 09:31:47	1342177288	submission.event.fileRevised	0
-17	515	2	20	2026-09-04 09:31:47	1342177296	submission.event.fileEdited	0
-18	1048585	2	20	2026-09-04 09:31:47	1342177296	submission.event.fileEdited	0
-19	515	3	20	2026-09-04 09:31:47	1342177281	submission.event.fileUploaded	0
-20	1048585	2	20	2026-09-04 09:31:47	1342177288	submission.event.fileRevised	0
-21	515	3	20	2026-09-04 09:31:48	1342177296	submission.event.fileEdited	0
-22	1048585	2	20	2026-09-04 09:31:48	1342177296	submission.event.fileEdited	0
-23	515	4	20	2026-09-04 09:31:48	1342177281	submission.event.fileUploaded	0
-24	1048585	2	20	2026-09-04 09:31:48	1342177288	submission.event.fileRevised	0
-25	515	4	20	2026-09-04 09:31:48	1342177296	submission.event.fileEdited	0
-26	1048585	2	20	2026-09-04 09:31:48	1342177296	submission.event.fileEdited	0
-27	515	5	20	2026-09-04 09:31:48	1342177281	submission.event.fileUploaded	0
-28	1048585	2	20	2026-09-04 09:31:48	1342177288	submission.event.fileRevised	0
-29	515	5	20	2026-09-04 09:31:48	1342177296	submission.event.fileEdited	0
-30	1048585	2	20	2026-09-04 09:31:48	1342177296	submission.event.fileEdited	0
-31	1048585	2	20	2026-09-04 09:31:51	268435458	submission.event.general.metadataUpdated	0
-32	1048585	2	20	2026-09-04 09:31:54	268435458	submission.event.general.metadataUpdated	0
-33	1048585	2	20	2026-09-04 09:31:56	268435458	submission.event.general.metadataUpdated	0
-34	1048585	2	20	2026-09-04 09:31:59	268435458	submission.event.general.metadataUpdated	0
-35	1048585	2	20	2026-09-04 09:32:01	268435458	submission.event.general.metadataUpdated	0
-36	1048585	2	20	2026-09-04 09:32:04	268435458	submission.event.general.metadataUpdated	0
-37	1048585	2	20	2026-09-04 09:32:06	268435458	submission.event.general.metadataUpdated	0
-38	1048585	2	20	2026-09-04 09:32:33	268435458	submission.event.general.metadataUpdated	0
-39	1048585	2	20	2026-09-04 09:32:34	268435457	submission.event.submissionSubmitted	0
-40	1048585	2	3	2026-09-04 09:32:40	805306371	log.editor.decision	0
-41	515	6	3	2026-09-04 09:32:40	1342177281	submission.event.fileUploaded	0
-42	1048585	2	3	2026-09-04 09:32:40	1342177288	submission.event.fileRevised	0
-43	515	7	3	2026-09-04 09:32:40	1342177281	submission.event.fileUploaded	0
-44	1048585	2	3	2026-09-04 09:32:40	1342177288	submission.event.fileRevised	0
-45	515	8	3	2026-09-04 09:32:40	1342177281	submission.event.fileUploaded	0
-46	1048585	2	3	2026-09-04 09:32:40	1342177288	submission.event.fileRevised	0
-47	515	9	3	2026-09-04 09:32:40	1342177281	submission.event.fileUploaded	0
-48	1048585	2	3	2026-09-04 09:32:40	1342177288	submission.event.fileRevised	0
-49	1048585	2	3	2026-09-04 09:32:46	1073741825	log.review.reviewerAssigned	0
-50	1048585	2	3	2026-09-04 09:32:51	1073741825	log.review.reviewerAssigned	0
-51	1048585	3	21	2026-09-04 09:32:58	268435458	submission.event.general.metadataUpdated	0
-52	1048585	3	21	2026-09-04 09:32:58	268435458	submission.event.general.metadataUpdated	0
-53	515	10	21	2026-09-04 09:32:58	1342177281	submission.event.fileUploaded	0
-54	1048585	3	21	2026-09-04 09:32:58	1342177288	submission.event.fileRevised	0
-55	515	10	21	2026-09-04 09:32:59	1342177296	submission.event.fileEdited	0
-56	1048585	3	21	2026-09-04 09:32:59	1342177296	submission.event.fileEdited	0
-57	1048585	3	21	2026-09-04 09:33:18	268435458	submission.event.general.metadataUpdated	0
-58	1048585	3	21	2026-09-04 09:33:19	268435457	submission.event.submissionSubmitted	0
-59	1048585	4	22	2026-09-04 09:33:25	268435458	submission.event.general.metadataUpdated	0
-60	1048585	4	22	2026-09-04 09:33:25	268435458	submission.event.general.metadataUpdated	0
-61	515	11	22	2026-09-04 09:33:26	1342177281	submission.event.fileUploaded	0
-62	1048585	4	22	2026-09-04 09:33:26	1342177288	submission.event.fileRevised	0
-63	515	11	22	2026-09-04 09:33:26	1342177296	submission.event.fileEdited	0
-64	1048585	4	22	2026-09-04 09:33:26	1342177296	submission.event.fileEdited	0
-65	515	12	22	2026-09-04 09:33:26	1342177281	submission.event.fileUploaded	0
-66	1048585	4	22	2026-09-04 09:33:26	1342177288	submission.event.fileRevised	0
-67	515	12	22	2026-09-04 09:33:27	1342177296	submission.event.fileEdited	0
-68	1048585	4	22	2026-09-04 09:33:27	1342177296	submission.event.fileEdited	0
-69	515	13	22	2026-09-04 09:33:27	1342177281	submission.event.fileUploaded	0
-70	1048585	4	22	2026-09-04 09:33:27	1342177288	submission.event.fileRevised	0
-71	515	13	22	2026-09-04 09:33:27	1342177296	submission.event.fileEdited	0
-72	1048585	4	22	2026-09-04 09:33:27	1342177296	submission.event.fileEdited	0
-73	515	14	22	2026-09-04 09:33:27	1342177281	submission.event.fileUploaded	0
-74	1048585	4	22	2026-09-04 09:33:27	1342177288	submission.event.fileRevised	0
-75	515	14	22	2026-09-04 09:33:27	1342177296	submission.event.fileEdited	0
-76	1048585	4	22	2026-09-04 09:33:27	1342177296	submission.event.fileEdited	0
-77	1048585	4	22	2026-09-04 09:33:31	268435458	submission.event.general.metadataUpdated	0
-78	1048585	4	22	2026-09-04 09:33:33	268435458	submission.event.general.metadataUpdated	0
-79	1048585	4	22	2026-09-04 09:33:36	268435458	submission.event.general.metadataUpdated	0
-80	1048585	4	22	2026-09-04 09:34:01	268435458	submission.event.general.metadataUpdated	0
-81	1048585	4	22	2026-09-04 09:34:02	268435457	submission.event.submissionSubmitted	0
-82	1048585	4	3	2026-09-04 09:34:08	805306371	log.editor.decision	0
-83	1048585	4	3	2026-09-04 09:34:14	1073741825	log.review.reviewerAssigned	0
-84	1048585	4	3	2026-09-04 09:34:16	805306371	log.editor.decision	0
-85	1048585	4	3	2026-09-04 09:34:21	1073741825	log.review.reviewerAssigned	0
-86	1048585	4	3	2026-09-04 09:34:23	805306371	log.editor.decision	0
-87	1048585	4	3	2026-09-04 09:34:28	268435459	submission.event.participantAdded	0
-88	1048585	4	3	2026-09-04 09:34:31	805306371	log.editor.decision	0
-89	1048585	4	3	2026-09-04 09:34:36	268435459	submission.event.participantAdded	0
-90	1048585	5	23	2026-09-04 09:34:43	268435458	submission.event.general.metadataUpdated	0
-91	1048585	5	23	2026-09-04 09:34:43	268435458	submission.event.general.metadataUpdated	0
-92	515	15	23	2026-09-04 09:34:44	1342177281	submission.event.fileUploaded	0
-93	1048585	5	23	2026-09-04 09:34:44	1342177288	submission.event.fileRevised	0
-94	515	15	23	2026-09-04 09:34:44	1342177296	submission.event.fileEdited	0
-95	1048585	5	23	2026-09-04 09:34:44	1342177296	submission.event.fileEdited	0
-96	1048585	5	23	2026-09-04 09:35:07	268435458	submission.event.general.metadataUpdated	0
-97	1048585	5	23	2026-09-04 09:35:08	268435457	submission.event.submissionSubmitted	0
-98	1048585	5	3	2026-09-04 09:35:14	805306371	log.editor.decision	0
-99	1048585	5	3	2026-09-04 09:35:18	1073741825	log.review.reviewerAssigned	0
-100	1048585	5	3	2026-09-04 09:35:20	805306371	log.editor.decision	0
-101	1048585	5	3	2026-09-04 09:35:26	1073741825	log.review.reviewerAssigned	0
-102	1048585	5	3	2026-09-04 09:35:28	805306371	log.editor.decision	0
-103	1048585	5	3	2026-09-04 09:35:32	268435459	submission.event.participantAdded	0
-104	1048585	5	3	2026-09-04 09:35:34	805306371	log.editor.decision	0
-105	1048585	5	3	2026-09-04 09:35:39	268435459	submission.event.participantAdded	0
-106	1048585	5	3	2026-09-04 09:35:42	268435459	submission.event.participantAdded	0
-107	1048585	5	3	2026-09-04 09:35:46	268435474	submission.event.publicationFormatCreated	0
-108	515	16	3	2026-09-04 09:35:48	1342177281	submission.event.fileUploaded	0
-109	1048585	5	3	2026-09-04 09:35:48	1342177288	submission.event.fileRevised	0
-110	1048585	5	3	2026-09-04 09:35:50	268435464	submission.event.publicationFormatPublished	0
-111	1048585	5	3	2026-09-04 09:35:51	268435476	submission.event.publicationFormatMadeAvailable	0
-112	515	16	3	2026-09-04 09:35:52	1342177296	submission.event.fileEdited	0
-113	1048585	5	3	2026-09-04 09:35:52	1342177296	submission.event.fileEdited	0
-114	515	16	3	2026-09-04 09:35:52	1342177287	submission.event.signoffSignoff	0
-115	1048585	5	3	2026-09-04 09:35:56	268435462	publication.event.published	0
-116	1048585	6	24	2026-09-04 09:36:02	268435458	submission.event.general.metadataUpdated	0
-117	1048585	6	24	2026-09-04 09:36:02	268435458	submission.event.general.metadataUpdated	0
-118	515	17	24	2026-09-04 09:36:03	1342177281	submission.event.fileUploaded	0
-119	1048585	6	24	2026-09-04 09:36:03	1342177288	submission.event.fileRevised	0
-120	515	17	24	2026-09-04 09:36:03	1342177296	submission.event.fileEdited	0
-121	1048585	6	24	2026-09-04 09:36:03	1342177296	submission.event.fileEdited	0
-122	515	18	24	2026-09-04 09:36:03	1342177281	submission.event.fileUploaded	0
-123	1048585	6	24	2026-09-04 09:36:03	1342177288	submission.event.fileRevised	0
-124	515	18	24	2026-09-04 09:36:03	1342177296	submission.event.fileEdited	0
-125	1048585	6	24	2026-09-04 09:36:03	1342177296	submission.event.fileEdited	0
-126	515	19	24	2026-09-04 09:36:04	1342177281	submission.event.fileUploaded	0
-127	1048585	6	24	2026-09-04 09:36:04	1342177288	submission.event.fileRevised	0
-128	515	19	24	2026-09-04 09:36:04	1342177296	submission.event.fileEdited	0
-129	1048585	6	24	2026-09-04 09:36:04	1342177296	submission.event.fileEdited	0
-130	515	20	24	2026-09-04 09:36:04	1342177281	submission.event.fileUploaded	0
-131	1048585	6	24	2026-09-04 09:36:04	1342177288	submission.event.fileRevised	0
-132	515	20	24	2026-09-04 09:36:04	1342177296	submission.event.fileEdited	0
-133	1048585	6	24	2026-09-04 09:36:04	1342177296	submission.event.fileEdited	0
-134	1048585	6	24	2026-09-04 09:36:07	268435458	submission.event.general.metadataUpdated	0
-135	1048585	6	24	2026-09-04 09:36:10	268435458	submission.event.general.metadataUpdated	0
-136	1048585	6	24	2026-09-04 09:36:13	268435458	submission.event.general.metadataUpdated	0
-137	1048585	6	24	2026-09-04 09:36:36	268435458	submission.event.general.metadataUpdated	0
-138	1048585	6	24	2026-09-04 09:36:37	268435457	submission.event.submissionSubmitted	0
-139	1048585	6	3	2026-09-04 09:36:43	805306371	log.editor.decision	0
-140	515	21	3	2026-09-04 09:36:43	1342177281	submission.event.fileUploaded	0
-141	1048585	6	3	2026-09-04 09:36:43	1342177288	submission.event.fileRevised	0
-142	515	22	3	2026-09-04 09:36:43	1342177281	submission.event.fileUploaded	0
-143	1048585	6	3	2026-09-04 09:36:43	1342177288	submission.event.fileRevised	0
-144	515	23	3	2026-09-04 09:36:43	1342177281	submission.event.fileUploaded	0
-145	1048585	6	3	2026-09-04 09:36:43	1342177288	submission.event.fileRevised	0
-146	515	24	3	2026-09-04 09:36:43	1342177281	submission.event.fileUploaded	0
-147	1048585	6	3	2026-09-04 09:36:43	1342177288	submission.event.fileRevised	0
-148	1048585	6	3	2026-09-04 09:36:48	268435459	submission.event.participantAdded	0
-149	1048585	6	6	2026-09-04 09:36:56	805306372	log.editor.recommendation	0
-150	1048585	7	25	2026-09-04 09:37:09	268435458	submission.event.general.metadataUpdated	0
-151	1048585	7	25	2026-09-04 09:37:09	268435458	submission.event.general.metadataUpdated	0
-152	515	25	25	2026-09-04 09:37:09	1342177281	submission.event.fileUploaded	0
-153	1048585	7	25	2026-09-04 09:37:09	1342177288	submission.event.fileRevised	0
-154	515	25	25	2026-09-04 09:37:10	1342177296	submission.event.fileEdited	0
-155	1048585	7	25	2026-09-04 09:37:10	1342177296	submission.event.fileEdited	0
-156	515	26	25	2026-09-04 09:37:10	1342177281	submission.event.fileUploaded	0
-157	1048585	7	25	2026-09-04 09:37:10	1342177288	submission.event.fileRevised	0
-158	515	26	25	2026-09-04 09:37:10	1342177296	submission.event.fileEdited	0
-159	1048585	7	25	2026-09-04 09:37:10	1342177296	submission.event.fileEdited	0
-160	515	27	25	2026-09-04 09:37:10	1342177281	submission.event.fileUploaded	0
-161	1048585	7	25	2026-09-04 09:37:10	1342177288	submission.event.fileRevised	0
-162	515	27	25	2026-09-04 09:37:10	1342177296	submission.event.fileEdited	0
-163	1048585	7	25	2026-09-04 09:37:10	1342177296	submission.event.fileEdited	0
-164	515	28	25	2026-09-04 09:37:11	1342177281	submission.event.fileUploaded	0
-165	1048585	7	25	2026-09-04 09:37:11	1342177288	submission.event.fileRevised	0
-166	515	28	25	2026-09-04 09:37:11	1342177296	submission.event.fileEdited	0
-167	1048585	7	25	2026-09-04 09:37:11	1342177296	submission.event.fileEdited	0
-168	515	29	25	2026-09-04 09:37:11	1342177281	submission.event.fileUploaded	0
-169	1048585	7	25	2026-09-04 09:37:11	1342177288	submission.event.fileRevised	0
-170	515	29	25	2026-09-04 09:37:11	1342177296	submission.event.fileEdited	0
-171	1048585	7	25	2026-09-04 09:37:11	1342177296	submission.event.fileEdited	0
-172	1048585	7	25	2026-09-04 09:37:15	268435458	submission.event.general.metadataUpdated	0
-173	1048585	7	25	2026-09-04 09:37:17	268435458	submission.event.general.metadataUpdated	0
-174	1048585	7	25	2026-09-04 09:37:20	268435458	submission.event.general.metadataUpdated	0
-175	1048585	7	25	2026-09-04 09:37:23	268435458	submission.event.general.metadataUpdated	0
-176	1048585	7	25	2026-09-04 09:37:55	268435458	submission.event.general.metadataUpdated	0
-177	1048585	7	25	2026-09-04 09:37:56	268435457	submission.event.submissionSubmitted	0
-178	1048585	7	3	2026-09-04 09:38:03	805306371	log.editor.decision	0
-179	515	30	3	2026-09-04 09:38:03	1342177281	submission.event.fileUploaded	0
-180	1048585	7	3	2026-09-04 09:38:03	1342177288	submission.event.fileRevised	0
-181	515	31	3	2026-09-04 09:38:03	1342177281	submission.event.fileUploaded	0
-182	1048585	7	3	2026-09-04 09:38:03	1342177288	submission.event.fileRevised	0
-183	515	32	3	2026-09-04 09:38:03	1342177281	submission.event.fileUploaded	0
-184	1048585	7	3	2026-09-04 09:38:03	1342177288	submission.event.fileRevised	0
-185	515	33	3	2026-09-04 09:38:03	1342177281	submission.event.fileUploaded	0
-186	1048585	7	3	2026-09-04 09:38:03	1342177288	submission.event.fileRevised	0
-187	515	34	3	2026-09-04 09:38:03	1342177281	submission.event.fileUploaded	0
-188	1048585	7	3	2026-09-04 09:38:03	1342177288	submission.event.fileRevised	0
-189	1048585	7	3	2026-09-04 09:38:09	1073741825	log.review.reviewerAssigned	0
-190	1048585	7	3	2026-09-04 09:38:12	805306371	log.editor.decision	0
-191	1048585	7	3	2026-09-04 09:38:17	268435459	submission.event.participantAdded	0
-192	1048585	8	3	2026-09-04 09:38:24	268435458	submission.event.general.metadataUpdated	0
-193	1048585	8	3	2026-09-04 09:38:24	268435458	submission.event.general.metadataUpdated	0
-194	515	35	3	2026-09-04 09:38:25	1342177281	submission.event.fileUploaded	0
-195	1048585	8	3	2026-09-04 09:38:25	1342177288	submission.event.fileRevised	0
-196	515	35	3	2026-09-04 09:38:25	1342177296	submission.event.fileEdited	0
-197	1048585	8	3	2026-09-04 09:38:25	1342177296	submission.event.fileEdited	0
-198	1048585	8	3	2026-09-04 09:38:26	268435458	submission.event.general.metadataUpdated	0
-199	1048585	8	3	2026-09-04 09:38:27	268435457	submission.event.submissionSubmitted	0
-200	1048585	9	26	2026-09-04 09:38:33	268435458	submission.event.general.metadataUpdated	0
-201	1048585	9	26	2026-09-04 09:38:33	268435458	submission.event.general.metadataUpdated	0
-202	515	36	26	2026-09-04 09:38:33	1342177281	submission.event.fileUploaded	0
-203	1048585	9	26	2026-09-04 09:38:33	1342177288	submission.event.fileRevised	0
-204	515	36	26	2026-09-04 09:38:34	1342177296	submission.event.fileEdited	0
-205	1048585	9	26	2026-09-04 09:38:34	1342177296	submission.event.fileEdited	0
-206	515	37	26	2026-09-04 09:38:34	1342177281	submission.event.fileUploaded	0
-207	1048585	9	26	2026-09-04 09:38:34	1342177288	submission.event.fileRevised	0
-208	515	37	26	2026-09-04 09:38:34	1342177296	submission.event.fileEdited	0
-209	1048585	9	26	2026-09-04 09:38:34	1342177296	submission.event.fileEdited	0
-210	515	38	26	2026-09-04 09:38:34	1342177281	submission.event.fileUploaded	0
-211	1048585	9	26	2026-09-04 09:38:34	1342177288	submission.event.fileRevised	0
-212	515	38	26	2026-09-04 09:38:34	1342177296	submission.event.fileEdited	0
-213	1048585	9	26	2026-09-04 09:38:34	1342177296	submission.event.fileEdited	0
-214	515	39	26	2026-09-04 09:38:35	1342177281	submission.event.fileUploaded	0
-215	1048585	9	26	2026-09-04 09:38:35	1342177288	submission.event.fileRevised	0
-216	515	39	26	2026-09-04 09:38:35	1342177296	submission.event.fileEdited	0
-217	1048585	9	26	2026-09-04 09:38:35	1342177296	submission.event.fileEdited	0
-218	515	40	26	2026-09-04 09:38:35	1342177281	submission.event.fileUploaded	0
-219	1048585	9	26	2026-09-04 09:38:35	1342177288	submission.event.fileRevised	0
-220	515	40	26	2026-09-04 09:38:35	1342177296	submission.event.fileEdited	0
-221	1048585	9	26	2026-09-04 09:38:35	1342177296	submission.event.fileEdited	0
-222	1048585	9	26	2026-09-04 09:38:39	268435458	submission.event.general.metadataUpdated	0
-223	1048585	9	26	2026-09-04 09:38:41	268435458	submission.event.general.metadataUpdated	0
-224	1048585	9	26	2026-09-04 09:38:43	268435458	submission.event.general.metadataUpdated	0
-225	1048585	9	26	2026-09-04 09:38:46	268435458	submission.event.general.metadataUpdated	0
-226	1048585	9	26	2026-09-04 09:39:17	268435458	submission.event.general.metadataUpdated	0
-227	1048585	9	26	2026-09-04 09:39:19	268435457	submission.event.submissionSubmitted	0
-228	1048585	9	3	2026-09-04 09:39:25	805306371	log.editor.decision	0
-229	1048585	10	27	2026-09-04 09:39:34	268435458	submission.event.general.metadataUpdated	0
-230	1048585	10	27	2026-09-04 09:39:34	268435458	submission.event.general.metadataUpdated	0
-231	515	41	27	2026-09-04 09:39:34	1342177281	submission.event.fileUploaded	0
-232	1048585	10	27	2026-09-04 09:39:34	1342177288	submission.event.fileRevised	0
-233	515	41	27	2026-09-04 09:39:35	1342177296	submission.event.fileEdited	0
-234	1048585	10	27	2026-09-04 09:39:35	1342177296	submission.event.fileEdited	0
-235	1048585	10	27	2026-09-04 09:40:09	268435458	submission.event.general.metadataUpdated	0
-236	1048585	10	27	2026-09-04 09:40:10	268435457	submission.event.submissionSubmitted	0
-237	1048585	11	28	2026-09-04 09:40:16	268435458	submission.event.general.metadataUpdated	0
-238	1048585	11	28	2026-09-04 09:40:16	268435458	submission.event.general.metadataUpdated	0
-239	515	42	28	2026-09-04 09:40:17	1342177281	submission.event.fileUploaded	0
-240	1048585	11	28	2026-09-04 09:40:17	1342177288	submission.event.fileRevised	0
-241	515	42	28	2026-09-04 09:40:18	1342177296	submission.event.fileEdited	0
-242	1048585	11	28	2026-09-04 09:40:18	1342177296	submission.event.fileEdited	0
-243	1048585	11	28	2026-09-04 09:40:25	268435458	submission.event.general.metadataUpdated	0
-244	1048585	11	28	2026-09-04 09:40:26	268435457	submission.event.submissionSubmitted	0
-245	1048585	11	3	2026-09-04 09:40:32	805306371	log.editor.decision	0
-246	1048585	11	3	2026-09-04 09:40:37	1073741825	log.review.reviewerAssigned	0
-247	1048585	11	3	2026-09-04 09:40:38	805306371	log.editor.decision	0
-248	1048585	11	3	2026-09-04 09:40:43	1073741825	log.review.reviewerAssigned	0
-249	1048585	11	3	2026-09-04 09:40:47	1073741825	log.review.reviewerAssigned	0
-250	1048585	11	10	2026-09-04 09:40:51	1073741830	log.review.reviewAccepted	0
-251	1048585	11	10	2026-09-04 09:40:54	1073741848	log.review.reviewReady	0
-252	1048585	11	12	2026-09-04 09:40:58	1073741830	log.review.reviewAccepted	0
-253	1048585	11	12	2026-09-04 09:41:02	1073741848	log.review.reviewReady	0
-254	1048585	11	3	2026-09-04 09:41:10	805306371	log.editor.decision	0
-255	1048585	12	29	2026-09-04 09:41:18	268435458	submission.event.general.metadataUpdated	0
-256	1048585	12	29	2026-09-04 09:41:18	268435458	submission.event.general.metadataUpdated	0
-257	515	43	29	2026-09-04 09:41:19	1342177281	submission.event.fileUploaded	0
-258	1048585	12	29	2026-09-04 09:41:19	1342177288	submission.event.fileRevised	0
-259	515	43	29	2026-09-04 09:41:19	1342177296	submission.event.fileEdited	0
-260	1048585	12	29	2026-09-04 09:41:19	1342177296	submission.event.fileEdited	0
-261	515	44	29	2026-09-04 09:41:20	1342177281	submission.event.fileUploaded	0
-262	1048585	12	29	2026-09-04 09:41:20	1342177288	submission.event.fileRevised	0
-263	515	44	29	2026-09-04 09:41:20	1342177296	submission.event.fileEdited	0
-264	1048585	12	29	2026-09-04 09:41:20	1342177296	submission.event.fileEdited	0
-265	515	45	29	2026-09-04 09:41:20	1342177281	submission.event.fileUploaded	0
-266	1048585	12	29	2026-09-04 09:41:20	1342177288	submission.event.fileRevised	0
-267	515	45	29	2026-09-04 09:41:20	1342177296	submission.event.fileEdited	0
-268	1048585	12	29	2026-09-04 09:41:20	1342177296	submission.event.fileEdited	0
-269	1048585	12	29	2026-09-04 09:41:23	268435458	submission.event.general.metadataUpdated	0
-270	1048585	12	29	2026-09-04 09:41:25	268435458	submission.event.general.metadataUpdated	0
-271	1048585	12	29	2026-09-04 09:41:28	268435458	submission.event.general.metadataUpdated	0
-272	1048585	12	29	2026-09-04 09:41:30	268435458	submission.event.general.metadataUpdated	0
-273	1048585	12	29	2026-09-04 09:41:33	268435458	submission.event.general.metadataUpdated	0
-274	1048585	12	29	2026-09-04 09:41:35	268435458	submission.event.general.metadataUpdated	0
-275	1048585	12	29	2026-09-04 09:41:38	268435458	submission.event.general.metadataUpdated	0
-276	1048585	12	29	2026-09-04 09:41:59	268435458	submission.event.general.metadataUpdated	0
-277	1048585	12	29	2026-09-04 09:42:00	268435457	submission.event.submissionSubmitted	0
-278	1048585	12	3	2026-09-04 09:42:07	805306371	log.editor.decision	0
-279	1048585	12	3	2026-09-04 09:42:13	1073741825	log.review.reviewerAssigned	0
-280	1048585	12	3	2026-09-04 09:42:18	1073741825	log.review.reviewerAssigned	0
-281	1048585	12	3	2026-09-04 09:42:22	1073741825	log.review.reviewerAssigned	0
-282	1048585	12	8	2026-09-04 09:42:27	1073741830	log.review.reviewAccepted	0
-283	1048585	12	8	2026-09-04 09:42:31	1073741848	log.review.reviewReady	0
-284	1048585	13	30	2026-09-04 09:42:38	268435458	submission.event.general.metadataUpdated	0
-285	1048585	13	30	2026-09-04 09:42:38	268435458	submission.event.general.metadataUpdated	0
-286	515	46	30	2026-09-04 09:42:38	1342177281	submission.event.fileUploaded	0
-287	1048585	13	30	2026-09-04 09:42:38	1342177288	submission.event.fileRevised	0
-288	515	46	30	2026-09-04 09:42:39	1342177296	submission.event.fileEdited	0
-289	1048585	13	30	2026-09-04 09:42:39	1342177296	submission.event.fileEdited	0
-290	515	47	30	2026-09-04 09:42:39	1342177281	submission.event.fileUploaded	0
-291	1048585	13	30	2026-09-04 09:42:39	1342177288	submission.event.fileRevised	0
-292	515	47	30	2026-09-04 09:42:39	1342177296	submission.event.fileEdited	0
-293	1048585	13	30	2026-09-04 09:42:39	1342177296	submission.event.fileEdited	0
-294	515	48	30	2026-09-04 09:42:39	1342177281	submission.event.fileUploaded	0
-295	1048585	13	30	2026-09-04 09:42:39	1342177288	submission.event.fileRevised	0
-296	515	48	30	2026-09-04 09:42:39	1342177296	submission.event.fileEdited	0
-297	1048585	13	30	2026-09-04 09:42:39	1342177296	submission.event.fileEdited	0
-298	1048585	13	30	2026-09-04 09:42:42	268435458	submission.event.general.metadataUpdated	0
-299	1048585	13	30	2026-09-04 09:42:45	268435458	submission.event.general.metadataUpdated	0
-300	1048585	13	30	2026-09-04 09:42:47	268435458	submission.event.general.metadataUpdated	0
-301	1048585	13	30	2026-09-04 09:43:05	268435458	submission.event.general.metadataUpdated	0
-302	1048585	13	30	2026-09-04 09:43:06	268435457	submission.event.submissionSubmitted	0
-303	1048585	13	3	2026-09-04 09:43:14	805306371	log.editor.decision	0
-304	515	49	3	2026-09-04 09:43:14	1342177281	submission.event.fileUploaded	0
-305	1048585	13	3	2026-09-04 09:43:14	1342177288	submission.event.fileRevised	0
-306	515	50	3	2026-09-04 09:43:14	1342177281	submission.event.fileUploaded	0
-307	1048585	13	3	2026-09-04 09:43:14	1342177288	submission.event.fileRevised	0
-308	515	51	3	2026-09-04 09:43:14	1342177281	submission.event.fileUploaded	0
-309	1048585	13	3	2026-09-04 09:43:14	1342177288	submission.event.fileRevised	0
-310	1048585	13	3	2026-09-04 09:43:19	1073741825	log.review.reviewerAssigned	0
-311	1048585	13	3	2026-09-04 09:43:21	805306371	log.editor.decision	0
-312	1048585	13	3	2026-09-04 09:43:27	1073741825	log.review.reviewerAssigned	0
-313	1048585	13	3	2026-09-04 09:43:31	1073741825	log.review.reviewerAssigned	0
-314	1048585	13	3	2026-09-04 09:43:36	1073741825	log.review.reviewerAssigned	0
-315	1048585	13	10	2026-09-04 09:43:41	1073741830	log.review.reviewAccepted	0
-316	1048585	13	10	2026-09-04 09:43:45	1073741848	log.review.reviewReady	0
-317	1048585	13	12	2026-09-04 09:43:50	1073741830	log.review.reviewAccepted	0
-318	1048585	13	12	2026-09-04 09:43:54	1073741848	log.review.reviewReady	0
-319	1048585	13	3	2026-09-04 09:44:04	805306371	log.editor.decision	0
-320	1048585	14	31	2026-09-04 09:44:12	268435458	submission.event.general.metadataUpdated	0
-321	1048585	14	31	2026-09-04 09:44:13	268435458	submission.event.general.metadataUpdated	0
-322	515	52	31	2026-09-04 09:44:13	1342177281	submission.event.fileUploaded	0
-323	1048585	14	31	2026-09-04 09:44:13	1342177288	submission.event.fileRevised	0
-324	515	52	31	2026-09-04 09:44:14	1342177296	submission.event.fileEdited	0
-325	1048585	14	31	2026-09-04 09:44:14	1342177296	submission.event.fileEdited	0
-326	515	53	31	2026-09-04 09:44:14	1342177281	submission.event.fileUploaded	0
-327	1048585	14	31	2026-09-04 09:44:14	1342177288	submission.event.fileRevised	0
-328	515	53	31	2026-09-04 09:44:14	1342177296	submission.event.fileEdited	0
-329	1048585	14	31	2026-09-04 09:44:14	1342177296	submission.event.fileEdited	0
-330	515	54	31	2026-09-04 09:44:14	1342177281	submission.event.fileUploaded	0
-331	1048585	14	31	2026-09-04 09:44:14	1342177288	submission.event.fileRevised	0
-332	515	54	31	2026-09-04 09:44:14	1342177296	submission.event.fileEdited	0
-333	1048585	14	31	2026-09-04 09:44:14	1342177296	submission.event.fileEdited	0
-334	515	55	31	2026-09-04 09:44:14	1342177281	submission.event.fileUploaded	0
-335	1048585	14	31	2026-09-04 09:44:14	1342177288	submission.event.fileRevised	0
-336	515	55	31	2026-09-04 09:44:15	1342177296	submission.event.fileEdited	0
-337	1048585	14	31	2026-09-04 09:44:15	1342177296	submission.event.fileEdited	0
-338	515	56	31	2026-09-04 09:44:15	1342177281	submission.event.fileUploaded	0
-339	1048585	14	31	2026-09-04 09:44:15	1342177288	submission.event.fileRevised	0
-340	515	56	31	2026-09-04 09:44:15	1342177296	submission.event.fileEdited	0
-341	1048585	14	31	2026-09-04 09:44:15	1342177296	submission.event.fileEdited	0
-342	515	57	31	2026-09-04 09:44:15	1342177281	submission.event.fileUploaded	0
-343	1048585	14	31	2026-09-04 09:44:15	1342177288	submission.event.fileRevised	0
-344	515	57	31	2026-09-04 09:44:16	1342177296	submission.event.fileEdited	0
-345	1048585	14	31	2026-09-04 09:44:16	1342177296	submission.event.fileEdited	0
-346	1048585	14	31	2026-09-04 09:44:20	268435458	submission.event.general.metadataUpdated	0
-347	1048585	14	31	2026-09-04 09:44:22	268435458	submission.event.general.metadataUpdated	0
-348	1048585	14	31	2026-09-04 09:44:45	268435458	submission.event.general.metadataUpdated	0
-349	1048585	14	31	2026-09-04 09:44:47	268435457	submission.event.submissionSubmitted	0
-350	1048585	14	3	2026-09-04 09:44:54	805306371	log.editor.decision	0
-351	1048585	14	3	2026-09-04 09:45:00	1073741825	log.review.reviewerAssigned	0
-352	1048585	14	3	2026-09-04 09:45:02	805306371	log.editor.decision	0
-353	1048585	14	3	2026-09-04 09:45:08	1073741825	log.review.reviewerAssigned	0
-354	1048585	14	3	2026-09-04 09:45:10	805306371	log.editor.decision	0
-355	1048585	14	3	2026-09-04 09:45:15	268435459	submission.event.participantAdded	0
-356	1048585	14	3	2026-09-04 09:45:18	805306371	log.editor.decision	0
-357	1048585	14	3	2026-09-04 09:45:23	268435459	submission.event.participantAdded	0
-358	1048585	14	3	2026-09-04 09:45:27	268435459	submission.event.participantAdded	0
-359	1048585	14	3	2026-09-04 09:45:31	268435474	submission.event.publicationFormatCreated	0
-360	515	58	3	2026-09-04 09:45:36	1342177281	submission.event.fileUploaded	0
-361	1048585	14	3	2026-09-04 09:45:36	1342177288	submission.event.fileRevised	0
-362	515	59	3	2026-09-04 09:45:36	1342177281	submission.event.fileUploaded	0
-363	1048585	14	3	2026-09-04 09:45:36	1342177288	submission.event.fileRevised	0
-364	515	60	3	2026-09-04 09:45:36	1342177281	submission.event.fileUploaded	0
-365	1048585	14	3	2026-09-04 09:45:36	1342177288	submission.event.fileRevised	0
-366	515	61	3	2026-09-04 09:45:36	1342177281	submission.event.fileUploaded	0
-367	1048585	14	3	2026-09-04 09:45:36	1342177288	submission.event.fileRevised	0
-368	515	62	3	2026-09-04 09:45:36	1342177281	submission.event.fileUploaded	0
-369	1048585	14	3	2026-09-04 09:45:36	1342177288	submission.event.fileRevised	0
-370	515	63	3	2026-09-04 09:45:36	1342177281	submission.event.fileUploaded	0
-371	1048585	14	3	2026-09-04 09:45:36	1342177288	submission.event.fileRevised	0
-372	1048585	14	3	2026-09-04 09:45:38	268435464	submission.event.publicationFormatPublished	0
-373	1048585	14	3	2026-09-04 09:45:40	268435476	submission.event.publicationFormatMadeAvailable	0
-374	515	58	3	2026-09-04 09:45:42	1342177296	submission.event.fileEdited	0
-375	1048585	14	3	2026-09-04 09:45:42	1342177296	submission.event.fileEdited	0
-376	515	58	3	2026-09-04 09:45:42	1342177287	submission.event.signoffSignoff	0
-377	515	59	3	2026-09-04 09:45:45	1342177296	submission.event.fileEdited	0
-378	1048585	14	3	2026-09-04 09:45:45	1342177296	submission.event.fileEdited	0
-379	515	59	3	2026-09-04 09:45:45	1342177287	submission.event.signoffSignoff	0
-380	515	60	3	2026-09-04 09:45:49	1342177296	submission.event.fileEdited	0
-381	1048585	14	3	2026-09-04 09:45:49	1342177296	submission.event.fileEdited	0
-382	515	60	3	2026-09-04 09:45:49	1342177287	submission.event.signoffSignoff	0
-383	515	61	3	2026-09-04 09:45:53	1342177296	submission.event.fileEdited	0
-384	1048585	14	3	2026-09-04 09:45:53	1342177296	submission.event.fileEdited	0
-385	515	61	3	2026-09-04 09:45:53	1342177287	submission.event.signoffSignoff	0
-386	515	62	3	2026-09-04 09:45:57	1342177296	submission.event.fileEdited	0
-387	1048585	14	3	2026-09-04 09:45:57	1342177296	submission.event.fileEdited	0
-388	515	62	3	2026-09-04 09:45:57	1342177287	submission.event.signoffSignoff	0
-389	515	63	3	2026-09-04 09:46:01	1342177296	submission.event.fileEdited	0
-390	1048585	14	3	2026-09-04 09:46:01	1342177296	submission.event.fileEdited	0
-391	515	63	3	2026-09-04 09:46:01	1342177287	submission.event.signoffSignoff	0
-392	1048585	14	3	2026-09-04 09:46:05	268435462	publication.event.published	0
-393	1048585	15	32	2026-09-04 09:46:12	268435458	submission.event.general.metadataUpdated	0
-394	1048585	15	32	2026-09-04 09:46:12	268435458	submission.event.general.metadataUpdated	0
-395	515	64	32	2026-09-04 09:46:12	1342177281	submission.event.fileUploaded	0
-396	1048585	15	32	2026-09-04 09:46:12	1342177288	submission.event.fileRevised	0
-397	515	64	32	2026-09-04 09:46:13	1342177296	submission.event.fileEdited	0
-398	1048585	15	32	2026-09-04 09:46:13	1342177296	submission.event.fileEdited	0
-399	1048585	15	32	2026-09-04 09:46:25	268435458	submission.event.general.metadataUpdated	0
-400	1048585	15	32	2026-09-04 09:46:25	268435457	submission.event.submissionSubmitted	0
-401	1048585	15	3	2026-09-04 09:46:32	805306371	log.editor.decision	0
-402	1048585	16	33	2026-09-04 09:46:40	268435458	submission.event.general.metadataUpdated	0
-403	1048585	16	33	2026-09-04 09:46:40	268435458	submission.event.general.metadataUpdated	0
-404	515	65	33	2026-09-04 09:46:41	1342177281	submission.event.fileUploaded	0
-405	1048585	16	33	2026-09-04 09:46:41	1342177288	submission.event.fileRevised	0
-406	515	65	33	2026-09-04 09:46:41	1342177296	submission.event.fileEdited	0
-407	1048585	16	33	2026-09-04 09:46:41	1342177296	submission.event.fileEdited	0
-408	1048585	16	33	2026-09-04 09:46:59	268435458	submission.event.general.metadataUpdated	0
-409	1048585	16	33	2026-09-04 09:47:00	268435457	submission.event.submissionSubmitted	0
-410	1048585	16	3	2026-09-04 09:47:07	805306371	log.editor.decision	0
-411	515	66	3	2026-09-04 09:47:07	1342177281	submission.event.fileUploaded	0
-412	1048585	16	3	2026-09-04 09:47:07	1342177288	submission.event.fileRevised	0
-413	1048585	16	3	2026-09-04 09:47:13	1073741825	log.review.reviewerAssigned	0
-414	1048585	16	3	2026-09-04 09:47:17	1073741825	log.review.reviewerAssigned	0
-415	1048585	16	3	2026-09-04 09:47:21	1073741825	log.review.reviewerAssigned	0
-416	1048585	16	10	2026-09-04 09:47:26	1073741830	log.review.reviewAccepted	0
-417	1048585	16	10	2026-09-04 09:47:29	1073741848	log.review.reviewReady	0
-418	1048585	17	34	2026-09-04 09:47:35	268435458	submission.event.general.metadataUpdated	0
-419	1048585	17	34	2026-09-04 09:47:35	268435458	submission.event.general.metadataUpdated	0
-420	515	67	34	2026-09-04 09:47:36	1342177281	submission.event.fileUploaded	0
-421	1048585	17	34	2026-09-04 09:47:36	1342177288	submission.event.fileRevised	0
-422	515	67	34	2026-09-04 09:47:36	1342177296	submission.event.fileEdited	0
-423	1048585	17	34	2026-09-04 09:47:36	1342177296	submission.event.fileEdited	0
-424	515	68	34	2026-09-04 09:47:36	1342177281	submission.event.fileUploaded	0
-425	1048585	17	34	2026-09-04 09:47:36	1342177288	submission.event.fileRevised	0
-426	515	68	34	2026-09-04 09:47:37	1342177296	submission.event.fileEdited	0
-427	1048585	17	34	2026-09-04 09:47:37	1342177296	submission.event.fileEdited	0
-428	515	69	34	2026-09-04 09:47:37	1342177281	submission.event.fileUploaded	0
-429	1048585	17	34	2026-09-04 09:47:37	1342177288	submission.event.fileRevised	0
-430	515	69	34	2026-09-04 09:47:37	1342177296	submission.event.fileEdited	0
-431	1048585	17	34	2026-09-04 09:47:37	1342177296	submission.event.fileEdited	0
-432	515	70	34	2026-09-04 09:47:37	1342177281	submission.event.fileUploaded	0
-433	1048585	17	34	2026-09-04 09:47:37	1342177288	submission.event.fileRevised	0
-434	515	70	34	2026-09-04 09:47:37	1342177296	submission.event.fileEdited	0
-435	1048585	17	34	2026-09-04 09:47:37	1342177296	submission.event.fileEdited	0
-436	515	71	34	2026-09-04 09:47:38	1342177281	submission.event.fileUploaded	0
-437	1048585	17	34	2026-09-04 09:47:38	1342177288	submission.event.fileRevised	0
-438	515	71	34	2026-09-04 09:47:38	1342177296	submission.event.fileEdited	0
-439	1048585	17	34	2026-09-04 09:47:38	1342177296	submission.event.fileEdited	0
-440	515	72	34	2026-09-04 09:47:38	1342177281	submission.event.fileUploaded	0
-441	1048585	17	34	2026-09-04 09:47:38	1342177288	submission.event.fileRevised	0
-442	515	72	34	2026-09-04 09:47:38	1342177296	submission.event.fileEdited	0
-443	1048585	17	34	2026-09-04 09:47:38	1342177296	submission.event.fileEdited	0
-444	1048585	17	34	2026-09-04 09:47:41	268435458	submission.event.general.metadataUpdated	0
-445	1048585	17	34	2026-09-04 09:47:44	268435458	submission.event.general.metadataUpdated	0
-446	1048585	17	34	2026-09-04 09:47:46	268435458	submission.event.general.metadataUpdated	0
-447	1048585	17	34	2026-09-04 09:47:49	268435458	submission.event.general.metadataUpdated	0
-448	1048585	17	34	2026-09-04 09:47:52	268435458	submission.event.general.metadataUpdated	0
-449	1048585	17	34	2026-09-04 09:47:54	268435458	submission.event.general.metadataUpdated	0
-450	1048585	17	34	2026-09-04 09:47:57	268435458	submission.event.general.metadataUpdated	0
-451	1048585	17	34	2026-09-04 09:48:38	268435458	submission.event.general.metadataUpdated	0
-452	1048585	17	34	2026-09-04 09:48:40	268435457	submission.event.submissionSubmitted	0
-453	1048585	17	3	2026-09-04 09:48:50	805306371	log.editor.decision	0
-454	515	73	3	2026-09-04 09:48:50	1342177281	submission.event.fileUploaded	0
-455	1048585	17	3	2026-09-04 09:48:50	1342177288	submission.event.fileRevised	0
-456	515	74	3	2026-09-04 09:48:50	1342177281	submission.event.fileUploaded	0
-457	1048585	17	3	2026-09-04 09:48:50	1342177288	submission.event.fileRevised	0
-458	515	75	3	2026-09-04 09:48:50	1342177281	submission.event.fileUploaded	0
-459	1048585	17	3	2026-09-04 09:48:50	1342177288	submission.event.fileRevised	0
-460	515	76	3	2026-09-04 09:48:50	1342177281	submission.event.fileUploaded	0
-461	1048585	17	3	2026-09-04 09:48:50	1342177288	submission.event.fileRevised	0
-462	515	77	3	2026-09-04 09:48:50	1342177281	submission.event.fileUploaded	0
-463	1048585	17	3	2026-09-04 09:48:50	1342177288	submission.event.fileRevised	0
-464	515	78	3	2026-09-04 09:48:50	1342177281	submission.event.fileUploaded	0
-465	1048585	17	3	2026-09-04 09:48:50	1342177288	submission.event.fileRevised	0
-466	1048585	17	3	2026-09-04 09:48:56	1073741825	log.review.reviewerAssigned	0
-467	1048585	17	3	2026-09-04 09:49:01	1073741825	log.review.reviewerAssigned	0
+1	1048585	1	19	2026-09-08 09:33:13	268435458	submission.event.general.metadataUpdated	0
+2	1048585	1	19	2026-09-08 09:33:13	268435458	submission.event.general.metadataUpdated	0
+3	515	1	19	2026-09-08 09:33:14	1342177281	submission.event.fileUploaded	0
+4	1048585	1	19	2026-09-08 09:33:14	1342177288	submission.event.fileRevised	0
+5	515	1	19	2026-09-08 09:33:14	1342177296	submission.event.fileEdited	0
+6	1048585	1	19	2026-09-08 09:33:14	1342177296	submission.event.fileEdited	0
+7	1048585	1	19	2026-09-08 09:33:26	268435458	submission.event.general.metadataUpdated	0
+8	1048585	1	19	2026-09-08 09:33:26	268435457	submission.event.submissionSubmitted	0
+9	1048585	1	3	2026-09-08 09:33:31	805306371	log.editor.decision	0
+10	1048585	1	3	2026-09-08 09:33:36	1073741825	log.review.reviewerAssigned	0
+11	1048585	1	3	2026-09-08 09:33:37	805306371	log.editor.decision	0
+12	1048585	1	3	2026-09-08 09:33:41	268435459	submission.event.participantAdded	0
+13	1048585	2	20	2026-09-08 09:33:47	268435458	submission.event.general.metadataUpdated	0
+14	1048585	2	20	2026-09-08 09:33:47	268435458	submission.event.general.metadataUpdated	0
+15	515	2	20	2026-09-08 09:33:48	1342177281	submission.event.fileUploaded	0
+16	1048585	2	20	2026-09-08 09:33:48	1342177288	submission.event.fileRevised	0
+17	515	2	20	2026-09-08 09:33:48	1342177296	submission.event.fileEdited	0
+18	1048585	2	20	2026-09-08 09:33:48	1342177296	submission.event.fileEdited	0
+19	515	3	20	2026-09-08 09:33:48	1342177281	submission.event.fileUploaded	0
+20	1048585	2	20	2026-09-08 09:33:48	1342177288	submission.event.fileRevised	0
+21	515	3	20	2026-09-08 09:33:49	1342177296	submission.event.fileEdited	0
+22	1048585	2	20	2026-09-08 09:33:49	1342177296	submission.event.fileEdited	0
+23	515	4	20	2026-09-08 09:33:49	1342177281	submission.event.fileUploaded	0
+24	1048585	2	20	2026-09-08 09:33:49	1342177288	submission.event.fileRevised	0
+25	515	4	20	2026-09-08 09:33:49	1342177296	submission.event.fileEdited	0
+26	1048585	2	20	2026-09-08 09:33:49	1342177296	submission.event.fileEdited	0
+27	515	5	20	2026-09-08 09:33:49	1342177281	submission.event.fileUploaded	0
+28	1048585	2	20	2026-09-08 09:33:49	1342177288	submission.event.fileRevised	0
+29	515	5	20	2026-09-08 09:33:49	1342177296	submission.event.fileEdited	0
+30	1048585	2	20	2026-09-08 09:33:49	1342177296	submission.event.fileEdited	0
+31	1048585	2	20	2026-09-08 09:33:52	268435458	submission.event.general.metadataUpdated	0
+32	1048585	2	20	2026-09-08 09:33:55	268435458	submission.event.general.metadataUpdated	0
+33	1048585	2	20	2026-09-08 09:33:57	268435458	submission.event.general.metadataUpdated	0
+34	1048585	2	20	2026-09-08 09:33:59	268435458	submission.event.general.metadataUpdated	0
+35	1048585	2	20	2026-09-08 09:34:02	268435458	submission.event.general.metadataUpdated	0
+36	1048585	2	20	2026-09-08 09:34:04	268435458	submission.event.general.metadataUpdated	0
+37	1048585	2	20	2026-09-08 09:34:07	268435458	submission.event.general.metadataUpdated	0
+38	1048585	2	20	2026-09-08 09:34:33	268435458	submission.event.general.metadataUpdated	0
+39	1048585	2	20	2026-09-08 09:34:34	268435457	submission.event.submissionSubmitted	0
+40	1048585	2	3	2026-09-08 09:34:40	805306371	log.editor.decision	0
+41	515	6	3	2026-09-08 09:34:40	1342177281	submission.event.fileUploaded	0
+42	1048585	2	3	2026-09-08 09:34:40	1342177288	submission.event.fileRevised	0
+43	515	7	3	2026-09-08 09:34:40	1342177281	submission.event.fileUploaded	0
+44	1048585	2	3	2026-09-08 09:34:40	1342177288	submission.event.fileRevised	0
+45	515	8	3	2026-09-08 09:34:40	1342177281	submission.event.fileUploaded	0
+46	1048585	2	3	2026-09-08 09:34:40	1342177288	submission.event.fileRevised	0
+47	515	9	3	2026-09-08 09:34:40	1342177281	submission.event.fileUploaded	0
+48	1048585	2	3	2026-09-08 09:34:40	1342177288	submission.event.fileRevised	0
+49	1048585	2	3	2026-09-08 09:34:46	1073741825	log.review.reviewerAssigned	0
+50	1048585	2	3	2026-09-08 09:34:50	1073741825	log.review.reviewerAssigned	0
+51	1048585	3	21	2026-09-08 09:34:57	268435458	submission.event.general.metadataUpdated	0
+52	1048585	3	21	2026-09-08 09:34:57	268435458	submission.event.general.metadataUpdated	0
+53	515	10	21	2026-09-08 09:34:58	1342177281	submission.event.fileUploaded	0
+54	1048585	3	21	2026-09-08 09:34:58	1342177288	submission.event.fileRevised	0
+55	515	10	21	2026-09-08 09:34:58	1342177296	submission.event.fileEdited	0
+56	1048585	3	21	2026-09-08 09:34:58	1342177296	submission.event.fileEdited	0
+57	1048585	3	21	2026-09-08 09:35:17	268435458	submission.event.general.metadataUpdated	0
+58	1048585	3	21	2026-09-08 09:35:18	268435457	submission.event.submissionSubmitted	0
+59	1048585	4	22	2026-09-08 09:35:24	268435458	submission.event.general.metadataUpdated	0
+60	1048585	4	22	2026-09-08 09:35:24	268435458	submission.event.general.metadataUpdated	0
+61	515	11	22	2026-09-08 09:35:25	1342177281	submission.event.fileUploaded	0
+62	1048585	4	22	2026-09-08 09:35:25	1342177288	submission.event.fileRevised	0
+63	515	11	22	2026-09-08 09:35:25	1342177296	submission.event.fileEdited	0
+64	1048585	4	22	2026-09-08 09:35:25	1342177296	submission.event.fileEdited	0
+65	515	12	22	2026-09-08 09:35:25	1342177281	submission.event.fileUploaded	0
+66	1048585	4	22	2026-09-08 09:35:25	1342177288	submission.event.fileRevised	0
+67	515	12	22	2026-09-08 09:35:25	1342177296	submission.event.fileEdited	0
+68	1048585	4	22	2026-09-08 09:35:25	1342177296	submission.event.fileEdited	0
+69	515	13	22	2026-09-08 09:35:25	1342177281	submission.event.fileUploaded	0
+70	1048585	4	22	2026-09-08 09:35:25	1342177288	submission.event.fileRevised	0
+71	515	13	22	2026-09-08 09:35:25	1342177296	submission.event.fileEdited	0
+72	1048585	4	22	2026-09-08 09:35:26	1342177296	submission.event.fileEdited	0
+73	515	14	22	2026-09-08 09:35:26	1342177281	submission.event.fileUploaded	0
+74	1048585	4	22	2026-09-08 09:35:26	1342177288	submission.event.fileRevised	0
+75	515	14	22	2026-09-08 09:35:26	1342177296	submission.event.fileEdited	0
+76	1048585	4	22	2026-09-08 09:35:26	1342177296	submission.event.fileEdited	0
+77	1048585	4	22	2026-09-08 09:35:29	268435458	submission.event.general.metadataUpdated	0
+78	1048585	4	22	2026-09-08 09:35:31	268435458	submission.event.general.metadataUpdated	0
+79	1048585	4	22	2026-09-08 09:35:34	268435458	submission.event.general.metadataUpdated	0
+80	1048585	4	22	2026-09-08 09:35:57	268435458	submission.event.general.metadataUpdated	0
+81	1048585	4	22	2026-09-08 09:35:58	268435457	submission.event.submissionSubmitted	0
+82	1048585	4	3	2026-09-08 09:36:04	805306371	log.editor.decision	0
+83	515	15	3	2026-09-08 09:36:04	1342177281	submission.event.fileUploaded	0
+84	1048585	4	3	2026-09-08 09:36:04	1342177288	submission.event.fileRevised	0
+85	515	16	3	2026-09-08 09:36:04	1342177281	submission.event.fileUploaded	0
+86	1048585	4	3	2026-09-08 09:36:04	1342177288	submission.event.fileRevised	0
+87	515	17	3	2026-09-08 09:36:04	1342177281	submission.event.fileUploaded	0
+88	1048585	4	3	2026-09-08 09:36:04	1342177288	submission.event.fileRevised	0
+89	515	18	3	2026-09-08 09:36:04	1342177281	submission.event.fileUploaded	0
+90	1048585	4	3	2026-09-08 09:36:04	1342177288	submission.event.fileRevised	0
+91	1048585	4	3	2026-09-08 09:36:10	1073741825	log.review.reviewerAssigned	0
+92	1048585	4	3	2026-09-08 09:36:11	805306371	log.editor.decision	0
+93	1048585	4	3	2026-09-08 09:36:17	1073741825	log.review.reviewerAssigned	0
+94	1048585	4	3	2026-09-08 09:36:19	805306371	log.editor.decision	0
+95	1048585	4	3	2026-09-08 09:36:23	268435459	submission.event.participantAdded	0
+96	1048585	4	3	2026-09-08 09:36:26	805306371	log.editor.decision	0
+97	1048585	4	3	2026-09-08 09:36:31	268435459	submission.event.participantAdded	0
+98	1048585	5	23	2026-09-08 09:36:37	268435458	submission.event.general.metadataUpdated	0
+99	1048585	5	23	2026-09-08 09:36:38	268435458	submission.event.general.metadataUpdated	0
+100	515	19	23	2026-09-08 09:36:38	1342177281	submission.event.fileUploaded	0
+101	1048585	5	23	2026-09-08 09:36:38	1342177288	submission.event.fileRevised	0
+102	515	19	23	2026-09-08 09:36:39	1342177296	submission.event.fileEdited	0
+103	1048585	5	23	2026-09-08 09:36:39	1342177296	submission.event.fileEdited	0
+104	1048585	5	23	2026-09-08 09:37:01	268435458	submission.event.general.metadataUpdated	0
+105	1048585	5	23	2026-09-08 09:37:02	268435457	submission.event.submissionSubmitted	0
+106	1048585	5	3	2026-09-08 09:37:07	805306371	log.editor.decision	0
+107	1048585	5	3	2026-09-08 09:37:12	1073741825	log.review.reviewerAssigned	0
+108	1048585	5	3	2026-09-08 09:37:13	805306371	log.editor.decision	0
+109	1048585	5	3	2026-09-08 09:37:19	1073741825	log.review.reviewerAssigned	0
+110	1048585	5	3	2026-09-08 09:37:20	805306371	log.editor.decision	0
+111	1048585	5	3	2026-09-08 09:37:25	268435459	submission.event.participantAdded	0
+112	1048585	5	3	2026-09-08 09:37:26	805306371	log.editor.decision	0
+113	1048585	5	3	2026-09-08 09:37:31	268435459	submission.event.participantAdded	0
+114	1048585	5	3	2026-09-08 09:37:34	268435459	submission.event.participantAdded	0
+115	1048585	5	3	2026-09-08 09:37:37	268435474	submission.event.publicationFormatCreated	0
+116	515	20	3	2026-09-08 09:37:39	1342177281	submission.event.fileUploaded	0
+117	1048585	5	3	2026-09-08 09:37:39	1342177288	submission.event.fileRevised	0
+118	1048585	5	3	2026-09-08 09:37:41	268435464	submission.event.publicationFormatPublished	0
+119	1048585	5	3	2026-09-08 09:37:42	268435476	submission.event.publicationFormatMadeAvailable	0
+120	515	20	3	2026-09-08 09:37:43	1342177296	submission.event.fileEdited	0
+121	1048585	5	3	2026-09-08 09:37:43	1342177296	submission.event.fileEdited	0
+122	515	20	3	2026-09-08 09:37:43	1342177287	submission.event.signoffSignoff	0
+123	1048585	5	3	2026-09-08 09:37:46	268435462	publication.event.published	0
+124	1048585	6	24	2026-09-08 09:37:52	268435458	submission.event.general.metadataUpdated	0
+125	1048585	6	24	2026-09-08 09:37:52	268435458	submission.event.general.metadataUpdated	0
+126	515	21	24	2026-09-08 09:37:53	1342177281	submission.event.fileUploaded	0
+127	1048585	6	24	2026-09-08 09:37:53	1342177288	submission.event.fileRevised	0
+128	515	21	24	2026-09-08 09:37:53	1342177296	submission.event.fileEdited	0
+129	1048585	6	24	2026-09-08 09:37:53	1342177296	submission.event.fileEdited	0
+130	515	22	24	2026-09-08 09:37:54	1342177281	submission.event.fileUploaded	0
+131	1048585	6	24	2026-09-08 09:37:54	1342177288	submission.event.fileRevised	0
+132	515	22	24	2026-09-08 09:37:54	1342177296	submission.event.fileEdited	0
+133	1048585	6	24	2026-09-08 09:37:54	1342177296	submission.event.fileEdited	0
+134	515	23	24	2026-09-08 09:37:54	1342177281	submission.event.fileUploaded	0
+135	1048585	6	24	2026-09-08 09:37:54	1342177288	submission.event.fileRevised	0
+136	515	23	24	2026-09-08 09:37:54	1342177296	submission.event.fileEdited	0
+137	1048585	6	24	2026-09-08 09:37:54	1342177296	submission.event.fileEdited	0
+138	515	24	24	2026-09-08 09:37:54	1342177281	submission.event.fileUploaded	0
+139	1048585	6	24	2026-09-08 09:37:54	1342177288	submission.event.fileRevised	0
+140	515	24	24	2026-09-08 09:37:54	1342177296	submission.event.fileEdited	0
+141	1048585	6	24	2026-09-08 09:37:55	1342177296	submission.event.fileEdited	0
+142	1048585	6	24	2026-09-08 09:37:57	268435458	submission.event.general.metadataUpdated	0
+143	1048585	6	24	2026-09-08 09:38:00	268435458	submission.event.general.metadataUpdated	0
+144	1048585	6	24	2026-09-08 09:38:02	268435458	submission.event.general.metadataUpdated	0
+145	1048585	6	24	2026-09-08 09:38:25	268435458	submission.event.general.metadataUpdated	0
+146	1048585	6	24	2026-09-08 09:38:26	268435457	submission.event.submissionSubmitted	0
+147	1048585	6	3	2026-09-08 09:38:32	805306371	log.editor.decision	0
+148	515	25	3	2026-09-08 09:38:32	1342177281	submission.event.fileUploaded	0
+149	1048585	6	3	2026-09-08 09:38:32	1342177288	submission.event.fileRevised	0
+150	515	26	3	2026-09-08 09:38:32	1342177281	submission.event.fileUploaded	0
+151	1048585	6	3	2026-09-08 09:38:32	1342177288	submission.event.fileRevised	0
+152	515	27	3	2026-09-08 09:38:32	1342177281	submission.event.fileUploaded	0
+153	1048585	6	3	2026-09-08 09:38:32	1342177288	submission.event.fileRevised	0
+154	515	28	3	2026-09-08 09:38:32	1342177281	submission.event.fileUploaded	0
+155	1048585	6	3	2026-09-08 09:38:32	1342177288	submission.event.fileRevised	0
+156	1048585	6	3	2026-09-08 09:38:36	268435459	submission.event.participantAdded	0
+157	1048585	6	6	2026-09-08 09:38:44	805306372	log.editor.recommendation	0
+158	1048585	7	25	2026-09-08 09:38:56	268435458	submission.event.general.metadataUpdated	0
+159	1048585	7	25	2026-09-08 09:38:56	268435458	submission.event.general.metadataUpdated	0
+160	515	29	25	2026-09-08 09:38:57	1342177281	submission.event.fileUploaded	0
+161	1048585	7	25	2026-09-08 09:38:57	1342177288	submission.event.fileRevised	0
+162	515	29	25	2026-09-08 09:38:57	1342177296	submission.event.fileEdited	0
+163	1048585	7	25	2026-09-08 09:38:57	1342177296	submission.event.fileEdited	0
+164	515	30	25	2026-09-08 09:38:57	1342177281	submission.event.fileUploaded	0
+165	1048585	7	25	2026-09-08 09:38:57	1342177288	submission.event.fileRevised	0
+166	515	30	25	2026-09-08 09:38:57	1342177296	submission.event.fileEdited	0
+167	1048585	7	25	2026-09-08 09:38:57	1342177296	submission.event.fileEdited	0
+168	515	31	25	2026-09-08 09:38:57	1342177281	submission.event.fileUploaded	0
+169	1048585	7	25	2026-09-08 09:38:57	1342177288	submission.event.fileRevised	0
+170	515	31	25	2026-09-08 09:38:58	1342177296	submission.event.fileEdited	0
+171	1048585	7	25	2026-09-08 09:38:58	1342177296	submission.event.fileEdited	0
+172	515	32	25	2026-09-08 09:38:58	1342177281	submission.event.fileUploaded	0
+173	1048585	7	25	2026-09-08 09:38:58	1342177288	submission.event.fileRevised	0
+174	515	32	25	2026-09-08 09:38:58	1342177296	submission.event.fileEdited	0
+175	1048585	7	25	2026-09-08 09:38:58	1342177296	submission.event.fileEdited	0
+176	515	33	25	2026-09-08 09:38:58	1342177281	submission.event.fileUploaded	0
+177	1048585	7	25	2026-09-08 09:38:58	1342177288	submission.event.fileRevised	0
+178	515	33	25	2026-09-08 09:38:58	1342177296	submission.event.fileEdited	0
+179	1048585	7	25	2026-09-08 09:38:58	1342177296	submission.event.fileEdited	0
+180	1048585	7	25	2026-09-08 09:39:02	268435458	submission.event.general.metadataUpdated	0
+181	1048585	7	25	2026-09-08 09:39:04	268435458	submission.event.general.metadataUpdated	0
+182	1048585	7	25	2026-09-08 09:39:07	268435458	submission.event.general.metadataUpdated	0
+183	1048585	7	25	2026-09-08 09:39:09	268435458	submission.event.general.metadataUpdated	0
+184	1048585	7	25	2026-09-08 09:39:40	268435458	submission.event.general.metadataUpdated	0
+185	1048585	7	25	2026-09-08 09:39:41	268435457	submission.event.submissionSubmitted	0
+186	1048585	7	3	2026-09-08 09:39:48	805306371	log.editor.decision	0
+187	1048585	7	3	2026-09-08 09:39:54	1073741825	log.review.reviewerAssigned	0
+188	1048585	7	3	2026-09-08 09:39:56	805306371	log.editor.decision	0
+189	1048585	7	3	2026-09-08 09:40:00	268435459	submission.event.participantAdded	0
+190	1048585	8	3	2026-09-08 09:40:07	268435458	submission.event.general.metadataUpdated	0
+191	1048585	8	3	2026-09-08 09:40:07	268435458	submission.event.general.metadataUpdated	0
+192	515	34	3	2026-09-08 09:40:08	1342177281	submission.event.fileUploaded	0
+193	1048585	8	3	2026-09-08 09:40:08	1342177288	submission.event.fileRevised	0
+194	515	34	3	2026-09-08 09:40:08	1342177296	submission.event.fileEdited	0
+195	1048585	8	3	2026-09-08 09:40:08	1342177296	submission.event.fileEdited	0
+196	1048585	8	3	2026-09-08 09:40:09	268435458	submission.event.general.metadataUpdated	0
+197	1048585	8	3	2026-09-08 09:40:10	268435457	submission.event.submissionSubmitted	0
+198	1048585	9	26	2026-09-08 09:40:16	268435458	submission.event.general.metadataUpdated	0
+199	1048585	9	26	2026-09-08 09:40:16	268435458	submission.event.general.metadataUpdated	0
+200	515	35	26	2026-09-08 09:40:16	1342177281	submission.event.fileUploaded	0
+201	1048585	9	26	2026-09-08 09:40:16	1342177288	submission.event.fileRevised	0
+202	515	35	26	2026-09-08 09:40:17	1342177296	submission.event.fileEdited	0
+203	1048585	9	26	2026-09-08 09:40:17	1342177296	submission.event.fileEdited	0
+204	515	36	26	2026-09-08 09:40:17	1342177281	submission.event.fileUploaded	0
+205	1048585	9	26	2026-09-08 09:40:17	1342177288	submission.event.fileRevised	0
+206	515	36	26	2026-09-08 09:40:17	1342177296	submission.event.fileEdited	0
+207	1048585	9	26	2026-09-08 09:40:17	1342177296	submission.event.fileEdited	0
+208	515	37	26	2026-09-08 09:40:17	1342177281	submission.event.fileUploaded	0
+209	1048585	9	26	2026-09-08 09:40:17	1342177288	submission.event.fileRevised	0
+210	515	37	26	2026-09-08 09:40:17	1342177296	submission.event.fileEdited	0
+211	1048585	9	26	2026-09-08 09:40:17	1342177296	submission.event.fileEdited	0
+212	515	38	26	2026-09-08 09:40:17	1342177281	submission.event.fileUploaded	0
+213	1048585	9	26	2026-09-08 09:40:17	1342177288	submission.event.fileRevised	0
+214	515	38	26	2026-09-08 09:40:18	1342177296	submission.event.fileEdited	0
+215	1048585	9	26	2026-09-08 09:40:18	1342177296	submission.event.fileEdited	0
+216	515	39	26	2026-09-08 09:40:18	1342177281	submission.event.fileUploaded	0
+217	1048585	9	26	2026-09-08 09:40:18	1342177288	submission.event.fileRevised	0
+218	515	39	26	2026-09-08 09:40:18	1342177296	submission.event.fileEdited	0
+219	1048585	9	26	2026-09-08 09:40:18	1342177296	submission.event.fileEdited	0
+220	1048585	9	26	2026-09-08 09:40:21	268435458	submission.event.general.metadataUpdated	0
+221	1048585	9	26	2026-09-08 09:40:23	268435458	submission.event.general.metadataUpdated	0
+222	1048585	9	26	2026-09-08 09:40:26	268435458	submission.event.general.metadataUpdated	0
+223	1048585	9	26	2026-09-08 09:40:28	268435458	submission.event.general.metadataUpdated	0
+224	1048585	9	26	2026-09-08 09:40:58	268435458	submission.event.general.metadataUpdated	0
+225	1048585	9	26	2026-09-08 09:40:59	268435457	submission.event.submissionSubmitted	0
+226	1048585	9	3	2026-09-08 09:41:06	805306371	log.editor.decision	0
+227	515	40	3	2026-09-08 09:41:06	1342177281	submission.event.fileUploaded	0
+228	1048585	9	3	2026-09-08 09:41:06	1342177288	submission.event.fileRevised	0
+229	515	41	3	2026-09-08 09:41:06	1342177281	submission.event.fileUploaded	0
+230	1048585	9	3	2026-09-08 09:41:06	1342177288	submission.event.fileRevised	0
+231	515	42	3	2026-09-08 09:41:06	1342177281	submission.event.fileUploaded	0
+232	1048585	9	3	2026-09-08 09:41:06	1342177288	submission.event.fileRevised	0
+233	515	43	3	2026-09-08 09:41:06	1342177281	submission.event.fileUploaded	0
+234	1048585	9	3	2026-09-08 09:41:06	1342177288	submission.event.fileRevised	0
+235	515	44	3	2026-09-08 09:41:06	1342177281	submission.event.fileUploaded	0
+236	1048585	9	3	2026-09-08 09:41:06	1342177288	submission.event.fileRevised	0
+237	1048585	10	27	2026-09-08 09:41:14	268435458	submission.event.general.metadataUpdated	0
+238	1048585	10	27	2026-09-08 09:41:14	268435458	submission.event.general.metadataUpdated	0
+239	515	45	27	2026-09-08 09:41:15	1342177281	submission.event.fileUploaded	0
+240	1048585	10	27	2026-09-08 09:41:15	1342177288	submission.event.fileRevised	0
+241	515	45	27	2026-09-08 09:41:15	1342177296	submission.event.fileEdited	0
+242	1048585	10	27	2026-09-08 09:41:15	1342177296	submission.event.fileEdited	0
+243	1048585	10	27	2026-09-08 09:41:48	268435458	submission.event.general.metadataUpdated	0
+244	1048585	10	27	2026-09-08 09:41:49	268435457	submission.event.submissionSubmitted	0
+245	1048585	11	28	2026-09-08 09:41:55	268435458	submission.event.general.metadataUpdated	0
+246	1048585	11	28	2026-09-08 09:41:55	268435458	submission.event.general.metadataUpdated	0
+247	515	46	28	2026-09-08 09:41:56	1342177281	submission.event.fileUploaded	0
+248	1048585	11	28	2026-09-08 09:41:56	1342177288	submission.event.fileRevised	0
+249	515	46	28	2026-09-08 09:41:56	1342177296	submission.event.fileEdited	0
+250	1048585	11	28	2026-09-08 09:41:56	1342177296	submission.event.fileEdited	0
+251	1048585	11	28	2026-09-08 09:42:04	268435458	submission.event.general.metadataUpdated	0
+252	1048585	11	28	2026-09-08 09:42:05	268435457	submission.event.submissionSubmitted	0
+253	1048585	11	3	2026-09-08 09:42:10	805306371	log.editor.decision	0
+254	1048585	11	3	2026-09-08 09:42:15	1073741825	log.review.reviewerAssigned	0
+255	1048585	11	3	2026-09-08 09:42:16	805306371	log.editor.decision	0
+256	1048585	11	3	2026-09-08 09:42:21	1073741825	log.review.reviewerAssigned	0
+257	1048585	11	3	2026-09-08 09:42:24	1073741825	log.review.reviewerAssigned	0
+258	1048585	11	10	2026-09-08 09:42:28	1073741830	log.review.reviewAccepted	0
+259	1048585	11	10	2026-09-08 09:42:31	1073741848	log.review.reviewReady	0
+260	1048585	11	12	2026-09-08 09:42:35	1073741830	log.review.reviewAccepted	0
+261	1048585	11	12	2026-09-08 09:42:38	1073741848	log.review.reviewReady	0
+262	1048585	11	3	2026-09-08 09:42:46	805306371	log.editor.decision	0
+263	1048585	12	29	2026-09-08 09:42:54	268435458	submission.event.general.metadataUpdated	0
+264	1048585	12	29	2026-09-08 09:42:54	268435458	submission.event.general.metadataUpdated	0
+265	515	47	29	2026-09-08 09:42:55	1342177281	submission.event.fileUploaded	0
+266	1048585	12	29	2026-09-08 09:42:55	1342177288	submission.event.fileRevised	0
+267	515	47	29	2026-09-08 09:42:55	1342177296	submission.event.fileEdited	0
+268	1048585	12	29	2026-09-08 09:42:55	1342177296	submission.event.fileEdited	0
+269	515	48	29	2026-09-08 09:42:55	1342177281	submission.event.fileUploaded	0
+270	1048585	12	29	2026-09-08 09:42:55	1342177288	submission.event.fileRevised	0
+271	515	48	29	2026-09-08 09:42:55	1342177296	submission.event.fileEdited	0
+272	1048585	12	29	2026-09-08 09:42:55	1342177296	submission.event.fileEdited	0
+273	515	49	29	2026-09-08 09:42:56	1342177281	submission.event.fileUploaded	0
+274	1048585	12	29	2026-09-08 09:42:56	1342177288	submission.event.fileRevised	0
+275	515	49	29	2026-09-08 09:42:56	1342177296	submission.event.fileEdited	0
+276	1048585	12	29	2026-09-08 09:42:56	1342177296	submission.event.fileEdited	0
+277	1048585	12	29	2026-09-08 09:42:58	268435458	submission.event.general.metadataUpdated	0
+278	1048585	12	29	2026-09-08 09:43:00	268435458	submission.event.general.metadataUpdated	0
+279	1048585	12	29	2026-09-08 09:43:03	268435458	submission.event.general.metadataUpdated	0
+280	1048585	12	29	2026-09-08 09:43:05	268435458	submission.event.general.metadataUpdated	0
+281	1048585	12	29	2026-09-08 09:43:07	268435458	submission.event.general.metadataUpdated	0
+282	1048585	12	29	2026-09-08 09:43:10	268435458	submission.event.general.metadataUpdated	0
+283	1048585	12	29	2026-09-08 09:43:12	268435458	submission.event.general.metadataUpdated	0
+284	1048585	12	29	2026-09-08 09:43:31	268435458	submission.event.general.metadataUpdated	0
+285	1048585	12	29	2026-09-08 09:43:33	268435457	submission.event.submissionSubmitted	0
+286	1048585	12	3	2026-09-08 09:43:39	805306371	log.editor.decision	0
+287	1048585	12	3	2026-09-08 09:43:45	1073741825	log.review.reviewerAssigned	0
+288	1048585	12	3	2026-09-08 09:43:50	1073741825	log.review.reviewerAssigned	0
+289	1048585	12	3	2026-09-08 09:43:54	1073741825	log.review.reviewerAssigned	0
+290	1048585	12	8	2026-09-08 09:43:59	1073741830	log.review.reviewAccepted	0
+291	1048585	12	8	2026-09-08 09:44:03	1073741848	log.review.reviewReady	0
+292	1048585	13	30	2026-09-08 09:44:09	268435458	submission.event.general.metadataUpdated	0
+293	1048585	13	30	2026-09-08 09:44:09	268435458	submission.event.general.metadataUpdated	0
+294	515	50	30	2026-09-08 09:44:09	1342177281	submission.event.fileUploaded	0
+295	1048585	13	30	2026-09-08 09:44:09	1342177288	submission.event.fileRevised	0
+296	515	50	30	2026-09-08 09:44:10	1342177296	submission.event.fileEdited	0
+297	1048585	13	30	2026-09-08 09:44:10	1342177296	submission.event.fileEdited	0
+298	515	51	30	2026-09-08 09:44:10	1342177281	submission.event.fileUploaded	0
+299	1048585	13	30	2026-09-08 09:44:10	1342177288	submission.event.fileRevised	0
+300	515	51	30	2026-09-08 09:44:10	1342177296	submission.event.fileEdited	0
+301	1048585	13	30	2026-09-08 09:44:10	1342177296	submission.event.fileEdited	0
+302	515	52	30	2026-09-08 09:44:10	1342177281	submission.event.fileUploaded	0
+303	1048585	13	30	2026-09-08 09:44:10	1342177288	submission.event.fileRevised	0
+304	515	52	30	2026-09-08 09:44:10	1342177296	submission.event.fileEdited	0
+305	1048585	13	30	2026-09-08 09:44:10	1342177296	submission.event.fileEdited	0
+306	1048585	13	30	2026-09-08 09:44:13	268435458	submission.event.general.metadataUpdated	0
+307	1048585	13	30	2026-09-08 09:44:15	268435458	submission.event.general.metadataUpdated	0
+308	1048585	13	30	2026-09-08 09:44:18	268435458	submission.event.general.metadataUpdated	0
+309	1048585	13	30	2026-09-08 09:44:35	268435458	submission.event.general.metadataUpdated	0
+310	1048585	13	30	2026-09-08 09:44:36	268435457	submission.event.submissionSubmitted	0
+311	1048585	13	3	2026-09-08 09:44:43	805306371	log.editor.decision	0
+312	1048585	13	3	2026-09-08 09:44:48	1073741825	log.review.reviewerAssigned	0
+313	1048585	13	3	2026-09-08 09:44:50	805306371	log.editor.decision	0
+314	1048585	13	3	2026-09-08 09:44:55	1073741825	log.review.reviewerAssigned	0
+315	1048585	13	3	2026-09-08 09:44:59	1073741825	log.review.reviewerAssigned	0
+316	1048585	13	3	2026-09-08 09:45:04	1073741825	log.review.reviewerAssigned	0
+317	1048585	13	10	2026-09-08 09:45:08	1073741830	log.review.reviewAccepted	0
+318	1048585	13	10	2026-09-08 09:45:12	1073741848	log.review.reviewReady	0
+319	1048585	13	12	2026-09-08 09:45:17	1073741830	log.review.reviewAccepted	0
+320	1048585	13	12	2026-09-08 09:45:20	1073741848	log.review.reviewReady	0
+321	1048585	13	3	2026-09-08 09:45:30	805306371	log.editor.decision	0
+322	1048585	14	31	2026-09-08 09:45:38	268435458	submission.event.general.metadataUpdated	0
+323	1048585	14	31	2026-09-08 09:45:38	268435458	submission.event.general.metadataUpdated	0
+324	515	53	31	2026-09-08 09:45:39	1342177281	submission.event.fileUploaded	0
+325	1048585	14	31	2026-09-08 09:45:39	1342177288	submission.event.fileRevised	0
+326	515	53	31	2026-09-08 09:45:39	1342177296	submission.event.fileEdited	0
+327	1048585	14	31	2026-09-08 09:45:39	1342177296	submission.event.fileEdited	0
+328	515	54	31	2026-09-08 09:45:39	1342177281	submission.event.fileUploaded	0
+329	1048585	14	31	2026-09-08 09:45:39	1342177288	submission.event.fileRevised	0
+330	515	54	31	2026-09-08 09:45:40	1342177296	submission.event.fileEdited	0
+331	1048585	14	31	2026-09-08 09:45:40	1342177296	submission.event.fileEdited	0
+332	515	55	31	2026-09-08 09:45:40	1342177281	submission.event.fileUploaded	0
+333	1048585	14	31	2026-09-08 09:45:40	1342177288	submission.event.fileRevised	0
+334	515	55	31	2026-09-08 09:45:40	1342177296	submission.event.fileEdited	0
+335	1048585	14	31	2026-09-08 09:45:40	1342177296	submission.event.fileEdited	0
+336	515	56	31	2026-09-08 09:45:40	1342177281	submission.event.fileUploaded	0
+337	1048585	14	31	2026-09-08 09:45:40	1342177288	submission.event.fileRevised	0
+338	515	56	31	2026-09-08 09:45:40	1342177296	submission.event.fileEdited	0
+339	1048585	14	31	2026-09-08 09:45:40	1342177296	submission.event.fileEdited	0
+340	515	57	31	2026-09-08 09:45:40	1342177281	submission.event.fileUploaded	0
+341	1048585	14	31	2026-09-08 09:45:40	1342177288	submission.event.fileRevised	0
+342	515	57	31	2026-09-08 09:45:41	1342177296	submission.event.fileEdited	0
+343	1048585	14	31	2026-09-08 09:45:41	1342177296	submission.event.fileEdited	0
+344	515	58	31	2026-09-08 09:45:41	1342177281	submission.event.fileUploaded	0
+345	1048585	14	31	2026-09-08 09:45:41	1342177288	submission.event.fileRevised	0
+346	515	58	31	2026-09-08 09:45:42	1342177296	submission.event.fileEdited	0
+347	1048585	14	31	2026-09-08 09:45:42	1342177296	submission.event.fileEdited	0
+348	1048585	14	31	2026-09-08 09:45:45	268435458	submission.event.general.metadataUpdated	0
+349	1048585	14	31	2026-09-08 09:45:48	268435458	submission.event.general.metadataUpdated	0
+350	1048585	14	31	2026-09-08 09:46:11	268435458	submission.event.general.metadataUpdated	0
+351	1048585	14	31	2026-09-08 09:46:12	268435457	submission.event.submissionSubmitted	0
+352	1048585	14	3	2026-09-08 09:46:19	805306371	log.editor.decision	0
+353	515	59	3	2026-09-08 09:46:19	1342177281	submission.event.fileUploaded	0
+354	1048585	14	3	2026-09-08 09:46:19	1342177288	submission.event.fileRevised	0
+355	515	60	3	2026-09-08 09:46:19	1342177281	submission.event.fileUploaded	0
+356	1048585	14	3	2026-09-08 09:46:19	1342177288	submission.event.fileRevised	0
+357	515	61	3	2026-09-08 09:46:19	1342177281	submission.event.fileUploaded	0
+358	1048585	14	3	2026-09-08 09:46:19	1342177288	submission.event.fileRevised	0
+359	515	62	3	2026-09-08 09:46:19	1342177281	submission.event.fileUploaded	0
+360	1048585	14	3	2026-09-08 09:46:19	1342177288	submission.event.fileRevised	0
+361	515	63	3	2026-09-08 09:46:19	1342177281	submission.event.fileUploaded	0
+362	1048585	14	3	2026-09-08 09:46:19	1342177288	submission.event.fileRevised	0
+363	515	64	3	2026-09-08 09:46:19	1342177281	submission.event.fileUploaded	0
+364	1048585	14	3	2026-09-08 09:46:19	1342177288	submission.event.fileRevised	0
+365	1048585	14	3	2026-09-08 09:46:25	1073741825	log.review.reviewerAssigned	0
+366	1048585	14	3	2026-09-08 09:46:27	805306371	log.editor.decision	0
+367	1048585	14	3	2026-09-08 09:46:32	1073741825	log.review.reviewerAssigned	0
+368	1048585	14	3	2026-09-08 09:46:34	805306371	log.editor.decision	0
+369	1048585	14	3	2026-09-08 09:46:39	268435459	submission.event.participantAdded	0
+370	1048585	14	3	2026-09-08 09:46:41	805306371	log.editor.decision	0
+371	1048585	14	3	2026-09-08 09:46:46	268435459	submission.event.participantAdded	0
+372	1048585	14	3	2026-09-08 09:46:50	268435459	submission.event.participantAdded	0
+373	1048585	14	3	2026-09-08 09:46:54	268435474	submission.event.publicationFormatCreated	0
+374	515	65	3	2026-09-08 09:46:59	1342177281	submission.event.fileUploaded	0
+375	1048585	14	3	2026-09-08 09:46:59	1342177288	submission.event.fileRevised	0
+376	515	66	3	2026-09-08 09:46:59	1342177281	submission.event.fileUploaded	0
+377	1048585	14	3	2026-09-08 09:46:59	1342177288	submission.event.fileRevised	0
+378	515	67	3	2026-09-08 09:46:59	1342177281	submission.event.fileUploaded	0
+379	1048585	14	3	2026-09-08 09:46:59	1342177288	submission.event.fileRevised	0
+380	515	68	3	2026-09-08 09:46:59	1342177281	submission.event.fileUploaded	0
+381	1048585	14	3	2026-09-08 09:46:59	1342177288	submission.event.fileRevised	0
+382	515	69	3	2026-09-08 09:46:59	1342177281	submission.event.fileUploaded	0
+383	1048585	14	3	2026-09-08 09:46:59	1342177288	submission.event.fileRevised	0
+384	515	70	3	2026-09-08 09:46:59	1342177281	submission.event.fileUploaded	0
+385	1048585	14	3	2026-09-08 09:46:59	1342177288	submission.event.fileRevised	0
+386	1048585	14	3	2026-09-08 09:47:00	268435464	submission.event.publicationFormatPublished	0
+387	1048585	14	3	2026-09-08 09:47:02	268435476	submission.event.publicationFormatMadeAvailable	0
+388	515	65	3	2026-09-08 09:47:04	1342177296	submission.event.fileEdited	0
+389	1048585	14	3	2026-09-08 09:47:04	1342177296	submission.event.fileEdited	0
+390	515	65	3	2026-09-08 09:47:04	1342177287	submission.event.signoffSignoff	0
+391	515	66	3	2026-09-08 09:47:08	1342177296	submission.event.fileEdited	0
+392	1048585	14	3	2026-09-08 09:47:08	1342177296	submission.event.fileEdited	0
+393	515	66	3	2026-09-08 09:47:08	1342177287	submission.event.signoffSignoff	0
+394	515	67	3	2026-09-08 09:47:12	1342177296	submission.event.fileEdited	0
+395	1048585	14	3	2026-09-08 09:47:12	1342177296	submission.event.fileEdited	0
+396	515	67	3	2026-09-08 09:47:12	1342177287	submission.event.signoffSignoff	0
+397	515	68	3	2026-09-08 09:47:15	1342177296	submission.event.fileEdited	0
+398	1048585	14	3	2026-09-08 09:47:15	1342177296	submission.event.fileEdited	0
+399	515	68	3	2026-09-08 09:47:15	1342177287	submission.event.signoffSignoff	0
+400	515	69	3	2026-09-08 09:47:20	1342177296	submission.event.fileEdited	0
+401	1048585	14	3	2026-09-08 09:47:20	1342177296	submission.event.fileEdited	0
+402	515	69	3	2026-09-08 09:47:20	1342177287	submission.event.signoffSignoff	0
+403	515	70	3	2026-09-08 09:47:24	1342177296	submission.event.fileEdited	0
+404	1048585	14	3	2026-09-08 09:47:24	1342177296	submission.event.fileEdited	0
+405	515	70	3	2026-09-08 09:47:24	1342177287	submission.event.signoffSignoff	0
+406	1048585	14	3	2026-09-08 09:47:28	268435462	publication.event.published	0
+407	1048585	15	32	2026-09-08 09:47:34	268435458	submission.event.general.metadataUpdated	0
+408	1048585	15	32	2026-09-08 09:47:34	268435458	submission.event.general.metadataUpdated	0
+409	515	71	32	2026-09-08 09:47:34	1342177281	submission.event.fileUploaded	0
+410	1048585	15	32	2026-09-08 09:47:34	1342177288	submission.event.fileRevised	0
+411	515	71	32	2026-09-08 09:47:35	1342177296	submission.event.fileEdited	0
+412	1048585	15	32	2026-09-08 09:47:35	1342177296	submission.event.fileEdited	0
+413	1048585	15	32	2026-09-08 09:47:46	268435458	submission.event.general.metadataUpdated	0
+414	1048585	15	32	2026-09-08 09:47:47	268435457	submission.event.submissionSubmitted	0
+415	1048585	15	3	2026-09-08 09:47:54	805306371	log.editor.decision	0
+416	1048585	16	33	2026-09-08 09:48:01	268435458	submission.event.general.metadataUpdated	0
+417	1048585	16	33	2026-09-08 09:48:01	268435458	submission.event.general.metadataUpdated	0
+418	515	72	33	2026-09-08 09:48:02	1342177281	submission.event.fileUploaded	0
+419	1048585	16	33	2026-09-08 09:48:02	1342177288	submission.event.fileRevised	0
+420	515	72	33	2026-09-08 09:48:02	1342177296	submission.event.fileEdited	0
+421	1048585	16	33	2026-09-08 09:48:02	1342177296	submission.event.fileEdited	0
+422	1048585	16	33	2026-09-08 09:48:21	268435458	submission.event.general.metadataUpdated	0
+423	1048585	16	33	2026-09-08 09:48:22	268435457	submission.event.submissionSubmitted	0
+424	1048585	16	3	2026-09-08 09:48:29	805306371	log.editor.decision	0
+425	515	73	3	2026-09-08 09:48:29	1342177281	submission.event.fileUploaded	0
+426	1048585	16	3	2026-09-08 09:48:29	1342177288	submission.event.fileRevised	0
+427	1048585	16	3	2026-09-08 09:48:34	1073741825	log.review.reviewerAssigned	0
+428	1048585	16	3	2026-09-08 09:48:38	1073741825	log.review.reviewerAssigned	0
+429	1048585	16	3	2026-09-08 09:48:42	1073741825	log.review.reviewerAssigned	0
+430	1048585	16	10	2026-09-08 09:48:47	1073741830	log.review.reviewAccepted	0
+431	1048585	16	10	2026-09-08 09:48:50	1073741848	log.review.reviewReady	0
+432	1048585	17	34	2026-09-08 09:48:56	268435458	submission.event.general.metadataUpdated	0
+433	1048585	17	34	2026-09-08 09:48:56	268435458	submission.event.general.metadataUpdated	0
+434	515	74	34	2026-09-08 09:48:57	1342177281	submission.event.fileUploaded	0
+435	1048585	17	34	2026-09-08 09:48:57	1342177288	submission.event.fileRevised	0
+436	515	74	34	2026-09-08 09:48:57	1342177296	submission.event.fileEdited	0
+437	1048585	17	34	2026-09-08 09:48:57	1342177296	submission.event.fileEdited	0
+438	515	75	34	2026-09-08 09:48:57	1342177281	submission.event.fileUploaded	0
+439	1048585	17	34	2026-09-08 09:48:57	1342177288	submission.event.fileRevised	0
+440	515	75	34	2026-09-08 09:48:57	1342177296	submission.event.fileEdited	0
+441	1048585	17	34	2026-09-08 09:48:57	1342177296	submission.event.fileEdited	0
+442	515	76	34	2026-09-08 09:48:58	1342177281	submission.event.fileUploaded	0
+443	1048585	17	34	2026-09-08 09:48:58	1342177288	submission.event.fileRevised	0
+444	515	76	34	2026-09-08 09:48:58	1342177296	submission.event.fileEdited	0
+445	1048585	17	34	2026-09-08 09:48:58	1342177296	submission.event.fileEdited	0
+446	515	77	34	2026-09-08 09:48:58	1342177281	submission.event.fileUploaded	0
+447	1048585	17	34	2026-09-08 09:48:58	1342177288	submission.event.fileRevised	0
+448	515	77	34	2026-09-08 09:48:58	1342177296	submission.event.fileEdited	0
+449	1048585	17	34	2026-09-08 09:48:58	1342177296	submission.event.fileEdited	0
+450	515	78	34	2026-09-08 09:48:58	1342177281	submission.event.fileUploaded	0
+451	1048585	17	34	2026-09-08 09:48:58	1342177288	submission.event.fileRevised	0
+452	515	78	34	2026-09-08 09:48:59	1342177296	submission.event.fileEdited	0
+453	1048585	17	34	2026-09-08 09:48:59	1342177296	submission.event.fileEdited	0
+454	515	79	34	2026-09-08 09:48:59	1342177281	submission.event.fileUploaded	0
+455	1048585	17	34	2026-09-08 09:48:59	1342177288	submission.event.fileRevised	0
+456	515	79	34	2026-09-08 09:48:59	1342177296	submission.event.fileEdited	0
+457	1048585	17	34	2026-09-08 09:48:59	1342177296	submission.event.fileEdited	0
+458	1048585	17	34	2026-09-08 09:49:02	268435458	submission.event.general.metadataUpdated	0
+459	1048585	17	34	2026-09-08 09:49:04	268435458	submission.event.general.metadataUpdated	0
+460	1048585	17	34	2026-09-08 09:49:07	268435458	submission.event.general.metadataUpdated	0
+461	1048585	17	34	2026-09-08 09:49:09	268435458	submission.event.general.metadataUpdated	0
+462	1048585	17	34	2026-09-08 09:49:12	268435458	submission.event.general.metadataUpdated	0
+463	1048585	17	34	2026-09-08 09:49:15	268435458	submission.event.general.metadataUpdated	0
+464	1048585	17	34	2026-09-08 09:49:17	268435458	submission.event.general.metadataUpdated	0
+465	1048585	17	34	2026-09-08 09:49:58	268435458	submission.event.general.metadataUpdated	0
+466	1048585	17	34	2026-09-08 09:49:59	268435457	submission.event.submissionSubmitted	0
+467	1048585	17	3	2026-09-08 09:50:09	805306371	log.editor.decision	0
+468	1048585	17	3	2026-09-08 09:50:15	1073741825	log.review.reviewerAssigned	0
+469	1048585	17	3	2026-09-08 09:50:20	1073741825	log.review.reviewerAssigned	0
 \.
 
 
@@ -6228,7 +6230,7 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 56	fileId	6	int
 56	submissionId	3	int
 56	username	bbarnetson	string
-83	round	1	int
+83	submissionId	4	int
 56	originalFileName	The Political Economy of Workplace Injury in Canada.pdf	string
 56	name	The Political Economy of Workplace Injury in Canada.pdf	string
 61	fileStage	2	int
@@ -6346,1805 +6348,1818 @@ COPY public.event_log_settings (log_id, setting_name, setting_value, setting_typ
 82	editorName	Daniel Barnes	string
 82	submissionId	4	int
 82	decision	Send to Internal Review	string
-83	reviewAssignmentId	4	string
-83	reviewerName	Aisla McCrae	string
-83	submissionId	4	int
-83	stageId	2	int
-84	editorName	Daniel Barnes	string
+83	fileStage	19	int
+83	sourceSubmissionFileId	11	int
+83	submissionFileId	15	int
+83	fileId	7	int
+83	originalFileName	Introduction: Contexts of Popular Cultur.pdf	string
+83	username	dbarnes	string
+84	fileStage	19	int
+84	submissionFileId	15	int
+84	fileId	7	int
 84	submissionId	4	int
-84	decision	Send to External Review	string
-85	reviewAssignmentId	5	string
-85	reviewerName	Al Zacharia	string
+84	username	dbarnes	string
+84	name	Introduction: Contexts of Popular Cultur.pdf	string
+85	fileStage	19	int
+85	sourceSubmissionFileId	12	int
+85	submissionFileId	16	int
+85	fileId	8	int
 85	submissionId	4	int
-85	stageId	3	int
-85	round	1	int
-86	editorName	Daniel Barnes	string
+85	originalFileName	Chapter 1. A Future for Media Studies: C.pdf	string
+85	username	dbarnes	string
+86	fileStage	19	int
+86	submissionFileId	16	int
+86	fileId	8	int
 86	submissionId	4	int
-86	decision	Accept Submission	string
-87	name	Maria Fritz	string
-87	username	mfritz	string
-87	userGroupName	Copyeditor	string
-88	editorName	Daniel Barnes	string
+86	username	dbarnes	string
+86	name	Chapter 1. A Future for Media Studies: C.pdf	string
+87	fileStage	19	int
+87	sourceSubmissionFileId	13	int
+87	submissionFileId	17	int
+87	fileId	9	int
+87	submissionId	4	int
+87	originalFileName	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
+87	username	dbarnes	string
+88	fileStage	19	int
+88	submissionFileId	17	int
+88	fileId	9	int
 88	submissionId	4	int
-88	decision	Send To Production	string
-89	name	Graham Cox	string
-89	username	gcox	string
-89	userGroupName	Layout Editor	string
-92	fileStage	2	int
-92	sourceSubmissionFileId	\N	string
-92	submissionFileId	15	int
-92	fileId	11	int
-92	submissionId	5	int
-92	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-92	username	callan	string
-93	fileStage	2	int
-93	submissionFileId	15	int
-93	fileId	11	int
-93	submissionId	5	int
-93	username	callan	string
-93	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-94	fileStage	2	int
-94	sourceSubmissionFileId	\N	string
-94	submissionFileId	15	int
-94	fileId	11	int
-94	submissionId	5	int
-94	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-94	username	callan	string
-95	fileStage	2	int
-95	sourceSubmissionFileId	\N	string
-95	submissionFileId	15	int
-95	fileId	11	int
-95	submissionId	5	int
-95	username	callan	string
-95	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-95	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-98	editorName	Daniel Barnes	string
-98	submissionId	5	int
-98	decision	Send to Internal Review	string
-99	reviewAssignmentId	6	string
-99	reviewerName	Paul Hudson	string
-99	submissionId	5	int
-99	stageId	2	int
-99	round	1	int
-100	editorName	Daniel Barnes	string
+88	username	dbarnes	string
+88	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
+89	fileStage	19	int
+89	sourceSubmissionFileId	14	int
+89	submissionFileId	18	int
+89	fileId	10	int
+89	submissionId	4	int
+89	originalFileName	Chapter 3. Hawkers and Public Space: Fre.pdf	string
+89	username	dbarnes	string
+90	fileStage	19	int
+90	submissionFileId	18	int
+90	fileId	10	int
+90	submissionId	4	int
+90	username	dbarnes	string
+90	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
+91	reviewAssignmentId	4	string
+91	reviewerName	Aisla McCrae	string
+91	submissionId	4	int
+91	stageId	2	int
+91	round	1	int
+92	editorName	Daniel Barnes	string
+92	submissionId	4	int
+92	decision	Send to External Review	string
+93	reviewAssignmentId	5	string
+93	reviewerName	Al Zacharia	string
+93	submissionId	4	int
+93	stageId	3	int
+93	round	1	int
+94	editorName	Daniel Barnes	string
+94	submissionId	4	int
+94	decision	Accept Submission	string
+95	name	Maria Fritz	string
+95	username	mfritz	string
+95	userGroupName	Copyeditor	string
+96	editorName	Daniel Barnes	string
+96	submissionId	4	int
+96	decision	Send To Production	string
+97	name	Graham Cox	string
+97	username	gcox	string
+97	userGroupName	Layout Editor	string
+100	fileStage	2	int
+100	sourceSubmissionFileId	\N	string
+100	submissionFileId	19	int
+100	fileId	11	int
 100	submissionId	5	int
-100	decision	Send to External Review	string
-101	reviewAssignmentId	7	string
-101	reviewerName	Gonzalo Favio	string
+100	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+100	username	callan	string
+101	fileStage	2	int
+101	submissionFileId	19	int
+101	fileId	11	int
 101	submissionId	5	int
-101	stageId	3	int
-101	round	1	int
-102	editorName	Daniel Barnes	string
+101	username	callan	string
+101	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+102	fileStage	2	int
+102	sourceSubmissionFileId	\N	string
+102	submissionFileId	19	int
+102	fileId	11	int
 102	submissionId	5	int
-102	decision	Accept Submission	string
-103	name	Sarah Vogt	string
-103	username	svogt	string
-103	userGroupName	Copyeditor	string
-104	editorName	Daniel Barnes	string
-104	submissionId	5	int
-104	decision	Send To Production	string
-105	name	Stephen Hellier	string
-105	username	shellier	string
-105	userGroupName	Layout Editor	string
-106	name	Catherine Turner	string
-106	username	cturner	string
-106	userGroupName	Proofreader	string
-107	formatName	PDF	string
-108	fileStage	10	int
-108	sourceSubmissionFileId	15	int
-108	submissionFileId	16	int
-108	fileId	11	int
+102	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+102	username	callan	string
+103	fileStage	2	int
+103	sourceSubmissionFileId	\N	string
+103	submissionFileId	19	int
+103	fileId	11	int
+103	submissionId	5	int
+103	username	callan	string
+103	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+103	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+106	editorName	Daniel Barnes	string
+106	submissionId	5	int
+106	decision	Send to Internal Review	string
+107	reviewAssignmentId	6	string
+107	reviewerName	Paul Hudson	string
+107	submissionId	5	int
+107	stageId	2	int
+107	round	1	int
+108	editorName	Daniel Barnes	string
 108	submissionId	5	int
-108	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-108	username	dbarnes	string
-109	fileStage	10	int
-109	submissionFileId	16	int
-109	fileId	11	int
+108	decision	Send to External Review	string
+109	reviewAssignmentId	7	string
+109	reviewerName	Gonzalo Favio	string
 109	submissionId	5	int
-109	username	dbarnes	string
-109	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-110	publicationFormatName	PDF	string
-111	publicationFormatName	PDF	string
-112	fileStage	10	int
-112	sourceSubmissionFileId	15	int
-112	submissionFileId	16	int
-112	fileId	11	int
+109	stageId	3	int
+109	round	1	int
+110	editorName	Daniel Barnes	string
+110	submissionId	5	int
+110	decision	Accept Submission	string
+111	name	Sarah Vogt	string
+111	username	svogt	string
+111	userGroupName	Copyeditor	string
+112	editorName	Daniel Barnes	string
 112	submissionId	5	int
-112	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-112	username	dbarnes	string
-113	fileStage	10	int
-113	sourceSubmissionFileId	15	int
-113	submissionFileId	16	int
-113	fileId	11	int
-113	submissionId	5	int
-113	username	dbarnes	string
-113	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-113	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-114	file	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-114	name	Daniel Barnes	string
-114	username	dbarnes	string
-118	fileStage	2	int
-118	sourceSubmissionFileId	\N	string
-118	submissionFileId	17	int
-118	fileId	12	int
-118	submissionId	6	int
-118	originalFileName	Identify: Understanding Your Information.pdf	string
-118	username	dbernnard	string
-119	fileStage	2	int
-119	submissionFileId	17	int
-119	fileId	12	int
-119	submissionId	6	int
-119	username	dbernnard	string
-119	name	Identify: Understanding Your Information.pdf	string
-120	fileStage	2	int
-120	sourceSubmissionFileId	\N	string
-120	submissionFileId	17	int
-120	fileId	12	int
-120	submissionId	6	int
-120	originalFileName	Identify: Understanding Your Information.pdf	string
-120	username	dbernnard	string
-121	fileStage	2	int
-121	sourceSubmissionFileId	\N	string
-121	submissionFileId	17	int
-121	fileId	12	int
-121	submissionId	6	int
-121	username	dbernnard	string
-121	originalFileName	Identify: Understanding Your Information.pdf	string
-121	name	Identify: Understanding Your Information.pdf	string
-122	fileStage	2	int
-122	sourceSubmissionFileId	\N	string
-122	submissionFileId	18	int
-122	fileId	13	int
-122	submissionId	6	int
-122	originalFileName	Scope: Knowing What Is Available.pdf	string
-122	username	dbernnard	string
-123	fileStage	2	int
-123	submissionFileId	18	int
-123	fileId	13	int
-123	submissionId	6	int
-123	username	dbernnard	string
-123	name	Scope: Knowing What Is Available.pdf	string
-124	fileStage	2	int
-124	sourceSubmissionFileId	\N	string
-124	submissionFileId	18	int
-124	fileId	13	int
-124	submissionId	6	int
-124	originalFileName	Scope: Knowing What Is Available.pdf	string
-124	username	dbernnard	string
-125	fileStage	2	int
-125	sourceSubmissionFileId	\N	string
-125	submissionFileId	18	int
-125	fileId	13	int
-125	submissionId	6	int
-125	username	dbernnard	string
-125	originalFileName	Scope: Knowing What Is Available.pdf	string
-125	name	Scope: Knowing What Is Available.pdf	string
+112	decision	Send To Production	string
+113	name	Stephen Hellier	string
+113	username	shellier	string
+113	userGroupName	Layout Editor	string
+114	name	Catherine Turner	string
+114	username	cturner	string
+114	userGroupName	Proofreader	string
+115	formatName	PDF	string
+116	fileStage	10	int
+116	sourceSubmissionFileId	19	int
+116	submissionFileId	20	int
+116	fileId	11	int
+116	submissionId	5	int
+116	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+116	username	dbarnes	string
+117	fileStage	10	int
+117	submissionFileId	20	int
+117	fileId	11	int
+117	submissionId	5	int
+117	username	dbarnes	string
+117	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+118	publicationFormatName	PDF	string
+119	publicationFormatName	PDF	string
+120	fileStage	10	int
+120	sourceSubmissionFileId	19	int
+120	submissionFileId	20	int
+120	fileId	11	int
+120	submissionId	5	int
+120	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+120	username	dbarnes	string
+121	fileStage	10	int
+121	sourceSubmissionFileId	19	int
+121	submissionFileId	20	int
+121	fileId	11	int
+121	submissionId	5	int
+121	username	dbarnes	string
+121	originalFileName	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+121	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+122	file	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+122	name	Daniel Barnes	string
+122	username	dbarnes	string
 126	fileStage	2	int
 126	sourceSubmissionFileId	\N	string
-126	submissionFileId	19	int
-126	fileId	14	int
+126	submissionFileId	21	int
+126	fileId	12	int
 126	submissionId	6	int
-126	originalFileName	Plan: Developing Research Strategies.pdf	string
+126	originalFileName	Identify: Understanding Your Information.pdf	string
 126	username	dbernnard	string
 127	fileStage	2	int
-127	submissionFileId	19	int
-127	fileId	14	int
+127	submissionFileId	21	int
+127	fileId	12	int
 127	submissionId	6	int
 127	username	dbernnard	string
-127	name	Plan: Developing Research Strategies.pdf	string
+127	name	Identify: Understanding Your Information.pdf	string
 128	fileStage	2	int
 128	sourceSubmissionFileId	\N	string
-128	submissionFileId	19	int
-128	fileId	14	int
+128	submissionFileId	21	int
+128	fileId	12	int
 128	submissionId	6	int
-128	originalFileName	Plan: Developing Research Strategies.pdf	string
+128	originalFileName	Identify: Understanding Your Information.pdf	string
 128	username	dbernnard	string
 129	fileStage	2	int
 129	sourceSubmissionFileId	\N	string
-129	submissionFileId	19	int
-129	fileId	14	int
+129	submissionFileId	21	int
+129	fileId	12	int
 129	submissionId	6	int
 129	username	dbernnard	string
-129	originalFileName	Plan: Developing Research Strategies.pdf	string
-129	name	Plan: Developing Research Strategies.pdf	string
+129	originalFileName	Identify: Understanding Your Information.pdf	string
+129	name	Identify: Understanding Your Information.pdf	string
 130	fileStage	2	int
 130	sourceSubmissionFileId	\N	string
-130	submissionFileId	20	int
-130	fileId	15	int
+130	submissionFileId	22	int
+130	fileId	13	int
 130	submissionId	6	int
-130	originalFileName	Gather: Finding What You Need.pdf	string
+130	originalFileName	Scope: Knowing What Is Available.pdf	string
 130	username	dbernnard	string
 131	fileStage	2	int
-131	submissionFileId	20	int
-131	fileId	15	int
+131	submissionFileId	22	int
+131	fileId	13	int
 131	submissionId	6	int
 131	username	dbernnard	string
-131	name	Gather: Finding What You Need.pdf	string
+131	name	Scope: Knowing What Is Available.pdf	string
 132	fileStage	2	int
 132	sourceSubmissionFileId	\N	string
-132	submissionFileId	20	int
-132	fileId	15	int
+132	submissionFileId	22	int
+132	fileId	13	int
 132	submissionId	6	int
-132	originalFileName	Gather: Finding What You Need.pdf	string
+132	originalFileName	Scope: Knowing What Is Available.pdf	string
 132	username	dbernnard	string
 133	fileStage	2	int
 133	sourceSubmissionFileId	\N	string
-133	submissionFileId	20	int
-133	fileId	15	int
+133	submissionFileId	22	int
+133	fileId	13	int
 133	submissionId	6	int
 133	username	dbernnard	string
-133	originalFileName	Gather: Finding What You Need.pdf	string
-133	name	Gather: Finding What You Need.pdf	string
-139	editorName	Daniel Barnes	string
+133	originalFileName	Scope: Knowing What Is Available.pdf	string
+133	name	Scope: Knowing What Is Available.pdf	string
+134	fileStage	2	int
+134	sourceSubmissionFileId	\N	string
+134	submissionFileId	23	int
+134	fileId	14	int
+134	submissionId	6	int
+134	originalFileName	Plan: Developing Research Strategies.pdf	string
+134	username	dbernnard	string
+135	fileStage	2	int
+135	submissionFileId	23	int
+135	fileId	14	int
+135	submissionId	6	int
+135	username	dbernnard	string
+135	name	Plan: Developing Research Strategies.pdf	string
+136	fileStage	2	int
+136	sourceSubmissionFileId	\N	string
+136	submissionFileId	23	int
+136	fileId	14	int
+136	submissionId	6	int
+136	originalFileName	Plan: Developing Research Strategies.pdf	string
+136	username	dbernnard	string
+137	fileStage	2	int
+137	sourceSubmissionFileId	\N	string
+137	submissionFileId	23	int
+137	fileId	14	int
+137	submissionId	6	int
+137	username	dbernnard	string
+137	originalFileName	Plan: Developing Research Strategies.pdf	string
+137	name	Plan: Developing Research Strategies.pdf	string
+138	fileStage	2	int
+138	sourceSubmissionFileId	\N	string
+138	submissionFileId	24	int
+138	fileId	15	int
+138	submissionId	6	int
+138	originalFileName	Gather: Finding What You Need.pdf	string
+138	username	dbernnard	string
+139	fileStage	2	int
+139	submissionFileId	24	int
+139	fileId	15	int
 139	submissionId	6	int
-139	decision	Send to Internal Review	string
-140	fileStage	19	int
-140	sourceSubmissionFileId	17	int
-140	submissionFileId	21	int
-140	fileId	12	int
+139	username	dbernnard	string
+139	name	Gather: Finding What You Need.pdf	string
+140	fileStage	2	int
+140	sourceSubmissionFileId	\N	string
+140	submissionFileId	24	int
+140	fileId	15	int
 140	submissionId	6	int
-140	originalFileName	Identify: Understanding Your Information.pdf	string
-140	username	dbarnes	string
-141	fileStage	19	int
-141	submissionFileId	21	int
-141	fileId	12	int
+140	originalFileName	Gather: Finding What You Need.pdf	string
+140	username	dbernnard	string
+141	fileStage	2	int
+141	sourceSubmissionFileId	\N	string
+141	submissionFileId	24	int
+141	fileId	15	int
 141	submissionId	6	int
-141	username	dbarnes	string
-141	name	Identify: Understanding Your Information.pdf	string
-142	fileStage	19	int
-142	sourceSubmissionFileId	18	int
-142	submissionFileId	22	int
-142	fileId	13	int
-142	submissionId	6	int
-142	originalFileName	Scope: Knowing What Is Available.pdf	string
-142	username	dbarnes	string
-143	fileStage	19	int
-143	submissionFileId	22	int
-143	fileId	13	int
-143	submissionId	6	int
-143	username	dbarnes	string
-143	name	Scope: Knowing What Is Available.pdf	string
-144	fileStage	19	int
-144	sourceSubmissionFileId	19	int
-144	submissionFileId	23	int
-144	fileId	14	int
-144	submissionId	6	int
-144	originalFileName	Plan: Developing Research Strategies.pdf	string
-144	username	dbarnes	string
-145	fileStage	19	int
-145	submissionFileId	23	int
-145	fileId	14	int
-145	submissionId	6	int
-145	username	dbarnes	string
-145	name	Plan: Developing Research Strategies.pdf	string
-146	fileStage	19	int
-146	sourceSubmissionFileId	20	int
-146	submissionFileId	24	int
-146	fileId	15	int
-146	submissionId	6	int
-146	originalFileName	Gather: Finding What You Need.pdf	string
-146	username	dbarnes	string
-147	fileStage	19	int
-147	submissionFileId	24	int
-147	fileId	15	int
+141	username	dbernnard	string
+141	originalFileName	Gather: Finding What You Need.pdf	string
+141	name	Gather: Finding What You Need.pdf	string
+147	editorName	Daniel Barnes	string
 147	submissionId	6	int
-147	username	dbarnes	string
-147	name	Gather: Finding What You Need.pdf	string
-148	name	Minoti Inoue	string
-148	username	minoue	string
-148	userGroupName	Series editor	string
-149	editorName	Minoti Inoue	string
+147	decision	Send to Internal Review	string
+148	fileStage	19	int
+148	sourceSubmissionFileId	21	int
+148	submissionFileId	25	int
+148	fileId	12	int
+148	submissionId	6	int
+148	originalFileName	Identify: Understanding Your Information.pdf	string
+148	username	dbarnes	string
+149	fileStage	19	int
+149	submissionFileId	25	int
+149	fileId	12	int
 149	submissionId	6	int
-149	decision	Send to External Review	string
-152	fileStage	2	int
-152	sourceSubmissionFileId	\N	string
-152	submissionFileId	25	int
-152	fileId	16	int
-152	submissionId	7	int
-152	originalFileName	Introduction.pdf	string
-152	username	dkennepohl	string
-153	fileStage	2	int
-153	submissionFileId	25	int
-153	fileId	16	int
-153	submissionId	7	int
-153	username	dkennepohl	string
-153	name	Introduction.pdf	string
-154	fileStage	2	int
-154	sourceSubmissionFileId	\N	string
-154	submissionFileId	25	int
-154	fileId	16	int
-154	submissionId	7	int
-154	originalFileName	Introduction.pdf	string
-154	username	dkennepohl	string
-155	fileStage	2	int
-155	sourceSubmissionFileId	\N	string
-155	submissionFileId	25	int
-155	fileId	16	int
-155	submissionId	7	int
-155	username	dkennepohl	string
-155	originalFileName	Introduction.pdf	string
-155	name	Introduction.pdf	string
-156	fileStage	2	int
-156	sourceSubmissionFileId	\N	string
-156	submissionFileId	26	int
-156	fileId	17	int
-156	submissionId	7	int
-156	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
-156	username	dkennepohl	string
-157	fileStage	2	int
-157	submissionFileId	26	int
-157	fileId	17	int
-157	submissionId	7	int
-157	username	dkennepohl	string
-157	name	Chapter 1: Interactions Affording Distan.pdf	string
-158	fileStage	2	int
-158	sourceSubmissionFileId	\N	string
-158	submissionFileId	26	int
-158	fileId	17	int
-158	submissionId	7	int
-158	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
-158	username	dkennepohl	string
-159	fileStage	2	int
-159	sourceSubmissionFileId	\N	string
-159	submissionFileId	26	int
-159	fileId	17	int
-159	submissionId	7	int
-159	username	dkennepohl	string
-159	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
-159	name	Chapter 1: Interactions Affording Distan.pdf	string
+149	username	dbarnes	string
+149	name	Identify: Understanding Your Information.pdf	string
+150	fileStage	19	int
+150	sourceSubmissionFileId	22	int
+150	submissionFileId	26	int
+150	fileId	13	int
+150	submissionId	6	int
+150	originalFileName	Scope: Knowing What Is Available.pdf	string
+150	username	dbarnes	string
+151	fileStage	19	int
+151	submissionFileId	26	int
+151	fileId	13	int
+151	submissionId	6	int
+151	username	dbarnes	string
+151	name	Scope: Knowing What Is Available.pdf	string
+152	fileStage	19	int
+152	sourceSubmissionFileId	23	int
+152	submissionFileId	27	int
+152	fileId	14	int
+152	submissionId	6	int
+152	originalFileName	Plan: Developing Research Strategies.pdf	string
+152	username	dbarnes	string
+153	fileStage	19	int
+153	submissionFileId	27	int
+153	fileId	14	int
+153	submissionId	6	int
+153	username	dbarnes	string
+153	name	Plan: Developing Research Strategies.pdf	string
+154	fileStage	19	int
+154	sourceSubmissionFileId	24	int
+154	submissionFileId	28	int
+154	fileId	15	int
+154	submissionId	6	int
+154	originalFileName	Gather: Finding What You Need.pdf	string
+154	username	dbarnes	string
+155	fileStage	19	int
+155	submissionFileId	28	int
+155	fileId	15	int
+155	submissionId	6	int
+155	username	dbarnes	string
+155	name	Gather: Finding What You Need.pdf	string
+156	name	Minoti Inoue	string
+156	username	minoue	string
+156	userGroupName	Series editor	string
+157	editorName	Minoti Inoue	string
+157	submissionId	6	int
+157	decision	Send to External Review	string
 160	fileStage	2	int
 160	sourceSubmissionFileId	\N	string
-160	submissionFileId	27	int
-160	fileId	18	int
+160	submissionFileId	29	int
+160	fileId	16	int
 160	submissionId	7	int
-160	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
+160	originalFileName	Introduction.pdf	string
 160	username	dkennepohl	string
 161	fileStage	2	int
-161	submissionFileId	27	int
-161	fileId	18	int
+161	submissionFileId	29	int
+161	fileId	16	int
 161	submissionId	7	int
 161	username	dkennepohl	string
-161	name	Chapter 2: Learning Science at a Distanc.pdf	string
+161	name	Introduction.pdf	string
 162	fileStage	2	int
 162	sourceSubmissionFileId	\N	string
-162	submissionFileId	27	int
-162	fileId	18	int
+162	submissionFileId	29	int
+162	fileId	16	int
 162	submissionId	7	int
-162	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
+162	originalFileName	Introduction.pdf	string
 162	username	dkennepohl	string
 163	fileStage	2	int
 163	sourceSubmissionFileId	\N	string
-163	submissionFileId	27	int
-163	fileId	18	int
+163	submissionFileId	29	int
+163	fileId	16	int
 163	submissionId	7	int
 163	username	dkennepohl	string
-163	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
-163	name	Chapter 2: Learning Science at a Distanc.pdf	string
+163	originalFileName	Introduction.pdf	string
+163	name	Introduction.pdf	string
 164	fileStage	2	int
 164	sourceSubmissionFileId	\N	string
-164	submissionFileId	28	int
-164	fileId	19	int
+164	submissionFileId	30	int
+164	fileId	17	int
 164	submissionId	7	int
-164	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
+164	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
 164	username	dkennepohl	string
 165	fileStage	2	int
-165	submissionFileId	28	int
-165	fileId	19	int
+165	submissionFileId	30	int
+165	fileId	17	int
 165	submissionId	7	int
 165	username	dkennepohl	string
-165	name	Chapter 3: Leadership Strategies for Coo.pdf	string
+165	name	Chapter 1: Interactions Affording Distan.pdf	string
 166	fileStage	2	int
 166	sourceSubmissionFileId	\N	string
-166	submissionFileId	28	int
-166	fileId	19	int
+166	submissionFileId	30	int
+166	fileId	17	int
 166	submissionId	7	int
-166	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
+166	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
 166	username	dkennepohl	string
 167	fileStage	2	int
 167	sourceSubmissionFileId	\N	string
-167	submissionFileId	28	int
-167	fileId	19	int
+167	submissionFileId	30	int
+167	fileId	17	int
 167	submissionId	7	int
 167	username	dkennepohl	string
-167	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
-167	name	Chapter 3: Leadership Strategies for Coo.pdf	string
+167	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
+167	name	Chapter 1: Interactions Affording Distan.pdf	string
 168	fileStage	2	int
 168	sourceSubmissionFileId	\N	string
-168	submissionFileId	29	int
-168	fileId	20	int
+168	submissionFileId	31	int
+168	fileId	18	int
 168	submissionId	7	int
-168	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
+168	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
 168	username	dkennepohl	string
 169	fileStage	2	int
-169	submissionFileId	29	int
-169	fileId	20	int
+169	submissionFileId	31	int
+169	fileId	18	int
 169	submissionId	7	int
 169	username	dkennepohl	string
-169	name	Chapter 4: Toward New Models of Flexible.pdf	string
+169	name	Chapter 2: Learning Science at a Distanc.pdf	string
 170	fileStage	2	int
 170	sourceSubmissionFileId	\N	string
-170	submissionFileId	29	int
-170	fileId	20	int
+170	submissionFileId	31	int
+170	fileId	18	int
 170	submissionId	7	int
-170	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
+170	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
 170	username	dkennepohl	string
 171	fileStage	2	int
 171	sourceSubmissionFileId	\N	string
-171	submissionFileId	29	int
-171	fileId	20	int
+171	submissionFileId	31	int
+171	fileId	18	int
 171	submissionId	7	int
 171	username	dkennepohl	string
-171	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
-171	name	Chapter 4: Toward New Models of Flexible.pdf	string
-178	editorName	Daniel Barnes	string
+171	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
+171	name	Chapter 2: Learning Science at a Distanc.pdf	string
+172	fileStage	2	int
+172	sourceSubmissionFileId	\N	string
+172	submissionFileId	32	int
+172	fileId	19	int
+172	submissionId	7	int
+172	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
+172	username	dkennepohl	string
+173	fileStage	2	int
+173	submissionFileId	32	int
+173	fileId	19	int
+173	submissionId	7	int
+173	username	dkennepohl	string
+173	name	Chapter 3: Leadership Strategies for Coo.pdf	string
+174	fileStage	2	int
+174	sourceSubmissionFileId	\N	string
+174	submissionFileId	32	int
+174	fileId	19	int
+174	submissionId	7	int
+174	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
+174	username	dkennepohl	string
+175	fileStage	2	int
+175	sourceSubmissionFileId	\N	string
+175	submissionFileId	32	int
+175	fileId	19	int
+175	submissionId	7	int
+175	username	dkennepohl	string
+175	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
+175	name	Chapter 3: Leadership Strategies for Coo.pdf	string
+176	fileStage	2	int
+176	sourceSubmissionFileId	\N	string
+176	submissionFileId	33	int
+176	fileId	20	int
+176	submissionId	7	int
+176	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
+176	username	dkennepohl	string
+177	fileStage	2	int
+177	submissionFileId	33	int
+177	fileId	20	int
+177	submissionId	7	int
+177	username	dkennepohl	string
+177	name	Chapter 4: Toward New Models of Flexible.pdf	string
+178	fileStage	2	int
+178	sourceSubmissionFileId	\N	string
+178	submissionFileId	33	int
+178	fileId	20	int
 178	submissionId	7	int
-178	decision	Send to External Review	string
-179	fileStage	4	int
-179	sourceSubmissionFileId	25	int
-179	submissionFileId	30	int
-179	fileId	16	int
+178	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
+178	username	dkennepohl	string
+179	fileStage	2	int
+179	sourceSubmissionFileId	\N	string
+179	submissionFileId	33	int
+179	fileId	20	int
 179	submissionId	7	int
-179	originalFileName	Introduction.pdf	string
-179	username	dbarnes	string
-180	fileStage	4	int
-180	submissionFileId	30	int
-180	fileId	16	int
-180	submissionId	7	int
-180	username	dbarnes	string
-180	name	Introduction.pdf	string
-181	fileStage	4	int
-181	sourceSubmissionFileId	26	int
-181	submissionFileId	31	int
-181	fileId	17	int
-181	submissionId	7	int
-181	originalFileName	Chapter 1: Interactions Affording Distan.pdf	string
-181	username	dbarnes	string
-182	fileStage	4	int
-182	submissionFileId	31	int
-182	fileId	17	int
-182	submissionId	7	int
-182	username	dbarnes	string
-182	name	Chapter 1: Interactions Affording Distan.pdf	string
-183	fileStage	4	int
-183	sourceSubmissionFileId	27	int
-183	submissionFileId	32	int
-183	fileId	18	int
-183	submissionId	7	int
-183	originalFileName	Chapter 2: Learning Science at a Distanc.pdf	string
-183	username	dbarnes	string
-184	fileStage	4	int
-184	submissionFileId	32	int
-184	fileId	18	int
-184	submissionId	7	int
-184	username	dbarnes	string
-184	name	Chapter 2: Learning Science at a Distanc.pdf	string
-185	fileStage	4	int
-185	sourceSubmissionFileId	28	int
-185	submissionFileId	33	int
-185	fileId	19	int
-185	submissionId	7	int
-185	originalFileName	Chapter 3: Leadership Strategies for Coo.pdf	string
-185	username	dbarnes	string
-186	fileStage	4	int
-186	submissionFileId	33	int
-186	fileId	19	int
+179	username	dkennepohl	string
+179	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
+179	name	Chapter 4: Toward New Models of Flexible.pdf	string
+186	editorName	Daniel Barnes	string
 186	submissionId	7	int
-186	username	dbarnes	string
-186	name	Chapter 3: Leadership Strategies for Coo.pdf	string
-187	fileStage	4	int
-187	sourceSubmissionFileId	29	int
-187	submissionFileId	34	int
-187	fileId	20	int
+186	decision	Send to External Review	string
+187	reviewAssignmentId	8	string
+187	reviewerName	Adela Gallego	string
 187	submissionId	7	int
-187	originalFileName	Chapter 4: Toward New Models of Flexible.pdf	string
-187	username	dbarnes	string
-188	fileStage	4	int
-188	submissionFileId	34	int
-188	fileId	20	int
+187	stageId	3	int
+187	round	1	int
+188	editorName	Daniel Barnes	string
 188	submissionId	7	int
-188	username	dbarnes	string
-188	name	Chapter 4: Toward New Models of Flexible.pdf	string
-189	reviewAssignmentId	8	string
-189	reviewerName	Adela Gallego	string
-189	submissionId	7	int
-189	stageId	3	int
-189	round	1	int
-190	editorName	Daniel Barnes	string
-190	submissionId	7	int
-190	decision	Accept Submission	string
-191	name	Maria Fritz	string
-191	username	mfritz	string
-191	userGroupName	Copyeditor	string
+188	decision	Accept Submission	string
+189	name	Maria Fritz	string
+189	username	mfritz	string
+189	userGroupName	Copyeditor	string
+192	fileStage	2	int
+192	sourceSubmissionFileId	\N	string
+192	submissionFileId	34	int
+192	fileId	21	int
+192	submissionId	8	int
+192	originalFileName	Editorial.pdf	string
+192	username	dbarnes	string
+193	fileStage	2	int
+193	submissionFileId	34	int
+193	fileId	21	int
+193	submissionId	8	int
+193	username	dbarnes	string
+193	name	Editorial.pdf	string
 194	fileStage	2	int
 194	sourceSubmissionFileId	\N	string
-194	submissionFileId	35	int
+194	submissionFileId	34	int
 194	fileId	21	int
 194	submissionId	8	int
 194	originalFileName	Editorial.pdf	string
 194	username	dbarnes	string
 195	fileStage	2	int
-195	submissionFileId	35	int
+195	sourceSubmissionFileId	\N	string
+195	submissionFileId	34	int
 195	fileId	21	int
 195	submissionId	8	int
 195	username	dbarnes	string
+195	originalFileName	Editorial.pdf	string
 195	name	Editorial.pdf	string
-196	fileStage	2	int
-196	sourceSubmissionFileId	\N	string
-196	submissionFileId	35	int
-196	fileId	21	int
-196	submissionId	8	int
-196	originalFileName	Editorial.pdf	string
-196	username	dbarnes	string
-197	fileStage	2	int
-197	sourceSubmissionFileId	\N	string
-197	submissionFileId	35	int
-197	fileId	21	int
-197	submissionId	8	int
-197	username	dbarnes	string
-197	originalFileName	Editorial.pdf	string
-197	name	Editorial.pdf	string
+200	fileStage	2	int
+200	sourceSubmissionFileId	\N	string
+200	submissionFileId	35	int
+200	fileId	22	int
+200	submissionId	9	int
+200	originalFileName	Internet, openness and the future of the.pdf	string
+200	username	fperini	string
+201	fileStage	2	int
+201	submissionFileId	35	int
+201	fileId	22	int
+201	submissionId	9	int
+201	username	fperini	string
+201	name	Internet, openness and the future of the.pdf	string
 202	fileStage	2	int
 202	sourceSubmissionFileId	\N	string
-202	submissionFileId	36	int
+202	submissionFileId	35	int
 202	fileId	22	int
 202	submissionId	9	int
 202	originalFileName	Internet, openness and the future of the.pdf	string
 202	username	fperini	string
 203	fileStage	2	int
-203	submissionFileId	36	int
+203	sourceSubmissionFileId	\N	string
+203	submissionFileId	35	int
 203	fileId	22	int
 203	submissionId	9	int
 203	username	fperini	string
+203	originalFileName	Internet, openness and the future of the.pdf	string
 203	name	Internet, openness and the future of the.pdf	string
 204	fileStage	2	int
 204	sourceSubmissionFileId	\N	string
 204	submissionFileId	36	int
-204	fileId	22	int
+204	fileId	23	int
 204	submissionId	9	int
-204	originalFileName	Internet, openness and the future of the.pdf	string
+204	originalFileName	Imagining the Internet: Open, closed or .pdf	string
 204	username	fperini	string
 205	fileStage	2	int
-205	sourceSubmissionFileId	\N	string
 205	submissionFileId	36	int
-205	fileId	22	int
+205	fileId	23	int
 205	submissionId	9	int
 205	username	fperini	string
-205	originalFileName	Internet, openness and the future of the.pdf	string
-205	name	Internet, openness and the future of the.pdf	string
+205	name	Imagining the Internet: Open, closed or .pdf	string
 206	fileStage	2	int
 206	sourceSubmissionFileId	\N	string
-206	submissionFileId	37	int
+206	submissionFileId	36	int
 206	fileId	23	int
 206	submissionId	9	int
 206	originalFileName	Imagining the Internet: Open, closed or .pdf	string
 206	username	fperini	string
 207	fileStage	2	int
-207	submissionFileId	37	int
+207	sourceSubmissionFileId	\N	string
+207	submissionFileId	36	int
 207	fileId	23	int
 207	submissionId	9	int
 207	username	fperini	string
+207	originalFileName	Imagining the Internet: Open, closed or .pdf	string
 207	name	Imagining the Internet: Open, closed or .pdf	string
 208	fileStage	2	int
 208	sourceSubmissionFileId	\N	string
 208	submissionFileId	37	int
-208	fileId	23	int
+208	fileId	24	int
 208	submissionId	9	int
-208	originalFileName	Imagining the Internet: Open, closed or .pdf	string
+208	originalFileName	The internet in LAC will remain free, pu.pdf	string
 208	username	fperini	string
 209	fileStage	2	int
-209	sourceSubmissionFileId	\N	string
 209	submissionFileId	37	int
-209	fileId	23	int
+209	fileId	24	int
 209	submissionId	9	int
 209	username	fperini	string
-209	originalFileName	Imagining the Internet: Open, closed or .pdf	string
-209	name	Imagining the Internet: Open, closed or .pdf	string
+209	name	The internet in LAC will remain free, pu.pdf	string
 210	fileStage	2	int
 210	sourceSubmissionFileId	\N	string
-210	submissionFileId	38	int
+210	submissionFileId	37	int
 210	fileId	24	int
 210	submissionId	9	int
 210	originalFileName	The internet in LAC will remain free, pu.pdf	string
 210	username	fperini	string
 211	fileStage	2	int
-211	submissionFileId	38	int
+211	sourceSubmissionFileId	\N	string
+211	submissionFileId	37	int
 211	fileId	24	int
 211	submissionId	9	int
 211	username	fperini	string
+211	originalFileName	The internet in LAC will remain free, pu.pdf	string
 211	name	The internet in LAC will remain free, pu.pdf	string
 212	fileStage	2	int
 212	sourceSubmissionFileId	\N	string
 212	submissionFileId	38	int
-212	fileId	24	int
+212	fileId	25	int
 212	submissionId	9	int
-212	originalFileName	The internet in LAC will remain free, pu.pdf	string
+212	originalFileName	Free Internet?.pdf	string
 212	username	fperini	string
 213	fileStage	2	int
-213	sourceSubmissionFileId	\N	string
 213	submissionFileId	38	int
-213	fileId	24	int
+213	fileId	25	int
 213	submissionId	9	int
 213	username	fperini	string
-213	originalFileName	The internet in LAC will remain free, pu.pdf	string
-213	name	The internet in LAC will remain free, pu.pdf	string
+213	name	Free Internet?.pdf	string
 214	fileStage	2	int
 214	sourceSubmissionFileId	\N	string
-214	submissionFileId	39	int
+214	submissionFileId	38	int
 214	fileId	25	int
 214	submissionId	9	int
 214	originalFileName	Free Internet?.pdf	string
 214	username	fperini	string
 215	fileStage	2	int
-215	submissionFileId	39	int
+215	sourceSubmissionFileId	\N	string
+215	submissionFileId	38	int
 215	fileId	25	int
 215	submissionId	9	int
 215	username	fperini	string
+215	originalFileName	Free Internet?.pdf	string
 215	name	Free Internet?.pdf	string
 216	fileStage	2	int
 216	sourceSubmissionFileId	\N	string
 216	submissionFileId	39	int
-216	fileId	25	int
+216	fileId	26	int
 216	submissionId	9	int
-216	originalFileName	Free Internet?.pdf	string
+216	originalFileName	Risks and challenges for freedom of expr.pdf	string
 216	username	fperini	string
 217	fileStage	2	int
-217	sourceSubmissionFileId	\N	string
 217	submissionFileId	39	int
-217	fileId	25	int
+217	fileId	26	int
 217	submissionId	9	int
 217	username	fperini	string
-217	originalFileName	Free Internet?.pdf	string
-217	name	Free Internet?.pdf	string
+217	name	Risks and challenges for freedom of expr.pdf	string
 218	fileStage	2	int
 218	sourceSubmissionFileId	\N	string
-218	submissionFileId	40	int
+218	submissionFileId	39	int
 218	fileId	26	int
 218	submissionId	9	int
 218	originalFileName	Risks and challenges for freedom of expr.pdf	string
 218	username	fperini	string
 219	fileStage	2	int
-219	submissionFileId	40	int
+219	sourceSubmissionFileId	\N	string
+219	submissionFileId	39	int
 219	fileId	26	int
 219	submissionId	9	int
 219	username	fperini	string
+219	originalFileName	Risks and challenges for freedom of expr.pdf	string
 219	name	Risks and challenges for freedom of expr.pdf	string
-220	fileStage	2	int
-220	sourceSubmissionFileId	\N	string
-220	submissionFileId	40	int
-220	fileId	26	int
-220	submissionId	9	int
-220	originalFileName	Risks and challenges for freedom of expr.pdf	string
-220	username	fperini	string
-221	fileStage	2	int
-221	sourceSubmissionFileId	\N	string
-221	submissionFileId	40	int
-221	fileId	26	int
-221	submissionId	9	int
-221	username	fperini	string
-221	originalFileName	Risks and challenges for freedom of expr.pdf	string
-221	name	Risks and challenges for freedom of expr.pdf	string
-228	editorName	Daniel Barnes	string
+226	editorName	Daniel Barnes	string
+226	submissionId	9	int
+226	decision	Send to Internal Review	string
+227	fileStage	19	int
+227	sourceSubmissionFileId	35	int
+227	submissionFileId	40	int
+227	fileId	22	int
+227	submissionId	9	int
+227	originalFileName	Internet, openness and the future of the.pdf	string
+227	username	dbarnes	string
+228	fileStage	19	int
+228	submissionFileId	40	int
+228	fileId	22	int
 228	submissionId	9	int
-228	decision	Send to Internal Review	string
-231	fileStage	2	int
-231	sourceSubmissionFileId	\N	string
-231	submissionFileId	41	int
-231	fileId	27	int
-231	submissionId	10	int
-231	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
-231	username	jbrower	string
-232	fileStage	2	int
-232	submissionFileId	41	int
-232	fileId	27	int
-232	submissionId	10	int
-232	username	jbrower	string
-232	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
-233	fileStage	2	int
-233	sourceSubmissionFileId	\N	string
-233	submissionFileId	41	int
-233	fileId	27	int
-233	submissionId	10	int
-233	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
-233	username	jbrower	string
-234	fileStage	2	int
-234	sourceSubmissionFileId	\N	string
-234	submissionFileId	41	int
-234	fileId	27	int
-234	submissionId	10	int
-234	username	jbrower	string
-234	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
-234	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
+228	username	dbarnes	string
+228	name	Internet, openness and the future of the.pdf	string
+229	fileStage	19	int
+229	sourceSubmissionFileId	36	int
+229	submissionFileId	41	int
+229	fileId	23	int
+229	submissionId	9	int
+229	originalFileName	Imagining the Internet: Open, closed or .pdf	string
+229	username	dbarnes	string
+230	fileStage	19	int
+230	submissionFileId	41	int
+230	fileId	23	int
+230	submissionId	9	int
+230	username	dbarnes	string
+230	name	Imagining the Internet: Open, closed or .pdf	string
+231	fileStage	19	int
+231	sourceSubmissionFileId	37	int
+231	submissionFileId	42	int
+231	fileId	24	int
+231	submissionId	9	int
+231	originalFileName	The internet in LAC will remain free, pu.pdf	string
+231	username	dbarnes	string
+232	fileStage	19	int
+232	submissionFileId	42	int
+232	fileId	24	int
+232	submissionId	9	int
+232	username	dbarnes	string
+232	name	The internet in LAC will remain free, pu.pdf	string
+233	fileStage	19	int
+233	sourceSubmissionFileId	38	int
+233	submissionFileId	43	int
+233	fileId	25	int
+233	submissionId	9	int
+233	originalFileName	Free Internet?.pdf	string
+233	username	dbarnes	string
+234	fileStage	19	int
+234	submissionFileId	43	int
+234	fileId	25	int
+234	submissionId	9	int
+234	username	dbarnes	string
+234	name	Free Internet?.pdf	string
+235	fileStage	19	int
+235	sourceSubmissionFileId	39	int
+235	submissionFileId	44	int
+235	fileId	26	int
+235	submissionId	9	int
+235	originalFileName	Risks and challenges for freedom of expr.pdf	string
+235	username	dbarnes	string
+236	fileStage	19	int
+236	submissionFileId	44	int
+236	fileId	26	int
+236	submissionId	9	int
+236	username	dbarnes	string
+236	name	Risks and challenges for freedom of expr.pdf	string
 239	fileStage	2	int
 239	sourceSubmissionFileId	\N	string
-239	submissionFileId	42	int
-239	fileId	28	int
-239	submissionId	11	int
-239	originalFileName	Dreamwork.pdf	string
-239	username	jlockehart	string
+239	submissionFileId	45	int
+239	fileId	27	int
+239	submissionId	10	int
+239	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
+239	username	jbrower	string
 240	fileStage	2	int
-240	submissionFileId	42	int
-240	fileId	28	int
-240	submissionId	11	int
-240	username	jlockehart	string
-240	name	Dreamwork.pdf	string
+240	submissionFileId	45	int
+240	fileId	27	int
+240	submissionId	10	int
+240	username	jbrower	string
+240	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
 241	fileStage	2	int
 241	sourceSubmissionFileId	\N	string
-241	submissionFileId	42	int
-241	fileId	28	int
-241	submissionId	11	int
-241	originalFileName	Dreamwork.pdf	string
-241	username	jlockehart	string
+241	submissionFileId	45	int
+241	fileId	27	int
+241	submissionId	10	int
+241	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
+241	username	jbrower	string
 242	fileStage	2	int
 242	sourceSubmissionFileId	\N	string
-242	submissionFileId	42	int
-242	fileId	28	int
-242	submissionId	11	int
-242	username	jlockehart	string
-242	originalFileName	Dreamwork.pdf	string
-242	name	Dreamwork.pdf	string
-245	editorName	Daniel Barnes	string
-245	submissionId	11	int
-245	decision	Send to Internal Review	string
-246	reviewAssignmentId	9	string
-246	reviewerName	Aisla McCrae	string
-246	submissionId	11	int
-246	stageId	2	int
-246	round	1	int
-247	editorName	Daniel Barnes	string
+242	submissionFileId	45	int
+242	fileId	27	int
+242	submissionId	10	int
+242	username	jbrower	string
+242	originalFileName	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
+242	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
+247	fileStage	2	int
+247	sourceSubmissionFileId	\N	string
+247	submissionFileId	46	int
+247	fileId	28	int
 247	submissionId	11	int
-247	decision	Send to External Review	string
-248	reviewAssignmentId	10	string
-248	reviewerName	Adela Gallego	string
+247	originalFileName	Dreamwork.pdf	string
+247	username	jlockehart	string
+248	fileStage	2	int
+248	submissionFileId	46	int
+248	fileId	28	int
 248	submissionId	11	int
-248	stageId	3	int
-248	round	1	int
-249	reviewAssignmentId	11	string
-249	reviewerName	Gonzalo Favio	string
+248	username	jlockehart	string
+248	name	Dreamwork.pdf	string
+249	fileStage	2	int
+249	sourceSubmissionFileId	\N	string
+249	submissionFileId	46	int
+249	fileId	28	int
 249	submissionId	11	int
-249	stageId	3	int
-249	round	1	int
-250	reviewAssignmentId	10	int
-250	reviewerName	Adela Gallego	string
+249	originalFileName	Dreamwork.pdf	string
+249	username	jlockehart	string
+250	fileStage	2	int
+250	sourceSubmissionFileId	\N	string
+250	submissionFileId	46	int
+250	fileId	28	int
 250	submissionId	11	int
-250	round	1	int
-251	reviewAssignmentId	10	int
-251	reviewerName	Adela Gallego	string
-251	submissionId	11	int
-251	round	1	int
-252	reviewAssignmentId	11	int
-252	reviewerName	Gonzalo Favio	string
-252	submissionId	11	int
-252	round	1	int
-253	reviewAssignmentId	11	int
-253	reviewerName	Gonzalo Favio	string
+250	username	jlockehart	string
+250	originalFileName	Dreamwork.pdf	string
+250	name	Dreamwork.pdf	string
+253	editorName	Daniel Barnes	string
 253	submissionId	11	int
-253	round	1	int
-254	editorName	Daniel Barnes	string
+253	decision	Send to Internal Review	string
+254	reviewAssignmentId	9	string
+254	reviewerName	Aisla McCrae	string
 254	submissionId	11	int
-254	decision	Accept Submission	string
-257	fileStage	2	int
-257	sourceSubmissionFileId	\N	string
-257	submissionFileId	43	int
-257	fileId	29	int
-257	submissionId	12	int
-257	originalFileName	Catalyzing Access through Social and Tec.pdf	string
-257	username	lelder	string
-258	fileStage	2	int
-258	submissionFileId	43	int
-258	fileId	29	int
-258	submissionId	12	int
-258	username	lelder	string
-258	name	Catalyzing Access through Social and Tec.pdf	string
-259	fileStage	2	int
-259	sourceSubmissionFileId	\N	string
-259	submissionFileId	43	int
-259	fileId	29	int
-259	submissionId	12	int
-259	originalFileName	Catalyzing Access through Social and Tec.pdf	string
-259	username	lelder	string
-260	fileStage	2	int
-260	sourceSubmissionFileId	\N	string
-260	submissionFileId	43	int
-260	fileId	29	int
-260	submissionId	12	int
-260	username	lelder	string
-260	originalFileName	Catalyzing Access through Social and Tec.pdf	string
-260	name	Catalyzing Access through Social and Tec.pdf	string
-261	fileStage	2	int
-261	sourceSubmissionFileId	\N	string
-261	submissionFileId	44	int
-261	fileId	30	int
-261	submissionId	12	int
-261	originalFileName	Catalyzing Access via Telecommunications.pdf	string
-261	username	lelder	string
-262	fileStage	2	int
-262	submissionFileId	44	int
-262	fileId	30	int
-262	submissionId	12	int
-262	username	lelder	string
-262	name	Catalyzing Access via Telecommunications.pdf	string
-263	fileStage	2	int
-263	sourceSubmissionFileId	\N	string
-263	submissionFileId	44	int
-263	fileId	30	int
-263	submissionId	12	int
-263	originalFileName	Catalyzing Access via Telecommunications.pdf	string
-263	username	lelder	string
-264	fileStage	2	int
-264	sourceSubmissionFileId	\N	string
-264	submissionFileId	44	int
-264	fileId	30	int
-264	submissionId	12	int
-264	username	lelder	string
-264	originalFileName	Catalyzing Access via Telecommunications.pdf	string
-264	name	Catalyzing Access via Telecommunications.pdf	string
+254	stageId	2	int
+254	round	1	int
+255	editorName	Daniel Barnes	string
+255	submissionId	11	int
+255	decision	Send to External Review	string
+256	reviewAssignmentId	10	string
+256	reviewerName	Adela Gallego	string
+256	submissionId	11	int
+256	stageId	3	int
+256	round	1	int
+257	reviewAssignmentId	11	string
+257	reviewerName	Gonzalo Favio	string
+257	submissionId	11	int
+257	stageId	3	int
+257	round	1	int
+258	reviewAssignmentId	10	int
+258	reviewerName	Adela Gallego	string
+258	submissionId	11	int
+258	round	1	int
+259	reviewAssignmentId	10	int
+259	reviewerName	Adela Gallego	string
+259	submissionId	11	int
+259	round	1	int
+260	reviewAssignmentId	11	int
+260	reviewerName	Gonzalo Favio	string
+260	submissionId	11	int
+260	round	1	int
+261	reviewAssignmentId	11	int
+261	reviewerName	Gonzalo Favio	string
+261	submissionId	11	int
+261	round	1	int
+262	editorName	Daniel Barnes	string
+262	submissionId	11	int
+262	decision	Accept Submission	string
 265	fileStage	2	int
 265	sourceSubmissionFileId	\N	string
-265	submissionFileId	45	int
-265	fileId	31	int
+265	submissionFileId	47	int
+265	fileId	29	int
 265	submissionId	12	int
-265	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
+265	originalFileName	Catalyzing Access through Social and Tec.pdf	string
 265	username	lelder	string
 266	fileStage	2	int
-266	submissionFileId	45	int
-266	fileId	31	int
+266	submissionFileId	47	int
+266	fileId	29	int
 266	submissionId	12	int
 266	username	lelder	string
-266	name	Access to Knowledge as a New Paradigm fo.pdf	string
+266	name	Catalyzing Access through Social and Tec.pdf	string
 267	fileStage	2	int
 267	sourceSubmissionFileId	\N	string
-267	submissionFileId	45	int
-267	fileId	31	int
+267	submissionFileId	47	int
+267	fileId	29	int
 267	submissionId	12	int
-267	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
+267	originalFileName	Catalyzing Access through Social and Tec.pdf	string
 267	username	lelder	string
 268	fileStage	2	int
 268	sourceSubmissionFileId	\N	string
-268	submissionFileId	45	int
-268	fileId	31	int
+268	submissionFileId	47	int
+268	fileId	29	int
 268	submissionId	12	int
 268	username	lelder	string
-268	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
-268	name	Access to Knowledge as a New Paradigm fo.pdf	string
-278	editorName	Daniel Barnes	string
-278	submissionId	12	int
-278	decision	Send to Internal Review	string
-279	reviewAssignmentId	12	string
-279	reviewerName	Julie Janssen	string
-279	submissionId	12	int
-279	stageId	2	int
-279	round	1	int
-280	reviewAssignmentId	13	string
-280	reviewerName	Paul Hudson	string
-280	submissionId	12	int
-280	stageId	2	int
-280	round	1	int
-281	reviewAssignmentId	14	string
-281	reviewerName	Aisla McCrae	string
-281	submissionId	12	int
-281	stageId	2	int
-281	round	1	int
-282	reviewAssignmentId	13	int
-282	reviewerName	Paul Hudson	string
-282	submissionId	12	int
-282	round	1	int
-283	reviewAssignmentId	13	int
-283	reviewerName	Paul Hudson	string
-283	submissionId	12	int
-283	round	1	int
-286	fileStage	2	int
-286	sourceSubmissionFileId	\N	string
-286	submissionFileId	46	int
-286	fileId	32	int
-286	submissionId	13	int
-286	originalFileName	Current State of Mobile Learning.pdf	string
-286	username	mally	string
-287	fileStage	2	int
-287	submissionFileId	46	int
-287	fileId	32	int
-287	submissionId	13	int
-287	username	mally	string
-287	name	Current State of Mobile Learning.pdf	string
-288	fileStage	2	int
-288	sourceSubmissionFileId	\N	string
-288	submissionFileId	46	int
-288	fileId	32	int
-288	submissionId	13	int
-288	originalFileName	Current State of Mobile Learning.pdf	string
-288	username	mally	string
-289	fileStage	2	int
-289	sourceSubmissionFileId	\N	string
-289	submissionFileId	46	int
-289	fileId	32	int
-289	submissionId	13	int
-289	username	mally	string
-289	originalFileName	Current State of Mobile Learning.pdf	string
-289	name	Current State of Mobile Learning.pdf	string
-290	fileStage	2	int
-290	sourceSubmissionFileId	\N	string
-290	submissionFileId	47	int
-290	fileId	33	int
-290	submissionId	13	int
-290	originalFileName	A Model for Framing Mobile Learning.pdf	string
-290	username	mally	string
-291	fileStage	2	int
-291	submissionFileId	47	int
-291	fileId	33	int
-291	submissionId	13	int
-291	username	mally	string
-291	name	A Model for Framing Mobile Learning.pdf	string
-292	fileStage	2	int
-292	sourceSubmissionFileId	\N	string
-292	submissionFileId	47	int
-292	fileId	33	int
-292	submissionId	13	int
-292	originalFileName	A Model for Framing Mobile Learning.pdf	string
-292	username	mally	string
-293	fileStage	2	int
-293	sourceSubmissionFileId	\N	string
-293	submissionFileId	47	int
-293	fileId	33	int
-293	submissionId	13	int
-293	username	mally	string
-293	originalFileName	A Model for Framing Mobile Learning.pdf	string
-293	name	A Model for Framing Mobile Learning.pdf	string
+268	originalFileName	Catalyzing Access through Social and Tec.pdf	string
+268	name	Catalyzing Access through Social and Tec.pdf	string
+269	fileStage	2	int
+269	sourceSubmissionFileId	\N	string
+269	submissionFileId	48	int
+269	fileId	30	int
+269	submissionId	12	int
+269	originalFileName	Catalyzing Access via Telecommunications.pdf	string
+269	username	lelder	string
+270	fileStage	2	int
+270	submissionFileId	48	int
+270	fileId	30	int
+270	submissionId	12	int
+270	username	lelder	string
+270	name	Catalyzing Access via Telecommunications.pdf	string
+271	fileStage	2	int
+271	sourceSubmissionFileId	\N	string
+271	submissionFileId	48	int
+271	fileId	30	int
+271	submissionId	12	int
+271	originalFileName	Catalyzing Access via Telecommunications.pdf	string
+271	username	lelder	string
+272	fileStage	2	int
+272	sourceSubmissionFileId	\N	string
+272	submissionFileId	48	int
+272	fileId	30	int
+272	submissionId	12	int
+272	username	lelder	string
+272	originalFileName	Catalyzing Access via Telecommunications.pdf	string
+272	name	Catalyzing Access via Telecommunications.pdf	string
+273	fileStage	2	int
+273	sourceSubmissionFileId	\N	string
+273	submissionFileId	49	int
+273	fileId	31	int
+273	submissionId	12	int
+273	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
+273	username	lelder	string
+274	fileStage	2	int
+274	submissionFileId	49	int
+274	fileId	31	int
+274	submissionId	12	int
+274	username	lelder	string
+274	name	Access to Knowledge as a New Paradigm fo.pdf	string
+275	fileStage	2	int
+275	sourceSubmissionFileId	\N	string
+275	submissionFileId	49	int
+275	fileId	31	int
+275	submissionId	12	int
+275	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
+275	username	lelder	string
+276	fileStage	2	int
+276	sourceSubmissionFileId	\N	string
+276	submissionFileId	49	int
+276	fileId	31	int
+276	submissionId	12	int
+276	username	lelder	string
+276	originalFileName	Access to Knowledge as a New Paradigm fo.pdf	string
+276	name	Access to Knowledge as a New Paradigm fo.pdf	string
+286	editorName	Daniel Barnes	string
+286	submissionId	12	int
+286	decision	Send to Internal Review	string
+287	reviewAssignmentId	12	string
+287	reviewerName	Julie Janssen	string
+287	submissionId	12	int
+287	stageId	2	int
+287	round	1	int
+288	reviewAssignmentId	13	string
+288	reviewerName	Paul Hudson	string
+288	submissionId	12	int
+288	stageId	2	int
+288	round	1	int
+289	reviewAssignmentId	14	string
+289	reviewerName	Aisla McCrae	string
+289	submissionId	12	int
+289	stageId	2	int
+289	round	1	int
+290	reviewAssignmentId	13	int
+290	reviewerName	Paul Hudson	string
+290	submissionId	12	int
+290	round	1	int
+291	reviewAssignmentId	13	int
+291	reviewerName	Paul Hudson	string
+291	submissionId	12	int
+291	round	1	int
 294	fileStage	2	int
 294	sourceSubmissionFileId	\N	string
-294	submissionFileId	48	int
-294	fileId	34	int
+294	submissionFileId	50	int
+294	fileId	32	int
 294	submissionId	13	int
-294	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
+294	originalFileName	Current State of Mobile Learning.pdf	string
 294	username	mally	string
 295	fileStage	2	int
-295	submissionFileId	48	int
-295	fileId	34	int
+295	submissionFileId	50	int
+295	fileId	32	int
 295	submissionId	13	int
 295	username	mally	string
-295	name	Mobile Distance Learning with PDAs: Deve.pdf	string
+295	name	Current State of Mobile Learning.pdf	string
 296	fileStage	2	int
 296	sourceSubmissionFileId	\N	string
-296	submissionFileId	48	int
-296	fileId	34	int
+296	submissionFileId	50	int
+296	fileId	32	int
 296	submissionId	13	int
-296	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
+296	originalFileName	Current State of Mobile Learning.pdf	string
 296	username	mally	string
 297	fileStage	2	int
 297	sourceSubmissionFileId	\N	string
-297	submissionFileId	48	int
-297	fileId	34	int
+297	submissionFileId	50	int
+297	fileId	32	int
 297	submissionId	13	int
 297	username	mally	string
-297	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
-297	name	Mobile Distance Learning with PDAs: Deve.pdf	string
-303	editorName	Daniel Barnes	string
+297	originalFileName	Current State of Mobile Learning.pdf	string
+297	name	Current State of Mobile Learning.pdf	string
+298	fileStage	2	int
+298	sourceSubmissionFileId	\N	string
+298	submissionFileId	51	int
+298	fileId	33	int
+298	submissionId	13	int
+298	originalFileName	A Model for Framing Mobile Learning.pdf	string
+298	username	mally	string
+299	fileStage	2	int
+299	submissionFileId	51	int
+299	fileId	33	int
+299	submissionId	13	int
+299	username	mally	string
+299	name	A Model for Framing Mobile Learning.pdf	string
+300	fileStage	2	int
+300	sourceSubmissionFileId	\N	string
+300	submissionFileId	51	int
+300	fileId	33	int
+300	submissionId	13	int
+300	originalFileName	A Model for Framing Mobile Learning.pdf	string
+300	username	mally	string
+301	fileStage	2	int
+301	sourceSubmissionFileId	\N	string
+301	submissionFileId	51	int
+301	fileId	33	int
+301	submissionId	13	int
+301	username	mally	string
+301	originalFileName	A Model for Framing Mobile Learning.pdf	string
+301	name	A Model for Framing Mobile Learning.pdf	string
+302	fileStage	2	int
+302	sourceSubmissionFileId	\N	string
+302	submissionFileId	52	int
+302	fileId	34	int
+302	submissionId	13	int
+302	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
+302	username	mally	string
+303	fileStage	2	int
+303	submissionFileId	52	int
+303	fileId	34	int
 303	submissionId	13	int
-303	decision	Send to Internal Review	string
-304	fileStage	19	int
-304	sourceSubmissionFileId	46	int
-304	submissionFileId	49	int
-304	fileId	32	int
+303	username	mally	string
+303	name	Mobile Distance Learning with PDAs: Deve.pdf	string
+304	fileStage	2	int
+304	sourceSubmissionFileId	\N	string
+304	submissionFileId	52	int
+304	fileId	34	int
 304	submissionId	13	int
-304	originalFileName	Current State of Mobile Learning.pdf	string
-304	username	dbarnes	string
-305	fileStage	19	int
-305	submissionFileId	49	int
-305	fileId	32	int
+304	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
+304	username	mally	string
+305	fileStage	2	int
+305	sourceSubmissionFileId	\N	string
+305	submissionFileId	52	int
+305	fileId	34	int
 305	submissionId	13	int
-305	username	dbarnes	string
-305	name	Current State of Mobile Learning.pdf	string
-306	fileStage	19	int
-306	sourceSubmissionFileId	47	int
-306	submissionFileId	50	int
-306	fileId	33	int
-306	submissionId	13	int
-306	originalFileName	A Model for Framing Mobile Learning.pdf	string
-306	username	dbarnes	string
-307	fileStage	19	int
-307	submissionFileId	50	int
-307	fileId	33	int
-307	submissionId	13	int
-307	username	dbarnes	string
-307	name	A Model for Framing Mobile Learning.pdf	string
-308	fileStage	19	int
-308	sourceSubmissionFileId	48	int
-308	submissionFileId	51	int
-308	fileId	34	int
-308	submissionId	13	int
-308	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
-308	username	dbarnes	string
-309	fileStage	19	int
-309	submissionFileId	51	int
-309	fileId	34	int
-309	submissionId	13	int
-309	username	dbarnes	string
-309	name	Mobile Distance Learning with PDAs: Deve.pdf	string
-310	reviewAssignmentId	15	string
-310	reviewerName	Paul Hudson	string
-310	submissionId	13	int
-310	stageId	2	int
-310	round	1	int
+305	username	mally	string
+305	originalFileName	Mobile Distance Learning with PDAs: Deve.pdf	string
+305	name	Mobile Distance Learning with PDAs: Deve.pdf	string
 311	editorName	Daniel Barnes	string
 311	submissionId	13	int
-311	decision	Send to External Review	string
-312	reviewAssignmentId	16	string
-312	reviewerName	Adela Gallego	string
+311	decision	Send to Internal Review	string
+312	reviewAssignmentId	15	string
+312	reviewerName	Paul Hudson	string
 312	submissionId	13	int
-312	stageId	3	int
+312	stageId	2	int
 312	round	1	int
-313	reviewAssignmentId	17	string
-313	reviewerName	Al Zacharia	string
+313	editorName	Daniel Barnes	string
 313	submissionId	13	int
-313	stageId	3	int
-313	round	1	int
-314	reviewAssignmentId	18	string
-314	reviewerName	Gonzalo Favio	string
+313	decision	Send to External Review	string
+314	reviewAssignmentId	16	string
+314	reviewerName	Adela Gallego	string
 314	submissionId	13	int
 314	stageId	3	int
 314	round	1	int
-315	reviewAssignmentId	16	int
-315	reviewerName	Adela Gallego	string
+315	reviewAssignmentId	17	string
+315	reviewerName	Al Zacharia	string
 315	submissionId	13	int
+315	stageId	3	int
 315	round	1	int
-316	reviewAssignmentId	16	int
-316	reviewerName	Adela Gallego	string
+316	reviewAssignmentId	18	string
+316	reviewerName	Gonzalo Favio	string
 316	submissionId	13	int
+316	stageId	3	int
 316	round	1	int
-317	reviewAssignmentId	18	int
-317	reviewerName	Gonzalo Favio	string
+317	reviewAssignmentId	16	int
+317	reviewerName	Adela Gallego	string
 317	submissionId	13	int
 317	round	1	int
-318	reviewAssignmentId	18	int
-318	reviewerName	Gonzalo Favio	string
+318	reviewAssignmentId	16	int
+318	reviewerName	Adela Gallego	string
 318	submissionId	13	int
 318	round	1	int
-319	editorName	Daniel Barnes	string
+319	reviewAssignmentId	18	int
+319	reviewerName	Gonzalo Favio	string
 319	submissionId	13	int
-319	decision	Accept Submission	string
-322	fileStage	2	int
-322	sourceSubmissionFileId	\N	string
-322	submissionFileId	52	int
-322	fileId	35	int
-322	submissionId	14	int
-322	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
-322	username	mdawson	string
-323	fileStage	2	int
-323	submissionFileId	52	int
-323	fileId	35	int
-323	submissionId	14	int
-323	username	mdawson	string
-323	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+319	round	1	int
+320	reviewAssignmentId	18	int
+320	reviewerName	Gonzalo Favio	string
+320	submissionId	13	int
+320	round	1	int
+321	editorName	Daniel Barnes	string
+321	submissionId	13	int
+321	decision	Accept Submission	string
 324	fileStage	2	int
 324	sourceSubmissionFileId	\N	string
-324	submissionFileId	52	int
+324	submissionFileId	53	int
 324	fileId	35	int
 324	submissionId	14	int
 324	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
 324	username	mdawson	string
 325	fileStage	2	int
-325	sourceSubmissionFileId	\N	string
-325	submissionFileId	52	int
+325	submissionFileId	53	int
 325	fileId	35	int
 325	submissionId	14	int
 325	username	mdawson	string
-325	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
 325	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
 326	fileStage	2	int
 326	sourceSubmissionFileId	\N	string
 326	submissionFileId	53	int
-326	fileId	36	int
+326	fileId	35	int
 326	submissionId	14	int
-326	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+326	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
 326	username	mdawson	string
 327	fileStage	2	int
+327	sourceSubmissionFileId	\N	string
 327	submissionFileId	53	int
-327	fileId	36	int
+327	fileId	35	int
 327	submissionId	14	int
 327	username	mdawson	string
-327	name	Chapter 2: Classical Music and the Class.pdf	string
+327	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+327	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
 328	fileStage	2	int
 328	sourceSubmissionFileId	\N	string
-328	submissionFileId	53	int
+328	submissionFileId	54	int
 328	fileId	36	int
 328	submissionId	14	int
 328	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 328	username	mdawson	string
 329	fileStage	2	int
-329	sourceSubmissionFileId	\N	string
-329	submissionFileId	53	int
+329	submissionFileId	54	int
 329	fileId	36	int
 329	submissionId	14	int
 329	username	mdawson	string
-329	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 329	name	Chapter 2: Classical Music and the Class.pdf	string
 330	fileStage	2	int
 330	sourceSubmissionFileId	\N	string
 330	submissionFileId	54	int
-330	fileId	37	int
+330	fileId	36	int
 330	submissionId	14	int
-330	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+330	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 330	username	mdawson	string
 331	fileStage	2	int
+331	sourceSubmissionFileId	\N	string
 331	submissionFileId	54	int
-331	fileId	37	int
+331	fileId	36	int
 331	submissionId	14	int
 331	username	mdawson	string
-331	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+331	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+331	name	Chapter 2: Classical Music and the Class.pdf	string
 332	fileStage	2	int
 332	sourceSubmissionFileId	\N	string
-332	submissionFileId	54	int
+332	submissionFileId	55	int
 332	fileId	37	int
 332	submissionId	14	int
 332	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 332	username	mdawson	string
 333	fileStage	2	int
-333	sourceSubmissionFileId	\N	string
-333	submissionFileId	54	int
+333	submissionFileId	55	int
 333	fileId	37	int
 333	submissionId	14	int
 333	username	mdawson	string
-333	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 333	name	Chapter 3: Situated Cognition and Bricol.pdf	string
 334	fileStage	2	int
 334	sourceSubmissionFileId	\N	string
 334	submissionFileId	55	int
-334	fileId	38	int
+334	fileId	37	int
 334	submissionId	14	int
-334	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+334	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 334	username	mdawson	string
 335	fileStage	2	int
+335	sourceSubmissionFileId	\N	string
 335	submissionFileId	55	int
-335	fileId	38	int
+335	fileId	37	int
 335	submissionId	14	int
 335	username	mdawson	string
-335	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+335	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+335	name	Chapter 3: Situated Cognition and Bricol.pdf	string
 336	fileStage	2	int
 336	sourceSubmissionFileId	\N	string
-336	submissionFileId	55	int
+336	submissionFileId	56	int
 336	fileId	38	int
 336	submissionId	14	int
 336	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 336	username	mdawson	string
 337	fileStage	2	int
-337	sourceSubmissionFileId	\N	string
-337	submissionFileId	55	int
+337	submissionFileId	56	int
 337	fileId	38	int
 337	submissionId	14	int
 337	username	mdawson	string
-337	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 337	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 338	fileStage	2	int
 338	sourceSubmissionFileId	\N	string
 338	submissionFileId	56	int
-338	fileId	39	int
+338	fileId	38	int
 338	submissionId	14	int
-338	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+338	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 338	username	mdawson	string
 339	fileStage	2	int
+339	sourceSubmissionFileId	\N	string
 339	submissionFileId	56	int
-339	fileId	39	int
+339	fileId	38	int
 339	submissionId	14	int
 339	username	mdawson	string
-339	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+339	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+339	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 340	fileStage	2	int
 340	sourceSubmissionFileId	\N	string
-340	submissionFileId	56	int
+340	submissionFileId	57	int
 340	fileId	39	int
 340	submissionId	14	int
 340	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 340	username	mdawson	string
 341	fileStage	2	int
-341	sourceSubmissionFileId	\N	string
-341	submissionFileId	56	int
+341	submissionFileId	57	int
 341	fileId	39	int
 341	submissionId	14	int
 341	username	mdawson	string
-341	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 341	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 342	fileStage	2	int
 342	sourceSubmissionFileId	\N	string
 342	submissionFileId	57	int
-342	fileId	40	int
+342	fileId	39	int
 342	submissionId	14	int
-342	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+342	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 342	username	mdawson	string
 343	fileStage	2	int
+343	sourceSubmissionFileId	\N	string
 343	submissionFileId	57	int
-343	fileId	40	int
+343	fileId	39	int
 343	submissionId	14	int
 343	username	mdawson	string
-343	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+343	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+343	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 344	fileStage	2	int
 344	sourceSubmissionFileId	\N	string
-344	submissionFileId	57	int
+344	submissionFileId	58	int
 344	fileId	40	int
 344	submissionId	14	int
 344	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 344	username	mdawson	string
 345	fileStage	2	int
-345	sourceSubmissionFileId	\N	string
-345	submissionFileId	57	int
+345	submissionFileId	58	int
 345	fileId	40	int
 345	submissionId	14	int
 345	username	mdawson	string
-345	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 345	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-350	editorName	Daniel Barnes	string
-350	submissionId	14	int
-350	decision	Send to Internal Review	string
-351	reviewAssignmentId	19	string
-351	reviewerName	Julie Janssen	string
-351	submissionId	14	int
-351	stageId	2	int
-351	round	1	int
+346	fileStage	2	int
+346	sourceSubmissionFileId	\N	string
+346	submissionFileId	58	int
+346	fileId	40	int
+346	submissionId	14	int
+346	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+346	username	mdawson	string
+347	fileStage	2	int
+347	sourceSubmissionFileId	\N	string
+347	submissionFileId	58	int
+347	fileId	40	int
+347	submissionId	14	int
+347	username	mdawson	string
+347	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+347	name	The Canadian Nutrient File: Nutrient Val.pdf	string
 352	editorName	Daniel Barnes	string
 352	submissionId	14	int
-352	decision	Send to External Review	string
-353	reviewAssignmentId	20	string
-353	reviewerName	Al Zacharia	string
+352	decision	Send to Internal Review	string
+353	fileStage	19	int
+353	sourceSubmissionFileId	53	int
+353	submissionFileId	59	int
+353	fileId	35	int
 353	submissionId	14	int
-353	stageId	3	int
-353	round	1	int
-354	editorName	Daniel Barnes	string
+353	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+353	username	dbarnes	string
+354	fileStage	19	int
+354	submissionFileId	59	int
+354	fileId	35	int
 354	submissionId	14	int
-354	decision	Accept Submission	string
-355	name	Maria Fritz	string
-355	username	mfritz	string
-355	userGroupName	Copyeditor	string
-356	editorName	Daniel Barnes	string
+354	username	dbarnes	string
+354	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+355	fileStage	19	int
+355	sourceSubmissionFileId	54	int
+355	submissionFileId	60	int
+355	fileId	36	int
+355	submissionId	14	int
+355	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+355	username	dbarnes	string
+356	fileStage	19	int
+356	submissionFileId	60	int
+356	fileId	36	int
 356	submissionId	14	int
-356	decision	Send To Production	string
-357	name	Graham Cox	string
-357	username	gcox	string
-357	userGroupName	Layout Editor	string
-358	name	Sabine Kumar	string
-358	username	skumar	string
-358	userGroupName	Proofreader	string
-359	formatName	PDF	string
-360	fileStage	10	int
-360	sourceSubmissionFileId	52	int
-360	submissionFileId	58	int
-360	fileId	35	int
+356	username	dbarnes	string
+356	name	Chapter 2: Classical Music and the Class.pdf	string
+357	fileStage	19	int
+357	sourceSubmissionFileId	55	int
+357	submissionFileId	61	int
+357	fileId	37	int
+357	submissionId	14	int
+357	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+357	username	dbarnes	string
+358	fileStage	19	int
+358	submissionFileId	61	int
+358	fileId	37	int
+358	submissionId	14	int
+358	username	dbarnes	string
+358	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+359	fileStage	19	int
+359	sourceSubmissionFileId	56	int
+359	submissionFileId	62	int
+359	fileId	38	int
+359	submissionId	14	int
+359	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+359	username	dbarnes	string
+360	fileStage	19	int
+360	submissionFileId	62	int
+360	fileId	38	int
 360	submissionId	14	int
-360	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
 360	username	dbarnes	string
-361	fileStage	10	int
-361	submissionFileId	58	int
-361	fileId	35	int
+360	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+361	fileStage	19	int
+361	sourceSubmissionFileId	57	int
+361	submissionFileId	63	int
+361	fileId	39	int
 361	submissionId	14	int
+361	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 361	username	dbarnes	string
-361	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
-362	fileStage	10	int
-362	sourceSubmissionFileId	53	int
-362	submissionFileId	59	int
-362	fileId	36	int
+362	fileStage	19	int
+362	submissionFileId	63	int
+362	fileId	39	int
 362	submissionId	14	int
-362	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 362	username	dbarnes	string
-363	fileStage	10	int
-363	submissionFileId	59	int
-363	fileId	36	int
+362	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+363	fileStage	19	int
+363	sourceSubmissionFileId	58	int
+363	submissionFileId	64	int
+363	fileId	40	int
 363	submissionId	14	int
+363	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 363	username	dbarnes	string
-363	name	Chapter 2: Classical Music and the Class.pdf	string
-364	fileStage	10	int
-364	sourceSubmissionFileId	54	int
-364	submissionFileId	60	int
-364	fileId	37	int
+364	fileStage	19	int
+364	submissionFileId	64	int
+364	fileId	40	int
 364	submissionId	14	int
-364	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 364	username	dbarnes	string
-365	fileStage	10	int
-365	submissionFileId	60	int
-365	fileId	37	int
+364	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+365	reviewAssignmentId	19	string
+365	reviewerName	Julie Janssen	string
 365	submissionId	14	int
-365	username	dbarnes	string
-365	name	Chapter 3: Situated Cognition and Bricol.pdf	string
-366	fileStage	10	int
-366	sourceSubmissionFileId	55	int
-366	submissionFileId	61	int
-366	fileId	38	int
+365	stageId	2	int
+365	round	1	int
+366	editorName	Daniel Barnes	string
 366	submissionId	14	int
-366	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-366	username	dbarnes	string
-367	fileStage	10	int
-367	submissionFileId	61	int
-367	fileId	38	int
+366	decision	Send to External Review	string
+367	reviewAssignmentId	20	string
+367	reviewerName	Al Zacharia	string
 367	submissionId	14	int
-367	username	dbarnes	string
-367	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-368	fileStage	10	int
-368	sourceSubmissionFileId	56	int
-368	submissionFileId	62	int
-368	fileId	39	int
+367	stageId	3	int
+367	round	1	int
+368	editorName	Daniel Barnes	string
 368	submissionId	14	int
-368	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
-368	username	dbarnes	string
-369	fileStage	10	int
-369	submissionFileId	62	int
-369	fileId	39	int
-369	submissionId	14	int
-369	username	dbarnes	string
-369	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-370	fileStage	10	int
-370	sourceSubmissionFileId	57	int
-370	submissionFileId	63	int
-370	fileId	40	int
+368	decision	Accept Submission	string
+369	name	Maria Fritz	string
+369	username	mfritz	string
+369	userGroupName	Copyeditor	string
+370	editorName	Daniel Barnes	string
 370	submissionId	14	int
-370	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
-370	username	dbarnes	string
-371	fileStage	10	int
-371	submissionFileId	63	int
-371	fileId	40	int
-371	submissionId	14	int
-371	username	dbarnes	string
-371	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-372	publicationFormatName	PDF	string
-373	publicationFormatName	PDF	string
+370	decision	Send To Production	string
+371	name	Graham Cox	string
+371	username	gcox	string
+371	userGroupName	Layout Editor	string
+372	name	Sabine Kumar	string
+372	username	skumar	string
+372	userGroupName	Proofreader	string
+373	formatName	PDF	string
 374	fileStage	10	int
-374	sourceSubmissionFileId	52	int
-374	submissionFileId	58	int
+374	sourceSubmissionFileId	53	int
+374	submissionFileId	65	int
 374	fileId	35	int
 374	submissionId	14	int
 374	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
 374	username	dbarnes	string
 375	fileStage	10	int
-375	sourceSubmissionFileId	52	int
-375	submissionFileId	58	int
+375	submissionFileId	65	int
 375	fileId	35	int
 375	submissionId	14	int
 375	username	dbarnes	string
-375	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
 375	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
-376	file	Chapter 1: Mind Control—Internal or Exte.pdf	string
-376	name	Daniel Barnes	string
+376	fileStage	10	int
+376	sourceSubmissionFileId	54	int
+376	submissionFileId	66	int
+376	fileId	36	int
+376	submissionId	14	int
+376	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 376	username	dbarnes	string
 377	fileStage	10	int
-377	sourceSubmissionFileId	53	int
-377	submissionFileId	59	int
+377	submissionFileId	66	int
 377	fileId	36	int
 377	submissionId	14	int
-377	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 377	username	dbarnes	string
+377	name	Chapter 2: Classical Music and the Class.pdf	string
 378	fileStage	10	int
-378	sourceSubmissionFileId	53	int
-378	submissionFileId	59	int
-378	fileId	36	int
+378	sourceSubmissionFileId	55	int
+378	submissionFileId	67	int
+378	fileId	37	int
 378	submissionId	14	int
+378	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
 378	username	dbarnes	string
-378	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
-378	name	Chapter 2: Classical Music and the Class.pdf	string
-379	file	Chapter 2: Classical Music and the Class.pdf	string
-379	name	Daniel Barnes	string
+379	fileStage	10	int
+379	submissionFileId	67	int
+379	fileId	37	int
+379	submissionId	14	int
 379	username	dbarnes	string
+379	name	Chapter 3: Situated Cognition and Bricol.pdf	string
 380	fileStage	10	int
-380	sourceSubmissionFileId	54	int
-380	submissionFileId	60	int
-380	fileId	37	int
+380	sourceSubmissionFileId	56	int
+380	submissionFileId	68	int
+380	fileId	38	int
 380	submissionId	14	int
-380	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+380	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 380	username	dbarnes	string
 381	fileStage	10	int
-381	sourceSubmissionFileId	54	int
-381	submissionFileId	60	int
-381	fileId	37	int
+381	submissionFileId	68	int
+381	fileId	38	int
 381	submissionId	14	int
 381	username	dbarnes	string
-381	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
-381	name	Chapter 3: Situated Cognition and Bricol.pdf	string
-382	file	Chapter 3: Situated Cognition and Bricol.pdf	string
-382	name	Daniel Barnes	string
+381	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+382	fileStage	10	int
+382	sourceSubmissionFileId	57	int
+382	submissionFileId	69	int
+382	fileId	39	int
+382	submissionId	14	int
+382	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
 382	username	dbarnes	string
 383	fileStage	10	int
-383	sourceSubmissionFileId	55	int
-383	submissionFileId	61	int
-383	fileId	38	int
+383	submissionFileId	69	int
+383	fileId	39	int
 383	submissionId	14	int
-383	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
 383	username	dbarnes	string
+383	name	Segmentation of Vascular Ultrasound Imag.pdf	string
 384	fileStage	10	int
-384	sourceSubmissionFileId	55	int
-384	submissionFileId	61	int
-384	fileId	38	int
+384	sourceSubmissionFileId	58	int
+384	submissionFileId	70	int
+384	fileId	40	int
 384	submissionId	14	int
+384	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 384	username	dbarnes	string
-384	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-384	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-385	file	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-385	name	Daniel Barnes	string
+385	fileStage	10	int
+385	submissionFileId	70	int
+385	fileId	40	int
+385	submissionId	14	int
 385	username	dbarnes	string
-386	fileStage	10	int
-386	sourceSubmissionFileId	56	int
-386	submissionFileId	62	int
-386	fileId	39	int
-386	submissionId	14	int
-386	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
-386	username	dbarnes	string
-387	fileStage	10	int
-387	sourceSubmissionFileId	56	int
-387	submissionFileId	62	int
-387	fileId	39	int
-387	submissionId	14	int
-387	username	dbarnes	string
-387	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
-387	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-388	file	Segmentation of Vascular Ultrasound Imag.pdf	string
-388	name	Daniel Barnes	string
+385	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+386	publicationFormatName	PDF	string
+387	publicationFormatName	PDF	string
+388	fileStage	10	int
+388	sourceSubmissionFileId	53	int
+388	submissionFileId	65	int
+388	fileId	35	int
+388	submissionId	14	int
+388	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
 388	username	dbarnes	string
 389	fileStage	10	int
-389	sourceSubmissionFileId	57	int
-389	submissionFileId	63	int
-389	fileId	40	int
+389	sourceSubmissionFileId	53	int
+389	submissionFileId	65	int
+389	fileId	35	int
 389	submissionId	14	int
-389	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
 389	username	dbarnes	string
-390	fileStage	10	int
-390	sourceSubmissionFileId	57	int
-390	submissionFileId	63	int
-390	fileId	40	int
-390	submissionId	14	int
+389	originalFileName	Chapter 1: Mind Control—Internal or Exte.pdf	string
+389	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+390	file	Chapter 1: Mind Control—Internal or Exte.pdf	string
+390	name	Daniel Barnes	string
 390	username	dbarnes	string
-390	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
-390	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-391	file	The Canadian Nutrient File: Nutrient Val.pdf	string
-391	name	Daniel Barnes	string
+391	fileStage	10	int
+391	sourceSubmissionFileId	54	int
+391	submissionFileId	66	int
+391	fileId	36	int
+391	submissionId	14	int
+391	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
 391	username	dbarnes	string
-395	fileStage	2	int
-395	sourceSubmissionFileId	\N	string
-395	submissionFileId	64	int
-395	fileId	41	int
-395	submissionId	15	int
-395	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-395	username	mforan	string
-396	fileStage	2	int
-396	submissionFileId	64	int
-396	fileId	41	int
-396	submissionId	15	int
-396	username	mforan	string
-396	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-397	fileStage	2	int
-397	sourceSubmissionFileId	\N	string
-397	submissionFileId	64	int
-397	fileId	41	int
-397	submissionId	15	int
-397	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-397	username	mforan	string
-398	fileStage	2	int
-398	sourceSubmissionFileId	\N	string
-398	submissionFileId	64	int
-398	fileId	41	int
-398	submissionId	15	int
-398	username	mforan	string
-398	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-398	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-401	editorName	Daniel Barnes	string
-401	submissionId	15	int
-401	decision	Send to External Review	string
-404	fileStage	2	int
-404	sourceSubmissionFileId	\N	string
-404	submissionFileId	65	int
-404	fileId	42	int
-404	submissionId	16	int
-404	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
-404	username	mpower	string
-405	fileStage	2	int
-405	submissionFileId	65	int
-405	fileId	42	int
-405	submissionId	16	int
-405	username	mpower	string
-405	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-406	fileStage	2	int
-406	sourceSubmissionFileId	\N	string
-406	submissionFileId	65	int
-406	fileId	42	int
-406	submissionId	16	int
-406	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
-406	username	mpower	string
-407	fileStage	2	int
-407	sourceSubmissionFileId	\N	string
-407	submissionFileId	65	int
-407	fileId	42	int
-407	submissionId	16	int
-407	username	mpower	string
-407	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
-407	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-410	editorName	Daniel Barnes	string
-410	submissionId	16	int
-410	decision	Send to External Review	string
-411	fileStage	4	int
-411	sourceSubmissionFileId	65	int
-411	submissionFileId	66	int
-411	fileId	42	int
-411	submissionId	16	int
-411	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
-411	username	dbarnes	string
-412	fileStage	4	int
-412	submissionFileId	66	int
-412	fileId	42	int
-412	submissionId	16	int
-412	username	dbarnes	string
-412	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-413	reviewAssignmentId	21	string
-413	reviewerName	Adela Gallego	string
-413	submissionId	16	int
-413	stageId	3	int
-413	round	1	int
-414	reviewAssignmentId	22	string
-414	reviewerName	Al Zacharia	string
-414	submissionId	16	int
-414	stageId	3	int
-414	round	1	int
-415	reviewAssignmentId	23	string
-415	reviewerName	Gonzalo Favio	string
-415	submissionId	16	int
-415	stageId	3	int
-415	round	1	int
-416	reviewAssignmentId	21	int
-416	reviewerName	Adela Gallego	string
-416	submissionId	16	int
-416	round	1	int
-417	reviewAssignmentId	21	int
-417	reviewerName	Adela Gallego	string
-417	submissionId	16	int
-417	round	1	int
+392	fileStage	10	int
+392	sourceSubmissionFileId	54	int
+392	submissionFileId	66	int
+392	fileId	36	int
+392	submissionId	14	int
+392	username	dbarnes	string
+392	originalFileName	Chapter 2: Classical Music and the Class.pdf	string
+392	name	Chapter 2: Classical Music and the Class.pdf	string
+393	file	Chapter 2: Classical Music and the Class.pdf	string
+393	name	Daniel Barnes	string
+393	username	dbarnes	string
+394	fileStage	10	int
+394	sourceSubmissionFileId	55	int
+394	submissionFileId	67	int
+394	fileId	37	int
+394	submissionId	14	int
+394	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+394	username	dbarnes	string
+395	fileStage	10	int
+395	sourceSubmissionFileId	55	int
+395	submissionFileId	67	int
+395	fileId	37	int
+395	submissionId	14	int
+395	username	dbarnes	string
+395	originalFileName	Chapter 3: Situated Cognition and Bricol.pdf	string
+395	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+396	file	Chapter 3: Situated Cognition and Bricol.pdf	string
+396	name	Daniel Barnes	string
+396	username	dbarnes	string
+397	fileStage	10	int
+397	sourceSubmissionFileId	56	int
+397	submissionFileId	68	int
+397	fileId	38	int
+397	submissionId	14	int
+397	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+397	username	dbarnes	string
+398	fileStage	10	int
+398	sourceSubmissionFileId	56	int
+398	submissionFileId	68	int
+398	fileId	38	int
+398	submissionId	14	int
+398	username	dbarnes	string
+398	originalFileName	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+398	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+399	file	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+399	name	Daniel Barnes	string
+399	username	dbarnes	string
+400	fileStage	10	int
+400	sourceSubmissionFileId	57	int
+400	submissionFileId	69	int
+400	fileId	39	int
+400	submissionId	14	int
+400	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+400	username	dbarnes	string
+401	fileStage	10	int
+401	sourceSubmissionFileId	57	int
+401	submissionFileId	69	int
+401	fileId	39	int
+401	submissionId	14	int
+401	username	dbarnes	string
+401	originalFileName	Segmentation of Vascular Ultrasound Imag.pdf	string
+401	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+402	file	Segmentation of Vascular Ultrasound Imag.pdf	string
+402	name	Daniel Barnes	string
+402	username	dbarnes	string
+403	fileStage	10	int
+403	sourceSubmissionFileId	58	int
+403	submissionFileId	70	int
+403	fileId	40	int
+403	submissionId	14	int
+403	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+403	username	dbarnes	string
+404	fileStage	10	int
+404	sourceSubmissionFileId	58	int
+404	submissionFileId	70	int
+404	fileId	40	int
+404	submissionId	14	int
+404	username	dbarnes	string
+404	originalFileName	The Canadian Nutrient File: Nutrient Val.pdf	string
+404	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+405	file	The Canadian Nutrient File: Nutrient Val.pdf	string
+405	name	Daniel Barnes	string
+405	username	dbarnes	string
+409	fileStage	2	int
+409	sourceSubmissionFileId	\N	string
+409	submissionFileId	71	int
+409	fileId	41	int
+409	submissionId	15	int
+409	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+409	username	mforan	string
+410	fileStage	2	int
+410	submissionFileId	71	int
+410	fileId	41	int
+410	submissionId	15	int
+410	username	mforan	string
+410	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+411	fileStage	2	int
+411	sourceSubmissionFileId	\N	string
+411	submissionFileId	71	int
+411	fileId	41	int
+411	submissionId	15	int
+411	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+411	username	mforan	string
+412	fileStage	2	int
+412	sourceSubmissionFileId	\N	string
+412	submissionFileId	71	int
+412	fileId	41	int
+412	submissionId	15	int
+412	username	mforan	string
+412	originalFileName	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+412	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+415	editorName	Daniel Barnes	string
+415	submissionId	15	int
+415	decision	Send to External Review	string
+418	fileStage	2	int
+418	sourceSubmissionFileId	\N	string
+418	submissionFileId	72	int
+418	fileId	42	int
+418	submissionId	16	int
+418	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
+418	username	mpower	string
+419	fileStage	2	int
+419	submissionFileId	72	int
+419	fileId	42	int
+419	submissionId	16	int
+419	username	mpower	string
+419	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
 420	fileStage	2	int
 420	sourceSubmissionFileId	\N	string
-420	submissionFileId	67	int
-420	fileId	43	int
-420	submissionId	17	int
-420	originalFileName	Preface.pdf	string
-420	username	msmith	string
+420	submissionFileId	72	int
+420	fileId	42	int
+420	submissionId	16	int
+420	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
+420	username	mpower	string
 421	fileStage	2	int
-421	submissionFileId	67	int
-421	fileId	43	int
-421	submissionId	17	int
-421	username	msmith	string
-421	name	Preface.pdf	string
-422	fileStage	2	int
-422	sourceSubmissionFileId	\N	string
-422	submissionFileId	67	int
-422	fileId	43	int
-422	submissionId	17	int
-422	originalFileName	Preface.pdf	string
-422	username	msmith	string
-423	fileStage	2	int
-423	sourceSubmissionFileId	\N	string
-423	submissionFileId	67	int
-423	fileId	43	int
-423	submissionId	17	int
-423	username	msmith	string
-423	originalFileName	Preface.pdf	string
-423	name	Preface.pdf	string
-424	fileStage	2	int
-424	sourceSubmissionFileId	\N	string
-424	submissionFileId	68	int
-424	fileId	44	int
-424	submissionId	17	int
-424	originalFileName	Introduction.pdf	string
-424	username	msmith	string
-425	fileStage	2	int
-425	submissionFileId	68	int
-425	fileId	44	int
-425	submissionId	17	int
-425	username	msmith	string
-425	name	Introduction.pdf	string
-426	fileStage	2	int
-426	sourceSubmissionFileId	\N	string
-426	submissionFileId	68	int
-426	fileId	44	int
-426	submissionId	17	int
-426	originalFileName	Introduction.pdf	string
-426	username	msmith	string
-427	fileStage	2	int
-427	sourceSubmissionFileId	\N	string
-427	submissionFileId	68	int
-427	fileId	44	int
-427	submissionId	17	int
-427	username	msmith	string
-427	originalFileName	Introduction.pdf	string
-427	name	Introduction.pdf	string
-428	fileStage	2	int
-428	sourceSubmissionFileId	\N	string
-428	submissionFileId	69	int
-428	fileId	45	int
-428	submissionId	17	int
-428	originalFileName	The Emergence of Open Development in a N.pdf	string
-428	username	msmith	string
-429	fileStage	2	int
-429	submissionFileId	69	int
-429	fileId	45	int
-429	submissionId	17	int
-429	username	msmith	string
-429	name	The Emergence of Open Development in a N.pdf	string
-430	fileStage	2	int
-430	sourceSubmissionFileId	\N	string
-430	submissionFileId	69	int
-430	fileId	45	int
-430	submissionId	17	int
-430	originalFileName	The Emergence of Open Development in a N.pdf	string
-430	username	msmith	string
-431	fileStage	2	int
-431	sourceSubmissionFileId	\N	string
-431	submissionFileId	69	int
-431	fileId	45	int
-431	submissionId	17	int
-431	username	msmith	string
-431	originalFileName	The Emergence of Open Development in a N.pdf	string
-431	name	The Emergence of Open Development in a N.pdf	string
-432	fileStage	2	int
-432	sourceSubmissionFileId	\N	string
-432	submissionFileId	70	int
-432	fileId	46	int
-432	submissionId	17	int
-432	originalFileName	Enacting Openness in ICT4D Research.pdf	string
-432	username	msmith	string
-433	fileStage	2	int
-433	submissionFileId	70	int
-433	fileId	46	int
-433	submissionId	17	int
-433	username	msmith	string
-433	name	Enacting Openness in ICT4D Research.pdf	string
+421	sourceSubmissionFileId	\N	string
+421	submissionFileId	72	int
+421	fileId	42	int
+421	submissionId	16	int
+421	username	mpower	string
+421	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
+421	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
+424	editorName	Daniel Barnes	string
+424	submissionId	16	int
+424	decision	Send to External Review	string
+425	fileStage	4	int
+425	sourceSubmissionFileId	72	int
+425	submissionFileId	73	int
+425	fileId	42	int
+425	submissionId	16	int
+448	sourceSubmissionFileId	\N	string
+425	originalFileName	A Designer's Log: Case Studies in Instructional Design.pdf	string
+425	username	dbarnes	string
+426	fileStage	4	int
+426	submissionFileId	73	int
+426	fileId	42	int
+426	submissionId	16	int
+426	username	dbarnes	string
+426	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
+427	reviewAssignmentId	21	string
+427	reviewerName	Adela Gallego	string
+427	submissionId	16	int
+427	stageId	3	int
+427	round	1	int
+428	reviewAssignmentId	22	string
+428	reviewerName	Al Zacharia	string
+428	submissionId	16	int
+428	stageId	3	int
+428	round	1	int
+429	reviewAssignmentId	23	string
+429	reviewerName	Gonzalo Favio	string
+429	submissionId	16	int
+429	stageId	3	int
+429	round	1	int
+430	reviewAssignmentId	21	int
+430	reviewerName	Adela Gallego	string
+430	submissionId	16	int
+430	round	1	int
+431	reviewAssignmentId	21	int
+431	reviewerName	Adela Gallego	string
+431	submissionId	16	int
+431	round	1	int
 434	fileStage	2	int
 434	sourceSubmissionFileId	\N	string
-434	submissionFileId	70	int
-434	fileId	46	int
+434	submissionFileId	74	int
+434	fileId	43	int
 434	submissionId	17	int
-434	originalFileName	Enacting Openness in ICT4D Research.pdf	string
+434	originalFileName	Preface.pdf	string
 434	username	msmith	string
 435	fileStage	2	int
-435	sourceSubmissionFileId	\N	string
-435	submissionFileId	70	int
-435	fileId	46	int
+435	submissionFileId	74	int
+435	fileId	43	int
 435	submissionId	17	int
 435	username	msmith	string
-435	originalFileName	Enacting Openness in ICT4D Research.pdf	string
-435	name	Enacting Openness in ICT4D Research.pdf	string
+435	name	Preface.pdf	string
 436	fileStage	2	int
 436	sourceSubmissionFileId	\N	string
-436	submissionFileId	71	int
-436	fileId	47	int
+436	submissionFileId	74	int
+436	fileId	43	int
 436	submissionId	17	int
-436	originalFileName	Transparency and Development: Ethical Co.pdf	string
+436	originalFileName	Preface.pdf	string
 436	username	msmith	string
 437	fileStage	2	int
-437	submissionFileId	71	int
-437	fileId	47	int
+437	sourceSubmissionFileId	\N	string
+437	submissionFileId	74	int
+437	fileId	43	int
 437	submissionId	17	int
 437	username	msmith	string
-437	name	Transparency and Development: Ethical Co.pdf	string
+437	originalFileName	Preface.pdf	string
+437	name	Preface.pdf	string
 438	fileStage	2	int
 438	sourceSubmissionFileId	\N	string
-438	submissionFileId	71	int
-438	fileId	47	int
+438	submissionFileId	75	int
+438	fileId	44	int
 438	submissionId	17	int
-438	originalFileName	Transparency and Development: Ethical Co.pdf	string
+438	originalFileName	Introduction.pdf	string
 438	username	msmith	string
 439	fileStage	2	int
-439	sourceSubmissionFileId	\N	string
-439	submissionFileId	71	int
-439	fileId	47	int
+439	submissionFileId	75	int
+439	fileId	44	int
 439	submissionId	17	int
 439	username	msmith	string
-439	originalFileName	Transparency and Development: Ethical Co.pdf	string
-439	name	Transparency and Development: Ethical Co.pdf	string
+439	name	Introduction.pdf	string
 440	fileStage	2	int
 440	sourceSubmissionFileId	\N	string
-440	submissionFileId	72	int
-440	fileId	48	int
+440	submissionFileId	75	int
+440	fileId	44	int
 440	submissionId	17	int
-440	originalFileName	Open Educational Resources: Opportunitie.pdf	string
+440	originalFileName	Introduction.pdf	string
 440	username	msmith	string
 441	fileStage	2	int
-441	submissionFileId	72	int
-441	fileId	48	int
+441	sourceSubmissionFileId	\N	string
+441	submissionFileId	75	int
+441	fileId	44	int
 441	submissionId	17	int
 441	username	msmith	string
-441	name	Open Educational Resources: Opportunitie.pdf	string
+441	originalFileName	Introduction.pdf	string
+441	name	Introduction.pdf	string
 442	fileStage	2	int
 442	sourceSubmissionFileId	\N	string
-442	submissionFileId	72	int
-442	fileId	48	int
+442	submissionFileId	76	int
+442	fileId	45	int
 442	submissionId	17	int
-442	originalFileName	Open Educational Resources: Opportunitie.pdf	string
+442	originalFileName	The Emergence of Open Development in a N.pdf	string
 442	username	msmith	string
 443	fileStage	2	int
-443	sourceSubmissionFileId	\N	string
-443	submissionFileId	72	int
-443	fileId	48	int
+443	submissionFileId	76	int
+443	fileId	45	int
 443	submissionId	17	int
 443	username	msmith	string
-443	originalFileName	Open Educational Resources: Opportunitie.pdf	string
-443	name	Open Educational Resources: Opportunitie.pdf	string
-453	editorName	Daniel Barnes	string
+443	name	The Emergence of Open Development in a N.pdf	string
+444	fileStage	2	int
+444	sourceSubmissionFileId	\N	string
+444	submissionFileId	76	int
+444	fileId	45	int
+444	submissionId	17	int
+444	originalFileName	The Emergence of Open Development in a N.pdf	string
+444	username	msmith	string
+445	fileStage	2	int
+445	sourceSubmissionFileId	\N	string
+445	submissionFileId	76	int
+445	fileId	45	int
+445	submissionId	17	int
+445	username	msmith	string
+445	originalFileName	The Emergence of Open Development in a N.pdf	string
+445	name	The Emergence of Open Development in a N.pdf	string
+446	fileStage	2	int
+446	sourceSubmissionFileId	\N	string
+446	submissionFileId	77	int
+446	fileId	46	int
+446	submissionId	17	int
+446	originalFileName	Enacting Openness in ICT4D Research.pdf	string
+446	username	msmith	string
+447	fileStage	2	int
+447	submissionFileId	77	int
+447	fileId	46	int
+447	submissionId	17	int
+447	username	msmith	string
+447	name	Enacting Openness in ICT4D Research.pdf	string
+448	fileStage	2	int
+448	submissionFileId	77	int
+448	fileId	46	int
+448	submissionId	17	int
+448	originalFileName	Enacting Openness in ICT4D Research.pdf	string
+448	username	msmith	string
+449	fileStage	2	int
+449	sourceSubmissionFileId	\N	string
+449	submissionFileId	77	int
+449	fileId	46	int
+449	submissionId	17	int
+449	username	msmith	string
+449	originalFileName	Enacting Openness in ICT4D Research.pdf	string
+449	name	Enacting Openness in ICT4D Research.pdf	string
+450	fileStage	2	int
+450	sourceSubmissionFileId	\N	string
+450	submissionFileId	78	int
+450	fileId	47	int
+450	submissionId	17	int
+450	originalFileName	Transparency and Development: Ethical Co.pdf	string
+450	username	msmith	string
+451	fileStage	2	int
+451	submissionFileId	78	int
+451	fileId	47	int
+451	submissionId	17	int
+451	username	msmith	string
+451	name	Transparency and Development: Ethical Co.pdf	string
+452	fileStage	2	int
+452	sourceSubmissionFileId	\N	string
+452	submissionFileId	78	int
+452	fileId	47	int
+452	submissionId	17	int
+452	originalFileName	Transparency and Development: Ethical Co.pdf	string
+452	username	msmith	string
+453	fileStage	2	int
+453	sourceSubmissionFileId	\N	string
+453	submissionFileId	78	int
+453	fileId	47	int
 453	submissionId	17	int
-453	decision	Send to Internal Review	string
-454	fileStage	19	int
-454	sourceSubmissionFileId	67	int
-454	submissionFileId	73	int
-454	fileId	43	int
+453	username	msmith	string
+453	originalFileName	Transparency and Development: Ethical Co.pdf	string
+453	name	Transparency and Development: Ethical Co.pdf	string
+454	fileStage	2	int
+454	sourceSubmissionFileId	\N	string
+454	submissionFileId	79	int
+454	fileId	48	int
 454	submissionId	17	int
-454	originalFileName	Preface.pdf	string
-454	username	dbarnes	string
-455	fileStage	19	int
-455	submissionFileId	73	int
-455	fileId	43	int
+454	originalFileName	Open Educational Resources: Opportunitie.pdf	string
+454	username	msmith	string
+455	fileStage	2	int
+455	submissionFileId	79	int
+455	fileId	48	int
 455	submissionId	17	int
-455	username	dbarnes	string
-455	name	Preface.pdf	string
-456	fileStage	19	int
-456	sourceSubmissionFileId	68	int
-456	submissionFileId	74	int
-456	fileId	44	int
+455	username	msmith	string
+455	name	Open Educational Resources: Opportunitie.pdf	string
+456	fileStage	2	int
+456	sourceSubmissionFileId	\N	string
+456	submissionFileId	79	int
+456	fileId	48	int
 456	submissionId	17	int
-456	originalFileName	Introduction.pdf	string
-456	username	dbarnes	string
-457	fileStage	19	int
-457	submissionFileId	74	int
-457	fileId	44	int
+456	originalFileName	Open Educational Resources: Opportunitie.pdf	string
+456	username	msmith	string
+457	fileStage	2	int
+457	sourceSubmissionFileId	\N	string
+457	submissionFileId	79	int
+457	fileId	48	int
 457	submissionId	17	int
-457	username	dbarnes	string
-457	name	Introduction.pdf	string
-458	fileStage	19	int
-458	sourceSubmissionFileId	69	int
-458	submissionFileId	75	int
-458	fileId	45	int
-458	submissionId	17	int
-458	originalFileName	The Emergence of Open Development in a N.pdf	string
-458	username	dbarnes	string
-459	fileStage	19	int
-459	submissionFileId	75	int
-459	fileId	45	int
-459	submissionId	17	int
-459	username	dbarnes	string
-459	name	The Emergence of Open Development in a N.pdf	string
-460	fileStage	19	int
-460	sourceSubmissionFileId	70	int
-460	submissionFileId	76	int
-460	fileId	46	int
-460	submissionId	17	int
-460	originalFileName	Enacting Openness in ICT4D Research.pdf	string
-460	username	dbarnes	string
-461	fileStage	19	int
-461	submissionFileId	76	int
-461	fileId	46	int
-461	submissionId	17	int
-461	username	dbarnes	string
-461	name	Enacting Openness in ICT4D Research.pdf	string
-462	fileStage	19	int
-462	sourceSubmissionFileId	71	int
-462	submissionFileId	77	int
-462	fileId	47	int
-462	submissionId	17	int
-462	originalFileName	Transparency and Development: Ethical Co.pdf	string
-462	username	dbarnes	string
-463	fileStage	19	int
-463	submissionFileId	77	int
-463	fileId	47	int
-463	submissionId	17	int
-463	username	dbarnes	string
-463	name	Transparency and Development: Ethical Co.pdf	string
-464	fileStage	19	int
-464	sourceSubmissionFileId	72	int
-464	submissionFileId	78	int
-464	fileId	48	int
-464	submissionId	17	int
-464	originalFileName	Open Educational Resources: Opportunitie.pdf	string
-464	username	dbarnes	string
-465	fileStage	19	int
-465	submissionFileId	78	int
-465	fileId	48	int
-465	submissionId	17	int
-465	username	dbarnes	string
-465	name	Open Educational Resources: Opportunitie.pdf	string
-466	reviewAssignmentId	24	string
-466	reviewerName	Julie Janssen	string
-466	submissionId	17	int
-466	stageId	2	int
-466	round	1	int
-467	reviewAssignmentId	25	string
-467	reviewerName	Paul Hudson	string
+457	username	msmith	string
+457	originalFileName	Open Educational Resources: Opportunitie.pdf	string
+457	name	Open Educational Resources: Opportunitie.pdf	string
+467	editorName	Daniel Barnes	string
 467	submissionId	17	int
-467	stageId	2	int
-467	round	1	int
+467	decision	Send to Internal Review	string
+468	reviewAssignmentId	24	string
+468	reviewerName	Julie Janssen	string
+468	submissionId	17	int
+468	stageId	2	int
+468	round	1	int
+469	reviewAssignmentId	25	string
+469	reviewerName	Paul Hudson	string
+469	submissionId	17	int
+469	stageId	2	int
+469	round	1	int
 \.
 
 
@@ -8161,54 +8176,54 @@ COPY public.features (submission_id, assoc_type, assoc_id, seq) FROM stdin;
 --
 
 COPY public.files (file_id, path, mimetype) FROM stdin;
-1	presses/1/monographs/1/6a9a8fe0828a6.pdf	application/pdf
-2	presses/1/monographs/2/6a9a90036dc43.pdf	application/pdf
-3	presses/1/monographs/2/6a9a9003c244c.pdf	application/pdf
-4	presses/1/monographs/2/6a9a900424838.pdf	application/pdf
-5	presses/1/monographs/2/6a9a900482b41.pdf	application/pdf
-6	presses/1/monographs/3/6a9a904ac40bd.pdf	application/pdf
-7	presses/1/monographs/4/6a9a9066774ec.pdf	application/pdf
-8	presses/1/monographs/4/6a9a9066d4933.pdf	application/pdf
-9	presses/1/monographs/4/6a9a9067376c8.pdf	application/pdf
-10	presses/1/monographs/4/6a9a906794208.pdf	application/pdf
-11	presses/1/monographs/5/6a9a90b427bb1.pdf	application/pdf
-12	presses/1/monographs/6/6a9a910356d8d.pdf	application/pdf
-13	presses/1/monographs/6/6a9a9103ad3c2.pdf	application/pdf
-14	presses/1/monographs/6/6a9a91040bfa8.pdf	application/pdf
-15	presses/1/monographs/6/6a9a910468d1e.pdf	application/pdf
-16	presses/1/monographs/7/6a9a9145e4e48.pdf	application/pdf
-17	presses/1/monographs/7/6a9a9146469b9.pdf	application/pdf
-18	presses/1/monographs/7/6a9a91469d18c.pdf	application/pdf
-19	presses/1/monographs/7/6a9a914705e51.pdf	application/pdf
-20	presses/1/monographs/7/6a9a914771f76.pdf	application/pdf
-21	presses/1/monographs/8/6a9a91910894a.pdf	application/pdf
-22	presses/1/monographs/9/6a9a9199ea8d8.pdf	application/pdf
-23	presses/1/monographs/9/6a9a919a49653.pdf	application/pdf
-24	presses/1/monographs/9/6a9a919aa1269.pdf	application/pdf
-25	presses/1/monographs/9/6a9a919b0ab25.pdf	application/pdf
-26	presses/1/monographs/9/6a9a919b71fc0.pdf	application/pdf
-27	presses/1/monographs/10/6a9a91d6e8f4f.pdf	application/pdf
-28	presses/1/monographs/11/6a9a9201b4eef.pdf	application/pdf
-29	presses/1/monographs/12/6a9a923fa25c4.pdf	application/pdf
-30	presses/1/monographs/12/6a9a92400c4d3.pdf	application/pdf
-31	presses/1/monographs/12/6a9a924061e59.pdf	application/pdf
-32	presses/1/monographs/13/6a9a928ed03dc.pdf	application/pdf
-33	presses/1/monographs/13/6a9a928f344b0.pdf	application/pdf
-34	presses/1/monographs/13/6a9a928f8a2f0.pdf	application/pdf
-35	presses/1/monographs/14/6a9a92edb642f.pdf	application/pdf
-36	presses/1/monographs/14/6a9a92ee17eb2.pdf	application/pdf
-37	presses/1/monographs/14/6a9a92ee66f70.pdf	application/pdf
-38	presses/1/monographs/14/6a9a92eeb9bd0.pdf	application/pdf
-39	presses/1/monographs/14/6a9a92ef290d5.pdf	application/pdf
-40	presses/1/monographs/14/6a9a92efb9784.pdf	application/pdf
-41	presses/1/monographs/15/6a9a9364d2b88.pdf	application/pdf
-42	presses/1/monographs/16/6a9a93810dcce.pdf	application/pdf
-43	presses/1/monographs/17/6a9a93b864b62.pdf	application/pdf
-44	presses/1/monographs/17/6a9a93b8bfa44.pdf	application/pdf
-45	presses/1/monographs/17/6a9a93b91e810.pdf	application/pdf
-46	presses/1/monographs/17/6a9a93b976c7b.pdf	application/pdf
-47	presses/1/monographs/17/6a9a93b9e55d6.pdf	application/pdf
-48	presses/1/monographs/17/6a9a93ba58895.pdf	application/pdf
+1	presses/1/monographs/1/6a9fd65a55866.pdf	application/pdf
+2	presses/1/monographs/2/6a9fd67c96ee7.pdf	application/pdf
+3	presses/1/monographs/2/6a9fd67ce6a52.pdf	application/pdf
+4	presses/1/monographs/2/6a9fd67d45eeb.pdf	application/pdf
+5	presses/1/monographs/2/6a9fd67d9ba75.pdf	application/pdf
+6	presses/1/monographs/3/6a9fd6c242aa8.pdf	application/pdf
+7	presses/1/monographs/4/6a9fd6dd11113.pdf	application/pdf
+8	presses/1/monographs/4/6a9fd6dd6714b.pdf	application/pdf
+9	presses/1/monographs/4/6a9fd6ddb57ae.pdf	application/pdf
+10	presses/1/monographs/4/6a9fd6de188f9.pdf	application/pdf
+11	presses/1/monographs/5/6a9fd726ba12a.pdf	application/pdf
+12	presses/1/monographs/6/6a9fd771ab2fb.pdf	application/pdf
+13	presses/1/monographs/6/6a9fd7720b5dd.pdf	application/pdf
+14	presses/1/monographs/6/6a9fd7725a34d.pdf	application/pdf
+15	presses/1/monographs/6/6a9fd772adbc2.pdf	application/pdf
+16	presses/1/monographs/7/6a9fd7b125055.pdf	application/pdf
+17	presses/1/monographs/7/6a9fd7b17ac30.pdf	application/pdf
+18	presses/1/monographs/7/6a9fd7b1caf34.pdf	application/pdf
+19	presses/1/monographs/7/6a9fd7b22927f.pdf	application/pdf
+20	presses/1/monographs/7/6a9fd7b292948.pdf	application/pdf
+21	presses/1/monographs/8/6a9fd7f852b5f.pdf	application/pdf
+22	presses/1/monographs/9/6a9fd800cee84.pdf	application/pdf
+23	presses/1/monographs/9/6a9fd801316aa.pdf	application/pdf
+24	presses/1/monographs/9/6a9fd80184a79.pdf	application/pdf
+25	presses/1/monographs/9/6a9fd801d9d1c.pdf	application/pdf
+26	presses/1/monographs/9/6a9fd802548db.pdf	application/pdf
+27	presses/1/monographs/10/6a9fd83aefd5d.pdf	application/pdf
+28	presses/1/monographs/11/6a9fd864821d0.pdf	application/pdf
+29	presses/1/monographs/12/6a9fd89f4f3c9.pdf	application/pdf
+30	presses/1/monographs/12/6a9fd89fa3869.pdf	application/pdf
+31	presses/1/monographs/12/6a9fd89ff1e29.pdf	application/pdf
+32	presses/1/monographs/13/6a9fd8e9d3525.pdf	application/pdf
+33	presses/1/monographs/13/6a9fd8ea37433.pdf	application/pdf
+34	presses/1/monographs/13/6a9fd8ea88e1a.pdf	application/pdf
+35	presses/1/monographs/14/6a9fd94379cdd.pdf	application/pdf
+36	presses/1/monographs/14/6a9fd943cf6be.pdf	application/pdf
+37	presses/1/monographs/14/6a9fd9442a1b2.pdf	application/pdf
+38	presses/1/monographs/14/6a9fd9447cfe6.pdf	application/pdf
+39	presses/1/monographs/14/6a9fd944e15e9.pdf	application/pdf
+40	presses/1/monographs/14/6a9fd94583d92.pdf	application/pdf
+41	presses/1/monographs/15/6a9fd9b6db62a.pdf	application/pdf
+42	presses/1/monographs/16/6a9fd9d2a66a7.pdf	application/pdf
+43	presses/1/monographs/17/6a9fda0955b01.pdf	application/pdf
+44	presses/1/monographs/17/6a9fda09a9c52.pdf	application/pdf
+45	presses/1/monographs/17/6a9fda0a0a1c3.pdf	application/pdf
+46	presses/1/monographs/17/6a9fda0a66510.pdf	application/pdf
+47	presses/1/monographs/17/6a9fda0ac371b.pdf	application/pdf
+48	presses/1/monographs/17/6a9fda0b37602.pdf	application/pdf
 \.
 
 
@@ -8531,7 +8546,7 @@ COPY public.new_releases (submission_id, assoc_type, assoc_id) FROM stdin;
 --
 
 COPY public.notes (note_id, assoc_type, assoc_id, user_id, date_created, date_modified, title, contents) FROM stdin;
-1	1048586	1	6	2026-09-04 09:36:56	2026-09-04 09:36:56	Recommendation	<p>Daniel Barnes, David Buskins:<br><br>The recommendation regarding the submission to Public Knowledge Press, "The Information Literacy User’s Guide" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
+1	1048586	1	6	2026-09-08 09:38:44	2026-09-08 09:38:44	Recommendation	<p>Daniel Barnes, David Buskins:<br><br>The recommendation regarding the submission to Public Knowledge Press, "The Information Literacy User’s Guide" is: Send to External Review</p><br/><br/>\n________________________________________________________________________<br/>\n<a href="{$ldelim}$contextUrl{$rdelim}">{$ldelim}$contextName{$rdelim}</a>
 \.
 
 
@@ -8580,125 +8595,125 @@ COPY public.notification_subscription_settings (setting_id, setting_name, settin
 --
 
 COPY public.notifications (notification_id, context_id, user_id, level, type, date_created, date_read, assoc_type, assoc_id) FROM stdin;
-43	1	12	3	16777227	2026-09-04 09:32:51	\N	517	3
-105	1	0	2	16777246	2026-09-04 09:35:56	\N	1048585	5
-66	1	0	2	16777245	2026-09-04 09:34:02	2026-09-04 09:34:32	1048585	4
-217	1	3	2	16777217	2026-09-04 09:41:59	\N	1048585	12
-143	1	0	2	16777236	2026-09-04 09:38:03	2026-09-04 09:38:05	523	8
-218	1	0	2	16777243	2026-09-04 09:41:59	\N	1048585	12
-219	1	0	2	16777245	2026-09-04 09:42:00	\N	1048585	12
-7	0	1	1	1	2026-09-04 09:31:06	\N	0	0
-145	1	10	3	16777227	2026-09-04 09:38:09	\N	517	8
-50	1	3	2	16777217	2026-09-04 09:33:19	\N	1048585	3
-51	1	0	2	16777243	2026-09-04 09:33:19	\N	1048585	3
-52	1	0	2	16777245	2026-09-04 09:33:19	\N	1048585	3
-221	1	29	2	16777229	2026-09-04 09:42:07	\N	1048585	12
-220	1	0	2	16777236	2026-09-04 09:42:07	2026-09-04 09:42:09	523	12
-11	1	3	2	16777217	2026-09-04 09:31:24	\N	1048585	1
-12	1	0	2	16777243	2026-09-04 09:31:25	\N	1048585	1
-13	1	0	2	16777245	2026-09-04 09:31:25	\N	1048585	1
-222	1	7	3	16777227	2026-09-04 09:42:13	\N	517	12
-14	1	0	2	16777236	2026-09-04 09:31:29	2026-09-04 09:31:31	523	1
-16	1	12	3	16777227	2026-09-04 09:31:34	\N	517	1
-18	1	19	2	16777230	2026-09-04 09:31:36	\N	1048585	1
-19	1	3	2	16777251	2026-09-04 09:31:36	2026-09-04 09:31:37	1048585	1
-147	1	25	2	16777230	2026-09-04 09:38:12	\N	1048585	7
-117	1	3	2	16777217	2026-09-04 09:36:37	\N	1048585	6
-118	1	4	2	16777217	2026-09-04 09:36:37	\N	1048585	6
-119	1	0	2	16777243	2026-09-04 09:36:37	\N	1048585	6
-120	1	0	2	16777245	2026-09-04 09:36:37	\N	1048585	6
-122	1	24	2	16777229	2026-09-04 09:36:43	\N	1048585	6
-121	1	0	2	16777236	2026-09-04 09:36:43	2026-09-04 09:36:45	523	7
-87	1	3	2	16777217	2026-09-04 09:35:08	\N	1048585	5
-64	1	3	2	16777217	2026-09-04 09:34:02	\N	1048585	4
-65	1	0	2	16777243	2026-09-04 09:34:02	\N	1048585	4
-67	1	0	2	16777236	2026-09-04 09:34:08	2026-09-04 09:34:10	523	3
-69	1	9	3	16777227	2026-09-04 09:34:14	\N	517	4
-124	1	3	3	16777249	2026-09-04 09:36:56	\N	1048586	1
-125	1	4	3	16777249	2026-09-04 09:36:56	\N	1048586	1
-71	1	0	2	16777236	2026-09-04 09:34:16	2026-09-04 09:34:18	523	4
-73	1	11	3	16777227	2026-09-04 09:34:21	\N	517	5
-36	1	3	2	16777217	2026-09-04 09:32:34	\N	1048585	2
-37	1	0	2	16777243	2026-09-04 09:32:34	\N	1048585	2
-38	1	0	2	16777245	2026-09-04 09:32:34	\N	1048585	2
-40	1	20	2	16777231	2026-09-04 09:32:40	\N	1048585	2
-39	1	0	2	16777236	2026-09-04 09:32:40	2026-09-04 09:32:42	523	2
-41	1	11	3	16777227	2026-09-04 09:32:46	\N	517	2
-148	1	3	2	16777251	2026-09-04 09:38:12	2026-09-04 09:38:13	1048585	7
-90	1	0	2	16777236	2026-09-04 09:35:14	2026-09-04 09:35:15	523	5
-78	1	22	2	16777235	2026-09-04 09:34:31	\N	1048585	4
-79	1	3	2	16777254	2026-09-04 09:34:31	\N	1048585	4
-92	1	8	3	16777227	2026-09-04 09:35:18	\N	517	6
-94	1	0	2	16777236	2026-09-04 09:35:20	2026-09-04 09:35:22	523	6
-96	1	12	3	16777227	2026-09-04 09:35:26	\N	517	7
-169	1	0	2	16777243	2026-09-04 09:39:18	\N	1048585	9
-150	1	3	2	16777217	2026-09-04 09:38:27	\N	1048585	8
-151	1	0	2	16777243	2026-09-04 09:38:27	\N	1048585	8
-152	1	0	2	16777245	2026-09-04 09:38:27	\N	1048585	8
-101	1	23	2	16777235	2026-09-04 09:35:35	\N	1048585	5
-102	1	3	2	16777254	2026-09-04 09:35:35	\N	1048585	5
-140	1	3	2	16777217	2026-09-04 09:37:56	\N	1048585	7
-141	1	0	2	16777243	2026-09-04 09:37:56	\N	1048585	7
-142	1	0	2	16777245	2026-09-04 09:37:56	\N	1048585	7
-170	1	0	2	16777245	2026-09-04 09:39:18	\N	1048585	9
-172	1	26	2	16777229	2026-09-04 09:39:25	\N	1048585	9
-171	1	0	2	16777236	2026-09-04 09:39:25	2026-09-04 09:39:27	523	9
-167	1	3	2	16777217	2026-09-04 09:39:18	\N	1048585	9
-168	1	4	2	16777217	2026-09-04 09:39:18	\N	1048585	9
-192	1	9	3	16777227	2026-09-04 09:40:37	\N	517	9
-187	1	3	2	16777217	2026-09-04 09:40:26	\N	1048585	11
-188	1	0	2	16777243	2026-09-04 09:40:26	\N	1048585	11
-182	1	3	2	16777217	2026-09-04 09:40:10	\N	1048585	10
-183	1	0	2	16777243	2026-09-04 09:40:10	\N	1048585	10
-184	1	0	2	16777245	2026-09-04 09:40:10	\N	1048585	10
-189	1	0	2	16777245	2026-09-04 09:40:26	\N	1048585	11
-190	1	0	2	16777236	2026-09-04 09:40:32	2026-09-04 09:40:33	523	10
-194	1	0	2	16777236	2026-09-04 09:40:38	2026-09-04 09:40:39	523	11
-200	1	3	2	16777219	2026-09-04 09:40:54	\N	517	10
-201	1	3	2	16777219	2026-09-04 09:41:01	\N	517	11
-202	1	28	2	16777230	2026-09-04 09:41:10	\N	1048585	11
-203	1	3	2	16777251	2026-09-04 09:41:10	2026-09-04 09:41:11	1048585	11
-334	1	34	2	16777229	2026-09-04 09:48:50	\N	1048585	17
-333	1	0	2	16777236	2026-09-04 09:48:50	2026-09-04 09:48:52	523	19
-335	1	7	3	16777227	2026-09-04 09:48:56	\N	517	24
-226	1	9	3	16777227	2026-09-04 09:42:22	\N	517	14
-228	1	3	2	16777219	2026-09-04 09:42:31	\N	517	13
-337	1	8	3	16777227	2026-09-04 09:49:01	\N	517	25
-270	1	0	2	16777236	2026-09-04 09:44:54	2026-09-04 09:44:56	523	15
-272	1	7	3	16777227	2026-09-04 09:45:00	\N	517	19
-274	1	0	2	16777236	2026-09-04 09:45:02	2026-09-04 09:45:03	523	16
-276	1	11	3	16777227	2026-09-04 09:45:08	\N	517	20
-238	1	3	2	16777217	2026-09-04 09:43:06	\N	1048585	13
-239	1	0	2	16777243	2026-09-04 09:43:06	\N	1048585	13
-240	1	0	2	16777245	2026-09-04 09:43:06	\N	1048585	13
-241	1	0	2	16777236	2026-09-04 09:43:14	2026-09-04 09:43:15	523	13
-243	1	8	3	16777227	2026-09-04 09:43:19	\N	517	15
-245	1	0	2	16777236	2026-09-04 09:43:21	2026-09-04 09:43:23	523	14
-308	1	12	3	16777227	2026-09-04 09:47:21	\N	517	23
-249	1	11	3	16777227	2026-09-04 09:43:31	\N	517	17
-253	1	3	2	16777219	2026-09-04 09:43:44	\N	517	16
-254	1	3	2	16777219	2026-09-04 09:43:53	\N	517	18
-255	1	30	2	16777230	2026-09-04 09:44:04	\N	1048585	13
-256	1	3	2	16777251	2026-09-04 09:44:04	2026-09-04 09:44:06	1048585	13
-281	1	31	2	16777235	2026-09-04 09:45:18	\N	1048585	14
-282	1	3	2	16777254	2026-09-04 09:45:18	\N	1048585	14
-310	1	3	2	16777219	2026-09-04 09:47:29	\N	517	21
-267	1	3	2	16777217	2026-09-04 09:44:46	\N	1048585	14
-285	1	0	2	16777246	2026-09-04 09:46:05	\N	1048585	14
-289	1	3	2	16777217	2026-09-04 09:46:25	\N	1048585	15
-290	1	0	2	16777243	2026-09-04 09:46:25	\N	1048585	15
-291	1	0	2	16777245	2026-09-04 09:46:25	\N	1048585	15
-293	1	32	2	16777231	2026-09-04 09:46:32	\N	1048585	15
-292	1	0	2	16777236	2026-09-04 09:46:32	2026-09-04 09:46:34	523	17
-330	1	3	2	16777217	2026-09-04 09:48:40	\N	1048585	17
-331	1	0	2	16777243	2026-09-04 09:48:40	\N	1048585	17
-299	1	3	2	16777217	2026-09-04 09:47:00	\N	1048585	16
-300	1	0	2	16777243	2026-09-04 09:47:00	\N	1048585	16
-301	1	0	2	16777245	2026-09-04 09:47:00	\N	1048585	16
-303	1	33	2	16777231	2026-09-04 09:47:08	\N	1048585	16
-302	1	0	2	16777236	2026-09-04 09:47:07	2026-09-04 09:47:09	523	18
-306	1	11	3	16777227	2026-09-04 09:47:17	\N	517	22
-332	1	0	2	16777245	2026-09-04 09:48:40	\N	1048585	17
+150	1	3	2	16777217	2026-09-08 09:40:10	\N	1048585	8
+67	1	0	2	16777236	2026-09-08 09:36:04	2026-09-08 09:36:06	523	3
+69	1	9	3	16777227	2026-09-08 09:36:10	\N	517	4
+151	1	0	2	16777243	2026-09-08 09:40:10	\N	1048585	8
+152	1	0	2	16777245	2026-09-08 09:40:10	\N	1048585	8
+253	1	3	2	16777219	2026-09-08 09:45:12	\N	517	16
+71	1	0	2	16777236	2026-09-08 09:36:11	2026-09-08 09:36:13	523	4
+73	1	11	3	16777227	2026-09-08 09:36:17	\N	517	5
+122	1	24	2	16777229	2026-09-08 09:38:32	\N	1048585	6
+7	0	1	1	1	2026-09-08 09:33:07	\N	0	0
+101	1	23	2	16777235	2026-09-08 09:37:27	\N	1048585	5
+102	1	3	2	16777254	2026-09-08 09:37:27	\N	1048585	5
+78	1	22	2	16777235	2026-09-08 09:36:26	\N	1048585	4
+11	1	3	2	16777217	2026-09-08 09:33:26	\N	1048585	1
+12	1	0	2	16777243	2026-09-08 09:33:26	\N	1048585	1
+13	1	0	2	16777245	2026-09-08 09:33:26	\N	1048585	1
+79	1	3	2	16777254	2026-09-08 09:36:26	\N	1048585	4
+14	1	0	2	16777236	2026-09-08 09:33:31	2026-09-08 09:33:32	523	1
+16	1	12	3	16777227	2026-09-08 09:33:36	\N	517	1
+66	1	0	2	16777245	2026-09-08 09:35:58	2026-09-08 09:36:27	1048585	4
+18	1	19	2	16777230	2026-09-08 09:33:37	\N	1048585	1
+19	1	3	2	16777251	2026-09-08 09:33:37	2026-09-08 09:33:39	1048585	1
+121	1	0	2	16777236	2026-09-08 09:38:32	2026-09-08 09:38:33	523	7
+50	1	3	2	16777217	2026-09-08 09:35:18	\N	1048585	3
+51	1	0	2	16777243	2026-09-08 09:35:18	\N	1048585	3
+52	1	0	2	16777245	2026-09-08 09:35:18	\N	1048585	3
+188	1	0	2	16777243	2026-09-08 09:42:05	\N	1048585	11
+105	1	0	2	16777246	2026-09-08 09:37:47	\N	1048585	5
+87	1	3	2	16777217	2026-09-08 09:37:02	\N	1048585	5
+167	1	3	2	16777217	2026-09-08 09:40:59	\N	1048585	9
+90	1	0	2	16777236	2026-09-08 09:37:07	2026-09-08 09:37:08	523	5
+92	1	8	3	16777227	2026-09-08 09:37:12	\N	517	6
+168	1	4	2	16777217	2026-09-08 09:40:59	\N	1048585	9
+124	1	3	3	16777249	2026-09-08 09:38:44	\N	1048586	1
+169	1	0	2	16777243	2026-09-08 09:40:59	\N	1048585	9
+94	1	0	2	16777236	2026-09-08 09:37:13	2026-09-08 09:37:15	523	6
+96	1	12	3	16777227	2026-09-08 09:37:19	\N	517	7
+170	1	0	2	16777245	2026-09-08 09:40:59	\N	1048585	9
+172	1	26	2	16777229	2026-09-08 09:41:06	\N	1048585	9
+36	1	3	2	16777217	2026-09-08 09:34:34	\N	1048585	2
+37	1	0	2	16777243	2026-09-08 09:34:34	\N	1048585	2
+38	1	0	2	16777245	2026-09-08 09:34:34	\N	1048585	2
+40	1	20	2	16777231	2026-09-08 09:34:40	\N	1048585	2
+39	1	0	2	16777236	2026-09-08 09:34:40	2026-09-08 09:34:42	523	2
+41	1	11	3	16777227	2026-09-08 09:34:46	\N	517	2
+171	1	0	2	16777236	2026-09-08 09:41:06	2026-09-08 09:41:08	523	9
+125	1	4	3	16777249	2026-09-08 09:38:44	\N	1048586	1
+43	1	12	3	16777227	2026-09-08 09:34:50	\N	517	3
+189	1	0	2	16777245	2026-09-08 09:42:05	\N	1048585	11
+182	1	3	2	16777217	2026-09-08 09:41:49	\N	1048585	10
+140	1	3	2	16777217	2026-09-08 09:39:41	\N	1048585	7
+183	1	0	2	16777243	2026-09-08 09:41:49	\N	1048585	10
+64	1	3	2	16777217	2026-09-08 09:35:58	\N	1048585	4
+65	1	0	2	16777243	2026-09-08 09:35:58	\N	1048585	4
+141	1	0	2	16777243	2026-09-08 09:39:41	\N	1048585	7
+184	1	0	2	16777245	2026-09-08 09:41:49	\N	1048585	10
+142	1	0	2	16777245	2026-09-08 09:39:41	\N	1048585	7
+190	1	0	2	16777236	2026-09-08 09:42:10	2026-09-08 09:42:12	523	10
+187	1	3	2	16777217	2026-09-08 09:42:04	\N	1048585	11
+117	1	3	2	16777217	2026-09-08 09:38:25	\N	1048585	6
+118	1	4	2	16777217	2026-09-08 09:38:26	\N	1048585	6
+119	1	0	2	16777243	2026-09-08 09:38:26	\N	1048585	6
+120	1	0	2	16777245	2026-09-08 09:38:26	\N	1048585	6
+192	1	9	3	16777227	2026-09-08 09:42:15	\N	517	9
+143	1	0	2	16777236	2026-09-08 09:39:48	2026-09-08 09:39:49	523	8
+145	1	10	3	16777227	2026-09-08 09:39:54	\N	517	8
+194	1	0	2	16777236	2026-09-08 09:42:16	2026-09-08 09:42:17	523	11
+200	1	3	2	16777219	2026-09-08 09:42:31	\N	517	10
+147	1	25	2	16777230	2026-09-08 09:39:56	\N	1048585	7
+201	1	3	2	16777219	2026-09-08 09:42:38	\N	517	11
+202	1	28	2	16777230	2026-09-08 09:42:46	\N	1048585	11
+148	1	3	2	16777251	2026-09-08 09:39:56	2026-09-08 09:39:57	1048585	7
+203	1	3	2	16777251	2026-09-08 09:42:46	2026-09-08 09:42:47	1048585	11
+217	1	3	2	16777217	2026-09-08 09:43:32	\N	1048585	12
+218	1	0	2	16777243	2026-09-08 09:43:32	\N	1048585	12
+219	1	0	2	16777245	2026-09-08 09:43:32	\N	1048585	12
+221	1	29	2	16777229	2026-09-08 09:43:39	\N	1048585	12
+220	1	0	2	16777236	2026-09-08 09:43:39	2026-09-08 09:43:41	523	12
+222	1	7	3	16777227	2026-09-08 09:43:45	\N	517	12
+291	1	0	2	16777245	2026-09-08 09:47:47	\N	1048585	15
+254	1	3	2	16777219	2026-09-08 09:45:20	\N	517	18
+255	1	30	2	16777230	2026-09-08 09:45:30	\N	1048585	13
+226	1	9	3	16777227	2026-09-08 09:43:54	\N	517	14
+256	1	3	2	16777251	2026-09-08 09:45:30	2026-09-08 09:45:32	1048585	13
+228	1	3	2	16777219	2026-09-08 09:44:02	\N	517	13
+293	1	32	2	16777231	2026-09-08 09:47:54	\N	1048585	15
+292	1	0	2	16777236	2026-09-08 09:47:54	2026-09-08 09:47:55	523	17
+238	1	3	2	16777217	2026-09-08 09:44:36	\N	1048585	13
+239	1	0	2	16777243	2026-09-08 09:44:36	\N	1048585	13
+240	1	0	2	16777245	2026-09-08 09:44:36	\N	1048585	13
+241	1	0	2	16777236	2026-09-08 09:44:43	2026-09-08 09:44:44	523	13
+243	1	8	3	16777227	2026-09-08 09:44:48	\N	517	15
+267	1	3	2	16777217	2026-09-08 09:46:12	\N	1048585	14
+245	1	0	2	16777236	2026-09-08 09:44:50	2026-09-08 09:44:51	523	14
+249	1	11	3	16777227	2026-09-08 09:44:59	\N	517	17
+270	1	0	2	16777236	2026-09-08 09:46:19	2026-09-08 09:46:21	523	15
+272	1	7	3	16777227	2026-09-08 09:46:25	\N	517	19
+274	1	0	2	16777236	2026-09-08 09:46:27	2026-09-08 09:46:29	523	16
+276	1	11	3	16777227	2026-09-08 09:46:32	\N	517	20
+299	1	3	2	16777217	2026-09-08 09:48:22	\N	1048585	16
+281	1	31	2	16777235	2026-09-08 09:46:41	\N	1048585	14
+282	1	3	2	16777254	2026-09-08 09:46:42	\N	1048585	14
+300	1	0	2	16777243	2026-09-08 09:48:22	\N	1048585	16
+301	1	0	2	16777245	2026-09-08 09:48:22	\N	1048585	16
+285	1	0	2	16777246	2026-09-08 09:47:28	\N	1048585	14
+303	1	33	2	16777231	2026-09-08 09:48:29	\N	1048585	16
+302	1	0	2	16777236	2026-09-08 09:48:29	2026-09-08 09:48:31	523	18
+289	1	3	2	16777217	2026-09-08 09:47:47	\N	1048585	15
+290	1	0	2	16777243	2026-09-08 09:47:47	\N	1048585	15
+306	1	11	3	16777227	2026-09-08 09:48:38	\N	517	22
+308	1	12	3	16777227	2026-09-08 09:48:42	\N	517	23
+310	1	3	2	16777219	2026-09-08 09:48:50	\N	517	21
+330	1	3	2	16777217	2026-09-08 09:49:59	\N	1048585	17
+331	1	0	2	16777243	2026-09-08 09:49:59	\N	1048585	17
+332	1	0	2	16777245	2026-09-08 09:49:59	\N	1048585	17
+334	1	34	2	16777229	2026-09-08 09:50:09	\N	1048585	17
+333	1	0	2	16777236	2026-09-08 09:50:09	2026-09-08 09:50:11	523	19
+335	1	7	3	16777227	2026-09-08 09:50:15	\N	517	24
+337	1	8	3	16777227	2026-09-08 09:50:20	\N	517	25
 \.
 
 
@@ -8715,8 +8730,9 @@ COPY public.oai_resumption_tokens (token, expire, record_offset, params) FROM st
 --
 
 COPY public.plugin_settings (plugin_name, context_id, setting_name, setting_value, setting_type) FROM stdin;
-defaultthemeplugin	0	enabled	1	bool
+usageeventplugin	0	enabled	1	bool
 tinymceplugin	0	enabled	1	bool
+defaultthemeplugin	0	enabled	1	bool
 acronplugin	0	enabled	1	bool
 usagestatsplugin	0	enabled	1	bool
 usagestatsplugin	0	createLogFiles	1	bool
@@ -8724,39 +8740,38 @@ usagestatsplugin	0	accessLogFileParseRegex	/^(?P<ip>\\S+) \\S+ \\S+ \\[(?P<date>
 usagestatsplugin	0	optionalColumns	["city","region"]	object
 usagestatsplugin	0	chartType	bar	string
 usagestatsplugin	0	datasetMaxCount	4	string
-usageeventplugin	0	enabled	1	bool
-languagetoggleblockplugin	0	enabled	1	bool
-languagetoggleblockplugin	0	seq	4	int
-languagetoggleblockplugin	0	context	1	int
 developedbyblockplugin	0	enabled	0	bool
 developedbyblockplugin	0	seq	0	int
 developedbyblockplugin	0	context	1	int
+languagetoggleblockplugin	0	enabled	1	bool
+languagetoggleblockplugin	0	seq	4	int
+languagetoggleblockplugin	0	context	1	int
 acronplugin	0	crontab	[{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"plugins.generic.usageStats.UsageStatsLoader","frequency":{"hour":24},"args":["autoStage"]},{"className":"lib.pkp.classes.task.ReviewReminder","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.PublishSubmissions","frequency":{"hour":24},"args":[]},{"className":"lib.pkp.classes.task.StatisticsReport","frequency":{"day":"1"},"args":[]}]	object
 tinymceplugin	1	enabled	1	bool
 defaultthemeplugin	1	enabled	1	bool
-languagetoggleblockplugin	1	enabled	1	bool
-languagetoggleblockplugin	1	seq	4	int
-languagetoggleblockplugin	1	context	1	int
-informationblockplugin	1	enabled	1	bool
-informationblockplugin	1	seq	7	int
-informationblockplugin	1	context	1	int
+developedbyblockplugin	1	enabled	0	bool
+developedbyblockplugin	1	seq	0	int
+developedbyblockplugin	1	context	1	int
 browseblockplugin	1	enabled	1	bool
 browseblockplugin	1	seq	1	int
 browseblockplugin	1	context	1	int
 browseblockplugin	1	browseNewReleases	1	bool
 browseblockplugin	1	browseCategories	1	bool
 browseblockplugin	1	browseSeries	1	bool
-developedbyblockplugin	1	enabled	0	bool
-developedbyblockplugin	1	seq	0	int
-developedbyblockplugin	1	context	1	int
+languagetoggleblockplugin	1	enabled	1	bool
+languagetoggleblockplugin	1	seq	4	int
+languagetoggleblockplugin	1	context	1	int
+informationblockplugin	1	enabled	1	bool
+informationblockplugin	1	seq	7	int
+informationblockplugin	1	context	1	int
 dublincoremetaplugin	1	enabled	1	bool
 htmlmonographfileplugin	1	enabled	1	bool
 webfeedplugin	1	enabled	1	bool
 webfeedplugin	1	displayPage	homepage	string
 webfeedplugin	1	displayItems	1	bool
-pdfjsviewerplugin	1	enabled	1	bool
 googlescholarplugin	1	enabled	1	bool
-usageeventplugin	0	uniqueSiteId	6a9a8f2c01514	string
+pdfjsviewerplugin	1	enabled	1	bool
+usageeventplugin	0	uniqueSiteId	6a9fd5ab3a8b5	string
 defaultthemeplugin	1	typography	notoSans	string
 defaultthemeplugin	1	useHomepageImageAsHeader	false	string
 defaultthemeplugin	1	baseColour	#1E6292	string
@@ -9028,23 +9043,23 @@ COPY public.publication_settings (publication_id, locale, setting_name, setting_
 --
 
 COPY public.publications (publication_id, date_published, last_modified, locale, primary_contact_id, publication_date_type, publication_type, seq, series_id, series_position, submission_id, status, url_path, version) FROM stdin;
-1	\N	2026-09-04 09:31:24	\N	1	pub	publication	0	\N	\N	1	1	\N	1
-12	\N	2026-09-04 09:41:58	\N	33	pub	publication	0	\N	\N	12	1	\N	1
-2	\N	2026-09-04 09:32:33	\N	2	pub	publication	0	\N	\N	2	1	\N	1
-3	\N	2026-09-04 09:33:18	\N	10	pub	publication	0	\N	\N	3	1	\N	1
-13	\N	2026-09-04 09:43:05	\N	41	pub	publication	0	\N	\N	13	1	\N	1
-4	\N	2026-09-04 09:34:01	\N	11	pub	publication	0	3	\N	4	1	\N	1
-5	2026-09-04	2026-09-04 09:35:56	\N	15	pub	publication	0	\N	\N	5	3	\N	1
-14	2026-09-04	2026-09-04 09:46:05	\N	45	pub	publication	0	5	\N	14	3	\N	1
-6	\N	2026-09-04 09:36:36	\N	16	pub	publication	0	1	\N	6	1	\N	1
-15	\N	2026-09-04 09:46:25	\N	48	pub	publication	0	\N	\N	15	1	\N	1
-7	\N	2026-09-04 09:37:55	\N	20	pub	publication	0	4	\N	7	1	\N	1
-16	\N	2026-09-04 09:46:59	\N	49	pub	publication	0	\N	\N	16	1	\N	1
-8	\N	2026-09-04 09:38:26	\N	25	pub	publication	0	\N	\N	8	1	\N	1
-9	\N	2026-09-04 09:39:17	\N	26	pub	publication	0	1	\N	9	1	\N	1
-10	\N	2026-09-04 09:40:09	\N	31	pub	publication	0	\N	\N	10	1	\N	1
-17	\N	2026-09-04 09:48:38	\N	50	pub	publication	0	\N	\N	17	1	\N	1
-11	\N	2026-09-04 09:40:25	\N	32	pub	publication	0	\N	\N	11	1	\N	1
+1	\N	2026-09-08 09:33:25	\N	1	pub	publication	0	\N	\N	1	1	\N	1
+12	\N	2026-09-08 09:43:31	\N	33	pub	publication	0	\N	\N	12	1	\N	1
+2	\N	2026-09-08 09:34:33	\N	2	pub	publication	0	\N	\N	2	1	\N	1
+3	\N	2026-09-08 09:35:17	\N	10	pub	publication	0	\N	\N	3	1	\N	1
+13	\N	2026-09-08 09:44:35	\N	41	pub	publication	0	\N	\N	13	1	\N	1
+4	\N	2026-09-08 09:35:57	\N	11	pub	publication	0	3	\N	4	1	\N	1
+5	2026-09-08	2026-09-08 09:37:46	\N	15	pub	publication	0	\N	\N	5	3	\N	1
+14	2026-09-08	2026-09-08 09:47:27	\N	45	pub	publication	0	5	\N	14	3	\N	1
+6	\N	2026-09-08 09:38:24	\N	16	pub	publication	0	1	\N	6	1	\N	1
+15	\N	2026-09-08 09:47:46	\N	48	pub	publication	0	\N	\N	15	1	\N	1
+7	\N	2026-09-08 09:39:40	\N	20	pub	publication	0	4	\N	7	1	\N	1
+16	\N	2026-09-08 09:48:21	\N	49	pub	publication	0	\N	\N	16	1	\N	1
+8	\N	2026-09-08 09:40:09	\N	25	pub	publication	0	\N	\N	8	1	\N	1
+9	\N	2026-09-08 09:40:58	\N	26	pub	publication	0	1	\N	9	1	\N	1
+10	\N	2026-09-08 09:41:48	\N	31	pub	publication	0	\N	\N	10	1	\N	1
+17	\N	2026-09-08 09:49:58	\N	50	pub	publication	0	\N	\N	17	1	\N	1
+11	\N	2026-09-08 09:42:04	\N	32	pub	publication	0	\N	\N	11	1	\N	1
 \.
 
 
@@ -9088,31 +9103,31 @@ COPY public.representatives (representative_id, submission_id, role, representat
 --
 
 COPY public.review_assignments (review_id, submission_id, reviewer_id, competing_interests, recommendation, date_assigned, date_notified, date_confirmed, date_completed, date_acknowledged, date_due, date_response_due, last_modified, reminder_was_automatic, declined, cancelled, reviewer_file_id, date_rated, date_reminded, quality, review_round_id, stage_id, review_method, round, step, review_form_id, unconsidered) FROM stdin;
-15	13	8	\N	\N	2026-09-04 09:43:19	2026-09-04 09:43:19	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:43:19	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	0
-1	1	12	\N	\N	2026-09-04 09:31:34	2026-09-04 09:31:34	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:31:34	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
-2	2	11	\N	\N	2026-09-04 09:32:46	2026-09-04 09:32:46	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:32:46	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
-3	2	12	\N	\N	2026-09-04 09:32:51	2026-09-04 09:32:51	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:32:51	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
-24	17	7	\N	\N	2026-09-04 09:48:56	2026-09-04 09:48:56	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:48:56	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
-4	4	9	\N	\N	2026-09-04 09:34:14	2026-09-04 09:34:14	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:34:14	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	0
-5	4	11	\N	\N	2026-09-04 09:34:21	2026-09-04 09:34:21	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:34:21	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
-6	5	8	\N	\N	2026-09-04 09:35:18	2026-09-04 09:35:18	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:35:18	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	0
-17	13	11	\N	\N	2026-09-04 09:43:31	2026-09-04 09:43:31	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:43:31	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	0
-7	5	12	\N	\N	2026-09-04 09:35:26	2026-09-04 09:35:26	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:35:26	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
-8	7	10	\N	\N	2026-09-04 09:38:09	2026-09-04 09:38:09	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:38:09	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	0
-9	11	9	\N	\N	2026-09-04 09:40:37	2026-09-04 09:40:37	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:40:37	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	0
-25	17	8	\N	\N	2026-09-04 09:49:01	2026-09-04 09:49:01	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:49:01	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
-16	13	10	\N	0	2026-09-04 09:43:27	2026-09-04 09:43:27	2026-09-04 09:43:41	2026-09-04 09:43:45	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:43:45	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
-10	11	10	\N	0	2026-09-04 09:40:43	2026-09-04 09:40:43	2026-09-04 09:40:51	2026-09-04 09:40:54	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:40:54	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
-18	13	12	\N	0	2026-09-04 09:43:36	2026-09-04 09:43:36	2026-09-04 09:43:50	2026-09-04 09:43:54	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:43:54	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
-11	11	12	\N	0	2026-09-04 09:40:47	2026-09-04 09:40:47	2026-09-04 09:40:58	2026-09-04 09:41:02	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:41:02	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
-12	12	7	\N	\N	2026-09-04 09:42:13	2026-09-04 09:42:13	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:42:13	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
-19	14	7	\N	\N	2026-09-04 09:45:00	2026-09-04 09:45:00	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:45:00	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	0
-14	12	9	\N	\N	2026-09-04 09:42:22	2026-09-04 09:42:22	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:42:22	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
-20	14	11	\N	\N	2026-09-04 09:45:08	2026-09-04 09:45:08	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:45:08	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	0
-13	12	8	\N	0	2026-09-04 09:42:18	2026-09-04 09:42:18	2026-09-04 09:42:27	2026-09-04 09:42:31	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:42:31	0	0	0	\N	\N	\N	0	12	2	2	1	4	\N	0
-22	16	11	\N	\N	2026-09-04 09:47:17	2026-09-04 09:47:17	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:47:17	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
-23	16	12	\N	\N	2026-09-04 09:47:21	2026-09-04 09:47:21	\N	\N	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:47:21	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
-21	16	10	\N	0	2026-09-04 09:47:13	2026-09-04 09:47:13	2026-09-04 09:47:26	2026-09-04 09:47:29	\N	2026-10-02 00:00:00	2026-10-02 00:00:00	2026-09-04 09:47:29	0	0	0	\N	\N	\N	0	18	3	2	1	4	\N	0
+15	13	8	\N	\N	2026-09-08 09:44:48	2026-09-08 09:44:48	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:44:48	0	0	0	\N	\N	\N	\N	13	2	2	1	1	\N	0
+1	1	12	\N	\N	2026-09-08 09:33:36	2026-09-08 09:33:36	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:33:36	0	0	0	\N	\N	\N	\N	1	3	2	1	1	\N	0
+2	2	11	\N	\N	2026-09-08 09:34:46	2026-09-08 09:34:46	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:34:46	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
+3	2	12	\N	\N	2026-09-08 09:34:50	2026-09-08 09:34:50	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:34:50	0	0	0	\N	\N	\N	\N	2	3	2	1	1	\N	0
+24	17	7	\N	\N	2026-09-08 09:50:15	2026-09-08 09:50:15	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:50:15	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
+4	4	9	\N	\N	2026-09-08 09:36:10	2026-09-08 09:36:10	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:36:10	0	0	0	\N	\N	\N	\N	3	2	2	1	1	\N	0
+5	4	11	\N	\N	2026-09-08 09:36:17	2026-09-08 09:36:17	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:36:17	0	0	0	\N	\N	\N	\N	4	3	2	1	1	\N	0
+6	5	8	\N	\N	2026-09-08 09:37:12	2026-09-08 09:37:12	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:37:12	0	0	0	\N	\N	\N	\N	5	2	2	1	1	\N	0
+17	13	11	\N	\N	2026-09-08 09:44:59	2026-09-08 09:44:59	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:44:59	0	0	0	\N	\N	\N	\N	14	3	2	1	1	\N	0
+7	5	12	\N	\N	2026-09-08 09:37:19	2026-09-08 09:37:19	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:37:19	0	0	0	\N	\N	\N	\N	6	3	2	1	1	\N	0
+8	7	10	\N	\N	2026-09-08 09:39:54	2026-09-08 09:39:54	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:39:54	0	0	0	\N	\N	\N	\N	8	3	2	1	1	\N	0
+9	11	9	\N	\N	2026-09-08 09:42:15	2026-09-08 09:42:15	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:42:15	0	0	0	\N	\N	\N	\N	10	2	2	1	1	\N	0
+25	17	8	\N	\N	2026-09-08 09:50:20	2026-09-08 09:50:20	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:50:20	0	0	0	\N	\N	\N	\N	19	2	2	1	1	\N	0
+16	13	10	\N	0	2026-09-08 09:44:55	2026-09-08 09:44:55	2026-09-08 09:45:08	2026-09-08 09:45:12	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:45:12	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
+10	11	10	\N	0	2026-09-08 09:42:21	2026-09-08 09:42:21	2026-09-08 09:42:28	2026-09-08 09:42:31	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:42:31	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
+18	13	12	\N	0	2026-09-08 09:45:04	2026-09-08 09:45:04	2026-09-08 09:45:17	2026-09-08 09:45:20	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:45:20	0	0	0	\N	\N	\N	0	14	3	2	1	4	\N	0
+11	11	12	\N	0	2026-09-08 09:42:24	2026-09-08 09:42:24	2026-09-08 09:42:35	2026-09-08 09:42:38	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:42:38	0	0	0	\N	\N	\N	0	11	3	2	1	4	\N	0
+12	12	7	\N	\N	2026-09-08 09:43:45	2026-09-08 09:43:45	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:43:45	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
+19	14	7	\N	\N	2026-09-08 09:46:25	2026-09-08 09:46:25	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:46:25	0	0	0	\N	\N	\N	\N	15	2	2	1	1	\N	0
+14	12	9	\N	\N	2026-09-08 09:43:54	2026-09-08 09:43:54	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:43:54	0	0	0	\N	\N	\N	\N	12	2	2	1	1	\N	0
+20	14	11	\N	\N	2026-09-08 09:46:32	2026-09-08 09:46:32	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:46:32	0	0	0	\N	\N	\N	\N	16	3	2	1	1	\N	0
+13	12	8	\N	0	2026-09-08 09:43:50	2026-09-08 09:43:50	2026-09-08 09:43:59	2026-09-08 09:44:02	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:44:02	0	0	0	\N	\N	\N	0	12	2	2	1	4	\N	0
+22	16	11	\N	\N	2026-09-08 09:48:38	2026-09-08 09:48:38	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:48:38	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
+23	16	12	\N	\N	2026-09-08 09:48:42	2026-09-08 09:48:42	\N	\N	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:48:42	0	0	0	\N	\N	\N	\N	18	3	2	1	1	\N	0
+21	16	10	\N	0	2026-09-08 09:48:34	2026-09-08 09:48:34	2026-09-08 09:48:47	2026-09-08 09:48:50	\N	2026-10-06 00:00:00	2026-10-06 00:00:00	2026-09-08 09:48:50	0	0	0	\N	\N	\N	0	18	3	2	1	4	\N	0
 \.
 
 
@@ -9129,29 +9144,19 @@ COPY public.review_files (review_id, submission_file_id) FROM stdin;
 3	7
 3	8
 3	9
-8	30
-8	31
-8	32
-8	33
-8	34
-15	49
-15	50
-15	51
-21	66
-22	66
-23	66
-24	73
-24	74
-24	75
-24	76
-24	77
-24	78
-25	73
-25	74
-25	75
-25	76
-25	77
-25	78
+4	15
+4	16
+4	17
+4	18
+19	59
+19	60
+19	61
+19	62
+19	63
+19	64
+21	73
+22	73
+23	73
 \.
 
 
@@ -9204,25 +9209,26 @@ COPY public.review_round_files (submission_id, review_round_id, stage_id, submis
 2	2	3	7
 2	2	3	8
 2	2	3	9
-6	7	2	21
-6	7	2	22
-6	7	2	23
-6	7	2	24
-7	8	3	30
-7	8	3	31
-7	8	3	32
-7	8	3	33
-7	8	3	34
-13	13	2	49
-13	13	2	50
-13	13	2	51
-16	18	3	66
-17	19	2	73
-17	19	2	74
-17	19	2	75
-17	19	2	76
-17	19	2	77
-17	19	2	78
+4	3	2	15
+4	3	2	16
+4	3	2	17
+4	3	2	18
+6	7	2	25
+6	7	2	26
+6	7	2	27
+6	7	2	28
+9	9	2	40
+9	9	2	41
+9	9	2	42
+9	9	2	43
+9	9	2	44
+14	15	2	59
+14	15	2	60
+14	15	2	61
+14	15	2	62
+14	15	2	63
+14	15	2	64
+16	18	3	73
 \.
 
 
@@ -9266,10 +9272,10 @@ COPY public.sales_rights (sales_rights_id, publication_format_id, type, row_sett
 --
 
 COPY public.scheduled_tasks (class_name, last_run) FROM stdin;
-plugins.generic.usageStats.UsageStatsLoader	2026-09-04 09:27:59
-lib.pkp.classes.task.ReviewReminder	2026-09-04 09:27:59
-lib.pkp.classes.task.PublishSubmissions	2026-09-04 09:27:59
-lib.pkp.classes.task.StatisticsReport	2026-09-04 09:27:59
+plugins.generic.usageStats.UsageStatsLoader	2026-09-08 09:30:07
+lib.pkp.classes.task.ReviewReminder	2026-09-08 09:30:07
+lib.pkp.classes.task.PublishSubmissions	2026-09-08 09:30:07
+lib.pkp.classes.task.StatisticsReport	2026-09-08 09:30:07
 \.
 
 
@@ -9362,31 +9368,31 @@ COPY public.series_settings (series_id, locale, setting_name, setting_value, set
 --
 
 COPY public.sessions (session_id, user_id, ip_address, user_agent, created, last_used, remember, data, domain) FROM stdin;
-fdjh8dk4e8t6uonpj6unu33c4v	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514077	1788514077	0		localhost
-6hdu1l9uo3lb7v26rpe9ncqdi1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788515048	1788515166	1	csrf|a:2:{s:9:"timestamp";i:1788515167;s:5:"token";s:32:"14f42b58b797a4e6410355338c2d4931";}username|s:7:"dbarnes";userId|i:3;	localhost
-be7fiqij9innrdvs9udb687iib	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514090	1788514102	1	csrf|a:2:{s:9:"timestamp";i:1788514102;s:5:"token";s:32:"57291809add4013281daa49a2b3971c9";}userId|i:1;username|s:5:"admin";	localhost
-o70sbln40dslfjeifv0acc42gd	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514102	1788514107	1	csrf|a:2:{s:9:"timestamp";i:1788514107;s:5:"token";s:32:"9426d226b876b8113608bb809e90f844";}userId|i:1;username|s:5:"admin";	localhost
-esr6tvdi3k3osifm51j3kugtt4	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514252	1788514266	1	csrf|a:2:{s:9:"timestamp";i:1788514266;s:5:"token";s:32:"af6730b348ff5ca2b1e56440bcd45351";}userId|i:1;username|s:5:"admin";	localhost
-n974tk55s8c0n8v2lflbmeiq1r	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514558	1788514623	1	csrf|a:2:{s:9:"timestamp";i:1788514623;s:5:"token";s:32:"7e84dec1d98768a80f476c6a00c2c442";}username|s:7:"dbarnes";userId|i:3;	localhost
-k1hmahab823o6unt1gtgron3qr	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514079	1788514090	1	csrf|a:2:{s:9:"timestamp";i:1788514090;s:5:"token";s:32:"9e50aacb9af63908b07aa62e09ade828";}userId|i:1;username|s:5:"admin";	localhost
-doaanekts8vgav9diemas3iqu5	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514108	1788514114	1	csrf|a:2:{s:9:"timestamp";i:1788514114;s:5:"token";s:32:"917dac8520eb24ceff221910928e3dc9";}userId|i:1;username|s:5:"admin";	localhost
-g0cmgkdlc2oar72ls3r59jp4f8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514624	1788514698	1	csrf|a:2:{s:9:"timestamp";i:1788514698;s:5:"token";s:32:"bad3fc39aac50bc2bef06a4b6dafcd43";}username|s:7:"dbarnes";userId|i:3;	localhost
-h9rq2vv10h8ksk4hqnir0na63l	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514119	1788514250	0	csrf|a:2:{s:9:"timestamp";i:1788514250;s:5:"token";s:32:"380161e85a0465b7e022b5b594e92f95";}username|s:5:"rvaca";	localhost
-h993gje3ueaqiac41tk44v1lbd	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514114	1788514117	1	csrf|a:2:{s:9:"timestamp";i:1788514117;s:5:"token";s:32:"5ffd68a5f571756b7c23b3c74eeca3f5";}userId|i:1;username|s:5:"admin";	localhost
-umgumo4lddaol2gv0t92ov7jmf	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514708	1788514768	1	csrf|a:2:{s:9:"timestamp";i:1788514768;s:5:"token";s:32:"c9d52cf407a9bb20ffe996178cb9bd2c";}username|s:7:"dbarnes";userId|i:3;	localhost
-mv5cth4vqom9p6lc73qhlicl54	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514700	1788514707	1	csrf|a:2:{s:9:"timestamp";i:1788514706;s:5:"token";s:32:"743692b11972aee09d8b249e11bafb3b";}userId|i:3;username|s:7:"dbarnes";	localhost
-km2afgou04heu2pq8t7l5me6k5	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514373	1788514399	0	csrf|a:2:{s:9:"timestamp";i:1788514399;s:5:"token";s:32:"61c7746733be622ebeed72684240a232";}username|s:10:"bbarnetson";userId|i:21;	localhost
-eeskifn3n95illoah09a5f4jbs	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514267	1788514300	1	csrf|a:2:{s:9:"timestamp";i:1788514300;s:5:"token";s:32:"49ca27ad34074c64ca8f6e2f60e4700f";}username|s:7:"dbarnes";userId|i:3;	localhost
-5lhaq1r8its5bfndp65bpip4rd	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514302	1788514371	1	csrf|a:2:{s:9:"timestamp";i:1788514371;s:5:"token";s:32:"e053ad0bf682714a2ad46fb542263d93";}username|s:7:"dbarnes";userId|i:3;	localhost
-4t86qpi9kki3p4ck9386f7o2r9	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514769	1788514811	0	csrf|a:2:{s:9:"timestamp";i:1788514810;s:5:"token";s:32:"e307bcde7ea1ec643ce2af91d8c07e91";}username|s:7:"jbrower";userId|i:27;	localhost
-ptm9gmgt066frdd7cjfq6kebuq	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514401	1788514477	1	csrf|a:2:{s:9:"timestamp";i:1788514477;s:5:"token";s:32:"3fc70431d7fbb024504e36c57246007a";}username|s:7:"dbarnes";userId|i:3;	localhost
-fsdl91htad3q9hm6ad1nge6o33	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514479	1788514557	1	csrf|a:2:{s:9:"timestamp";i:1788514557;s:5:"token";s:32:"53dd3ebca67f428bc573f17ba2ee0d0c";}username|s:7:"dbarnes";userId|i:3;	localhost
-5ke3j9n2hcmnbr768snaucbi1d	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514812	1788514872	0	csrf|a:2:{s:9:"timestamp";i:1788514872;s:5:"token";s:32:"2f45418b48650da95007ddca33406519";}username|s:7:"dbarnes";	localhost
-sjngpl7pe2kta2dn0aro8fb1tl	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514874	1788514952	0	csrf|a:2:{s:9:"timestamp";i:1788514952;s:5:"token";s:32:"b4e93747864f6e1adda3271f1d01da70";}username|s:7:"phudson";	localhost
-7pebovl8gljp4b0gjg8dsuuec8	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788514953	1788515046	1	csrf|a:2:{s:9:"timestamp";i:1788515046;s:5:"token";s:32:"9815a04b148bb3bf3232646280301cf9";}username|s:7:"dbarnes";userId|i:3;	localhost
-ndjafphgh87hte5jnoti20pus4	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788515251	1788515342	1	csrf|a:2:{s:9:"timestamp";i:1788515341;s:5:"token";s:32:"28eb507bde477670e31cb42e90e23de5";}username|s:7:"dbarnes";userId|i:3;	localhost
-b4u71ck9aea8re0rs3dl72dgn1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788515167	1788515194	1	csrf|a:2:{s:9:"timestamp";i:1788515195;s:5:"token";s:32:"5b8438565672ebb1a2c9ac3e60f64f35";}username|s:7:"dbarnes";userId|i:3;	localhost
-k89bbbp67aniuub47u3msn3841	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36	1788515196	1788515249	0	csrf|a:2:{s:9:"timestamp";i:1788515249;s:5:"token";s:32:"7913eef04e928a0d0f07eb882f4e2ede";}username|s:8:"agallego";	localhost
+sh86n5v3m30ms16oe44n6ivkir	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788859805	1788859805	0		localhost
+o7ksrnuab2fpvle12b529kdo4h	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860331	1788860401	1	csrf|a:2:{s:9:"timestamp";i:1788860401;s:5:"token";s:32:"9ba5400c392239c4a10027fbab2a887b";}username|s:7:"dbarnes";userId|i:3;	localhost
+839hde7r5ef5berv0le0rjpeb6	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860734	1788860849	1	csrf|a:2:{s:9:"timestamp";i:1788860849;s:5:"token";s:32:"873f7a379df0ae742c43285772a90b84";}username|s:7:"dbarnes";userId|i:3;	localhost
+plckc8u24qlhi0ejfsjgrfa1qp	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860411	1788860468	1	csrf|a:2:{s:9:"timestamp";i:1788860468;s:5:"token";s:32:"e76eddde2ff235b773bedfc2d68f2ffa";}username|s:7:"dbarnes";userId|i:3;	localhost
+n6kp3766030m8bl18cl859thig	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788859818	1788859828	1	csrf|a:2:{s:9:"timestamp";i:1788859828;s:5:"token";s:32:"04c380f5016427663ffe18ab4843767e";}userId|i:1;username|s:5:"admin";	localhost
+nii15dub13jfr57074hj5qvi8t	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860403	1788860410	1	csrf|a:2:{s:9:"timestamp";i:1788860410;s:5:"token";s:32:"1f1b70a05a6edeeef64cc966134b3a67";}userId|i:3;username|s:7:"dbarnes";	localhost
+64rdnoqfntojnk2ldt3jvprof2	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788859829	1788859834	1	csrf|a:2:{s:9:"timestamp";i:1788859834;s:5:"token";s:32:"645b9a9fb413d40e9428ef062c47e937";}userId|i:1;username|s:5:"admin";	localhost
+o7ac301jdi1bi8s2dgrqkpf9mt	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788859806	1788859817	1	csrf|a:2:{s:9:"timestamp";i:1788859817;s:5:"token";s:32:"648a4c1fad1c967ab9b91cadc0944016";}userId|i:1;username|s:5:"admin";	localhost
+oofuvp6bt7faopga3vgp0228pn	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788859834	1788859840	1	csrf|a:2:{s:9:"timestamp";i:1788859840;s:5:"token";s:32:"ad2cb171278ecddf301a4ffa9d3b730c";}userId|i:1;username|s:5:"admin";	localhost
+nn78b5ajct2bm1r7shtql4etuq	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788859974	1788859987	1	csrf|a:2:{s:9:"timestamp";i:1788859987;s:5:"token";s:32:"3ae4824005d51f0bb6873aa32773124b";}userId|i:1;username|s:5:"admin";	localhost
+bb3cs06u3625slj7vevnqlnqr1	1	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788859840	1788859843	1	csrf|a:2:{s:9:"timestamp";i:1788859843;s:5:"token";s:32:"f6db0a796f4796026a57e9cc545c1d80";}userId|i:1;username|s:5:"admin";	localhost
+272216e5cksopgbcl0h639vrj7	27	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860470	1788860509	0	csrf|a:2:{s:9:"timestamp";i:1788860509;s:5:"token";s:32:"c5c9c3ab1cfcfdbf8f3557f768714822";}username|s:7:"jbrower";userId|i:27;	localhost
+refv9qkhv05nnm8c2bumu1ocfs	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788859845	1788859972	0	csrf|a:2:{s:9:"timestamp";i:1788859972;s:5:"token";s:32:"b5b92c3ff93b9464cc8cc4118b3e9f83";}username|s:5:"rvaca";	localhost
+r465ta7c5jpd3gh3029founduh	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788859989	1788860021	1	csrf|a:2:{s:9:"timestamp";i:1788860022;s:5:"token";s:32:"29ef6800d330e720552d4d1874c829fb";}username|s:7:"dbarnes";userId|i:3;	localhost
+2bbhbpbtmeo1cbq04vc1d1br7k	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860023	1788860091	1	csrf|a:2:{s:9:"timestamp";i:1788860090;s:5:"token";s:32:"91c462ed8f0c3b62ad7fac5f3ad99776";}username|s:7:"dbarnes";userId|i:3;	localhost
+r045is0a3j6vaijljkph9afpqo	21	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860093	1788860118	0	csrf|a:2:{s:9:"timestamp";i:1788860118;s:5:"token";s:32:"05bc37242a92a9a2784f04894ac87d2f";}username|s:10:"bbarnetson";userId|i:21;	localhost
+q4od7ro86svp16rbf525jh5281	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860511	1788860568	0	csrf|a:2:{s:9:"timestamp";i:1788860568;s:5:"token";s:32:"dfd5801296753d398a67f86443bf6917";}username|s:7:"dbarnes";	localhost
+cl21se4aoimlt7hmnsejdfumq1	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860120	1788860191	1	csrf|a:2:{s:9:"timestamp";i:1788860191;s:5:"token";s:32:"376340340dbca5bfe098cfe906bb3d81";}username|s:7:"dbarnes";userId|i:3;	localhost
+nbp2q79sc97q1v4c82obbpntbj	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860570	1788860643	0	csrf|a:2:{s:9:"timestamp";i:1788860643;s:5:"token";s:32:"dc0b2b2a4d35b7e28109711e59fabc25";}username|s:7:"phudson";	localhost
+adqufuktsvqcegdoh4u4n8f1ro	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860193	1788860266	1	csrf|a:2:{s:9:"timestamp";i:1788860266;s:5:"token";s:32:"e2ca0517642420442ae23c4650c6da99";}username|s:7:"dbarnes";userId|i:3;	localhost
+paof6ulb1nsnvd1f16ab9a635c	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860268	1788860330	1	csrf|a:2:{s:9:"timestamp";i:1788860331;s:5:"token";s:32:"fffcd02379212fe5d645ef08f7f2b61f";}username|s:7:"dbarnes";userId|i:3;	localhost
+4ss6nv7lkt2aian6guv6roid8a	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860645	1788860732	1	csrf|a:2:{s:9:"timestamp";i:1788860732;s:5:"token";s:32:"5c52b42847336e02a6a4b6f332da2d77";}username|s:7:"dbarnes";userId|i:3;	localhost
+frcgden46ap8kua5tu7p6ucgb2	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860932	1788861020	1	csrf|a:2:{s:9:"timestamp";i:1788861020;s:5:"token";s:32:"6c58583facd33bbb1626459a1f4c2a84";}username|s:7:"dbarnes";userId|i:3;	localhost
+96g1k7jvf7phb5d13qek060ksm	3	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860849	1788860876	1	csrf|a:2:{s:9:"timestamp";i:1788860876;s:5:"token";s:32:"31f31db45716901b33640d7fd6eb4e9b";}username|s:7:"dbarnes";userId|i:3;	localhost
+ru4jpvssc1q93epephlfi6guab	\N	127.0.0.1	Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36	1788860877	1788860930	0	csrf|a:2:{s:9:"timestamp";i:1788860930;s:5:"token";s:32:"622652a372c455222a36f2da9cfc0254";}username|s:8:"agallego";	localhost
 \.
 
 
@@ -9432,53 +9438,53 @@ COPY public.spotlights (spotlight_id, assoc_type, assoc_id, press_id) FROM stdin
 --
 
 COPY public.stage_assignments (stage_assignment_id, submission_id, user_group_id, user_id, date_assigned, recommend_only, can_change_metadata) FROM stdin;
-1	1	13	19	2026-09-04 09:31:11	0	0
-2	1	3	3	2026-09-04 09:31:24	0	1
-3	1	6	14	2026-09-04 09:31:40	0	0
-4	2	14	20	2026-09-04 09:31:46	0	0
-5	2	3	3	2026-09-04 09:32:34	0	1
-6	3	13	21	2026-09-04 09:32:58	0	0
-7	3	3	3	2026-09-04 09:33:19	0	1
-8	4	14	22	2026-09-04 09:33:25	0	0
-9	4	3	3	2026-09-04 09:34:02	0	1
-10	4	6	13	2026-09-04 09:34:28	0	0
-11	4	10	15	2026-09-04 09:34:36	0	0
-12	5	13	23	2026-09-04 09:34:43	0	0
-13	5	3	3	2026-09-04 09:35:08	0	1
-14	5	6	14	2026-09-04 09:35:32	0	0
-15	5	10	16	2026-09-04 09:35:39	0	0
-16	5	12	17	2026-09-04 09:35:42	0	0
-17	6	14	24	2026-09-04 09:36:02	0	0
-18	6	3	3	2026-09-04 09:36:37	0	1
-19	6	5	4	2026-09-04 09:36:37	0	1
-20	6	5	6	2026-09-04 09:36:48	1	1
-21	7	14	25	2026-09-04 09:37:09	0	0
-22	7	3	3	2026-09-04 09:37:56	0	1
-23	7	6	13	2026-09-04 09:38:17	0	0
-24	8	13	3	2026-09-04 09:38:24	0	0
-25	8	3	3	2026-09-04 09:38:27	0	1
-26	9	14	26	2026-09-04 09:38:33	0	0
-27	9	3	3	2026-09-04 09:39:18	0	1
-28	9	5	4	2026-09-04 09:39:18	0	1
-29	10	13	27	2026-09-04 09:39:34	0	0
-30	10	3	3	2026-09-04 09:40:10	0	1
-31	11	13	28	2026-09-04 09:40:16	0	0
-32	11	3	3	2026-09-04 09:40:26	0	1
-33	12	14	29	2026-09-04 09:41:18	0	0
-34	12	3	3	2026-09-04 09:41:59	0	1
-35	13	14	30	2026-09-04 09:42:38	0	0
-36	13	3	3	2026-09-04 09:43:06	0	1
-37	14	14	31	2026-09-04 09:44:12	0	0
-38	14	3	3	2026-09-04 09:44:46	0	1
-39	14	6	13	2026-09-04 09:45:15	0	0
-40	14	10	15	2026-09-04 09:45:23	0	0
-41	14	12	18	2026-09-04 09:45:27	0	0
-42	15	13	32	2026-09-04 09:46:12	0	0
-43	15	3	3	2026-09-04 09:46:25	0	1
-44	16	13	33	2026-09-04 09:46:40	0	0
-45	16	3	3	2026-09-04 09:47:00	0	1
-46	17	14	34	2026-09-04 09:47:35	0	0
-47	17	3	3	2026-09-04 09:48:40	0	1
+1	1	13	19	2026-09-08 09:33:13	0	0
+2	1	3	3	2026-09-08 09:33:26	0	1
+3	1	6	14	2026-09-08 09:33:41	0	0
+4	2	14	20	2026-09-08 09:33:47	0	0
+5	2	3	3	2026-09-08 09:34:34	0	1
+6	3	13	21	2026-09-08 09:34:57	0	0
+7	3	3	3	2026-09-08 09:35:18	0	1
+8	4	14	22	2026-09-08 09:35:24	0	0
+9	4	3	3	2026-09-08 09:35:58	0	1
+10	4	6	13	2026-09-08 09:36:23	0	0
+11	4	10	15	2026-09-08 09:36:31	0	0
+12	5	13	23	2026-09-08 09:36:37	0	0
+13	5	3	3	2026-09-08 09:37:02	0	1
+14	5	6	14	2026-09-08 09:37:25	0	0
+15	5	10	16	2026-09-08 09:37:31	0	0
+16	5	12	17	2026-09-08 09:37:34	0	0
+17	6	14	24	2026-09-08 09:37:52	0	0
+18	6	3	3	2026-09-08 09:38:25	0	1
+19	6	5	4	2026-09-08 09:38:25	0	1
+20	6	5	6	2026-09-08 09:38:36	1	1
+21	7	14	25	2026-09-08 09:38:56	0	0
+22	7	3	3	2026-09-08 09:39:41	0	1
+23	7	6	13	2026-09-08 09:40:00	0	0
+24	8	13	3	2026-09-08 09:40:07	0	0
+25	8	3	3	2026-09-08 09:40:10	0	1
+26	9	14	26	2026-09-08 09:40:16	0	0
+27	9	3	3	2026-09-08 09:40:59	0	1
+28	9	5	4	2026-09-08 09:40:59	0	1
+29	10	13	27	2026-09-08 09:41:14	0	0
+30	10	3	3	2026-09-08 09:41:49	0	1
+31	11	13	28	2026-09-08 09:41:55	0	0
+32	11	3	3	2026-09-08 09:42:04	0	1
+33	12	14	29	2026-09-08 09:42:54	0	0
+34	12	3	3	2026-09-08 09:43:32	0	1
+35	13	14	30	2026-09-08 09:44:09	0	0
+36	13	3	3	2026-09-08 09:44:36	0	1
+37	14	14	31	2026-09-08 09:45:38	0	0
+38	14	3	3	2026-09-08 09:46:12	0	1
+39	14	6	13	2026-09-08 09:46:39	0	0
+40	14	10	15	2026-09-08 09:46:46	0	0
+41	14	12	18	2026-09-08 09:46:50	0	0
+42	15	13	32	2026-09-08 09:47:34	0	0
+43	15	3	3	2026-09-08 09:47:47	0	1
+44	16	13	33	2026-09-08 09:48:01	0	0
+45	16	3	3	2026-09-08 09:48:22	0	1
+46	17	14	34	2026-09-08 09:48:56	0	0
+47	17	3	3	2026-09-08 09:49:59	0	1
 \.
 
 
@@ -10105,10 +10111,15 @@ COPY public.submission_chapter_settings (chapter_id, locale, setting_name, setti
 --
 
 COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id, seq) FROM stdin;
+42	\N	10	6
+43	\N	10	7
 1	\N	1	1
 2	\N	1	2
 3	\N	1	3
-58	\N	15	1
+44	\N	10	8
+45	\N	10	9
+46	\N	11	1
+47	\N	11	2
 4	\N	2	1
 5	\N	2	2
 6	\N	2	3
@@ -10116,17 +10127,18 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 23	\N	6	1
 24	\N	6	2
 25	\N	6	3
-59	\N	15	2
 26	\N	6	4
-60	\N	15	3
 8	\N	3	1
 9	\N	3	2
 10	\N	3	3
 11	\N	3	4
 12	\N	3	5
+48	\N	12	1
+49	\N	12	2
 13	\N	4	1
 14	\N	4	2
 15	\N	4	3
+50	\N	12	3
 16	\N	4	4
 27	\N	7	1
 28	\N	7	2
@@ -10139,43 +10151,37 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 20	\N	5	4
 21	\N	5	5
 22	\N	5	6
-61	\N	16	1
-62	\N	16	2
-63	\N	16	3
-64	\N	16	4
-65	\N	16	5
-37	\N	10	1
-38	\N	10	2
-39	\N	10	3
+51	\N	13	1
+52	\N	13	2
+53	\N	13	3
 32	\N	9	1
 33	\N	9	2
 34	\N	9	3
 35	\N	9	4
-40	\N	10	4
 36	\N	9	5
-41	\N	10	5
-42	\N	10	6
-43	\N	10	7
-44	\N	10	8
-45	\N	10	9
-46	\N	11	1
-47	\N	11	2
-48	\N	12	1
-49	\N	12	2
-50	\N	12	3
-51	\N	13	1
-52	\N	13	2
-53	\N	13	3
 54	\N	14	1
 55	\N	14	2
 56	\N	14	3
-66	\N	17	1
 57	\N	14	4
+58	\N	15	1
+59	\N	15	2
+60	\N	15	3
+66	\N	17	1
 67	\N	17	2
 68	\N	17	3
 69	\N	17	4
 70	\N	17	5
 71	\N	17	6
+37	\N	10	1
+38	\N	10	2
+39	\N	10	3
+40	\N	10	4
+41	\N	10	5
+61	\N	16	1
+62	\N	16	2
+63	\N	16	3
+64	\N	16	4
+65	\N	16	5
 \.
 
 
@@ -10184,12 +10190,12 @@ COPY public.submission_chapters (chapter_id, primary_contact_id, publication_id,
 --
 
 COPY public.submission_comments (comment_id, comment_type, role_id, submission_id, assoc_id, author_id, comment_title, comments, date_posted, date_modified, viewable) FROM stdin;
-1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2026-09-04 09:40:54	\N	1
-2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2026-09-04 09:41:01	\N	1
-3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2026-09-04 09:42:31	\N	1
-4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2026-09-04 09:43:44	\N	1
-5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2026-09-04 09:43:53	\N	1
-6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2026-09-04 09:47:29	\N	1
+1	1	4096	11	10	10		<p>I recommend that the author revise this submission.</p>	2026-09-08 09:42:31	\N	1
+2	1	4096	11	11	12		<p>I recommend that the author resubmit this submission.</p>	2026-09-08 09:42:38	\N	1
+3	1	4096	12	13	8		<p>I recommend declining this submission.</p>	2026-09-08 09:44:02	\N	1
+4	1	4096	13	16	10		<p>I recommend requiring revisions.</p>	2026-09-08 09:45:12	\N	1
+5	1	4096	13	18	12		<p>I recommend resubmitting.</p>	2026-09-08 09:45:20	\N	1
+6	1	4096	16	21	10		<p>I recommend that the author revise this submission.</p>	2026-09-08 09:48:50	\N	1
 \.
 
 
@@ -10212,70 +10218,71 @@ COPY public.submission_file_revisions (revision_id, submission_file_id, file_id)
 12	12	8
 13	13	9
 14	14	10
-15	15	11
-16	16	11
-17	17	12
-18	18	13
-19	19	14
-20	20	15
+15	15	7
+16	16	8
+17	17	9
+18	18	10
+19	19	11
+20	20	11
 21	21	12
 22	22	13
 23	23	14
 24	24	15
-25	25	16
-26	26	17
-27	27	18
-28	28	19
-29	29	20
-30	30	16
-31	31	17
-32	32	18
-33	33	19
-34	34	20
-35	35	21
-36	36	22
-37	37	23
-38	38	24
-39	39	25
-40	40	26
-41	41	27
-42	42	28
-43	43	29
-44	44	30
-45	45	31
-46	46	32
-47	47	33
-48	48	34
-49	49	32
-50	50	33
-51	51	34
-52	52	35
-53	53	36
-54	54	37
-55	55	38
-56	56	39
-57	57	40
-58	58	35
-59	59	36
-60	60	37
-61	61	38
-62	62	39
-63	63	40
-64	64	41
-65	65	42
-66	66	42
-67	67	43
-68	68	44
-69	69	45
-70	70	46
-71	71	47
-72	72	48
-73	73	43
-74	74	44
-75	75	45
-76	76	46
-77	77	47
-78	78	48
+25	25	12
+26	26	13
+27	27	14
+28	28	15
+29	29	16
+30	30	17
+31	31	18
+32	32	19
+33	33	20
+34	34	21
+35	35	22
+36	36	23
+37	37	24
+38	38	25
+39	39	26
+40	40	22
+41	41	23
+42	42	24
+43	43	25
+44	44	26
+45	45	27
+46	46	28
+47	47	29
+48	48	30
+49	49	31
+50	50	32
+51	51	33
+52	52	34
+53	53	35
+54	54	36
+55	55	37
+56	56	38
+57	57	39
+58	58	40
+59	59	35
+60	60	36
+61	61	37
+62	62	38
+63	63	39
+64	64	40
+65	65	35
+66	66	36
+67	67	37
+68	68	38
+69	69	39
+70	70	40
+71	71	41
+72	72	42
+73	73	42
+74	74	43
+75	75	44
+76	76	45
+77	77	46
+78	78	47
+79	79	48
 \.
 
 
@@ -10310,122 +10317,122 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 12		chapterId	14	string
 13		chapterId	15	string
 14		chapterId	16	string
-15	en_US	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-16	en_US	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
-17	en_US	name	Identify: Understanding Your Information.pdf	string
-18	en_US	name	Scope: Knowing What Is Available.pdf	string
-19	en_US	name	Plan: Developing Research Strategies.pdf	string
-20	en_US	name	Gather: Finding What You Need.pdf	string
-17		chapterId	23	string
-18		chapterId	24	string
-19		chapterId	25	string
-20		chapterId	26	string
+15	en_US	name	Introduction: Contexts of Popular Cultur.pdf	string
+15		chapterId	13	string
+16	en_US	name	Chapter 1. A Future for Media Studies: C.pdf	string
+16		chapterId	14	string
+17	en_US	name	Chapter 2. Log On, Goof Off, and Look Up.pdf	string
+17		chapterId	15	string
+18	en_US	name	Chapter 3. Hawkers and Public Space: Fre.pdf	string
+18		chapterId	16	string
+19	en_US	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
+20	en_US	name	Bomb Canada and Other Unkind Remarks in the American Media.pdf	string
 21	en_US	name	Identify: Understanding Your Information.pdf	string
-21		chapterId	23	string
 22	en_US	name	Scope: Knowing What Is Available.pdf	string
-22		chapterId	24	string
 23	en_US	name	Plan: Developing Research Strategies.pdf	string
-23		chapterId	25	string
 24	en_US	name	Gather: Finding What You Need.pdf	string
+21		chapterId	23	string
+22		chapterId	24	string
+23		chapterId	25	string
 24		chapterId	26	string
-25	en_US	name	Introduction.pdf	string
-26	en_US	name	Chapter 1: Interactions Affording Distan.pdf	string
-27	en_US	name	Chapter 2: Learning Science at a Distanc.pdf	string
-28	en_US	name	Chapter 3: Leadership Strategies for Coo.pdf	string
-29	en_US	name	Chapter 4: Toward New Models of Flexible.pdf	string
-25		chapterId	27	string
-26		chapterId	28	string
-27		chapterId	29	string
-28		chapterId	30	string
-29		chapterId	31	string
-30	en_US	name	Introduction.pdf	string
-30		chapterId	27	string
-31	en_US	name	Chapter 1: Interactions Affording Distan.pdf	string
-31		chapterId	28	string
-32	en_US	name	Chapter 2: Learning Science at a Distanc.pdf	string
-32		chapterId	29	string
-33	en_US	name	Chapter 3: Leadership Strategies for Coo.pdf	string
-33		chapterId	30	string
-34	en_US	name	Chapter 4: Toward New Models of Flexible.pdf	string
-34		chapterId	31	string
-35	en_US	name	Editorial.pdf	string
-36	en_US	name	Internet, openness and the future of the.pdf	string
-37	en_US	name	Imagining the Internet: Open, closed or .pdf	string
-38	en_US	name	The internet in LAC will remain free, pu.pdf	string
-39	en_US	name	Free Internet?.pdf	string
-40	en_US	name	Risks and challenges for freedom of expr.pdf	string
-36		chapterId	32	string
-37		chapterId	33	string
-38		chapterId	34	string
-39		chapterId	35	string
-40		chapterId	36	string
-41	en_US	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
-42	en_US	name	Dreamwork.pdf	string
-43	en_US	name	Catalyzing Access through Social and Tec.pdf	string
-44	en_US	name	Catalyzing Access via Telecommunications.pdf	string
-45	en_US	name	Access to Knowledge as a New Paradigm fo.pdf	string
-43		chapterId	48	string
-44		chapterId	49	string
-45		chapterId	50	string
-46	en_US	name	Current State of Mobile Learning.pdf	string
-47	en_US	name	A Model for Framing Mobile Learning.pdf	string
-48	en_US	name	Mobile Distance Learning with PDAs: Deve.pdf	string
-46		chapterId	51	string
-47		chapterId	52	string
-48		chapterId	53	string
-49	en_US	name	Current State of Mobile Learning.pdf	string
-49		chapterId	51	string
-50	en_US	name	A Model for Framing Mobile Learning.pdf	string
-50		chapterId	52	string
-51	en_US	name	Mobile Distance Learning with PDAs: Deve.pdf	string
-51		chapterId	53	string
-52	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
-53	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
-54	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
-55	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-56	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-57	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-52		chapterId	54	string
-53		chapterId	55	string
-54		chapterId	56	string
-55		chapterId	57	string
-58	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
-58		chapterId	54	string
-59	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
-59		chapterId	55	string
-60	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
-60		chapterId	56	string
-61	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
-61		chapterId	57	string
-62	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
-63	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
-64	en_US	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
-65	en_US	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-66	en_US	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
-67	en_US	name	Preface.pdf	string
-68	en_US	name	Introduction.pdf	string
-69	en_US	name	The Emergence of Open Development in a N.pdf	string
-70	en_US	name	Enacting Openness in ICT4D Research.pdf	string
-71	en_US	name	Transparency and Development: Ethical Co.pdf	string
-72	en_US	name	Open Educational Resources: Opportunitie.pdf	string
-67		chapterId	66	string
-68		chapterId	67	string
-69		chapterId	68	string
-70		chapterId	69	string
-71		chapterId	70	string
-72		chapterId	71	string
-73	en_US	name	Preface.pdf	string
-73		chapterId	66	string
-74	en_US	name	Introduction.pdf	string
-74		chapterId	67	string
-75	en_US	name	The Emergence of Open Development in a N.pdf	string
-75		chapterId	68	string
-76	en_US	name	Enacting Openness in ICT4D Research.pdf	string
-76		chapterId	69	string
-77	en_US	name	Transparency and Development: Ethical Co.pdf	string
-77		chapterId	70	string
-78	en_US	name	Open Educational Resources: Opportunitie.pdf	string
-78		chapterId	71	string
+25	en_US	name	Identify: Understanding Your Information.pdf	string
+25		chapterId	23	string
+26	en_US	name	Scope: Knowing What Is Available.pdf	string
+26		chapterId	24	string
+27	en_US	name	Plan: Developing Research Strategies.pdf	string
+27		chapterId	25	string
+28	en_US	name	Gather: Finding What You Need.pdf	string
+28		chapterId	26	string
+29	en_US	name	Introduction.pdf	string
+30	en_US	name	Chapter 1: Interactions Affording Distan.pdf	string
+31	en_US	name	Chapter 2: Learning Science at a Distanc.pdf	string
+32	en_US	name	Chapter 3: Leadership Strategies for Coo.pdf	string
+33	en_US	name	Chapter 4: Toward New Models of Flexible.pdf	string
+29		chapterId	27	string
+30		chapterId	28	string
+31		chapterId	29	string
+32		chapterId	30	string
+33		chapterId	31	string
+34	en_US	name	Editorial.pdf	string
+35	en_US	name	Internet, openness and the future of the.pdf	string
+36	en_US	name	Imagining the Internet: Open, closed or .pdf	string
+37	en_US	name	The internet in LAC will remain free, pu.pdf	string
+38	en_US	name	Free Internet?.pdf	string
+39	en_US	name	Risks and challenges for freedom of expr.pdf	string
+35		chapterId	32	string
+36		chapterId	33	string
+37		chapterId	34	string
+38		chapterId	35	string
+39		chapterId	36	string
+40	en_US	name	Internet, openness and the future of the.pdf	string
+40		chapterId	32	string
+41	en_US	name	Imagining the Internet: Open, closed or .pdf	string
+41		chapterId	33	string
+42	en_US	name	The internet in LAC will remain free, pu.pdf	string
+42		chapterId	34	string
+43	en_US	name	Free Internet?.pdf	string
+43		chapterId	35	string
+44	en_US	name	Risks and challenges for freedom of expr.pdf	string
+44		chapterId	36	string
+45	en_US	name	Lost Tracks: Buffalo National Park, 1909-1939.pdf	string
+46	en_US	name	Dreamwork.pdf	string
+47	en_US	name	Catalyzing Access through Social and Tec.pdf	string
+48	en_US	name	Catalyzing Access via Telecommunications.pdf	string
+49	en_US	name	Access to Knowledge as a New Paradigm fo.pdf	string
+47		chapterId	48	string
+48		chapterId	49	string
+49		chapterId	50	string
+50	en_US	name	Current State of Mobile Learning.pdf	string
+51	en_US	name	A Model for Framing Mobile Learning.pdf	string
+52	en_US	name	Mobile Distance Learning with PDAs: Deve.pdf	string
+50		chapterId	51	string
+51		chapterId	52	string
+52		chapterId	53	string
+53	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+54	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
+55	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+56	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+57	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+58	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+53		chapterId	54	string
+54		chapterId	55	string
+55		chapterId	56	string
+56		chapterId	57	string
+59	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+59		chapterId	54	string
+60	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
+60		chapterId	55	string
+61	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+61		chapterId	56	string
+62	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+62		chapterId	57	string
+63	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+64	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+65	en_US	name	Chapter 1: Mind Control—Internal or Exte.pdf	string
+65		chapterId	54	string
+66	en_US	name	Chapter 2: Classical Music and the Class.pdf	string
+66		chapterId	55	string
+67	en_US	name	Chapter 3: Situated Cognition and Bricol.pdf	string
+67		chapterId	56	string
+68	en_US	name	Chapter 4: Braitenberg’s Vehicle 2.pdf	string
+68		chapterId	57	string
+69	en_US	name	Segmentation of Vascular Ultrasound Imag.pdf	string
+70	en_US	name	The Canadian Nutrient File: Nutrient Val.pdf	string
+71	en_US	name	Expansive Discourses: Urban Sprawl in Calgary, 1945-1978.pdf	string
+72	en_US	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
+73	en_US	name	A Designer's Log: Case Studies in Instructional Design.pdf	string
+74	en_US	name	Preface.pdf	string
+75	en_US	name	Introduction.pdf	string
+76	en_US	name	The Emergence of Open Development in a N.pdf	string
+77	en_US	name	Enacting Openness in ICT4D Research.pdf	string
+78	en_US	name	Transparency and Development: Ethical Co.pdf	string
+79	en_US	name	Open Educational Resources: Opportunitie.pdf	string
+74		chapterId	66	string
+75		chapterId	67	string
+76		chapterId	68	string
+77		chapterId	69	string
+78		chapterId	70	string
+79		chapterId	71	string
 \.
 
 
@@ -10434,84 +10441,85 @@ COPY public.submission_file_settings (submission_file_id, locale, setting_name, 
 --
 
 COPY public.submission_files (submission_file_id, submission_id, file_id, source_submission_file_id, genre_id, file_stage, direct_sales_price, sales_type, viewable, created_at, updated_at, uploader_user_id, assoc_type, assoc_id) FROM stdin;
-1	1	1	\N	3	2	\N	\N	\N	2026-09-04 09:31:12	2026-09-04 09:31:12	19	\N	\N
-2	2	2	\N	4	2	\N	\N	\N	2026-09-04 09:31:47	2026-09-04 09:31:47	20	\N	\N
-3	2	3	\N	4	2	\N	\N	\N	2026-09-04 09:31:47	2026-09-04 09:31:48	20	\N	\N
-4	2	4	\N	4	2	\N	\N	\N	2026-09-04 09:31:48	2026-09-04 09:31:48	20	\N	\N
-5	2	5	\N	4	2	\N	\N	\N	2026-09-04 09:31:48	2026-09-04 09:31:48	20	\N	\N
-6	2	2	2	4	4	\N	\N	\N	2026-09-04 09:32:40	2026-09-04 09:32:40	20	\N	\N
-7	2	3	3	4	4	\N	\N	\N	2026-09-04 09:32:40	2026-09-04 09:32:40	20	\N	\N
-8	2	4	4	4	4	\N	\N	\N	2026-09-04 09:32:40	2026-09-04 09:32:40	20	\N	\N
-9	2	5	5	4	4	\N	\N	\N	2026-09-04 09:32:40	2026-09-04 09:32:40	20	\N	\N
-10	3	6	\N	3	2	\N	\N	\N	2026-09-04 09:32:58	2026-09-04 09:32:59	21	\N	\N
-11	4	7	\N	4	2	\N	\N	\N	2026-09-04 09:33:26	2026-09-04 09:33:26	22	\N	\N
-12	4	8	\N	4	2	\N	\N	\N	2026-09-04 09:33:26	2026-09-04 09:33:27	22	\N	\N
-13	4	9	\N	4	2	\N	\N	\N	2026-09-04 09:33:27	2026-09-04 09:33:27	22	\N	\N
-14	4	10	\N	4	2	\N	\N	\N	2026-09-04 09:33:27	2026-09-04 09:33:27	22	\N	\N
-15	5	11	\N	3	2	\N	\N	\N	2026-09-04 09:34:44	2026-09-04 09:34:44	23	\N	\N
-16	5	11	15	3	10	0	openAccess	1	2026-09-04 09:35:48	2026-09-04 09:35:52	23	521	1
-17	6	12	\N	4	2	\N	\N	\N	2026-09-04 09:36:03	2026-09-04 09:36:03	24	\N	\N
-18	6	13	\N	4	2	\N	\N	\N	2026-09-04 09:36:03	2026-09-04 09:36:03	24	\N	\N
-19	6	14	\N	4	2	\N	\N	\N	2026-09-04 09:36:04	2026-09-04 09:36:04	24	\N	\N
-20	6	15	\N	4	2	\N	\N	\N	2026-09-04 09:36:04	2026-09-04 09:36:04	24	\N	\N
-21	6	12	17	4	19	\N	\N	\N	2026-09-04 09:36:43	2026-09-04 09:36:43	24	\N	\N
-22	6	13	18	4	19	\N	\N	\N	2026-09-04 09:36:43	2026-09-04 09:36:43	24	\N	\N
-23	6	14	19	4	19	\N	\N	\N	2026-09-04 09:36:43	2026-09-04 09:36:43	24	\N	\N
-24	6	15	20	4	19	\N	\N	\N	2026-09-04 09:36:43	2026-09-04 09:36:43	24	\N	\N
-25	7	16	\N	4	2	\N	\N	\N	2026-09-04 09:37:09	2026-09-04 09:37:10	25	\N	\N
-26	7	17	\N	4	2	\N	\N	\N	2026-09-04 09:37:10	2026-09-04 09:37:10	25	\N	\N
-27	7	18	\N	4	2	\N	\N	\N	2026-09-04 09:37:10	2026-09-04 09:37:10	25	\N	\N
-28	7	19	\N	4	2	\N	\N	\N	2026-09-04 09:37:11	2026-09-04 09:37:11	25	\N	\N
-29	7	20	\N	4	2	\N	\N	\N	2026-09-04 09:37:11	2026-09-04 09:37:11	25	\N	\N
-30	7	16	25	4	4	\N	\N	\N	2026-09-04 09:38:03	2026-09-04 09:38:03	25	\N	\N
-31	7	17	26	4	4	\N	\N	\N	2026-09-04 09:38:03	2026-09-04 09:38:03	25	\N	\N
-32	7	18	27	4	4	\N	\N	\N	2026-09-04 09:38:03	2026-09-04 09:38:03	25	\N	\N
-33	7	19	28	4	4	\N	\N	\N	2026-09-04 09:38:03	2026-09-04 09:38:03	25	\N	\N
-34	7	20	29	4	4	\N	\N	\N	2026-09-04 09:38:03	2026-09-04 09:38:03	25	\N	\N
-35	8	21	\N	3	2	\N	\N	\N	2026-09-04 09:38:25	2026-09-04 09:38:25	3	\N	\N
-36	9	22	\N	4	2	\N	\N	\N	2026-09-04 09:38:33	2026-09-04 09:38:34	26	\N	\N
-37	9	23	\N	4	2	\N	\N	\N	2026-09-04 09:38:34	2026-09-04 09:38:34	26	\N	\N
-38	9	24	\N	4	2	\N	\N	\N	2026-09-04 09:38:34	2026-09-04 09:38:34	26	\N	\N
-39	9	25	\N	4	2	\N	\N	\N	2026-09-04 09:38:35	2026-09-04 09:38:35	26	\N	\N
-40	9	26	\N	4	2	\N	\N	\N	2026-09-04 09:38:35	2026-09-04 09:38:35	26	\N	\N
-41	10	27	\N	3	2	\N	\N	\N	2026-09-04 09:39:34	2026-09-04 09:39:35	27	\N	\N
-42	11	28	\N	3	2	\N	\N	\N	2026-09-04 09:40:17	2026-09-04 09:40:17	28	\N	\N
-43	12	29	\N	4	2	\N	\N	\N	2026-09-04 09:41:19	2026-09-04 09:41:19	29	\N	\N
-44	12	30	\N	4	2	\N	\N	\N	2026-09-04 09:41:20	2026-09-04 09:41:20	29	\N	\N
-45	12	31	\N	4	2	\N	\N	\N	2026-09-04 09:41:20	2026-09-04 09:41:20	29	\N	\N
-46	13	32	\N	4	2	\N	\N	\N	2026-09-04 09:42:38	2026-09-04 09:42:39	30	\N	\N
-47	13	33	\N	4	2	\N	\N	\N	2026-09-04 09:42:39	2026-09-04 09:42:39	30	\N	\N
-48	13	34	\N	4	2	\N	\N	\N	2026-09-04 09:42:39	2026-09-04 09:42:39	30	\N	\N
-49	13	32	46	4	19	\N	\N	\N	2026-09-04 09:43:14	2026-09-04 09:43:14	30	\N	\N
-50	13	33	47	4	19	\N	\N	\N	2026-09-04 09:43:14	2026-09-04 09:43:14	30	\N	\N
-51	13	34	48	4	19	\N	\N	\N	2026-09-04 09:43:14	2026-09-04 09:43:14	30	\N	\N
-52	14	35	\N	4	2	\N	\N	\N	2026-09-04 09:44:13	2026-09-04 09:44:13	31	\N	\N
-53	14	36	\N	4	2	\N	\N	\N	2026-09-04 09:44:14	2026-09-04 09:44:14	31	\N	\N
-54	14	37	\N	4	2	\N	\N	\N	2026-09-04 09:44:14	2026-09-04 09:44:14	31	\N	\N
-55	14	38	\N	4	2	\N	\N	\N	2026-09-04 09:44:14	2026-09-04 09:44:15	31	\N	\N
-56	14	39	\N	13	2	\N	\N	\N	2026-09-04 09:44:15	2026-09-04 09:44:15	31	\N	\N
-57	14	40	\N	9	2	\N	\N	\N	2026-09-04 09:44:15	2026-09-04 09:44:16	31	\N	\N
-60	14	37	54	4	10	0	openAccess	1	2026-09-04 09:45:36	2026-09-04 09:45:49	31	521	2
-58	14	35	52	4	10	0	openAccess	1	2026-09-04 09:45:36	2026-09-04 09:45:41	31	521	2
-62	14	39	56	13	10	0	openAccess	1	2026-09-04 09:45:36	2026-09-04 09:45:57	31	521	2
-59	14	36	53	4	10	0	openAccess	1	2026-09-04 09:45:36	2026-09-04 09:45:45	31	521	2
-61	14	38	55	4	10	0	openAccess	1	2026-09-04 09:45:36	2026-09-04 09:45:53	31	521	2
-65	16	42	\N	3	2	\N	\N	\N	2026-09-04 09:46:41	2026-09-04 09:46:41	33	\N	\N
-63	14	40	57	9	10	0	openAccess	1	2026-09-04 09:45:36	2026-09-04 09:46:01	31	521	2
-64	15	41	\N	3	2	\N	\N	\N	2026-09-04 09:46:12	2026-09-04 09:46:13	32	\N	\N
-66	16	42	65	3	4	\N	\N	\N	2026-09-04 09:47:07	2026-09-04 09:47:07	33	\N	\N
-67	17	43	\N	4	2	\N	\N	\N	2026-09-04 09:47:36	2026-09-04 09:47:36	34	\N	\N
-68	17	44	\N	4	2	\N	\N	\N	2026-09-04 09:47:36	2026-09-04 09:47:37	34	\N	\N
-69	17	45	\N	4	2	\N	\N	\N	2026-09-04 09:47:37	2026-09-04 09:47:37	34	\N	\N
-70	17	46	\N	4	2	\N	\N	\N	2026-09-04 09:47:37	2026-09-04 09:47:37	34	\N	\N
-71	17	47	\N	4	2	\N	\N	\N	2026-09-04 09:47:37	2026-09-04 09:47:38	34	\N	\N
-72	17	48	\N	4	2	\N	\N	\N	2026-09-04 09:47:38	2026-09-04 09:47:38	34	\N	\N
-73	17	43	67	4	19	\N	\N	\N	2026-09-04 09:48:50	2026-09-04 09:48:50	34	\N	\N
-74	17	44	68	4	19	\N	\N	\N	2026-09-04 09:48:50	2026-09-04 09:48:50	34	\N	\N
-75	17	45	69	4	19	\N	\N	\N	2026-09-04 09:48:50	2026-09-04 09:48:50	34	\N	\N
-76	17	46	70	4	19	\N	\N	\N	2026-09-04 09:48:50	2026-09-04 09:48:50	34	\N	\N
-77	17	47	71	4	19	\N	\N	\N	2026-09-04 09:48:50	2026-09-04 09:48:50	34	\N	\N
-78	17	48	72	4	19	\N	\N	\N	2026-09-04 09:48:50	2026-09-04 09:48:50	34	\N	\N
+1	1	1	\N	3	2	\N	\N	\N	2026-09-08 09:33:14	2026-09-08 09:33:14	19	\N	\N
+2	2	2	\N	4	2	\N	\N	\N	2026-09-08 09:33:48	2026-09-08 09:33:48	20	\N	\N
+3	2	3	\N	4	2	\N	\N	\N	2026-09-08 09:33:48	2026-09-08 09:33:49	20	\N	\N
+4	2	4	\N	4	2	\N	\N	\N	2026-09-08 09:33:49	2026-09-08 09:33:49	20	\N	\N
+5	2	5	\N	4	2	\N	\N	\N	2026-09-08 09:33:49	2026-09-08 09:33:49	20	\N	\N
+6	2	2	2	4	4	\N	\N	\N	2026-09-08 09:34:40	2026-09-08 09:34:40	20	\N	\N
+7	2	3	3	4	4	\N	\N	\N	2026-09-08 09:34:40	2026-09-08 09:34:40	20	\N	\N
+8	2	4	4	4	4	\N	\N	\N	2026-09-08 09:34:40	2026-09-08 09:34:40	20	\N	\N
+9	2	5	5	4	4	\N	\N	\N	2026-09-08 09:34:40	2026-09-08 09:34:40	20	\N	\N
+10	3	6	\N	3	2	\N	\N	\N	2026-09-08 09:34:58	2026-09-08 09:34:58	21	\N	\N
+11	4	7	\N	4	2	\N	\N	\N	2026-09-08 09:35:25	2026-09-08 09:35:25	22	\N	\N
+12	4	8	\N	4	2	\N	\N	\N	2026-09-08 09:35:25	2026-09-08 09:35:25	22	\N	\N
+13	4	9	\N	4	2	\N	\N	\N	2026-09-08 09:35:25	2026-09-08 09:35:25	22	\N	\N
+14	4	10	\N	4	2	\N	\N	\N	2026-09-08 09:35:26	2026-09-08 09:35:26	22	\N	\N
+15	4	7	11	4	19	\N	\N	\N	2026-09-08 09:36:04	2026-09-08 09:36:04	22	\N	\N
+16	4	8	12	4	19	\N	\N	\N	2026-09-08 09:36:04	2026-09-08 09:36:04	22	\N	\N
+17	4	9	13	4	19	\N	\N	\N	2026-09-08 09:36:04	2026-09-08 09:36:04	22	\N	\N
+18	4	10	14	4	19	\N	\N	\N	2026-09-08 09:36:04	2026-09-08 09:36:04	22	\N	\N
+19	5	11	\N	3	2	\N	\N	\N	2026-09-08 09:36:38	2026-09-08 09:36:39	23	\N	\N
+20	5	11	19	3	10	0	openAccess	1	2026-09-08 09:37:39	2026-09-08 09:37:43	23	521	1
+21	6	12	\N	4	2	\N	\N	\N	2026-09-08 09:37:53	2026-09-08 09:37:53	24	\N	\N
+22	6	13	\N	4	2	\N	\N	\N	2026-09-08 09:37:54	2026-09-08 09:37:54	24	\N	\N
+23	6	14	\N	4	2	\N	\N	\N	2026-09-08 09:37:54	2026-09-08 09:37:54	24	\N	\N
+24	6	15	\N	4	2	\N	\N	\N	2026-09-08 09:37:54	2026-09-08 09:37:54	24	\N	\N
+25	6	12	21	4	19	\N	\N	\N	2026-09-08 09:38:32	2026-09-08 09:38:32	24	\N	\N
+26	6	13	22	4	19	\N	\N	\N	2026-09-08 09:38:32	2026-09-08 09:38:32	24	\N	\N
+27	6	14	23	4	19	\N	\N	\N	2026-09-08 09:38:32	2026-09-08 09:38:32	24	\N	\N
+28	6	15	24	4	19	\N	\N	\N	2026-09-08 09:38:32	2026-09-08 09:38:32	24	\N	\N
+29	7	16	\N	4	2	\N	\N	\N	2026-09-08 09:38:57	2026-09-08 09:38:57	25	\N	\N
+30	7	17	\N	4	2	\N	\N	\N	2026-09-08 09:38:57	2026-09-08 09:38:57	25	\N	\N
+31	7	18	\N	4	2	\N	\N	\N	2026-09-08 09:38:57	2026-09-08 09:38:58	25	\N	\N
+32	7	19	\N	4	2	\N	\N	\N	2026-09-08 09:38:58	2026-09-08 09:38:58	25	\N	\N
+33	7	20	\N	4	2	\N	\N	\N	2026-09-08 09:38:58	2026-09-08 09:38:58	25	\N	\N
+34	8	21	\N	3	2	\N	\N	\N	2026-09-08 09:40:08	2026-09-08 09:40:08	3	\N	\N
+35	9	22	\N	4	2	\N	\N	\N	2026-09-08 09:40:16	2026-09-08 09:40:17	26	\N	\N
+36	9	23	\N	4	2	\N	\N	\N	2026-09-08 09:40:17	2026-09-08 09:40:17	26	\N	\N
+37	9	24	\N	4	2	\N	\N	\N	2026-09-08 09:40:17	2026-09-08 09:40:17	26	\N	\N
+38	9	25	\N	4	2	\N	\N	\N	2026-09-08 09:40:17	2026-09-08 09:40:18	26	\N	\N
+39	9	26	\N	4	2	\N	\N	\N	2026-09-08 09:40:18	2026-09-08 09:40:18	26	\N	\N
+40	9	22	35	4	19	\N	\N	\N	2026-09-08 09:41:06	2026-09-08 09:41:06	26	\N	\N
+41	9	23	36	4	19	\N	\N	\N	2026-09-08 09:41:06	2026-09-08 09:41:06	26	\N	\N
+42	9	24	37	4	19	\N	\N	\N	2026-09-08 09:41:06	2026-09-08 09:41:06	26	\N	\N
+43	9	25	38	4	19	\N	\N	\N	2026-09-08 09:41:06	2026-09-08 09:41:06	26	\N	\N
+44	9	26	39	4	19	\N	\N	\N	2026-09-08 09:41:06	2026-09-08 09:41:06	26	\N	\N
+45	10	27	\N	3	2	\N	\N	\N	2026-09-08 09:41:14	2026-09-08 09:41:15	27	\N	\N
+46	11	28	\N	3	2	\N	\N	\N	2026-09-08 09:41:56	2026-09-08 09:41:56	28	\N	\N
+47	12	29	\N	4	2	\N	\N	\N	2026-09-08 09:42:55	2026-09-08 09:42:55	29	\N	\N
+48	12	30	\N	4	2	\N	\N	\N	2026-09-08 09:42:55	2026-09-08 09:42:55	29	\N	\N
+49	12	31	\N	4	2	\N	\N	\N	2026-09-08 09:42:56	2026-09-08 09:42:56	29	\N	\N
+50	13	32	\N	4	2	\N	\N	\N	2026-09-08 09:44:09	2026-09-08 09:44:10	30	\N	\N
+51	13	33	\N	4	2	\N	\N	\N	2026-09-08 09:44:10	2026-09-08 09:44:10	30	\N	\N
+52	13	34	\N	4	2	\N	\N	\N	2026-09-08 09:44:10	2026-09-08 09:44:10	30	\N	\N
+53	14	35	\N	4	2	\N	\N	\N	2026-09-08 09:45:39	2026-09-08 09:45:39	31	\N	\N
+54	14	36	\N	4	2	\N	\N	\N	2026-09-08 09:45:39	2026-09-08 09:45:40	31	\N	\N
+55	14	37	\N	4	2	\N	\N	\N	2026-09-08 09:45:40	2026-09-08 09:45:40	31	\N	\N
+56	14	38	\N	4	2	\N	\N	\N	2026-09-08 09:45:40	2026-09-08 09:45:40	31	\N	\N
+57	14	39	\N	13	2	\N	\N	\N	2026-09-08 09:45:40	2026-09-08 09:45:41	31	\N	\N
+58	14	40	\N	9	2	\N	\N	\N	2026-09-08 09:45:41	2026-09-08 09:45:42	31	\N	\N
+59	14	35	53	4	19	\N	\N	\N	2026-09-08 09:46:19	2026-09-08 09:46:19	31	\N	\N
+60	14	36	54	4	19	\N	\N	\N	2026-09-08 09:46:19	2026-09-08 09:46:19	31	\N	\N
+61	14	37	55	4	19	\N	\N	\N	2026-09-08 09:46:19	2026-09-08 09:46:19	31	\N	\N
+62	14	38	56	4	19	\N	\N	\N	2026-09-08 09:46:19	2026-09-08 09:46:19	31	\N	\N
+63	14	39	57	13	19	\N	\N	\N	2026-09-08 09:46:19	2026-09-08 09:46:19	31	\N	\N
+64	14	40	58	9	19	\N	\N	\N	2026-09-08 09:46:19	2026-09-08 09:46:19	31	\N	\N
+65	14	35	53	4	10	0	openAccess	1	2026-09-08 09:46:58	2026-09-08 09:47:04	31	521	2
+66	14	36	54	4	10	0	openAccess	1	2026-09-08 09:46:59	2026-09-08 09:47:08	31	521	2
+67	14	37	55	4	10	0	openAccess	1	2026-09-08 09:46:59	2026-09-08 09:47:12	31	521	2
+68	14	38	56	4	10	0	openAccess	1	2026-09-08 09:46:59	2026-09-08 09:47:15	31	521	2
+69	14	39	57	13	10	0	openAccess	1	2026-09-08 09:46:59	2026-09-08 09:47:20	31	521	2
+70	14	40	58	9	10	0	openAccess	1	2026-09-08 09:46:59	2026-09-08 09:47:24	31	521	2
+71	15	41	\N	3	2	\N	\N	\N	2026-09-08 09:47:34	2026-09-08 09:47:35	32	\N	\N
+72	16	42	\N	3	2	\N	\N	\N	2026-09-08 09:48:02	2026-09-08 09:48:02	33	\N	\N
+73	16	42	72	3	4	\N	\N	\N	2026-09-08 09:48:29	2026-09-08 09:48:29	33	\N	\N
+74	17	43	\N	4	2	\N	\N	\N	2026-09-08 09:48:57	2026-09-08 09:48:57	34	\N	\N
+75	17	44	\N	4	2	\N	\N	\N	2026-09-08 09:48:57	2026-09-08 09:48:57	34	\N	\N
+76	17	45	\N	4	2	\N	\N	\N	2026-09-08 09:48:58	2026-09-08 09:48:58	34	\N	\N
+77	17	46	\N	4	2	\N	\N	\N	2026-09-08 09:48:58	2026-09-08 09:48:58	34	\N	\N
+78	17	47	\N	4	2	\N	\N	\N	2026-09-08 09:48:58	2026-09-08 09:48:59	34	\N	\N
+79	17	48	\N	4	2	\N	\N	\N	2026-09-08 09:48:59	2026-09-08 09:48:59	34	\N	\N
 \.
 
 
@@ -10827,23 +10835,23 @@ COPY public.submission_settings (submission_id, locale, setting_name, setting_va
 --
 
 COPY public.submissions (submission_id, context_id, current_publication_id, date_last_activity, date_submitted, last_modified, stage_id, locale, status, submission_progress, work_type) FROM stdin;
-10	1	10	2026-09-04 09:40:10	2026-09-04 09:40:10	2026-09-04 09:40:10	1	en_US	1	0	2
-16	1	16	2026-09-04 09:47:29	2026-09-04 09:47:00	2026-09-04 09:47:00	3	en_US	1	0	2
-5	1	5	2026-09-04 09:35:56	2026-09-04 09:35:08	2026-09-04 09:35:08	5	en_US	3	0	2
-1	1	1	2026-09-04 09:31:40	2026-09-04 09:31:24	2026-09-04 09:31:24	4	en_US	1	0	2
-7	1	7	2026-09-04 09:38:17	2026-09-04 09:37:56	2026-09-04 09:37:56	4	en_US	1	0	1
-4	1	4	2026-09-04 09:34:36	2026-09-04 09:34:02	2026-09-04 09:34:02	5	en_US	1	0	1
-8	1	8	2026-09-04 09:38:27	2026-09-04 09:38:26	2026-09-04 09:38:26	1	en_US	1	0	2
-6	1	6	2026-09-04 09:36:56	2026-09-04 09:36:37	2026-09-04 09:36:37	2	en_US	1	0	1
-11	1	11	2026-09-04 09:41:10	2026-09-04 09:40:26	2026-09-04 09:40:26	4	en_US	1	0	2
-14	1	14	2026-09-04 09:46:05	2026-09-04 09:44:46	2026-09-04 09:44:46	5	en_US	3	0	1
-13	1	13	2026-09-04 09:44:04	2026-09-04 09:43:06	2026-09-04 09:43:06	4	en_US	1	0	1
-2	1	2	2026-09-04 09:32:51	2026-09-04 09:32:34	2026-09-04 09:32:34	3	en_US	1	0	1
-3	1	3	2026-09-04 09:33:19	2026-09-04 09:33:19	2026-09-04 09:33:19	1	en_US	1	0	2
-9	1	9	2026-09-04 09:39:25	2026-09-04 09:39:18	2026-09-04 09:39:18	2	en_US	1	0	1
-15	1	15	2026-09-04 09:46:32	2026-09-04 09:46:25	2026-09-04 09:46:25	3	en_US	1	0	2
-17	1	17	2026-09-04 09:49:01	2026-09-04 09:48:40	2026-09-04 09:48:40	2	en_US	1	0	1
-12	1	12	2026-09-04 09:42:31	2026-09-04 09:41:59	2026-09-04 09:41:59	2	en_US	1	0	1
+10	1	10	2026-09-08 09:41:49	2026-09-08 09:41:49	2026-09-08 09:41:49	1	en_US	1	0	2
+3	1	3	2026-09-08 09:35:18	2026-09-08 09:35:18	2026-09-08 09:35:18	1	en_US	1	0	2
+7	1	7	2026-09-08 09:40:00	2026-09-08 09:39:41	2026-09-08 09:39:41	4	en_US	1	0	1
+1	1	1	2026-09-08 09:33:41	2026-09-08 09:33:26	2026-09-08 09:33:26	4	en_US	1	0	2
+16	1	16	2026-09-08 09:48:50	2026-09-08 09:48:22	2026-09-08 09:48:22	3	en_US	1	0	2
+5	1	5	2026-09-08 09:37:46	2026-09-08 09:37:02	2026-09-08 09:37:02	5	en_US	3	0	2
+8	1	8	2026-09-08 09:40:10	2026-09-08 09:40:10	2026-09-08 09:40:10	1	en_US	1	0	2
+11	1	11	2026-09-08 09:42:46	2026-09-08 09:42:04	2026-09-08 09:42:04	4	en_US	1	0	2
+4	1	4	2026-09-08 09:36:31	2026-09-08 09:35:58	2026-09-08 09:35:58	5	en_US	1	0	1
+13	1	13	2026-09-08 09:45:30	2026-09-08 09:44:35	2026-09-08 09:44:35	4	en_US	1	0	1
+2	1	2	2026-09-08 09:34:50	2026-09-08 09:34:34	2026-09-08 09:34:34	3	en_US	1	0	1
+14	1	14	2026-09-08 09:47:28	2026-09-08 09:46:12	2026-09-08 09:46:12	5	en_US	3	0	1
+6	1	6	2026-09-08 09:38:44	2026-09-08 09:38:25	2026-09-08 09:38:25	2	en_US	1	0	1
+9	1	9	2026-09-08 09:41:06	2026-09-08 09:40:59	2026-09-08 09:40:59	2	en_US	1	0	1
+15	1	15	2026-09-08 09:47:54	2026-09-08 09:47:47	2026-09-08 09:47:47	3	en_US	1	0	2
+17	1	17	2026-09-08 09:50:20	2026-09-08 09:49:59	2026-09-08 09:49:59	2	en_US	1	0	1
+12	1	12	2026-09-08 09:44:03	2026-09-08 09:43:32	2026-09-08 09:43:32	2	en_US	1	0	1
 \.
 
 
@@ -11409,40 +11417,40 @@ COPY public.user_user_groups (user_group_id, user_id) FROM stdin;
 --
 
 COPY public.users (user_id, username, password, email, url, phone, mailing_address, billing_address, country, locales, gossip, date_last_email, date_registered, date_validated, date_last_login, must_change_password, auth_id, auth_str, disabled, disabled_reason, inline_help) FROM stdin;
-33	mpower	$2y$10$XNlCgbbGGCVswT81iHxGr.qY09FxNm0hchXCrGtTI4M5tmD/eOwK2	mpower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:46:38	\N	2026-09-04 09:46:38	0	\N	\N	0	\N	1
-6	minoue	$2y$10$4oOM53Nfsz9/rPDMDPmBvuXgW0y.jQQqfENIBOC9w7lHB6M6VZajm	minoue@mailinator.com				\N	JP		\N	\N	2026-09-04 09:29:08	\N	2026-09-04 09:36:51	0	\N	\N	0	\N	1
-8	phudson	$2y$10$gb/PvZL3/LKHHuGrueGViubP0sRTPesHc89sAvVb7.y3SOjofHGTK	phudson@mailinator.com				\N	CA		\N	\N	2026-09-04 09:29:21	\N	2026-09-04 09:42:25	0	\N	\N	0	\N	1
-25	dkennepohl	$2y$10$I0Uv7g6kDnzCmAnzNrSOqefOUjhrtUQJbKcFeVjxMzSx4.jypwgkO	dkennepohl@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:37:06	\N	2026-09-04 09:37:07	0	\N	\N	0	\N	1
-4	dbuskins	$2y$10$WOuedgxU3CiR8q8XrLGH4u53tI8GE7Jsb8SvwCQv6F4kuvjKDXD3G	dbuskins@mailinator.com				\N	US		\N	\N	2026-09-04 09:28:56	\N	2026-09-04 09:28:56	0	\N	\N	0	\N	1
-5	sberardo	$2y$10$towfoMg/J31sfEusAl80heulWZgl0r0U0cc27PnmAnTUn5nfjoNqK	sberardo@mailinator.com				\N	CA		\N	\N	2026-09-04 09:29:02	\N	2026-09-04 09:29:02	0	\N	\N	0	\N	1
-7	jjanssen	$2y$10$X4oPUjB66wc6JjJhNgfeP.eXaWDDuHPfMlzUyeYLNLm2zPZ1L2KO.	jjanssen@mailinator.com				\N	NL		\N	\N	2026-09-04 09:29:14	\N	2026-09-04 09:29:14	0	\N	\N	0	\N	1
-9	amccrae	$2y$10$sBqqeTNhJrLu75lQF6RJ0eFtmSpnE2VUymI8R6YihLMRgkFXK5uSC	amccrae@mailinator.com				\N	CA		\N	\N	2026-09-04 09:29:27	\N	2026-09-04 09:29:27	0	\N	\N	0	\N	1
-11	alzacharia	$2y$10$DpkckjJ4My367Acvz/7Uz.nDD03CZQ2p0BD8nK0517Klc0aJidMti	alzacharia@mailinator.com				\N	GH		\N	\N	2026-09-04 09:29:42	\N	2026-09-04 09:29:42	0	\N	\N	0	\N	1
-13	mfritz	$2y$10$dXE0xwlnWFdkQSxoegEJeOwqF7WO1KKwqohua0UfXCt6NudBMWrV.	mfritz@mailinator.com				\N	BE		\N	\N	2026-09-04 09:29:58	\N	2026-09-04 09:29:58	0	\N	\N	0	\N	1
-14	svogt	$2y$10$VYA4NLXbnJynK3.KMqiP3uoOJ2KNrVN62rxHbzYnMuRFLDVUx/P6m	svogt@mailinator.com				\N	CL		\N	\N	2026-09-04 09:30:06	\N	2026-09-04 09:30:06	0	\N	\N	0	\N	1
-15	gcox	$2y$10$XuGIm7BBrW0PErbSzny4COVk2Kz6E2SgF5XzzcS3BmdA2TWe/jTmm	gcox@mailinator.com				\N	US		\N	\N	2026-09-04 09:30:14	\N	2026-09-04 09:30:14	0	\N	\N	0	\N	1
-16	shellier	$2y$10$Yr4TDyzJEXJi53JNDfP3ROGgqHOmuGHeE3Nt9amBZKPRdmRvgjdRq	shellier@mailinator.com				\N	ZA		\N	\N	2026-09-04 09:30:23	\N	2026-09-04 09:30:23	0	\N	\N	0	\N	1
-17	cturner	$2y$10$l2ORYw/WpRwWZJrheRfnBOJilSvT5zYZwt3dLdkxhEwUv6RH3hJOS	cturner@mailinator.com				\N	GB		\N	\N	2026-09-04 09:30:33	\N	2026-09-04 09:30:33	0	\N	\N	0	\N	1
-18	skumar	$2y$10$h5eRsLHK.Qet1hTZgTl89eY0bHzxAwks/O5430DaDdXhDMTL7J6CC	skumar@mailinator.com				\N	SG		\N	\N	2026-09-04 09:30:42	\N	2026-09-04 09:30:42	0	\N	\N	0	\N	1
-30	mally	$2y$10$.nsTT.sjgD1noqkHtR2bue5kB1kWgcQ6TsuBoXXKeRvlVbj4l6c.W	mally@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:42:36	\N	2026-09-04 09:42:36	0	\N	\N	0	\N	1
-2	rvaca	$2y$10$fIRPxL4YHQ13JQZpF81V8OEtrMCgQKaXF.mh8INcGwYz3bfW8wXDW	rvaca@mailinator.com				\N	MX		\N	\N	2026-09-04 09:28:45	\N	2026-09-04 09:30:50	0	\N	\N	0	\N	1
-1	admin	$2y$10$uYiwYsp.KwbbMishNDklDOygCmYz0gjdATKMcd42tTG0p9Ow6evMm	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2026-09-04 09:27:56	\N	2026-09-04 09:30:53	0	\N	\N	0	\N	1
-19	aclark	$2y$10$xYrl0tD3top/PD.8r4dQ/eBCVDVOtMpIAzvkRSGiaf2Wlup0/0XQy	aclark@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:31:09	\N	2026-09-04 09:31:09	0	\N	\N	0	\N	1
-26	fperini	$2y$10$tlg4GtcuZXg.WGY7.lzDBeCYYMSluXeb2wPVzrulrooUKIXLTIA.2	fperini@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:38:30	\N	2026-09-04 09:38:31	0	\N	\N	0	\N	1
-20	afinkel	$2y$10$s8U/qRB0mt4Wdd5kSoBDO.pRFBXHcQ5GH5SHdzWuYm2wH7VR8Kh7m	afinkel@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:31:44	\N	2026-09-04 09:31:44	0	\N	\N	0	\N	1
-21	bbarnetson	$2y$10$.KAzIcwC.iO62.tNuCXYN.ZGCbx0rh7LLWt1q.p.z6/J0Jzq9X/22	bbarnetson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:32:55	\N	2026-09-04 09:32:56	0	\N	\N	0	\N	1
-22	bbeaty	$2y$10$YZGMvUEtHkMytFav1stl2.bT9Wp7sWJ6WKYi3hiPmW3Sh2jGxlcj.	bbeaty@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:33:23	\N	2026-09-04 09:33:23	0	\N	\N	0	\N	1
-23	callan	$2y$10$MDzXh.IrmB62YtCACRWAcOpUVQaY4Ve/FSfhJElJqGGAyZRjr2Dry	callan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:34:41	\N	2026-09-04 09:34:41	0	\N	\N	0	\N	1
-24	dbernnard	$2y$10$yWT0JYbh/u4YJG4iCuqrROOyKqIzC9ZdNdbbQtLMyO.ujd3dwKpVG	dbernnard@mailinator.com	\N	\N	\N	\N	US		\N	\N	2026-09-04 09:36:00	\N	2026-09-04 09:36:00	0	\N	\N	0	\N	1
-27	jbrower	$2y$10$0DsOVnqmzoGd7WfR3dgdz.ElHNJqyhdITGtdujA7yUgsdxxoFDpoy	jbrower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:39:32	\N	2026-09-04 09:39:32	0	\N	\N	0	\N	1
-28	jlockehart	$2y$10$mACJACp32XV9AoQY3DdSRO./BhW0Diy/vSARW01pOJdmgJHFK//Ai	jlockehart@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:40:14	\N	2026-09-04 09:40:14	0	\N	\N	0	\N	1
-12	gfavio	$2y$10$NS7W7ebWM34VGjuOIo4W5eD3fxeFXroLsnhAj9Yf2rfd618WjBMjW	gfavio@mailinator.com				\N	ES		\N	\N	2026-09-04 09:29:49	\N	2026-09-04 09:43:47	0	\N	\N	0	\N	1
-10	agallego	$2y$10$8gYn0Xpow6W0e6b.HbpdnOYVtoUSeplOieFk3RABV6Icj1QoogAa2	agallego@mailinator.com				\N	US		\N	\N	2026-09-04 09:29:34	\N	2026-09-04 09:47:23	0	\N	\N	0	\N	1
-34	msmith	$2y$10$U8g6XcOpBSAIwMk7RYinz.aMdwo1e/pAjDodI80TjVVD0f2nFMna2	msmith@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:47:33	\N	2026-09-04 09:47:33	0	\N	\N	0	\N	1
-29	lelder	$2y$10$QI2ZNO1Hhb9CLofEqFpxlupCw5Zjb4fHQzBZnmwGiJFgXgc6nUzvO	lelder@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:41:16	\N	2026-09-04 09:41:16	0	\N	\N	0	\N	1
-3	dbarnes	$2y$10$yYl05OmXajaGzGiwRUh3E.qAZQbYOstpWX0r4Pm2BML9qNIbROaA.	dbarnes@mailinator.com				\N	AU		\N	\N	2026-09-04 09:28:51	\N	2026-09-04 09:48:42	0	\N	\N	0	\N	1
-31	mdawson	$2y$10$e5Wu4h8xRLfz7CC6FyKV7.4UU9XmSj/EHiTZFuaHq9oI1NehWVRum	mdawson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:44:10	\N	2026-09-04 09:44:11	0	\N	\N	0	\N	1
-32	mforan	$2y$10$biCyOwj9dE9VDsbFF2oC1.ti5f7CzdWWlgmL6m13RUBgnTjK8klHK	mforan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-04 09:46:09	\N	2026-09-04 09:46:10	0	\N	\N	0	\N	1
+33	mpower	$2y$10$YfJvOFjZ2diM/ZeAZte52ewlRkWrzVC/NqV6vAaEhf7xcn3PVKnDa	mpower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:47:59	\N	2026-09-08 09:48:00	0	\N	\N	0	\N	1
+6	minoue	$2y$10$1Pfl9Y3jsw3Pyc8rpfjWgumxAkfhxkcfFcqfS08YM34wwB60MtgNK	minoue@mailinator.com				\N	JP		\N	\N	2026-09-08 09:31:14	\N	2026-09-08 09:38:39	0	\N	\N	0	\N	1
+8	phudson	$2y$10$UQDti2Sm/93m8UbtJdfETeo6bz9f5UX9PqRhXdT/btN9eitjSNVOm	phudson@mailinator.com				\N	CA		\N	\N	2026-09-08 09:31:26	\N	2026-09-08 09:43:57	0	\N	\N	0	\N	1
+25	dkennepohl	$2y$10$lXnkolfhtVS/HYeMaPi6g.74lkRn7gBAS8cGhqnq1nyrb5VljPZlm	dkennepohl@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:38:54	\N	2026-09-08 09:38:54	0	\N	\N	0	\N	1
+4	dbuskins	$2y$10$JPUane0/Xksm1hAw2iG4tu2mj.uZ39j4HSWMhj4tPCIIIhPtKER8O	dbuskins@mailinator.com				\N	US		\N	\N	2026-09-08 09:31:02	\N	2026-09-08 09:31:02	0	\N	\N	0	\N	1
+5	sberardo	$2y$10$6xUpyhpfHbcsRVyNgDLK6el8pEtur3q1FCgLDrWthd3/SLGsUoP8m	sberardo@mailinator.com				\N	CA		\N	\N	2026-09-08 09:31:08	\N	2026-09-08 09:31:08	0	\N	\N	0	\N	1
+7	jjanssen	$2y$10$PzrLIAYoyEGlNS4ZSWrhIO.0CpuEfnWBUhOmHRvVr.IAsozL8wqJa	jjanssen@mailinator.com				\N	NL		\N	\N	2026-09-08 09:31:20	\N	2026-09-08 09:31:20	0	\N	\N	0	\N	1
+9	amccrae	$2y$10$KcNiNAW3kKx53m8IlBIoIeD/cyY8gQzABhNpN9dSih5CJFKbFxkGm	amccrae@mailinator.com				\N	CA		\N	\N	2026-09-08 09:31:33	\N	2026-09-08 09:31:33	0	\N	\N	0	\N	1
+11	alzacharia	$2y$10$q.03b6NEXWmYCbsfnWFV1OmCRoSEcRKA40j5Iu1WiQA32G1T0ZPSC	alzacharia@mailinator.com				\N	GH		\N	\N	2026-09-08 09:31:47	\N	2026-09-08 09:31:47	0	\N	\N	0	\N	1
+13	mfritz	$2y$10$wjXfbxrefMAqQpf.5IlZ6eKJP/SDhm8AeGTGA6slgJxBEdWpc1OTS	mfritz@mailinator.com				\N	BE		\N	\N	2026-09-08 09:32:02	\N	2026-09-08 09:32:02	0	\N	\N	0	\N	1
+14	svogt	$2y$10$49qQJF9zDsC0lSJNwBOiw.7F/bOM/FAWUjBS6.qG.A.OSy/Wmw8nS	svogt@mailinator.com				\N	CL		\N	\N	2026-09-08 09:32:10	\N	2026-09-08 09:32:10	0	\N	\N	0	\N	1
+15	gcox	$2y$10$p8KDt1yLAvccGyLTi0ts6.keGgO.dk1471hQTIaSDYZ.OGZzpvl/m	gcox@mailinator.com				\N	US		\N	\N	2026-09-08 09:32:18	\N	2026-09-08 09:32:18	0	\N	\N	0	\N	1
+16	shellier	$2y$10$T4UikeJEQ09pl6sdPL8efOxkl7h4IrKE8NlYTdAPtygLqOMkDRiuy	shellier@mailinator.com				\N	ZA		\N	\N	2026-09-08 09:32:26	\N	2026-09-08 09:32:26	0	\N	\N	0	\N	1
+17	cturner	$2y$10$pJbxWX9QFDZ4QuWcxIWia.L3xQlNRw9LGhO2Nh8EB6abCGbIR85re	cturner@mailinator.com				\N	GB		\N	\N	2026-09-08 09:32:35	\N	2026-09-08 09:32:35	0	\N	\N	0	\N	1
+18	skumar	$2y$10$0TKCNQQBa2ZXOqk6DjShV.5.gsFcXSSwqTKfvzHuUbQ7/KDOdyKkG	skumar@mailinator.com				\N	SG		\N	\N	2026-09-08 09:32:44	\N	2026-09-08 09:32:44	0	\N	\N	0	\N	1
+30	mally	$2y$10$Sq812owIyRmfBAf2OfpwUOcPRf6PqW4qZ/lI1OG7zV4W7LoFDv2Lq	mally@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:44:07	\N	2026-09-08 09:44:07	0	\N	\N	0	\N	1
+2	rvaca	$2y$10$2L2cnGxOL1BTuHC8WaC73.Vuld1MxSSdTG.tLPORkpUyQuiEZuAHy	rvaca@mailinator.com				\N	MX		\N	\N	2026-09-08 09:30:52	\N	2026-09-08 09:32:52	0	\N	\N	0	\N	1
+1	admin	$2y$10$feEoQE.rRPeIHF8hazXXru6Bnft.0zv2/0LPbZWxI6npc9txgNpXi	pkpadmin@mailinator.com	\N	\N	\N	\N	\N		\N	\N	2026-09-08 09:30:04	\N	2026-09-08 09:32:55	0	\N	\N	0	\N	1
+19	aclark	$2y$10$JuPUmjHTPFQHCmzqCsY33uKZKJR5ZPEm8jSvXUjxCZcpZIkERTwBW	aclark@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:33:11	\N	2026-09-08 09:33:11	0	\N	\N	0	\N	1
+26	fperini	$2y$10$p0XFPqWuqmJ/z5A8yYRqwOuB9tD1IDeQBHmD.ZqvAEvfIzef0oZX.	fperini@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:40:13	\N	2026-09-08 09:40:14	0	\N	\N	0	\N	1
+20	afinkel	$2y$10$jpkLp9zQfnagSDNIVOjf2.dU3wz/NyaLdX2llooFKWnHGDggzo/RW	afinkel@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:33:45	\N	2026-09-08 09:33:45	0	\N	\N	0	\N	1
+21	bbarnetson	$2y$10$44AcYb/tzLRUCng9gp6T8O/BBAgOSlrAdXnQPJqeshFBLlksEvM2S	bbarnetson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:34:55	\N	2026-09-08 09:34:55	0	\N	\N	0	\N	1
+22	bbeaty	$2y$10$Uct9egv.41zcWiRvNiEYnuRYEGN9gyqkZsrFFBsADxdo3Qz9NxQQq	bbeaty@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:35:22	\N	2026-09-08 09:35:22	0	\N	\N	0	\N	1
+23	callan	$2y$10$VWHAJb6ePhfhaGHpxUnlseFwbIYoQp5uew5G2g96aSNu7p8SdmWda	callan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:36:35	\N	2026-09-08 09:36:36	0	\N	\N	0	\N	1
+24	dbernnard	$2y$10$2E6yJUPK./4qQHRd5/J7neZTv0u0sCCg4GGbTiT5c5yZGNjx9gwmm	dbernnard@mailinator.com	\N	\N	\N	\N	US		\N	\N	2026-09-08 09:37:50	\N	2026-09-08 09:37:50	0	\N	\N	0	\N	1
+27	jbrower	$2y$10$kO6utPGwsv6Dqw7tjxb5LOFSIOPCScBygveet14vx73GJFfNVc6vK	jbrower@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:41:12	\N	2026-09-08 09:41:12	0	\N	\N	0	\N	1
+28	jlockehart	$2y$10$s.tz2Eo5fwZtu21T28fAuO25CDMTXPSzG8Ys72Y8C9JlfGirydyyK	jlockehart@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:41:53	\N	2026-09-08 09:41:53	0	\N	\N	0	\N	1
+12	gfavio	$2y$10$QFXktj1uF6qfQFSeWf6hV.CmxU5Oo2x0/ablVWt4bvpDSjMzK.quW	gfavio@mailinator.com				\N	ES		\N	\N	2026-09-08 09:31:54	\N	2026-09-08 09:45:14	0	\N	\N	0	\N	1
+10	agallego	$2y$10$HJIxTtNyK9LlQzXDImeaQuSPcu/2DGZQbkscMWeEzdYAn6fXfqjKa	agallego@mailinator.com				\N	US		\N	\N	2026-09-08 09:31:40	\N	2026-09-08 09:48:44	0	\N	\N	0	\N	1
+34	msmith	$2y$10$e0WAO/RzqrNtFnlT3/G8hu6L07AdstDqw5YNz036wV.WGNhN8Ayym	msmith@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:48:54	\N	2026-09-08 09:48:54	0	\N	\N	0	\N	1
+29	lelder	$2y$10$yEQvi04/O1GQTd8AtXvr3e0cH7yTCh6kdgjqnxriEwIHAK2NmkPnm	lelder@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:42:52	\N	2026-09-08 09:42:52	0	\N	\N	0	\N	1
+3	dbarnes	$2y$10$1JUre25979mGcRGF.NruiO0U/QNLMYkh1nosuIzzl6lm4MmuI3R1K	dbarnes@mailinator.com				\N	AU		\N	\N	2026-09-08 09:30:57	\N	2026-09-08 09:50:02	0	\N	\N	0	\N	1
+31	mdawson	$2y$10$OVi4bzZTozL2jMTW3qwrX.ucT39mKPFNpWvV9uxIWpiagYQ9wuVou	mdawson@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:45:36	\N	2026-09-08 09:45:36	0	\N	\N	0	\N	1
+32	mforan	$2y$10$0vm6cOUmqvtoSZYHASC07emDt6DGAkQNgc40uhZ7.U0NBbr098FY.	mforan@mailinator.com	\N	\N	\N	\N	CA		\N	\N	2026-09-08 09:47:32	\N	2026-09-08 09:47:32	0	\N	\N	0	\N	1
 \.
 
 
@@ -11451,37 +11459,37 @@ COPY public.users (user_id, username, password, email, url, phone, mailing_addre
 --
 
 COPY public.versions (major, minor, revision, build, date_installed, current, product_type, product, product_class_name, lazy_load, sitewide) FROM stdin;
-1	0	0	0	2026-09-04 09:27:56	1	plugins.metadata	dc11		0	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.pubIds	urn	URNPubIdPlugin	0	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.pubIds	doi	DOIPubIdPlugin	0	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.blocks	information	InformationBlockPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
-1	2	0	0	2026-09-04 09:27:56	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.generic	webFeed	WebFeedPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.generic	acron		0	1
-1	2	0	0	2026-09-04 09:27:56	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
-1	0	0	0	2026-09-04 09:27:56	1	plugins.generic	usageEvent		0	1
-1	0	0	0	2026-09-04 09:27:56	1	plugins.themes	default	DefaultThemePlugin	1	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.importexport	users		0	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.importexport	native		0	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.importexport	csv		0	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.importexport	onix30		0	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.oaiMetadataFormats	dc		0	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.paymethod	paypal		0	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.paymethod	manual		0	0
-2	0	0	0	2026-09-04 09:27:56	1	plugins.reports	reviewReport		0	0
-1	0	0	0	2026-09-04 09:27:56	1	plugins.reports	monographReport		0	0
-3	3	0	22	2026-09-04 09:27:55	1	core	omp		0	1
+1	0	0	0	2026-09-08 09:30:04	1	plugins.metadata	dc11		0	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.pubIds	doi	DOIPubIdPlugin	0	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.pubIds	urn	URNPubIdPlugin	0	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.blocks	makeSubmission	MakeSubmissionBlockPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.blocks	developedBy	DevelopedByBlockPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.blocks	browse	BrowseBlockPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.blocks	languageToggle	LanguageToggleBlockPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.blocks	information	InformationBlockPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.generic	usageEvent		0	1
+1	0	0	0	2026-09-08 09:30:04	1	plugins.generic	tinymce	TinyMCEPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.generic	dublinCoreMeta	DublinCoreMetaPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.generic	htmlMonographFile	HtmlMonographFilePlugin	1	0
+1	2	0	0	2026-09-08 09:30:04	1	plugins.generic	staticPages	StaticPagesPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.generic	acron		0	1
+1	0	0	0	2026-09-08 09:30:04	1	plugins.generic	webFeed	WebFeedPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.generic	usageStats	UsageStatsPlugin	0	1
+1	2	0	0	2026-09-08 09:30:04	1	plugins.generic	customBlockManager	CustomBlockManagerPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.generic	googleScholar	GoogleScholarPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.generic	googleAnalytics	GoogleAnalyticsPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.generic	pdfJsViewer	PdfJsViewerPlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.themes	default	DefaultThemePlugin	1	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.importexport	users		0	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.importexport	native		0	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.importexport	csv		0	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.importexport	onix30		0	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.oaiMetadataFormats	dc		0	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.paymethod	manual		0	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.paymethod	paypal		0	0
+2	0	0	0	2026-09-08 09:30:04	1	plugins.reports	reviewReport		0	0
+1	0	0	0	2026-09-08 09:30:04	1	plugins.reports	monographReport		0	0
+3	3	0	22	2026-09-08 09:30:03	1	core	omp		0	1
 \.
 
 
@@ -11601,7 +11609,7 @@ SELECT pg_catalog.setval('public.email_templates_email_id_seq', 1, false);
 -- Name: event_log_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
 --
 
-SELECT pg_catalog.setval('public.event_log_log_id_seq', 467, true);
+SELECT pg_catalog.setval('public.event_log_log_id_seq', 469, true);
 
 
 --
@@ -11846,14 +11854,14 @@ SELECT pg_catalog.setval('public.submission_comments_comment_id_seq', 6, true);
 -- Name: submission_file_revisions_revision_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
 --
 
-SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 78, true);
+SELECT pg_catalog.setval('public.submission_file_revisions_revision_id_seq', 79, true);
 
 
 --
 -- Name: submission_files_submission_file_id_seq; Type: SEQUENCE SET; Schema: public; Owner: omp-ci
 --
 
-SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 78, true);
+SELECT pg_catalog.setval('public.submission_files_submission_file_id_seq', 79, true);
 
 
 --
@@ -13633,5 +13641,5 @@ ALTER TABLE ONLY public.submission_files
 -- PostgreSQL database dump complete
 --
 
-\unrestrict U8MgGvX1digJZUZGOelpofYQ9X4YnlFhnwDw3uUEJjDLy7SEj0k24F4kK10TCcm
+\unrestrict e2wfEM0uszYHB3ab3DGxdyREVptZ0RPIZJGoUC0ctbCpXmF72Ga84fU9sdBoa3b
 
