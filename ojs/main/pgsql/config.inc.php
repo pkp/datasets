@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:NF510lwUSKxYK+PyskWD4vG4HUMXiOabspsIEXoi/UU="
+app_key = "base64:XKh03WkSE+Kjc4madOUfP1JNmEMrxBuhZsH8cTrngxU="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -348,7 +348,7 @@ filter_galley_html = Off
 ; allowed_galley_html = "img[id|style],math"
 
 ; When the filter_galley_html option is turned On, only specified allowed media hosts are allowed.
-; allowed_hosts = '["doi.org", "wikipedia.org"]'
+; allowed_media_hosts = '["doi.org", "wikipedia.org"]'
 
 
 ;;;;;;;;;;;;;;;;;;
