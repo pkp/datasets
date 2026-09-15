@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:08zVzdSxMPM97mZucXyNBR6Q1k5vsffKm13rXwsliEg="
+app_key = "base64:+HfI+dEse4f2QkFUaH4YiCam9sMKPBKbm9dBykwJZKo="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
@@ -172,6 +172,12 @@ name = ops-ci
 ; Verify the server's SSL/TLS certificate (default to On when secure is enabled)
 ; Set to Off to connect with encryption but skip certificate verification (not recommended for production)
 ; verify = On
+
+; Keep the database connection open and reuse it across requests served by
+; the same PHP process (PDO persistent connection). The primary purpose is to
+; run the end-to-end test suites efficiently, where many short requests are
+; served by long-lived PHP processes. Not recommended for production.
+; persistent = Off
 
 ; Enable database debug output (very verbose!)
 debug = Off
