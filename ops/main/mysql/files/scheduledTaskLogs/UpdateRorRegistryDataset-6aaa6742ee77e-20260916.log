@@ -1,0 +1,4 @@
+[2026-09-16 09:54:10] production.INFO: http://localhost  
+[2026-09-16 09:54:10] production.NOTICE: Task process started.  
+[2026-09-16 09:55:06] production.ERROR: cURL error 28: Operation timed out after 30001 milliseconds with 0 bytes received (see https://curl.se/libcurl/c/libcurl-errors.html) for https://zenodo.org/api/records/22099990  
+[2026-09-16 09:55:06] production.NOTICE: Task process stopped.  
