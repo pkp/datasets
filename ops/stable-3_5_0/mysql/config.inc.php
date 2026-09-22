@@ -26,7 +26,7 @@
 
 ; An application-specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
-app_key = "base64:dMNIjbtDlOmXR9YRBmu0s1dgNM1XoKI1CQv0GxqHx14="
+app_key = "base64:oogmoPT2zrgXxiSEHORCJPCI4sgC0wOc97r0CdWrIgU="
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
