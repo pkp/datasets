@@ -1,0 +1,4 @@
+[2026-10-09 12:22:31] http://localhost
+[2026-10-09 12:22:31] [Notice] Task process started.
+[2026-10-09 12:23:03] [Error] cURL error 28: SSL connection timeout (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for https://zenodo.org/api/records/23187250/files/v2.14-2026-10-06-ror-data.zip/content
+[2026-10-09 12:23:03] [Notice] Task process stopped.
