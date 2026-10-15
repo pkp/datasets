@@ -1,9 +1,0 @@
-[2026-10-12 12:58:06] production.INFO: http://localhost  
-[2026-10-12 12:58:06] production.NOTICE: Task process started.  
-[2026-10-12 12:59:17] production.ERROR: Server error: `GET https://zenodo.org/api/records/23187250/files/v2.14-2026-10-06-ror-data.zip/content` resulted in a `504 Gateway Time-out` response:
-<html><body><h1>504 Gateway Time-out</h1>
-The server didn't respond in time.
-</body></html>
-
-  
-[2026-10-12 12:59:17] production.NOTICE: Task process stopped.  
